@@ -8,6 +8,7 @@ export const generateRequestSchema = z.object({
   proteins: z.array(z.string()).min(1),
   healthiness_preference: z.enum(["lean", "balanced", "comfort"]),
   allergens_to_avoid: z.array(z.string()),
+  vegetarian_swap_needed: z.boolean().optional().default(false),
   last_template_id: z.number().optional(),
 });
 
@@ -46,6 +47,20 @@ export interface RecipeStep {
   body: string;
 }
 
+export interface VegOptionIngredient {
+  item: string;
+  amount: string;
+  notes: string;
+}
+
+export interface VegOption {
+  enabled: boolean;
+  swap_protein: string;
+  ingredients: VegOptionIngredient[];
+  steps: string[];
+  plating_notes: string;
+}
+
 export interface GenerateResponse {
   template_id: number;
   chosen_protein: string;
@@ -57,6 +72,7 @@ export interface GenerateResponse {
   steps: RecipeStep[];
   cleanup_tip: string;
   macros_per_serving: MacrosPerServing;
+  veg_option?: VegOption;
 }
 
 export interface TemplateRow {
