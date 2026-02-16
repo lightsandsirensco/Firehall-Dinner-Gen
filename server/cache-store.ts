@@ -64,16 +64,18 @@ export function buildCacheKey(templateId: string, request: GenerateRequest): str
     healthiness_preference: request.healthiness_preference,
     allergens_to_avoid: [...request.allergens_to_avoid].sort(),
   });
-  return crypto.createHash("sha256").update(keyData).digest("hex").substring(0, 16);
+  return crypto.createHash("sha256").update(keyData).digest("hex").substring(0, 32);
 }
 
 export function getCachedRecipe(cacheKey: string): GenerateResponse | null {
   const row = db.prepare("SELECT recipe_json FROM recipe_cache WHERE cache_key = ?").get(cacheKey) as any;
   if (!row) return null;
-  db.prepare("UPDATE recipe_cache SET hit_count = hit_count + 1 WHERE cache_key = ?").run(cacheKey);
   try {
-    return JSON.parse(row.recipe_json);
+    const parsed = JSON.parse(row.recipe_json);
+    db.prepare("UPDATE recipe_cache SET hit_count = hit_count + 1 WHERE cache_key = ?").run(cacheKey);
+    return parsed;
   } catch {
+    db.prepare("DELETE FROM recipe_cache WHERE cache_key = ?").run(cacheKey);
     return null;
   }
 }
@@ -89,16 +91,22 @@ export function checkRateLimit(key: string, windowMs: number, maxRequests: numbe
   const now = Date.now();
   const windowStart = now - windowMs;
 
-  db.prepare("DELETE FROM rate_limits WHERE timestamp < ?").run(windowStart);
+  const txn = db.transaction(() => {
+    db.prepare("DELETE FROM rate_limits WHERE timestamp < ?").run(windowStart);
 
-  const count = (db.prepare("SELECT COUNT(*) as cnt FROM rate_limits WHERE key = ? AND timestamp >= ?").get(key, windowStart) as any).cnt;
+    const count = (db.prepare("SELECT COUNT(*) as cnt FROM rate_limits WHERE key = ? AND timestamp >= ?").get(key, windowStart) as any).cnt;
 
-  if (count >= maxRequests) {
-    return { allowed: false, remaining: 0, resetMs: windowMs };
-  }
+    if (count >= maxRequests) {
+      const oldest = db.prepare("SELECT MIN(timestamp) as ts FROM rate_limits WHERE key = ? AND timestamp >= ?").get(key, windowStart) as any;
+      const resetAt = oldest?.ts ? (oldest.ts + windowMs - now) : windowMs;
+      return { allowed: false, remaining: 0, resetMs: Math.max(0, resetAt) };
+    }
 
-  db.prepare("INSERT INTO rate_limits (key, timestamp) VALUES (?, ?)").run(key, now);
-  return { allowed: true, remaining: maxRequests - count - 1, resetMs: windowMs };
+    db.prepare("INSERT INTO rate_limits (key, timestamp) VALUES (?, ?)").run(key, now);
+    return { allowed: true, remaining: maxRequests - count - 1, resetMs: windowMs };
+  });
+
+  return txn() as { allowed: boolean; remaining: number; resetMs: number };
 }
 
 export function logUsage(entry: {
