@@ -66,10 +66,43 @@ export async function generateRecipe(
 ): Promise<AIResult> {
   const allergenWarning =
     request.allergens_to_avoid.length > 0
-      ? `CRITICAL: The crew has allergies: ${request.allergens_to_avoid.join(", ")}. Do NOT include any ingredients with these allergens. Use safe substitutes.`
+      ? `CRITICAL: The crew has allergies: ${request.allergens_to_avoid.join(", ")}. Do NOT include any ingredients with these allergens. Use safe substitutes. This applies to BOTH the main recipe AND any vegetarian option.`
       : "No allergy restrictions.";
 
   const proteinDisplay = chosenProtein.charAt(0).toUpperCase() + chosenProtein.slice(1);
+
+  const vegOptionBlock = request.vegetarian_swap_needed
+    ? `
+VEG OPTION REQUIRED: One crew member is vegetarian. Include a "veg_option" section in the JSON.
+VEG OPTION RULES:
+- The main recipe still uses ${proteinDisplay} for the crew.
+- The veg_option makes the SAME meal vegetarian for 1 person only.
+- Choose ONE vegetarian protein swap from: chickpeas, lentils, black beans, tofu, tempeh, paneer (only if dairy is NOT in allergens_to_avoid), or plant-based ground.
+- The veg option must share the same base (same sauce, spices, base carbs) as the main meal.
+- Provide a short parallel cooking method (5-10 minutes extra max).
+- Include cross-contamination guidance: separate pan or cook veg first, separate utensils, label the vegetarian portion.
+- The veg_option ingredients should only list the ADDITIONAL items needed for the 1-person vegetarian swap (not the shared base ingredients).
+${request.allergens_to_avoid.includes("dairy") ? "- Do NOT use paneer or any dairy-based protein swap." : ""}
+${request.allergens_to_avoid.includes("soy") ? "- Do NOT use tofu or tempeh as protein swap." : ""}
+${request.allergens_to_avoid.includes("gluten") ? "- Ensure the veg protein swap is gluten-free." : ""}`
+    : "";
+
+  const exampleSwap = request.allergens_to_avoid.includes("soy")
+    ? { protein: "chickpeas", item: "canned chickpeas", amount: "1 can (400g)", notes: "drained and rinsed" }
+    : request.allergens_to_avoid.includes("dairy")
+    ? { protein: "black beans", item: "canned black beans", amount: "1 can (400g)", notes: "drained and rinsed" }
+    : { protein: "tofu", item: "firm tofu", amount: "200g", notes: "pressed and cubed" };
+
+  const vegJsonBlock = request.vegetarian_swap_needed
+    ? `,
+  "veg_option": {
+    "enabled": true,
+    "swap_protein": "${exampleSwap.protein}",
+    "ingredients": [{"item":"${exampleSwap.item}","amount":"${exampleSwap.amount}","notes":"${exampleSwap.notes}"}],
+    "steps": ["Cook ${exampleSwap.protein} in a separate pan over medium-high heat (5 min). Toss with same sauce as main recipe."],
+    "plating_notes": "Plate on a separate dish, label 'VEG'. Use separate serving utensils."
+  }`
+    : "";
 
   const prompt = `Generate ONE firehall dinner recipe as JSON.
 
@@ -83,7 +116,7 @@ ${allergenWarning}
 
 PRIMARY PROTEIN: ${proteinDisplay}
 CRITICAL PROTEIN RULE: Use ONLY "${proteinDisplay}" as the primary protein in this recipe. Do NOT include any other meats or proteins as main ingredients. Small accent ingredients (e.g., bacon bits as garnish, parmesan) are acceptable, but the main protein must be ONLY ${proteinDisplay}.
-
+${vegOptionBlock}
 RULES:
 - Scale for ${request.crew_size} servings. 4-6 interruptible steps. 8-12 ingredients. Target 35-60g protein/serving.
 - Every step MUST include explicit temperature (oven temp in °F/°C, or stove heat level like "medium-high") AND approximate cook time.
@@ -125,7 +158,7 @@ REQUIRED JSON FORMAT:
     {"heading":"Rest & serve (5 min)","body":"Let chicken rest, then slice and plate."}
   ],
   "cleanup_tip": "string",
-  "macros_per_serving": {"calories":0,"protein_g":0,"carbs_g":0,"fat_g":0}
+  "macros_per_serving": {"calories":0,"protein_g":0,"carbs_g":0,"fat_g":0}${vegJsonBlock}
 }
 
 IMPORTANT:

@@ -21,6 +21,7 @@ export default function Home() {
     proteins: ["chicken", "beef"],
     healthiness_preference: "balanced",
     allergens_to_avoid: [],
+    vegetarian_swap_needed: false,
   });
 
   const handleGenerate = async (currentFilters: FilterState, templateId?: number) => {

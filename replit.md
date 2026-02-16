@@ -40,6 +40,8 @@ A single-page web app that generates one high-protein dinner recipe for a firefi
 - Anti-repeat: last_template_id excludes previous template
 - AI retry: 3 attempts with exponential backoff on empty/error responses
 - On generation failure, last recipe stays visible (only cleared on no-match)
+- `vegetarian_swap_needed` (boolean): when true, recipe includes a `veg_option` section with swap_protein, ingredients, steps, and plating_notes for 1 vegetarian crew member
+- Veg option respects allergens_to_avoid (e.g., no tofu/tempeh if soy allergy, no paneer if dairy)
 
 ## Cost Control
 - **Caching**: SHA256 hash of template_id + normalized filters -> SQLite recipe_cache table

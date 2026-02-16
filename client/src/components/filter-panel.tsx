@@ -4,7 +4,8 @@ import { Label } from "@/components/ui/label";
 import { Slider } from "@/components/ui/slider";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
-import { Flame, RefreshCw, Users, Clock, Zap, Dumbbell, ShieldAlert, ChefHat } from "lucide-react";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Flame, RefreshCw, Users, Clock, Zap, Dumbbell, ShieldAlert, ChefHat, Leaf } from "lucide-react";
 
 export interface FilterState {
   crew_size: number;
@@ -14,6 +15,7 @@ export interface FilterState {
   proteins: string[];
   healthiness_preference: string;
   allergens_to_avoid: string[];
+  vegetarian_swap_needed: boolean;
 }
 
 interface FilterPanelProps {
@@ -197,6 +199,24 @@ export function FilterPanel({ filters, onFiltersChange, onGenerate, onGenerateAn
                 <SelectItem value="comfort">Comfort</SelectItem>
               </SelectContent>
             </Select>
+          </div>
+
+          <div className="space-y-2">
+            <div className="flex items-center gap-2.5">
+              <Checkbox
+                id="veg-swap"
+                checked={filters.vegetarian_swap_needed}
+                onCheckedChange={(checked) => update("vegetarian_swap_needed", !!checked)}
+                data-testid="checkbox-veg-swap"
+              />
+              <Label
+                htmlFor="veg-swap"
+                className="flex items-center gap-2 text-xs uppercase tracking-wider text-muted-foreground font-medium cursor-pointer select-none"
+              >
+                <Leaf className="w-3.5 h-3.5 text-green-500" />
+                One crew member is vegetarian (add a veg option)
+              </Label>
+            </div>
           </div>
 
           <div className="space-y-2">

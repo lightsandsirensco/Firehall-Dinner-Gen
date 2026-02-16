@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import type { GenerateResponse } from "@shared/schema";
-import { Flame, Droplets, Wheat, Beef, Sparkles, Trash2, Clock, Timer, ShieldCheck, Thermometer, Printer } from "lucide-react";
+import { Flame, Droplets, Wheat, Beef, Sparkles, Trash2, Clock, Timer, ShieldCheck, Thermometer, Printer, Leaf } from "lucide-react";
 
 interface RecipeCardProps {
   recipe: GenerateResponse;
@@ -133,6 +133,26 @@ function buildPrintHtml(recipe: GenerateResponse, crewSize: number): string {
   <div class="cleanup">
     <strong>Cleanup Tip</strong>
     ${recipe.cleanup_tip}
+  </div>` : ""}
+
+  ${recipe.veg_option?.enabled ? `
+  <h2 style="color:#16a34a">Veg Option (1 Serving)</h2>
+  <p style="font-size:14px;margin-bottom:8px"><strong>Swap protein:</strong> ${recipe.veg_option.swap_protein}</p>
+  <table class="ingredients">
+    <tbody>
+      ${recipe.veg_option.ingredients.map(ing => `<tr>
+        <td style="padding:4px 16px 4px 0;font-weight:600">${ing.item}</td>
+        <td style="padding:4px 0">${ing.amount || ""}</td>
+        ${ing.notes ? `<td style="padding:4px 0 4px 16px;color:#555;font-size:13px">${ing.notes}</td>` : "<td></td>"}
+      </tr>`).join("")}
+    </tbody>
+  </table>
+  <ol style="margin-top:12px">
+    ${recipe.veg_option.steps.map(s => `<li style="margin-bottom:8px">${s}</li>`).join("")}
+  </ol>
+  <div class="cleanup" style="margin-top:12px">
+    <strong>Plating Notes</strong>
+    ${recipe.veg_option.plating_notes}
   </div>` : ""}
 
   <div class="footer">www.lightsandsirensco.com</div>
@@ -357,6 +377,77 @@ export function RecipeCard({ recipe, crewSize }: RecipeCardProps) {
           </div>
         </CardContent>
       </Card>
+
+      {recipe.veg_option?.enabled && (
+        <Card className="border-green-600/30" data-testid="section-veg-option">
+          <CardContent className="p-4 space-y-4">
+            <div className="flex items-center gap-2">
+              <Leaf className="w-5 h-5 text-green-500" />
+              <h3 className="font-heading text-lg tracking-wider uppercase text-green-600 dark:text-green-400">
+                Veg Option (1 Serving)
+              </h3>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <Badge variant="outline" className="border-green-600/40 text-green-700 dark:text-green-400" data-testid="badge-veg-swap-protein">
+                {recipe.veg_option.swap_protein}
+              </Badge>
+              <span className="text-xs text-muted-foreground">replaces {recipe.chosen_protein}</span>
+            </div>
+
+            <div>
+              <h4 className="text-xs uppercase tracking-wider text-muted-foreground font-medium mb-2">
+                Additional Ingredients
+              </h4>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2" data-testid="veg-ingredients">
+                {recipe.veg_option.ingredients.map((ing, i) => (
+                  <div
+                    key={i}
+                    className="flex flex-col gap-1 rounded-md border border-green-600/20 p-2.5 leading-relaxed"
+                    style={{ overflowWrap: "anywhere", wordBreak: "break-word" }}
+                    data-testid={`veg-ingredient-${i}`}
+                  >
+                    <p className="text-sm whitespace-normal break-words">
+                      <span className="font-bold text-foreground">{ing.item}</span>
+                      {ing.amount && (
+                        <span className="text-green-600 dark:text-green-400 font-medium"> — {ing.amount}</span>
+                      )}
+                    </p>
+                    {ing.notes && (
+                      <p className="text-xs text-muted-foreground whitespace-normal break-words">
+                        {ing.notes}
+                      </p>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h4 className="text-xs uppercase tracking-wider text-muted-foreground font-medium mb-2">
+                Steps
+              </h4>
+              <ol className="space-y-2" data-testid="veg-steps">
+                {recipe.veg_option.steps.map((step, i) => (
+                  <li key={i} className="flex gap-3" data-testid={`veg-step-${i}`}>
+                    <span className="font-heading text-lg text-green-500 flex-shrink-0 w-5 text-right leading-5">
+                      {i + 1}
+                    </span>
+                    <p className="text-sm text-foreground/80 leading-relaxed">{step}</p>
+                  </li>
+                ))}
+              </ol>
+            </div>
+
+            <div className="rounded-md border border-green-600/20 p-3">
+              <h4 className="text-xs uppercase tracking-wider text-muted-foreground font-medium mb-1">
+                Plating Notes
+              </h4>
+              <p className="text-sm text-foreground/80" data-testid="text-veg-plating">{recipe.veg_option.plating_notes}</p>
+            </div>
+          </CardContent>
+        </Card>
+      )}
     </div>
   );
 }
