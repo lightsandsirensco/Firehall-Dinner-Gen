@@ -30,7 +30,7 @@ const APPLIANCE_OPTIONS = [
 ];
 
 const PROTEIN_OPTIONS = [
-  "chicken", "beef", "pork", "turkey", "fish", "vegetarian", "sausage"
+  "chicken", "beef", "pork", "turkey", "fish", "vegetarian"
 ];
 
 const ALLERGEN_OPTIONS = [

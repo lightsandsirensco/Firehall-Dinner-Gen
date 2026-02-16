@@ -72,9 +72,10 @@ RULES:
 - Scale for ${request.crew_size} servings. 4-6 interruptible steps. 8-12 ingredients. Target 35-60g protein/serving.
 - Every step MUST include explicit temperature (oven temp in °F/°C, or stove heat level like "medium-high") AND approximate cook time.
 - Steps MUST mention when to check internal temperature and the exact target number.
+- SAUSAGE RULE: Sausage is NOT a standalone protein. It is always a subtype of its base meat. If the recipe uses sausage, specify the base protein (e.g., "Pork Sausage", "Chicken Sausage", "Turkey Sausage"). Use the correct safety temp for the base meat. Generic "sausage" = pork sausage.
 - FOOD SAFETY TEMPS (mandatory):
-  * Chicken/turkey: 165°F / 74°C
-  * Ground meats (beef, pork, turkey): 160°F / 71°C
+  * Chicken/turkey (including chicken/turkey sausage): 165°F / 74°C
+  * Ground meats and sausage (beef, pork): 160°F / 71°C
   * Whole pork/pork chops: 145°F / 63°C + 3 min rest
   * Fish/seafood: 145°F / 63°C
   * Reheating leftovers: 165°F / 74°C

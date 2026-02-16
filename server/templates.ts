@@ -57,7 +57,15 @@ export function filterTemplates(templates: TemplateRow[], request: GenerateReque
 
     const templateProteins = t.proteins_allowed.split("|").map((s) => s.trim().toLowerCase());
     const requestProteins = request.proteins.map((s) => s.toLowerCase());
-    const hasProtein = templateProteins.some((p) => requestProteins.includes(p));
+    const resolvedTemplateProteins = templateProteins.flatMap((p) => {
+      if (p === "pork sausage") return ["pork"];
+      if (p === "chicken sausage") return ["chicken"];
+      if (p === "turkey sausage") return ["turkey"];
+      if (p === "beef sausage") return ["beef"];
+      if (p === "sausage") return ["pork"];
+      return [p];
+    });
+    const hasProtein = resolvedTemplateProteins.some((p) => requestProteins.includes(p));
     if (!hasProtein) {
       return false;
     }
