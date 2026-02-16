@@ -1,0 +1,31 @@
+template_id,template_name,style,base_idea_description,appliances_needed,time_range_minutes,busy_level_fit,healthiness_level,proteins_allowed,allergens_possible,mess_level,reheat_friendly
+1,Classic Chicken Stir Fry,Asian,Quick high-protein chicken stir fry with vegetables and rice,stove,20-30,quiet|average|busy,lean,chicken,soy,low,yes
+2,BBQ Pulled Pork Sandwiches,American,Slow-cooked pulled pork with BBQ sauce on buns,slow cooker|oven,60-90,quiet|average,comfort,pork,gluten,medium,yes
+3,Turkey Taco Bowl,Mexican,Seasoned ground turkey with rice beans and toppings,stove,25-40,average|busy,balanced,turkey,dairy,low,yes
+4,Beef Chili,American,Hearty ground beef chili with beans and vegetables,stove|slow cooker,45-60,quiet|average,balanced,beef,none,low,yes
+5,Grilled Chicken Breast Plate,American,Grilled chicken breast with roasted vegetables and potatoes,grill|oven,30-45,quiet|average,lean,chicken,none,low,yes
+6,Sausage and Peppers,Italian,Italian sausage with bell peppers and onions over rice or rolls,stove|oven,25-40,average|busy,comfort,sausage,gluten,low,yes
+7,Fish Tacos,Mexican,Light crispy fish tacos with slaw and lime crema,stove|air fryer,20-30,average|busy,lean,fish,gluten|dairy,medium,no
+8,Instant Pot Chicken Curry,Indian,Creamy chicken curry with rice made in the instant pot,instant pot|rice cooker,30-45,quiet|average|busy,balanced,chicken,dairy,low,yes
+9,One-Pan Beef and Broccoli,Asian,Quick beef and broccoli stir fry with garlic sauce,stove,20-30,average|busy|slammed,balanced,beef,soy,low,yes
+10,Turkey Meatball Subs,Italian,Baked turkey meatballs in marinara on sub rolls,oven|stove,30-45,quiet|average,balanced,turkey,gluten|dairy,medium,yes
+11,Vegetarian Black Bean Burgers,American,Hearty black bean burgers with sweet potato fries,oven|stove,30-45,quiet|average,lean,vegetarian,gluten|eggs,medium,no
+12,Chicken Fajitas,Mexican,Sizzling chicken fajitas with peppers and onions,stove|grill,20-30,average|busy|slammed,lean,chicken,dairy,low,yes
+13,Pork Fried Rice,Asian,Quick pork fried rice with vegetables and eggs,stove|rice cooker,20-30,busy|slammed,balanced,pork,soy|eggs,low,yes
+14,Air Fryer Chicken Wings,American,Crispy air fryer chicken wings with dipping sauces,air fryer|oven,25-40,average|busy,comfort,chicken,none,medium,no
+15,Beef Burrito Bowls,Mexican,Seasoned ground beef over rice with all the fixings,stove|rice cooker,25-40,average|busy|slammed,balanced,beef,dairy,low,yes
+16,Slow Cooker Turkey Chili,American,Lean turkey chili loaded with beans and vegetables,slow cooker,60-90,quiet|average,lean,turkey,none,low,yes
+17,Grilled Sausage with Potato Salad,American,Grilled sausages served with classic potato salad,grill|stove,25-40,average|busy,comfort,sausage,eggs|dairy,low,no
+18,Microwave Chicken Quesadillas,Mexican,Quick cheesy chicken quesadillas in the microwave,microwave|stove,15-25,busy|slammed,comfort,chicken,dairy|gluten,low,yes
+19,Instant Pot Beef Stew,American,Hearty beef stew with potatoes and root vegetables,instant pot,45-60,quiet|average,balanced,beef,none,low,yes
+20,Fish and Rice Bowl,Asian,Simple baked or pan-seared fish over seasoned rice,oven|stove|rice cooker,25-40,average|busy,lean,fish,soy,low,yes
+21,Vegetarian Pasta Primavera,Italian,Pasta loaded with fresh vegetables in light garlic sauce,stove,20-30,average|busy,balanced,vegetarian,gluten,low,yes
+22,Chicken Caesar Wraps,American,Grilled chicken Caesar wraps with romaine and parmesan,stove|grill,15-25,busy|slammed,balanced,chicken,dairy|gluten|eggs,low,no
+23,Pork Tenderloin with Roasted Veggies,American,Roasted pork tenderloin with seasonal vegetables,oven,45-60,quiet|average,lean,pork,none,low,yes
+24,Beef Tacos,Mexican,Classic seasoned ground beef tacos with all the toppings,stove,15-25,average|busy|slammed,balanced,beef,dairy|gluten,low,no
+25,Turkey Sausage Skillet,American,One-pan turkey sausage with peppers potatoes and onions,stove,20-30,average|busy|slammed,lean,turkey|sausage,none,low,yes
+26,Sausage and Lentil Soup,Italian,Hearty sausage and lentil soup with crusty bread,stove|slow cooker,45-60,quiet|average,balanced,sausage,gluten,low,yes
+27,Air Fryer Fish Sticks with Veggies,American,Crispy air fryer fish sticks with roasted broccoli,air fryer|oven,20-30,busy|slammed,balanced,fish,gluten,low,yes
+28,Chicken and Rice Casserole,American,Creamy chicken and rice casserole baked in the oven,oven|rice cooker,45-60,quiet|average,comfort,chicken,dairy,low,yes
+29,Vegetarian Stuffed Peppers,Mediterranean,Bell peppers stuffed with rice beans cheese and vegetables,oven|stove,30-45,quiet|average,lean,vegetarian,dairy,medium,yes
+30,Ground Beef Stroganoff,Eastern European,Creamy ground beef stroganoff over egg noodles,stove,25-40,average|busy,comfort,beef,dairy|gluten|eggs,low,yes
