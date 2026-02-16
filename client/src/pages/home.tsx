@@ -86,7 +86,7 @@ export default function Home() {
             </div>
             <div>
               <h1 className="font-heading text-2xl leading-none tracking-wide text-foreground" data-testid="text-app-title">
-                LIGHTS & SIRENS
+                FIREHALL MEALS
               </h1>
               <p className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground font-medium">
                 Firehall Meal Generator
