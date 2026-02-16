@@ -101,12 +101,19 @@ REQUIRED JSON FORMAT:
     }
   ],
   "ingredients": [{"item":"string","amount":"string","notes":"string"}],
-  "steps": ["Preheat oven to 425°F (218°C). Season chicken... (10 min)"],
+  "steps": [
+    {"heading":"Preheat & prep (425°F / 218°C, ~8 min)","body":"Season chicken. Halve potatoes and toss with oil."},
+    {"heading":"Roast potatoes (10 min)","body":"Spread in single layer, roast until slightly softened."},
+    {"heading":"Add chicken (18–20 min)","body":"Place chicken in center of pan. Remove at 165°F / 74°C."},
+    {"heading":"Rest & serve (5 min)","body":"Let chicken rest, then slice and plate."}
+  ],
   "cleanup_tip": "string",
   "macros_per_serving": {"calories":0,"protein_g":0,"carbs_g":0,"fat_g":0}
 }
 
-IMPORTANT: protein_safety MUST have one entry for EACH protein in the recipe. Always include target_temp_f, target_temp_c, rest_minutes, probe_where, and notes.`;
+IMPORTANT:
+- protein_safety MUST have one entry for EACH protein in the recipe.
+- STEP FORMAT: Each step is an object with "heading" and "body". The heading is a short scannable label with temp/time in parentheses (e.g., "Roast chicken (425°F, 20 min)"). The body contains only short, direct action phrases. NEVER repeat info from the heading in the body. Mention internal temp only once in the most relevant step. No filler phrases like "While oven preheats" or "This step is interruptible". Keep it concise and operational.`;
 
   log(`Generating recipe from template: ${template.template_name} (ID: ${template.template_id})`, "ai");
 

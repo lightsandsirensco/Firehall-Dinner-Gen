@@ -175,15 +175,26 @@ export function RecipeCard({ recipe, crewSize }: RecipeCardProps) {
           <h3 className="font-heading text-lg tracking-wider uppercase text-foreground mb-3">
             Steps
           </h3>
-          <ol className="space-y-3" data-testid="section-steps">
-            {recipe.steps.map((step, i) => (
-              <li key={i} className="flex gap-3">
-                <span className="font-heading text-xl text-primary flex-shrink-0 w-6 text-right leading-6">
-                  {i + 1}
-                </span>
-                <p className="text-sm text-foreground/90 leading-relaxed">{step}</p>
-              </li>
-            ))}
+          <ol className="space-y-4" data-testid="section-steps">
+            {recipe.steps.map((step, i) => {
+              const heading = typeof step === "string" ? null : step.heading;
+              const body = typeof step === "string" ? step : step.body;
+              return (
+                <li key={i} className="flex gap-3" data-testid={`step-${i}`}>
+                  <span className="font-heading text-xl text-primary flex-shrink-0 w-6 text-right leading-6">
+                    {i + 1}
+                  </span>
+                  <div className="flex-1 min-w-0">
+                    {heading && (
+                      <p className="text-sm font-bold text-foreground mb-0.5 leading-snug">
+                        {heading}
+                      </p>
+                    )}
+                    <p className="text-sm text-foreground/80 leading-relaxed">{body}</p>
+                  </div>
+                </li>
+              );
+            })}
           </ol>
         </CardContent>
       </Card>

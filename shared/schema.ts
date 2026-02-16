@@ -41,6 +41,11 @@ export interface ProteinSafetyItem {
   notes: string;
 }
 
+export interface RecipeStep {
+  heading: string;
+  body: string;
+}
+
 export interface GenerateResponse {
   template_id: number;
   title: string;
@@ -48,7 +53,7 @@ export interface GenerateResponse {
   timing: RecipeTiming;
   protein_safety: ProteinSafetyItem[];
   ingredients: IngredientItem[];
-  steps: string[];
+  steps: RecipeStep[];
   cleanup_tip: string;
   macros_per_serving: MacrosPerServing;
 }

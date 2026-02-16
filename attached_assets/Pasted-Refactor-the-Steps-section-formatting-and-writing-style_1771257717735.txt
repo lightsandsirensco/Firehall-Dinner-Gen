@@ -1,0 +1,68 @@
+Refactor the "Steps" section formatting and writing style to eliminate repetition and make it more concise, readable, and professional.
+
+Current problems:
+- Steps repeat the same information multiple times.
+- Example: “Preheat oven to 425°F” is written in the step title and then repeated again in the sentence.
+- Temperatures, timing, and actions are often duplicated in the same line.
+- Steps feel wordy and robotic.
+
+New formatting rules:
+
+1) Remove duplicated phrases.
+   - If temperature is shown in the step title, do NOT repeat it again in the body text.
+   - Avoid repeating the same action twice (ex: “Preheat oven…” followed by “While oven preheats…”).
+
+2) Use this cleaner structure per step:
+
+   Step 1 — Preheat & prep (425°F / 218°C, ~5–8 min)
+   - Set oven to 425°F (218°C).
+   - Rinse and halve potatoes.
+   - Mix chicken with oil, lemon, garlic, and spices in a bowl.
+
+3) Keep step titles short and scannable:
+   - Preheat & prep
+   - Start potatoes
+   - Add chicken & finish roasting
+   - Cook sides
+   - Rest & serve
+
+4) Body text should:
+   - Be written in short, direct instructions
+   - Avoid repeating temperatures and times already shown in the header
+   - Focus only on actions
+   - Use bullet-style sentence flow (but still structured text)
+
+5) Keep safety information, but streamline it:
+   - Mention internal temp only once in the most relevant step.
+   - Example:
+     "Check thickest part; remove when it reaches 165°F / 74°C."
+
+6) Reduce verbosity:
+   - Replace long explanations with short operational phrases.
+   - Avoid phrases like:
+     - "While oven preheats..."
+     - "This step is interruptible..."
+     - "Continue cooking and re-check every..."
+   - Instead:
+     - "Check temp at 18 minutes."
+     - "Rest 5 minutes before slicing."
+
+7) Output style example:
+
+   Step 1 — Preheat & prep (425°F / 218°C, ~8 min)
+   Prep potatoes and season chicken.
+
+   Step 2 — Roast potatoes (10 min)
+   Spread in a single layer and roast until slightly softened.
+
+   Step 3 — Add chicken (18–20 min)
+   Place chicken in center of pan. Cook until internal temp reaches 165°F / 74°C.
+
+   Step 4 — Cook sides (stovetop, ~15 min)
+   Simmer quinoa and sauté green beans until tender.
+
+   Step 5 — Rest & serve (5 min)
+   Let chicken rest, then slice and plate.
+
+Goal:
+Make steps cleaner, less repetitive, and easier to scan quickly in a real firehall cooking environment.
