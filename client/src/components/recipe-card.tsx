@@ -156,7 +156,10 @@ function buildPrintHtml(recipe: GenerateResponse, crewSize: number): string {
     ${recipe.veg_option.plating_notes}
   </div>` : ""}
 
-  <div class="footer">www.lightsandsirensco.com</div>
+  <div class="footer">
+    www.lightsandsirensco.com<br>
+    <span style="font-size:11px;color:#888">Powered by Lights &amp; Sirens Co.</span>
+  </div>
 
   <script>window.onload = function() { window.print(); }</script>
 </body>

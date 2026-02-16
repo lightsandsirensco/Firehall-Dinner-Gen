@@ -133,6 +133,20 @@ export default function Home() {
           healthinessLevel={filters.healthiness_preference}
         />
       )}
+      <footer className="text-center py-4 mt-6">
+        <p className="text-xs text-muted-foreground/60">
+          Powered by{" "}
+          <a
+            href="https://www.lightsandsirensco.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-muted-foreground transition-colors"
+            data-testid="link-attribution"
+          >
+            Lights &amp; Sirens Co.
+          </a>
+        </p>
+      </footer>
     </div>
   );
 }
