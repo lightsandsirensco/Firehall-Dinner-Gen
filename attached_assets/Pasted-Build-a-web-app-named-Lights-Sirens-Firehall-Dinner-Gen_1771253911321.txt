@@ -1,0 +1,92 @@
+Build a web app named: “Lights & Sirens Firehall Dinner Generator” (NOT a meal planner).
+
+V1 goal:
+Generate ONE dinner recipe for a firefighter crew based on filters. No multi-day plans.
+
+Design:
+- Dark, premium firehouse aesthetic (high contrast, clean, performance-focused).
+- Use Bebas Neue for headings/buttons/titles and Inter for body text.
+
+Data:
+- I will upload a CSV into the project at: /data/firehall_templates_v1.csv
+- Use these exact CSV headers:
+  template_id, template_name, style, base_idea_description, appliances_needed, time_range_minutes, busy_level_fit, healthiness_level, proteins_allowed, allergens_possible, mess_level, reheat_friendly
+- Do NOT build a separate “Templates” uploader page and do NOT assume any other CSV format. Read the CSV directly from /data.
+
+UI (single page):
+Left panel filters:
+1) crew_size (2–20)
+2) busy_level (quiet, average, busy, slammed)
+3) time_available (15-25, 20-30, 25-40, 30-45, 45-60, 60-90)
+4) appliances (multi-select: stove, oven, grill, slow cooker, rice cooker, air fryer, microwave, instant pot)
+5) proteins (multi-select: chicken, beef, pork, turkey, fish, vegetarian, sausage)
+6) healthiness_preference (lean, balanced, comfort)
+7) IMPORTANT: allergies/restrictions filter (multi-select “Avoid”):
+   dairy, gluten, soy, eggs, nuts
+
+Right panel output card:
+- title
+- why_it_fits_tonight
+- ingredients scaled to crew_size
+- steps (firehall practical, interruptible)
+- cleanup_tip
+- estimated macros per serving: calories, protein_g, carbs_g, fat_g (strong performance/high-protein bias)
+
+Behavior:
+- Provide POST /api/generate that accepts JSON:
+  crew_size,
+  busy_level,
+  time_available,
+  appliances[],
+  proteins[],
+  healthiness_preference,
+  allergens_to_avoid[],   // very important
+  last_template_id (optional)
+
+Template selection:
+- Load CSV from /data/firehall_templates_v1.csv on request (or cache in memory safely).
+- Filter templates by:
+  - busy_level must be included in template.busy_level_fit
+  - time_available must be compatible with template.time_range_minutes
+  - appliances must overlap with template.appliances_needed
+  - proteins must overlap with template.proteins_allowed
+  - healthiness_preference should bias selection (prefer lean/balanced by default; comfort less often)
+  - VERY IMPORTANT: allergens_to_avoid must be enforced:
+    - Exclude any template whose allergens_possible contains any avoided allergen.
+    - Treat “none” as safe.
+- Randomly pick one from the remaining candidates.
+- IMPORTANT anti-repeat: if last_template_id is provided, exclude it from candidates to avoid returning the same template twice in a row (unless no alternatives exist).
+
+AI generation:
+- Call an LLM to generate ONE complete dinner recipe based on the chosen template and constraints.
+- Hard rules:
+  - Do not include ingredients containing allergens_to_avoid.
+  - If necessary, substitute safe alternatives (e.g., dairy-free, gluten-free, soy-free).
+- Strongly performance-focused: higher protein per serving (target 35–60g), moderate carbs, moderate fats.
+
+Return JSON only:
+{
+  template_id,
+  title,
+  why_it_fits_tonight,
+  ingredients: [{ item, amount, notes }],
+  steps: [string],
+  cleanup_tip,
+  macros_per_serving: { calories, protein_g, carbs_g, fat_g }
+}
+
+UX:
+- Buttons: “Generate Dinner” and “Generate Another”
+- “Generate Another” must:
+  - keep the same filters
+  - call /api/generate again
+  - send last_template_id to prevent repeats
+  - feel instant (no page reload; show a smooth loading state)
+- If no templates match, show a friendly message suggesting which filter to loosen.
+
+Do NOT add:
+- accounts
+- meal plans
+- history page
+- template management UI
+- Shopify integration
