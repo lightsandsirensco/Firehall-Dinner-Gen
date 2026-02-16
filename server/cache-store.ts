@@ -53,14 +53,14 @@ export function initCacheStore() {
   log("Cache store initialized", "cache");
 }
 
-export function buildCacheKey(templateId: string, request: GenerateRequest): string {
+export function buildCacheKey(templateId: string, request: GenerateRequest, chosenProtein?: string): string {
   const keyData = JSON.stringify({
     template_id: templateId,
     crew_size: request.crew_size,
     busy_level: request.busy_level,
     time_available: request.time_available,
     appliances: [...request.appliances].sort(),
-    proteins: [...request.proteins].sort(),
+    chosen_protein: chosenProtein || [...request.proteins].sort().join(","),
     healthiness_preference: request.healthiness_preference,
     allergens_to_avoid: [...request.allergens_to_avoid].sort(),
   });

@@ -3,7 +3,7 @@ import { type Server } from "http";
 import crypto from "crypto";
 import cookieParser from "cookie-parser";
 import { generateRequestSchema } from "@shared/schema";
-import { loadTemplates, filterTemplates, pickTemplate } from "./templates";
+import { loadTemplates, filterTemplates, pickTemplate, chooseProtein } from "./templates";
 import { generateRecipe } from "./ai";
 import { log } from "./index";
 import {
@@ -137,7 +137,8 @@ export async function registerRoutes(
       }
 
       const chosen = pickTemplate(candidates, request.last_template_id);
-      const cacheKey = buildCacheKey(chosen.template_id, request);
+      const chosenProtein = chooseProtein(chosen, request.proteins, request.healthiness_preference);
+      const cacheKey = buildCacheKey(chosen.template_id, request, chosenProtein);
       const startTime = Date.now();
 
       const cached = getCachedRecipe(cacheKey);
@@ -165,7 +166,7 @@ export async function registerRoutes(
         });
       }
 
-      const { recipe, tokensIn, tokensOut } = await generateRecipe(chosen, request);
+      const { recipe, tokensIn, tokensOut } = await generateRecipe(chosen, request, chosenProtein);
 
       const estimatedCost =
         (tokensIn / 1000) * COST_PER_1K_INPUT +

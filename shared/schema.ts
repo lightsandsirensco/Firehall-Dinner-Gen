@@ -48,6 +48,7 @@ export interface RecipeStep {
 
 export interface GenerateResponse {
   template_id: number;
+  chosen_protein: string;
   title: string;
   why_it_fits_tonight: string;
   timing: RecipeTiming;

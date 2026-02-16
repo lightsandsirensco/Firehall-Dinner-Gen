@@ -61,12 +61,15 @@ async function callAI(prompt: string, systemPrompt: string): Promise<{ content: 
 
 export async function generateRecipe(
   template: TemplateRow,
-  request: GenerateRequest
+  request: GenerateRequest,
+  chosenProtein: string
 ): Promise<AIResult> {
   const allergenWarning =
     request.allergens_to_avoid.length > 0
       ? `CRITICAL: The crew has allergies: ${request.allergens_to_avoid.join(", ")}. Do NOT include any ingredients with these allergens. Use safe substitutes.`
       : "No allergy restrictions.";
+
+  const proteinDisplay = chosenProtein.charAt(0).toUpperCase() + chosenProtein.slice(1);
 
   const prompt = `Generate ONE firehall dinner recipe as JSON.
 
@@ -75,9 +78,11 @@ Appliances: ${template.appliances_needed}
 
 CREW: ${request.crew_size} people | Shift: ${request.busy_level} | Time: ${request.time_available} min
 Appliances available: ${request.appliances.join(", ")}
-Proteins: ${request.proteins.join(", ")}
 Healthiness: ${request.healthiness_preference}
 ${allergenWarning}
+
+PRIMARY PROTEIN: ${proteinDisplay}
+CRITICAL PROTEIN RULE: Use ONLY "${proteinDisplay}" as the primary protein in this recipe. Do NOT include any other meats or proteins as main ingredients. Small accent ingredients (e.g., bacon bits as garnish, parmesan) are acceptable, but the main protein must be ONLY ${proteinDisplay}.
 
 RULES:
 - Scale for ${request.crew_size} servings. 4-6 interruptible steps. 8-12 ingredients. Target 35-60g protein/serving.
@@ -94,6 +99,7 @@ RULES:
 REQUIRED JSON FORMAT:
 {
   "template_id": ${template.template_id},
+  "chosen_protein": "${proteinDisplay}",
   "title": "string",
   "why_it_fits_tonight": "string",
   "timing": {
@@ -144,6 +150,7 @@ IMPORTANT:
   }
 
   recipe.template_id = parseInt(template.template_id);
+  recipe.chosen_protein = proteinDisplay;
 
   if (!recipe.timing) {
     recipe.timing = { prep_minutes: 0, cook_minutes: 0, total_minutes: 0 };

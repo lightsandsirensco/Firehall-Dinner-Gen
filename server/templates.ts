@@ -87,6 +87,53 @@ export function filterTemplates(templates: TemplateRow[], request: GenerateReque
   });
 }
 
+function resolveTemplateProteins(raw: string): string[] {
+  return raw.split("|").map((s) => s.trim().toLowerCase());
+}
+
+function resolveToBase(protein: string): string {
+  const p = protein.toLowerCase();
+  if (p.includes("sausage")) {
+    if (p.includes("chicken")) return "chicken";
+    if (p.includes("turkey")) return "turkey";
+    if (p.includes("beef")) return "beef";
+    return "pork";
+  }
+  return p;
+}
+
+const LEAN_ORDER = ["chicken", "turkey", "fish", "shrimp", "tofu", "beans", "pork", "beef", "lamb"];
+
+export function chooseProtein(
+  template: TemplateRow,
+  userProteins: string[],
+  healthiness: string
+): string {
+  const templateProteins = resolveTemplateProteins(template.proteins_allowed);
+  const userLower = userProteins.map((p) => p.toLowerCase());
+
+  const compatible = userLower.filter((up) =>
+    templateProteins.some((tp) => resolveToBase(tp) === up || tp === up)
+  );
+
+  if (compatible.length === 0) {
+    const fallback = templateProteins.find((tp) => userLower.includes(resolveToBase(tp)));
+    return fallback ? resolveToBase(fallback) : userLower[0];
+  }
+
+  if (compatible.length === 1) return compatible[0];
+
+  if (healthiness === "lean") {
+    const sorted = [...compatible].sort(
+      (a, b) => (LEAN_ORDER.indexOf(a) === -1 ? 99 : LEAN_ORDER.indexOf(a)) -
+                (LEAN_ORDER.indexOf(b) === -1 ? 99 : LEAN_ORDER.indexOf(b))
+    );
+    return sorted[0];
+  }
+
+  return compatible[Math.floor(Math.random() * compatible.length)];
+}
+
 export function pickTemplate(candidates: TemplateRow[], lastTemplateId?: number): TemplateRow {
   if (lastTemplateId !== undefined && candidates.length > 1) {
     const filtered = candidates.filter(

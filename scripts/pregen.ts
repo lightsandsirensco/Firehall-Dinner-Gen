@@ -1,4 +1,4 @@
-import { loadTemplates, filterTemplates } from "../server/templates";
+import { loadTemplates, filterTemplates, chooseProtein } from "../server/templates";
 import { generateRecipe } from "../server/ai";
 import { initCacheStore, buildCacheKey, getCachedRecipe, setCachedRecipe } from "../server/cache-store";
 import type { GenerateRequest } from "../shared/schema";
@@ -53,7 +53,8 @@ async function main() {
               }
 
               const template = candidates[0];
-              const cacheKey = buildCacheKey(template.template_id, request);
+              const protein = chooseProtein(template, proteins, health);
+              const cacheKey = buildCacheKey(template.template_id, request, protein);
 
               if (getCachedRecipe(cacheKey)) {
                 cached++;
@@ -61,8 +62,8 @@ async function main() {
               }
 
               try {
-                console.log(`Generating: crew=${crewSize} busy=${busy} time=${time} proteins=${proteins.join(",")} template=${template.template_name}`);
-                const { recipe } = await generateRecipe(template, request);
+                console.log(`Generating: crew=${crewSize} busy=${busy} time=${time} protein=${protein} template=${template.template_name}`);
+                const { recipe } = await generateRecipe(template, request, protein);
                 setCachedRecipe(cacheKey, parseInt(template.template_id), recipe);
                 generated++;
                 console.log(`  -> Cached: ${recipe.title}`);

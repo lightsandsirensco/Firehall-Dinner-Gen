@@ -94,7 +94,7 @@ function buildPrintHtml(recipe: GenerateResponse, crewSize: number): string {
 <body>
   <h1>${recipe.title}</h1>
   <p class="subtitle">${recipe.why_it_fits_tonight}</p>
-  <p class="servings">Serves ${crewSize}</p>
+  <p class="servings">Serves ${crewSize}${recipe.chosen_protein ? ` &bull; Protein: ${recipe.chosen_protein}` : ""}</p>
 
   ${recipe.timing ? `
   <h2>Timing</h2>
@@ -170,6 +170,14 @@ export function RecipeCard({ recipe, crewSize }: RecipeCardProps) {
         <p className="text-sm text-muted-foreground" data-testid="text-recipe-why">
           {recipe.why_it_fits_tonight}
         </p>
+        {recipe.chosen_protein && (
+          <div className="flex items-center gap-2 mt-1">
+            <Beef className="w-4 h-4 text-primary" />
+            <span className="text-sm font-medium text-foreground" data-testid="text-chosen-protein">
+              Protein: {recipe.chosen_protein}
+            </span>
+          </div>
+        )}
       </div>
 
       <div className="flex flex-wrap gap-3" data-testid="section-timing-macros">
