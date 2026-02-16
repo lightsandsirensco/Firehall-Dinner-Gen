@@ -26,14 +26,28 @@ export default function Home() {
     healthiness_preference: "balanced",
     allergens_to_avoid: [],
     vegetarian_swap_needed: false,
+    use_what_we_have: false,
+    ingredients_on_hand_text: "",
   });
 
   const handleGenerate = async (currentFilters: FilterState, templateId?: number) => {
     setLoading(true);
     setError(null);
     try {
+      const ingredients_on_hand = currentFilters.use_what_we_have
+        ? currentFilters.ingredients_on_hand_text.split(",").map(s => s.trim()).filter(Boolean)
+        : [];
       const res = await apiRequest("POST", "/api/generate", {
-        ...currentFilters,
+        crew_size: currentFilters.crew_size,
+        busy_level: currentFilters.busy_level,
+        time_available: currentFilters.time_available,
+        appliances: currentFilters.appliances,
+        proteins: currentFilters.use_what_we_have ? ["chicken"] : currentFilters.proteins,
+        healthiness_preference: currentFilters.healthiness_preference,
+        allergens_to_avoid: currentFilters.allergens_to_avoid,
+        vegetarian_swap_needed: currentFilters.vegetarian_swap_needed,
+        use_what_we_have: currentFilters.use_what_we_have,
+        ingredients_on_hand,
         last_template_id: templateId,
       });
       const data: GenerateResponse = await res.json();

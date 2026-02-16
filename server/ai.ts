@@ -198,3 +198,131 @@ IMPORTANT:
 
   return { recipe, tokensIn, tokensOut };
 }
+
+export async function generateRecipeFromPantry(
+  template: TemplateRow,
+  request: GenerateRequest
+): Promise<AIResult> {
+  const ingredientsList = (request.ingredients_on_hand || []).join(", ");
+
+  const allergenWarning =
+    request.allergens_to_avoid.length > 0
+      ? `CRITICAL: The crew has allergies: ${request.allergens_to_avoid.join(", ")}. Do NOT include any ingredients with these allergens. Use safe substitutes. This applies to BOTH the main recipe AND any vegetarian option.`
+      : "No allergy restrictions.";
+
+  const vegOptionBlock = request.vegetarian_swap_needed
+    ? `
+VEG OPTION REQUIRED: One crew member is vegetarian. Include a "veg_option" section in the JSON.
+- Make the SAME meal vegetarian for 1 person only.
+- Choose ONE vegetarian protein swap from: chickpeas, lentils, black beans, tofu, tempeh, paneer (only if dairy is NOT in allergens_to_avoid), or plant-based ground.
+- Provide a short parallel cooking method (5-10 minutes extra max).
+- Include cross-contamination guidance.
+${request.allergens_to_avoid.includes("dairy") ? "- Do NOT use paneer or any dairy-based protein swap." : ""}
+${request.allergens_to_avoid.includes("soy") ? "- Do NOT use tofu or tempeh as protein swap." : ""}`
+    : "";
+
+  const vegJsonBlock = request.vegetarian_swap_needed
+    ? `,
+  "veg_option": {
+    "enabled": true,
+    "swap_protein": "chickpeas",
+    "ingredients": [{"item":"canned chickpeas","amount":"1 can (400g)","notes":"drained and rinsed"}],
+    "steps": ["Cook chickpeas in a separate pan (5 min). Toss with same sauce as main recipe."],
+    "plating_notes": "Plate on a separate dish, label 'VEG'. Use separate serving utensils."
+  }`
+    : "";
+
+  const prompt = `Generate ONE firehall meal recipe as JSON using ingredients the crew already has on hand.
+
+INGREDIENTS ON HAND: ${ingredientsList}
+
+TEMPLATE STYLE: ${template.template_name} (${template.style}) - ${template.base_idea_description}
+Appliances available: ${request.appliances.join(", ")}
+
+CREW: ${request.crew_size} people | Shift: ${request.busy_level} | Time: ${request.time_available} min
+Healthiness: ${request.healthiness_preference}
+${allergenWarning}
+
+PANTRY MODE RULES:
+- Build a practical firehall-style meal using AS MANY of the provided ingredients as practical.
+- You do NOT have to use ALL ingredients. Use at least one primary ingredient.
+- Identify the likely protein from the provided ingredients (chicken, beef, eggs, pork, etc.).
+- Keep the recipe simple and practical. No exotic dishes.
+- If essential items are missing, list them in "extra_items_needed" (1-4 items max, things like oil, salt, basic seasonings don't count as extra).
+- List which of the user's provided ingredients you actually used in "ingredients_used".
+${vegOptionBlock}
+
+RULES:
+- Scale for ${request.crew_size} servings. 4-6 interruptible steps. 8-12 ingredients. Target 35-60g protein/serving.
+- Every step MUST include explicit temperature and approximate cook time.
+- Steps MUST mention when to check internal temperature and the exact target number.
+- FOOD SAFETY TEMPS (mandatory):
+  * Chicken/turkey: 165°F / 74°C
+  * Ground meats and sausage (beef, pork): 160°F / 71°C
+  * Whole pork/pork chops: 145°F / 63°C + 3 min rest
+  * Fish/seafood: 145°F / 63°C
+
+REQUIRED JSON FORMAT:
+{
+  "template_id": ${template.template_id},
+  "chosen_protein": "the primary protein used",
+  "title": "string",
+  "why_it_fits_tonight": "string",
+  "timing": {"prep_minutes": 0, "cook_minutes": 0, "total_minutes": 0},
+  "protein_safety": [{"protein":"string","target_temp_f":0,"target_temp_c":0,"rest_minutes":0,"probe_where":"string","notes":"string"}],
+  "ingredients": [{"item":"string","amount":"string","notes":"string"}],
+  "steps": [{"heading":"short label with temp/time","body":"action phrases"}],
+  "cleanup_tip": "string",
+  "macros_per_serving": {"calories":0,"protein_g":0,"carbs_g":0,"fat_g":0},
+  "ingredients_used": ["chicken", "rice", "peppers"],
+  "extra_items_needed": ["soy sauce", "sesame oil"]${vegJsonBlock}
+}
+
+IMPORTANT:
+- "ingredients_used" must ONLY contain items from the user's provided list: [${ingredientsList}]. Do not add items the user didn't provide.
+- "extra_items_needed" lists items NOT in the user's list that are needed (exclude basic pantry staples like salt, pepper, oil, butter).
+- protein_safety MUST have one entry for EACH protein in the recipe.
+- STEP FORMAT: Each step is an object with "heading" and "body". Keep it concise and operational.`;
+
+  log(`Generating pantry recipe from template: ${template.template_name} (ID: ${template.template_id}), ingredients: ${ingredientsList}`, "ai");
+
+  const { content, tokensIn, tokensOut } = await callAI(
+    prompt,
+    "You are a firehall chef focused on food safety. Return ONLY valid JSON. No markdown. No code fences. Always include cooking temperatures and internal temp targets for every protein."
+  );
+
+  log(`AI pantry response received (${content.length} chars, ${tokensIn} in / ${tokensOut} out tokens)`, "ai");
+
+  let recipe: GenerateResponse;
+  try {
+    recipe = JSON.parse(content) as GenerateResponse;
+  } catch {
+    log(`Failed to parse AI JSON: ${content.substring(0, 200)}`, "ai");
+    throw new Error("Failed to parse AI response. Please try again.");
+  }
+
+  recipe.template_id = parseInt(template.template_id);
+
+  if (!recipe.chosen_protein) {
+    recipe.chosen_protein = "Pantry mix";
+  }
+
+  if (!recipe.timing) {
+    recipe.timing = { prep_minutes: 0, cook_minutes: 0, total_minutes: 0 };
+  }
+  if (!recipe.protein_safety || !Array.isArray(recipe.protein_safety)) {
+    recipe.protein_safety = [];
+  }
+  if (!recipe.ingredients_used) {
+    recipe.ingredients_used = [];
+  }
+  if (!recipe.extra_items_needed) {
+    recipe.extra_items_needed = [];
+  }
+
+  if (!recipe.title || !recipe.ingredients || !recipe.steps) {
+    throw new Error("AI returned incomplete recipe data. Please try again.");
+  }
+
+  return { recipe, tokensIn, tokensOut };
+}

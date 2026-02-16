@@ -4,7 +4,7 @@ import crypto from "crypto";
 import cookieParser from "cookie-parser";
 import { generateRequestSchema } from "@shared/schema";
 import { loadTemplates, filterTemplates, pickTemplate, chooseProtein } from "./templates";
-import { generateRecipe } from "./ai";
+import { generateRecipe, generateRecipeFromPantry } from "./ai";
 import { subscribeToList, trackRecipeEvent } from "./klaviyo";
 import { log } from "./index";
 import {
@@ -130,6 +130,11 @@ export async function registerRoutes(
       }
 
       const request = parsed.data;
+
+      if (request.use_what_we_have && (!request.ingredients_on_hand || request.ingredients_on_hand.length === 0)) {
+        return res.status(400).json({ message: "Please enter at least one ingredient when using 'Use What We Have' mode." });
+      }
+
       const templates = await loadTemplates();
       const candidates = filterTemplates(templates, request);
 
@@ -138,7 +143,7 @@ export async function registerRoutes(
       }
 
       const chosen = pickTemplate(candidates, request.last_template_id);
-      const chosenProtein = chooseProtein(chosen, request.proteins, request.healthiness_preference);
+      const chosenProtein = request.use_what_we_have ? "pantry" : chooseProtein(chosen, request.proteins, request.healthiness_preference);
       const cacheKey = buildCacheKey(chosen.template_id, request, chosenProtein);
       const startTime = Date.now();
 
@@ -167,7 +172,9 @@ export async function registerRoutes(
         });
       }
 
-      const { recipe, tokensIn, tokensOut } = await generateRecipe(chosen, request, chosenProtein);
+      const { recipe, tokensIn, tokensOut } = request.use_what_we_have
+        ? await generateRecipeFromPantry(chosen, request)
+        : await generateRecipe(chosen, request, chosenProtein);
 
       const estimatedCost =
         (tokensIn / 1000) * COST_PER_1K_INPUT +

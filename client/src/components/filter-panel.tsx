@@ -2,10 +2,12 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Slider } from "@/components/ui/slider";
+import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Switch } from "@/components/ui/switch";
 import { Badge } from "@/components/ui/badge";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Flame, RefreshCw, Users, Clock, Zap, Dumbbell, ShieldAlert, ChefHat, Leaf } from "lucide-react";
+import { Flame, RefreshCw, Users, Clock, Zap, Dumbbell, ShieldAlert, ChefHat, Leaf, Package } from "lucide-react";
 
 export interface FilterState {
   crew_size: number;
@@ -16,6 +18,8 @@ export interface FilterState {
   healthiness_preference: string;
   allergens_to_avoid: string[];
   vegetarian_swap_needed: boolean;
+  use_what_we_have: boolean;
+  ingredients_on_hand_text: string;
 }
 
 interface FilterPanelProps {
@@ -103,6 +107,32 @@ export function FilterPanel({ filters, onFiltersChange, onGenerate, onGenerateAn
     <div className="space-y-4">
       <Card>
         <CardContent className="p-4 space-y-5">
+          <div className="space-y-3">
+            <div className="flex items-center justify-between gap-3">
+              <Label
+                htmlFor="use-what-we-have"
+                className="flex items-center gap-2 text-xs uppercase tracking-wider text-muted-foreground font-medium cursor-pointer select-none"
+              >
+                <Package className="w-3.5 h-3.5" />
+                Use What We Have
+              </Label>
+              <Switch
+                id="use-what-we-have"
+                checked={filters.use_what_we_have}
+                onCheckedChange={(checked) => update("use_what_we_have", !!checked)}
+                data-testid="switch-use-what-we-have"
+              />
+            </div>
+            {filters.use_what_we_have && (
+              <Input
+                placeholder="chicken, rice, eggs, peppers, pasta, ground beef"
+                value={filters.ingredients_on_hand_text}
+                onChange={(e) => update("ingredients_on_hand_text", e.target.value)}
+                data-testid="input-ingredients-on-hand"
+              />
+            )}
+          </div>
+
           <div className="space-y-2">
             <Label className="flex items-center gap-2 text-xs uppercase tracking-wider text-muted-foreground font-medium">
               <Users className="w-3.5 h-3.5" />
@@ -171,18 +201,20 @@ export function FilterPanel({ filters, onFiltersChange, onGenerate, onGenerateAn
             />
           </div>
 
-          <div className="space-y-2">
-            <Label className="flex items-center gap-2 text-xs uppercase tracking-wider text-muted-foreground font-medium">
-              <Dumbbell className="w-3.5 h-3.5" />
-              Proteins
-            </Label>
-            <MultiToggle
-              options={PROTEIN_OPTIONS}
-              selected={filters.proteins}
-              onChange={(val) => update("proteins", val)}
-              testIdPrefix="toggle-protein"
-            />
-          </div>
+          {!filters.use_what_we_have && (
+            <div className="space-y-2">
+              <Label className="flex items-center gap-2 text-xs uppercase tracking-wider text-muted-foreground font-medium">
+                <Dumbbell className="w-3.5 h-3.5" />
+                Proteins
+              </Label>
+              <MultiToggle
+                options={PROTEIN_OPTIONS}
+                selected={filters.proteins}
+                onChange={(val) => update("proteins", val)}
+                testIdPrefix="toggle-protein"
+              />
+            </div>
+          )}
 
           <div className="space-y-2">
             <Label className="flex items-center gap-2 text-xs uppercase tracking-wider text-muted-foreground font-medium">
@@ -243,7 +275,7 @@ export function FilterPanel({ filters, onFiltersChange, onGenerate, onGenerateAn
             size="lg"
             className="w-full font-heading text-lg tracking-wider"
             onClick={onGenerate}
-            disabled={isLoading || filters.appliances.length === 0 || filters.proteins.length === 0}
+            disabled={isLoading || filters.appliances.length === 0 || (!filters.use_what_we_have && filters.proteins.length === 0) || (filters.use_what_we_have && filters.ingredients_on_hand_text.trim().length === 0)}
             data-testid="button-generate"
           >
             {isLoading ? (

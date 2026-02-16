@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import type { GenerateResponse } from "@shared/schema";
-import { Flame, Droplets, Wheat, Beef, Sparkles, Trash2, Clock, Timer, ShieldCheck, Thermometer, Printer, Leaf, Mail } from "lucide-react";
+import { Flame, Droplets, Wheat, Beef, Sparkles, Trash2, Clock, Timer, ShieldCheck, Thermometer, Printer, Leaf, Mail, Package, ShoppingCart } from "lucide-react";
 
 interface RecipeCardProps {
   recipe: GenerateResponse;
@@ -96,6 +96,13 @@ function buildPrintHtml(recipe: GenerateResponse, crewSize: number): string {
   <h1>${recipe.title}</h1>
   <p class="subtitle">${recipe.why_it_fits_tonight}</p>
   <p class="servings">Serves ${crewSize}${recipe.chosen_protein ? ` &bull; Protein: ${recipe.chosen_protein}` : ""}</p>
+
+  ${recipe.ingredients_used && recipe.ingredients_used.length > 0 ? `
+  <h2>Using What You Have</h2>
+  <p style="font-size:14px;margin-bottom:4px">${recipe.ingredients_used.join(", ")}</p>
+  ${recipe.extra_items_needed && recipe.extra_items_needed.length > 0 ? `
+  <p style="font-size:13px;color:#666;margin-top:8px"><strong>You may need to grab:</strong> ${recipe.extra_items_needed.join(", ")}</p>` : ""}
+  ` : ""}
 
   ${recipe.timing ? `
   <h2>Timing</h2>
@@ -211,6 +218,39 @@ export function RecipeCard({ recipe, crewSize, onEmailClick }: RecipeCardProps) 
           </div>
         )}
       </div>
+
+      {recipe.ingredients_used && recipe.ingredients_used.length > 0 && (
+        <Card data-testid="section-ingredients-used">
+          <CardContent className="p-4">
+            <div className="flex items-center gap-2 mb-3">
+              <Package className="w-4 h-4 text-primary" />
+              <h3 className="font-heading text-lg tracking-wider uppercase text-foreground">Using What You Have</h3>
+            </div>
+            <div className="flex flex-wrap gap-1.5">
+              {recipe.ingredients_used.map((item, i) => (
+                <Badge key={i} variant="outline" className="capitalize" data-testid={`badge-ingredient-used-${i}`}>
+                  {item}
+                </Badge>
+              ))}
+            </div>
+            {recipe.extra_items_needed && recipe.extra_items_needed.length > 0 && (
+              <div className="mt-3 pt-3 border-t border-border/40">
+                <div className="flex items-center gap-2 mb-2">
+                  <ShoppingCart className="w-3.5 h-3.5 text-muted-foreground" />
+                  <span className="text-xs uppercase tracking-wider text-muted-foreground font-medium">You may need to grab</span>
+                </div>
+                <div className="flex flex-wrap gap-1.5">
+                  {recipe.extra_items_needed.map((item, i) => (
+                    <Badge key={i} variant="secondary" className="capitalize" data-testid={`badge-extra-item-${i}`}>
+                      {item}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
+            )}
+          </CardContent>
+        </Card>
+      )}
 
       <div className="flex flex-wrap gap-3" data-testid="section-timing-macros">
         {hasTiming && (

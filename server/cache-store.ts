@@ -64,6 +64,8 @@ export function buildCacheKey(templateId: string, request: GenerateRequest, chos
     healthiness_preference: request.healthiness_preference,
     allergens_to_avoid: [...request.allergens_to_avoid].sort(),
     vegetarian_swap_needed: !!request.vegetarian_swap_needed,
+    use_what_we_have: !!request.use_what_we_have,
+    ingredients_on_hand: request.ingredients_on_hand ? [...request.ingredients_on_hand].sort() : [],
   });
   return crypto.createHash("sha256").update(keyData).digest("hex").substring(0, 32);
 }
