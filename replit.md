@@ -65,14 +65,14 @@ A single-page web app that generates one high-protein meal recipe for a firefigh
 - `SESSION_SECRET` - Session encryption key
 - `KLAVIYO_API_KEY` - Klaviyo private API key for email capture
 
-## Use What We Have Mode
-- Toggle in filter panel enables "pantry mode"
+## Use What's in the Fridge Mode
+- Toggle in filter panel enables "pantry mode" (labeled "Use What's in the Fridge")
 - Users enter comma-separated ingredients they have on hand
 - Protein filter is hidden when mode is active
 - Template filtering bypasses protein matching in this mode
 - AI generates recipes prioritizing provided ingredients
 - Response includes ingredients_used[] and extra_items_needed[]
-- Recipe card shows "Using What You Have" section with used ingredients
+- Recipe card shows "Using What's in the Fridge" section with used ingredients
 - "You may need to grab" section shows 1-4 extra items if needed
 - Print layout also includes pantry sections
 - Cache key includes use_what_we_have and ingredients_on_hand

@@ -98,7 +98,7 @@ function buildPrintHtml(recipe: GenerateResponse, crewSize: number): string {
   <p class="servings">Serves ${crewSize}${recipe.chosen_protein ? ` &bull; Protein: ${recipe.chosen_protein}` : ""}</p>
 
   ${recipe.ingredients_used && recipe.ingredients_used.length > 0 ? `
-  <h2>Using What You Have</h2>
+  <h2>Using What's in the Fridge</h2>
   <p style="font-size:14px;margin-bottom:4px">${recipe.ingredients_used.join(", ")}</p>
   ${recipe.extra_items_needed && recipe.extra_items_needed.length > 0 ? `
   <p style="font-size:13px;color:#666;margin-top:8px"><strong>You may need to grab:</strong> ${recipe.extra_items_needed.join(", ")}</p>` : ""}
@@ -224,7 +224,7 @@ export function RecipeCard({ recipe, crewSize, onEmailClick }: RecipeCardProps) 
           <CardContent className="p-4">
             <div className="flex items-center gap-2 mb-3">
               <Package className="w-4 h-4 text-primary" />
-              <h3 className="font-heading text-lg tracking-wider uppercase text-foreground">Using What You Have</h3>
+              <h3 className="font-heading text-lg tracking-wider uppercase text-foreground">Using What's in the Fridge</h3>
             </div>
             <div className="flex flex-wrap gap-1.5">
               {recipe.ingredients_used.map((item, i) => (

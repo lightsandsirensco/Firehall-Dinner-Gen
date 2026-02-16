@@ -132,7 +132,7 @@ export async function registerRoutes(
       const request = parsed.data;
 
       if (request.use_what_we_have && (!request.ingredients_on_hand || request.ingredients_on_hand.length === 0)) {
-        return res.status(400).json({ message: "Please enter at least one ingredient when using 'Use What We Have' mode." });
+        return res.status(400).json({ message: "Please enter at least one ingredient when using 'Use What's in the Fridge' mode." });
       }
 
       const templates = await loadTemplates();

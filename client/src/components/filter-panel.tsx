@@ -114,7 +114,7 @@ export function FilterPanel({ filters, onFiltersChange, onGenerate, onGenerateAn
                 className="flex items-center gap-2 text-xs uppercase tracking-wider text-muted-foreground font-medium cursor-pointer select-none"
               >
                 <Package className="w-3.5 h-3.5" />
-                Use What We Have
+                Use What's in the Fridge
               </Label>
               <Switch
                 id="use-what-we-have"
@@ -125,7 +125,7 @@ export function FilterPanel({ filters, onFiltersChange, onGenerate, onGenerateAn
             </div>
             {filters.use_what_we_have && (
               <Input
-                placeholder="chicken, rice, eggs, peppers, pasta, ground beef"
+                placeholder="Enter what's in the fridge (comma separated)"
                 value={filters.ingredients_on_hand_text}
                 onChange={(e) => update("ingredients_on_hand_text", e.target.value)}
                 data-testid="input-ingredients-on-hand"
