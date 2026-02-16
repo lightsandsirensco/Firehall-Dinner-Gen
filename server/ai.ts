@@ -104,7 +104,7 @@ ${request.allergens_to_avoid.includes("gluten") ? "- Ensure the veg protein swap
   }`
     : "";
 
-  const prompt = `Generate ONE firehall dinner recipe as JSON.
+  const prompt = `Generate ONE firehall meal recipe as JSON.
 
 TEMPLATE: ${template.template_name} (${template.style}) - ${template.base_idea_description}
 Appliances: ${template.appliances_needed}

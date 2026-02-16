@@ -251,7 +251,7 @@ export function FilterPanel({ filters, onFiltersChange, onGenerate, onGenerateAn
             ) : (
               <Flame className="w-4 h-4 mr-2" />
             )}
-            {isLoading ? "GENERATING..." : "GENERATE DINNER"}
+            {isLoading ? "GENERATING..." : "GENERATE MEAL"}
           </Button>
         ) : (
           <>

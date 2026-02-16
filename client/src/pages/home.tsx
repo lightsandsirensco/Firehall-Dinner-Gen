@@ -89,7 +89,7 @@ export default function Home() {
                 LIGHTS & SIRENS
               </h1>
               <p className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground font-medium">
-                Firehall Dinner Generator
+                Firehall Meal Generator
               </p>
             </div>
           </div>

@@ -1,7 +1,7 @@
-# Lights & Sirens - Firehall Dinner Generator
+# Lights & Sirens - Firehall Meal Generator
 
 ## Overview
-A single-page web app that generates one high-protein dinner recipe for a firefighter crew based on user-selected filters. Uses AI (OpenAI via Replit AI Integrations) to create complete recipes from CSV meal templates.
+A single-page web app that generates one high-protein meal recipe for a firefighter crew based on user-selected filters. Uses AI (OpenAI via Replit AI Integrations) to create complete recipes from CSV meal templates.
 
 ## Architecture
 - **Frontend**: React + Vite + TailwindCSS + shadcn/ui

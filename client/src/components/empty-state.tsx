@@ -10,7 +10,7 @@ export function EmptyState() {
         READY TO COOK
       </h2>
       <p className="text-muted-foreground text-sm max-w-sm">
-        Set your crew's filters and hit Generate Dinner to get a high-protein, firehall-ready recipe.
+        Set your crew's filters and hit Generate Meal to get a high-protein, firehall-ready recipe.
       </p>
     </div>
   );
