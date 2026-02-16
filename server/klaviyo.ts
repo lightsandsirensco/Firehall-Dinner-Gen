@@ -174,3 +174,55 @@ export async function trackRecipeEvent(
 
   log(`Tracked "Recipe Generated" event for ${email}: ${properties.recipe_title}`, "klaviyo");
 }
+
+export async function trackShoppingListEvent(
+  email: string,
+  properties: {
+    recipe_title: string;
+    shopping_list_sections: { title: string; items: string[] }[];
+    generator_type: string;
+    timestamp: string;
+  }
+): Promise<void> {
+  const res = await fetch(`${KLAVIYO_BASE}/events/`, {
+    method: "POST",
+    headers: headers(),
+    body: JSON.stringify({
+      data: {
+        type: "event",
+        attributes: {
+          properties: {
+            recipe_title: properties.recipe_title,
+            shopping_list_sections: properties.shopping_list_sections,
+            generator_type: properties.generator_type,
+            requested_at: properties.timestamp,
+          },
+          metric: {
+            data: {
+              type: "metric",
+              attributes: {
+                name: "Shopping List Requested",
+              },
+            },
+          },
+          profile: {
+            data: {
+              type: "profile",
+              attributes: {
+                email,
+              },
+            },
+          },
+        },
+      },
+    }),
+  });
+
+  if (!res.ok) {
+    const errText = await res.text();
+    log(`Klaviyo shopping list event error: ${res.status} ${errText}`, "klaviyo");
+    throw new Error(`Klaviyo event failed: ${res.status}`);
+  }
+
+  log(`Tracked "Shopping List Requested" event for ${email}: ${properties.recipe_title}`, "klaviyo");
+}

@@ -1,0 +1,90 @@
+Add a “Shopping List” feature that works on BOTH generators:
+1) Firehall Meal Generator
+2) Homemade Pizza Night
+
+Goal:
+From the currently generated recipe, produce a clean, categorized shopping list that is easy to use in a grocery store, and can be copied/printed/emailed.
+
+IMPORTANT: Do NOT call the LLM again to create the shopping list.
+The shopping list must be derived deterministically from the existing recipe JSON (ingredients array + optional “You may need to grab” list + veg option ingredients).
+
+UI Requirements (both pages):
+1) Add a button next to Print / Email actions:
+   - Button text: “Shopping List”
+
+2) Clicking the button opens a modal or slide-over panel with:
+   - Title: “Shopping List”
+   - Subtext: “Based on this recipe”
+
+3) Include 3 actions inside the modal:
+   - “Copy List”
+   - “Print List”
+   - “Email List” (uses existing Klaviyo email capture flow; same modal prompt headline can be reused)
+
+Shopping list content rules:
+A) Combine duplicate items
+- If the recipe has “Garlic” multiple times, merge into one line.
+- If amounts are compatible, sum them.
+- If they are not compatible (e.g., “1 cup” and “2 tbsp”), keep both amounts in parentheses.
+
+B) Keep ingredient-first formatting:
+- “Chicken thighs — 1.8 kg”
+- “Bell peppers — 3”
+- “Greek yogurt (or dairy-free alt) — 1 cup”
+
+C) Categorize into standard grocery sections (in this order):
+1) Proteins
+2) Produce
+3) Dairy / Dairy Alternatives
+4) Pantry & Spices
+5) Bakery / Dough
+6) Frozen
+7) Condiments & Sauces
+8) Other
+
+D) Respect modes/toggles:
+- If “Use What’s in the Fridge” mode is ON:
+  - Show two sections:
+    1) “Using what’s in the fridge” (items they entered that were used)
+    2) “You may need to grab” (missing items)
+- If Budget is “Low ($)”:
+  - Add a small “Budget swaps” note (non-AI) suggesting cheaper alternatives for any premium items.
+
+E) Vegetarian swap:
+- If veg option is enabled, include those items in the list under a subheading:
+  “Veg Option (1 serving)”
+- Do NOT include tofu.
+
+Data model / output:
+- Create a reusable helper function used by BOTH pages:
+  buildShoppingList(recipe) => {
+    sections: [
+      { title: "Proteins", items: [{ name, amount, notes }] },
+      ...
+    ],
+    fridge_used?: string[],
+    need_to_grab?: string[],
+    veg_option?: { items: [...] }
+  }
+
+Printing:
+- “Print List” should print ONLY the shopping list (white background, black text).
+- Include a small footer:
+  www.lightsandsirensco.com
+
+Email:
+- “Email List” should send the shopping list via the existing Klaviyo flow/event.
+- Add event name: “Shopping List Requested”
+- Include properties:
+  recipe_title, shopping_list_sections, timestamp, generator_type ("meal" or "pizza")
+
+Edge cases:
+- If no recipe is generated yet, disable the Shopping List button and show tooltip:
+  “Generate a meal first.”
+- Ensure no overlapping text; keep spacing clean.
+
+Deliverables:
+- Add Shopping List button + modal to both generators.
+- Implement deterministic shopping list builder (no extra AI calls).
+- Add copy/print/email actions.
+- Keep style consistent with the app.

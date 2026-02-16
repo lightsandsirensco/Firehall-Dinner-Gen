@@ -3,12 +3,13 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import type { PizzaResponse } from "@shared/schema";
-import { Flame, Droplets, Wheat, Beef, Sparkles, Trash2, Clock, Timer, ShieldCheck, Thermometer, Printer, Leaf, Mail, ThermometerSun } from "lucide-react";
+import { Flame, Droplets, Wheat, Beef, Sparkles, Trash2, Clock, Timer, ShieldCheck, Thermometer, Printer, Leaf, Mail, ThermometerSun, List } from "lucide-react";
 
 interface PizzaCardProps {
   recipe: PizzaResponse;
   crewSize: number;
   onEmailClick?: () => void;
+  onShoppingListClick?: () => void;
 }
 
 function MacroBar({ label, value, unit, icon, color }: { label: string; value: number; unit: string; icon: any; color: string }) {
@@ -177,7 +178,7 @@ function buildPizzaPrintHtml(recipe: PizzaResponse, crewSize: number): string {
 </html>`;
 }
 
-export function PizzaCard({ recipe, crewSize, onEmailClick }: PizzaCardProps) {
+export function PizzaCard({ recipe, crewSize, onEmailClick, onShoppingListClick }: PizzaCardProps) {
   const hasTiming = recipe.timing && (recipe.timing.prep_minutes || recipe.timing.bake_minutes || recipe.timing.total_minutes);
   const hasSafety = recipe.protein_safety && recipe.protein_safety.length > 0;
 
@@ -208,6 +209,12 @@ export function PizzaCard({ recipe, crewSize, onEmailClick }: PizzaCardProps) {
               <Printer className="w-4 h-4 mr-2" />
               Print for the Hall
             </Button>
+            {onShoppingListClick && (
+              <Button variant="outline" onClick={onShoppingListClick} data-testid="pizza-button-shopping-list">
+                <List className="w-4 h-4 mr-2" />
+                Shopping List
+              </Button>
+            )}
           </div>
         </div>
         <p className="text-sm text-muted-foreground" data-testid="pizza-text-why">

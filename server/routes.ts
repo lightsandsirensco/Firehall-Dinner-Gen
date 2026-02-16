@@ -6,7 +6,7 @@ import { generateRequestSchema, pizzaRequestSchema } from "@shared/schema";
 import { loadTemplates, filterTemplates, pickTemplate, chooseProtein } from "./templates";
 import { generateRecipe, generateRecipeFromPantry } from "./ai";
 import { generatePizzaRecipe, pickPizzaConcept } from "./pizza-ai";
-import { subscribeToList, trackRecipeEvent } from "./klaviyo";
+import { subscribeToList, trackRecipeEvent, trackShoppingListEvent } from "./klaviyo";
 import { log } from "./index";
 import {
   initCacheStore,
@@ -251,6 +251,36 @@ export async function registerRoutes(
     } catch (error: any) {
       log(`Email recipe error: ${error.message}`, "klaviyo");
       return res.status(500).json({ message: "Failed to send recipe. Please try again." });
+    }
+  });
+
+  app.post("/api/email-shopping-list", async (req: Request, res: Response) => {
+    try {
+      const { email, recipe_title, shopping_list_sections, generator_type, timestamp } = req.body;
+
+      if (!email || !recipe_title) {
+        return res.status(400).json({ message: "Email and recipe title are required." });
+      }
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        return res.status(400).json({ message: "Invalid email address." });
+      }
+
+      await Promise.all([
+        subscribeToList(email),
+        trackShoppingListEvent(email, {
+          recipe_title,
+          shopping_list_sections: shopping_list_sections || [],
+          generator_type: generator_type || "meal",
+          timestamp: timestamp || new Date().toISOString(),
+        }),
+      ]);
+
+      return res.json({ success: true, message: "Shopping list sent. Check your inbox." });
+    } catch (error: any) {
+      log(`Email shopping list error: ${error.message}`, "klaviyo");
+      return res.status(500).json({ message: "Failed to send shopping list. Please try again." });
     }
   });
 

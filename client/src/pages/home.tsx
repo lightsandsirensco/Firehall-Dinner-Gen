@@ -1,10 +1,12 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useMemo } from "react";
 import { FilterPanel, type FilterState } from "@/components/filter-panel";
 import { RecipeCard } from "@/components/recipe-card";
 import { EmptyState } from "@/components/empty-state";
 import { LoadingState } from "@/components/loading-state";
 import { ErrorState } from "@/components/error-state";
 import { EmailModal } from "@/components/email-modal";
+import { ShoppingListModal } from "@/components/shopping-list-modal";
+import { buildShoppingListFromMeal } from "@/lib/shopping-list";
 import { apiRequest } from "@/lib/queryClient";
 import type { GenerateResponse } from "@shared/schema";
 import { Flame } from "lucide-react";
@@ -16,6 +18,7 @@ export default function Home() {
   const [error, setError] = useState<string | null>(null);
   const [lastTemplateId, setLastTemplateId] = useState<number | undefined>();
   const [emailModalOpen, setEmailModalOpen] = useState(false);
+  const [shoppingListOpen, setShoppingListOpen] = useState(false);
   const genCountRef = useRef(0);
   const emailPromptedRef = useRef(false);
   const [filters, setFilters] = useState<FilterState>({
@@ -144,6 +147,7 @@ export default function Home() {
                 recipe={recipe}
                 crewSize={filters.crew_size}
                 onEmailClick={() => setEmailModalOpen(true)}
+                onShoppingListClick={() => setShoppingListOpen(true)}
               />
             )}
             {!loading && !error && !recipe && <EmptyState />}
@@ -151,13 +155,25 @@ export default function Home() {
         </div>
       </main>
       {recipe && (
-        <EmailModal
-          open={emailModalOpen}
-          onOpenChange={setEmailModalOpen}
-          recipe={recipe}
-          crewSize={filters.crew_size}
-          healthinessLevel={filters.healthiness_preference}
-        />
+        <>
+          <EmailModal
+            open={emailModalOpen}
+            onOpenChange={setEmailModalOpen}
+            recipe={recipe}
+            crewSize={filters.crew_size}
+            healthinessLevel={filters.healthiness_preference}
+          />
+          <ShoppingListModal
+            open={shoppingListOpen}
+            onOpenChange={setShoppingListOpen}
+            shoppingList={buildShoppingListFromMeal(recipe, {
+              useWhatWeHave: filters.use_what_we_have,
+              budgetLevel: filters.budget_level,
+            })}
+            recipeTitle={recipe.title}
+            generatorType="meal"
+          />
+        </>
       )}
       <footer className="text-center py-4 mt-6">
         <p className="text-xs text-muted-foreground/60">

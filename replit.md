@@ -105,5 +105,22 @@ A single-page web app that generates one high-protein meal recipe for a firefigh
 - Print + Email buttons reuse existing patterns (print-friendly layout, Klaviyo flow)
 - Key files: client/src/pages/pizza-night.tsx, client/src/components/pizza-filter-panel.tsx, client/src/components/pizza-card.tsx, server/pizza-ai.ts
 
+## Shopping List Feature
+- Available on both Meal Generator and Pizza Night pages
+- "Shopping List" button next to Print / Email actions on recipe cards
+- Deterministic: built from existing recipe JSON, no extra AI calls
+- Modal with Copy List, Print List, Email List actions
+- Ingredients categorized into grocery sections: Proteins, Produce, Dairy/Dairy Alternatives, Pantry & Spices, Bakery/Dough, Frozen, Condiments & Sauces, Other
+- Duplicate items merged with amounts combined
+- Ingredient-first formatting: "Chicken thighs — 1.8 kg"
+- Pantry mode ("Use What's in the Fridge"): shows "Using what's in the fridge" and "You may need to grab" sections
+- Budget "Low ($)": includes budget swap suggestions for premium items
+- Veg option items shown under "Veg Option (1 Serving)" subheading (no tofu)
+- Print prints only the shopping list (white background, black text, footer: www.lightsandsirensco.com)
+- Email uses Klaviyo flow with "Shopping List Requested" event
+- POST /api/email-shopping-list endpoint with Klaviyo integration
+- Key files: client/src/lib/shopping-list.ts, client/src/components/shopping-list-modal.tsx
+- Helper: buildShoppingListFromMeal(recipe, options) and buildShoppingListFromPizza(recipe, options)
+
 ## User Preferences
 - No accounts, meal plans, history, template management, or Shopify

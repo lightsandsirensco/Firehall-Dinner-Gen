@@ -5,6 +5,8 @@ import { EmptyState } from "@/components/empty-state";
 import { LoadingState } from "@/components/loading-state";
 import { ErrorState } from "@/components/error-state";
 import { EmailModal } from "@/components/email-modal";
+import { ShoppingListModal } from "@/components/shopping-list-modal";
+import { buildShoppingListFromPizza } from "@/lib/shopping-list";
 import { apiRequest } from "@/lib/queryClient";
 import type { PizzaResponse, GenerateResponse } from "@shared/schema";
 import { Flame } from "lucide-react";
@@ -16,6 +18,7 @@ export default function PizzaNight() {
   const [error, setError] = useState<string | null>(null);
   const [lastPizzaStyleId, setLastPizzaStyleId] = useState<string | undefined>();
   const [emailModalOpen, setEmailModalOpen] = useState(false);
+  const [shoppingListOpen, setShoppingListOpen] = useState(false);
   const genCountRef = useRef(0);
   const emailPromptedRef = useRef(false);
   const [filters, setFilters] = useState<PizzaFilterState>({
@@ -151,6 +154,7 @@ export default function PizzaNight() {
                 recipe={recipe}
                 crewSize={filters.crew_size}
                 onEmailClick={() => setEmailModalOpen(true)}
+                onShoppingListClick={() => setShoppingListOpen(true)}
               />
             )}
             {!loading && !error && !recipe && (
@@ -176,6 +180,15 @@ export default function PizzaNight() {
           recipe={emailRecipe}
           crewSize={filters.crew_size}
           healthinessLevel={filters.style_preference}
+        />
+      )}
+      {recipe && (
+        <ShoppingListModal
+          open={shoppingListOpen}
+          onOpenChange={setShoppingListOpen}
+          shoppingList={buildShoppingListFromPizza(recipe)}
+          recipeTitle={recipe.title}
+          generatorType="pizza"
         />
       )}
       <footer className="text-center py-4 mt-6">
