@@ -9,7 +9,13 @@ const openai = new OpenAI({
 
 const MAX_RETRIES = 3;
 
-async function callAI(prompt: string, systemPrompt: string, templateId: string): Promise<string> {
+export interface AIResult {
+  recipe: GenerateResponse;
+  tokensIn: number;
+  tokensOut: number;
+}
+
+async function callAI(prompt: string, systemPrompt: string): Promise<{ content: string; tokensIn: number; tokensOut: number }> {
   for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
     try {
       const response = await openai.chat.completions.create({
@@ -24,9 +30,14 @@ async function callAI(prompt: string, systemPrompt: string, templateId: string):
 
       const choice = response.choices[0];
       const content = choice?.message?.content;
+      const usage = response.usage;
 
       if (content && content.trim().length > 10) {
-        return content;
+        return {
+          content,
+          tokensIn: usage?.prompt_tokens || 0,
+          tokensOut: usage?.completion_tokens || 0,
+        };
       }
 
       const finishReason = choice?.finish_reason || "unknown";
@@ -51,7 +62,7 @@ async function callAI(prompt: string, systemPrompt: string, templateId: string):
 export async function generateRecipe(
   template: TemplateRow,
   request: GenerateRequest
-): Promise<GenerateResponse> {
+): Promise<AIResult> {
   const allergenWarning =
     request.allergens_to_avoid.length > 0
       ? `CRITICAL: The crew has allergies: ${request.allergens_to_avoid.join(", ")}. Do NOT include any ingredients with these allergens. Use safe substitutes.`
@@ -117,13 +128,12 @@ IMPORTANT:
 
   log(`Generating recipe from template: ${template.template_name} (ID: ${template.template_id})`, "ai");
 
-  const content = await callAI(
+  const { content, tokensIn, tokensOut } = await callAI(
     prompt,
-    "You are a firehall chef focused on food safety. Return ONLY valid JSON. No markdown. No code fences. Always include cooking temperatures and internal temp targets for every protein.",
-    template.template_id
+    "You are a firehall chef focused on food safety. Return ONLY valid JSON. No markdown. No code fences. Always include cooking temperatures and internal temp targets for every protein."
   );
 
-  log(`AI response received (${content.length} chars)`, "ai");
+  log(`AI response received (${content.length} chars, ${tokensIn} in / ${tokensOut} out tokens)`, "ai");
 
   let recipe: GenerateResponse;
   try {
@@ -146,5 +156,5 @@ IMPORTANT:
     throw new Error("AI returned incomplete recipe data. Please try again.");
   }
 
-  return recipe;
+  return { recipe, tokensIn, tokensOut };
 }

@@ -39,6 +39,17 @@ export default function Home() {
       if (msg.includes("No matching templates") || msg.includes("404")) {
         setError("no_match");
         setRecipe(null);
+      } else if (msg.includes("429")) {
+        try {
+          const parsed = JSON.parse(msg.replace(/^\d+:\s*/, ""));
+          setError(parsed.message || "Rate limit reached. Please wait a moment.");
+        } catch {
+          setError("Too many requests. Please wait a moment before generating again.");
+        }
+      } else if (msg.includes("503") || msg.includes("budget")) {
+        setError("Daily recipe limit reached. Please try again tomorrow.");
+      } else if (msg.includes("403")) {
+        setError("Security check failed. Please refresh the page and try again.");
       } else {
         setError("Generation failed. Please try again.");
       }

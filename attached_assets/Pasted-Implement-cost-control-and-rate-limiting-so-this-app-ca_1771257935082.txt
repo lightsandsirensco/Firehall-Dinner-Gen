@@ -1,0 +1,72 @@
+Implement cost-control and rate-limiting so this app cannot generate unlimited LLM calls and rack up huge API bills.
+
+Goals:
+- Keep per-user usage bounded.
+- Cache results aggressively so repeated requests don’t hit the LLM.
+- Add fallbacks so the app still works when the LLM is unavailable or rate-limited.
+- Prevent abuse (bots, refresh spam, scripted calls).
+
+Requirements:
+
+1) Two-stage generation to reduce LLM calls
+- Stage A (no LLM): Select a template from the CSV deterministically/randomly based on filters.
+- Stage B (LLM optional): Only call the LLM if we don’t already have a cached recipe for that template+filter combination.
+- If cached, return cached recipe instantly with no LLM call.
+
+2) Caching
+- Implement a cache key:
+  cache_key = hash(template_id + crew_size + busy_level + time_available + appliances + proteins + allergens_to_avoid + healthiness_preference)
+- Store generated recipe JSON in a persistent store (preferred) or durable file-based DB.
+- Cache TTL: 30 days (or no TTL if you prefer).
+- Return cached results for identical cache_key.
+
+3) Pre-generation (cheap scaling)
+- Add an admin script that pre-generates recipes for all templates and common filter combos (e.g., crew sizes 4/6/8, busy levels, appliances).
+- This allows most traffic to be served from cache without live LLM calls.
+
+4) Rate limiting (hard limits)
+- Add server-side rate limiting by IP:
+  - max 10 generations per hour per IP (adjustable)
+  - max 3 generations per minute per IP (burst control)
+- Also rate limit by anonymous session cookie:
+  - create a session_id cookie if none exists
+  - apply same limits per session_id
+- If limit exceeded, return a friendly message.
+
+5) Abuse protection
+- Add bot protection (basic):
+  - block obvious non-browser user agents
+  - require a CSRF token on POST /api/generate
+  - optional: add Cloudflare Turnstile on the generate endpoint if traffic increases
+
+6) Cost visibility
+- Log every LLM call with:
+  - timestamp
+  - cache_key
+  - template_id
+  - estimated tokens in/out
+  - estimated cost (if provider supports)
+- Add a simple admin-only “Usage” page showing:
+  - calls/day
+  - cache hit rate
+  - top IPs/sessions
+  - estimated spend
+
+7) Budget circuit breaker (must have)
+- Add an environment variable:
+  DAILY_LLM_BUDGET_USD
+- Track daily spend estimate.
+- If spend exceeds budget, automatically:
+  - stop calling the LLM
+  - serve cached recipes only
+  - if no cache exists, serve a template-based non-LLM recipe (fallback) or a “try again later” message
+
+8) LLM prompt + output constraints
+- Force compact JSON output (no long narratives).
+- Enforce max tokens and short responses.
+- Do not generate images in V1.
+
+Deliverables:
+- Implement caching + rate limiting + budget breaker + logs.
+- Ensure /api/generate returns cached results whenever possible.
+- Add clear error messages for rate limit and budget exceeded.
