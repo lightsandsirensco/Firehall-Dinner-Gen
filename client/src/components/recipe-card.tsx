@@ -1,8 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import type { GenerateResponse } from "@shared/schema";
-import { Flame, Droplets, Wheat, Beef, Sparkles, Trash2, Clock, Timer, ShieldCheck, Thermometer } from "lucide-react";
+import { Flame, Droplets, Wheat, Beef, Sparkles, Trash2, Clock, Timer, ShieldCheck, Thermometer, Printer } from "lucide-react";
 
 interface RecipeCardProps {
   recipe: GenerateResponse;
@@ -20,16 +21,142 @@ function MacroBar({ label, value, unit, icon, color }: { label: string; value: n
   );
 }
 
+function buildPrintHtml(recipe: GenerateResponse, crewSize: number): string {
+  const safetyRows = recipe.protein_safety?.length
+    ? recipe.protein_safety
+        .map(
+          (ps) =>
+            `<tr>
+              <td style="font-weight:700;padding:6px 12px 6px 0">${ps.protein}</td>
+              <td style="padding:6px 12px">${ps.target_temp_f}&deg;F / ${ps.target_temp_c}&deg;C</td>
+              <td style="padding:6px 12px">${ps.rest_minutes > 0 ? ps.rest_minutes + " min" : "—"}</td>
+              <td style="padding:6px 12px;font-size:13px">${ps.probe_where}${ps.notes ? ". " + ps.notes : ""}</td>
+            </tr>`
+        )
+        .join("")
+    : "";
+
+  const ingredientRows = recipe.ingredients
+    .map(
+      (ing) =>
+        `<tr>
+          <td style="padding:4px 16px 4px 0;font-weight:600">${ing.item}</td>
+          <td style="padding:4px 0">${ing.amount || ""}</td>
+          ${ing.notes ? `<td style="padding:4px 0 4px 16px;color:#555;font-size:13px">${ing.notes}</td>` : "<td></td>"}
+        </tr>`
+    )
+    .join("");
+
+  const stepItems = recipe.steps
+    .map((step, i) => {
+      const heading = typeof step === "string" ? null : step.heading;
+      const body = typeof step === "string" ? step : step.body;
+      return `<li style="margin-bottom:12px;page-break-inside:avoid">
+        ${heading ? `<strong>${heading}</strong><br/>` : ""}
+        ${body}
+      </li>`;
+    })
+    .join("");
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>${recipe.title} — Print</title>
+<style>
+  @page { margin: 0.75in; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #111; background: #fff; line-height: 1.5; font-size: 15px; padding: 0; }
+  h1 { font-size: 32px; font-weight: 800; margin-bottom: 4px; letter-spacing: 0.5px; }
+  h2 { font-size: 18px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin: 24px 0 8px; border-bottom: 2px solid #222; padding-bottom: 4px; }
+  .subtitle { color: #444; font-style: italic; font-size: 14px; margin-bottom: 16px; }
+  .timing-bar { display: flex; gap: 24px; background: #f5f5f5; padding: 10px 16px; border-radius: 4px; margin-bottom: 8px; }
+  .timing-item { text-align: center; }
+  .timing-item strong { display: block; font-size: 22px; line-height: 1.2; }
+  .timing-item span { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #666; }
+  table { width: 100%; border-collapse: collapse; }
+  table.safety td { border-bottom: 1px solid #ddd; vertical-align: top; }
+  table.ingredients td { border-bottom: 1px solid #eee; vertical-align: top; }
+  ol { padding-left: 24px; }
+  ol li { font-size: 15px; }
+  .cleanup { background: #f5f5f5; padding: 12px 16px; border-radius: 4px; margin-top: 16px; page-break-inside: avoid; }
+  .cleanup strong { display: block; text-transform: uppercase; font-size: 12px; letter-spacing: 1px; color: #666; margin-bottom: 4px; }
+  .servings { font-size: 13px; color: #666; margin-bottom: 16px; }
+  @media print {
+    body { padding: 0; }
+    .no-print { display: none !important; }
+  }
+</style>
+</head>
+<body>
+  <h1>${recipe.title}</h1>
+  <p class="subtitle">${recipe.why_it_fits_tonight}</p>
+  <p class="servings">Serves ${crewSize}</p>
+
+  ${recipe.timing ? `
+  <h2>Timing</h2>
+  <div class="timing-bar">
+    <div class="timing-item"><strong>${recipe.timing.prep_minutes}</strong><span>min prep</span></div>
+    <div class="timing-item"><strong>${recipe.timing.cook_minutes}</strong><span>min cook</span></div>
+    <div class="timing-item"><strong>${recipe.timing.total_minutes}</strong><span>min total</span></div>
+  </div>` : ""}
+
+  ${safetyRows ? `
+  <h2>Protein Safety</h2>
+  <table class="safety">
+    <thead><tr>
+      <th style="text-align:left;padding:6px 12px 6px 0;font-size:12px;text-transform:uppercase;color:#666">Protein</th>
+      <th style="text-align:left;padding:6px 12px;font-size:12px;text-transform:uppercase;color:#666">Internal Temp</th>
+      <th style="text-align:left;padding:6px 12px;font-size:12px;text-transform:uppercase;color:#666">Rest</th>
+      <th style="text-align:left;padding:6px 12px;font-size:12px;text-transform:uppercase;color:#666">Details</th>
+    </tr></thead>
+    <tbody>${safetyRows}</tbody>
+  </table>` : ""}
+
+  <h2>Ingredients</h2>
+  <table class="ingredients">
+    <tbody>${ingredientRows}</tbody>
+  </table>
+
+  <h2>Steps</h2>
+  <ol>${stepItems}</ol>
+
+  ${recipe.cleanup_tip ? `
+  <div class="cleanup">
+    <strong>Cleanup Tip</strong>
+    ${recipe.cleanup_tip}
+  </div>` : ""}
+
+  <script>window.onload = function() { window.print(); }</script>
+</body>
+</html>`;
+}
+
 export function RecipeCard({ recipe, crewSize }: RecipeCardProps) {
   const hasTiming = recipe.timing && (recipe.timing.prep_minutes || recipe.timing.cook_minutes || recipe.timing.total_minutes);
   const hasSafety = recipe.protein_safety && recipe.protein_safety.length > 0;
 
+  const handlePrint = () => {
+    const html = buildPrintHtml(recipe, crewSize);
+    const printWindow = window.open("", "_blank");
+    if (printWindow) {
+      printWindow.document.write(html);
+      printWindow.document.close();
+    }
+  };
+
   return (
     <div className="space-y-4 animate-in fade-in slide-in-from-bottom-4 duration-500">
       <div className="space-y-1">
-        <h2 className="font-heading text-4xl md:text-5xl tracking-wide text-foreground leading-none" data-testid="text-recipe-title">
-          {recipe.title}
-        </h2>
+        <div className="flex items-start justify-between gap-3 flex-wrap">
+          <h2 className="font-heading text-4xl md:text-5xl tracking-wide text-foreground leading-none" data-testid="text-recipe-title">
+            {recipe.title}
+          </h2>
+          <Button variant="outline" onClick={handlePrint} className="flex-shrink-0" data-testid="button-print">
+            <Printer className="w-4 h-4 mr-2" />
+            Print for the Hall
+          </Button>
+        </div>
         <p className="text-sm text-muted-foreground" data-testid="text-recipe-why">
           {recipe.why_it_fits_tonight}
         </p>
