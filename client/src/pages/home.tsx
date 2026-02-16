@@ -127,6 +127,18 @@ export default function Home() {
             <p className="text-sm text-muted-foreground mt-2 max-w-lg mx-auto leading-relaxed" data-testid="text-app-description">
               Crew meal ideas built for the fire service. Generate dinners, pizza nights, and crew meals based on time, crew size, and what's in the fridge.
             </p>
+            <p className="text-[10px] text-muted-foreground/40 mt-2 font-normal">
+              Powered by{" "}
+              <a
+                href="https://lightsandsirensco.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-muted-foreground/60 transition-colors"
+                data-testid="link-header-attribution"
+              >
+                Lights &amp; Sirens Co.
+              </a>
+            </p>
           </div>
         </div>
       </header>
