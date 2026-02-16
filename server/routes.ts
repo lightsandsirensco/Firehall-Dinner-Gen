@@ -5,6 +5,7 @@ import cookieParser from "cookie-parser";
 import { generateRequestSchema } from "@shared/schema";
 import { loadTemplates, filterTemplates, pickTemplate, chooseProtein } from "./templates";
 import { generateRecipe } from "./ai";
+import { subscribeToList, trackRecipeEvent } from "./klaviyo";
 import { log } from "./index";
 import {
   initCacheStore,
@@ -206,6 +207,40 @@ export async function registerRoutes(
       });
     }
     return res.json({ token });
+  });
+
+  app.post("/api/email-recipe", async (req: Request, res: Response) => {
+    try {
+      const { email, recipe_title, primary_protein, ingredients, steps, macros, healthiness_level, crew_size, timestamp } = req.body;
+
+      if (!email || !recipe_title) {
+        return res.status(400).json({ message: "Email and recipe title are required." });
+      }
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        return res.status(400).json({ message: "Invalid email address." });
+      }
+
+      await Promise.all([
+        subscribeToList(email),
+        trackRecipeEvent(email, {
+          recipe_title,
+          primary_protein: primary_protein || "",
+          healthiness_level: healthiness_level || "",
+          crew_size: crew_size || 0,
+          ingredients: ingredients || [],
+          steps: steps || [],
+          macros: macros || { calories: 0, protein_g: 0, carbs_g: 0, fat_g: 0 },
+          generated_at: timestamp || new Date().toISOString(),
+        }),
+      ]);
+
+      return res.json({ success: true, message: "Recipe sent. Check your inbox." });
+    } catch (error: any) {
+      log(`Email recipe error: ${error.message}`, "klaviyo");
+      return res.status(500).json({ message: "Failed to send recipe. Please try again." });
+    }
   });
 
   app.get("/api/admin/usage", (req: Request, res: Response) => {

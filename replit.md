@@ -51,10 +51,19 @@ A single-page web app that generates one high-protein dinner recipe for a firefi
 - **CSRF**: Token-based validation on POST /api/generate
 - **Admin**: Usage dashboard at /admin showing budget, cache stats, request logs, top IPs/sessions
 
+## Klaviyo Email Capture
+- `POST /api/email-recipe` - Subscribes email to Klaviyo list + tracks "Recipe Generated" event
+- Auto-creates "Firehall Dinner Generator Leads" list in Klaviyo
+- Email modal appears after 2nd recipe generation or via "Email me this recipe" button
+- Klaviyo Flow handles actual email delivery (not custom sender)
+- server/klaviyo.ts - Klaviyo API integration (profile subscribe, event tracking)
+- client/src/components/email-modal.tsx - Email capture modal UI
+
 ## Environment Variables
 - `DAILY_LLM_BUDGET_USD` - Daily AI spending cap (default: "5.00")
 - `ADMIN_SECRET` - Optional admin API key for /api/admin/usage (open in dev if not set)
 - `SESSION_SECRET` - Session encryption key
+- `KLAVIYO_API_KEY` - Klaviyo private API key for email capture
 
 ## User Preferences
 - No accounts, meal plans, history, template management, or Shopify

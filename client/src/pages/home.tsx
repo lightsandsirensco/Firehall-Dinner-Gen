@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { FilterPanel, type FilterState } from "@/components/filter-panel";
 import { RecipeCard } from "@/components/recipe-card";
 import { EmptyState } from "@/components/empty-state";
 import { LoadingState } from "@/components/loading-state";
 import { ErrorState } from "@/components/error-state";
+import { EmailModal } from "@/components/email-modal";
 import { apiRequest } from "@/lib/queryClient";
 import type { GenerateResponse } from "@shared/schema";
 import { Flame } from "lucide-react";
@@ -13,6 +14,9 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [lastTemplateId, setLastTemplateId] = useState<number | undefined>();
+  const [emailModalOpen, setEmailModalOpen] = useState(false);
+  const genCountRef = useRef(0);
+  const emailPromptedRef = useRef(false);
   const [filters, setFilters] = useState<FilterState>({
     crew_size: 6,
     busy_level: "average",
@@ -35,6 +39,11 @@ export default function Home() {
       const data: GenerateResponse = await res.json();
       setRecipe(data);
       setLastTemplateId(data.template_id);
+      genCountRef.current += 1;
+      if (genCountRef.current === 2 && !emailPromptedRef.current) {
+        emailPromptedRef.current = true;
+        setTimeout(() => setEmailModalOpen(true), 800);
+      }
     } catch (err: any) {
       const msg = err?.message || "Something went wrong";
       if (msg.includes("No matching templates") || msg.includes("404")) {
@@ -104,11 +113,26 @@ export default function Home() {
             {loading && <LoadingState />}
             {!loading && error === "no_match" && <ErrorState type="no_match" />}
             {!loading && error && error !== "no_match" && <ErrorState type="error" message={error} />}
-            {!loading && !error && recipe && <RecipeCard recipe={recipe} crewSize={filters.crew_size} />}
+            {!loading && !error && recipe && (
+              <RecipeCard
+                recipe={recipe}
+                crewSize={filters.crew_size}
+                onEmailClick={() => setEmailModalOpen(true)}
+              />
+            )}
             {!loading && !error && !recipe && <EmptyState />}
           </div>
         </div>
       </main>
+      {recipe && (
+        <EmailModal
+          open={emailModalOpen}
+          onOpenChange={setEmailModalOpen}
+          recipe={recipe}
+          crewSize={filters.crew_size}
+          healthinessLevel={filters.healthiness_preference}
+        />
+      )}
     </div>
   );
 }

@@ -3,11 +3,12 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import type { GenerateResponse } from "@shared/schema";
-import { Flame, Droplets, Wheat, Beef, Sparkles, Trash2, Clock, Timer, ShieldCheck, Thermometer, Printer, Leaf } from "lucide-react";
+import { Flame, Droplets, Wheat, Beef, Sparkles, Trash2, Clock, Timer, ShieldCheck, Thermometer, Printer, Leaf, Mail } from "lucide-react";
 
 interface RecipeCardProps {
   recipe: GenerateResponse;
   crewSize: number;
+  onEmailClick?: () => void;
 }
 
 function MacroBar({ label, value, unit, icon, color }: { label: string; value: number; unit: string; icon: any; color: string }) {
@@ -162,7 +163,7 @@ function buildPrintHtml(recipe: GenerateResponse, crewSize: number): string {
 </html>`;
 }
 
-export function RecipeCard({ recipe, crewSize }: RecipeCardProps) {
+export function RecipeCard({ recipe, crewSize, onEmailClick }: RecipeCardProps) {
   const hasTiming = recipe.timing && (recipe.timing.prep_minutes || recipe.timing.cook_minutes || recipe.timing.total_minutes);
   const hasSafety = recipe.protein_safety && recipe.protein_safety.length > 0;
 
@@ -182,10 +183,18 @@ export function RecipeCard({ recipe, crewSize }: RecipeCardProps) {
           <h2 className="font-heading text-4xl md:text-5xl tracking-wide text-foreground leading-none" data-testid="text-recipe-title">
             {recipe.title}
           </h2>
-          <Button variant="outline" onClick={handlePrint} className="flex-shrink-0" data-testid="button-print">
-            <Printer className="w-4 h-4 mr-2" />
-            Print for the Hall
-          </Button>
+          <div className="flex gap-2 flex-shrink-0 flex-wrap">
+            {onEmailClick && (
+              <Button variant="outline" onClick={onEmailClick} data-testid="button-email-recipe">
+                <Mail className="w-4 h-4 mr-2" />
+                Email me this recipe
+              </Button>
+            )}
+            <Button variant="outline" onClick={handlePrint} data-testid="button-print">
+              <Printer className="w-4 h-4 mr-2" />
+              Print for the Hall
+            </Button>
+          </div>
         </div>
         <p className="text-sm text-muted-foreground" data-testid="text-recipe-why">
           {recipe.why_it_fits_tonight}
