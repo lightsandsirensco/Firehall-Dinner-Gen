@@ -1,61 +1,51 @@
 import { useState, useRef } from "react";
-import { FilterPanel, type FilterState } from "@/components/filter-panel";
-import { RecipeCard } from "@/components/recipe-card";
+import { PizzaFilterPanel, type PizzaFilterState } from "@/components/pizza-filter-panel";
+import { PizzaCard } from "@/components/pizza-card";
 import { EmptyState } from "@/components/empty-state";
 import { LoadingState } from "@/components/loading-state";
 import { ErrorState } from "@/components/error-state";
 import { EmailModal } from "@/components/email-modal";
 import { apiRequest } from "@/lib/queryClient";
-import type { GenerateResponse } from "@shared/schema";
+import type { PizzaResponse, GenerateResponse } from "@shared/schema";
 import { Flame } from "lucide-react";
 import { Link } from "wouter";
 
-export default function Home() {
-  const [recipe, setRecipe] = useState<GenerateResponse | null>(null);
+export default function PizzaNight() {
+  const [recipe, setRecipe] = useState<PizzaResponse | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [lastTemplateId, setLastTemplateId] = useState<number | undefined>();
+  const [lastPizzaStyleId, setLastPizzaStyleId] = useState<string | undefined>();
   const [emailModalOpen, setEmailModalOpen] = useState(false);
   const genCountRef = useRef(0);
   const emailPromptedRef = useRef(false);
-  const [filters, setFilters] = useState<FilterState>({
+  const [filters, setFilters] = useState<PizzaFilterState>({
     crew_size: 6,
-    busy_level: "average",
-    time_available: "25-40",
-    appliances: ["stove", "oven"],
-    proteins: ["chicken", "beef"],
-    healthiness_preference: "balanced",
-    budget_level: "standard",
+    time_available: "45-60",
+    dough_option: "premade",
+    style_preference: "classic",
+    heat_level: "medium",
     allergens_to_avoid: [],
     vegetarian_swap_needed: false,
-    use_what_we_have: false,
-    ingredients_on_hand_text: "",
+    oven_available: true,
   });
 
-  const handleGenerate = async (currentFilters: FilterState, templateId?: number) => {
+  const handleGenerate = async (currentFilters: PizzaFilterState, lastStyleId?: string) => {
     setLoading(true);
     setError(null);
     try {
-      const ingredients_on_hand = currentFilters.use_what_we_have
-        ? currentFilters.ingredients_on_hand_text.split(",").map(s => s.trim()).filter(Boolean)
-        : [];
-      const res = await apiRequest("POST", "/api/generate", {
+      const res = await apiRequest("POST", "/api/generate-pizza", {
         crew_size: currentFilters.crew_size,
-        busy_level: currentFilters.busy_level,
         time_available: currentFilters.time_available,
-        appliances: currentFilters.appliances,
-        proteins: currentFilters.use_what_we_have ? ["chicken"] : currentFilters.proteins,
-        healthiness_preference: currentFilters.healthiness_preference,
-        budget_level: currentFilters.budget_level,
+        dough_option: currentFilters.dough_option,
+        style_preference: currentFilters.style_preference,
+        heat_level: currentFilters.heat_level,
         allergens_to_avoid: currentFilters.allergens_to_avoid,
         vegetarian_swap_needed: currentFilters.vegetarian_swap_needed,
-        use_what_we_have: currentFilters.use_what_we_have,
-        ingredients_on_hand,
-        last_template_id: templateId,
+        last_pizza_style_id: lastStyleId,
       });
-      const data: GenerateResponse = await res.json();
+      const data: PizzaResponse = await res.json();
       setRecipe(data);
-      setLastTemplateId(data.template_id);
+      setLastPizzaStyleId(data.pizza_style_id);
       genCountRef.current += 1;
       if (genCountRef.current === 2 && !emailPromptedRef.current) {
         emailPromptedRef.current = true;
@@ -63,10 +53,7 @@ export default function Home() {
       }
     } catch (err: any) {
       const msg = err?.message || "Something went wrong";
-      if (msg.includes("No matching templates") || msg.includes("404")) {
-        setError("no_match");
-        setRecipe(null);
-      } else if (msg.includes("429")) {
+      if (msg.includes("429")) {
         try {
           const parsed = JSON.parse(msg.replace(/^\d+:\s*/, ""));
           setError(parsed.message || "Rate limit reached. Please wait a moment.");
@@ -90,8 +77,29 @@ export default function Home() {
   };
 
   const handleGenerateAnother = () => {
-    handleGenerate(filters, lastTemplateId);
+    handleGenerate(filters, lastPizzaStyleId);
   };
+
+  const emailRecipe: GenerateResponse | null = recipe
+    ? {
+        template_id: 0,
+        chosen_protein: "",
+        title: recipe.title,
+        why_it_fits_tonight: recipe.why_this_works,
+        timing: { prep_minutes: recipe.timing.prep_minutes, cook_minutes: recipe.timing.bake_minutes, total_minutes: recipe.timing.total_minutes },
+        protein_safety: recipe.protein_safety,
+        ingredients: [
+          ...(recipe.ingredients.dough || []),
+          ...recipe.ingredients.sauce,
+          ...recipe.ingredients.cheese,
+          ...recipe.ingredients.toppings,
+          ...recipe.ingredients.drizzles,
+        ],
+        steps: recipe.build_steps,
+        cleanup_tip: recipe.cleanup_tip,
+        macros_per_serving: recipe.macros_per_serving,
+      }
+    : null;
 
   return (
     <div className="min-h-screen bg-background">
@@ -102,22 +110,22 @@ export default function Home() {
               <Flame className="w-5 h-5 text-primary-foreground" />
             </div>
             <div>
-              <h1 className="font-heading text-2xl leading-none tracking-wide text-foreground" data-testid="text-app-title">
-                FIREHALL MEALS
+              <h1 className="font-heading text-2xl leading-none tracking-wide text-foreground" data-testid="pizza-text-app-title">
+                PIZZA NIGHT
               </h1>
               <p className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground font-medium">
-                Firehall Meal Generator
+                Homemade Pizza Night
               </p>
             </div>
           </div>
           <nav className="ml-auto flex items-center gap-1" data-testid="nav-links">
-            <span className="text-xs uppercase tracking-wider text-foreground font-medium px-3 py-1.5" data-testid="nav-link-meals-active">
+            <Link href="/" className="text-xs uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors font-medium px-3 py-1.5" data-testid="nav-link-meals">
               Meal Generator
-            </span>
-            <span className="text-muted-foreground/30 text-xs">|</span>
-            <Link href="/pizza" className="text-xs uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors font-medium px-3 py-1.5" data-testid="nav-link-pizza">
-              Pizza Night
             </Link>
+            <span className="text-muted-foreground/30 text-xs">|</span>
+            <span className="text-xs uppercase tracking-wider text-foreground font-medium px-3 py-1.5" data-testid="nav-link-pizza-active">
+              Pizza Night
+            </span>
           </nav>
         </div>
       </header>
@@ -125,7 +133,7 @@ export default function Home() {
       <main className="max-w-[1400px] mx-auto px-4 py-6">
         <div className="flex flex-col lg:flex-row gap-6">
           <div className="w-full lg:w-[380px] flex-shrink-0">
-            <FilterPanel
+            <PizzaFilterPanel
               filters={filters}
               onFiltersChange={setFilters}
               onGenerate={handleGenerateClick}
@@ -137,26 +145,37 @@ export default function Home() {
 
           <div className="flex-1 min-w-0">
             {loading && <LoadingState />}
-            {!loading && error === "no_match" && <ErrorState type="no_match" />}
-            {!loading && error && error !== "no_match" && <ErrorState type="error" message={error} />}
+            {!loading && error && <ErrorState type="error" message={error} />}
             {!loading && !error && recipe && (
-              <RecipeCard
+              <PizzaCard
                 recipe={recipe}
                 crewSize={filters.crew_size}
                 onEmailClick={() => setEmailModalOpen(true)}
               />
             )}
-            {!loading && !error && !recipe && <EmptyState />}
+            {!loading && !error && !recipe && (
+              <div className="flex flex-col items-center justify-center min-h-[400px] text-center">
+                <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mb-6">
+                  <Flame className="w-10 h-10 text-primary/60" />
+                </div>
+                <h2 className="font-heading text-3xl tracking-wide text-foreground mb-2" data-testid="pizza-text-empty-title">
+                  READY FOR PIZZA NIGHT
+                </h2>
+                <p className="text-muted-foreground text-sm max-w-sm">
+                  Set your crew's preferences and fire up a homemade pizza recipe. Oven required.
+                </p>
+              </div>
+            )}
           </div>
         </div>
       </main>
-      {recipe && (
+      {emailRecipe && (
         <EmailModal
           open={emailModalOpen}
           onOpenChange={setEmailModalOpen}
-          recipe={recipe}
+          recipe={emailRecipe}
           crewSize={filters.crew_size}
-          healthinessLevel={filters.healthiness_preference}
+          healthinessLevel={filters.style_preference}
         />
       )}
       <footer className="text-center py-4 mt-6">
@@ -167,7 +186,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-muted-foreground transition-colors"
-            data-testid="link-attribution"
+            data-testid="pizza-link-attribution"
           >
             Lights &amp; Sirens Co.
           </a>

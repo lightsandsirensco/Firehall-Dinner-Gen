@@ -2,16 +2,20 @@ import type { Express, Request, Response, NextFunction } from "express";
 import { type Server } from "http";
 import crypto from "crypto";
 import cookieParser from "cookie-parser";
-import { generateRequestSchema } from "@shared/schema";
+import { generateRequestSchema, pizzaRequestSchema } from "@shared/schema";
 import { loadTemplates, filterTemplates, pickTemplate, chooseProtein } from "./templates";
 import { generateRecipe, generateRecipeFromPantry } from "./ai";
+import { generatePizzaRecipe, pickPizzaConcept } from "./pizza-ai";
 import { subscribeToList, trackRecipeEvent } from "./klaviyo";
 import { log } from "./index";
 import {
   initCacheStore,
   buildCacheKey,
+  buildPizzaCacheKey,
   getCachedRecipe,
+  getCachedPizzaRecipe,
   setCachedRecipe,
+  setCachedPizzaRecipe,
   checkRateLimit,
   logUsage,
   getDailySpend,
@@ -247,6 +251,113 @@ export async function registerRoutes(
     } catch (error: any) {
       log(`Email recipe error: ${error.message}`, "klaviyo");
       return res.status(500).json({ message: "Failed to send recipe. Please try again." });
+    }
+  });
+
+  app.post("/api/generate-pizza", async (req: Request, res: Response) => {
+    try {
+      const ua = req.headers["user-agent"] || "";
+      if (isBot(ua)) {
+        return res.status(403).json({ message: "Automated requests are not allowed." });
+      }
+
+      const csrfCookie = req.cookies?.csrf_token;
+      const csrfHeader = req.headers["x-csrf-token"] as string;
+      if (!csrfCookie || !csrfHeader || csrfCookie !== csrfHeader) {
+        return res.status(403).json({ message: "Invalid security token. Please refresh the page and try again." });
+      }
+
+      const sessionId = (req as any)._sessionId || "unknown";
+      const clientIp = getClientIp(req);
+      const ipHash = hashIp(clientIp);
+
+      const burstCheck = checkRateLimit(`burst:${ipHash}`, 60_000, 3);
+      if (!burstCheck.allowed) {
+        return res.status(429).json({
+          message: "Slow down! Maximum 3 recipes per minute. Please wait a moment.",
+          retry_after_seconds: 60,
+        });
+      }
+
+      const hourlyCheck = checkRateLimit(`hourly:${ipHash}`, 3_600_000, 10);
+      if (!hourlyCheck.allowed) {
+        return res.status(429).json({
+          message: `Hourly limit reached (10 recipes/hour). Try again later.`,
+          retry_after_seconds: 3600,
+        });
+      }
+
+      const sessionBurst = checkRateLimit(`burst:session:${sessionId}`, 60_000, 3);
+      if (!sessionBurst.allowed) {
+        return res.status(429).json({ message: "Slow down! Maximum 3 recipes per minute.", retry_after_seconds: 60 });
+      }
+
+      const sessionHourly = checkRateLimit(`hourly:session:${sessionId}`, 3_600_000, 10);
+      if (!sessionHourly.allowed) {
+        return res.status(429).json({ message: "Hourly limit reached (10 recipes/hour). Try again later.", retry_after_seconds: 3600 });
+      }
+
+      const parsed = pizzaRequestSchema.safeParse(req.body);
+      if (!parsed.success) {
+        return res.status(400).json({ message: "Invalid request: " + parsed.error.message });
+      }
+
+      const request = parsed.data;
+      const conceptId = pickPizzaConcept(request.allergens_to_avoid, request.last_pizza_style_id);
+      const cacheKey = buildPizzaCacheKey(conceptId, request);
+      const startTime = Date.now();
+
+      const cached = getCachedPizzaRecipe(cacheKey);
+      if (cached) {
+        log(`Pizza cache HIT for key ${cacheKey} (concept: ${conceptId})`, "cache");
+        logUsage({
+          cacheKey,
+          templateId: 0,
+          cacheHit: true,
+          latencyMs: Date.now() - startTime,
+          ipHash,
+          sessionId,
+        });
+        return res.json(cached);
+      }
+
+      const dailyBudget = parseFloat(process.env.DAILY_LLM_BUDGET_USD || "5.00");
+      const currentSpend = getDailySpend();
+
+      if (currentSpend >= dailyBudget) {
+        log(`Budget exceeded: $${currentSpend.toFixed(4)} / $${dailyBudget.toFixed(2)}`, "budget");
+        return res.status(503).json({
+          message: "Daily recipe generation limit reached. Please try again tomorrow.",
+          budget_exceeded: true,
+        });
+      }
+
+      const { recipe, tokensIn, tokensOut } = await generatePizzaRecipe(request, conceptId);
+
+      const estimatedCost =
+        (tokensIn / 1000) * COST_PER_1K_INPUT +
+        (tokensOut / 1000) * COST_PER_1K_OUTPUT;
+
+      setCachedPizzaRecipe(cacheKey, recipe);
+
+      logUsage({
+        cacheKey,
+        templateId: 0,
+        cacheHit: false,
+        tokensIn,
+        tokensOut,
+        estimatedCost,
+        latencyMs: Date.now() - startTime,
+        ipHash,
+        sessionId,
+      });
+
+      log(`Pizza LLM call: ${tokensIn} in / ${tokensOut} out, ~$${estimatedCost.toFixed(5)}`, "cost");
+
+      return res.json(recipe);
+    } catch (error: any) {
+      console.error("Pizza generate error:", error);
+      return res.status(500).json({ message: error.message || "Failed to generate pizza recipe" });
     }
   });
 

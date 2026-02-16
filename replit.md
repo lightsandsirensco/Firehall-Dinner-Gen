@@ -90,5 +90,20 @@ A single-page web app that generates one high-protein meal recipe for a firefigh
 - Print layout includes budget label and tips
 - Cache key includes budget_level
 
+## Homemade Pizza Night (route: /pizza)
+- Separate page at /pizza with its own filters and recipe output
+- Navigation links between Meal Generator (/) and Pizza Night (/pizza) in header
+- Controls: crew_size (2-20), time_available (30-45/45-60/60-90/90-150), dough_option (premade/from_scratch/surprise_me), style_preference (classic/creative/comfort/healthier), heat_level (mild/medium/spicy), allergens_to_avoid, vegetarian_swap_needed
+- POST /api/generate-pizza endpoint with same rate limiting, caching, budget protections
+- 23 pizza concepts rotated randomly (hot honey pepperoni, Big Mac, buffalo chicken, BBQ chicken, philly cheesesteak, taco, chicken bacon ranch, garlic parm white, meatball ricotta, hawaiian, spicy italian, greek, veggie supreme, margherita, cheeseburger, breakfast, nashville hot chicken, pesto chicken, mushroom truffle, donair, leftovers, meat lovers, supreme classic)
+- Anti-repeat: last_pizza_style_id excludes previous concept
+- Allergen filtering: breakfast pizza excluded if eggs avoided, pesto chicken excluded if nuts avoided
+- Dough handling: premade gives stretching tips + shorter time; from-scratch includes full recipe with make-ahead notes
+- Response: PizzaResponse with pizza_style_id, title, dough_type, why_this_works, recommended_pizzas, timing (prep/bake/total), oven_setup (temp F/C, rack, surface), ingredients grouped (dough/sauce/cheese/toppings/drizzles), build_steps, protein_safety, veg_option, cleanup_tip, macros_per_serving
+- Veg option: no tofu, uses plant-based crumbles/mushrooms/roasted veg, matches same flavor profile
+- Pizza scaling: crew 6 = 3-4 pizzas, crew 10 = 5-6, etc.
+- Print + Email buttons reuse existing patterns (print-friendly layout, Klaviyo flow)
+- Key files: client/src/pages/pizza-night.tsx, client/src/components/pizza-filter-panel.tsx, client/src/components/pizza-card.tsx, server/pizza-ai.ts
+
 ## User Preferences
 - No accounts, meal plans, history, template management, or Shopify

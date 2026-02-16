@@ -82,6 +82,59 @@ export interface GenerateResponse {
   budget_tips?: string[];
 }
 
+export const pizzaRequestSchema = z.object({
+  crew_size: z.number().min(2).max(20),
+  time_available: z.enum(["30-45", "45-60", "60-90", "90-150"]),
+  dough_option: z.enum(["premade", "from_scratch", "surprise_me"]),
+  style_preference: z.enum(["classic", "creative", "comfort", "healthier"]),
+  heat_level: z.enum(["mild", "medium", "spicy"]),
+  allergens_to_avoid: z.array(z.string()),
+  vegetarian_swap_needed: z.boolean().optional().default(false),
+  last_pizza_style_id: z.string().optional(),
+});
+
+export type PizzaRequest = z.infer<typeof pizzaRequestSchema>;
+
+export interface PizzaOvenSetup {
+  preheat_temp_f: number;
+  preheat_temp_c: number;
+  rack_position: string;
+  surface_option: string;
+}
+
+export interface PizzaTiming {
+  prep_minutes: number;
+  bake_minutes: number;
+  total_minutes: number;
+}
+
+export interface PizzaResponse {
+  pizza_style_id: string;
+  title: string;
+  dough_type: string;
+  why_this_works: string;
+  recommended_pizzas: string;
+  timing: PizzaTiming;
+  oven_setup: PizzaOvenSetup;
+  ingredients: {
+    dough?: IngredientItem[];
+    sauce: IngredientItem[];
+    cheese: IngredientItem[];
+    toppings: IngredientItem[];
+    drizzles: IngredientItem[];
+  };
+  build_steps: RecipeStep[];
+  protein_safety: ProteinSafetyItem[];
+  veg_option?: {
+    enabled: boolean;
+    description: string;
+    swap_toppings: IngredientItem[];
+    steps: string[];
+  };
+  cleanup_tip: string;
+  macros_per_serving: MacrosPerServing;
+}
+
 export interface TemplateRow {
   template_id: string;
   template_name: string;

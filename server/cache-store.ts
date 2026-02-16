@@ -71,7 +71,35 @@ export function buildCacheKey(templateId: string, request: GenerateRequest, chos
   return crypto.createHash("sha256").update(keyData).digest("hex").substring(0, 32);
 }
 
+export function buildPizzaCacheKey(conceptId: string, request: any): string {
+  const keyData = JSON.stringify({
+    type: "pizza",
+    concept: conceptId,
+    crew_size: request.crew_size,
+    time_available: request.time_available,
+    dough_option: request.dough_option,
+    style_preference: request.style_preference,
+    heat_level: request.heat_level,
+    allergens_to_avoid: [...(request.allergens_to_avoid || [])].sort(),
+    vegetarian_swap_needed: !!request.vegetarian_swap_needed,
+  });
+  return crypto.createHash("sha256").update(keyData).digest("hex").substring(0, 32);
+}
+
 export function getCachedRecipe(cacheKey: string): GenerateResponse | null {
+  const row = db.prepare("SELECT recipe_json FROM recipe_cache WHERE cache_key = ?").get(cacheKey) as any;
+  if (!row) return null;
+  try {
+    const parsed = JSON.parse(row.recipe_json);
+    db.prepare("UPDATE recipe_cache SET hit_count = hit_count + 1 WHERE cache_key = ?").run(cacheKey);
+    return parsed;
+  } catch {
+    db.prepare("DELETE FROM recipe_cache WHERE cache_key = ?").run(cacheKey);
+    return null;
+  }
+}
+
+export function getCachedPizzaRecipe(cacheKey: string): any | null {
   const row = db.prepare("SELECT recipe_json FROM recipe_cache WHERE cache_key = ?").get(cacheKey) as any;
   if (!row) return null;
   try {
@@ -89,6 +117,13 @@ export function setCachedRecipe(cacheKey: string, templateId: number, recipe: Ge
     INSERT OR REPLACE INTO recipe_cache (cache_key, template_id, recipe_json, created_at, hit_count)
     VALUES (?, ?, ?, datetime('now'), 0)
   `).run(cacheKey, templateId, JSON.stringify(recipe));
+}
+
+export function setCachedPizzaRecipe(cacheKey: string, recipe: any) {
+  db.prepare(`
+    INSERT OR REPLACE INTO recipe_cache (cache_key, template_id, recipe_json, created_at, hit_count)
+    VALUES (?, ?, ?, datetime('now'), 0)
+  `).run(cacheKey, 0, JSON.stringify(recipe));
 }
 
 export function checkRateLimit(key: string, windowMs: number, maxRequests: number): { allowed: boolean; remaining: number; resetMs: number } {

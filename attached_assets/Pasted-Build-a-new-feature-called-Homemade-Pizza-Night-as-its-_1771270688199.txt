@@ -1,0 +1,113 @@
+Build a new feature called “🍕 Homemade Pizza Night” as its own separate toggle page (not mixed into the main Meal Generator filters).
+
+Navigation / UI:
+1) Add a top-level nav item or tab:
+   “Homemade Pizza Night”
+2) This opens a dedicated page with its own controls and results.
+3) Keep the same overall design system (dark UI, Bebas Neue headings, Inter body).
+
+Purpose:
+Generate ONLY homemade OVEN pizzas for a firehall crew with lots of creative variety (not delivery, not frozen, not flatbread).
+
+Pizza Night Page — Controls (left panel):
+- Crew size (2–20)
+- Time available (30–45, 45–60, 60–90, 90–150)
+- Dough option:
+  - “Premade dough”
+  - “From scratch”
+  - “Surprise me”
+- Style preference:
+  - “Classic”
+  - “Creative / Viral”
+  - “Comfort / Heavy”
+  - “Healthier”
+- Heat level:
+  - mild / medium / spicy
+- Allergies / restrictions (avoid):
+  dairy, gluten, soy, eggs, nuts
+- One vegetarian crew member (add veg swap — no tofu) toggle
+
+Rules:
+- Must require an oven. If oven not available, show a friendly message and do not generate.
+- Must generate ONE pizza night result at a time.
+- Must not combine multiple meats if multiple proteins are selected elsewhere; on this page choose a single primary meat topping (or vegetarian).
+- Avoid repetition: do not show the same pizza concept twice in a row (track last_pizza_style_id).
+
+Pizza Variety (important):
+Include a large set of distinct homemade pizza concepts and rotate through them.
+At minimum include concepts like:
+- Hot honey pepperoni
+- Big Mac pizza
+- Buffalo chicken
+- BBQ chicken
+- Philly cheesesteak
+- Taco pizza
+- Chicken bacon ranch (offer dairy-free alt if dairy avoided)
+- Garlic parm white pizza (offer dairy-free alt)
+- Meatball + ricotta (offer dairy-free alt)
+- Hawaiian (ham + pineapple)
+- Spicy Italian (calabrese/salami + peppers)
+- Greek (chicken, olives, cucumber, tzatziki-style drizzle)
+- Veggie supreme
+- Margherita
+- Cheeseburger pizza (pickle, onion, special sauce)
+- Breakfast pizza (only if eggs not avoided)
+- Nashville hot chicken style
+- Pesto chicken (avoid if nuts avoided; provide alt)
+- Mushroom truffle “vibe” (budget dependent)
+- Donair-style pizza (Canadian option)
+- “Leftovers” pizza (use what’s in the fridge toppings)
+
+Dough handling:
+If “Premade dough”:
+- Provide simple stretching + shaping tips
+- Shorter total time
+If “From scratch”:
+- Provide a simple dough recipe and rise times
+- Include make-ahead option for firehall practicality
+
+Output (right panel):
+Return a structured result with these sections:
+
+1) Pizza Title (big, bold)
+2) Dough Type (Premade / From scratch)
+3) Why this works tonight (1–2 lines)
+4) Timing:
+   prep_minutes, bake_minutes, total_minutes
+5) Oven Setup:
+   preheat temp (F/C), rack position, stone/steel/sheet pan option
+6) Ingredients (scaled to crew size):
+   - Dough (if scratch)
+   - Sauce
+   - Cheese (or dairy-free alt)
+   - Toppings
+   - Drizzles/sauces (ex: hot honey, “special sauce”, ranch alt)
+7) Build Steps (clean, non-repetitive, scannable):
+   - No duplicated “preheat” text
+   - Include bake time ranges
+8) Food Safety:
+   - If chicken/beef/pork used, include safe internal temp and when to check
+9) Veg Option (1 serving) if toggle on:
+   - No tofu
+   - Must match the same flavor profile (e.g., Big Mac pizza veg version)
+10) Cleanup tip
+
+Pizza Scaling Rules:
+- Always recommend number of pizzas based on crew size:
+  Example:
+  crew 6 = 3–4 large pizzas
+  crew 10 = 5–6 large pizzas
+- Keep portions realistic for firefighters.
+
+Print + Email:
+- Add the same “Print for the Hall” button on this page (print-friendly layout + macros + footer: www.lightsandsirensco.com).
+- Add “Email me this recipe” button that triggers the existing Klaviyo flow/event.
+
+Constraints:
+- Respect allergies/restrictions (avoid) strictly.
+- If dairy avoided, offer cheese alternatives and dairy-free sauce options.
+- If gluten avoided, provide a gluten-free dough option suggestion (premade GF dough) and note cross-contamination.
+- Keep outputs concise and practical.
+
+Deliverable:
+Implement the separate “Homemade Pizza Night” page, its filters, unique pizza concept rotation, and clean recipe output formatting consistent with the rest of the app.
