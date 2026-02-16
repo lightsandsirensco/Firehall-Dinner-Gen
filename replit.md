@@ -33,6 +33,8 @@ A single-page web app that generates one high-protein dinner recipe for a firefi
 - `POST /api/generate` - Accepts GenerateRequest JSON, returns GenerateResponse JSON
 - Template filtering: busy_level, time, appliances, proteins, allergens
 - Anti-repeat: last_template_id excludes previous template
+- AI retry: 3 attempts with exponential backoff on empty/error responses
+- On generation failure, last recipe stays visible (only cleared on no-match)
 
 ## User Preferences
 - No accounts, meal plans, history, template management, or Shopify
