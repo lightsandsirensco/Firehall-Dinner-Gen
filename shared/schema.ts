@@ -10,6 +10,8 @@ export const generateRequestSchema = z.object({
   allergens_to_avoid: z.array(z.string()),
   vegetarian_swap_needed: z.boolean().optional().default(false),
   last_template_id: z.number().optional(),
+  use_what_we_have: z.boolean().optional().default(false),
+  ingredients_on_hand: z.array(z.string()).optional().default([]),
 });
 
 export type GenerateRequest = z.infer<typeof generateRequestSchema>;
@@ -73,6 +75,8 @@ export interface GenerateResponse {
   cleanup_tip: string;
   macros_per_serving: MacrosPerServing;
   veg_option?: VegOption;
+  ingredients_used?: string[];
+  extra_items_needed?: string[];
 }
 
 export interface TemplateRow {

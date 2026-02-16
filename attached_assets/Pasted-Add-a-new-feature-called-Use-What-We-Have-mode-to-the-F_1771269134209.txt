@@ -1,0 +1,73 @@
+Add a new feature called “Use What We Have” mode to the Firehall Meal Generator.
+
+Goal:
+Allow users to enter ingredients they already have, and generate a crew meal based on those items.
+
+UI CHANGES:
+
+1) Add a toggle at the top of the filters panel:
+Label:
+"Use What We Have Mode"
+
+2) When enabled:
+- Show a text input field with placeholder:
+  "Enter ingredients you have (comma separated)"
+  Example placeholder text:
+  "chicken, rice, eggs, peppers, pasta, ground beef"
+
+3) Hide or deprioritize the protein filter when this mode is active.
+- The generator should infer the protein from the entered ingredients.
+
+BACKEND LOGIC:
+
+1) Add a new field to the generate request:
+ingredients_on_hand: string[]
+
+2) If “Use What We Have Mode” is ON:
+- The generator should prioritize recipes using the provided ingredients.
+- It does NOT have to use all ingredients.
+- It should use at least one primary ingredient if possible.
+
+3) Recipe generation rules:
+- Identify likely protein from entered items (chicken, beef, eggs, pork, etc.)
+- Build a realistic firehall-style meal using:
+  - as many provided ingredients as practical
+  - minimal extra grocery items
+- If something essential is missing, include a small section:
+  "You may need to grab:"
+  (short list of 1–4 extra items)
+
+4) Continue to respect:
+- crew size
+- time available
+- appliances available
+- healthiness setting
+- allergies/restrictions
+- vegetarian swap toggle
+
+OUTPUT CHANGES:
+
+Add a new section near the top of the recipe:
+
+"Using what you have:"
+List the ingredients from the user that were used in the meal.
+
+EXAMPLE:
+Using what you have:
+- chicken
+- rice
+- peppers
+
+UX RULES:
+
+- Keep the experience fast and simple.
+- Do not require perfect ingredient matches.
+- If ingredients are vague, make a smart best guess.
+- Avoid exotic recipes.
+- Favor practical firehall meals.
+
+IMPORTANT:
+
+- Do NOT remove or break the normal generator.
+- This is an optional mode users can switch on/off.
+- When the toggle is off, the app works exactly as before.
