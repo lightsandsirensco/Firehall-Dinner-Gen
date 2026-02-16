@@ -106,30 +106,39 @@ export default function PizzaNight() {
 
   return (
     <div className="min-h-screen bg-background">
-      <header className="border-b border-border/50 bg-card/50 backdrop-blur-sm sticky top-0 z-50">
-        <div className="max-w-[1400px] mx-auto px-4 py-3 flex items-center gap-3">
-          <div className="flex items-center gap-2">
-            <div className="w-9 h-9 rounded-md bg-primary flex items-center justify-center">
-              <Flame className="w-5 h-5 text-primary-foreground" />
+      <header className="bg-background border-b border-border/40">
+        <div className="max-w-[1400px] mx-auto px-4">
+          <nav className="flex items-center justify-between py-2" data-testid="nav-links">
+            <div className="flex items-center gap-2">
+              <div className="w-7 h-7 rounded-md bg-primary flex items-center justify-center">
+                <Flame className="w-4 h-4 text-primary-foreground" />
+              </div>
+              <span className="font-heading text-lg leading-none tracking-wide text-foreground">FIREHALL MEALS</span>
             </div>
-            <div>
-              <h1 className="font-heading text-2xl leading-none tracking-wide text-foreground" data-testid="pizza-text-app-title">
-                PIZZA NIGHT
-              </h1>
-              <p className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground font-medium">
-                Homemade Pizza Night
-              </p>
+            <div className="flex items-center gap-1">
+              <Link href="/" className="text-xs uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors font-medium px-3 py-1.5" data-testid="nav-link-meals">
+                Meal Generator
+              </Link>
+              <span className="text-muted-foreground/30 text-xs">|</span>
+              <span className="text-xs uppercase tracking-wider text-foreground font-medium px-3 py-1.5" data-testid="nav-link-pizza-active">
+                Pizza Night
+              </span>
             </div>
-          </div>
-          <nav className="ml-auto flex items-center gap-1" data-testid="nav-links">
-            <Link href="/" className="text-xs uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors font-medium px-3 py-1.5" data-testid="nav-link-meals">
-              Meal Generator
-            </Link>
-            <span className="text-muted-foreground/30 text-xs">|</span>
-            <span className="text-xs uppercase tracking-wider text-foreground font-medium px-3 py-1.5" data-testid="nav-link-pizza-active">
-              Pizza Night
-            </span>
           </nav>
+          <div className="text-center py-5 pb-6">
+            <h1 className="font-heading text-5xl sm:text-6xl leading-none tracking-wide text-foreground" data-testid="pizza-text-app-title">
+              PIZZA NIGHT
+            </h1>
+            <p className="font-heading text-xl sm:text-2xl tracking-wide text-primary mt-1.5" data-testid="pizza-text-app-subtitle">
+              Firefighter Built. Firehall Tested.
+            </p>
+            <p className="text-sm text-muted-foreground mt-2 max-w-lg mx-auto leading-relaxed" data-testid="pizza-text-app-description">
+              Crew meal ideas built for the fire service. Generate dinners, pizza nights, and crew meals based on time, crew size, and what's in the fridge.
+            </p>
+            <p className="text-[11px] text-muted-foreground/50 mt-2" data-testid="pizza-text-app-credibility">
+              Built by a firefighter for the fire service.
+            </p>
+          </div>
         </div>
       </header>
 
