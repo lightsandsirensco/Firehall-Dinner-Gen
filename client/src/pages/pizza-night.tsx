@@ -135,9 +135,6 @@ export default function PizzaNight() {
             <p className="text-sm text-muted-foreground mt-2 max-w-lg mx-auto leading-relaxed" data-testid="pizza-text-app-description">
               Crew meal ideas built for the fire service. Generate dinners, pizza nights, and crew meals based on time, crew size, and what's in the fridge.
             </p>
-            <p className="text-[11px] text-muted-foreground/50 mt-2" data-testid="pizza-text-app-credibility">
-              Built by a firefighter for the fire service.
-            </p>
           </div>
         </div>
       </header>
