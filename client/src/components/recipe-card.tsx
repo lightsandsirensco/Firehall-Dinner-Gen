@@ -65,23 +65,21 @@ export function RecipeCard({ recipe, crewSize }: RecipeCardProps) {
             {recipe.ingredients.map((ing, i) => (
               <div
                 key={i}
-                className="flex items-start gap-3 rounded-md border border-border/40 p-3 leading-relaxed"
+                className="flex flex-col gap-1 rounded-md border border-border/40 p-3 leading-relaxed"
                 style={{ overflowWrap: "anywhere", wordBreak: "break-word" }}
                 data-testid={`ingredient-row-${i}`}
               >
-                <span className="text-primary font-medium text-sm whitespace-normal min-w-[5rem] max-w-[7rem] flex-shrink-0">
-                  {ing.amount}
-                </span>
-                <div className="flex-1 min-w-0">
-                  <span className="text-sm font-semibold text-foreground whitespace-normal break-words">
-                    {ing.item}
-                  </span>
-                  {ing.notes && (
-                    <p className="text-xs text-muted-foreground whitespace-normal break-words mt-0.5">
-                      {ing.notes}
-                    </p>
+                <p className="text-sm whitespace-normal break-words">
+                  <span className="font-bold text-foreground">{ing.item}</span>
+                  {ing.amount && (
+                    <span className="text-primary font-medium"> — {ing.amount}</span>
                   )}
-                </div>
+                </p>
+                {ing.notes && (
+                  <p className="text-xs text-muted-foreground whitespace-normal break-words">
+                    {ing.notes}
+                  </p>
+                )}
               </div>
             ))}
           </div>
