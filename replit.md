@@ -77,5 +77,18 @@ A single-page web app that generates one high-protein meal recipe for a firefigh
 - Print layout also includes pantry sections
 - Cache key includes use_what_we_have and ingredients_on_hand
 
+## Budget Feature
+- Filter dropdown with Low ($), Standard ($$), Splurge ($$$)
+- Request field: budget_level ("low" | "standard" | "splurge"), default "standard"
+- Response fields: budget_level (string), budget_tips (string[])
+- Low ($): AI prefers cheap proteins/staples, avoids premium ingredients, includes 2-3 budget_tips
+- Standard ($$): Normal balanced choices, no constraints
+- Splurge ($$$): Premium ingredients allowed (ribeye, salmon, shrimp, etc.)
+- In pantry mode, budget only influences extra_items_needed suggestions
+- "Budget-friendly" badge shown on recipe card when budget_level is "low"
+- Budget tips section shown with lightbulb icon when tips exist
+- Print layout includes budget label and tips
+- Cache key includes budget_level
+
 ## User Preferences
 - No accounts, meal plans, history, template management, or Shopify

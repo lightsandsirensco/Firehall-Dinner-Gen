@@ -71,6 +71,23 @@ export async function generateRecipe(
 
   const proteinDisplay = chosenProtein.charAt(0).toUpperCase() + chosenProtein.slice(1);
 
+  const budgetLevel = request.budget_level || "standard";
+  const budgetBlock = budgetLevel === "low"
+    ? `
+BUDGET: LOW ($) - Budget-friendly meal.
+- Prefer cheaper proteins: chicken thighs, ground turkey, ground beef (budget cuts), pork shoulder, beans/lentils, eggs.
+- Prefer frozen vegetables and bulk carbs: rice, pasta, potatoes, tortillas.
+- AVOID expensive ingredients: steak cuts, salmon, shrimp, specialty cheeses, nuts, fancy sauces.
+- Include a "budget_tips" array with 2-3 practical cost-saving tactics (e.g., "Buy chicken thighs in bulk for ~$2/lb", "Use frozen mixed vegetables instead of fresh", "Stretch the meal with rice or beans").`
+    : budgetLevel === "splurge"
+    ? `
+BUDGET: SPLURGE ($$$) - Premium "treat meal" vibe.
+- Allow premium ingredients: ribeye, striploin, salmon, shrimp, nicer cheeses, fresh herbs, quality sauces.
+- Still keep it firehall practical and within the time/appliance limits.
+- No budget_tips needed.`
+    : `
+BUDGET: STANDARD ($$) - Normal balanced grocery choices. No special budget constraints.`;
+
   const vegOptionBlock = request.vegetarian_swap_needed
     ? `
 VEG OPTION REQUIRED: One crew member is vegetarian. Include a "veg_option" section in the JSON.
@@ -116,6 +133,7 @@ ${allergenWarning}
 
 PRIMARY PROTEIN: ${proteinDisplay}
 CRITICAL PROTEIN RULE: Use ONLY "${proteinDisplay}" as the primary protein in this recipe. Do NOT include any other meats or proteins as main ingredients. Small accent ingredients (e.g., bacon bits as garnish, parmesan) are acceptable, but the main protein must be ONLY ${proteinDisplay}.
+${budgetBlock}
 ${vegOptionBlock}
 RULES:
 - Scale for ${request.crew_size} servings. 4-6 interruptible steps. 8-12 ingredients. Target 35-60g protein/serving.
@@ -158,7 +176,9 @@ REQUIRED JSON FORMAT:
     {"heading":"Rest & serve (5 min)","body":"Let chicken rest, then slice and plate."}
   ],
   "cleanup_tip": "string",
-  "macros_per_serving": {"calories":0,"protein_g":0,"carbs_g":0,"fat_g":0}${vegJsonBlock}
+  "macros_per_serving": {"calories":0,"protein_g":0,"carbs_g":0,"fat_g":0},
+  "budget_level": "${budgetLevel}",
+  "budget_tips": ${budgetLevel === "low" ? '["Buy in bulk to save", "Use frozen veg"]' : "[]"}${vegJsonBlock}
 }
 
 IMPORTANT:
@@ -184,6 +204,8 @@ IMPORTANT:
 
   recipe.template_id = parseInt(template.template_id);
   recipe.chosen_protein = proteinDisplay;
+  recipe.budget_level = budgetLevel;
+  if (!recipe.budget_tips) recipe.budget_tips = [];
 
   if (!recipe.timing) {
     recipe.timing = { prep_minutes: 0, cook_minutes: 0, total_minutes: 0 };
@@ -204,11 +226,24 @@ export async function generateRecipeFromPantry(
   request: GenerateRequest
 ): Promise<AIResult> {
   const ingredientsList = (request.ingredients_on_hand || []).join(", ");
+  const budgetLevel = request.budget_level || "standard";
 
   const allergenWarning =
     request.allergens_to_avoid.length > 0
       ? `CRITICAL: The crew has allergies: ${request.allergens_to_avoid.join(", ")}. Do NOT include any ingredients with these allergens. Use safe substitutes. This applies to BOTH the main recipe AND any vegetarian option.`
       : "No allergy restrictions.";
+
+  const budgetBlockPantry = budgetLevel === "low"
+    ? `
+BUDGET NOTE (applies ONLY to extra items, NOT the main recipe which uses on-hand ingredients):
+- For "extra_items_needed", keep them minimal and inexpensive (no premium items, stick to cheap staples).
+- Include a "budget_tips" array with 2-3 practical cost-saving tactics (e.g., "Buy frozen veg in bulk", "Stretch with rice or beans").`
+    : budgetLevel === "splurge"
+    ? `
+BUDGET NOTE (applies ONLY to extra items, NOT the main recipe which uses on-hand ingredients):
+- For "extra_items_needed", feel free to suggest premium additions (quality sauces, fresh herbs, nicer cheeses).`
+    : `
+BUDGET: STANDARD ($$) - No special budget constraints for extra items.`;
 
   const vegOptionBlock = request.vegetarian_swap_needed
     ? `
@@ -242,6 +277,7 @@ Appliances available: ${request.appliances.join(", ")}
 CREW: ${request.crew_size} people | Shift: ${request.busy_level} | Time: ${request.time_available} min
 Healthiness: ${request.healthiness_preference}
 ${allergenWarning}
+${budgetBlockPantry}
 
 PANTRY MODE RULES:
 - Build a practical firehall-style meal using AS MANY of the provided ingredients as practical.
@@ -275,7 +311,9 @@ REQUIRED JSON FORMAT:
   "cleanup_tip": "string",
   "macros_per_serving": {"calories":0,"protein_g":0,"carbs_g":0,"fat_g":0},
   "ingredients_used": ["chicken", "rice", "peppers"],
-  "extra_items_needed": ["soy sauce", "sesame oil"]${vegJsonBlock}
+  "extra_items_needed": ["soy sauce", "sesame oil"],
+  "budget_level": "${budgetLevel}",
+  "budget_tips": ${budgetLevel === "low" ? '["Buy in bulk to save", "Use frozen veg"]' : "[]"}${vegJsonBlock}
 }
 
 IMPORTANT:
@@ -306,6 +344,8 @@ IMPORTANT:
   if (!recipe.chosen_protein) {
     recipe.chosen_protein = "Pantry mix";
   }
+  recipe.budget_level = budgetLevel;
+  if (!recipe.budget_tips) recipe.budget_tips = [];
 
   if (!recipe.timing) {
     recipe.timing = { prep_minutes: 0, cook_minutes: 0, total_minutes: 0 };

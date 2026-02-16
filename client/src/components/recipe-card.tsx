@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import type { GenerateResponse } from "@shared/schema";
-import { Flame, Droplets, Wheat, Beef, Sparkles, Trash2, Clock, Timer, ShieldCheck, Thermometer, Printer, Leaf, Mail, Package, ShoppingCart } from "lucide-react";
+import { Flame, Droplets, Wheat, Beef, Sparkles, Trash2, Clock, Timer, ShieldCheck, Thermometer, Printer, Leaf, Mail, Package, ShoppingCart, DollarSign, Lightbulb } from "lucide-react";
 
 interface RecipeCardProps {
   recipe: GenerateResponse;
@@ -95,7 +95,7 @@ function buildPrintHtml(recipe: GenerateResponse, crewSize: number): string {
 <body>
   <h1>${recipe.title}</h1>
   <p class="subtitle">${recipe.why_it_fits_tonight}</p>
-  <p class="servings">Serves ${crewSize}${recipe.chosen_protein ? ` &bull; Protein: ${recipe.chosen_protein}` : ""}</p>
+  <p class="servings">Serves ${crewSize}${recipe.chosen_protein ? ` &bull; Protein: ${recipe.chosen_protein}` : ""}${recipe.budget_level === "low" ? ' &bull; <strong>Budget-friendly ($)</strong>' : ""}</p>
 
   ${recipe.ingredients_used && recipe.ingredients_used.length > 0 ? `
   <h2>Using What's in the Fridge</h2>
@@ -142,6 +142,12 @@ function buildPrintHtml(recipe: GenerateResponse, crewSize: number): string {
     <strong>Cleanup Tip</strong>
     ${recipe.cleanup_tip}
   </div>` : ""}
+
+  ${recipe.budget_tips && recipe.budget_tips.length > 0 ? `
+  <h2>Budget Tips</h2>
+  <ul style="padding-left:20px;font-size:14px">
+    ${recipe.budget_tips.map(tip => `<li style="margin-bottom:4px">${tip}</li>`).join("")}
+  </ul>` : ""}
 
   ${recipe.veg_option?.enabled ? `
   <h2 style="color:#16a34a">Veg Option (1 Serving)</h2>
@@ -209,14 +215,22 @@ export function RecipeCard({ recipe, crewSize, onEmailClick }: RecipeCardProps) 
         <p className="text-sm text-muted-foreground" data-testid="text-recipe-why">
           {recipe.why_it_fits_tonight}
         </p>
-        {recipe.chosen_protein && (
-          <div className="flex items-center gap-2 mt-1">
-            <Beef className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-foreground" data-testid="text-chosen-protein">
-              Protein: {recipe.chosen_protein}
-            </span>
-          </div>
-        )}
+        <div className="flex items-center gap-2 mt-1 flex-wrap">
+          {recipe.chosen_protein && (
+            <div className="flex items-center gap-2">
+              <Beef className="w-4 h-4 text-primary" />
+              <span className="text-sm font-medium text-foreground" data-testid="text-chosen-protein">
+                Protein: {recipe.chosen_protein}
+              </span>
+            </div>
+          )}
+          {recipe.budget_level === "low" && (
+            <Badge variant="secondary" className="text-xs" data-testid="badge-budget-friendly">
+              <DollarSign className="w-3 h-3 mr-1" />
+              Budget-friendly
+            </Badge>
+          )}
+        </div>
       </div>
 
       {recipe.ingredients_used && recipe.ingredients_used.length > 0 && (
@@ -429,6 +443,25 @@ export function RecipeCard({ recipe, crewSize, onEmailClick }: RecipeCardProps) 
           </div>
         </CardContent>
       </Card>
+
+      {recipe.budget_tips && recipe.budget_tips.length > 0 && (
+        <Card data-testid="section-budget-tips">
+          <CardContent className="p-4">
+            <div className="flex items-center gap-2 mb-3">
+              <Lightbulb className="w-4 h-4 text-amber-500" />
+              <h3 className="font-heading text-lg tracking-wider uppercase text-foreground">Budget Tips</h3>
+            </div>
+            <ul className="space-y-2">
+              {recipe.budget_tips.map((tip, i) => (
+                <li key={i} className="flex gap-2 text-sm text-foreground/80" data-testid={`budget-tip-${i}`}>
+                  <DollarSign className="w-3.5 h-3.5 text-amber-500 flex-shrink-0 mt-0.5" />
+                  <span>{tip}</span>
+                </li>
+              ))}
+            </ul>
+          </CardContent>
+        </Card>
+      )}
 
       {recipe.veg_option?.enabled && (
         <Card className="border-green-600/30" data-testid="section-veg-option">

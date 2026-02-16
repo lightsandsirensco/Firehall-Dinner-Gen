@@ -7,7 +7,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Switch } from "@/components/ui/switch";
 import { Badge } from "@/components/ui/badge";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Flame, RefreshCw, Users, Clock, Zap, Dumbbell, ShieldAlert, ChefHat, Leaf, Package } from "lucide-react";
+import { Flame, RefreshCw, Users, Clock, Zap, Dumbbell, ShieldAlert, ChefHat, Leaf, Package, DollarSign } from "lucide-react";
 
 export interface FilterState {
   crew_size: number;
@@ -16,6 +16,7 @@ export interface FilterState {
   appliances: string[];
   proteins: string[];
   healthiness_preference: string;
+  budget_level: string;
   allergens_to_avoid: string[];
   vegetarian_swap_needed: boolean;
   use_what_we_have: boolean;
@@ -229,6 +230,23 @@ export function FilterPanel({ filters, onFiltersChange, onGenerate, onGenerateAn
                 <SelectItem value="lean">Lean</SelectItem>
                 <SelectItem value="balanced">Balanced</SelectItem>
                 <SelectItem value="comfort">Comfort</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+
+          <div className="space-y-2">
+            <Label className="flex items-center gap-2 text-xs uppercase tracking-wider text-muted-foreground font-medium">
+              <DollarSign className="w-3.5 h-3.5" />
+              Budget
+            </Label>
+            <Select value={filters.budget_level} onValueChange={(val) => update("budget_level", val)}>
+              <SelectTrigger data-testid="select-budget-level">
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="low">Low ($)</SelectItem>
+                <SelectItem value="standard">Standard ($$)</SelectItem>
+                <SelectItem value="splurge">Splurge ($$$)</SelectItem>
               </SelectContent>
             </Select>
           </div>

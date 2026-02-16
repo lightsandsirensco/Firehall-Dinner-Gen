@@ -7,6 +7,7 @@ export const generateRequestSchema = z.object({
   appliances: z.array(z.string()).min(1),
   proteins: z.array(z.string()).min(1),
   healthiness_preference: z.enum(["lean", "balanced", "comfort"]),
+  budget_level: z.enum(["low", "standard", "splurge"]).optional().default("standard"),
   allergens_to_avoid: z.array(z.string()),
   vegetarian_swap_needed: z.boolean().optional().default(false),
   last_template_id: z.number().optional(),
@@ -77,6 +78,8 @@ export interface GenerateResponse {
   veg_option?: VegOption;
   ingredients_used?: string[];
   extra_items_needed?: string[];
+  budget_level?: string;
+  budget_tips?: string[];
 }
 
 export interface TemplateRow {
