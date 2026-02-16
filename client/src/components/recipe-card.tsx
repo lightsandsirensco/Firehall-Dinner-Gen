@@ -82,6 +82,9 @@ function buildPrintHtml(recipe: GenerateResponse, crewSize: number): string {
   .cleanup { background: #f5f5f5; padding: 12px 16px; border-radius: 4px; margin-top: 16px; page-break-inside: avoid; }
   .cleanup strong { display: block; text-transform: uppercase; font-size: 12px; letter-spacing: 1px; color: #666; margin-bottom: 4px; }
   .servings { font-size: 13px; color: #666; margin-bottom: 16px; }
+  .macros { font-size: 14px; color: #222; margin-bottom: 8px; padding: 8px 0; }
+  .macros strong { font-weight: 600; }
+  .footer { text-align: center; color: #444; font-size: 12px; margin-top: 40px; padding-top: 16px; border-top: 1px solid #ddd; }
   @media print {
     body { padding: 0; }
     .no-print { display: none !important; }
@@ -100,6 +103,11 @@ function buildPrintHtml(recipe: GenerateResponse, crewSize: number): string {
     <div class="timing-item"><strong>${recipe.timing.cook_minutes}</strong><span>min cook</span></div>
     <div class="timing-item"><strong>${recipe.timing.total_minutes}</strong><span>min total</span></div>
   </div>` : ""}
+
+  <div class="macros">
+    <strong>Macros per serving:</strong>
+    Calories: ${recipe.macros_per_serving.calories} | Protein: ${recipe.macros_per_serving.protein_g}g | Carbs: ${recipe.macros_per_serving.carbs_g}g | Fat: ${recipe.macros_per_serving.fat_g}g
+  </div>
 
   ${safetyRows ? `
   <h2>Protein Safety</h2>
@@ -126,6 +134,8 @@ function buildPrintHtml(recipe: GenerateResponse, crewSize: number): string {
     <strong>Cleanup Tip</strong>
     ${recipe.cleanup_tip}
   </div>` : ""}
+
+  <div class="footer">www.lightsandsirensco.com</div>
 
   <script>window.onload = function() { window.print(); }</script>
 </body>
