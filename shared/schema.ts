@@ -26,10 +26,27 @@ export interface MacrosPerServing {
   fat_g: number;
 }
 
+export interface RecipeTiming {
+  prep_minutes: number;
+  cook_minutes: number;
+  total_minutes: number;
+}
+
+export interface ProteinSafetyItem {
+  protein: string;
+  target_temp_f: number;
+  target_temp_c: number;
+  rest_minutes: number;
+  probe_where: string;
+  notes: string;
+}
+
 export interface GenerateResponse {
   template_id: number;
   title: string;
   why_it_fits_tonight: string;
+  timing: RecipeTiming;
+  protein_safety: ProteinSafetyItem[];
   ingredients: IngredientItem[];
   steps: string[];
   cleanup_tip: string;

@@ -68,16 +68,50 @@ Proteins: ${request.proteins.join(", ")}
 Healthiness: ${request.healthiness_preference}
 ${allergenWarning}
 
-Rules: Scale for ${request.crew_size} servings. 4-6 interruptible steps. 8-12 ingredients. Target 35-60g protein/serving.
+RULES:
+- Scale for ${request.crew_size} servings. 4-6 interruptible steps. 8-12 ingredients. Target 35-60g protein/serving.
+- Every step MUST include explicit temperature (oven temp in °F/°C, or stove heat level like "medium-high") AND approximate cook time.
+- Steps MUST mention when to check internal temperature and the exact target number.
+- FOOD SAFETY TEMPS (mandatory):
+  * Chicken/turkey: 165°F / 74°C
+  * Ground meats (beef, pork, turkey): 160°F / 71°C
+  * Whole pork/pork chops: 145°F / 63°C + 3 min rest
+  * Fish/seafood: 145°F / 63°C
+  * Reheating leftovers: 165°F / 74°C
 
-JSON format:
-{"template_id":${template.template_id},"title":"string","why_it_fits_tonight":"string","ingredients":[{"item":"string","amount":"string","notes":"string"}],"steps":["string"],"cleanup_tip":"string","macros_per_serving":{"calories":0,"protein_g":0,"carbs_g":0,"fat_g":0}}`;
+REQUIRED JSON FORMAT:
+{
+  "template_id": ${template.template_id},
+  "title": "string",
+  "why_it_fits_tonight": "string",
+  "timing": {
+    "prep_minutes": 0,
+    "cook_minutes": 0,
+    "total_minutes": 0
+  },
+  "protein_safety": [
+    {
+      "protein": "Chicken breast",
+      "target_temp_f": 165,
+      "target_temp_c": 74,
+      "rest_minutes": 5,
+      "probe_where": "Thickest part of the breast, avoiding bone",
+      "notes": "Juices run clear, no pink in center"
+    }
+  ],
+  "ingredients": [{"item":"string","amount":"string","notes":"string"}],
+  "steps": ["Preheat oven to 425°F (218°C). Season chicken... (10 min)"],
+  "cleanup_tip": "string",
+  "macros_per_serving": {"calories":0,"protein_g":0,"carbs_g":0,"fat_g":0}
+}
+
+IMPORTANT: protein_safety MUST have one entry for EACH protein in the recipe. Always include target_temp_f, target_temp_c, rest_minutes, probe_where, and notes.`;
 
   log(`Generating recipe from template: ${template.template_name} (ID: ${template.template_id})`, "ai");
 
   const content = await callAI(
     prompt,
-    "You are a firehall chef. Return ONLY valid JSON. No markdown. No code fences.",
+    "You are a firehall chef focused on food safety. Return ONLY valid JSON. No markdown. No code fences. Always include cooking temperatures and internal temp targets for every protein.",
     template.template_id
   );
 
@@ -92,6 +126,13 @@ JSON format:
   }
 
   recipe.template_id = parseInt(template.template_id);
+
+  if (!recipe.timing) {
+    recipe.timing = { prep_minutes: 0, cook_minutes: 0, total_minutes: 0 };
+  }
+  if (!recipe.protein_safety || !Array.isArray(recipe.protein_safety)) {
+    recipe.protein_safety = [];
+  }
 
   if (!recipe.title || !recipe.ingredients || !recipe.steps) {
     throw new Error("AI returned incomplete recipe data. Please try again.");
