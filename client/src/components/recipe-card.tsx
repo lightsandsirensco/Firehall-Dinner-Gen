@@ -58,14 +58,30 @@ export function RecipeCard({ recipe, crewSize }: RecipeCardProps) {
           <h3 className="font-heading text-lg tracking-wider uppercase text-foreground mb-3">
             Ingredients
           </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-1.5" data-testid="section-ingredients">
+          <div
+            className="grid grid-cols-1 md:grid-cols-2 gap-3"
+            data-testid="section-ingredients"
+          >
             {recipe.ingredients.map((ing, i) => (
-              <div key={i} className="flex items-baseline gap-2 py-1 border-b border-border/30 last:border-0">
-                <span className="text-primary font-medium text-sm whitespace-nowrap">{ing.amount}</span>
-                <span className="text-sm text-foreground">{ing.item}</span>
-                {ing.notes && (
-                  <span className="text-xs text-muted-foreground ml-auto whitespace-nowrap">({ing.notes})</span>
-                )}
+              <div
+                key={i}
+                className="flex items-start gap-3 rounded-md border border-border/40 p-3 leading-relaxed"
+                style={{ overflowWrap: "anywhere", wordBreak: "break-word" }}
+                data-testid={`ingredient-row-${i}`}
+              >
+                <span className="text-primary font-medium text-sm whitespace-normal min-w-[5rem] max-w-[7rem] flex-shrink-0">
+                  {ing.amount}
+                </span>
+                <div className="flex-1 min-w-0">
+                  <span className="text-sm font-semibold text-foreground whitespace-normal break-words">
+                    {ing.item}
+                  </span>
+                  {ing.notes && (
+                    <p className="text-xs text-muted-foreground whitespace-normal break-words mt-0.5">
+                      {ing.notes}
+                    </p>
+                  )}
+                </div>
               </div>
             ))}
           </div>
