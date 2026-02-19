@@ -110,9 +110,7 @@ export default function PizzaNight() {
         <div className="max-w-[1400px] mx-auto px-4">
           <nav className="flex items-center justify-between py-2" data-testid="nav-links">
             <div className="flex items-center gap-2">
-              <div className="w-7 h-7 rounded-md bg-primary flex items-center justify-center">
-                <Flame className="w-4 h-4 text-primary-foreground" />
-              </div>
+              <Flame className="w-7 h-7" style={{ color: "#C62828" }} />
               <span className="font-heading text-lg leading-none tracking-wide text-foreground">FIREHALL MEALS</span>
             </div>
             <div className="flex items-center gap-1">
