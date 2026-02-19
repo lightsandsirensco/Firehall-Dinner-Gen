@@ -117,47 +117,45 @@ async function getOrCreateList(): Promise<string> {
 export async function subscribeToList(email: string): Promise<void> {
   const listId = await getOrCreateList();
 
-  const result = await klaviyoFetch(
+  const profileRes = await klaviyoFetch(
     "POST",
-    `${KLAVIYO_BASE}/profile-subscription-bulk-create-jobs/`,
+    `${KLAVIYO_BASE}/profile-import/`,
     {
       data: {
-        type: "profile-subscription-bulk-create-job",
-        attributes: {
-          profiles: {
-            data: [
-              {
-                type: "profile",
-                attributes: {
-                  email,
-                  subscriptions: {
-                    email: {
-                      marketing: {
-                        consent: "SUBSCRIBED",
-                      },
-                    },
-                  },
-                },
-              },
-            ],
-          },
-        },
-        relationships: {
-          list: {
-            data: {
-              type: "list",
-              id: listId,
-            },
-          },
-        },
+        type: "profile",
+        attributes: { email },
       },
     },
-    `subscribe(${email})`,
+    `importProfile(${email})`,
   );
 
-  if (!result.ok) {
-    const detail = result.data?.errors?.[0]?.detail || result.raw.substring(0, 200);
-    throw new Error(`Subscribe failed (${result.status}): ${detail}`);
+  if (!profileRes.ok) {
+    const detail = profileRes.data?.errors?.[0]?.detail || profileRes.raw.substring(0, 200);
+    throw new Error(`Profile import failed (${profileRes.status}): ${detail}`);
+  }
+
+  const profileId = profileRes.data?.data?.id;
+  if (!profileId) {
+    throw new Error("Profile import succeeded but no profile ID returned");
+  }
+
+  const addRes = await klaviyoFetch(
+    "POST",
+    `${KLAVIYO_BASE}/lists/${listId}/relationships/profiles/`,
+    {
+      data: [
+        {
+          type: "profile",
+          id: profileId,
+        },
+      ],
+    },
+    `addToList(${email})`,
+  );
+
+  if (!addRes.ok) {
+    const detail = addRes.data?.errors?.[0]?.detail || addRes.raw.substring(0, 200);
+    throw new Error(`Add to list failed (${addRes.status}): ${detail}`);
   }
 
   log(`Subscribed ${email} to list ${listId}`, "klaviyo");
