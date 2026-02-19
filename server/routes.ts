@@ -7,6 +7,7 @@ import { loadTemplates, filterTemplates, pickTemplate, chooseProtein } from "./t
 import { generateRecipe, generateRecipeFromPantry } from "./ai";
 import { generatePizzaRecipe, pickPizzaConcept } from "./pizza-ai";
 import { subscribeToList, trackRecipeEvent, trackShoppingListEvent } from "./klaviyo";
+import { getFromPool, refillPool, getPoolSize } from "./recipe-pool";
 import { log } from "./index";
 import {
   initCacheStore,
@@ -47,6 +48,11 @@ export async function registerRoutes(
   app: Express
 ): Promise<Server> {
   initCacheStore();
+
+  setTimeout(() => {
+    log("Starting pre-generation pool warmup...", "pool");
+    refillPool().catch((err) => log(`Pool warmup error: ${err.message}`, "pool"));
+  }, 3000);
 
   app.use(cookieParser());
 
@@ -165,6 +171,24 @@ export async function registerRoutes(
         return res.json(cached);
       }
 
+      if (!request.use_what_we_have) {
+        const poolEntry = getFromPool(request, request.last_template_id);
+        if (poolEntry) {
+          setCachedRecipe(poolEntry.cacheKey, poolEntry.templateId, poolEntry.recipe);
+          logUsage({
+            cacheKey: poolEntry.cacheKey,
+            templateId: poolEntry.templateId,
+            cacheHit: false,
+            estimatedCost: poolEntry.estimatedCost,
+            latencyMs: Date.now() - startTime,
+            ipHash,
+            sessionId,
+          });
+          log(`Pool served in ${Date.now() - startTime}ms`, "perf");
+          return res.json(poolEntry.recipe);
+        }
+      }
+
       const dailyBudget = parseFloat(process.env.DAILY_LLM_BUDGET_USD || "5.00");
       const currentSpend = getDailySpend();
 
@@ -198,7 +222,9 @@ export async function registerRoutes(
         sessionId,
       });
 
-      log(`LLM call: ${tokensIn} in / ${tokensOut} out, ~$${estimatedCost.toFixed(5)}, daily total: $${(currentSpend + estimatedCost).toFixed(4)}`, "cost");
+      log(`Generated in ${Date.now() - startTime}ms | ${tokensIn}in/${tokensOut}out | ~$${estimatedCost.toFixed(5)}`, "perf");
+
+      refillPool().catch(() => {});
 
       return res.json(recipe);
     } catch (error: any) {
@@ -382,7 +408,7 @@ export async function registerRoutes(
         sessionId,
       });
 
-      log(`Pizza LLM call: ${tokensIn} in / ${tokensOut} out, ~$${estimatedCost.toFixed(5)}`, "cost");
+      log(`Pizza generated in ${Date.now() - startTime}ms | ${tokensIn}in/${tokensOut}out | ~$${estimatedCost.toFixed(5)}`, "perf");
 
       return res.json(recipe);
     } catch (error: any) {
@@ -414,6 +440,9 @@ export async function registerRoutes(
       cacheInfo: {
         total_recipes_cached: cacheCount,
         total_cache_hits: stats.cache.totalHits,
+      },
+      pool: {
+        size: getPoolSize(),
       },
       today: stats.today,
       last7Days: stats.last7Days,

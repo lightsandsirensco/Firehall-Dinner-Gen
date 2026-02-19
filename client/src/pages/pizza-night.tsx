@@ -165,29 +165,37 @@ export default function PizzaNight() {
           </div>
 
           <div className="flex-1 min-w-0">
-            {loading && <LoadingState />}
-            {!loading && error && <ErrorState type="error" message={error} />}
-            {!loading && !error && recipe && (
-              <PizzaCard
-                recipe={recipe}
-                crewSize={filters.crew_size}
-                onEmailClick={() => setEmailModalOpen(true)}
-                onShoppingListClick={() => setShoppingListOpen(true)}
-              />
-            )}
-            {!loading && !error && !recipe && (
-              <div className="flex flex-col items-center justify-center min-h-[400px] text-center">
-                <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mb-6">
-                  <Flame className="w-10 h-10 text-primary/60" />
+            <div className="transition-opacity duration-300 ease-in-out" style={{ opacity: loading ? 0.6 : 1 }}>
+              {loading && <LoadingState />}
+              {!loading && error && (
+                <div className="animate-in fade-in duration-300">
+                  <ErrorState type="error" message={error} />
                 </div>
-                <h2 className="font-heading text-3xl tracking-wide text-foreground mb-2" data-testid="pizza-text-empty-title">
-                  READY FOR PIZZA NIGHT
-                </h2>
-                <p className="text-muted-foreground text-sm max-w-sm">
-                  Set your crew's preferences and fire up a homemade pizza recipe. Oven required.
-                </p>
-              </div>
-            )}
+              )}
+              {!loading && !error && recipe && (
+                <div key={recipe.title} className="animate-in fade-in slide-in-from-bottom-2 duration-400">
+                  <PizzaCard
+                    recipe={recipe}
+                    crewSize={filters.crew_size}
+                    onEmailClick={() => setEmailModalOpen(true)}
+                    onShoppingListClick={() => setShoppingListOpen(true)}
+                  />
+                </div>
+              )}
+              {!loading && !error && !recipe && (
+                <div className="flex flex-col items-center justify-center min-h-[400px] text-center">
+                  <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mb-6">
+                    <Flame className="w-10 h-10 text-primary/60" />
+                  </div>
+                  <h2 className="font-heading text-3xl tracking-wide text-foreground mb-2" data-testid="pizza-text-empty-title">
+                    READY FOR PIZZA NIGHT
+                  </h2>
+                  <p className="text-muted-foreground text-sm max-w-sm">
+                    Set your crew's preferences and fire up a homemade pizza recipe. Oven required.
+                  </p>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </main>

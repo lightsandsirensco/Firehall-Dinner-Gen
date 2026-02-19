@@ -1,4 +1,4 @@
-import { useState, useRef, useMemo } from "react";
+import { useState, useRef, useMemo, useCallback } from "react";
 import { FilterPanel, type FilterState } from "@/components/filter-panel";
 import { RecipeCard } from "@/components/recipe-card";
 import { EmptyState } from "@/components/empty-state";
@@ -157,18 +157,30 @@ export default function Home() {
           </div>
 
           <div className="flex-1 min-w-0">
-            {loading && <LoadingState />}
-            {!loading && error === "no_match" && <ErrorState type="no_match" />}
-            {!loading && error && error !== "no_match" && <ErrorState type="error" message={error} />}
-            {!loading && !error && recipe && (
-              <RecipeCard
-                recipe={recipe}
-                crewSize={filters.crew_size}
-                onEmailClick={() => setEmailModalOpen(true)}
-                onShoppingListClick={() => setShoppingListOpen(true)}
-              />
-            )}
-            {!loading && !error && !recipe && <EmptyState />}
+            <div className="transition-opacity duration-300 ease-in-out" style={{ opacity: loading ? 0.6 : 1 }}>
+              {loading && <LoadingState />}
+              {!loading && error === "no_match" && (
+                <div className="animate-in fade-in duration-300">
+                  <ErrorState type="no_match" />
+                </div>
+              )}
+              {!loading && error && error !== "no_match" && (
+                <div className="animate-in fade-in duration-300">
+                  <ErrorState type="error" message={error} />
+                </div>
+              )}
+              {!loading && !error && recipe && (
+                <div key={recipe.title} className="animate-in fade-in slide-in-from-bottom-2 duration-400">
+                  <RecipeCard
+                    recipe={recipe}
+                    crewSize={filters.crew_size}
+                    onEmailClick={() => setEmailModalOpen(true)}
+                    onShoppingListClick={() => setShoppingListOpen(true)}
+                  />
+                </div>
+              )}
+              {!loading && !error && !recipe && <EmptyState />}
+            </div>
           </div>
         </div>
       </main>
