@@ -6,7 +6,7 @@ import { generateRequestSchema, pizzaRequestSchema } from "@shared/schema";
 import { loadTemplates, filterTemplates, pickTemplate, chooseProtein } from "./templates";
 import { generateRecipe, generateRecipeFromPantry } from "./ai";
 import { generatePizzaRecipe, pickPizzaConcept } from "./pizza-ai";
-import { subscribeToList, trackRecipeEvent, trackShoppingListEvent } from "./klaviyo";
+import { subscribeToList, trackRecipeEvent, trackShoppingListEvent, validateKlaviyoConfig } from "./klaviyo";
 import { getFromPool, refillPool, getPoolSize } from "./recipe-pool";
 import { log } from "./index";
 import {
@@ -48,6 +48,13 @@ export async function registerRoutes(
   app: Express
 ): Promise<Server> {
   initCacheStore();
+
+  const klaviyoCheck = validateKlaviyoConfig();
+  if (klaviyoCheck.ok) {
+    log("Klaviyo API key configured", "klaviyo");
+  } else {
+    log(`WARNING: ${klaviyoCheck.error} — email features will fail`, "klaviyo");
+  }
 
   setTimeout(() => {
     log("Starting pre-generation pool warmup...", "pool");
@@ -256,10 +263,16 @@ export async function registerRoutes(
 
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailRegex.test(email)) {
-        return res.status(400).json({ message: "Invalid email address." });
+        return res.status(400).json({ message: "Please enter a valid email address." });
       }
 
-      await Promise.all([
+      const klaviyo = validateKlaviyoConfig();
+      if (!klaviyo.ok) {
+        log(`Email blocked: ${klaviyo.error}`, "klaviyo");
+        return res.status(503).json({ message: "Email service is not configured. Please contact the site owner." });
+      }
+
+      const results = await Promise.allSettled([
         subscribeToList(email),
         trackRecipeEvent(email, {
           recipe_title,
@@ -273,10 +286,34 @@ export async function registerRoutes(
         }),
       ]);
 
+      const subscribeFailed = results[0].status === "rejected";
+      const eventFailed = results[1].status === "rejected";
+
+      if (subscribeFailed) {
+        const reason = (results[0] as PromiseRejectedResult).reason?.message || "Unknown error";
+        log(`Subscribe failed for ${email}: ${reason}`, "klaviyo");
+      }
+      if (eventFailed) {
+        const reason = (results[1] as PromiseRejectedResult).reason?.message || "Unknown error";
+        log(`Event tracking failed for ${email}: ${reason}`, "klaviyo");
+      }
+
+      if (subscribeFailed && eventFailed) {
+        const reason = (results[0] as PromiseRejectedResult).reason?.message || "Unknown error";
+        if (reason.includes("KLAVIYO_API_KEY")) {
+          return res.status(503).json({ message: "Email service is not configured. Please contact the site owner." });
+        }
+        return res.status(502).json({ message: `Email service error: ${reason}` });
+      }
+
+      if (subscribeFailed) {
+        return res.status(207).json({ success: true, message: "Recipe tracked but subscription may not have completed. Check your inbox." });
+      }
+
       return res.json({ success: true, message: "Recipe sent. Check your inbox." });
     } catch (error: any) {
       log(`Email recipe error: ${error.message}`, "klaviyo");
-      return res.status(500).json({ message: "Failed to send recipe. Please try again." });
+      return res.status(500).json({ message: `Failed to send recipe: ${error.message}` });
     }
   });
 
@@ -290,10 +327,16 @@ export async function registerRoutes(
 
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailRegex.test(email)) {
-        return res.status(400).json({ message: "Invalid email address." });
+        return res.status(400).json({ message: "Please enter a valid email address." });
       }
 
-      await Promise.all([
+      const klaviyo = validateKlaviyoConfig();
+      if (!klaviyo.ok) {
+        log(`Email blocked: ${klaviyo.error}`, "klaviyo");
+        return res.status(503).json({ message: "Email service is not configured. Please contact the site owner." });
+      }
+
+      const results = await Promise.allSettled([
         subscribeToList(email),
         trackShoppingListEvent(email, {
           recipe_title,
@@ -303,10 +346,30 @@ export async function registerRoutes(
         }),
       ]);
 
+      const subscribeFailed = results[0].status === "rejected";
+      const eventFailed = results[1].status === "rejected";
+
+      if (subscribeFailed) {
+        const reason = (results[0] as PromiseRejectedResult).reason?.message || "Unknown error";
+        log(`Subscribe failed for ${email}: ${reason}`, "klaviyo");
+      }
+      if (eventFailed) {
+        const reason = (results[1] as PromiseRejectedResult).reason?.message || "Unknown error";
+        log(`Event tracking failed for ${email}: ${reason}`, "klaviyo");
+      }
+
+      if (subscribeFailed && eventFailed) {
+        const reason = (results[0] as PromiseRejectedResult).reason?.message || "Unknown error";
+        if (reason.includes("KLAVIYO_API_KEY")) {
+          return res.status(503).json({ message: "Email service is not configured. Please contact the site owner." });
+        }
+        return res.status(502).json({ message: `Email service error: ${reason}` });
+      }
+
       return res.json({ success: true, message: "Shopping list sent. Check your inbox." });
     } catch (error: any) {
       log(`Email shopping list error: ${error.message}`, "klaviyo");
-      return res.status(500).json({ message: "Failed to send shopping list. Please try again." });
+      return res.status(500).json({ message: `Failed to send shopping list: ${error.message}` });
     }
   });
 

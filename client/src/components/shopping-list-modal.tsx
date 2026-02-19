@@ -6,7 +6,6 @@ import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Copy, Printer, Mail, CheckCircle, Loader2, ShoppingCart, Leaf, Lightbulb, Package, Check } from "lucide-react";
-import { apiRequest } from "@/lib/queryClient";
 import type { ShoppingListResult } from "@/lib/shopping-list";
 import { shoppingListToText } from "@/lib/shopping-list";
 
@@ -160,17 +159,34 @@ export function ShoppingListModal({ open, onOpenChange, shoppingList, recipeTitl
         }),
       }));
 
-      await apiRequest("POST", "/api/email-shopping-list", {
-        email: email.trim(),
-        recipe_title: recipeTitle,
-        shopping_list_sections: sectionsData,
-        generator_type: generatorType,
-        timestamp: new Date().toISOString(),
+      const res = await fetch("/api/email-shopping-list", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email: email.trim(),
+          recipe_title: recipeTitle,
+          shopping_list_sections: sectionsData,
+          generator_type: generatorType,
+          timestamp: new Date().toISOString(),
+        }),
+        credentials: "include",
       });
+
+      const data = await res.json().catch(() => null);
+
+      if (!res.ok) {
+        const msg = data?.message || `Server error (${res.status}). Please try again.`;
+        console.error("[shopping-list-modal] Email failed:", res.status, msg);
+        setEmailStatus("error");
+        setEmailError(msg);
+        return;
+      }
+
       setEmailStatus("success");
-    } catch {
+    } catch (err: any) {
+      console.error("[shopping-list-modal] Network error:", err);
       setEmailStatus("error");
-      setEmailError("Something went wrong. Please try again.");
+      setEmailError("Network error. Check your connection and try again.");
     }
   };
 

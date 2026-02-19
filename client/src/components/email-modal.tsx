@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Mail, CheckCircle, Loader2 } from "lucide-react";
-import { apiRequest } from "@/lib/queryClient";
 import type { GenerateResponse } from "@shared/schema";
 
 interface EmailModalProps {
@@ -28,21 +27,38 @@ export function EmailModal({ open, onOpenChange, recipe, crewSize, healthinessLe
     setErrorMsg("");
 
     try {
-      await apiRequest("POST", "/api/email-recipe", {
-        email: email.trim(),
-        recipe_title: recipe.title,
-        primary_protein: recipe.chosen_protein || "",
-        healthiness_level: healthinessLevel,
-        crew_size: crewSize,
-        ingredients: recipe.ingredients.map((i) => `${i.item} — ${i.amount}`),
-        steps: recipe.steps.map((s) => typeof s === "string" ? s : `${s.heading}: ${s.body}`),
-        macros: recipe.macros_per_serving,
-        timestamp: new Date().toISOString(),
+      const res = await fetch("/api/email-recipe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email: email.trim(),
+          recipe_title: recipe.title,
+          primary_protein: recipe.chosen_protein || "",
+          healthiness_level: healthinessLevel,
+          crew_size: crewSize,
+          ingredients: recipe.ingredients.map((i) => `${i.item} — ${i.amount}`),
+          steps: recipe.steps.map((s) => typeof s === "string" ? s : `${s.heading}: ${s.body}`),
+          macros: recipe.macros_per_serving,
+          timestamp: new Date().toISOString(),
+        }),
+        credentials: "include",
       });
+
+      const data = await res.json().catch(() => null);
+
+      if (!res.ok) {
+        const msg = data?.message || `Server error (${res.status}). Please try again.`;
+        console.error("[email-modal] Submit failed:", res.status, msg);
+        setStatus("error");
+        setErrorMsg(msg);
+        return;
+      }
+
       setStatus("success");
     } catch (err: any) {
+      console.error("[email-modal] Network error:", err);
       setStatus("error");
-      setErrorMsg("Something went wrong. Please try again.");
+      setErrorMsg("Network error. Check your connection and try again.");
     }
   };
 
