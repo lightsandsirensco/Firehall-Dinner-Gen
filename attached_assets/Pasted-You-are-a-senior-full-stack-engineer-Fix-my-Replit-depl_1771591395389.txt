@@ -1,0 +1,44 @@
+You are a senior full-stack engineer. Fix my Replit-deployed web app so it consistently stays on my custom domain (firehallmeals.com) and never rewrites/redirects to the Replit URL (firehall-meal-gen.replit.app). This used to work and recently regressed.
+
+Goals:
+1) When I visit https://firehallmeals.com the browser URL must remain firehallmeals.com (no redirect to .replit.app).
+2) All internal links, API calls, form actions, and email links must use the custom domain (or relative URLs) so they work on both local and deployed.
+3) The app header/brand text “FirehallMeals” must appear at the top again (it disappeared after the regression).
+4) The fix must be robust across refreshes, deep links, and navigation.
+
+Do this:
+A) Search the entire codebase for any references to:
+   - "replit.app"
+   - "firehall-meal-gen"
+   - "REPLIT"
+   - "window.location"
+   - "location.href"
+   - "redirect"
+   - "BASE_URL"
+   - "NEXT_PUBLIC_*URL"
+   - "VITE_*URL"
+   - "canonical"
+   - proxy / rewrite settings
+B) Identify the exact regression point(s): hardcoded base URL, redirect middleware, router basename, canonical tag, or API endpoint building.
+C) Replace hardcoded absolute URLs with relative paths wherever possible (e.g., fetch("/api/send") instead of fetch("https://firehall-meal-gen.replit.app/api/send")).
+D) If an absolute URL is required (e.g., inside emails), create a single source of truth:
+   - Set env var BASE_URL=https://firehallmeals.com
+   - Use process.env.BASE_URL (server) or the appropriate public env var (client) and fall back safely.
+E) Check hosting config:
+   - Ensure no server-side middleware forces redirect to the Replit domain
+   - Ensure canonical <link rel="canonical"> (if present) points to https://firehallmeals.com/
+F) Ensure the “FirehallMeals” header renders:
+   - Find the Header/Nav component and verify it’s included on the main layout
+   - Confirm styling/CSS isn’t hiding it due to broken asset paths or conditional rendering tied to hostname
+G) Provide:
+   1) A short explanation of the root cause
+   2) A list of exact files changed
+   3) The specific code diffs (before/after) for each change
+   4) The env vars I must set in Replit (and where)
+   5) Redeploy steps
+
+Constraints:
+- Do not introduce new paid services.
+- Keep changes minimal and safe.
+- Assume I’m deploying on Replit with a custom domain attached.
+- After implementing, tell me how to verify with 3 quick tests (home page, deep link, form submit/email link).
