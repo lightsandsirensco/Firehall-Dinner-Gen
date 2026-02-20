@@ -51,14 +51,17 @@ export function EmailModal({ open, onOpenChange, recipe, crewSize, healthinessLe
         console.error("[email-modal] Submit failed:", res.status, msg);
         setStatus("error");
         setErrorMsg(msg);
+        window.gtag?.('event', 'email_submission_error');
         return;
       }
 
       setStatus("success");
+      window.gtag?.('event', 'email_submission_success');
     } catch (err: any) {
       console.error("[email-modal] Network error:", err);
       setStatus("error");
       setErrorMsg("Network error. Check your connection and try again.");
+      window.gtag?.('event', 'email_submission_error');
     }
   };
 

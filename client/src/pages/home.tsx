@@ -59,6 +59,7 @@ export default function Home() {
       const data: GenerateResponse = await res.json();
       setRecipe(data);
       setLastTemplateId(data.template_id);
+      window.gtag?.('event', 'generate_meal_clicked');
       genCountRef.current += 1;
       if (genCountRef.current === 2 && !emailPromptedRef.current) {
         emailPromptedRef.current = true;
