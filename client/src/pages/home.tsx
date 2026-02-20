@@ -8,6 +8,7 @@ import { EmailModal } from "@/components/email-modal";
 import { ShoppingListModal } from "@/components/shopping-list-modal";
 import { buildShoppingListFromMeal } from "@/lib/shopping-list";
 import { apiRequest } from "@/lib/queryClient";
+import { trackEvent } from "@/lib/analytics";
 import type { GenerateResponse } from "@shared/schema";
 import { Flame } from "lucide-react";
 import { Link } from "wouter";
@@ -59,7 +60,7 @@ export default function Home() {
       const data: GenerateResponse = await res.json();
       setRecipe(data);
       setLastTemplateId(data.template_id);
-      window.gtag?.('event', 'generate_meal_clicked');
+      trackEvent('generate_meal_clicked');
       genCountRef.current += 1;
       if (genCountRef.current === 2 && !emailPromptedRef.current) {
         emailPromptedRef.current = true;
