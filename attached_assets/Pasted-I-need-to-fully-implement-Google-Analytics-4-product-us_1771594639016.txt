@@ -1,0 +1,117 @@
+I need to fully implement Google Analytics 4 product usage tracking in this app.
+
+IMPORTANT:
+- Do not refactor existing business logic.
+- Do not break meal generation or email functionality.
+- Only add analytics safely.
+- Ensure no duplicate script loads.
+- Ensure no duplicate event firing.
+
+----------------------------------------
+STEP 1 — Ensure GA4 Base Tag Is Installed Globally
+----------------------------------------
+
+Verify the following Google tag is installed ONCE in the global <head> of the root HTML template (not inside components):
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LYT598M5KT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-LYT598M5KT');
+</script>
+
+If already present, do not duplicate.
+
+----------------------------------------
+STEP 2 — Create Safe Analytics Helper
+----------------------------------------
+
+Add a reusable helper function in a global utilities file or near app initialization:
+
+function trackEvent(name, params = {}) {
+  if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+    window.gtag('event', name, params);
+  }
+}
+
+This prevents runtime errors if analytics fails to load.
+
+----------------------------------------
+STEP 3 — Track Core Product Usage Events
+----------------------------------------
+
+Add event tracking to these actions:
+
+1) When meal generation STARTS:
+trackEvent('meal_generation_started');
+
+2) When meal generation SUCCESSFULLY completes:
+trackEvent('meal_generation_success');
+
+3) When snack toggle is clicked:
+trackEvent('snack_toggle_clicked');
+
+4) When allergy filter is changed:
+trackEvent('allergy_filter_used');
+
+5) When Simple / Classic Mode is toggled:
+trackEvent('simple_mode_toggled');
+
+6) When email submission succeeds:
+trackEvent('email_submission_success');
+
+7) When email submission fails:
+trackEvent('email_submission_error', {
+  error_type: 'validation_or_api'
+});
+
+----------------------------------------
+STEP 4 — Track Usage Depth (Important)
+----------------------------------------
+
+Add a session counter:
+
+let mealsGeneratedThisSession = 0;
+
+Each time a meal is successfully generated:
+
+mealsGeneratedThisSession++;
+trackEvent('meal_generation_success', {
+  meals_generated_this_session: mealsGeneratedThisSession
+});
+
+----------------------------------------
+STEP 5 — Track Returning Users (Email Based)
+----------------------------------------
+
+After successful email submission:
+
+- Hash the email using SHA-256 (do not store raw email in analytics).
+- Set user_id in GA4 using:
+
+gtag('set', {
+  user_id: hashedEmail
+});
+
+This allows tracking repeat usage per user securely.
+
+----------------------------------------
+STEP 6 — Prevent Duplicate Event Firing
+----------------------------------------
+
+Ensure:
+- Events only fire after confirmed success responses.
+- Events do NOT fire on component re-renders.
+- Events fire once per action.
+
+----------------------------------------
+STEP 7 — After Implementation
+----------------------------------------
+
+Report:
+- Which files were modified
+- Where GA tag is located
+- Where each event hook was inserted
+- Confirmation that no duplicate script exists

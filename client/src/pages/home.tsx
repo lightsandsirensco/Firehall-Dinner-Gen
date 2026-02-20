@@ -8,7 +8,7 @@ import { EmailModal } from "@/components/email-modal";
 import { ShoppingListModal } from "@/components/shopping-list-modal";
 import { buildShoppingListFromMeal } from "@/lib/shopping-list";
 import { apiRequest } from "@/lib/queryClient";
-import { trackEvent } from "@/lib/analytics";
+import { trackEvent, trackMealGenerated } from "@/lib/analytics";
 import type { GenerateResponse } from "@shared/schema";
 import { Flame } from "lucide-react";
 import { Link } from "wouter";
@@ -39,6 +39,7 @@ export default function Home() {
   const handleGenerate = async (currentFilters: FilterState, templateId?: number) => {
     setLoading(true);
     setError(null);
+    trackEvent('meal_generation_started');
     try {
       const ingredients_on_hand = currentFilters.use_what_we_have
         ? currentFilters.ingredients_on_hand_text.split(",").map(s => s.trim()).filter(Boolean)
@@ -60,7 +61,7 @@ export default function Home() {
       const data: GenerateResponse = await res.json();
       setRecipe(data);
       setLastTemplateId(data.template_id);
-      trackEvent('generate_meal_clicked');
+      trackMealGenerated();
       genCountRef.current += 1;
       if (genCountRef.current === 2 && !emailPromptedRef.current) {
         emailPromptedRef.current = true;

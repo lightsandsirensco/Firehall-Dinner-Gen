@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Mail, CheckCircle, Loader2 } from "lucide-react";
 import type { GenerateResponse } from "@shared/schema";
-import { trackEvent } from "@/lib/analytics";
+import { trackEvent, setAnalyticsUserId } from "@/lib/analytics";
 
 interface EmailModalProps {
   open: boolean;
@@ -58,6 +58,7 @@ export function EmailModal({ open, onOpenChange, recipe, crewSize, healthinessLe
 
       setStatus("success");
       trackEvent('email_submission_success');
+      setAnalyticsUserId(email);
     } catch (err: any) {
       console.error("[email-modal] Network error:", err);
       setStatus("error");
