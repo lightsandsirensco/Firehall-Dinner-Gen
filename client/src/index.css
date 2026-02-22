@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+  background-color: #141414 !important;
+  min-height: 100vh;
+}
+
 /* LIGHT MODE */
 :root {
   --button-outline: rgba(255,255,255, .10);
