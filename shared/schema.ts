@@ -135,6 +135,43 @@ export interface PizzaResponse {
   macros_per_serving: MacrosPerServing;
 }
 
+export const hallVoteCreateSchema = z.object({
+  title: z.string().max(100).optional().default("Tonight's Hall Vote"),
+  options: z.array(z.object({
+    name: z.string(),
+    description: z.string(),
+    est_cost: z.string().optional(),
+    est_time: z.string().optional(),
+    recipe_payload: z.any(),
+  })).min(2).max(5),
+});
+
+export type HallVoteCreateRequest = z.infer<typeof hallVoteCreateSchema>;
+
+export interface HallVoteOption {
+  option_id: number;
+  name: string;
+  description: string;
+  est_cost?: string;
+  est_time?: string;
+  recipe_payload: GenerateResponse;
+  vote_count: number;
+}
+
+export interface HallVoteResponse {
+  vote_id: string;
+  title: string;
+  options: HallVoteOption[];
+  status: "open" | "closed";
+  created_at: string;
+  expires_at: string;
+  total_votes: number;
+  user_vote?: number;
+  can_close: boolean;
+  winner?: number;
+  share_url?: string;
+}
+
 export interface TemplateRow {
   template_id: string;
   template_name: string;

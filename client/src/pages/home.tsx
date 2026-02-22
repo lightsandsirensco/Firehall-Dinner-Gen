@@ -6,12 +6,15 @@ import { LoadingState } from "@/components/loading-state";
 import { ErrorState } from "@/components/error-state";
 import { EmailModal } from "@/components/email-modal";
 import { ShoppingListModal } from "@/components/shopping-list-modal";
+import { HallVoteModal } from "@/components/hall-vote-modal";
 import { buildShoppingListFromMeal } from "@/lib/shopping-list";
 import { apiRequest } from "@/lib/queryClient";
 import { trackEvent, trackMealGenerated } from "@/lib/analytics";
 import type { GenerateResponse } from "@shared/schema";
-import { Flame } from "lucide-react";
+import { Flame, Vote } from "lucide-react";
 import { Link } from "wouter";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   const [recipe, setRecipe] = useState<GenerateResponse | null>(null);
@@ -20,6 +23,8 @@ export default function Home() {
   const [lastTemplateId, setLastTemplateId] = useState<number | undefined>();
   const [emailModalOpen, setEmailModalOpen] = useState(false);
   const [shoppingListOpen, setShoppingListOpen] = useState(false);
+  const [hallVoteOpen, setHallVoteOpen] = useState(false);
+  const [recentRecipes, setRecentRecipes] = useState<GenerateResponse[]>([]);
   const genCountRef = useRef(0);
   const emailPromptedRef = useRef(false);
   const [filters, setFilters] = useState<FilterState>({
@@ -60,6 +65,10 @@ export default function Home() {
       });
       const data: GenerateResponse = await res.json();
       setRecipe(data);
+      setRecentRecipes(prev => {
+        const deduped = prev.filter(r => r.title !== data.title);
+        return [data, ...deduped].slice(0, 5);
+      });
       setLastTemplateId(data.template_id);
       trackMealGenerated();
       genCountRef.current += 1;
@@ -178,6 +187,28 @@ export default function Home() {
                     onEmailClick={() => setEmailModalOpen(true)}
                     onShoppingListClick={() => setShoppingListOpen(true)}
                   />
+                  {recentRecipes.length >= 2 && (
+                    <div className="mt-4 p-4 rounded-xl border border-border/50 bg-card/50 flex items-center justify-between gap-3 animate-in fade-in duration-500">
+                      <div className="flex items-center gap-2 min-w-0">
+                        <Vote className="w-5 h-5 text-primary flex-shrink-0" />
+                        <div>
+                          <p className="text-sm font-bold text-foreground">Can't decide? Let the crew vote.</p>
+                          <p className="text-xs text-muted-foreground">
+                            {recentRecipes.length} meals ready &middot; Share a link, crew picks the winner
+                          </p>
+                        </div>
+                      </div>
+                      <Button
+                        variant="outline"
+                        className="font-heading tracking-wider flex-shrink-0"
+                        onClick={() => setHallVoteOpen(true)}
+                        data-testid="button-start-hall-vote"
+                      >
+                        <Vote className="w-4 h-4 mr-2" />
+                        HALL VOTE
+                      </Button>
+                    </div>
+                  )}
                 </div>
               )}
               {!loading && !error && !recipe && <EmptyState />}
@@ -205,6 +236,13 @@ export default function Home() {
             generatorType="meal"
           />
         </>
+      )}
+      {recentRecipes.length >= 2 && (
+        <HallVoteModal
+          open={hallVoteOpen}
+          onOpenChange={setHallVoteOpen}
+          recipes={recentRecipes}
+        />
       )}
       <footer className="text-center py-4 mt-6">
         <p className="text-xs text-muted-foreground/60">

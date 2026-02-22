@@ -2,12 +2,13 @@ import type { Express, Request, Response, NextFunction } from "express";
 import { type Server } from "http";
 import crypto from "crypto";
 import cookieParser from "cookie-parser";
-import { generateRequestSchema, pizzaRequestSchema } from "@shared/schema";
+import { generateRequestSchema, pizzaRequestSchema, hallVoteCreateSchema } from "@shared/schema";
 import { loadTemplates, filterTemplates, pickTemplate, chooseProtein } from "./templates";
 import { generateRecipe, generateRecipeFromPantry } from "./ai";
 import { generatePizzaRecipe, pickPizzaConcept } from "./pizza-ai";
 import { subscribeToList, trackRecipeEvent, trackShoppingListEvent, validateKlaviyoConfig } from "./klaviyo";
 import { getFromPool, refillPool, getPoolSize } from "./recipe-pool";
+import { initHallVoteTables, createHallVote, getHallVote, castBallot, closeHallVote, hashVoterFingerprint } from "./hall-vote-store";
 import { log } from "./index";
 import {
   initCacheStore,
@@ -48,6 +49,7 @@ export async function registerRoutes(
   app: Express
 ): Promise<Server> {
   initCacheStore();
+  initHallVoteTables();
 
   const klaviyoCheck = validateKlaviyoConfig();
   if (klaviyoCheck.ok) {
@@ -477,6 +479,124 @@ export async function registerRoutes(
     } catch (error: any) {
       console.error("Pizza generate error:", error);
       return res.status(500).json({ message: error.message || "Failed to generate pizza recipe" });
+    }
+  });
+
+  app.post("/api/hall-vote", async (req: Request, res: Response) => {
+    try {
+      const csrfCookie = req.cookies?.csrf_token;
+      const csrfHeader = req.headers["x-csrf-token"] as string;
+      if (!csrfCookie || !csrfHeader || csrfCookie !== csrfHeader) {
+        return res.status(403).json({ message: "Invalid security token. Please refresh the page." });
+      }
+
+      const sessionId = (req as any)._sessionId || "unknown";
+      const clientIp = getClientIp(req);
+      const ipHash = hashIp(clientIp);
+
+      const voteLimit = checkRateLimit(`hallvote:${ipHash}`, 60_000, 2);
+      if (!voteLimit.allowed) {
+        return res.status(429).json({ message: "Please wait before creating another vote.", retry_after_seconds: 60 });
+      }
+
+      const parsed = hallVoteCreateSchema.safeParse(req.body);
+      if (!parsed.success) {
+        return res.status(400).json({ message: "Invalid request: " + parsed.error.message });
+      }
+
+      const { title, options } = parsed.data;
+
+      const { voteId } = createHallVote(title, options, sessionId);
+
+      const protocol = req.headers["x-forwarded-proto"] || req.protocol;
+      const host = req.headers["host"] || "localhost:5000";
+      const shareUrl = `${protocol}://${host}/vote/${voteId}`;
+
+      return res.json({ vote_id: voteId, share_url: shareUrl });
+    } catch (error: any) {
+      console.error("Hall vote create error:", error);
+      return res.status(500).json({ message: "Failed to create vote" });
+    }
+  });
+
+  app.get("/api/hall-vote/:voteId", (req: Request, res: Response) => {
+    try {
+      const { voteId } = req.params;
+      const sessionId = (req as any)._sessionId || "";
+      const clientIp = getClientIp(req);
+      const ua = req.headers["user-agent"] || "";
+      const fingerprint = hashVoterFingerprint(clientIp, ua);
+
+      const vote = getHallVote(voteId, sessionId, fingerprint);
+      if (!vote) {
+        return res.status(404).json({ message: "Vote not found" });
+      }
+
+      return res.json(vote);
+    } catch (error: any) {
+      console.error("Hall vote get error:", error);
+      return res.status(500).json({ message: "Failed to get vote" });
+    }
+  });
+
+  app.post("/api/hall-vote/:voteId/vote", (req: Request, res: Response) => {
+    try {
+      const { voteId } = req.params;
+      const { optionId } = req.body;
+
+      if (typeof optionId !== "number") {
+        return res.status(400).json({ message: "optionId is required" });
+      }
+
+      const clientIp = getClientIp(req);
+      const ipHash = hashIp(clientIp);
+      const voteRateLimit = checkRateLimit(`vote:${ipHash}`, 60_000, 10);
+      if (!voteRateLimit.allowed) {
+        return res.status(429).json({ message: "Too many vote attempts. Please wait." });
+      }
+
+      const ua = req.headers["user-agent"] || "";
+      const fingerprint = hashVoterFingerprint(clientIp, ua);
+
+      const result = castBallot(voteId, optionId, fingerprint);
+      if (!result.success) {
+        const statusCode = result.error === "You already voted" ? 409 : 400;
+        return res.status(statusCode).json({ message: result.error });
+      }
+
+      const sessionId = (req as any)._sessionId || "";
+      const updatedVote = getHallVote(voteId, sessionId, fingerprint);
+      return res.json(updatedVote);
+    } catch (error: any) {
+      console.error("Hall vote cast error:", error);
+      return res.status(500).json({ message: "Failed to cast vote" });
+    }
+  });
+
+  app.post("/api/hall-vote/:voteId/close", (req: Request, res: Response) => {
+    try {
+      const csrfCookie = req.cookies?.csrf_token;
+      const csrfHeader = req.headers["x-csrf-token"] as string;
+      if (!csrfCookie || !csrfHeader || csrfCookie !== csrfHeader) {
+        return res.status(403).json({ message: "Invalid security token. Please refresh the page." });
+      }
+
+      const { voteId } = req.params;
+      const sessionId = (req as any)._sessionId || "";
+
+      const result = closeHallVote(voteId, sessionId);
+      if (!result.success) {
+        return res.status(403).json({ message: result.error });
+      }
+
+      const clientIp = getClientIp(req);
+      const ua = req.headers["user-agent"] || "";
+      const fingerprint = hashVoterFingerprint(clientIp, ua);
+      const updatedVote = getHallVote(voteId, sessionId, fingerprint);
+      return res.json(updatedVote);
+    } catch (error: any) {
+      console.error("Hall vote close error:", error);
+      return res.status(500).json({ message: "Failed to close vote" });
     }
   });
 

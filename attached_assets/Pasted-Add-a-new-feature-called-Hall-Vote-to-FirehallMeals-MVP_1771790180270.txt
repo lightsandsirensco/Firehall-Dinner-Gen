@@ -1,0 +1,93 @@
+Add a new feature called “Hall Vote” to FirehallMeals (MVP).
+
+Goal:
+Let a user generate 3 meal options, start a vote, share a link/QR with the crew, collect anonymous votes, and show live results + the winning meal.
+
+Requirements (must implement all):
+
+1) Data model (DB)
+Create tables/collections:
+- hall_votes:
+  - id (short unique, URL-safe, e.g., nanoid)
+  - created_at
+  - expires_at (default: now + 24h)
+  - created_by (optional, can be null)
+  - title (string, default: “Tonight’s Hall Vote”)
+  - options (array of 3 objects: { option_id, name, description, est_cost, est_time, image_url(optional), recipe_payload })
+  - status (“open” | “closed”)
+  - total_votes (integer)
+- hall_vote_ballots:
+  - id
+  - vote_id (fk)
+  - option_id
+  - created_at
+  - voter_fingerprint_hash (hash of IP + userAgent + salt; do NOT store raw IP)
+  - UNIQUE(vote_id, voter_fingerprint_hash) to prevent repeat voting
+
+2) Backend API routes
+Implement endpoints:
+- POST /api/hall-vote
+  Input: current user preferences OR a payload of 3 generated recipes (preferred: reuse the existing “generate recipes” output to create the vote)
+  Action: create hall_vote with 3 options, status=open, expires_at=24h
+  Return: { voteId, shareUrl }
+
+- GET /api/hall-vote/:voteId
+  Return: vote details (title, options, status, expires_at, total_votes) AND current counts per option
+
+- POST /api/hall-vote/:voteId/vote
+  Input: { optionId }
+  Rules:
+   - only allow if status=open and not expired
+   - prevent multiple votes using voter_fingerprint_hash uniqueness
+   - on success increment totals and return updated counts
+   - on duplicate vote return 409 with message “You already voted”
+
+- POST /api/hall-vote/:voteId/close
+  Action: set status=closed (only creator can close if auth exists; otherwise allow close from the same session that created it)
+
+3) Frontend UI
+Add a button on results screen after generating recipes:
+- “Start Hall Vote”
+When clicked:
+- create vote via POST /api/hall-vote using the 3 displayed recipes
+- show a modal with:
+  - Share link (copy button)
+  - QR code generated from shareUrl
+  - “Open Live Results” button
+
+Create new public page/route:
+- /vote/:voteId
+This page must:
+- show 3 options with big tap targets (name + quick stats like time/cost)
+- allow 1-tap vote
+- after voting, show “Thanks — current results” with live updates
+
+Create results page/section:
+- show bar chart or simple progress bars with counts & percentages
+- highlight the current leader and final winner if closed
+- show “Close Vote” button (if allowed)
+
+4) Live updates
+Implement lightweight live updates:
+- simplest: poll GET /api/hall-vote/:voteId every 3 seconds
+- stop polling if status=closed or expired
+(If websockets already exist, you can use them, but polling is acceptable for MVP)
+
+5) Expiry + safety
+- If now > expires_at, treat vote as closed and block new ballots
+- Sanitize all inputs
+- Handle errors gracefully
+- Keep the feature fast on mobile
+
+6) Styling
+Match the current FirehallMeals look.
+Keep the Hall Vote UI simple, bold, and “shift friendly”.
+
+Deliverables:
+- migrations/schema updates
+- new API routes
+- new /vote/:voteId page
+- integration button “Start Hall Vote” on recipe results
+- tested locally with at least 3 simulated voters
+
+Also: do not break existing recipe generation and email sending flows.

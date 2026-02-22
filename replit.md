@@ -124,5 +124,20 @@ A single-page web app that generates one high-protein meal recipe for a firefigh
 - Key files: client/src/lib/shopping-list.ts, client/src/components/shopping-list-modal.tsx
 - Helper: buildShoppingListFromMeal(recipe, options) and buildShoppingListFromPizza(recipe, options)
 
+## Hall Vote Feature
+- "Can't decide? Let the crew vote" — appears after generating 2+ recipes in a session
+- Creator clicks "Hall Vote" button → modal shows recipe options → creates vote → gets shareable link + QR code
+- POST /api/hall-vote — creates vote (CSRF protected, rate limited 2/min)
+- GET /api/hall-vote/:voteId — returns vote with tallies, user's vote, can_close flag
+- POST /api/hall-vote/:voteId/vote — cast ballot (duplicate prevention via IP+UA fingerprint hash)
+- POST /api/hall-vote/:voteId/close — creator closes vote early
+- /vote/:voteId public page: mobile-friendly, tap-to-vote, live results with 3s polling
+- SQLite tables: hall_votes (vote_id, title, options_json, status, total_votes, creator_session_id, expires_at), hall_vote_ballots (vote_id, option_id, fingerprint_hash, unique constraint)
+- 24-hour auto-expiry on votes
+- Winner shown when vote closes (highest vote count)
+- QR code generated client-side via qrcode library
+- Key files: server/hall-vote-store.ts, client/src/components/hall-vote-modal.tsx, client/src/pages/vote.tsx
+- Schemas: hallVoteCreateSchema, HallVoteOption, HallVoteResponse in shared/schema.ts
+
 ## User Preferences
 - No accounts, meal plans, history, template management, or Shopify
