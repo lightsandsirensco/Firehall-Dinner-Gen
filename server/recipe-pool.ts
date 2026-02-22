@@ -59,14 +59,18 @@ export function getFromPool(request: GenerateRequest, lastTemplateId?: number): 
 
   pruneExpired();
 
+  const requestProteins = request.proteins.map((p) => p.toLowerCase());
+
   const validIdx = pool.findIndex(
-    (entry) => !lastTemplateId || entry.templateId !== lastTemplateId
+    (entry) =>
+      (!lastTemplateId || entry.templateId !== lastTemplateId) &&
+      requestProteins.includes(entry.recipe.chosen_protein.toLowerCase())
   );
 
   if (validIdx === -1) return null;
 
   const entry = pool.splice(validIdx, 1)[0];
-  log(`Pool HIT — served "${entry.recipe.title}" (pool remaining: ${pool.length})`, "pool");
+  log(`Pool HIT — served "${entry.recipe.title}" (protein: ${entry.recipe.chosen_protein}, pool remaining: ${pool.length})`, "pool");
 
   refillPool();
 

@@ -38,7 +38,9 @@ A single-page web app that generates one high-protein meal recipe for a firefigh
 - `GET /api/admin/usage` - Admin usage dashboard data (protected by ADMIN_SECRET env var)
 - Template filtering: busy_level, time, appliances, proteins, allergens
 - Anti-repeat: last_template_id excludes previous template
-- AI retry: 3 attempts with exponential backoff on empty/error responses
+- AI retry: 2 attempts with exponential backoff on empty/error responses
+- Protein enforcement: strict prompt constraints + post-generation validation (up to 3 retries) via server/protein-validator.ts
+- Proteins validated against enum: chicken, beef, pork, turkey, fish, vegetarian
 - On generation failure, last recipe stays visible (only cleared on no-match)
 - `vegetarian_swap_needed` (boolean): when true, recipe includes a `veg_option` section with swap_protein, ingredients, steps, and plating_notes for 1 vegetarian crew member
 - Veg option respects allergens_to_avoid (e.g., no tofu/tempeh if soy allergy, no paneer if dairy)

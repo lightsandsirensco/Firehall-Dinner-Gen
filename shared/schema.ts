@@ -5,7 +5,7 @@ export const generateRequestSchema = z.object({
   busy_level: z.enum(["quiet", "average", "busy", "slammed"]),
   time_available: z.enum(["15-25", "20-30", "25-40", "30-45", "45-60", "60-90"]),
   appliances: z.array(z.string()).min(1),
-  proteins: z.array(z.string()).min(1),
+  proteins: z.array(z.enum(["chicken", "beef", "pork", "turkey", "fish", "vegetarian"])).min(1),
   healthiness_preference: z.enum(["lean", "balanced", "comfort"]),
   budget_level: z.enum(["low", "standard", "splurge"]).optional().default("standard"),
   allergens_to_avoid: z.array(z.string()),

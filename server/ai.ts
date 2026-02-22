@@ -1,6 +1,7 @@
 import OpenAI from "openai";
 import type { TemplateRow, GenerateRequest, GenerateResponse } from "@shared/schema";
 import { log } from "./index";
+import { getForbiddenProteinsText, validateProteinCompliance } from "./protein-validator";
 
 const openai = new OpenAI({
   apiKey: process.env.AI_INTEGRATIONS_OPENAI_API_KEY,
@@ -8,6 +9,7 @@ const openai = new OpenAI({
 });
 
 const MAX_RETRIES = 2;
+const MAX_PROTEIN_RETRIES = 3;
 
 export interface AIResult {
   recipe: GenerateResponse;
@@ -55,6 +57,28 @@ async function callAI(prompt: string, systemPrompt: string): Promise<{ content: 
   throw new Error("AI did not return a recipe after multiple attempts. Please try again.");
 }
 
+function parseRecipe(content: string, template: TemplateRow, chosenProtein: string, budgetLevel: string): GenerateResponse {
+  let recipe: GenerateResponse;
+  try {
+    recipe = JSON.parse(content) as GenerateResponse;
+  } catch {
+    log(`JSON parse failed: ${content.substring(0, 200)}`, "ai");
+    throw new Error("Failed to parse AI response. Please try again.");
+  }
+
+  recipe.template_id = parseInt(template.template_id);
+  recipe.chosen_protein = chosenProtein.charAt(0).toUpperCase() + chosenProtein.slice(1);
+  recipe.budget_level = budgetLevel;
+  if (!recipe.budget_tips) recipe.budget_tips = [];
+  if (!recipe.timing) recipe.timing = { prep_minutes: 0, cook_minutes: 0, total_minutes: 0 };
+  if (!recipe.protein_safety || !Array.isArray(recipe.protein_safety)) recipe.protein_safety = [];
+  if (!recipe.title || !recipe.ingredients || !recipe.steps) {
+    throw new Error("AI returned incomplete recipe data. Please try again.");
+  }
+
+  return recipe;
+}
+
 export async function generateRecipe(
   template: TemplateRow,
   request: GenerateRequest,
@@ -62,6 +86,7 @@ export async function generateRecipe(
 ): Promise<AIResult> {
   const proteinDisplay = chosenProtein.charAt(0).toUpperCase() + chosenProtein.slice(1);
   const budgetLevel = request.budget_level || "standard";
+  const forbiddenText = getForbiddenProteinsText(chosenProtein);
 
   const allergenLine = request.allergens_to_avoid.length > 0
     ? `ALLERGIES (CRITICAL): ${request.allergens_to_avoid.join(", ")} — exclude ALL ingredients with these allergens from main recipe AND veg option.`
@@ -81,7 +106,8 @@ export async function generateRecipe(
 
 TEMPLATE: ${template.template_name} (${template.style}) — ${template.base_idea_description}
 CREW: ${request.crew_size} | Shift: ${request.busy_level} | Time: ${request.time_available} min | Appliances: ${request.appliances.join(", ")}
-PROTEIN: ${proteinDisplay} only. Healthiness: ${request.healthiness_preference}
+PROTEIN (STRICT): Recipe MUST use ${proteinDisplay} as the ONLY animal protein. Do not include, mention, or substitute any other meat or animal protein. The title MUST include the word "${proteinDisplay}". Every meat ingredient MUST be ${proteinDisplay}. FORBIDDEN proteins (do NOT use any of these): ${forbiddenText}.
+Healthiness: ${request.healthiness_preference}
 ${allergenLine}
 ${budgetLine}
 ${vegLine}
@@ -92,35 +118,37 @@ JSON:
 {"template_id":${template.template_id},"chosen_protein":"${proteinDisplay}","title":"","why_it_fits_tonight":"","timing":{"prep_minutes":0,"cook_minutes":0,"total_minutes":0},"protein_safety":[{"protein":"","target_temp_f":0,"target_temp_c":0,"rest_minutes":0,"probe_where":"","notes":""}],"ingredients":[{"item":"","amount":"","notes":""}],"steps":[{"heading":"","body":""}],"cleanup_tip":"","macros_per_serving":{"calories":0,"protein_g":0,"carbs_g":0,"fat_g":0},"budget_level":"${budgetLevel}","budget_tips":[]${request.vegetarian_swap_needed ? ',"veg_option":{"enabled":true,"swap_protein":"","ingredients":[],"steps":[],"plating_notes":""}' : ""}}`;
 
   const genStart = Date.now();
-  log(`Generating: ${template.template_name} (ID: ${template.template_id})`, "ai");
+  log(`Generating: ${template.template_name} (ID: ${template.template_id}), protein: ${proteinDisplay}`, "ai");
 
-  const { content, tokensIn, tokensOut } = await callAI(
-    prompt,
-    "Firehall chef. Return ONLY valid JSON. Include cooking temps and safety targets for every protein. No markdown."
-  );
+  let totalTokensIn = 0;
+  let totalTokensOut = 0;
 
-  const genElapsed = Date.now() - genStart;
-  log(`Recipe generated in ${genElapsed}ms (${tokensIn}in/${tokensOut}out tokens)`, "perf");
+  for (let proteinAttempt = 1; proteinAttempt <= MAX_PROTEIN_RETRIES; proteinAttempt++) {
+    const { content, tokensIn, tokensOut } = await callAI(
+      prompt,
+      "Firehall chef. Return ONLY valid JSON. Include cooking temps and safety targets for every protein. No markdown. The recipe MUST use ONLY the specified protein — no substitutions."
+    );
 
-  let recipe: GenerateResponse;
-  try {
-    recipe = JSON.parse(content) as GenerateResponse;
-  } catch {
-    log(`JSON parse failed: ${content.substring(0, 200)}`, "ai");
-    throw new Error("Failed to parse AI response. Please try again.");
+    totalTokensIn += tokensIn;
+    totalTokensOut += tokensOut;
+
+    const recipe = parseRecipe(content, template, chosenProtein, budgetLevel);
+    const validation = validateProteinCompliance(recipe, chosenProtein);
+
+    if (validation.valid) {
+      const genElapsed = Date.now() - genStart;
+      log(`Recipe generated in ${genElapsed}ms (${totalTokensIn}in/${totalTokensOut}out tokens, protein attempts: ${proteinAttempt})`, "perf");
+      return { recipe, tokensIn: totalTokensIn, tokensOut: totalTokensOut };
+    }
+
+    log(`Protein validation failed (attempt ${proteinAttempt}/${MAX_PROTEIN_RETRIES}): ${validation.reason}`, "ai");
+
+    if (proteinAttempt < MAX_PROTEIN_RETRIES) {
+      await new Promise((r) => setTimeout(r, 500));
+    }
   }
 
-  recipe.template_id = parseInt(template.template_id);
-  recipe.chosen_protein = proteinDisplay;
-  recipe.budget_level = budgetLevel;
-  if (!recipe.budget_tips) recipe.budget_tips = [];
-  if (!recipe.timing) recipe.timing = { prep_minutes: 0, cook_minutes: 0, total_minutes: 0 };
-  if (!recipe.protein_safety || !Array.isArray(recipe.protein_safety)) recipe.protein_safety = [];
-  if (!recipe.title || !recipe.ingredients || !recipe.steps) {
-    throw new Error("AI returned incomplete recipe data. Please try again.");
-  }
-
-  return { recipe, tokensIn, tokensOut };
+  throw new Error(`Couldn't generate a compliant ${proteinDisplay} recipe after ${MAX_PROTEIN_RETRIES} attempts. Please try again.`);
 }
 
 export async function generateRecipeFromPantry(

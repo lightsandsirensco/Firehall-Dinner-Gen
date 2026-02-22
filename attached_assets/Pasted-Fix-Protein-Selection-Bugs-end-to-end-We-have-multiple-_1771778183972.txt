@@ -1,0 +1,55 @@
+Fix Protein Selection Bugs (end-to-end)
+
+We have multiple issues where selecting a protein (e.g., turkey) still generates recipes containing other meats (e.g., pork). Implement a robust fix across UI → API → generation → validation.
+
+GOALS
+- When a user selects a protein, the recipe MUST use that protein as the ONLY animal protein.
+- No substitution. No “similar protein” swaps.
+- If the model returns the wrong protein, automatically regenerate until it complies (with a max retry limit).
+
+TASKS
+
+1) FRONTEND: Ensure protein selection is correctly captured and sent
+- Confirm the protein selector updates state (selectedProtein) correctly.
+- Ensure the request payload includes selectedProtein exactly as chosen (string, lowercase standardized).
+- Log the outbound payload in dev mode so we can see selectedProtein being sent.
+
+2) BACKEND/API: Ensure selectedProtein is received and used
+- Validate request body contains selectedProtein and it is one of the allowed options.
+- If missing/invalid, return a clear error message (400) instead of silently defaulting.
+- Log received selectedProtein (dev mode only).
+
+3) GENERATION PROMPT: Make protein enforcement strict
+- Update the AI prompt to include a hard constraint:
+
+“Recipe MUST use {selectedProtein} as the ONLY animal protein. Do not include or mention any other meats or animal proteins. Do not substitute. If you cannot comply, respond with ‘REGENERATE’.”
+
+- Require the title to include selectedProtein.
+- Require ingredient list to include selectedProtein explicitly.
+
+4) POST-GENERATION VALIDATION: Reject wrong proteins reliably
+- After generation, run a validator on title + ingredients + instructions.
+- If selectedProtein is missing OR any other animal protein appears, reject and regenerate.
+- Add a maxRetries (e.g., 3). If still failing, return a friendly error: “Couldn’t generate a compliant recipe—please try again.”
+
+Validation rules:
+- Normalize text (lowercase, trim, remove punctuation).
+- selectedProtein must appear in title AND ingredients.
+- Forbidden proteins list should include common variants.
+
+Example forbidden sets:
+- If selectedProtein = turkey: forbid pork, bacon, ham, sausage, prosciutto, pancetta, chorizo, salami, pepperoni, beef, steak, veal, lamb, chicken, fish, salmon, tuna, shrimp, crab, lobster.
+- If selectedProtein = chicken: forbid turkey + all others, etc.
+Implement this as a reusable map for each protein option.
+
+5) DATA PATHS: Ensure no fallback or cached recipe ignores the filter
+- If using a recipe database or cached results, ensure the protein filter is applied BEFORE selecting a recipe.
+- If AI-generated results are cached, include selectedProtein in the cache key so turkey doesn’t reuse a pork result.
+
+6) TESTS
+- Add a simple test function or script that calls generation for each protein option 5 times and asserts compliance.
+- Log failures with the offending words found.
+
+DELIVERABLE
+- Provide the updated code changes (frontend payload + backend validation + prompt update + validator + retry loop + tests).
+- Point me to the exact files changed and the functions involved.
