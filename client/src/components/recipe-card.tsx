@@ -215,49 +215,47 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
   return (
     <div className="space-y-4 animate-in fade-in slide-in-from-bottom-4 duration-500">
       <div className="space-y-1">
-        <div className="flex items-start justify-between gap-3 flex-wrap">
-          <h2 className="font-heading text-4xl md:text-5xl tracking-wide text-foreground leading-none" data-testid="text-recipe-title">
-            {recipe.title}
-          </h2>
-          <div className="flex gap-2 flex-shrink-0 flex-wrap">
-            {!hideSave && (
-              <Button
-                variant={saved ? "default" : "outline"}
-                onClick={handleSave}
-                disabled={saved}
-                className={saved ? "bg-primary/20 text-primary border-primary/30 hover:bg-primary/20" : ""}
-                data-testid="button-save-favorite"
-              >
-                {saved ? (
-                  <>
-                    <Check className="w-4 h-4 mr-2" />
-                    Saved
-                  </>
-                ) : (
-                  <>
-                    <Heart className="w-4 h-4 mr-2" />
-                    Save to Hall Favorites
-                  </>
-                )}
-              </Button>
-            )}
-            {onEmailClick && (
-              <Button variant="outline" onClick={onEmailClick} data-testid="button-email-recipe">
-                <Mail className="w-4 h-4 mr-2" />
-                Email me this recipe
-              </Button>
-            )}
-            <Button variant="outline" onClick={handlePrint} data-testid="button-print">
-              <Printer className="w-4 h-4 mr-2" />
-              Print for the Hall
+        <h2 className="font-heading text-4xl md:text-5xl tracking-wide text-foreground leading-none" data-testid="text-recipe-title">
+          {recipe.title}
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex lg:flex-wrap gap-2 mt-2">
+          {onShoppingListClick && (
+            <Button onClick={onShoppingListClick} className="w-full sm:w-auto" data-testid="button-shopping-list">
+              <List className="w-4 h-4 mr-2" />
+              Shopping List
             </Button>
-            {onShoppingListClick && (
-              <Button variant="outline" onClick={onShoppingListClick} data-testid="button-shopping-list">
-                <List className="w-4 h-4 mr-2" />
-                Shopping List
-              </Button>
-            )}
-          </div>
+          )}
+          {onEmailClick && (
+            <Button variant="outline" onClick={onEmailClick} className="w-full sm:w-auto" data-testid="button-email-recipe">
+              <Mail className="w-4 h-4 mr-2" />
+              Email me this recipe
+            </Button>
+          )}
+          <Button variant="outline" onClick={handlePrint} className="w-full sm:w-auto" data-testid="button-print">
+            <Printer className="w-4 h-4 mr-2" />
+            Print for the Hall
+          </Button>
+          {!hideSave && (
+            <Button
+              variant={saved ? "default" : "outline"}
+              onClick={handleSave}
+              disabled={saved}
+              className={`w-full sm:w-auto ${saved ? "bg-primary/20 text-primary border-primary/30 hover:bg-primary/20" : ""}`}
+              data-testid="button-save-favorite"
+            >
+              {saved ? (
+                <>
+                  <Check className="w-4 h-4 mr-2" />
+                  Saved
+                </>
+              ) : (
+                <>
+                  <Heart className="w-4 h-4 mr-2" />
+                  Save to Hall Favorites
+                </>
+              )}
+            </Button>
+          )}
         </div>
         {showConfirm && (
           <div className="flex items-center gap-2 text-sm text-primary animate-in fade-in duration-300" data-testid="text-save-confirmation">
