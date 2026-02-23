@@ -80,6 +80,7 @@ export interface GenerateResponse {
   extra_items_needed?: string[];
   budget_level?: string;
   budget_tips?: string[];
+  pro_tips?: string[];
 }
 
 export const pizzaRequestSchema = z.object({

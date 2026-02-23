@@ -3,9 +3,11 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import type { GenerateResponse } from "@shared/schema";
-import { Flame, Droplets, Wheat, Beef, Sparkles, Trash2, Clock, Timer, ShieldCheck, Thermometer, Printer, Leaf, Mail, Package, ShoppingCart, DollarSign, Lightbulb, List, Heart, Check } from "lucide-react";
+import { Flame, Droplets, Wheat, Beef, Sparkles, Trash2, Clock, Timer, ShieldCheck, Thermometer, Printer, Leaf, Mail, Package, ShoppingCart, DollarSign, Lightbulb, List, Heart, Check, ChevronDown } from "lucide-react";
 import { saveMeal, isMealSaved } from "@/lib/saved-meals";
 import { useState, useEffect } from "react";
+
+let sessionProTipsCollapsed = false;
 
 interface RecipeCardProps {
   recipe: GenerateResponse;
@@ -141,6 +143,12 @@ function buildPrintHtml(recipe: GenerateResponse, crewSize: number): string {
   <h2>Steps</h2>
   <ol>${stepItems}</ol>
 
+  ${recipe.pro_tips && recipe.pro_tips.length > 0 ? `
+  <h2>Pro Tips</h2>
+  <ul style="padding-left:20px;font-size:14px">
+    ${recipe.pro_tips.map(tip => `<li style="margin-bottom:4px">${tip}</li>`).join("")}
+  </ul>` : ""}
+
   ${recipe.cleanup_tip ? `
   <div class="cleanup">
     <strong>Cleanup Tip</strong>
@@ -188,6 +196,15 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
   const hasSafety = recipe.protein_safety && recipe.protein_safety.length > 0;
   const [saved, setSaved] = useState(false);
   const [showConfirm, setShowConfirm] = useState(false);
+  const [proTipsOpen, setProTipsOpen] = useState(!sessionProTipsCollapsed);
+
+  const toggleProTips = () => {
+    setProTipsOpen(prev => {
+      const next = !prev;
+      sessionProTipsCollapsed = !next;
+      return next;
+    });
+  };
 
   useEffect(() => {
     setSaved(isMealSaved(recipe));
@@ -480,6 +497,39 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
           </ol>
         </CardContent>
       </Card>
+
+      {recipe.pro_tips && recipe.pro_tips.length > 0 && (
+        <Card data-testid="section-pro-tips">
+          <CardContent className="p-4">
+            <button
+              type="button"
+              onClick={toggleProTips}
+              className="flex items-center justify-between w-full text-left cursor-pointer"
+              data-testid="button-toggle-pro-tips"
+            >
+              <div className="flex items-center gap-2">
+                <Lightbulb className="w-4 h-4 text-amber-500" />
+                <h3 className="font-heading text-lg tracking-wider uppercase text-foreground">
+                  Pro Tips
+                </h3>
+              </div>
+              <ChevronDown
+                className={`w-5 h-5 text-muted-foreground transition-transform duration-200 ${proTipsOpen ? "" : "-rotate-90"}`}
+              />
+            </button>
+            {proTipsOpen && (
+              <ul className="mt-3 space-y-2" data-testid="list-pro-tips">
+                {recipe.pro_tips.map((tip, i) => (
+                  <li key={i} className="flex gap-2 text-sm text-foreground/80" data-testid={`pro-tip-${i}`}>
+                    <Sparkles className="w-3.5 h-3.5 text-amber-500 flex-shrink-0 mt-0.5" />
+                    <span>{tip}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </CardContent>
+        </Card>
+      )}
 
       <Card>
         <CardContent className="p-4">

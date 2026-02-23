@@ -170,6 +170,7 @@ export async function trackRecipeEvent(
     crew_size: number;
     ingredients: string[];
     steps: string[];
+    pro_tips: string[];
     macros: { calories: number; protein_g: number; carbs_g: number; fat_g: number };
     generated_at: string;
   }
@@ -188,6 +189,7 @@ export async function trackRecipeEvent(
             crew_size: properties.crew_size,
             ingredients: properties.ingredients,
             steps: properties.steps,
+            pro_tips: properties.pro_tips,
             macros_calories: properties.macros.calories,
             macros_protein_g: properties.macros.protein_g,
             macros_carbs_g: properties.macros.carbs_g,

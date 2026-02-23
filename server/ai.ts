@@ -70,6 +70,7 @@ function parseRecipe(content: string, template: TemplateRow, chosenProtein: stri
   recipe.chosen_protein = chosenProtein.charAt(0).toUpperCase() + chosenProtein.slice(1);
   recipe.budget_level = budgetLevel;
   if (!recipe.budget_tips) recipe.budget_tips = [];
+  if (!recipe.pro_tips || !Array.isArray(recipe.pro_tips)) recipe.pro_tips = [];
   if (!recipe.timing) recipe.timing = { prep_minutes: 0, cook_minutes: 0, total_minutes: 0 };
   if (!recipe.protein_safety || !Array.isArray(recipe.protein_safety)) recipe.protein_safety = [];
   if (!recipe.title || !recipe.ingredients || !recipe.steps) {
@@ -112,12 +113,12 @@ ${allergenLine}
 ${budgetLine}
 ${vegLine}
 
-RULES: ${request.crew_size} servings. 6-10 steps max. 8-12 ingredients. 35-60g protein/serving.
+RULES: ${request.crew_size} servings. 6-10 steps max. 8-12 ingredients. 35-60g protein/serving. Include "pro_tips": 1-2 short practical tips (1-2 sentences each) about technique, make-ahead, or serving. Max 2 tips.
 STEP FORMAT (each step MUST follow this): heading = "Action (heat level, time)" e.g. "Sear the chicken (medium-high, 5-7 min)". body = concise HOW-TO with visual/doneness cue. Include: heat level (low/medium/medium-high/high or oven °F), time estimate, and a doneness cue ("until golden brown", "until juices run clear", "until internal temp reaches 165°F"). Never repeat same instruction in two steps. No storytelling. Keep each step 1-3 sentences.
 SAFETY TEMPS (always include for any protein): chicken/turkey 165°F/74°C, ground beef/sausage 160°F/71°C, pork 145°F/63°C +3min rest, fish 145°F/63°C.
 
 JSON:
-{"template_id":${template.template_id},"chosen_protein":"${proteinDisplay}","title":"","why_it_fits_tonight":"","timing":{"prep_minutes":0,"cook_minutes":0,"total_minutes":0},"protein_safety":[{"protein":"","target_temp_f":0,"target_temp_c":0,"rest_minutes":0,"probe_where":"","notes":""}],"ingredients":[{"item":"","amount":"","notes":""}],"steps":[{"heading":"","body":""}],"cleanup_tip":"","macros_per_serving":{"calories":0,"protein_g":0,"carbs_g":0,"fat_g":0},"budget_level":"${budgetLevel}","budget_tips":[]${request.vegetarian_swap_needed ? ',"veg_option":{"enabled":true,"swap_protein":"","ingredients":[],"steps":[],"plating_notes":""}' : ""}}`;
+{"template_id":${template.template_id},"chosen_protein":"${proteinDisplay}","title":"","why_it_fits_tonight":"","timing":{"prep_minutes":0,"cook_minutes":0,"total_minutes":0},"protein_safety":[{"protein":"","target_temp_f":0,"target_temp_c":0,"rest_minutes":0,"probe_where":"","notes":""}],"ingredients":[{"item":"","amount":"","notes":""}],"steps":[{"heading":"","body":""}],"cleanup_tip":"","macros_per_serving":{"calories":0,"protein_g":0,"carbs_g":0,"fat_g":0},"budget_level":"${budgetLevel}","budget_tips":[],"pro_tips":[]${request.vegetarian_swap_needed ? ',"veg_option":{"enabled":true,"swap_protein":"","ingredients":[],"steps":[],"plating_notes":""}' : ""}}`;
 
   const genStart = Date.now();
   log(`Generating: ${template.template_name} (ID: ${template.template_id}), protein: ${proteinDisplay}`, "ai");
@@ -184,12 +185,12 @@ ${allergenLine}
 ${budgetLine}
 ${vegLine}
 
-RULES: Use as many on-hand ingredients as practical. List used ones in "ingredients_used". List 1-4 extras needed in "extra_items_needed" (skip basic pantry staples). ${request.crew_size} servings. 6-10 steps max. 8-12 ingredients. 35-60g protein/serving.
+RULES: Use as many on-hand ingredients as practical. List used ones in "ingredients_used". List 1-4 extras needed in "extra_items_needed" (skip basic pantry staples). ${request.crew_size} servings. 6-10 steps max. 8-12 ingredients. 35-60g protein/serving. Include "pro_tips": 1-2 short practical tips (1-2 sentences each) about technique, make-ahead, or serving. Max 2 tips.
 STEP FORMAT (each step MUST follow this): heading = "Action (heat level, time)" e.g. "Sear the chicken (medium-high, 5-7 min)". body = concise HOW-TO with visual/doneness cue. Include: heat level (low/medium/medium-high/high or oven °F), time estimate, and a doneness cue ("until golden brown", "until juices run clear", "until internal temp reaches 165°F"). Never repeat same instruction in two steps. No storytelling. Keep each step 1-3 sentences.
 SAFETY TEMPS (always include for any protein): chicken/turkey 165°F/74°C, ground beef/sausage 160°F/71°C, pork 145°F/63°C +3min rest, fish 145°F/63°C.
 
 JSON:
-{"template_id":${template.template_id},"chosen_protein":"","title":"","why_it_fits_tonight":"","timing":{"prep_minutes":0,"cook_minutes":0,"total_minutes":0},"protein_safety":[{"protein":"","target_temp_f":0,"target_temp_c":0,"rest_minutes":0,"probe_where":"","notes":""}],"ingredients":[{"item":"","amount":"","notes":""}],"steps":[{"heading":"","body":""}],"cleanup_tip":"","macros_per_serving":{"calories":0,"protein_g":0,"carbs_g":0,"fat_g":0},"ingredients_used":[],"extra_items_needed":[],"budget_level":"${budgetLevel}","budget_tips":[]${request.vegetarian_swap_needed ? ',"veg_option":{"enabled":true,"swap_protein":"","ingredients":[],"steps":[],"plating_notes":""}' : ""}}`;
+{"template_id":${template.template_id},"chosen_protein":"","title":"","why_it_fits_tonight":"","timing":{"prep_minutes":0,"cook_minutes":0,"total_minutes":0},"protein_safety":[{"protein":"","target_temp_f":0,"target_temp_c":0,"rest_minutes":0,"probe_where":"","notes":""}],"ingredients":[{"item":"","amount":"","notes":""}],"steps":[{"heading":"","body":""}],"cleanup_tip":"","macros_per_serving":{"calories":0,"protein_g":0,"carbs_g":0,"fat_g":0},"ingredients_used":[],"extra_items_needed":[],"budget_level":"${budgetLevel}","budget_tips":[],"pro_tips":[]${request.vegetarian_swap_needed ? ',"veg_option":{"enabled":true,"swap_protein":"","ingredients":[],"steps":[],"plating_notes":""}' : ""}}`;
 
   const genStart = Date.now();
   log(`Generating pantry recipe: ${template.template_name}, ingredients: ${ingredientsList}`, "ai");
@@ -214,6 +215,7 @@ JSON:
   if (!recipe.chosen_protein) recipe.chosen_protein = "Pantry mix";
   recipe.budget_level = budgetLevel;
   if (!recipe.budget_tips) recipe.budget_tips = [];
+  if (!recipe.pro_tips || !Array.isArray(recipe.pro_tips)) recipe.pro_tips = [];
   if (!recipe.timing) recipe.timing = { prep_minutes: 0, cook_minutes: 0, total_minutes: 0 };
   if (!recipe.protein_safety || !Array.isArray(recipe.protein_safety)) recipe.protein_safety = [];
   if (!recipe.ingredients_used) recipe.ingredients_used = [];

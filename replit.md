@@ -59,6 +59,14 @@ A single-page web app that generates one high-protein meal recipe for a firefigh
 - **CSRF**: Token-based validation on POST /api/generate
 - **Admin**: Usage dashboard at /admin showing budget, cache stats, request logs, top IPs/sessions
 
+## Pro Tips
+- 1-2 short practical tips per recipe (technique, make-ahead, or serving suggestions)
+- Displayed expanded by default below Steps section on recipe card
+- Collapsible: click "Pro Tips" header to toggle, session-persisting state (module-level var resets on page refresh)
+- Included in Print view and Klaviyo email events (pro_tips field)
+- NOT included in Shopping List
+- Response field: pro_tips (string[])
+
 ## Klaviyo Email Capture
 - `POST /api/email-recipe` - Subscribes email to Klaviyo list + tracks "Recipe Generated" event
 - Auto-creates "Firehall Dinner Generator Leads" list in Klaviyo

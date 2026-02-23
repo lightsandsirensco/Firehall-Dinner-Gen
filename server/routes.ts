@@ -257,7 +257,7 @@ export async function registerRoutes(
 
   app.post("/api/email-recipe", async (req: Request, res: Response) => {
     try {
-      const { email, recipe_title, primary_protein, ingredients, steps, macros, healthiness_level, crew_size, timestamp } = req.body;
+      const { email, recipe_title, primary_protein, ingredients, steps, pro_tips, macros, healthiness_level, crew_size, timestamp } = req.body;
 
       if (!email || !recipe_title) {
         return res.status(400).json({ message: "Email and recipe title are required." });
@@ -283,6 +283,7 @@ export async function registerRoutes(
           crew_size: crew_size || 0,
           ingredients: ingredients || [],
           steps: steps || [],
+          pro_tips: pro_tips || [],
           macros: macros || { calories: 0, protein_g: 0, carbs_g: 0, fat_g: 0 },
           generated_at: timestamp || new Date().toISOString(),
         }),

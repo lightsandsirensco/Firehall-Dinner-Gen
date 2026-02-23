@@ -39,6 +39,7 @@ export function EmailModal({ open, onOpenChange, recipe, crewSize, healthinessLe
           crew_size: crewSize,
           ingredients: recipe.ingredients.map((i) => `${i.item} — ${i.amount}`),
           steps: recipe.steps.map((s) => typeof s === "string" ? s : `${s.heading}: ${s.body}`),
+          pro_tips: recipe.pro_tips || [],
           macros: recipe.macros_per_serving,
           timestamp: new Date().toISOString(),
         }),
