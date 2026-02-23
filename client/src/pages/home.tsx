@@ -62,7 +62,7 @@ const ResultsPanel = memo(function ResultsPanel({
   const showEmpty = !loading && !error && !recipe;
 
   return (
-    <div className="flex-1 min-w-0">
+    <div className="flex-1 min-w-0 overflow-x-hidden">
       {loading && !recipe && <LoadingState />}
       {loading && recipe && (
         <div className="relative">

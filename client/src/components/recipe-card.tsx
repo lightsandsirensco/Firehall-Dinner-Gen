@@ -235,42 +235,42 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
         <h2 className="font-heading text-4xl md:text-5xl tracking-wide text-foreground leading-none" data-testid="text-recipe-title">
           {recipe.title}
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex lg:flex-wrap gap-2 mt-2">
-          {onShoppingListClick && (
-            <Button onClick={onShoppingListClick} className="w-full sm:w-auto" data-testid="button-shopping-list">
-              <List className="w-4 h-4 mr-2" />
-              Shopping List
-            </Button>
-          )}
-          {onEmailClick && (
-            <Button variant="outline" onClick={onEmailClick} className="w-full sm:w-auto" data-testid="button-email-recipe">
-              <Mail className="w-4 h-4 mr-2" />
-              Email me this recipe
-            </Button>
-          )}
-          <Button variant="outline" onClick={handlePrint} className="w-full sm:w-auto" data-testid="button-print">
-            <Printer className="w-4 h-4 mr-2" />
-            Print for the Hall
-          </Button>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mt-2">
           {!hideSave && (
             <Button
               variant={saved ? "default" : "outline"}
               onClick={handleSave}
               disabled={saved}
-              className={`w-full sm:w-auto ${saved ? "bg-primary/20 text-primary border-primary/30 hover:bg-primary/20" : ""}`}
+              className={`w-full justify-start ${saved ? "bg-primary/20 text-primary border-primary/30 hover:bg-primary/20" : ""}`}
               data-testid="button-save-favorite"
             >
               {saved ? (
                 <>
-                  <Check className="w-4 h-4 mr-2" />
-                  Saved
+                  <Check className="w-4 h-4 mr-2 flex-shrink-0" />
+                  <span className="truncate">Saved</span>
                 </>
               ) : (
                 <>
-                  <Heart className="w-4 h-4 mr-2" />
-                  Save to Hall Favorites
+                  <Heart className="w-4 h-4 mr-2 flex-shrink-0" />
+                  <span className="truncate">Save</span>
                 </>
               )}
+            </Button>
+          )}
+          {onEmailClick && (
+            <Button variant="outline" onClick={onEmailClick} className="w-full justify-start" data-testid="button-email-recipe">
+              <Mail className="w-4 h-4 mr-2 flex-shrink-0" />
+              <span className="truncate">Email</span>
+            </Button>
+          )}
+          <Button variant="outline" onClick={handlePrint} className="w-full justify-start" data-testid="button-print">
+            <Printer className="w-4 h-4 mr-2 flex-shrink-0" />
+            <span className="truncate">Print</span>
+          </Button>
+          {onShoppingListClick && (
+            <Button onClick={onShoppingListClick} className="w-full justify-start" data-testid="button-shopping-list">
+              <List className="w-4 h-4 mr-2 flex-shrink-0" />
+              <span className="truncate">Shopping List</span>
             </Button>
           )}
         </div>
