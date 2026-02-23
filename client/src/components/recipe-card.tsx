@@ -144,7 +144,7 @@ function buildPrintHtml(recipe: GenerateResponse, crewSize: number): string {
   <ol>${stepItems}</ol>
 
   ${recipe.pro_tips && recipe.pro_tips.length > 0 ? `
-  <h2>Pro Tips</h2>
+  <h2>💡 Pro Tips</h2>
   <ul style="padding-left:20px;font-size:14px">
     ${recipe.pro_tips.map(tip => `<li style="margin-bottom:4px">${tip}</li>`).join("")}
   </ul>` : ""}
@@ -508,7 +508,7 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
               data-testid="button-toggle-pro-tips"
             >
               <div className="flex items-center gap-2">
-                <Lightbulb className="w-4 h-4 text-amber-500" />
+                <span className="text-base leading-none" aria-hidden="true">💡</span>
                 <h3 className="font-heading text-lg tracking-wider uppercase text-foreground">
                   Pro Tips
                 </h3>
