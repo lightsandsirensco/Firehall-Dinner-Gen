@@ -8,6 +8,7 @@ import Home from "@/pages/home";
 import PizzaNight from "@/pages/pizza-night";
 import AdminPage from "@/pages/admin";
 import VotePage from "@/pages/vote";
+import FavoritesPage from "@/pages/favorites";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -17,6 +18,7 @@ function Router() {
       <Route path="/pizza" component={PizzaNight} />
       <Route path="/admin" component={AdminPage} />
       <Route path="/vote/:voteId" component={VotePage} />
+      <Route path="/favorites" component={FavoritesPage} />
       <Route component={NotFound} />
     </Switch>
   );

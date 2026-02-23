@@ -124,6 +124,18 @@ A single-page web app that generates one high-protein meal recipe for a firefigh
 - Key files: client/src/lib/shopping-list.ts, client/src/components/shopping-list-modal.tsx
 - Helper: buildShoppingListFromMeal(recipe, options) and buildShoppingListFromPizza(recipe, options)
 
+## Hall Favorites (Save Meal) Feature
+- localStorage-only, no authentication, no backend
+- Key: "firehall_saved_meals" storing array of SavedMeal objects
+- "Save to Hall Favorites" button on recipe card (heart icon)
+- Duplicate prevention via title + top-5 ingredients hash
+- /favorites page with card grid: view, remove saved meals
+- View opens full recipe in dialog (no re-generation)
+- "Favorites" nav link with count badge in header (home + pizza pages)
+- Custom event "favorites-changed" keeps count badge in sync
+- Key files: client/src/lib/saved-meals.ts, client/src/pages/favorites.tsx
+- Persists across sessions, works on mobile, no layout shifts
+
 ## Hall Vote Feature
 - "Can't decide? Let the crew vote" — appears after generating 2+ recipes in a session
 - Creator clicks "Hall Vote" button → modal shows recipe options → creates vote → gets shareable link + QR code

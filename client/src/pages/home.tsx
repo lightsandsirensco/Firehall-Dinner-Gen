@@ -1,4 +1,4 @@
-import { useState, useRef, useMemo, useCallback } from "react";
+import { useState, useRef, useEffect } from "react";
 import { FilterPanel, type FilterState } from "@/components/filter-panel";
 import { RecipeCard } from "@/components/recipe-card";
 import { EmptyState } from "@/components/empty-state";
@@ -8,10 +8,11 @@ import { EmailModal } from "@/components/email-modal";
 import { ShoppingListModal } from "@/components/shopping-list-modal";
 import { HallVoteModal } from "@/components/hall-vote-modal";
 import { buildShoppingListFromMeal } from "@/lib/shopping-list";
+import { getSavedCount } from "@/lib/saved-meals";
 import { apiRequest } from "@/lib/queryClient";
 import { trackEvent, trackMealGenerated } from "@/lib/analytics";
 import type { GenerateResponse } from "@shared/schema";
-import { Flame, Vote } from "lucide-react";
+import { Flame, Vote, Heart } from "lucide-react";
 import { Link } from "wouter";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -25,8 +26,15 @@ export default function Home() {
   const [shoppingListOpen, setShoppingListOpen] = useState(false);
   const [hallVoteOpen, setHallVoteOpen] = useState(false);
   const [recentRecipes, setRecentRecipes] = useState<GenerateResponse[]>([]);
+  const [favCount, setFavCount] = useState(() => getSavedCount());
   const genCountRef = useRef(0);
   const emailPromptedRef = useRef(false);
+
+  useEffect(() => {
+    const handler = () => setFavCount(getSavedCount());
+    window.addEventListener("favorites-changed", handler);
+    return () => window.removeEventListener("favorites-changed", handler);
+  }, []);
   const [filters, setFilters] = useState<FilterState>({
     crew_size: 6,
     busy_level: "average",
@@ -124,6 +132,16 @@ export default function Home() {
               <span className="text-muted-foreground/30 text-xs">|</span>
               <Link href="/pizza" className="text-xs uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors font-medium px-3 py-1.5" data-testid="nav-link-pizza">
                 Pizza Night
+              </Link>
+              <span className="text-muted-foreground/30 text-xs">|</span>
+              <Link href="/favorites" className="text-xs uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors font-medium px-3 py-1.5 flex items-center gap-1" data-testid="nav-link-favorites">
+                <Heart className="w-3 h-3" />
+                Favorites
+                {favCount > 0 && (
+                  <Badge variant="secondary" className="text-[9px] px-1.5 py-0 h-4 min-w-[16px] leading-none" data-testid="badge-fav-count">
+                    {favCount}
+                  </Badge>
+                )}
               </Link>
             </div>
           </nav>

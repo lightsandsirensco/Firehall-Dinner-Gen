@@ -3,13 +3,16 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import type { GenerateResponse } from "@shared/schema";
-import { Flame, Droplets, Wheat, Beef, Sparkles, Trash2, Clock, Timer, ShieldCheck, Thermometer, Printer, Leaf, Mail, Package, ShoppingCart, DollarSign, Lightbulb, List } from "lucide-react";
+import { Flame, Droplets, Wheat, Beef, Sparkles, Trash2, Clock, Timer, ShieldCheck, Thermometer, Printer, Leaf, Mail, Package, ShoppingCart, DollarSign, Lightbulb, List, Heart, Check } from "lucide-react";
+import { saveMeal, isMealSaved } from "@/lib/saved-meals";
+import { useState, useEffect } from "react";
 
 interface RecipeCardProps {
   recipe: GenerateResponse;
   crewSize: number;
   onEmailClick?: () => void;
   onShoppingListClick?: () => void;
+  hideSave?: boolean;
 }
 
 function MacroBar({ label, value, unit, icon, color }: { label: string; value: number; unit: string; icon: any; color: string }) {
@@ -180,9 +183,25 @@ function buildPrintHtml(recipe: GenerateResponse, crewSize: number): string {
 </html>`;
 }
 
-export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick }: RecipeCardProps) {
+export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick, hideSave }: RecipeCardProps) {
   const hasTiming = recipe.timing && (recipe.timing.prep_minutes || recipe.timing.cook_minutes || recipe.timing.total_minutes);
   const hasSafety = recipe.protein_safety && recipe.protein_safety.length > 0;
+  const [saved, setSaved] = useState(false);
+  const [showConfirm, setShowConfirm] = useState(false);
+
+  useEffect(() => {
+    setSaved(isMealSaved(recipe));
+    setShowConfirm(false);
+  }, [recipe.title, recipe.ingredients]);
+
+  const handleSave = () => {
+    const result = saveMeal(recipe);
+    if (result.saved || result.duplicate) {
+      setSaved(true);
+      setShowConfirm(true);
+      setTimeout(() => setShowConfirm(false), 2500);
+    }
+  };
 
   const handlePrint = () => {
     const html = buildPrintHtml(recipe, crewSize);
@@ -201,6 +220,27 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
             {recipe.title}
           </h2>
           <div className="flex gap-2 flex-shrink-0 flex-wrap">
+            {!hideSave && (
+              <Button
+                variant={saved ? "default" : "outline"}
+                onClick={handleSave}
+                disabled={saved}
+                className={saved ? "bg-primary/20 text-primary border-primary/30 hover:bg-primary/20" : ""}
+                data-testid="button-save-favorite"
+              >
+                {saved ? (
+                  <>
+                    <Check className="w-4 h-4 mr-2" />
+                    Saved
+                  </>
+                ) : (
+                  <>
+                    <Heart className="w-4 h-4 mr-2" />
+                    Save to Hall Favorites
+                  </>
+                )}
+              </Button>
+            )}
             {onEmailClick && (
               <Button variant="outline" onClick={onEmailClick} data-testid="button-email-recipe">
                 <Mail className="w-4 h-4 mr-2" />
@@ -219,6 +259,12 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
             )}
           </div>
         </div>
+        {showConfirm && (
+          <div className="flex items-center gap-2 text-sm text-primary animate-in fade-in duration-300" data-testid="text-save-confirmation">
+            <Check className="w-4 h-4" />
+            Saved to Hall Favorites.
+          </div>
+        )}
         <p className="text-sm text-muted-foreground" data-testid="text-recipe-why">
           {recipe.why_it_fits_tonight}
         </p>
