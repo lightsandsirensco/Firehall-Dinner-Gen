@@ -112,7 +112,9 @@ ${allergenLine}
 ${budgetLine}
 ${vegLine}
 
-RULES: ${request.crew_size} servings. 4-6 steps. 8-12 ingredients. 35-60g protein/serving. Each step: heading with temp/time, body with concise actions. Safety temps: chicken/turkey 165°F/74°C, ground meat 160°F/71°C, pork 145°F/63°C +3min rest, fish 145°F/63°C.
+RULES: ${request.crew_size} servings. 6-10 steps max. 8-12 ingredients. 35-60g protein/serving.
+STEP FORMAT (each step MUST follow this): heading = "Action (heat level, time)" e.g. "Sear the chicken (medium-high, 5-7 min)". body = concise HOW-TO with visual/doneness cue. Include: heat level (low/medium/medium-high/high or oven °F), time estimate, and a doneness cue ("until golden brown", "until juices run clear", "until internal temp reaches 165°F"). Never repeat same instruction in two steps. No storytelling. Keep each step 1-3 sentences.
+SAFETY TEMPS (always include for any protein): chicken/turkey 165°F/74°C, ground beef/sausage 160°F/71°C, pork 145°F/63°C +3min rest, fish 145°F/63°C.
 
 JSON:
 {"template_id":${template.template_id},"chosen_protein":"${proteinDisplay}","title":"","why_it_fits_tonight":"","timing":{"prep_minutes":0,"cook_minutes":0,"total_minutes":0},"protein_safety":[{"protein":"","target_temp_f":0,"target_temp_c":0,"rest_minutes":0,"probe_where":"","notes":""}],"ingredients":[{"item":"","amount":"","notes":""}],"steps":[{"heading":"","body":""}],"cleanup_tip":"","macros_per_serving":{"calories":0,"protein_g":0,"carbs_g":0,"fat_g":0},"budget_level":"${budgetLevel}","budget_tips":[]${request.vegetarian_swap_needed ? ',"veg_option":{"enabled":true,"swap_protein":"","ingredients":[],"steps":[],"plating_notes":""}' : ""}}`;
@@ -126,7 +128,7 @@ JSON:
   for (let proteinAttempt = 1; proteinAttempt <= MAX_PROTEIN_RETRIES; proteinAttempt++) {
     const { content, tokensIn, tokensOut } = await callAI(
       prompt,
-      "Firehall chef. Return ONLY valid JSON. Include cooking temps and safety targets for every protein. No markdown. The recipe MUST use ONLY the specified protein — no substitutions."
+      "Firehall chef writing beginner-friendly recipes. Return ONLY valid JSON. Every step heading includes heat level and time. Every step body explains HOW to do it with a visual doneness cue. Include safety temps for every protein. No markdown. The recipe MUST use ONLY the specified protein — no substitutions."
     );
 
     totalTokensIn += tokensIn;
@@ -182,7 +184,9 @@ ${allergenLine}
 ${budgetLine}
 ${vegLine}
 
-RULES: Use as many on-hand ingredients as practical. List used ones in "ingredients_used". List 1-4 extras needed in "extra_items_needed" (skip basic pantry staples). ${request.crew_size} servings. 4-6 steps. 8-12 ingredients. 35-60g protein/serving. Safety temps: chicken 165°F, ground meat 160°F, pork 145°F+3min rest.
+RULES: Use as many on-hand ingredients as practical. List used ones in "ingredients_used". List 1-4 extras needed in "extra_items_needed" (skip basic pantry staples). ${request.crew_size} servings. 6-10 steps max. 8-12 ingredients. 35-60g protein/serving.
+STEP FORMAT (each step MUST follow this): heading = "Action (heat level, time)" e.g. "Sear the chicken (medium-high, 5-7 min)". body = concise HOW-TO with visual/doneness cue. Include: heat level (low/medium/medium-high/high or oven °F), time estimate, and a doneness cue ("until golden brown", "until juices run clear", "until internal temp reaches 165°F"). Never repeat same instruction in two steps. No storytelling. Keep each step 1-3 sentences.
+SAFETY TEMPS (always include for any protein): chicken/turkey 165°F/74°C, ground beef/sausage 160°F/71°C, pork 145°F/63°C +3min rest, fish 145°F/63°C.
 
 JSON:
 {"template_id":${template.template_id},"chosen_protein":"","title":"","why_it_fits_tonight":"","timing":{"prep_minutes":0,"cook_minutes":0,"total_minutes":0},"protein_safety":[{"protein":"","target_temp_f":0,"target_temp_c":0,"rest_minutes":0,"probe_where":"","notes":""}],"ingredients":[{"item":"","amount":"","notes":""}],"steps":[{"heading":"","body":""}],"cleanup_tip":"","macros_per_serving":{"calories":0,"protein_g":0,"carbs_g":0,"fat_g":0},"ingredients_used":[],"extra_items_needed":[],"budget_level":"${budgetLevel}","budget_tips":[]${request.vegetarian_swap_needed ? ',"veg_option":{"enabled":true,"swap_protein":"","ingredients":[],"steps":[],"plating_notes":""}' : ""}}`;
@@ -192,7 +196,7 @@ JSON:
 
   const { content, tokensIn, tokensOut } = await callAI(
     prompt,
-    "Firehall chef. Return ONLY valid JSON. Include cooking temps for every protein. No markdown."
+    "Firehall chef writing beginner-friendly recipes. Return ONLY valid JSON. Every step heading includes heat level and time. Every step body explains HOW to do it with a visual doneness cue. Include safety temps for every protein. No markdown."
   );
 
   const genElapsed = Date.now() - genStart;
