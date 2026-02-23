@@ -97,6 +97,15 @@ export function getAllCached(filterKey: string): GenerateResponse[] {
   return entries.filter((e) => now - e.ts < TTL_MS).map((e) => e.recipe);
 }
 
+export function removeCached(filterKey: string, templateId: number) {
+  ensureMemory();
+  const entries = memoryCache[filterKey];
+  if (!entries) return;
+  memoryCache[filterKey] = entries.filter((e) => e.recipe.template_id !== templateId);
+  if (memoryCache[filterKey].length === 0) delete memoryCache[filterKey];
+  saveDisk(memoryCache);
+}
+
 export function putCached(filterKey: string, recipe: GenerateResponse) {
   ensureMemory();
   if (!memoryCache[filterKey]) memoryCache[filterKey] = [];

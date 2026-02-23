@@ -10,7 +10,7 @@ import { HallVoteModal } from "@/components/hall-vote-modal";
 import { buildShoppingListFromMeal } from "@/lib/shopping-list";
 import { getSavedCount } from "@/lib/saved-meals";
 import { apiRequest } from "@/lib/queryClient";
-import { buildFilterKey, getCached, putCached } from "@/lib/recipe-cache";
+import { buildFilterKey, putCached } from "@/lib/recipe-cache";
 import { prefetchMeals, consumePrefetched } from "@/lib/prefetch";
 import { trackEvent, trackMealGenerated } from "@/lib/analytics";
 import type { GenerateResponse } from "@shared/schema";
@@ -58,9 +58,25 @@ const ResultsPanel = memo(function ResultsPanel({
   onShoppingListClick: () => void;
   onHallVoteClick: () => void;
 }) {
+  const showRecipe = !error && recipe;
+  const showEmpty = !loading && !error && !recipe;
+
   return (
     <div className="flex-1 min-w-0">
-      {loading && <LoadingState />}
+      {loading && !recipe && <LoadingState />}
+      {loading && recipe && (
+        <div className="relative">
+          <div className="absolute inset-x-0 top-0 z-10 pointer-events-none">
+            <LoadingState />
+          </div>
+          <div className="opacity-30 pointer-events-none select-none">
+            <RecipeCard
+              recipe={recipe}
+              crewSize={filters.crew_size}
+            />
+          </div>
+        </div>
+      )}
       {!loading && error === "no_match" && (
         <div className="animate-in fade-in duration-300">
           <ErrorState type="no_match" />
@@ -71,7 +87,7 @@ const ResultsPanel = memo(function ResultsPanel({
           <ErrorState type="error" message={error} />
         </div>
       )}
-      {!loading && !error && recipe && (
+      {!loading && showRecipe && (
         <div key={recipe.title} className="animate-in fade-in slide-in-from-bottom-2 duration-400">
           <RecipeCard
             recipe={recipe}
@@ -103,7 +119,7 @@ const ResultsPanel = memo(function ResultsPanel({
           )}
         </div>
       )}
-      {!loading && !error && !recipe && <EmptyState />}
+      {showEmpty && <EmptyState />}
     </div>
   );
 });
@@ -142,23 +158,21 @@ export default function Home() {
   });
 
   const handleGenerate = useCallback(async (currentFilters: FilterState, templateId?: number) => {
-    setLoading(true);
     setError(null);
     trackEvent('meal_generation_started');
 
     const payload = buildRequestPayload(currentFilters, templateId);
 
-    const prefetched = consumePrefetched(payload, templateId);
-    if (prefetched) {
-      setRecipe(prefetched);
+    const cached = consumePrefetched(payload, templateId);
+    if (cached) {
+      setRecipe(cached);
       setRecentRecipes(prev => {
-        const deduped = prev.filter(r => r.title !== prefetched.title);
-        return [prefetched, ...deduped].slice(0, 5);
+        const deduped = prev.filter(r => r.title !== cached.title);
+        return [cached, ...deduped].slice(0, 5);
       });
-      setLastTemplateId(prefetched.template_id);
+      setLastTemplateId(cached.template_id);
       trackMealGenerated();
       genCountRef.current += 1;
-      setLoading(false);
       if (genCountRef.current === 2 && !emailPromptedRef.current) {
         emailPromptedRef.current = true;
         setTimeout(() => setEmailModalOpen(true), 800);
@@ -167,6 +181,7 @@ export default function Home() {
       return;
     }
 
+    setLoading(true);
     try {
       const res = await apiRequest("POST", "/api/generate", payload);
       const data: GenerateResponse = await res.json();

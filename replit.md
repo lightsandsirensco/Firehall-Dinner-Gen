@@ -10,6 +10,12 @@ A single-page web app that generates one high-protein meal recipe for a firefigh
 - **Data**: CSV file at `/data/firehall_templates_v1.csv`
 - **Cache/Rate DB**: SQLite at `data/cache.db` (auto-created) for recipe caching, rate limiting, usage tracking
 
+## Performance Optimizations
+- **Client-side cache**: memory + localStorage recipe cache (client/src/lib/recipe-cache.ts), keyed by normalized filter hash (excludes last_template_id), 24h TTL, max 50 entries
+- **Background prefetch**: After each generation, silently pre-generates 2 additional meals with same filters (client/src/lib/prefetch.ts), consumed entries removed from pool
+- **Instant UI**: Skeleton loader shown immediately; when re-generating, previous recipe stays visible (dimmed) behind skeleton overlay
+- **Memoization**: FilterPanel wrapped in React.memo, ResultsPanel is a separate memo component, all handlers use useCallback to prevent unnecessary rerenders
+
 ## Key Files
 - `client/src/pages/home.tsx` - Main single-page UI
 - `client/src/pages/admin.tsx` - Admin usage dashboard (route: /admin)
