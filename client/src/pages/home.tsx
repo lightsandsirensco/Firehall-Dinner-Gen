@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback, memo } from "react";
 import { FilterPanel, type FilterState } from "@/components/filter-panel";
 import { RecipeCard } from "@/components/recipe-card";
 import { EmptyState } from "@/components/empty-state";
@@ -10,12 +10,103 @@ import { HallVoteModal } from "@/components/hall-vote-modal";
 import { buildShoppingListFromMeal } from "@/lib/shopping-list";
 import { getSavedCount } from "@/lib/saved-meals";
 import { apiRequest } from "@/lib/queryClient";
+import { buildFilterKey, getCached, putCached } from "@/lib/recipe-cache";
+import { prefetchMeals, consumePrefetched } from "@/lib/prefetch";
 import { trackEvent, trackMealGenerated } from "@/lib/analytics";
 import type { GenerateResponse } from "@shared/schema";
 import { Flame, Vote, Heart } from "lucide-react";
 import { Link } from "wouter";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+
+function buildRequestPayload(filters: FilterState, templateId?: number) {
+  const ingredients_on_hand = filters.use_what_we_have
+    ? filters.ingredients_on_hand_text.split(",").map(s => s.trim()).filter(Boolean)
+    : [];
+  return {
+    crew_size: filters.crew_size,
+    busy_level: filters.busy_level,
+    time_available: filters.time_available,
+    appliances: filters.appliances,
+    proteins: filters.use_what_we_have ? ["chicken"] : filters.proteins,
+    healthiness_preference: filters.healthiness_preference,
+    budget_level: filters.budget_level,
+    allergens_to_avoid: filters.allergens_to_avoid,
+    vegetarian_swap_needed: filters.vegetarian_swap_needed,
+    use_what_we_have: filters.use_what_we_have,
+    ingredients_on_hand,
+    last_template_id: templateId,
+  };
+}
+
+const ResultsPanel = memo(function ResultsPanel({
+  loading,
+  error,
+  recipe,
+  recentRecipes,
+  filters,
+  onEmailClick,
+  onShoppingListClick,
+  onHallVoteClick,
+}: {
+  loading: boolean;
+  error: string | null;
+  recipe: GenerateResponse | null;
+  recentRecipes: GenerateResponse[];
+  filters: FilterState;
+  onEmailClick: () => void;
+  onShoppingListClick: () => void;
+  onHallVoteClick: () => void;
+}) {
+  return (
+    <div className="flex-1 min-w-0">
+      {loading && <LoadingState />}
+      {!loading && error === "no_match" && (
+        <div className="animate-in fade-in duration-300">
+          <ErrorState type="no_match" />
+        </div>
+      )}
+      {!loading && error && error !== "no_match" && (
+        <div className="animate-in fade-in duration-300">
+          <ErrorState type="error" message={error} />
+        </div>
+      )}
+      {!loading && !error && recipe && (
+        <div key={recipe.title} className="animate-in fade-in slide-in-from-bottom-2 duration-400">
+          <RecipeCard
+            recipe={recipe}
+            crewSize={filters.crew_size}
+            onEmailClick={onEmailClick}
+            onShoppingListClick={onShoppingListClick}
+          />
+          {recentRecipes.length >= 2 && (
+            <div className="mt-4 p-4 rounded-xl border border-border/50 bg-card/50 flex items-center justify-between gap-3 animate-in fade-in duration-500">
+              <div className="flex items-center gap-2 min-w-0">
+                <Vote className="w-5 h-5 text-primary flex-shrink-0" />
+                <div>
+                  <p className="text-sm font-bold text-foreground">Can't decide? Let the crew vote.</p>
+                  <p className="text-xs text-muted-foreground">
+                    {recentRecipes.length} meals ready &middot; Share a link, crew picks the winner
+                  </p>
+                </div>
+              </div>
+              <Button
+                variant="outline"
+                className="font-heading tracking-wider flex-shrink-0"
+                onClick={onHallVoteClick}
+                data-testid="button-start-hall-vote"
+              >
+                <Vote className="w-4 h-4 mr-2" />
+                HALL VOTE
+              </Button>
+            </div>
+          )}
+        </div>
+      )}
+      {!loading && !error && !recipe && <EmptyState />}
+    </div>
+  );
+});
 
 export default function Home() {
   const [recipe, setRecipe] = useState<GenerateResponse | null>(null);
@@ -35,6 +126,7 @@ export default function Home() {
     window.addEventListener("favorites-changed", handler);
     return () => window.removeEventListener("favorites-changed", handler);
   }, []);
+
   const [filters, setFilters] = useState<FilterState>({
     crew_size: 6,
     busy_level: "average",
@@ -49,28 +141,34 @@ export default function Home() {
     ingredients_on_hand_text: "",
   });
 
-  const handleGenerate = async (currentFilters: FilterState, templateId?: number) => {
+  const handleGenerate = useCallback(async (currentFilters: FilterState, templateId?: number) => {
     setLoading(true);
     setError(null);
     trackEvent('meal_generation_started');
-    try {
-      const ingredients_on_hand = currentFilters.use_what_we_have
-        ? currentFilters.ingredients_on_hand_text.split(",").map(s => s.trim()).filter(Boolean)
-        : [];
-      const res = await apiRequest("POST", "/api/generate", {
-        crew_size: currentFilters.crew_size,
-        busy_level: currentFilters.busy_level,
-        time_available: currentFilters.time_available,
-        appliances: currentFilters.appliances,
-        proteins: currentFilters.use_what_we_have ? ["chicken"] : currentFilters.proteins,
-        healthiness_preference: currentFilters.healthiness_preference,
-        budget_level: currentFilters.budget_level,
-        allergens_to_avoid: currentFilters.allergens_to_avoid,
-        vegetarian_swap_needed: currentFilters.vegetarian_swap_needed,
-        use_what_we_have: currentFilters.use_what_we_have,
-        ingredients_on_hand,
-        last_template_id: templateId,
+
+    const payload = buildRequestPayload(currentFilters, templateId);
+
+    const prefetched = consumePrefetched(payload, templateId);
+    if (prefetched) {
+      setRecipe(prefetched);
+      setRecentRecipes(prev => {
+        const deduped = prev.filter(r => r.title !== prefetched.title);
+        return [prefetched, ...deduped].slice(0, 5);
       });
+      setLastTemplateId(prefetched.template_id);
+      trackMealGenerated();
+      genCountRef.current += 1;
+      setLoading(false);
+      if (genCountRef.current === 2 && !emailPromptedRef.current) {
+        emailPromptedRef.current = true;
+        setTimeout(() => setEmailModalOpen(true), 800);
+      }
+      setTimeout(() => prefetchMeals(payload), 100);
+      return;
+    }
+
+    try {
+      const res = await apiRequest("POST", "/api/generate", payload);
       const data: GenerateResponse = await res.json();
       setRecipe(data);
       setRecentRecipes(prev => {
@@ -78,12 +176,18 @@ export default function Home() {
         return [data, ...deduped].slice(0, 5);
       });
       setLastTemplateId(data.template_id);
+
+      const filterKey = buildFilterKey(payload);
+      putCached(filterKey, data);
+
       trackMealGenerated();
       genCountRef.current += 1;
       if (genCountRef.current === 2 && !emailPromptedRef.current) {
         emailPromptedRef.current = true;
         setTimeout(() => setEmailModalOpen(true), 800);
       }
+
+      setTimeout(() => prefetchMeals(payload), 100);
     } catch (err: any) {
       const msg = err?.message || "Something went wrong";
       if (msg.includes("No matching templates") || msg.includes("404")) {
@@ -106,15 +210,23 @@ export default function Home() {
     } finally {
       setLoading(false);
     }
-  };
+  }, []);
 
-  const handleGenerateClick = () => {
+  const handleGenerateClick = useCallback(() => {
     handleGenerate(filters);
-  };
+  }, [filters, handleGenerate]);
 
-  const handleGenerateAnother = () => {
+  const handleGenerateAnother = useCallback(() => {
     handleGenerate(filters, lastTemplateId);
-  };
+  }, [filters, lastTemplateId, handleGenerate]);
+
+  const onFiltersChange = useCallback((newFilters: FilterState) => {
+    setFilters(newFilters);
+  }, []);
+
+  const onEmailClick = useCallback(() => setEmailModalOpen(true), []);
+  const onShoppingListClick = useCallback(() => setShoppingListOpen(true), []);
+  const onHallVoteClick = useCallback(() => setHallVoteOpen(true), []);
 
   return (
     <div className="min-h-screen bg-background">
@@ -176,7 +288,7 @@ export default function Home() {
           <div className="w-full lg:w-[380px] flex-shrink-0">
             <FilterPanel
               filters={filters}
-              onFiltersChange={setFilters}
+              onFiltersChange={onFiltersChange}
               onGenerate={handleGenerateClick}
               onGenerateAnother={handleGenerateAnother}
               isLoading={loading}
@@ -184,54 +296,16 @@ export default function Home() {
             />
           </div>
 
-          <div className="flex-1 min-w-0">
-            <div className="transition-opacity duration-300 ease-in-out" style={{ opacity: loading ? 0.6 : 1 }}>
-              {loading && <LoadingState />}
-              {!loading && error === "no_match" && (
-                <div className="animate-in fade-in duration-300">
-                  <ErrorState type="no_match" />
-                </div>
-              )}
-              {!loading && error && error !== "no_match" && (
-                <div className="animate-in fade-in duration-300">
-                  <ErrorState type="error" message={error} />
-                </div>
-              )}
-              {!loading && !error && recipe && (
-                <div key={recipe.title} className="animate-in fade-in slide-in-from-bottom-2 duration-400">
-                  <RecipeCard
-                    recipe={recipe}
-                    crewSize={filters.crew_size}
-                    onEmailClick={() => setEmailModalOpen(true)}
-                    onShoppingListClick={() => setShoppingListOpen(true)}
-                  />
-                  {recentRecipes.length >= 2 && (
-                    <div className="mt-4 p-4 rounded-xl border border-border/50 bg-card/50 flex items-center justify-between gap-3 animate-in fade-in duration-500">
-                      <div className="flex items-center gap-2 min-w-0">
-                        <Vote className="w-5 h-5 text-primary flex-shrink-0" />
-                        <div>
-                          <p className="text-sm font-bold text-foreground">Can't decide? Let the crew vote.</p>
-                          <p className="text-xs text-muted-foreground">
-                            {recentRecipes.length} meals ready &middot; Share a link, crew picks the winner
-                          </p>
-                        </div>
-                      </div>
-                      <Button
-                        variant="outline"
-                        className="font-heading tracking-wider flex-shrink-0"
-                        onClick={() => setHallVoteOpen(true)}
-                        data-testid="button-start-hall-vote"
-                      >
-                        <Vote className="w-4 h-4 mr-2" />
-                        HALL VOTE
-                      </Button>
-                    </div>
-                  )}
-                </div>
-              )}
-              {!loading && !error && !recipe && <EmptyState />}
-            </div>
-          </div>
+          <ResultsPanel
+            loading={loading}
+            error={error}
+            recipe={recipe}
+            recentRecipes={recentRecipes}
+            filters={filters}
+            onEmailClick={onEmailClick}
+            onShoppingListClick={onShoppingListClick}
+            onHallVoteClick={onHallVoteClick}
+          />
         </div>
       </main>
       {recipe && (

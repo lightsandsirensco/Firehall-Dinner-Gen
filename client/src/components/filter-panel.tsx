@@ -9,6 +9,7 @@ import { Badge } from "@/components/ui/badge";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Flame, RefreshCw, Users, Clock, Zap, Dumbbell, ShieldAlert, ChefHat, Leaf, Package, DollarSign } from "lucide-react";
 import { trackEvent } from "@/lib/analytics";
+import { memo } from "react";
 
 export interface FilterState {
   crew_size: number;
@@ -100,7 +101,7 @@ function MultiToggle({
   );
 }
 
-export function FilterPanel({ filters, onFiltersChange, onGenerate, onGenerateAnother, isLoading, hasRecipe }: FilterPanelProps) {
+export const FilterPanel = memo(function FilterPanel({ filters, onFiltersChange, onGenerate, onGenerateAnother, isLoading, hasRecipe }: FilterPanelProps) {
   const update = (key: keyof FilterState, value: any) => {
     if (key === "allergens_to_avoid") trackEvent("allergy_filter_used");
     onFiltersChange({ ...filters, [key]: value });
@@ -337,4 +338,4 @@ export function FilterPanel({ filters, onFiltersChange, onGenerate, onGenerateAn
       </div>
     </div>
   );
-}
+});

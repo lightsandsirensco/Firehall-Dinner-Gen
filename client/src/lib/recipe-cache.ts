@@ -1,0 +1,109 @@
+import type { GenerateResponse } from "@shared/schema";
+
+const STORAGE_KEY = "firehall_recipe_cache";
+const MAX_ENTRIES = 50;
+const TTL_MS = 24 * 60 * 60 * 1000;
+
+interface CacheEntry {
+  recipe: GenerateResponse;
+  ts: number;
+}
+
+type CacheMap = Record<string, CacheEntry[]>;
+
+const memoryCache: CacheMap = {};
+
+function sortKey(obj: Record<string, unknown>): string {
+  const sorted = Object.keys(obj)
+    .sort()
+    .reduce((acc, k) => {
+      const v = obj[k];
+      if (Array.isArray(v)) {
+        acc[k] = [...v].sort();
+      } else {
+        acc[k] = v;
+      }
+      return acc;
+    }, {} as Record<string, unknown>);
+  return JSON.stringify(sorted);
+}
+
+export function buildFilterKey(filters: Record<string, unknown>): string {
+  const { last_template_id, ...rest } = filters;
+  return sortKey(rest);
+}
+
+function loadDisk(): CacheMap {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (!raw) return {};
+    const parsed: CacheMap = JSON.parse(raw);
+    const now = Date.now();
+    for (const key of Object.keys(parsed)) {
+      parsed[key] = parsed[key].filter((e) => now - e.ts < TTL_MS);
+      if (parsed[key].length === 0) delete parsed[key];
+    }
+    return parsed;
+  } catch {
+    return {};
+  }
+}
+
+function saveDisk(cache: CacheMap) {
+  try {
+    let total = 0;
+    for (const entries of Object.values(cache)) total += entries.length;
+    if (total > MAX_ENTRIES) {
+      const all: { key: string; idx: number; ts: number }[] = [];
+      for (const [key, entries] of Object.entries(cache)) {
+        entries.forEach((e, idx) => all.push({ key, idx, ts: e.ts }));
+      }
+      all.sort((a, b) => a.ts - b.ts);
+      const toRemove = all.slice(0, total - MAX_ENTRIES);
+      for (const r of toRemove) {
+        cache[r.key] = cache[r.key].filter((_, i) => i !== r.idx);
+        if (cache[r.key].length === 0) delete cache[r.key];
+      }
+    }
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(cache));
+  } catch {}
+}
+
+function ensureMemory() {
+  if (Object.keys(memoryCache).length === 0) {
+    const disk = loadDisk();
+    Object.assign(memoryCache, disk);
+  }
+}
+
+export function getCached(filterKey: string, excludeTemplateId?: number): GenerateResponse | null {
+  ensureMemory();
+  const entries = memoryCache[filterKey];
+  if (!entries || entries.length === 0) return null;
+  const now = Date.now();
+  const valid = entries.filter(
+    (e) => now - e.ts < TTL_MS && (excludeTemplateId == null || e.recipe.template_id !== excludeTemplateId)
+  );
+  if (valid.length === 0) return null;
+  const pick = valid[Math.floor(Math.random() * valid.length)];
+  return pick.recipe;
+}
+
+export function getAllCached(filterKey: string): GenerateResponse[] {
+  ensureMemory();
+  const entries = memoryCache[filterKey];
+  if (!entries) return [];
+  const now = Date.now();
+  return entries.filter((e) => now - e.ts < TTL_MS).map((e) => e.recipe);
+}
+
+export function putCached(filterKey: string, recipe: GenerateResponse) {
+  ensureMemory();
+  if (!memoryCache[filterKey]) memoryCache[filterKey] = [];
+  const exists = memoryCache[filterKey].some(
+    (e) => e.recipe.template_id === recipe.template_id
+  );
+  if (exists) return;
+  memoryCache[filterKey].push({ recipe, ts: Date.now() });
+  saveDisk(memoryCache);
+}
