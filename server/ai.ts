@@ -393,7 +393,8 @@ async function attemptGenerate(
     const recipe = tryParseRecipe(content, template, chosenProtein, budgetLevel);
     if (recipe) return { recipe, tokensIn, tokensOut };
     return null;
-  } catch {
+  } catch (err: any) {
+    if (err.message?.includes("timed out")) throw err;
     return null;
   }
 }
