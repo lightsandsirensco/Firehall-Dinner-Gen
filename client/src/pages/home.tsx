@@ -159,6 +159,11 @@ export default function Home() {
     ingredients_on_hand_text: "",
   });
 
+  useEffect(() => {
+    const warmupPayload = buildRequestPayload(filters);
+    prefetchMeals(warmupPayload);
+  }, []);
+
   const handleGenerate = useCallback(async (currentFilters: FilterState, templateId?: number) => {
     setError(null);
     trackEvent('meal_generation_started');
@@ -221,6 +226,8 @@ export default function Home() {
         setError("Daily recipe limit reached. Please try again tomorrow.");
       } else if (msg.includes("403")) {
         setError("Security check failed. Please refresh the page and try again.");
+      } else if (msg.includes("timed out") || msg.includes("AbortError")) {
+        setError("Still warming up — tap Generate again to retry.");
       } else {
         setError("Generation failed. Please try again.");
       }

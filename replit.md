@@ -20,6 +20,7 @@ Key features include:
 - **Cuisine Style Filter**: Allows users to specify a cuisine preference, influencing flavor profiles without overriding core constraints.
 - **Healthy Variety System**: Incorporates a healthy bias (lean, balanced, comfort) and an in-memory variety tracking system to prevent repetition of cuisines, cooking methods, proteins, and carbs within recent generations. Recipes are tagged for easy identification of qualities like high protein or quick cleanup.
 - **Performance Optimizations**: Includes client-side caching (memory + localStorage), background prefetching, instant UI rendering with skeleton loaders, and memoization of React components.
+- **Timeout & Fallback System**: Server-side 15s AI timeout per call, with deterministic fallback recipes from templates if AI fails. Client-side 45s AbortController timeout with retry-friendly error messages. Cold-start detection and logging. Page-mount warm-up prefetch for instant first generation.
 - **Cost Control**: Implemented through caching, rate limiting per IP/session, a daily AI budget cap, bot blocking, and `ENABLE_POOL_WARMUP` env flag (default false) for Autoscale-friendly on-demand generation.
 - **Admin Dashboard**: Provides usage statistics, budget status, cache details, and request logs.
 - **Pro Tips**: Recipes include short, practical tips for cooking.

@@ -11,6 +11,7 @@ import { subscribeToList, trackRecipeEvent, trackShoppingListEvent, validateKlav
 import { getFromPool, refillPool, getPoolSize } from "./recipe-pool";
 import { initHallVoteTables, createHallVote, getHallVote, castBallot, closeHallVote, hashVoterFingerprint } from "./hall-vote-store";
 import { addFavourite, getFavourites, removeFavourite } from "./favourites";
+import { buildFallbackRecipe } from "./fallback-recipe";
 import { log } from "./index";
 import {
   initCacheStore,
@@ -30,6 +31,8 @@ import {
 
 const COST_PER_1K_INPUT = 0.00015;
 const COST_PER_1K_OUTPUT = 0.0006;
+
+let firstRequestSinceBoot = true;
 
 const BOT_UA_PATTERNS = [
   /bot/i, /crawler/i, /spider/i, /scraper/i, /curl/i, /wget/i,
@@ -218,11 +221,42 @@ export async function registerRoutes(
         });
       }
 
+      const isColdStart = firstRequestSinceBoot;
+      if (firstRequestSinceBoot) {
+        log("Cold start: first AI request since boot", "perf");
+        firstRequestSinceBoot = false;
+      }
+
       const varietyConstraints = getVarietyConstraints(request.cuisine_style);
 
-      const aiResult = request.use_what_we_have
-        ? await generateRecipeFromPantry(chosen, request, varietyConstraints)
-        : await generateRecipe(chosen, request, chosenProtein, varietyConstraints);
+      let aiResult;
+
+      try {
+        aiResult = request.use_what_we_have
+          ? await generateRecipeFromPantry(chosen, request, varietyConstraints)
+          : await generateRecipe(chosen, request, chosenProtein, varietyConstraints);
+      } catch (aiError: any) {
+        const errorCategory = aiError.message?.includes("timed out") ? "timeout"
+          : aiError.message?.includes("empty") ? "ai_empty"
+          : aiError.message?.includes("parse") ? "json_parse_failed"
+          : aiError.message?.includes("validation") ? "validation_failed"
+          : "ai_error";
+        log(`AI generation failed (${errorCategory}): ${aiError.message}${isColdStart ? " [COLD START]" : ""} — serving fallback`, "fallback");
+
+        const fallbackRecipe = buildFallbackRecipe(chosen, request, chosenProtein);
+        setCachedRecipe(cacheKey, parseInt(chosen.template_id), fallbackRecipe);
+        recordRecipe(fallbackRecipe);
+        logUsage({
+          cacheKey,
+          templateId: parseInt(chosen.template_id),
+          cacheHit: false,
+          latencyMs: Date.now() - startTime,
+          ipHash,
+          sessionId,
+        });
+        log(`Fallback served in ${Date.now() - startTime}ms${isColdStart ? " [COLD START]" : ""}`, "perf");
+        return res.json({ ...fallbackRecipe, _fallback: true });
+      }
 
       const { recipe, tokensIn, tokensOut } = aiResult;
 
@@ -246,7 +280,7 @@ export async function registerRoutes(
         sessionId,
       });
 
-      log(`Generated in ${Date.now() - startTime}ms | ${tokensIn}in/${tokensOut}out | ~$${estimatedCost.toFixed(5)}${aiResult.fallback ? " [FALLBACK]" : ""}`, "perf");
+      log(`Generated in ${Date.now() - startTime}ms | ${tokensIn}in/${tokensOut}out | ~$${estimatedCost.toFixed(5)}${aiResult.fallback ? " [FALLBACK_REMIX]" : ""}${isColdStart ? " [COLD START]" : ""}`, "perf");
 
       if (process.env.ENABLE_POOL_WARMUP === "true") {
         refillPool().catch(() => {});

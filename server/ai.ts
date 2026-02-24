@@ -160,17 +160,31 @@ function isRecipeValid(recipe: GenerateResponse): { valid: boolean; reason?: str
   return { valid: true };
 }
 
+const AI_CALL_TIMEOUT_MS = 15_000;
+
+function withTimeout<T>(promise: Promise<T>, ms: number, label: string): Promise<T> {
+  return new Promise<T>((resolve, reject) => {
+    const timer = setTimeout(() => {
+      reject(new Error(`AI call timed out after ${ms}ms (${label})`));
+    }, ms);
+    promise
+      .then((v) => { clearTimeout(timer); resolve(v); })
+      .catch((e) => { clearTimeout(timer); reject(e); });
+  });
+}
+
 async function callAI(
   prompt: string,
   systemPrompt: string,
-  isRetry: boolean = false
+  isRetry: boolean = false,
+  timeoutMs: number = AI_CALL_TIMEOUT_MS
 ): Promise<{ content: string; tokensIn: number; tokensOut: number }> {
   const retryAddendum = isRetry ? " IMPORTANT: Return ONLY valid JSON that exactly matches the schema. No extra text, no backticks, no markdown." : "";
   const finalSystem = systemPrompt + retryAddendum;
 
   try {
     const startMs = Date.now();
-    const response = await openai.chat.completions.create({
+    const apiPromise = openai.chat.completions.create({
       model: "gpt-5-mini",
       messages: [
         { role: "system", content: finalSystem },
@@ -179,6 +193,8 @@ async function callAI(
       max_completion_tokens: 4096,
       response_format: { type: "json_object" },
     });
+
+    const response = await withTimeout(apiPromise, timeoutMs, isRetry ? "retry" : "primary");
 
     const elapsed = Date.now() - startMs;
     const choice = response.choices[0];
@@ -199,7 +215,9 @@ async function callAI(
     throw new Error("AI returned empty response");
   } catch (err: any) {
     if (err.message === "AI returned empty response") throw err;
-    if (err.code === "ETIMEDOUT" || err.message?.includes("timeout")) {
+    if (err.message?.includes("timed out")) {
+      logError("ai_timeout", err.message);
+    } else if (err.code === "ETIMEDOUT" || err.message?.includes("timeout")) {
       logError("ai_timeout", err.message);
     } else {
       logError("unknown", err.message);

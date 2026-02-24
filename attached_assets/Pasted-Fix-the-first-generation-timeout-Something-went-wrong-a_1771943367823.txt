@@ -1,0 +1,53 @@
+Fix the first-generation timeout (“Something went wrong” after ~20s) and make first meal generation reliably fast.
+
+Root issue:
+The first request is timing out due to cold start + AI latency + strict parsing/extra computations.
+
+Non-negotiables:
+- Keep recipe quality/creativity.
+- Do not remove filters or features.
+- Avoid user-facing failures.
+
+Implement:
+
+1) Add server-side timeout protection + graceful fallback
+- Wrap the AI call in a timeout (e.g., 12–15 seconds).
+- If the AI call exceeds timeout or errors, do NOT throw a fatal error.
+- Return a fallback recipe immediately:
+  - Choose the best matching template from existing templates based on filters,
+  - Generate a clean recipe from it deterministically (no AI) OR do a very small “polish” AI call with a 5–7s timeout.
+- In UI, show a subtle note (optional): “Loaded a quick recipe while we warm up the generator.”
+
+2) Prefetch/Warm-up on page load (eliminate cold start pain)
+- On generator page mount, start a background request that warms the AI route and/or pre-generates one meal using default/last-used filters.
+- Store result in a “readyMeal” cache.
+- On first user click, if readyMeal matches current filters, display instantly.
+
+3) Reduce blocking work on first render (perceived speed)
+- Render the recipe as soon as it’s available.
+- Compute/add secondary data AFTER render:
+  - shopping list formatting
+  - macros
+  - pro tips
+- If you can stream, stream the recipe JSON (or sections) and progressively render.
+
+4) Fix client-side request timeouts
+- Ensure the frontend fetch client timeout is >= 30s OR uses AbortController with a user-friendly retry that doesn’t crash state.
+- If request is aborted, show “Still working—tap to retry” and keep the skeleton (don’t blank the UI).
+
+5) Observability
+- Add logs with timing breakdown:
+  - cold start indicator (first request since deploy)
+  - AI call duration
+  - parse duration
+  - total request duration
+- Log exact error cause category:
+  - timeout
+  - ai_error
+  - json_parse_failed
+  - validation_failed
+
+Acceptance test:
+- First generation should not error even if AI is slow.
+- Worst case: fallback recipe appears within 2–5 seconds.
+- After warm-up, generations should be faster and never hit the “something went wrong” state.
