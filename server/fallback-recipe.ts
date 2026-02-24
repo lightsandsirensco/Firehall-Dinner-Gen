@@ -574,7 +574,7 @@ export function buildFallbackRecipe(
     pro_tips: proTips,
     veg_option: vegOption,
     tags: {
-      cuisine: cuisineData ? cuisineStyle.replace("_", " ") : (template.style || "American"),
+      cuisine: cuisineData ? cuisineStyle.replace("_", " ") : "American",
       cooking_method: cookingMethod,
       base_carb: "rice",
       key_ingredients: [proteinDisplay, "rice", "vegetables"],

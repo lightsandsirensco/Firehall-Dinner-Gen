@@ -170,6 +170,7 @@ export default function Home() {
   });
 
   useEffect(() => {
+    fetch("/api/warm").catch(() => {});
     const warmupPayload = buildRequestPayload(filters);
     prefetchMeals(warmupPayload);
   }, []);

@@ -160,7 +160,7 @@ function isRecipeValid(recipe: GenerateResponse): { valid: boolean; reason?: str
   return { valid: true };
 }
 
-const AI_CALL_TIMEOUT_MS = 15_000;
+const AI_CALL_TIMEOUT_MS = 35_000;
 
 function withTimeout<T>(promise: Promise<T>, ms: number, label: string): Promise<T> {
   return new Promise<T>((resolve, reject) => {

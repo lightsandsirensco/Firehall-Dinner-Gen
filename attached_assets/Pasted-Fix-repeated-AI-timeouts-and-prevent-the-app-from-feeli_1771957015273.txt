@@ -1,0 +1,42 @@
+Fix repeated AI timeouts and prevent the app from feeling stuck.
+
+Current issue:
+Primary AI call times out at 15000ms, causing frequent fallback after long waits and “glitching” perception.
+
+Implement:
+
+1) Change timeouts to a 2-stage strategy:
+- Fast fallback threshold: 8000ms
+  - If AI call is not finished by 8s, immediately return a high-quality fallback recipe so the UI updates quickly.
+- Background completion:
+  - Continue the AI request in the background (do not cancel) if possible.
+  - If/when AI finishes, update the UI seamlessly with the AI version (only if the user is still on the page and requestId matches latest).
+- Hard stop: 35000ms max (to avoid runaway).
+
+2) Add warm-up to eliminate cold start pain:
+- On generator page load, call a lightweight /api/warm endpoint to wake the server.
+- Also pre-generate 1 recipe in the background using default/last-used filters and store as readyMeal.
+- If user clicks Generate and readyMeal matches current filters, show instantly.
+
+3) Do not block first render on “extras”
+- Render the recipe immediately.
+- Compute macros, pro tips, and shopping-list formatting AFTER render (async), so the user sees the recipe fast.
+
+4) Fix protein selection rule (multiple selected)
+- If multiple proteins are selected, choose ONE randomly per generation and pass only that chosen protein forward.
+- Log chosen_protein.
+
+5) Fix fallback cuisine tagging
+- Ensure fallback tags.cuisine matches the requested cuisine (or “any” if random).
+- Do not label fallback as “asian” unless asian was selected.
+
+6) Improve UI responsiveness
+- Always reset loading state in finally().
+- Prevent stale responses: use requestId and only apply the latest response.
+- Show a small “Generating…” skeleton immediately on click.
+
+Acceptance:
+- First click updates UI within ~2–5 seconds (fallback if needed).
+- No waiting 15 seconds then falling back.
+- Subsequent clicks reliably generate different meals.
+- Cuisine tags match selection; protein selection uses one protein only.

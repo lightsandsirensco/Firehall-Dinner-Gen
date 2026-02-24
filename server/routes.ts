@@ -104,6 +104,11 @@ export async function registerRoutes(
     next();
   });
 
+  app.get("/api/warm", (_req: Request, res: Response) => {
+    log("Warm-up ping received", "perf");
+    return res.json({ status: "warm", uptime: process.uptime() });
+  });
+
   app.post("/api/generate", async (req: Request, res: Response) => {
     try {
       const ua = req.headers["user-agent"] || "";
@@ -173,6 +178,7 @@ export async function registerRoutes(
 
       const chosen = pickTemplate(candidates, request.last_template_id);
       const chosenProtein = request.use_what_we_have ? "pantry" : chooseProtein(chosen, request.proteins, request.healthiness_preference);
+      log(`Protein selected: ${chosenProtein} (from user choices: ${request.proteins.join(", ")})`, "ai");
       const cacheKey = buildCacheKey(chosen.template_id, request, chosenProtein);
       const startTime = Date.now();
 
@@ -229,22 +235,55 @@ export async function registerRoutes(
 
       const varietyConstraints = getVarietyConstraints(request.cuisine_style);
 
-      let aiResult;
+      const FAST_FALLBACK_MS = 8_000;
 
-      try {
-        aiResult = request.use_what_we_have
+      const fallbackRecipe = buildFallbackRecipe(chosen, request, chosenProtein);
+
+      const aiPromise = (async () => {
+        const result = request.use_what_we_have
           ? await generateRecipeFromPantry(chosen, request, varietyConstraints)
           : await generateRecipe(chosen, request, chosenProtein, varietyConstraints);
-      } catch (aiError: any) {
-        const errorCategory = aiError.message?.includes("timed out") ? "timeout"
-          : aiError.message?.includes("empty") ? "ai_empty"
-          : aiError.message?.includes("parse") ? "json_parse_failed"
-          : aiError.message?.includes("validation") ? "validation_failed"
-          : "ai_error";
-        log(`AI generation failed (${errorCategory}): ${aiError.message}${isColdStart ? " [COLD START]" : ""} — serving fallback`, "fallback");
+        return result;
+      })();
 
-        const fallbackRecipe = buildFallbackRecipe(chosen, request, chosenProtein);
-        setCachedRecipe(cacheKey, parseInt(chosen.template_id), fallbackRecipe);
+      const fastTimer = new Promise<"timeout">((resolve) =>
+        setTimeout(() => resolve("timeout"), FAST_FALLBACK_MS)
+      );
+
+      const raceResult = await Promise.race([
+        aiPromise.then((r) => ({ type: "ai" as const, result: r })),
+        fastTimer.then(() => ({ type: "timeout" as const })),
+      ]).catch((aiError: any) => {
+        return { type: "error" as const, error: aiError };
+      });
+
+      if (raceResult.type === "ai") {
+        const { recipe, tokensIn, tokensOut } = raceResult.result;
+        recordRecipe(recipe);
+        const estimatedCost =
+          (tokensIn / 1000) * COST_PER_1K_INPUT +
+          (tokensOut / 1000) * COST_PER_1K_OUTPUT;
+        setCachedRecipe(cacheKey, parseInt(chosen.template_id), recipe);
+        logUsage({
+          cacheKey,
+          templateId: parseInt(chosen.template_id),
+          cacheHit: false,
+          tokensIn,
+          tokensOut,
+          estimatedCost,
+          latencyMs: Date.now() - startTime,
+          ipHash,
+          sessionId,
+        });
+        log(`Generated in ${Date.now() - startTime}ms | ${tokensIn}in/${tokensOut}out | ~$${estimatedCost.toFixed(5)}${raceResult.result.fallback ? " [FALLBACK_REMIX]" : ""}${isColdStart ? " [COLD START]" : ""}`, "perf");
+        if (process.env.ENABLE_POOL_WARMUP === "true") {
+          refillPool().catch(() => {});
+        }
+        return res.json(recipe);
+      }
+
+      if (raceResult.type === "timeout") {
+        log(`AI exceeded ${FAST_FALLBACK_MS}ms — serving fast fallback, AI continues in background${isColdStart ? " [COLD START]" : ""}`, "fallback");
         recordRecipe(fallbackRecipe);
         logUsage({
           cacheKey,
@@ -254,39 +293,44 @@ export async function registerRoutes(
           ipHash,
           sessionId,
         });
-        log(`Fallback served in ${Date.now() - startTime}ms${isColdStart ? " [COLD START]" : ""}`, "perf");
+
+        aiPromise
+          .then((aiResult) => {
+            const { recipe, tokensIn, tokensOut } = aiResult;
+            const estimatedCost =
+              (tokensIn / 1000) * COST_PER_1K_INPUT +
+              (tokensOut / 1000) * COST_PER_1K_OUTPUT;
+            setCachedRecipe(cacheKey, parseInt(chosen.template_id), recipe);
+            recordRecipe(recipe);
+            log(`Background AI completed in ${Date.now() - startTime}ms — cached for next request | ~$${estimatedCost.toFixed(5)}`, "perf");
+          })
+          .catch((bgErr: any) => {
+            log(`Background AI also failed: ${bgErr.message}`, "fallback");
+            setCachedRecipe(cacheKey, parseInt(chosen.template_id), fallbackRecipe);
+          });
+
         return res.json({ ...fallbackRecipe, _fallback: true });
       }
 
-      const { recipe, tokensIn, tokensOut } = aiResult;
-
-      recordRecipe(recipe);
-
-      const estimatedCost =
-        (tokensIn / 1000) * COST_PER_1K_INPUT +
-        (tokensOut / 1000) * COST_PER_1K_OUTPUT;
-
-      setCachedRecipe(cacheKey, parseInt(chosen.template_id), recipe);
-
+      const aiError = (raceResult as any).error;
+      const errorCategory = aiError?.message?.includes("timed out") ? "timeout"
+        : aiError?.message?.includes("empty") ? "ai_empty"
+        : aiError?.message?.includes("parse") ? "json_parse_failed"
+        : aiError?.message?.includes("validation") ? "validation_failed"
+        : "ai_error";
+      log(`AI generation failed (${errorCategory}): ${aiError?.message}${isColdStart ? " [COLD START]" : ""} — serving fallback`, "fallback");
+      setCachedRecipe(cacheKey, parseInt(chosen.template_id), fallbackRecipe);
+      recordRecipe(fallbackRecipe);
       logUsage({
         cacheKey,
         templateId: parseInt(chosen.template_id),
         cacheHit: false,
-        tokensIn,
-        tokensOut,
-        estimatedCost,
         latencyMs: Date.now() - startTime,
         ipHash,
         sessionId,
       });
-
-      log(`Generated in ${Date.now() - startTime}ms | ${tokensIn}in/${tokensOut}out | ~$${estimatedCost.toFixed(5)}${aiResult.fallback ? " [FALLBACK_REMIX]" : ""}${isColdStart ? " [COLD START]" : ""}`, "perf");
-
-      if (process.env.ENABLE_POOL_WARMUP === "true") {
-        refillPool().catch(() => {});
-      }
-
-      return res.json(recipe);
+      log(`Fallback served in ${Date.now() - startTime}ms${isColdStart ? " [COLD START]" : ""}`, "perf");
+      return res.json({ ...fallbackRecipe, _fallback: true });
     } catch (error: any) {
       console.error("Generate error:", error);
       return res.status(500).json({ message: error.message || "Failed to generate recipe" });
