@@ -170,9 +170,10 @@ export default function Home() {
   });
 
   useEffect(() => {
-    fetch("/api/warm").catch(() => {});
     const warmupPayload = buildRequestPayload(filters);
-    prefetchMeals(warmupPayload);
+    fetch("/api/warm")
+      .then(() => prefetchMeals(warmupPayload))
+      .catch(() => prefetchMeals(warmupPayload));
   }, []);
 
   const applyRecipe = useCallback((data: GenerateResponse, requestId: string) => {

@@ -101,7 +101,15 @@ app.use((req, res, next) => {
     },
   );
 
+  const SELF_PING_INTERVAL_MS = 4 * 60 * 1000;
+  const selfPingTimer = setInterval(() => {
+    const url = `http://0.0.0.0:${port}/api/warm`;
+    fetch(url).catch(() => {});
+  }, SELF_PING_INTERVAL_MS);
+  selfPingTimer.unref();
+
   function gracefulShutdown(signal: string) {
+    clearInterval(selfPingTimer);
     log(`${signal} received. Shutting down gracefully...`, "system");
     httpServer.close(() => {
       log("HTTP server closed.", "system");
