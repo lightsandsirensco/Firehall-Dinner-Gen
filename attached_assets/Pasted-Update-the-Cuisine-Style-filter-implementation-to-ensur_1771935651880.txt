@@ -1,0 +1,68 @@
+Update the Cuisine Style filter implementation to ensure it works as a flavor layer only and does NOT remove, override, disable, or hide any other existing filters.
+
+Requirements:
+
+1) Preserve ALL existing filters exactly as they are:
+   - Crew size
+   - Protein selection
+   - Healthiness
+   - Allergies & restrictions
+   - Vegetarian add-on
+   - Budget
+   - Appliances
+   - Time available
+   - Meal Style
+   - Use what’s in the fridge
+   - Pizza Night (separate page)
+   - Any other current filters
+
+2) Cuisine Style must act as a flavor profile layer only.
+   - It influences spices, sauces, ingredient combinations, and naming.
+   - It does NOT override:
+     - selected protein(s)
+     - allergies/restrictions
+     - time limits
+     - budget level
+     - healthiness selection
+     - vegetarian toggle
+
+3) If constraints conflict:
+   - Respect protein + allergies + healthiness first.
+   - Then adapt cuisine creatively within those constraints.
+   Example:
+     - If Cuisine = Korean but dairy-free is selected → avoid dairy-based sauces.
+     - If Cuisine = Mexican and Vegetarian add-on selected → create plant-based variant for 1 serving while keeping main protein for others.
+     - If Cuisine = BBQ but time = 25 minutes → create skillet BBQ style, not 4-hour smoked brisket.
+
+4) UI behavior:
+   - Selecting a Cuisine must NOT hide or disable any other filters.
+   - No filters should visually disappear.
+   - No layout shifts in the filter panel.
+   - Maintain consistent spacing and grouping.
+
+5) Random behavior:
+   - If Cuisine = Any (Random):
+       - Randomize cuisine from full list.
+       - Do not repeat the same cuisine back-to-back.
+       - Do not disable any other filters.
+
+6) Validation:
+   - Test 20 combinations mixing:
+       - Cuisine + Meal Style
+       - Cuisine + Allergies
+       - Cuisine + Budget
+       - Cuisine + Vegetarian add-on
+   - Ensure recipes always respect ALL filters.
+
+7) Do NOT modify:
+   - Email feature
+   - Save feature
+   - Shopping list logic
+   - Print logic
+   - Pro Tips logic
+   - Speed optimizations
+
+Acceptance check:
+- All filters remain visible and functional after selecting a Cuisine.
+- Cuisine adjusts flavor only.
+- No feature regressions.

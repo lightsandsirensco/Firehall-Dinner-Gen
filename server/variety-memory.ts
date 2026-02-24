@@ -57,23 +57,27 @@ export interface VarietyConstraints {
   recent_titles: string[];
 }
 
-export function getVarietyConstraints(): VarietyConstraints {
+export function getVarietyConstraints(cuisineStyle?: string): VarietyConstraints {
   const last3 = recentRecipes.slice(-3);
   const last2 = recentRecipes.slice(-2);
 
-  const avoid_cuisines = Array.from(new Set(last3.map((r) => r.cuisine).filter(Boolean)));
+  const explicitCuisine = cuisineStyle && cuisineStyle !== "any";
+
+  const avoid_cuisines = explicitCuisine ? [] : Array.from(new Set(last3.map((r) => r.cuisine).filter(Boolean)));
   const avoid_methods = Array.from(new Set(last3.map((r) => r.cooking_method).filter(Boolean)));
   const avoid_proteins = Array.from(new Set(last2.map((r) => r.protein).filter(Boolean)));
   const avoid_carbs = Array.from(new Set(last2.map((r) => r.base_carb).filter(Boolean)));
   const recent_titles = recentRecipes.slice(-5).map((r) => r.title);
 
-  const usedCuisinesLower = new Set(avoid_cuisines.map((c) => c.toLowerCase()));
   let suggested_cuisine = "";
-  const available = CUISINE_POOL.filter((c) => !usedCuisinesLower.has(c.toLowerCase()));
-  if (available.length > 0) {
-    suggested_cuisine = available[Math.floor(Math.random() * available.length)];
-  } else {
-    suggested_cuisine = CUISINE_POOL[Math.floor(Math.random() * CUISINE_POOL.length)];
+  if (!explicitCuisine) {
+    const usedCuisinesLower = new Set(avoid_cuisines.map((c) => c.toLowerCase()));
+    const available = CUISINE_POOL.filter((c) => !usedCuisinesLower.has(c.toLowerCase()));
+    if (available.length > 0) {
+      suggested_cuisine = available[Math.floor(Math.random() * available.length)];
+    } else {
+      suggested_cuisine = CUISINE_POOL[Math.floor(Math.random() * CUISINE_POOL.length)];
+    }
   }
 
   return {
@@ -93,7 +97,7 @@ export function buildVarietyPromptBlock(constraints: VarietyConstraints): string
 
   if (constraints.avoid_cuisines.length > 0) {
     lines.push(`- Do NOT repeat these cuisines (used recently): ${constraints.avoid_cuisines.join(", ")}. Try: ${constraints.suggested_cuisine}.`);
-  } else {
+  } else if (constraints.suggested_cuisine) {
     lines.push(`- Suggested cuisine: ${constraints.suggested_cuisine}. Rotate across: Mediterranean, Mexican, Korean, Thai, Indian, Japanese, Middle Eastern, Italian-lite, BBQ/Smoky, Canadian comfort-lite.`);
   }
 

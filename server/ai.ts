@@ -233,6 +233,26 @@ function tryParseRecipe(
   return filled;
 }
 
+const CUISINE_DISPLAY_NAMES: Record<string, string> = {
+  mediterranean: "Mediterranean",
+  mexican: "Mexican / Tex-Mex",
+  italian: "Italian-Inspired",
+  asian: "Asian-Inspired",
+  korean: "Korean-Inspired",
+  thai: "Thai-Inspired",
+  indian: "Indian-Inspired",
+  middle_eastern: "Middle Eastern",
+  bbq: "BBQ / Smoky",
+  cajun: "Cajun / Southern",
+  canadian: "Canadian Classics",
+};
+
+function buildCuisineDirective(cuisineStyle: string): string {
+  if (!cuisineStyle || cuisineStyle === "any") return "";
+  const displayName = CUISINE_DISPLAY_NAMES[cuisineStyle] || cuisineStyle;
+  return `CUISINE STYLE (FLAVOR LAYER — mandatory): This recipe MUST use a ${displayName} flavor profile. Use ${displayName} spices, sauces, seasoning blends, and ingredient combinations. The dish name, aromatics, and key flavors must clearly reflect ${displayName} cuisine. This is a flavor directive only — it does NOT override protein selection, allergies, time, or healthiness constraints. If constraints conflict (e.g. dairy-free + Italian), adapt creatively within the cuisine (e.g. olive oil instead of butter/cheese).`;
+}
+
 function buildFilterSummary(request: GenerateRequest): string {
   const parts = [
     `crew=${request.crew_size}`,
@@ -241,6 +261,7 @@ function buildFilterSummary(request: GenerateRequest): string {
     `appliances=${request.appliances.join("+")}`,
     `health=${request.healthiness_preference}`,
     `budget=${request.budget_level || "standard"}`,
+    `cuisine=${request.cuisine_style || "any"}`,
   ];
   if (request.use_what_we_have) parts.push("pantry=yes");
   if (request.vegetarian_swap_needed) parts.push("veg=yes");
@@ -271,12 +292,15 @@ function buildPrompt(template: TemplateRow, request: GenerateRequest, chosenProt
     ? `VEG OPTION: 1 crew member is vegetarian. Add "veg_option" with swap_protein (chickpeas/lentils/black beans/tofu/tempeh/paneer/plant-based ground), ingredients (additional only), steps, plating_notes. Same base sauce/spices. Separate pan. Label "VEG".${request.allergens_to_avoid.includes("dairy") ? " No paneer." : ""}${request.allergens_to_avoid.includes("soy") ? " No tofu/tempeh." : ""}`
     : "";
 
+  const cuisineLine = buildCuisineDirective(request.cuisine_style || "any");
+
   return `Generate ONE firehall meal as JSON.
 
 TEMPLATE: ${template.template_name} (${template.style}) — ${template.base_idea_description}
 CREW: ${request.crew_size} | Shift: ${request.busy_level} | Time: ${request.time_available} min | Appliances: ${request.appliances.join(", ")}
 PROTEIN (STRICT): Recipe MUST use ${proteinDisplay} as the ONLY animal protein. Do not include, mention, or substitute any other meat or animal protein. The title MUST include the word "${proteinDisplay}". Every meat ingredient MUST be ${proteinDisplay}. FORBIDDEN proteins (do NOT use any of these): ${forbiddenText}.
 Healthiness: ${request.healthiness_preference}
+${cuisineLine}
 ${allergenLine}
 ${budgetLine}
 ${vegLine}
@@ -312,12 +336,15 @@ function buildPantryPrompt(template: TemplateRow, request: GenerateRequest, vari
     ? `VEG OPTION: 1 person. Add "veg_option" with swap_protein, ingredients, steps, plating_notes. No tofu if soy allergy, no paneer if dairy allergy.`
     : "";
 
+  const cuisineLine = buildCuisineDirective(request.cuisine_style || "any");
+
   return `Generate ONE firehall meal as JSON using crew's on-hand ingredients.
 
 ON HAND: ${ingredientsList}
 TEMPLATE: ${template.template_name} (${template.style}) — ${template.base_idea_description}
 CREW: ${request.crew_size} | Shift: ${request.busy_level} | Time: ${request.time_available} min | Appliances: ${request.appliances.join(", ")}
 Healthiness: ${request.healthiness_preference}
+${cuisineLine}
 ${allergenLine}
 ${budgetLine}
 ${vegLine}

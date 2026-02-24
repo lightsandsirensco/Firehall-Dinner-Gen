@@ -7,7 +7,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Switch } from "@/components/ui/switch";
 import { Badge } from "@/components/ui/badge";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Flame, RefreshCw, Users, Clock, Zap, Dumbbell, ShieldAlert, ChefHat, Leaf, Package, DollarSign } from "lucide-react";
+import { Flame, RefreshCw, Users, Clock, Zap, Dumbbell, ShieldAlert, ChefHat, Leaf, Package, DollarSign, Globe } from "lucide-react";
 import { trackEvent } from "@/lib/analytics";
 import { memo } from "react";
 
@@ -19,6 +19,7 @@ export interface FilterState {
   proteins: string[];
   healthiness_preference: string;
   budget_level: string;
+  cuisine_style: string;
   allergens_to_avoid: string[];
   vegetarian_swap_needed: boolean;
   use_what_we_have: boolean;
@@ -233,6 +234,32 @@ export const FilterPanel = memo(function FilterPanel({ filters, onFiltersChange,
                 <SelectItem value="lean">Lean</SelectItem>
                 <SelectItem value="balanced">Balanced</SelectItem>
                 <SelectItem value="comfort">Comfort</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+
+          <div className="space-y-2">
+            <Label className="flex items-center gap-2 text-xs uppercase tracking-wider text-muted-foreground font-medium">
+              <Globe className="w-3.5 h-3.5" />
+              Cuisine Style
+            </Label>
+            <Select value={filters.cuisine_style} onValueChange={(val) => update("cuisine_style", val)}>
+              <SelectTrigger data-testid="select-cuisine-style">
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="any">Any (Random)</SelectItem>
+                <SelectItem value="mediterranean">Mediterranean</SelectItem>
+                <SelectItem value="mexican">Mexican / Tex-Mex</SelectItem>
+                <SelectItem value="italian">Italian-Inspired</SelectItem>
+                <SelectItem value="asian">Asian-Inspired</SelectItem>
+                <SelectItem value="korean">Korean-Inspired</SelectItem>
+                <SelectItem value="thai">Thai-Inspired</SelectItem>
+                <SelectItem value="indian">Indian-Inspired</SelectItem>
+                <SelectItem value="middle_eastern">Middle Eastern</SelectItem>
+                <SelectItem value="bbq">BBQ / Smoky</SelectItem>
+                <SelectItem value="cajun">Cajun / Southern</SelectItem>
+                <SelectItem value="canadian">Canadian Classics</SelectItem>
               </SelectContent>
             </Select>
           </div>

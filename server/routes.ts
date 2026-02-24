@@ -212,7 +212,7 @@ export async function registerRoutes(
         });
       }
 
-      const varietyConstraints = getVarietyConstraints();
+      const varietyConstraints = getVarietyConstraints(request.cuisine_style);
 
       const aiResult = request.use_what_we_have
         ? await generateRecipeFromPantry(chosen, request, varietyConstraints)

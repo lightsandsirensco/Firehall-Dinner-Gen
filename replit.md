@@ -1,188 +1,31 @@
 # Lights & Sirens - Firehall Meal Generator
 
 ## Overview
-A single-page web app that generates one high-protein meal recipe for a firefighter crew based on user-selected filters. Uses AI (OpenAI via Replit AI Integrations) to create complete recipes from CSV meal templates.
-
-## Architecture
-- **Frontend**: React + Vite + TailwindCSS + shadcn/ui
-- **Backend**: Express.js
-- **AI**: OpenAI (gpt-5-mini) via Replit AI Integrations
-- **Data**: CSV file at `/data/firehall_templates_v1.csv`
-- **Cache/Rate DB**: SQLite at `data/cache.db` (auto-created) for recipe caching, rate limiting, usage tracking
-
-## Performance Optimizations
-- **Client-side cache**: memory + localStorage recipe cache (client/src/lib/recipe-cache.ts), keyed by normalized filter hash (excludes last_template_id), 24h TTL, max 50 entries
-- **Background prefetch**: After each generation, silently pre-generates 2 additional meals with same filters (client/src/lib/prefetch.ts), consumed entries removed from pool
-- **Instant UI**: Skeleton loader shown immediately; when re-generating, previous recipe stays visible (dimmed) behind skeleton overlay
-- **Memoization**: FilterPanel wrapped in React.memo, ResultsPanel is a separate memo component, all handlers use useCallback to prevent unnecessary rerenders
-
-## Key Files
-- `client/src/pages/home.tsx` - Main single-page UI
-- `client/src/pages/admin.tsx` - Admin usage dashboard (route: /admin)
-- `client/src/components/filter-panel.tsx` - Left panel with all filters
-- `client/src/components/recipe-card.tsx` - Right panel recipe output
-- `client/src/components/empty-state.tsx` - Empty state before generating
-- `client/src/components/loading-state.tsx` - Skeleton loading
-- `client/src/components/error-state.tsx` - Error / no-match states
-- `server/routes.ts` - POST /api/generate endpoint, CSRF, rate limiting, admin endpoint
-- `server/cache-store.ts` - SQLite-backed caching, rate limiting, usage tracking
-- `server/templates.ts` - CSV loading and template filtering logic
-- `server/ai.ts` - OpenAI recipe generation with token tracking, variety/healthy prompt injection
-- `server/variety-memory.ts` - In-memory recent recipes ring buffer (15 entries) for variety enforcement
-- `shared/schema.ts` - Zod schemas and TypeScript types
-- `scripts/pregen.ts` - Pre-generation script for cache warming
-- `data/firehall_templates_v1.csv` - 30 meal templates
-
-## Design
-- Dark, premium firehouse aesthetic
-- Bebas Neue for headings/buttons/titles
-- Inter for body text
-- Primary color: fire engine red-orange (hsl 6 78% 50%)
-
-## API
-- `POST /api/generate` - Accepts GenerateRequest JSON, returns GenerateResponse JSON
-- `GET /api/csrf-token` - Returns CSRF token (set as cookie)
-- `GET /api/admin/usage` - Admin usage dashboard data (protected by ADMIN_SECRET env var)
-- Template filtering: busy_level, time, appliances, proteins, allergens
-- Anti-repeat: last_template_id excludes previous template
-- AI retry: 2 attempts with exponential backoff on empty/error responses
-- Protein enforcement: strict prompt constraints + post-generation validation (up to 3 retries) via server/protein-validator.ts
-- Proteins validated against enum: chicken, beef, pork, turkey, fish, vegetarian
-- On generation failure, last recipe stays visible (only cleared on no-match)
-- `vegetarian_swap_needed` (boolean): when true, recipe includes a `veg_option` section with swap_protein, ingredients, steps, and plating_notes for 1 vegetarian crew member
-- Veg option respects allergens_to_avoid (e.g., no tofu/tempeh if soy allergy, no paneer if dairy)
-
-## Cost Control
-- **Caching**: SHA256 hash of template_id + normalized filters -> SQLite recipe_cache table
-- **Rate Limiting**: 3 req/min burst + 10 req/hr per IP and session (atomic SQLite transactions)
-- **Budget**: Daily cap via DAILY_LLM_BUDGET_USD env var (default $5.00), returns 503 when exceeded
-- **Bot Blocking**: User-agent filtering for known bot/scraper patterns
-- **CSRF**: Token-based validation on POST /api/generate
-- **Admin**: Usage dashboard at /admin showing budget, cache stats, request logs, top IPs/sessions
-
-## Pro Tips
-- 1-2 short practical tips per recipe (technique, make-ahead, or serving suggestions)
-- Displayed expanded by default below Steps section on recipe card
-- Collapsible: click "Pro Tips" header to toggle, session-persisting state (module-level var resets on page refresh)
-- Included in Print view and Klaviyo email events (pro_tips field)
-- NOT included in Shopping List
-- Response field: pro_tips (string[])
-
-## Klaviyo Email Capture
-- `POST /api/email-recipe` - Subscribes email to Klaviyo list + tracks "Recipe Generated" event
-- Auto-creates "Firehall Dinner Generator Leads" list in Klaviyo
-- Email modal appears after 2nd recipe generation or via "Email me this recipe" button
-- Klaviyo Flow handles actual email delivery (not custom sender)
-- server/klaviyo.ts - Klaviyo API integration (profile subscribe, event tracking)
-- client/src/components/email-modal.tsx - Email capture modal UI
-
-## Environment Variables
-- `DAILY_LLM_BUDGET_USD` - Daily AI spending cap (default: "5.00")
-- `ADMIN_SECRET` - Optional admin API key for /api/admin/usage (open in dev if not set)
-- `SESSION_SECRET` - Session encryption key
-- `KLAVIYO_API_KEY` - Klaviyo private API key for email capture
-
-## Use What's in the Fridge Mode
-- Toggle in filter panel enables "pantry mode" (labeled "Use What's in the Fridge")
-- Users enter comma-separated ingredients they have on hand
-- Protein filter is hidden when mode is active
-- Template filtering bypasses protein matching in this mode
-- AI generates recipes prioritizing provided ingredients
-- Response includes ingredients_used[] and extra_items_needed[]
-- Recipe card shows "Using What's in the Fridge" section with used ingredients
-- "You may need to grab" section shows 1-4 extra items if needed
-- Print layout also includes pantry sections
-- Cache key includes use_what_we_have and ingredients_on_hand
-
-## Budget Feature
-- Filter dropdown with Low ($), Standard ($$), Splurge ($$$)
-- Request field: budget_level ("low" | "standard" | "splurge"), default "standard"
-- Response fields: budget_level (string), budget_tips (string[])
-- Low ($): AI prefers cheap proteins/staples, avoids premium ingredients, includes 2-3 budget_tips
-- Standard ($$): Normal balanced choices, no constraints
-- Splurge ($$$): Premium ingredients allowed (ribeye, salmon, shrimp, etc.)
-- In pantry mode, budget only influences extra_items_needed suggestions
-- "Budget-friendly" badge shown on recipe card when budget_level is "low"
-- Budget tips section shown with lightbulb icon when tips exist
-- Print layout includes budget label and tips
-- Cache key includes budget_level
-
-## Homemade Pizza Night (route: /pizza)
-- Separate page at /pizza with its own filters and recipe output
-- Navigation links between Meal Generator (/) and Pizza Night (/pizza) in header
-- Controls: crew_size (2-20), time_available (30-45/45-60/60-90/90-150), dough_option (premade/from_scratch/surprise_me), style_preference (classic/creative/comfort/healthier), heat_level (mild/medium/spicy), allergens_to_avoid, vegetarian_swap_needed
-- POST /api/generate-pizza endpoint with same rate limiting, caching, budget protections
-- 23 pizza concepts rotated randomly (hot honey pepperoni, Big Mac, buffalo chicken, BBQ chicken, philly cheesesteak, taco, chicken bacon ranch, garlic parm white, meatball ricotta, hawaiian, spicy italian, greek, veggie supreme, margherita, cheeseburger, breakfast, nashville hot chicken, pesto chicken, mushroom truffle, donair, leftovers, meat lovers, supreme classic)
-- Anti-repeat: last_pizza_style_id excludes previous concept
-- Allergen filtering: breakfast pizza excluded if eggs avoided, pesto chicken excluded if nuts avoided
-- Dough handling: premade gives stretching tips + shorter time; from-scratch includes full recipe with make-ahead notes
-- Response: PizzaResponse with pizza_style_id, title, dough_type, why_this_works, recommended_pizzas, timing (prep/bake/total), oven_setup (temp F/C, rack, surface), ingredients grouped (dough/sauce/cheese/toppings/drizzles), build_steps, protein_safety, veg_option, cleanup_tip, macros_per_serving
-- Veg option: no tofu, uses plant-based crumbles/mushrooms/roasted veg, matches same flavor profile
-- Pizza scaling: crew 6 = 3-4 pizzas, crew 10 = 5-6, etc.
-- Print + Email buttons reuse existing patterns (print-friendly layout, Klaviyo flow)
-- Key files: client/src/pages/pizza-night.tsx, client/src/components/pizza-filter-panel.tsx, client/src/components/pizza-card.tsx, server/pizza-ai.ts
-
-## Shopping List Feature
-- Available on both Meal Generator and Pizza Night pages
-- "Shopping List" button next to Print / Email actions on recipe cards
-- Deterministic: built from existing recipe JSON, no extra AI calls
-- Modal with Copy List, Print List, Email List actions
-- Ingredients categorized into grocery sections: Proteins, Produce, Dairy/Dairy Alternatives, Pantry & Spices, Bakery/Dough, Frozen, Condiments & Sauces, Other
-- Duplicate items merged with amounts combined
-- Ingredient-first formatting: "Chicken thighs — 1.8 kg"
-- Pantry mode ("Use What's in the Fridge"): shows "Using what's in the fridge" and "You may need to grab" sections
-- Budget "Low ($)": includes budget swap suggestions for premium items
-- Veg option items shown under "Veg Option (1 Serving)" subheading (no tofu)
-- Print prints only the shopping list (white background, black text, footer: www.lightsandsirensco.com)
-- Email uses Klaviyo flow with "Shopping List Requested" event
-- POST /api/email-shopping-list endpoint with Klaviyo integration
-- Key files: client/src/lib/shopping-list.ts, client/src/components/shopping-list-modal.tsx
-- Helper: buildShoppingListFromMeal(recipe, options) and buildShoppingListFromPizza(recipe, options)
-
-## Hall Favorites (Save Meal) Feature
-- localStorage-only, no authentication, no backend
-- Key: "firehall_saved_meals" storing array of SavedMeal objects
-- "Save to Hall Favorites" button on recipe card (heart icon)
-- Duplicate prevention via title + top-5 ingredients hash
-- /favorites page with card grid: view, remove saved meals
-- View opens full recipe in dialog (no re-generation)
-- "Favorites" nav link with count badge in header (home + pizza pages)
-- Custom event "favorites-changed" keeps count badge in sync
-- Key files: client/src/lib/saved-meals.ts, client/src/pages/favorites.tsx
-- Persists across sessions, works on mobile, no layout shifts
-
-## Hall Vote Feature
-- "Can't decide? Let the crew vote" — appears after generating 2+ recipes in a session
-- Creator clicks "Hall Vote" button → modal shows recipe options → creates vote → gets shareable link + QR code
-- POST /api/hall-vote — creates vote (CSRF protected, rate limited 2/min)
-- GET /api/hall-vote/:voteId — returns vote with tallies, user's vote, can_close flag
-- POST /api/hall-vote/:voteId/vote — cast ballot (duplicate prevention via IP+UA fingerprint hash)
-- POST /api/hall-vote/:voteId/close — creator closes vote early
-- /vote/:voteId public page: mobile-friendly, tap-to-vote, live results with 3s polling
-- SQLite tables: hall_votes (vote_id, title, options_json, status, total_votes, creator_session_id, expires_at), hall_vote_ballots (vote_id, option_id, fingerprint_hash, unique constraint)
-- 24-hour auto-expiry on votes
-- Winner shown when vote closes (highest vote count)
-- QR code generated client-side via qrcode library
-- Key files: server/hall-vote-store.ts, client/src/components/hall-vote-modal.tsx, client/src/pages/vote.tsx
-- Schemas: hallVoteCreateSchema, HallVoteOption, HallVoteResponse in shared/schema.ts
-
-## Healthy Variety System
-- **Healthy bias**: "lean" → 100% healthy recipes, "balanced" → 70% healthy bias, "comfort" → no constraints
-- **Variety memory**: server/variety-memory.ts — in-memory ring buffer of last 15 generated recipes
-- Tracks: title, protein, cuisine, cooking_method, base_carb, key_ingredients per recipe
-- **Variety constraints (hard)**:
-  - No same cuisine within last 3 recipes
-  - No same cooking method within last 3 recipes
-  - No same primary protein within last 2 recipes
-  - No same base carb (rice/pasta/potato/tortilla) within last 2 recipes
-- **Cuisine rotation**: Mediterranean, Mexican, Korean, Thai, Indian, Japanese, Middle Eastern, Italian-lite, BBQ/Smoky lean, Canadian comfort-lite
-- **Quality signals** (healthy meals must have 2+): 30g+ protein, high-fiber ingredient, healthy fat source, veg volume, lower sugar
-- **Anti-boring-healthy**: No plain chicken+broccoli+rice; uses bold flavor builders (chimichurri, gochujang, miso, tahini-lemon, harissa, etc.)
-- **Station practicality**: busy/slammed shifts prefer one-pan, sheet-pan, slow-cooker meals with prep shortcuts
-- **Recipe tags** (RecipeTags type in schema): cuisine, cooking_method, base_carb, key_ingredients[], high_protein, high_fiber, quick_cleanup
-- Tags displayed as badges on recipe card (Globe icon for cuisine, UtensilsCrossed for method, colored badges for quality signals)
-- Variety memory recorded for all served recipes (AI-generated, cache hits, pool hits) to maintain consistent rotation
-- Memory resets on server restart (in-memory only, no persistence needed)
+Lights & Sirens is a single-page web application designed to generate high-protein meal recipes specifically for firefighter crews. Leveraging AI, it creates complete recipes based on user-selected filters, ensuring variety and adherence to dietary needs. The project aims to provide a practical tool for firehall meal planning, offering features like budget control, pantry integration, and even a dedicated pizza night generator.
 
 ## User Preferences
-- No accounts, meal plans, history, template management, or Shopify
+No accounts, meal plans, history, template management, or Shopify
+
+## System Architecture
+The application features a modern full-stack architecture. The frontend is built with **React, Vite, TailwindCSS, and shadcn/ui**, providing a responsive and aesthetically pleasing user interface with a dark, premium firehouse aesthetic using specific typography and color schemes. The backend, powered by **Express.js**, handles API requests, data processing, and AI integration. **OpenAI (gpt-5-mini)** is utilized via Replit AI Integrations for recipe generation. Data is managed through a CSV file for meal templates and an **SQLite database** (`data/cache.db`) for recipe caching, rate limiting, and usage tracking.
+
+Key features include:
+- **Meal Generation**: Generates recipes based on filters such as busy level, time, appliances, proteins, allergens, and budget level (Low, Standard, Splurge).
+- **Pantry Mode**: "Use What's in the Fridge" mode allows users to input available ingredients, influencing AI-generated recipes.
+- **Vegetarian Swap**: Provides a vegetarian option for one crew member, respecting allergens.
+- **Pizza Night**: A dedicated section for generating pizza recipes with specific filters (crew size, time, dough option, style, heat level).
+- **Shopping List**: Automatically generates a categorized shopping list from recipes, with options for printing and emailing.
+- **Hall Favorites**: A client-side (localStorage) feature for saving preferred recipes without authentication.
+- **Hall Vote**: Enables creation and sharing of vote polls for recipes among crew members, with real-time results.
+- **Cuisine Style Filter**: Allows users to specify a cuisine preference, influencing flavor profiles without overriding core constraints.
+- **Healthy Variety System**: Incorporates a healthy bias (lean, balanced, comfort) and an in-memory variety tracking system to prevent repetition of cuisines, cooking methods, proteins, and carbs within recent generations. Recipes are tagged for easy identification of qualities like high protein or quick cleanup.
+- **Performance Optimizations**: Includes client-side caching (memory + localStorage), background prefetching, instant UI rendering with skeleton loaders, and memoization of React components.
+- **Cost Control**: Implemented through caching, rate limiting per IP/session, a daily AI budget cap, and bot blocking.
+- **Admin Dashboard**: Provides usage statistics, budget status, cache details, and request logs.
+- **Pro Tips**: Recipes include short, practical tips for cooking.
+
+## External Dependencies
+- **OpenAI**: Used for AI-powered recipe generation (gpt-5-mini via Replit AI Integrations).
+- **Klaviyo**: Integrated for email capture, subscribing users to mailing lists, and tracking recipe-related events.
+- **SQLite**: Used as the database for caching, rate limiting, and usage tracking.
+- **qrcode library**: Client-side library for generating QR codes for vote sharing.

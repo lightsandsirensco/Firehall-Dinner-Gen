@@ -65,6 +65,7 @@ export function buildCacheKey(templateId: string, request: GenerateRequest, chos
     allergens_to_avoid: [...request.allergens_to_avoid].sort(),
     vegetarian_swap_needed: !!request.vegetarian_swap_needed,
     budget_level: request.budget_level || "standard",
+    cuisine_style: request.cuisine_style || "any",
     use_what_we_have: !!request.use_what_we_have,
     ingredients_on_hand: request.ingredients_on_hand ? [...request.ingredients_on_hand].sort() : [],
   });

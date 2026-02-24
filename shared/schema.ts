@@ -13,6 +13,20 @@ export const generateRequestSchema = z.object({
   last_template_id: z.number().optional(),
   use_what_we_have: z.boolean().optional().default(false),
   ingredients_on_hand: z.array(z.string()).optional().default([]),
+  cuisine_style: z.enum([
+    "any",
+    "mediterranean",
+    "mexican",
+    "italian",
+    "asian",
+    "korean",
+    "thai",
+    "indian",
+    "middle_eastern",
+    "bbq",
+    "cajun",
+    "canadian",
+  ]).optional().default("any"),
 });
 
 export type GenerateRequest = z.infer<typeof generateRequestSchema>;

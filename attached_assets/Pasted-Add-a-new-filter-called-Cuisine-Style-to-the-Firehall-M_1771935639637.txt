@@ -1,0 +1,48 @@
+Add a new filter called “Cuisine Style” to the Firehall Meals generator.
+
+UI/UX requirements:
+1) Add “Cuisine Style” as a single dropdown/select (clean, consistent with existing inputs).
+2) Default = “Any (Random)”.
+3) Place it near other high-level controls (e.g., Meal Style, Healthiness, Time) so the filters feel organized.
+4) Keep the filter panel clean on mobile (full-width select, no overlap, consistent spacing).
+
+Cuisine Style options (dropdown):
+- Any (Random)
+- Mediterranean
+- Mexican / Tex-Mex
+- Italian-Inspired
+- Asian-Inspired
+- Korean-Inspired
+- Thai-Inspired
+- Indian-Inspired
+- Middle Eastern
+- BBQ / Smoky
+- Cajun / Southern
+- Canadian Classics (lighter/healthy options allowed)
+
+Behavior rules:
+1) If Cuisine Style is NOT “Any (Random)”:
+   - Generated meal must match that cuisine profile in flavors, sauces, and typical components.
+   - Shopping list and steps must remain firefighter-practical.
+
+2) If Cuisine Style is “Any (Random)”:
+   - Randomize cuisine across all cuisine styles.
+   - Implement non-repeat logic:
+     - Do not repeat the same cuisine style back-to-back.
+     - Prefer not to repeat the same cuisine within the last 3 generations if possible.
+   - Store recent cuisine history locally (in memory or localStorage) to enforce rotation.
+
+3) Integrate with Meal Style:
+   - Meal Style determines structure (bowl, one-pot, sheet pan, etc.).
+   - Cuisine Style determines flavor profile and ingredient choices.
+   - If a combination is unrealistic, choose the closest valid match and keep output coherent.
+
+Do NOT change:
+- Existing filters
+- Generation output schema/formatting
+- Email/print/shopping list/save/history features
+
+Acceptance tests:
+- Select Cuisine = Korean-Inspired, Meal Style = Bowl → outputs a Korean-style bowl (e.g., bulgogi-ish, gochujang, sesame, kimchi-style slaw).
+- Select Cuisine = BBQ/Smoky, Meal Style = One-Pot → outputs BBQ-style one-pot meal (e.g., smoky spices, BBQ sauce alternatives).
+- Select Cuisine = Any (Random) and generate 6 meals → cuisine rotates without repeating back-to-back.
