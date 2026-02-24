@@ -209,9 +209,11 @@ export async function registerRoutes(
         });
       }
 
-      const { recipe, tokensIn, tokensOut } = request.use_what_we_have
+      const aiResult = request.use_what_we_have
         ? await generateRecipeFromPantry(chosen, request)
         : await generateRecipe(chosen, request, chosenProtein);
+
+      const { recipe, tokensIn, tokensOut } = aiResult;
 
       const estimatedCost =
         (tokensIn / 1000) * COST_PER_1K_INPUT +
@@ -231,7 +233,7 @@ export async function registerRoutes(
         sessionId,
       });
 
-      log(`Generated in ${Date.now() - startTime}ms | ${tokensIn}in/${tokensOut}out | ~$${estimatedCost.toFixed(5)}`, "perf");
+      log(`Generated in ${Date.now() - startTime}ms | ${tokensIn}in/${tokensOut}out | ~$${estimatedCost.toFixed(5)}${aiResult.fallback ? " [FALLBACK]" : ""}`, "perf");
 
       refillPool().catch(() => {});
 

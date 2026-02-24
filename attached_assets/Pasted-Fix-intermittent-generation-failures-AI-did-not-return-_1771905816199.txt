@@ -1,0 +1,72 @@
+Fix intermittent generation failures (“AI did not return a recipe after multiple attempts”) while preserving creative, high-quality recipes.
+
+Non-negotiables:
+- Do NOT reduce creativity or make recipes feel templated/boring.
+- Do NOT remove filters or features (email, print, shopping list, pizza night, save, history).
+- Do NOT add accounts.
+
+Root cause to address:
+AI responses sometimes fail strict parsing/validation (extra text, malformed JSON, missing optional fields), causing retries and eventual failure.
+
+Implement the following:
+
+1) Make output reliably machine-parseable WITHOUT lowering creativity
+- Keep current creativity settings (temperature) unless currently extreme (>0.9). If extreme, cap at 0.7–0.85 to preserve creativity but reduce formatting errors.
+- Require the AI to return ONLY JSON (no markdown, no backticks, no commentary).
+- Provide a concise schema contract in the prompt and instruct the model to conform exactly.
+- Keep recipe content creative (unique flavors, sauces, mix-ins, firefighter-friendly meals) — creativity should be in the values, not the formatting.
+
+2) Add resilient JSON parsing with safe extraction
+- Before JSON.parse, extract the JSON object from the response:
+  - find first “{” and last “}”, parse substring
+  - if parse fails, attempt regex capture of the largest {...} block
+- Log the first 400–800 chars of raw output on failure (truncate) for debugging.
+- Never crash the server on parse errors.
+
+3) Validate strictly only where it matters; fill defaults for optional fields
+Hard-required fields:
+- name/title (string)
+- proteinType (string)
+- servings/crewSize (number)
+- ingredients (array of objects with name + quantity)
+- steps (array of strings with step number implied)
+Optional fields (do NOT fail if missing):
+- macros
+- proTips
+- safety temps note (can be inferred)
+If optional fields are missing, compute sensible defaults:
+- proTips: []
+- macros: null
+- safetyTemps: infer from proteinType (e.g., chicken 165°F, ground beef 160°F, fish 145°F, pork 145°F, sausage 160°F)
+
+4) Smarter retry strategy (preserve creativity, reduce failures)
+- Max 1 retry (2 attempts total).
+- On retry, keep creativity but add a single “format correction” instruction:
+  “Return ONLY valid JSON that matches the schema, no extra text.”
+- Do NOT retry more than once.
+
+5) Graceful fallback that still feels creative (only if both attempts fail)
+- If both attempts fail, do NOT show an error to the user.
+- Instead, return a fallback recipe by:
+  a) selecting a matching template from the uploaded templates (protein/healthiness/time/appliances/allergies),
+  b) then calling AI once with a small prompt to creatively “remix” it (new sauce/spice profile/side option) while staying within the same constraints,
+  c) output in the same JSON schema.
+This ensures the user always gets a high-quality, creative recipe result even during AI hiccups.
+
+6) UI behavior
+- If fallback is used, do NOT show a scary error.
+- Optionally show a subtle note: “Generated from a backup recipe engine.” (non-blocking)
+- Keep the generate experience smooth.
+
+7) Observability
+- Add timing logs: total ms, AI call ms, parse/validate ms.
+- Log error category: json_parse_failed / schema_invalid / ai_timeout / ai_empty.
+- Include a compact summary of selected filters in logs.
+
+Acceptance tests:
+- Generate 30 recipes with varied filters and restrictions.
+- No fatal “AI did not return…” error reaches the user.
+- Recipe quality remains creative and non-repetitive.
+- Output always renders cleanly (ingredients + steps).
+- If AI output is malformed, extraction+defaults recover without user-facing failure.
+- Fallback is rare and still produces a creative recipe.
