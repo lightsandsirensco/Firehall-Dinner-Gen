@@ -191,13 +191,64 @@ const PROTEIN_SAFETY: Record<string, { protein: string; target_temp_f: number; t
   fish: { protein: "Fish", target_temp_f: 145, target_temp_c: 63, rest_minutes: 0, probe_where: "Center of the thickest fillet", notes: "Fish should flake easily with a fork when done." },
 };
 
-const FALLBACK_TITLES: Record<string, string> = {
-  chicken: "Quick Chicken & Veggie Stir-Fry with Rice",
-  beef: "One-Pot Seasoned Beef with Tomatoes & Rice",
-  pork: "Roasted Pork Tenderloin with Potatoes & Green Beans",
-  turkey: "Turkey Taco Bowls with Black Beans & Rice",
-  fish: "Pan-Seared Salmon with Rice & Roasted Asparagus",
+const FALLBACK_TITLE_VARIANTS: Record<string, string[]> = {
+  chicken: [
+    "Quick Chicken & Veggie Stir-Fry with Rice",
+    "Garlic Herb Chicken with Roasted Vegetables",
+    "Crew-Style Chicken Rice Bowls",
+    "Skillet Chicken with Peppers & Rice",
+    "Station House Chicken & Veggie Dinner",
+  ],
+  beef: [
+    "One-Pot Seasoned Beef with Tomatoes & Rice",
+    "Skillet Beef & Vegetable Rice Bowls",
+    "Crew-Ready Beef Stir-Fry with Rice",
+    "Firehouse Beef & Pepper Skillet",
+    "Quick Beef & Veggie One-Pan Dinner",
+  ],
+  pork: [
+    "Roasted Pork Tenderloin with Potatoes & Green Beans",
+    "Honey Mustard Pork with Roasted Potatoes",
+    "Skillet Pork Chops with Seasonal Vegetables",
+    "Station House Pork & Veggie Sheet Pan",
+    "Crew-Style Pork Tenderloin Dinner",
+  ],
+  turkey: [
+    "Turkey Taco Bowls with Black Beans & Rice",
+    "Seasoned Turkey & Veggie Rice Bowls",
+    "Quick Turkey Skillet with Black Beans",
+    "Firehouse Turkey Lettuce Wraps",
+    "Station House Turkey & Rice Dinner",
+  ],
+  fish: [
+    "Pan-Seared Salmon with Rice & Roasted Asparagus",
+    "Herb-Crusted Fish with Lemon & Rice",
+    "Quick Fish & Veggie Rice Bowls",
+    "Skillet Fish with Garlic Vegetables",
+    "Station House Seafood Dinner",
+  ],
 };
+
+const recentFallbackTemplateIds: number[] = [];
+const MAX_RECENT_FALLBACKS = 5;
+
+function pickFallbackTitle(protein: string): string {
+  const variants = FALLBACK_TITLE_VARIANTS[protein] || FALLBACK_TITLE_VARIANTS.chicken;
+  return variants[Math.floor(Math.random() * variants.length)];
+}
+
+export function trackFallbackTemplateId(templateId: number) {
+  const idx = recentFallbackTemplateIds.indexOf(templateId);
+  if (idx !== -1) recentFallbackTemplateIds.splice(idx, 1);
+  recentFallbackTemplateIds.unshift(templateId);
+  if (recentFallbackTemplateIds.length > MAX_RECENT_FALLBACKS) {
+    recentFallbackTemplateIds.length = MAX_RECENT_FALLBACKS;
+  }
+}
+
+export function getRecentFallbackTemplateIds(): number[] {
+  return [...recentFallbackTemplateIds];
+}
 
 const CUISINE_SEASONINGS: Record<string, { spices: RawIngredient[]; titlePrefix: string }> = {
   mediterranean: {
@@ -494,7 +545,7 @@ export function buildFallbackRecipe(
   };
   const macros = adjustMacrosForHealthiness(baseMacros, healthiness);
 
-  const baseTitle = FALLBACK_TITLES[finalProtein] || `Quick ${proteinDisplay} — ${template.template_name}`;
+  const baseTitle = pickFallbackTitle(finalProtein);
   const title = cuisineData
     ? `${cuisineData.titlePrefix} ${baseTitle}`
     : baseTitle;

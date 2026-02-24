@@ -11,7 +11,7 @@ import { subscribeToList, trackRecipeEvent, trackShoppingListEvent, validateKlav
 import { getFromPool, refillPool, getPoolSize } from "./recipe-pool";
 import { initHallVoteTables, createHallVote, getHallVote, castBallot, closeHallVote, hashVoterFingerprint } from "./hall-vote-store";
 import { addFavourite, getFavourites, removeFavourite } from "./favourites";
-import { buildFallbackRecipe } from "./fallback-recipe";
+import { buildFallbackRecipe, trackFallbackTemplateId, getRecentFallbackTemplateIds } from "./fallback-recipe";
 import { log } from "./index";
 import {
   initCacheStore,
@@ -237,7 +237,18 @@ export async function registerRoutes(
 
       const FAST_FALLBACK_MS = 8_000;
 
-      const fallbackRecipe = buildFallbackRecipe(chosen, request, chosenProtein);
+      const recentFbIds = getRecentFallbackTemplateIds();
+      let fallbackTemplate = chosen;
+      if (candidates.length > 1) {
+        const nonRecent = candidates.filter(c => !recentFbIds.includes(parseInt(c.template_id)));
+        const pool = nonRecent.length > 0 ? nonRecent : candidates;
+        const otherPool = pool.filter(c => c.template_id !== chosen.template_id);
+        fallbackTemplate = otherPool.length > 0
+          ? otherPool[Math.floor(Math.random() * otherPool.length)]
+          : pool[Math.floor(Math.random() * pool.length)];
+      }
+      const fallbackProtein = request.use_what_we_have ? "pantry" : chooseProtein(fallbackTemplate, request.proteins, request.healthiness_preference);
+      const fallbackRecipe = buildFallbackRecipe(fallbackTemplate, request, fallbackProtein);
 
       const aiPromise = (async () => {
         const result = request.use_what_we_have
@@ -283,11 +294,13 @@ export async function registerRoutes(
       }
 
       if (raceResult.type === "timeout") {
-        log(`AI exceeded ${FAST_FALLBACK_MS}ms — serving fast fallback, AI continues in background${isColdStart ? " [COLD START]" : ""}`, "fallback");
+        const fbTemplateId = parseInt(fallbackTemplate.template_id);
+        trackFallbackTemplateId(fbTemplateId);
+        log(`AI exceeded ${FAST_FALLBACK_MS}ms — serving fast fallback (template ${fbTemplateId}), AI continues in background${isColdStart ? " [COLD START]" : ""}`, "fallback");
         recordRecipe(fallbackRecipe);
         logUsage({
           cacheKey,
-          templateId: parseInt(chosen.template_id),
+          templateId: fbTemplateId,
           cacheHit: false,
           latencyMs: Date.now() - startTime,
           ipHash,
@@ -306,7 +319,6 @@ export async function registerRoutes(
           })
           .catch((bgErr: any) => {
             log(`Background AI also failed: ${bgErr.message}`, "fallback");
-            setCachedRecipe(cacheKey, parseInt(chosen.template_id), fallbackRecipe);
           });
 
         return res.json({ ...fallbackRecipe, _fallback: true });
@@ -318,12 +330,13 @@ export async function registerRoutes(
         : aiError?.message?.includes("parse") ? "json_parse_failed"
         : aiError?.message?.includes("validation") ? "validation_failed"
         : "ai_error";
-      log(`AI generation failed (${errorCategory}): ${aiError?.message}${isColdStart ? " [COLD START]" : ""} — serving fallback`, "fallback");
-      setCachedRecipe(cacheKey, parseInt(chosen.template_id), fallbackRecipe);
+      const fbTemplateId = parseInt(fallbackTemplate.template_id);
+      trackFallbackTemplateId(fbTemplateId);
+      log(`AI generation failed (${errorCategory}): ${aiError?.message}${isColdStart ? " [COLD START]" : ""} — serving fallback (template ${fbTemplateId})`, "fallback");
       recordRecipe(fallbackRecipe);
       logUsage({
         cacheKey,
-        templateId: parseInt(chosen.template_id),
+        templateId: fbTemplateId,
         cacheHit: false,
         latencyMs: Date.now() - startTime,
         ipHash,
