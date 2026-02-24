@@ -12,7 +12,7 @@ import { getSavedCount } from "@/lib/saved-meals";
 import { apiRequest } from "@/lib/queryClient";
 import { buildFilterKey, putCached, addRecentSignature, getRecentSignatures } from "@/lib/recipe-cache";
 import { prefetchMeals, consumePrefetched } from "@/lib/prefetch";
-import { trackEvent, trackMealGenerated } from "@/lib/analytics";
+import { trackEvent, trackMealGenerated, trackEmailModalOpened } from "@/lib/analytics";
 import type { GenerateResponse } from "@shared/schema";
 import { Flame, Vote, Heart } from "lucide-react";
 import { Link } from "wouter";
@@ -290,7 +290,10 @@ export default function Home() {
     setFilters(newFilters);
   }, []);
 
-  const onEmailClick = useCallback(() => setEmailModalOpen(true), []);
+  const onEmailClick = useCallback(() => {
+    trackEmailModalOpened();
+    setEmailModalOpen(true);
+  }, []);
   const onShoppingListClick = useCallback(() => setShoppingListOpen(true), []);
   const onHallVoteClick = useCallback(() => setHallVoteOpen(true), []);
 

@@ -8,9 +8,17 @@ export function trackEvent(name: string, params?: Record<string, string | number
 
 export function trackMealGenerated() {
   mealsGeneratedThisSession++;
-  trackEvent("meal_generation_success", {
+  trackEvent("recipe_generated", {
     meals_generated_this_session: mealsGeneratedThisSession,
   });
+}
+
+export function trackEmailModalOpened() {
+  trackEvent("email_modal_opened");
+}
+
+export function trackEmailSubmitted(recipeTitle: string) {
+  trackEvent("email_submitted", { recipe_title: recipeTitle });
 }
 
 export async function setAnalyticsUserId(email: string) {
