@@ -1,0 +1,56 @@
+Increase the variety and creativity of HEALTHY recipes in the Firehall Meals generator while keeping them realistic for a crew.
+
+Goals:
+- More healthy options than comfort options
+- Much higher variety (avoid repeats)
+- Healthy meals must still feel hearty and satisfying for firefighters
+
+Implementation requirements:
+
+1) Healthy bias
+- When “Healthy” is selected, produce a healthy recipe 100% of the time.
+- When “Any” is selected, bias results toward healthy ~70% of the time.
+
+2) Healthy variety rules (hard constraints)
+- Maintain a “recent recipes memory” of the last 15 generated meals (title + primary protein + cuisine + cooking method + key ingredients).
+- Do not repeat the same:
+  - cuisine category within last 3
+  - cooking method within last 3
+  - primary protein within last 2
+  - base carb (rice/pasta/potato/tortilla) within last 2
+- Rotate across at least these cuisine profiles:
+  Mediterranean, Mexican-inspired, Korean-inspired, Thai-inspired, Indian-inspired, Japanese-inspired, Middle Eastern, Italian-inspired (lighter), BBQ/Smoky (lean), Canadian comfort-lite.
+
+3) Healthy meals must include at least 2 of these “quality signals”
+- 30g+ protein per serving (or clearly “high protein”)
+- 1+ high-fiber ingredient (beans/lentils/chickpeas/veg/whole grains)
+- Healthy fat source (olive oil/avocado/nuts/seeds)
+- Veg volume (2+ cups veg per serving OR 3+ veg ingredients)
+- Lower added sugar (no sweet sauces unless low-sugar alternative)
+
+4) Avoid “boring healthy”
+- Do NOT default to plain chicken + broccoli + rice.
+- Avoid repetitive “salad” meals unless user selects salad explicitly.
+- Use bold but healthy flavor builders:
+  citrus, vinegars, herbs, garlic, ginger, spice blends, yogurt sauces, salsa verde, chimichurri, gochujang-style but lower sugar, miso, tahini-lemon, etc.
+
+5) Station practicality
+- Keep total time within the selected time filter.
+- Prefer one-pan, sheet-pan, slow cooker, or pot meals when “busy hall” is selected.
+- Provide prep shortcuts (pre-chopped veg, frozen veg, rotisserie chicken if allowed).
+
+6) Output tags
+- Add tags to each meal:
+  - cuisine
+  - cooking method
+  - “high protein”
+  - “high fiber” (if applicable)
+  - “quick cleanup”
+This helps enforce variety rules.
+
+7) Keep existing features intact
+- Do not remove filters or change email/print/shopping list.
+- Keep recipe format and JSON schema the same.
+
+Acceptance test:
+- Generate 20 healthy meals in a row and confirm they are meaningfully different in cuisine, method, and ingredients.

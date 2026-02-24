@@ -1,7 +1,8 @@
 import OpenAI from "openai";
-import type { TemplateRow, GenerateRequest, GenerateResponse, ProteinSafetyItem } from "@shared/schema";
+import type { TemplateRow, GenerateRequest, GenerateResponse, ProteinSafetyItem, RecipeTags } from "@shared/schema";
 import { log } from "./index";
 import { getForbiddenProteinsText, validateProteinCompliance } from "./protein-validator";
+import { type VarietyConstraints, buildVarietyPromptBlock, buildHealthyPromptBlock } from "./variety-memory";
 
 const openai = new OpenAI({
   apiKey: process.env.AI_INTEGRATIONS_OPENAI_API_KEY,
@@ -111,6 +112,21 @@ function fillDefaults(recipe: GenerateResponse, template: TemplateRow, chosenPro
   if (!recipe.cleanup_tip) recipe.cleanup_tip = "";
   if (!recipe.ingredients_used) recipe.ingredients_used = [];
   if (!recipe.extra_items_needed) recipe.extra_items_needed = [];
+
+  if (!recipe.tags || typeof recipe.tags !== "object") {
+    recipe.tags = { cuisine: "", cooking_method: "", base_carb: "", key_ingredients: [], high_protein: false, high_fiber: false, quick_cleanup: false };
+  } else {
+    const t = recipe.tags as any;
+    recipe.tags = {
+      cuisine: t.cuisine || "",
+      cooking_method: t.cooking_method || "",
+      base_carb: t.base_carb || "",
+      key_ingredients: Array.isArray(t.key_ingredients) ? t.key_ingredients : [],
+      high_protein: !!t.high_protein,
+      high_fiber: !!t.high_fiber,
+      quick_cleanup: !!t.quick_cleanup,
+    };
+  }
 
   if (recipe.steps && Array.isArray(recipe.steps)) {
     recipe.steps = recipe.steps.map((s: any) => {
@@ -236,7 +252,7 @@ function buildFilterSummary(request: GenerateRequest): string {
 const SYSTEM_PROMPT = "Firehall chef writing beginner-friendly recipes. Return ONLY valid JSON. Every step heading includes heat level and time. Every step body explains HOW to do it with a visual doneness cue. Include safety temps for every protein. No markdown. The recipe MUST use ONLY the specified protein — no substitutions.";
 const PANTRY_SYSTEM_PROMPT = "Firehall chef writing beginner-friendly recipes. Return ONLY valid JSON. Every step heading includes heat level and time. Every step body explains HOW to do it with a visual doneness cue. Include safety temps for every protein. No markdown.";
 
-function buildPrompt(template: TemplateRow, request: GenerateRequest, chosenProtein: string): string {
+function buildPrompt(template: TemplateRow, request: GenerateRequest, chosenProtein: string, varietyBlock: string, healthyBlock: string): string {
   const proteinDisplay = chosenProtein.charAt(0).toUpperCase() + chosenProtein.slice(1);
   const budgetLevel = request.budget_level || "standard";
   const forbiddenText = getForbiddenProteinsText(chosenProtein);
@@ -265,15 +281,20 @@ ${allergenLine}
 ${budgetLine}
 ${vegLine}
 
+${varietyBlock}
+
+${healthyBlock}
+
 RULES: ${request.crew_size} servings. 6-10 steps max. 8-12 ingredients. 35-60g protein/serving. Include "pro_tips": 1-2 short practical tips (1-2 sentences each) about technique, make-ahead, or serving. Max 2 tips.
 STEP FORMAT (each step MUST follow this): heading = "Action (heat level, time)" e.g. "Sear the chicken (medium-high, 5-7 min)". body = concise HOW-TO with visual/doneness cue. Include: heat level (low/medium/medium-high/high or oven °F), time estimate, and a doneness cue ("until golden brown", "until juices run clear", "until internal temp reaches 165°F"). Never repeat same instruction in two steps. No storytelling. Keep each step 1-3 sentences.
 SAFETY TEMPS (always include for any protein): chicken/turkey 165°F/74°C, ground beef/sausage 160°F/71°C, pork 145°F/63°C +3min rest, fish 145°F/63°C.
+REQUIRED OUTPUT TAGS: Include "tags" object with: cuisine (e.g. "Mediterranean"), cooking_method (e.g. "sheet-pan"), base_carb (e.g. "rice"), key_ingredients (3-5 main items as string array), high_protein (boolean, true if 30g+ protein/serving), high_fiber (boolean, true if contains beans/lentils/chickpeas/whole grains), quick_cleanup (boolean, true if one-pan/sheet-pan/slow-cooker).
 
 JSON:
-{"template_id":${template.template_id},"chosen_protein":"${proteinDisplay}","title":"","why_it_fits_tonight":"","timing":{"prep_minutes":0,"cook_minutes":0,"total_minutes":0},"protein_safety":[{"protein":"","target_temp_f":0,"target_temp_c":0,"rest_minutes":0,"probe_where":"","notes":""}],"ingredients":[{"item":"","amount":"","notes":""}],"steps":[{"heading":"","body":""}],"cleanup_tip":"","macros_per_serving":{"calories":0,"protein_g":0,"carbs_g":0,"fat_g":0},"budget_level":"${budgetLevel}","budget_tips":[],"pro_tips":[]${request.vegetarian_swap_needed ? ',"veg_option":{"enabled":true,"swap_protein":"","ingredients":[],"steps":[],"plating_notes":""}' : ""}}`;
+{"template_id":${template.template_id},"chosen_protein":"${proteinDisplay}","title":"","why_it_fits_tonight":"","timing":{"prep_minutes":0,"cook_minutes":0,"total_minutes":0},"protein_safety":[{"protein":"","target_temp_f":0,"target_temp_c":0,"rest_minutes":0,"probe_where":"","notes":""}],"ingredients":[{"item":"","amount":"","notes":""}],"steps":[{"heading":"","body":""}],"cleanup_tip":"","macros_per_serving":{"calories":0,"protein_g":0,"carbs_g":0,"fat_g":0},"budget_level":"${budgetLevel}","budget_tips":[],"pro_tips":[],"tags":{"cuisine":"","cooking_method":"","base_carb":"","key_ingredients":[],"high_protein":false,"high_fiber":false,"quick_cleanup":false}${request.vegetarian_swap_needed ? ',"veg_option":{"enabled":true,"swap_protein":"","ingredients":[],"steps":[],"plating_notes":""}' : ""}}`;
 }
 
-function buildPantryPrompt(template: TemplateRow, request: GenerateRequest): string {
+function buildPantryPrompt(template: TemplateRow, request: GenerateRequest, varietyBlock: string, healthyBlock: string): string {
   const ingredientsList = (request.ingredients_on_hand || []).join(", ");
   const budgetLevel = request.budget_level || "standard";
 
@@ -301,12 +322,17 @@ ${allergenLine}
 ${budgetLine}
 ${vegLine}
 
+${varietyBlock}
+
+${healthyBlock}
+
 RULES: Use as many on-hand ingredients as practical. List used ones in "ingredients_used". List 1-4 extras needed in "extra_items_needed" (skip basic pantry staples). ${request.crew_size} servings. 6-10 steps max. 8-12 ingredients. 35-60g protein/serving. Include "pro_tips": 1-2 short practical tips (1-2 sentences each) about technique, make-ahead, or serving. Max 2 tips.
 STEP FORMAT (each step MUST follow this): heading = "Action (heat level, time)" e.g. "Sear the chicken (medium-high, 5-7 min)". body = concise HOW-TO with visual/doneness cue. Include: heat level (low/medium/medium-high/high or oven °F), time estimate, and a doneness cue ("until golden brown", "until juices run clear", "until internal temp reaches 165°F"). Never repeat same instruction in two steps. No storytelling. Keep each step 1-3 sentences.
 SAFETY TEMPS (always include for any protein): chicken/turkey 165°F/74°C, ground beef/sausage 160°F/71°C, pork 145°F/63°C +3min rest, fish 145°F/63°C.
+REQUIRED OUTPUT TAGS: Include "tags" object with: cuisine (e.g. "Mediterranean"), cooking_method (e.g. "sheet-pan"), base_carb (e.g. "rice"), key_ingredients (3-5 main items as string array), high_protein (boolean, true if 30g+ protein/serving), high_fiber (boolean, true if contains beans/lentils/chickpeas/whole grains), quick_cleanup (boolean, true if one-pan/sheet-pan/slow-cooker).
 
 JSON:
-{"template_id":${template.template_id},"chosen_protein":"","title":"","why_it_fits_tonight":"","timing":{"prep_minutes":0,"cook_minutes":0,"total_minutes":0},"protein_safety":[{"protein":"","target_temp_f":0,"target_temp_c":0,"rest_minutes":0,"probe_where":"","notes":""}],"ingredients":[{"item":"","amount":"","notes":""}],"steps":[{"heading":"","body":""}],"cleanup_tip":"","macros_per_serving":{"calories":0,"protein_g":0,"carbs_g":0,"fat_g":0},"ingredients_used":[],"extra_items_needed":[],"budget_level":"${budgetLevel}","budget_tips":[],"pro_tips":[]${request.vegetarian_swap_needed ? ',"veg_option":{"enabled":true,"swap_protein":"","ingredients":[],"steps":[],"plating_notes":""}' : ""}}`;
+{"template_id":${template.template_id},"chosen_protein":"","title":"","why_it_fits_tonight":"","timing":{"prep_minutes":0,"cook_minutes":0,"total_minutes":0},"protein_safety":[{"protein":"","target_temp_f":0,"target_temp_c":0,"rest_minutes":0,"probe_where":"","notes":""}],"ingredients":[{"item":"","amount":"","notes":""}],"steps":[{"heading":"","body":""}],"cleanup_tip":"","macros_per_serving":{"calories":0,"protein_g":0,"carbs_g":0,"fat_g":0},"ingredients_used":[],"extra_items_needed":[],"budget_level":"${budgetLevel}","budget_tips":[],"pro_tips":[],"tags":{"cuisine":"","cooking_method":"","base_carb":"","key_ingredients":[],"high_protein":false,"high_fiber":false,"quick_cleanup":false}${request.vegetarian_swap_needed ? ',"veg_option":{"enabled":true,"swap_protein":"","ingredients":[],"steps":[],"plating_notes":""}' : ""}}`;
 }
 
 async function attemptGenerate(
@@ -371,7 +397,8 @@ Return ONLY valid JSON matching this schema exactly:
 export async function generateRecipe(
   template: TemplateRow,
   request: GenerateRequest,
-  chosenProtein: string
+  chosenProtein: string,
+  varietyConstraints?: VarietyConstraints
 ): Promise<AIResult> {
   const genStart = Date.now();
   const budgetLevel = request.budget_level || "standard";
@@ -380,7 +407,9 @@ export async function generateRecipe(
 
   log(`Generating: ${template.template_name} (ID: ${template.template_id}), protein: ${proteinDisplay} | ${filterSummary}`, "ai");
 
-  const prompt = buildPrompt(template, request, chosenProtein);
+  const varietyBlock = varietyConstraints ? buildVarietyPromptBlock(varietyConstraints) : "";
+  const healthyBlock = buildHealthyPromptBlock(request.healthiness_preference, request.busy_level);
+  const prompt = buildPrompt(template, request, chosenProtein, varietyBlock, healthyBlock);
   let totalTokensIn = 0;
   let totalTokensOut = 0;
 
@@ -425,7 +454,8 @@ export async function generateRecipe(
 
 export async function generateRecipeFromPantry(
   template: TemplateRow,
-  request: GenerateRequest
+  request: GenerateRequest,
+  varietyConstraints?: VarietyConstraints
 ): Promise<AIResult> {
   const genStart = Date.now();
   const budgetLevel = request.budget_level || "standard";
@@ -433,7 +463,9 @@ export async function generateRecipeFromPantry(
 
   log(`Generating pantry recipe: ${template.template_name}, ingredients: ${(request.ingredients_on_hand || []).join(", ")} | ${filterSummary}`, "ai");
 
-  const prompt = buildPantryPrompt(template, request);
+  const varietyBlock = varietyConstraints ? buildVarietyPromptBlock(varietyConstraints) : "";
+  const healthyBlock = buildHealthyPromptBlock(request.healthiness_preference, request.busy_level);
+  const prompt = buildPantryPrompt(template, request, varietyBlock, healthyBlock);
 
   const result = await attemptGenerate(prompt, PANTRY_SYSTEM_PROMPT, template, "pantry", budgetLevel, false);
   if (result) {

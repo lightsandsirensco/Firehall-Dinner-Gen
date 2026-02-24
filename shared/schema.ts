@@ -64,6 +64,16 @@ export interface VegOption {
   plating_notes: string;
 }
 
+export interface RecipeTags {
+  cuisine: string;
+  cooking_method: string;
+  base_carb: string;
+  key_ingredients: string[];
+  high_protein: boolean;
+  high_fiber: boolean;
+  quick_cleanup: boolean;
+}
+
 export interface GenerateResponse {
   template_id: number;
   chosen_protein: string;
@@ -81,6 +91,7 @@ export interface GenerateResponse {
   budget_level?: string;
   budget_tips?: string[];
   pro_tips?: string[];
+  tags?: RecipeTags;
 }
 
 export const pizzaRequestSchema = z.object({

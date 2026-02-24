@@ -27,7 +27,8 @@ A single-page web app that generates one high-protein meal recipe for a firefigh
 - `server/routes.ts` - POST /api/generate endpoint, CSRF, rate limiting, admin endpoint
 - `server/cache-store.ts` - SQLite-backed caching, rate limiting, usage tracking
 - `server/templates.ts` - CSV loading and template filtering logic
-- `server/ai.ts` - OpenAI recipe generation with token tracking
+- `server/ai.ts` - OpenAI recipe generation with token tracking, variety/healthy prompt injection
+- `server/variety-memory.ts` - In-memory recent recipes ring buffer (15 entries) for variety enforcement
 - `shared/schema.ts` - Zod schemas and TypeScript types
 - `scripts/pregen.ts` - Pre-generation script for cache warming
 - `data/firehall_templates_v1.csv` - 30 meal templates
@@ -164,6 +165,24 @@ A single-page web app that generates one high-protein meal recipe for a firefigh
 - QR code generated client-side via qrcode library
 - Key files: server/hall-vote-store.ts, client/src/components/hall-vote-modal.tsx, client/src/pages/vote.tsx
 - Schemas: hallVoteCreateSchema, HallVoteOption, HallVoteResponse in shared/schema.ts
+
+## Healthy Variety System
+- **Healthy bias**: "lean" → 100% healthy recipes, "balanced" → 70% healthy bias, "comfort" → no constraints
+- **Variety memory**: server/variety-memory.ts — in-memory ring buffer of last 15 generated recipes
+- Tracks: title, protein, cuisine, cooking_method, base_carb, key_ingredients per recipe
+- **Variety constraints (hard)**:
+  - No same cuisine within last 3 recipes
+  - No same cooking method within last 3 recipes
+  - No same primary protein within last 2 recipes
+  - No same base carb (rice/pasta/potato/tortilla) within last 2 recipes
+- **Cuisine rotation**: Mediterranean, Mexican, Korean, Thai, Indian, Japanese, Middle Eastern, Italian-lite, BBQ/Smoky lean, Canadian comfort-lite
+- **Quality signals** (healthy meals must have 2+): 30g+ protein, high-fiber ingredient, healthy fat source, veg volume, lower sugar
+- **Anti-boring-healthy**: No plain chicken+broccoli+rice; uses bold flavor builders (chimichurri, gochujang, miso, tahini-lemon, harissa, etc.)
+- **Station practicality**: busy/slammed shifts prefer one-pan, sheet-pan, slow-cooker meals with prep shortcuts
+- **Recipe tags** (RecipeTags type in schema): cuisine, cooking_method, base_carb, key_ingredients[], high_protein, high_fiber, quick_cleanup
+- Tags displayed as badges on recipe card (Globe icon for cuisine, UtensilsCrossed for method, colored badges for quality signals)
+- Variety memory recorded for all served recipes (AI-generated, cache hits, pool hits) to maintain consistent rotation
+- Memory resets on server restart (in-memory only, no persistence needed)
 
 ## User Preferences
 - No accounts, meal plans, history, template management, or Shopify

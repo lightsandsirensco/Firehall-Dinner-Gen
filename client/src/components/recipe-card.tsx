@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import type { GenerateResponse } from "@shared/schema";
-import { Flame, Droplets, Wheat, Beef, Sparkles, Trash2, Clock, Timer, ShieldCheck, Thermometer, Printer, Leaf, Mail, Package, ShoppingCart, DollarSign, Lightbulb, List, Heart, Check, ChevronDown } from "lucide-react";
+import { Flame, Droplets, Wheat, Beef, Sparkles, Trash2, Clock, Timer, ShieldCheck, Thermometer, Printer, Leaf, Mail, Package, ShoppingCart, DollarSign, Lightbulb, List, Heart, Check, ChevronDown, UtensilsCrossed, Globe, Zap } from "lucide-react";
 import { saveMeal, isMealSaved } from "@/lib/saved-meals";
 import { useState, useEffect } from "react";
 
@@ -299,6 +299,40 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
             </Badge>
           )}
         </div>
+        {recipe.tags && (recipe.tags.cuisine || recipe.tags.cooking_method || recipe.tags.high_protein || recipe.tags.high_fiber || recipe.tags.quick_cleanup) && (
+          <div className="flex items-center gap-1.5 mt-1.5 flex-wrap" data-testid="section-recipe-tags">
+            {recipe.tags.cuisine && (
+              <Badge variant="outline" className="text-xs" data-testid="badge-tag-cuisine">
+                <Globe className="w-3 h-3 mr-1" />
+                {recipe.tags.cuisine}
+              </Badge>
+            )}
+            {recipe.tags.cooking_method && (
+              <Badge variant="outline" className="text-xs" data-testid="badge-tag-method">
+                <UtensilsCrossed className="w-3 h-3 mr-1" />
+                {recipe.tags.cooking_method}
+              </Badge>
+            )}
+            {recipe.tags.high_protein && (
+              <Badge variant="secondary" className="text-xs" data-testid="badge-tag-high-protein">
+                <Zap className="w-3 h-3 mr-1" />
+                High Protein
+              </Badge>
+            )}
+            {recipe.tags.high_fiber && (
+              <Badge variant="secondary" className="text-xs" data-testid="badge-tag-high-fiber">
+                <Wheat className="w-3 h-3 mr-1" />
+                High Fiber
+              </Badge>
+            )}
+            {recipe.tags.quick_cleanup && (
+              <Badge variant="secondary" className="text-xs" data-testid="badge-tag-quick-cleanup">
+                <Sparkles className="w-3 h-3 mr-1" />
+                Quick Cleanup
+              </Badge>
+            )}
+          </div>
+        )}
       </div>
 
       {recipe.ingredients_used && recipe.ingredients_used.length > 0 && (

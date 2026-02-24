@@ -5,6 +5,7 @@ import cookieParser from "cookie-parser";
 import { generateRequestSchema, pizzaRequestSchema, hallVoteCreateSchema } from "@shared/schema";
 import { loadTemplates, filterTemplates, pickTemplate, chooseProtein } from "./templates";
 import { generateRecipe, generateRecipeFromPantry } from "./ai";
+import { getVarietyConstraints, recordRecipe } from "./variety-memory";
 import { generatePizzaRecipe, pickPizzaConcept } from "./pizza-ai";
 import { subscribeToList, trackRecipeEvent, trackShoppingListEvent, validateKlaviyoConfig } from "./klaviyo";
 import { getFromPool, refillPool, getPoolSize } from "./recipe-pool";
@@ -169,6 +170,7 @@ export async function registerRoutes(
       const cached = getCachedRecipe(cacheKey);
       if (cached) {
         log(`Cache HIT for key ${cacheKey} (template ${chosen.template_id})`, "cache");
+        recordRecipe(cached);
         logUsage({
           cacheKey,
           templateId: parseInt(chosen.template_id),
@@ -183,6 +185,7 @@ export async function registerRoutes(
       if (!request.use_what_we_have) {
         const poolEntry = getFromPool(request, request.last_template_id);
         if (poolEntry) {
+          recordRecipe(poolEntry.recipe);
           setCachedRecipe(poolEntry.cacheKey, poolEntry.templateId, poolEntry.recipe);
           logUsage({
             cacheKey: poolEntry.cacheKey,
@@ -209,11 +212,15 @@ export async function registerRoutes(
         });
       }
 
+      const varietyConstraints = getVarietyConstraints();
+
       const aiResult = request.use_what_we_have
-        ? await generateRecipeFromPantry(chosen, request)
-        : await generateRecipe(chosen, request, chosenProtein);
+        ? await generateRecipeFromPantry(chosen, request, varietyConstraints)
+        : await generateRecipe(chosen, request, chosenProtein, varietyConstraints);
 
       const { recipe, tokensIn, tokensOut } = aiResult;
+
+      recordRecipe(recipe);
 
       const estimatedCost =
         (tokensIn / 1000) * COST_PER_1K_INPUT +
