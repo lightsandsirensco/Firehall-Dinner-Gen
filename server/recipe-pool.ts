@@ -28,6 +28,7 @@ const DEFAULT_REQUEST: GenerateRequest = {
   proteins: ["chicken", "beef", "pork"],
   healthiness_preference: "balanced",
   budget_level: "standard",
+  cuisine_style: "any",
   allergens_to_avoid: [],
   vegetarian_swap_needed: false,
   use_what_we_have: false,
@@ -41,6 +42,10 @@ function pruneExpired() {
       pool.splice(i, 1);
     }
   }
+}
+
+function isDuplicateInPool(cacheKey: string): boolean {
+  return pool.some((entry) => entry.cacheKey === cacheKey);
 }
 
 function isDefaultRequest(request: GenerateRequest): boolean {
@@ -96,6 +101,11 @@ async function doRefill() {
       const chosen = pickTemplate(candidates, excludeId);
       const chosenProtein = chooseProtein(chosen, DEFAULT_REQUEST.proteins, DEFAULT_REQUEST.healthiness_preference);
       const cacheKey = buildCacheKey(chosen.template_id, DEFAULT_REQUEST, chosenProtein);
+
+      if (isDuplicateInPool(cacheKey)) {
+        log(`Pool dedupe: skipping duplicate cacheKey ${cacheKey}`, "pool");
+        continue;
+      }
 
       const cached = getCachedRecipe(cacheKey);
       if (cached) {

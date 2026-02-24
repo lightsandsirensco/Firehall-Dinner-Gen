@@ -10,6 +10,7 @@ import { generatePizzaRecipe, pickPizzaConcept } from "./pizza-ai";
 import { subscribeToList, trackRecipeEvent, trackShoppingListEvent, validateKlaviyoConfig } from "./klaviyo";
 import { getFromPool, refillPool, getPoolSize } from "./recipe-pool";
 import { initHallVoteTables, createHallVote, getHallVote, castBallot, closeHallVote, hashVoterFingerprint } from "./hall-vote-store";
+import { addFavourite, getFavourites, removeFavourite } from "./favourites";
 import { log } from "./index";
 import {
   initCacheStore,
@@ -59,10 +60,15 @@ export async function registerRoutes(
     log(`WARNING: ${klaviyoCheck.error} — email features will fail`, "klaviyo");
   }
 
-  setTimeout(() => {
-    log("Starting pre-generation pool warmup...", "pool");
-    refillPool().catch((err) => log(`Pool warmup error: ${err.message}`, "pool"));
-  }, 3000);
+  const poolWarmupEnabled = process.env.ENABLE_POOL_WARMUP === "true";
+  if (poolWarmupEnabled) {
+    setTimeout(() => {
+      log("Starting pre-generation pool warmup...", "pool");
+      refillPool().catch((err) => log(`Pool warmup error: ${err.message}`, "pool"));
+    }, 3000);
+  } else {
+    log("Pool warmup disabled (ENABLE_POOL_WARMUP != true). Recipes will be generated on-demand.", "pool");
+  }
 
   app.use(cookieParser());
 
@@ -242,7 +248,9 @@ export async function registerRoutes(
 
       log(`Generated in ${Date.now() - startTime}ms | ${tokensIn}in/${tokensOut}out | ~$${estimatedCost.toFixed(5)}${aiResult.fallback ? " [FALLBACK]" : ""}`, "perf");
 
-      refillPool().catch(() => {});
+      if (process.env.ENABLE_POOL_WARMUP === "true") {
+        refillPool().catch(() => {});
+      }
 
       return res.json(recipe);
     } catch (error: any) {
@@ -608,6 +616,35 @@ export async function registerRoutes(
       console.error("Hall vote close error:", error);
       return res.status(500).json({ message: "Failed to close vote" });
     }
+  });
+
+  app.get("/health", (_req: Request, res: Response) => {
+    return res.json({ status: "ok", uptime: process.uptime() });
+  });
+
+  app.get("/api/favourites", (req: Request, res: Response) => {
+    const userId = (req as any)._sessionId || "unknown";
+    const faves = getFavourites(userId);
+    return res.json({ favourites: faves });
+  });
+
+  app.post("/api/favourites", (req: Request, res: Response) => {
+    const userId = (req as any)._sessionId || "unknown";
+    const { recipeId } = req.body;
+
+    if (!recipeId || typeof recipeId !== "string") {
+      return res.status(400).json({ message: "recipeId (string) is required." });
+    }
+
+    const updated = addFavourite(userId, recipeId);
+    return res.json({ favourites: updated });
+  });
+
+  app.delete("/api/favourites/:recipeId", (req: Request, res: Response) => {
+    const userId = (req as any)._sessionId || "unknown";
+    const { recipeId } = req.params;
+    const updated = removeFavourite(userId, recipeId);
+    return res.json({ favourites: updated });
   });
 
   app.get("/api/admin/usage", (req: Request, res: Response) => {

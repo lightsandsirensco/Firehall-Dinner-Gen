@@ -15,12 +15,12 @@ Key features include:
 - **Vegetarian Swap**: Provides a vegetarian option for one crew member, respecting allergens.
 - **Pizza Night**: A dedicated section for generating pizza recipes with specific filters (crew size, time, dough option, style, heat level).
 - **Shopping List**: Automatically generates a categorized shopping list from recipes, with options for printing and emailing.
-- **Hall Favorites**: A client-side (localStorage) feature for saving preferred recipes without authentication.
+- **Hall Favorites**: Client-side (localStorage) saving plus a backend `POST /api/favourites` endpoint with a max of 5 favourites per session (in-memory store, idempotent, newest-first).
 - **Hall Vote**: Enables creation and sharing of vote polls for recipes among crew members, with real-time results.
 - **Cuisine Style Filter**: Allows users to specify a cuisine preference, influencing flavor profiles without overriding core constraints.
 - **Healthy Variety System**: Incorporates a healthy bias (lean, balanced, comfort) and an in-memory variety tracking system to prevent repetition of cuisines, cooking methods, proteins, and carbs within recent generations. Recipes are tagged for easy identification of qualities like high protein or quick cleanup.
 - **Performance Optimizations**: Includes client-side caching (memory + localStorage), background prefetching, instant UI rendering with skeleton loaders, and memoization of React components.
-- **Cost Control**: Implemented through caching, rate limiting per IP/session, a daily AI budget cap, and bot blocking.
+- **Cost Control**: Implemented through caching, rate limiting per IP/session, a daily AI budget cap, bot blocking, and `ENABLE_POOL_WARMUP` env flag (default false) for Autoscale-friendly on-demand generation.
 - **Admin Dashboard**: Provides usage statistics, budget status, cache details, and request logs.
 - **Pro Tips**: Recipes include short, practical tips for cooking.
 
@@ -29,3 +29,20 @@ Key features include:
 - **Klaviyo**: Integrated for email capture, subscribing users to mailing lists, and tracking recipe-related events.
 - **SQLite**: Used as the database for caching, rate limiting, and usage tracking.
 - **qrcode library**: Client-side library for generating QR codes for vote sharing.
+
+## Deployment
+- **Build command**: `npm ci && npm run build`
+- **Run command**: `npm start` (runs `NODE_ENV=production node dist/index.cjs`)
+- **Health check**: `GET /health` returns `{ status: "ok", uptime: <seconds> }`
+- **Graceful shutdown**: SIGTERM/SIGINT handlers with 10s failsafe timeout
+- **Port**: Uses `process.env.PORT` (injected by Replit), falls back to 5000
+
+## Environment Variables
+| Variable | Default | Description |
+|---|---|---|
+| `PORT` | `5000` | Server listen port (injected by Replit) |
+| `ENABLE_POOL_WARMUP` | `false` | Set to `"true"` to enable continuous recipe pool pre-generation. Leave false for Autoscale to save cost. |
+| `DAILY_LLM_BUDGET_USD` | `5.00` | Daily AI spending cap in USD |
+| `ADMIN_SECRET` | _(none)_ | Optional key for `/api/admin/usage` access |
+| `KLAVIYO_API_KEY` | _(secret)_ | Klaviyo API key for email features |
+| `SESSION_SECRET` | _(secret)_ | Session encryption secret |

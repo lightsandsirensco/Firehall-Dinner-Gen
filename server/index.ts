@@ -100,4 +100,19 @@ app.use((req, res, next) => {
       log(`serving on port ${port}`);
     },
   );
+
+  function gracefulShutdown(signal: string) {
+    log(`${signal} received. Shutting down gracefully...`, "system");
+    httpServer.close(() => {
+      log("HTTP server closed.", "system");
+      process.exit(0);
+    });
+    setTimeout(() => {
+      log("Forcefully shutting down after 10s timeout.", "system");
+      process.exit(1);
+    }, 10_000).unref();
+  }
+
+  process.on("SIGTERM", () => gracefulShutdown("SIGTERM"));
+  process.on("SIGINT", () => gracefulShutdown("SIGINT"));
 })();
