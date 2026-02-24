@@ -1,0 +1,50 @@
+Fix the “Generate Another” glitch: after the first meal, clicking “Generate Another” must always produce a new meal and update the UI.
+
+Non-negotiables:
+- Do not remove filters.
+- Do not reduce recipe creativity.
+- Do not break email/print/shopping list/save/history.
+
+Implement:
+
+1) Ensure the button actually triggers a fresh generation
+- Verify onClick handler is wired to the generate function.
+- Prevent stuck disabled/loading states:
+  - loading must always reset in finally() even on error.
+- Disable the button only while a request is in flight.
+
+2) Add request de-duplication protection
+- Every generate request must include a unique requestId (timestamp + random).
+- Backend should treat requestId as unique and not reuse prior response automatically.
+- Client should ignore out-of-order responses (if user clicks quickly):
+  - keep an activeRequestId and only apply response if it matches latest.
+
+3) Fix caching so it doesn’t return the same meal repeatedly
+- If caching is enabled, caching must store a POOL per filter key, not a single result.
+- When “Generate Another” is clicked:
+  - do NOT return the same meal id/title as the currently displayed meal.
+  - exclude the last N (at least 5) recent meals for that filter set.
+- Add “exclude” memory:
+  - store last 10 generated meal signatures in localStorage:
+    signature = title + primaryProtein + cuisine + keyIngredients
+- When generating, pass exclude signatures to template selection / AI so it avoids repeats.
+
+4) Guarantee UI updates
+- Ensure recipe state is replaced with a NEW object reference.
+- Update a “generationCounter” state that increments each successful generation and is used as a key on the recipe display component to force clean re-render.
+- Add a subtle fade transition to reduce perceived glitch.
+
+5) Error handling (no silent failures)
+- If API fails, show a clear toast: “Generation failed — tap to try again.”
+- Log the actual error to console with status code + message.
+
+6) Add debug instrumentation (temporary)
+- Log when button clicked: “Generate clicked”
+- Log requestId, filterKey, and returned recipe title
+- Log when state updated: “Recipe updated”
+
+Acceptance test:
+- Click Generate (works) then click Generate Another 10 times.
+- Each result changes (no repeated title back-to-back).
+- Button never gets stuck.
+- UI always updates.

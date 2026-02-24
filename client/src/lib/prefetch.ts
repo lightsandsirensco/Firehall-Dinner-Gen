@@ -1,6 +1,6 @@
 import type { GenerateResponse } from "@shared/schema";
 import { apiRequest } from "@/lib/queryClient";
-import { buildFilterKey, putCached, getAllCached, removeCached } from "@/lib/recipe-cache";
+import { buildFilterKey, putCached, getAllCached, removeCached, buildSignature, getRecentSignatures } from "@/lib/recipe-cache";
 
 const POOL_SIZE = 2;
 let activeFetches = 0;
@@ -45,11 +45,27 @@ export function prefetchMeals(filters: Record<string, unknown>) {
 export function consumePrefetched(filters: Record<string, unknown>, excludeTemplateId?: number): GenerateResponse | null {
   const filterKey = buildFilterKey(filters);
   const cached = getAllCached(filterKey);
+  const recentSigs = getRecentSignatures();
+  const sigSet = new Set(recentSigs);
+
   const match = cached.find(
-    (r) => excludeTemplateId == null || r.template_id !== excludeTemplateId
+    (r) =>
+      (excludeTemplateId == null || r.template_id !== excludeTemplateId) &&
+      !sigSet.has(buildSignature(r))
   );
-  if (match && match.template_id != null) {
+
+  if (!match) {
+    const fallback = cached.find(
+      (r) => excludeTemplateId == null || r.template_id !== excludeTemplateId
+    );
+    if (fallback && fallback.template_id != null) {
+      removeCached(filterKey, fallback.template_id);
+    }
+    return fallback || null;
+  }
+
+  if (match.template_id != null) {
     removeCached(filterKey, match.template_id);
   }
-  return match || null;
+  return match;
 }

@@ -10,7 +10,7 @@ import { HallVoteModal } from "@/components/hall-vote-modal";
 import { buildShoppingListFromMeal } from "@/lib/shopping-list";
 import { getSavedCount } from "@/lib/saved-meals";
 import { apiRequest } from "@/lib/queryClient";
-import { buildFilterKey, putCached } from "@/lib/recipe-cache";
+import { buildFilterKey, putCached, addRecentSignature, getRecentSignatures } from "@/lib/recipe-cache";
 import { prefetchMeals, consumePrefetched } from "@/lib/prefetch";
 import { trackEvent, trackMealGenerated } from "@/lib/analytics";
 import type { GenerateResponse } from "@shared/schema";
@@ -18,6 +18,7 @@ import { Flame, Vote, Heart } from "lucide-react";
 import { Link } from "wouter";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { useToast } from "@/hooks/use-toast";
 
 function buildRequestPayload(filters: FilterState, templateId?: number) {
   const ingredients_on_hand = filters.use_what_we_have
@@ -40,12 +41,17 @@ function buildRequestPayload(filters: FilterState, templateId?: number) {
   };
 }
 
+function makeRequestId(): string {
+  return `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+}
+
 const ResultsPanel = memo(function ResultsPanel({
   loading,
   error,
   recipe,
   recentRecipes,
   filters,
+  generationCounter,
   onEmailClick,
   onShoppingListClick,
   onHallVoteClick,
@@ -55,6 +61,7 @@ const ResultsPanel = memo(function ResultsPanel({
   recipe: GenerateResponse | null;
   recentRecipes: GenerateResponse[];
   filters: FilterState;
+  generationCounter: number;
   onEmailClick: () => void;
   onShoppingListClick: () => void;
   onHallVoteClick: () => void;
@@ -89,7 +96,7 @@ const ResultsPanel = memo(function ResultsPanel({
         </div>
       )}
       {!loading && showRecipe && (
-        <div key={recipe.title} className="animate-in fade-in slide-in-from-bottom-2 duration-400">
+        <div key={generationCounter} className="animate-in fade-in slide-in-from-bottom-2 duration-400">
           <RecipeCard
             recipe={recipe}
             crewSize={filters.crew_size}
@@ -135,8 +142,11 @@ export default function Home() {
   const [hallVoteOpen, setHallVoteOpen] = useState(false);
   const [recentRecipes, setRecentRecipes] = useState<GenerateResponse[]>([]);
   const [favCount, setFavCount] = useState(() => getSavedCount());
+  const [generationCounter, setGenerationCounter] = useState(0);
   const genCountRef = useRef(0);
   const emailPromptedRef = useRef(false);
+  const activeRequestIdRef = useRef<string | null>(null);
+  const { toast } = useToast();
 
   useEffect(() => {
     const handler = () => setFavCount(getSavedCount());
@@ -164,54 +174,76 @@ export default function Home() {
     prefetchMeals(warmupPayload);
   }, []);
 
+  const applyRecipe = useCallback((data: GenerateResponse, requestId: string) => {
+    if (activeRequestIdRef.current !== requestId) {
+      console.log("[Generate] Ignoring stale response", { requestId, active: activeRequestIdRef.current });
+      return;
+    }
+
+    setRecipe({ ...data });
+    setGenerationCounter(c => c + 1);
+    addRecentSignature(data);
+    setRecentRecipes(prev => {
+      const deduped = prev.filter(r => r.title !== data.title);
+      return [data, ...deduped].slice(0, 5);
+    });
+    setLastTemplateId(data.template_id);
+    trackMealGenerated();
+    genCountRef.current += 1;
+    console.log("[Generate] Recipe updated:", data.title);
+
+    if (genCountRef.current === 2 && !emailPromptedRef.current) {
+      emailPromptedRef.current = true;
+      setTimeout(() => setEmailModalOpen(true), 800);
+    }
+  }, []);
+
   const handleGenerate = useCallback(async (currentFilters: FilterState, templateId?: number) => {
+    const requestId = makeRequestId();
+    activeRequestIdRef.current = requestId;
+    console.log("[Generate] Clicked", { requestId, templateId });
+
     setError(null);
     trackEvent('meal_generation_started');
 
     const payload = buildRequestPayload(currentFilters, templateId);
+    const filterKey = buildFilterKey(payload);
 
     const cached = consumePrefetched(payload, templateId);
     if (cached) {
-      setRecipe(cached);
-      setRecentRecipes(prev => {
-        const deduped = prev.filter(r => r.title !== cached.title);
-        return [cached, ...deduped].slice(0, 5);
-      });
-      setLastTemplateId(cached.template_id);
-      trackMealGenerated();
-      genCountRef.current += 1;
-      if (genCountRef.current === 2 && !emailPromptedRef.current) {
-        emailPromptedRef.current = true;
-        setTimeout(() => setEmailModalOpen(true), 800);
-      }
+      console.log("[Generate] Using prefetched:", cached.title, { requestId, filterKey });
+      applyRecipe(cached, requestId);
       setTimeout(() => prefetchMeals(payload), 100);
       return;
     }
 
     setLoading(true);
     try {
-      const res = await apiRequest("POST", "/api/generate", payload);
-      const data: GenerateResponse = await res.json();
-      setRecipe(data);
-      setRecentRecipes(prev => {
-        const deduped = prev.filter(r => r.title !== data.title);
-        return [data, ...deduped].slice(0, 5);
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), 45000);
+
+      const res = await apiRequest("POST", "/api/generate", {
+        ...payload,
+        request_id: requestId,
+        exclude_signatures: getRecentSignatures(),
       });
-      setLastTemplateId(data.template_id);
+      clearTimeout(timeout);
+      const data: GenerateResponse = await res.json();
 
-      const filterKey = buildFilterKey(payload);
+      console.log("[Generate] API returned:", data.title, { requestId, filterKey });
+      applyRecipe(data, requestId);
       putCached(filterKey, data);
-
-      trackMealGenerated();
-      genCountRef.current += 1;
-      if (genCountRef.current === 2 && !emailPromptedRef.current) {
-        emailPromptedRef.current = true;
-        setTimeout(() => setEmailModalOpen(true), 800);
-      }
-
       setTimeout(() => prefetchMeals(payload), 100);
     } catch (err: any) {
+      if (activeRequestIdRef.current !== requestId) {
+        console.log("[Generate] Ignoring stale error", { requestId });
+        return;
+      }
+
       const msg = err?.message || "Something went wrong";
+      const status = msg.match(/^(\d+)/)?.[1] || "unknown";
+      console.error("[Generate] Failed", { requestId, status, message: msg });
+
       if (msg.includes("No matching templates") || msg.includes("404")) {
         setError("no_match");
         setRecipe(null);
@@ -231,10 +263,18 @@ export default function Home() {
       } else {
         setError("Generation failed. Please try again.");
       }
+
+      toast({
+        title: "Generation failed",
+        description: "Tap Generate to try again.",
+        variant: "destructive",
+      });
     } finally {
-      setLoading(false);
+      if (activeRequestIdRef.current === requestId) {
+        setLoading(false);
+      }
     }
-  }, []);
+  }, [applyRecipe, toast]);
 
   const handleGenerateClick = useCallback(() => {
     handleGenerate(filters);
@@ -326,6 +366,7 @@ export default function Home() {
             recipe={recipe}
             recentRecipes={recentRecipes}
             filters={filters}
+            generationCounter={generationCounter}
             onEmailClick={onEmailClick}
             onShoppingListClick={onShoppingListClick}
             onHallVoteClick={onHallVoteClick}
