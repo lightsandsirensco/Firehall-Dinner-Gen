@@ -1,0 +1,56 @@
+Fix the repeat/stuck generation issue where the app keeps returning the same fallback meal (“One-Pot Seasoned Beef with Tomatoes & Rice”, template_id=9) and does not change on “Generate Another”.
+
+Non-negotiables:
+- Do not remove filters/features (email/print/shopping list/save/pizza/cuisine).
+- Keep recipe creativity/quality.
+- “Generate Another” must always produce a DIFFERENT meal than the one currently displayed.
+
+Implement ALL of the following:
+
+1) Ensure “Generate Another” forces a new result (client)
+- Add a unique requestId to every /api/generate call: `${Date.now()}-${Math.random()}`
+- Keep an activeRequestId; only apply the latest response to the UI (ignore stale responses).
+- Always reset loading state in finally() so the button never gets stuck.
+
+2) Fix caching so it cannot return the same meal repeatedly
+- If you cache by filterKey, you must cache a POOL (array) not a single meal.
+- When user clicks “Generate Another”, do NOT serve the currently displayed meal again even if cached.
+- Add an exclude list (last 10 meal signatures) stored in localStorage:
+  signature = title + chosen_protein + cuisine + base_carb + cooking_method
+- Send exclude signatures to the backend in the request body.
+
+3) Fix fallback selection so it rotates and never repeats back-to-back
+- When fallback is used, select from ALL templates matching constraints (protein, allergies, time, healthiness, appliances, cuisine).
+- Do NOT choose the first match.
+- Randomize selection and exclude:
+  - currentTemplateId
+  - lastFallbackTemplateIds (keep last 10 in memory)
+- If only 1 template matches, allow repeat but apply a “remix” step (see #5).
+
+4) Fix AI timeout behavior so fallback isn’t triggered every time
+- Increase primary AI timeout to 30–35 seconds on paid Replit OR implement a two-stage approach:
+  - if AI not ready by 8 seconds, immediately return a rotating fallback (so UI updates fast)
+  - continue AI in background and swap in the AI recipe when ready (only if requestId still current)
+- Do not block the UI for the full timeout.
+
+5) Ensure fallback still feels different (remix when needed)
+- If fallback must reuse a template (because few matches exist), create variation without extra latency:
+  - swap sauce/spice profile based on cuisine
+  - change veg combination
+  - change base carb if allowed
+  - change toppings
+- Ensure the title changes accordingly and the signature differs.
+
+6) Add debug logs (temporary) so we can confirm it’s fixed
+Log on every request:
+- requestId, filterKey, chosen_protein
+- whether response is AI or fallback
+- template_id
+- title
+- whether it was excluded/replaced due to duplicates
+
+Acceptance test:
+- Generate first meal, then click “Generate Another” 10 times.
+- Title must change every time (no back-to-back repeats).
+- template_id should rotate when fallback occurs.
+- If AI returns, it should replace fallback and also vary across clicks.
