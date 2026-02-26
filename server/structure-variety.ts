@@ -98,9 +98,67 @@ function parseMaxTime(timeRange: string): number {
   return 60;
 }
 
+const STRUCTURE_WEIGHTS: Record<StructureType, number> = {
+  "bowl": 1,
+  "wrap": 3,
+  "taco": 3,
+  "sandwich": 3,
+  "burger": 2,
+  "sheet-pan": 3,
+  "skillet": 3,
+  "stir-fry": 3,
+  "grill": 2,
+  "flatbread": 2,
+  "stuffed": 2,
+  "casserole": 2,
+  "bake": 2,
+  "soup-stew": 2,
+  "pasta": 3,
+  "rice-bake": 2,
+  "noodle-toss": 3,
+  "loaded-fries": 2,
+  "stuffed-bread": 2,
+  "one-pot": 3,
+  "breakfast-for-dinner": 2,
+};
+
+function displayToInternal(display: string): StructureType | null {
+  const lower = display.toLowerCase().trim();
+  for (const [key, val] of Object.entries(STRUCTURE_DISPLAY)) {
+    if (val.toLowerCase() === lower || key === lower) return key as StructureType;
+  }
+  const fuzzy: Record<string, StructureType> = {
+    "bowl": "bowl", "wrap": "wrap", "burrito": "wrap", "taco": "taco",
+    "sandwich": "sandwich", "sub": "sandwich", "burger": "burger",
+    "sheet pan": "sheet-pan", "skillet": "skillet", "stir fry": "stir-fry",
+    "grill": "grill", "grilled": "grill", "flatbread": "flatbread",
+    "stuffed": "stuffed", "casserole": "casserole", "bake": "bake",
+    "soup": "soup-stew", "stew": "soup-stew", "soup/stew": "soup-stew",
+    "pasta": "pasta", "one-pot": "one-pot", "one pot": "one-pot",
+    "rice bake": "rice-bake", "noodle toss": "noodle-toss",
+    "loaded fries": "loaded-fries", "stuffed bread": "stuffed-bread",
+    "breakfast-for-dinner": "breakfast-for-dinner", "breakfast for dinner": "breakfast-for-dinner",
+    "pizza night": "flatbread",
+  };
+  return fuzzy[lower] || null;
+}
+
+function weightedPick(pool: StructureType[]): StructureType {
+  const totalWeight = pool.reduce((sum, s) => sum + STRUCTURE_WEIGHTS[s], 0);
+  let rand = Math.random() * totalWeight;
+  for (const s of pool) {
+    rand -= STRUCTURE_WEIGHTS[s];
+    if (rand <= 0) return s;
+  }
+  return pool[pool.length - 1];
+}
+
 export function pickStructure(
   appliances: string[],
   timeRange: string,
+  clientRecentStyles: string[] = [],
+  preferDifferentStyle: boolean = false,
+  currentStyle?: string,
 ): StructureType {
   const maxTime = parseMaxTime(timeRange);
   const appLower = appliances.map(a => a.toLowerCase());
@@ -115,11 +173,29 @@ export function pickStructure(
     return "skillet";
   }
 
-  const notRecent = compatible.filter(s => !recentStructures.includes(s));
-  const pool = notRecent.length > 0 ? notRecent : compatible;
+  const clientRecent: StructureType[] = clientRecentStyles
+    .map(displayToInternal)
+    .filter((s): s is StructureType => s !== null);
 
-  const pick = pool[Math.floor(Math.random() * pool.length)];
-  log(`[structure] Picked "${pick}" from ${pool.length} options (${compatible.length} compatible, ${recentStructures.length} recent excluded)`, "variety");
+  const allRecent = new Set([...recentStructures, ...clientRecent]);
+
+  let backToBack: StructureType | null = null;
+  if (preferDifferentStyle && currentStyle) {
+    backToBack = displayToInternal(currentStyle);
+  } else if (allRecent.size > 0) {
+    backToBack = clientRecent[0] || recentStructures[0] || null;
+  }
+
+  const last3 = [...new Set([...clientRecent.slice(0, 3), ...recentStructures.slice(0, 3)])].slice(0, 3);
+
+  let pool = compatible.filter(s => s !== backToBack);
+  if (pool.length === 0) pool = [...compatible];
+
+  let narrower = pool.filter(s => !last3.includes(s));
+  if (narrower.length > 0) pool = narrower;
+
+  const pick = weightedPick(pool);
+  log(`[structure] Picked "${pick}" from ${pool.length} options (${compatible.length} compatible, recent=[${[...allRecent].join(",")}], backToBack=${backToBack || "none"}, preferDiff=${preferDifferentStyle})`, "variety");
   return pick;
 }
 

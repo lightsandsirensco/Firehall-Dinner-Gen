@@ -292,6 +292,11 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
               </span>
             </div>
           )}
+          {recipe.meal_style && (
+            <Badge variant="outline" className="text-xs" data-testid="badge-meal-style">
+              {recipe.meal_style}
+            </Badge>
+          )}
           {recipe.budget_level === "low" && (
             <Badge variant="secondary" className="text-xs" data-testid="badge-budget-friendly">
               <DollarSign className="w-3 h-3 mr-1" />

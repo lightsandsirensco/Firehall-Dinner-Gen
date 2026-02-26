@@ -12,7 +12,7 @@ import { getFromPool, refillPool, getPoolSize } from "./recipe-pool";
 import { initHallVoteTables, createHallVote, getHallVote, castBallot, closeHallVote, hashVoterFingerprint } from "./hall-vote-store";
 import { addFavourite, getFavourites, removeFavourite } from "./favourites";
 import { buildFallbackRecipe, trackFallbackTemplateId, getRecentFallbackTemplateIds } from "./fallback-recipe";
-import { pickStructure, trackStructure } from "./structure-variety";
+import { pickStructure, trackStructure, STRUCTURE_DISPLAY } from "./structure-variety";
 import { log } from "./index";
 import {
   initCacheStore,
@@ -183,37 +183,61 @@ export async function registerRoutes(
       const cacheKey = buildCacheKey(chosen.template_id, request, chosenProtein);
       const startTime = Date.now();
 
+      const recentStyles = request.recent_meal_styles || [];
+      const lastStyle = recentStyles[0] || "";
+      const preferDiff = request.prefer_different_style || false;
+
       const cached = getCachedRecipe(cacheKey);
       if (cached) {
-        log(`Cache HIT for key ${cacheKey} (template ${chosen.template_id})`, "cache");
-        recordRecipe(cached);
-        logUsage({
-          cacheKey,
-          templateId: parseInt(chosen.template_id),
-          cacheHit: true,
-          latencyMs: Date.now() - startTime,
-          ipHash,
-          sessionId,
-        });
-        return res.json(cached);
+        const cachedStyle = cached.meal_style || "";
+        const styleConflict = preferDiff && cachedStyle && cachedStyle.toLowerCase() === lastStyle.toLowerCase();
+        if (styleConflict) {
+          log(`Cache HIT but style conflict (${cachedStyle} === ${lastStyle}) — bypassing cache for rotation`, "variety");
+        } else {
+          log(`Cache HIT for key ${cacheKey} (template ${chosen.template_id})`, "cache");
+          recordRecipe(cached);
+          logUsage({
+            cacheKey,
+            templateId: parseInt(chosen.template_id),
+            cacheHit: true,
+            latencyMs: Date.now() - startTime,
+            ipHash,
+            sessionId,
+          });
+          if (!cached.meal_style) {
+            const inferredStructure = pickStructure(request.appliances, request.time_available, recentStyles, false);
+            cached.meal_style = STRUCTURE_DISPLAY[inferredStructure] || inferredStructure;
+          }
+          return res.json(cached);
+        }
       }
 
       if (!request.use_what_we_have) {
         const poolEntry = getFromPool(request, request.last_template_id);
         if (poolEntry) {
-          recordRecipe(poolEntry.recipe);
-          setCachedRecipe(poolEntry.cacheKey, poolEntry.templateId, poolEntry.recipe);
-          logUsage({
-            cacheKey: poolEntry.cacheKey,
-            templateId: poolEntry.templateId,
-            cacheHit: false,
-            estimatedCost: poolEntry.estimatedCost,
-            latencyMs: Date.now() - startTime,
-            ipHash,
-            sessionId,
-          });
-          log(`Pool served in ${Date.now() - startTime}ms`, "perf");
-          return res.json(poolEntry.recipe);
+          const poolStyle = poolEntry.recipe.meal_style || "";
+          const poolConflict = preferDiff && poolStyle && poolStyle.toLowerCase() === lastStyle.toLowerCase();
+          if (poolConflict) {
+            log(`Pool entry style conflict (${poolStyle} === ${lastStyle}) — bypassing pool for rotation`, "variety");
+          } else {
+            recordRecipe(poolEntry.recipe);
+            setCachedRecipe(poolEntry.cacheKey, poolEntry.templateId, poolEntry.recipe);
+            logUsage({
+              cacheKey: poolEntry.cacheKey,
+              templateId: poolEntry.templateId,
+              cacheHit: false,
+              estimatedCost: poolEntry.estimatedCost,
+              latencyMs: Date.now() - startTime,
+              ipHash,
+              sessionId,
+            });
+            log(`Pool served in ${Date.now() - startTime}ms`, "perf");
+            if (!poolEntry.recipe.meal_style) {
+              const inferredStructure = pickStructure(request.appliances, request.time_available, recentStyles, false);
+              poolEntry.recipe.meal_style = STRUCTURE_DISPLAY[inferredStructure] || inferredStructure;
+            }
+            return res.json(poolEntry.recipe);
+          }
         }
       }
 
@@ -236,8 +260,15 @@ export async function registerRoutes(
 
       const varietyConstraints = getVarietyConstraints(request.cuisine_style);
 
-      const structureType = pickStructure(request.appliances, request.time_available);
-      log(`[structure] Selected: ${structureType} for protein: ${chosenProtein}`, "variety");
+      const structureType = pickStructure(
+        request.appliances,
+        request.time_available,
+        request.recent_meal_styles || [],
+        request.prefer_different_style || false,
+        request.recent_meal_styles?.[0],
+      );
+      const mealStyleDisplay = STRUCTURE_DISPLAY[structureType] || structureType;
+      log(`[structure] Selected: ${structureType} (${mealStyleDisplay}) for protein: ${chosenProtein} | template: ${chosen.template_id} | clientRecent: [${(request.recent_meal_styles || []).join(",")}] | preferDiff: ${request.prefer_different_style}`, "variety");
 
       const FAST_FALLBACK_MS = 8_000;
 
@@ -295,7 +326,7 @@ export async function registerRoutes(
         if (process.env.ENABLE_POOL_WARMUP === "true") {
           refillPool().catch(() => {});
         }
-        return res.json(recipe);
+        return res.json({ ...recipe, meal_style: mealStyleDisplay });
       }
 
       if (raceResult.type === "timeout") {
@@ -327,7 +358,7 @@ export async function registerRoutes(
             log(`Background AI also failed: ${bgErr.message}`, "fallback");
           });
 
-        return res.json({ ...fallbackRecipe, _fallback: true });
+        return res.json({ ...fallbackRecipe, _fallback: true, meal_style: mealStyleDisplay });
       }
 
       const aiError = (raceResult as any).error;
@@ -350,7 +381,7 @@ export async function registerRoutes(
         sessionId,
       });
       log(`Fallback served in ${Date.now() - startTime}ms${isColdStart ? " [COLD START]" : ""}`, "perf");
-      return res.json({ ...fallbackRecipe, _fallback: true });
+      return res.json({ ...fallbackRecipe, _fallback: true, meal_style: mealStyleDisplay });
     } catch (error: any) {
       console.error("Generate error:", error);
       return res.status(500).json({ message: error.message || "Failed to generate recipe" });

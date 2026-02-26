@@ -31,7 +31,7 @@ function sortKey(obj: Record<string, unknown>): string {
 }
 
 export function buildFilterKey(filters: Record<string, unknown>): string {
-  const { last_template_id, request_id, ...rest } = filters;
+  const { last_template_id, request_id, recent_meal_styles, prefer_different_style, exclude_signatures, ...rest } = filters;
   return sortKey(rest);
 }
 

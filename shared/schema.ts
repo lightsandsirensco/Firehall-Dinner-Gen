@@ -27,6 +27,8 @@ export const generateRequestSchema = z.object({
     "cajun",
     "canadian",
   ]).optional().default("any"),
+  recent_meal_styles: z.array(z.string()).optional().default([]),
+  prefer_different_style: z.boolean().optional().default(false),
 });
 
 export type GenerateRequest = z.infer<typeof generateRequestSchema>;
@@ -92,6 +94,7 @@ export interface GenerateResponse {
   template_id: number;
   chosen_protein: string;
   title: string;
+  meal_style?: string;
   why_it_fits_tonight: string;
   timing: RecipeTiming;
   protein_safety: ProteinSafetyItem[];

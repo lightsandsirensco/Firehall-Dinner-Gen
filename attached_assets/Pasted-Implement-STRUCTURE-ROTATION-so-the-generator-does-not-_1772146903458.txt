@@ -1,0 +1,62 @@
+Implement STRUCTURE ROTATION so the generator does not default to bowls and does not repeat the same meal structure back-to-back (or too often), while still respecting all filters.
+
+Goal:
+- “Meal Style” (structure) must vary across generations.
+- Prevent “3 bowls in a row” even if proteins change.
+
+Add/Update:
+
+1) Add an explicit field in the recipe response:
+- recipe.meal_style (string)
+Valid values:
+Bowl, Wrap, Taco, Sandwich, Burger, Sheet Pan, Skillet, Stir Fry, Grill, Flatbread, Stuffed, Casserole, Bake, Soup/Stew, Pasta, One-Pot, Rice Bake, Noodle Toss, Pizza Night
+
+2) Create a structure selection step BEFORE generating:
+- Choose a candidate meal_style from a weighted list.
+- Weight bowls LOWER than others.
+- Remove styles that don’t fit constraints:
+  - Appliances available
+  - Time available
+  - Vegetarian toggle
+  - Allergies/restrictions
+  - Pizza Night page remains separate and only chosen there
+
+3) Add rotation memory (client + server):
+- Store last 5 meal_style values in localStorage under "recentMealStyles".
+- Send recentMealStyles to backend with each /api/generate request.
+- Backend must exclude those styles if alternatives exist.
+Rules:
+- Never repeat the same meal_style back-to-back.
+- Avoid repeating any of the last 3 styles if possible.
+- If constraints leave only 1 valid style, allow it but force major variation in cuisine + base carb + cooking method.
+
+4) Add rotation across fallback AND AI:
+- Fallback template selection must also respect meal_style exclusion.
+- If fallback pool for chosen style is empty, choose a different style that fits constraints.
+
+5) Ensure “Generate Another” always tries a different style:
+- When user clicks Generate Another, pass a flag preferDifferentStyle=true.
+- Backend should prioritize a style NOT equal to the current meal’s style.
+
+6) Reduce bowl dominance:
+- Set default weights roughly like:
+  Bowl: low
+  Wrap/Taco/Sandwich/Sheet Pan/Skillet/Stir Fry/Pasta/One-Pot: medium-high
+  Grill/Stuffed/Casserole/Soup: medium (only if time/appliances allow)
+- Do NOT hard-ban bowls; just stop them being the default.
+
+7) Logging (temporary):
+Log each generation:
+- chosen meal_style
+- valid styles list size
+- recentMealStyles
+- whether AI or fallback
+- template_id
+
+Acceptance tests:
+- With common settings (time 25–40, stove+oven, balanced), generate 10 meals:
+  - No back-to-back same meal_style
+  - Bowls are not > 3 out of 10 unless constraints force it
+- Repeat for chicken and beef selections.
+- All existing filters remain visible and functional.
+- No feature regressions (email/print/shopping list/save/history).

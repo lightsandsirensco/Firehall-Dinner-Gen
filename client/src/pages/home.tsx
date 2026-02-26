@@ -20,7 +20,22 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 
-function buildRequestPayload(filters: FilterState, templateId?: number) {
+function getRecentMealStyles(): string[] {
+  try {
+    const raw = localStorage.getItem("recentMealStyles");
+    return raw ? JSON.parse(raw) : [];
+  } catch { return []; }
+}
+
+function trackMealStyle(style: string) {
+  try {
+    const recent = getRecentMealStyles().filter(s => s !== style);
+    recent.unshift(style);
+    localStorage.setItem("recentMealStyles", JSON.stringify(recent.slice(0, 5)));
+  } catch {}
+}
+
+function buildRequestPayload(filters: FilterState, templateId?: number, preferDifferentStyle = false) {
   const ingredients_on_hand = filters.use_what_we_have
     ? filters.ingredients_on_hand_text.split(",").map(s => s.trim()).filter(Boolean)
     : [];
@@ -38,6 +53,8 @@ function buildRequestPayload(filters: FilterState, templateId?: number) {
     use_what_we_have: filters.use_what_we_have,
     ingredients_on_hand,
     last_template_id: templateId,
+    recent_meal_styles: getRecentMealStyles(),
+    prefer_different_style: preferDifferentStyle,
   };
 }
 
@@ -185,6 +202,7 @@ export default function Home() {
     setRecipe({ ...data });
     setGenerationCounter(c => c + 1);
     addRecentSignature(data);
+    if (data.meal_style) trackMealStyle(data.meal_style);
     setRecentRecipes(prev => {
       const deduped = prev.filter(r => r.title !== data.title);
       return [data, ...deduped].slice(0, 5);
@@ -192,7 +210,7 @@ export default function Home() {
     setLastTemplateId(data.template_id);
     trackMealGenerated();
     genCountRef.current += 1;
-    console.log("[Generate] Recipe updated:", data.title);
+    console.log("[Generate] Recipe updated:", data.title, "| style:", data.meal_style);
 
     if (genCountRef.current === 2 && !emailPromptedRef.current) {
       emailPromptedRef.current = true;
@@ -200,15 +218,15 @@ export default function Home() {
     }
   }, []);
 
-  const handleGenerate = useCallback(async (currentFilters: FilterState, templateId?: number) => {
+  const handleGenerate = useCallback(async (currentFilters: FilterState, templateId?: number, preferDifferentStyle = false) => {
     const requestId = makeRequestId();
     activeRequestIdRef.current = requestId;
-    console.log("[Generate] Clicked", { requestId, templateId });
+    console.log("[Generate] Clicked", { requestId, templateId, preferDifferentStyle });
 
     setError(null);
     trackEvent('meal_generation_started');
 
-    const payload = buildRequestPayload(currentFilters, templateId);
+    const payload = buildRequestPayload(currentFilters, templateId, preferDifferentStyle);
     const filterKey = buildFilterKey(payload);
 
     const cached = consumePrefetched(payload, templateId);
@@ -283,7 +301,7 @@ export default function Home() {
   }, [filters, handleGenerate]);
 
   const handleGenerateAnother = useCallback(() => {
-    handleGenerate(filters, lastTemplateId);
+    handleGenerate(filters, lastTemplateId, true);
   }, [filters, lastTemplateId, handleGenerate]);
 
   const onFiltersChange = useCallback((newFilters: FilterState) => {

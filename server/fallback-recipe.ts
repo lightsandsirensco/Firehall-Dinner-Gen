@@ -1,6 +1,7 @@
 import type { TemplateRow, GenerateRequest, GenerateResponse } from "@shared/schema";
 import { log } from "./index";
 import type { StructureType } from "./structure-variety";
+import { STRUCTURE_DISPLAY } from "./structure-variety";
 
 interface RawIngredient {
   item: string;
@@ -724,10 +725,13 @@ export function buildFallbackRecipe(
   ];
   log(`Built fallback recipe: "${title}" (${logParts.join(" | ")})`, "fallback");
 
+  const mealStyleLabel = structureType ? (STRUCTURE_DISPLAY[structureType] || structureType) : "Skillet";
+
   return {
     template_id: parseInt(template.template_id),
     chosen_protein: proteinDisplay,
     title,
+    meal_style: mealStyleLabel,
     why_it_fits_tonight: whyItFits,
     timing,
     protein_safety: [safety],
