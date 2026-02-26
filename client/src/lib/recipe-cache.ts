@@ -82,7 +82,9 @@ export function buildSignature(recipe: GenerateResponse): string {
   const title = (recipe.title || "").toLowerCase().trim();
   const protein = (recipe.chosen_protein || "").toLowerCase().trim();
   const cuisine = (recipe.tags?.cuisine || "").toLowerCase().trim();
-  return `${title}|${protein}|${cuisine}`;
+  const baseCarb = (recipe.tags?.base_carb || "").toLowerCase().trim();
+  const method = (recipe.tags?.cooking_method || "").toLowerCase().trim();
+  return `${title}|${protein}|${cuisine}|${baseCarb}|${method}`;
 }
 
 export function getRecentSignatures(): string[] {

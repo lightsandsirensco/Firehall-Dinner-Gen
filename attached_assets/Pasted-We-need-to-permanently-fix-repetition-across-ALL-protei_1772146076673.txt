@@ -1,0 +1,146 @@
+We need to permanently fix repetition across ALL proteins (chicken, beef, pork, turkey, fish, vegetarian).
+
+Current issue:
+- The generator often returns structurally similar meals (e.g., rice bowls).
+- Fallback logic repeats the same template (e.g., One-Pot Beef, Chicken Rice Bowls).
+- “Generate Another” does not feel meaningfully different.
+
+This must be fixed at the architecture level, not just by adding more templates.
+
+Implement ALL of the following:
+
+----------------------------------------
+1) Add STRUCTURAL VARIETY LAYER
+----------------------------------------
+
+Before generating a recipe, randomly select a "Meal Structure Type" from this list (filtered by appliances + time):
+
+Meal Structure Types:
+- Bowl
+- Wrap / Burrito
+- Taco
+- Sandwich / Sub
+- Burger
+- Sheet Pan
+- Skillet
+- Stir Fry
+- Grill
+- Flatbread
+- Stuffed (peppers, potatoes, etc.)
+- Casserole
+- Bake
+- Soup / Stew
+- Pasta
+- Rice Bake
+- Noodle Toss
+- Loaded Fries
+- Stuffed Bread
+- One-Pot
+- Breakfast-for-Dinner
+
+Rules:
+- Do NOT allow the same structure type back-to-back.
+- Store last 5 structure types in memory.
+- Exclude recently used structure types from next generation.
+- If only 1 structure fits constraints, allow reuse but force major flavor variation.
+
+----------------------------------------
+2) Add SIGNATURE-BASED NO-REPEAT SYSTEM
+----------------------------------------
+
+Create a recipe signature:
+signature = protein + structureType + cuisine + baseCarb + cookingMethod
+
+Store last 10 signatures in localStorage (frontend).
+Send them to backend on each generation request.
+
+Backend must:
+- Never return a recipe with a matching signature.
+- If AI or fallback returns duplicate signature, regenerate up to 3 times.
+- If still duplicate, force structure swap.
+
+----------------------------------------
+3) Improve FALLBACK ROTATION
+----------------------------------------
+
+When fallback is used:
+- Do NOT choose first matching template.
+- Randomly select from all eligible templates.
+- Exclude:
+   - currentTemplateId
+   - last 10 templateIds used
+- If no options remain, remix:
+   - swap base carb
+   - swap vegetable mix
+   - swap spice profile
+   - adjust cuisine tag
+   - change title accordingly
+
+Fallback must feel different.
+
+----------------------------------------
+4) Expand PROTEIN-SPECIFIC ARCHETYPES
+----------------------------------------
+
+For EACH protein, ensure minimum 15 structural archetypes available.
+
+Chicken example structures:
+- Greek sheet pan
+- BBQ flatbread
+- Buffalo wraps
+- Teriyaki stir fry
+- Chipotle bowls
+- Creamy skillet
+- Grilled subs
+- Stuffed peppers
+- Lemon garlic pasta
+- Chicken taco bake
+- etc.
+
+Apply same depth to:
+- Beef
+- Pork
+- Turkey
+- Fish
+- Vegetarian
+
+----------------------------------------
+5) Strengthen AI Prompt for Variation
+----------------------------------------
+
+Update AI generation prompt to include:
+
+- You MUST vary:
+  - structure
+  - cuisine
+  - cooking method
+  - base carb
+- Do not default to rice bowls.
+- Avoid repeating common combinations.
+- If the last recipe was a bowl, next must NOT be a bowl.
+
+----------------------------------------
+6) Logging for Debug
+----------------------------------------
+
+Temporarily log:
+- structureType
+- signature
+- fallback or AI
+- templateId
+- whether regeneration occurred
+
+----------------------------------------
+ACCEPTANCE TEST
+----------------------------------------
+
+Test:
+- Select Chicken → click Generate 10 times.
+- No two back-to-back meals share same structure type.
+- Titles must be clearly different categories.
+- Repeat test for Beef and Vegetarian.
+
+If repetition still occurs, continue regenerating until unique.
+
+Do not remove any existing filters or features.
+Maintain high recipe quality and safety standards.

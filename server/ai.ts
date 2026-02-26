@@ -3,6 +3,7 @@ import type { TemplateRow, GenerateRequest, GenerateResponse, ProteinSafetyItem,
 import { log } from "./index";
 import { getForbiddenProteinsText, validateProteinCompliance } from "./protein-validator";
 import { type VarietyConstraints, buildVarietyPromptBlock, buildHealthyPromptBlock } from "./variety-memory";
+import { type StructureType, STRUCTURE_DISPLAY } from "./structure-variety";
 
 const openai = new OpenAI({
   apiKey: process.env.AI_INTEGRATIONS_OPENAI_API_KEY,
@@ -291,7 +292,7 @@ function buildFilterSummary(request: GenerateRequest): string {
 const SYSTEM_PROMPT = "Firehall chef writing beginner-friendly recipes. Return ONLY valid JSON. Every step heading includes heat level and time. Every step body explains HOW to do it with a visual doneness cue. Include safety temps for every protein. No markdown. The recipe MUST use ONLY the specified protein — no substitutions.";
 const PANTRY_SYSTEM_PROMPT = "Firehall chef writing beginner-friendly recipes. Return ONLY valid JSON. Every step heading includes heat level and time. Every step body explains HOW to do it with a visual doneness cue. Include safety temps for every protein. No markdown.";
 
-function buildPrompt(template: TemplateRow, request: GenerateRequest, chosenProtein: string, varietyBlock: string, healthyBlock: string): string {
+function buildPrompt(template: TemplateRow, request: GenerateRequest, chosenProtein: string, varietyBlock: string, healthyBlock: string, structureType?: StructureType): string {
   const proteinDisplay = chosenProtein.charAt(0).toUpperCase() + chosenProtein.slice(1);
   const budgetLevel = request.budget_level || "standard";
   const forbiddenText = getForbiddenProteinsText(chosenProtein);
@@ -312,12 +313,17 @@ function buildPrompt(template: TemplateRow, request: GenerateRequest, chosenProt
 
   const cuisineLine = buildCuisineDirective(request.cuisine_style || "any");
 
+  const structureLine = structureType
+    ? `MEAL STRUCTURE (mandatory): This recipe MUST be a ${STRUCTURE_DISPLAY[structureType]} style meal. The dish format, title, and presentation must clearly be a ${STRUCTURE_DISPLAY[structureType]}. Do NOT default to a rice bowl. Do NOT repeat the same structure as previous recipes.`
+    : `MEAL STRUCTURE: Vary the structure. Do NOT default to a rice bowl. Use different formats like wraps, tacos, sheet-pan, pasta, one-pot, stuffed, casserole, stir-fry, etc. across generations.`;
+
   return `Generate ONE firehall meal as JSON.
 
 TEMPLATE: ${template.template_name} (${template.style}) — ${template.base_idea_description}
 CREW: ${request.crew_size} | Shift: ${request.busy_level} | Time: ${request.time_available} min | Appliances: ${request.appliances.join(", ")}
 PROTEIN (STRICT): Recipe MUST use ${proteinDisplay} as the ONLY animal protein. Do not include, mention, or substitute any other meat or animal protein. The title MUST include the word "${proteinDisplay}". Every meat ingredient MUST be ${proteinDisplay}. FORBIDDEN proteins (do NOT use any of these): ${forbiddenText}.
 Healthiness: ${request.healthiness_preference}
+${structureLine}
 ${cuisineLine}
 ${allergenLine}
 ${budgetLine}
@@ -336,7 +342,7 @@ JSON:
 {"template_id":${template.template_id},"chosen_protein":"${proteinDisplay}","title":"","why_it_fits_tonight":"","timing":{"prep_minutes":0,"cook_minutes":0,"total_minutes":0},"protein_safety":[{"protein":"","target_temp_f":0,"target_temp_c":0,"rest_minutes":0,"probe_where":"","notes":""}],"ingredients":[{"item":"","amount":"","notes":""}],"steps":[{"heading":"","body":""}],"cleanup_tip":"","macros_per_serving":{"calories":0,"protein_g":0,"carbs_g":0,"fat_g":0},"budget_level":"${budgetLevel}","budget_tips":[],"pro_tips":[],"tags":{"cuisine":"","cooking_method":"","base_carb":"","key_ingredients":[],"high_protein":false,"high_fiber":false,"quick_cleanup":false}${request.vegetarian_swap_needed ? ',"veg_option":{"enabled":true,"swap_protein":"","ingredients":[],"steps":[],"plating_notes":""}' : ""}}`;
 }
 
-function buildPantryPrompt(template: TemplateRow, request: GenerateRequest, varietyBlock: string, healthyBlock: string): string {
+function buildPantryPrompt(template: TemplateRow, request: GenerateRequest, varietyBlock: string, healthyBlock: string, structureType?: StructureType): string {
   const ingredientsList = (request.ingredients_on_hand || []).join(", ");
   const budgetLevel = request.budget_level || "standard";
 
@@ -356,12 +362,17 @@ function buildPantryPrompt(template: TemplateRow, request: GenerateRequest, vari
 
   const cuisineLine = buildCuisineDirective(request.cuisine_style || "any");
 
+  const structureLine = structureType
+    ? `MEAL STRUCTURE (mandatory): This recipe MUST be a ${STRUCTURE_DISPLAY[structureType]} style meal. Vary the format — do NOT default to a rice bowl.`
+    : `MEAL STRUCTURE: Vary the structure. Do NOT default to a rice bowl.`;
+
   return `Generate ONE firehall meal as JSON using crew's on-hand ingredients.
 
 ON HAND: ${ingredientsList}
 TEMPLATE: ${template.template_name} (${template.style}) — ${template.base_idea_description}
 CREW: ${request.crew_size} | Shift: ${request.busy_level} | Time: ${request.time_available} min | Appliances: ${request.appliances.join(", ")}
 Healthiness: ${request.healthiness_preference}
+${structureLine}
 ${cuisineLine}
 ${allergenLine}
 ${budgetLine}
@@ -444,18 +455,19 @@ export async function generateRecipe(
   template: TemplateRow,
   request: GenerateRequest,
   chosenProtein: string,
-  varietyConstraints?: VarietyConstraints
+  varietyConstraints?: VarietyConstraints,
+  structureType?: StructureType
 ): Promise<AIResult> {
   const genStart = Date.now();
   const budgetLevel = request.budget_level || "standard";
   const proteinDisplay = chosenProtein.charAt(0).toUpperCase() + chosenProtein.slice(1);
   const filterSummary = buildFilterSummary(request);
 
-  log(`Generating: ${template.template_name} (ID: ${template.template_id}), protein: ${proteinDisplay} | ${filterSummary}`, "ai");
+  log(`Generating: ${template.template_name} (ID: ${template.template_id}), protein: ${proteinDisplay}, structure: ${structureType || "any"} | ${filterSummary}`, "ai");
 
   const varietyBlock = varietyConstraints ? buildVarietyPromptBlock(varietyConstraints) : "";
   const healthyBlock = buildHealthyPromptBlock(request.healthiness_preference, request.busy_level);
-  const prompt = buildPrompt(template, request, chosenProtein, varietyBlock, healthyBlock);
+  const prompt = buildPrompt(template, request, chosenProtein, varietyBlock, healthyBlock, structureType);
   let totalTokensIn = 0;
   let totalTokensOut = 0;
 
@@ -501,17 +513,18 @@ export async function generateRecipe(
 export async function generateRecipeFromPantry(
   template: TemplateRow,
   request: GenerateRequest,
-  varietyConstraints?: VarietyConstraints
+  varietyConstraints?: VarietyConstraints,
+  structureType?: StructureType
 ): Promise<AIResult> {
   const genStart = Date.now();
   const budgetLevel = request.budget_level || "standard";
   const filterSummary = buildFilterSummary(request);
 
-  log(`Generating pantry recipe: ${template.template_name}, ingredients: ${(request.ingredients_on_hand || []).join(", ")} | ${filterSummary}`, "ai");
+  log(`Generating pantry recipe: ${template.template_name}, structure: ${structureType || "any"}, ingredients: ${(request.ingredients_on_hand || []).join(", ")} | ${filterSummary}`, "ai");
 
   const varietyBlock = varietyConstraints ? buildVarietyPromptBlock(varietyConstraints) : "";
   const healthyBlock = buildHealthyPromptBlock(request.healthiness_preference, request.busy_level);
-  const prompt = buildPantryPrompt(template, request, varietyBlock, healthyBlock);
+  const prompt = buildPantryPrompt(template, request, varietyBlock, healthyBlock, structureType);
 
   const result = await attemptGenerate(prompt, PANTRY_SYSTEM_PROMPT, template, "pantry", budgetLevel, false);
   if (result) {

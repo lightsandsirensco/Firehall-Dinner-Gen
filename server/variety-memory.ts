@@ -9,11 +9,38 @@ interface RecentEntry {
   cuisine: string;
   cooking_method: string;
   base_carb: string;
+  structure_type: string;
   key_ingredients: string[];
   timestamp: number;
 }
 
 const recentRecipes: RecentEntry[] = [];
+
+function inferStructureFromTitle(title: string, method: string): string {
+  const t = title.toLowerCase();
+  const m = method.toLowerCase();
+  if (t.includes("bowl")) return "bowl";
+  if (t.includes("wrap") || t.includes("burrito")) return "wrap";
+  if (t.includes("taco")) return "taco";
+  if (t.includes("sandwich") || t.includes("sub")) return "sandwich";
+  if (t.includes("burger")) return "burger";
+  if (t.includes("sheet pan") || m.includes("sheet")) return "sheet-pan";
+  if (t.includes("stir-fry") || t.includes("stir fry")) return "stir-fry";
+  if (t.includes("flatbread")) return "flatbread";
+  if (t.includes("stuffed")) return "stuffed";
+  if (t.includes("casserole")) return "casserole";
+  if (t.includes("bake") && !t.includes("rice bake")) return "bake";
+  if (t.includes("rice bake")) return "rice-bake";
+  if (t.includes("soup") || t.includes("stew") || t.includes("chili") || t.includes("chowder")) return "soup-stew";
+  if (t.includes("pasta") || t.includes("penne") || t.includes("spaghetti")) return "pasta";
+  if (t.includes("noodle")) return "noodle-toss";
+  if (t.includes("loaded fries") || t.includes("nacho fries")) return "loaded-fries";
+  if (t.includes("one-pot") || t.includes("one pot")) return "one-pot";
+  if (t.includes("breakfast") || t.includes("hash")) return "breakfast-for-dinner";
+  if (t.includes("skillet") || m.includes("skillet")) return "skillet";
+  if (t.includes("grill") || m.includes("grill")) return "grill";
+  return m || "skillet";
+}
 
 const CUISINE_POOL = [
   "Mediterranean",
@@ -36,6 +63,7 @@ export function recordRecipe(recipe: GenerateResponse): void {
     cuisine: tags?.cuisine?.toLowerCase() || "",
     cooking_method: tags?.cooking_method?.toLowerCase() || "",
     base_carb: tags?.base_carb?.toLowerCase() || "",
+    structure_type: inferStructureFromTitle(recipe.title, tags?.cooking_method || ""),
     key_ingredients: tags?.key_ingredients?.map((k) => k.toLowerCase()) || [],
     timestamp: Date.now(),
   };
@@ -53,6 +81,7 @@ export interface VarietyConstraints {
   avoid_methods: string[];
   avoid_proteins: string[];
   avoid_carbs: string[];
+  avoid_structures: string[];
   suggested_cuisine: string;
   recent_titles: string[];
 }
@@ -67,6 +96,7 @@ export function getVarietyConstraints(cuisineStyle?: string): VarietyConstraints
   const avoid_methods = Array.from(new Set(last3.map((r) => r.cooking_method).filter(Boolean)));
   const avoid_proteins = Array.from(new Set(last2.map((r) => r.protein).filter(Boolean)));
   const avoid_carbs = Array.from(new Set(last2.map((r) => r.base_carb).filter(Boolean)));
+  const avoid_structures = Array.from(new Set(last3.map((r) => r.structure_type).filter(Boolean)));
   const recent_titles = recentRecipes.slice(-5).map((r) => r.title);
 
   let suggested_cuisine = "";
@@ -85,6 +115,7 @@ export function getVarietyConstraints(cuisineStyle?: string): VarietyConstraints
     avoid_methods,
     avoid_proteins,
     avoid_carbs,
+    avoid_structures,
     suggested_cuisine,
     recent_titles,
   };
@@ -103,6 +134,10 @@ export function buildVarietyPromptBlock(constraints: VarietyConstraints): string
 
   if (constraints.avoid_methods.length > 0) {
     lines.push(`- Do NOT repeat these cooking methods (used recently): ${constraints.avoid_methods.join(", ")}. Use a different method (stir-fry, sheet-pan, one-pot, grilling, braising, sautéing, baking, slow-cook, etc.).`);
+  }
+
+  if (constraints.avoid_structures.length > 0) {
+    lines.push(`- Do NOT repeat these meal structures (used recently): ${constraints.avoid_structures.join(", ")}. Use a completely different format (bowl, wrap, taco, sandwich, burger, sheet-pan, casserole, pasta, stuffed, flatbread, etc.).`);
   }
 
   if (constraints.avoid_proteins.length > 0) {

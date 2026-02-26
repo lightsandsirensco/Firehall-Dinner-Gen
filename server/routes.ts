@@ -12,6 +12,7 @@ import { getFromPool, refillPool, getPoolSize } from "./recipe-pool";
 import { initHallVoteTables, createHallVote, getHallVote, castBallot, closeHallVote, hashVoterFingerprint } from "./hall-vote-store";
 import { addFavourite, getFavourites, removeFavourite } from "./favourites";
 import { buildFallbackRecipe, trackFallbackTemplateId, getRecentFallbackTemplateIds } from "./fallback-recipe";
+import { pickStructure, trackStructure } from "./structure-variety";
 import { log } from "./index";
 import {
   initCacheStore,
@@ -235,6 +236,9 @@ export async function registerRoutes(
 
       const varietyConstraints = getVarietyConstraints(request.cuisine_style);
 
+      const structureType = pickStructure(request.appliances, request.time_available);
+      log(`[structure] Selected: ${structureType} for protein: ${chosenProtein}`, "variety");
+
       const FAST_FALLBACK_MS = 8_000;
 
       const recentFbIds = getRecentFallbackTemplateIds();
@@ -248,12 +252,12 @@ export async function registerRoutes(
           : pool[Math.floor(Math.random() * pool.length)];
       }
       const fallbackProtein = request.use_what_we_have ? "pantry" : chooseProtein(fallbackTemplate, request.proteins, request.healthiness_preference);
-      const fallbackRecipe = buildFallbackRecipe(fallbackTemplate, request, fallbackProtein);
+      const fallbackRecipe = buildFallbackRecipe(fallbackTemplate, request, fallbackProtein, structureType);
 
       const aiPromise = (async () => {
         const result = request.use_what_we_have
-          ? await generateRecipeFromPantry(chosen, request, varietyConstraints)
-          : await generateRecipe(chosen, request, chosenProtein, varietyConstraints);
+          ? await generateRecipeFromPantry(chosen, request, varietyConstraints, structureType)
+          : await generateRecipe(chosen, request, chosenProtein, varietyConstraints, structureType);
         return result;
       })();
 
@@ -270,6 +274,7 @@ export async function registerRoutes(
 
       if (raceResult.type === "ai") {
         const { recipe, tokensIn, tokensOut } = raceResult.result;
+        trackStructure(structureType);
         recordRecipe(recipe);
         const estimatedCost =
           (tokensIn / 1000) * COST_PER_1K_INPUT +
@@ -296,7 +301,8 @@ export async function registerRoutes(
       if (raceResult.type === "timeout") {
         const fbTemplateId = parseInt(fallbackTemplate.template_id);
         trackFallbackTemplateId(fbTemplateId);
-        log(`AI exceeded ${FAST_FALLBACK_MS}ms — serving fast fallback (template ${fbTemplateId}), AI continues in background${isColdStart ? " [COLD START]" : ""}`, "fallback");
+        trackStructure(structureType);
+        log(`AI exceeded ${FAST_FALLBACK_MS}ms — serving fast fallback (template ${fbTemplateId}, structure ${structureType}), AI continues in background${isColdStart ? " [COLD START]" : ""}`, "fallback");
         recordRecipe(fallbackRecipe);
         logUsage({
           cacheKey,
@@ -332,7 +338,8 @@ export async function registerRoutes(
         : "ai_error";
       const fbTemplateId = parseInt(fallbackTemplate.template_id);
       trackFallbackTemplateId(fbTemplateId);
-      log(`AI generation failed (${errorCategory}): ${aiError?.message}${isColdStart ? " [COLD START]" : ""} — serving fallback (template ${fbTemplateId})`, "fallback");
+      trackStructure(structureType);
+      log(`AI generation failed (${errorCategory}): ${aiError?.message}${isColdStart ? " [COLD START]" : ""} — serving fallback (template ${fbTemplateId}, structure ${structureType})`, "fallback");
       recordRecipe(fallbackRecipe);
       logUsage({
         cacheKey,

@@ -1,5 +1,6 @@
 import type { TemplateRow, GenerateRequest, GenerateResponse } from "@shared/schema";
 import { log } from "./index";
+import type { StructureType } from "./structure-variety";
 
 interface RawIngredient {
   item: string;
@@ -191,50 +192,160 @@ const PROTEIN_SAFETY: Record<string, { protein: string; target_temp_f: number; t
   fish: { protein: "Fish", target_temp_f: 145, target_temp_c: 63, rest_minutes: 0, probe_where: "Center of the thickest fillet", notes: "Fish should flake easily with a fork when done." },
 };
 
-const FALLBACK_TITLE_VARIANTS: Record<string, string[]> = {
+interface FallbackArchetype {
+  structure: StructureType;
+  title: string;
+  baseCarb: string;
+  cookingMethod: string;
+}
+
+const FALLBACK_ARCHETYPES: Record<string, FallbackArchetype[]> = {
   chicken: [
-    "Quick Chicken & Veggie Stir-Fry with Rice",
-    "Garlic Herb Chicken with Roasted Vegetables",
-    "Crew-Style Chicken Rice Bowls",
-    "Skillet Chicken with Peppers & Rice",
-    "Station House Chicken & Veggie Dinner",
+    { structure: "bowl", title: "Chipotle Chicken Rice Bowls", baseCarb: "rice", cookingMethod: "stovetop" },
+    { structure: "wrap", title: "Buffalo Chicken Wraps", baseCarb: "tortilla", cookingMethod: "stovetop" },
+    { structure: "taco", title: "Chicken Street Tacos", baseCarb: "tortilla", cookingMethod: "skillet" },
+    { structure: "sandwich", title: "Grilled Chicken Subs with Peppers", baseCarb: "sub roll", cookingMethod: "grill" },
+    { structure: "sheet-pan", title: "Greek Sheet Pan Chicken & Vegetables", baseCarb: "pita", cookingMethod: "oven" },
+    { structure: "skillet", title: "Creamy Garlic Chicken Skillet", baseCarb: "rice", cookingMethod: "stovetop" },
+    { structure: "stir-fry", title: "Teriyaki Chicken Stir-Fry", baseCarb: "rice", cookingMethod: "stovetop" },
+    { structure: "flatbread", title: "BBQ Chicken Flatbreads", baseCarb: "flatbread", cookingMethod: "oven" },
+    { structure: "stuffed", title: "Chicken & Rice Stuffed Peppers", baseCarb: "rice", cookingMethod: "oven" },
+    { structure: "pasta", title: "Lemon Garlic Chicken Pasta", baseCarb: "pasta", cookingMethod: "stovetop" },
+    { structure: "bake", title: "Chicken Taco Bake", baseCarb: "tortilla", cookingMethod: "oven" },
+    { structure: "one-pot", title: "One-Pot Chicken & Veggie Rice", baseCarb: "rice", cookingMethod: "stovetop" },
+    { structure: "noodle-toss", title: "Sesame Chicken Noodle Toss", baseCarb: "noodles", cookingMethod: "stovetop" },
+    { structure: "soup-stew", title: "Hearty Chicken & Vegetable Stew", baseCarb: "crusty bread", cookingMethod: "stovetop" },
+    { structure: "loaded-fries", title: "Loaded Chicken Nacho Fries", baseCarb: "fries", cookingMethod: "oven" },
+    { structure: "casserole", title: "Chicken Enchilada Casserole", baseCarb: "tortilla", cookingMethod: "oven" },
+    { structure: "burger", title: "Smash Chicken Burgers", baseCarb: "bun", cookingMethod: "skillet" },
+    { structure: "breakfast-for-dinner", title: "Chicken & Veggie Breakfast Hash", baseCarb: "potato", cookingMethod: "skillet" },
+    { structure: "grill", title: "Herb-Marinated Grilled Chicken Plates", baseCarb: "couscous", cookingMethod: "grill" },
+    { structure: "rice-bake", title: "Cheesy Chicken & Rice Bake", baseCarb: "rice", cookingMethod: "oven" },
   ],
   beef: [
-    "One-Pot Seasoned Beef with Tomatoes & Rice",
-    "Skillet Beef & Vegetable Rice Bowls",
-    "Crew-Ready Beef Stir-Fry with Rice",
-    "Firehouse Beef & Pepper Skillet",
-    "Quick Beef & Veggie One-Pan Dinner",
+    { structure: "bowl", title: "Korean Beef Rice Bowls", baseCarb: "rice", cookingMethod: "stovetop" },
+    { structure: "wrap", title: "Philly Cheesesteak Wraps", baseCarb: "tortilla", cookingMethod: "skillet" },
+    { structure: "taco", title: "Seasoned Beef Street Tacos", baseCarb: "tortilla", cookingMethod: "skillet" },
+    { structure: "sandwich", title: "French Dip Beef Sandwiches", baseCarb: "hoagie roll", cookingMethod: "stovetop" },
+    { structure: "burger", title: "Smash Burgers with All the Fixings", baseCarb: "bun", cookingMethod: "skillet" },
+    { structure: "sheet-pan", title: "Sheet Pan Beef & Veggie Fajitas", baseCarb: "tortilla", cookingMethod: "oven" },
+    { structure: "skillet", title: "Firehouse Beef & Pepper Skillet", baseCarb: "rice", cookingMethod: "stovetop" },
+    { structure: "stir-fry", title: "Beef & Broccoli Stir-Fry", baseCarb: "rice", cookingMethod: "stovetop" },
+    { structure: "stuffed", title: "Beef & Cheese Stuffed Peppers", baseCarb: "rice", cookingMethod: "oven" },
+    { structure: "casserole", title: "Beef & Potato Casserole", baseCarb: "potato", cookingMethod: "oven" },
+    { structure: "pasta", title: "Beefy Marinara Pasta Bake", baseCarb: "pasta", cookingMethod: "oven" },
+    { structure: "soup-stew", title: "Hearty Beef & Vegetable Stew", baseCarb: "crusty bread", cookingMethod: "stovetop" },
+    { structure: "one-pot", title: "One-Pot Beef Chili Mac", baseCarb: "pasta", cookingMethod: "stovetop" },
+    { structure: "noodle-toss", title: "Mongolian Beef Noodle Toss", baseCarb: "noodles", cookingMethod: "stovetop" },
+    { structure: "loaded-fries", title: "Loaded Beef Nacho Fries", baseCarb: "fries", cookingMethod: "oven" },
+    { structure: "flatbread", title: "Beef & Onion Flatbreads", baseCarb: "flatbread", cookingMethod: "oven" },
+    { structure: "bake", title: "Beef Enchilada Bake", baseCarb: "tortilla", cookingMethod: "oven" },
+    { structure: "stuffed-bread", title: "Beef & Cheese Stuffed Bread", baseCarb: "bread dough", cookingMethod: "oven" },
+    { structure: "breakfast-for-dinner", title: "Beef & Egg Breakfast Skillet", baseCarb: "potato", cookingMethod: "skillet" },
+    { structure: "rice-bake", title: "Cheesy Beef & Rice Bake", baseCarb: "rice", cookingMethod: "oven" },
   ],
   pork: [
-    "Roasted Pork Tenderloin with Potatoes & Green Beans",
-    "Honey Mustard Pork with Roasted Potatoes",
-    "Skillet Pork Chops with Seasonal Vegetables",
-    "Station House Pork & Veggie Sheet Pan",
-    "Crew-Style Pork Tenderloin Dinner",
+    { structure: "bowl", title: "Hawaiian Pork Rice Bowls", baseCarb: "rice", cookingMethod: "stovetop" },
+    { structure: "wrap", title: "Pulled Pork Wraps with Slaw", baseCarb: "tortilla", cookingMethod: "stovetop" },
+    { structure: "taco", title: "Carnitas Street Tacos", baseCarb: "tortilla", cookingMethod: "skillet" },
+    { structure: "sandwich", title: "BBQ Pulled Pork Sandwiches", baseCarb: "bun", cookingMethod: "slow cooker" },
+    { structure: "sheet-pan", title: "Sheet Pan Pork Chops & Roasted Veggies", baseCarb: "sweet potato", cookingMethod: "oven" },
+    { structure: "skillet", title: "Honey Mustard Pork Skillet", baseCarb: "rice", cookingMethod: "stovetop" },
+    { structure: "stir-fry", title: "Ginger Pork Stir-Fry", baseCarb: "rice", cookingMethod: "stovetop" },
+    { structure: "flatbread", title: "Pork & Caramelized Onion Flatbreads", baseCarb: "flatbread", cookingMethod: "oven" },
+    { structure: "stuffed", title: "Pork & Apple Stuffed Sweet Potatoes", baseCarb: "sweet potato", cookingMethod: "oven" },
+    { structure: "pasta", title: "Pork Ragu Pasta", baseCarb: "pasta", cookingMethod: "stovetop" },
+    { structure: "one-pot", title: "One-Pot Pork & Rice Dinner", baseCarb: "rice", cookingMethod: "stovetop" },
+    { structure: "noodle-toss", title: "Szechuan Pork Noodle Toss", baseCarb: "noodles", cookingMethod: "stovetop" },
+    { structure: "soup-stew", title: "Pork & White Bean Stew", baseCarb: "crusty bread", cookingMethod: "stovetop" },
+    { structure: "bake", title: "Pork Tenderloin & Potato Bake", baseCarb: "potato", cookingMethod: "oven" },
+    { structure: "loaded-fries", title: "Loaded Pulled Pork Fries", baseCarb: "fries", cookingMethod: "oven" },
+    { structure: "casserole", title: "Pork & Veggie Casserole", baseCarb: "rice", cookingMethod: "oven" },
+    { structure: "burger", title: "Pork Smash Burgers", baseCarb: "bun", cookingMethod: "skillet" },
+    { structure: "breakfast-for-dinner", title: "Pork & Hash Brown Breakfast Skillet", baseCarb: "potato", cookingMethod: "skillet" },
+    { structure: "grill", title: "Grilled Pork Chops with Corn Salad", baseCarb: "corn", cookingMethod: "grill" },
+    { structure: "rice-bake", title: "Cheesy Pork & Rice Bake", baseCarb: "rice", cookingMethod: "oven" },
   ],
   turkey: [
-    "Turkey Taco Bowls with Black Beans & Rice",
-    "Seasoned Turkey & Veggie Rice Bowls",
-    "Quick Turkey Skillet with Black Beans",
-    "Firehouse Turkey Lettuce Wraps",
-    "Station House Turkey & Rice Dinner",
+    { structure: "bowl", title: "Turkey Taco Bowls with Black Beans", baseCarb: "rice", cookingMethod: "stovetop" },
+    { structure: "wrap", title: "Turkey Lettuce Wraps", baseCarb: "lettuce", cookingMethod: "stovetop" },
+    { structure: "taco", title: "Spiced Turkey Tacos", baseCarb: "tortilla", cookingMethod: "skillet" },
+    { structure: "sandwich", title: "Turkey Meatball Subs", baseCarb: "sub roll", cookingMethod: "oven" },
+    { structure: "burger", title: "Turkey Smash Burgers", baseCarb: "bun", cookingMethod: "skillet" },
+    { structure: "sheet-pan", title: "Sheet Pan Turkey & Sweet Potato", baseCarb: "sweet potato", cookingMethod: "oven" },
+    { structure: "skillet", title: "Turkey Sausage & Pepper Skillet", baseCarb: "rice", cookingMethod: "stovetop" },
+    { structure: "stir-fry", title: "Turkey & Veggie Stir-Fry", baseCarb: "rice", cookingMethod: "stovetop" },
+    { structure: "stuffed", title: "Turkey & Quinoa Stuffed Peppers", baseCarb: "quinoa", cookingMethod: "oven" },
+    { structure: "casserole", title: "Turkey Enchilada Casserole", baseCarb: "tortilla", cookingMethod: "oven" },
+    { structure: "pasta", title: "Turkey Bolognese Pasta", baseCarb: "pasta", cookingMethod: "stovetop" },
+    { structure: "soup-stew", title: "Turkey & White Bean Chili", baseCarb: "cornbread", cookingMethod: "stovetop" },
+    { structure: "one-pot", title: "One-Pot Turkey & Rice", baseCarb: "rice", cookingMethod: "stovetop" },
+    { structure: "noodle-toss", title: "Asian Turkey Noodle Toss", baseCarb: "noodles", cookingMethod: "stovetop" },
+    { structure: "loaded-fries", title: "Loaded Turkey Taco Fries", baseCarb: "fries", cookingMethod: "oven" },
+    { structure: "flatbread", title: "Turkey & Pesto Flatbreads", baseCarb: "flatbread", cookingMethod: "oven" },
+    { structure: "bake", title: "Turkey & Veggie Rice Bake", baseCarb: "rice", cookingMethod: "oven" },
+    { structure: "breakfast-for-dinner", title: "Turkey Sausage Breakfast Hash", baseCarb: "potato", cookingMethod: "skillet" },
+    { structure: "grill", title: "Grilled Turkey Burgers with Fixings", baseCarb: "bun", cookingMethod: "grill" },
+    { structure: "rice-bake", title: "Turkey & Black Bean Rice Bake", baseCarb: "rice", cookingMethod: "oven" },
   ],
   fish: [
-    "Pan-Seared Salmon with Rice & Roasted Asparagus",
-    "Herb-Crusted Fish with Lemon & Rice",
-    "Quick Fish & Veggie Rice Bowls",
-    "Skillet Fish with Garlic Vegetables",
-    "Station House Seafood Dinner",
+    { structure: "bowl", title: "Teriyaki Salmon Rice Bowls", baseCarb: "rice", cookingMethod: "stovetop" },
+    { structure: "wrap", title: "Fish & Slaw Wraps", baseCarb: "tortilla", cookingMethod: "stovetop" },
+    { structure: "taco", title: "Crispy Fish Tacos with Lime Crema", baseCarb: "tortilla", cookingMethod: "skillet" },
+    { structure: "sandwich", title: "Crispy Fish Sandwiches", baseCarb: "bun", cookingMethod: "skillet" },
+    { structure: "sheet-pan", title: "Sheet Pan Salmon & Asparagus", baseCarb: "rice", cookingMethod: "oven" },
+    { structure: "skillet", title: "Lemon Butter Fish Skillet", baseCarb: "rice", cookingMethod: "stovetop" },
+    { structure: "stir-fry", title: "Ginger Fish & Veggie Stir-Fry", baseCarb: "rice", cookingMethod: "stovetop" },
+    { structure: "flatbread", title: "Smoked Salmon Flatbreads", baseCarb: "flatbread", cookingMethod: "oven" },
+    { structure: "pasta", title: "Garlic Shrimp & Lemon Pasta", baseCarb: "pasta", cookingMethod: "stovetop" },
+    { structure: "one-pot", title: "One-Pot Fish & Rice Dinner", baseCarb: "rice", cookingMethod: "stovetop" },
+    { structure: "noodle-toss", title: "Thai Fish Noodle Toss", baseCarb: "noodles", cookingMethod: "stovetop" },
+    { structure: "soup-stew", title: "Hearty Fish & Potato Chowder", baseCarb: "crusty bread", cookingMethod: "stovetop" },
+    { structure: "bake", title: "Herb-Crusted Fish Bake", baseCarb: "potato", cookingMethod: "oven" },
+    { structure: "loaded-fries", title: "Loaded Fish & Chips Fries", baseCarb: "fries", cookingMethod: "oven" },
+    { structure: "casserole", title: "Fish & Veggie Rice Casserole", baseCarb: "rice", cookingMethod: "oven" },
+    { structure: "burger", title: "Salmon Burgers with Dill Sauce", baseCarb: "bun", cookingMethod: "skillet" },
+    { structure: "breakfast-for-dinner", title: "Smoked Salmon Breakfast Plates", baseCarb: "toast", cookingMethod: "stovetop" },
+    { structure: "grill", title: "Grilled Fish with Citrus & Rice", baseCarb: "rice", cookingMethod: "grill" },
+    { structure: "rice-bake", title: "Cheesy Fish & Rice Bake", baseCarb: "rice", cookingMethod: "oven" },
+    { structure: "stuffed", title: "Fish-Stuffed Bell Peppers", baseCarb: "rice", cookingMethod: "oven" },
   ],
 };
 
 const recentFallbackTemplateIds: number[] = [];
 const MAX_RECENT_FALLBACKS = 5;
 
-function pickFallbackTitle(protein: string): string {
-  const variants = FALLBACK_TITLE_VARIANTS[protein] || FALLBACK_TITLE_VARIANTS.chicken;
-  return variants[Math.floor(Math.random() * variants.length)];
+export function pickFallbackArchetype(protein: string, structureType: StructureType, appliances: string[]): FallbackArchetype {
+  const archetypes = FALLBACK_ARCHETYPES[protein] || FALLBACK_ARCHETYPES.chicken;
+  const appLower = appliances.map(a => a.toLowerCase());
+
+  const COOKING_METHOD_APPLIANCE_MAP: Record<string, string[]> = {
+    "stovetop": ["stove"],
+    "skillet": ["stove"],
+    "oven": ["oven", "air fryer"],
+    "grill": ["grill"],
+    "slow cooker": ["slow cooker", "instant pot"],
+    "instant pot": ["instant pot", "slow cooker"],
+    "air fryer": ["air fryer", "oven"],
+    "microwave": ["microwave"],
+  };
+
+  const methodCompatible = (method: string) => {
+    const needed = COOKING_METHOD_APPLIANCE_MAP[method] || ["stove"];
+    return needed.some(a => appLower.includes(a));
+  };
+
+  const structMatch = archetypes.filter(a => a.structure === structureType && methodCompatible(a.cookingMethod));
+  if (structMatch.length > 0) {
+    return structMatch[Math.floor(Math.random() * structMatch.length)];
+  }
+
+  const anyCompatible = archetypes.filter(a => methodCompatible(a.cookingMethod));
+  if (anyCompatible.length > 0) {
+    return anyCompatible[Math.floor(Math.random() * anyCompatible.length)];
+  }
+
+  return archetypes[Math.floor(Math.random() * archetypes.length)];
 }
 
 export function trackFallbackTemplateId(templateId: number) {
@@ -497,7 +608,8 @@ function getBudgetTips(budgetLevel: string): string[] {
 export function buildFallbackRecipe(
   template: TemplateRow,
   request: GenerateRequest,
-  chosenProtein: string
+  chosenProtein: string,
+  structureType?: StructureType
 ): GenerateResponse {
   const protein = chosenProtein.toLowerCase();
   const proteinKey = Object.keys(PROTEIN_INGREDIENTS).includes(protein) ? protein : "chicken";
@@ -545,7 +657,10 @@ export function buildFallbackRecipe(
   };
   const macros = adjustMacrosForHealthiness(baseMacros, healthiness);
 
-  const baseTitle = pickFallbackTitle(finalProtein);
+  const archetype = structureType
+    ? pickFallbackArchetype(finalProtein, structureType, appliances)
+    : pickFallbackArchetype(finalProtein, "skillet", appliances);
+  const baseTitle = archetype.title;
   const title = cuisineData
     ? `${cuisineData.titlePrefix} ${baseTitle}`
     : baseTitle;
@@ -626,12 +741,12 @@ export function buildFallbackRecipe(
     veg_option: vegOption,
     tags: {
       cuisine: cuisineData ? cuisineStyle.replace("_", " ") : "American",
-      cooking_method: cookingMethod,
-      base_carb: "rice",
-      key_ingredients: [proteinDisplay, "rice", "vegetables"],
+      cooking_method: archetype.cookingMethod || cookingMethod,
+      base_carb: archetype.baseCarb || "rice",
+      key_ingredients: [proteinDisplay, archetype.baseCarb || "rice", "vegetables"],
       high_protein: true,
       high_fiber: healthiness === "lean",
-      quick_cleanup: true,
+      quick_cleanup: archetype.structure === "one-pot" || archetype.structure === "sheet-pan",
     },
     ingredients_used: [],
     extra_items_needed: [],
