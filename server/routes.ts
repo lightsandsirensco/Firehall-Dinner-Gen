@@ -4,7 +4,7 @@ import crypto from "crypto";
 import cookieParser from "cookie-parser";
 import { generateRequestSchema, pizzaRequestSchema, hallVoteCreateSchema, type GenerateResponse, type ClientRecipeResponse, type ClientIngredient, type ClientStep, type ClientProteinSafety, type ClientPlating, type ClientTiming } from "@shared/schema";
 import { loadTemplates, filterTemplates, pickTemplate, chooseProtein } from "./templates";
-import { generateRecipe, generateRecipeFromPantry } from "./ai";
+import { generateRecipe, generateRecipeFromPantry, repairRecipe, buildSafeFallbackRecipe } from "./ai";
 import { getVarietyConstraints, recordRecipe } from "./variety-memory";
 import { generatePizzaRecipe, pickPizzaConcept } from "./pizza-ai";
 import { subscribeToList, trackRecipeEvent, trackShoppingListEvent, validateKlaviyoConfig } from "./klaviyo";
@@ -14,7 +14,7 @@ import { addFavourite, getFavourites, removeFavourite } from "./favourites";
 import { buildFallbackRecipe, trackFallbackTemplateId, getRecentFallbackTemplateIds } from "./fallback-recipe";
 import { pickStructure, trackStructure, STRUCTURE_DISPLAY } from "./structure-variety";
 import { log } from "./index";
-import { validateAndFixRecipe, computeSignature, recordSignature, type RecipeValidationContext } from "./validateRecipe";
+import { validateAndFixRecipe, validateRecipe, computeSignature, recordSignature, type RecipeValidationContext } from "./validateRecipe";
 import {
   initCacheStore,
   buildCacheKey,
@@ -493,30 +493,89 @@ export async function registerRoutes(
       });
 
       if (raceResult.type === "ai") {
-        const { recipe, tokensIn, tokensOut } = raceResult.result;
+        let { recipe, tokensIn, tokensOut } = raceResult.result;
+        let totalTokensIn = tokensIn;
+        let totalTokensOut = tokensOut;
         trackStructure(structureType);
         recordRecipe(recipe);
+
+        const aiRecipeWithStyle = { ...recipe, meal_style: mealStyleDisplay };
+        let aiValidation = validateAndFixRecipe(aiRecipeWithStyle, validationCtx);
+
+        const contentErrors = validateRecipe(aiValidation.recipe);
+        const blockingErrors = contentErrors.filter(e =>
+          e.startsWith("format_missing_required:") ||
+          e.startsWith("format_has_forbidden:") ||
+          e.startsWith("format_missing_step:") ||
+          e.startsWith("format_forbidden_step:")
+        );
+
+        if (blockingErrors.length > 0) {
+          log(`[repair-loop] Attempt 1 failed with ${blockingErrors.length} blocking errors — requesting LLM repair`, "ai");
+          try {
+            const repairResult = await repairRecipe(
+              aiValidation.recipe,
+              contentErrors,
+              chosen,
+              chosenProtein,
+              request.budget_level || "standard"
+            );
+
+            if (repairResult) {
+              totalTokensIn += repairResult.tokensIn;
+              totalTokensOut += repairResult.tokensOut;
+              const repairedWithStyle = { ...repairResult.recipe, meal_style: mealStyleDisplay };
+              aiValidation = validateAndFixRecipe(repairedWithStyle, validationCtx);
+
+              const repairErrors = validateRecipe(aiValidation.recipe);
+              const repairBlocking = repairErrors.filter(e =>
+                e.startsWith("format_missing_required:") ||
+                e.startsWith("format_has_forbidden:") ||
+                e.startsWith("format_missing_step:") ||
+                e.startsWith("format_forbidden_step:")
+              );
+
+              if (repairBlocking.length > 0) {
+                log(`[repair-loop] Attempt 2 still invalid (${repairBlocking.length} blocking) — serving safe fallback`, "ai");
+                const safeFb = buildSafeFallbackRecipe(request.meal_format || mealStyleDisplay, request.crew_size);
+                const safeFbWithStyle = { ...safeFb, meal_style: mealStyleDisplay, _fallback: true };
+                aiValidation = validateAndFixRecipe(safeFbWithStyle as any, validationCtx);
+              } else {
+                log(`[repair-loop] Repair succeeded on attempt 2`, "ai");
+              }
+            } else {
+              log(`[repair-loop] Repair call failed — serving safe fallback`, "ai");
+              const safeFb = buildSafeFallbackRecipe(request.meal_format || mealStyleDisplay, request.crew_size);
+              const safeFbWithStyle = { ...safeFb, meal_style: mealStyleDisplay, _fallback: true };
+              aiValidation = validateAndFixRecipe(safeFbWithStyle as any, validationCtx);
+            }
+          } catch (repairErr: any) {
+            log(`[repair-loop] Repair error: ${repairErr.message} — serving safe fallback`, "ai");
+            const safeFb = buildSafeFallbackRecipe(request.meal_format || mealStyleDisplay, request.crew_size);
+            const safeFbWithStyle = { ...safeFb, meal_style: mealStyleDisplay, _fallback: true };
+            aiValidation = validateAndFixRecipe(safeFbWithStyle as any, validationCtx);
+          }
+        }
+
         const estimatedCost =
-          (tokensIn / 1000) * COST_PER_1K_INPUT +
-          (tokensOut / 1000) * COST_PER_1K_OUTPUT;
-        setCachedRecipe(cacheKey, parseInt(chosen.template_id), recipe);
+          (totalTokensIn / 1000) * COST_PER_1K_INPUT +
+          (totalTokensOut / 1000) * COST_PER_1K_OUTPUT;
+        setCachedRecipe(cacheKey, parseInt(chosen.template_id), aiValidation.recipe);
         logUsage({
           cacheKey,
           templateId: parseInt(chosen.template_id),
           cacheHit: false,
-          tokensIn,
-          tokensOut,
+          tokensIn: totalTokensIn,
+          tokensOut: totalTokensOut,
           estimatedCost,
           latencyMs: Date.now() - startTime,
           ipHash,
           sessionId,
         });
-        log(`Generated in ${Date.now() - startTime}ms | ${tokensIn}in/${tokensOut}out | ~$${estimatedCost.toFixed(5)}${raceResult.result.fallback ? " [FALLBACK_REMIX]" : ""}${isColdStart ? " [COLD START]" : ""}`, "perf");
+        log(`Generated in ${Date.now() - startTime}ms | ${totalTokensIn}in/${totalTokensOut}out | ~$${estimatedCost.toFixed(5)}${raceResult.result.fallback ? " [FALLBACK_REMIX]" : ""}${isColdStart ? " [COLD START]" : ""}`, "perf");
         if (process.env.ENABLE_POOL_WARMUP === "true") {
           refillPool().catch(() => {});
         }
-        const aiRecipeWithStyle = { ...recipe, meal_style: mealStyleDisplay };
-        const aiValidation = validateAndFixRecipe(aiRecipeWithStyle, validationCtx);
         recordSignature(chosenProtein, aiValidation.signature);
         return res.json(buildResponse(aiValidation, {}, debugMode, request.crew_size, request.meal_format));
       }

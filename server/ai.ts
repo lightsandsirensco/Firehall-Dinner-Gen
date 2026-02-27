@@ -677,3 +677,181 @@ export async function generateRecipeFromPantry(
 
   throw new Error("Couldn't generate a pantry recipe. Please try again.");
 }
+
+const REPAIR_SYSTEM_PROMPT = "You are a recipe repair assistant. You receive a recipe JSON and a list of validation errors. Fix ONLY the issues described. Return ONLY corrected JSON. No markdown, no explanation.";
+
+export async function repairRecipe(
+  recipe: GenerateResponse,
+  validationErrors: string[],
+  template: TemplateRow,
+  chosenProtein: string,
+  budgetLevel: string
+): Promise<AIResult | null> {
+  const repairPrompt = `The following recipe JSON failed validation. Fix it and return ONLY corrected JSON.
+
+PREVIOUS JSON:
+${JSON.stringify(recipe, null, 2)}
+
+VALIDATION ERRORS:
+${JSON.stringify(validationErrors)}
+
+INSTRUCTIONS:
+- Return ONLY corrected JSON. Do not change meal_format or servings.
+- Do not add rice unless meal_format is bowl.
+- Fix every listed error while keeping the recipe coherent.
+- Keep the same title style, protein, and crew size.
+- Ensure every ingredient is used in at least one step.
+- Ensure steps do not reference ingredients not in the ingredients list.
+- Respect format constraints (e.g., burgers need buns, tacos need tortillas, bowls need a base layer).`;
+
+  try {
+    log(`[repair] Attempting repair for "${recipe.title}" with ${validationErrors.length} errors: ${validationErrors.join(", ")}`, "ai");
+    const { content, tokensIn, tokensOut } = await callAI(repairPrompt, REPAIR_SYSTEM_PROMPT, true, 15_000);
+    const repaired = tryParseRecipe(content, template, chosenProtein, budgetLevel);
+    if (repaired) {
+      log(`[repair] Repair succeeded: "${repaired.title}"`, "ai");
+      return { recipe: repaired, tokensIn, tokensOut };
+    }
+    log(`[repair] Repair returned unparseable JSON`, "ai");
+    return null;
+  } catch (err: any) {
+    log(`[repair] Repair LLM call failed: ${err.message}`, "ai");
+    return null;
+  }
+}
+
+const SAFE_FALLBACK_RECIPES: Record<string, () => GenerateResponse> = {
+  "sheet-pan": () => ({
+    template_id: 0,
+    chosen_protein: "Chicken",
+    primary_protein_source: "Chicken",
+    title: "Classic Sheet-Pan Chicken & Vegetables",
+    why_it_fits_tonight: "Simple, reliable, and feeds the whole crew with minimal cleanup.",
+    timing: { prep_minutes: 10, cook_minutes: 25, total_minutes: 35 },
+    protein_safety: [{ protein: "Chicken", target_temp_f: 165, target_temp_c: 74, rest_minutes: 0, probe_where: "Thickest part of the breast", notes: "All poultry must reach 165°F." }],
+    ingredients: [
+      { item: "Boneless skinless chicken breasts", amount: "3 lbs", notes: "Cut into 1-inch cubes" },
+      { item: "Broccoli florets", amount: "4 cups", notes: "" },
+      { item: "Bell peppers", amount: "3 large", notes: "Cut into strips" },
+      { item: "Red onion", amount: "2 large", notes: "Cut into wedges" },
+      { item: "Olive oil", amount: "3 tbsp", notes: "" },
+      { item: "Garlic powder", amount: "1 tbsp", notes: "" },
+      { item: "Smoked paprika", amount: "1 tbsp", notes: "" },
+      { item: "Salt and pepper", amount: "To taste", notes: "" },
+    ],
+    steps: [
+      { heading: "Preheat oven (425°F, 2 min)", body: "Preheat oven to 425°F. Line a large sheet pan with parchment paper." },
+      { heading: "Season the chicken (no heat, 5 min)", body: "Toss chicken cubes with olive oil, garlic powder, smoked paprika, salt, and pepper in a large bowl." },
+      { heading: "Arrange on sheet pan (no heat, 3 min)", body: "Spread seasoned chicken and all vegetables (broccoli florets, bell pepper strips, red onion wedges) in a single layer on the sheet pan. Don't overcrowd." },
+      { heading: "Roast (425°F oven, 25 min)", body: "Roast for 25 minutes, flipping chicken and vegetables halfway through, until chicken reaches 165°F and vegetables are tender with charred edges." },
+      { heading: "Serve (no heat, 2 min)", body: "Divide chicken and vegetables among plates. Serve immediately." },
+    ],
+    cleanup_tip: "Line the sheet pan with parchment for zero-scrub cleanup.",
+    macros_per_serving: { calories: 380, protein_g: 42, carbs_g: 18, fat_g: 14 },
+    budget_level: "standard",
+    budget_tips: ["Buy chicken in bulk and freeze portions.", "Use whatever vegetables are on sale."],
+    pro_tips: ["Don't overcrowd the pan — air circulation is key to crispy edges.", "Pat chicken dry before seasoning for better browning."],
+    tags: { cuisine: "", cooking_method: "sheet-pan", base_carb: "none", key_ingredients: ["Chicken", "Broccoli", "Bell Peppers"], high_protein: true, high_fiber: false, quick_cleanup: true },
+    meal_style: "Sheet Pan",
+    ingredients_used: [],
+    extra_items_needed: [],
+  }),
+  burger: () => ({
+    template_id: 0,
+    chosen_protein: "Beef",
+    primary_protein_source: "Beef",
+    title: "Classic Smash Burgers",
+    why_it_fits_tonight: "Fast, satisfying, and a crew favorite every time.",
+    timing: { prep_minutes: 10, cook_minutes: 15, total_minutes: 25 },
+    protein_safety: [{ protein: "Beef (ground)", target_temp_f: 160, target_temp_c: 71, rest_minutes: 0, probe_where: "Center of patty", notes: "Ground beef must reach 160°F." }],
+    ingredients: [
+      { item: "Ground beef (80/20)", amount: "3 lbs", notes: "" },
+      { item: "Burger buns", amount: "6", notes: "Brioche or sesame" },
+      { item: "Cheddar cheese slices", amount: "6", notes: "" },
+      { item: "Lettuce leaves", amount: "6", notes: "" },
+      { item: "Tomato", amount: "2 large", notes: "Sliced" },
+      { item: "Red onion", amount: "1 large", notes: "Sliced into rings" },
+      { item: "Salt and pepper", amount: "To taste", notes: "" },
+      { item: "Butter", amount: "2 tbsp", notes: "For toasting buns" },
+    ],
+    steps: [
+      { heading: "Form patties (no heat, 5 min)", body: "Divide ground beef into 6 equal balls (about 8 oz each). Season generously with salt and pepper." },
+      { heading: "Heat skillet (high, 2 min)", body: "Heat a large cast-iron skillet or flat grill over high heat until smoking." },
+      { heading: "Smash and sear (high, 3 min per side)", body: "Place beef balls on the hot skillet and smash flat with a sturdy spatula. Sear for 3 minutes until a deep crust forms. Flip, add cheddar cheese on top, and cook 2 more minutes until cheese melts and beef reaches 160°F." },
+      { heading: "Toast buns (medium, 2 min)", body: "Butter the burger buns and toast them cut-side down in the skillet until golden." },
+      { heading: "Assemble burgers (no heat, 3 min)", body: "Layer each toasted bun with lettuce, tomato slice, red onion ring, and the smash patty. Close and serve." },
+    ],
+    cleanup_tip: "Wipe the cast iron while still warm — don't soak it.",
+    macros_per_serving: { calories: 620, protein_g: 45, carbs_g: 32, fat_g: 35 },
+    budget_level: "standard",
+    budget_tips: ["80/20 ground beef has the best flavor-to-cost ratio.", "Buy buns in bulk when on sale."],
+    pro_tips: ["Don't press the patty after smashing — you'll lose all the juices.", "A hot, dry skillet is the secret to a great crust."],
+    tags: { cuisine: "", cooking_method: "stovetop", base_carb: "bread", key_ingredients: ["Ground Beef", "Cheddar", "Burger Buns"], high_protein: true, high_fiber: false, quick_cleanup: false },
+    meal_style: "Burger",
+    ingredients_used: [],
+    extra_items_needed: [],
+  }),
+  taco: () => ({
+    template_id: 0,
+    chosen_protein: "Chicken",
+    primary_protein_source: "Chicken",
+    title: "Fire-Roasted Chicken Tacos",
+    why_it_fits_tonight: "Quick to assemble, everyone builds their own — perfect for a busy shift.",
+    timing: { prep_minutes: 10, cook_minutes: 15, total_minutes: 25 },
+    protein_safety: [{ protein: "Chicken", target_temp_f: 165, target_temp_c: 74, rest_minutes: 0, probe_where: "Thickest part", notes: "All poultry must reach 165°F." }],
+    ingredients: [
+      { item: "Boneless skinless chicken thighs", amount: "3 lbs", notes: "" },
+      { item: "Flour tortillas", amount: "12", notes: "Street taco size or large" },
+      { item: "Lime", amount: "3", notes: "Cut into wedges" },
+      { item: "Cilantro", amount: "1 bunch", notes: "Roughly chopped" },
+      { item: "Red onion", amount: "1 large", notes: "Diced" },
+      { item: "Chili powder", amount: "2 tbsp", notes: "" },
+      { item: "Cumin", amount: "1 tbsp", notes: "" },
+      { item: "Olive oil", amount: "2 tbsp", notes: "" },
+      { item: "Salt and pepper", amount: "To taste", notes: "" },
+    ],
+    steps: [
+      { heading: "Season chicken (no heat, 5 min)", body: "Toss chicken thighs with olive oil, chili powder, cumin, salt, and pepper." },
+      { heading: "Cook chicken (medium-high, 12 min)", body: "Sear chicken in a hot skillet for 5-6 minutes per side until charred and internal temp reaches 165°F. Rest 3 minutes, then slice into strips." },
+      { heading: "Warm tortillas (medium, 2 min)", body: "Warm flour tortillas in a dry skillet or directly over a gas flame for 15 seconds per side." },
+      { heading: "Assemble tacos (no heat, 3 min)", body: "Fill each tortilla with sliced chicken, diced red onion, chopped cilantro, and a squeeze of lime juice. Serve immediately." },
+    ],
+    cleanup_tip: "One skillet, one cutting board — rinse and done.",
+    macros_per_serving: { calories: 420, protein_g: 38, carbs_g: 35, fat_g: 14 },
+    budget_level: "standard",
+    budget_tips: ["Chicken thighs are cheaper and more flavorful than breasts.", "Buy limes in bags for better value."],
+    pro_tips: ["Let the chicken rest before slicing to keep it juicy.", "Charring tortillas over a flame adds great smoky flavor."],
+    tags: { cuisine: "Mexican", cooking_method: "stovetop", base_carb: "tortillas", key_ingredients: ["Chicken", "Tortillas", "Cilantro", "Lime"], high_protein: true, high_fiber: false, quick_cleanup: true },
+    meal_style: "Taco",
+    ingredients_used: [],
+    extra_items_needed: [],
+  }),
+};
+
+export function buildSafeFallbackRecipe(mealFormat: string, crewSize: number): GenerateResponse {
+  const formatLower = (mealFormat || "").toLowerCase();
+  let key = "sheet-pan";
+  if (formatLower.includes("burger")) key = "burger";
+  else if (formatLower.includes("taco")) key = "taco";
+
+  const builder = SAFE_FALLBACK_RECIPES[key] || SAFE_FALLBACK_RECIPES["sheet-pan"];
+  const recipe = builder();
+
+  if (crewSize && crewSize !== 6) {
+    const scale = crewSize / 6;
+    recipe.ingredients = recipe.ingredients.map(ing => {
+      const match = ing.amount.match(/^([\d.]+)\s*(.*)/);
+      if (match) {
+        const scaled = Math.round(parseFloat(match[1]) * scale * 10) / 10;
+        return { ...ing, amount: `${scaled} ${match[2]}`.trim() };
+      }
+      return ing;
+    });
+    if (recipe.macros_per_serving) {
+      recipe.macros_per_serving = { ...recipe.macros_per_serving };
+    }
+  }
+
+  log(`[safe-fallback] Serving deterministic ${key} fallback for format="${mealFormat}", crew=${crewSize}`, "fallback");
+  return recipe;
+}
