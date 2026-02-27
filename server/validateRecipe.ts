@@ -688,8 +688,10 @@ const FORMAT_RULES: Record<string, FormatConstraints> = {
   pasta: {
     required: /\b(pasta|spaghetti|penne|rigatoni|fusilli|linguine|fettuccine|rotini|farfalle|ziti|macaroni|orzo|noodle)\b/i,
     requiredLabel: "pasta/noodles",
-    forbidden: /\b(rice|bun|brioche|tortilla)\b/i,
-    forbiddenLabel: "rice/buns/tortillas",
+    forbidden: /\b(rice|quinoa|bun|brioche|tortilla|fries)\b/i,
+    forbiddenLabel: "rice/quinoa/buns/tortillas/fries",
+    stepForbidden: /\b(serve over rice|cook\s+(the\s+)?rice|add\s+(the\s+)?rice|serve.*with rice)\b/i,
+    stepForbiddenLabel: "rice (in steps)",
   },
   salad: {
     required: /\b(greens|lettuce|spinach|kale|arugula|romaine|mixed greens|spring mix|cabbage)\b/i,
@@ -796,11 +798,13 @@ export function validateRecipe(recipe: GenerateResponse, requestMealFormat?: str
     }
 
     if (rules.forbidden) {
-      const riceOnlyFormats = new Set(["sheet-pan", "soup-stew", "breakfast-for-dinner", "burger"]);
-      const hasForbidden = riceOnlyFormats.has(formatKey)
-        ? filterRiceFromIngredients(ingsText)
-        : rules.forbidden.test(ingsText);
-      if (hasForbidden) {
+      const hasRiceRule = /rice/.test(rules.forbidden.source);
+      const hasActualRice = hasRiceRule && filterRiceFromIngredients(ingsText);
+      const nonRiceForbidden = hasRiceRule
+        ? new RegExp(rules.forbidden.source.replace(/\brice\b\|?/g, "").replace(/\|$/, ""), "i")
+        : rules.forbidden;
+      const hasOtherForbidden = nonRiceForbidden.source.replace(/[^a-z]/gi, "").length > 0 && nonRiceForbidden.test(ingsText);
+      if (hasActualRice || hasOtherForbidden) {
         errors.push(`format_has_forbidden:${formatKey} must NOT include ${rules.forbiddenLabel}`);
       }
     }
