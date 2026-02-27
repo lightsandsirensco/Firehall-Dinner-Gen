@@ -9,7 +9,7 @@ import { ShoppingListModal } from "@/components/shopping-list-modal";
 import { buildShoppingListFromPizza } from "@/lib/shopping-list";
 import { getSavedCount } from "@/lib/saved-meals";
 import { apiRequest } from "@/lib/queryClient";
-import type { PizzaResponse, GenerateResponse } from "@shared/schema";
+import type { PizzaResponse, ClientRecipeResponse, ClientIngredient } from "@shared/schema";
 import { Flame, Heart } from "lucide-react";
 import { Link } from "wouter";
 import { Badge } from "@/components/ui/badge";
@@ -93,24 +93,44 @@ export default function PizzaNight() {
     handleGenerate(filters, lastPizzaStyleId);
   };
 
-  const emailRecipe: GenerateResponse | null = recipe
+  const emailRecipe: ClientRecipeResponse | null = recipe
     ? {
-        template_id: 0,
-        chosen_protein: "",
         title: recipe.title,
-        why_it_fits_tonight: recipe.why_this_works,
-        timing: { prep_minutes: recipe.timing.prep_minutes, cook_minutes: recipe.timing.bake_minutes, total_minutes: recipe.timing.total_minutes },
-        protein_safety: recipe.protein_safety,
+        meal_format: "pizza",
+        servings: filters.crew_size,
+        tags: [],
+        timing: { prep_min: recipe.timing.prep_minutes, cook_min: recipe.timing.bake_minutes, total_min: recipe.timing.total_minutes },
+        protein_safety: {
+          protein: recipe.protein_safety?.[0]?.protein || "",
+          internal_temp_f: recipe.protein_safety?.[0]?.target_temp_f || 0,
+          rest_min: recipe.protein_safety?.[0]?.rest_minutes || 0,
+          notes: recipe.protein_safety?.[0]?.probe_where || "",
+        },
         ingredients: [
           ...(recipe.ingredients.dough || []),
           ...recipe.ingredients.sauce,
           ...recipe.ingredients.cheese,
           ...recipe.ingredients.toppings,
           ...recipe.ingredients.drizzles,
-        ],
-        steps: recipe.build_steps,
+        ].map((ing, i): ClientIngredient => ({
+          name: ing.item,
+          qty: 0,
+          unit: ing.amount,
+          category: "other",
+        })),
+        steps: recipe.build_steps.map((s, i) => ({
+          n: i + 1,
+          title: typeof s === "string" ? "" : s.heading,
+          heat: "",
+          minutes: 0,
+          instructions: typeof s === "string" ? s : s.body,
+        })),
+        plating: { serve_style: "pizza", assembly_instructions: "", optional_toppings: [] },
         cleanup_tip: recipe.cleanup_tip,
         macros_per_serving: recipe.macros_per_serving,
+        chosen_protein: "",
+        primary_protein_source: "",
+        why_it_fits_tonight: recipe.why_this_works,
       }
     : null;
 

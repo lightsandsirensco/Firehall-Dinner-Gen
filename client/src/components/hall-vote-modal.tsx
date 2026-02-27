@@ -4,13 +4,13 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { apiRequest } from "@/lib/queryClient";
-import type { GenerateResponse } from "@shared/schema";
+import type { ClientRecipeResponse } from "@shared/schema";
 import { Vote, Copy, Check, ExternalLink, QrCode, Loader2 } from "lucide-react";
 
 interface HallVoteModalProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
-  recipes: GenerateResponse[];
+  recipes: ClientRecipeResponse[];
 }
 
 export function HallVoteModal({ open, onOpenChange, recipes }: HallVoteModalProps) {
@@ -30,7 +30,7 @@ export function HallVoteModal({ open, onOpenChange, recipes }: HallVoteModalProp
         name: r.title,
         description: r.why_it_fits_tonight,
         est_cost: r.budget_level === "low" ? "$" : r.budget_level === "splurge" ? "$$$" : "$$",
-        est_time: r.timing ? `${r.timing.total_minutes} min` : "",
+        est_time: r.timing ? `${r.timing.total_min} min` : "",
         recipe_payload: r,
       }));
 
@@ -117,7 +117,7 @@ export function HallVoteModal({ open, onOpenChange, recipes }: HallVoteModalProp
                     <p className="text-sm font-bold text-foreground truncate">{r.title}</p>
                     <div className="flex gap-2 mt-0.5">
                       {r.timing && (
-                        <span className="text-xs text-muted-foreground">{r.timing.total_minutes} min</span>
+                        <span className="text-xs text-muted-foreground">{r.timing.total_min} min</span>
                       )}
                       {r.chosen_protein && (
                         <Badge variant="outline" className="text-[10px] py-0 h-4">{r.chosen_protein}</Badge>

@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import type { GenerateResponse } from "@shared/schema";
+import type { ClientRecipeResponse } from "@shared/schema";
 import { Flame, Droplets, Wheat, Beef, Sparkles, Trash2, Clock, Timer, ShieldCheck, Thermometer, Printer, Leaf, Mail, Package, ShoppingCart, DollarSign, Lightbulb, List, Heart, Check, ChevronDown, UtensilsCrossed, Globe, Zap } from "lucide-react";
 import { saveMeal, isMealSaved } from "@/lib/saved-meals";
 import { useState, useEffect } from "react";
@@ -10,7 +10,7 @@ import { useState, useEffect } from "react";
 let sessionProTipsCollapsed = false;
 
 interface RecipeCardProps {
-  recipe: GenerateResponse;
+  recipe: ClientRecipeResponse;
   crewSize: number;
   onEmailClick?: () => void;
   onShoppingListClick?: () => void;
@@ -28,39 +28,38 @@ function MacroBar({ label, value, unit, icon, color }: { label: string; value: n
   );
 }
 
-function buildPrintHtml(recipe: GenerateResponse, crewSize: number): string {
-  const safetyRows = recipe.protein_safety?.length
-    ? recipe.protein_safety
-        .map(
-          (ps) =>
-            `<tr>
-              <td style="font-weight:700;padding:6px 12px 6px 0">${ps.protein}</td>
-              <td style="padding:6px 12px">${ps.target_temp_f}&deg;F / ${ps.target_temp_c}&deg;C</td>
-              <td style="padding:6px 12px">${ps.rest_minutes > 0 ? ps.rest_minutes + " min" : "—"}</td>
-              <td style="padding:6px 12px;font-size:13px">${ps.probe_where}${ps.notes ? ". " + ps.notes : ""}</td>
-            </tr>`
-        )
-        .join("")
+function fmtQty(qty: number, unit: string): string {
+  if (!qty && !unit) return "";
+  const display = qty % 1 === 0 ? qty.toString() : qty.toFixed(1);
+  return unit ? `${display} ${unit}` : display;
+}
+
+function buildPrintHtml(recipe: ClientRecipeResponse, crewSize: number): string {
+  const safetyHtml = recipe.protein_safety && recipe.protein_safety.internal_temp_f > 0
+    ? `<tr>
+        <td style="font-weight:700;padding:6px 12px 6px 0">${recipe.protein_safety.protein}</td>
+        <td style="padding:6px 12px">${recipe.protein_safety.internal_temp_f}&deg;F</td>
+        <td style="padding:6px 12px">${recipe.protein_safety.rest_min > 0 ? recipe.protein_safety.rest_min + " min" : "—"}</td>
+        <td style="padding:6px 12px;font-size:13px">${recipe.protein_safety.notes || ""}</td>
+      </tr>`
     : "";
 
   const ingredientRows = recipe.ingredients
     .map(
       (ing) =>
         `<tr>
-          <td style="padding:4px 16px 4px 0;font-weight:600">${ing.item}</td>
-          <td style="padding:4px 0">${ing.amount || ""}</td>
-          ${ing.notes ? `<td style="padding:4px 0 4px 16px;color:#555;font-size:13px">${ing.notes}</td>` : "<td></td>"}
+          <td style="padding:4px 16px 4px 0;font-weight:600">${ing.name}</td>
+          <td style="padding:4px 0">${fmtQty(ing.qty, ing.unit)}</td>
+          <td style="padding:4px 0 4px 16px;color:#555;font-size:13px">${ing.category || ""}</td>
         </tr>`
     )
     .join("");
 
   const stepItems = recipe.steps
-    .map((step, i) => {
-      const heading = typeof step === "string" ? null : step.heading;
-      const body = typeof step === "string" ? step : step.body;
+    .map((step) => {
       return `<li style="margin-bottom:12px;page-break-inside:avoid">
-        ${heading ? `<strong>${heading}</strong><br/>` : ""}
-        ${body}
+        ${step.title ? `<strong>${step.title}</strong><br/>` : ""}
+        ${step.instructions}
       </li>`;
     })
     .join("");
@@ -113,9 +112,9 @@ function buildPrintHtml(recipe: GenerateResponse, crewSize: number): string {
   ${recipe.timing ? `
   <h2>Timing</h2>
   <div class="timing-bar">
-    <div class="timing-item"><strong>${recipe.timing.prep_minutes}</strong><span>min prep</span></div>
-    <div class="timing-item"><strong>${recipe.timing.cook_minutes}</strong><span>min cook</span></div>
-    <div class="timing-item"><strong>${recipe.timing.total_minutes}</strong><span>min total</span></div>
+    <div class="timing-item"><strong>${recipe.timing.prep_min}</strong><span>min prep</span></div>
+    <div class="timing-item"><strong>${recipe.timing.cook_min}</strong><span>min cook</span></div>
+    <div class="timing-item"><strong>${recipe.timing.total_min}</strong><span>min total</span></div>
   </div>` : ""}
 
   <div class="macros">
@@ -123,7 +122,7 @@ function buildPrintHtml(recipe: GenerateResponse, crewSize: number): string {
     Calories: ${recipe.macros_per_serving.calories} | Protein: ${recipe.macros_per_serving.protein_g}g | Carbs: ${recipe.macros_per_serving.carbs_g}g | Fat: ${recipe.macros_per_serving.fat_g}g
   </div>
 
-  ${safetyRows ? `
+  ${safetyHtml ? `
   <h2>Protein Safety</h2>
   <table class="safety">
     <thead><tr>
@@ -132,7 +131,7 @@ function buildPrintHtml(recipe: GenerateResponse, crewSize: number): string {
       <th style="text-align:left;padding:6px 12px;font-size:12px;text-transform:uppercase;color:#666">Rest</th>
       <th style="text-align:left;padding:6px 12px;font-size:12px;text-transform:uppercase;color:#666">Details</th>
     </tr></thead>
-    <tbody>${safetyRows}</tbody>
+    <tbody>${safetyHtml}</tbody>
   </table>` : ""}
 
   <h2>Ingredients</h2>
@@ -144,7 +143,7 @@ function buildPrintHtml(recipe: GenerateResponse, crewSize: number): string {
   <ol>${stepItems}</ol>
 
   ${recipe.pro_tips && recipe.pro_tips.length > 0 ? `
-  <h2>💡 Pro Tips</h2>
+  <h2>Pro Tips</h2>
   <ul style="padding-left:20px;font-size:14px">
     ${recipe.pro_tips.map(tip => `<li style="margin-bottom:4px">${tip}</li>`).join("")}
   </ul>` : ""}
@@ -192,8 +191,8 @@ function buildPrintHtml(recipe: GenerateResponse, crewSize: number): string {
 }
 
 export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick, hideSave }: RecipeCardProps) {
-  const hasTiming = recipe.timing && (recipe.timing.prep_minutes || recipe.timing.cook_minutes || recipe.timing.total_minutes);
-  const hasSafety = recipe.protein_safety && recipe.protein_safety.length > 0;
+  const hasTiming = recipe.timing && (recipe.timing.prep_min || recipe.timing.cook_min || recipe.timing.total_min);
+  const hasSafety = recipe.protein_safety && recipe.protein_safety.internal_temp_f > 0;
   const [saved, setSaved] = useState(false);
   const [showConfirm, setShowConfirm] = useState(false);
   const [proTipsOpen, setProTipsOpen] = useState(!sessionProTipsCollapsed);
@@ -228,6 +227,8 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
       printWindow.document.close();
     }
   };
+
+  const recipeTags = recipe.recipe_tags;
 
   return (
     <div className="space-y-4 animate-in fade-in slide-in-from-bottom-4 duration-500">
@@ -297,6 +298,11 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
               {recipe.meal_style}
             </Badge>
           )}
+          {recipe.meal_format && (
+            <Badge variant="outline" className="text-xs" data-testid="badge-meal-format">
+              {recipe.meal_format}
+            </Badge>
+          )}
           {recipe.budget_level === "low" && (
             <Badge variant="secondary" className="text-xs" data-testid="badge-budget-friendly">
               <DollarSign className="w-3 h-3 mr-1" />
@@ -304,33 +310,33 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
             </Badge>
           )}
         </div>
-        {recipe.tags && (recipe.tags.cuisine || recipe.tags.cooking_method || recipe.tags.high_protein || recipe.tags.high_fiber || recipe.tags.quick_cleanup) && (
+        {recipeTags && (recipeTags.cuisine || recipeTags.cooking_method || recipeTags.high_protein || recipeTags.high_fiber || recipeTags.quick_cleanup) && (
           <div className="flex items-center gap-1.5 mt-1.5 flex-wrap" data-testid="section-recipe-tags">
-            {recipe.tags.cuisine && (
+            {recipeTags.cuisine && (
               <Badge variant="outline" className="text-xs" data-testid="badge-tag-cuisine">
                 <Globe className="w-3 h-3 mr-1" />
-                {recipe.tags.cuisine}
+                {recipeTags.cuisine}
               </Badge>
             )}
-            {recipe.tags.cooking_method && (
+            {recipeTags.cooking_method && (
               <Badge variant="outline" className="text-xs" data-testid="badge-tag-method">
                 <UtensilsCrossed className="w-3 h-3 mr-1" />
-                {recipe.tags.cooking_method}
+                {recipeTags.cooking_method}
               </Badge>
             )}
-            {recipe.tags.high_protein && (
+            {recipeTags.high_protein && (
               <Badge variant="secondary" className="text-xs" data-testid="badge-tag-high-protein">
                 <Zap className="w-3 h-3 mr-1" />
                 High Protein
               </Badge>
             )}
-            {recipe.tags.high_fiber && (
+            {recipeTags.high_fiber && (
               <Badge variant="secondary" className="text-xs" data-testid="badge-tag-high-fiber">
                 <Wheat className="w-3 h-3 mr-1" />
                 High Fiber
               </Badge>
             )}
-            {recipe.tags.quick_cleanup && (
+            {recipeTags.quick_cleanup && (
               <Badge variant="secondary" className="text-xs" data-testid="badge-tag-quick-cleanup">
                 <Sparkles className="w-3 h-3 mr-1" />
                 Quick Cleanup
@@ -384,19 +390,19 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
               <div className="flex gap-2" data-testid="section-timing">
                 <div className="flex flex-col items-center gap-1 flex-1">
                   <Timer className="w-4 h-4 text-blue-400" />
-                  <span className="font-heading text-xl leading-none">{recipe.timing.prep_minutes}</span>
+                  <span className="font-heading text-xl leading-none">{recipe.timing.prep_min}</span>
                   <span className="text-[10px] uppercase tracking-wider text-muted-foreground">prep</span>
                 </div>
                 <Separator orientation="vertical" className="h-14 self-center" />
                 <div className="flex flex-col items-center gap-1 flex-1">
                   <Flame className="w-4 h-4 text-orange-400" />
-                  <span className="font-heading text-xl leading-none">{recipe.timing.cook_minutes}</span>
+                  <span className="font-heading text-xl leading-none">{recipe.timing.cook_min}</span>
                   <span className="text-[10px] uppercase tracking-wider text-muted-foreground">cook</span>
                 </div>
                 <Separator orientation="vertical" className="h-14 self-center" />
                 <div className="flex flex-col items-center gap-1 flex-1">
                   <Clock className="w-4 h-4 text-green-400" />
-                  <span className="font-heading text-xl leading-none">{recipe.timing.total_minutes}</span>
+                  <span className="font-heading text-xl leading-none">{recipe.timing.total_min}</span>
                   <span className="text-[10px] uppercase tracking-wider text-muted-foreground">total</span>
                 </div>
               </div>
@@ -434,42 +440,30 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
               <h3 className="font-heading text-lg tracking-wider uppercase text-foreground">Protein Safety</h3>
             </div>
             <div
-              className="grid grid-cols-1 md:grid-cols-2 gap-3"
+              className="rounded-md border border-border/40 p-3 space-y-2"
               data-testid="section-protein-safety"
             >
-              {recipe.protein_safety.map((ps, i) => (
-                <div
-                  key={i}
-                  className="rounded-md border border-border/40 p-3 space-y-2"
-                  data-testid={`protein-safety-${i}`}
-                >
-                  <div className="flex items-center gap-2">
-                    <Thermometer className="w-4 h-4 text-primary flex-shrink-0" />
-                    <span className="font-bold text-sm text-foreground">{ps.protein}</span>
-                  </div>
-                  <div className="flex flex-wrap gap-x-4 gap-y-1">
-                    <div className="flex items-baseline gap-1">
-                      <span className="text-xs text-muted-foreground">Target:</span>
-                      <span className="text-sm font-heading text-primary">{ps.target_temp_f}°F</span>
-                      <span className="text-xs text-muted-foreground">/ {ps.target_temp_c}°C</span>
-                    </div>
-                    {ps.rest_minutes > 0 && (
-                      <div className="flex items-baseline gap-1">
-                        <span className="text-xs text-muted-foreground">Rest:</span>
-                        <span className="text-sm font-medium text-foreground">{ps.rest_minutes} min</span>
-                      </div>
-                    )}
-                  </div>
-                  <p className="text-xs text-muted-foreground leading-relaxed">
-                    <span className="font-medium text-foreground/80">Probe:</span> {ps.probe_where}
-                  </p>
-                  {ps.notes && (
-                    <p className="text-xs text-muted-foreground leading-relaxed">
-                      {ps.notes}
-                    </p>
-                  )}
+              <div className="flex items-center gap-2">
+                <Thermometer className="w-4 h-4 text-primary flex-shrink-0" />
+                <span className="font-bold text-sm text-foreground">{recipe.protein_safety.protein}</span>
+              </div>
+              <div className="flex flex-wrap gap-x-4 gap-y-1">
+                <div className="flex items-baseline gap-1">
+                  <span className="text-xs text-muted-foreground">Internal Temp:</span>
+                  <span className="text-sm font-heading text-primary">{recipe.protein_safety.internal_temp_f}°F</span>
                 </div>
-              ))}
+                {recipe.protein_safety.rest_min > 0 && (
+                  <div className="flex items-baseline gap-1">
+                    <span className="text-xs text-muted-foreground">Rest:</span>
+                    <span className="text-sm font-medium text-foreground">{recipe.protein_safety.rest_min} min</span>
+                  </div>
+                )}
+              </div>
+              {recipe.protein_safety.notes && (
+                <p className="text-xs text-muted-foreground leading-relaxed">
+                  {recipe.protein_safety.notes}
+                </p>
+              )}
             </div>
           </CardContent>
         </Card>
@@ -492,14 +486,14 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
                 data-testid={`ingredient-row-${i}`}
               >
                 <p className="text-sm whitespace-normal break-words">
-                  <span className="font-bold text-foreground">{ing.item}</span>
-                  {ing.amount && (
-                    <span className="text-primary font-medium"> — {ing.amount}</span>
+                  <span className="font-bold text-foreground">{ing.name}</span>
+                  {(ing.qty > 0 || ing.unit) && (
+                    <span className="text-primary font-medium"> — {fmtQty(ing.qty, ing.unit)}</span>
                   )}
                 </p>
-                {ing.notes && (
-                  <p className="text-xs text-muted-foreground whitespace-normal break-words">
-                    {ing.notes}
+                {ing.category && ing.category !== "other" && (
+                  <p className="text-xs text-muted-foreground whitespace-normal break-words capitalize">
+                    {ing.category}
                   </p>
                 )}
               </div>
@@ -515,20 +509,18 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
           </h3>
           <ol className="space-y-4" data-testid="section-steps">
             {recipe.steps.map((step, i) => {
-              const heading = typeof step === "string" ? null : step.heading;
-              const body = typeof step === "string" ? step : step.body;
               return (
                 <li key={i} className="flex gap-3" data-testid={`step-${i}`}>
                   <span className="font-heading text-xl text-primary flex-shrink-0 w-6 text-right leading-6">
-                    {i + 1}
+                    {step.n}
                   </span>
                   <div className="flex-1 min-w-0">
-                    {heading && (
+                    {step.title && (
                       <p className="text-sm font-bold text-foreground mb-0.5 leading-snug">
-                        {heading}
+                        {step.title}
                       </p>
                     )}
-                    <p className="text-sm text-foreground/80 leading-relaxed">{body}</p>
+                    <p className="text-sm text-foreground/80 leading-relaxed">{step.instructions}</p>
                   </div>
                 </li>
               );
@@ -536,6 +528,34 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
           </ol>
         </CardContent>
       </Card>
+
+      {recipe.plating && recipe.plating.assembly_instructions && (
+        <Card data-testid="section-plating">
+          <CardContent className="p-4">
+            <div className="flex items-center gap-2 mb-3">
+              <UtensilsCrossed className="w-4 h-4 text-primary" />
+              <h3 className="font-heading text-lg tracking-wider uppercase text-foreground">Plating</h3>
+            </div>
+            {recipe.plating.serve_style && (
+              <Badge variant="outline" className="text-xs mb-2" data-testid="badge-serve-style">
+                {recipe.plating.serve_style}
+              </Badge>
+            )}
+            <p className="text-sm text-foreground/80 leading-relaxed" data-testid="text-plating-instructions">
+              {recipe.plating.assembly_instructions}
+            </p>
+            {recipe.plating.optional_toppings && recipe.plating.optional_toppings.length > 0 && (
+              <div className="mt-2 flex flex-wrap gap-1.5">
+                {recipe.plating.optional_toppings.map((topping, i) => (
+                  <Badge key={i} variant="secondary" className="text-xs" data-testid={`badge-topping-${i}`}>
+                    {topping}
+                  </Badge>
+                ))}
+              </div>
+            )}
+          </CardContent>
+        </Card>
+      )}
 
       {recipe.pro_tips && recipe.pro_tips.length > 0 && (
         <Card data-testid="section-pro-tips">

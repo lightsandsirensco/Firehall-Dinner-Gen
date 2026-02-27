@@ -1,4 +1,4 @@
-import type { GenerateResponse } from "@shared/schema";
+import type { ClientRecipeResponse } from "@shared/schema";
 
 const STORAGE_KEY = "firehall_recipe_cache";
 const SIGNATURES_KEY = "firehall_recent_signatures";
@@ -7,7 +7,7 @@ const MAX_SIGNATURES = 10;
 const TTL_MS = 24 * 60 * 60 * 1000;
 
 interface CacheEntry {
-  recipe: GenerateResponse;
+  recipe: ClientRecipeResponse;
   ts: number;
 }
 
@@ -78,12 +78,12 @@ function ensureMemory() {
   }
 }
 
-export function buildSignature(recipe: GenerateResponse): string {
+export function buildSignature(recipe: ClientRecipeResponse): string {
   const title = (recipe.title || "").toLowerCase().trim();
   const protein = (recipe.chosen_protein || "").toLowerCase().trim();
-  const cuisine = (recipe.tags?.cuisine || "").toLowerCase().trim();
-  const baseCarb = (recipe.tags?.base_carb || "").toLowerCase().trim();
-  const method = (recipe.tags?.cooking_method || "").toLowerCase().trim();
+  const cuisine = (recipe.recipe_tags?.cuisine || "").toLowerCase().trim();
+  const baseCarb = (recipe.recipe_tags?.base_carb || "").toLowerCase().trim();
+  const method = (recipe.recipe_tags?.cooking_method || "").toLowerCase().trim();
   return `${title}|${protein}|${cuisine}|${baseCarb}|${method}`;
 }
 
@@ -97,7 +97,7 @@ export function getRecentSignatures(): string[] {
   }
 }
 
-export function addRecentSignature(recipe: GenerateResponse & { _signature?: string }) {
+export function addRecentSignature(recipe: ClientRecipeResponse & { _signature?: string }) {
   const sig = (recipe as any)._signature || buildSignature(recipe);
   const sigs = getRecentSignatures().filter((s) => s !== sig);
   sigs.unshift(sig);
@@ -106,7 +106,7 @@ export function addRecentSignature(recipe: GenerateResponse & { _signature?: str
   } catch {}
 }
 
-export function getCached(filterKey: string, excludeTemplateId?: number, excludeSignatures?: string[]): GenerateResponse | null {
+export function getCached(filterKey: string, excludeTemplateId?: number, excludeSignatures?: string[]): ClientRecipeResponse | null {
   ensureMemory();
   const entries = memoryCache[filterKey];
   if (!entries || entries.length === 0) return null;
@@ -123,7 +123,7 @@ export function getCached(filterKey: string, excludeTemplateId?: number, exclude
   return pick.recipe;
 }
 
-export function getAllCached(filterKey: string): GenerateResponse[] {
+export function getAllCached(filterKey: string): ClientRecipeResponse[] {
   ensureMemory();
   const entries = memoryCache[filterKey];
   if (!entries) return [];
@@ -140,7 +140,7 @@ export function removeCached(filterKey: string, templateId: number) {
   saveDisk(memoryCache);
 }
 
-export function putCached(filterKey: string, recipe: GenerateResponse) {
+export function putCached(filterKey: string, recipe: ClientRecipeResponse) {
   ensureMemory();
   if (!memoryCache[filterKey]) memoryCache[filterKey] = [];
   const sig = buildSignature(recipe);

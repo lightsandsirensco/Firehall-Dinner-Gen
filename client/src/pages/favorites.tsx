@@ -112,7 +112,7 @@ export default function FavoritesPage() {
                     {meal.recipe.timing && (
                       <Badge variant="outline" className="text-[10px] gap-1">
                         <Clock className="w-3 h-3" />
-                        {meal.recipe.timing.total_minutes}m
+                        {meal.recipe.timing.total_min}m
                       </Badge>
                     )}
                   </div>

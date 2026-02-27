@@ -7,13 +7,13 @@ import { ErrorState } from "@/components/error-state";
 import { EmailModal } from "@/components/email-modal";
 import { ShoppingListModal } from "@/components/shopping-list-modal";
 import { HallVoteModal } from "@/components/hall-vote-modal";
-import { buildShoppingListFromMeal } from "@/lib/shopping-list";
+import { buildShoppingListFromClientMeal } from "@/lib/shopping-list";
 import { getSavedCount } from "@/lib/saved-meals";
 import { apiRequest } from "@/lib/queryClient";
 import { buildFilterKey, putCached, addRecentSignature, getRecentSignatures } from "@/lib/recipe-cache";
 import { prefetchMeals, consumePrefetched } from "@/lib/prefetch";
 import { trackEvent, trackMealGenerated, trackEmailModalOpened } from "@/lib/analytics";
-import type { GenerateResponse } from "@shared/schema";
+import type { ClientRecipeResponse } from "@shared/schema";
 import { Flame, Vote, Heart } from "lucide-react";
 import { Link } from "wouter";
 import { Badge } from "@/components/ui/badge";
@@ -76,8 +76,8 @@ const ResultsPanel = memo(function ResultsPanel({
 }: {
   loading: boolean;
   error: string | null;
-  recipe: GenerateResponse | null;
-  recentRecipes: GenerateResponse[];
+  recipe: ClientRecipeResponse | null;
+  recentRecipes: ClientRecipeResponse[];
   filters: FilterState;
   generationCounter: number;
   onEmailClick: () => void;
@@ -151,14 +151,14 @@ const ResultsPanel = memo(function ResultsPanel({
 });
 
 export default function Home() {
-  const [recipe, setRecipe] = useState<GenerateResponse | null>(null);
+  const [recipe, setRecipe] = useState<ClientRecipeResponse | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [lastTemplateId, setLastTemplateId] = useState<number | undefined>();
   const [emailModalOpen, setEmailModalOpen] = useState(false);
   const [shoppingListOpen, setShoppingListOpen] = useState(false);
   const [hallVoteOpen, setHallVoteOpen] = useState(false);
-  const [recentRecipes, setRecentRecipes] = useState<GenerateResponse[]>([]);
+  const [recentRecipes, setRecentRecipes] = useState<ClientRecipeResponse[]>([]);
   const [favCount, setFavCount] = useState(() => getSavedCount());
   const [generationCounter, setGenerationCounter] = useState(0);
   const genCountRef = useRef(0);
@@ -195,7 +195,7 @@ export default function Home() {
       .catch(() => prefetchMeals(warmupPayload));
   }, []);
 
-  const applyRecipe = useCallback((data: GenerateResponse, requestId: string) => {
+  const applyRecipe = useCallback((data: ClientRecipeResponse, requestId: string) => {
     if (activeRequestIdRef.current !== requestId) {
       console.log("[Generate] Ignoring stale response", { requestId, active: activeRequestIdRef.current });
       return;
@@ -253,7 +253,7 @@ export default function Home() {
         currentRecipeSignature: currentSig,
       });
       clearTimeout(timeout);
-      const data: GenerateResponse = await res.json();
+      const data: ClientRecipeResponse = await res.json();
 
       console.log("[Generate] API returned:", data.title, { requestId, filterKey });
       applyRecipe(data, requestId);
@@ -413,7 +413,7 @@ export default function Home() {
           <ShoppingListModal
             open={shoppingListOpen}
             onOpenChange={setShoppingListOpen}
-            shoppingList={buildShoppingListFromMeal(recipe, {
+            shoppingList={buildShoppingListFromClientMeal(recipe, {
               useWhatWeHave: filters.use_what_we_have,
               budgetLevel: filters.budget_level,
             })}

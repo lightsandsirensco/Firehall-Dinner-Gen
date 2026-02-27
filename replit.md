@@ -29,6 +29,21 @@ Key features include:
 - **Admin Dashboard**: Provides usage statistics, budget status, cache details, and request logs.
 - **Pro Tips**: Recipes include short, practical tips for cooking.
 
+## Client Recipe Schema
+The API response is normalized to `ClientRecipeResponse` before being sent to the frontend. The backend uses `GenerateResponse` internally (validator, fallback, cache) and transforms it via `normalizeToClientFormat()` in `server/routes.ts`.
+
+Key field mappings (internal → client):
+- `ingredients[].item/amount/notes` → `ingredients[].name/qty/unit/category` (qty is numeric, category is auto-detected)
+- `steps[].heading/body` → `steps[].n/title/heat/minutes/instructions` (n is 1-indexed)
+- `timing.prep_minutes/cook_minutes/total_minutes` → `timing.prep_min/cook_min/total_min`
+- `protein_safety[]` (array) → `protein_safety{}` (single object with `protein/internal_temp_f/rest_min/notes`)
+- `tags` (RecipeTags object) → `tags` (string[]) + `recipe_tags` (full RecipeTags preserved)
+- New: `plating { serve_style, assembly_instructions, optional_toppings[] }`
+- New: `meal_format` (from request filter), `servings` (crew_size)
+
+Helper functions added in `server/routes.ts`: `parseQtyUnit()`, `categorizeIngredient()`, `normalizeToClientFormat()`
+Client shopping list uses `buildShoppingListFromClientMeal()` in `client/src/lib/shopping-list.ts`.
+
 ## External Dependencies
 - **OpenAI**: Used for AI-powered recipe generation (gpt-5-mini via Replit AI Integrations).
 - **Klaviyo**: Integrated for email capture, subscribing users to mailing lists, and tracking recipe-related events.

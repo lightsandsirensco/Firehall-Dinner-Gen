@@ -4,13 +4,13 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Mail, CheckCircle, Loader2 } from "lucide-react";
-import type { GenerateResponse } from "@shared/schema";
+import type { ClientRecipeResponse } from "@shared/schema";
 import { trackEvent, trackEmailSubmitted, setAnalyticsUserId } from "@/lib/analytics";
 
 interface EmailModalProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
-  recipe: GenerateResponse;
+  recipe: ClientRecipeResponse;
   crewSize: number;
   healthinessLevel: string;
 }
@@ -37,8 +37,11 @@ export function EmailModal({ open, onOpenChange, recipe, crewSize, healthinessLe
           primary_protein: recipe.chosen_protein || "",
           healthiness_level: healthinessLevel,
           crew_size: crewSize,
-          ingredients: recipe.ingredients.map((i) => `${i.item} — ${i.amount}`),
-          steps: recipe.steps.map((s) => typeof s === "string" ? s : `${s.heading}: ${s.body}`),
+          ingredients: recipe.ingredients.map((i) => {
+            const qty = i.qty ? (i.unit ? `${i.qty} ${i.unit}` : `${i.qty}`) : "";
+            return qty ? `${i.name} — ${qty}` : i.name;
+          }),
+          steps: recipe.steps.map((s) => s.title ? `${s.title}: ${s.instructions}` : s.instructions),
           pro_tips: recipe.pro_tips || [],
           macros: recipe.macros_per_serving,
           timestamp: new Date().toISOString(),

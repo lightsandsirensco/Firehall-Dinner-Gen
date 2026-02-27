@@ -54,6 +54,13 @@ export interface IngredientItem {
   notes: string;
 }
 
+export interface ClientIngredient {
+  name: string;
+  qty: number;
+  unit: string;
+  category: string;
+}
+
 export interface MacrosPerServing {
   calories: number;
   protein_g: number;
@@ -67,6 +74,12 @@ export interface RecipeTiming {
   total_minutes: number;
 }
 
+export interface ClientTiming {
+  prep_min: number;
+  cook_min: number;
+  total_min: number;
+}
+
 export interface ProteinSafetyItem {
   protein: string;
   target_temp_f: number;
@@ -76,9 +89,30 @@ export interface ProteinSafetyItem {
   notes: string;
 }
 
+export interface ClientProteinSafety {
+  protein: string;
+  internal_temp_f: number;
+  rest_min: number;
+  notes: string;
+}
+
 export interface RecipeStep {
   heading: string;
   body: string;
+}
+
+export interface ClientStep {
+  n: number;
+  title: string;
+  heat: string;
+  minutes: number;
+  instructions: string;
+}
+
+export interface ClientPlating {
+  serve_style: string;
+  assembly_instructions: string;
+  optional_toppings: string[];
 }
 
 export interface VegOptionIngredient {
@@ -125,6 +159,34 @@ export interface GenerateResponse {
   budget_tips?: string[];
   pro_tips?: string[];
   tags?: RecipeTags;
+}
+
+export interface ClientRecipeResponse {
+  title: string;
+  meal_format: string;
+  servings: number;
+  tags: string[];
+  timing: ClientTiming;
+  protein_safety: ClientProteinSafety;
+  ingredients: ClientIngredient[];
+  steps: ClientStep[];
+  plating: ClientPlating;
+  macros_per_serving: MacrosPerServing;
+  chosen_protein: string;
+  primary_protein_source: string;
+  meal_style?: string;
+  why_it_fits_tonight: string;
+  cleanup_tip: string;
+  pro_tips?: string[];
+  budget_level?: string;
+  budget_tips?: string[];
+  veg_option?: VegOption;
+  ingredients_used?: string[];
+  extra_items_needed?: string[];
+  recipe_tags?: RecipeTags;
+  template_id?: number;
+  _fallback?: boolean;
+  _signature?: string;
 }
 
 export const pizzaRequestSchema = z.object({

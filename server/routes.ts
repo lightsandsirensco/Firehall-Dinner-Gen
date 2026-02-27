@@ -2,7 +2,7 @@ import type { Express, Request, Response, NextFunction } from "express";
 import { type Server } from "http";
 import crypto from "crypto";
 import cookieParser from "cookie-parser";
-import { generateRequestSchema, pizzaRequestSchema, hallVoteCreateSchema } from "@shared/schema";
+import { generateRequestSchema, pizzaRequestSchema, hallVoteCreateSchema, type GenerateResponse, type ClientRecipeResponse, type ClientIngredient, type ClientStep, type ClientProteinSafety, type ClientPlating, type ClientTiming } from "@shared/schema";
 import { loadTemplates, filterTemplates, pickTemplate, chooseProtein } from "./templates";
 import { generateRecipe, generateRecipeFromPantry } from "./ai";
 import { getVarietyConstraints, recordRecipe } from "./variety-memory";
@@ -111,10 +111,135 @@ export async function registerRoutes(
     return res.json({ status: "warm", uptime: process.uptime() });
   });
 
-  function buildResponse(validation: import("./validateRecipe").ValidationResult, extras: Record<string, any>, debug: boolean): Record<string, any> {
-    const base = { ...validation.recipe, ...extras, _signature: validation.signature };
+  function parseQtyUnit(amount: string): { qty: number; unit: string } {
+    if (!amount || !amount.trim()) return { qty: 0, unit: "" };
+    const m = amount.trim().match(/^([\d.\/\s]+)\s*(.*)$/);
+    if (!m) return { qty: 0, unit: amount.trim() };
+    let val: number;
+    const numStr = m[1].trim();
+    if (numStr.includes("/")) {
+      const parts = numStr.split("/");
+      val = parseFloat(parts[0]) / (parseFloat(parts[1]) || 1);
+    } else if (numStr.includes(" ")) {
+      const [whole, frac] = numStr.split(/\s+/);
+      val = parseFloat(whole) + (frac && frac.includes("/") ? parseFloat(frac.split("/")[0]) / parseFloat(frac.split("/")[1]) : 0);
+    } else {
+      val = parseFloat(numStr);
+    }
+    if (isNaN(val)) val = 0;
+    return { qty: Math.round(val * 100) / 100, unit: m[2].trim() };
+  }
+
+  function categorizeIngredient(name: string): string {
+    const lower = name.toLowerCase();
+    const cats: [string, string[]][] = [
+      ["protein", ["chicken", "beef", "pork", "turkey", "salmon", "shrimp", "sausage", "bacon", "steak", "ground", "fish", "tofu", "lamb", "ham", "prosciutto", "pepperoni", "crab", "lobster", "scallop", "tuna", "cod", "tilapia"]],
+      ["produce", ["onion", "garlic", "pepper", "tomato", "lettuce", "spinach", "broccoli", "carrot", "celery", "potato", "mushroom", "zucchini", "corn", "avocado", "lime", "lemon", "cilantro", "basil", "cucumber", "cabbage", "kale", "ginger", "jalape", "arugula"]],
+      ["dairy", ["cheese", "mozzarella", "cheddar", "parmesan", "cream", "milk", "butter", "yogurt", "sour cream", "ricotta", "feta"]],
+      ["grain", ["rice", "pasta", "noodle", "bread", "tortilla", "bun", "roll", "pita", "naan", "flour", "couscous", "quinoa", "oats"]],
+      ["spice", ["salt", "pepper", "cumin", "paprika", "chili", "oregano", "thyme", "cinnamon", "cayenne", "garlic powder", "onion powder", "turmeric"]],
+      ["sauce", ["sauce", "soy", "vinegar", "mustard", "ketchup", "mayo", "sriracha", "bbq", "salsa", "pesto", "hoisin", "teriyaki", "hot sauce", "honey", "oil"]],
+    ];
+    for (const [cat, keywords] of cats) {
+      if (keywords.some(k => lower.includes(k))) return cat;
+    }
+    return "other";
+  }
+
+  function normalizeToClientFormat(recipe: any, crewSize: number, mealFormat: string): ClientRecipeResponse {
+    const ingredients: ClientIngredient[] = (recipe.ingredients || []).map((ing: any) => {
+      const { qty, unit } = parseQtyUnit(ing.amount || "");
+      return {
+        name: ing.item || ing.name || "",
+        qty,
+        unit,
+        category: categorizeIngredient(ing.item || ing.name || ""),
+      };
+    });
+
+    const steps: ClientStep[] = (recipe.steps || []).map((step: any, i: number) => {
+      const heading = typeof step === "string" ? "" : (step.heading || step.title || "");
+      const body = typeof step === "string" ? step : (step.body || step.instructions || "");
+      return {
+        n: i + 1,
+        title: heading,
+        heat: "",
+        minutes: 0,
+        instructions: body,
+      };
+    });
+
+    const timing: ClientTiming = recipe.timing ? {
+      prep_min: recipe.timing.prep_minutes ?? recipe.timing.prep_min ?? 0,
+      cook_min: recipe.timing.cook_minutes ?? recipe.timing.cook_min ?? 0,
+      total_min: recipe.timing.total_minutes ?? recipe.timing.total_min ?? 0,
+    } : { prep_min: 0, cook_min: 0, total_min: 0 };
+
+    const safetyArr = recipe.protein_safety || [];
+    const firstSafety = Array.isArray(safetyArr) && safetyArr.length > 0 ? safetyArr[0] : null;
+    const proteinSafety: ClientProteinSafety = firstSafety ? {
+      protein: firstSafety.protein || recipe.chosen_protein || "",
+      internal_temp_f: firstSafety.target_temp_f ?? firstSafety.internal_temp_f ?? 0,
+      rest_min: firstSafety.rest_minutes ?? firstSafety.rest_min ?? 0,
+      notes: [firstSafety.probe_where, firstSafety.notes].filter(Boolean).join(". ") || "",
+    } : {
+      protein: recipe.chosen_protein || "",
+      internal_temp_f: 0,
+      rest_min: 0,
+      notes: "",
+    };
+
+    const tags: string[] = [];
+    if (recipe.tags) {
+      if (recipe.tags.cuisine) tags.push(recipe.tags.cuisine);
+      if (recipe.tags.cooking_method) tags.push(recipe.tags.cooking_method);
+      if (recipe.tags.high_protein) tags.push("High Protein");
+      if (recipe.tags.high_fiber) tags.push("High Fiber");
+      if (recipe.tags.quick_cleanup) tags.push("Quick Cleanup");
+      if (recipe.tags.base_carb) tags.push(recipe.tags.base_carb);
+    }
+
+    const plating: ClientPlating = recipe.plating || {
+      serve_style: recipe.meal_style || mealFormat || "",
+      assembly_instructions: "",
+      optional_toppings: [],
+    };
+
+    return {
+      title: recipe.title || "",
+      meal_format: mealFormat || recipe.meal_style || "",
+      servings: crewSize,
+      tags,
+      timing,
+      protein_safety: proteinSafety,
+      ingredients,
+      steps,
+      plating,
+      macros_per_serving: recipe.macros_per_serving || { calories: 0, protein_g: 0, carbs_g: 0, fat_g: 0 },
+      chosen_protein: recipe.chosen_protein || "",
+      primary_protein_source: recipe.primary_protein_source || "",
+      meal_style: recipe.meal_style,
+      why_it_fits_tonight: recipe.why_it_fits_tonight || "",
+      cleanup_tip: recipe.cleanup_tip || "",
+      pro_tips: recipe.pro_tips,
+      budget_level: recipe.budget_level,
+      budget_tips: recipe.budget_tips,
+      veg_option: recipe.veg_option,
+      ingredients_used: recipe.ingredients_used,
+      extra_items_needed: recipe.extra_items_needed,
+      recipe_tags: recipe.tags,
+      template_id: recipe.template_id,
+      _fallback: recipe._fallback,
+      _signature: recipe._signature,
+    };
+  }
+
+  function buildResponse(validation: import("./validateRecipe").ValidationResult, extras: Record<string, any>, debug: boolean, crewSize: number = 0, mealFormat: string = ""): Record<string, any> {
+    const merged = { ...validation.recipe, ...extras, _signature: validation.signature };
+    const client = normalizeToClientFormat(merged, crewSize, mealFormat);
+    const base: Record<string, any> = { ...client };
     if (debug) {
-      (base as any)._debug = {
+      base._debug = {
         validation_ok: validation.ok,
         issues: validation.issues,
         action: validation.actionTaken,
@@ -239,7 +364,7 @@ export async function registerRoutes(
           };
           const cacheVal = validateAndFixRecipe(cached, cacheValCtx);
           recordSignature(chosenProtein, cacheVal.signature);
-          return res.json(buildResponse(cacheVal, {}, cacheDebug));
+          return res.json(buildResponse(cacheVal, {}, cacheDebug, request.crew_size, request.meal_format));
         }
       }
 
@@ -279,7 +404,7 @@ export async function registerRoutes(
             };
             const poolVal = validateAndFixRecipe(poolEntry.recipe, poolValCtx);
             recordSignature(chosenProtein, poolVal.signature);
-            return res.json(buildResponse(poolVal, {}, poolDebug));
+            return res.json(buildResponse(poolVal, {}, poolDebug, request.crew_size, request.meal_format));
           }
         }
       }
@@ -384,7 +509,7 @@ export async function registerRoutes(
         const aiRecipeWithStyle = { ...recipe, meal_style: mealStyleDisplay };
         const aiValidation = validateAndFixRecipe(aiRecipeWithStyle, validationCtx);
         recordSignature(chosenProtein, aiValidation.signature);
-        return res.json(buildResponse(aiValidation, {}, debugMode));
+        return res.json(buildResponse(aiValidation, {}, debugMode, request.crew_size, request.meal_format));
       }
 
       if (raceResult.type === "timeout") {
@@ -419,7 +544,7 @@ export async function registerRoutes(
         const fbRecipeWithStyle = { ...fallbackRecipe, _fallback: true, meal_style: mealStyleDisplay };
         const fbValidation = validateAndFixRecipe(fbRecipeWithStyle as any, validationCtx);
         recordSignature(chosenProtein, fbValidation.signature);
-        return res.json(buildResponse(fbValidation, { _fallback: true }, debugMode));
+        return res.json(buildResponse(fbValidation, { _fallback: true }, debugMode, request.crew_size, request.meal_format));
       }
 
       const aiError = (raceResult as any).error;
@@ -445,7 +570,7 @@ export async function registerRoutes(
       const errFbWithStyle = { ...fallbackRecipe, _fallback: true, meal_style: mealStyleDisplay };
       const errFbValidation = validateAndFixRecipe(errFbWithStyle as any, validationCtx);
       recordSignature(chosenProtein, errFbValidation.signature);
-      return res.json(buildResponse(errFbValidation, { _fallback: true }, debugMode));
+      return res.json(buildResponse(errFbValidation, { _fallback: true }, debugMode, request.crew_size, request.meal_format));
     } catch (error: any) {
       console.error("Generate error:", error);
       return res.status(500).json({ message: error.message || "Failed to generate recipe" });

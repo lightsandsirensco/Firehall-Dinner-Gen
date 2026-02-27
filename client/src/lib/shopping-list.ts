@@ -1,4 +1,4 @@
-import type { GenerateResponse, PizzaResponse, IngredientItem } from "@shared/schema";
+import type { GenerateResponse, PizzaResponse, IngredientItem, ClientRecipeResponse, ClientIngredient } from "@shared/schema";
 
 export interface ShoppingItem {
   name: string;
@@ -196,6 +196,14 @@ function ingredientToShoppingItem(ing: IngredientItem): ShoppingItem {
   return { name: ing.item, amount: ing.amount, notes: ing.notes };
 }
 
+function clientIngredientToShoppingItem(ing: ClientIngredient): ShoppingItem {
+  let amount = "";
+  if (ing.qty > 0) {
+    amount = ing.unit ? `${ing.qty} ${ing.unit}` : `${ing.qty}`;
+  }
+  return { name: ing.name, amount, notes: "" };
+}
+
 const BUDGET_SWAPS: Record<string, string> = {
   "ribeye": "Use chuck steak or sirloin instead of ribeye",
   "salmon": "Swap salmon for canned tuna or tilapia",
@@ -224,6 +232,55 @@ function getBudgetSwaps(items: ShoppingItem[]): string[] {
     }
   }
   return swaps;
+}
+
+export function buildShoppingListFromClientMeal(
+  recipe: ClientRecipeResponse,
+  options?: { useWhatWeHave?: boolean; budgetLevel?: string }
+): ShoppingListResult {
+  const allItems: ShoppingItem[] = recipe.ingredients.map(clientIngredientToShoppingItem);
+
+  if (recipe.extra_items_needed) {
+    for (const extra of recipe.extra_items_needed) {
+      allItems.push({ name: extra, amount: "", notes: "" });
+    }
+  }
+
+  const merged = mergeItems(allItems);
+
+  const sectionMap = new Map<string, ShoppingItem[]>();
+  for (const item of merged) {
+    const category = categorize(item.name);
+    if (!sectionMap.has(category)) sectionMap.set(category, []);
+    sectionMap.get(category)!.push(item);
+  }
+
+  const sections: ShoppingSection[] = SECTION_ORDER
+    .filter(title => sectionMap.has(title))
+    .map(title => ({ title, items: sectionMap.get(title)! }));
+
+  const result: ShoppingListResult = { sections };
+
+  if (options?.useWhatWeHave && recipe.ingredients_used && recipe.ingredients_used.length > 0) {
+    result.fridge_used = recipe.ingredients_used;
+    result.need_to_grab = recipe.extra_items_needed || [];
+  }
+
+  if (recipe.veg_option?.enabled && recipe.veg_option.ingredients.length > 0) {
+    const vegItems = recipe.veg_option.ingredients
+      .filter(ing => !ing.item.toLowerCase().includes("tofu"))
+      .map(ingredientToShoppingItem);
+    if (vegItems.length > 0) {
+      result.veg_option = { items: mergeItems(vegItems) };
+    }
+  }
+
+  if (options?.budgetLevel === "low") {
+    const allShoppingItems = [...merged, ...(result.veg_option?.items || [])];
+    result.budget_swaps = getBudgetSwaps(allShoppingItems);
+  }
+
+  return result;
 }
 
 export function buildShoppingListFromMeal(

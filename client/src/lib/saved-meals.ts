@@ -1,17 +1,17 @@
-import type { GenerateResponse } from "@shared/schema";
+import type { ClientRecipeResponse } from "@shared/schema";
 
 const STORAGE_KEY = "firehall_saved_meals";
 
 export interface SavedMeal {
   id: string;
   savedAt: string;
-  recipe: GenerateResponse;
+  recipe: ClientRecipeResponse;
 }
 
-function generateId(recipe: GenerateResponse): string {
+function generateId(recipe: ClientRecipeResponse): string {
   const ingredientKey = recipe.ingredients
     .slice(0, 5)
-    .map((i) => i.item.toLowerCase().trim())
+    .map((i) => i.name.toLowerCase().trim())
     .sort()
     .join("|");
   return `${recipe.title.toLowerCase().trim()}::${ingredientKey}`;
@@ -33,12 +33,12 @@ export function getSavedCount(): number {
   return getSavedMeals().length;
 }
 
-export function isMealSaved(recipe: GenerateResponse): boolean {
+export function isMealSaved(recipe: ClientRecipeResponse): boolean {
   const id = generateId(recipe);
   return getSavedMeals().some((m) => m.id === id);
 }
 
-export function saveMeal(recipe: GenerateResponse): { saved: boolean; duplicate: boolean } {
+export function saveMeal(recipe: ClientRecipeResponse): { saved: boolean; duplicate: boolean } {
   const id = generateId(recipe);
   const existing = getSavedMeals();
 

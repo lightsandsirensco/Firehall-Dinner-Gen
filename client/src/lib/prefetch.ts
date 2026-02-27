@@ -1,4 +1,4 @@
-import type { GenerateResponse } from "@shared/schema";
+import type { ClientRecipeResponse } from "@shared/schema";
 import { apiRequest } from "@/lib/queryClient";
 import { buildFilterKey, putCached, getAllCached, removeCached, buildSignature, getRecentSignatures } from "@/lib/recipe-cache";
 
@@ -28,7 +28,7 @@ export function prefetchMeals(filters: Record<string, unknown>) {
     const capturedExclude = prevExclude;
     apiRequest("POST", "/api/generate", body)
       .then((res) => res.json())
-      .then((data: GenerateResponse) => {
+      .then((data: ClientRecipeResponse) => {
         putCached(filterKey, data);
       })
       .catch(() => {})
@@ -42,7 +42,7 @@ export function prefetchMeals(filters: Record<string, unknown>) {
   }
 }
 
-export function consumePrefetched(filters: Record<string, unknown>, excludeTemplateId?: number): GenerateResponse | null {
+export function consumePrefetched(filters: Record<string, unknown>, excludeTemplateId?: number): ClientRecipeResponse | null {
   const filterKey = buildFilterKey(filters);
   const cached = getAllCached(filterKey);
   const recentSigs = getRecentSignatures();
