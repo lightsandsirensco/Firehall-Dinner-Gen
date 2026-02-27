@@ -466,6 +466,31 @@ Return ONLY valid JSON matching this schema exactly:
   }
 }
 
+function runValidationGates(
+  recipe: GenerateResponse,
+  proteinMode: string
+): { ok: boolean; reasons: string[]; vegBase?: string } {
+  const reasons: string[] = [];
+
+  const v1 = validateStructure(recipe);
+  if (!v1.ok) reasons.push(...v1.reasons);
+
+  const v2 = validateProteinCompliance(recipe, proteinMode);
+  if (!v2.valid) reasons.push(v2.reason || "protein_invalid");
+
+  const v3 = validateTitleConsistency(recipe);
+  if (!v3.ok) reasons.push(...v3.reasons);
+
+  let vegBase: string | undefined;
+  if (proteinMode === "vegetarian") {
+    const v4 = validateVegVariety(recipe);
+    if (!v4.ok) reasons.push(...v4.reasons);
+    else vegBase = v4.base;
+  }
+
+  return { ok: reasons.length === 0, reasons, vegBase };
+}
+
 export async function generateRecipe(
   template: TemplateRow,
   request: GenerateRequest,
@@ -487,6 +512,8 @@ export async function generateRecipe(
   let totalTokensOut = 0;
 
   let lastRecipe: GenerateResponse | null = null;
+  let lastReasons: string[] = [];
+
   for (let attempt = 1; attempt <= MAX_PROTEIN_RETRIES; attempt++) {
     const isRetry = attempt > 1;
     const result = await attemptGenerate(prompt, SYSTEM_PROMPT, template, chosenProtein, budgetLevel, isRetry);
@@ -496,46 +523,26 @@ export async function generateRecipe(
       totalTokensOut += result.tokensOut;
       lastRecipe = result.recipe;
 
-      const structCheck = validateStructure(result.recipe);
-      if (!structCheck.ok) {
-        log(`[recipe-validation] structure invalid attempt=${attempt}/${MAX_PROTEIN_RETRIES}: ${structCheck.reasons.join(", ")}`, "ai");
+      const { ok, reasons, vegBase } = runValidationGates(result.recipe, chosenProtein);
+      if (!ok) {
+        lastReasons = reasons;
+        log(`[recipe-validation] invalid (${chosenProtein}) attempt=${attempt}/${MAX_PROTEIN_RETRIES}: ${reasons.join(", ")}`, "ai");
+        if (attempt < MAX_PROTEIN_RETRIES) await new Promise((r) => setTimeout(r, 300));
         continue;
       }
 
-      const validation = validateProteinCompliance(result.recipe, chosenProtein);
-      if (!validation.valid) {
-        log(`[recipe-validation] invalid (${chosenProtein}) attempt=${attempt}/${MAX_PROTEIN_RETRIES}: ${validation.reason}`, "ai");
-        continue;
-      }
-
-      const titleCheck = validateTitleConsistency(result.recipe);
-      if (!titleCheck.ok) {
-        log(`[recipe-validation] title inconsistency attempt=${attempt}/${MAX_PROTEIN_RETRIES}: ${titleCheck.reasons.join(", ")}`, "ai");
-        continue;
-      }
-
-      if (chosenProtein === "vegetarian") {
-        const vegCheck = validateVegVariety(result.recipe);
-        if (!vegCheck.ok) {
-          log(`[recipe-validation] veg variety rejected attempt=${attempt}/${MAX_PROTEIN_RETRIES}: ${vegCheck.reasons.join(", ")}`, "ai");
-          continue;
-        }
-        commitVegBase(vegCheck.base);
-      }
+      if (chosenProtein === "vegetarian" && vegBase) commitVegBase(vegBase);
 
       const elapsed = Date.now() - genStart;
       log(`Recipe OK in ${elapsed}ms (${totalTokensIn}in/${totalTokensOut}out, attempt ${attempt}/${MAX_PROTEIN_RETRIES}) | ${filterSummary}`, "perf");
       return { recipe: result.recipe, tokensIn: totalTokensIn, tokensOut: totalTokensOut };
     } else {
       log(`[recipe-validation] attempt ${attempt}/${MAX_PROTEIN_RETRIES}: AI failed to produce parseable recipe`, "ai");
-    }
-
-    if (attempt < MAX_PROTEIN_RETRIES) {
-      await new Promise((r) => setTimeout(r, 300));
+      if (attempt < MAX_PROTEIN_RETRIES) await new Promise((r) => setTimeout(r, 300));
     }
   }
 
-  log(`Could not generate a valid ${chosenProtein} recipe after ${MAX_PROTEIN_RETRIES} attempts — trying fallback remix...`, "ai");
+  log(`Could not generate a valid ${chosenProtein} recipe after ${MAX_PROTEIN_RETRIES} attempts (last: ${lastReasons.join(", ")}) — trying fallback remix...`, "ai");
 
   const fallback = await fallbackRemix(template, request, chosenProtein);
   if (fallback) {
@@ -569,6 +576,8 @@ export async function generateRecipeFromPantry(
   let totalTokensOut = 0;
 
   const maxAttempts = pantryProteinMode ? MAX_PROTEIN_RETRIES : 2;
+  const validationMode = pantryProteinMode || "any";
+  let lastReasons: string[] = [];
 
   for (let attempt = 1; attempt <= maxAttempts; attempt++) {
     const isRetry = attempt > 1;
@@ -578,50 +587,15 @@ export async function generateRecipeFromPantry(
       totalTokensIn += result.tokensIn;
       totalTokensOut += result.tokensOut;
 
-      const structCheck = validateStructure(result.recipe);
-      if (!structCheck.ok) {
-        log(`[recipe-validation] pantry structure invalid attempt=${attempt}/${maxAttempts}: ${structCheck.reasons.join(", ")}`, "ai");
-        if (attempt < maxAttempts) {
-          await new Promise((r) => setTimeout(r, 300));
-          continue;
-        }
-        break;
+      const { ok, reasons, vegBase } = runValidationGates(result.recipe, validationMode);
+      if (!ok) {
+        lastReasons = reasons;
+        log(`[recipe-validation] pantry (${validationMode}) invalid attempt=${attempt}/${maxAttempts}: ${reasons.join(", ")}`, "ai");
+        if (attempt < maxAttempts) await new Promise((r) => setTimeout(r, 300));
+        continue;
       }
 
-      if (pantryProteinMode) {
-        const validation = validateProteinCompliance(result.recipe, pantryProteinMode);
-        if (!validation.valid) {
-          log(`[recipe-validation] pantry+${pantryProteinMode} invalid attempt=${attempt}/${maxAttempts}: ${validation.reason}`, "ai");
-          if (attempt < maxAttempts) {
-            await new Promise((r) => setTimeout(r, 300));
-            continue;
-          }
-          break;
-        }
-      }
-
-      const titleCheck = validateTitleConsistency(result.recipe);
-      if (!titleCheck.ok) {
-        log(`[recipe-validation] pantry title inconsistency attempt=${attempt}/${maxAttempts}: ${titleCheck.reasons.join(", ")}`, "ai");
-        if (attempt < maxAttempts) {
-          await new Promise((r) => setTimeout(r, 300));
-          continue;
-        }
-        break;
-      }
-
-      if (pantryProteinMode === "vegetarian") {
-        const vegCheck = validateVegVariety(result.recipe);
-        if (!vegCheck.ok) {
-          log(`[recipe-validation] pantry veg variety rejected attempt=${attempt}/${maxAttempts}: ${vegCheck.reasons.join(", ")}`, "ai");
-          if (attempt < maxAttempts) {
-            await new Promise((r) => setTimeout(r, 300));
-            continue;
-          }
-          break;
-        }
-        commitVegBase(vegCheck.base);
-      }
+      if (pantryProteinMode === "vegetarian" && vegBase) commitVegBase(vegBase);
 
       const elapsed = Date.now() - genStart;
       log(`Pantry recipe OK in ${elapsed}ms (${totalTokensIn}in/${totalTokensOut}out, attempt ${attempt}/${maxAttempts}) | ${filterSummary}`, "perf");
@@ -629,12 +603,10 @@ export async function generateRecipeFromPantry(
     }
 
     log(`[recipe-validation] pantry attempt ${attempt}/${maxAttempts}: AI failed to produce parseable recipe`, "ai");
-    if (attempt < maxAttempts) {
-      await new Promise((r) => setTimeout(r, 300));
-    }
+    if (attempt < maxAttempts) await new Promise((r) => setTimeout(r, 300));
   }
 
-  log(`Pantry generation failed after ${maxAttempts} attempts, trying fallback remix...`, "ai");
+  log(`Pantry generation failed after ${maxAttempts} attempts (last: ${lastReasons.join(", ")}), trying fallback remix...`, "ai");
   const fallback = await fallbackRemix(template, request, "pantry");
   if (fallback) {
     const elapsed = Date.now() - genStart;
