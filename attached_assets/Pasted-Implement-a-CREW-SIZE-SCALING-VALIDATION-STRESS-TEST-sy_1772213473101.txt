@@ -1,0 +1,120 @@
+Implement a CREW SIZE SCALING VALIDATION + STRESS TEST system.
+
+Problem:
+When generating meals for 12+ crew members, quantities, appliances, time, labels, and nutrition can become unrealistic or inconsistent.
+
+Goal:
+Ensure every recipe generated for crew size >= 12 is structurally valid, properly scaled, and operationally realistic for a firehall.
+
+-------------------------------------------------
+1) Hard scaling rules
+-------------------------------------------------
+
+All quantities must scale proportionally to crew_size.
+
+- Protein:
+  Minimum 6–8 oz raw protein per person for meat.
+  If crew_size = 12:
+    Chicken breasts should not be less than ~4.5–6 lbs total.
+  Enforce minimum protein weight threshold based on crew size.
+
+- Base carbs:
+  Rice/pasta: ~0.5 cup dry per person minimum.
+  For 12 crew → at least 6 cups dry rice equivalent.
+
+- Vegetables:
+  Minimum 1 cup total veg per person for balanced meals.
+
+If scaling results in unrealistic fractional amounts:
+  Round to kitchen-friendly amounts (¼ lb, ½ cup, whole cans).
+
+-------------------------------------------------
+2) Appliance realism check
+-------------------------------------------------
+
+If crew_size >= 12:
+
+- Do NOT generate:
+  - Single small skillet-only recipes
+  - 1 baking sheet unless clearly marked as "use 2 sheets"
+  - Air fryer-only meals
+
+Validator rules:
+- For stovetop: require "large Dutch oven" or "large stock pot"
+- For oven: allow multiple trays
+- For grill: allow multiple batches
+- Add note in steps if batching required
+
+-------------------------------------------------
+3) Time realism check
+-------------------------------------------------
+
+If crew_size >= 12:
+
+- Increase prep time by 20–40% automatically
+- Ensure cook time reflects batch cooking if required
+- Total time must not remain identical to 6-person recipe unless method truly scales (e.g., stew)
+
+-------------------------------------------------
+4) Nutrition per serving validation
+-------------------------------------------------
+
+Macros must remain PER SERVING.
+
+- Validate that calories/protein per serving are not multiplied by crew size.
+- Ensure serving count equals crew_size in UI.
+
+-------------------------------------------------
+5) Label validation for high crew size
+-------------------------------------------------
+
+If crew_size >= 12:
+- Avoid labeling meal as "Quick 20-Minute" unless total <= 30 realistically.
+- Add optional badge: "Large Crew Friendly"
+
+-------------------------------------------------
+6) Allergy scaling check
+-------------------------------------------------
+
+If allergens selected:
+- Ensure substitutions scale properly.
+- No leftover non-GF pasta etc.
+- No ambiguous “rice or pasta” allowed.
+
+-------------------------------------------------
+7) Add automated test mode
+-------------------------------------------------
+
+Create test route:
+GET /api/test-large-crew
+
+It should:
+- Generate 20 meals with crew_size = 12
+- Generate 20 meals with crew_size = 15
+- Randomize proteins + filters
+- Log:
+    - total weight of protein
+    - base_carb quantity
+    - appliance type
+    - total time
+    - any validation corrections applied
+
+Fail test if:
+- Protein < threshold
+- Ingredient quantities not scaled
+- Labels mismatch
+- Appliances unrealistic
+- Duplicate signatures
+
+-------------------------------------------------
+8) Add server log:
+[crewScaleAudit] crew=13 proteinLbs=4.75 baseCarbCups=6 appliance=stovetop fixesApplied=[...]
+
+-------------------------------------------------
+Acceptance Criteria:
+- Generate 20 meals at crew_size 13 → all valid
+- No unrealistic quantities
+- No mismatched labels
+- No appliance under-scaling
+- No blank results
+- No duplicate recipes

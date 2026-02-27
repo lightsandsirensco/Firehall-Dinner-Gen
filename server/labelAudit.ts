@@ -558,11 +558,21 @@ function checkTitleConsistency(recipe: GenerateResponse, contentStyle: string, i
   for (const [cuisineKey, pattern] of Object.entries(CUISINE_TITLE_WORDS)) {
     if (pattern.test(title)) {
       const cuisineInfo = CUISINE_INDICATORS[cuisineKey];
-      if (cuisineInfo && cuisineInfo.display !== inferredCuisine) {
+      if (!cuisineInfo) continue;
+
+      if (cuisineInfo.display !== inferredCuisine) {
         const text = fullText(recipe);
+        const ings = ingsText(recipe);
         const matches = text.match(cuisineInfo.pattern);
         const unique = new Set((matches || []).map(m => m.toLowerCase()));
-        if (unique.size < 2) {
+
+        const isHighThreshold = HIGH_THRESHOLD_CUISINES.has(cuisineInfo.display);
+        const minRequired = isHighThreshold ? 3 : 2;
+
+        if (unique.size < minRequired) {
+          return true;
+        }
+        if (isHighThreshold && !ASIAN_REQUIRED_INDICATORS.test(ings)) {
           return true;
         }
       }

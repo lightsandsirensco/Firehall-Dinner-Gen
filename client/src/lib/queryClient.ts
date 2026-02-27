@@ -26,6 +26,7 @@ export async function apiRequest(
   url: string,
   data?: unknown | undefined,
   timeoutMs: number = 45_000,
+  externalSignal?: AbortSignal,
 ): Promise<Response> {
   const headers: Record<string, string> = {};
   if (data) headers["Content-Type"] = "application/json";
@@ -36,6 +37,18 @@ export async function apiRequest(
 
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), timeoutMs);
+
+  if (externalSignal) {
+    if (externalSignal.aborted) {
+      clearTimeout(timer);
+      controller.abort();
+    } else {
+      externalSignal.addEventListener("abort", () => {
+        clearTimeout(timer);
+        controller.abort();
+      }, { once: true });
+    }
+  }
 
   try {
     const res = await fetch(url, {
@@ -52,6 +65,9 @@ export async function apiRequest(
   } catch (err: any) {
     clearTimeout(timer);
     if (err.name === "AbortError") {
+      if (externalSignal?.aborted) {
+        throw err;
+      }
       throw new Error("Request timed out. The server is still working — tap Generate again to retry.");
     }
     throw err;

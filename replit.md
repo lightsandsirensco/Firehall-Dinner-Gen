@@ -30,8 +30,9 @@ Key architectural features and design patterns include:
 - **Auto-Repair Loop**: Automatically attempts to repair AI-generated recipes that fail validation using the LLM, falling back to a deterministic safe recipe after multiple attempts.
 - **Meal Format → Structure Override**: Forces the structure type to match the user-selected `meal_format`.
 - **Filter Persistence**: All filter selections are saved to localStorage and restored on page load.
-- **Per-Session Signature Dedup**: Tracks recent recipe signatures and remixes or forces a different structure if duplicates are generated.
-- **Frontend Request Management**: Manages "Generate Another" requests by canceling in-flight requests and skipping prefetch cache.
+- **Per-Session Signature Dedup**: Tracks recent recipe signatures (15-entry history) and remixes (sauce + base carb swap including step text updates) or forces a different structure if duplicates are generated.
+- **Frontend Request Management**: Manages "Generate Another" requests by canceling in-flight requests via AbortController signal propagation, skipping prefetch cache, and using stale-closure-free state updates.
+- **Crew Scale Audit**: Validates ingredient quantities, appliance realism, timing, and nutrition for large crews (12+). Auto-scales protein, carbs, and vegetables to meet per-person minimums. Located in `server/crew-scale-audit.ts`.
 - **Cost Control**: Implemented through caching, rate limiting, daily AI budget caps, and bot blocking.
 - **Admin Dashboard**: Provides usage statistics, budget status, cache details, and request logs.
 - **Pro Tips**: Recipes include short, practical cooking tips.

@@ -274,15 +274,14 @@ export default function Home() {
     const timeout = setTimeout(() => controller.abort(), 45000);
 
     try {
-      const currentSig = recipe?._signature || undefined;
+      const recentSigs = getRecentSignatures();
       const debugParam = new URLSearchParams(window.location.search).get("debug") === "1" ? "?debug=1" : "";
       const res = await apiRequest("POST", `/api/generate${debugParam}`, {
         ...payload,
         request_id: requestId,
-        exclude_signatures: getRecentSignatures(),
-        recentSignatures: getRecentSignatures(),
-        currentRecipeSignature: currentSig,
-      });
+        exclude_signatures: recentSigs,
+        recentSignatures: recentSigs,
+      }, 45_000, controller.signal);
       clearTimeout(timeout);
 
       if (activeRequestIdRef.current !== requestId) {
@@ -344,7 +343,7 @@ export default function Home() {
         abortControllerRef.current = null;
       }
     }
-  }, [applyRecipe, toast, recipe]);
+  }, [applyRecipe, toast]);
 
   const handleGenerateClick = useCallback(() => {
     handleGenerate(filters);

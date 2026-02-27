@@ -6,6 +6,7 @@ import { generateRequestSchema, pizzaRequestSchema, hallVoteCreateSchema, type G
 import { loadTemplates, filterTemplates, filterTemplatesWithRelaxation, pickTemplate, chooseProtein } from "./templates";
 import { scanRecipeForAllergens, autoSubstituteAllergens, substituteTextForAllergens, buildAllergenAvoidList } from "./allergens";
 import { auditAndFixRecipe as labelAudit, inferIngredientCategory, type LabelAuditContext } from "./labelAudit";
+import { auditCrewScale, type CrewScaleAuditResult } from "./crew-scale-audit";
 import { generateRecipe, generateRecipeFromPantry, repairRecipe, buildSafeFallbackRecipe } from "./ai";
 import { getVarietyConstraints, recordRecipe } from "./variety-memory";
 import { generatePizzaRecipe, pickPizzaConcept } from "./pizza-ai";
@@ -467,6 +468,21 @@ export async function registerRoutes(
     });
     const newCarb = altCarbs.length > 0 ? altCarbs[Math.floor(Math.random() * altCarbs.length)] : "rice";
     if (newCarb && remixed.tags) remixed.tags.base_carb = newCarb;
+
+    if (newCarb && currentCarb && newCarb !== currentCarb.toLowerCase()) {
+      const carbPattern = new RegExp(`\\b(${currentCarb.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})\\b`, "gi");
+      const display = newCarb.charAt(0).toUpperCase() + newCarb.slice(1);
+      const carbIngIdx = remixed.ingredients.findIndex(i => carbPattern.test(i.item));
+      if (carbIngIdx >= 0) {
+        remixed.ingredients[carbIngIdx] = { ...remixed.ingredients[carbIngIdx], item: display };
+      }
+      for (let si = 0; si < remixed.steps.length; si++) {
+        const stepBody = remixed.steps[si].body || "";
+        if (carbPattern.test(stepBody)) {
+          remixed.steps[si] = { ...remixed.steps[si], body: stepBody.replace(carbPattern, newCarb) };
+        }
+      }
+    }
 
     const proteinDisplay = protein.charAt(0).toUpperCase() + protein.slice(1);
     const styleDisplay = remixed.meal_style || currentStructure;
