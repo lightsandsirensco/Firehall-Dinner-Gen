@@ -26,9 +26,9 @@ const ALLERGEN_SAFE_REPLACEMENTS: AllergenSafeReplacement[] = [
   { match: /cheese/i, safeFor: ["dairy"], replacement: { item: "Nutritional yeast", amount: "3 tbsp", baseQty: 3, unit: "tbsp" }, stepFind: /cheese/gi, stepReplace: "nutritional yeast" },
   { match: /chicken broth/i, safeFor: ["dairy"], replacement: { item: "Vegetable broth", amount: "1 cup", baseQty: 1, unit: "cup" }, stepFind: /chicken broth/gi, stepReplace: "vegetable broth" },
   { match: /cream/i, safeFor: ["dairy", "soy", "nuts"], replacement: { item: "Coconut cream", amount: "½ cup", baseQty: 0.5, unit: "cup" }, stepFind: /cream/gi, stepReplace: "coconut cream" },
-  { match: /soy sauce/i, safeFor: ["soy", "gluten"], replacement: { item: "Coconut aminos", amount: "3 tbsp", baseQty: 3, unit: "tbsp" }, stepFind: /soy sauce/gi, stepReplace: "coconut aminos" },
-  { match: /soy sauce/i, safeFor: ["soy"], replacement: { item: "Coconut aminos", amount: "3 tbsp", baseQty: 3, unit: "tbsp" }, stepFind: /soy sauce/gi, stepReplace: "coconut aminos" },
   { match: /soy sauce/i, safeFor: ["gluten"], replacement: { item: "Tamari (gluten-free)", amount: "3 tbsp", baseQty: 3, unit: "tbsp" }, stepFind: /soy sauce/gi, stepReplace: "tamari (gluten-free)" },
+  { match: /soy sauce/i, safeFor: ["soy"], replacement: { item: "Coconut aminos", amount: "3 tbsp", baseQty: 3, unit: "tbsp" }, stepFind: /soy sauce/gi, stepReplace: "coconut aminos" },
+  { match: /soy sauce/i, safeFor: ["soy", "gluten"], replacement: { item: "Coconut aminos", amount: "3 tbsp", baseQty: 3, unit: "tbsp" }, stepFind: /soy sauce/gi, stepReplace: "coconut aminos" },
   { match: /rice or pasta/i, safeFor: ["gluten"], replacement: { item: "Rice", amount: "2 cups", baseQty: 2, unit: "cups" }, stepFind: /rice or pasta/gi, stepReplace: "rice" },
   { match: /pasta/i, safeFor: ["gluten"], replacement: { item: "Rice (gluten-free substitute)", amount: "2 cups", baseQty: 2, unit: "cups" }, stepFind: /pasta/gi, stepReplace: "rice" },
   { match: /dijon mustard/i, safeFor: ["gluten"], replacement: { item: "Gluten-free Dijon mustard", amount: "2 tbsp", baseQty: 2, unit: "tbsp" }, stepFind: /dijon mustard/gi, stepReplace: "gluten-free Dijon mustard" },
@@ -782,15 +782,15 @@ function applyAllergenSwaps(
   for (let i = 0; i < swappedIngredients.length; i++) {
     if (alreadySwapped.has(i)) continue;
 
+    const taggedAllergens = swappedIngredients[i].allergens || [];
+    const triggeredAllergens = lowerAllergens.filter(a =>
+      taggedAllergens.includes(a) || ALLERGEN_SAFE_REPLACEMENTS.some(r => r.match.test(swappedIngredients[i].item) && r.safeFor.includes(a))
+    );
+    if (triggeredAllergens.length === 0) continue;
+
     const bestSwap = ALLERGEN_SAFE_REPLACEMENTS.find(rule => {
       if (!rule.match.test(swappedIngredients[i].item)) return false;
-      const relevantAllergens = lowerAllergens.filter(a => {
-        const taggedAllergens = swappedIngredients[i].allergens || [];
-        if (taggedAllergens.includes(a)) return true;
-        return rule.safeFor.includes(a);
-      });
-      if (relevantAllergens.length === 0) return false;
-      return relevantAllergens.every(a => rule.safeFor.includes(a));
+      return triggeredAllergens.every(a => rule.safeFor.includes(a));
     });
 
     if (bestSwap) {

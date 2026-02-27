@@ -4,7 +4,7 @@ import crypto from "crypto";
 import cookieParser from "cookie-parser";
 import { generateRequestSchema, pizzaRequestSchema, hallVoteCreateSchema, type GenerateResponse, type ClientRecipeResponse, type ClientIngredient, type ClientStep, type ClientProteinSafety, type ClientPlating, type ClientTiming } from "@shared/schema";
 import { loadTemplates, filterTemplates, filterTemplatesWithRelaxation, pickTemplate, chooseProtein } from "./templates";
-import { scanRecipeForAllergens, autoSubstituteAllergens, buildAllergenAvoidList } from "./allergens";
+import { scanRecipeForAllergens, autoSubstituteAllergens, substituteTextForAllergens, buildAllergenAvoidList } from "./allergens";
 import { auditAndFixRecipe as labelAudit, inferIngredientCategory, type LabelAuditContext } from "./labelAudit";
 import { generateRecipe, generateRecipeFromPantry, repairRecipe, buildSafeFallbackRecipe } from "./ai";
 import { getVarietyConstraints, recordRecipe } from "./variety-memory";
@@ -315,6 +315,30 @@ export async function registerRoutes(
         }
       } else {
         log(`[allergen-postcheck] Clean — no allergen violations found`, "allergen");
+      }
+
+      if (recipe.pro_tips && Array.isArray(recipe.pro_tips)) {
+        recipe = { ...recipe, pro_tips: recipe.pro_tips.map((t: string) => substituteTextForAllergens(t, allergens)) };
+      }
+      if (recipe.why_it_fits_tonight) {
+        recipe = { ...recipe, why_it_fits_tonight: substituteTextForAllergens(recipe.why_it_fits_tonight, allergens) };
+      }
+      if (recipe.cleanup_tip) {
+        recipe = { ...recipe, cleanup_tip: substituteTextForAllergens(recipe.cleanup_tip, allergens) };
+      }
+      if (recipe.budget_tips && Array.isArray(recipe.budget_tips)) {
+        recipe = { ...recipe, budget_tips: recipe.budget_tips.map((t: string) => substituteTextForAllergens(t, allergens)) };
+      }
+      if (recipe.veg_option) {
+        const vo = recipe.veg_option;
+        recipe = {
+          ...recipe,
+          veg_option: {
+            ...vo,
+            title: vo.title ? substituteTextForAllergens(vo.title, allergens) : vo.title,
+            swap_instructions: vo.swap_instructions ? substituteTextForAllergens(vo.swap_instructions, allergens) : vo.swap_instructions,
+          },
+        };
       }
     }
 

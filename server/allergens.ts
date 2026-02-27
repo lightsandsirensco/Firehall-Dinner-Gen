@@ -206,6 +206,20 @@ export function autoSubstituteAllergens(
   return { ingredients: fixedIngredients, steps: fixedSteps, title: fixedTitle, substitutionsMade };
 }
 
+export function substituteTextForAllergens(text: string, allergens: string[]): string {
+  if (!text || !allergens || allergens.length === 0) return text;
+  const normalizedAllergens = allergens.map(a => a.toLowerCase().trim());
+  let result = text;
+  for (const sub of ALLERGEN_SUBSTITUTIONS) {
+    const isRelevant = sub.safeFor.some(sf => normalizedAllergens.includes(sf));
+    if (!isRelevant) continue;
+    if (sub.stepFind.test(result)) {
+      result = result.replace(sub.stepFind, sub.stepReplace);
+    }
+  }
+  return result;
+}
+
 export function buildAllergenAvoidList(allergens: string[]): string {
   if (!allergens || allergens.length === 0) return "";
   const items: string[] = [];
