@@ -1025,9 +1025,14 @@ export function buildFallbackRecipe(
 
   const mealStyleLabel = structureType ? (STRUCTURE_DISPLAY[structureType] || structureType) : "Skillet";
 
+  const primarySource = isVegetarian && vegSet
+    ? vegSet.base
+    : isSeafood ? "Seafood" : proteinDisplay;
+
   return {
     template_id: parseInt(template.template_id),
     chosen_protein: proteinDisplay,
+    primary_protein_source: primarySource,
     title,
     meal_style: mealStyleLabel,
     why_it_fits_tonight: whyItFits,

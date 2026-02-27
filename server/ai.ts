@@ -99,6 +99,24 @@ function fillDefaults(recipe: GenerateResponse, template: TemplateRow, chosenPro
   }
   recipe.budget_level = budgetLevel;
 
+  if (!recipe.primary_protein_source) {
+    const lower = (chosenProtein || "").toLowerCase();
+    if (lower === "vegetarian") {
+      const VEG_SOURCES = ["lentils", "chickpeas", "black beans", "kidney beans", "white beans", "tempeh", "tofu", "seitan", "edamame", "greek yogurt", "eggs", "quinoa", "paneer"];
+      const text = [
+        recipe.title || "",
+        ...(recipe.ingredients || []).map((i: any) => i.item || ""),
+      ].join(" ").toLowerCase();
+      recipe.primary_protein_source = VEG_SOURCES.find(s => text.includes(s)) || "mixed vegetables";
+    } else if (lower === "pantry") {
+      const text = [recipe.title || "", ...(recipe.ingredients || []).map((i: any) => i.item || "")].join(" ").toLowerCase();
+      const PROTEINS = ["chicken", "beef", "pork", "turkey", "salmon", "shrimp", "tofu", "lentils", "chickpeas", "black beans"];
+      recipe.primary_protein_source = PROTEINS.find(s => text.includes(s)) || "mixed";
+    } else {
+      recipe.primary_protein_source = chosenProtein.charAt(0).toUpperCase() + chosenProtein.slice(1);
+    }
+  }
+
   if (!recipe.budget_tips || !Array.isArray(recipe.budget_tips)) recipe.budget_tips = [];
   if (!recipe.pro_tips || !Array.isArray(recipe.pro_tips)) recipe.pro_tips = [];
   if (!recipe.timing) recipe.timing = { prep_minutes: 0, cook_minutes: 0, total_minutes: 0 };
@@ -354,10 +372,11 @@ ${healthyBlock}
 RULES: ${request.crew_size} servings. 6-10 steps max. 8-12 ingredients. ${isVegetarian ? "25-45g" : "35-60g"} protein/serving. Include "pro_tips": 1-2 short practical tips (1-2 sentences each) about technique, make-ahead, or serving. Max 2 tips.
 STEP FORMAT (each step MUST follow this): heading = "Action (heat level, time)" e.g. "${isVegetarian ? "Sauté the chickpeas (medium-high, 4-5 min)" : "Sear the chicken (medium-high, 5-7 min)"}". body = concise HOW-TO with visual/doneness cue. Include: heat level (low/medium/medium-high/high or oven °F), time estimate, and a doneness cue ("until golden brown", "until fragrant", "until heated through"). Never repeat same instruction in two steps. No storytelling. Keep each step 1-3 sentences.
 ${isVegetarian ? "SAFETY: Reheat leftovers to 165°F. Ensure tofu/tempeh is cooked through." : "SAFETY TEMPS (always include for any protein): chicken/turkey 165°F/74°C, ground beef/sausage 160°F/71°C, pork 145°F/63°C +3min rest, fish 145°F/63°C."}
+PRIMARY PROTEIN SOURCE: Set "primary_protein_source" to the single main protein ingredient (e.g. "chicken", "lentils", "salmon", "chickpeas", "tofu", "eggs"). For vegetarian: name the specific plant protein used most.
 REQUIRED OUTPUT TAGS: Include "tags" object with: cuisine (e.g. "Mediterranean"), cooking_method (e.g. "sheet-pan"), base_carb (e.g. "rice"), key_ingredients (3-5 main items as string array), high_protein (boolean, true if 30g+ protein/serving), high_fiber (boolean, true if contains beans/lentils/chickpeas/whole grains), quick_cleanup (boolean, true if one-pan/sheet-pan/slow-cooker).
 
 JSON:
-{"template_id":${template.template_id},"chosen_protein":"${proteinDisplay}","title":"","why_it_fits_tonight":"","timing":{"prep_minutes":0,"cook_minutes":0,"total_minutes":0},"protein_safety":[{"protein":"","target_temp_f":0,"target_temp_c":0,"rest_minutes":0,"probe_where":"","notes":""}],"ingredients":[{"item":"","amount":"","notes":""}],"steps":[{"heading":"","body":""}],"cleanup_tip":"","macros_per_serving":{"calories":0,"protein_g":0,"carbs_g":0,"fat_g":0},"budget_level":"${budgetLevel}","budget_tips":[],"pro_tips":[],"tags":{"cuisine":"","cooking_method":"","base_carb":"","key_ingredients":[],"high_protein":false,"high_fiber":false,"quick_cleanup":false}${request.vegetarian_swap_needed ? ',"veg_option":{"enabled":true,"swap_protein":"","ingredients":[],"steps":[],"plating_notes":""}' : ""}}`;
+{"template_id":${template.template_id},"chosen_protein":"${proteinDisplay}","primary_protein_source":"","title":"","why_it_fits_tonight":"","timing":{"prep_minutes":0,"cook_minutes":0,"total_minutes":0},"protein_safety":[{"protein":"","target_temp_f":0,"target_temp_c":0,"rest_minutes":0,"probe_where":"","notes":""}],"ingredients":[{"item":"","amount":"","notes":""}],"steps":[{"heading":"","body":""}],"cleanup_tip":"","macros_per_serving":{"calories":0,"protein_g":0,"carbs_g":0,"fat_g":0},"budget_level":"${budgetLevel}","budget_tips":[],"pro_tips":[],"tags":{"cuisine":"","cooking_method":"","base_carb":"","key_ingredients":[],"high_protein":false,"high_fiber":false,"quick_cleanup":false}${request.vegetarian_swap_needed ? ',"veg_option":{"enabled":true,"swap_protein":"","ingredients":[],"steps":[],"plating_notes":""}' : ""}}`;
 }
 
 function buildPantryPrompt(template: TemplateRow, request: GenerateRequest, varietyBlock: string, healthyBlock: string, structureType?: StructureType): string {
@@ -415,10 +434,11 @@ ${healthyBlock}
 RULES: Use as many on-hand ingredients as practical. List used ones in "ingredients_used". List 1-4 extras needed in "extra_items_needed" (skip basic pantry staples). ${request.crew_size} servings. 6-10 steps max. 8-12 ingredients. ${isPantryVegetarian ? "25-45g" : "35-60g"} protein/serving. Include "pro_tips": 1-2 short practical tips (1-2 sentences each) about technique, make-ahead, or serving. Max 2 tips.
 STEP FORMAT (each step MUST follow this): heading = "Action (heat level, time)" e.g. "Sear the chicken (medium-high, 5-7 min)". body = concise HOW-TO with visual/doneness cue. Include: heat level (low/medium/medium-high/high or oven °F), time estimate, and a doneness cue ("until golden brown", "until juices run clear", "until internal temp reaches 165°F"). Never repeat same instruction in two steps. No storytelling. Keep each step 1-3 sentences.
 SAFETY TEMPS (always include for any protein): chicken/turkey 165°F/74°C, ground beef/sausage 160°F/71°C, pork 145°F/63°C +3min rest, fish 145°F/63°C.
+PRIMARY PROTEIN SOURCE: Set "primary_protein_source" to the single main protein ingredient (e.g. "chicken", "lentils", "salmon", "chickpeas", "tofu", "eggs"). For vegetarian: name the specific plant protein used most.
 REQUIRED OUTPUT TAGS: Include "tags" object with: cuisine (e.g. "Mediterranean"), cooking_method (e.g. "sheet-pan"), base_carb (e.g. "rice"), key_ingredients (3-5 main items as string array), high_protein (boolean, true if 30g+ protein/serving), high_fiber (boolean, true if contains beans/lentils/chickpeas/whole grains), quick_cleanup (boolean, true if one-pan/sheet-pan/slow-cooker).
 
 JSON:
-{"template_id":${template.template_id},"chosen_protein":"","title":"","why_it_fits_tonight":"","timing":{"prep_minutes":0,"cook_minutes":0,"total_minutes":0},"protein_safety":[{"protein":"","target_temp_f":0,"target_temp_c":0,"rest_minutes":0,"probe_where":"","notes":""}],"ingredients":[{"item":"","amount":"","notes":""}],"steps":[{"heading":"","body":""}],"cleanup_tip":"","macros_per_serving":{"calories":0,"protein_g":0,"carbs_g":0,"fat_g":0},"ingredients_used":[],"extra_items_needed":[],"budget_level":"${budgetLevel}","budget_tips":[],"pro_tips":[],"tags":{"cuisine":"","cooking_method":"","base_carb":"","key_ingredients":[],"high_protein":false,"high_fiber":false,"quick_cleanup":false}${request.vegetarian_swap_needed ? ',"veg_option":{"enabled":true,"swap_protein":"","ingredients":[],"steps":[],"plating_notes":""}' : ""}}`;
+{"template_id":${template.template_id},"chosen_protein":"","primary_protein_source":"","title":"","why_it_fits_tonight":"","timing":{"prep_minutes":0,"cook_minutes":0,"total_minutes":0},"protein_safety":[{"protein":"","target_temp_f":0,"target_temp_c":0,"rest_minutes":0,"probe_where":"","notes":""}],"ingredients":[{"item":"","amount":"","notes":""}],"steps":[{"heading":"","body":""}],"cleanup_tip":"","macros_per_serving":{"calories":0,"protein_g":0,"carbs_g":0,"fat_g":0},"ingredients_used":[],"extra_items_needed":[],"budget_level":"${budgetLevel}","budget_tips":[],"pro_tips":[],"tags":{"cuisine":"","cooking_method":"","base_carb":"","key_ingredients":[],"high_protein":false,"high_fiber":false,"quick_cleanup":false}${request.vegetarian_swap_needed ? ',"veg_option":{"enabled":true,"swap_protein":"","ingredients":[],"steps":[],"plating_notes":""}' : ""}}`;
 }
 
 async function attemptGenerate(
@@ -459,7 +479,7 @@ ${request.allergens_to_avoid.length > 0 ? `AVOID: ${request.allergens_to_avoid.j
 
 Give it a creative twist — different sauce, spice profile, or side variation. Keep it practical for a fire station kitchen.
 Return ONLY valid JSON matching this schema exactly:
-{"template_id":${template.template_id},"chosen_protein":"${proteinDisplay}","title":"","why_it_fits_tonight":"","timing":{"prep_minutes":0,"cook_minutes":0,"total_minutes":0},"protein_safety":[],"ingredients":[{"item":"","amount":"","notes":""}],"steps":[{"heading":"","body":""}],"cleanup_tip":"","macros_per_serving":{"calories":0,"protein_g":0,"carbs_g":0,"fat_g":0},"budget_level":"${budgetLevel}","budget_tips":[],"pro_tips":[]}`;
+{"template_id":${template.template_id},"chosen_protein":"${proteinDisplay}","primary_protein_source":"","title":"","why_it_fits_tonight":"","timing":{"prep_minutes":0,"cook_minutes":0,"total_minutes":0},"protein_safety":[],"ingredients":[{"item":"","amount":"","notes":""}],"steps":[{"heading":"","body":""}],"cleanup_tip":"","macros_per_serving":{"calories":0,"protein_g":0,"carbs_g":0,"fat_g":0},"budget_level":"${budgetLevel}","budget_tips":[],"pro_tips":[]}`;
 
   try {
     log(`Fallback remix attempt for template: ${template.template_name}`, "ai");

@@ -93,6 +93,7 @@ export interface RecipeTags {
 export interface GenerateResponse {
   template_id: number;
   chosen_protein: string;
+  primary_protein_source: string;
   title: string;
   meal_style?: string;
   why_it_fits_tonight: string;

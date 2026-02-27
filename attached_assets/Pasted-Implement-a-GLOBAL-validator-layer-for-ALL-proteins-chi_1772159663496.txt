@@ -1,0 +1,123 @@
+Implement a GLOBAL validator layer for ALL proteins (chicken, beef, pork, turkey, fish, vegetarian) to prevent title/structure mismatches and “same recipe, different name”.
+
+Problem:
+Across all proteins, the title/cuisine/meal_style sometimes don’t match the actual ingredients/steps (e.g., “Wraps” but no tortillas, “Burrito Bowl” but no rice/beans, “Greek” but no Greek indicators). Users see repeated base recipes with renamed titles.
+
+Solution:
+Add a validator + dedupe layer that runs on EVERY /api/generate response (AI and fallback) before returning to the client.
+
+1) Create validateRecipe.ts
+Export:
+- validateAndFixRecipe(recipe, ctx) => { recipe, ok, issues, actionTaken }
+
+ctx includes:
+- selectedProteins, chosenProtein, meal_style, cuisine, time, appliances, allergies, healthiness, budget
+- recentSignatures (from client)
+- currentRecipeSignature (so we never return the same)
+
+2) Enforce STRUCTURE RULES for ALL recipes
+Validate based on recipe.meal_style:
+
+WRAP:
+- Required ingredient: tortilla/wrap/pita/naan/lavash/flatbread
+- Required step: assemble/wrap/roll
+- Forbidden main base: rice/quinoa as primary (allowed only as “optional side”)
+
+TACO:
+- Required: tortillas/taco shells + assembly step
+- No “wrap” language
+
+BOWL:
+- Required: a base layer (rice/quinoa/noodles/greens/potatoes)
+- Must not present tortillas as the main vessel
+
+PASTA:
+- Required: pasta/noodles + boil/cook step
+
+SHEET PAN / BAKE:
+- Required: oven temp + bake/roast step + sheet pan/tray mention
+
+GRILL:
+- Require grill appliance OR fall back to stovetop “grill-pan” wording
+
+SOUP/STEW:
+- Required: broth/stock + simmer step
+
+ONE-POT:
+- Steps must be single-vessel flow (allow quick side only if labeled)
+
+3) Title ↔ Content VALIDATION (applies to all proteins)
+Title must accurately reflect:
+- chosen protein (or veg protein)
+- meal_style keyword (or synonym)
+- cuisine word ONLY if supported by ingredients/spices
+
+Cuisine proof rule:
+If title uses a cuisine adjective, require at least 2 matching indicators:
+- Mexican: cumin, chili powder, lime, salsa, tortillas, beans
+- Mediterranean/Greek: oregano, lemon, garlic, feta/olive (if allowed)
+- Asian: soy/tamari, ginger, sesame, rice vinegar
+- Indian: curry, garam masala, turmeric, cumin
+- Italian: basil, oregano, tomato, parmesan (if allowed)
+(extend list as needed)
+If proof fails → remove cuisine adjective from title OR adjust ingredients/spices to match.
+
+If title mentions a key ingredient (e.g., “honey”, “hummus”, “bbq”, “teriyaki”) it must exist in ingredients; otherwise remove it from title.
+
+4) Add GLOBAL fingerprint + dedupe (all proteins)
+Compute signature:
+signature = normalize(
+  meal_style +
+  chosenProtein +
+  cuisine +
+  baseCarb +
+  cookingMethod +
+  sorted(core_ingredients_without_oil_salt_water).slice(0,10)
+)
+
+Block duplicates:
+- Compare against:
+  a) ctx.recentSignatures from client (last 10)
+  b) server-side lastSignaturesByProtein (store last 20 per chosenProtein)
+- If duplicate:
+  Attempt 1 (no new AI call): “remix” locally by changing ONE major axis:
+    - meal_style OR baseCarb OR cuisine spice set OR key veg set
+    - update ingredients/steps accordingly
+    - regenerate title from the FINAL content
+  Attempt 2 (one AI call max): regenerate with forced different meal_style + different baseCarb
+- Hard limit: max 1 extra AI call total. Never loop more than 2 attempts.
+
+5) Ensure “Generate Another” cannot return the same recipe
+- Client sends currentRecipeSignature and recentSignatures.
+- Backend must never return same signature as currentRecipeSignature.
+
+6) Add “title-from-content” function (global)
+After final recipe content is set (post-fix/remix), generate title deterministically from:
+- protein + meal_style + cuisine (only if valid) + 1 key ingredient
+Examples:
+“Sheet-Pan Lemon Oregano Chicken & Potatoes”
+“Skillet BBQ Pulled Pork Sandwiches”
+“Teriyaki Beef Stir-Fry Bowls”
+“Turkey Taco Lettuce Wraps”
+This function must never invent ingredients that aren’t in the list.
+
+7) Integrate into /api/generate
+Flow:
+- get recipe (AI or fallback)
+- validateAndFixRecipe(...)
+- compute signature
+- if duplicate → remix/regenerate (per rules)
+- return final recipe with recipe.meal_style and signature
+
+8) Logging (temporary)
+Log:
+[validator] ok=?, action=?, issuesCount=?, meal_style=?, chosenProtein=?, cuisine=?, baseCarb=?, signature=?, title=?
+
+Acceptance tests:
+- For each protein (chicken/beef/pork/turkey/fish/vegetarian):
+  Generate 10 meals with common settings.
+  - No “wrap” without tortillas + wrap step
+  - No cuisine labels that don’t match ingredients
+  - No identical ingredient lists with different names
+  - No back-to-back duplicate signatures
+- No filter removal, no regression to email/print/shopping list/save/history.
