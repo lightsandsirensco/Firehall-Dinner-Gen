@@ -307,6 +307,26 @@ function buildFilterSummary(request: GenerateRequest): string {
   return parts.join(" | ");
 }
 
+const MEAL_FORMAT_RULES: Record<string, string> = {
+  burger: "FORMAT RULES (BURGER — STRICT): Must include buns (or lettuce wrap if low carb). Final step must assemble the burger. Do NOT include rice. Do NOT say 'serve over rice'. Do NOT include tortillas.",
+  tacos: "FORMAT RULES (TACOS — STRICT): Must include tortillas (corn or flour). Final step must assemble tacos. Do NOT include buns. Do NOT say 'serve over rice'. Do NOT include rice.",
+  wrap: "FORMAT RULES (WRAP — STRICT): Must include a large tortilla or wrap. Final step must roll or fold the wrap. Do NOT include buns. Do NOT say 'serve over rice'. Do NOT include rice.",
+  bowl: "FORMAT RULES (BOWL — STRICT): Must include a base layer: rice, quinoa, potatoes, or greens. Final step must say 'serve in a bowl' or 'serve over [base]'. Do NOT include buns or tortillas.",
+  pasta: "FORMAT RULES (PASTA — STRICT): Must include pasta (any shape). Final step must toss or combine with pasta. Do NOT include buns or tortillas. Do NOT include rice.",
+  salad: "FORMAT RULES (SALAD — STRICT): Must include greens or a salad base. Final step must toss or plate the salad. Do NOT include buns or tortillas. Do NOT include rice. Do NOT include pasta.",
+  sheet_pan: "FORMAT RULES (SHEET PAN — STRICT): Must include an oven temperature and a roasting step on a sheet pan. Must NOT be a stovetop-only recipe. Do NOT include rice. Do NOT say 'serve over rice'.",
+  stir_fry: "FORMAT RULES (STIR FRY — STRICT): Must use high-heat skillet or wok stir-fry technique. Do NOT include buns or tortillas. Do NOT default to rice — only include rice if the format is also a bowl.",
+  soup_chili: "FORMAT RULES (SOUP/CHILI — STRICT): Must include a simmer time. Serve in a bowl. Do NOT include rice. Do NOT include buns or tortillas.",
+  breakfast: "FORMAT RULES (BREAKFAST — STRICT): Must include a breakfast anchor: eggs, oats, yogurt, pancakes, or similar. Do NOT include rice. Do NOT include buns or tortillas.",
+};
+
+function buildMealFormatBlock(mealFormat: string | undefined): string {
+  if (!mealFormat || mealFormat === "random") {
+    return "CARB RULE: Do not default to rice. Only include a carb (rice, pasta, bread, tortillas, etc.) if it is integral to the dish style. Vary the base across generations.";
+  }
+  return MEAL_FORMAT_RULES[mealFormat] || "";
+}
+
 const STRUCTURAL_CONSISTENCY_RULES = `STRUCTURAL CONSISTENCY RULES (STRICT): The recipe title, ingredients, and instructions must be fully aligned. If the title contains a descriptive claim, it must be reflected in both ingredients and instructions. Examples: If the title includes "cheesy", the ingredients must contain a cheese product and the instructions must include adding or melting the cheese. If the title includes "creamy", the ingredients must contain a cream-based ingredient (cream, milk, yogurt, coconut milk, cream cheese, etc.) and the instructions must show it being incorporated. If the title includes "stuffed", the instructions must explicitly describe stuffing or filling the item. If the title includes a protein (e.g., chicken, pork, tofu), that protein must appear in the ingredients and be used in the instructions. Do not generate titles that exaggerate or misrepresent the ingredients.`;
 
 const SYSTEM_PROMPT = `Firehall chef writing beginner-friendly recipes. Return ONLY valid JSON. Every step heading includes heat level and time. Every step body explains HOW to do it with a visual doneness cue. Include safety temps for every protein. No markdown. The recipe MUST use ONLY the specified protein — no substitutions. ${STRUCTURAL_CONSISTENCY_RULES}`;
@@ -332,10 +352,11 @@ function buildPrompt(template: TemplateRow, request: GenerateRequest, chosenProt
     : "";
 
   const cuisineLine = buildCuisineDirective(request.cuisine_style || "any");
+  const mealFormatBlock = buildMealFormatBlock(request.meal_format);
 
   const structureLine = structureType
-    ? `MEAL STRUCTURE (mandatory): This recipe MUST be a ${STRUCTURE_DISPLAY[structureType]} style meal. The dish format, title, and presentation must clearly be a ${STRUCTURE_DISPLAY[structureType]}. Do NOT default to a rice bowl. Do NOT repeat the same structure as previous recipes.`
-    : `MEAL STRUCTURE: Vary the structure. Do NOT default to a rice bowl. Use different formats like wraps, tacos, sheet-pan, pasta, one-pot, stuffed, casserole, stir-fry, etc. across generations.`;
+    ? `MEAL STRUCTURE (mandatory): This recipe MUST be a ${STRUCTURE_DISPLAY[structureType]} style meal. The dish format, title, and presentation must clearly be a ${STRUCTURE_DISPLAY[structureType]}. Do NOT repeat the same structure as previous recipes.`
+    : `MEAL STRUCTURE: Vary the structure. Use different formats like wraps, tacos, sheet-pan, pasta, one-pot, stuffed, casserole, stir-fry, etc. across generations.`;
 
   const isVegetarian = chosenProtein.toLowerCase() === "vegetarian";
   const isSeafood = chosenProtein.toLowerCase() === "seafood";
@@ -360,6 +381,7 @@ CREW: ${request.crew_size} | Shift: ${request.busy_level} | Time: ${request.time
 ${proteinDirective}
 Healthiness: ${request.healthiness_preference}
 ${structureLine}
+${mealFormatBlock}
 ${cuisineLine}
 ${allergenLine}
 ${budgetLine}
@@ -373,7 +395,7 @@ RULES: ${request.crew_size} servings. 6-10 steps max. 8-12 ingredients. ${isVege
 STEP FORMAT (each step MUST follow this): heading = "Action (heat level, time)" e.g. "${isVegetarian ? "Sauté the chickpeas (medium-high, 4-5 min)" : "Sear the chicken (medium-high, 5-7 min)"}". body = concise HOW-TO with visual/doneness cue. Include: heat level (low/medium/medium-high/high or oven °F), time estimate, and a doneness cue ("until golden brown", "until fragrant", "until heated through"). Never repeat same instruction in two steps. No storytelling. Keep each step 1-3 sentences.
 ${isVegetarian ? "SAFETY: Reheat leftovers to 165°F. Ensure tofu/tempeh is cooked through." : "SAFETY TEMPS (always include for any protein): chicken/turkey 165°F/74°C, ground beef/sausage 160°F/71°C, pork 145°F/63°C +3min rest, fish 145°F/63°C."}
 PRIMARY PROTEIN SOURCE: Set "primary_protein_source" to the single main protein ingredient (e.g. "chicken", "lentils", "salmon", "chickpeas", "tofu", "eggs"). For vegetarian: name the specific plant protein used most.
-REQUIRED OUTPUT TAGS: Include "tags" object with: cuisine (e.g. "Mediterranean"), cooking_method (e.g. "sheet-pan"), base_carb (e.g. "rice"), key_ingredients (3-5 main items as string array), high_protein (boolean, true if 30g+ protein/serving), high_fiber (boolean, true if contains beans/lentils/chickpeas/whole grains), quick_cleanup (boolean, true if one-pan/sheet-pan/slow-cooker).
+REQUIRED OUTPUT TAGS: Include "tags" object with: cuisine (e.g. "Mediterranean"), cooking_method (e.g. "sheet-pan"), base_carb (the actual carb used, or empty string if none), key_ingredients (3-5 main items as string array), high_protein (boolean, true if 30g+ protein/serving), high_fiber (boolean, true if contains beans/lentils/chickpeas/whole grains), quick_cleanup (boolean, true if one-pan/sheet-pan/slow-cooker).
 
 JSON:
 {"template_id":${template.template_id},"chosen_protein":"${proteinDisplay}","primary_protein_source":"","title":"","why_it_fits_tonight":"","timing":{"prep_minutes":0,"cook_minutes":0,"total_minutes":0},"protein_safety":[{"protein":"","target_temp_f":0,"target_temp_c":0,"rest_minutes":0,"probe_where":"","notes":""}],"ingredients":[{"item":"","amount":"","notes":""}],"steps":[{"heading":"","body":""}],"cleanup_tip":"","macros_per_serving":{"calories":0,"protein_g":0,"carbs_g":0,"fat_g":0},"budget_level":"${budgetLevel}","budget_tips":[],"pro_tips":[],"tags":{"cuisine":"","cooking_method":"","base_carb":"","key_ingredients":[],"high_protein":false,"high_fiber":false,"quick_cleanup":false}${request.vegetarian_swap_needed ? ',"veg_option":{"enabled":true,"swap_protein":"","ingredients":[],"steps":[],"plating_notes":""}' : ""}}`;
@@ -398,10 +420,11 @@ function buildPantryPrompt(template: TemplateRow, request: GenerateRequest, vari
     : "";
 
   const cuisineLine = buildCuisineDirective(request.cuisine_style || "any");
+  const mealFormatBlock = buildMealFormatBlock(request.meal_format);
 
   const structureLine = structureType
-    ? `MEAL STRUCTURE (mandatory): This recipe MUST be a ${STRUCTURE_DISPLAY[structureType]} style meal. Vary the format — do NOT default to a rice bowl.`
-    : `MEAL STRUCTURE: Vary the structure. Do NOT default to a rice bowl.`;
+    ? `MEAL STRUCTURE (mandatory): This recipe MUST be a ${STRUCTURE_DISPLAY[structureType]} style meal. Vary the format.`
+    : `MEAL STRUCTURE: Vary the structure.`;
 
   const isPantryVegetarian = (request.proteins || []).some(p => p.toLowerCase() === "vegetarian");
   const pantryRecentVeg = isPantryVegetarian ? getRecentVegBases(3) : [];
@@ -421,6 +444,7 @@ TEMPLATE: ${template.template_name} (${template.style}) — ${template.base_idea
 CREW: ${request.crew_size} | Shift: ${request.busy_level} | Time: ${request.time_available} min | Appliances: ${request.appliances.join(", ")}
 Healthiness: ${request.healthiness_preference}
 ${structureLine}
+${mealFormatBlock}
 ${cuisineLine}
 ${allergenLine}
 ${budgetLine}
@@ -435,7 +459,7 @@ RULES: Use as many on-hand ingredients as practical. List used ones in "ingredie
 STEP FORMAT (each step MUST follow this): heading = "Action (heat level, time)" e.g. "Sear the chicken (medium-high, 5-7 min)". body = concise HOW-TO with visual/doneness cue. Include: heat level (low/medium/medium-high/high or oven °F), time estimate, and a doneness cue ("until golden brown", "until juices run clear", "until internal temp reaches 165°F"). Never repeat same instruction in two steps. No storytelling. Keep each step 1-3 sentences.
 SAFETY TEMPS (always include for any protein): chicken/turkey 165°F/74°C, ground beef/sausage 160°F/71°C, pork 145°F/63°C +3min rest, fish 145°F/63°C.
 PRIMARY PROTEIN SOURCE: Set "primary_protein_source" to the single main protein ingredient (e.g. "chicken", "lentils", "salmon", "chickpeas", "tofu", "eggs"). For vegetarian: name the specific plant protein used most.
-REQUIRED OUTPUT TAGS: Include "tags" object with: cuisine (e.g. "Mediterranean"), cooking_method (e.g. "sheet-pan"), base_carb (e.g. "rice"), key_ingredients (3-5 main items as string array), high_protein (boolean, true if 30g+ protein/serving), high_fiber (boolean, true if contains beans/lentils/chickpeas/whole grains), quick_cleanup (boolean, true if one-pan/sheet-pan/slow-cooker).
+REQUIRED OUTPUT TAGS: Include "tags" object with: cuisine (e.g. "Mediterranean"), cooking_method (e.g. "sheet-pan"), base_carb (the actual carb used, or empty string if none), key_ingredients (3-5 main items as string array), high_protein (boolean, true if 30g+ protein/serving), high_fiber (boolean, true if contains beans/lentils/chickpeas/whole grains), quick_cleanup (boolean, true if one-pan/sheet-pan/slow-cooker).
 
 JSON:
 {"template_id":${template.template_id},"chosen_protein":"","primary_protein_source":"","title":"","why_it_fits_tonight":"","timing":{"prep_minutes":0,"cook_minutes":0,"total_minutes":0},"protein_safety":[{"protein":"","target_temp_f":0,"target_temp_c":0,"rest_minutes":0,"probe_where":"","notes":""}],"ingredients":[{"item":"","amount":"","notes":""}],"steps":[{"heading":"","body":""}],"cleanup_tip":"","macros_per_serving":{"calories":0,"protein_g":0,"carbs_g":0,"fat_g":0},"ingredients_used":[],"extra_items_needed":[],"budget_level":"${budgetLevel}","budget_tips":[],"pro_tips":[],"tags":{"cuisine":"","cooking_method":"","base_carb":"","key_ingredients":[],"high_protein":false,"high_fiber":false,"quick_cleanup":false}${request.vegetarian_swap_needed ? ',"veg_option":{"enabled":true,"swap_protein":"","ingredients":[],"steps":[],"plating_notes":""}' : ""}}`;
