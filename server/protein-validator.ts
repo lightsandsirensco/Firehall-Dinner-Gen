@@ -61,12 +61,23 @@ const PROTEIN_SPECIFIC_TERMS: Record<string, RegExp[]> = {
   fish: [/\bfish\b/, /\bsalmon\b/, /\btuna\b/, /\bcod\b/, /\btilapia\b/, /\bhalibut\b/, /\btrout\b/, /\bmahi\b/, /\bswordfish\b/, /\bbass\b/, /\bsnapper\b/, /\bfish\s+fillet\b/, /\bwhite\s+fish\b/, /\bhaddock\b/, /\bsardines?\b/],
 };
 
-function normalizeText(s: string): string {
-  return s
+function norm(s: string): string {
+  return (s ?? "")
     .toLowerCase()
     .replace(/[^\p{L}\p{N}\s]/gu, " ")
     .replace(/\s+/g, " ")
     .trim();
+}
+
+function fullText(recipe: GenerateResponse): string {
+  const ing = (recipe.ingredients ?? [])
+    .map((x: any) => (typeof x === "string" ? x : x?.item ?? ""))
+    .join(" ");
+  const steps = (recipe.steps ?? [])
+    .map((s: any) => (typeof s === "string" ? s : `${s?.heading ?? ""} ${s?.body ?? ""}`))
+    .join(" ");
+  const tips = (recipe.pro_tips ?? []).join(" ");
+  return norm(`${recipe.title ?? ""} ${ing} ${steps} ${tips}`);
 }
 
 function findMatches(text: string, patterns: RegExp[]): string[] {
@@ -86,16 +97,6 @@ function findMatchesFiltered(text: string, patterns: RegExp[], excludePatterns: 
     }
   }
   return hits;
-}
-
-function buildRecipeText(recipe: GenerateResponse): string {
-  const parts = [
-    recipe.title,
-    ...recipe.ingredients.map(i => i.item),
-    ...(recipe.steps || []).map(s => `${s.heading} ${s.body}`),
-    ...(recipe.pro_tips || []),
-  ];
-  return normalizeText(parts.join(" "));
 }
 
 export function getForbiddenProteins(selectedProtein: string): string[] {
@@ -161,8 +162,8 @@ export function validateProteinCompliance(
     return { valid: true };
   }
 
-  const text = buildRecipeText(recipe);
-  const ingredientText = normalizeText(recipe.ingredients.map(i => i.item).join(" "));
+  const text = fullText(recipe);
+  const ingredientText = norm((recipe.ingredients ?? []).map((x: any) => (typeof x === "string" ? x : x?.item ?? "")).join(" "));
 
   if (mode === "vegetarian") {
     const landMeatHits = findMatchesFiltered(text, LAND_MEAT_PATTERNS, VEGETARIAN_FALSE_POSITIVE_PATTERNS);
