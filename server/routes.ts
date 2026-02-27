@@ -230,6 +230,70 @@ export async function registerRoutes(
     };
   }
 
+  function buildAllergenSafeFallback(originalRecipe: GenerateResponse, allergens: string[], crewSize: number): GenerateResponse {
+    const protein = originalRecipe.chosen_protein || "chicken";
+    const scale = crewSize > 0 ? crewSize / 4 : 1;
+    const scaleAmt = (base: number, unit: string) => `${Math.round(base * scale)} ${unit}`;
+
+    const safeIngredients: { item: string; amount: string; notes: string }[] = [];
+
+    if (protein === "vegetarian") {
+      safeIngredients.push(
+        { item: "Chickpeas, drained and rinsed", amount: scaleAmt(2, "cans"), notes: "" },
+        { item: "Olive oil", amount: "3 tbsp", notes: "" },
+        { item: "Garlic cloves, minced", amount: scaleAmt(4, "cloves"), notes: "" },
+      );
+    } else {
+      const proteinLabel = protein === "fish" ? "White fish fillets" :
+        protein === "beef" ? "Ground beef" :
+        protein === "pork" ? "Pork tenderloin, sliced" :
+        protein === "turkey" ? "Ground turkey" : "Boneless skinless chicken breasts";
+      safeIngredients.push(
+        { item: proteinLabel, amount: scaleAmt(2, "lbs"), notes: "" },
+        { item: "Olive oil", amount: "2 tbsp", notes: "" },
+        { item: "Garlic cloves, minced", amount: scaleAmt(4, "cloves"), notes: "" },
+      );
+    }
+
+    safeIngredients.push(
+      { item: "Rice", amount: scaleAmt(2, "cups"), notes: "" },
+      { item: "Mixed vegetables (bell pepper, broccoli, carrots)", amount: scaleAmt(4, "cups"), notes: "" },
+      { item: "Salt", amount: "1 tsp", notes: "" },
+      { item: "Black pepper", amount: "½ tsp", notes: "" },
+      { item: "Paprika", amount: "1 tsp", notes: "" },
+      { item: "Lemon juice", amount: "2 tbsp", notes: "" },
+    );
+
+    const safeSteps = [
+      { heading: "Cook the rice (high heat, 1 min)", body: "Bring salted water to a boil. Add rice and cook according to package directions until tender. Drain and set aside." },
+      { heading: "Season and cook the protein (medium-high, 8 min)", body: `Season ${protein === "vegetarian" ? "chickpeas" : "protein"} with salt, pepper, and paprika. Heat olive oil in a large skillet over medium-high heat. Cook until golden and cooked through, about 6-8 minutes.` },
+      { heading: "Sauté vegetables (medium, 5 min)", body: "In the same pan, add garlic and mixed vegetables. Cook 4-5 minutes until tender-crisp." },
+      { heading: "Combine and finish (medium, 2 min)", body: `Return ${protein === "vegetarian" ? "chickpeas" : "protein"} to the pan. Toss everything together. Squeeze lemon juice over the top.` },
+      { heading: "Plate and serve (no heat, 2 min)", body: "Spoon rice onto plates. Top with the protein and vegetable mixture. Serve family-style." },
+    ];
+
+    const proteinDisplay = protein.charAt(0).toUpperCase() + protein.slice(1);
+    const safeTitle = `Lemon Herb ${protein === "vegetarian" ? "Chickpea" : proteinDisplay} Rice Skillet`;
+
+    log(`[allergen-postcheck] Built allergen-safe fallback: "${safeTitle}"`, "allergen");
+
+    return {
+      ...originalRecipe,
+      title: safeTitle,
+      ingredients: safeIngredients,
+      steps: safeSteps,
+      meal_style: originalRecipe.meal_style || "Skillet",
+      base_carb: "rice",
+      cooking_method: "stovetop",
+      tags: {
+        ...(originalRecipe.tags || {}),
+        base_carb: "rice",
+        cooking_method: "stovetop",
+        meal_style: "skillet",
+      },
+    };
+  }
+
   function buildResponse(validation: import("./validateRecipe").ValidationResult, extras: Record<string, any>, debug: boolean, crewSize: number = 0, mealFormat: string = "", allergens: string[] = [], auditCtx?: LabelAuditContext): Record<string, any> {
     let recipe = validation.recipe;
 
@@ -245,7 +309,9 @@ export async function registerRoutes(
 
         const rescan = scanRecipeForAllergens(recipe.ingredients, recipe.steps, recipe.title, allergens);
         if (rescan.found) {
-          log(`[allergen-postcheck] Still found violations after substitution: ${rescan.violations.join("; ")}`, "allergen");
+          log(`[allergen-postcheck] Still found violations after substitution — switching to allergen-safe fallback: ${rescan.violations.join("; ")}`, "allergen");
+          const safeRecipe = buildAllergenSafeFallback(recipe, allergens, crewSize);
+          recipe = safeRecipe;
         }
       } else {
         log(`[allergen-postcheck] Clean — no allergen violations found`, "allergen");
@@ -347,8 +413,9 @@ export async function registerRoutes(
   };
 
   const REMIX_CARBS = ["rice", "pasta", "quinoa", "potatoes", "noodles", "bread", "tortillas", "couscous"];
+  const GLUTEN_UNSAFE_CARBS = new Set(["pasta", "noodles", "bread", "couscous", "tortillas"]);
 
-  function remixRecipeForVariety(recipe: GenerateResponse, currentStructure: StructureType, protein: string): GenerateResponse {
+  function remixRecipeForVariety(recipe: GenerateResponse, currentStructure: StructureType, protein: string, allergens: string[] = []): GenerateResponse {
     const remixed = { ...recipe, ingredients: [...recipe.ingredients], steps: [...recipe.steps], tags: recipe.tags ? { ...recipe.tags } : undefined };
 
     const sauces = REMIX_SAUCES[protein.toLowerCase()] || REMIX_SAUCES.chicken;
@@ -368,8 +435,13 @@ export async function registerRoutes(
     }
 
     const currentCarb = remixed.tags?.base_carb || "";
-    const altCarbs = REMIX_CARBS.filter(c => c !== currentCarb.toLowerCase());
-    const newCarb = altCarbs[Math.floor(Math.random() * altCarbs.length)];
+    const hasGluten = allergens.some(a => a.toLowerCase() === "gluten");
+    const altCarbs = REMIX_CARBS.filter(c => {
+      if (c === currentCarb.toLowerCase()) return false;
+      if (hasGluten && GLUTEN_UNSAFE_CARBS.has(c)) return false;
+      return true;
+    });
+    const newCarb = altCarbs.length > 0 ? altCarbs[Math.floor(Math.random() * altCarbs.length)] : "rice";
     if (newCarb && remixed.tags) remixed.tags.base_carb = newCarb;
 
     const proteinDisplay = protein.charAt(0).toUpperCase() + protein.slice(1);
@@ -763,7 +835,7 @@ export async function registerRoutes(
 
           if (dedupAttempt < 2) {
             log(`[dedup] Signature in session history (attempt ${dedupAttempt + 1}) — remixing`, "variety");
-            const remixed = remixRecipeForVariety(aiValidation.recipe, structureType, chosenProtein);
+            const remixed = remixRecipeForVariety(aiValidation.recipe, structureType, chosenProtein, allergens);
             aiValidation = validateAndFixRecipe(remixed, validationCtx);
           } else {
             log(`[dedup] Remix still duplicate after 2 attempts — forcing different structure`, "variety");
@@ -837,7 +909,7 @@ export async function registerRoutes(
         for (let fbDedup = 0; fbDedup < 2; fbDedup++) {
           if (!isRecentSessionSignature(fbSessKey, fbValidation.signature)) break;
           log(`[dedup] Fallback sig in session history (attempt ${fbDedup + 1}) — remixing`, "variety");
-          const remixed = remixRecipeForVariety(fbValidation.recipe, structureType, chosenProtein);
+          const remixed = remixRecipeForVariety(fbValidation.recipe, structureType, chosenProtein, allergens);
           fbValidation = validateAndFixRecipe(remixed, validationCtx);
         }
         recordSignature(chosenProtein, fbValidation.signature);
@@ -872,7 +944,7 @@ export async function registerRoutes(
       for (let errDedup = 0; errDedup < 2; errDedup++) {
         if (!isRecentSessionSignature(errSessKey, errFbValidation.signature)) break;
         log(`[dedup] Error-fallback sig in session history (attempt ${errDedup + 1}) — remixing`, "variety");
-        const remixed = remixRecipeForVariety(errFbValidation.recipe, structureType, chosenProtein);
+        const remixed = remixRecipeForVariety(errFbValidation.recipe, structureType, chosenProtein, allergens);
         errFbValidation = validateAndFixRecipe(remixed, validationCtx);
       }
       recordSignature(chosenProtein, errFbValidation.signature);

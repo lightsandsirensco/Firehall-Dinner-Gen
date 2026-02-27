@@ -35,8 +35,11 @@ export const ALLERGEN_SUBSTITUTIONS: {
   { pattern: /\bcheese\b/i, safeFor: ["dairy"], replacement: "nutritional yeast", stepFind: /\bcheese\b/gi, stepReplace: "nutritional yeast" },
   { pattern: /\bpaneer\b/i, safeFor: ["dairy"], replacement: "extra-firm tofu", stepFind: /\bpaneer\b/gi, stepReplace: "extra-firm tofu" },
   { pattern: /\bghee\b/i, safeFor: ["dairy"], replacement: "coconut oil", stepFind: /\bghee\b/gi, stepReplace: "coconut oil" },
-  { pattern: /\bsoy sauce\b/i, safeFor: ["soy", "gluten"], replacement: "coconut aminos", stepFind: /\bsoy sauce\b/gi, stepReplace: "coconut aminos" },
-  { pattern: /\btamari\b/i, safeFor: ["soy"], replacement: "coconut aminos", stepFind: /\btamari\b/gi, stepReplace: "coconut aminos" },
+  { pattern: /\bsoy sauce\b/i, safeFor: ["soy"], replacement: "coconut aminos", stepFind: /\bsoy sauce\b/gi, stepReplace: "coconut aminos" },
+  { pattern: /\bsoy sauce\b/i, safeFor: ["gluten"], replacement: "tamari (gluten-free)", stepFind: /\bsoy sauce\b/gi, stepReplace: "tamari (gluten-free)" },
+  { pattern: /\btamari(?! \(gluten-free\))\b/i, safeFor: ["soy"], replacement: "coconut aminos", stepFind: /\btamari(?! \(gluten-free\))\b/gi, stepReplace: "coconut aminos" },
+  { pattern: /\brice or pasta\b/i, safeFor: ["gluten"], replacement: "rice", stepFind: /\brice or pasta\b/gi, stepReplace: "rice" },
+  { pattern: /\bcornstarch\b/i, safeFor: ["gluten"], replacement: "cornstarch (gluten-free thickener)", stepFind: /\bcornstarch\b/gi, stepReplace: "cornstarch" },
   { pattern: /\btofu\b/i, safeFor: ["soy"], replacement: "chickpeas", stepFind: /\btofu\b/gi, stepReplace: "chickpeas" },
   { pattern: /\btempeh\b/i, safeFor: ["soy"], replacement: "lentils", stepFind: /\btempeh\b/gi, stepReplace: "lentils" },
   { pattern: /\bedamame\b/i, safeFor: ["soy"], replacement: "green peas", stepFind: /\bedamame\b/gi, stepReplace: "green peas" },
@@ -77,7 +80,7 @@ export const ALLERGEN_SUBSTITUTIONS: {
 
 const FALSE_POSITIVE_GUARDS: Record<string, RegExp> = {
   dairy: /\b(coconut cream|coconut yogurt|dairy[- ]free|oat milk|almond milk|cashew cream|nut milk|rice milk|soy milk|non[- ]dairy)\b/i,
-  gluten: /\b(gluten[- ]free|rice noodle|rice paper|rice vinegar|rice wine|rice flour|corn tortilla|coconut aminos|tamari|gf\b)/i,
+  gluten: /\b(gluten[- ]free|rice noodle|rice paper|rice vinegar|rice wine|rice flour|corn tortilla|coconut aminos|tamari \(gluten-free\)|tamari|gf\b)/i,
   nuts: /\b(coconut|sunflower|pumpkin seed|sesame|pine[- ]?apple)\b/i,
   soy: /\b(coconut aminos|soy[- ]free|soy[- ]&[- ]gluten[- ]free)\b/i,
   egg: /\b(egg[- ]free|flax egg|chia egg|vegan mayo)\b/i,
