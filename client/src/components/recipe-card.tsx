@@ -3,9 +3,9 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import type { ClientRecipeResponse } from "@shared/schema";
-import { Flame, Droplets, Wheat, Beef, Sparkles, Trash2, Clock, Timer, ShieldCheck, Thermometer, Printer, Leaf, Mail, Package, ShoppingCart, DollarSign, Lightbulb, List, Heart, Check, ChevronDown, UtensilsCrossed, Globe, Zap } from "lucide-react";
+import { Flame, Droplets, Wheat, Beef, Sparkles, Trash2, Clock, Timer, ShieldCheck, Thermometer, Printer, Leaf, Mail, Package, ShoppingCart, DollarSign, Lightbulb, List, Heart, Check, ChevronDown, UtensilsCrossed, Globe, Zap, Bug } from "lucide-react";
 import { saveMeal, isMealSaved } from "@/lib/saved-meals";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 
 let sessionProTipsCollapsed = false;
 
@@ -230,6 +230,13 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
 
   const recipeTags = recipe.recipe_tags;
 
+  const isDebugMode = useMemo(() => {
+    if (typeof window === "undefined") return false;
+    return new URLSearchParams(window.location.search).get("debug") === "1";
+  }, []);
+
+  const debugData = (recipe as any)._debug || null;
+
   return (
     <div className="space-y-4 animate-in fade-in slide-in-from-bottom-4 duration-500">
       <div className="space-y-1">
@@ -293,14 +300,14 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
               </span>
             </div>
           )}
-          {recipe.meal_style && (
-            <Badge variant="outline" className="text-xs" data-testid="badge-meal-style">
-              {recipe.meal_style}
+          {recipe.meal_format && (
+            <Badge className="text-[10px] font-bold uppercase tracking-widest bg-primary/15 text-primary border border-primary/30 px-2 py-0.5" data-testid="badge-meal-format">
+              {recipe.meal_format}
             </Badge>
           )}
-          {recipe.meal_format && (
-            <Badge variant="outline" className="text-xs" data-testid="badge-meal-format">
-              {recipe.meal_format}
+          {recipe.meal_style && recipe.meal_style !== recipe.meal_format && (
+            <Badge variant="outline" className="text-xs" data-testid="badge-meal-style">
+              {recipe.meal_style}
             </Badge>
           )}
           {recipe.budget_level === "low" && (
@@ -690,6 +697,81 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
               </h4>
               <p className="text-sm text-foreground/80" data-testid="text-veg-plating">{recipe.veg_option.plating_notes}</p>
             </div>
+          </CardContent>
+        </Card>
+      )}
+
+      {isDebugMode && (
+        <Card className="border-yellow-600/40 bg-yellow-950/20 mt-4" data-testid="debug-panel">
+          <CardContent className="p-4 space-y-3">
+            <div className="flex items-center gap-2">
+              <Bug className="w-4 h-4 text-yellow-500" />
+              <span className="text-xs font-bold uppercase tracking-wider text-yellow-500">Debug Panel</span>
+            </div>
+
+            {debugData?.validation_errors && debugData.validation_errors.length > 0 && (
+              <div>
+                <p className="text-xs font-semibold text-red-400 mb-1">Validation Errors ({debugData.validation_errors.length})</p>
+                <ul className="list-disc list-inside space-y-0.5">
+                  {debugData.validation_errors.map((err: string, i: number) => (
+                    <li key={i} className="text-xs text-red-300 font-mono">{err}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {debugData?.issues && debugData.issues.length > 0 && (
+              <div>
+                <p className="text-xs font-semibold text-yellow-400 mb-1">All Issues ({debugData.issues.length})</p>
+                <ul className="list-disc list-inside space-y-0.5">
+                  {debugData.issues.map((issue: string, i: number) => (
+                    <li key={i} className="text-xs text-yellow-300 font-mono">{issue}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {debugData && (
+              <div>
+                <p className="text-xs font-semibold text-muted-foreground mb-1">Debug Info</p>
+                <div className="grid grid-cols-2 gap-x-4 gap-y-1 text-xs font-mono text-muted-foreground">
+                  <span>validation_ok: {String(debugData.validation_ok)}</span>
+                  <span>action: {debugData.action}</span>
+                  <span>meal_style: {debugData.meal_style}</span>
+                  <span>cuisine: {debugData.cuisine}</span>
+                  <span>base_carb: {debugData.base_carb}</span>
+                  <span>cooking_method: {debugData.cooking_method}</span>
+                </div>
+              </div>
+            )}
+
+            <details>
+              <summary className="text-xs font-semibold text-muted-foreground cursor-pointer hover:text-foreground">
+                Raw Debug Data
+              </summary>
+              <pre className="mt-2 text-[10px] font-mono text-muted-foreground bg-black/30 rounded p-3 overflow-x-auto max-h-96 whitespace-pre-wrap" data-testid="debug-raw-json">
+                {JSON.stringify(debugData || { note: "No _debug block in response. Recipe may have been served from prefetch/cache without ?debug=1." }, null, 2)}
+              </pre>
+            </details>
+            <details>
+              <summary className="text-xs font-semibold text-muted-foreground cursor-pointer hover:text-foreground">
+                Recipe Summary
+              </summary>
+              <pre className="mt-2 text-[10px] font-mono text-muted-foreground bg-black/30 rounded p-3 overflow-x-auto max-h-96 whitespace-pre-wrap">
+                {JSON.stringify({
+                  title: recipe.title,
+                  meal_format: recipe.meal_format,
+                  meal_style: recipe.meal_style,
+                  chosen_protein: recipe.chosen_protein,
+                  budget_level: recipe.budget_level,
+                  servings: recipe.servings,
+                  timing: recipe.timing,
+                  ingredient_count: recipe.ingredients?.length,
+                  step_count: recipe.steps?.length,
+                  tags: recipe.tags,
+                }, null, 2)}
+              </pre>
+            </details>
           </CardContent>
         </Card>
       )}

@@ -1,0 +1,105 @@
+Fix Firehall Meals recipe accuracy issues end-to-end. Right now recipes frequently include random rice/pasta and steps that contradict the title/format (e.g., burgers/tacos/loaded fries still telling users to cook rice). Implement a robust “structured generation + validation + auto-repair” pipeline.
+
+GOALS
+1) Recipes must match their meal type (no hybrid meals).
+2) Ingredients and steps must be consistent (steps reference only listed ingredients; all ingredients are used).
+3) Remove the global “default rice/pasta carb” behavior.
+4) Steps must be more detailed and practical (heat level, exact actions, doneness cues, timing, and parallelization suggestions).
+5) Users should NEVER see a broken recipe; if generation fails, auto-repair or fall back to a safe template.
+
+REQUIRED CHANGES
+
+A) Add a REQUIRED UI field: meal_format
+- Add a dropdown input named meal_format to the generator filters UI (near cuisine/healthiness).
+- Options (value -> label):
+  random -> Random
+  burger -> Burger
+  tacos -> Tacos
+  wrap -> Wrap
+  bowl -> Bowl
+  pasta -> Pasta
+  salad -> Salad
+  sheet_pan -> Sheet Pan
+  stir_fry -> Stir Fry
+  soup_chili -> Soup / Chili
+  breakfast -> Breakfast
+  loaded_fries -> Loaded Fries
+- Default to random.
+- Save/load to localStorage consistent with other filters.
+
+B) Send meal_format in the generate request payload
+- Ensure the frontend includes meal_format in the API request (default random if missing).
+- Ensure backend receives it.
+
+C) Switch LLM output to STRICT JSON ONLY
+- Update the backend LLM prompt to return ONLY a single JSON object (no markdown).
+- Use this schema exactly:
+
+{
+  "title": string,
+  "meal_format": "burger|tacos|wrap|bowl|pasta|salad|sheet_pan|stir_fry|soup_chili|breakfast|loaded_fries",
+  "servings": number,
+  "tags": string[],
+  "timing": { "prep_min": number, "cook_min": number, "total_min": number },
+  "protein_safety": { "protein": string, "internal_temp_f": number, "rest_min": number, "notes": string },
+  "ingredients": [{ "name": string, "qty": number, "unit": string, "category": "protein|carb|veg|fat|dairy|sauce|seasoning|other" }],
+  "steps": [{ "n": number, "title": string, "heat": "none|low|medium|medium-high|high|oven", "minutes": number, "instructions": string }],
+  "plating": { "serve_style": string, "assembly_instructions": string, "optional_toppings": string[] }
+}
+
+- Update the frontend rendering to use this JSON (ingredients list, timing, steps, etc.) rather than relying on freeform text parsing.
+
+D) Enforce meal_format rules in the prompt (NO MIXING + NO DEFAULT RICE)
+In the LLM prompt include a hard “STRUCTURE REQUIREMENT” and “FORMAT RULES”:
+
+STRUCTURE REQUIREMENT:
+- You must generate the recipe in the format: {meal_format}. Do not mix formats.
+- Steps/ingredients/plating must match the format.
+- Do NOT include rice/pasta/quinoa as a default. Only include a carb base if required by the format.
+- Do not output “either/or” ingredients like “rice or pasta”. Choose ONE specific ingredient.
+
+FORMAT RULES:
+- burger: must include buns (or lettuce wrap if explicitly low carb); final step assembles burger; forbid rice/pasta/tortillas; forbid phrase “serve over rice”
+- tacos: must include tortillas; final step assembles tacos; forbid buns; forbid “serve over rice”; rice not allowed
+- wrap: must include wrap/large tortilla; final step rolls/folds; forbid buns; forbid “serve over rice”; rice not allowed
+- bowl: must include exactly ONE base carb from [rice, quinoa, potatoes, greens, cauliflower rice]; final plating says serve in a bowl/over base; forbid buns/tortillas
+- pasta: must include pasta; final step tosses with pasta; forbid rice/buns/tortillas
+- salad: must include greens/salad base; final step tosses salad; forbid rice/pasta/buns/tortillas
+- sheet_pan: must include oven temperature AND sheet pan/baking sheet roast step; forbid rice/pasta/buns/tortillas
+- stir_fry: must mention stir-fry/high-heat skillet; base carb optional but if included it must be explicitly chosen (default: no rice); forbid buns
+- soup_chili: must include simmer time; served in bowls; forbid rice/pasta/buns/tortillas
+- breakfast: must include breakfast anchor (eggs/oats/yogurt/etc.); forbid rice/pasta/buns/tortillas unless explicitly breakfast sandwich (skip for now)
+- loaded_fries: base carb must be fries (frozen fries OR fresh potato fries); must bake/airfry fries then top them; forbid rice/pasta/quinoa/tortillas/buns
+
+E) Make steps MORE DETAILED (quality upgrade)
+Update prompt instructions so each step includes:
+- clear action verbs + exact sequence
+- heat level + pan/pot/oven instructions
+- doneness cues (color/texture/internal temp)
+- brief parallelization note where appropriate (e.g., “while fries bake, brown beef”)
+- avoid vague steps (“cook until done”)
+
+F) Add backend validation + auto-repair loop (max 2 tries)
+Implement validateRecipe(recipeJson) -> string[] errors with at least these checks:
+1) Steps must not mention ingredients not in ingredients list (ignore salt/pepper/oil/water).
+2) Every ingredient (except salt/pepper/oil/water) must be referenced in at least one step.
+3) Format rules enforcement:
+   - For formats where rice/pasta forbidden, reject if ingredients or steps mention them (also reject “rice or pasta”).
+   - Required items must exist (buns for burger, tortillas for tacos/wrap, fries for loaded_fries, pasta for pasta, greens for salad, oven+sheet pan for sheet_pan, simmer for soup_chili, etc.).
+4) Timing sanity: total_min must be reasonable (>= max(prep_min,cook_min) and <= prep_min + cook_min).
+
+Generation flow:
+- Attempt 1: call LLM, parse JSON
+- Validate; if errors:
+  - Attempt 2: call LLM with REPAIR PROMPT: include previous JSON + validation errors, instruct “Return ONLY corrected JSON. Keep meal_format and servings fixed. Remove forbidden carbs. Fix steps/ingredients coherence.”
+- If still invalid after attempt 2:
+  - Return a deterministic fallback recipe template that matches meal_format (simple, coherent, no rice defaults).
+
+G) Logging + safety
+- Add minimal server logs for validation failures and repair attempts (not shown to user).
+- Ensure API always returns valid JSON recipe object.
+
+DELIVERABLES
+- Implement all code changes in the appropriate frontend component(s) and backend route(s).
+- Return a summary: files changed + what was implemented.
+- Include the final LLM generation prompt string and the repair prompt string in your response so I can review them.
