@@ -1,0 +1,65 @@
+In the backend prompt that is sent to the LLM, enforce a strict meal format rule.
+
+Requirements:
+- Inject the selected meal_format into the LLM prompt.
+- Add a "STRUCTURE REQUIREMENT" section that says the recipe MUST follow that format and must not mix formats.
+- Add "FORMAT RULES" exactly like this (keep it concise, but enforce hard constraints):
+
+If meal_format = burger:
+- Must include buns (or lettuce wrap if low carb)
+- Final step must assemble burger
+- Do NOT include rice
+- Do NOT say "serve over rice"
+
+If meal_format = tacos:
+- Must include tortillas
+- Final step assembles tacos
+- Do NOT include buns
+- Do NOT say "serve over rice"
+
+If meal_format = wrap:
+- Must include wrap/large tortilla
+- Final step rolls/folds wrap
+- Do NOT include buns
+- Do NOT say "serve over rice"
+
+If meal_format = bowl:
+- Must include a base: rice OR quinoa OR potatoes OR greens
+- Final step must say "serve in a bowl" or "serve over"
+- Do NOT include buns/tortillas
+
+If meal_format = pasta:
+- Must include pasta
+- Final step tosses with pasta
+- Do NOT include buns/tortillas
+- Rice not allowed
+
+If meal_format = salad:
+- Must include greens/salad base
+- Final step tosses salad
+- Do NOT include buns/tortillas
+- Rice not allowed unless explicitly "grain salad" (skip grain salad for now)
+
+If meal_format = sheet_pan:
+- Must include oven temp and roasting step on sheet pan
+- No stovetop-only recipe
+- Rice not allowed
+
+If meal_format = stir_fry:
+- Must mention stir-fry/high-heat skillet
+- Rice optional ONLY if meal_format is bowl OR user explicitly selected rice base (we do not have rice base input yet, so default rice = not included)
+- No buns/tortillas
+
+If meal_format = soup_chili:
+- Must include simmer time
+- Served in bowl
+- No rice
+
+If meal_format = breakfast:
+- Must include a breakfast anchor (eggs/oats/yogurt/etc)
+- No rice
+
+Also add: "Do not default to rice unless meal_format=bowl."
+
+Locate the existing prompt string/template used for the LLM call and update it.
+Return the updated prompt in full.

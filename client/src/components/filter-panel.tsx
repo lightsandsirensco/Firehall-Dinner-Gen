@@ -7,7 +7,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Switch } from "@/components/ui/switch";
 import { Badge } from "@/components/ui/badge";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Flame, RefreshCw, Users, Clock, Zap, Dumbbell, ShieldAlert, ChefHat, Leaf, Package, DollarSign, Globe } from "lucide-react";
+import { Flame, RefreshCw, Users, Clock, Zap, Dumbbell, ShieldAlert, ChefHat, Leaf, Package, DollarSign, Globe, UtensilsCrossed } from "lucide-react";
 import { trackEvent } from "@/lib/analytics";
 import { memo } from "react";
 
@@ -20,6 +20,7 @@ export interface FilterState {
   healthiness_preference: string;
   budget_level: string;
   cuisine_style: string;
+  meal_format: string;
   allergens_to_avoid: string[];
   vegetarian_swap_needed: boolean;
   use_what_we_have: boolean;
@@ -260,6 +261,31 @@ export const FilterPanel = memo(function FilterPanel({ filters, onFiltersChange,
                 <SelectItem value="bbq">BBQ / Smoky</SelectItem>
                 <SelectItem value="cajun">Cajun / Southern</SelectItem>
                 <SelectItem value="canadian">Canadian Classics</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+
+          <div className="space-y-2">
+            <Label className="flex items-center gap-2 text-xs uppercase tracking-wider text-muted-foreground font-medium">
+              <UtensilsCrossed className="w-3.5 h-3.5" />
+              Meal Format
+            </Label>
+            <Select value={filters.meal_format} onValueChange={(val) => update("meal_format", val)}>
+              <SelectTrigger data-testid="select-meal-format">
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="random">Random</SelectItem>
+                <SelectItem value="burger">Burger</SelectItem>
+                <SelectItem value="tacos">Tacos</SelectItem>
+                <SelectItem value="wrap">Wrap</SelectItem>
+                <SelectItem value="bowl">Bowl</SelectItem>
+                <SelectItem value="pasta">Pasta</SelectItem>
+                <SelectItem value="salad">Salad</SelectItem>
+                <SelectItem value="sheet_pan">Sheet Pan</SelectItem>
+                <SelectItem value="stir_fry">Stir Fry</SelectItem>
+                <SelectItem value="soup_chili">Soup / Chili</SelectItem>
+                <SelectItem value="breakfast">Breakfast</SelectItem>
               </SelectContent>
             </Select>
           </div>
