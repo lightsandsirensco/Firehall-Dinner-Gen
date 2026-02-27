@@ -10,7 +10,7 @@ const openai = new OpenAI({
   baseURL: process.env.AI_INTEGRATIONS_OPENAI_BASE_URL,
 });
 
-const MAX_PROTEIN_RETRIES = 2;
+const MAX_PROTEIN_RETRIES = 4;
 
 export interface AIResult {
   recipe: GenerateResponse;
@@ -486,6 +486,7 @@ export async function generateRecipe(
   let totalTokensIn = 0;
   let totalTokensOut = 0;
 
+  let lastRecipe: GenerateResponse | null = null;
   for (let attempt = 1; attempt <= MAX_PROTEIN_RETRIES; attempt++) {
     const isRetry = attempt > 1;
     const result = await attemptGenerate(prompt, SYSTEM_PROMPT, template, chosenProtein, budgetLevel, isRetry);
@@ -493,25 +494,26 @@ export async function generateRecipe(
     if (result) {
       totalTokensIn += result.tokensIn;
       totalTokensOut += result.tokensOut;
+      lastRecipe = result.recipe;
 
       const validation = validateProteinCompliance(result.recipe, chosenProtein);
       if (validation.valid) {
         const elapsed = Date.now() - genStart;
-        log(`Recipe OK in ${elapsed}ms (${totalTokensIn}in/${totalTokensOut}out, attempt ${attempt}) | ${filterSummary}`, "perf");
+        log(`Recipe OK in ${elapsed}ms (${totalTokensIn}in/${totalTokensOut}out, attempt ${attempt}/${MAX_PROTEIN_RETRIES}) | ${filterSummary}`, "perf");
         return { recipe: result.recipe, tokensIn: totalTokensIn, tokensOut: totalTokensOut };
       }
 
-      logError("protein_mismatch", `Attempt ${attempt}/${MAX_PROTEIN_RETRIES}: ${validation.reason}`);
+      log(`[recipe-validation] invalid (${chosenProtein}) attempt=${attempt}/${MAX_PROTEIN_RETRIES}: ${validation.reason}`, "ai");
     } else {
-      log(`Attempt ${attempt}/${MAX_PROTEIN_RETRIES}: failed to produce valid recipe`, "ai");
+      log(`[recipe-validation] attempt ${attempt}/${MAX_PROTEIN_RETRIES}: AI failed to produce parseable recipe`, "ai");
     }
 
     if (attempt < MAX_PROTEIN_RETRIES) {
-      await new Promise((r) => setTimeout(r, 500));
+      await new Promise((r) => setTimeout(r, 300));
     }
   }
 
-  log(`Primary generation failed after ${MAX_PROTEIN_RETRIES} attempts, trying fallback remix...`, "ai");
+  log(`Could not generate a valid ${chosenProtein} recipe after ${MAX_PROTEIN_RETRIES} attempts — trying fallback remix...`, "ai");
 
   const fallback = await fallbackRemix(template, request, chosenProtein);
   if (fallback) {
@@ -534,34 +536,57 @@ export async function generateRecipeFromPantry(
   const genStart = Date.now();
   const budgetLevel = request.budget_level || "standard";
   const filterSummary = buildFilterSummary(request);
+  const pantryProteinMode = (request.proteins || []).find(p => ["vegetarian", "seafood"].includes(p.toLowerCase()));
 
-  log(`Generating pantry recipe: ${template.template_name}, structure: ${structureType || "any"}, ingredients: ${(request.ingredients_on_hand || []).join(", ")} | ${filterSummary}`, "ai");
+  log(`Generating pantry recipe: ${template.template_name}, structure: ${structureType || "any"}, ingredients: ${(request.ingredients_on_hand || []).join(", ")}${pantryProteinMode ? ` | diet: ${pantryProteinMode}` : ""} | ${filterSummary}`, "ai");
 
   const varietyBlock = varietyConstraints ? buildVarietyPromptBlock(varietyConstraints) : "";
   const healthyBlock = buildHealthyPromptBlock(request.healthiness_preference, request.busy_level);
   const prompt = buildPantryPrompt(template, request, varietyBlock, healthyBlock, structureType);
+  let totalTokensIn = 0;
+  let totalTokensOut = 0;
 
-  const result = await attemptGenerate(prompt, PANTRY_SYSTEM_PROMPT, template, "pantry", budgetLevel, false);
-  if (result) {
-    const elapsed = Date.now() - genStart;
-    log(`Pantry recipe OK in ${elapsed}ms (${result.tokensIn}in/${result.tokensOut}out) | ${filterSummary}`, "perf");
-    return { recipe: result.recipe, tokensIn: result.tokensIn, tokensOut: result.tokensOut };
+  const maxAttempts = pantryProteinMode ? MAX_PROTEIN_RETRIES : 2;
+
+  for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+    const isRetry = attempt > 1;
+    const result = await attemptGenerate(prompt, PANTRY_SYSTEM_PROMPT, template, "pantry", budgetLevel, isRetry);
+
+    if (result) {
+      totalTokensIn += result.tokensIn;
+      totalTokensOut += result.tokensOut;
+
+      if (pantryProteinMode) {
+        const validation = validateProteinCompliance(result.recipe, pantryProteinMode);
+        if (!validation.valid) {
+          log(`[recipe-validation] pantry+${pantryProteinMode} invalid attempt=${attempt}/${maxAttempts}: ${validation.reason}`, "ai");
+          if (attempt < maxAttempts) {
+            await new Promise((r) => setTimeout(r, 300));
+            continue;
+          }
+          break;
+        }
+      }
+
+      const elapsed = Date.now() - genStart;
+      log(`Pantry recipe OK in ${elapsed}ms (${totalTokensIn}in/${totalTokensOut}out, attempt ${attempt}/${maxAttempts}) | ${filterSummary}`, "perf");
+      return { recipe: result.recipe, tokensIn: totalTokensIn, tokensOut: totalTokensOut };
+    }
+
+    log(`[recipe-validation] pantry attempt ${attempt}/${maxAttempts}: AI failed to produce parseable recipe`, "ai");
+    if (attempt < maxAttempts) {
+      await new Promise((r) => setTimeout(r, 300));
+    }
   }
 
-  log(`Pantry primary failed, retrying with format correction...`, "ai");
-  const retry = await attemptGenerate(prompt, PANTRY_SYSTEM_PROMPT, template, "pantry", budgetLevel, true);
-  if (retry) {
-    const elapsed = Date.now() - genStart;
-    log(`Pantry retry OK in ${elapsed}ms | ${filterSummary}`, "perf");
-    return { recipe: retry.recipe, tokensIn: retry.tokensIn, tokensOut: retry.tokensOut };
-  }
-
-  log(`Pantry retry failed, trying fallback remix...`, "ai");
+  log(`Pantry generation failed after ${maxAttempts} attempts, trying fallback remix...`, "ai");
   const fallback = await fallbackRemix(template, request, "pantry");
   if (fallback) {
     const elapsed = Date.now() - genStart;
+    totalTokensIn += fallback.tokensIn;
+    totalTokensOut += fallback.tokensOut;
     log(`Pantry fallback served in ${elapsed}ms | ${filterSummary}`, "perf");
-    return fallback;
+    return { recipe: fallback.recipe, tokensIn: totalTokensIn, tokensOut: totalTokensOut, fallback: true };
   }
 
   throw new Error("Couldn't generate a pantry recipe. Please try again.");
