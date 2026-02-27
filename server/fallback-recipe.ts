@@ -2,6 +2,7 @@ import type { TemplateRow, GenerateRequest, GenerateResponse } from "@shared/sch
 import { log } from "./index";
 import type { StructureType } from "./structure-variety";
 import { STRUCTURE_DISPLAY } from "./structure-variety";
+import { getRecentVegBases } from "./protein-validator";
 
 interface RawIngredient {
   item: string;
@@ -97,20 +98,249 @@ const PROTEIN_INGREDIENTS: Record<string, RawIngredient[]> = {
     { item: "Butter", amount: "2 tbsp", baseQty: 2, unit: "tbsp", allergens: ["dairy"] },
     { item: "Lemon wedges", amount: "for serving" },
   ],
-  vegetarian: [
-    { item: "Chickpeas, drained and rinsed", amount: "3 cans (15 oz)", baseQty: 3, unit: "cans (15 oz)" },
-    { item: "Extra-firm tofu, pressed and cubed", amount: "1 lb", baseQty: 1, unit: "lb", allergens: ["soy"] },
-    { item: "Olive oil", amount: "3 tbsp", baseQty: 3, unit: "tbsp" },
-    { item: "Garlic cloves, minced", amount: "4", baseQty: 4, unit: "" },
-    { item: "Onion, diced", amount: "1 large", baseQty: 1, unit: "large" },
-    { item: "Salt", amount: "1 tsp", baseQty: 1, unit: "tsp" },
-    { item: "Smoked paprika", amount: "2 tsp", baseQty: 2, unit: "tsp" },
-    { item: "Cumin", amount: "1 tsp", baseQty: 1, unit: "tsp" },
-    { item: "Rice", amount: "2 cups", baseQty: 2, unit: "cups" },
-    { item: "Mixed vegetables (bell pepper, zucchini, broccoli)", amount: "4 cups", baseQty: 4, unit: "cups" },
-    { item: "Vegetable broth", amount: "1 cup", baseQty: 1, unit: "cup" },
-  ],
+  vegetarian: [],
 };
+
+interface VegFallbackSet {
+  base: string;
+  ingredients: RawIngredient[];
+  steps: { heading: string; body: string }[];
+  proTips: string[];
+  whySnippet: string;
+}
+
+const VEG_FALLBACK_SETS: VegFallbackSet[] = [
+  {
+    base: "chickpeas",
+    ingredients: [
+      { item: "Chickpeas, drained and rinsed", amount: "4 cans (15 oz)", baseQty: 4, unit: "cans (15 oz)" },
+      { item: "Olive oil", amount: "3 tbsp", baseQty: 3, unit: "tbsp" },
+      { item: "Garlic cloves, minced", amount: "4", baseQty: 4, unit: "" },
+      { item: "Onion, diced", amount: "1 large", baseQty: 1, unit: "large" },
+      { item: "Salt", amount: "1 tsp", baseQty: 1, unit: "tsp" },
+      { item: "Smoked paprika", amount: "2 tsp", baseQty: 2, unit: "tsp" },
+      { item: "Cumin", amount: "1 tsp", baseQty: 1, unit: "tsp" },
+      { item: "Rice", amount: "2 cups", baseQty: 2, unit: "cups" },
+      { item: "Mixed vegetables (bell pepper, zucchini, broccoli)", amount: "4 cups", baseQty: 4, unit: "cups" },
+      { item: "Vegetable broth", amount: "1 cup", baseQty: 1, unit: "cup" },
+    ],
+    steps: [
+      { heading: "Start the rice (high → low, 20 min)", body: "Bring 2 cups rice and 4 cups water to a boil. Reduce to low, cover tightly, and simmer 18-20 minutes until water is absorbed and grains are tender." },
+      { heading: "Sauté the aromatics (medium, 3 min)", body: "Heat olive oil in a large skillet. Add onion and cook 2 minutes until softened. Add garlic and stir 30 seconds until fragrant." },
+      { heading: "Season the chickpeas (medium-high, 5 min)", body: "Add drained chickpeas, smoked paprika, cumin, and salt. Stir to coat evenly. Cook 4-5 minutes until chickpeas are lightly golden and crispy on the edges." },
+      { heading: "Cook the vegetables (medium-high, 5 min)", body: "Add mixed vegetables and vegetable broth. Stir-fry 4-5 minutes until vegetables are crisp-tender and brightly colored." },
+      { heading: "Combine and serve (no heat, 2 min)", body: "Serve seasoned chickpeas and vegetables over rice. Each serving packs protein from the chickpeas — hearty and filling." },
+    ],
+    proTips: ["Drain and rinse canned chickpeas to reduce sodium by up to 40%.", "For extra crunch, roast chickpeas at 400°F for 20 minutes instead of pan-frying."],
+    whySnippet: "chickpeas and fresh vegetables",
+  },
+  {
+    base: "lentils",
+    ingredients: [
+      { item: "Green or brown lentils, rinsed", amount: "2 cups dry", baseQty: 2, unit: "cups" },
+      { item: "Olive oil", amount: "3 tbsp", baseQty: 3, unit: "tbsp" },
+      { item: "Garlic cloves, minced", amount: "4", baseQty: 4, unit: "" },
+      { item: "Onion, diced", amount: "1 large", baseQty: 1, unit: "large" },
+      { item: "Carrots, diced", amount: "2 medium", baseQty: 2, unit: "medium" },
+      { item: "Salt", amount: "1 tsp", baseQty: 1, unit: "tsp" },
+      { item: "Cumin", amount: "2 tsp", baseQty: 2, unit: "tsp" },
+      { item: "Turmeric", amount: "1 tsp", baseQty: 1, unit: "tsp" },
+      { item: "Vegetable broth", amount: "4 cups", baseQty: 4, unit: "cups" },
+      { item: "Spinach, fresh", amount: "4 cups", baseQty: 4, unit: "cups" },
+      { item: "Lemon juice", amount: "2 tbsp", baseQty: 2, unit: "tbsp" },
+    ],
+    steps: [
+      { heading: "Sauté the aromatics (medium, 4 min)", body: "Heat olive oil in a large pot. Add onion and carrots, cook 3 minutes. Add garlic, cumin, and turmeric — stir 1 minute until fragrant." },
+      { heading: "Cook the lentils (medium, 25 min)", body: "Add rinsed lentils and vegetable broth. Bring to a boil, then reduce to a simmer. Cook 20-25 minutes until lentils are tender but still hold their shape." },
+      { heading: "Wilt the spinach (medium, 2 min)", body: "Stir in fresh spinach and let it wilt into the hot lentils — takes about 2 minutes. Season with salt." },
+      { heading: "Finish and serve (no heat, 2 min)", body: "Squeeze lemon juice over the top and stir. Serve in bowls — each serving is loaded with plant-based protein and fiber." },
+    ],
+    proTips: ["Green lentils hold their shape better than red — perfect for hearty dishes.", "A squeeze of lemon at the end brightens the whole dish."],
+    whySnippet: "lentils and fresh spinach",
+  },
+  {
+    base: "black beans",
+    ingredients: [
+      { item: "Black beans, drained and rinsed", amount: "4 cans (15 oz)", baseQty: 4, unit: "cans (15 oz)" },
+      { item: "Olive oil", amount: "2 tbsp", baseQty: 2, unit: "tbsp" },
+      { item: "Garlic cloves, minced", amount: "4", baseQty: 4, unit: "" },
+      { item: "Red onion, diced", amount: "1 large", baseQty: 1, unit: "large" },
+      { item: "Bell peppers, diced", amount: "2 large", baseQty: 2, unit: "large" },
+      { item: "Salt", amount: "1 tsp", baseQty: 1, unit: "tsp" },
+      { item: "Chili powder", amount: "2 tsp", baseQty: 2, unit: "tsp" },
+      { item: "Cumin", amount: "1 tsp", baseQty: 1, unit: "tsp" },
+      { item: "Rice", amount: "2 cups", baseQty: 2, unit: "cups" },
+      { item: "Lime juice", amount: "2 tbsp", baseQty: 2, unit: "tbsp" },
+      { item: "Fresh cilantro, chopped", amount: "¼ cup", baseQty: 0.25, unit: "cup" },
+    ],
+    steps: [
+      { heading: "Start the rice (high → low, 20 min)", body: "Bring 2 cups rice and 4 cups water to a boil. Reduce to low, cover tightly, and simmer 18-20 minutes until tender." },
+      { heading: "Sauté vegetables (medium-high, 5 min)", body: "Heat olive oil in a large skillet. Add red onion and bell peppers, cook 3-4 minutes. Add garlic and stir 30 seconds." },
+      { heading: "Season the black beans (medium, 5 min)", body: "Add drained black beans, chili powder, cumin, and salt. Cook 4-5 minutes, lightly mashing some beans for a creamy texture." },
+      { heading: "Finish and serve (no heat, 2 min)", body: "Squeeze lime juice over the beans and top with fresh cilantro. Serve over rice — packed with fiber and plant protein." },
+    ],
+    proTips: ["Mash a third of the beans for a creamier texture while keeping some whole for bite.", "Lime juice added at the end keeps the flavor bright and fresh."],
+    whySnippet: "black beans, peppers, and rice",
+  },
+  {
+    base: "kidney beans",
+    ingredients: [
+      { item: "Kidney beans, drained and rinsed", amount: "4 cans (15 oz)", baseQty: 4, unit: "cans (15 oz)" },
+      { item: "Olive oil", amount: "2 tbsp", baseQty: 2, unit: "tbsp" },
+      { item: "Garlic cloves, minced", amount: "4", baseQty: 4, unit: "" },
+      { item: "Onion, diced", amount: "1 large", baseQty: 1, unit: "large" },
+      { item: "Diced tomatoes", amount: "2 cans (14 oz)", baseQty: 2, unit: "cans (14 oz)" },
+      { item: "Salt", amount: "1 tsp", baseQty: 1, unit: "tsp" },
+      { item: "Smoked paprika", amount: "2 tsp", baseQty: 2, unit: "tsp" },
+      { item: "Oregano", amount: "1 tsp", baseQty: 1, unit: "tsp" },
+      { item: "Rice", amount: "2 cups", baseQty: 2, unit: "cups" },
+      { item: "Vegetable broth", amount: "1 cup", baseQty: 1, unit: "cup" },
+    ],
+    steps: [
+      { heading: "Start the rice (high → low, 20 min)", body: "Bring 2 cups rice and 4 cups water to a boil. Reduce to low, cover tightly, and simmer 18-20 minutes until tender." },
+      { heading: "Sauté aromatics (medium, 3 min)", body: "Heat olive oil in a large pot. Add onion and cook 2 minutes. Add garlic, smoked paprika, and oregano — stir 1 minute." },
+      { heading: "Simmer the beans (medium, 15 min)", body: "Add kidney beans, diced tomatoes, vegetable broth, and salt. Simmer 12-15 minutes until sauce thickens and flavors meld." },
+      { heading: "Serve (no heat, 2 min)", body: "Spoon the saucy kidney beans over rice. Each bowl delivers hearty protein and a rich, smoky flavor." },
+    ],
+    proTips: ["Kidney beans are one of the highest-protein legumes — great for firefighter fuel.", "Simmer longer for a thicker, stew-like consistency."],
+    whySnippet: "kidney beans in a smoky tomato sauce",
+  },
+  {
+    base: "quinoa",
+    ingredients: [
+      { item: "Quinoa, rinsed", amount: "2 cups dry", baseQty: 2, unit: "cups" },
+      { item: "Olive oil", amount: "3 tbsp", baseQty: 3, unit: "tbsp" },
+      { item: "Garlic cloves, minced", amount: "4", baseQty: 4, unit: "" },
+      { item: "Red bell pepper, diced", amount: "2 large", baseQty: 2, unit: "large" },
+      { item: "Zucchini, diced", amount: "2 medium", baseQty: 2, unit: "medium" },
+      { item: "Cherry tomatoes, halved", amount: "2 cups", baseQty: 2, unit: "cups" },
+      { item: "Salt", amount: "1 tsp", baseQty: 1, unit: "tsp" },
+      { item: "Dried herbs (basil, oregano)", amount: "2 tsp", baseQty: 2, unit: "tsp" },
+      { item: "Lemon juice", amount: "2 tbsp", baseQty: 2, unit: "tbsp" },
+      { item: "Vegetable broth", amount: "4 cups", baseQty: 4, unit: "cups" },
+    ],
+    steps: [
+      { heading: "Cook the quinoa (medium, 15 min)", body: "Combine rinsed quinoa and vegetable broth in a pot. Bring to a boil, reduce to low, cover and cook 15 minutes until liquid is absorbed. Fluff with a fork." },
+      { heading: "Roast the vegetables (425°F, 20 min)", body: "Toss bell pepper, zucchini, and cherry tomatoes with olive oil, salt, and dried herbs on a sheet pan. Roast at 425°F for 18-20 minutes until edges are caramelized." },
+      { heading: "Combine and finish (no heat, 3 min)", body: "Toss roasted vegetables into the quinoa. Add garlic and lemon juice, stir to combine. Quinoa is a complete protein — all essential amino acids in one grain." },
+    ],
+    proTips: ["Rinse quinoa before cooking to remove the bitter saponin coating.", "Quinoa is a complete protein — one of the few plant foods with all 9 essential amino acids."],
+    whySnippet: "quinoa and roasted vegetables",
+  },
+  {
+    base: "eggs",
+    ingredients: [
+      { item: "Large eggs", amount: "18", baseQty: 18, unit: "", allergens: ["eggs"] },
+      { item: "Olive oil", amount: "2 tbsp", baseQty: 2, unit: "tbsp" },
+      { item: "Bell peppers, diced", amount: "2 large", baseQty: 2, unit: "large" },
+      { item: "Onion, diced", amount: "1 large", baseQty: 1, unit: "large" },
+      { item: "Mushrooms, sliced", amount: "2 cups", baseQty: 2, unit: "cups" },
+      { item: "Salt", amount: "1 tsp", baseQty: 1, unit: "tsp" },
+      { item: "Black pepper", amount: "½ tsp", baseQty: 0.5, unit: "tsp" },
+      { item: "Shredded cheese", amount: "1 cup", baseQty: 1, unit: "cup", allergens: ["dairy"] },
+      { item: "Toast or tortillas", amount: "12 slices", baseQty: 12, unit: "slices" },
+      { item: "Hot sauce", amount: "for serving" },
+    ],
+    steps: [
+      { heading: "Prep the vegetables (no heat, 5 min)", body: "Dice bell peppers, onion, and slice mushrooms. Have eggs cracked into a bowl and lightly beaten with salt and pepper." },
+      { heading: "Sauté vegetables (medium-high, 5 min)", body: "Heat olive oil in a large skillet. Cook peppers, onion, and mushrooms 4-5 minutes until softened and lightly golden." },
+      { heading: "Scramble the eggs (medium, 4 min)", body: "Pour beaten eggs over the vegetables. Let set 30 seconds, then gently fold with a spatula every 30 seconds until eggs are just set but still creamy — about 3-4 minutes." },
+      { heading: "Finish and serve (no heat, 2 min)", body: "Top with shredded cheese and let it melt from residual heat. Serve with toast or in tortillas. Add hot sauce to taste." },
+    ],
+    proTips: ["Pull eggs off heat when still slightly wet — carryover heat finishes them perfectly.", "3 eggs per person gives a solid 18g of protein per serving."],
+    whySnippet: "scrambled eggs loaded with vegetables",
+  },
+  {
+    base: "tempeh",
+    ingredients: [
+      { item: "Tempeh, cubed", amount: "2 lbs", baseQty: 2, unit: "lbs", allergens: ["soy"] },
+      { item: "Olive oil", amount: "3 tbsp", baseQty: 3, unit: "tbsp" },
+      { item: "Garlic cloves, minced", amount: "4", baseQty: 4, unit: "" },
+      { item: "Soy sauce", amount: "3 tbsp", baseQty: 3, unit: "tbsp", allergens: ["soy", "gluten"] },
+      { item: "Maple syrup", amount: "2 tbsp", baseQty: 2, unit: "tbsp" },
+      { item: "Rice vinegar", amount: "1 tbsp", baseQty: 1, unit: "tbsp" },
+      { item: "Salt", amount: "½ tsp", baseQty: 0.5, unit: "tsp" },
+      { item: "Rice", amount: "2 cups", baseQty: 2, unit: "cups" },
+      { item: "Broccoli florets", amount: "4 cups", baseQty: 4, unit: "cups" },
+      { item: "Sesame seeds", amount: "2 tbsp", baseQty: 2, unit: "tbsp" },
+    ],
+    steps: [
+      { heading: "Start the rice (high → low, 20 min)", body: "Bring 2 cups rice and 4 cups water to a boil. Reduce to low, cover tightly, and simmer 18-20 minutes." },
+      { heading: "Make the glaze (no heat, 2 min)", body: "Whisk together soy sauce, maple syrup, rice vinegar, and garlic in a small bowl. Set aside." },
+      { heading: "Crisp the tempeh (medium-high, 8 min)", body: "Heat olive oil in a large skillet. Add cubed tempeh in a single layer. Cook 3-4 minutes per side until golden and crispy on the edges." },
+      { heading: "Steam the broccoli (medium, 5 min)", body: "Steam or blanch broccoli florets until bright green and crisp-tender, about 4-5 minutes." },
+      { heading: "Glaze and serve (medium, 2 min)", body: "Pour the glaze over crispy tempeh and toss to coat. Cook 1 minute until sticky. Serve over rice with broccoli. Top with sesame seeds." },
+    ],
+    proTips: ["Tempeh has more protein per ounce than tofu and a nuttier, meatier texture.", "Steaming tempeh for 10 minutes before cooking removes any bitterness."],
+    whySnippet: "glazed tempeh with broccoli and rice",
+  },
+  {
+    base: "white beans",
+    ingredients: [
+      { item: "Cannellini beans, drained and rinsed", amount: "4 cans (15 oz)", baseQty: 4, unit: "cans (15 oz)" },
+      { item: "Olive oil", amount: "3 tbsp", baseQty: 3, unit: "tbsp" },
+      { item: "Garlic cloves, minced", amount: "5", baseQty: 5, unit: "" },
+      { item: "Cherry tomatoes", amount: "2 cups", baseQty: 2, unit: "cups" },
+      { item: "Fresh spinach", amount: "4 cups", baseQty: 4, unit: "cups" },
+      { item: "Salt", amount: "1 tsp", baseQty: 1, unit: "tsp" },
+      { item: "Red pepper flakes", amount: "½ tsp", baseQty: 0.5, unit: "tsp" },
+      { item: "Crusty bread", amount: "1 large loaf", baseQty: 1, unit: "large loaf" },
+      { item: "Lemon juice", amount: "2 tbsp", baseQty: 2, unit: "tbsp" },
+      { item: "Vegetable broth", amount: "1 cup", baseQty: 1, unit: "cup" },
+    ],
+    steps: [
+      { heading: "Sauté garlic and tomatoes (medium, 4 min)", body: "Heat olive oil in a large skillet. Add garlic and red pepper flakes, cook 30 seconds. Add cherry tomatoes and cook 3-4 minutes until they start to burst." },
+      { heading: "Add the beans (medium, 5 min)", body: "Add drained cannellini beans and vegetable broth. Season with salt. Simmer 4-5 minutes until the sauce thickens slightly." },
+      { heading: "Wilt the spinach (medium, 2 min)", body: "Stir in fresh spinach and cook until just wilted, about 2 minutes. Squeeze lemon juice over the top." },
+      { heading: "Serve (no heat, 2 min)", body: "Spoon the white bean mixture into bowls. Serve with thick slices of crusty bread for sopping up the sauce." },
+    ],
+    proTips: ["Cannellini beans are creamy and mild — they absorb flavor from the garlic and tomatoes beautifully.", "Save the bean liquid (aquafaba) for use in other recipes as an egg white substitute."],
+    whySnippet: "white beans with garlic, tomatoes, and spinach",
+  },
+  {
+    base: "edamame",
+    ingredients: [
+      { item: "Shelled edamame", amount: "2 lbs frozen", baseQty: 2, unit: "lbs", allergens: ["soy"] },
+      { item: "Sesame oil", amount: "2 tbsp", baseQty: 2, unit: "tbsp" },
+      { item: "Garlic cloves, minced", amount: "4", baseQty: 4, unit: "" },
+      { item: "Fresh ginger, grated", amount: "1 tbsp", baseQty: 1, unit: "tbsp" },
+      { item: "Soy sauce", amount: "3 tbsp", baseQty: 3, unit: "tbsp", allergens: ["soy", "gluten"] },
+      { item: "Rice vinegar", amount: "1 tbsp", baseQty: 1, unit: "tbsp" },
+      { item: "Rice noodles", amount: "1 lb", baseQty: 1, unit: "lb" },
+      { item: "Shredded carrots", amount: "2 cups", baseQty: 2, unit: "cups" },
+      { item: "Green onions, sliced", amount: "1 bunch", baseQty: 1, unit: "bunch" },
+      { item: "Sesame seeds", amount: "2 tbsp", baseQty: 2, unit: "tbsp" },
+    ],
+    steps: [
+      { heading: "Cook the noodles (boiling, 5 min)", body: "Cook rice noodles according to package directions. Drain, rinse with cold water, and toss with a drizzle of sesame oil to prevent sticking." },
+      { heading: "Cook the edamame (medium-high, 4 min)", body: "Heat sesame oil in a large skillet. Add edamame and cook 3-4 minutes until heated through and lightly golden." },
+      { heading: "Build the sauce (medium, 2 min)", body: "Add garlic and ginger, stir 30 seconds. Pour in soy sauce and rice vinegar. Toss to coat the edamame evenly." },
+      { heading: "Combine and serve (no heat, 3 min)", body: "Toss noodles, edamame, and shredded carrots together. Top with green onions and sesame seeds. Serve warm or at room temperature." },
+    ],
+    proTips: ["Edamame packs 17g of protein per cup — one of the highest-protein vegetables.", "Rice noodles cook in minutes and are naturally gluten-free."],
+    whySnippet: "edamame and rice noodles",
+  },
+];
+
+function pickVegFallbackSet(allergens: string[]): VegFallbackSet {
+  const recent = getRecentVegBases(3);
+  const hasSoy = allergens.includes("soy");
+  const hasEggs = allergens.includes("eggs");
+  const hasDairy = allergens.includes("dairy");
+
+  const eligible = VEG_FALLBACK_SETS.filter(s => {
+    if (recent.includes(s.base)) return false;
+    if (hasSoy && (s.base === "tempeh" || s.base === "edamame")) return false;
+    if (hasEggs && s.base === "eggs") return false;
+    return true;
+  });
+
+  if (eligible.length === 0) {
+    return VEG_FALLBACK_SETS[Math.floor(Math.random() * VEG_FALLBACK_SETS.length)];
+  }
+
+  return eligible[Math.floor(Math.random() * eligible.length)];
+}
 
 const STOVETOP_STEPS: Record<string, { heading: string; body: string }[]> = {
   chicken: [
@@ -675,8 +905,13 @@ export function buildFallbackRecipe(
   const timeRange = request.time_available || "25-40";
   const appliances = request.appliances || ["stove", "oven"];
 
-  let rawIngredients = [...(PROTEIN_INGREDIENTS[finalProtein] || PROTEIN_INGREDIENTS.chicken)];
-  let steps = getStepsForAppliances(finalProtein, appliances);
+  const vegSet = isVegetarian ? pickVegFallbackSet(allergens) : null;
+  let rawIngredients = isVegetarian && vegSet
+    ? [...vegSet.ingredients]
+    : [...(PROTEIN_INGREDIENTS[finalProtein] || PROTEIN_INGREDIENTS.chicken)];
+  let steps = isVegetarian && vegSet
+    ? [...vegSet.steps]
+    : getStepsForAppliances(finalProtein, appliances);
 
   const { ingredients: allergenSafeIngredients, steps: allergenSafeSteps, swapsMade } =
     applyAllergenSwaps(rawIngredients, steps, allergens);
@@ -723,14 +958,18 @@ export function buildFallbackRecipe(
   const allergenNote = swapsMade.length > 0
     ? ` Allergen swaps applied: ${swapsMade.join("; ")}.`
     : "";
-  const whyItFits = isVegetarian
-    ? `Hearty vegetarian meal for ${crewSize} — ready in about ${timing.total_minutes} minutes with chickpeas, tofu, and fresh vegetables. Packed with plant-based protein your crew will love.${allergenNote}`
+  const whyItFits = isVegetarian && vegSet
+    ? `Hearty vegetarian meal for ${crewSize} — ready in about ${timing.total_minutes} minutes with ${vegSet.whySnippet}. Packed with plant-based protein your crew will love.${allergenNote}`
+    : isVegetarian
+    ? `Hearty vegetarian meal for ${crewSize} — ready in about ${timing.total_minutes} minutes. Packed with plant-based protein your crew will love.${allergenNote}`
     : `Quick, reliable ${proteinDisplay.toLowerCase()} meal for ${crewSize} — ready in about ${timing.total_minutes} minutes with simple ingredients your crew will love.${allergenNote}`;
 
-  const proTips: string[] = isVegetarian
+  const proTips: string[] = isVegetarian && vegSet
+    ? vegSet.proTips
+    : isVegetarian
     ? [
-        "Press tofu well before cooking — drier tofu gets crispier and absorbs more flavor.",
         "Drain and rinse canned beans to reduce sodium by up to 40%.",
+        "Add a squeeze of lemon or lime at the end to brighten any vegetarian dish.",
       ]
     : [
         "Pat your protein dry before cooking — moisture prevents browning.",
@@ -771,7 +1010,7 @@ export function buildFallbackRecipe(
     : "stovetop";
 
   const logParts = [
-    `protein: ${proteinDisplay}`,
+    `protein: ${proteinDisplay}${vegSet ? ` (base: ${vegSet.base})` : ""}`,
     `crew: ${crewSize}`,
     `allergens: ${allergens.length ? allergens.join(",") : "none"}`,
     `swaps: ${swapsMade.length}`,

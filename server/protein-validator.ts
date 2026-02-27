@@ -316,3 +316,7 @@ export function commitVegBase(base: string): void {
   recentVegBase.push(base);
   if (recentVegBase.length > 20) recentVegBase.splice(0, recentVegBase.length - 20);
 }
+
+export function getRecentVegBases(count = 3): string[] {
+  return recentVegBase.slice(-count);
+}

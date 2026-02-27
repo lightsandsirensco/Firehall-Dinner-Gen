@@ -1,7 +1,7 @@
 import OpenAI from "openai";
 import type { TemplateRow, GenerateRequest, GenerateResponse, ProteinSafetyItem, RecipeTags } from "@shared/schema";
 import { log } from "./index";
-import { getForbiddenProteinsText, validateProteinCompliance, validateTitleConsistency, validateStructure, validateVegVariety, commitVegBase } from "./protein-validator";
+import { getForbiddenProteinsText, validateProteinCompliance, validateTitleConsistency, validateStructure, validateVegVariety, commitVegBase, getRecentVegBases } from "./protein-validator";
 import { type VarietyConstraints, buildVarietyPromptBlock, buildHealthyPromptBlock } from "./variety-memory";
 import { type StructureType, STRUCTURE_DISPLAY } from "./structure-variety";
 
@@ -322,8 +322,15 @@ function buildPrompt(template: TemplateRow, request: GenerateRequest, chosenProt
   const isVegetarian = chosenProtein.toLowerCase() === "vegetarian";
   const isSeafood = chosenProtein.toLowerCase() === "seafood";
 
+  const recentVegBases = isVegetarian ? getRecentVegBases(3) : [];
+  const vegVarietyLine = isVegetarian && recentVegBases.length > 0
+    ? ` PROTEIN VARIETY (mandatory): Do NOT default to tofu. Rotate the primary vegetarian protein. Recently used: ${recentVegBases.join(", ")} — pick a DIFFERENT one from this list: lentils, chickpeas, black beans, kidney beans, white beans, quinoa, tempeh, seitan, greek yogurt, eggs, edamame.`
+    : isVegetarian
+    ? ` PROTEIN VARIETY (mandatory): Do NOT default to tofu. Pick the primary protein from this rotation list: lentils, chickpeas, black beans, kidney beans, white beans, quinoa, tempeh, seitan, greek yogurt, eggs, edamame.`
+    : "";
+
   const proteinDirective = isVegetarian
-    ? `DIET CONSTRAINT (STRICT VEGETARIAN): Vegetarian means ZERO meat and ZERO seafood. Do NOT include: chicken, beef, pork, turkey, lamb, veal, fish, salmon, tuna, shrimp, crab, lobster, scallops, anchovies, or any other meat/seafood. Do NOT include meat or fish broths (chicken broth, chicken stock, beef broth, beef stock, fish stock, bone broth). Do NOT include gelatin, fish sauce, anchovy paste, oyster sauce, worcestershire sauce, lard, tallow, suet, dripping, schmaltz, demi-glace. Eggs and dairy ARE allowed unless restricted by allergens below. Use vegetable broth/stock instead of any animal broth. Use soy sauce or tamari instead of fish sauce/oyster sauce. If any prohibited ingredient appears, the recipe is INVALID. Use plant-based proteins ONLY: tofu, tempeh, chickpeas, lentils, black beans, kidney beans, white beans, edamame, paneer, eggs, quinoa, seitan, nuts, seeds, or plant-based ground. The title must clearly reflect it is a vegetarian dish. FORBIDDEN (do NOT include ANY of these): ${forbiddenText}.${request.allergens_to_avoid.includes("dairy") ? " ALLERGEN: No paneer, cheese, yogurt, cream, butter, or any dairy." : ""}${request.allergens_to_avoid.includes("soy") ? " ALLERGEN: No tofu, tempeh, soy sauce, or edamame." : ""}${request.allergens_to_avoid.includes("eggs") ? " ALLERGEN: No eggs." : ""}`
+    ? `DIET CONSTRAINT (STRICT VEGETARIAN): Vegetarian means ZERO meat and ZERO seafood. Do NOT include: chicken, beef, pork, turkey, lamb, veal, fish, salmon, tuna, shrimp, crab, lobster, scallops, anchovies, or any other meat/seafood. Do NOT include meat or fish broths (chicken broth, chicken stock, beef broth, beef stock, fish stock, bone broth). Do NOT include gelatin, fish sauce, anchovy paste, oyster sauce, worcestershire sauce, lard, tallow, suet, dripping, schmaltz, demi-glace. Eggs and dairy ARE allowed unless restricted by allergens below. Use vegetable broth/stock instead of any animal broth. Use soy sauce or tamari instead of fish sauce/oyster sauce. If any prohibited ingredient appears, the recipe is INVALID. The title must clearly reflect it is a vegetarian dish. FORBIDDEN (do NOT include ANY of these): ${forbiddenText}.${vegVarietyLine}${request.allergens_to_avoid.includes("dairy") ? " ALLERGEN: No paneer, cheese, yogurt, cream, butter, or any dairy." : ""}${request.allergens_to_avoid.includes("soy") ? " ALLERGEN: No tofu, tempeh, soy sauce, or edamame." : ""}${request.allergens_to_avoid.includes("eggs") ? " ALLERGEN: No eggs." : ""}`
     : isSeafood
     ? `PROTEIN (STRICT — SEAFOOD ONLY): Use seafood as the ONLY protein — fish (salmon, tuna, cod, tilapia, halibut, etc.) or shellfish (shrimp, prawns, crab, lobster, scallops, clams, mussels, etc.). Do NOT include ANY land meat: chicken, beef, pork, turkey, lamb, duck, sausage, bacon, or any other land-animal protein. Do NOT use meat-based broths/stocks (chicken broth, chicken stock, beef broth, beef stock, bone broth). Use seafood stock, fish stock, or vegetable broth instead. The title must clearly feature the seafood used. FORBIDDEN (do NOT include ANY of these): ${forbiddenText}. If any land meat appears, the recipe is INVALID — regenerate.`
     : `PROTEIN (STRICT): Recipe MUST use ${proteinDisplay} as the ONLY animal protein. Do not include, mention, or substitute any other meat or animal protein. The title MUST include the word "${proteinDisplay}". Every meat ingredient MUST be ${proteinDisplay}. FORBIDDEN proteins (do NOT use any of these): ${forbiddenText}.`;
@@ -378,8 +385,14 @@ function buildPantryPrompt(template: TemplateRow, request: GenerateRequest, vari
     : `MEAL STRUCTURE: Vary the structure. Do NOT default to a rice bowl.`;
 
   const isPantryVegetarian = (request.proteins || []).some(p => p.toLowerCase() === "vegetarian");
+  const pantryRecentVeg = isPantryVegetarian ? getRecentVegBases(3) : [];
+  const pantryVegVariety = isPantryVegetarian && pantryRecentVeg.length > 0
+    ? ` PROTEIN VARIETY (mandatory): Do NOT default to tofu. Recently used: ${pantryRecentVeg.join(", ")} — pick a DIFFERENT primary protein from: lentils, chickpeas, black beans, kidney beans, white beans, quinoa, tempeh, seitan, greek yogurt, eggs, edamame.`
+    : isPantryVegetarian
+    ? ` PROTEIN VARIETY (mandatory): Do NOT default to tofu. Pick the primary protein from: lentils, chickpeas, black beans, kidney beans, white beans, quinoa, tempeh, seitan, greek yogurt, eggs, edamame.`
+    : "";
   const pantryVegLine = isPantryVegetarian
-    ? `DIET CONSTRAINT (STRICT VEGETARIAN): Vegetarian means ZERO meat and ZERO seafood. Do NOT include: chicken, beef, pork, turkey, lamb, veal, fish, salmon, tuna, shrimp, crab, lobster, scallops, anchovies, or any other meat/seafood. Do NOT include meat or fish broths (chicken broth, chicken stock, beef broth, beef stock, fish stock, bone broth). Do NOT include gelatin, fish sauce, anchovy paste, oyster sauce, worcestershire sauce, lard, tallow, suet, dripping, schmaltz, demi-glace. Eggs and dairy ARE allowed${request.allergens_to_avoid.includes("dairy") ? " — EXCEPT dairy is an allergen, so NO paneer, cheese, yogurt, cream, butter, or any dairy" : ""}${request.allergens_to_avoid.includes("soy") ? " — EXCEPT soy is an allergen, so NO tofu, tempeh, soy sauce, or edamame" : ""}${request.allergens_to_avoid.includes("eggs") ? " — EXCEPT eggs are an allergen, so NO eggs" : ""}. Use vegetable broth/stock instead of any animal broth. If any prohibited ingredient appears, the recipe is INVALID.`
+    ? `DIET CONSTRAINT (STRICT VEGETARIAN): Vegetarian means ZERO meat and ZERO seafood. Do NOT include: chicken, beef, pork, turkey, lamb, veal, fish, salmon, tuna, shrimp, crab, lobster, scallops, anchovies, or any other meat/seafood. Do NOT include meat or fish broths (chicken broth, chicken stock, beef broth, beef stock, fish stock, bone broth). Do NOT include gelatin, fish sauce, anchovy paste, oyster sauce, worcestershire sauce, lard, tallow, suet, dripping, schmaltz, demi-glace. Eggs and dairy ARE allowed${request.allergens_to_avoid.includes("dairy") ? " — EXCEPT dairy is an allergen, so NO paneer, cheese, yogurt, cream, butter, or any dairy" : ""}${request.allergens_to_avoid.includes("soy") ? " — EXCEPT soy is an allergen, so NO tofu, tempeh, soy sauce, or edamame" : ""}${request.allergens_to_avoid.includes("eggs") ? " — EXCEPT eggs are an allergen, so NO eggs" : ""}. Use vegetable broth/stock instead of any animal broth. If any prohibited ingredient appears, the recipe is INVALID.${pantryVegVariety}`
     : "";
 
   return `Generate ONE firehall meal as JSON using crew's on-hand ingredients.
