@@ -164,6 +164,8 @@ export default function Home() {
   const genCountRef = useRef(0);
   const emailPromptedRef = useRef(false);
   const activeRequestIdRef = useRef<string | null>(null);
+  const abortControllerRef = useRef<AbortController | null>(null);
+  const recipeRef = useRef<HTMLDivElement>(null);
   const { toast } = useToast();
 
   useEffect(() => {
@@ -217,7 +219,7 @@ export default function Home() {
       return;
     }
 
-    setRecipe({ ...data });
+    setRecipe(() => ({ ...data }));
     setGenerationCounter(c => c + 1);
     addRecentSignature(data);
     if (data.meal_style) trackMealStyle(data.meal_style);
@@ -228,7 +230,11 @@ export default function Home() {
     setLastTemplateId(data.template_id);
     trackMealGenerated();
     genCountRef.current += 1;
-    console.log("[Generate] Recipe updated:", data.title, "| style:", data.meal_style);
+    console.log("[Generate] Recipe updated:", data.title, "| style:", data.meal_style, "| sig:", (data as any)._signature?.substring(0, 40));
+
+    requestAnimationFrame(() => {
+      recipeRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
 
     if (genCountRef.current === 2 && !emailPromptedRef.current) {
       emailPromptedRef.current = true;
@@ -237,6 +243,11 @@ export default function Home() {
   }, []);
 
   const handleGenerate = useCallback(async (currentFilters: FilterState, templateId?: number, preferDifferentStyle = false) => {
+    if (abortControllerRef.current) {
+      abortControllerRef.current.abort();
+      abortControllerRef.current = null;
+    }
+
     const requestId = makeRequestId();
     activeRequestIdRef.current = requestId;
     console.log("[Generate] Clicked", { requestId, templateId, preferDifferentStyle });
@@ -247,19 +258,22 @@ export default function Home() {
     const payload = buildRequestPayload(currentFilters, templateId, preferDifferentStyle);
     const filterKey = buildFilterKey(payload);
 
-    const cached = consumePrefetched(payload, templateId);
-    if (cached) {
-      console.log("[Generate] Using prefetched:", cached.title, { requestId, filterKey });
-      applyRecipe(cached, requestId);
-      setTimeout(() => prefetchMeals(payload), 100);
-      return;
+    if (!preferDifferentStyle) {
+      const cached = consumePrefetched(payload, templateId);
+      if (cached) {
+        console.log("[Generate] Using prefetched:", cached.title, { requestId, filterKey });
+        applyRecipe(cached, requestId);
+        setTimeout(() => prefetchMeals(payload), 100);
+        return;
+      }
     }
 
     setLoading(true);
-    try {
-      const controller = new AbortController();
-      const timeout = setTimeout(() => controller.abort(), 45000);
+    const controller = new AbortController();
+    abortControllerRef.current = controller;
+    const timeout = setTimeout(() => controller.abort(), 45000);
 
+    try {
       const currentSig = recipe?._signature || undefined;
       const debugParam = new URLSearchParams(window.location.search).get("debug") === "1" ? "?debug=1" : "";
       const res = await apiRequest("POST", `/api/generate${debugParam}`, {
@@ -270,15 +284,28 @@ export default function Home() {
         currentRecipeSignature: currentSig,
       });
       clearTimeout(timeout);
+
+      if (activeRequestIdRef.current !== requestId) {
+        console.log("[Generate] Ignoring stale response", { requestId });
+        return;
+      }
+
       const data: ClientRecipeResponse = await res.json();
 
       console.log("[Generate] API returned:", data.title, { requestId, filterKey });
       applyRecipe(data, requestId);
-      putCached(filterKey, data);
-      setTimeout(() => prefetchMeals(payload), 100);
+      if (!preferDifferentStyle) {
+        putCached(filterKey, data);
+        setTimeout(() => prefetchMeals(payload), 100);
+      }
     } catch (err: any) {
+      clearTimeout(timeout);
       if (activeRequestIdRef.current !== requestId) {
         console.log("[Generate] Ignoring stale error", { requestId });
+        return;
+      }
+
+      if (controller.signal.aborted && err?.name === "AbortError") {
         return;
       }
 
@@ -314,9 +341,10 @@ export default function Home() {
     } finally {
       if (activeRequestIdRef.current === requestId) {
         setLoading(false);
+        abortControllerRef.current = null;
       }
     }
-  }, [applyRecipe, toast]);
+  }, [applyRecipe, toast, recipe]);
 
   const handleGenerateClick = useCallback(() => {
     handleGenerate(filters);
@@ -405,17 +433,19 @@ export default function Home() {
             />
           </div>
 
-          <ResultsPanel
-            loading={loading}
-            error={error}
-            recipe={recipe}
-            recentRecipes={recentRecipes}
-            filters={filters}
-            generationCounter={generationCounter}
-            onEmailClick={onEmailClick}
-            onShoppingListClick={onShoppingListClick}
-            onHallVoteClick={onHallVoteClick}
-          />
+          <div ref={recipeRef}>
+            <ResultsPanel
+              loading={loading}
+              error={error}
+              recipe={recipe}
+              recentRecipes={recentRecipes}
+              filters={filters}
+              generationCounter={generationCounter}
+              onEmailClick={onEmailClick}
+              onShoppingListClick={onShoppingListClick}
+              onHallVoteClick={onHallVoteClick}
+            />
+          </div>
         </div>
       </main>
       {recipe && (

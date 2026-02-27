@@ -31,6 +31,8 @@ import {
   finalizeRequest,
   cancelRequest,
   logUsage,
+  addSessionSignature,
+  isRecentSessionSignature,
   getDailySpend,
   getUsageStats,
   getCacheCount,
@@ -312,6 +314,8 @@ export async function registerRoutes(
   function sendRecipeResponse(res: Response, validation: import("./validateRecipe").ValidationResult, extras: Record<string, any>, debug: boolean, crewSize: number, mealFormat: string, allergens: string[], auditCtx: LabelAuditContext | undefined, ipHash: string, sessionId: string, requestId: string) {
     const result = buildResponse(validation, extras, debug, crewSize, mealFormat, allergens, auditCtx);
     const signature = validation.signature || result._signature || "";
+    const sessKey = `${ipHash}:${sessionId}`;
+    addSessionSignature(sessKey, signature);
     recordSuccessfulGeneration(ipHash, sessionId, requestId, signature);
     return res.json(result);
   }
@@ -330,6 +334,51 @@ export async function registerRoutes(
     recordRateLimit(`burst:session:${sessionId}`);
     recordRateLimit(`hourly:session:${sessionId}`);
     log(`[rate] Generation counted — request_id=${requestId} signature=${signature} session=${sessionId}`, "rate");
+  }
+
+  const REMIX_SAUCES: Record<string, string[]> = {
+    chicken: ["honey mustard", "teriyaki glaze", "chipotle lime", "lemon herb", "bbq sauce", "buffalo sauce", "pesto", "garlic butter"],
+    beef: ["chimichurri", "mushroom gravy", "bbq sauce", "teriyaki", "garlic herb butter", "horseradish cream", "balsamic glaze", "salsa verde"],
+    pork: ["apple cider glaze", "honey garlic", "bbq sauce", "mustard glaze", "teriyaki", "chipotle", "maple dijon", "hoisin"],
+    turkey: ["cranberry glaze", "herb gravy", "honey mustard", "lemon herb", "bbq rub", "chipotle lime", "garlic herb", "teriyaki"],
+    fish: ["lemon dill", "miso glaze", "garlic butter", "cajun spice", "teriyaki", "coconut curry", "herb crust", "citrus salsa"],
+    vegetarian: ["pesto", "tahini", "coconut curry", "chipotle", "lemon herb", "garlic sauce", "harissa", "teriyaki"],
+    pantry: ["garlic herb", "lemon pepper", "bbq rub", "cajun spice", "honey mustard", "teriyaki", "chipotle", "balsamic"],
+  };
+
+  const REMIX_CARBS = ["rice", "pasta", "quinoa", "potatoes", "noodles", "bread", "tortillas", "couscous"];
+
+  function remixRecipeForVariety(recipe: GenerateResponse, currentStructure: StructureType, protein: string): GenerateResponse {
+    const remixed = { ...recipe, ingredients: [...recipe.ingredients], steps: [...recipe.steps], tags: recipe.tags ? { ...recipe.tags } : undefined };
+
+    const sauces = REMIX_SAUCES[protein.toLowerCase()] || REMIX_SAUCES.chicken;
+    const currentIngs = remixed.ingredients.map(i => i.item.toLowerCase()).join(" ");
+    const availSauces = sauces.filter(s => !currentIngs.includes(s.split(" ")[0]));
+    let chosenSauce = "";
+    if (availSauces.length > 0) {
+      chosenSauce = availSauces[Math.floor(Math.random() * availSauces.length)];
+      const sauceIdx = remixed.ingredients.findIndex(i =>
+        /sauce|glaze|dressing|marinade|drizzle/i.test(i.item) || /sauce|glaze|dressing/i.test(i.notes || "")
+      );
+      if (sauceIdx >= 0) {
+        remixed.ingredients[sauceIdx] = { item: chosenSauce.charAt(0).toUpperCase() + chosenSauce.slice(1), amount: remixed.ingredients[sauceIdx].amount, notes: "" };
+      } else {
+        remixed.ingredients.push({ item: chosenSauce.charAt(0).toUpperCase() + chosenSauce.slice(1), amount: "2 tbsp", notes: "for finishing" });
+      }
+    }
+
+    const currentCarb = remixed.tags?.base_carb || "";
+    const altCarbs = REMIX_CARBS.filter(c => c !== currentCarb.toLowerCase());
+    const newCarb = altCarbs[Math.floor(Math.random() * altCarbs.length)];
+    if (newCarb && remixed.tags) remixed.tags.base_carb = newCarb;
+
+    const proteinDisplay = protein.charAt(0).toUpperCase() + protein.slice(1);
+    const styleDisplay = remixed.meal_style || currentStructure;
+    const flavorWord = chosenSauce ? chosenSauce.split(" ")[0] : "";
+    const titleFlavor = flavorWord ? flavorWord.charAt(0).toUpperCase() + flavorWord.slice(1) + " " : "";
+    remixed.title = `${titleFlavor}${proteinDisplay} ${styleDisplay}`;
+
+    return remixed;
   }
 
   app.post("/api/generate", async (req: Request, res: Response) => {
@@ -482,9 +531,14 @@ export async function registerRoutes(
             recentSignatures: (req.body as any).recentSignatures || [],
             currentRecipeSignature: (req.body as any).currentRecipeSignature || undefined,
           };
-          const cacheVal = validateAndFixRecipe(cached, cacheValCtx);
-          recordSignature(chosenProtein, cacheVal.signature);
-          return sendRecipeResponse(res, cacheVal, {}, cacheDebug, request.crew_size, request.meal_format, allergens, auditCtx, ipHash, sessionId, requestId);
+          let cacheVal = validateAndFixRecipe(cached, cacheValCtx);
+          const cacheSessKey = `${ipHash}:${sessionId}`;
+          if (isRecentSessionSignature(cacheSessKey, cacheVal.signature)) {
+            log(`Cache HIT but sig in session history — bypassing cache for variety`, "variety");
+          } else {
+            recordSignature(chosenProtein, cacheVal.signature);
+            return sendRecipeResponse(res, cacheVal, {}, cacheDebug, request.crew_size, request.meal_format, allergens, auditCtx, ipHash, sessionId, requestId);
+          }
         }
       }
 
@@ -523,8 +577,13 @@ export async function registerRoutes(
               currentRecipeSignature: (req.body as any).currentRecipeSignature || undefined,
             };
             const poolVal = validateAndFixRecipe(poolEntry.recipe, poolValCtx);
-            recordSignature(chosenProtein, poolVal.signature);
-            return sendRecipeResponse(res, poolVal, {}, poolDebug, request.crew_size, request.meal_format, allergens, auditCtx, ipHash, sessionId, requestId);
+            const poolSessKey = `${ipHash}:${sessionId}`;
+            if (isRecentSessionSignature(poolSessKey, poolVal.signature)) {
+              log(`Pool entry sig in session history — bypassing pool for variety`, "variety");
+            } else {
+              recordSignature(chosenProtein, poolVal.signature);
+              return sendRecipeResponse(res, poolVal, {}, poolDebug, request.crew_size, request.meal_format, allergens, auditCtx, ipHash, sessionId, requestId);
+            }
           }
         }
       }
@@ -698,6 +757,24 @@ export async function registerRoutes(
           }
         }
 
+        const sessKey = `${ipHash}:${sessionId}`;
+        for (let dedupAttempt = 0; dedupAttempt < 3; dedupAttempt++) {
+          if (!isRecentSessionSignature(sessKey, aiValidation.signature)) break;
+
+          if (dedupAttempt < 2) {
+            log(`[dedup] Signature in session history (attempt ${dedupAttempt + 1}) — remixing`, "variety");
+            const remixed = remixRecipeForVariety(aiValidation.recipe, structureType, chosenProtein);
+            aiValidation = validateAndFixRecipe(remixed, validationCtx);
+          } else {
+            log(`[dedup] Remix still duplicate after 2 attempts — forcing different structure`, "variety");
+            const altStructure = pickStructure(request.appliances, request.time_available, [mealStyleDisplay, ...(request.recent_meal_styles || [])], true);
+            const altFb = buildFallbackRecipe(fallbackTemplate || (candidates.length > 0 ? candidates[0] : null) as any, request, chosenProtein, altStructure);
+            const altWithStyle = { ...altFb, meal_style: STRUCTURE_DISPLAY[altStructure] || altStructure };
+            aiValidation = validateAndFixRecipe(altWithStyle as any, { ...validationCtx, meal_style: altWithStyle.meal_style });
+            log(`[dedup] Forced alt structure=${altStructure}, newSig=${aiValidation.signature.substring(0, 40)}`, "variety");
+          }
+        }
+
         const estimatedCost =
           (totalTokensIn / 1000) * COST_PER_1K_INPUT +
           (totalTokensOut / 1000) * COST_PER_1K_OUTPUT;
@@ -754,8 +831,15 @@ export async function registerRoutes(
             log(`Background AI also failed: ${bgErr.message}`, "fallback");
           });
 
+        const fbSessKey = `${ipHash}:${sessionId}`;
         const fbRecipeWithStyle = { ...fallbackRecipe, _fallback: true, meal_style: mealStyleDisplay };
-        const fbValidation = validateAndFixRecipe(fbRecipeWithStyle as any, validationCtx);
+        let fbValidation = validateAndFixRecipe(fbRecipeWithStyle as any, validationCtx);
+        for (let fbDedup = 0; fbDedup < 2; fbDedup++) {
+          if (!isRecentSessionSignature(fbSessKey, fbValidation.signature)) break;
+          log(`[dedup] Fallback sig in session history (attempt ${fbDedup + 1}) — remixing`, "variety");
+          const remixed = remixRecipeForVariety(fbValidation.recipe, structureType, chosenProtein);
+          fbValidation = validateAndFixRecipe(remixed, validationCtx);
+        }
         recordSignature(chosenProtein, fbValidation.signature);
         const fbExtras: Record<string, any> = { _fallback: true };
         if (filtersRelaxed) fbExtras._filtersRelaxed = true;
@@ -783,7 +867,14 @@ export async function registerRoutes(
       });
       log(`Fallback served in ${Date.now() - startTime}ms${isColdStart ? " [COLD START]" : ""}`, "perf");
       const errFbWithStyle = { ...fallbackRecipe, _fallback: true, meal_style: mealStyleDisplay };
-      const errFbValidation = validateAndFixRecipe(errFbWithStyle as any, validationCtx);
+      let errFbValidation = validateAndFixRecipe(errFbWithStyle as any, validationCtx);
+      const errSessKey = `${ipHash}:${sessionId}`;
+      for (let errDedup = 0; errDedup < 2; errDedup++) {
+        if (!isRecentSessionSignature(errSessKey, errFbValidation.signature)) break;
+        log(`[dedup] Error-fallback sig in session history (attempt ${errDedup + 1}) — remixing`, "variety");
+        const remixed = remixRecipeForVariety(errFbValidation.recipe, structureType, chosenProtein);
+        errFbValidation = validateAndFixRecipe(remixed, validationCtx);
+      }
       recordSignature(chosenProtein, errFbValidation.signature);
       const errExtras: Record<string, any> = { _fallback: true };
       if (filtersRelaxed) errExtras._filtersRelaxed = true;

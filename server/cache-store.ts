@@ -208,7 +208,44 @@ setInterval(() => {
       idempotencyStore.delete(keys[i]);
     }
   }
+  if (sessionSignatureStore.size > 5000) {
+    const keys = Array.from(sessionSignatureStore.keys());
+    for (let i = 0; i < keys.length - 2500; i++) {
+      sessionSignatureStore.delete(keys[i]);
+    }
+  }
 }, 600_000);
+
+const SESSION_MAX_SIGNATURES = 15;
+const sessionSignatureStore = new Map<string, string[]>();
+
+export function getSessionSignatures(sessionKey: string): string[] {
+  return sessionSignatureStore.get(sessionKey) || [];
+}
+
+export function addSessionSignature(sessionKey: string, sig: string): void {
+  let sigs = sessionSignatureStore.get(sessionKey);
+  if (!sigs) {
+    sigs = [];
+    sessionSignatureStore.set(sessionKey, sigs);
+  }
+  if (!sigs.includes(sig)) {
+    sigs.push(sig);
+    if (sigs.length > SESSION_MAX_SIGNATURES) {
+      sigs.shift();
+    }
+  }
+}
+
+export function isRecentSessionSignature(sessionKey: string, sig: string): boolean {
+  const sigs = sessionSignatureStore.get(sessionKey) || [];
+  return sigs.includes(sig);
+}
+
+export function getLastSessionSignature(sessionKey: string): string {
+  const sigs = sessionSignatureStore.get(sessionKey) || [];
+  return sigs.length > 0 ? sigs[sigs.length - 1] : "";
+}
 
 export function logUsage(entry: {
   cacheKey: string;

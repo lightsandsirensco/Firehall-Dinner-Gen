@@ -590,7 +590,19 @@ const FALLBACK_ARCHETYPES: Record<string, FallbackArchetype[]> = {
 const recentFallbackTemplateIds: number[] = [];
 const MAX_RECENT_FALLBACKS = 5;
 
-export function pickFallbackArchetype(protein: string, structureType: StructureType, appliances: string[]): FallbackArchetype {
+const recentArchetypeTitles: string[] = [];
+const MAX_RECENT_ARCHETYPES = 10;
+
+function trackArchetype(title: string) {
+  const idx = recentArchetypeTitles.indexOf(title);
+  if (idx !== -1) recentArchetypeTitles.splice(idx, 1);
+  recentArchetypeTitles.unshift(title);
+  if (recentArchetypeTitles.length > MAX_RECENT_ARCHETYPES) {
+    recentArchetypeTitles.length = MAX_RECENT_ARCHETYPES;
+  }
+}
+
+export function pickFallbackArchetype(protein: string, structureType: StructureType, appliances: string[], recentSignatures?: string[]): FallbackArchetype {
   const archetypes = FALLBACK_ARCHETYPES[protein] || FALLBACK_ARCHETYPES.chicken;
   const appLower = appliances.map(a => a.toLowerCase());
 
@@ -610,17 +622,27 @@ export function pickFallbackArchetype(protein: string, structureType: StructureT
     return needed.some(a => appLower.includes(a));
   };
 
+  const notRecentlyUsed = (a: FallbackArchetype) => !recentArchetypeTitles.includes(a.title);
+
+  const pickBest = (candidates: FallbackArchetype[]): FallbackArchetype => {
+    const fresh = candidates.filter(notRecentlyUsed);
+    const pool = fresh.length > 0 ? fresh : candidates;
+    const pick = pool[Math.floor(Math.random() * pool.length)];
+    trackArchetype(pick.title);
+    return pick;
+  };
+
   const structMatch = archetypes.filter(a => a.structure === structureType && methodCompatible(a.cookingMethod));
   if (structMatch.length > 0) {
-    return structMatch[Math.floor(Math.random() * structMatch.length)];
+    return pickBest(structMatch);
   }
 
   const anyCompatible = archetypes.filter(a => methodCompatible(a.cookingMethod));
   if (anyCompatible.length > 0) {
-    return anyCompatible[Math.floor(Math.random() * anyCompatible.length)];
+    return pickBest(anyCompatible);
   }
 
-  return archetypes[Math.floor(Math.random() * archetypes.length)];
+  return pickBest(archetypes);
 }
 
 export function trackFallbackTemplateId(templateId: number) {

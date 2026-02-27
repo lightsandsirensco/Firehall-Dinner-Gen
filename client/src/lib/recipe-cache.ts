@@ -3,7 +3,7 @@ import type { ClientRecipeResponse } from "@shared/schema";
 const STORAGE_KEY = "firehall_recipe_cache";
 const SIGNATURES_KEY = "firehall_recent_signatures";
 const MAX_ENTRIES = 50;
-const MAX_SIGNATURES = 10;
+const MAX_SIGNATURES = 15;
 const TTL_MS = 24 * 60 * 60 * 1000;
 
 interface CacheEntry {

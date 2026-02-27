@@ -141,15 +141,26 @@ const CUISINE_INDICATORS: Record<string, { pattern: RegExp; display: string }> =
   japanese: { pattern: /\b(soy sauce|miso|teriyaki|wasabi|nori|dashi|sake|mirin|panko|ramen)\b/ig, display: "Japanese" },
 };
 
+const HIGH_THRESHOLD_CUISINES = new Set(["Asian", "Korean", "Japanese", "Thai"]);
+const ASIAN_REQUIRED_INDICATORS = /\b(soy sauce|tamari|ginger|sesame|teriyaki|miso|hoisin|rice vinegar|wok|stir.?fry|gochujang|kimchi|fish sauce|coconut milk|lemongrass|curry paste|mirin|dashi|nori)\b/i;
+
 export function inferCuisine(recipe: GenerateResponse): string {
   const text = fullText(recipe);
+  const ings = ingsText(recipe);
   let best = "";
   let bestCount = 0;
 
   for (const [, info] of Object.entries(CUISINE_INDICATORS)) {
     const matches = text.match(info.pattern);
     const unique = new Set((matches || []).map(m => m.toLowerCase()));
-    if (unique.size >= 2 && unique.size > bestCount) {
+
+    const isHighThreshold = HIGH_THRESHOLD_CUISINES.has(info.display);
+    const minRequired = isHighThreshold ? 3 : 2;
+
+    if (unique.size >= minRequired && unique.size > bestCount) {
+      if (isHighThreshold && !ASIAN_REQUIRED_INDICATORS.test(ings)) {
+        continue;
+      }
       bestCount = unique.size;
       best = info.display;
     }
@@ -372,13 +383,18 @@ export function auditAndFixRecipe(recipe: GenerateResponse, ctx: LabelAuditConte
   let cuisineChanged = false;
   if (currentCuisine && currentCuisine !== "American") {
     const text = fullText(fixed);
+    const ings = ingsText(fixed);
     const cuisineKey = Object.entries(CUISINE_INDICATORS).find(([, info]) => info.display === currentCuisine);
     if (cuisineKey) {
       const matches = text.match(cuisineKey[1].pattern);
       const unique = new Set((matches || []).map(m => m.toLowerCase()));
-      if (unique.size < 2) {
+      const isHighThreshold = HIGH_THRESHOLD_CUISINES.has(currentCuisine);
+      const minRequired = isHighThreshold ? 3 : 2;
+      const missingAsianIndicators = isHighThreshold && !ASIAN_REQUIRED_INDICATORS.test(ings);
+
+      if (unique.size < minRequired || missingAsianIndicators) {
         fixed.tags!.cuisine = inferredCuisine;
-        fixes.push(`cuisine: "${currentCuisine}" → "${inferredCuisine}" (insufficient indicators: ${unique.size}/2)`);
+        fixes.push(`cuisine: "${currentCuisine}" → "${inferredCuisine}" (indicators: ${unique.size}/${minRequired}${missingAsianIndicators ? ", missing core Asian ingredients" : ""})`);
         cuisineChanged = true;
       }
     }
@@ -455,19 +471,15 @@ export function auditAndFixRecipe(recipe: GenerateResponse, ctx: LabelAuditConte
     }
   }
 
-  if (styleChanged || cuisineChanged) {
+  const finalCuisine = fixed.tags?.cuisine || inferredCuisine;
+
+  const hasTitleMismatch = checkTitleConsistency(fixed, finalStyle, finalCuisine);
+  if (styleChanged || cuisineChanged || hasTitleMismatch) {
     const rebuilt = rebuildTitle(fixed, finalStyle);
     if (rebuilt !== fixed.title) {
-      fixes.push(`title: rebuilt to match corrected labels`);
+      fixes.push(`title: rebuilt from finalized content (style=${finalStyle}, cuisine=${finalCuisine})`);
       fixed.title = rebuilt;
     }
-  }
-
-  const hasTitleMismatch = checkTitleConsistency(fixed, finalStyle);
-  if (hasTitleMismatch) {
-    const rebuilt = rebuildTitle(fixed, finalStyle);
-    fixed.title = rebuilt;
-    fixes.push(`title: corrected style mismatch in title`);
   }
 
   const details: AuditDetails = {
@@ -508,7 +520,20 @@ export function auditAndFixRecipe(recipe: GenerateResponse, ctx: LabelAuditConte
   };
 }
 
-function checkTitleConsistency(recipe: GenerateResponse, contentStyle: string): boolean {
+const CUISINE_TITLE_WORDS: Record<string, RegExp> = {
+  asian: /\b(asian|mongolian|chinese|szechuan|cantonese)\b/i,
+  korean: /\b(korean|bulgogi|bibimbap)\b/i,
+  japanese: /\b(japanese|teriyaki|miso|ramen)\b/i,
+  thai: /\b(thai|pad thai)\b/i,
+  indian: /\b(indian|tikka|masala|curry)\b/i,
+  mexican: /\b(mexican|enchilada|taco)\b/i,
+  italian: /\b(italian|marinara|bolognese)\b/i,
+  mediterranean: /\b(mediterranean|greek)\b/i,
+  cajun: /\b(cajun|creole)\b/i,
+  middle_eastern: /\b(middle eastern|shawarma|falafel)\b/i,
+};
+
+function checkTitleConsistency(recipe: GenerateResponse, contentStyle: string, inferredCuisine: string): boolean {
   const title = (recipe.title || "").toLowerCase();
 
   const TITLE_STYLE_WORDS: Record<string, RegExp> = {
@@ -526,6 +551,20 @@ function checkTitleConsistency(recipe: GenerateResponse, contentStyle: string): 
       const evidence = STYLE_EVIDENCE[style];
       if (evidence && !evidence.ingredients.test(ings) && !evidence.steps.test(steps)) {
         return true;
+      }
+    }
+  }
+
+  for (const [cuisineKey, pattern] of Object.entries(CUISINE_TITLE_WORDS)) {
+    if (pattern.test(title)) {
+      const cuisineInfo = CUISINE_INDICATORS[cuisineKey];
+      if (cuisineInfo && cuisineInfo.display !== inferredCuisine) {
+        const text = fullText(recipe);
+        const matches = text.match(cuisineInfo.pattern);
+        const unique = new Set((matches || []).map(m => m.toLowerCase()));
+        if (unique.size < 2) {
+          return true;
+        }
       }
     }
   }
