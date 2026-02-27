@@ -39,6 +39,7 @@ export const generateRequestSchema = z.object({
     "stir_fry",
     "soup_chili",
     "breakfast",
+    "loaded_fries",
   ]).optional().default("random"),
   recent_meal_styles: z.array(z.string()).optional().default([]),
   prefer_different_style: z.boolean().optional().default(false),

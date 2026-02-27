@@ -713,6 +713,18 @@ const FORMAT_RULES: Record<string, FormatConstraints> = {
     forbidden: /\b(rice)\b/i,
     forbiddenLabel: "rice",
   },
+  "stir-fry": {
+    stepRequired: /\b(stir.?fry|wok|high.?heat|toss)\b/i,
+    stepRequiredLabel: "stir-fry/wok/high-heat technique",
+    forbidden: /\b(bun|brioche|tortilla)\b/i,
+    forbiddenLabel: "buns/tortillas",
+  },
+  "loaded-fries": {
+    required: /\b(fries|fry|french fries|potato fries|frozen fries)\b/i,
+    requiredLabel: "fries (frozen or fresh-cut)",
+    forbidden: /\b(rice|pasta|quinoa|tortilla|bun|brioche)\b/i,
+    forbiddenLabel: "rice/pasta/quinoa/tortillas/buns",
+  },
 };
 
 function normalizeFormatKey(mealStyle: string): string {
@@ -724,6 +736,8 @@ function normalizeFormatKey(mealStyle: string): string {
   if (s.includes("pasta")) return "pasta";
   if (s.includes("salad")) return "salad";
   if (s.includes("sheet") && s.includes("pan")) return "sheet-pan";
+  if (s.includes("loaded") && (s.includes("fries") || s.includes("fry"))) return "loaded-fries";
+  if (s.includes("stir") && s.includes("fry")) return "stir-fry";
   if (s.includes("soup") || s.includes("stew") || s.includes("chili")) return "soup-stew";
   if (s.includes("breakfast")) return "breakfast-for-dinner";
   return "";
@@ -738,7 +752,7 @@ function filterRiceFromIngredients(ings: string): boolean {
   return /\b(rice)\b/i.test(ings) && !/rice vinegar|rice wine|rice paper|rice noodle/i.test(ings);
 }
 
-export function validateRecipe(recipe: GenerateResponse): string[] {
+export function validateRecipe(recipe: GenerateResponse, requestMealFormat?: string): string[] {
   const errors: string[] = [];
   const ingredientItems = (recipe.ingredients || []).map(i => i.item);
   const ingsText = ingredientText(recipe);
@@ -769,8 +783,11 @@ export function validateRecipe(recipe: GenerateResponse): string[] {
     }
   }
 
+  const mealFormatNormalized = requestMealFormat && requestMealFormat !== "random"
+    ? normalizeFormatKey(requestMealFormat.replace(/_/g, " "))
+    : "";
   const style = recipe.meal_style || "";
-  const formatKey = normalizeFormatKey(style);
+  const formatKey = mealFormatNormalized || normalizeFormatKey(style);
   const rules = FORMAT_RULES[formatKey];
 
   if (rules) {
@@ -779,11 +796,10 @@ export function validateRecipe(recipe: GenerateResponse): string[] {
     }
 
     if (rules.forbidden) {
-      const hasForbidden = formatKey === "bowl" || formatKey === "pasta" || formatKey === "salad"
-        ? rules.forbidden.test(ingsText)
-        : (formatKey === "sheet-pan" || formatKey === "soup-stew" || formatKey === "breakfast-for-dinner" || formatKey === "burger")
-          ? filterRiceFromIngredients(ingsText)
-          : rules.forbidden.test(ingsText);
+      const riceOnlyFormats = new Set(["sheet-pan", "soup-stew", "breakfast-for-dinner", "burger"]);
+      const hasForbidden = riceOnlyFormats.has(formatKey)
+        ? filterRiceFromIngredients(ingsText)
+        : rules.forbidden.test(ingsText);
       if (hasForbidden) {
         errors.push(`format_has_forbidden:${formatKey} must NOT include ${rules.forbiddenLabel}`);
       }
@@ -806,6 +822,23 @@ export function validateRecipe(recipe: GenerateResponse): string[] {
       const combinedText = stepsStr + " " + platText;
       if (rules.stepForbidden.test(combinedText)) {
         errors.push(`format_forbidden_step:${formatKey} steps/plating must not contain ${rules.stepForbiddenLabel}`);
+      }
+    }
+  }
+
+  const timing = recipe.timing;
+  if (timing) {
+    const prep = timing.prep_minutes || 0;
+    const cook = timing.cook_minutes || 0;
+    const total = timing.total_minutes || 0;
+    if (total <= 0 && (prep > 0 || cook > 0)) {
+      errors.push(`timing_invalid:total_minutes is 0 but prep=${prep}, cook=${cook}`);
+    } else if (total > 0) {
+      if (total < Math.max(prep, cook)) {
+        errors.push(`timing_invalid:total_minutes (${total}) less than max(prep=${prep}, cook=${cook})`);
+      }
+      if (total > prep + cook + 5) {
+        errors.push(`timing_invalid:total_minutes (${total}) exceeds prep+cook (${prep + cook}) by too much`);
       }
     }
   }

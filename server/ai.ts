@@ -308,21 +308,22 @@ function buildFilterSummary(request: GenerateRequest): string {
 }
 
 const MEAL_FORMAT_RULES: Record<string, string> = {
-  burger: "FORMAT RULES (BURGER — STRICT): Must include buns (or lettuce wrap if low carb). Final step must assemble the burger. Do NOT include rice. Do NOT say 'serve over rice'. Do NOT include tortillas.",
-  tacos: "FORMAT RULES (TACOS — STRICT): Must include tortillas (corn or flour). Final step must assemble tacos. Do NOT include buns. Do NOT say 'serve over rice'. Do NOT include rice.",
-  wrap: "FORMAT RULES (WRAP — STRICT): Must include a large tortilla or wrap. Final step must roll or fold the wrap. Do NOT include buns. Do NOT say 'serve over rice'. Do NOT include rice.",
-  bowl: "FORMAT RULES (BOWL — STRICT): Must include a base layer: rice, quinoa, potatoes, or greens. Final step must say 'serve in a bowl' or 'serve over [base]'. Do NOT include buns or tortillas.",
-  pasta: "FORMAT RULES (PASTA — STRICT): Must include pasta (any shape). Final step must toss or combine with pasta. Do NOT include buns or tortillas. Do NOT include rice.",
-  salad: "FORMAT RULES (SALAD — STRICT): Must include greens or a salad base. Final step must toss or plate the salad. Do NOT include buns or tortillas. Do NOT include rice. Do NOT include pasta.",
-  sheet_pan: "FORMAT RULES (SHEET PAN — STRICT): Must include an oven temperature and a roasting step on a sheet pan. Must NOT be a stovetop-only recipe. Do NOT include rice. Do NOT say 'serve over rice'.",
-  stir_fry: "FORMAT RULES (STIR FRY — STRICT): Must use high-heat skillet or wok stir-fry technique. Do NOT include buns or tortillas. Do NOT default to rice — only include rice if the format is also a bowl.",
-  soup_chili: "FORMAT RULES (SOUP/CHILI — STRICT): Must include a simmer time. Serve in a bowl. Do NOT include rice. Do NOT include buns or tortillas.",
-  breakfast: "FORMAT RULES (BREAKFAST — STRICT): Must include a breakfast anchor: eggs, oats, yogurt, pancakes, or similar. Do NOT include rice. Do NOT include buns or tortillas.",
+  burger: "STRUCTURE REQUIREMENT: meal_format=burger. Do NOT mix formats.\nFORMAT RULES (BURGER — STRICT): Must include buns (or lettuce wrap if explicitly low carb). Final step MUST assemble the burger. FORBIDDEN: rice, pasta, quinoa, tortillas. Do NOT say 'serve over rice'. Do NOT include 'either/or' ingredients — choose ONE specific ingredient.",
+  tacos: "STRUCTURE REQUIREMENT: meal_format=tacos. Do NOT mix formats.\nFORMAT RULES (TACOS — STRICT): Must include tortillas (corn or flour). Final step MUST assemble tacos. FORBIDDEN: buns, rice, pasta, quinoa. Do NOT say 'serve over rice'. Rice is NOT allowed.",
+  wrap: "STRUCTURE REQUIREMENT: meal_format=wrap. Do NOT mix formats.\nFORMAT RULES (WRAP — STRICT): Must include a large tortilla or wrap. Final step MUST roll or fold the wrap. FORBIDDEN: buns, rice, pasta, quinoa. Do NOT say 'serve over rice'.",
+  bowl: "STRUCTURE REQUIREMENT: meal_format=bowl. Do NOT mix formats.\nFORMAT RULES (BOWL — STRICT): Must include exactly ONE base carb from [rice, quinoa, potatoes, greens, cauliflower rice]. Final plating MUST say 'serve in a bowl' or 'serve over [base]'. FORBIDDEN: buns, tortillas. Do NOT output 'either/or' ingredients — choose ONE specific base.",
+  pasta: "STRUCTURE REQUIREMENT: meal_format=pasta. Do NOT mix formats.\nFORMAT RULES (PASTA — STRICT): Must include pasta (any shape). Final step MUST toss or combine with pasta. FORBIDDEN: rice, buns, tortillas, quinoa.",
+  salad: "STRUCTURE REQUIREMENT: meal_format=salad. Do NOT mix formats.\nFORMAT RULES (SALAD — STRICT): Must include greens or a salad base. Final step MUST toss or plate the salad. FORBIDDEN: rice, pasta, buns, tortillas, quinoa.",
+  sheet_pan: "STRUCTURE REQUIREMENT: meal_format=sheet_pan. Do NOT mix formats.\nFORMAT RULES (SHEET PAN — STRICT): Must include an oven temperature AND a roasting/baking step on a sheet pan/baking sheet. Must NOT be a stovetop-only recipe. FORBIDDEN: rice, pasta, buns, tortillas. Do NOT say 'serve over rice'.",
+  stir_fry: "STRUCTURE REQUIREMENT: meal_format=stir_fry. Do NOT mix formats.\nFORMAT RULES (STIR FRY — STRICT): Must mention stir-fry, wok, or high-heat skillet technique. FORBIDDEN: buns, tortillas. Do NOT default to rice — only include a carb base if it is integral to the stir-fry. If including a carb, choose ONE (rice OR noodles, not both).",
+  soup_chili: "STRUCTURE REQUIREMENT: meal_format=soup_chili. Do NOT mix formats.\nFORMAT RULES (SOUP/CHILI — STRICT): Must include a simmer time (e.g. 'simmer 20 minutes'). Serve in bowls. FORBIDDEN: rice, pasta, buns, tortillas.",
+  breakfast: "STRUCTURE REQUIREMENT: meal_format=breakfast. Do NOT mix formats.\nFORMAT RULES (BREAKFAST — STRICT): Must include a breakfast anchor ingredient: eggs, oats, yogurt, pancakes, hash browns, or similar. FORBIDDEN: rice, pasta, buns, tortillas.",
+  loaded_fries: "STRUCTURE REQUIREMENT: meal_format=loaded_fries. Do NOT mix formats.\nFORMAT RULES (LOADED FRIES — STRICT): Base carb MUST be fries (frozen fries OR fresh-cut potato fries). Must bake or air-fry the fries, then top them. FORBIDDEN: rice, pasta, quinoa, tortillas, buns. Do NOT say 'serve over rice'.",
 };
 
 function buildMealFormatBlock(mealFormat: string | undefined): string {
   if (!mealFormat || mealFormat === "random") {
-    return "CARB RULE: Do not default to rice. Only include a carb (rice, pasta, bread, tortillas, etc.) if it is integral to the dish style. Vary the base across generations.";
+    return "STRUCTURE REQUIREMENT: meal_format=random. Choose a format that fits the dish naturally.\nCARB RULE (STRICT): Do NOT default to rice or pasta. Only include a carb (rice, pasta, bread, tortillas, fries, etc.) if it is integral to the chosen dish format. Do NOT add rice/pasta as a side unless the dish structure demands it. Do NOT output 'either/or' ingredients like 'rice or pasta' — choose ONE specific ingredient. Vary the base across generations.";
   }
   return MEAL_FORMAT_RULES[mealFormat] || "";
 }
@@ -392,7 +393,7 @@ ${varietyBlock}
 ${healthyBlock}
 
 RULES: ${request.crew_size} servings. 6-10 steps max. 8-12 ingredients. ${isVegetarian ? "25-45g" : "35-60g"} protein/serving. Include "pro_tips": 1-2 short practical tips (1-2 sentences each) about technique, make-ahead, or serving. Max 2 tips.
-STEP FORMAT (each step MUST follow this): heading = "Action (heat level, time)" e.g. "${isVegetarian ? "Sauté the chickpeas (medium-high, 4-5 min)" : "Sear the chicken (medium-high, 5-7 min)"}". body = concise HOW-TO with visual/doneness cue. Include: heat level (low/medium/medium-high/high or oven °F), time estimate, and a doneness cue ("until golden brown", "until fragrant", "until heated through"). Never repeat same instruction in two steps. No storytelling. Keep each step 1-3 sentences.
+STEP FORMAT (each step MUST follow this): heading = "Action (heat level, time)" e.g. "${isVegetarian ? "Sauté the chickpeas (medium-high, 4-5 min)" : "Sear the chicken (medium-high, 5-7 min)"}". body = concise HOW-TO with visual/doneness cue. Each step MUST include: (1) clear action verb + exact sequence, (2) heat level (low/medium/medium-high/high or oven °F) + pan/pot/oven instructions, (3) doneness cue (color/texture/internal temp, e.g. "until golden brown", "until edges crisp", "until internal temp reaches 165°F"), (4) brief parallelization note where appropriate (e.g. "while fries bake, brown the beef"). AVOID vague steps like "cook until done". Never repeat same instruction in two steps. No storytelling. Keep each step 1-3 sentences.
 ${isVegetarian ? "SAFETY: Reheat leftovers to 165°F. Ensure tofu/tempeh is cooked through." : "SAFETY TEMPS (always include for any protein): chicken/turkey 165°F/74°C, ground beef/sausage 160°F/71°C, pork 145°F/63°C +3min rest, fish 145°F/63°C."}
 PRIMARY PROTEIN SOURCE: Set "primary_protein_source" to the single main protein ingredient (e.g. "chicken", "lentils", "salmon", "chickpeas", "tofu", "eggs"). For vegetarian: name the specific plant protein used most.
 REQUIRED OUTPUT TAGS: Include "tags" object with: cuisine (e.g. "Mediterranean"), cooking_method (e.g. "sheet-pan"), base_carb (the actual carb used, or empty string if none), key_ingredients (3-5 main items as string array), high_protein (boolean, true if 30g+ protein/serving), high_fiber (boolean, true if contains beans/lentils/chickpeas/whole grains), quick_cleanup (boolean, true if one-pan/sheet-pan/slow-cooker).
@@ -456,7 +457,7 @@ ${varietyBlock}
 ${healthyBlock}
 
 RULES: Use as many on-hand ingredients as practical. List used ones in "ingredients_used". List 1-4 extras needed in "extra_items_needed" (skip basic pantry staples). ${request.crew_size} servings. 6-10 steps max. 8-12 ingredients. ${isPantryVegetarian ? "25-45g" : "35-60g"} protein/serving. Include "pro_tips": 1-2 short practical tips (1-2 sentences each) about technique, make-ahead, or serving. Max 2 tips.
-STEP FORMAT (each step MUST follow this): heading = "Action (heat level, time)" e.g. "Sear the chicken (medium-high, 5-7 min)". body = concise HOW-TO with visual/doneness cue. Include: heat level (low/medium/medium-high/high or oven °F), time estimate, and a doneness cue ("until golden brown", "until juices run clear", "until internal temp reaches 165°F"). Never repeat same instruction in two steps. No storytelling. Keep each step 1-3 sentences.
+STEP FORMAT (each step MUST follow this): heading = "Action (heat level, time)" e.g. "Sear the chicken (medium-high, 5-7 min)". body = concise HOW-TO with visual/doneness cue. Each step MUST include: (1) clear action verb + exact sequence, (2) heat level (low/medium/medium-high/high or oven °F) + pan/pot/oven instructions, (3) doneness cue (color/texture/internal temp, e.g. "until golden brown", "until edges crisp", "until internal temp reaches 165°F"), (4) brief parallelization note where appropriate (e.g. "while fries bake, brown the beef"). AVOID vague steps like "cook until done". Never repeat same instruction in two steps. No storytelling. Keep each step 1-3 sentences.
 SAFETY TEMPS (always include for any protein): chicken/turkey 165°F/74°C, ground beef/sausage 160°F/71°C, pork 145°F/63°C +3min rest, fish 145°F/63°C.
 PRIMARY PROTEIN SOURCE: Set "primary_protein_source" to the single main protein ingredient (e.g. "chicken", "lentils", "salmon", "chickpeas", "tofu", "eggs"). For vegetarian: name the specific plant protein used most.
 REQUIRED OUTPUT TAGS: Include "tags" object with: cuisine (e.g. "Mediterranean"), cooking_method (e.g. "sheet-pan"), base_carb (the actual carb used, or empty string if none), key_ingredients (3-5 main items as string array), high_protein (boolean, true if 30g+ protein/serving), high_fiber (boolean, true if contains beans/lentils/chickpeas/whole grains), quick_cleanup (boolean, true if one-pan/sheet-pan/slow-cooker).
@@ -697,12 +698,14 @@ ${JSON.stringify(validationErrors)}
 
 INSTRUCTIONS:
 - Return ONLY corrected JSON. Do not change meal_format or servings.
-- Do not add rice unless meal_format is bowl.
+- Do NOT add rice or pasta unless the meal_format explicitly requires it (bowl allows rice; pasta requires pasta).
+- Do NOT include "either/or" ingredients like "rice or pasta" — choose ONE specific ingredient.
 - Fix every listed error while keeping the recipe coherent.
 - Keep the same title style, protein, and crew size.
 - Ensure every ingredient is used in at least one step.
 - Ensure steps do not reference ingredients not in the ingredients list.
-- Respect format constraints (e.g., burgers need buns, tacos need tortillas, bowls need a base layer).`;
+- Respect format constraints: burgers need buns (no rice/pasta/tortillas), tacos need tortillas (no rice/buns), wraps need tortillas (no rice/buns), bowls need a base layer (no buns/tortillas), pasta needs pasta (no rice/buns), salad needs greens (no rice/pasta/buns), sheet_pan needs oven+sheet pan (no rice/pasta), stir_fry needs wok/high-heat (no buns), soup_chili needs simmer time (no rice/buns), breakfast needs anchor ingredient (no rice/pasta), loaded_fries need fries as base (no rice/pasta/quinoa/buns).
+- Ensure timing.total_minutes >= max(prep_minutes, cook_minutes) and <= prep_minutes + cook_minutes + 5.`;
 
   try {
     log(`[repair] Attempting repair for "${recipe.title}" with ${validationErrors.length} errors: ${validationErrors.join(", ")}`, "ai");
@@ -826,13 +829,52 @@ const SAFE_FALLBACK_RECIPES: Record<string, () => GenerateResponse> = {
     ingredients_used: [],
     extra_items_needed: [],
   }),
+  "loaded-fries": () => ({
+    template_id: 0,
+    chosen_protein: "Beef",
+    primary_protein_source: "Beef",
+    title: "Loaded Chili-Cheese Fries",
+    why_it_fits_tonight: "Hearty, easy, and a crowd-pleasing hit for the crew.",
+    timing: { prep_minutes: 10, cook_minutes: 25, total_minutes: 35 },
+    protein_safety: [{ protein: "Beef (ground)", target_temp_f: 160, target_temp_c: 71, rest_minutes: 0, probe_where: "Center of meat", notes: "Ground beef must reach 160°F." }],
+    ingredients: [
+      { item: "Frozen French fries", amount: "3 lbs", notes: "Thick-cut preferred" },
+      { item: "Ground beef (80/20)", amount: "2 lbs", notes: "" },
+      { item: "Shredded cheddar cheese", amount: "2 cups", notes: "" },
+      { item: "Red onion", amount: "1 large", notes: "Diced" },
+      { item: "Jalapeños", amount: "3", notes: "Sliced" },
+      { item: "Chili powder", amount: "2 tbsp", notes: "" },
+      { item: "Cumin", amount: "1 tbsp", notes: "" },
+      { item: "Sour cream", amount: "1 cup", notes: "For topping" },
+      { item: "Salt and pepper", amount: "To taste", notes: "" },
+    ],
+    steps: [
+      { heading: "Preheat oven (425°F, 2 min)", body: "Preheat oven to 425°F. Line a large sheet pan with parchment paper." },
+      { heading: "Bake fries (425°F oven, 20 min)", body: "Spread frozen fries in a single layer on the sheet pan. Bake for 20 minutes until golden and crispy, flipping halfway through." },
+      { heading: "Brown beef (medium-high, 8 min)", body: "While fries bake, brown ground beef in a large skillet over medium-high heat. Break into crumbles until no pink remains and internal temp reaches 160°F. Drain excess fat." },
+      { heading: "Season beef (medium, 2 min)", body: "Add chili powder, cumin, salt, and pepper to the cooked beef. Stir to coat evenly and cook 1-2 minutes until fragrant." },
+      { heading: "Load the fries (no heat, 3 min)", body: "Top the crispy fries with seasoned beef, diced red onion, sliced jalapeños, and shredded cheddar cheese." },
+      { heading: "Melt cheese (425°F oven, 3 min)", body: "Return the loaded fries to the oven for 2-3 minutes until cheese is melted and bubbly." },
+      { heading: "Serve (no heat, 2 min)", body: "Dollop sour cream on top. Serve immediately on the sheet pan for easy sharing." },
+    ],
+    cleanup_tip: "Parchment paper on the sheet pan means almost no scrubbing.",
+    macros_per_serving: { calories: 580, protein_g: 38, carbs_g: 42, fat_g: 28 },
+    budget_level: "standard",
+    budget_tips: ["Frozen fries are cheaper than fresh-cut.", "Use store-brand shredded cheese."],
+    pro_tips: ["Don't overcrowd the fries — spread them out for maximum crispiness.", "Drain the beef well so fries stay crispy under the toppings."],
+    tags: { cuisine: "", cooking_method: "oven", base_carb: "fries", key_ingredients: ["French Fries", "Ground Beef", "Cheddar", "Jalapeños"], high_protein: true, high_fiber: false, quick_cleanup: true },
+    meal_style: "Loaded Fries",
+    ingredients_used: [],
+    extra_items_needed: [],
+  }),
 };
 
 export function buildSafeFallbackRecipe(mealFormat: string, crewSize: number): GenerateResponse {
-  const formatLower = (mealFormat || "").toLowerCase();
+  const formatLower = (mealFormat || "").toLowerCase().replace(/_/g, " ");
   let key = "sheet-pan";
   if (formatLower.includes("burger")) key = "burger";
   else if (formatLower.includes("taco")) key = "taco";
+  else if (formatLower.includes("loaded") && formatLower.includes("fries")) key = "loaded-fries";
 
   const builder = SAFE_FALLBACK_RECIPES[key] || SAFE_FALLBACK_RECIPES["sheet-pan"];
   const recipe = builder();

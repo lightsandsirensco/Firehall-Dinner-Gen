@@ -12,7 +12,7 @@ import { getFromPool, refillPool, getPoolSize } from "./recipe-pool";
 import { initHallVoteTables, createHallVote, getHallVote, castBallot, closeHallVote, hashVoterFingerprint } from "./hall-vote-store";
 import { addFavourite, getFavourites, removeFavourite } from "./favourites";
 import { buildFallbackRecipe, trackFallbackTemplateId, getRecentFallbackTemplateIds } from "./fallback-recipe";
-import { pickStructure, trackStructure, STRUCTURE_DISPLAY } from "./structure-variety";
+import { pickStructure, trackStructure, STRUCTURE_DISPLAY, type StructureType } from "./structure-variety";
 import { log } from "./index";
 import { validateAndFixRecipe, validateRecipe, computeSignature, recordSignature, type RecipeValidationContext } from "./validateRecipe";
 import {
@@ -437,7 +437,25 @@ export async function registerRoutes(
 
       const varietyConstraints = getVarietyConstraints(request.cuisine_style);
 
-      const structureType = pickStructure(
+      const MEAL_FORMAT_TO_STRUCTURE: Record<string, StructureType> = {
+        burger: "burger",
+        tacos: "taco",
+        wrap: "wrap",
+        bowl: "bowl",
+        pasta: "pasta",
+        salad: "salad",
+        sheet_pan: "sheet-pan",
+        stir_fry: "stir-fry",
+        soup_chili: "soup-stew",
+        breakfast: "breakfast-for-dinner",
+        loaded_fries: "loaded-fries",
+      };
+
+      const explicitStructure = request.meal_format && request.meal_format !== "random"
+        ? MEAL_FORMAT_TO_STRUCTURE[request.meal_format]
+        : undefined;
+
+      const structureType: StructureType = explicitStructure || pickStructure(
         request.appliances,
         request.time_available,
         request.recent_meal_styles || [],
@@ -502,12 +520,13 @@ export async function registerRoutes(
         const aiRecipeWithStyle = { ...recipe, meal_style: mealStyleDisplay };
         let aiValidation = validateAndFixRecipe(aiRecipeWithStyle, validationCtx);
 
-        const contentErrors = validateRecipe(aiValidation.recipe);
+        const contentErrors = validateRecipe(aiValidation.recipe, request.meal_format);
         const blockingErrors = contentErrors.filter(e =>
           e.startsWith("format_missing_required:") ||
           e.startsWith("format_has_forbidden:") ||
           e.startsWith("format_missing_step:") ||
-          e.startsWith("format_forbidden_step:")
+          e.startsWith("format_forbidden_step:") ||
+          e.startsWith("timing_invalid:")
         );
 
         if (blockingErrors.length > 0) {
@@ -527,7 +546,7 @@ export async function registerRoutes(
               const repairedWithStyle = { ...repairResult.recipe, meal_style: mealStyleDisplay };
               aiValidation = validateAndFixRecipe(repairedWithStyle, validationCtx);
 
-              const repairErrors = validateRecipe(aiValidation.recipe);
+              const repairErrors = validateRecipe(aiValidation.recipe, request.meal_format);
               const repairBlocking = repairErrors.filter(e =>
                 e.startsWith("format_missing_required:") ||
                 e.startsWith("format_has_forbidden:") ||

@@ -286,6 +286,7 @@ export const FilterPanel = memo(function FilterPanel({ filters, onFiltersChange,
                 <SelectItem value="stir_fry">Stir Fry</SelectItem>
                 <SelectItem value="soup_chili">Soup / Chili</SelectItem>
                 <SelectItem value="breakfast">Breakfast</SelectItem>
+                <SelectItem value="loaded_fries">Loaded Fries</SelectItem>
               </SelectContent>
             </Select>
           </div>

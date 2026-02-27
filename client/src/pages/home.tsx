@@ -172,21 +172,37 @@ export default function Home() {
     return () => window.removeEventListener("favorites-changed", handler);
   }, []);
 
-  const [filters, setFilters] = useState<FilterState>({
-    crew_size: 6,
-    busy_level: "average",
-    time_available: "25-40",
-    appliances: ["stove", "oven"],
-    proteins: ["chicken", "beef"],
-    healthiness_preference: "balanced",
-    budget_level: "standard",
-    cuisine_style: "any",
-    meal_format: "random",
-    allergens_to_avoid: [],
-    vegetarian_swap_needed: false,
-    use_what_we_have: false,
-    ingredients_on_hand_text: "",
+  const [filters, setFilters] = useState<FilterState>(() => {
+    const defaults: FilterState = {
+      crew_size: 6,
+      busy_level: "average",
+      time_available: "25-40",
+      appliances: ["stove", "oven"],
+      proteins: ["chicken", "beef"],
+      healthiness_preference: "balanced",
+      budget_level: "standard",
+      cuisine_style: "any",
+      meal_format: "random",
+      allergens_to_avoid: [],
+      vegetarian_swap_needed: false,
+      use_what_we_have: false,
+      ingredients_on_hand_text: "",
+    };
+    try {
+      const saved = localStorage.getItem("firehall_filters");
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        return { ...defaults, ...parsed };
+      }
+    } catch {}
+    return defaults;
   });
+
+  useEffect(() => {
+    try {
+      localStorage.setItem("firehall_filters", JSON.stringify(filters));
+    } catch {}
+  }, [filters]);
 
   useEffect(() => {
     const warmupPayload = buildRequestPayload(filters);
