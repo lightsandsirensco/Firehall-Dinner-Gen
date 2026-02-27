@@ -14,6 +14,7 @@ import { addFavourite, getFavourites, removeFavourite } from "./favourites";
 import { buildFallbackRecipe, trackFallbackTemplateId, getRecentFallbackTemplateIds } from "./fallback-recipe";
 import { pickStructure, trackStructure, STRUCTURE_DISPLAY } from "./structure-variety";
 import { log } from "./index";
+import { validateAndFixRecipe, computeSignature, recordSignature, type RecipeValidationContext } from "./validateRecipe";
 import {
   initCacheStore,
   buildCacheKey,
@@ -208,7 +209,18 @@ export async function registerRoutes(
             const inferredStructure = pickStructure(request.appliances, request.time_available, recentStyles, false);
             cached.meal_style = STRUCTURE_DISPLAY[inferredStructure] || inferredStructure;
           }
-          return res.json(cached);
+          const cacheValCtx: RecipeValidationContext = {
+            chosenProtein: chosenProtein,
+            meal_style: cached.meal_style || "",
+            cuisine: request.cuisine_style || "any",
+            appliances: request.appliances,
+            allergens: request.allergens_to_avoid || [],
+            recentSignatures: (req.body as any).recentSignatures || [],
+            currentRecipeSignature: (req.body as any).currentRecipeSignature || undefined,
+          };
+          const cacheVal = validateAndFixRecipe(cached, cacheValCtx);
+          recordSignature(chosenProtein, cacheVal.signature);
+          return res.json({ ...cacheVal.recipe, _signature: cacheVal.signature });
         }
       }
 
@@ -236,7 +248,18 @@ export async function registerRoutes(
               const inferredStructure = pickStructure(request.appliances, request.time_available, recentStyles, false);
               poolEntry.recipe.meal_style = STRUCTURE_DISPLAY[inferredStructure] || inferredStructure;
             }
-            return res.json(poolEntry.recipe);
+            const poolValCtx: RecipeValidationContext = {
+              chosenProtein: chosenProtein,
+              meal_style: poolEntry.recipe.meal_style || "",
+              cuisine: request.cuisine_style || "any",
+              appliances: request.appliances,
+              allergens: request.allergens_to_avoid || [],
+              recentSignatures: (req.body as any).recentSignatures || [],
+              currentRecipeSignature: (req.body as any).currentRecipeSignature || undefined,
+            };
+            const poolVal = validateAndFixRecipe(poolEntry.recipe, poolValCtx);
+            recordSignature(chosenProtein, poolVal.signature);
+            return res.json({ ...poolVal.recipe, _signature: poolVal.signature });
           }
         }
       }
@@ -269,6 +292,16 @@ export async function registerRoutes(
       );
       const mealStyleDisplay = STRUCTURE_DISPLAY[structureType] || structureType;
       log(`[structure] Selected: ${structureType} (${mealStyleDisplay}) for protein: ${chosenProtein} | template: ${chosen.template_id} | clientRecent: [${(request.recent_meal_styles || []).join(",")}] | preferDiff: ${request.prefer_different_style}`, "variety");
+
+      const validationCtx: RecipeValidationContext = {
+        chosenProtein: chosenProtein,
+        meal_style: mealStyleDisplay,
+        cuisine: request.cuisine_style || "any",
+        appliances: request.appliances,
+        allergens: request.allergens_to_avoid || [],
+        recentSignatures: (req.body as any).recentSignatures || [],
+        currentRecipeSignature: (req.body as any).currentRecipeSignature || undefined,
+      };
 
       const FAST_FALLBACK_MS = 8_000;
 
@@ -326,7 +359,10 @@ export async function registerRoutes(
         if (process.env.ENABLE_POOL_WARMUP === "true") {
           refillPool().catch(() => {});
         }
-        return res.json({ ...recipe, meal_style: mealStyleDisplay });
+        const aiRecipeWithStyle = { ...recipe, meal_style: mealStyleDisplay };
+        const aiValidation = validateAndFixRecipe(aiRecipeWithStyle, validationCtx);
+        recordSignature(chosenProtein, aiValidation.signature);
+        return res.json({ ...aiValidation.recipe, _signature: aiValidation.signature });
       }
 
       if (raceResult.type === "timeout") {
@@ -358,7 +394,10 @@ export async function registerRoutes(
             log(`Background AI also failed: ${bgErr.message}`, "fallback");
           });
 
-        return res.json({ ...fallbackRecipe, _fallback: true, meal_style: mealStyleDisplay });
+        const fbRecipeWithStyle = { ...fallbackRecipe, _fallback: true, meal_style: mealStyleDisplay };
+        const fbValidation = validateAndFixRecipe(fbRecipeWithStyle as any, validationCtx);
+        recordSignature(chosenProtein, fbValidation.signature);
+        return res.json({ ...fbValidation.recipe, _signature: fbValidation.signature });
       }
 
       const aiError = (raceResult as any).error;
@@ -381,7 +420,10 @@ export async function registerRoutes(
         sessionId,
       });
       log(`Fallback served in ${Date.now() - startTime}ms${isColdStart ? " [COLD START]" : ""}`, "perf");
-      return res.json({ ...fallbackRecipe, _fallback: true, meal_style: mealStyleDisplay });
+      const errFbWithStyle = { ...fallbackRecipe, _fallback: true, meal_style: mealStyleDisplay };
+      const errFbValidation = validateAndFixRecipe(errFbWithStyle as any, validationCtx);
+      recordSignature(chosenProtein, errFbValidation.signature);
+      return res.json({ ...errFbValidation.recipe, _signature: errFbValidation.signature });
     } catch (error: any) {
       console.error("Generate error:", error);
       return res.status(500).json({ message: error.message || "Failed to generate recipe" });

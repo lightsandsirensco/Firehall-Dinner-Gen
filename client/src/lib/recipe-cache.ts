@@ -97,8 +97,8 @@ export function getRecentSignatures(): string[] {
   }
 }
 
-export function addRecentSignature(recipe: GenerateResponse) {
-  const sig = buildSignature(recipe);
+export function addRecentSignature(recipe: GenerateResponse & { _signature?: string }) {
+  const sig = (recipe as any)._signature || buildSignature(recipe);
   const sigs = getRecentSignatures().filter((s) => s !== sig);
   sigs.unshift(sig);
   try {

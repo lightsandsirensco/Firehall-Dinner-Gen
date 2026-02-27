@@ -29,6 +29,8 @@ export const generateRequestSchema = z.object({
   ]).optional().default("any"),
   recent_meal_styles: z.array(z.string()).optional().default([]),
   prefer_different_style: z.boolean().optional().default(false),
+  recentSignatures: z.array(z.string()).optional().default([]),
+  currentRecipeSignature: z.string().optional(),
 });
 
 export type GenerateRequest = z.infer<typeof generateRequestSchema>;

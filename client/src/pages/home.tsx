@@ -242,10 +242,13 @@ export default function Home() {
       const controller = new AbortController();
       const timeout = setTimeout(() => controller.abort(), 45000);
 
+      const currentSig = recipe?._signature || undefined;
       const res = await apiRequest("POST", "/api/generate", {
         ...payload,
         request_id: requestId,
         exclude_signatures: getRecentSignatures(),
+        recentSignatures: getRecentSignatures(),
+        currentRecipeSignature: currentSig,
       });
       clearTimeout(timeout);
       const data: GenerateResponse = await res.json();

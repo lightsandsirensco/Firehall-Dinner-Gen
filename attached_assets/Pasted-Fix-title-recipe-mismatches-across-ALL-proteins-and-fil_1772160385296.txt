@@ -1,0 +1,74 @@
+Fix title/recipe mismatches across ALL proteins and filters. Titles must accurately describe the FINAL recipe content (ingredients + steps + method + structure). Validate and block incorrect titles.
+
+Implement a strict “Title ↔ Recipe Alignment” validator layer that runs for EVERY generation (AI + fallback) before returning a response.
+
+1) Add canonical fields to every recipe response (always present)
+- meal_style (Bowl/Wrap/Taco/Sheet Pan/Skillet/Stir Fry/Pasta/One-Pot/Grill/Bake/Soup/Etc.)
+- base_carb (rice/quinoa/pasta/potatoes/bread/greens/none)
+- cooking_method (stovetop/oven/grill/instantpot/etc.)
+- cuisine (only if truly supported)
+- key_ingredients (3–6 main ingredients that are actually in the recipe)
+
+2) Generate titles ONLY after recipe is finalized
+- Title must be derived deterministically from the finalized fields:
+  {meal_style or method} + {cuisine (optional)} + {protein} + {base_carb or vessel} + {1 key ingredient}
+- Never invent ingredients (e.g., “hummus”, “honey”, “teriyaki”) unless present in ingredients list.
+- Never include a cuisine adjective unless validated (see #4).
+
+3) Implement validateTitleMatchesRecipe(recipe) with hard rules
+Validate the title against ingredients/steps/tags:
+
+Structure rules:
+- If title contains “Wrap” → recipe must include tortillas/wrap/pita/flatbread AND a wrap/assemble step.
+- If title contains “Taco” → must include tortillas/taco shells AND an assembly step.
+- If title contains “Bowl” → must include base layer (rice/quinoa/noodles/greens/potatoes) and not rely on tortilla vessel.
+- If title contains “Pasta” → must include pasta/noodles and a boil/cook pasta step.
+- If title contains “Sheet-Pan/Baked/Roasted” → must include oven temp and bake/roast step.
+- If title contains “Grilled” → must include grill step or grill-pan step.
+
+Ingredient claim rules:
+- If title contains any of these keywords, they MUST appear in ingredients:
+  hummus, honey, teriyaki, bbq, pesto, curry, buffalo, chimichurri, tzatziki, alfredo, marinara, parmesan, feta, avocado, cilantro, lime, etc.
+If missing → title is invalid.
+
+Protein rules:
+- Title must include the chosen protein (or veg protein) and it must match selected filters.
+- If vegetarian, title must include the veg protein (tofu/chickpea/lentil/bean/tempeh/etc.).
+
+4) Cuisine validation (“proof” requirement)
+If title includes a cuisine adjective (Mexican/Greek/Mediterranean/Italian/Indian/Asian/Japanese/Korean/Thai/etc.):
+Require at least 2 matching indicators in ingredients/spices:
+- Mexican: cumin/chili/lime/salsa/beans/tortillas
+- Greek/Mediterranean: oregano/lemon/garlic/feta/olives/tzatziki
+- Italian: basil/oregano/tomato/garlic/parmesan/marinara
+- Indian: garam masala/turmeric/curry/cumin/coriander
+- Asian: soy/tamari/ginger/sesame/rice vinegar/gochujang/miso
+If not proven → remove cuisine adjective from title OR adjust recipe to actually match (prefer removing from title to avoid inventing ingredients).
+
+5) Auto-fix behavior (no extra AI call if possible)
+If validation fails:
+- Rebuild the title from the FINAL recipe content using a safe title builder.
+- If structure mismatch is severe (e.g., title says Wrap but no tortilla AND steps are bowl-based):
+  - Update meal_style to the correct structure based on content, rebuild title accordingly.
+  - OR restructure the recipe to match the chosen meal_style (only if constraints allow) then rebuild title.
+Do not return a recipe with a mismatched title.
+
+6) Add a “recipe_signature” and block duplicates (optional but recommended)
+signature = meal_style + protein + cuisine + base_carb + sorted(core ingredients)
+Store last 10 signatures (client) and last 20 (server).
+Prevent “same recipe different title” by blocking duplicate signatures.
+
+7) Logging + QA mode
+Add temporary logs:
+- title
+- meal_style, base_carb, cuisine, protein
+- validation result ok/failed and which rule failed
+- whether auto-fix occurred
+Add a hidden debug toggle (?debug=1) that shows validator status + fields for internal testing only (not default).
+
+Acceptance tests:
+- Generate 50 meals across random proteins/filters.
+- 0 cases where title mentions a structure/ingredient/cuisine that isn’t supported by ingredients/steps.
+- Vegetarian titles always reflect actual veg protein.
+- Wrap/Taco/Bowl/Pasta/Sheet-Pan titles always match structure requirements.
+- No regressions to existing filters/features (email/print/shopping list/save/history).
