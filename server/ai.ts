@@ -320,7 +320,7 @@ function buildPrompt(template: TemplateRow, request: GenerateRequest, chosenProt
   const isVegetarian = chosenProtein.toLowerCase() === "vegetarian";
 
   const proteinDirective = isVegetarian
-    ? `PROTEIN (STRICT — VEGETARIAN): This recipe MUST be 100% VEGETARIAN. ZERO meat, poultry, fish, seafood, or gelatin allowed. Use plant-based proteins ONLY: tofu, tempeh, chickpeas, lentils, black beans, kidney beans, edamame, paneer, eggs, quinoa, nuts, seeds, or plant-based ground. The title must clearly reflect it is a vegetarian dish. FORBIDDEN (do NOT include ANY of these): ${forbiddenText}. If any meat product appears, the recipe is invalid.${request.allergens_to_avoid.includes("dairy") ? " No paneer or dairy." : ""}${request.allergens_to_avoid.includes("soy") ? " No tofu or tempeh." : ""}${request.allergens_to_avoid.includes("eggs") ? " No eggs." : ""}`
+    ? `PROTEIN (STRICT — VEGETARIAN): This recipe MUST be 100% VEGETARIAN. ZERO meat, poultry, fish, seafood, or gelatin allowed. Use plant-based proteins ONLY: tofu, tempeh, chickpeas, lentils, black beans, kidney beans, edamame, paneer, eggs, quinoa, nuts, seeds, or plant-based ground. The title must clearly reflect it is a vegetarian dish. FORBIDDEN (do NOT include ANY of these): ${forbiddenText}. ALSO FORBIDDEN — hidden animal products: chicken broth, chicken stock, beef broth, beef stock, fish stock, fish sauce, oyster sauce, anchovy paste, worcestershire sauce, gelatin, lard, tallow, bone broth, suet, dripping, schmaltz, demi-glace. Use vegetable broth/stock instead. Use soy sauce or tamari instead of fish sauce/oyster sauce. If any meat or animal-derived product appears, the recipe is INVALID — regenerate.${request.allergens_to_avoid.includes("dairy") ? " No paneer or dairy." : ""}${request.allergens_to_avoid.includes("soy") ? " No tofu or tempeh." : ""}${request.allergens_to_avoid.includes("eggs") ? " No eggs." : ""}`
     : `PROTEIN (STRICT): Recipe MUST use ${proteinDisplay} as the ONLY animal protein. Do not include, mention, or substitute any other meat or animal protein. The title MUST include the word "${proteinDisplay}". Every meat ingredient MUST be ${proteinDisplay}. FORBIDDEN proteins (do NOT use any of these): ${forbiddenText}.`;
 
   return `Generate ONE firehall meal as JSON.
@@ -372,6 +372,11 @@ function buildPantryPrompt(template: TemplateRow, request: GenerateRequest, vari
     ? `MEAL STRUCTURE (mandatory): This recipe MUST be a ${STRUCTURE_DISPLAY[structureType]} style meal. Vary the format — do NOT default to a rice bowl.`
     : `MEAL STRUCTURE: Vary the structure. Do NOT default to a rice bowl.`;
 
+  const isPantryVegetarian = (request.proteins || []).some(p => p.toLowerCase() === "vegetarian");
+  const pantryVegLine = isPantryVegetarian
+    ? `DIET CONSTRAINT (STRICT — VEGETARIAN): This recipe MUST be 100% VEGETARIAN. ZERO meat, poultry, fish, seafood allowed. NO animal broths/stocks (chicken/beef/fish stock, bone broth), NO gelatin, NO fish sauce, NO oyster sauce, NO anchovy paste, NO lard/tallow. Use vegetable broth/stock instead. Eggs and dairy ARE allowed${request.allergens_to_avoid.includes("dairy") ? " — EXCEPT dairy is an allergen, so no dairy either" : ""}${request.allergens_to_avoid.includes("eggs") ? " — EXCEPT eggs are an allergen, so no eggs either" : ""}. If any forbidden ingredient appears, the recipe is INVALID.`
+    : "";
+
   return `Generate ONE firehall meal as JSON using crew's on-hand ingredients.
 
 ON HAND: ${ingredientsList}
@@ -383,12 +388,13 @@ ${cuisineLine}
 ${allergenLine}
 ${budgetLine}
 ${vegLine}
+${pantryVegLine}
 
 ${varietyBlock}
 
 ${healthyBlock}
 
-RULES: Use as many on-hand ingredients as practical. List used ones in "ingredients_used". List 1-4 extras needed in "extra_items_needed" (skip basic pantry staples). ${request.crew_size} servings. 6-10 steps max. 8-12 ingredients. 35-60g protein/serving. Include "pro_tips": 1-2 short practical tips (1-2 sentences each) about technique, make-ahead, or serving. Max 2 tips.
+RULES: Use as many on-hand ingredients as practical. List used ones in "ingredients_used". List 1-4 extras needed in "extra_items_needed" (skip basic pantry staples). ${request.crew_size} servings. 6-10 steps max. 8-12 ingredients. ${isPantryVegetarian ? "25-45g" : "35-60g"} protein/serving. Include "pro_tips": 1-2 short practical tips (1-2 sentences each) about technique, make-ahead, or serving. Max 2 tips.
 STEP FORMAT (each step MUST follow this): heading = "Action (heat level, time)" e.g. "Sear the chicken (medium-high, 5-7 min)". body = concise HOW-TO with visual/doneness cue. Include: heat level (low/medium/medium-high/high or oven °F), time estimate, and a doneness cue ("until golden brown", "until juices run clear", "until internal temp reaches 165°F"). Never repeat same instruction in two steps. No storytelling. Keep each step 1-3 sentences.
 SAFETY TEMPS (always include for any protein): chicken/turkey 165°F/74°C, ground beef/sausage 160°F/71°C, pork 145°F/63°C +3min rest, fish 145°F/63°C.
 REQUIRED OUTPUT TAGS: Include "tags" object with: cuisine (e.g. "Mediterranean"), cooking_method (e.g. "sheet-pan"), base_carb (e.g. "rice"), key_ingredients (3-5 main items as string array), high_protein (boolean, true if 30g+ protein/serving), high_fiber (boolean, true if contains beans/lentils/chickpeas/whole grains), quick_cleanup (boolean, true if one-pan/sheet-pan/slow-cooker).

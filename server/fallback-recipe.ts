@@ -586,13 +586,16 @@ function getStepsForAppliances(proteinKey: string, appliances: string[]): { head
   }
   if (hasSlowCooker || hasInstantPot) {
     const applianceName = hasInstantPot ? "Instant Pot" : "slow cooker";
+    const isVeg = proteinKey === "vegetarian";
+    const mainItem = isVeg ? "chickpeas and tofu" : "the protein";
+    const brothType = isVeg ? "vegetable broth" : "broth";
     return [
-      { heading: `Prep ingredients (no heat, 5 min)`, body: `Season the protein with salt, pepper, and spices. Dice onion and mince garlic. Prep vegetables.` },
-      { heading: `Load the ${applianceName} (2 min)`, body: `Place the seasoned protein in the ${applianceName}. Add diced onion, garlic, and a cup of broth or water.` },
-      { heading: `Cook (${hasInstantPot ? "high pressure, 15 min" : "low 6-8 hrs / high 3-4 hrs"})`, body: `${hasInstantPot ? "Seal lid, set to high pressure for 15 minutes. Allow 10 minutes natural release." : "Cover and cook on low for 6-8 hours or high for 3-4 hours until protein is tender and cooked through."}` },
+      { heading: `Prep ingredients (no heat, 5 min)`, body: `Season ${mainItem} with salt, pepper, and spices. Dice onion and mince garlic. Prep vegetables.` },
+      { heading: `Load the ${applianceName} (2 min)`, body: `Place ${mainItem} in the ${applianceName}. Add diced onion, garlic, and a cup of ${brothType} or water.` },
+      { heading: `Cook (${hasInstantPot ? "high pressure, 15 min" : "low 6-8 hrs / high 3-4 hrs"})`, body: `${hasInstantPot ? "Seal lid, set to high pressure for 15 minutes. Allow 10 minutes natural release." : "Cover and cook on low for 6-8 hours or high for 3-4 hours until tender and cooked through."}` },
       { heading: `Cook the rice separately (20 min)`, body: `While the main dish cooks, prepare rice according to package directions.` },
       { heading: `Add vegetables (${hasInstantPot ? "5 min" : "30 min before done"})`, body: `${hasInstantPot ? "Quick release, open lid, stir in vegetables. Set to sauté mode for 5 minutes." : "Add vegetables to the slow cooker 30 minutes before serving time."} Cook until tender.` },
-      { heading: `Serve (no heat, 2 min)`, body: `Plate the protein and vegetables over rice. Check internal temperature for safety.` },
+      { heading: `Serve (no heat, 2 min)`, body: `Plate ${mainItem} and vegetables over rice.${isVeg ? "" : " Check internal temperature for safety."}` },
     ];
   }
   return STOVETOP_STEPS[proteinKey] || STOVETOP_STEPS.chicken;

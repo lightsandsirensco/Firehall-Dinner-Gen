@@ -14,14 +14,39 @@ const ALL_ANIMAL_PROTEINS: Record<string, string[]> = {
   other_meat: ["gelatin", "lard", "bone broth", "duck", "venison", "bison", "goat", "rabbit"],
 };
 
+const HIDDEN_ANIMAL_PRODUCTS: string[] = [
+  "chicken broth", "chicken stock", "chicken bouillon",
+  "beef broth", "beef stock", "beef bouillon",
+  "fish stock", "fish sauce", "fish broth",
+  "oyster sauce", "anchovy paste", "worcestershire",
+  "tallow", "suet", "dripping", "schmaltz",
+  "demi-glace", "demi glace",
+];
+
 const FALSE_POSITIVE_CONTEXTS: Record<string, string[]> = {
-  fish: ["fish sauce", "fish stock", "starfish"],
   ham: ["hamburger"],
   bass: ["basset", "bass note"],
-  chicken: ["chicken stock", "chicken broth", "chicken bouillon", "plant-based chicken", "chickpea"],
-  beef: ["beef stock", "beef broth", "beef bouillon", "plant-based beef", "plant-based ground"],
   duck: ["duck sauce"],
   lamb: ["lamb's lettuce", "lamb ear"],
+};
+
+const VEGETARIAN_SAFE_FALSE_POSITIVES: Record<string, RegExp[]> = {
+  chicken: [/chickpea/i, /plant[- ]based chicken/i],
+  beef: [/plant[- ]based beef/i, /plant[- ]based ground/i],
+  lamb: [/lamb's lettuce/i, /lamb ear/i],
+  ham: [/hamburger/i],
+  bass: [/basset/i, /bass note/i],
+  fish: [/starfish/i],
+};
+
+const NON_VEGETARIAN_FALSE_POSITIVES: Record<string, RegExp[]> = {
+  fish: [/fish sauce/i, /fish stock/i, /starfish/i],
+  ham: [/hamburger/i],
+  bass: [/basset/i, /bass note/i],
+  chicken: [/chicken stock/i, /chicken broth/i, /chicken bouillon/i, /plant[- ]based chicken/i, /chickpea/i],
+  beef: [/beef stock/i, /beef broth/i, /beef bouillon/i, /plant[- ]based beef/i, /plant[- ]based ground/i],
+  duck: [/duck sauce/i],
+  lamb: [/lamb's lettuce/i, /lamb ear/i],
 };
 
 export function getForbiddenProteins(selectedProtein: string): string[] {
@@ -45,10 +70,22 @@ export function getForbiddenProteinsText(selectedProtein: string): string {
   return forbidden.join(", ");
 }
 
-function isFalsePositive(word: string, text: string): boolean {
-  const contexts = FALSE_POSITIVE_CONTEXTS[word];
-  if (!contexts) return false;
-  return contexts.some((ctx) => text.includes(ctx));
+function isTermFalsePositiveInSegment(word: string, segment: string, isVegetarian: boolean): boolean {
+  const patterns = isVegetarian
+    ? VEGETARIAN_SAFE_FALSE_POSITIVES[word]
+    : NON_VEGETARIAN_FALSE_POSITIVES[word];
+  if (!patterns) return false;
+  return patterns.some((rx) => rx.test(segment));
+}
+
+function allOccurrencesAreFalsePositives(word: string, segments: string[], isVegetarian: boolean): boolean {
+  const regex = new RegExp(`\\b${word.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`, "i");
+  for (const seg of segments) {
+    if (regex.test(seg) && !isTermFalsePositiveInSegment(word, seg, isVegetarian)) {
+      return false;
+    }
+  }
+  return true;
 }
 
 export function validateProteinCompliance(
@@ -77,22 +114,35 @@ export function validateProteinCompliance(
     allMeatTerms.push("sausage");
 
     const stepTexts = (recipe.steps || []).map(s => `${s.heading} ${s.body}`.toLowerCase());
-    const allSearchableText = [
-      ingredientTexts.join(" "),
+    const proTipTexts = (recipe.pro_tips || []).map(t => t.toLowerCase());
+    const allSegments = [
+      ...ingredientTexts,
       titleLower,
       ...stepTexts,
-    ].join(" ");
+      ...proTipTexts,
+    ];
+    const allSearchableText = allSegments.join(" ");
 
     for (const term of allMeatTerms) {
       if (term.length < 4) continue;
       const regex = new RegExp(`\\b${term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`, "i");
-      if (regex.test(allSearchableText) && !isFalsePositive(term, allSearchableText)) {
+      if (regex.test(allSearchableText) && !allOccurrencesAreFalsePositives(term, allSegments, true)) {
         return {
           valid: false,
           reason: `Animal protein "${term}" found in vegetarian recipe`,
         };
       }
     }
+
+    for (const hidden of HIDDEN_ANIMAL_PRODUCTS) {
+      if (allSearchableText.includes(hidden)) {
+        return {
+          valid: false,
+          reason: `Hidden animal product "${hidden}" found in vegetarian recipe`,
+        };
+      }
+    }
+
     return { valid: true };
   }
 
@@ -113,7 +163,7 @@ export function validateProteinCompliance(
     if (word.length < 4) continue;
     const regex = new RegExp(`\\b${word.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`, "i");
     if (regex.test(allIngredientText)) {
-      if (isFalsePositive(word, allIngredientText)) continue;
+      if (allOccurrencesAreFalsePositives(word, ingredientTexts, false)) continue;
       if (word === "sausage" && allIngredientText.includes(`${selected} sausage`)) continue;
       return {
         valid: false,
