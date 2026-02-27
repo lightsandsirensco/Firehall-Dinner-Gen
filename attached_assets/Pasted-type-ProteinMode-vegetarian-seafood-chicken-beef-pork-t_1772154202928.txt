@@ -1,0 +1,63 @@
+type ProteinMode = "vegetarian" | "seafood" | "chicken" | "beef" | "pork" | "turkey" | "lamb" | "any";
+
+const LAND_MEAT_PATTERNS: RegExp[] = [
+  /\bchicken\b/, /\bturkey\b/, /\bbeef\b/, /\bpork\b/, /\bham\b/, /\bbacon\b/,
+  /\blamb\b/, /\bveal\b/, /\bsausage\b/, /\bpepperoni\b/, /\bprosciutto\b/,
+  /\bmeatballs?\b/, /\bground\s+(beef|pork|turkey|chicken)\b/,
+  /\bsteak\b/, /\bribs?\b/, /\bbrisket\b/, /\bsalami\b/, /\bchorizo\b/,
+];
+
+const SEAFOOD_PATTERNS: RegExp[] = [
+  /\bfish\b/, /\bsalmon\b/, /\btuna\b/, /\btilapia\b/, /\bcod\b/, /\bhaddock\b/,
+  /\bshrimp\b/, /\bprawn(s)?\b/, /\bcrab\b/, /\blobster\b/, /\bscallops?\b/,
+  /\bclam(s)?\b/, /\bmussel(s)?\b/, /\boyster(s)?\b/, /\banchov(y|ies)\b/,
+  /\bsardine(s)?\b/, /\bhalibut\b/, /\bmahi\b/, /\btrout\b/, /\bseafood\b/,
+];
+
+// “Sneaky” non-veg ingredients that often slip into “vegetarian”
+const NON_VEG_ADDON_PATTERNS: RegExp[] = [
+  /\bchicken\s+stock\b/, /\bbeef\s+stock\b/, /\bfish\s+stock\b/,
+  /\bbone\s+broth\b/, /\bchicken\s+broth\b/, /\bbeef\s+broth\b/,
+  /\bfish\s+sauce\b/, /\boyster\s+sauce\b/, /\banchovy\s+paste\b/,
+  /\bgelatin\b/, /\blard\b/, /\btallow\b/,
+];
+
+function normalizeText(s: string): string {
+  return s
+    .toLowerCase()
+    .replace(/[^\p{L}\p{N}\s]/gu, " ") // drop punctuation (unicode-safe)
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function findMatches(text: string, patterns: RegExp[]): string[] {
+  const hits: string[] = [];
+  for (const rx of patterns) {
+    if (rx.test(text)) hits.push(rx.source);
+  }
+  return hits;
+}
+
+export function validateRecipeByProteinMode(recipeTextRaw: string, mode: ProteinMode) {
+  const text = normalizeText(recipeTextRaw);
+
+  const landMeatHits = findMatches(text, LAND_MEAT_PATTERNS);
+  const seafoodHits = findMatches(text, SEAFOOD_PATTERNS);
+  const addonHits = findMatches(text, NON_VEG_ADDON_PATTERNS);
+
+  if (mode === "vegetarian") {
+    const forbidden = [...landMeatHits, ...seafoodHits, ...addonHits];
+    return { ok: forbidden.length === 0, forbidden };
+  }
+
+  if (mode === "seafood") {
+    // seafood-only: allow seafood, forbid land meat + non-veg broths/sauces
+    const forbidden = [...landMeatHits, ...addonHits.filter(src => !/oyster\s+sauce/.test(src))];
+    // (optional) you can allow oyster sauce for seafood recipes; keep or remove that line as you want.
+    const ok = forbidden.length === 0 && seafoodHits.length > 0; // require seafood present
+    return { ok, forbidden, note: seafoodHits.length === 0 ? "No seafood detected" : undefined };
+  }
+
+  // For specific meat modes, you can add similar logic (e.g. chicken mode forbids beef/pork/etc.)
+  return { ok: true, forbidden: [] as string[] };
+}
