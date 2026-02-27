@@ -111,6 +111,24 @@ export async function registerRoutes(
     return res.json({ status: "warm", uptime: process.uptime() });
   });
 
+  function buildResponse(validation: import("./validateRecipe").ValidationResult, extras: Record<string, any>, debug: boolean): Record<string, any> {
+    const base = { ...validation.recipe, ...extras, _signature: validation.signature };
+    if (debug) {
+      (base as any)._debug = {
+        validation_ok: validation.ok,
+        issues: validation.issues,
+        action: validation.actionTaken,
+        meal_style: validation.recipe.meal_style,
+        base_carb: validation.recipe.tags?.base_carb,
+        cooking_method: validation.recipe.tags?.cooking_method,
+        cuisine: validation.recipe.tags?.cuisine,
+        key_ingredients: validation.recipe.tags?.key_ingredients,
+        signature: validation.signature,
+      };
+    }
+    return base;
+  }
+
   app.post("/api/generate", async (req: Request, res: Response) => {
     try {
       const ua = req.headers["user-agent"] || "";
@@ -209,6 +227,7 @@ export async function registerRoutes(
             const inferredStructure = pickStructure(request.appliances, request.time_available, recentStyles, false);
             cached.meal_style = STRUCTURE_DISPLAY[inferredStructure] || inferredStructure;
           }
+          const cacheDebug = req.query.debug === "1" || (req.body as any).debug === true;
           const cacheValCtx: RecipeValidationContext = {
             chosenProtein: chosenProtein,
             meal_style: cached.meal_style || "",
@@ -220,7 +239,7 @@ export async function registerRoutes(
           };
           const cacheVal = validateAndFixRecipe(cached, cacheValCtx);
           recordSignature(chosenProtein, cacheVal.signature);
-          return res.json({ ...cacheVal.recipe, _signature: cacheVal.signature });
+          return res.json(buildResponse(cacheVal, {}, cacheDebug));
         }
       }
 
@@ -248,6 +267,7 @@ export async function registerRoutes(
               const inferredStructure = pickStructure(request.appliances, request.time_available, recentStyles, false);
               poolEntry.recipe.meal_style = STRUCTURE_DISPLAY[inferredStructure] || inferredStructure;
             }
+            const poolDebug = req.query.debug === "1" || (req.body as any).debug === true;
             const poolValCtx: RecipeValidationContext = {
               chosenProtein: chosenProtein,
               meal_style: poolEntry.recipe.meal_style || "",
@@ -259,7 +279,7 @@ export async function registerRoutes(
             };
             const poolVal = validateAndFixRecipe(poolEntry.recipe, poolValCtx);
             recordSignature(chosenProtein, poolVal.signature);
-            return res.json({ ...poolVal.recipe, _signature: poolVal.signature });
+            return res.json(buildResponse(poolVal, {}, poolDebug));
           }
         }
       }
@@ -292,6 +312,8 @@ export async function registerRoutes(
       );
       const mealStyleDisplay = STRUCTURE_DISPLAY[structureType] || structureType;
       log(`[structure] Selected: ${structureType} (${mealStyleDisplay}) for protein: ${chosenProtein} | template: ${chosen.template_id} | clientRecent: [${(request.recent_meal_styles || []).join(",")}] | preferDiff: ${request.prefer_different_style}`, "variety");
+
+      const debugMode = req.query.debug === "1" || (req.body as any).debug === true;
 
       const validationCtx: RecipeValidationContext = {
         chosenProtein: chosenProtein,
@@ -362,7 +384,7 @@ export async function registerRoutes(
         const aiRecipeWithStyle = { ...recipe, meal_style: mealStyleDisplay };
         const aiValidation = validateAndFixRecipe(aiRecipeWithStyle, validationCtx);
         recordSignature(chosenProtein, aiValidation.signature);
-        return res.json({ ...aiValidation.recipe, _signature: aiValidation.signature });
+        return res.json(buildResponse(aiValidation, {}, debugMode));
       }
 
       if (raceResult.type === "timeout") {
@@ -397,7 +419,7 @@ export async function registerRoutes(
         const fbRecipeWithStyle = { ...fallbackRecipe, _fallback: true, meal_style: mealStyleDisplay };
         const fbValidation = validateAndFixRecipe(fbRecipeWithStyle as any, validationCtx);
         recordSignature(chosenProtein, fbValidation.signature);
-        return res.json({ ...fbValidation.recipe, _signature: fbValidation.signature });
+        return res.json(buildResponse(fbValidation, { _fallback: true }, debugMode));
       }
 
       const aiError = (raceResult as any).error;
@@ -423,7 +445,7 @@ export async function registerRoutes(
       const errFbWithStyle = { ...fallbackRecipe, _fallback: true, meal_style: mealStyleDisplay };
       const errFbValidation = validateAndFixRecipe(errFbWithStyle as any, validationCtx);
       recordSignature(chosenProtein, errFbValidation.signature);
-      return res.json({ ...errFbValidation.recipe, _signature: errFbValidation.signature });
+      return res.json(buildResponse(errFbValidation, { _fallback: true }, debugMode));
     } catch (error: any) {
       console.error("Generate error:", error);
       return res.status(500).json({ message: error.message || "Failed to generate recipe" });
