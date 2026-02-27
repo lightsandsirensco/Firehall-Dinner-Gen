@@ -598,6 +598,221 @@ function shouldRebuildTitle(allIssues: string[]): boolean {
   );
 }
 
+const IGNORED_INGREDIENTS = /^(salt|pepper|black pepper|oil|olive oil|vegetable oil|canola oil|cooking oil|cooking spray|water|ice|ice water)$/i;
+
+function extractIngredientWords(item: string): string[] {
+  const cleaned = item
+    .replace(/,.*$/, "")
+    .replace(/\(.*?\)/g, "")
+    .replace(/\b(fresh|dried|chopped|diced|minced|sliced|shredded|grated|crushed|ground|large|small|medium|whole|boneless|skinless|frozen|canned|cooked|raw|extra|pure|light|dark|thick|thin|low-sodium|reduced-fat|unsalted)\b/gi, "")
+    .trim();
+  return cleaned.split(/\s+/).filter(w => w.length > 2).map(w => w.toLowerCase().replace(/s$/, ""));
+}
+
+function ingredientMentionedInSteps(ingItem: string, stepsStr: string): boolean {
+  const words = extractIngredientWords(ingItem);
+  const stepsLower = stepsStr.toLowerCase();
+  return words.some(w => stepsLower.includes(w));
+}
+
+function stepIngredientMentionedInList(word: string, ingredientItems: string[]): boolean {
+  const wLower = word.toLowerCase().replace(/s$/, "");
+  return ingredientItems.some(item => {
+    const itemWords = extractIngredientWords(item);
+    return itemWords.some(iw => iw === wLower || iw.includes(wLower) || wLower.includes(iw));
+  });
+}
+
+const STEP_ACTION_WORDS = /^(add|stir|cook|heat|combine|mix|toss|place|pour|spread|remove|set|let|bring|reduce|cover|uncover|drain|transfer|cut|slice|dice|chop|peel|mince|season|serve|plate|top|layer|fold|roll|wrap|flip|turn|bake|roast|grill|sear|saute|sauté|fry|boil|simmer|blend|whisk|beat|melt|preheat|arrange|divide|assemble|stack|brush|drizzle|garnish|rinse|pat|dry|repeat|rest|cool|chill|warm|reheat|sprinkle|squeeze|scoop|stuff|fill|measure|check|taste|adjust|finish|reserve|continue|return|discard|keep|swap|use|do|make|take)$/i;
+
+const STEP_EQUIPMENT_WORDS = /^(pan|pot|skillet|bowl|oven|grill|sheet|tray|plate|board|knife|spatula|tongs|whisk|colander|strainer|blender|processor|rack|foil|parchment|paper|towel|wrap|lid|heat|temperature|minutes|min|seconds|sec|hours|hr|degrees|inch|inches|cups?|tablespoons?|tbsp|teaspoons?|tsp|pounds?|lbs?|ounces?|oz|side|sides|time|batch|batches|half|quarter|piece|pieces|each|all|everything|mixture|remaining|rest|other|well|evenly|thoroughly|gently|quickly|carefully|lightly|generously|about|until|before|after|while|during|inside|outside|over|under|top|bottom|medium|high|low)$/i;
+
+function extractFoodNounsFromStep(stepBody: string): string[] {
+  const words = stepBody
+    .replace(/[().,;:!?"""''`]/g, " ")
+    .split(/\s+/)
+    .filter(w => w.length > 2)
+    .map(w => w.toLowerCase().replace(/s$/, ""));
+
+  return words.filter(w =>
+    !STEP_ACTION_WORDS.test(w) &&
+    !STEP_EQUIPMENT_WORDS.test(w) &&
+    !IGNORED_INGREDIENTS.test(w) &&
+    !/^\d/.test(w) &&
+    !/^(the|and|for|with|into|onto|from|than|then|that|this|them|they|their|been|have|has|had|will|would|should|could|can|may|might|also|just|very|much|more|most|some|any|your|you|are|was|were|not|but|don)$/.test(w)
+  );
+}
+
+interface FormatConstraints {
+  required?: RegExp;
+  requiredLabel?: string;
+  forbidden?: RegExp;
+  forbiddenLabel?: string;
+  stepRequired?: RegExp;
+  stepRequiredLabel?: string;
+  stepForbidden?: RegExp;
+  stepForbiddenLabel?: string;
+}
+
+const FORMAT_RULES: Record<string, FormatConstraints> = {
+  burger: {
+    required: /\b(bun|brioche|roll)\b/i,
+    requiredLabel: "bun/brioche/roll",
+    forbidden: /\b(rice)\b/i,
+    forbiddenLabel: "rice",
+    stepForbidden: /serve over rice/i,
+    stepForbiddenLabel: '"serve over rice"',
+  },
+  taco: {
+    required: /\b(tortilla|taco shell|corn tortilla|flour tortilla)\b/i,
+    requiredLabel: "tortilla/taco shell",
+    forbidden: /\b(bun|brioche)\b/i,
+    forbiddenLabel: "buns",
+    stepForbidden: /serve over rice/i,
+    stepForbiddenLabel: '"serve over rice"',
+  },
+  wrap: {
+    required: /\b(wrap|tortilla|lavash|flatbread)\b/i,
+    requiredLabel: "wrap/tortilla",
+    forbidden: /\b(bun|brioche)\b/i,
+    forbiddenLabel: "buns",
+    stepForbidden: /serve over rice/i,
+    stepForbiddenLabel: '"serve over rice"',
+  },
+  bowl: {
+    required: /\b(rice|quinoa|potato|potatoes|greens|lettuce|spinach|kale|arugula|farro|barley|couscous|sweet potato)\b/i,
+    requiredLabel: "base (rice/quinoa/potatoes/greens)",
+    forbidden: /\b(bun|brioche|tortilla)\b/i,
+    forbiddenLabel: "buns/tortillas",
+  },
+  pasta: {
+    required: /\b(pasta|spaghetti|penne|rigatoni|fusilli|linguine|fettuccine|rotini|farfalle|ziti|macaroni|orzo|noodle)\b/i,
+    requiredLabel: "pasta/noodles",
+    forbidden: /\b(rice|bun|brioche|tortilla)\b/i,
+    forbiddenLabel: "rice/buns/tortillas",
+  },
+  salad: {
+    required: /\b(greens|lettuce|spinach|kale|arugula|romaine|mixed greens|spring mix|cabbage)\b/i,
+    requiredLabel: "greens/lettuce",
+    forbidden: /\b(rice|bun|brioche|tortilla)\b/i,
+    forbiddenLabel: "rice/buns/tortillas",
+  },
+  "sheet-pan": {
+    forbidden: /\b(rice)\b/i,
+    forbiddenLabel: "rice",
+  },
+  "soup-stew": {
+    stepRequired: /\b(simmer|simmer.*\d+\s*min|simmer.*\d+\s*hour)/i,
+    stepRequiredLabel: "simmer time",
+    forbidden: /\b(rice)\b/i,
+    forbiddenLabel: "rice",
+  },
+  "breakfast-for-dinner": {
+    required: /\b(egg|eggs|oat|oats|oatmeal|yogurt|pancake|waffle|french toast|hash brown|sausage|bacon|granola|cereal)\b/i,
+    requiredLabel: "breakfast anchor (eggs/oats/yogurt/etc)",
+    forbidden: /\b(rice)\b/i,
+    forbiddenLabel: "rice",
+  },
+};
+
+function normalizeFormatKey(mealStyle: string): string {
+  const s = norm(mealStyle);
+  if (s.includes("burger")) return "burger";
+  if (s.includes("taco")) return "taco";
+  if (s.includes("wrap") || s.includes("burrito")) return "wrap";
+  if (s.includes("bowl")) return "bowl";
+  if (s.includes("pasta")) return "pasta";
+  if (s.includes("salad")) return "salad";
+  if (s.includes("sheet") && s.includes("pan")) return "sheet-pan";
+  if (s.includes("soup") || s.includes("stew") || s.includes("chili")) return "soup-stew";
+  if (s.includes("breakfast")) return "breakfast-for-dinner";
+  return "";
+}
+
+function isIgnoredIngredient(item: string): boolean {
+  const cleaned = item.replace(/,.*$/, "").replace(/\(.*?\)/g, "").trim();
+  return IGNORED_INGREDIENTS.test(cleaned);
+}
+
+function filterRiceFromIngredients(ings: string): boolean {
+  return /\b(rice)\b/i.test(ings) && !/rice vinegar|rice wine|rice paper|rice noodle/i.test(ings);
+}
+
+export function validateRecipe(recipe: GenerateResponse): string[] {
+  const errors: string[] = [];
+  const ingredientItems = (recipe.ingredients || []).map(i => i.item);
+  const ingsText = ingredientText(recipe);
+  const stepsStr = stepText(recipe);
+  const platText = norm(
+    (recipe as any).plating?.assembly_instructions || ""
+  );
+
+  const platAssembly = norm((recipe as any).plating?.assembly_instructions || "");
+  const optionalToppings = ((recipe as any).plating?.optional_toppings || []).map((t: string) => norm(t)).join(" ");
+  const allRecipeText = stepsStr + " " + platText + " " + platAssembly + " " + optionalToppings;
+
+  const nonTrivialIngredients = ingredientItems.filter(i => !isIgnoredIngredient(i));
+  for (const item of nonTrivialIngredients) {
+    if (!ingredientMentionedInSteps(item, allRecipeText)) {
+      errors.push(`ingredient_unused:${item.replace(/,.*$/, "").trim()}`);
+    }
+  }
+
+  const allStepBodies = (recipe.steps || []).map(s => s.body).join(" ");
+  const foodNouns = extractFoodNounsFromStep(allStepBodies);
+  for (const noun of foodNouns) {
+    if (!stepIngredientMentionedInList(noun, ingredientItems) && !IGNORED_INGREDIENTS.test(noun)) {
+      const common = /^(flavor|filling|topping|coating|seasoning|marinade|sauce|dressing|glaze|batter|crumb|char|edge|center|interior|exterior|surface|golden|crispy|tender|done|ready|nice|good|desired|preferred|optional|needed|necessary|extra)$/i;
+      if (!common.test(noun)) {
+        errors.push(`step_mentions_unlisted:${noun}`);
+      }
+    }
+  }
+
+  const style = recipe.meal_style || "";
+  const formatKey = normalizeFormatKey(style);
+  const rules = FORMAT_RULES[formatKey];
+
+  if (rules) {
+    if (rules.required && !rules.required.test(ingsText)) {
+      errors.push(`format_missing_required:${formatKey} must include ${rules.requiredLabel}`);
+    }
+
+    if (rules.forbidden) {
+      const hasForbidden = formatKey === "bowl" || formatKey === "pasta" || formatKey === "salad"
+        ? rules.forbidden.test(ingsText)
+        : (formatKey === "sheet-pan" || formatKey === "soup-stew" || formatKey === "breakfast-for-dinner" || formatKey === "burger")
+          ? filterRiceFromIngredients(ingsText)
+          : rules.forbidden.test(ingsText);
+      if (hasForbidden) {
+        errors.push(`format_has_forbidden:${formatKey} must NOT include ${rules.forbiddenLabel}`);
+      }
+    }
+
+    if (formatKey === "sheet-pan") {
+      const hasOvenTemp = /\b\d{3}\s*°?\s*F\b/i.test(stepsStr);
+      const hasSheetPan = /\b(sheet\s*pan|baking\s*sheet)\b/i.test(stepsStr);
+      if (!hasOvenTemp) {
+        errors.push(`format_missing_step:sheet-pan steps must mention oven temperature`);
+      }
+      if (!hasSheetPan) {
+        errors.push(`format_missing_step:sheet-pan steps must mention sheet pan/baking sheet`);
+      }
+    } else if (rules.stepRequired && !rules.stepRequired.test(stepsStr)) {
+      errors.push(`format_missing_step:${formatKey} steps must mention ${rules.stepRequiredLabel}`);
+    }
+
+    if (rules.stepForbidden) {
+      const combinedText = stepsStr + " " + platText;
+      if (rules.stepForbidden.test(combinedText)) {
+        errors.push(`format_forbidden_step:${formatKey} steps/plating must not contain ${rules.stepForbiddenLabel}`);
+      }
+    }
+  }
+
+  return errors;
+}
+
 export function validateAndFixRecipe(
   recipe: GenerateResponse,
   ctx: RecipeValidationContext
@@ -650,12 +865,29 @@ export function validateAndFixRecipe(
 
   fixedRecipe = ensureCanonicalFields(fixedRecipe);
 
+  const recipeErrors = validateRecipe(fixedRecipe);
+  if (recipeErrors.length > 0) {
+    issues.push(...recipeErrors);
+    actions.push("recipe_validation_failed");
+    log(
+      `[validator] recipe validation errors (${recipeErrors.length}): ${recipeErrors.join(", ")}`,
+      "validator"
+    );
+  }
+
   const sig = computeSignature(fixedRecipe);
 
   if (isDuplicate(ctx.chosenProtein, sig, ctx)) {
     issues.push("duplicate_signature");
     actions.push("duplicate_detected");
   }
+
+  const hasBlockingErrors = recipeErrors.some(e =>
+    e.startsWith("format_missing_required:") ||
+    e.startsWith("format_has_forbidden:") ||
+    e.startsWith("format_missing_step:") ||
+    e.startsWith("format_forbidden_step:")
+  );
 
   const actionTaken = actions.length > 0 ? actions.join("+") : "none";
 
@@ -664,13 +896,14 @@ export function validateAndFixRecipe(
     `meal_style=${fixedRecipe.meal_style || "?"}, protein=${ctx.chosenProtein}, ` +
     `cuisine=${fixedRecipe.tags?.cuisine || "?"}, baseCarb=${fixedRecipe.tags?.base_carb || "?"}, ` +
     `method=${fixedRecipe.tags?.cooking_method || "?"}, ` +
-    `sig=${sig.substring(0, 60)}..., title="${fixedRecipe.title}"`,
+    `sig=${sig.substring(0, 60)}..., title="${fixedRecipe.title}"` +
+    (hasBlockingErrors ? " [BLOCKED - format violation]" : ""),
     "validator"
   );
 
   return {
     recipe: fixedRecipe,
-    ok: issues.length === 0,
+    ok: issues.length === 0 && !hasBlockingErrors,
     issues,
     actionTaken,
     signature: sig,

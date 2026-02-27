@@ -239,9 +239,18 @@ export async function registerRoutes(
     const client = normalizeToClientFormat(merged, crewSize, mealFormat);
     const base: Record<string, any> = { ...client };
     if (debug) {
+      const recipeValidationErrors = validation.issues.filter((i: string) =>
+        i.startsWith("ingredient_unused:") ||
+        i.startsWith("step_mentions_unlisted:") ||
+        i.startsWith("format_missing_required:") ||
+        i.startsWith("format_has_forbidden:") ||
+        i.startsWith("format_missing_step:") ||
+        i.startsWith("format_forbidden_step:")
+      );
       base._debug = {
         validation_ok: validation.ok,
         issues: validation.issues,
+        validation_errors: recipeValidationErrors,
         action: validation.actionTaken,
         meal_style: validation.recipe.meal_style,
         base_carb: validation.recipe.tags?.base_carb,
