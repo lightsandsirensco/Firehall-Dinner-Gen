@@ -49,9 +49,21 @@ const NON_VEGETARIAN_FALSE_POSITIVES: Record<string, RegExp[]> = {
   lamb: [/lamb's lettuce/i, /lamb ear/i],
 };
 
+const SEAFOOD_CATEGORIES = ["fish", "shrimp", "crab", "lobster", "seafood"];
+const LAND_MEAT_CATEGORIES = ["chicken", "beef", "pork", "turkey", "lamb", "other_meat"];
+
 export function getForbiddenProteins(selectedProtein: string): string[] {
   const selected = selectedProtein.toLowerCase();
   const forbidden: string[] = [];
+
+  if (selected === "seafood") {
+    for (const [protein, variants] of Object.entries(ALL_ANIMAL_PROTEINS)) {
+      if (SEAFOOD_CATEGORIES.includes(protein)) continue;
+      forbidden.push(...variants);
+    }
+    forbidden.push("sausage");
+    return forbidden;
+  }
 
   for (const [protein, variants] of Object.entries(ALL_ANIMAL_PROTEINS)) {
     if (protein === selected) continue;
@@ -139,6 +151,68 @@ export function validateProteinCompliance(
         return {
           valid: false,
           reason: `Hidden animal product "${hidden}" found in vegetarian recipe`,
+        };
+      }
+    }
+
+    return { valid: true };
+  }
+
+  if (selected === "seafood") {
+    const allSeafoodTerms: string[] = [];
+    for (const cat of SEAFOOD_CATEGORIES) {
+      if (ALL_ANIMAL_PROTEINS[cat]) allSeafoodTerms.push(...ALL_ANIMAL_PROTEINS[cat]);
+    }
+
+    const hasAnySeafood = ingredientTexts.some((text) =>
+      allSeafoodTerms.some((v) => text.includes(v))
+    );
+    if (!hasAnySeafood) {
+      return {
+        valid: false,
+        reason: `No seafood protein found in ingredients for "seafood" recipe`,
+      };
+    }
+
+    const landMeatTerms: string[] = [];
+    for (const cat of LAND_MEAT_CATEGORIES) {
+      if (ALL_ANIMAL_PROTEINS[cat]) landMeatTerms.push(...ALL_ANIMAL_PROTEINS[cat]);
+    }
+    landMeatTerms.push("sausage");
+
+    const stepTexts = (recipe.steps || []).map(s => `${s.heading} ${s.body}`.toLowerCase());
+    const proTipTexts = (recipe.pro_tips || []).map(t => t.toLowerCase());
+    const allSegments = [
+      ...ingredientTexts,
+      titleLower,
+      ...stepTexts,
+      ...proTipTexts,
+    ];
+    const allSearchableText = allSegments.join(" ");
+
+    for (const term of landMeatTerms) {
+      if (term.length < 4) continue;
+      const regex = new RegExp(`\\b${term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`, "i");
+      if (regex.test(allSearchableText) && !allOccurrencesAreFalsePositives(term, allSegments, false)) {
+        return {
+          valid: false,
+          reason: `Land meat "${term}" found in seafood-only recipe`,
+        };
+      }
+    }
+
+    const LAND_MEAT_BROTHS = [
+      "chicken broth", "chicken stock", "chicken bouillon",
+      "beef broth", "beef stock", "beef bouillon",
+      "pork broth", "pork stock",
+      "turkey broth", "turkey stock",
+      "bone broth",
+    ];
+    for (const broth of LAND_MEAT_BROTHS) {
+      if (allSearchableText.includes(broth)) {
+        return {
+          valid: false,
+          reason: `Meat-based broth "${broth}" found in seafood-only recipe`,
         };
       }
     }

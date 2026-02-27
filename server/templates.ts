@@ -66,7 +66,11 @@ export function filterTemplates(templates: TemplateRow[], request: GenerateReque
         if (p === "sausage") return ["pork"];
         return [p];
       });
-      const hasProtein = resolvedTemplateProteins.some((p) => requestProteins.includes(p));
+      const expandedRequestProteins = requestProteins.flatMap((p) => {
+        if (p === "seafood") return ["seafood", "fish"];
+        return [p];
+      });
+      const hasProtein = resolvedTemplateProteins.some((p) => expandedRequestProteins.includes(p));
       if (!hasProtein) {
         return false;
       }
@@ -104,7 +108,12 @@ function resolveToBase(protein: string): string {
   return p;
 }
 
-const LEAN_ORDER = ["chicken", "turkey", "fish", "shrimp", "tofu", "beans", "pork", "beef", "lamb"];
+const LEAN_ORDER = ["chicken", "turkey", "fish", "seafood", "shrimp", "tofu", "beans", "pork", "beef", "lamb"];
+
+function resolveUserProteinToTemplate(userProtein: string): string {
+  if (userProtein === "seafood") return "fish";
+  return userProtein;
+}
 
 export function chooseProtein(
   template: TemplateRow,
@@ -114,12 +123,13 @@ export function chooseProtein(
   const templateProteins = resolveTemplateProteins(template.proteins_allowed);
   const userLower = userProteins.map((p) => p.toLowerCase());
 
-  const compatible = userLower.filter((up) =>
-    templateProteins.some((tp) => resolveToBase(tp) === up || tp === up)
-  );
+  const compatible = userLower.filter((up) => {
+    const mapped = resolveUserProteinToTemplate(up);
+    return templateProteins.some((tp) => resolveToBase(tp) === mapped || tp === mapped || resolveToBase(tp) === up || tp === up);
+  });
 
   if (compatible.length === 0) {
-    const fallback = templateProteins.find((tp) => userLower.includes(resolveToBase(tp)));
+    const fallback = templateProteins.find((tp) => userLower.some(u => resolveToBase(tp) === resolveUserProteinToTemplate(u) || resolveToBase(tp) === u));
     return fallback ? resolveToBase(fallback) : userLower[0];
   }
 

@@ -318,9 +318,12 @@ function buildPrompt(template: TemplateRow, request: GenerateRequest, chosenProt
     : `MEAL STRUCTURE: Vary the structure. Do NOT default to a rice bowl. Use different formats like wraps, tacos, sheet-pan, pasta, one-pot, stuffed, casserole, stir-fry, etc. across generations.`;
 
   const isVegetarian = chosenProtein.toLowerCase() === "vegetarian";
+  const isSeafood = chosenProtein.toLowerCase() === "seafood";
 
   const proteinDirective = isVegetarian
     ? `PROTEIN (STRICT — VEGETARIAN): This recipe MUST be 100% VEGETARIAN. ZERO meat, poultry, fish, seafood, or gelatin allowed. Use plant-based proteins ONLY: tofu, tempeh, chickpeas, lentils, black beans, kidney beans, edamame, paneer, eggs, quinoa, nuts, seeds, or plant-based ground. The title must clearly reflect it is a vegetarian dish. FORBIDDEN (do NOT include ANY of these): ${forbiddenText}. ALSO FORBIDDEN — hidden animal products: chicken broth, chicken stock, beef broth, beef stock, fish stock, fish sauce, oyster sauce, anchovy paste, worcestershire sauce, gelatin, lard, tallow, bone broth, suet, dripping, schmaltz, demi-glace. Use vegetable broth/stock instead. Use soy sauce or tamari instead of fish sauce/oyster sauce. If any meat or animal-derived product appears, the recipe is INVALID — regenerate.${request.allergens_to_avoid.includes("dairy") ? " No paneer or dairy." : ""}${request.allergens_to_avoid.includes("soy") ? " No tofu or tempeh." : ""}${request.allergens_to_avoid.includes("eggs") ? " No eggs." : ""}`
+    : isSeafood
+    ? `PROTEIN (STRICT — SEAFOOD ONLY): Use seafood as the ONLY protein — fish (salmon, tuna, cod, tilapia, halibut, etc.) or shellfish (shrimp, prawns, crab, lobster, scallops, clams, mussels, etc.). Do NOT include ANY land meat: chicken, beef, pork, turkey, lamb, duck, sausage, bacon, or any other land-animal protein. Do NOT use meat-based broths/stocks (chicken broth, chicken stock, beef broth, beef stock, bone broth). Use seafood stock, fish stock, or vegetable broth instead. The title must clearly feature the seafood used. FORBIDDEN (do NOT include ANY of these): ${forbiddenText}. If any land meat appears, the recipe is INVALID — regenerate.`
     : `PROTEIN (STRICT): Recipe MUST use ${proteinDisplay} as the ONLY animal protein. Do not include, mention, or substitute any other meat or animal protein. The title MUST include the word "${proteinDisplay}". Every meat ingredient MUST be ${proteinDisplay}. FORBIDDEN proteins (do NOT use any of these): ${forbiddenText}.`;
 
   return `Generate ONE firehall meal as JSON.

@@ -661,9 +661,11 @@ export function buildFallbackRecipe(
 ): GenerateResponse {
   const protein = chosenProtein.toLowerCase();
   const isVegetarian = protein === "vegetarian";
-  const proteinKey = Object.keys(PROTEIN_INGREDIENTS).includes(protein) ? protein : "chicken";
+  const isSeafood = protein === "seafood";
+  const resolvedProtein = isSeafood ? "fish" : protein;
+  const proteinKey = Object.keys(PROTEIN_INGREDIENTS).includes(resolvedProtein) ? resolvedProtein : "chicken";
   const finalProtein = isVegetarian ? "vegetarian" : pickProteinForAppliances(proteinKey, request.appliances || ["stove", "oven"]);
-  const proteinDisplay = isVegetarian ? "Vegetarian" : finalProtein.charAt(0).toUpperCase() + finalProtein.slice(1);
+  const proteinDisplay = isVegetarian ? "Vegetarian" : isSeafood ? "Seafood" : finalProtein.charAt(0).toUpperCase() + finalProtein.slice(1);
   const budgetLevel = request.budget_level || "standard";
   const crewSize = request.crew_size || BASE_CREW;
   const scale = crewSize / BASE_CREW;
