@@ -393,6 +393,9 @@ ${varietyBlock}
 ${healthyBlock}
 
 RULES: ${request.crew_size} servings. 6-10 steps max. 8-12 ingredients. ${isVegetarian ? "25-45g" : "35-60g"} protein/serving. Include "pro_tips": 1-2 short practical tips (1-2 sentences each) about technique, make-ahead, or serving. Max 2 tips.
+TITLE RULES (mandatory): Use this formula: {Cooking Method or Texture Word} + {Flavor Descriptor} + {Protein} + {Meal Style or Base}. Use 1-2 vivid adjectives max. Only use descriptors that are supported by actual ingredients/spices (e.g. "Smoky" only if using smoked paprika/chipotle/BBQ; "Zesty" only if using lime/lemon; "Creamy" only if using cream/cheese/coconut milk; "Crispy" only if a frying/roasting step produces crispness). Use texture words only if supported by cooking method in steps (crispy, roasted, grilled, charred, seared, caramelized). NEVER use clickbait words: "ultimate", "insane", "crazy", "life-changing", "best-ever", "epic". Examples of great titles: "Crispy Garlic-Lime Chicken Wraps", "Smoky Chipotle Beef Skillet Bowls", "Zesty Lemon-Oregano Sheet-Pan Chicken", "Hearty Mediterranean Chickpea Pitas", "Bold Teriyaki Steak Stir-Fry", "Creamy Tuscan Turkey Pasta", "Golden Roasted Veggie & Tofu Grain Bowls". Bland titles like "Chicken Rice Bowl" or "Beef Pasta" are NOT acceptable.
+DESCRIPTION RULES ("why_it_fits_tonight"): Write 1-2 punchy sentences that sell the meal to the crew. Mention texture + flavor + protein. Explain why it works for the shift (quick, filling, easy cleanup, budget-friendly, one-pan, feeds a crowd). Example: "A bold, protein-packed wrap with smoky spices and crispy tofu — built to satisfy a hungry crew in 30 minutes." Do NOT use generic lines like "A hearty meal for the crew."
+FLAVOR AMPLIFIER MAP (use ONLY when ingredients justify it): lime/lemon→"zesty" or "bright"; chili powder/smoked paprika/chipotle→"smoky" or "bold"; garlic+butter→"savory garlic"; BBQ sauce→"sticky BBQ"; soy sauce/ginger→"umami-packed" or "savory soy-ginger"; roasted vegetables→"caramelized"; cream/cheese→"creamy"; honey/brown sugar→"sweet heat" or "honey-glazed"; cumin/coriander→"warmly spiced".
 STEP FORMAT (each step MUST follow this): heading = "Action (heat level, time)" e.g. "${isVegetarian ? "Sauté the chickpeas (medium-high, 4-5 min)" : "Sear the chicken (medium-high, 5-7 min)"}". body = concise HOW-TO with visual/doneness cue. Each step MUST include: (1) clear action verb + exact sequence, (2) heat level (low/medium/medium-high/high or oven °F) + pan/pot/oven instructions, (3) doneness cue (color/texture/internal temp, e.g. "until golden brown", "until edges crisp", "until internal temp reaches 165°F"), (4) brief parallelization note where appropriate (e.g. "while fries bake, brown the beef"). AVOID vague steps like "cook until done". Never repeat same instruction in two steps. No storytelling. Keep each step 1-3 sentences.
 ${isVegetarian ? "SAFETY: Reheat leftovers to 165°F. Ensure tofu/tempeh is cooked through." : "SAFETY TEMPS (always include for any protein): chicken/turkey 165°F/74°C, ground beef/sausage 160°F/71°C, pork 145°F/63°C +3min rest, fish 145°F/63°C."}
 PRIMARY PROTEIN SOURCE: Set "primary_protein_source" to the single main protein ingredient (e.g. "chicken", "lentils", "salmon", "chickpeas", "tofu", "eggs"). For vegetarian: name the specific plant protein used most.
@@ -457,6 +460,9 @@ ${varietyBlock}
 ${healthyBlock}
 
 RULES: Use as many on-hand ingredients as practical. List used ones in "ingredients_used". List 1-4 extras needed in "extra_items_needed" (skip basic pantry staples). ${request.crew_size} servings. 6-10 steps max. 8-12 ingredients. ${isPantryVegetarian ? "25-45g" : "35-60g"} protein/serving. Include "pro_tips": 1-2 short practical tips (1-2 sentences each) about technique, make-ahead, or serving. Max 2 tips.
+TITLE RULES (mandatory): Use this formula: {Cooking Method or Texture Word} + {Flavor Descriptor} + {Protein} + {Meal Style or Base}. Use 1-2 vivid adjectives max. Only use descriptors supported by actual ingredients/spices. Use texture words only if supported by cooking method. NEVER use clickbait words: "ultimate", "insane", "crazy", "life-changing", "best-ever", "epic". Bland titles like "Chicken Bowl" or "Beef Pasta" are NOT acceptable.
+DESCRIPTION RULES ("why_it_fits_tonight"): Write 1-2 punchy sentences that sell the meal to the crew. Mention texture + flavor + protein. Explain why it works for the shift. Example: "A bold, protein-packed wrap with smoky spices and crispy tofu — built to satisfy a hungry crew in 30 minutes."
+FLAVOR AMPLIFIER MAP (use ONLY when ingredients justify it): lime/lemon→"zesty"; chili powder/smoked paprika→"smoky"; garlic+butter→"savory garlic"; BBQ sauce→"sticky BBQ"; soy/ginger→"umami-packed"; cream/cheese→"creamy"; honey/brown sugar→"honey-glazed"; cumin/coriander→"warmly spiced".
 STEP FORMAT (each step MUST follow this): heading = "Action (heat level, time)" e.g. "Sear the chicken (medium-high, 5-7 min)". body = concise HOW-TO with visual/doneness cue. Each step MUST include: (1) clear action verb + exact sequence, (2) heat level (low/medium/medium-high/high or oven °F) + pan/pot/oven instructions, (3) doneness cue (color/texture/internal temp, e.g. "until golden brown", "until edges crisp", "until internal temp reaches 165°F"), (4) brief parallelization note where appropriate (e.g. "while fries bake, brown the beef"). AVOID vague steps like "cook until done". Never repeat same instruction in two steps. No storytelling. Keep each step 1-3 sentences.
 SAFETY TEMPS (always include for any protein): chicken/turkey 165°F/74°C, ground beef/sausage 160°F/71°C, pork 145°F/63°C +3min rest, fish 145°F/63°C.
 PRIMARY PROTEIN SOURCE: Set "primary_protein_source" to the single main protein ingredient (e.g. "chicken", "lentils", "salmon", "chickpeas", "tofu", "eggs"). For vegetarian: name the specific plant protein used most.
@@ -728,8 +734,8 @@ const SAFE_FALLBACK_RECIPES: Record<string, () => GenerateResponse> = {
     template_id: 0,
     chosen_protein: "Chicken",
     primary_protein_source: "Chicken",
-    title: "Classic Sheet-Pan Chicken & Vegetables",
-    why_it_fits_tonight: "Simple, reliable, and feeds the whole crew with minimal cleanup.",
+    title: "Smoky Paprika Sheet-Pan Chicken & Roasted Vegetables",
+    why_it_fits_tonight: "Crispy, protein-packed chicken with smoky paprika seasoning and roasted vegetables — one pan, zero fuss, and ready before the next call.",
     timing: { prep_minutes: 10, cook_minutes: 25, total_minutes: 35 },
     protein_safety: [{ protein: "Chicken", target_temp_f: 165, target_temp_c: 74, rest_minutes: 0, probe_where: "Thickest part of the breast", notes: "All poultry must reach 165°F." }],
     ingredients: [
@@ -763,8 +769,8 @@ const SAFE_FALLBACK_RECIPES: Record<string, () => GenerateResponse> = {
     template_id: 0,
     chosen_protein: "Beef",
     primary_protein_source: "Beef",
-    title: "Classic Smash Burgers",
-    why_it_fits_tonight: "Fast, satisfying, and a crew favorite every time.",
+    title: "Seared Smash Burgers with Melted Cheddar",
+    why_it_fits_tonight: "Crispy-edged, juicy smash burgers with gooey melted cheddar — a crew-favorite that's ready in 25 minutes flat.",
     timing: { prep_minutes: 10, cook_minutes: 15, total_minutes: 25 },
     protein_safety: [{ protein: "Beef (ground)", target_temp_f: 160, target_temp_c: 71, rest_minutes: 0, probe_where: "Center of patty", notes: "Ground beef must reach 160°F." }],
     ingredients: [
@@ -798,8 +804,8 @@ const SAFE_FALLBACK_RECIPES: Record<string, () => GenerateResponse> = {
     template_id: 0,
     chosen_protein: "Chicken",
     primary_protein_source: "Chicken",
-    title: "Fire-Roasted Chicken Tacos",
-    why_it_fits_tonight: "Quick to assemble, everyone builds their own — perfect for a busy shift.",
+    title: "Charred Chili-Lime Chicken Tacos",
+    why_it_fits_tonight: "Smoky, zesty chicken with a quick char — everyone builds their own in minutes. Perfect for a crew on the move.",
     timing: { prep_minutes: 10, cook_minutes: 15, total_minutes: 25 },
     protein_safety: [{ protein: "Chicken", target_temp_f: 165, target_temp_c: 74, rest_minutes: 0, probe_where: "Thickest part", notes: "All poultry must reach 165°F." }],
     ingredients: [
@@ -833,8 +839,8 @@ const SAFE_FALLBACK_RECIPES: Record<string, () => GenerateResponse> = {
     template_id: 0,
     chosen_protein: "Beef",
     primary_protein_source: "Beef",
-    title: "Loaded Chili-Cheese Fries",
-    why_it_fits_tonight: "Hearty, easy, and a crowd-pleasing hit for the crew.",
+    title: "Spiced Chili-Cheese Loaded Fries",
+    why_it_fits_tonight: "Crispy fries piled high with spiced beef, melted cheddar, and a kick of jalapeño — shareable, satisfying, and done in 35 minutes.",
     timing: { prep_minutes: 10, cook_minutes: 25, total_minutes: 35 },
     protein_safety: [{ protein: "Beef (ground)", target_temp_f: 160, target_temp_c: 71, rest_minutes: 0, probe_where: "Center of meat", notes: "Ground beef must reach 160°F." }],
     ingredients: [

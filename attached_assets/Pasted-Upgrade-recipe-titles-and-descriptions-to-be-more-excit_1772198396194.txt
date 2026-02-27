@@ -1,0 +1,91 @@
+Upgrade recipe titles and descriptions to be more exciting, appetizing, and engaging — without breaking structural accuracy or validator rules.
+
+Goal:
+- Make meals sound crave-worthy, bold, and satisfying.
+- Do NOT invent ingredients.
+- Do NOT exaggerate cuisine.
+- Do NOT add words that aren't supported by the ingredient list.
+
+-------------------------------------
+1) Upgrade Title Builder Logic
+-------------------------------------
+
+Replace basic titles like:
+- "Chicken Rice Bowl"
+- "Beef Pasta"
+- "Chickpea Wrap"
+
+With vivid but accurate titles using this formula:
+
+{Cooking Method or Texture Word} + {Flavor Descriptor} + {Protein} + {Meal Style or Base}
+
+Examples:
+- Crispy Garlic-Lime Chicken Wraps
+- Smoky Chipotle Beef Skillet Bowls
+- Zesty Lemon-Oregano Sheet-Pan Chicken
+- Hearty Mediterranean Chickpea Pitas
+- Bold Teriyaki Steak Stir-Fry
+- Creamy Tuscan Turkey Pasta
+- Fiery BBQ Pulled Pork Sandwiches
+- Golden Roasted Veggie & Tofu Grain Bowls
+
+Rules:
+- Only use descriptors supported by spices/sauces in ingredients.
+- Use texture words only if supported by steps (crispy, roasted, grilled, charred, slow-simmered).
+- Use 1–2 adjectives max.
+- Avoid clickbait words like “ultimate,” “insane,” “crazy,” “life-changing.”
+
+-------------------------------------
+2) Upgrade Description Line (Why it fits tonight)
+-------------------------------------
+
+Make the short intro feel strong and hall-focused.
+
+Instead of:
+"Hearty vegetarian meal for 6 — ready in 30 minutes."
+
+Use:
+"A bold, protein-packed wrap with smoky spices and crispy tofu — built to satisfy a hungry crew in 30 minutes."
+
+Structure:
+- Texture + flavor + protein mention
+- Why it works for the crew (quick, filling, easy cleanup, budget-friendly)
+
+Keep it 1–2 sentences.
+
+-------------------------------------
+3) Add Flavor Amplifiers Based on Ingredients
+-------------------------------------
+
+If recipe contains:
+- Lime or lemon → use "zesty" or "bright"
+- Chili powder/smoked paprika → "smoky" or "bold"
+- Garlic + butter → "savory garlic"
+- BBQ sauce → "sticky BBQ"
+- Soy/ginger → "umami-packed" or "savory soy-ginger"
+- Roasted vegetables → "caramelized"
+- Cream/cheese → "creamy"
+
+Only apply if ingredients justify it.
+
+-------------------------------------
+4) Keep Validator Safe
+-------------------------------------
+
+Before returning:
+- Run validator to confirm no invented flavors.
+- Remove adjectives if they are not supported.
+- Ensure title structure remains correct (Wrap/Bowl/etc).
+
+-------------------------------------
+5) Acceptance Test
+-------------------------------------
+
+Generate 10 random meals:
+- No bland titles like “Chicken Bowl”
+- No invented ingredients in title
+- Titles feel bold, satisfying, hall-worthy
+- Validator passes on all
+
+Do not modify filters, logic, or features.
+Only upgrade naming + description layer.
