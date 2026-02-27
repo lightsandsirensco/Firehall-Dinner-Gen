@@ -317,11 +317,17 @@ function buildPrompt(template: TemplateRow, request: GenerateRequest, chosenProt
     ? `MEAL STRUCTURE (mandatory): This recipe MUST be a ${STRUCTURE_DISPLAY[structureType]} style meal. The dish format, title, and presentation must clearly be a ${STRUCTURE_DISPLAY[structureType]}. Do NOT default to a rice bowl. Do NOT repeat the same structure as previous recipes.`
     : `MEAL STRUCTURE: Vary the structure. Do NOT default to a rice bowl. Use different formats like wraps, tacos, sheet-pan, pasta, one-pot, stuffed, casserole, stir-fry, etc. across generations.`;
 
+  const isVegetarian = chosenProtein.toLowerCase() === "vegetarian";
+
+  const proteinDirective = isVegetarian
+    ? `PROTEIN (STRICT — VEGETARIAN): This recipe MUST be 100% VEGETARIAN. ZERO meat, poultry, fish, seafood, or gelatin allowed. Use plant-based proteins ONLY: tofu, tempeh, chickpeas, lentils, black beans, kidney beans, edamame, paneer, eggs, quinoa, nuts, seeds, or plant-based ground. The title must clearly reflect it is a vegetarian dish. FORBIDDEN (do NOT include ANY of these): ${forbiddenText}. If any meat product appears, the recipe is invalid.${request.allergens_to_avoid.includes("dairy") ? " No paneer or dairy." : ""}${request.allergens_to_avoid.includes("soy") ? " No tofu or tempeh." : ""}${request.allergens_to_avoid.includes("eggs") ? " No eggs." : ""}`
+    : `PROTEIN (STRICT): Recipe MUST use ${proteinDisplay} as the ONLY animal protein. Do not include, mention, or substitute any other meat or animal protein. The title MUST include the word "${proteinDisplay}". Every meat ingredient MUST be ${proteinDisplay}. FORBIDDEN proteins (do NOT use any of these): ${forbiddenText}.`;
+
   return `Generate ONE firehall meal as JSON.
 
 TEMPLATE: ${template.template_name} (${template.style}) — ${template.base_idea_description}
 CREW: ${request.crew_size} | Shift: ${request.busy_level} | Time: ${request.time_available} min | Appliances: ${request.appliances.join(", ")}
-PROTEIN (STRICT): Recipe MUST use ${proteinDisplay} as the ONLY animal protein. Do not include, mention, or substitute any other meat or animal protein. The title MUST include the word "${proteinDisplay}". Every meat ingredient MUST be ${proteinDisplay}. FORBIDDEN proteins (do NOT use any of these): ${forbiddenText}.
+${proteinDirective}
 Healthiness: ${request.healthiness_preference}
 ${structureLine}
 ${cuisineLine}
@@ -333,9 +339,9 @@ ${varietyBlock}
 
 ${healthyBlock}
 
-RULES: ${request.crew_size} servings. 6-10 steps max. 8-12 ingredients. 35-60g protein/serving. Include "pro_tips": 1-2 short practical tips (1-2 sentences each) about technique, make-ahead, or serving. Max 2 tips.
-STEP FORMAT (each step MUST follow this): heading = "Action (heat level, time)" e.g. "Sear the chicken (medium-high, 5-7 min)". body = concise HOW-TO with visual/doneness cue. Include: heat level (low/medium/medium-high/high or oven °F), time estimate, and a doneness cue ("until golden brown", "until juices run clear", "until internal temp reaches 165°F"). Never repeat same instruction in two steps. No storytelling. Keep each step 1-3 sentences.
-SAFETY TEMPS (always include for any protein): chicken/turkey 165°F/74°C, ground beef/sausage 160°F/71°C, pork 145°F/63°C +3min rest, fish 145°F/63°C.
+RULES: ${request.crew_size} servings. 6-10 steps max. 8-12 ingredients. ${isVegetarian ? "25-45g" : "35-60g"} protein/serving. Include "pro_tips": 1-2 short practical tips (1-2 sentences each) about technique, make-ahead, or serving. Max 2 tips.
+STEP FORMAT (each step MUST follow this): heading = "Action (heat level, time)" e.g. "${isVegetarian ? "Sauté the chickpeas (medium-high, 4-5 min)" : "Sear the chicken (medium-high, 5-7 min)"}". body = concise HOW-TO with visual/doneness cue. Include: heat level (low/medium/medium-high/high or oven °F), time estimate, and a doneness cue ("until golden brown", "until fragrant", "until heated through"). Never repeat same instruction in two steps. No storytelling. Keep each step 1-3 sentences.
+${isVegetarian ? "SAFETY: Reheat leftovers to 165°F. Ensure tofu/tempeh is cooked through." : "SAFETY TEMPS (always include for any protein): chicken/turkey 165°F/74°C, ground beef/sausage 160°F/71°C, pork 145°F/63°C +3min rest, fish 145°F/63°C."}
 REQUIRED OUTPUT TAGS: Include "tags" object with: cuisine (e.g. "Mediterranean"), cooking_method (e.g. "sheet-pan"), base_carb (e.g. "rice"), key_ingredients (3-5 main items as string array), high_protein (boolean, true if 30g+ protein/serving), high_fiber (boolean, true if contains beans/lentils/chickpeas/whole grains), quick_cleanup (boolean, true if one-pan/sheet-pan/slow-cooker).
 
 JSON:

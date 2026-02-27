@@ -10,14 +10,18 @@ const ALL_ANIMAL_PROTEINS: Record<string, string[]> = {
   lamb: ["lamb"],
   crab: ["crab"],
   lobster: ["lobster"],
+  seafood: ["seafood", "clam", "mussel", "oyster", "scallop", "squid", "calamari", "octopus", "anchovy", "anchovies"],
+  other_meat: ["gelatin", "lard", "bone broth", "duck", "venison", "bison", "goat", "rabbit"],
 };
 
 const FALSE_POSITIVE_CONTEXTS: Record<string, string[]> = {
   fish: ["fish sauce", "fish stock", "starfish"],
   ham: ["hamburger"],
   bass: ["basset", "bass note"],
-  chicken: ["chicken stock", "chicken broth", "chicken bouillon"],
-  beef: ["beef stock", "beef broth", "beef bouillon"],
+  chicken: ["chicken stock", "chicken broth", "chicken bouillon", "plant-based chicken", "chickpea"],
+  beef: ["beef stock", "beef broth", "beef bouillon", "plant-based beef", "plant-based ground"],
+  duck: ["duck sauce"],
+  lamb: ["lamb's lettuce", "lamb ear"],
 };
 
 export function getForbiddenProteins(selectedProtein: string): string[] {
@@ -71,14 +75,21 @@ export function validateProteinCompliance(
       allMeatTerms.push(...variants);
     }
     allMeatTerms.push("sausage");
-    const allIngredientText = ingredientTexts.join(" ");
+
+    const stepTexts = (recipe.steps || []).map(s => `${s.heading} ${s.body}`.toLowerCase());
+    const allSearchableText = [
+      ingredientTexts.join(" "),
+      titleLower,
+      ...stepTexts,
+    ].join(" ");
+
     for (const term of allMeatTerms) {
       if (term.length < 4) continue;
       const regex = new RegExp(`\\b${term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`, "i");
-      if (regex.test(allIngredientText) && !isFalsePositive(term, allIngredientText)) {
+      if (regex.test(allSearchableText) && !isFalsePositive(term, allSearchableText)) {
         return {
           valid: false,
-          reason: `Animal protein "${term}" found in vegetarian recipe ingredients`,
+          reason: `Animal protein "${term}" found in vegetarian recipe`,
         };
       }
     }

@@ -97,6 +97,19 @@ const PROTEIN_INGREDIENTS: Record<string, RawIngredient[]> = {
     { item: "Butter", amount: "2 tbsp", baseQty: 2, unit: "tbsp", allergens: ["dairy"] },
     { item: "Lemon wedges", amount: "for serving" },
   ],
+  vegetarian: [
+    { item: "Chickpeas, drained and rinsed", amount: "3 cans (15 oz)", baseQty: 3, unit: "cans (15 oz)" },
+    { item: "Extra-firm tofu, pressed and cubed", amount: "1 lb", baseQty: 1, unit: "lb", allergens: ["soy"] },
+    { item: "Olive oil", amount: "3 tbsp", baseQty: 3, unit: "tbsp" },
+    { item: "Garlic cloves, minced", amount: "4", baseQty: 4, unit: "" },
+    { item: "Onion, diced", amount: "1 large", baseQty: 1, unit: "large" },
+    { item: "Salt", amount: "1 tsp", baseQty: 1, unit: "tsp" },
+    { item: "Smoked paprika", amount: "2 tsp", baseQty: 2, unit: "tsp" },
+    { item: "Cumin", amount: "1 tsp", baseQty: 1, unit: "tsp" },
+    { item: "Rice", amount: "2 cups", baseQty: 2, unit: "cups" },
+    { item: "Mixed vegetables (bell pepper, zucchini, broccoli)", amount: "4 cups", baseQty: 4, unit: "cups" },
+    { item: "Vegetable broth", amount: "1 cup", baseQty: 1, unit: "cup" },
+  ],
 };
 
 const STOVETOP_STEPS: Record<string, { heading: string; body: string }[]> = {
@@ -183,6 +196,14 @@ const OVEN_STEPS: Record<string, { heading: string; body: string }[]> = {
     { heading: "Roast the asparagus (425°F, 8-10 min)", body: "While salmon cooks, roast asparagus in the oven at 425°F for 8-10 minutes until tender and tips are slightly crispy." },
     { heading: "Plate and serve (no heat, 2 min)", body: "Place salmon fillets on plates alongside rice and asparagus. Squeeze fresh lemon over the fish and serve with lemon wedges." },
   ],
+  vegetarian: [
+    { heading: "Start the rice (high → low, 20 min)", body: "Bring 2 cups rice and 4 cups water to a boil. Reduce to low, cover tightly, and simmer 18-20 minutes until water is absorbed and grains are tender." },
+    { heading: "Press and cube the tofu (no heat, 5 min)", body: "Press tofu between paper towels with a heavy pan on top for 5 minutes. Cut into ¾-inch cubes. Pat dry again — drier tofu = crispier results." },
+    { heading: "Crisp the tofu (medium-high, 8-10 min)", body: "Heat 2 tbsp olive oil in a large non-stick skillet over medium-high. Add tofu cubes in a single layer. Cook 3-4 minutes per side without moving until golden and crispy on all sides." },
+    { heading: "Cook the vegetables (medium-high, 5 min)", body: "Remove tofu and set aside. Add remaining olive oil, garlic, and onion. Cook 2 minutes until fragrant. Add mixed vegetables, stir-fry 4-5 minutes until crisp-tender and brightly colored." },
+    { heading: "Add chickpeas and season (medium, 3 min)", body: "Add drained chickpeas, smoked paprika, cumin, and salt. Stir to combine. Pour in vegetable broth and let simmer 2-3 minutes until heated through and lightly saucy." },
+    { heading: "Combine and serve (no heat, 2 min)", body: "Return crispy tofu to the pan, toss gently. Serve over rice. Each serving packs protein from both tofu and chickpeas." },
+  ],
 };
 
 const PROTEIN_SAFETY: Record<string, { protein: string; target_temp_f: number; target_temp_c: number; rest_minutes: number; probe_where: string; notes: string }> = {
@@ -191,6 +212,7 @@ const PROTEIN_SAFETY: Record<string, { protein: string; target_temp_f: number; t
   pork: { protein: "Pork", target_temp_f: 145, target_temp_c: 63, rest_minutes: 3, probe_where: "Center of the thickest portion", notes: "Allow a 3-minute rest for carryover cooking." },
   turkey: { protein: "Turkey", target_temp_f: 165, target_temp_c: 74, rest_minutes: 0, probe_where: "Thickest part, away from bone", notes: "All poultry must reach 165°F for safety." },
   fish: { protein: "Fish", target_temp_f: 145, target_temp_c: 63, rest_minutes: 0, probe_where: "Center of the thickest fillet", notes: "Fish should flake easily with a fork when done." },
+  vegetarian: { protein: "General food safety", target_temp_f: 165, target_temp_c: 74, rest_minutes: 0, probe_where: "Center of dish", notes: "Reheat leftovers to 165°F. Ensure tofu and beans are heated through." },
 };
 
 interface FallbackArchetype {
@@ -310,6 +332,28 @@ const FALLBACK_ARCHETYPES: Record<string, FallbackArchetype[]> = {
     { structure: "grill", title: "Grilled Fish with Citrus & Rice", baseCarb: "rice", cookingMethod: "grill" },
     { structure: "rice-bake", title: "Cheesy Fish & Rice Bake", baseCarb: "rice", cookingMethod: "oven" },
     { structure: "stuffed", title: "Fish-Stuffed Bell Peppers", baseCarb: "rice", cookingMethod: "oven" },
+  ],
+  vegetarian: [
+    { structure: "bowl", title: "Chickpea & Roasted Veggie Rice Bowls", baseCarb: "rice", cookingMethod: "stovetop" },
+    { structure: "wrap", title: "Spiced Chickpea & Hummus Wraps", baseCarb: "tortilla", cookingMethod: "stovetop" },
+    { structure: "taco", title: "Black Bean & Sweet Potato Tacos", baseCarb: "tortilla", cookingMethod: "skillet" },
+    { structure: "sandwich", title: "Crispy Tofu Bánh Mì Sandwiches", baseCarb: "baguette", cookingMethod: "stovetop" },
+    { structure: "burger", title: "Smoky Black Bean Burgers", baseCarb: "bun", cookingMethod: "skillet" },
+    { structure: "sheet-pan", title: "Sheet Pan Tofu & Veggie Dinner", baseCarb: "rice", cookingMethod: "oven" },
+    { structure: "skillet", title: "Lentil & Vegetable Skillet", baseCarb: "rice", cookingMethod: "stovetop" },
+    { structure: "stir-fry", title: "Tofu & Veggie Stir-Fry", baseCarb: "rice", cookingMethod: "stovetop" },
+    { structure: "flatbread", title: "Roasted Veggie & Hummus Flatbreads", baseCarb: "flatbread", cookingMethod: "oven" },
+    { structure: "stuffed", title: "Quinoa-Stuffed Bell Peppers", baseCarb: "quinoa", cookingMethod: "oven" },
+    { structure: "pasta", title: "Creamy Roasted Red Pepper Pasta", baseCarb: "pasta", cookingMethod: "stovetop" },
+    { structure: "one-pot", title: "One-Pot Chickpea Coconut Curry", baseCarb: "rice", cookingMethod: "stovetop" },
+    { structure: "noodle-toss", title: "Peanut Noodle Toss with Edamame", baseCarb: "noodles", cookingMethod: "stovetop" },
+    { structure: "soup-stew", title: "Hearty Lentil & Vegetable Stew", baseCarb: "crusty bread", cookingMethod: "stovetop" },
+    { structure: "bake", title: "Mediterranean Veggie & Feta Bake", baseCarb: "orzo", cookingMethod: "oven" },
+    { structure: "loaded-fries", title: "Loaded Black Bean Nacho Fries", baseCarb: "fries", cookingMethod: "oven" },
+    { structure: "casserole", title: "Three-Bean Enchilada Casserole", baseCarb: "tortilla", cookingMethod: "oven" },
+    { structure: "breakfast-for-dinner", title: "Veggie & Egg Breakfast Hash", baseCarb: "potato", cookingMethod: "skillet" },
+    { structure: "grill", title: "Grilled Halloumi & Veggie Plates", baseCarb: "couscous", cookingMethod: "grill" },
+    { structure: "rice-bake", title: "Cheesy Black Bean & Rice Bake", baseCarb: "rice", cookingMethod: "oven" },
   ],
 };
 
@@ -613,9 +657,10 @@ export function buildFallbackRecipe(
   structureType?: StructureType
 ): GenerateResponse {
   const protein = chosenProtein.toLowerCase();
+  const isVegetarian = protein === "vegetarian";
   const proteinKey = Object.keys(PROTEIN_INGREDIENTS).includes(protein) ? protein : "chicken";
-  const finalProtein = pickProteinForAppliances(proteinKey, request.appliances || ["stove", "oven"]);
-  const proteinDisplay = finalProtein.charAt(0).toUpperCase() + finalProtein.slice(1);
+  const finalProtein = isVegetarian ? "vegetarian" : pickProteinForAppliances(proteinKey, request.appliances || ["stove", "oven"]);
+  const proteinDisplay = isVegetarian ? "Vegetarian" : finalProtein.charAt(0).toUpperCase() + finalProtein.slice(1);
   const budgetLevel = request.budget_level || "standard";
   const crewSize = request.crew_size || BASE_CREW;
   const scale = crewSize / BASE_CREW;
@@ -650,12 +695,14 @@ export function buildFallbackRecipe(
 
   const timing = getTimingForRange(timeRange);
 
-  const baseMacros = {
-    calories: finalProtein === "fish" ? 420 : finalProtein === "chicken" ? 450 : 520,
-    protein_g: finalProtein === "fish" ? 38 : finalProtein === "chicken" ? 42 : 40,
-    carbs_g: finalProtein === "fish" ? 40 : 45,
-    fat_g: finalProtein === "fish" ? 14 : finalProtein === "chicken" ? 12 : 18,
-  };
+  const baseMacros = isVegetarian
+    ? { calories: 420, protein_g: 32, carbs_g: 52, fat_g: 14 }
+    : {
+        calories: finalProtein === "fish" ? 420 : finalProtein === "chicken" ? 450 : 520,
+        protein_g: finalProtein === "fish" ? 38 : finalProtein === "chicken" ? 42 : 40,
+        carbs_g: finalProtein === "fish" ? 40 : 45,
+        fat_g: finalProtein === "fish" ? 14 : finalProtein === "chicken" ? 12 : 18,
+      };
   const macros = adjustMacrosForHealthiness(baseMacros, healthiness);
 
   const archetype = structureType
@@ -666,23 +713,30 @@ export function buildFallbackRecipe(
     ? `${cuisineData.titlePrefix} ${baseTitle}`
     : baseTitle;
 
-  const safety = PROTEIN_SAFETY[finalProtein] || PROTEIN_SAFETY.chicken;
+  const safety = PROTEIN_SAFETY[finalProtein] || PROTEIN_SAFETY.vegetarian;
 
   const allergenNote = swapsMade.length > 0
     ? ` Allergen swaps applied: ${swapsMade.join("; ")}.`
     : "";
-  const whyItFits = `Quick, reliable ${proteinDisplay.toLowerCase()} meal for ${crewSize} — ready in about ${timing.total_minutes} minutes with simple ingredients your crew will love.${allergenNote}`;
+  const whyItFits = isVegetarian
+    ? `Hearty vegetarian meal for ${crewSize} — ready in about ${timing.total_minutes} minutes with chickpeas, tofu, and fresh vegetables. Packed with plant-based protein your crew will love.${allergenNote}`
+    : `Quick, reliable ${proteinDisplay.toLowerCase()} meal for ${crewSize} — ready in about ${timing.total_minutes} minutes with simple ingredients your crew will love.${allergenNote}`;
 
-  const proTips: string[] = [
-    "Pat your protein dry before cooking — moisture prevents browning.",
-    "Let meat rest after cooking so juices redistribute for a more flavourful result.",
-  ];
+  const proTips: string[] = isVegetarian
+    ? [
+        "Press tofu well before cooking — drier tofu gets crispier and absorbs more flavor.",
+        "Drain and rinse canned beans to reduce sodium by up to 40%.",
+      ]
+    : [
+        "Pat your protein dry before cooking — moisture prevents browning.",
+        "Let meat rest after cooking so juices redistribute for a more flavourful result.",
+      ];
   if (healthiness === "lean") {
     proTips.push("Swap butter for olive oil and reduce cheese portions to keep it lighter.");
   }
 
   let vegOption: { enabled: boolean; swap_protein: string; ingredients: { item: string; amount: string; notes: string }[]; steps: string[]; plating_notes: string } | undefined;
-  if (request.vegetarian_swap_needed) {
+  if (request.vegetarian_swap_needed && !isVegetarian) {
     vegOption = {
       enabled: true,
       swap_protein: "Extra-firm tofu",
