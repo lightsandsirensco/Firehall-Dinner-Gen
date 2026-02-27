@@ -5,6 +5,7 @@ import cookieParser from "cookie-parser";
 import { generateRequestSchema, pizzaRequestSchema, hallVoteCreateSchema, type GenerateResponse, type ClientRecipeResponse, type ClientIngredient, type ClientStep, type ClientProteinSafety, type ClientPlating, type ClientTiming } from "@shared/schema";
 import { loadTemplates, filterTemplates, filterTemplatesWithRelaxation, pickTemplate, chooseProtein } from "./templates";
 import { scanRecipeForAllergens, autoSubstituteAllergens, buildAllergenAvoidList } from "./allergens";
+import { auditAndFixRecipe as labelAudit, inferIngredientCategory, type LabelAuditContext } from "./labelAudit";
 import { generateRecipe, generateRecipeFromPantry, repairRecipe, buildSafeFallbackRecipe } from "./ai";
 import { getVarietyConstraints, recordRecipe } from "./variety-memory";
 import { generatePizzaRecipe, pickPizzaConcept } from "./pizza-ai";
@@ -132,19 +133,7 @@ export async function registerRoutes(
   }
 
   function categorizeIngredient(name: string): string {
-    const lower = name.toLowerCase();
-    const cats: [string, string[]][] = [
-      ["protein", ["chicken", "beef", "pork", "turkey", "salmon", "shrimp", "sausage", "bacon", "steak", "ground", "fish", "tofu", "lamb", "ham", "prosciutto", "pepperoni", "crab", "lobster", "scallop", "tuna", "cod", "tilapia"]],
-      ["produce", ["onion", "garlic", "pepper", "tomato", "lettuce", "spinach", "broccoli", "carrot", "celery", "potato", "mushroom", "zucchini", "corn", "avocado", "lime", "lemon", "cilantro", "basil", "cucumber", "cabbage", "kale", "ginger", "jalape", "arugula"]],
-      ["dairy", ["cheese", "mozzarella", "cheddar", "parmesan", "cream", "milk", "butter", "yogurt", "sour cream", "ricotta", "feta"]],
-      ["grain", ["rice", "pasta", "noodle", "bread", "tortilla", "bun", "roll", "pita", "naan", "flour", "couscous", "quinoa", "oats"]],
-      ["spice", ["salt", "pepper", "cumin", "paprika", "chili", "oregano", "thyme", "cinnamon", "cayenne", "garlic powder", "onion powder", "turmeric"]],
-      ["sauce", ["sauce", "soy", "vinegar", "mustard", "ketchup", "mayo", "sriracha", "bbq", "salsa", "pesto", "hoisin", "teriyaki", "hot sauce", "honey", "oil"]],
-    ];
-    for (const [cat, keywords] of cats) {
-      if (keywords.some(k => lower.includes(k))) return cat;
-    }
-    return "other";
+    return inferIngredientCategory(name);
   }
 
   function normalizeToClientFormat(recipe: any, crewSize: number, mealFormat: string): ClientRecipeResponse {
@@ -235,7 +224,7 @@ export async function registerRoutes(
     };
   }
 
-  function buildResponse(validation: import("./validateRecipe").ValidationResult, extras: Record<string, any>, debug: boolean, crewSize: number = 0, mealFormat: string = "", allergens: string[] = []): Record<string, any> {
+  function buildResponse(validation: import("./validateRecipe").ValidationResult, extras: Record<string, any>, debug: boolean, crewSize: number = 0, mealFormat: string = "", allergens: string[] = [], auditCtx?: LabelAuditContext): Record<string, any> {
     let recipe = validation.recipe;
 
     if (allergens.length > 0) {
@@ -255,6 +244,25 @@ export async function registerRoutes(
       } else {
         log(`[allergen-postcheck] Clean — no allergen violations found`, "allergen");
       }
+    }
+
+    const ctx: LabelAuditContext = auditCtx || {
+      selectedAppliances: [],
+      selectedAllergens: allergens,
+      selectedHealthiness: "balanced",
+      selectedBudget: "standard",
+      selectedCuisine: "",
+      selectedMealFormat: mealFormat,
+      selectedProteins: [],
+      chosenProtein: recipe.chosen_protein || "",
+      crewSize,
+    };
+
+    const audit = labelAudit(recipe, ctx);
+    recipe = audit.recipe;
+
+    if (audit.fixesApplied.length > 0) {
+      log(`[label-audit] Applied ${audit.fixesApplied.length} fixes: ${audit.fixesApplied.join("; ")}`, "audit");
     }
 
     const merged = { ...recipe, ...extras, _signature: validation.signature };
@@ -286,6 +294,12 @@ export async function registerRoutes(
         cuisine: recipe.tags?.cuisine,
         key_ingredients: recipe.tags?.key_ingredients,
         signature: validation.signature,
+        label_audit: {
+          ok: audit.ok,
+          fixes_applied: audit.fixesApplied,
+          issues: audit.issues,
+          details: audit.auditDetails,
+        },
       };
     }
     return base;
@@ -369,6 +383,18 @@ export async function registerRoutes(
       const cacheKey = noTemplateMode ? `allergen-safe-${chosenProtein}-${allergens.sort().join("-")}-${request.crew_size}` : buildCacheKey(chosen!.template_id, request, chosenProtein);
       const startTime = Date.now();
 
+      const auditCtx: LabelAuditContext = {
+        selectedAppliances: request.appliances || [],
+        selectedAllergens: allergens,
+        selectedHealthiness: request.healthiness_preference || "balanced",
+        selectedBudget: request.budget_level || "standard",
+        selectedCuisine: request.cuisine_style || "",
+        selectedMealFormat: request.meal_format || "",
+        selectedProteins: request.proteins || [],
+        chosenProtein,
+        crewSize: request.crew_size || 4,
+      };
+
       const recentStyles = request.recent_meal_styles || [];
       const lastStyle = recentStyles[0] || "";
       const preferDiff = request.prefer_different_style || false;
@@ -406,7 +432,7 @@ export async function registerRoutes(
           };
           const cacheVal = validateAndFixRecipe(cached, cacheValCtx);
           recordSignature(chosenProtein, cacheVal.signature);
-          return res.json(buildResponse(cacheVal, {}, cacheDebug, request.crew_size, request.meal_format, allergens));
+          return res.json(buildResponse(cacheVal, {}, cacheDebug, request.crew_size, request.meal_format, allergens, auditCtx));
         }
       }
 
@@ -446,7 +472,7 @@ export async function registerRoutes(
             };
             const poolVal = validateAndFixRecipe(poolEntry.recipe, poolValCtx);
             recordSignature(chosenProtein, poolVal.signature);
-            return res.json(buildResponse(poolVal, {}, poolDebug, request.crew_size, request.meal_format, allergens));
+            return res.json(buildResponse(poolVal, {}, poolDebug, request.crew_size, request.meal_format, allergens, auditCtx));
           }
         }
       }
@@ -642,7 +668,7 @@ export async function registerRoutes(
         recordSignature(chosenProtein, aiValidation.signature);
         const responseExtras: Record<string, any> = {};
         if (filtersRelaxed) responseExtras._filtersRelaxed = true;
-        return res.json(buildResponse(aiValidation, responseExtras, debugMode, request.crew_size, request.meal_format, allergens));
+        return res.json(buildResponse(aiValidation, responseExtras, debugMode, request.crew_size, request.meal_format, allergens, auditCtx));
       }
 
       if (raceResult.type === "timeout") {
@@ -680,7 +706,7 @@ export async function registerRoutes(
         recordSignature(chosenProtein, fbValidation.signature);
         const fbExtras: Record<string, any> = { _fallback: true };
         if (filtersRelaxed) fbExtras._filtersRelaxed = true;
-        return res.json(buildResponse(fbValidation, fbExtras, debugMode, request.crew_size, request.meal_format, allergens));
+        return res.json(buildResponse(fbValidation, fbExtras, debugMode, request.crew_size, request.meal_format, allergens, auditCtx));
       }
 
       const aiError = (raceResult as any).error;
@@ -708,7 +734,7 @@ export async function registerRoutes(
       recordSignature(chosenProtein, errFbValidation.signature);
       const errExtras: Record<string, any> = { _fallback: true };
       if (filtersRelaxed) errExtras._filtersRelaxed = true;
-      return res.json(buildResponse(errFbValidation, errExtras, debugMode, request.crew_size, request.meal_format, allergens));
+      return res.json(buildResponse(errFbValidation, errExtras, debugMode, request.crew_size, request.meal_format, allergens, auditCtx));
     } catch (error: any) {
       console.error("Generate error:", error);
       return res.status(500).json({ message: error.message || "Failed to generate recipe" });

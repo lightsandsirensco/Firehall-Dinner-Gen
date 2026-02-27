@@ -1,0 +1,148 @@
+Implement a GLOBAL LABEL AUDIT + AUTO-CORRECTION system that validates and fixes EVERY label shown in the UI for every generated recipe (AI + fallback). Do not allow incorrect labels anywhere.
+
+Problem:
+Multiple labels are wrong (meal format/style, cuisine, cooking method, base carb, ingredient categories, protein safety labels, etc.). Users notice mismatch between title/labels and actual ingredients/steps.
+
+Goal:
+For every recipe returned, all labels must be consistent with the underlying recipe content (ingredients + steps) and with the user’s selected filters (time/appliances/allergies/etc.).
+
+-----------------------------------------
+A) Define the full set of labels to audit
+-----------------------------------------
+
+1) meal_style / meal_format
+2) cuisine
+3) cooking_method (stovetop / oven / grill / slow cooker / instant pot / air fryer / microwave)
+4) base_carb (rice / quinoa / pasta / potatoes / bread / greens / none)
+5) protein (chosen_protein) + protein_type (ground/whole cut/fish/legume/tofu/etc.)
+6) healthiness (healthy/balanced/comfort) — must match ingredient heuristics
+7) budget_level (cheap/standard/premium) — must match ingredient heuristics
+8) time buckets (prep/cook/total) — must align with steps timing
+9) ingredient category labels (protein/produce/spice/sauce/etc.) — must match ingredient name
+10) allergen flags (dairy/gluten/soy/eggs/nuts) — must match ingredients/substitutions
+11) appliance fit (recipe must not require appliances not selected)
+
+-----------------------------------------
+B) Add a LabelAudit module
+-----------------------------------------
+
+Create src/lib/labelAudit.ts with:
+- auditAndFixRecipe(recipe, ctx) => { recipe, ok, fixesApplied, issues, hardFail }
+
+Where ctx includes:
+- selected filters (time, appliances, allergies, healthiness, budget, cuisine, meal_style, proteins, veg toggle)
+- recent signatures (for dedupe)
+
+This module runs AFTER generation but BEFORE response.
+
+-----------------------------------------
+C) Canonical Parsing: derive truth from recipe content
+-----------------------------------------
+
+Add functions that infer canonical truths from ingredients + steps:
+
+1) inferMealStyle(recipe):
+- Wrap: requires tortilla/wrap/pita + assembly step
+- Taco: tortilla/shell + assembly step
+- Pasta: pasta/noodles + boil/cook pasta step
+- Soup/Stew: broth/stock primary + simmer step + one-pot flow
+- Sheet Pan/Bake: oven temp + roast/bake step + tray mention
+- Stir Fry: “stir-fry” or high heat skillet wok + quick veg + sauce
+- Bowl: base layer rice/quinoa/noodles/greens + serve in bowl
+- Sandwich/Burger: buns/bread + assemble
+- Grill: grill step or grill-pan and grill selected
+Return the most supported style by evidence.
+
+2) inferBaseCarb(recipe):
+Detect dominant carb by ingredient quantities:
+- rice/quinoa/pasta/potatoes/bread/greens/none
+If carb exists but is clearly optional side, mark as optionalSideCarb instead of base_carb.
+
+3) inferCookingMethod(recipe):
+From steps: oven temp => oven; “slow cooker” => slow cooker; “air fryer” => air fryer; “pressure cook” => instant pot; etc.
+
+4) inferCuisine(recipe):
+Use ingredient/spice indicators with a score.
+Only set cuisine if score >= threshold.
+If no cuisine crosses threshold, set cuisine = “American” or “Any/Generic” (but do not claim specific cuisines).
+
+5) inferIngredientCategories(ingredient):
+Assign category by keyword map:
+- Proteins: chicken, beef, pork, turkey, fish, shrimp, tofu, tempeh, beans, lentils, chickpeas, eggs
+- Produce: onion, pepper, zucchini, etc.
+- Spices: cumin, paprika, chili powder, etc.
+- Sauces/Condiments: soy sauce, bbq sauce, salsa, etc.
+- Pantry: rice, pasta, canned tomatoes, broth, etc.
+Correct mislabels like broth as “protein”.
+
+6) inferHealthiness(recipe):
+Heuristic scoring:
+- + points: lean protein, lots of veg, whole grains
+- - points: heavy cream, deep frying, lots of added sugar, processed meats
+Map score to Healthy/Balanced/Comfort.
+Do not label “Healthy” if high sugar + processed foods dominate.
+
+7) inferBudget(recipe):
+Heuristic scoring:
+- Cheap: beans, rice, frozen veg, ground meats
+- Premium: salmon, steak, specialty cheeses, lots of fresh herbs, etc.
+
+8) inferAllergens(recipe):
+Scan ingredients for allergen keywords and substitutions.
+If allergen selected to avoid is detected => hardFail unless substitution available.
+
+-----------------------------------------
+D) Auto-correction rules
+-----------------------------------------
+
+For each label shown in UI:
+
+- Compute inferred truth from content.
+- If mismatch between recipe label and inferred truth:
+  1) Prefer fixing the LABEL to match content (cheap, no AI call):
+     - Update meal_style, base_carb, cuisine, cooking_method, ingredient categories, healthiness, budget.
+     - Rebuild the TITLE from the corrected labels + actual key ingredients.
+  2) If mismatch violates user-selected constraints (appliances/allergies/time):
+     - Attempt safe local substitutions or step edits (no extra AI call).
+  3) If cannot be fixed safely:
+     - Regenerate ONCE with constraints locked to satisfy filters and correct labels.
+  4) Never return a recipe with knowingly incorrect labels.
+
+Important:
+- Do not “fake” cuisines or structures by changing label only when the user explicitly selected a different meal_style. If user selected Soup/Stew but content is a Bowl, you must regenerate or clearly adjust to the correct format AND show a subtle note that format was adjusted to match constraints.
+
+-----------------------------------------
+E) Add a hard “No Empty Results” guarantee
+-----------------------------------------
+
+Even if corrections/regeneration fail:
+- Return a deterministic safe recipe that matches constraints and has correct labels.
+
+-----------------------------------------
+F) Add debugging + QA
+-----------------------------------------
+
+1) Add server log line per request:
+[audit] fixesApplied=[...] hardFail=? requestedStyle=? inferredStyle=? finalStyle=? cuisine=? baseCarb=? method=?
+
+2) Add optional debug UI mode (?debug=1):
+Show:
+- requested labels
+- inferred labels
+- final labels
+- fixes applied
+Hidden by default.
+
+-----------------------------------------
+G) Acceptance tests
+-----------------------------------------
+
+Generate 100 recipes across random filters/proteins:
+- 0 cases where title mentions wrap/taco/pasta/stew without required evidence.
+- 0 cases where cuisine is claimed without sufficient indicators.
+- 0 cases where ingredient categories are obviously wrong (broth labeled protein).
+- 0 cases where base_carb contradicts meal_style (rice base in stew unless optional side).
+- Allergies never violated.
+- No regressions to email/print/shopping list/save/history.
+
+Do not remove any filters or features. Only add audit/correction and make labels truthful.

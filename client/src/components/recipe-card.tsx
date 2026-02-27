@@ -751,6 +751,51 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
               </div>
             )}
 
+            {debugData?.label_audit && (
+              <div>
+                <p className="text-xs font-semibold text-blue-400 mb-1">Label Audit</p>
+                <div className="grid grid-cols-2 gap-x-4 gap-y-1 text-xs font-mono text-muted-foreground">
+                  <span>audit_ok: {String(debugData.label_audit.ok)}</span>
+                  <span>fixes: {debugData.label_audit.fixes_applied?.length || 0}</span>
+                </div>
+                {debugData.label_audit.fixes_applied?.length > 0 && (
+                  <div className="mt-1">
+                    <p className="text-[10px] font-semibold text-blue-300">Fixes Applied:</p>
+                    <ul className="text-[10px] font-mono text-blue-200/70 list-disc pl-4">
+                      {debugData.label_audit.fixes_applied.map((fix: string, i: number) => (
+                        <li key={i}>{fix}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                {debugData.label_audit.issues?.length > 0 && (
+                  <div className="mt-1">
+                    <p className="text-[10px] font-semibold text-orange-300">Audit Issues:</p>
+                    <ul className="text-[10px] font-mono text-orange-200/70 list-disc pl-4">
+                      {debugData.label_audit.issues.map((issue: string, i: number) => (
+                        <li key={i}>{issue}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                {debugData.label_audit.details && (
+                  <div className="mt-1 grid grid-cols-2 gap-x-4 gap-y-0.5 text-[10px] font-mono text-muted-foreground">
+                    <span>req_style: {debugData.label_audit.details.requestedStyle}</span>
+                    <span>inf_style: {debugData.label_audit.details.inferredStyle}</span>
+                    <span>fin_style: {debugData.label_audit.details.finalStyle}</span>
+                    <span>inf_cuisine: {debugData.label_audit.details.inferredCuisine}</span>
+                    <span>fin_cuisine: {debugData.label_audit.details.finalCuisine}</span>
+                    <span>inf_carb: {debugData.label_audit.details.inferredBaseCarb}</span>
+                    <span>inf_method: {debugData.label_audit.details.inferredMethod}</span>
+                    <span>inf_health: {debugData.label_audit.details.inferredHealthiness}</span>
+                    <span>inf_budget: {debugData.label_audit.details.inferredBudget}</span>
+                    <span>appliance_fit: {String(debugData.label_audit.details.applianceFit)}</span>
+                    <span>allergen_clean: {String(debugData.label_audit.details.allergenClean)}</span>
+                  </div>
+                )}
+              </div>
+            )}
+
             <details>
               <summary className="text-xs font-semibold text-muted-foreground cursor-pointer hover:text-foreground">
                 Raw Debug Data
