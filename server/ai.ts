@@ -1,7 +1,7 @@
 import OpenAI from "openai";
 import type { TemplateRow, GenerateRequest, GenerateResponse, ProteinSafetyItem, RecipeTags } from "@shared/schema";
 import { log } from "./index";
-import { getForbiddenProteinsText, validateProteinCompliance, validateTitleConsistency } from "./protein-validator";
+import { getForbiddenProteinsText, validateProteinCompliance, validateTitleConsistency, validateStructure } from "./protein-validator";
 import { type VarietyConstraints, buildVarietyPromptBlock, buildHealthyPromptBlock } from "./variety-memory";
 import { type StructureType, STRUCTURE_DISPLAY } from "./structure-variety";
 
@@ -496,6 +496,12 @@ export async function generateRecipe(
       totalTokensOut += result.tokensOut;
       lastRecipe = result.recipe;
 
+      const structCheck = validateStructure(result.recipe);
+      if (!structCheck.ok) {
+        log(`[recipe-validation] structure invalid attempt=${attempt}/${MAX_PROTEIN_RETRIES}: ${structCheck.reasons.join(", ")}`, "ai");
+        continue;
+      }
+
       const validation = validateProteinCompliance(result.recipe, chosenProtein);
       if (!validation.valid) {
         log(`[recipe-validation] invalid (${chosenProtein}) attempt=${attempt}/${MAX_PROTEIN_RETRIES}: ${validation.reason}`, "ai");
@@ -562,6 +568,16 @@ export async function generateRecipeFromPantry(
     if (result) {
       totalTokensIn += result.tokensIn;
       totalTokensOut += result.tokensOut;
+
+      const structCheck = validateStructure(result.recipe);
+      if (!structCheck.ok) {
+        log(`[recipe-validation] pantry structure invalid attempt=${attempt}/${maxAttempts}: ${structCheck.reasons.join(", ")}`, "ai");
+        if (attempt < maxAttempts) {
+          await new Promise((r) => setTimeout(r, 300));
+          continue;
+        }
+        break;
+      }
 
       if (pantryProteinMode) {
         const validation = validateProteinCompliance(result.recipe, pantryProteinMode);

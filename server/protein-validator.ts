@@ -269,3 +269,21 @@ export function validateTitleConsistency(recipe: GenerateResponse): { ok: boolea
   }
   return { ok: reasons.length === 0, reasons };
 }
+
+export function validateStructure(recipe: GenerateResponse): { ok: boolean; reasons: string[] } {
+  const reasons: string[] = [];
+
+  if (!recipe?.title || norm(recipe.title).length < 4) reasons.push("missing_title");
+  if (!Array.isArray(recipe?.ingredients) || recipe.ingredients.length < 4) reasons.push("too_few_ingredients");
+  if (!Array.isArray(recipe?.steps) || recipe.steps.length < 4) reasons.push("too_few_steps");
+
+  const stepTexts = (recipe.steps ?? []).map((s: any) =>
+    norm(typeof s === "string" ? s : `${s?.heading ?? ""} ${s?.body ?? ""}`)
+  );
+  const hasVerb = stepTexts.some(s =>
+    /\b(add|mix|stir|cook|bake|simmer|boil|saute|saut[ée]|roast|grill|season|serve|heat|toss|slice|dice|chop|drain|fold|whisk|sear|fry|broil|spread|layer|combine|pour|reduce|rest|plate|flip|press|marinate)\b/.test(s)
+  );
+  if (!hasVerb) reasons.push("instructions_not_actionable");
+
+  return { ok: reasons.length === 0, reasons };
+}
