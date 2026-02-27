@@ -289,8 +289,10 @@ function buildFilterSummary(request: GenerateRequest): string {
   return parts.join(" | ");
 }
 
-const SYSTEM_PROMPT = "Firehall chef writing beginner-friendly recipes. Return ONLY valid JSON. Every step heading includes heat level and time. Every step body explains HOW to do it with a visual doneness cue. Include safety temps for every protein. No markdown. The recipe MUST use ONLY the specified protein — no substitutions.";
-const PANTRY_SYSTEM_PROMPT = "Firehall chef writing beginner-friendly recipes. Return ONLY valid JSON. Every step heading includes heat level and time. Every step body explains HOW to do it with a visual doneness cue. Include safety temps for every protein. No markdown.";
+const STRUCTURAL_CONSISTENCY_RULES = `STRUCTURAL CONSISTENCY RULES (STRICT): The recipe title, ingredients, and instructions must be fully aligned. If the title contains a descriptive claim, it must be reflected in both ingredients and instructions. Examples: If the title includes "cheesy", the ingredients must contain a cheese product and the instructions must include adding or melting the cheese. If the title includes "creamy", the ingredients must contain a cream-based ingredient (cream, milk, yogurt, coconut milk, cream cheese, etc.) and the instructions must show it being incorporated. If the title includes "stuffed", the instructions must explicitly describe stuffing or filling the item. If the title includes a protein (e.g., chicken, pork, tofu), that protein must appear in the ingredients and be used in the instructions. Do not generate titles that exaggerate or misrepresent the ingredients.`;
+
+const SYSTEM_PROMPT = `Firehall chef writing beginner-friendly recipes. Return ONLY valid JSON. Every step heading includes heat level and time. Every step body explains HOW to do it with a visual doneness cue. Include safety temps for every protein. No markdown. The recipe MUST use ONLY the specified protein — no substitutions. ${STRUCTURAL_CONSISTENCY_RULES}`;
+const PANTRY_SYSTEM_PROMPT = `Firehall chef writing beginner-friendly recipes. Return ONLY valid JSON. Every step heading includes heat level and time. Every step body explains HOW to do it with a visual doneness cue. Include safety temps for every protein. No markdown. ${STRUCTURAL_CONSISTENCY_RULES}`;
 
 function buildPrompt(template: TemplateRow, request: GenerateRequest, chosenProtein: string, varietyBlock: string, healthyBlock: string, structureType?: StructureType): string {
   const proteinDisplay = chosenProtein.charAt(0).toUpperCase() + chosenProtein.slice(1);
