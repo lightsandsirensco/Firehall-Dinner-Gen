@@ -1,7 +1,7 @@
 import OpenAI from "openai";
 import type { TemplateRow, GenerateRequest, GenerateResponse, ProteinSafetyItem, RecipeTags } from "@shared/schema";
 import { log } from "./index";
-import { getForbiddenProteinsText, validateProteinCompliance, validateTitleConsistency, validateStructure } from "./protein-validator";
+import { getForbiddenProteinsText, validateProteinCompliance, validateTitleConsistency, validateStructure, validateVegVariety, commitVegBase } from "./protein-validator";
 import { type VarietyConstraints, buildVarietyPromptBlock, buildHealthyPromptBlock } from "./variety-memory";
 import { type StructureType, STRUCTURE_DISPLAY } from "./structure-variety";
 
@@ -514,6 +514,15 @@ export async function generateRecipe(
         continue;
       }
 
+      if (chosenProtein === "vegetarian") {
+        const vegCheck = validateVegVariety(result.recipe);
+        if (!vegCheck.ok) {
+          log(`[recipe-validation] veg variety rejected attempt=${attempt}/${MAX_PROTEIN_RETRIES}: ${vegCheck.reasons.join(", ")}`, "ai");
+          continue;
+        }
+        commitVegBase(vegCheck.base);
+      }
+
       const elapsed = Date.now() - genStart;
       log(`Recipe OK in ${elapsed}ms (${totalTokensIn}in/${totalTokensOut}out, attempt ${attempt}/${MAX_PROTEIN_RETRIES}) | ${filterSummary}`, "perf");
       return { recipe: result.recipe, tokensIn: totalTokensIn, tokensOut: totalTokensOut };
@@ -599,6 +608,19 @@ export async function generateRecipeFromPantry(
           continue;
         }
         break;
+      }
+
+      if (pantryProteinMode === "vegetarian") {
+        const vegCheck = validateVegVariety(result.recipe);
+        if (!vegCheck.ok) {
+          log(`[recipe-validation] pantry veg variety rejected attempt=${attempt}/${maxAttempts}: ${vegCheck.reasons.join(", ")}`, "ai");
+          if (attempt < maxAttempts) {
+            await new Promise((r) => setTimeout(r, 300));
+            continue;
+          }
+          break;
+        }
+        commitVegBase(vegCheck.base);
       }
 
       const elapsed = Date.now() - genStart;

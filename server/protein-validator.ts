@@ -287,3 +287,32 @@ export function validateStructure(recipe: GenerateResponse): { ok: boolean; reas
 
   return { ok: reasons.length === 0, reasons };
 }
+
+const VEG_PROTEIN_SOURCES = [
+  "lentils", "chickpeas", "black beans", "kidney beans", "white beans",
+  "tempeh", "tofu", "seitan", "edamame", "greek yogurt", "eggs", "quinoa",
+];
+
+const recentVegBase: string[] = [];
+
+function detectVegBase(recipe: GenerateResponse): string {
+  const text = fullText(recipe);
+  for (const p of VEG_PROTEIN_SOURCES) {
+    if (text.includes(p)) return p;
+  }
+  return "unknown";
+}
+
+export function validateVegVariety(recipe: GenerateResponse): { ok: boolean; reasons: string[]; base: string } {
+  const base = detectVegBase(recipe);
+  if (base !== "unknown" && recentVegBase.slice(-3).includes(base)) {
+    return { ok: false, reasons: [`repeated_veg_protein_base:${base}`], base };
+  }
+  return { ok: true, reasons: [], base };
+}
+
+export function commitVegBase(base: string): void {
+  if (!base || base === "unknown") return;
+  recentVegBase.push(base);
+  if (recentVegBase.length > 20) recentVegBase.splice(0, recentVegBase.length - 20);
+}
