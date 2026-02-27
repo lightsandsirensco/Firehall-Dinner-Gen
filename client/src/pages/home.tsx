@@ -63,13 +63,17 @@ function makeRequestId(): string {
   return `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
 }
 
+let recipeKeyCounter = 0;
+function recipeKey(recipe: ClientRecipeResponse): string {
+  return (recipe as any)._signature || `${recipe.title}-${recipe.template_id}-${++recipeKeyCounter}`;
+}
+
 const ResultsPanel = memo(function ResultsPanel({
   loading,
   error,
   recipe,
   recentRecipes,
   filters,
-  generationCounter,
   onEmailClick,
   onShoppingListClick,
   onHallVoteClick,
@@ -79,7 +83,6 @@ const ResultsPanel = memo(function ResultsPanel({
   recipe: ClientRecipeResponse | null;
   recentRecipes: ClientRecipeResponse[];
   filters: FilterState;
-  generationCounter: number;
   onEmailClick: () => void;
   onShoppingListClick: () => void;
   onHallVoteClick: () => void;
@@ -114,8 +117,9 @@ const ResultsPanel = memo(function ResultsPanel({
         </div>
       )}
       {!loading && showRecipe && (
-        <div key={generationCounter} className="animate-in fade-in slide-in-from-bottom-2 duration-400">
+        <div className="animate-in fade-in slide-in-from-bottom-2 duration-400">
           <RecipeCard
+            key={recipeKey(recipe)}
             recipe={recipe}
             crewSize={filters.crew_size}
             onEmailClick={onEmailClick}
@@ -160,10 +164,9 @@ export default function Home() {
   const [hallVoteOpen, setHallVoteOpen] = useState(false);
   const [recentRecipes, setRecentRecipes] = useState<ClientRecipeResponse[]>([]);
   const [favCount, setFavCount] = useState(() => getSavedCount());
-  const [generationCounter, setGenerationCounter] = useState(0);
+  const latestRequestRef = useRef(0);
   const genCountRef = useRef(0);
   const emailPromptedRef = useRef(false);
-  const activeRequestIdRef = useRef<string | null>(null);
   const abortControllerRef = useRef<AbortController | null>(null);
   const recipeRef = useRef<HTMLDivElement>(null);
   const { toast } = useToast();
@@ -213,14 +216,16 @@ export default function Home() {
       .catch(() => prefetchMeals(warmupPayload));
   }, []);
 
-  const applyRecipe = useCallback((data: ClientRecipeResponse, requestId: string) => {
-    if (activeRequestIdRef.current !== requestId) {
-      console.log("[Generate] Ignoring stale response", { requestId, active: activeRequestIdRef.current });
+  const applyRecipe = useCallback((data: ClientRecipeResponse, seq: number) => {
+    if (seq !== latestRequestRef.current) {
+      console.log("[Generate] Ignoring stale response", { seq, latest: latestRequestRef.current });
       return;
     }
 
-    setRecipe(() => ({ ...data }));
-    setGenerationCounter(c => c + 1);
+    setRecipe(data);
+    setLoading(false);
+    setError(null);
+    abortControllerRef.current = null;
     addRecentSignature(data);
     if (data.meal_style) trackMealStyle(data.meal_style);
     setRecentRecipes(prev => {
@@ -230,7 +235,7 @@ export default function Home() {
     setLastTemplateId(data.template_id);
     trackMealGenerated();
     genCountRef.current += 1;
-    console.log("[Generate] Recipe updated:", data.title, "| style:", data.meal_style, "| sig:", (data as any)._signature?.substring(0, 40));
+    console.log("[Generate] Recipe applied:", data.title, "| style:", data.meal_style, "| seq:", seq);
 
     requestAnimationFrame(() => {
       recipeRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -248,11 +253,12 @@ export default function Home() {
       abortControllerRef.current = null;
     }
 
+    const seq = ++latestRequestRef.current;
     const requestId = makeRequestId();
-    activeRequestIdRef.current = requestId;
-    console.log("[Generate] Clicked", { requestId, templateId, preferDifferentStyle });
+    console.log("[Generate] Clicked", { seq, requestId, templateId, preferDifferentStyle });
 
     setError(null);
+    setLoading(true);
     trackEvent('meal_generation_started');
 
     const payload = buildRequestPayload(currentFilters, templateId, preferDifferentStyle);
@@ -261,14 +267,13 @@ export default function Home() {
     if (!preferDifferentStyle) {
       const cached = consumePrefetched(payload, templateId);
       if (cached) {
-        console.log("[Generate] Using prefetched:", cached.title, { requestId, filterKey });
-        applyRecipe(cached, requestId);
+        console.log("[Generate] Using prefetched:", cached.title, { seq, filterKey });
+        applyRecipe(cached, seq);
         setTimeout(() => prefetchMeals(payload), 100);
         return;
       }
     }
 
-    setLoading(true);
     const controller = new AbortController();
     abortControllerRef.current = controller;
     const timeout = setTimeout(() => controller.abort(), 45000);
@@ -284,23 +289,23 @@ export default function Home() {
       }, 45_000, controller.signal);
       clearTimeout(timeout);
 
-      if (activeRequestIdRef.current !== requestId) {
-        console.log("[Generate] Ignoring stale response", { requestId });
+      if (seq !== latestRequestRef.current) {
+        console.log("[Generate] Ignoring stale response", { seq, latest: latestRequestRef.current });
         return;
       }
 
       const data: ClientRecipeResponse = await res.json();
 
-      console.log("[Generate] API returned:", data.title, { requestId, filterKey });
-      applyRecipe(data, requestId);
+      console.log("[Generate] API returned:", data.title, { seq, filterKey });
+      applyRecipe(data, seq);
       if (!preferDifferentStyle) {
         putCached(filterKey, data);
         setTimeout(() => prefetchMeals(payload), 100);
       }
     } catch (err: any) {
       clearTimeout(timeout);
-      if (activeRequestIdRef.current !== requestId) {
-        console.log("[Generate] Ignoring stale error", { requestId });
+      if (seq !== latestRequestRef.current) {
+        console.log("[Generate] Ignoring stale error", { seq });
         return;
       }
 
@@ -310,7 +315,7 @@ export default function Home() {
 
       const msg = err?.message || "Something went wrong";
       const status = msg.match(/^(\d+)/)?.[1] || "unknown";
-      console.error("[Generate] Failed", { requestId, status, message: msg });
+      console.error("[Generate] Failed", { seq, status, message: msg });
 
       if (msg.includes("No matching templates") || msg.includes("404")) {
         setError("no_match");
@@ -332,16 +337,12 @@ export default function Home() {
         setError("Generation failed. Please try again.");
       }
 
+      setLoading(false);
       toast({
         title: "Generation failed",
         description: "Tap Generate to try again.",
         variant: "destructive",
       });
-    } finally {
-      if (activeRequestIdRef.current === requestId) {
-        setLoading(false);
-        abortControllerRef.current = null;
-      }
     }
   }, [applyRecipe, toast]);
 
@@ -439,7 +440,6 @@ export default function Home() {
               recipe={recipe}
               recentRecipes={recentRecipes}
               filters={filters}
-              generationCounter={generationCounter}
               onEmailClick={onEmailClick}
               onShoppingListClick={onShoppingListClick}
               onHallVoteClick={onHallVoteClick}
