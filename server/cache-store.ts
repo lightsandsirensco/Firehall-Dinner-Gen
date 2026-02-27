@@ -142,12 +142,73 @@ export function checkRateLimit(key: string, windowMs: number, maxRequests: numbe
       return { allowed: false, remaining: 0, resetMs: Math.max(0, resetAt) };
     }
 
-    db.prepare("INSERT INTO rate_limits (key, timestamp) VALUES (?, ?)").run(key, now);
-    return { allowed: true, remaining: maxRequests - count - 1, resetMs: windowMs };
+    return { allowed: true, remaining: maxRequests - count, resetMs: windowMs };
   });
 
   return txn() as { allowed: boolean; remaining: number; resetMs: number };
 }
+
+export function recordRateLimit(key: string): void {
+  db.prepare("INSERT INTO rate_limits (key, timestamp) VALUES (?, ?)").run(key, Date.now());
+}
+
+const idempotencyStore = new Map<string, { requestIds: string[]; lastSignature: string; pendingIds: Set<string> }>();
+const IDEMPOTENCY_MAX_IDS = 20;
+
+export function checkAndReserveRequest(sessionKey: string, requestId: string): { isDuplicate: boolean; isInFlight: boolean } {
+  let entry = idempotencyStore.get(sessionKey);
+  if (!entry) {
+    entry = { requestIds: [], lastSignature: "", pendingIds: new Set() };
+    idempotencyStore.set(sessionKey, entry);
+  }
+
+  if (entry.requestIds.includes(requestId)) {
+    return { isDuplicate: true, isInFlight: false };
+  }
+
+  if (entry.pendingIds.has(requestId)) {
+    return { isDuplicate: false, isInFlight: true };
+  }
+
+  entry.pendingIds.add(requestId);
+  return { isDuplicate: false, isInFlight: false };
+}
+
+export function finalizeRequest(sessionKey: string, requestId: string, signature: string): { sameSignature: boolean } {
+  let entry = idempotencyStore.get(sessionKey);
+  if (!entry) {
+    entry = { requestIds: [], lastSignature: "", pendingIds: new Set() };
+    idempotencyStore.set(sessionKey, entry);
+  }
+
+  entry.pendingIds.delete(requestId);
+
+  const sameSignature = signature === entry.lastSignature && signature !== "";
+
+  entry.requestIds.push(requestId);
+  if (entry.requestIds.length > IDEMPOTENCY_MAX_IDS) {
+    entry.requestIds.shift();
+  }
+  entry.lastSignature = signature;
+
+  return { sameSignature };
+}
+
+export function cancelRequest(sessionKey: string, requestId: string): void {
+  const entry = idempotencyStore.get(sessionKey);
+  if (entry) {
+    entry.pendingIds.delete(requestId);
+  }
+}
+
+setInterval(() => {
+  if (idempotencyStore.size > 10000) {
+    const keys = Array.from(idempotencyStore.keys());
+    for (let i = 0; i < keys.length - 5000; i++) {
+      idempotencyStore.delete(keys[i]);
+    }
+  }
+}, 600_000);
 
 export function logUsage(entry: {
   cacheKey: string;

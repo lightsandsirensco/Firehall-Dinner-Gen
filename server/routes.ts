@@ -26,6 +26,10 @@ import {
   setCachedRecipe,
   setCachedPizzaRecipe,
   checkRateLimit,
+  recordRateLimit,
+  checkAndReserveRequest,
+  finalizeRequest,
+  cancelRequest,
   logUsage,
   getDailySpend,
   getUsageStats,
@@ -305,6 +309,29 @@ export async function registerRoutes(
     return base;
   }
 
+  function sendRecipeResponse(res: Response, validation: import("./validateRecipe").ValidationResult, extras: Record<string, any>, debug: boolean, crewSize: number, mealFormat: string, allergens: string[], auditCtx: LabelAuditContext | undefined, ipHash: string, sessionId: string, requestId: string) {
+    const result = buildResponse(validation, extras, debug, crewSize, mealFormat, allergens, auditCtx);
+    const signature = validation.signature || result._signature || "";
+    recordSuccessfulGeneration(ipHash, sessionId, requestId, signature);
+    return res.json(result);
+  }
+
+  function recordSuccessfulGeneration(ipHash: string, sessionId: string, requestId: string, signature: string) {
+    const sessionKey = `${ipHash}:${sessionId}`;
+    const result = finalizeRequest(sessionKey, requestId, signature);
+
+    if (result.sameSignature) {
+      log(`[rate] NOT counted — same signature=${signature} for session=${sessionId} request_id=${requestId}`, "rate");
+      return;
+    }
+
+    recordRateLimit(`burst:${ipHash}`);
+    recordRateLimit(`hourly:${ipHash}`);
+    recordRateLimit(`burst:session:${sessionId}`);
+    recordRateLimit(`hourly:session:${sessionId}`);
+    log(`[rate] Generation counted — request_id=${requestId} signature=${signature} session=${sessionId}`, "rate");
+  }
+
   app.post("/api/generate", async (req: Request, res: Response) => {
     try {
       const ua = req.headers["user-agent"] || "";
@@ -322,8 +349,27 @@ export async function registerRoutes(
       const clientIp = getClientIp(req);
       const ipHash = hashIp(clientIp);
 
+      const requestId = (req.body as any)?.request_id || `auto-${Date.now()}`;
+      const sessionKey = `${ipHash}:${sessionId}`;
+      const reserveCheck = checkAndReserveRequest(sessionKey, requestId);
+      if (reserveCheck.isDuplicate) {
+        log(`[rate] Duplicate request_id=${requestId} — already completed`, "rate");
+        return res.status(429).json({
+          message: "Duplicate request detected. Please wait for the current recipe to finish.",
+          retry_after_seconds: 5,
+        });
+      }
+      if (reserveCheck.isInFlight) {
+        log(`[rate] In-flight request_id=${requestId} — blocking concurrent duplicate`, "rate");
+        return res.status(429).json({
+          message: "A recipe is already being generated. Please wait.",
+          retry_after_seconds: 5,
+        });
+      }
+
       const burstCheck = checkRateLimit(`burst:${ipHash}`, 60_000, 3);
       if (!burstCheck.allowed) {
+        cancelRequest(sessionKey, requestId);
         return res.status(429).json({
           message: "Slow down! Maximum 3 recipes per minute. Please wait a moment.",
           retry_after_seconds: 60,
@@ -332,6 +378,7 @@ export async function registerRoutes(
 
       const hourlyCheck = checkRateLimit(`hourly:${ipHash}`, 3_600_000, 10);
       if (!hourlyCheck.allowed) {
+        cancelRequest(sessionKey, requestId);
         return res.status(429).json({
           message: `Hourly limit reached (10 recipes/hour). You have ${hourlyCheck.remaining} remaining. Try again later.`,
           retry_after_seconds: 3600,
@@ -340,6 +387,7 @@ export async function registerRoutes(
 
       const sessionBurst = checkRateLimit(`burst:session:${sessionId}`, 60_000, 3);
       if (!sessionBurst.allowed) {
+        cancelRequest(sessionKey, requestId);
         return res.status(429).json({
           message: "Slow down! Maximum 3 recipes per minute.",
           retry_after_seconds: 60,
@@ -348,6 +396,7 @@ export async function registerRoutes(
 
       const sessionHourly = checkRateLimit(`hourly:session:${sessionId}`, 3_600_000, 10);
       if (!sessionHourly.allowed) {
+        cancelRequest(sessionKey, requestId);
         return res.status(429).json({
           message: "Hourly limit reached (10 recipes/hour). Try again later.",
           retry_after_seconds: 3600,
@@ -356,12 +405,14 @@ export async function registerRoutes(
 
       const parsed = generateRequestSchema.safeParse(req.body);
       if (!parsed.success) {
+        cancelRequest(sessionKey, requestId);
         return res.status(400).json({ message: "Invalid request: " + parsed.error.message });
       }
 
       const request = parsed.data;
 
       if (request.use_what_we_have && (!request.ingredients_on_hand || request.ingredients_on_hand.length === 0)) {
+        cancelRequest(sessionKey, requestId);
         return res.status(400).json({ message: "Please enter at least one ingredient when using 'Use What's in the Fridge' mode." });
       }
 
@@ -374,6 +425,7 @@ export async function registerRoutes(
         noTemplateMode = true;
         log(`[allergen] No templates match even after relaxation — entering AI-only allergen-safe mode`, "ai");
       } else if (candidates.length === 0) {
+        cancelRequest(sessionKey, requestId);
         return res.status(404).json({ message: "No matching templates found. Try loosening your filters." });
       }
 
@@ -432,7 +484,7 @@ export async function registerRoutes(
           };
           const cacheVal = validateAndFixRecipe(cached, cacheValCtx);
           recordSignature(chosenProtein, cacheVal.signature);
-          return res.json(buildResponse(cacheVal, {}, cacheDebug, request.crew_size, request.meal_format, allergens, auditCtx));
+          return sendRecipeResponse(res, cacheVal, {}, cacheDebug, request.crew_size, request.meal_format, allergens, auditCtx, ipHash, sessionId, requestId);
         }
       }
 
@@ -472,7 +524,7 @@ export async function registerRoutes(
             };
             const poolVal = validateAndFixRecipe(poolEntry.recipe, poolValCtx);
             recordSignature(chosenProtein, poolVal.signature);
-            return res.json(buildResponse(poolVal, {}, poolDebug, request.crew_size, request.meal_format, allergens, auditCtx));
+            return sendRecipeResponse(res, poolVal, {}, poolDebug, request.crew_size, request.meal_format, allergens, auditCtx, ipHash, sessionId, requestId);
           }
         }
       }
@@ -481,6 +533,7 @@ export async function registerRoutes(
       const currentSpend = getDailySpend();
 
       if (currentSpend >= dailyBudget) {
+        cancelRequest(sessionKey, requestId);
         log(`Budget exceeded: $${currentSpend.toFixed(4)} / $${dailyBudget.toFixed(2)}`, "budget");
         return res.status(503).json({
           message: "Daily recipe generation limit reached. Cached recipes are still available. Please try again tomorrow.",
@@ -668,7 +721,7 @@ export async function registerRoutes(
         recordSignature(chosenProtein, aiValidation.signature);
         const responseExtras: Record<string, any> = {};
         if (filtersRelaxed) responseExtras._filtersRelaxed = true;
-        return res.json(buildResponse(aiValidation, responseExtras, debugMode, request.crew_size, request.meal_format, allergens, auditCtx));
+        return sendRecipeResponse(res, aiValidation, responseExtras, debugMode, request.crew_size, request.meal_format, allergens, auditCtx, ipHash, sessionId, requestId);
       }
 
       if (raceResult.type === "timeout") {
@@ -706,7 +759,7 @@ export async function registerRoutes(
         recordSignature(chosenProtein, fbValidation.signature);
         const fbExtras: Record<string, any> = { _fallback: true };
         if (filtersRelaxed) fbExtras._filtersRelaxed = true;
-        return res.json(buildResponse(fbValidation, fbExtras, debugMode, request.crew_size, request.meal_format, allergens, auditCtx));
+        return sendRecipeResponse(res, fbValidation, fbExtras, debugMode, request.crew_size, request.meal_format, allergens, auditCtx, ipHash, sessionId, requestId);
       }
 
       const aiError = (raceResult as any).error;
@@ -734,8 +787,9 @@ export async function registerRoutes(
       recordSignature(chosenProtein, errFbValidation.signature);
       const errExtras: Record<string, any> = { _fallback: true };
       if (filtersRelaxed) errExtras._filtersRelaxed = true;
-      return res.json(buildResponse(errFbValidation, errExtras, debugMode, request.crew_size, request.meal_format, allergens, auditCtx));
+      return sendRecipeResponse(res, errFbValidation, errExtras, debugMode, request.crew_size, request.meal_format, allergens, auditCtx, ipHash, sessionId, requestId);
     } catch (error: any) {
+      cancelRequest(sessionKey, requestId);
       console.error("Generate error:", error);
       return res.status(500).json({ message: error.message || "Failed to generate recipe" });
     }
