@@ -2,7 +2,7 @@ import type { TemplateRow, GenerateRequest, GenerateResponse } from "@shared/sch
 import { log } from "./index";
 import type { StructureType } from "./structure-variety";
 import { STRUCTURE_DISPLAY } from "./structure-variety";
-import { getRecentVegBases } from "./protein-validator";
+import { getRecentVegBases, commitVegBase } from "./protein-validator";
 
 interface RawIngredient {
   item: string;
@@ -883,6 +883,32 @@ function getBudgetTips(budgetLevel: string): string[] {
   return [];
 }
 
+const VEG_TITLE_DISPLAY: Record<string, string> = {
+  chickpeas: "Chickpea",
+  lentils: "Lentil",
+  "black beans": "Black Bean",
+  "kidney beans": "Kidney Bean",
+  "white beans": "White Bean",
+  quinoa: "Quinoa",
+  tempeh: "Tempeh",
+  eggs: "Egg",
+  edamame: "Edamame",
+  seitan: "Seitan",
+  "greek yogurt": "Greek Yogurt",
+  tofu: "Tofu",
+};
+
+const VEG_PROTEIN_PATTERN = /\b(Chickpea|Lentil|Black Bean|Kidney Bean|White Bean|Quinoa|Tempeh|Egg|Edamame|Seitan|Tofu|Three-Bean)\b/i;
+
+function adaptVegTitle(archetypeTitle: string, vegBase: string): string {
+  const display = VEG_TITLE_DISPLAY[vegBase];
+  if (!display) return archetypeTitle;
+  if (archetypeTitle.toLowerCase().includes(display.toLowerCase())) return archetypeTitle;
+  const replaced = archetypeTitle.replace(VEG_PROTEIN_PATTERN, display);
+  if (replaced !== archetypeTitle) return replaced;
+  return archetypeTitle;
+}
+
 export function buildFallbackRecipe(
   template: TemplateRow,
   request: GenerateRequest,
@@ -948,7 +974,9 @@ export function buildFallbackRecipe(
   const archetype = structureType
     ? pickFallbackArchetype(finalProtein, structureType, appliances)
     : pickFallbackArchetype(finalProtein, "skillet", appliances);
-  const baseTitle = archetype.title;
+  const baseTitle = isVegetarian && vegSet
+    ? adaptVegTitle(archetype.title, vegSet.base)
+    : archetype.title;
   const title = cuisineData
     ? `${cuisineData.titlePrefix} ${baseTitle}`
     : baseTitle;
@@ -1028,6 +1056,10 @@ export function buildFallbackRecipe(
   const primarySource = isVegetarian && vegSet
     ? vegSet.base
     : isSeafood ? "Seafood" : proteinDisplay;
+
+  if (isVegetarian && vegSet) {
+    commitVegBase(vegSet.base);
+  }
 
   return {
     template_id: parseInt(template.template_id),
