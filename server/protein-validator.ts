@@ -233,3 +233,39 @@ export function validateProteinCompliance(
 
   return { valid: true };
 }
+
+const TITLE_RULES: Array<{
+  trigger: RegExp;
+  requireInText: RegExp[];
+  reason: string;
+}> = [
+  {
+    trigger: /\bcheesy\b/,
+    requireInText: [/\bcheese\b/, /\bcheddar\b/, /\bmozzarella\b/, /\bparmesan\b/, /\bcream\s+cheese\b/],
+    reason: "title_claims_cheesy_but_no_cheese",
+  },
+  {
+    trigger: /\bcreamy\b/,
+    requireInText: [/\bcream\b/, /\bmilk\b/, /\byogurt\b/, /\bcoconut\s+milk\b/, /\bcream\s+cheese\b/],
+    reason: "title_claims_creamy_but_no_creamy_ingredient",
+  },
+  {
+    trigger: /\bstuffed\b/,
+    requireInText: [/\bstuff\b/, /\bfill\b/, /\bfilled\b/],
+    reason: "title_claims_stuffed_but_no_stuff_step",
+  },
+];
+
+export function validateTitleConsistency(recipe: GenerateResponse): { ok: boolean; reasons: string[] } {
+  const t = norm(recipe?.title ?? "");
+  const text = fullText(recipe);
+
+  const reasons: string[] = [];
+  for (const rule of TITLE_RULES) {
+    if (rule.trigger.test(t)) {
+      const ok = rule.requireInText.some(rx => rx.test(text));
+      if (!ok) reasons.push(rule.reason);
+    }
+  }
+  return { ok: reasons.length === 0, reasons };
+}

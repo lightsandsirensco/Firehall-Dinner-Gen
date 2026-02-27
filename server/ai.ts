@@ -1,7 +1,7 @@
 import OpenAI from "openai";
 import type { TemplateRow, GenerateRequest, GenerateResponse, ProteinSafetyItem, RecipeTags } from "@shared/schema";
 import { log } from "./index";
-import { getForbiddenProteinsText, validateProteinCompliance } from "./protein-validator";
+import { getForbiddenProteinsText, validateProteinCompliance, validateTitleConsistency } from "./protein-validator";
 import { type VarietyConstraints, buildVarietyPromptBlock, buildHealthyPromptBlock } from "./variety-memory";
 import { type StructureType, STRUCTURE_DISPLAY } from "./structure-variety";
 
@@ -497,13 +497,20 @@ export async function generateRecipe(
       lastRecipe = result.recipe;
 
       const validation = validateProteinCompliance(result.recipe, chosenProtein);
-      if (validation.valid) {
-        const elapsed = Date.now() - genStart;
-        log(`Recipe OK in ${elapsed}ms (${totalTokensIn}in/${totalTokensOut}out, attempt ${attempt}/${MAX_PROTEIN_RETRIES}) | ${filterSummary}`, "perf");
-        return { recipe: result.recipe, tokensIn: totalTokensIn, tokensOut: totalTokensOut };
+      if (!validation.valid) {
+        log(`[recipe-validation] invalid (${chosenProtein}) attempt=${attempt}/${MAX_PROTEIN_RETRIES}: ${validation.reason}`, "ai");
+        continue;
       }
 
-      log(`[recipe-validation] invalid (${chosenProtein}) attempt=${attempt}/${MAX_PROTEIN_RETRIES}: ${validation.reason}`, "ai");
+      const titleCheck = validateTitleConsistency(result.recipe);
+      if (!titleCheck.ok) {
+        log(`[recipe-validation] title inconsistency attempt=${attempt}/${MAX_PROTEIN_RETRIES}: ${titleCheck.reasons.join(", ")}`, "ai");
+        continue;
+      }
+
+      const elapsed = Date.now() - genStart;
+      log(`Recipe OK in ${elapsed}ms (${totalTokensIn}in/${totalTokensOut}out, attempt ${attempt}/${MAX_PROTEIN_RETRIES}) | ${filterSummary}`, "perf");
+      return { recipe: result.recipe, tokensIn: totalTokensIn, tokensOut: totalTokensOut };
     } else {
       log(`[recipe-validation] attempt ${attempt}/${MAX_PROTEIN_RETRIES}: AI failed to produce parseable recipe`, "ai");
     }
@@ -566,6 +573,16 @@ export async function generateRecipeFromPantry(
           }
           break;
         }
+      }
+
+      const titleCheck = validateTitleConsistency(result.recipe);
+      if (!titleCheck.ok) {
+        log(`[recipe-validation] pantry title inconsistency attempt=${attempt}/${maxAttempts}: ${titleCheck.reasons.join(", ")}`, "ai");
+        if (attempt < maxAttempts) {
+          await new Promise((r) => setTimeout(r, 300));
+          continue;
+        }
+        break;
       }
 
       const elapsed = Date.now() - genStart;
