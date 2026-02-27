@@ -1,5 +1,6 @@
 import type { GenerateResponse } from "@shared/schema";
 import { log } from "./index";
+import { containsAllergen } from "./allergens";
 
 export interface RecipeValidationContext {
   chosenProtein: string;
@@ -161,16 +162,8 @@ const GLUTEN_ITEMS = /\b(tortilla|bread|bun|roll|pasta|penne|spaghetti|noodle|fl
 const DAIRY_ITEMS = /\b(cheese|cheddar|mozzarella|parmesan|feta|cream|yogurt|butter|milk|halloumi|ricotta)\b/i;
 
 function hasAllergen(item: string, allergens: string[]): boolean {
-  const lo = norm(item);
   for (const a of allergens) {
-    const al = norm(a);
-    if (al === "gluten" && GLUTEN_ITEMS.test(lo)) return true;
-    if (al === "dairy" && DAIRY_ITEMS.test(lo)) return true;
-    if (al === "nuts" && /\b(peanut|almond|walnut|cashew|pecan|hazelnut|pistachio)\b/i.test(lo)) return true;
-    if (al === "soy" && /\b(soy|tofu|edamame|tamari|miso)\b/i.test(lo)) return true;
-    if (al === "shellfish" && /\b(shrimp|crab|lobster|mussel|clam|oyster|scallop)\b/i.test(lo)) return true;
-    if (al === "eggs" && /\b(egg)\b/i.test(lo)) return true;
-    if (lo.includes(al)) return true;
+    if (containsAllergen(item, a)) return true;
   }
   return false;
 }

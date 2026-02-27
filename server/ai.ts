@@ -4,6 +4,7 @@ import { log } from "./index";
 import { getForbiddenProteinsText, validateProteinCompliance, validateTitleConsistency, validateStructure, validateVegVariety, commitVegBase, getRecentVegBases } from "./protein-validator";
 import { type VarietyConstraints, buildVarietyPromptBlock, buildHealthyPromptBlock } from "./variety-memory";
 import { type StructureType, STRUCTURE_DISPLAY } from "./structure-variety";
+import { buildAllergenAvoidList } from "./allergens";
 
 const openai = new OpenAI({
   apiKey: process.env.AI_INTEGRATIONS_OPENAI_API_KEY,
@@ -339,7 +340,11 @@ function buildPrompt(template: TemplateRow, request: GenerateRequest, chosenProt
   const forbiddenText = getForbiddenProteinsText(chosenProtein);
 
   const allergenLine = request.allergens_to_avoid.length > 0
-    ? `ALLERGIES (CRITICAL): ${request.allergens_to_avoid.join(", ")} — exclude ALL ingredients with these allergens from main recipe AND veg option.`
+    ? `ALLERGIES (CRITICAL — ZERO TOLERANCE): ${request.allergens_to_avoid.join(", ")}
+MUST AVOID these specific ingredients: ${buildAllergenAvoidList(request.allergens_to_avoid)}
+Do NOT include ANY of the above in ingredients, steps, garnishes, sauces, or pro tips — not even as "optional".
+Use safe substitutions automatically:${request.allergens_to_avoid.includes("dairy") ? " butter→olive oil, cheese→nutritional yeast, cream→coconut cream, yogurt→coconut yogurt, milk→oat milk." : ""}${request.allergens_to_avoid.includes("gluten") ? " flour→GF flour, pasta→GF pasta, soy sauce→coconut aminos/tamari, bread→GF bread, tortillas→corn tortillas." : ""}${request.allergens_to_avoid.includes("nuts") ? " peanut butter→sunflower seed butter, almonds/cashews/walnuts→pumpkin seeds or sunflower seeds." : ""}${request.allergens_to_avoid.includes("soy") ? " soy sauce→coconut aminos, tofu→chickpeas, tempeh→lentils, edamame→green peas." : ""}${request.allergens_to_avoid.includes("eggs") || request.allergens_to_avoid.includes("egg") ? " eggs→flax eggs, mayo→egg-free mayo." : ""}
+This applies to the main recipe AND any veg_option.`
     : "";
 
   const budgetLine = budgetLevel === "low"
@@ -410,7 +415,11 @@ function buildPantryPrompt(template: TemplateRow, request: GenerateRequest, vari
   const budgetLevel = request.budget_level || "standard";
 
   const allergenLine = request.allergens_to_avoid.length > 0
-    ? `ALLERGIES (CRITICAL): ${request.allergens_to_avoid.join(", ")} — exclude ALL.`
+    ? `ALLERGIES (CRITICAL — ZERO TOLERANCE): ${request.allergens_to_avoid.join(", ")}
+MUST AVOID: ${buildAllergenAvoidList(request.allergens_to_avoid)}
+Do NOT include ANY of the above in ingredients, steps, garnishes, or sauces.
+Use safe substitutions:${request.allergens_to_avoid.includes("dairy") ? " butter→olive oil, cheese→nutritional yeast, cream→coconut cream." : ""}${request.allergens_to_avoid.includes("gluten") ? " flour→GF flour, soy sauce→coconut aminos, tortillas→corn tortillas." : ""}${request.allergens_to_avoid.includes("nuts") ? " nuts→seeds." : ""}${request.allergens_to_avoid.includes("soy") ? " soy sauce→coconut aminos, tofu→chickpeas." : ""}${request.allergens_to_avoid.includes("eggs") || request.allergens_to_avoid.includes("egg") ? " eggs→flax eggs, mayo→egg-free mayo." : ""}
+Applies to main recipe AND veg_option.`
     : "";
 
   const budgetLine = budgetLevel === "low"
@@ -420,7 +429,7 @@ function buildPantryPrompt(template: TemplateRow, request: GenerateRequest, vari
     : `BUDGET: STANDARD ($$).`;
 
   const vegLine = request.vegetarian_swap_needed
-    ? `VEG OPTION: 1 person. Add "veg_option" with swap_protein, ingredients, steps, plating_notes. No tofu if soy allergy, no paneer if dairy allergy.`
+    ? `VEG OPTION: 1 person. Add "veg_option" with swap_protein, ingredients, steps, plating_notes.${request.allergens_to_avoid.includes("soy") ? " No tofu/tempeh." : ""}${request.allergens_to_avoid.includes("dairy") ? " No paneer/cheese." : ""}${request.allergens_to_avoid.includes("nuts") ? " No nut-based proteins." : ""}`
     : "";
 
   const cuisineLine = buildCuisineDirective(request.cuisine_style || "any");

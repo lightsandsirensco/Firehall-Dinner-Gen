@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import { parse } from "csv-parse/sync";
 import type { TemplateRow, GenerateRequest } from "@shared/schema";
+import { log } from "./index";
 
 let cachedTemplates: TemplateRow[] | null = null;
 let cacheTimestamp = 0;
@@ -37,15 +38,24 @@ function timeRangesOverlap(requestRange: string, templateRange: string): boolean
   return reqMin <= tplMax && tplMin <= reqMax;
 }
 
-export function filterTemplates(templates: TemplateRow[], request: GenerateRequest): TemplateRow[] {
+interface FilterOptions {
+  skipCuisine?: boolean;
+  skipMealStyle?: boolean;
+  skipBudget?: boolean;
+  relaxTime?: boolean;
+}
+
+function filterTemplatesInternal(templates: TemplateRow[], request: GenerateRequest, opts: FilterOptions = {}): TemplateRow[] {
   return templates.filter((t) => {
     const busyLevels = t.busy_level_fit.split("|").map((s) => s.trim().toLowerCase());
     if (!busyLevels.includes(request.busy_level.toLowerCase())) {
       return false;
     }
 
-    if (!timeRangesOverlap(request.time_available, t.time_range_minutes)) {
-      return false;
+    if (!opts.relaxTime) {
+      if (!timeRangesOverlap(request.time_available, t.time_range_minutes)) {
+        return false;
+      }
     }
 
     const templateAppliances = t.appliances_needed.split("|").map((s) => s.trim().toLowerCase());
@@ -91,6 +101,47 @@ export function filterTemplates(templates: TemplateRow[], request: GenerateReque
 
     return true;
   });
+}
+
+export function filterTemplates(templates: TemplateRow[], request: GenerateRequest): TemplateRow[] {
+  return filterTemplatesInternal(templates, request);
+}
+
+export interface FilterResult {
+  candidates: TemplateRow[];
+  relaxed: boolean;
+  relaxedConstraints: string[];
+}
+
+export function filterTemplatesWithRelaxation(templates: TemplateRow[], request: GenerateRequest): FilterResult {
+  const strict = filterTemplatesInternal(templates, request);
+  const totalCount = templates.length;
+
+  log(`[allergen-filter] templates: ${totalCount} total, ${strict.length} after strict filter (allergens: ${request.allergens_to_avoid.join(",") || "none"})`, "template");
+
+  if (strict.length > 0) {
+    return { candidates: strict, relaxed: false, relaxedConstraints: [] };
+  }
+
+  if (request.allergens_to_avoid.length === 0) {
+    return { candidates: [], relaxed: false, relaxedConstraints: [] };
+  }
+
+  const relaxationSteps: { label: string; opts: FilterOptions }[] = [
+    { label: "time", opts: { relaxTime: true } },
+  ];
+
+  for (const step of relaxationSteps) {
+    const relaxed = filterTemplatesInternal(templates, request, step.opts);
+    if (relaxed.length > 0) {
+      const constraints = step.label.split("+");
+      log(`[allergen-filter] relaxed [${step.label}] → ${relaxed.length} templates`, "template");
+      return { candidates: relaxed, relaxed: true, relaxedConstraints: constraints };
+    }
+  }
+
+  log(`[allergen-filter] no templates after all relaxation — will use AI-only generation`, "template");
+  return { candidates: [], relaxed: true, relaxedConstraints: ["all"] };
 }
 
 function resolveTemplateProteins(raw: string): string[] {

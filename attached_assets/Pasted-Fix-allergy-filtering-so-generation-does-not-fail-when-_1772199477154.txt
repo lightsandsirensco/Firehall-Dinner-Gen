@@ -1,0 +1,62 @@
+Fix allergy filtering so generation does not fail when an allergy/restriction is selected.
+
+Problem:
+When an allergy is selected, searches/generation sometimes fail (empty results, timeouts, or “no recipe returned”).
+
+Implement:
+
+1) Treat allergies as EXCLUSIONS, not required inclusions
+- Allergy list defines ingredients to avoid.
+- Never filter by “must contain allergy”.
+
+2) Add ingredient normalization + allergen mapping
+Create a normalized ingredient matcher:
+- lowercase
+- singularize basic plurals
+- strip punctuation
+Then map allergens to keyword sets:
+- dairy: milk, butter, cheese, cream, whey, casein, yogurt
+- gluten: wheat, flour, bread, pasta, soy sauce (unless tamari), barley, rye
+- peanut: peanut, peanuts, peanut butter
+- tree nuts: almond, cashew, walnut, pecan, pistachio, hazelnut
+- egg: egg, mayo (unless egg-free), aioli
+- soy: soy, soy sauce, edamame, tofu, tempeh
+- shellfish: shrimp, prawn, crab, lobster
+(extend as needed)
+
+3) Template selection: never return “0 matches”
+- If filtering templates results in 0 matches:
+  a) relax only NON-safety constraints in this order:
+     cuisine -> meal_style -> budget -> time (within reason)
+  b) NEVER relax allergy constraints.
+- If still 0 matches, generate an AI recipe with substitutions and strict “avoid list”.
+- If AI fails, return a deterministic safe fallback recipe that avoids the allergen set.
+
+4) Add substitution logic (key to success)
+When allergy is selected, automatically swap common offenders:
+- dairy-free: olive oil for butter, coconut yogurt for yogurt, omit cheese or use DF cheese
+- gluten-free: tamari for soy sauce, GF pasta/tortillas, cornstarch for flour
+- nut-free: sunflower seed butter for peanut butter, omit nuts/crunch with toasted seeds
+- egg-free: vegan mayo or omit
+
+5) Validator changes
+- Validator must check allergen keywords against ingredients and FAIL if any are present.
+- If validator fails, auto-fix by substituting and updating title/steps (no extra AI call if possible).
+
+6) UI/UX
+- If constraints are very tight and we had to broaden cuisine/style/time, show a subtle note:
+  “Adjusted meal style to meet allergy requirements.”
+- Do not show scary errors.
+
+7) Logging
+Log:
+- selected allergies
+- templates before/after filtering count
+- whether substitutions were applied
+- final recipe passes allergen check
+
+Acceptance tests:
+- Select each allergy (dairy, gluten, nuts, egg, soy) and generate 10 meals.
+- 0 generation failures.
+- 0 allergen-containing ingredients in results.
+- Titles still match recipe content.

@@ -3,7 +3,8 @@ import { type Server } from "http";
 import crypto from "crypto";
 import cookieParser from "cookie-parser";
 import { generateRequestSchema, pizzaRequestSchema, hallVoteCreateSchema, type GenerateResponse, type ClientRecipeResponse, type ClientIngredient, type ClientStep, type ClientProteinSafety, type ClientPlating, type ClientTiming } from "@shared/schema";
-import { loadTemplates, filterTemplates, pickTemplate, chooseProtein } from "./templates";
+import { loadTemplates, filterTemplates, filterTemplatesWithRelaxation, pickTemplate, chooseProtein } from "./templates";
+import { scanRecipeForAllergens, autoSubstituteAllergens, buildAllergenAvoidList } from "./allergens";
 import { generateRecipe, generateRecipeFromPantry, repairRecipe, buildSafeFallbackRecipe } from "./ai";
 import { getVarietyConstraints, recordRecipe } from "./variety-memory";
 import { generatePizzaRecipe, pickPizzaConcept } from "./pizza-ai";
@@ -234,10 +235,37 @@ export async function registerRoutes(
     };
   }
 
-  function buildResponse(validation: import("./validateRecipe").ValidationResult, extras: Record<string, any>, debug: boolean, crewSize: number = 0, mealFormat: string = ""): Record<string, any> {
-    const merged = { ...validation.recipe, ...extras, _signature: validation.signature };
+  function buildResponse(validation: import("./validateRecipe").ValidationResult, extras: Record<string, any>, debug: boolean, crewSize: number = 0, mealFormat: string = "", allergens: string[] = []): Record<string, any> {
+    let recipe = validation.recipe;
+
+    if (allergens.length > 0) {
+      const scan = scanRecipeForAllergens(recipe.ingredients, recipe.steps, recipe.title, allergens);
+      if (scan.found) {
+        log(`[allergen-postcheck] Found ${scan.violations.length} allergen violations — auto-substituting: ${scan.violations.join("; ")}`, "allergen");
+        const fixed = autoSubstituteAllergens(recipe.ingredients, recipe.steps, recipe.title, allergens);
+        recipe = { ...recipe, ingredients: fixed.ingredients, steps: fixed.steps, title: fixed.title };
+        if (fixed.substitutionsMade.length > 0) {
+          log(`[allergen-postcheck] Substitutions: ${fixed.substitutionsMade.join("; ")}`, "allergen");
+        }
+
+        const rescan = scanRecipeForAllergens(recipe.ingredients, recipe.steps, recipe.title, allergens);
+        if (rescan.found) {
+          log(`[allergen-postcheck] Still found violations after substitution: ${rescan.violations.join("; ")}`, "allergen");
+        }
+      } else {
+        log(`[allergen-postcheck] Clean — no allergen violations found`, "allergen");
+      }
+    }
+
+    const merged = { ...recipe, ...extras, _signature: validation.signature };
     const client = normalizeToClientFormat(merged, crewSize, mealFormat);
     const base: Record<string, any> = { ...client };
+
+    if (extras._filtersRelaxed) {
+      base._filters_adjusted = true;
+      base._adjustment_note = "Adjusted meal style to meet allergy requirements.";
+    }
+
     if (debug) {
       const recipeValidationErrors = validation.issues.filter((i: string) =>
         i.startsWith("ingredient_unused:") ||
@@ -252,11 +280,11 @@ export async function registerRoutes(
         issues: validation.issues,
         validation_errors: recipeValidationErrors,
         action: validation.actionTaken,
-        meal_style: validation.recipe.meal_style,
-        base_carb: validation.recipe.tags?.base_carb,
-        cooking_method: validation.recipe.tags?.cooking_method,
-        cuisine: validation.recipe.tags?.cuisine,
-        key_ingredients: validation.recipe.tags?.key_ingredients,
+        meal_style: recipe.meal_style,
+        base_carb: recipe.tags?.base_carb,
+        cooking_method: recipe.tags?.cooking_method,
+        cuisine: recipe.tags?.cuisine,
+        key_ingredients: recipe.tags?.key_ingredients,
         signature: validation.signature,
       };
     }
@@ -324,16 +352,21 @@ export async function registerRoutes(
       }
 
       const templates = await loadTemplates();
-      const candidates = filterTemplates(templates, request);
+      const allergens = request.allergens_to_avoid || [];
+      const { candidates, relaxed: filtersRelaxed, relaxedConstraints } = filterTemplatesWithRelaxation(templates, request);
 
-      if (candidates.length === 0) {
+      let noTemplateMode = false;
+      if (candidates.length === 0 && allergens.length > 0) {
+        noTemplateMode = true;
+        log(`[allergen] No templates match even after relaxation — entering AI-only allergen-safe mode`, "ai");
+      } else if (candidates.length === 0) {
         return res.status(404).json({ message: "No matching templates found. Try loosening your filters." });
       }
 
-      const chosen = pickTemplate(candidates, request.last_template_id);
-      const chosenProtein = request.use_what_we_have ? "pantry" : chooseProtein(chosen, request.proteins, request.healthiness_preference);
+      const chosen = noTemplateMode ? null : pickTemplate(candidates, request.last_template_id);
+      const chosenProtein = request.use_what_we_have ? "pantry" : noTemplateMode ? request.proteins[0] || "chicken" : chooseProtein(chosen!, request.proteins, request.healthiness_preference);
       log(`Protein selected: ${chosenProtein} (from user choices: ${request.proteins.join(", ")})`, "ai");
-      const cacheKey = buildCacheKey(chosen.template_id, request, chosenProtein);
+      const cacheKey = noTemplateMode ? `allergen-safe-${chosenProtein}-${allergens.sort().join("-")}-${request.crew_size}` : buildCacheKey(chosen!.template_id, request, chosenProtein);
       const startTime = Date.now();
 
       const recentStyles = request.recent_meal_styles || [];
@@ -373,7 +406,7 @@ export async function registerRoutes(
           };
           const cacheVal = validateAndFixRecipe(cached, cacheValCtx);
           recordSignature(chosenProtein, cacheVal.signature);
-          return res.json(buildResponse(cacheVal, {}, cacheDebug, request.crew_size, request.meal_format));
+          return res.json(buildResponse(cacheVal, {}, cacheDebug, request.crew_size, request.meal_format, allergens));
         }
       }
 
@@ -413,7 +446,7 @@ export async function registerRoutes(
             };
             const poolVal = validateAndFixRecipe(poolEntry.recipe, poolValCtx);
             recordSignature(chosenProtein, poolVal.signature);
-            return res.json(buildResponse(poolVal, {}, poolDebug, request.crew_size, request.meal_format));
+            return res.json(buildResponse(poolVal, {}, poolDebug, request.crew_size, request.meal_format, allergens));
           }
         }
       }
@@ -463,7 +496,7 @@ export async function registerRoutes(
         request.recent_meal_styles?.[0],
       );
       const mealStyleDisplay = STRUCTURE_DISPLAY[structureType] || structureType;
-      log(`[structure] Selected: ${structureType} (${mealStyleDisplay}) for protein: ${chosenProtein} | template: ${chosen.template_id} | clientRecent: [${(request.recent_meal_styles || []).join(",")}] | preferDiff: ${request.prefer_different_style}`, "variety");
+      log(`[structure] Selected: ${structureType} (${mealStyleDisplay}) for protein: ${chosenProtein} | template: ${chosen ? chosen.template_id : "none"} | clientRecent: [${(request.recent_meal_styles || []).join(",")}] | preferDiff: ${request.prefer_different_style}`, "variety");
 
       const debugMode = req.query.debug === "1" || (req.body as any).debug === true;
 
@@ -480,22 +513,32 @@ export async function registerRoutes(
       const FAST_FALLBACK_MS = 8_000;
 
       const recentFbIds = getRecentFallbackTemplateIds();
-      let fallbackTemplate = chosen;
-      if (candidates.length > 1) {
+      let fallbackTemplate = chosen || (candidates.length > 0 ? candidates[0] : null);
+      if (fallbackTemplate && candidates.length > 1) {
         const nonRecent = candidates.filter(c => !recentFbIds.includes(parseInt(c.template_id)));
         const pool = nonRecent.length > 0 ? nonRecent : candidates;
-        const otherPool = pool.filter(c => c.template_id !== chosen.template_id);
+        const chosenId = chosen ? chosen.template_id : "";
+        const otherPool = pool.filter(c => c.template_id !== chosenId);
         fallbackTemplate = otherPool.length > 0
           ? otherPool[Math.floor(Math.random() * otherPool.length)]
           : pool[Math.floor(Math.random() * pool.length)];
       }
-      const fallbackProtein = request.use_what_we_have ? "pantry" : chooseProtein(fallbackTemplate, request.proteins, request.healthiness_preference);
-      const fallbackRecipe = buildFallbackRecipe(fallbackTemplate, request, fallbackProtein, structureType);
+      const fallbackProtein = request.use_what_we_have ? "pantry" : fallbackTemplate ? chooseProtein(fallbackTemplate, request.proteins, request.healthiness_preference) : chosenProtein;
+      const fallbackRecipe = fallbackTemplate
+        ? buildFallbackRecipe(fallbackTemplate, request, fallbackProtein, structureType)
+        : buildSafeFallbackRecipe(request.meal_format || mealStyleDisplay, request.crew_size);
 
+      const templateForAI = chosen || fallbackTemplate;
       const aiPromise = (async () => {
+        if (!templateForAI) {
+          return await generateRecipe(
+            { template_id: "0", template_name: "Open Recipe", style: "flexible", base_idea_description: "crew-sized meal", busy_level_fit: request.busy_level, time_range_minutes: request.time_available, appliances_needed: request.appliances.join("|"), proteins_allowed: request.proteins.join("|"), allergens_possible: "none" } as TemplateRow,
+            request, chosenProtein, varietyConstraints, structureType
+          );
+        }
         const result = request.use_what_we_have
-          ? await generateRecipeFromPantry(chosen, request, varietyConstraints, structureType)
-          : await generateRecipe(chosen, request, chosenProtein, varietyConstraints, structureType);
+          ? await generateRecipeFromPantry(templateForAI, request, varietyConstraints, structureType)
+          : await generateRecipe(templateForAI, request, chosenProtein, varietyConstraints, structureType);
         return result;
       })();
 
@@ -579,10 +622,11 @@ export async function registerRoutes(
         const estimatedCost =
           (totalTokensIn / 1000) * COST_PER_1K_INPUT +
           (totalTokensOut / 1000) * COST_PER_1K_OUTPUT;
-        setCachedRecipe(cacheKey, parseInt(chosen.template_id), aiValidation.recipe);
+        const templateId = chosen ? parseInt(chosen.template_id) : 0;
+        setCachedRecipe(cacheKey, templateId, aiValidation.recipe);
         logUsage({
           cacheKey,
-          templateId: parseInt(chosen.template_id),
+          templateId,
           cacheHit: false,
           tokensIn: totalTokensIn,
           tokensOut: totalTokensOut,
@@ -596,12 +640,14 @@ export async function registerRoutes(
           refillPool().catch(() => {});
         }
         recordSignature(chosenProtein, aiValidation.signature);
-        return res.json(buildResponse(aiValidation, {}, debugMode, request.crew_size, request.meal_format));
+        const responseExtras: Record<string, any> = {};
+        if (filtersRelaxed) responseExtras._filtersRelaxed = true;
+        return res.json(buildResponse(aiValidation, responseExtras, debugMode, request.crew_size, request.meal_format, allergens));
       }
 
       if (raceResult.type === "timeout") {
-        const fbTemplateId = parseInt(fallbackTemplate.template_id);
-        trackFallbackTemplateId(fbTemplateId);
+        const fbTemplateId = fallbackTemplate ? parseInt(fallbackTemplate.template_id) : 0;
+        if (fbTemplateId) trackFallbackTemplateId(fbTemplateId);
         trackStructure(structureType);
         log(`AI exceeded ${FAST_FALLBACK_MS}ms — serving fast fallback (template ${fbTemplateId}, structure ${structureType}), AI continues in background${isColdStart ? " [COLD START]" : ""}`, "fallback");
         recordRecipe(fallbackRecipe);
@@ -614,13 +660,14 @@ export async function registerRoutes(
           sessionId,
         });
 
+        const bgTemplateId = chosen ? parseInt(chosen.template_id) : 0;
         aiPromise
           .then((aiResult) => {
             const { recipe, tokensIn, tokensOut } = aiResult;
             const estimatedCost =
               (tokensIn / 1000) * COST_PER_1K_INPUT +
               (tokensOut / 1000) * COST_PER_1K_OUTPUT;
-            setCachedRecipe(cacheKey, parseInt(chosen.template_id), recipe);
+            setCachedRecipe(cacheKey, bgTemplateId, recipe);
             recordRecipe(recipe);
             log(`Background AI completed in ${Date.now() - startTime}ms — cached for next request | ~$${estimatedCost.toFixed(5)}`, "perf");
           })
@@ -631,7 +678,9 @@ export async function registerRoutes(
         const fbRecipeWithStyle = { ...fallbackRecipe, _fallback: true, meal_style: mealStyleDisplay };
         const fbValidation = validateAndFixRecipe(fbRecipeWithStyle as any, validationCtx);
         recordSignature(chosenProtein, fbValidation.signature);
-        return res.json(buildResponse(fbValidation, { _fallback: true }, debugMode, request.crew_size, request.meal_format));
+        const fbExtras: Record<string, any> = { _fallback: true };
+        if (filtersRelaxed) fbExtras._filtersRelaxed = true;
+        return res.json(buildResponse(fbValidation, fbExtras, debugMode, request.crew_size, request.meal_format, allergens));
       }
 
       const aiError = (raceResult as any).error;
@@ -640,14 +689,14 @@ export async function registerRoutes(
         : aiError?.message?.includes("parse") ? "json_parse_failed"
         : aiError?.message?.includes("validation") ? "validation_failed"
         : "ai_error";
-      const fbTemplateId = parseInt(fallbackTemplate.template_id);
-      trackFallbackTemplateId(fbTemplateId);
+      const fbTemplateId2 = fallbackTemplate ? parseInt(fallbackTemplate.template_id) : 0;
+      if (fbTemplateId2) trackFallbackTemplateId(fbTemplateId2);
       trackStructure(structureType);
-      log(`AI generation failed (${errorCategory}): ${aiError?.message}${isColdStart ? " [COLD START]" : ""} — serving fallback (template ${fbTemplateId}, structure ${structureType})`, "fallback");
+      log(`AI generation failed (${errorCategory}): ${aiError?.message}${isColdStart ? " [COLD START]" : ""} — serving fallback (template ${fbTemplateId2}, structure ${structureType})`, "fallback");
       recordRecipe(fallbackRecipe);
       logUsage({
         cacheKey,
-        templateId: fbTemplateId,
+        templateId: fbTemplateId2,
         cacheHit: false,
         latencyMs: Date.now() - startTime,
         ipHash,
@@ -657,7 +706,9 @@ export async function registerRoutes(
       const errFbWithStyle = { ...fallbackRecipe, _fallback: true, meal_style: mealStyleDisplay };
       const errFbValidation = validateAndFixRecipe(errFbWithStyle as any, validationCtx);
       recordSignature(chosenProtein, errFbValidation.signature);
-      return res.json(buildResponse(errFbValidation, { _fallback: true }, debugMode, request.crew_size, request.meal_format));
+      const errExtras: Record<string, any> = { _fallback: true };
+      if (filtersRelaxed) errExtras._filtersRelaxed = true;
+      return res.json(buildResponse(errFbValidation, errExtras, debugMode, request.crew_size, request.meal_format, allergens));
     } catch (error: any) {
       console.error("Generate error:", error);
       return res.status(500).json({ message: error.message || "Failed to generate recipe" });

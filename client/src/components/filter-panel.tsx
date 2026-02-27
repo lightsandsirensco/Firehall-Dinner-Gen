@@ -45,7 +45,7 @@ const PROTEIN_OPTIONS = [
 ];
 
 const ALLERGEN_OPTIONS = [
-  "dairy", "gluten", "soy", "eggs", "nuts"
+  "dairy", "gluten", "soy", "eggs", "nuts", "shellfish"
 ];
 
 const BUSY_LEVELS = [
