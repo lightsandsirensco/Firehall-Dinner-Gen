@@ -2,7 +2,7 @@ import { log } from "./index";
 
 export const ALLERGEN_KEYWORDS: Record<string, RegExp> = {
   dairy: /\b(milk|butter|cheese|cream|whey|casein|yogurt|yoghurt|ghee|cheddar|mozzarella|parmesan|feta|ricotta|halloumi|brie|gouda|gruyere|provolone|monterey|colby|swiss cheese|cream cheese|sour cream|half.and.half|whipped cream|ice cream|custard|paneer|buttermilk|condensed milk|evaporated milk|heavy cream|light cream|mascarpone|queso|crema)\b/i,
-  gluten: /\b(wheat|flour|bread|pasta|penne|spaghetti|linguine|fettuccine|macaroni|noodle|flatbread|naan|pizza dough|brioche|baguette|ciabatta|sourdough|couscous|barley|rye|seitan|breadcrumb|panko|crouton|pita|tortilla(?!.*corn)|bun(?!ion)|roll(?!ed)|orzo|farro|bulgur|semolina)\b/i,
+  gluten: /\b(wheat|flour|pasta|penne|spaghetti|linguine|fettuccine|macaroni|noodle|flatbread|naan|pizza dough|brioche|baguette|ciabatta|sourdough|couscous|barley|rye|seitan|bread|breadcrumb|panko|crouton|pita|tortilla(?!.*corn)|bun(?!ion)|roll(?!ed)|orzo|farro|bulgur|semolina)\b/i,
   peanut: /\b(peanut|peanuts|peanut butter|peanut oil|peanut sauce)\b/i,
   nuts: /\b(peanut|peanuts|peanut butter|almond|almonds|walnut|walnuts|cashew|cashews|pecan|pecans|pistachio|pistachios|hazelnut|hazelnuts|macadamia|pine nut|pine nuts|brazil nut|praline|nut butter|mixed nuts|almond milk|almond flour|almond butter|cashew cream)\b/i,
   egg: /\b(egg|eggs|mayo|mayonnaise|aioli|meringue|custard)\b/i,
@@ -80,7 +80,7 @@ export const ALLERGEN_SUBSTITUTIONS: {
 
 const FALSE_POSITIVE_GUARDS: Record<string, RegExp> = {
   dairy: /\b(coconut cream|coconut yogurt|dairy[- ]free|oat milk|almond milk|cashew cream|nut milk|rice milk|soy milk|non[- ]dairy)\b/i,
-  gluten: /\b(gluten[- ]free|rice noodle|rice paper|rice vinegar|rice wine|rice flour|corn tortilla|coconut aminos|tamari \(gluten-free\)|tamari|gf\b)/i,
+  gluten: /\b(gluten[- ]free|chickpea pasta|lentil pasta|brown rice pasta|rice noodle|rice paper|rice vinegar|rice wine|rice flour|corn tortilla|coconut aminos|tamari \(gluten-free\)|tamari|gf\b)/i,
   nuts: /\b(coconut|sunflower|pumpkin seed|sesame|pine[- ]?apple)\b/i,
   soy: /\b(coconut aminos|soy[- ]free|soy[- ]&[- ]gluten[- ]free)\b/i,
   egg: /\b(egg[- ]free|flax egg|chia egg|vegan mayo)\b/i,

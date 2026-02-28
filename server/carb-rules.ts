@@ -139,7 +139,7 @@ export function chooseCarb(ctx: ChooseCarbContext): "none" | "rice" | "quinoa" |
 
   if (key === "soup-stew") return "none";
   if (key === "burger" || key === "sandwich") return "none";
-  if (key === "pasta") return hasGluten ? "none" : "pasta";
+  if (key === "pasta") return "pasta";
   if (key === "wrap" || key === "taco") return "tortilla";
 
   if (key === "sheet-pan") {

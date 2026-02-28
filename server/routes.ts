@@ -259,7 +259,6 @@ export async function registerRoutes(
     }
 
     safeIngredients.push(
-      { item: "Rice", amount: scaleAmt(2, "cups"), notes: "" },
       { item: "Mixed vegetables (bell pepper, broccoli, carrots)", amount: scaleAmt(4, "cups"), notes: "" },
       { item: "Salt", amount: "1 tsp", notes: "" },
       { item: "Black pepper", amount: "½ tsp", notes: "" },
@@ -268,15 +267,14 @@ export async function registerRoutes(
     );
 
     const safeSteps = [
-      { heading: "Cook the rice (high heat, 1 min)", body: "Bring salted water to a boil. Add rice and cook according to package directions until tender. Drain and set aside." },
       { heading: "Season and cook the protein (medium-high, 8 min)", body: `Season ${protein === "vegetarian" ? "chickpeas" : "protein"} with salt, pepper, and paprika. Heat olive oil in a large skillet over medium-high heat. Cook until golden and cooked through, about 6-8 minutes.` },
       { heading: "Sauté vegetables (medium, 5 min)", body: "In the same pan, add garlic and mixed vegetables. Cook 4-5 minutes until tender-crisp." },
       { heading: "Combine and finish (medium, 2 min)", body: `Return ${protein === "vegetarian" ? "chickpeas" : "protein"} to the pan. Toss everything together. Squeeze lemon juice over the top.` },
-      { heading: "Plate and serve (no heat, 2 min)", body: "Spoon rice onto plates. Top with the protein and vegetable mixture. Serve family-style." },
+      { heading: "Plate and serve (no heat, 2 min)", body: "Plate the protein and vegetable mixture. Serve family-style." },
     ];
 
     const proteinDisplay = protein.charAt(0).toUpperCase() + protein.slice(1);
-    const safeTitle = `Lemon Herb ${protein === "vegetarian" ? "Chickpea" : proteinDisplay} Rice Skillet`;
+    const safeTitle = `Lemon Herb ${protein === "vegetarian" ? "Chickpea" : proteinDisplay} Skillet`;
 
     log(`[allergen-postcheck] Built allergen-safe fallback: "${safeTitle}"`, "allergen");
 
@@ -286,11 +284,11 @@ export async function registerRoutes(
       ingredients: safeIngredients,
       steps: safeSteps,
       meal_style: originalRecipe.meal_style || "Skillet",
-      base_carb: "rice",
+      base_carb: "none",
       cooking_method: "stovetop",
       tags: {
         ...(originalRecipe.tags || {}),
-        base_carb: "rice",
+        base_carb: "none",
         cooking_method: "stovetop",
         meal_style: "skillet",
       },
