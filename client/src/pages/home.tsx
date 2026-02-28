@@ -273,6 +273,7 @@ export default function Home() {
     setRecipe(data);
     setLoading(false);
     setError(null);
+    isGeneratingRef.current = false;
     abortControllerRef.current = null;
     addRecentSignature(data);
     if (data.meal_style) trackMealStyle(data.meal_style);
@@ -295,7 +296,23 @@ export default function Home() {
     }
   }, []);
 
+  const isGeneratingRef = useRef(false);
+  const lastClickTimeRef = useRef(0);
+  const CLICK_DEBOUNCE_MS = 2000;
+
   const handleGenerate = useCallback(async (currentFilters: FilterState, templateId?: number, preferDifferentStyle = false) => {
+    const now = Date.now();
+    if (now - lastClickTimeRef.current < CLICK_DEBOUNCE_MS) {
+      console.log("[Generate] Blocked — debounce (clicked too fast)");
+      return;
+    }
+    if (isGeneratingRef.current) {
+      console.log("[Generate] Blocked — already generating");
+      return;
+    }
+    lastClickTimeRef.current = now;
+    isGeneratingRef.current = true;
+
     if (abortControllerRef.current) {
       abortControllerRef.current.abort();
       abortControllerRef.current = null;
@@ -341,6 +358,7 @@ export default function Home() {
 
       if (seq !== latestRequestRef.current) {
         console.log("[Generate] Ignoring stale response", { seq, latest: latestRequestRef.current });
+        isGeneratingRef.current = false;
         return;
       }
 
@@ -356,10 +374,12 @@ export default function Home() {
       clearTimeout(timeout);
       if (seq !== latestRequestRef.current) {
         console.log("[Generate] Ignoring stale error", { seq });
+        isGeneratingRef.current = false;
         return;
       }
 
       if (controller.signal.aborted && err?.name === "AbortError") {
+        isGeneratingRef.current = false;
         return;
       }
 
@@ -388,6 +408,7 @@ export default function Home() {
       }
 
       setLoading(false);
+      isGeneratingRef.current = false;
       toast({
         title: "Generation failed",
         description: "Tap Generate to try again.",
