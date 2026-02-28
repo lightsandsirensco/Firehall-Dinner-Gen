@@ -54,9 +54,9 @@ export const CARB_RULES: Record<string, CarbRule> = {
     forbiddenBase: null,
     forbiddenBaseLabel: "",
     allowedSides: [],
-    defaultSide: "rice",
-    defaultSideHealthy: "quinoa",
-    baseRequired: true,
+    defaultSide: "greens",
+    defaultSideHealthy: "greens",
+    baseRequired: false,
     allowedBase: /\b(rice|quinoa|noodles|greens|potatoes|sweet potato|farro|barley|cauliflower rice|mixed greens)\b/i,
     allowedBaseLabel: "rice, quinoa, noodles, greens, potatoes",
   },
@@ -93,8 +93,8 @@ export const CARB_RULES: Record<string, CarbRule> = {
     forbiddenBase: null,
     forbiddenBaseLabel: "",
     allowedSides: [],
-    defaultSide: "rice",
-    defaultSideHealthy: "rice",
+    defaultSide: "none",
+    defaultSideHealthy: "none",
     baseRequired: false,
     allowedBase: /\b(rice|noodles|rice noodles|udon|soba|lo mein)\b/i,
     allowedBaseLabel: "rice or noodles",
@@ -119,10 +119,65 @@ export const CARB_RULES: Record<string, CarbRule> = {
   },
 };
 
-const BOWL_CARB_ROTATION = ["rice", "quinoa", "potatoes", "noodles", "sweet potato"];
-const STIR_FRY_CARB_ROTATION = ["rice", "rice noodles", "udon noodles", "lo mein noodles"];
+const BOWL_CARB_ROTATION = ["greens", "quinoa", "potatoes", "sweet potato", "none"];
+const STIR_FRY_CARB_ROTATION = ["none", "rice noodles", "udon noodles", "lo mein noodles"];
 const recentCarbs: string[] = [];
 const MAX_RECENT_CARBS = 10;
+
+export interface ChooseCarbContext {
+  meal_format: string;
+  healthiness: string;
+  time: string;
+  budget: string;
+  allergens: string[];
+  crew_size: number;
+}
+
+export function chooseCarb(ctx: ChooseCarbContext): "none" | "rice" | "quinoa" | "potatoes" | "sweet_potatoes" | "pasta" | "noodles" | "bread" | "tortilla" | "greens" {
+  const key = normalizeFormatToRuleKey(ctx.meal_format);
+  const hasGluten = ctx.allergens.includes("gluten");
+
+  if (key === "soup-stew") return "none";
+  if (key === "burger" || key === "sandwich") return "none";
+  if (key === "pasta") return hasGluten ? "none" : "pasta";
+  if (key === "wrap" || key === "taco") return "tortilla";
+
+  if (key === "sheet-pan") {
+    if (ctx.healthiness === "lean") return "none";
+    return "potatoes";
+  }
+
+  if (key === "bowl") {
+    if (ctx.healthiness === "lean") return "greens";
+    const pool: Array<"none" | "greens" | "quinoa" | "potatoes" | "sweet_potatoes"> = ["greens", "quinoa", "potatoes", "none"];
+    if (ctx.crew_size >= 12) {
+      return pickRandom(["greens", "potatoes", "none"] as const);
+    }
+    return pickRandom(pool);
+  }
+
+  if (key === "stir-fry") {
+    if (ctx.healthiness === "lean") return "none";
+    if (hasGluten) {
+      return pickRandom(["none", "rice"] as const);
+    }
+    return pickRandom(["none", "noodles", "rice"] as const);
+  }
+
+  if (key === "loaded-fries") return "potatoes";
+  if (key === "breakfast-for-dinner") return "potatoes";
+
+  if (ctx.healthiness === "lean") return "none";
+  if (ctx.crew_size >= 12) {
+    return pickRandom(["none", "potatoes", "greens"] as const);
+  }
+
+  return "none";
+}
+
+function pickRandom<T>(arr: readonly T[]): T {
+  return arr[Math.floor(Math.random() * arr.length)];
+}
 
 export function trackCarb(carb: string): void {
   const c = carb.toLowerCase().trim();
@@ -155,14 +210,14 @@ export function pickCarbForFormat(
     pool = [...STIR_FRY_CARB_ROTATION];
     if (hasGluten) pool = pool.filter(c => !["udon noodles", "lo mein noodles"].includes(c));
   } else if (format === "sheet-pan") {
-    pool = healthiness === "lean" ? ["sweet potatoes"] : ["potatoes", "sweet potatoes"];
+    pool = healthiness === "lean" ? ["none", "sweet potatoes"] : ["potatoes", "sweet potatoes", "none"];
   } else if (format === "loaded-fries") {
     pool = healthiness === "lean" ? ["sweet potato fries"] : ["fries", "sweet potato fries"];
   } else {
-    return "";
+    return "none";
   }
 
-  if (pool.length === 0) return "";
+  if (pool.length === 0) return "none";
 
   const last = recentCarbs.length > 0 ? recentCarbs[recentCarbs.length - 1] : "";
   const nonRepeat = pool.filter(c => c !== last);
@@ -170,14 +225,29 @@ export function pickCarbForFormat(
   return finalPool[Math.floor(Math.random() * finalPool.length)];
 }
 
-export function buildCarbRulesPromptBlock(mealFormat: string | undefined, healthiness: string): string {
-  if (!mealFormat || mealFormat === "random") return "";
+export function buildCarbRulesPromptBlock(mealFormat: string | undefined, healthiness: string, carbCtx?: ChooseCarbContext): string {
+  if (!mealFormat || mealFormat === "random") {
+    return `CARB POLICY: Carbs are OPTIONAL. Do NOT default to rice. Only include a carb if it genuinely improves the dish. Set base_carb tag to "none" if no carb is used.`;
+  }
   const key = normalizeFormatToRuleKey(mealFormat);
   const rules = CARB_RULES[key];
   if (!rules) return "";
 
+  const chosenCarb = carbCtx ? chooseCarb(carbCtx) : null;
+
   const lines: string[] = [];
   lines.push("CARB RULES (STRICT — enforced by validator):");
+
+  if (chosenCarb) {
+    if (chosenCarb === "none") {
+      lines.push(`- CHOSEN CARB: none. Do NOT include any carb (rice, pasta, quinoa, noodles) in ingredients or steps.`);
+      lines.push(`- Do NOT include "start the rice", "cook the pasta", or "serve over rice" steps.`);
+      lines.push(`- Set base_carb tag to "none".`);
+    } else {
+      lines.push(`- CHOSEN CARB: ${chosenCarb}. Use ${chosenCarb} as the base carb for this recipe.`);
+      lines.push(`- Set base_carb tag to "${chosenCarb}".`);
+    }
+  }
 
   if (rules.noneBase) {
     lines.push(`- base_carb MUST be "none". This format does NOT have a base carb.`);
@@ -200,16 +270,24 @@ export function buildCarbRulesPromptBlock(mealFormat: string | undefined, health
 
   if (rules.baseRequired) {
     lines.push(`- A base carb IS required for this format.`);
+  } else {
+    lines.push(`- Carbs are OPTIONAL for this format. Do NOT default to rice.`);
+  }
+
+  if (key === "bowl") {
+    lines.push(`- Base can be greens, quinoa, potatoes, or no carb (protein bowl). Do NOT default to rice.`);
+  } else if (key === "stir-fry") {
+    lines.push(`- Rice or noodles optional — serve as veg + protein stir-fry if omitted. Do NOT default to rice.`);
   }
 
   if (rules.allowedSides.length > 0) {
     const sidePick = healthiness === "lean" ? rules.defaultSideHealthy : rules.defaultSide;
-    if (sidePick) {
+    if (sidePick && sidePick !== "none") {
       lines.push(`- Preferred side: ${sidePick}.`);
     }
   }
 
-  lines.push(`- Do NOT use "either/or" carb placeholders — choose ONE specific carb.`);
+  lines.push(`- Choose ONE specific carb or "none". Do NOT use "either/or" carb placeholders.`);
 
   return lines.join("\n");
 }
@@ -380,14 +458,64 @@ export function enforceCarbs(recipe: GenerateResponse, mealFormat: string | unde
     log(`[carbRules] breakfast: removed rice, added hash browns`, "carb");
   }
 
+  const RICE_ALLOWED_FORMATS = new Set(["bowl", "stir-fry", "rice-bake"]);
+  if (!RICE_ALLOWED_FORMATS.has(key) && isBaseRice(fixed)) {
+    const alreadyHandled = key === "burger" || key === "sandwich" || key === "soup-stew" || key === "wrap" || key === "taco" || key === "sheet-pan" || key === "breakfast-for-dinner";
+    if (!alreadyHandled) {
+      fixed.ingredients = fixed.ingredients.filter(i => !/\brice\b/i.test(i.item) || /rice vinegar|rice wine|rice paper|rice noodle/i.test(i.item));
+      fixed.steps = fixed.steps.filter(s => !/\bstart the rice\b|\bcook the rice\b/i.test(`${s.heading} ${s.body}`));
+      fixed.steps = fixed.steps.map(s => ({
+        ...s,
+        body: s.body.replace(/\bserve over rice\b/gi, "plate and serve"),
+        heading: s.heading.replace(/\bserve over rice\b/gi, "plate and serve"),
+      }));
+      if (fixed.tags) {
+        const replacement = key === "sheet-pan" ? "potatoes" : "none";
+        fixed.tags = { ...fixed.tags, base_carb: replacement };
+      }
+      fixes.push(`carb_fix:${key}_removed_rice→none`);
+      log(`[carbRules] ${key}: removed rice base, set base_carb=none`, "carb");
+    }
+  }
+
   if (fixed.tags) {
     const currentBaseCarb = (fixed.tags.base_carb || "").toLowerCase();
+
+    if (currentBaseCarb === "none" || !currentBaseCarb) {
+      fixed.steps = fixed.steps.filter(s => {
+        const text = `${s.heading} ${s.body}`;
+        if (/\bstart the rice\b|\bcook the rice\b|\bstart the pasta\b/i.test(text)) {
+          fixes.push("carb_fix:removed_stale_carb_step");
+          return false;
+        }
+        return true;
+      });
+      fixed.steps = fixed.steps.map(s => ({
+        ...s,
+        body: s.body.replace(/\bserve over rice\b/gi, "plate and serve").replace(/\bserve on rice\b/gi, "plate and serve"),
+        heading: s.heading.replace(/\bserve over rice\b/gi, "plate and serve").replace(/\bserve on rice\b/gi, "plate and serve"),
+      }));
+    }
+
+    if ((currentBaseCarb === "none" || !currentBaseCarb) && fixed.title) {
+      const titleBefore = fixed.title;
+      fixed.title = fixed.title
+        .replace(/\s+Rice\b/gi, "")
+        .replace(/\bRice\s+/gi, "")
+        .replace(/\s+Pasta\b/gi, "")
+        .replace(/\bPasta\s+/gi, "")
+        .trim();
+      if (fixed.title !== titleBefore) {
+        fixes.push(`carb_fix:title_stripped_carb_word`);
+      }
+    }
+
     if (rules.noneBase && currentBaseCarb && currentBaseCarb !== "none") {
       fixed.tags = { ...fixed.tags, base_carb: "none" };
       fixes.push(`carb_tag_fix:${key}_base_carb→none`);
     }
     if (rules.forbiddenBase && currentBaseCarb && rules.forbiddenBase.test(currentBaseCarb)) {
-      const replacement = rules.noneBase ? "none" : (rules.defaultSide || "");
+      const replacement = rules.noneBase ? "none" : (rules.defaultSide || "none");
       fixed.tags = { ...fixed.tags, base_carb: replacement };
       fixes.push(`carb_tag_fix:${key}_base_carb_${currentBaseCarb}→${replacement}`);
     }

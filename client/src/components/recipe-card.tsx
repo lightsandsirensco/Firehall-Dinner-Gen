@@ -323,7 +323,7 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
             </Badge>
           )}
         </div>
-        {recipeTags && (recipeTags.cuisine || recipeTags.cooking_method || recipeTags.high_protein || recipeTags.high_fiber || recipeTags.quick_cleanup) && (
+        {recipeTags && (recipeTags.cuisine || recipeTags.cooking_method || recipeTags.high_protein || recipeTags.high_fiber || recipeTags.quick_cleanup || !recipeTags.base_carb || recipeTags.base_carb === "none" || recipeTags.base_carb === "greens") && (
           <div className="flex items-center gap-1.5 mt-1.5 flex-wrap" data-testid="section-recipe-tags">
             {recipeTags.cuisine && (
               <Badge variant="outline" className="text-xs" data-testid="badge-tag-cuisine">
@@ -353,6 +353,18 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
               <Badge variant="secondary" className="text-xs" data-testid="badge-tag-quick-cleanup">
                 <Sparkles className="w-3 h-3 mr-1" />
                 Quick Cleanup
+              </Badge>
+            )}
+            {(recipeTags.base_carb === "none" || !recipeTags.base_carb) && (
+              <Badge variant="secondary" className="text-xs" data-testid="badge-no-carb">
+                <Leaf className="w-3 h-3 mr-1" />
+                No Carb Needed
+              </Badge>
+            )}
+            {recipeTags.base_carb === "greens" && (
+              <Badge variant="secondary" className="text-xs" data-testid="badge-lower-carb">
+                <Leaf className="w-3 h-3 mr-1" />
+                Lower-Carb Option
               </Badge>
             )}
           </div>

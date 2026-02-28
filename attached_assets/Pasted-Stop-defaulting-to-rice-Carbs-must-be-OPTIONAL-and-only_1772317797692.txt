@@ -1,0 +1,43 @@
+Stop defaulting to rice. Carbs must be OPTIONAL and only included when they make sense for the selected meal format.
+
+Requirements:
+1) Add a “carb_optional” rule to generation:
+- Do NOT force a carb into every recipe.
+- If a carb is not structurally required by the meal format, omit it by default.
+
+2) Remove all placeholders like “rice or pasta”.
+Always choose a specific base OR “no carb”.
+
+3) Meal-format carb rules (hard constraints):
+- Soup/Stew/Chili: NO base carb (allowed: potatoes/beans/lentils inside stew; bread as optional side only)
+- Burger/Sandwich: NO rice/quinoa/pasta. Default side = optional (salad/veg) OR wedges/fries if comfort/budget-friendly
+- Wrap/Taco: base = tortilla/wrap only (no rice unless explicitly optional side)
+- Sheet-pan/Roast: carbs optional; prefer veggies; potatoes optional
+- Stir-fry: rice OR noodles optional (only if time/crew size fits); otherwise serve as “veg + protein stir-fry”
+- Bowl: carb optional; can be greens base (salad bowl) or protein bowl without rice
+- Pasta: carb required (pasta/noodles)
+- Pizza night: crust required (dough)
+
+4) Add a decision function chooseCarb(ctx):
+- Inputs: meal_format, healthiness, time, budget, allergies, crew_size
+- Output: one of [none, rice, quinoa, potatoes, sweet_potatoes, pasta, noodles, bread, tortilla, greens]
+Rules:
+- If meal_format does NOT require a carb and healthiness=Healthy → prefer none or greens
+- If crew_size >= 12 → carbs optional, but if used, prefer potatoes/greens over rice unless bowl/stir-fry
+- If gluten avoidance → never choose pasta/bread unless explicitly gluten-free
+- Never choose rice as a default fallback
+
+5) Validator enforcement:
+- If meal_format is not Bowl/Stir-fry and base_carb is rice → set base_carb to none (or potatoes if it fits), and rewrite ingredients/steps/title accordingly.
+- If carb is none, steps must NOT include “start the rice/pasta”.
+
+6) UI/Labels:
+- Add badge when no carb:
+  “No Carb Needed” or “Lower-Carb Option”
+- Title must not mention rice/pasta unless present.
+
+Acceptance test:
+- Generate 50 random meals:
+  - At least 30% contain NO carb when format supports it
+  - Rice appears only for Bowl/Stir-fry (or explicitly optional side)
+  - No recipes mention rice in steps/ingredients unless actually included

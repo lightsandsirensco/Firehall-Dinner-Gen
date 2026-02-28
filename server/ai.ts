@@ -5,7 +5,7 @@ import { getForbiddenProteinsText, validateProteinCompliance, validateTitleConsi
 import { type VarietyConstraints, buildVarietyPromptBlock, buildHealthyPromptBlock } from "./variety-memory";
 import { type StructureType, STRUCTURE_DISPLAY } from "./structure-variety";
 import { buildAllergenAvoidList } from "./allergens";
-import { buildCarbRulesPromptBlock } from "./carb-rules";
+import { buildCarbRulesPromptBlock, type ChooseCarbContext } from "./carb-rules";
 
 const openai = new OpenAI({
   apiKey: process.env.AI_INTEGRATIONS_OPENAI_API_KEY,
@@ -313,11 +313,12 @@ const MEAL_FORMAT_RULES: Record<string, string> = {
   burger: "STRUCTURE REQUIREMENT: meal_format=burger. Do NOT mix formats.\nFORMAT RULES (BURGER — STRICT): Must include buns (or lettuce wrap if explicitly low carb). Final step MUST assemble the burger. FORBIDDEN base carb: rice, pasta, quinoa, noodles, couscous, tortillas. Do NOT say 'serve over rice'. Do NOT include 'start the rice' step. Do NOT include 'either/or' ingredients. Side options: potato wedges, sweet potato fries, coleslaw, side salad. base_carb tag MUST be \"none\".",
   tacos: "STRUCTURE REQUIREMENT: meal_format=tacos. Do NOT mix formats.\nFORMAT RULES (TACOS — STRICT): Must include tortillas (corn or flour). Final step MUST assemble tacos. FORBIDDEN: buns, rice, pasta, quinoa. Do NOT say 'serve over rice'. Rice is NOT allowed.",
   wrap: "STRUCTURE REQUIREMENT: meal_format=wrap. Do NOT mix formats.\nFORMAT RULES (WRAP — STRICT): Must include a large tortilla or wrap. Final step MUST roll or fold the wrap. FORBIDDEN: buns, rice, pasta, quinoa. Do NOT say 'serve over rice'.",
-  bowl: "STRUCTURE REQUIREMENT: meal_format=bowl. Do NOT mix formats.\nFORMAT RULES (BOWL — STRICT): Must include exactly ONE base carb from [rice, quinoa, potatoes, greens, cauliflower rice]. Final plating MUST say 'serve in a bowl' or 'serve over [base]'. FORBIDDEN: buns, tortillas. Do NOT output 'either/or' ingredients — choose ONE specific base.",
+  bowl: "STRUCTURE REQUIREMENT: meal_format=bowl. Do NOT mix formats.\nFORMAT RULES (BOWL — STRICT): Carb is OPTIONAL. Can be greens base (salad bowl), protein bowl, or quinoa/sweet potato base. Do NOT default to rice. Final plating MUST say 'serve in a bowl' or 'serve over [base]'. FORBIDDEN: buns, tortillas. Do NOT output 'either/or' ingredients — choose ONE specific base.",
   pasta: "STRUCTURE REQUIREMENT: meal_format=pasta. Do NOT mix formats.\nFORMAT RULES (PASTA — STRICT): The ONLY base carb allowed is pasta. Must include pasta (any shape) in ingredients. Final step MUST toss or combine with pasta. FORBIDDEN: rice, quinoa, buns, tortillas, fries. Do NOT include rice anywhere — not in ingredients, not in steps, not as a side. Do NOT include 'rice or pasta' either/or ingredients. Do NOT say 'serve over rice'. Do not include more than one base carb.",
   salad: "STRUCTURE REQUIREMENT: meal_format=salad. Do NOT mix formats.\nFORMAT RULES (SALAD — STRICT): Must include greens or a salad base. Final step MUST toss or plate the salad. FORBIDDEN: rice, pasta, buns, tortillas, quinoa.",
-  sheet_pan: "STRUCTURE REQUIREMENT: meal_format=sheet_pan. Do NOT mix formats.\nFORMAT RULES (SHEET PAN — STRICT): Must include an oven temperature AND a roasting/baking step on a sheet pan/baking sheet. Must NOT be a stovetop-only recipe. FORBIDDEN: rice, pasta, noodles, buns, tortillas. Do NOT say 'serve over rice'. Do NOT include 'start the rice' step. Use potatoes or sweet potatoes as the carb on the pan.",
-  stir_fry: "STRUCTURE REQUIREMENT: meal_format=stir_fry. Do NOT mix formats.\nFORMAT RULES (STIR FRY — STRICT): Must mention stir-fry, wok, or high-heat skillet technique. FORBIDDEN: buns, tortillas. Do NOT default to rice — only include a carb base if it is integral to the stir-fry. If including a carb, choose ONE (rice OR noodles, not both).",
+  sheet_pan: "STRUCTURE REQUIREMENT: meal_format=sheet_pan. Do NOT mix formats.\nFORMAT RULES (SHEET PAN — STRICT): Must include an oven temperature AND a roasting/baking step on a sheet pan/baking sheet. Must NOT be a stovetop-only recipe. FORBIDDEN: rice, pasta, noodles, buns, tortillas. Do NOT say 'serve over rice'. Do NOT include 'start the rice' step. base_carb should be 'none' or 'potatoes' only. Do NOT include rice.",
+  skillet: "STRUCTURE REQUIREMENT: meal_format=skillet. Do NOT mix formats.\nFORMAT RULES (SKILLET — STRICT): Must use a skillet or pan on stovetop. Carbs NOT required. Do NOT default to rice. Serve the skillet dish as protein + vegetables. FORBIDDEN: buns, tortillas. base_carb should be 'none' unless a carb is integral to the dish.",
+  stir_fry: "STRUCTURE REQUIREMENT: meal_format=stir_fry. Do NOT mix formats.\nFORMAT RULES (STIR FRY — STRICT): Must mention stir-fry, wok, or high-heat skillet technique. Rice or noodles optional. Can serve as protein + veggie stir-fry without carb. FORBIDDEN: buns, tortillas. Do NOT default to rice — only include a carb base if it is integral to the stir-fry. If including a carb, choose ONE (rice OR noodles, not both).",
   soup_chili: "STRUCTURE REQUIREMENT: meal_format=soup_chili. Do NOT mix formats.\nFORMAT RULES (SOUP/CHILI — STRICT): Must include broth/stock (>= 3 cups). Must include a simmer step (>= 10 minutes). Single pot flow. base_carb MUST be \"none\". FORBIDDEN base: rice, pasta, noodles, quinoa. Do NOT include a \"start the rice\" step. Do NOT say \"serve over rice\". Allowed thickeners INSIDE the stew: potato, beans, lentils, barley. Optional SIDE (not base): crusty bread or cornbread.",
   breakfast: "STRUCTURE REQUIREMENT: meal_format=breakfast. Do NOT mix formats.\nFORMAT RULES (BREAKFAST — STRICT): Must include a breakfast anchor ingredient: eggs, oats, yogurt, pancakes, hash browns, or similar. FORBIDDEN: rice, pasta, buns, tortillas.",
   loaded_fries: "STRUCTURE REQUIREMENT: meal_format=loaded_fries. Do NOT mix formats.\nFORMAT RULES (LOADED FRIES — STRICT): Base carb MUST be fries (frozen fries OR fresh-cut potato fries). Must bake or air-fry the fries, then top them. FORBIDDEN: rice, pasta, quinoa, tortillas, buns. Do NOT say 'serve over rice'.",
@@ -360,7 +361,15 @@ This applies to the main recipe AND any veg_option.`
 
   const cuisineLine = buildCuisineDirective(request.cuisine_style || "any");
   const mealFormatBlock = buildMealFormatBlock(request.meal_format);
-  const carbRulesBlock = buildCarbRulesPromptBlock(request.meal_format, request.healthiness_preference);
+  const carbCtx: ChooseCarbContext = {
+    meal_format: request.meal_format || "random",
+    healthiness: request.healthiness_preference || "balanced",
+    time: request.time_available || "25-40",
+    budget: request.budget_level || "standard",
+    allergens: request.allergens_to_avoid || [],
+    crew_size: request.crew_size || 6,
+  };
+  const carbRulesBlock = buildCarbRulesPromptBlock(request.meal_format, request.healthiness_preference, carbCtx);
 
   const structureLine = structureType
     ? `MEAL STRUCTURE (mandatory): This recipe MUST be a ${STRUCTURE_DISPLAY[structureType]} style meal. The dish format, title, and presentation must clearly be a ${STRUCTURE_DISPLAY[structureType]}. Do NOT repeat the same structure as previous recipes.`
@@ -400,6 +409,7 @@ ${varietyBlock}
 
 ${healthyBlock}
 
+CARB POLICY: Carbs are OPTIONAL. Do NOT default to rice. Only include a carb if the meal format structurally requires it (pasta needs pasta, pizza needs crust). For formats like skillet, sheet-pan, bowl, stir-fry, soup — omit carbs unless they genuinely improve the dish. If you do include a carb, choose ONE specific option — never 'rice or pasta'. If no carb is used, set base_carb tag to 'none' and do NOT include rice/pasta/quinoa in ingredients or steps.
 RULES: ${request.crew_size} servings. 6-10 steps max. 8-12 ingredients. ${isVegetarian ? "25-45g" : "35-60g"} protein/serving. Include "pro_tips": 1-2 short practical tips (1-2 sentences each) about technique, make-ahead, or serving. Max 2 tips.
 TITLE RULES (mandatory): Use this formula: {Cooking Method or Texture Word} + {Flavor Descriptor} + {Protein} + {Meal Style or Base}. Use 1-2 vivid adjectives max. Only use descriptors that are supported by actual ingredients/spices (e.g. "Smoky" only if using smoked paprika/chipotle/BBQ; "Zesty" only if using lime/lemon; "Creamy" only if using cream/cheese/coconut milk; "Crispy" only if a frying/roasting step produces crispness). Use texture words only if supported by cooking method in steps (crispy, roasted, grilled, charred, seared, caramelized). NEVER use clickbait words: "ultimate", "insane", "crazy", "life-changing", "best-ever", "epic". Examples of great titles: "Crispy Garlic-Lime Chicken Wraps", "Smoky Chipotle Beef Skillet Bowls", "Zesty Lemon-Oregano Sheet-Pan Chicken", "Hearty Mediterranean Chickpea Pitas", "Bold Teriyaki Steak Stir-Fry", "Creamy Tuscan Turkey Pasta", "Golden Roasted Veggie & Tofu Grain Bowls". Bland titles like "Chicken Rice Bowl" or "Beef Pasta" are NOT acceptable.
 DESCRIPTION RULES ("why_it_fits_tonight"): Write 1-2 punchy sentences that sell the meal to the crew. Mention texture + flavor + protein. Explain why it works for the shift (quick, filling, easy cleanup, budget-friendly, one-pan, feeds a crowd). Example: "A bold, protein-packed wrap with smoky spices and crispy tofu — built to satisfy a hungry crew in 30 minutes." Do NOT use generic lines like "A hearty meal for the crew."
@@ -407,7 +417,7 @@ FLAVOR AMPLIFIER MAP (use ONLY when ingredients justify it): lime/lemon→"zesty
 STEP FORMAT (each step MUST follow this): heading = "Action (heat level, time)" e.g. "${isVegetarian ? "Sauté the chickpeas (medium-high, 4-5 min)" : "Sear the chicken (medium-high, 5-7 min)"}". body = concise HOW-TO with visual/doneness cue. Each step MUST include: (1) clear action verb + exact sequence, (2) heat level (low/medium/medium-high/high or oven °F) + pan/pot/oven instructions, (3) doneness cue (color/texture/internal temp, e.g. "until golden brown", "until edges crisp", "until internal temp reaches 165°F"), (4) brief parallelization note where appropriate (e.g. "while fries bake, brown the beef"). AVOID vague steps like "cook until done". Never repeat same instruction in two steps. No storytelling. Keep each step 1-3 sentences.
 ${isVegetarian ? "SAFETY: Reheat leftovers to 165°F. Ensure tofu/tempeh is cooked through." : "SAFETY TEMPS (always include for any protein): chicken/turkey 165°F/74°C, ground beef/sausage 160°F/71°C, pork 145°F/63°C +3min rest, fish 145°F/63°C."}
 PRIMARY PROTEIN SOURCE: Set "primary_protein_source" to the single main protein ingredient (e.g. "chicken", "lentils", "salmon", "chickpeas", "tofu", "eggs"). For vegetarian: name the specific plant protein used most.
-REQUIRED OUTPUT TAGS: Include "tags" object with: cuisine (e.g. "Mediterranean"), cooking_method (e.g. "sheet-pan"), base_carb (the actual carb used, or empty string if none), key_ingredients (3-5 main items as string array), high_protein (boolean, true if 30g+ protein/serving), high_fiber (boolean, true if contains beans/lentils/chickpeas/whole grains), quick_cleanup (boolean, true if one-pan/sheet-pan/slow-cooker).
+REQUIRED OUTPUT TAGS: Include "tags" object with: cuisine (e.g. "Mediterranean"), cooking_method (e.g. "sheet-pan"), base_carb (the actual carb used e.g. "rice", "pasta", "potatoes", "tortilla", "greens", or "none" if no carb — NEVER default to rice), key_ingredients (3-5 main items as string array), high_protein (boolean, true if 30g+ protein/serving), high_fiber (boolean, true if contains beans/lentils/chickpeas/whole grains), quick_cleanup (boolean, true if one-pan/sheet-pan/slow-cooker).
 
 JSON:
 {"template_id":${template.template_id},"chosen_protein":"${proteinDisplay}","primary_protein_source":"","title":"","why_it_fits_tonight":"","timing":{"prep_minutes":0,"cook_minutes":0,"total_minutes":0},"protein_safety":[{"protein":"","target_temp_f":0,"target_temp_c":0,"rest_minutes":0,"probe_where":"","notes":""}],"ingredients":[{"item":"","amount":"","notes":""}],"steps":[{"heading":"","body":""}],"cleanup_tip":"","macros_per_serving":{"calories":0,"protein_g":0,"carbs_g":0,"fat_g":0},"budget_level":"${budgetLevel}","budget_tips":[],"pro_tips":[],"tags":{"cuisine":"","cooking_method":"","base_carb":"","key_ingredients":[],"high_protein":false,"high_fiber":false,"quick_cleanup":false}${request.vegetarian_swap_needed ? ',"veg_option":{"enabled":true,"swap_protein":"","ingredients":[],"steps":[],"plating_notes":""}' : ""}}`;
@@ -437,7 +447,15 @@ Applies to main recipe AND veg_option.`
 
   const cuisineLine = buildCuisineDirective(request.cuisine_style || "any");
   const mealFormatBlock = buildMealFormatBlock(request.meal_format);
-  const carbRulesBlock = buildCarbRulesPromptBlock(request.meal_format, request.healthiness_preference);
+  const pantryCarbCtx: ChooseCarbContext = {
+    meal_format: request.meal_format || "random",
+    healthiness: request.healthiness_preference || "balanced",
+    time: request.time_available || "25-40",
+    budget: request.budget_level || "standard",
+    allergens: request.allergens_to_avoid || [],
+    crew_size: request.crew_size || 6,
+  };
+  const carbRulesBlock = buildCarbRulesPromptBlock(request.meal_format, request.healthiness_preference, pantryCarbCtx);
 
   const structureLine = structureType
     ? `MEAL STRUCTURE (mandatory): This recipe MUST be a ${STRUCTURE_DISPLAY[structureType]} style meal. Vary the format.`
@@ -473,6 +491,7 @@ ${varietyBlock}
 
 ${healthyBlock}
 
+CARB POLICY: Carbs are OPTIONAL. Do NOT default to rice. Only include a carb if the meal format structurally requires it (pasta needs pasta, pizza needs crust). For formats like skillet, sheet-pan, bowl, stir-fry, soup — omit carbs unless they genuinely improve the dish. If you do include a carb, choose ONE specific option — never 'rice or pasta'. If no carb is used, set base_carb tag to 'none' and do NOT include rice/pasta/quinoa in ingredients or steps.
 RULES: Use as many on-hand ingredients as practical. List used ones in "ingredients_used". List 1-4 extras needed in "extra_items_needed" (skip basic pantry staples). ${request.crew_size} servings. 6-10 steps max. 8-12 ingredients. ${isPantryVegetarian ? "25-45g" : "35-60g"} protein/serving. Include "pro_tips": 1-2 short practical tips (1-2 sentences each) about technique, make-ahead, or serving. Max 2 tips.
 TITLE RULES (mandatory): Use this formula: {Cooking Method or Texture Word} + {Flavor Descriptor} + {Protein} + {Meal Style or Base}. Use 1-2 vivid adjectives max. Only use descriptors supported by actual ingredients/spices. Use texture words only if supported by cooking method. NEVER use clickbait words: "ultimate", "insane", "crazy", "life-changing", "best-ever", "epic". Bland titles like "Chicken Bowl" or "Beef Pasta" are NOT acceptable.
 DESCRIPTION RULES ("why_it_fits_tonight"): Write 1-2 punchy sentences that sell the meal to the crew. Mention texture + flavor + protein. Explain why it works for the shift. Example: "A bold, protein-packed wrap with smoky spices and crispy tofu — built to satisfy a hungry crew in 30 minutes."
@@ -480,7 +499,7 @@ FLAVOR AMPLIFIER MAP (use ONLY when ingredients justify it): lime/lemon→"zesty
 STEP FORMAT (each step MUST follow this): heading = "Action (heat level, time)" e.g. "Sear the chicken (medium-high, 5-7 min)". body = concise HOW-TO with visual/doneness cue. Each step MUST include: (1) clear action verb + exact sequence, (2) heat level (low/medium/medium-high/high or oven °F) + pan/pot/oven instructions, (3) doneness cue (color/texture/internal temp, e.g. "until golden brown", "until edges crisp", "until internal temp reaches 165°F"), (4) brief parallelization note where appropriate (e.g. "while fries bake, brown the beef"). AVOID vague steps like "cook until done". Never repeat same instruction in two steps. No storytelling. Keep each step 1-3 sentences.
 SAFETY TEMPS (always include for any protein): chicken/turkey 165°F/74°C, ground beef/sausage 160°F/71°C, pork 145°F/63°C +3min rest, fish 145°F/63°C.
 PRIMARY PROTEIN SOURCE: Set "primary_protein_source" to the single main protein ingredient (e.g. "chicken", "lentils", "salmon", "chickpeas", "tofu", "eggs"). For vegetarian: name the specific plant protein used most.
-REQUIRED OUTPUT TAGS: Include "tags" object with: cuisine (e.g. "Mediterranean"), cooking_method (e.g. "sheet-pan"), base_carb (the actual carb used, or empty string if none), key_ingredients (3-5 main items as string array), high_protein (boolean, true if 30g+ protein/serving), high_fiber (boolean, true if contains beans/lentils/chickpeas/whole grains), quick_cleanup (boolean, true if one-pan/sheet-pan/slow-cooker).
+REQUIRED OUTPUT TAGS: Include "tags" object with: cuisine (e.g. "Mediterranean"), cooking_method (e.g. "sheet-pan"), base_carb (the actual carb used e.g. "rice", "pasta", "potatoes", "tortilla", "greens", or "none" if no carb — NEVER default to rice), key_ingredients (3-5 main items as string array), high_protein (boolean, true if 30g+ protein/serving), high_fiber (boolean, true if contains beans/lentils/chickpeas/whole grains), quick_cleanup (boolean, true if one-pan/sheet-pan/slow-cooker).
 
 JSON:
 {"template_id":${template.template_id},"chosen_protein":"","primary_protein_source":"","title":"","why_it_fits_tonight":"","timing":{"prep_minutes":0,"cook_minutes":0,"total_minutes":0},"protein_safety":[{"protein":"","target_temp_f":0,"target_temp_c":0,"rest_minutes":0,"probe_where":"","notes":""}],"ingredients":[{"item":"","amount":"","notes":""}],"steps":[{"heading":"","body":""}],"cleanup_tip":"","macros_per_serving":{"calories":0,"protein_g":0,"carbs_g":0,"fat_g":0},"ingredients_used":[],"extra_items_needed":[],"budget_level":"${budgetLevel}","budget_tips":[],"pro_tips":[],"tags":{"cuisine":"","cooking_method":"","base_carb":"","key_ingredients":[],"high_protein":false,"high_fiber":false,"quick_cleanup":false}${request.vegetarian_swap_needed ? ',"veg_option":{"enabled":true,"swap_protein":"","ingredients":[],"steps":[],"plating_notes":""}' : ""}}`;
