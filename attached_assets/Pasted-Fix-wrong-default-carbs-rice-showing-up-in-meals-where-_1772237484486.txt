@@ -1,0 +1,69 @@
+Fix wrong default carbs (rice showing up in meals where it doesn’t belong, e.g., chicken burgers). Implement Meal Format → Carb Rules and enforce them in generation + validation.
+
+Problem:
+base_carb is defaulting to rice too often (fallback bias), causing mismatched carbs (burger recipes served with rice, etc.).
+
+Implement:
+
+1) Create a carb rule map by meal_format:
+
+BURGER / SANDWICH:
+- forbidden base_carb: rice, quinoa, pasta
+- allowed sides: potato wedges, sweet potato fries, salad, coleslaw, roasted veg, chips (budget)
+- default side: potato wedges (or sweet potato fries if healthiness=healthy)
+
+WRAP / TACO:
+- base_carb is tortilla/wrap (not rice)
+- optional side: rice/beans only if cuisine=Mexican and explicitly “side”
+
+BOWL:
+- allowed base: rice, quinoa, noodles, greens, potatoes
+- default: rotate among rice/quinoa/potatoes/noodles (do not always rice)
+
+PASTA:
+- base must be pasta/noodles (not rice)
+
+SOUP / STEW:
+- base_carb = none
+- allowed thickener: potato, beans, lentils, barley (if no gluten restriction)
+- optional side: bread (if no gluten) or “served with” not “over”
+
+PIZZA NIGHT:
+- base is pizza dough/crust only
+
+SHEET PAN:
+- allowed: potatoes, sweet potatoes, root veg, rice only if explicitly “sheet pan rice” (generally avoid)
+- default: potatoes
+
+STIR-FRY:
+- allowed: rice OR noodles; choose based on cuisine and rotate
+
+2) Generation order change:
+- Resolve meal_format first
+- Choose base_carb/side from carb rules BEFORE building ingredients/steps
+- Do not insert “rice or pasta” placeholder. Always choose a concrete base.
+
+3) Add carb rotation memory:
+- Track last 10 base_carb selections per protein.
+- Do not repeat the same base_carb back-to-back unless user explicitly selects it.
+
+4) Validator hard rules:
+- If meal_format is BURGER/SANDWICH and ingredients include rice as base:
+  - replace rice with potato wedges or sweet potato fries
+  - update ingredients + steps accordingly
+  - update title + tags
+- If meal_format is STEW and steps include “start the rice”:
+  - remove rice step, replace with simmer/thicken step OR mark bread as optional side
+- If meal_format is WRAP/TACO and rice appears as base:
+  - move rice to optional side or remove and increase veg/beans
+
+5) Healthiness-aware defaults:
+- If healthiness=healthy: prefer sweet potato fries / roasted veg / salad
+- If comfort: prefer wedges / mac & cheese (if allowed) / chips
+
+6) Acceptance tests:
+- Generate 20 BURGER recipes → 0 have rice as base, 80% have wedges/fries side.
+- Generate 20 STEW recipes → 0 “start the rice” steps.
+- Generate 50 random recipes → rice appears only in Bowl/Stir-fry contexts unless explicitly optional side.
+
+Do not remove any filters or features. Only fix carb selection + validation.

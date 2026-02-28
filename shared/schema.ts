@@ -188,6 +188,7 @@ export interface ClientRecipeResponse {
   template_id?: number;
   _fallback?: boolean;
   _signature?: string;
+  _id?: string;
 }
 
 export const pizzaRequestSchema = z.object({

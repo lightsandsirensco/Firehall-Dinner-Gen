@@ -626,9 +626,25 @@ export function pickFallbackArchetype(protein: string, structureType: StructureT
 
   const notRecentlyUsed = (a: FallbackArchetype) => !recentArchetypeTitles.includes(a.title);
 
+  const notMatchingRecentSignature = (a: FallbackArchetype) => {
+    if (!recentSignatures || recentSignatures.length === 0) return true;
+    const structPart = a.structure.toLowerCase();
+    const proteinLower = protein.toLowerCase();
+    const carbPart = (a.baseCarb || "").toLowerCase();
+    return !recentSignatures.some(sig => {
+      const sigLower = sig.toLowerCase();
+      const sigParts = sigLower.split("|");
+      const sigStyle = sigParts[0] || "";
+      const sigProtein = sigParts[1] || "";
+      const sigCarb = sigParts[3] || "";
+      return sigStyle === structPart && sigProtein === proteinLower && sigCarb === carbPart;
+    });
+  };
+
   const pickBest = (candidates: FallbackArchetype[]): FallbackArchetype => {
-    const fresh = candidates.filter(notRecentlyUsed);
-    const pool = fresh.length > 0 ? fresh : candidates;
+    const fresh = candidates.filter(c => notRecentlyUsed(c) && notMatchingRecentSignature(c));
+    const lessStale = fresh.length > 0 ? fresh : candidates.filter(notRecentlyUsed);
+    const pool = lessStale.length > 0 ? lessStale : candidates;
     const pick = pool[Math.floor(Math.random() * pool.length)];
     trackArchetype(pick.title);
     return pick;
@@ -933,11 +949,32 @@ function adaptVegTitle(archetypeTitle: string, vegBase: string): string {
   return archetypeTitle;
 }
 
+const NO_BASE_CARB_STRUCTURES = new Set(["soup-stew", "burger", "sandwich"]);
+const STRUCTURE_DEFAULT_CARB: Record<string, string> = {
+  "sheet-pan": "potatoes",
+  "breakfast-for-dinner": "potato",
+  "loaded-fries": "fries",
+};
+
+function resolveBaseCarb(archetype: FallbackArchetype, structureType?: StructureType): string {
+  const struct = structureType || archetype.structure;
+  if (NO_BASE_CARB_STRUCTURES.has(struct)) return "none";
+  if (archetype.baseCarb && archetype.baseCarb !== "rice") return archetype.baseCarb;
+  if (archetype.baseCarb === "rice") {
+    if (NO_BASE_CARB_STRUCTURES.has(struct)) return "none";
+    if (struct === "sheet-pan") return "potatoes";
+    if (struct === "breakfast-for-dinner") return "potato";
+  }
+  if (STRUCTURE_DEFAULT_CARB[struct]) return STRUCTURE_DEFAULT_CARB[struct];
+  return archetype.baseCarb || "";
+}
+
 export function buildFallbackRecipe(
   template: TemplateRow,
   request: GenerateRequest,
   chosenProtein: string,
-  structureType?: StructureType
+  structureType?: StructureType,
+  recentSignatures?: string[]
 ): GenerateResponse {
   const protein = chosenProtein.toLowerCase();
   const isVegetarian = protein === "vegetarian";
@@ -996,8 +1033,8 @@ export function buildFallbackRecipe(
   const macros = adjustMacrosForHealthiness(baseMacros, healthiness);
 
   const archetype = structureType
-    ? pickFallbackArchetype(finalProtein, structureType, appliances)
-    : pickFallbackArchetype(finalProtein, "skillet", appliances);
+    ? pickFallbackArchetype(finalProtein, structureType, appliances, recentSignatures)
+    : pickFallbackArchetype(finalProtein, "skillet", appliances, recentSignatures);
   const baseTitle = isVegetarian && vegSet
     ? adaptVegTitle(archetype.title, vegSet.base)
     : archetype.title;
@@ -1105,8 +1142,8 @@ export function buildFallbackRecipe(
     tags: {
       cuisine: cuisineData ? cuisineStyle.replace("_", " ") : "American",
       cooking_method: archetype.cookingMethod || cookingMethod,
-      base_carb: archetype.baseCarb || "rice",
-      key_ingredients: [proteinDisplay, archetype.baseCarb || "rice", "vegetables"],
+      base_carb: resolveBaseCarb(archetype, structureType),
+      key_ingredients: [proteinDisplay, resolveBaseCarb(archetype, structureType) === "none" ? "vegetables" : (resolveBaseCarb(archetype, structureType) || "vegetables"), "vegetables"],
       high_protein: true,
       high_fiber: healthiness === "lean",
       quick_cleanup: archetype.structure === "one-pot" || archetype.structure === "sheet-pan",

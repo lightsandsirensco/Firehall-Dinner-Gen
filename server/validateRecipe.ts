@@ -651,10 +651,10 @@ const FORMAT_RULES: Record<string, FormatConstraints> = {
   burger: {
     required: /\b(bun|brioche|roll)\b/i,
     requiredLabel: "bun/brioche/roll",
-    forbidden: /\b(rice)\b/i,
-    forbiddenLabel: "rice",
-    stepForbidden: /serve over rice/i,
-    stepForbiddenLabel: '"serve over rice"',
+    forbidden: /\b(rice|quinoa|pasta|noodles|couscous)\b/i,
+    forbiddenLabel: "rice/quinoa/pasta/noodles",
+    stepForbidden: /\bstart the rice\b|\bcook the rice\b|\bserve over rice\b/i,
+    stepForbiddenLabel: '"start/cook the rice" or "serve over rice"',
   },
   taco: {
     required: /\b(tortilla|taco shell|corn tortilla|flour tortilla)\b/i,
@@ -695,18 +695,26 @@ const FORMAT_RULES: Record<string, FormatConstraints> = {
   "sheet-pan": {
     forbidden: /\b(rice)\b/i,
     forbiddenLabel: "rice",
+    stepForbidden: /\bstart the rice\b|\bcook the rice\b|\bserve over rice\b/i,
+    stepForbiddenLabel: '"start/cook the rice" or "serve over rice"',
   },
   "soup-stew": {
+    required: /\b(broth|stock)\b/i,
+    requiredLabel: "broth/stock",
     stepRequired: /\b(simmer|simmer.*\d+\s*min|simmer.*\d+\s*hour)/i,
     stepRequiredLabel: "simmer time",
     forbidden: /\b(rice)\b/i,
     forbiddenLabel: "rice",
+    stepForbidden: /\bstart the rice\b|\bcook the rice\b|\bserve over rice\b/i,
+    stepForbiddenLabel: '"start/cook the rice" or "serve over rice"',
   },
   "breakfast-for-dinner": {
     required: /\b(egg|eggs|oat|oats|oatmeal|yogurt|pancake|waffle|french toast|hash brown|sausage|bacon|granola|cereal)\b/i,
     requiredLabel: "breakfast anchor (eggs/oats/yogurt/etc)",
-    forbidden: /\b(rice)\b/i,
-    forbiddenLabel: "rice",
+    forbidden: /\b(rice|pasta|noodles|quinoa)\b/i,
+    forbiddenLabel: "rice/pasta/noodles",
+    stepForbidden: /\bstart the rice\b|\bcook the rice\b|\bserve over rice\b/i,
+    stepForbiddenLabel: '"start/cook the rice" or "serve over rice"',
   },
   "stir-fry": {
     stepRequired: /\b(stir.?fry|wok|high.?heat|toss)\b/i,

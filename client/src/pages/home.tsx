@@ -63,6 +63,43 @@ function makeRequestId(): string {
   return `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
 }
 
+function hashIngredients(recipe: ClientRecipeResponse): string {
+  return (recipe.ingredients || []).map(i => `${i.name}|${i.qty}|${i.unit}`).join(";;");
+}
+
+function hashSteps(recipe: ClientRecipeResponse): string {
+  return (recipe.steps || []).map(s => `${s.title}|${s.instructions}`).join(";;");
+}
+
+function isRecipeCoherent(newRecipe: ClientRecipeResponse, oldRecipe: ClientRecipeResponse | null): boolean {
+  if (!oldRecipe) return true;
+
+  const newSig = (newRecipe as any)._signature || "";
+  const oldSig = (oldRecipe as any)._signature || "";
+  const sigChanged = newSig !== oldSig;
+  const titleChanged = newRecipe.title !== oldRecipe.title;
+  const newIngHash = hashIngredients(newRecipe);
+  const oldIngHash = hashIngredients(oldRecipe);
+  const newStepHash = hashSteps(newRecipe);
+  const oldStepHash = hashSteps(oldRecipe);
+  const ingsChanged = newIngHash !== oldIngHash;
+  const stepsChanged = newStepHash !== oldStepHash;
+
+  console.log(`[mismatchGuard] titleChanged=${titleChanged} signatureChanged=${sigChanged} ingredientsHashChanged=${ingsChanged} stepsHashChanged=${stepsChanged}`);
+
+  if (titleChanged && !ingsChanged && !stepsChanged) {
+    console.warn("[mismatchGuard] Title changed but ingredients and steps are identical — possible partial update");
+    return false;
+  }
+
+  if (sigChanged && !ingsChanged && !stepsChanged && titleChanged) {
+    console.warn("[mismatchGuard] Signature changed with new title but same content — discarding");
+    return false;
+  }
+
+  return true;
+}
+
 let recipeKeyCounter = 0;
 function recipeKey(recipe: ClientRecipeResponse): string {
   return (recipe as any)._signature || `${recipe.title}-${recipe.template_id}-${++recipeKeyCounter}`;
@@ -169,6 +206,7 @@ export default function Home() {
   const emailPromptedRef = useRef(false);
   const abortControllerRef = useRef<AbortController | null>(null);
   const recipeRef = useRef<HTMLDivElement>(null);
+  const recipeStateRef = useRef<ClientRecipeResponse | null>(null);
   const { toast } = useToast();
 
   useEffect(() => {
@@ -210,6 +248,10 @@ export default function Home() {
   }, [filters]);
 
   useEffect(() => {
+    recipeStateRef.current = recipe;
+  }, [recipe]);
+
+  useEffect(() => {
     const warmupPayload = buildRequestPayload(filters);
     fetch("/api/warm")
       .then(() => prefetchMeals(warmupPayload))
@@ -220,6 +262,12 @@ export default function Home() {
     if (seq !== latestRequestRef.current) {
       console.log("[Generate] Ignoring stale response", { seq, latest: latestRequestRef.current });
       return;
+    }
+
+    const prev = recipeStateRef.current;
+    const coherent = isRecipeCoherent(data, prev);
+    if (!coherent) {
+      console.warn("[mismatchGuard] Incoherent recipe detected — accepting anyway (server _id differs)");
     }
 
     setRecipe(data);
@@ -235,7 +283,7 @@ export default function Home() {
     setLastTemplateId(data.template_id);
     trackMealGenerated();
     genCountRef.current += 1;
-    console.log("[Generate] Recipe applied:", data.title, "| style:", data.meal_style, "| seq:", seq);
+    console.log("[Generate] Recipe applied:", data.title, "| style:", data.meal_style, "| id:", (data as any)._id, "| seq:", seq);
 
     requestAnimationFrame(() => {
       recipeRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -280,12 +328,14 @@ export default function Home() {
 
     try {
       const recentSigs = getRecentSignatures();
+      const currentSig = recipeStateRef.current ? (recipeStateRef.current as any)._signature || "" : "";
       const debugParam = new URLSearchParams(window.location.search).get("debug") === "1" ? "?debug=1" : "";
       const res = await apiRequest("POST", `/api/generate${debugParam}`, {
         ...payload,
         request_id: requestId,
         exclude_signatures: recentSigs,
         recentSignatures: recentSigs,
+        currentRecipeSignature: currentSig,
       }, 45_000, controller.signal);
       clearTimeout(timeout);
 

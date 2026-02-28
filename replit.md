@@ -30,8 +30,10 @@ Key architectural features and design patterns include:
 - **Auto-Repair Loop**: Automatically attempts to repair AI-generated recipes that fail validation using the LLM, falling back to a deterministic safe recipe after multiple attempts.
 - **Meal Format → Structure Override**: Forces the structure type to match the user-selected `meal_format`.
 - **Filter Persistence**: All filter selections are saved to localStorage and restored on page load.
-- **Per-Session Signature Dedup**: Tracks recent recipe signatures (15-entry history) and remixes (sauce + base carb swap including step text updates) or forces a different structure if duplicates are generated.
-- **Frontend Request Management**: Manages "Generate Another" requests by canceling in-flight requests via AbortController signal propagation, skipping prefetch cache, and using stale-closure-free state updates.
+- **Per-Session Signature Dedup**: Tracks recent recipe signatures (15-entry history) and remixes (sauce + base carb swap including step text updates) or forces a different structure if duplicates are generated. Client sends `currentRecipeSignature` which is registered server-side at request start to prevent returning the same recipe.
+- **Frontend Request Management**: Manages "Generate Another" requests by canceling in-flight requests via AbortController signal propagation, skipping prefetch cache, and using stale-closure-free state updates via `recipeStateRef`. Includes mismatch guard logging when title changes without ingredient/step changes.
+- **Backend Response Integrity**: Every `/api/generate` response includes a unique `_id` (uuid), `_signature`, complete `ingredients[]`, `steps[]`, `timing`, and `tags`. Server logs `[api] returning recipe id=... signature=... title=... ingredientsCount=... stepsCount=...` for every response.
+- **Fallback Signature-Aware Rotation**: `pickFallbackArchetype()` filters candidates against recent signatures by comparing structure/protein/carb components, avoiding recently served archetype combinations.
 - **Crew Scale Audit**: Validates ingredient quantities, appliance realism, timing, and nutrition for large crews (12+). Auto-scales protein, carbs, and vegetables to meet per-person minimums. Located in `server/crew-scale-audit.ts`.
 - **Cost Control**: Implemented through caching, rate limiting, daily AI budget caps, and bot blocking.
 - **Admin Dashboard**: Provides usage statistics, budget status, cache details, and request logs.

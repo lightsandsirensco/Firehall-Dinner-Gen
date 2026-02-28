@@ -15,6 +15,7 @@ import { getFromPool, refillPool, getPoolSize } from "./recipe-pool";
 import { initHallVoteTables, createHallVote, getHallVote, castBallot, closeHallVote, hashVoterFingerprint } from "./hall-vote-store";
 import { addFavourite, getFavourites, removeFavourite } from "./favourites";
 import { buildFallbackRecipe, trackFallbackTemplateId, getRecentFallbackTemplateIds } from "./fallback-recipe";
+import { enforceCarbs, trackCarb } from "./carb-rules";
 import { pickStructure, trackStructure, STRUCTURE_DISPLAY, type StructureType } from "./structure-variety";
 import { log } from "./index";
 import { validateAndFixRecipe, validateRecipe, computeSignature, recordSignature, type RecipeValidationContext } from "./validateRecipe";
@@ -228,6 +229,7 @@ export async function registerRoutes(
       template_id: recipe.template_id,
       _fallback: recipe._fallback,
       _signature: recipe._signature,
+      _id: recipe._id,
     };
   }
 
@@ -362,9 +364,26 @@ export async function registerRoutes(
       log(`[label-audit] Applied ${audit.fixesApplied.length} fixes: ${audit.fixesApplied.join("; ")}`, "audit");
     }
 
-    const merged = { ...recipe, ...extras, _signature: validation.signature };
+    const healthiness = ctx.selectedHealthiness || "balanced";
+    const { recipe: carbFixed, fixes: carbFixes } = enforceCarbs(recipe, mealFormat, healthiness, allergens);
+    recipe = carbFixed;
+    if (carbFixes.length > 0) {
+      log(`[carb-rules] Applied ${carbFixes.length} fixes: ${carbFixes.join("; ")}`, "carb");
+    }
+    const finalBaseCarb = recipe.tags?.base_carb || "";
+    if (finalBaseCarb && finalBaseCarb !== "none") {
+      trackCarb(finalBaseCarb);
+    }
+
+    const recipeId = crypto.randomUUID();
+    const merged = { ...recipe, ...extras, _signature: validation.signature, _id: recipeId };
     const client = normalizeToClientFormat(merged, crewSize, mealFormat);
     const base: Record<string, any> = { ...client };
+    base._id = recipeId;
+
+    const ingsCount = (client.ingredients || []).length;
+    const stepsCount = (client.steps || []).length;
+    log(`[api] returning recipe id=${recipeId} signature=${(validation.signature || "").substring(0, 50)} title="${client.title}" ingredientsCount=${ingsCount} stepsCount=${stepsCount}`, "api");
 
     if (extras._filtersRelaxed) {
       base._filters_adjusted = true;
@@ -608,6 +627,11 @@ export async function registerRoutes(
         crewSize: request.crew_size || 4,
       };
 
+      const clientCurrentSig = (req.body as any).currentRecipeSignature || "";
+      if (clientCurrentSig) {
+        addSessionSignature(`${ipHash}:${sessionId}`, clientCurrentSig);
+      }
+
       const recentStyles = request.recent_meal_styles || [];
       const lastStyle = recentStyles[0] || "";
       const preferDiff = request.prefer_different_style || false;
@@ -774,8 +798,9 @@ export async function registerRoutes(
           : pool[Math.floor(Math.random() * pool.length)];
       }
       const fallbackProtein = request.use_what_we_have ? "pantry" : fallbackTemplate ? chooseProtein(fallbackTemplate, request.proteins, request.healthiness_preference) : chosenProtein;
+      const clientRecentSigs = (req.body as any).recentSignatures || [];
       const fallbackRecipe = fallbackTemplate
-        ? buildFallbackRecipe(fallbackTemplate, request, fallbackProtein, structureType)
+        ? buildFallbackRecipe(fallbackTemplate, request, fallbackProtein, structureType, clientRecentSigs)
         : buildSafeFallbackRecipe(request.meal_format || mealStyleDisplay, request.crew_size);
 
       const templateForAI = chosen || fallbackTemplate;
@@ -880,7 +905,7 @@ export async function registerRoutes(
           } else {
             log(`[dedup] Remix still duplicate after 2 attempts — forcing different structure`, "variety");
             const altStructure = pickStructure(request.appliances, request.time_available, [mealStyleDisplay, ...(request.recent_meal_styles || [])], true);
-            const altFb = buildFallbackRecipe(fallbackTemplate || (candidates.length > 0 ? candidates[0] : null) as any, request, chosenProtein, altStructure);
+            const altFb = buildFallbackRecipe(fallbackTemplate || (candidates.length > 0 ? candidates[0] : null) as any, request, chosenProtein, altStructure, clientRecentSigs);
             const altWithStyle = { ...altFb, meal_style: STRUCTURE_DISPLAY[altStructure] || altStructure };
             aiValidation = validateAndFixRecipe(altWithStyle as any, { ...validationCtx, meal_style: altWithStyle.meal_style });
             log(`[dedup] Forced alt structure=${altStructure}, newSig=${aiValidation.signature.substring(0, 40)}`, "variety");

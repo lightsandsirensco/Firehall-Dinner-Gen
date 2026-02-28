@@ -5,6 +5,7 @@ import { getForbiddenProteinsText, validateProteinCompliance, validateTitleConsi
 import { type VarietyConstraints, buildVarietyPromptBlock, buildHealthyPromptBlock } from "./variety-memory";
 import { type StructureType, STRUCTURE_DISPLAY } from "./structure-variety";
 import { buildAllergenAvoidList } from "./allergens";
+import { buildCarbRulesPromptBlock } from "./carb-rules";
 
 const openai = new OpenAI({
   apiKey: process.env.AI_INTEGRATIONS_OPENAI_API_KEY,
@@ -309,15 +310,15 @@ function buildFilterSummary(request: GenerateRequest): string {
 }
 
 const MEAL_FORMAT_RULES: Record<string, string> = {
-  burger: "STRUCTURE REQUIREMENT: meal_format=burger. Do NOT mix formats.\nFORMAT RULES (BURGER — STRICT): Must include buns (or lettuce wrap if explicitly low carb). Final step MUST assemble the burger. FORBIDDEN: rice, pasta, quinoa, tortillas. Do NOT say 'serve over rice'. Do NOT include 'either/or' ingredients — choose ONE specific ingredient.",
+  burger: "STRUCTURE REQUIREMENT: meal_format=burger. Do NOT mix formats.\nFORMAT RULES (BURGER — STRICT): Must include buns (or lettuce wrap if explicitly low carb). Final step MUST assemble the burger. FORBIDDEN base carb: rice, pasta, quinoa, noodles, couscous, tortillas. Do NOT say 'serve over rice'. Do NOT include 'start the rice' step. Do NOT include 'either/or' ingredients. Side options: potato wedges, sweet potato fries, coleslaw, side salad. base_carb tag MUST be \"none\".",
   tacos: "STRUCTURE REQUIREMENT: meal_format=tacos. Do NOT mix formats.\nFORMAT RULES (TACOS — STRICT): Must include tortillas (corn or flour). Final step MUST assemble tacos. FORBIDDEN: buns, rice, pasta, quinoa. Do NOT say 'serve over rice'. Rice is NOT allowed.",
   wrap: "STRUCTURE REQUIREMENT: meal_format=wrap. Do NOT mix formats.\nFORMAT RULES (WRAP — STRICT): Must include a large tortilla or wrap. Final step MUST roll or fold the wrap. FORBIDDEN: buns, rice, pasta, quinoa. Do NOT say 'serve over rice'.",
   bowl: "STRUCTURE REQUIREMENT: meal_format=bowl. Do NOT mix formats.\nFORMAT RULES (BOWL — STRICT): Must include exactly ONE base carb from [rice, quinoa, potatoes, greens, cauliflower rice]. Final plating MUST say 'serve in a bowl' or 'serve over [base]'. FORBIDDEN: buns, tortillas. Do NOT output 'either/or' ingredients — choose ONE specific base.",
   pasta: "STRUCTURE REQUIREMENT: meal_format=pasta. Do NOT mix formats.\nFORMAT RULES (PASTA — STRICT): The ONLY base carb allowed is pasta. Must include pasta (any shape) in ingredients. Final step MUST toss or combine with pasta. FORBIDDEN: rice, quinoa, buns, tortillas, fries. Do NOT include rice anywhere — not in ingredients, not in steps, not as a side. Do NOT include 'rice or pasta' either/or ingredients. Do NOT say 'serve over rice'. Do not include more than one base carb.",
   salad: "STRUCTURE REQUIREMENT: meal_format=salad. Do NOT mix formats.\nFORMAT RULES (SALAD — STRICT): Must include greens or a salad base. Final step MUST toss or plate the salad. FORBIDDEN: rice, pasta, buns, tortillas, quinoa.",
-  sheet_pan: "STRUCTURE REQUIREMENT: meal_format=sheet_pan. Do NOT mix formats.\nFORMAT RULES (SHEET PAN — STRICT): Must include an oven temperature AND a roasting/baking step on a sheet pan/baking sheet. Must NOT be a stovetop-only recipe. FORBIDDEN: rice, pasta, buns, tortillas. Do NOT say 'serve over rice'.",
+  sheet_pan: "STRUCTURE REQUIREMENT: meal_format=sheet_pan. Do NOT mix formats.\nFORMAT RULES (SHEET PAN — STRICT): Must include an oven temperature AND a roasting/baking step on a sheet pan/baking sheet. Must NOT be a stovetop-only recipe. FORBIDDEN: rice, pasta, noodles, buns, tortillas. Do NOT say 'serve over rice'. Do NOT include 'start the rice' step. Use potatoes or sweet potatoes as the carb on the pan.",
   stir_fry: "STRUCTURE REQUIREMENT: meal_format=stir_fry. Do NOT mix formats.\nFORMAT RULES (STIR FRY — STRICT): Must mention stir-fry, wok, or high-heat skillet technique. FORBIDDEN: buns, tortillas. Do NOT default to rice — only include a carb base if it is integral to the stir-fry. If including a carb, choose ONE (rice OR noodles, not both).",
-  soup_chili: "STRUCTURE REQUIREMENT: meal_format=soup_chili. Do NOT mix formats.\nFORMAT RULES (SOUP/CHILI — STRICT): Must include a simmer time (e.g. 'simmer 20 minutes'). Serve in bowls. FORBIDDEN: rice, pasta, buns, tortillas.",
+  soup_chili: "STRUCTURE REQUIREMENT: meal_format=soup_chili. Do NOT mix formats.\nFORMAT RULES (SOUP/CHILI — STRICT): Must include broth/stock (>= 3 cups). Must include a simmer step (>= 10 minutes). Single pot flow. base_carb MUST be \"none\". FORBIDDEN base: rice, pasta, noodles, quinoa. Do NOT include a \"start the rice\" step. Do NOT say \"serve over rice\". Allowed thickeners INSIDE the stew: potato, beans, lentils, barley. Optional SIDE (not base): crusty bread or cornbread.",
   breakfast: "STRUCTURE REQUIREMENT: meal_format=breakfast. Do NOT mix formats.\nFORMAT RULES (BREAKFAST — STRICT): Must include a breakfast anchor ingredient: eggs, oats, yogurt, pancakes, hash browns, or similar. FORBIDDEN: rice, pasta, buns, tortillas.",
   loaded_fries: "STRUCTURE REQUIREMENT: meal_format=loaded_fries. Do NOT mix formats.\nFORMAT RULES (LOADED FRIES — STRICT): Base carb MUST be fries (frozen fries OR fresh-cut potato fries). Must bake or air-fry the fries, then top them. FORBIDDEN: rice, pasta, quinoa, tortillas, buns. Do NOT say 'serve over rice'.",
 };
@@ -359,6 +360,7 @@ This applies to the main recipe AND any veg_option.`
 
   const cuisineLine = buildCuisineDirective(request.cuisine_style || "any");
   const mealFormatBlock = buildMealFormatBlock(request.meal_format);
+  const carbRulesBlock = buildCarbRulesPromptBlock(request.meal_format, request.healthiness_preference);
 
   const structureLine = structureType
     ? `MEAL STRUCTURE (mandatory): This recipe MUST be a ${STRUCTURE_DISPLAY[structureType]} style meal. The dish format, title, and presentation must clearly be a ${STRUCTURE_DISPLAY[structureType]}. Do NOT repeat the same structure as previous recipes.`
@@ -388,6 +390,7 @@ ${proteinDirective}
 Healthiness: ${request.healthiness_preference}
 ${structureLine}
 ${mealFormatBlock}
+${carbRulesBlock}
 ${cuisineLine}
 ${allergenLine}
 ${budgetLine}
@@ -434,6 +437,7 @@ Applies to main recipe AND veg_option.`
 
   const cuisineLine = buildCuisineDirective(request.cuisine_style || "any");
   const mealFormatBlock = buildMealFormatBlock(request.meal_format);
+  const carbRulesBlock = buildCarbRulesPromptBlock(request.meal_format, request.healthiness_preference);
 
   const structureLine = structureType
     ? `MEAL STRUCTURE (mandatory): This recipe MUST be a ${STRUCTURE_DISPLAY[structureType]} style meal. Vary the format.`
@@ -458,6 +462,7 @@ CREW: ${request.crew_size} | Shift: ${request.busy_level} | Time: ${request.time
 Healthiness: ${request.healthiness_preference}
 ${structureLine}
 ${mealFormatBlock}
+${carbRulesBlock}
 ${cuisineLine}
 ${allergenLine}
 ${budgetLine}
