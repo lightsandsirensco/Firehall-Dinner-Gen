@@ -1,6 +1,6 @@
 import { useState, useCallback, useEffect, useMemo } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { Flame, Search, Clock, Users, ChevronLeft, ExternalLink, X, Loader2, Heart, ShieldAlert, Globe, UtensilsCrossed, ChefHat, Package, Leaf } from "lucide-react";
+import { Flame, Search, Clock, Users, ChevronLeft, ExternalLink, X, Loader2, Heart, ShieldAlert, Globe, UtensilsCrossed, ChefHat, Package, Leaf, Printer, Mail, List, BookmarkPlus } from "lucide-react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -11,7 +11,11 @@ import { Slider } from "@/components/ui/slider";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Textarea } from "@/components/ui/textarea";
-import { getSavedCount } from "@/lib/saved-meals";
+import { getSavedCount, saveMeal, isMealSaved } from "@/lib/saved-meals";
+import { buildShoppingListFromClientMeal } from "@/lib/shopping-list";
+import { EmailModal } from "@/components/email-modal";
+import { ShoppingListModal } from "@/components/shopping-list-modal";
+import type { ClientRecipeResponse, ClientIngredient } from "@shared/schema";
 
 interface SearchResult {
   id: number;
@@ -38,6 +42,112 @@ interface RecipeDetail {
   ingredients: { name: string; amount: number; unit: string; original: string }[];
   steps: { number: number; step: string }[];
   macros: { calories: number; protein_g: number; carbs_g: number; fat_g: number };
+}
+
+function inferCategory(name: string): string {
+  const n = name.toLowerCase();
+  if (/chicken|beef|pork|turkey|fish|shrimp|salmon|tuna|sausage|bacon|lamb|steak/.test(n)) return "Proteins";
+  if (/milk|cream|cheese|butter|yogurt|sour cream/.test(n)) return "Dairy";
+  if (/onion|garlic|pepper|tomato|lettuce|spinach|broccoli|carrot|celery|potato|mushroom|zucchini|corn|bean|pea|avocado|cilantro|basil|parsley|lime|lemon/.test(n)) return "Produce";
+  if (/oil|vinegar|sauce|salt|pepper|cumin|paprika|oregano|thyme|chili|sugar|honey|flour|stock|broth/.test(n)) return "Pantry";
+  if (/rice|pasta|noodle|bread|tortilla|bun/.test(n)) return "Grains";
+  return "Other";
+}
+
+function spoonacularToClientRecipe(detail: RecipeDetail, crewSize: number): ClientRecipeResponse {
+  const ingredients: ClientIngredient[] = detail.ingredients.map(ing => ({
+    name: ing.name,
+    qty: ing.amount,
+    unit: ing.unit,
+    category: inferCategory(ing.name),
+  }));
+
+  const proteinIng = ingredients.find(i => i.category === "Proteins");
+  const chosenProtein = proteinIng?.name || "mixed";
+
+  return {
+    title: detail.title,
+    meal_format: detail.dishTypes?.[0] || "dinner",
+    servings: detail.servings || crewSize,
+    tags: [...detail.cuisines, ...detail.diets],
+    timing: {
+      prep_min: Math.max(5, Math.round(detail.readyInMinutes * 0.3)),
+      cook_min: Math.max(10, Math.round(detail.readyInMinutes * 0.7)),
+      total_min: detail.readyInMinutes || 30,
+    },
+    protein_safety: {
+      protein: chosenProtein,
+      internal_temp_f: 0,
+      rest_min: 0,
+      notes: "",
+    },
+    ingredients,
+    steps: detail.steps.map(s => ({
+      n: s.number,
+      title: `Step ${s.number}`,
+      heat: "",
+      minutes: 0,
+      instructions: s.step,
+    })),
+    plating: {
+      serve_style: "plated",
+      assembly_instructions: "",
+      optional_toppings: [],
+    },
+    macros_per_serving: {
+      calories: detail.macros.calories,
+      protein_g: detail.macros.protein_g,
+      carbs_g: detail.macros.carbs_g,
+      fat_g: detail.macros.fat_g,
+    },
+    chosen_protein: chosenProtein,
+    primary_protein_source: chosenProtein,
+    why_it_fits_tonight: `Discovered via Explore — ${detail.cuisines.join(", ") || "versatile"} recipe`,
+    cleanup_tip: "",
+    pro_tips: [],
+    recipe_tags: {
+      cuisine: detail.cuisines[0] || "",
+      cooking_method: "",
+      base_carb: "",
+      key_ingredients: detail.ingredients.slice(0, 5).map(i => i.name),
+      high_protein: detail.macros.protein_g >= 25,
+      high_fiber: false,
+      quick_cleanup: detail.readyInMinutes <= 30,
+    },
+    _id: `spoonacular-${detail.id}`,
+    _signature: `spoonacular-${detail.id}`,
+  };
+}
+
+function buildExplorePrintHtml(recipe: RecipeDetail, crewSize: number): string {
+  const ingredientsHtml = recipe.ingredients
+    .map(i => `<li style="padding:3px 0;border-bottom:1px solid #eee">${i.original}</li>`)
+    .join("");
+  const stepsHtml = recipe.steps
+    .map(s => `<li style="padding:6px 0;border-bottom:1px solid #eee"><strong>Step ${s.number}:</strong> ${s.step}</li>`)
+    .join("");
+  const macroHtml = recipe.macros.calories > 0
+    ? `<div style="display:flex;gap:24px;padding:12px 0;border-top:1px solid #ddd;margin-top:12px">
+        <div><strong>${recipe.macros.calories}</strong> cal</div>
+        <div><strong>${recipe.macros.protein_g}g</strong> protein</div>
+        <div><strong>${recipe.macros.carbs_g}g</strong> carbs</div>
+        <div><strong>${recipe.macros.fat_g}g</strong> fat</div>
+      </div>`
+    : "";
+
+  return `<!DOCTYPE html><html><head><title>${recipe.title}</title>
+    <style>@page{margin:0.75in}body{font-family:system-ui,sans-serif;max-width:700px;margin:0 auto;color:#111}
+    h1{font-size:22px;margin-bottom:4px}h2{font-size:16px;margin-top:20px;text-transform:uppercase;letter-spacing:1px;color:#333}
+    ul,ol{padding-left:20px}li{font-size:14px}
+    .meta{font-size:13px;color:#666;margin-bottom:16px}</style></head>
+    <body>
+    <h1>${recipe.title}</h1>
+    <p class="meta">${recipe.readyInMinutes} min · ${recipe.servings} servings · Crew of ${crewSize}</p>
+    ${macroHtml}
+    <h2>Ingredients</h2><ul style="list-style:none;padding:0">${ingredientsHtml}</ul>
+    <h2>Instructions</h2><ol style="list-style:none;padding:0">${stepsHtml}</ol>
+    <p style="text-align:center;margin-top:24px;font-size:11px;color:#999">Powered by Lights & Sirens Co. · Recipe from Spoonacular</p>
+    </body></html>`;
 }
 
 const CUISINE_MAP: Record<string, string> = {
@@ -341,7 +451,7 @@ export default function ExplorePage() {
             <ChevronLeft className="w-4 h-4" />
             Back to results
           </Button>
-          <RecipeDetailView recipe={recipeDetail} />
+          <RecipeDetailView recipe={recipeDetail} crewSize={filters.crewSize} />
         </main>
         <Footer />
       </div>
@@ -732,7 +842,34 @@ function ExploreNav({ favCount }: { favCount: number }) {
   );
 }
 
-function RecipeDetailView({ recipe }: { recipe: RecipeDetail }) {
+function RecipeDetailView({ recipe, crewSize }: { recipe: RecipeDetail; crewSize: number }) {
+  const [saved, setSaved] = useState(() => {
+    const client = spoonacularToClientRecipe(recipe, crewSize);
+    return isMealSaved(client);
+  });
+  const [emailOpen, setEmailOpen] = useState(false);
+  const [shoppingOpen, setShoppingOpen] = useState(false);
+
+  const clientRecipe = useMemo(() => spoonacularToClientRecipe(recipe, crewSize), [recipe, crewSize]);
+  const shoppingList = useMemo(() => buildShoppingListFromClientMeal(clientRecipe), [clientRecipe]);
+
+  const handleSave = () => {
+    const result = saveMeal(clientRecipe);
+    if (result.saved || result.duplicate) {
+      setSaved(true);
+    }
+  };
+
+  const handlePrint = () => {
+    const html = buildExplorePrintHtml(recipe, crewSize);
+    const printWindow = window.open("", "_blank");
+    if (printWindow) {
+      printWindow.document.write(html);
+      printWindow.document.close();
+      setTimeout(() => printWindow.print(), 300);
+    }
+  };
+
   return (
     <div className="space-y-6" data-testid="explore-recipe-detail">
       {recipe.image && (
@@ -766,6 +903,35 @@ function RecipeDetailView({ recipe }: { recipe: RecipeDetail }) {
           <p className="text-sm text-muted-foreground leading-relaxed" data-testid="text-detail-summary">{recipe.summary}</p>
         )}
       </div>
+
+      <Card>
+        <CardContent className="p-4">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+            <Button
+              variant="outline"
+              onClick={handleSave}
+              disabled={saved}
+              className={`justify-start ${saved ? "bg-primary/20 text-primary border-primary/30 hover:bg-primary/20" : ""}`}
+              data-testid="button-explore-save"
+            >
+              {saved ? <Heart className="w-4 h-4 mr-2 fill-current" /> : <BookmarkPlus className="w-4 h-4 mr-2" />}
+              <span className="truncate">{saved ? "Saved" : "Save"}</span>
+            </Button>
+            <Button variant="outline" onClick={handlePrint} className="justify-start" data-testid="button-explore-print">
+              <Printer className="w-4 h-4 mr-2 flex-shrink-0" />
+              <span className="truncate">Print</span>
+            </Button>
+            <Button variant="outline" onClick={() => setEmailOpen(true)} className="justify-start" data-testid="button-explore-email">
+              <Mail className="w-4 h-4 mr-2 flex-shrink-0" />
+              <span className="truncate">Email</span>
+            </Button>
+            <Button onClick={() => setShoppingOpen(true)} className="justify-start" data-testid="button-explore-shopping">
+              <List className="w-4 h-4 mr-2 flex-shrink-0" />
+              <span className="truncate">Shopping List</span>
+            </Button>
+          </div>
+        </CardContent>
+      </Card>
 
       {recipe.macros.calories > 0 && (
         <Card>
@@ -833,6 +999,21 @@ function RecipeDetailView({ recipe }: { recipe: RecipeDetail }) {
           </a>
         </div>
       )}
+
+      <EmailModal
+        open={emailOpen}
+        onOpenChange={setEmailOpen}
+        recipe={clientRecipe}
+        crewSize={crewSize}
+        healthinessLevel="balanced"
+      />
+      <ShoppingListModal
+        open={shoppingOpen}
+        onOpenChange={setShoppingOpen}
+        shoppingList={shoppingList}
+        recipeTitle={recipe.title}
+        generatorType="meal"
+      />
     </div>
   );
 }
