@@ -16,6 +16,7 @@ import { trackEvent, trackMealGenerated, trackEmailModalOpened } from "@/lib/ana
 import type { ClientRecipeResponse } from "@shared/schema";
 import { Flame, Vote, Heart } from "lucide-react";
 import { Link } from "wouter";
+import heroTruckImg from "@assets/truck1_1773178049785.jpg";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
@@ -469,31 +470,42 @@ export default function Home() {
               </Link>
             </div>
           </nav>
-          <div className="text-center py-5 pb-6">
-            <h1 className="font-heading text-5xl sm:text-6xl leading-none tracking-wide text-foreground" data-testid="text-app-title">
-              FIREHALL MEALS
-            </h1>
-            <p className="font-heading text-xl sm:text-2xl tracking-wide text-primary mt-1.5" data-testid="text-app-subtitle">
-              Firefighter Built. Firehall Tested.
-            </p>
-            <p className="text-sm text-muted-foreground mt-2 max-w-lg mx-auto leading-relaxed" data-testid="text-app-description">
-              Crew meal ideas built for the fire service. Generate dinners, pizza nights, and crew meals based on time, crew size, and what's in the fridge.
-            </p>
-            <p className="text-[10px] text-muted-foreground/40 mt-2 font-normal">
-              Powered by{" "}
-              <a
-                href="https://lightsandsirensco.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-muted-foreground/60 transition-colors"
-                data-testid="link-header-attribution"
-              >
-                Lights &amp; Sirens Co.
-              </a>
-            </p>
-          </div>
         </div>
       </header>
+
+      <section
+        className="relative w-full h-[220px] sm:h-[340px] flex items-center justify-center overflow-hidden"
+        style={{ backgroundImage: `url(${heroTruckImg})`, backgroundSize: "cover", backgroundPosition: "center" }}
+        data-testid="hero-header"
+      >
+        <div className="absolute inset-0 bg-black/55" />
+        <div className="relative z-10 flex flex-col items-center justify-center text-center px-5">
+          <h1
+            className="font-heading text-4xl sm:text-5xl md:text-6xl leading-none tracking-wide text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.7)]"
+            data-testid="text-app-title"
+          >
+            Firehall Meals
+          </h1>
+          <p
+            className="text-[#e5e5e5] text-base sm:text-lg mt-2 max-w-md"
+            data-testid="text-app-subtitle"
+          >
+            Generate real meals for your crew in seconds
+          </p>
+          <p className="text-[10px] text-white/40 mt-3 font-normal">
+            Powered by{" "}
+            <a
+              href="https://lightsandsirensco.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white/60 transition-colors"
+              data-testid="link-header-attribution"
+            >
+              Lights &amp; Sirens Co.
+            </a>
+          </p>
+        </div>
+      </section>
 
       <main className="max-w-[1400px] mx-auto px-4 py-6">
         <div className="flex flex-col lg:flex-row gap-6">
