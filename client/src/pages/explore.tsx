@@ -1,6 +1,6 @@
 import { useState, useCallback, useEffect, useMemo } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { Flame, Search, Clock, Users, ChevronLeft, ExternalLink, X, Loader2, Heart, ShieldAlert, Globe, UtensilsCrossed, ChefHat, Package, Leaf, Printer, Mail, List, BookmarkPlus } from "lucide-react";
+import { Flame, Search, Clock, Users, ChevronLeft, X, Loader2, Heart, ShieldAlert, Globe, UtensilsCrossed, ChefHat, Package, Leaf, Printer, Mail, List, BookmarkPlus } from "lucide-react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -146,7 +146,7 @@ function buildExplorePrintHtml(recipe: RecipeDetail, crewSize: number): string {
     ${macroHtml}
     <h2>Ingredients</h2><ul style="list-style:none;padding:0">${ingredientsHtml}</ul>
     <h2>Instructions</h2><ol style="list-style:none;padding:0">${stepsHtml}</ol>
-    <p style="text-align:center;margin-top:24px;font-size:11px;color:#999">Powered by Lights & Sirens Co. · Recipe from Spoonacular</p>
+    <p style="text-align:center;margin-top:24px;font-size:11px;color:#999">Powered by Lights & Sirens Co.</p>
     </body></html>`;
 }
 
@@ -991,15 +991,6 @@ function RecipeDetailView({ recipe, crewSize }: { recipe: RecipeDetail; crewSize
         </Card>
       )}
 
-      {recipe.sourceUrl && (
-        <div className="text-center">
-          <a href={recipe.sourceUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-sm text-primary hover:underline" data-testid="link-source-recipe">
-            <ExternalLink className="w-4 h-4" />
-            View original recipe
-          </a>
-        </div>
-      )}
-
       <EmailModal
         open={emailOpen}
         onOpenChange={setEmailOpen}
@@ -1025,10 +1016,6 @@ function Footer() {
         Powered by{" "}
         <a href="https://www.lightsandsirensco.com" target="_blank" rel="noopener noreferrer" className="hover:text-muted-foreground transition-colors" data-testid="link-attribution">
           Lights &amp; Sirens Co.
-        </a>
-        {" "}&middot;{" "}Recipe data from{" "}
-        <a href="https://spoonacular.com" target="_blank" rel="noopener noreferrer" className="hover:text-muted-foreground transition-colors">
-          Spoonacular
         </a>
       </p>
     </footer>
