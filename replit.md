@@ -39,9 +39,11 @@ Key architectural features and design patterns include:
 - **Cost Control**: Implemented through caching, rate limiting, daily AI budget caps, and bot blocking.
 - **Admin Dashboard**: Provides usage statistics, budget status, cache details, and request logs.
 - **Pro Tips**: Recipes include short, practical cooking tips.
+- **Explore Recipes (Spoonacular)**: Search/discovery page at `/explore` powered by Spoonacular API. Backend service in `server/spoonacular.ts` with `searchRecipes()` and `getRecipeById()`. Routes: GET `/api/explore/search` (query, cuisine, diet, type filters) and GET `/api/explore/recipe/:id` (full recipe detail with macros, ingredients, steps). Frontend page at `client/src/pages/explore.tsx` with search form, result grid, and recipe detail view. Returns 503 if SPOONACULAR_API_KEY not set.
 
 ## External Dependencies
 - **OpenAI**: Used for AI-powered recipe generation (gpt-5-mini via Replit AI Integrations).
 - **Klaviyo**: Integrated for email capture and event tracking.
+- **Spoonacular**: Recipe search/discovery API for the Explore page. Requires `SPOONACULAR_API_KEY` environment variable.
 - **SQLite**: Used as the database for caching, rate limiting, and usage tracking.
 - **qrcode library**: Client-side library for generating QR codes.

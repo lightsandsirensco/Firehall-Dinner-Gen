@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { ErrorBoundary } from "@/components/error-boundary";
 import Home from "@/pages/home";
 import PizzaNight from "@/pages/pizza-night";
+import ExplorePage from "@/pages/explore";
 import AdminPage from "@/pages/admin";
 import VotePage from "@/pages/vote";
 import FavoritesPage from "@/pages/favorites";
@@ -16,6 +17,7 @@ function Router() {
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/pizza" component={PizzaNight} />
+      <Route path="/explore" component={ExplorePage} />
       <Route path="/admin" component={AdminPage} />
       <Route path="/vote/:voteId" component={VotePage} />
       <Route path="/favorites" component={FavoritesPage} />

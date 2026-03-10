@@ -454,6 +454,10 @@ export default function Home() {
                 Pizza Night
               </Link>
               <span className="text-muted-foreground/30 text-xs">|</span>
+              <Link href="/explore" className="text-xs uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors font-medium px-3 py-1.5" data-testid="nav-link-explore">
+                Explore
+              </Link>
+              <span className="text-muted-foreground/30 text-xs">|</span>
               <Link href="/favorites" className="text-xs uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors font-medium px-3 py-1.5 flex items-center gap-1" data-testid="nav-link-favorites">
                 <Heart className="w-3 h-3" />
                 Favorites

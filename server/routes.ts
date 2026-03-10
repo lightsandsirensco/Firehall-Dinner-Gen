@@ -15,6 +15,7 @@ import { getFromPool, refillPool, getPoolSize } from "./recipe-pool";
 import { initHallVoteTables, createHallVote, getHallVote, castBallot, closeHallVote, hashVoterFingerprint } from "./hall-vote-store";
 import { addFavourite, getFavourites, removeFavourite } from "./favourites";
 import { buildFallbackRecipe, trackFallbackTemplateId, getRecentFallbackTemplateIds } from "./fallback-recipe";
+import { searchRecipes, getRecipeById, getRandomRecipes } from "./spoonacular";
 import { enforceCarbs, trackCarb } from "./carb-rules";
 import { pickStructure, trackStructure, STRUCTURE_DISPLAY, type StructureType } from "./structure-variety";
 import { log } from "./index";
@@ -1442,6 +1443,108 @@ export async function registerRoutes(
       topIps: stats.topIps,
       topSessions: stats.topSessions,
     });
+  });
+
+  app.get("/api/explore/search", async (req: Request, res: Response) => {
+    try {
+      const query = (req.query.q as string) || "";
+      const cuisine = (req.query.cuisine as string) || "";
+      const diet = (req.query.diet as string) || "";
+      const type = (req.query.type as string) || "";
+      const rawMaxReadyTime = parseInt(req.query.maxReadyTime as string);
+      const maxReadyTime = Number.isFinite(rawMaxReadyTime) && rawMaxReadyTime > 0 ? Math.min(rawMaxReadyTime, 480) : undefined;
+      const rawNumber = parseInt((req.query.number as string) || "12");
+      const number = Number.isFinite(rawNumber) && rawNumber > 0 ? Math.min(rawNumber, 24) : 12;
+      const rawOffset = parseInt((req.query.offset as string) || "0");
+      const offset = Number.isFinite(rawOffset) && rawOffset >= 0 ? rawOffset : 0;
+
+      if (!query.trim()) {
+        const results = await getRandomRecipes(cuisine || undefined, number);
+        return res.json({
+          results: results.map(r => ({
+            id: r.id,
+            title: r.title,
+            image: r.image,
+            readyInMinutes: r.readyInMinutes,
+            servings: r.servings,
+            summary: (r.summary || "").replace(/<[^>]*>/g, "").substring(0, 200),
+            cuisines: r.cuisines || [],
+            diets: r.diets || [],
+          })),
+          totalResults: results.length,
+        });
+      }
+
+      const searchResults = await searchRecipes(query, { cuisine, diet, type, maxReadyTime, number, offset });
+      return res.json({
+        results: searchResults.results.map(r => ({
+          id: r.id,
+          title: r.title,
+          image: r.image,
+          readyInMinutes: r.readyInMinutes,
+          servings: r.servings,
+          summary: (r.summary || "").replace(/<[^>]*>/g, "").substring(0, 200),
+        })),
+        totalResults: searchResults.totalResults,
+      });
+    } catch (err: any) {
+      const msg = err.message || "Search failed";
+      if (msg.includes("SPOONACULAR_API_KEY is not configured")) {
+        return res.status(503).json({ message: "Recipe search is not configured. SPOONACULAR_API_KEY is missing." });
+      }
+      log(`[spoonacular] Search error: ${msg}`, "spoonacular");
+      return res.status(500).json({ message: "Recipe search failed. Please try again." });
+    }
+  });
+
+  app.get("/api/explore/recipe/:id", async (req: Request, res: Response) => {
+    try {
+      const id = parseInt(req.params.id);
+      if (isNaN(id)) return res.status(400).json({ message: "Invalid recipe ID" });
+
+      const detail = await getRecipeById(id);
+
+      const nutrients = detail.nutrition?.nutrients || [];
+      const findNutrient = (name: string) => nutrients.find(n => n.name.toLowerCase() === name.toLowerCase())?.amount || 0;
+
+      const steps = detail.analyzedInstructions?.[0]?.steps || [];
+
+      return res.json({
+        id: detail.id,
+        title: detail.title,
+        image: detail.image,
+        readyInMinutes: detail.readyInMinutes,
+        servings: detail.servings,
+        sourceUrl: detail.sourceUrl,
+        summary: (detail.summary || "").replace(/<[^>]*>/g, ""),
+        cuisines: detail.cuisines || [],
+        diets: detail.diets || [],
+        dishTypes: detail.dishTypes || [],
+        ingredients: (detail.extendedIngredients || []).map(ing => ({
+          name: ing.name,
+          amount: ing.amount,
+          unit: ing.unit,
+          original: ing.original,
+        })),
+        steps: steps.map(s => ({
+          number: s.number,
+          step: s.step,
+        })),
+        macros: {
+          calories: Math.round(findNutrient("Calories")),
+          protein_g: Math.round(findNutrient("Protein")),
+          carbs_g: Math.round(findNutrient("Carbohydrates")),
+          fat_g: Math.round(findNutrient("Fat")),
+        },
+      });
+    } catch (err: any) {
+      const msg = err.message || "Fetch failed";
+      if (msg.includes("SPOONACULAR_API_KEY is not configured")) {
+        return res.status(503).json({ message: "Recipe search is not configured. SPOONACULAR_API_KEY is missing." });
+      }
+      log(`[spoonacular] Detail error: ${msg}`, "spoonacular");
+      return res.status(500).json({ message: "Failed to load recipe details. Please try again." });
+    }
   });
 
   return httpServer;
