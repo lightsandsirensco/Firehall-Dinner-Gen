@@ -81,17 +81,17 @@ export function SiteHeader({ activePage, favCount = 0 }: SiteHeaderProps) {
               </Link>
             )}
 
-            <span className="text-border/40 mx-1.5 hidden sm:inline select-none">·</span>
+            <span className="text-border/40 mx-1 sm:mx-1.5 hidden sm:inline select-none">·</span>
             <a
               href="https://www.lightsandsirensco.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[12px] sm:text-[13px] uppercase tracking-wider text-muted-foreground/50 hover:text-muted-foreground transition-colors duration-200 font-normal px-2 py-1.5 flex items-center gap-1.5"
+              className="text-[11px] sm:text-[12px] tracking-wide text-muted-foreground/40 hover:text-muted-foreground/70 transition-colors duration-200 font-normal px-1.5 py-1 inline-flex items-center gap-1 whitespace-nowrap leading-none"
               data-testid="nav-link-brand"
             >
-              <Flame className="w-3 h-3" style={{ color: "#C62828" }} />
+              <Flame className="w-2.5 h-2.5 shrink-0" style={{ color: "#C62828" }} />
               <span className="hidden sm:inline">Lights & Sirens Co.</span>
-              <span className="sm:hidden">L&S</span>
+              <span className="sm:hidden">L&S Co.</span>
             </a>
           </div>
         </nav>

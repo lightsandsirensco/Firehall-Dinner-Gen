@@ -105,7 +105,7 @@ export function HeroHeader({
         )}
 
         <a
-          href="https://lightsandsirenscreative.com"
+          href="https://www.lightsandsirensco.com"
           target="_blank"
           rel="noopener noreferrer"
           className="text-white/30 text-[9px] uppercase tracking-[0.15em] hover:text-white/50 transition-colors mt-2"
