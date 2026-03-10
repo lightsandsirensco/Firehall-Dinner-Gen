@@ -37,3 +37,14 @@ export function removeFavourite(userId: string, recipeId: string): FavouriteEntr
   log(`Favourite removed: ${recipeId} for ${userId} (${updated.length}/${MAX_FAVES})`, "fav");
   return updated;
 }
+
+export function getAllFavouriteIds(): Map<string, number> {
+  const counts = new Map<string, number>();
+  const entries = Array.from(store.values());
+  for (const faves of entries) {
+    for (const f of faves) {
+      counts.set(f.recipeId, (counts.get(f.recipeId) || 0) + 1);
+    }
+  }
+  return counts;
+}

@@ -13,7 +13,8 @@ import { generatePizzaRecipe, pickPizzaConcept } from "./pizza-ai";
 import { subscribeToList, trackRecipeEvent, trackShoppingListEvent, validateKlaviyoConfig } from "./klaviyo";
 import { getFromPool, refillPool, getPoolSize } from "./recipe-pool";
 import { initHallVoteTables, createHallVote, getHallVote, castBallot, closeHallVote, hashVoterFingerprint } from "./hall-vote-store";
-import { addFavourite, getFavourites, removeFavourite } from "./favourites";
+import { addFavourite, getFavourites, removeFavourite, getAllFavouriteIds } from "./favourites";
+import { getTopCachedRecipes, getVotedRecipeNames } from "./cache-store";
 import { buildFallbackRecipe, trackFallbackTemplateId, getRecentFallbackTemplateIds } from "./fallback-recipe";
 import { searchRecipes, getRecipeById, getRandomRecipes, type SearchOptions } from "./spoonacular";
 import { enforceCarbs, trackCarb } from "./carb-rules";
@@ -1479,6 +1480,92 @@ export async function registerRoutes(
       }
     }
   }
+
+  app.get("/api/explore/trending", async (_req: Request, res: Response) => {
+    try {
+      const cachedRecipes = getTopCachedRecipes(30);
+      const votedNames = getVotedRecipeNames();
+      const favCounts = getAllFavouriteIds();
+
+      interface TrendingItem {
+        title: string;
+        protein: string;
+        score: number;
+        source: string;
+        hit_count: number;
+      }
+
+      const titleMap = new Map<string, TrendingItem>();
+
+      for (const cr of cachedRecipes) {
+        const key = cr.title.toLowerCase().replace(/[^a-z]/g, "").substring(0, 40);
+        const existing = titleMap.get(key);
+        const score = cr.hit_count * 2;
+        if (!existing || score > existing.score) {
+          titleMap.set(key, {
+            title: cr.title.replace(/\s*\(.*?\)\s*$/, "").replace(/\s*—.*$/, "").trim(),
+            protein: cr.chosen_protein,
+            score,
+            source: "generated",
+            hit_count: cr.hit_count,
+          });
+        }
+      }
+
+      for (const voted of votedNames) {
+        const key = voted.name.toLowerCase().replace(/[^a-z]/g, "").substring(0, 40);
+        const existing = titleMap.get(key);
+        const voteBonus = voted.votes * 3;
+        if (existing) {
+          existing.score += voteBonus;
+          existing.source = "voted";
+        } else {
+          titleMap.set(key, {
+            title: voted.name,
+            protein: "",
+            score: voteBonus,
+            source: "voted",
+            hit_count: 0,
+          });
+        }
+      }
+
+      for (const [recipeId, count] of Array.from(favCounts.entries())) {
+        for (const cr of cachedRecipes) {
+          try {
+            const parsed = JSON.parse(cr.recipe_json);
+            if (parsed._id === recipeId) {
+              const key = cr.title.toLowerCase().replace(/[^a-z]/g, "").substring(0, 40);
+              const existing = titleMap.get(key);
+              if (existing) {
+                existing.score += count * 5;
+                existing.source = "favorited";
+              }
+              break;
+            }
+          } catch {}
+        }
+      }
+
+      const sorted = Array.from(titleMap.values())
+        .sort((a, b) => b.score - a.score)
+        .slice(0, 6);
+
+      const trending = sorted.map(item => ({
+        title: item.title,
+        protein: item.protein,
+        score: item.score,
+        source: item.source,
+        hit_count: item.hit_count,
+      }));
+
+      log(`[explore] Trending: ${trending.length} items`, "spoonacular");
+      return res.json({ trending });
+    } catch (err: any) {
+      log(`[explore] Trending error: ${err.message}`, "spoonacular");
+      return res.json({ trending: [] });
+    }
+  });
 
   app.get("/api/explore/discover", async (req: Request, res: Response) => {
     try {

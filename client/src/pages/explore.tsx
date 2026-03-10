@@ -1,6 +1,6 @@
 import { useState, useCallback, useEffect, useMemo, useRef } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { Flame, Search, Clock, Users, ChevronLeft, X, Loader2, Heart, ShieldAlert, Globe, UtensilsCrossed, ChefHat, Package, Leaf, Printer, Mail, List, BookmarkPlus, Sparkles, SlidersHorizontal, Utensils } from "lucide-react";
+import { Flame, Search, Clock, Users, ChevronLeft, X, Loader2, Heart, ShieldAlert, Globe, UtensilsCrossed, ChefHat, Package, Leaf, Printer, Mail, List, BookmarkPlus, Sparkles, SlidersHorizontal, Utensils, TrendingUp } from "lucide-react";
 import { HeroHeader } from "@/components/hero-header";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
@@ -639,6 +639,23 @@ export default function ExplorePage() {
     }
   }, [submitted, filters.vegetarian, filters.allergens, fetchDiscoverBatch]);
 
+  interface TrendingItem {
+    title: string;
+    protein: string;
+    score: number;
+    source: string;
+    hit_count: number;
+  }
+  const { data: trendingData } = useQuery<{ trending: TrendingItem[] }>({
+    queryKey: ["/api/explore/trending"],
+    queryFn: async () => {
+      const res = await fetch("/api/explore/trending");
+      if (!res.ok) return { trending: [] };
+      return res.json();
+    },
+    staleTime: 5 * 60 * 1000,
+  });
+
   const { data: searchData, isLoading: searchLoading, error: searchError } = useQuery<SearchResponse>({
     queryKey: ["/api/explore/search", queryString],
     queryFn: async () => {
@@ -935,6 +952,42 @@ export default function ExplorePage() {
             )}
           </div>
         </form>
+
+        {!submitted && trendingData && trendingData.trending.length > 0 && (
+          <div className="mb-8" data-testid="section-trending">
+            <div className="flex items-center gap-2 mb-4">
+              <TrendingUp className="w-5 h-5 text-primary" />
+              <h2 className="font-heading text-lg tracking-wider uppercase">Trending in Firehalls</h2>
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
+              {trendingData.trending.map((item, i) => (
+                <button
+                  key={i}
+                  data-testid={`trending-item-${i}`}
+                  onClick={() => {
+                    const updated = { ...filters, freeText: item.title };
+                    setFilters(updated);
+                    setSearchParams(buildSearchParams(updated));
+                    setSubmitted(true);
+                    setSelectedRecipeId(null);
+                  }}
+                  className="group relative overflow-hidden rounded-xl border border-border/40 bg-card/60 backdrop-blur-sm p-3 text-left transition-all hover:border-primary/40 hover:shadow-md hover:shadow-primary/5 hover:-translate-y-0.5"
+                >
+                  <div className="flex items-start gap-2 mb-1.5">
+                    <Flame className="w-3.5 h-3.5 text-primary shrink-0 mt-0.5" />
+                    <span className="text-xs font-medium leading-tight line-clamp-2">{item.title}</span>
+                  </div>
+                  <div className="flex items-center gap-1.5 mt-auto">
+                    {item.protein && (
+                      <span className="text-[10px] text-muted-foreground bg-muted/50 px-1.5 py-0.5 rounded-full">{item.protein}</span>
+                    )}
+                    <span className="text-[10px] text-muted-foreground">{item.hit_count > 0 ? `${item.hit_count}× made` : "crew pick"}</span>
+                  </div>
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
 
         {(searchLoading || (!submitted && discoverLoading)) && (
           <div className="flex flex-col items-center justify-center py-24 gap-3" data-testid="explore-loading">

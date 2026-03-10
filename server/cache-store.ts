@@ -359,3 +359,63 @@ export function getCacheCount(): number {
 export function hashIp(ip: string): string {
   return crypto.createHash("sha256").update(ip + "lights-sirens-salt").digest("hex").substring(0, 12);
 }
+
+export interface TrendingRecipeRow {
+  title: string;
+  chosen_protein: string;
+  hit_count: number;
+  recipe_json: string;
+}
+
+export function getTopCachedRecipes(limit: number = 20): TrendingRecipeRow[] {
+  const rows = db.prepare(`
+    SELECT recipe_json, hit_count
+    FROM recipe_cache
+    WHERE hit_count >= 2
+    ORDER BY hit_count DESC
+    LIMIT ?
+  `).all(limit) as { recipe_json: string; hit_count: number }[];
+  return rows.map(row => {
+    try {
+      const parsed = JSON.parse(row.recipe_json);
+      return {
+        title: parsed.title || "",
+        chosen_protein: parsed.chosen_protein || "",
+        hit_count: row.hit_count,
+        recipe_json: row.recipe_json,
+      };
+    } catch {
+      return { title: "", chosen_protein: "", hit_count: row.hit_count, recipe_json: row.recipe_json };
+    }
+  }).filter(r => r.title);
+}
+
+export interface VotedRecipe {
+  name: string;
+  votes: number;
+}
+
+export function getVotedRecipeNames(): VotedRecipe[] {
+  try {
+    const rows = db.prepare(`
+      SELECT options_json, total_votes
+      FROM hall_votes
+      WHERE total_votes > 0
+      ORDER BY total_votes DESC
+      LIMIT 10
+    `).all() as { options_json: string; total_votes: number }[];
+    const results: VotedRecipe[] = [];
+    for (const row of rows) {
+      try {
+        const opts = JSON.parse(row.options_json);
+        const perOption = Math.max(1, Math.ceil(row.total_votes / opts.length));
+        for (const opt of opts) {
+          if (opt.name) results.push({ name: opt.name, votes: perOption });
+        }
+      } catch {}
+    }
+    return results;
+  } catch {
+    return [];
+  }
+}
