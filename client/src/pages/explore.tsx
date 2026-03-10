@@ -77,7 +77,7 @@ function spoonacularToClientRecipe(detail: RecipeDetail, crewSize: number): Clie
   return {
     title: detail.title,
     meal_format: detail.dishTypes?.[0] || "dinner",
-    servings: detail.servings || crewSize,
+    servings: crewSize,
     tags: [...detail.cuisines, ...detail.diets],
     timing: {
       prep_min: Math.max(5, Math.round(detail.readyInMinutes * 0.3)),
@@ -151,7 +151,7 @@ function buildExplorePrintHtml(recipe: RecipeDetail, crewSize: number): string {
     .meta{font-size:13px;color:#666;margin-bottom:16px}</style></head>
     <body>
     <h1>${recipe.title}</h1>
-    <p class="meta">${recipe.readyInMinutes} min · ${recipe.servings} servings · Crew of ${crewSize}</p>
+    <p class="meta">${recipe.readyInMinutes} min · ${crewSize} servings</p>
     ${macroHtml}
     <h2>Ingredients</h2><ul style="list-style:none;padding:0">${ingredientsHtml}</ul>
     <h2>Instructions</h2><ol style="list-style:none;padding:0">${stepsHtml}</ol>
@@ -790,12 +790,10 @@ export default function ExplorePage() {
                           {result.readyInMinutes} min
                         </span>
                       )}
-                      {result.servings > 0 && (
-                        <span className="flex items-center gap-1">
-                          <Users className="w-3 h-3" />
-                          {result.servings} servings
-                        </span>
-                      )}
+                      <span className="flex items-center gap-1">
+                        <Users className="w-3 h-3" />
+                        {filters.crewSize} servings
+                      </span>
                     </div>
                     {result.summary && (
                       <p className="text-xs text-muted-foreground/80 line-clamp-2 mb-3 leading-relaxed">{result.summary}</p>
@@ -922,7 +920,7 @@ function RecipeDetailView({ recipe, crewSize }: { recipe: RecipeDetail; crewSize
           )}
           <span className="flex items-center gap-1.5">
             <Users className="w-4 h-4 text-primary/60" />
-            {recipe.servings} servings
+            {crewSize} servings
           </span>
         </div>
         <div className="flex gap-1.5 flex-wrap mb-5">
