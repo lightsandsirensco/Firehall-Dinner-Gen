@@ -864,6 +864,18 @@ function ExploreNav({ favCount }: { favCount: number }) {
                 <Badge variant="secondary" className="text-[9px] px-1.5 py-0 h-4 min-w-[16px] leading-none">{favCount}</Badge>
               )}
             </Link>
+            <span className="text-border/50 text-xs mx-1 hidden sm:inline">·</span>
+            <a
+              href="https://www.lightsandsirensco.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[11px] uppercase tracking-wider text-muted-foreground/60 hover:text-muted-foreground transition-colors duration-200 font-normal px-2 py-1.5 flex items-center gap-1.5"
+              data-testid="nav-link-brand"
+            >
+              <Flame className="w-3 h-3" style={{ color: "#C62828" }} />
+              <span className="hidden sm:inline">Lights & Sirens Co.</span>
+              <span className="sm:hidden">L&S Co.</span>
+            </a>
           </div>
         </nav>
       </div>
