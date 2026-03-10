@@ -82,14 +82,23 @@ export interface SpoonacularRecipeDetail {
   dishTypes: string[];
 }
 
-export async function searchRecipes(query: string, options: {
+export interface SearchOptions {
   cuisine?: string;
   diet?: string;
   type?: string;
   maxReadyTime?: number;
   number?: number;
   offset?: number;
-} = {}): Promise<SpoonacularSearchResponse> {
+  intolerances?: string;
+  excludeIngredients?: string;
+  includeIngredients?: string;
+  equipment?: string;
+  minServings?: number;
+  maxServings?: number;
+  sort?: string;
+}
+
+export async function searchRecipes(query: string, options: SearchOptions = {}): Promise<SpoonacularSearchResponse> {
   const apiKey = getApiKey();
   const params = new URLSearchParams({
     apiKey,
@@ -104,6 +113,13 @@ export async function searchRecipes(query: string, options: {
   if (options.diet) params.set("diet", options.diet);
   if (options.type) params.set("type", options.type);
   if (options.maxReadyTime) params.set("maxReadyTime", String(options.maxReadyTime));
+  if (options.intolerances) params.set("intolerances", options.intolerances);
+  if (options.excludeIngredients) params.set("excludeIngredients", options.excludeIngredients);
+  if (options.includeIngredients) params.set("includeIngredients", options.includeIngredients);
+  if (options.equipment) params.set("equipment", options.equipment);
+  if (options.minServings) params.set("minServings", String(options.minServings));
+  if (options.maxServings) params.set("maxServings", String(options.maxServings));
+  if (options.sort) params.set("sort", options.sort);
 
   const cacheKey = `search:${params}`;
   const cached = getCached<SpoonacularSearchResponse>(cacheKey);

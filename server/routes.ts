@@ -1466,12 +1466,21 @@ export async function registerRoutes(
       const cuisine = (req.query.cuisine as string) || "";
       const diet = (req.query.diet as string) || "";
       const type = (req.query.type as string) || "";
+      const intolerances = (req.query.intolerances as string) || "";
+      const excludeIngredients = (req.query.excludeIngredients as string) || "";
+      const includeIngredients = (req.query.includeIngredients as string) || "";
+      const equipment = (req.query.equipment as string) || "";
       const rawMaxReadyTime = parseInt(req.query.maxReadyTime as string);
       const maxReadyTime = Number.isFinite(rawMaxReadyTime) && rawMaxReadyTime > 0 ? Math.min(rawMaxReadyTime, 480) : undefined;
       const rawNumber = parseInt((req.query.number as string) || "12");
       const number = Number.isFinite(rawNumber) && rawNumber > 0 ? Math.min(rawNumber, 24) : 12;
       const rawOffset = parseInt((req.query.offset as string) || "0");
       const offset = Number.isFinite(rawOffset) && rawOffset >= 0 ? rawOffset : 0;
+      const rawMinServings = parseInt(req.query.minServings as string);
+      const minServings = Number.isFinite(rawMinServings) && rawMinServings > 0 ? rawMinServings : undefined;
+      const rawMaxServings = parseInt(req.query.maxServings as string);
+      const maxServings = Number.isFinite(rawMaxServings) && rawMaxServings > 0 ? rawMaxServings : undefined;
+      const sort = (req.query.sort as string) || "";
 
       if (!query.trim()) {
         const results = await getRandomRecipes(cuisine || undefined, number);
@@ -1490,7 +1499,11 @@ export async function registerRoutes(
         });
       }
 
-      const searchResults = await searchRecipes(query, { cuisine, diet, type, maxReadyTime, number, offset });
+      const searchResults = await searchRecipes(query, {
+        cuisine, diet, type, maxReadyTime, number, offset,
+        intolerances, excludeIngredients, includeIngredients,
+        equipment, minServings, maxServings, sort,
+      });
       return res.json({
         results: searchResults.results.map(r => ({
           id: r.id,

@@ -1,12 +1,16 @@
-import { useState, useCallback, useEffect } from "react";
+import { useState, useCallback, useEffect, useMemo } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { Flame, Search, Clock, Users, ChevronLeft, ExternalLink, X, Loader2, Heart } from "lucide-react";
+import { Flame, Search, Clock, Users, ChevronLeft, ExternalLink, X, Loader2, Heart, ShieldAlert, Globe, UtensilsCrossed, ChefHat, Package, Leaf } from "lucide-react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
+import { Label } from "@/components/ui/label";
+import { Slider } from "@/components/ui/slider";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Textarea } from "@/components/ui/textarea";
 import { getSavedCount } from "@/lib/saved-meals";
 
 interface SearchResult {
@@ -36,62 +40,267 @@ interface RecipeDetail {
   macros: { calories: number; protein_g: number; carbs_g: number; fat_g: number };
 }
 
-const CUISINE_OPTIONS = [
-  { value: "all", label: "All Cuisines" },
-  { value: "american", label: "American" },
-  { value: "italian", label: "Italian" },
-  { value: "mexican", label: "Mexican" },
-  { value: "asian", label: "Asian" },
-  { value: "mediterranean", label: "Mediterranean" },
-  { value: "indian", label: "Indian" },
-  { value: "thai", label: "Thai" },
-  { value: "chinese", label: "Chinese" },
-  { value: "japanese", label: "Japanese" },
-  { value: "korean", label: "Korean" },
-  { value: "cajun", label: "Cajun" },
-  { value: "greek", label: "Greek" },
-  { value: "french", label: "French" },
+const CUISINE_MAP: Record<string, string> = {
+  any: "",
+  mediterranean: "mediterranean",
+  mexican: "mexican",
+  italian: "italian",
+  asian: "chinese,japanese,korean,thai,vietnamese",
+  korean: "korean",
+  thai: "thai",
+  indian: "indian",
+  middle_eastern: "middle eastern",
+  bbq: "american",
+  cajun: "cajun",
+  canadian: "american",
+};
+
+const FORMAT_QUERY_MAP: Record<string, string> = {
+  random: "",
+  burger: "burger",
+  tacos: "tacos",
+  wrap: "wrap pita",
+  bowl: "bowl",
+  pasta: "pasta",
+  salad: "salad",
+  sheet_pan: "sheet pan",
+  stir_fry: "stir fry",
+  soup_chili: "soup stew chili",
+  breakfast: "breakfast",
+  loaded_fries: "loaded fries",
+};
+
+const ALLERGEN_TO_INTOLERANCE: Record<string, string> = {
+  dairy: "dairy",
+  gluten: "gluten",
+  soy: "soy",
+  eggs: "egg",
+  nuts: "tree nut,peanut",
+  shellfish: "shellfish",
+};
+
+const ALLERGEN_EXCLUDE_MAP: Record<string, string[]> = {
+  dairy: ["milk", "cheese", "butter", "cream", "yogurt"],
+  gluten: ["wheat", "flour", "bread", "breadcrumbs"],
+  soy: ["soy sauce", "tofu", "edamame", "soybean"],
+  eggs: ["egg", "eggs", "mayonnaise"],
+  nuts: ["peanut", "almond", "walnut", "cashew", "pecan"],
+  shellfish: ["shrimp", "crab", "lobster", "clam", "mussel", "oyster"],
+};
+
+const PROTEIN_OPTIONS = ["chicken", "beef", "pork", "turkey", "seafood", "vegetarian"];
+
+const ALLERGEN_OPTIONS = ["dairy", "gluten", "soy", "eggs", "nuts", "shellfish"];
+
+const APPLIANCE_OPTIONS = ["stove", "oven", "grill", "slow cooker", "air fryer", "instant pot"];
+
+const APPLIANCE_EQUIPMENT_MAP: Record<string, string> = {
+  stove: "stove",
+  oven: "oven",
+  grill: "grill",
+  "slow cooker": "slow cooker",
+  "air fryer": "air fryer",
+  "instant pot": "pressure cooker",
+};
+
+const TIME_OPTIONS = [
+  { value: "any", label: "Any Time" },
+  { value: "15", label: "≤ 15 min" },
+  { value: "25", label: "≤ 25 min" },
+  { value: "40", label: "≤ 40 min" },
+  { value: "60", label: "≤ 60 min" },
+  { value: "90", label: "≤ 90 min" },
 ];
 
-const DIET_OPTIONS = [
-  { value: "all", label: "Any Diet" },
-  { value: "gluten free", label: "Gluten Free" },
-  { value: "vegetarian", label: "Vegetarian" },
-  { value: "vegan", label: "Vegan" },
-  { value: "dairy free", label: "Dairy Free" },
-  { value: "whole30", label: "Whole30" },
-  { value: "paleo", label: "Paleo" },
-  { value: "ketogenic", label: "Keto" },
-];
+interface ExploreFilters {
+  freeText: string;
+  cuisine: string;
+  mealFormat: string;
+  proteins: string[];
+  allergens: string[];
+  appliances: string[];
+  timeAvailable: string;
+  crewSize: number;
+  pantryMode: boolean;
+  pantryIngredients: string;
+  vegetarian: boolean;
+}
+
+function buildSearchParams(filters: ExploreFilters): URLSearchParams {
+  const params = new URLSearchParams();
+
+  const queryParts: string[] = [];
+
+  if (filters.freeText.trim()) {
+    queryParts.push(filters.freeText.trim());
+  }
+
+  const formatKeyword = FORMAT_QUERY_MAP[filters.mealFormat] || "";
+  if (formatKeyword) {
+    queryParts.push(formatKeyword);
+  }
+
+  const isVegetarian = filters.vegetarian || filters.proteins.includes("vegetarian");
+  if (isVegetarian) {
+    params.set("diet", "vegetarian");
+  } else if (filters.proteins.length > 0) {
+    const proteinKeywords = filters.proteins
+      .filter(p => p !== "seafood")
+      .concat(filters.proteins.includes("seafood") ? ["fish", "shrimp"] : []);
+    if (proteinKeywords.length > 0) {
+      queryParts.push(proteinKeywords.join(" "));
+    }
+  }
+
+  if (queryParts.length === 0) {
+    queryParts.push("dinner");
+  }
+  params.set("q", queryParts.join(" "));
+
+  const spoonCuisine = CUISINE_MAP[filters.cuisine] || "";
+  if (spoonCuisine) {
+    params.set("cuisine", spoonCuisine);
+  }
+
+  if (filters.allergens.length > 0) {
+    const intolerances = filters.allergens
+      .map(a => ALLERGEN_TO_INTOLERANCE[a])
+      .filter(Boolean)
+      .join(",");
+    if (intolerances) params.set("intolerances", intolerances);
+
+    const excludeItems = filters.allergens
+      .flatMap(a => ALLERGEN_EXCLUDE_MAP[a] || []);
+    if (excludeItems.length > 0) {
+      params.set("excludeIngredients", excludeItems.join(","));
+    }
+  }
+
+  if (filters.timeAvailable !== "any") {
+    params.set("maxReadyTime", filters.timeAvailable);
+  }
+
+  if (filters.appliances.length > 0) {
+    const equipment = filters.appliances
+      .map(a => APPLIANCE_EQUIPMENT_MAP[a])
+      .filter(Boolean)
+      .join(",");
+    if (equipment) params.set("equipment", equipment);
+  }
+
+  if (filters.pantryMode && filters.pantryIngredients.trim()) {
+    const ingredients = filters.pantryIngredients
+      .split(/[,\n]+/)
+      .map(i => i.trim().toLowerCase())
+      .filter(Boolean)
+      .slice(0, 10)
+      .join(",");
+    if (ingredients) params.set("includeIngredients", ingredients);
+  }
+
+  const crew = filters.crewSize;
+  const minS = Math.max(1, crew - 2);
+  const maxS = crew + 4;
+  params.set("minServings", String(minS));
+  params.set("maxServings", String(maxS));
+
+  params.set("number", "12");
+
+  return params;
+}
+
+function MultiToggle({ options, selected, onChange, testIdPrefix }: {
+  options: string[];
+  selected: string[];
+  onChange: (val: string[]) => void;
+  testIdPrefix: string;
+}) {
+  const toggle = (option: string) => {
+    if (selected.includes(option)) {
+      onChange(selected.filter(s => s !== option));
+    } else {
+      onChange([...selected, option]);
+    }
+  };
+
+  return (
+    <div className="flex flex-wrap gap-1.5">
+      {options.map(option => {
+        const isActive = selected.includes(option);
+        return (
+          <Badge
+            key={option}
+            variant={isActive ? "default" : "outline"}
+            className={`cursor-pointer select-none capitalize text-xs toggle-elevate ${isActive ? "toggle-elevated bg-primary text-primary-foreground" : ""}`}
+            onClick={() => toggle(option)}
+            data-testid={`${testIdPrefix}-${option}`}
+          >
+            {option}
+          </Badge>
+        );
+      })}
+    </div>
+  );
+}
 
 export default function ExplorePage() {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [submittedQuery, setSubmittedQuery] = useState("");
-  const [cuisine, setCuisine] = useState("all");
-  const [diet, setDiet] = useState("all");
+  const [filters, setFilters] = useState<ExploreFilters>(() => {
+    const defaults: ExploreFilters = {
+      freeText: "",
+      cuisine: "any",
+      mealFormat: "random",
+      proteins: ["chicken", "beef"],
+      allergens: [],
+      appliances: ["stove", "oven"],
+      timeAvailable: "any",
+      crewSize: 6,
+      pantryMode: false,
+      pantryIngredients: "",
+      vegetarian: false,
+    };
+    try {
+      const saved = localStorage.getItem("explore_filters");
+      if (saved) return { ...defaults, ...JSON.parse(saved) };
+    } catch {}
+    return defaults;
+  });
+
+  const [submitted, setSubmitted] = useState(false);
+  const [searchParams, setSearchParams] = useState<URLSearchParams | null>(null);
   const [selectedRecipeId, setSelectedRecipeId] = useState<number | null>(null);
   const [favCount] = useState(() => getSavedCount());
 
   useEffect(() => {
-    setSubmittedQuery("");
+    try {
+      localStorage.setItem("explore_filters", JSON.stringify(filters));
+    } catch {}
+  }, [filters]);
+
+  const update = useCallback(<K extends keyof ExploreFilters>(key: K, value: ExploreFilters[K]) => {
+    setFilters(prev => ({ ...prev, [key]: value }));
   }, []);
 
-  const searchParams = new URLSearchParams();
-  if (submittedQuery) searchParams.set("q", submittedQuery);
-  if (cuisine !== "all") searchParams.set("cuisine", cuisine);
-  if (diet !== "all") searchParams.set("diet", diet);
-  searchParams.set("number", "12");
+  const handleSearch = useCallback((e: React.FormEvent) => {
+    e.preventDefault();
+    const params = buildSearchParams(filters);
+    setSearchParams(params);
+    setSubmitted(true);
+    setSelectedRecipeId(null);
+  }, [filters]);
+
+  const queryString = searchParams?.toString() || "";
 
   const { data: searchData, isLoading: searchLoading, error: searchError } = useQuery<{ results: SearchResult[]; totalResults: number }>({
-    queryKey: ["/api/explore/search", submittedQuery, cuisine, diet],
+    queryKey: ["/api/explore/search", queryString],
     queryFn: async () => {
-      const res = await fetch(`/api/explore/search?${searchParams}`);
+      const res = await fetch(`/api/explore/search?${queryString}`);
       if (!res.ok) {
         const err = await res.json().catch(() => ({}));
         throw new Error(err.message || "Search failed");
       }
       return res.json();
     },
+    enabled: submitted && !!queryString,
     staleTime: 5 * 60 * 1000,
   });
 
@@ -109,16 +318,24 @@ export default function ExplorePage() {
     staleTime: 10 * 60 * 1000,
   });
 
-  const handleSearch = useCallback((e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmittedQuery(searchQuery);
-    setSelectedRecipeId(null);
-  }, [searchQuery]);
+  const activeFilterCount = useMemo(() => {
+    let count = 0;
+    if (filters.cuisine !== "any") count++;
+    if (filters.mealFormat !== "random") count++;
+    if (filters.proteins.length > 0) count++;
+    if (filters.allergens.length > 0) count++;
+    if (filters.appliances.length > 0) count++;
+    if (filters.timeAvailable !== "any") count++;
+    if (filters.pantryMode) count++;
+    if (filters.vegetarian) count++;
+    if (filters.crewSize !== 6) count++;
+    return count;
+  }, [filters]);
 
   if (selectedRecipeId && recipeDetail) {
     return (
       <div className="min-h-screen bg-background">
-        <ExplorNav favCount={favCount} />
+        <ExploreNav favCount={favCount} />
         <main className="max-w-[900px] mx-auto px-4 py-6">
           <Button variant="ghost" className="mb-4 gap-1" onClick={() => setSelectedRecipeId(null)} data-testid="button-back-to-results">
             <ChevronLeft className="w-4 h-4" />
@@ -134,7 +351,7 @@ export default function ExplorePage() {
   if (selectedRecipeId && (detailLoading || detailError)) {
     return (
       <div className="min-h-screen bg-background">
-        <ExplorNav favCount={favCount} />
+        <ExploreNav favCount={favCount} />
         <main className="max-w-[900px] mx-auto px-4 py-6">
           <Button variant="ghost" className="mb-4 gap-1" onClick={() => setSelectedRecipeId(null)} data-testid="button-back-to-results">
             <ChevronLeft className="w-4 h-4" />
@@ -160,7 +377,7 @@ export default function ExplorePage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <ExplorNav favCount={favCount} />
+      <ExploreNav favCount={favCount} />
 
       <header className="bg-background border-b border-border/40">
         <div className="max-w-[1400px] mx-auto px-4 py-6 text-center">
@@ -168,52 +385,227 @@ export default function ExplorePage() {
             EXPLORE RECIPES
           </h1>
           <p className="text-sm text-muted-foreground mt-2 max-w-lg mx-auto">
-            Search thousands of recipes for inspiration. Find crew meals by cuisine, diet, or ingredients.
+            Search thousands of recipes using your crew's filters. Match by cuisine, format, allergies, time, and what's in the fridge.
           </p>
         </div>
       </header>
 
       <main className="max-w-[1400px] mx-auto px-4 py-6">
-        <form onSubmit={handleSearch} className="flex flex-col sm:flex-row gap-3 mb-6" data-testid="form-explore-search">
-          <div className="relative flex-1">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-            <Input
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search recipes... (e.g. chicken tacos, pasta, stir fry)"
-              className="pl-9"
-              data-testid="input-explore-search"
-            />
-            {searchQuery && (
-              <button type="button" className="absolute right-3 top-1/2 -translate-y-1/2" onClick={() => { setSearchQuery(""); setSubmittedQuery(""); }}>
-                <X className="w-4 h-4 text-muted-foreground hover:text-foreground" />
-              </button>
+        <form onSubmit={handleSearch} data-testid="form-explore-search">
+          <Card className="mb-6">
+            <CardContent className="p-4 space-y-4">
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+                <Input
+                  value={filters.freeText}
+                  onChange={(e) => update("freeText", e.target.value)}
+                  placeholder="Search keywords (optional — filters below do the heavy lifting)"
+                  className="pl-9"
+                  data-testid="input-explore-search"
+                />
+                {filters.freeText && (
+                  <button type="button" className="absolute right-3 top-1/2 -translate-y-1/2" onClick={() => update("freeText", "")}>
+                    <X className="w-4 h-4 text-muted-foreground hover:text-foreground" />
+                  </button>
+                )}
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div className="space-y-2">
+                  <Label className="flex items-center gap-2 text-xs uppercase tracking-wider text-muted-foreground font-medium">
+                    <Globe className="w-3.5 h-3.5" />
+                    Cuisine Style
+                  </Label>
+                  <Select value={filters.cuisine} onValueChange={(val) => update("cuisine", val)}>
+                    <SelectTrigger data-testid="select-explore-cuisine">
+                      <SelectValue />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="any">Any (Random)</SelectItem>
+                      <SelectItem value="mediterranean">Mediterranean</SelectItem>
+                      <SelectItem value="mexican">Mexican / Tex-Mex</SelectItem>
+                      <SelectItem value="italian">Italian-Inspired</SelectItem>
+                      <SelectItem value="asian">Asian-Inspired</SelectItem>
+                      <SelectItem value="korean">Korean-Inspired</SelectItem>
+                      <SelectItem value="thai">Thai-Inspired</SelectItem>
+                      <SelectItem value="indian">Indian-Inspired</SelectItem>
+                      <SelectItem value="middle_eastern">Middle Eastern</SelectItem>
+                      <SelectItem value="bbq">BBQ / Smoky</SelectItem>
+                      <SelectItem value="cajun">Cajun / Southern</SelectItem>
+                      <SelectItem value="canadian">Canadian Classics</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+
+                <div className="space-y-2">
+                  <Label className="flex items-center gap-2 text-xs uppercase tracking-wider text-muted-foreground font-medium">
+                    <UtensilsCrossed className="w-3.5 h-3.5" />
+                    Meal Format
+                  </Label>
+                  <Select value={filters.mealFormat} onValueChange={(val) => update("mealFormat", val)}>
+                    <SelectTrigger data-testid="select-explore-format">
+                      <SelectValue />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="random">Any Format</SelectItem>
+                      <SelectItem value="burger">Burger</SelectItem>
+                      <SelectItem value="tacos">Tacos</SelectItem>
+                      <SelectItem value="wrap">Wrap</SelectItem>
+                      <SelectItem value="bowl">Bowl</SelectItem>
+                      <SelectItem value="pasta">Pasta</SelectItem>
+                      <SelectItem value="salad">Salad</SelectItem>
+                      <SelectItem value="sheet_pan">Sheet Pan</SelectItem>
+                      <SelectItem value="stir_fry">Stir Fry</SelectItem>
+                      <SelectItem value="soup_chili">Soup / Chili</SelectItem>
+                      <SelectItem value="breakfast">Breakfast</SelectItem>
+                      <SelectItem value="loaded_fries">Loaded Fries</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+
+                <div className="space-y-2">
+                  <Label className="flex items-center gap-2 text-xs uppercase tracking-wider text-muted-foreground font-medium">
+                    <Clock className="w-3.5 h-3.5" />
+                    Time Available
+                  </Label>
+                  <Select value={filters.timeAvailable} onValueChange={(val) => update("timeAvailable", val)}>
+                    <SelectTrigger data-testid="select-explore-time">
+                      <SelectValue />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {TIME_OPTIONS.map(o => (
+                        <SelectItem key={o.value} value={o.value}>{o.label}</SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <Label className="flex items-center gap-2 text-xs uppercase tracking-wider text-muted-foreground font-medium">
+                    <ChefHat className="w-3.5 h-3.5" />
+                    Protein
+                  </Label>
+                  <MultiToggle
+                    options={PROTEIN_OPTIONS}
+                    selected={filters.proteins}
+                    onChange={(val) => {
+                      const wasVeg = filters.proteins.includes("vegetarian");
+                      const isNowVeg = val.includes("vegetarian");
+                      if (isNowVeg && !wasVeg) {
+                        update("proteins", ["vegetarian"]);
+                        update("vegetarian", true);
+                      } else if (!isNowVeg && wasVeg) {
+                        update("proteins", val.filter(p => p !== "vegetarian"));
+                        update("vegetarian", false);
+                      } else if (isNowVeg) {
+                        update("proteins", ["vegetarian"]);
+                      } else {
+                        update("proteins", val);
+                        update("vegetarian", false);
+                      }
+                    }}
+                    testIdPrefix="toggle-explore-protein"
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <Label className="flex items-center gap-2 text-xs uppercase tracking-wider text-muted-foreground font-medium">
+                    <ShieldAlert className="w-3.5 h-3.5" />
+                    Avoid (Allergies)
+                  </Label>
+                  <MultiToggle
+                    options={ALLERGEN_OPTIONS}
+                    selected={filters.allergens}
+                    onChange={(val) => update("allergens", val)}
+                    testIdPrefix="toggle-explore-allergen"
+                  />
+                  {filters.allergens.length === 0 && (
+                    <p className="text-xs text-muted-foreground">No restrictions</p>
+                  )}
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <Label className="flex items-center gap-2 text-xs uppercase tracking-wider text-muted-foreground font-medium">
+                    <Flame className="w-3.5 h-3.5" />
+                    Appliances
+                  </Label>
+                  <MultiToggle
+                    options={APPLIANCE_OPTIONS}
+                    selected={filters.appliances}
+                    onChange={(val) => update("appliances", val)}
+                    testIdPrefix="toggle-explore-appliance"
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <Label className="flex items-center gap-2 text-xs uppercase tracking-wider text-muted-foreground font-medium">
+                    <Users className="w-3.5 h-3.5" />
+                    Crew Size: {filters.crewSize}
+                  </Label>
+                  <Slider
+                    value={[filters.crewSize]}
+                    onValueChange={([val]) => update("crewSize", val)}
+                    min={2}
+                    max={20}
+                    step={1}
+                    data-testid="slider-explore-crew"
+                  />
+                  <p className="text-xs text-muted-foreground">Prefer recipes serving ~{filters.crewSize} people</p>
+                </div>
+              </div>
+
+              <div className="border-t border-border/40 pt-4 space-y-3">
+                <div className="flex items-center gap-2.5">
+                  <Checkbox
+                    id="explore-pantry"
+                    checked={filters.pantryMode}
+                    onCheckedChange={(checked) => update("pantryMode", !!checked)}
+                    data-testid="checkbox-explore-pantry"
+                  />
+                  <Label htmlFor="explore-pantry" className="flex items-center gap-2 text-xs uppercase tracking-wider text-muted-foreground font-medium cursor-pointer select-none">
+                    <Package className="w-3.5 h-3.5" />
+                    Use what's in the fridge
+                  </Label>
+                </div>
+                {filters.pantryMode && (
+                  <Textarea
+                    value={filters.pantryIngredients}
+                    onChange={(e) => update("pantryIngredients", e.target.value)}
+                    placeholder="List ingredients you have (comma or newline separated)&#10;e.g. chicken thighs, bell peppers, onions, garlic"
+                    rows={3}
+                    className="text-sm"
+                    data-testid="textarea-explore-pantry"
+                  />
+                )}
+              </div>
+            </CardContent>
+          </Card>
+
+          <div className="flex items-center gap-3 mb-6">
+            <Button type="submit" className="font-heading tracking-wider flex-1 sm:flex-none" data-testid="button-explore-search">
+              <Search className="w-4 h-4 mr-1" />
+              SEARCH RECIPES
+              {activeFilterCount > 0 && (
+                <Badge variant="secondary" className="ml-2 text-[10px] px-1.5 py-0">{activeFilterCount} filters</Badge>
+              )}
+            </Button>
+            {submitted && (
+              <Button
+                type="button"
+                variant="outline"
+                className="font-heading tracking-wider"
+                onClick={() => { setSubmitted(false); setSearchParams(null); }}
+                data-testid="button-explore-clear"
+              >
+                <X className="w-4 h-4 mr-1" />
+                CLEAR
+              </Button>
             )}
           </div>
-          <Select value={cuisine} onValueChange={setCuisine}>
-            <SelectTrigger className="w-full sm:w-[160px]" data-testid="select-explore-cuisine">
-              <SelectValue />
-            </SelectTrigger>
-            <SelectContent>
-              {CUISINE_OPTIONS.map(o => (
-                <SelectItem key={o.value} value={o.value}>{o.label}</SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
-          <Select value={diet} onValueChange={setDiet}>
-            <SelectTrigger className="w-full sm:w-[150px]" data-testid="select-explore-diet">
-              <SelectValue />
-            </SelectTrigger>
-            <SelectContent>
-              {DIET_OPTIONS.map(o => (
-                <SelectItem key={o.value} value={o.value}>{o.label}</SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
-          <Button type="submit" className="font-heading tracking-wider" data-testid="button-explore-search">
-            <Search className="w-4 h-4 mr-1" />
-            SEARCH
-          </Button>
         </form>
 
         {searchLoading && (
@@ -225,16 +617,15 @@ export default function ExplorePage() {
         {searchError && (
           <div className="text-center py-12" data-testid="explore-error">
             <p className="text-destructive font-medium">{(searchError as Error).message}</p>
-            <p className="text-sm text-muted-foreground mt-1">Please try again or adjust your search.</p>
+            <p className="text-sm text-muted-foreground mt-1">Please try again or adjust your filters.</p>
           </div>
         )}
 
-        {!searchLoading && searchData && (
+        {!searchLoading && searchData && submitted && (
           <>
             <div className="flex items-center justify-between mb-4">
               <p className="text-sm text-muted-foreground" data-testid="text-result-count">
                 {searchData.totalResults > 0 ? `${searchData.totalResults.toLocaleString()} recipes found` : "No recipes found"}
-                {submittedQuery && ` for "${submittedQuery}"`}
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" data-testid="explore-results-grid">
@@ -247,12 +638,7 @@ export default function ExplorePage() {
                 >
                   {result.image && (
                     <div className="aspect-video overflow-hidden">
-                      <img
-                        src={result.image}
-                        alt={result.title}
-                        className="w-full h-full object-cover"
-                        loading="lazy"
-                      />
+                      <img src={result.image} alt={result.title} className="w-full h-full object-cover" loading="lazy" />
                     </div>
                   )}
                   <CardContent className="p-4">
@@ -291,10 +677,18 @@ export default function ExplorePage() {
             {searchData.results.length === 0 && (
               <div className="text-center py-12">
                 <Search className="w-12 h-12 mx-auto text-muted-foreground/30 mb-3" />
-                <p className="text-muted-foreground">No recipes found. Try different keywords or filters.</p>
+                <p className="text-muted-foreground">No recipes found. Try loosening your filters or removing restrictions.</p>
               </div>
             )}
           </>
+        )}
+
+        {!submitted && (
+          <div className="text-center py-16">
+            <Search className="w-16 h-16 mx-auto text-muted-foreground/20 mb-4" />
+            <p className="text-muted-foreground text-lg font-heading tracking-wide">SET YOUR FILTERS AND HIT SEARCH</p>
+            <p className="text-sm text-muted-foreground/70 mt-1">Your crew's filters map to real recipe results</p>
+          </div>
         )}
       </main>
       <Footer />
@@ -302,7 +696,7 @@ export default function ExplorePage() {
   );
 }
 
-function ExplorNav({ favCount }: { favCount: number }) {
+function ExploreNav({ favCount }: { favCount: number }) {
   return (
     <div className="bg-background border-b border-border/40">
       <div className="max-w-[1400px] mx-auto px-4">
