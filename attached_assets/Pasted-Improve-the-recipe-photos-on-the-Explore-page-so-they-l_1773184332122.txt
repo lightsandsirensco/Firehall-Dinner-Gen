@@ -1,0 +1,54 @@
+Improve the recipe photos on the Explore page so they look much more enticing, appetizing, and high quality.
+
+Goal:
+Make the Explore page feel more visually crave-worthy and premium by using better food images that make users want to click and cook the recipes.
+
+Requirements:
+
+1) Improve image quality
+- Use higher-quality, more appetizing recipe photos where available
+- Prefer images that clearly show the finished dish
+- Avoid dull, blurry, poorly cropped, or low-light images
+- Avoid photos that look generic, flat, or unprofessional
+
+2) Prioritize images that feel:
+- warm
+- rich in color
+- well-lit
+- close enough to show texture
+- realistic and satisfying
+- suitable for firefighter-style meals (hearty, filling, bold)
+
+3) Improve image presentation in the UI
+- Use consistent aspect ratios across all Explore cards
+- Ensure images are cropped cleanly and do not cut off the main food awkwardly
+- Add subtle rounded corners and card polish to make the images feel premium
+- Make sure images scale cleanly on mobile
+
+4) Add a visual enhancement layer if needed
+- Slightly improve contrast / sharpness / saturation in a tasteful way
+- Do not over-edit or make the food look fake
+- Keep the same theme and premium dark UI
+
+5) Improve recipe card hierarchy
+- Make the image the strongest visual anchor of each Explore card
+- Ensure title, tags, and metadata sit nicely below the image
+- Add subtle hover/tap polish so cards feel more clickable
+
+6) If multiple image sources are available:
+- Prefer the most appetizing one
+- Avoid repetitive stock-like images
+- If a recipe image is weak, allow fallback to a better-quality relevant food image if possible
+
+7) Maintain consistency
+- All Explore images should feel like they belong in the same app
+- Avoid some images feeling vibrant while others feel dull and lifeless
+
+8) Do NOT:
+- change the overall app theme
+- make the photos cartoonish or AI-looking
+- stretch or distort images
+- break card loading performance unnecessarily
+
+Final goal:
+Make the Explore page images significantly more mouth-watering, polished, and engaging so users are more likely to click into recipes and come back to browse.

@@ -93,11 +93,11 @@ export const CARB_RULES: Record<string, CarbRule> = {
     forbiddenBase: null,
     forbiddenBaseLabel: "",
     allowedSides: [],
-    defaultSide: "none",
-    defaultSideHealthy: "none",
-    baseRequired: false,
-    allowedBase: /\b(rice|noodles|rice noodles|udon|soba|lo mein)\b/i,
-    allowedBaseLabel: "rice or noodles",
+    defaultSide: "jasmine rice",
+    defaultSideHealthy: "jasmine rice",
+    baseRequired: true,
+    allowedBase: /\b(rice|jasmine rice|noodles|rice noodles|udon|soba|lo mein)\b/i,
+    allowedBaseLabel: "jasmine rice or noodles",
   },
   "loaded-fries": {
     forbiddenBase: /\b(rice|pasta|quinoa|noodles)\b/i,
@@ -120,7 +120,7 @@ export const CARB_RULES: Record<string, CarbRule> = {
 };
 
 const BOWL_CARB_ROTATION = ["greens", "quinoa", "potatoes", "sweet potato", "none"];
-const STIR_FRY_CARB_ROTATION = ["none", "rice noodles", "udon noodles", "lo mein noodles"];
+const STIR_FRY_CARB_ROTATION = ["jasmine rice", "rice noodles", "jasmine rice", "udon noodles"];
 const recentCarbs: string[] = [];
 const MAX_RECENT_CARBS = 10;
 
@@ -157,11 +157,7 @@ export function chooseCarb(ctx: ChooseCarbContext): "none" | "rice" | "quinoa" |
   }
 
   if (key === "stir-fry") {
-    if (ctx.healthiness === "lean") return "none";
-    if (hasGluten) {
-      return pickRandom(["none", "rice"] as const);
-    }
-    return pickRandom(["none", "noodles", "rice"] as const);
+    return "rice";
   }
 
   if (key === "loaded-fries") return "potatoes";
@@ -277,7 +273,7 @@ export function buildCarbRulesPromptBlock(mealFormat: string | undefined, health
   if (key === "bowl") {
     lines.push(`- Base can be greens, quinoa, potatoes, or no carb (protein bowl). Do NOT default to rice.`);
   } else if (key === "stir-fry") {
-    lines.push(`- Rice or noodles optional — serve as veg + protein stir-fry if omitted. Do NOT default to rice.`);
+    lines.push(`- ALWAYS include jasmine rice as the base. Stir-fry dishes are served over jasmine rice by default. Include a rice cooking step at the beginning.`);
   }
 
   if (rules.allowedSides.length > 0) {
@@ -459,7 +455,8 @@ export function enforceCarbs(recipe: GenerateResponse, mealFormat: string | unde
   }
 
   const RICE_ALLOWED_FORMATS = new Set(["bowl", "stir-fry", "rice-bake"]);
-  if (!RICE_ALLOWED_FORMATS.has(key) && isBaseRice(fixed)) {
+  const titleRequiresRice = RICE_REQUIRED_PATTERNS.test(fixed.title || "");
+  if (!RICE_ALLOWED_FORMATS.has(key) && !titleRequiresRice && isBaseRice(fixed)) {
     const alreadyHandled = key === "burger" || key === "sandwich" || key === "soup-stew" || key === "wrap" || key === "taco" || key === "sheet-pan" || key === "breakfast-for-dinner";
     if (!alreadyHandled) {
       fixed.ingredients = fixed.ingredients.filter(i => !/\brice\b/i.test(i.item) || /rice vinegar|rice wine|rice paper|rice noodle/i.test(i.item));
@@ -481,7 +478,7 @@ export function enforceCarbs(recipe: GenerateResponse, mealFormat: string | unde
   if (fixed.tags) {
     const currentBaseCarb = (fixed.tags.base_carb || "").toLowerCase();
 
-    if (currentBaseCarb === "none" || !currentBaseCarb) {
+    if ((currentBaseCarb === "none" || !currentBaseCarb) && !titleRequiresRice && !RICE_ALLOWED_FORMATS.has(key)) {
       fixed.steps = fixed.steps.filter(s => {
         const text = `${s.heading} ${s.body}`;
         if (/\bstart the rice\b|\bcook the rice\b|\bstart the pasta\b/i.test(text)) {
@@ -497,7 +494,7 @@ export function enforceCarbs(recipe: GenerateResponse, mealFormat: string | unde
       }));
     }
 
-    if ((currentBaseCarb === "none" || !currentBaseCarb) && fixed.title) {
+    if ((currentBaseCarb === "none" || !currentBaseCarb) && !titleRequiresRice && fixed.title) {
       const titleBefore = fixed.title;
       fixed.title = fixed.title
         .replace(/\s+Rice\b/gi, "")
@@ -521,5 +518,100 @@ export function enforceCarbs(recipe: GenerateResponse, mealFormat: string | unde
     }
   }
 
+  return { recipe: fixed, fixes };
+}
+
+const RICE_REQUIRED_PATTERNS = /\b(stir[- ]?fry|teriyaki|curry|fried rice|rice bowl|bibimbap|bulgogi|katsu|thai basil|kung pao|orange chicken|general tso|mongolian|szechuan|sweet and sour|lo mein|chow mein|tikka masala|butter chicken)\b/i;
+
+const RICE_REQUIRED_FORMATS = new Set(["stir-fry"]);
+
+function isRiceDish(title: string, mealFormat: string | undefined): boolean {
+  if (mealFormat) {
+    const key = normalizeFormatToRuleKey(mealFormat);
+    if (RICE_REQUIRED_FORMATS.has(key)) return true;
+  }
+  return RICE_REQUIRED_PATTERNS.test(title);
+}
+
+function hasActualRiceIngredient(recipe: GenerateResponse): boolean {
+  const ingsText = (recipe.ingredients || []).map(i => i.item.toLowerCase()).join(" ");
+  if (!/\brice\b/.test(ingsText)) return false;
+  if (/rice vinegar|rice wine|rice paper|rice noodle/i.test(ingsText) && !/jasmine rice|white rice|basmati rice|brown rice|long.grain rice|uncooked rice|^rice$/i.test(ingsText)) return false;
+  return true;
+}
+
+function riceQtyForCrew(crewSize: number): { amount: string; waterAmount: string } {
+  if (crewSize <= 4) return { amount: "2 cups", waterAmount: "3.5 cups" };
+  if (crewSize <= 6) return { amount: "3 cups", waterAmount: "5.25 cups" };
+  if (crewSize <= 8) return { amount: "4 cups", waterAmount: "7 cups" };
+  if (crewSize <= 10) return { amount: "5 cups", waterAmount: "8.75 cups" };
+  return { amount: "6 cups", waterAmount: "10.5 cups" };
+}
+
+export function ensureRiceForRiceDishes(
+  recipe: GenerateResponse,
+  mealFormat: string | undefined,
+  crewSize: number,
+  allergens: string[]
+): { recipe: GenerateResponse; fixes: string[] } {
+  const title = recipe.title || "";
+  if (!isRiceDish(title, mealFormat)) return { recipe, fixes: [] };
+
+  if (allergens.some(a => /rice/i.test(a))) return { recipe, fixes: [] };
+
+  if (hasActualRiceIngredient(recipe)) {
+    const fixes: string[] = [];
+    let fixed = { ...recipe, steps: [...(recipe.steps || [])], tags: recipe.tags ? { ...recipe.tags } : undefined };
+
+    const hasRiceStep = fixed.steps.some(s => /cook.*rice|start.*rice|rice.*package/i.test(`${s.heading} ${s.body}`));
+    if (!hasRiceStep) {
+      const { amount, waterAmount } = riceQtyForCrew(crewSize);
+      fixed.steps.unshift({
+        heading: "Cook rice according to package instructions",
+        body: `Rinse ${amount} jasmine rice under cold water. Combine with ${waterAmount} water in a pot, bring to a boil, reduce to low, cover, and simmer 15-18 minutes until tender. Fluff with a fork and set aside.`,
+      });
+      fixes.push("rice_step_added");
+      log(`[carbRules] Rice dish "${title}": added rice cooking step`, "carb");
+    }
+
+    if (fixed.tags) {
+      fixed.tags.base_carb = "rice";
+    }
+    return { recipe: fixed, fixes };
+  }
+
+  const fixes: string[] = [];
+  let fixed = { ...recipe, ingredients: [...(recipe.ingredients || [])], steps: [...(recipe.steps || [])], tags: recipe.tags ? { ...recipe.tags } : undefined };
+
+  const { amount, waterAmount } = riceQtyForCrew(crewSize);
+  fixed.ingredients.push({
+    item: "Jasmine rice, uncooked",
+    amount,
+    notes: "",
+  });
+  fixes.push("rice_ingredient_added");
+
+  const hasRiceStep = fixed.steps.some(s => /cook.*rice|start.*rice|rice.*package/i.test(`${s.heading} ${s.body}`));
+  if (!hasRiceStep) {
+    fixed.steps.unshift({
+      heading: "Cook rice according to package instructions",
+      body: `Rinse ${amount} jasmine rice under cold water. Combine with ${waterAmount} water in a pot, bring to a boil, reduce to low, cover, and simmer 15-18 minutes until tender. Fluff with a fork and set aside.`,
+    });
+    fixes.push("rice_step_added");
+  }
+
+  const lastStep = fixed.steps[fixed.steps.length - 1];
+  if (lastStep && !/rice/i.test(`${lastStep.heading} ${lastStep.body}`)) {
+    fixed.steps[fixed.steps.length - 1] = {
+      ...lastStep,
+      body: lastStep.body.replace(/plate and serve/i, "serve over jasmine rice").replace(/\.$/, "") + (lastStep.body.includes("rice") ? "" : ". Serve over jasmine rice."),
+    };
+  }
+
+  if (fixed.tags) {
+    fixed.tags.base_carb = "rice";
+  }
+
+  log(`[carbRules] Rice dish "${title}": added jasmine rice ingredient + step for ${crewSize} crew`, "carb");
   return { recipe: fixed, fixes };
 }

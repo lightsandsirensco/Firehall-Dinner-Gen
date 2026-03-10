@@ -17,7 +17,7 @@ import { addFavourite, getFavourites, removeFavourite, getAllFavouriteIds } from
 import { getTopCachedRecipes, getVotedRecipeNames } from "./cache-store";
 import { buildFallbackRecipe, trackFallbackTemplateId, getRecentFallbackTemplateIds } from "./fallback-recipe";
 import { searchRecipes, getRecipeById, getRandomRecipes, type SearchOptions } from "./spoonacular";
-import { enforceCarbs, trackCarb } from "./carb-rules";
+import { enforceCarbs, trackCarb, ensureRiceForRiceDishes } from "./carb-rules";
 import { pickStructure, trackStructure, STRUCTURE_DISPLAY, type StructureType } from "./structure-variety";
 import { log } from "./index";
 import { validateAndFixRecipe, validateRecipe, computeSignature, recordSignature, type RecipeValidationContext } from "./validateRecipe";
@@ -376,6 +376,14 @@ export async function registerRoutes(
     if (carbFixes.length > 0) {
       log(`[carb-rules] Applied ${carbFixes.length} fixes: ${carbFixes.join("; ")}`, "carb");
     }
+
+    const effectiveCrewSize = ctx.crewSize || crewSize || 6;
+    const { recipe: riceFixed, fixes: riceFixes } = ensureRiceForRiceDishes(recipe, mealFormat, effectiveCrewSize, allergens);
+    recipe = riceFixed;
+    if (riceFixes.length > 0) {
+      log(`[rice-inject] Applied ${riceFixes.length} fixes: ${riceFixes.join("; ")}`, "carb");
+    }
+
     const finalBaseCarb = recipe.tags?.base_carb || "";
     if (finalBaseCarb && finalBaseCarb !== "none") {
       trackCarb(finalBaseCarb);
