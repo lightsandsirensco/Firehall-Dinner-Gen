@@ -424,12 +424,16 @@ export default function ExplorePage() {
     } catch {}
     return [];
   })());
-  const [discoverRefreshKey, setDiscoverRefreshKey] = useState(0);
+  const [discoverRecipes, setDiscoverRecipes] = useState<SearchResult[]>([]);
+  const [discoverLoading, setDiscoverLoading] = useState(false);
+  const [loadMoreLoading, setLoadMoreLoading] = useState(false);
+  const [discoverExhausted, setDiscoverExhausted] = useState(false);
+  const discoverLoadedIdsRef = useRef<Set<number>>(new Set());
 
   const addSeenIds = useCallback((ids: number[]) => {
     const prev = seenIdsRef.current;
     const combined = [...prev, ...ids.filter(id => !prev.includes(id))];
-    const trimmed = combined.slice(-30);
+    const trimmed = combined.slice(-60);
     seenIdsRef.current = trimmed;
     try { localStorage.setItem("explore_seen_ids", JSON.stringify(trimmed)); } catch {}
   }, []);
@@ -454,8 +458,9 @@ export default function ExplorePage() {
 
   const queryString = searchParams?.toString() || "";
 
-  const buildDiscoverUrl = useCallback(() => {
+  const buildDiscoverUrl = useCallback((batchLimit: number) => {
     const params = new URLSearchParams();
+    params.set("limit", String(batchLimit));
     if (filters.vegetarian) params.set("diet", "vegetarian");
     if (filters.allergens.length > 0) {
       const intolerances = filters.allergens
@@ -467,29 +472,72 @@ export default function ExplorePage() {
         .flatMap(a => ALLERGEN_EXCLUDE_MAP[a] || []);
       if (excludeItems.length > 0) params.set("excludeIngredients", excludeItems.join(","));
     }
-    const seen = seenIdsRef.current;
-    if (seen.length > 0) params.set("seen", seen.join(","));
+    const allSeen = [...seenIdsRef.current, ...Array.from(discoverLoadedIdsRef.current)];
+    const uniqueSeen = Array.from(new Set(allSeen));
+    if (uniqueSeen.length > 0) params.set("seen", uniqueSeen.join(","));
     return params.toString();
   }, [filters.vegetarian, filters.allergens]);
 
-  const { data: discoverData, isLoading: discoverLoading, refetch: refetchDiscover } = useQuery<SearchResponse>({
-    queryKey: ["/api/explore/discover", discoverRefreshKey, filters.vegetarian, filters.allergens.join(",")],
-    queryFn: async () => {
-      const qs = buildDiscoverUrl();
+  const [discoverError, setDiscoverError] = useState<string | null>(null);
+
+  const fetchDiscoverBatch = useCallback(async (batchLimit: number, isLoadMore: boolean) => {
+    if (isLoadMore) {
+      setLoadMoreLoading(true);
+    } else {
+      setDiscoverLoading(true);
+      setDiscoverError(null);
+    }
+    try {
+      const qs = buildDiscoverUrl(batchLimit);
       const res = await fetch(`/api/explore/discover?${qs}`);
       if (!res.ok) {
         const err = await res.json().catch(() => ({}));
         throw new Error(err.message || "Discovery failed");
       }
       const data = await res.json();
-      if (data.results?.length > 0) {
-        addSeenIds(data.results.map((r: SearchResult) => r.id));
+      const newResults: SearchResult[] = (data.results || []).filter(
+        (r: SearchResult) => !discoverLoadedIdsRef.current.has(r.id)
+      );
+      if (newResults.length > 0) {
+        addSeenIds(newResults.map(r => r.id));
+        for (const r of newResults) discoverLoadedIdsRef.current.add(r.id);
       }
-      return data;
-    },
-    enabled: !submitted,
-    staleTime: 2 * 60 * 1000,
-  });
+      if (isLoadMore) {
+        if (newResults.length > 0) {
+          setDiscoverRecipes(prev => [...prev, ...newResults]);
+        }
+      } else {
+        setDiscoverRecipes(newResults);
+      }
+      if (newResults.length < Math.floor(batchLimit * 0.5)) {
+        setDiscoverExhausted(true);
+      }
+    } catch (err: any) {
+      setDiscoverError(err.message || "Failed to load recipes");
+    } finally {
+      if (isLoadMore) {
+        setLoadMoreLoading(false);
+      } else {
+        setDiscoverLoading(false);
+      }
+    }
+  }, [buildDiscoverUrl, addSeenIds]);
+
+  const initialLoadDone = useRef(false);
+  const prevFilterKeyRef = useRef(`${filters.vegetarian}-${filters.allergens.join(",")}`);
+  useEffect(() => {
+    if (submitted) return;
+    const filterKey = `${filters.vegetarian}-${filters.allergens.join(",")}`;
+    if (!initialLoadDone.current) {
+      initialLoadDone.current = true;
+      fetchDiscoverBatch(12, false);
+    } else if (filterKey !== prevFilterKeyRef.current) {
+      prevFilterKeyRef.current = filterKey;
+      discoverLoadedIdsRef.current.clear();
+      setDiscoverExhausted(false);
+      fetchDiscoverBatch(12, false);
+    }
+  }, [submitted, filters.vegetarian, filters.allergens, fetchDiscoverBatch]);
 
   const { data: searchData, isLoading: searchLoading, error: searchError } = useQuery<SearchResponse>({
     queryKey: ["/api/explore/search", queryString],
@@ -795,6 +843,21 @@ export default function ExplorePage() {
           </div>
         )}
 
+        {!submitted && discoverError && !discoverLoading && (
+          <div className="text-center py-16" data-testid="explore-discover-error">
+            <p className="text-destructive font-medium">{discoverError}</p>
+            <p className="text-sm text-muted-foreground mt-2">
+              <button
+                className="underline hover:text-foreground transition-colors"
+                onClick={() => fetchDiscoverBatch(12, false)}
+                data-testid="button-retry-discover"
+              >
+                Try again
+              </button>
+            </p>
+          </div>
+        )}
+
         {searchError && (
           <div className="text-center py-16" data-testid="explore-error">
             <p className="text-destructive font-medium">{(searchError as Error).message}</p>
@@ -802,20 +865,24 @@ export default function ExplorePage() {
           </div>
         )}
 
-        {!submitted && !discoverLoading && discoverData && discoverData.results.length > 0 && (
+        {!submitted && !discoverLoading && discoverRecipes.length > 0 && (
           <>
             <div className="flex items-center justify-between gap-3 mb-5">
               <div className="flex items-center gap-2">
                 <Sparkles className="w-4 h-4 text-primary/60" />
                 <p className="text-sm text-muted-foreground" data-testid="text-discover-label">
-                  {discoverData.results.length} recipes to explore
+                  {discoverRecipes.length} recipes to explore
                 </p>
               </div>
               <Button
                 variant="outline"
                 size="sm"
                 className="text-xs gap-1.5"
-                onClick={() => setDiscoverRefreshKey(k => k + 1)}
+                onClick={() => {
+                  discoverLoadedIdsRef.current.clear();
+                  setDiscoverExhausted(false);
+                  fetchDiscoverBatch(12, false);
+                }}
                 data-testid="button-refresh-discover"
               >
                 <Sparkles className="w-3 h-3" />
@@ -823,7 +890,7 @@ export default function ExplorePage() {
               </Button>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5" data-testid="explore-discover-grid">
-              {discoverData.results.map((result) => (
+              {discoverRecipes.map((result) => (
                 <Card
                   key={result.id}
                   className="overflow-visible cursor-pointer hover-elevate transition-all duration-200"
@@ -866,6 +933,35 @@ export default function ExplorePage() {
                 </Card>
               ))}
             </div>
+            {!discoverExhausted && (
+              <div className="flex justify-center mt-8">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="gap-2 px-8"
+                  onClick={() => fetchDiscoverBatch(10, true)}
+                  disabled={loadMoreLoading}
+                  data-testid="button-load-more"
+                >
+                  {loadMoreLoading ? (
+                    <>
+                      <Loader2 className="w-4 h-4 animate-spin" />
+                      Loading...
+                    </>
+                  ) : (
+                    <>
+                      <ChefHat className="w-4 h-4" />
+                      Load More Recipes
+                    </>
+                  )}
+                </Button>
+              </div>
+            )}
+            {discoverExhausted && discoverRecipes.length > 12 && (
+              <p className="text-center text-xs text-muted-foreground/60 mt-6" data-testid="text-discover-exhausted">
+                You've explored all available recipes. Hit Refresh for a new set!
+              </p>
+            )}
           </>
         )}
 

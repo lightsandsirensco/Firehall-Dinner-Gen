@@ -1486,6 +1486,8 @@ export async function registerRoutes(
       const intolerances = (req.query.intolerances as string) || "";
       const excludeIngredients = (req.query.excludeIngredients as string) || "";
       const seenParam = (req.query.seen as string) || "";
+      const limitParam = parseInt(req.query.limit as string) || 12;
+      const limit = Math.min(Math.max(limitParam, 4), 20);
       const seenIds = new Set([
         ...discoverSeenIds,
         ...seenParam.split(",").map(s => parseInt(s)).filter(Number.isFinite),
@@ -1640,23 +1642,26 @@ export async function registerRoutes(
       };
 
       const poolOrder = pools.map(p => p.name).sort(() => Math.random() - 0.5);
+      const firstPassPick = Math.max(1, Math.ceil(limit / pools.length));
       for (const poolName of poolOrder) {
-        pickFromPool(poolName, 2);
+        if (diverse.length >= limit) break;
+        pickFromPool(poolName, firstPassPick);
       }
 
       for (const poolName of poolOrder) {
-        if (diverse.length >= 20) break;
-        pickFromPool(poolName, 2);
+        if (diverse.length >= limit) break;
+        pickFromPool(poolName, 3);
       }
 
-      diverse.sort(() => Math.random() - 0.5);
+      const trimmed = diverse.slice(0, limit);
+      trimmed.sort(() => Math.random() - 0.5);
 
-      addToDiscoverMemory(diverse.map(r => r.id));
+      addToDiscoverMemory(trimmed.map(r => r.id));
 
-      log(`[explore] Discover feed: ${diverse.length} diverse recipes from ${pools.length} pools | memory=${discoverSeenIds.length}`, "spoonacular");
+      log(`[explore] Discover feed: ${trimmed.length}/${limit} diverse recipes from ${pools.length} pools | memory=${discoverSeenIds.length}`, "spoonacular");
       return res.json({
-        results: diverse,
-        totalResults: diverse.length,
+        results: trimmed,
+        totalResults: trimmed.length,
         _source: "spoonacular",
         _discover: true,
       });

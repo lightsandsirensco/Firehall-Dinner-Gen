@@ -1,0 +1,82 @@
+Redesign the app header so it is much more eye-catching and compelling, while keeping the same Firehall Meals theme and premium firefighter-focused identity.
+
+Goal:
+The header is the first thing users see, so it should immediately hook them, communicate value, and make the app feel premium and useful.
+
+Requirements:
+
+1) Keep the same brand identity
+- Keep the dark Firehall Meals theme
+- Keep the firefighter-built feel
+- Do not make it look like a generic corporate SaaS header
+- Keep it premium, bold, and clean
+
+2) Strengthen the visual hierarchy
+Make the header much more visually striking with:
+- a bolder main title
+- a stronger subtitle/tagline
+- better spacing and alignment
+- more intentional typography
+- clearer separation between headline, supporting text, and actions
+
+3) Update the header copy to be more compelling
+Use a stronger structure like:
+
+Main Title:
+Firehall Meals
+
+Headline / Hook:
+Firefighter Built. Firehall Tested.
+
+Supporting line:
+End the “what’s for dinner?” debate.
+Generate crew meals based on time, budget, allergies, and what’s in the fridge.
+
+Optional supporting line:
+Free to use. Built for the fire service.
+
+4) Add stronger visual appeal
+Without changing the theme, improve the header with:
+- a more premium card/panel background
+- subtle depth, layering, or texture
+- better padding
+- stronger contrast between text blocks
+- optional small flame icon accent or badge
+- optional subtle divider or gradient accent
+
+5) Improve CTA presentation
+If there are action buttons near the header, make them feel more intentional and premium.
+Examples:
+- Generate Meal
+- Explore Recipes
+- Hall Favorites
+
+They should be visually clean, aligned, and easy to tap on mobile.
+
+6) Make it feel more like a hook
+The header should immediately make users think:
+- this is useful
+- this is built for us
+- this solves a real daily problem
+- this feels premium
+
+7) Mobile optimization
+- Ensure the header still looks strong on mobile
+- Avoid giant blocks of text
+- Keep the most important value proposition visible quickly
+- Make spacing and proportions feel polished
+
+8) Keep these elements visible somewhere in the header area
+- Firehall Meals
+- Firefighter Built. Firehall Tested.
+- Powered by Lights & Sirens Co. (clickable if already implemented)
+
+9) Do NOT:
+- change the app theme
+- make it bright
+- clutter the header
+- add cheesy marketing language
+- make it feel like a banner ad
+
+Final goal:
+Make the header feel significantly more eye-catching, premium, and conversion-friendly so it immediately hooks users when they land on the app.
