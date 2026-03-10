@@ -26,6 +26,14 @@ interface SearchResult {
   summary: string;
   cuisines?: string[];
   diets?: string[];
+  _firehallFallback?: boolean;
+}
+
+interface SearchResponse {
+  results: SearchResult[];
+  totalResults: number;
+  _source?: "spoonacular" | "firehall" | "none";
+  _relaxed?: string;
 }
 
 interface RecipeDetail {
@@ -267,6 +275,19 @@ function buildSearchParams(filters: ExploreFilters): URLSearchParams {
   }
   params.set("q", queryParts.join(" "));
 
+  const baseQueryParts: string[] = [];
+  if (filters.freeText.trim()) baseQueryParts.push(filters.freeText.trim());
+  const isVeg = filters.vegetarian || filters.proteins.includes("vegetarian");
+  if (!isVeg && filters.proteins.length > 0) {
+    const bp = filters.proteins
+      .filter(p => p !== "seafood")
+      .concat(filters.proteins.includes("seafood") ? ["fish", "shrimp"] : []);
+    if (bp.length > 0) baseQueryParts.push(bp.join(" "));
+  }
+  if (baseQueryParts.length > 0) {
+    params.set("_baseQuery", baseQueryParts.join(" "));
+  }
+
   const spoonCuisine = CUISINE_MAP[filters.cuisine] || "";
   if (spoonCuisine) {
     params.set("cuisine", spoonCuisine);
@@ -315,6 +336,7 @@ function buildSearchParams(filters: ExploreFilters): URLSearchParams {
   params.set("maxServings", String(maxS));
 
   params.set("number", "12");
+  params.set("_crewSize", String(crew));
 
   return params;
 }
@@ -400,7 +422,7 @@ export default function ExplorePage() {
 
   const queryString = searchParams?.toString() || "";
 
-  const { data: searchData, isLoading: searchLoading, error: searchError } = useQuery<{ results: SearchResult[]; totalResults: number }>({
+  const { data: searchData, isLoading: searchLoading, error: searchError } = useQuery<SearchResponse>({
     queryKey: ["/api/explore/search", queryString],
     queryFn: async () => {
       const res = await fetch(`/api/explore/search?${queryString}`);
@@ -741,9 +763,15 @@ export default function ExplorePage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" data-testid="explore-results-grid">
               {searchData.results.map((result) => (
                 <Card
-                  key={result.id}
+                  key={result._firehallFallback ? `fb-${result.title}` : result.id}
                   className="overflow-hidden cursor-pointer hover:border-primary/50 transition-colors"
-                  onClick={() => setSelectedRecipeId(result.id)}
+                  onClick={() => {
+                    if (result._firehallFallback) {
+                      window.location.href = "/";
+                    } else {
+                      setSelectedRecipeId(result.id);
+                    }
+                  }}
                   data-testid={`card-explore-result-${result.id}`}
                 >
                   {result.image && (
@@ -752,6 +780,12 @@ export default function ExplorePage() {
                     </div>
                   )}
                   <CardContent className="p-4">
+                    {result._firehallFallback && (
+                      <Badge variant="secondary" className="text-[10px] mb-2">
+                        <Flame className="w-3 h-3 mr-1" />
+                        Firehall AI Recipe
+                      </Badge>
+                    )}
                     <h3 className="font-heading text-sm tracking-wide text-foreground line-clamp-2 mb-2" data-testid={`text-result-title-${result.id}`}>
                       {result.title}
                     </h3>

@@ -2,7 +2,7 @@ import type { Express, Request, Response, NextFunction } from "express";
 import { type Server } from "http";
 import crypto from "crypto";
 import cookieParser from "cookie-parser";
-import { generateRequestSchema, pizzaRequestSchema, hallVoteCreateSchema, type GenerateResponse, type ClientRecipeResponse, type ClientIngredient, type ClientStep, type ClientProteinSafety, type ClientPlating, type ClientTiming } from "@shared/schema";
+import { generateRequestSchema, pizzaRequestSchema, hallVoteCreateSchema, type GenerateRequest, type GenerateResponse, type ClientRecipeResponse, type ClientIngredient, type ClientStep, type ClientProteinSafety, type ClientPlating, type ClientTiming } from "@shared/schema";
 import { loadTemplates, filterTemplates, filterTemplatesWithRelaxation, pickTemplate, chooseProtein } from "./templates";
 import { scanRecipeForAllergens, autoSubstituteAllergens, substituteTextForAllergens, buildAllergenAvoidList } from "./allergens";
 import { auditAndFixRecipe as labelAudit, inferIngredientCategory, type LabelAuditContext } from "./labelAudit";
@@ -15,7 +15,7 @@ import { getFromPool, refillPool, getPoolSize } from "./recipe-pool";
 import { initHallVoteTables, createHallVote, getHallVote, castBallot, closeHallVote, hashVoterFingerprint } from "./hall-vote-store";
 import { addFavourite, getFavourites, removeFavourite } from "./favourites";
 import { buildFallbackRecipe, trackFallbackTemplateId, getRecentFallbackTemplateIds } from "./fallback-recipe";
-import { searchRecipes, getRecipeById, getRandomRecipes } from "./spoonacular";
+import { searchRecipes, getRecipeById, getRandomRecipes, type SearchOptions } from "./spoonacular";
 import { enforceCarbs, trackCarb } from "./carb-rules";
 import { pickStructure, trackStructure, STRUCTURE_DISPLAY, type StructureType } from "./structure-variety";
 import { log } from "./index";
@@ -1481,9 +1481,11 @@ export async function registerRoutes(
       const rawMaxServings = parseInt(req.query.maxServings as string);
       const maxServings = Number.isFinite(rawMaxServings) && rawMaxServings > 0 ? rawMaxServings : undefined;
       const sort = (req.query.sort as string) || "";
+      const baseQuery = (req.query._baseQuery as string) || "";
 
       if (!query.trim()) {
         const results = await getRandomRecipes(cuisine || undefined, number);
+        log(`[explore] Random recipes returned ${results.length} results | source=spoonacular`, "spoonacular");
         return res.json({
           results: results.map(r => ({
             id: r.id,
@@ -1496,25 +1498,133 @@ export async function registerRoutes(
             diets: r.diets || [],
           })),
           totalResults: results.length,
+          _source: "spoonacular",
         });
       }
 
-      const searchResults = await searchRecipes(query, {
-        cuisine, diet, type, maxReadyTime, number, offset,
-        intolerances, excludeIngredients, includeIngredients,
-        equipment, minServings, maxServings, sort,
-      });
-      return res.json({
-        results: searchResults.results.map(r => ({
-          id: r.id,
-          title: r.title,
-          image: r.image,
-          readyInMinutes: r.readyInMinutes,
-          servings: r.servings,
-          summary: (r.summary || "").replace(/<[^>]*>/g, "").substring(0, 200),
-        })),
-        totalResults: searchResults.totalResults,
-      });
+      const safetyFilters = { intolerances, excludeIngredients, diet };
+
+      const relaxationSteps: { label: string; opts: SearchOptions; q: string }[] = [
+        {
+          label: "original",
+          q: query,
+          opts: { cuisine, type, maxReadyTime, number, offset, includeIngredients, equipment, minServings, maxServings, sort, ...safetyFilters },
+        },
+        {
+          label: "relax-cuisine",
+          q: query,
+          opts: { type, maxReadyTime, number, offset, includeIngredients, equipment, minServings, maxServings, sort, ...safetyFilters },
+        },
+        {
+          label: "relax-meal-style",
+          q: baseQuery || "dinner",
+          opts: { maxReadyTime, number, offset, includeIngredients, equipment, minServings, maxServings, sort, ...safetyFilters },
+        },
+        {
+          label: "relax-time",
+          q: baseQuery || "dinner",
+          opts: { number, offset, includeIngredients, equipment, sort, ...safetyFilters },
+        },
+      ];
+
+      for (const step of relaxationSteps) {
+        const searchResults = await searchRecipes(step.q, step.opts);
+        if (searchResults.results.length > 0) {
+          if (step.label !== "original") {
+            log(`[explore] Relaxation "${step.label}" found ${searchResults.results.length} results (query="${step.q}") | source=spoonacular`, "spoonacular");
+          } else {
+            log(`[explore] Original search found ${searchResults.results.length} results | source=spoonacular`, "spoonacular");
+          }
+          return res.json({
+            results: searchResults.results.map(r => ({
+              id: r.id,
+              title: r.title,
+              image: r.image,
+              readyInMinutes: r.readyInMinutes,
+              servings: r.servings,
+              summary: (r.summary || "").replace(/<[^>]*>/g, "").substring(0, 200),
+            })),
+            totalResults: searchResults.totalResults,
+            _source: "spoonacular",
+            _relaxed: step.label !== "original" ? step.label : undefined,
+          });
+        }
+        if (step.label !== relaxationSteps[relaxationSteps.length - 1].label) {
+          log(`[explore] Step "${step.label}" returned 0 results — relaxing next filter`, "spoonacular");
+        }
+      }
+
+      log(`[explore] All Spoonacular relaxation steps exhausted — falling back to Firehall generator`, "spoonacular");
+      try {
+        const rawCrewParam = parseInt(req.query._crewSize as string);
+        const crewSize = Number.isFinite(rawCrewParam) && rawCrewParam >= 2 ? rawCrewParam : 6;
+        const allergenList = [
+          ...(intolerances || "").split(",").map(a => a.trim().toLowerCase()).filter(Boolean),
+          ...(excludeIngredients || "").split(",").map(a => a.trim().toLowerCase()).filter(Boolean),
+        ];
+        const isVegetarian = diet === "vegetarian";
+        const proteins: string[] = [];
+        if (isVegetarian) {
+          proteins.push("vegetarian");
+        } else {
+          const queryLower = query.toLowerCase();
+          for (const p of ["chicken", "beef", "pork", "turkey", "fish", "seafood"]) {
+            if (queryLower.includes(p)) proteins.push(p);
+          }
+          if (proteins.length === 0) proteins.push("chicken");
+        }
+
+        const equipList = (equipment || "").split(",").map(e => e.trim().toLowerCase()).filter(Boolean);
+        const applianceMap: Record<string, string> = { oven: "oven", stove: "stove", "slow cooker": "slow cooker", grill: "grill", "rice cooker": "rice cooker" };
+        const appliances = equipList.map(e => applianceMap[e]).filter(Boolean);
+        if (appliances.length === 0) appliances.push("stove", "oven");
+
+        const fallbackRequest: GenerateRequest = {
+          crew_size: crewSize,
+          busy_level: "average",
+          time_available: maxReadyTime && maxReadyTime <= 25 ? "15-25" : maxReadyTime && maxReadyTime <= 40 ? "25-40" : "30-45",
+          appliances,
+          proteins: proteins as any,
+          healthiness_preference: "balanced",
+          budget_level: "standard",
+          allergens_to_avoid: allergenList,
+          vegetarian_swap_needed: false,
+          use_what_we_have: false,
+          ingredients_on_hand: [],
+          cuisine_style: "any",
+          meal_format: "random",
+        };
+
+        const templates = await loadTemplates();
+        const filterResult = filterTemplatesWithRelaxation(templates, fallbackRequest);
+        if (filterResult.candidates.length === 0) {
+          log(`[explore] Firehall fallback: no matching templates`, "spoonacular");
+          return res.json({ results: [], totalResults: 0, _source: "none" });
+        }
+        const template = pickTemplate(filterResult.candidates);
+        const protein = chooseProtein(template, fallbackRequest.proteins, fallbackRequest.healthiness_preference);
+        const fallback = buildFallbackRecipe(template, fallbackRequest, protein);
+
+        const fbResult = {
+          id: -1,
+          title: fallback.title,
+          image: "",
+          readyInMinutes: (fallback.timing?.total_min) || 30,
+          servings: crewSize,
+          summary: fallback.why_it_fits_tonight || "AI-generated crew meal from the Firehall generator.",
+          _firehallFallback: true,
+        };
+
+        log(`[explore] Firehall fallback served: "${fallback.title}" for crew of ${crewSize} | source=firehall`, "spoonacular");
+        return res.json({
+          results: [fbResult],
+          totalResults: 1,
+          _source: "firehall",
+        });
+      } catch (fbErr: any) {
+        log(`[explore] Firehall fallback failed: ${fbErr.message}`, "spoonacular");
+        return res.json({ results: [], totalResults: 0, _source: "none" });
+      }
     } catch (err: any) {
       const msg = err.message || "Search failed";
       if (msg.includes("SPOONACULAR_API_KEY is not configured")) {
