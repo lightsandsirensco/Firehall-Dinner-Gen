@@ -13,6 +13,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Checkbox } from "@/components/ui/checkbox";
 import { Textarea } from "@/components/ui/textarea";
 import { getSavedCount, saveMeal, isMealSaved } from "@/lib/saved-meals";
+import { ExploreRecipeCard, ExploreRecipeCardSkeleton } from "@/components/explore-recipe-card";
 import { buildShoppingListFromClientMeal } from "@/lib/shopping-list";
 import { EmailModal } from "@/components/email-modal";
 import { ShoppingListModal } from "@/components/shopping-list-modal";
@@ -806,7 +807,7 @@ export default function ExplorePage() {
     <div className="min-h-screen bg-background">
       <ExploreNav favCount={favCount} />
 
-      <HeroHeader title="Explore Recipes" subtitle="Search thousands of recipes using your crew's filters" />
+      <HeroHeader title="Explore Recipes" subtitle="Search thousands of recipes using your crew's filters" compact />
 
       <main className="max-w-[1200px] mx-auto px-4 sm:px-6 py-8">
         <form onSubmit={handleSearch} data-testid="form-explore-search">
@@ -1079,10 +1080,14 @@ export default function ExplorePage() {
           </div>
         )}
 
-        {(searchLoading || (!submitted && discoverLoading)) && (
-          <div className="flex flex-col items-center justify-center py-24 gap-3" data-testid="explore-loading">
-            <Loader2 className="w-8 h-8 animate-spin text-primary" />
-            <p className="text-sm text-muted-foreground">{submitted ? "Searching recipes..." : "Loading discover feed..."}</p>
+        {(searchLoading || (!submitted && discoverLoading && discoverRecipes.length === 0)) && (
+          <div data-testid="explore-loading">
+            <p className="text-sm text-muted-foreground mb-5">{submitted ? "Searching recipes..." : "Loading discover feed..."}</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              {Array.from({ length: 6 }).map((_, i) => (
+                <ExploreRecipeCardSkeleton key={i} />
+              ))}
+            </div>
           </div>
         )}
 
@@ -1134,43 +1139,17 @@ export default function ExplorePage() {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5" data-testid="explore-discover-grid">
               {discoverRecipes.map((result) => (
-                <Card
+                <ExploreRecipeCard
                   key={result.id}
-                  className="overflow-visible cursor-pointer hover-elevate transition-all duration-200"
+                  id={result.id}
+                  title={result.title}
+                  image={result.image}
+                  readyInMinutes={result.readyInMinutes}
+                  servings={filters.crewSize}
+                  summary={result.summary}
+                  tags={inferRecipeTags(result)}
                   onClick={() => setSelectedRecipeId(result.id)}
-                  data-testid={`card-explore-result-${result.id}`}
-                >
-                  {result.image && (
-                    <div className="aspect-[16/10] overflow-hidden rounded-t-md">
-                      <img src={result.image} alt={result.title} className="w-full h-full object-cover" loading="lazy" />
-                    </div>
-                  )}
-                  <CardContent className="p-4 sm:p-5">
-                    <h3 className="font-heading text-base tracking-wide text-foreground line-clamp-2 mb-2" data-testid={`text-result-title-${result.id}`}>
-                      {result.title}
-                    </h3>
-                    <div className="flex items-center gap-3 text-xs text-muted-foreground mb-3">
-                      {result.readyInMinutes > 0 && (
-                        <span className="flex items-center gap-1">
-                          <Clock className="w-3 h-3" />
-                          {result.readyInMinutes} min
-                        </span>
-                      )}
-                      <span className="flex items-center gap-1">
-                        <Users className="w-3 h-3" />
-                        {filters.crewSize} servings
-                      </span>
-                    </div>
-                    {result.summary && (
-                      <p className="text-xs text-muted-foreground/80 line-clamp-2 mb-3 leading-relaxed">{result.summary}</p>
-                    )}
-                    <div className="flex gap-1.5 flex-wrap" data-testid={`tags-${result.id}`}>
-                      {inferRecipeTags(result).map(tag => (
-                        <Badge key={tag} variant="outline" className="text-[10px] font-normal text-muted-foreground/70 border-border/50">{tag}</Badge>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
+                />
               ))}
             </div>
             {!discoverExhausted && (
@@ -1219,9 +1198,16 @@ export default function ExplorePage() {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5" data-testid="explore-results-grid">
               {searchData.results.map((result) => (
-                <Card
+                <ExploreRecipeCard
                   key={result._firehallFallback ? `fb-${result.title}` : result.id}
-                  className="overflow-visible cursor-pointer hover-elevate transition-all duration-200"
+                  id={result.id}
+                  title={result.title}
+                  image={result.image}
+                  readyInMinutes={result.readyInMinutes}
+                  servings={filters.crewSize}
+                  summary={result.summary}
+                  tags={inferRecipeTags(result)}
+                  isFirehallFallback={result._firehallFallback}
                   onClick={() => {
                     if (result._firehallFallback) {
                       window.location.href = "/";
@@ -1229,45 +1215,7 @@ export default function ExplorePage() {
                       setSelectedRecipeId(result.id);
                     }
                   }}
-                  data-testid={`card-explore-result-${result.id}`}
-                >
-                  {result.image && (
-                    <div className="aspect-[16/10] overflow-hidden rounded-t-md">
-                      <img src={result.image} alt={result.title} className="w-full h-full object-cover" loading="lazy" />
-                    </div>
-                  )}
-                  <CardContent className="p-4 sm:p-5">
-                    {result._firehallFallback && (
-                      <Badge variant="secondary" className="text-[10px] mb-2.5">
-                        <Flame className="w-3 h-3 mr-1" />
-                        Firehall AI Recipe
-                      </Badge>
-                    )}
-                    <h3 className="font-heading text-base tracking-wide text-foreground line-clamp-2 mb-2" data-testid={`text-result-title-${result.id}`}>
-                      {result.title}
-                    </h3>
-                    <div className="flex items-center gap-3 text-xs text-muted-foreground mb-3">
-                      {result.readyInMinutes > 0 && (
-                        <span className="flex items-center gap-1">
-                          <Clock className="w-3 h-3" />
-                          {result.readyInMinutes} min
-                        </span>
-                      )}
-                      <span className="flex items-center gap-1">
-                        <Users className="w-3 h-3" />
-                        {filters.crewSize} servings
-                      </span>
-                    </div>
-                    {result.summary && (
-                      <p className="text-xs text-muted-foreground/80 line-clamp-2 mb-3 leading-relaxed">{result.summary}</p>
-                    )}
-                    <div className="flex gap-1.5 flex-wrap" data-testid={`tags-${result.id}`}>
-                      {inferRecipeTags(result).map(tag => (
-                        <Badge key={tag} variant="outline" className="text-[10px] font-normal text-muted-foreground/70 border-border/50">{tag}</Badge>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
+                />
               ))}
             </div>
             {searchData.results.length === 0 && (

@@ -485,7 +485,13 @@ export default function Home() {
         </div>
       </header>
 
-      <HeroHeader title="Firehall Meals" subtitle="Generate real meals for your crew in seconds" />
+      <HeroHeader
+        title="Firehall Meals"
+        headline="End the 'what's for dinner?' debate."
+        subtitle="Generate crew meals based on time, budget, allergies, and what's in the fridge."
+        supportingText="Free to use. Built for the fire service."
+        showCTAs
+      />
 
       <main className="max-w-[1400px] mx-auto px-4 sm:px-6 py-8">
         <div className="flex flex-col lg:flex-row gap-8">
