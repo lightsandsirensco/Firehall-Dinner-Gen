@@ -439,29 +439,29 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background">
-      <header className="bg-background border-b border-border/40">
+      <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border/30">
         <div className="max-w-[1400px] mx-auto px-4">
-          <nav className="flex items-center justify-between py-2" data-testid="nav-links">
-            <div className="flex items-center gap-2">
+          <nav className="flex items-center justify-between gap-3 py-3" data-testid="nav-links">
+            <div className="flex items-center gap-2.5">
               <Flame className="w-7 h-7" style={{ color: "#C62828" }} />
-              <span className="font-heading text-lg leading-none tracking-wide text-foreground">FIREHALL MEALS</span>
+              <span className="font-heading text-lg leading-none tracking-wide text-foreground hidden sm:inline">FIREHALL MEALS</span>
             </div>
-            <div className="flex items-center gap-1">
-              <span className="text-xs uppercase tracking-wider text-foreground font-medium px-3 py-1.5" data-testid="nav-link-meals-active">
+            <div className="flex items-center gap-0.5 flex-wrap">
+              <span
+                className="text-xs uppercase tracking-wider text-foreground font-semibold px-3 py-1.5 rounded-md bg-primary/10 border border-primary/20"
+                data-testid="nav-link-meals-active"
+              >
                 Meal Generator
               </span>
-              <span className="text-muted-foreground/30 text-xs">|</span>
-              <Link href="/pizza" className="text-xs uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors font-medium px-3 py-1.5" data-testid="nav-link-pizza">
+              <Link href="/pizza" className="text-xs uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium px-3 py-1.5 rounded-md hover-elevate" data-testid="nav-link-pizza">
                 Pizza Night
               </Link>
-              <span className="text-muted-foreground/30 text-xs">|</span>
-              <Link href="/explore" className="text-xs uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors font-medium px-3 py-1.5" data-testid="nav-link-explore">
+              <Link href="/explore" className="text-xs uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium px-3 py-1.5 rounded-md hover-elevate" data-testid="nav-link-explore">
                 Explore
               </Link>
-              <span className="text-muted-foreground/30 text-xs">|</span>
-              <Link href="/favorites" className="text-xs uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors font-medium px-3 py-1.5 flex items-center gap-1" data-testid="nav-link-favorites">
+              <Link href="/favorites" className="text-xs uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium px-3 py-1.5 rounded-md hover-elevate flex items-center gap-1.5" data-testid="nav-link-favorites">
                 <Heart className="w-3 h-3" />
-                Favorites
+                <span className="hidden sm:inline">Favorites</span>
                 {favCount > 0 && (
                   <Badge variant="secondary" className="text-[9px] px-1.5 py-0 h-4 min-w-[16px] leading-none" data-testid="badge-fav-count">
                     {favCount}
@@ -474,31 +474,37 @@ export default function Home() {
       </header>
 
       <section
-        className="relative w-full h-[220px] sm:h-[340px] flex items-center justify-center overflow-hidden"
+        className="relative w-full h-[240px] sm:h-[360px] flex items-center justify-center overflow-hidden"
         style={{ backgroundImage: `url(${heroTruckImg})`, backgroundSize: "cover", backgroundPosition: "center" }}
         data-testid="hero-header"
       >
-        <div className="absolute inset-0 bg-black/55" />
-        <div className="relative z-10 flex flex-col items-center justify-center text-center px-5">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/55 to-black/70" />
+        <div className="relative z-10 flex flex-col items-center justify-center text-center px-5 gap-3">
           <h1
-            className="font-heading text-4xl sm:text-5xl md:text-6xl leading-none tracking-wide text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.7)]"
+            className="font-heading text-4xl sm:text-5xl md:text-6xl leading-none tracking-wide text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]"
             data-testid="text-app-title"
           >
             Firehall Meals
           </h1>
           <p
-            className="text-[#e5e5e5] text-base sm:text-lg mt-2 max-w-md"
+            className="text-white/70 text-xs sm:text-sm uppercase tracking-[0.2em] font-medium"
+            data-testid="text-app-tagline"
+          >
+            Firefighter Built. Firehall Tested.
+          </p>
+          <p
+            className="text-[#d4d4d4] text-base sm:text-lg max-w-md mt-1"
             data-testid="text-app-subtitle"
           >
             Generate real meals for your crew in seconds
           </p>
-          <p className="text-[10px] text-white/40 mt-3 font-normal">
+          <p className="text-[10px] text-white/35 mt-2 font-normal">
             Powered by{" "}
             <a
               href="https://lightsandsirensco.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-white/60 transition-colors"
+              className="hover:text-white/55 transition-colors duration-200"
               data-testid="link-header-attribution"
             >
               Lights &amp; Sirens Co.
@@ -507,8 +513,8 @@ export default function Home() {
         </div>
       </section>
 
-      <main className="max-w-[1400px] mx-auto px-4 py-6">
-        <div className="flex flex-col lg:flex-row gap-6">
+      <main className="max-w-[1400px] mx-auto px-4 sm:px-6 py-8">
+        <div className="flex flex-col lg:flex-row gap-8">
           <div className="w-full lg:w-[380px] flex-shrink-0">
             <FilterPanel
               filters={filters}
@@ -562,19 +568,22 @@ export default function Home() {
           recipes={recentRecipes}
         />
       )}
-      <footer className="text-center py-4 mt-6">
-        <p className="text-xs text-muted-foreground/60">
-          Powered by{" "}
-          <a
-            href="https://www.lightsandsirensco.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-muted-foreground transition-colors"
-            data-testid="link-attribution"
-          >
-            Lights &amp; Sirens Co.
-          </a>
-        </p>
+      <footer className="border-t border-border/20 mt-10">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 py-6 flex items-center justify-center gap-2">
+          <Flame className="w-3.5 h-3.5 text-muted-foreground/40" />
+          <p className="text-xs text-muted-foreground/50">
+            Powered by{" "}
+            <a
+              href="https://www.lightsandsirensco.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-muted-foreground transition-colors duration-200"
+              data-testid="link-attribution"
+            >
+              Lights &amp; Sirens Co.
+            </a>
+          </p>
+        </div>
       </footer>
     </div>
   );

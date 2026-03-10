@@ -238,7 +238,7 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
   const debugData = (recipe as any)._debug || null;
 
   return (
-    <div className="space-y-4 animate-in fade-in slide-in-from-bottom-4 duration-500">
+    <div className="space-y-5 animate-in fade-in slide-in-from-bottom-4 duration-500">
       {(recipe as any)._filters_adjusted && (
         <div className="flex items-center gap-2 text-sm text-amber-400/80 bg-amber-400/10 border border-amber-400/20 rounded-lg px-3 py-2" data-testid="text-allergen-adjustment-note">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
@@ -249,13 +249,13 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
         <h2 className="font-heading text-4xl md:text-5xl tracking-wide text-foreground leading-none" data-testid="text-recipe-title">
           {recipe.title}
         </h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mt-2">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-3">
           {!hideSave && (
             <Button
               variant={saved ? "default" : "outline"}
               onClick={handleSave}
               disabled={saved}
-              className={`w-full justify-start ${saved ? "bg-primary/20 text-primary border-primary/30 hover:bg-primary/20" : ""}`}
+              className={`w-full justify-start ${saved ? "bg-primary/20 text-primary border-primary/30" : ""}`}
               data-testid="button-save-favorite"
             >
               {saved ? (
@@ -271,6 +271,12 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
               )}
             </Button>
           )}
+          {onShoppingListClick && (
+            <Button onClick={onShoppingListClick} className="w-full justify-start" data-testid="button-shopping-list">
+              <List className="w-4 h-4 mr-2 flex-shrink-0" />
+              <span className="truncate">Shopping List</span>
+            </Button>
+          )}
           {onEmailClick && (
             <Button variant="outline" onClick={onEmailClick} className="w-full justify-start" data-testid="button-email-recipe">
               <Mail className="w-4 h-4 mr-2 flex-shrink-0" />
@@ -281,12 +287,6 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
             <Printer className="w-4 h-4 mr-2 flex-shrink-0" />
             <span className="truncate">Print</span>
           </Button>
-          {onShoppingListClick && (
-            <Button onClick={onShoppingListClick} className="w-full justify-start" data-testid="button-shopping-list">
-              <List className="w-4 h-4 mr-2 flex-shrink-0" />
-              <span className="truncate">Shopping List</span>
-            </Button>
-          )}
         </div>
         {showConfirm && (
           <div className="flex items-center gap-2 text-sm text-primary animate-in fade-in duration-300" data-testid="text-save-confirmation">
@@ -373,14 +373,14 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
 
       {recipe.ingredients_used && recipe.ingredients_used.length > 0 && (
         <Card data-testid="section-ingredients-used">
-          <CardContent className="p-4">
+          <CardContent className="p-5">
             <div className="flex items-center gap-2 mb-3">
               <Package className="w-4 h-4 text-primary" />
               <h3 className="font-heading text-lg tracking-wider uppercase text-foreground">Using What's in the Fridge</h3>
             </div>
-            <div className="flex flex-wrap gap-1.5">
+            <div className="flex flex-wrap gap-2">
               {recipe.ingredients_used.map((item, i) => (
-                <Badge key={i} variant="outline" className="capitalize" data-testid={`badge-ingredient-used-${i}`}>
+                <Badge key={i} variant="outline" className="capitalize px-3 py-1" data-testid={`badge-ingredient-used-${i}`}>
                   {item}
                 </Badge>
               ))}
@@ -391,9 +391,9 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
                   <ShoppingCart className="w-3.5 h-3.5 text-muted-foreground" />
                   <span className="text-xs uppercase tracking-wider text-muted-foreground font-medium">You may need to grab</span>
                 </div>
-                <div className="flex flex-wrap gap-1.5">
+                <div className="flex flex-wrap gap-2">
                   {recipe.extra_items_needed.map((item, i) => (
-                    <Badge key={i} variant="secondary" className="capitalize" data-testid={`badge-extra-item-${i}`}>
+                    <Badge key={i} variant="secondary" className="capitalize px-3 py-1" data-testid={`badge-extra-item-${i}`}>
                       {item}
                     </Badge>
                   ))}
@@ -407,7 +407,7 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
       <div className="flex flex-wrap gap-3" data-testid="section-timing-macros">
         {hasTiming && (
           <Card className="flex-1 min-w-[200px]">
-            <CardContent className="p-4">
+            <CardContent className="p-5">
               <div className="flex items-center gap-2 mb-3">
                 <Clock className="w-4 h-4 text-primary" />
                 <h3 className="font-heading text-lg tracking-wider uppercase text-foreground">Timing</h3>
@@ -436,7 +436,7 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
         )}
 
         <Card className="flex-1 min-w-[200px]">
-          <CardContent className="p-4">
+          <CardContent className="p-5">
             <div className="flex items-center gap-2 mb-3">
               <Sparkles className="w-4 h-4 text-primary" />
               <h3 className="font-heading text-lg tracking-wider uppercase text-foreground">Macros Per Serving</h3>
@@ -459,7 +459,7 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
 
       {hasSafety && (
         <Card>
-          <CardContent className="p-4">
+          <CardContent className="p-5">
             <div className="flex items-center gap-2 mb-3">
               <ShieldCheck className="w-4 h-4 text-primary" />
               <h3 className="font-heading text-lg tracking-wider uppercase text-foreground">Protein Safety</h3>
@@ -495,10 +495,13 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
       )}
 
       <Card>
-        <CardContent className="p-4">
-          <h3 className="font-heading text-lg tracking-wider uppercase text-foreground mb-3">
-            Ingredients
-          </h3>
+        <CardContent className="p-5">
+          <div className="flex items-center gap-2 mb-4">
+            <List className="w-4 h-4 text-primary" />
+            <h3 className="font-heading text-lg tracking-wider uppercase text-foreground">
+              Ingredients
+            </h3>
+          </div>
           <div
             className="grid grid-cols-1 md:grid-cols-2 gap-3"
             data-testid="section-ingredients"
@@ -506,7 +509,7 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
             {recipe.ingredients.map((ing, i) => (
               <div
                 key={i}
-                className="flex flex-col gap-1 rounded-md border border-border/40 p-3 leading-relaxed"
+                className="flex flex-col gap-1.5 rounded-md border border-border/50 p-3.5 leading-relaxed transition-colors duration-150"
                 style={{ overflowWrap: "anywhere", wordBreak: "break-word" }}
                 data-testid={`ingredient-row-${i}`}
               >
@@ -528,20 +531,23 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
       </Card>
 
       <Card>
-        <CardContent className="p-4">
-          <h3 className="font-heading text-lg tracking-wider uppercase text-foreground mb-3">
-            Steps
-          </h3>
-          <ol className="space-y-4" data-testid="section-steps">
+        <CardContent className="p-5">
+          <div className="flex items-center gap-2 mb-4">
+            <UtensilsCrossed className="w-4 h-4 text-primary" />
+            <h3 className="font-heading text-lg tracking-wider uppercase text-foreground">
+              Steps
+            </h3>
+          </div>
+          <ol className="space-y-5" data-testid="section-steps">
             {recipe.steps.map((step, i) => {
               return (
-                <li key={i} className="flex gap-3" data-testid={`step-${i}`}>
-                  <span className="font-heading text-xl text-primary flex-shrink-0 w-6 text-right leading-6">
+                <li key={i} className="flex gap-4" data-testid={`step-${i}`}>
+                  <span className="font-heading text-2xl font-bold text-primary flex-shrink-0 w-7 text-center leading-7 rounded-md bg-primary/10 h-7 flex items-center justify-center">
                     {step.n}
                   </span>
-                  <div className="flex-1 min-w-0">
+                  <div className="flex-1 min-w-0 pt-0.5">
                     {step.title && (
-                      <p className="text-sm font-bold text-foreground mb-0.5 leading-snug">
+                      <p className="text-sm font-bold text-foreground mb-1 leading-snug">
                         {step.title}
                       </p>
                     )}
@@ -556,7 +562,7 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
 
       {recipe.plating && recipe.plating.assembly_instructions && (
         <Card data-testid="section-plating">
-          <CardContent className="p-4">
+          <CardContent className="p-5">
             <div className="flex items-center gap-2 mb-3">
               <UtensilsCrossed className="w-4 h-4 text-primary" />
               <h3 className="font-heading text-lg tracking-wider uppercase text-foreground">Plating</h3>
@@ -584,7 +590,7 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
 
       {recipe.pro_tips && recipe.pro_tips.length > 0 && (
         <Card data-testid="section-pro-tips">
-          <CardContent className="p-4">
+          <CardContent className="p-5">
             <button
               type="button"
               onClick={toggleProTips}
@@ -592,7 +598,7 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
               data-testid="button-toggle-pro-tips"
             >
               <div className="flex items-center gap-2">
-                <span className="text-base leading-none" aria-hidden="true">💡</span>
+                <Lightbulb className="w-4 h-4 text-amber-500" />
                 <h3 className="font-heading text-lg tracking-wider uppercase text-foreground">
                   Pro Tips
                 </h3>
@@ -616,7 +622,7 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
       )}
 
       <Card>
-        <CardContent className="p-4">
+        <CardContent className="p-5">
           <div className="flex items-start gap-3">
             <Trash2 className="w-4 h-4 text-muted-foreground mt-0.5 flex-shrink-0" />
             <div>
@@ -631,7 +637,7 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
 
       {recipe.budget_tips && recipe.budget_tips.length > 0 && (
         <Card data-testid="section-budget-tips">
-          <CardContent className="p-4">
+          <CardContent className="p-5">
             <div className="flex items-center gap-2 mb-3">
               <Lightbulb className="w-4 h-4 text-amber-500" />
               <h3 className="font-heading text-lg tracking-wider uppercase text-foreground">Budget Tips</h3>
@@ -650,7 +656,7 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
 
       {recipe.veg_option?.enabled && (
         <Card className="border-green-600/30" data-testid="section-veg-option">
-          <CardContent className="p-4 space-y-4">
+          <CardContent className="p-5 space-y-4">
             <div className="flex items-center gap-2">
               <Leaf className="w-5 h-5 text-green-500" />
               <h3 className="font-heading text-lg tracking-wider uppercase text-green-600 dark:text-green-400">
@@ -699,8 +705,8 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
               </h4>
               <ol className="space-y-2" data-testid="veg-steps">
                 {recipe.veg_option.steps.map((step, i) => (
-                  <li key={i} className="flex gap-3" data-testid={`veg-step-${i}`}>
-                    <span className="font-heading text-lg text-green-500 flex-shrink-0 w-5 text-right leading-5">
+                  <li key={i} className="flex gap-4" data-testid={`veg-step-${i}`}>
+                    <span className="font-heading text-lg font-bold text-green-500 flex-shrink-0 w-7 text-center leading-7 rounded-md bg-green-500/10 h-7 flex items-center justify-center">
                       {i + 1}
                     </span>
                     <p className="text-sm text-foreground/80 leading-relaxed">{step}</p>
@@ -721,7 +727,7 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
 
       {isDebugMode && (
         <Card className="border-yellow-600/40 bg-yellow-950/20 mt-4" data-testid="debug-panel">
-          <CardContent className="p-4 space-y-3">
+          <CardContent className="p-5 space-y-3">
             <div className="flex items-center gap-2">
               <Bug className="w-4 h-4 text-yellow-500" />
               <span className="text-xs font-bold uppercase tracking-wider text-yellow-500">Debug Panel</span>

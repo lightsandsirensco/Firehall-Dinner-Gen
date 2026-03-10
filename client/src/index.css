@@ -52,14 +52,14 @@ html, body {
   --font-serif: Georgia, serif;
   --font-mono: Menlo, monospace;
   --radius: .5rem;
-  --shadow-2xs: 0px 2px 0px 0px hsl(0 0% 0% / 0.00);
-  --shadow-xs: 0px 2px 0px 0px hsl(0 0% 0% / 0.00);
-  --shadow-sm: 0px 2px 0px 0px hsl(0 0% 0% / 0.00), 0px 1px 2px -1px hsl(0 0% 0% / 0.00);
-  --shadow: 0px 2px 0px 0px hsl(0 0% 0% / 0.00), 0px 1px 2px -1px hsl(0 0% 0% / 0.00);
-  --shadow-md: 0px 2px 0px 0px hsl(0 0% 0% / 0.00), 0px 2px 4px -1px hsl(0 0% 0% / 0.00);
-  --shadow-lg: 0px 2px 0px 0px hsl(0 0% 0% / 0.00), 0px 4px 6px -1px hsl(0 0% 0% / 0.00);
-  --shadow-xl: 0px 2px 0px 0px hsl(0 0% 0% / 0.00), 0px 8px 10px -1px hsl(0 0% 0% / 0.00);
-  --shadow-2xl: 0px 2px 0px 0px hsl(0 0% 0% / 0.00);
+  --shadow-2xs: 0 1px 2px 0 hsl(0 0% 0% / 0.15);
+  --shadow-xs: 0 1px 3px 0 hsl(0 0% 0% / 0.20);
+  --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.25), 0 1px 3px -1px hsl(0 0% 0% / 0.15);
+  --shadow: 0 2px 4px 0 hsl(0 0% 0% / 0.30), 0 1px 3px -1px hsl(0 0% 0% / 0.20);
+  --shadow-md: 0 4px 8px -1px hsl(0 0% 0% / 0.35), 0 2px 4px -2px hsl(0 0% 0% / 0.20);
+  --shadow-lg: 0 8px 16px -2px hsl(0 0% 0% / 0.40), 0 4px 6px -4px hsl(0 0% 0% / 0.25);
+  --shadow-xl: 0 16px 32px -4px hsl(0 0% 0% / 0.45), 0 8px 16px -8px hsl(0 0% 0% / 0.30);
+  --shadow-2xl: 0 24px 48px -8px hsl(0 0% 0% / 0.50);
   --tracking-normal: 0em;
   --spacing: 0.25rem;
 
@@ -132,14 +132,14 @@ html, body {
   --chart-3: 188 95% 68%;
   --chart-4: 280 75% 68%;
   --chart-5: 148 70% 65%;
-  --shadow-2xs: 0px 2px 0px 0px hsl(0 0% 0% / 0.00);
-  --shadow-xs: 0px 2px 0px 0px hsl(0 0% 0% / 0.00);
-  --shadow-sm: 0px 2px 0px 0px hsl(0 0% 0% / 0.00), 0px 1px 2px -1px hsl(0 0% 0% / 0.00);
-  --shadow: 0px 2px 0px 0px hsl(0 0% 0% / 0.00), 0px 1px 2px -1px hsl(0 0% 0% / 0.00);
-  --shadow-md: 0px 2px 0px 0px hsl(0 0% 0% / 0.00), 0px 2px 4px -1px hsl(0 0% 0% / 0.00);
-  --shadow-lg: 0px 2px 0px 0px hsl(0 0% 0% / 0.00), 0px 4px 6px -1px hsl(0 0% 0% / 0.00);
-  --shadow-xl: 0px 2px 0px 0px hsl(0 0% 0% / 0.00), 0px 8px 10px -1px hsl(0 0% 0% / 0.00);
-  --shadow-2xl: 0px 2px 0px 0px hsl(0 0% 0% / 0.00);
+  --shadow-2xs: 0 1px 2px 0 hsl(0 0% 0% / 0.30);
+  --shadow-xs: 0 1px 3px 0 hsl(0 0% 0% / 0.40);
+  --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.45), 0 1px 3px -1px hsl(0 0% 0% / 0.30);
+  --shadow: 0 2px 4px 0 hsl(0 0% 0% / 0.50), 0 1px 3px -1px hsl(0 0% 0% / 0.35);
+  --shadow-md: 0 4px 8px -1px hsl(0 0% 0% / 0.55), 0 2px 4px -2px hsl(0 0% 0% / 0.35);
+  --shadow-lg: 0 8px 16px -2px hsl(0 0% 0% / 0.60), 0 4px 6px -4px hsl(0 0% 0% / 0.40);
+  --shadow-xl: 0 16px 32px -4px hsl(0 0% 0% / 0.65), 0 8px 16px -8px hsl(0 0% 0% / 0.45);
+  --shadow-2xl: 0 24px 48px -8px hsl(0 0% 0% / 0.70);
 
 /* Fallback for older browsers */
   --sidebar-primary-border: hsl(var(--sidebar-primary));
@@ -290,4 +290,59 @@ html, body {
   .border.hover-elevate:not(.no-hover-interaction-elevate)::after {
     inset: -1px;
   }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes save-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.premium-skeleton {
+  background: linear-gradient(90deg, hsl(var(--muted)) 25%, hsl(var(--muted-foreground) / 0.08) 50%, hsl(var(--muted)) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.8s ease-in-out infinite;
+}
+
+.save-confirmed {
+  animation: save-pulse 0.4s ease-in-out;
+}
+
+.fade-up {
+  animation: fade-up 0.4s ease-out both;
+}
+
+.premium-card {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.premium-card:hover {
+  border-color: hsl(var(--border) / 0.6);
+  box-shadow: 0 4px 12px -2px hsl(0 0% 0% / 0.4);
+}
+
+.btn-generate {
+  transition: box-shadow 0.2s ease, transform 0.1s ease;
+}
+
+.btn-generate:hover:not(:disabled) {
+  box-shadow: 0 0 20px -4px hsl(var(--primary) / 0.4);
+}
+
+.btn-generate:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, hsl(var(--border) / 0.5) 20%, hsl(var(--border) / 0.5) 80%, transparent);
 }

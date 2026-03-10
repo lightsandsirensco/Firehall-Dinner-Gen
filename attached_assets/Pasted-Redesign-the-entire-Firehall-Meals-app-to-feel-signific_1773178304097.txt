@@ -1,0 +1,229 @@
+Redesign the entire Firehall Meals app to feel significantly more premium, polished, and habit-forming while keeping the same core theme, dark aesthetic, and firefighter-focused identity.
+
+Primary goals:
+- Make the app feel more premium and trustworthy
+- Increase perceived quality and visual appeal
+- Make users want to come back and use it again
+- Keep the same functionality and theme, but elevate the experience
+
+Do NOT:
+- remove features
+- change backend logic unless needed for UI polish
+- break current functionality
+- make it look like a generic SaaS app
+- make it bright, flashy, or off-brand
+
+--------------------------------------------------
+1) UPGRADE THE OVERALL VISUAL DESIGN
+--------------------------------------------------
+
+Keep the same dark Firehall Meals theme, but make it more refined and premium.
+
+Requirements:
+- Improve spacing, padding, alignment, and proportions across the app
+- Make typography more intentional and visually strong
+- Strengthen hierarchy between:
+  - page headers
+  - section titles
+  - recipe titles
+  - body text
+  - buttons
+  - labels/tags
+- Use more polished card styling:
+  - subtle shadows
+  - better border treatment
+  - cleaner rounded corners
+  - stronger separation between sections
+
+The result should feel:
+- high quality
+- modern
+- intentional
+- slightly rugged but premium
+- built for firefighters, not corporate
+
+--------------------------------------------------
+2) MAKE THE APP FEEL MORE “WORTH COMING BACK TO”
+--------------------------------------------------
+
+Add subtle UX and visual improvements that increase retention and emotional attachment.
+
+Examples:
+- stronger “Hall Favorites” styling
+- premium-looking save/favorite button states
+- more polished loading skeletons
+- smoother transitions when generating new meals
+- visually satisfying success states for:
+  - recipe saved
+  - recipe emailed
+  - shopping list opened
+
+Use subtle delight:
+- hover effects
+- button transitions
+- clean reveal/fade animations
+- no flashy gimmicks
+
+--------------------------------------------------
+3) IMPROVE THE HEADER / TOP EXPERIENCE
+--------------------------------------------------
+
+Make the app header feel more premium and memorable.
+
+Keep:
+- Firehall Meals
+- Firefighter Built. Firehall Tested.
+- Powered by Lights & Sirens Co.
+
+But improve:
+- spacing
+- typography hierarchy
+- icon/logo treatment
+- visual balance
+- layout polish
+
+Optional:
+- add subtle visual texture / depth behind the header
+- keep it clean and dark
+
+The top of the app should make a strong first impression.
+
+--------------------------------------------------
+4) UPGRADE BUTTONS AND ACTION ROWS
+--------------------------------------------------
+
+Make all buttons feel more premium and consistent.
+
+Improve:
+- spacing
+- padding
+- icon alignment
+- hover states
+- active states
+- mobile responsiveness
+
+Especially upgrade:
+- Generate Meal
+- Generate Another
+- Shopping List
+- Save to Hall Favorites
+- Email me this recipe
+- Print
+
+Rules:
+- Shopping List should remain prominent
+- buttons should never look cramped or awkward on mobile
+- no messy multi-row button layouts
+
+--------------------------------------------------
+5) MAKE RECIPE CARDS FEEL PREMIUM
+--------------------------------------------------
+
+The recipe result card should feel like the heart of the app.
+
+Improve:
+- title styling
+- badges (Meal Style, cuisine, high protein, etc.)
+- ingredient layout
+- step spacing
+- timing / macros / protein safety presentation
+- Pro Tips section
+- shopping list modal styling
+
+Recipe cards should feel:
+- easy to scan
+- high-quality
+- satisfying to interact with
+- structured like a serious product, not a rough prototype
+
+--------------------------------------------------
+6) IMPROVE FILTER PANEL DESIGN
+--------------------------------------------------
+
+Keep all filters, but make them look cleaner, more organized, and more premium.
+
+Requirements:
+- use better grouping/sections
+- improve label spacing
+- improve dropdown/input styling
+- make the panel easier to scan
+- make the overall filter experience feel intentional and not cluttered
+
+Optional section headings:
+- Basics
+- Diet & Restrictions
+- Kitchen & Budget
+- Meal Preferences
+
+Keep theme consistent.
+
+--------------------------------------------------
+7) IMPROVE EMPTY STATES / LOADING STATES
+--------------------------------------------------
+
+Upgrade all “blank” or “loading” experiences.
+
+Requirements:
+- premium skeleton loaders
+- polished empty states
+- helpful microcopy
+- no janky transitions
+
+For example:
+- before first meal generation
+- while loading
+- when no saved meals exist
+- when no recipes match filters
+
+These states should still feel branded and polished.
+
+--------------------------------------------------
+8) CREATE A STRONGER APP-QUALITY FEEL
+--------------------------------------------------
+
+The app should feel closer to a premium mobile/web product.
+
+Do this by improving:
+- consistency of spacing
+- consistency of cards and buttons
+- consistency of icons
+- visual rhythm across sections
+- subtle animation timing
+
+No cheap-looking UI.
+No “builder default” look.
+No random spacing inconsistencies.
+
+--------------------------------------------------
+9) KEEP EVERYTHING FUNCTIONAL
+--------------------------------------------------
+
+Do NOT remove or break:
+- filters
+- generate meal
+- generate another
+- shopping list
+- save recipe
+- hall favorites
+- print
+- email recipe
+- pizza night
+- cuisine style
+- meal style
+- allergies
+- validator logic
+- structure rotation
+- carb rules
+
+--------------------------------------------------
+10) FINAL GOAL
+--------------------------------------------------
+
+Make Firehall Meals feel like a premium, polished, addictive firefighter lifestyle product that users trust, enjoy using, and want to return to regularly.
+
+The final design should feel:
+- premium
+- useful
+- memorable
+- firefighter-built
+- habit-forming
