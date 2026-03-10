@@ -28,6 +28,7 @@ interface SearchResult {
   cuisines?: string[];
   diets?: string[];
   _firehallFallback?: boolean;
+  _pool?: string;
 }
 
 interface SearchResponse {
@@ -35,6 +36,105 @@ interface SearchResponse {
   totalResults: number;
   _source?: "spoonacular" | "firehall" | "none";
   _relaxed?: string;
+}
+
+function inferRecipeTags(r: SearchResult): string[] {
+  const tags: string[] = [];
+  const addTag = (tag: string) => { if (!tags.includes(tag)) tags.push(tag); };
+  const t = r.title.toLowerCase();
+  const s = (r.summary || "").toLowerCase();
+  const combined = t + " " + s;
+  const pool = r._pool || "";
+
+  if (r.readyInMinutes > 0 && r.readyInMinutes <= 20) addTag("Quick & Easy");
+  else if (r.readyInMinutes > 0 && r.readyInMinutes <= 30) addTag("30-Minute Meal");
+
+  const styleChecks: [RegExp, string][] = [
+    [/sheet\s*pan/i, "Sheet Pan"],
+    [/one[- ]pot|one[- ]pan/i, "One-Pot"],
+    [/slow\s*cook|crock\s*pot|instant\s*pot/i, "Slow Cooker"],
+    [/stir[- ]?fry/i, "Stir Fry"],
+    [/grill/i, "Grilled"],
+    [/skillet/i, "Skillet"],
+    [/bowl/i, "Bowl"],
+    [/burger/i, "Burger"],
+    [/wrap|sandwich/i, "Wrap"],
+    [/salad/i, "Salad"],
+    [/roast/i, "Roasted"],
+    [/bake/i, "Baked"],
+  ];
+  for (const [pattern, tag] of styleChecks) {
+    if (pattern.test(t)) { addTag(tag); break; }
+  }
+
+  const foodChecks: [RegExp, string][] = [
+    [/taco|burrito|enchilada|fajita|quesadilla|salsa|tortilla/i, "Mexican"],
+    [/pasta|spaghetti|penne|rigatoni|lasagna|gnocchi|ravioli|linguine|fettuccine/i, "Pasta"],
+    [/curry|tikka|masala|tandoori|korma/i, "Curry"],
+    [/stew|chili|chowder|soup|bisque|gumbo/i, "Hearty"],
+    [/casserole|mac.*cheese|meatloaf|pot\s*pie|comfort/i, "Comfort Food"],
+    [/bbq|barbecue|pulled\s*pork|smoked/i, "BBQ"],
+    [/teriyaki|soy\s*sauce|sesame|asian/i, "Asian"],
+    [/pizza|flatbread/i, "Pizza"],
+    [/pie|cobbler|crumble/i, "Baked"],
+  ];
+  for (const [pattern, tag] of foodChecks) {
+    if (pattern.test(t) && !tags.includes(tag)) { addTag(tag); break; }
+  }
+
+  const cuisineMap: Record<string, string> = {
+    mediterranean: "Mediterranean", greek: "Mediterranean", italian: "Italian",
+    mexican: "Mexican", cajun: "Cajun", korean: "Korean", japanese: "Japanese",
+    chinese: "Chinese", thai: "Thai", indian: "Indian", vietnamese: "Vietnamese",
+    french: "French", american: "American",
+  };
+  for (const c of (r.cuisines || [])) {
+    const mapped = cuisineMap[c.toLowerCase()];
+    if (mapped) { addTag(mapped); break; }
+  }
+
+  const dietTags: Record<string, string> = {
+    "gluten free": "Gluten Free", vegan: "Vegan", vegetarian: "Vegetarian",
+    "dairy free": "Dairy Free", "whole30": "Whole30", paleo: "Paleo",
+    ketogenic: "Keto",
+  };
+  for (const d of (r.diets || [])) {
+    const mapped = dietTags[d.toLowerCase()];
+    if (mapped) { addTag(mapped); break; }
+  }
+
+  if (pool) {
+    const poolTags: Record<string, string> = {
+      healthy: "High Protein", comfort: "Comfort Food", vegetarian: "Vegetarian",
+      international: "World Cuisine",
+    };
+    const pt = poolTags[pool];
+    if (pt) addTag(pt);
+  }
+
+  if (tags.length < 2) {
+    if (/high[- ]?protein|lean|grilled\s+(chicken|salmon|fish|steak)/i.test(combined)) addTag("High Protein");
+    else if (/healthy|nutritious|light|low[- ]?cal/i.test(combined)) addTag("Healthy");
+  }
+
+  const proteinChecks: [RegExp, string][] = [
+    [/chicken/i, "Chicken"], [/beef|steak|goulash/i, "Beef"], [/pork|sausage/i, "Pork"],
+    [/salmon|fish|shrimp|seafood|scallop|cod|tuna/i, "Seafood"],
+    [/turkey/i, "Turkey"], [/lamb|mutton/i, "Lamb"],
+    [/tofu|tempeh|lentil|chickpea|bean/i, "Plant-Based"],
+  ];
+  if (tags.length < 3) {
+    for (const [pattern, tag] of proteinChecks) {
+      if (pattern.test(t)) { addTag(tag); break; }
+    }
+  }
+
+  if (tags.length === 0) {
+    if (r.readyInMinutes > 60) addTag("Slow-Cooked");
+    else addTag("Dinner");
+  }
+
+  return tags.slice(0, 3);
 }
 
 interface RecipeDetail {
@@ -921,12 +1021,9 @@ export default function ExplorePage() {
                     {result.summary && (
                       <p className="text-xs text-muted-foreground/80 line-clamp-2 mb-3 leading-relaxed">{result.summary}</p>
                     )}
-                    <div className="flex gap-1.5 flex-wrap">
-                      {(result.cuisines || []).slice(0, 2).map(c => (
-                        <Badge key={c} variant="outline" className="text-[10px]">{c}</Badge>
-                      ))}
-                      {(result.diets || []).slice(0, 1).map(d => (
-                        <Badge key={d} variant="secondary" className="text-[10px]">{d}</Badge>
+                    <div className="flex gap-1.5 flex-wrap" data-testid={`tags-${result.id}`}>
+                      {inferRecipeTags(result).map(tag => (
+                        <Badge key={tag} variant="outline" className="text-[10px] font-normal text-muted-foreground/70 border-border/50">{tag}</Badge>
                       ))}
                     </div>
                   </CardContent>
@@ -1021,12 +1118,9 @@ export default function ExplorePage() {
                     {result.summary && (
                       <p className="text-xs text-muted-foreground/80 line-clamp-2 mb-3 leading-relaxed">{result.summary}</p>
                     )}
-                    <div className="flex gap-1.5 flex-wrap">
-                      {(result.cuisines || []).slice(0, 2).map(c => (
-                        <Badge key={c} variant="outline" className="text-[10px]">{c}</Badge>
-                      ))}
-                      {(result.diets || []).slice(0, 2).map(d => (
-                        <Badge key={d} variant="secondary" className="text-[10px]">{d}</Badge>
+                    <div className="flex gap-1.5 flex-wrap" data-testid={`tags-${result.id}`}>
+                      {inferRecipeTags(result).map(tag => (
+                        <Badge key={tag} variant="outline" className="text-[10px] font-normal text-muted-foreground/70 border-border/50">{tag}</Badge>
                       ))}
                     </div>
                   </CardContent>
