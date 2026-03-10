@@ -1,6 +1,6 @@
 import { useState, useCallback, useEffect, useMemo } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { Flame, Search, Clock, Users, ChevronLeft, X, Loader2, Heart, ShieldAlert, Globe, UtensilsCrossed, ChefHat, Package, Leaf, Printer, Mail, List, BookmarkPlus } from "lucide-react";
+import { Flame, Search, Clock, Users, ChevronLeft, X, Loader2, Heart, ShieldAlert, Globe, UtensilsCrossed, ChefHat, Package, Leaf, Printer, Mail, List, BookmarkPlus, Sparkles, SlidersHorizontal, Utensils } from "lucide-react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -223,11 +223,11 @@ const APPLIANCE_EQUIPMENT_MAP: Record<string, string> = {
 
 const TIME_OPTIONS = [
   { value: "any", label: "Any Time" },
-  { value: "15", label: "≤ 15 min" },
-  { value: "25", label: "≤ 25 min" },
-  { value: "40", label: "≤ 40 min" },
-  { value: "60", label: "≤ 60 min" },
-  { value: "90", label: "≤ 90 min" },
+  { value: "15", label: "15 min" },
+  { value: "25", label: "25 min" },
+  { value: "40", label: "40 min" },
+  { value: "60", label: "60 min" },
+  { value: "90", label: "90 min" },
 ];
 
 interface ExploreFilters {
@@ -335,7 +335,7 @@ function buildSearchParams(filters: ExploreFilters): URLSearchParams {
   params.set("minServings", String(minS));
   params.set("maxServings", String(maxS));
 
-  params.set("number", "12");
+  params.set("number", "5");
   params.set("_crewSize", String(crew));
 
   return params;
@@ -371,6 +371,18 @@ function MultiToggle({ options, selected, onChange, testIdPrefix }: {
           </Badge>
         );
       })}
+    </div>
+  );
+}
+
+function FilterSection({ icon: Icon, title, children }: { icon: typeof Globe; title: string; children: React.ReactNode }) {
+  return (
+    <div className="space-y-2.5">
+      <Label className="flex items-center gap-2 text-[11px] uppercase tracking-widest text-muted-foreground font-semibold">
+        <Icon className="w-3.5 h-3.5 text-primary/70" />
+        {title}
+      </Label>
+      {children}
     </div>
   );
 }
@@ -439,7 +451,7 @@ export default function ExplorePage() {
   const { data: recipeDetail, isLoading: detailLoading, error: detailError } = useQuery<RecipeDetail>({
     queryKey: ["/api/explore/recipe", selectedRecipeId],
     queryFn: async () => {
-      const res = await fetch(`/api/explore/recipe/${selectedRecipeId}`);
+      const res = await fetch(`/api/explore/recipe/${selectedRecipeId}?nutrition=true`);
       if (!res.ok) {
         const err = await res.json().catch(() => ({}));
         throw new Error(err.message || "Failed to load recipe");
@@ -468,8 +480,8 @@ export default function ExplorePage() {
     return (
       <div className="min-h-screen bg-background">
         <ExploreNav favCount={favCount} />
-        <main className="max-w-[900px] mx-auto px-4 py-6">
-          <Button variant="ghost" className="mb-4 gap-1" onClick={() => setSelectedRecipeId(null)} data-testid="button-back-to-results">
+        <main className="max-w-[900px] mx-auto px-4 sm:px-6 py-8">
+          <Button variant="ghost" className="mb-6 gap-1.5" onClick={() => setSelectedRecipeId(null)} data-testid="button-back-to-results">
             <ChevronLeft className="w-4 h-4" />
             Back to results
           </Button>
@@ -484,19 +496,19 @@ export default function ExplorePage() {
     return (
       <div className="min-h-screen bg-background">
         <ExploreNav favCount={favCount} />
-        <main className="max-w-[900px] mx-auto px-4 py-6">
-          <Button variant="ghost" className="mb-4 gap-1" onClick={() => setSelectedRecipeId(null)} data-testid="button-back-to-results">
+        <main className="max-w-[900px] mx-auto px-4 sm:px-6 py-8">
+          <Button variant="ghost" className="mb-6 gap-1.5" onClick={() => setSelectedRecipeId(null)} data-testid="button-back-to-results">
             <ChevronLeft className="w-4 h-4" />
             Back to results
           </Button>
           {detailLoading ? (
-            <div className="flex items-center justify-center py-20">
+            <div className="flex items-center justify-center py-24">
               <Loader2 className="w-8 h-8 animate-spin text-primary" />
             </div>
           ) : (
-            <div className="text-center py-12" data-testid="explore-detail-error">
+            <div className="text-center py-16" data-testid="explore-detail-error">
               <p className="text-destructive font-medium">{(detailError as Error).message}</p>
-              <p className="text-sm text-muted-foreground mt-1 mb-4">Could not load recipe details.</p>
+              <p className="text-sm text-muted-foreground mt-2 mb-5">Could not load recipe details.</p>
               <Button variant="outline" onClick={() => setSelectedRecipeId(null)} data-testid="button-back-after-error">
                 Back to results
               </Button>
@@ -511,22 +523,36 @@ export default function ExplorePage() {
     <div className="min-h-screen bg-background">
       <ExploreNav favCount={favCount} />
 
-      <header className="bg-background border-b border-border/40">
-        <div className="max-w-[1400px] mx-auto px-4 py-6 text-center">
-          <h1 className="font-heading text-4xl sm:text-5xl leading-none tracking-wide text-foreground" data-testid="text-explore-title">
+      <header className="relative overflow-visible border-b border-border/30">
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/[0.04] to-transparent pointer-events-none" />
+        <div className="relative max-w-[1200px] mx-auto px-4 sm:px-6 py-10 sm:py-14 text-center">
+          <div className="inline-flex items-center justify-center gap-2 mb-4">
+            <Sparkles className="w-5 h-5 text-primary/60" />
+            <span className="text-[11px] uppercase tracking-widest text-primary/70 font-semibold">Recipe Discovery</span>
+            <Sparkles className="w-5 h-5 text-primary/60" />
+          </div>
+          <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl leading-none tracking-wide text-foreground" data-testid="text-explore-title">
             EXPLORE RECIPES
           </h1>
-          <p className="text-sm text-muted-foreground mt-2 max-w-lg mx-auto">
+          <p className="text-sm sm:text-base text-muted-foreground mt-3 max-w-xl mx-auto leading-relaxed">
             Search thousands of recipes using your crew's filters. Match by cuisine, format, allergies, time, and what's in the fridge.
           </p>
         </div>
       </header>
 
-      <main className="max-w-[1400px] mx-auto px-4 py-6">
+      <main className="max-w-[1200px] mx-auto px-4 sm:px-6 py-8">
         <form onSubmit={handleSearch} data-testid="form-explore-search">
-          <Card className="mb-6">
-            <CardContent className="p-4 space-y-4">
-              <div className="relative">
+          <Card className="mb-8">
+            <CardContent className="p-5 sm:p-6">
+              <div className="flex items-center gap-2.5 mb-5">
+                <SlidersHorizontal className="w-4 h-4 text-primary/70" />
+                <h2 className="font-heading text-sm tracking-widest uppercase text-foreground">Search & Filters</h2>
+                {activeFilterCount > 0 && (
+                  <Badge variant="secondary" className="text-[10px]">{activeFilterCount} active</Badge>
+                )}
+              </div>
+
+              <div className="relative mb-6">
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                 <Input
                   value={filters.freeText}
@@ -537,17 +563,13 @@ export default function ExplorePage() {
                 />
                 {filters.freeText && (
                   <button type="button" className="absolute right-3 top-1/2 -translate-y-1/2" onClick={() => update("freeText", "")}>
-                    <X className="w-4 h-4 text-muted-foreground hover:text-foreground" />
+                    <X className="w-4 h-4 text-muted-foreground" />
                   </button>
                 )}
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                <div className="space-y-2">
-                  <Label className="flex items-center gap-2 text-xs uppercase tracking-wider text-muted-foreground font-medium">
-                    <Globe className="w-3.5 h-3.5" />
-                    Cuisine Style
-                  </Label>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                <FilterSection icon={Globe} title="Cuisine Style">
                   <Select value={filters.cuisine} onValueChange={(val) => update("cuisine", val)}>
                     <SelectTrigger data-testid="select-explore-cuisine">
                       <SelectValue />
@@ -567,13 +589,9 @@ export default function ExplorePage() {
                       <SelectItem value="canadian">Canadian Classics</SelectItem>
                     </SelectContent>
                   </Select>
-                </div>
+                </FilterSection>
 
-                <div className="space-y-2">
-                  <Label className="flex items-center gap-2 text-xs uppercase tracking-wider text-muted-foreground font-medium">
-                    <UtensilsCrossed className="w-3.5 h-3.5" />
-                    Meal Format
-                  </Label>
+                <FilterSection icon={UtensilsCrossed} title="Meal Format">
                   <Select value={filters.mealFormat} onValueChange={(val) => update("mealFormat", val)}>
                     <SelectTrigger data-testid="select-explore-format">
                       <SelectValue />
@@ -593,13 +611,9 @@ export default function ExplorePage() {
                       <SelectItem value="loaded_fries">Loaded Fries</SelectItem>
                     </SelectContent>
                   </Select>
-                </div>
+                </FilterSection>
 
-                <div className="space-y-2">
-                  <Label className="flex items-center gap-2 text-xs uppercase tracking-wider text-muted-foreground font-medium">
-                    <Clock className="w-3.5 h-3.5" />
-                    Time Available
-                  </Label>
+                <FilterSection icon={Clock} title="Time Available">
                   <Select value={filters.timeAvailable} onValueChange={(val) => update("timeAvailable", val)}>
                     <SelectTrigger data-testid="select-explore-time">
                       <SelectValue />
@@ -610,87 +624,75 @@ export default function ExplorePage() {
                       ))}
                     </SelectContent>
                   </Select>
+                </FilterSection>
+              </div>
+
+              <div className="border-t border-border/30 mt-6 pt-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <FilterSection icon={ChefHat} title="Protein">
+                    <MultiToggle
+                      options={PROTEIN_OPTIONS}
+                      selected={filters.proteins}
+                      onChange={(val) => {
+                        const wasVeg = filters.proteins.includes("vegetarian");
+                        const isNowVeg = val.includes("vegetarian");
+                        if (isNowVeg && !wasVeg) {
+                          update("proteins", ["vegetarian"]);
+                          update("vegetarian", true);
+                        } else if (!isNowVeg && wasVeg) {
+                          update("proteins", val.filter(p => p !== "vegetarian"));
+                          update("vegetarian", false);
+                        } else if (isNowVeg) {
+                          update("proteins", ["vegetarian"]);
+                        } else {
+                          update("proteins", val);
+                          update("vegetarian", false);
+                        }
+                      }}
+                      testIdPrefix="toggle-explore-protein"
+                    />
+                  </FilterSection>
+
+                  <FilterSection icon={ShieldAlert} title="Avoid (Allergies)">
+                    <MultiToggle
+                      options={ALLERGEN_OPTIONS}
+                      selected={filters.allergens}
+                      onChange={(val) => update("allergens", val)}
+                      testIdPrefix="toggle-explore-allergen"
+                    />
+                    {filters.allergens.length === 0 && (
+                      <p className="text-xs text-muted-foreground/60">No restrictions</p>
+                    )}
+                  </FilterSection>
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <Label className="flex items-center gap-2 text-xs uppercase tracking-wider text-muted-foreground font-medium">
-                    <ChefHat className="w-3.5 h-3.5" />
-                    Protein
-                  </Label>
-                  <MultiToggle
-                    options={PROTEIN_OPTIONS}
-                    selected={filters.proteins}
-                    onChange={(val) => {
-                      const wasVeg = filters.proteins.includes("vegetarian");
-                      const isNowVeg = val.includes("vegetarian");
-                      if (isNowVeg && !wasVeg) {
-                        update("proteins", ["vegetarian"]);
-                        update("vegetarian", true);
-                      } else if (!isNowVeg && wasVeg) {
-                        update("proteins", val.filter(p => p !== "vegetarian"));
-                        update("vegetarian", false);
-                      } else if (isNowVeg) {
-                        update("proteins", ["vegetarian"]);
-                      } else {
-                        update("proteins", val);
-                        update("vegetarian", false);
-                      }
-                    }}
-                    testIdPrefix="toggle-explore-protein"
-                  />
-                </div>
+              <div className="border-t border-border/30 mt-6 pt-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <FilterSection icon={Flame} title="Appliances">
+                    <MultiToggle
+                      options={APPLIANCE_OPTIONS}
+                      selected={filters.appliances}
+                      onChange={(val) => update("appliances", val)}
+                      testIdPrefix="toggle-explore-appliance"
+                    />
+                  </FilterSection>
 
-                <div className="space-y-2">
-                  <Label className="flex items-center gap-2 text-xs uppercase tracking-wider text-muted-foreground font-medium">
-                    <ShieldAlert className="w-3.5 h-3.5" />
-                    Avoid (Allergies)
-                  </Label>
-                  <MultiToggle
-                    options={ALLERGEN_OPTIONS}
-                    selected={filters.allergens}
-                    onChange={(val) => update("allergens", val)}
-                    testIdPrefix="toggle-explore-allergen"
-                  />
-                  {filters.allergens.length === 0 && (
-                    <p className="text-xs text-muted-foreground">No restrictions</p>
-                  )}
+                  <FilterSection icon={Users} title={`Crew Size: ${filters.crewSize}`}>
+                    <Slider
+                      value={[filters.crewSize]}
+                      onValueChange={([val]) => update("crewSize", val)}
+                      min={2}
+                      max={20}
+                      step={1}
+                      data-testid="slider-explore-crew"
+                    />
+                    <p className="text-xs text-muted-foreground/60">Prefer recipes serving ~{filters.crewSize} people</p>
+                  </FilterSection>
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <Label className="flex items-center gap-2 text-xs uppercase tracking-wider text-muted-foreground font-medium">
-                    <Flame className="w-3.5 h-3.5" />
-                    Appliances
-                  </Label>
-                  <MultiToggle
-                    options={APPLIANCE_OPTIONS}
-                    selected={filters.appliances}
-                    onChange={(val) => update("appliances", val)}
-                    testIdPrefix="toggle-explore-appliance"
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <Label className="flex items-center gap-2 text-xs uppercase tracking-wider text-muted-foreground font-medium">
-                    <Users className="w-3.5 h-3.5" />
-                    Crew Size: {filters.crewSize}
-                  </Label>
-                  <Slider
-                    value={[filters.crewSize]}
-                    onValueChange={([val]) => update("crewSize", val)}
-                    min={2}
-                    max={20}
-                    step={1}
-                    data-testid="slider-explore-crew"
-                  />
-                  <p className="text-xs text-muted-foreground">Prefer recipes serving ~{filters.crewSize} people</p>
-                </div>
-              </div>
-
-              <div className="border-t border-border/40 pt-4 space-y-3">
+              <div className="border-t border-border/30 mt-6 pt-5">
                 <div className="flex items-center gap-2.5">
                   <Checkbox
                     id="explore-pantry"
@@ -698,8 +700,8 @@ export default function ExplorePage() {
                     onCheckedChange={(checked) => update("pantryMode", !!checked)}
                     data-testid="checkbox-explore-pantry"
                   />
-                  <Label htmlFor="explore-pantry" className="flex items-center gap-2 text-xs uppercase tracking-wider text-muted-foreground font-medium cursor-pointer select-none">
-                    <Package className="w-3.5 h-3.5" />
+                  <Label htmlFor="explore-pantry" className="flex items-center gap-2 text-[11px] uppercase tracking-widest text-muted-foreground font-semibold cursor-pointer select-none">
+                    <Package className="w-3.5 h-3.5 text-primary/70" />
                     Use what's in the fridge
                   </Label>
                 </div>
@@ -709,7 +711,7 @@ export default function ExplorePage() {
                     onChange={(e) => update("pantryIngredients", e.target.value)}
                     placeholder="List ingredients you have (comma or newline separated)&#10;e.g. chicken thighs, bell peppers, onions, garlic"
                     rows={3}
-                    className="text-sm"
+                    className="text-sm mt-3"
                     data-testid="textarea-explore-pantry"
                   />
                 )}
@@ -717,23 +719,23 @@ export default function ExplorePage() {
             </CardContent>
           </Card>
 
-          <div className="flex items-center gap-3 mb-6">
-            <Button type="submit" className="font-heading tracking-wider flex-1 sm:flex-none" data-testid="button-explore-search">
-              <Search className="w-4 h-4 mr-1" />
+          <div className="flex items-center gap-3 mb-8">
+            <Button type="submit" className="font-heading tracking-wider flex-1 sm:flex-none gap-2" data-testid="button-explore-search">
+              <Search className="w-4 h-4" />
               SEARCH RECIPES
               {activeFilterCount > 0 && (
-                <Badge variant="secondary" className="ml-2 text-[10px] px-1.5 py-0">{activeFilterCount} filters</Badge>
+                <Badge variant="secondary" className="text-[10px] px-1.5 py-0">{activeFilterCount} filters</Badge>
               )}
             </Button>
             {submitted && (
               <Button
                 type="button"
                 variant="outline"
-                className="font-heading tracking-wider"
+                className="font-heading tracking-wider gap-2"
                 onClick={() => { setSubmitted(false); setSearchParams(null); }}
                 data-testid="button-explore-clear"
               >
-                <X className="w-4 h-4 mr-1" />
+                <X className="w-4 h-4" />
                 CLEAR
               </Button>
             )}
@@ -741,30 +743,36 @@ export default function ExplorePage() {
         </form>
 
         {searchLoading && (
-          <div className="flex items-center justify-center py-20" data-testid="explore-loading">
+          <div className="flex flex-col items-center justify-center py-24 gap-3" data-testid="explore-loading">
             <Loader2 className="w-8 h-8 animate-spin text-primary" />
+            <p className="text-sm text-muted-foreground">Searching recipes...</p>
           </div>
         )}
 
         {searchError && (
-          <div className="text-center py-12" data-testid="explore-error">
+          <div className="text-center py-16" data-testid="explore-error">
             <p className="text-destructive font-medium">{(searchError as Error).message}</p>
-            <p className="text-sm text-muted-foreground mt-1">Please try again or adjust your filters.</p>
+            <p className="text-sm text-muted-foreground mt-2">Please try again or adjust your filters.</p>
           </div>
         )}
 
         {!searchLoading && searchData && submitted && (
           <>
-            <div className="flex items-center justify-between mb-4">
+            <div className="flex items-center justify-between gap-3 mb-5">
               <p className="text-sm text-muted-foreground" data-testid="text-result-count">
                 {searchData.totalResults > 0 ? `${searchData.totalResults.toLocaleString()} recipes found` : "No recipes found"}
               </p>
+              {searchData._source && searchData._source !== "none" && (
+                <Badge variant="outline" className="text-[10px]">
+                  {searchData._source === "firehall" ? "Firehall AI" : "Spoonacular"}
+                </Badge>
+              )}
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" data-testid="explore-results-grid">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5" data-testid="explore-results-grid">
               {searchData.results.map((result) => (
                 <Card
                   key={result._firehallFallback ? `fb-${result.title}` : result.id}
-                  className="overflow-hidden cursor-pointer hover:border-primary/50 transition-colors"
+                  className="overflow-visible cursor-pointer hover-elevate transition-all duration-200"
                   onClick={() => {
                     if (result._firehallFallback) {
                       window.location.href = "/";
@@ -775,21 +783,21 @@ export default function ExplorePage() {
                   data-testid={`card-explore-result-${result.id}`}
                 >
                   {result.image && (
-                    <div className="aspect-video overflow-hidden">
+                    <div className="aspect-[16/10] overflow-hidden rounded-t-md">
                       <img src={result.image} alt={result.title} className="w-full h-full object-cover" loading="lazy" />
                     </div>
                   )}
-                  <CardContent className="p-4">
+                  <CardContent className="p-4 sm:p-5">
                     {result._firehallFallback && (
-                      <Badge variant="secondary" className="text-[10px] mb-2">
+                      <Badge variant="secondary" className="text-[10px] mb-2.5">
                         <Flame className="w-3 h-3 mr-1" />
                         Firehall AI Recipe
                       </Badge>
                     )}
-                    <h3 className="font-heading text-sm tracking-wide text-foreground line-clamp-2 mb-2" data-testid={`text-result-title-${result.id}`}>
+                    <h3 className="font-heading text-base tracking-wide text-foreground line-clamp-2 mb-2" data-testid={`text-result-title-${result.id}`}>
                       {result.title}
                     </h3>
-                    <div className="flex items-center gap-3 text-xs text-muted-foreground mb-2">
+                    <div className="flex items-center gap-3 text-xs text-muted-foreground mb-3">
                       {result.readyInMinutes > 0 && (
                         <span className="flex items-center gap-1">
                           <Clock className="w-3 h-3" />
@@ -804,9 +812,9 @@ export default function ExplorePage() {
                       )}
                     </div>
                     {result.summary && (
-                      <p className="text-xs text-muted-foreground line-clamp-2">{result.summary}</p>
+                      <p className="text-xs text-muted-foreground/80 line-clamp-2 mb-3 leading-relaxed">{result.summary}</p>
                     )}
-                    <div className="flex gap-1 mt-2 flex-wrap">
+                    <div className="flex gap-1.5 flex-wrap">
                       {(result.cuisines || []).slice(0, 2).map(c => (
                         <Badge key={c} variant="outline" className="text-[10px]">{c}</Badge>
                       ))}
@@ -819,19 +827,22 @@ export default function ExplorePage() {
               ))}
             </div>
             {searchData.results.length === 0 && (
-              <div className="text-center py-12">
-                <Search className="w-12 h-12 mx-auto text-muted-foreground/30 mb-3" />
-                <p className="text-muted-foreground">No recipes found. Try loosening your filters or removing restrictions.</p>
+              <div className="text-center py-16">
+                <Search className="w-14 h-14 mx-auto text-muted-foreground/20 mb-4" />
+                <p className="text-muted-foreground text-lg font-heading tracking-wide">NO RECIPES FOUND</p>
+                <p className="text-sm text-muted-foreground/60 mt-2">Try loosening your filters or removing restrictions.</p>
               </div>
             )}
           </>
         )}
 
         {!submitted && (
-          <div className="text-center py-16">
-            <Search className="w-16 h-16 mx-auto text-muted-foreground/20 mb-4" />
-            <p className="text-muted-foreground text-lg font-heading tracking-wide">SET YOUR FILTERS AND HIT SEARCH</p>
-            <p className="text-sm text-muted-foreground/70 mt-1">Your crew's filters map to real recipe results</p>
+          <div className="text-center py-20">
+            <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary/[0.07] mb-5">
+              <Utensils className="w-9 h-9 text-primary/40" />
+            </div>
+            <p className="text-foreground text-lg font-heading tracking-wide">SET YOUR FILTERS AND HIT SEARCH</p>
+            <p className="text-sm text-muted-foreground/60 mt-2 max-w-sm mx-auto">Your crew's filters map to real recipe results from thousands of options</p>
           </div>
         )}
       </main>
@@ -842,27 +853,27 @@ export default function ExplorePage() {
 
 function ExploreNav({ favCount }: { favCount: number }) {
   return (
-    <div className="bg-background border-b border-border/40">
-      <div className="max-w-[1400px] mx-auto px-4">
-        <nav className="flex items-center justify-between py-2" data-testid="nav-links">
-          <div className="flex items-center gap-2">
-            <Flame className="w-7 h-7" style={{ color: "#C62828" }} />
-            <span className="font-heading text-lg leading-none tracking-wide text-foreground">FIREHALL MEALS</span>
+    <div className="bg-background/95 backdrop-blur-sm border-b border-border/30 sticky top-0 z-50">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
+        <nav className="flex items-center justify-between gap-3 py-3" data-testid="nav-links">
+          <div className="flex items-center gap-2.5">
+            <Flame className="w-7 h-7 flex-shrink-0" style={{ color: "#C62828" }} />
+            <span className="font-heading text-lg leading-none tracking-wide text-foreground hidden sm:inline">FIREHALL MEALS</span>
           </div>
-          <div className="flex items-center gap-1">
-            <Link href="/" className="text-xs uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors font-medium px-3 py-1.5" data-testid="nav-link-meals">
-              Meal Generator
+          <div className="flex items-center gap-0.5 sm:gap-1 flex-wrap">
+            <Link href="/" className="text-xs uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors font-medium px-2 sm:px-3 py-1.5" data-testid="nav-link-meals">
+              Generator
             </Link>
-            <span className="text-muted-foreground/30 text-xs">|</span>
-            <Link href="/pizza" className="text-xs uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors font-medium px-3 py-1.5" data-testid="nav-link-pizza">
-              Pizza Night
+            <span className="text-muted-foreground/20 text-xs">|</span>
+            <Link href="/pizza" className="text-xs uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors font-medium px-2 sm:px-3 py-1.5" data-testid="nav-link-pizza">
+              Pizza
             </Link>
-            <span className="text-muted-foreground/30 text-xs">|</span>
-            <span className="text-xs uppercase tracking-wider text-foreground font-medium px-3 py-1.5" data-testid="nav-link-explore-active">
+            <span className="text-muted-foreground/20 text-xs">|</span>
+            <span className="text-xs uppercase tracking-wider text-primary font-semibold px-2 sm:px-3 py-1.5" data-testid="nav-link-explore-active">
               Explore
             </span>
-            <span className="text-muted-foreground/30 text-xs">|</span>
-            <Link href="/favorites" className="text-xs uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors font-medium px-3 py-1.5 flex items-center gap-1" data-testid="nav-link-favorites">
+            <span className="text-muted-foreground/20 text-xs">|</span>
+            <Link href="/favorites" className="text-xs uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors font-medium px-2 sm:px-3 py-1.5 flex items-center gap-1" data-testid="nav-link-favorites">
               <Heart className="w-3 h-3" />
               Favorites
               {favCount > 0 && (
@@ -907,28 +918,28 @@ function RecipeDetailView({ recipe, crewSize }: { recipe: RecipeDetail; crewSize
   return (
     <div className="space-y-6" data-testid="explore-recipe-detail">
       {recipe.image && (
-        <div className="rounded-xl overflow-hidden max-h-[400px]">
+        <div className="rounded-md overflow-hidden max-h-[400px]">
           <img src={recipe.image} alt={recipe.title} className="w-full h-full object-cover" />
         </div>
       )}
 
       <div>
-        <h1 className="font-heading text-2xl sm:text-3xl tracking-wide text-foreground mb-2" data-testid="text-detail-title">
+        <h1 className="font-heading text-2xl sm:text-3xl tracking-wide text-foreground mb-3" data-testid="text-detail-title">
           {recipe.title}
         </h1>
-        <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
+        <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
           {recipe.readyInMinutes > 0 && (
-            <span className="flex items-center gap-1">
-              <Clock className="w-4 h-4" />
+            <span className="flex items-center gap-1.5">
+              <Clock className="w-4 h-4 text-primary/60" />
               {recipe.readyInMinutes} min
             </span>
           )}
-          <span className="flex items-center gap-1">
-            <Users className="w-4 h-4" />
+          <span className="flex items-center gap-1.5">
+            <Users className="w-4 h-4 text-primary/60" />
             {recipe.servings} servings
           </span>
         </div>
-        <div className="flex gap-1.5 flex-wrap mb-4">
+        <div className="flex gap-1.5 flex-wrap mb-5">
           {recipe.cuisines.map(c => <Badge key={c} variant="outline" className="text-xs">{c}</Badge>)}
           {recipe.diets.map(d => <Badge key={d} variant="secondary" className="text-xs">{d}</Badge>)}
           {recipe.dishTypes.slice(0, 3).map(t => <Badge key={t} variant="outline" className="text-xs">{t}</Badge>)}
@@ -939,28 +950,28 @@ function RecipeDetailView({ recipe, crewSize }: { recipe: RecipeDetail; crewSize
       </div>
 
       <Card>
-        <CardContent className="p-4">
+        <CardContent className="p-4 sm:p-5">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
             <Button
               variant="outline"
               onClick={handleSave}
               disabled={saved}
-              className={`justify-start ${saved ? "bg-primary/20 text-primary border-primary/30 hover:bg-primary/20" : ""}`}
+              className={`justify-start gap-2 ${saved ? "bg-primary/20 text-primary border-primary/30" : ""}`}
               data-testid="button-explore-save"
             >
-              {saved ? <Heart className="w-4 h-4 mr-2 fill-current" /> : <BookmarkPlus className="w-4 h-4 mr-2" />}
+              {saved ? <Heart className="w-4 h-4 fill-current flex-shrink-0" /> : <BookmarkPlus className="w-4 h-4 flex-shrink-0" />}
               <span className="truncate">{saved ? "Saved" : "Save"}</span>
             </Button>
-            <Button variant="outline" onClick={handlePrint} className="justify-start" data-testid="button-explore-print">
-              <Printer className="w-4 h-4 mr-2 flex-shrink-0" />
+            <Button variant="outline" onClick={handlePrint} className="justify-start gap-2" data-testid="button-explore-print">
+              <Printer className="w-4 h-4 flex-shrink-0" />
               <span className="truncate">Print</span>
             </Button>
-            <Button variant="outline" onClick={() => setEmailOpen(true)} className="justify-start" data-testid="button-explore-email">
-              <Mail className="w-4 h-4 mr-2 flex-shrink-0" />
+            <Button variant="outline" onClick={() => setEmailOpen(true)} className="justify-start gap-2" data-testid="button-explore-email">
+              <Mail className="w-4 h-4 flex-shrink-0" />
               <span className="truncate">Email</span>
             </Button>
-            <Button onClick={() => setShoppingOpen(true)} className="justify-start" data-testid="button-explore-shopping">
-              <List className="w-4 h-4 mr-2 flex-shrink-0" />
+            <Button onClick={() => setShoppingOpen(true)} className="justify-start gap-2" data-testid="button-explore-shopping">
+              <List className="w-4 h-4 flex-shrink-0" />
               <span className="truncate">Shopping List</span>
             </Button>
           </div>
@@ -969,24 +980,27 @@ function RecipeDetailView({ recipe, crewSize }: { recipe: RecipeDetail; crewSize
 
       {recipe.macros.calories > 0 && (
         <Card>
-          <CardContent className="p-4">
-            <h3 className="font-heading text-sm tracking-wider uppercase text-foreground mb-3">Nutrition per Serving</h3>
+          <CardContent className="p-4 sm:p-5">
+            <h3 className="font-heading text-sm tracking-widest uppercase text-foreground mb-4 flex items-center gap-2">
+              <Sparkles className="w-3.5 h-3.5 text-primary/60" />
+              Nutrition per Serving
+            </h3>
             <div className="grid grid-cols-4 gap-3 text-center">
               <div>
-                <p className="text-lg font-bold text-foreground" data-testid="text-detail-calories">{recipe.macros.calories}</p>
-                <p className="text-xs text-muted-foreground">Calories</p>
+                <p className="text-xl font-bold text-foreground" data-testid="text-detail-calories">{recipe.macros.calories}</p>
+                <p className="text-[11px] text-muted-foreground uppercase tracking-wider mt-0.5">Calories</p>
               </div>
               <div>
-                <p className="text-lg font-bold text-primary" data-testid="text-detail-protein">{recipe.macros.protein_g}g</p>
-                <p className="text-xs text-muted-foreground">Protein</p>
+                <p className="text-xl font-bold text-foreground" data-testid="text-detail-protein">{recipe.macros.protein_g}g</p>
+                <p className="text-[11px] text-muted-foreground uppercase tracking-wider mt-0.5">Protein</p>
               </div>
               <div>
-                <p className="text-lg font-bold text-foreground" data-testid="text-detail-carbs">{recipe.macros.carbs_g}g</p>
-                <p className="text-xs text-muted-foreground">Carbs</p>
+                <p className="text-xl font-bold text-foreground" data-testid="text-detail-carbs">{recipe.macros.carbs_g}g</p>
+                <p className="text-[11px] text-muted-foreground uppercase tracking-wider mt-0.5">Carbs</p>
               </div>
               <div>
-                <p className="text-lg font-bold text-foreground" data-testid="text-detail-fat">{recipe.macros.fat_g}g</p>
-                <p className="text-xs text-muted-foreground">Fat</p>
+                <p className="text-xl font-bold text-foreground" data-testid="text-detail-fat">{recipe.macros.fat_g}g</p>
+                <p className="text-[11px] text-muted-foreground uppercase tracking-wider mt-0.5">Fat</p>
               </div>
             </div>
           </CardContent>
@@ -994,12 +1008,15 @@ function RecipeDetailView({ recipe, crewSize }: { recipe: RecipeDetail; crewSize
       )}
 
       <Card>
-        <CardContent className="p-4">
-          <h3 className="font-heading text-sm tracking-wider uppercase text-foreground mb-3">Ingredients</h3>
-          <ul className="space-y-1.5" data-testid="section-detail-ingredients">
+        <CardContent className="p-4 sm:p-5">
+          <h3 className="font-heading text-sm tracking-widest uppercase text-foreground mb-4 flex items-center gap-2">
+            <ChefHat className="w-3.5 h-3.5 text-primary/60" />
+            Ingredients
+          </h3>
+          <ul className="space-y-2" data-testid="section-detail-ingredients">
             {recipe.ingredients.map((ing, i) => (
-              <li key={i} className="text-sm text-foreground flex items-start gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
+              <li key={i} className="text-sm text-foreground flex items-start gap-2.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-primary/50 mt-1.5 flex-shrink-0" />
                 {ing.original}
               </li>
             ))}
@@ -1009,15 +1026,18 @@ function RecipeDetailView({ recipe, crewSize }: { recipe: RecipeDetail; crewSize
 
       {recipe.steps.length > 0 && (
         <Card>
-          <CardContent className="p-4">
-            <h3 className="font-heading text-sm tracking-wider uppercase text-foreground mb-3">Instructions</h3>
-            <ol className="space-y-3" data-testid="section-detail-steps">
+          <CardContent className="p-4 sm:p-5">
+            <h3 className="font-heading text-sm tracking-widest uppercase text-foreground mb-4 flex items-center gap-2">
+              <Utensils className="w-3.5 h-3.5 text-primary/60" />
+              Instructions
+            </h3>
+            <ol className="space-y-4" data-testid="section-detail-steps">
               {recipe.steps.map((step) => (
                 <li key={step.number} className="flex gap-3">
-                  <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary text-xs font-bold flex items-center justify-center mt-0.5">
+                  <span className="flex-shrink-0 w-7 h-7 rounded-full bg-primary/10 text-primary text-xs font-bold flex items-center justify-center mt-0.5">
                     {step.number}
                   </span>
-                  <p className="text-sm text-foreground leading-relaxed">{step.step}</p>
+                  <p className="text-sm text-foreground leading-relaxed pt-1">{step.step}</p>
                 </li>
               ))}
             </ol>
@@ -1045,8 +1065,8 @@ function RecipeDetailView({ recipe, crewSize }: { recipe: RecipeDetail; crewSize
 
 function Footer() {
   return (
-    <footer className="text-center py-4 mt-6">
-      <p className="text-xs text-muted-foreground/60">
+    <footer className="text-center py-6 mt-8 border-t border-border/20">
+      <p className="text-xs text-muted-foreground/50">
         Powered by{" "}
         <a href="https://www.lightsandsirensco.com" target="_blank" rel="noopener noreferrer" className="hover:text-muted-foreground transition-colors" data-testid="link-attribution">
           Lights &amp; Sirens Co.

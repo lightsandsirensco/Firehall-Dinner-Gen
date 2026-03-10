@@ -165,7 +165,71 @@ function fillDefaults(recipe: GenerateResponse, template: TemplateRow, chosenPro
     });
   }
 
+  sanitizeGenericProteinWord(recipe, chosenProtein);
+
   return recipe;
+}
+
+function sanitizeGenericProteinWord(recipe: GenerateResponse, chosenProtein: string): void {
+  const lower = (chosenProtein || "").toLowerCase();
+  if (lower === "pantry" || !lower) return;
+
+  const PROTEIN_DISPLAY_MAP: Record<string, string> = {
+    chicken: "chicken", beef: "beef", pork: "pork", turkey: "turkey",
+    fish: "fish", salmon: "salmon", shrimp: "shrimp", seafood: "seafood",
+    vegetarian: "the main filling", tofu: "tofu", tempeh: "tempeh",
+    lentils: "lentils", chickpeas: "chickpeas",
+  };
+  const replacement = PROTEIN_DISPLAY_MAP[lower] || lower;
+
+  const genericPatterns = [
+    /\bthe protein\b/gi,
+    /\byour protein\b/gi,
+    /\bthe proteins\b/gi,
+    /\beach protein\b/gi,
+    /\bprotein pieces?\b/gi,
+    /\bprotein dry\b/gi,
+    /\bprotein in bulk\b/gi,
+  ];
+
+  const replaceInText = (text: string): string => {
+    let result = text;
+    for (const pattern of genericPatterns) {
+      result = result.replace(pattern, (match) => {
+        const startsUpper = match[0] === match[0].toUpperCase();
+        const rep = match.toLowerCase().replace(/protein(s|pieces?)?/g, replacement);
+        return startsUpper ? rep.charAt(0).toUpperCase() + rep.slice(1) : rep;
+      });
+    }
+    return result;
+  };
+
+  if (recipe.title) recipe.title = replaceInText(recipe.title);
+  if (recipe.why_it_fits) recipe.why_it_fits = replaceInText(recipe.why_it_fits);
+  if (recipe.cleanup_tip) recipe.cleanup_tip = replaceInText(recipe.cleanup_tip);
+
+  if (recipe.steps && Array.isArray(recipe.steps)) {
+    recipe.steps = recipe.steps.map((s: any) => ({
+      heading: replaceInText(s.heading || ""),
+      body: replaceInText(s.body || ""),
+    }));
+  }
+
+  if (recipe.ingredients && Array.isArray(recipe.ingredients)) {
+    recipe.ingredients = recipe.ingredients.map((ing: any) => ({
+      item: replaceInText(ing.item || ""),
+      amount: ing.amount || "",
+      notes: replaceInText(ing.notes || ""),
+    }));
+  }
+
+  if (recipe.pro_tips && Array.isArray(recipe.pro_tips)) {
+    recipe.pro_tips = recipe.pro_tips.map((tip: string) => replaceInText(tip));
+  }
+
+  if (recipe.budget_tips && Array.isArray(recipe.budget_tips)) {
+    recipe.budget_tips = recipe.budget_tips.map((tip: string) => replaceInText(tip));
+  }
 }
 
 function isRecipeValid(recipe: GenerateResponse): { valid: boolean; reason?: string } {
@@ -333,8 +397,21 @@ function buildMealFormatBlock(mealFormat: string | undefined): string {
 
 const STRUCTURAL_CONSISTENCY_RULES = `STRUCTURAL CONSISTENCY RULES (STRICT): The recipe title, ingredients, and instructions must be fully aligned. If the title contains a descriptive claim, it must be reflected in both ingredients and instructions. Examples: If the title includes "cheesy", the ingredients must contain a cheese product and the instructions must include adding or melting the cheese. If the title includes "creamy", the ingredients must contain a cream-based ingredient (cream, milk, yogurt, coconut milk, cream cheese, etc.) and the instructions must show it being incorporated. If the title includes "stuffed", the instructions must explicitly describe stuffing or filling the item. If the title includes a protein (e.g., chicken, pork, tofu), that protein must appear in the ingredients and be used in the instructions. Do not generate titles that exaggerate or misrepresent the ingredients.`;
 
-const SYSTEM_PROMPT = `Firehall chef writing beginner-friendly recipes. Return ONLY valid JSON. Every step heading includes heat level and time. Every step body explains HOW to do it with a visual doneness cue. Include safety temps for every protein. No markdown. The recipe MUST use ONLY the specified protein — no substitutions. ${STRUCTURAL_CONSISTENCY_RULES}`;
-const PANTRY_SYSTEM_PROMPT = `Firehall chef writing beginner-friendly recipes. Return ONLY valid JSON. Every step heading includes heat level and time. Every step body explains HOW to do it with a visual doneness cue. Include safety temps for every protein. No markdown. ${STRUCTURAL_CONSISTENCY_RULES}`;
+const SYSTEM_PROMPT = `Firehall chef writing beginner-friendly recipes. Return ONLY valid JSON. Every step heading includes heat level and time. Every step body explains HOW to do it with a visual doneness cue. Include safety temps for every protein. No markdown. The recipe MUST use ONLY the specified protein — no substitutions. ${STRUCTURAL_CONSISTENCY_RULES}
+
+NATURAL LANGUAGE RULES (mandatory):
+1. NEVER use the generic word "protein" in steps, ingredients, titles, or tips. Always use the SPECIFIC ingredient name (e.g. "chicken thighs", "ground beef", "salmon fillets", "chickpeas", "lentils", "tofu"). The word "protein" is FORBIDDEN in recipe text.
+2. Use VARIED cooking verbs — never repeat the same verb in consecutive steps. Rotate between: sear, brown, roast, grill, toss, stir, simmer, sauté, crisp, char, braise, fold, drizzle, build, assemble, layer.
+3. Every step must include: (a) specific heat level, (b) approximate time, (c) a visual or sensory doneness cue like "until golden brown", "until edges crisp", "until fragrant", "until bubbling".
+4. NEVER start more than 2 steps with the same verb. Vary sentence openers.
+5. Write like a confident chef coaching a beginner — direct, clear, encouraging. No robotic phrasing.`;
+const PANTRY_SYSTEM_PROMPT = `Firehall chef writing beginner-friendly recipes. Return ONLY valid JSON. Every step heading includes heat level and time. Every step body explains HOW to do it with a visual doneness cue. Include safety temps for every protein. No markdown. ${STRUCTURAL_CONSISTENCY_RULES}
+
+NATURAL LANGUAGE RULES (mandatory):
+1. NEVER use the generic word "protein" in steps, ingredients, titles, or tips. Always use the SPECIFIC ingredient name. The word "protein" is FORBIDDEN in recipe text.
+2. Use VARIED cooking verbs. Rotate between: sear, brown, roast, grill, toss, stir, simmer, sauté, crisp, braise, fold, drizzle, build, assemble, layer.
+3. Every step must include specific heat level, approximate time, and a visual doneness cue.
+4. Write like a confident chef coaching a beginner.`;
 
 function buildPrompt(template: TemplateRow, request: GenerateRequest, chosenProtein: string, varietyBlock: string, healthyBlock: string, structureType?: StructureType): string {
   const proteinDisplay = chosenProtein.charAt(0).toUpperCase() + chosenProtein.slice(1);

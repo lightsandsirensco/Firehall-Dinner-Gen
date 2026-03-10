@@ -848,6 +848,20 @@ export function validateRecipe(recipe: GenerateResponse, requestMealFormat?: str
     }
   }
 
+  const genericProteinRe = /\b(the|your|each)\s+protein\b|\bprotein\s+(pieces?|dry|in bulk)\b/i;
+  const allowedProteinContexts = /\bhigh[- ]protein\b|\bprotein[_-]g\b|\bprotein_safety\b|\bprimary_protein_source\b|\bprotein content\b/i;
+  const textToCheck = [
+    recipe.title || "",
+    ...(recipe.steps || []).map(s => `${s.heading} ${s.body}`),
+    ...(recipe.ingredients || []).map(i => `${i.item} ${i.notes || ""}`),
+    ...(recipe.pro_tips || []),
+    ...(recipe.budget_tips || []),
+    recipe.why_it_fits || "",
+  ].join(" ");
+  if (genericProteinRe.test(textToCheck) && !allowedProteinContexts.test(textToCheck.match(genericProteinRe)?.[0] || "")) {
+    errors.push("generic_protein_word:recipe uses generic 'protein' instead of actual ingredient name");
+  }
+
   return errors;
 }
 

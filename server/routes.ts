@@ -267,14 +267,20 @@ export async function registerRoutes(
       { item: "Lemon juice", amount: "2 tbsp", notes: "" },
     );
 
-    const safeSteps = [
-      { heading: "Season and cook the protein (medium-high, 8 min)", body: `Season ${protein === "vegetarian" ? "chickpeas" : "protein"} with salt, pepper, and paprika. Heat olive oil in a large skillet over medium-high heat. Cook until golden and cooked through, about 6-8 minutes.` },
-      { heading: "Sauté vegetables (medium, 5 min)", body: "In the same pan, add garlic and mixed vegetables. Cook 4-5 minutes until tender-crisp." },
-      { heading: "Combine and finish (medium, 2 min)", body: `Return ${protein === "vegetarian" ? "chickpeas" : "protein"} to the pan. Toss everything together. Squeeze lemon juice over the top.` },
-      { heading: "Plate and serve (no heat, 2 min)", body: "Plate the protein and vegetable mixture. Serve family-style." },
-    ];
-
     const proteinDisplay = protein.charAt(0).toUpperCase() + protein.slice(1);
+    const proteinStepName = protein === "vegetarian" ? "chickpeas"
+      : protein === "fish" ? "the fish fillets"
+      : protein === "beef" ? "the ground beef"
+      : protein === "pork" ? "the pork"
+      : protein === "turkey" ? "the ground turkey"
+      : "the chicken";
+
+    const safeSteps = [
+      { heading: `Season and cook ${proteinStepName} (medium-high, 8 min)`, body: `Season ${proteinStepName} with salt, pepper, and paprika. Heat olive oil in a large skillet over medium-high heat. Cook until golden and cooked through, about 6-8 minutes.` },
+      { heading: "Sauté vegetables (medium, 5 min)", body: "In the same pan, add garlic and mixed vegetables. Cook 4-5 minutes until tender-crisp." },
+      { heading: "Combine and finish (medium, 2 min)", body: `Return ${proteinStepName} to the pan. Toss everything together. Squeeze lemon juice over the top.` },
+      { heading: "Plate and serve (no heat, 2 min)", body: `Plate ${proteinStepName} and vegetable mixture. Serve family-style.` },
+    ];
     const safeTitle = `Lemon Herb ${protein === "vegetarian" ? "Chickpea" : proteinDisplay} Skillet`;
 
     log(`[allergen-postcheck] Built allergen-safe fallback: "${safeTitle}"`, "allergen");
@@ -1472,8 +1478,8 @@ export async function registerRoutes(
       const equipment = (req.query.equipment as string) || "";
       const rawMaxReadyTime = parseInt(req.query.maxReadyTime as string);
       const maxReadyTime = Number.isFinite(rawMaxReadyTime) && rawMaxReadyTime > 0 ? Math.min(rawMaxReadyTime, 480) : undefined;
-      const rawNumber = parseInt((req.query.number as string) || "12");
-      const number = Number.isFinite(rawNumber) && rawNumber > 0 ? Math.min(rawNumber, 24) : 12;
+      const rawNumber = parseInt((req.query.number as string) || "5");
+      const number = Number.isFinite(rawNumber) && rawNumber > 0 ? Math.min(rawNumber, 5) : 5;
       const rawOffset = parseInt((req.query.offset as string) || "0");
       const offset = Number.isFinite(rawOffset) && rawOffset >= 0 ? rawOffset : 0;
       const rawMinServings = parseInt(req.query.minServings as string);
@@ -1640,7 +1646,8 @@ export async function registerRoutes(
       const id = parseInt(req.params.id);
       if (isNaN(id)) return res.status(400).json({ message: "Invalid recipe ID" });
 
-      const detail = await getRecipeById(id);
+      const includeNutrition = req.query.nutrition === "true";
+      const detail = await getRecipeById(id, includeNutrition);
 
       const nutrients = detail.nutrition?.nutrients || [];
       const findNutrient = (name: string) => nutrients.find(n => n.name.toLowerCase() === name.toLowerCase())?.amount || 0;

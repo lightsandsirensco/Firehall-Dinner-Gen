@@ -1,27 +1,41 @@
 import { log } from "./index";
 
 const SPOONACULAR_BASE = "https://api.spoonacular.com";
-const CACHE_TTL_MS = 10 * 60 * 1000;
-const MAX_CACHE_SIZE = 200;
+const SEARCH_CACHE_TTL_MS = 24 * 60 * 60 * 1000;
+const DETAIL_CACHE_TTL_MS = 7 * 24 * 60 * 60 * 1000;
+const MAX_CACHE_SIZE = 500;
+const DEFAULT_RESULTS_PER_REQUEST = 5;
 
-const apiCache = new Map<string, { data: any; expires: number }>();
+const apiCache = new Map<string, { data: any; expires: number; ttl: number }>();
 
 function getCached<T>(key: string): T | null {
   const entry = apiCache.get(key);
   if (!entry) return null;
   if (Date.now() > entry.expires) {
     apiCache.delete(key);
+    const expiresLabel = key.startsWith("detail:") ? "7d" : "24h";
+    log(`[spoonacular-cache] Expired (TTL ${expiresLabel}): ${key.substring(0, 80)}`, "spoonacular");
     return null;
   }
   return entry.data as T;
 }
 
-function setCache(key: string, data: any): void {
+function setCache(key: string, data: any, ttlMs: number): void {
   if (apiCache.size >= MAX_CACHE_SIZE) {
-    const oldest = apiCache.keys().next().value;
-    if (oldest) apiCache.delete(oldest);
+    let oldestKey: string | null = null;
+    let oldestExpires = Infinity;
+    for (const [k, v] of apiCache) {
+      if (v.expires < oldestExpires) {
+        oldestExpires = v.expires;
+        oldestKey = k;
+      }
+    }
+    if (oldestKey) apiCache.delete(oldestKey);
   }
-  apiCache.set(key, { data, expires: Date.now() + CACHE_TTL_MS });
+  const expires = Date.now() + ttlMs;
+  apiCache.set(key, { data, expires, ttl: ttlMs });
+  const expiresAt = new Date(expires).toISOString();
+  log(`[spoonacular-cache] Stored: ${key.substring(0, 80)} | expires=${expiresAt}`, "spoonacular");
 }
 
 function getApiKey(): string {
@@ -30,6 +44,16 @@ function getApiKey(): string {
     throw new Error("SPOONACULAR_API_KEY is not configured. Please add it to your Replit secrets.");
   }
   return key;
+}
+
+export function getSpoonacularCacheStats(): { size: number; searchEntries: number; detailEntries: number } {
+  let searchEntries = 0;
+  let detailEntries = 0;
+  for (const [key] of apiCache) {
+    if (key.startsWith("search:")) searchEntries++;
+    else if (key.startsWith("detail:")) detailEntries++;
+  }
+  return { size: apiCache.size, searchEntries, detailEntries };
 }
 
 export interface SpoonacularSearchResult {
@@ -100,10 +124,11 @@ export interface SearchOptions {
 
 export async function searchRecipes(query: string, options: SearchOptions = {}): Promise<SpoonacularSearchResponse> {
   const apiKey = getApiKey();
+  const requestCount = options.number || DEFAULT_RESULTS_PER_REQUEST;
   const params = new URLSearchParams({
     apiKey,
     query,
-    number: String(options.number || 12),
+    number: String(requestCount),
     offset: String(options.offset || 0),
     addRecipeInformation: "true",
     fillIngredients: "false",
@@ -121,15 +146,18 @@ export async function searchRecipes(query: string, options: SearchOptions = {}):
   if (options.maxServings) params.set("maxServings", String(options.maxServings));
   if (options.sort) params.set("sort", options.sort);
 
-  const cacheKey = `search:${params}`;
+  const cacheParams = new URLSearchParams(params);
+  cacheParams.delete("apiKey");
+  const cacheKey = `search:${cacheParams}`;
   const cached = getCached<SpoonacularSearchResponse>(cacheKey);
   if (cached) {
-    log(`[spoonacular] Cache hit for search: query="${query}"`, "spoonacular");
+    log(`[spoonacular-cache] HIT search (${cached.results.length} results): query="${query}" | Spoonacular API called=no`, "spoonacular");
     return cached;
   }
 
+  log(`[spoonacular-cache] MISS search: query="${query}" | Spoonacular API called=yes`, "spoonacular");
   const url = `${SPOONACULAR_BASE}/recipes/complexSearch?${params}`;
-  log(`[spoonacular] Searching: query="${query}" cuisine=${options.cuisine || "any"} diet=${options.diet || "any"}`, "spoonacular");
+  log(`[spoonacular] Searching: query="${query}" cuisine=${options.cuisine || "any"} diet=${options.diet || "any"} limit=${requestCount}`, "spoonacular");
 
   const res = await fetch(url);
   if (!res.ok) {
@@ -151,22 +179,24 @@ export async function searchRecipes(query: string, options: SearchOptions = {}):
     })),
     totalResults: data.totalResults || 0,
   };
-  setCache(cacheKey, result);
+  log(`[spoonacular] Search returned ${result.results.length} recipes (total available: ${result.totalResults})`, "spoonacular");
+  setCache(cacheKey, result, SEARCH_CACHE_TTL_MS);
   return result;
 }
 
-export async function getRecipeById(id: number): Promise<SpoonacularRecipeDetail> {
-  const cacheKey = `detail:${id}`;
+export async function getRecipeById(id: number, includeNutrition: boolean = false): Promise<SpoonacularRecipeDetail> {
+  const cacheKey = `detail:${id}:nutrition=${includeNutrition}`;
   const cached = getCached<SpoonacularRecipeDetail>(cacheKey);
   if (cached) {
-    log(`[spoonacular] Cache hit for recipe detail: id=${id}`, "spoonacular");
+    log(`[spoonacular-cache] HIT detail: id=${id} | Spoonacular API called=no`, "spoonacular");
     return cached;
   }
 
   const apiKey = getApiKey();
-  const url = `${SPOONACULAR_BASE}/recipes/${id}/information?apiKey=${apiKey}&includeNutrition=true`;
+  const nutritionParam = includeNutrition ? "true" : "false";
+  const url = `${SPOONACULAR_BASE}/recipes/${id}/information?apiKey=${apiKey}&includeNutrition=${nutritionParam}`;
 
-  log(`[spoonacular] Fetching recipe detail: id=${id}`, "spoonacular");
+  log(`[spoonacular-cache] MISS detail: id=${id} | Spoonacular API called=yes | includeNutrition=${includeNutrition}`, "spoonacular");
 
   const res = await fetch(url);
   if (!res.ok) {
@@ -176,11 +206,18 @@ export async function getRecipeById(id: number): Promise<SpoonacularRecipeDetail
   }
 
   const data = await res.json();
-  setCache(cacheKey, data);
+  setCache(cacheKey, data, DETAIL_CACHE_TTL_MS);
   return data;
 }
 
-export async function getRandomRecipes(tags?: string, number: number = 12): Promise<SpoonacularRecipeDetail[]> {
+export async function getRandomRecipes(tags?: string, number: number = 5): Promise<SpoonacularRecipeDetail[]> {
+  const cacheKey = `random:${tags || "none"}:${number}`;
+  const cached = getCached<SpoonacularRecipeDetail[]>(cacheKey);
+  if (cached) {
+    log(`[spoonacular-cache] HIT random: tags=${tags || "none"} (${cached.length} recipes) | Spoonacular API called=no`, "spoonacular");
+    return cached;
+  }
+
   const apiKey = getApiKey();
   const params = new URLSearchParams({
     apiKey,
@@ -189,7 +226,7 @@ export async function getRandomRecipes(tags?: string, number: number = 12): Prom
   if (tags) params.set("tags", tags);
 
   const url = `${SPOONACULAR_BASE}/recipes/random?${params}`;
-  log(`[spoonacular] Fetching random recipes: tags=${tags || "none"} count=${number}`, "spoonacular");
+  log(`[spoonacular-cache] MISS random: tags=${tags || "none"} | Spoonacular API called=yes`, "spoonacular");
 
   const res = await fetch(url);
   if (!res.ok) {
@@ -199,5 +236,8 @@ export async function getRandomRecipes(tags?: string, number: number = 12): Prom
   }
 
   const data = await res.json();
-  return data.recipes || [];
+  const recipes = data.recipes || [];
+  log(`[spoonacular] Random returned ${recipes.length} recipes`, "spoonacular");
+  setCache(cacheKey, recipes, SEARCH_CACHE_TTL_MS);
+  return recipes;
 }

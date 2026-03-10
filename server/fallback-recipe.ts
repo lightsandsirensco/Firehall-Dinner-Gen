@@ -439,7 +439,7 @@ interface FallbackArchetype {
 
 const FALLBACK_ARCHETYPES: Record<string, FallbackArchetype[]> = {
   chicken: [
-    { structure: "bowl", title: "Chipotle Chicken Protein Bowls", baseCarb: "greens", cookingMethod: "stovetop" },
+    { structure: "bowl", title: "Chipotle Chicken Power Bowls", baseCarb: "greens", cookingMethod: "stovetop" },
     { structure: "wrap", title: "Buffalo Chicken Wraps", baseCarb: "tortilla", cookingMethod: "stovetop" },
     { structure: "taco", title: "Chicken Street Tacos", baseCarb: "tortilla", cookingMethod: "skillet" },
     { structure: "sandwich", title: "Grilled Chicken Subs with Peppers", baseCarb: "sub roll", cookingMethod: "grill" },
@@ -461,7 +461,7 @@ const FALLBACK_ARCHETYPES: Record<string, FallbackArchetype[]> = {
     { structure: "rice-bake", title: "Cheesy Chicken & Rice Bake", baseCarb: "rice", cookingMethod: "oven" },
   ],
   beef: [
-    { structure: "bowl", title: "Korean Beef Protein Bowls", baseCarb: "greens", cookingMethod: "stovetop" },
+    { structure: "bowl", title: "Korean Beef Power Bowls", baseCarb: "greens", cookingMethod: "stovetop" },
     { structure: "wrap", title: "Philly Cheesesteak Wraps", baseCarb: "tortilla", cookingMethod: "skillet" },
     { structure: "taco", title: "Seasoned Beef Street Tacos", baseCarb: "tortilla", cookingMethod: "skillet" },
     { structure: "sandwich", title: "French Dip Beef Sandwiches", baseCarb: "hoagie roll", cookingMethod: "stovetop" },
@@ -483,7 +483,7 @@ const FALLBACK_ARCHETYPES: Record<string, FallbackArchetype[]> = {
     { structure: "rice-bake", title: "Cheesy Beef & Rice Bake", baseCarb: "rice", cookingMethod: "oven" },
   ],
   pork: [
-    { structure: "bowl", title: "Hawaiian Pork Protein Bowls", baseCarb: "none", cookingMethod: "stovetop" },
+    { structure: "bowl", title: "Hawaiian Pork Power Bowls", baseCarb: "none", cookingMethod: "stovetop" },
     { structure: "wrap", title: "Pulled Pork Wraps with Slaw", baseCarb: "tortilla", cookingMethod: "stovetop" },
     { structure: "taco", title: "Carnitas Street Tacos", baseCarb: "tortilla", cookingMethod: "skillet" },
     { structure: "sandwich", title: "BBQ Pulled Pork Sandwiches", baseCarb: "bun", cookingMethod: "slow cooker" },
@@ -825,7 +825,7 @@ function pickProteinForAppliances(chosenProtein: string, appliances: string[]): 
   return chosenProtein;
 }
 
-function getStepsForAppliances(proteinKey: string, appliances: string[]): { heading: string; body: string }[] {
+function getStepsForAppliances(proteinKey: string, appliances: string[], proteinDisplayName: string = "chicken"): { heading: string; body: string }[] {
   const hasStove = hasAppliance(appliances, "stove");
   const hasOven = hasAppliance(appliances, "oven");
   const hasSlowCooker = hasAppliance(appliances, "slow cooker");
@@ -840,15 +840,15 @@ function getStepsForAppliances(proteinKey: string, appliances: string[]): { head
   if (hasSlowCooker || hasInstantPot) {
     const applianceName = hasInstantPot ? "Instant Pot" : "slow cooker";
     const isVeg = proteinKey === "vegetarian";
-    const mainItem = isVeg ? "chickpeas and tofu" : "the protein";
+    const mainItem = isVeg ? "chickpeas and tofu" : proteinDisplayName;
     const brothType = isVeg ? "vegetable broth" : "broth";
     return [
-      { heading: `Prep ingredients (no heat, 5 min)`, body: `Season ${mainItem} with salt, pepper, and spices. Dice onion and mince garlic. Prep vegetables.` },
-      { heading: `Load the ${applianceName} (2 min)`, body: `Place ${mainItem} in the ${applianceName}. Add diced onion, garlic, and a cup of ${brothType} or water.` },
+      { heading: `Prep ingredients (no heat, 5 min)`, body: `Season the ${mainItem} with salt, pepper, and spices. Dice onion and mince garlic. Prep vegetables.` },
+      { heading: `Load the ${applianceName} (2 min)`, body: `Place the ${mainItem} in the ${applianceName}. Add diced onion, garlic, and a cup of ${brothType} or water.` },
       { heading: `Cook (${hasInstantPot ? "high pressure, 15 min" : "low 6-8 hrs / high 3-4 hrs"})`, body: `${hasInstantPot ? "Seal lid, set to high pressure for 15 minutes. Allow 10 minutes natural release." : "Cover and cook on low for 6-8 hours or high for 3-4 hours until tender and cooked through."}` },
-      { heading: `Prep additional vegetables (10 min)`, body: `While the main dish cooks, prepare any additional vegetables or sides.` },
+      { heading: `Prep additional vegetables (10 min)`, body: `While the ${mainItem} cooks, prepare any additional vegetables or sides.` },
       { heading: `Add vegetables (${hasInstantPot ? "5 min" : "30 min before done"})`, body: `${hasInstantPot ? "Quick release, open lid, stir in vegetables. Set to sauté mode for 5 minutes." : "Add vegetables to the slow cooker 30 minutes before serving time."} Cook until tender.` },
-      { heading: `Serve (no heat, 2 min)`, body: `Plate ${mainItem} and vegetables in bowls.${isVeg ? "" : " Check internal temperature for safety."}` },
+      { heading: `Serve (no heat, 2 min)`, body: `Plate the ${mainItem} and vegetables in bowls.${isVeg ? "" : " Check internal temperature for safety."}` },
     ];
   }
   return STOVETOP_STEPS[proteinKey] || STOVETOP_STEPS.chicken;
@@ -889,17 +889,17 @@ function adjustMacrosForHealthiness(
   return baseMacros;
 }
 
-function getBudgetTips(budgetLevel: string): string[] {
+function getBudgetTips(budgetLevel: string, proteinName: string): string[] {
   if (budgetLevel === "low") {
     return [
-      "Buy protein in bulk and freeze portions.",
+      `Buy ${proteinName} in bulk and freeze portions.`,
       "Frozen vegetables work just as well and cost less.",
       "Store-brand spices are just as good as name brands.",
     ];
   }
   if (budgetLevel === "splurge") {
     return [
-      "Try organic or free-range protein for better flavor.",
+      `Try organic or free-range ${proteinName} for better flavor.`,
       "Fresh herbs make a big difference — grab a bunch of each.",
     ];
   }
@@ -983,7 +983,7 @@ export function buildFallbackRecipe(
     : [...(PROTEIN_INGREDIENTS[finalProtein] || PROTEIN_INGREDIENTS.chicken)];
   let steps = isVegetarian && vegSet
     ? [...vegSet.steps]
-    : getStepsForAppliances(finalProtein, appliances);
+    : getStepsForAppliances(finalProtein, appliances, proteinDisplay);
 
   const { ingredients: allergenSafeIngredients, steps: allergenSafeSteps, swapsMade } =
     applyAllergenSwaps(rawIngredients, steps, allergens);
@@ -1032,10 +1032,11 @@ export function buildFallbackRecipe(
   const allergenNote = swapsMade.length > 0
     ? ` Allergen swaps applied: ${swapsMade.join("; ")}.`
     : "";
+  const vegProteinName = vegSet ? vegSet.base : "plant-based goodness";
   const whyItFits = isVegetarian && vegSet
-    ? `Hearty vegetarian meal for ${crewSize} — ready in about ${timing.total_minutes} minutes with ${vegSet.whySnippet}. Packed with plant-based protein your crew will love.${allergenNote}`
+    ? `Hearty vegetarian meal for ${crewSize} — ready in about ${timing.total_minutes} minutes with ${vegSet.whySnippet}. Packed with ${vegProteinName} your crew will love.${allergenNote}`
     : isVegetarian
-    ? `Hearty vegetarian meal for ${crewSize} — ready in about ${timing.total_minutes} minutes. Packed with plant-based protein your crew will love.${allergenNote}`
+    ? `Hearty vegetarian meal for ${crewSize} — ready in about ${timing.total_minutes} minutes. Packed with hearty ingredients your crew will love.${allergenNote}`
     : `Quick, reliable ${proteinDisplay.toLowerCase()} meal for ${crewSize} — ready in about ${timing.total_minutes} minutes with simple ingredients your crew will love.${allergenNote}`;
 
   const proTips: string[] = isVegetarian && vegSet
@@ -1046,8 +1047,8 @@ export function buildFallbackRecipe(
         "Add a squeeze of lemon or lime at the end to brighten any vegetarian dish.",
       ]
     : [
-        "Pat your protein dry before cooking — moisture prevents browning.",
-        "Let meat rest after cooking so juices redistribute for a more flavourful result.",
+        `Pat the ${proteinDisplay.toLowerCase()} dry before cooking — moisture prevents browning.`,
+        `Let the ${proteinDisplay.toLowerCase()} rest after cooking so juices redistribute for a more flavourful result.`,
       ];
   if (healthiness === "lean") {
     proTips.push("Swap butter for olive oil and reduce cheese portions to keep it lighter.");
@@ -1121,7 +1122,7 @@ export function buildFallbackRecipe(
     cleanup_tip: "Line baking sheets with foil for easy cleanup. Soak the skillet with hot soapy water right after plating.",
     macros_per_serving: macros,
     budget_level: budgetLevel,
-    budget_tips: getBudgetTips(budgetLevel),
+    budget_tips: getBudgetTips(budgetLevel, proteinDisplay.toLowerCase()),
     pro_tips: proTips,
     veg_option: vegOption,
     tags: {

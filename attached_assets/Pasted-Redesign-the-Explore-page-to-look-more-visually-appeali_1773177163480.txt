@@ -1,0 +1,61 @@
+Redesign the Explore page to look more visually appealing and polished while keeping the exact same overall theme, branding, and dark firefighter-style aesthetic.
+
+Goals:
+- Make the page feel more premium, clean, and modern
+- Improve hierarchy, spacing, and visual interest
+- Keep the same dark theme and overall Firehall Meals identity
+- Do NOT change the functionality or remove any existing content
+
+Requirements:
+
+1) Keep the same theme
+- Maintain the current dark UI
+- Keep existing fonts, color palette, and overall brand feel
+- Keep it feeling rugged, clean, and firefighter-focused
+- Do not introduce bright or off-brand colors
+
+2) Improve layout and visual hierarchy
+- Add better spacing between sections
+- Make headings more prominent and easier to scan
+- Use stronger section separation with subtle cards, borders, or background panels
+- Improve alignment and padding so the page feels balanced and intentional
+
+3) Upgrade recipe cards / content blocks
+- Make cards feel more polished with:
+  - slightly better padding
+  - cleaner spacing
+  - more consistent button placement
+  - stronger visual hierarchy between title, tags, and metadata
+- Keep cards easy to scan on both desktop and mobile
+
+4) Add subtle visual interest
+- Use tasteful icons where appropriate
+- Add small badges, labels, or section accents
+- Use hover states and transitions that feel smooth and premium
+- Keep all effects subtle, not flashy
+
+5) Improve the top of the page
+- Make the Explore page header feel stronger and more intentional
+- Add a clean intro/header area if needed, but keep it compact
+- Improve first impression without turning it into a marketing page
+
+6) Improve filter / category presentation if present
+- Make filters look cleaner and more organized
+- Use consistent spacing and better grouping
+- Ensure mobile layout remains clean and easy to tap
+
+7) Mobile optimization
+- Ensure the page looks polished on mobile
+- Avoid cramped cards, awkward spacing, or uneven layouts
+- Maintain consistent proportions and readable text
+
+8) Do NOT change:
+- app theme
+- core navigation
+- backend logic
+- recipe generation logic
+- shopping list
+- print/email/save functionality
+
+Goal:
+Make the Explore page feel significantly more polished, premium, and visually appealing while still looking like the same Firehall Meals app.
