@@ -8,12 +8,16 @@ interface HeroHeaderProps {
 export function HeroHeader({ title = "Firehall Meals", subtitle }: HeroHeaderProps) {
   return (
     <section
-      className="relative w-full h-[160px] sm:h-[220px] flex items-center justify-center overflow-hidden"
-      style={{ backgroundImage: `url(${heroTruckImg})`, backgroundSize: "cover", backgroundPosition: "center" }}
+      className="relative w-full overflow-hidden bg-black"
       data-testid="hero-header"
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/55 to-black/70" />
-      <div className="relative z-10 flex flex-col items-center justify-center text-center px-5 gap-2">
+      <img
+        src={heroTruckImg}
+        alt=""
+        className="w-full h-auto block"
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/45 to-black/65" />
+      <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-5 gap-2">
         <h1
           className="font-heading text-3xl sm:text-4xl md:text-5xl leading-none tracking-wide text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]"
           data-testid="text-page-title"
