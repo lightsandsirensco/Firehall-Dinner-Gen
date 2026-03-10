@@ -1466,6 +1466,140 @@ export async function registerRoutes(
     }
   });
 
+  const discoverSeenIds: number[] = [];
+  const DISCOVER_MEMORY_SIZE = 30;
+
+  function addToDiscoverMemory(ids: number[]) {
+    for (const id of ids) {
+      if (!discoverSeenIds.includes(id)) {
+        discoverSeenIds.push(id);
+        if (discoverSeenIds.length > DISCOVER_MEMORY_SIZE) {
+          discoverSeenIds.shift();
+        }
+      }
+    }
+  }
+
+  app.get("/api/explore/discover", async (req: Request, res: Response) => {
+    try {
+      const diet = (req.query.diet as string) || "";
+      const intolerances = (req.query.intolerances as string) || "";
+      const excludeIngredients = (req.query.excludeIngredients as string) || "";
+      const seenParam = (req.query.seen as string) || "";
+      const seenIds = new Set([
+        ...discoverSeenIds,
+        ...seenParam.split(",").map(s => parseInt(s)).filter(Number.isFinite),
+      ]);
+
+      const safetyFilters: Record<string, string> = {};
+      if (diet) safetyFilters.diet = diet;
+      if (intolerances) safetyFilters.intolerances = intolerances;
+      if (excludeIngredients) safetyFilters.excludeIngredients = excludeIngredients;
+
+      const queries = [
+        { q: "chicken dinner", cuisine: "american" },
+        { q: "beef stew", cuisine: "american" },
+        { q: "tacos", cuisine: "mexican" },
+        { q: "pasta", cuisine: "italian" },
+        { q: "stir fry", cuisine: "chinese,japanese,korean,thai,vietnamese" },
+        { q: "grilled meat", cuisine: "american" },
+        { q: "mediterranean bowl", cuisine: "mediterranean,greek" },
+        { q: "cajun", cuisine: "cajun" },
+        { q: "burger", cuisine: "" },
+        { q: "sheet pan dinner", cuisine: "" },
+        { q: "one pot meal", cuisine: "" },
+        { q: "high protein meal", cuisine: "" },
+        { q: "pork dinner", cuisine: "" },
+        { q: "seafood", cuisine: "" },
+        { q: "turkey meal", cuisine: "" },
+        { q: "vegetarian dinner", cuisine: "" },
+        { q: "wrap sandwich", cuisine: "" },
+        { q: "skillet dinner", cuisine: "" },
+        { q: "comfort food", cuisine: "" },
+        { q: "bbq", cuisine: "" },
+      ];
+
+      const shuffled = queries.sort(() => Math.random() - 0.5);
+      const selected = shuffled.slice(0, 8);
+
+      const fetches = selected.map(s =>
+        searchRecipes(s.q, { cuisine: s.cuisine || undefined, number: 4, sort: "random", ...safetyFilters })
+          .catch(() => ({ results: [], totalResults: 0 } as { results: any[]; totalResults: number }))
+      );
+
+      const batchResults = await Promise.all(fetches);
+
+      const allRecipes: any[] = [];
+      const seenTitles = new Set<string>();
+
+      for (const batch of batchResults) {
+        for (const r of batch.results) {
+          if (seenIds.has(r.id)) continue;
+          const titleKey = r.title.toLowerCase().replace(/[^a-z]/g, "");
+          if (seenTitles.has(titleKey)) continue;
+          seenTitles.add(titleKey);
+          allRecipes.push({
+            id: r.id,
+            title: r.title,
+            image: r.image || "",
+            readyInMinutes: r.readyInMinutes || 0,
+            servings: r.servings || 0,
+            summary: (r.summary || "").replace(/<[^>]*>/g, "").substring(0, 200),
+            cuisines: r.cuisines || [],
+            diets: r.diets || [],
+          });
+        }
+      }
+
+      const diverse: any[] = [];
+      const usedCuisines = new Map<string, number>();
+      const usedTitleWords = new Map<string, number>();
+
+      const remaining = [...allRecipes];
+      while (diverse.length < 20 && remaining.length > 0) {
+        let bestIdx = 0;
+        let bestScore = Infinity;
+        for (let i = 0; i < remaining.length; i++) {
+          const r = remaining[i];
+          const mainCuisine = (r.cuisines?.[0] || "other").toLowerCase();
+          const titleWords = r.title.toLowerCase().split(/\s+/).filter((w: string) => w.length > 3);
+          const cuisineCount = usedCuisines.get(mainCuisine) || 0;
+          const wordOverlap = titleWords.reduce((sum: number, w: string) => sum + (usedTitleWords.get(w) || 0), 0);
+          const score = cuisineCount * 3 + wordOverlap;
+          if (score < bestScore) {
+            bestScore = score;
+            bestIdx = i;
+          }
+        }
+        const picked = remaining.splice(bestIdx, 1)[0];
+        diverse.push(picked);
+        const mc = (picked.cuisines?.[0] || "other").toLowerCase();
+        usedCuisines.set(mc, (usedCuisines.get(mc) || 0) + 1);
+        const tw = picked.title.toLowerCase().split(/\s+/).filter((w: string) => w.length > 3);
+        for (const w of tw) {
+          usedTitleWords.set(w, (usedTitleWords.get(w) || 0) + 1);
+        }
+      }
+
+      addToDiscoverMemory(diverse.map(r => r.id));
+
+      log(`[explore] Discover feed: ${diverse.length} diverse recipes from ${selected.length} category queries | memory=${discoverSeenIds.length}`, "spoonacular");
+      return res.json({
+        results: diverse,
+        totalResults: diverse.length,
+        _source: "spoonacular",
+        _discover: true,
+      });
+    } catch (err: any) {
+      const msg = err.message || "Discover failed";
+      if (msg.includes("SPOONACULAR_API_KEY is not configured")) {
+        return res.status(503).json({ message: "Recipe search is not configured. SPOONACULAR_API_KEY is missing." });
+      }
+      log(`[spoonacular] Discover error: ${msg}`, "spoonacular");
+      return res.status(500).json({ message: "Recipe discovery failed. Please try again." });
+    }
+  });
+
   app.get("/api/explore/search", async (req: Request, res: Response) => {
     try {
       const query = (req.query.q as string) || "";
@@ -1478,8 +1612,8 @@ export async function registerRoutes(
       const equipment = (req.query.equipment as string) || "";
       const rawMaxReadyTime = parseInt(req.query.maxReadyTime as string);
       const maxReadyTime = Number.isFinite(rawMaxReadyTime) && rawMaxReadyTime > 0 ? Math.min(rawMaxReadyTime, 480) : undefined;
-      const rawNumber = parseInt((req.query.number as string) || "5");
-      const number = Number.isFinite(rawNumber) && rawNumber > 0 ? Math.min(rawNumber, 5) : 5;
+      const rawNumber = parseInt((req.query.number as string) || "15");
+      const number = Number.isFinite(rawNumber) && rawNumber > 0 ? Math.min(rawNumber, 20) : 15;
       const rawOffset = parseInt((req.query.offset as string) || "0");
       const offset = Number.isFinite(rawOffset) && rawOffset >= 0 ? rawOffset : 0;
       const rawMinServings = parseInt(req.query.minServings as string);

@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect, useMemo } from "react";
+import { useState, useCallback, useEffect, useMemo, useRef } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Flame, Search, Clock, Users, ChevronLeft, X, Loader2, Heart, ShieldAlert, Globe, UtensilsCrossed, ChefHat, Package, Leaf, Printer, Mail, List, BookmarkPlus, Sparkles, SlidersHorizontal, Utensils } from "lucide-react";
 import { HeroHeader } from "@/components/hero-header";
@@ -336,7 +336,7 @@ function buildSearchParams(filters: ExploreFilters): URLSearchParams {
   params.set("minServings", String(minS));
   params.set("maxServings", String(maxS));
 
-  params.set("number", "5");
+  params.set("number", "15");
   params.set("_crewSize", String(crew));
 
   return params;
@@ -414,6 +414,25 @@ export default function ExplorePage() {
   const [searchParams, setSearchParams] = useState<URLSearchParams | null>(null);
   const [selectedRecipeId, setSelectedRecipeId] = useState<number | null>(null);
   const [favCount] = useState(() => getSavedCount());
+  const seenIdsRef = useRef<number[]>((() => {
+    try {
+      const saved = localStorage.getItem("explore_seen_ids");
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed)) return parsed.slice(-30);
+      }
+    } catch {}
+    return [];
+  })());
+  const [discoverRefreshKey, setDiscoverRefreshKey] = useState(0);
+
+  const addSeenIds = useCallback((ids: number[]) => {
+    const prev = seenIdsRef.current;
+    const combined = [...prev, ...ids.filter(id => !prev.includes(id))];
+    const trimmed = combined.slice(-30);
+    seenIdsRef.current = trimmed;
+    try { localStorage.setItem("explore_seen_ids", JSON.stringify(trimmed)); } catch {}
+  }, []);
 
   useEffect(() => {
     try {
@@ -435,6 +454,43 @@ export default function ExplorePage() {
 
   const queryString = searchParams?.toString() || "";
 
+  const buildDiscoverUrl = useCallback(() => {
+    const params = new URLSearchParams();
+    if (filters.vegetarian) params.set("diet", "vegetarian");
+    if (filters.allergens.length > 0) {
+      const intolerances = filters.allergens
+        .map(a => ALLERGEN_TO_INTOLERANCE[a])
+        .filter(Boolean)
+        .join(",");
+      if (intolerances) params.set("intolerances", intolerances);
+      const excludeItems = filters.allergens
+        .flatMap(a => ALLERGEN_EXCLUDE_MAP[a] || []);
+      if (excludeItems.length > 0) params.set("excludeIngredients", excludeItems.join(","));
+    }
+    const seen = seenIdsRef.current;
+    if (seen.length > 0) params.set("seen", seen.join(","));
+    return params.toString();
+  }, [filters.vegetarian, filters.allergens]);
+
+  const { data: discoverData, isLoading: discoverLoading, refetch: refetchDiscover } = useQuery<SearchResponse>({
+    queryKey: ["/api/explore/discover", discoverRefreshKey, filters.vegetarian, filters.allergens.join(",")],
+    queryFn: async () => {
+      const qs = buildDiscoverUrl();
+      const res = await fetch(`/api/explore/discover?${qs}`);
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({}));
+        throw new Error(err.message || "Discovery failed");
+      }
+      const data = await res.json();
+      if (data.results?.length > 0) {
+        addSeenIds(data.results.map((r: SearchResult) => r.id));
+      }
+      return data;
+    },
+    enabled: !submitted,
+    staleTime: 2 * 60 * 1000,
+  });
+
   const { data: searchData, isLoading: searchLoading, error: searchError } = useQuery<SearchResponse>({
     queryKey: ["/api/explore/search", queryString],
     queryFn: async () => {
@@ -443,7 +499,11 @@ export default function ExplorePage() {
         const err = await res.json().catch(() => ({}));
         throw new Error(err.message || "Search failed");
       }
-      return res.json();
+      const data = await res.json();
+      if (data.results?.length > 0) {
+        addSeenIds(data.results.map((r: SearchResult) => r.id));
+      }
+      return data;
     },
     enabled: submitted && !!queryString,
     staleTime: 5 * 60 * 1000,
@@ -728,10 +788,10 @@ export default function ExplorePage() {
           </div>
         </form>
 
-        {searchLoading && (
+        {(searchLoading || (!submitted && discoverLoading)) && (
           <div className="flex flex-col items-center justify-center py-24 gap-3" data-testid="explore-loading">
             <Loader2 className="w-8 h-8 animate-spin text-primary" />
-            <p className="text-sm text-muted-foreground">Searching recipes...</p>
+            <p className="text-sm text-muted-foreground">{submitted ? "Searching recipes..." : "Loading discover feed..."}</p>
           </div>
         )}
 
@@ -742,11 +802,78 @@ export default function ExplorePage() {
           </div>
         )}
 
+        {!submitted && !discoverLoading && discoverData && discoverData.results.length > 0 && (
+          <>
+            <div className="flex items-center justify-between gap-3 mb-5">
+              <div className="flex items-center gap-2">
+                <Sparkles className="w-4 h-4 text-primary/60" />
+                <p className="text-sm text-muted-foreground" data-testid="text-discover-label">
+                  {discoverData.results.length} recipes to explore
+                </p>
+              </div>
+              <Button
+                variant="outline"
+                size="sm"
+                className="text-xs gap-1.5"
+                onClick={() => setDiscoverRefreshKey(k => k + 1)}
+                data-testid="button-refresh-discover"
+              >
+                <Sparkles className="w-3 h-3" />
+                Refresh
+              </Button>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5" data-testid="explore-discover-grid">
+              {discoverData.results.map((result) => (
+                <Card
+                  key={result.id}
+                  className="overflow-visible cursor-pointer hover-elevate transition-all duration-200"
+                  onClick={() => setSelectedRecipeId(result.id)}
+                  data-testid={`card-explore-result-${result.id}`}
+                >
+                  {result.image && (
+                    <div className="aspect-[16/10] overflow-hidden rounded-t-md">
+                      <img src={result.image} alt={result.title} className="w-full h-full object-cover" loading="lazy" />
+                    </div>
+                  )}
+                  <CardContent className="p-4 sm:p-5">
+                    <h3 className="font-heading text-base tracking-wide text-foreground line-clamp-2 mb-2" data-testid={`text-result-title-${result.id}`}>
+                      {result.title}
+                    </h3>
+                    <div className="flex items-center gap-3 text-xs text-muted-foreground mb-3">
+                      {result.readyInMinutes > 0 && (
+                        <span className="flex items-center gap-1">
+                          <Clock className="w-3 h-3" />
+                          {result.readyInMinutes} min
+                        </span>
+                      )}
+                      <span className="flex items-center gap-1">
+                        <Users className="w-3 h-3" />
+                        {filters.crewSize} servings
+                      </span>
+                    </div>
+                    {result.summary && (
+                      <p className="text-xs text-muted-foreground/80 line-clamp-2 mb-3 leading-relaxed">{result.summary}</p>
+                    )}
+                    <div className="flex gap-1.5 flex-wrap">
+                      {(result.cuisines || []).slice(0, 2).map(c => (
+                        <Badge key={c} variant="outline" className="text-[10px]">{c}</Badge>
+                      ))}
+                      {(result.diets || []).slice(0, 1).map(d => (
+                        <Badge key={d} variant="secondary" className="text-[10px]">{d}</Badge>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </>
+        )}
+
         {!searchLoading && searchData && submitted && (
           <>
             <div className="flex items-center justify-between gap-3 mb-5">
               <p className="text-sm text-muted-foreground" data-testid="text-result-count">
-                {searchData.totalResults > 0 ? `${searchData.totalResults.toLocaleString()} recipes found` : "No recipes found"}
+                {searchData.totalResults > 0 ? `${searchData.results.length} recipes found` : "No recipes found"}
               </p>
               {searchData._source && searchData._source !== "none" && (
                 <Badge variant="outline" className="text-[10px]">
