@@ -1445,6 +1445,21 @@ export async function registerRoutes(
     });
   });
 
+  app.get("/api/test-spoonacular", async (_req: Request, res: Response) => {
+    try {
+      const apiKey = process.env.SPOONACULAR_API_KEY;
+      if (!apiKey) {
+        return res.status(503).json({ error: "SPOONACULAR_API_KEY is not set" });
+      }
+      const url = `https://api.spoonacular.com/recipes/complexSearch?query=chicken&number=3&apiKey=${apiKey}`;
+      const response = await fetch(url);
+      const data = await response.json();
+      return res.json({ status: response.status, data });
+    } catch (err: any) {
+      return res.status(500).json({ error: err.message });
+    }
+  });
+
   app.get("/api/explore/search", async (req: Request, res: Response) => {
     try {
       const query = (req.query.q as string) || "";
