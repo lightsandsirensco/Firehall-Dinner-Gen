@@ -7,6 +7,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { RecipeCard } from "@/components/recipe-card";
 import { getSavedMeals, removeMeal, type SavedMeal } from "@/lib/saved-meals";
 import { Flame, Heart, Trash2, Eye, Clock, Beef, ChevronLeft } from "lucide-react";
+import { HeroHeader } from "@/components/hero-header";
 
 export default function FavoritesPage() {
   const [meals, setMeals] = useState<SavedMeal[]>([]);
@@ -64,17 +65,9 @@ export default function FavoritesPage() {
         </div>
       </header>
 
+      <HeroHeader title="Hall Favorites" subtitle={meals.length === 0 ? "Save your best crew meals here" : `${meals.length} saved ${meals.length === 1 ? "meal" : "meals"}`} />
+
       <main className="max-w-[1000px] mx-auto px-4 py-8">
-        <div className="text-center mb-8">
-          <h1 className="font-heading text-4xl sm:text-5xl tracking-wide text-foreground" data-testid="text-favorites-title">
-            HALL FAVORITES
-          </h1>
-          <p className="text-sm text-muted-foreground mt-2">
-            {meals.length === 0
-              ? "No saved meals yet. Generate a meal and save it to see it here."
-              : `${meals.length} saved ${meals.length === 1 ? "meal" : "meals"}`}
-          </p>
-        </div>
 
         {meals.length === 0 ? (
           <div className="text-center py-16">

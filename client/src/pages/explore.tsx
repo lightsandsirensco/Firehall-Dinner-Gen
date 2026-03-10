@@ -1,6 +1,7 @@
 import { useState, useCallback, useEffect, useMemo } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Flame, Search, Clock, Users, ChevronLeft, X, Loader2, Heart, ShieldAlert, Globe, UtensilsCrossed, ChefHat, Package, Leaf, Printer, Mail, List, BookmarkPlus, Sparkles, SlidersHorizontal, Utensils } from "lucide-react";
+import { HeroHeader } from "@/components/hero-header";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -523,22 +524,7 @@ export default function ExplorePage() {
     <div className="min-h-screen bg-background">
       <ExploreNav favCount={favCount} />
 
-      <header className="relative overflow-visible border-b border-border/30">
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/[0.04] to-transparent pointer-events-none" />
-        <div className="relative max-w-[1200px] mx-auto px-4 sm:px-6 py-10 sm:py-14 text-center">
-          <div className="inline-flex items-center justify-center gap-2 mb-4">
-            <Sparkles className="w-5 h-5 text-primary/60" />
-            <span className="text-[11px] uppercase tracking-widest text-primary/70 font-semibold">Recipe Discovery</span>
-            <Sparkles className="w-5 h-5 text-primary/60" />
-          </div>
-          <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl leading-none tracking-wide text-foreground" data-testid="text-explore-title">
-            EXPLORE RECIPES
-          </h1>
-          <p className="text-sm sm:text-base text-muted-foreground mt-3 max-w-xl mx-auto leading-relaxed">
-            Search thousands of recipes using your crew's filters. Match by cuisine, format, allergies, time, and what's in the fridge.
-          </p>
-        </div>
-      </header>
+      <HeroHeader title="Explore Recipes" subtitle="Search thousands of recipes using your crew's filters" />
 
       <main className="max-w-[1200px] mx-auto px-4 sm:px-6 py-8">
         <form onSubmit={handleSearch} data-testid="form-explore-search">

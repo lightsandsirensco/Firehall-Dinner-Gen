@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Flame, Clock, Trophy, Check, Vote as VoteIcon, Lock, Timer, Users, ChevronRight } from "lucide-react";
+import { HeroHeader } from "@/components/hero-header";
 import type { HallVoteResponse, HallVoteOption } from "@shared/schema";
 
 function VoteBar({ option, totalVotes, isWinner, isUserVote }: {
@@ -192,7 +193,7 @@ export default function VotePage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <header className="bg-background border-b border-border/40">
+      <header className="bg-background/95 backdrop-blur-sm border-b border-border/40 sticky top-0 z-50">
         <div className="max-w-lg mx-auto px-4 py-3">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
@@ -207,6 +208,8 @@ export default function VotePage() {
           </div>
         </div>
       </header>
+
+      <HeroHeader title="Hall Vote" subtitle="Vote on tonight's crew meal" />
 
       <main className="max-w-lg mx-auto px-4 py-6 space-y-5">
         <div className="text-center space-y-2">

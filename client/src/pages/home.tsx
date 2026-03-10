@@ -16,7 +16,7 @@ import { trackEvent, trackMealGenerated, trackEmailModalOpened } from "@/lib/ana
 import type { ClientRecipeResponse } from "@shared/schema";
 import { Flame, Vote, Heart } from "lucide-react";
 import { Link } from "wouter";
-import heroTruckImg from "@assets/truck1_1773178049785.jpg";
+import { HeroHeader } from "@/components/hero-header";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
@@ -473,45 +473,7 @@ export default function Home() {
         </div>
       </header>
 
-      <section
-        className="relative w-full h-[240px] sm:h-[360px] flex items-center justify-center overflow-hidden"
-        style={{ backgroundImage: `url(${heroTruckImg})`, backgroundSize: "cover", backgroundPosition: "center" }}
-        data-testid="hero-header"
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/55 to-black/70" />
-        <div className="relative z-10 flex flex-col items-center justify-center text-center px-5 gap-3">
-          <h1
-            className="font-heading text-4xl sm:text-5xl md:text-6xl leading-none tracking-wide text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]"
-            data-testid="text-app-title"
-          >
-            Firehall Meals
-          </h1>
-          <p
-            className="text-white/70 text-xs sm:text-sm uppercase tracking-[0.2em] font-medium"
-            data-testid="text-app-tagline"
-          >
-            Firefighter Built. Firehall Tested.
-          </p>
-          <p
-            className="text-[#d4d4d4] text-base sm:text-lg max-w-md mt-1"
-            data-testid="text-app-subtitle"
-          >
-            Generate real meals for your crew in seconds
-          </p>
-          <p className="text-[10px] text-white/35 mt-2 font-normal">
-            Powered by{" "}
-            <a
-              href="https://lightsandsirensco.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white/55 transition-colors duration-200"
-              data-testid="link-header-attribution"
-            >
-              Lights &amp; Sirens Co.
-            </a>
-          </p>
-        </div>
-      </section>
+      <HeroHeader title="Firehall Meals" subtitle="Generate real meals for your crew in seconds" />
 
       <main className="max-w-[1400px] mx-auto px-4 sm:px-6 py-8">
         <div className="flex flex-col lg:flex-row gap-8">

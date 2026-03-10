@@ -13,6 +13,7 @@ import type { PizzaResponse, ClientRecipeResponse, ClientIngredient } from "@sha
 import { Flame, Heart } from "lucide-react";
 import { Link } from "wouter";
 import { Badge } from "@/components/ui/badge";
+import { HeroHeader } from "@/components/hero-header";
 
 export default function PizzaNight() {
   const [recipe, setRecipe] = useState<PizzaResponse | null>(null);
@@ -167,31 +168,10 @@ export default function PizzaNight() {
               </Link>
             </div>
           </nav>
-          <div className="text-center py-5 pb-6">
-            <h1 className="font-heading text-5xl sm:text-6xl leading-none tracking-wide text-foreground" data-testid="pizza-text-app-title">
-              PIZZA NIGHT
-            </h1>
-            <p className="font-heading text-xl sm:text-2xl tracking-wide text-primary mt-1.5" data-testid="pizza-text-app-subtitle">
-              Firefighter Built. Firehall Tested.
-            </p>
-            <p className="text-sm text-muted-foreground mt-2 max-w-lg mx-auto leading-relaxed" data-testid="pizza-text-app-description">
-              Crew meal ideas built for the fire service. Generate dinners, pizza nights, and crew meals based on time, crew size, and what's in the fridge.
-            </p>
-            <p className="text-[10px] text-muted-foreground/40 mt-2 font-normal">
-              Powered by{" "}
-              <a
-                href="https://lightsandsirensco.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-muted-foreground/60 transition-colors"
-                data-testid="pizza-link-header-attribution"
-              >
-                Lights &amp; Sirens Co.
-              </a>
-            </p>
-          </div>
         </div>
       </header>
+
+      <HeroHeader title="Pizza Night" subtitle="Build crew-ready pizza from scratch or premade dough" />
 
       <main className="max-w-[1400px] mx-auto px-4 py-6">
         <div className="flex flex-col lg:flex-row gap-6">
