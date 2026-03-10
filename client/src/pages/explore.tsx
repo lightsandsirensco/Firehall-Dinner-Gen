@@ -1186,15 +1186,10 @@ export default function ExplorePage() {
 
         {!searchLoading && searchData && submitted && (
           <>
-            <div className="flex items-center justify-between gap-3 mb-5">
+            <div className="mb-5">
               <p className="text-sm text-muted-foreground" data-testid="text-result-count">
                 {searchData.totalResults > 0 ? `${searchData.results.length} recipes found` : "No recipes found"}
               </p>
-              {searchData._source && searchData._source !== "none" && (
-                <Badge variant="outline" className="text-[10px]">
-                  {searchData._source === "firehall" ? "Firehall AI" : "Spoonacular"}
-                </Badge>
-              )}
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5" data-testid="explore-results-grid">
               {searchData.results.map((result) => (
