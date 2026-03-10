@@ -1,7 +1,8 @@
 import { useState, useCallback, useEffect, useMemo, useRef } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { Flame, Search, Clock, Users, ChevronLeft, X, Loader2, Heart, ShieldAlert, Globe, UtensilsCrossed, ChefHat, Package, Leaf, Printer, Mail, List, BookmarkPlus, Sparkles, SlidersHorizontal, Utensils, TrendingUp } from "lucide-react";
+import { Search, Clock, Users, ChevronLeft, X, Loader2, Heart, ShieldAlert, Globe, UtensilsCrossed, ChefHat, Package, Leaf, Printer, Mail, List, BookmarkPlus, Sparkles, SlidersHorizontal, Utensils, TrendingUp, Flame } from "lucide-react";
 import { HeroHeader } from "@/components/hero-header";
+import { SiteHeader } from "@/components/site-header";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -763,7 +764,7 @@ export default function ExplorePage() {
   if (selectedRecipeId && recipeDetail) {
     return (
       <div className="min-h-screen bg-background">
-        <ExploreNav favCount={favCount} />
+        <SiteHeader activePage="explore" favCount={favCount} />
         <main className="max-w-[900px] mx-auto px-4 sm:px-6 py-8">
           <Button variant="ghost" className="mb-6 gap-1.5" onClick={() => setSelectedRecipeId(null)} data-testid="button-back-to-results">
             <ChevronLeft className="w-4 h-4" />
@@ -779,7 +780,7 @@ export default function ExplorePage() {
   if (selectedRecipeId && (detailLoading || detailError)) {
     return (
       <div className="min-h-screen bg-background">
-        <ExploreNav favCount={favCount} />
+        <SiteHeader activePage="explore" favCount={favCount} />
         <main className="max-w-[900px] mx-auto px-4 sm:px-6 py-8">
           <Button variant="ghost" className="mb-6 gap-1.5" onClick={() => setSelectedRecipeId(null)} data-testid="button-back-to-results">
             <ChevronLeft className="w-4 h-4" />
@@ -805,7 +806,7 @@ export default function ExplorePage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <ExploreNav favCount={favCount} />
+      <SiteHeader activePage="explore" favCount={favCount} />
 
       <HeroHeader title="Explore Recipes" subtitle="Search thousands of recipes using your crew's filters" compact />
 
@@ -1238,53 +1239,6 @@ export default function ExplorePage() {
   );
 }
 
-function ExploreNav({ favCount }: { favCount: number }) {
-  return (
-    <div className="bg-background/95 backdrop-blur-sm border-b border-border/30 sticky top-0 z-50">
-      <div className="max-w-[1400px] mx-auto px-4">
-        <nav className="flex items-center justify-between gap-3 py-3" data-testid="nav-links">
-          <div className="flex items-center gap-2.5">
-            <Flame className="w-7 h-7 flex-shrink-0" style={{ color: "#C62828" }} />
-            <span className="font-heading text-lg leading-none tracking-wide text-foreground hidden sm:inline">FIREHALL MEALS</span>
-          </div>
-          <div className="flex items-center gap-0.5 flex-wrap">
-            <Link href="/" className="text-xs uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium px-3 py-1.5 rounded-md hover-elevate" data-testid="nav-link-meals">
-              Meal Generator
-            </Link>
-            <Link href="/pizza" className="text-xs uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium px-3 py-1.5 rounded-md hover-elevate" data-testid="nav-link-pizza">
-              Pizza Night
-            </Link>
-            <span
-              className="text-xs uppercase tracking-wider text-foreground font-semibold px-3 py-1.5 rounded-md bg-primary/10 border border-primary/20"
-              data-testid="nav-link-explore-active"
-            >
-              Explore
-            </span>
-            <Link href="/favorites" className="text-xs uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium px-3 py-1.5 rounded-md hover-elevate flex items-center gap-1.5" data-testid="nav-link-favorites">
-              <Heart className="w-3 h-3" />
-              <span className="hidden sm:inline">Favorites</span>
-              {favCount > 0 && (
-                <Badge variant="secondary" className="text-[9px] px-1.5 py-0 h-4 min-w-[16px] leading-none">{favCount}</Badge>
-              )}
-            </Link>
-            <span className="text-border/50 text-xs mx-1 hidden sm:inline">·</span>
-            <a
-              href="https://www.lightsandsirensco.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[11px] uppercase tracking-wider text-muted-foreground/60 hover:text-muted-foreground transition-colors duration-200 font-normal px-2 py-1.5 flex items-center gap-1.5"
-              data-testid="nav-link-brand"
-            >
-              <Flame className="w-3 h-3" style={{ color: "#C62828" }} />
-              <span className="hidden sm:inline">Lights & Sirens Co.</span>
-              <span className="sm:hidden">L&S Co.</span>
-            </a>
-          </div>
-        </nav>
-      </div>
-    </div>
-  );
-}
 
 function RecipeDetailView({ recipe, crewSize }: { recipe: RecipeDetail; crewSize: number }) {
   const [saved, setSaved] = useState(() => {

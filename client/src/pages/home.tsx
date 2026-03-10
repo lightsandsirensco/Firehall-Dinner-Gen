@@ -14,9 +14,9 @@ import { buildFilterKey, putCached, addRecentSignature, getRecentSignatures } fr
 import { prefetchMeals, consumePrefetched } from "@/lib/prefetch";
 import { trackEvent, trackMealGenerated, trackEmailModalOpened } from "@/lib/analytics";
 import type { ClientRecipeResponse } from "@shared/schema";
-import { Flame, Vote, Heart } from "lucide-react";
-import { Link } from "wouter";
+import { Vote, Flame } from "lucide-react";
 import { HeroHeader } from "@/components/hero-header";
+import { SiteHeader } from "@/components/site-header";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
@@ -439,51 +439,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background">
-      <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border/30">
-        <div className="max-w-[1400px] mx-auto px-4">
-          <nav className="flex items-center justify-between gap-3 py-3" data-testid="nav-links">
-            <div className="flex items-center gap-2.5">
-              <Flame className="w-7 h-7" style={{ color: "#C62828" }} />
-              <span className="font-heading text-lg leading-none tracking-wide text-foreground hidden sm:inline">FIREHALL MEALS</span>
-            </div>
-            <div className="flex items-center gap-0.5 flex-wrap">
-              <span
-                className="text-xs uppercase tracking-wider text-foreground font-semibold px-3 py-1.5 rounded-md bg-primary/10 border border-primary/20"
-                data-testid="nav-link-meals-active"
-              >
-                Meal Generator
-              </span>
-              <Link href="/pizza" className="text-xs uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium px-3 py-1.5 rounded-md hover-elevate" data-testid="nav-link-pizza">
-                Pizza Night
-              </Link>
-              <Link href="/explore" className="text-xs uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium px-3 py-1.5 rounded-md hover-elevate" data-testid="nav-link-explore">
-                Explore
-              </Link>
-              <Link href="/favorites" className="text-xs uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium px-3 py-1.5 rounded-md hover-elevate flex items-center gap-1.5" data-testid="nav-link-favorites">
-                <Heart className="w-3 h-3" />
-                <span className="hidden sm:inline">Favorites</span>
-                {favCount > 0 && (
-                  <Badge variant="secondary" className="text-[9px] px-1.5 py-0 h-4 min-w-[16px] leading-none" data-testid="badge-fav-count">
-                    {favCount}
-                  </Badge>
-                )}
-              </Link>
-              <span className="text-border/50 text-xs mx-1 hidden sm:inline">·</span>
-              <a
-                href="https://www.lightsandsirensco.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[11px] uppercase tracking-wider text-muted-foreground/60 hover:text-muted-foreground transition-colors duration-200 font-normal px-2 py-1.5 flex items-center gap-1.5"
-                data-testid="nav-link-brand"
-              >
-                <Flame className="w-3 h-3" style={{ color: "#C62828" }} />
-                <span className="hidden sm:inline">Lights & Sirens Co.</span>
-                <span className="sm:hidden">L&S Co.</span>
-              </a>
-            </div>
-          </nav>
-        </div>
-      </header>
+      <SiteHeader activePage="generator" favCount={favCount} />
 
       <HeroHeader
         title="Firehall Meals"

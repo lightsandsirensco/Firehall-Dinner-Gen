@@ -1,13 +1,14 @@
 import { useState, useEffect, useCallback } from "react";
-import { Link } from "wouter";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { RecipeCard } from "@/components/recipe-card";
 import { getSavedMeals, removeMeal, type SavedMeal } from "@/lib/saved-meals";
-import { Flame, Heart, Trash2, Eye, Clock, Beef, ChevronLeft } from "lucide-react";
+import { Heart, Trash2, Eye, Clock, Beef, ChevronLeft } from "lucide-react";
+import { Link } from "wouter";
 import { HeroHeader } from "@/components/hero-header";
+import { SiteHeader } from "@/components/site-header";
 
 export default function FavoritesPage() {
   const [meals, setMeals] = useState<SavedMeal[]>([]);
@@ -36,46 +37,7 @@ export default function FavoritesPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border/30">
-        <div className="max-w-[1400px] mx-auto px-4">
-          <nav className="flex items-center justify-between gap-3 py-3" data-testid="nav-links">
-            <div className="flex items-center gap-2.5">
-              <Flame className="w-7 h-7" style={{ color: "#C62828" }} />
-              <span className="font-heading text-lg leading-none tracking-wide text-foreground hidden sm:inline">FIREHALL MEALS</span>
-            </div>
-            <div className="flex items-center gap-0.5 flex-wrap">
-              <Link href="/" className="text-xs uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium px-3 py-1.5 rounded-md hover-elevate" data-testid="nav-link-meals">
-                Meal Generator
-              </Link>
-              <Link href="/pizza" className="text-xs uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium px-3 py-1.5 rounded-md hover-elevate" data-testid="nav-link-pizza">
-                Pizza Night
-              </Link>
-              <Link href="/explore" className="text-xs uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium px-3 py-1.5 rounded-md hover-elevate" data-testid="nav-link-explore">
-                Explore
-              </Link>
-              <span
-                className="text-xs uppercase tracking-wider text-foreground font-semibold px-3 py-1.5 rounded-md bg-primary/10 border border-primary/20 flex items-center gap-1.5"
-                data-testid="nav-link-favorites-active"
-              >
-                <Heart className="w-3 h-3" />
-                <span className="hidden sm:inline">Favorites</span>
-              </span>
-              <span className="text-border/50 text-xs mx-1 hidden sm:inline">·</span>
-              <a
-                href="https://www.lightsandsirensco.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[11px] uppercase tracking-wider text-muted-foreground/60 hover:text-muted-foreground transition-colors duration-200 font-normal px-2 py-1.5 flex items-center gap-1.5"
-                data-testid="nav-link-brand"
-              >
-                <Flame className="w-3 h-3" style={{ color: "#C62828" }} />
-                <span className="hidden sm:inline">Lights & Sirens Co.</span>
-                <span className="sm:hidden">L&S Co.</span>
-              </a>
-            </div>
-          </nav>
-        </div>
-      </header>
+      <SiteHeader activePage="favorites" />
 
       <HeroHeader title="Hall Favorites" subtitle={meals.length === 0 ? "Save your best crew meals here" : `${meals.length} saved ${meals.length === 1 ? "meal" : "meals"}`} />
 
