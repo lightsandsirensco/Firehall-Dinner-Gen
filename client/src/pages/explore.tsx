@@ -442,6 +442,61 @@ function buildSearchParams(filters: ExploreFilters): URLSearchParams {
   return params;
 }
 
+interface FirehallClassic {
+  title: string;
+  searchQuery: string;
+  protein: string;
+  style: string;
+  emoji: string;
+}
+
+const ALL_FIREHALL_CLASSICS: FirehallClassic[] = [
+  { title: "Firehall Chili", searchQuery: "beef chili", protein: "Beef", style: "One-Pot", emoji: "🌶️" },
+  { title: "Smash Burgers + Fries", searchQuery: "smash burgers with fries", protein: "Beef", style: "Grill", emoji: "🍔" },
+  { title: "Taco Night", searchQuery: "ground beef tacos", protein: "Beef", style: "Tacos", emoji: "🌮" },
+  { title: "BBQ Chicken", searchQuery: "bbq chicken", protein: "Chicken", style: "BBQ", emoji: "🍗" },
+  { title: "Cajun Chicken Pasta", searchQuery: "cajun chicken pasta", protein: "Chicken", style: "Pasta", emoji: "🍝" },
+  { title: "Pulled Pork Sandwiches", searchQuery: "pulled pork sandwich", protein: "Pork", style: "Sandwich", emoji: "🥪" },
+  { title: "Meatball Subs", searchQuery: "meatball sub sandwich", protein: "Beef", style: "Sandwich", emoji: "🥖" },
+  { title: "Breakfast for Dinner", searchQuery: "breakfast for dinner eggs bacon", protein: "Mixed", style: "Breakfast", emoji: "🍳" },
+  { title: "Loaded Nachos", searchQuery: "loaded nachos with ground beef", protein: "Beef", style: "Snack", emoji: "🧀" },
+  { title: "Sheet Pan Sausage & Veg", searchQuery: "sheet pan sausage vegetables", protein: "Pork", style: "Sheet Pan", emoji: "🥘" },
+  { title: "Mac & Cheese with Protein", searchQuery: "mac and cheese with chicken", protein: "Chicken", style: "Comfort", emoji: "🧈" },
+  { title: "Chicken Parm Pasta", searchQuery: "chicken parmesan pasta", protein: "Chicken", style: "Pasta", emoji: "🍝" },
+];
+
+function getRotatedClassics(count: number = 8): FirehallClassic[] {
+  const dayOfYear = Math.floor((Date.now() - new Date(new Date().getFullYear(), 0, 0).getTime()) / 86400000);
+  const seed = dayOfYear;
+  const shuffled = [...ALL_FIREHALL_CLASSICS];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = ((seed * (i + 7)) % (i + 1) + i + 1) % (i + 1);
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  const selected: FirehallClassic[] = [];
+  const proteinCounts = new Map<string, number>();
+  const usedStyles = new Set<string>();
+  const MAX_PER_PROTEIN = 2;
+  for (const c of shuffled) {
+    if (selected.length >= count) break;
+    const pCount = proteinCounts.get(c.protein) || 0;
+    if (pCount >= MAX_PER_PROTEIN) continue;
+    if (usedStyles.has(c.style)) continue;
+    selected.push(c);
+    proteinCounts.set(c.protein, pCount + 1);
+    usedStyles.add(c.style);
+  }
+  for (const c of shuffled) {
+    if (selected.length >= count) break;
+    if (selected.includes(c)) continue;
+    const pCount = proteinCounts.get(c.protein) || 0;
+    if (pCount >= MAX_PER_PROTEIN + 1) continue;
+    selected.push(c);
+    proteinCounts.set(c.protein, pCount + 1);
+  }
+  return selected;
+}
+
 function MultiToggle({ options, selected, onChange, testIdPrefix }: {
   options: string[];
   selected: string[];
@@ -543,6 +598,8 @@ export default function ExplorePage() {
       localStorage.setItem("explore_filters", JSON.stringify(filters));
     } catch {}
   }, [filters]);
+
+  const classicsToShow = useMemo(() => getRotatedClassics(8), []);
 
   const update = useCallback(<K extends keyof ExploreFilters>(key: K, value: ExploreFilters[K]) => {
     setFilters(prev => ({ ...prev, [key]: value }));
@@ -952,6 +1009,39 @@ export default function ExplorePage() {
             )}
           </div>
         </form>
+
+        {!submitted && (
+          <div className="mb-10" data-testid="section-firehall-classics">
+            <div className="flex items-center gap-2 mb-1">
+              <span className="text-xl" role="img" aria-label="fire">🔥</span>
+              <h2 className="font-heading text-lg tracking-wider uppercase">Firehall Classics</h2>
+            </div>
+            <p className="text-sm text-muted-foreground mb-5">Crowd favourites built for the hall.</p>
+            <div className="flex flex-nowrap gap-3 overflow-x-auto pb-3 snap-x snap-mandatory scrollbar-thin md:grid md:grid-cols-4 md:overflow-visible md:pb-0">
+              {classicsToShow.map((classic, i) => (
+                <button
+                  key={classic.title}
+                  data-testid={`classic-item-${i}`}
+                  onClick={() => {
+                    const updated = { ...filters, freeText: classic.searchQuery };
+                    setFilters(updated);
+                    setSearchParams(buildSearchParams(updated));
+                    setSubmitted(true);
+                    setSelectedRecipeId(null);
+                  }}
+                  className="snap-start shrink-0 w-[160px] min-w-[160px] md:w-auto md:min-w-0 md:shrink group relative overflow-hidden rounded-xl border border-border/30 bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm p-4 text-left transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1 active:translate-y-0"
+                >
+                  <span className="text-2xl block mb-2">{classic.emoji}</span>
+                  <span className="text-sm font-semibold leading-tight block mb-1.5 group-hover:text-primary transition-colors">{classic.title}</span>
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-[10px] text-muted-foreground bg-primary/10 px-1.5 py-0.5 rounded-full font-medium">{classic.protein}</span>
+                    <span className="text-[10px] text-muted-foreground">{classic.style}</span>
+                  </div>
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
 
         {!submitted && trendingData && trendingData.trending.length > 0 && (
           <div className="mb-8" data-testid="section-trending">
