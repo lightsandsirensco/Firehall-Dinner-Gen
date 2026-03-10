@@ -838,28 +838,28 @@ export default function ExplorePage() {
 function ExploreNav({ favCount }: { favCount: number }) {
   return (
     <div className="bg-background/95 backdrop-blur-sm border-b border-border/30 sticky top-0 z-50">
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
+      <div className="max-w-[1400px] mx-auto px-4">
         <nav className="flex items-center justify-between gap-3 py-3" data-testid="nav-links">
           <div className="flex items-center gap-2.5">
             <Flame className="w-7 h-7 flex-shrink-0" style={{ color: "#C62828" }} />
             <span className="font-heading text-lg leading-none tracking-wide text-foreground hidden sm:inline">FIREHALL MEALS</span>
           </div>
-          <div className="flex items-center gap-0.5 sm:gap-1 flex-wrap">
-            <Link href="/" className="text-xs uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors font-medium px-2 sm:px-3 py-1.5" data-testid="nav-link-meals">
-              Generator
+          <div className="flex items-center gap-0.5 flex-wrap">
+            <Link href="/" className="text-xs uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium px-3 py-1.5 rounded-md hover-elevate" data-testid="nav-link-meals">
+              Meal Generator
             </Link>
-            <span className="text-muted-foreground/20 text-xs">|</span>
-            <Link href="/pizza" className="text-xs uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors font-medium px-2 sm:px-3 py-1.5" data-testid="nav-link-pizza">
-              Pizza
+            <Link href="/pizza" className="text-xs uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium px-3 py-1.5 rounded-md hover-elevate" data-testid="nav-link-pizza">
+              Pizza Night
             </Link>
-            <span className="text-muted-foreground/20 text-xs">|</span>
-            <span className="text-xs uppercase tracking-wider text-primary font-semibold px-2 sm:px-3 py-1.5" data-testid="nav-link-explore-active">
+            <span
+              className="text-xs uppercase tracking-wider text-foreground font-semibold px-3 py-1.5 rounded-md bg-primary/10 border border-primary/20"
+              data-testid="nav-link-explore-active"
+            >
               Explore
             </span>
-            <span className="text-muted-foreground/20 text-xs">|</span>
-            <Link href="/favorites" className="text-xs uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors font-medium px-2 sm:px-3 py-1.5 flex items-center gap-1" data-testid="nav-link-favorites">
+            <Link href="/favorites" className="text-xs uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium px-3 py-1.5 rounded-md hover-elevate flex items-center gap-1.5" data-testid="nav-link-favorites">
               <Heart className="w-3 h-3" />
-              Favorites
+              <span className="hidden sm:inline">Favorites</span>
               {favCount > 0 && (
                 <Badge variant="secondary" className="text-[9px] px-1.5 py-0 h-4 min-w-[16px] leading-none">{favCount}</Badge>
               )}

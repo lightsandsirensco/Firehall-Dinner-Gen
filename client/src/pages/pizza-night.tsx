@@ -137,29 +137,29 @@ export default function PizzaNight() {
 
   return (
     <div className="min-h-screen bg-background">
-      <header className="bg-background border-b border-border/40">
+      <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border/30">
         <div className="max-w-[1400px] mx-auto px-4">
-          <nav className="flex items-center justify-between py-2" data-testid="nav-links">
-            <div className="flex items-center gap-2">
+          <nav className="flex items-center justify-between gap-3 py-3" data-testid="nav-links">
+            <div className="flex items-center gap-2.5">
               <Flame className="w-7 h-7" style={{ color: "#C62828" }} />
-              <span className="font-heading text-lg leading-none tracking-wide text-foreground">FIREHALL MEALS</span>
+              <span className="font-heading text-lg leading-none tracking-wide text-foreground hidden sm:inline">FIREHALL MEALS</span>
             </div>
-            <div className="flex items-center gap-1">
-              <Link href="/" className="text-xs uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors font-medium px-3 py-1.5" data-testid="nav-link-meals">
+            <div className="flex items-center gap-0.5 flex-wrap">
+              <Link href="/" className="text-xs uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium px-3 py-1.5 rounded-md hover-elevate" data-testid="nav-link-meals">
                 Meal Generator
               </Link>
-              <span className="text-muted-foreground/30 text-xs">|</span>
-              <span className="text-xs uppercase tracking-wider text-foreground font-medium px-3 py-1.5" data-testid="nav-link-pizza-active">
+              <span
+                className="text-xs uppercase tracking-wider text-foreground font-semibold px-3 py-1.5 rounded-md bg-primary/10 border border-primary/20"
+                data-testid="nav-link-pizza-active"
+              >
                 Pizza Night
               </span>
-              <span className="text-muted-foreground/30 text-xs">|</span>
-              <Link href="/explore" className="text-xs uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors font-medium px-3 py-1.5" data-testid="nav-link-explore">
+              <Link href="/explore" className="text-xs uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium px-3 py-1.5 rounded-md hover-elevate" data-testid="nav-link-explore">
                 Explore
               </Link>
-              <span className="text-muted-foreground/30 text-xs">|</span>
-              <Link href="/favorites" className="text-xs uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors font-medium px-3 py-1.5 flex items-center gap-1" data-testid="nav-link-favorites">
+              <Link href="/favorites" className="text-xs uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium px-3 py-1.5 rounded-md hover-elevate flex items-center gap-1.5" data-testid="nav-link-favorites">
                 <Heart className="w-3 h-3" />
-                Favorites
+                <span className="hidden sm:inline">Favorites</span>
                 {favCount > 0 && (
                   <Badge variant="secondary" className="text-[9px] px-1.5 py-0 h-4 min-w-[16px] leading-none" data-testid="badge-fav-count">
                     {favCount}
