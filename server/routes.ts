@@ -1496,94 +1496,164 @@ export async function registerRoutes(
       if (intolerances) safetyFilters.intolerances = intolerances;
       if (excludeIngredients) safetyFilters.excludeIngredients = excludeIngredients;
 
-      const queries = [
-        { q: "chicken dinner", cuisine: "american" },
-        { q: "beef stew", cuisine: "american" },
-        { q: "tacos", cuisine: "mexican" },
-        { q: "pasta", cuisine: "italian" },
-        { q: "stir fry", cuisine: "chinese,japanese,korean,thai,vietnamese" },
-        { q: "grilled meat", cuisine: "american" },
-        { q: "mediterranean bowl", cuisine: "mediterranean,greek" },
-        { q: "cajun", cuisine: "cajun" },
-        { q: "burger", cuisine: "" },
-        { q: "sheet pan dinner", cuisine: "" },
-        { q: "one pot meal", cuisine: "" },
-        { q: "high protein meal", cuisine: "" },
-        { q: "pork dinner", cuisine: "" },
-        { q: "seafood", cuisine: "" },
-        { q: "turkey meal", cuisine: "" },
-        { q: "vegetarian dinner", cuisine: "" },
-        { q: "wrap sandwich", cuisine: "" },
-        { q: "skillet dinner", cuisine: "" },
-        { q: "comfort food", cuisine: "" },
-        { q: "bbq", cuisine: "" },
+      const pools: { name: string; queries: { q: string; cuisine?: string }[] }[] = [
+        {
+          name: "chicken",
+          queries: [
+            { q: "chicken dinner" },
+            { q: "chicken bowl", cuisine: "mediterranean,greek" },
+            { q: "chicken stir fry", cuisine: "chinese,thai,korean" },
+            { q: "grilled chicken" },
+            { q: "chicken sheet pan" },
+          ],
+        },
+        {
+          name: "beef",
+          queries: [
+            { q: "beef dinner" },
+            { q: "beef stew" },
+            { q: "burger" },
+            { q: "steak dinner" },
+            { q: "beef tacos", cuisine: "mexican" },
+          ],
+        },
+        {
+          name: "pork",
+          queries: [
+            { q: "pork dinner" },
+            { q: "pork chops" },
+            { q: "bbq pork" },
+            { q: "pulled pork" },
+            { q: "pork tenderloin" },
+          ],
+        },
+        {
+          name: "vegetarian",
+          queries: [
+            { q: "vegetarian dinner" },
+            { q: "vegetable stir fry" },
+            { q: "vegetarian pasta", cuisine: "italian" },
+            { q: "bean bowl", cuisine: "mexican" },
+            { q: "tofu dinner" },
+          ],
+        },
+        {
+          name: "comfort",
+          queries: [
+            { q: "comfort food dinner" },
+            { q: "mac and cheese" },
+            { q: "casserole" },
+            { q: "one pot meal" },
+            { q: "slow cooker dinner" },
+          ],
+        },
+        {
+          name: "healthy",
+          queries: [
+            { q: "high protein meal" },
+            { q: "healthy dinner" },
+            { q: "lean protein meal" },
+            { q: "quinoa bowl" },
+            { q: "grilled fish" },
+          ],
+        },
+        {
+          name: "international",
+          queries: [
+            { q: "cajun dinner", cuisine: "cajun" },
+            { q: "tacos", cuisine: "mexican" },
+            { q: "pasta", cuisine: "italian" },
+            { q: "curry", cuisine: "indian,thai" },
+            { q: "mediterranean bowl", cuisine: "mediterranean,greek" },
+            { q: "korean dinner", cuisine: "korean" },
+            { q: "japanese dinner", cuisine: "japanese" },
+          ],
+        },
       ];
 
-      const shuffled = queries.sort(() => Math.random() - 0.5);
-      const selected = shuffled.slice(0, 8);
+      const poolResults = new Map<string, any[]>();
 
-      const fetches = selected.map(s =>
-        searchRecipes(s.q, { cuisine: s.cuisine || undefined, number: 4, sort: "random", ...safetyFilters })
-          .catch(() => ({ results: [], totalResults: 0 } as { results: any[]; totalResults: number }))
-      );
+      const poolEntries = pools.map(pool => ({
+        pool,
+        query: pool.queries[Math.floor(Math.random() * pool.queries.length)],
+      }));
 
-      const batchResults = await Promise.all(fetches);
+      const batch1 = poolEntries.slice(0, 4);
+      const batch2 = poolEntries.slice(4);
 
-      const allRecipes: any[] = [];
-      const seenTitles = new Set<string>();
+      const fetchBatch = async (entries: typeof poolEntries) => {
+        await Promise.all(entries.map(({ pool, query }) =>
+          searchRecipes(query.q, {
+            cuisine: query.cuisine || undefined,
+            number: 6,
+            sort: "random",
+            ...safetyFilters,
+          })
+            .then(result => {
+              const cleaned = result.results
+                .filter((r: any) => !seenIds.has(r.id))
+                .map((r: any) => ({
+                  id: r.id,
+                  title: r.title,
+                  image: r.image || "",
+                  readyInMinutes: r.readyInMinutes || 0,
+                  servings: r.servings || 0,
+                  summary: (r.summary || "").replace(/<[^>]*>/g, "").substring(0, 200),
+                  cuisines: r.cuisines || [],
+                  diets: r.diets || [],
+                  _pool: pool.name,
+                }));
+              poolResults.set(pool.name, cleaned);
+            })
+            .catch(() => {
+              poolResults.set(pool.name, []);
+            })
+        ));
+      };
 
-      for (const batch of batchResults) {
-        for (const r of batch.results) {
-          if (seenIds.has(r.id)) continue;
-          const titleKey = r.title.toLowerCase().replace(/[^a-z]/g, "");
-          if (seenTitles.has(titleKey)) continue;
-          seenTitles.add(titleKey);
-          allRecipes.push({
-            id: r.id,
-            title: r.title,
-            image: r.image || "",
-            readyInMinutes: r.readyInMinutes || 0,
-            servings: r.servings || 0,
-            summary: (r.summary || "").replace(/<[^>]*>/g, "").substring(0, 200),
-            cuisines: r.cuisines || [],
-            diets: r.diets || [],
-          });
-        }
-      }
+      await fetchBatch(batch1);
+      await new Promise(resolve => setTimeout(resolve, 1100));
+      await fetchBatch(batch2);
 
       const diverse: any[] = [];
-      const usedCuisines = new Map<string, number>();
+      const seenTitles = new Set<string>();
       const usedTitleWords = new Map<string, number>();
 
-      const remaining = [...allRecipes];
-      while (diverse.length < 20 && remaining.length > 0) {
-        let bestIdx = 0;
-        let bestScore = Infinity;
-        for (let i = 0; i < remaining.length; i++) {
-          const r = remaining[i];
-          const mainCuisine = (r.cuisines?.[0] || "other").toLowerCase();
+      const pickFromPool = (poolName: string, count: number) => {
+        const candidates = poolResults.get(poolName) || [];
+        const shuffledCandidates = [...candidates].sort(() => Math.random() - 0.5);
+        let picked = 0;
+        for (const r of shuffledCandidates) {
+          if (picked >= count) break;
+          const titleKey = r.title.toLowerCase().replace(/[^a-z]/g, "");
+          if (seenTitles.has(titleKey)) continue;
           const titleWords = r.title.toLowerCase().split(/\s+/).filter((w: string) => w.length > 3);
-          const cuisineCount = usedCuisines.get(mainCuisine) || 0;
           const wordOverlap = titleWords.reduce((sum: number, w: string) => sum + (usedTitleWords.get(w) || 0), 0);
-          const score = cuisineCount * 3 + wordOverlap;
-          if (score < bestScore) {
-            bestScore = score;
-            bestIdx = i;
+          if (wordOverlap > 2 && shuffledCandidates.length > picked + 1) continue;
+          seenTitles.add(titleKey);
+          for (const w of titleWords) {
+            usedTitleWords.set(w, (usedTitleWords.get(w) || 0) + 1);
           }
+          diverse.push(r);
+          picked++;
         }
-        const picked = remaining.splice(bestIdx, 1)[0];
-        diverse.push(picked);
-        const mc = (picked.cuisines?.[0] || "other").toLowerCase();
-        usedCuisines.set(mc, (usedCuisines.get(mc) || 0) + 1);
-        const tw = picked.title.toLowerCase().split(/\s+/).filter((w: string) => w.length > 3);
-        for (const w of tw) {
-          usedTitleWords.set(w, (usedTitleWords.get(w) || 0) + 1);
-        }
+      };
+
+      const poolOrder = pools.map(p => p.name).sort(() => Math.random() - 0.5);
+      for (const poolName of poolOrder) {
+        pickFromPool(poolName, 2);
       }
+
+      for (const poolName of poolOrder) {
+        if (diverse.length >= 20) break;
+        pickFromPool(poolName, 2);
+      }
+
+      diverse.sort(() => Math.random() - 0.5);
 
       addToDiscoverMemory(diverse.map(r => r.id));
 
-      log(`[explore] Discover feed: ${diverse.length} diverse recipes from ${selected.length} category queries | memory=${discoverSeenIds.length}`, "spoonacular");
+      log(`[explore] Discover feed: ${diverse.length} diverse recipes from ${pools.length} pools | memory=${discoverSeenIds.length}`, "spoonacular");
       return res.json({
         results: diverse,
         totalResults: diverse.length,
