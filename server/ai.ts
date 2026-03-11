@@ -2,6 +2,7 @@ import OpenAI from "openai";
 import type { TemplateRow, GenerateRequest, GenerateResponse, ProteinSafetyItem, RecipeTags } from "@shared/schema";
 import { log } from "./index";
 import { getForbiddenProteinsText, validateProteinCompliance, validateTitleConsistency, validateStructure, validateVegVariety, commitVegBase, getRecentVegBases } from "./protein-validator";
+import { validateFirehouseFlavor } from "./validateRecipe";
 import { type VarietyConstraints, buildVarietyPromptBlock, buildHealthyPromptBlock } from "./variety-memory";
 import { type StructureType, STRUCTURE_DISPLAY } from "./structure-variety";
 import { buildAllergenAvoidList } from "./allergens";
@@ -692,6 +693,14 @@ function runValidationGates(
     const v4 = validateVegVariety(recipe);
     if (!v4.ok) reasons.push(...v4.reasons);
     else vegBase = v4.base;
+  }
+
+  const v5 = validateFirehouseFlavor(recipe);
+  const criticalFlavorIssues = v5.issues.filter(i =>
+    i.startsWith("firehouse_missing_sauce") || i.startsWith("firehouse_missing_technique")
+  );
+  if (criticalFlavorIssues.length > 0) {
+    reasons.push(...criticalFlavorIssues);
   }
 
   return { ok: reasons.length === 0, reasons, vegBase };

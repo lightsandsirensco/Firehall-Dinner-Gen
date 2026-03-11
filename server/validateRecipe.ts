@@ -755,6 +755,147 @@ function filterRiceFromIngredients(ings: string): boolean {
   return /\b(rice)\b/i.test(ings) && !/rice vinegar|rice wine|rice paper|rice noodle/i.test(ings);
 }
 
+const SAUCE_SEASONING_PATTERN = /\b(sauce|glaze|marinade|rub|crema|vinaigrette|dressing|aioli|pesto|salsa|chimichurri|gremolata|mojo|chutney|relish|compound butter|garlic butter|herb butter|honey.?(?:soy|sriracha|mustard|lime|chipotle|garlic)|chipotle|buffalo|teriyaki|hoisin|gochujang|tahini|tzatziki|ranch|bbq|barbecue|cajun|jerk|curry paste|miso|balsamic.?(?:glaze|reduction)|smoked paprika|cumin|oregano|chili powder|cayenne|turmeric|garam masala|za'atar|old bay|italian seasoning|herb.?(?:blend|mix|crust)|spice.?(?:blend|rub|mix)|seasoning blend)\b/i;
+
+const COOKING_TECHNIQUE_PATTERN = /\b(sear(?:ed|ing)?|roast(?:ed|ing)?|brais(?:e|ed|ing)|carameliz(?:e|ed|ing)|char(?:red|ring)?|grill(?:ed|ing)?|reduc(?:e|ed|ing)|deglaz(?:e|ed|ing)|toast(?:ed|ing)?|broil(?:ed|ing)?|brown(?:ed|ing)?|crisp(?:ed|ing)?|simmer(?:ed|ing)?|saut[eé](?:ed|ing)?|blister(?:ed|ing)?|blacken(?:ed|ing)?|smoke(?:d|ing)?|flambé(?:ed|ing)?)\b/i;
+
+const GARNISH_FINISH_PATTERN = /\b(garnish|finish|top with|drizzle|squeeze|sprinkle|scatter|fresh (?:herbs?|parsley|cilantro|basil|dill|chives|mint|thyme|rosemary|scallion)|lime (?:wedge|juice|squeeze)|lemon (?:wedge|juice|squeeze|zest)|pickled|crumbl(?:e|ed)|toasted (?:sesame|seeds?|nuts?|breadcrumbs?|almonds?)|hot (?:sauce|honey)|sour cream|crema|yogurt|feta|parmesan|cotija|green onion|scallion|microgreen|sesame seed|cilantro|chive|basil leaves?)\b/i;
+
+const VEGETABLE_COMPONENT_PATTERN = /\b(broccoli|bell pepper|red pepper|green pepper|yellow pepper|onion|zucchini|squash|sweet potato|potato(?:es)?|corn|green bean|asparagus|spinach|kale|chard|cabbage|carrot|cauliflower|brussels sprout|eggplant|mushroom|tomato(?:es)?|bok choy|snap pea|edamame|artichoke|fennel|beet|radish|cucumber|celery|leek|shallot|scallion|green onion|jalapeño|poblano|arugula|romaine|mixed greens|coleslaw|slaw)\b/i;
+
+const BLAND_TITLE_PATTERN = /^(chicken|beef|pork|turkey|salmon|shrimp|tofu|fish)\s+(and\s+)?(rice|pasta|bowl|salad|wrap|tacos?|soup|stew)\s*$/i;
+
+interface FirehouseFlavorResult {
+  issues: string[];
+  hasSauce: boolean;
+  hasTechnique: boolean;
+  hasGarnish: boolean;
+  hasVegetable: boolean;
+  hasCraveableTitle: boolean;
+}
+
+export function validateFirehouseFlavor(recipe: GenerateResponse): FirehouseFlavorResult {
+  const issues: string[] = [];
+  const ings = ingredientText(recipe);
+  const steps = stepText(recipe);
+  const allText = ings + " " + steps;
+  const title = norm(recipe.title || "");
+  const lastStep = recipe.steps && recipe.steps.length > 0
+    ? norm(recipe.steps[recipe.steps.length - 1].heading + " " + recipe.steps[recipe.steps.length - 1].body)
+    : "";
+
+  const hasSauce = SAUCE_SEASONING_PATTERN.test(allText);
+  if (!hasSauce) {
+    issues.push("firehouse_missing_sauce:recipe lacks a named sauce, marinade, glaze, or seasoning blend");
+  }
+
+  const hasTechnique = COOKING_TECHNIQUE_PATTERN.test(steps);
+  if (!hasTechnique) {
+    issues.push("firehouse_missing_technique:recipe steps lack a real cooking technique (sear, roast, braise, caramelize, etc.)");
+  }
+
+  const hasGarnish = GARNISH_FINISH_PATTERN.test(lastStep) || GARNISH_FINISH_PATTERN.test(steps);
+  if (!hasGarnish) {
+    issues.push("firehouse_missing_garnish:recipe lacks a garnish or finishing element");
+  }
+
+  const hasVegetable = VEGETABLE_COMPONENT_PATTERN.test(ings);
+  if (!hasVegetable) {
+    issues.push("firehouse_missing_vegetable:recipe lacks a substantial vegetable component");
+  }
+
+  const hasCraveableTitle = !BLAND_TITLE_PATTERN.test(title) && title.length > 15;
+  if (!hasCraveableTitle) {
+    issues.push("firehouse_bland_title:recipe title is too basic — needs flavor/technique descriptors");
+  }
+
+  return { issues, hasSauce, hasTechnique, hasGarnish, hasVegetable, hasCraveableTitle };
+}
+
+export function autoImproveFirehouseFlavor(recipe: GenerateResponse, allergens: string[] = []): { recipe: GenerateResponse; improvements: string[] } {
+  const { hasSauce, hasTechnique, hasGarnish, hasVegetable, hasCraveableTitle } = validateFirehouseFlavor(recipe);
+  const improvements: string[] = [];
+  let fixed = { ...recipe };
+  const allergenSet = new Set(allergens.map(a => a.toLowerCase()));
+
+  if (!hasGarnish && fixed.steps && fixed.steps.length > 0) {
+    const lastStep = fixed.steps[fixed.steps.length - 1];
+    const allGarnishOptions = [
+      { text: "Finish with a squeeze of fresh lemon juice and a scatter of chopped parsley.", blocked: [] },
+      { text: "Top with fresh cilantro and a squeeze of lime.", blocked: [] },
+      { text: "Drizzle with a touch of olive oil and sprinkle with fresh herbs.", blocked: [] },
+      { text: "Finish with toasted sesame seeds and sliced green onions.", blocked: ["sesame"] },
+      { text: "Garnish with crumbled feta and a drizzle of balsamic glaze.", blocked: ["dairy"] },
+    ];
+    const safeOptions = allGarnishOptions.filter(
+      opt => !opt.blocked.some(b => allergenSet.has(b))
+    );
+    const options = safeOptions.length > 0 ? safeOptions : allGarnishOptions.slice(0, 3);
+    const pick = options[Math.floor(Math.random() * options.length)];
+    fixed = {
+      ...fixed,
+      steps: [
+        ...fixed.steps.slice(0, -1),
+        { ...lastStep, body: lastStep.body + " " + pick.text },
+      ],
+    };
+    improvements.push("garnish_added");
+  }
+
+  if (!hasSauce) {
+    const hasAnySpice = /\b(paprika|cumin|chili|garlic|oregano|cayenne|turmeric)\b/i.test(
+      ingredientText(fixed)
+    );
+    if (hasAnySpice) {
+      improvements.push("sauce_flagged_for_repair");
+    } else {
+      fixed = {
+        ...fixed,
+        ingredients: [
+          ...fixed.ingredients,
+          { item: "Garlic powder", amount: "1 tsp", notes: "" },
+          { item: "Smoked paprika", amount: "1 tsp", notes: "" },
+          { item: "Olive oil", amount: "1 tbsp", notes: "For finishing drizzle" },
+        ],
+      };
+      improvements.push("basic_seasoning_injected");
+    }
+  }
+
+  if (!hasVegetable) {
+    improvements.push("vegetable_flagged_for_repair");
+  }
+
+  if (!hasTechnique && fixed.steps && fixed.steps.length > 0) {
+    for (let i = 0; i < fixed.steps.length; i++) {
+      const step = fixed.steps[i];
+      if (/\bcook\s+(the\s+)?(chicken|beef|pork|turkey|salmon|shrimp|fish|tofu)\b/i.test(step.body)) {
+        const newBody = step.body
+          .replace(/\b[Cc]ook\s+(the\s+)?/i, (match) => {
+            return match[0] === 'C' ? 'Sear ' + (match.includes('the') ? 'the ' : '') : 'sear ' + (match.includes('the') ? 'the ' : '');
+          });
+        const newHeading = step.heading.replace(/\b[Cc]ook\b/, (m) => m[0] === 'C' ? 'Sear' : 'sear');
+        fixed = {
+          ...fixed,
+          steps: [
+            ...fixed.steps.slice(0, i),
+            { heading: newHeading, body: newBody },
+            ...fixed.steps.slice(i + 1),
+          ],
+        };
+        improvements.push("technique_verb_upgraded");
+        break;
+      }
+    }
+  }
+
+  if (!hasCraveableTitle && fixed.title) {
+    improvements.push("title_flagged_for_repair");
+  }
+
+  return { recipe: fixed, improvements };
+}
+
 export function validateRecipe(recipe: GenerateResponse, requestMealFormat?: string): string[] {
   const errors: string[] = [];
   const ingredientItems = (recipe.ingredients || []).map(i => i.item);
@@ -862,6 +1003,9 @@ export function validateRecipe(recipe: GenerateResponse, requestMealFormat?: str
     errors.push("generic_protein_word:recipe uses generic 'protein' instead of actual ingredient name");
   }
 
+  const flavorCheck = validateFirehouseFlavor(recipe);
+  errors.push(...flavorCheck.issues);
+
   return errors;
 }
 
@@ -916,6 +1060,19 @@ export function validateAndFixRecipe(
   }
 
   fixedRecipe = ensureCanonicalFields(fixedRecipe);
+
+  const flavorPreCheck = validateFirehouseFlavor(fixedRecipe);
+  if (flavorPreCheck.issues.length > 0) {
+    const { recipe: improvedRecipe, improvements } = autoImproveFirehouseFlavor(fixedRecipe, ctx.allergens || []);
+    if (improvements.length > 0) {
+      fixedRecipe = improvedRecipe;
+      actions.push("firehouse_flavor_improved:" + improvements.join(","));
+      log(
+        `[validator] firehouse flavor auto-improved: ${improvements.join(", ")}`,
+        "validator"
+      );
+    }
+  }
 
   const recipeErrors = validateRecipe(fixedRecipe);
   if (recipeErrors.length > 0) {
