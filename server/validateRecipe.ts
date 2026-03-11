@@ -728,6 +728,20 @@ const FORMAT_RULES: Record<string, FormatConstraints> = {
     forbidden: /\b(rice|pasta|quinoa|tortilla|bun|brioche)\b/i,
     forbiddenLabel: "rice/pasta/quinoa/tortillas/buns",
   },
+  sandwich: {
+    required: /\b(bread|roll|hoagie|ciabatta|sourdough|brioche|sub|baguette|focaccia)\b/i,
+    requiredLabel: "bread/roll/hoagie",
+    forbidden: /\b(rice|pasta|quinoa|tortilla)\b/i,
+    forbiddenLabel: "rice/pasta/quinoa/tortillas",
+  },
+  casserole: {
+    stepRequired: /\b(bake|baking|oven)\b/i,
+    stepRequiredLabel: "bake/oven step",
+  },
+  "plated-main": {
+    forbidden: /\b(bun|brioche|tortilla|wrap)\b/i,
+    forbiddenLabel: "buns/tortillas/wraps",
+  },
 };
 
 function normalizeFormatKey(mealStyle: string): string {
@@ -743,6 +757,9 @@ function normalizeFormatKey(mealStyle: string): string {
   if (s.includes("stir") && s.includes("fry")) return "stir-fry";
   if (s.includes("soup") || s.includes("stew") || s.includes("chili")) return "soup-stew";
   if (s.includes("breakfast")) return "breakfast-for-dinner";
+  if (s.includes("sandwich") || s.includes("sub") || s.includes("hoagie")) return "sandwich";
+  if (s.includes("casserole")) return "casserole";
+  if (s.includes("plated") && s.includes("main")) return "plated-main";
   return "";
 }
 

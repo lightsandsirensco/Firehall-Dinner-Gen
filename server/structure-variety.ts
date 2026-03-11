@@ -22,6 +22,7 @@ export const STRUCTURE_TYPES = [
   "stuffed-bread",
   "one-pot",
   "breakfast-for-dinner",
+  "plated-main",
 ] as const;
 
 export type StructureType = (typeof STRUCTURE_TYPES)[number];
@@ -48,6 +49,7 @@ const APPLIANCE_COMPAT: Record<StructureType, string[]> = {
   "stuffed-bread": ["oven"],
   "one-pot": ["stove", "instant pot", "slow cooker"],
   "breakfast-for-dinner": ["stove", "oven", "grill", "air fryer"],
+  "plated-main": ["stove", "oven", "grill", "air fryer"],
 };
 
 const TIME_COMPAT: Record<StructureType, number> = {
@@ -72,10 +74,11 @@ const TIME_COMPAT: Record<StructureType, number> = {
   "stuffed-bread": 25,
   "one-pot": 20,
   "breakfast-for-dinner": 15,
+  "plated-main": 15,
 };
 
 const recentStructures: StructureType[] = [];
-const MAX_RECENT = 5;
+const MAX_RECENT = 8;
 
 export function getRecentStructures(): StructureType[] {
   return [...recentStructures];
@@ -99,27 +102,28 @@ function parseMaxTime(timeRange: string): number {
 }
 
 const STRUCTURE_WEIGHTS: Record<StructureType, number> = {
-  "bowl": 1,
+  "bowl": 4,
   "wrap": 3,
-  "taco": 3,
-  "sandwich": 3,
-  "burger": 2,
-  "sheet-pan": 3,
-  "skillet": 3,
-  "stir-fry": 3,
+  "taco": 4,
+  "sandwich": 4,
+  "burger": 3,
+  "sheet-pan": 4,
+  "skillet": 4,
+  "stir-fry": 4,
   "grill": 2,
-  "flatbread": 2,
-  "stuffed": 2,
-  "casserole": 2,
-  "bake": 2,
+  "flatbread": 1,
+  "stuffed": 1,
+  "casserole": 3,
+  "bake": 1,
   "soup-stew": 2,
-  "pasta": 3,
-  "rice-bake": 2,
-  "noodle-toss": 3,
-  "loaded-fries": 2,
-  "stuffed-bread": 2,
-  "one-pot": 3,
-  "breakfast-for-dinner": 2,
+  "pasta": 4,
+  "rice-bake": 1,
+  "noodle-toss": 2,
+  "loaded-fries": 1,
+  "stuffed-bread": 1,
+  "one-pot": 2,
+  "breakfast-for-dinner": 1,
+  "plated-main": 3,
 };
 
 function displayToInternal(display: string): StructureType | null {
@@ -139,6 +143,8 @@ function displayToInternal(display: string): StructureType | null {
     "loaded fries": "loaded-fries", "stuffed bread": "stuffed-bread",
     "breakfast-for-dinner": "breakfast-for-dinner", "breakfast for dinner": "breakfast-for-dinner",
     "pizza night": "flatbread",
+    "plated main": "plated-main", "plated": "plated-main", "main": "plated-main",
+    "dinner plate": "plated-main", "plate": "plated-main",
   };
   return fuzzy[lower] || null;
 }
@@ -186,13 +192,13 @@ export function pickStructure(
     backToBack = clientRecent[0] || recentStructures[0] || null;
   }
 
-  const last3 = [...new Set([...clientRecent.slice(0, 3), ...recentStructures.slice(0, 3)])].slice(0, 3);
+  const last5 = [...new Set([...clientRecent.slice(0, 5), ...recentStructures.slice(0, 5)])].slice(0, 5);
 
   let pool = compatible.filter(s => s !== backToBack);
   if (pool.length === 0) pool = [...compatible];
 
-  let narrower = pool.filter(s => !last3.includes(s));
-  if (narrower.length > 0) pool = narrower;
+  let narrower = pool.filter(s => !last5.includes(s));
+  if (narrower.length >= 3) pool = narrower;
 
   const pick = weightedPick(pool);
   log(`[structure] Picked "${pick}" from ${pool.length} options (${compatible.length} compatible, recent=[${[...allRecent].join(",")}], backToBack=${backToBack || "none"}, preferDiff=${preferDifferentStyle})`, "variety");
@@ -221,4 +227,5 @@ export const STRUCTURE_DISPLAY: Record<StructureType, string> = {
   "stuffed-bread": "Stuffed Bread",
   "one-pot": "One-Pot",
   "breakfast-for-dinner": "Breakfast-for-Dinner",
+  "plated-main": "Plated Main",
 };

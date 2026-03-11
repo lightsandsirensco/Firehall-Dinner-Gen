@@ -764,12 +764,16 @@ export async function registerRoutes(
         wrap: "wrap",
         bowl: "bowl",
         pasta: "pasta",
-        salad: "salad",
+        salad: "bowl",
         sheet_pan: "sheet-pan",
+        skillet: "skillet",
         stir_fry: "stir-fry",
         soup_chili: "soup-stew",
         breakfast: "breakfast-for-dinner",
         loaded_fries: "loaded-fries",
+        plated_main: "plated-main",
+        sandwich: "sandwich",
+        casserole: "casserole",
       };
 
       const explicitStructure = request.meal_format && request.meal_format !== "random"

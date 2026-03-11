@@ -117,6 +117,24 @@ export const CARB_RULES: Record<string, CarbRule> = {
     defaultSideHealthy: "whole grain toast",
     baseRequired: false,
   },
+  skillet: {
+    allowedSides: [],
+    defaultSide: "",
+    defaultSideHealthy: "",
+    baseRequired: false,
+  },
+  casserole: {
+    allowedSides: [],
+    defaultSide: "",
+    defaultSideHealthy: "",
+    baseRequired: false,
+  },
+  "plated-main": {
+    allowedSides: ["potatoes", "mashed potatoes", "roasted potatoes", "rice", "sweet potato"],
+    defaultSide: "roasted potatoes",
+    defaultSideHealthy: "roasted sweet potatoes",
+    baseRequired: false,
+  },
 };
 
 const BOWL_CARB_ROTATION = ["greens", "quinoa", "potatoes", "sweet potato", "none"];
@@ -298,6 +316,9 @@ function normalizeFormatToRuleKey(format: string): string {
   if (f === "burger" || f === "burgers") return "burger";
   if (f === "tacos" || f === "taco") return "taco";
   if (f.includes("sandwich")) return "sandwich";
+  if (f === "skillet") return "skillet";
+  if (f === "plated-main" || f === "plated_main") return "plated-main";
+  if (f === "casserole") return "casserole";
   return f;
 }
 

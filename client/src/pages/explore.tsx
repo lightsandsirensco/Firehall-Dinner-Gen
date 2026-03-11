@@ -285,10 +285,14 @@ const FORMAT_QUERY_MAP: Record<string, string> = {
   pasta: "pasta",
   salad: "salad",
   sheet_pan: "sheet pan",
+  skillet: "skillet one pan",
   stir_fry: "stir fry",
   soup_chili: "soup stew chili",
   breakfast: "breakfast",
   loaded_fries: "loaded fries",
+  sandwich: "sandwich sub hoagie",
+  casserole: "casserole bake",
+  plated_main: "dinner entree main course",
 };
 
 const ALLERGEN_TO_INTOLERANCE: Record<string, string> = {
@@ -868,14 +872,18 @@ export default function ExplorePage() {
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="random">Any Format</SelectItem>
-                      <SelectItem value="burger">Burger</SelectItem>
-                      <SelectItem value="tacos">Tacos</SelectItem>
-                      <SelectItem value="wrap">Wrap</SelectItem>
                       <SelectItem value="bowl">Bowl</SelectItem>
                       <SelectItem value="pasta">Pasta</SelectItem>
-                      <SelectItem value="salad">Salad</SelectItem>
+                      <SelectItem value="sandwich">Sandwich</SelectItem>
+                      <SelectItem value="tacos">Tacos</SelectItem>
+                      <SelectItem value="skillet">Skillet</SelectItem>
                       <SelectItem value="sheet_pan">Sheet Pan</SelectItem>
+                      <SelectItem value="burger">Burger</SelectItem>
+                      <SelectItem value="wrap">Wrap</SelectItem>
+                      <SelectItem value="casserole">Casserole</SelectItem>
                       <SelectItem value="stir_fry">Stir Fry</SelectItem>
+                      <SelectItem value="plated_main">Plated Main</SelectItem>
+                      <SelectItem value="salad">Salad</SelectItem>
                       <SelectItem value="soup_chili">Soup / Chili</SelectItem>
                       <SelectItem value="breakfast">Breakfast</SelectItem>
                       <SelectItem value="loaded_fries">Loaded Fries</SelectItem>

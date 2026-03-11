@@ -358,14 +358,18 @@ export const FilterPanel = memo(function FilterPanel({ filters, onFiltersChange,
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="random">Random</SelectItem>
-                  <SelectItem value="burger">Burger</SelectItem>
-                  <SelectItem value="tacos">Tacos</SelectItem>
-                  <SelectItem value="wrap">Wrap</SelectItem>
                   <SelectItem value="bowl">Bowl</SelectItem>
                   <SelectItem value="pasta">Pasta</SelectItem>
-                  <SelectItem value="salad">Salad</SelectItem>
+                  <SelectItem value="sandwich">Sandwich</SelectItem>
+                  <SelectItem value="tacos">Tacos</SelectItem>
+                  <SelectItem value="skillet">Skillet</SelectItem>
                   <SelectItem value="sheet_pan">Sheet Pan</SelectItem>
+                  <SelectItem value="burger">Burger</SelectItem>
+                  <SelectItem value="wrap">Wrap</SelectItem>
+                  <SelectItem value="casserole">Casserole</SelectItem>
                   <SelectItem value="stir_fry">Stir Fry</SelectItem>
+                  <SelectItem value="plated_main">Plated Main</SelectItem>
+                  <SelectItem value="salad">Salad</SelectItem>
                   <SelectItem value="soup_chili">Soup / Chili</SelectItem>
                   <SelectItem value="breakfast">Breakfast</SelectItem>
                   <SelectItem value="loaded_fries">Loaded Fries</SelectItem>
