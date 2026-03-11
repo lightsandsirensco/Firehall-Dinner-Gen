@@ -116,7 +116,7 @@ ${vegLine}
 RULES: Oven pizza only. Scale for ${pizzaCount} pizzas/${crewSize} people. 4-8 build steps. Safety: chicken 165°F, ground meat 160°F, pork 145°F+3min.
 
 JSON:
-{"pizza_style_id":"${conceptId}","title":"","dough_type":"","why_this_works":"","recommended_pizzas":"${pizzaCount} large pizzas for ${crewSize} people","timing":{"prep_minutes":0,"bake_minutes":0,"total_minutes":0},"oven_setup":{"preheat_temp_f":450,"preheat_temp_c":232,"rack_position":"","surface_option":""},"ingredients":{${hasDough ? '"dough":[],' : ""}"sauce":[],"cheese":[],"toppings":[],"drizzles":[]},"build_steps":[{"heading":"","body":""}],"protein_safety":[],"cleanup_tip":"","macros_per_serving":{"calories":0,"protein_g":0,"carbs_g":0,"fat_g":0}${request.vegetarian_swap_needed ? ',"veg_option":{"enabled":true,"description":"","swap_toppings":[],"steps":[]}' : ""}}`;
+{"pizza_style_id":"${conceptId}","title":"","dough_type":"","why_this_works":"","recommended_pizzas":"${pizzaCount} large pizzas for ${crewSize} people","timing":{"prep_minutes":0,"bake_minutes":0,"total_minutes":0},"oven_setup":{"preheat_temp_f":450,"preheat_temp_c":232,"rack_position":"","surface_option":""},"ingredients":{${hasDough ? '"dough":[{"item":"","amount":"","notes":""}],' : ""}"sauce":[{"item":"","amount":"","notes":""}],"cheese":[{"item":"","amount":"","notes":""}],"toppings":[{"item":"","amount":"","notes":""}],"drizzles":[{"item":"","amount":"","notes":""}]},"build_steps":[{"heading":"","body":""}],"protein_safety":[{"protein":"","target_temp_f":0,"target_temp_c":0,"rest_minutes":0,"probe_where":"","notes":""}],"cleanup_tip":"","macros_per_serving":{"calories":0,"protein_g":0,"carbs_g":0,"fat_g":0}${request.vegetarian_swap_needed ? ',"veg_option":{"enabled":true,"description":"","swap_toppings":[{"item":"","amount":"","notes":""}],"steps":[]}' : ""}}`;
 
   const genStart = Date.now();
   log(`Generating pizza: ${conceptId} (crew: ${crewSize}, style: ${request.style_preference})`, "ai");
@@ -144,6 +144,60 @@ JSON:
   if (!recipe.ingredients) recipe.ingredients = { sauce: [], cheese: [], toppings: [], drizzles: [] };
   if (!recipe.build_steps || !Array.isArray(recipe.build_steps)) recipe.build_steps = [];
   if (!recipe.title) throw new Error("AI returned incomplete pizza data. Please try again.");
+
+  const normalizeIngredients = (arr: any[]): { item: string; amount: string; notes: string }[] => {
+    if (!Array.isArray(arr)) return [];
+    return arr.map((entry: any) => {
+      if (typeof entry === "string") {
+        const match = entry.match(/^([\d½¼¾⅓⅔⅛\s\/\.\-]+(?:cups?|tbsp|tsp|oz|g|lbs?|pounds?|cans?|cloves?|pinch(?:es)?|packets?|bunch(?:es)?|large|medium|small)?)\s+(.+)$/i);
+        if (match) {
+          return { item: match[2].trim(), amount: match[1].trim(), notes: "" };
+        }
+        return { item: entry, amount: "", notes: "" };
+      }
+      if (entry && typeof entry === "object") {
+        return { item: entry.item || entry.name || "", amount: entry.amount || entry.qty || "", notes: entry.notes || "" };
+      }
+      return { item: String(entry), amount: "", notes: "" };
+    });
+  };
+
+  if (recipe.ingredients.dough) recipe.ingredients.dough = normalizeIngredients(recipe.ingredients.dough);
+  recipe.ingredients.sauce = normalizeIngredients(recipe.ingredients.sauce);
+  recipe.ingredients.cheese = normalizeIngredients(recipe.ingredients.cheese);
+  recipe.ingredients.toppings = normalizeIngredients(recipe.ingredients.toppings);
+  recipe.ingredients.drizzles = normalizeIngredients(recipe.ingredients.drizzles);
+
+  if (recipe.veg_option?.swap_toppings) {
+    recipe.veg_option.swap_toppings = normalizeIngredients(recipe.veg_option.swap_toppings);
+  }
+
+  if (Array.isArray(recipe.protein_safety)) {
+    recipe.protein_safety = recipe.protein_safety
+      .map((ps: any) => {
+        if (typeof ps === "string") {
+          const tempMatch = ps.match(/(\d+)\s*°?\s*F/i);
+          const cMatch = ps.match(/(\d+)\s*°?\s*C/i);
+          const proteinMatch = ps.match(/^([\w\s]+?)(?:\s*:|,)/);
+          return {
+            protein: proteinMatch ? proteinMatch[1].trim() : ps.split(":")[0]?.trim() || "Meat",
+            target_temp_f: tempMatch ? parseInt(tempMatch[1]) : 165,
+            target_temp_c: cMatch ? parseInt(cMatch[1]) : 74,
+            rest_minutes: /rest/i.test(ps) ? 3 : 0,
+            probe_where: "thickest part",
+            notes: ps,
+          };
+        }
+        return {
+          protein: ps.protein || "",
+          target_temp_f: ps.target_temp_f || ps.temp_f || 0,
+          target_temp_c: ps.target_temp_c || ps.temp_c || 0,
+          rest_minutes: ps.rest_minutes || ps.rest_min || 0,
+          probe_where: ps.probe_where || ps.probe || "",
+          notes: ps.notes || "",
+        };
+      });
+  }
 
   return { recipe, tokensIn, tokensOut };
 }

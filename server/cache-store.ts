@@ -105,6 +105,12 @@ export function getCachedPizzaRecipe(cacheKey: string): any | null {
   if (!row) return null;
   try {
     const parsed = JSON.parse(row.recipe_json);
+    const hasBadIngredients = parsed.ingredients?.sauce && Array.isArray(parsed.ingredients.sauce) && parsed.ingredients.sauce.length > 0 && typeof parsed.ingredients.sauce[0] === "string";
+    const hasBadSafety = Array.isArray(parsed.protein_safety) && parsed.protein_safety.length > 0 && typeof parsed.protein_safety[0] === "string";
+    if (hasBadIngredients || hasBadSafety) {
+      db.prepare("DELETE FROM recipe_cache WHERE cache_key = ?").run(cacheKey);
+      return null;
+    }
     db.prepare("UPDATE recipe_cache SET hit_count = hit_count + 1 WHERE cache_key = ?").run(cacheKey);
     return parsed;
   } catch {
