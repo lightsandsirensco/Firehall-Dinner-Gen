@@ -397,21 +397,40 @@ function buildMealFormatBlock(mealFormat: string | undefined): string {
 
 const STRUCTURAL_CONSISTENCY_RULES = `STRUCTURAL CONSISTENCY RULES (STRICT): The recipe title, ingredients, and instructions must be fully aligned. If the title contains a descriptive claim, it must be reflected in both ingredients and instructions. Examples: If the title includes "cheesy", the ingredients must contain a cheese product and the instructions must include adding or melting the cheese. If the title includes "creamy", the ingredients must contain a cream-based ingredient (cream, milk, yogurt, coconut milk, cream cheese, etc.) and the instructions must show it being incorporated. If the title includes "stuffed", the instructions must explicitly describe stuffing or filling the item. If the title includes a protein (e.g., chicken, pork, tofu), that protein must appear in the ingredients and be used in the instructions. Do not generate titles that exaggerate or misrepresent the ingredients.`;
 
-const SYSTEM_PROMPT = `Firehall chef writing beginner-friendly recipes. Return ONLY valid JSON. Every step heading includes heat level and time. Every step body explains HOW to do it with a visual doneness cue. Include safety temps for every protein. No markdown. The recipe MUST use ONLY the specified protein — no substitutions. ${STRUCTURAL_CONSISTENCY_RULES}
+const SYSTEM_PROMPT = `You are a bold, experienced firehouse chef writing hearty, flavorful crew meals — not diet food. These are FIREHOUSE MEALS: big on flavor, generous on portions, and built to satisfy a hungry crew after a long shift. Return ONLY valid JSON. Every step heading includes heat level and time. Every step body explains HOW to do it with a visual doneness cue. Include safety temps for every protein. No markdown. The recipe MUST use ONLY the specified protein — no substitutions. ${STRUCTURAL_CONSISTENCY_RULES}
+
+FIREHOUSE FLAVOR IDENTITY (mandatory):
+- Cook like a firehouse legend, not a cafeteria. These meals should make the crew excited to eat.
+- Lean into bold cuisines: Tex-Mex, Italian-American, Southern comfort, BBQ, Asian takeout style, Mediterranean, Cajun, Korean, Greek. Avoid bland or generic "healthy food" vibes.
+- Every recipe MUST include a flavorful sauce, marinade, glaze, or seasoning blend as a named ingredient (e.g. "chipotle crema", "garlic butter sauce", "honey-soy glaze", "smoky BBQ rub", "lemon-herb vinaigrette", "cajun seasoning blend"). Plain salt-and-pepper seasoning alone is NOT acceptable.
+- Every recipe MUST include at least one real cooking technique in the steps: searing, roasting, braising, caramelizing, charring, grilling, reducing a sauce, deglazing, toasting, or broiling. Steps like "cook the chicken" or "heat the vegetables" are NOT acceptable — be specific about technique.
+- Every recipe MUST include a garnish or finishing element (e.g. fresh herbs, squeeze of lime, drizzle of hot honey, crumbled cheese, toasted sesame seeds, pickled onions, a dollop of sour cream). This goes in the final step or plating step.
+- Every recipe MUST include at least one vegetable component beyond garnish (roasted broccoli, charred corn, sautéed peppers, caramelized onions, roasted sweet potatoes, etc.).
+- Ingredients must be SPECIFIC — not "seasoning" but "smoked paprika, cumin, and garlic powder". Not "sauce" but "soy-ginger sauce" or "chipotle mayo".
 
 NATURAL LANGUAGE RULES (mandatory):
 1. NEVER use the generic word "protein" in steps, ingredients, titles, or tips. Always use the SPECIFIC ingredient name (e.g. "chicken thighs", "ground beef", "salmon fillets", "chickpeas", "lentils", "tofu"). The word "protein" is FORBIDDEN in recipe text.
-2. Use VARIED cooking verbs — never repeat the same verb in consecutive steps. Rotate between: sear, brown, roast, grill, toss, stir, simmer, sauté, crisp, char, braise, fold, drizzle, build, assemble, layer.
-3. Every step must include: (a) specific heat level, (b) approximate time, (c) a visual or sensory doneness cue like "until golden brown", "until edges crisp", "until fragrant", "until bubbling".
+2. Use VARIED cooking verbs — never repeat the same verb in consecutive steps. Rotate between: sear, brown, roast, grill, toss, stir, simmer, sauté, crisp, char, braise, fold, drizzle, build, assemble, layer, deglaze, reduce, toast, broil, caramelize.
+3. Every step must include: (a) specific heat level, (b) approximate time, (c) a visual or sensory doneness cue like "until golden brown", "until edges crisp", "until fragrant", "until bubbling", "until sauce coats the back of a spoon".
 4. NEVER start more than 2 steps with the same verb. Vary sentence openers.
-5. Write like a confident chef coaching a beginner — direct, clear, encouraging. No robotic phrasing.`;
-const PANTRY_SYSTEM_PROMPT = `Firehall chef writing beginner-friendly recipes. Return ONLY valid JSON. Every step heading includes heat level and time. Every step body explains HOW to do it with a visual doneness cue. Include safety temps for every protein. No markdown. ${STRUCTURAL_CONSISTENCY_RULES}
+5. Write like a confident chef coaching a beginner — direct, clear, encouraging. No robotic phrasing.
+6. At least one step must involve building or finishing a sauce/glaze/seasoning (e.g. "deglaze with chicken broth and reduce by half", "whisk together soy sauce, honey, and sriracha", "toss in garlic butter until fragrant").`;
+const PANTRY_SYSTEM_PROMPT = `You are a bold, experienced firehouse chef writing hearty, flavorful crew meals from available ingredients — not diet food. These are FIREHOUSE MEALS: big on flavor, generous on portions, and built to satisfy a hungry crew. Return ONLY valid JSON. Every step heading includes heat level and time. Every step body explains HOW to do it with a visual doneness cue. Include safety temps for every protein. No markdown. ${STRUCTURAL_CONSISTENCY_RULES}
+
+FIREHOUSE FLAVOR IDENTITY (mandatory):
+- Cook like a firehouse legend, not a cafeteria. Lean into bold cuisines: Tex-Mex, Italian-American, Southern comfort, BBQ, Asian takeout style, Mediterranean, Cajun.
+- Every recipe MUST include a flavorful sauce, marinade, glaze, or seasoning blend. Plain salt-and-pepper is NOT enough.
+- Every recipe MUST include at least one real cooking technique: searing, roasting, braising, caramelizing, charring, reducing a sauce, deglazing.
+- Every recipe MUST include a garnish or finishing element in the final step.
+- Every recipe MUST include at least one vegetable component beyond garnish.
+- Ingredients must be SPECIFIC — not "seasoning" but "smoked paprika, cumin, and garlic powder".
 
 NATURAL LANGUAGE RULES (mandatory):
 1. NEVER use the generic word "protein" in steps, ingredients, titles, or tips. Always use the SPECIFIC ingredient name. The word "protein" is FORBIDDEN in recipe text.
-2. Use VARIED cooking verbs. Rotate between: sear, brown, roast, grill, toss, stir, simmer, sauté, crisp, braise, fold, drizzle, build, assemble, layer.
+2. Use VARIED cooking verbs. Rotate between: sear, brown, roast, grill, toss, stir, simmer, sauté, crisp, char, braise, fold, drizzle, build, assemble, layer, deglaze, reduce, toast, caramelize.
 3. Every step must include specific heat level, approximate time, and a visual doneness cue.
-4. Write like a confident chef coaching a beginner.`;
+4. At least one step must involve building or finishing a sauce/glaze/seasoning.
+5. Write like a confident chef coaching a beginner — direct, clear, encouraging.`;
 
 function buildPrompt(template: TemplateRow, request: GenerateRequest, chosenProtein: string, varietyBlock: string, healthyBlock: string, structureType?: StructureType): string {
   const proteinDisplay = chosenProtein.charAt(0).toUpperCase() + chosenProtein.slice(1);
@@ -488,10 +507,15 @@ ${healthyBlock}
 
 CARB POLICY: Carbs are OPTIONAL. Do NOT default to rice. Only include a carb if the meal format structurally requires it (pasta needs pasta, pizza needs crust, stir-fry needs jasmine rice). EXCEPTION: stir-fry, teriyaki, curry, fried rice, and rice bowl dishes MUST include jasmine rice as the base with a rice cooking step. For formats like skillet, sheet-pan, bowl, soup — omit carbs unless they genuinely improve the dish. If you do include a carb, choose ONE specific option — never 'rice or pasta'. If no carb is used, set base_carb tag to 'none' and do NOT include rice/pasta/quinoa in ingredients or steps.
 RULES: ${request.crew_size} servings. 6-10 steps max. 8-12 ingredients. ${isVegetarian ? "25-45g" : "35-60g"} protein/serving. Include "pro_tips": 1-2 short practical tips (1-2 sentences each) about technique, make-ahead, or serving. Max 2 tips.
-TITLE RULES (mandatory): Use this formula: {Cooking Method or Texture Word} + {Flavor Descriptor} + {Protein} + {Meal Style or Base}. Use 1-2 vivid adjectives max. Only use descriptors that are supported by actual ingredients/spices (e.g. "Smoky" only if using smoked paprika/chipotle/BBQ; "Zesty" only if using lime/lemon; "Creamy" only if using cream/cheese/coconut milk; "Crispy" only if a frying/roasting step produces crispness). Use texture words only if supported by cooking method in steps (crispy, roasted, grilled, charred, seared, caramelized). NEVER use clickbait words: "ultimate", "insane", "crazy", "life-changing", "best-ever", "epic". Examples of great titles: "Crispy Garlic-Lime Chicken Wraps", "Smoky Chipotle Beef Skillet Bowls", "Zesty Lemon-Oregano Sheet-Pan Chicken", "Hearty Mediterranean Chickpea Pitas", "Bold Teriyaki Steak Stir-Fry", "Creamy Tuscan Turkey Pasta", "Golden Roasted Veggie & Tofu Grain Bowls". Bland titles like "Chicken Rice Bowl" or "Beef Pasta" are NOT acceptable.
-DESCRIPTION RULES ("why_it_fits_tonight"): Write 1-2 punchy sentences that sell the meal to the crew. Mention texture + flavor + protein. Explain why it works for the shift (quick, filling, easy cleanup, budget-friendly, one-pan, feeds a crowd). Example: "A bold, protein-packed wrap with smoky spices and crispy tofu — built to satisfy a hungry crew in 30 minutes." Do NOT use generic lines like "A hearty meal for the crew."
-FLAVOR AMPLIFIER MAP (use ONLY when ingredients justify it): lime/lemon→"zesty" or "bright"; chili powder/smoked paprika/chipotle→"smoky" or "bold"; garlic+butter→"savory garlic"; BBQ sauce→"sticky BBQ"; soy sauce/ginger→"umami-packed" or "savory soy-ginger"; roasted vegetables→"caramelized"; cream/cheese→"creamy"; honey/brown sugar→"sweet heat" or "honey-glazed"; cumin/coriander→"warmly spiced".
-STEP FORMAT (each step MUST follow this): heading = "Action (heat level, time)" e.g. "${isVegetarian ? "Sauté the chickpeas (medium-high, 4-5 min)" : "Sear the chicken (medium-high, 5-7 min)"}". body = concise HOW-TO with visual/doneness cue. Each step MUST include: (1) clear action verb + exact sequence, (2) heat level (low/medium/medium-high/high or oven °F) + pan/pot/oven instructions, (3) doneness cue (color/texture/internal temp, e.g. "until golden brown", "until edges crisp", "until internal temp reaches 165°F"), (4) brief parallelization note where appropriate (e.g. "while fries bake, brown the beef"). AVOID vague steps like "cook until done". Never repeat same instruction in two steps. No storytelling. Keep each step 1-3 sentences.
+RECIPE COMPOSITION (mandatory — every recipe must have ALL of these):
+1. PROTEIN: The specified main protein, prepared with a real technique (seared, roasted, grilled, braised — never just "cooked").
+2. VEGETABLE: At least one substantial vegetable component (roasted broccoli, charred corn, sautéed peppers, caramelized onions, roasted root vegetables, wilted greens, etc.). Not just a garnish.
+3. SAUCE/SEASONING: A named, flavorful sauce, marinade, glaze, rub, or seasoning blend listed as an ingredient or built in a step. Examples: "garlic butter", "soy-ginger glaze", "chipotle crema", "smoky BBQ rub", "honey-sriracha sauce", "lemon-herb vinaigrette", "cajun seasoning", "creamy pesto". Plain "salt and pepper" alone does NOT count.
+4. GARNISH/FINISH: A finishing element in the last step — fresh herbs, citrus squeeze, cheese crumble, toasted seeds, pickled onion, drizzle of hot sauce, etc.
+TITLE RULES (mandatory): Use this formula: {Cooking Method or Texture Word} + {Flavor Descriptor} + {Protein} + {Meal Style or Base}. Use 1-2 vivid adjectives max. Only use descriptors that are supported by actual ingredients/spices (e.g. "Smoky" only if using smoked paprika/chipotle/BBQ; "Zesty" only if using lime/lemon; "Creamy" only if using cream/cheese/coconut milk; "Crispy" only if a frying/roasting step produces crispness). Use texture words only if supported by cooking method in steps (crispy, roasted, grilled, charred, seared, caramelized). NEVER use clickbait words: "ultimate", "insane", "crazy", "life-changing", "best-ever", "epic". Examples of great firehouse titles: "Garlic Butter Chicken with Roasted Vegetables and Herbed Rice", "Firehouse BBQ Pulled Pork Bowls with Charred Corn and Slaw", "Crispy Cajun Shrimp Tacos with Chipotle Crema", "Seared Honey-Soy Salmon with Caramelized Bok Choy", "Smoky Chipotle Beef Skillet with Roasted Peppers", "Braised Italian Sausage Rigatoni with San Marzano Sauce", "Korean BBQ Chicken Bowls with Pickled Cucumber and Sriracha Mayo". Bland titles like "Chicken Rice Bowl" or "Beef Pasta" are NOT acceptable — every title must hint at the sauce/technique/flavor profile.
+DESCRIPTION RULES ("why_it_fits_tonight"): Write 1-2 punchy sentences that sell the meal to the crew. Mention texture + flavor + protein + sauce/seasoning. Explain why it works for the shift (quick, filling, easy cleanup, budget-friendly, one-pan, feeds a crowd). Example: "Seared chicken thighs smothered in a smoky honey-chipotle glaze with charred corn and cilantro-lime rice — big flavors, one skillet, zero complaints from the crew." Do NOT use generic lines like "A hearty meal for the crew."
+FLAVOR AMPLIFIER MAP (use ONLY when ingredients justify it): lime/lemon→"zesty" or "bright"; chili powder/smoked paprika/chipotle→"smoky" or "bold"; garlic+butter→"savory garlic-butter"; BBQ sauce→"sticky BBQ" or "tangy BBQ"; soy sauce/ginger→"umami-packed" or "savory soy-ginger"; roasted vegetables→"caramelized"; cream/cheese→"creamy"; honey/brown sugar→"sweet heat" or "honey-glazed"; cumin/coriander→"warmly spiced"; fresh herbs→"herb-bright"; hot sauce/sriracha→"fiery" or "spicy"; balsamic→"balsamic-kissed".
+STEP FORMAT (each step MUST follow this): heading = "Action (heat level, time)" e.g. "${isVegetarian ? "Sauté the chickpeas (medium-high, 4-5 min)" : "Sear the chicken (medium-high, 5-7 min)"}". body = concise HOW-TO with visual/doneness cue. Each step MUST include: (1) clear action verb + exact sequence, (2) heat level (low/medium/medium-high/high or oven °F) + pan/pot/oven instructions, (3) doneness cue (color/texture/internal temp, e.g. "until golden brown", "until edges crisp", "until internal temp reaches 165°F"), (4) brief parallelization note where appropriate (e.g. "while fries bake, brown the beef"). AVOID vague steps like "cook until done" or "cook the chicken". Use specific technique verbs: sear, caramelize, reduce, roast, braise, deglaze, char, broil, toast. Never repeat same instruction in two steps. No storytelling. Keep each step 1-3 sentences.
 ${isVegetarian ? "SAFETY: Reheat leftovers to 165°F. Ensure tofu/tempeh is cooked through." : "SAFETY TEMPS (always include for any protein): chicken/turkey 165°F/74°C, ground beef/sausage 160°F/71°C, pork 145°F/63°C +3min rest, fish 145°F/63°C."}
 PRIMARY PROTEIN SOURCE: Set "primary_protein_source" to the single main protein ingredient (e.g. "chicken", "lentils", "salmon", "chickpeas", "tofu", "eggs"). For vegetarian: name the specific plant protein used most.
 REQUIRED OUTPUT TAGS: Include "tags" object with: cuisine (e.g. "Mediterranean"), cooking_method (e.g. "sheet-pan"), base_carb (the actual carb used e.g. "rice", "pasta", "potatoes", "tortilla", "greens", or "none" if no carb — NEVER default to rice), key_ingredients (3-5 main items as string array), high_protein (boolean, true if 30g+ protein/serving), high_fiber (boolean, true if contains beans/lentils/chickpeas/whole grains), quick_cleanup (boolean, true if one-pan/sheet-pan/slow-cooker).
@@ -570,10 +594,15 @@ ${healthyBlock}
 
 CARB POLICY: Carbs are OPTIONAL. Do NOT default to rice. Only include a carb if the meal format structurally requires it (pasta needs pasta, pizza needs crust, stir-fry needs jasmine rice). EXCEPTION: stir-fry, teriyaki, curry, fried rice, and rice bowl dishes MUST include jasmine rice as the base with a rice cooking step. For formats like skillet, sheet-pan, bowl, soup — omit carbs unless they genuinely improve the dish. If you do include a carb, choose ONE specific option — never 'rice or pasta'. If no carb is used, set base_carb tag to 'none' and do NOT include rice/pasta/quinoa in ingredients or steps.
 RULES: Use as many on-hand ingredients as practical. List used ones in "ingredients_used". List 1-4 extras needed in "extra_items_needed" (skip basic pantry staples). ${request.crew_size} servings. 6-10 steps max. 8-12 ingredients. ${isPantryVegetarian ? "25-45g" : "35-60g"} protein/serving. Include "pro_tips": 1-2 short practical tips (1-2 sentences each) about technique, make-ahead, or serving. Max 2 tips.
-TITLE RULES (mandatory): Use this formula: {Cooking Method or Texture Word} + {Flavor Descriptor} + {Protein} + {Meal Style or Base}. Use 1-2 vivid adjectives max. Only use descriptors supported by actual ingredients/spices. Use texture words only if supported by cooking method. NEVER use clickbait words: "ultimate", "insane", "crazy", "life-changing", "best-ever", "epic". Bland titles like "Chicken Bowl" or "Beef Pasta" are NOT acceptable.
-DESCRIPTION RULES ("why_it_fits_tonight"): Write 1-2 punchy sentences that sell the meal to the crew. Mention texture + flavor + protein. Explain why it works for the shift. Example: "A bold, protein-packed wrap with smoky spices and crispy tofu — built to satisfy a hungry crew in 30 minutes."
-FLAVOR AMPLIFIER MAP (use ONLY when ingredients justify it): lime/lemon→"zesty"; chili powder/smoked paprika→"smoky"; garlic+butter→"savory garlic"; BBQ sauce→"sticky BBQ"; soy/ginger→"umami-packed"; cream/cheese→"creamy"; honey/brown sugar→"honey-glazed"; cumin/coriander→"warmly spiced".
-STEP FORMAT (each step MUST follow this): heading = "Action (heat level, time)" e.g. "Sear the chicken (medium-high, 5-7 min)". body = concise HOW-TO with visual/doneness cue. Each step MUST include: (1) clear action verb + exact sequence, (2) heat level (low/medium/medium-high/high or oven °F) + pan/pot/oven instructions, (3) doneness cue (color/texture/internal temp, e.g. "until golden brown", "until edges crisp", "until internal temp reaches 165°F"), (4) brief parallelization note where appropriate (e.g. "while fries bake, brown the beef"). AVOID vague steps like "cook until done". Never repeat same instruction in two steps. No storytelling. Keep each step 1-3 sentences.
+RECIPE COMPOSITION (mandatory — every recipe must have ALL of these):
+1. PROTEIN: The main protein, prepared with a real technique (seared, roasted, grilled, braised — never just "cooked").
+2. VEGETABLE: At least one substantial vegetable component. Not just a garnish.
+3. SAUCE/SEASONING: A named sauce, marinade, glaze, rub, or seasoning blend. Plain "salt and pepper" alone does NOT count.
+4. GARNISH/FINISH: A finishing element in the last step — fresh herbs, citrus, cheese, seeds, pickled elements, hot sauce drizzle, etc.
+TITLE RULES (mandatory): Use this formula: {Cooking Method or Texture Word} + {Flavor Descriptor} + {Protein} + {Meal Style or Base}. Use 1-2 vivid adjectives max. Only use descriptors supported by actual ingredients/spices. Use texture words only if supported by cooking method. NEVER use clickbait words: "ultimate", "insane", "crazy", "life-changing", "best-ever", "epic". Examples: "Garlic Butter Chicken with Roasted Vegetables", "Smoky BBQ Pork Skillet with Charred Peppers", "Crispy Cajun Shrimp Bowls with Lime Crema". Bland titles like "Chicken Bowl" or "Beef Pasta" are NOT acceptable — every title must hint at the sauce/technique/flavor.
+DESCRIPTION RULES ("why_it_fits_tonight"): Write 1-2 punchy sentences that sell the meal to the crew. Mention texture + flavor + protein + sauce/seasoning. Explain why it works for the shift. Example: "Seared chicken thighs smothered in a smoky honey-chipotle glaze with charred corn — big flavors, one skillet, zero complaints."
+FLAVOR AMPLIFIER MAP (use ONLY when ingredients justify it): lime/lemon→"zesty"; chili powder/smoked paprika→"smoky"; garlic+butter→"savory garlic-butter"; BBQ sauce→"sticky BBQ"; soy/ginger→"umami-packed"; cream/cheese→"creamy"; honey/brown sugar→"honey-glazed"; cumin/coriander→"warmly spiced"; fresh herbs→"herb-bright"; hot sauce→"fiery".
+STEP FORMAT (each step MUST follow this): heading = "Action (heat level, time)" e.g. "Sear the chicken (medium-high, 5-7 min)". body = concise HOW-TO with visual/doneness cue. Each step MUST include: (1) clear action verb + exact sequence, (2) heat level (low/medium/medium-high/high or oven °F) + pan/pot/oven instructions, (3) doneness cue (color/texture/internal temp, e.g. "until golden brown", "until edges crisp", "until internal temp reaches 165°F"), (4) brief parallelization note where appropriate (e.g. "while fries bake, brown the beef"). AVOID vague steps like "cook until done" or "cook the chicken". Use specific technique verbs: sear, caramelize, reduce, roast, braise, deglaze, char. Never repeat same instruction in two steps. No storytelling. Keep each step 1-3 sentences.
 SAFETY TEMPS (always include for any protein): chicken/turkey 165°F/74°C, ground beef/sausage 160°F/71°C, pork 145°F/63°C +3min rest, fish 145°F/63°C.
 PRIMARY PROTEIN SOURCE: Set "primary_protein_source" to the single main protein ingredient (e.g. "chicken", "lentils", "salmon", "chickpeas", "tofu", "eggs"). For vegetarian: name the specific plant protein used most.
 REQUIRED OUTPUT TAGS: Include "tags" object with: cuisine (e.g. "Mediterranean"), cooking_method (e.g. "sheet-pan"), base_carb (the actual carb used e.g. "rice", "pasta", "potatoes", "tortilla", "greens", or "none" if no carb — NEVER default to rice), key_ingredients (3-5 main items as string array), high_protein (boolean, true if 30g+ protein/serving), high_fiber (boolean, true if contains beans/lentils/chickpeas/whole grains), quick_cleanup (boolean, true if one-pan/sheet-pan/slow-cooker).
@@ -618,6 +647,7 @@ HEALTHINESS: ${request.healthiness_preference}
 TIME: ${request.time_available} min
 ${request.allergens_to_avoid.length > 0 ? `AVOID: ${request.allergens_to_avoid.join(", ")}` : ""}
 
+FIREHOUSE FLAVOR RULES: Must include a named sauce/marinade/glaze/seasoning blend (not just salt & pepper). Must use a real cooking technique (sear, roast, braise, caramelize, char, deglaze). Must include a garnish/finishing element in the last step. Must include at least one substantial vegetable component. Use specific ingredient names (not generic "seasoning" or "sauce").
 Give it a creative twist — different sauce, spice profile, or side variation. Keep it practical for a fire station kitchen.
 Return ONLY valid JSON matching this schema exactly:
 {"template_id":${template.template_id},"chosen_protein":"${proteinDisplay}","primary_protein_source":"","title":"","why_it_fits_tonight":"","timing":{"prep_minutes":0,"cook_minutes":0,"total_minutes":0},"protein_safety":[],"ingredients":[{"item":"","amount":"","notes":""}],"steps":[{"heading":"","body":""}],"cleanup_tip":"","macros_per_serving":{"calories":0,"protein_g":0,"carbs_g":0,"fat_g":0},"budget_level":"${budgetLevel}","budget_tips":[],"pro_tips":[]}`;
@@ -626,7 +656,7 @@ Return ONLY valid JSON matching this schema exactly:
     log(`Fallback remix attempt for template: ${template.template_name}`, "ai");
     const { content, tokensIn, tokensOut } = await callAI(
       fallbackPrompt,
-      "Creative firehall chef. Return ONLY valid JSON. No markdown.",
+      "Bold firehouse chef writing hearty, flavorful crew meals. Every recipe needs a named sauce/seasoning, real cooking technique, garnish, and vegetable component. Return ONLY valid JSON. No markdown.",
       false
     );
 
@@ -844,33 +874,37 @@ const SAFE_FALLBACK_RECIPES: Record<string, () => GenerateResponse> = {
     template_id: 0,
     chosen_protein: "Chicken",
     primary_protein_source: "Chicken",
-    title: "Smoky Paprika Sheet-Pan Chicken & Roasted Vegetables",
-    why_it_fits_tonight: "Crispy, protein-packed chicken with smoky paprika seasoning and roasted vegetables — one pan, zero fuss, and ready before the next call.",
+    title: "Smoky Paprika Sheet-Pan Chicken with Caramelized Vegetables and Lemon-Herb Drizzle",
+    why_it_fits_tonight: "Crispy, golden chicken thighs rubbed in smoky paprika and roasted alongside caramelized peppers and broccoli — finished with a bright lemon-herb drizzle. One pan, zero fuss, bold flavor.",
     timing: { prep_minutes: 10, cook_minutes: 25, total_minutes: 35 },
-    protein_safety: [{ protein: "Chicken", target_temp_f: 165, target_temp_c: 74, rest_minutes: 0, probe_where: "Thickest part of the breast", notes: "All poultry must reach 165°F." }],
+    protein_safety: [{ protein: "Chicken", target_temp_f: 165, target_temp_c: 74, rest_minutes: 0, probe_where: "Thickest part of the thigh", notes: "All poultry must reach 165°F." }],
     ingredients: [
-      { item: "Boneless skinless chicken breasts", amount: "3 lbs", notes: "Cut into 1-inch cubes" },
+      { item: "Boneless skinless chicken thighs", amount: "3 lbs", notes: "Trimmed and patted dry" },
       { item: "Broccoli florets", amount: "4 cups", notes: "" },
-      { item: "Bell peppers", amount: "3 large", notes: "Cut into strips" },
+      { item: "Bell peppers", amount: "3 large", notes: "Cut into thick strips" },
       { item: "Red onion", amount: "2 large", notes: "Cut into wedges" },
       { item: "Olive oil", amount: "3 tbsp", notes: "" },
-      { item: "Garlic powder", amount: "1 tbsp", notes: "" },
       { item: "Smoked paprika", amount: "1 tbsp", notes: "" },
+      { item: "Garlic powder", amount: "1 tsp", notes: "" },
+      { item: "Cumin", amount: "1 tsp", notes: "" },
+      { item: "Lemon", amount: "1 large", notes: "Juiced" },
+      { item: "Fresh parsley", amount: "1/4 cup", notes: "Roughly chopped" },
       { item: "Salt and pepper", amount: "To taste", notes: "" },
     ],
     steps: [
       { heading: "Preheat oven (425°F, 2 min)", body: "Preheat oven to 425°F. Line a large sheet pan with parchment paper." },
-      { heading: "Season the chicken (no heat, 5 min)", body: "Toss chicken cubes with olive oil, garlic powder, smoked paprika, salt, and pepper in a large bowl." },
-      { heading: "Arrange on sheet pan (no heat, 3 min)", body: "Spread seasoned chicken and all vegetables (broccoli florets, bell pepper strips, red onion wedges) in a single layer on the sheet pan. Don't overcrowd." },
-      { heading: "Roast (425°F oven, 25 min)", body: "Roast for 25 minutes, flipping chicken and vegetables halfway through, until chicken reaches 165°F and vegetables are tender with charred edges." },
-      { heading: "Serve (no heat, 2 min)", body: "Divide chicken and vegetables among plates. Serve immediately." },
+      { heading: "Build the smoky rub (no heat, 3 min)", body: "In a small bowl, whisk together olive oil, smoked paprika, garlic powder, cumin, salt, and pepper to form a thick spice paste." },
+      { heading: "Season the chicken thighs (no heat, 4 min)", body: "Coat chicken thighs generously with the smoky spice paste, making sure every surface is covered. Arrange on one half of the sheet pan." },
+      { heading: "Arrange vegetables (no heat, 3 min)", body: "Toss broccoli florets, bell pepper strips, and red onion wedges with a drizzle of olive oil. Spread in a single layer on the other half of the pan — don't overcrowd." },
+      { heading: "Roast until charred (425°F oven, 25 min)", body: "Roast for 25 minutes, flipping halfway through, until chicken reaches 165°F internally and vegetables have caramelized edges with light char marks." },
+      { heading: "Finish with lemon-herb drizzle (no heat, 2 min)", body: "Squeeze fresh lemon juice over the entire pan. Scatter chopped parsley generously over chicken and vegetables. Serve immediately." },
     ],
     cleanup_tip: "Line the sheet pan with parchment for zero-scrub cleanup.",
-    macros_per_serving: { calories: 380, protein_g: 42, carbs_g: 18, fat_g: 14 },
+    macros_per_serving: { calories: 390, protein_g: 42, carbs_g: 18, fat_g: 16 },
     budget_level: "standard",
-    budget_tips: ["Buy chicken in bulk and freeze portions.", "Use whatever vegetables are on sale."],
-    pro_tips: ["Don't overcrowd the pan — air circulation is key to crispy edges.", "Pat chicken dry before seasoning for better browning."],
-    tags: { cuisine: "", cooking_method: "sheet-pan", base_carb: "none", key_ingredients: ["Chicken", "Broccoli", "Bell Peppers"], high_protein: true, high_fiber: false, quick_cleanup: true },
+    budget_tips: ["Buy chicken thighs in bulk — they're cheaper and more flavorful than breasts.", "Use whatever vegetables are on sale."],
+    pro_tips: ["Pat chicken dry before rubbing — moisture is the enemy of crispy skin.", "Don't overcrowd the pan — air circulation is key to caramelized edges."],
+    tags: { cuisine: "Mediterranean", cooking_method: "sheet-pan", base_carb: "none", key_ingredients: ["Chicken Thighs", "Broccoli", "Bell Peppers", "Smoked Paprika"], high_protein: true, high_fiber: false, quick_cleanup: true },
     meal_style: "Sheet Pan",
     ingredients_used: [],
     extra_items_needed: [],
@@ -879,33 +913,37 @@ const SAFE_FALLBACK_RECIPES: Record<string, () => GenerateResponse> = {
     template_id: 0,
     chosen_protein: "Beef",
     primary_protein_source: "Beef",
-    title: "Seared Smash Burgers with Melted Cheddar",
-    why_it_fits_tonight: "Crispy-edged, juicy smash burgers with gooey melted cheddar — a crew-favorite that's ready in 25 minutes flat.",
+    title: "Seared Smash Burgers with Caramelized Onions and Smoky Burger Sauce",
+    why_it_fits_tonight: "Crispy-edged smash burgers with deeply caramelized onions, melted cheddar, and a smoky paprika-spiked burger sauce — a crew-favorite that's ready in 25 minutes flat.",
     timing: { prep_minutes: 10, cook_minutes: 15, total_minutes: 25 },
     protein_safety: [{ protein: "Beef (ground)", target_temp_f: 160, target_temp_c: 71, rest_minutes: 0, probe_where: "Center of patty", notes: "Ground beef must reach 160°F." }],
     ingredients: [
       { item: "Ground beef (80/20)", amount: "3 lbs", notes: "" },
-      { item: "Burger buns", amount: "6", notes: "Brioche or sesame" },
-      { item: "Cheddar cheese slices", amount: "6", notes: "" },
-      { item: "Lettuce leaves", amount: "6", notes: "" },
-      { item: "Tomato", amount: "2 large", notes: "Sliced" },
-      { item: "Red onion", amount: "1 large", notes: "Sliced into rings" },
+      { item: "Brioche burger buns", amount: "6", notes: "" },
+      { item: "Sharp cheddar cheese slices", amount: "6", notes: "" },
+      { item: "Yellow onion", amount: "2 large", notes: "Thinly sliced" },
+      { item: "Mayonnaise", amount: "1/3 cup", notes: "" },
+      { item: "Ketchup", amount: "2 tbsp", notes: "" },
+      { item: "Smoked paprika", amount: "1 tsp", notes: "" },
+      { item: "Garlic powder", amount: "1/2 tsp", notes: "" },
+      { item: "Dill pickles", amount: "12 slices", notes: "" },
+      { item: "Butter", amount: "3 tbsp", notes: "" },
       { item: "Salt and pepper", amount: "To taste", notes: "" },
-      { item: "Butter", amount: "2 tbsp", notes: "For toasting buns" },
     ],
     steps: [
-      { heading: "Form patties (no heat, 5 min)", body: "Divide ground beef into 6 equal balls (about 8 oz each). Season generously with salt and pepper." },
-      { heading: "Heat skillet (high, 2 min)", body: "Heat a large cast-iron skillet or flat grill over high heat until smoking." },
-      { heading: "Smash and sear (high, 3 min per side)", body: "Place beef balls on the hot skillet and smash flat with a sturdy spatula. Sear for 3 minutes until a deep crust forms. Flip, add cheddar cheese on top, and cook 2 more minutes until cheese melts and beef reaches 160°F." },
-      { heading: "Toast buns (medium, 2 min)", body: "Butter the burger buns and toast them cut-side down in the skillet until golden." },
-      { heading: "Assemble burgers (no heat, 3 min)", body: "Layer each toasted bun with lettuce, tomato slice, red onion ring, and the smash patty. Close and serve." },
+      { heading: "Caramelize the onions (medium, 8-10 min)", body: "Melt 1 tbsp butter in a skillet over medium heat. Add sliced onions and cook slowly, stirring occasionally, until deep golden brown and jammy — about 8-10 minutes. Set aside." },
+      { heading: "Build the smoky burger sauce (no heat, 2 min)", body: "Whisk together mayo, ketchup, smoked paprika, and garlic powder in a small bowl until smooth. Set aside." },
+      { heading: "Form patties (no heat, 3 min)", body: "Divide ground beef into 6 equal balls (about 8 oz each). Season generously with salt and pepper." },
+      { heading: "Smash and sear (high, 3 min per side)", body: "Heat a large cast-iron skillet over high heat until smoking. Place beef balls on the hot skillet and smash flat with a sturdy spatula. Sear for 3 minutes until a deep, dark crust forms. Flip, top with sharp cheddar, and cook 2 more minutes until cheese melts and beef reaches 160°F." },
+      { heading: "Toast the brioche buns (medium, 2 min)", body: "Butter the buns and toast them cut-side down in the skillet until golden brown and slightly crispy." },
+      { heading: "Assemble and finish (no heat, 3 min)", body: "Spread smoky burger sauce on both bun halves. Stack the smash patty, caramelized onions, and dill pickle slices. Close and serve immediately." },
     ],
     cleanup_tip: "Wipe the cast iron while still warm — don't soak it.",
-    macros_per_serving: { calories: 620, protein_g: 45, carbs_g: 32, fat_g: 35 },
+    macros_per_serving: { calories: 650, protein_g: 46, carbs_g: 34, fat_g: 37 },
     budget_level: "standard",
     budget_tips: ["80/20 ground beef has the best flavor-to-cost ratio.", "Buy buns in bulk when on sale."],
-    pro_tips: ["Don't press the patty after smashing — you'll lose all the juices.", "A hot, dry skillet is the secret to a great crust."],
-    tags: { cuisine: "", cooking_method: "stovetop", base_carb: "bread", key_ingredients: ["Ground Beef", "Cheddar", "Burger Buns"], high_protein: true, high_fiber: false, quick_cleanup: false },
+    pro_tips: ["Don't press the patty after smashing — you'll lose all the juices.", "A smoking-hot, dry skillet is the secret to that restaurant-quality crust."],
+    tags: { cuisine: "American", cooking_method: "stovetop", base_carb: "bread", key_ingredients: ["Ground Beef", "Sharp Cheddar", "Caramelized Onions", "Smoky Burger Sauce"], high_protein: true, high_fiber: false, quick_cleanup: false },
     meal_style: "Burger",
     ingredients_used: [],
     extra_items_needed: [],
@@ -914,33 +952,37 @@ const SAFE_FALLBACK_RECIPES: Record<string, () => GenerateResponse> = {
     template_id: 0,
     chosen_protein: "Chicken",
     primary_protein_source: "Chicken",
-    title: "Charred Chili-Lime Chicken Tacos",
-    why_it_fits_tonight: "Smoky, zesty chicken with a quick char — everyone builds their own in minutes. Perfect for a crew on the move.",
+    title: "Charred Chili-Lime Chicken Tacos with Chipotle Crema and Pickled Onion",
+    why_it_fits_tonight: "Smoky, seared chicken thighs with a chili-lime crust, topped with cool chipotle crema and tangy pickled red onion — everyone builds their own in minutes.",
     timing: { prep_minutes: 10, cook_minutes: 15, total_minutes: 25 },
     protein_safety: [{ protein: "Chicken", target_temp_f: 165, target_temp_c: 74, rest_minutes: 0, probe_where: "Thickest part", notes: "All poultry must reach 165°F." }],
     ingredients: [
-      { item: "Boneless skinless chicken thighs", amount: "3 lbs", notes: "" },
+      { item: "Boneless skinless chicken thighs", amount: "3 lbs", notes: "Patted dry" },
       { item: "Flour tortillas", amount: "12", notes: "Street taco size or large" },
       { item: "Lime", amount: "3", notes: "Cut into wedges" },
       { item: "Cilantro", amount: "1 bunch", notes: "Roughly chopped" },
-      { item: "Red onion", amount: "1 large", notes: "Diced" },
+      { item: "Red onion", amount: "1 large", notes: "Half diced, half thinly sliced for pickling" },
       { item: "Chili powder", amount: "2 tbsp", notes: "" },
       { item: "Cumin", amount: "1 tbsp", notes: "" },
+      { item: "Sour cream", amount: "1/2 cup", notes: "" },
+      { item: "Chipotle peppers in adobo", amount: "2 peppers + 1 tbsp adobo sauce", notes: "Minced" },
+      { item: "Apple cider vinegar", amount: "1/4 cup", notes: "For quick-pickling the onion" },
       { item: "Olive oil", amount: "2 tbsp", notes: "" },
       { item: "Salt and pepper", amount: "To taste", notes: "" },
     ],
     steps: [
-      { heading: "Season chicken (no heat, 5 min)", body: "Toss chicken thighs with olive oil, chili powder, cumin, salt, and pepper." },
-      { heading: "Cook chicken (medium-high, 12 min)", body: "Sear chicken in a hot skillet for 5-6 minutes per side until charred and internal temp reaches 165°F. Rest 3 minutes, then slice into strips." },
-      { heading: "Warm tortillas (medium, 2 min)", body: "Warm flour tortillas in a dry skillet or directly over a gas flame for 15 seconds per side." },
-      { heading: "Assemble tacos (no heat, 3 min)", body: "Fill each tortilla with sliced chicken, diced red onion, chopped cilantro, and a squeeze of lime juice. Serve immediately." },
+      { heading: "Quick-pickle the onions (no heat, 3 min)", body: "Toss thinly sliced red onion with apple cider vinegar and a pinch of salt in a small bowl. Let sit while you cook — they'll turn bright pink and tangy." },
+      { heading: "Build the chipotle crema (no heat, 2 min)", body: "Whisk sour cream with minced chipotle peppers and adobo sauce until smooth. Set aside." },
+      { heading: "Season and sear the chicken (medium-high, 12 min)", body: "Rub chicken thighs with olive oil, chili powder, cumin, salt, and pepper. Sear in a screaming-hot skillet for 5-6 minutes per side until deeply charred and internal temp reaches 165°F. Rest 3 minutes, then slice into strips." },
+      { heading: "Char the tortillas (high, 2 min)", body: "Warm flour tortillas directly over a gas flame or in a dry skillet for 15 seconds per side until lightly charred and pliable." },
+      { heading: "Assemble and finish (no heat, 3 min)", body: "Fill each tortilla with sliced chicken, diced red onion, and a drizzle of chipotle crema. Top with pickled onion, chopped cilantro, and a squeeze of fresh lime." },
     ],
     cleanup_tip: "One skillet, one cutting board — rinse and done.",
-    macros_per_serving: { calories: 420, protein_g: 38, carbs_g: 35, fat_g: 14 },
+    macros_per_serving: { calories: 440, protein_g: 39, carbs_g: 36, fat_g: 16 },
     budget_level: "standard",
     budget_tips: ["Chicken thighs are cheaper and more flavorful than breasts.", "Buy limes in bags for better value."],
     pro_tips: ["Let the chicken rest before slicing to keep it juicy.", "Charring tortillas over a flame adds great smoky flavor."],
-    tags: { cuisine: "Mexican", cooking_method: "stovetop", base_carb: "tortillas", key_ingredients: ["Chicken", "Tortillas", "Cilantro", "Lime"], high_protein: true, high_fiber: false, quick_cleanup: true },
+    tags: { cuisine: "Tex-Mex", cooking_method: "stovetop", base_carb: "tortillas", key_ingredients: ["Chicken Thighs", "Tortillas", "Chipotle Crema", "Pickled Onion"], high_protein: true, high_fiber: false, quick_cleanup: true },
     meal_style: "Taco",
     ingredients_used: [],
     extra_items_needed: [],
@@ -949,36 +991,40 @@ const SAFE_FALLBACK_RECIPES: Record<string, () => GenerateResponse> = {
     template_id: 0,
     chosen_protein: "Beef",
     primary_protein_source: "Beef",
-    title: "Spiced Chili-Cheese Loaded Fries",
-    why_it_fits_tonight: "Crispy fries piled high with spiced beef, melted cheddar, and a kick of jalapeño — shareable, satisfying, and done in 35 minutes.",
+    title: "Smoky Chili-Cheese Loaded Fries with Charred Peppers and Chipotle Sour Cream",
+    why_it_fits_tonight: "Crispy fries buried under smoky spiced beef, charred bell peppers, bubbly melted cheddar, and a cool chipotle sour cream drizzle — shareable, satisfying, and done in 35 minutes.",
     timing: { prep_minutes: 10, cook_minutes: 25, total_minutes: 35 },
     protein_safety: [{ protein: "Beef (ground)", target_temp_f: 160, target_temp_c: 71, rest_minutes: 0, probe_where: "Center of meat", notes: "Ground beef must reach 160°F." }],
     ingredients: [
       { item: "Frozen French fries", amount: "3 lbs", notes: "Thick-cut preferred" },
       { item: "Ground beef (80/20)", amount: "2 lbs", notes: "" },
-      { item: "Shredded cheddar cheese", amount: "2 cups", notes: "" },
+      { item: "Shredded sharp cheddar cheese", amount: "2 cups", notes: "" },
       { item: "Red onion", amount: "1 large", notes: "Diced" },
-      { item: "Jalapeños", amount: "3", notes: "Sliced" },
+      { item: "Bell peppers", amount: "2 large", notes: "Cut into small dice" },
+      { item: "Jalapeños", amount: "3", notes: "Sliced into rings" },
       { item: "Chili powder", amount: "2 tbsp", notes: "" },
+      { item: "Smoked paprika", amount: "1 tsp", notes: "" },
       { item: "Cumin", amount: "1 tbsp", notes: "" },
-      { item: "Sour cream", amount: "1 cup", notes: "For topping" },
-      { item: "Salt and pepper", amount: "To taste", notes: "" },
+      { item: "Garlic powder", amount: "1 tsp", notes: "" },
+      { item: "Sour cream", amount: "1 cup", notes: "" },
+      { item: "Chipotle peppers in adobo", amount: "1 pepper + 1 tsp adobo sauce", notes: "Minced" },
+      { item: "Green onions", amount: "4 stalks", notes: "Sliced for garnish" },
     ],
     steps: [
-      { heading: "Preheat oven (425°F, 2 min)", body: "Preheat oven to 425°F. Line a large sheet pan with parchment paper." },
-      { heading: "Bake fries (425°F oven, 20 min)", body: "Spread frozen fries in a single layer on the sheet pan. Bake for 20 minutes until golden and crispy, flipping halfway through." },
-      { heading: "Brown beef (medium-high, 8 min)", body: "While fries bake, brown ground beef in a large skillet over medium-high heat. Break into crumbles until no pink remains and internal temp reaches 160°F. Drain excess fat." },
-      { heading: "Season beef (medium, 2 min)", body: "Add chili powder, cumin, salt, and pepper to the cooked beef. Stir to coat evenly and cook 1-2 minutes until fragrant." },
-      { heading: "Load the fries (no heat, 3 min)", body: "Top the crispy fries with seasoned beef, diced red onion, sliced jalapeños, and shredded cheddar cheese." },
-      { heading: "Melt cheese (425°F oven, 3 min)", body: "Return the loaded fries to the oven for 2-3 minutes until cheese is melted and bubbly." },
-      { heading: "Serve (no heat, 2 min)", body: "Dollop sour cream on top. Serve immediately on the sheet pan for easy sharing." },
+      { heading: "Bake the fries (425°F oven, 20 min)", body: "Preheat oven to 425°F. Spread frozen fries in a single layer on a parchment-lined sheet pan. Bake for 20 minutes until golden and crispy, flipping halfway through." },
+      { heading: "Build the chipotle sour cream (no heat, 2 min)", body: "While fries bake, stir together sour cream with minced chipotle pepper and adobo sauce until smooth. Set aside." },
+      { heading: "Brown and season the beef (medium-high, 8 min)", body: "Brown ground beef in a large skillet over medium-high heat, breaking into crumbles until no pink remains (160°F). Drain excess fat. Add chili powder, smoked paprika, cumin, garlic powder, salt, and pepper — stir until fragrant, about 1-2 minutes." },
+      { heading: "Char the peppers (high, 4 min)", body: "In the same skillet over high heat, toss diced bell peppers and cook without stirring for 2 minutes until charred on one side. Stir once and char another 2 minutes until blistered and slightly softened." },
+      { heading: "Load the fries (no heat, 3 min)", body: "Top the crispy fries with seasoned beef, charred bell peppers, diced red onion, sliced jalapeño rings, and shredded sharp cheddar." },
+      { heading: "Broil until bubbly (broil/high, 3 min)", body: "Return the loaded fries to the oven under the broiler for 2-3 minutes until cheese is melted, bubbly, and starting to brown." },
+      { heading: "Finish and serve (no heat, 2 min)", body: "Drizzle chipotle sour cream generously over the top. Scatter sliced green onions for color and crunch. Serve immediately on the sheet pan for easy sharing." },
     ],
     cleanup_tip: "Parchment paper on the sheet pan means almost no scrubbing.",
-    macros_per_serving: { calories: 580, protein_g: 38, carbs_g: 42, fat_g: 28 },
+    macros_per_serving: { calories: 590, protein_g: 39, carbs_g: 42, fat_g: 29 },
     budget_level: "standard",
     budget_tips: ["Frozen fries are cheaper than fresh-cut.", "Use store-brand shredded cheese."],
     pro_tips: ["Don't overcrowd the fries — spread them out for maximum crispiness.", "Drain the beef well so fries stay crispy under the toppings."],
-    tags: { cuisine: "", cooking_method: "oven", base_carb: "fries", key_ingredients: ["French Fries", "Ground Beef", "Cheddar", "Jalapeños"], high_protein: true, high_fiber: false, quick_cleanup: true },
+    tags: { cuisine: "Tex-Mex", cooking_method: "oven", base_carb: "fries", key_ingredients: ["French Fries", "Ground Beef", "Sharp Cheddar", "Charred Bell Peppers", "Chipotle Sour Cream"], high_protein: true, high_fiber: false, quick_cleanup: true },
     meal_style: "Loaded Fries",
     ingredients_used: [],
     extra_items_needed: [],

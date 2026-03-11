@@ -17,6 +17,7 @@ Key architectural features and design patterns include:
 - **Shopping List**: Automatically generates a categorized shopping list from recipes.
 - **Hall Favorites**: Client-side saving with a backend endpoint for up to 5 favorites per session.
 - **Hall Vote**: Enables creation and sharing of recipe polls among crew members with real-time results.
+- **Firehouse Flavor System**: AI prompts enforce mandatory recipe composition — every recipe must include a named sauce/marinade/glaze/seasoning blend, at least one real cooking technique (sear, roast, braise, caramelize, deglaze, etc.), a garnish/finishing element, and a substantial vegetable component. Prompts lean into bold cuisines (Tex-Mex, Italian-American, Southern, BBQ, Asian takeout, Mediterranean, Cajun, Korean, Greek). Titles must hint at sauce/technique/flavor profile. Steps forbid generic language like "cook the protein" — technique-specific verbs required. Safe fallback recipes also follow this pattern with named sauces and garnishes.
 - **Cuisine Style Filter**: Allows specifying a cuisine preference without overriding core constraints.
 - **Structure Rotation System**: Selects `meal_style` from 21 structure types with weighted random selection and rotation logic to ensure variety.
 - **Healthy Variety System**: Incorporates healthy bias (lean, balanced, comfort) and tracks recent generations to prevent repetition of cuisines, cooking methods, proteins, carbs, and structures.
