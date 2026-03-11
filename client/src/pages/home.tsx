@@ -430,6 +430,20 @@ export default function Home() {
     setFilters(newFilters);
   }, []);
 
+  const classicTriggered = useRef(false);
+  useEffect(() => {
+    if (classicTriggered.current) return;
+    const params = new URLSearchParams(window.location.search);
+    const classicName = params.get("classic");
+    if (classicName) {
+      classicTriggered.current = true;
+      window.history.replaceState({}, "", "/");
+      setTimeout(() => {
+        handleGenerate(filters);
+      }, 300);
+    }
+  }, [filters, handleGenerate]);
+
   const onEmailClick = useCallback(() => {
     trackEmailModalOpened();
     setEmailModalOpen(true);

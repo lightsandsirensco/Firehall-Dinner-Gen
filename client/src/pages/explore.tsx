@@ -448,27 +448,34 @@ function buildSearchParams(filters: ExploreFilters): URLSearchParams {
   return params;
 }
 
+interface ClassicGeneratorFilters {
+  meal_format: string;
+  proteins: string[];
+  cuisine_style: string;
+}
+
 interface FirehallClassic {
   title: string;
   searchQuery: string;
   protein: string;
   style: string;
   emoji: string;
+  generatorFilters: ClassicGeneratorFilters;
 }
 
 const ALL_FIREHALL_CLASSICS: FirehallClassic[] = [
-  { title: "Firehall Chili", searchQuery: "beef chili", protein: "Beef", style: "One-Pot", emoji: "🌶️" },
-  { title: "Smash Burgers + Fries", searchQuery: "smash burgers with fries", protein: "Beef", style: "Grill", emoji: "🍔" },
-  { title: "Taco Night", searchQuery: "ground beef tacos", protein: "Beef", style: "Tacos", emoji: "🌮" },
-  { title: "BBQ Chicken", searchQuery: "bbq chicken", protein: "Chicken", style: "BBQ", emoji: "🍗" },
-  { title: "Cajun Chicken Pasta", searchQuery: "cajun chicken pasta", protein: "Chicken", style: "Pasta", emoji: "🍝" },
-  { title: "Pulled Pork Sandwiches", searchQuery: "pulled pork sandwich", protein: "Pork", style: "Sandwich", emoji: "🥪" },
-  { title: "Meatball Subs", searchQuery: "meatball sub sandwich", protein: "Beef", style: "Sandwich", emoji: "🥖" },
-  { title: "Breakfast for Dinner", searchQuery: "breakfast for dinner eggs bacon", protein: "Mixed", style: "Breakfast", emoji: "🍳" },
-  { title: "Loaded Nachos", searchQuery: "loaded nachos with ground beef", protein: "Beef", style: "Snack", emoji: "🧀" },
-  { title: "Sheet Pan Sausage & Veg", searchQuery: "sheet pan sausage vegetables", protein: "Pork", style: "Sheet Pan", emoji: "🥘" },
-  { title: "Mac & Cheese with Protein", searchQuery: "mac and cheese with chicken", protein: "Chicken", style: "Comfort", emoji: "🧈" },
-  { title: "Chicken Parm Pasta", searchQuery: "chicken parmesan pasta", protein: "Chicken", style: "Pasta", emoji: "🍝" },
+  { title: "Firehall Chili", searchQuery: "beef chili", protein: "Beef", style: "One-Pot", emoji: "🌶️", generatorFilters: { meal_format: "soup_chili", proteins: ["beef"], cuisine_style: "mexican" } },
+  { title: "Smash Burgers + Fries", searchQuery: "smash burgers with fries", protein: "Beef", style: "Grill", emoji: "🍔", generatorFilters: { meal_format: "burger", proteins: ["beef"], cuisine_style: "any" } },
+  { title: "Taco Night", searchQuery: "ground beef tacos", protein: "Beef", style: "Tacos", emoji: "🌮", generatorFilters: { meal_format: "tacos", proteins: ["beef"], cuisine_style: "mexican" } },
+  { title: "BBQ Chicken", searchQuery: "bbq chicken", protein: "Chicken", style: "BBQ", emoji: "🍗", generatorFilters: { meal_format: "plated_main", proteins: ["chicken"], cuisine_style: "bbq" } },
+  { title: "Cajun Chicken Pasta", searchQuery: "cajun chicken pasta", protein: "Chicken", style: "Pasta", emoji: "🍝", generatorFilters: { meal_format: "pasta", proteins: ["chicken"], cuisine_style: "cajun" } },
+  { title: "Pulled Pork Sandwiches", searchQuery: "pulled pork sandwich", protein: "Pork", style: "Sandwich", emoji: "🥪", generatorFilters: { meal_format: "sandwich", proteins: ["pork"], cuisine_style: "bbq" } },
+  { title: "Meatball Subs", searchQuery: "meatball sub sandwich", protein: "Beef", style: "Sandwich", emoji: "🥖", generatorFilters: { meal_format: "sandwich", proteins: ["beef"], cuisine_style: "italian" } },
+  { title: "Breakfast for Dinner", searchQuery: "breakfast for dinner eggs bacon", protein: "Mixed", style: "Breakfast", emoji: "🍳", generatorFilters: { meal_format: "breakfast", proteins: ["chicken", "pork"], cuisine_style: "any" } },
+  { title: "Loaded Nachos", searchQuery: "loaded nachos with ground beef", protein: "Beef", style: "Snack", emoji: "🧀", generatorFilters: { meal_format: "loaded_fries", proteins: ["beef"], cuisine_style: "mexican" } },
+  { title: "Sheet Pan Sausage & Veg", searchQuery: "sheet pan sausage vegetables", protein: "Pork", style: "Sheet Pan", emoji: "🥘", generatorFilters: { meal_format: "sheet_pan", proteins: ["pork"], cuisine_style: "any" } },
+  { title: "Mac & Cheese with Protein", searchQuery: "mac and cheese with chicken", protein: "Chicken", style: "Comfort", emoji: "🧈", generatorFilters: { meal_format: "casserole", proteins: ["chicken"], cuisine_style: "any" } },
+  { title: "Chicken Parm Pasta", searchQuery: "chicken parmesan pasta", protein: "Chicken", style: "Pasta", emoji: "🍝", generatorFilters: { meal_format: "pasta", proteins: ["chicken"], cuisine_style: "italian" } },
 ];
 
 function getRotatedClassics(count: number = 8): FirehallClassic[] {
@@ -1033,11 +1040,21 @@ export default function ExplorePage() {
                   key={classic.title}
                   data-testid={`classic-item-${i}`}
                   onClick={() => {
-                    const updated = { ...filters, freeText: classic.searchQuery };
-                    setFilters(updated);
-                    setSearchParams(buildSearchParams(updated));
-                    setSubmitted(true);
-                    setSelectedRecipeId(null);
+                    try {
+                      const saved = localStorage.getItem("firehall_filters");
+                      const existing = saved ? JSON.parse(saved) : {};
+                      const merged = {
+                        ...existing,
+                        meal_format: classic.generatorFilters.meal_format,
+                        proteins: classic.generatorFilters.proteins,
+                        cuisine_style: classic.generatorFilters.cuisine_style,
+                        use_what_we_have: false,
+                        ingredients_on_hand_text: "",
+                        vegetarian_swap_needed: false,
+                      };
+                      localStorage.setItem("firehall_filters", JSON.stringify(merged));
+                    } catch {}
+                    window.location.href = "/?classic=" + encodeURIComponent(classic.title);
                   }}
                   className="snap-start shrink-0 w-[160px] min-w-[160px] md:w-auto md:min-w-0 md:shrink group relative overflow-hidden rounded-xl border border-border/30 bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm p-4 text-left transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1 active:translate-y-0"
                 >
