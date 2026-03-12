@@ -34,7 +34,7 @@ function fmtQty(qty: number, unit: string): string {
   return unit ? `${display} ${unit}` : display;
 }
 
-function buildPrintHtml(recipe: ClientRecipeResponse, crewSize: number): string {
+export function buildPrintHtml(recipe: ClientRecipeResponse, crewSize: number): string {
   const safetyHtml = recipe.protein_safety && recipe.protein_safety.internal_temp_f > 0
     ? `<tr>
         <td style="font-weight:700;padding:6px 12px 6px 0">${recipe.protein_safety.protein}</td>

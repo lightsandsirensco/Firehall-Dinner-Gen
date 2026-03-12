@@ -18,6 +18,7 @@ import { ExploreRecipeCard, ExploreRecipeCardSkeleton } from "@/components/explo
 import { buildShoppingListFromClientMeal } from "@/lib/shopping-list";
 import { EmailModal } from "@/components/email-modal";
 import { ShoppingListModal } from "@/components/shopping-list-modal";
+import { buildPrintHtml } from "@/components/recipe-card";
 import type { ClientRecipeResponse, ClientIngredient } from "@shared/schema";
 
 interface SearchResult {
@@ -581,6 +582,7 @@ export default function ExplorePage() {
   const [submitted, setSubmitted] = useState(false);
   const [searchParams, setSearchParams] = useState<URLSearchParams | null>(null);
   const [selectedRecipeId, setSelectedRecipeId] = useState<number | null>(null);
+  const [classicLoading, setClassicLoading] = useState<string | null>(null);
   const [favCount] = useState(() => getSavedCount());
   const seenIdsRef = useRef<number[]>((() => {
     try {
@@ -1035,37 +1037,50 @@ export default function ExplorePage() {
             </div>
             <p className="text-sm text-muted-foreground mb-5">Crowd favourites built for the hall.</p>
             <div className="flex flex-nowrap gap-3 overflow-x-auto pb-3 snap-x snap-mandatory scrollbar-thin md:grid md:grid-cols-4 md:overflow-visible md:pb-0">
-              {classicsToShow.map((classic, i) => (
-                <button
-                  key={classic.title}
-                  data-testid={`classic-item-${i}`}
-                  onClick={() => {
-                    try {
-                      const saved = localStorage.getItem("firehall_filters");
-                      const existing = saved ? JSON.parse(saved) : {};
-                      const merged = {
-                        ...existing,
-                        meal_format: classic.generatorFilters.meal_format,
-                        proteins: classic.generatorFilters.proteins,
-                        cuisine_style: classic.generatorFilters.cuisine_style,
-                        use_what_we_have: false,
-                        ingredients_on_hand_text: "",
-                        vegetarian_swap_needed: false,
-                      };
-                      localStorage.setItem("firehall_filters", JSON.stringify(merged));
-                    } catch {}
-                    window.location.href = "/?classic=" + encodeURIComponent(classic.title);
-                  }}
-                  className="snap-start shrink-0 w-[160px] min-w-[160px] md:w-auto md:min-w-0 md:shrink group relative overflow-hidden rounded-xl border border-border/30 bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm p-4 text-left transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1 active:translate-y-0"
-                >
-                  <span className="text-2xl block mb-2">{classic.emoji}</span>
-                  <span className="text-sm font-semibold leading-tight block mb-1.5 group-hover:text-primary transition-colors">{classic.title}</span>
-                  <div className="flex items-center gap-1.5">
-                    <span className="text-[10px] text-muted-foreground bg-primary/10 px-1.5 py-0.5 rounded-full font-medium">{classic.protein}</span>
-                    <span className="text-[10px] text-muted-foreground">{classic.style}</span>
-                  </div>
-                </button>
-              ))}
+              {classicsToShow.map((classic, i) => {
+                const isThisLoading = classicLoading === classic.title;
+                return (
+                  <button
+                    key={classic.title}
+                    data-testid={`classic-item-${i}`}
+                    disabled={classicLoading !== null}
+                    onClick={async () => {
+                      setClassicLoading(classic.title);
+                      try {
+                        const params = new URLSearchParams({ q: classic.searchQuery, number: "3" });
+                        const res = await fetch(`/api/explore/search?${params}`);
+                        if (res.ok) {
+                          const data = await res.json();
+                          const firstId: number | undefined = data?.results?.[0]?.id;
+                          if (firstId) {
+                            setSelectedRecipeId(firstId);
+                            setClassicLoading(null);
+                            return;
+                          }
+                        }
+                      } catch {}
+                      // Graceful fallback: search within Explore using the query
+                      setClassicLoading(null);
+                      const updated = { ...filters, freeText: classic.searchQuery };
+                      setFilters(updated);
+                      setSearchParams(buildSearchParams(updated));
+                      setSubmitted(true);
+                    }}
+                    className="snap-start shrink-0 w-[160px] min-w-[160px] md:w-auto md:min-w-0 md:shrink group relative overflow-hidden rounded-xl border border-border/30 bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm p-4 text-left transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1 active:translate-y-0 disabled:opacity-60 disabled:cursor-wait"
+                  >
+                    {isThisLoading ? (
+                      <Loader2 className="w-5 h-5 animate-spin mb-2 text-primary" />
+                    ) : (
+                      <span className="text-2xl block mb-2">{classic.emoji}</span>
+                    )}
+                    <span className="text-sm font-semibold leading-tight block mb-1.5 group-hover:text-primary transition-colors">{classic.title}</span>
+                    <div className="flex items-center gap-1.5">
+                      <span className="text-[10px] text-muted-foreground bg-primary/10 px-1.5 py-0.5 rounded-full font-medium">{classic.protein}</span>
+                      <span className="text-[10px] text-muted-foreground">{classic.style}</span>
+                    </div>
+                  </button>
+                );
+              })}
             </div>
           </div>
         )}
@@ -1284,7 +1299,7 @@ function RecipeDetailView({ recipe, crewSize }: { recipe: RecipeDetail; crewSize
   };
 
   const handlePrint = () => {
-    const html = buildExplorePrintHtml(recipe, crewSize);
+    const html = buildPrintHtml(clientRecipe, crewSize);
     const printWindow = window.open("", "_blank");
     if (printWindow) {
       printWindow.document.write(html);
