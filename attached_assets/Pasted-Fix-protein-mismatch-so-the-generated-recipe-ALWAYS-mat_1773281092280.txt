@@ -1,0 +1,52 @@
+Fix protein mismatch so the generated recipe ALWAYS matches the selected protein filter.
+
+Problem:
+A user can select chicken, but the app returns a shrimp or seafood recipe while still labeling it as chicken. This is a major trust-breaking bug.
+
+Requirements:
+
+1) Make protein a HARD FILTER
+When a user selects a protein (chicken, beef, pork, turkey, seafood, vegetarian), the returned recipe must actually contain that protein as the primary protein.
+
+2) For Spoonacular search:
+- Use the selected protein as a strict search constraint, not just a soft keyword.
+- Filter out any results whose title, main ingredients, or metadata do not match the selected protein.
+Examples:
+  - If chicken selected -> reject shrimp, salmon, beef, pork, turkey, tofu, chickpea recipes
+  - If seafood selected -> allow shrimp, salmon, cod, tuna, etc.
+  - If vegetarian selected -> reject all meat/seafood
+
+3) Add a protein validator before returning any recipe:
+- Inspect title
+- Inspect ingredients
+- Inspect source data if available
+- Infer the actual primary protein from the recipe
+- If inferred protein != selected protein, reject the recipe and choose another one
+
+4) Do NOT overwrite recipe protein labels from the selected filter.
+Instead:
+- derive chosen_protein from the ACTUAL recipe content
+- then verify it matches the selected protein filter
+- only return if they match
+
+5) Add a retry step:
+If Spoonacular returns a mismatched recipe:
+- discard it
+- try the next matching Spoonacular result
+- if no Spoonacular result matches, then fall back safely
+- never show a mismatched recipe to the user
+
+6) UI labels must reflect the final validated protein only.
+If recipe is shrimp, it must not say chicken.
+If recipe is chicken, it must not say seafood.
+
+7) Acceptance test:
+- Select chicken and generate 20 recipes -> all must be chicken
+- Select beef and generate 20 -> all must be beef
+- Select seafood and generate 20 -> all must be seafood
+- Select vegetarian and generate 20 -> no meat/seafood
+- 0 mismatches between title, ingredients, and displayed protein label
+
+8) Add logs:
+[proteinAudit] selected=chicken inferred=shrimp result=rejected
+[proteinAudit] selected=chicken inferred=chicken result=accepted

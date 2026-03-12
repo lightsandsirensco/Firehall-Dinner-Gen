@@ -180,6 +180,72 @@ function inferCookingMethod(steps: RecipeStep[]): string {
   return "stovetop";
 }
 
+// ─── Protein Audit System ────────────────────────────────────────────────────
+
+const PROTEIN_KEYWORD_GROUPS: Record<string, string[]> = {
+  chicken: ["chicken", "hen", "poultry", "rotisserie"],
+  turkey: ["turkey", "ground turkey"],
+  beef: [
+    "beef", "steak", "brisket", "sirloin", "ribeye", "chuck", "ground beef",
+    "meatball", "meatballs", "hamburger", "short rib", "short ribs",
+  ],
+  pork: [
+    "pork", "ham", "bacon", "prosciutto", "pancetta", "sausage", "chorizo",
+    "carnitas", "pulled pork", "ribs", "spare rib", "bratwurst", "kielbasa",
+    "salami", "pepperoni",
+  ],
+  fish: [
+    "salmon", "cod", "tilapia", "tuna", "halibut", "trout", "bass", "snapper",
+    "mahi", "haddock", "flounder", "catfish", "pollock", "swordfish", "branzino",
+    "sea bass", "mackerel", "sardine", "anchovy", "ahi",
+  ],
+  seafood: [
+    "shrimp", "prawn", "crab", "lobster", "scallop", "clam", "mussel",
+    "oyster", "squid", "calamari", "octopus", "langoustine",
+  ],
+};
+
+const ALL_MEAT_SEAFOOD_WORDS = Object.values(PROTEIN_KEYWORD_GROUPS).flat();
+
+/**
+ * Infer the actual protein type from a recipe's title and ingredient list.
+ * Returns "chicken" | "turkey" | "beef" | "pork" | "fish" | "seafood" | "vegetarian" | "unknown"
+ */
+export function inferActualProtein(
+  title: string,
+  ingredientNames: string[],
+): string {
+  const combined = [title, ...ingredientNames].join(" ").toLowerCase();
+
+  for (const [protein, keywords] of Object.entries(PROTEIN_KEYWORD_GROUPS)) {
+    for (const kw of keywords) {
+      const regex = new RegExp(`\\b${kw.replace(/ /g, "\\s+")}`, "i");
+      if (regex.test(combined)) return protein;
+    }
+  }
+
+  const hasMeat = ALL_MEAT_SEAFOOD_WORDS.some((kw) =>
+    new RegExp(`\\b${kw.replace(/ /g, "\\s+")}`, "i").test(combined),
+  );
+  if (!hasMeat) return "vegetarian";
+
+  return "unknown";
+}
+
+/**
+ * Check whether the inferred protein satisfies the selected protein filter.
+ * "seafood" filter accepts both fish and shellfish (seafood).
+ * "vegetarian" filter rejects any meat or seafood.
+ */
+export function proteinMatchesFilter(
+  inferred: string,
+  selected: string,
+): boolean {
+  if (selected === "seafood") return inferred === "seafood" || inferred === "fish";
+  if (selected === "vegetarian") return inferred === "vegetarian";
+  return inferred === selected;
+}
+
 function inferMealStyle(dishTypes: string[], title: string, mealFormat?: string): string {
   const types = (dishTypes || []).map((d) => d.toLowerCase());
   const t = title.toLowerCase();
@@ -307,6 +373,46 @@ export function convertSpoonacularToGenerateResponse(
   };
 }
 
+async function tryConvertCandidate(
+  candidate: { id: number; title: string },
+  request: GenerateRequest,
+  chosenProtein: string,
+): Promise<GenerateResponse | null> {
+  const detail = await getRecipeById(candidate.id, true);
+
+  const hasSteps =
+    detail.analyzedInstructions &&
+    detail.analyzedInstructions.length > 0 &&
+    detail.analyzedInstructions[0].steps.length > 0;
+
+  if (!hasSteps) {
+    log(
+      `[spoonacular-generator] id=${candidate.id} "${candidate.title}" — no parsed steps, skipping`,
+      "spoonacular",
+    );
+    return null;
+  }
+
+  const ingredientNames = detail.extendedIngredients.map((i) => i.name);
+  const inferred = inferActualProtein(detail.title, ingredientNames);
+  const matches = proteinMatchesFilter(inferred, chosenProtein);
+
+  if (matches) {
+    log(
+      `[proteinAudit] selected=${chosenProtein} inferred=${inferred} result=accepted title="${detail.title}"`,
+      "spoonacular",
+    );
+  } else {
+    log(
+      `[proteinAudit] selected=${chosenProtein} inferred=${inferred} result=rejected title="${detail.title}"`,
+      "spoonacular",
+    );
+    return null;
+  }
+
+  return convertSpoonacularToGenerateResponse(detail, request, chosenProtein);
+}
+
 export async function fetchBestSpoonacularRecipe(
   request: GenerateRequest,
   chosenProtein: string,
@@ -380,60 +486,50 @@ export async function fetchBestSpoonacularRecipe(
       return null;
     }
 
-    const candidateCount = Math.min(3, searchResult.results.length);
-    const randomIndex = Math.floor(Math.random() * candidateCount);
-    const best = searchResult.results[randomIndex];
+    // --- Pre-filter candidates by title protein match (cheap, no API call) ---
+    const titlePassing = searchResult.results.filter((r) => {
+      const inferred = inferActualProtein(r.title, []);
+      // If title gives a clear mismatch, skip early. If title is ambiguous ("unknown"), let detail check decide.
+      if (inferred === "unknown") return true;
+      return proteinMatchesFilter(inferred, chosenProtein);
+    });
+
+    const candidates =
+      titlePassing.length > 0 ? titlePassing : searchResult.results;
 
     log(
-      `[spoonacular-generator] Selected recipe id=${best.id} title="${best.title}" (from ${searchResult.results.length} results)`,
+      `[spoonacular-generator] ${searchResult.results.length} results, ${candidates.length} pass title protein check for selected="${chosenProtein}"`,
       "spoonacular",
     );
 
-    const detail = await getRecipeById(best.id, true);
-
-    const hasSteps =
-      detail.analyzedInstructions &&
-      detail.analyzedInstructions.length > 0 &&
-      detail.analyzedInstructions[0].steps.length > 0;
-
-    if (!hasSteps) {
-      log(
-        `[spoonacular-generator] Recipe id=${best.id} has no parsed steps — trying next candidate`,
-        "spoonacular",
-      );
-      const fallbackCandidate = searchResult.results.find(
-        (r, i) => i !== randomIndex && r.id !== best.id,
-      );
-      if (fallbackCandidate) {
-        const detail2 = await getRecipeById(fallbackCandidate.id, true);
-        const has2 =
-          detail2.analyzedInstructions?.[0]?.steps?.length > 0;
-        if (has2) {
-          log(
-            `[spoonacular-generator] Using fallback candidate id=${fallbackCandidate.id} title="${fallbackCandidate.title}"`,
-            "spoonacular",
-          );
-          const recipe2 = convertSpoonacularToGenerateResponse(detail2, request, chosenProtein);
-          log(
-            `[spoonacular-generator] Converted: "${recipe2.title}" | ${recipe2.ingredients.length} ingredients | ${recipe2.steps.length} steps | source=spoonacular`,
-            "spoonacular",
-          );
-          return recipe2;
-        }
-      }
-      log(
-        `[spoonacular-generator] No usable steps in any candidate — falling back to AI`,
-        "spoonacular",
-      );
-      return null;
+    // Shuffle top-5 candidates so we get variety on repeated requests
+    const pool = candidates.slice(0, 5);
+    for (let i = pool.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [pool[i], pool[j]] = [pool[j], pool[i]];
     }
 
-    const recipe = convertSpoonacularToGenerateResponse(detail, request, chosenProtein);
+    // Try each candidate in order — return first that passes protein audit + has steps
+    for (const candidate of pool) {
+      log(
+        `[spoonacular-generator] Trying candidate id=${candidate.id} title="${candidate.title}"`,
+        "spoonacular",
+      );
+      const recipe = await tryConvertCandidate(candidate, request, chosenProtein);
+      if (recipe) {
+        log(
+          `[spoonacular-generator] Converted: "${recipe.title}" | ${recipe.ingredients.length} ingredients | ${recipe.steps.length} steps | source=spoonacular`,
+          "spoonacular",
+        );
+        return recipe;
+      }
+    }
+
     log(
-      `[spoonacular-generator] Converted: "${recipe.title}" | ${recipe.ingredients.length} ingredients | ${recipe.steps.length} steps | source=spoonacular`,
+      `[spoonacular-generator] No protein-matching candidates found among ${pool.length} tried — falling back to AI`,
       "spoonacular",
     );
-    return recipe;
+    return null;
   } catch (err: any) {
     log(
       `[spoonacular-generator] Error: ${err.message} — falling back to AI`,
