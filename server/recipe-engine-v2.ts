@@ -410,9 +410,10 @@ export async function runV2Generate(
 
   log(`[v2] ✓ Accepted "${detail.title}" | protein=${validation.inferredProtein} | ingredients=${withCarbs.ingredients?.length} | steps=${withCarbs.steps?.length} | source=spoonacular_v2`, "v2");
 
-  // ── Step 5: Light copy polish (title + description only) ─────────────────
-  //   gpt-4o-mini polishes wording without changing dish type or ingredients.
-  //   Hard 2-second timeout; falls back to original title + generated description.
+  // ── Step 5: Polish + step improvement ────────────────────────────────────
+  //   Single gpt-4o-mini call: polishes title/description AND rewrites steps to
+  //   be beginner-friendly (heat level, time range, doneness cues, safe temps).
+  //   Hard 5-second timeout; falls back to original title/description/steps.
   //   Results cached per Spoonacular ID for 1 hour (zero repeat AI calls).
   const cuisine = detail.cuisines?.[0] || withCarbs.tags?.cuisine || "any";
   const keyIngredients = (withCarbs.ingredients || []).slice(0, 5).map((i) => i.name);
@@ -424,13 +425,14 @@ export async function runV2Generate(
     withCarbs.timing?.total_minutes ?? 0,
     request.crew_size,
     keyIngredients,
-    withCarbs.steps?.length ?? 0,
+    withCarbs.steps ?? [],
   );
 
   const finalRecipe: GenerateResponse = {
     ...withCarbs,
     title: polish.title,
     why_it_fits_tonight: polish.why_it_fits_tonight,
+    steps: polish.steps,
   };
   const acceptedTitle = polish.title;
 

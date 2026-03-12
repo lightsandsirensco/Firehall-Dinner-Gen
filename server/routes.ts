@@ -163,11 +163,40 @@ export async function registerRoutes(
     const steps: ClientStep[] = (recipe.steps || []).map((step: any, i: number) => {
       const heading = typeof step === "string" ? "" : (step.heading || step.title || "");
       const body = typeof step === "string" ? step : (step.body || step.instructions || "");
+
+      // Extract heat and time from structured heading parenthetical:
+      // e.g. "Sear the chicken (medium-high, 5–7 min)" → heat="medium-high", minutes=6
+      // e.g. "Plate and serve (no heat, 2 min)" → heat="no heat", minutes=2
+      let heat = "";
+      let minutes = 0;
+      const parenMatch = heading.match(/\(([^)]+)\)\s*$/);
+      if (parenMatch) {
+        const parts = parenMatch[1].split(",").map((p: string) => p.trim());
+        if (parts.length >= 2) {
+          heat = parts[0];
+          const timeMatch = parts[1].match(/(\d+)[–\-](\d+)|(\d+)/);
+          if (timeMatch) {
+            const lo = parseInt(timeMatch[1] || timeMatch[3] || "0");
+            const hi = timeMatch[2] ? parseInt(timeMatch[2]) : lo;
+            minutes = Math.round((lo + hi) / 2);
+          }
+        } else if (parts.length === 1) {
+          const timeOnly = parts[0].match(/^(\d+)[–\-]?(\d+)?\s*min/);
+          if (timeOnly) {
+            const lo = parseInt(timeOnly[1]);
+            const hi = timeOnly[2] ? parseInt(timeOnly[2]) : lo;
+            minutes = Math.round((lo + hi) / 2);
+          } else {
+            heat = parts[0];
+          }
+        }
+      }
+
       return {
         n: i + 1,
         title: heading,
-        heat: "",
-        minutes: 0,
+        heat,
+        minutes,
         instructions: body,
       };
     });
