@@ -1,0 +1,79 @@
+Fix recipe generation so recipes are pulled from Spoonacular using the existing API key, instead of being incorrectly generated or mislabeled.
+
+Goal:
+Make Firehall Meals use Spoonacular as the primary recipe source so recipe titles, ingredients, steps, and meal types all come from real recipe data.
+
+Requirements:
+
+1) Use Spoonacular as the PRIMARY recipe source
+- Use the Replit secret:
+  process.env.SPOONACULAR_API_KEY
+- Do not use the internal AI generator as the default source
+- Do not create AI-generated recipes unless Spoonacular fails or returns no valid result
+
+2) Search Spoonacular based on the current app filters
+Map these filters to Spoonacular search parameters:
+- protein
+- cuisine
+- meal style
+- allergies / restrictions
+- time available
+- use what’s in the fridge
+- crew size (where possible)
+- healthiness / diet if supported
+
+3) Use Spoonacular recipe search and then recipe detail lookup
+Flow:
+- Step 1: search Spoonacular for matching recipes
+- Step 2: select the best recipe match
+- Step 3: fetch full recipe details for that recipe
+- Step 4: convert Spoonacular’s response into the Firehall Meals recipe format already used by the frontend
+
+4) Make Spoonacular the source of truth
+The following must come directly from Spoonacular recipe data:
+- recipe title
+- ingredients
+- steps / instructions
+- image
+- servings
+- timing
+- source URL / source name (keep in backend even if not shown in UI)
+
+5) Do NOT invent or relabel recipes
+- Do not rename a recipe into something that does not match the Spoonacular result
+- Do not change a burger into a rice bowl
+- Do not call something stew if it is not a stew
+- Do not add rice unless the Spoonacular recipe actually uses rice or a properly chosen substitution is required
+
+6) Keep existing app features working
+Do NOT remove:
+- shopping list
+- print
+- save to favorites
+- email recipe
+- explore page
+- Firehall Classics
+- cuisine filters
+- meal style filters
+
+7) Fallback behavior
+If Spoonacular fails or returns no valid recipes:
+- then and only then use the internal fallback generator
+- clearly log when fallback is used
+
+8) Add logging so I can verify it is working
+Log:
+- Spoonacular search request
+- selected recipe ID
+- selected recipe title
+- whether recipe came from Spoonacular or fallback
+- whether filters were relaxed
+- any Spoonacular errors
+
+9) Acceptance test
+After implementation:
+- generate 10 recipes with different filters
+- confirm the recipes come from Spoonacular
+- confirm titles, ingredients, and steps match each other
+- confirm repeated fake rice-based recipes stop appearing
+- confirm logs show Spoonacular as source for successful recipes

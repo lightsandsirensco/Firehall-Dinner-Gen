@@ -17,6 +17,7 @@ import { addFavourite, getFavourites, removeFavourite, getAllFavouriteIds } from
 import { getTopCachedRecipes, getVotedRecipeNames } from "./cache-store";
 import { buildFallbackRecipe, trackFallbackTemplateId, getRecentFallbackTemplateIds } from "./fallback-recipe";
 import { searchRecipes, getRecipeById, getRandomRecipes, type SearchOptions } from "./spoonacular";
+import { fetchBestSpoonacularRecipe } from "./spoonacular-converter";
 import { enforceCarbs, trackCarb, ensureRiceForRiceDishes } from "./carb-rules";
 import { pickStructure, trackStructure, STRUCTURE_DISPLAY, type StructureType } from "./structure-variety";
 import { log } from "./index";

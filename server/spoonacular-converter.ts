@@ -1,0 +1,435 @@
+import { log } from "./index";
+import { searchRecipes, getRecipeById, SpoonacularRecipeDetail } from "./spoonacular";
+import type {
+  GenerateRequest,
+  GenerateResponse,
+  IngredientItem,
+  RecipeStep,
+  ProteinSafetyItem,
+  RecipeTiming,
+  MacrosPerServing,
+  RecipeTags,
+} from "../shared/schema";
+
+const CUISINE_MAP: Record<string, string> = {
+  "mediterranean": "mediterranean",
+  "mexican": "mexican",
+  "italian": "italian",
+  "asian": "chinese",
+  "korean": "korean",
+  "thai": "thai",
+  "indian": "indian",
+  "middle_eastern": "middle eastern",
+  "bbq": "",
+  "cajun": "cajun",
+  "canadian": "",
+  "any": "",
+};
+
+const FORMAT_MAP: Record<string, { type: string; keyword: string }> = {
+  "burger": { type: "main course", keyword: "burger" },
+  "tacos": { type: "main course", keyword: "tacos" },
+  "wrap": { type: "main course", keyword: "wrap" },
+  "bowl": { type: "main course", keyword: "bowl" },
+  "pasta": { type: "main course", keyword: "pasta" },
+  "salad": { type: "salad", keyword: "" },
+  "sheet_pan": { type: "main course", keyword: "sheet pan baked" },
+  "skillet": { type: "main course", keyword: "skillet" },
+  "stir_fry": { type: "main course", keyword: "stir fry" },
+  "soup_chili": { type: "soup", keyword: "" },
+  "breakfast": { type: "breakfast", keyword: "" },
+  "loaded_fries": { type: "main course", keyword: "loaded" },
+  "sandwich": { type: "main course", keyword: "sandwich" },
+  "casserole": { type: "main course", keyword: "casserole baked" },
+  "plated_main": { type: "main course", keyword: "" },
+  "random": { type: "main course", keyword: "" },
+};
+
+const ALLERGEN_INTOLERANCE_MAP: Record<string, string> = {
+  "gluten": "gluten",
+  "wheat": "wheat",
+  "dairy": "dairy",
+  "eggs": "egg",
+  "peanuts": "peanut",
+  "shellfish": "shellfish",
+  "soy": "soy",
+  "tree-nuts": "tree nut",
+  "sesame": "sesame",
+  "fish": "seafood",
+  "seafood": "seafood",
+  "sulphites": "sulfite",
+};
+
+const TIME_MAP: Record<string, number> = {
+  "15-25": 25,
+  "20-30": 30,
+  "25-40": 40,
+  "30-45": 45,
+  "45-60": 60,
+  "60-90": 90,
+};
+
+const PROTEIN_SAFETY_TABLE: Record<string, { temp_f: number; temp_c: number; rest_min: number; probe: string }> = {
+  "chicken": { temp_f: 165, temp_c: 74, rest_min: 0, probe: "thickest part of breast or thigh, away from bone" },
+  "turkey": { temp_f: 165, temp_c: 74, rest_min: 0, probe: "thickest part of the breast or thigh" },
+  "beef": { temp_f: 145, temp_c: 63, rest_min: 3, probe: "thickest part, away from bone" },
+  "pork": { temp_f: 145, temp_c: 63, rest_min: 3, probe: "thickest part of the cut" },
+  "fish": { temp_f: 145, temp_c: 63, rest_min: 0, probe: "thickest part of the fillet" },
+  "seafood": { temp_f: 145, temp_c: 63, rest_min: 0, probe: "thickest part" },
+  "lamb": { temp_f: 145, temp_c: 63, rest_min: 3, probe: "thickest part, away from bone" },
+  "vegetarian": { temp_f: 0, temp_c: 0, rest_min: 0, probe: "N/A" },
+};
+
+function getProteinSafety(protein: string): ProteinSafetyItem {
+  const safe = PROTEIN_SAFETY_TABLE[protein.toLowerCase()] || PROTEIN_SAFETY_TABLE["beef"];
+  if (safe.temp_f === 0) {
+    return {
+      protein: "Vegetables / Plant Protein",
+      target_temp_f: 0,
+      target_temp_c: 0,
+      rest_minutes: 0,
+      probe_where: "N/A",
+      notes: "No meat temperature required. Wash all produce before use.",
+    };
+  }
+  return {
+    protein: protein.charAt(0).toUpperCase() + protein.slice(1),
+    target_temp_f: safe.temp_f,
+    target_temp_c: safe.temp_c,
+    rest_minutes: safe.rest_min,
+    probe_where: safe.probe,
+    notes: `Cook to ${safe.temp_f}°F (${safe.temp_c}°C) internal temperature${safe.rest_min > 0 ? ` and rest ${safe.rest_min} minutes before serving` : ""}.`,
+  };
+}
+
+function formatScaledAmount(amount: number, unit: string): string {
+  const u = (unit || "").toLowerCase().trim();
+  const roundQ = (n: number, q: number) => Math.round(n / q) * q;
+
+  if (["lb", "lbs", "pound", "pounds"].includes(u)) {
+    const r = roundQ(amount, 0.25);
+    return `${r} lb${r !== 1 ? "s" : ""}`;
+  }
+  if (["oz", "ounce", "ounces"].includes(u)) {
+    return `${Math.round(amount)} oz`;
+  }
+  if (["cup", "cups"].includes(u)) {
+    const r = roundQ(amount, 0.25);
+    return `${r} ${r === 1 ? "cup" : "cups"}`;
+  }
+  if (["tbsp", "tablespoon", "tablespoons"].includes(u)) {
+    return `${Math.round(amount)} tbsp`;
+  }
+  if (["tsp", "teaspoon", "teaspoons"].includes(u)) {
+    const r = roundQ(amount, 0.25);
+    return `${r} tsp`;
+  }
+  if (["clove", "cloves"].includes(u)) {
+    return `${Math.round(amount)} cloves`;
+  }
+  if (["slice", "slices"].includes(u)) {
+    return `${Math.round(amount)} slices`;
+  }
+  if (["can", "cans"].includes(u)) {
+    const r = Math.round(amount);
+    return `${r} can${r !== 1 ? "s" : ""}`;
+  }
+  if (u === "" || ["serving", "servings", "portion", "portions"].includes(u)) {
+    return `${Math.round(amount)}`;
+  }
+
+  const r = Math.round(amount * 10) / 10;
+  return `${r}${u ? " " + u : ""}`.trim();
+}
+
+function extractMacros(detail: SpoonacularRecipeDetail): MacrosPerServing {
+  if (!detail.nutrition?.nutrients) {
+    return { calories: 550, protein_g: 40, carbs_g: 35, fat_g: 20 };
+  }
+  const nutrients = detail.nutrition.nutrients;
+  const get = (name: string) =>
+    nutrients.find((n) => n.name.toLowerCase() === name.toLowerCase())?.amount || 0;
+
+  return {
+    calories: Math.round(get("calories")),
+    protein_g: Math.round(get("protein")),
+    carbs_g: Math.round(get("carbohydrates") || get("net carbohydrates")),
+    fat_g: Math.round(get("fat")),
+  };
+}
+
+function inferBaseCarb(detail: SpoonacularRecipeDetail): string {
+  const combined = (detail.title + " " + detail.extendedIngredients.map((i) => i.name).join(" ")).toLowerCase();
+  if (/pasta|spaghetti|penne|fettuccine|rigatoni|linguine|macaroni|lasagna/.test(combined)) return "pasta";
+  if (/\brice\b|fried rice|risotto|pilaf|stir.fry/.test(combined)) return "rice";
+  if (/\bbread\b|\bbun\b|sandwich|burger|toast|roll|hoagie/.test(combined)) return "bread";
+  if (/tortilla|taco|wrap|burrito|quesadilla/.test(combined)) return "tortilla";
+  if (/potato|fries|mash/.test(combined)) return "potato";
+  if (/quinoa/.test(combined)) return "quinoa";
+  if (/noodle|ramen|lo mein|udon|soba/.test(combined)) return "noodles";
+  return "none";
+}
+
+function inferCookingMethod(steps: RecipeStep[]): string {
+  const all = steps.map((s) => s.body.toLowerCase()).join(" ");
+  if (/grill|grilled|barbecue/.test(all)) return "grill";
+  if (/slow cooker|crock.?pot|braise/.test(all)) return "braise";
+  if (/\boven\b|bake|baked|roast|roasted/.test(all)) return "oven";
+  if (/stir.fry|wok/.test(all)) return "stir-fry";
+  if (/instant pot|pressure cooker/.test(all)) return "pressure";
+  return "stovetop";
+}
+
+function inferMealStyle(dishTypes: string[], title: string, mealFormat?: string): string {
+  const types = (dishTypes || []).map((d) => d.toLowerCase());
+  const t = title.toLowerCase();
+
+  if (mealFormat && mealFormat !== "random") {
+    const formatToStyle: Record<string, string> = {
+      burger: "burger",
+      tacos: "tacos",
+      wrap: "wrap",
+      bowl: "bowl",
+      pasta: "pasta",
+      salad: "salad",
+      sheet_pan: "sheet pan",
+      skillet: "skillet",
+      stir_fry: "stir fry",
+      soup_chili: "soup/chili",
+      breakfast: "breakfast",
+      loaded_fries: "loaded fries",
+      sandwich: "sandwich",
+      casserole: "casserole",
+      plated_main: "plated main",
+    };
+    if (formatToStyle[mealFormat]) return formatToStyle[mealFormat];
+  }
+
+  if (types.includes("soup") || types.includes("stew") || t.includes("soup") || t.includes("stew") || t.includes("chili")) return "soup/chili";
+  if (types.includes("salad") || t.includes("salad")) return "salad";
+  if (types.includes("breakfast") || t.includes("breakfast")) return "breakfast";
+  if (t.includes("burger")) return "burger";
+  if (t.includes("taco")) return "tacos";
+  if (t.includes("wrap")) return "wrap";
+  if (t.includes("stir") || t.includes("stir-fry")) return "stir fry";
+  if (t.includes("casserole")) return "casserole";
+  if (t.includes("skillet")) return "skillet";
+  if (t.includes("sandwich") || t.includes("sub") || t.includes("hoagie")) return "sandwich";
+  if (types.includes("pasta") || t.includes("pasta") || t.includes("spaghetti") || t.includes("penne")) return "pasta";
+  return "plated main";
+}
+
+export function convertSpoonacularToGenerateResponse(
+  detail: SpoonacularRecipeDetail,
+  request: GenerateRequest,
+  chosenProtein: string,
+): GenerateResponse {
+  const baseServings = detail.servings || 4;
+  const scaleFactor = request.crew_size / baseServings;
+
+  const ingredients: IngredientItem[] = detail.extendedIngredients.map((ing) => ({
+    item: ing.name,
+    amount: formatScaledAmount(ing.amount * scaleFactor, ing.unit),
+    notes: ing.original !== ing.name ? ing.original : "",
+  }));
+
+  const rawSteps = detail.analyzedInstructions?.[0]?.steps || [];
+  const steps: RecipeStep[] =
+    rawSteps.length > 0
+      ? rawSteps.map((s, i) => ({
+          heading: `Step ${s.number || i + 1}`,
+          body: s.step,
+        }))
+      : [
+          {
+            heading: "Prepare and Cook",
+            body: detail.instructions || "Follow recipe instructions, scaling for your crew size.",
+          },
+        ];
+
+  const macros = extractMacros(detail);
+
+  const totalMin = detail.readyInMinutes || 30;
+  const prepMin = (detail as any).preparationMinutes || Math.round(totalMin * 0.35);
+  const cookMin = (detail as any).cookingMinutes || totalMin - prepMin;
+  const timing: RecipeTiming = {
+    prep_minutes: Math.max(5, prepMin),
+    cook_minutes: Math.max(5, cookMin),
+    total_minutes: Math.max(10, totalMin),
+  };
+
+  const protein_safety: ProteinSafetyItem[] = [getProteinSafety(chosenProtein)];
+
+  const mealStyle = inferMealStyle(detail.dishTypes, detail.title, request.meal_format);
+  const cuisine = detail.cuisines?.[0] || request.cuisine_style || "american";
+
+  const recipeTags: RecipeTags = {
+    cuisine: cuisine.toLowerCase(),
+    cooking_method: inferCookingMethod(steps),
+    base_carb: inferBaseCarb(detail),
+    key_ingredients: detail.extendedIngredients.slice(0, 5).map((i) => i.name),
+    high_protein: macros.protein_g >= 30,
+    high_fiber: false,
+    quick_cleanup: totalMin <= 30,
+  };
+
+  const cuisineLabel = detail.cuisines?.[0] || cuisine;
+  const why = `A ${cuisineLabel} recipe scaled for ${request.crew_size} crew members — ready in ${totalMin} minutes with ${steps.length} steps.`;
+
+  return {
+    template_id: 0,
+    chosen_protein: chosenProtein,
+    primary_protein_source: chosenProtein,
+    title: detail.title,
+    meal_style: mealStyle,
+    why_it_fits_tonight: why,
+    timing,
+    protein_safety,
+    ingredients,
+    steps,
+    cleanup_tip:
+      "Soak pots and pans right after plating while they're still warm. Wipe down prep surfaces and return unused ingredients to storage immediately.",
+    macros_per_serving: macros,
+    pro_tips: [
+      `Scaled from ${baseServings} servings to ${request.crew_size} — check single-use items (whole cans, eggs) individually.`,
+      "Taste and adjust seasoning after scaling — salt doesn't always scale linearly.",
+    ],
+    tags: recipeTags,
+  };
+}
+
+export async function fetchBestSpoonacularRecipe(
+  request: GenerateRequest,
+  chosenProtein: string,
+): Promise<GenerateResponse | null> {
+  try {
+    const proteinQuery =
+      chosenProtein === "pantry" ? (request.proteins || []).join(" ") : chosenProtein;
+
+    const formatInfo =
+      FORMAT_MAP[request.meal_format || "random"] || { type: "main course", keyword: "" };
+    const cuisineKey = request.cuisine_style || "any";
+    const spoonacularCuisine = CUISINE_MAP[cuisineKey] || "";
+
+    const queryParts = [proteinQuery];
+    if (formatInfo.keyword) queryParts.push(formatInfo.keyword);
+    if (cuisineKey === "bbq") queryParts.push("bbq");
+    if (cuisineKey === "canadian") queryParts.push("canadian style");
+    if (cuisineKey === "asian" && !spoonacularCuisine) queryParts.push("asian");
+    const query = queryParts.filter(Boolean).join(" ");
+
+    const intolerances = (request.allergens_to_avoid || [])
+      .map((a) => ALLERGEN_INTOLERANCE_MAP[a.toLowerCase()] || "")
+      .filter(Boolean)
+      .join(",");
+
+    const maxReadyTime = TIME_MAP[request.time_available] || 60;
+
+    let diet: string | undefined;
+    if (
+      request.proteins.length === 1 &&
+      request.proteins[0] === "vegetarian"
+    ) {
+      diet = "vegetarian";
+    }
+
+    log(
+      `[spoonacular-generator] Searching: query="${query}" cuisine="${spoonacularCuisine || "any"}" type="${formatInfo.type}" maxTime=${maxReadyTime} intolerances="${intolerances || "none"}" diet="${diet || "none"}"`,
+      "spoonacular",
+    );
+
+    let searchResult = await searchRecipes(query, {
+      cuisine: spoonacularCuisine || undefined,
+      type: formatInfo.type,
+      maxReadyTime,
+      intolerances: intolerances || undefined,
+      diet,
+      number: 10,
+      sort: "popularity",
+    });
+
+    if (!searchResult.results || searchResult.results.length === 0) {
+      log(
+        `[spoonacular-generator] 0 results for query="${query}" — relaxing format constraint`,
+        "spoonacular",
+      );
+      searchResult = await searchRecipes(query, {
+        cuisine: spoonacularCuisine || undefined,
+        maxReadyTime: Math.min(maxReadyTime + 20, 120),
+        intolerances: intolerances || undefined,
+        diet,
+        number: 10,
+        sort: "popularity",
+      });
+    }
+
+    if (!searchResult.results || searchResult.results.length === 0) {
+      log(
+        `[spoonacular-generator] Still 0 results after relaxation — falling back to AI`,
+        "spoonacular",
+      );
+      return null;
+    }
+
+    const candidateCount = Math.min(3, searchResult.results.length);
+    const randomIndex = Math.floor(Math.random() * candidateCount);
+    const best = searchResult.results[randomIndex];
+
+    log(
+      `[spoonacular-generator] Selected recipe id=${best.id} title="${best.title}" (from ${searchResult.results.length} results)`,
+      "spoonacular",
+    );
+
+    const detail = await getRecipeById(best.id, true);
+
+    const hasSteps =
+      detail.analyzedInstructions &&
+      detail.analyzedInstructions.length > 0 &&
+      detail.analyzedInstructions[0].steps.length > 0;
+
+    if (!hasSteps) {
+      log(
+        `[spoonacular-generator] Recipe id=${best.id} has no parsed steps — trying next candidate`,
+        "spoonacular",
+      );
+      const fallbackCandidate = searchResult.results.find(
+        (r, i) => i !== randomIndex && r.id !== best.id,
+      );
+      if (fallbackCandidate) {
+        const detail2 = await getRecipeById(fallbackCandidate.id, true);
+        const has2 =
+          detail2.analyzedInstructions?.[0]?.steps?.length > 0;
+        if (has2) {
+          log(
+            `[spoonacular-generator] Using fallback candidate id=${fallbackCandidate.id} title="${fallbackCandidate.title}"`,
+            "spoonacular",
+          );
+          const recipe2 = convertSpoonacularToGenerateResponse(detail2, request, chosenProtein);
+          log(
+            `[spoonacular-generator] Converted: "${recipe2.title}" | ${recipe2.ingredients.length} ingredients | ${recipe2.steps.length} steps | source=spoonacular`,
+            "spoonacular",
+          );
+          return recipe2;
+        }
+      }
+      log(
+        `[spoonacular-generator] No usable steps in any candidate — falling back to AI`,
+        "spoonacular",
+      );
+      return null;
+    }
+
+    const recipe = convertSpoonacularToGenerateResponse(detail, request, chosenProtein);
+    log(
+      `[spoonacular-generator] Converted: "${recipe.title}" | ${recipe.ingredients.length} ingredients | ${recipe.steps.length} steps | source=spoonacular`,
+      "spoonacular",
+    );
+    return recipe;
+  } catch (err: any) {
+    log(
+      `[spoonacular-generator] Error: ${err.message} — falling back to AI`,
+      "spoonacular",
+    );
+    return null;
+  }
+}
