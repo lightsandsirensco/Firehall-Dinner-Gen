@@ -227,11 +227,20 @@ export function convertSpoonacularToGenerateResponse(
   const baseServings = detail.servings || 4;
   const scaleFactor = request.crew_size / baseServings;
 
-  const ingredients: IngredientItem[] = detail.extendedIngredients.map((ing) => ({
+  const rawIngredients: IngredientItem[] = detail.extendedIngredients.map((ing) => ({
     item: ing.name,
     amount: formatScaledAmount(ing.amount * scaleFactor, ing.unit),
     notes: ing.original !== ing.name ? ing.original : "",
   }));
+
+  const ingMap = new Map<string, IngredientItem>();
+  for (const ing of rawIngredients) {
+    const key = ing.item.toLowerCase().trim();
+    if (!ingMap.has(key)) {
+      ingMap.set(key, ing);
+    }
+  }
+  const ingredients: IngredientItem[] = Array.from(ingMap.values());
 
   const rawSteps = detail.analyzedInstructions?.[0]?.steps || [];
   const steps: RecipeStep[] =

@@ -10,7 +10,7 @@ No accounts, meal plans, history, template management, or Shopify
 The application features a modern full-stack architecture. The frontend is built with React, Vite, TailwindCSS, and shadcn/ui, providing a responsive UI with a dark, premium firehouse aesthetic. The backend, powered by Express.js, handles API requests, data processing, and AI integration. OpenAI (gpt-5-mini) is utilized for recipe generation. Data is managed through a CSV file for meal templates and an SQLite database for recipe caching, rate limiting, and usage tracking.
 
 Key architectural features and design patterns include:
-- **Meal Generation**: Generates recipes based on filters such as busy level, time, appliances, proteins, allergens, and budget.
+- **Meal Generation**: Uses Spoonacular as the PRIMARY recipe source — searches by protein, cuisine, format, time, and allergen filters, fetches full recipe detail (title, ingredients, steps, macros, timing), and converts to Firehall format. Original recipe titles are preserved through all validation stages. Falls back to OpenAI (gpt-4o-mini) generation if Spoonacular returns no valid results or fails. Pantry mode always uses AI. `server/spoonacular-converter.ts` handles filter mapping, scaling, ingredient deduplication, and format conversion. Logging identifies whether each recipe came from Spoonacular or fallback.
 - **Pantry Mode**: Allows users to input available ingredients to influence AI-generated recipes.
 - **Vegetarian Swap**: Provides an allergen-aware vegetarian option for one crew member.
 - **Pizza Night**: Generates pizza recipes with specific filters (crew size, time, dough option, style, heat level).

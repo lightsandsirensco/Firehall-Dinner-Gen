@@ -438,6 +438,10 @@ export async function registerRoutes(
 
   function sendRecipeResponse(res: Response, validation: import("./validateRecipe").ValidationResult, extras: Record<string, any>, debug: boolean, crewSize: number, mealFormat: string, allergens: string[], auditCtx: LabelAuditContext | undefined, ipHash: string, sessionId: string, requestId: string) {
     const result = buildResponse(validation, extras, debug, crewSize, mealFormat, allergens, auditCtx);
+    if (extras._spoonacular_title && result.title !== extras._spoonacular_title) {
+      log(`[spoonacular-generator] Label audit changed title — restoring: "${extras._spoonacular_title}"`, "spoonacular");
+      result.title = extras._spoonacular_title;
+    }
     const signature = validation.signature || result._signature || "";
     const sessKey = `${ipHash}:${sessionId}`;
     addSessionSignature(sessKey, signature);
@@ -619,6 +623,51 @@ export async function registerRoutes(
       if (candidates.length === 0 && allergens.length > 0) {
         noTemplateMode = true;
         log(`[allergen] No templates match even after relaxation — entering AI-only allergen-safe mode`, "ai");
+      } else if (candidates.length === 0 && !request.use_what_we_have && !!process.env.SPOONACULAR_API_KEY) {
+        log(`[template] No matching templates — attempting Spoonacular-only path`, "spoonacular");
+        const spoonOnlyProtein = request.proteins[0] || "chicken";
+        let spoonOnlyRecipe: GenerateResponse | null = null;
+        try {
+          spoonOnlyRecipe = await fetchBestSpoonacularRecipe(request, spoonOnlyProtein);
+        } catch (spoonOnlyErr: any) {
+          log(`[spoonacular-generator] Error in no-template path: ${spoonOnlyErr.message}`, "spoonacular");
+        }
+        if (spoonOnlyRecipe) {
+          cancelRequest(sessionKey, requestId);
+          const spoonOnlyOriginalTitle = spoonOnlyRecipe.title;
+          const spoonOnlyStyle = spoonOnlyRecipe.meal_style || "plated main";
+          const spoonOnlyValidCtx: RecipeValidationContext = {
+            chosenProtein: spoonOnlyProtein,
+            meal_style: spoonOnlyStyle,
+            cuisine: request.cuisine_style || "any",
+            appliances: request.appliances,
+            allergens,
+            recentSignatures: (req.body as any).recentSignatures || [],
+            currentRecipeSignature: (req.body as any).currentRecipeSignature || undefined,
+          };
+          const spoonOnlyWithStyle = { ...spoonOnlyRecipe, meal_style: spoonOnlyStyle };
+          let spoonOnlyVal = validateAndFixRecipe(spoonOnlyWithStyle, spoonOnlyValidCtx);
+          if (spoonOnlyVal.recipe.title !== spoonOnlyOriginalTitle) {
+            log(`[spoonacular-generator] Restoring original title (no-template path): "${spoonOnlyOriginalTitle}"`, "spoonacular");
+            spoonOnlyVal = { ...spoonOnlyVal, recipe: { ...spoonOnlyVal.recipe, title: spoonOnlyOriginalTitle } };
+          }
+          const spoonOnlyAudit: LabelAuditContext = {
+            selectedAppliances: request.appliances || [],
+            selectedAllergens: allergens,
+            selectedHealthiness: request.healthiness_preference || "balanced",
+            selectedBudget: request.budget_level || "standard",
+            selectedCuisine: request.cuisine_style || "",
+            selectedMealFormat: request.meal_format || "",
+            selectedProteins: request.proteins || [],
+            chosenProtein: spoonOnlyProtein,
+            crewSize: request.crew_size || 4,
+          };
+          recordSignature(spoonOnlyProtein, spoonOnlyVal.signature);
+          log(`[spoonacular-generator] No-template path: serving "${spoonOnlyOriginalTitle}" from Spoonacular`, "spoonacular");
+          return sendRecipeResponse(res, spoonOnlyVal, { _source: "spoonacular", _spoonacular_title: spoonOnlyOriginalTitle }, req.query.debug === "1", request.crew_size, "random", allergens, spoonOnlyAudit, ipHash, sessionId, requestId);
+        }
+        cancelRequest(sessionKey, requestId);
+        return res.status(404).json({ message: "No matching recipes found. Try adjusting your filters." });
       } else if (candidates.length === 0) {
         cancelRequest(sessionKey, requestId);
         return res.status(404).json({ message: "No matching templates found. Try loosening your filters." });
@@ -821,6 +870,58 @@ export async function registerRoutes(
       const fallbackRecipe = fallbackTemplate
         ? buildFallbackRecipe(fallbackTemplate, request, fallbackProtein, structureType, clientRecentSigs)
         : buildSafeFallbackRecipe(request.meal_format || mealStyleDisplay, request.crew_size);
+
+      const spoonacularEnabled = !!process.env.SPOONACULAR_API_KEY && !request.use_what_we_have;
+
+      if (spoonacularEnabled) {
+        const spoonStart = Date.now();
+        let spoonRecipe: GenerateResponse | null = null;
+        try {
+          spoonRecipe = await fetchBestSpoonacularRecipe(request, chosenProtein);
+        } catch (spoonErr: any) {
+          log(`[spoonacular-generator] Unexpected error: ${spoonErr.message}`, "spoonacular");
+        }
+
+        if (spoonRecipe) {
+          const spoonOriginalTitle = spoonRecipe.title;
+          const spoonWithStyle = { ...spoonRecipe, meal_style: mealStyleDisplay };
+          let spoonValidation = validateAndFixRecipe(spoonWithStyle, validationCtx);
+          if (spoonValidation.recipe.title !== spoonOriginalTitle) {
+            log(`[spoonacular-generator] Restoring original title: "${spoonOriginalTitle}" (was changed to "${spoonValidation.recipe.title}")`, "spoonacular");
+            spoonValidation = { ...spoonValidation, recipe: { ...spoonValidation.recipe, title: spoonOriginalTitle } };
+          }
+
+          for (let dedupAttempt = 0; dedupAttempt < 2; dedupAttempt++) {
+            const sessKey = `${ipHash}:${sessionId}`;
+            if (!isRecentSessionSignature(sessKey, spoonValidation.signature)) break;
+            log(`[dedup] Spoonacular sig in session history (attempt ${dedupAttempt + 1}) — skipping to AI fallback`, "variety");
+            spoonRecipe = null;
+            break;
+          }
+
+          if (spoonRecipe) {
+            const estimatedCost = 0;
+            const templateId = 0;
+            setCachedRecipe(cacheKey, templateId, spoonValidation.recipe);
+            logUsage({
+              cacheKey,
+              templateId,
+              cacheHit: false,
+              estimatedCost,
+              latencyMs: Date.now() - spoonStart,
+              ipHash,
+              sessionId,
+            });
+            log(`[spoonacular-generator] Served in ${Date.now() - spoonStart}ms | source=spoonacular`, "perf");
+            recordSignature(chosenProtein, spoonValidation.signature);
+            const spoonExtras: Record<string, any> = { _source: "spoonacular", _spoonacular_title: spoonOriginalTitle };
+            if (filtersRelaxed) spoonExtras._filtersRelaxed = true;
+            return sendRecipeResponse(res, spoonValidation, spoonExtras, debugMode, request.crew_size, "random", allergens, auditCtx, ipHash, sessionId, requestId);
+          }
+        }
+
+        log(`[spoonacular-generator] No usable Spoonacular result — falling back to AI generator`, "spoonacular");
+      }
 
       const templateForAI = chosen || fallbackTemplate;
       const aiPromise = (async () => {
