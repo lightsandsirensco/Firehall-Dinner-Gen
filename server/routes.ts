@@ -18,6 +18,7 @@ import { getTopCachedRecipes, getVotedRecipeNames } from "./cache-store";
 import { buildFallbackRecipe, trackFallbackTemplateId, getRecentFallbackTemplateIds } from "./fallback-recipe";
 import { searchRecipes, getRecipeById, getRandomRecipes, type SearchOptions } from "./spoonacular";
 import { fetchBestSpoonacularRecipe } from "./spoonacular-converter";
+import { runV2Generate } from "./recipe-engine-v2";
 import { enforceCarbs, trackCarb, ensureRiceForRiceDishes } from "./carb-rules";
 import { pickStructure, trackStructure, STRUCTURE_DISPLAY, type StructureType } from "./structure-variety";
 import { log } from "./index";
@@ -615,69 +616,74 @@ export async function registerRoutes(
         return res.status(400).json({ message: "Please enter at least one ingredient when using 'Use What's in the Fridge' mode." });
       }
 
-      const templates = await loadTemplates();
+      // ─── V2 GENERATE PIPELINE ────────────────────────────────────────────────
+      //
+      // Primary source: Spoonacular (multi-pass progressive search + protein audit)
+      // Fallback:       Deterministic template-based recipe (no AI)
+      // Pantry mode:    AI generation using ingredients on hand (preserved as-is)
+      //
       const allergens = request.allergens_to_avoid || [];
-      const { candidates, relaxed: filtersRelaxed, relaxedConstraints } = filterTemplatesWithRelaxation(templates, request);
+      const startTime = Date.now();
+      const debugMode = req.query.debug === "1" || (req.body as any).debug === true;
+      const clientCurrentSig = (req.body as any).currentRecipeSignature || "";
+      const clientRecentSigs = (req.body as any).recentSignatures || [];
 
-      let noTemplateMode = false;
-      if (candidates.length === 0 && allergens.length > 0) {
-        noTemplateMode = true;
-        log(`[allergen] No templates match even after relaxation — entering AI-only allergen-safe mode`, "ai");
-      } else if (candidates.length === 0 && !request.use_what_we_have && !!process.env.SPOONACULAR_API_KEY) {
-        log(`[template] No matching templates — attempting Spoonacular-only path`, "spoonacular");
-        const spoonOnlyProtein = request.proteins[0] || "chicken";
-        let spoonOnlyRecipe: GenerateResponse | null = null;
-        try {
-          spoonOnlyRecipe = await fetchBestSpoonacularRecipe(request, spoonOnlyProtein);
-        } catch (spoonOnlyErr: any) {
-          log(`[spoonacular-generator] Error in no-template path: ${spoonOnlyErr.message}`, "spoonacular");
-        }
-        if (spoonOnlyRecipe) {
-          cancelRequest(sessionKey, requestId);
-          const spoonOnlyOriginalTitle = spoonOnlyRecipe.title;
-          const spoonOnlyStyle = spoonOnlyRecipe.meal_style || "plated main";
-          const spoonOnlyValidCtx: RecipeValidationContext = {
-            chosenProtein: spoonOnlyProtein,
-            meal_style: spoonOnlyStyle,
-            cuisine: request.cuisine_style || "any",
-            appliances: request.appliances,
-            allergens,
-            recentSignatures: (req.body as any).recentSignatures || [],
-            currentRecipeSignature: (req.body as any).currentRecipeSignature || undefined,
-          };
-          const spoonOnlyWithStyle = { ...spoonOnlyRecipe, meal_style: spoonOnlyStyle };
-          let spoonOnlyVal = validateAndFixRecipe(spoonOnlyWithStyle, spoonOnlyValidCtx);
-          if (spoonOnlyVal.recipe.title !== spoonOnlyOriginalTitle) {
-            log(`[spoonacular-generator] Restoring original title (no-template path): "${spoonOnlyOriginalTitle}"`, "spoonacular");
-            spoonOnlyVal = { ...spoonOnlyVal, recipe: { ...spoonOnlyVal.recipe, title: spoonOnlyOriginalTitle } };
-          }
-          const spoonOnlyAudit: LabelAuditContext = {
-            selectedAppliances: request.appliances || [],
-            selectedAllergens: allergens,
-            selectedHealthiness: request.healthiness_preference || "balanced",
-            selectedBudget: request.budget_level || "standard",
-            selectedCuisine: request.cuisine_style || "",
-            selectedMealFormat: request.meal_format || "",
-            selectedProteins: request.proteins || [],
-            chosenProtein: spoonOnlyProtein,
-            crewSize: request.crew_size || 4,
-          };
-          recordSignature(spoonOnlyProtein, spoonOnlyVal.signature);
-          log(`[spoonacular-generator] No-template path: serving "${spoonOnlyOriginalTitle}" from Spoonacular`, "spoonacular");
-          return sendRecipeResponse(res, spoonOnlyVal, { _source: "spoonacular", _spoonacular_title: spoonOnlyOriginalTitle }, req.query.debug === "1", request.crew_size, "random", allergens, spoonOnlyAudit, ipHash, sessionId, requestId);
-        }
-        cancelRequest(sessionKey, requestId);
-        return res.status(404).json({ message: "No matching recipes found. Try adjusting your filters." });
-      } else if (candidates.length === 0) {
-        cancelRequest(sessionKey, requestId);
-        return res.status(404).json({ message: "No matching templates found. Try loosening your filters." });
+      if (clientCurrentSig) {
+        addSessionSignature(`${ipHash}:${sessionId}`, clientCurrentSig);
       }
 
-      const chosen = noTemplateMode ? null : pickTemplate(candidates, request.last_template_id);
-      const chosenProtein = request.use_what_we_have ? "pantry" : noTemplateMode ? request.proteins[0] || "chicken" : chooseProtein(chosen!, request.proteins, request.healthiness_preference);
-      log(`Protein selected: ${chosenProtein} (from user choices: ${request.proteins.join(", ")})`, "ai");
-      const cacheKey = noTemplateMode ? `allergen-safe-${chosenProtein}-${allergens.sort().join("-")}-${request.crew_size}` : buildCacheKey(chosen!.template_id, request, chosenProtein);
-      const startTime = Date.now();
+      // ── PANTRY MODE: AI generation from ingredients on hand ─────────────────
+      if (request.use_what_we_have) {
+        const ptTemplates = await loadTemplates();
+        const { candidates: ptCandidates } = filterTemplatesWithRelaxation(ptTemplates, request);
+        const ptChosen = ptCandidates.length > 0 ? pickTemplate(ptCandidates, request.last_template_id) : null;
+        const ptProtein = "pantry";
+        const ptStructure = pickStructure(request.appliances, request.time_available, request.recent_meal_styles || [], request.prefer_different_style || false);
+        const ptStyle = STRUCTURE_DISPLAY[ptStructure] || ptStructure;
+        const ptVariety = getVarietyConstraints(request.cuisine_style);
+        const ptAuditCtx: LabelAuditContext = {
+          selectedAppliances: request.appliances || [],
+          selectedAllergens: allergens,
+          selectedHealthiness: request.healthiness_preference || "balanced",
+          selectedBudget: request.budget_level || "standard",
+          selectedCuisine: request.cuisine_style || "",
+          selectedMealFormat: request.meal_format || "",
+          selectedProteins: request.proteins || [],
+          chosenProtein: ptProtein,
+          crewSize: request.crew_size || 4,
+        };
+        const ptValCtx: RecipeValidationContext = {
+          chosenProtein: ptProtein,
+          meal_style: ptStyle,
+          cuisine: request.cuisine_style || "any",
+          appliances: request.appliances,
+          allergens,
+          recentSignatures: clientRecentSigs,
+          currentRecipeSignature: clientCurrentSig || undefined,
+        };
+
+        let ptRecipe: GenerateResponse | null = null;
+        try {
+          if (ptChosen) {
+            const ptAI = await generateRecipeFromPantry(ptChosen, request, ptVariety, ptStructure);
+            ptRecipe = ptAI.recipe;
+          }
+        } catch (ptErr: any) {
+          log(`[pantry] AI error: ${ptErr.message} — using safe fallback`, "ai");
+        }
+
+        const ptFinal = ptRecipe ?? buildSafeFallbackRecipe(request.meal_format || ptStyle, request.crew_size);
+        const ptWithStyle = { ...ptFinal, meal_style: ptStyle };
+        const ptVal = validateAndFixRecipe(ptWithStyle as any, ptValCtx);
+        logUsage({ cacheKey: `pantry-${sessionId}`, templateId: 0, cacheHit: false, latencyMs: Date.now() - startTime, ipHash, sessionId });
+        recordSignature(ptProtein, ptVal.signature);
+        return sendRecipeResponse(res, ptVal, {}, debugMode, request.crew_size, request.meal_format || "random", allergens, ptAuditCtx, ipHash, sessionId, requestId);
+      }
+
+      // ── V2 MAIN PATH: Spoonacular as authoritative source ───────────────────
+      const v2Result = await runV2Generate(request);
+      const chosenProtein = v2Result?.protein ?? request.proteins[0] ?? "chicken";
+      const v2CacheKey = buildCacheKey("v2", request, chosenProtein);
 
       const auditCtx: LabelAuditContext = {
         selectedAppliances: request.appliances || [],
@@ -691,451 +697,70 @@ export async function registerRoutes(
         crewSize: request.crew_size || 4,
       };
 
-      const clientCurrentSig = (req.body as any).currentRecipeSignature || "";
-      if (clientCurrentSig) {
-        addSessionSignature(`${ipHash}:${sessionId}`, clientCurrentSig);
-      }
+      if (v2Result) {
+        const originalTitle = v2Result.originalTitle;
+        const v2ValCtx: RecipeValidationContext = {
+          chosenProtein,
+          meal_style: v2Result.recipe.meal_style || "plated main",
+          cuisine: request.cuisine_style || "any",
+          appliances: request.appliances,
+          allergens,
+          recentSignatures: clientRecentSigs,
+          currentRecipeSignature: clientCurrentSig || undefined,
+        };
 
-      const recentStyles = request.recent_meal_styles || [];
-      const lastStyle = recentStyles[0] || "";
-      const preferDiff = request.prefer_different_style || false;
+        let v2Val = validateAndFixRecipe(v2Result.recipe, v2ValCtx);
 
-      const cached = getCachedRecipe(cacheKey);
-      if (cached) {
-        const cachedStyle = cached.meal_style || "";
-        const styleConflict = preferDiff && cachedStyle && cachedStyle.toLowerCase() === lastStyle.toLowerCase();
-        if (styleConflict) {
-          log(`Cache HIT but style conflict (${cachedStyle} === ${lastStyle}) — bypassing cache for rotation`, "variety");
-        } else {
-          log(`Cache HIT for key ${cacheKey} (template ${chosen.template_id})`, "cache");
-          recordRecipe(cached);
-          logUsage({
-            cacheKey,
-            templateId: parseInt(chosen.template_id),
-            cacheHit: true,
-            latencyMs: Date.now() - startTime,
-            ipHash,
-            sessionId,
-          });
-          if (!cached.meal_style) {
-            const inferredStructure = pickStructure(request.appliances, request.time_available, recentStyles, false);
-            cached.meal_style = STRUCTURE_DISPLAY[inferredStructure] || inferredStructure;
-          }
-          const cacheDebug = req.query.debug === "1" || (req.body as any).debug === true;
-          const cacheValCtx: RecipeValidationContext = {
-            chosenProtein: chosenProtein,
-            meal_style: cached.meal_style || "",
-            cuisine: request.cuisine_style || "any",
-            appliances: request.appliances,
-            allergens: request.allergens_to_avoid || [],
-            recentSignatures: (req.body as any).recentSignatures || [],
-            currentRecipeSignature: (req.body as any).currentRecipeSignature || undefined,
-          };
-          let cacheVal = validateAndFixRecipe(cached, cacheValCtx);
-          const cacheSessKey = `${ipHash}:${sessionId}`;
-          if (isRecentSessionSignature(cacheSessKey, cacheVal.signature)) {
-            log(`Cache HIT but sig in session history — bypassing cache for variety`, "variety");
-          } else {
-            recordSignature(chosenProtein, cacheVal.signature);
-            return sendRecipeResponse(res, cacheVal, {}, cacheDebug, request.crew_size, request.meal_format, allergens, auditCtx, ipHash, sessionId, requestId);
-          }
+        // Restore original Spoonacular title — validator must not rename it
+        if (v2Val.recipe.title !== originalTitle) {
+          log(`[v2] Validator changed title — restoring "${originalTitle}"`, "v2");
+          v2Val = { ...v2Val, recipe: { ...v2Val.recipe, title: originalTitle } };
         }
+
+        setCachedRecipe(v2CacheKey, 0, v2Val.recipe);
+        logUsage({ cacheKey: v2CacheKey, templateId: 0, cacheHit: false, latencyMs: Date.now() - startTime, ipHash, sessionId });
+        log(`[v2] Served "${originalTitle}" in ${Date.now() - startTime}ms | source=spoonacular_v2`, "v2");
+        recordSignature(chosenProtein, v2Val.signature);
+        return sendRecipeResponse(res, v2Val, { _source: "spoonacular_v2", _spoonacular_title: originalTitle }, debugMode, request.crew_size, request.meal_format || "random", allergens, auditCtx, ipHash, sessionId, requestId);
       }
 
-      if (!request.use_what_we_have) {
-        const poolEntry = getFromPool(request, request.last_template_id);
-        if (poolEntry) {
-          const poolStyle = poolEntry.recipe.meal_style || "";
-          const poolConflict = preferDiff && poolStyle && poolStyle.toLowerCase() === lastStyle.toLowerCase();
-          if (poolConflict) {
-            log(`Pool entry style conflict (${poolStyle} === ${lastStyle}) — bypassing pool for rotation`, "variety");
-          } else {
-            recordRecipe(poolEntry.recipe);
-            setCachedRecipe(poolEntry.cacheKey, poolEntry.templateId, poolEntry.recipe);
-            logUsage({
-              cacheKey: poolEntry.cacheKey,
-              templateId: poolEntry.templateId,
-              cacheHit: false,
-              estimatedCost: poolEntry.estimatedCost,
-              latencyMs: Date.now() - startTime,
-              ipHash,
-              sessionId,
-            });
-            log(`Pool served in ${Date.now() - startTime}ms`, "perf");
-            if (!poolEntry.recipe.meal_style) {
-              const inferredStructure = pickStructure(request.appliances, request.time_available, recentStyles, false);
-              poolEntry.recipe.meal_style = STRUCTURE_DISPLAY[inferredStructure] || inferredStructure;
-            }
-            const poolDebug = req.query.debug === "1" || (req.body as any).debug === true;
-            const poolValCtx: RecipeValidationContext = {
-              chosenProtein: chosenProtein,
-              meal_style: poolEntry.recipe.meal_style || "",
-              cuisine: request.cuisine_style || "any",
-              appliances: request.appliances,
-              allergens: request.allergens_to_avoid || [],
-              recentSignatures: (req.body as any).recentSignatures || [],
-              currentRecipeSignature: (req.body as any).currentRecipeSignature || undefined,
-            };
-            const poolVal = validateAndFixRecipe(poolEntry.recipe, poolValCtx);
-            const poolSessKey = `${ipHash}:${sessionId}`;
-            if (isRecentSessionSignature(poolSessKey, poolVal.signature)) {
-              log(`Pool entry sig in session history — bypassing pool for variety`, "variety");
-            } else {
-              recordSignature(chosenProtein, poolVal.signature);
-              return sendRecipeResponse(res, poolVal, {}, poolDebug, request.crew_size, request.meal_format, allergens, auditCtx, ipHash, sessionId, requestId);
-            }
-          }
-        }
-      }
+      // ── DETERMINISTIC FALLBACK: Spoonacular returned no valid result ─────────
+      log("[v2] No valid Spoonacular result — serving deterministic fallback", "v2");
 
-      const dailyBudget = parseFloat(process.env.DAILY_LLM_BUDGET_USD || "5.00");
-      const currentSpend = getDailySpend();
+      const fbTemplates = await loadTemplates();
+      const { candidates: fbCandidates } = filterTemplatesWithRelaxation(fbTemplates, request);
+      const fbChosen = fbCandidates.length > 0
+        ? fbCandidates[Math.floor(Math.random() * Math.min(fbCandidates.length, 3))]
+        : null;
+      const fbProtein = fbChosen
+        ? chooseProtein(fbChosen, request.proteins, request.healthiness_preference)
+        : chosenProtein;
+      const fbStructure = pickStructure(request.appliances, request.time_available, request.recent_meal_styles || [], false);
+      const fbStyle = STRUCTURE_DISPLAY[fbStructure] || fbStructure;
+      const fbRecipe = fbChosen
+        ? buildFallbackRecipe(fbChosen, request, fbProtein, fbStructure, clientRecentSigs)
+        : buildSafeFallbackRecipe(request.meal_format || fbStyle, request.crew_size);
 
-      if (currentSpend >= dailyBudget) {
-        cancelRequest(sessionKey, requestId);
-        log(`Budget exceeded: $${currentSpend.toFixed(4)} / $${dailyBudget.toFixed(2)}`, "budget");
-        return res.status(503).json({
-          message: "Daily recipe generation limit reached. Cached recipes are still available. Please try again tomorrow.",
-          budget_exceeded: true,
-        });
-      }
-
-      const isColdStart = firstRequestSinceBoot;
-      if (firstRequestSinceBoot) {
-        log("Cold start: first AI request since boot", "perf");
-        firstRequestSinceBoot = false;
-      }
-
-      const varietyConstraints = getVarietyConstraints(request.cuisine_style);
-
-      const MEAL_FORMAT_TO_STRUCTURE: Record<string, StructureType> = {
-        burger: "burger",
-        tacos: "taco",
-        wrap: "wrap",
-        bowl: "bowl",
-        pasta: "pasta",
-        salad: "bowl",
-        sheet_pan: "sheet-pan",
-        skillet: "skillet",
-        stir_fry: "stir-fry",
-        soup_chili: "soup-stew",
-        breakfast: "breakfast-for-dinner",
-        loaded_fries: "loaded-fries",
-        plated_main: "plated-main",
-        sandwich: "sandwich",
-        casserole: "casserole",
-      };
-
-      const explicitStructure = request.meal_format && request.meal_format !== "random"
-        ? MEAL_FORMAT_TO_STRUCTURE[request.meal_format]
-        : undefined;
-
-      const structureType: StructureType = explicitStructure || pickStructure(
-        request.appliances,
-        request.time_available,
-        request.recent_meal_styles || [],
-        request.prefer_different_style || false,
-        request.recent_meal_styles?.[0],
-      );
-      const mealStyleDisplay = STRUCTURE_DISPLAY[structureType] || structureType;
-      log(`[structure] Selected: ${structureType} (${mealStyleDisplay}) for protein: ${chosenProtein} | template: ${chosen ? chosen.template_id : "none"} | clientRecent: [${(request.recent_meal_styles || []).join(",")}] | preferDiff: ${request.prefer_different_style}`, "variety");
-
-      const debugMode = req.query.debug === "1" || (req.body as any).debug === true;
-
-      const validationCtx: RecipeValidationContext = {
-        chosenProtein: chosenProtein,
-        meal_style: mealStyleDisplay,
+      const fbAuditCtx: LabelAuditContext = { ...auditCtx, chosenProtein: fbProtein };
+      const fbValCtx: RecipeValidationContext = {
+        chosenProtein: fbProtein,
+        meal_style: fbStyle,
         cuisine: request.cuisine_style || "any",
         appliances: request.appliances,
-        allergens: request.allergens_to_avoid || [],
-        recentSignatures: (req.body as any).recentSignatures || [],
-        currentRecipeSignature: (req.body as any).currentRecipeSignature || undefined,
+        allergens,
+        recentSignatures: clientRecentSigs,
+        currentRecipeSignature: clientCurrentSig || undefined,
       };
 
-      const FAST_FALLBACK_MS = 8_000;
+      const fbWithStyle = { ...fbRecipe, _fallback: true, meal_style: fbStyle };
+      const fbVal = validateAndFixRecipe(fbWithStyle as any, fbValCtx);
+      const fbTemplateId = fbChosen ? parseInt(fbChosen.template_id) : 0;
+      setCachedRecipe(v2CacheKey, fbTemplateId, fbVal.recipe);
+      logUsage({ cacheKey: v2CacheKey, templateId: fbTemplateId, cacheHit: false, latencyMs: Date.now() - startTime, ipHash, sessionId });
+      log(`[v2] Fallback served in ${Date.now() - startTime}ms`, "v2");
+      recordSignature(fbProtein, fbVal.signature);
+      return sendRecipeResponse(res, fbVal, { _fallback: true }, debugMode, request.crew_size, request.meal_format, allergens, fbAuditCtx, ipHash, sessionId, requestId);
 
-      const recentFbIds = getRecentFallbackTemplateIds();
-      let fallbackTemplate = chosen || (candidates.length > 0 ? candidates[0] : null);
-      if (fallbackTemplate && candidates.length > 1) {
-        const nonRecent = candidates.filter(c => !recentFbIds.includes(parseInt(c.template_id)));
-        const pool = nonRecent.length > 0 ? nonRecent : candidates;
-        const chosenId = chosen ? chosen.template_id : "";
-        const otherPool = pool.filter(c => c.template_id !== chosenId);
-        fallbackTemplate = otherPool.length > 0
-          ? otherPool[Math.floor(Math.random() * otherPool.length)]
-          : pool[Math.floor(Math.random() * pool.length)];
-      }
-      const fallbackProtein = request.use_what_we_have ? "pantry" : fallbackTemplate ? chooseProtein(fallbackTemplate, request.proteins, request.healthiness_preference) : chosenProtein;
-      const clientRecentSigs = (req.body as any).recentSignatures || [];
-      const fallbackRecipe = fallbackTemplate
-        ? buildFallbackRecipe(fallbackTemplate, request, fallbackProtein, structureType, clientRecentSigs)
-        : buildSafeFallbackRecipe(request.meal_format || mealStyleDisplay, request.crew_size);
-
-      const spoonacularEnabled = !!process.env.SPOONACULAR_API_KEY && !request.use_what_we_have;
-
-      if (spoonacularEnabled) {
-        const spoonStart = Date.now();
-        let spoonRecipe: GenerateResponse | null = null;
-        try {
-          spoonRecipe = await fetchBestSpoonacularRecipe(request, chosenProtein);
-        } catch (spoonErr: any) {
-          log(`[spoonacular-generator] Unexpected error: ${spoonErr.message}`, "spoonacular");
-        }
-
-        if (spoonRecipe) {
-          const spoonOriginalTitle = spoonRecipe.title;
-          const spoonWithStyle = { ...spoonRecipe, meal_style: mealStyleDisplay };
-          let spoonValidation = validateAndFixRecipe(spoonWithStyle, validationCtx);
-          if (spoonValidation.recipe.title !== spoonOriginalTitle) {
-            log(`[spoonacular-generator] Restoring original title: "${spoonOriginalTitle}" (was changed to "${spoonValidation.recipe.title}")`, "spoonacular");
-            spoonValidation = { ...spoonValidation, recipe: { ...spoonValidation.recipe, title: spoonOriginalTitle } };
-          }
-
-          for (let dedupAttempt = 0; dedupAttempt < 2; dedupAttempt++) {
-            const sessKey = `${ipHash}:${sessionId}`;
-            if (!isRecentSessionSignature(sessKey, spoonValidation.signature)) break;
-            log(`[dedup] Spoonacular sig in session history (attempt ${dedupAttempt + 1}) — skipping to AI fallback`, "variety");
-            spoonRecipe = null;
-            break;
-          }
-
-          if (spoonRecipe) {
-            const estimatedCost = 0;
-            const templateId = 0;
-            setCachedRecipe(cacheKey, templateId, spoonValidation.recipe);
-            logUsage({
-              cacheKey,
-              templateId,
-              cacheHit: false,
-              estimatedCost,
-              latencyMs: Date.now() - spoonStart,
-              ipHash,
-              sessionId,
-            });
-            log(`[spoonacular-generator] Served in ${Date.now() - spoonStart}ms | source=spoonacular`, "perf");
-            recordSignature(chosenProtein, spoonValidation.signature);
-            const spoonExtras: Record<string, any> = { _source: "spoonacular", _spoonacular_title: spoonOriginalTitle };
-            if (filtersRelaxed) spoonExtras._filtersRelaxed = true;
-            return sendRecipeResponse(res, spoonValidation, spoonExtras, debugMode, request.crew_size, "random", allergens, auditCtx, ipHash, sessionId, requestId);
-          }
-        }
-
-        log(`[spoonacular-generator] No usable Spoonacular result — falling back to AI generator`, "spoonacular");
-      }
-
-      const templateForAI = chosen || fallbackTemplate;
-      const aiPromise = (async () => {
-        if (!templateForAI) {
-          return await generateRecipe(
-            { template_id: "0", template_name: "Open Recipe", style: "flexible", base_idea_description: "crew-sized meal", busy_level_fit: request.busy_level, time_range_minutes: request.time_available, appliances_needed: request.appliances.join("|"), proteins_allowed: request.proteins.join("|"), allergens_possible: "none" } as TemplateRow,
-            request, chosenProtein, varietyConstraints, structureType
-          );
-        }
-        const result = request.use_what_we_have
-          ? await generateRecipeFromPantry(templateForAI, request, varietyConstraints, structureType)
-          : await generateRecipe(templateForAI, request, chosenProtein, varietyConstraints, structureType);
-        return result;
-      })();
-
-      const fastTimer = new Promise<"timeout">((resolve) =>
-        setTimeout(() => resolve("timeout"), FAST_FALLBACK_MS)
-      );
-
-      const raceResult = await Promise.race([
-        aiPromise.then((r) => ({ type: "ai" as const, result: r })),
-        fastTimer.then(() => ({ type: "timeout" as const })),
-      ]).catch((aiError: any) => {
-        return { type: "error" as const, error: aiError };
-      });
-
-      if (raceResult.type === "ai") {
-        let { recipe, tokensIn, tokensOut } = raceResult.result;
-        let totalTokensIn = tokensIn;
-        let totalTokensOut = tokensOut;
-        trackStructure(structureType);
-        recordRecipe(recipe);
-
-        const aiRecipeWithStyle = { ...recipe, meal_style: mealStyleDisplay };
-        let aiValidation = validateAndFixRecipe(aiRecipeWithStyle, validationCtx);
-
-        const contentErrors = validateRecipe(aiValidation.recipe, request.meal_format);
-        const blockingErrors = contentErrors.filter(e =>
-          e.startsWith("format_missing_required:") ||
-          e.startsWith("format_has_forbidden:") ||
-          e.startsWith("format_missing_step:") ||
-          e.startsWith("format_forbidden_step:") ||
-          e.startsWith("timing_invalid:")
-        );
-
-        if (blockingErrors.length > 0) {
-          log(`[repair-loop] Attempt 1 failed with ${blockingErrors.length} blocking errors — requesting LLM repair`, "ai");
-          try {
-            const repairResult = await repairRecipe(
-              aiValidation.recipe,
-              contentErrors,
-              chosen,
-              chosenProtein,
-              request.budget_level || "standard"
-            );
-
-            if (repairResult) {
-              totalTokensIn += repairResult.tokensIn;
-              totalTokensOut += repairResult.tokensOut;
-              const repairedWithStyle = { ...repairResult.recipe, meal_style: mealStyleDisplay };
-              aiValidation = validateAndFixRecipe(repairedWithStyle, validationCtx);
-
-              const repairErrors = validateRecipe(aiValidation.recipe, request.meal_format);
-              const repairBlocking = repairErrors.filter(e =>
-                e.startsWith("format_missing_required:") ||
-                e.startsWith("format_has_forbidden:") ||
-                e.startsWith("format_missing_step:") ||
-                e.startsWith("format_forbidden_step:")
-              );
-
-              if (repairBlocking.length > 0) {
-                log(`[repair-loop] Attempt 2 still invalid (${repairBlocking.length} blocking) — serving safe fallback`, "ai");
-                const safeFb = buildSafeFallbackRecipe(request.meal_format || mealStyleDisplay, request.crew_size);
-                const safeFbWithStyle = { ...safeFb, meal_style: mealStyleDisplay, _fallback: true };
-                aiValidation = validateAndFixRecipe(safeFbWithStyle as any, validationCtx);
-              } else {
-                log(`[repair-loop] Repair succeeded on attempt 2`, "ai");
-              }
-            } else {
-              log(`[repair-loop] Repair call failed — serving safe fallback`, "ai");
-              const safeFb = buildSafeFallbackRecipe(request.meal_format || mealStyleDisplay, request.crew_size);
-              const safeFbWithStyle = { ...safeFb, meal_style: mealStyleDisplay, _fallback: true };
-              aiValidation = validateAndFixRecipe(safeFbWithStyle as any, validationCtx);
-            }
-          } catch (repairErr: any) {
-            log(`[repair-loop] Repair error: ${repairErr.message} — serving safe fallback`, "ai");
-            const safeFb = buildSafeFallbackRecipe(request.meal_format || mealStyleDisplay, request.crew_size);
-            const safeFbWithStyle = { ...safeFb, meal_style: mealStyleDisplay, _fallback: true };
-            aiValidation = validateAndFixRecipe(safeFbWithStyle as any, validationCtx);
-          }
-        }
-
-        const sessKey = `${ipHash}:${sessionId}`;
-        for (let dedupAttempt = 0; dedupAttempt < 3; dedupAttempt++) {
-          if (!isRecentSessionSignature(sessKey, aiValidation.signature)) break;
-
-          if (dedupAttempt < 2) {
-            log(`[dedup] Signature in session history (attempt ${dedupAttempt + 1}) — remixing`, "variety");
-            const remixed = remixRecipeForVariety(aiValidation.recipe, structureType, chosenProtein, allergens);
-            aiValidation = validateAndFixRecipe(remixed, validationCtx);
-          } else {
-            log(`[dedup] Remix still duplicate after 2 attempts — forcing different structure`, "variety");
-            const altStructure = pickStructure(request.appliances, request.time_available, [mealStyleDisplay, ...(request.recent_meal_styles || [])], true);
-            const altFb = buildFallbackRecipe(fallbackTemplate || (candidates.length > 0 ? candidates[0] : null) as any, request, chosenProtein, altStructure, clientRecentSigs);
-            const altWithStyle = { ...altFb, meal_style: STRUCTURE_DISPLAY[altStructure] || altStructure };
-            aiValidation = validateAndFixRecipe(altWithStyle as any, { ...validationCtx, meal_style: altWithStyle.meal_style });
-            log(`[dedup] Forced alt structure=${altStructure}, newSig=${aiValidation.signature.substring(0, 40)}`, "variety");
-          }
-        }
-
-        const estimatedCost =
-          (totalTokensIn / 1000) * COST_PER_1K_INPUT +
-          (totalTokensOut / 1000) * COST_PER_1K_OUTPUT;
-        const templateId = chosen ? parseInt(chosen.template_id) : 0;
-        setCachedRecipe(cacheKey, templateId, aiValidation.recipe);
-        logUsage({
-          cacheKey,
-          templateId,
-          cacheHit: false,
-          tokensIn: totalTokensIn,
-          tokensOut: totalTokensOut,
-          estimatedCost,
-          latencyMs: Date.now() - startTime,
-          ipHash,
-          sessionId,
-        });
-        log(`Generated in ${Date.now() - startTime}ms | ${totalTokensIn}in/${totalTokensOut}out | ~$${estimatedCost.toFixed(5)}${raceResult.result.fallback ? " [FALLBACK_REMIX]" : ""}${isColdStart ? " [COLD START]" : ""}`, "perf");
-        if (process.env.ENABLE_POOL_WARMUP === "true") {
-          refillPool().catch(() => {});
-        }
-        recordSignature(chosenProtein, aiValidation.signature);
-        const responseExtras: Record<string, any> = {};
-        if (filtersRelaxed) responseExtras._filtersRelaxed = true;
-        return sendRecipeResponse(res, aiValidation, responseExtras, debugMode, request.crew_size, request.meal_format, allergens, auditCtx, ipHash, sessionId, requestId);
-      }
-
-      if (raceResult.type === "timeout") {
-        const fbTemplateId = fallbackTemplate ? parseInt(fallbackTemplate.template_id) : 0;
-        if (fbTemplateId) trackFallbackTemplateId(fbTemplateId);
-        trackStructure(structureType);
-        log(`AI exceeded ${FAST_FALLBACK_MS}ms — serving fast fallback (template ${fbTemplateId}, structure ${structureType}), AI continues in background${isColdStart ? " [COLD START]" : ""}`, "fallback");
-        recordRecipe(fallbackRecipe);
-        logUsage({
-          cacheKey,
-          templateId: fbTemplateId,
-          cacheHit: false,
-          latencyMs: Date.now() - startTime,
-          ipHash,
-          sessionId,
-        });
-
-        const bgTemplateId = chosen ? parseInt(chosen.template_id) : 0;
-        aiPromise
-          .then((aiResult) => {
-            const { recipe, tokensIn, tokensOut } = aiResult;
-            const estimatedCost =
-              (tokensIn / 1000) * COST_PER_1K_INPUT +
-              (tokensOut / 1000) * COST_PER_1K_OUTPUT;
-            setCachedRecipe(cacheKey, bgTemplateId, recipe);
-            recordRecipe(recipe);
-            log(`Background AI completed in ${Date.now() - startTime}ms — cached for next request | ~$${estimatedCost.toFixed(5)}`, "perf");
-          })
-          .catch((bgErr: any) => {
-            log(`Background AI also failed: ${bgErr.message}`, "fallback");
-          });
-
-        const fbSessKey = `${ipHash}:${sessionId}`;
-        const fbRecipeWithStyle = { ...fallbackRecipe, _fallback: true, meal_style: mealStyleDisplay };
-        let fbValidation = validateAndFixRecipe(fbRecipeWithStyle as any, validationCtx);
-        for (let fbDedup = 0; fbDedup < 2; fbDedup++) {
-          if (!isRecentSessionSignature(fbSessKey, fbValidation.signature)) break;
-          log(`[dedup] Fallback sig in session history (attempt ${fbDedup + 1}) — remixing`, "variety");
-          const remixed = remixRecipeForVariety(fbValidation.recipe, structureType, chosenProtein, allergens);
-          fbValidation = validateAndFixRecipe(remixed, validationCtx);
-        }
-        recordSignature(chosenProtein, fbValidation.signature);
-        const fbExtras: Record<string, any> = { _fallback: true };
-        if (filtersRelaxed) fbExtras._filtersRelaxed = true;
-        return sendRecipeResponse(res, fbValidation, fbExtras, debugMode, request.crew_size, request.meal_format, allergens, auditCtx, ipHash, sessionId, requestId);
-      }
-
-      const aiError = (raceResult as any).error;
-      const errorCategory = aiError?.message?.includes("timed out") ? "timeout"
-        : aiError?.message?.includes("empty") ? "ai_empty"
-        : aiError?.message?.includes("parse") ? "json_parse_failed"
-        : aiError?.message?.includes("validation") ? "validation_failed"
-        : "ai_error";
-      const fbTemplateId2 = fallbackTemplate ? parseInt(fallbackTemplate.template_id) : 0;
-      if (fbTemplateId2) trackFallbackTemplateId(fbTemplateId2);
-      trackStructure(structureType);
-      log(`AI generation failed (${errorCategory}): ${aiError?.message}${isColdStart ? " [COLD START]" : ""} — serving fallback (template ${fbTemplateId2}, structure ${structureType})`, "fallback");
-      recordRecipe(fallbackRecipe);
-      logUsage({
-        cacheKey,
-        templateId: fbTemplateId2,
-        cacheHit: false,
-        latencyMs: Date.now() - startTime,
-        ipHash,
-        sessionId,
-      });
-      log(`Fallback served in ${Date.now() - startTime}ms${isColdStart ? " [COLD START]" : ""}`, "perf");
-      const errFbWithStyle = { ...fallbackRecipe, _fallback: true, meal_style: mealStyleDisplay };
-      let errFbValidation = validateAndFixRecipe(errFbWithStyle as any, validationCtx);
-      const errSessKey = `${ipHash}:${sessionId}`;
-      for (let errDedup = 0; errDedup < 2; errDedup++) {
-        if (!isRecentSessionSignature(errSessKey, errFbValidation.signature)) break;
-        log(`[dedup] Error-fallback sig in session history (attempt ${errDedup + 1}) — remixing`, "variety");
-        const remixed = remixRecipeForVariety(errFbValidation.recipe, structureType, chosenProtein, allergens);
-        errFbValidation = validateAndFixRecipe(remixed, validationCtx);
-      }
-      recordSignature(chosenProtein, errFbValidation.signature);
-      const errExtras: Record<string, any> = { _fallback: true };
-      if (filtersRelaxed) errExtras._filtersRelaxed = true;
-      return sendRecipeResponse(res, errFbValidation, errExtras, debugMode, request.crew_size, request.meal_format, allergens, auditCtx, ipHash, sessionId, requestId);
     } catch (error: any) {
       cancelRequest(sessionKey, requestId);
       console.error("Generate error:", error);
