@@ -210,6 +210,14 @@ export async function getRecipeById(id: number, includeNutrition: boolean = fals
   return data;
 }
 
+/**
+ * Fetch full recipe details for a single recipe by id.
+ * This is the V2 engine's primary detail fetch — called only for the selected candidate.
+ */
+export async function getRecipeDetails(id: number, includeNutrition: boolean = true): Promise<SpoonacularRecipeDetail> {
+  return getRecipeById(id, includeNutrition);
+}
+
 export async function getRandomRecipes(tags?: string, number: number = 5): Promise<SpoonacularRecipeDetail[]> {
   const cacheKey = `random:${tags || "none"}:${number}`;
   const cached = getCached<SpoonacularRecipeDetail[]>(cacheKey);
