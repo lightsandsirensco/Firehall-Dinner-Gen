@@ -26,6 +26,7 @@
 import { log } from "./index";
 import { searchRecipes, getRecipeDetails, type SpoonacularSearchResult } from "./spoonacular";
 import { inferActualProtein, proteinMatchesFilter, convertSpoonacularToGenerateResponse } from "./spoonacular-converter";
+import { validateV2Candidate } from "./v2-validator";
 import { ensureRiceForRiceDishes } from "./carb-rules";
 import type { GenerateRequest, GenerateResponse } from "../shared/schema";
 
@@ -301,62 +302,11 @@ function buildSearchParams(request: GenerateRequest, chosenProtein: string): Spo
   return params;
 }
 
-// ─── Step 3: Select one candidate from search results ────────────────────────
+// ─── Step 3 / Step 4 ──────────────────────────────────────────────────────────
 //
-// Selection uses only lightweight search result data (title + metadata).
-// No extra API call here — full detail is fetched after selection.
-
-function selectCandidate(
-  candidates: SpoonacularSearchResult[],
-  chosenProtein: string,
-): SpoonacularSearchResult | null {
-  if (candidates.length === 0) return null;
-
-  // Title-based protein pre-filter (no API cost)
-  const proteinMatches = candidates.filter((c) => {
-    const quick = inferActualProtein(c.title, []);
-    // "unknown" = no clear protein word in title → allow through (ingredient check comes at detail stage)
-    return quick === "unknown" || proteinMatchesFilter(quick, chosenProtein);
-  });
-
-  const pool = proteinMatches.length > 0 ? proteinMatches : candidates;
-
-  // Random pick for variety on repeated requests with same filters
-  return pool[Math.floor(Math.random() * pool.length)];
-}
-
-// ─── Step 5: Post-select format validation ────────────────────────────────────
-//
-// Light check that the selected recipe title or dishTypes roughly match
-// the requested format. Prevents a "soup" from being returned as a "burger".
-// Returns true if ok, false if the mismatch is severe enough to skip.
-
-function formatMatchesRequest(
-  detail: { title: string; dishTypes?: string[] },
-  formatKey: string,
-): boolean {
-  if (formatKey === "random" || formatKey === "plated_main") return true;
-
-  const titleLower = detail.title.toLowerCase();
-  const dishTypes = (detail.dishTypes || []).map((d) => d.toLowerCase());
-  const allText = titleLower + " " + dishTypes.join(" ");
-
-  const HARD_MISMATCHES: Record<string, string[]> = {
-    pasta:     ["burger", "taco", "wrap", "stir fry", "stir-fry"],
-    burger:    ["pasta", "soup", "stew", "stir fry"],
-    tacos:     ["pasta", "soup", "stew", "burger"],
-    soup_chili:["burger", "wrap", "pasta", "stir fry"],
-    stew:      ["burger", "pasta", "wrap", "taco", "stir fry"],
-    stir_fry:  ["soup", "stew", "burger", "pasta"],
-    salad:     ["burger", "soup", "stew", "pasta"],
-    breakfast: [],
-  };
-
-  const blocklist = HARD_MISMATCHES[formatKey];
-  if (!blocklist) return true;
-
-  return !blocklist.some((term) => allText.includes(term));
-}
+// Candidate selection + strict validation live in the main runV2Generate flow below.
+// The old single-pick selectCandidate() and light formatMatchesRequest() are replaced
+// by validateV2Candidate() (v2-validator.ts) which iterates every candidate.
 
 // ─── Main Entry Point ─────────────────────────────────────────────────────────
 
@@ -404,59 +354,76 @@ export async function runV2Generate(
     return null;
   }
 
-  // ── Step 3: Select one candidate ────────────────────────────────────────
-  const selected = selectCandidate(results, chosenProtein);
-  if (!selected) {
-    log("[v2] No suitable candidate after title filter — caller will use fallback", "v2");
-    return null;
-  }
+  // ── Step 3: Build ordered candidate pool ────────────────────────────────
+  //   Title-based protein pre-filter (zero API cost) then shuffle for variety.
+  //   Candidates that don't clearly match the protein go to the back of the pool.
+  const proteinMatched = results.filter((c) => {
+    const quick = inferActualProtein(c.title, []);
+    return quick === "unknown" || proteinMatchesFilter(quick, chosenProtein);
+  });
+  const pool = proteinMatched.length > 0 ? proteinMatched : results;
+  const shuffled = pool.slice().sort(() => Math.random() - 0.5);
 
-  log(`[v2] Selected recipe id=${selected.id}`, "v2");
-  log(`[v2] Selected recipe title="${selected.title}"`, "v2");
+  log(`[v2] Candidate pool: ${shuffled.length} after title-level filter (from ${results.length} total)`, "v2");
 
-  // ── Step 4: getRecipeDetails(recipeId) ──────────────────────────────────
-  //   One detail fetch for the selected recipe ONLY — not all candidates.
-  let detail;
-  try {
-    detail = await getRecipeDetails(selected.id);
-  } catch (err: any) {
-    log(`[v2] getRecipeDetails failed for id=${selected.id}: ${err.message}`, "v2");
-    return null;
-  }
-
-  // Require parsed instruction steps
-  const hasSteps = detail.analyzedInstructions?.[0]?.steps?.length > 0;
-  if (!hasSteps) {
-    log(`[v2] id=${selected.id} "${selected.title}" has no parsed steps — caller will use fallback`, "v2");
-    return null;
-  }
-
-  // Light format mismatch guard — skip severe mismatches (e.g. soup returned as burger)
-  if (!formatMatchesRequest(detail, request.meal_format || "random")) {
-    log(`[v2] id=${selected.id} format mismatch for requested="${request.meal_format}" — caller will use fallback`, "v2");
-    return null;
-  }
-
-  // ── Step 5: Normalize to Firehall recipe shape ───────────────────────────
-  //   Scales to crew size, maps macros/timing/tags from Spoonacular data.
-  //   Does NOT invent content or relabel meal types.
-  //   carb_free formats skip rice injection entirely.
+  // ── Step 4: Iterate candidates — fetch detail + strict validate each ─────
+  //   Full validation runs on each candidate in turn.
+  //   The FIRST candidate that passes all checks is used.
+  //   If ALL candidates fail, we fall back to the internal generator.
   const formatInfo = FORMAT_MAP[request.meal_format || "random"] ?? FORMAT_MAP.random;
-  const recipe = convertSpoonacularToGenerateResponse(detail, request, chosenProtein);
+  let finalRecipe: GenerateResponse | null = null;
+  let acceptedTitle = "";
 
-  // Inject rice only for recipes that genuinely require it (e.g. stir fry, teriyaki bowl)
-  // Skip entirely for carb-free formats like sheet pan, grill, salad
-  let finalRecipe = recipe;
-  if (!formatInfo.carb_free) {
-    const riceResult = ensureRiceForRiceDishes(recipe, request.meal_format, request.crew_size, allergens);
-    finalRecipe = riceResult.recipe || recipe;
+  for (let i = 0; i < shuffled.length; i++) {
+    const candidate = shuffled[i];
+    log(`[v2] Trying candidate ${i + 1}/${shuffled.length}: id=${candidate.id} title="${candidate.title}"`, "v2");
+
+    let detail;
+    try {
+      detail = await getRecipeDetails(candidate.id);
+    } catch (err: any) {
+      log(`[v2] getRecipeDetails failed id=${candidate.id}: ${err.message} — skipping`, "v2");
+      continue;
+    }
+
+    // ── Strict Validation ──────────────────────────────────────────────────
+    const validation = validateV2Candidate(
+      detail,
+      chosenProtein,
+      request.meal_format || "random",
+      allergens,
+    );
+
+    if (!validation.accepted) {
+      log(`[v2] Candidate ${i + 1} REJECTED: ${validation.rejectionReason}`, "v2");
+      continue;
+    }
+
+    // ── Normalize to Firehall shape ────────────────────────────────────────
+    const recipe = convertSpoonacularToGenerateResponse(detail, request, chosenProtein);
+
+    // Inject rice only for non-carb-free formats that genuinely need it
+    let withCarbs = recipe;
+    if (!formatInfo.carb_free) {
+      const riceResult = ensureRiceForRiceDishes(recipe, request.meal_format, request.crew_size, allergens);
+      withCarbs = riceResult.recipe || recipe;
+    }
+
+    log(`[v2] ✓ Normalized "${detail.title}" | protein=${validation.inferredProtein} | ingredients=${withCarbs.ingredients?.length} | steps=${withCarbs.steps?.length} | source=spoonacular_v2`, "v2");
+
+    finalRecipe = withCarbs;
+    acceptedTitle = detail.title;
+    break;
   }
 
-  log(`[v2] ✓ Normalized "${detail.title}" | protein=${chosenProtein} | ingredients=${finalRecipe.ingredients.length} | steps=${finalRecipe.steps.length} | source=spoonacular_v2`, "v2");
+  if (!finalRecipe) {
+    log(`[v2] All ${shuffled.length} candidates rejected — caller will use fallback`, "v2");
+    return null;
+  }
 
   return {
     recipe: finalRecipe,
-    originalTitle: detail.title,
+    originalTitle: acceptedTitle,
     protein: chosenProtein,
     source: "spoonacular_v2",
   };
