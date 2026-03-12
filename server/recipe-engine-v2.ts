@@ -7,6 +7,7 @@
  *   3. Select one candidate        — title-based protein pre-filter → shuffle → pick first
  *   4. getRecipeDetails(id)        — fetch full detail for that ONE candidate (cached 1h)
  *   5. Normalize                   — convert Spoonacular shape → Firehall recipe shape
+ *   6. Polish                      — gpt-4o-mini lightly fixes title wording + writes description (cached 1h, 2s timeout)
  *
  * Protein is a hard constraint enforced at three levels:
  *   - query keyword (e.g., "chicken skillet")
@@ -28,6 +29,7 @@ import { searchRecipes, getRecipeDetails, type SpoonacularSearchResult } from ".
 import { inferActualProtein, proteinMatchesFilter, convertSpoonacularToGenerateResponse } from "./spoonacular-converter";
 import { validateV2Candidate } from "./v2-validator";
 import { ensureRiceForRiceDishes } from "./carb-rules";
+import { polishRecipeCopy } from "./recipe-polish";
 import type { GenerateRequest, GenerateResponse } from "../shared/schema";
 
 // ─── Constants ────────────────────────────────────────────────────────────────
@@ -408,8 +410,29 @@ export async function runV2Generate(
 
   log(`[v2] ✓ Accepted "${detail.title}" | protein=${validation.inferredProtein} | ingredients=${withCarbs.ingredients?.length} | steps=${withCarbs.steps?.length} | source=spoonacular_v2`, "v2");
 
-  const finalRecipe = withCarbs;
-  const acceptedTitle = detail.title;
+  // ── Step 5: Light copy polish (title + description only) ─────────────────
+  //   gpt-4o-mini polishes wording without changing dish type or ingredients.
+  //   Hard 2-second timeout; falls back to original title + generated description.
+  //   Results cached per Spoonacular ID for 1 hour (zero repeat AI calls).
+  const cuisine = detail.cuisines?.[0] || withCarbs.tags?.cuisine || "any";
+  const keyIngredients = (withCarbs.ingredients || []).slice(0, 5).map((i) => i.name);
+  const polish = await polishRecipeCopy(
+    detail.id,
+    detail.title,
+    chosenProtein,
+    cuisine,
+    withCarbs.timing?.total_minutes ?? 0,
+    request.crew_size,
+    keyIngredients,
+    withCarbs.steps?.length ?? 0,
+  );
+
+  const finalRecipe: GenerateResponse = {
+    ...withCarbs,
+    title: polish.title,
+    why_it_fits_tonight: polish.why_it_fits_tonight,
+  };
+  const acceptedTitle = polish.title;
 
   return {
     recipe: finalRecipe,
