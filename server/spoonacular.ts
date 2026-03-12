@@ -1,8 +1,8 @@
 import { log } from "./index";
 
 const SPOONACULAR_BASE = "https://api.spoonacular.com";
-const SEARCH_CACHE_TTL_MS = 24 * 60 * 60 * 1000;
-const DETAIL_CACHE_TTL_MS = 7 * 24 * 60 * 60 * 1000;
+const SEARCH_CACHE_TTL_MS = 60 * 60 * 1000;       // 1 hour
+const DETAIL_CACHE_TTL_MS = 60 * 60 * 1000;       // 1 hour
 const MAX_CACHE_SIZE = 500;
 const DEFAULT_RESULTS_PER_REQUEST = 5;
 
@@ -13,8 +13,7 @@ function getCached<T>(key: string): T | null {
   if (!entry) return null;
   if (Date.now() > entry.expires) {
     apiCache.delete(key);
-    const expiresLabel = key.startsWith("detail:") ? "7d" : "24h";
-    log(`[spoonacular-cache] Expired (TTL ${expiresLabel}): ${key.substring(0, 80)}`, "spoonacular");
+    log(`[spoonacular-cache] Expired (TTL 1h): ${key.substring(0, 80)}`, "spoonacular");
     return null;
   }
   return entry.data as T;

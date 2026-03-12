@@ -3,9 +3,9 @@
  *
  * Generation flow:
  *   1. buildSearchParams(request)  — map all Firehall filters → Spoonacular params
- *   2. searchRecipes(params)       — search Spoonacular for 5 candidates
- *   3. Select one candidate        — title-based protein pre-filter, random pick
- *   4. getRecipeDetails(id)        — fetch full detail for the selected recipe ONLY
+ *   2. searchRecipes(params)       — search Spoonacular for 5 candidates (cached 1h)
+ *   3. Select one candidate        — title-based protein pre-filter → shuffle → pick first
+ *   4. getRecipeDetails(id)        — fetch full detail for that ONE candidate (cached 1h)
  *   5. Normalize                   — convert Spoonacular shape → Firehall recipe shape
  *
  * Protein is a hard constraint enforced at three levels:
@@ -19,7 +19,7 @@
  * Rules:
  *   - No recipe invention in this flow
  *   - No relabeling into different meal types
- *   - Full details fetched for selected recipe only (not all candidates)
+ *   - One getRecipeDetails call per request (selected candidate only)
  *   - No default rice / no forced carbs
  */
 
@@ -366,60 +366,50 @@ export async function runV2Generate(
 
   log(`[v2] Candidate pool: ${shuffled.length} after title-level filter (from ${results.length} total)`, "v2");
 
-  // ── Step 4: Iterate candidates — fetch detail + strict validate each ─────
-  //   Full validation runs on each candidate in turn.
-  //   The FIRST candidate that passes all checks is used.
-  //   If ALL candidates fail, we fall back to the internal generator.
+  // ── Step 4: Select one candidate — fetch its detail — validate once ──────
+  //   We pick a single candidate (first after protein-title-filter + shuffle).
+  //   getRecipeDetails is called ONLY for that one recipe — one API call max.
+  //   If validation fails we go straight to fallback without retrying others.
+  //   (Subsequent requests for the same candidate ID hit the 1-hour cache.)
   const formatInfo = FORMAT_MAP[request.meal_format || "random"] ?? FORMAT_MAP.random;
-  let finalRecipe: GenerateResponse | null = null;
-  let acceptedTitle = "";
 
-  for (let i = 0; i < shuffled.length; i++) {
-    const candidate = shuffled[i];
-    log(`[v2] Trying candidate ${i + 1}/${shuffled.length}: id=${candidate.id} title="${candidate.title}"`, "v2");
+  const selected = shuffled[0];
+  log(`[v2] Selected candidate: id=${selected.id} title="${selected.title}" (pool size=${shuffled.length})`, "v2");
 
-    let detail;
-    try {
-      detail = await getRecipeDetails(candidate.id);
-    } catch (err: any) {
-      log(`[v2] getRecipeDetails failed id=${candidate.id}: ${err.message} — skipping`, "v2");
-      continue;
-    }
-
-    // ── Strict Validation ──────────────────────────────────────────────────
-    const validation = validateV2Candidate(
-      detail,
-      chosenProtein,
-      request.meal_format || "random",
-      allergens,
-    );
-
-    if (!validation.accepted) {
-      log(`[v2] Candidate ${i + 1} REJECTED: ${validation.rejectionReason}`, "v2");
-      continue;
-    }
-
-    // ── Normalize to Firehall shape ────────────────────────────────────────
-    const recipe = convertSpoonacularToGenerateResponse(detail, request, chosenProtein);
-
-    // Inject rice only for non-carb-free formats that genuinely need it
-    let withCarbs = recipe;
-    if (!formatInfo.carb_free) {
-      const riceResult = ensureRiceForRiceDishes(recipe, request.meal_format, request.crew_size, allergens);
-      withCarbs = riceResult.recipe || recipe;
-    }
-
-    log(`[v2] ✓ Normalized "${detail.title}" | protein=${validation.inferredProtein} | ingredients=${withCarbs.ingredients?.length} | steps=${withCarbs.steps?.length} | source=spoonacular_v2`, "v2");
-
-    finalRecipe = withCarbs;
-    acceptedTitle = detail.title;
-    break;
-  }
-
-  if (!finalRecipe) {
-    log(`[v2] All ${shuffled.length} candidates rejected — caller will use fallback`, "v2");
+  let detail;
+  try {
+    detail = await getRecipeDetails(selected.id);
+  } catch (err: any) {
+    log(`[v2] getRecipeDetails failed id=${selected.id}: ${err.message} — caller will use fallback`, "v2");
     return null;
   }
+
+  // ── Strict Validation ────────────────────────────────────────────────────
+  const validation = validateV2Candidate(
+    detail,
+    chosenProtein,
+    request.meal_format || "random",
+    allergens,
+  );
+
+  if (!validation.accepted) {
+    log(`[v2] Candidate REJECTED (${validation.rejectionReason}) — caller will use fallback`, "v2");
+    return null;
+  }
+
+  // ── Normalize to Firehall shape ──────────────────────────────────────────
+  const recipe = convertSpoonacularToGenerateResponse(detail, request, chosenProtein);
+
+  let withCarbs = recipe;
+  if (!formatInfo.carb_free) {
+    const riceResult = ensureRiceForRiceDishes(recipe, request.meal_format, request.crew_size, allergens);
+    withCarbs = riceResult.recipe || recipe;
+  }
+
+  log(`[v2] ✓ Accepted "${detail.title}" | protein=${validation.inferredProtein} | ingredients=${withCarbs.ingredients?.length} | steps=${withCarbs.steps?.length} | source=spoonacular_v2`, "v2");
+
+  const finalRecipe = withCarbs;
+  const acceptedTitle = detail.title;
 
   return {
     recipe: finalRecipe,
