@@ -309,6 +309,9 @@ export function buildCarbRulesPromptBlock(mealFormat: string | undefined, health
 function normalizeFormatToRuleKey(format: string): string {
   const f = format.toLowerCase().replace(/_/g, "-");
   if (f === "soup-chili" || f === "soup_chili") return "soup-stew";
+  if (f === "stew") return "soup-stew";
+  if (f === "grill") return "plated-main";
+  if (f === "one-pot" || f === "one_pot") return "soup-stew";
   if (f === "sheet-pan" || f === "sheet_pan") return "sheet-pan";
   if (f === "stir-fry" || f === "stir_fry") return "stir-fry";
   if (f === "loaded-fries" || f === "loaded_fries") return "loaded-fries";
