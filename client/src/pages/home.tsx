@@ -17,9 +17,10 @@ import type { ClientRecipeResponse } from "@shared/schema";
 import { Vote, Flame } from "lucide-react";
 import { HeroHeader } from "@/components/hero-header";
 import { SiteHeader } from "@/components/site-header";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
+
+// ─── Helpers ──────────────────────────────────────────────────────────────────
 
 function getRecentMealStyles(): string[] {
   try {
@@ -64,47 +65,14 @@ function makeRequestId(): string {
   return `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
 }
 
-function hashIngredients(recipe: ClientRecipeResponse): string {
-  return (recipe.ingredients || []).map(i => `${i.name}|${i.qty}|${i.unit}`).join(";;");
+// Stable key: every distinct recipe object gets a unique render identity.
+// Uses server-assigned _id so React knows to unmount/remount RecipeCard on a new recipe,
+// not on every intermediate re-render.
+function stableRecipeKey(recipe: ClientRecipeResponse): string {
+  return (recipe as any)._id || (recipe as any)._signature || recipe.title;
 }
 
-function hashSteps(recipe: ClientRecipeResponse): string {
-  return (recipe.steps || []).map(s => `${s.title}|${s.instructions}`).join(";;");
-}
-
-function isRecipeCoherent(newRecipe: ClientRecipeResponse, oldRecipe: ClientRecipeResponse | null): boolean {
-  if (!oldRecipe) return true;
-
-  const newSig = (newRecipe as any)._signature || "";
-  const oldSig = (oldRecipe as any)._signature || "";
-  const sigChanged = newSig !== oldSig;
-  const titleChanged = newRecipe.title !== oldRecipe.title;
-  const newIngHash = hashIngredients(newRecipe);
-  const oldIngHash = hashIngredients(oldRecipe);
-  const newStepHash = hashSteps(newRecipe);
-  const oldStepHash = hashSteps(oldRecipe);
-  const ingsChanged = newIngHash !== oldIngHash;
-  const stepsChanged = newStepHash !== oldStepHash;
-
-  console.log(`[mismatchGuard] titleChanged=${titleChanged} signatureChanged=${sigChanged} ingredientsHashChanged=${ingsChanged} stepsHashChanged=${stepsChanged}`);
-
-  if (titleChanged && !ingsChanged && !stepsChanged) {
-    console.warn("[mismatchGuard] Title changed but ingredients and steps are identical — possible partial update");
-    return false;
-  }
-
-  if (sigChanged && !ingsChanged && !stepsChanged && titleChanged) {
-    console.warn("[mismatchGuard] Signature changed with new title but same content — discarding");
-    return false;
-  }
-
-  return true;
-}
-
-let recipeKeyCounter = 0;
-function recipeKey(recipe: ClientRecipeResponse): string {
-  return (recipe as any)._signature || `${recipe.title}-${recipe.template_id}-${++recipeKeyCounter}`;
-}
+// ─── Results Panel ────────────────────────────────────────────────────────────
 
 const ResultsPanel = memo(function ResultsPanel({
   loading,
@@ -157,7 +125,7 @@ const ResultsPanel = memo(function ResultsPanel({
       {!loading && showRecipe && (
         <div className="animate-in fade-in slide-in-from-bottom-2 duration-400">
           <RecipeCard
-            key={recipeKey(recipe)}
+            key={stableRecipeKey(recipe)}
             recipe={recipe}
             crewSize={filters.crew_size}
             onEmailClick={onEmailClick}
@@ -192,30 +160,62 @@ const ResultsPanel = memo(function ResultsPanel({
   );
 });
 
+// ─── Home Page ────────────────────────────────────────────────────────────────
+
 export default function Home() {
+  // ── Core recipe state ─────────────────────────────────────────────────────
+  // recipe is ALWAYS replaced atomically — never partially updated.
+  // Title, ingredients, steps, timing, tags, macros all come from the same object.
   const [recipe, setRecipe] = useState<ClientRecipeResponse | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  // ── Supporting state ──────────────────────────────────────────────────────
   const [lastTemplateId, setLastTemplateId] = useState<number | undefined>();
   const [emailModalOpen, setEmailModalOpen] = useState(false);
   const [shoppingListOpen, setShoppingListOpen] = useState(false);
   const [hallVoteOpen, setHallVoteOpen] = useState(false);
   const [recentRecipes, setRecentRecipes] = useState<ClientRecipeResponse[]>([]);
   const [favCount, setFavCount] = useState(() => getSavedCount());
-  const latestRequestRef = useRef(0);
+
+  // ── Refs (never trigger re-renders) ──────────────────────────────────────
+  // latestRequestSeq: incremented on every new request. Stale responses whose
+  // seq doesn't match this value are silently discarded.
+  const latestRequestSeq = useRef(0);
+
+  // isGenerating: true from the moment a request fires until it resolves/fails.
+  // Prevents double-submits. Buttons are also disabled via the `loading` state.
+  const isGenerating = useRef(false);
+
+  // lastClickTime: millisecond timestamp of the last generate click, for debouncing.
+  const lastClickTime = useRef(0);
+  const DEBOUNCE_MS = 1500;
+
+  // abortController: cancel in-flight fetch when a new request supersedes it.
+  const abortControllerRef = useRef<AbortController | null>(null);
+
+  // currentSignature: the last served recipe's signature, sent to the server
+  // to avoid returning the same recipe twice in a row.
+  const currentSignatureRef = useRef("");
+
+  // recipeRef: scroll target for the results panel.
+  const recipeRef = useRef<HTMLDivElement>(null);
+
+  // Generation counter — only incremented by successful recipe delivery,
+  // never by email/shopping/print/save actions.
   const genCountRef = useRef(0);
   const emailPromptedRef = useRef(false);
-  const abortControllerRef = useRef<AbortController | null>(null);
-  const recipeRef = useRef<HTMLDivElement>(null);
-  const recipeStateRef = useRef<ClientRecipeResponse | null>(null);
+
   const { toast } = useToast();
 
+  // ── Favourites counter ────────────────────────────────────────────────────
   useEffect(() => {
     const handler = () => setFavCount(getSavedCount());
     window.addEventListener("favorites-changed", handler);
     return () => window.removeEventListener("favorites-changed", handler);
   }, []);
 
+  // ── Filters (persisted to localStorage) ──────────────────────────────────
   const [filters, setFilters] = useState<FilterState>(() => {
     const defaults: FilterState = {
       crew_size: 6,
@@ -234,106 +234,134 @@ export default function Home() {
     };
     try {
       const saved = localStorage.getItem("firehall_filters");
-      if (saved) {
-        const parsed = JSON.parse(saved);
-        return { ...defaults, ...parsed };
-      }
+      if (saved) return { ...defaults, ...JSON.parse(saved) };
     } catch {}
     return defaults;
   });
 
   useEffect(() => {
-    try {
-      localStorage.setItem("firehall_filters", JSON.stringify(filters));
-    } catch {}
+    try { localStorage.setItem("firehall_filters", JSON.stringify(filters)); } catch {}
   }, [filters]);
 
+  // ── Warmup ────────────────────────────────────────────────────────────────
   useEffect(() => {
-    recipeStateRef.current = recipe;
-  }, [recipe]);
-
-  useEffect(() => {
-    const warmupPayload = buildRequestPayload(filters);
+    const payload = buildRequestPayload(filters);
     fetch("/api/warm")
-      .then(() => prefetchMeals(warmupPayload))
-      .catch(() => prefetchMeals(warmupPayload));
+      .then(() => prefetchMeals(payload))
+      .catch(() => prefetchMeals(payload));
   }, []);
 
+  // ─────────────────────────────────────────────────────────────────────────
+  // applyRecipe — the ONLY function that may call setRecipe.
+  //
+  // It replaces the ENTIRE recipe object atomically in a single setState call.
+  // React 18 batches the three setState calls (recipe, loading, error) into one
+  // synchronous commit, so the UI always sees a fully-consistent recipe object.
+  //
+  // Called exclusively from handleGenerate (never from email/shopping/print/save).
+  // ─────────────────────────────────────────────────────────────────────────
   const applyRecipe = useCallback((data: ClientRecipeResponse, seq: number) => {
-    if (seq !== latestRequestRef.current) {
-      console.log("[Generate] Ignoring stale response", { seq, latest: latestRequestRef.current });
+    // Stale-response guard: discard any response that isn't from the most recent request.
+    if (seq !== latestRequestSeq.current) {
+      console.log(`[Generate] Discarding stale response seq=${seq} (latest=${latestRequestSeq.current})`);
+      isGenerating.current = false;
       return;
     }
 
-    const prev = recipeStateRef.current;
-    const coherent = isRecipeCoherent(data, prev);
-    if (!coherent) {
-      console.warn("[mismatchGuard] Incoherent recipe detected — accepting anyway (server _id differs)");
-    }
-
+    // Atomic state replacement — all three fire in the same React commit.
     setRecipe(data);
     setLoading(false);
     setError(null);
-    isGeneratingRef.current = false;
+
+    // Reset generation lock.
+    isGenerating.current = false;
     abortControllerRef.current = null;
+
+    // Track the served recipe's signature for server-side dedup on the next request.
+    currentSignatureRef.current = (data as any)._signature || "";
+
+    // Side-effects that do NOT cause re-renders (refs + localStorage).
     addRecentSignature(data);
     if (data.meal_style) trackMealStyle(data.meal_style);
+    setLastTemplateId(data.template_id);
+
+    // Update the recent-recipes list (for Hall Vote).
     setRecentRecipes(prev => {
-      const deduped = prev.filter(r => r.title !== data.title);
+      const deduped = prev.filter(r => (r as any)._id !== (data as any)._id);
       return [data, ...deduped].slice(0, 5);
     });
-    setLastTemplateId(data.template_id);
+
+    // Generation counters — only incremented by successful recipe delivery.
     trackMealGenerated();
     genCountRef.current += 1;
-    console.log("[Generate] Recipe applied:", data.title, "| style:", data.meal_style, "| id:", (data as any)._id, "| seq:", seq);
 
+    console.log(
+      `[Generate] Applied: "${data.title}" | seq=${seq} | id=${(data as any)._id} | style=${data.meal_style}`
+    );
+
+    // Scroll results into view.
     requestAnimationFrame(() => {
       recipeRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
     });
 
+    // Auto-open email modal after 2nd generation (once per session).
     if (genCountRef.current === 2 && !emailPromptedRef.current) {
       emailPromptedRef.current = true;
       setTimeout(() => setEmailModalOpen(true), 800);
     }
   }, []);
 
-  const isGeneratingRef = useRef(false);
-  const lastClickTimeRef = useRef(0);
-  const CLICK_DEBOUNCE_MS = 2000;
-
-  const handleGenerate = useCallback(async (currentFilters: FilterState, templateId?: number, preferDifferentStyle = false) => {
+  // ─────────────────────────────────────────────────────────────────────────
+  // handleGenerate — fires one request at a time.
+  //
+  // Guards:
+  //   1. Debounce (1.5 s) — prevents double-taps.
+  //   2. isGenerating lock — blocks new requests while one is in flight.
+  //      The buttons are also disabled via the `loading` React state, so this
+  //      is a belt-and-suspenders guard for programmatic calls.
+  //   3. Sequence number — each request gets a unique seq. Any response that
+  //      arrives after a newer request has been fired is discarded.
+  // ─────────────────────────────────────────────────────────────────────────
+  const handleGenerate = useCallback(async (
+    currentFilters: FilterState,
+    templateId?: number,
+    preferDifferentStyle = false,
+  ) => {
     const now = Date.now();
-    if (now - lastClickTimeRef.current < CLICK_DEBOUNCE_MS) {
-      console.log("[Generate] Blocked — debounce (clicked too fast)");
+    if (now - lastClickTime.current < DEBOUNCE_MS) {
+      console.log("[Generate] Debounced");
       return;
     }
-    if (isGeneratingRef.current) {
-      console.log("[Generate] Blocked — already generating");
+    if (isGenerating.current) {
+      console.log("[Generate] Blocked — request in flight");
       return;
     }
-    lastClickTimeRef.current = now;
-    isGeneratingRef.current = true;
 
+    lastClickTime.current = now;
+    isGenerating.current = true;
+
+    // Cancel any in-flight request (e.g. if the lock somehow wasn't set).
     if (abortControllerRef.current) {
       abortControllerRef.current.abort();
       abortControllerRef.current = null;
     }
 
-    const seq = ++latestRequestRef.current;
+    const seq = ++latestRequestSeq.current;
     const requestId = makeRequestId();
-    console.log("[Generate] Clicked", { seq, requestId, templateId, preferDifferentStyle });
+    console.log(`[Generate] Starting seq=${seq} rid=${requestId} preferDiff=${preferDifferentStyle}`);
 
     setError(null);
     setLoading(true);
-    trackEvent('meal_generation_started');
+    trackEvent("meal_generation_started");
 
     const payload = buildRequestPayload(currentFilters, templateId, preferDifferentStyle);
     const filterKey = buildFilterKey(payload);
 
+    // Try prefetch cache first (skipped when "Generate Another" is active).
     if (!preferDifferentStyle) {
       const cached = consumePrefetched(payload, templateId);
       if (cached) {
-        console.log("[Generate] Using prefetched:", cached.title, { seq, filterKey });
+        console.log(`[Generate] Prefetch hit: "${cached.title}" seq=${seq}`);
         applyRecipe(cached, seq);
         setTimeout(() => prefetchMeals(payload), 100);
         return;
@@ -342,74 +370,83 @@ export default function Home() {
 
     const controller = new AbortController();
     abortControllerRef.current = controller;
-    const timeout = setTimeout(() => controller.abort(), 45000);
+    const timeout = setTimeout(() => controller.abort(), 45_000);
 
     try {
       const recentSigs = getRecentSignatures();
-      const currentSig = recipeStateRef.current ? (recipeStateRef.current as any)._signature || "" : "";
       const debugParam = new URLSearchParams(window.location.search).get("debug") === "1" ? "?debug=1" : "";
+
       const res = await apiRequest("POST", `/api/generate${debugParam}`, {
         ...payload,
         request_id: requestId,
         exclude_signatures: recentSigs,
         recentSignatures: recentSigs,
-        currentRecipeSignature: currentSig,
+        currentRecipeSignature: currentSignatureRef.current,
       }, 45_000, controller.signal);
+
       clearTimeout(timeout);
 
-      if (seq !== latestRequestRef.current) {
-        console.log("[Generate] Ignoring stale response", { seq, latest: latestRequestRef.current });
-        isGeneratingRef.current = false;
+      // Check again after the await — a newer request may have fired.
+      if (seq !== latestRequestSeq.current) {
+        console.log(`[Generate] Stale after fetch — discarding seq=${seq}`);
+        isGenerating.current = false;
         return;
       }
 
       const data: ClientRecipeResponse = await res.json();
+      console.log(`[Generate] Received: "${data.title}" seq=${seq}`);
 
-      console.log("[Generate] API returned:", data.title, { seq, filterKey });
+      // applyRecipe performs the atomic state replacement.
       applyRecipe(data, seq);
+
       if (!preferDifferentStyle) {
         putCached(filterKey, data);
         setTimeout(() => prefetchMeals(payload), 100);
       }
     } catch (err: any) {
       clearTimeout(timeout);
-      if (seq !== latestRequestRef.current) {
-        console.log("[Generate] Ignoring stale error", { seq });
-        isGeneratingRef.current = false;
+
+      // Discard errors from stale requests.
+      if (seq !== latestRequestSeq.current) {
+        console.log(`[Generate] Stale error — discarding seq=${seq}`);
+        isGenerating.current = false;
         return;
       }
 
-      if (controller.signal.aborted && err?.name === "AbortError") {
-        isGeneratingRef.current = false;
+      // Ignore intentional cancellations.
+      if (err?.name === "AbortError") {
+        isGenerating.current = false;
         return;
       }
 
       const msg = err?.message || "Something went wrong";
-      const status = msg.match(/^(\d+)/)?.[1] || "unknown";
-      console.error("[Generate] Failed", { seq, status, message: msg });
+      console.error(`[Generate] Error seq=${seq}:`, msg);
 
+      let errorMsg: string;
       if (msg.includes("No matching templates") || msg.includes("404")) {
-        setError("no_match");
+        errorMsg = "no_match";
         setRecipe(null);
       } else if (msg.includes("429")) {
         try {
           const parsed = JSON.parse(msg.replace(/^\d+:\s*/, ""));
-          setError(parsed.message || "Rate limit reached. Please wait a moment.");
+          errorMsg = parsed.message || "Rate limit reached. Please wait a moment.";
         } catch {
-          setError("Too many requests. Please wait a moment before generating again.");
+          errorMsg = "Too many requests. Please wait a moment before generating again.";
         }
       } else if (msg.includes("503") || msg.includes("budget")) {
-        setError("Daily recipe limit reached. Please try again tomorrow.");
+        errorMsg = "Daily recipe limit reached. Please try again tomorrow.";
       } else if (msg.includes("403")) {
-        setError("Security check failed. Please refresh the page and try again.");
+        errorMsg = "Security check failed. Please refresh the page and try again.";
       } else if (msg.includes("timed out") || msg.includes("AbortError")) {
-        setError("Still warming up — tap Generate again to retry.");
+        errorMsg = "Still warming up — tap Generate again to retry.";
       } else {
-        setError("Generation failed. Please try again.");
+        errorMsg = "Generation failed. Please try again.";
       }
 
+      setError(errorMsg);
       setLoading(false);
-      isGeneratingRef.current = false;
+      isGenerating.current = false;
+
       toast({
         title: "Generation failed",
         description: "Tap Generate to try again.",
@@ -418,6 +455,7 @@ export default function Home() {
     }
   }, [applyRecipe, toast]);
 
+  // ── Button handlers ───────────────────────────────────────────────────────
   const handleGenerateClick = useCallback(() => {
     handleGenerate(filters);
   }, [filters, handleGenerate]);
@@ -430,20 +468,19 @@ export default function Home() {
     setFilters(newFilters);
   }, []);
 
+  // ── Deep-link: ?classic=<name> triggers an immediate generate ─────────────
   const classicTriggered = useRef(false);
   useEffect(() => {
     if (classicTriggered.current) return;
     const params = new URLSearchParams(window.location.search);
-    const classicName = params.get("classic");
-    if (classicName) {
+    if (params.get("classic")) {
       classicTriggered.current = true;
       window.history.replaceState({}, "", "/");
-      setTimeout(() => {
-        handleGenerate(filters);
-      }, 300);
+      setTimeout(() => handleGenerate(filters), 300);
     }
   }, [filters, handleGenerate]);
 
+  // ── Modal openers — do NOT touch generation counters or recipe state ───────
   const onEmailClick = useCallback(() => {
     trackEmailModalOpened();
     setEmailModalOpen(true);
@@ -451,6 +488,7 @@ export default function Home() {
   const onShoppingListClick = useCallback(() => setShoppingListOpen(true), []);
   const onHallVoteClick = useCallback(() => setHallVoteOpen(true), []);
 
+  // ─────────────────────────────────────────────────────────────────────────
   return (
     <div className="min-h-screen bg-background">
       <SiteHeader activePage="generator" favCount={favCount} />
@@ -490,6 +528,9 @@ export default function Home() {
           </div>
         </div>
       </main>
+
+      {/* Modals — rendered outside the results panel, driven by recipe state only.
+          Opening these modals never touches generation state or counters. */}
       {recipe && (
         <>
           <EmailModal
@@ -518,6 +559,7 @@ export default function Home() {
           recipes={recentRecipes}
         />
       )}
+
       <footer className="border-t border-border/20 mt-10">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 py-6 flex items-center justify-center gap-2">
           <Flame className="w-3.5 h-3.5 text-muted-foreground/40" />
