@@ -370,7 +370,7 @@ function buildFilterSummary(request: GenerateRequest): string {
   if (request.use_what_we_have) parts.push("pantry=yes");
   if (request.vegetarian_swap_needed) parts.push("veg=yes");
   if (request.allergens_to_avoid.length) parts.push(`allergens=${request.allergens_to_avoid.join("+")}`);
-  if (!request.use_what_we_have) parts.push(`proteins=${request.proteins.join("+")}`);
+  if (!request.use_what_we_have) parts.push(`protein=${request.protein}`);
   return parts.join(" | ");
 }
 
@@ -566,7 +566,7 @@ Applies to main recipe AND veg_option.`
     ? `MEAL STRUCTURE (mandatory): This recipe MUST be a ${STRUCTURE_DISPLAY[structureType]} style meal. Vary the format.`
     : `MEAL STRUCTURE: Vary the structure.`;
 
-  const isPantryVegetarian = (request.proteins || []).some(p => p.toLowerCase() === "vegetarian");
+  const isPantryVegetarian = (request.protein || "").toLowerCase() === "vegetarian";
   const pantryRecentVeg = isPantryVegetarian ? getRecentVegBases(3) : [];
   const pantryVegVariety = isPantryVegetarian && pantryRecentVeg.length > 0
     ? ` PROTEIN VARIETY (mandatory): Do NOT default to tofu. Recently used: ${pantryRecentVeg.join(", ")} — pick a DIFFERENT primary protein from: lentils, chickpeas, black beans, kidney beans, white beans, quinoa, tempeh, seitan, greek yogurt, eggs, edamame.`
@@ -783,7 +783,7 @@ export async function generateRecipeFromPantry(
   const genStart = Date.now();
   const budgetLevel = request.budget_level || "standard";
   const filterSummary = buildFilterSummary(request);
-  const pantryProteinMode = (request.proteins || []).find(p => ["vegetarian", "seafood"].includes(p.toLowerCase()));
+  const pantryProteinMode = ["vegetarian", "seafood"].includes((request.protein || "").toLowerCase()) ? request.protein : undefined;
 
   log(`Generating pantry recipe: ${template.template_name}, structure: ${structureType || "any"}, ingredients: ${(request.ingredients_on_hand || []).join(", ")}${pantryProteinMode ? ` | diet: ${pantryProteinMode}` : ""} | ${filterSummary}`, "ai");
 

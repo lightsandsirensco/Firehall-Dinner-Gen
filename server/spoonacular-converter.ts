@@ -420,7 +420,7 @@ export async function fetchBestSpoonacularRecipe(
 ): Promise<GenerateResponse | null> {
   try {
     const proteinQuery =
-      chosenProtein === "pantry" ? (request.proteins || []).join(" ") : chosenProtein;
+      chosenProtein === "pantry" ? (request.protein || "chicken") : chosenProtein;
 
     const formatInfo =
       FORMAT_MAP[request.meal_format || "random"] || { type: "main course", keyword: "" };
@@ -442,10 +442,7 @@ export async function fetchBestSpoonacularRecipe(
     const maxReadyTime = TIME_MAP[request.time_available] || 60;
 
     let diet: string | undefined;
-    if (
-      request.proteins.length === 1 &&
-      request.proteins[0] === "vegetarian"
-    ) {
+    if (request.protein === "vegetarian") {
       diet = "vegetarian";
     }
 

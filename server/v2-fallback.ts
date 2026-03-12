@@ -99,7 +99,7 @@ export async function runV2Fallback(
     structureSource = "variety rotation (format=random)";
   }
 
-  const protein = request.proteins?.[0] ?? "chicken";
+  const protein = request.protein ?? "chicken";
 
   log(
     `[fallback] used=true | reason=${reason} | format=${fmt ?? "random"} → structure=${targetStructure} (${structureSource}) | protein=${protein}`,

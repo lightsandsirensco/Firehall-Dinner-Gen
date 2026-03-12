@@ -46,7 +46,7 @@ function buildRequestPayload(filters: FilterState, templateId?: number, preferDi
     busy_level: filters.busy_level,
     time_available: filters.time_available,
     appliances: filters.appliances,
-    proteins: [filters.use_what_we_have ? "chicken" : filters.protein],
+    protein: filters.use_what_we_have ? "chicken" : filters.protein,
     healthiness_preference: filters.healthiness_preference,
     budget_level: filters.budget_level,
     cuisine_style: filters.cuisine_style,

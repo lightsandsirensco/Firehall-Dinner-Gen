@@ -66,23 +66,23 @@ function filterTemplatesInternal(templates: TemplateRow[], request: GenerateRequ
     }
 
     if (!request.use_what_we_have) {
-      const templateProteins = t.proteins_allowed.split("|").map((s) => s.trim().toLowerCase());
-      const requestProteins = request.proteins.map((s) => s.toLowerCase());
-      const resolvedTemplateProteins = templateProteins.flatMap((p) => {
-        if (p === "pork sausage") return ["pork"];
-        if (p === "chicken sausage") return ["chicken"];
-        if (p === "turkey sausage") return ["turkey"];
-        if (p === "beef sausage") return ["beef"];
-        if (p === "sausage") return ["pork"];
-        return [p];
-      });
-      const expandedRequestProteins = requestProteins.flatMap((p) => {
-        if (p === "seafood") return ["seafood", "fish"];
-        return [p];
-      });
-      const hasProtein = resolvedTemplateProteins.some((p) => expandedRequestProteins.includes(p));
-      if (!hasProtein) {
-        return false;
+      // "any" protein: skip protein filter — any template is acceptable
+      if (request.protein !== "any") {
+        const templateProteins = t.proteins_allowed.split("|").map((s) => s.trim().toLowerCase());
+        const requestProtein = request.protein.toLowerCase();
+        const resolvedTemplateProteins = templateProteins.flatMap((p) => {
+          if (p === "pork sausage") return ["pork"];
+          if (p === "chicken sausage") return ["chicken"];
+          if (p === "turkey sausage") return ["turkey"];
+          if (p === "beef sausage") return ["beef"];
+          if (p === "sausage") return ["pork"];
+          return [p];
+        });
+        const expandedRequestProtein = requestProtein === "seafood" ? ["seafood", "fish"] : [requestProtein];
+        const hasProtein = resolvedTemplateProteins.some((p) => expandedRequestProtein.includes(p));
+        if (!hasProtein) {
+          return false;
+        }
       }
     }
 
@@ -166,22 +166,27 @@ function resolveUserProteinToTemplate(userProtein: string): string {
   return userProtein;
 }
 
+const ALL_PROTEINS_LIST = ["chicken", "beef", "pork", "turkey", "seafood", "vegetarian", "fish"];
+
 export function chooseProtein(
   template: TemplateRow,
-  userProteins: string[],
+  userProtein: string,
   healthiness: string
 ): string {
+  // "any" → pick from all proteins
+  const candidates = userProtein === "any" ? ALL_PROTEINS_LIST : [userProtein.toLowerCase()];
   const templateProteins = resolveTemplateProteins(template.proteins_allowed);
-  const userLower = userProteins.map((p) => p.toLowerCase());
 
-  const compatible = userLower.filter((up) => {
+  const compatible = candidates.filter((up) => {
     const mapped = resolveUserProteinToTemplate(up);
     return templateProteins.some((tp) => resolveToBase(tp) === mapped || tp === mapped || resolveToBase(tp) === up || tp === up);
   });
 
   if (compatible.length === 0) {
-    const fallback = templateProteins.find((tp) => userLower.some(u => resolveToBase(tp) === resolveUserProteinToTemplate(u) || resolveToBase(tp) === u));
-    return fallback ? resolveToBase(fallback) : userLower[0];
+    const fallback = templateProteins.find((tp) =>
+      candidates.some(u => resolveToBase(tp) === resolveUserProteinToTemplate(u) || resolveToBase(tp) === u)
+    );
+    return fallback ? resolveToBase(fallback) : candidates[0];
   }
 
   if (compatible.length === 1) return compatible[0];

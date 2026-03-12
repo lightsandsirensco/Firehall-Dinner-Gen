@@ -60,7 +60,7 @@ export function buildCacheKey(templateId: string, request: GenerateRequest, chos
     busy_level: request.busy_level,
     time_available: request.time_available,
     appliances: [...request.appliances].sort(),
-    chosen_protein: chosenProtein || [...request.proteins].sort().join(","),
+    chosen_protein: chosenProtein || request.protein,
     healthiness_preference: request.healthiness_preference,
     allergens_to_avoid: [...request.allergens_to_avoid].sort(),
     vegetarian_swap_needed: !!request.vegetarian_swap_needed,

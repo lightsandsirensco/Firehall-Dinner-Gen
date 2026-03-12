@@ -192,18 +192,16 @@ interface SpoonacularSearchParams {
 
 const ALL_PROTEINS = ["chicken", "beef", "pork", "turkey", "seafood", "vegetarian"];
 
-function selectProtein(proteins: string[], healthiness: string): string {
-  // "any" → pick from the full protein pool using health-based weighting
-  const resolved = proteins.includes("any") ? ALL_PROTEINS : proteins;
+/** Resolve "any" to a single concrete protein using health-based weighting. */
+function resolveProtein(protein: string, healthiness: string): string {
+  if (protein !== "any") return protein;
 
-  if (resolved.length === 1) return resolved[0];
-
-  const LEAN_WEIGHTS:    Record<string, number> = { chicken: 4, turkey: 3, fish: 3, seafood: 3, vegetarian: 2, beef: 1, pork: 1 };
-  const COMFORT_WEIGHTS: Record<string, number> = { beef: 4, pork: 3, chicken: 2, turkey: 2, seafood: 1, fish: 1, vegetarian: 1 };
+  const LEAN_WEIGHTS:    Record<string, number> = { chicken: 4, turkey: 3, seafood: 3, vegetarian: 2, beef: 1, pork: 1 };
+  const COMFORT_WEIGHTS: Record<string, number> = { beef: 4, pork: 3, chicken: 2, turkey: 2, seafood: 1, vegetarian: 1 };
   const weights = healthiness === "lean" ? LEAN_WEIGHTS : healthiness === "comfort" ? COMFORT_WEIGHTS : {};
 
   const pool: string[] = [];
-  for (const p of resolved) {
+  for (const p of ALL_PROTEINS) {
     const w = weights[p] ?? 2;
     for (let i = 0; i < w; i++) pool.push(p);
   }
@@ -253,9 +251,8 @@ function buildSearchParams(request: GenerateRequest, chosenProtein: string): Spo
     const extras = ALLERGEN_EXCLUDE_MAP[allergen.toLowerCase()] || [];
     for (const e of extras) excludeSet.add(e);
   }
-  // Only apply competing-protein exclusions when a specific (non-"any") protein is selected
-  const requestedAny = request.proteins.includes("any");
-  if (!requestedAny) {
+  // Only apply competing-protein exclusions when a specific (non-"any") protein was requested
+  if (request.protein !== "any") {
     const competingExcludes = PROTEIN_EXCLUDE_MAP[chosenProtein] || [];
     for (const e of competingExcludes) excludeSet.add(e);
   }
@@ -326,7 +323,7 @@ export async function runV2Generate(
     return null;
   }
 
-  const chosenProtein = selectProtein(request.proteins, request.healthiness_preference);
+  const chosenProtein = resolveProtein(request.protein, request.healthiness_preference);
   const allergens = request.allergens_to_avoid || [];
 
   // ── Step 1: Build search params ──────────────────────────────────────────

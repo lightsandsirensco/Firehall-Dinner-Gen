@@ -390,7 +390,7 @@ export async function registerRoutes(
       selectedBudget: "standard",
       selectedCuisine: "",
       selectedMealFormat: mealFormat,
-      selectedProteins: [],
+      selectedProtein: "any",
       chosenProtein: recipe.chosen_protein || "",
       crewSize,
     };
@@ -678,7 +678,7 @@ export async function registerRoutes(
           selectedBudget: request.budget_level || "standard",
           selectedCuisine: request.cuisine_style || "",
           selectedMealFormat: request.meal_format || "",
-          selectedProteins: request.proteins || [],
+          selectedProtein: request.protein || "any",
           chosenProtein: ptProtein,
           crewSize: request.crew_size || 4,
         };
@@ -712,7 +712,7 @@ export async function registerRoutes(
 
       // ── V2 MAIN PATH: Spoonacular as authoritative source ───────────────────
       const v2Result = await runV2Generate(request);
-      const chosenProtein = v2Result?.protein ?? request.proteins[0] ?? "chicken";
+      const chosenProtein = v2Result?.protein ?? request.protein ?? "chicken";
       const v2CacheKey = buildCacheKey("v2", request, chosenProtein);
 
       const auditCtx: LabelAuditContext = {
@@ -722,7 +722,7 @@ export async function registerRoutes(
         selectedBudget: request.budget_level || "standard",
         selectedCuisine: request.cuisine_style || "",
         selectedMealFormat: request.meal_format || "",
-        selectedProteins: request.proteins || [],
+        selectedProtein: request.protein || "any",
         chosenProtein,
         crewSize: request.crew_size || 4,
       };
@@ -1622,15 +1622,14 @@ export async function registerRoutes(
           ...(excludeIngredients || "").split(",").map(a => a.trim().toLowerCase()).filter(Boolean),
         ];
         const isVegetarian = diet === "vegetarian";
-        const proteins: string[] = [];
+        let detectedProtein = "chicken";
         if (isVegetarian) {
-          proteins.push("vegetarian");
+          detectedProtein = "vegetarian";
         } else {
           const queryLower = query.toLowerCase();
           for (const p of ["chicken", "beef", "pork", "turkey", "fish", "seafood"]) {
-            if (queryLower.includes(p)) proteins.push(p);
+            if (queryLower.includes(p)) { detectedProtein = p; break; }
           }
-          if (proteins.length === 0) proteins.push("chicken");
         }
 
         const equipList = (equipment || "").split(",").map(e => e.trim().toLowerCase()).filter(Boolean);
@@ -1643,7 +1642,7 @@ export async function registerRoutes(
           busy_level: "average",
           time_available: maxReadyTime && maxReadyTime <= 25 ? "15-25" : maxReadyTime && maxReadyTime <= 40 ? "25-40" : "30-45",
           appliances,
-          proteins: proteins as any,
+          protein: detectedProtein as any,
           healthiness_preference: "balanced",
           budget_level: "standard",
           allergens_to_avoid: allergenList,
@@ -1661,7 +1660,7 @@ export async function registerRoutes(
           return res.json({ results: [], totalResults: 0, _source: "none" });
         }
         const template = pickTemplate(filterResult.candidates);
-        const protein = chooseProtein(template, fallbackRequest.proteins, fallbackRequest.healthiness_preference);
+        const protein = chooseProtein(template, fallbackRequest.protein, fallbackRequest.healthiness_preference);
         const fallback = buildFallbackRecipe(template, fallbackRequest, protein);
 
         const fbResult = {

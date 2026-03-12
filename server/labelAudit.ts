@@ -9,7 +9,7 @@ export interface LabelAuditContext {
   selectedBudget: string;
   selectedCuisine: string;
   selectedMealFormat: string;
-  selectedProteins: string[];
+  selectedProtein: string;
   chosenProtein: string;
   crewSize: number;
 }

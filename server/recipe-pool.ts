@@ -25,7 +25,7 @@ const DEFAULT_REQUEST: GenerateRequest = {
   busy_level: "average",
   time_available: "25-40",
   appliances: ["stove", "oven"],
-  proteins: ["chicken", "beef", "pork"],
+  protein: "any",
   healthiness_preference: "balanced",
   budget_level: "standard",
   cuisine_style: "any",
@@ -64,12 +64,12 @@ export function getFromPool(request: GenerateRequest, lastTemplateId?: number): 
 
   pruneExpired();
 
-  const requestProteins = request.proteins.map((p) => p.toLowerCase());
+  const requestProtein = request.protein.toLowerCase();
 
   const validIdx = pool.findIndex(
     (entry) =>
       (!lastTemplateId || entry.templateId !== lastTemplateId) &&
-      requestProteins.includes(entry.recipe.chosen_protein.toLowerCase())
+      (requestProtein === "any" || entry.recipe.chosen_protein.toLowerCase() === requestProtein)
   );
 
   if (validIdx === -1) return null;
@@ -99,7 +99,7 @@ async function doRefill() {
 
       const excludeId = usedTemplateIds.length > 0 ? usedTemplateIds[usedTemplateIds.length - 1] : undefined;
       const chosen = pickTemplate(candidates, excludeId);
-      const chosenProtein = chooseProtein(chosen, DEFAULT_REQUEST.proteins, DEFAULT_REQUEST.healthiness_preference);
+      const chosenProtein = chooseProtein(chosen, DEFAULT_REQUEST.protein, DEFAULT_REQUEST.healthiness_preference);
       const cacheKey = buildCacheKey(chosen.template_id, DEFAULT_REQUEST, chosenProtein);
 
       if (isDuplicateInPool(cacheKey)) {
