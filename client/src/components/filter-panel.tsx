@@ -16,7 +16,7 @@ export interface FilterState {
   busy_level: string;
   time_available: string;
   appliances: string[];
-  proteins: string[];
+  protein: string;
   healthiness_preference: string;
   budget_level: string;
   cuisine_style: string;
@@ -40,8 +40,14 @@ const APPLIANCE_OPTIONS = [
   "stove", "oven", "grill", "slow cooker", "rice cooker", "air fryer", "microwave", "instant pot"
 ];
 
-const PROTEIN_OPTIONS = [
-  "chicken", "beef", "pork", "turkey", "seafood", "vegetarian"
+const PROTEIN_OPTIONS: { value: string; label: string }[] = [
+  { value: "chicken",    label: "Chicken" },
+  { value: "beef",       label: "Beef" },
+  { value: "pork",       label: "Pork" },
+  { value: "turkey",     label: "Turkey" },
+  { value: "seafood",    label: "Seafood" },
+  { value: "vegetarian", label: "Vegetarian" },
+  { value: "any",        label: "Any Protein" },
 ];
 
 const ALLERGEN_OPTIONS = [
@@ -105,6 +111,42 @@ function MultiToggle({
             data-testid={`${testIdPrefix}-${option}`}
           >
             {option}
+          </Badge>
+        );
+      })}
+    </div>
+  );
+}
+
+function SingleProteinSelect({
+  value,
+  onChange,
+}: {
+  value: string;
+  onChange: (val: string) => void;
+}) {
+  return (
+    <div className="flex flex-wrap gap-2">
+      {PROTEIN_OPTIONS.map(({ value: optValue, label }) => {
+        const isActive = value === optValue;
+        const isAny = optValue === "any";
+        return (
+          <Badge
+            key={optValue}
+            variant={isActive ? "default" : "outline"}
+            className={`cursor-pointer select-none text-xs px-3 py-1.5 toggle-elevate transition-all ${
+              isActive
+                ? isAny
+                  ? "toggle-elevated bg-amber-500/90 text-white border-amber-500"
+                  : "toggle-elevated bg-primary text-primary-foreground"
+                : isAny
+                  ? "border-amber-500/40 text-amber-400 hover:border-amber-500/70"
+                  : ""
+            }`}
+            onClick={() => onChange(optValue)}
+            data-testid={`toggle-protein-${optValue}`}
+          >
+            {label}
           </Badge>
         );
       })}
@@ -217,13 +259,11 @@ export const FilterPanel = memo(function FilterPanel({ filters, onFiltersChange,
               <div className="space-y-2">
                 <Label className="flex items-center gap-2 text-xs uppercase tracking-wider text-muted-foreground font-medium">
                   <Dumbbell className="w-3.5 h-3.5" />
-                  Proteins
+                  Protein
                 </Label>
-                <MultiToggle
-                  options={PROTEIN_OPTIONS}
-                  selected={filters.proteins}
-                  onChange={(val) => update("proteins", val)}
-                  testIdPrefix="toggle-protein"
+                <SingleProteinSelect
+                  value={filters.protein}
+                  onChange={(val) => update("protein", val)}
                 />
               </div>
             )}
@@ -390,7 +430,7 @@ export const FilterPanel = memo(function FilterPanel({ filters, onFiltersChange,
             size="lg"
             className="btn-generate w-full font-heading text-lg tracking-wider min-h-12"
             onClick={onGenerate}
-            disabled={isLoading || filters.appliances.length === 0 || (!filters.use_what_we_have && filters.proteins.length === 0) || (filters.use_what_we_have && filters.ingredients_on_hand_text.trim().length === 0)}
+            disabled={isLoading || filters.appliances.length === 0 || (filters.use_what_we_have && filters.ingredients_on_hand_text.trim().length === 0)}
             data-testid="button-generate"
           >
             {isLoading ? (

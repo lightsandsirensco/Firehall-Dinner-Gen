@@ -46,7 +46,7 @@ function buildRequestPayload(filters: FilterState, templateId?: number, preferDi
     busy_level: filters.busy_level,
     time_available: filters.time_available,
     appliances: filters.appliances,
-    proteins: filters.use_what_we_have ? ["chicken"] : filters.proteins,
+    proteins: [filters.use_what_we_have ? "chicken" : filters.protein],
     healthiness_preference: filters.healthiness_preference,
     budget_level: filters.budget_level,
     cuisine_style: filters.cuisine_style,
@@ -222,7 +222,7 @@ export default function Home() {
       busy_level: "average",
       time_available: "25-40",
       appliances: ["stove", "oven"],
-      proteins: ["chicken", "beef"],
+      protein: "chicken",
       healthiness_preference: "balanced",
       budget_level: "standard",
       cuisine_style: "any",
@@ -234,7 +234,15 @@ export default function Home() {
     };
     try {
       const saved = localStorage.getItem("firehall_filters");
-      if (saved) return { ...defaults, ...JSON.parse(saved) };
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        // Migrate old multi-select "proteins" array → single "protein" string
+        if (!parsed.protein && Array.isArray(parsed.proteins)) {
+          parsed.protein = parsed.proteins[0] || "chicken";
+          delete parsed.proteins;
+        }
+        return { ...defaults, ...parsed };
+      }
     } catch {}
     return defaults;
   });

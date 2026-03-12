@@ -241,6 +241,7 @@ export function proteinMatchesFilter(
   inferred: string,
   selected: string,
 ): boolean {
+  if (selected === "any") return true;
   if (selected === "seafood") return inferred === "seafood" || inferred === "fish";
   if (selected === "vegetarian") return inferred === "vegetarian";
   return inferred === selected;
