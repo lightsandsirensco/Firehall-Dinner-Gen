@@ -15,10 +15,11 @@ import { getFromPool, refillPool, getPoolSize } from "./recipe-pool";
 import { initHallVoteTables, createHallVote, getHallVote, castBallot, closeHallVote, hashVoterFingerprint } from "./hall-vote-store";
 import { addFavourite, getFavourites, removeFavourite, getAllFavouriteIds } from "./favourites";
 import { getTopCachedRecipes, getVotedRecipeNames } from "./cache-store";
-import { buildFallbackRecipe, trackFallbackTemplateId, getRecentFallbackTemplateIds } from "./fallback-recipe";
+import { buildFallbackRecipe } from "./fallback-recipe";
 import { searchRecipes, getRecipeById, getRandomRecipes, type SearchOptions } from "./spoonacular";
 import { fetchBestSpoonacularRecipe } from "./spoonacular-converter";
 import { runV2Generate } from "./recipe-engine-v2";
+import { runV2Fallback } from "./v2-fallback";
 import { enforceCarbs, trackCarb, ensureRiceForRiceDishes } from "./carb-rules";
 import { pickStructure, trackStructure, STRUCTURE_DISPLAY, type StructureType } from "./structure-variety";
 import { log } from "./index";
@@ -720,31 +721,20 @@ export async function registerRoutes(
         setCachedRecipe(v2CacheKey, 0, v2Val.recipe);
         logUsage({ cacheKey: v2CacheKey, templateId: 0, cacheHit: false, latencyMs: Date.now() - startTime, ipHash, sessionId });
         log(`[v2] Served "${originalTitle}" in ${Date.now() - startTime}ms | source=spoonacular_v2`, "v2");
+        log("[fallback] used=false", "fallback");
         recordSignature(chosenProtein, v2Val.signature);
         return sendRecipeResponse(res, v2Val, { _source: "spoonacular_v2", _spoonacular_title: originalTitle }, debugMode, request.crew_size, request.meal_format || "random", allergens, auditCtx, ipHash, sessionId, requestId);
       }
 
       // ── DETERMINISTIC FALLBACK: Spoonacular returned no valid result ─────────
-      log("[v2] No valid Spoonacular result — serving deterministic fallback", "v2");
+      log("[v2] No valid Spoonacular result — running deterministic fallback", "v2");
 
-      const fbTemplates = await loadTemplates();
-      const { candidates: fbCandidates } = filterTemplatesWithRelaxation(fbTemplates, request);
-      const fbChosen = fbCandidates.length > 0
-        ? fbCandidates[Math.floor(Math.random() * Math.min(fbCandidates.length, 3))]
-        : null;
-      const fbProtein = fbChosen
-        ? chooseProtein(fbChosen, request.proteins, request.healthiness_preference)
-        : chosenProtein;
-      const fbStructure = pickStructure(request.appliances, request.time_available, request.recent_meal_styles || [], false);
-      const fbStyle = STRUCTURE_DISPLAY[fbStructure] || fbStructure;
-      const fbRecipe = fbChosen
-        ? buildFallbackRecipe(fbChosen, request, fbProtein, fbStructure, clientRecentSigs)
-        : buildSafeFallbackRecipe(request.meal_format || fbStyle, request.crew_size);
+      const fb = await runV2Fallback(request, "spoonacular_no_valid_candidate", clientRecentSigs);
 
-      const fbAuditCtx: LabelAuditContext = { ...auditCtx, chosenProtein: fbProtein };
+      const fbAuditCtx: LabelAuditContext = { ...auditCtx, chosenProtein: fb.protein };
       const fbValCtx: RecipeValidationContext = {
-        chosenProtein: fbProtein,
-        meal_style: fbStyle,
+        chosenProtein: fb.protein,
+        meal_style: fb.structureDisplay,
         cuisine: request.cuisine_style || "any",
         appliances: request.appliances,
         allergens,
@@ -752,13 +742,12 @@ export async function registerRoutes(
         currentRecipeSignature: clientCurrentSig || undefined,
       };
 
-      const fbWithStyle = { ...fbRecipe, _fallback: true, meal_style: fbStyle };
+      const fbWithStyle = { ...fb.recipe, _fallback: true, meal_style: fb.structureDisplay };
       const fbVal = validateAndFixRecipe(fbWithStyle as any, fbValCtx);
-      const fbTemplateId = fbChosen ? parseInt(fbChosen.template_id) : 0;
-      setCachedRecipe(v2CacheKey, fbTemplateId, fbVal.recipe);
-      logUsage({ cacheKey: v2CacheKey, templateId: fbTemplateId, cacheHit: false, latencyMs: Date.now() - startTime, ipHash, sessionId });
-      log(`[v2] Fallback served in ${Date.now() - startTime}ms`, "v2");
-      recordSignature(fbProtein, fbVal.signature);
+      setCachedRecipe(v2CacheKey, 0, fbVal.recipe);
+      logUsage({ cacheKey: v2CacheKey, templateId: 0, cacheHit: false, latencyMs: Date.now() - startTime, ipHash, sessionId });
+      log(`[v2] Fallback served in ${Date.now() - startTime}ms | structure=${fb.structure} | protein=${fb.protein}`, "v2");
+      recordSignature(fb.protein, fbVal.signature);
       return sendRecipeResponse(res, fbVal, { _fallback: true }, debugMode, request.crew_size, request.meal_format, allergens, fbAuditCtx, ipHash, sessionId, requestId);
 
     } catch (error: any) {
