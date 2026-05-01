@@ -11,11 +11,13 @@
  *   4. Title alignment (key title words appear in ingredients)
  *   5. Allergen scan (secondary safety net beyond Spoonacular intolerances)
  *   6. Carb logic (rice not present in non-rice formats)
+ *   7. Cuisine guard (no cross-cuisine ingredient contamination; score ≥ 6)
  */
 
 import { log } from "./index";
 import { inferActualProtein, proteinMatchesFilter } from "./spoonacular-converter";
 import { ALLERGEN_KEYWORDS } from "./allergens";
+import { scoreCuisineMatch } from "./cuisine-guard";
 import type { SpoonacularRecipeDetail } from "./spoonacular";
 
 // ─── Result Types ─────────────────────────────────────────────────────────────
@@ -225,6 +227,7 @@ export function validateV2Candidate(
   selectedProtein: string,
   formatKey: string,
   allergens: string[],
+  cuisineKey: string = "any",
 ): CandidateValidationResult {
   const ingredientNames = detail.extendedIngredients.map((i) => i.name);
   const ingredientText = ingredientNames.join(" ").toLowerCase();
@@ -308,6 +311,25 @@ export function validateV2Candidate(
     const reason = `carb:rice-in-${formatKey}`;
     log(`[validator] result=rejected rejectionReason=${reason}`, "v2");
     return { accepted: false, inferredProtein, rejectionReason: reason };
+  }
+
+  // ── Check 7: Cuisine guard ─────────────────────────────────────────────────
+  // Scores 0–10: deducts 2 per cross-cuisine ingredient found in the blocklist.
+  // Threshold < 6 = two or more clear violations → reject.
+  // "any" cuisine always passes (score = 10).
+  if (cuisineKey && cuisineKey !== "any") {
+    const cuisineScore = scoreCuisineMatch(ingredientNames, detail.title, cuisineKey);
+    log(`[validator] cuisineMatchScore=${cuisineScore} cuisine=${cuisineKey}`, "v2");
+
+    if (cuisineScore < 6) {
+      const reason = `cuisine-mismatch:cuisine=${cuisineKey},score=${cuisineScore}`;
+      log(`[validator] result=rejected rejectionReason=${reason}`, "v2");
+      return { accepted: false, inferredProtein, rejectionReason: reason };
+    }
+
+    if (cuisineScore < 8) {
+      log(`[validator] cuisine-warning:score=${cuisineScore} cuisine=${cuisineKey} — passing with caution`, "v2");
+    }
   }
 
   // ── Accepted ───────────────────────────────────────────────────────────────

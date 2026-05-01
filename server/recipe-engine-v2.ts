@@ -325,6 +325,7 @@ export async function runV2Generate(
 
   const chosenProtein = resolveProtein(request.protein, request.healthiness_preference);
   const allergens = request.allergens_to_avoid || [];
+  const cuisineKey = request.cuisine_style || "any";
 
   // ── Step 1: Build search params ──────────────────────────────────────────
   const params = buildSearchParams(request, chosenProtein);
@@ -395,6 +396,7 @@ export async function runV2Generate(
     chosenProtein,
     request.meal_format || "random",
     allergens,
+    cuisineKey,
   );
 
   if (!validation.accepted) {
