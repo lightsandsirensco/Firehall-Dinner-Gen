@@ -7,7 +7,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Switch } from "@/components/ui/switch";
 import { Badge } from "@/components/ui/badge";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Flame, RefreshCw, Users, Clock, Zap, Dumbbell, ShieldAlert, ChefHat, Leaf, Package, DollarSign, Globe, UtensilsCrossed, Settings2, Heart, Utensils } from "lucide-react";
+import { Flame, RefreshCw, Users, Clock, Zap, Dumbbell, ShieldAlert, ChefHat, Leaf, Package, DollarSign, Globe, UtensilsCrossed, Settings2, Heart, Utensils, ChevronLeft, ChevronRight } from "lucide-react";
 import { trackEvent } from "@/lib/analytics";
 import { memo } from "react";
 
@@ -34,6 +34,10 @@ interface FilterPanelProps {
   onGenerateAnother: () => void;
   isLoading: boolean;
   hasRecipe: boolean;
+  canGoBack?: boolean;
+  canGoForward?: boolean;
+  onBack?: () => void;
+  onForward?: () => void;
 }
 
 const APPLIANCE_OPTIONS = [
@@ -154,7 +158,7 @@ function SingleProteinSelect({
   );
 }
 
-export const FilterPanel = memo(function FilterPanel({ filters, onFiltersChange, onGenerate, onGenerateAnother, isLoading, hasRecipe }: FilterPanelProps) {
+export const FilterPanel = memo(function FilterPanel({ filters, onFiltersChange, onGenerate, onGenerateAnother, isLoading, hasRecipe, canGoBack = false, canGoForward = false, onBack, onForward }: FilterPanelProps) {
   const update = (key: keyof FilterState, value: any) => {
     if (key === "allergens_to_avoid") trackEvent("allergy_filter_used");
     onFiltersChange({ ...filters, [key]: value });
@@ -456,6 +460,34 @@ export const FilterPanel = memo(function FilterPanel({ filters, onFiltersChange,
               )}
               {isLoading ? "GENERATING..." : "GENERATE ANOTHER"}
             </Button>
+            {(canGoBack || canGoForward) && (
+              <div className="flex gap-2">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="flex-1 font-heading tracking-wider min-h-12"
+                  onClick={onBack}
+                  disabled={!canGoBack || isLoading}
+                  data-testid="button-back"
+                  title="Previous meal"
+                >
+                  <ChevronLeft className="w-5 h-5 mr-1" />
+                  BACK
+                </Button>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="flex-1 font-heading tracking-wider min-h-12"
+                  onClick={onForward}
+                  disabled={!canGoForward || isLoading}
+                  data-testid="button-forward"
+                  title="Next meal"
+                >
+                  FORWARD
+                  <ChevronRight className="w-5 h-5 ml-1" />
+                </Button>
+              </div>
+            )}
             <Button
               variant="outline"
               size="lg"

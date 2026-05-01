@@ -83,6 +83,7 @@ const ResultsPanel = memo(function ResultsPanel({
   onEmailClick,
   onShoppingListClick,
   onHallVoteClick,
+  historyNav,
 }: {
   loading: boolean;
   error: string | null;
@@ -92,6 +93,7 @@ const ResultsPanel = memo(function ResultsPanel({
   onEmailClick: () => void;
   onShoppingListClick: () => void;
   onHallVoteClick: () => void;
+  historyNav: { index: number; total: number };
 }) {
   const showRecipe = !error && recipe;
   const showEmpty = !loading && !error && !recipe;
@@ -124,6 +126,13 @@ const ResultsPanel = memo(function ResultsPanel({
       )}
       {!loading && showRecipe && (
         <div className="animate-in fade-in slide-in-from-bottom-2 duration-400">
+          {historyNav.total > 1 && (
+            <div className="flex items-center justify-center mb-3" data-testid="history-position-indicator">
+              <span className="text-xs text-muted-foreground/60 font-mono tracking-widest uppercase">
+                Meal {historyNav.index + 1} of {historyNav.total}
+              </span>
+            </div>
+          )}
           <RecipeCard
             key={stableRecipeKey(recipe)}
             recipe={recipe}
@@ -169,6 +178,15 @@ export default function Home() {
   const [recipe, setRecipe] = useState<ClientRecipeResponse | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  // ── Meal history (browser-style Back/Forward) ─────────────────────────────
+  // mealHistoryRef holds every generated meal in order. historyIndexRef tracks
+  // which one is currently displayed. Both are refs so they can be read inside
+  // callbacks without stale-closure issues. historyNav is the React state that
+  // drives button enabled/disabled state and the "Meal X of Y" indicator.
+  const mealHistoryRef = useRef<ClientRecipeResponse[]>([]);
+  const historyIndexRef = useRef<number>(-1);
+  const [historyNav, setHistoryNav] = useState({ index: -1, total: 0 });
 
   // ── Supporting state ──────────────────────────────────────────────────────
   const [lastTemplateId, setLastTemplateId] = useState<number | undefined>();
@@ -275,6 +293,15 @@ export default function Home() {
       isGenerating.current = false;
       return;
     }
+
+    // ── Update meal history ───────────────────────────────────────────────
+    // Truncate any "future" meals if the user went back before regenerating,
+    // then push the new meal and advance to it.
+    const truncated = mealHistoryRef.current.slice(0, historyIndexRef.current + 1);
+    const newHistory = [...truncated, data];
+    mealHistoryRef.current = newHistory;
+    historyIndexRef.current = newHistory.length - 1;
+    setHistoryNav({ index: historyIndexRef.current, total: newHistory.length });
 
     // Atomic state replacement — all three fire in the same React commit.
     setRecipe(data);
@@ -472,6 +499,31 @@ export default function Home() {
     handleGenerate(filters, lastTemplateId, true);
   }, [filters, lastTemplateId, handleGenerate]);
 
+  // ── History navigation — NO API calls, instant ────────────────────────────
+  const handleBack = useCallback(() => {
+    const newIdx = historyIndexRef.current - 1;
+    if (newIdx < 0) return;
+    historyIndexRef.current = newIdx;
+    setHistoryNav(prev => ({ ...prev, index: newIdx }));
+    setRecipe(mealHistoryRef.current[newIdx]);
+    setError(null);
+    requestAnimationFrame(() => {
+      recipeRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  }, []);
+
+  const handleForward = useCallback(() => {
+    const newIdx = historyIndexRef.current + 1;
+    if (newIdx >= mealHistoryRef.current.length) return;
+    historyIndexRef.current = newIdx;
+    setHistoryNav(prev => ({ ...prev, index: newIdx }));
+    setRecipe(mealHistoryRef.current[newIdx]);
+    setError(null);
+    requestAnimationFrame(() => {
+      recipeRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  }, []);
+
   const onFiltersChange = useCallback((newFilters: FilterState) => {
     setFilters(newFilters);
   }, []);
@@ -519,6 +571,10 @@ export default function Home() {
               onGenerateAnother={handleGenerateAnother}
               isLoading={loading}
               hasRecipe={!!recipe}
+              canGoBack={historyNav.index > 0}
+              canGoForward={historyNav.index < historyNav.total - 1}
+              onBack={handleBack}
+              onForward={handleForward}
             />
           </div>
 
@@ -532,6 +588,7 @@ export default function Home() {
               onEmailClick={onEmailClick}
               onShoppingListClick={onShoppingListClick}
               onHallVoteClick={onHallVoteClick}
+              historyNav={historyNav}
             />
           </div>
         </div>
