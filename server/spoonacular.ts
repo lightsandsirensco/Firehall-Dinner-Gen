@@ -183,7 +183,38 @@ export async function searchRecipes(query: string, options: SearchOptions = {}):
   return result;
 }
 
+export function isValidSpoonacularRecipeId(id: unknown): id is number {
+  const n = typeof id === "number" ? id : parseInt(String(id), 10);
+  return Number.isFinite(n) && n > 0;
+}
+
+async function fetchRecipeInformation(
+  id: number,
+  includeNutrition: boolean,
+): Promise<{ data: SpoonacularRecipeDetail; status: number }> {
+  const apiKey = getApiKey();
+  const nutritionParam = includeNutrition ? "true" : "false";
+  const url = `${SPOONACULAR_BASE}/recipes/${id}/information?apiKey=${apiKey}&includeNutrition=${nutritionParam}`;
+  log(`[spoonacular] Detail request: GET recipes/${id}/information includeNutrition=${nutritionParam}`, "spoonacular");
+
+  const res = await fetch(url);
+  const text = await res.text();
+  if (!res.ok) {
+    log(`[spoonacular] Detail fetch failed: id=${id} status=${res.status} body=${text.substring(0, 200)}`, "spoonacular");
+    const err = new Error(`Spoonacular detail error ${res.status} for recipe ${id}`);
+    (err as Error & { status?: number }).status = res.status;
+    throw err;
+  }
+
+  const data = JSON.parse(text) as SpoonacularRecipeDetail;
+  return { data, status: res.status };
+}
+
 export async function getRecipeById(id: number, includeNutrition: boolean = false): Promise<SpoonacularRecipeDetail> {
+  if (!isValidSpoonacularRecipeId(id)) {
+    throw new Error(`Invalid Spoonacular recipe id: ${id}`);
+  }
+
   const cacheKey = `detail:${id}:nutrition=${includeNutrition}`;
   const cached = getCached<SpoonacularRecipeDetail>(cacheKey);
   if (cached) {
@@ -191,22 +222,23 @@ export async function getRecipeById(id: number, includeNutrition: boolean = fals
     return cached;
   }
 
-  const apiKey = getApiKey();
-  const nutritionParam = includeNutrition ? "true" : "false";
-  const url = `${SPOONACULAR_BASE}/recipes/${id}/information?apiKey=${apiKey}&includeNutrition=${nutritionParam}`;
-
   log(`[spoonacular-cache] MISS detail: id=${id} | Spoonacular API called=yes | includeNutrition=${includeNutrition}`, "spoonacular");
 
-  const res = await fetch(url);
-  if (!res.ok) {
-    const text = await res.text();
-    log(`[spoonacular] Detail fetch failed: ${res.status} ${text}`, "spoonacular");
-    throw new Error(`Spoonacular API error: ${res.status}`);
+  try {
+    const { data } = await fetchRecipeInformation(id, includeNutrition);
+    setCache(cacheKey, data, DETAIL_CACHE_TTL_MS);
+    log(`[spoonacular] Detail OK: id=${id} title="${data.title?.substring(0, 50)}"`, "spoonacular");
+    return data;
+  } catch (err: any) {
+    const status = err.status as number | undefined;
+    if (includeNutrition && (status === 402 || status === 403)) {
+      log(`[spoonacular] Nutrition not available for id=${id} — retrying without nutrition`, "spoonacular");
+      const { data } = await fetchRecipeInformation(id, false);
+      setCache(`detail:${id}:nutrition=false`, data, DETAIL_CACHE_TTL_MS);
+      return data;
+    }
+    throw err;
   }
-
-  const data = await res.json();
-  setCache(cacheKey, data, DETAIL_CACHE_TTL_MS);
-  return data;
 }
 
 /**

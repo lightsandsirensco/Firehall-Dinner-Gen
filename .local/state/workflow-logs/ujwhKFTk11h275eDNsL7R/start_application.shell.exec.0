@@ -1,0 +1,47 @@
+[1G[0K⠙[1G[0K
+> rest-express@1.0.0 dev
+> NODE_ENV=development tsx server/index.ts
+
+[1G[0K⠙[1G[0K4:43:33 PM [cache] Cache store initialized
+4:43:33 PM [vote] Hall vote tables initialized
+4:43:33 PM [klaviyo] Klaviyo API key configured
+4:43:33 PM [pool] Pool warmup disabled (ENABLE_POOL_WARMUP != true). Recipes will be generated on-demand.
+4:43:34 PM [express] serving on port 5000
+4:47:34 PM [perf] Warm-up ping received
+4:47:34 PM [express] GET /api/warm 200 in 4ms :: {"status":"warm","uptime":243.460532076}
+Browserslist: browsers data (caniuse-lite) is 7 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+
+A PostCSS plugin did not pass the `from` option to `postcss.parse`. This may cause imported assets to be incorrectly transformed. If you've recently added a PostCSS plugin that raised this warning, please contact the package author to fix the issue.
+4:49:30 PM [perf] Warm-up ping received
+4:49:30 PM [express] GET /api/warm 200 in 1ms :: {"status":"warm","uptime":359.801569993}
+4:49:30 PM [v2] [v2] Selected filters | protein="chicken" cuisine="any" format="random" time="30-45" crew=11 allergens=[none] pantry=[none]
+4:49:30 PM [v2] [v2] Mapped Spoonacular params | query="chicken" cuisine="any" type="main course" maxReadyTime=45 intolerances="none" excludeIngredients="beef,ground beef,steak,pork,bacon,ham,sausage,shrimp,salmon,tuna" includeIngredients="chicken" diet="none" minServings=4
+4:49:30 PM [v2] [v2] Spoonacular search called | query="chicken" cuisine="any" type="main course" maxTime=45 allergens="none"
+4:49:30 PM [spoonacular] [spoonacular-cache] MISS search: query="chicken" | Spoonacular API called=yes
+4:49:30 PM [spoonacular] [spoonacular] Searching: query="chicken" cuisine=any diet=any limit=5
+4:49:31 PM [spoonacular] [spoonacular] Search returned 5 recipes (total available: 245)
+4:49:31 PM [spoonacular] [spoonacular-cache] Stored: search:query=chicken&number=5&offset=0&addRecipeInformation=true&fillIngredients | expires=2026-05-01T17:49:31.550Z
+4:49:31 PM [v2] [v2] Recipe candidates returned: 5
+4:49:31 PM [v2] [v2] Candidate pool: 3 after title-level filter (from 5 total)
+4:49:31 PM [v2] [v2] Selected candidate: id=715421 title="Cheesy Chicken Enchilada Quinoa Casserole" (pool size=3)
+4:49:31 PM [spoonacular] [spoonacular-cache] MISS detail: id=715421 | Spoonacular API called=yes | includeNutrition=true
+4:49:31 PM [spoonacular] [spoonacular-cache] Stored: detail:715421:nutrition=true | expires=2026-05-01T17:49:31.709Z
+4:49:31 PM [v2] [validator] selectedProtein=chicken
+4:49:31 PM [v2] [validator] inferredProtein=chicken
+4:49:31 PM [v2] [validator] mealStyle=random
+4:49:31 PM [v2] [validator] result=accepted
+4:49:31 PM [v2] [v2] ✓ Accepted "Cheesy Chicken Enchilada Quinoa Casserole" | protein=chicken | ingredients=15 | steps=4 | source=spoonacular_v2
+4:49:31 PM [polish] [polish] cache MISS id=715421 — calling gpt-4o-mini (steps=4)
+4:49:36 PM [polish] [polish] polished id=715421 title="Cheesy Chicken Enchilada Quinoa Casserole" steps=8
+4:49:36 PM [validator] [validator] recipe validation errors (35): ingredient_unused:cumin, ingredient_unused:verde enchilada sauce, ingredient_unused:corn, step_mentions_unlisted:thi, step_mentions_unlisted:ensure, step_mentions_unlisted:even, step_mentions_unlisted:cooking, step_mentions_unlisted:casserole, step_mentions_unlisted:according, step_mentions_unlisted:package, step_mentions_unlisted:instruction, step_mentions_unlisted:fluffy, step_mentions_unlisted:cooked, step_mentions_unlisted:through, step_mentions_unlisted:shred, step_mentions_unlisted:using, step_mentions_unlisted:two, step_mentions_unlisted:fork, step_mentions_unlisted:shredded, step_mentions_unlisted:cooked, step_mentions_unlisted:mixed, step_mentions_unlisted:baking, step_mentions_unlisted:dish, step_mentions_unlisted:spreading, step_mentions_unlisted:preheated, step_mentions_unlisted:melted, step_mentions_unlisted:bubbly, step_mentions_unlisted:casserole, step_mentions_unlisted:minute, step_mentions_unlisted:chopped, step_mentions_unlisted:portion, step_mentions_unlisted:immediately, step_mentions_unlisted:deliciou, step_mentions_unlisted:meal, firehouse_missing_technique:recipe steps lack a real cooking technique (sear, roast, braise, caramelize, etc.)
+4:49:36 PM [validator] [validator] ok=false, action=recipe_validation_failed, issues=35, meal_style=casserole, protein=chicken, cuisine=mexican, baseCarb=quinoa, method=oven, sig=casserole|chicken|mexican|quinoa|oven|avocado,black beans,ca..., title="Cheesy Chicken Enchilada Quinoa Casserole"
+4:49:36 PM [v2] [v2] Served "Cheesy Chicken Enchilada Quinoa Casserole" in 5260ms | source=spoonacular_v2
+4:49:36 PM [fallback] [fallback] used=false
+4:49:36 PM [audit] [audit] fixes=[healthiness: "balanced" → "lean"] issues=0 reqStyle=random infStyle=taco finStyle=casserole cuisine=mexican baseCarb=quinoa method=oven health=lean budget=standard appFit=true allergenOk=true
+4:49:36 PM [audit] [label-audit] Applied 1 fixes: healthiness: "balanced" → "lean"
+4:49:36 PM [api] [api] returning recipe id=69a48324-2ec4-4041-95c2-4190102509f6 signature=casserole|chicken|mexican|quinoa|oven|avocado,blac title="Cheesy Chicken Enchilada Quinoa Casserole" ingredientsCount=15 stepsCount=8
+4:49:36 PM [rate] [rate] Generation counted — request_id=auto-1777654170955 signature=casserole|chicken|mexican|quinoa|oven|avocado,black beans,canned tomatoes,cheese,chicken breast,chili powder,cilantro,corn session=774ef5cd-fbf8-478f-a2d9-1199c968f518
+4:51:34 PM [perf] Warm-up ping received
+4:51:34 PM [express] GET /api/warm 200 in 2ms :: {"status":"warm","uptime":483.44089118}

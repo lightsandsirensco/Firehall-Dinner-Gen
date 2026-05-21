@@ -1,4 +1,9 @@
 import type { GenerateResponse, PizzaResponse, IngredientItem, ClientRecipeResponse, ClientIngredient } from "@shared/schema";
+import {
+  inferShoppingCategory,
+  isSeasoningOrGarnish,
+  isRequiredForMeal,
+} from "@shared/meal-semantics";
 
 export interface ShoppingItem {
   name: string;
@@ -81,14 +86,19 @@ const PANTRY_KEYWORDS = [
   "peanut", "dried", "sun-dried", "raisin", "breadcrumb",
 ];
 
-function categorize(itemName: string): string {
-  const lower = itemName.toLowerCase();
+function categorize(itemName: string, notes = ""): string {
+  if (isSeasoningOrGarnish(itemName, notes)) return "Pantry & Spices";
+  const semantic = inferShoppingCategory(itemName, notes);
+  if (semantic !== "Other") return semantic;
 
+  const lower = itemName.toLowerCase();
   if (PROTEIN_KEYWORDS.some(k => lower.includes(k))) return "Proteins";
   if (FROZEN_KEYWORDS.some(k => lower.includes(k))) return "Frozen";
   if (DAIRY_KEYWORDS.some(k => lower.includes(k))) return "Dairy / Dairy Alternatives";
-  if (PRODUCE_KEYWORDS.some(k => lower.includes(k))) return "Produce";
   if (BAKERY_KEYWORDS.some(k => lower.includes(k))) return "Bakery / Dough";
+  if (PRODUCE_KEYWORDS.some(k => lower.includes(k)) && !/\b(black pepper|white pepper|ground pepper)\b/i.test(lower)) {
+    return "Produce";
+  }
   if (CONDIMENT_KEYWORDS.some(k => lower.includes(k))) return "Condiments & Sauces";
   if (PANTRY_KEYWORDS.some(k => lower.includes(k))) return "Pantry & Spices";
 
@@ -96,6 +106,7 @@ function categorize(itemName: string): string {
 }
 
 const SECTION_ORDER = [
+  "Required for tonight's meal",
   "Proteins",
   "Produce",
   "Dairy / Dairy Alternatives",
@@ -105,6 +116,8 @@ const SECTION_ORDER = [
   "Condiments & Sauces",
   "Other",
 ];
+
+const REQUIRED_SECTION = "Required for tonight's meal";
 
 function normalizeItemName(name: string): string {
   return name.toLowerCase().replace(/[^a-z0-9 ]/g, "").trim();
@@ -196,12 +209,60 @@ function ingredientToShoppingItem(ing: IngredientItem): ShoppingItem {
   return { name: ing.item, amount: ing.amount, notes: ing.notes };
 }
 
+function fmtShoppingQty(qty: number, unit: string): string {
+  const rounded = Math.round(qty * 100) / 100;
+  const display = Number.isInteger(rounded) ? String(rounded) : rounded.toFixed(1).replace(/\.0$/, "");
+  return unit ? `${display} ${unit}` : display;
+}
+
 function clientIngredientToShoppingItem(ing: ClientIngredient): ShoppingItem {
   let amount = "";
   if (ing.qty > 0) {
-    amount = ing.unit ? `${ing.qty} ${ing.unit}` : `${ing.qty}`;
+    amount = fmtShoppingQty(ing.qty, ing.unit);
   }
-  return { name: ing.name, amount, notes: "" };
+  const notes =
+    ing.category && ing.category !== "other" ? `category: ${ing.category}` : "";
+  return { name: ing.name, amount, notes };
+}
+
+function plateLineMatchesIngredient(plateName: string, ingName: string): boolean {
+  const p = plateName.toLowerCase().trim();
+  const n = ingName.toLowerCase().trim();
+  if (p === n) return true;
+  if (n.includes(p) && p.length >= 5) return true;
+  const pWords = p.split(/\s+/).filter((w) => w.length > 4);
+  if (pWords.length === 0) return false;
+  return pWords.every((w) => new RegExp(`\\b${w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`, "i").test(n));
+}
+
+function collectRequiredPlateItems(recipe: ClientRecipeResponse, merged: ShoppingItem[]): ShoppingItem[] {
+  const plate = recipe.meal_plate;
+  if (!plate) return [];
+
+  const plateLines = [...(plate.main || []), ...(plate.sides || [])];
+  const required: ShoppingItem[] = [];
+  const used = new Set<string>();
+
+  for (const line of plateLines) {
+    const match = merged.find(
+      (item) =>
+        !isSeasoningOrGarnish(item.name, item.notes) &&
+        plateLineMatchesIngredient(line.name, item.name),
+    );
+    if (match && !used.has(normalizeItemName(match.name))) {
+      used.add(normalizeItemName(match.name));
+      required.push({ ...match, notes: "Required for this meal" });
+    }
+  }
+
+  for (const item of merged) {
+    if (isRequiredForMeal(item.notes) && !used.has(normalizeItemName(item.name))) {
+      used.add(normalizeItemName(item.name));
+      required.push({ ...item, notes: "Required for this meal" });
+    }
+  }
+
+  return required;
 }
 
 const BUDGET_SWAPS: Record<string, string> = {
@@ -240,17 +301,29 @@ export function buildShoppingListFromClientMeal(
 ): ShoppingListResult {
   const allItems: ShoppingItem[] = recipe.ingredients.map(clientIngredientToShoppingItem);
 
+  const existingNames = new Set(allItems.map((i) => normalizeItemName(i.name)));
   if (recipe.extra_items_needed) {
     for (const extra of recipe.extra_items_needed) {
+      const key = normalizeItemName(extra);
+      if (!key || existingNames.has(key)) continue;
+      existingNames.add(key);
       allItems.push({ name: extra, amount: "", notes: "" });
     }
   }
 
   const merged = mergeItems(allItems);
 
+  const requiredItems = collectRequiredPlateItems(recipe, merged);
+  const requiredKeys = new Set(requiredItems.map((i) => normalizeItemName(i.name)));
+
   const sectionMap = new Map<string, ShoppingItem[]>();
+  if (requiredItems.length > 0) {
+    sectionMap.set(REQUIRED_SECTION, requiredItems);
+  }
+
   for (const item of merged) {
-    const category = categorize(item.name);
+    if (requiredKeys.has(normalizeItemName(item.name))) continue;
+    const category = categorize(item.name, item.notes);
     if (!sectionMap.has(category)) sectionMap.set(category, []);
     sectionMap.get(category)!.push(item);
   }
@@ -297,9 +370,17 @@ export function buildShoppingListFromMeal(
 
   const merged = mergeItems(allItems);
 
+  const requiredItems = merged.filter((item) => isRequiredForMeal(item.notes));
+  const requiredKeys = new Set(requiredItems.map((i) => normalizeItemName(i.name)));
+
   const sectionMap = new Map<string, ShoppingItem[]>();
+  if (requiredItems.length > 0) {
+    sectionMap.set(REQUIRED_SECTION, requiredItems.map((i) => ({ ...i, notes: "Required for this meal" })));
+  }
+
   for (const item of merged) {
-    const category = categorize(item.name);
+    if (requiredKeys.has(normalizeItemName(item.name))) continue;
+    const category = categorize(item.name, item.notes);
     if (!sectionMap.has(category)) sectionMap.set(category, []);
     sectionMap.get(category)!.push(item);
   }

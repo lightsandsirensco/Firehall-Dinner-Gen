@@ -3,13 +3,14 @@ import { Link } from "wouter";
 import { Badge } from "@/components/ui/badge";
 
 interface SiteHeaderProps {
-  activePage: "generator" | "pizza" | "explore" | "favorites";
+  activePage: "generator" | "pizza" | "explore" | "wheel" | "favorites";
   favCount?: number;
 }
 
 export function SiteHeader({ activePage, favCount = 0 }: SiteHeaderProps) {
   const navItems = [
     { key: "generator" as const, label: "Meal Generator", href: "/" },
+    { key: "wheel" as const, label: "Classics Wheel", href: "/wheel" },
     { key: "pizza" as const, label: "Pizza Night", href: "/pizza" },
     { key: "explore" as const, label: "Explore", href: "/explore" },
   ];

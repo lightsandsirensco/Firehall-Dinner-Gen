@@ -16,6 +16,7 @@
 
 import { log } from "./index";
 import { inferActualProtein, proteinMatchesFilter } from "./spoonacular-converter";
+import { isWeakTitle } from "./meal-plate";
 import { ALLERGEN_KEYWORDS } from "./allergens";
 import { scoreCuisineMatch } from "./cuisine-guard";
 import type { SpoonacularRecipeDetail } from "./spoonacular";
@@ -26,6 +27,11 @@ export interface CandidateValidationResult {
   accepted: boolean;
   inferredProtein: string;
   rejectionReason?: string;
+}
+
+export interface CandidateValidationContext {
+  candidateIndex?: number;
+  spoonacularId?: number;
 }
 
 // ─── Format Rules ─────────────────────────────────────────────────────────────
@@ -222,12 +228,31 @@ function isEasilySubstitutable(ingredientName: string, allergen: string): boolea
 
 // ─── Main Validator ───────────────────────────────────────────────────────────
 
+function logCandidateRejection(
+  ctx: CandidateValidationContext | undefined,
+  detail: SpoonacularRecipeDetail,
+  selectedProtein: string,
+  formatKey: string,
+  reason: string,
+  extra?: string,
+): void {
+  const idx = ctx?.candidateIndex != null ? ctx.candidateIndex + 1 : "?";
+  const id = ctx?.spoonacularId ?? detail.id;
+  const title = detail.title.substring(0, 60);
+  const suffix = extra ? ` | ${extra}` : "";
+  log(
+    `[validator] REJECT candidate ${idx}/5 id=${id} title="${title}" protein=${selectedProtein} format=${formatKey} reason=${reason}${suffix}`,
+    "v2",
+  );
+}
+
 export function validateV2Candidate(
   detail: SpoonacularRecipeDetail,
   selectedProtein: string,
   formatKey: string,
   allergens: string[],
   cuisineKey: string = "any",
+  logContext?: CandidateValidationContext,
 ): CandidateValidationResult {
   const ingredientNames = detail.extendedIngredients.map((i) => i.name);
   const ingredientText = ingredientNames.join(" ").toLowerCase();
@@ -238,7 +263,13 @@ export function validateV2Candidate(
   // ── Check 1: Parsed steps ──────────────────────────────────────────────────
   if (steps.length === 0) {
     const reason = "no-parsed-steps";
-    log(`[validator] selectedProtein=${selectedProtein} inferredProtein=unknown mealStyle=${formatKey} result=rejected rejectionReason=${reason}`, "v2");
+    logCandidateRejection(logContext, detail, selectedProtein, formatKey, reason);
+    return { accepted: false, inferredProtein: "unknown", rejectionReason: reason };
+  }
+
+  if (isWeakTitle(detail.title)) {
+    const reason = "weak-title:single-word-or-generic";
+    logCandidateRejection(logContext, detail, selectedProtein, formatKey, reason);
     return { accepted: false, inferredProtein: "unknown", rejectionReason: reason };
   }
 
@@ -252,7 +283,7 @@ export function validateV2Candidate(
 
   if (!proteinOk) {
     const reason = `protein-mismatch:expected=${selectedProtein},inferred=${inferredProtein}`;
-    log(`[validator] result=rejected rejectionReason=${reason}`, "v2");
+    logCandidateRejection(logContext, detail, selectedProtein, formatKey, reason);
     return { accepted: false, inferredProtein, rejectionReason: reason };
   }
 
@@ -262,13 +293,13 @@ export function validateV2Candidate(
     // Required ingredient
     if (fmtRules.requiredIngredient && !fmtRules.requiredIngredient.test(ingredientText)) {
       const reason = `format:missing-${fmtRules.requiredIngredientLabel}`;
-      log(`[validator] result=rejected rejectionReason=${reason}`, "v2");
+      logCandidateRejection(logContext, detail, selectedProtein, formatKey, reason);
       return { accepted: false, inferredProtein, rejectionReason: reason };
     }
     // Required step
     if (fmtRules.requiredStep && !fmtRules.requiredStep.test(stepText)) {
       const reason = `format:missing-step:${fmtRules.requiredStepLabel}`;
-      log(`[validator] result=rejected rejectionReason=${reason}`, "v2");
+      logCandidateRejection(logContext, detail, selectedProtein, formatKey, reason);
       return { accepted: false, inferredProtein, rejectionReason: reason };
     }
     // Required either (ingredient OR step)
@@ -276,14 +307,14 @@ export function validateV2Candidate(
       const eitherOk = fmtRules.requiredEither.test(ingredientText) || fmtRules.requiredEither.test(stepText) || fmtRules.requiredEither.test(titleLower);
       if (!eitherOk) {
         const reason = `format:missing:${fmtRules.requiredEitherLabel}`;
-        log(`[validator] result=rejected rejectionReason=${reason}`, "v2");
+        logCandidateRejection(logContext, detail, selectedProtein, formatKey, reason);
         return { accepted: false, inferredProtein, rejectionReason: reason };
       }
     }
     // Forbidden carb
     if (fmtRules.forbiddenCarb && fmtRules.forbiddenCarb.test(ingredientText)) {
       const reason = `format:forbidden-carb:${fmtRules.forbiddenCarbLabel}`;
-      log(`[validator] result=rejected rejectionReason=${reason}`, "v2");
+      logCandidateRejection(logContext, detail, selectedProtein, formatKey, reason);
       return { accepted: false, inferredProtein, rejectionReason: reason };
     }
   }
@@ -292,7 +323,7 @@ export function validateV2Candidate(
   const titleCheck = validateTitleAlignment(detail.title, ingredientNames);
   if (!titleCheck.ok) {
     const reason = `title-alignment:${titleCheck.reason}`;
-    log(`[validator] result=rejected rejectionReason=${reason}`, "v2");
+    logCandidateRejection(logContext, detail, selectedProtein, formatKey, reason);
     return { accepted: false, inferredProtein, rejectionReason: reason };
   }
 
@@ -301,7 +332,7 @@ export function validateV2Candidate(
     const allergenCheck = validateAllergens(ingredientNames, steps, detail.title, allergens);
     if (!allergenCheck.ok) {
       const reason = `allergen:${allergenCheck.violations.slice(0, 2).join("|")}`;
-      log(`[validator] result=rejected rejectionReason=${reason}`, "v2");
+      logCandidateRejection(logContext, detail, selectedProtein, formatKey, reason);
       return { accepted: false, inferredProtein, rejectionReason: reason };
     }
   }
@@ -309,7 +340,7 @@ export function validateV2Candidate(
   // ── Check 6: Carb logic ────────────────────────────────────────────────────
   if (RICE_FORBIDDEN_FORMATS.has(formatKey) && hasRiceAsMainIngredient(ingredientNames)) {
     const reason = `carb:rice-in-${formatKey}`;
-    log(`[validator] result=rejected rejectionReason=${reason}`, "v2");
+    logCandidateRejection(logContext, detail, selectedProtein, formatKey, reason);
     return { accepted: false, inferredProtein, rejectionReason: reason };
   }
 
@@ -323,7 +354,7 @@ export function validateV2Candidate(
 
     if (cuisineScore < 6) {
       const reason = `cuisine-mismatch:cuisine=${cuisineKey},score=${cuisineScore}`;
-      log(`[validator] result=rejected rejectionReason=${reason}`, "v2");
+      logCandidateRejection(logContext, detail, selectedProtein, formatKey, reason, `cuisineScore=${cuisineScore}`);
       return { accepted: false, inferredProtein, rejectionReason: reason };
     }
 
@@ -333,6 +364,10 @@ export function validateV2Candidate(
   }
 
   // ── Accepted ───────────────────────────────────────────────────────────────
-  log(`[validator] result=accepted`, "v2");
+  const idx = logContext?.candidateIndex != null ? logContext.candidateIndex + 1 : "?";
+  log(
+    `[validator] ACCEPT candidate ${idx}/5 id=${detail.id} title="${detail.title.substring(0, 60)}" protein=${inferredProtein} format=${formatKey}`,
+    "v2",
+  );
   return { accepted: true, inferredProtein };
 }

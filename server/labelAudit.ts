@@ -1,4 +1,5 @@
 import type { GenerateResponse } from "@shared/schema";
+import { inferShoppingCategory, isSeasoningOrGarnish } from "@shared/meal-semantics";
 import { log } from "./index";
 import { containsAllergen } from "./allergens";
 
@@ -227,6 +228,18 @@ export function inferIngredientCategory(name: string): string {
   if (SPICE_OVERRIDES.test(lower)) return "spice";
   if (SAUCE_OVERRIDES.test(lower)) return "sauce";
   if (PANTRY_OVERRIDES.test(lower)) return "pantry";
+  if (isSeasoningOrGarnish(name)) return "spice";
+  const aisle = inferShoppingCategory(name);
+  const map: Record<string, string> = {
+    Proteins: "protein",
+    Produce: "produce",
+    "Dairy / Dairy Alternatives": "dairy",
+    "Bakery / Dough": "grain",
+    "Pantry & Spices": "spice",
+    "Condiments & Sauces": "sauce",
+    Other: "other",
+  };
+  if (map[aisle]) return map[aisle];
   for (const [cat, pattern] of INGREDIENT_CATEGORIES) {
     if (pattern.test(lower)) return cat;
   }

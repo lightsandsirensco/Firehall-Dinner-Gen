@@ -10,6 +10,8 @@ import ExplorePage from "@/pages/explore";
 import AdminPage from "@/pages/admin";
 import VotePage from "@/pages/vote";
 import FavoritesPage from "@/pages/favorites";
+import ClassicsWheelPage from "@/pages/classics-wheel";
+import CuratedPackagePage from "@/pages/curated-package";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -18,6 +20,8 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/pizza" component={PizzaNight} />
       <Route path="/explore" component={ExplorePage} />
+      <Route path="/wheel" component={ClassicsWheelPage} />
+      <Route path="/package/:slug" component={CuratedPackagePage} />
       <Route path="/admin" component={AdminPage} />
       <Route path="/vote/:voteId" component={VotePage} />
       <Route path="/favorites" component={FavoritesPage} />

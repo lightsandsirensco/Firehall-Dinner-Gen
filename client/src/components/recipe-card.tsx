@@ -2,12 +2,16 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import type { ClientRecipeResponse } from "@shared/schema";
+import type { ClientRecipeResponse, MealPlateLine } from "@shared/schema";
+import { resolveMealPlate } from "@/lib/meal-plate-ui";
 import { Flame, Droplets, Wheat, Beef, Sparkles, Trash2, Clock, Timer, ShieldCheck, Thermometer, Printer, Leaf, Mail, Package, ShoppingCart, DollarSign, Lightbulb, List, Heart, Check, ChevronDown, UtensilsCrossed, Globe, Zap, Bug } from "lucide-react";
 import { saveMeal, isMealSaved } from "@/lib/saved-meals";
 import { useState, useEffect, useMemo } from "react";
 
 let sessionProTipsCollapsed = false;
+
+const STARCH = /\b(rice|potato|pasta|bread|bun|naan|noodle|fries|wedge|quinoa)\b/i;
+const VEG = /\b(broccoli|bean|salad|slaw|corn|pepper|carrot|spinach|kale|cucumber|vegetable|greens)\b/i;
 
 interface RecipeCardProps {
   recipe: ClientRecipeResponse;
@@ -24,6 +28,33 @@ function MacroBar({ label, value, unit, icon, color }: { label: string; value: n
       <Icon className={`w-4 h-4 ${color}`} />
       <span className="font-heading text-xl leading-none">{value}</span>
       <span className="text-[10px] uppercase tracking-wider text-muted-foreground">{unit}</span>
+    </div>
+  );
+}
+
+function PlateSection({
+  label,
+  items,
+  testId,
+}: {
+  label: string;
+  items: MealPlateLine[];
+  testId: string;
+}) {
+  if (!items.length) return null;
+  return (
+    <div className="space-y-2" data-testid={testId}>
+      <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary/90">{label.toUpperCase()}</p>
+      <ul className="space-y-2">
+        {items.map((item, i) => (
+          <li key={`${item.name}-${i}`} className="text-sm text-foreground leading-snug">
+            <span className="font-semibold">{item.name}</span>
+            {item.amount ? (
+              <span className="text-muted-foreground"> — {item.amount}</span>
+            ) : null}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
@@ -208,7 +239,7 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
   useEffect(() => {
     setSaved(isMealSaved(recipe));
     setShowConfirm(false);
-  }, [recipe.title, recipe.ingredients]);
+  }, [recipe._id, recipe._signature, recipe.title]);
 
   const handleSave = () => {
     const result = saveMeal(recipe);
@@ -229,6 +260,10 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
   };
 
   const recipeTags = recipe.recipe_tags;
+  const mealPlate = useMemo(() => resolveMealPlate(recipe), [recipe]);
+  const displayTitle = mealPlate?.display_title || recipe.title;
+  const starchSides = mealPlate?.sides.filter((s) => s.role === "starch") || [];
+  const vegSides = mealPlate?.sides.filter((s) => s.role === "veg") || [];
 
   const isDebugMode = useMemo(() => {
     if (typeof window === "undefined") return false;
@@ -246,9 +281,14 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
         </div>
       )}
       <div className="space-y-1">
-        <h2 className="font-heading text-4xl md:text-5xl tracking-wide text-foreground leading-none" data-testid="text-recipe-title">
-          {recipe.title}
+        <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl tracking-wide text-foreground leading-tight" data-testid="text-recipe-title">
+          {displayTitle}
         </h2>
+        {mealPlate?.cuisine_label && (
+          <p className="text-xs uppercase tracking-widest text-primary/80 mt-1" data-testid="text-cuisine-label">
+            {mealPlate.cuisine_label} · Hall spread
+          </p>
+        )}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-3">
           {!hideSave && (
             <Button
@@ -294,9 +334,14 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
             Saved to Hall Favorites.
           </div>
         )}
-        <p className="text-sm text-muted-foreground" data-testid="text-recipe-why">
-          {recipe.why_it_fits_tonight}
-        </p>
+        <div className="rounded-lg border border-primary/15 bg-primary/5 px-3 py-2.5 mt-1">
+          <p className="text-[10px] uppercase tracking-widest text-primary/80 font-semibold mb-1">
+            Tonight at the hall
+          </p>
+          <p className="text-sm text-foreground/90 leading-relaxed" data-testid="text-recipe-why">
+            {recipe.why_it_fits_tonight}
+          </p>
+        </div>
         <div className="flex items-center gap-2 mt-1 flex-wrap">
           {recipe.chosen_protein && (
             <div className="flex items-center gap-2">
@@ -339,37 +384,51 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
             )}
             {recipeTags.high_protein && (
               <Badge variant="secondary" className="text-xs" data-testid="badge-tag-high-protein">
-                <Zap className="w-3 h-3 mr-1" />
-                High Protein
-              </Badge>
-            )}
-            {recipeTags.high_fiber && (
-              <Badge variant="secondary" className="text-xs" data-testid="badge-tag-high-fiber">
-                <Wheat className="w-3 h-3 mr-1" />
-                High Fiber
+                <Flame className="w-3 h-3 mr-1" />
+                Feeds hard
               </Badge>
             )}
             {recipeTags.quick_cleanup && (
               <Badge variant="secondary" className="text-xs" data-testid="badge-tag-quick-cleanup">
                 <Sparkles className="w-3 h-3 mr-1" />
-                Quick Cleanup
+                Easy cleanup
               </Badge>
             )}
             {(recipeTags.base_carb === "none" || !recipeTags.base_carb) && (
               <Badge variant="secondary" className="text-xs" data-testid="badge-no-carb">
                 <Leaf className="w-3 h-3 mr-1" />
-                No Carb Needed
+                No starch side
               </Badge>
             )}
             {recipeTags.base_carb === "greens" && (
               <Badge variant="secondary" className="text-xs" data-testid="badge-lower-carb">
                 <Leaf className="w-3 h-3 mr-1" />
-                Lower-Carb Option
+                Greens base
               </Badge>
             )}
           </div>
         )}
       </div>
+
+      {mealPlate && (mealPlate.main.length > 0 || mealPlate.sides.length > 0) && (
+        <Card className="border-primary/25 bg-gradient-to-br from-primary/5 to-transparent" data-testid="section-meal-plate">
+          <CardContent className="p-5 space-y-4">
+            <div className="flex items-center gap-2">
+              <UtensilsCrossed className="w-4 h-4 text-primary" />
+              <h3 className="font-heading text-lg tracking-wider uppercase text-foreground">
+                Tonight&apos;s table
+              </h3>
+            </div>
+            <PlateSection label="Main" items={mealPlate.main} testId="plate-main" />
+            <PlateSection
+              label="Sides"
+              items={[...starchSides, ...vegSides]}
+              testId="plate-sides"
+            />
+            <PlateSection label="Optional" items={mealPlate.optional} testId="plate-optional" />
+          </CardContent>
+        </Card>
+      )}
 
       {recipe.ingredients_used && recipe.ingredients_used.length > 0 && (
         <Card data-testid="section-ingredients-used">
@@ -439,12 +498,19 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
           <CardContent className="p-5">
             <div className="flex items-center gap-2 mb-3">
               <Sparkles className="w-4 h-4 text-primary" />
-              <h3 className="font-heading text-lg tracking-wider uppercase text-foreground">Macros Per Serving</h3>
+              <h3 className="font-heading text-sm tracking-wider uppercase text-muted-foreground">
+                Rough nutrition per seat
+              </h3>
               <Badge variant="outline" className="ml-auto text-xs">
-                {crewSize} servings
+                {crewSize} at the table
               </Badge>
             </div>
-            <div className="flex gap-2" data-testid="section-macros">
+            <p className="text-[11px] text-muted-foreground/80 mb-2 -mt-1">
+              {recipe.macros_estimated
+                ? "Estimated after sides were added — ballpark for planning, not lab-precise."
+                : "Ballpark only — we feed the crew first, count macros second."}
+            </p>
+            <div className="flex gap-2 opacity-90" data-testid="section-macros">
               <MacroBar label="Calories" value={recipe.macros_per_serving.calories} unit="cal" icon={Flame} color="text-orange-400" />
               <Separator orientation="vertical" className="h-14 self-center" />
               <MacroBar label="Protein" value={recipe.macros_per_serving.protein_g} unit="protein" icon={Beef} color="text-red-400" />
@@ -499,7 +565,7 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
           <div className="flex items-center gap-2 mb-4">
             <List className="w-4 h-4 text-primary" />
             <h3 className="font-heading text-lg tracking-wider uppercase text-foreground">
-              Ingredients
+              {mealPlate ? "Full ingredient list" : "Ingredients"}
             </h3>
           </div>
           <div
@@ -565,7 +631,7 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
           <CardContent className="p-5">
             <div className="flex items-center gap-2 mb-3">
               <UtensilsCrossed className="w-4 h-4 text-primary" />
-              <h3 className="font-heading text-lg tracking-wider uppercase text-foreground">Plating</h3>
+              <h3 className="font-heading text-lg tracking-wider uppercase text-foreground">Tonight&apos;s spread</h3>
             </div>
             {recipe.plating.serve_style && (
               <Badge variant="outline" className="text-xs mb-2" data-testid="badge-serve-style">
@@ -621,19 +687,21 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
         </Card>
       )}
 
-      <Card>
-        <CardContent className="p-5">
-          <div className="flex items-start gap-3">
-            <Trash2 className="w-4 h-4 text-muted-foreground mt-0.5 flex-shrink-0" />
-            <div>
-              <h3 className="font-heading text-sm tracking-wider uppercase text-muted-foreground mb-1">
-                Cleanup Tip
-              </h3>
-              <p className="text-sm text-foreground/80" data-testid="text-cleanup-tip">{recipe.cleanup_tip}</p>
+      {recipe.cleanup_tip?.trim() && (
+        <Card>
+          <CardContent className="p-5">
+            <div className="flex items-start gap-3">
+              <Trash2 className="w-4 h-4 text-muted-foreground mt-0.5 flex-shrink-0" />
+              <div>
+                <h3 className="font-heading text-sm tracking-wider uppercase text-muted-foreground mb-1">
+                  Kitchen shutdown
+                </h3>
+                <p className="text-sm text-foreground/80" data-testid="text-cleanup-tip">{recipe.cleanup_tip}</p>
+              </div>
             </div>
-          </div>
-        </CardContent>
-      </Card>
+          </CardContent>
+        </Card>
+      )}
 
       {recipe.budget_tips && recipe.budget_tips.length > 0 && (
         <Card data-testid="section-budget-tips">

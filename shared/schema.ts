@@ -123,6 +123,20 @@ export interface ClientPlating {
   optional_toppings: string[];
 }
 
+export interface MealPlateLine {
+  name: string;
+  amount: string;
+  role?: "main" | "starch" | "veg" | "optional";
+}
+
+export interface MealPlate {
+  display_title: string;
+  main: MealPlateLine[];
+  sides: MealPlateLine[];
+  optional: MealPlateLine[];
+  cuisine_label?: string;
+}
+
 export interface VegOptionIngredient {
   item: string;
   amount: string;
@@ -171,6 +185,7 @@ export interface GenerateResponse {
 
 export interface ClientRecipeResponse {
   title: string;
+  meal_plate?: MealPlate;
   meal_format: string;
   servings: number;
   tags: string[];
@@ -180,6 +195,8 @@ export interface ClientRecipeResponse {
   steps: ClientStep[];
   plating: ClientPlating;
   macros_per_serving: MacrosPerServing;
+  /** True when sides were composed after fetch — macros are adjusted estimates. */
+  macros_estimated?: boolean;
   chosen_protein: string;
   primary_protein_source: string;
   meal_style?: string;

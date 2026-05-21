@@ -220,6 +220,12 @@ setInterval(() => {
       sessionSignatureStore.delete(keys[i]);
     }
   }
+  if (sessionSpoonacularIdStore.size > 5000) {
+    const keys = Array.from(sessionSpoonacularIdStore.keys());
+    for (let i = 0; i < keys.length - 2500; i++) {
+      sessionSpoonacularIdStore.delete(keys[i]);
+    }
+  }
 }, 600_000);
 
 const SESSION_MAX_SIGNATURES = 15;
@@ -251,6 +257,28 @@ export function isRecentSessionSignature(sessionKey: string, sig: string): boole
 export function getLastSessionSignature(sessionKey: string): string {
   const sigs = sessionSignatureStore.get(sessionKey) || [];
   return sigs.length > 0 ? sigs[sigs.length - 1] : "";
+}
+
+const SESSION_MAX_SPOONACULAR_IDS = 20;
+const sessionSpoonacularIdStore = new Map<string, number[]>();
+
+export function getRecentSpoonacularIds(sessionKey: string): number[] {
+  return sessionSpoonacularIdStore.get(sessionKey) || [];
+}
+
+export function addRecentSpoonacularId(sessionKey: string, recipeId: number): void {
+  if (!sessionKey || !Number.isFinite(recipeId)) return;
+  let ids = sessionSpoonacularIdStore.get(sessionKey);
+  if (!ids) {
+    ids = [];
+    sessionSpoonacularIdStore.set(sessionKey, ids);
+  }
+  const filtered = ids.filter((id) => id !== recipeId);
+  filtered.push(recipeId);
+  if (filtered.length > SESSION_MAX_SPOONACULAR_IDS) {
+    filtered.splice(0, filtered.length - SESSION_MAX_SPOONACULAR_IDS);
+  }
+  sessionSpoonacularIdStore.set(sessionKey, filtered);
 }
 
 export function logUsage(entry: {

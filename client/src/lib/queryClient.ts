@@ -75,12 +75,32 @@ export async function apiRequest(
 }
 
 type UnauthorizedBehavior = "returnNull" | "throw";
+
+/** Build a fetch URL from react-query keys — avoids `/api/foo/bar=baz` join bugs. */
+export function buildUrlFromQueryKey(queryKey: readonly unknown[]): string {
+  if (queryKey.length === 0) return "/";
+  const base = String(queryKey[0]);
+  if (queryKey.length === 1) return base;
+  const second = queryKey[1];
+  if (typeof second === "number" && Number.isFinite(second)) {
+    return `${base.replace(/\/$/, "")}/${second}`;
+  }
+  if (typeof second === "string") {
+    if (second.includes("=")) {
+      return `${base}${base.includes("?") ? "&" : "?"}${second}`;
+    }
+    return `${base.replace(/\/$/, "")}/${second}`;
+  }
+  return base;
+}
+
 export const getQueryFn: <T>(options: {
   on401: UnauthorizedBehavior;
 }) => QueryFunction<T> =
   ({ on401: unauthorizedBehavior }) =>
   async ({ queryKey }) => {
-    const res = await fetch(queryKey.join("/") as string, {
+    const url = buildUrlFromQueryKey(queryKey);
+    const res = await fetch(url, {
       credentials: "include",
     });
 

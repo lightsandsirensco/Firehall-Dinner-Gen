@@ -1,4 +1,10 @@
 import { log } from "./index";
+import {
+  applyCrewPortionFloors,
+  buildHallWhyItFits,
+  hallCleanupTip,
+  hallProTips,
+} from "./firehall-voice";
 import { searchRecipes, getRecipeById, SpoonacularRecipeDetail } from "./spoonacular";
 import type {
   GenerateRequest,
@@ -307,7 +313,8 @@ export function convertSpoonacularToGenerateResponse(
       ingMap.set(key, ing);
     }
   }
-  const ingredients: IngredientItem[] = Array.from(ingMap.values());
+  let ingredients: IngredientItem[] = Array.from(ingMap.values());
+  ingredients = applyCrewPortionFloors(ingredients, request.crew_size);
 
   const rawSteps = detail.analyzedInstructions?.[0]?.steps || [];
   const steps: RecipeStep[] =
@@ -350,7 +357,14 @@ export function convertSpoonacularToGenerateResponse(
   };
 
   const cuisineLabel = detail.cuisines?.[0] || cuisine;
-  const why = `A ${cuisineLabel} recipe scaled for ${request.crew_size} crew members — ready in ${totalMin} minutes with ${steps.length} steps.`;
+  const why = buildHallWhyItFits(
+    detail.title,
+    request.crew_size,
+    cuisineLabel,
+    chosenProtein,
+    totalMin,
+    request.meal_format,
+  );
 
   return {
     template_id: 0,
@@ -363,13 +377,9 @@ export function convertSpoonacularToGenerateResponse(
     protein_safety,
     ingredients,
     steps,
-    cleanup_tip:
-      "Soak pots and pans right after plating while they're still warm. Wipe down prep surfaces and return unused ingredients to storage immediately.",
+    cleanup_tip: hallCleanupTip(),
     macros_per_serving: macros,
-    pro_tips: [
-      `Scaled from ${baseServings} servings to ${request.crew_size} — check single-use items (whole cans, eggs) individually.`,
-      "Taste and adjust seasoning after scaling — salt doesn't always scale linearly.",
-    ],
+    pro_tips: hallProTips(request.crew_size, baseServings),
     tags: recipeTags,
   };
 }

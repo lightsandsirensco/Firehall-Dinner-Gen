@@ -4,10 +4,10 @@
  * Generation flow:
  *   1. buildSearchParams(request)  — map all Firehall filters → Spoonacular params
  *   2. searchRecipes(params)       — search Spoonacular for 5 candidates (cached 1h)
- *   3. Select one candidate        — title-based protein pre-filter → shuffle → pick first
- *   4. getRecipeDetails(id)        — fetch full detail for that ONE candidate (cached 1h)
+ *   3. Order candidates            — protein title filter → deprioritize recent session IDs → shuffle
+ *   4. getRecipeDetails + validate — try up to 5 candidates; stop on first pass (cached 1h)
  *   5. Normalize                   — convert Spoonacular shape → Firehall recipe shape
- *   6. Polish                      — gpt-4o-mini lightly fixes title wording + writes description (cached 1h, 2s timeout)
+ *   6. Polish                      — copy-only polish with safety guard (cached 1h, 6s timeout)
  *
  * Protein is a hard constraint enforced at three levels:
  *   - query keyword (e.g., "chicken skillet")
@@ -20,7 +20,7 @@
  * Rules:
  *   - No recipe invention in this flow
  *   - No relabeling into different meal types
- *   - One getRecipeDetails call per request (selected candidate only)
+ *   - Up to 5 getRecipeDetails attempts only when earlier candidates fail validation
  *   - No default rice / no forced carbs
  */
 
@@ -28,13 +28,16 @@ import { log } from "./index";
 import { searchRecipes, getRecipeDetails, type SpoonacularSearchResult } from "./spoonacular";
 import { inferActualProtein, proteinMatchesFilter, convertSpoonacularToGenerateResponse } from "./spoonacular-converter";
 import { validateV2Candidate } from "./v2-validator";
-import { ensureRiceForRiceDishes } from "./carb-rules";
+import { shouldTryNextCandidate } from "./meal-composition";
+import { applyCrewPortionFloors, hallCleanupTip, hallProTips } from "./firehall-voice";
+import { isWeakTitle, resolvePolishTitle } from "./meal-plate";
 import { polishRecipeCopy } from "./recipe-polish";
+import { getRecentSpoonacularIds, addRecentSpoonacularId } from "./cache-store";
 import type { GenerateRequest, GenerateResponse } from "../shared/schema";
 
 // ─── Constants ────────────────────────────────────────────────────────────────
 
-const SEARCH_CANDIDATES = 5;
+const SEARCH_CANDIDATES = 8;
 
 // ─── Filter Mapping Tables ────────────────────────────────────────────────────
 
@@ -170,6 +173,12 @@ export interface V2GenerateResult {
   originalTitle: string;
   protein: string;
   source: "spoonacular_v2";
+  spoonacularId: number;
+}
+
+export interface V2GenerateOptions {
+  /** `${ipHash}:${sessionId}` — used to deprioritize recently served Spoonacular IDs */
+  sessionKey?: string;
 }
 
 // ─── Spoonacular Params Type ──────────────────────────────────────────────────
@@ -186,6 +195,7 @@ interface SpoonacularSearchParams {
   minServings?: number;
   number: number;
   sort: string;
+  offset: number;
 }
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
@@ -295,7 +305,8 @@ function buildSearchParams(request: GenerateRequest, chosenProtein: string): Spo
     diet,
     minServings,
     number:            SEARCH_CANDIDATES,
-    sort:              "popularity",
+    sort:              "random",
+    offset:            Math.floor(Math.random() * 24),
   };
 
   // ── Log mapped Spoonacular parameters ────────────────────────────────────
@@ -307,16 +318,31 @@ function buildSearchParams(request: GenerateRequest, chosenProtein: string): Spo
   return params;
 }
 
-// ─── Step 3 / Step 4 ──────────────────────────────────────────────────────────
-//
-// Candidate selection + strict validation live in the main runV2Generate flow below.
-// The old single-pick selectCandidate() and light formatMatchesRequest() are replaced
-// by validateV2Candidate() (v2-validator.ts) which iterates every candidate.
+// ─── Candidate ordering ───────────────────────────────────────────────────────
+
+function shuffle<T>(arr: T[]): T[] {
+  return arr.slice().sort(() => Math.random() - 0.5);
+}
+
+/** Fresh session IDs first, then shuffled repeats — reduces duplicate meals without extra API calls. */
+function orderCandidatePool(
+  pool: SpoonacularSearchResult[],
+  recentIds: Set<number>,
+): SpoonacularSearchResult[] {
+  const fresh: SpoonacularSearchResult[] = [];
+  const repeat: SpoonacularSearchResult[] = [];
+  for (const c of pool) {
+    if (recentIds.has(c.id)) repeat.push(c);
+    else fresh.push(c);
+  }
+  return [...shuffle(fresh), ...shuffle(repeat)];
+}
 
 // ─── Main Entry Point ─────────────────────────────────────────────────────────
 
 export async function runV2Generate(
   request: GenerateRequest,
+  options?: V2GenerateOptions,
 ): Promise<V2GenerateResult | null> {
   if (!process.env.SPOONACULAR_API_KEY) {
     log("[v2] SPOONACULAR_API_KEY not set — V2 engine unavailable", "v2");
@@ -346,6 +372,7 @@ export async function runV2Generate(
       minServings:        params.minServings,
       number:             params.number,
       sort:               params.sort,
+      offset:             params.offset,
     });
   } catch (err: any) {
     log(`[v2] Spoonacular search error: ${err.message}`, "v2");
@@ -368,83 +395,121 @@ export async function runV2Generate(
     return quick === "unknown" || proteinMatchesFilter(quick, chosenProtein);
   });
   const pool = proteinMatched.length > 0 ? proteinMatched : results;
-  const shuffled = pool.slice().sort(() => Math.random() - 0.5);
+  const recentIds = new Set(
+    options?.sessionKey ? getRecentSpoonacularIds(options.sessionKey) : [],
+  );
+  const ordered = orderCandidatePool(pool, recentIds).slice(0, SEARCH_CANDIDATES);
 
-  log(`[v2] Candidate pool: ${shuffled.length} after title-level filter (from ${results.length} total)`, "v2");
+  log(
+    `[v2] Candidate pool: ${ordered.length} ordered (${recentIds.size} recent IDs deprioritized, from ${results.length} search results)`,
+    "v2",
+  );
 
-  // ── Step 4: Select one candidate — fetch its detail — validate once ──────
-  //   We pick a single candidate (first after protein-title-filter + shuffle).
-  //   getRecipeDetails is called ONLY for that one recipe — one API call max.
-  //   If validation fails we go straight to fallback without retrying others.
-  //   (Subsequent requests for the same candidate ID hit the 1-hour cache.)
   const formatInfo = FORMAT_MAP[request.meal_format || "random"] ?? FORMAT_MAP.random;
+  const mealFormat = request.meal_format || "random";
+  const failures: Array<{ id: number; title: string; reason: string }> = [];
 
-  const selected = shuffled[0];
-  log(`[v2] Selected candidate: id=${selected.id} title="${selected.title}" (pool size=${shuffled.length})`, "v2");
+  // ── Step 4: Try candidates sequentially — stop on first valid (avg 1 detail call) ──
+  for (let i = 0; i < ordered.length; i++) {
+    const candidate = ordered[i];
+    log(`[v2] Trying candidate ${i + 1}/${ordered.length} id=${candidate.id} title="${candidate.title}"`, "v2");
 
-  let detail;
-  try {
-    detail = await getRecipeDetails(selected.id);
-  } catch (err: any) {
-    log(`[v2] getRecipeDetails failed id=${selected.id}: ${err.message} — caller will use fallback`, "v2");
-    return null;
+    let detail;
+    try {
+      detail = await getRecipeDetails(candidate.id);
+    } catch (err: any) {
+      const reason = `detail-fetch:${err.message}`;
+      failures.push({ id: candidate.id, title: candidate.title, reason });
+      log(`[v2] Candidate ${i + 1} skipped — ${reason}`, "v2");
+      continue;
+    }
+
+    const validation = validateV2Candidate(
+      detail,
+      chosenProtein,
+      mealFormat,
+      allergens,
+      cuisineKey,
+      { candidateIndex: i, spoonacularId: detail.id },
+    );
+
+    if (!validation.accepted) {
+      failures.push({
+        id: detail.id,
+        title: detail.title,
+        reason: validation.rejectionReason || "unknown",
+      });
+      continue;
+    }
+
+    // ── Normalize (Spoonacular = source of truth for ingredients/macros/steps) ──
+    const recipe = convertSpoonacularToGenerateResponse(detail, request, chosenProtein);
+
+    if (shouldTryNextCandidate(recipe, i, ordered.length, mealFormat)) {
+      failures.push({
+        id: detail.id,
+        title: detail.title,
+        reason: "thin-plate:missing-starch-or-veg",
+      });
+      log(`[v2] Candidate ${i + 1} skipped — incomplete plate (trying next)`, "v2");
+      continue;
+    }
+
+    const cuisine = detail.cuisines?.[0] || recipe.tags?.cuisine || cuisineKey || "any";
+    const spoonacularTitle = detail.title;
+    const keyIngredients = (recipe.ingredients || []).slice(0, 12).map((ing) => ing.item);
+
+    const polish = await polishRecipeCopy(
+      detail.id,
+      spoonacularTitle,
+      chosenProtein,
+      cuisine,
+      recipe.timing?.total_minutes ?? 0,
+      request.crew_size,
+      keyIngredients,
+      recipe.steps ?? [],
+      request.healthiness_preference || "balanced",
+    );
+
+    const finalRecipe: GenerateResponse = {
+      ...recipe,
+      title: resolvePolishTitle(polish.title, recipe.title, spoonacularTitle),
+      why_it_fits_tonight: polish.why_it_fits_tonight,
+      steps: polish.steps,
+      ingredients: applyCrewPortionFloors(recipe.ingredients || [], request.crew_size),
+      cleanup_tip: hallCleanupTip(),
+      pro_tips: hallProTips(request.crew_size, detail.servings || 4),
+      tags: {
+        ...(recipe.tags || {}),
+        cuisine: recipe.tags?.cuisine || cuisine,
+      },
+    };
+
+    if (isWeakTitle(finalRecipe.title)) {
+      finalRecipe.title = spoonacularTitle;
+    }
+
+    if (options?.sessionKey) {
+      addRecentSpoonacularId(options.sessionKey, detail.id);
+    }
+
+    log(
+      `[v2] ✓ Accepted candidate ${i + 1}/${ordered.length} id=${detail.id} "${spoonacularTitle}" | protein=${validation.inferredProtein} | tried=${i + 1} detail-call(s)`,
+      "v2",
+    );
+
+    return {
+      recipe: finalRecipe,
+      originalTitle: spoonacularTitle,
+      protein: chosenProtein,
+      source: "spoonacular_v2",
+      spoonacularId: detail.id,
+    };
   }
 
-  // ── Strict Validation ────────────────────────────────────────────────────
-  const validation = validateV2Candidate(
-    detail,
-    chosenProtein,
-    request.meal_format || "random",
-    allergens,
-    cuisineKey,
+  log(
+    `[v2] All ${ordered.length} Spoonacular candidates failed — summary: ${failures.map((f) => `id=${f.id}(${f.reason})`).join("; ")}`,
+    "v2",
   );
-
-  if (!validation.accepted) {
-    log(`[v2] Candidate REJECTED (${validation.rejectionReason}) — caller will use fallback`, "v2");
-    return null;
-  }
-
-  // ── Normalize to Firehall shape ──────────────────────────────────────────
-  const recipe = convertSpoonacularToGenerateResponse(detail, request, chosenProtein);
-
-  let withCarbs = recipe;
-  if (!formatInfo.carb_free) {
-    const riceResult = ensureRiceForRiceDishes(recipe, request.meal_format, request.crew_size, allergens);
-    withCarbs = riceResult.recipe || recipe;
-  }
-
-  log(`[v2] ✓ Accepted "${detail.title}" | protein=${validation.inferredProtein} | ingredients=${withCarbs.ingredients?.length} | steps=${withCarbs.steps?.length} | source=spoonacular_v2`, "v2");
-
-  // ── Step 5: Polish + step improvement ────────────────────────────────────
-  //   Single gpt-4o-mini call: polishes title/description AND rewrites steps to
-  //   be beginner-friendly (heat level, time range, doneness cues, safe temps).
-  //   Hard 5-second timeout; falls back to original title/description/steps.
-  //   Results cached per Spoonacular ID for 1 hour (zero repeat AI calls).
-  const cuisine = detail.cuisines?.[0] || withCarbs.tags?.cuisine || "any";
-  const keyIngredients = (withCarbs.ingredients || []).slice(0, 5).map((i) => i.name);
-  const polish = await polishRecipeCopy(
-    detail.id,
-    detail.title,
-    chosenProtein,
-    cuisine,
-    withCarbs.timing?.total_minutes ?? 0,
-    request.crew_size,
-    keyIngredients,
-    withCarbs.steps ?? [],
-  );
-
-  const finalRecipe: GenerateResponse = {
-    ...withCarbs,
-    title: polish.title,
-    why_it_fits_tonight: polish.why_it_fits_tonight,
-    steps: polish.steps,
-  };
-  const acceptedTitle = polish.title;
-
-  return {
-    recipe: finalRecipe,
-    originalTitle: acceptedTitle,
-    protein: chosenProtein,
-    source: "spoonacular_v2",
-  };
+  return null;
 }

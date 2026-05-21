@@ -27,7 +27,7 @@ export const CARB_RULES: Record<string, CarbRule> = {
     forbiddenBaseLabel: "rice, quinoa, pasta",
     allowedSides: ["potato wedges", "sweet potato fries", "side salad", "coleslaw", "roasted vegetables", "chips"],
     defaultSide: "potato wedges",
-    defaultSideHealthy: "side salad",
+    defaultSideHealthy: "coleslaw",
     baseRequired: false,
   },
   wrap: {
@@ -118,21 +118,25 @@ export const CARB_RULES: Record<string, CarbRule> = {
     baseRequired: false,
   },
   skillet: {
-    allowedSides: [],
-    defaultSide: "",
-    defaultSideHealthy: "",
+    forbiddenBase: null,
+    forbiddenBaseLabel: "",
+    allowedSides: ["mashed potatoes", "jasmine rice", "potato wedges"],
+    defaultSide: "mashed potatoes",
+    defaultSideHealthy: "jasmine rice",
     baseRequired: false,
   },
   casserole: {
-    allowedSides: [],
-    defaultSide: "",
-    defaultSideHealthy: "",
+    forbiddenBase: null,
+    forbiddenBaseLabel: "",
+    allowedSides: ["side salad", "crusty bread"],
+    defaultSide: "side salad",
+    defaultSideHealthy: "side salad",
     baseRequired: false,
   },
   "plated-main": {
-    allowedSides: ["potatoes", "mashed potatoes", "roasted potatoes", "rice", "sweet potato"],
-    defaultSide: "roasted potatoes",
-    defaultSideHealthy: "roasted sweet potatoes",
+    allowedSides: ["mashed potatoes", "jasmine rice", "potato wedges", "mac and cheese", "cornbread", "quinoa"],
+    defaultSide: "mashed potatoes",
+    defaultSideHealthy: "quinoa",
     baseRequired: false,
   },
 };
@@ -448,7 +452,7 @@ export function enforceCarbs(recipe: GenerateResponse, mealFormat: string | unde
 
     const hasPotato = fixed.ingredients.some(i => /potato/i.test(i.item));
     if (!hasPotato) {
-      const side = healthiness === "lean" ? "Sweet potatoes, cubed" : "Baby potatoes, halved";
+      const side = healthiness === "lean" ? "Sweet potatoes, cubed" : "Yukon gold potatoes, cubed";
       fixed.ingredients.push({ item: side, amount: "1.5 lbs", notes: "Toss with oil, roast on pan" });
     }
 

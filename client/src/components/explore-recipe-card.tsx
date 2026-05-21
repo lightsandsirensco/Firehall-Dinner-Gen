@@ -9,6 +9,7 @@ interface ExploreRecipeCardProps {
   summary?: string;
   tags: string[];
   isFirehallFallback?: boolean;
+  isCurated?: boolean;
   onClick: () => void;
 }
 
@@ -58,36 +59,40 @@ export function ExploreRecipeCard({
   summary,
   tags,
   isFirehallFallback,
+  isCurated,
   onClick,
 }: ExploreRecipeCardProps) {
   const hiResImage = getHighResImage(image);
 
   return (
     <article
-      className="group relative rounded-xl overflow-hidden bg-card border border-border/30 cursor-pointer transition-all duration-300 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5 hover:-translate-y-1 active:translate-y-0"
+      className="group relative rounded-2xl overflow-hidden bg-card border border-border/40 cursor-pointer transition-all duration-300 hover:border-primary/40 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-1.5 active:translate-y-0"
       onClick={onClick}
       data-testid={`card-explore-result-${id}`}
     >
-      <div className="aspect-[16/10] overflow-hidden relative bg-muted">
+      <div className="aspect-[4/3] sm:aspect-[16/10] overflow-hidden relative bg-gradient-to-br from-muted to-muted/50">
         {hiResImage ? (
           <img
             src={hiResImage}
             alt={title}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.06]"
             loading="lazy"
           />
         ) : (
-          <div className="w-full h-full flex items-center justify-center">
-            <Flame className="w-10 h-10 text-muted-foreground/20" />
+          <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary/10 to-muted">
+            <Flame className="w-12 h-12 text-primary/25" />
           </div>
         )}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 p-4 sm:hidden">
+          <h3 className="font-heading text-sm tracking-wide text-white line-clamp-2 drop-shadow-md">{title}</h3>
+        </div>
 
-        {isFirehallFallback && (
+        {(isCurated || isFirehallFallback) && (
           <div className="absolute top-3 left-3 z-10">
             <span className="inline-flex items-center gap-1 bg-primary/90 text-primary-foreground text-[10px] font-semibold px-2.5 py-1 rounded-full shadow-lg backdrop-blur-sm">
               <Flame className="w-3 h-3" />
-              Firehall AI
+              {isCurated ? "Hall classic" : "Firehall AI"}
             </span>
           </div>
         )}
@@ -102,9 +107,9 @@ export function ExploreRecipeCard({
         )}
       </div>
 
-      <div className="p-4 sm:p-5">
+      <div className="p-4 sm:p-5 hidden sm:block">
         <h3
-          className="font-heading text-[15px] sm:text-base tracking-wide text-foreground line-clamp-2 mb-2.5 leading-snug"
+          className="font-heading text-[15px] sm:text-base tracking-wide text-foreground line-clamp-2 mb-2.5 leading-snug group-hover:text-primary transition-colors"
           data-testid={`text-result-title-${id}`}
         >
           {title}
@@ -158,8 +163,8 @@ export function ExploreRecipeCard({
 
 export function ExploreRecipeCardSkeleton() {
   return (
-    <div className="rounded-xl overflow-hidden bg-card border border-border/30 animate-pulse" data-testid="skeleton-card">
-      <div className="aspect-[16/10] bg-muted" />
+    <div className="rounded-2xl overflow-hidden bg-card border border-border/40 animate-pulse" data-testid="skeleton-card">
+      <div className="aspect-[4/3] sm:aspect-[16/10] bg-muted" />
       <div className="p-4 sm:p-5 space-y-3">
         <div className="h-5 bg-muted rounded-md w-3/4" />
         <div className="flex gap-3">

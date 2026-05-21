@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { serveStatic } from "./static";
@@ -21,6 +22,34 @@ app.use(
 );
 
 app.use(express.urlencoded({ extended: false }));
+
+function summarizeApiResponse(path: string, body: Record<string, any>): string {
+  if (path.includes("/generate")) {
+    return JSON.stringify({
+      title: body.title,
+      template_id: body.template_id,
+      _source: body._source,
+      _fallback: body._fallback,
+      _signature: body._signature ? `${String(body._signature).slice(0, 12)}…` : undefined,
+    });
+  }
+  if (path.includes("/explore") || path.includes("/search")) {
+    const results = body.results;
+    return JSON.stringify({
+      count: Array.isArray(results) ? results.length : 0,
+      _source: body._source,
+      totalResults: body.totalResults,
+    });
+  }
+  if (typeof body.message === "string") {
+    return JSON.stringify({ message: body.message });
+  }
+  if (typeof body.status === "string") {
+    return JSON.stringify({ status: body.status });
+  }
+  const keys = Object.keys(body).slice(0, 6);
+  return JSON.stringify(keys.length <= 6 ? Object.fromEntries(keys.map((k) => [k, typeof body[k]])) : { keys: keys.length });
+}
 
 export function log(message: string, source = "express") {
   const formattedTime = new Date().toLocaleTimeString("en-US", {
@@ -49,7 +78,8 @@ app.use((req, res, next) => {
     if (path.startsWith("/api")) {
       let logLine = `${req.method} ${path} ${res.statusCode} in ${duration}ms`;
       if (capturedJsonResponse) {
-        logLine += ` :: ${JSON.stringify(capturedJsonResponse)}`;
+        const summary = summarizeApiResponse(path, capturedJsonResponse);
+        if (summary) logLine += ` :: ${summary}`;
       }
 
       log(logLine);
@@ -90,16 +120,9 @@ app.use((req, res, next) => {
   // this serves both the API and the client.
   // It is the only port that is not firewalled.
   const port = parseInt(process.env.PORT || "5000", 10);
-  httpServer.listen(
-    {
-      port,
-      host: "0.0.0.0",
-      reusePort: true,
-    },
-    () => {
-      log(`serving on port ${port}`);
-    },
-  );
+  httpServer.listen(port, () => {
+    log(`serving on port ${port}`);
+  });
 
   const SELF_PING_INTERVAL_MS = 4 * 60 * 1000;
   const selfPingTimer = setInterval(() => {

@@ -21,6 +21,9 @@ import { fetchBestSpoonacularRecipe } from "./spoonacular-converter";
 import { runV2Generate } from "./recipe-engine-v2";
 import { runV2Fallback } from "./v2-fallback";
 import { enforceCarbs, trackCarb, ensureRiceForRiceDishes } from "./carb-rules";
+import { completeFirehallPlate } from "./meal-composition";
+import { adjustMacrosAfterCompose, assertMealSemanticsOrLog, scorePlateTrust } from "./meal-sanity";
+import { applyCrewPortionFloors, hallCleanupTip, hallProTips } from "./firehall-voice";
 import { pickStructure, trackStructure, STRUCTURE_DISPLAY, type StructureType } from "./structure-variety";
 import { log } from "./index";
 import { validateAndFixRecipe, validateRecipe, computeSignature, recordSignature, type RecipeValidationContext } from "./validateRecipe";
@@ -225,7 +228,7 @@ export async function registerRoutes(
     if (recipe.tags) {
       if (recipe.tags.cuisine) tags.push(recipe.tags.cuisine);
       if (recipe.tags.cooking_method) tags.push(recipe.tags.cooking_method);
-      if (recipe.tags.high_protein) tags.push("High Protein");
+      if (recipe.tags.high_protein) tags.push("Feeds hard");
       if (recipe.tags.high_fiber) tags.push("High Fiber");
       if (recipe.tags.quick_cleanup) tags.push("Quick Cleanup");
       if (recipe.tags.base_carb) tags.push(recipe.tags.base_carb);
@@ -239,6 +242,7 @@ export async function registerRoutes(
 
     return {
       title: recipe.title || "",
+      meal_plate: recipe.meal_plate || undefined,
       meal_format: mealFormat || recipe.meal_style || "",
       servings: crewSize,
       tags,
@@ -248,6 +252,7 @@ export async function registerRoutes(
       steps,
       plating,
       macros_per_serving: recipe.macros_per_serving || { calories: 0, protein_g: 0, carbs_g: 0, fat_g: 0 },
+      macros_estimated: !!(recipe.tags as Record<string, unknown> | undefined)?.macros_estimated,
       chosen_protein: recipe.chosen_protein || "",
       primary_protein_source: recipe.primary_protein_source || "",
       meal_style: recipe.meal_style,
@@ -415,6 +420,43 @@ export async function registerRoutes(
     if (riceFixes.length > 0) {
       log(`[rice-inject] Applied ${riceFixes.length} fixes: ${riceFixes.join("; ")}`, "carb");
     }
+
+    const { recipe: composed, fixes: composeFixes } = completeFirehallPlate(recipe, {
+      mealFormat,
+      cuisine: ctx.selectedCuisine || recipe.tags?.cuisine || "any",
+      healthiness,
+      crewSize: effectiveCrewSize,
+      allergens,
+      protein: ctx.chosenProtein || recipe.chosen_protein || "any",
+    });
+    recipe = composed;
+    if (composeFixes.length > 0) {
+      log(`[compose] Applied ${composeFixes.length} plate fixes: ${composeFixes.join("; ")}`, "compose");
+    }
+
+    recipe = assertMealSemanticsOrLog(recipe, {
+      mealFormat,
+      cuisine: ctx.selectedCuisine || recipe.tags?.cuisine || "any",
+      crewSize: effectiveCrewSize,
+      allergens,
+      protein: ctx.chosenProtein || recipe.chosen_protein || "any",
+    }, composeFixes.filter((f) => f.startsWith("unrepaired:") || f.startsWith("repair:")));
+
+    if (composeFixes.length > 0) {
+      recipe = adjustMacrosAfterCompose(recipe, composeFixes.length);
+    }
+
+    const trustScore = scorePlateTrust(recipe);
+    if (trustScore < 5) {
+      log(`[meal-sanity] Low plate trust (${trustScore}/10) for "${recipe.title}"`, "validate");
+    }
+
+    recipe = {
+      ...recipe,
+      ingredients: applyCrewPortionFloors(recipe.ingredients || [], effectiveCrewSize),
+      cleanup_tip: recipe.cleanup_tip || hallCleanupTip(),
+      pro_tips: recipe.pro_tips?.length ? recipe.pro_tips : hallProTips(effectiveCrewSize, 4),
+    };
 
     const finalBaseCarb = recipe.tags?.base_carb || "";
     if (finalBaseCarb && finalBaseCarb !== "none") {
@@ -711,7 +753,8 @@ export async function registerRoutes(
       }
 
       // ── V2 MAIN PATH: Spoonacular as authoritative source ───────────────────
-      const v2Result = await runV2Generate(request);
+      const v2SessionKey = `${ipHash}:${sessionId}`;
+      const v2Result = await runV2Generate(request, { sessionKey: v2SessionKey });
       const chosenProtein = v2Result?.protein ?? request.protein ?? "chicken";
       const v2CacheKey = buildCacheKey("v2", request, chosenProtein);
 
@@ -755,8 +798,8 @@ export async function registerRoutes(
         return sendRecipeResponse(res, v2Val, { _source: "spoonacular_v2", _spoonacular_title: originalTitle }, debugMode, request.crew_size, request.meal_format || "random", allergens, auditCtx, ipHash, sessionId, requestId);
       }
 
-      // ── DETERMINISTIC FALLBACK: Spoonacular returned no valid result ─────────
-      log("[v2] No valid Spoonacular result — running deterministic fallback", "v2");
+      // ── DETERMINISTIC FALLBACK: all Spoonacular candidates failed validation ──
+      log("[v2] All Spoonacular candidates exhausted — running deterministic fallback", "v2");
 
       const fb = await runV2Fallback(request, "spoonacular_no_valid_candidate", clientRecentSigs);
 
@@ -1308,13 +1351,21 @@ export async function registerRoutes(
         .sort((a, b) => b.score - a.score)
         .slice(0, 6);
 
-      const trending = sorted.map(item => ({
-        title: item.title,
-        protein: item.protein,
-        score: item.score,
-        source: item.source,
-        hit_count: item.hit_count,
-      }));
+      const { resolveCuratedSlugFromTitle, getCuratedPackageDef } = await import("../shared/curated-hall-packages.js");
+      const trending = sorted.map(item => {
+        const curatedSlug = resolveCuratedSlugFromTitle(item.title);
+        const pkg = curatedSlug ? getCuratedPackageDef(curatedSlug) : undefined;
+        return {
+          title: item.title,
+          protein: item.protein,
+          score: item.score,
+          source: item.source,
+          hit_count: item.hit_count,
+          curatedSlug: curatedSlug || null,
+          image: pkg?.heroImage || "",
+          emoji: pkg?.emoji || "🔥",
+        };
+      });
 
       log(`[explore] Trending: ${trending.length} items`, "spoonacular");
       return res.json({ trending });
@@ -1438,12 +1489,14 @@ export async function registerRoutes(
             .then(result => {
               const cleaned = result.results
                 .filter((r: any) => !seenIds.has(r.id))
+                .filter((r: { id: number; title?: string }) => Number.isFinite(r.id) && r.id > 0 && !!r.title?.trim())
                 .map((r: any) => ({
                   id: r.id,
                   title: r.title,
                   image: r.image || "",
                   readyInMinutes: r.readyInMinutes || 0,
                   servings: r.servings || 0,
+                  sourceUrl: r.sourceUrl || "",
                   summary: (r.summary || "").replace(/<[^>]*>/g, "").substring(0, 200),
                   cuisines: r.cuisines || [],
                   diets: r.diets || [],
@@ -1497,10 +1550,12 @@ export async function registerRoutes(
         pickFromPool(poolName, 3);
       }
 
-      const trimmed = diverse.slice(0, limit);
+      const trimmed = diverse
+        .filter((r: { id: number; title?: string }) => Number.isFinite(r.id) && r.id > 0 && !!r.title?.trim())
+        .slice(0, limit);
       trimmed.sort(() => Math.random() - 0.5);
 
-      addToDiscoverMemory(trimmed.map(r => r.id));
+      addToDiscoverMemory(trimmed.map((r: { id: number }) => r.id));
 
       log(`[explore] Discover feed: ${trimmed.length}/${limit} diverse recipes from ${pools.length} pools | memory=${discoverSeenIds.length}`, "spoonacular");
       return res.json({
@@ -1546,12 +1601,15 @@ export async function registerRoutes(
         const results = await getRandomRecipes(cuisine || undefined, number);
         log(`[explore] Random recipes returned ${results.length} results | source=spoonacular`, "spoonacular");
         return res.json({
-          results: results.map(r => ({
+          results: results
+            .filter(r => Number.isFinite(r.id) && r.id > 0)
+            .map(r => ({
             id: r.id,
             title: r.title,
             image: r.image,
             readyInMinutes: r.readyInMinutes,
             servings: r.servings,
+            sourceUrl: r.sourceUrl || "",
             summary: (r.summary || "").replace(/<[^>]*>/g, "").substring(0, 200),
             cuisines: r.cuisines || [],
             diets: r.diets || [],
@@ -1595,12 +1653,15 @@ export async function registerRoutes(
             log(`[explore] Original search found ${searchResults.results.length} results | source=spoonacular`, "spoonacular");
           }
           return res.json({
-            results: searchResults.results.map(r => ({
+            results: searchResults.results
+              .filter(r => Number.isFinite(r.id) && r.id > 0)
+              .map(r => ({
               id: r.id,
               title: r.title,
               image: r.image,
               readyInMinutes: r.readyInMinutes,
               servings: r.servings,
+              sourceUrl: r.sourceUrl || "",
               summary: (r.summary || "").replace(/<[^>]*>/g, "").substring(0, 200),
             })),
             totalResults: searchResults.totalResults,
@@ -1693,10 +1754,45 @@ export async function registerRoutes(
     }
   });
 
-  app.get("/api/explore/recipe/:id", async (req: Request, res: Response) => {
+  app.get("/api/curated/:slug", async (req: Request, res: Response) => {
     try {
-      const id = parseInt(req.params.id);
-      if (isNaN(id)) return res.status(400).json({ message: "Invalid recipe ID" });
+      const { getCuratedPackageDef, buildCuratedClientRecipe } = await import("../shared/curated-hall-packages.js");
+      const slug = (req.params.slug || "").toLowerCase().trim();
+      const def = getCuratedPackageDef(slug);
+      if (!def) {
+        return res.status(404).json({ message: "Curated package not found." });
+      }
+      const rawCrew = parseInt(req.query.crewSize as string, 10);
+      const crewSize = Number.isFinite(rawCrew) && rawCrew >= 2 && rawCrew <= 20 ? rawCrew : 6;
+      const recipe = buildCuratedClientRecipe(def, crewSize);
+      return res.json({
+        slug: def.slug,
+        title: def.title,
+        displayTitle: def.displayTitle,
+        emoji: def.emoji,
+        heroImage: def.heroImage,
+        externalUrl: def.externalUrl,
+        tagline: def.tagline,
+        crewLine: def.crewLine,
+        curated: true,
+        recipe,
+      });
+    } catch (err: any) {
+      log(`[curated] Error: ${err.message}`, "api");
+      return res.status(500).json({ message: "Failed to load curated package." });
+    }
+  });
+
+  app.get("/api/explore/recipe/:id", async (req: Request, res: Response) => {
+    const rawId = req.params.id;
+    const id = parseInt(rawId, 10);
+    log(`[explore] Detail click: rawId=${rawId} parsedId=${id}`, "spoonacular");
+
+    try {
+      if (!Number.isFinite(id) || id <= 0) {
+        log(`[explore] Detail rejected: invalid id="${rawId}"`, "spoonacular");
+        return res.status(400).json({ message: "Invalid recipe ID. Please pick another recipe from the list." });
+      }
 
       const includeNutrition = req.query.nutrition === "true";
       const detail = await getRecipeById(id, includeNutrition);
@@ -1704,9 +1800,18 @@ export async function registerRoutes(
       const nutrients = detail.nutrition?.nutrients || [];
       const findNutrient = (name: string) => nutrients.find(n => n.name.toLowerCase() === name.toLowerCase())?.amount || 0;
 
-      const steps = detail.analyzedInstructions?.[0]?.steps || [];
+      let steps = detail.analyzedInstructions?.[0]?.steps || [];
+      if (steps.length === 0 && detail.instructions) {
+        const plain = detail.instructions.replace(/<[^>]*>/g, "").trim();
+        if (plain) {
+          steps = plain
+            .split(/\.\s+/)
+            .filter(Boolean)
+            .map((sentence, i) => ({ number: i + 1, step: sentence.trim() }));
+        }
+      }
 
-      return res.json({
+      const payload = {
         id: detail.id,
         title: detail.title,
         image: detail.image,
@@ -1721,7 +1826,7 @@ export async function registerRoutes(
           name: ing.name,
           amount: ing.amount,
           unit: ing.unit,
-          original: ing.original,
+          original: ing.original || `${ing.amount} ${ing.unit} ${ing.name}`.trim(),
         })),
         steps: steps.map(s => ({
           number: s.number,
@@ -1733,13 +1838,22 @@ export async function registerRoutes(
           carbs_g: Math.round(findNutrient("Carbohydrates")),
           fat_g: Math.round(findNutrient("Fat")),
         },
-      });
+      };
+
+      log(
+        `[explore] Detail OK: id=${id} title="${payload.title}" ingredients=${payload.ingredients.length} steps=${payload.steps.length}`,
+        "spoonacular",
+      );
+      return res.json(payload);
     } catch (err: any) {
       const msg = err.message || "Fetch failed";
       if (msg.includes("SPOONACULAR_API_KEY is not configured")) {
         return res.status(503).json({ message: "Recipe search is not configured. SPOONACULAR_API_KEY is missing." });
       }
-      log(`[spoonacular] Detail error: ${msg}`, "spoonacular");
+      if (msg.includes("Invalid Spoonacular recipe id")) {
+        return res.status(400).json({ message: "Invalid recipe ID. Please pick another recipe from the list." });
+      }
+      log(`[explore] Detail error: id=${rawId} msg=${msg}`, "spoonacular");
       return res.status(500).json({ message: "Failed to load recipe details. Please try again." });
     }
   });

@@ -6,6 +6,29 @@ const POOL_SIZE = 2;
 let activeFetches = 0;
 const MAX_CONCURRENT = 2;
 
+const HAS_GENERATED_KEY = "firehall_has_generated";
+
+/** True after the user has successfully generated at least one meal (any visit). */
+export function hasUserGeneratedBefore(): boolean {
+  try {
+    return localStorage.getItem(HAS_GENERATED_KEY) === "1";
+  } catch {
+    return false;
+  }
+}
+
+export function markUserHasGenerated(): void {
+  try {
+    localStorage.setItem(HAS_GENERATED_KEY, "1");
+  } catch {}
+}
+
+/** Skips background prefetch on first visit to avoid wasted API calls. */
+export function prefetchMealsIfReturning(filters: Record<string, unknown>): void {
+  if (!hasUserGeneratedBefore()) return;
+  prefetchMeals(filters);
+}
+
 export function prefetchMeals(filters: Record<string, unknown>) {
   const filterKey = buildFilterKey(filters);
   const cached = getAllCached(filterKey);

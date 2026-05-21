@@ -18,6 +18,8 @@
 
 import OpenAI from "openai";
 import { log } from "./index";
+import { inferActualProtein } from "./spoonacular-converter";
+import { healthinessForVoice } from "./firehall-voice";
 import type { RecipeStep } from "@shared/schema";
 
 const openai = new OpenAI({
@@ -44,7 +46,7 @@ export interface PolishResult {
 
 function buildFallbackWhy(cuisine: string, protein: string, totalMin: number, crewSize: number): string {
   const c = cuisine && cuisine !== "any" ? cuisine.charAt(0).toUpperCase() + cuisine.slice(1) : "Hearty";
-  return `${c} ${protein} — ${totalMin}-minute meal ready for ${crewSize}.`;
+  return `Hall spread for ${crewSize} — ${c} ${protein}, about ${totalMin} minutes. The kind of dinner the crew actually looks forward to.`;
 }
 
 const PROTEIN_TEMPS: Record<string, string> = {
@@ -67,6 +69,138 @@ function getSafeTemp(protein: string): string {
   return "";
 }
 
+const SIGNIFICANT_TITLE_STOP = new Set([
+  "with", "and", "the", "for", "in", "on", "a", "an", "of", "to", "style", "recipe",
+]);
+
+const DISH_TYPE_WORDS = [
+  "pasta", "taco", "tacos", "burger", "bowl", "salad", "soup", "chili", "stew",
+  "skillet", "casserole", "wrap", "sandwich", "stir", "fry", "grill", "sheet",
+];
+
+const NEW_PROTEIN_PATTERNS: Record<string, RegExp> = {
+  chicken: /\b(chicken|poultry)\b/i,
+  beef: /\b(beef|steak|brisket)\b/i,
+  pork: /\b(pork|bacon|ham|sausage)\b/i,
+  turkey: /\b(turkey)\b/i,
+  seafood: /\b(shrimp|salmon|fish|cod|tuna|scallop|lobster|crab)\b/i,
+  vegetarian: /\b(tofu|tempeh|lentil|chickpea)\b/i,
+};
+
+function significantTitleTokens(title: string): string[] {
+  return title
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, " ")
+    .split(/\s+/)
+    .filter((w) => w.length > 2 && !SIGNIFICANT_TITLE_STOP.has(w));
+}
+
+function titlePolishIsSafe(originalTitle: string, polishedTitle: string, protein: string): boolean {
+  if (!polishedTitle.trim()) return false;
+  const orig = significantTitleTokens(originalTitle);
+  const polish = significantTitleTokens(polishedTitle);
+  if (orig.length === 0) return true;
+
+  const overlap = orig.filter((w) => polish.includes(w)).length / orig.length;
+  if (overlap < 0.5) {
+    log(`[polish] title unsafe: word overlap ${(overlap * 100).toFixed(0)}% < 50%`, "polish");
+    return false;
+  }
+
+  for (const dish of DISH_TYPE_WORDS) {
+    const inOrig = orig.some((w) => w.includes(dish));
+    const inPolish = polish.some((w) => w.includes(dish));
+    if (inOrig && !inPolish) {
+      log(`[polish] title unsafe: dropped dish-type word "${dish}"`, "polish");
+      return false;
+    }
+    if (!inOrig && inPolish) {
+      log(`[polish] title unsafe: added dish-type word "${dish}"`, "polish");
+      return false;
+    }
+  }
+
+  const origProtein = inferActualProtein(originalTitle, []);
+  const polishProtein = inferActualProtein(polishedTitle, []);
+  if (
+    origProtein !== "unknown" &&
+    polishProtein !== "unknown" &&
+    origProtein !== polishProtein &&
+    !proteinMatchesLoose(polishProtein, protein)
+  ) {
+    log(`[polish] title unsafe: protein ${origProtein} → ${polishProtein}`, "polish");
+    return false;
+  }
+
+  return true;
+}
+
+function proteinMatchesLoose(inferred: string, selected: string): boolean {
+  if (selected === "any") return true;
+  if (inferred === selected) return true;
+  if (selected === "seafood" && ["fish", "salmon", "shrimp"].includes(inferred)) return true;
+  return false;
+}
+
+function buildIngredientAllowlist(ingredientNames: string[], originalTitle: string): string {
+  return [...ingredientNames, ...significantTitleTokens(originalTitle)].join(" ").toLowerCase();
+}
+
+function stepsPolishIsSafe(
+  originalSteps: RecipeStep[],
+  polishedSteps: RecipeStep[],
+  allowlistText: string,
+): boolean {
+  if (polishedSteps.length === 0) return false;
+  const minSteps = Math.max(2, originalSteps.length - 3);
+  const maxSteps = Math.min(12, originalSteps.length + 3);
+  if (polishedSteps.length < minSteps || polishedSteps.length > maxSteps) {
+    log(`[polish] steps unsafe: count ${polishedSteps.length} outside ${minSteps}-${maxSteps}`, "polish");
+    return false;
+  }
+
+  for (const [protein, pattern] of Object.entries(NEW_PROTEIN_PATTERNS)) {
+    const inAllow = pattern.test(allowlistText);
+    if (inAllow) continue;
+    for (const step of polishedSteps) {
+      const text = `${step.heading} ${step.body}`;
+      if (pattern.test(text)) {
+        log(`[polish] steps unsafe: mentions ${protein} not in ingredient list`, "polish");
+        return false;
+      }
+    }
+  }
+
+  return true;
+}
+
+/** Reject polish output that drifts from Spoonacular source data. */
+export function applySafePolish(
+  originalTitle: string,
+  originalSteps: RecipeStep[],
+  polish: PolishResult,
+  protein: string,
+  ingredientNames: string[],
+): PolishResult {
+  const allowlist = buildIngredientAllowlist(ingredientNames, originalTitle);
+
+  let title = polish.title;
+  if (!titlePolishIsSafe(originalTitle, title, protein)) {
+    title = originalTitle;
+  }
+
+  let steps = polish.steps;
+  if (!stepsPolishIsSafe(originalSteps, steps, allowlist)) {
+    steps = originalSteps;
+  }
+
+  return {
+    title,
+    why_it_fits_tonight: polish.why_it_fits_tonight,
+    steps,
+  };
+}
+
 export async function polishRecipeCopy(
   recipeId: number,
   originalTitle: string,
@@ -76,6 +210,7 @@ export async function polishRecipeCopy(
   crewSize: number,
   keyIngredients: string[],
   originalSteps: RecipeStep[],
+  healthiness: string = "balanced",
 ): Promise<PolishResult> {
   // ── Cache check ────────────────────────────────────────────────────────────
   const cached = polishCache.get(recipeId);
@@ -102,17 +237,22 @@ export async function polishRecipeCopy(
     .map((s, i) => `${i + 1}. ${s.body.substring(0, 300)}`)
     .join("\n");
 
+  const voice = healthinessForVoice(healthiness);
+
   const prompt =
-    `You are a firehouse cook's assistant. For this recipe, do three things:\n\n` +
-    `1. TITLE: Fix capitalization or awkward phrasing only. Do NOT change dish type, cuisine, or protein. Under 10 words.\n` +
-    `2. DESCRIPTION: One sentence. Crew-ready tone. Accurate to the recipe. Under 25 words.\n` +
-    `3. STEPS: Rewrite each step to be beginner-friendly. Rules:\n` +
-    `   - Heading format exactly: "Action phrase (heat, X–Y min)" e.g. "Sear the chicken (medium-high, 5–7 min)"\n` +
-    `   - If no heat (prep/plating): "Action phrase (no heat, X min)"\n` +
-    `   - Body: explain HOW step by step. Include visual/doneness cue (e.g., "until golden brown", "until edges are set").${safeTempNote}\n` +
-    `   - Combine steps if over 10 total. Max 8–10 steps.\n` +
-    `   - No storytelling. No repeating the same instruction twice.\n` +
-    `   - Keep each body under 50 words.\n\n` +
+    `You are the best cook at the fire hall — practical, confident, zero influencer energy. ` +
+    `Write like you're telling the crew what's for dinner tonight, not publishing a recipe blog.\n\n` +
+    `Tone rules: hearty, craveable, station-realistic. NO "nourish", "macros", "meal prep", "balanced bowl", or diet language. ` +
+    `Frozen/bagged sides are fine. Big portions for hungry firefighters.\n\n` +
+    `For this recipe, do three things:\n\n` +
+    `1. TITLE: Fix capitalization or awkward phrasing ONLY. Keep the same dish and protein. Sound like a real dinner name ("Cajun Chicken Thighs", not "Healthy Chicken Dish"). Under 10 words.\n` +
+    `2. DESCRIPTION: One sentence — the FULL hall spread (main + sides in the ingredient list). Make it sound craveable and doable on shift. Style: ${voice}. Do NOT invent ingredients. Under 30 words.\n` +
+    `3. STEPS: Clarify existing steps only. Rules:\n` +
+    `   - Do NOT add new ingredients or change the dish. Reference sides already listed.\n` +
+    `   - Heading format: "Action phrase (heat, X–Y min)" e.g. "Sear the chicken (medium-high, 5–7 min)"\n` +
+    `   - Prep/plating: "Action phrase (no heat, X min)"\n` +
+    `   - Body: clear HOW-to for a busy kitchen. Visual/doneness cues.${safeTempNote}\n` +
+    `   - Max 8–10 steps. No fluff. Under 50 words per body.\n\n` +
     `Output ONLY valid JSON:\n` +
     `{"title":"...","description":"...","steps":[{"heading":"...","body":"..."}]}\n\n` +
     `Recipe:\n` +
@@ -120,7 +260,7 @@ export async function polishRecipeCopy(
     `Protein: ${protein}\n` +
     `Cuisine: ${cuisine}\n` +
     `Time: ${totalMin} min | Crew: ${crewSize}\n` +
-    `Key ingredients: ${keyIngredients.slice(0, 5).join(", ")}\n\n` +
+    `Full plate ingredients: ${keyIngredients.slice(0, 10).join(", ")}\n\n` +
     `Current steps:\n${stepLines}`;
 
   try {
@@ -162,10 +302,19 @@ export async function polishRecipeCopy(
       if (mapped.length > 0) steps = mapped;
     }
 
-    polishCache.set(recipeId, { title, why, steps, expires: Date.now() + POLISH_CACHE_TTL_MS });
-    log(`[polish] polished id=${recipeId} title="${title}" steps=${steps.length}`, "polish");
+    const rawPolish: PolishResult = { title, why_it_fits_tonight: why, steps };
+    const safe = applySafePolish(
+      originalTitle,
+      originalSteps,
+      rawPolish,
+      protein,
+      keyIngredients,
+    );
 
-    return { title, why_it_fits_tonight: why, steps };
+    polishCache.set(recipeId, { title: safe.title, why: safe.why_it_fits_tonight, steps: safe.steps, expires: Date.now() + POLISH_CACHE_TTL_MS });
+    log(`[polish] polished id=${recipeId} title="${safe.title}" steps=${safe.steps.length}`, "polish");
+
+    return safe;
   } catch (err: any) {
     log(`[polish] failed id=${recipeId}: ${err.message} — using fallback`, "polish");
     return fallback;

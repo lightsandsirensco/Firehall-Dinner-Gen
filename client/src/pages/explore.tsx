@@ -3,7 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import { Search, Clock, Users, ChevronLeft, X, Loader2, Heart, ShieldAlert, Globe, UtensilsCrossed, ChefHat, Package, Leaf, Printer, Mail, List, BookmarkPlus, Sparkles, SlidersHorizontal, Utensils, TrendingUp, Flame } from "lucide-react";
 import { HeroHeader } from "@/components/hero-header";
 import { SiteHeader } from "@/components/site-header";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
@@ -19,6 +19,13 @@ import { buildShoppingListFromClientMeal } from "@/lib/shopping-list";
 import { EmailModal } from "@/components/email-modal";
 import { ShoppingListModal } from "@/components/shopping-list-modal";
 import { buildPrintHtml } from "@/components/recipe-card";
+import { fetchExploreRecipeDetail, normalizeExploreRecipeId } from "@/lib/explore-api";
+import { stripHtml } from "@/lib/text";
+import {
+  getWheelClassicBySlug,
+  resolveCuratedSlugFromTitle,
+  buildPackageUrl,
+} from "@/lib/firehall-classics-wheel";
 import type { ClientRecipeResponse, ClientIngredient } from "@shared/schema";
 
 interface SearchResult {
@@ -28,6 +35,7 @@ interface SearchResult {
   readyInMinutes: number;
   servings: number;
   summary: string;
+  sourceUrl?: string;
   cuisines?: string[];
   diets?: string[];
   _firehallFallback?: boolean;
@@ -167,9 +175,13 @@ function inferCategory(name: string): string {
 }
 
 function spoonacularToClientRecipe(detail: RecipeDetail, crewSize: number): ClientRecipeResponse {
+  const baseServings = detail.servings > 0 ? detail.servings : 4;
+  const scale = crewSize / baseServings;
+  const roundQty = (n: number) => Math.round(n * scale * 100) / 100;
+
   const ingredients: ClientIngredient[] = detail.ingredients.map(ing => ({
     name: ing.name,
-    qty: ing.amount,
+    qty: roundQty(ing.amount),
     unit: ing.unit,
     category: inferCategory(ing.name),
   }));
@@ -558,6 +570,7 @@ function FilterSection({ icon: Icon, title, children }: { icon: typeof Globe; ti
 }
 
 export default function ExplorePage() {
+  const [, navigate] = useLocation();
   const [filters, setFilters] = useState<ExploreFilters>(() => {
     const defaults: ExploreFilters = {
       freeText: "",
@@ -582,6 +595,19 @@ export default function ExplorePage() {
   const [submitted, setSubmitted] = useState(false);
   const [searchParams, setSearchParams] = useState<URLSearchParams | null>(null);
   const [selectedRecipeId, setSelectedRecipeId] = useState<number | null>(null);
+
+  const lastSourceUrlRef = useRef<string | null>(null);
+
+  const openExploreRecipe = useCallback((rawId: unknown, sourceUrl?: string) => {
+    const id = normalizeExploreRecipeId(rawId);
+    console.debug("[explore] Recipe card clicked:", { rawId, normalizedId: id, sourceUrl });
+    if (id === null) {
+      console.warn("[explore] Cannot open recipe — invalid id:", rawId);
+      return;
+    }
+    lastSourceUrlRef.current = sourceUrl || null;
+    setSelectedRecipeId(id);
+  }, []);
   const [classicLoading, setClassicLoading] = useState<string | null>(null);
   const [favCount] = useState(() => getSavedCount());
   const seenIdsRef = useRef<number[]>((() => {
@@ -613,6 +639,19 @@ export default function ExplorePage() {
       localStorage.setItem("explore_filters", JSON.stringify(filters));
     } catch {}
   }, [filters]);
+
+  const wheelClassicTriggered = useRef(false);
+  useEffect(() => {
+    if (wheelClassicTriggered.current) return;
+    const params = new URLSearchParams(window.location.search);
+    const slug = params.get("classic");
+    if (!slug) return;
+    const classic = getWheelClassicBySlug(slug);
+    if (!classic) return;
+    wheelClassicTriggered.current = true;
+    window.history.replaceState({}, "", "/explore");
+    navigate(buildPackageUrl(classic));
+  }, [navigate]);
 
   const classicsToShow = useMemo(() => getRotatedClassics(8), []);
 
@@ -668,7 +707,9 @@ export default function ExplorePage() {
       }
       const data = await res.json();
       const newResults: SearchResult[] = (data.results || []).filter(
-        (r: SearchResult) => !discoverLoadedIdsRef.current.has(r.id)
+        (r: SearchResult) =>
+          normalizeExploreRecipeId(r.id) !== null &&
+          !discoverLoadedIdsRef.current.has(r.id),
       );
       if (newResults.length > 0) {
         addSeenIds(newResults.map(r => r.id));
@@ -717,6 +758,9 @@ export default function ExplorePage() {
     score: number;
     source: string;
     hit_count: number;
+    curatedSlug?: string | null;
+    image?: string;
+    emoji?: string;
   }
   const { data: trendingData } = useQuery<{ trending: TrendingItem[] }>({
     queryKey: ["/api/explore/trending"],
@@ -728,7 +772,7 @@ export default function ExplorePage() {
     staleTime: 5 * 60 * 1000,
   });
 
-  const { data: searchData, isLoading: searchLoading, error: searchError } = useQuery<SearchResponse>({
+  const { data: searchData, isLoading: searchLoading, error: searchError, refetch: refetchSearch } = useQuery<SearchResponse>({
     queryKey: ["/api/explore/search", queryString],
     queryFn: async () => {
       const res = await fetch(`/api/explore/search?${queryString}`);
@@ -746,19 +790,31 @@ export default function ExplorePage() {
     staleTime: 5 * 60 * 1000,
   });
 
-  const { data: recipeDetail, isLoading: detailLoading, error: detailError } = useQuery<RecipeDetail>({
-    queryKey: ["/api/explore/recipe", selectedRecipeId],
-    queryFn: async () => {
-      const res = await fetch(`/api/explore/recipe/${selectedRecipeId}?nutrition=true`);
-      if (!res.ok) {
-        const err = await res.json().catch(() => ({}));
-        throw new Error(err.message || "Failed to load recipe");
+  const detailQueryKey = selectedRecipeId
+    ? [`/api/explore/recipe/${selectedRecipeId}?nutrition=true`]
+    : ["/api/explore/recipe/_none"];
+
+  const {
+    data: recipeDetail,
+    isPending: detailPending,
+    error: detailError,
+    refetch: refetchDetail,
+  } = useQuery<RecipeDetail>({
+    queryKey: detailQueryKey,
+    queryFn: async ({ queryKey }) => {
+      const url = String(queryKey[0]);
+      const match = url.match(/\/api\/explore\/recipe\/(\d+)/);
+      const id = match ? parseInt(match[1], 10) : selectedRecipeId;
+      if (!id || id <= 0) {
+        throw new Error("Invalid recipe ID. Please pick another recipe from the list.");
       }
-      return res.json();
+      return fetchExploreRecipeDetail(id);
     },
-    enabled: !!selectedRecipeId,
+    enabled: selectedRecipeId !== null && selectedRecipeId > 0,
     staleTime: 10 * 60 * 1000,
   });
+
+  const detailLoading = detailPending && !recipeDetail;
 
   const activeFilterCount = useMemo(() => {
     let count = 0;
@@ -790,7 +846,7 @@ export default function ExplorePage() {
     );
   }
 
-  if (selectedRecipeId && (detailLoading || detailError)) {
+  if (selectedRecipeId && detailLoading) {
     return (
       <div className="min-h-screen bg-background">
         <SiteHeader activePage="explore" favCount={favCount} />
@@ -799,19 +855,54 @@ export default function ExplorePage() {
             <ChevronLeft className="w-4 h-4" />
             Back to results
           </Button>
-          {detailLoading ? (
-            <div className="flex items-center justify-center py-24">
-              <Loader2 className="w-8 h-8 animate-spin text-primary" />
+          <div className="space-y-6 animate-pulse" data-testid="explore-detail-skeleton">
+            <div className="aspect-[16/9] rounded-xl bg-muted" />
+            <div className="h-8 bg-muted rounded w-2/3" />
+            <div className="h-4 bg-muted rounded w-1/2" />
+            <div className="grid grid-cols-2 gap-3">
+              {Array.from({ length: 4 }).map((_, i) => (
+                <div key={i} className="h-16 bg-muted rounded" />
+              ))}
             </div>
-          ) : (
+          </div>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
+
+  if (selectedRecipeId && detailError && !recipeDetail) {
+    return (
+      <div className="min-h-screen bg-background">
+        <SiteHeader activePage="explore" favCount={favCount} />
+        <main className="max-w-[900px] mx-auto px-4 sm:px-6 py-8">
+          <Button variant="ghost" className="mb-6 gap-1.5" onClick={() => setSelectedRecipeId(null)} data-testid="button-back-to-results">
+            <ChevronLeft className="w-4 h-4" />
+            Back to results
+          </Button>
             <div className="text-center py-16" data-testid="explore-detail-error">
               <p className="text-destructive font-medium">{(detailError as Error).message}</p>
               <p className="text-sm text-muted-foreground mt-2 mb-5">Could not load recipe details.</p>
-              <Button variant="outline" onClick={() => setSelectedRecipeId(null)} data-testid="button-back-after-error">
-                Back to results
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-2 justify-center flex-wrap">
+                <Button
+                  variant="default"
+                  onClick={() => refetchDetail()}
+                  data-testid="button-retry-detail"
+                >
+                  Try again
+                </Button>
+                {lastSourceUrlRef.current && (
+                  <Button variant="secondary" asChild data-testid="button-external-recipe">
+                    <a href={lastSourceUrlRef.current} target="_blank" rel="noopener noreferrer">
+                      View original recipe
+                    </a>
+                  </Button>
+                )}
+                <Button variant="outline" onClick={() => setSelectedRecipeId(null)} data-testid="button-back-after-error">
+                  Back to results
+                </Button>
+              </div>
             </div>
-          )}
         </main>
       </div>
     );
@@ -1044,27 +1135,18 @@ export default function ExplorePage() {
                     key={classic.title}
                     data-testid={`classic-item-${i}`}
                     disabled={classicLoading !== null}
-                    onClick={async () => {
+                    onClick={() => {
+                      const slug = resolveCuratedSlugFromTitle(classic.title);
+                      if (slug) {
+                        navigate(buildPackageUrl({ slug }));
+                        return;
+                      }
                       setClassicLoading(classic.title);
-                      try {
-                        const params = new URLSearchParams({ q: classic.searchQuery, number: "3" });
-                        const res = await fetch(`/api/explore/search?${params}`);
-                        if (res.ok) {
-                          const data = await res.json();
-                          const firstId: number | undefined = data?.results?.[0]?.id;
-                          if (firstId) {
-                            setSelectedRecipeId(firstId);
-                            setClassicLoading(null);
-                            return;
-                          }
-                        }
-                      } catch {}
-                      // Graceful fallback: search within Explore using the query
-                      setClassicLoading(null);
                       const updated = { ...filters, freeText: classic.searchQuery };
                       setFilters(updated);
                       setSearchParams(buildSearchParams(updated));
                       setSubmitted(true);
+                      setClassicLoading(null);
                     }}
                     className="snap-start shrink-0 w-[160px] min-w-[160px] md:w-auto md:min-w-0 md:shrink group relative overflow-hidden rounded-xl border border-border/30 bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm p-4 text-left transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1 active:translate-y-0 disabled:opacity-60 disabled:cursor-wait"
                   >
@@ -1086,36 +1168,35 @@ export default function ExplorePage() {
         )}
 
         {!submitted && trendingData && trendingData.trending.length > 0 && (
-          <div className="mb-8" data-testid="section-trending">
+          <div className="mb-10" data-testid="section-trending">
             <div className="flex items-center gap-2 mb-4">
               <TrendingUp className="w-5 h-5 text-primary" />
               <h2 className="font-heading text-lg tracking-wider uppercase">Trending in Firehalls</h2>
             </div>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {trendingData.trending.map((item, i) => (
-                <button
-                  key={i}
-                  data-testid={`trending-item-${i}`}
+                <ExploreRecipeCard
+                  key={item.curatedSlug || `trend-${i}`}
+                  id={100000 + i}
+                  title={item.title}
+                  image={item.image || ""}
+                  readyInMinutes={45}
+                  servings={filters.crewSize}
+                  summary={item.hit_count > 0 ? `Made ${item.hit_count}× in halls near you` : "Crew favourite this week"}
+                  tags={item.protein ? [item.protein, "Trending"] : ["Trending"]}
+                  isCurated={!!item.curatedSlug}
                   onClick={() => {
+                    if (item.curatedSlug) {
+                      navigate(buildPackageUrl({ slug: item.curatedSlug }));
+                      return;
+                    }
                     const updated = { ...filters, freeText: item.title };
                     setFilters(updated);
                     setSearchParams(buildSearchParams(updated));
                     setSubmitted(true);
                     setSelectedRecipeId(null);
                   }}
-                  className="group relative overflow-hidden rounded-xl border border-border/40 bg-card/60 backdrop-blur-sm p-3 text-left transition-all hover:border-primary/40 hover:shadow-md hover:shadow-primary/5 hover:-translate-y-0.5"
-                >
-                  <div className="flex items-start gap-2 mb-1.5">
-                    <Flame className="w-3.5 h-3.5 text-primary shrink-0 mt-0.5" />
-                    <span className="text-xs font-medium leading-tight line-clamp-2">{item.title}</span>
-                  </div>
-                  <div className="flex items-center gap-1.5 mt-auto">
-                    {item.protein && (
-                      <span className="text-[10px] text-muted-foreground bg-muted/50 px-1.5 py-0.5 rounded-full">{item.protein}</span>
-                    )}
-                    <span className="text-[10px] text-muted-foreground">{item.hit_count > 0 ? `${item.hit_count}× made` : "crew pick"}</span>
-                  </div>
-                </button>
+                />
               ))}
             </div>
           </div>
@@ -1147,10 +1228,24 @@ export default function ExplorePage() {
           </div>
         )}
 
-        {searchError && (
+        {submitted && queryString && searchError && !selectedRecipeId && (
           <div className="text-center py-16" data-testid="explore-error">
             <p className="text-destructive font-medium">{(searchError as Error).message}</p>
-            <p className="text-sm text-muted-foreground mt-2">Please try again or adjust your filters.</p>
+            <p className="text-sm text-muted-foreground mt-2 mb-4">Please try again or adjust your filters.</p>
+            <Button variant="outline" size="sm" onClick={() => refetchSearch()} data-testid="button-retry-search">
+              Try again
+            </Button>
+          </div>
+        )}
+
+        {!submitted && !discoverLoading && !discoverError && discoverRecipes.length === 0 && (
+          <div className="text-center py-16" data-testid="explore-discover-empty">
+            <Sparkles className="w-12 h-12 mx-auto text-muted-foreground/25 mb-4" />
+            <p className="text-foreground font-heading tracking-wide">No recipes in the feed right now</p>
+            <p className="text-sm text-muted-foreground mt-2 mb-5">The API may be busy — refresh to load a new batch.</p>
+            <Button variant="outline" onClick={() => fetchDiscoverBatch(12, false)} data-testid="button-refresh-discover-empty">
+              Refresh feed
+            </Button>
           </div>
         )}
 
@@ -1178,8 +1273,10 @@ export default function ExplorePage() {
                 Refresh
               </Button>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5" data-testid="explore-discover-grid">
-              {discoverRecipes.map((result) => (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" data-testid="explore-discover-grid">
+              {discoverRecipes
+                .filter((r) => normalizeExploreRecipeId(r.id) !== null)
+                .map((result) => (
                 <ExploreRecipeCard
                   key={result.id}
                   id={result.id}
@@ -1187,9 +1284,9 @@ export default function ExplorePage() {
                   image={result.image}
                   readyInMinutes={result.readyInMinutes}
                   servings={filters.crewSize}
-                  summary={result.summary}
+                  summary={stripHtml(result.summary || "")}
                   tags={inferRecipeTags(result)}
-                  onClick={() => setSelectedRecipeId(result.id)}
+                  onClick={() => openExploreRecipe(result.id, result.sourceUrl)}
                 />
               ))}
             </div>
@@ -1232,7 +1329,7 @@ export default function ExplorePage() {
                 {searchData.totalResults > 0 ? `${searchData.results.length} recipes found` : "No recipes found"}
               </p>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5" data-testid="explore-results-grid">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" data-testid="explore-results-grid">
               {searchData.results.map((result) => (
                 <ExploreRecipeCard
                   key={result._firehallFallback ? `fb-${result.title}` : result.id}
@@ -1241,14 +1338,19 @@ export default function ExplorePage() {
                   image={result.image}
                   readyInMinutes={result.readyInMinutes}
                   servings={filters.crewSize}
-                  summary={result.summary}
+                  summary={stripHtml(result.summary || "")}
                   tags={inferRecipeTags(result)}
                   isFirehallFallback={result._firehallFallback}
                   onClick={() => {
                     if (result._firehallFallback) {
                       window.location.href = "/";
                     } else {
-                      setSelectedRecipeId(result.id);
+                      const slug = resolveCuratedSlugFromTitle(result.title);
+                      if (slug) {
+                        navigate(buildPackageUrl({ slug }));
+                      } else {
+                        openExploreRecipe(result.id, result.sourceUrl);
+                      }
                     }
                   }}
                 />
@@ -1264,7 +1366,7 @@ export default function ExplorePage() {
           </>
         )}
 
-        {!submitted && (
+        {!submitted && discoverRecipes.length === 0 && !discoverLoading && (
           <div className="text-center py-20">
             <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary/[0.07] mb-5">
               <Utensils className="w-9 h-9 text-primary/40" />
@@ -1289,7 +1391,13 @@ function RecipeDetailView({ recipe, crewSize }: { recipe: RecipeDetail; crewSize
   const [shoppingOpen, setShoppingOpen] = useState(false);
 
   const clientRecipe = useMemo(() => spoonacularToClientRecipe(recipe, crewSize), [recipe, crewSize]);
-  const shoppingList = useMemo(() => buildShoppingListFromClientMeal(clientRecipe), [clientRecipe]);
+  const shoppingList = useMemo(
+    () => buildShoppingListFromClientMeal(clientRecipe, {
+      useWhatWeHave: false,
+      budgetLevel: "standard",
+    }),
+    [clientRecipe],
+  );
 
   const handleSave = () => {
     const result = saveMeal(clientRecipe);
@@ -1338,7 +1446,18 @@ function RecipeDetailView({ recipe, crewSize }: { recipe: RecipeDetail; crewSize
           {recipe.dishTypes.slice(0, 3).map(t => <Badge key={t} variant="outline" className="text-xs">{t}</Badge>)}
         </div>
         {recipe.summary && (
-          <p className="text-sm text-muted-foreground leading-relaxed" data-testid="text-detail-summary">{recipe.summary}</p>
+          <p className="text-sm text-muted-foreground leading-relaxed" data-testid="text-detail-summary">{stripHtml(recipe.summary)}</p>
+        )}
+        {recipe.sourceUrl && (
+          <a
+            href={recipe.sourceUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-sm text-primary mt-3 hover:underline"
+            data-testid="link-detail-source"
+          >
+            View full recipe on source site →
+          </a>
         )}
       </div>
 
@@ -1378,7 +1497,7 @@ function RecipeDetailView({ recipe, crewSize }: { recipe: RecipeDetail; crewSize
               <Sparkles className="w-3.5 h-3.5 text-primary/60" />
               Nutrition per Serving
             </h3>
-            <div className="grid grid-cols-4 gap-3 text-center">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
               <div>
                 <p className="text-xl font-bold text-foreground" data-testid="text-detail-calories">{recipe.macros.calories}</p>
                 <p className="text-[11px] text-muted-foreground uppercase tracking-wider mt-0.5">Calories</p>
