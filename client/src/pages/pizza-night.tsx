@@ -56,21 +56,22 @@ export default function PizzaNight() {
       const data: PizzaResponse = await res.json();
       setRecipe(data);
       setLastPizzaStyleId(data.pizza_style_id);
-    } catch (err: any) {
-      const msg = err?.message || "Something went wrong";
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : "Something went wrong";
       if (msg.includes("429")) {
         try {
-          const parsed = JSON.parse(msg.replace(/^\d+:\s*/, ""));
+          const parsed = JSON.parse(msg.replace(/^\d+:\s*/, "")) as { message?: string };
           setError(parsed.message || "Rate limit reached. Please wait a moment.");
         } catch {
           setError("Too many requests. Please wait a moment before generating again.");
         }
-      } else if (msg.includes("503") || msg.includes("budget")) {
-        setError("Daily recipe limit reached. Please try again tomorrow.");
       } else if (msg.includes("403")) {
         setError("Security check failed. Please refresh the page and try again.");
+      } else if (msg.includes("400")) {
+        setError("Check your filters and try again.");
       } else {
-        setError("Generation failed. Please try again.");
+        const detail = msg.replace(/^\d+:\s*/, "").trim();
+        setError(detail.length > 10 && detail.length < 200 ? detail : "Generation failed. Please try again.");
       }
     } finally {
       setLoading(false);

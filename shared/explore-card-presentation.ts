@@ -5,6 +5,7 @@ export type ExploreBadge =
   | "comfort_food"
   | "one_pot"
   | "bbq"
+  | "healthy"
   | "crew_favorite"
   | "under_30"
   | "shift_meal";
@@ -15,18 +16,32 @@ export interface ExploreCardPresentation {
   badges: ExploreBadge[];
   /** Max 2 short labels for overlay chips */
   displayBadges: string[];
+  /** Quick-info pills for cinematic cards (time + traits) */
+  quickPills: string[];
   hookLine: string;
 }
 
 const BADGE_LABELS: Record<ExploreBadge, string> = {
   high_protein: "High Protein",
-  comfort_food: "Comfort Food",
+  comfort_food: "Comfort",
   one_pot: "One Pot",
   bbq: "BBQ",
+  healthy: "Healthy",
   crew_favorite: "Crew Favorite",
   under_30: "30 Min",
   shift_meal: "Shift Meal",
 };
+
+const TRAIT_PILL_PRIORITY: ExploreBadge[] = [
+  "crew_favorite",
+  "under_30",
+  "high_protein",
+  "one_pot",
+  "comfort_food",
+  "bbq",
+  "healthy",
+  "shift_meal",
+];
 
 function detectProtein(title: string): string | undefined {
   const t = title.toLowerCase();
@@ -73,8 +88,25 @@ function collectBadges(
   if (recipe.readyInMinutes > 0 && recipe.readyInMinutes <= 30) badges.push("under_30");
   if (recipe._curatedSlug) badges.push("crew_favorite");
   if (/post[- ]?fire|shift|hall|crew/i.test(combined)) badges.push("shift_meal");
+  if (recipe._pool === "healthy" || /grilled|lean|light|salad|salmon/i.test(combined)) {
+    badges.push("healthy");
+  }
 
   return badges;
+}
+
+function buildQuickPills(recipe: ExploreRecipeCard, badges: ExploreBadge[]): string[] {
+  const pills: string[] = [];
+  if (recipe.readyInMinutes > 0) {
+    pills.push(recipe.readyInMinutes <= 30 ? `${recipe.readyInMinutes} Min` : `${recipe.readyInMinutes}m`);
+  }
+  for (const key of TRAIT_PILL_PRIORITY) {
+    if (pills.length >= 3) break;
+    if (!badges.includes(key)) continue;
+    const label = BADGE_LABELS[key];
+    if (!pills.includes(label)) pills.push(label);
+  }
+  return pills.slice(0, 3);
 }
 
 function buildHookLine(
@@ -153,11 +185,14 @@ export function computeCardPresentation(
     recipe.hookLine ||
     buildHookLine(recipe, primaryProtein, comfortLabel, options?.macros, options?.crewSize);
 
+  const quickPills = buildQuickPills(recipe, badges);
+
   return {
     primaryProtein,
     comfortLabel,
     badges,
     displayBadges,
+    quickPills,
     hookLine,
   };
 }

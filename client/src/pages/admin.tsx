@@ -3,7 +3,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { Shield, DollarSign, Database, Activity, RefreshCw, Users, Globe } from "lucide-react";
+import { Link } from "wouter";
+import { Shield, DollarSign, Database, Activity, RefreshCw, Users, Globe, ChefHat } from "lucide-react";
 
 interface UsageData {
   budget: {
@@ -72,10 +73,18 @@ export default function AdminPage() {
             <Shield className="w-6 h-6 text-primary" />
             <h1 className="font-heading text-3xl tracking-wide text-foreground">ADMIN USAGE</h1>
           </div>
-          <Button onClick={fetchUsage} data-testid="button-load-usage">
-            <Activity className="w-4 h-4 mr-2" />
-            Load Usage Data
-          </Button>
+          <div className="flex flex-wrap gap-2">
+            <Button onClick={fetchUsage} data-testid="button-load-usage">
+              <Activity className="w-4 h-4 mr-2" />
+              Load Usage Data
+            </Button>
+            <Link href="/admin/ingestion">
+              <Button variant="outline" data-testid="button-ingestion-admin">
+                <ChefHat className="w-4 h-4 mr-2" />
+                Recipe Ingestion
+              </Button>
+            </Link>
+          </div>
         </div>
       </div>
     );

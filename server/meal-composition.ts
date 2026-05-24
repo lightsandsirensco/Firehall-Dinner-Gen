@@ -25,6 +25,7 @@ export interface MealComposeContext {
   crewSize: number;
   allergens: string[];
   protein: string;
+  sessionKey?: string;
 }
 
 const STARCH_PATTERN =
@@ -92,6 +93,7 @@ function pairingCtx(ctx: MealComposeContext, title: string, formatKey: string): 
     healthiness: ctx.healthiness || "balanced",
     allergens: ctx.allergens || [],
     formatKey,
+    sessionKey: ctx.sessionKey,
   };
 }
 
@@ -273,7 +275,7 @@ export function completeFirehallPlate(
     const starchKey = picked?.includes("rice") ? "jasmine rice" : picked === "quinoa" ? "quinoa" : sides.starchKey || "jasmine rice";
     if (addStarchFromKey(fixed, starchKey, ctx.crewSize, "Station side — bowl base")) {
       fixes.push(`compose:bowl_${starchKey}`);
-      trackComposedSides(starchKey, null);
+      trackComposedSides(starchKey, null, null, ctx.sessionKey);
     }
   }
 
@@ -290,7 +292,7 @@ export function completeFirehallPlate(
   if (needsStarchSide && sides.starchKey) {
     if (addStarchFromKey(fixed, sides.starchKey, ctx.crewSize, "Station side — starch for the table; plate_role: starch")) {
       fixes.push(`compose:starch_${sides.starchKey}:${sides.pairingSource}`);
-      trackComposedSides(sides.starchKey, null);
+      trackComposedSides(sides.starchKey, null, null, ctx.sessionKey);
     }
   }
 
@@ -298,7 +300,7 @@ export function completeFirehallPlate(
   if (handheld && !hasStarch && sides.starchKey && sides.starchKey !== "roasted potatoes") {
     if (addStarchFromKey(fixed, sides.starchKey, ctx.crewSize, "Station side — starch for the table; plate_role: starch")) {
       fixes.push(`compose:handheld_${sides.starchKey}`);
-      trackComposedSides(sides.starchKey, null);
+      trackComposedSides(sides.starchKey, null, null, ctx.sessionKey);
     }
   }
 
@@ -310,7 +312,7 @@ export function completeFirehallPlate(
 
   if (needsVeg && addVegSide(fixed, sides.vegLabel!, ctx.crewSize)) {
     fixes.push(`compose:veg_${sides.pairingSource}`);
-    trackComposedSides(null, sides.vegLabel, sides.bundleId);
+    trackComposedSides(null, sides.vegLabel, sides.bundleId, ctx.sessionKey);
   }
 
   // Optional extra (naan, kimchi, etc.)

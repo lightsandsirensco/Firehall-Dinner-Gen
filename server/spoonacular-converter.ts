@@ -6,6 +6,7 @@ import {
   hallProTips,
 } from "./firehall-voice";
 import { searchRecipes, getRecipeById, SpoonacularRecipeDetail } from "./spoonacular";
+import { enhanceRecipeStepsSync, buildEnhanceContextFromTitle } from "./instruction-enhancer.js";
 import type {
   GenerateRequest,
   GenerateResponse,
@@ -317,7 +318,7 @@ export function convertSpoonacularToGenerateResponse(
   ingredients = applyCrewPortionFloors(ingredients, request.crew_size);
 
   const rawSteps = detail.analyzedInstructions?.[0]?.steps || [];
-  const steps: RecipeStep[] =
+  let steps: RecipeStep[] =
     rawSteps.length > 0
       ? rawSteps.map((s, i) => ({
           heading: `Step ${s.number || i + 1}`,
@@ -329,6 +330,14 @@ export function convertSpoonacularToGenerateResponse(
             body: detail.instructions || "Follow recipe instructions, scaling for your crew size.",
           },
         ];
+
+  steps = enhanceRecipeStepsSync(steps, buildEnhanceContextFromTitle(detail.title, {
+    protein: chosenProtein,
+    totalMinutes: detail.readyInMinutes,
+    crewSize: request.crew_size,
+    ingredients: ingredientNames,
+    mealFormat: request.meal_format,
+  }));
 
   const macros = extractMacros(detail);
 

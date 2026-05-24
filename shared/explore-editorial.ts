@@ -1,4 +1,14 @@
 import type { ExploreRecipeCard } from "./explore-recipe.js";
+import { EXPLORE_DISCOVERY_SECTIONS } from "./explore-discovery-catalog.js";
+
+/** Visual accent for section headers (maps to CSS in explore-discovery-section) */
+export type ExploreSectionTheme =
+  | "ember"
+  | "smoke"
+  | "gold"
+  | "steel"
+  | "copper"
+  | "ocean";
 
 /** Editorial collection — stable identity, not random pool noise */
 export interface ExploreSectionDef {
@@ -9,6 +19,7 @@ export interface ExploreSectionDef {
   /** Lower = higher on page */
   priority: number;
   poolTag: string;
+  theme?: ExploreSectionTheme;
   queries: ExploreSectionQuery[];
   limit: number;
   sort?: "popularity" | "time";
@@ -28,110 +39,12 @@ export interface ExploreEditorialSection {
   title: string;
   subtitle: string;
   layout: "rail" | "grid";
+  theme?: ExploreSectionTheme;
   recipes: ExploreRecipeCard[];
 }
 
-/** Spoonacular-backed editorial rails — deterministic query rotation by day */
-export const EXPLORE_EDITORIAL_SECTIONS: ExploreSectionDef[] = [
-  {
-    id: "comfort_hall",
-    title: "Comfort Food for the Hall",
-    subtitle: "Stick-to-your-ribs meals crews actually want tonight",
-    layout: "rail",
-    priority: 10,
-    poolTag: "comfort",
-    appetiteBoost: 8,
-    queries: [
-      { q: "mac and cheese dinner" },
-      { q: "beef stew hearty" },
-      { q: "chicken pot pie" },
-      { q: "loaded baked potato dinner" },
-      { q: "meatloaf dinner" },
-    ],
-    limit: 8,
-  },
-  {
-    id: "high_protein",
-    title: "High Protein · Feed the Crew",
-    subtitle: "Big portions, lean grills, and satisfying protein",
-    layout: "rail",
-    priority: 20,
-    poolTag: "healthy",
-    appetiteBoost: 6,
-    queries: [
-      { q: "high protein dinner" },
-      { q: "grilled chicken breast dinner" },
-      { q: "steak dinner" },
-      { q: "salmon dinner" },
-      { q: "turkey bowl healthy" },
-    ],
-    limit: 8,
-  },
-  {
-    id: "bbq_grill",
-    title: "BBQ & Grill Marks",
-    subtitle: "Smoky, charred, and built for the station grill",
-    layout: "rail",
-    priority: 30,
-    poolTag: "bbq",
-    appetiteBoost: 10,
-    queries: [
-      { q: "bbq chicken dinner" },
-      { q: "grilled ribs" },
-      { q: "pulled pork dinner" },
-      { q: "grilled steak" },
-      { equipment: "grill", q: "dinner" },
-    ],
-    limit: 8,
-  },
-  {
-    id: "under_30",
-    title: "Under 30 · Shift Night",
-    subtitle: "Fast turns when the hall is hungry now",
-    layout: "rail",
-    priority: 40,
-    poolTag: "quick",
-    queries: [
-      { q: "quick dinner", maxReadyTime: 30 },
-      { q: "30 minute chicken dinner", maxReadyTime: 30 },
-      { q: "easy pasta dinner", maxReadyTime: 30 },
-      { q: "stir fry dinner", maxReadyTime: 30 },
-    ],
-    limit: 8,
-    sort: "time",
-  },
-  {
-    id: "one_pot",
-    title: "One Pot · Fast Cleanup",
-    subtitle: "Less dishes, more time with the crew",
-    layout: "rail",
-    priority: 50,
-    poolTag: "one_pot",
-    queries: [
-      { q: "one pot dinner" },
-      { q: "sheet pan dinner" },
-      { q: "skillet dinner" },
-      { q: "dutch oven dinner" },
-    ],
-    limit: 8,
-  },
-  {
-    id: "trending_plates",
-    title: "Trending Tonight",
-    subtitle: "What halls are firing up this week",
-    layout: "grid",
-    priority: 5,
-    poolTag: "trending",
-    sort: "popularity",
-    queries: [
-      { q: "popular dinner" },
-      { q: "best chicken dinner" },
-      { q: "easy crowd pleasing dinner" },
-    ],
-    limit: 6,
-    appetiteBoost: 4,
-  },
-];
+/** Spoonacular-backed discovery rails — see explore-discovery-catalog.ts */
+export const EXPLORE_EDITORIAL_SECTIONS: ExploreSectionDef[] = EXPLORE_DISCOVERY_SECTIONS;
 
 const APPETITE_SIGNALS: [RegExp, number][] = [
   [/crispy|crunchy|golden brown|crusted/i, 14],

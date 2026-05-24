@@ -52,6 +52,10 @@ export const generateRequestSchema = z.object({
   prefer_different_style: z.boolean().optional().default(false),
   recentSignatures: z.array(z.string()).optional().default([]),
   currentRecipeSignature: z.string().optional(),
+  /** Client correlation id — required for user-initiated generations */
+  request_id: z.string().max(80).optional(),
+  /** Background prefetch must not consume per-user burst limits */
+  generation_intent: z.enum(["user", "prefetch"]).optional().default("user"),
 });
 
 export type GenerateRequest = z.infer<typeof generateRequestSchema>;
@@ -211,6 +215,8 @@ export interface ClientRecipeResponse {
   recipe_tags?: RecipeTags;
   template_id?: number;
   _fallback?: boolean;
+  /** Server generate path: catalog, spoonacular_v2, template_fallback, etc. */
+  _source?: string;
   _signature?: string;
   _id?: string;
   /** Catalog write-through from V2 Spoonacular success */

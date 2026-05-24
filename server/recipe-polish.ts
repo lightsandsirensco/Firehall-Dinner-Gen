@@ -251,8 +251,9 @@ export async function polishRecipeCopy(
     `   - Do NOT add new ingredients or change the dish. Reference sides already listed.\n` +
     `   - Heading format: "Action phrase (heat, X–Y min)" e.g. "Sear the chicken (medium-high, 5–7 min)"\n` +
     `   - Prep/plating: "Action phrase (no heat, X min)"\n` +
-    `   - Body: clear HOW-to for a busy kitchen. Visual/doneness cues.${safeTempNote}\n` +
-    `   - Max 8–10 steps. No fluff. Under 50 words per body.\n\n` +
+    `   - Body: beginner-friendly HOW-to for a tired cook. Explain what to do, what it should LOOK/SMELL like, and when to move on.${safeTempNote}\n` +
+    `   - 3–4 sentences per step (about 60–90 words). Mention heat, pan size, and what can go wrong.\n` +
+    `   - Max 10–12 steps. Practical fire-hall tone — not food-blog fluff.\n\n` +
     `Output ONLY valid JSON:\n` +
     `{"title":"...","description":"...","steps":[{"heading":"...","body":"..."}]}\n\n` +
     `Recipe:\n` +
@@ -268,7 +269,7 @@ export async function polishRecipeCopy(
       openai.chat.completions.create({
         model: "gpt-4o-mini",
         messages: [{ role: "user", content: prompt }],
-        max_tokens: 1200,
+        max_tokens: 2400,
         temperature: 0.3,
         response_format: { type: "json_object" },
       }),

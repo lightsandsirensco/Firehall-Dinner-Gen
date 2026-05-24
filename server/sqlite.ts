@@ -1,13 +1,21 @@
 /**
  * Local SQLite via sql.js (WASM) — no native node-gyp build required (Windows-friendly).
  */
-import initSqlJs, { type Database as SqlJsDatabase, type SqlValue } from "sql.js";
+import initSqlJs from "sql.js";
 import fs from "fs";
 import path from "path";
+
+/** sql.js bind array elements and Statement#get() cell values */
+type SqlBindValue = number | string | Uint8Array | null;
+
+type SqlJsStatic = Awaited<ReturnType<typeof initSqlJs>>;
+type SqlJsDatabase = InstanceType<SqlJsStatic["Database"]>;
+type SqlJsStatement = ReturnType<SqlJsDatabase["prepare"]>;
+
 export interface SqliteStatement {
-  get(...params: SqlValue[]): Record<string, unknown> | undefined;
-  all(...params: SqlValue[]): Record<string, unknown>[];
-  run(...params: SqlValue[]): void;
+  get(...params: SqlBindValue[]): Record<string, unknown> | undefined;
+  all(...params: SqlBindValue[]): Record<string, unknown>[];
+  run(...params: SqlBindValue[]): void;
 }
 
 export interface SqliteDatabase {
@@ -48,14 +56,14 @@ function schedulePersist(): void {
   }, 100);
 }
 
-function bindParams(stmt: ReturnType<SqlJsDatabase["prepare"]>, params: SqlValue[]): void {
+function bindParams(stmt: SqlJsStatement, params: SqlBindValue[]): void {
   if (params.length === 0) return;
   stmt.bind(params);
 }
 
 function rowToObject(
   columns: string[],
-  values: SqlValue[],
+  values: SqlBindValue[],
 ): Record<string, unknown> {
   const row: Record<string, unknown> = {};
   for (let i = 0; i < columns.length; i++) {
@@ -75,7 +83,7 @@ function wrapDatabase(native: SqlJsDatabase): SqliteDatabase {
     },
     prepare(sql: string): SqliteStatement {
       return {
-        get(...params: SqlValue[]) {
+        get(...params: SqlBindValue[]) {
           const stmt = native.prepare(sql);
           try {
             bindParams(stmt, params);
@@ -87,7 +95,7 @@ function wrapDatabase(native: SqlJsDatabase): SqliteDatabase {
             stmt.free();
           }
         },
-        all(...params: SqlValue[]) {
+        all(...params: SqlBindValue[]) {
           const stmt = native.prepare(sql);
           const rows: Record<string, unknown>[] = [];
           try {
@@ -100,7 +108,7 @@ function wrapDatabase(native: SqlJsDatabase): SqliteDatabase {
             stmt.free();
           }
         },
-        run(...params: SqlValue[]) {
+        run(...params: SqlBindValue[]) {
           const stmt = native.prepare(sql);
           try {
             bindParams(stmt, params);

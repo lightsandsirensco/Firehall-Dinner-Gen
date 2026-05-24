@@ -53,11 +53,15 @@ export function mergeDetailWithCardPreview(
 }
 
 export function imageUrlForRecipeCard(card: Pick<ExploreRecipeCard, "id" | "image">): string {
-  if (card.image?.includes("spoonacular.com")) {
-    return card.image;
+  const custom = (card.image || "").trim();
+  if (custom && !custom.includes("spoonacular.com")) {
+    return custom;
+  }
+  if (custom.includes("spoonacular.com")) {
+    return custom;
   }
   if (card.id > 0) {
     return spoonacularImageUrl(card.id);
   }
-  return card.image || "";
+  return "";
 }

@@ -11,6 +11,8 @@ import { auditCrewScale, type CrewScaleAuditResult } from "./crew-scale-audit";
 import { generateRecipe, generateRecipeFromPantry, repairRecipe, buildSafeFallbackRecipe } from "./ai";
 import { getVarietyConstraints, recordRecipe } from "./variety-memory";
 import { generatePizzaRecipe, pickPizzaConcept } from "./pizza-ai";
+import { buildPizzaTemplate } from "./pizza-templates.js";
+import { finalizePizzaRecipe } from "./pizza-finalize.js";
 import { subscribeToList, trackRecipeEvent, trackShoppingListEvent, validateKlaviyoConfig } from "./klaviyo";
 import { getFromPool, refillPool, getPoolSize } from "./recipe-pool";
 import { initHallVoteTables, createHallVote, getHallVote, castBallot, closeHallVote, hashVoterFingerprint } from "./hall-vote-store";
@@ -24,18 +26,35 @@ import {
   filterDisplayableExploreCards,
 } from "../shared/explore-recipe.js";
 import { buildExploreEditorialFeed } from "./explore-editorial.js";
+import { fetchExploreRecipeDetailPayload } from "./explore-recipe-detail.js";
+import {
+  parseGenerationRateContext,
+  enforceUserGenerationRateLimits,
+  recordUserGenerationRateLimit,
+} from "./generation-rate-limit.js";
 import { initRecipeCatalog } from "./recipe-catalog.js";
+import {
+  initIngestionStore,
+  getIngestionSummary,
+  getLatestIngestionRun,
+  listStagingForReview,
+  updateStagingStatus,
+} from "./ingestion/ingestion-store.js";
+import { promoteDraftByFingerprint } from "./ingestion/promote.js";
+import { initCuratedRecipeStore, getCuratedStoreStats, getCuratedRecipeById, listCuratedRecipeSummaries } from "./curated-recipe-store.js";
 import { pickCatalogExploreFallback, pickCatalogRecipeForGenerate } from "./recipe-ranker.js";
 import { fetchBestSpoonacularRecipe } from "./spoonacular-converter";
 import { runV2Generate } from "./recipe-engine-v2";
 import { runV2Fallback } from "./v2-fallback";
+import { isTemplateFallbackAllowed } from "./recipe-fallback-policy";
 import { enforceCarbs, trackCarb, ensureRiceForRiceDishes } from "./carb-rules";
 import { completeFirehallPlate } from "./meal-composition";
+import { enhanceRecipeStepsSync, buildEnhanceContextFromTitle } from "./instruction-enhancer.js";
 import { adjustMacrosAfterCompose, assertMealSemanticsOrLog, scorePlateTrust } from "./meal-sanity";
 import { applyCrewPortionFloors, hallCleanupTip, hallProTips } from "./firehall-voice";
 import { pickStructure, trackStructure, STRUCTURE_DISPLAY, type StructureType } from "./structure-variety";
 import { log, logVerbose, logError, clip, formatLogFields, maskEmail } from "./logger";
-import { validateAndFixRecipe, validateRecipe, computeSignature, recordSignature, type RecipeValidationContext } from "./validateRecipe";
+import { validateAndFixRecipe, validateRecipe, computeSignature, recordSignature, isBlockedByRecentVariety, type RecipeValidationContext } from "./validateRecipe";
 import {
   initCacheStore,
   buildCacheKey,
@@ -45,7 +64,6 @@ import {
   setCachedRecipe,
   setCachedPizzaRecipe,
   checkRateLimit,
-  recordRateLimit,
   checkAndReserveRequest,
   finalizeRequest,
   cancelRequest,
@@ -56,6 +74,8 @@ import {
   getUsageStats,
   getCacheCount,
   hashIp,
+  getRecentSpoonacularIds,
+  addRecentSpoonacularId,
 } from "./cache-store";
 
 const COST_PER_1K_INPUT = 0.00015;
@@ -83,7 +103,9 @@ export async function registerRoutes(
   app: Express
 ): Promise<Server> {
   await initCacheStore();
+  await initCuratedRecipeStore();
   await initRecipeCatalog();
+  await initIngestionStore();
   await initHallVoteTables();
 
   const klaviyoCheck = validateKlaviyoConfig();
@@ -163,6 +185,19 @@ export async function registerRoutes(
   }
 
   function normalizeToClientFormat(recipe: any, crewSize: number, mealFormat: string): ClientRecipeResponse {
+    const recipeTitle = recipe.title || "Tonight's dinner";
+    const enhanceCtx = buildEnhanceContextFromTitle(recipeTitle, {
+      protein: recipe.chosen_protein || recipe.primary_protein_source,
+      totalMinutes: recipe.timing?.total_minutes ?? recipe.timing?.total_min,
+      crewSize,
+      ingredients: (recipe.ingredients || []).map((ing: any) => ing.item || ing.name || ""),
+      mealFormat,
+    });
+
+    if (Array.isArray(recipe.steps) && recipe.steps.length > 0) {
+      recipe.steps = enhanceRecipeStepsSync(recipe.steps, enhanceCtx);
+    }
+
     const ingredients: ClientIngredient[] = (recipe.ingredients || []).map((ing: any) => {
       const { qty, unit } = parseQtyUnit(ing.amount || "");
       return {
@@ -350,7 +385,7 @@ export async function registerRoutes(
     };
   }
 
-  function buildResponse(validation: import("./validateRecipe").ValidationResult, extras: Record<string, any>, debug: boolean, crewSize: number = 0, mealFormat: string = "", allergens: string[] = [], auditCtx?: LabelAuditContext): Record<string, any> {
+  function buildResponse(validation: import("./validateRecipe").ValidationResult, extras: Record<string, any>, debug: boolean, crewSize: number = 0, mealFormat: string = "", allergens: string[] = [], auditCtx?: LabelAuditContext, sessionKey?: string): Record<string, any> {
     let recipe = validation.recipe;
 
     if (allergens.length > 0) {
@@ -438,6 +473,7 @@ export async function registerRoutes(
       crewSize: effectiveCrewSize,
       allergens,
       protein: ctx.chosenProtein || recipe.chosen_protein || "any",
+      sessionKey,
     });
     recipe = composed;
     if (composeFixes.length > 0) {
@@ -478,6 +514,10 @@ export async function registerRoutes(
     const client = normalizeToClientFormat(merged, crewSize, mealFormat);
     const base: Record<string, any> = { ...client };
     base._id = recipeId;
+    if (extras._fallback === true) base._fallback = true;
+    if (extras._source) base._source = extras._source;
+    if (extras._catalog_id) base._catalog_id = extras._catalog_id;
+    if (extras._recipe_source) base._recipe_source = extras._recipe_source;
 
     const ingsCount = (client.ingredients || []).length;
     const stepsCount = (client.steps || []).length;
@@ -535,33 +575,28 @@ export async function registerRoutes(
     return base;
   }
 
-  function sendRecipeResponse(res: Response, validation: import("./validateRecipe").ValidationResult, extras: Record<string, any>, debug: boolean, crewSize: number, mealFormat: string, allergens: string[], auditCtx: LabelAuditContext | undefined, ipHash: string, sessionId: string, requestId: string) {
-    const result = buildResponse(validation, extras, debug, crewSize, mealFormat, allergens, auditCtx);
+  function sendRecipeResponse(res: Response, validation: import("./validateRecipe").ValidationResult, extras: Record<string, any>, debug: boolean, crewSize: number, mealFormat: string, allergens: string[], auditCtx: LabelAuditContext | undefined, ipHash: string, sessionId: string, rateCtx: ReturnType<typeof parseGenerationRateContext>) {
+    const sessKey = `${ipHash}:${sessionId}`;
+    const result = buildResponse(validation, extras, debug, crewSize, mealFormat, allergens, auditCtx, sessKey);
     if (extras._spoonacular_title && result.title !== extras._spoonacular_title) {
       log(`[spoonacular-generator] Label audit changed title — restoring: "${extras._spoonacular_title}"`, "spoonacular");
       result.title = extras._spoonacular_title;
     }
     const signature = validation.signature || result._signature || "";
-    const sessKey = `${ipHash}:${sessionId}`;
     addSessionSignature(sessKey, signature);
-    recordSuccessfulGeneration(ipHash, sessionId, requestId, signature);
+    recordSuccessfulGeneration(ipHash, sessionId, rateCtx, signature);
     return res.json(result);
   }
 
-  function recordSuccessfulGeneration(ipHash: string, sessionId: string, requestId: string, signature: string) {
+  function recordSuccessfulGeneration(
+    ipHash: string,
+    sessionId: string,
+    rateCtx: ReturnType<typeof parseGenerationRateContext>,
+    signature: string,
+  ) {
     const sessionKey = `${ipHash}:${sessionId}`;
-    const result = finalizeRequest(sessionKey, requestId, signature);
-
-    if (result.sameSignature) {
-      log(`[rate] NOT counted — same signature=${signature} for session=${sessionId} request_id=${requestId}`, "rate");
-      return;
-    }
-
-    recordRateLimit(`burst:${ipHash}`);
-    recordRateLimit(`hourly:${ipHash}`);
-    recordRateLimit(`burst:session:${sessionId}`);
-    recordRateLimit(`hourly:session:${sessionId}`);
-    log(`[rate] Generation counted — request_id=${requestId} signature=${signature} session=${sessionId}`, "rate");
+    const result = finalizeRequest(sessionKey, rateCtx.requestId, signature);
+    recordUserGenerationRateLimit(ipHash, sessionId, rateCtx, { sameSignature: result.sameSignature });
   }
 
   const REMIX_SAUCES: Record<string, string[]> = {
@@ -647,8 +682,12 @@ export async function registerRoutes(
       const clientIp = getClientIp(req);
       const ipHash = hashIp(clientIp);
 
-      const requestId = (req.body as any)?.request_id || `auto-${Date.now()}`;
+      const rateCtx = parseGenerationRateContext(req);
+      const requestId = rateCtx.requestId;
       const sessionKey = `${ipHash}:${sessionId}`;
+
+      log(`[generate] start intent=${rateCtx.intent} rid=${requestId} session=${sessionId}`, "generate");
+
       const reserveCheck = checkAndReserveRequest(sessionKey, requestId);
       if (reserveCheck.isDuplicate) {
         log(`[rate] Duplicate request_id=${requestId} — already completed`, "rate");
@@ -665,39 +704,12 @@ export async function registerRoutes(
         });
       }
 
-      const burstCheck = checkRateLimit(`burst:${ipHash}`, 60_000, 3);
-      if (!burstCheck.allowed) {
+      const userLimits = enforceUserGenerationRateLimits(ipHash, sessionId, rateCtx);
+      if (!userLimits.allowed) {
         cancelRequest(sessionKey, requestId);
-        return res.status(429).json({
-          message: "Slow down! Maximum 3 recipes per minute. Please wait a moment.",
-          retry_after_seconds: 60,
-        });
-      }
-
-      const hourlyCheck = checkRateLimit(`hourly:${ipHash}`, 3_600_000, 10);
-      if (!hourlyCheck.allowed) {
-        cancelRequest(sessionKey, requestId);
-        return res.status(429).json({
-          message: `Hourly limit reached (10 recipes/hour). You have ${hourlyCheck.remaining} remaining. Try again later.`,
-          retry_after_seconds: 3600,
-        });
-      }
-
-      const sessionBurst = checkRateLimit(`burst:session:${sessionId}`, 60_000, 3);
-      if (!sessionBurst.allowed) {
-        cancelRequest(sessionKey, requestId);
-        return res.status(429).json({
-          message: "Slow down! Maximum 3 recipes per minute.",
-          retry_after_seconds: 60,
-        });
-      }
-
-      const sessionHourly = checkRateLimit(`hourly:session:${sessionId}`, 3_600_000, 10);
-      if (!sessionHourly.allowed) {
-        cancelRequest(sessionKey, requestId);
-        return res.status(429).json({
-          message: "Hourly limit reached (10 recipes/hour). Try again later.",
-          retry_after_seconds: 3600,
+        return res.status(userLimits.status ?? 429).json({
+          message: userLimits.message,
+          retry_after_seconds: userLimits.retryAfterSeconds ?? 60,
         });
       }
 
@@ -800,12 +812,25 @@ export async function registerRoutes(
           ptAuditCtx,
           ipHash,
           sessionId,
-          requestId,
+          rateCtx,
         );
       }
 
       // ── CATALOG-FIRST, then V2 Spoonacular ─────────────────────────────────
       const v2SessionKey = `${ipHash}:${sessionId}`;
+      const catalogVarietySeed = (() => {
+        const rid = String((req.body as { request_id?: string }).request_id || "");
+        if (rid) {
+          return parseInt(crypto.createHash("sha256").update(rid).digest("hex").slice(0, 8), 16);
+        }
+        return clientRecentSigs.length;
+      })();
+      const catalogPickOptions = {
+        recentSignatures: clientRecentSigs,
+        currentRecipeSignature: clientCurrentSig || undefined,
+        varietySeed: catalogVarietySeed,
+        recentSpoonacularIds: getRecentSpoonacularIds(v2SessionKey),
+      };
 
       const auditCtx: LabelAuditContext = {
         selectedAppliances: request.appliances || [],
@@ -819,10 +844,19 @@ export async function registerRoutes(
         crewSize: request.crew_size || 4,
       };
 
-      const catalogHit = pickCatalogRecipeForGenerate(request, {
+      const varietyCtxBase: RecipeValidationContext = {
+        chosenProtein: request.protein === "any" ? "chicken" : request.protein,
+        meal_style: request.meal_format || "plated main",
+        cuisine: request.cuisine_style || "any",
+        appliances: request.appliances,
+        allergens,
         recentSignatures: clientRecentSigs,
         currentRecipeSignature: clientCurrentSig || undefined,
-      });
+      };
+
+      const catalogHit = request.prefer_different_style
+        ? null
+        : pickCatalogRecipeForGenerate(request, catalogPickOptions);
 
       if (catalogHit) {
         const chosenProtein = catalogHit.protein;
@@ -844,44 +878,51 @@ export async function registerRoutes(
           catalogVal = { ...catalogVal, recipe: { ...catalogVal.recipe, title: catalogHit.originalTitle } };
         }
 
-        setCachedRecipe(v2CacheKey, 0, catalogVal.recipe);
-        logUsage({
-          cacheKey: v2CacheKey,
-          templateId: 0,
-          cacheHit: true,
-          latencyMs: Date.now() - startTime,
-          ipHash,
-          sessionId,
-        });
-        log(
-          `[generate] success ${formatLogFields({
-            source: "catalog",
-            title: clip(catalogHit.originalTitle, 60),
-            cuisine: request.cuisine_style || "any",
-            protein: chosenProtein,
-            duration: `${Date.now() - startTime}ms`,
-          })}`,
-          "generate",
-        );
-        recordSignature(chosenProtein, catalogVal.signature);
-        return sendRecipeResponse(
-          res,
-          catalogVal,
-          {
-            _source: "catalog",
-            _spoonacular_title: catalogHit.originalTitle,
-            _catalog_id: catalogHit.catalogId,
-            _recipe_source: catalogHit.recipeSource,
-          },
-          debugMode,
-          request.crew_size,
-          request.meal_format || "random",
-          allergens,
-          auditCtx,
-          ipHash,
-          sessionId,
-          requestId,
-        );
+        if (catalogVal.issues.includes("duplicate_signature")) {
+          log("[catalog] Skipping hit — duplicate_signature (fall through to V2)", "catalog");
+        } else {
+          setCachedRecipe(v2CacheKey, 0, catalogVal.recipe);
+          logUsage({
+            cacheKey: v2CacheKey,
+            templateId: 0,
+            cacheHit: true,
+            latencyMs: Date.now() - startTime,
+            ipHash,
+            sessionId,
+          });
+          log(
+            `[generate] success ${formatLogFields({
+              source: "catalog",
+              title: clip(catalogHit.originalTitle, 60),
+              cuisine: request.cuisine_style || "any",
+              protein: chosenProtein,
+              duration: `${Date.now() - startTime}ms`,
+            })}`,
+            "generate",
+          );
+          recordSignature(chosenProtein, catalogVal.signature);
+          if (catalogHit.spoonacularId && catalogHit.spoonacularId > 0) {
+            addRecentSpoonacularId(v2SessionKey, catalogHit.spoonacularId);
+          }
+          return sendRecipeResponse(
+            res,
+            catalogVal,
+            {
+              _source: "catalog",
+              _spoonacular_title: catalogHit.originalTitle,
+              _catalog_id: catalogHit.catalogId,
+              _recipe_source: catalogHit.recipeSource,
+            },
+            debugMode,
+            request.crew_size,
+            request.meal_format || "random",
+            allergens,
+            auditCtx,
+            ipHash,
+            sessionId,
+            rateCtx,
+          );
+        }
       }
 
       const v2Result = await runV2Generate(request, { sessionKey: v2SessionKey });
@@ -938,14 +979,13 @@ export async function registerRoutes(
           auditCtx,
           ipHash,
           sessionId,
-          requestId,
+          rateCtx,
         );
       }
 
       // ── Relaxed catalog (lower bar, format-agnostic) ───────────────────────
       const catalogRelaxed = pickCatalogRecipeForGenerate(request, {
-        recentSignatures: clientRecentSigs,
-        currentRecipeSignature: clientCurrentSig || undefined,
+        ...catalogPickOptions,
         relaxed: true,
       });
       if (catalogRelaxed) {
@@ -1002,7 +1042,7 @@ export async function registerRoutes(
           auditCtx,
           ipHash,
           sessionId,
-          requestId,
+          rateCtx,
         );
       }
 
@@ -1056,50 +1096,65 @@ export async function registerRoutes(
           auditCtx,
           ipHash,
           sessionId,
-          requestId,
+          rateCtx,
         );
       }
 
       // ── Session cache (prior real recipe for same filters) ─────────────────
       const sessionCached = getCachedRecipe(v2CacheKey);
-      if (sessionCached?.title && !sessionCached._fallback) {
+      if (sessionCached?.title && !sessionCached._fallback && !request.prefer_different_style) {
         const cacheValCtx: RecipeValidationContext = {
+          ...varietyCtxBase,
           chosenProtein: auditCtx.chosenProtein,
-          meal_style: sessionCached.meal_style || "plated main",
-          cuisine: request.cuisine_style || "any",
-          appliances: request.appliances,
-          allergens,
-          recentSignatures: clientRecentSigs,
-          currentRecipeSignature: clientCurrentSig || undefined,
+          meal_style: sessionCached.meal_style || varietyCtxBase.meal_style,
         };
-        const cacheVal = validateAndFixRecipe(sessionCached, cacheValCtx);
-        logUsage({ cacheKey: v2CacheKey, templateId: 0, cacheHit: true, latencyMs: Date.now() - startTime, ipHash, sessionId });
-        log(
-          `[generate] success ${formatLogFields({
-            source: "session_cache",
-            title: clip(cacheVal.recipe.title, 60),
-            protein: auditCtx.chosenProtein,
-            duration: `${Date.now() - startTime}ms`,
-          })}`,
-          "generate",
-        );
-        recordSignature(auditCtx.chosenProtein, cacheVal.signature);
-        return sendRecipeResponse(
-          res,
-          cacheVal,
-          { _source: "session_cache", _recipe_source: sessionCached._recipe_source },
-          debugMode,
-          request.crew_size,
-          request.meal_format || "random",
-          allergens,
-          auditCtx,
-          ipHash,
-          sessionId,
-          requestId,
-        );
+        const sessionSig = computeSignature(sessionCached);
+        if (!isBlockedByRecentVariety(sessionSig, cacheValCtx)) {
+          const cacheVal = validateAndFixRecipe(sessionCached, cacheValCtx);
+          if (!cacheVal.issues.includes("duplicate_signature")) {
+            logUsage({ cacheKey: v2CacheKey, templateId: 0, cacheHit: true, latencyMs: Date.now() - startTime, ipHash, sessionId });
+            log(
+              `[generate] success ${formatLogFields({
+                source: "session_cache",
+                title: clip(cacheVal.recipe.title, 60),
+                protein: auditCtx.chosenProtein,
+                duration: `${Date.now() - startTime}ms`,
+              })}`,
+              "generate",
+            );
+            recordSignature(auditCtx.chosenProtein, cacheVal.signature);
+            return sendRecipeResponse(
+              res,
+              cacheVal,
+              { _source: "session_cache", _recipe_source: sessionCached._recipe_source },
+              debugMode,
+              request.crew_size,
+              request.meal_format || "random",
+              allergens,
+              auditCtx,
+              ipHash,
+              sessionId,
+              rateCtx,
+            );
+          }
+          log("[generate] session_cache skip: duplicate_signature", "generate");
+        } else {
+          log("[generate] session_cache skip: blocked by recent variety", "generate");
+        }
       }
 
       // ── LAST RESORT: deterministic template (no Spoonacular / catalog) ─────
+      if (!isTemplateFallbackAllowed()) {
+        cancelRequest(sessionKey, requestId);
+        log("[generate] template_fallback blocked DISABLE_TEMPLATE_FALLBACK=true", "generate");
+        return res.status(503).json({
+          message:
+            "No matching real recipes right now. Try a different protein, meal style, or cuisine — or turn off strict filters.",
+          retry_after_seconds: 30,
+          _source: "none",
+        });
+      }
+
       log("[generate] last_resort template_fallback reason=all_real_sources_exhausted", "generate");
 
       const fb = await runV2Fallback(request, "all_real_sources_exhausted", clientRecentSigs);
@@ -1139,11 +1194,13 @@ export async function registerRoutes(
         fbAuditCtx,
         ipHash,
         sessionId,
-        requestId,
+        rateCtx,
       );
 
     } catch (error: any) {
-      cancelRequest(sessionKey, requestId);
+      const failCtx = parseGenerationRateContext(req);
+      const failKey = `${hashIp(getClientIp(req))}:${(req as any)._sessionId || "unknown"}`;
+      cancelRequest(failKey, failCtx.requestId);
       logError("generate", "request failed", error);
       return res.status(500).json({ message: error.message || "Failed to generate recipe" });
     }
@@ -1372,13 +1429,18 @@ export async function registerRoutes(
 
       const dailyBudget = parseFloat(process.env.DAILY_LLM_BUDGET_USD || "5.00");
       const currentSpend = getDailySpend();
+      const budgetExceeded = currentSpend >= dailyBudget;
 
-      if (currentSpend >= dailyBudget) {
-        log(`Budget exceeded: $${currentSpend.toFixed(4)} / $${dailyBudget.toFixed(2)}`, "budget");
-        return res.status(503).json({
-          message: "Daily recipe generation limit reached. Please try again tomorrow.",
-          budget_exceeded: true,
-        });
+      if (budgetExceeded) {
+        log(`[pizza] LLM budget exceeded — serving hall template (${conceptId})`, "budget");
+        const templateRecipe = finalizePizzaRecipe(
+          buildPizzaTemplate(conceptId, request),
+          request,
+          conceptId,
+          "template",
+        );
+        setCachedPizzaRecipe(cacheKey, templateRecipe);
+        return res.json(templateRecipe);
       }
 
       const { recipe, tokensIn, tokensOut } = await generatePizzaRecipe(request, conceptId);
@@ -1406,6 +1468,25 @@ export async function registerRoutes(
       return res.json(recipe);
     } catch (error: any) {
       logError("pizza", "generate failed", error);
+      try {
+        const parsed = pizzaRequestSchema.safeParse(req.body);
+        if (parsed.success) {
+          const conceptId = pickPizzaConcept(
+            parsed.data.allergens_to_avoid,
+            parsed.data.last_pizza_style_id,
+          );
+          const fallback = finalizePizzaRecipe(
+            buildPizzaTemplate(conceptId, parsed.data),
+            parsed.data,
+            conceptId,
+            "template",
+          );
+          log(`[pizza] emergency template fallback: ${conceptId}`, "pizza");
+          return res.json(fallback);
+        }
+      } catch {
+        /* ignore */
+      }
       return res.status(500).json({ message: error.message || "Failed to generate pizza recipe" });
     }
   });
@@ -1626,18 +1707,17 @@ export async function registerRoutes(
       const diet = (req.query.diet as string) || "";
       const intolerances = (req.query.intolerances as string) || "";
       const excludeIngredients = (req.query.excludeIngredients as string) || "";
-      const seenParam = (req.query.seen as string) || "";
-      const seenIds = seenParam
-        .split(",")
-        .map((s) => parseInt(s, 10))
-        .filter((id) => Number.isFinite(id) && id > 0);
+      const feed = await buildExploreEditorialFeed({
+        diet: diet || undefined,
+        intolerances: intolerances || undefined,
+        excludeIngredients: excludeIngredients || undefined,
+      });
 
-      const sections = await buildExploreEditorialFeed(
-        { diet: diet || undefined, intolerances: intolerances || undefined, excludeIngredients: excludeIngredients || undefined },
-        [...discoverSeenIds, ...seenIds],
-      );
-
-      return res.json({ sections, _editorial: true });
+      return res.json({
+        sections: feed.sections,
+        _editorial: true,
+        _meta: feed.meta,
+      });
     } catch (err: unknown) {
       const msg = err instanceof Error ? err.message : "Sections failed";
       if (msg.includes("SPOONACULAR_API_KEY is not configured")) {
@@ -1645,6 +1725,109 @@ export async function registerRoutes(
       }
       log(`[explore] Sections error: ${msg}`, "spoonacular");
       return res.status(500).json({ message: "Failed to load editorial sections. Please try again." });
+    }
+  });
+
+  app.get("/api/admin/curated-recipes/stats", async (_req: Request, res: Response) => {
+    try {
+      return res.json(getCuratedStoreStats());
+    } catch (err: unknown) {
+      return res.status(500).json({ message: (err as Error).message });
+    }
+  });
+
+  app.get("/api/admin/curated-recipes/:recipeId", async (req: Request, res: Response) => {
+    try {
+      const recipe = getCuratedRecipeById(decodeURIComponent(String(req.params.recipeId)));
+      if (!recipe) return res.status(404).json({ message: "Recipe not found" });
+      return res.json(recipe);
+    } catch (err: unknown) {
+      return res.status(500).json({ message: (err as Error).message });
+    }
+  });
+
+  app.get("/api/curated-recipes", async (req: Request, res: Response) => {
+    try {
+      const limit = Math.min(parseInt(String(req.query.limit || "24"), 10) || 24, 60);
+      const explorePool = req.query.pool ? String(req.query.pool) : undefined;
+      const rows = listCuratedRecipeSummaries({
+        status: "published",
+        explorePool,
+        minQuality: 30,
+        limit,
+        orderBy: "quality",
+      });
+      return res.json({ recipes: rows });
+    } catch (err: unknown) {
+      return res.status(500).json({ message: (err as Error).message });
+    }
+  });
+
+  app.get("/api/admin/ingestion/status", async (_req: Request, res: Response) => {
+    try {
+      const summary = getIngestionSummary();
+      const lastRun = getLatestIngestionRun();
+      return res.json({ summary, lastRun, _batchOnly: true });
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : "Ingestion status failed";
+      return res.status(500).json({ message: msg });
+    }
+  });
+
+  app.get("/api/admin/ingestion/staging", async (req: Request, res: Response) => {
+    try {
+      const status = (req.query.status as string) || "validated";
+      const limit = Math.min(parseInt(String(req.query.limit || "30"), 10) || 30, 80);
+      const allowed = ["pending", "validated", "rejected", "promoted"];
+      const filter = allowed.includes(status) ? (status as typeof allowed[number]) : "validated";
+      const rows = listStagingForReview(
+        filter === "promoted" ? "promoted" : (filter as "pending" | "validated" | "rejected"),
+        limit,
+      );
+      return res.json({ rows });
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : "Staging list failed";
+      return res.status(500).json({ message: msg });
+    }
+  });
+
+  app.post("/api/admin/ingestion/staging/:fingerprint/approve", async (req: Request, res: Response) => {
+    try {
+      const fp = decodeURIComponent(String(req.params.fingerprint));
+      updateStagingStatus(fp, "validated");
+      return res.json({ ok: true, status: "validated" });
+    } catch (err: unknown) {
+      return res.status(500).json({ message: (err as Error).message });
+    }
+  });
+
+  app.post("/api/admin/ingestion/staging/:fingerprint/reject", async (req: Request, res: Response) => {
+    try {
+      const fp = decodeURIComponent(String(req.params.fingerprint));
+      updateStagingStatus(fp, "rejected", "admin_rejected");
+      return res.json({ ok: true, status: "rejected" });
+    } catch (err: unknown) {
+      return res.status(500).json({ message: (err as Error).message });
+    }
+  });
+
+  app.post("/api/admin/ingestion/staging/:fingerprint/promote", async (req: Request, res: Response) => {
+    try {
+      const fp = decodeURIComponent(String(req.params.fingerprint));
+      const ok = await promoteDraftByFingerprint(fp);
+      if (!ok) return res.status(400).json({ message: "Promote failed — needs Spoonacular id and valid draft" });
+      return res.json({ ok: true, status: "promoted" });
+    } catch (err: unknown) {
+      return res.status(500).json({ message: (err as Error).message });
+    }
+  });
+
+  app.get("/api/admin/expansion/stats", async (_req: Request, res: Response) => {
+    try {
+      const { getExpansionDashboard } = await import("./expansion/recipe-expansion-service.js");
+      return res.json(getExpansionDashboard());
+    } catch (err: unknown) {
+      return res.status(500).json({ message: (err as Error).message });
     }
   });
 
@@ -2091,6 +2274,11 @@ export async function registerRoutes(
         }
       }
 
+      if (!isTemplateFallbackAllowed()) {
+        log(`[explore] template_fallback blocked — returning empty`, "spoonacular");
+        return res.json({ results: [], totalResults: 0, _source: "none" });
+      }
+
       log(`[explore] Catalog empty — last_resort template_fallback`, "spoonacular");
       try {
         const rawCrewParam = parseInt(req.query._crewSize as string);
@@ -2191,16 +2379,11 @@ export async function registerRoutes(
       const rawCrew = parseInt(req.query.crewSize as string, 10);
       const crewSize = Number.isFinite(rawCrew) && rawCrew >= 2 && rawCrew <= 20 ? rawCrew : 6;
       const recipe = buildCuratedClientRecipe(def, crewSize);
-      let heroImage = def.heroImage;
-      if (process.env.SPOONACULAR_API_KEY && def.spoonacularRecipeId > 0) {
-        try {
-          const { getRecipeById } = await import("./spoonacular.js");
-          const sp = await getRecipeById(def.spoonacularRecipeId);
-          if (sp?.image) heroImage = sp.image;
-        } catch {
-          /* keep curated CDN URL */
-        }
-      }
+      const { getClassicHallMeal, resolveClassicHeroImage } = await import("../shared/classic-hall-meals.js");
+      const classicMeta = getClassicHallMeal(slug);
+      const heroImage = classicMeta
+        ? resolveClassicHeroImage(classicMeta)
+        : def.heroImage;
       return res.json({
         slug: def.slug,
         title: def.title,
@@ -2226,7 +2409,20 @@ export async function registerRoutes(
   app.get("/api/explore/recipe/:id", async (req: Request, res: Response) => {
     const rawId = req.params.id;
     const id = parseInt(rawId, 10);
-    log(`[explore] detail id=${id}`, "explore");
+    const hints = {
+      slug: typeof req.query.slug === "string" ? req.query.slug : undefined,
+      curatedRecipeId:
+        typeof req.query.cid === "string"
+          ? req.query.cid
+          : typeof req.query.curatedRecipeId === "string"
+            ? req.query.curatedRecipeId
+            : undefined,
+    };
+
+    log(
+      `[explore] detail request id=${rawId} parsed=${id} slug=${hints.slug ?? "-"} cid=${hints.curatedRecipeId ?? "-"}`,
+      "explore",
+    );
 
     try {
       if (!Number.isFinite(id) || id <= 0) {
@@ -2235,55 +2431,11 @@ export async function registerRoutes(
       }
 
       const includeNutrition = req.query.nutrition === "true";
-      const detail = await getRecipeById(id, includeNutrition);
-
-      const nutrients = detail.nutrition?.nutrients || [];
-      const findNutrient = (name: string) => nutrients.find(n => n.name.toLowerCase() === name.toLowerCase())?.amount || 0;
-
-      let steps = detail.analyzedInstructions?.[0]?.steps || [];
-      if (steps.length === 0 && detail.instructions) {
-        const plain = detail.instructions.replace(/<[^>]*>/g, "").trim();
-        if (plain) {
-          steps = plain
-            .split(/\.\s+/)
-            .filter(Boolean)
-            .map((sentence, i) => ({ number: i + 1, step: sentence.trim() }));
-        }
-      }
-
-      const payload = {
-        id: detail.id,
-        title: detail.title,
-        image: detail.image,
-        imageAlt: detail.title,
-        readyInMinutes: detail.readyInMinutes,
-        servings: detail.servings,
-        sourceUrl: detail.sourceUrl,
-        summary: (detail.summary || "").replace(/<[^>]*>/g, ""),
-        cuisines: detail.cuisines || [],
-        diets: detail.diets || [],
-        dishTypes: detail.dishTypes || [],
-        ingredients: (detail.extendedIngredients || []).map(ing => ({
-          name: ing.name,
-          amount: ing.amount,
-          unit: ing.unit,
-          original: ing.original || `${ing.amount} ${ing.unit} ${ing.name}`.trim(),
-        })),
-        steps: steps.map(s => ({
-          number: s.number,
-          step: s.step,
-        })),
-        macros: {
-          calories: Math.round(findNutrient("Calories")),
-          protein_g: Math.round(findNutrient("Protein")),
-          carbs_g: Math.round(findNutrient("Carbohydrates")),
-          fat_g: Math.round(findNutrient("Fat")),
-        },
-      };
+      const payload = await fetchExploreRecipeDetailPayload(id, includeNutrition, hints);
 
       log(
-        `[explore] detail ok id=${id} status=200 title="${clip(payload.title, 50)}" ings=${payload.ingredients.length} steps=${payload.steps.length}`,
-        "spoonacular",
+        `[explore] detail ok id=${id} curated=${Boolean(payload._fromCurated)} curatedRecipeId=${payload._curatedRecipeId ?? "-"} title="${clip(payload.title, 50)}" ings=${payload.ingredients.length} steps=${payload.steps.length}`,
+        payload._fromCurated ? "catalog" : "spoonacular",
       );
       return res.json(payload);
     } catch (err: any) {
@@ -2294,7 +2446,11 @@ export async function registerRoutes(
       if (msg.includes("Invalid Spoonacular recipe id")) {
         return res.status(400).json({ message: "Invalid recipe ID. Please pick another recipe from the list." });
       }
-      log(`[explore] Detail error: id=${rawId} msg=${msg}`, "spoonacular");
+      if (msg.includes("could not be loaded")) {
+        log(`[explore] Detail not found: id=${rawId} hints=${JSON.stringify(hints)}`, "catalog");
+        return res.status(404).json({ message: msg });
+      }
+      log(`[explore] Detail error: id=${rawId} hints=${JSON.stringify(hints)} msg=${msg}`, "spoonacular");
       return res.status(500).json({ message: "Failed to load recipe details. Please try again." });
     }
   });

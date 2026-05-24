@@ -28,7 +28,7 @@ export interface ExploreRecipeDetail {
   diets: string[];
   dishTypes: string[];
   ingredients: { name: string; amount: number; unit: string; original: string }[];
-  steps: { number: number; step: string }[];
+  steps: { number: number; heading?: string; step: string }[];
   macros: { calories: number; protein_g: number; carbs_g: number; fat_g: number };
 }
 
@@ -47,16 +47,28 @@ async function fetchWithRetry(url: string, attempts = 2): Promise<Response> {
 
 import { normalizeExploreRecipeDetail } from "@/lib/explore-recipe";
 
+export interface ExploreDetailLookupHints {
+  slug?: string;
+  curatedRecipeId?: string;
+}
+
 /** Fetch full recipe detail for Explore — image always tied to recipe id. */
-export async function fetchExploreRecipeDetail(recipeId: number): Promise<ExploreRecipeDetail> {
+export async function fetchExploreRecipeDetail(
+  recipeId: number,
+  hints: ExploreDetailLookupHints = {},
+): Promise<ExploreRecipeDetail> {
   const validId = normalizeExploreRecipeId(recipeId);
   if (validId === null) {
     console.warn("[explore] Invalid recipe id — skipping detail fetch:", recipeId);
     throw new Error("Invalid recipe ID. Please pick another recipe from the list.");
   }
 
-  const url = `/api/explore/recipe/${validId}?nutrition=true`;
-  console.debug("[explore] Detail request:", { recipeId: validId, url });
+  const params = new URLSearchParams({ nutrition: "true" });
+  if (hints.slug?.trim()) params.set("slug", hints.slug.trim());
+  if (hints.curatedRecipeId?.trim()) params.set("cid", hints.curatedRecipeId.trim());
+
+  const url = `/api/explore/recipe/${validId}?${params.toString()}`;
+  console.debug("[explore] Detail request:", { recipeId: validId, url, hints });
 
   const res = await fetchWithRetry(url);
   console.debug("[explore] Detail response:", { recipeId: validId, status: res.status, ok: res.ok });

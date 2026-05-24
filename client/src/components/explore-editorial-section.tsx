@@ -6,14 +6,12 @@ export interface ExploreEditorialSectionProps {
   section: ExploreEditorialSection;
   crewSize: number;
   onRecipeClick: (recipe: ExploreRecipeCard) => void;
-  onCuratedClick?: (slug: string) => void;
 }
 
 export function ExploreEditorialSectionBlock({
   section,
   crewSize,
   onRecipeClick,
-  onCuratedClick,
 }: ExploreEditorialSectionProps) {
   if (section.recipes.length === 0) return null;
 
@@ -39,13 +37,7 @@ export function ExploreEditorialSectionBlock({
                 recipe={recipe}
                 displayServings={crewSize}
                 isCurated={Boolean(recipe._curatedSlug)}
-                onClick={() => {
-                  if (recipe._curatedSlug && onCuratedClick) {
-                    onCuratedClick(recipe._curatedSlug);
-                  } else {
-                    onRecipeClick(recipe);
-                  }
-                }}
+                onClick={() => onRecipeClick(recipe)}
               />
             </div>
           ))}
@@ -58,13 +50,7 @@ export function ExploreEditorialSectionBlock({
               recipe={recipe}
               displayServings={crewSize}
               isCurated={Boolean(recipe._curatedSlug)}
-              onClick={() => {
-                if (recipe._curatedSlug && onCuratedClick) {
-                  onCuratedClick(recipe._curatedSlug);
-                } else {
-                  onRecipeClick(recipe);
-                }
-              }}
+              onClick={() => onRecipeClick(recipe)}
             />
           ))}
         </div>

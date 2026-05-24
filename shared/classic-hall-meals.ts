@@ -38,6 +38,16 @@ export interface ClassicHallMealMeta {
     proteins: string[];
     cuisine_style: string;
   };
+  /**
+   * Optional site-root hero image when Spoonacular CDN does not match the hall classic.
+   * Served from client/public (e.g. /images/explore/jerk-chicken-hero.jpg).
+   */
+  heroImagePath?: string;
+  /**
+   * When not using heroImagePath, Spoonacular title must include at least one of these
+   * (prevents Mexican bowl / salad photos on BBQ hall classics, etc.).
+   */
+  spoonacularTitleMustInclude?: string[];
 }
 
 export function spoonacularHeroImage(
@@ -45,6 +55,20 @@ export function spoonacularHeroImage(
   size: SpoonacularImageSize = "636x393",
 ): string {
   return `https://img.spoonacular.com/recipes/${recipeId}-${size}.jpg`;
+}
+
+/** Resolve Explore / wheel hero URL for a classic meal (single source of truth). */
+export function resolveClassicHeroImage(
+  meal: ClassicHallMealMeta,
+  size: SpoonacularImageSize = "636x393",
+): string {
+  if (meal.heroImagePath?.trim()) {
+    return meal.heroImagePath.trim();
+  }
+  if (meal.spoonacularRecipeId > 0) {
+    return spoonacularHeroImage(meal.spoonacularRecipeId, size);
+  }
+  return "";
 }
 
 /** Verified Spoonacular IDs (titles confirmed via API, May 2026). */
@@ -200,8 +224,10 @@ export const CLASSIC_HALL_MEALS: ClassicHallMealMeta[] = [
     emoji: "🔥",
     spoonacularRecipeId: 637103,
     spoonacularTitle: "Caribbean Chicken Thighs",
-    imageAlt: "Caribbean spiced grilled chicken thighs",
-    imageKeywords: ["caribbean", "chicken", "grill", "spice"],
+    // CC BY-SA 2.0 — simon thomas / Wikimedia Commons "Jerk Chicken, Rice.jpg" (jerk chicken + rice and peas)
+    heroImagePath: "/images/explore/jerk-chicken-hero.jpg",
+    imageAlt: "Close-up plate of jerk chicken with rice and peas",
+    imageKeywords: ["jerk", "chicken", "rice", "peas", "caribbean", "grill"],
     cuisine: "Caribbean",
     mealFormat: "grill",
     protein: "Chicken",
@@ -244,15 +270,20 @@ export const CLASSIC_HALL_MEALS: ClassicHallMealMeta[] = [
     description: "Sweet smoke, rice base, everyone eats happy.",
     tagline: "Line up the bowls",
     emoji: "🍗",
-    spoonacularRecipeId: 1096017,
-    spoonacularTitle: "Mexican Chicken & Rice Bowl",
-    imageAlt: "Chicken and rice bowl with barbecue flavors",
-    imageKeywords: ["chicken", "rice", "bowl", "bbq"],
+    // Was 1096017 "Mexican Chicken & Rice Bowl" — wrong cuisine/visual for this hall classic.
+    spoonacularRecipeId: 715420,
+    spoonacularTitle: "Barbecue Chicken Cauliflower Couscous Bowls",
+    spoonacularTitleMustInclude: ["bbq", "barbecue"],
+    // Pinned hero: barbecue chicken bowl (Spoonacular 715420) — stable across wheel, package, Explore.
+    heroImagePath: "/images/explore/bbq-chicken-bowls-hero.jpg",
+    imageAlt:
+      "Barbecue glazed chicken over grain bowl with roasted vegetables and slaw on a dark plate",
+    imageKeywords: ["bbq", "barbecue", "chicken", "bowl", "rice", "slaw", "glazed"],
     cuisine: "BBQ",
     mealFormat: "bowl",
     protein: "Chicken",
     tags: ["BBQ", "Hall classic", "Bowl", "Chicken"],
-    recipeSource: { type: "curated", spoonacularId: 1096017 },
+    recipeSource: { type: "curated", spoonacularId: 715420 },
     segmentColor: "#1565C0",
     segmentColorAlt: "#1976D2",
     searchQuery: "bbq chicken rice bowl",
@@ -293,7 +324,7 @@ export function getClassicHallMeal(slug: string): ClassicHallMealMeta | undefine
 export function getClassicHeroImage(slug: string, size: SpoonacularImageSize = "636x393"): string {
   const meta = getClassicHallMeal(slug);
   if (!meta) return "";
-  return spoonacularHeroImage(meta.spoonacularRecipeId, size);
+  return resolveClassicHeroImage(meta, size);
 }
 
 /** Extract Spoonacular recipe id embedded in a CDN image URL. */
@@ -323,9 +354,13 @@ export function validateClassicMealConsistency(
     (typeof process !== "undefined" && process.env?.NODE_ENV !== "production");
   if (!isDev) return;
 
-  const image = heroImage ?? spoonacularHeroImage(meal.spoonacularRecipeId);
+  const image = heroImage ?? resolveClassicHeroImage(meal);
   const urlId = extractSpoonacularIdFromImageUrl(image);
-  if (urlId !== null && urlId !== meal.spoonacularRecipeId) {
+  if (
+    urlId !== null &&
+    urlId !== meal.spoonacularRecipeId &&
+    !meal.heroImagePath?.trim()
+  ) {
     console.warn(
       `[classic-meal:${context}] Image URL recipe id ${urlId} ≠ expected ${meal.spoonacularRecipeId} for "${meal.slug}"`,
     );
@@ -346,11 +381,57 @@ export function validateClassicMealConsistency(
       `[classic-meal:${context}] Title "${meal.title}" may not match Spoonacular "${meal.spoonacularTitle}" (${meal.slug})`,
     );
   }
+
+  const mustInclude = meal.spoonacularTitleMustInclude || [];
+  if (mustInclude.length > 0 && !meal.heroImagePath?.trim()) {
+    const spoonLower = meal.spoonacularTitle.toLowerCase();
+    const ok = mustInclude.some((k) => spoonLower.includes(k.toLowerCase()));
+    if (!ok) {
+      console.warn(
+        `[classic-meal:${context}] Spoonacular title "${meal.spoonacularTitle}" missing required keywords [${mustInclude.join(", ")}] for "${meal.slug}"`,
+      );
+    }
+  }
+
+  const hallLower = `${meal.title} ${meal.displayTitle}`.toLowerCase();
+  if (
+    (hallLower.includes("bbq") || hallLower.includes("barbecue")) &&
+    !meal.heroImagePath?.trim()
+  ) {
+    const spoonLower = meal.spoonacularTitle.toLowerCase();
+    if (!/bbq|barbecue/.test(spoonLower)) {
+      console.warn(
+        `[classic-meal:${context}] Hall classic "${meal.slug}" is BBQ-themed but Spoonacular title is "${meal.spoonacularTitle}" — add heroImagePath or fix recipe id`,
+      );
+    }
+  }
+}
+
+/** Detect duplicate Spoonacular hero ids across wheel meals (dev guard). */
+export function findDuplicateClassicHeroIds(): { id: number; slugs: string[] }[] {
+  const byId = new Map<number, string[]>();
+  for (const meal of CLASSIC_HALL_MEALS) {
+    if (meal.heroImagePath?.trim()) continue;
+    const id = meal.spoonacularRecipeId;
+    if (!id) continue;
+    const list = byId.get(id) || [];
+    list.push(meal.slug);
+    byId.set(id, list);
+  }
+  return [...byId.entries()]
+    .filter(([, slugs]) => slugs.length > 1)
+    .map(([id, slugs]) => ({ id, slugs }));
 }
 
 /** Run validation for all classics once (client dev boot or server import). */
 export function validateAllClassicMeals(context = "init"): void {
   for (const meal of CLASSIC_HALL_MEALS) {
     validateClassicMealConsistency(meal, context);
+  }
+  const dups = findDuplicateClassicHeroIds();
+  for (const dup of dups) {
+    console.warn(
+      `[classic-meal:${context}] Duplicate Spoonacular hero id ${dup.id} on slugs: ${dup.slugs.join(", ")}`,
+    );
   }
 }

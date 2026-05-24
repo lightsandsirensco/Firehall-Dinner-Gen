@@ -1,0 +1,55 @@
+import { cn } from "@/lib/utils";
+
+export interface ExploreCategoryNavProps {
+  items: { id: string; label: string }[];
+  activeId?: string;
+  onSelect: (sectionId: string) => void;
+  className?: string;
+}
+
+export function ExploreCategoryNav({
+  items,
+  activeId,
+  onSelect,
+  className,
+}: ExploreCategoryNavProps) {
+  return (
+    <nav
+      className={cn(
+        "sticky top-0 z-30 -mx-4 px-4 sm:-mx-6 sm:px-6 py-3",
+        "bg-background/90 backdrop-blur-md border-b border-border/40",
+        className,
+      )}
+      aria-label="Browse meal categories"
+      data-testid="explore-category-nav"
+    >
+      <div
+        className={cn(
+          "flex gap-2 overflow-x-auto pb-0.5",
+          "scrollbar-thin scroll-smooth snap-x snap-mandatory",
+        )}
+      >
+        {items.map((item) => {
+          const active = activeId === item.id;
+          return (
+            <button
+              key={item.id}
+              type="button"
+              onClick={() => onSelect(item.id)}
+              className={cn(
+                "snap-start shrink-0 rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-wider",
+                "transition-colors duration-200 border",
+                active
+                  ? "bg-primary text-primary-foreground border-primary shadow-md shadow-primary/20"
+                  : "bg-muted/50 text-muted-foreground border-border/50 hover:bg-muted hover:text-foreground",
+              )}
+              data-testid={`nav-category-${item.id}`}
+            >
+              {item.label}
+            </button>
+          );
+        })}
+      </div>
+    </nav>
+  );
+}

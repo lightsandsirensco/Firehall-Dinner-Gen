@@ -32,6 +32,7 @@ import { shouldTryNextCandidate } from "./meal-composition";
 import { applyCrewPortionFloors, hallCleanupTip, hallProTips } from "./firehall-voice";
 import { isWeakTitle, resolvePolishTitle } from "./meal-plate";
 import { polishRecipeCopy } from "./recipe-polish";
+import { enhanceRecipeStepsSync, buildEnhanceContextFromTitle } from "./instruction-enhancer.js";
 import { getRecentSpoonacularIds, addRecentSpoonacularId } from "./cache-store";
 import type { GenerateRequest, GenerateResponse } from "../shared/schema";
 import type { RecipeSourceAttribution } from "../shared/canonical-recipe.js";
@@ -397,6 +398,12 @@ export async function runV2Generate(
   // ── Step 3: Build ordered candidate pool ────────────────────────────────
   //   Title-based protein pre-filter (zero API cost) then shuffle for variety.
   //   Candidates that don't clearly match the protein go to the back of the pool.
+  const formatInfo = FORMAT_MAP[request.meal_format || "random"] ?? FORMAT_MAP.random;
+  const mealFormat = request.meal_format || "random";
+  const relaxed = options?.relaxed === true;
+  const validationFormat = relaxed ? "random" : mealFormat;
+  const candidateLimit = relaxed ? Math.max(SEARCH_CANDIDATES, 12) : SEARCH_CANDIDATES;
+
   const proteinMatched = results.filter((c) => {
     const quick = inferActualProtein(c.title, []);
     return quick === "unknown" || proteinMatchesFilter(quick, chosenProtein);
@@ -411,12 +418,6 @@ export async function runV2Generate(
     `[v2] Candidate pool: ${ordered.length} ordered (${recentIds.size} recent IDs deprioritized, from ${results.length} search results)${relaxed ? " [relaxed]" : ""}`,
     "v2",
   );
-
-  const formatInfo = FORMAT_MAP[request.meal_format || "random"] ?? FORMAT_MAP.random;
-  const mealFormat = request.meal_format || "random";
-  const relaxed = options?.relaxed === true;
-  const validationFormat = relaxed ? "random" : mealFormat;
-  const candidateLimit = relaxed ? Math.max(SEARCH_CANDIDATES, 12) : SEARCH_CANDIDATES;
   const failures: Array<{ id: number; title: string; reason: string }> = [];
 
   // ── Step 4: Try candidates sequentially — stop on first valid (avg 1 detail call) ──
@@ -481,11 +482,19 @@ export async function runV2Generate(
       request.healthiness_preference || "balanced",
     );
 
+    const polishedSteps = enhanceRecipeStepsSync(polish.steps, buildEnhanceContextFromTitle(spoonacularTitle, {
+      protein: chosenProtein,
+      totalMinutes: recipe.timing?.total_minutes ?? 0,
+      crewSize: request.crew_size,
+      ingredients: keyIngredients,
+      mealFormat: request.meal_format,
+    }));
+
     const finalRecipe: GenerateResponse = {
       ...recipe,
       title: resolvePolishTitle(polish.title, recipe.title, spoonacularTitle),
       why_it_fits_tonight: polish.why_it_fits_tonight,
-      steps: polish.steps,
+      steps: polishedSteps,
       ingredients: applyCrewPortionFloors(recipe.ingredients || [], request.crew_size),
       cleanup_tip: hallCleanupTip(),
       pro_tips: hallProTips(request.crew_size, detail.servings || 4),

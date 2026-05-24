@@ -1,9 +1,20 @@
 import type { ExploreEditorialSection } from "@shared/explore-editorial";
 import { normalizeExploreRecipeList } from "@/lib/explore-recipe";
 
+export interface ExploreFeedMeta {
+  curatedPublished: number;
+  curatedOnly: boolean;
+  totalRecipes: number;
+  sectionSources?: Record<
+    string,
+    { curated: number; spoonacular: number; catalog: number; seed: number }
+  >;
+}
+
 export interface ExploreSectionsResponse {
   sections: ExploreEditorialSection[];
   _editorial?: boolean;
+  _meta?: ExploreFeedMeta;
 }
 
 export interface ExploreSectionsParams {

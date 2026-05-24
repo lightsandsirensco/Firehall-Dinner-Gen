@@ -2,6 +2,7 @@ import type { FilterState } from "@/components/filter-panel";
 import {
   CLASSIC_HALL_MEALS,
   getClassicHallMeal,
+  resolveClassicHeroImage,
   type ClassicHallMealMeta,
 } from "@shared/classic-hall-meals";
 import {
@@ -51,7 +52,7 @@ function metaToWheelClassic(meta: ClassicHallMealMeta): WheelClassic {
     crewLine: meta.description,
     tagline: meta.tagline,
     description: meta.description,
-    heroImage: pkg?.heroImage ?? `https://img.spoonacular.com/recipes/${meta.spoonacularRecipeId}-636x393.jpg`,
+    heroImage: resolveClassicHeroImage(meta),
     imageAlt: meta.imageAlt,
     cuisine: meta.cuisine,
     mealFormat: meta.mealFormat,

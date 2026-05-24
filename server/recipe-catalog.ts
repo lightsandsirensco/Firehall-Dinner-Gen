@@ -2,7 +2,7 @@
  * Recipe catalog — SQLite persistence for real recipes (V2 write-through).
  */
 
-import { log } from "./index";
+import { log } from "./logger.js";
 import type { GenerateRequest, GenerateResponse } from "../shared/schema.js";
 import {
   type CanonicalRecipe,
@@ -12,6 +12,7 @@ import {
   inferCleanupDifficulty,
 } from "../shared/canonical-recipe.js";
 import { scoreAppetiteAppeal } from "../shared/explore-editorial.js";
+import { canonicalMatchesExplorePool } from "../shared/ingestion/pool-match.js";
 import { spoonacularImageUrl } from "../shared/explore-recipe.js";
 import { getSharedLocalDb, type SqliteDatabase } from "./sqlite.js";
 
@@ -275,18 +276,85 @@ export function getCatalogById(catalogId: string): CanonicalRecipe | null {
   }
 }
 
-/** Load top catalog rows for generate-time ranking (catalog-before-V2). */
-export function listCatalogCandidates(limit = 80): CanonicalRecipe[] {
+/** Explore rails — include lower-quality rows so empty DBs still surface meals. */
+export function listCatalogCandidatesForExplore(limit = 120, protein?: string): CanonicalRecipe[] {
   const database = requireDb();
   const safeLimit = Math.min(Math.max(limit, 1), 200);
-  const rows = database
-    .prepare(
-      `SELECT payload_json FROM recipe_catalog
-       WHERE quality_score >= ?
-       ORDER BY quality_score DESC, appetite_score DESC, served_count DESC
-       LIMIT ?`,
-    )
-    .all(MIN_LIST_QUALITY, safeLimit) as { payload_json: string }[];
+  const proteinKey = (protein || "").toLowerCase().trim();
+  const filterProtein = proteinKey && proteinKey !== "any";
+
+  const rows = filterProtein
+    ? (database
+        .prepare(
+          `SELECT payload_json FROM recipe_catalog
+           WHERE LOWER(protein) = ?
+           ORDER BY quality_score DESC, appetite_score DESC, updated_at DESC
+           LIMIT ?`,
+        )
+        .all(proteinKey, safeLimit) as { payload_json: string }[])
+    : (database
+        .prepare(
+          `SELECT payload_json FROM recipe_catalog
+           ORDER BY quality_score DESC, appetite_score DESC, updated_at DESC
+           LIMIT ?`,
+        )
+        .all(safeLimit) as { payload_json: string }[]);
+
+  const out: CanonicalRecipe[] = [];
+  for (const row of rows) {
+    if (!row?.payload_json) continue;
+    try {
+      const parsed = JSON.parse(row.payload_json) as CanonicalRecipe;
+      if (parsed?.catalogId && parsed.generateResponse) out.push(parsed);
+    } catch {
+      /* skip */
+    }
+  }
+  return out;
+}
+
+/** Catalog rows scoped to an Explore editorial pool (bbq, comfort, quick, …). */
+export function listCatalogForExplorePool(poolTag: string, limit = 12): CanonicalRecipe[] {
+  const pool = poolTag.toLowerCase();
+  const protein =
+    pool === "chicken" ? "chicken" : pool === "beef" ? "beef" : undefined;
+  const poolLimit = Math.min(Math.max(limit * 4, 24), 120);
+  let candidates = listCatalogCandidatesForExplore(poolLimit, protein).filter((r) =>
+    canonicalMatchesExplorePool(r, pool),
+  );
+  if (candidates.length < limit) {
+    const more = listCatalogCandidatesForExplore(poolLimit).filter(
+      (r) => canonicalMatchesExplorePool(r, pool) && !candidates.some((c) => c.catalogId === r.catalogId),
+    );
+    candidates = [...candidates, ...more];
+  }
+  return candidates.slice(0, limit);
+}
+
+/** Load top catalog rows for generate-time ranking (catalog-before-V2). */
+export function listCatalogCandidates(limit = 80, protein?: string): CanonicalRecipe[] {
+  const database = requireDb();
+  const safeLimit = Math.min(Math.max(limit, 1), 200);
+  const proteinKey = (protein || "").toLowerCase().trim();
+  const filterProtein = proteinKey && proteinKey !== "any";
+
+  const rows = filterProtein
+    ? (database
+        .prepare(
+          `SELECT payload_json FROM recipe_catalog
+           WHERE quality_score >= ? AND LOWER(protein) = ?
+           ORDER BY quality_score DESC, appetite_score DESC, updated_at DESC
+           LIMIT ?`,
+        )
+        .all(MIN_LIST_QUALITY, proteinKey, safeLimit) as { payload_json: string }[])
+    : (database
+        .prepare(
+          `SELECT payload_json FROM recipe_catalog
+           WHERE quality_score >= ?
+           ORDER BY quality_score DESC, appetite_score DESC, updated_at DESC
+           LIMIT ?`,
+        )
+        .all(MIN_LIST_QUALITY, safeLimit) as { payload_json: string }[]);
 
   const out: CanonicalRecipe[] = [];
   for (const row of rows) {

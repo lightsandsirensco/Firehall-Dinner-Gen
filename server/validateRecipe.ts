@@ -466,6 +466,11 @@ function isDuplicate(protein: string, sig: string, ctx: RecipeValidationContext)
   return false;
 }
 
+/** True when a cached or catalog hit should not be served (recent / current meal). */
+export function isBlockedByRecentVariety(sig: string, ctx: RecipeValidationContext): boolean {
+  return isDuplicate(ctx.chosenProtein, sig, ctx);
+}
+
 function fixStructureIssues(recipe: GenerateResponse, issues: string[], allergens: string[]): GenerateResponse {
   let fixed = { ...recipe, ingredients: [...recipe.ingredients], steps: [...recipe.steps] };
 

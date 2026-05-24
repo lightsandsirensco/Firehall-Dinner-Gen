@@ -8,6 +8,7 @@ import Home from "@/pages/home";
 import PizzaNight from "@/pages/pizza-night";
 import ExplorePage from "@/pages/explore";
 import AdminPage from "@/pages/admin";
+import AdminIngestionPage from "@/pages/admin-ingestion";
 import VotePage from "@/pages/vote";
 import FavoritesPage from "@/pages/favorites";
 import ClassicsWheelPage from "@/pages/classics-wheel";
@@ -24,6 +25,7 @@ function Router() {
       <Route path="/wheel" component={ClassicsWheelPage} />
       <Route path="/package/:slug" component={CuratedPackagePage} />
       <Route path="/admin" component={AdminPage} />
+      <Route path="/admin/ingestion" component={AdminIngestionPage} />
       <Route path="/vote/:voteId" component={VotePage} />
       <Route path="/favorites" component={FavoritesPage} />
       <Route component={NotFound} />

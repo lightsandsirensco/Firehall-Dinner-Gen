@@ -6,7 +6,7 @@ import type {
 } from "./schema";
 import {
   getClassicHallMeal,
-  spoonacularHeroImage,
+  resolveClassicHeroImage,
   validateClassicMealConsistency,
   validateAllClassicMeals,
   type ClassicHallMealMeta,
@@ -17,6 +17,7 @@ export {
   CLASSIC_HALL_MEALS,
   getClassicHallMeal,
   getClassicHeroImage,
+  resolveClassicHeroImage,
   spoonacularHeroImage,
   validateClassicMealConsistency,
   validateAllClassicMeals,
@@ -135,7 +136,7 @@ function enrichCuratedPackage(input: CuratedPackageInput): CuratedPackageDef {
   if (!meta) {
     throw new Error(`[curated-hall-packages] Missing classic-hall-meals meta for slug: ${input.slug}`);
   }
-  const heroImage = spoonacularHeroImage(meta.spoonacularRecipeId);
+  const heroImage = resolveClassicHeroImage(meta);
   const def: CuratedPackageDef = {
     ...input,
     title: meta.title,

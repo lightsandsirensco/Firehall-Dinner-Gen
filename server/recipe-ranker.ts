@@ -29,6 +29,10 @@ export interface CatalogPickOptions {
   currentRecipeSignature?: string;
   /** Skip strict meal_format match and lower quality bar — used before template fallback. */
   relaxed?: boolean;
+  /** Rotates among top catalog matches (e.g. hash of request_id). */
+  varietySeed?: number;
+  /** Session Spoonacular IDs to deprioritize (same as V2). */
+  recentSpoonacularIds?: number[];
 }
 
 export interface CatalogGenerateHit {
@@ -84,7 +88,7 @@ function rankCatalogEntry(
   entry: CanonicalRecipe,
   request: GenerateRequest,
 ): number {
-  let score = entry.qualityScore;
+  let score = entry.qualityScore + Math.round((entry.appetiteScore || 0) * 0.25);
   const reqFormat = request.meal_format || "random";
   if (reqFormat !== "random" && entry.mealFormat === reqFormat) score += 12;
   const reqArchetype = mealFormatToArchetype(reqFormat);
@@ -96,8 +100,29 @@ function rankCatalogEntry(
       score -= 15;
     }
   }
-  score += Math.min(10, Math.floor((entry.servedCount || 1) / 3));
+  // Penalize over-served catalog rows so early generations don't lock onto one "winner".
+  score -= Math.min(12, Math.floor((entry.servedCount || 1) / 2));
   return score;
+}
+
+function hashVarietySeed(input: string): number {
+  let h = 0;
+  for (let i = 0; i < input.length; i++) {
+    h = (Math.imul(31, h) + input.charCodeAt(i)) | 0;
+  }
+  return Math.abs(h);
+}
+
+const CATALOG_PICK_BAND = 8;
+
+function pickFromViableBand(
+  viable: Array<{ entry: CanonicalRecipe; rank: number }>,
+  varietySeed: number,
+): { entry: CanonicalRecipe; rank: number } {
+  const band = viable.slice(0, CATALOG_PICK_BAND);
+  if (band.length === 1) return band[0]!;
+  const idx = varietySeed % band.length;
+  return band[idx]!;
 }
 
 function filterCatalogEntry(
@@ -108,7 +133,8 @@ function filterCatalogEntry(
   const minQuality = relaxed ? MIN_QUALITY_SCORE_RELAXED : MIN_QUALITY_SCORE;
   if (entry.qualityScore < minQuality) return false;
   if (!entry.generateResponse?.title?.trim()) return false;
-  if (!entry.spoonacularId || entry.spoonacularId <= 0) return false;
+  const hasCuratedId = Boolean(entry.curatedSlug || entry.catalogId?.startsWith("curated:"));
+  if ((!entry.spoonacularId || entry.spoonacularId <= 0) && !hasCuratedId) return false;
 
   const selectedProtein = request.protein || "any";
   if (!proteinMatchesFilter(entry.protein, selectedProtein)) return false;
@@ -135,7 +161,7 @@ export function pickCatalogRecipeForGenerate(
   options: CatalogPickOptions = {},
 ): CatalogGenerateHit | null {
   const relaxed = options.relaxed === true;
-  const pool = listCatalogCandidates(CANDIDATE_POOL_LIMIT);
+  const pool = listCatalogCandidates(CANDIDATE_POOL_LIMIT, request.protein);
   if (pool.length === 0) {
     log(`[catalog] generate miss: empty catalog${relaxed ? " (relaxed)" : ""}`, "catalog");
     return null;
@@ -154,28 +180,46 @@ export function pickCatalogRecipeForGenerate(
     .map((entry) => ({ entry, rank: rankCatalogEntry(entry, request) }))
     .sort((a, b) => b.rank - a.rank);
 
-  for (const { entry } of ranked.slice(0, 12)) {
+  const recentSpoonIds = new Set(options.recentSpoonacularIds || []);
+  const viable: Array<{ entry: CanonicalRecipe; rank: number }> = [];
+
+  for (const item of ranked) {
+    const { entry } = item;
+    if (entry.spoonacularId && recentSpoonIds.has(entry.spoonacularId)) continue;
+
     const recipe = rescaleCatalogRecipe(entry, request);
     const sig = computeSignature(recipe);
     if (signatureIsBlocked(sig, entry.protein, options)) continue;
 
-    log(
-      `[catalog] generate hit id=${entry.catalogId} title="${entry.title.slice(0, 48)}" quality=${entry.qualityScore} rank=${rankCatalogEntry(entry, request)}${relaxed ? " (relaxed)" : ""}`,
-      "catalog",
-    );
-
-    return {
-      catalogId: entry.catalogId,
-      spoonacularId: entry.spoonacularId,
-      originalTitle: entry.title,
-      protein: entry.protein,
-      recipe,
-      recipeSource: entry.source,
-    };
+    viable.push(item);
+    if (viable.length >= 24) break;
   }
 
-  log(`[catalog] generate miss: ${filtered.length} matched but all blocked by variety`, "catalog");
-  return null;
+  if (viable.length === 0) {
+    log(`[catalog] generate miss: ${filtered.length} matched but all blocked by variety`, "catalog");
+    return null;
+  }
+
+  const seedInput =
+    options.varietySeed !== undefined
+      ? String(options.varietySeed)
+      : `${request.protein}:${(options.recentSignatures || []).length}`;
+  const varietySeed = hashVarietySeed(seedInput);
+  const { entry, rank } = pickFromViableBand(viable, varietySeed);
+
+  log(
+    `[catalog] generate hit id=${entry.catalogId} title="${entry.title.slice(0, 48)}" quality=${entry.qualityScore} rank=${rank} pick=${(varietySeed % Math.min(viable.length, CATALOG_PICK_BAND)) + 1}/${Math.min(viable.length, CATALOG_PICK_BAND)}${relaxed ? " (relaxed)" : ""}`,
+    "catalog",
+  );
+
+  return {
+    catalogId: entry.catalogId,
+    spoonacularId: entry.spoonacularId,
+    originalTitle: entry.title,
+    protein: entry.protein,
+    recipe: rescaleCatalogRecipe(entry, request),
+    recipeSource: entry.source,
+  };
 }
 
 /** Explore search last resort — any catalog row with a hero image (real recipe). */

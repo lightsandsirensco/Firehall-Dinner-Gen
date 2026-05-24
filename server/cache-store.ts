@@ -60,6 +60,7 @@ export function buildCacheKey(templateId: string, request: GenerateRequest, chos
     appliances: [...request.appliances].sort(),
     chosen_protein: chosenProtein || request.protein,
     healthiness_preference: request.healthiness_preference,
+    meal_format: request.meal_format || "random",
     allergens_to_avoid: [...request.allergens_to_avoid].sort(),
     vegetarian_swap_needed: !!request.vegetarian_swap_needed,
     budget_level: request.budget_level || "standard",
@@ -277,6 +278,60 @@ export function addRecentSpoonacularId(sessionKey: string, recipeId: number): vo
     filtered.splice(0, filtered.length - SESSION_MAX_SPOONACULAR_IDS);
   }
   sessionSpoonacularIdStore.set(sessionKey, filtered);
+}
+
+/** Per-session side rotation — avoids cross-user repetition */
+const SESSION_MAX_SIDE_RECENT = 8;
+const sessionSideStarchStore = new Map<string, string[]>();
+const sessionSideVegStore = new Map<string, string[]>();
+const sessionSideBundleStore = new Map<string, string[]>();
+
+export function getSessionSideStarch(sessionKey: string): string[] {
+  return sessionSideStarchStore.get(sessionKey) || [];
+}
+
+export function getSessionSideVeg(sessionKey: string): string[] {
+  return sessionSideVegStore.get(sessionKey) || [];
+}
+
+export function getSessionSideBundles(sessionKey: string): string[] {
+  return sessionSideBundleStore.get(sessionKey) || [];
+}
+
+export function trackSessionComposedSides(
+  sessionKey: string,
+  starchKey: string | null,
+  vegLabel: string | null,
+  bundleId?: string | null,
+): void {
+  if (!sessionKey) return;
+  if (starchKey) {
+    let arr = sessionSideStarchStore.get(sessionKey);
+    if (!arr) {
+      arr = [];
+      sessionSideStarchStore.set(sessionKey, arr);
+    }
+    arr.push(starchKey);
+    if (arr.length > SESSION_MAX_SIDE_RECENT) arr.shift();
+  }
+  if (vegLabel) {
+    let arr = sessionSideVegStore.get(sessionKey);
+    if (!arr) {
+      arr = [];
+      sessionSideVegStore.set(sessionKey, arr);
+    }
+    arr.push(vegLabel);
+    if (arr.length > SESSION_MAX_SIDE_RECENT) arr.shift();
+  }
+  if (bundleId) {
+    let arr = sessionSideBundleStore.get(sessionKey);
+    if (!arr) {
+      arr = [];
+      sessionSideBundleStore.set(sessionKey, arr);
+    }
+    arr.push(bundleId);
+    if (arr.length > SESSION_MAX_SIDE_RECENT) arr.shift();
+  }
 }
 
 export function logUsage(entry: {

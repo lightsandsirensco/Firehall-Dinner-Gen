@@ -1,11 +1,12 @@
 /**
  * Single source of truth for Explore recipe cards.
- * Images are always derived from Spoonacular recipe id — never mixed across recipes.
+ * Spoonacular search cards use recipe id for CDN URLs; hall classics may use heroImagePath overrides.
  */
 
 export type SpoonacularImageSize = "636x393" | "556x370" | "312x231";
 
 import type { ExploreBadge } from "./explore-card-presentation.js";
+import { getClassicHallMeal, resolveClassicHeroImage } from "./classic-hall-meals.js";
 
 /** Atomic Explore card — title, image, and id always travel together. */
 export interface ExploreRecipeCard {
@@ -26,10 +27,20 @@ export interface ExploreRecipeCard {
   primaryProtein?: string;
   comfortLabel?: string;
   badges?: ExploreBadge[];
+  /** Server-computed quick pills (30 Min, High Protein, etc.) */
+  quickPills?: string[];
   hookLine?: string;
   macros?: { calories?: number; protein_g?: number };
   imageVariants?: { w312: string; w556: string; w636: string };
   qualityScore?: number;
+  /** Publisher / partner name from curated_recipes.source_name */
+  publisherName?: string;
+  /** True when card row came from curated_recipes (not live Spoonacular search) */
+  fromCuratedDb?: boolean;
+  curatedRecipeId?: string;
+  /** Hero image is original publisher/editorial photography (not Spoonacular CDN) */
+  publisherMedia?: boolean;
+  sourceKind?: string;
 }
 
 export function spoonacularImageUrl(
@@ -104,16 +115,29 @@ export function normalizeExploreRecipeCard(
     image = upgradeSpoonacularImageSize(fromApi, "636x393");
   } else if (fromApi && urlId !== null && urlId !== id) {
     logImageMismatch(title, id, urlId, context);
-    image = canonical;
+    // Curated hall cards: hero URL carries the real Spoonacular id — never rewrite to card.id
+    image = raw._curatedSlug
+      ? upgradeSpoonacularImageSize(fromApi, "636x393")
+      : canonical;
   } else if (fromApi && !fromApi.includes("spoonacular.com")) {
     image = fromApi;
+  }
+
+  let imageAlt = (raw.imageAlt || title).trim() || title;
+  const publisherMedia = Boolean(raw.publisherMedia);
+  if (raw._curatedSlug && !publisherMedia) {
+    const meta = getClassicHallMeal(String(raw._curatedSlug));
+    if (meta) {
+      image = resolveClassicHeroImage(meta);
+      imageAlt = meta.imageAlt || imageAlt;
+    }
   }
 
   const card: ExploreRecipeCard = {
     id,
     title,
     image,
-    imageAlt: title,
+    imageAlt,
     readyInMinutes: Number(raw.readyInMinutes) || 0,
     servings: Number(raw.servings) || 0,
     summary: (raw.summary || "").replace(/<[^>]*>/g, "").substring(0, 300),
@@ -129,11 +153,22 @@ export function normalizeExploreRecipeCard(
     hookLine: raw.hookLine,
     macros: raw.macros,
     qualityScore: raw.qualityScore,
-    imageVariants: {
-      w312: spoonacularImageUrl(id, "312x231"),
-      w556: spoonacularImageUrl(id, "556x370"),
-      w636: spoonacularImageUrl(id, "636x393"),
-    },
+    publisherMedia,
+    sourceKind: raw.sourceKind,
+    publisherName: raw.publisherName,
+    fromCuratedDb: raw.fromCuratedDb,
+    curatedRecipeId: raw.curatedRecipeId,
+    imageVariants: image.includes("spoonacular.com")
+      ? {
+          w312: spoonacularImageUrl(id, "312x231"),
+          w556: spoonacularImageUrl(id, "556x370"),
+          w636: spoonacularImageUrl(id, "636x393"),
+        }
+      : {
+          w312: image,
+          w556: image,
+          w636: image,
+        },
   };
 
   return card;

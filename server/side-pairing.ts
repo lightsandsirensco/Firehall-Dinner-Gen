@@ -14,6 +14,12 @@ import {
   type MealIdentity,
 } from "@shared/meal-semantics";
 import { getRecentCarbs, trackCarb } from "./carb-rules";
+import {
+  getSessionSideBundles,
+  getSessionSideStarch,
+  getSessionSideVeg,
+  trackSessionComposedSides,
+} from "./cache-store.js";
 import { log } from "./index";
 
 export interface SidePairingContext {
@@ -24,6 +30,8 @@ export interface SidePairingContext {
   healthiness: string;
   allergens: string[];
   formatKey: string;
+  /** When set, side rotation is scoped to this session (not global). */
+  sessionKey?: string;
 }
 
 export interface ComposedSidePick {
@@ -106,6 +114,15 @@ export const STARCH_TEMPLATES: Record<string, { item: string; amount: string; st
     step: {
       heading: "Make mac & cheese (simmer + bake, 25 min)",
       body: "Cook macaroni, toss with cheese sauce, and bake until bubbly. Hold warm on the table.",
+    },
+  },
+  spaghetti: {
+    item: "Spaghetti, dry",
+    amount: "2 lbs",
+    carbTag: "pasta",
+    step: {
+      heading: "Cook spaghetti (boil, 10–12 min)",
+      body: "Boil spaghetti in salted water until al dente. Drain and toss with a little olive oil; hold warm for plating.",
     },
   },
   "garlic bread": {
@@ -319,13 +336,15 @@ function pickArchetypeBundle(
   let viable = bundles.filter((b) => bundlePassesAllergens(b, ctx.allergens));
   if (viable.length === 0) viable = bundles;
 
-  const recentBundleSet = new Set(recentBundleIds);
+  const bundleRecent = bundleRecentForCtx(ctx);
+  const vegRecent = vegRecentForCtx(ctx);
+  const recentBundleSet = new Set(bundleRecent);
   let fresh = viable.filter((b) => {
     if (recentBundleSet.has(b.id)) return false;
     const sk = sideKey(b.starchKey);
     const vk = sideKey(b.vegLabel);
     const starchHits = recentAllStarch.filter((r) => r === sk || r.includes(sk)).length;
-    const vegHits = recentVegLabels.filter((v) => sideKey(v) === vk).length;
+    const vegHits = vegRecent.filter((v) => sideKey(v) === vk).length;
     return starchHits < 2 && vegHits < 2;
   });
   if (fresh.length === 0) fresh = viable;
@@ -371,7 +390,12 @@ export function trackComposedSides(
   starchKey: string | null,
   vegLabel: string | null,
   bundleId?: string | null,
+  sessionKey?: string,
 ): void {
+  if (sessionKey) {
+    trackSessionComposedSides(sessionKey, starchKey, vegLabel, bundleId);
+    return;
+  }
   if (starchKey) {
     const k = sideKey(starchKey);
     recentStarchKeys.push(k);
@@ -389,6 +413,24 @@ export function trackComposedSides(
   }
 }
 
+function starchRecentForCtx(ctx: SidePairingContext): string[] {
+  const recentCarbKeys = getRecentCarbs().map((c) => sideKey(c));
+  if (ctx.sessionKey) {
+    return [...getSessionSideStarch(ctx.sessionKey).map(sideKey), ...recentCarbKeys];
+  }
+  return [...recentStarchKeys, ...recentCarbKeys];
+}
+
+function vegRecentForCtx(ctx: SidePairingContext): string[] {
+  if (ctx.sessionKey) return getSessionSideVeg(ctx.sessionKey);
+  return recentVegLabels;
+}
+
+function bundleRecentForCtx(ctx: SidePairingContext): string[] {
+  if (ctx.sessionKey) return getSessionSideBundles(ctx.sessionKey);
+  return recentBundleIds;
+}
+
 /** Title-specific curated dinners (highest priority). */
 function pickTitleCurated(title: string): Partial<ComposedSidePick> | null {
   const t = title.toLowerCase();
@@ -399,7 +441,12 @@ function pickTitleCurated(title: string): Partial<ComposedSidePick> | null {
     return { starchKey: "basmati rice", vegLabel: "Cucumber yogurt salad", extraLabel: "Warm naan", pairingSource: "title:indian_curry" };
   }
   if (/\bchicken parm/.test(t)) {
-    return { starchKey: "garlic bread", vegLabel: "Caesar salad", extraLabel: null, pairingSource: "title:chicken_parm" };
+    return {
+      starchKey: "spaghetti",
+      vegLabel: "Caesar salad",
+      extraLabel: "Garlic bread",
+      pairingSource: "title:chicken_parm",
+    };
   }
   if (/\b(korean beef|bulgogi|bibimbap)\b/.test(t)) {
     return { starchKey: "jasmine rice", vegLabel: "Quick cucumber salad", extraLabel: "Kimchi", pairingSource: "title:korean" };
@@ -421,8 +468,8 @@ const PLATED_STARCH_ROTATION = ["mashed potatoes", "jasmine rice", "potato wedge
 export function pickComposedSides(ctx: SidePairingContext): ComposedSidePick {
   const cuisineKey = normalizeCuisine(ctx.cuisine);
   const identity = detectMealIdentity(ctx.title, ctx.formatKey);
-  const recentCarbKeys = getRecentCarbs().map((c) => sideKey(c));
-  const recentAllStarch = [...recentStarchKeys, ...recentCarbKeys];
+  const recentAllStarch = starchRecentForCtx(ctx);
+  const vegRecent = vegRecentForCtx(ctx);
 
   const curated = pickTitleCurated(ctx.title);
   if (curated?.starchKey || curated?.vegLabel) {
@@ -432,7 +479,7 @@ export function pickComposedSides(ctx: SidePairingContext): ComposedSidePick {
       recentAllStarch.filter((r) => r === curatedStarch || r.includes(curatedStarch)).length >= 2;
     const vegRepeated =
       curated.vegLabel &&
-      recentVegLabels.filter((v) => sideKey(v) === sideKey(curated.vegLabel!)).length >= 2;
+      vegRecent.filter((v) => sideKey(v) === sideKey(curated.vegLabel!)).length >= 2;
 
     if (!starchRepeated && !vegRepeated) {
       return {
@@ -481,7 +528,7 @@ export function pickComposedSides(ctx: SidePairingContext): ComposedSidePick {
   );
   const vegLabel = pickFromPool(
     vegPool,
-    recentVegLabels,
+    vegRecent,
     ctx.healthiness,
     ctx.allergens,
     false,

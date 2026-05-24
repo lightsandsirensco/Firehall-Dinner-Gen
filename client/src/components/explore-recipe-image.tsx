@@ -1,7 +1,11 @@
 import { useEffect, useState } from "react";
 import { Flame } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { exploreImageSrcSet, spoonacularImageUrl } from "@/lib/explore-recipe";
+import {
+  exploreImageSrcSet,
+  spoonacularImageUrl,
+  extractRecipeIdFromSpoonacularImage,
+} from "@/lib/explore-recipe";
 import type { ExploreRecipeCard } from "@/lib/explore-recipe";
 
 interface ExploreRecipeImageProps {
@@ -12,6 +16,10 @@ interface ExploreRecipeImageProps {
   variant?: "card" | "detail";
   /** Apply warm cinematic grade + vignette (card thumbnails) */
   cinematic?: boolean;
+  /** Responsive sizes hint for larger Explore rails */
+  sizesHint?: "rail" | "grid" | "spotlight";
+  /** LCP / above-the-fold cards */
+  priority?: boolean;
 }
 
 export function ExploreRecipeImage({
@@ -20,23 +28,36 @@ export function ExploreRecipeImage({
   imgClassName,
   variant = "card",
   cinematic = false,
+  sizesHint = "grid",
+  priority = false,
 }: ExploreRecipeImageProps) {
+  const sizes =
+    sizesHint === "spotlight"
+      ? "100vw"
+      : sizesHint === "rail"
+        ? "(max-width: 640px) 88vw, 320px"
+        : "(max-width: 640px) 50vw, 280px";
   const [src, setSrc] = useState(recipe.image);
   const [loaded, setLoaded] = useState(false);
   const [failed, setFailed] = useState(false);
+
+  const imageRecipeId =
+    extractRecipeIdFromSpoonacularImage(recipe.image) ??
+    (recipe.image?.includes("spoonacular.com") && recipe.id > 0 && recipe.id < 500_000
+      ? recipe.id
+      : 0);
 
   useEffect(() => {
     setSrc(recipe.image);
     setLoaded(false);
     setFailed(false);
   }, [recipe.id, recipe.image]);
-
   const canSpoonacularFallback =
-    recipe.id > 0 &&
-    recipe.id < 500_000 &&
+    imageRecipeId > 0 &&
+    imageRecipeId < 500_000 &&
     (recipe.image?.includes("spoonacular.com") || !recipe.image);
-  const fallbackSrc = canSpoonacularFallback ? spoonacularImageUrl(recipe.id) : "";
-  const srcSet = canSpoonacularFallback ? exploreImageSrcSet(recipe.id) : undefined;
+  const fallbackSrc = canSpoonacularFallback ? spoonacularImageUrl(imageRecipeId) : "";
+  const srcSet = canSpoonacularFallback ? exploreImageSrcSet(imageRecipeId) : undefined;
   const showImage = Boolean(src) && !failed;
 
   return (
@@ -49,7 +70,7 @@ export function ExploreRecipeImage({
     >
       {!loaded && showImage && (
         <div
-          className="absolute inset-0 animate-pulse bg-gradient-to-br from-zinc-800/80 via-zinc-900/40 to-zinc-800/80"
+          className="absolute inset-0 bg-zinc-900/90 backdrop-blur-md animate-pulse"
           aria-hidden
         />
       )}
@@ -58,16 +79,18 @@ export function ExploreRecipeImage({
           key={`explore-img-${recipe.id}`}
           src={src}
           srcSet={srcSet}
-          sizes={variant === "card" ? "(max-width: 640px) 50vw, 33vw" : "100vw"}
+          sizes={variant === "card" ? sizes : "100vw"}
           alt={recipe.imageAlt || recipe.title}
           className={cn(
             "w-full h-full object-cover object-center transition-opacity duration-300",
             cinematic && "saturate-[1.08] contrast-[1.05] brightness-[0.92]",
-            loaded ? "opacity-100" : "opacity-0",
+            loaded ? "opacity-100 scale-100" : "opacity-0 scale-[1.02]",
+            "transition-[opacity,transform] duration-500 ease-out",
             imgClassName,
           )}
-          loading="lazy"
+          loading={priority ? "eager" : "lazy"}
           decoding="async"
+          fetchPriority={priority ? "high" : "auto"}
           onLoad={() => setLoaded(true)}
           onError={() => {
             if (fallbackSrc && src !== fallbackSrc) {

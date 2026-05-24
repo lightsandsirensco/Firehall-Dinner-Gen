@@ -227,6 +227,11 @@ export function PizzaCard({ recipe, crewSize, onEmailClick, onShoppingListClick 
           <Badge variant="secondary" className="text-xs" data-testid="pizza-badge-count">
             {recipe.recommended_pizzas}
           </Badge>
+          {recipe.pizza_style_id && (
+            <Badge variant="outline" className="text-xs capitalize border-primary/30 text-primary">
+              {recipe.pizza_style_id.replace(/_/g, " ")}
+            </Badge>
+          )}
         </div>
       </div>
 

@@ -17,11 +17,13 @@ import { getSavedCount } from "@/lib/saved-meals";
 import { apiRequest } from "@/lib/queryClient";
 import { buildFilterKey, putCached, addRecentSignature, getRecentSignatures } from "@/lib/recipe-cache";
 import {
-  prefetchMealsIfReturning,
+  schedulePrefetchAfterGeneration,
+  cancelActivePrefetches,
   consumePrefetched,
   markUserHasGenerated,
   hasUserGeneratedBefore,
 } from "@/lib/prefetch";
+import { GENERATION_INTENT_USER } from "@shared/generation-intent";
 import { trackEvent, trackMealGenerated, trackEmailModalOpened } from "@/lib/analytics";
 import {
   getPersistedGenerationCount,
@@ -306,11 +308,9 @@ export default function Home() {
     };
   }, [openEarnedEmailCapture]);
 
-  // ── Warmup (prefetch only for returning users — saves API on first visit) ─
+  // ── Warmup only — no background /api/generate on mount (burned rate limits) ─
   useEffect(() => {
     fetch("/api/warm").catch(() => {});
-    const payload = buildRequestPayload(filters);
-    prefetchMealsIfReturning(payload);
   }, []);
 
   // ─────────────────────────────────────────────────────────────────────────
@@ -434,6 +434,7 @@ export default function Home() {
 
     lastClickTime.current = now;
     isGenerating.current = true;
+    cancelActivePrefetches();
 
     // Cancel any in-flight request (e.g. if the lock somehow wasn't set).
     if (abortControllerRef.current) {
@@ -458,7 +459,7 @@ export default function Home() {
       if (cached) {
         console.log(`[Generate] Prefetch hit: "${cached.title}" seq=${seq}`);
         applyRecipe(cached, seq);
-        setTimeout(() => prefetchMealsIfReturning(payload), 100);
+        schedulePrefetchAfterGeneration(payload);
         return;
       }
     }
@@ -474,6 +475,7 @@ export default function Home() {
       const res = await apiRequest("POST", `/api/generate${debugParam}`, {
         ...payload,
         request_id: requestId,
+        generation_intent: GENERATION_INTENT_USER,
         exclude_signatures: recentSigs,
         recentSignatures: recentSigs,
         currentRecipeSignature: currentSignatureRef.current,
@@ -496,7 +498,7 @@ export default function Home() {
 
       if (!preferDifferentStyle) {
         putCached(filterKey, data);
-        setTimeout(() => prefetchMealsIfReturning(payload), 100);
+        schedulePrefetchAfterGeneration(payload);
       }
     } catch (err: any) {
       clearTimeout(timeout);
@@ -525,8 +527,17 @@ export default function Home() {
         setRecipe(null);
       } else if (msg.includes("429")) {
         try {
-          const parsed = JSON.parse(msg.replace(/^\d+:\s*/, ""));
-          errorMsg = parsed.message || "Rate limit reached. Please wait a moment.";
+          const parsed = JSON.parse(msg.replace(/^\d+:\s*/, "")) as {
+            message?: string;
+            retry_after_seconds?: number;
+          };
+          const waitSec = parsed.retry_after_seconds;
+          const waitHint =
+            waitSec && waitSec > 0
+              ? ` Try again in about ${Math.ceil(waitSec)} seconds.`
+              : "";
+          errorMsg =
+            (parsed.message || "Rate limit reached. Please wait a moment.") + waitHint;
         } catch {
           errorMsg = "Too many requests. Please wait a moment before generating again.";
         }

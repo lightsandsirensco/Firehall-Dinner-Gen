@@ -8,7 +8,21 @@
     "build": "tsx script/build.ts",
     "start": "NODE_ENV=production node dist/index.cjs",
     "check": "tsc",
-    "db:push": "drizzle-kit push"
+    "db:push": "drizzle-kit push",
+    "ingest:discover": "tsx scripts/ingest-discovery.ts",
+    "ingest:apify": "tsx scripts/apify-export-trends.ts",
+    "ingest:pinterest": "tsx scripts/ingest-pinterest.ts",
+    "ingest:pinterest:promote": "tsx scripts/ingest-pinterest.ts --promote",
+    "ingest:weekly": "tsx scripts/apify-export-trends.ts --merge && tsx scripts/ingest-pinterest.ts --promote",
+    "db:sync-curated": "tsx scripts/sync-catalog-to-curated.ts",
+    "seed:explore": "tsx scripts/seed-curated-explore.ts",
+    "audit:explore": "tsx scripts/audit-explore-flow.ts",
+    "seed:publisher": "tsx scripts/seed-publisher-explore.ts",
+    "expand:recipes": "tsx scripts/expand-recipes.ts",
+    "expand:recipes:promote": "tsx scripts/expand-recipes.ts --promote",
+    "expand:recipes:publisher": "tsx scripts/expand-recipes.ts --promote --prefer-publisher",
+    "expand:backfill-archetypes": "tsx scripts/backfill-recipe-archetypes.ts",
+    "audit:classics-wheel": "tsx scripts/audit-classic-wheel-images.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

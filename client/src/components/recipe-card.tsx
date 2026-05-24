@@ -293,7 +293,7 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
           <ShieldCheck className="w-3.5 h-3.5 text-primary/55 shrink-0" aria-hidden />
           <span>{trustLine}</span>
         </p>
-        {recipe._recipe_source?.name && (
+        {recipe._recipe_source?.name && !recipe._fallback && (
           <p className="text-xs text-muted-foreground/80 mt-1 max-w-xl" data-testid="text-recipe-source">
             {recipe._recipe_source.url ? (
               <>
@@ -310,6 +310,11 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
             ) : (
               <>Recipe from {recipe._recipe_source.name}</>
             )}
+          </p>
+        )}
+        {recipe._fallback && (
+          <p className="text-xs text-amber-700/90 dark:text-amber-500/90 mt-1 max-w-xl" data-testid="text-template-fallback">
+            Built from a station template when no catalog match was found — try different filters for a publisher recipe.
           </p>
         )}
         {mealPlate?.cuisine_label && (

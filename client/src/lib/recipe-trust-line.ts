@@ -48,6 +48,10 @@ function crewCount(recipe: ClientRecipeResponse, crewSize?: number): number {
 
 /** Deterministic, context-aware trust line for the recipe card (S7). */
 export function buildRecipeTrustLine(recipe: ClientRecipeResponse, crewSize?: number): string {
+  if (recipe._fallback) {
+    return "Station kitchen template — loosen a filter for a linked publisher recipe";
+  }
+
   const blob = tagBlob(recipe);
   const title = norm(recipe.title || "");
   const mins = totalMinutes(recipe);

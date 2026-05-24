@@ -55,7 +55,8 @@ import {
   formatDifferentMealSubcopy,
   formatTonightAtHallLine,
 } from "@/lib/meal-outcome-copy";
-import { memo, useState } from "react";
+import { forwardRef, memo, useState, type ComponentPropsWithoutRef } from "react";
+import { cn } from "@/lib/utils";
 
 export type { TonightVibe };
 
@@ -326,7 +327,7 @@ function AdvancedFilterSections({
             <SelectTrigger data-testid="select-budget-level">
               <SelectValue />
             </SelectTrigger>
-            <SelectContent>
+            <SelectContent className="z-[120]">
               <SelectItem value="low">Low ($)</SelectItem>
               <SelectItem value="standard">Standard ($$)</SelectItem>
               <SelectItem value="splurge">Splurge ($$$)</SelectItem>
@@ -345,7 +346,7 @@ function AdvancedFilterSections({
             <SelectTrigger data-testid="select-cuisine-style">
               <SelectValue />
             </SelectTrigger>
-            <SelectContent>
+            <SelectContent className="z-[120]">
               <SelectItem value="any">Any</SelectItem>
               <SelectItem value="mediterranean">Mediterranean</SelectItem>
               <SelectItem value="mexican">Mexican</SelectItem>
@@ -367,7 +368,7 @@ function AdvancedFilterSections({
             <SelectTrigger data-testid="select-meal-format">
               <SelectValue />
             </SelectTrigger>
-            <SelectContent>
+            <SelectContent className="z-[120]">
               <SelectItem value="random">Random</SelectItem>
               <SelectItem value="bowl">Bowl</SelectItem>
               <SelectItem value="pasta">Pasta</SelectItem>
@@ -391,7 +392,7 @@ function AdvancedFilterSections({
             <SelectTrigger data-testid="select-healthiness">
               <SelectValue />
             </SelectTrigger>
-            <SelectContent>
+            <SelectContent className="z-[120]">
               <SelectItem value="lean">Lighter / healthy</SelectItem>
               <SelectItem value="balanced">Hall standard</SelectItem>
               <SelectItem value="comfort">Full comfort</SelectItem>
@@ -403,37 +404,36 @@ function AdvancedFilterSections({
   );
 }
 
-function MoreOptionsTrigger({
-  customized,
-  open,
-  className,
-}: {
-  customized: boolean;
-  open?: boolean;
-  className?: string;
-}) {
-  return (
-    <Button
-      type="button"
-      variant="outline"
-      className={`w-full justify-between font-medium text-sm min-h-11 ${className ?? ""}`}
-      data-testid="button-toggle-advanced-filters"
-    >
-      <span className="flex items-center gap-2">
-        <Settings2 className="w-4 h-4 text-primary" />
-        More options
-        {customized && (
-          <Badge variant="secondary" className="text-[10px] px-1.5 py-0">
-            customized
-          </Badge>
-        )}
-      </span>
-      <ChevronDown
-        className={`w-4 h-4 shrink-0 transition-transform duration-200 ${open ? "rotate-180" : ""}`}
-      />
-    </Button>
-  );
-}
+const MoreOptionsTrigger = forwardRef<
+  HTMLButtonElement,
+  ComponentPropsWithoutRef<typeof Button> & {
+    customized: boolean;
+    open?: boolean;
+  }
+>(({ customized, open, className, ...props }, ref) => (
+  <Button
+    ref={ref}
+    type="button"
+    variant="outline"
+    className={cn("w-full justify-between font-medium text-sm min-h-11", className)}
+    data-testid="button-toggle-advanced-filters"
+    {...props}
+  >
+    <span className="flex items-center gap-2">
+      <Settings2 className="w-4 h-4 text-primary" />
+      More options
+      {customized && (
+        <Badge variant="secondary" className="text-[10px] px-1.5 py-0">
+          customized
+        </Badge>
+      )}
+    </span>
+    <ChevronDown
+      className={cn("w-4 h-4 shrink-0 transition-transform duration-200", open && "rotate-180")}
+    />
+  </Button>
+));
+MoreOptionsTrigger.displayName = "MoreOptionsTrigger";
 
 function GenerateButtons({
   filters,
