@@ -11,6 +11,7 @@ import { buildShoppingListFromClientMeal } from "@/lib/shopping-list";
 import { EmailModal } from "@/components/email-modal";
 import { ShoppingListModal } from "@/components/shopping-list-modal";
 import type { ClientRecipeResponse } from "@shared/schema";
+import { MealHeroImage } from "@/components/meal-hero-image";
 
 interface CuratedPackageResponse {
   slug: string;
@@ -18,6 +19,9 @@ interface CuratedPackageResponse {
   displayTitle: string;
   emoji: string;
   heroImage: string;
+  imageAlt?: string;
+  tags?: string[];
+  cuisineLabel?: string;
   externalUrl?: string;
   tagline: string;
   crewLine: string;
@@ -88,18 +92,16 @@ export default function CuratedPackagePage() {
 
         {data && recipe && (
           <div className="space-y-8">
-            <div className="relative rounded-2xl overflow-hidden border border-primary/25 shadow-xl shadow-primary/5">
-              {data.heroImage && (
-                <div className="aspect-[21/9] sm:aspect-[2.5/1] relative">
-                  <img
-                    src={data.heroImage}
-                    alt={data.title}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
-                </div>
-              )}
-              <div className={`relative ${data.heroImage ? "p-6 sm:p-8 -mt-16 sm:-mt-20" : "p-6 sm:p-8"}`}>
+            <div className="relative rounded-2xl overflow-hidden border border-primary/30 shadow-2xl shadow-primary/15 ring-1 ring-primary/20">
+              <MealHeroImage
+                src={data.heroImage}
+                alt={data.imageAlt || data.title}
+                emoji={data.emoji}
+                title={data.title}
+                variant="cinematic"
+                className="aspect-[21/9] sm:aspect-[2.2/1]"
+              />
+              <div className={`relative p-6 sm:p-8 -mt-12 sm:-mt-16`}>
                 <span className="text-4xl sm:text-5xl block mb-3" role="img" aria-hidden>
                   {data.emoji}
                 </span>

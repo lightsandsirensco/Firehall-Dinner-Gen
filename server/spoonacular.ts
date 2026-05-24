@@ -1,4 +1,8 @@
-import { log } from "./index";
+import { log, clip, isProductionEnv } from "./logger";
+import {
+  normalizeExploreRecipeCard,
+  normalizeExploreRecipeDetail,
+} from "../shared/explore-recipe.js";
 
 const SPOONACULAR_BASE = "https://api.spoonacular.com";
 const SEARCH_CACHE_TTL_MS = 60 * 60 * 1000;       // 1 hour
@@ -161,21 +165,40 @@ export async function searchRecipes(query: string, options: SearchOptions = {}):
   const res = await fetch(url);
   if (!res.ok) {
     const text = await res.text();
-    log(`[spoonacular] Search failed: ${res.status} ${text}`, "spoonacular");
+    log(
+      `[spoonacular] search failed status=${res.status}${isProductionEnv() ? "" : ` body=${clip(text, 80)}`}`,
+      "spoonacular",
+    );
     throw new Error(`Spoonacular API error: ${res.status}`);
   }
 
   const data = await res.json();
   const result: SpoonacularSearchResponse = {
-    results: (data.results || []).map((r: any) => ({
-      id: r.id,
-      title: r.title,
-      image: r.image || "",
-      readyInMinutes: r.readyInMinutes || 0,
-      servings: r.servings || 0,
-      sourceUrl: r.sourceUrl || "",
-      summary: r.summary || "",
-    })),
+    results: (data.results || [])
+      .map((r: any) =>
+        normalizeExploreRecipeCard(
+          {
+            id: r.id,
+            title: r.title,
+            image: r.image || "",
+            readyInMinutes: r.readyInMinutes || 0,
+            servings: r.servings || 0,
+            sourceUrl: r.sourceUrl || "",
+            summary: r.summary || "",
+          },
+          "search",
+        ),
+      )
+      .filter((r): r is NonNullable<typeof r> => r !== null)
+      .map((card) => ({
+        id: card.id,
+        title: card.title,
+        image: card.image,
+        readyInMinutes: card.readyInMinutes,
+        servings: card.servings,
+        sourceUrl: card.sourceUrl,
+        summary: card.summary,
+      })),
     totalResults: data.totalResults || 0,
   };
   log(`[spoonacular] Search returned ${result.results.length} recipes (total available: ${result.totalResults})`, "spoonacular");
@@ -195,12 +218,13 @@ async function fetchRecipeInformation(
   const apiKey = getApiKey();
   const nutritionParam = includeNutrition ? "true" : "false";
   const url = `${SPOONACULAR_BASE}/recipes/${id}/information?apiKey=${apiKey}&includeNutrition=${nutritionParam}`;
-  log(`[spoonacular] Detail request: GET recipes/${id}/information includeNutrition=${nutritionParam}`, "spoonacular");
-
   const res = await fetch(url);
   const text = await res.text();
   if (!res.ok) {
-    log(`[spoonacular] Detail fetch failed: id=${id} status=${res.status} body=${text.substring(0, 200)}`, "spoonacular");
+    log(
+      `[spoonacular] detail failed id=${id} status=${res.status}${isProductionEnv() ? "" : ` body=${clip(text, 80)}`}`,
+      "spoonacular",
+    );
     const err = new Error(`Spoonacular detail error ${res.status} for recipe ${id}`);
     (err as Error & { status?: number }).status = res.status;
     throw err;
@@ -218,24 +242,26 @@ export async function getRecipeById(id: number, includeNutrition: boolean = fals
   const cacheKey = `detail:${id}:nutrition=${includeNutrition}`;
   const cached = getCached<SpoonacularRecipeDetail>(cacheKey);
   if (cached) {
-    log(`[spoonacular-cache] HIT detail: id=${id} | Spoonacular API called=no`, "spoonacular");
-    return cached;
+    log(`[spoonacular] detail id=${id} cache=hit`, "spoonacular");
+    return normalizeExploreRecipeDetail(cached, "detail-cache");
   }
 
-  log(`[spoonacular-cache] MISS detail: id=${id} | Spoonacular API called=yes | includeNutrition=${includeNutrition}`, "spoonacular");
+  log(`[spoonacular] detail id=${id} cache=miss nutrition=${includeNutrition}`, "spoonacular");
 
   try {
     const { data } = await fetchRecipeInformation(id, includeNutrition);
-    setCache(cacheKey, data, DETAIL_CACHE_TTL_MS);
-    log(`[spoonacular] Detail OK: id=${id} title="${data.title?.substring(0, 50)}"`, "spoonacular");
-    return data;
+    const normalized = normalizeExploreRecipeDetail(data, "detail-fetch");
+    setCache(cacheKey, normalized, DETAIL_CACHE_TTL_MS);
+    log(`[spoonacular] detail id=${id} status=200 title="${clip(normalized.title || "", 50)}"`, "spoonacular");
+    return normalized;
   } catch (err: any) {
     const status = err.status as number | undefined;
     if (includeNutrition && (status === 402 || status === 403)) {
       log(`[spoonacular] Nutrition not available for id=${id} — retrying without nutrition`, "spoonacular");
       const { data } = await fetchRecipeInformation(id, false);
-      setCache(`detail:${id}:nutrition=false`, data, DETAIL_CACHE_TTL_MS);
-      return data;
+      const normalized = normalizeExploreRecipeDetail(data, "detail-fetch-no-nutrition");
+      setCache(`detail:${id}:nutrition=false`, normalized, DETAIL_CACHE_TTL_MS);
+      return normalized;
     }
     throw err;
   }
@@ -270,7 +296,10 @@ export async function getRandomRecipes(tags?: string, number: number = 5): Promi
   const res = await fetch(url);
   if (!res.ok) {
     const text = await res.text();
-    log(`[spoonacular] Random fetch failed: ${res.status} ${text}`, "spoonacular");
+    log(
+      `[spoonacular] random failed status=${res.status}${isProductionEnv() ? "" : ` body=${clip(text, 80)}`}`,
+      "spoonacular",
+    );
     throw new Error(`Spoonacular API error: ${res.status}`);
   }
 

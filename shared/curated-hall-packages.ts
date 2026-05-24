@@ -4,6 +4,23 @@ import type {
   ClientStep,
   MealPlate,
 } from "./schema";
+import {
+  getClassicHallMeal,
+  spoonacularHeroImage,
+  validateClassicMealConsistency,
+  validateAllClassicMeals,
+  type ClassicHallMealMeta,
+} from "./classic-hall-meals";
+
+export type { ClassicHallMealMeta } from "./classic-hall-meals";
+export {
+  CLASSIC_HALL_MEALS,
+  getClassicHallMeal,
+  getClassicHeroImage,
+  spoonacularHeroImage,
+  validateClassicMealConsistency,
+  validateAllClassicMeals,
+} from "./classic-hall-meals";
 
 export interface CuratedPackageDef {
   slug: string;
@@ -11,6 +28,10 @@ export interface CuratedPackageDef {
   displayTitle: string;
   emoji: string;
   heroImage: string;
+  imageAlt: string;
+  spoonacularRecipeId: number;
+  spoonacularTitle: string;
+  tags: string[];
   externalUrl?: string;
   tagline: string;
   crewLine: string;
@@ -72,7 +93,7 @@ export function buildCuratedClientRecipe(
     meal_plate: plate,
     meal_format: def.mealFormat,
     servings: crewSize,
-    tags: [def.cuisineLabel, "Hall classic", "Curated package"],
+    tags: def.tags.length > 0 ? [...def.tags, "Curated package"] : [def.cuisineLabel, "Hall classic", "Curated package"],
     timing: {
       prep_min: def.prepMin,
       cook_min: def.cookMin,
@@ -104,14 +125,45 @@ export function buildCuratedClientRecipe(
   };
 }
 
-/** All wheel / hall curated dinner packages */
-export const CURATED_HALL_PACKAGES: CuratedPackageDef[] = [
+type CuratedPackageInput = Omit<
+  CuratedPackageDef,
+  "heroImage" | "imageAlt" | "spoonacularRecipeId" | "spoonacularTitle" | "tags"
+> & { tags?: string[] };
+
+function enrichCuratedPackage(input: CuratedPackageInput): CuratedPackageDef {
+  const meta = getClassicHallMeal(input.slug);
+  if (!meta) {
+    throw new Error(`[curated-hall-packages] Missing classic-hall-meals meta for slug: ${input.slug}`);
+  }
+  const heroImage = spoonacularHeroImage(meta.spoonacularRecipeId);
+  const def: CuratedPackageDef = {
+    ...input,
+    title: meta.title,
+    displayTitle: meta.displayTitle,
+    emoji: meta.emoji,
+    tagline: meta.tagline,
+    crewLine: meta.description,
+    mealFormat: meta.mealFormat,
+    protein: meta.protein,
+    cuisineLabel: meta.cuisine,
+    heroImage,
+    imageAlt: meta.imageAlt,
+    spoonacularRecipeId: meta.spoonacularRecipeId,
+    spoonacularTitle: meta.spoonacularTitle,
+    tags: input.tags ?? meta.tags,
+    externalUrl: input.externalUrl ?? meta.externalUrl,
+  };
+  validateClassicMealConsistency(meta, `package:${input.slug}`, heroImage);
+  return def;
+}
+
+/** All wheel / hall curated dinner packages (hero images from classic-hall-meals). */
+const CURATED_HALL_PACKAGES_RAW: CuratedPackageInput[] = [
   {
     slug: "chicken-parm",
     title: "Chicken Parm",
     displayTitle: "Chicken Parm Night — Italian Hall Spread",
     emoji: "🍝",
-    heroImage: "https://img.spoonacular.com/recipes/716429-556x370.jpg",
     externalUrl: "https://www.allrecipes.com/recipe/223042/chicken-parmesan/",
     tagline: "Italian night at the station",
     crewLine: "Breaded cutlets, red sauce, pasta, and garlic bread — the full hall spread.",
@@ -164,7 +216,6 @@ export const CURATED_HALL_PACKAGES: CuratedPackageDef[] = [
     title: "Taco Night",
     displayTitle: "Taco Night — Build-Your-Own Hall Line",
     emoji: "🌮",
-    heroImage: "https://img.spoonacular.com/recipes/716426-556x370.jpg",
     tagline: "Build-your-own crew favorite",
     crewLine: "Seasoned beef, warm tortillas, and all the fixings on the counter.",
     mealFormat: "tacos",
@@ -217,7 +268,6 @@ export const CURATED_HALL_PACKAGES: CuratedPackageDef[] = [
     title: "Pulled Pork Sandwiches",
     displayTitle: "Pulled Pork Sandwiches — BBQ Hall Line",
     emoji: "🥪",
-    heroImage: "https://img.spoonacular.com/recipes/664678-556x370.jpg",
     mealFormat: "sandwich",
     protein: "Pork",
     cuisineLabel: "BBQ",
@@ -263,7 +313,6 @@ export const CURATED_HALL_PACKAGES: CuratedPackageDef[] = [
     title: "Smash Burgers",
     displayTitle: "Smash Burgers & Fries — Griddle Night",
     emoji: "🍔",
-    heroImage: "https://img.spoonacular.com/recipes/715421-556x370.jpg",
     mealFormat: "burger",
     protein: "Beef",
     cuisineLabel: "American",
@@ -309,7 +358,6 @@ export const CURATED_HALL_PACKAGES: CuratedPackageDef[] = [
     title: "Chili & Garlic Bread",
     displayTitle: "Chili & Garlic Bread — One-Pot Hall Night",
     emoji: "🌶️",
-    heroImage: "https://img.spoonacular.com/recipes/660405-556x370.jpg",
     mealFormat: "soup_chili",
     protein: "Beef",
     cuisineLabel: "Comfort",
@@ -353,51 +401,102 @@ export const CURATED_HALL_PACKAGES: CuratedPackageDef[] = [
   {
     slug: "chicken-caesar",
     title: "Chicken Caesar Salad",
-    displayTitle: "Chicken Caesar — Grilled Protein & Big Salad",
+    displayTitle: "Chicken Caesar Salad — Hearty Hall Spread",
     emoji: "🥗",
-    heroImage: "https://img.spoonacular.com/recipes/640803-556x370.jpg",
     mealFormat: "salad",
     protein: "Chicken",
     cuisineLabel: "American",
-    tagline: "When the crew wants something lighter",
-    crewLine: "Grilled chicken over romaine, parmesan, croutons — garlic bread on the side.",
-    prepMin: 20,
-    cookMin: 20,
-    macros: { calories: 480, protein_g: 42, carbs_g: 22, fat_g: 24 },
+    tagline: "Big bowls, hot chicken, all the fixings",
+    crewLine:
+      "Grilled chicken Caesar with garlic bread, crispy bacon, homemade croutons, shaved parmesan, and steak fries — built for a hungry hall.",
+    prepMin: 25,
+    cookMin: 35,
+    macros: { calories: 620, protein_g: 48, carbs_g: 38, fat_g: 32 },
     plate: {
-      display_title: "Chicken Caesar — Grilled Protein & Big Salad",
-      main: [{ name: "Grilled chicken breast", amount: "10 lb", role: "main" }],
+      display_title: "Chicken Caesar Salad — Hearty Hall Spread",
+      main: [{ name: "Grilled chicken Caesar salad", amount: "6 large bowls", role: "main" }],
       sides: [
-        { name: "Caesar salad", amount: "2 deli tubs", role: "veg" },
-        { name: "Garlic bread sticks", amount: "2 boxes", role: "starch" },
+        { name: "Garlic bread", amount: "3 loaves", role: "starch" },
+        { name: "Crispy bacon bits", amount: "2 lb", role: "optional" },
+        { name: "Homemade croutons", amount: "2 sheet pans", role: "starch" },
+        { name: "Shaved parmesan", amount: "for the line", role: "optional" },
       ],
-      optional: [{ name: "Extra parmesan", amount: "for the table", role: "optional" }],
+      optional: [
+        { name: "Steak fries", amount: "3 lb", role: "starch" },
+        { name: "Tomato soup shooters", amount: "optional pairing", role: "optional" },
+      ],
       cuisine_label: "American",
     },
     ingredients: [
       { name: "Chicken breast", qty: 10, unit: "lb", category: "Proteins" },
-      { name: "Romaine hearts", qty: 8, unit: "bags", category: "Produce" },
-      { name: "Caesar dressing", qty: 3, unit: "cups", category: "Pantry" },
-      { name: "Croutons", qty: 4, unit: "cups", category: "Pantry" },
-      { name: "Parmesan", qty: 2, unit: "cups", category: "Dairy" },
-      { name: "Garlic bread sticks", qty: 2, unit: "boxes", category: "Frozen" },
+      { name: "Romaine hearts", qty: 10, unit: "heads", category: "Produce" },
+      { name: "Caesar dressing", qty: 4, unit: "cups", category: "Pantry" },
+      { name: "Thick-cut bacon", qty: 2, unit: "lb", category: "Proteins" },
+      { name: "Parmesan wedge", qty: 1, unit: "lb", category: "Dairy" },
+      { name: "French bread / baguette", qty: 3, unit: "loaves", category: "Bakery" },
+      { name: "Butter + garlic", qty: 1, unit: "batch", category: "Pantry" },
+      { name: "Day-old bread cubes", qty: 8, unit: "cups", category: "Bakery" },
+      { name: "Olive oil", qty: 0.5, unit: "cup", category: "Pantry" },
+      { name: "Frozen steak fries", qty: 3, unit: "lb", category: "Frozen" },
+      { name: "Lemon", qty: 6, unit: "", category: "Produce" },
     ],
     steps: [
-      { title: "Grill chicken (medium-high, 14 min)", heat: "high", minutes: 14, instructions: "Season and grill to 165°F; rest 5 min, slice for the line." },
-      { title: "Build Caesar (no heat, 12 min)", heat: "none", minutes: 12, instructions: "Chop romaine, toss with dressing, croutons, and half the parmesan." },
-      { title: "Bake bread sticks (425°F, 8 min)", heat: "high", minutes: 8, instructions: "Bake until golden; wrap to hold warmth." },
-      { title: "Serve salad line (serve)", heat: "none", minutes: 5, instructions: "Big bowls of salad, sliced chicken on the side, bread at the end." },
+      {
+        title: "Grill chicken (medium-high, 16 min)",
+        heat: "high",
+        minutes: 16,
+        instructions:
+          "Season breasts with salt, pepper, and a little oil. Grill to 165°F with clear grill marks. Rest 5 minutes, then slice thick for the salad line.",
+      },
+      {
+        title: "Crisp bacon (medium, 12 min)",
+        heat: "medium",
+        minutes: 12,
+        instructions: "Lay bacon on sheet pans. Bake at 400°F until crisp. Drain on paper towels and chop into bite-size bits.",
+      },
+      {
+        title: "Toast homemade croutons (400°F, 10 min)",
+        heat: "high",
+        minutes: 10,
+        instructions:
+          "Toss bread cubes with olive oil, garlic powder, and salt. Spread on pans and bake until golden and crunchy.",
+      },
+      {
+        title: "Build the Caesar base (no heat, 15 min)",
+        heat: "none",
+        minutes: 15,
+        instructions:
+          "Chop romaine into big pieces — fill the bowls deep. Hold dressing until the line opens so it stays crisp.",
+      },
+      {
+        title: "Garlic bread + fries (425°F, 18 min)",
+        heat: "high",
+        minutes: 18,
+        instructions:
+          "Butter and garlic the split loaves; wrap in foil. Bake fries on a second rack. Pull bread when edges are golden; keep wrapped.",
+      },
+      {
+        title: "Run the hall line (serve)",
+        heat: "none",
+        minutes: 8,
+        instructions:
+          "Dress salad, top with sliced chicken, bacon, croutons, and parmesan. Garlic bread and fries on the end of the counter — crew builds their bowl.",
+      },
     ],
-    whyItFits: "A full lighter night — grilled protein, big salad, and bread still on the table.",
-    cleanupTip: "Sanitize cutting boards right after chicken — don't wait until after the meal.",
-    proTips: ["Slice chicken against the grain for tender bites.", "Dress salad just before the crew hits the line."],
+    whyItFits:
+      "Caesar night at the hall means protein, starch, and crunch — not a sad side salad. This is a full crew dinner.",
+    cleanupTip: "Wash chicken boards and knives first — then tackle the salad bowls.",
+    proTips: [
+      "Slice chicken thick and against the grain so it feels like a main, not a garnish.",
+      "Keep bacon and croutons in warm pans so the line stays loud and crunchy.",
+      "Dress each bowl to order — soggy Caesar kills the vibe.",
+    ],
   },
   {
     slug: "jerk-chicken",
     title: "Jerk Chicken",
     displayTitle: "Jerk Chicken — Rice & Island Sides",
     emoji: "🔥",
-    heroImage: "https://img.spoonacular.com/recipes/716004-556x370.jpg",
     mealFormat: "grill",
     protein: "Chicken",
     cuisineLabel: "Caribbean",
@@ -436,55 +535,10 @@ export const CURATED_HALL_PACKAGES: CuratedPackageDef[] = [
     proTips: ["Use thighs — they forgive the grill and stay juicy.", "Keep extra lime at the end of the line."],
   },
   {
-    slug: "loaded-nachos",
-    title: "Loaded Nachos",
-    displayTitle: "Loaded Nachos — Sheet Pan Hall Feast",
-    emoji: "🧀",
-    heroImage: "https://img.spoonacular.com/recipes/660366-556x370.jpg",
-    mealFormat: "loaded_fries",
-    protein: "Beef",
-    cuisineLabel: "Mexican",
-    tagline: "Game-night at the hall",
-    crewLine: "Chip layers, seasoned beef, melted cheese, and all the toppings.",
-    prepMin: 15,
-    cookMin: 25,
-    macros: { calories: 650, protein_g: 34, carbs_g: 52, fat_g: 36 },
-    plate: {
-      display_title: "Loaded Nachos — Sheet Pan Hall Feast",
-      main: [{ name: "Loaded nachos", amount: "4 sheet pans", role: "main" }],
-      sides: [
-        { name: "Guacamole & salsa", amount: "2 bowls each", role: "veg" },
-        { name: "Sour cream", amount: "2 cups", role: "optional" },
-      ],
-      optional: [{ name: "Jalapeños", amount: "sliced", role: "optional" }],
-      cuisine_label: "Mexican",
-    },
-    ingredients: [
-      { name: "Tortilla chips", qty: 6, unit: "bags", category: "Pantry" },
-      { name: "Ground beef", qty: 3, unit: "lb", category: "Proteins" },
-      { name: "Taco seasoning", qty: 3, unit: "packets", category: "Pantry" },
-      { name: "Shredded Mexican cheese", qty: 3, unit: "lb", category: "Dairy" },
-      { name: "Salsa", qty: 2, unit: "jars", category: "Pantry" },
-      { name: "Sour cream", qty: 2, unit: "cups", category: "Dairy" },
-      { name: "Guacamole", qty: 3, unit: "cups", category: "Produce" },
-      { name: "Jalapeños", qty: 2, unit: "cans", category: "Pantry" },
-    ],
-    steps: [
-      { title: "Brown seasoned beef (medium-high, 10 min)", heat: "high", minutes: 10, instructions: "Brown beef with taco seasoning; hold warm." },
-      { title: "Layer & melt nachos (425°F, 12 min)", heat: "high", minutes: 12, instructions: "Chips, beef, cheese on sheet pans; bake until cheese bubbles." },
-      { title: "Set topping station (no heat, 8 min)", heat: "none", minutes: 8, instructions: "Salsa, guac, sour cream, jalapeños in bowls." },
-      { title: "Serve pans hot (serve)", heat: "none", minutes: 5, instructions: "Put pans on the table — crew digs in family-style." },
-    ],
-    whyItFits: "Game-night nachos with toppings bar — built for a hungry hall, not a snack.",
-    cleanupTip: "Soak sheet pans with hot water — cheese releases faster.",
-    proTips: ["Layer cheese between chip layers so it binds.", "Serve straight from the oven — nachos wait for no one."],
-  },
-  {
     slug: "beef-dip",
     title: "Beef Dip Sandwiches",
     displayTitle: "French Dip — Au Jus Hall Line",
     emoji: "🥖",
-    heroImage: "https://img.spoonacular.com/recipes/636602-556x370.jpg",
     mealFormat: "sandwich",
     protein: "Beef",
     cuisineLabel: "Canadian",
@@ -528,7 +582,6 @@ export const CURATED_HALL_PACKAGES: CuratedPackageDef[] = [
     title: "BBQ Chicken Bowls",
     displayTitle: "BBQ Chicken Bowls — Rice Line",
     emoji: "🍗",
-    heroImage: "https://img.spoonacular.com/recipes/715540-556x370.jpg",
     mealFormat: "bowl",
     protein: "Chicken",
     cuisineLabel: "BBQ",
@@ -565,7 +618,120 @@ export const CURATED_HALL_PACKAGES: CuratedPackageDef[] = [
     cleanupTip: "Rinse rice pot immediately — starch sets fast.",
     proTips: ["Glaze sauce at the end so it doesn't burn on the grill.", "Keep slaw on ice under the counter."],
   },
+  {
+    slug: "steak-sandwiches",
+    title: "Steak Sandwiches",
+    displayTitle: "Steak Sandwiches — Hall Line Classic",
+    emoji: "🥩",
+    mealFormat: "sandwich",
+    protein: "Beef",
+    cuisineLabel: "American",
+    tagline: "Grill marks, melted cheese, sandwich line",
+    crewLine:
+      "Sliced sirloin on toasted buns with garlic fries, Caesar salad, roasted vegetables, and a toppings bar — horseradish aioli, onions, mushrooms, and provolone.",
+    prepMin: 25,
+    cookMin: 35,
+    macros: { calories: 710, protein_g: 46, carbs_g: 48, fat_g: 36 },
+    plate: {
+      display_title: "Steak Sandwiches — Hall Line Classic",
+      main: [{ name: "Sliced steak sandwiches", amount: "18 sandwiches", role: "main" }],
+      sides: [
+        { name: "Garlic fries", amount: "4 lb", role: "starch" },
+        { name: "Caesar salad", amount: "2 large bowls", role: "veg" },
+        { name: "Roasted vegetables", amount: "2 sheet pans", role: "veg" },
+      ],
+      optional: [
+        { name: "Onion rings", amount: "1 tray", role: "optional" },
+        { name: "Horseradish aioli", amount: "for the line", role: "optional" },
+        { name: "Sautéed onions & mushrooms", amount: "2 pans", role: "optional" },
+        { name: "Melted provolone", amount: "18 slices", role: "optional" },
+      ],
+      cuisine_label: "American",
+    },
+    ingredients: [
+      { name: "Sirloin or flank steak", qty: 8, unit: "lb", category: "Proteins" },
+      { name: "Sub rolls / ciabatta", qty: 18, unit: "", category: "Bakery" },
+      { name: "Butter", qty: 1, unit: "lb", category: "Dairy" },
+      { name: "Garlic", qty: 8, unit: "cloves", category: "Produce" },
+      { name: "Frozen steak fries", qty: 4, unit: "lb", category: "Frozen" },
+      { name: "Romaine hearts", qty: 4, unit: "bags", category: "Produce" },
+      { name: "Caesar dressing", qty: 2, unit: "cups", category: "Pantry" },
+      { name: "Croutons", qty: 2, unit: "cups", category: "Pantry" },
+      { name: "Parmesan", qty: 1, unit: "cup", category: "Dairy" },
+      { name: "Bell peppers & zucchini", qty: 6, unit: "lb", category: "Produce" },
+      { name: "Olive oil", qty: 0.5, unit: "cup", category: "Pantry" },
+      { name: "Yellow onions", qty: 4, unit: "", category: "Produce" },
+      { name: "Mushrooms", qty: 2, unit: "lb", category: "Produce" },
+      { name: "Provolone cheese", qty: 18, unit: "slices", category: "Dairy" },
+      { name: "Horseradish", qty: 0.5, unit: "cup", category: "Pantry" },
+      { name: "Mayonnaise", qty: 2, unit: "cups", category: "Pantry" },
+      { name: "Frozen onion rings", qty: 2, unit: "bags", category: "Frozen" },
+    ],
+    steps: [
+      {
+        title: "Season & rest steak (no heat, 10 min)",
+        heat: "none",
+        minutes: 10,
+        instructions:
+          "Pat steaks dry; salt and pepper generously. Let sit at room temp while ovens and grill heat.",
+      },
+      {
+        title: "Roast vegetables (425°F, 22 min)",
+        heat: "high",
+        minutes: 22,
+        instructions:
+          "Toss peppers and zucchini with oil, salt, and garlic. Spread on sheet pans; roast until charred edges and tender.",
+      },
+      {
+        title: "Grill steak (high, 12 min)",
+        heat: "high",
+        minutes: 12,
+        instructions:
+          "Grill sirloin or flank to medium-rare/medium (130–140°F). Rest 8 minutes, then slice thin against the grain.",
+      },
+      {
+        title: "Garlic fries & onion rings (425°F, 20 min)",
+        heat: "high",
+        minutes: 20,
+        instructions:
+          "Bake fries until crisp; toss hot fries with butter and minced garlic. Bake onion rings on a second rack if serving.",
+      },
+      {
+        title: "Sauté onions & mushrooms (medium-high, 10 min)",
+        heat: "medium",
+        minutes: 10,
+        instructions: "Cook sliced onions until golden; add mushrooms until browned. Hold warm for the toppings bar.",
+      },
+      {
+        title: "Build Caesar & aioli (no heat, 10 min)",
+        heat: "none",
+        minutes: 10,
+        instructions:
+          "Toss romaine with dressing, croutons, and parmesan. Mix horseradish into mayo for aioli; keep cold.",
+      },
+      {
+        title: "Toast buns & run sandwich line (serve)",
+        heat: "medium",
+        minutes: 12,
+        instructions:
+          "Split and toast rolls. Layer steak, optional provolone melt, onions, mushrooms, and aioli. Fries, Caesar, and veg on the counter.",
+      },
+    ],
+    whyItFits:
+      "Steak sandwich night is a hall classic — hot protein, real buns, crispy sides, and a build-your-own line. Not deli slices on cold bread.",
+    cleanupTip: "Deglaze the steak pan or grill tray while still warm — comes clean faster after service.",
+    proTips: [
+      "Slice steak thin after the rest — crew eats better and portions stretch.",
+      "Toast buns hard enough to hold juice without falling apart.",
+      "Keep Caesar and aioli on ice until the line opens.",
+    ],
+  },
 ];
+
+export const CURATED_HALL_PACKAGES: CuratedPackageDef[] =
+  CURATED_HALL_PACKAGES_RAW.map(enrichCuratedPackage);
+
+validateAllClassicMeals("curated-packages");
 
 const SLUG_MAP = new Map(CURATED_HALL_PACKAGES.map((p) => [p.slug, p]));
 
@@ -585,7 +751,7 @@ const TITLE_MATCHERS: { pattern: RegExp; slug: string }[] = [
   { pattern: /chili/i, slug: "chili-garlic-bread" },
   { pattern: /caesar/i, slug: "chicken-caesar" },
   { pattern: /jerk/i, slug: "jerk-chicken" },
-  { pattern: /nacho/i, slug: "loaded-nachos" },
+  { pattern: /steak\s*sandwich/i, slug: "steak-sandwiches" },
   { pattern: /french\s*dip|beef\s*dip/i, slug: "beef-dip" },
   { pattern: /bbq\s*chicken|chicken\s*bowl/i, slug: "bbq-chicken-bowls" },
 ];

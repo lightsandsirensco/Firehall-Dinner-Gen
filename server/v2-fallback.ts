@@ -14,6 +14,8 @@ import { log } from "./index";
 import { type StructureType, pickStructure, STRUCTURE_DISPLAY } from "./structure-variety";
 import { buildFallbackRecipe } from "./fallback-recipe";
 import { buildSafeFallbackRecipe } from "./ai";
+import { TEMPLATE_FALLBACK_ATTRIBUTION } from "./recipe-fallback-policy";
+import type { RecipeSourceAttribution } from "../shared/canonical-recipe.js";
 
 // ── Format → Structure map ─────────────────────────────────────────────────
 // Each schema meal_format value maps to the closest StructureType in the
@@ -63,6 +65,7 @@ export interface V2FallbackResult {
   structure: StructureType;
   structureDisplay: string;
   usedFallback: true;
+  recipeSource: RecipeSourceAttribution;
 }
 
 /**
@@ -102,7 +105,7 @@ export async function runV2Fallback(
   const protein = request.protein ?? "chicken";
 
   log(
-    `[fallback] used=true | reason=${reason} | format=${fmt ?? "random"} → structure=${targetStructure} (${structureSource}) | protein=${protein}`,
+    `[fallback] last_resort=true | reason=${reason} | format=${fmt ?? "random"} → structure=${targetStructure} (${structureSource}) | protein=${protein}`,
     "fallback",
   );
 
@@ -124,5 +127,6 @@ export async function runV2Fallback(
     structure: targetStructure,
     structureDisplay,
     usedFallback: true,
+    recipeSource: TEMPLATE_FALLBACK_ATTRIBUTION,
   };
 }

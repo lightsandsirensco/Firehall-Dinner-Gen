@@ -1051,7 +1051,9 @@ export function buildFallbackRecipe(
         `Let the ${proteinDisplay.toLowerCase()} rest after cooking so juices redistribute for a more flavourful result.`,
       ];
   if (healthiness === "lean") {
-    proTips.push("Swap butter for olive oil and reduce cheese portions to keep it lighter.");
+    proTips.push(
+      "Go heavier on roasted veg and herbs — keeps it lighter without shrinking crew portions.",
+    );
   }
 
   let vegOption: { enabled: boolean; swap_protein: string; ingredients: { item: string; amount: string; notes: string }[]; steps: string[]; plating_notes: string } | undefined;

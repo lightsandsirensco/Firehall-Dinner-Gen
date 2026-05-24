@@ -24,7 +24,7 @@
  *   - No default rice / no forced carbs
  */
 
-import { log } from "./index";
+import { log, logVerbose, clip } from "./logger";
 import { searchRecipes, getRecipeDetails, type SpoonacularSearchResult } from "./spoonacular";
 import { inferActualProtein, proteinMatchesFilter, convertSpoonacularToGenerateResponse } from "./spoonacular-converter";
 import { validateV2Candidate } from "./v2-validator";
@@ -34,6 +34,8 @@ import { isWeakTitle, resolvePolishTitle } from "./meal-plate";
 import { polishRecipeCopy } from "./recipe-polish";
 import { getRecentSpoonacularIds, addRecentSpoonacularId } from "./cache-store";
 import type { GenerateRequest, GenerateResponse } from "../shared/schema";
+import type { RecipeSourceAttribution } from "../shared/canonical-recipe.js";
+import { upsertCatalogFromV2 } from "./recipe-catalog.js";
 
 // ─── Constants ────────────────────────────────────────────────────────────────
 
@@ -174,11 +176,15 @@ export interface V2GenerateResult {
   protein: string;
   source: "spoonacular_v2";
   spoonacularId: number;
+  catalogId?: string;
+  recipeSource?: RecipeSourceAttribution;
 }
 
 export interface V2GenerateOptions {
   /** `${ipHash}:${sessionId}` — used to deprioritize recently served Spoonacular IDs */
   sessionKey?: string;
+  /** Looser validation (format/cuisine/plate completeness) — pre–template-fallback tier only */
+  relaxed?: boolean;
 }
 
 // ─── Spoonacular Params Type ──────────────────────────────────────────────────
@@ -230,9 +236,8 @@ function buildSearchParams(request: GenerateRequest, chosenProtein: string): Spo
   const formatInfo = FORMAT_MAP[formatKey] ?? FORMAT_MAP.random;
   const crewSize = request.crew_size || 4;
 
-  // ── Log selected filters ─────────────────────────────────────────────────
-  log(
-    `[v2] Selected filters | protein="${chosenProtein}" cuisine="${cuisineKey}" format="${formatKey}" time="${request.time_available}" crew=${crewSize} allergens=[${allergens.join(", ") || "none"}] pantry=[${(request.ingredients_on_hand || []).slice(0, 5).join(", ") || "none"}]`,
+  logVerbose(
+    `[v2] filters protein=${chosenProtein} cuisine=${cuisineKey} format=${formatKey} time=${request.time_available} crew=${crewSize} allergens=${allergens.length}`,
     "v2",
   );
 
@@ -309,9 +314,8 @@ function buildSearchParams(request: GenerateRequest, chosenProtein: string): Spo
     offset:            Math.floor(Math.random() * 24),
   };
 
-  // ── Log mapped Spoonacular parameters ────────────────────────────────────
-  log(
-    `[v2] Mapped Spoonacular params | query="${params.query}" cuisine="${params.cuisine || "any"}" type="${params.type}" maxReadyTime=${params.maxReadyTime} intolerances="${params.intolerances || "none"}" excludeIngredients="${params.excludeIngredients || "none"}" includeIngredients="${params.includeIngredients || "none"}" diet="${params.diet || "none"}" minServings=${params.minServings}`,
+  logVerbose(
+    `[v2] spoonacular-params query="${clip(params.query || "", 40)}" cuisine=${params.cuisine || "any"} type=${params.type} maxTime=${params.maxReadyTime}`,
     "v2",
   );
 
@@ -357,7 +361,10 @@ export async function runV2Generate(
   const params = buildSearchParams(request, chosenProtein);
 
   // ── Step 2: searchRecipes(filters) ──────────────────────────────────────
-  log(`[v2] Spoonacular search called | query="${params.query}" cuisine="${params.cuisine || "any"}" type="${params.type}" maxTime=${params.maxReadyTime} allergens="${params.intolerances || "none"}"`, "v2");
+  log(
+    `[v2] search query="${clip(params.query, 50)}" cuisine=${params.cuisine || "any"} maxTime=${params.maxReadyTime}`,
+    "v2",
+  );
 
   let searchResult;
   try {
@@ -398,21 +405,24 @@ export async function runV2Generate(
   const recentIds = new Set(
     options?.sessionKey ? getRecentSpoonacularIds(options.sessionKey) : [],
   );
-  const ordered = orderCandidatePool(pool, recentIds).slice(0, SEARCH_CANDIDATES);
+  const ordered = orderCandidatePool(pool, recentIds).slice(0, candidateLimit);
 
   log(
-    `[v2] Candidate pool: ${ordered.length} ordered (${recentIds.size} recent IDs deprioritized, from ${results.length} search results)`,
+    `[v2] Candidate pool: ${ordered.length} ordered (${recentIds.size} recent IDs deprioritized, from ${results.length} search results)${relaxed ? " [relaxed]" : ""}`,
     "v2",
   );
 
   const formatInfo = FORMAT_MAP[request.meal_format || "random"] ?? FORMAT_MAP.random;
   const mealFormat = request.meal_format || "random";
+  const relaxed = options?.relaxed === true;
+  const validationFormat = relaxed ? "random" : mealFormat;
+  const candidateLimit = relaxed ? Math.max(SEARCH_CANDIDATES, 12) : SEARCH_CANDIDATES;
   const failures: Array<{ id: number; title: string; reason: string }> = [];
 
   // ── Step 4: Try candidates sequentially — stop on first valid (avg 1 detail call) ──
   for (let i = 0; i < ordered.length; i++) {
     const candidate = ordered[i];
-    log(`[v2] Trying candidate ${i + 1}/${ordered.length} id=${candidate.id} title="${candidate.title}"`, "v2");
+    logVerbose(`[v2] try candidate ${i + 1}/${ordered.length} id=${candidate.id}`, "v2");
 
     let detail;
     try {
@@ -427,9 +437,9 @@ export async function runV2Generate(
     const validation = validateV2Candidate(
       detail,
       chosenProtein,
-      mealFormat,
+      validationFormat,
       allergens,
-      cuisineKey,
+      relaxed ? "any" : cuisineKey,
       { candidateIndex: i, spoonacularId: detail.id },
     );
 
@@ -445,7 +455,7 @@ export async function runV2Generate(
     // ── Normalize (Spoonacular = source of truth for ingredients/macros/steps) ──
     const recipe = convertSpoonacularToGenerateResponse(detail, request, chosenProtein);
 
-    if (shouldTryNextCandidate(recipe, i, ordered.length, mealFormat)) {
+    if (!relaxed && shouldTryNextCandidate(recipe, i, ordered.length, mealFormat)) {
       failures.push({
         id: detail.id,
         title: detail.title,
@@ -498,17 +508,41 @@ export async function runV2Generate(
       "v2",
     );
 
+    let catalogId: string | undefined;
+    let recipeSource: RecipeSourceAttribution | undefined;
+    try {
+      const catalogRow = await upsertCatalogFromV2({
+        request,
+        recipe: finalRecipe,
+        spoonacularId: detail.id,
+        originalTitle: spoonacularTitle,
+        chosenProtein,
+        sourceUrl: detail.sourceUrl || "",
+        image: detail.image,
+        cuisines: detail.cuisines,
+        readyInMinutes: detail.readyInMinutes,
+        servings: detail.servings,
+      });
+      catalogId = catalogRow.catalogId;
+      recipeSource = catalogRow.source;
+    } catch (catalogErr: unknown) {
+      const msg = catalogErr instanceof Error ? catalogErr.message : String(catalogErr);
+      log(`[catalog] V2 write-through failed id=${detail.id}: ${msg}`, "catalog");
+    }
+
     return {
       recipe: finalRecipe,
       originalTitle: spoonacularTitle,
       protein: chosenProtein,
       source: "spoonacular_v2",
       spoonacularId: detail.id,
+      catalogId,
+      recipeSource,
     };
   }
 
   log(
-    `[v2] All ${ordered.length} Spoonacular candidates failed — summary: ${failures.map((f) => `id=${f.id}(${f.reason})`).join("; ")}`,
+    `[v2] All ${ordered.length} Spoonacular candidates failed${relaxed ? " (relaxed)" : ""} — summary: ${failures.map((f) => `id=${f.id}(${f.reason})`).join("; ")}`,
     "v2",
   );
   return null;

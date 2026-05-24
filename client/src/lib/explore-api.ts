@@ -19,6 +19,7 @@ export interface ExploreRecipeDetail {
   id: number;
   title: string;
   image: string;
+  imageAlt?: string;
   readyInMinutes: number;
   servings: number;
   sourceUrl: string;
@@ -44,7 +45,9 @@ async function fetchWithRetry(url: string, attempts = 2): Promise<Response> {
   return lastRes!;
 }
 
-/** Fetch full recipe detail for Explore — with temporary debug logging. */
+import { normalizeExploreRecipeDetail } from "@/lib/explore-recipe";
+
+/** Fetch full recipe detail for Explore — image always tied to recipe id. */
 export async function fetchExploreRecipeDetail(recipeId: number): Promise<ExploreRecipeDetail> {
   const validId = normalizeExploreRecipeId(recipeId);
   if (validId === null) {
@@ -65,7 +68,15 @@ export async function fetchExploreRecipeDetail(recipeId: number): Promise<Explor
     throw new Error(message);
   }
 
-  const data = (await res.json()) as ExploreRecipeDetail;
+  const data = normalizeExploreRecipeDetail(
+    (await res.json()) as ExploreRecipeDetail,
+    "client-detail",
+  ) as ExploreRecipeDetail;
+
+  if (data.id !== validId) {
+    console.warn("[explore] Detail id mismatch:", { requested: validId, received: data.id });
+  }
+
   console.debug("[explore] Detail parsed:", {
     recipeId: validId,
     id: data?.id,

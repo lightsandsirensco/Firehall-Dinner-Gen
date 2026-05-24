@@ -9,6 +9,13 @@ const LOADING_MESSAGES = [
   "Rounding out the sides for the table...",
 ];
 
+const ALT_LOADING_MESSAGES = [
+  "Shuffling another dinner idea…",
+  "Checking what else plays at the hall…",
+  "Rounding up a new plate for the crew…",
+  "One more option for tonight's table…",
+];
+
 function ShimmerBlock({ className }: { className?: string }) {
   return <div className={`premium-skeleton rounded-md ${className ?? ""}`} />;
 }
@@ -25,15 +32,23 @@ function LoadingProgressBar() {
   );
 }
 
-function LoadingStatus({ variant }: { variant: "full" | "compact" }) {
+function LoadingStatus({
+  variant,
+  mode = "initial",
+}: {
+  variant: "full" | "compact";
+  mode?: "initial" | "alternate";
+}) {
+  const messages = mode === "alternate" ? ALT_LOADING_MESSAGES : LOADING_MESSAGES;
   const [messageIndex, setMessageIndex] = useState(0);
 
   useEffect(() => {
+    setMessageIndex(0);
     const id = window.setInterval(() => {
-      setMessageIndex((i) => (i + 1) % LOADING_MESSAGES.length);
+      setMessageIndex((i) => (i + 1) % messages.length);
     }, 2800);
     return () => window.clearInterval(id);
-  }, []);
+  }, [messages.length, mode]);
 
   return (
     <div
@@ -44,21 +59,28 @@ function LoadingStatus({ variant }: { variant: "full" | "compact" }) {
         className="text-sm text-muted-foreground tracking-wide text-center animate-in fade-in duration-300"
         data-testid="text-loading-message"
       >
-        {LOADING_MESSAGES[messageIndex]}
+        {messages[messageIndex]}
       </p>
     </div>
   );
 }
 
-export function LoadingState({ variant = "full" }: { variant?: "full" | "compact" }) {
+export function LoadingState({
+  variant = "full",
+  mode = "initial",
+}: {
+  variant?: "full" | "compact";
+  mode?: "initial" | "alternate";
+}) {
   if (variant === "compact") {
     return (
       <div
         className="rounded-lg border border-primary/20 bg-background/95 backdrop-blur-sm px-4 py-3 shadow-lg animate-in fade-in duration-300"
         data-testid="loading-state-compact"
+        data-loading-mode={mode}
       >
         <LoadingProgressBar />
-        <LoadingStatus variant="compact" />
+        <LoadingStatus variant="compact" mode={mode} />
       </div>
     );
   }
@@ -121,7 +143,7 @@ export function LoadingState({ variant = "full" }: { variant?: "full" | "compact
         </CardContent>
       </Card>
 
-      <LoadingStatus variant="full" />
+      <LoadingStatus variant="full" mode={mode} />
     </div>
   );
 }

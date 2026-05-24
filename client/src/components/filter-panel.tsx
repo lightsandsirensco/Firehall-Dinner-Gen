@@ -8,6 +8,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import {
   Flame,
   RefreshCw,
+  Shuffle,
   Users,
   Clock,
   Dumbbell,
@@ -19,13 +20,20 @@ import {
   Globe,
   UtensilsCrossed,
   Settings2,
-  Heart,
   Utensils,
   ChevronLeft,
   ChevronRight,
   ChevronDown,
 } from "lucide-react";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import { useIsMobile } from "@/hooks/use-mobile";
 import { trackEvent } from "@/lib/analytics";
 import {
   type TonightVibe,
@@ -34,16 +42,25 @@ import {
   TIME_CHIPS,
   PROTEIN_CHIPS,
   applyTonightVibe,
-  formatGenerateSummary,
+  applySimplifiedChipSelection,
   isAdvancedCustomized,
 } from "@/lib/tonight-vibes";
+import {
+  DIFFERENT_MEAL_LABEL,
+  DIFFERENT_MEAL_LOADING,
+  INITIAL_MEAL_LABEL,
+  INITIAL_MEAL_LOADING,
+  ONE_TAP_MEAL_LABEL,
+  formatDinnerOutcomeLine,
+  formatDifferentMealSubcopy,
+  formatTonightAtHallLine,
+} from "@/lib/meal-outcome-copy";
 import { memo, useState } from "react";
 
 export type { TonightVibe };
 
 export interface FilterState {
   crew_size: number;
-  busy_level: string;
   time_available: string;
   appliances: string[];
   protein: string;
@@ -95,23 +112,25 @@ function ChipRow<T extends string | number>({
   value,
   onChange,
   testIdPrefix,
+  layout = "wrap",
 }: {
   options: readonly { value: T; label: string }[];
   value: T;
   onChange: (val: T) => void;
   testIdPrefix: string;
+  layout?: "wrap" | "grid";
 }) {
   return (
-    <div className="flex flex-wrap gap-2">
+    <div className={layout === "grid" ? "grid grid-cols-4 gap-2" : "flex flex-wrap gap-2"}>
       {options.map((opt) => {
         const isActive = value === opt.value;
         return (
           <Badge
             key={String(opt.value)}
             variant={isActive ? "default" : "outline"}
-            className={`cursor-pointer select-none text-xs px-3 py-2 min-h-9 toggle-elevate ${
-              isActive ? "toggle-elevated bg-primary text-primary-foreground" : ""
-            }`}
+            className={`cursor-pointer select-none text-sm font-medium px-3 py-2.5 min-h-11 toggle-elevate transition-colors ${
+              layout === "grid" ? "w-full justify-center" : ""
+            } ${isActive ? "toggle-elevated bg-primary text-primary-foreground ring-2 ring-primary/30" : ""}`}
             onClick={() => onChange(opt.value)}
             data-testid={`${testIdPrefix}-${opt.value}`}
           >
@@ -176,12 +195,40 @@ function FieldLabel({ icon: Icon, children }: { icon: React.ElementType; childre
 function AdvancedFilterSections({
   filters,
   update,
+  onVibeChange,
 }: {
   filters: FilterState;
   update: (key: keyof FilterState, value: unknown) => void;
+  onVibeChange: (vibe: TonightVibe) => void;
 }) {
   return (
     <>
+      <div className="space-y-2">
+        <FieldLabel icon={Utensils}>Tonight&apos;s vibe</FieldLabel>
+        <p className="text-[11px] text-muted-foreground leading-snug">
+          Optional — usually inferred from your picks above.
+        </p>
+        <div className="flex flex-wrap gap-2">
+          {TONIGHT_VIBE_OPTIONS.map((v) => {
+            const active = filters.tonight_vibe === v.value;
+            return (
+              <Badge
+                key={v.value}
+                variant={active ? "default" : "outline"}
+                className={`cursor-pointer select-none text-xs px-3 py-2 min-h-9 ${
+                  active ? "bg-primary text-primary-foreground" : ""
+                }`}
+                onClick={() => onVibeChange(v.value)}
+                data-testid={`chip-vibe-${v.value}`}
+                title={v.hint}
+              >
+                {v.label}
+              </Badge>
+            );
+          })}
+        </div>
+      </div>
+
       <div className="section-divider" />
 
       <div className="space-y-3">
@@ -345,7 +392,7 @@ function AdvancedFilterSections({
               <SelectValue />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="lean">Lighter plate</SelectItem>
+              <SelectItem value="lean">Lighter / healthy</SelectItem>
               <SelectItem value="balanced">Hall standard</SelectItem>
               <SelectItem value="comfort">Full comfort</SelectItem>
             </SelectContent>
@@ -353,6 +400,38 @@ function AdvancedFilterSections({
         </div>
       </div>
     </>
+  );
+}
+
+function MoreOptionsTrigger({
+  customized,
+  open,
+  className,
+}: {
+  customized: boolean;
+  open?: boolean;
+  className?: string;
+}) {
+  return (
+    <Button
+      type="button"
+      variant="outline"
+      className={`w-full justify-between font-medium text-sm min-h-11 ${className ?? ""}`}
+      data-testid="button-toggle-advanced-filters"
+    >
+      <span className="flex items-center gap-2">
+        <Settings2 className="w-4 h-4 text-primary" />
+        More options
+        {customized && (
+          <Badge variant="secondary" className="text-[10px] px-1.5 py-0">
+            customized
+          </Badge>
+        )}
+      </span>
+      <ChevronDown
+        className={`w-4 h-4 shrink-0 transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+      />
+    </Button>
   );
 }
 
@@ -385,15 +464,15 @@ function GenerateButtons({
     isLoading ||
     filters.appliances.length === 0 ||
     (filters.use_what_we_have && filters.ingredients_on_hand_text.trim().length === 0);
-  const summary = formatGenerateSummary(filters);
+  const outcomeLine = formatDinnerOutcomeLine(filters, true);
 
   return (
-    <div className={`flex flex-col gap-2 ${className ?? ""}`}>
+    <div className={`flex flex-col gap-2.5 ${className ?? ""}`}>
       {!hasRecipe ? (
         <>
           <Button
             size="lg"
-            className="btn-generate w-full font-heading text-lg tracking-wider min-h-12"
+            className="btn-generate w-full font-heading text-lg tracking-wider min-h-12 active:scale-[0.98] transition-transform"
             onClick={onGenerate}
             disabled={disabled}
             data-testid="button-generate"
@@ -403,15 +482,19 @@ function GenerateButtons({
             ) : (
               <Flame className="w-5 h-5 mr-2" />
             )}
-            {isLoading ? "Working the line…" : "Put dinner on the board"}
+            {isLoading ? INITIAL_MEAL_LOADING : ONE_TAP_MEAL_LABEL}
           </Button>
-          <p className="text-center text-xs text-muted-foreground">{summary}</p>
+          <p className="text-center text-xs text-muted-foreground leading-snug">{outcomeLine}</p>
+          <p className="text-center text-[10px] text-muted-foreground/70">{formatTonightAtHallLine()}</p>
         </>
       ) : (
         <>
+          <p className="text-center text-[10px] font-medium uppercase tracking-[0.2em] text-primary/80">
+            {formatTonightAtHallLine()}
+          </p>
           <Button
             size="lg"
-            className="btn-generate w-full font-heading text-lg tracking-wider min-h-12"
+            className="btn-generate w-full font-heading text-lg tracking-wider min-h-[3.25rem] sm:min-h-12 active:scale-[0.98] transition-transform shadow-md shadow-primary/10"
             onClick={onGenerateAnother}
             disabled={isLoading}
             data-testid="button-generate-another"
@@ -419,11 +502,13 @@ function GenerateButtons({
             {isLoading ? (
               <RefreshCw className="w-5 h-5 mr-2 animate-spin" />
             ) : (
-              <RefreshCw className="w-5 h-5 mr-2" />
+              <Shuffle className="w-5 h-5 mr-2" />
             )}
-            {isLoading ? "Working another option…" : "Different meal"}
+            {isLoading ? DIFFERENT_MEAL_LOADING : DIFFERENT_MEAL_LABEL}
           </Button>
-          <p className="text-center text-xs text-muted-foreground">Same crew · new plate for the table</p>
+          <p className="text-center text-xs text-muted-foreground leading-snug px-1">
+            {formatDifferentMealSubcopy(filters)}
+          </p>
           {(canGoBack || canGoForward) && (
             <div className="flex gap-2">
               <Button
@@ -458,8 +543,8 @@ function GenerateButtons({
             disabled={isLoading}
             data-testid="button-new-generate"
           >
-            <Flame className="w-4 h-4 mr-2" />
-            New filters
+            <Settings2 className="w-4 h-4 mr-2" />
+            Change picks
           </Button>
         </>
       )}
@@ -480,7 +565,8 @@ export const FilterPanel = memo(function FilterPanel({
   onForward,
   onScrollToFilters,
 }: FilterPanelProps) {
-  const [advancedOpen, setAdvancedOpen] = useState(false);
+  const [moreOptionsOpen, setMoreOptionsOpen] = useState(false);
+  const isMobile = useIsMobile();
 
   const update = (key: keyof FilterState, value: unknown) => {
     if (key === "allergens_to_avoid") trackEvent("allergy_filter_used");
@@ -491,33 +577,70 @@ export const FilterPanel = memo(function FilterPanel({
     onFiltersChange(applyTonightVibe(filters, vibe));
   };
 
+  const applyChip = (change: Parameters<typeof applySimplifiedChipSelection>[1]) => {
+    onFiltersChange(applySimplifiedChipSelection(filters, change));
+  };
+
   const customized = isAdvancedCustomized(filters);
+  const advancedSections = (
+    <AdvancedFilterSections filters={filters} update={update} onVibeChange={setVibe} />
+  );
 
   return (
     <div className="space-y-4" id="filters-panel">
       <Card className="premium-card">
-        <CardContent className="p-4 sm:p-5 space-y-5">
+        <CardContent className="p-4 sm:p-5 space-y-4">
           <div>
-            <h2 className="font-heading text-xl tracking-wide text-foreground">What's for dinner at the hall?</h2>
-            <p className="text-xs text-muted-foreground mt-1">Crew, time, protein — we'll build a full table meal.</p>
+            <h2 className="font-heading text-xl tracking-wide text-foreground">Pick tonight&apos;s dinner</h2>
+            <p className="text-xs text-muted-foreground mt-1">
+              {hasRecipe ? "Three taps · full crew meal." : "Defaults set — one tap or fine-tune below."}
+            </p>
           </div>
 
+          {!hasRecipe && (
+            <Button
+              size="lg"
+              className="btn-generate w-full font-heading text-lg tracking-wider min-h-[3.25rem] lg:hidden shadow-md shadow-primary/10 active:scale-[0.98] transition-transform"
+              onClick={onGenerate}
+              disabled={
+                isLoading ||
+                filters.appliances.length === 0 ||
+                (filters.use_what_we_have && filters.ingredients_on_hand_text.trim().length === 0)
+              }
+              data-testid="button-one-tap-generate-mobile"
+            >
+              {isLoading ? (
+                <RefreshCw className="w-5 h-5 mr-2 animate-spin" />
+              ) : (
+                <Flame className="w-5 h-5 mr-2" />
+              )}
+              {isLoading ? INITIAL_MEAL_LOADING : ONE_TAP_MEAL_LABEL}
+            </Button>
+          )}
+
           <div className="space-y-2">
-            <FieldLabel icon={Users}>How many eating?</FieldLabel>
+            <FieldLabel icon={Users}>
+              {!hasRecipe && <span className="text-muted-foreground/70 font-normal">Optional · </span>}
+              Crew size
+            </FieldLabel>
             <ChipRow
+              layout="grid"
               options={CREW_CHIPS}
               value={
                 CREW_CHIPS.some((c) => c.value === filters.crew_size)
                   ? filters.crew_size
                   : 6
               }
-              onChange={(val) => update("crew_size", val)}
+              onChange={(val) => applyChip({ crew_size: val })}
               testIdPrefix="chip-crew"
             />
           </div>
 
           <div className="space-y-2">
-            <FieldLabel icon={Clock}>How much time?</FieldLabel>
+            <FieldLabel icon={Clock}>
+              {!hasRecipe && <span className="text-muted-foreground/70 font-normal">Optional · </span>}
+              Time available
+            </FieldLabel>
             <ChipRow
               options={TIME_CHIPS}
               value={
@@ -525,14 +648,17 @@ export const FilterPanel = memo(function FilterPanel({
                   ? (filters.time_available as (typeof TIME_CHIPS)[number]["value"])
                   : "25-40"
               }
-              onChange={(val) => update("time_available", val)}
+              onChange={(val) => applyChip({ time_available: val })}
               testIdPrefix="chip-time"
             />
           </div>
 
           {!filters.use_what_we_have && (
             <div className="space-y-2">
-              <FieldLabel icon={Dumbbell}>Protein</FieldLabel>
+              <FieldLabel icon={Dumbbell}>
+                {!hasRecipe && <span className="text-muted-foreground/70 font-normal">Optional · </span>}
+                Protein
+              </FieldLabel>
               <ChipRow
                 options={PROTEIN_CHIPS}
                 value={
@@ -540,63 +666,32 @@ export const FilterPanel = memo(function FilterPanel({
                     ? (filters.protein as (typeof PROTEIN_CHIPS)[number]["value"])
                     : "chicken"
                 }
-                onChange={(val) => update("protein", val)}
+                onChange={(val) => applyChip({ protein: val })}
                 testIdPrefix="chip-protein"
               />
             </div>
           )}
 
-          <div className="space-y-2">
-            <FieldLabel icon={Utensils}>Tonight's vibe</FieldLabel>
-            <div className="flex flex-wrap gap-2">
-              {TONIGHT_VIBE_OPTIONS.map((v) => {
-                const active = filters.tonight_vibe === v.value;
-                return (
-                  <Badge
-                    key={v.value}
-                    variant={active ? "default" : "outline"}
-                    className={`cursor-pointer select-none text-xs px-3 py-2 min-h-9 ${
-                      active ? "bg-primary text-primary-foreground" : ""
-                    }`}
-                    onClick={() => setVibe(v.value)}
-                    data-testid={`chip-vibe-${v.value}`}
-                    title={v.hint}
-                  >
-                    {v.label}
-                  </Badge>
-                );
-              })}
-            </div>
-          </div>
-
-          <Collapsible open={advancedOpen} onOpenChange={setAdvancedOpen}>
-            <CollapsibleTrigger asChild>
-              <Button
-                type="button"
-                variant="outline"
-                className="w-full justify-between font-medium text-sm min-h-11"
-                data-testid="button-toggle-advanced-filters"
-              >
-                <span className="flex items-center gap-2">
-                  <Settings2 className="w-4 h-4 text-primary" />
-                  Advanced
-                  {customized && (
-                    <Badge variant="secondary" className="text-[10px] px-1.5 py-0">
-                      customized
-                    </Badge>
-                  )}
-                </span>
-                <ChevronDown
-                  className={`w-4 h-4 shrink-0 transition-transform duration-200 ${
-                    advancedOpen ? "rotate-180" : ""
-                  }`}
-                />
-              </Button>
-            </CollapsibleTrigger>
-            <CollapsibleContent className="pt-4">
-              <AdvancedFilterSections filters={filters} update={update} />
-            </CollapsibleContent>
-          </Collapsible>
+          {isMobile ? (
+            <Sheet open={moreOptionsOpen} onOpenChange={setMoreOptionsOpen}>
+              <SheetTrigger asChild>
+                <MoreOptionsTrigger customized={customized} open={moreOptionsOpen} />
+              </SheetTrigger>
+              <SheetContent side="bottom" className="max-h-[88vh] overflow-y-auto rounded-t-2xl pb-8">
+                <SheetHeader className="text-left pb-2">
+                  <SheetTitle className="font-heading text-lg tracking-wide">More options</SheetTitle>
+                </SheetHeader>
+                {advancedSections}
+              </SheetContent>
+            </Sheet>
+          ) : (
+            <Collapsible open={moreOptionsOpen} onOpenChange={setMoreOptionsOpen}>
+              <CollapsibleTrigger asChild>
+                <MoreOptionsTrigger customized={customized} open={moreOptionsOpen} />
+              </CollapsibleTrigger>
+              <CollapsibleContent className="pt-4">{advancedSections}</CollapsibleContent>
+            </Collapsible>
+          )}
         </CardContent>
       </Card>
 
@@ -617,4 +712,4 @@ export const FilterPanel = memo(function FilterPanel({
   );
 });
 
-export { formatGenerateSummary, GenerateButtons };
+export { formatDinnerOutcomeLine as formatGenerateSummary, GenerateButtons };

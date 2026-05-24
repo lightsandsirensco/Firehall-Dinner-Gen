@@ -1014,7 +1014,7 @@ export function validateRecipe(recipe: GenerateResponse, requestMealFormat?: str
     ...(recipe.ingredients || []).map(i => `${i.item} ${i.notes || ""}`),
     ...(recipe.pro_tips || []),
     ...(recipe.budget_tips || []),
-    recipe.why_it_fits || "",
+    recipe.why_it_fits_tonight || "",
   ].join(" ");
   if (genericProteinRe.test(textToCheck) && !allowedProteinContexts.test(textToCheck.match(genericProteinRe)?.[0] || "")) {
     errors.push("generic_protein_word:recipe uses generic 'protein' instead of actual ingredient name");

@@ -155,36 +155,42 @@ export function buildVarietyPromptBlock(constraints: VarietyConstraints): string
   return lines.join("\n");
 }
 
-export function buildHealthyPromptBlock(healthiness: string, busyLevel: string): string {
+export function buildHealthyPromptBlock(healthiness: string, timeAvailable: string): string {
   const lines: string[] = [];
 
   if (healthiness === "lean") {
-    lines.push("HEALTHY DIRECTIVE (100% healthy — this is mandatory):");
-    lines.push("- This MUST be a healthy, high-protein, nutrient-dense meal. No exceptions.");
+    lines.push("HEALTHY CREW DINNER (mandatory — firehall tone, NOT a diet or meal-prep app):");
+    lines.push("- Lighter, cleaner plates for the hall — still satisfying, craveable, and crew-sized.");
+    lines.push("- FULL composed meals: quality protein + starch/grain + real vegetable sides (or equivalent veg volume).");
+    lines.push("- Prefer grilling, roasting, sheet-pan, rice/grain bowls, wraps with slaw, Mediterranean/Mexican/Asian flavors.");
+    lines.push("- Hearty portions — everyone leaves full. No tiny plates, no influencer meal-prep energy.");
+    lines.push("");
+    lines.push("GOOD EXAMPLES (match this energy):");
+    lines.push("- Grilled chicken rice bowls, Greek chicken plates, steak + roasted potatoes + greens");
+    lines.push("- Mediterranean bowls, salmon + potatoes + veg, chicken Caesar with real toppings");
+    lines.push("- Turkey tacos with slaw, sheet-pan chicken + peppers + rice");
+    lines.push("");
+    lines.push("AVOID:");
+    lines.push("- Plain chicken breast + broccoli only, sad side salads, deep-fried comfort bombs, mac-and-cheese feasts");
+    lines.push("- Low-carb obsession, bland diet food, macro-tracker language in titles or copy");
+    lines.push("");
+    lines.push("FLAVOR & SIDES:");
+    lines.push("- Bold but clean: citrus, herbs, garlic, ginger, chimichurri, salsa, yogurt sauces, spice blends");
+    lines.push("- 2+ vegetable elements or a substantial veg side; prefer roasted/grilled/slaw over heavy cream sauces");
+    lines.push("- Minimize deep-frying; olive oil, grilling, and roasting are preferred");
   } else if (healthiness === "balanced") {
-    lines.push("HEALTHY DIRECTIVE (healthy-leaning — 70% chance this should be healthy):");
-    lines.push("- Prefer a healthy, high-protein meal but occasional comfort-inspired options are fine if still nutritious.");
+    lines.push("BALANCED HALL MEAL:");
+    lines.push("- Default hall dinner — hearty and practical; vegetables and protein still matter.");
+    lines.push("- Occasional comfort is fine; avoid making every meal feel like diet food.");
   } else {
     return "";
   }
 
-  lines.push("HEALTHY QUALITY SIGNALS (include at least 2 of these):");
-  lines.push("- 30g+ protein per serving");
-  lines.push("- 1+ high-fiber ingredient (beans, lentils, chickpeas, whole grains, veg-heavy)");
-  lines.push("- Healthy fat source (olive oil, avocado, nuts, seeds)");
-  lines.push("- Veg volume (2+ cups veg per serving OR 3+ vegetable ingredients)");
-  lines.push("- Lower added sugar (no sweet sauces unless low-sugar alternative)");
-  lines.push("");
-  lines.push("AVOID 'BORING HEALTHY':");
-  lines.push("- Do NOT default to plain chicken + broccoli + rice. Be creative.");
-  lines.push("- Avoid generic 'salad' meals.");
-  lines.push("- Use bold healthy flavor builders: citrus, vinegars, fresh herbs, garlic, ginger, spice blends, yogurt sauces, salsa verde, chimichurri, gochujang (lower sugar), miso, tahini-lemon, harissa, chermoula, etc.");
-
-  if (busyLevel === "busy" || busyLevel === "slammed") {
+  if (timeAvailable === "15-25" || timeAvailable === "20-30") {
     lines.push("");
-    lines.push("STATION PRACTICALITY (busy hall):");
-    lines.push("- Prefer one-pan, sheet-pan, slow cooker, or single-pot meals.");
-    lines.push("- Include prep shortcuts: pre-chopped veg, frozen veg, rotisserie chicken if applicable.");
+    lines.push("SHORT TIME WINDOW:");
+    lines.push("- Prefer sheet-pan, skillet, or one-pan approaches when possible.");
+    lines.push("- Frozen veg, pre-chopped produce, and rotisserie chicken are fair game on shift.");
   }
 
   return lines.join("\n");

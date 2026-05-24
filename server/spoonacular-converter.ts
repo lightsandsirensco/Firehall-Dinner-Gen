@@ -1,4 +1,4 @@
-import { log } from "./index";
+import { log, logVerbose, clip } from "./logger";
 import {
   applyCrewPortionFloors,
   buildHallWhyItFits,
@@ -409,13 +409,13 @@ async function tryConvertCandidate(
   const matches = proteinMatchesFilter(inferred, chosenProtein);
 
   if (matches) {
-    log(
-      `[proteinAudit] selected=${chosenProtein} inferred=${inferred} result=accepted title="${detail.title}"`,
+    logVerbose(
+      `[proteinAudit] accepted selected=${chosenProtein} inferred=${inferred} id=${candidate.id}`,
       "spoonacular",
     );
   } else {
-    log(
-      `[proteinAudit] selected=${chosenProtein} inferred=${inferred} result=rejected title="${detail.title}"`,
+    logVerbose(
+      `[proteinAudit] rejected selected=${chosenProtein} inferred=${inferred} id=${candidate.id}`,
       "spoonacular",
     );
     return null;
@@ -519,14 +519,14 @@ export async function fetchBestSpoonacularRecipe(
 
     // Try each candidate in order — return first that passes protein audit + has steps
     for (const candidate of pool) {
-      log(
-        `[spoonacular-generator] Trying candidate id=${candidate.id} title="${candidate.title}"`,
+      logVerbose(
+        `[spoonacular-generator] try id=${candidate.id} title="${clip(candidate.title, 40)}"`,
         "spoonacular",
       );
       const recipe = await tryConvertCandidate(candidate, request, chosenProtein);
       if (recipe) {
         log(
-          `[spoonacular-generator] Converted: "${recipe.title}" | ${recipe.ingredients.length} ingredients | ${recipe.steps.length} steps | source=spoonacular`,
+          `[spoonacular-generator] converted id=${candidate.id} title="${clip(recipe.title, 50)}" ings=${recipe.ingredients.length} steps=${recipe.steps.length}`,
           "spoonacular",
         );
         return recipe;

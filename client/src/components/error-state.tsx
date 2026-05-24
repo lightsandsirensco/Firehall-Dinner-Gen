@@ -40,7 +40,7 @@ export function ErrorState({ type, message }: ErrorStateProps) {
       </p>
       <div className="flex items-center gap-1.5 text-muted-foreground/60 text-xs mt-1" data-testid="text-error-hint">
         <RefreshCw className="w-3 h-3" />
-        <span>Hit Generate Meal to try again</span>
+        <span>Tap Different Meal or adjust your picks</span>
       </div>
     </div>
   );

@@ -22,9 +22,6 @@ export default function PizzaNight() {
   const [emailModalOpen, setEmailModalOpen] = useState(false);
   const [shoppingListOpen, setShoppingListOpen] = useState(false);
   const [favCount, setFavCount] = useState(() => getSavedCount());
-  const genCountRef = useRef(0);
-  const emailPromptedRef = useRef(false);
-
   useEffect(() => {
     const handler = () => setFavCount(getSavedCount());
     window.addEventListener("favorites-changed", handler);
@@ -59,11 +56,6 @@ export default function PizzaNight() {
       const data: PizzaResponse = await res.json();
       setRecipe(data);
       setLastPizzaStyleId(data.pizza_style_id);
-      genCountRef.current += 1;
-      if (genCountRef.current === 2 && !emailPromptedRef.current) {
-        emailPromptedRef.current = true;
-        setTimeout(() => setEmailModalOpen(true), 800);
-      }
     } catch (err: any) {
       const msg = err?.message || "Something went wrong";
       if (msg.includes("429")) {

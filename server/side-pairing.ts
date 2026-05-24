@@ -5,6 +5,10 @@
 
 import type { RecipeStep } from "@shared/schema";
 import {
+  bundlesForMeal,
+  type SideBundle,
+} from "@shared/meal-archetype-sides";
+import {
   detectMealIdentity,
   isSeasoningOrGarnish,
   type MealIdentity,
@@ -27,6 +31,7 @@ export interface ComposedSidePick {
   vegLabel: string | null;
   extraLabel: string | null;
   pairingSource: string;
+  bundleId?: string | null;
 }
 
 /** Starch template registry — keys used across composition + validation. */
@@ -232,7 +237,15 @@ const CUISINE_EXTRA: Record<string, string[]> = {
 
 const recentStarchKeys: string[] = [];
 const recentVegLabels: string[] = [];
+const recentBundleIds: string[] = [];
 const MAX_RECENT_SIDES = 8;
+const MAX_RECENT_BUNDLES = 6;
+
+function hashSeed(s: string): number {
+  let h = 0;
+  for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) | 0;
+  return Math.abs(h);
+}
 
 function normalizeCuisine(cuisine: string): string {
   const c = (cuisine || "any").toLowerCase().replace(/\s+/g, "_");
@@ -259,6 +272,7 @@ function pickFromPool(
   healthiness: string,
   allergens: string[],
   preferLight = false,
+  seed = "",
 ): string | null {
   let viable = pool.filter((s) => s && !allergenBlocks(s, allergens));
   if (viable.length === 0) return null;
@@ -268,21 +282,96 @@ function pickFromPool(
   if (fresh.length === 0) fresh = viable;
 
   if (healthiness === "lean" || preferLight) {
-    const light = fresh.filter((s) => /salad|slaw|cucumber|green|broccoli|rice|quinoa/i.test(s));
+    const light = fresh.filter((s) =>
+      /salad|slaw|cucumber|green|broccoli|asparagus|pepper|roasted|grilled|vegetable|veg|rice|quinoa|sweet potato|greens/i.test(
+        s,
+      ),
+    );
     if (light.length > 0) viable = light;
     else viable = fresh;
   } else {
     viable = fresh;
   }
 
-  return viable[Math.floor(Math.random() * viable.length)];
+  const start = seed ? hashSeed(seed) % viable.length : 0;
+  for (let i = 0; i < viable.length; i++) {
+    const pick = viable[(start + i) % viable.length];
+    if (!recentSet.has(pick.toLowerCase()) && !recentSet.has(sideKey(pick))) return pick;
+  }
+  return viable[0];
+}
+
+function bundlePassesAllergens(bundle: SideBundle, allergens: string[]): boolean {
+  if (allergenBlocks(bundle.starchKey, allergens)) return false;
+  if (allergenBlocks(bundle.vegLabel, allergens)) return false;
+  if (bundle.extraLabel && allergenBlocks(bundle.extraLabel, allergens)) return false;
+  return true;
+}
+
+function pickArchetypeBundle(
+  ctx: SidePairingContext,
+  identity: MealIdentity,
+  recentAllStarch: string[],
+): ComposedSidePick | null {
+  const bundles = bundlesForMeal(identity, ctx.formatKey);
+  if (bundles.length === 0) return null;
+
+  let viable = bundles.filter((b) => bundlePassesAllergens(b, ctx.allergens));
+  if (viable.length === 0) viable = bundles;
+
+  const recentBundleSet = new Set(recentBundleIds);
+  let fresh = viable.filter((b) => {
+    if (recentBundleSet.has(b.id)) return false;
+    const sk = sideKey(b.starchKey);
+    const vk = sideKey(b.vegLabel);
+    const starchHits = recentAllStarch.filter((r) => r === sk || r.includes(sk)).length;
+    const vegHits = recentVegLabels.filter((v) => sideKey(v) === vk).length;
+    return starchHits < 2 && vegHits < 2;
+  });
+  if (fresh.length === 0) fresh = viable;
+
+  if (ctx.healthiness === "lean") {
+    const light = fresh.filter((b) =>
+      /salad|slaw|cucumber|green|broccoli|asparagus|pepper|roasted|grilled|vegetable|veg|rice|quinoa|greens/i.test(
+        `${b.starchKey} ${b.vegLabel}`,
+      ),
+    );
+    if (light.length > 0) fresh = light;
+  }
+
+  const start = hashSeed(`${ctx.title}|${identity}`) % fresh.length;
+  for (let i = 0; i < fresh.length; i++) {
+    const b = fresh[(start + i) % fresh.length];
+    if (!recentBundleSet.has(b.id)) {
+      return {
+        starchKey: b.starchKey,
+        vegLabel: b.vegLabel,
+        extraLabel: b.extraLabel ?? null,
+        pairingSource: `bundle:${b.id}`,
+        bundleId: b.id,
+      };
+    }
+  }
+
+  const b = fresh[0];
+  return {
+    starchKey: b.starchKey,
+    vegLabel: b.vegLabel,
+    extraLabel: b.extraLabel ?? null,
+    pairingSource: `bundle:${b.id}`,
+    bundleId: b.id,
+  };
 }
 
 export function sideKey(labelOrKey: string): string {
   return labelOrKey.toLowerCase().replace(/\s+/g, "_").replace(/[()]/g, "");
 }
 
-export function trackComposedSides(starchKey: string | null, vegLabel: string | null): void {
+export function trackComposedSides(
+  starchKey: string | null,
+  vegLabel: string | null,
+  bundleId?: string | null,
+): void {
   if (starchKey) {
     const k = sideKey(starchKey);
     recentStarchKeys.push(k);
@@ -293,6 +382,10 @@ export function trackComposedSides(starchKey: string | null, vegLabel: string | 
   if (vegLabel) {
     recentVegLabels.push(vegLabel);
     if (recentVegLabels.length > MAX_RECENT_SIDES) recentVegLabels.shift();
+  }
+  if (bundleId) {
+    recentBundleIds.push(bundleId);
+    if (recentBundleIds.length > MAX_RECENT_BUNDLES) recentBundleIds.shift();
   }
 }
 
@@ -352,6 +445,15 @@ export function pickComposedSides(ctx: SidePairingContext): ComposedSidePick {
     log(`[side-pair] Rotating off curated "${ctx.title}" — recent overlap`, "compose");
   }
 
+  const archetype = pickArchetypeBundle(ctx, identity, recentAllStarch);
+  if (archetype?.starchKey && archetype.vegLabel) {
+    log(
+      `[side-pair] "${ctx.title}" → bundle ${archetype.bundleId} starch=${archetype.starchKey} veg=${archetype.vegLabel}`,
+      "compose",
+    );
+    return archetype;
+  }
+
   let starchPool = IDENTITY_STARCH[identity] || [];
   if (starchPool.length === 0) starchPool = CUISINE_STARCH[cuisineKey] || PLATED_STARCH_ROTATION;
 
@@ -369,12 +471,26 @@ export function pickComposedSides(ctx: SidePairingContext): ComposedSidePick {
     starchPool = ["jasmine rice", "quinoa"];
   }
 
-  const starchKey = pickFromPool(starchPool, recentAllStarch, ctx.healthiness, ctx.allergens);
-  const vegLabel = pickFromPool(vegPool, recentVegLabels, ctx.healthiness, ctx.allergens);
+  const starchKey = pickFromPool(
+    starchPool,
+    recentAllStarch,
+    ctx.healthiness,
+    ctx.allergens,
+    false,
+    `${ctx.title}:starch`,
+  );
+  const vegLabel = pickFromPool(
+    vegPool,
+    recentVegLabels,
+    ctx.healthiness,
+    ctx.allergens,
+    false,
+    `${ctx.title}:veg`,
+  );
 
   const extraPool = CUISINE_EXTRA[cuisineKey] || [];
   const extraLabel = extraPool.length > 0
-    ? pickFromPool(extraPool, [], ctx.healthiness, ctx.allergens) ?? null
+    ? pickFromPool(extraPool, [], ctx.healthiness, ctx.allergens, false, `${ctx.title}:extra`) ?? null
     : null;
 
   const source = `identity:${identity}|cuisine:${cuisineKey}`;

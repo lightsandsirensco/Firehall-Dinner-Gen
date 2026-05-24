@@ -19,6 +19,7 @@ function Router() {
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/pizza" component={PizzaNight} />
+      <Route path="/explore/recipe/:id" component={ExplorePage} />
       <Route path="/explore" component={ExplorePage} />
       <Route path="/wheel" component={ClassicsWheelPage} />
       <Route path="/package/:slug" component={CuratedPackagePage} />

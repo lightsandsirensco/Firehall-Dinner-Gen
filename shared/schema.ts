@@ -213,6 +213,14 @@ export interface ClientRecipeResponse {
   _fallback?: boolean;
   _signature?: string;
   _id?: string;
+  /** Catalog write-through from V2 Spoonacular success */
+  _catalog_id?: string;
+  _recipe_source?: {
+    kind: string;
+    name: string;
+    url: string;
+    license?: string;
+  };
 }
 
 export const pizzaRequestSchema = z.object({

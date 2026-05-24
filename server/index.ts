@@ -3,6 +3,20 @@ import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { serveStatic } from "./static";
 import { createServer } from "http";
+import { log, logError, summarizeJsonBody } from "./logger";
+
+export {
+  log,
+  logVerbose,
+  logError,
+  isDebugLogs,
+  isProductionEnv,
+  formatLogFields,
+  clip,
+  clipReasons,
+  maskEmail,
+  summarizeJsonBody,
+} from "./logger";
 
 const app = express();
 const httpServer = createServer(app);
@@ -23,66 +37,29 @@ app.use(
 
 app.use(express.urlencoded({ extended: false }));
 
-function summarizeApiResponse(path: string, body: Record<string, any>): string {
-  if (path.includes("/generate")) {
-    return JSON.stringify({
-      title: body.title,
-      template_id: body.template_id,
-      _source: body._source,
-      _fallback: body._fallback,
-      _signature: body._signature ? `${String(body._signature).slice(0, 12)}…` : undefined,
-    });
-  }
-  if (path.includes("/explore") || path.includes("/search")) {
-    const results = body.results;
-    return JSON.stringify({
-      count: Array.isArray(results) ? results.length : 0,
-      _source: body._source,
-      totalResults: body.totalResults,
-    });
-  }
-  if (typeof body.message === "string") {
-    return JSON.stringify({ message: body.message });
-  }
-  if (typeof body.status === "string") {
-    return JSON.stringify({ status: body.status });
-  }
-  const keys = Object.keys(body).slice(0, 6);
-  return JSON.stringify(keys.length <= 6 ? Object.fromEntries(keys.map((k) => [k, typeof body[k]])) : { keys: keys.length });
-}
-
-export function log(message: string, source = "express") {
-  const formattedTime = new Date().toLocaleTimeString("en-US", {
-    hour: "numeric",
-    minute: "2-digit",
-    second: "2-digit",
-    hour12: true,
-  });
-
-  console.log(`${formattedTime} [${source}] ${message}`);
-}
-
 app.use((req, res, next) => {
   const start = Date.now();
   const path = req.path;
-  let capturedJsonResponse: Record<string, any> | undefined = undefined;
+  let capturedJsonResponse: Record<string, unknown> | undefined = undefined;
 
   const originalResJson = res.json;
   res.json = function (bodyJson, ...args) {
-    capturedJsonResponse = bodyJson;
+    if (bodyJson && typeof bodyJson === "object" && !Array.isArray(bodyJson)) {
+      capturedJsonResponse = bodyJson as Record<string, unknown>;
+    }
     return originalResJson.apply(res, [bodyJson, ...args]);
   };
 
   res.on("finish", () => {
     const duration = Date.now() - start;
     if (path.startsWith("/api")) {
-      let logLine = `${req.method} ${path} ${res.statusCode} in ${duration}ms`;
-      if (capturedJsonResponse) {
-        const summary = summarizeApiResponse(path, capturedJsonResponse);
-        if (summary) logLine += ` :: ${summary}`;
-      }
-
-      log(logLine);
+      const summary = capturedJsonResponse
+        ? summarizeJsonBody(path, capturedJsonResponse)
+        : "";
+      const line = summary
+        ? `${req.method} ${path} ${res.statusCode} ${duration}ms ${summary}`
+        : `${req.method} ${path} ${res.statusCode} ${duration}ms`;
+      log(line, "http");
     }
   });
 
@@ -92,11 +69,12 @@ app.use((req, res, next) => {
 (async () => {
   await registerRoutes(httpServer, app);
 
-  app.use((err: any, _req: Request, res: Response, next: NextFunction) => {
-    const status = err.status || err.statusCode || 500;
-    const message = err.message || "Internal Server Error";
+  app.use((err: unknown, _req: Request, res: Response, next: NextFunction) => {
+    const error = err as { status?: number; statusCode?: number; message?: string };
+    const status = error.status || error.statusCode || 500;
+    const message = error.message || "Internal Server Error";
 
-    console.error("Internal Server Error:", err);
+    logError("express", "Internal Server Error", err);
 
     if (res.headersSent) {
       return next(err);
@@ -105,9 +83,6 @@ app.use((req, res, next) => {
     return res.status(status).json({ message });
   });
 
-  // importantly only setup vite in development and after
-  // setting up all the other routes so the catch-all route
-  // doesn't interfere with the other routes
   if (process.env.NODE_ENV === "production") {
     serveStatic(app);
   } else {
@@ -115,24 +90,12 @@ app.use((req, res, next) => {
     await setupVite(httpServer, app);
   }
 
-  // ALWAYS serve the app on the port specified in the environment variable PORT
-  // Other ports are firewalled. Default to 5000 if not specified.
-  // this serves both the API and the client.
-  // It is the only port that is not firewalled.
   const port = parseInt(process.env.PORT || "5000", 10);
-  httpServer.listen(port, () => {
+  httpServer.listen(port, "0.0.0.0", () => {
     log(`serving on port ${port}`);
   });
 
-  const SELF_PING_INTERVAL_MS = 4 * 60 * 1000;
-  const selfPingTimer = setInterval(() => {
-    const url = `http://0.0.0.0:${port}/api/warm`;
-    fetch(url).catch(() => {});
-  }, SELF_PING_INTERVAL_MS);
-  selfPingTimer.unref();
-
-  function gracefulShutdown(signal: string) {
-    clearInterval(selfPingTimer);
+  const shutdown = (signal: string) => {
     log(`${signal} received. Shutting down gracefully...`, "system");
     httpServer.close(() => {
       log("HTTP server closed.", "system");
@@ -142,8 +105,8 @@ app.use((req, res, next) => {
       log("Forcefully shutting down after 10s timeout.", "system");
       process.exit(1);
     }, 10_000).unref();
-  }
+  };
 
-  process.on("SIGTERM", () => gracefulShutdown("SIGTERM"));
-  process.on("SIGINT", () => gracefulShutdown("SIGINT"));
+  process.on("SIGTERM", () => shutdown("SIGTERM"));
+  process.on("SIGINT", () => shutdown("SIGINT"));
 })();

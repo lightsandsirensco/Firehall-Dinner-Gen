@@ -1,14 +1,12 @@
-import Database from "better-sqlite3";
-import path from "path";
 import crypto from "crypto";
 import { log } from "./index";
 import type { GenerateResponse, GenerateRequest } from "@shared/schema";
+import { getSharedLocalDb, type SqliteDatabase } from "./sqlite";
 
-const DB_PATH = path.join(process.cwd(), "data", "cache.db");
-let db: Database.Database;
+let db: SqliteDatabase;
 
-export function initCacheStore() {
-  db = new Database(DB_PATH);
+export async function initCacheStore() {
+  db = await getSharedLocalDb();
   db.pragma("journal_mode = WAL");
   db.pragma("busy_timeout = 5000");
 

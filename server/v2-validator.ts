@@ -14,7 +14,7 @@
  *   7. Cuisine guard (no cross-cuisine ingredient contamination; score ≥ 6)
  */
 
-import { log } from "./index";
+import { log, logVerbose } from "./logger";
 import { inferActualProtein, proteinMatchesFilter } from "./spoonacular-converter";
 import { isWeakTitle } from "./meal-plate";
 import { ALLERGEN_KEYWORDS } from "./allergens";
@@ -277,9 +277,10 @@ export function validateV2Candidate(
   const inferredProtein = inferActualProtein(detail.title, ingredientNames);
   const proteinOk = proteinMatchesFilter(inferredProtein, selectedProtein);
 
-  log(`[validator] selectedProtein=${selectedProtein}`, "v2");
-  log(`[validator] inferredProtein=${inferredProtein}`, "v2");
-  log(`[validator] mealStyle=${formatKey}`, "v2");
+  logVerbose(
+    `[validator] check protein=${selectedProtein} inferred=${inferredProtein} format=${formatKey} id=${detail.id}`,
+    "v2",
+  );
 
   if (!proteinOk) {
     const reason = `protein-mismatch:expected=${selectedProtein},inferred=${inferredProtein}`;
@@ -350,7 +351,7 @@ export function validateV2Candidate(
   // "any" cuisine always passes (score = 10).
   if (cuisineKey && cuisineKey !== "any") {
     const cuisineScore = scoreCuisineMatch(ingredientNames, detail.title, cuisineKey);
-    log(`[validator] cuisineMatchScore=${cuisineScore} cuisine=${cuisineKey}`, "v2");
+    logVerbose(`[validator] cuisineScore=${cuisineScore} cuisine=${cuisineKey} id=${detail.id}`, "v2");
 
     if (cuisineScore < 6) {
       const reason = `cuisine-mismatch:cuisine=${cuisineKey},score=${cuisineScore}`;
@@ -359,7 +360,10 @@ export function validateV2Candidate(
     }
 
     if (cuisineScore < 8) {
-      log(`[validator] cuisine-warning:score=${cuisineScore} cuisine=${cuisineKey} — passing with caution`, "v2");
+      logVerbose(
+        `[validator] cuisine-warning score=${cuisineScore} cuisine=${cuisineKey} id=${detail.id}`,
+        "v2",
+      );
     }
   }
 

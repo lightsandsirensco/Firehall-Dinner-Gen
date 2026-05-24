@@ -1,9 +1,9 @@
 import { useState, useCallback, useEffect, useMemo, useRef } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { Search, Clock, Users, ChevronLeft, X, Loader2, Heart, ShieldAlert, Globe, UtensilsCrossed, ChefHat, Package, Leaf, Printer, Mail, List, BookmarkPlus, Sparkles, SlidersHorizontal, Utensils, TrendingUp, Flame } from "lucide-react";
+import { Search, Clock, Users, ChevronLeft, X, Loader2, Heart, ShieldAlert, Globe, UtensilsCrossed, Package, Leaf, Printer, Mail, List, BookmarkPlus, Sparkles, SlidersHorizontal, Utensils, Flame } from "lucide-react";
 import { HeroHeader } from "@/components/hero-header";
 import { SiteHeader } from "@/components/site-header";
-import { Link, useLocation } from "wouter";
+import { Link, useLocation, useRoute } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
@@ -14,7 +14,12 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Checkbox } from "@/components/ui/checkbox";
 import { Textarea } from "@/components/ui/textarea";
 import { getSavedCount, saveMeal, isMealSaved } from "@/lib/saved-meals";
-import { ExploreRecipeCard, ExploreRecipeCardSkeleton } from "@/components/explore-recipe-card";
+import { ExploreRecipeCard as ExploreRecipeCardView } from "@/components/explore-recipe-card";
+import {
+  ExploreEditorialSectionBlock,
+  ExploreEditorialSkeleton,
+} from "@/components/explore-editorial-section";
+import { fetchExploreSections } from "@/lib/explore-sections-api";
 import { buildShoppingListFromClientMeal } from "@/lib/shopping-list";
 import { EmailModal } from "@/components/email-modal";
 import { ShoppingListModal } from "@/components/shopping-list-modal";
@@ -22,34 +27,28 @@ import { buildPrintHtml } from "@/components/recipe-card";
 import { fetchExploreRecipeDetail, normalizeExploreRecipeId } from "@/lib/explore-api";
 import { stripHtml } from "@/lib/text";
 import {
+  type ExploreRecipeCard,
+  normalizeExploreRecipeList,
+  ExploreRecipeCardRegistry,
+  mergeDetailWithCardPreview,
+} from "@/lib/explore-recipe";
+import { ExploreRecipeImage } from "@/components/explore-recipe-image";
+import {
   getWheelClassicBySlug,
-  resolveCuratedSlugFromTitle,
   buildPackageUrl,
+  getExploreClassicCards,
+  resolveCuratedSlugFromTitle,
 } from "@/lib/firehall-classics-wheel";
 import type { ClientRecipeResponse, ClientIngredient } from "@shared/schema";
 
-interface SearchResult {
-  id: number;
-  title: string;
-  image: string;
-  readyInMinutes: number;
-  servings: number;
-  summary: string;
-  sourceUrl?: string;
-  cuisines?: string[];
-  diets?: string[];
-  _firehallFallback?: boolean;
-  _pool?: string;
-}
-
 interface SearchResponse {
-  results: SearchResult[];
+  results: ExploreRecipeCard[];
   totalResults: number;
   _source?: "spoonacular" | "firehall" | "none";
   _relaxed?: string;
 }
 
-function inferRecipeTags(r: SearchResult): string[] {
+function inferRecipeTags(r: ExploreRecipeCard): string[] {
   const tags: string[] = [];
   const addTag = (tag: string) => { if (!tags.includes(tag)) tags.push(tag); };
   const t = r.title.toLowerCase();
@@ -152,6 +151,7 @@ interface RecipeDetail {
   id: number;
   title: string;
   image: string;
+  imageAlt?: string;
   readyInMinutes: number;
   servings: number;
   sourceUrl: string;
@@ -461,45 +461,15 @@ function buildSearchParams(filters: ExploreFilters): URLSearchParams {
   return params;
 }
 
-interface ClassicGeneratorFilters {
-  meal_format: string;
-  proteins: string[];
-  cuisine_style: string;
-}
-
-interface FirehallClassic {
-  title: string;
-  searchQuery: string;
-  protein: string;
-  style: string;
-  emoji: string;
-  generatorFilters: ClassicGeneratorFilters;
-}
-
-const ALL_FIREHALL_CLASSICS: FirehallClassic[] = [
-  { title: "Firehall Chili", searchQuery: "beef chili", protein: "Beef", style: "One-Pot", emoji: "🌶️", generatorFilters: { meal_format: "soup_chili", proteins: ["beef"], cuisine_style: "mexican" } },
-  { title: "Smash Burgers + Fries", searchQuery: "smash burgers with fries", protein: "Beef", style: "Grill", emoji: "🍔", generatorFilters: { meal_format: "burger", proteins: ["beef"], cuisine_style: "any" } },
-  { title: "Taco Night", searchQuery: "ground beef tacos", protein: "Beef", style: "Tacos", emoji: "🌮", generatorFilters: { meal_format: "tacos", proteins: ["beef"], cuisine_style: "mexican" } },
-  { title: "BBQ Chicken", searchQuery: "bbq chicken", protein: "Chicken", style: "BBQ", emoji: "🍗", generatorFilters: { meal_format: "plated_main", proteins: ["chicken"], cuisine_style: "bbq" } },
-  { title: "Cajun Chicken Pasta", searchQuery: "cajun chicken pasta", protein: "Chicken", style: "Pasta", emoji: "🍝", generatorFilters: { meal_format: "pasta", proteins: ["chicken"], cuisine_style: "cajun" } },
-  { title: "Pulled Pork Sandwiches", searchQuery: "pulled pork sandwich", protein: "Pork", style: "Sandwich", emoji: "🥪", generatorFilters: { meal_format: "sandwich", proteins: ["pork"], cuisine_style: "bbq" } },
-  { title: "Meatball Subs", searchQuery: "meatball sub sandwich", protein: "Beef", style: "Sandwich", emoji: "🥖", generatorFilters: { meal_format: "sandwich", proteins: ["beef"], cuisine_style: "italian" } },
-  { title: "Breakfast for Dinner", searchQuery: "breakfast for dinner eggs bacon", protein: "Mixed", style: "Breakfast", emoji: "🍳", generatorFilters: { meal_format: "breakfast", proteins: ["chicken", "pork"], cuisine_style: "any" } },
-  { title: "Loaded Nachos", searchQuery: "loaded nachos with ground beef", protein: "Beef", style: "Snack", emoji: "🧀", generatorFilters: { meal_format: "loaded_fries", proteins: ["beef"], cuisine_style: "mexican" } },
-  { title: "Sheet Pan Sausage & Veg", searchQuery: "sheet pan sausage vegetables", protein: "Pork", style: "Sheet Pan", emoji: "🥘", generatorFilters: { meal_format: "sheet_pan", proteins: ["pork"], cuisine_style: "any" } },
-  { title: "Mac & Cheese with Protein", searchQuery: "mac and cheese with chicken", protein: "Chicken", style: "Comfort", emoji: "🧈", generatorFilters: { meal_format: "casserole", proteins: ["chicken"], cuisine_style: "any" } },
-  { title: "Chicken Parm Pasta", searchQuery: "chicken parmesan pasta", protein: "Chicken", style: "Pasta", emoji: "🍝", generatorFilters: { meal_format: "pasta", proteins: ["chicken"], cuisine_style: "italian" } },
-];
-
-function getRotatedClassics(count: number = 8): FirehallClassic[] {
+function getRotatedClassics(count: number = 8) {
   const dayOfYear = Math.floor((Date.now() - new Date(new Date().getFullYear(), 0, 0).getTime()) / 86400000);
   const seed = dayOfYear;
-  const shuffled = [...ALL_FIREHALL_CLASSICS];
+  const shuffled = [...getExploreClassicCards()];
   for (let i = shuffled.length - 1; i > 0; i--) {
     const j = ((seed * (i + 7)) % (i + 1) + i + 1) % (i + 1);
     [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
   }
-  const selected: FirehallClassic[] = [];
+  const selected: ReturnType<typeof getExploreClassicCards> = [];
   const proteinCounts = new Map<string, number>();
   const usedStyles = new Set<string>();
   const MAX_PER_PROTEIN = 2;
@@ -571,6 +541,7 @@ function FilterSection({ icon: Icon, title, children }: { icon: typeof Globe; ti
 
 export default function ExplorePage() {
   const [, navigate] = useLocation();
+  const [recipeRouteMatch, recipeRouteParams] = useRoute("/explore/recipe/:id");
   const [filters, setFilters] = useState<ExploreFilters>(() => {
     const defaults: ExploreFilters = {
       freeText: "",
@@ -595,20 +566,40 @@ export default function ExplorePage() {
   const [submitted, setSubmitted] = useState(false);
   const [searchParams, setSearchParams] = useState<URLSearchParams | null>(null);
   const [selectedRecipeId, setSelectedRecipeId] = useState<number | null>(null);
+  const [selectedRecipePreview, setSelectedRecipePreview] = useState<ExploreRecipeCard | null>(null);
 
   const lastSourceUrlRef = useRef<string | null>(null);
+  const recipeCardRegistry = useRef(new ExploreRecipeCardRegistry());
 
-  const openExploreRecipe = useCallback((rawId: unknown, sourceUrl?: string) => {
-    const id = normalizeExploreRecipeId(rawId);
-    console.debug("[explore] Recipe card clicked:", { rawId, normalizedId: id, sourceUrl });
+  const openExploreRecipe = useCallback((card: ExploreRecipeCard) => {
+    const id = normalizeExploreRecipeId(card.id);
+    console.debug("[explore] Recipe card clicked:", { id, title: card.title, image: card.image });
     if (id === null) {
-      console.warn("[explore] Cannot open recipe — invalid id:", rawId);
+      console.warn("[explore] Cannot open recipe — invalid id:", card.id);
       return;
     }
-    lastSourceUrlRef.current = sourceUrl || null;
+    recipeCardRegistry.current.register([card]);
+    lastSourceUrlRef.current = card.sourceUrl || null;
+    setSelectedRecipePreview(card);
     setSelectedRecipeId(id);
-  }, []);
-  const [classicLoading, setClassicLoading] = useState<string | null>(null);
+    navigate(`/explore/recipe/${id}`);
+  }, [navigate]);
+
+  const closeRecipeDetail = useCallback(() => {
+    setSelectedRecipeId(null);
+    setSelectedRecipePreview(null);
+    navigate("/explore");
+  }, [navigate]);
+
+  useEffect(() => {
+    if (!recipeRouteMatch || !recipeRouteParams?.id) return;
+    const id = normalizeExploreRecipeId(recipeRouteParams.id);
+    if (id === null) return;
+    if (selectedRecipeId === id) return;
+    const cached = recipeCardRegistry.current.get(id);
+    if (cached) setSelectedRecipePreview(cached);
+    setSelectedRecipeId(id);
+  }, [recipeRouteMatch, recipeRouteParams?.id, selectedRecipeId]);
   const [favCount] = useState(() => getSavedCount());
   const seenIdsRef = useRef<number[]>((() => {
     try {
@@ -620,11 +611,6 @@ export default function ExplorePage() {
     } catch {}
     return [];
   })());
-  const [discoverRecipes, setDiscoverRecipes] = useState<SearchResult[]>([]);
-  const [discoverLoading, setDiscoverLoading] = useState(false);
-  const [loadMoreLoading, setLoadMoreLoading] = useState(false);
-  const [discoverExhausted, setDiscoverExhausted] = useState(false);
-  const discoverLoadedIdsRef = useRef<Set<number>>(new Set());
 
   const addSeenIds = useCallback((ids: number[]) => {
     const prev = seenIdsRef.current;
@@ -665,112 +651,45 @@ export default function ExplorePage() {
     setSearchParams(params);
     setSubmitted(true);
     setSelectedRecipeId(null);
+    setSelectedRecipePreview(null);
   }, [filters]);
 
   const queryString = searchParams?.toString() || "";
 
-  const buildDiscoverUrl = useCallback((batchLimit: number) => {
-    const params = new URLSearchParams();
-    params.set("limit", String(batchLimit));
-    if (filters.vegetarian) params.set("diet", "vegetarian");
-    if (filters.allergens.length > 0) {
+  const editorialSafetyKey = `${filters.vegetarian}-${filters.allergens.join(",")}`;
+
+  const {
+    data: editorialData,
+    isLoading: editorialLoading,
+    error: editorialError,
+    refetch: refetchEditorial,
+  } = useQuery({
+    queryKey: ["/api/explore/sections", editorialSafetyKey],
+    queryFn: async () => {
       const intolerances = filters.allergens
-        .map(a => ALLERGEN_TO_INTOLERANCE[a])
+        .map((a) => ALLERGEN_TO_INTOLERANCE[a])
         .filter(Boolean)
         .join(",");
-      if (intolerances) params.set("intolerances", intolerances);
-      const excludeItems = filters.allergens
-        .flatMap(a => ALLERGEN_EXCLUDE_MAP[a] || []);
-      if (excludeItems.length > 0) params.set("excludeIngredients", excludeItems.join(","));
-    }
-    const allSeen = [...seenIdsRef.current, ...Array.from(discoverLoadedIdsRef.current)];
-    const uniqueSeen = Array.from(new Set(allSeen));
-    if (uniqueSeen.length > 0) params.set("seen", uniqueSeen.join(","));
-    return params.toString();
-  }, [filters.vegetarian, filters.allergens]);
-
-  const [discoverError, setDiscoverError] = useState<string | null>(null);
-
-  const fetchDiscoverBatch = useCallback(async (batchLimit: number, isLoadMore: boolean) => {
-    if (isLoadMore) {
-      setLoadMoreLoading(true);
-    } else {
-      setDiscoverLoading(true);
-      setDiscoverError(null);
-    }
-    try {
-      const qs = buildDiscoverUrl(batchLimit);
-      const res = await fetch(`/api/explore/discover?${qs}`);
-      if (!res.ok) {
-        const err = await res.json().catch(() => ({}));
-        throw new Error(err.message || "Discovery failed");
-      }
-      const data = await res.json();
-      const newResults: SearchResult[] = (data.results || []).filter(
-        (r: SearchResult) =>
-          normalizeExploreRecipeId(r.id) !== null &&
-          !discoverLoadedIdsRef.current.has(r.id),
-      );
-      if (newResults.length > 0) {
-        addSeenIds(newResults.map(r => r.id));
-        for (const r of newResults) discoverLoadedIdsRef.current.add(r.id);
-      }
-      if (isLoadMore) {
-        if (newResults.length > 0) {
-          setDiscoverRecipes(prev => [...prev, ...newResults]);
-        }
-      } else {
-        setDiscoverRecipes(newResults);
-      }
-      if (newResults.length < Math.floor(batchLimit * 0.5)) {
-        setDiscoverExhausted(true);
-      }
-    } catch (err: any) {
-      setDiscoverError(err.message || "Failed to load recipes");
-    } finally {
-      if (isLoadMore) {
-        setLoadMoreLoading(false);
-      } else {
-        setDiscoverLoading(false);
-      }
-    }
-  }, [buildDiscoverUrl, addSeenIds]);
-
-  const initialLoadDone = useRef(false);
-  const prevFilterKeyRef = useRef(`${filters.vegetarian}-${filters.allergens.join(",")}`);
-  useEffect(() => {
-    if (submitted) return;
-    const filterKey = `${filters.vegetarian}-${filters.allergens.join(",")}`;
-    if (!initialLoadDone.current) {
-      initialLoadDone.current = true;
-      fetchDiscoverBatch(12, false);
-    } else if (filterKey !== prevFilterKeyRef.current) {
-      prevFilterKeyRef.current = filterKey;
-      discoverLoadedIdsRef.current.clear();
-      setDiscoverExhausted(false);
-      fetchDiscoverBatch(12, false);
-    }
-  }, [submitted, filters.vegetarian, filters.allergens, fetchDiscoverBatch]);
-
-  interface TrendingItem {
-    title: string;
-    protein: string;
-    score: number;
-    source: string;
-    hit_count: number;
-    curatedSlug?: string | null;
-    image?: string;
-    emoji?: string;
-  }
-  const { data: trendingData } = useQuery<{ trending: TrendingItem[] }>({
-    queryKey: ["/api/explore/trending"],
-    queryFn: async () => {
-      const res = await fetch("/api/explore/trending");
-      if (!res.ok) return { trending: [] };
-      return res.json();
+      const excludeItems = filters.allergens.flatMap((a) => ALLERGEN_EXCLUDE_MAP[a] || []);
+      return fetchExploreSections({
+        diet: filters.vegetarian ? "vegetarian" : undefined,
+        intolerances: intolerances || undefined,
+        excludeIngredients: excludeItems.length > 0 ? excludeItems.join(",") : undefined,
+        seen: seenIdsRef.current,
+      });
     },
-    staleTime: 5 * 60 * 1000,
+    enabled: !submitted,
+    staleTime: 10 * 60 * 1000,
   });
+
+  useEffect(() => {
+    if (!editorialData?.sections?.length) return;
+    const allRecipes = editorialData.sections.flatMap((s) => s.recipes);
+    if (allRecipes.length > 0) {
+      recipeCardRegistry.current.register(allRecipes);
+      addSeenIds(allRecipes.filter((r) => r.id > 0 && r.id < 900_000).map((r) => r.id));
+    }
+  }, [editorialData, addSeenIds]);
 
   const { data: searchData, isLoading: searchLoading, error: searchError, refetch: refetchSearch } = useQuery<SearchResponse>({
     queryKey: ["/api/explore/search", queryString],
@@ -781,10 +700,12 @@ export default function ExplorePage() {
         throw new Error(err.message || "Search failed");
       }
       const data = await res.json();
-      if (data.results?.length > 0) {
-        addSeenIds(data.results.map((r: SearchResult) => r.id));
+      const results = normalizeExploreRecipeList(data.results || [], "search-client");
+      if (results.length > 0) {
+        recipeCardRegistry.current.register(results);
+        addSeenIds(results.map((r) => r.id));
       }
-      return data;
+      return { ...data, results };
     },
     enabled: submitted && !!queryString,
     staleTime: 5 * 60 * 1000,
@@ -812,9 +733,20 @@ export default function ExplorePage() {
     },
     enabled: selectedRecipeId !== null && selectedRecipeId > 0,
     staleTime: 10 * 60 * 1000,
+    placeholderData: undefined,
   });
 
-  const detailLoading = detailPending && !recipeDetail;
+  const matchedDetail =
+    recipeDetail && selectedRecipeId !== null && recipeDetail.id === selectedRecipeId
+      ? recipeDetail
+      : undefined;
+
+  const detailPreview =
+    selectedRecipePreview?.id === selectedRecipeId
+      ? selectedRecipePreview
+      : recipeCardRegistry.current.get(selectedRecipeId ?? -1) ?? null;
+
+  const detailLoading = detailPending && !matchedDetail;
 
   const activeFilterCount = useMemo(() => {
     let count = 0;
@@ -830,16 +762,20 @@ export default function ExplorePage() {
     return count;
   }, [filters]);
 
-  if (selectedRecipeId && recipeDetail) {
+  if (selectedRecipeId && matchedDetail) {
+    const displayDetail = mergeDetailWithCardPreview(
+      { ...matchedDetail, imageAlt: matchedDetail.imageAlt || matchedDetail.title },
+      detailPreview,
+    ) as RecipeDetail;
     return (
       <div className="min-h-screen bg-background">
         <SiteHeader activePage="explore" favCount={favCount} />
         <main className="max-w-[900px] mx-auto px-4 sm:px-6 py-8">
-          <Button variant="ghost" className="mb-6 gap-1.5" onClick={() => setSelectedRecipeId(null)} data-testid="button-back-to-results">
+          <Button variant="ghost" className="mb-6 gap-1.5" onClick={closeRecipeDetail} data-testid="button-back-to-results">
             <ChevronLeft className="w-4 h-4" />
             Back to results
           </Button>
-          <RecipeDetailView recipe={recipeDetail} crewSize={filters.crewSize} />
+          <RecipeDetailView recipe={displayDetail} crewSize={filters.crewSize} />
         </main>
         <Footer />
       </div>
@@ -851,17 +787,25 @@ export default function ExplorePage() {
       <div className="min-h-screen bg-background">
         <SiteHeader activePage="explore" favCount={favCount} />
         <main className="max-w-[900px] mx-auto px-4 sm:px-6 py-8">
-          <Button variant="ghost" className="mb-6 gap-1.5" onClick={() => setSelectedRecipeId(null)} data-testid="button-back-to-results">
+          <Button variant="ghost" className="mb-6 gap-1.5" onClick={closeRecipeDetail} data-testid="button-back-to-results">
             <ChevronLeft className="w-4 h-4" />
             Back to results
           </Button>
-          <div className="space-y-6 animate-pulse" data-testid="explore-detail-skeleton">
-            <div className="aspect-[16/9] rounded-xl bg-muted" />
-            <div className="h-8 bg-muted rounded w-2/3" />
-            <div className="h-4 bg-muted rounded w-1/2" />
+          <div className="space-y-6" data-testid="explore-detail-skeleton">
+            {detailPreview ? (
+              <>
+                <div className="rounded-2xl overflow-hidden ring-1 ring-border/40">
+                  <ExploreRecipeImage recipe={detailPreview} variant="detail" />
+                </div>
+                <h1 className="font-heading text-2xl tracking-wide text-foreground">{detailPreview.title}</h1>
+              </>
+            ) : (
+              <div className="aspect-[16/9] rounded-xl bg-muted animate-pulse" />
+            )}
+            <div className="h-4 bg-muted rounded w-1/2 animate-pulse" />
             <div className="grid grid-cols-2 gap-3">
               {Array.from({ length: 4 }).map((_, i) => (
-                <div key={i} className="h-16 bg-muted rounded" />
+                <div key={i} className="h-16 bg-muted rounded animate-pulse" />
               ))}
             </div>
           </div>
@@ -871,12 +815,12 @@ export default function ExplorePage() {
     );
   }
 
-  if (selectedRecipeId && detailError && !recipeDetail) {
+  if (selectedRecipeId && detailError && !matchedDetail) {
     return (
       <div className="min-h-screen bg-background">
         <SiteHeader activePage="explore" favCount={favCount} />
         <main className="max-w-[900px] mx-auto px-4 sm:px-6 py-8">
-          <Button variant="ghost" className="mb-6 gap-1.5" onClick={() => setSelectedRecipeId(null)} data-testid="button-back-to-results">
+          <Button variant="ghost" className="mb-6 gap-1.5" onClick={closeRecipeDetail} data-testid="button-back-to-results">
             <ChevronLeft className="w-4 h-4" />
             Back to results
           </Button>
@@ -898,12 +842,13 @@ export default function ExplorePage() {
                     </a>
                   </Button>
                 )}
-                <Button variant="outline" onClick={() => setSelectedRecipeId(null)} data-testid="button-back-after-error">
+                <Button variant="outline" onClick={closeRecipeDetail} data-testid="button-back-after-error">
                   Back to results
                 </Button>
               </div>
             </div>
         </main>
+        <Footer />
       </div>
     );
   }
@@ -1128,103 +1073,69 @@ export default function ExplorePage() {
             </div>
             <p className="text-sm text-muted-foreground mb-5">Crowd favourites built for the hall.</p>
             <div className="flex flex-nowrap gap-3 overflow-x-auto pb-3 snap-x snap-mandatory scrollbar-thin md:grid md:grid-cols-4 md:overflow-visible md:pb-0">
-              {classicsToShow.map((classic, i) => {
-                const isThisLoading = classicLoading === classic.title;
-                return (
+              {classicsToShow.map((classic, i) => (
                   <button
-                    key={classic.title}
+                    key={classic.slug}
                     data-testid={`classic-item-${i}`}
-                    disabled={classicLoading !== null}
-                    onClick={() => {
-                      const slug = resolveCuratedSlugFromTitle(classic.title);
-                      if (slug) {
-                        navigate(buildPackageUrl({ slug }));
-                        return;
-                      }
-                      setClassicLoading(classic.title);
-                      const updated = { ...filters, freeText: classic.searchQuery };
-                      setFilters(updated);
-                      setSearchParams(buildSearchParams(updated));
-                      setSubmitted(true);
-                      setClassicLoading(null);
-                    }}
-                    className="snap-start shrink-0 w-[160px] min-w-[160px] md:w-auto md:min-w-0 md:shrink group relative overflow-hidden rounded-xl border border-border/30 bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm p-4 text-left transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1 active:translate-y-0 disabled:opacity-60 disabled:cursor-wait"
+                    onClick={() => navigate(buildPackageUrl({ slug: classic.slug }))}
+                    className="snap-start shrink-0 w-[180px] min-w-[180px] md:w-auto md:min-w-0 md:shrink group relative overflow-hidden rounded-xl border border-border/30 bg-card text-left transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1 active:translate-y-0"
                   >
-                    {isThisLoading ? (
-                      <Loader2 className="w-5 h-5 animate-spin mb-2 text-primary" />
-                    ) : (
-                      <span className="text-2xl block mb-2">{classic.emoji}</span>
-                    )}
-                    <span className="text-sm font-semibold leading-tight block mb-1.5 group-hover:text-primary transition-colors">{classic.title}</span>
-                    <div className="flex items-center gap-1.5">
-                      <span className="text-[10px] text-muted-foreground bg-primary/10 px-1.5 py-0.5 rounded-full font-medium">{classic.protein}</span>
-                      <span className="text-[10px] text-muted-foreground">{classic.style}</span>
+                    <div className="aspect-[4/3] relative overflow-hidden bg-muted">
+                      {classic.heroImage ? (
+                        <img
+                          src={classic.heroImage}
+                          alt={classic.imageAlt}
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          loading="lazy"
+                        />
+                      ) : (
+                        <span className="absolute inset-0 flex items-center justify-center text-3xl">{classic.emoji}</span>
+                      )}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                      <span className="absolute bottom-2 left-2 text-xl drop-shadow-lg" aria-hidden>{classic.emoji}</span>
+                    </div>
+                    <div className="p-3">
+                      <span className="text-sm font-semibold leading-tight block mb-1.5 group-hover:text-primary transition-colors">{classic.title}</span>
+                      <div className="flex items-center gap-1.5">
+                        <span className="text-[10px] text-muted-foreground bg-primary/10 px-1.5 py-0.5 rounded-full font-medium">{classic.protein}</span>
+                        <span className="text-[10px] text-muted-foreground">{classic.style}</span>
+                      </div>
                     </div>
                   </button>
-                );
-              })}
-            </div>
-          </div>
-        )}
-
-        {!submitted && trendingData && trendingData.trending.length > 0 && (
-          <div className="mb-10" data-testid="section-trending">
-            <div className="flex items-center gap-2 mb-4">
-              <TrendingUp className="w-5 h-5 text-primary" />
-              <h2 className="font-heading text-lg tracking-wider uppercase">Trending in Firehalls</h2>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-              {trendingData.trending.map((item, i) => (
-                <ExploreRecipeCard
-                  key={item.curatedSlug || `trend-${i}`}
-                  id={100000 + i}
-                  title={item.title}
-                  image={item.image || ""}
-                  readyInMinutes={45}
-                  servings={filters.crewSize}
-                  summary={item.hit_count > 0 ? `Made ${item.hit_count}× in halls near you` : "Crew favourite this week"}
-                  tags={item.protein ? [item.protein, "Trending"] : ["Trending"]}
-                  isCurated={!!item.curatedSlug}
-                  onClick={() => {
-                    if (item.curatedSlug) {
-                      navigate(buildPackageUrl({ slug: item.curatedSlug }));
-                      return;
-                    }
-                    const updated = { ...filters, freeText: item.title };
-                    setFilters(updated);
-                    setSearchParams(buildSearchParams(updated));
-                    setSubmitted(true);
-                    setSelectedRecipeId(null);
-                  }}
-                />
               ))}
             </div>
           </div>
         )}
 
-        {(searchLoading || (!submitted && discoverLoading && discoverRecipes.length === 0)) && (
+        {!submitted && editorialLoading && (
           <div data-testid="explore-loading">
-            <p className="text-sm text-muted-foreground mb-5">{submitted ? "Searching recipes..." : "Loading discover feed..."}</p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-              {Array.from({ length: 6 }).map((_, i) => (
-                <ExploreRecipeCardSkeleton key={i} />
-              ))}
-            </div>
+            <p className="text-sm text-muted-foreground mb-5">Curating tonight&apos;s picks for your hall...</p>
+            {Array.from({ length: 3 }).map((_, i) => (
+              <ExploreEditorialSkeleton key={i} />
+            ))}
           </div>
         )}
 
-        {!submitted && discoverError && !discoverLoading && (
-          <div className="text-center py-16" data-testid="explore-discover-error">
-            <p className="text-destructive font-medium">{discoverError}</p>
+        {!submitted && editorialError && !editorialLoading && (
+          <div className="text-center py-16" data-testid="explore-sections-error">
+            <p className="text-destructive font-medium">{(editorialError as Error).message}</p>
             <p className="text-sm text-muted-foreground mt-2">
               <button
+                type="button"
                 className="underline hover:text-foreground transition-colors"
-                onClick={() => fetchDiscoverBatch(12, false)}
-                data-testid="button-retry-discover"
+                onClick={() => refetchEditorial()}
+                data-testid="button-retry-sections"
               >
                 Try again
               </button>
             </p>
+          </div>
+        )}
+
+        {searchLoading && submitted && (
+          <div data-testid="explore-search-loading">
+            <p className="text-sm text-muted-foreground mb-5">Searching recipes...</p>
+            <ExploreEditorialSkeleton />
           </div>
         )}
 
@@ -1238,88 +1149,47 @@ export default function ExplorePage() {
           </div>
         )}
 
-        {!submitted && !discoverLoading && !discoverError && discoverRecipes.length === 0 && (
-          <div className="text-center py-16" data-testid="explore-discover-empty">
-            <Sparkles className="w-12 h-12 mx-auto text-muted-foreground/25 mb-4" />
-            <p className="text-foreground font-heading tracking-wide">No recipes in the feed right now</p>
-            <p className="text-sm text-muted-foreground mt-2 mb-5">The API may be busy — refresh to load a new batch.</p>
-            <Button variant="outline" onClick={() => fetchDiscoverBatch(12, false)} data-testid="button-refresh-discover-empty">
-              Refresh feed
-            </Button>
-          </div>
-        )}
-
-        {!submitted && !discoverLoading && discoverRecipes.length > 0 && (
-          <>
-            <div className="flex items-center justify-between gap-3 mb-5">
-              <div className="flex items-center gap-2">
-                <Sparkles className="w-4 h-4 text-primary/60" />
-                <p className="text-sm text-muted-foreground" data-testid="text-discover-label">
-                  {discoverRecipes.length} recipes to explore
+        {!submitted && !editorialLoading && !editorialError && editorialData?.sections && editorialData.sections.length > 0 && (
+          <div data-testid="explore-editorial-feed">
+            <div className="flex items-center justify-between gap-3 mb-6">
+              <div>
+                <p className="font-heading text-sm tracking-widest uppercase text-primary/80">Curated for your hall</p>
+                <p className="text-xs text-muted-foreground mt-0.5">
+                  Editor&apos;s picks · appetite-first ordering · refreshed daily
                 </p>
               </div>
               <Button
                 variant="outline"
                 size="sm"
-                className="text-xs gap-1.5"
-                onClick={() => {
-                  discoverLoadedIdsRef.current.clear();
-                  setDiscoverExhausted(false);
-                  fetchDiscoverBatch(12, false);
-                }}
-                data-testid="button-refresh-discover"
+                className="text-xs gap-1.5 shrink-0"
+                onClick={() => refetchEditorial()}
+                data-testid="button-refresh-sections"
               >
                 <Sparkles className="w-3 h-3" />
                 Refresh
               </Button>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" data-testid="explore-discover-grid">
-              {discoverRecipes
-                .filter((r) => normalizeExploreRecipeId(r.id) !== null)
-                .map((result) => (
-                <ExploreRecipeCard
-                  key={result.id}
-                  id={result.id}
-                  title={result.title}
-                  image={result.image}
-                  readyInMinutes={result.readyInMinutes}
-                  servings={filters.crewSize}
-                  summary={stripHtml(result.summary || "")}
-                  tags={inferRecipeTags(result)}
-                  onClick={() => openExploreRecipe(result.id, result.sourceUrl)}
-                />
-              ))}
-            </div>
-            {!discoverExhausted && (
-              <div className="flex justify-center mt-8">
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="gap-2 px-8"
-                  onClick={() => fetchDiscoverBatch(10, true)}
-                  disabled={loadMoreLoading}
-                  data-testid="button-load-more"
-                >
-                  {loadMoreLoading ? (
-                    <>
-                      <Loader2 className="w-4 h-4 animate-spin" />
-                      Loading...
-                    </>
-                  ) : (
-                    <>
-                      <ChefHat className="w-4 h-4" />
-                      Load More Recipes
-                    </>
-                  )}
-                </Button>
-              </div>
-            )}
-            {discoverExhausted && discoverRecipes.length > 12 && (
-              <p className="text-center text-xs text-muted-foreground/60 mt-6" data-testid="text-discover-exhausted">
-                You've explored all available recipes. Hit Refresh for a new set!
-              </p>
-            )}
-          </>
+            {editorialData.sections.map((section) => (
+              <ExploreEditorialSectionBlock
+                key={section.id}
+                section={section}
+                crewSize={filters.crewSize}
+                onRecipeClick={openExploreRecipe}
+                onCuratedClick={(slug) => navigate(buildPackageUrl({ slug }))}
+              />
+            ))}
+          </div>
+        )}
+
+        {!submitted && !editorialLoading && !editorialError && editorialData?.sections?.length === 0 && (
+          <div className="text-center py-16" data-testid="explore-sections-empty">
+            <Sparkles className="w-12 h-12 mx-auto text-muted-foreground/25 mb-4" />
+            <p className="text-foreground font-heading tracking-wide">No curated sections right now</p>
+            <p className="text-sm text-muted-foreground mt-2 mb-5">Try again in a moment or use search with your crew filters.</p>
+            <Button variant="outline" onClick={() => refetchEditorial()} data-testid="button-refresh-sections-empty">
+              Refresh picks
+            </Button>
+          </div>
         )}
 
         {!searchLoading && searchData && submitted && (
@@ -1329,17 +1199,12 @@ export default function ExplorePage() {
                 {searchData.totalResults > 0 ? `${searchData.results.length} recipes found` : "No recipes found"}
               </p>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" data-testid="explore-results-grid">
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4" data-testid="explore-results-grid">
               {searchData.results.map((result) => (
-                <ExploreRecipeCard
+                <ExploreRecipeCardView
                   key={result._firehallFallback ? `fb-${result.title}` : result.id}
-                  id={result.id}
-                  title={result.title}
-                  image={result.image}
-                  readyInMinutes={result.readyInMinutes}
-                  servings={filters.crewSize}
-                  summary={stripHtml(result.summary || "")}
-                  tags={inferRecipeTags(result)}
+                  recipe={result}
+                  displayServings={filters.crewSize}
                   isFirehallFallback={result._firehallFallback}
                   onClick={() => {
                     if (result._firehallFallback) {
@@ -1349,7 +1214,7 @@ export default function ExplorePage() {
                       if (slug) {
                         navigate(buildPackageUrl({ slug }));
                       } else {
-                        openExploreRecipe(result.id, result.sourceUrl);
+                        openExploreRecipe(result);
                       }
                     }
                   }}
@@ -1366,15 +1231,6 @@ export default function ExplorePage() {
           </>
         )}
 
-        {!submitted && discoverRecipes.length === 0 && !discoverLoading && (
-          <div className="text-center py-20">
-            <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary/[0.07] mb-5">
-              <Utensils className="w-9 h-9 text-primary/40" />
-            </div>
-            <p className="text-foreground text-lg font-heading tracking-wide">SET YOUR FILTERS AND HIT SEARCH</p>
-            <p className="text-sm text-muted-foreground/60 mt-2 max-w-sm mx-auto">Your crew's filters map to real recipe results from thousands of options</p>
-          </div>
-        )}
       </main>
       <Footer />
     </div>
@@ -1416,13 +1272,24 @@ function RecipeDetailView({ recipe, crewSize }: { recipe: RecipeDetail; crewSize
     }
   };
 
+  const heroRecipe: ExploreRecipeCard = {
+    id: recipe.id,
+    title: recipe.title,
+    image: recipe.image,
+    imageAlt: recipe.imageAlt || recipe.title,
+    readyInMinutes: recipe.readyInMinutes,
+    servings: recipe.servings,
+    summary: recipe.summary,
+    sourceUrl: recipe.sourceUrl,
+    cuisines: recipe.cuisines,
+    diets: recipe.diets,
+  };
+
   return (
     <div className="space-y-6" data-testid="explore-recipe-detail">
-      {recipe.image && (
-        <div className="rounded-md overflow-hidden max-h-[400px]">
-          <img src={recipe.image} alt={recipe.title} className="w-full h-full object-cover" />
-        </div>
-      )}
+      <div className="rounded-2xl overflow-hidden ring-1 ring-border/40 shadow-xl shadow-black/20 max-h-[min(420px,55vh)]">
+        <ExploreRecipeImage recipe={heroRecipe} variant="detail" />
+      </div>
 
       <div>
         <h1 className="font-heading text-2xl sm:text-3xl tracking-wide text-foreground mb-3" data-testid="text-detail-title">

@@ -1,6 +1,8 @@
-import { useState, useRef, useEffect, useCallback, memo } from "react";
+import { useState, useRef, useEffect, useCallback, memo, useMemo } from "react";
 import { FilterPanel, GenerateButtons, type FilterState } from "@/components/filter-panel";
-import { createDefaultFilters, normalizeLoadedFilters, apiProtein } from "@/lib/tonight-vibes";
+import { createFirstTapDefaults, normalizeLoadedFilters, apiProtein } from "@/lib/tonight-vibes";
+import { formatDinnerOutcomeLine, ONE_TAP_MEAL_LABEL } from "@/lib/meal-outcome-copy";
+import { inferBusyLevelFromTime } from "@shared/busy-level";
 import { getWheelClassicBySlug, buildPackageUrl } from "@/lib/firehall-classics-wheel";
 import { RecipeCard } from "@/components/recipe-card";
 import { EmptyState } from "@/components/empty-state";
@@ -9,6 +11,7 @@ import { ErrorState } from "@/components/error-state";
 import { EmailModal } from "@/components/email-modal";
 import { ShoppingListModal } from "@/components/shopping-list-modal";
 import { HallVoteModal } from "@/components/hall-vote-modal";
+import { HallVotePromoBanner } from "@/components/hall-vote-promo-banner";
 import { buildShoppingListFromClientMeal } from "@/lib/shopping-list";
 import { getSavedCount } from "@/lib/saved-meals";
 import { apiRequest } from "@/lib/queryClient";
@@ -20,11 +23,20 @@ import {
   hasUserGeneratedBefore,
 } from "@/lib/prefetch";
 import { trackEvent, trackMealGenerated, trackEmailModalOpened } from "@/lib/analytics";
+import {
+  getPersistedGenerationCount,
+  recordSuccessfulGeneration,
+  scheduleEarnedEmailCapture,
+  shouldTriggerEmailCaptureOnGeneration,
+  cancelScheduledEmailCapture,
+} from "@/lib/email-capture";
+import type { EmailModalVariant } from "@/components/email-modal";
+import type { EmailCaptureTrigger } from "@/lib/email-capture";
 import type { ClientRecipeResponse } from "@shared/schema";
-import { Vote, Flame } from "lucide-react";
-import { HeroHeader } from "@/components/hero-header";
+import { Flame } from "lucide-react";
+import { HeroHeader, type HeroVariant } from "@/components/hero-header";
+import { cn } from "@/lib/utils";
 import { SiteHeader } from "@/components/site-header";
-import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
@@ -50,7 +62,7 @@ function buildRequestPayload(filters: FilterState, templateId?: number, preferDi
     : [];
   return {
     crew_size: filters.crew_size,
-    busy_level: "average",
+    busy_level: inferBusyLevelFromTime(filters.time_available),
     time_available: filters.time_available,
     appliances: filters.appliances,
     protein: filters.use_what_we_have ? "chicken" : apiProtein(filters.protein),
@@ -94,6 +106,8 @@ const ResultsPanel = memo(function ResultsPanel({
   onGenerate,
   generateDisabled,
   showHallVotePrompt = false,
+  hallVoteBannerRef,
+  voteOptionCount = 0,
 }: {
   loading: boolean;
   error: string | null;
@@ -106,8 +120,10 @@ const ResultsPanel = memo(function ResultsPanel({
   historyNav: { index: number; total: number };
   onGenerate: () => void;
   generateDisabled: boolean;
-  /** True after two distinct successful generations this session. */
+  /** True after first successful generation this session. */
   showHallVotePrompt?: boolean;
+  hallVoteBannerRef?: React.RefObject<HTMLDivElement | null>;
+  voteOptionCount?: number;
 }) {
   const showRecipe = !error && recipe;
   const showEmpty = !loading && !error && !recipe;
@@ -118,9 +134,9 @@ const ResultsPanel = memo(function ResultsPanel({
       {loading && recipe && (
         <div className="relative">
           <div className="absolute inset-x-0 top-0 z-10 pointer-events-none px-1">
-            <LoadingState variant="compact" />
+            <LoadingState variant="compact" mode="alternate" />
           </div>
-          <div className="opacity-30 pointer-events-none select-none">
+          <div className="opacity-35 pointer-events-none select-none transition-opacity duration-300 blur-[0.5px]">
             <RecipeCard
               recipe={recipe}
               crewSize={filters.crew_size}
@@ -139,7 +155,7 @@ const ResultsPanel = memo(function ResultsPanel({
         </div>
       )}
       {!loading && showRecipe && (
-        <div className="animate-in fade-in slide-in-from-bottom-2 duration-400">
+        <div className="animate-in fade-in slide-in-from-bottom-2 duration-500" key={stableRecipeKey(recipe)}>
           {historyNav.total > 1 && historyNav.index < historyNav.total - 1 && (
             <div className="flex items-center justify-center mb-3" data-testid="history-position-indicator">
               <span className="text-xs text-muted-foreground/60 font-mono tracking-widest uppercase">
@@ -155,31 +171,21 @@ const ResultsPanel = memo(function ResultsPanel({
             onShoppingListClick={onShoppingListClick}
           />
           {showHallVotePrompt && (
-            <div className="mt-4 p-4 rounded-xl border border-border/50 bg-card/50 flex items-center justify-between gap-3 animate-in fade-in duration-500">
-              <div className="flex items-center gap-2 min-w-0">
-                <Vote className="w-5 h-5 text-primary flex-shrink-0" />
-                <div>
-                  <p className="text-sm font-bold text-foreground">Can't decide? Let the crew vote.</p>
-                  <p className="text-xs text-muted-foreground">
-                    {(recentRecipes?.length ?? 0)} meals ready &middot; Share a link, crew picks the winner
-                  </p>
-                </div>
-              </div>
-              <Button
-                variant="outline"
-                className="font-heading tracking-wider flex-shrink-0"
-                onClick={onHallVoteClick}
-                data-testid="button-start-hall-vote"
-              >
-                <Vote className="w-4 h-4 mr-2" />
-                HALL VOTE
-              </Button>
-            </div>
+            <HallVotePromoBanner
+              onStartVote={onHallVoteClick}
+              optionCount={voteOptionCount}
+              bannerRef={hallVoteBannerRef}
+            />
           )}
         </div>
       )}
       {showEmpty && (
-        <EmptyState onGenerate={onGenerate} generateDisabled={generateDisabled} />
+        <EmptyState
+          onGenerate={onGenerate}
+          generateDisabled={generateDisabled}
+          ctaLabel={ONE_TAP_MEAL_LABEL}
+          summaryLine={formatDinnerOutcomeLine(filters, true)}
+        />
       )}
     </div>
   );
@@ -207,6 +213,8 @@ export default function Home() {
   // ── Supporting state ──────────────────────────────────────────────────────
   const [lastTemplateId, setLastTemplateId] = useState<number | undefined>();
   const [emailModalOpen, setEmailModalOpen] = useState(false);
+  const [emailModalVariant, setEmailModalVariant] = useState<EmailModalVariant>("manual");
+  const [emailCaptureTrigger, setEmailCaptureTrigger] = useState<EmailCaptureTrigger | undefined>();
   const [shoppingListOpen, setShoppingListOpen] = useState(false);
   const [hallVoteOpen, setHallVoteOpen] = useState(false);
   const [recentRecipes, setRecentRecipes] = useState<ClientRecipeResponse[]>([]);
@@ -234,11 +242,13 @@ export default function Home() {
 
   // recipeRef: scroll target for the results panel.
   const recipeRef = useRef<HTMLDivElement>(null);
+  const hallVoteBannerRef = useRef<HTMLDivElement>(null);
+  const hallVoteScrollDoneRef = useRef(false);
 
   // Generation counter — only incremented by successful, non-duplicate recipe delivery.
   const lastAppliedSignatureRef = useRef<string | null>(null);
-  const [userGenCount, setUserGenCount] = useState(0);
-  const emailPromptedRef = useRef(false);
+  const [userGenCount, setUserGenCount] = useState(() => getPersistedGenerationCount());
+  const [mealHistoryVersion, setMealHistoryVersion] = useState(0);
 
   const { toast } = useToast();
 
@@ -262,14 +272,39 @@ export default function Home() {
         return normalizeLoadedFilters(parsed);
       }
     } catch {}
-    return createDefaultFilters();
+    return createFirstTapDefaults();
   });
 
-  const compactHero = hasUserGeneratedBefore();
+  /** Meal-first layout: utility hero + recipe above filters on mobile after first successful gen. */
+  const mealFocusMode = !!recipe && userGenCount >= 1;
+  const heroVariant: HeroVariant = mealFocusMode
+    ? "utility"
+    : hasUserGeneratedBefore() || userGenCount > 0
+      ? "compact"
+      : "full";
 
   useEffect(() => {
     try { localStorage.setItem("firehall_filters", JSON.stringify(filters)); } catch {}
   }, [filters]);
+
+  const openEarnedEmailCapture = useCallback((trigger: EmailCaptureTrigger) => {
+    setEmailModalVariant("earned");
+    setEmailCaptureTrigger(trigger);
+    trackEmailModalOpened();
+    trackEvent("email_capture_prompt_shown", { trigger });
+    setEmailModalOpen(true);
+  }, []);
+
+  useEffect(() => {
+    const onMealSaved = () => {
+      scheduleEarnedEmailCapture("save", () => openEarnedEmailCapture("save"), 1100);
+    };
+    window.addEventListener("firehall-meal-saved", onMealSaved);
+    return () => {
+      window.removeEventListener("firehall-meal-saved", onMealSaved);
+      cancelScheduledEmailCapture();
+    };
+  }, [openEarnedEmailCapture]);
 
   // ── Warmup (prefetch only for returning users — saves API on first visit) ─
   useEffect(() => {
@@ -315,6 +350,7 @@ export default function Home() {
     mealHistoryRef.current = newHistory;
     historyIndexRef.current = newHistory.length - 1;
     setHistoryNav({ index: historyIndexRef.current, total: newHistory.length });
+    setMealHistoryVersion((v) => v + 1);
     lastAppliedSignatureRef.current = sig || null;
 
     // Atomic state replacement — all three fire in the same React commit.
@@ -342,24 +378,33 @@ export default function Home() {
 
     markUserHasGenerated();
     trackMealGenerated();
-    setUserGenCount((prev) => {
-      const next = prev + 1;
-      if (next === 2 && !emailPromptedRef.current) {
-        emailPromptedRef.current = true;
-        setTimeout(() => setEmailModalOpen(true), 800);
-      }
-      return next;
-    });
+    const totalGens = recordSuccessfulGeneration();
+    setUserGenCount(totalGens);
+
+    if (totalGens === 1 && !hallVoteScrollDoneRef.current) {
+      hallVoteScrollDoneRef.current = true;
+      setTimeout(() => {
+        hallVoteBannerRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      }, 700);
+    }
+
+    if (shouldTriggerEmailCaptureOnGeneration(totalGens)) {
+      scheduleEarnedEmailCapture("generation", () => openEarnedEmailCapture("generation"), 1200);
+    }
 
     console.log(
       `[Generate] Applied: "${data.title}" | seq=${seq} | id=${(data as any)._id} | style=${data.meal_style}`
     );
 
-    // Scroll results into view.
+    // Scroll meal into view — mobile gets priority scroll to minimize filter chrome above fold.
     requestAnimationFrame(() => {
-      recipeRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+      const isMobile = window.matchMedia("(max-width: 1023px)").matches;
+      recipeRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: isMobile ? "start" : "nearest",
+      });
     });
-  }, []);
+  }, [openEarnedEmailCapture]);
 
   // ─────────────────────────────────────────────────────────────────────────
   // handleGenerate — fires one request at a time.
@@ -407,7 +452,7 @@ export default function Home() {
     const payload = buildRequestPayload(currentFilters, templateId, preferDifferentStyle);
     const filterKey = buildFilterKey(payload);
 
-    // Try prefetch cache first (skipped when "Generate Another" is active).
+    // Try prefetch cache first (skipped when "Different Meal" is active).
     if (!preferDifferentStyle) {
       const cached = consumePrefetched(payload, templateId);
       if (cached) {
@@ -490,7 +535,7 @@ export default function Home() {
       } else if (msg.includes("403")) {
         errorMsg = "Security check failed. Please refresh the page and try again.";
       } else if (msg.includes("timed out") || msg.includes("AbortError")) {
-        errorMsg = "Still warming up — tap Generate again to retry.";
+        errorMsg = "Still warming up — tap Put dinner on the board to try again.";
       } else {
         errorMsg = "Generation failed. Please try again.";
       }
@@ -501,7 +546,7 @@ export default function Home() {
 
       toast({
         title: "Generation failed",
-        description: "Tap Generate to try again.",
+        description: "Tap Put dinner on the board or Different Meal to try again.",
         variant: "destructive",
       });
     }
@@ -524,6 +569,7 @@ export default function Home() {
     setHistoryNav(prev => ({ ...prev, index: newIdx }));
     setRecipe(mealHistoryRef.current[newIdx]);
     setError(null);
+    setMealHistoryVersion((v) => v + 1);
     requestAnimationFrame(() => {
       recipeRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
     });
@@ -536,6 +582,7 @@ export default function Home() {
     setHistoryNav(prev => ({ ...prev, index: newIdx }));
     setRecipe(mealHistoryRef.current[newIdx]);
     setError(null);
+    setMealHistoryVersion((v) => v + 1);
     requestAnimationFrame(() => {
       recipeRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
     });
@@ -560,6 +607,8 @@ export default function Home() {
 
   // ── Modal openers — do NOT touch generation counters or recipe state ───────
   const onEmailClick = useCallback(() => {
+    setEmailModalVariant("manual");
+    setEmailCaptureTrigger(undefined);
     trackEmailModalOpened();
     setEmailModalOpen(true);
   }, []);
@@ -575,8 +624,14 @@ export default function Home() {
     filters.appliances.length === 0 ||
     (filters.use_what_we_have && filters.ingredients_on_hand_text.trim().length === 0);
 
-  const showHallVotePrompt =
-    userGenCount >= 2 && (recentRecipes?.length ?? 0) >= 2;
+  const voteRecipes = useMemo(() => {
+    const hist = mealHistoryRef.current;
+    if (hist.length >= 2) return hist.slice(-5);
+    return recentRecipes;
+  }, [recentRecipes, mealHistoryVersion]);
+
+  const showHallVotePrompt = userGenCount >= 1 && !!recipe && !loading;
+  const oneTapMode = !recipe && !loading && userGenCount === 0;
 
   // ─────────────────────────────────────────────────────────────────────────
   return (
@@ -585,19 +640,35 @@ export default function Home() {
 
       <HeroHeader
         title="Firehall Meals"
-        headline={compactHero ? undefined : "What's for dinner at the hall?"}
+        variant={heroVariant}
+        headline={heroVariant === "full" ? "What's for dinner at the hall?" : undefined}
         subtitle={
-          compactHero
-            ? "Full table meal — main, starch, sides."
-            : "Tell us who's eating and how much time you've got. We'll put dinner on the board."
+          mealFocusMode
+            ? "Dinner solved before the next call."
+            : heroVariant === "compact"
+              ? "Dinner solved before the next call."
+              : "Settle it before tones drop — full crew dinners with ingredients, sides, and steps."
         }
-        supportingText={compactHero ? undefined : "Built by firefighters. For hungry crews."}
-        compact={compactHero}
-        showCTAs={!compactHero}
+        supportingText={heroVariant === "full" ? "Built by firefighters. For hungry crews." : undefined}
+        showCTAs={heroVariant === "full"}
       />
 
-      <main className="max-w-[1400px] mx-auto px-4 sm:px-6 py-8 pb-28 lg:pb-8">
-        <div className="flex flex-col lg:flex-row gap-8">
+      <main
+        className={cn(
+          "max-w-[1400px] mx-auto px-4 sm:px-6 pb-28 lg:pb-8 transition-[padding] duration-500 ease-out",
+          mealFocusMode ? "py-2 sm:py-3 lg:py-4" : heroVariant === "compact" ? "py-4 sm:py-5" : "py-8",
+        )}
+      >
+        <div
+          className={cn(
+            "flex flex-col lg:flex-row transition-[gap] duration-500",
+            mealFocusMode
+              ? "gap-4 flex-col-reverse lg:flex-row"
+              : oneTapMode
+                ? "gap-4 flex-col-reverse lg:flex-row lg:gap-8"
+                : "gap-8",
+          )}
+        >
           <div className="w-full lg:w-[380px] flex-shrink-0">
             <FilterPanel
               filters={filters}
@@ -614,7 +685,7 @@ export default function Home() {
             />
           </div>
 
-          <div ref={recipeRef}>
+          <div ref={recipeRef} className="scroll-mt-[3.5rem] lg:scroll-mt-16 min-w-0 flex-1">
             <ResultsPanel
               loading={loading}
               error={error}
@@ -628,6 +699,8 @@ export default function Home() {
               onGenerate={handleGenerateClick}
               generateDisabled={generateDisabled}
               showHallVotePrompt={showHallVotePrompt}
+              hallVoteBannerRef={hallVoteBannerRef}
+              voteOptionCount={voteRecipes.length}
             />
           </div>
         </div>
@@ -643,6 +716,8 @@ export default function Home() {
             recipe={recipe}
             crewSize={filters.crew_size}
             healthinessLevel={filters.healthiness_preference}
+            variant={emailModalVariant}
+            captureTrigger={emailCaptureTrigger}
           />
           <ShoppingListModal
             open={shoppingListOpen}
@@ -656,11 +731,13 @@ export default function Home() {
           />
         </>
       )}
-      {recentRecipes.length >= 2 && (
+      {voteRecipes.length >= 1 && (
         <HallVoteModal
           open={hallVoteOpen}
           onOpenChange={setHallVoteOpen}
-          recipes={recentRecipes}
+          recipes={voteRecipes}
+          onGenerateAnother={handleGenerateAnother}
+          isGenerating={loading}
         />
       )}
 

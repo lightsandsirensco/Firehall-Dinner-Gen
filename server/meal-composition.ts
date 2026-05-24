@@ -310,7 +310,7 @@ export function completeFirehallPlate(
 
   if (needsVeg && addVegSide(fixed, sides.vegLabel!, ctx.crewSize)) {
     fixes.push(`compose:veg_${sides.pairingSource}`);
-    trackComposedSides(null, sides.vegLabel);
+    trackComposedSides(null, sides.vegLabel, sides.bundleId);
   }
 
   // Optional extra (naan, kimchi, etc.)

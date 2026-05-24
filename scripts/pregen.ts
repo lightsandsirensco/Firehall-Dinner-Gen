@@ -22,7 +22,7 @@ const PROTEIN_COMBOS = [
 const HEALTHINESS = ["balanced"] as const;
 
 async function main() {
-  initCacheStore();
+  await initCacheStore();
   const templates = await loadTemplates();
 
   let generated = 0;

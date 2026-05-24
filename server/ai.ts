@@ -1,12 +1,14 @@
 import OpenAI from "openai";
 import type { TemplateRow, GenerateRequest, GenerateResponse, ProteinSafetyItem, RecipeTags } from "@shared/schema";
-import { log } from "./index";
+import { log, logVerbose, clip, clipReasons, formatLogFields, isDebugLogs } from "./logger";
 import { getForbiddenProteinsText, validateProteinCompliance, validateTitleConsistency, validateStructure, validateVegVariety, commitVegBase, getRecentVegBases } from "./protein-validator";
 import { validateFirehouseFlavor } from "./validateRecipe";
 import { type VarietyConstraints, buildVarietyPromptBlock, buildHealthyPromptBlock } from "./variety-memory";
-import { type StructureType, STRUCTURE_DISPLAY } from "./structure-variety";
+import { type StructureType, pickStructure, STRUCTURE_DISPLAY } from "./structure-variety";
 import { buildAllergenAvoidList } from "./allergens";
 import { buildCarbRulesPromptBlock, type ChooseCarbContext } from "./carb-rules";
+import { buildFallbackRecipe } from "./fallback-recipe";
+import { isLlmFallbackAllowed } from "./recipe-fallback-policy";
 
 const openai = new OpenAI({
   apiKey: process.env.AI_INTEGRATIONS_OPENAI_API_KEY,
@@ -25,7 +27,13 @@ export interface AIResult {
 type ErrorCategory = "json_parse_failed" | "schema_invalid" | "ai_timeout" | "ai_empty" | "protein_mismatch" | "unknown";
 
 function logError(category: ErrorCategory, detail: string, rawSnippet?: string) {
-  log(`[${category}] ${detail}${rawSnippet ? ` | raw(${rawSnippet.length}): ${rawSnippet.substring(0, 600)}` : ""}`, "ai");
+  const raw =
+    rawSnippet && isDebugLogs()
+      ? ` raw_len=${rawSnippet.length} snippet="${clip(rawSnippet, 200)}"`
+      : rawSnippet
+        ? ` raw_len=${rawSnippet.length}`
+        : "";
+  log(`[ai] ${category} ${detail}${raw}`, "ai");
 }
 
 const SAFETY_TEMPS: Record<string, ProteinSafetyItem> = {
@@ -206,7 +214,7 @@ function sanitizeGenericProteinWord(recipe: GenerateResponse, chosenProtein: str
   };
 
   if (recipe.title) recipe.title = replaceInText(recipe.title);
-  if (recipe.why_it_fits) recipe.why_it_fits = replaceInText(recipe.why_it_fits);
+  if (recipe.why_it_fits_tonight) recipe.why_it_fits_tonight = replaceInText(recipe.why_it_fits_tonight);
   if (recipe.cleanup_tip) recipe.cleanup_tip = replaceInText(recipe.cleanup_tip);
 
   if (recipe.steps && Array.isArray(recipe.steps)) {
@@ -287,7 +295,7 @@ async function callAI(
     const content = choice?.message?.content;
     const usage = response.usage;
 
-    log(`AI call completed in ${elapsed}ms (retry=${isRetry})`, "perf");
+    logVerbose(`[ai] call completed duration=${elapsed}ms retry=${isRetry}`, "perf");
 
     if (content && content.trim().length > 10) {
       return {
@@ -333,7 +341,7 @@ function tryParseRecipe(
     return null;
   }
 
-  log(`Parse+validate completed in ${Date.now() - parseStart}ms`, "perf");
+  logVerbose(`[ai] parse+validate duration=${Date.now() - parseStart}ms`, "perf");
   return filled;
 }
 
@@ -360,7 +368,6 @@ function buildCuisineDirective(cuisineStyle: string): string {
 function buildFilterSummary(request: GenerateRequest): string {
   const parts = [
     `crew=${request.crew_size}`,
-    `shift=${request.busy_level}`,
     `time=${request.time_available}`,
     `appliances=${request.appliances.join("+")}`,
     `health=${request.healthiness_preference}`,
@@ -494,7 +501,7 @@ This applies to the main recipe AND any veg_option.`
   return `Generate ONE firehall meal as JSON.
 
 TEMPLATE: ${template.template_name} (${template.style}) — ${template.base_idea_description}
-CREW: ${request.crew_size} | Shift: ${request.busy_level} | Time: ${request.time_available} min | Appliances: ${request.appliances.join(", ")}
+CREW: ${request.crew_size} | Time budget: ${request.time_available} | Appliances: ${request.appliances.join(", ")}
 ${proteinDirective}
 Healthiness: ${request.healthiness_preference}
 ${structureLine}
@@ -581,7 +588,7 @@ Applies to main recipe AND veg_option.`
 
 ON HAND: ${ingredientsList}
 TEMPLATE: ${template.template_name} (${template.style}) — ${template.base_idea_description}
-CREW: ${request.crew_size} | Shift: ${request.busy_level} | Time: ${request.time_available} min | Appliances: ${request.appliances.join(", ")}
+CREW: ${request.crew_size} | Time budget: ${request.time_available} | Appliances: ${request.appliances.join(", ")}
 Healthiness: ${request.healthiness_preference}
 ${structureLine}
 ${mealFormatBlock}
@@ -631,6 +638,36 @@ async function attemptGenerate(
   } catch (err: any) {
     if (err.message?.includes("timed out")) throw err;
     return null;
+  }
+}
+
+function deterministicTemplateFallback(
+  template: TemplateRow,
+  request: GenerateRequest,
+  chosenProtein: string,
+  structureType?: StructureType,
+): AIResult | null {
+  const structure =
+    structureType ||
+    pickStructure(
+      request.appliances,
+      request.time_available,
+      request.recent_meal_styles || [],
+      request.prefer_different_style || false,
+    );
+
+  try {
+    const recipe = buildFallbackRecipe(template, request, chosenProtein, structure);
+    log(
+      `[ai] deterministic template fallback structure=${structure} title="${clip(recipe.title, 50)}"`,
+      "fallback",
+    );
+    return { recipe, tokensIn: 0, tokensOut: 0, fallback: true };
+  } catch (err: unknown) {
+    const msg = err instanceof Error ? err.message : String(err);
+    log(`[ai] deterministic fallback failed: ${msg} — safe fallback`, "fallback");
+    const recipe = buildSafeFallbackRecipe(structure, request.crew_size ?? 4);
+    return { recipe, tokensIn: 0, tokensOut: 0, fallback: true };
   }
 }
 
@@ -721,10 +758,19 @@ export async function generateRecipe(
   const proteinDisplay = chosenProtein.charAt(0).toUpperCase() + chosenProtein.slice(1);
   const filterSummary = buildFilterSummary(request);
 
-  log(`Generating: ${template.template_name} (ID: ${template.template_id}), protein: ${proteinDisplay}, structure: ${structureType || "any"} | ${filterSummary}`, "ai");
+  log(
+    `[ai] generating ${formatLogFields({
+      template_id: template.template_id,
+      protein: chosenProtein,
+      cuisine: request.cuisine_style || "any",
+      structure: structureType || "any",
+    })}`,
+    "ai",
+  );
+  logVerbose(`[ai] filters ${filterSummary}`, "ai");
 
   const varietyBlock = varietyConstraints ? buildVarietyPromptBlock(varietyConstraints) : "";
-  const healthyBlock = buildHealthyPromptBlock(request.healthiness_preference, request.busy_level);
+  const healthyBlock = buildHealthyPromptBlock(request.healthiness_preference, request.time_available);
   const prompt = buildPrompt(template, request, chosenProtein, varietyBlock, healthyBlock, structureType);
   let totalTokensIn = 0;
   let totalTokensOut = 0;
@@ -744,7 +790,10 @@ export async function generateRecipe(
       const { ok, reasons, vegBase } = runValidationGates(result.recipe, chosenProtein);
       if (!ok) {
         lastReasons = reasons;
-        log(`[recipe-validation] invalid (${chosenProtein}) attempt=${attempt}/${MAX_PROTEIN_RETRIES}: ${reasons.join(", ")}`, "ai");
+        log(
+          `[recipe-validation] invalid protein=${chosenProtein} attempt=${attempt}/${MAX_PROTEIN_RETRIES} reasons="${clipReasons(reasons)}"`,
+          "ai",
+        );
         if (attempt < MAX_PROTEIN_RETRIES) await new Promise((r) => setTimeout(r, 300));
         continue;
       }
@@ -752,7 +801,18 @@ export async function generateRecipe(
       if (chosenProtein === "vegetarian" && vegBase) commitVegBase(vegBase);
 
       const elapsed = Date.now() - genStart;
-      log(`Recipe OK in ${elapsed}ms (${totalTokensIn}in/${totalTokensOut}out, attempt ${attempt}/${MAX_PROTEIN_RETRIES}) | ${filterSummary}`, "perf");
+      log(
+        `[ai] success ${formatLogFields({
+          title: clip(result.recipe.title, 50),
+          protein: chosenProtein,
+          duration: `${elapsed}ms`,
+          attempt,
+          tokens_in: totalTokensIn,
+          tokens_out: totalTokensOut,
+        })}`,
+        "ai",
+      );
+      logVerbose(`[ai] filters ${filterSummary}`, "ai");
       return { recipe: result.recipe, tokensIn: totalTokensIn, tokensOut: totalTokensOut };
     } else {
       log(`[recipe-validation] attempt ${attempt}/${MAX_PROTEIN_RETRIES}: AI failed to produce parseable recipe`, "ai");
@@ -760,14 +820,27 @@ export async function generateRecipe(
     }
   }
 
-  log(`Could not generate a valid ${chosenProtein} recipe after ${MAX_PROTEIN_RETRIES} attempts (last: ${lastReasons.join(", ")}) — trying fallback remix...`, "ai");
+  log(
+    `[ai] last_resort fallback reason=validation_exhausted protein=${chosenProtein} last="${clipReasons(lastReasons)}" llm=${isLlmFallbackAllowed()}`,
+    "ai",
+  );
 
-  const fallback = await fallbackRemix(template, request, chosenProtein);
+  const fallback = isLlmFallbackAllowed()
+    ? await fallbackRemix(template, request, chosenProtein)
+    : deterministicTemplateFallback(template, request, chosenProtein, structureType);
   if (fallback) {
     const elapsed = Date.now() - genStart;
     totalTokensIn += fallback.tokensIn;
     totalTokensOut += fallback.tokensOut;
-    log(`Fallback served in ${elapsed}ms total | ${filterSummary}`, "perf");
+    log(
+      `[ai] last_resort success ${formatLogFields({
+        title: clip(fallback.recipe.title, 50),
+        protein: chosenProtein,
+        duration: `${elapsed}ms`,
+        mode: isLlmFallbackAllowed() ? "llm" : "template",
+      })}`,
+      "ai",
+    );
     return { recipe: fallback.recipe, tokensIn: totalTokensIn, tokensOut: totalTokensOut, fallback: true };
   }
 
@@ -785,10 +858,23 @@ export async function generateRecipeFromPantry(
   const filterSummary = buildFilterSummary(request);
   const pantryProteinMode = ["vegetarian", "seafood"].includes((request.protein || "").toLowerCase()) ? request.protein : undefined;
 
-  log(`Generating pantry recipe: ${template.template_name}, structure: ${structureType || "any"}, ingredients: ${(request.ingredients_on_hand || []).join(", ")}${pantryProteinMode ? ` | diet: ${pantryProteinMode}` : ""} | ${filterSummary}`, "ai");
+  const pantryCount = (request.ingredients_on_hand || []).length;
+  log(
+    `[ai] pantry start ${formatLogFields({
+      template_id: template.template_id,
+      pantry_items: pantryCount,
+      structure: structureType || "any",
+      diet: pantryProteinMode,
+    })}`,
+    "ai",
+  );
+  logVerbose(
+    `[ai] pantry ingredients=${(request.ingredients_on_hand || []).map((i) => clip(i, 30)).join("; ")} | ${filterSummary}`,
+    "ai",
+  );
 
   const varietyBlock = varietyConstraints ? buildVarietyPromptBlock(varietyConstraints) : "";
-  const healthyBlock = buildHealthyPromptBlock(request.healthiness_preference, request.busy_level);
+  const healthyBlock = buildHealthyPromptBlock(request.healthiness_preference, request.time_available);
   const prompt = buildPantryPrompt(template, request, varietyBlock, healthyBlock, structureType);
   let totalTokensIn = 0;
   let totalTokensOut = 0;
@@ -808,7 +894,10 @@ export async function generateRecipeFromPantry(
       const { ok, reasons, vegBase } = runValidationGates(result.recipe, validationMode);
       if (!ok) {
         lastReasons = reasons;
-        log(`[recipe-validation] pantry (${validationMode}) invalid attempt=${attempt}/${maxAttempts}: ${reasons.join(", ")}`, "ai");
+        log(
+          `[recipe-validation] pantry invalid mode=${validationMode} attempt=${attempt}/${maxAttempts} reasons="${clipReasons(reasons)}"`,
+          "ai",
+        );
         if (attempt < maxAttempts) await new Promise((r) => setTimeout(r, 300));
         continue;
       }
@@ -816,7 +905,16 @@ export async function generateRecipeFromPantry(
       if (pantryProteinMode === "vegetarian" && vegBase) commitVegBase(vegBase);
 
       const elapsed = Date.now() - genStart;
-      log(`Pantry recipe OK in ${elapsed}ms (${totalTokensIn}in/${totalTokensOut}out, attempt ${attempt}/${maxAttempts}) | ${filterSummary}`, "perf");
+      log(
+        `[ai] pantry success ${formatLogFields({
+          title: clip(result.recipe.title, 50),
+          duration: `${elapsed}ms`,
+          attempt,
+          tokens_in: totalTokensIn,
+          tokens_out: totalTokensOut,
+        })}`,
+        "ai",
+      );
       return { recipe: result.recipe, tokensIn: totalTokensIn, tokensOut: totalTokensOut };
     }
 
@@ -824,13 +922,25 @@ export async function generateRecipeFromPantry(
     if (attempt < maxAttempts) await new Promise((r) => setTimeout(r, 300));
   }
 
-  log(`Pantry generation failed after ${maxAttempts} attempts (last: ${lastReasons.join(", ")}), trying fallback remix...`, "ai");
-  const fallback = await fallbackRemix(template, request, "pantry");
+  log(
+    `[ai] pantry last_resort reason=validation_exhausted last="${clipReasons(lastReasons)}" llm=${isLlmFallbackAllowed()}`,
+    "ai",
+  );
+  const fallback = isLlmFallbackAllowed()
+    ? await fallbackRemix(template, request, "pantry")
+    : deterministicTemplateFallback(template, request, "pantry", structureType);
   if (fallback) {
     const elapsed = Date.now() - genStart;
     totalTokensIn += fallback.tokensIn;
     totalTokensOut += fallback.tokensOut;
-    log(`Pantry fallback served in ${elapsed}ms | ${filterSummary}`, "perf");
+    log(
+      `[ai] pantry last_resort success ${formatLogFields({
+        title: clip(fallback.recipe.title, 50),
+        duration: `${elapsed}ms`,
+        mode: isLlmFallbackAllowed() ? "llm" : "template",
+      })}`,
+      "ai",
+    );
     return { recipe: fallback.recipe, tokensIn: totalTokensIn, tokensOut: totalTokensOut, fallback: true };
   }
 
@@ -866,7 +976,10 @@ INSTRUCTIONS:
 - Ensure timing.total_minutes >= max(prep_minutes, cook_minutes) and <= prep_minutes + cook_minutes + 5.`;
 
   try {
-    log(`[repair] Attempting repair for "${recipe.title}" with ${validationErrors.length} errors: ${validationErrors.join(", ")}`, "ai");
+    log(
+      `[repair] start title="${clip(recipe.title, 40)}" errors=${validationErrors.length} detail="${clipReasons(validationErrors)}"`,
+      "ai",
+    );
     const { content, tokensIn, tokensOut } = await callAI(repairPrompt, REPAIR_SYSTEM_PROMPT, true, 15_000);
     const repaired = tryParseRecipe(content, template, chosenProtein, budgetLevel);
     if (repaired) {

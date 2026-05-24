@@ -1,23 +1,20 @@
-import Database from "better-sqlite3";
-import path from "path";
 import crypto from "crypto";
 import { nanoid } from "nanoid";
 import { log } from "./index";
 import type { GenerateResponse, HallVoteOption, HallVoteResponse } from "@shared/schema";
+import { getSharedLocalDb, type SqliteDatabase } from "./sqlite";
 
-const DB_PATH = path.join(process.cwd(), "data", "cache.db");
-let db: Database.Database;
+let db: SqliteDatabase;
 
-function getDb(): Database.Database {
+function getDb(): SqliteDatabase {
   if (!db) {
-    db = new Database(DB_PATH);
-    db.pragma("journal_mode = WAL");
-    db.pragma("busy_timeout = 5000");
+    throw new Error("Hall vote store not initialized — call initHallVoteTables() first");
   }
   return db;
 }
 
-export function initHallVoteTables() {
+export async function initHallVoteTables() {
+  db = await getSharedLocalDb();
   const d = getDb();
   d.exec(`
     CREATE TABLE IF NOT EXISTS hall_votes (
@@ -86,7 +83,7 @@ export function createHallVote(
     VALUES (?, ?, ?, 'open', 0, ?, ?)
   `).run(voteId, title, JSON.stringify(optionsWithIds), creatorSessionId, expiresAt);
 
-  log(`Hall vote created: ${voteId} with ${options.length} options`, "vote");
+  log(`[hallvote] created voteId=${voteId} options=${options.length}`, "hallvote");
   return { voteId };
 }
 
@@ -204,6 +201,6 @@ export function closeHallVote(voteId: string, sessionId: string): { success: boo
   }
 
   d.prepare("UPDATE hall_votes SET status = 'closed' WHERE vote_id = ?").run(voteId);
-  log(`Hall vote closed: ${voteId}`, "vote");
+  log(`[hallvote] closed voteId=${voteId}`, "hallvote");
   return { success: true };
 }

@@ -1,4 +1,4 @@
-import { log } from "./index";
+import { log, clip, maskEmail, isProductionEnv } from "./logger";
 
 const KLAVIYO_BASE = "https://a.klaviyo.com/api";
 const REVISION = "2025-01-15";
@@ -65,11 +65,12 @@ async function klaviyoFetch(
       const errDetail = data?.errors
         ? data.errors.map((e: any) => `${e.title}: ${e.detail}`).join("; ")
         : raw.substring(0, 300);
-      log(`FAIL ${res.status} (${elapsed}ms) ${tag} — ${errDetail}`, "klaviyo");
+      const detail = isProductionEnv() ? clip(errDetail, 120) : errDetail;
+      log(`[klaviyo] FAIL status=${res.status} duration=${elapsed}ms tag=${tag} detail="${detail}"`, "klaviyo");
       return { ok: false, status: res.status, data, raw };
     }
 
-    log(`OK ${res.status} (${elapsed}ms) ${tag}`, "klaviyo");
+    log(`[klaviyo] OK status=${res.status} duration=${elapsed}ms tag=${tag}`, "klaviyo");
     return { ok: true, status: res.status, data, raw };
   } catch (err: any) {
     const elapsed = Date.now() - startMs;
@@ -158,7 +159,7 @@ export async function subscribeToList(email: string): Promise<void> {
     throw new Error(`Add to list failed (${addRes.status}): ${detail}`);
   }
 
-  log(`Subscribed ${email} to list ${listId}`, "klaviyo");
+  log(`[klaviyo] subscribed email=${maskEmail(email)} listId=${listId}`, "klaviyo");
 }
 
 export async function trackRecipeEvent(
@@ -223,7 +224,10 @@ export async function trackRecipeEvent(
     throw new Error(`Track recipe event failed (${result.status}): ${detail}`);
   }
 
-  log(`Tracked "Recipe Generated" for ${email}: ${properties.recipe_title}`, "klaviyo");
+  log(
+    `[klaviyo] event=RecipeGenerated email=${maskEmail(email)} title="${clip(properties.recipe_title, 50)}" crew=${properties.crew_size}`,
+    "klaviyo",
+  );
 }
 
 export async function trackShoppingListEvent(
@@ -275,5 +279,9 @@ export async function trackShoppingListEvent(
     throw new Error(`Track shopping list event failed (${result.status}): ${detail}`);
   }
 
-  log(`Tracked "Shopping List Requested" for ${email}: ${properties.recipe_title}`, "klaviyo");
+  const sectionCount = properties.shopping_list_sections?.length ?? 0;
+  log(
+    `[klaviyo] event=ShoppingListRequested email=${maskEmail(email)} title="${clip(properties.recipe_title, 50)}" sections=${sectionCount}`,
+    "klaviyo",
+  );
 }

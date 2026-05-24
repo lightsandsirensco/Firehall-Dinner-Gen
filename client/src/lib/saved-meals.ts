@@ -55,6 +55,7 @@ export function saveMeal(recipe: ClientRecipeResponse): { saved: boolean; duplic
   const updated = [entry, ...existing];
   localStorage.setItem(STORAGE_KEY, JSON.stringify(updated));
   window.dispatchEvent(new Event("favorites-changed"));
+  window.dispatchEvent(new CustomEvent("firehall-meal-saved", { detail: { id } }));
   return { saved: true, duplicate: false };
 }
 

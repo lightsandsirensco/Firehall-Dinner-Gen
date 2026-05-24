@@ -6,6 +6,7 @@ import {
   type WheelClassic,
   playWheelSound,
 } from "@/lib/firehall-classics-wheel";
+import { MealHeroImage } from "@/components/meal-hero-image";
 
 const SEGMENT_COUNT = WHEEL_CLASSICS.length;
 const SEGMENT_ANGLE = 360 / SEGMENT_COUNT;
@@ -71,10 +72,12 @@ export function ClassicsWheel({ disabled, onLanded, onSpinStart }: ClassicsWheel
 
       {/* Outer glow ring */}
       <div
-        className={`absolute inset-2 rounded-full transition-shadow duration-500 ${
-          spinning
-            ? "shadow-[0_0_40px_rgba(198,40,40,0.45)] ring-2 ring-primary/40"
-            : "shadow-[0_0_24px_rgba(198,40,40,0.2)] ring-1 ring-primary/20"
+        className={`absolute inset-2 rounded-full transition-all duration-700 ${
+          activeIndex !== null && !spinning
+            ? "shadow-[0_0_56px_rgba(198,40,40,0.65)] ring-2 ring-primary/70 animate-pulse"
+            : spinning
+              ? "shadow-[0_0_40px_rgba(198,40,40,0.45)] ring-2 ring-primary/40"
+              : "shadow-[0_0_24px_rgba(198,40,40,0.2)] ring-1 ring-primary/20"
         }`}
       />
 
@@ -183,35 +186,33 @@ export function WheelReveal({
         animate={{ opacity: 1, y: 0, scale: 1 }}
         exit={{ opacity: 0, y: 12 }}
         transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-        className="w-full max-w-lg mx-auto"
+        className="w-full max-w-xl mx-auto"
         data-testid="wheel-reveal"
       >
-        <div className="relative overflow-hidden rounded-2xl border border-primary/30 bg-card shadow-2xl shadow-primary/10">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/15 via-transparent to-transparent pointer-events-none" />
-          <motion.div
-            className="absolute -top-20 -right-20 w-40 h-40 rounded-full bg-primary/20 blur-3xl"
-            animate={{ scale: [1, 1.2, 1], opacity: [0.4, 0.7, 0.4] }}
-            transition={{ duration: 2.5, repeat: Infinity }}
+        <div className="relative overflow-hidden rounded-2xl border border-primary/40 bg-card shadow-2xl shadow-primary/20 ring-1 ring-primary/30">
+          <MealHeroImage
+            src={classic.heroImage}
+            alt={classic.imageAlt}
+            emoji={classic.emoji}
+            title={classic.title}
+            variant="cinematic"
+            className="w-full"
           />
-          <div className="relative p-6 sm:p-8 text-center">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-transparent pointer-events-none" />
+          <motion.div
+            className="absolute -top-20 -right-20 w-48 h-48 rounded-full bg-primary/25 blur-3xl"
+            animate={{ scale: [1, 1.25, 1], opacity: [0.5, 0.85, 0.5] }}
+            transition={{ duration: 2.2, repeat: Infinity }}
+          />
+          <div className="relative p-6 sm:p-8 text-center -mt-2">
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.15 }}
-              className="text-xs uppercase tracking-[0.35em] text-primary font-semibold mb-3"
+              className="text-xs uppercase tracking-[0.35em] text-primary font-semibold mb-3 drop-shadow-sm"
             >
               Tonight&apos;s hall pick
             </motion.p>
-            <motion.span
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ type: "spring", stiffness: 260, damping: 18, delay: 0.2 }}
-              className="text-5xl sm:text-6xl block mb-4"
-              role="img"
-              aria-hidden
-            >
-              {classic.emoji}
-            </motion.span>
             <h2
               className="font-heading text-2xl sm:text-3xl tracking-wide text-foreground mb-2"
               data-testid="text-wheel-winner"
@@ -225,6 +226,9 @@ export function WheelReveal({
             <div className="flex flex-wrap justify-center gap-2 mb-6">
               <span className="text-[10px] font-medium uppercase tracking-wider px-2.5 py-1 rounded-full bg-primary/10 text-primary border border-primary/20">
                 {classic.protein}
+              </span>
+              <span className="text-[10px] font-medium uppercase tracking-wider px-2.5 py-1 rounded-full bg-muted text-muted-foreground border border-border/40">
+                {classic.cuisine}
               </span>
               <span className="text-[10px] font-medium uppercase tracking-wider px-2.5 py-1 rounded-full bg-muted text-muted-foreground border border-border/40">
                 Hall classic

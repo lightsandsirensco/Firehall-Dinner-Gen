@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import type { ClientRecipeResponse, MealPlateLine } from "@shared/schema";
 import { resolveMealPlate } from "@/lib/meal-plate-ui";
+import { buildRecipeTrustLine } from "@/lib/recipe-trust-line";
 import { Flame, Droplets, Wheat, Beef, Sparkles, Trash2, Clock, Timer, ShieldCheck, Thermometer, Printer, Leaf, Mail, Package, ShoppingCart, DollarSign, Lightbulb, List, Heart, Check, ChevronDown, UtensilsCrossed, Globe, Zap, Bug } from "lucide-react";
 import { saveMeal, isMealSaved } from "@/lib/saved-meals";
 import { useState, useEffect, useMemo } from "react";
@@ -261,6 +262,7 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
 
   const recipeTags = recipe.recipe_tags;
   const mealPlate = useMemo(() => resolveMealPlate(recipe), [recipe]);
+  const trustLine = useMemo(() => buildRecipeTrustLine(recipe, crewSize), [recipe, crewSize]);
   const displayTitle = mealPlate?.display_title || recipe.title;
   const starchSides = mealPlate?.sides.filter((s) => s.role === "starch") || [];
   const vegSides = mealPlate?.sides.filter((s) => s.role === "veg") || [];
@@ -284,8 +286,34 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
         <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl tracking-wide text-foreground leading-tight" data-testid="text-recipe-title">
           {displayTitle}
         </h2>
+        <p
+          className="flex items-center gap-1.5 text-sm text-muted-foreground leading-snug mt-2 max-w-xl"
+          data-testid="text-recipe-trust-line"
+        >
+          <ShieldCheck className="w-3.5 h-3.5 text-primary/55 shrink-0" aria-hidden />
+          <span>{trustLine}</span>
+        </p>
+        {recipe._recipe_source?.name && (
+          <p className="text-xs text-muted-foreground/80 mt-1 max-w-xl" data-testid="text-recipe-source">
+            {recipe._recipe_source.url ? (
+              <>
+                Recipe from{" "}
+                <a
+                  href={recipe._recipe_source.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline"
+                >
+                  {recipe._recipe_source.name}
+                </a>
+              </>
+            ) : (
+              <>Recipe from {recipe._recipe_source.name}</>
+            )}
+          </p>
+        )}
         {mealPlate?.cuisine_label && (
-          <p className="text-xs uppercase tracking-widest text-primary/80 mt-1" data-testid="text-cuisine-label">
+          <p className="text-xs uppercase tracking-widest text-primary/80 mt-2" data-testid="text-cuisine-label">
             {mealPlate.cuisine_label} · Hall spread
           </p>
         )}
