@@ -1,7 +1,14 @@
 /**
  * Local SQLite via sql.js (WASM) — no native node-gyp build required (Windows-friendly).
  */
-import initSqlJs from "sql.js";
+import _sqlJsImport from "sql.js";
+// sql.js ships as module.exports = initFn (CJS). When bundled externally by esbuild
+// the interop wraps it as { default: fn }, but when required directly the fn is the
+// module root. Normalise so initSqlJs is always the callable initialiser function.
+const initSqlJs: typeof _sqlJsImport =
+  (typeof (_sqlJsImport as any).default === "function"
+    ? (_sqlJsImport as any).default
+    : _sqlJsImport) as typeof _sqlJsImport;
 import fs from "fs";
 import path from "path";
 
