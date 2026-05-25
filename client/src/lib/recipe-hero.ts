@@ -14,10 +14,14 @@ async function fetchMealHero(
   recipeId: string,
   signature?: string,
   title?: string,
+  mealFormat?: string,
+  protein?: string,
 ): Promise<HeroPollState> {
   const params = new URLSearchParams();
   if (signature) params.set("signature", signature);
   if (title) params.set("title", title);
+  if (mealFormat) params.set("meal_format", mealFormat);
+  if (protein) params.set("protein", protein);
   const qs = params.toString();
   const res = await fetch(`/api/recipe-hero/meal/${encodeURIComponent(recipeId)}${qs ? `?${qs}` : ""}`);
   if (!res.ok) return { hero_image_status: "unavailable" };
@@ -66,10 +70,20 @@ export function useMealHeroPoll(
       if (cancelled || polls.current >= MAX_POLLS) return;
       polls.current += 1;
       const sig = (recipe as ClientRecipeResponse & { _signature?: string })._signature;
-      const next = await fetchMealHero(String(recipe._id), sig, recipe.title);
+      const next = await fetchMealHero(
+        String(recipe._id),
+        sig,
+        recipe.title,
+        recipe.meal_style,
+        recipe.chosen_protein,
+      );
       if (cancelled) return;
       setHero(next);
       if (next.hero_image_status === "ready") return;
+      if (polls.current >= MAX_POLLS) {
+        setHero({ hero_image_status: "unavailable" });
+        return;
+      }
       window.setTimeout(tick, POLL_MS);
     };
 

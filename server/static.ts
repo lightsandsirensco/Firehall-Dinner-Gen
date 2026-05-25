@@ -10,6 +10,11 @@ export function serveStatic(app: Express) {
     );
   }
 
+  const clientPublic = path.resolve(process.cwd(), "client", "public");
+  if (fs.existsSync(clientPublic)) {
+    app.use("/images", express.static(path.join(clientPublic, "images"), { index: false, maxAge: "1h" }));
+  }
+
   app.use(express.static(distPath, { index: false, maxAge: "1h" }));
 
   // SPA fallback — never return index.html for static asset paths (broken images)

@@ -11,6 +11,7 @@ function formatSourceAttribution(source: NonNullable<ClientRecipeResponse["_reci
 }
 import { resolveMealPlate } from "@/lib/meal-plate-ui";
 import { MealHeroImage } from "@/components/meal-hero-image";
+import { resolveEditorialFallbackHero } from "@shared/meal-hero-fallback";
 import { buildRecipeTrustLine } from "@/lib/recipe-trust-line";
 import { Flame, Droplets, Wheat, Beef, Sparkles, Trash2, Clock, Timer, ShieldCheck, Thermometer, Printer, Leaf, Mail, Package, ShoppingCart, DollarSign, Lightbulb, List, Heart, Check, ChevronDown, UtensilsCrossed, Globe, Zap, Bug } from "lucide-react";
 import { saveMeal, isMealSaved } from "@/lib/saved-meals";
@@ -282,10 +283,14 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
 
   const debugData = (recipe as any)._debug || null;
   const displayTitle = mealPlate?.display_title || recipe.title;
+  const fallbackHero = resolveEditorialFallbackHero(displayTitle, {
+    mealFormat: recipe.meal_style,
+    protein: recipe.chosen_protein,
+  });
 
   return (
     <div className="space-y-5 animate-in fade-in slide-in-from-bottom-4 duration-500">
-      {recipe.hero_image ? (
+      {recipe.hero_image && recipe.hero_image_status === "ready" ? (
         <MealHeroImage
           src={recipe.hero_image}
           alt={recipe.hero_image_alt || displayTitle}
@@ -297,9 +302,33 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
         />
       ) : recipe.hero_image_status === "pending" ? (
         <div
-          className="relative w-full aspect-[5/4] max-h-[min(40vh,360px)] sm:aspect-[16/9] sm:max-h-[min(360px,48vh)] rounded-2xl overflow-hidden bg-gradient-to-br from-zinc-900 via-zinc-950 to-black ring-1 ring-border/30 animate-pulse"
+          className="relative w-full aspect-[5/4] max-h-[min(40vh,360px)] sm:aspect-[16/9] sm:max-h-[min(360px,48vh)] rounded-2xl overflow-hidden ring-1 ring-border/30"
           aria-label="Generating meal photo"
           data-testid="meal-hero-pending"
+        >
+          {fallbackHero ? (
+            <MealHeroImage
+              src={fallbackHero}
+              alt={displayTitle}
+              title={displayTitle}
+              variant="cinematic"
+              className="opacity-70"
+              imgClassName="opacity-90"
+            />
+          ) : (
+            <div className="absolute inset-0 bg-gradient-to-br from-zinc-900 via-zinc-950 to-black" />
+          )}
+          <div className="absolute inset-0 bg-black/25 animate-pulse pointer-events-none" />
+        </div>
+      ) : fallbackHero ? (
+        <MealHeroImage
+          src={fallbackHero}
+          alt={displayTitle}
+          title={displayTitle}
+          emoji="🔥"
+          variant="cinematic"
+          priority
+          className="rounded-2xl overflow-hidden ring-1 ring-border/40 shadow-xl shadow-black/25"
         />
       ) : null}
       {(recipe as any)._filters_adjusted && (

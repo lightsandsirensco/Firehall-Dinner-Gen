@@ -27,6 +27,8 @@ export interface FoodImageryContext {
   sourceKind?: string;
   /** Hall classic pinned path — skip unless force */
   pinnedHeroPath?: string;
+  /** Optional dedupe key (meal:sig:…) — aliased after generation */
+  signatureKey?: string;
 }
 
 export interface FoodImageryPromptSpec {

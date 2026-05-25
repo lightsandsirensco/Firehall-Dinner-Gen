@@ -24,7 +24,9 @@ export function foodImageryContextFromGenerateResponse(
     name: i.item,
   }));
   return {
-    recipeKey: signature ? mealImageryKeyFromSignature(signature) : mealImageryKeyFromId(recipeId),
+    // Poll endpoint looks up meal:id first — must match generation key.
+    recipeKey: mealImageryKeyFromId(recipeId),
+    signatureKey: signature ? mealImageryKeyFromSignature(signature) : undefined,
     title: recipe.title,
     displayTitle: recipe.title,
     summary: recipe.why_it_fits_tonight,

@@ -2631,7 +2631,9 @@ export async function registerRoutes(
       const recipeId = String(req.params.recipeId || "");
       const title = typeof req.query.title === "string" ? req.query.title : undefined;
       const signature = typeof req.query.signature === "string" ? req.query.signature : undefined;
-      const hero = await resolveMealHeroImage(signature, recipeId, title);
+      const mealFormat = typeof req.query.meal_format === "string" ? req.query.meal_format : undefined;
+      const protein = typeof req.query.protein === "string" ? req.query.protein : undefined;
+      const hero = await resolveMealHeroImage(signature, recipeId, title, { mealFormat, protein });
       return res.json(hero);
     } catch (err: unknown) {
       const msg = err instanceof Error ? err.message : String(err);

@@ -3,9 +3,14 @@ import path from "node:path";
 import { randomUUID } from "node:crypto";
 import { getSharedLocalDb, type SqliteDatabase } from "../sqlite.js";
 import { log } from "../logger.js";
-import { generatedImagePublicPath, slugifyRecipeKey } from "../../shared/food-imagery/paths.js";
+import { generatedImagePublicPath } from "../../shared/food-imagery/paths.js";
 import type { FoodImageryJobStatus } from "../../shared/food-imagery/types.js";
 import { getFoodImageryConfig } from "./config.js";
+import {
+  imageExtensionForBuffer,
+  mirrorGeneratedImageFile,
+  publicImageFileExists,
+} from "./storage-paths.js";
 
 export interface SaveAssetInput {
   recipeKey: string;
@@ -28,6 +33,20 @@ export function ensureGeneratedStorageDir(): string {
   return dir;
 }
 
+export async function getLatestJobForRecipe(recipeKey: string): Promise<{
+  status: FoodImageryJobStatus;
+  lastError: string | null;
+} | null> {
+  const row = (await getDb())
+    .prepare(
+      `SELECT status, last_error FROM food_imagery_jobs
+       WHERE recipe_key = ? ORDER BY updated_at DESC LIMIT 1`,
+    )
+    .get(recipeKey) as { status: FoodImageryJobStatus; last_error: string | null } | undefined;
+  if (!row) return null;
+  return { status: row.status, lastError: row.last_error };
+}
+
 async function getDb(): Promise<SqliteDatabase> {
   return getSharedLocalDb();
 }
@@ -48,6 +67,10 @@ export async function getLatestAssetForRecipe(recipeKey: string): Promise<{
     | { asset_id: string; public_path: string; version: number; prompt_hash: string }
     | undefined;
   if (!row) return null;
+  if (!publicImageFileExists(row.public_path)) {
+    log(`[food-imagery] asset row exists but file missing: ${row.public_path}`, "catalog");
+    return null;
+  }
   return {
     assetId: row.asset_id,
     publicPath: row.public_path,
@@ -83,13 +106,13 @@ export async function saveFoodImageryAsset(input: SaveAssetInput): Promise<{
   absolutePath: string;
   version: number;
 }> {
-  const storageDir = ensureGeneratedStorageDir();
+  ensureGeneratedStorageDir();
   const version = await getNextVersion(input.recipeKey);
-  const publicPath = generatedImagePublicPath(slugifyRecipeKey(input.recipeKey), version);
+  const ext = imageExtensionForBuffer(input.buffer);
+  const publicPath = generatedImagePublicPath(input.recipeKey, version, ext);
   const filename = path.basename(publicPath);
-  const absolutePath = path.join(storageDir, filename);
-
-  fs.writeFileSync(absolutePath, input.buffer);
+  const { primaryPath: absolutePath, mirrored } = mirrorGeneratedImageFile(filename, input.buffer);
+  log(`[food-imagery] mirrored to ${mirrored.length} path(s)`, "catalog");
 
   const assetId = randomUUID();
   const database = await getDb();

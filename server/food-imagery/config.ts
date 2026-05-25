@@ -5,9 +5,7 @@ import { resolvePublicAppUrl } from "../../shared/replit-public-url.js";
 function defaultStorageDir(): string {
   const custom = process.env.FOOD_IMAGERY_STORAGE_DIR?.trim();
   if (custom) return custom;
-  if (process.env.NODE_ENV === "production") {
-    return path.join(process.cwd(), "dist", "public", "images", "generated");
-  }
+  // Always write under client/public (Vite source); mirrored to dist/public in production.
   return path.join(process.cwd(), "client", "public", "images", "generated");
 }
 

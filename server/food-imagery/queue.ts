@@ -23,7 +23,7 @@ export function resetFoodImageryQueue(): void {
 
 export async function enqueueFoodImageryJob(
   ctx: FoodImageryContext,
-  options: { force?: boolean; recipeId?: string } = {},
+  options: { force?: boolean; recipeId?: string; mealId?: string } = {},
 ): Promise<string> {
   const key = ctx.recipeKey;
   const existing = pending.get(key);

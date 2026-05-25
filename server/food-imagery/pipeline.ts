@@ -100,6 +100,9 @@ export async function generateFoodImageryForRecipe(
       if (options.mealId) {
         await duplicateAssetAlias(ctx.recipeKey, mealImageryKeyFromId(options.mealId));
       }
+      if (ctx.signatureKey && ctx.signatureKey !== ctx.recipeKey) {
+        await duplicateAssetAlias(ctx.recipeKey, ctx.signatureKey);
+      }
 
       return {
         ok: true,
@@ -150,6 +153,10 @@ export async function ensureFoodImageryQueued(
   }
 
   const { enqueueFoodImageryJob } = await import("./queue.js");
-  const jobId = await enqueueFoodImageryJob(ctx, options);
+  const jobId = await enqueueFoodImageryJob(ctx, {
+    force: options.force,
+    recipeId: options.recipeId,
+    mealId: options.mealId,
+  });
   return { ok: true, jobId, reason: "queued" };
 }

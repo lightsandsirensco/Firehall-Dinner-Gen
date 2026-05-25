@@ -1,6 +1,6 @@
 import type { ClientRecipeResponse, PizzaResponse } from "../../shared/schema.js";
 import { log } from "../logger.js";
-import { getLatestAssetForRecipe } from "./asset-store.js";
+import { getLatestAssetForRecipe, getLatestJobForRecipe } from "./asset-store.js";
 import { getFoodImageryConfig } from "./config.js";
 import { shouldGenerateFoodImagery } from "./policy.js";
 import { ensureFoodImageryQueued, generateFoodImageryForRecipe } from "./pipeline.js";
@@ -15,6 +15,7 @@ import { buildPizzaFoodImageryPrompt } from "../../shared/food-imagery/pizza-pro
 import { getPizzaConceptMeta } from "../../shared/pizza-concepts.js";
 import { buildFoodImageryPrompt } from "../../shared/food-imagery/prompt-builder.js";
 import { hashPrompt } from "./generator.js";
+import { resolveEditorialFallbackHero } from "../../shared/meal-hero-fallback.js";
 
 export type HeroImageStatus = "ready" | "pending" | "unavailable";
 
@@ -22,6 +23,7 @@ export interface ResolvedHeroImage {
   hero_image?: string;
   hero_image_alt?: string;
   hero_image_status: HeroImageStatus;
+  hero_image_source?: "generated" | "editorial_fallback";
 }
 
 async function firstHeroFromKeys(keys: string[]): Promise<string | null> {
@@ -32,10 +34,34 @@ async function firstHeroFromKeys(keys: string[]): Promise<string | null> {
   return null;
 }
 
+function fallbackHero(
+  title?: string,
+  mealFormat?: string,
+  protein?: string,
+): ResolvedHeroImage | null {
+  const path = resolveEditorialFallbackHero(title || "", { mealFormat, protein });
+  if (!path) return null;
+  return {
+    hero_image: path,
+    hero_image_alt: title ? `${title} — Firehall Meals` : "Firehall meal",
+    hero_image_status: "ready",
+    hero_image_source: "editorial_fallback",
+  };
+}
+
+async function latestJobFailed(keys: string[]): Promise<boolean> {
+  for (const key of keys) {
+    const job = await getLatestJobForRecipe(key);
+    if (job?.status === "failed") return true;
+  }
+  return false;
+}
+
 export async function resolveMealHeroImage(
   signature?: string,
   recipeId?: string,
   title?: string,
+  opts?: { mealFormat?: string; protein?: string },
 ): Promise<ResolvedHeroImage> {
   const keys: string[] = [];
   if (recipeId) keys.push(mealImageryKeyFromId(recipeId));
@@ -47,12 +73,23 @@ export async function resolveMealHeroImage(
       hero_image: path,
       hero_image_alt: title ? `${title} — Firehall Meals` : "Firehall meal",
       hero_image_status: "ready",
+      hero_image_source: "generated",
     };
   }
 
   const cfg = getFoodImageryConfig();
+  const fb = fallbackHero(title, opts?.mealFormat, opts?.protein);
+
   if (!cfg.enabled) {
-    return { hero_image_status: "unavailable" };
+    return fb ?? { hero_image_status: "unavailable" };
+  }
+
+  if (await latestJobFailed(keys)) {
+    return (
+      fb ?? {
+        hero_image_status: "unavailable",
+      }
+    );
   }
 
   return { hero_image_status: "pending" };
@@ -68,11 +105,17 @@ export async function resolvePizzaHeroImage(
       hero_image: path,
       hero_image_alt: title ? `${title} — Pizza Night` : "Firehall pizza",
       hero_image_status: "ready",
+      hero_image_source: "generated",
     };
   }
 
   const cfg = getFoodImageryConfig();
   if (!cfg.enabled) {
+    return { hero_image_status: "unavailable" };
+  }
+
+  const job = await getLatestJobForRecipe(pizzaImageryKey(styleId));
+  if (job?.status === "failed") {
     return { hero_image_status: "unavailable" };
   }
 
@@ -86,8 +129,15 @@ export async function enrichClientRecipeWithHero(
 ): Promise<Record<string, unknown>> {
   const recipeId = String(client._id || "");
   const title = String(client.title || "");
-  const hero = await resolveMealHeroImage(signature, recipeId || undefined, title);
-  return { ...client, ...hero };
+  const mealFormat = String(client.meal_style || client.meal_format || "");
+  const protein = String(client.chosen_protein || "");
+  const hero = await resolveMealHeroImage(signature, recipeId || undefined, title, {
+    mealFormat,
+    protein,
+  });
+  const out: Record<string, unknown> = { ...client, ...hero };
+  if (signature) out._signature = signature;
+  return out;
 }
 
 export async function enrichPizzaWithHero(recipe: PizzaResponse): Promise<PizzaResponse> {
@@ -145,6 +195,7 @@ export async function generatePizzaHeroSync(
       hero_image: result.publicPath,
       hero_image_alt: `${title || meta.title} — Pizza Night`,
       hero_image_status: "ready",
+      hero_image_source: "generated",
     };
   }
   return { hero_image_status: "unavailable" };

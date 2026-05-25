@@ -22,14 +22,19 @@ export function isFirehallOwnedHeroUrl(url: string): boolean {
   return false;
 }
 
-export function generatedImagePublicPath(recipeKey: string, version = 1): string {
+export function generatedImagePublicPath(
+  recipeKey: string,
+  version = 1,
+  ext: "jpg" | "png" = "jpg",
+): string {
   const safe = recipeKey
     .toLowerCase()
+    .replace(/^meal-(sig|id):/, "")
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "")
     .slice(0, 64);
   const suffix = version > 1 ? `-v${version}` : "";
-  return `${GENERATED_IMAGE_URL_PREFIX}${safe}${suffix}.jpg`;
+  return `${GENERATED_IMAGE_URL_PREFIX}${safe}${suffix}.${ext}`;
 }
 
 /** Strip localhost (or loopback) absolute URLs to site-root /images/ paths only. */
