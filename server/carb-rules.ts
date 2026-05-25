@@ -134,6 +134,8 @@ export const CARB_RULES: Record<string, CarbRule> = {
     baseRequired: false,
   },
   "plated-main": {
+    forbiddenBase: null,
+    forbiddenBaseLabel: "",
     allowedSides: ["mashed potatoes", "jasmine rice", "potato wedges", "mac and cheese", "cornbread", "quinoa"],
     defaultSide: "mashed potatoes",
     defaultSideHealthy: "quinoa",

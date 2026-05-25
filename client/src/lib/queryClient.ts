@@ -12,7 +12,7 @@ function getCsrfToken(): string {
   return match ? decodeURIComponent(match[1]) : "";
 }
 
-async function ensureCsrfToken(): Promise<string> {
+export async function ensureCsrfToken(): Promise<string> {
   let token = getCsrfToken();
   if (!token) {
     await fetch("/api/csrf-token", { credentials: "include" });

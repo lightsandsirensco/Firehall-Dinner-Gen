@@ -18,9 +18,10 @@ export type CuratedSourceKind =
   | "partner"
   | "manual"
   | "hall_classic"
-  | "import";
+  | "import"
+  | "template";
 
-export type CuratedSourceLicense = "aggregator" | "owned" | "partner";
+export type CuratedSourceLicense = "aggregator" | "owned" | "partner" | "internal";
 
 export type CuratedImageRole = "hero" | "card" | "og" | "thumb";
 

@@ -4,6 +4,7 @@ import { Shield, RefreshCw, Check, X, Upload, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { adminFetch } from "@/lib/admin-api";
 
 interface StagingRow {
   fingerprint: string;
@@ -37,9 +38,15 @@ export default function AdminIngestionPage() {
     setError(null);
     try {
       const [statusRes, stagingRes] = await Promise.all([
-        fetch("/api/admin/ingestion/status"),
-        fetch(`/api/admin/ingestion/staging?status=${filter}&limit=30`),
+        adminFetch("/api/admin/ingestion/status"),
+        adminFetch(`/api/admin/ingestion/staging?status=${filter}&limit=30`),
       ]);
+      if (statusRes.status === 401 || stagingRes.status === 401) {
+        throw new Error("Unauthorized — set ADMIN_SECRET and enter the key when prompted");
+      }
+      if (statusRes.status === 503 || stagingRes.status === 503) {
+        throw new Error("Admin API disabled — set ADMIN_SECRET on the server");
+      }
       if (!statusRes.ok || !stagingRes.ok) throw new Error("Failed to load ingestion data");
       setStatus(await statusRes.json());
       const staging = await stagingRes.json();
@@ -56,7 +63,7 @@ export default function AdminIngestionPage() {
   }, [load]);
 
   const action = async (fingerprint: string, type: "approve" | "reject" | "promote") => {
-    const res = await fetch(`/api/admin/ingestion/staging/${encodeURIComponent(fingerprint)}/${type}`, {
+    const res = await adminFetch(`/api/admin/ingestion/staging/${encodeURIComponent(fingerprint)}/${type}`, {
       method: "POST",
     });
     if (!res.ok) {

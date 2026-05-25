@@ -6,7 +6,8 @@ import {
   hallProTips,
 } from "./firehall-voice";
 import { searchRecipes, getRecipeById, SpoonacularRecipeDetail } from "./spoonacular";
-import { enhanceRecipeStepsSync, buildEnhanceContextFromTitle } from "./instruction-enhancer.js";
+import { attachImportedRecipeMeta } from "../shared/imported-recipe.js";
+import { publisherNameFromSourceUrl } from "../shared/canonical-recipe.js";
 import type {
   GenerateRequest,
   GenerateResponse,
@@ -331,19 +332,11 @@ export function convertSpoonacularToGenerateResponse(
           },
         ];
 
-  steps = enhanceRecipeStepsSync(steps, buildEnhanceContextFromTitle(detail.title, {
-    protein: chosenProtein,
-    totalMinutes: detail.readyInMinutes,
-    crewSize: request.crew_size,
-    ingredients: ingredientNames,
-    mealFormat: request.meal_format,
-  }));
-
   const macros = extractMacros(detail);
 
   const totalMin = detail.readyInMinutes || 30;
-  const prepMin = (detail as any).preparationMinutes || Math.round(totalMin * 0.35);
-  const cookMin = (detail as any).cookingMinutes || totalMin - prepMin;
+  const prepMin = detail.preparationMinutes ?? Math.round(totalMin * 0.35);
+  const cookMin = detail.cookingMinutes ?? totalMin - prepMin;
   const timing: RecipeTiming = {
     prep_minutes: Math.max(5, prepMin),
     cook_minutes: Math.max(5, cookMin),
@@ -375,7 +368,8 @@ export function convertSpoonacularToGenerateResponse(
     request.meal_format,
   );
 
-  return {
+  const sourceUrl = detail.sourceUrl || "";
+  const base: GenerateResponse = {
     template_id: 0,
     chosen_protein: chosenProtein,
     primary_protein_source: chosenProtein,
@@ -391,6 +385,17 @@ export function convertSpoonacularToGenerateResponse(
     pro_tips: hallProTips(request.crew_size, baseServings),
     tags: recipeTags,
   };
+
+  return attachImportedRecipeMeta(
+    base,
+    {
+      kind: "spoonacular",
+      name: publisherNameFromSourceUrl(sourceUrl),
+      url: sourceUrl,
+      license: "aggregator",
+    },
+    { preserveSteps: rawSteps.length >= 3 },
+  );
 }
 
 async function tryConvertCandidate(

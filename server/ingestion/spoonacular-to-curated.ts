@@ -4,6 +4,7 @@
 
 import { getRecipeById } from "../spoonacular.js";
 import { convertSpoonacularToGenerateResponse, inferActualProtein } from "../spoonacular-converter.js";
+import { createDefaultGenerateRequest } from "../../shared/generate-request-defaults.js";
 import type { GenerateRequest } from "../../shared/schema.js";
 import type { CuratedRecipeInsert } from "../../shared/curated-recipe/types.js";
 import { curatedRecipeIdFromSpoonacular, slugifyRecipeTitle } from "../../shared/curated-recipe/ids.js";
@@ -12,18 +13,10 @@ import { assignExploreCategories } from "../../shared/ingestion/categorize.js";
 import { computeIngestQualityScores } from "../../shared/ingestion/scoring.js";
 import { upgradeSpoonacularImageSize } from "../../shared/explore-recipe.js";
 
-const DEFAULT_REQUEST: GenerateRequest = {
+const DEFAULT_REQUEST: GenerateRequest = createDefaultGenerateRequest({
   crew_size: 8,
-  busy_level: "average",
   time_available: "30-45",
-  appliances: ["stove", "oven"],
-  protein: "any",
-  healthiness_preference: "balanced",
-  allergens_to_avoid: [],
-  cuisine_style: "any",
-  meal_format: "random",
-  prefer_different_style: false,
-};
+});
 
 export interface SpoonacularToCuratedOptions {
   spoonacularId: number;
@@ -93,24 +86,6 @@ export async function buildCuratedInsertFromSpoonacular(
     ];
     const uniqueCategories = [...new Set(categories.map((c) => c.toLowerCase()))];
 
-    const scores = computeIngestQualityScores(
-      {
-        title,
-        heroImage,
-        totalMinutes: totalMin,
-        mealFormat,
-        mealArchetype,
-        servingsBase: draftBase.servingsBase,
-        steps: (generateResponse.steps || []).map((s) => ({
-          heading: s.heading,
-          body: s.body,
-        })),
-        tags: draftBase.tags,
-        spoonacularId,
-      },
-      options.trendScore ?? 65,
-    );
-
     const ingredients = (generateResponse.ingredients || []).map((ing, i) => {
       const name = ing.item || "ingredient";
       return {
@@ -121,6 +96,32 @@ export async function buildCuratedInsertFromSpoonacular(
         originalText: [ing.amount, ing.item, ing.notes].filter(Boolean).join(" ").trim() || name,
       };
     });
+
+    const scores = computeIngestQualityScores(
+      {
+        title,
+        heroImage,
+        totalMinutes: totalMin,
+        mealFormat,
+        mealArchetype,
+        servingsBase: draftBase.servingsBase,
+        steps: (generateResponse.steps || []).map((s, idx) => ({
+          number: idx + 1,
+          step: s.body || s.heading,
+        })),
+        tags: draftBase.tags,
+        spoonacularId,
+        source: "spoonacular",
+        sourceUrl: detail.sourceUrl || options.sourceUrl || "",
+        ingredients: ingredients.map((i) => ({
+          name: i.name,
+          amount: i.amount,
+          unit: i.unit,
+          original: i.originalText,
+        })),
+      },
+      options.trendScore ?? 65,
+    );
 
     const instructions = (generateResponse.steps || []).map((s, i) => ({
       stepNumber: i + 1,

@@ -8,10 +8,9 @@
  */
 
 import "dotenv/config";
+import { applyDevInsecureTlsIfAllowed } from "./dev-tls.js";
 
-if (process.env.SPOONACULAR_INSECURE_TLS === "true") {
-  process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
-}
+applyDevInsecureTlsIfAllowed();
 import { initCuratedRecipeStore } from "../server/curated-recipe-store.js";
 import { initRecipeCatalog } from "../server/recipe-catalog.js";
 import { initIngestionStore } from "../server/ingestion/ingestion-store.js";

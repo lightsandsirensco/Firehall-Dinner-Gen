@@ -1,4 +1,5 @@
 import type { ExploreRecipeCard } from "./explore-recipe.js";
+import { isExploreFeedBlocked } from "./explore-feed-blocklist.js";
 import { EXPLORE_DISCOVERY_SECTIONS } from "./explore-discovery-catalog.js";
 
 /** Visual accent for section headers (maps to CSS in explore-discovery-section) */
@@ -118,6 +119,7 @@ export function dedupeExploreCards(
 ): ExploreRecipeCard[] {
   const out: ExploreRecipeCard[] = [];
   for (const card of cards) {
+    if (isExploreFeedBlocked(card.title)) continue;
     if (seenIds.has(card.id)) continue;
     const titleKey = card.title.toLowerCase().replace(/[^a-z0-9]/g, "").slice(0, 48);
     if (seenTitleKeys.has(titleKey)) continue;

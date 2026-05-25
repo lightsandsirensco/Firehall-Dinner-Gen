@@ -13,6 +13,7 @@ import {
   isSeasoningOrGarnish,
   type MealIdentity,
 } from "@shared/meal-semantics";
+import { correctStarchKeyForTitle, isCaesarMainDish } from "@shared/firehall-instruction-voice";
 import { getRecentCarbs, trackCarb } from "./carb-rules";
 import {
   getSessionSideBundles,
@@ -126,12 +127,15 @@ export const STARCH_TEMPLATES: Record<string, { item: string; amount: string; st
     },
   },
   "garlic bread": {
-    item: "Garlic bread",
+    item: "Garlic bread or split baguettes",
     amount: "2 loaves",
     carbTag: "bread",
     step: {
-      heading: "Warm garlic bread (400°F, 8–10 min)",
-      body: "Heat garlic bread until warm and crisp at the edges.",
+      heading: "Toast garlic bread (400°F oven, 8–10 min)",
+      body:
+        "Spread garlic butter on the cut sides and sprinkle parmesan if you have it. " +
+        "Bake at 400°F until the edges are crisp and golden — garlic burns fast, so pull it when you smell toast, not smoke. " +
+        "Wrap in foil and hold on the counter so the crew gets hot bread with the mains.",
     },
   },
   "cornbread": {
@@ -190,10 +194,11 @@ export const STARCH_TEMPLATES: Record<string, { item: string; amount: string; st
 
 /** Identity-first pairing (title + format). */
 const IDENTITY_STARCH: Partial<Record<MealIdentity, string[]>> = {
+  caesar_salad: ["garlic bread", "potato wedges"],
   french_dip: ["fries", "potato wedges"],
   burger: ["potato wedges", "fries"],
   sandwich: ["potato wedges", "coleslaw"],
-  taco: ["jasmine rice"],
+  taco: [],
   wrap: ["jasmine rice", "side salad"],
   pasta: ["garlic bread"],
   bowl: ["jasmine rice", "quinoa"],
@@ -220,7 +225,7 @@ const CUISINE_STARCH: Record<string, string[]> = {
   thai: ["jasmine rice"],
   chinese: ["jasmine rice"],
   indian: ["basmati rice", "naan"],
-  mexican: ["jasmine rice", "Spanish rice"],
+  mexican: ["Spanish rice"],
   italian: ["garlic bread"],
   bbq: ["potato wedges", "mac and cheese", "cornbread"],
   cajun: ["mashed potatoes", "cornbread"],
@@ -434,6 +439,14 @@ function bundleRecentForCtx(ctx: SidePairingContext): string[] {
 /** Title-specific curated dinners (highest priority). */
 function pickTitleCurated(title: string): Partial<ComposedSidePick> | null {
   const t = title.toLowerCase();
+  if (/\bcaesar\b/.test(t)) {
+    return {
+      starchKey: "garlic bread",
+      vegLabel: null,
+      extraLabel: null,
+      pairingSource: "title:caesar_salad",
+    };
+  }
   if (/\bfrench dip\b/.test(t)) {
     return { starchKey: "fries", vegLabel: "Creamy coleslaw", extraLabel: null, pairingSource: "title:french_dip" };
   }
@@ -492,6 +505,27 @@ export function pickComposedSides(ctx: SidePairingContext): ComposedSidePick {
     log(`[side-pair] Rotating off curated "${ctx.title}" — recent overlap`, "compose");
   }
 
+  if (identity === "caesar_salad" || isCaesarMainDish(ctx.title)) {
+    const starchKey = correctStarchKeyForTitle(
+      ctx.title,
+      pickFromPool(
+        IDENTITY_STARCH.caesar_salad || ["garlic bread", "potato wedges"],
+        recentAllStarch,
+        ctx.healthiness,
+        ctx.allergens,
+        false,
+        `${ctx.title}:caesar_starch`,
+      ) || "garlic bread",
+    );
+    log(`[side-pair] "${ctx.title}" → Caesar night starch=${starchKey}`, "compose");
+    return {
+      starchKey,
+      vegLabel: null,
+      extraLabel: null,
+      pairingSource: "identity:caesar_salad",
+    };
+  }
+
   const archetype = pickArchetypeBundle(ctx, identity, recentAllStarch);
   if (archetype?.starchKey && archetype.vegLabel) {
     log(
@@ -510,6 +544,20 @@ export function pickComposedSides(ctx: SidePairingContext): ComposedSidePick {
     starchPool = starchPool.filter((k) => k !== "roasted potatoes");
   }
 
+  if (ctx.formatKey === "tacos" || identity === "taco" || /\btaco(s)?\b/i.test(ctx.title)) {
+    starchPool = [];
+    vegPool = IDENTITY_VEG.taco || CUISINE_VEG.mexican;
+    log(`[side-pair] "${ctx.title}" → taco night (no rice starch; toppings only)`, "compose");
+    return {
+      starchKey: null,
+      vegLabel:
+        pickFromPool(vegPool, vegRecent, ctx.healthiness, ctx.allergens, false, `${ctx.title}:taco_veg`) ||
+        "Pico & shredded lettuce",
+      extraLabel: CUISINE_EXTRA.mexican?.[0] ?? "Lime wedges and cilantro",
+      pairingSource: "format:tacos",
+    };
+  }
+
   if (ctx.formatKey === "pasta") {
     starchPool = ["garlic bread"];
     vegPool = CUISINE_VEG.italian;
@@ -518,7 +566,7 @@ export function pickComposedSides(ctx: SidePairingContext): ComposedSidePick {
     starchPool = ["jasmine rice", "quinoa"];
   }
 
-  const starchKey = pickFromPool(
+  let starchKey = pickFromPool(
     starchPool,
     recentAllStarch,
     ctx.healthiness,
@@ -526,6 +574,7 @@ export function pickComposedSides(ctx: SidePairingContext): ComposedSidePick {
     false,
     `${ctx.title}:starch`,
   );
+  starchKey = correctStarchKeyForTitle(ctx.title, starchKey);
   const vegLabel = pickFromPool(
     vegPool,
     vegRecent,

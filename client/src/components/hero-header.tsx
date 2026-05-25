@@ -2,6 +2,8 @@ import { Flame } from "lucide-react";
 import heroTruckImg from "@assets/truck1_1773178049785.jpg";
 import { Link } from "wouter";
 import { cn } from "@/lib/utils";
+import { HeroImage } from "@/components/hero-image";
+import type { HeroImageLayout } from "@/lib/hero-image";
 
 export type HeroVariant = "full" | "compact" | "utility";
 
@@ -16,10 +18,16 @@ interface HeroHeaderProps {
   variant?: HeroVariant;
 }
 
-const IMAGE_HEIGHT: Record<HeroVariant, string> = {
-  full: "h-[260px] sm:h-[320px] md:h-[380px]",
-  compact: "h-[132px] sm:h-[168px]",
-  utility: "h-[52px] sm:h-[64px]",
+const BANNER_LAYOUT: Record<HeroVariant, HeroImageLayout> = {
+  full: "banner-full",
+  compact: "banner-compact",
+  utility: "banner-utility",
+};
+
+const BANNER_OVERLAY: Record<HeroVariant, "banner-full" | "banner-compact" | "banner-utility"> = {
+  full: "banner-full",
+  compact: "banner-compact",
+  utility: "banner-utility",
 };
 
 export function HeroHeader({
@@ -41,27 +49,14 @@ export function HeroHeader({
       data-testid="hero-header"
       data-hero-variant={resolved}
     >
-      <img
+      <HeroImage
         src={heroTruckImg}
         alt=""
-        className={cn(
-          "w-full object-cover object-[center_35%] block transition-[height] duration-500 ease-out",
-          IMAGE_HEIGHT[resolved],
-        )}
-      />
-      <div
-        className={cn(
-          "absolute inset-0 bg-gradient-to-b transition-opacity duration-500",
-          isUtility
-            ? "from-black/70 via-black/75 to-black/90"
-            : "from-black/50 via-black/60 to-black/85",
-        )}
-      />
-      <div
-        className={cn(
-          "absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#141414] to-transparent transition-[height] duration-500",
-          isUtility ? "h-8" : "h-24",
-        )}
+        layout={BANNER_LAYOUT[resolved]}
+        focal="banner"
+        overlay={BANNER_OVERLAY[resolved]}
+        priority
+        className="transition-[height] duration-500 ease-out"
       />
 
       <div

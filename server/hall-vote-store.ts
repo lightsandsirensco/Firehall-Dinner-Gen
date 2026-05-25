@@ -1,7 +1,12 @@
 import crypto from "crypto";
 import { nanoid } from "nanoid";
 import { log } from "./index";
-import type { GenerateResponse, HallVoteOption, HallVoteResponse } from "@shared/schema";
+import type {
+  GenerateResponse,
+  HallVoteOption,
+  HallVoteResponse,
+  VoteOptionInput,
+} from "@shared/schema";
 import { getSharedLocalDb, type SqliteDatabase } from "./sqlite";
 
 let db: SqliteDatabase;
@@ -50,14 +55,6 @@ export function createVoteId(): string {
 export function hashVoterFingerprint(ip: string, userAgent: string): string {
   const salt = "firehall-vote-salt-2024";
   return crypto.createHash("sha256").update(`${ip}|${userAgent}|${salt}`).digest("hex").substring(0, 32);
-}
-
-interface VoteOptionInput {
-  name: string;
-  description: string;
-  est_cost?: string;
-  est_time?: string;
-  recipe_payload: GenerateResponse;
 }
 
 export function createHallVote(

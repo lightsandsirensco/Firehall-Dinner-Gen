@@ -12,12 +12,20 @@ import {
 import { getRecipeById } from "./spoonacular.js";
 import { log } from "./logger.js";
 import { enhanceRecipeSteps, buildEnhanceContextFromTitle } from "./instruction-enhancer.js";
+import { preserveSourceStepsLight } from "./meal-instructions.js";
+import { isRealSourcedMeal } from "../shared/imported-recipe.js";
+import { isShallowInstructionSet } from "../shared/instruction-enhancement.js";
 import type { RecipeStep } from "../shared/schema.js";
+import {
+  buildExploreDetailFromHallPackage,
+  resolveHallPackageSlug,
+} from "./hall-package-explore-detail.js";
+import type {
+  ExploreDetailLookupHints,
+  ExploreRecipeDetailPayload,
+} from "./explore-detail-types.js";
 
-export interface ExploreDetailLookupHints {
-  slug?: string;
-  curatedRecipeId?: string;
-}
+export type { ExploreDetailLookupHints, ExploreRecipeDetailPayload } from "./explore-detail-types.js";
 
 function resolveCuratedForExplore(
   exploreId: number,
@@ -43,26 +51,6 @@ function resolveCuratedForExplore(
 
   log(`[explore] curated lookup miss id=${exploreId} tried=[${tried.join(", ")}]`, "catalog");
   return null;
-}
-
-export interface ExploreRecipeDetailPayload {
-  id: number;
-  title: string;
-  image: string;
-  imageAlt: string;
-  readyInMinutes: number;
-  servings: number;
-  sourceUrl: string;
-  summary: string;
-  cuisines: string[];
-  diets: string[];
-  dishTypes: string[];
-  ingredients: { name: string; amount: number; unit: string; original: string }[];
-  steps: { number: number; heading?: string; step: string }[];
-  macros: { calories: number; protein_g: number; carbs_g: number; fat_g: number };
-  _fromCurated?: boolean;
-  _curatedRecipeId?: string;
-  _publisherName?: string;
 }
 
 function rawStepsFromCurated(curated: CuratedRecipe): RecipeStep[] {
@@ -105,8 +93,29 @@ async function detailFromCurated(
     mealFormat: curated.mealFormat,
   });
 
-  const enhanced = await enhanceRecipeSteps(rawStepsFromCurated(curated), ctx);
-  const steps = payloadStepsFromRecipeSteps(enhanced);
+  const rawSteps = rawStepsFromCurated(curated);
+  const src = curated.source;
+  const catalogKind =
+    src.kind === "publisher"
+      ? "publisher"
+      : src.kind === "spoonacular"
+        ? "spoonacular"
+        : "curated";
+  const usePreserved =
+    isRealSourcedMeal(
+      {
+        kind: catalogKind,
+        name: src.name,
+        url: src.url,
+        license: src.license,
+      },
+      curated.generateResponse,
+    ) && rawSteps.length >= 3;
+
+  const finalSteps = usePreserved
+    ? preserveSourceStepsLight(rawSteps)
+    : await enhanceRecipeSteps(rawSteps, ctx);
+  const steps = payloadStepsFromRecipeSteps(finalSteps);
 
   const ingredients =
     curated.ingredients.length > 0
@@ -156,6 +165,15 @@ export async function fetchExploreRecipeDetailPayload(
   includeNutrition: boolean,
   hints: ExploreDetailLookupHints = {},
 ): Promise<ExploreRecipeDetailPayload> {
+  const hallSlug = resolveHallPackageSlug(exploreId, hints);
+  if (hallSlug) {
+    const hallDetail = buildExploreDetailFromHallPackage(hallSlug, exploreId);
+    if (hallDetail) {
+      log(`[explore] detail hall package slug=${hallSlug} id=${exploreId}`, "catalog");
+      return hallDetail;
+    }
+  }
+
   const curated = resolveCuratedForExplore(exploreId, hints);
   if (curated) {
     log(
@@ -203,7 +221,12 @@ export async function fetchExploreRecipeDetailPayload(
     crewSize: detail.servings,
     ingredients: ingredientNames,
   });
-  const enhanced = await enhanceRecipeSteps(rawSteps, ctx);
+  const shallow = isShallowInstructionSet(
+    rawSteps.map((s) => ({ heading: s.heading, body: s.body })),
+  );
+  const finalSteps = shallow
+    ? await enhanceRecipeSteps(rawSteps, ctx)
+    : preserveSourceStepsLight(rawSteps);
 
   return {
     id: detail.id,
@@ -223,7 +246,7 @@ export async function fetchExploreRecipeDetailPayload(
       unit: ing.unit,
       original: ing.original || `${ing.amount} ${ing.unit} ${ing.name}`.trim(),
     })),
-    steps: payloadStepsFromRecipeSteps(enhanced),
+    steps: payloadStepsFromRecipeSteps(finalSteps),
     macros: {
       calories: Math.round(findNutrient("Calories")),
       protein_g: Math.round(findNutrient("Protein")),

@@ -25,6 +25,8 @@ export type MealIdentity =
   | "stir_fry"
   | "indian_curry"
   | "soup_stew"
+  | "caesar_salad"
+  | "bbq"
   | "plated_main"
   | "generic";
 
@@ -121,6 +123,8 @@ export function detectMealIdentity(title: string, mealFormat: string): MealIdent
   if (/\b(stir fry|stir-fry|fried rice)\b/i.test(t) || fmt === "stir-fry" || fmt === "stir_fry") return "stir_fry";
   if (/\b(bowl|bibimbap|donburi)\b/i.test(t) || fmt === "bowl") return "bowl";
   if (/\b(soup|chili|stew|chowder|gumbo)\b/i.test(t) || fmt.includes("soup") || fmt.includes("stew")) return "soup_stew";
+  if (/\bcaesar\b/i.test(t)) return "caesar_salad";
+  if (fmt === "salad" && /\bcaesar\b/i.test(t)) return "caesar_salad";
   if (fmt === "burger") return "burger";
   if (fmt === "sandwich") return "sandwich";
   if (fmt === "pasta") return "pasta";

@@ -46,7 +46,9 @@ export function defaultIngestionSources(
   options: IngestionPipelineSourceOptions = {},
 ): IngestionSourceBundle {
   const useApify = options.apifyPinterest ?? Boolean(getApifyToken());
-  const trends = [new JsonTrendDiscoverySource()];
+  const trends: import("./sources/types.js").TrendDiscoverySource[] = [
+    new JsonTrendDiscoverySource(),
+  ];
   if (useApify) trends.unshift(new ApifyPinterestTrendSource());
 
   const resolvers = [];

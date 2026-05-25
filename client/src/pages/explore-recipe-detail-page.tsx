@@ -23,7 +23,11 @@ import { buildShoppingListFromClientMeal } from "@/lib/shopping-list";
 import { EmailModal } from "@/components/email-modal";
 import { ShoppingListModal } from "@/components/shopping-list-modal";
 import { buildPrintHtml } from "@/components/recipe-card";
-import { fetchExploreRecipeDetail, normalizeExploreRecipeId } from "@/lib/explore-api";
+import {
+  fetchExploreRecipeDetail,
+  normalizeExploreRecipeId,
+  type ExploreRecipeDetail,
+} from "@/lib/explore-api";
 import { stripHtml } from "@/lib/text";
 import {
   type ExploreRecipeCard,
@@ -31,26 +35,11 @@ import {
   mergeDetailWithCardPreview,
 } from "@/lib/explore-recipe";
 import { ExploreRecipeImage } from "@/components/explore-recipe-image";
+import { HERO_CONTENT_FADE } from "@/lib/hero-image";
+import { cn } from "@/lib/utils";
 import type { ClientRecipeResponse, ClientIngredient } from "@shared/schema";
 
 const DEFAULT_CREW_SIZE = 6;
-
-interface RecipeDetail {
-  id: number;
-  title: string;
-  image: string;
-  imageAlt?: string;
-  readyInMinutes: number;
-  servings: number;
-  sourceUrl: string;
-  summary: string;
-  cuisines: string[];
-  diets: string[];
-  dishTypes: string[];
-  ingredients: { name: string; amount: number; unit: string; original: string }[];
-  steps: { number: number; heading?: string; step: string }[];
-  macros: { calories: number; protein_g: number; carbs_g: number; fat_g: number };
-}
 
 function inferCategory(name: string): string {
   const n = name.toLowerCase();
@@ -62,7 +51,7 @@ function inferCategory(name: string): string {
   return "Other";
 }
 
-function spoonacularToClientRecipe(detail: RecipeDetail, crewSize: number): ClientRecipeResponse {
+function spoonacularToClientRecipe(detail: ExploreRecipeDetail, crewSize: number): ClientRecipeResponse {
   const baseServings = detail.servings > 0 ? detail.servings : 4;
   const scale = crewSize / baseServings;
   const roundQty = (n: number) => Math.round(n * scale * 100) / 100;
@@ -79,7 +68,7 @@ function spoonacularToClientRecipe(detail: RecipeDetail, crewSize: number): Clie
 
   return {
     title: detail.title,
-    meal_format: detail.dishTypes?.[0] || "dinner",
+    meal_format: detail.dishTypes?.[0] || "plated_main",
     servings: crewSize,
     tags: [...detail.cuisines, ...detail.diets],
     timing: {
@@ -89,7 +78,7 @@ function spoonacularToClientRecipe(detail: RecipeDetail, crewSize: number): Clie
     },
     protein_safety: {
       protein: chosenProtein,
-      internal_temp_f: 0,
+      internal_temp_f: 165,
       rest_min: 0,
       notes: "",
     },
@@ -215,7 +204,7 @@ export function ExploreRecipeDetailPage({ registryRef }: ExploreRecipeDetailPage
     isPending: detailPending,
     error: detailError,
     refetch: refetchDetail,
-  } = useQuery<RecipeDetail>({
+  } = useQuery<ExploreRecipeDetail>({
     queryKey: detailQueryKey,
     queryFn: async ({ queryKey }) => {
       const url = String(queryKey[0]);
@@ -244,7 +233,7 @@ export function ExploreRecipeDetailPage({ registryRef }: ExploreRecipeDetailPage
     const displayDetail = mergeDetailWithCardPreview(
       { ...matchedDetail, imageAlt: matchedDetail.imageAlt || matchedDetail.title },
       detailPreview,
-    ) as RecipeDetail;
+    );
     return (
       <div className="min-h-screen min-h-[100dvh] bg-background overflow-x-hidden">
         <SiteHeader activePage="explore" favCount={favCount} />
@@ -267,11 +256,9 @@ export function ExploreRecipeDetailPage({ registryRef }: ExploreRecipeDetailPage
         <main className="max-w-[900px] mx-auto">
           <div className="relative">
             {detailPreview ? (
-              <div className="max-h-[min(52vh,480px)] overflow-hidden">
-                <ExploreRecipeImage recipe={detailPreview} variant="detail" priority />
-              </div>
+              <ExploreRecipeImage recipe={detailPreview} variant="detail" priority />
             ) : (
-              <div className="aspect-[4/5] max-h-[52vh] skeleton-shimmer" />
+              <div className="w-full aspect-[5/4] max-h-[min(48vh,440px)] sm:aspect-[16/9] skeleton-shimmer" />
             )}
             <Button
               variant="secondary"
@@ -350,7 +337,7 @@ function RecipeDetailView({
   crewSize,
   onBack,
 }: {
-  recipe: RecipeDetail;
+  recipe: ExploreRecipeDetail;
   crewSize: number;
   onBack: () => void;
 }) {
@@ -405,11 +392,15 @@ function RecipeDetailView({
   return (
     <div className="fade-up" data-testid="explore-recipe-detail">
       {/* Full-bleed hero */}
-      <div className="relative -mx-0 sm:mx-0 sm:rounded-2xl sm:overflow-hidden sm:ring-1 sm:ring-border/40 sm:shadow-xl sm:shadow-black/20 sm:mt-6 sm:mx-6">
-        <div className="relative max-h-[min(52vh,480px)] sm:max-h-[min(420px,55vh)] overflow-hidden">
-          <ExploreRecipeImage recipe={heroRecipe} variant="detail" priority />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent pointer-events-none" />
-        </div>
+      <div className="relative sm:rounded-2xl sm:overflow-hidden sm:ring-1 sm:ring-border/40 sm:shadow-xl sm:shadow-black/20 sm:mt-4 sm:mx-4 md:mx-6">
+        <ExploreRecipeImage recipe={heroRecipe} variant="detail" priority />
+        <div
+          className={cn(
+            "pointer-events-none absolute inset-0 z-[4]",
+            HERO_CONTENT_FADE,
+          )}
+          aria-hidden
+        />
         <Button
           variant="secondary"
           size="sm"

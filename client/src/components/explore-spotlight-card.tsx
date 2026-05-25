@@ -2,6 +2,7 @@ import { Clock, Flame, Users } from "lucide-react";
 import type { ExploreRecipeCard } from "@/lib/explore-recipe";
 import { ExploreRecipeImage } from "@/components/explore-recipe-image";
 import { buildExploreTrustLine } from "@/lib/explore-trust-line";
+import { HERO_LAYOUT_FRAME } from "@/lib/hero-image";
 import { cn } from "@/lib/utils";
 
 export interface ExploreSpotlightCardProps {
@@ -34,14 +35,10 @@ export function ExploreSpotlightCard({
       )}
       data-testid="explore-spotlight-card"
     >
-      <div className="relative aspect-[16/10] sm:aspect-[21/9] min-h-[220px] max-h-[min(52vh,420px)]">
+      <div className={cn("relative overflow-hidden", HERO_LAYOUT_FRAME.cinematic)}>
         <div className="absolute inset-0 transition-transform duration-700 group-hover:scale-[1.03] motion-reduce:group-hover:scale-100">
-          <ExploreRecipeImage recipe={recipe} variant="card" cinematic sizesHint="spotlight" />
+          <ExploreRecipeImage recipe={recipe} variant="card" cinematic sizesHint="spotlight" priority />
         </div>
-        <div
-          className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/20 z-[1]"
-          aria-hidden
-        />
         <div className="absolute top-4 left-4 z-10 flex flex-wrap gap-2">
           <span className="inline-flex items-center gap-1.5 bg-primary text-primary-foreground text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">
             <Flame className="w-3.5 h-3.5" />

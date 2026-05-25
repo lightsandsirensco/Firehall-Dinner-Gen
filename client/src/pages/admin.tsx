@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Link } from "wouter";
 import { Shield, DollarSign, Database, Activity, RefreshCw, Users, Globe, ChefHat } from "lucide-react";
+import { adminFetch } from "@/lib/admin-api";
 
 interface UsageData {
   budget: {
@@ -55,7 +56,9 @@ export default function AdminPage() {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch("/api/admin/usage", { credentials: "include" });
+      const res = await adminFetch("/api/admin/usage");
+      if (res.status === 401) throw new Error("Unauthorized — set ADMIN_SECRET and enter the key when prompted");
+      if (res.status === 503) throw new Error("Admin API disabled — set ADMIN_SECRET on the server");
       if (!res.ok) throw new Error("Failed to load usage data");
       setData(await res.json());
     } catch (err: any) {

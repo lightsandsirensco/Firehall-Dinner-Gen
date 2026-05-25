@@ -1,98 +1,146 @@
-import { useState, useRef, useEffect } from "react";
-import { PizzaFilterPanel, type PizzaFilterState } from "@/components/pizza-filter-panel";
+import { useState, useEffect, useCallback, useMemo } from "react";
+import { useQuery } from "@tanstack/react-query";
+import {
+  PizzaFilterPanel,
+  type PizzaFilterState,
+  type PizzaGenerationMode,
+} from "@/components/pizza-filter-panel";
 import { PizzaCard } from "@/components/pizza-card";
-import { EmptyState } from "@/components/empty-state";
+import { PizzaHero } from "@/components/pizza-hero";
 import { LoadingState } from "@/components/loading-state";
 import { ErrorState } from "@/components/error-state";
 import { EmailModal } from "@/components/email-modal";
 import { ShoppingListModal } from "@/components/shopping-list-modal";
 import { buildShoppingListFromPizza } from "@/lib/shopping-list";
 import { getSavedCount } from "@/lib/saved-meals";
+import { getRecentPizzaStyleIds, recordPizzaStyleId } from "@/lib/pizza-session";
 import { apiRequest } from "@/lib/queryClient";
+import { parseApiError } from "@/lib/parse-api-error";
 import type { PizzaResponse, ClientRecipeResponse, ClientIngredient } from "@shared/schema";
-import { Flame } from "lucide-react";
-import { HeroHeader } from "@/components/hero-header";
+import { usePizzaHeroPoll } from "@/lib/recipe-hero";
+import { getPizzaConceptMeta } from "@shared/pizza-concepts";
 import { SiteHeader } from "@/components/site-header";
+import { cn } from "@/lib/utils";
+import { Flame } from "lucide-react";
+
+interface PizzaMenuResponse {
+  featured: string[];
+  concepts: { id: string; title: string; emoji: string; gradient: string; badges: string[] }[];
+  total: number;
+}
+
+const DEFAULT_FILTERS: PizzaFilterState = {
+  crew_size: 6,
+  time_available: "45-60",
+  dough_option: "premade",
+  style_preference: "classic",
+  heat_level: "medium",
+  allergens_to_avoid: [],
+  vegetarian_swap_needed: false,
+  oven_available: true,
+  crust_preference: "surprise",
+  sauce_preference: "surprise",
+  generation_mode: "standard",
+};
 
 export default function PizzaNight() {
   const [recipe, setRecipe] = useState<PizzaResponse | null>(null);
+  const recipeWithHero = usePizzaHeroPoll(recipe);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [lastPizzaStyleId, setLastPizzaStyleId] = useState<string | undefined>();
   const [emailModalOpen, setEmailModalOpen] = useState(false);
   const [shoppingListOpen, setShoppingListOpen] = useState(false);
   const [favCount, setFavCount] = useState(() => getSavedCount());
+  const [filters, setFilters] = useState<PizzaFilterState>(DEFAULT_FILTERS);
+  const [wheelHighlight, setWheelHighlight] = useState<string | null>(null);
+
+  const { data: menu } = useQuery<PizzaMenuResponse>({
+    queryKey: ["/api/pizza/menu"],
+    staleTime: 30 * 60 * 1000,
+  });
+
   useEffect(() => {
     const handler = () => setFavCount(getSavedCount());
     window.addEventListener("favorites-changed", handler);
     return () => window.removeEventListener("favorites-changed", handler);
   }, []);
 
-  const [filters, setFilters] = useState<PizzaFilterState>({
-    crew_size: 6,
-    time_available: "45-60",
-    dough_option: "premade",
-    style_preference: "classic",
-    heat_level: "medium",
-    allergens_to_avoid: [],
-    vegetarian_swap_needed: false,
-    oven_available: true,
-  });
+  const featuredCards = useMemo(() => {
+    if (!menu?.concepts?.length) return [];
+    const ids = menu.featured?.length ? menu.featured : menu.concepts.slice(0, 6).map((c) => c.id);
+    return ids
+      .map((id) => {
+        const fromMenu = menu.concepts.find((c) => c.id === id);
+        if (fromMenu) return fromMenu;
+        const meta = getPizzaConceptMeta(id);
+        if (!meta) return null;
+        return {
+          id: meta.id,
+          title: meta.title,
+          emoji: meta.heroEmoji,
+          gradient: meta.heroGradient,
+          badges: meta.badges.slice(0, 2),
+        };
+      })
+      .filter((x): x is NonNullable<typeof x> => x != null);
+  }, [menu]);
 
-  const handleGenerate = async (currentFilters: PizzaFilterState, lastStyleId?: string) => {
-    setLoading(true);
-    setError(null);
-    try {
-      const res = await apiRequest("POST", "/api/generate-pizza", {
-        crew_size: currentFilters.crew_size,
-        time_available: currentFilters.time_available,
-        dough_option: currentFilters.dough_option,
-        style_preference: currentFilters.style_preference,
-        heat_level: currentFilters.heat_level,
-        allergens_to_avoid: currentFilters.allergens_to_avoid,
-        vegetarian_swap_needed: currentFilters.vegetarian_swap_needed,
-        last_pizza_style_id: lastStyleId,
-      });
-      const data: PizzaResponse = await res.json();
-      setRecipe(data);
-      setLastPizzaStyleId(data.pizza_style_id);
-    } catch (err: unknown) {
-      const msg = err instanceof Error ? err.message : "Something went wrong";
-      if (msg.includes("429")) {
-        try {
-          const parsed = JSON.parse(msg.replace(/^\d+:\s*/, "")) as { message?: string };
-          setError(parsed.message || "Rate limit reached. Please wait a moment.");
-        } catch {
-          setError("Too many requests. Please wait a moment before generating again.");
-        }
-      } else if (msg.includes("403")) {
-        setError("Security check failed. Please refresh the page and try again.");
-      } else if (msg.includes("400")) {
-        setError("Check your filters and try again.");
-      } else {
-        const detail = msg.replace(/^\d+:\s*/, "").trim();
-        setError(detail.length > 10 && detail.length < 200 ? detail : "Generation failed. Please try again.");
+  const handleGenerate = useCallback(
+    async (currentFilters: PizzaFilterState, mode?: PizzaGenerationMode) => {
+      setLoading(true);
+      setError(null);
+      const genMode = mode ?? currentFilters.generation_mode ?? "standard";
+      const effectiveMode = genMode === "spin_again" ? "spin_again" : genMode;
+
+      try {
+        const res = await apiRequest("POST", "/api/generate-pizza", {
+          crew_size: currentFilters.crew_size,
+          time_available: currentFilters.time_available,
+          dough_option: currentFilters.dough_option,
+          style_preference: currentFilters.style_preference,
+          heat_level: currentFilters.heat_level,
+          allergens_to_avoid: currentFilters.allergens_to_avoid,
+          vegetarian_swap_needed: currentFilters.vegetarian_swap_needed,
+          last_pizza_style_id: lastPizzaStyleId,
+          last_pizza_style_ids: getRecentPizzaStyleIds(),
+          generation_mode: effectiveMode,
+          crust_preference: currentFilters.crust_preference,
+          sauce_preference: currentFilters.sauce_preference,
+        });
+        const data: PizzaResponse = await res.json();
+        setRecipe(data);
+        setLastPizzaStyleId(data.pizza_style_id);
+        recordPizzaStyleId(data.pizza_style_id);
+        setFilters((f) => ({ ...f, generation_mode: effectiveMode }));
+      } catch (err: unknown) {
+        const parsed = parseApiError(err);
+        setError(parsed.message);
+      } finally {
+        setLoading(false);
+        setWheelHighlight(null);
       }
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const handleGenerateClick = () => {
-    handleGenerate(filters);
-  };
+    },
+    [lastPizzaStyleId],
+  );
 
   const handleGenerateAnother = () => {
-    handleGenerate(filters, lastPizzaStyleId);
+    handleGenerate({ ...filters, generation_mode: "spin_again" }, "spin_again");
   };
+
+  const recipeMeta = recipe ? getPizzaConceptMeta(recipe.pizza_style_id) : undefined;
 
   const emailRecipe: ClientRecipeResponse | null = recipe
     ? {
         title: recipe.title,
         meal_format: "pizza",
         servings: filters.crew_size,
-        tags: [],
-        timing: { prep_min: recipe.timing.prep_minutes, cook_min: recipe.timing.bake_minutes, total_min: recipe.timing.total_minutes },
+        tags: recipe.badges ?? [],
+        timing: {
+          prep_min: recipe.timing.prep_minutes,
+          cook_min: recipe.timing.bake_minutes,
+          total_min: recipe.timing.total_minutes,
+        },
         protein_safety: {
           protein: recipe.protein_safety?.[0]?.protein || "",
           internal_temp_f: recipe.protein_safety?.[0]?.target_temp_f || 0,
@@ -105,7 +153,7 @@ export default function PizzaNight() {
           ...recipe.ingredients.cheese,
           ...recipe.ingredients.toppings,
           ...recipe.ingredients.drizzles,
-        ].map((ing, i): ClientIngredient => ({
+        ].map((ing): ClientIngredient => ({
           name: ing.item,
           qty: 0,
           unit: ing.amount,
@@ -128,36 +176,85 @@ export default function PizzaNight() {
     : null;
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen min-h-[100dvh] bg-background overflow-x-hidden">
       <SiteHeader activePage="pizza" favCount={favCount} />
 
-      <HeroHeader title="Pizza Night" subtitle="Build crew-ready pizza from scratch or premade dough" />
+      <PizzaHero
+        title="Pizza Night"
+        subtitle={`${menu?.total ?? "40+"} hall-tested pies · crew-sized · step-by-step for beginners`}
+        emoji={recipeWithHero?.hero_emoji ?? recipeMeta?.heroEmoji ?? "🍕"}
+        gradient={recipeMeta?.heroGradient ?? "from-orange-950 via-red-950 to-zinc-950"}
+        heroImage={recipeWithHero?.hero_image}
+        heroImageAlt={recipeWithHero?.hero_image_alt}
+      />
 
-      <main className="max-w-[1400px] mx-auto px-4 py-6">
+      {!recipe && featuredCards.length > 0 && (
+        <section className="max-w-[1400px] mx-auto px-4 sm:px-6 py-6 border-b border-border/40">
+          <p className="text-[10px] uppercase tracking-[0.3em] text-primary font-semibold mb-3">
+            Tonight&apos;s rotation
+          </p>
+          <div className="flex gap-3 overflow-x-auto pb-2 snap-x snap-mandatory scrollbar-thin">
+            {featuredCards.map((card) => (
+              <button
+                key={card.id}
+                type="button"
+                disabled={loading || !filters.oven_available}
+                onClick={() => {
+                  setWheelHighlight(card.id);
+                  handleGenerate({ ...filters, generation_mode: "specialty_slice" }, "specialty_slice");
+                }}
+                className={cn(
+                  "snap-start shrink-0 w-[140px] sm:w-[160px] rounded-xl overflow-hidden ring-1 ring-white/10",
+                  "transition-transform active:scale-95 text-left",
+                  wheelHighlight === card.id && "ring-2 ring-primary",
+                )}
+                data-testid={`pizza-featured-${card.id}`}
+              >
+                <div className={cn("h-20 bg-gradient-to-br relative", card.gradient)}>
+                  <span className="absolute bottom-2 right-2 text-3xl">{card.emoji}</span>
+                </div>
+                <div className="p-2.5 bg-card">
+                  <p className="text-xs font-semibold text-foreground line-clamp-2 leading-tight">
+                    {card.title}
+                  </p>
+                </div>
+              </button>
+            ))}
+          </div>
+        </section>
+      )}
+
+      <main className="max-w-[1400px] mx-auto px-4 py-6 pb-safe">
         <div className="flex flex-col lg:flex-row gap-6">
-          <div className="w-full lg:w-[380px] flex-shrink-0">
+          <div className="w-full lg:w-[400px] flex-shrink-0 lg:sticky lg:top-20 lg:self-start">
             <PizzaFilterPanel
               filters={filters}
               onFiltersChange={setFilters}
-              onGenerate={handleGenerateClick}
+              onGenerate={(mode) => handleGenerate(filters, mode)}
               onGenerateAnother={handleGenerateAnother}
               isLoading={loading}
-              hasRecipe={!!recipe}
+              hasRecipe={!!recipeWithHero}
             />
           </div>
 
           <div className="flex-1 min-w-0">
-            <div className="transition-opacity duration-300 ease-in-out" style={{ opacity: loading ? 0.6 : 1 }}>
+            <div
+              className="transition-opacity duration-300"
+              style={{ opacity: loading ? 0.65 : 1 }}
+            >
               {loading && <LoadingState />}
               {!loading && error && (
                 <div className="animate-in fade-in duration-300">
                   <ErrorState type="error" message={error} />
                 </div>
               )}
-              {!loading && !error && recipe && (
-                <div key={recipe.title} className="animate-in fade-in slide-in-from-bottom-2 duration-400">
+              {!loading && !error && recipeWithHero && (
+                <div
+                  key={recipeWithHero.pizza_style_id + recipeWithHero.title}
+                  className="animate-in fade-in slide-in-from-bottom-2 duration-400"
+                >
                   <PizzaCard
-                    recipe={recipe}
+                    recipe={recipeWithHero}
                     crewSize={filters.crew_size}
                     onEmailClick={() => setEmailModalOpen(true)}
                     onShoppingListClick={() => setShoppingListOpen(true)}
@@ -165,15 +262,19 @@ export default function PizzaNight() {
                 </div>
               )}
               {!loading && !error && !recipe && (
-                <div className="flex flex-col items-center justify-center min-h-[400px] text-center">
-                  <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mb-6">
-                    <Flame className="w-10 h-10 text-primary/60" />
+                <div className="flex flex-col items-center justify-center min-h-[360px] text-center rounded-2xl border border-dashed border-border/50 bg-card/30 px-6">
+                  <div className="w-24 h-24 rounded-full bg-primary/10 flex items-center justify-center mb-6 ring-2 ring-primary/20">
+                    <Flame className="w-12 h-12 text-primary/70" />
                   </div>
-                  <h2 className="font-heading text-3xl tracking-wide text-foreground mb-2" data-testid="pizza-text-empty-title">
+                  <h2
+                    className="font-heading text-3xl tracking-wide text-foreground mb-2"
+                    data-testid="pizza-text-empty-title"
+                  >
                     READY FOR PIZZA NIGHT
                   </h2>
-                  <p className="text-muted-foreground text-sm max-w-sm">
-                    Set your crew's preferences and fire up a homemade pizza recipe. Oven required.
+                  <p className="text-muted-foreground text-sm max-w-md leading-relaxed">
+                    Pick a mode — wheel spin, specialty slice, fridge raid, or classic generate.
+                    Every recipe includes temps, timing cues, and hall-scale portions.
                   </p>
                 </div>
               )}
@@ -181,6 +282,7 @@ export default function PizzaNight() {
           </div>
         </div>
       </main>
+
       {emailRecipe && (
         <EmailModal
           open={emailModalOpen}
@@ -199,7 +301,7 @@ export default function PizzaNight() {
           generatorType="pizza"
         />
       )}
-      <footer className="text-center py-4 mt-6">
+      <footer className="text-center py-4 mt-6 pb-safe">
         <p className="text-xs text-muted-foreground/60">
           Powered by{" "}
           <a

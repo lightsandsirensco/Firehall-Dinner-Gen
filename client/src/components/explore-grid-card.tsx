@@ -51,17 +51,6 @@ export function ExploreGridCard({
           <ExploreRecipeImage recipe={recipe} variant="card" cinematic />
         </div>
 
-        {/* Top vignette for badges */}
-        <div
-          className="pointer-events-none absolute inset-x-0 top-0 h-[28%] bg-gradient-to-b from-black/50 to-transparent z-[1]"
-          aria-hidden
-        />
-        {/* Bottom vignette for title */}
-        <div
-          className="pointer-events-none absolute inset-x-0 bottom-0 h-[55%] bg-gradient-to-t from-black/90 via-black/50 to-transparent z-[1]"
-          aria-hidden
-        />
-
         <div className="absolute top-2.5 left-2.5 right-2.5 flex items-start justify-between gap-2 z-10">
           <div className="flex flex-wrap gap-1.5 min-w-0">
             {isCurated && (

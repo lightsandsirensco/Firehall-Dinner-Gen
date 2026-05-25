@@ -1,0 +1,169 @@
+import type { ClientRecipeResponse, PizzaResponse } from "../../shared/schema.js";
+import { log } from "../logger.js";
+import { getLatestAssetForRecipe } from "./asset-store.js";
+import { getFoodImageryConfig } from "./config.js";
+import { shouldGenerateFoodImagery } from "./policy.js";
+import { ensureFoodImageryQueued, generateFoodImageryForRecipe } from "./pipeline.js";
+import {
+  foodImageryContextFromGenerateResponse,
+  foodImageryContextFromPizza,
+  mealImageryKeyFromId,
+  mealImageryKeyFromSignature,
+  pizzaImageryKey,
+} from "./context-builders.js";
+import { buildPizzaFoodImageryPrompt } from "../../shared/food-imagery/pizza-prompt-builder.js";
+import { getPizzaConceptMeta } from "../../shared/pizza-concepts.js";
+import { buildFoodImageryPrompt } from "../../shared/food-imagery/prompt-builder.js";
+import { hashPrompt } from "./generator.js";
+
+export type HeroImageStatus = "ready" | "pending" | "unavailable";
+
+export interface ResolvedHeroImage {
+  hero_image?: string;
+  hero_image_alt?: string;
+  hero_image_status: HeroImageStatus;
+}
+
+async function firstHeroFromKeys(keys: string[]): Promise<string | null> {
+  for (const key of keys) {
+    const asset = await getLatestAssetForRecipe(key);
+    if (asset?.publicPath) return asset.publicPath;
+  }
+  return null;
+}
+
+export async function resolveMealHeroImage(
+  signature?: string,
+  recipeId?: string,
+  title?: string,
+): Promise<ResolvedHeroImage> {
+  const keys: string[] = [];
+  if (recipeId) keys.push(mealImageryKeyFromId(recipeId));
+  if (signature) keys.push(mealImageryKeyFromSignature(signature));
+
+  const path = await firstHeroFromKeys(keys);
+  if (path) {
+    return {
+      hero_image: path,
+      hero_image_alt: title ? `${title} — Firehall Meals` : "Firehall meal",
+      hero_image_status: "ready",
+    };
+  }
+
+  const cfg = getFoodImageryConfig();
+  if (!cfg.enabled) {
+    return { hero_image_status: "unavailable" };
+  }
+
+  return { hero_image_status: "pending" };
+}
+
+export async function resolvePizzaHeroImage(
+  styleId: string,
+  title?: string,
+): Promise<ResolvedHeroImage> {
+  const path = await firstHeroFromKeys([pizzaImageryKey(styleId)]);
+  if (path) {
+    return {
+      hero_image: path,
+      hero_image_alt: title ? `${title} — Pizza Night` : "Firehall pizza",
+      hero_image_status: "ready",
+    };
+  }
+
+  const cfg = getFoodImageryConfig();
+  if (!cfg.enabled) {
+    return { hero_image_status: "unavailable" };
+  }
+
+  return { hero_image_status: "pending" };
+}
+
+/** Attach cached hero fields to API payload (sync, non-blocking). */
+export async function enrichClientRecipeWithHero(
+  client: Record<string, unknown>,
+  signature?: string,
+): Promise<Record<string, unknown>> {
+  const recipeId = String(client._id || "");
+  const title = String(client.title || "");
+  const hero = await resolveMealHeroImage(signature, recipeId || undefined, title);
+  return { ...client, ...hero };
+}
+
+export async function enrichPizzaWithHero(recipe: PizzaResponse): Promise<PizzaResponse> {
+  const hero = await resolvePizzaHeroImage(recipe.pizza_style_id, recipe.title);
+  return { ...recipe, ...hero };
+}
+
+/** Queue async generation after meal normalize — does not block response. */
+export function queueMealHeroAfterGenerate(
+  recipe: import("../../shared/schema.js").GenerateResponse,
+  recipeId: string,
+  signature: string,
+): void {
+  const ctx = foodImageryContextFromGenerateResponse(recipe, recipeId, signature);
+  if (!shouldGenerateFoodImagery(ctx)) return;
+
+  void (async () => {
+    try {
+      await ensureFoodImageryQueued(ctx, { mealId: recipeId });
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : String(err);
+      log(`[food-imagery] meal queue failed: ${msg}`, "catalog");
+    }
+  })();
+}
+
+/** Queue pizza hero by style id (shared across same concept). */
+export function queuePizzaHeroAfterGenerate(recipe: PizzaResponse): void {
+  const ctx = foodImageryContextFromPizza(recipe);
+  if (!ctx || !shouldGenerateFoodImagery(ctx)) return;
+
+  void ensureFoodImageryQueued(ctx).catch((err: unknown) => {
+    const msg = err instanceof Error ? err.message : String(err);
+    log(`[food-imagery] pizza queue failed: ${msg}`, "catalog");
+  });
+}
+
+/** Sync generate for CLI / admin only. */
+export async function generatePizzaHeroSync(
+  styleId: string,
+  title?: string,
+  force = false,
+): Promise<ResolvedHeroImage> {
+  const meta = getPizzaConceptMeta(styleId);
+  if (!meta) return { hero_image_status: "unavailable" };
+  const ctx = foodImageryContextFromPizza({
+    pizza_style_id: styleId,
+    title: title || meta.title,
+  } as PizzaResponse);
+  if (!ctx) return { hero_image_status: "unavailable" };
+
+  const result = await generateFoodImageryForRecipe(ctx, { force });
+  if (result.ok && result.publicPath) {
+    return {
+      hero_image: result.publicPath,
+      hero_image_alt: `${title || meta.title} — Pizza Night`,
+      hero_image_status: "ready",
+    };
+  }
+  return { hero_image_status: "unavailable" };
+}
+
+export function mealPromptPreview(signature: string, title: string): { prompt: string; hash: string } {
+  const ctx: import("../../shared/food-imagery/types.js").FoodImageryContext = {
+    recipeKey: mealImageryKeyFromSignature(signature),
+    title,
+    mealFormat: "plated_main",
+    protein: "mixed",
+  };
+  const prompt = buildFoodImageryPrompt(ctx);
+  return { prompt, hash: hashPrompt(prompt) };
+}
+
+export function pizzaPromptPreview(styleId: string): { prompt: string; hash: string } | null {
+  const meta = getPizzaConceptMeta(styleId);
+  if (!meta) return null;
+  const prompt = buildPizzaFoodImageryPrompt(meta);
+  return { prompt, hash: hashPrompt(prompt) };
+}

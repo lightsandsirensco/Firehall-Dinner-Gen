@@ -7,11 +7,9 @@
  */
 
 import "dotenv/config";
+import { applyDevInsecureTlsIfAllowed } from "./dev-tls.js";
 
-/** Windows/corporate networks often block Spoonacular TLS — set in .env for local seeding */
-if (process.env.SPOONACULAR_INSECURE_TLS === "true") {
-  process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
-}
+applyDevInsecureTlsIfAllowed();
 import { initCuratedRecipeStore, upsertCuratedRecipe, getCuratedStoreStats } from "../server/curated-recipe-store.js";
 import { searchRecipes } from "../server/spoonacular.js";
 import { buildCuratedInsertFromSpoonacular } from "../server/ingestion/spoonacular-to-curated.js";

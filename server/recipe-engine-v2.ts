@@ -32,7 +32,7 @@ import { shouldTryNextCandidate } from "./meal-composition";
 import { applyCrewPortionFloors, hallCleanupTip, hallProTips } from "./firehall-voice";
 import { isWeakTitle, resolvePolishTitle } from "./meal-plate";
 import { polishRecipeCopy } from "./recipe-polish";
-import { enhanceRecipeStepsSync, buildEnhanceContextFromTitle } from "./instruction-enhancer.js";
+import { normalizeRecipeTags } from "@shared/recipe-tags.js";
 import { getRecentSpoonacularIds, addRecentSpoonacularId } from "./cache-store";
 import type { GenerateRequest, GenerateResponse } from "../shared/schema";
 import type { RecipeSourceAttribution } from "../shared/canonical-recipe.js";
@@ -482,30 +482,51 @@ export async function runV2Generate(
       request.healthiness_preference || "balanced",
     );
 
-    const polishedSteps = enhanceRecipeStepsSync(polish.steps, buildEnhanceContextFromTitle(spoonacularTitle, {
-      protein: chosenProtein,
-      totalMinutes: recipe.timing?.total_minutes ?? 0,
-      crewSize: request.crew_size,
-      ingredients: keyIngredients,
-      mealFormat: request.meal_format,
-    }));
-
     const finalRecipe: GenerateResponse = {
       ...recipe,
       title: resolvePolishTitle(polish.title, recipe.title, spoonacularTitle),
       why_it_fits_tonight: polish.why_it_fits_tonight,
-      steps: polishedSteps,
+      steps: recipe.steps,
       ingredients: applyCrewPortionFloors(recipe.ingredients || [], request.crew_size),
       cleanup_tip: hallCleanupTip(),
       pro_tips: hallProTips(request.crew_size, detail.servings || 4),
-      tags: {
-        ...(recipe.tags || {}),
-        cuisine: recipe.tags?.cuisine || cuisine,
-      },
+      tags: normalizeRecipeTags(recipe.tags, { cuisine }),
     };
 
     if (isWeakTitle(finalRecipe.title)) {
       finalRecipe.title = spoonacularTitle;
+    }
+
+    const { runRecipeQualityGate, applyQualityTitleFix } = await import(
+      "../shared/recipe-quality-gate.js"
+    );
+    const { detectMealIdentity } = await import("../shared/meal-semantics.js");
+    let q = runRecipeQualityGate(finalRecipe, {
+      mealFormat: validationFormat,
+      identity: detectMealIdentity(finalRecipe.title, validationFormat),
+      protein: chosenProtein,
+      crewSize: request.crew_size,
+      importedSource: true,
+    });
+    if (!q.pass) {
+      const fixed = applyQualityTitleFix(finalRecipe, validationFormat);
+      q = runRecipeQualityGate(fixed, {
+        mealFormat: validationFormat,
+        identity: detectMealIdentity(fixed.title, validationFormat),
+        protein: chosenProtein,
+        crewSize: request.crew_size,
+        importedSource: true,
+      });
+      if (!q.pass && q.issues.some((i) => i === "taco_with_rice" || i === "title_taco_no_tortilla")) {
+        failures.push({
+          id: detail.id,
+          title: detail.title,
+          reason: `quality-gate:${q.issues.join(",")}`,
+        });
+        log(`[v2] Candidate ${i + 1} skipped — quality gate ${q.issues.join(",")}`, "v2");
+        continue;
+      }
+      Object.assign(finalRecipe, fixed);
     }
 
     if (options?.sessionKey) {

@@ -1,6 +1,8 @@
 import type { GenerateResponse } from "@shared/schema";
 import { log } from "./index";
+import { scoreHallRealism } from "@shared/firehall-instruction-voice";
 import { containsAllergen } from "./allergens";
+import { normalizeRecipeSignature } from "../shared/recipe-signature.js";
 
 export interface RecipeValidationContext {
   chosenProtein: string;
@@ -442,7 +444,8 @@ export function computeSignature(recipe: GenerateResponse): string {
     .sort()
     .slice(0, 8);
 
-  return `${style}|${protein}|${cuisine}|${baseCarb}|${method}|${coreIngs.join(",")}`;
+  const raw = `${style}|${protein}|${cuisine}|${baseCarb}|${method}|${coreIngs.join(",")}`;
+  return normalizeRecipeSignature(raw);
 }
 
 const lastSignaturesByProtein: Record<string, string[]> = {};
@@ -495,7 +498,6 @@ function fixStructureIssues(recipe: GenerateResponse, issues: string[], allergen
       if (type === "bowl" && !ingredientText(fixed).match(/rice|quinoa|noodle|greens|potato|couscous/i)) {
         if (!hasAllergen("Rice", allergens)) {
           fixed.ingredients.push({ item: "Rice", amount: "2 cups", notes: "" });
-          fixed.steps.unshift({ heading: "Start the rice (high → low, 20 min)", body: "Bring 2 cups rice and 4 cups water to a boil. Reduce to low, cover, and simmer 18-20 minutes until tender." });
         } else {
           fixed.ingredients.push({ item: "Mixed greens", amount: "6 cups", notes: "As a base layer" });
         }
@@ -504,10 +506,8 @@ function fixStructureIssues(recipe: GenerateResponse, issues: string[], allergen
       if (type === "pasta" && !ingredientText(fixed).match(/pasta|spaghetti|penne|noodle/i)) {
         if (!hasAllergen("Penne pasta", allergens)) {
           fixed.ingredients.push({ item: "Penne pasta", amount: "1 lb", notes: "" });
-          fixed.steps.unshift({ heading: "Cook the pasta (boiling, 10 min)", body: "Bring a large pot of salted water to a rolling boil. Add pasta and cook until al dente. Drain, reserving ½ cup pasta water." });
         } else {
           fixed.ingredients.push({ item: "Gluten-free pasta", amount: "1 lb", notes: "" });
-          fixed.steps.unshift({ heading: "Cook the pasta (boiling, 10 min)", body: "Cook gluten-free pasta according to package directions until al dente. Drain." });
         }
       }
 
@@ -522,7 +522,6 @@ function fixStructureIssues(recipe: GenerateResponse, issues: string[], allergen
       if (type === "sandwich" && !ingredientText(fixed).match(/bread|bun|roll|baguette/i)) {
         if (!hasAllergen("Crusty sub rolls", allergens)) {
           fixed.ingredients.push({ item: "Crusty sub rolls", amount: "6", notes: "" });
-          fixed.steps.push({ heading: "Assemble the sandwiches (no heat, 3 min)", body: "Split each roll, layer the filling and toppings inside, and serve." });
         } else {
           fixed.ingredients.push({ item: "Gluten-free wraps", amount: "6", notes: "" });
         }
@@ -536,12 +535,10 @@ function fixStructureIssues(recipe: GenerateResponse, issues: string[], allergen
 
       if (type === "loaded-fries" && !ingredientText(fixed).match(/fries|potato/i)) {
         fixed.ingredients.push({ item: "Frozen French fries", amount: "2 lbs", notes: "" });
-        fixed.steps.unshift({ heading: "Bake the fries (425°F oven, 20 min)", body: "Spread frozen fries on a lined baking sheet. Bake at 425°F for 20 minutes, flipping halfway, until golden and crispy." });
       }
 
       if (type === "noodle-toss" && !ingredientText(fixed).match(/noodle|pasta|soba|udon/i)) {
         fixed.ingredients.push({ item: "Rice noodles", amount: "1 lb", notes: "" });
-        fixed.steps.unshift({ heading: "Cook the noodles (boiling, 8 min)", body: "Cook rice noodles according to package directions. Drain and rinse with cold water to prevent sticking." });
       }
 
       if (type === "rice-bake" && !ingredientText(fixed).match(/rice/i)) {
@@ -553,33 +550,7 @@ function fixStructureIssues(recipe: GenerateResponse, issues: string[], allergen
       }
     }
 
-    if (issue.startsWith("structure_missing_step:")) {
-      const type = issue.split(":")[1];
-
-      if ((type === "wrap" || type === "taco") && !stepText(fixed).match(/assemble|wrap|roll|fold|fill/i)) {
-        fixed.steps.push({ heading: `Assemble the ${type}s (no heat, 3 min)`, body: `Spoon the filling onto each ${type === "taco" ? "tortilla" : "wrap"}. Add toppings and ${type === "wrap" ? "roll tightly" : "fold"} to serve.` });
-      }
-
-      if (type === "pasta" && !stepText(fixed).match(/boil|cook.*pasta|drain/i)) {
-        fixed.steps.unshift({ heading: "Cook the pasta (boiling, 10 min)", body: "Bring a large pot of salted water to a rolling boil. Add pasta and cook until al dente. Drain, reserving ½ cup pasta water." });
-      }
-
-      if (type === "sheet-pan" && !stepText(fixed).match(/bake|roast|sheet/i)) {
-        fixed.steps.unshift({ heading: "Preheat oven (425°F, 2 min)", body: "Preheat oven to 425°F. Line a large sheet pan with parchment paper or foil." });
-      }
-
-      if (type === "grill" && !stepText(fixed).match(/grill/i)) {
-        fixed.steps.unshift({ heading: "Heat the grill pan (medium-high, 3 min)", body: "Heat a grill pan or cast-iron skillet over medium-high heat until very hot. Lightly oil the surface." });
-      }
-
-      if (type === "soup-stew" && !stepText(fixed).match(/simmer|boil|stew/i)) {
-        fixed.steps.push({ heading: "Simmer until thickened (medium-low, 15 min)", body: "Bring to a gentle boil, then reduce heat and simmer uncovered for 15 minutes until slightly thickened and flavors meld." });
-      }
-
-      if (type === "stir-fry" && !stepText(fixed).match(/stir.?fry|wok|toss/i)) {
-        fixed.steps.push({ heading: "Stir-fry over high heat (high, 3-4 min)", body: "Toss everything together in the hot pan over high heat for 3-4 minutes until heated through and slightly charred at the edges." });
-      }
-    }
+    /* structure_missing_step — steps rebuilt by meal-instructions after plate compose */
   }
 
   return fixed;
@@ -1027,6 +998,15 @@ export function validateRecipe(recipe: GenerateResponse, requestMealFormat?: str
 
   const flavorCheck = validateFirehouseFlavor(recipe);
   errors.push(...flavorCheck.issues);
+
+  const realism = scoreHallRealism(
+    recipe.title || "",
+    recipe.steps || [],
+    (recipe.ingredients || []).map((i) => ({ item: i.item })),
+  );
+  for (const issue of realism.issues) {
+    errors.push(`hall_realism:${issue}`);
+  }
 
   return errors;
 }

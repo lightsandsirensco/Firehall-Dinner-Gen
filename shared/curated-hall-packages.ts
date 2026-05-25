@@ -213,56 +213,121 @@ const CURATED_HALL_PACKAGES_RAW: CuratedPackageInput[] = [
     proTips: ["Hold sauced pasta separate from cutlets so breading stays crisp.", "Broil mozzarella only 1–2 min — watch the hall oven."],
   },
   {
-    slug: "taco-night",
-    title: "Taco Night",
-    displayTitle: "Taco Night — Build-Your-Own Hall Line",
+    slug: "steak-tacos",
+    title: "Street-Style Chimichurri Steak Tacos",
+    displayTitle: "Street-Style Chimichurri Steak Tacos",
     emoji: "🌮",
-    tagline: "Build-your-own crew favorite",
-    crewLine: "Seasoned beef, warm tortillas, and all the fixings on the counter.",
+    tagline: "Char, acid, and melty cotija",
+    crewLine:
+      "Skirt steak over open flame, charred tortillas, chimichurri, pickled onions, cotija, and lime crema — build-your-own street line.",
     mealFormat: "tacos",
     protein: "Beef",
     cuisineLabel: "Mexican",
-    prepMin: 20,
-    cookMin: 25,
-    macros: { calories: 580, protein_g: 36, carbs_g: 45, fat_g: 28 },
+    prepMin: 25,
+    cookMin: 30,
+    macros: { calories: 520, protein_g: 34, carbs_g: 38, fat_g: 26 },
     plate: {
-      display_title: "Taco Night — Build-Your-Own Hall Line",
-      main: [{ name: "Seasoned ground beef", amount: "4 lb", role: "main" }],
+      display_title: "Street-Style Chimichurri Steak Tacos",
+      main: [{ name: "Charred skirt steak", amount: "3 lb cooked", role: "main" }],
       sides: [
-        { name: "Flour & corn tortillas", amount: "60 count", role: "starch" },
-        { name: "Shredded lettuce & pico", amount: "2 trays", role: "veg" },
-        { name: "Mexican rice", amount: "6 cups cooked", role: "starch" },
+        { name: "Charred corn tortillas", amount: "36 count", role: "starch" },
+        { name: "Fresh chimichurri", amount: "2 cups", role: "veg" },
+        { name: "Quick-pickled red onions", amount: "2 cups", role: "veg" },
       ],
       optional: [
-        { name: "Shredded cheese", amount: "2 lb", role: "optional" },
-        { name: "Sour cream & salsa", amount: "for the line", role: "optional" },
+        { name: "Cotija & lime crema", amount: "for the line", role: "optional" },
+        { name: "Fresh jalapeño slices", amount: "for heat lovers", role: "optional" },
       ],
       cuisine_label: "Mexican",
     },
     ingredients: [
-      { name: "Ground beef", qty: 4, unit: "lb", category: "Proteins" },
-      { name: "Taco seasoning", qty: 4, unit: "packets", category: "Pantry" },
-      { name: "Flour tortillas", qty: 36, unit: "", category: "Bakery" },
+      { name: "Skirt or flank steak", qty: 3.5, unit: "lb", category: "Proteins" },
+      { name: "Smoked paprika", qty: 2, unit: "tbsp", category: "Pantry" },
+      { name: "Chili powder", qty: 1, unit: "tbsp", category: "Pantry" },
+      { name: "Ground cumin", qty: 2, unit: "tsp", category: "Pantry" },
+      { name: "Garlic powder", qty: 1, unit: "tbsp", category: "Pantry" },
+      { name: "Kosher salt", qty: 2, unit: "tbsp", category: "Pantry" },
+      { name: "Black pepper", qty: 1, unit: "tbsp", category: "Pantry" },
+      { name: "Fresh parsley (flat-leaf)", qty: 2, unit: "cups packed", category: "Produce" },
+      { name: "Fresh cilantro", qty: 1, unit: "cup packed", category: "Produce" },
+      { name: "Garlic cloves", qty: 6, unit: "", category: "Produce" },
+      { name: "Red wine vinegar", qty: 6, unit: "tbsp", category: "Pantry" },
+      { name: "Extra-virgin olive oil", qty: 1, unit: "cup", category: "Pantry" },
+      { name: "Red onion", qty: 2, unit: "large", category: "Produce" },
+      { name: "White vinegar (pickling)", qty: 1, unit: "cup", category: "Pantry" },
+      { name: "Sugar", qty: 2, unit: "tbsp", category: "Pantry" },
       { name: "Corn tortillas", qty: 36, unit: "", category: "Bakery" },
-      { name: "Long-grain rice", qty: 3, unit: "cups", category: "Grains" },
-      { name: "Shredded lettuce", qty: 2, unit: "bags", category: "Produce" },
-      { name: "Tomatoes", qty: 6, unit: "", category: "Produce" },
-      { name: "Onions", qty: 4, unit: "", category: "Produce" },
-      { name: "Shredded cheddar", qty: 2, unit: "lb", category: "Dairy" },
+      { name: "Cotija cheese", qty: 12, unit: "oz", category: "Dairy" },
       { name: "Sour cream", qty: 2, unit: "cups", category: "Dairy" },
-      { name: "Salsa", qty: 2, unit: "jars", category: "Pantry" },
-      { name: "Lime", qty: 8, unit: "", category: "Produce" },
+      { name: "Limes", qty: 10, unit: "", category: "Produce" },
+      { name: "Jalapeños", qty: 4, unit: "", category: "Produce" },
+      { name: "Neutral oil (high heat)", qty: 3, unit: "tbsp", category: "Pantry" },
     ],
     steps: [
-      { title: "Cook Mexican rice (simmer, 18 min)", heat: "medium", minutes: 18, instructions: "Simmer rice with tomato, onion, and seasoning until fluffy." },
-      { title: "Brown the beef (medium-high, 12 min)", heat: "high", minutes: 12, instructions: "Brown ground beef, drain fat, add taco seasoning and splash of water." },
-      { title: "Warm tortillas (dry skillet, 5 min)", heat: "medium", minutes: 5, instructions: "Heat stacks in dry skillet or wrapped in foil in oven." },
-      { title: "Prep topping bar (no heat, 15 min)", heat: "none", minutes: 15, instructions: "Dice pico, shred lettuce, set cheese, salsa, sour cream, and lime wedges." },
-      { title: "Open the line (serve)", heat: "none", minutes: 5, instructions: "Crew builds tacos — beef, rice, and toppings to taste." },
+      {
+        title: "Prep chimichurri (no heat, 10 min)",
+        heat: "none",
+        minutes: 10,
+        instructions:
+          "Finely chop parsley and cilantro — you want small pieces, not a wet purée (blending too long turns chimichurri muddy). Mince garlic. Whisk olive oil, red wine vinegar, garlic, herbs, 1 tsp salt, and cracked pepper. Chimichurri should look like loose green confetti in glossy oil — sharp, herb-forward, not mayonnaise-thick. Taste: it should hit acid first, then garlic, then peppery herbs. Hold at room temp 20 minutes so flavors meld.",
+      },
+      {
+        title: "Quick-pickle the onions (no heat, 8 min)",
+        heat: "none",
+        minutes: 8,
+        instructions:
+          "Slice red onions paper-thin on a mandoline if you have one — thick rings stay crunchy-raw instead of pickle-soft. Cover with white vinegar, pinch of salt, and sugar; toss and let sit at least 15 minutes. Done when rings turn hot pink and taste tangy-sweet (not harsh raw onion). Drain lightly before the line — keep a little brine for brightness.",
+      },
+      {
+        title: "Season the steak (no heat, 5 min)",
+        heat: "none",
+        minutes: 5,
+        instructions:
+          "Pat skirt or flank completely dry — wet steak steams instead of chars. Rub with smoked paprika, chili powder, cumin, garlic powder, salt, and pepper. Skirt has more fat and forgiving texture; flank is leaner — either works, but slice against the grain extra thin for flank. Let sit 10 minutes at room temp so the salt seasons the interior.",
+      },
+      {
+        title: "Sear steak hard (high, 8–10 min)",
+        heat: "high",
+        minutes: 10,
+        instructions:
+          "Heat cast iron or grill to screaming hot — oil should shimmer and barely smoke. Sear steak in batches; don't crowd. You want deep brown crust with grill marks, not gray steamed meat. Flip once. Skirt: 3–4 min per side for medium-rare. Flank: 4–5 min per side. Internal 125–130°F for pink center — carryover cooking will rise 5° while resting. Common mistake: flipping too early; wait until the crust releases cleanly.",
+      },
+      {
+        title: "Rest & slice against the grain (no heat, 12 min)",
+        heat: "none",
+        minutes: 12,
+        instructions:
+          "Transfer steak to a cutting board and rest uncovered 8–10 minutes — juices redistribute so slices stay juicy, not a puddle on the board. Slice at a sharp angle against the grain into thin ribbons (⅛-inch). You should see short muscle fibers, not long chewy lines. Hold loosely covered with foil — don't stack hot slices or they'll steam soggy.",
+      },
+      {
+        title: "Char tortillas (high, 6 min)",
+        heat: "high",
+        minutes: 6,
+        instructions:
+          "Work in batches over open flame, hot cast iron, or dry skillet. 20–40 seconds per side until you see leopard char spots and smell toasted corn — pliable in the center, not cracker-crisp. Stack wrapped in a towel so they steam slightly and stay warm. Cold tortillas crack when folded — warm is non-negotiable for street tacos.",
+      },
+      {
+        title: "Lime crema & taco line (no heat, 8 min)",
+        heat: "none",
+        minutes: 8,
+        instructions:
+          "Whisk sour cream with lime juice and zest until pourable — balance fat (crema) with acid (lime) so each bite isn't heavy. Crumble cotija. Set chimichurri, pickled onions, crema, cilantro, and optional jalapeño slices on the counter. Assembly order for best texture: tortilla → thin steak → chimichurri → onions → cotija → crema → cilantro. Acid and herbs cut the rich steak; crema cools heat from jalapeños.",
+      },
+      {
+        title: "Serve immediately (no heat, 3 min)",
+        heat: "none",
+        minutes: 3,
+        instructions:
+          "Call the crew when steak and tortillas are hot — street tacos fall apart when held under heat lamps. Lime wedges on the side for a final squeeze. Balance check on your first taco: char (steak/tortilla), fat (crema/cotija), acid (pickled onion/lime/chimichurri), spice (jalapeño/chili rub). Adjust chimichurri vinegar or salt at the line if needed.",
+      },
     ],
-    whyItFits: "The full taco line — protein, tortillas, rice, and toppings — not just seasoned meat alone.",
-    cleanupTip: "Line trash cans at the end of the counter — taco night creates wrappers fast.",
-    proTips: ["Keep beef on low steam table so it stays moist.", "Offer both corn and flour — crew preference splits every time."],
+    whyItFits:
+      "Real street tacos — charred steak, chimichurri, pickles, and cotija — not ground beef with rice on the side.",
+    cleanupTip: "Soak onion-pickle container while the crew eats — vinegar smell clears faster when warm.",
+    proTips: [
+      "Slice steak only after resting — rushing guarantees chewy tacos.",
+      "Keep chimichurri loose; a thick paste won't cling to sliced steak.",
+    ],
   },
   {
     slug: "pulled-pork",
@@ -311,93 +376,254 @@ const CURATED_HALL_PACKAGES_RAW: CuratedPackageInput[] = [
   },
   {
     slug: "smash-burgers",
-    title: "Smash Burgers",
-    displayTitle: "Smash Burgers & Fries — Griddle Night",
+    title: "Double Smash Burgers with Caramelized Onions & Dirty Sauce",
+    displayTitle: "Double Smash Burgers with Caramelized Onions & Dirty Sauce",
     emoji: "🍔",
     mealFormat: "burger",
     protein: "Beef",
     cuisineLabel: "American",
-    tagline: "Griddle night energy",
-    crewLine: "Crispy-edged patties, melty cheese, fries, and all the fixings.",
-    prepMin: 20,
-    cookMin: 30,
-    macros: { calories: 720, protein_g: 40, carbs_g: 48, fat_g: 38 },
+    tagline: "Diner griddle · melty · viral stack",
+    crewLine:
+      "Two thin patties per bun, lacy crust, potato rolls, dirty sauce, caramelized onions, pickles, and shredded lettuce — bacon optional.",
+    prepMin: 25,
+    cookMin: 25,
+    macros: { calories: 780, protein_g: 42, carbs_g: 46, fat_g: 44 },
     plate: {
-      display_title: "Smash Burgers & Fries — Griddle Night",
-      main: [{ name: "Smash burgers", amount: "12 patties", role: "main" }],
+      display_title: "Double Smash Burgers with Caramelized Onions & Dirty Sauce",
+      main: [{ name: "Double smash burgers", amount: "8 stacks", role: "main" }],
       sides: [
-        { name: "Steak fries", amount: "4 lb", role: "starch" },
-        { name: "Fixings bar", amount: "lettuce, tomato, onion", role: "veg" },
+        { name: "Caramelized onions", amount: "2 cups", role: "veg" },
+        { name: "Shredded iceberg & pickles", amount: "for the line", role: "veg" },
+        { name: "Crispy diner fries", amount: "4 lb", role: "starch" },
       ],
-      optional: [{ name: "American cheese slices", amount: "12 slices", role: "optional" }],
+      optional: [{ name: "Crispy bacon", amount: "16 strips", role: "optional" }],
       cuisine_label: "American",
     },
     ingredients: [
-      { name: "Ground beef (80/20)", qty: 4, unit: "lb", category: "Proteins" },
-      { name: "Burger buns", qty: 12, unit: "", category: "Bakery" },
-      { name: "American cheese", qty: 12, unit: "slices", category: "Dairy" },
-      { name: "Frozen steak fries", qty: 4, unit: "lb", category: "Frozen" },
-      { name: "Lettuce", qty: 2, unit: "heads", category: "Produce" },
-      { name: "Tomatoes", qty: 6, unit: "", category: "Produce" },
-      { name: "Onions", qty: 3, unit: "", category: "Produce" },
-      { name: "Pickles", qty: 1, unit: "jar", category: "Pantry" },
-      { name: "Ketchup & mustard", qty: 1, unit: "set", category: "Pantry" },
+      { name: "Ground beef (80/20)", qty: 3, unit: "lb", category: "Proteins" },
+      { name: "Potato slider/burger buns", qty: 8, unit: "", category: "Bakery" },
+      { name: "American cheese slices", qty: 16, unit: "", category: "Dairy" },
+      { name: "Yellow onions", qty: 3, unit: "large", category: "Produce" },
+      { name: "Unsalted butter", qty: 6, unit: "tbsp", category: "Dairy" },
+      { name: "Mayonnaise", qty: 0.5, unit: "cup", category: "Pantry" },
+      { name: "Ketchup", qty: 3, unit: "tbsp", category: "Pantry" },
+      { name: "Yellow mustard", qty: 2, unit: "tbsp", category: "Pantry" },
+      { name: "Dill pickle relish", qty: 2, unit: "tbsp", category: "Pantry" },
+      { name: "Worcestershire sauce", qty: 1, unit: "tsp", category: "Pantry" },
+      { name: "Garlic powder", qty: 0.5, unit: "tsp", category: "Pantry" },
+      { name: "Smoked paprika", qty: 0.5, unit: "tsp", category: "Pantry" },
+      { name: "Iceberg lettuce", qty: 1, unit: "head", category: "Produce" },
+      { name: "Dill pickle chips", qty: 2, unit: "cups", category: "Pantry" },
+      { name: "Bacon (optional)", qty: 16, unit: "strips", category: "Proteins" },
+      { name: "Frozen crinkle or diner fries", qty: 4, unit: "lb", category: "Frozen" },
+      { name: "Neutral high-heat oil", qty: 2, unit: "tbsp", category: "Pantry" },
+      { name: "Kosher salt & black pepper", qty: 1, unit: "set", category: "Pantry" },
     ],
     steps: [
-      { title: "Bake fries (425°F, 22 min)", heat: "high", minutes: 22, instructions: "Spread fries on sheets; season and bake until crisp." },
-      { title: "Smash patties (high, 3 min each batch)", heat: "high", minutes: 18, instructions: "Ball, smash on hot griddle, season, flip, add cheese to melt." },
-      { title: "Toast buns (griddle, 2 min)", heat: "medium", minutes: 2, instructions: "Butter cut sides and toast until golden." },
-      { title: "Set fixings bar (no heat, 10 min)", heat: "none", minutes: 10, instructions: "Slice tomatoes and onions; wash lettuce; set condiments." },
-      { title: "Serve burger line (serve)", heat: "none", minutes: 5, instructions: "Fries in bowls, burgers from the line, crew builds their own." },
+      {
+        title: "Make dirty sauce (no heat, 5 min)",
+        heat: "none",
+        minutes: 5,
+        instructions:
+          "Whisk mayo, ketchup, mustard, relish, Worcestershire, garlic powder, and smoked paprika until creamy and pink-tan. Dirty sauce should taste tangy-savory-sweet — not plain mayo. Hold refrigerated until service; room-temp sauce on hot burgers is fine, but don't water it down.",
+      },
+      {
+        title: "Caramelize onions (medium-low, 25–30 min)",
+        heat: "medium",
+        minutes: 30,
+        instructions:
+          "Slice onions into thin half-moons. Melt butter in a wide pan over medium-low — gentle heat is the secret (high heat burns before sweet). Stir every 3–4 minutes until onions turn jammy, mahogany, and smell like candy (25–30 min). They should melt when pressed, not hold crunch. Season lightly with salt. Common mistake: rushing — pale onions taste sharp, not diner-sweet.",
+      },
+      {
+        title: "Prep & portion beef (no heat, 10 min)",
+        heat: "none",
+        minutes: 10,
+        instructions:
+          "Divide beef into 2.5–3 oz loose balls per patty (16 balls for 8 double stacks). Do not pack tight — air pockets help the smash spread. Chill until smash time if kitchen is warm; cold fat renders into crispy edges. Shred iceberg fine; drain pickle chips on paper towels so buns don't sog.",
+      },
+      {
+        title: "Toast potato buns (medium, 4 min)",
+        heat: "medium",
+        minutes: 4,
+        instructions:
+          "Butter cut sides of potato buns generously. Toast on griddle or skillet until edges are golden and centers still soft — you want a glossy, buttery shell that won't dissolve under sauce. Toast just before smashing so buns stay warm. Stack cut-side up on a sheet pan.",
+      },
+      {
+        title: "Smash first patty — crust formation (high, 2 min)",
+        heat: "high",
+        minutes: 2,
+        instructions:
+          "Heat cast iron or flat griddle until a water droplet dances and evaporates in 2 seconds — that's smash heat. Oil lightly. Place a beef ball, immediately smash flat with a stiff spatula (use parchment on spatula if it sticks). Press 10 seconds so meat spreads thin with lacy edges creeping past the ball. Season with salt and pepper. Don't move — crust is forming. Cook until edges look deep brown and lacey, top still pink-red, about 90 seconds.",
+      },
+      {
+        title: "Flip, cheese, stack second patty (high, 2 min)",
+        heat: "high",
+        minutes: 2,
+        instructions:
+          "Scrape and flip with confidence — the crust should release cleanly. Lay American cheese on the cooked side immediately; residual heat melts cheese in 30–45 seconds (cheese should drape, not sit solid). Add a fresh beef ball on the cheese, smash again, season, and cook second crust 90 seconds. Flip once more, add second cheese slice, and stack both patties cheese-side-in so you get a molten core. Timing matters: cheese goes on the hot face right after flip, not before — otherwise it oils out.",
+      },
+      {
+        title: "Optional bacon (medium, 8 min)",
+        heat: "medium",
+        minutes: 8,
+        instructions:
+          "Lay bacon in cold pan, turn to medium, cook until shatter-crisp. Blot on towels — wet bacon steams the bun. Hold warm; add only at assembly so it stays crisp.",
+      },
+      {
+        title: "Bake diner fries (425°F, 22 min)",
+        heat: "high",
+        minutes: 22,
+        instructions:
+          "Spread fries in a single layer — crowded pans steam instead of crisp. Bake until deeply golden with audible crunch when shaken. Season with salt immediately out of the oven (hot fat grabs seasoning). Hold in warm oven with door cracked.",
+      },
+      {
+        title: "Assembly order (no heat, 3 min each)",
+        heat: "none",
+        minutes: 3,
+        instructions:
+          "Bottom bun → dirty sauce → shredded lettuce (barrier against juice) → pickles → double stack (cheese melted between patties) → spoon of caramelized onions → optional bacon → more dirty sauce on top bun → crown. Press lightly so stack sets. Serve within 2 minutes — smash burgers lose their crisp edge fast. Crew eats open-faced at the line if stacks are tall.",
+      },
     ],
-    whyItFits: "Burgers plus fries and a fixings bar — the complete griddle-night package.",
-    cleanupTip: "Deglaze the griddle while warm — scrape beats soaking overnight.",
-    proTips: ["Work in small batches so the griddle stays screaming hot.", "Season fries right out of the oven."],
+    whyItFits:
+      "Restaurant-style doubles with caramelized onions and dirty sauce — not plain grilled patties on generic buns.",
+    cleanupTip: "Deglaze the griddle while warm with water — scrape lacy bits before they weld on.",
+    proTips: [
+      "Smash once per side — re-smashing after crust forms tears the lace.",
+      "American cheese melts faster than cheddar; use it for that diner drape.",
+    ],
   },
   {
     slug: "chili-garlic-bread",
-    title: "Chili & Garlic Bread",
-    displayTitle: "Chili & Garlic Bread — One-Pot Hall Night",
-    emoji: "🌶️",
+    title: "Firehouse Smoked Beef Chili with Cheesy Garlic Bread",
+    displayTitle: "Firehouse Smoked Beef Chili with Cheesy Garlic Bread",
+    emoji: "🔥",
     mealFormat: "soup_chili",
     protein: "Beef",
     cuisineLabel: "Comfort",
-    tagline: "Stick-to-your-ribs hall fuel",
-    crewLine: "Big pot of chili, garlic bread, and shredded cheese for the table.",
-    prepMin: 15,
-    cookMin: 45,
-    macros: { calories: 540, protein_g: 32, carbs_g: 46, fat_g: 24 },
+    tagline: "Viral comfort-food hall night",
+    crewLine:
+      "Two stock pots of smoky, stick-to-your-ribs chili with a sheet-pan of cheesy garlic bread — topping bar for the crew.",
+    prepMin: 25,
+    cookMin: 50,
+    macros: { calories: 580, protein_g: 36, carbs_g: 48, fat_g: 26 },
     plate: {
-      display_title: "Chili & Garlic Bread — One-Pot Hall Night",
-      main: [{ name: "Firehall beef chili", amount: "2 stock pots", role: "main" }],
+      display_title: "Firehouse Smoked Beef Chili with Cheesy Garlic Bread",
+      main: [{ name: "Smoked beef chili", amount: "2 stock pots (8+ servings)", role: "main" }],
       sides: [
-        { name: "Garlic bread", amount: "4 loaves", role: "starch" },
-        { name: "Shredded cheese & onions", amount: "topping bar", role: "optional" },
+        { name: "Cheddar-mozzarella garlic bread", amount: "4 split loaves", role: "starch" },
+        { name: "Topping bar", amount: "cheese, onion, jalapeño, sour cream", role: "optional" },
       ],
-      optional: [{ name: "Sour cream", amount: "for topping", role: "optional" }],
+      optional: [
+        { name: "Pickled jalapeños", amount: "for heat lovers", role: "optional" },
+        { name: "Fresh cilantro", amount: "handful", role: "optional" },
+      ],
       cuisine_label: "Comfort",
     },
     ingredients: [
-      { name: "Ground beef", qty: 4, unit: "lb", category: "Proteins" },
-      { name: "Kidney beans", qty: 4, unit: "cans", category: "Pantry" },
-      { name: "Diced tomatoes", qty: 4, unit: "cans", category: "Pantry" },
-      { name: "Tomato paste", qty: 2, unit: "cans", category: "Pantry" },
-      { name: "Chili powder", qty: 4, unit: "tbsp", category: "Pantry" },
-      { name: "Onions", qty: 3, unit: "", category: "Produce" },
-      { name: "Bell peppers", qty: 4, unit: "", category: "Produce" },
-      { name: "Italian bread", qty: 4, unit: "loaves", category: "Bakery" },
-      { name: "Garlic butter", qty: 1.5, unit: "cups", category: "Dairy" },
-      { name: "Shredded cheddar", qty: 2, unit: "lb", category: "Dairy" },
+      { name: "Ground beef (80/20)", qty: 4, unit: "lb", category: "Proteins" },
+      { name: "Yellow onions", qty: 3, unit: "large", category: "Produce" },
+      { name: "Bell peppers (mixed)", qty: 3, unit: "", category: "Produce" },
+      { name: "Garlic cloves", qty: 8, unit: "", category: "Produce" },
+      { name: "Fire-roasted diced tomatoes", qty: 3, unit: "cans (14 oz)", category: "Pantry" },
+      { name: "Crushed fire-roasted tomatoes", qty: 2, unit: "cans (28 oz)", category: "Pantry" },
+      { name: "Tomato paste", qty: 3, unit: "tbsp", category: "Pantry" },
+      { name: "Beef broth", qty: 4, unit: "cups", category: "Pantry" },
+      { name: "Kidney beans", qty: 3, unit: "cans", category: "Pantry" },
+      { name: "Chili powder", qty: 3, unit: "tbsp", category: "Pantry" },
+      { name: "Smoked paprika", qty: 2, unit: "tbsp", category: "Pantry" },
+      { name: "Ground cumin", qty: 2, unit: "tsp", category: "Pantry" },
+      { name: "Dried oregano", qty: 1, unit: "tsp", category: "Pantry" },
+      { name: "Chipotle in adobo", qty: 2, unit: "tbsp sauce", category: "Pantry" },
+      { name: "Brown sugar", qty: 1, unit: "tbsp", category: "Pantry" },
+      { name: "Worcestershire sauce", qty: 2, unit: "tbsp", category: "Pantry" },
+      { name: "Italian bread or baguettes", qty: 4, unit: "loaves", category: "Bakery" },
+      { name: "Unsalted butter (softened)", qty: 1, unit: "cup", category: "Dairy" },
+      { name: "Shredded sharp cheddar", qty: 12, unit: "oz", category: "Dairy" },
+      { name: "Shredded mozzarella", qty: 12, unit: "oz", category: "Dairy" },
+      { name: "Fresh jalapeños", qty: 4, unit: "", category: "Produce" },
+      { name: "Sour cream", qty: 2, unit: "cups", category: "Dairy" },
     ],
     steps: [
-      { title: "Brown beef & build chili (simmer, 40 min)", heat: "medium", minutes: 40, instructions: "Brown beef with onion and pepper; add tomatoes, beans, paste, and spices. Simmer until thick." },
-      { title: "Bake garlic bread (425°F, 10 min)", heat: "high", minutes: 10, instructions: "Split loaves, garlic butter, bake until golden." },
-      { title: "Set topping bar (no heat, 5 min)", heat: "none", minutes: 5, instructions: "Cheese, diced onion, sour cream for the counter." },
-      { title: "Ladle for the crew (serve)", heat: "none", minutes: 5, instructions: "Bowls of chili, bread on the side, toppings within reach." },
+      {
+        title: "Prep the station (no heat, 15 min)",
+        heat: "none",
+        minutes: 15,
+        instructions:
+          "Dice onions into ¼-inch pieces (you want even pieces so they caramelize together). Dice bell peppers. Mince garlic. Drain and rinse beans. Open all tomatoes. Line two sheet pans with parchment for garlic bread. Set out a large Dutch oven or stock pot — chili needs room to reduce without splashing.",
+      },
+      {
+        title: "Caramelize the onions (medium, 12–15 min)",
+        heat: "medium",
+        minutes: 15,
+        instructions:
+          "Heat 2 tbsp oil in the pot over medium. Add onions with a pinch of salt and cook, stirring every 2–3 minutes, until edges turn golden and the centers are soft and sweet — not raw, not burnt. They should look like wet golden ribbons and smell sweet. Push onions to the side; you'll brown beef in the same pot.",
+      },
+      {
+        title: "Brown the beef hard (medium-high, 10 min)",
+        heat: "high",
+        minutes: 10,
+        instructions:
+          "Raise heat to medium-high. Add beef in two batches so the pan sears instead of steams. Break into crumbles; cook until deeply browned with no pink (160°F). Drain excess grease if the pot looks oily — leave about 1 tbsp fat for flavor. Stir browned beef back with onions.",
+      },
+      {
+        title: "Bloom spices & build the base (medium, 5 min)",
+        heat: "medium",
+        minutes: 5,
+        instructions:
+          "Add garlic, chili powder, smoked paprika, and cumin; stir 45 seconds until the kitchen smells smoky (don't let garlic burn). Stir in tomato paste and brown sugar; cook 1 minute until the paste darkens slightly. Add Worcestershire and chipotle adobo — taste later for heat.",
+      },
+      {
+        title: "Simmer the chili (low, 35–40 min)",
+        heat: "medium",
+        minutes: 40,
+        instructions:
+          "Pour in fire-roasted diced tomatoes, crushed tomatoes, and beef broth. Add beans. Bring to a gentle bubble, then lower to a steady simmer — small bubbles breaking the surface, not a rolling boil. Cook uncovered 30 minutes, stirring every 10 minutes. Chili is ready when it coats the back of a spoon and a drag through the pot leaves a clear trail (like thick stew, not soup). If it's still thin, simmer 10 more minutes. Season with salt, pepper, and a splash of broth if too thick.",
+      },
+      {
+        title: "Make garlic butter & prep bread (no heat, 5 min)",
+        heat: "none",
+        minutes: 5,
+        instructions:
+          "Mix softened butter with 3 minced garlic cloves, pinch of salt, and ½ tsp dried oregano. Halve loaves lengthwise. Spread cut sides generously — edge to edge. Combine cheddar and mozzarella in a bowl.",
+      },
+      {
+        title: "Toast cheesy garlic bread (425°F, 10–12 min)",
+        heat: "high",
+        minutes: 12,
+        instructions:
+          "Preheat oven to 425°F while chili simmers. Lay bread cut-side up on sheet pans. Pile cheese evenly on buttered surfaces. Bake on the middle rack until cheese is fully melted with light golden spots and bread edges are crisp — about 10–12 minutes. Rotate pans halfway. Bread is done when you press the center and it springs back with melted cheese, not pale or raw dough.",
+      },
+      {
+        title: "Optional jalapeño finish (low, 3 min)",
+        heat: "low",
+        minutes: 3,
+        instructions:
+          "For medium spice, stir sliced jalapeños into the chili for the last 3 minutes of simmer. For mild, keep jalapeños on the topping bar only. Skim any extra fat from the chili surface if needed.",
+      },
+      {
+        title: "Topping bar & serve (no heat, 5 min)",
+        heat: "none",
+        minutes: 5,
+        instructions:
+          "Set sour cream, extra cheese, diced onion, cilantro, and jalapeños on the counter. Slice garlic bread into thick sticks. Ladle chili into bowls — deep fill, not skimpy. Serve bread hot on platters. Tell the crew to add toppings at the table so bread stays crisp.",
+      },
+      {
+        title: "Leftovers & storage (cool, 10 min)",
+        heat: "none",
+        minutes: 10,
+        instructions:
+          "Chili keeps 4 days refrigerated in shallow containers — reheat on the stove with a splash of broth. Freeze portions up to 3 months; thaw overnight. Garlic bread is best fresh; day-old bread can be rebaked 5 min at 400°F. Never store bread sealed with hot chili or it steams soggy.",
+      },
     ],
-    whyItFits: "Chili night means bread and toppings — not a lone pot on the stove.",
-    cleanupTip: "Soak the chili pot with hot water while bread trays cool.",
-    proTips: ["Simmer uncovered last 10 min to tighten the pot.", "Hold bread covered with foil so it stays soft inside."],
+    whyItFits:
+      "Smoky, layered chili with real caramelized onions and cheese-pull garlic bread — the kind of cold-night spread crews actually fight over.",
+    cleanupTip:
+      "Deglaze the chili pot with hot water while the crew eats — baked-on tomato lifts easier when warm.",
+    proTips: [
+      "If chili tastes flat, add ½ tsp more smoked paprika and a pinch of salt — not more sugar.",
+      "Hold garlic bread under loose foil on the counter; cut open only when the line forms.",
+      "Scale beef + tomatoes 1.25× for 10+ crew; keep spice levels the same first, adjust heat on the bar.",
+    ],
   },
   {
     slug: "chicken-caesar",
@@ -409,7 +635,7 @@ const CURATED_HALL_PACKAGES_RAW: CuratedPackageInput[] = [
     cuisineLabel: "American",
     tagline: "Big bowls, hot chicken, all the fixings",
     crewLine:
-      "Grilled chicken Caesar with garlic bread, crispy bacon, homemade croutons, shaved parmesan, and steak fries — built for a hungry hall.",
+      "Blackened or grilled chicken Caesar with hot garlic bread, loud croutons, and parmesan at the pass — built for a hungry hall, not a sad side salad.",
     prepMin: 25,
     cookMin: 35,
     macros: { calories: 620, protein_g: 48, carbs_g: 38, fat_g: 32 },
@@ -423,8 +649,8 @@ const CURATED_HALL_PACKAGES_RAW: CuratedPackageInput[] = [
         { name: "Shaved parmesan", amount: "for the line", role: "optional" },
       ],
       optional: [
-        { name: "Steak fries", amount: "3 lb", role: "starch" },
-        { name: "Tomato soup shooters", amount: "optional pairing", role: "optional" },
+        { name: "Crispy bacon bits", amount: "2 lb", role: "optional" },
+        { name: "Lemon wedges", amount: "for the line", role: "optional" },
       ],
       cuisine_label: "American",
     },
@@ -438,50 +664,50 @@ const CURATED_HALL_PACKAGES_RAW: CuratedPackageInput[] = [
       { name: "Butter + garlic", qty: 1, unit: "batch", category: "Pantry" },
       { name: "Day-old bread cubes", qty: 8, unit: "cups", category: "Bakery" },
       { name: "Olive oil", qty: 0.5, unit: "cup", category: "Pantry" },
-      { name: "Frozen steak fries", qty: 3, unit: "lb", category: "Frozen" },
       { name: "Lemon", qty: 6, unit: "", category: "Produce" },
     ],
     steps: [
       {
-        title: "Grill chicken (medium-high, 16 min)",
+        title: "Prep the station (no heat, 12 min)",
+        heat: "none",
+        minutes: 12,
+        instructions:
+          "Lay out chicken, romaine, dressing, parmesan, bread, sheet pans, and a large skillet or grill pan before any heat goes on. In a busy hall, cooking gets messy fast if you're hunting for ingredients halfway through.",
+      },
+      {
+        title: "Cook the chicken (medium-high, 14–16 min)",
         heat: "high",
         minutes: 16,
         instructions:
-          "Season breasts with salt, pepper, and a little oil. Grill to 165°F with clear grill marks. Rest 5 minutes, then slice thick for the salad line.",
+          "Heat a large skillet over medium-high until a drop of water sizzles on contact. Season chicken with salt, pepper, garlic powder, and a little paprika. Add oil, then chicken in a single layer — overcrowd and it steams instead of coloring. Cook 5–6 minutes per side until golden outside and 165°F in the center. Rest 5 minutes, then slice across the grain so juices stay in the meat.",
       },
       {
-        title: "Crisp bacon (medium, 12 min)",
-        heat: "medium",
-        minutes: 12,
-        instructions: "Lay bacon on sheet pans. Bake at 400°F until crisp. Drain on paper towels and chop into bite-size bits.",
-      },
-      {
-        title: "Toast homemade croutons (400°F, 10 min)",
+        title: "Make the garlic bread (400°F oven, 8–10 min)",
         heat: "high",
         minutes: 10,
         instructions:
-          "Toss bread cubes with olive oil, garlic powder, and salt. Spread on pans and bake until golden and crunchy.",
+          "Spread garlic butter on halved loaves and sprinkle parmesan and parsley if you have them. Bake at 400°F until edges are crisp and the top is golden. Keep an eye on it — garlic burns fast and nobody wants black toast at the table.",
       },
       {
-        title: "Build the Caesar base (no heat, 15 min)",
-        heat: "none",
-        minutes: 15,
-        instructions:
-          "Chop romaine into big pieces — fill the bowls deep. Hold dressing until the line opens so it stays crisp.",
-      },
-      {
-        title: "Garlic bread + fries (425°F, 18 min)",
+        title: "Toast the croutons (400°F, 8–10 min)",
         heat: "high",
-        minutes: 18,
+        minutes: 10,
         instructions:
-          "Butter and garlic the split loaves; wrap in foil. Bake fries on a second rack. Pull bread when edges are golden; keep wrapped.",
+          "Toss bread cubes with oil, salt, and garlic powder. Spread on a sheet pan and bake until crunchy all the way through — soft centers will sog out the salad in minutes.",
       },
       {
-        title: "Run the hall line (serve)",
+        title: "Build the Caesar salad (no heat, 10 min)",
         heat: "none",
-        minutes: 8,
+        minutes: 10,
         instructions:
-          "Dress salad, top with sliced chicken, bacon, croutons, and parmesan. Garlic bread and fries on the end of the counter — crew builds their bowl.",
+          "Chop romaine into bite-sized pieces and dry it well so dressing sticks instead of pooling. Toss lightly with Caesar dressing, parmesan, croutons, and a squeeze of lemon. Add dressing gradually — coated lettuce, not soup.",
+      },
+      {
+        title: "Slice and serve (no heat, 5 min)",
+        heat: "none",
+        minutes: 5,
+        instructions:
+          "Slice rested chicken across the grain and lay it over the Caesar while still warm. Serve with hot garlic bread on the side and extra parmesan at the table for the crew.",
       },
     ],
     whyItFits:
@@ -740,15 +966,21 @@ export function getCuratedPackageDef(slug: string): CuratedPackageDef | undefine
   return SLUG_MAP.get(slug.toLowerCase().trim());
 }
 
+export function getCuratedPackageBySpoonacularId(
+  spoonacularId: number,
+): CuratedPackageDef | undefined {
+  return CURATED_HALL_PACKAGES.find((p) => p.spoonacularRecipeId === spoonacularId);
+}
+
 export function getAllCuratedSlugs(): string[] {
   return CURATED_HALL_PACKAGES.map((p) => p.slug);
 }
 
 const TITLE_MATCHERS: { pattern: RegExp; slug: string }[] = [
   { pattern: /chicken\s*parm/i, slug: "chicken-parm" },
-  { pattern: /taco/i, slug: "taco-night" },
+  { pattern: /chimichurri|steak\s*taco|skirt\s*steak\s*taco|flank\s*steak\s*taco/i, slug: "steak-tacos" },
   { pattern: /pulled\s*pork/i, slug: "pulled-pork" },
-  { pattern: /smash\s*burger/i, slug: "smash-burgers" },
+  { pattern: /double\s*smash|dirty\s*sauce|smash\s*burger/i, slug: "smash-burgers" },
   { pattern: /chili/i, slug: "chili-garlic-bread" },
   { pattern: /caesar/i, slug: "chicken-caesar" },
   { pattern: /jerk/i, slug: "jerk-chicken" },

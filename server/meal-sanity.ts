@@ -7,6 +7,11 @@ import { isSeasoningOrGarnish } from "../shared/meal-semantics";
 import { validateMealSemantics } from "./meal-validation";
 import type { MealValidationContext } from "./meal-validation";
 import { log } from "./index";
+import {
+  buildStationSideStep,
+  polishFirehallSteps,
+  scoreHallRealism,
+} from "@shared/firehall-instruction-voice";
 
 const STATION_NOTE = /station side|hall side|hall base|hall extra|plate_role/i;
 
@@ -44,10 +49,8 @@ export function syncStationSidesToSteps(recipe: GenerateResponse): { recipe: Gen
     const probe = words.slice(0, 2).join("|") || ing.item.split(" ")[0];
     if (!probe || new RegExp(probe, "i").test(stepsStr)) continue;
 
-    const step: RecipeStep = {
-      heading: `Prepare ${ing.item.split("(")[0].trim()} (medium, 8–12 min)`,
-      body: `While the main cooks, finish ${ing.item.toLowerCase()} for the hall table. Season, hold warm, and set out family-style.`,
-    };
+    const sideStep = buildStationSideStep(ing.item);
+    const step: RecipeStep = sideStep;
     recipe.steps = [...(recipe.steps || []), step];
     fixes.push(`sync_step:${ing.item}`);
     stepsStr += ` ${step.heading} ${step.body}`.toLowerCase();
@@ -115,6 +118,23 @@ export function dedupePlateIngredients(recipe: GenerateResponse): { recipe: Gene
     log(`[meal-sanity] "${recipe.title}" — removed ${removed} duplicate ingredient line(s)`, "validate");
   }
   return { recipe: { ...recipe, ingredients: out }, removed };
+}
+
+/** Strip filler, dedupe steps, log low hall-realism scores. */
+export function applyHallInstructionPolish(recipe: GenerateResponse): GenerateResponse {
+  const steps = polishFirehallSteps(recipe.steps || []);
+  const realism = scoreHallRealism(
+    recipe.title || "",
+    steps,
+    (recipe.ingredients || []).map((i) => ({ item: i.item })),
+  );
+  if (realism.score < 6) {
+    log(
+      `[hall-voice] Low realism ${realism.score}/10 for "${recipe.title}" issues=[${realism.issues.join(", ")}]`,
+      "validate",
+    );
+  }
+  return { ...recipe, steps };
 }
 
 export function scorePlateTrust(recipe: GenerateResponse): number {

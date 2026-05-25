@@ -11,6 +11,7 @@ import {
   markEmailCaptureDismissed,
   type EmailCaptureTrigger,
 } from "@/lib/email-capture";
+import { fetchWithCsrf } from "@/lib/csrf-fetch";
 
 export type EmailModalVariant = "manual" | "earned";
 
@@ -48,7 +49,7 @@ export function EmailModal({
     setErrorMsg("");
 
     try {
-      const res = await fetch("/api/email-recipe", {
+      const res = await fetchWithCsrf("/api/email-recipe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -67,7 +68,6 @@ export function EmailModal({
           timestamp: new Date().toISOString(),
           capture_source: isEarned ? captureTrigger || "earned" : "manual",
         }),
-        credentials: "include",
       });
 
       const data = await res.json().catch(() => null);

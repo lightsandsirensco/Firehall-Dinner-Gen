@@ -2,6 +2,7 @@ import { log, clip, isProductionEnv } from "./logger";
 import {
   normalizeExploreRecipeCard,
   normalizeExploreRecipeDetail,
+  type ExploreRecipeCard,
 } from "../shared/explore-recipe.js";
 
 const SPOONACULAR_BASE = "https://api.spoonacular.com";
@@ -79,6 +80,8 @@ export interface SpoonacularRecipeDetail {
   title: string;
   image: string;
   readyInMinutes: number;
+  preparationMinutes?: number;
+  cookingMinutes?: number;
   servings: number;
   sourceUrl: string;
   summary: string;
@@ -175,7 +178,7 @@ export async function searchRecipes(query: string, options: SearchOptions = {}):
   const data = await res.json();
   const result: SpoonacularSearchResponse = {
     results: (data.results || [])
-      .map((r: any) =>
+      .map((r: SpoonacularSearchResult) =>
         normalizeExploreRecipeCard(
           {
             id: r.id,
@@ -189,8 +192,8 @@ export async function searchRecipes(query: string, options: SearchOptions = {}):
           "search",
         ),
       )
-      .filter((r): r is NonNullable<typeof r> => r !== null)
-      .map((card) => ({
+      .filter((r: ExploreRecipeCard | null): r is ExploreRecipeCard => r !== null)
+      .map((card: ExploreRecipeCard) => ({
         id: card.id,
         title: card.title,
         image: card.image,

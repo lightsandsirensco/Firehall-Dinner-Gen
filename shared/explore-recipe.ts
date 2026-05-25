@@ -7,6 +7,9 @@ export type SpoonacularImageSize = "636x393" | "556x370" | "312x231";
 
 import type { ExploreBadge } from "./explore-card-presentation.js";
 import { getClassicHallMeal, resolveClassicHeroImage } from "./classic-hall-meals.js";
+import { isExploreFeedBlocked } from "./explore-feed-blocklist.js";
+import { isFirehallOwnedHeroUrl, normalizeOwnedMediaPath } from "./food-imagery/paths.js";
+import { isDevRuntime } from "./runtime-env.js";
 
 /** Atomic Explore card — title, image, and id always travel together. */
 export interface ExploreRecipeCard {
@@ -21,6 +24,7 @@ export interface ExploreRecipeCard {
   cuisines: string[];
   diets: string[];
   _firehallFallback?: boolean;
+  _catalogFallback?: boolean;
   _pool?: string;
   _curatedSlug?: string | null;
   /** Server or client presentation hints */
@@ -66,11 +70,7 @@ export function upgradeSpoonacularImageSize(
 }
 
 function logImageMismatch(title: string, recipeId: number, urlId: number | null, context: string): void {
-  const isDev =
-    (typeof process !== "undefined" && process.env.NODE_ENV !== "production") ||
-    (typeof import.meta !== "undefined" &&
-      (import.meta as { env?: { DEV?: boolean } }).env?.DEV);
-  if (!isDev) return;
+  if (!isDevRuntime()) return;
   console.warn(
     `[explore:${context}] Image/recipe id mismatch for "${title}": card id=${recipeId}, image url id=${urlId ?? "none"}`,
   );
@@ -86,6 +86,7 @@ export function normalizeExploreRecipeCard(
 ): ExploreRecipeCard | null {
   const title = (raw.title || "").trim();
   if (!title) return null;
+  if (isExploreFeedBlocked(title)) return null;
 
   if (raw._firehallFallback) {
     return {
@@ -119,8 +120,8 @@ export function normalizeExploreRecipeCard(
     image = raw._curatedSlug
       ? upgradeSpoonacularImageSize(fromApi, "636x393")
       : canonical;
-  } else if (fromApi && !fromApi.includes("spoonacular.com")) {
-    image = fromApi;
+  } else if (fromApi && (!fromApi.includes("spoonacular.com") || isFirehallOwnedHeroUrl(fromApi))) {
+    image = normalizeOwnedMediaPath(fromApi);
   }
 
   let imageAlt = (raw.imageAlt || title).trim() || title;
@@ -153,7 +154,7 @@ export function normalizeExploreRecipeCard(
     hookLine: raw.hookLine,
     macros: raw.macros,
     qualityScore: raw.qualityScore,
-    publisherMedia,
+    publisherMedia: publisherMedia || isFirehallOwnedHeroUrl(image),
     sourceKind: raw.sourceKind,
     publisherName: raw.publisherName,
     fromCuratedDb: raw.fromCuratedDb,
@@ -176,7 +177,13 @@ export function normalizeExploreRecipeCard(
 
 /** Omit cards without real photography from browse grids */
 export function filterDisplayableExploreCards(cards: ExploreRecipeCard[]): ExploreRecipeCard[] {
-  return cards.filter((c) => !c._firehallFallback && c.id > 0 && Boolean(c.image?.trim()));
+  return cards.filter(
+    (c) =>
+      !c._firehallFallback &&
+      c.id > 0 &&
+      Boolean(c.image?.trim()) &&
+      !isExploreFeedBlocked(c.title),
+  );
 }
 
 export function normalizeExploreRecipeList(

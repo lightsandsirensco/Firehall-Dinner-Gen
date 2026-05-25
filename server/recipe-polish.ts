@@ -21,6 +21,8 @@ import { log } from "./index";
 import { inferActualProtein } from "./spoonacular-converter";
 import { healthinessForVoice } from "./firehall-voice";
 import type { RecipeStep } from "@shared/schema";
+import { FIREHALL_VOICE_RULES } from "@shared/firehall-instruction-voice";
+import { CHEF_RECIPE_RULES, TITLE_QUALITY_EXAMPLES } from "@shared/chef-quality-prompt";
 
 const openai = new OpenAI({
   apiKey: process.env.AI_INTEGRATIONS_OPENAI_API_KEY,
@@ -240,22 +242,17 @@ export async function polishRecipeCopy(
   const voice = healthinessForVoice(healthiness);
 
   const prompt =
-    `You are the best cook at the fire hall — practical, confident, zero influencer energy. ` +
-    `Write like you're telling the crew what's for dinner tonight, not publishing a recipe blog.\n\n` +
-    `Tone rules: hearty, craveable, station-realistic. NO "nourish", "macros", "meal prep", "balanced bowl", or diet language. ` +
-    `Frozen/bagged sides are fine. Big portions for hungry firefighters.\n\n` +
-    `For this recipe, do three things:\n\n` +
-    `1. TITLE: Fix capitalization or awkward phrasing ONLY. Keep the same dish and protein. Sound like a real dinner name ("Cajun Chicken Thighs", not "Healthy Chicken Dish"). Under 10 words.\n` +
-    `2. DESCRIPTION: One sentence — the FULL hall spread (main + sides in the ingredient list). Make it sound craveable and doable on shift. Style: ${voice}. Do NOT invent ingredients. Under 30 words.\n` +
-    `3. STEPS: Clarify existing steps only. Rules:\n` +
-    `   - Do NOT add new ingredients or change the dish. Reference sides already listed.\n` +
-    `   - Heading format: "Action phrase (heat, X–Y min)" e.g. "Sear the chicken (medium-high, 5–7 min)"\n` +
-    `   - Prep/plating: "Action phrase (no heat, X min)"\n` +
-    `   - Body: beginner-friendly HOW-to for a tired cook. Explain what to do, what it should LOOK/SMELL like, and when to move on.${safeTempNote}\n` +
-    `   - 3–4 sentences per step (about 60–90 words). Mention heat, pan size, and what can go wrong.\n` +
-    `   - Max 10–12 steps. Practical fire-hall tone — not food-blog fluff.\n\n` +
+    `You are a recipe editor for a premium comfort-food site (Serious Eats / NYT Cooking level).\n\n` +
+    `${CHEF_RECIPE_RULES}\n\n` +
+    `${FIREHALL_VOICE_RULES}\n\n` +
+    `Good title examples: ${TITLE_QUALITY_EXAMPLES.good.join(" | ")}\n` +
+    `Bad title examples: ${TITLE_QUALITY_EXAMPLES.bad.join(" | ")}\n\n` +
+    `For this recipe:\n\n` +
+    `1. TITLE: Make it craveable and accurate to ingredients. You MAY rephrase for clarity but NEVER call it "Tacos" without tortillas in the ingredient list. Under 12 words.\n` +
+    `2. DESCRIPTION: One vivid sentence — what makes this dinner exciting (texture + sauce + main). Style: ${voice}. No invented ingredients. Under 35 words.\n\n` +
+    `Do NOT rewrite cooking steps — steps stay from the source recipe.\n\n` +
     `Output ONLY valid JSON:\n` +
-    `{"title":"...","description":"...","steps":[{"heading":"...","body":"..."}]}\n\n` +
+    `{"title":"...","description":"..."}\n\n` +
     `Recipe:\n` +
     `Title: ${originalTitle}\n` +
     `Protein: ${protein}\n` +
@@ -291,19 +288,7 @@ export async function polishRecipeCopy(
         ? parsed.description.trim()
         : fallbackWhy;
 
-    // Validate and map improved steps — fall back to originals on bad output
-    let steps: RecipeStep[] = originalSteps;
-    if (Array.isArray(parsed.steps) && parsed.steps.length > 0) {
-      const mapped: RecipeStep[] = parsed.steps
-        .filter((s: any) => typeof s?.heading === "string" && typeof s?.body === "string")
-        .map((s: any, i: number) => ({
-          heading: s.heading.trim() || `Step ${i + 1}`,
-          body: s.body.trim(),
-        }));
-      if (mapped.length > 0) steps = mapped;
-    }
-
-    const rawPolish: PolishResult = { title, why_it_fits_tonight: why, steps };
+    const rawPolish: PolishResult = { title, why_it_fits_tonight: why, steps: originalSteps };
     const safe = applySafePolish(
       originalTitle,
       originalSteps,
@@ -311,11 +296,12 @@ export async function polishRecipeCopy(
       protein,
       keyIngredients,
     );
+    const copyOnly: PolishResult = { ...safe, steps: originalSteps };
 
-    polishCache.set(recipeId, { title: safe.title, why: safe.why_it_fits_tonight, steps: safe.steps, expires: Date.now() + POLISH_CACHE_TTL_MS });
-    log(`[polish] polished id=${recipeId} title="${safe.title}" steps=${safe.steps.length}`, "polish");
+    polishCache.set(recipeId, { title: copyOnly.title, why: copyOnly.why_it_fits_tonight, steps: originalSteps, expires: Date.now() + POLISH_CACHE_TTL_MS });
+    log(`[polish] polished id=${recipeId} title="${copyOnly.title}" (steps unchanged)`, "polish");
 
-    return safe;
+    return copyOnly;
   } catch (err: any) {
     log(`[polish] failed id=${recipeId}: ${err.message} — using fallback`, "polish");
     return fallback;

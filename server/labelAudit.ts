@@ -344,16 +344,20 @@ function rebuildTitle(recipe: GenerateResponse, styleLabel: string): string {
   const protein = recipe.primary_protein_source || recipe.chosen_protein || "";
   const proteinDisplay = cap(protein);
   const cuisine = recipe.tags?.cuisine || "";
-  const ings = (recipe.ingredients || []).map(i => i.item).join(" ");
+  const ings = (recipe.ingredients || []).map((i) => i.item).join(" ");
   const flavorKw = findFlavorKeyword(ings);
   const flavorDisplay = flavorKw ? cap(flavorKw) : "";
   const prefix = LABEL_TO_TITLE_PREFIX[styleLabel] || "";
-  const suffix = LABEL_TO_TITLE_SUFFIX[styleLabel] || cap(styleLabel);
+  let suffix = LABEL_TO_TITLE_SUFFIX[styleLabel] || cap(styleLabel);
+
+  if ((styleLabel === "taco" || suffix === "Tacos") && !/\b(tortilla|taco shell|corn tortilla|flour tortilla)\b/i.test(ings)) {
+    suffix = /\b(rice|quinoa|grain)\b/i.test(ings) ? "Bowls" : "Skillet";
+  }
 
   const parts: string[] = [];
   if (prefix) parts.push(prefix);
   if (cuisine && cuisine !== "American") parts.push(cuisine);
-  if (flavorDisplay && !parts.some(p => p.toLowerCase() === flavorDisplay.toLowerCase())) parts.push(flavorDisplay);
+  if (flavorDisplay && !parts.some((p) => p.toLowerCase() === flavorDisplay.toLowerCase())) parts.push(flavorDisplay);
   if (proteinDisplay) parts.push(proteinDisplay);
   parts.push(suffix);
 
@@ -487,7 +491,19 @@ export function auditAndFixRecipe(recipe: GenerateResponse, ctx: LabelAuditConte
   const finalCuisine = fixed.tags?.cuisine || inferredCuisine;
 
   const hasTitleMismatch = checkTitleConsistency(fixed, finalStyle, finalCuisine);
-  if (styleChanged || cuisineChanged || hasTitleMismatch) {
+  const tacoTitleWithoutShell =
+    /\btaco(s)?\b/i.test(fixed.title || "") &&
+    !/\b(tortilla|taco shell|corn tortilla|flour tortilla)\b/i.test(ingsText(fixed));
+
+  if (tacoTitleWithoutShell) {
+    const rebuilt = rebuildTitle(fixed, "bowl");
+    fixes.push(`title: taco label removed (no tortillas) → "${rebuilt}"`);
+    fixed.title = rebuilt;
+    if (finalStyle === "taco") {
+      finalStyle = "bowl";
+      fixed.meal_style = "Bowl";
+    }
+  } else if (styleChanged || cuisineChanged || hasTitleMismatch) {
     const rebuilt = rebuildTitle(fixed, finalStyle);
     if (rebuilt !== fixed.title) {
       fixes.push(`title: rebuilt from finalized content (style=${finalStyle}, cuisine=${finalCuisine})`);

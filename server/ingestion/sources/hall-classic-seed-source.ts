@@ -37,6 +37,7 @@ export class HallClassicSeedSource implements RecipeResolutionSource {
         mealArchetype: mealFormatToArchetype(mealFormat),
         prepMinutes: 15,
         totalMinutes: 45,
+        cleanupDifficulty: 3,
         servingsBase: 8,
         exploreCategories: [],
         tags: meal.tags,

@@ -5,11 +5,16 @@
 
 import type { GenerateResponse, IngredientItem, RecipeStep } from "@shared/schema";
 import { log } from "./index";
-import { dedupePlateIngredients, syncStationSidesToSteps } from "./meal-sanity";
+import { applyHallInstructionPolish, dedupePlateIngredients, syncStationSidesToSteps } from "./meal-sanity";
 import { normalizeFormatKeyForCarb, pickCarbForFormat } from "./carb-rules";
 import { scaleAmountForCrew } from "./firehall-voice";
 import { validateAndRepairMeal } from "./meal-validation";
 import { detectMealIdentity, isSeasoningOrGarnish } from "@shared/meal-semantics";
+import {
+  correctStarchKeyForTitle,
+  isCaesarMainDish,
+  isWeakCaesarStarch,
+} from "@shared/firehall-instruction-voice";
 import {
   pickComposedSides,
   getStarchTemplate,
@@ -235,6 +240,12 @@ export function completeFirehallPlate(
 
   sanitizePantryLines(fixed);
 
+  if (isCaesarMainDish(fixed.title || "")) {
+    fixed.ingredients = (fixed.ingredients || []).filter(
+      (i) => !isWeakCaesarStarch(i.item),
+    );
+  }
+
   const preText = ingredientsText(fixed);
   const alreadyComposed = (fixed.ingredients || []).some((i) =>
     /station side|hall side|hall base|hall extra/i.test(i.notes || ""),
@@ -280,8 +291,24 @@ export function completeFirehallPlate(
   }
 
   // Starch side (skipped for handheld — buns added by validation; fries/slaw from pairing)
+  const isCaesar = isCaesarMainDish(fixed.title || "") || identity === "caesar_salad";
+  if (isCaesar && !hasStarch && sides.starchKey) {
+    const starch = correctStarchKeyForTitle(fixed.title || "", sides.starchKey) || "garlic bread";
+    if (addStarchFromKey(fixed, starch, ctx.crewSize, "Station side — garlic bread for Caesar night; plate_role: starch")) {
+      fixes.push(`compose:caesar_${starch}`);
+      trackComposedSides(starch, null, null, ctx.sessionKey);
+    }
+  }
+
+  const isTacoNight =
+    formatKey === "tacos" ||
+    identity === "taco" ||
+    /\btaco(s)?\b/i.test(fixed.title || "");
+
   const needsStarchSide =
     !handheld &&
+    !isCaesar &&
+    !isTacoNight &&
     formatKey !== "bowl" &&
     formatKey !== "stir-fry" &&
     formatKey !== "pasta" &&
@@ -306,6 +333,7 @@ export function completeFirehallPlate(
 
   const textAfterStarch = ingredientsText(fixed);
   const needsVeg =
+    !isCaesar &&
     formatKey !== "salad" &&
     !hasMatch(textAfterStarch, VEG_PATTERN) &&
     sides.vegLabel;
@@ -362,7 +390,8 @@ export function completeFirehallPlate(
   const { recipe: synced, fixes: stepFixes } = syncStationSidesToSteps(validated);
   fixes.push(...stepFixes);
 
-  return { recipe: synced, fixes };
+  const polished = applyHallInstructionPolish(synced);
+  return { recipe: polished, fixes };
 }
 
 function allergenBlocksExtra(recipe: GenerateResponse, extra: string, allergens: string[]): boolean {

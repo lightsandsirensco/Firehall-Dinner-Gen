@@ -4,8 +4,10 @@
 
 import type { PizzaRequest, PizzaResponse, IngredientItem, RecipeStep } from "../shared/schema.js";
 import { buildPizzaTemplate } from "./pizza-templates.js";
-import { enhanceRecipeStepsSync, buildEnhanceContextFromTitle } from "./instruction-enhancer.js";
+import { getPizzaConceptMeta } from "../shared/pizza-concepts.js";
+import { resolvePizzaBuildSteps, aiPizzaStepsAreSpecific } from "./pizza-instructions.js";
 import { log } from "./logger.js";
+import { resolvePizzaRecommendedSides } from "./pizza-sides.js";
 
 function normalizeIngredientList(arr: unknown): IngredientItem[] {
   if (!Array.isArray(arr)) return [];
@@ -130,24 +132,11 @@ export function finalizePizzaRecipe(
     template.ingredients.drizzles,
   );
 
-  let buildSteps = normalizeBuildSteps(recipe.build_steps);
-  if (buildSteps.length < 3) {
-    buildSteps = template.build_steps;
-    log(`[pizza] build_steps thin — using template steps for ${conceptId}`, "catalog");
+  const normalizedAiSteps = normalizeBuildSteps(recipe.build_steps);
+  recipe.build_steps = resolvePizzaBuildSteps(conceptId, recipe, request, normalizedAiSteps);
+  if (!aiPizzaStepsAreSpecific(normalizedAiSteps)) {
+    log(`[pizza] Rebuilt concept-specific build_steps for ${conceptId} (source=${source})`, "catalog");
   }
-
-  const ctx = buildEnhanceContextFromTitle(recipe.title, {
-    protein: template.protein_safety?.[0]?.protein,
-    totalMinutes: recipe.timing.total_minutes,
-    crewSize: request.crew_size,
-    ingredients: [
-      ...recipe.ingredients.sauce,
-      ...recipe.ingredients.cheese,
-      ...recipe.ingredients.toppings,
-    ].map((i) => i.item),
-    mealFormat: "pizza",
-  });
-  recipe.build_steps = enhanceRecipeStepsSync(buildSteps, ctx);
 
   if (!recipe.protein_safety?.length && template.protein_safety?.length) {
     recipe.protein_safety = template.protein_safety;
@@ -194,9 +183,43 @@ export function finalizePizzaRecipe(
     recipe.veg_option.swap_toppings = normalizeIngredientList(recipe.veg_option.swap_toppings);
   }
 
-  if (!recipe.title || recipe.ingredients.sauce.length === 0 || recipe.build_steps.length < 2) {
+  const meta = getPizzaConceptMeta(conceptId);
+  if (meta) {
+    recipe.category = recipe.category ?? meta.category;
+    recipe.badges = recipe.badges?.length ? recipe.badges : meta.badges;
+    recipe.spice_level =
+      recipe.spice_level ??
+      (["Mild", "Medium", "Hot", "Firehall Hot"][meta.spiceLevel] ?? "Medium");
+    recipe.difficulty = recipe.difficulty ?? meta.difficulty;
+    recipe.estimated_cost = recipe.estimated_cost ?? meta.estimatedCost;
+    const sides = resolvePizzaRecommendedSides(request, meta);
+    if (sides?.length) {
+      recipe.recommended_sides = sides;
+    } else {
+      delete recipe.recommended_sides;
+    }
+    recipe.dipping_sauces = recipe.dipping_sauces?.length
+      ? recipe.dipping_sauces
+      : meta.dippingSauces;
+    recipe.crust_type = recipe.crust_type ?? meta.crust;
+    recipe.sauce_style = recipe.sauce_style ?? meta.sauceStyle;
+    recipe.substitutions = recipe.substitutions?.length
+      ? recipe.substitutions
+      : meta.substitutions;
+    recipe.optional_toppings = recipe.optional_toppings?.length
+      ? recipe.optional_toppings
+      : meta.optionalToppings;
+    recipe.hero_emoji = recipe.hero_emoji ?? meta.heroEmoji;
+    recipe.hall_line =
+      recipe.hall_line ??
+      (meta.quickShift
+        ? "Quick between calls — oven-ready fast."
+        : "Built for a hungry hall crew.");
+  }
+
+  if (!recipe.title || recipe.ingredients.sauce.length === 0 || recipe.build_steps.length < 3) {
     log(`[pizza] finalize fell back to full template for ${conceptId} (source=${source})`, "catalog");
-    return { ...buildPizzaTemplate(conceptId, request), pizza_style_id: conceptId };
+    return finalizePizzaRecipe(buildPizzaTemplate(conceptId, request), request, conceptId, "template");
   }
 
   return recipe;

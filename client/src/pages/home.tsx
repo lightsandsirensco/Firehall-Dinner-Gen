@@ -15,6 +15,7 @@ import { HallVotePromoBanner } from "@/components/hall-vote-promo-banner";
 import { buildShoppingListFromClientMeal } from "@/lib/shopping-list";
 import { getSavedCount } from "@/lib/saved-meals";
 import { apiRequest } from "@/lib/queryClient";
+import { parseApiError } from "@/lib/parse-api-error";
 import { buildFilterKey, putCached, addRecentSignature, getRecentSignatures } from "@/lib/recipe-cache";
 import {
   schedulePrefetchAfterGeneration,
@@ -35,6 +36,7 @@ import {
 import type { EmailModalVariant } from "@/components/email-modal";
 import type { EmailCaptureTrigger } from "@/lib/email-capture";
 import type { ClientRecipeResponse } from "@shared/schema";
+import { useMealHeroPoll } from "@/lib/recipe-hero";
 import { Flame } from "lucide-react";
 import { HeroHeader, type HeroVariant } from "@/components/hero-header";
 import { cn } from "@/lib/utils";
@@ -127,20 +129,21 @@ const ResultsPanel = memo(function ResultsPanel({
   hallVoteBannerRef?: React.RefObject<HTMLDivElement | null>;
   voteOptionCount?: number;
 }) {
-  const showRecipe = !error && recipe;
-  const showEmpty = !loading && !error && !recipe;
+  const recipeWithHero = useMealHeroPoll(recipe);
+  const showRecipe = !error && recipeWithHero;
+  const showEmpty = !loading && !error && !recipeWithHero;
 
   return (
     <div className="flex-1 min-w-0 overflow-x-hidden">
       {loading && !recipe && <LoadingState />}
-      {loading && recipe && (
+      {loading && recipeWithHero && (
         <div className="relative">
           <div className="absolute inset-x-0 top-0 z-10 pointer-events-none px-1">
             <LoadingState variant="compact" mode="alternate" />
           </div>
           <div className="opacity-35 pointer-events-none select-none transition-opacity duration-300 blur-[0.5px]">
             <RecipeCard
-              recipe={recipe}
+              recipe={recipeWithHero}
               crewSize={filters.crew_size}
             />
           </div>
@@ -156,8 +159,8 @@ const ResultsPanel = memo(function ResultsPanel({
           <ErrorState type="error" message={error} />
         </div>
       )}
-      {!loading && showRecipe && (
-        <div className="animate-in fade-in slide-in-from-bottom-2 duration-500" key={stableRecipeKey(recipe)}>
+      {!loading && showRecipe && recipeWithHero && (
+        <div className="animate-in fade-in slide-in-from-bottom-2 duration-500" key={stableRecipeKey(recipeWithHero)}>
           {historyNav.total > 1 && historyNav.index < historyNav.total - 1 && (
             <div className="flex items-center justify-center mb-3" data-testid="history-position-indicator">
               <span className="text-xs text-muted-foreground/60 font-mono tracking-widest uppercase">
@@ -166,8 +169,8 @@ const ResultsPanel = memo(function ResultsPanel({
             </div>
           )}
           <RecipeCard
-            key={stableRecipeKey(recipe)}
-            recipe={recipe}
+            key={stableRecipeKey(recipeWithHero)}
+            recipe={recipeWithHero}
             crewSize={filters.crew_size}
             onEmailClick={onEmailClick}
             onShoppingListClick={onShoppingListClick}
@@ -466,7 +469,7 @@ export default function Home() {
 
     const controller = new AbortController();
     abortControllerRef.current = controller;
-    const timeout = setTimeout(() => controller.abort(), 45_000);
+    const timeout = setTimeout(() => controller.abort(), 50_000);
 
     try {
       const recentSigs = getRecentSignatures();
@@ -479,87 +482,67 @@ export default function Home() {
         exclude_signatures: recentSigs,
         recentSignatures: recentSigs,
         currentRecipeSignature: currentSignatureRef.current,
-      }, 45_000, controller.signal);
+      }, 50_000, controller.signal);
 
-      clearTimeout(timeout);
-
-      // Check again after the await — a newer request may have fired.
       if (seq !== latestRequestSeq.current) {
         console.log(`[Generate] Stale after fetch — discarding seq=${seq}`);
-        isGenerating.current = false;
         return;
       }
 
       const data: ClientRecipeResponse = await res.json();
-      console.log(`[Generate] Received: "${data.title}" seq=${seq}`);
+      if (!data?.title || !Array.isArray(data.steps) || data.steps.length === 0) {
+        throw new Error("500: {\"code\":\"generation_failed\",\"message\":\"Server returned an incomplete recipe.\"}");
+      }
 
-      // applyRecipe performs the atomic state replacement.
+      console.log(`[Generate] Received: "${data.title}" seq=${seq}`);
       applyRecipe(data, seq);
 
       if (!preferDifferentStyle) {
         putCached(filterKey, data);
         schedulePrefetchAfterGeneration(payload);
       }
-    } catch (err: any) {
-      clearTimeout(timeout);
-
-      // Discard errors from stale requests.
+    } catch (err: unknown) {
       if (seq !== latestRequestSeq.current) {
         console.log(`[Generate] Stale error — discarding seq=${seq}`);
-        isGenerating.current = false;
         return;
       }
 
-      // Ignore intentional cancellations.
-      if (err?.name === "AbortError") {
-        if (seq === latestRequestSeq.current) {
-          isGenerating.current = false;
-        }
-        return;
-      }
-
-      const msg = err?.message || "Something went wrong";
-      console.error(`[Generate] Error seq=${seq}:`, msg);
+      const parsed = parseApiError(err);
+      console.error(`[Generate] Error seq=${seq}:`, parsed);
 
       let errorMsg: string;
-      if (msg.includes("No matching templates") || msg.includes("404")) {
+      if (parsed.code === "no_match" || parsed.status === 404) {
         errorMsg = "no_match";
         setRecipe(null);
-      } else if (msg.includes("429")) {
-        try {
-          const parsed = JSON.parse(msg.replace(/^\d+:\s*/, "")) as {
-            message?: string;
-            retry_after_seconds?: number;
-          };
-          const waitSec = parsed.retry_after_seconds;
-          const waitHint =
-            waitSec && waitSec > 0
-              ? ` Try again in about ${Math.ceil(waitSec)} seconds.`
-              : "";
-          errorMsg =
-            (parsed.message || "Rate limit reached. Please wait a moment.") + waitHint;
-        } catch {
-          errorMsg = "Too many requests. Please wait a moment before generating again.";
-        }
-      } else if (msg.includes("503") || msg.includes("budget")) {
-        errorMsg = "Daily recipe limit reached. Please try again tomorrow.";
-      } else if (msg.includes("403")) {
-        errorMsg = "Security check failed. Please refresh the page and try again.";
-      } else if (msg.includes("timed out") || msg.includes("AbortError")) {
-        errorMsg = "Still warming up — tap Put dinner on the board to try again.";
+      } else if (parsed.code === "rate_limited" || parsed.status === 429) {
+        errorMsg = parsed.message;
+      } else if (parsed.code === "in_flight" || parsed.code === "duplicate_request" || parsed.status === 409) {
+        errorMsg = parsed.message;
+      } else if (parsed.code === "upstream_timeout" || parsed.status === 504) {
+        errorMsg = parsed.message;
+      } else if (parsed.code === "validation_error" || parsed.status === 400) {
+        errorMsg = parsed.message || "Generator temporarily failed. Retrying with a simplified request…";
+      } else if (parsed.status === 503 || parsed.message.includes("budget")) {
+        errorMsg = "No matching real recipes right now. Try different filters or again in a minute.";
+      } else if (parsed.status === 403) {
+        errorMsg = "Security check failed. Refresh the page and try again.";
       } else {
-        errorMsg = "Generation failed. Please try again.";
+        errorMsg = parsed.message || "Generation failed. Please try again.";
       }
 
       setError(errorMsg);
-      setLoading(false);
-      isGenerating.current = false;
-
       toast({
-        title: "Generation failed",
-        description: "Tap Put dinner on the board or Different Meal to try again.",
+        title: parsed.code === "rate_limited" ? "Give the line a breath" : "Generation failed",
+        description: errorMsg,
         variant: "destructive",
       });
+    } finally {
+      clearTimeout(timeout);
+      if (seq === latestRequestSeq.current) {
+        setLoading(false);
+        isGenerating.current = false;
+        abortControllerRef.current = null;
+      }
     }
   }, [applyRecipe, toast]);
 

@@ -122,7 +122,7 @@ export async function runV2Fallback(
   const structureDisplay = STRUCTURE_DISPLAY[targetStructure] || targetStructure;
 
   return {
-    recipe,
+    recipe: { ...recipe, _fallback: true },
     protein,
     structure: targetStructure,
     structureDisplay,

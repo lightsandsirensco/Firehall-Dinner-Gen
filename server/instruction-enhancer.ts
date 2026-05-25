@@ -10,6 +10,7 @@ import {
   type InstructionEnhanceContext,
   type InstructionStep,
 } from "../shared/instruction-enhancement.js";
+import { FIREHALL_VOICE_RULES } from "@shared/firehall-instruction-voice";
 import { log } from "./logger.js";
 import { createOpenAIClient, hasOpenAIKey } from "./openai-client.js";
 
@@ -63,14 +64,15 @@ async function enhanceStepsWithAI(
 
   const prompt =
     `You are the experienced cook at a fire hall kitchen teaching a beginner who is tired and easily distracted.\n\n` +
+    `${FIREHALL_VOICE_RULES}\n\n` +
     `Rewrite ONLY the cooking steps for this recipe. Do NOT change ingredients or invent new ones.\n\n` +
     `Rules for EVERY step:\n` +
     `- heading: "Action (heat level, time)" e.g. "Brown the beef (medium-high, 8–10 min)"\n` +
-    `- body: 3–5 short sentences (about 60–100 words). Explain HOW, what to LOOK for, what can go WRONG, when to move on.\n` +
-    `- Include: pan size when relevant, heat level, visual/texture cues, doneness, safety temps for protein.\n` +
-    `- Firefighter practical: interruptions happen — note when it's safe to pause.\n` +
-    `- Start with a prep/setup step if missing. End with a serve/portion step.\n` +
-    `- Max 12 steps. Plain language — no chef jargon.\n\n` +
+    `- body: 3–5 short sentences (about 60–100 words). Explain HOW, what it should look/smell/feel like, what can go WRONG, when to move on.\n` +
+    `- Include: pan size when relevant, heat level, temps, doneness — NEVER say "watch for visual cues", "spread evenly", or "wooden bowl".\n` +
+    `- Firefighter practical: interruptions happen — note when it's safe to pause. Coordinate sides (bread in oven while protein rests).\n` +
+    `- Start with "Prep the station" if missing. End with "Serve the hall".\n` +
+    `- Max 12 steps. Station kitchen tone — not a food blog.\n\n` +
     `Recipe: ${ctx.title}\n` +
     `Protein: ${ctx.protein || "mixed"} | Crew: ${ctx.crewSize || 6} | Time budget: ~${ctx.totalMinutes || 45} min\n` +
     `Ingredients: ${(ctx.ingredients || []).slice(0, 12).join(", ")}\n\n` +

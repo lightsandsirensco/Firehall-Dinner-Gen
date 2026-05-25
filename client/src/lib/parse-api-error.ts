@@ -1,0 +1,50 @@
+import type { GenerationErrorCode } from "@shared/generation-errors";
+
+export interface ParsedApiError {
+  status: number;
+  message: string;
+  code?: GenerationErrorCode;
+  retryAfterSeconds?: number;
+}
+
+/** Parse `apiRequest` errors shaped as "429: {\"message\":...}" */
+export function parseApiError(err: unknown): ParsedApiError {
+  const raw = err instanceof Error ? err.message : String(err);
+  const statusMatch = raw.match(/^(\d{3}):\s*/);
+  const status = statusMatch ? parseInt(statusMatch[1], 10) : 0;
+  const jsonPart = statusMatch ? raw.slice(statusMatch[0].length) : raw;
+
+  try {
+    const body = JSON.parse(jsonPart) as {
+      message?: string;
+      code?: GenerationErrorCode;
+      retry_after_seconds?: number;
+    };
+    const waitHint =
+      body.retry_after_seconds && body.retry_after_seconds > 0
+        ? ` Try again in about ${Math.ceil(body.retry_after_seconds)} seconds.`
+        : "";
+    return {
+      status,
+      code: body.code,
+      message: (body.message || raw) + waitHint,
+      retryAfterSeconds: body.retry_after_seconds,
+    };
+  } catch {
+    if (raw.includes("timed out") || (err instanceof Error && err.name === "AbortError")) {
+      return {
+        status: 504,
+        code: "upstream_timeout",
+        message: "Request timed out. Tap Generate again — the hall line is still working.",
+      };
+    }
+    if (/String must contain at most|too_big|Invalid request:/i.test(raw)) {
+      return {
+        status: status || 400,
+        code: "validation_error",
+        message: "Generator temporarily failed. Refreshing recipe memory…",
+      };
+    }
+    return { status, message: raw || "Something went wrong" };
+  }
+}

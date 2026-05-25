@@ -52,12 +52,26 @@ export function computeIngestQualityScores(
     | "ingredients"
   > & { summary?: string },
   trendScore: number,
-): Pick<IngestRecipeDraft, "appetiteScore" | "comfortScore" | "healthyScore" | "firehallSuitabilityScore" | "qualityScore"> {
+): Pick<
+  IngestRecipeDraft,
+  | "appetiteScore"
+  | "comfortScore"
+  | "healthyScore"
+  | "firehallSuitabilityScore"
+  | "qualityScore"
+  | "cleanupDifficulty"
+> {
   const q = scoreRecipeQuality({
     ...qualityInputFromIngestDraft(draft as IngestRecipeDraft),
     trendScore,
   });
   const healthyScore = scoreHealthy(draft.title, draft.tags || []);
+  const cleanupDifficulty = Math.min(5, Math.max(1, Math.round(q.cleanupDifficulty))) as
+    | 1
+    | 2
+    | 3
+    | 4
+    | 5;
 
   return {
     appetiteScore: q.appetite,
@@ -65,5 +79,6 @@ export function computeIngestQualityScores(
     healthyScore,
     firehallSuitabilityScore: q.hallSuitability,
     qualityScore: q.composite,
+    cleanupDifficulty,
   };
 }

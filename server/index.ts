@@ -1,9 +1,11 @@
 import 'dotenv/config';
 import express, { type Request, Response, NextFunction } from "express";
+import helmet from "helmet";
 import { registerRoutes } from "./routes";
 import { serveStatic } from "./static";
 import { createServer } from "http";
 import { log, logError, summarizeJsonBody } from "./logger";
+import { configureTrustProxy } from "./client-ip.js";
 
 export {
   log,
@@ -21,21 +23,36 @@ export {
 const app = express();
 const httpServer = createServer(app);
 
+configureTrustProxy(app);
+
 declare module "http" {
   interface IncomingMessage {
     rawBody: unknown;
   }
 }
 
+const isProduction = process.env.NODE_ENV === "production";
+
+app.use(
+  helmet({
+    contentSecurityPolicy: isProduction,
+    crossOriginEmbedderPolicy: false,
+    crossOriginResourcePolicy: { policy: "cross-origin" },
+  }),
+);
+
+const jsonBodyLimit = process.env.JSON_BODY_LIMIT || "256kb";
+
 app.use(
   express.json({
+    limit: jsonBodyLimit,
     verify: (req, _res, buf) => {
       req.rawBody = buf;
     },
   }),
 );
 
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: false, limit: jsonBodyLimit }));
 
 app.use((req, res, next) => {
   const start = Date.now();
@@ -70,7 +87,10 @@ app.use((req, res, next) => {
   await registerRoutes(httpServer, app);
 
   app.use((err: unknown, _req: Request, res: Response, next: NextFunction) => {
-    const error = err as { status?: number; statusCode?: number; message?: string };
+    const error = err as { status?: number; statusCode?: number; message?: string; type?: string };
+    if (error.type === "entity.too.large") {
+      return res.status(413).json({ message: "Request body is too large." });
+    }
     const status = error.status || error.statusCode || 500;
     const message = error.message || "Internal Server Error";
 

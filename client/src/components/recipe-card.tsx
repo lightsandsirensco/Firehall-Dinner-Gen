@@ -3,10 +3,18 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import type { ClientRecipeResponse, MealPlateLine } from "@shared/schema";
+import { formatAdaptationLabel } from "@shared/imported-recipe";
+import type { RecipeSourceAttribution } from "@shared/canonical-recipe";
+
+function formatSourceAttribution(source: NonNullable<ClientRecipeResponse["_recipe_source"]>): string {
+  return formatAdaptationLabel(source as RecipeSourceAttribution) || "Recipe from";
+}
 import { resolveMealPlate } from "@/lib/meal-plate-ui";
+import { MealHeroImage } from "@/components/meal-hero-image";
 import { buildRecipeTrustLine } from "@/lib/recipe-trust-line";
 import { Flame, Droplets, Wheat, Beef, Sparkles, Trash2, Clock, Timer, ShieldCheck, Thermometer, Printer, Leaf, Mail, Package, ShoppingCart, DollarSign, Lightbulb, List, Heart, Check, ChevronDown, UtensilsCrossed, Globe, Zap, Bug } from "lucide-react";
 import { saveMeal, isMealSaved } from "@/lib/saved-meals";
+import { escapeHtml } from "@/lib/escape-html";
 import { useState, useEffect, useMemo } from "react";
 
 let sessionProTipsCollapsed = false;
@@ -67,12 +75,13 @@ function fmtQty(qty: number, unit: string): string {
 }
 
 export function buildPrintHtml(recipe: ClientRecipeResponse, crewSize: number): string {
+  const e = escapeHtml;
   const safetyHtml = recipe.protein_safety && recipe.protein_safety.internal_temp_f > 0
     ? `<tr>
-        <td style="font-weight:700;padding:6px 12px 6px 0">${recipe.protein_safety.protein}</td>
-        <td style="padding:6px 12px">${recipe.protein_safety.internal_temp_f}&deg;F</td>
-        <td style="padding:6px 12px">${recipe.protein_safety.rest_min > 0 ? recipe.protein_safety.rest_min + " min" : "—"}</td>
-        <td style="padding:6px 12px;font-size:13px">${recipe.protein_safety.notes || ""}</td>
+        <td style="font-weight:700;padding:6px 12px 6px 0">${e(recipe.protein_safety.protein)}</td>
+        <td style="padding:6px 12px">${e(recipe.protein_safety.internal_temp_f)}&deg;F</td>
+        <td style="padding:6px 12px">${recipe.protein_safety.rest_min > 0 ? e(recipe.protein_safety.rest_min) + " min" : "—"}</td>
+        <td style="padding:6px 12px;font-size:13px">${e(recipe.protein_safety.notes)}</td>
       </tr>`
     : "";
 
@@ -80,9 +89,9 @@ export function buildPrintHtml(recipe: ClientRecipeResponse, crewSize: number): 
     .map(
       (ing) =>
         `<tr>
-          <td style="padding:4px 16px 4px 0;font-weight:600">${ing.name}</td>
-          <td style="padding:4px 0">${fmtQty(ing.qty, ing.unit)}</td>
-          <td style="padding:4px 0 4px 16px;color:#555;font-size:13px">${ing.category || ""}</td>
+          <td style="padding:4px 16px 4px 0;font-weight:600">${e(ing.name)}</td>
+          <td style="padding:4px 0">${e(fmtQty(ing.qty, ing.unit))}</td>
+          <td style="padding:4px 0 4px 16px;color:#555;font-size:13px">${e(ing.category)}</td>
         </tr>`
     )
     .join("");
@@ -90,8 +99,8 @@ export function buildPrintHtml(recipe: ClientRecipeResponse, crewSize: number): 
   const stepItems = recipe.steps
     .map((step) => {
       return `<li style="margin-bottom:12px;page-break-inside:avoid">
-        ${step.title ? `<strong>${step.title}</strong><br/>` : ""}
-        ${step.instructions}
+        ${step.title ? `<strong>${e(step.title)}</strong><br/>` : ""}
+        ${e(step.instructions)}
       </li>`;
     })
     .join("");
@@ -100,7 +109,7 @@ export function buildPrintHtml(recipe: ClientRecipeResponse, crewSize: number): 
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<title>${recipe.title} — Print</title>
+<title>${e(recipe.title)} — Print</title>
 <style>
   @page { margin: 0.75in; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -130,15 +139,15 @@ export function buildPrintHtml(recipe: ClientRecipeResponse, crewSize: number): 
 </style>
 </head>
 <body>
-  <h1>${recipe.title}</h1>
-  <p class="subtitle">${recipe.why_it_fits_tonight}</p>
-  <p class="servings">Serves ${crewSize}${recipe.chosen_protein ? ` &bull; Protein: ${recipe.chosen_protein}` : ""}${recipe.budget_level === "low" ? ' &bull; <strong>Budget-friendly ($)</strong>' : ""}</p>
+  <h1>${e(recipe.title)}</h1>
+  <p class="subtitle">${e(recipe.why_it_fits_tonight)}</p>
+  <p class="servings">Serves ${e(crewSize)}${recipe.chosen_protein ? ` &bull; Protein: ${e(recipe.chosen_protein)}` : ""}${recipe.budget_level === "low" ? " &bull; <strong>Budget-friendly ($)</strong>" : ""}</p>
 
   ${recipe.ingredients_used && recipe.ingredients_used.length > 0 ? `
   <h2>Using What's in the Fridge</h2>
-  <p style="font-size:14px;margin-bottom:4px">${recipe.ingredients_used.join(", ")}</p>
+  <p style="font-size:14px;margin-bottom:4px">${recipe.ingredients_used.map((i) => e(i)).join(", ")}</p>
   ${recipe.extra_items_needed && recipe.extra_items_needed.length > 0 ? `
-  <p style="font-size:13px;color:#666;margin-top:8px"><strong>You may need to grab:</strong> ${recipe.extra_items_needed.join(", ")}</p>` : ""}
+  <p style="font-size:13px;color:#666;margin-top:8px"><strong>You may need to grab:</strong> ${recipe.extra_items_needed.map((i) => e(i)).join(", ")}</p>` : ""}
   ` : ""}
 
   ${recipe.timing ? `
@@ -177,39 +186,39 @@ export function buildPrintHtml(recipe: ClientRecipeResponse, crewSize: number): 
   ${recipe.pro_tips && recipe.pro_tips.length > 0 ? `
   <h2>Pro Tips</h2>
   <ul style="padding-left:20px;font-size:14px">
-    ${recipe.pro_tips.map(tip => `<li style="margin-bottom:4px">${tip}</li>`).join("")}
+    ${recipe.pro_tips.map((tip) => `<li style="margin-bottom:4px">${e(tip)}</li>`).join("")}
   </ul>` : ""}
 
   ${recipe.cleanup_tip ? `
   <div class="cleanup">
     <strong>Cleanup Tip</strong>
-    ${recipe.cleanup_tip}
+    ${e(recipe.cleanup_tip)}
   </div>` : ""}
 
   ${recipe.budget_tips && recipe.budget_tips.length > 0 ? `
   <h2>Budget Tips</h2>
   <ul style="padding-left:20px;font-size:14px">
-    ${recipe.budget_tips.map(tip => `<li style="margin-bottom:4px">${tip}</li>`).join("")}
+    ${recipe.budget_tips.map((tip) => `<li style="margin-bottom:4px">${e(tip)}</li>`).join("")}
   </ul>` : ""}
 
   ${recipe.veg_option?.enabled ? `
   <h2 style="color:#16a34a">Veg Option (1 Serving)</h2>
-  <p style="font-size:14px;margin-bottom:8px"><strong>Swap protein:</strong> ${recipe.veg_option.swap_protein}</p>
+  <p style="font-size:14px;margin-bottom:8px"><strong>Swap protein:</strong> ${e(recipe.veg_option.swap_protein)}</p>
   <table class="ingredients">
     <tbody>
-      ${recipe.veg_option.ingredients.map(ing => `<tr>
-        <td style="padding:4px 16px 4px 0;font-weight:600">${ing.item}</td>
-        <td style="padding:4px 0">${ing.amount || ""}</td>
-        ${ing.notes ? `<td style="padding:4px 0 4px 16px;color:#555;font-size:13px">${ing.notes}</td>` : "<td></td>"}
+      ${recipe.veg_option.ingredients.map((ing) => `<tr>
+        <td style="padding:4px 16px 4px 0;font-weight:600">${e(ing.item)}</td>
+        <td style="padding:4px 0">${e(ing.amount)}</td>
+        ${ing.notes ? `<td style="padding:4px 0 4px 16px;color:#555;font-size:13px">${e(ing.notes)}</td>` : "<td></td>"}
       </tr>`).join("")}
     </tbody>
   </table>
   <ol style="margin-top:12px">
-    ${recipe.veg_option.steps.map(s => `<li style="margin-bottom:8px">${s}</li>`).join("")}
+    ${recipe.veg_option.steps.map((s) => `<li style="margin-bottom:8px">${e(s)}</li>`).join("")}
   </ol>
   <div class="cleanup" style="margin-top:12px">
     <strong>Plating Notes</strong>
-    ${recipe.veg_option.plating_notes}
+    ${e(recipe.veg_option.plating_notes)}
   </div>` : ""}
 
   <div class="footer">
@@ -263,7 +272,6 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
   const recipeTags = recipe.recipe_tags;
   const mealPlate = useMemo(() => resolveMealPlate(recipe), [recipe]);
   const trustLine = useMemo(() => buildRecipeTrustLine(recipe, crewSize), [recipe, crewSize]);
-  const displayTitle = mealPlate?.display_title || recipe.title;
   const starchSides = mealPlate?.sides.filter((s) => s.role === "starch") || [];
   const vegSides = mealPlate?.sides.filter((s) => s.role === "veg") || [];
 
@@ -273,9 +281,27 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
   }, []);
 
   const debugData = (recipe as any)._debug || null;
+  const displayTitle = mealPlate?.display_title || recipe.title;
 
   return (
     <div className="space-y-5 animate-in fade-in slide-in-from-bottom-4 duration-500">
+      {recipe.hero_image ? (
+        <MealHeroImage
+          src={recipe.hero_image}
+          alt={recipe.hero_image_alt || displayTitle}
+          title={displayTitle}
+          emoji="🔥"
+          variant="cinematic"
+          priority
+          className="rounded-2xl overflow-hidden ring-1 ring-border/40 shadow-xl shadow-black/25"
+        />
+      ) : recipe.hero_image_status === "pending" ? (
+        <div
+          className="relative w-full aspect-[5/4] max-h-[min(40vh,360px)] sm:aspect-[16/9] sm:max-h-[min(360px,48vh)] rounded-2xl overflow-hidden bg-gradient-to-br from-zinc-900 via-zinc-950 to-black ring-1 ring-border/30 animate-pulse"
+          aria-label="Generating meal photo"
+          data-testid="meal-hero-pending"
+        />
+      ) : null}
       {(recipe as any)._filters_adjusted && (
         <div className="flex items-center gap-2 text-sm text-amber-400/80 bg-amber-400/10 border border-amber-400/20 rounded-lg px-3 py-2" data-testid="text-allergen-adjustment-note">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
@@ -297,7 +323,7 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
           <p className="text-xs text-muted-foreground/80 mt-1 max-w-xl" data-testid="text-recipe-source">
             {recipe._recipe_source.url ? (
               <>
-                Recipe from{" "}
+                {formatSourceAttribution(recipe._recipe_source)}{" "}
                 <a
                   href={recipe._recipe_source.url}
                   target="_blank"
@@ -308,13 +334,13 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
                 </a>
               </>
             ) : (
-              <>Recipe from {recipe._recipe_source.name}</>
+              <>{formatSourceAttribution(recipe._recipe_source) || `Recipe from ${recipe._recipe_source.name}`}</>
             )}
           </p>
         )}
         {recipe._fallback && (
           <p className="text-xs text-amber-700/90 dark:text-amber-500/90 mt-1 max-w-xl" data-testid="text-template-fallback">
-            Built from a station template when no catalog match was found — try different filters for a publisher recipe.
+            Backup recipe while we find a better match — try different filters for a publisher-sourced meal.
           </p>
         )}
         {mealPlate?.cuisine_label && (

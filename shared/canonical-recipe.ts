@@ -5,7 +5,7 @@
 
 import type { GenerateResponse } from "./schema.js";
 
-export type CatalogSourceKind = "spoonacular" | "curated" | "publisher";
+export type CatalogSourceKind = "spoonacular" | "curated" | "publisher" | "template";
 
 export type MealArchetype =
   | "pasta_night"
@@ -24,7 +24,7 @@ export interface RecipeSourceAttribution {
   kind: CatalogSourceKind;
   name: string;
   url: string;
-  license: "aggregator" | "owned" | "partner";
+  license: "aggregator" | "owned" | "partner" | "internal";
 }
 
 /** Full persisted catalog row (payload includes scaled GenerateResponse). */

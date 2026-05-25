@@ -192,3 +192,11 @@ export function flushSqliteToDisk(): void {
   }
   persistToDisk();
 }
+
+/** Release pending persist timers so CLI test scripts can exit cleanly. */
+export function releaseSqliteTimersForTests(): void {
+  if (saveTimer) {
+    clearTimeout(saveTimer);
+    saveTimer = null;
+  }
+}

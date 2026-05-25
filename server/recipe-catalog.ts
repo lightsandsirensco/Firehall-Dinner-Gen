@@ -7,10 +7,13 @@ import type { GenerateRequest, GenerateResponse } from "../shared/schema.js";
 import {
   type CanonicalRecipe,
   catalogIdFromSpoonacularId,
+  catalogIdFromCuratedSlug,
   mealFormatToArchetype,
   publisherNameFromSourceUrl,
   inferCleanupDifficulty,
 } from "../shared/canonical-recipe.js";
+import type { IngestRecipeDraft } from "../shared/ingestion/recipe-ingest-schema.js";
+import { attachImportedRecipeMeta } from "../shared/imported-recipe.js";
 import { scoreAppetiteAppeal } from "../shared/explore-editorial.js";
 import { canonicalMatchesExplorePool } from "../shared/ingestion/pool-match.js";
 import { spoonacularImageUrl } from "../shared/explore-recipe.js";
@@ -71,8 +74,8 @@ export interface V2CatalogWriteInput {
 
 function scoreHealthyFromRequest(request: GenerateRequest): number {
   const h = request.healthiness_preference || "balanced";
-  if (h === "lighter" || h === "light") return 75;
-  if (h === "hearty" || h === "comfort") return 25;
+  if (h === "lean") return 75;
+  if (h === "comfort") return 25;
   return 50;
 }
 
@@ -187,7 +190,12 @@ export function buildCanonicalFromV2(input: V2CatalogWriteInput): CanonicalRecip
       url: sourceUrl || "",
       license: "aggregator",
     },
-    generateResponse: recipe,
+    generateResponse: attachImportedRecipeMeta(recipe, {
+      kind: "spoonacular",
+      name: publisherName,
+      url: sourceUrl || "",
+      license: "aggregator",
+    }, { preserveSteps: (recipe.steps?.length ?? 0) >= 3 }),
     catalogVersion: CATALOG_VERSION,
     servedCount: 1,
     createdAt: now,
@@ -248,6 +256,123 @@ export async function upsertCatalogFromV2(input: V2CatalogWriteInput): Promise<C
   );
 
   return { ...canonical, servedCount };
+}
+
+export interface PublisherCatalogWriteInput {
+  draft: IngestRecipeDraft;
+  recipe: GenerateResponse;
+}
+
+/** Publisher / blog import → same catalog table generate reads first. */
+export function buildCanonicalFromPublisher(input: PublisherCatalogWriteInput): CanonicalRecipe {
+  const { draft, recipe } = input;
+  const slug = draft.curatedSlug || draft.fingerprint.slice(0, 12);
+  const catalogId = catalogIdFromCuratedSlug(slug);
+  const mealFormat = draft.mealFormat || "random";
+  const mealArchetype = mealFormatToArchetype(mealFormat);
+  const heroImage = draft.heroImage?.trim() || "";
+  const totalMin = draft.totalMinutes || recipe.timing?.total_minutes || 45;
+  const prepMin = draft.prepMinutes || recipe.timing?.prep_minutes || 10;
+  const stepsCount = recipe.steps?.length ?? draft.steps.length;
+
+  const marked = attachImportedRecipeMeta(recipe, {
+    kind: "publisher",
+    name: draft.sourceName || publisherNameFromSourceUrl(draft.sourceUrl),
+    url: draft.sourceUrl || "",
+    license: draft.license === "owned" ? "owned" : "partner",
+  }, { preserveSteps: true });
+
+  const qualityScore = Math.min(
+    100,
+    Math.max(draft.qualityScore || 50, 48) + 8,
+  );
+
+  const now = new Date().toISOString();
+
+  return {
+    catalogId,
+    curatedSlug: slug,
+    title: draft.title,
+    heroImage,
+    imageAlt: draft.imageAlt || draft.title,
+    protein: draft.protein,
+    cuisine: draft.cuisine || "any",
+    mealFormat,
+    mealArchetype,
+    cookingStyle: mealFormat.replace(/_/g, " "),
+    prepMinutes: prepMin,
+    totalMinutes: totalMin,
+    cleanupDifficulty: draft.cleanupDifficulty ?? inferCleanupDifficulty(mealFormat, draft.title, stepsCount),
+    servingsBase: draft.servingsBase || 6,
+    tags: draft.tags?.length ? draft.tags : [draft.protein, mealArchetype],
+    comfortScore: draft.comfortScore ?? 55,
+    healthyScore: draft.healthyScore ?? 50,
+    firehallSuitabilityScore: draft.firehallSuitabilityScore ?? 65,
+    appetiteScore: draft.appetiteScore ?? 60,
+    qualityScore,
+    source: {
+      kind: "publisher",
+      name: draft.sourceName || "Recipe blog",
+      url: draft.sourceUrl || "",
+      license: draft.license === "owned" ? "owned" : "partner",
+    },
+    generateResponse: marked,
+    catalogVersion: CATALOG_VERSION,
+    servedCount: 1,
+    createdAt: now,
+    updatedAt: now,
+  };
+}
+
+export async function upsertCatalogFromPublisher(
+  input: PublisherCatalogWriteInput,
+): Promise<CanonicalRecipe> {
+  const database = requireDb();
+  const canonical = buildCanonicalFromPublisher(input);
+  const payloadJson = JSON.stringify(canonical);
+
+  database
+    .prepare(
+      `INSERT INTO recipe_catalog (
+        catalog_id, spoonacular_id, source_kind, protein, cuisine, meal_format, meal_archetype,
+        quality_score, appetite_score, hero_image, source_name, source_url, payload_json,
+        served_count, updated_at
+      ) VALUES (?, NULL, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 1, datetime('now'))
+      ON CONFLICT(catalog_id) DO UPDATE SET
+        protein = excluded.protein,
+        cuisine = excluded.cuisine,
+        meal_format = excluded.meal_format,
+        meal_archetype = excluded.meal_archetype,
+        quality_score = excluded.quality_score,
+        appetite_score = excluded.appetite_score,
+        hero_image = excluded.hero_image,
+        source_name = excluded.source_name,
+        source_url = excluded.source_url,
+        payload_json = excluded.payload_json,
+        served_count = recipe_catalog.served_count + 1,
+        updated_at = datetime('now')`,
+    )
+    .run(
+      canonical.catalogId,
+      canonical.source.kind,
+      canonical.protein,
+      canonical.cuisine,
+      canonical.mealFormat,
+      canonical.mealArchetype,
+      canonical.qualityScore,
+      canonical.appetiteScore,
+      canonical.heroImage,
+      canonical.source.name,
+      canonical.source.url,
+      payloadJson,
+    );
+
+  log(
+    `[catalog] publisher write-through id=${canonical.catalogId} title="${canonical.title.slice(0, 50)}" quality=${canonical.qualityScore}`,
+    "catalog",
+  );
+
+  return canonical;
 }
 
 export function getCatalogBySpoonacularId(spoonacularId: number): CanonicalRecipe | null {

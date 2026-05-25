@@ -37,10 +37,10 @@ export class ExploreRecipeCardRegistry {
   }
 }
 
-export function mergeDetailWithCardPreview(
-  detail: ExploreRecipeCard & Record<string, unknown>,
+export function mergeDetailWithCardPreview<D extends { id: number; title: string; image?: string; imageAlt?: string }>(
+  detail: D,
   preview: ExploreRecipeCard | null | undefined,
-): ExploreRecipeCard & Record<string, unknown> {
+): D {
   if (!preview || preview.id !== detail.id) {
     return detail;
   }
@@ -48,7 +48,7 @@ export function mergeDetailWithCardPreview(
     ...detail,
     title: detail.title || preview.title,
     image: detail.image || preview.image,
-    imageAlt: detail.title,
+    imageAlt: detail.imageAlt || preview.title,
   };
 }
 

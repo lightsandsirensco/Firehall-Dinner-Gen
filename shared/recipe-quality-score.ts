@@ -4,6 +4,7 @@
 
 import { scoreAppetiteAppeal } from "./explore-editorial.js";
 import { isPublisherHeroImage } from "./editorial-quality.js";
+import { isFirehallOwnedHeroUrl } from "./food-imagery/paths.js";
 import { publisherQualityBonus } from "./ingestion/trusted-publishers.js";
 import type { IngestRecipeDraft } from "./ingestion/recipe-ingest-schema.js";
 
@@ -52,6 +53,7 @@ function stepCount(input: RecipeQualityInput): number {
 
 export function scoreImageQuality(heroImage?: string, sourceKind?: string): number {
   if (!heroImage?.trim()) return 15;
+  if (isFirehallOwnedHeroUrl(heroImage)) return 96;
   if (heroImage.includes("spoonacular.com")) return 42;
   if (isPublisherHeroImage(heroImage)) return 88;
   if (/placeholder|default|1x1|emoji/i.test(heroImage)) return 20;

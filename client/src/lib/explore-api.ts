@@ -15,22 +15,7 @@ function parseApiMessage(text: string): string {
   return text || "Request failed";
 }
 
-export interface ExploreRecipeDetail {
-  id: number;
-  title: string;
-  image: string;
-  imageAlt?: string;
-  readyInMinutes: number;
-  servings: number;
-  sourceUrl: string;
-  summary: string;
-  cuisines: string[];
-  diets: string[];
-  dishTypes: string[];
-  ingredients: { name: string; amount: number; unit: string; original: string }[];
-  steps: { number: number; heading?: string; step: string }[];
-  macros: { calories: number; protein_g: number; carbs_g: number; fat_g: number };
-}
+export type { ExploreRecipeDetail, RecipeDetail } from "@shared/explore-recipe-detail";
 
 async function fetchWithRetry(url: string, attempts = 2): Promise<Response> {
   let lastRes: Response | null = null;
@@ -46,6 +31,7 @@ async function fetchWithRetry(url: string, attempts = 2): Promise<Response> {
 }
 
 import { normalizeExploreRecipeDetail } from "@/lib/explore-recipe";
+import type { ExploreRecipeDetail } from "@shared/explore-recipe-detail";
 
 export interface ExploreDetailLookupHints {
   slug?: string;

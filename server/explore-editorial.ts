@@ -27,6 +27,9 @@ import {
   normalizeExploreRecipeCard,
   type ExploreRecipeCard,
 } from "../shared/explore-recipe.js";
+import { isExploreFeedBlocked } from "../shared/explore-feed-blocklist.js";
+import { isFirehallOwnedHeroUrl, normalizeOwnedMediaPath } from "../shared/food-imagery/paths.js";
+import { resolveFoodImageryHero } from "./food-imagery/hero-resolver.js";
 import { computeCardPresentation } from "../shared/explore-card-presentation.js";
 import { exploreIdFromRecipeId } from "../shared/explore-curated-id.js";
 import { buildPublisherAttribution } from "../shared/editorial-quality.js";
@@ -92,7 +95,8 @@ function curatedSummaryToExploreCard(
   section: ExploreSectionDef,
 ): ExploreRecipeCard | null {
   const publisherMedia =
-    Boolean(row.heroImage?.trim()) && !row.heroImage.includes("spoonacular.com");
+    isFirehallOwnedHeroUrl(row.heroImage || "") ||
+    (Boolean(row.heroImage?.trim()) && !row.heroImage.includes("spoonacular.com"));
   const cardId =
     row.spoonacularId && row.spoonacularId > 0
       ? row.spoonacularId
@@ -128,11 +132,11 @@ function curatedSummaryToExploreCard(
   return card ? enrichCard(card, section) : null;
 }
 
-function fetchCuratedSectionRecipes(
+async function fetchCuratedSectionRecipes(
   section: ExploreSectionDef,
   daySeed: number,
   limit: number,
-): ExploreRecipeCard[] {
+): Promise<ExploreRecipeCard[]> {
   try {
     const rows = listCuratedForExplorePool(section.poolTag, Math.max(limit * 2, 10));
     if (rows.length === 0) return [];
@@ -144,10 +148,18 @@ function fetchCuratedSectionRecipes(
     const cards: ExploreRecipeCard[] = [];
     for (const row of rotated) {
       if (cards.length >= limit) break;
-      const card = curatedSummaryToExploreCard(row, section);
-      if (card && filterDisplayableExploreCards([card]).length > 0) {
-        cards.push(card);
+      let card = curatedSummaryToExploreCard(row, section);
+      if (!card || filterDisplayableExploreCards([card]).length === 0) continue;
+
+      const hero = await resolveFoodImageryHero(row.slug, card.image);
+      if (hero.source === "generated" || isFirehallOwnedHeroUrl(hero.url)) {
+        card = {
+          ...card,
+          image: normalizeOwnedMediaPath(hero.url),
+          publisherMedia: true,
+        };
       }
+      cards.push(card);
     }
     return sortExploreCardsByRank(cards, { sectionBoost: section.appetiteBoost ?? 0 })
       .slice(0, limit);
@@ -207,7 +219,7 @@ async function fetchSectionRecipes(
     seed: 0,
   };
 
-  let cards: ExploreRecipeCard[] = fetchCuratedSectionRecipes(section, daySeed, section.limit);
+  let cards: ExploreRecipeCard[] = await fetchCuratedSectionRecipes(section, daySeed, section.limit);
   sources.curated = cards.length;
   if (cards.length > 0) {
     log(`[explore] Section "${section.id}" curated-db → ${cards.length} cards`, "catalog");
@@ -325,7 +337,8 @@ async function buildHallFavoritesSection(
     };
     const cards = crewRows
       .map((row) => curatedSummaryToExploreCard(row, def))
-      .filter((c): c is ExploreRecipeCard => c !== null);
+      .filter((c): c is ExploreRecipeCard => c !== null)
+      .filter((c) => !isExploreFeedBlocked(c.title));
     const deduped = dedupeExploreCards(cards, seenIds, seenTitles);
     if (deduped.length >= 3) {
       return {
@@ -362,24 +375,29 @@ async function buildHallFavoritesSection(
     seenTitles.add(titleKey);
 
     const meta = getClassicHallMeal(pkg.slug);
-    const heroImage = meta ? resolveClassicHeroImage(meta) : pkg.heroImage;
+    const fallbackHero = meta ? resolveClassicHeroImage(meta) : pkg.heroImage;
+    const resolved = await resolveFoodImageryHero(pkg.slug, fallbackHero);
+    const heroImage = normalizeOwnedMediaPath(resolved.url);
 
     const card: ExploreRecipeCard = {
       id: recipeId,
-      title: pkg.title,
+      title: meta?.displayTitle || pkg.title,
       image: heroImage,
       imageAlt: meta?.imageAlt || pkg.imageAlt || pkg.title,
-      readyInMinutes: 45,
-      servings: 8,
-      summary: `Hall classic · ${pkg.protein} · ${pkg.cuisineLabel}`,
+      readyInMinutes: meta?.exploreReadyMinutes ?? pkg.prepMin + pkg.cookMin,
+      servings: meta?.exploreServings ?? 8,
+      summary:
+        meta?.exploreSummary ??
+        `Hall classic · ${pkg.protein} · ${pkg.cuisineLabel}${meta?.spiceLevelLabel ? ` · ${meta.spiceLevelLabel} spice` : ""}`,
       sourceUrl: "",
       cuisines: [],
       diets: [],
       _curatedSlug: pkg.slug,
       _pool: "hall_classic",
-      hookLine: "Firehouse staple · crew-approved",
+      hookLine: meta?.exploreHookLine ?? "Firehouse staple · crew-approved",
       primaryProtein: pkg.protein,
       comfortLabel: "Comfort Food",
+      badges: ["crew_favorite", "comfort_food"],
     };
     recipes.push(card);
   }

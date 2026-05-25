@@ -1,4 +1,5 @@
-import type { ClientRecipeResponse } from "@shared/schema";
+import { createDefaultGenerateRequest } from "@shared/generate-request-defaults";
+import type { ClientRecipeResponse, GenerateRequest } from "@shared/schema";
 import { GENERATION_INTENT_PREFETCH } from "@shared/generation-intent";
 import { apiRequest } from "@/lib/queryClient";
 import { buildFilterKey, putCached, getAllCached, removeCached, buildSignature, getRecentSignatures } from "@/lib/recipe-cache";
@@ -64,7 +65,7 @@ export function prefetchMealsIfReturning(_filters: Record<string, unknown>): voi
   /* intentionally empty — mount prefetch burned rate limits */
 }
 
-function prefetchMeals(filters: Record<string, unknown>, epoch: number): void {
+function prefetchMeals(filters: Partial<GenerateRequest>, epoch: number): void {
   if (epoch !== prefetchEpoch) return;
 
   const filterKey = buildFilterKey(filters);
@@ -78,14 +79,15 @@ function prefetchMeals(filters: Record<string, unknown>, epoch: number): void {
     existingIds.push(lastUsed);
   }
 
-  const body = {
+  const body: GenerateRequest = {
+    ...createDefaultGenerateRequest(),
     ...filters,
     generation_intent: GENERATION_INTENT_PREFETCH,
     request_id: makePrefetchRequestId(),
+    ...(existingIds.length > 0
+      ? { last_template_id: existingIds[existingIds.length - 1] }
+      : {}),
   };
-  if (existingIds.length > 0) {
-    body.last_template_id = existingIds[existingIds.length - 1];
-  }
 
   activeFetches++;
   const rid = body.request_id;

@@ -1,6 +1,6 @@
 import crypto from "crypto";
-import { log } from "./index";
-import type { GenerateResponse, GenerateRequest } from "@shared/schema";
+import { log } from "./logger.js";
+import type { GenerateResponse, GenerateRequest, PizzaRequest } from "@shared/schema";
 import { getSharedLocalDb, type SqliteDatabase } from "./sqlite";
 
 let db: SqliteDatabase;
@@ -71,15 +71,22 @@ export function buildCacheKey(templateId: string, request: GenerateRequest, chos
   return crypto.createHash("sha256").update(keyData).digest("hex").substring(0, 32);
 }
 
-export function buildPizzaCacheKey(conceptId: string, request: any): string {
+/** Bump when pizza recipe shape / instruction engine changes — invalidates stale cache rows. */
+export const PIZZA_CACHE_SCHEMA_VERSION = "pizza-steps-v2";
+
+export function buildPizzaCacheKey(conceptId: string, request: PizzaRequest): string {
   const keyData = JSON.stringify({
     type: "pizza",
+    schema: PIZZA_CACHE_SCHEMA_VERSION,
     concept: conceptId,
     crew_size: request.crew_size,
     time_available: request.time_available,
     dough_option: request.dough_option,
     style_preference: request.style_preference,
     heat_level: request.heat_level,
+    generation_mode: request.generation_mode || "standard",
+    crust_preference: request.crust_preference || "surprise",
+    sauce_preference: request.sauce_preference || "surprise",
     allergens_to_avoid: [...(request.allergens_to_avoid || [])].sort(),
     vegetarian_swap_needed: !!request.vegetarian_swap_needed,
   });
@@ -90,7 +97,11 @@ export function getCachedRecipe(cacheKey: string): GenerateResponse | null {
   const row = db.prepare("SELECT recipe_json FROM recipe_cache WHERE cache_key = ?").get(cacheKey) as any;
   if (!row) return null;
   try {
-    const parsed = JSON.parse(row.recipe_json);
+    const parsed = JSON.parse(row.recipe_json) as GenerateResponse;
+    if (parsed._fallback === true) {
+      db.prepare("DELETE FROM recipe_cache WHERE cache_key = ?").run(cacheKey);
+      return null;
+    }
     db.prepare("UPDATE recipe_cache SET hit_count = hit_count + 1 WHERE cache_key = ?").run(cacheKey);
     return parsed;
   } catch {
@@ -119,6 +130,9 @@ export function getCachedPizzaRecipe(cacheKey: string): any | null {
 }
 
 export function setCachedRecipe(cacheKey: string, templateId: number, recipe: GenerateResponse) {
+  if (recipe._fallback === true) {
+    return;
+  }
   db.prepare(`
     INSERT OR REPLACE INTO recipe_cache (cache_key, template_id, recipe_json, created_at, hit_count)
     VALUES (?, ?, ?, datetime('now'), 0)
@@ -132,6 +146,16 @@ export function setCachedPizzaRecipe(cacheKey: string, recipe: any) {
   `).run(cacheKey, 0, JSON.stringify(recipe));
 }
 
+/** Read-only window check — does not insert. Use recordRateLimit after successful action. */
+export function peekRateLimit(
+  key: string,
+  windowMs: number,
+  maxRequests: number,
+): { allowed: boolean; remaining: number; resetMs: number } {
+  return checkRateLimit(key, windowMs, maxRequests);
+}
+
+/** @deprecated Prefer peekRateLimit — name clarifies non-consuming read */
 export function checkRateLimit(key: string, windowMs: number, maxRequests: number): { allowed: boolean; remaining: number; resetMs: number } {
   const now = Date.now();
   const windowStart = now - windowMs;

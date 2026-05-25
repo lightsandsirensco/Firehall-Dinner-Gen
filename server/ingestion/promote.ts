@@ -4,12 +4,13 @@
 
 import { getRecipeById } from "../spoonacular.js";
 import { convertSpoonacularToGenerateResponse, inferActualProtein } from "../spoonacular-converter.js";
-import { upsertCatalogFromV2 } from "../recipe-catalog.js";
+import { upsertCatalogFromV2, upsertCatalogFromPublisher } from "../recipe-catalog.js";
 import { curatedInsertFromCanonical, curatedInsertFromIngestDraft } from "../curated-recipe-bridge.js";
 import { upsertCuratedRecipe } from "../curated-recipe-store.js";
 import { buildGenerateResponseFromDraft } from "./build-generate-response.js";
 import { log } from "../logger.js";
 import type { IngestRecipeDraft } from "../../shared/ingestion/recipe-ingest-schema.js";
+import { createDefaultGenerateRequest } from "../../shared/generate-request-defaults.js";
 import type { GenerateRequest } from "../../shared/schema.js";
 import {
   getStagingByFingerprint,
@@ -34,31 +35,29 @@ function defaultHallRequest(draft: IngestRecipeDraft): GenerateRequest {
     mixed: "any",
   };
   const mealFormat = (draft.mealFormat || "random") as GenerateRequest["meal_format"];
-  return {
+  return createDefaultGenerateRequest({
     crew_size: Math.max(6, draft.servingsBase || 6),
-    busy_level: "average",
     time_available: draft.totalMinutes <= 30 ? "20-30" : "30-45",
-    appliances: ["stove", "oven"],
     protein: proteinMap[draft.protein] || "any",
-    healthiness_preference: "balanced",
-    allergens_to_avoid: [],
-    cuisine_style: "any",
     meal_format: mealFormat,
-    prefer_different_style: false,
-  };
+  });
 }
 
 async function promotePublisherDraft(draft: IngestRecipeDraft): Promise<boolean> {
   try {
-    const withRecipe = {
-      ...draft,
-      generateResponse: draft.generateResponse || buildGenerateResponseFromDraft(draft),
-    };
+    const generateResponse = draft.generateResponse || buildGenerateResponseFromDraft(draft);
+    const withRecipe = { ...draft, generateResponse };
+
+    await upsertCatalogFromPublisher({ draft: withRecipe, recipe: generateResponse });
+
     const insert = curatedInsertFromIngestDraft(withRecipe);
     insert.status = "published";
     upsertCuratedRecipe(insert);
     updateStagingStatus(draft.fingerprint, "promoted");
-    log(`[ingestion] promoted publisher curated:${insert.slug} "${draft.title.slice(0, 40)}"`, "ingestion");
+    log(
+      `[ingestion] promoted publisher catalog+curated:${insert.slug} "${draft.title.slice(0, 40)}"`,
+      "ingestion",
+    );
     return true;
   } catch (err: unknown) {
     const msg = err instanceof Error ? err.message : String(err);
@@ -134,6 +133,20 @@ export async function promoteDraftToCatalog(
 
     updateStagingStatus(enriched.fingerprint, "promoted");
     log(`[ingestion] promoted catalog spoonacular:${enriched.spoonacularId} "${enriched.title.slice(0, 40)}"`, "ingestion");
+
+    try {
+      const { foodImageryContextFromDraft } = await import("../food-imagery/attach-hero.js");
+      const { ensureFoodImageryQueued } = await import("../food-imagery/pipeline.js");
+      await ensureFoodImageryQueued(foodImageryContextFromDraft(enriched), {
+        recipeId: enriched.spoonacularId
+          ? `spoonacular:${enriched.spoonacularId}`
+          : undefined,
+      });
+    } catch (imgErr: unknown) {
+      const imgMsg = imgErr instanceof Error ? imgErr.message : String(imgErr);
+      log(`[ingestion] food-imagery queue warn: ${imgMsg}`, "ingestion");
+    }
+
     return true;
   } catch (err: unknown) {
     const msg = err instanceof Error ? err.message : String(err);

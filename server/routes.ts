@@ -2,20 +2,50 @@ import type { Express, Request, Response, NextFunction } from "express";
 import { type Server } from "http";
 import crypto from "crypto";
 import cookieParser from "cookie-parser";
-import { generateRequestSchema, pizzaRequestSchema, hallVoteCreateSchema, type GenerateRequest, type GenerateResponse, type ClientRecipeResponse, type ClientIngredient, type ClientStep, type ClientProteinSafety, type ClientPlating, type ClientTiming } from "@shared/schema";
+import {
+  generateRequestSchema,
+  pizzaRequestSchema,
+  hallVoteCreateSchema,
+  emailRecipeSchema,
+  emailShoppingListSchema,
+  type GenerateRequest,
+  type GenerateResponse,
+  type ClientRecipeResponse,
+  type ClientIngredient,
+  type ClientStep,
+  type ClientProteinSafety,
+  type ClientPlating,
+  type ClientTiming,
+} from "@shared/schema";
 import { inferBusyLevelFromTime } from "@shared/busy-level";
+import { createDefaultGenerateRequest } from "@shared/generate-request-defaults";
+import { buildMinimalGenerateResponse } from "@shared/minimal-generate-response";
+import type { VoteOptionInput } from "@shared/schema";
 import { loadTemplates, filterTemplates, filterTemplatesWithRelaxation, pickTemplate, chooseProtein } from "./templates";
 import { scanRecipeForAllergens, autoSubstituteAllergens, substituteTextForAllergens, buildAllergenAvoidList } from "./allergens";
 import { auditAndFixRecipe as labelAudit, inferIngredientCategory, type LabelAuditContext } from "./labelAudit";
 import { auditCrewScale, type CrewScaleAuditResult } from "./crew-scale-audit";
 import { generateRecipe, generateRecipeFromPantry, repairRecipe, buildSafeFallbackRecipe } from "./ai";
 import { getVarietyConstraints, recordRecipe } from "./variety-memory";
-import { generatePizzaRecipe, pickPizzaConcept } from "./pizza-ai";
+import { generatePizzaRecipe } from "./pizza-ai";
+import { pickPizzaConcept, getFeaturedPizzaIds } from "./pizza-variety";
+import { PIZZA_CONCEPT_REGISTRY } from "../shared/pizza-concepts.js";
 import { buildPizzaTemplate } from "./pizza-templates.js";
 import { finalizePizzaRecipe } from "./pizza-finalize.js";
 import { subscribeToList, trackRecipeEvent, trackShoppingListEvent, validateKlaviyoConfig } from "./klaviyo";
 import { getFromPool, refillPool, getPoolSize } from "./recipe-pool";
-import { initHallVoteTables, createHallVote, getHallVote, castBallot, closeHallVote, hashVoterFingerprint } from "./hall-vote-store";
+import {
+  initHallVoteTables,
+  createHallVote,
+  getHallVote,
+  castBallot,
+  closeHallVote,
+  hashVoterFingerprint,
+} from "./hall-vote-store";
+
+function routeParam(value: string | string[] | undefined): string {
+  return Array.isArray(value) ? (value[0] ?? "") : (value ?? "");
+}
 import { addFavourite, getFavourites, removeFavourite, getAllFavouriteIds } from "./favourites";
 import { getTopCachedRecipes, getVotedRecipeNames } from "./cache-store";
 import { buildFallbackRecipe } from "./fallback-recipe";
@@ -31,7 +61,16 @@ import {
   parseGenerationRateContext,
   enforceUserGenerationRateLimits,
   recordUserGenerationRateLimit,
+  enforcePizzaGenerationRateLimits,
+  recordPizzaGenerationRateLimit,
 } from "./generation-rate-limit.js";
+import { generationTimeoutMs, pizzaTimeoutMs, withTimeout } from "./generation-timeout.js";
+import { generationError } from "../shared/generation-errors.js";
+import {
+  formatZodValidationForClient,
+  formatPizzaZodValidationForClient,
+  logGenerateValidationFailure,
+} from "./request-validation.js";
 import { initRecipeCatalog } from "./recipe-catalog.js";
 import {
   initIngestionStore,
@@ -42,18 +81,38 @@ import {
 } from "./ingestion/ingestion-store.js";
 import { promoteDraftByFingerprint } from "./ingestion/promote.js";
 import { initCuratedRecipeStore, getCuratedStoreStats, getCuratedRecipeById, listCuratedRecipeSummaries } from "./curated-recipe-store.js";
-import { pickCatalogExploreFallback, pickCatalogRecipeForGenerate } from "./recipe-ranker.js";
+import {
+  pickCatalogExploreFallback,
+  pickCatalogRecipeForGenerate,
+  pickCuratedExploreSearchCard,
+} from "./recipe-ranker.js";
 import { fetchBestSpoonacularRecipe } from "./spoonacular-converter";
 import { runV2Generate } from "./recipe-engine-v2";
 import { runV2Fallback } from "./v2-fallback";
 import { isTemplateFallbackAllowed } from "./recipe-fallback-policy";
 import { enforceCarbs, trackCarb, ensureRiceForRiceDishes } from "./carb-rules";
 import { completeFirehallPlate } from "./meal-composition";
-import { enhanceRecipeStepsSync, buildEnhanceContextFromTitle } from "./instruction-enhancer.js";
+import { resolveMealBuildSteps } from "./meal-instructions.js";
+import { detectMealIdentity } from "../shared/meal-semantics.js";
+import {
+  runRecipeQualityGate,
+  applyQualityTitleFix,
+} from "../shared/recipe-quality-gate.js";
+import { polishFirehallSteps } from "../shared/firehall-instruction-voice.js";
 import { adjustMacrosAfterCompose, assertMealSemanticsOrLog, scorePlateTrust } from "./meal-sanity";
 import { applyCrewPortionFloors, hallCleanupTip, hallProTips } from "./firehall-voice";
 import { pickStructure, trackStructure, STRUCTURE_DISPLAY, type StructureType } from "./structure-variety";
 import { log, logVerbose, logError, clip, formatLogFields, maskEmail } from "./logger";
+import { requireAdmin } from "./admin-auth.js";
+import { requireCsrf } from "./csrf.js";
+import {
+  sanitizeClientGenerationMeta,
+  sanitizeGenerateRequest,
+  sanitizePizzaRequest,
+} from "./sanitize-request.js";
+import { getClientIp } from "./client-ip.js";
+import { enforceExploreRateLimit } from "./explore-rate-limit.js";
+import { enforceEmailRateLimit } from "./email-rate-limit.js";
 import { validateAndFixRecipe, validateRecipe, computeSignature, recordSignature, isBlockedByRecentVariety, type RecipeValidationContext } from "./validateRecipe";
 import {
   initCacheStore,
@@ -88,12 +147,6 @@ const BOT_UA_PATTERNS = [
   /python-requests/i, /httpie/i, /postman/i,
 ];
 
-function getClientIp(req: Request): string {
-  const forwarded = req.headers["x-forwarded-for"];
-  if (typeof forwarded === "string") return forwarded.split(",")[0].trim();
-  return req.ip || req.socket.remoteAddress || "unknown";
-}
-
 function isBot(ua: string): boolean {
   return BOT_UA_PATTERNS.some((p) => p.test(ua));
 }
@@ -115,6 +168,17 @@ export async function registerRoutes(
     log(`WARNING: ${klaviyoCheck.error} — email features will fail`, "klaviyo");
   }
 
+  const { getFoodImageryConfig } = await import("./food-imagery/config.js");
+  const imageryCfg = getFoodImageryConfig();
+  if (imageryCfg.enabled) {
+    log(`Food imagery pipeline enabled (model=${imageryCfg.model})`, "catalog");
+  } else {
+    log(
+      "Food imagery pipeline disabled — set FOOD_IMAGERY_ENABLED=true and OPENAI_API_KEY in Secrets",
+      "catalog",
+    );
+  }
+
   const poolWarmupEnabled = process.env.ENABLE_POOL_WARMUP === "true";
   if (poolWarmupEnabled) {
     setTimeout(() => {
@@ -126,6 +190,8 @@ export async function registerRoutes(
   }
 
   app.use(cookieParser());
+
+  app.use("/api/admin", requireAdmin);
 
   app.use((req: Request, res: Response, next: NextFunction) => {
     if (!req.cookies?.session_id) {
@@ -185,19 +251,6 @@ export async function registerRoutes(
   }
 
   function normalizeToClientFormat(recipe: any, crewSize: number, mealFormat: string): ClientRecipeResponse {
-    const recipeTitle = recipe.title || "Tonight's dinner";
-    const enhanceCtx = buildEnhanceContextFromTitle(recipeTitle, {
-      protein: recipe.chosen_protein || recipe.primary_protein_source,
-      totalMinutes: recipe.timing?.total_minutes ?? recipe.timing?.total_min,
-      crewSize,
-      ingredients: (recipe.ingredients || []).map((ing: any) => ing.item || ing.name || ""),
-      mealFormat,
-    });
-
-    if (Array.isArray(recipe.steps) && recipe.steps.length > 0) {
-      recipe.steps = enhanceRecipeStepsSync(recipe.steps, enhanceCtx);
-    }
-
     const ingredients: ClientIngredient[] = (recipe.ingredients || []).map((ing: any) => {
       const { qty, unit } = parseQtyUnit(ing.amount || "");
       return {
@@ -210,20 +263,25 @@ export async function registerRoutes(
 
     const steps: ClientStep[] = (recipe.steps || []).map((step: any, i: number) => {
       const heading = typeof step === "string" ? "" : (step.heading || step.title || "");
-      const body = typeof step === "string" ? step : (step.body || step.instructions || "");
+      const body = typeof step === "string" ? step : (step.body || step.instruction || step.instructions || "");
+
+      let heat =
+        typeof step === "object" && step.cooking_method
+          ? String(step.cooking_method).replace(/_/g, "-")
+          : "";
+      let minutes =
+        typeof step === "object" && typeof step.estimated_time === "number"
+          ? step.estimated_time
+          : 0;
 
       // Extract heat and time from structured heading parenthetical:
-      // e.g. "Sear the chicken (medium-high, 5–7 min)" → heat="medium-high", minutes=6
-      // e.g. "Plate and serve (no heat, 2 min)" → heat="no heat", minutes=2
-      let heat = "";
-      let minutes = 0;
       const parenMatch = heading.match(/\(([^)]+)\)\s*$/);
-      if (parenMatch) {
+      if (parenMatch && (!heat || !minutes)) {
         const parts = parenMatch[1].split(",").map((p: string) => p.trim());
         if (parts.length >= 2) {
-          heat = parts[0];
+          if (!heat) heat = parts[0];
           const timeMatch = parts[1].match(/(\d+)[–\-](\d+)|(\d+)/);
-          if (timeMatch) {
+          if (timeMatch && !minutes) {
             const lo = parseInt(timeMatch[1] || timeMatch[3] || "0");
             const hi = timeMatch[2] ? parseInt(timeMatch[2]) : lo;
             minutes = Math.round((lo + hi) / 2);
@@ -373,20 +431,27 @@ export async function registerRoutes(
       title: safeTitle,
       ingredients: safeIngredients,
       steps: safeSteps,
-      meal_style: originalRecipe.meal_style || "Skillet",
-      base_carb: "none",
-      cooking_method: "stovetop",
+      meal_style: originalRecipe.meal_style || "skillet",
       tags: {
-        ...(originalRecipe.tags || {}),
-        base_carb: "none",
+        cuisine: originalRecipe.tags?.cuisine || "american",
         cooking_method: "stovetop",
-        meal_style: "skillet",
+        base_carb: "none",
+        key_ingredients: originalRecipe.tags?.key_ingredients || [],
+        high_protein: originalRecipe.tags?.high_protein ?? true,
+        high_fiber: originalRecipe.tags?.high_fiber ?? false,
+        quick_cleanup: originalRecipe.tags?.quick_cleanup ?? true,
       },
     };
   }
 
   function buildResponse(validation: import("./validateRecipe").ValidationResult, extras: Record<string, any>, debug: boolean, crewSize: number = 0, mealFormat: string = "", allergens: string[] = [], auditCtx?: LabelAuditContext, sessionKey?: string): Record<string, any> {
     let recipe = validation.recipe;
+    if (extras._recipe_source) {
+      recipe = { ...recipe, _recipe_source: extras._recipe_source };
+    }
+    if (extras._fallback === true) {
+      recipe = { ...recipe, _fallback: true };
+    }
 
     if (allergens.length > 0) {
       const scan = scanRecipeForAllergens(recipe.ingredients, recipe.steps, recipe.title, allergens);
@@ -426,8 +491,15 @@ export async function registerRoutes(
           ...recipe,
           veg_option: {
             ...vo,
-            title: vo.title ? substituteTextForAllergens(vo.title, allergens) : vo.title,
-            swap_instructions: vo.swap_instructions ? substituteTextForAllergens(vo.swap_instructions, allergens) : vo.swap_instructions,
+            swap_protein: vo.swap_protein
+              ? substituteTextForAllergens(vo.swap_protein, allergens)
+              : vo.swap_protein,
+            plating_notes: vo.plating_notes
+              ? substituteTextForAllergens(vo.plating_notes, allergens)
+              : vo.plating_notes,
+            steps: Array.isArray(vo.steps)
+              ? vo.steps.map((t: string) => substituteTextForAllergens(t, allergens))
+              : vo.steps,
           },
         };
       }
@@ -475,7 +547,11 @@ export async function registerRoutes(
       protein: ctx.chosenProtein || recipe.chosen_protein || "any",
       sessionKey,
     });
-    recipe = composed;
+    const recipeSource = composed._recipe_source || extras._recipe_source;
+    recipe = {
+      ...composed,
+      steps: resolveMealBuildSteps(composed, mealFormat, effectiveCrewSize, recipeSource),
+    };
     if (composeFixes.length > 0) {
       log(`[compose] Applied ${composeFixes.length} plate fixes: ${composeFixes.join("; ")}`, "compose");
     }
@@ -499,10 +575,37 @@ export async function registerRoutes(
 
     recipe = {
       ...recipe,
+      steps: polishFirehallSteps(recipe.steps || []),
       ingredients: applyCrewPortionFloors(recipe.ingredients || [], effectiveCrewSize),
       cleanup_tip: recipe.cleanup_tip || hallCleanupTip(),
       pro_tips: recipe.pro_tips?.length ? recipe.pro_tips : hallProTips(effectiveCrewSize, 4),
     };
+
+    const importedSource =
+      extras._source === "spoonacular_v2" ||
+      extras._source === "catalog" ||
+      recipe._imported === true;
+    let quality = runRecipeQualityGate(recipe, {
+      mealFormat,
+      identity: detectMealIdentity(recipe.title || "", mealFormat),
+      protein: ctx.chosenProtein || recipe.chosen_protein,
+      crewSize: effectiveCrewSize,
+      importedSource,
+    });
+    if (!quality.pass) {
+      recipe = applyQualityTitleFix(recipe, mealFormat);
+      quality = runRecipeQualityGate(recipe, {
+        mealFormat,
+        identity: detectMealIdentity(recipe.title || "", mealFormat),
+        protein: ctx.chosenProtein || recipe.chosen_protein,
+        crewSize: effectiveCrewSize,
+        importedSource,
+      });
+      log(
+        `[quality-gate] "${clip(recipe.title, 40)}" score=${quality.score} issues=[${quality.issues.join(",")}] msgs=${quality.messages.slice(0, 3).join("; ")}`,
+        "generate",
+      );
+    }
 
     const finalBaseCarb = recipe.tags?.base_carb || "";
     if (finalBaseCarb && finalBaseCarb !== "none") {
@@ -575,7 +678,7 @@ export async function registerRoutes(
     return base;
   }
 
-  function sendRecipeResponse(res: Response, validation: import("./validateRecipe").ValidationResult, extras: Record<string, any>, debug: boolean, crewSize: number, mealFormat: string, allergens: string[], auditCtx: LabelAuditContext | undefined, ipHash: string, sessionId: string, rateCtx: ReturnType<typeof parseGenerationRateContext>) {
+  async function sendRecipeResponse(res: Response, validation: import("./validateRecipe").ValidationResult, extras: Record<string, any>, debug: boolean, crewSize: number, mealFormat: string, allergens: string[], auditCtx: LabelAuditContext | undefined, ipHash: string, sessionId: string, rateCtx: ReturnType<typeof parseGenerationRateContext>) {
     const sessKey = `${ipHash}:${sessionId}`;
     const result = buildResponse(validation, extras, debug, crewSize, mealFormat, allergens, auditCtx, sessKey);
     if (extras._spoonacular_title && result.title !== extras._spoonacular_title) {
@@ -583,9 +686,16 @@ export async function registerRoutes(
       result.title = extras._spoonacular_title;
     }
     const signature = validation.signature || result._signature || "";
+    const { enrichClientRecipeWithHero, queueMealHeroAfterGenerate } = await import(
+      "./food-imagery/meal-integration.js",
+    );
+    const enriched = await enrichClientRecipeWithHero(result, signature);
+    if (validation.recipe && enriched._id) {
+      queueMealHeroAfterGenerate(validation.recipe, String(enriched._id), signature);
+    }
     addSessionSignature(sessKey, signature);
     recordSuccessfulGeneration(ipHash, sessionId, rateCtx, signature);
-    return res.json(result);
+    return res.json(enriched);
   }
 
   function recordSuccessfulGeneration(
@@ -665,17 +775,11 @@ export async function registerRoutes(
     return remixed;
   }
 
-  app.post("/api/generate", async (req: Request, res: Response) => {
+  app.post("/api/generate", requireCsrf, async (req: Request, res: Response) => {
     try {
       const ua = req.headers["user-agent"] || "";
       if (isBot(ua)) {
         return res.status(403).json({ message: "Automated requests are not allowed." });
-      }
-
-      const csrfCookie = req.cookies?.csrf_token;
-      const csrfHeader = req.headers["x-csrf-token"] as string;
-      if (!csrfCookie || !csrfHeader || csrfCookie !== csrfHeader) {
-        return res.status(403).json({ message: "Invalid security token. Please refresh the page and try again." });
       }
 
       const sessionId = (req as any)._sessionId || "unknown";
@@ -691,55 +795,65 @@ export async function registerRoutes(
       const reserveCheck = checkAndReserveRequest(sessionKey, requestId);
       if (reserveCheck.isDuplicate) {
         log(`[rate] Duplicate request_id=${requestId} — already completed`, "rate");
-        return res.status(429).json({
-          message: "Duplicate request detected. Please wait for the current recipe to finish.",
-          retry_after_seconds: 5,
-        });
+        return res.status(409).json(
+          generationError("duplicate_request", "This request already completed. Wait a moment or tap Generate again.", {
+            retry_after_seconds: 3,
+            request_id: requestId,
+          }),
+        );
       }
       if (reserveCheck.isInFlight) {
         log(`[rate] In-flight request_id=${requestId} — blocking concurrent duplicate`, "rate");
-        return res.status(429).json({
-          message: "A recipe is already being generated. Please wait.",
-          retry_after_seconds: 5,
-        });
+        return res.status(409).json(
+          generationError("in_flight", "A recipe is already generating for this session. Please wait.", {
+            retry_after_seconds: 5,
+            request_id: requestId,
+          }),
+        );
       }
 
       const userLimits = enforceUserGenerationRateLimits(ipHash, sessionId, rateCtx);
       if (!userLimits.allowed) {
         cancelRequest(sessionKey, requestId);
-        return res.status(userLimits.status ?? 429).json({
-          message: userLimits.message,
-          retry_after_seconds: userLimits.retryAfterSeconds ?? 60,
-        });
+        return res.status(userLimits.status ?? 429).json(
+          generationError("rate_limited", userLimits.message || "Rate limit exceeded.", {
+            retry_after_seconds: userLimits.retryAfterSeconds ?? 60,
+            request_id: requestId,
+          }),
+        );
       }
 
       const parsed = generateRequestSchema.safeParse(req.body);
       if (!parsed.success) {
         cancelRequest(sessionKey, requestId);
-        return res.status(400).json({ message: "Invalid request: " + parsed.error.message });
+        logGenerateValidationFailure(parsed.error, req.body);
+        const { status, body } = formatZodValidationForClient(parsed.error);
+        return res.status(status).json(body);
       }
 
-      const request: GenerateRequest = {
+      const request: GenerateRequest = sanitizeGenerateRequest({
         ...parsed.data,
         busy_level: inferBusyLevelFromTime(parsed.data.time_available),
-      };
+      });
 
       if (request.use_what_we_have && (!request.ingredients_on_hand || request.ingredients_on_hand.length === 0)) {
         cancelRequest(sessionKey, requestId);
         return res.status(400).json({ message: "Please enter at least one ingredient when using 'Use What's in the Fridge' mode." });
       }
 
-      // ─── GENERATE PIPELINE (real recipes first) ─────────────────────────────
+      // ─── GENERATE PIPELINE (imported recipes first) ─────────────────────────
       //
-      // 1. Catalog (strict) → 2. Spoonacular V2 → 3. Catalog (relaxed) →
-      // 4. V2 (relaxed) → 5. Session cache → 6. Template fallback (last resort)
+      // 1. Catalog (publisher + Spoonacular imports) → 2. Live Spoonacular V2 →
+      // 3. Catalog relaxed → 4. V2 relaxed → 5. Session cache (real meals only) →
+      // 6. Template fallback (last resort — never cached)
       // Pantry: AI from on-hand ingredients; template only if AI fails (no LLM remix by default)
       //
       const allergens = request.allergens_to_avoid || [];
       const startTime = Date.now();
       const debugMode = req.query.debug === "1" || (req.body as any).debug === true;
-      const clientCurrentSig = (req.body as any).currentRecipeSignature || "";
-      const clientRecentSigs = (req.body as any).recentSignatures || [];
+      const clientMeta = sanitizeClientGenerationMeta((req.body as Record<string, unknown>) || {});
+      const clientCurrentSig = clientMeta.currentRecipeSignature;
+      const clientRecentSigs = clientMeta.recentSignatures;
 
       if (clientCurrentSig) {
         addSessionSignature(`${ipHash}:${sessionId}`, clientCurrentSig);
@@ -778,7 +892,9 @@ export async function registerRoutes(
         let ptRecipe: GenerateResponse | null = null;
         try {
           if (ptChosen) {
-            const ptAI = await generateRecipeFromPantry(ptChosen, request, ptVariety, ptStructure);
+            const ptAI = await withTimeout("pantry_ai", generationTimeoutMs(), () =>
+              generateRecipeFromPantry(ptChosen, request, ptVariety, ptStructure),
+            );
             ptRecipe = ptAI.recipe;
           }
         } catch (ptErr: any) {
@@ -925,7 +1041,9 @@ export async function registerRoutes(
         }
       }
 
-      const v2Result = await runV2Generate(request, { sessionKey: v2SessionKey });
+      const v2Result = await withTimeout("spoonacular_v2", generationTimeoutMs(), () =>
+        runV2Generate(request, { sessionKey: v2SessionKey }),
+      );
       const chosenProtein = v2Result?.protein ?? request.protein ?? "chicken";
       auditCtx.chosenProtein = chosenProtein;
       const v2CacheKey = buildCacheKey("v2", request, chosenProtein);
@@ -1047,7 +1165,9 @@ export async function registerRoutes(
       }
 
       // ── Relaxed Spoonacular V2 ─────────────────────────────────────────────
-      const v2Relaxed = await runV2Generate(request, { sessionKey: v2SessionKey, relaxed: true });
+      const v2Relaxed = await withTimeout("spoonacular_v2_relaxed", generationTimeoutMs(), () =>
+        runV2Generate(request, { sessionKey: v2SessionKey, relaxed: true }),
+      );
       if (v2Relaxed) {
         const relaxedProtein = v2Relaxed.protein;
         auditCtx.chosenProtein = relaxedProtein;
@@ -1157,7 +1277,9 @@ export async function registerRoutes(
 
       log("[generate] last_resort template_fallback reason=all_real_sources_exhausted", "generate");
 
-      const fb = await runV2Fallback(request, "all_real_sources_exhausted", clientRecentSigs);
+      const fb = await withTimeout("template_fallback", 15_000, () =>
+        runV2Fallback(request, "all_real_sources_exhausted", clientRecentSigs),
+      );
 
       const fbAuditCtx: LabelAuditContext = { ...auditCtx, chosenProtein: fb.protein };
       const fbValCtx: RecipeValidationContext = {
@@ -1172,7 +1294,6 @@ export async function registerRoutes(
 
       const fbWithStyle = { ...fb.recipe, _fallback: true, meal_style: fb.structureDisplay };
       const fbVal = validateAndFixRecipe(fbWithStyle as any, fbValCtx);
-      setCachedRecipe(v2CacheKey, 0, fbVal.recipe);
       logUsage({ cacheKey: v2CacheKey, templateId: 0, cacheHit: false, latencyMs: Date.now() - startTime, ipHash, sessionId });
       log(
         `[generate] last_resort success structure=${fb.structure} protein=${fb.protein} duration=${Date.now() - startTime}ms`,
@@ -1197,12 +1318,22 @@ export async function registerRoutes(
         rateCtx,
       );
 
-    } catch (error: any) {
+    } catch (error: unknown) {
       const failCtx = parseGenerationRateContext(req);
       const failKey = `${hashIp(getClientIp(req))}:${(req as any)._sessionId || "unknown"}`;
       cancelRequest(failKey, failCtx.requestId);
+      const msg = error instanceof Error ? error.message : String(error);
       logError("generate", "request failed", error);
-      return res.status(500).json({ message: error.message || "Failed to generate recipe" });
+      const isTimeout = /timed out/i.test(msg);
+      return res.status(isTimeout ? 504 : 500).json(
+        generationError(
+          isTimeout ? "upstream_timeout" : "generation_failed",
+          isTimeout
+            ? "Generation took too long. Try again — cached meals load faster."
+            : msg || "Failed to generate recipe",
+          { request_id: failCtx.requestId, retry_after_seconds: isTimeout ? 10 : 5 },
+        ),
+      );
     }
   });
 
@@ -1219,18 +1350,30 @@ export async function registerRoutes(
     return res.json({ token });
   });
 
-  app.post("/api/email-recipe", async (req: Request, res: Response) => {
+  app.post("/api/email-recipe", requireCsrf, async (req: Request, res: Response) => {
     try {
-      const { email, recipe_title, primary_protein, ingredients, steps, pro_tips, macros, healthiness_level, crew_size, timestamp } = req.body;
-
-      if (!email || !recipe_title) {
-        return res.status(400).json({ message: "Email and recipe title are required." });
+      const parsed = emailRecipeSchema.safeParse(req.body);
+      if (!parsed.success) {
+        return res.status(400).json({
+          message: "Invalid email request.",
+          errors: parsed.error.flatten().fieldErrors,
+        });
       }
 
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(email)) {
-        return res.status(400).json({ message: "Please enter a valid email address." });
-      }
+      const {
+        email,
+        recipe_title,
+        primary_protein,
+        ingredients,
+        steps,
+        pro_tips,
+        macros,
+        healthiness_level,
+        crew_size,
+        timestamp,
+      } = parsed.data;
+
+      if (!enforceEmailRateLimit(req, res, email)) return;
 
       const klaviyo = validateKlaviyoConfig();
       if (!klaviyo.ok) {
@@ -1294,18 +1437,19 @@ export async function registerRoutes(
     }
   });
 
-  app.post("/api/email-shopping-list", async (req: Request, res: Response) => {
+  app.post("/api/email-shopping-list", requireCsrf, async (req: Request, res: Response) => {
     try {
-      const { email, recipe_title, shopping_list_sections, generator_type, timestamp } = req.body;
-
-      if (!email || !recipe_title) {
-        return res.status(400).json({ message: "Email and recipe title are required." });
+      const parsed = emailShoppingListSchema.safeParse(req.body);
+      if (!parsed.success) {
+        return res.status(400).json({
+          message: "Invalid email request.",
+          errors: parsed.error.flatten().fieldErrors,
+        });
       }
 
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(email)) {
-        return res.status(400).json({ message: "Please enter a valid email address." });
-      }
+      const { email, recipe_title, shopping_list_sections, generator_type, timestamp } = parsed.data;
+
+      if (!enforceEmailRateLimit(req, res, email)) return;
 
       const klaviyo = validateKlaviyoConfig();
       if (!klaviyo.ok) {
@@ -1317,7 +1461,12 @@ export async function registerRoutes(
         subscribeToList(email),
         trackShoppingListEvent(email, {
           recipe_title,
-          shopping_list_sections: shopping_list_sections || [],
+          shopping_list_sections: (shopping_list_sections || []).map((section) => ({
+            title: section.title,
+            items: section.items.map((item) =>
+              [item.name, item.amount, item.notes].filter(Boolean).join(" — "),
+            ),
+          })),
           generator_type: generator_type || "meal",
           timestamp: timestamp || new Date().toISOString(),
         }),
@@ -1360,56 +1509,58 @@ export async function registerRoutes(
     }
   });
 
-  app.post("/api/generate-pizza", async (req: Request, res: Response) => {
+  app.get("/api/pizza/menu", (_req: Request, res: Response) => {
+    res.json({
+      featured: getFeaturedPizzaIds(8),
+      concepts: PIZZA_CONCEPT_REGISTRY.map((c) => ({
+        id: c.id,
+        title: c.title,
+        category: c.category,
+        emoji: c.heroEmoji,
+        gradient: c.heroGradient,
+        badges: c.badges.slice(0, 2),
+      })),
+      total: PIZZA_CONCEPT_REGISTRY.length,
+    });
+  });
+
+  async function respondWithPizza(res: Response, recipe: import("@shared/schema").PizzaResponse) {
+    const { enrichPizzaWithHero, queuePizzaHeroAfterGenerate } = await import(
+      "./food-imagery/meal-integration.js",
+    );
+    const enriched = await enrichPizzaWithHero(recipe);
+    queuePizzaHeroAfterGenerate(recipe);
+    return res.json(enriched);
+  }
+
+  app.post("/api/generate-pizza", requireCsrf, async (req: Request, res: Response) => {
     try {
       const ua = req.headers["user-agent"] || "";
       if (isBot(ua)) {
         return res.status(403).json({ message: "Automated requests are not allowed." });
       }
 
-      const csrfCookie = req.cookies?.csrf_token;
-      const csrfHeader = req.headers["x-csrf-token"] as string;
-      if (!csrfCookie || !csrfHeader || csrfCookie !== csrfHeader) {
-        return res.status(403).json({ message: "Invalid security token. Please refresh the page and try again." });
-      }
-
       const sessionId = (req as any)._sessionId || "unknown";
       const clientIp = getClientIp(req);
       const ipHash = hashIp(clientIp);
 
-      const burstCheck = checkRateLimit(`burst:${ipHash}`, 60_000, 3);
-      if (!burstCheck.allowed) {
-        return res.status(429).json({
-          message: "Slow down! Maximum 3 recipes per minute. Please wait a moment.",
-          retry_after_seconds: 60,
-        });
-      }
-
-      const hourlyCheck = checkRateLimit(`hourly:${ipHash}`, 3_600_000, 10);
-      if (!hourlyCheck.allowed) {
-        return res.status(429).json({
-          message: `Hourly limit reached (10 recipes/hour). Try again later.`,
-          retry_after_seconds: 3600,
-        });
-      }
-
-      const sessionBurst = checkRateLimit(`burst:session:${sessionId}`, 60_000, 3);
-      if (!sessionBurst.allowed) {
-        return res.status(429).json({ message: "Slow down! Maximum 3 recipes per minute.", retry_after_seconds: 60 });
-      }
-
-      const sessionHourly = checkRateLimit(`hourly:session:${sessionId}`, 3_600_000, 10);
-      if (!sessionHourly.allowed) {
-        return res.status(429).json({ message: "Hourly limit reached (10 recipes/hour). Try again later.", retry_after_seconds: 3600 });
+      const pizzaLimits = enforcePizzaGenerationRateLimits(ipHash);
+      if (!pizzaLimits.allowed) {
+        return res.status(pizzaLimits.status ?? 429).json(
+          generationError("rate_limited", pizzaLimits.message || "Slow down on pizza.", {
+            retry_after_seconds: pizzaLimits.retryAfterSeconds ?? 30,
+          }),
+        );
       }
 
       const parsed = pizzaRequestSchema.safeParse(req.body);
       if (!parsed.success) {
-        return res.status(400).json({ message: "Invalid request: " + parsed.error.message });
+        const { status, body } = formatPizzaZodValidationForClient(parsed.error);
+        return res.status(status).json(body);
       }
 
-      const request = parsed.data;
-      const conceptId = pickPizzaConcept(request.allergens_to_avoid, request.last_pizza_style_id);
+      const request = sanitizePizzaRequest(parsed.data);
+      const conceptId = pickPizzaConcept(request);
       const cacheKey = buildPizzaCacheKey(conceptId, request);
       const startTime = Date.now();
 
@@ -1424,7 +1575,7 @@ export async function registerRoutes(
           ipHash,
           sessionId,
         });
-        return res.json(cached);
+        return respondWithPizza(res, cached);
       }
 
       const dailyBudget = parseFloat(process.env.DAILY_LLM_BUDGET_USD || "5.00");
@@ -1440,16 +1591,19 @@ export async function registerRoutes(
           "template",
         );
         setCachedPizzaRecipe(cacheKey, templateRecipe);
-        return res.json(templateRecipe);
+        return respondWithPizza(res, templateRecipe);
       }
 
-      const { recipe, tokensIn, tokensOut } = await generatePizzaRecipe(request, conceptId);
+      const { recipe, tokensIn, tokensOut } = await withTimeout("pizza_ai", pizzaTimeoutMs(), () =>
+        generatePizzaRecipe(request, conceptId),
+      );
 
       const estimatedCost =
         (tokensIn / 1000) * COST_PER_1K_INPUT +
         (tokensOut / 1000) * COST_PER_1K_OUTPUT;
 
       setCachedPizzaRecipe(cacheKey, recipe);
+      recordPizzaGenerationRateLimit(ipHash);
 
       logUsage({
         cacheKey,
@@ -1465,16 +1619,13 @@ export async function registerRoutes(
 
       log(`Pizza generated in ${Date.now() - startTime}ms | ${tokensIn}in/${tokensOut}out | ~$${estimatedCost.toFixed(5)}`, "perf");
 
-      return res.json(recipe);
+      return respondWithPizza(res, recipe);
     } catch (error: any) {
       logError("pizza", "generate failed", error);
       try {
         const parsed = pizzaRequestSchema.safeParse(req.body);
         if (parsed.success) {
-          const conceptId = pickPizzaConcept(
-            parsed.data.allergens_to_avoid,
-            parsed.data.last_pizza_style_id,
-          );
+          const conceptId = pickPizzaConcept(parsed.data);
           const fallback = finalizePizzaRecipe(
             buildPizzaTemplate(conceptId, parsed.data),
             parsed.data,
@@ -1482,7 +1633,7 @@ export async function registerRoutes(
             "template",
           );
           log(`[pizza] emergency template fallback: ${conceptId}`, "pizza");
-          return res.json(fallback);
+          return respondWithPizza(res, fallback);
         }
       } catch {
         /* ignore */
@@ -1491,14 +1642,8 @@ export async function registerRoutes(
     }
   });
 
-  app.post("/api/hall-vote", async (req: Request, res: Response) => {
+  app.post("/api/hall-vote", requireCsrf, async (req: Request, res: Response) => {
     try {
-      const csrfCookie = req.cookies?.csrf_token;
-      const csrfHeader = req.headers["x-csrf-token"] as string;
-      if (!csrfCookie || !csrfHeader || csrfCookie !== csrfHeader) {
-        return res.status(403).json({ message: "Invalid security token. Please refresh the page." });
-      }
-
       const sessionId = (req as any)._sessionId || "unknown";
       const clientIp = getClientIp(req);
       const ipHash = hashIp(clientIp);
@@ -1514,8 +1659,17 @@ export async function registerRoutes(
       }
 
       const { title, options } = parsed.data;
+      const voteOptions: VoteOptionInput[] = options.map((opt) => ({
+        name: opt.name,
+        description: opt.description,
+        est_cost: opt.est_cost,
+        est_time: opt.est_time,
+        recipe_payload:
+          (opt.recipe_payload as GenerateResponse | undefined) ??
+          buildMinimalGenerateResponse(opt.name),
+      }));
 
-      const { voteId } = createHallVote(title, options, sessionId);
+      const { voteId } = createHallVote(title, voteOptions, sessionId);
 
       const protocol = req.headers["x-forwarded-proto"] || req.protocol;
       const host = req.headers["host"] || "localhost:5000";
@@ -1530,7 +1684,7 @@ export async function registerRoutes(
 
   app.get("/api/hall-vote/:voteId", (req: Request, res: Response) => {
     try {
-      const { voteId } = req.params;
+      const voteId = routeParam(req.params.voteId);
       const sessionId = (req as any)._sessionId || "";
       const clientIp = getClientIp(req);
       const ua = req.headers["user-agent"] || "";
@@ -1550,7 +1704,7 @@ export async function registerRoutes(
 
   app.post("/api/hall-vote/:voteId/vote", (req: Request, res: Response) => {
     try {
-      const { voteId } = req.params;
+      const voteId = routeParam(req.params.voteId);
       const { optionId } = req.body;
 
       if (typeof optionId !== "number") {
@@ -1582,15 +1736,9 @@ export async function registerRoutes(
     }
   });
 
-  app.post("/api/hall-vote/:voteId/close", (req: Request, res: Response) => {
+  app.post("/api/hall-vote/:voteId/close", requireCsrf, (req: Request, res: Response) => {
     try {
-      const csrfCookie = req.cookies?.csrf_token;
-      const csrfHeader = req.headers["x-csrf-token"] as string;
-      if (!csrfCookie || !csrfHeader || csrfCookie !== csrfHeader) {
-        return res.status(403).json({ message: "Invalid security token. Please refresh the page." });
-      }
-
-      const { voteId } = req.params;
+      const voteId = routeParam(req.params.voteId);
       const sessionId = (req as any)._sessionId || "";
 
       const result = closeHallVote(voteId, sessionId);
@@ -1633,19 +1781,12 @@ export async function registerRoutes(
 
   app.delete("/api/favourites/:recipeId", (req: Request, res: Response) => {
     const userId = (req as any)._sessionId || "unknown";
-    const { recipeId } = req.params;
+    const recipeId = routeParam(req.params.recipeId);
     const updated = removeFavourite(userId, recipeId);
     return res.json({ favourites: updated });
   });
 
   app.get("/api/admin/usage", (req: Request, res: Response) => {
-    const adminKey = process.env.ADMIN_SECRET;
-    const providedKey = req.headers["x-admin-key"] || req.query.key;
-
-    if (adminKey && providedKey !== adminKey) {
-      return res.status(401).json({ message: "Unauthorized" });
-    }
-
     const stats = getUsageStats();
     const cacheCount = getCacheCount();
     const dailyBudget = parseFloat(process.env.DAILY_LLM_BUDGET_USD || "5.00");
@@ -1673,20 +1814,21 @@ export async function registerRoutes(
     });
   });
 
-  app.get("/api/test-spoonacular", async (_req: Request, res: Response) => {
-    try {
-      const apiKey = process.env.SPOONACULAR_API_KEY;
-      if (!apiKey) {
-        return res.status(503).json({ error: "SPOONACULAR_API_KEY is not set" });
+  if (process.env.NODE_ENV !== "production") {
+    app.get("/api/test-spoonacular", requireAdmin, async (_req: Request, res: Response) => {
+      try {
+        if (!process.env.SPOONACULAR_API_KEY) {
+          return res.status(503).json({ error: "SPOONACULAR_API_KEY is not set" });
+        }
+        const { searchRecipes } = await import("./spoonacular.js");
+        const results = await searchRecipes("chicken", { number: 3 });
+        return res.json({ ok: true, count: results.results?.length ?? 0 });
+      } catch (err: unknown) {
+        const msg = err instanceof Error ? err.message : "Spoonacular test failed";
+        return res.status(500).json({ error: msg });
       }
-      const url = `https://api.spoonacular.com/recipes/complexSearch?query=chicken&number=3&apiKey=${apiKey}`;
-      const response = await fetch(url);
-      const data = await response.json();
-      return res.json({ status: response.status, data });
-    } catch (err: any) {
-      return res.status(500).json({ error: err.message });
-    }
-  });
+    });
+  }
 
   const discoverSeenIds: number[] = [];
   const DISCOVER_MEMORY_SIZE = 30;
@@ -1703,6 +1845,7 @@ export async function registerRoutes(
   }
 
   app.get("/api/explore/sections", async (req: Request, res: Response) => {
+    if (!enforceExploreRateLimit(req, res)) return;
     try {
       const diet = (req.query.diet as string) || "";
       const intolerances = (req.query.intolerances as string) || "";
@@ -1831,7 +1974,8 @@ export async function registerRoutes(
     }
   });
 
-  app.get("/api/explore/trending", async (_req: Request, res: Response) => {
+  app.get("/api/explore/trending", async (req: Request, res: Response) => {
+    if (!enforceExploreRateLimit(req, res)) return;
     try {
       const cachedRecipes = getTopCachedRecipes(30);
       const votedNames = getVotedRecipeNames();
@@ -1950,6 +2094,7 @@ export async function registerRoutes(
   });
 
   app.get("/api/explore/discover", async (req: Request, res: Response) => {
+    if (!enforceExploreRateLimit(req, res)) return;
     try {
       const diet = (req.query.diet as string) || "";
       const intolerances = (req.query.intolerances as string) || "";
@@ -2155,6 +2300,7 @@ export async function registerRoutes(
   });
 
   app.get("/api/explore/search", async (req: Request, res: Response) => {
+    if (!enforceExploreRateLimit(req, res)) return;
     try {
       const query = (req.query.q as string) || "";
       const cuisine = (req.query.cuisine as string) || "";
@@ -2248,7 +2394,32 @@ export async function registerRoutes(
         }
       }
 
-      log(`[explore] All Spoonacular relaxation steps exhausted — trying catalog before template`, "spoonacular");
+      log(`[explore] All Spoonacular relaxation steps exhausted — trying curated/catalog before template`, "spoonacular");
+
+      const curatedExplore = pickCuratedExploreSearchCard();
+      if (curatedExplore) {
+        const curatedCard = normalizeExploreRecipeCard(
+          {
+            id: curatedExplore.exploreId,
+            title: curatedExplore.title,
+            image: curatedExplore.image,
+            readyInMinutes: curatedExplore.readyInMinutes,
+            servings: 6,
+            summary: curatedExplore.summary,
+            sourceUrl: curatedExplore.sourceUrl,
+            _catalogFallback: true,
+          },
+          "curated",
+        );
+        if (curatedCard) {
+          log(`[explore] Curated import hit: "${curatedExplore.title}" slug=${curatedExplore.slug}`, "spoonacular");
+          return res.json({
+            results: [curatedCard],
+            totalResults: 1,
+            _source: "curated",
+          });
+        }
+      }
 
       const catalogExplore = pickCatalogExploreFallback();
       if (catalogExplore) {
@@ -2309,21 +2480,14 @@ export async function registerRoutes(
             : maxReadyTime && maxReadyTime <= 40
               ? "25-40"
               : "30-45";
-        const fallbackRequest: GenerateRequest = {
+        const fallbackRequest = createDefaultGenerateRequest({
           crew_size: crewSize,
           busy_level: inferBusyLevelFromTime(exploreTime),
           time_available: exploreTime,
           appliances,
-          protein: detectedProtein as any,
-          healthiness_preference: "balanced",
-          budget_level: "standard",
+          protein: detectedProtein as GenerateRequest["protein"],
           allergens_to_avoid: allergenList,
-          vegetarian_swap_needed: false,
-          use_what_we_have: false,
-          ingredients_on_hand: [],
-          cuisine_style: "any",
-          meal_format: "random",
-        };
+        });
 
         const templates = await loadTemplates();
         const filterResult = filterTemplatesWithRelaxation(templates, fallbackRequest);
@@ -2340,7 +2504,7 @@ export async function registerRoutes(
             id: -1,
             title: fallback.title,
             image: "",
-            readyInMinutes: (fallback.timing?.total_min) || 30,
+            readyInMinutes: fallback.timing?.total_minutes || 30,
             servings: crewSize,
             summary: fallback.why_it_fits_tonight || "AI-generated crew meal from the Firehall generator.",
             _firehallFallback: true,
@@ -2371,7 +2535,7 @@ export async function registerRoutes(
   app.get("/api/curated/:slug", async (req: Request, res: Response) => {
     try {
       const { getCuratedPackageDef, buildCuratedClientRecipe } = await import("../shared/curated-hall-packages.js");
-      const slug = (req.params.slug || "").toLowerCase().trim();
+      const slug = routeParam(req.params.slug).toLowerCase().trim();
       const def = getCuratedPackageDef(slug);
       if (!def) {
         return res.status(404).json({ message: "Curated package not found." });
@@ -2407,7 +2571,8 @@ export async function registerRoutes(
   });
 
   app.get("/api/explore/recipe/:id", async (req: Request, res: Response) => {
-    const rawId = req.params.id;
+    if (!enforceExploreRateLimit(req, res)) return;
+    const rawId = routeParam(req.params.id);
     const id = parseInt(rawId, 10);
     const hints = {
       slug: typeof req.query.slug === "string" ? req.query.slug : undefined,
@@ -2431,7 +2596,9 @@ export async function registerRoutes(
       }
 
       const includeNutrition = req.query.nutrition === "true";
-      const payload = await fetchExploreRecipeDetailPayload(id, includeNutrition, hints);
+      const payload = await withTimeout("explore_detail", 30_000, () =>
+        fetchExploreRecipeDetailPayload(id, includeNutrition, hints),
+      );
 
       log(
         `[explore] detail ok id=${id} curated=${Boolean(payload._fromCurated)} curatedRecipeId=${payload._curatedRecipeId ?? "-"} title="${clip(payload.title, 50)}" ings=${payload.ingredients.length} steps=${payload.steps.length}`,
@@ -2452,6 +2619,36 @@ export async function registerRoutes(
       }
       log(`[explore] Detail error: id=${rawId} hints=${JSON.stringify(hints)} msg=${msg}`, "spoonacular");
       return res.status(500).json({ message: "Failed to load recipe details. Please try again." });
+    }
+  });
+
+  const { registerFoodImageryRoutes } = await import("./food-imagery/routes.js");
+  registerFoodImageryRoutes(app);
+
+  app.get("/api/recipe-hero/meal/:recipeId", async (req: Request, res: Response) => {
+    try {
+      const { resolveMealHeroImage } = await import("./food-imagery/meal-integration.js");
+      const recipeId = String(req.params.recipeId || "");
+      const title = typeof req.query.title === "string" ? req.query.title : undefined;
+      const signature = typeof req.query.signature === "string" ? req.query.signature : undefined;
+      const hero = await resolveMealHeroImage(signature, recipeId, title);
+      return res.json(hero);
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : String(err);
+      return res.status(500).json({ hero_image_status: "unavailable", message: msg });
+    }
+  });
+
+  app.get("/api/recipe-hero/pizza/:styleId", async (req: Request, res: Response) => {
+    try {
+      const { resolvePizzaHeroImage } = await import("./food-imagery/meal-integration.js");
+      const styleId = String(req.params.styleId || "");
+      const title = typeof req.query.title === "string" ? req.query.title : undefined;
+      const hero = await resolvePizzaHeroImage(styleId, title);
+      return res.json(hero);
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : String(err);
+      return res.status(500).json({ hero_image_status: "unavailable", message: msg });
     }
   });
 

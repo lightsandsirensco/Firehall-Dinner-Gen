@@ -1,3 +1,4 @@
+import { DEFAULT_GENERATE_REQUEST } from "@shared/generate-request-defaults";
 import type { GenerateRequest, GenerateResponse } from "@shared/schema";
 import { loadTemplates, filterTemplates, pickTemplate, chooseProtein } from "./templates";
 import { generateRecipe } from "./ai";
@@ -21,18 +22,8 @@ const pool: PoolEntry[] = [];
 let refillPromise: Promise<void> | null = null;
 
 const DEFAULT_REQUEST: GenerateRequest = {
-  crew_size: 6,
-  busy_level: "average",
+  ...DEFAULT_GENERATE_REQUEST,
   time_available: "25-40",
-  appliances: ["stove", "oven"],
-  protein: "any",
-  healthiness_preference: "balanced",
-  budget_level: "standard",
-  cuisine_style: "any",
-  allergens_to_avoid: [],
-  vegetarian_swap_needed: false,
-  use_what_we_have: false,
-  ingredients_on_hand: [],
 };
 
 function pruneExpired() {

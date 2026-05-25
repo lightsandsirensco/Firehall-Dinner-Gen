@@ -4,6 +4,7 @@ import type { ExploreRecipeCard } from "@/lib/explore-recipe";
 import { computeCardPresentation } from "@/lib/explore-recipe";
 import { buildExploreTrustLine } from "@/lib/explore-trust-line";
 import { ExploreRecipeImage } from "@/components/explore-recipe-image";
+import { EXPLORE_CARD_ASPECT } from "@/lib/hero-image";
 import { cn } from "@/lib/utils";
 
 export interface ExploreCinematicCardProps {
@@ -71,10 +72,10 @@ function ExploreCinematicCardInner({
       <div
         className={cn(
           "relative w-full overflow-hidden bg-zinc-950",
-          isGrid ? "aspect-[3/4] sm:aspect-[4/5]" : "aspect-[4/5] sm:aspect-[4/5] min-h-[260px] sm:min-h-[280px]",
+          isGrid ? EXPLORE_CARD_ASPECT.grid : EXPLORE_CARD_ASPECT.rail,
         )}
       >
-        <div className="absolute inset-0 transition-transform duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.06] motion-reduce:group-hover:scale-100">
+        <div className="absolute inset-0 transition-transform duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.05] motion-reduce:group-hover:scale-100">
           <ExploreRecipeImage
             recipe={recipe}
             variant="card"
@@ -83,15 +84,6 @@ function ExploreCinematicCardInner({
             sizesHint={isGrid ? "grid" : "rail"}
           />
         </div>
-
-        <div
-          className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black via-black/55 to-black/15 z-[1]"
-          aria-hidden
-        />
-        <div
-          className="pointer-events-none absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-60 z-[1]"
-          aria-hidden
-        />
 
         <div className="absolute top-3 left-3 right-3 flex flex-wrap items-start gap-1.5 z-10 max-w-[85%]">
           {isCurated && (
@@ -149,7 +141,7 @@ export function ExploreCinematicCardSkeleton({ layout = "rail" }: { layout?: "ra
     <div
       className={cn(
         "rounded-2xl sm:rounded-[1.35rem] overflow-hidden bg-zinc-900/90 ring-1 ring-white/5",
-        layout === "grid" ? "aspect-[4/5]" : "aspect-[5/6] min-h-[280px]",
+        layout === "grid" ? EXPLORE_CARD_ASPECT.grid : "aspect-[4/5] min-h-[240px]",
       )}
       data-testid="skeleton-cinematic-card"
     >

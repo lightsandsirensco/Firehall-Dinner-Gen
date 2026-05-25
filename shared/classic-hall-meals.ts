@@ -3,6 +3,8 @@
  * Hero images use verified Spoonacular recipe IDs — titles checked against the API.
  */
 
+import { isDevRuntime } from "./runtime-env.js";
+
 export type SpoonacularImageSize = "556x370" | "636x393" | "312x231";
 
 export interface ClassicHallMealMeta {
@@ -43,6 +45,12 @@ export interface ClassicHallMealMeta {
    * Served from client/public (e.g. /images/explore/jerk-chicken-hero.jpg).
    */
   heroImagePath?: string;
+  /** Explore Crew Favorites rail — overrides generic hook/summary when set */
+  exploreHookLine?: string;
+  exploreSummary?: string;
+  exploreReadyMinutes?: number;
+  exploreServings?: number;
+  spiceLevelLabel?: string;
   /**
    * When not using heroImagePath, Spoonacular title must include at least one of these
    * (prevents Mexican bowl / salad photos on BBQ hall classics, etc.).
@@ -98,27 +106,36 @@ export const CLASSIC_HALL_MEALS: ClassicHallMealMeta[] = [
     generatorFilters: { meal_format: "pasta", proteins: ["chicken"], cuisine_style: "italian" },
   },
   {
-    id: "taco-night",
-    slug: "taco-night",
-    title: "Taco Night",
-    shortLabel: "Taco Night",
-    displayTitle: "Taco Night — Build-Your-Own Hall Spread",
-    description: "Shells, salsa, and a line out the bay door.",
-    tagline: "Build-your-own crew favorite",
+    id: "steak-tacos",
+    slug: "steak-tacos",
+    title: "Street-Style Chimichurri Steak Tacos",
+    shortLabel: "Steak Tacos",
+    displayTitle: "Street-Style Chimichurri Steak Tacos",
+    description:
+      "Charred tortillas, sliced skirt steak, bright chimichurri, pickled onions, cotija, and lime crema — no rice, just taco-line energy.",
+    tagline: "Char, acid, and melty cotija",
     emoji: "🌮",
-    spoonacularRecipeId: 1505411,
-    spoonacularTitle: "Ground Beef Street Tacos",
-    imageAlt: "Ground beef street tacos with fresh toppings",
-    imageKeywords: ["taco", "beef", "mexican", "street"],
+    spoonacularRecipeId: 716426,
+    spoonacularTitle: "Flank Steak Tacos with Chimichurri",
+    heroImagePath: "/images/explore/chimichurri-steak-tacos-hero.jpg",
+    imageAlt:
+      "Street-style steak tacos with charred tortillas, chimichurri, pickled onions, cotija, and lime crema",
+    imageKeywords: ["steak", "taco", "chimichurri", "charred", "cotija", "street", "mexican"],
     cuisine: "Mexican",
     mealFormat: "tacos",
     protein: "Beef",
-    tags: ["Mexican", "Hall classic", "Tacos", "Beef"],
-    recipeSource: { type: "curated", spoonacularId: 1505411 },
+    tags: ["Mexican", "Hall classic", "Tacos", "Beef", "Crew Favorite", "Grill Night"],
+    recipeSource: { type: "curated", spoonacularId: 716426 },
     segmentColor: "#6B3A1F",
     segmentColorAlt: "#E65100",
-    searchQuery: "ground beef tacos",
+    searchQuery: "flank steak tacos chimichurri",
     generatorFilters: { meal_format: "tacos", proteins: ["beef"], cuisine_style: "mexican" },
+    exploreHookLine: "Charred steak · bright chimichurri · taco-line build",
+    exploreSummary:
+      "Crew Favorite · Grill Night · Medium spice · Street tacos (no rice sides)",
+    exploreReadyMinutes: 55,
+    exploreServings: 8,
+    spiceLevelLabel: "Medium",
   },
   {
     id: "pulled-pork",
@@ -146,48 +163,73 @@ export const CLASSIC_HALL_MEALS: ClassicHallMealMeta[] = [
   {
     id: "smash-burgers",
     slug: "smash-burgers",
-    title: "Smash Burgers",
-    shortLabel: "Smash Burgers",
-    displayTitle: "Smash Burgers — Griddle Night at the Hall",
-    description: "Crispy edges, melty cheese — shift-approved.",
-    tagline: "Griddle night energy",
+    title: "Double Smash Burgers with Caramelized Onions & Dirty Sauce",
+    shortLabel: "Double Smash",
+    displayTitle: "Double Smash Burgers with Caramelized Onions & Dirty Sauce",
+    description:
+      "Two thin patties, lacy crispy edges, potato buns, American cheese, caramelized onions, pickles, shredded lettuce, and homemade dirty sauce — optional bacon for the crew.",
+    tagline: "Diner griddle · melty · viral stack",
     emoji: "🍔",
     spoonacularRecipeId: 645680,
-    spoonacularTitle: "Grilled Chuck Burgers with Extra Sharp Cheddar and Lemon Garlic Aioli",
-    imageAlt: "Grilled cheeseburgers with melted cheddar",
-    imageKeywords: ["burger", "beef", "cheddar", "grill"],
+    spoonacularTitle: "Smash Burgers with American Cheese",
+    heroImagePath: "/images/explore/double-smash-burgers-hero.jpg",
+    imageAlt:
+      "Double smash burger stack on a glossy potato bun with melted American cheese, caramelized onions, pickles, and crispy beef edges",
+    imageKeywords: ["smash", "burger", "double", "cheese", "onion", "potato", "bun", "diner"],
     cuisine: "American",
     mealFormat: "burger",
     protein: "Beef",
-    tags: ["American", "Hall classic", "Burger", "Beef"],
+    tags: ["American", "Hall classic", "Burger", "Beef", "Crew Favorite", "Comfort Food"],
     recipeSource: { type: "curated", spoonacularId: 645680 },
     segmentColor: "#4A3728",
     segmentColorAlt: "#D84315",
-    searchQuery: "smash burgers with fries",
+    searchQuery: "double smash burger caramelized onions",
     generatorFilters: { meal_format: "burger", proteins: ["beef"], cuisine_style: "any" },
+    exploreHookLine: "Lacy edges · dirty sauce · potato bun stack",
+    exploreSummary:
+      "Crew Favorite · Comfort Food · Diner griddle night · Feeds 8+",
+    exploreReadyMinutes: 50,
+    exploreServings: 8,
   },
   {
     id: "chili-garlic-bread",
     slug: "chili-garlic-bread",
-    title: "Chili & Garlic Bread",
-    shortLabel: "Chili & Bread",
-    displayTitle: "Chili & Garlic Bread — Stick-to-Your-Ribs Hall Fuel",
-    description: "One pot, big ladle, zero complaints.",
-    tagline: "Stick-to-your-ribs hall fuel",
-    emoji: "🌶️",
+    title: "Firehouse Smoked Beef Chili with Cheesy Garlic Bread",
+    shortLabel: "Smoked Chili Night",
+    displayTitle: "Firehouse Smoked Beef Chili with Cheesy Garlic Bread",
+    description:
+      "Deep, smoky beef chili with sweet caramelized onions and fire-roasted tomatoes — ladled hot with cheddar-mozzarella garlic bread for the whole hall.",
+    tagline: "Viral comfort-food hall night",
+    emoji: "🔥",
     spoonacularRecipeId: 660273,
     spoonacularTitle: "Slow Cooked Beef Chili",
-    imageAlt: "Hearty slow-cooked beef chili in a bowl",
-    imageKeywords: ["chili", "beef", "slow", "hearty"],
+    heroImagePath: "/images/explore/firehouse-smoked-beef-chili-hero.jpg",
+    imageAlt:
+      "Dark bowl of smoky beef chili with visible steam beside cheesy golden garlic bread on a rustic board",
+    imageKeywords: ["chili", "beef", "smoked", "garlic", "bread", "cheese", "comfort", "bowl"],
     cuisine: "American",
     mealFormat: "soup_chili",
     protein: "Beef",
-    tags: ["American", "Hall classic", "Chili", "One-Pot"],
+    tags: [
+      "American",
+      "Hall classic",
+      "Chili",
+      "Comfort Food",
+      "Crew Favorite",
+      "Cold Nights",
+      "Feeds 8+",
+    ],
     recipeSource: { type: "curated", spoonacularId: 660273 },
     segmentColor: "#7F1D1D",
-    segmentColorAlt: "#B71C1C",
-    searchQuery: "beef chili garlic bread",
+    segmentColorAlt: "#E65100",
+    searchQuery: "smoky beef chili cheesy garlic bread",
     generatorFilters: { meal_format: "soup_chili", proteins: ["beef"], cuisine_style: "any" },
+    exploreHookLine: "Smoky beef · cheesy garlic pull · feeds the hall",
+    exploreSummary:
+      "Crew Favorite · Best for Cold Nights · Medium spice · Feeds 8+ firefighters",
+    exploreReadyMinutes: 75,
+    exploreServings: 8,
+    spiceLevelLabel: "Medium",
   },
   {
     id: "chicken-caesar",
@@ -348,11 +390,7 @@ export function validateClassicMealConsistency(
   context: string,
   heroImage?: string,
 ): void {
-  if (typeof process !== "undefined" && process.env?.NODE_ENV === "production") return;
-  const isDev =
-    (typeof import.meta !== "undefined" && (import.meta as { env?: { DEV?: boolean } }).env?.DEV) ||
-    (typeof process !== "undefined" && process.env?.NODE_ENV !== "production");
-  if (!isDev) return;
+  if (!isDevRuntime()) return;
 
   const image = heroImage ?? resolveClassicHeroImage(meal);
   const urlId = extractSpoonacularIdFromImageUrl(image);

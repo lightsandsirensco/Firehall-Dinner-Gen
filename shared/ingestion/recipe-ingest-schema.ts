@@ -56,6 +56,8 @@ export interface IngestRecipeDraft {
   mealArchetype: MealArchetype;
   prepMinutes: number;
   totalMinutes: number;
+  /** 1 = easiest cleanup, 5 = heavy */
+  cleanupDifficulty: 1 | 2 | 3 | 4 | 5;
   servingsBase: number;
   exploreCategories: string[];
   tags: string[];

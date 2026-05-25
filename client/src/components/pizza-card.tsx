@@ -3,7 +3,30 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import type { PizzaResponse } from "@shared/schema";
-import { Flame, Droplets, Wheat, Beef, Sparkles, Trash2, Clock, Timer, ShieldCheck, Thermometer, Printer, Leaf, Mail, ThermometerSun, List } from "lucide-react";
+import { escapeHtml } from "@/lib/escape-html";
+import {
+  Flame,
+  Droplets,
+  Wheat,
+  Beef,
+  Sparkles,
+  Trash2,
+  Clock,
+  Timer,
+  ShieldCheck,
+  Thermometer,
+  Printer,
+  Leaf,
+  Mail,
+  ThermometerSun,
+  List,
+  UtensilsCrossed,
+  Wine,
+  Replace,
+} from "lucide-react";
+import { getPizzaConceptMeta } from "@shared/pizza-concepts";
+import { cn } from "@/lib/utils";
+import { MealHeroImage } from "@/components/meal-hero-image";
 
 interface PizzaCardProps {
   recipe: PizzaResponse;
@@ -49,24 +72,25 @@ function IngredientGroup({ title, items }: { title: string; items: { item: strin
 }
 
 function buildPizzaPrintHtml(recipe: PizzaResponse, crewSize: number): string {
+  const e = escapeHtml;
   const safetyRows = recipe.protein_safety?.length
     ? recipe.protein_safety
         .map(ps => `<tr>
-          <td style="font-weight:700;padding:6px 12px 6px 0">${ps.protein}</td>
-          <td style="padding:6px 12px">${ps.target_temp_f}&deg;F / ${ps.target_temp_c}&deg;C</td>
-          <td style="padding:6px 12px">${ps.rest_minutes > 0 ? ps.rest_minutes + " min" : "\u2014"}</td>
-          <td style="padding:6px 12px;font-size:13px">${ps.probe_where}${ps.notes ? ". " + ps.notes : ""}</td>
+          <td style="font-weight:700;padding:6px 12px 6px 0">${e(ps.protein)}</td>
+          <td style="padding:6px 12px">${e(ps.target_temp_f)}&deg;F / ${e(ps.target_temp_c)}&deg;C</td>
+          <td style="padding:6px 12px">${ps.rest_minutes > 0 ? e(ps.rest_minutes) + " min" : "\u2014"}</td>
+          <td style="padding:6px 12px;font-size:13px">${e(ps.probe_where)}${ps.notes ? ". " + e(ps.notes) : ""}</td>
         </tr>`)
         .join("")
     : "";
 
   const renderIngGroup = (title: string, items?: { item: string; amount: string; notes: string }[]) => {
     if (!items || items.length === 0) return "";
-    return `<h3 style="font-size:14px;font-weight:700;margin:16px 0 6px;text-transform:uppercase;letter-spacing:1px;color:#555">${title}</h3>
+    return `<h3 style="font-size:14px;font-weight:700;margin:16px 0 6px;text-transform:uppercase;letter-spacing:1px;color:#555">${e(title)}</h3>
     <table class="ingredients"><tbody>${items.map(ing => `<tr>
-      <td style="padding:4px 16px 4px 0;font-weight:600">${ing.item}</td>
-      <td style="padding:4px 0">${ing.amount || ""}</td>
-      ${ing.notes ? `<td style="padding:4px 0 4px 16px;color:#555;font-size:13px">${ing.notes}</td>` : "<td></td>"}
+      <td style="padding:4px 16px 4px 0;font-weight:600">${e(ing.item)}</td>
+      <td style="padding:4px 0">${e(ing.amount)}</td>
+      ${ing.notes ? `<td style="padding:4px 0 4px 16px;color:#555;font-size:13px">${e(ing.notes)}</td>` : "<td></td>"}
     </tr>`).join("")}</tbody></table>`;
   };
 
@@ -75,7 +99,7 @@ function buildPizzaPrintHtml(recipe: PizzaResponse, crewSize: number): string {
       const heading = typeof step === "string" ? null : step.heading;
       const body = typeof step === "string" ? step : step.body;
       return `<li style="margin-bottom:12px;page-break-inside:avoid">
-        ${heading ? `<strong>${heading}</strong><br/>` : ""}${body}
+        ${heading ? `<strong>${e(heading)}</strong><br/>` : ""}${e(body)}
       </li>`;
     })
     .join("");
@@ -84,7 +108,7 @@ function buildPizzaPrintHtml(recipe: PizzaResponse, crewSize: number): string {
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<title>${recipe.title} — Pizza Night Print</title>
+<title>${e(recipe.title)} — Pizza Night Print</title>
 <style>
   @page { margin: 0.75in; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -110,24 +134,24 @@ function buildPizzaPrintHtml(recipe: PizzaResponse, crewSize: number): string {
 </style>
 </head>
 <body>
-  <h1>${recipe.title}</h1>
-  <p class="subtitle">${recipe.why_this_works}</p>
-  <p class="servings">Serves ${crewSize} &bull; ${recipe.recommended_pizzas} &bull; Dough: ${recipe.dough_type}</p>
+  <h1>${e(recipe.title)}</h1>
+  <p class="subtitle">${e(recipe.why_this_works)}</p>
+  <p class="servings">Serves ${e(crewSize)} &bull; ${e(recipe.recommended_pizzas)} &bull; Dough: ${e(recipe.dough_type)}</p>
 
   ${recipe.timing ? `
   <h2>Timing</h2>
   <div class="timing-bar">
-    <div class="timing-item"><strong>${recipe.timing.prep_minutes}</strong><span>min prep</span></div>
-    <div class="timing-item"><strong>${recipe.timing.bake_minutes}</strong><span>min bake</span></div>
-    <div class="timing-item"><strong>${recipe.timing.total_minutes}</strong><span>min total</span></div>
+    <div class="timing-item"><strong>${e(recipe.timing.prep_minutes)}</strong><span>min prep</span></div>
+    <div class="timing-item"><strong>${e(recipe.timing.bake_minutes)}</strong><span>min bake</span></div>
+    <div class="timing-item"><strong>${e(recipe.timing.total_minutes)}</strong><span>min total</span></div>
   </div>` : ""}
 
   <h2>Oven Setup</h2>
-  <p style="font-size:14px">Preheat to <strong>${recipe.oven_setup.preheat_temp_f}&deg;F / ${recipe.oven_setup.preheat_temp_c}&deg;C</strong> &bull; Rack: ${recipe.oven_setup.rack_position} &bull; Surface: ${recipe.oven_setup.surface_option}</p>
+  <p style="font-size:14px">Preheat to <strong>${e(recipe.oven_setup.preheat_temp_f)}&deg;F / ${e(recipe.oven_setup.preheat_temp_c)}&deg;C</strong> &bull; Rack: ${e(recipe.oven_setup.rack_position)} &bull; Surface: ${e(recipe.oven_setup.surface_option)}</p>
 
   <div class="macros">
     <strong>Macros per serving (2 slices):</strong>
-    Calories: ${recipe.macros_per_serving.calories} | Protein: ${recipe.macros_per_serving.protein_g}g | Carbs: ${recipe.macros_per_serving.carbs_g}g | Fat: ${recipe.macros_per_serving.fat_g}g
+    Calories: ${e(recipe.macros_per_serving.calories)} | Protein: ${e(recipe.macros_per_serving.protein_g)}g | Carbs: ${e(recipe.macros_per_serving.carbs_g)}g | Fat: ${e(recipe.macros_per_serving.fat_g)}g
   </div>
 
   ${safetyRows ? `
@@ -152,20 +176,20 @@ function buildPizzaPrintHtml(recipe: PizzaResponse, crewSize: number): string {
   <h2>Build Steps</h2>
   <ol>${stepItems}</ol>
 
-  ${recipe.cleanup_tip ? `<div class="cleanup"><strong>Cleanup Tip</strong>${recipe.cleanup_tip}</div>` : ""}
+  ${recipe.cleanup_tip ? `<div class="cleanup"><strong>Cleanup Tip</strong>${e(recipe.cleanup_tip)}</div>` : ""}
 
   ${recipe.veg_option?.enabled ? `
   <h2 style="color:#16a34a">Veg Option (1 Serving)</h2>
-  <p style="font-size:14px;margin-bottom:8px">${recipe.veg_option.description}</p>
+  <p style="font-size:14px;margin-bottom:8px">${e(recipe.veg_option.description)}</p>
   <table class="ingredients"><tbody>
     ${recipe.veg_option.swap_toppings.map(ing => `<tr>
-      <td style="padding:4px 16px 4px 0;font-weight:600">${ing.item}</td>
-      <td style="padding:4px 0">${ing.amount || ""}</td>
-      ${ing.notes ? `<td style="padding:4px 0 4px 16px;color:#555;font-size:13px">${ing.notes}</td>` : "<td></td>"}
+      <td style="padding:4px 16px 4px 0;font-weight:600">${e(ing.item)}</td>
+      <td style="padding:4px 0">${e(ing.amount)}</td>
+      ${ing.notes ? `<td style="padding:4px 0 4px 16px;color:#555;font-size:13px">${e(ing.notes)}</td>` : "<td></td>"}
     </tr>`).join("")}
   </tbody></table>
   <ol style="margin-top:12px">
-    ${recipe.veg_option.steps.map(s => `<li style="margin-bottom:8px">${s}</li>`).join("")}
+    ${recipe.veg_option.steps.map(s => `<li style="margin-bottom:8px">${e(s)}</li>`).join("")}
   </ol>` : ""}
 
   <div class="footer">
@@ -179,6 +203,10 @@ function buildPizzaPrintHtml(recipe: PizzaResponse, crewSize: number): string {
 }
 
 export function PizzaCard({ recipe, crewSize, onEmailClick, onShoppingListClick }: PizzaCardProps) {
+  const meta = getPizzaConceptMeta(recipe.pizza_style_id);
+  const heroEmoji = recipe.hero_emoji ?? meta?.heroEmoji ?? "🍕";
+  const heroGradient = meta?.heroGradient ?? "from-orange-950 via-red-950 to-zinc-950";
+  const badges = recipe.badges?.length ? recipe.badges : meta?.badges ?? [];
   const hasTiming = recipe.timing && (recipe.timing.prep_minutes || recipe.timing.bake_minutes || recipe.timing.total_minutes);
   const hasSafety = recipe.protein_safety && recipe.protein_safety.length > 0;
 
@@ -193,11 +221,76 @@ export function PizzaCard({ recipe, crewSize, onEmailClick, onShoppingListClick 
 
   return (
     <div className="space-y-4 animate-in fade-in slide-in-from-bottom-4 duration-500">
-      <div className="space-y-1">
-        <div className="flex items-start justify-between gap-3 flex-wrap">
-          <h2 className="font-heading text-4xl md:text-5xl tracking-wide text-foreground leading-none" data-testid="pizza-text-recipe-title">
-            {recipe.title}
-          </h2>
+      {recipe.hero_image ? (
+        <MealHeroImage
+          src={recipe.hero_image}
+          alt={recipe.hero_image_alt || recipe.title}
+          title={recipe.title}
+          emoji={heroEmoji}
+          variant="cinematic"
+          priority
+          className="rounded-2xl overflow-hidden ring-1 ring-primary/25 shadow-xl shadow-black/30"
+        />
+      ) : (
+      <div
+        className={cn(
+          "relative overflow-hidden rounded-2xl ring-1 ring-primary/25 shadow-xl shadow-black/30",
+          recipe.hero_image_status === "pending" && "animate-pulse",
+          "bg-gradient-to-br",
+          heroGradient,
+        )}
+        data-testid="pizza-recipe-hero"
+      >
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_20%,rgba(255,255,255,0.08),transparent)]" />
+        <div className="relative flex items-center justify-between gap-4 p-6 sm:p-8">
+          <div className="min-w-0 flex-1">
+            <p className="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold mb-2">
+              {recipe.category?.replace(/_/g, " ") ?? "Hall Pizza"}
+            </p>
+            <h2
+              className="font-heading text-2xl sm:text-4xl tracking-wide text-white leading-tight drop-shadow-md"
+              data-testid="pizza-text-recipe-title"
+            >
+              {recipe.title}
+            </h2>
+            {recipe.hall_line && (
+              <p className="text-sm text-white/75 mt-2 max-w-lg">{recipe.hall_line}</p>
+            )}
+            <div className="flex flex-wrap gap-1.5 mt-3">
+              {badges.map((b) => (
+                <span
+                  key={b}
+                  className="text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-black/40 text-white border border-white/15"
+                >
+                  {b}
+                </span>
+              ))}
+              {recipe.spice_level && (
+                <span className="text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-primary/80 text-primary-foreground">
+                  {recipe.spice_level}
+                </span>
+              )}
+              {recipe.difficulty && (
+                <span className="text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-white/15 text-white">
+                  {recipe.difficulty}
+                </span>
+              )}
+              {recipe.estimated_cost && (
+                <span className="text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-white/15 text-white">
+                  Est. {recipe.estimated_cost}
+                </span>
+              )}
+            </div>
+          </div>
+          <span className="text-6xl sm:text-7xl shrink-0 drop-shadow-2xl" aria-hidden>
+            {heroEmoji}
+          </span>
+        </div>
+      </div>
+      )}
+
+      <div className="space-y-1 px-0.5">
+        <div className="flex items-start justify-end gap-3 flex-wrap">
           <div className="flex gap-2 flex-shrink-0 flex-wrap">
             {onEmailClick && (
               <Button variant="outline" onClick={onEmailClick} data-testid="pizza-button-email">
@@ -217,23 +310,99 @@ export function PizzaCard({ recipe, crewSize, onEmailClick, onShoppingListClick 
             )}
           </div>
         </div>
-        <p className="text-sm text-muted-foreground" data-testid="pizza-text-why">
+        <p className="text-sm text-muted-foreground leading-relaxed" data-testid="pizza-text-why">
           {recipe.why_this_works}
         </p>
-        <div className="flex items-center gap-2 mt-1 flex-wrap">
+        <div className="flex items-center gap-2 mt-2 flex-wrap">
           <Badge variant="outline" className="text-xs" data-testid="pizza-badge-dough">
             {recipe.dough_type}
           </Badge>
           <Badge variant="secondary" className="text-xs" data-testid="pizza-badge-count">
             {recipe.recommended_pizzas}
           </Badge>
-          {recipe.pizza_style_id && (
-            <Badge variant="outline" className="text-xs capitalize border-primary/30 text-primary">
-              {recipe.pizza_style_id.replace(/_/g, " ")}
+          {recipe.crust_type && (
+            <Badge variant="outline" className="text-xs border-border/60">
+              {recipe.crust_type}
+            </Badge>
+          )}
+          {recipe.sauce_style && (
+            <Badge variant="outline" className="text-xs border-border/60">
+              {recipe.sauce_style}
             </Badge>
           )}
         </div>
       </div>
+
+      {(recipe.recommended_sides?.length || recipe.dipping_sauces?.length) && (
+        <div className="grid sm:grid-cols-2 gap-3">
+          {recipe.recommended_sides && recipe.recommended_sides.length > 0 && (
+            <Card className="border-border/50">
+              <CardContent className="p-4">
+                <div className="flex items-center gap-2 mb-2">
+                  <UtensilsCrossed className="w-4 h-4 text-primary" />
+                  <h3 className="font-heading text-sm tracking-wider uppercase">Optional sides</h3>
+                </div>
+                <ul className="text-sm text-foreground/85 space-y-1">
+                  {recipe.recommended_sides.map((s) => (
+                    <li key={s}>• {s}</li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+          )}
+          {recipe.dipping_sauces && recipe.dipping_sauces.length > 0 && (
+            <Card className="border-border/50">
+              <CardContent className="p-4">
+                <div className="flex items-center gap-2 mb-2">
+                  <Wine className="w-4 h-4 text-primary" />
+                  <h3 className="font-heading text-sm tracking-wider uppercase">Dipping Sauces</h3>
+                </div>
+                <ul className="text-sm text-foreground/85 space-y-1">
+                  {recipe.dipping_sauces.map((s) => (
+                    <li key={s}>• {s}</li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+          )}
+        </div>
+      )}
+
+      {(recipe.optional_toppings?.length || recipe.substitutions?.length) && (
+        <Card className="border-dashed border-border/60">
+          <CardContent className="p-4 grid sm:grid-cols-2 gap-4">
+            {recipe.optional_toppings && recipe.optional_toppings.length > 0 && (
+              <div>
+                <h3 className="text-xs uppercase tracking-wider text-muted-foreground font-medium mb-2">
+                  Optional Toppings
+                </h3>
+                <ul className="text-sm space-y-1">
+                  {recipe.optional_toppings.map((t) => (
+                    <li key={t} className="text-foreground/85">
+                      + {t}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {recipe.substitutions && recipe.substitutions.length > 0 && (
+              <div>
+                <div className="flex items-center gap-1.5 mb-2">
+                  <Replace className="w-3.5 h-3.5 text-muted-foreground" />
+                  <h3 className="text-xs uppercase tracking-wider text-muted-foreground font-medium">
+                    Substitutions
+                  </h3>
+                </div>
+                <ul className="text-sm space-y-1 text-muted-foreground">
+                  {recipe.substitutions.map((s) => (
+                    <li key={s}>{s}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </CardContent>
+        </Card>
+      )}
 
       <div className="flex flex-wrap gap-3" data-testid="pizza-section-timing-macros">
         {hasTiming && (

@@ -99,6 +99,7 @@ export function normalizeExtractedToDraft(
     mealArchetype,
     prepMinutes: Math.min(180, extracted.prepMinutes || 0),
     totalMinutes,
+    cleanupDifficulty: 3,
     servingsBase: Math.max(4, Math.min(12, extracted.servings || 6)),
     exploreCategories: [],
     tags,

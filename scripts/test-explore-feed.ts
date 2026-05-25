@@ -1,7 +1,7 @@
 import "dotenv/config";
-if (process.env.SPOONACULAR_INSECURE_TLS === "true") {
-  process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
-}
+import { applyDevInsecureTlsIfAllowed } from "./dev-tls.js";
+
+applyDevInsecureTlsIfAllowed();
 import { initCuratedRecipeStore } from "../server/curated-recipe-store.js";
 import { initRecipeCatalog, listCatalogCandidates } from "../server/recipe-catalog.js";
 import { buildExploreEditorialFeed } from "../server/explore-editorial.js";

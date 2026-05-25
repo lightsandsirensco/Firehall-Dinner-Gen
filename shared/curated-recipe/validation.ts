@@ -28,9 +28,17 @@ export const curatedInstructionSchema = z.object({
   body: z.string().min(8).max(4000),
 });
 
+const ownedOrAbsoluteImageUrl = (v: string) =>
+  /^https?:\/\//i.test(v) || v.startsWith("/images/");
+
 export const curatedImageSchema = z.object({
   role: z.enum(["hero", "card", "og", "thumb"]),
-  url: z.string().url().max(2000),
+  url: z
+    .string()
+    .max(2000)
+    .refine(ownedOrAbsoluteImageUrl, {
+      message: "image url must be absolute URL or site-root /images/ path",
+    }),
   width: z.number().int().positive().optional(),
   height: z.number().int().positive().optional(),
   altText: z.string().max(300),
@@ -72,7 +80,12 @@ export const curatedRecipeInsertSchema = z.object({
   title: z.string().min(3).max(200),
   summary: z.string().max(2000).optional(),
 
-  heroImage: z.string().url().max(2000),
+  heroImage: z
+    .string()
+    .max(2000)
+    .refine((v) => /^https?:\/\//i.test(v) || v.startsWith("/images/"), {
+      message: "heroImage must be absolute URL or site-root /images/ path",
+    }),
   images: z.array(curatedImageSchema).optional(),
 
   ingredients: z.array(curatedIngredientSchema).min(2),

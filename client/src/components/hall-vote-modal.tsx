@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { apiRequest } from "@/lib/queryClient";
 import type { ClientRecipeResponse } from "@shared/schema";
+import { buildMinimalClientRecipe } from "@shared/minimal-client-recipe";
 import { Vote, Copy, Check, ExternalLink, QrCode, Loader2, Users, Shuffle } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -14,14 +15,7 @@ const TRY_ANOTHER_DESC =
 
 function buildTryAnotherPayload(): ClientRecipeResponse {
   return {
-    title: TRY_ANOTHER_LABEL,
-    servings: 6,
-    tags: ["Hall vote"],
-    timing: { prep_min: 0, cook_min: 0, total_min: 0 },
-    ingredients: [],
-    steps: [],
-    chosen_protein: "any",
-    primary_protein_source: "any",
+    ...buildMinimalClientRecipe(TRY_ANOTHER_LABEL),
     why_it_fits_tonight: TRY_ANOTHER_DESC,
     _signature: "hall-vote:try-another",
     _id: "hall-vote-try-another",

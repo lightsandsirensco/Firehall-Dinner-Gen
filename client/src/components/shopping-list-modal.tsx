@@ -8,6 +8,8 @@ import { Separator } from "@/components/ui/separator";
 import { Copy, Printer, Mail, CheckCircle, Loader2, ShoppingCart, Leaf, Lightbulb, Package, Check } from "lucide-react";
 import type { ShoppingListResult } from "@/lib/shopping-list";
 import { shoppingListToText } from "@/lib/shopping-list";
+import { escapeHtml } from "@/lib/escape-html";
+import { fetchWithCsrf } from "@/lib/csrf-fetch";
 
 interface ShoppingListModalProps {
   open: boolean;
@@ -18,29 +20,30 @@ interface ShoppingListModalProps {
 }
 
 function buildPrintHtml(shoppingList: ShoppingListResult, recipeTitle: string): string {
+  const e = escapeHtml;
   let fridgeHtml = "";
   if (shoppingList.fridge_used && shoppingList.fridge_used.length > 0) {
     fridgeHtml = `<div class="fridge-section">
       <h2>Using What's in the Fridge</h2>
-      <ul>${shoppingList.fridge_used.map(item => `<li class="fridge-item">${item}</li>`).join("")}</ul>
+      <ul>${shoppingList.fridge_used.map(item => `<li class="fridge-item">${e(item)}</li>`).join("")}</ul>
     </div>`;
     if (shoppingList.need_to_grab && shoppingList.need_to_grab.length > 0) {
       fridgeHtml += `<div class="grab-section">
         <h3>You May Need to Grab</h3>
-        <ul>${shoppingList.need_to_grab.map(item => `<li>${item}</li>`).join("")}</ul>
+        <ul>${shoppingList.need_to_grab.map(item => `<li>${e(item)}</li>`).join("")}</ul>
       </div>`;
     }
   }
 
   const sectionsHtml = shoppingList.sections.map(section => `
     <div class="section">
-      <h2>${section.title}</h2>
+      <h2>${e(section.title)}</h2>
       <table><tbody>
         ${section.items.map(item => `<tr>
           <td class="checkbox">&#9744;</td>
-          <td class="item-name">${item.name}</td>
-          <td class="item-amount">${item.amount ? `— ${item.amount}` : ""}</td>
-          <td class="item-notes">${item.notes || ""}</td>
+          <td class="item-name">${e(item.name)}</td>
+          <td class="item-amount">${item.amount ? `— ${e(item.amount)}` : ""}</td>
+          <td class="item-notes">${e(item.notes)}</td>
         </tr>`).join("")}
       </tbody></table>
     </div>`).join("");
@@ -52,9 +55,9 @@ function buildPrintHtml(shoppingList: ShoppingListResult, recipeTitle: string): 
       <table><tbody>
         ${shoppingList.veg_option.items.map(item => `<tr>
           <td class="checkbox">&#9744;</td>
-          <td class="item-name">${item.name}</td>
-          <td class="item-amount">${item.amount ? `— ${item.amount}` : ""}</td>
-          <td class="item-notes">${item.notes || ""}</td>
+          <td class="item-name">${e(item.name)}</td>
+          <td class="item-amount">${item.amount ? `— ${e(item.amount)}` : ""}</td>
+          <td class="item-notes">${e(item.notes)}</td>
         </tr>`).join("")}
       </tbody></table>
     </div>`;
@@ -64,7 +67,7 @@ function buildPrintHtml(shoppingList: ShoppingListResult, recipeTitle: string): 
   if (shoppingList.budget_swaps && shoppingList.budget_swaps.length > 0) {
     budgetHtml = `<div class="section">
       <h2>Budget Swaps</h2>
-      <ul>${shoppingList.budget_swaps.map(swap => `<li>${swap}</li>`).join("")}</ul>
+      <ul>${shoppingList.budget_swaps.map(swap => `<li>${e(swap)}</li>`).join("")}</ul>
     </div>`;
   }
 
@@ -72,7 +75,7 @@ function buildPrintHtml(shoppingList: ShoppingListResult, recipeTitle: string): 
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<title>Shopping List — ${recipeTitle}</title>
+<title>Shopping List — ${e(recipeTitle)}</title>
 <style>
   @page { margin: 0.75in; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -96,7 +99,7 @@ function buildPrintHtml(shoppingList: ShoppingListResult, recipeTitle: string): 
 </head>
 <body>
   <h1>Shopping List</h1>
-  <p class="subtitle">Based on: ${recipeTitle}</p>
+  <p class="subtitle">Based on: ${e(recipeTitle)}</p>
   ${fridgeHtml}
   ${sectionsHtml}
   ${vegHtml}
@@ -159,7 +162,7 @@ export function ShoppingListModal({ open, onOpenChange, shoppingList, recipeTitl
         }),
       }));
 
-      const res = await fetch("/api/email-shopping-list", {
+      const res = await fetchWithCsrf("/api/email-shopping-list", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -169,7 +172,6 @@ export function ShoppingListModal({ open, onOpenChange, shoppingList, recipeTitl
           generator_type: generatorType,
           timestamp: new Date().toISOString(),
         }),
-        credentials: "include",
       });
 
       const data = await res.json().catch(() => null);

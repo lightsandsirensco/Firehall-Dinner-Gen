@@ -3,33 +3,15 @@
  */
 
 import type { PizzaRequest, PizzaResponse, IngredientItem, RecipeStep } from "../shared/schema.js";
+import { PIZZA_CONCEPT_IDS, getPizzaConceptMeta } from "../shared/pizza-concepts.js";
+import {
+  EXTENDED_PIZZA_TEMPLATES,
+  metaAwareGenericTemplate,
+} from "./pizza-templates-extended.js";
+import { buildPizzaInstructionSteps } from "./pizza-instructions.js";
+import { resolvePizzaRecommendedSides } from "./pizza-sides.js";
 
-export const PIZZA_CONCEPT_IDS = [
-  "hot_honey_pepperoni",
-  "big_mac_pizza",
-  "buffalo_chicken",
-  "bbq_chicken",
-  "philly_cheesesteak",
-  "taco_pizza",
-  "chicken_bacon_ranch",
-  "garlic_parm_white",
-  "meatball_ricotta",
-  "hawaiian",
-  "spicy_italian",
-  "greek_chicken",
-  "veggie_supreme",
-  "margherita",
-  "cheeseburger_pizza",
-  "breakfast_pizza",
-  "nashville_hot_chicken",
-  "pesto_chicken",
-  "mushroom_truffle",
-  "donair_style",
-  "leftovers_pizza",
-  "meat_lovers",
-  "supreme_classic",
-] as const;
-
+export { PIZZA_CONCEPT_IDS };
 export type PizzaConceptId = (typeof PIZZA_CONCEPT_IDS)[number];
 
 interface PizzaTemplateDef {
@@ -42,6 +24,8 @@ interface PizzaTemplateDef {
   drizzles: IngredientItem[];
   build_steps: RecipeStep[];
   protein_safety?: PizzaResponse["protein_safety"];
+  prep_minutes?: number;
+  bake_minutes?: number;
 }
 
 function ing(item: string, amount: string, notes = ""): IngredientItem {
@@ -305,31 +289,21 @@ const TEMPLATES: Record<string, PizzaTemplateDef> = {
   },
 };
 
-function genericTemplate(conceptId: string, request: PizzaRequest): PizzaTemplateDef {
-  const label = conceptId.replace(/_/g, " ");
-  return {
-    title: label.replace(/\b\w/g, (c) => c.toUpperCase()),
-    dough_type: request.dough_option === "from_scratch" ? "Homemade pizza dough" : "Premade dough balls",
-    why_this_works: `Crew-ready ${label} pizza — built for a busy hall oven and hungry shift.`,
-    sauce: [ing("Pizza sauce", "1¼ cups")],
-    cheese: [ing("Shredded mozzarella", "4 cups")],
-    toppings: [ing("Your choice protein or veg", "see hall prep"), ing("Red onion", "1 medium")],
-    drizzles: [ing("Olive oil", "2 tbsp")],
-    build_steps: [
-      step("Prep (no heat, 12 min)", "Gather ingredients, bring dough to room temp, preheat oven to 475°F."),
-      step("Stretch dough (8 min)", "Stretch to 12–14 inch rounds on parchment."),
-      step("Sauce and cheese (5 min)", "Spread sauce thinly; cover with mozzarella."),
-      step("Top and bake (475°F, 12–16 min)", "Add toppings; bake until crust is golden and cheese bubbles."),
-      step("Serve", "Rest 2 minutes, slice, and serve hot."),
-    ],
-  };
-}
+const ALL_TEMPLATES: Record<string, PizzaTemplateDef> = {
+  ...TEMPLATES,
+  ...EXTENDED_PIZZA_TEMPLATES,
+};
 
 export function buildPizzaTemplate(conceptId: string, request: PizzaRequest): PizzaResponse {
-  const base = TEMPLATES[conceptId] || genericTemplate(conceptId, request);
+  const meta = getPizzaConceptMeta(conceptId);
+  const base =
+    ALL_TEMPLATES[conceptId] ??
+    metaAwareGenericTemplate(conceptId);
   const crew = request.crew_size;
-  const prep = request.time_available === "30-45" ? 20 : request.time_available === "45-60" ? 25 : 30;
-  const bake = 14;
+  const prep =
+    base.prep_minutes ??
+    (request.time_available === "30-45" ? 20 : request.time_available === "45-60" ? 25 : 30);
+  const bake = base.bake_minutes ?? 14;
 
   const dough: IngredientItem[] | undefined =
     request.dough_option === "from_scratch"
@@ -344,9 +318,9 @@ export function buildPizzaTemplate(conceptId: string, request: PizzaRequest): Pi
         ? [ing("Premade pizza dough balls", `${Math.max(2, Math.ceil(crew / 2))} balls (16–20 oz each)`)]
         : undefined;
 
-  return {
+  const response: PizzaResponse = {
     pizza_style_id: conceptId,
-    title: base.title,
+    title: meta?.title ?? base.title,
     dough_type: base.dough_type,
     why_this_works: base.why_this_works,
     recommended_pizzas: pizzaCountLabel(crew),
@@ -378,4 +352,26 @@ export function buildPizzaTemplate(conceptId: string, request: PizzaRequest): Pi
       fat_g: 18,
     },
   };
+
+  if (meta) {
+    response.category = meta.category;
+    response.badges = meta.badges;
+    response.spice_level = ["Mild", "Medium", "Hot", "Firehall Hot"][meta.spiceLevel] ?? "Medium";
+    response.difficulty = meta.difficulty;
+    response.estimated_cost = meta.estimatedCost;
+    const sides = resolvePizzaRecommendedSides(request, meta);
+    if (sides?.length) response.recommended_sides = sides;
+    response.dipping_sauces = meta.dippingSauces;
+    response.crust_type = meta.crust;
+    response.sauce_style = meta.sauceStyle;
+    response.substitutions = meta.substitutions;
+    response.optional_toppings = meta.optionalToppings;
+    response.hero_emoji = meta.heroEmoji;
+    response.hall_line = meta.quickShift
+      ? "Quick between calls — oven-ready in under an hour."
+      : "Feeds a hungry hall crew — scale pans for your shift size.";
+  }
+
+  response.build_steps = buildPizzaInstructionSteps(conceptId, response, request);
+  return response;
 }

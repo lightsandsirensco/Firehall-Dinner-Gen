@@ -10,10 +10,14 @@ export function serveStatic(app: Express) {
     );
   }
 
-  app.use(express.static(distPath));
+  app.use(express.static(distPath, { index: false, maxAge: "1h" }));
 
-  // fall through to index.html if the file doesn't exist
-  app.use("/{*path}", (_req, res) => {
+  // SPA fallback — never return index.html for static asset paths (broken images)
+  app.use("/{*path}", (req, res) => {
+    const p = req.path.toLowerCase();
+    if (/\.(jpg|jpeg|png|webp|gif|svg|ico|woff2?|css|js|map|txt)$/i.test(p)) {
+      return res.status(404).end();
+    }
     res.sendFile(path.resolve(distPath, "index.html"));
   });
 }

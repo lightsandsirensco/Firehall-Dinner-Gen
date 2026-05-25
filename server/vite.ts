@@ -1,10 +1,12 @@
-import { type Express } from "express";
+import express, { type Express } from "express";
 import { createServer as createViteServer, createLogger } from "vite";
 import { type Server } from "http";
 import viteConfig from "../vite.config";
 import fs from "fs";
 import path from "path";
 import { nanoid } from "nanoid";
+
+const CLIENT_PUBLIC = path.resolve(import.meta.dirname, "..", "client", "public");
 
 const viteLogger = createLogger();
 
@@ -29,9 +31,15 @@ export async function setupVite(server: Server, app: Express) {
     appType: "custom",
   });
 
+  // Serve /images/* from client/public before SPA fallback (avoids HTML responses for JPGs)
+  app.use(express.static(CLIENT_PUBLIC, { index: false, maxAge: "1h" }));
+
   app.use(vite.middlewares);
 
   app.use("/{*path}", async (req, res, next) => {
+    if (req.path.startsWith("/images/") || req.path.startsWith("/assets/")) {
+      return next();
+    }
     const url = req.originalUrl;
 
     try {

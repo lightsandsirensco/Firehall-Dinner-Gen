@@ -76,6 +76,7 @@ export class SpoonacularResolveSource implements RecipeResolutionSource {
           mealArchetype,
           prepMinutes: Math.max(5, Math.floor((hit.readyInMinutes || 30) * 0.35)),
           totalMinutes: hit.readyInMinutes || 30,
+          cleanupDifficulty: 3,
           servingsBase: hit.servings || 6,
           exploreCategories: [],
           tags: signal.tags || [],

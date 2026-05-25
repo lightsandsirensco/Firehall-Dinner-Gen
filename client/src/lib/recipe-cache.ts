@@ -1,4 +1,5 @@
 import type { ClientRecipeResponse } from "@shared/schema";
+import { normalizeRecipeSignature, sanitizeRecipeSignatureList } from "@shared/recipe-signature";
 
 const STORAGE_KEY = "firehall_recipe_cache";
 const SIGNATURES_KEY = "firehall_recent_signatures";
@@ -92,14 +93,16 @@ export function buildSignature(recipe: ClientRecipeResponse): string {
   const cuisine = (recipe.recipe_tags?.cuisine || "").toLowerCase().trim();
   const baseCarb = (recipe.recipe_tags?.base_carb || "").toLowerCase().trim();
   const method = (recipe.recipe_tags?.cooking_method || "").toLowerCase().trim();
-  return `${title}|${protein}|${cuisine}|${baseCarb}|${method}`;
+  const serverSig = (recipe as { _signature?: string })._signature;
+  if (serverSig) return normalizeRecipeSignature(serverSig);
+  return normalizeRecipeSignature(`${title}|${protein}|${cuisine}|${baseCarb}|${method}`);
 }
 
 export function getRecentSignatures(): string[] {
   try {
     const raw = localStorage.getItem(SIGNATURES_KEY);
     if (!raw) return [];
-    return JSON.parse(raw) as string[];
+    return sanitizeRecipeSignatureList(JSON.parse(raw));
   } catch {
     return [];
   }

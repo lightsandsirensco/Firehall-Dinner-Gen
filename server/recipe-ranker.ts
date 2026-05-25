@@ -10,6 +10,8 @@ import { applyCrewPortionFloors, hallProTips } from "./firehall-voice.js";
 import { proteinMatchesFilter } from "./spoonacular-converter.js";
 import { computeSignature } from "./validateRecipe.js";
 import { listCatalogCandidates } from "./recipe-catalog.js";
+import { listCuratedRecipeSummaries } from "./curated-recipe-store.js";
+import { exploreIdFromRecipeId } from "../shared/explore-curated-id.js";
 
 const TIME_MAX_MINUTES: Record<string, number> = {
   "15-25": 25,
@@ -81,6 +83,9 @@ function rescaleCatalogRecipe(canonical: CanonicalRecipe, request: GenerateReque
     ingredients: applyCrewPortionFloors(base.ingredients || [], request.crew_size),
     pro_tips:
       base.pro_tips?.length ? base.pro_tips : hallProTips(request.crew_size, canonical.servingsBase || 4),
+    _imported: base._imported ?? true,
+    _preserve_source_steps: base._preserve_source_steps ?? canonical.source.kind === "publisher",
+    _recipe_source: base._recipe_source ?? canonical.source,
   };
 }
 
@@ -102,6 +107,9 @@ function rankCatalogEntry(
   }
   // Penalize over-served catalog rows so early generations don't lock onto one "winner".
   score -= Math.min(12, Math.floor((entry.servedCount || 1) / 2));
+  if (entry.source.kind === "publisher") score += 22;
+  else if (entry.curatedSlug || entry.catalogId.startsWith("curated:")) score += 14;
+  else if (entry.source.kind === "spoonacular") score += 6;
   return score;
 }
 
@@ -222,6 +230,37 @@ export function pickCatalogRecipeForGenerate(
   };
 }
 
+/** Explore search — published curated/imported meal before template invention. */
+export function pickCuratedExploreSearchCard(): {
+  exploreId: number;
+  title: string;
+  image: string;
+  readyInMinutes: number;
+  summary: string;
+  sourceName: string;
+  sourceUrl: string;
+  slug: string;
+} | null {
+  const rows = listCuratedRecipeSummaries({ status: "published", limit: 40, orderBy: "publisherFirst" });
+  const viable = rows.filter((r) => r.heroImage?.trim() && r.title?.trim());
+  if (!viable.length) return null;
+  const pick = viable[Math.floor(Math.random() * Math.min(viable.length, 10))];
+  const exploreId =
+    pick.spoonacularId && pick.spoonacularId > 0
+      ? pick.spoonacularId
+      : exploreIdFromRecipeId(pick.recipeId);
+  return {
+    exploreId,
+    title: pick.title,
+    image: pick.heroImage,
+    readyInMinutes: pick.totalMinutes || 35,
+    summary: pick.summary || `Imported ${pick.category.replace(/_/g, " ")} for the hall.`,
+    sourceName: pick.sourceName || "Firehall curated",
+    sourceUrl: pick.sourceUrl || "",
+    slug: pick.slug,
+  };
+}
+
 /** Explore search last resort — any catalog row with a hero image (real recipe). */
 export function pickCatalogExploreFallback(): {
   catalogId: string;
@@ -248,7 +287,7 @@ export function pickCatalogExploreFallback(): {
     spoonacularId: entry.spoonacularId!,
     title: entry.title,
     heroImage: entry.heroImage,
-    readyInMinutes: entry.totalMinutes || base.timing?.total_min || 30,
+    readyInMinutes: entry.totalMinutes || base.timing?.total_minutes || 30,
     summary: base.why_it_fits_tonight || `A crew-tested ${entry.protein} meal from the Firehall catalog.`,
     sourceName: entry.source?.name || "Firehall catalog",
   };

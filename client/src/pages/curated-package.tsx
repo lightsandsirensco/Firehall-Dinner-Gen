@@ -76,7 +76,7 @@ export default function CuratedPackagePage() {
 
         {isLoading && (
           <div className="space-y-6" data-testid="curated-loading">
-            <div className="aspect-[4/5] sm:aspect-[2.2/1] rounded-2xl skeleton-shimmer" />
+            <div className="w-full aspect-[5/4] max-h-[min(48vh,440px)] sm:aspect-[16/9] rounded-2xl skeleton-shimmer" />
             <div className="space-y-3 px-1">
               <div className="h-10 w-3/4 skeleton-shimmer rounded-lg" />
               <div className="h-4 w-full skeleton-shimmer rounded" />
@@ -103,7 +103,7 @@ export default function CuratedPackagePage() {
                 emoji={data.emoji}
                 title={data.title}
                 variant="cinematic"
-                className="aspect-[4/5] sm:aspect-[2.2/1] max-h-[min(70vh,520px)] sm:max-h-none"
+                className="w-full"
               />
               <div className="relative p-5 sm:p-8 -mt-8 sm:-mt-16 bg-gradient-to-t from-card via-card/95 to-transparent">
                 <span className="text-4xl sm:text-5xl block mb-3" role="img" aria-hidden>
@@ -193,6 +193,7 @@ export default function CuratedPackagePage() {
               onOpenChange={setShoppingOpen}
               shoppingList={shoppingList}
               recipeTitle={recipe.title}
+              generatorType="meal"
             />
           )}
         </>

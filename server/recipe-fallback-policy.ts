@@ -23,5 +23,5 @@ export const TEMPLATE_FALLBACK_ATTRIBUTION: RecipeSourceAttribution = {
   kind: "template",
   name: "Firehall Kitchen",
   url: "",
-  license: "Firehall template — not a publisher recipe",
+  license: "internal",
 };

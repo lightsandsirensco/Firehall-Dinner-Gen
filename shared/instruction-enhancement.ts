@@ -1,7 +1,9 @@
 /**
  * Beginner-friendly instruction expansion — rule-based layer (no API).
- * Assumes the cook is tired, distracted, and new to the station kitchen.
+ * Firehall station tone: direct, practical, crew-focused (not recipe-blog filler).
  */
+
+import { stripBannedInstructionPhrases } from "./firehall-instruction-voice";
 
 export interface InstructionStep {
   heading: string;
@@ -86,7 +88,10 @@ export function expandStepRuleBased(
   let heading = step.heading?.trim() || "";
   let body = step.body.trim();
   if (!isShallowStepBody(body)) {
-    return { heading: heading || inferHeadingFromBody(body), body };
+    return {
+      heading: stripBannedInstructionPhrases(heading || inferHeadingFromBody(body)),
+      body: stripBannedInstructionPhrases(body),
+    };
   }
 
   const lower = body.toLowerCase();
@@ -150,17 +155,21 @@ export function expandStepRuleBased(
       "Taste once more at the line and adjust salt or heat (hot sauce) if your hall likes it spicier.";
   } else {
     heading = heading || inferHeadingFromBody(body);
+    const base = body.replace(/\.\s*$/, "").trim();
     body =
-      `${body.replace(/\.\s*$/, "")}. ` +
-      `Work over ${heat} heat and watch for visual cues — color, aroma, and texture tell you more than the clock alone. ` +
-      `If anything starts burning or sticking, lower the heat and add a small splash of liquid.${proteinNote}`;
+      `${base}. ` +
+      `Run the pan at ${heat} and move things before they stick — you want color and sizzle, not a gray steam bath. ` +
+      `If the bottom is browning too fast, drop the heat a notch or add a splash of broth or water.${proteinNote}`;
   }
 
-  if (!TIME_CUE.test(body)) {
-    body += ` Plan about ${mins}–${mins + 5} minutes for this step unless your pan runs hotter than usual.`;
+  if (!TIME_CUE.test(body) && mins > 0) {
+    body += ` Budget about ${mins}–${mins + 5} minutes here; a hotter stove finishes faster.`;
   }
 
-  return { heading, body };
+  return {
+    heading: stripBannedInstructionPhrases(heading),
+    body: stripBannedInstructionPhrases(body),
+  };
 }
 
 function inferHeadingFromBody(body: string): string {
@@ -175,24 +184,26 @@ export function buildHallPrepStep(ctx: InstructionEnhanceContext): InstructionSt
   const crew = ctx.crewSize || 6;
   const ingPreview =
     ctx.ingredients && ctx.ingredients.length > 0
-      ? ` You'll need: ${ctx.ingredients.slice(0, 8).join(", ")}${ctx.ingredients.length > 8 ? ", and more" : ""}.`
+      ? ` Lay out: ${ctx.ingredients.slice(0, 8).join(", ")}${ctx.ingredients.length > 8 ? ", and the rest from the list" : ""}.`
       : "";
 
   return {
-    heading: "Set up before you cook (no heat, 10–15 min)",
+    heading: "Prep the station (no heat, 10–15 min)",
     body:
-      `Read all steps once, then gather ingredients, cutting board, knife, and your largest pan or pot.${ingPreview} ` +
-      `You're cooking for about ${crew} — scale portions accordingly. ` +
-      "If you get interrupted by a call, turn off heat and note which step you're on.",
+      `Get everything on the counter before you light any burners — pans, sheet pans, tongs, and a thermometer if you have one.${ingPreview} ` +
+      `You're feeding about ${crew} hungry people, so full trays beat pretty plating. ` +
+      "Read the full run once so you know what can run in parallel. If a tone drops mid-cook, kill the heat and jot the step number.",
   };
 }
 
 export function buildHallServeStep(ctx: InstructionEnhanceContext): InstructionStep {
+  const crew = ctx.crewSize || 6;
   return {
-    heading: `Serve the hall (${ctx.crewSize || 6} portions, no heat)`,
+    heading: `Run the line and serve (${crew} portions, no heat)`,
     body:
-      "Taste and adjust salt or spice at the last second. " +
-      "Serve hot in big batches — firefighters eat after shifts, so keep it warm on the line or in a low oven (200°F) covered with foil if needed.",
+      "Taste once at the pass — salt and acid fix most sins. " +
+      "Portion big: this is hall dinner, not tasting-menu bites. " +
+      "Hold hot food covered at 200°F if the crew is still on a run; cold mains get skipped.",
   };
 }
 
@@ -223,7 +234,7 @@ export function enhanceInstructionsRuleBased(
   }
 
   return out.map((s, i) => ({
-    heading: s.heading?.trim() || `Step ${i + 1}`,
-    body: s.body.trim(),
+    heading: stripBannedInstructionPhrases(s.heading?.trim() || `Step ${i + 1}`),
+    body: stripBannedInstructionPhrases(s.body.trim()),
   }));
 }
