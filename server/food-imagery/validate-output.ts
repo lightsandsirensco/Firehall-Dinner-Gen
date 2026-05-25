@@ -2,14 +2,19 @@ import { createOpenAIClient, hasOpenAIKey } from "../openai-client.js";
 import { log } from "../logger.js";
 import type { FoodImageryContext } from "../../shared/food-imagery/types.js";
 import { getFoodImageryConfig } from "./config.js";
+import {
+  evaluateVisionQaResult,
+  formatQualityNotes,
+  VISION_QA_RUBRIC,
+} from "../../shared/food-imagery/quality-score.js";
+import { readPngDimensions } from "./png-dimensions.js";
+import { parseSizeDimensions, FOOD_IMAGERY_HERO_SIZE } from "../../shared/food-imagery/aspect-ratio.js";
 
 export interface OutputValidationResult {
   ok: boolean;
   reason?: string;
   notes?: string;
 }
-
-import { readPngDimensions } from "./png-dimensions.js";
 
 /** Fast local checks — no vision API. */
 export function validateImageBufferHeuristic(
@@ -27,14 +32,18 @@ export function validateImageBufferHeuristic(
   if (!isPng && !isJpeg) return { ok: false, reason: "unknown_format" };
 
   const dims = isPng ? readPngDimensions(buf) : null;
+  const target = parseSizeDimensions(FOOD_IMAGERY_HERO_SIZE);
   if (dims && (dims.width < 512 || dims.height < 512)) {
     return { ok: false, reason: "resolution_low", notes: `${dims.width}x${dims.height}` };
+  }
+  if (dims && (dims.width < target.width * 0.9 || dims.height < target.height * 0.9)) {
+    return { ok: false, reason: "below_target_size", notes: `${dims.width}x${dims.height}` };
   }
 
   return { ok: true, notes: dims ? `${dims.width}x${dims.height}` : `jpeg_${buf.length}b` };
 }
 
-/** Optional vision gate — rejects obvious AI failures. */
+/** Vision gate — brand consistency + realism scoring. */
 export async function validateImageWithVision(
   buf: Buffer,
   ctx: FoodImageryContext,
@@ -54,17 +63,13 @@ export async function validateImageWithVision(
       temperature: 0.1,
       response_format: { type: "json_object" },
       messages: [
-        {
-          role: "system",
-          content:
-            "You are a food photography QA director. Return JSON: {pass:boolean,issues:string[],matchesTitle:boolean,realismScore:1-10}. Reject distorted food, wrong dish type, hands, utensils dominating frame, cartoon style, text overlays.",
-        },
+        { role: "system", content: VISION_QA_RUBRIC },
         {
           role: "user",
           content: [
             {
               type: "text",
-              text: `Does this image faithfully represent "${ctx.title}" as premium comfort food? Cuisine: ${ctx.cuisine || "American"}.`,
+              text: `Dish: "${ctx.title}". Cuisine: ${ctx.cuisine || "American"}. Format: ${ctx.mealFormat || "plated"}.`,
             },
             {
               type: "image_url",
@@ -76,28 +81,18 @@ export async function validateImageWithVision(
     });
 
     const raw = res.choices[0]?.message?.content || "{}";
-    const parsed = JSON.parse(raw) as {
-      pass?: boolean;
-      issues?: string[];
-      matchesTitle?: boolean;
-      realismScore?: number;
-    };
+    const parsed = JSON.parse(raw) as Record<string, unknown>;
+    const scores = evaluateVisionQaResult(parsed);
 
-    if (parsed.pass === false) {
+    if (!scores.pass) {
       return {
         ok: false,
-        reason: "vision_reject",
-        notes: (parsed.issues || []).join("; ").slice(0, 200),
+        reason: scores.realism < 7 ? "low_realism" : scores.brandConsistency < 7 ? "low_brand_consistency" : "vision_reject",
+        notes: formatQualityNotes(scores),
       };
     }
-    if (parsed.matchesTitle === false) {
-      return { ok: false, reason: "title_mismatch", notes: (parsed.issues || []).join("; ") };
-    }
-    if ((parsed.realismScore ?? 10) < 6) {
-      return { ok: false, reason: "low_realism", notes: `score=${parsed.realismScore}` };
-    }
 
-    return { ok: true, notes: `vision_ok realism=${parsed.realismScore ?? "?"}` };
+    return { ok: true, notes: formatQualityNotes(scores) };
   } catch (err: unknown) {
     const msg = err instanceof Error ? err.message : String(err);
     log(`[food-imagery] vision validate skipped: ${msg}`, "catalog");

@@ -7,7 +7,7 @@
     "dev": "cross-env NODE_ENV=development tsx server/index.ts",
     "build": "tsx script/build.ts",
     "start": "NODE_ENV=production node dist/index.cjs",
-    "check": "tsc && tsx scripts/validate-generate-request-defaults.ts && tsx scripts/test-generation-reliability.ts && tsx scripts/test-meal-instructions.ts && tsx scripts/test-burger-sourcing.ts && tsx scripts/test-recipe-quality-gate.ts && tsx scripts/test-food-imagery-prompt.ts",
+    "check": "tsc && tsx scripts/validate-generate-request-defaults.ts && tsx scripts/test-generation-reliability.ts && tsx scripts/test-meal-instructions.ts && tsx scripts/test-burger-sourcing.ts && tsx scripts/test-recipe-quality-gate.ts && tsx scripts/validate-food-imagery-style.ts && tsx scripts/test-food-imagery-prompt.ts",
     "db:push": "drizzle-kit push",
     "ingest:discover": "tsx scripts/ingest-discovery.ts",
     "ingest:apify": "tsx scripts/apify-export-trends.ts",

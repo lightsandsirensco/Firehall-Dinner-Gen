@@ -1,5 +1,6 @@
 #!/usr/bin/env tsx
 import { buildFoodImageryPrompt, buildFoodImageryPromptSpec } from "../shared/food-imagery/prompt-builder.js";
+import { FOOD_IMAGERY_STYLE_VERSION } from "../shared/food-imagery/master-style.js";
 import type { FoodImageryContext } from "../shared/food-imagery/types.js";
 
 const ctx: FoodImageryContext = {
@@ -25,22 +26,35 @@ if (!lower.includes("burger") && !lower.includes("smash")) {
 if (!spec.negative.includes("cartoon")) {
   throw new Error("Negative prompt missing cartoon guard");
 }
-if (prompt.length < 200) {
-  throw new Error("Prompt too short");
+if (spec.shotPresetId !== "burger") {
+  throw new Error(`Expected burger shot preset, got ${spec.shotPresetId}`);
+}
+if (!prompt.includes(FOOD_IMAGERY_STYLE_VERSION)) {
+  throw new Error("Prompt must include style version");
+}
+if (!prompt.includes("locked preset burger")) {
+  throw new Error("Prompt must use locked category shot preset");
+}
+if (prompt.length < 400) {
+  throw new Error("Prompt too short — master style block missing?");
 }
 
-import { buildPizzaFoodImageryPrompt } from "../shared/food-imagery/pizza-prompt-builder.js";
+import { buildPizzaFoodImageryPrompt, buildPizzaFoodImageryPromptSpec } from "../shared/food-imagery/pizza-prompt-builder.js";
 import { getPizzaConceptMeta } from "../shared/pizza-concepts.js";
 
 const pepperoni = getPizzaConceptMeta("hot_honey_pepperoni");
 if (!pepperoni) throw new Error("Missing pizza concept");
+const pizzaSpec = buildPizzaFoodImageryPromptSpec(pepperoni);
 const pizzaPrompt = buildPizzaFoodImageryPrompt(pepperoni);
+if (pizzaSpec.shotPresetId !== "pizza") {
+  throw new Error("Pizza must use pizza shot preset");
+}
 if (!pizzaPrompt.toLowerCase().includes("mozzarella")) {
   throw new Error("Pizza prompt missing cheese cue");
 }
-if (!pizzaPrompt.toLowerCase().includes("crust")) {
-  throw new Error("Pizza prompt missing crust cue");
+if (!pizzaPrompt.includes(FOOD_IMAGERY_STYLE_VERSION)) {
+  throw new Error("Pizza prompt missing style version");
 }
 
 console.log("[test-food-imagery-prompt] OK");
-console.log(prompt.slice(0, 280) + "...");
+console.log(prompt.slice(0, 320) + "...");

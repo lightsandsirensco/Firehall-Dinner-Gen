@@ -1,7 +1,7 @@
 import { randomUUID } from "node:crypto";
 import type { FoodImageryContext } from "../../shared/food-imagery/types.js";
-import { buildPromptForContext } from "./prompt-resolve.js";
 import { log } from "../logger.js";
+import { preflightFoodImagery } from "./preflight.js";
 import { generateFoodImageBuffer, hashPrompt } from "./generator.js";
 import { getFoodImageryConfig } from "./config.js";
 import {
@@ -46,8 +46,16 @@ export async function generateFoodImageryForRecipe(
     return { ok: false, skipped: true, reason: "disabled" };
   }
 
-  const prompt = buildPromptForContext(ctx);
-  const promptHash = hashPrompt(prompt);
+  const pre = preflightFoodImagery(ctx, options);
+  if (pre.skipped) {
+    return { ok: true, skipped: true, reason: pre.reason };
+  }
+  if (!pre.ok || !pre.prompt || !pre.promptHash) {
+    return { ok: false, skipped: true, reason: pre.reason ?? "preflight_failed" };
+  }
+
+  const prompt = pre.prompt;
+  const promptHash = pre.promptHash;
 
   const cached = await findAssetByPromptHash(ctx.recipeKey, promptHash);
   if (cached) {
@@ -66,7 +74,7 @@ export async function generateFoodImageryForRecipe(
   let lastError = "";
   for (let attempt = 0; attempt <= cfg.maxRetries; attempt++) {
     try {
-      const buf = await generateFoodImageBuffer(prompt);
+      const buf = await generateFoodImageBuffer(prompt, pre.size);
       const heuristic = validateImageBufferHeuristic(buf);
       if (!heuristic.ok) {
         lastError = heuristic.reason || "heuristic_fail";

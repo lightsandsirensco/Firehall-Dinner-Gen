@@ -39,6 +39,18 @@ export interface FoodImageryPromptSpec {
   lighting: string;
   camera: string;
   mood: string;
+  /** Bumped in master-style.ts — embedded in prompt for cache invalidation */
+  styleVersion: string;
+  shotPresetId: string;
+  aspectRatio: string;
+}
+
+export interface FoodImageryQualityScores {
+  realism: number;
+  brandConsistency: number;
+  titleMatch: boolean;
+  issues: string[];
+  pass: boolean;
 }
 
 export interface FoodImageryAssetRecord {

@@ -15,7 +15,7 @@ import { buildPizzaFoodImageryPrompt } from "../../shared/food-imagery/pizza-pro
 import { getPizzaConceptMeta } from "../../shared/pizza-concepts.js";
 import { buildFoodImageryPrompt } from "../../shared/food-imagery/prompt-builder.js";
 import { hashPrompt } from "./generator.js";
-import { resolveEditorialFallbackHero } from "../../shared/meal-hero-fallback.js";
+import { resolveHeroHierarchy } from "./fallback-hierarchy.js";
 
 export type HeroImageStatus = "ready" | "pending" | "unavailable";
 
@@ -23,30 +23,7 @@ export interface ResolvedHeroImage {
   hero_image?: string;
   hero_image_alt?: string;
   hero_image_status: HeroImageStatus;
-  hero_image_source?: "generated" | "editorial_fallback";
-}
-
-async function firstHeroFromKeys(keys: string[]): Promise<string | null> {
-  for (const key of keys) {
-    const asset = await getLatestAssetForRecipe(key);
-    if (asset?.publicPath) return asset.publicPath;
-  }
-  return null;
-}
-
-function fallbackHero(
-  title?: string,
-  mealFormat?: string,
-  protein?: string,
-): ResolvedHeroImage | null {
-  const path = resolveEditorialFallbackHero(title || "", { mealFormat, protein });
-  if (!path) return null;
-  return {
-    hero_image: path,
-    hero_image_alt: title ? `${title} — Firehall Meals` : "Firehall meal",
-    hero_image_status: "ready",
-    hero_image_source: "editorial_fallback",
-  };
+  hero_image_source?: "generated" | "editorial_fallback" | "pinned";
 }
 
 async function latestJobFailed(keys: string[]): Promise<boolean> {
@@ -67,59 +44,44 @@ export async function resolveMealHeroImage(
   if (recipeId) keys.push(mealImageryKeyFromId(recipeId));
   if (signature) keys.push(mealImageryKeyFromSignature(signature));
 
-  const path = await firstHeroFromKeys(keys);
-  if (path) {
-    return {
-      hero_image: path,
-      hero_image_alt: title ? `${title} — Firehall Meals` : "Firehall meal",
-      hero_image_status: "ready",
-      hero_image_source: "generated",
-    };
-  }
-
   const cfg = getFoodImageryConfig();
-  const fb = fallbackHero(title, opts?.mealFormat, opts?.protein);
+  const resolved = await resolveHeroHierarchy({
+    recipeKeys: keys,
+    title,
+    mealFormat: opts?.mealFormat,
+    protein: opts?.protein,
+    imageryEnabled: cfg.enabled,
+    latestJobFailed: await latestJobFailed(keys),
+  });
 
-  if (!cfg.enabled) {
-    return fb ?? { hero_image_status: "unavailable" };
-  }
-
-  if (await latestJobFailed(keys)) {
-    return (
-      fb ?? {
-        hero_image_status: "unavailable",
-      }
-    );
-  }
-
-  return { hero_image_status: "pending" };
+  return {
+    hero_image: resolved.hero_image,
+    hero_image_alt: resolved.hero_image_alt,
+    hero_image_status: resolved.hero_image_status,
+    hero_image_source: resolved.hero_image_source,
+  };
 }
 
 export async function resolvePizzaHeroImage(
   styleId: string,
   title?: string,
 ): Promise<ResolvedHeroImage> {
-  const path = await firstHeroFromKeys([pizzaImageryKey(styleId)]);
-  if (path) {
-    return {
-      hero_image: path,
-      hero_image_alt: title ? `${title} — Pizza Night` : "Firehall pizza",
-      hero_image_status: "ready",
-      hero_image_source: "generated",
-    };
-  }
-
   const cfg = getFoodImageryConfig();
-  if (!cfg.enabled) {
-    return { hero_image_status: "unavailable" };
-  }
+  const key = pizzaImageryKey(styleId);
+  const resolved = await resolveHeroHierarchy({
+    recipeKeys: [key],
+    title,
+    mealFormat: "pizza",
+    imageryEnabled: cfg.enabled,
+    latestJobFailed: (await getLatestJobForRecipe(key))?.status === "failed",
+  });
 
-  const job = await getLatestJobForRecipe(pizzaImageryKey(styleId));
-  if (job?.status === "failed") {
-    return { hero_image_status: "unavailable" };
-  }
-
-  return { hero_image_status: "pending" };
+  return {
+    hero_image: resolved.hero_image,
+    hero_image_alt: resolved.hero_image_alt ?? (title ? `${title} — Pizza Night` : "Firehall pizza"),
+    hero_image_status: resolved.hero_image_status,
+    hero_image_source: resolved.hero_image_source,
+  };
 }
 
 /** Attach cached hero fields to API payload (sync, non-blocking). */

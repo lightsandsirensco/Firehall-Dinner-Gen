@@ -7,16 +7,20 @@ export function hashPrompt(prompt: string): string {
   return createHash("sha256").update(prompt).digest("hex").slice(0, 24);
 }
 
-export async function generateFoodImageBuffer(prompt: string): Promise<Buffer> {
+export async function generateFoodImageBuffer(
+  prompt: string,
+  size?: "1024x1024" | "512x512",
+): Promise<Buffer> {
   const cfg = getFoodImageryConfig();
   const client = createOpenAIClient();
+  const outputSize = size ?? cfg.size;
 
   let response;
   try {
     response = await client.images.generate({
       model: cfg.model,
       prompt,
-      size: cfg.size,
+      size: outputSize,
       n: 1,
     });
   } catch (err: unknown) {
@@ -34,6 +38,6 @@ export async function generateFoodImageBuffer(prompt: string): Promise<Buffer> {
   }
 
   const buf = Buffer.from(b64, "base64");
-  log(`[food-imagery] generated ${buf.length} bytes model=${cfg.model}`, "catalog");
+  log(`[food-imagery] generated ${buf.length} bytes model=${cfg.model} size=${outputSize}`, "catalog");
   return buf;
 }
