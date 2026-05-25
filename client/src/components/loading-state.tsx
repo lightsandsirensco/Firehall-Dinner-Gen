@@ -27,7 +27,7 @@ function LoadingProgressBar() {
       role="progressbar"
       aria-label="Loading recipe"
     >
-      <div className="h-full w-1/3 rounded-full bg-primary/70 animate-[loading-bar_1.8s_ease-in-out_infinite]" />
+      <div className="h-full w-1/3 rounded-full bg-primary/70 animate-[loading-bar_1.4s_ease-in-out_infinite] motion-reduce:animate-none" />
     </div>
   );
 }

@@ -23,6 +23,7 @@ import { getPizzaConceptMeta } from "@shared/pizza-concepts";
 import { SiteHeader } from "@/components/site-header";
 import { cn } from "@/lib/utils";
 import { Flame } from "lucide-react";
+import { hapticLight, hapticSuccess } from "@/lib/haptics";
 
 interface PizzaMenuResponse {
   featured: string[];
@@ -89,6 +90,7 @@ export default function PizzaNight() {
 
   const handleGenerate = useCallback(
     async (currentFilters: PizzaFilterState, mode?: PizzaGenerationMode) => {
+      hapticLight();
       setLoading(true);
       setError(null);
       const genMode = mode ?? currentFilters.generation_mode ?? "standard";
@@ -111,6 +113,7 @@ export default function PizzaNight() {
         });
         const data: PizzaResponse = await res.json();
         setRecipe(data);
+        hapticSuccess();
         setLastPizzaStyleId(data.pizza_style_id);
         recordPizzaStyleId(data.pizza_style_id);
         setFilters((f) => ({ ...f, generation_mode: effectiveMode }));
@@ -252,7 +255,7 @@ export default function PizzaNight() {
               {!loading && !error && recipeWithHero && (
                 <div
                   key={recipeWithHero.pizza_style_id + recipeWithHero.title}
-                  className="animate-in fade-in slide-in-from-bottom-2 duration-400"
+                  className="meal-reveal motion-reduce:animate-none"
                 >
                   <PizzaCard
                     recipe={recipeWithHero}

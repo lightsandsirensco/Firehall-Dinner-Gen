@@ -11,6 +11,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
+import { hapticLight } from "@/lib/haptics";
 
 interface SiteHeaderProps {
   activePage: "generator" | "pizza" | "explore" | "wheel" | "favorites";
@@ -29,6 +30,7 @@ export function SiteHeader({ activePage, favCount = 0 }: SiteHeaderProps) {
   ];
 
   const go = (href: string) => {
+    hapticLight();
     setMenuOpen(false);
     navigate(href);
   };
@@ -152,7 +154,7 @@ export function SiteHeader({ activePage, favCount = 0 }: SiteHeaderProps) {
                   <Menu className="w-5 h-5" />
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[min(100vw-2rem,320px)] pb-safe">
+              <SheetContent side="right" className="w-[min(100vw-2rem,320px)] pb-safe scroll-momentum">
                 <SheetHeader>
                   <SheetTitle className="font-heading text-left tracking-wide text-xl">
                     Firehall Meals

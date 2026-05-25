@@ -41,7 +41,10 @@ import { Flame } from "lucide-react";
 import { HeroHeader, type HeroVariant } from "@/components/hero-header";
 import { cn } from "@/lib/utils";
 import { SiteHeader } from "@/components/site-header";
+import { FirstShiftTip } from "@/components/first-shift-tip";
 import { useToast } from "@/hooks/use-toast";
+import { hapticLight, hapticSuccess, hapticWarning } from "@/lib/haptics";
+import { shouldShowFirstShiftTip } from "@/lib/app-session";
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
@@ -160,7 +163,7 @@ const ResultsPanel = memo(function ResultsPanel({
         </div>
       )}
       {!loading && showRecipe && recipeWithHero && (
-        <div className="animate-in fade-in slide-in-from-bottom-2 duration-500" key={stableRecipeKey(recipeWithHero)}>
+        <div className="meal-reveal motion-reduce:animate-none" key={stableRecipeKey(recipeWithHero)}>
           {historyNav.total > 1 && historyNav.index < historyNav.total - 1 && (
             <div className="flex items-center justify-center mb-3" data-testid="history-position-indicator">
               <span className="text-xs text-muted-foreground/60 font-mono tracking-widest uppercase">
@@ -224,6 +227,9 @@ export default function Home() {
   const [hallVoteOpen, setHallVoteOpen] = useState(false);
   const [recentRecipes, setRecentRecipes] = useState<ClientRecipeResponse[]>([]);
   const [favCount, setFavCount] = useState(() => getSavedCount());
+  const [showFirstShiftTip, setShowFirstShiftTip] = useState(
+    () => shouldShowFirstShiftTip() && !hasUserGeneratedBefore(),
+  );
 
   // ── Refs (never trigger re-renders) ──────────────────────────────────────
   // latestRequestSeq: incremented on every new request. Stale responses whose
@@ -381,6 +387,7 @@ export default function Home() {
 
     markUserHasGenerated();
     trackMealGenerated();
+    hapticSuccess();
     const totalGens = recordSuccessfulGeneration();
     setUserGenCount(totalGens);
 
@@ -436,6 +443,7 @@ export default function Home() {
     }
 
     lastClickTime.current = now;
+    hapticLight();
     isGenerating.current = true;
     cancelActivePrefetches();
 
@@ -514,6 +522,7 @@ export default function Home() {
       if (parsed.code === "no_match" || parsed.status === 404) {
         errorMsg = "no_match";
         setRecipe(null);
+        hapticWarning();
       } else if (parsed.code === "rate_limited" || parsed.status === 429) {
         errorMsg = parsed.message;
       } else if (parsed.code === "in_flight" || parsed.code === "duplicate_request" || parsed.status === 409) {
@@ -548,8 +557,9 @@ export default function Home() {
 
   // ── Button handlers ───────────────────────────────────────────────────────
   const handleGenerateClick = useCallback(() => {
+    if (showFirstShiftTip) setShowFirstShiftTip(false);
     handleGenerate(filters);
-  }, [filters, handleGenerate]);
+  }, [filters, handleGenerate, showFirstShiftTip]);
 
   const handleGenerateAnother = useCallback(() => {
     handleGenerate(filters, lastTemplateId, true);
@@ -649,10 +659,13 @@ export default function Home() {
 
       <main
         className={cn(
-          "max-w-[1400px] mx-auto px-page pb-safe-sticky lg:pb-8 transition-[padding] duration-500 ease-out",
+          "max-w-[1400px] mx-auto px-page pb-safe-sticky lg:pb-8 transition-[padding] duration-500 ease-out scroll-momentum",
           mealFocusMode ? "py-2 sm:py-3 lg:py-4" : heroVariant === "compact" ? "py-4 sm:py-5" : "py-8",
         )}
       >
+        {oneTapMode && showFirstShiftTip && (
+          <FirstShiftTip onDismiss={() => setShowFirstShiftTip(false)} />
+        )}
         <div
           className={cn(
             "flex flex-col lg:flex-row transition-[gap] duration-500",

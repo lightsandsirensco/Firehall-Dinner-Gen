@@ -15,6 +15,7 @@ import { resolveEditorialFallbackHero } from "@shared/meal-hero-fallback";
 import { buildRecipeTrustLine } from "@/lib/recipe-trust-line";
 import { Flame, Droplets, Wheat, Beef, Sparkles, Trash2, Clock, Timer, ShieldCheck, Thermometer, Printer, Leaf, Mail, Package, ShoppingCart, DollarSign, Lightbulb, List, Heart, Check, ChevronDown, UtensilsCrossed, Globe, Zap, Bug } from "lucide-react";
 import { saveMeal, isMealSaved } from "@/lib/saved-meals";
+import { hapticSuccess } from "@/lib/haptics";
 import { escapeHtml } from "@/lib/escape-html";
 import { useState, useEffect, useMemo } from "react";
 
@@ -255,6 +256,7 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
   const handleSave = () => {
     const result = saveMeal(recipe);
     if (result.saved || result.duplicate) {
+      hapticSuccess();
       setSaved(true);
       setShowConfirm(true);
       setTimeout(() => setShowConfirm(false), 2500);
@@ -417,7 +419,7 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
           </Button>
         </div>
         {showConfirm && (
-          <div className="flex items-center gap-2 text-sm text-primary animate-in fade-in duration-300" data-testid="text-save-confirmation">
+          <div className="flex items-center gap-2 text-sm text-primary success-pop motion-reduce:animate-none" data-testid="text-save-confirmation">
             <Check className="w-4 h-4" />
             Saved to Hall Favorites.
           </div>

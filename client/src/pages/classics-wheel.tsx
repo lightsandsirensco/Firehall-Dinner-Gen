@@ -13,6 +13,7 @@ import {
   toggleClassicPin,
 } from "@/lib/firehall-classics-wheel";
 import { AnimatePresence, motion } from "framer-motion";
+import { hapticSuccess } from "@/lib/haptics";
 
 type Phase = "ready" | "spinning" | "reveal";
 
@@ -29,6 +30,7 @@ export default function ClassicsWheelPage() {
   }, []);
 
   const handleLanded = useCallback((classic: WheelClassic) => {
+    hapticSuccess();
     setWinner(classic);
     setPinned(isClassicPinned(classic.slug));
     setPhase("reveal");

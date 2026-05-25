@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Flame, UtensilsCrossed } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { hapticLight } from "@/lib/haptics";
 
 const TONIGHT_IDEAS = [
   "Skillet night · hall portions",
@@ -68,8 +69,11 @@ export function EmptyState({
       {onGenerate && (
         <Button
           size="lg"
-          className="btn-generate font-heading text-lg sm:text-xl tracking-wider min-h-[3.25rem] px-10 w-full max-w-sm shadow-md shadow-primary/15 active:scale-[0.98] transition-transform"
-          onClick={onGenerate}
+          className="btn-generate font-heading text-lg sm:text-xl tracking-wider min-h-[3.25rem] px-10 w-full max-w-sm shadow-md shadow-primary/15 active:scale-[0.98] transition-transform touch-manipulation tap-scale"
+          onClick={() => {
+            hapticLight();
+            onGenerate();
+          }}
           disabled={generateDisabled}
           data-testid="button-empty-generate"
         >

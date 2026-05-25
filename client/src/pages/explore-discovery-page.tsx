@@ -225,7 +225,7 @@ export function ExploreDiscoveryPage({ registryRef }: ExploreDiscoveryPageProps)
         )}
 
         {!isLoading && !error && sections.length > 0 && (
-          <div data-testid="explore-discovery-feed">
+          <div data-testid="explore-discovery-feed" className="stagger-fade motion-reduce:[&>*]:!animate-none">
             {sections.map((section, sectionIndex) => (
               <ExploreDiscoverySection
                 key={section.id}
