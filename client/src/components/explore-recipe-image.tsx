@@ -64,7 +64,7 @@ export function ExploreRecipeImage({
     <div
       className={cn(
         "relative overflow-hidden bg-gradient-to-br from-zinc-950 to-black",
-        variant === "card" ? "w-full h-full" : "w-full min-h-[220px] sm:min-h-[320px]",
+        variant === "card" ? "w-full h-full" : "w-full aspect-[4/5] sm:aspect-[16/10] sm:min-h-[320px]",
         className,
       )}
     >

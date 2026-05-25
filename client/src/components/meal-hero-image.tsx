@@ -58,7 +58,7 @@ export function MealHeroImage({
         alt={alt}
         className={cn(
           "w-full h-full object-cover",
-          variant === "cinematic" && "min-h-[200px] sm:min-h-[280px] max-h-[420px]",
+          variant === "cinematic" && "min-h-[220px] sm:min-h-[280px] max-h-[min(70vh,480px)] sm:max-h-[420px]",
           imgClassName,
         )}
         onError={() => setFailed(true)}

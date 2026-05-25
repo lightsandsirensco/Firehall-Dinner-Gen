@@ -646,7 +646,7 @@ export default function Home() {
 
   // ─────────────────────────────────────────────────────────────────────────
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen min-h-[100dvh] bg-background overflow-x-hidden">
       <SiteHeader activePage="generator" favCount={favCount} />
 
       <HeroHeader
@@ -666,7 +666,7 @@ export default function Home() {
 
       <main
         className={cn(
-          "max-w-[1400px] mx-auto px-4 sm:px-6 pb-28 lg:pb-8 transition-[padding] duration-500 ease-out",
+          "max-w-[1400px] mx-auto px-4 sm:px-6 pb-safe-nav lg:pb-8 transition-[padding] duration-500 ease-out",
           mealFocusMode ? "py-2 sm:py-3 lg:py-4" : heroVariant === "compact" ? "py-4 sm:py-5" : "py-8",
         )}
       >

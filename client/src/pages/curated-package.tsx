@@ -58,7 +58,7 @@ export default function CuratedPackagePage() {
   );
 
   return (
-    <div className="min-h-screen bg-background flex flex-col">
+    <div className="min-h-screen min-h-[100dvh] bg-background flex flex-col overflow-x-hidden">
       <SiteHeader activePage="wheel" favCount={favCount} />
 
       <main className="flex-1 max-w-[1200px] mx-auto w-full px-4 sm:px-6 py-6 sm:py-10">
@@ -75,9 +75,13 @@ export default function CuratedPackagePage() {
         </div>
 
         {isLoading && (
-          <div className="flex flex-col items-center py-24" data-testid="curated-loading">
-            <Loader2 className="w-10 h-10 animate-spin text-primary mb-4" />
-            <p className="text-sm text-muted-foreground">Loading tonight&apos;s spread...</p>
+          <div className="space-y-6" data-testid="curated-loading">
+            <div className="aspect-[4/5] sm:aspect-[2.2/1] rounded-2xl skeleton-shimmer" />
+            <div className="space-y-3 px-1">
+              <div className="h-10 w-3/4 skeleton-shimmer rounded-lg" />
+              <div className="h-4 w-full skeleton-shimmer rounded" />
+              <div className="h-4 w-2/3 skeleton-shimmer rounded" />
+            </div>
           </div>
         )}
 
@@ -99,9 +103,9 @@ export default function CuratedPackagePage() {
                 emoji={data.emoji}
                 title={data.title}
                 variant="cinematic"
-                className="aspect-[21/9] sm:aspect-[2.2/1]"
+                className="aspect-[4/5] sm:aspect-[2.2/1] max-h-[min(70vh,520px)] sm:max-h-none"
               />
-              <div className={`relative p-6 sm:p-8 -mt-12 sm:-mt-16`}>
+              <div className="relative p-5 sm:p-8 -mt-8 sm:-mt-16 bg-gradient-to-t from-card via-card/95 to-transparent">
                 <span className="text-4xl sm:text-5xl block mb-3" role="img" aria-hidden>
                   {data.emoji}
                 </span>

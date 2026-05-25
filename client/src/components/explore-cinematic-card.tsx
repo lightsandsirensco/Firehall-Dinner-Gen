@@ -71,7 +71,7 @@ function ExploreCinematicCardInner({
       <div
         className={cn(
           "relative w-full overflow-hidden bg-zinc-950",
-          isGrid ? "aspect-[4/5]" : "aspect-[5/6] sm:aspect-[4/5] min-h-[280px]",
+          isGrid ? "aspect-[3/4] sm:aspect-[4/5]" : "aspect-[4/5] sm:aspect-[4/5] min-h-[260px] sm:min-h-[280px]",
         )}
       >
         <div className="absolute inset-0 transition-transform duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.06] motion-reduce:group-hover:scale-100">
@@ -129,7 +129,7 @@ function ExploreCinematicCardInner({
           </div>
 
           <div>
-            <h3 className="font-heading text-[1.4rem] sm:text-2xl leading-[1.12] text-white line-clamp-2 drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]">
+            <h3 className="font-heading text-xl sm:text-2xl leading-[1.12] text-white line-clamp-2 drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]">
               {recipe.title}
             </h3>
             <p className="mt-1.5 text-xs sm:text-sm text-white/88 line-clamp-2 font-medium leading-snug">
@@ -153,7 +153,7 @@ export function ExploreCinematicCardSkeleton({ layout = "rail" }: { layout?: "ra
       )}
       data-testid="skeleton-cinematic-card"
     >
-      <div className="h-full w-full animate-pulse bg-gradient-to-br from-zinc-800/70 via-zinc-900/50 to-zinc-800/70" />
+      <div className="h-full w-full skeleton-shimmer" />
     </div>
   );
 }

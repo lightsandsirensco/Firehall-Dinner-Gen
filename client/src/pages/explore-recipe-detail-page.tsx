@@ -246,54 +246,53 @@ export function ExploreRecipeDetailPage({ registryRef }: ExploreRecipeDetailPage
       detailPreview,
     ) as RecipeDetail;
     return (
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen min-h-[100dvh] bg-background overflow-x-hidden">
         <SiteHeader activePage="explore" favCount={favCount} />
-        <main className="max-w-[900px] mx-auto px-4 sm:px-6 py-8">
-          <Button
-            variant="ghost"
-            className="mb-6 gap-1.5"
-            onClick={closeRecipeDetail}
-            data-testid="button-back-to-results"
-          >
-            <ChevronLeft className="w-4 h-4" />
-            Back to Explore
-          </Button>
-          <RecipeDetailView recipe={displayDetail} crewSize={DEFAULT_CREW_SIZE} />
+        <main className="max-w-[900px] mx-auto pb-safe-cta sm:pb-8">
+          <RecipeDetailView
+            recipe={displayDetail}
+            crewSize={DEFAULT_CREW_SIZE}
+            onBack={closeRecipeDetail}
+          />
         </main>
-        <ExploreDetailFooter />
+        <ExploreDetailFooter className="hidden sm:block" />
       </div>
     );
   }
 
   if (selectedRecipeId && detailLoading) {
     return (
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen min-h-[100dvh] bg-background overflow-x-hidden">
         <SiteHeader activePage="explore" favCount={favCount} />
-        <main className="max-w-[900px] mx-auto px-4 sm:px-6 py-8">
-          <Button
-            variant="ghost"
-            className="mb-6 gap-1.5"
-            onClick={closeRecipeDetail}
-            data-testid="button-back-to-results"
-          >
-            <ChevronLeft className="w-4 h-4" />
-            Back to Explore
-          </Button>
-          <div className="space-y-6" data-testid="explore-detail-skeleton">
+        <main className="max-w-[900px] mx-auto">
+          <div className="relative">
             {detailPreview ? (
-              <>
-                <div className="rounded-2xl overflow-hidden ring-1 ring-border/40">
-                  <ExploreRecipeImage recipe={detailPreview} variant="detail" />
-                </div>
-                <h1 className="font-heading text-2xl tracking-wide text-foreground">{detailPreview.title}</h1>
-              </>
+              <div className="max-h-[min(52vh,480px)] overflow-hidden">
+                <ExploreRecipeImage recipe={detailPreview} variant="detail" priority />
+              </div>
             ) : (
-              <div className="aspect-[16/9] rounded-xl bg-muted animate-pulse" />
+              <div className="aspect-[4/5] max-h-[52vh] skeleton-shimmer" />
             )}
-            <div className="h-4 bg-muted rounded w-1/2 animate-pulse" />
+            <Button
+              variant="secondary"
+              size="sm"
+              className="absolute top-3 left-3 z-20 gap-1.5 bg-black/50 backdrop-blur-md border-white/10 text-white min-h-10"
+              onClick={closeRecipeDetail}
+            >
+              <ChevronLeft className="w-4 h-4" />
+              Explore
+            </Button>
+          </div>
+          <div className="px-4 py-6 space-y-4" data-testid="explore-detail-skeleton">
+            <div className="h-9 skeleton-shimmer rounded-lg w-[85%]" />
+            <div className="flex gap-2">
+              <div className="h-8 w-24 skeleton-shimmer rounded-full" />
+              <div className="h-8 w-20 skeleton-shimmer rounded-full" />
+            </div>
+            <div className="h-4 skeleton-shimmer rounded w-full" />
+            <div className="h-4 skeleton-shimmer rounded w-2/3" />
           </div>
         </main>
-        <ExploreDetailFooter />
       </div>
     );
   }
@@ -346,7 +345,15 @@ export function ExploreRecipeDetailPage({ registryRef }: ExploreRecipeDetailPage
   return null;
 }
 
-function RecipeDetailView({ recipe, crewSize }: { recipe: RecipeDetail; crewSize: number }) {
+function RecipeDetailView({
+  recipe,
+  crewSize,
+  onBack,
+}: {
+  recipe: RecipeDetail;
+  crewSize: number;
+  onBack: () => void;
+}) {
   const [saved, setSaved] = useState(() => {
     const client = spoonacularToClientRecipe(recipe, crewSize);
     return isMealSaved(client);
@@ -392,178 +399,238 @@ function RecipeDetailView({ recipe, crewSize }: { recipe: RecipeDetail; crewSize
     diets: recipe.diets,
   };
 
+  const prepMin = Math.max(5, Math.round(recipe.readyInMinutes * 0.3));
+  const cookMin = Math.max(10, recipe.readyInMinutes - prepMin);
+
   return (
-    <div className="space-y-6" data-testid="explore-recipe-detail">
-      <div className="rounded-2xl overflow-hidden ring-1 ring-border/40 shadow-xl shadow-black/20 max-h-[min(420px,55vh)]">
-        <ExploreRecipeImage recipe={heroRecipe} variant="detail" />
-      </div>
-
-      <div>
-        <h1
-          className="font-heading text-2xl sm:text-3xl tracking-wide text-foreground mb-3"
-          data-testid="text-detail-title"
+    <div className="fade-up" data-testid="explore-recipe-detail">
+      {/* Full-bleed hero */}
+      <div className="relative -mx-0 sm:mx-0 sm:rounded-2xl sm:overflow-hidden sm:ring-1 sm:ring-border/40 sm:shadow-xl sm:shadow-black/20 sm:mt-6 sm:mx-6">
+        <div className="relative max-h-[min(52vh,480px)] sm:max-h-[min(420px,55vh)] overflow-hidden">
+          <ExploreRecipeImage recipe={heroRecipe} variant="detail" priority />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent pointer-events-none" />
+        </div>
+        <Button
+          variant="secondary"
+          size="sm"
+          className="absolute top-3 left-3 z-20 gap-1.5 bg-black/50 backdrop-blur-md border-white/10 text-white hover:bg-black/70 min-h-10 touch-manipulation"
+          onClick={onBack}
+          data-testid="button-back-to-results"
         >
-          {recipe.title}
-        </h1>
-        <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
-          {recipe.readyInMinutes > 0 && (
-            <span className="flex items-center gap-1.5">
-              <Clock className="w-4 h-4 text-primary/60" />
-              {recipe.readyInMinutes} min
-            </span>
-          )}
-          <span className="flex items-center gap-1.5">
-            <Users className="w-4 h-4 text-primary/60" />
-            {crewSize} servings
-          </span>
-        </div>
-        <div className="flex gap-1.5 flex-wrap mb-5">
-          {recipe.cuisines.map((c) => (
-            <Badge key={c} variant="outline" className="text-xs">
-              {c}
-            </Badge>
-          ))}
-          {recipe.diets.map((d) => (
-            <Badge key={d} variant="secondary" className="text-xs">
-              {d}
-            </Badge>
-          ))}
-          {recipe.dishTypes.slice(0, 3).map((t) => (
-            <Badge key={t} variant="outline" className="text-xs">
-              {t}
-            </Badge>
-          ))}
-        </div>
-        {recipe.summary && (
-          <p className="text-sm text-muted-foreground leading-relaxed" data-testid="text-detail-summary">
-            {stripHtml(recipe.summary)}
-          </p>
-        )}
-        {recipe.sourceUrl && (
-          <a
-            href={recipe.sourceUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-sm text-primary mt-3 hover:underline"
-            data-testid="link-detail-source"
-          >
-            View full recipe on source site →
-          </a>
-        )}
+          <ChevronLeft className="w-4 h-4" />
+          <span className="text-xs font-semibold uppercase tracking-wider">Explore</span>
+        </Button>
       </div>
 
-      <Card>
-        <CardContent className="p-4 sm:p-5">
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
-            <Button
-              variant="outline"
-              onClick={handleSave}
-              disabled={saved}
-              className={`justify-start gap-2 ${saved ? "bg-primary/20 text-primary border-primary/30" : ""}`}
-              data-testid="button-explore-save"
-            >
-              {saved ? (
-                <Heart className="w-4 h-4 fill-current flex-shrink-0" />
-              ) : (
-                <BookmarkPlus className="w-4 h-4 flex-shrink-0" />
-              )}
-              <span className="truncate">{saved ? "Saved" : "Save"}</span>
-            </Button>
-            <Button variant="outline" onClick={handlePrint} className="justify-start gap-2" data-testid="button-explore-print">
-              <Printer className="w-4 h-4 flex-shrink-0" />
-              <span className="truncate">Print</span>
-            </Button>
-            <Button variant="outline" onClick={() => setEmailOpen(true)} className="justify-start gap-2" data-testid="button-explore-email">
-              <Mail className="w-4 h-4 flex-shrink-0" />
-              <span className="truncate">Email</span>
-            </Button>
-            <Button onClick={() => setShoppingOpen(true)} className="justify-start gap-2" data-testid="button-explore-shopping">
-              <List className="w-4 h-4 flex-shrink-0" />
-              <span className="truncate">Shopping List</span>
-            </Button>
-          </div>
-        </CardContent>
-      </Card>
+      <div className="px-4 sm:px-6 pt-5 sm:pt-6 space-y-6">
+        <div>
+          <h1
+            className="font-heading text-[1.75rem] sm:text-3xl tracking-wide text-foreground leading-[1.1] mb-3"
+            data-testid="text-detail-title"
+          >
+            {recipe.title}
+          </h1>
 
-      {recipe.macros.calories > 0 && (
-        <Card>
+          <div className="flex flex-wrap gap-2 mb-4">
+            {recipe.readyInMinutes > 0 && (
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/15 border border-primary/25 px-3 py-1.5 text-xs font-semibold text-primary tabular-nums">
+                <Clock className="w-3.5 h-3.5" />
+                {recipe.readyInMinutes} min total
+              </span>
+            )}
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-muted/80 border border-border/50 px-3 py-1.5 text-xs font-medium text-foreground">
+              <Users className="w-3.5 h-3.5 text-primary/70" />
+              {crewSize} servings
+            </span>
+            {prepMin > 0 && (
+              <span className="inline-flex items-center rounded-full bg-muted/60 border border-border/40 px-3 py-1.5 text-[11px] font-medium text-muted-foreground uppercase tracking-wide">
+                Prep ~{prepMin}m
+              </span>
+            )}
+            {cookMin > 0 && (
+              <span className="inline-flex items-center rounded-full bg-muted/60 border border-border/40 px-3 py-1.5 text-[11px] font-medium text-muted-foreground uppercase tracking-wide">
+                Cook ~{cookMin}m
+              </span>
+            )}
+          </div>
+
+          <div className="flex gap-1.5 flex-wrap mb-4">
+            {recipe.cuisines.slice(0, 3).map((c) => (
+              <Badge key={c} variant="outline" className="text-[10px] uppercase tracking-wide">
+                {c}
+              </Badge>
+            ))}
+            {recipe.diets.slice(0, 2).map((d) => (
+              <Badge key={d} variant="secondary" className="text-[10px]">
+                {d}
+              </Badge>
+            ))}
+          </div>
+
+          {recipe.summary && (
+            <p className="text-[15px] sm:text-sm text-muted-foreground leading-relaxed" data-testid="text-detail-summary">
+              {stripHtml(recipe.summary)}
+            </p>
+          )}
+          {recipe.sourceUrl && (
+            <a
+              href={recipe.sourceUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-sm text-primary mt-4 min-h-11 touch-manipulation"
+              data-testid="link-detail-source"
+            >
+              View full recipe on source site →
+            </a>
+          )}
+        </div>
+
+        {/* Desktop action row */}
+        <Card className="hidden sm:block">
           <CardContent className="p-4 sm:p-5">
-            <h3 className="font-heading text-sm tracking-widest uppercase text-foreground mb-4 flex items-center gap-2">
-              <Sparkles className="w-3.5 h-3.5 text-primary/60" />
-              Nutrition per Serving
-            </h3>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
-              <div>
-                <p className="text-xl font-bold text-foreground" data-testid="text-detail-calories">
-                  {recipe.macros.calories}
-                </p>
-                <p className="text-[11px] text-muted-foreground uppercase tracking-wider mt-0.5">Calories</p>
-              </div>
-              <div>
-                <p className="text-xl font-bold text-foreground" data-testid="text-detail-protein">
-                  {recipe.macros.protein_g}g
-                </p>
-                <p className="text-[11px] text-muted-foreground uppercase tracking-wider mt-0.5">Protein</p>
-              </div>
-              <div>
-                <p className="text-xl font-bold text-foreground" data-testid="text-detail-carbs">
-                  {recipe.macros.carbs_g}g
-                </p>
-                <p className="text-[11px] text-muted-foreground uppercase tracking-wider mt-0.5">Carbs</p>
-              </div>
-              <div>
-                <p className="text-xl font-bold text-foreground" data-testid="text-detail-fat">
-                  {recipe.macros.fat_g}g
-                </p>
-                <p className="text-[11px] text-muted-foreground uppercase tracking-wider mt-0.5">Fat</p>
-              </div>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+              <Button
+                variant="outline"
+                onClick={handleSave}
+                disabled={saved}
+                className={`justify-start gap-2 min-h-11 ${saved ? "bg-primary/20 text-primary border-primary/30" : ""}`}
+                data-testid="button-explore-save"
+              >
+                {saved ? <Heart className="w-4 h-4 fill-current" /> : <BookmarkPlus className="w-4 h-4" />}
+                {saved ? "Saved" : "Save"}
+              </Button>
+              <Button variant="outline" onClick={handlePrint} className="justify-start gap-2 min-h-11" data-testid="button-explore-print">
+                <Printer className="w-4 h-4" />
+                Print
+              </Button>
+              <Button variant="outline" onClick={() => setEmailOpen(true)} className="justify-start gap-2 min-h-11" data-testid="button-explore-email">
+                <Mail className="w-4 h-4" />
+                Email
+              </Button>
+              <Button onClick={() => setShoppingOpen(true)} className="justify-start gap-2 min-h-11" data-testid="button-explore-shopping">
+                <List className="w-4 h-4" />
+                Shopping List
+              </Button>
             </div>
           </CardContent>
         </Card>
-      )}
 
-      <Card>
-        <CardContent className="p-4 sm:p-5">
-          <h3 className="font-heading text-sm tracking-widest uppercase text-foreground mb-4 flex items-center gap-2">
-            <ChefHat className="w-3.5 h-3.5 text-primary/60" />
-            Ingredients
-          </h3>
-          <ul className="space-y-2" data-testid="section-detail-ingredients">
-            {recipe.ingredients.map((ing, i) => (
-              <li key={i} className="text-sm text-foreground flex items-start gap-2.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-primary/50 mt-1.5 flex-shrink-0" />
-                {ing.original}
-              </li>
-            ))}
-          </ul>
-        </CardContent>
-      </Card>
-
-      {recipe.steps.length > 0 && (
-        <Card>
-          <CardContent className="p-4 sm:p-5">
-            <h3 className="font-heading text-sm tracking-widest uppercase text-foreground mb-4 flex items-center gap-2">
-              <Utensils className="w-3.5 h-3.5 text-primary/60" />
-              Instructions
-            </h3>
-            <ol className="space-y-5" data-testid="section-detail-steps">
-              {recipe.steps.map((step) => (
-                <li key={step.number} className="flex gap-3">
-                  <span className="flex-shrink-0 w-7 h-7 rounded-full bg-primary/10 text-primary text-xs font-bold flex items-center justify-center mt-0.5">
-                    {step.number}
-                  </span>
-                  <div className="min-w-0 pt-0.5 space-y-1.5">
-                    {step.heading && step.heading !== `Step ${step.number}` && (
-                      <p className="text-sm font-semibold text-foreground leading-snug">{step.heading}</p>
-                    )}
-                    <p className="text-sm text-foreground/90 leading-relaxed">{step.step}</p>
+        {recipe.macros.calories > 0 && (
+          <Card className="border-border/50 bg-card/80">
+            <CardContent className="p-4 sm:p-5">
+              <h3 className="font-heading text-xs sm:text-sm tracking-widest uppercase text-foreground mb-4 flex items-center gap-2">
+                <Sparkles className="w-3.5 h-3.5 text-primary/60" />
+                Nutrition per serving
+              </h3>
+              <div className="grid grid-cols-4 gap-2 sm:gap-3">
+                {[
+                  { label: "Cal", value: recipe.macros.calories, id: "calories" },
+                  { label: "Protein", value: `${recipe.macros.protein_g}g`, id: "protein" },
+                  { label: "Carbs", value: `${recipe.macros.carbs_g}g`, id: "carbs" },
+                  { label: "Fat", value: `${recipe.macros.fat_g}g`, id: "fat" },
+                ].map((m) => (
+                  <div
+                    key={m.id}
+                    className="rounded-xl bg-muted/40 border border-border/30 py-3 px-1 text-center"
+                  >
+                    <p className="text-lg sm:text-xl font-bold text-foreground tabular-nums" data-testid={`text-detail-${m.id}`}>
+                      {m.value}
+                    </p>
+                    <p className="text-[9px] sm:text-[11px] text-muted-foreground uppercase tracking-wider mt-0.5">
+                      {m.label}
+                    </p>
                   </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        )}
+
+        <div className="section-divider" />
+
+        <Card className="border-border/50">
+          <CardContent className="p-4 sm:p-5">
+            <h3 className="font-heading text-xs sm:text-sm tracking-widest uppercase text-foreground mb-4 flex items-center gap-2">
+              <ChefHat className="w-3.5 h-3.5 text-primary/60" />
+              Ingredients
+            </h3>
+            <ul className="space-y-3" data-testid="section-detail-ingredients">
+              {recipe.ingredients.map((ing, i) => (
+                <li
+                  key={i}
+                  className="text-[15px] sm:text-sm text-foreground flex items-start gap-3 py-2 border-b border-border/20 last:border-0"
+                >
+                  <span className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
+                  <span className="leading-relaxed">{ing.original}</span>
                 </li>
               ))}
-            </ol>
+            </ul>
           </CardContent>
         </Card>
-      )}
+
+        {recipe.steps.length > 0 && (
+          <Card className="border-border/50">
+            <CardContent className="p-4 sm:p-5">
+              <h3 className="font-heading text-xs sm:text-sm tracking-widest uppercase text-foreground mb-5 flex items-center gap-2">
+                <Utensils className="w-3.5 h-3.5 text-primary/60" />
+                Step-by-step
+              </h3>
+              <ol className="space-y-6" data-testid="section-detail-steps">
+                {recipe.steps.map((step) => (
+                  <li key={step.number} className="flex gap-3.5">
+                    <span className="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground text-sm font-bold flex items-center justify-center shadow-md shadow-primary/25">
+                      {step.number}
+                    </span>
+                    <div className="min-w-0 flex-1 space-y-2 pt-0.5">
+                      {step.heading && step.heading !== `Step ${step.number}` && (
+                        <p className="text-[15px] font-semibold text-foreground leading-snug">{step.heading}</p>
+                      )}
+                      <p className="text-[15px] sm:text-sm text-foreground/90 leading-[1.65]">{step.step}</p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            </CardContent>
+          </Card>
+        )}
+      </div>
+
+      {/* Mobile sticky CTAs */}
+      <div
+        className="sm:hidden fixed bottom-0 inset-x-0 z-40 border-t border-border/50 bg-background/95 backdrop-blur-lg shadow-[0_-8px_32px_rgba(0,0,0,0.45)] pb-safe"
+        data-testid="explore-detail-mobile-cta"
+      >
+        <div className="grid grid-cols-2 gap-2 p-3 max-w-[900px] mx-auto">
+          <Button
+            variant="outline"
+            onClick={handleSave}
+            disabled={saved}
+            className={`min-h-12 gap-2 touch-manipulation ${saved ? "bg-primary/15 border-primary/30 text-primary" : ""}`}
+            data-testid="button-explore-save-mobile"
+          >
+            {saved ? <Heart className="w-4 h-4 fill-current" /> : <BookmarkPlus className="w-4 h-4" />}
+            {saved ? "Saved" : "Save"}
+          </Button>
+          <Button
+            onClick={() => setShoppingOpen(true)}
+            className="min-h-12 gap-2 touch-manipulation font-semibold"
+            data-testid="button-explore-shopping-mobile"
+          >
+            <List className="w-4 h-4" />
+            Shopping list
+          </Button>
+        </div>
+        <div className="grid grid-cols-2 gap-2 px-3 pb-2 max-w-[900px] mx-auto">
+          <Button variant="ghost" size="sm" onClick={handlePrint} className="min-h-10 text-xs touch-manipulation">
+            <Printer className="w-3.5 h-3.5 mr-1" />
+            Print
+          </Button>
+          <Button variant="ghost" size="sm" onClick={() => setEmailOpen(true)} className="min-h-10 text-xs touch-manipulation">
+            <Mail className="w-3.5 h-3.5 mr-1" />
+            Email crew
+          </Button>
+        </div>
+      </div>
 
       <EmailModal
         open={emailOpen}
@@ -583,9 +650,9 @@ function RecipeDetailView({ recipe, crewSize }: { recipe: RecipeDetail; crewSize
   );
 }
 
-function ExploreDetailFooter() {
+function ExploreDetailFooter({ className = "" }: { className?: string }) {
   return (
-    <footer className="text-center py-6 mt-8 border-t border-border/20">
+    <footer className={`text-center py-6 mt-8 border-t border-border/20 ${className}`}>
       <p className="text-xs text-muted-foreground/50">
         Powered by{" "}
         <a

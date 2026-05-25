@@ -16,7 +16,7 @@ export function ExploreCategoryNav({
   return (
     <nav
       className={cn(
-        "sticky top-0 z-30 -mx-4 px-4 sm:-mx-6 sm:px-6 py-3",
+        "sticky z-30 -mx-4 px-4 sm:-mx-6 sm:px-6 py-2.5",
         "bg-background/90 backdrop-blur-md border-b border-border/40",
         className,
       )}
@@ -37,8 +37,8 @@ export function ExploreCategoryNav({
               type="button"
               onClick={() => onSelect(item.id)}
               className={cn(
-                "snap-start shrink-0 rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-wider",
-                "transition-colors duration-200 border",
+                "snap-start shrink-0 rounded-full px-4 py-2.5 text-xs font-semibold uppercase tracking-wider min-h-11",
+                "transition-colors duration-200 border touch-manipulation active:scale-[0.97]",
                 active
                   ? "bg-primary text-primary-foreground border-primary shadow-md shadow-primary/20"
                   : "bg-muted/50 text-muted-foreground border-border/50 hover:bg-muted hover:text-foreground",

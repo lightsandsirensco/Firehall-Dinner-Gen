@@ -61,7 +61,7 @@ export function ClassicsWheel({ disabled, onLanded, onSpinStart }: ClassicsWheel
   }, [spinning, disabled, onLanded, onSpinStart]);
 
   return (
-    <div className="relative mx-auto w-full max-w-[min(100%,420px)] aspect-square" data-testid="classics-wheel">
+    <div className="relative mx-auto w-full max-w-[min(92vw,400px)] sm:max-w-[420px] aspect-square touch-manipulation" data-testid="classics-wheel">
       {/* Pointer */}
       <div
         className="absolute left-1/2 -translate-x-1/2 -top-1 z-30 flex flex-col items-center"
@@ -143,7 +143,7 @@ export function ClassicsWheel({ disabled, onLanded, onSpinStart }: ClassicsWheel
         type="button"
         onClick={spin}
         disabled={spinning || disabled}
-        className="absolute left-1/2 top-1/2 z-20 -translate-x-1/2 -translate-y-1/2 w-[28%] min-w-[88px] max-w-[120px] aspect-square rounded-full bg-gradient-to-br from-primary to-primary/80 text-primary-foreground font-heading tracking-widest uppercase text-xs sm:text-sm shadow-lg shadow-primary/30 border-4 border-background/90 hover:scale-105 active:scale-95 transition-transform disabled:opacity-70 disabled:pointer-events-none disabled:scale-100"
+        className="absolute left-1/2 top-1/2 z-20 -translate-x-1/2 -translate-y-1/2 w-[30%] min-w-[92px] max-w-[124px] aspect-square rounded-full bg-gradient-to-br from-primary to-primary/80 text-primary-foreground font-heading tracking-widest uppercase text-xs sm:text-sm shadow-lg shadow-primary/30 border-4 border-background/90 hover:scale-105 active:scale-[0.92] transition-transform disabled:opacity-70 disabled:pointer-events-none disabled:scale-100 touch-manipulation"
         data-testid="button-spin-wheel"
       >
         {spinning ? (
@@ -186,10 +186,10 @@ export function WheelReveal({
         animate={{ opacity: 1, y: 0, scale: 1 }}
         exit={{ opacity: 0, y: 12 }}
         transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-        className="w-full max-w-xl mx-auto"
+        className="w-full max-w-xl mx-auto px-0 sm:px-0"
         data-testid="wheel-reveal"
       >
-        <div className="relative overflow-hidden rounded-2xl border border-primary/40 bg-card shadow-2xl shadow-primary/20 ring-1 ring-primary/30">
+        <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl border border-primary/40 bg-card shadow-2xl shadow-primary/20 ring-1 ring-primary/30">
           <MealHeroImage
             src={classic.heroImage}
             alt={classic.imageAlt}
@@ -238,7 +238,7 @@ export function WheelReveal({
               <button
                 type="button"
                 onClick={onCook}
-                className="col-span-1 sm:col-span-2 inline-flex items-center justify-center gap-2 rounded-lg bg-primary text-primary-foreground font-heading tracking-wider uppercase text-sm py-3 px-4 hover:bg-primary/90 transition-colors"
+                className="col-span-1 sm:col-span-2 inline-flex items-center justify-center gap-2 rounded-xl bg-primary text-primary-foreground font-heading tracking-wider uppercase text-sm py-3.5 px-4 min-h-[52px] hover:bg-primary/90 active:scale-[0.98] transition-all touch-manipulation"
                 data-testid="button-wheel-cook"
               >
                 <Flame className="w-4 h-4" />

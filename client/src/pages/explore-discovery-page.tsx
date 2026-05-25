@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, type RefObject } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, type RefObject } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { useLocation } from "wouter";
 import { Flame, ShieldCheck } from "lucide-react";
@@ -18,6 +18,7 @@ import { getSavedCount } from "@/lib/saved-meals";
 import { getWheelClassicBySlug, buildPackageUrl } from "@/lib/firehall-classics-wheel";
 import { resolveExploreCardNavigation } from "@/lib/explore-navigation";
 import { preloadExploreImages } from "@/lib/explore-image-preload";
+import { ExploreCategoryNav } from "@/components/explore-category-nav";
 
 const DEFAULT_CREW_SIZE = 6;
 const EXPLORE_QUERY_KEY = ["/api/explore/sections", "publisher-v1"] as const;
@@ -30,6 +31,13 @@ export function ExploreDiscoveryPage({ registryRef }: ExploreDiscoveryPageProps)
   const [, navigate] = useLocation();
   const favCount = getSavedCount();
   const preloadedRef = useRef(false);
+  const [activeSectionId, setActiveSectionId] = useState<string | undefined>();
+
+  const scrollToSection = useCallback((sectionId: string) => {
+    setActiveSectionId(sectionId);
+    const el = document.getElementById(`explore-section-${sectionId}`);
+    el?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, []);
 
   const {
     data: editorialData,
@@ -48,6 +56,15 @@ export function ExploreDiscoveryPage({ registryRef }: ExploreDiscoveryPageProps)
   const sections = useMemo(
     () => editorialData?.sections ?? [],
     [editorialData?.sections],
+  );
+
+  const categoryNavItems = useMemo(
+    () =>
+      sections.map((s) => ({
+        id: s.id,
+        label: s.title.replace(/^(Trending|Hall|Firehouse)\s*/i, "").slice(0, 18),
+      })),
+    [sections],
   );
 
   const recipeCount = useMemo(
@@ -114,7 +131,7 @@ export function ExploreDiscoveryPage({ registryRef }: ExploreDiscoveryPageProps)
   );
 
   return (
-    <div className="min-h-screen bg-background pb-safe">
+    <div className="min-h-screen min-h-[100dvh] bg-background pb-safe overflow-x-hidden">
       <SiteHeader activePage="explore" favCount={favCount} />
 
       <header className="relative overflow-hidden border-b border-border/40">
@@ -123,7 +140,7 @@ export function ExploreDiscoveryPage({ registryRef }: ExploreDiscoveryPageProps)
           className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-20%,rgba(234,88,12,0.22),transparent)]"
           aria-hidden
         />
-        <div className="relative max-w-[1320px] mx-auto px-4 sm:px-6 pt-8 sm:pt-10 pb-7 sm:pb-9">
+        <div className="relative max-w-[1320px] mx-auto px-4 sm:px-6 pt-6 sm:pt-10 pb-6 sm:pb-9">
           <div className="flex flex-wrap items-center gap-2 mb-3">
             <span className="inline-flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-widest text-primary bg-primary/10 border border-primary/20 px-2.5 py-1 rounded-full">
               <Flame className="w-3 h-3" />
@@ -134,7 +151,7 @@ export function ExploreDiscoveryPage({ registryRef }: ExploreDiscoveryPageProps)
               Real recipes · crew-tested
             </span>
           </div>
-          <h1 className="font-heading text-3xl sm:text-4xl md:text-[2.75rem] tracking-wide text-foreground max-w-2xl leading-[1.08]">
+          <h1 className="font-heading text-[2rem] sm:text-4xl md:text-[2.75rem] tracking-wide text-foreground max-w-2xl leading-[1.08]">
             Tonight&apos;s crew dinner inspiration
           </h1>
           <p className="text-sm sm:text-base text-muted-foreground mt-3 max-w-lg leading-relaxed">
@@ -143,12 +160,22 @@ export function ExploreDiscoveryPage({ registryRef }: ExploreDiscoveryPageProps)
         </div>
       </header>
 
-      <main className="max-w-[1320px] mx-auto px-4 sm:px-6 py-6 sm:py-8">
+      <main className="max-w-[1320px] mx-auto px-4 sm:px-6 py-5 sm:py-8">
+        {!isLoading && !error && categoryNavItems.length > 1 && (
+          <ExploreCategoryNav
+            items={categoryNavItems}
+            activeId={activeSectionId}
+            onSelect={scrollToSection}
+            className="mb-6 -mx-4 px-4 sm:-mx-6 sm:px-6 top-14 sm:top-16"
+          />
+        )}
+
         {isLoading && (
-          <div data-testid="explore-discovery-loading" className="space-y-11">
-            {Array.from({ length: 6 }).map((_, i) => (
-              <ExploreDiscoverySectionSkeleton key={i} layout="rail" />
-            ))}
+          <div data-testid="explore-discovery-loading" className="space-y-10">
+            <ExploreDiscoverySectionSkeleton layout="rail" />
+            <ExploreDiscoverySectionSkeleton layout="rail" />
+            <ExploreDiscoverySectionSkeleton layout="grid" />
+            <ExploreDiscoverySectionSkeleton layout="rail" />
           </div>
         )}
 

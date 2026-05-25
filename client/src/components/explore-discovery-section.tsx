@@ -86,7 +86,7 @@ export function ExploreDiscoverySection({
       </div>
 
       {isGrid ? (
-        <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
+        <div className="grid grid-cols-2 gap-2.5 sm:gap-4 md:grid-cols-3">
           {section.recipes.map((recipe, index) => (
             <ExploreCinematicCard
               key={`${section.id}-${recipe.id}-${recipe._curatedSlug ?? ""}`}
@@ -105,7 +105,7 @@ export function ExploreDiscoverySection({
             "flex flex-nowrap gap-3 sm:gap-4 overflow-x-auto pb-3 -mx-4 px-4 sm:-mx-6 sm:px-6",
             "snap-x snap-mandatory scroll-smooth overscroll-x-contain",
             "[-webkit-overflow-scrolling:touch]",
-            "scrollbar-thin",
+            "scrollbar-hide sm:scrollbar-thin",
             isHeroRail && themeStyle.glow,
           )}
         >
@@ -115,8 +115,8 @@ export function ExploreDiscoverySection({
               className={cn(
                 "snap-start shrink-0",
                 isHeroRail
-                  ? "w-[min(92vw,340px)] sm:w-[360px]"
-                  : "w-[min(88vw,300px)] sm:w-[300px] md:w-[320px]",
+                  ? "w-[min(86vw,340px)] sm:w-[360px]"
+                  : "w-[min(82vw,300px)] sm:w-[300px] md:w-[320px]",
               )}
             >
               <ExploreCinematicCard
