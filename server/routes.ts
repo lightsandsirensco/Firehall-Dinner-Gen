@@ -1856,6 +1856,7 @@ export async function registerRoutes(
         excludeIngredients: excludeIngredients || undefined,
       });
 
+      res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
       return res.json({
         sections: feed.sections,
         _editorial: true,
@@ -2634,6 +2635,11 @@ export async function registerRoutes(
       const mealFormat = typeof req.query.meal_format === "string" ? req.query.meal_format : undefined;
       const protein = typeof req.query.protein === "string" ? req.query.protein : undefined;
       const hero = await resolveMealHeroImage(signature, recipeId, title, { mealFormat, protein });
+      if (hero.hero_image_status === "ready" && hero.hero_image) {
+        res.setHeader("Cache-Control", "public, max-age=3600, stale-while-revalidate=86400");
+      } else {
+        res.setHeader("Cache-Control", "private, no-cache");
+      }
       return res.json(hero);
     } catch (err: unknown) {
       const msg = err instanceof Error ? err.message : String(err);
@@ -2647,6 +2653,11 @@ export async function registerRoutes(
       const styleId = String(req.params.styleId || "");
       const title = typeof req.query.title === "string" ? req.query.title : undefined;
       const hero = await resolvePizzaHeroImage(styleId, title);
+      if (hero.hero_image_status === "ready" && hero.hero_image) {
+        res.setHeader("Cache-Control", "public, max-age=3600, stale-while-revalidate=86400");
+      } else {
+        res.setHeader("Cache-Control", "private, no-cache");
+      }
       return res.json(hero);
     } catch (err: unknown) {
       const msg = err instanceof Error ? err.message : String(err);

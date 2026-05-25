@@ -40,7 +40,7 @@ export function cancelActivePrefetches(): void {
     clearTimeout(prefetchTimer);
     prefetchTimer = null;
   }
-  console.log("[Prefetch] Cancelled background prefetches");
+  if (import.meta.env.DEV) console.log("[Prefetch] Cancelled background prefetches");
 }
 
 /**
@@ -91,20 +91,22 @@ function prefetchMeals(filters: Partial<GenerateRequest>, epoch: number): void {
 
   activeFetches++;
   const rid = body.request_id;
-  console.log(`[Prefetch] Start rid=${rid}`);
+  if (import.meta.env.DEV) console.log(`[Prefetch] Start rid=${rid}`);
 
   apiRequest("POST", "/api/generate", body)
     .then((res) => res.json())
     .then((data: ClientRecipeResponse) => {
       if (epoch !== prefetchEpoch) {
-        console.log(`[Prefetch] Discarded stale result rid=${rid}`);
+        if (import.meta.env.DEV) console.log(`[Prefetch] Discarded stale result rid=${rid}`);
         return;
       }
       putCached(filterKey, data);
-      console.log(`[Prefetch] Cached "${data.title}" rid=${rid}`);
+      if (import.meta.env.DEV) console.log(`[Prefetch] Cached "${data.title}" rid=${rid}`);
     })
     .catch((err) => {
-      console.log(`[Prefetch] Failed rid=${rid}:`, (err as Error).message?.slice(0, 80));
+      if (import.meta.env.DEV) {
+        console.log(`[Prefetch] Failed rid=${rid}:`, (err as Error).message?.slice(0, 80));
+      }
     })
     .finally(() => {
       activeFetches--;

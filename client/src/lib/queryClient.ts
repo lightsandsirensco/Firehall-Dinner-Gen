@@ -1,4 +1,18 @@
-import { QueryClient, QueryFunction } from "@tanstack/react-query";
+import { QueryClient, QueryFunction, onlineManager } from "@tanstack/react-query";
+
+if (typeof window !== "undefined") {
+  onlineManager.setEventListener((setOnline) => {
+    const onOnline = () => setOnline(true);
+    const onOffline = () => setOnline(false);
+    window.addEventListener("online", onOnline);
+    window.addEventListener("offline", onOffline);
+    setOnline(navigator.onLine);
+    return () => {
+      window.removeEventListener("online", onOnline);
+      window.removeEventListener("offline", onOffline);
+    };
+  });
+}
 
 async function throwIfResNotOk(res: Response) {
   if (!res.ok) {
@@ -98,10 +112,11 @@ export const getQueryFn: <T>(options: {
   on401: UnauthorizedBehavior;
 }) => QueryFunction<T> =
   ({ on401: unauthorizedBehavior }) =>
-  async ({ queryKey }) => {
+  async ({ queryKey, signal }) => {
     const url = buildUrlFromQueryKey(queryKey);
     const res = await fetch(url, {
       credentials: "include",
+      signal,
     });
 
     if (unauthorizedBehavior === "returnNull" && res.status === 401) {
@@ -119,10 +134,17 @@ export const queryClient = new QueryClient({
       refetchInterval: false,
       refetchOnWindowFocus: false,
       staleTime: Infinity,
-      retry: false,
+      gcTime: 30 * 60 * 1000,
+      networkMode: "online",
+      retry: (failureCount) => {
+        if (typeof navigator !== "undefined" && !navigator.onLine) return false;
+        return failureCount < 2;
+      },
+      retryDelay: (attemptIndex) => Math.min(1000 * 2 ** attemptIndex, 8000),
     },
     mutations: {
       retry: false,
+      networkMode: "online",
     },
   },
 });

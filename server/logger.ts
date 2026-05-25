@@ -12,6 +12,23 @@ export function isProductionEnv(): boolean {
   return process.env.NODE_ENV === "production";
 }
 
+const HTTP_SLOW_MS = parseInt(process.env.HTTP_SLOW_MS || "800", 10);
+
+/** Production: log slow API calls, errors, and generate — skip noisy hero polls */
+export function shouldLogHttpRequest(
+  path: string,
+  statusCode: number,
+  durationMs: number,
+): boolean {
+  if (!isProductionEnv()) return path.startsWith("/api");
+  if (statusCode >= 400) return true;
+  if (durationMs >= HTTP_SLOW_MS) return true;
+  if (path.startsWith("/api/recipe-hero/")) return false;
+  if (path.startsWith("/api/generate") || path.startsWith("/api/generate-pizza")) return true;
+  if (path.startsWith("/api/explore/sections")) return durationMs >= 400;
+  return durationMs >= HTTP_SLOW_MS;
+}
+
 /** key=value pairs for concise structured lines */
 export function formatLogFields(
   fields: Record<string, string | number | boolean | null | undefined>,

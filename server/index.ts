@@ -4,7 +4,7 @@ import helmet from "helmet";
 import { registerRoutes } from "./routes";
 import { serveStatic } from "./static";
 import { createServer } from "http";
-import { log, logError, summarizeJsonBody } from "./logger";
+import { log, logError, summarizeJsonBody, shouldLogHttpRequest } from "./logger";
 import { configureTrustProxy } from "./client-ip.js";
 
 export {
@@ -69,15 +69,14 @@ app.use((req, res, next) => {
 
   res.on("finish", () => {
     const duration = Date.now() - start;
-    if (path.startsWith("/api")) {
-      const summary = capturedJsonResponse
-        ? summarizeJsonBody(path, capturedJsonResponse)
-        : "";
-      const line = summary
-        ? `${req.method} ${path} ${res.statusCode} ${duration}ms ${summary}`
-        : `${req.method} ${path} ${res.statusCode} ${duration}ms`;
-      log(line, "http");
-    }
+    if (!shouldLogHttpRequest(path, res.statusCode, duration)) return;
+    const summary = capturedJsonResponse
+      ? summarizeJsonBody(path, capturedJsonResponse)
+      : "";
+    const line = summary
+      ? `${req.method} ${path} ${res.statusCode} ${duration}ms ${summary}`
+      : `${req.method} ${path} ${res.statusCode} ${duration}ms`;
+    log(line, "http");
   });
 
   next();
