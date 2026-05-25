@@ -80,8 +80,8 @@ export function HeroHeader({
               isUtility
                 ? "text-base sm:text-lg tracking-[0.12em]"
                 : isFull
-                  ? "text-3xl sm:text-4xl md:text-5xl"
-                  : "text-xl sm:text-2xl",
+                  ? "text-2xl sm:text-4xl md:text-5xl"
+                  : "text-lg sm:text-2xl",
             )}
             data-testid="text-page-title"
           >

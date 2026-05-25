@@ -629,7 +629,7 @@ export default function Home() {
 
   // ─────────────────────────────────────────────────────────────────────────
   return (
-    <div className="min-h-screen min-h-[100dvh] bg-background overflow-x-hidden">
+    <div className="page-shell min-h-screen min-h-[100dvh] bg-background">
       <SiteHeader activePage="generator" favCount={favCount} />
 
       <HeroHeader
@@ -649,7 +649,7 @@ export default function Home() {
 
       <main
         className={cn(
-          "max-w-[1400px] mx-auto px-4 sm:px-6 pb-safe-nav lg:pb-8 transition-[padding] duration-500 ease-out",
+          "max-w-[1400px] mx-auto px-page pb-safe-sticky lg:pb-8 transition-[padding] duration-500 ease-out",
           mealFocusMode ? "py-2 sm:py-3 lg:py-4" : heroVariant === "compact" ? "py-4 sm:py-5" : "py-8",
         )}
       >
@@ -679,7 +679,7 @@ export default function Home() {
             />
           </div>
 
-          <div ref={recipeRef} className="scroll-mt-[3.5rem] lg:scroll-mt-16 min-w-0 flex-1">
+          <div ref={recipeRef} className="scroll-section min-w-0 flex-1">
             <ResultsPanel
               loading={loading}
               error={error}
@@ -735,12 +735,8 @@ export default function Home() {
         />
       )}
 
-      <div
-        className="lg:hidden fixed bottom-0 inset-x-0 z-40 border-t border-border/40 bg-background/95 backdrop-blur-md shadow-[0_-4px_24px_rgba(0,0,0,0.35)]"
-        style={{ paddingBottom: "max(0.75rem, env(safe-area-inset-bottom))" }}
-        data-testid="mobile-generate-bar"
-      >
-        <div className="px-4 pt-3">
+      <div className="mobile-sticky-bar lg:hidden" data-testid="mobile-generate-bar">
+        <div className="px-page pt-3">
           <GenerateButtons
             filters={filters}
             hasRecipe={!!recipe}
@@ -757,7 +753,7 @@ export default function Home() {
       </div>
 
       <footer className="border-t border-border/20 mt-10 pb-20 lg:pb-0">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 py-6 flex items-center justify-center gap-2">
+        <div className="max-w-[1400px] mx-auto px-page py-6 flex items-center justify-center gap-2">
           <Flame className="w-3.5 h-3.5 text-muted-foreground/40" />
           <p className="text-xs text-muted-foreground/50">
             Powered by{" "}

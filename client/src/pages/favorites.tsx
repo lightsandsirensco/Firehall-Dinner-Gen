@@ -36,19 +36,23 @@ export default function FavoritesPage() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="page-shell min-h-screen min-h-[100dvh] bg-background">
       <SiteHeader activePage="favorites" />
 
-      <HeroHeader title="Hall Favorites" subtitle={meals.length === 0 ? "Save your best crew meals here" : `${meals.length} saved ${meals.length === 1 ? "meal" : "meals"}`} />
+      <HeroHeader
+        variant="compact"
+        title="Hall Favorites"
+        subtitle={meals.length === 0 ? "Save your best crew meals here" : `${meals.length} saved ${meals.length === 1 ? "meal" : "meals"}`}
+      />
 
-      <main className="max-w-[1000px] mx-auto px-4 py-8">
+      <main className="max-w-[1000px] mx-auto px-page py-6 sm:py-8 pb-safe-nav">
 
         {meals.length === 0 ? (
           <div className="text-center py-16">
             <Heart className="w-12 h-12 mx-auto text-muted-foreground/20 mb-4" />
             <p className="text-muted-foreground text-sm mb-4">Your favorites are empty.</p>
             <Link href="/">
-              <Button variant="outline" className="font-heading tracking-wider" data-testid="button-go-generate">
+              <Button variant="outline" className="font-heading tracking-wider min-h-11 touch-manipulation" data-testid="button-go-generate">
                 <ChevronLeft className="w-4 h-4 mr-1" />
                 GENERATE A MEAL
               </Button>
@@ -57,7 +61,7 @@ export default function FavoritesPage() {
         ) : (
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {meals.map((meal) => (
-              <Card key={meal.id} className="bg-card border-border/50 hover:border-border transition-colors" data-testid={`card-favorite-${meal.id}`}>
+              <Card key={meal.id} className="premium-card hover:border-border transition-colors" data-testid={`card-favorite-${meal.id}`}>
                 <CardContent className="p-4 space-y-3">
                   <div>
                     <h3 className="font-heading text-xl tracking-wide text-foreground leading-tight line-clamp-2" data-testid={`text-favorite-title-${meal.id}`}>
@@ -96,7 +100,7 @@ export default function FavoritesPage() {
                     <Button
                       variant="outline"
                       size="sm"
-                      className="flex-1 text-xs"
+                      className="flex-1 text-xs min-h-11 touch-manipulation"
                       onClick={() => setViewingMeal(meal)}
                       data-testid={`button-view-${meal.id}`}
                     >
@@ -106,7 +110,7 @@ export default function FavoritesPage() {
                     <Button
                       variant="outline"
                       size="sm"
-                      className="text-xs text-destructive hover:text-destructive"
+                      className="text-xs min-h-11 touch-manipulation text-destructive hover:text-destructive"
                       onClick={() => handleRemove(meal.id)}
                       data-testid={`button-remove-${meal.id}`}
                     >
@@ -122,7 +126,7 @@ export default function FavoritesPage() {
       </main>
 
       <Dialog open={!!viewingMeal} onOpenChange={(open) => !open && setViewingMeal(null)}>
-        <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
+        <DialogContent className="max-w-3xl max-h-[90dvh] overflow-y-auto max-sm:fixed max-sm:inset-x-0 max-sm:bottom-0 max-sm:top-auto max-sm:left-0 max-sm:translate-x-0 max-sm:translate-y-0 max-sm:max-h-[92dvh] max-sm:rounded-t-2xl max-sm:w-full pb-safe">
           <DialogHeader>
             <DialogTitle className="font-heading text-2xl tracking-wide flex items-center gap-2">
               <Heart className="w-5 h-5 text-primary" />

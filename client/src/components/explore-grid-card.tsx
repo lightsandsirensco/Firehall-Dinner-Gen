@@ -40,7 +40,7 @@ export function ExploreGridCard({
         "group relative cursor-pointer overflow-hidden rounded-xl sm:rounded-2xl",
         "transition-transform duration-300 ease-out",
         "hover:scale-[1.02] hover:shadow-2xl hover:shadow-black/40",
-        "active:scale-[0.98] motion-reduce:transition-none motion-reduce:hover:scale-100",
+        "active:scale-[0.98] touch-manipulation motion-reduce:transition-none motion-reduce:hover:scale-100",
         className,
       )}
       onClick={onClick}

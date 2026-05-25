@@ -58,13 +58,13 @@ export default function CuratedPackagePage() {
   );
 
   return (
-    <div className="min-h-screen min-h-[100dvh] bg-background flex flex-col overflow-x-hidden">
+    <div className="page-shell min-h-screen min-h-[100dvh] bg-background flex flex-col">
       <SiteHeader activePage="wheel" favCount={favCount} />
 
-      <main className="flex-1 max-w-[1200px] mx-auto w-full px-4 sm:px-6 py-6 sm:py-10">
+      <main className="flex-1 max-w-[1200px] mx-auto w-full px-page py-6 sm:py-10 pb-safe-nav">
         <div className="flex flex-wrap items-center gap-3 mb-6">
           <Link href="/wheel">
-            <Button variant="ghost" className="gap-1.5" data-testid="button-back-wheel">
+            <Button variant="ghost" className="gap-1.5 min-h-11 touch-manipulation" data-testid="button-back-wheel">
               <ChevronLeft className="w-4 h-4" />
               Back to wheel
             </Button>

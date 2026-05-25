@@ -29,8 +29,8 @@ export const HERO_LAYOUT_FRAME: Record<HeroImageLayout, string> = {
   cinematic:
     "w-full aspect-[5/4] max-h-[min(48vh,440px)] sm:aspect-[16/9] sm:max-h-[min(400px,52vh)]",
   "card-fill": "w-full h-full min-h-0",
-  "banner-full": "w-full h-[220px] sm:h-[280px] md:h-[340px]",
-  "banner-compact": "w-full h-[120px] sm:h-[152px]",
+  "banner-full": "w-full h-[min(32vh,200px)] sm:h-[280px] md:h-[340px]",
+  "banner-compact": "w-full h-[100px] sm:h-[152px]",
   "banner-utility": "w-full h-[52px] sm:h-[60px]",
 };
 

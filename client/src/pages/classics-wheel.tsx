@@ -55,7 +55,7 @@ export default function ClassicsWheelPage() {
   }, [winner]);
 
   return (
-    <div className="min-h-screen min-h-[100dvh] bg-background flex flex-col overflow-x-hidden">
+    <div className="page-shell min-h-screen min-h-[100dvh] bg-background flex flex-col">
       <SiteHeader activePage="wheel" favCount={favCount} />
 
       <HeroHeader
@@ -64,7 +64,7 @@ export default function ClassicsWheelPage() {
         compact
       />
 
-      <main className="flex-1 max-w-[900px] mx-auto w-full px-4 sm:px-6 py-8 sm:py-12">
+      <main className="flex-1 max-w-[900px] mx-auto w-full px-page py-8 sm:py-12 pb-safe-nav">
         <div className="text-center mb-8 sm:mb-10">
           <div className="inline-flex items-center gap-2 text-primary/80 text-xs uppercase tracking-[0.3em] font-semibold mb-3">
             <Users className="w-3.5 h-3.5" />

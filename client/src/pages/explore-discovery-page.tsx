@@ -39,9 +39,13 @@ export function ExploreDiscoveryPage({ registryRef }: ExploreDiscoveryPageProps)
     el?.scrollIntoView({ behavior: "smooth", block: "start" });
   }, []);
 
+  const [pullRefreshing, setPullRefreshing] = useState(false);
+  const pullStartY = useRef(0);
+
   const {
     data: editorialData,
     isLoading,
+    isFetching,
     error,
     refetch,
   } = useQuery({
@@ -89,6 +93,26 @@ export function ExploreDiscoveryPage({ registryRef }: ExploreDiscoveryPageProps)
 
   const wheelClassicTriggered = useRef(false);
   useEffect(() => {
+    const onTouchStart = (e: TouchEvent) => {
+      if (window.scrollY <= 4) pullStartY.current = e.touches[0]?.clientY ?? 0;
+    };
+    const onTouchEnd = (e: TouchEvent) => {
+      if (window.scrollY > 4 || isLoading || isFetching) return;
+      const endY = e.changedTouches[0]?.clientY ?? 0;
+      if (endY - pullStartY.current > 72) {
+        setPullRefreshing(true);
+        void refetch().finally(() => setPullRefreshing(false));
+      }
+    };
+    window.addEventListener("touchstart", onTouchStart, { passive: true });
+    window.addEventListener("touchend", onTouchEnd, { passive: true });
+    return () => {
+      window.removeEventListener("touchstart", onTouchStart);
+      window.removeEventListener("touchend", onTouchEnd);
+    };
+  }, [isLoading, isFetching, refetch]);
+
+  useEffect(() => {
     if (wheelClassicTriggered.current) return;
     const params = new URLSearchParams(window.location.search);
     const slug = params.get("classic");
@@ -131,8 +155,20 @@ export function ExploreDiscoveryPage({ registryRef }: ExploreDiscoveryPageProps)
   );
 
   return (
-    <div className="min-h-screen min-h-[100dvh] bg-background pb-safe overflow-x-hidden">
+    <div className="page-shell min-h-screen min-h-[100dvh] bg-background pb-safe-nav">
       <SiteHeader activePage="explore" favCount={favCount} />
+
+      {(pullRefreshing || (isFetching && !isLoading)) && (
+        <div
+          className="fixed left-0 right-0 z-40 flex justify-center pointer-events-none explore-refresh-hint"
+          style={{ top: "calc(3.5rem + env(safe-area-inset-top, 0px))" }}
+          aria-live="polite"
+        >
+          <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-primary bg-primary/10 border border-primary/25 px-3 py-1.5 rounded-full backdrop-blur-sm">
+            Refreshing feed
+          </span>
+        </div>
+      )}
 
       <header className="relative overflow-hidden border-b border-border/40">
         <div className="absolute inset-0 bg-gradient-to-b from-zinc-950 via-zinc-900 to-background" aria-hidden />
@@ -140,7 +176,7 @@ export function ExploreDiscoveryPage({ registryRef }: ExploreDiscoveryPageProps)
           className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-20%,rgba(234,88,12,0.22),transparent)]"
           aria-hidden
         />
-        <div className="relative max-w-[1320px] mx-auto px-4 sm:px-6 pt-6 sm:pt-10 pb-6 sm:pb-9">
+        <div className="relative max-w-[1320px] mx-auto px-page pt-6 sm:pt-10 pb-6 sm:pb-9">
           <div className="flex flex-wrap items-center gap-2 mb-3">
             <span className="inline-flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-widest text-primary bg-primary/10 border border-primary/20 px-2.5 py-1 rounded-full">
               <Flame className="w-3 h-3" />
@@ -151,7 +187,7 @@ export function ExploreDiscoveryPage({ registryRef }: ExploreDiscoveryPageProps)
               Real recipes · crew-tested
             </span>
           </div>
-          <h1 className="font-heading text-[2rem] sm:text-4xl md:text-[2.75rem] tracking-wide text-foreground max-w-2xl leading-[1.08]">
+          <h1 className="font-heading text-[1.65rem] sm:text-4xl md:text-[2.75rem] tracking-wide text-foreground max-w-2xl leading-[1.08]">
             Tonight&apos;s crew dinner inspiration
           </h1>
           <p className="text-sm sm:text-base text-muted-foreground mt-3 max-w-lg leading-relaxed">
@@ -160,7 +196,7 @@ export function ExploreDiscoveryPage({ registryRef }: ExploreDiscoveryPageProps)
         </div>
       </header>
 
-      <main className="max-w-[1320px] mx-auto px-4 sm:px-6 py-5 sm:py-8">
+      <main className="max-w-[1320px] mx-auto px-page py-5 sm:py-8">
         {!isLoading && !error && categoryNavItems.length > 1 && (
           <ExploreCategoryNav
             items={categoryNavItems}

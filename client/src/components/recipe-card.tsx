@@ -695,17 +695,17 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
           <ol className="space-y-5" data-testid="section-steps">
             {recipe.steps.map((step, i) => {
               return (
-                <li key={i} className="flex gap-4" data-testid={`step-${i}`}>
-                  <span className="font-heading text-2xl font-bold text-primary flex-shrink-0 w-7 text-center leading-7 rounded-md bg-primary/10 h-7 flex items-center justify-center">
+                <li key={i} className="flex gap-3 sm:gap-4" data-testid={`step-${i}`}>
+                  <span className="font-heading text-xl sm:text-2xl font-bold text-primary flex-shrink-0 w-8 sm:w-7 text-center leading-8 sm:leading-7 rounded-md bg-primary/10 h-8 sm:h-7 flex items-center justify-center">
                     {step.n}
                   </span>
                   <div className="flex-1 min-w-0 pt-0.5">
                     {step.title && (
-                      <p className="text-sm font-bold text-foreground mb-1 leading-snug">
+                      <p className="text-[15px] sm:text-sm font-bold text-foreground mb-1 leading-snug">
                         {step.title}
                       </p>
                     )}
-                    <p className="text-sm text-foreground/80 leading-relaxed">{step.instructions}</p>
+                    <p className="text-[15px] sm:text-sm text-foreground/85 leading-relaxed">{step.instructions}</p>
                   </div>
                 </li>
               );

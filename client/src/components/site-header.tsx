@@ -38,9 +38,9 @@ export function SiteHeader({ activePage, favCount = 0 }: SiteHeaderProps) {
       className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-border/30 pt-safe"
       data-testid="site-header"
     >
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6">
+      <div className="max-w-[1400px] mx-auto px-page">
         <nav
-          className="flex items-center justify-between h-14 sm:h-16 gap-2"
+          className="flex items-center justify-between h-[3.25rem] sm:h-16 gap-2"
           data-testid="nav-links"
         >
           <Link href="/" className="flex items-center gap-2 shrink-0 group min-h-11 min-w-11" data-testid="nav-logo">

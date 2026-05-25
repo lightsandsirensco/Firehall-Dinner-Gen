@@ -381,52 +381,81 @@ export function PizzaFilterPanel({
         </CardContent>
       </Card>
 
-      <div className="flex flex-col gap-2">
-        {!hasRecipe ? (
+      <PizzaGenerateButtons
+        className="max-lg:hidden"
+        hasRecipe={hasRecipe}
+        isLoading={isLoading}
+        ovenAvailable={filters.oven_available}
+        onGenerate={onGenerate}
+        onGenerateAnother={onGenerateAnother}
+      />
+    </div>
+  );
+}
+
+interface PizzaGenerateButtonsProps {
+  hasRecipe: boolean;
+  isLoading: boolean;
+  ovenAvailable: boolean;
+  onGenerate: (mode?: PizzaGenerationMode) => void;
+  onGenerateAnother: () => void;
+  className?: string;
+}
+
+export function PizzaGenerateButtons({
+  hasRecipe,
+  isLoading,
+  ovenAvailable,
+  onGenerate,
+  onGenerateAnother,
+  className,
+}: PizzaGenerateButtonsProps) {
+  return (
+    <div className={cn("flex flex-col gap-2", className)}>
+      {!hasRecipe ? (
+        <Button
+          size="lg"
+          className="w-full font-heading text-lg tracking-wider min-h-[3.25rem] shadow-lg shadow-primary/25 active:scale-[0.98] transition-transform touch-manipulation"
+          onClick={() => onGenerate("standard")}
+          disabled={isLoading || !ovenAvailable}
+          data-testid="pizza-button-generate"
+        >
+          {isLoading ? (
+            <RefreshCw className="w-4 h-4 mr-2 animate-spin" />
+          ) : (
+            <Flame className="w-4 h-4 mr-2" />
+          )}
+          {isLoading ? "FIRING UP..." : "FIRE UP PIZZA NIGHT"}
+        </Button>
+      ) : (
+        <>
           <Button
             size="lg"
-            className="w-full font-heading text-lg tracking-wider shadow-lg shadow-primary/25"
-            onClick={() => onGenerate("standard")}
-            disabled={isLoading || !filters.oven_available}
-            data-testid="pizza-button-generate"
+            className="w-full font-heading text-lg tracking-wider min-h-[3.25rem] active:scale-[0.98] transition-transform touch-manipulation"
+            onClick={onGenerateAnother}
+            disabled={isLoading || !ovenAvailable}
+            data-testid="pizza-button-spin-again"
           >
             {isLoading ? (
               <RefreshCw className="w-4 h-4 mr-2 animate-spin" />
             ) : (
-              <Flame className="w-4 h-4 mr-2" />
+              <RefreshCw className="w-4 h-4 mr-2" />
             )}
-            {isLoading ? "FIRING UP..." : "FIRE UP PIZZA NIGHT"}
+            {isLoading ? "SPINNING..." : "SPIN AGAIN"}
           </Button>
-        ) : (
-          <>
-            <Button
-              size="lg"
-              className="w-full font-heading text-lg tracking-wider"
-              onClick={onGenerateAnother}
-              disabled={isLoading || !filters.oven_available}
-              data-testid="pizza-button-spin-again"
-            >
-              {isLoading ? (
-                <RefreshCw className="w-4 h-4 mr-2 animate-spin" />
-              ) : (
-                <RefreshCw className="w-4 h-4 mr-2" />
-              )}
-              {isLoading ? "SPINNING..." : "SPIN AGAIN"}
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="w-full font-heading tracking-wider"
-              onClick={() => onGenerate("standard")}
-              disabled={isLoading || !filters.oven_available}
-              data-testid="pizza-button-new-generate"
-            >
-              <Flame className="w-4 h-4 mr-2" />
-              NEW SEARCH
-            </Button>
-          </>
-        )}
-      </div>
+          <Button
+            variant="outline"
+            size="lg"
+            className="w-full font-heading tracking-wider min-h-11 touch-manipulation"
+            onClick={() => onGenerate("standard")}
+            disabled={isLoading || !ovenAvailable}
+            data-testid="pizza-button-new-generate"
+          >
+            <Flame className="w-4 h-4 mr-2" />
+            NEW SEARCH
+          </Button>
+        </>
+      )}
     </div>
   );
 }

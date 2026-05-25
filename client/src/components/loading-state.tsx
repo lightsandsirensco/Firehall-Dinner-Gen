@@ -89,6 +89,11 @@ export function LoadingState({
     <div className="space-y-5 animate-in fade-in duration-500" data-testid="loading-state">
       <LoadingProgressBar />
 
+      <div
+        className="w-full aspect-[5/4] max-h-[min(40vh,320px)] sm:aspect-[16/9] sm:max-h-[min(360px,48vh)] rounded-2xl overflow-hidden ring-1 ring-border/30 premium-skeleton"
+        aria-hidden
+      />
+
       <div className="flex items-center gap-4 mb-1 fade-up">
         <div className="w-12 h-12 rounded-md bg-primary/15 flex items-center justify-center shrink-0">
           <Flame className="w-6 h-6 text-primary animate-pulse" />

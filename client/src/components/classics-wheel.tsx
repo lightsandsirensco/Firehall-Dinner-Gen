@@ -247,7 +247,7 @@ export function WheelReveal({
               <button
                 type="button"
                 onClick={onExplore}
-                className="inline-flex items-center justify-center gap-2 rounded-lg border border-border/50 bg-muted/40 text-foreground font-medium text-sm py-2.5 px-3 hover:bg-muted/70 transition-colors"
+                className="inline-flex items-center justify-center gap-2 rounded-lg border border-border/50 bg-muted/40 text-foreground font-medium text-sm py-3 px-3 min-h-11 hover:bg-muted/70 transition-colors touch-manipulation active:scale-[0.98]"
                 data-testid="button-wheel-explore"
               >
                 Browse similar recipes
@@ -255,7 +255,7 @@ export function WheelReveal({
               <button
                 type="button"
                 onClick={onSpinAgain}
-                className="inline-flex items-center justify-center gap-2 rounded-lg border border-border/50 bg-transparent text-foreground font-medium text-sm py-2.5 px-3 hover:bg-white/[0.04] transition-colors"
+                className="inline-flex items-center justify-center gap-2 rounded-lg border border-border/50 bg-transparent text-foreground font-medium text-sm py-3 px-3 min-h-11 hover:bg-white/[0.04] transition-colors touch-manipulation active:scale-[0.98]"
                 data-testid="button-wheel-spin-again"
               >
                 Spin again
@@ -263,7 +263,7 @@ export function WheelReveal({
               <button
                 type="button"
                 onClick={onTogglePin}
-                className={`inline-flex items-center justify-center gap-2 rounded-lg border text-sm py-2.5 px-3 transition-colors sm:col-span-2 ${
+                className={`inline-flex items-center justify-center gap-2 rounded-lg border text-sm py-3 px-3 min-h-11 transition-colors touch-manipulation sm:col-span-2 ${
                   pinned
                     ? "border-primary/40 bg-primary/15 text-primary"
                     : "border-border/50 bg-transparent text-muted-foreground hover:text-foreground"

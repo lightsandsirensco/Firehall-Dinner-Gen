@@ -677,7 +677,7 @@ export const FilterPanel = memo(function FilterPanel({
               <SheetTrigger asChild>
                 <MoreOptionsTrigger customized={customized} open={moreOptionsOpen} />
               </SheetTrigger>
-              <SheetContent side="bottom" className="max-h-[88vh] overflow-y-auto rounded-t-2xl pb-8">
+              <SheetContent side="bottom" className="max-h-[90dvh] overflow-y-auto rounded-t-2xl pb-safe">
                 <SheetHeader className="text-left pb-2">
                   <SheetTitle className="font-heading text-lg tracking-wide">More options</SheetTitle>
                 </SheetHeader>

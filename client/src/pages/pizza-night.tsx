@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback, useMemo } from "react";
 import { useQuery } from "@tanstack/react-query";
 import {
   PizzaFilterPanel,
+  PizzaGenerateButtons,
   type PizzaFilterState,
   type PizzaGenerationMode,
 } from "@/components/pizza-filter-panel";
@@ -176,7 +177,7 @@ export default function PizzaNight() {
     : null;
 
   return (
-    <div className="min-h-screen min-h-[100dvh] bg-background overflow-x-hidden">
+    <div className="page-shell min-h-screen min-h-[100dvh] bg-background">
       <SiteHeader activePage="pizza" favCount={favCount} />
 
       <PizzaHero
@@ -189,7 +190,7 @@ export default function PizzaNight() {
       />
 
       {!recipe && featuredCards.length > 0 && (
-        <section className="max-w-[1400px] mx-auto px-4 sm:px-6 py-6 border-b border-border/40">
+        <section className="max-w-[1400px] mx-auto px-page py-6 border-b border-border/40">
           <p className="text-[10px] uppercase tracking-[0.3em] text-primary font-semibold mb-3">
             Tonight&apos;s rotation
           </p>
@@ -224,7 +225,7 @@ export default function PizzaNight() {
         </section>
       )}
 
-      <main className="max-w-[1400px] mx-auto px-4 py-6 pb-safe">
+      <main className="max-w-[1400px] mx-auto px-page py-6 pb-safe-sticky lg:pb-8">
         <div className="flex flex-col lg:flex-row gap-6">
           <div className="w-full lg:w-[400px] flex-shrink-0 lg:sticky lg:top-20 lg:self-start">
             <PizzaFilterPanel
@@ -292,6 +293,18 @@ export default function PizzaNight() {
           healthinessLevel={filters.style_preference}
         />
       )}
+      <div className="mobile-sticky-bar lg:hidden" data-testid="pizza-mobile-generate-bar">
+        <div className="px-page pt-3">
+          <PizzaGenerateButtons
+            hasRecipe={!!recipeWithHero}
+            isLoading={loading}
+            ovenAvailable={filters.oven_available}
+            onGenerate={(mode) => handleGenerate(filters, mode)}
+            onGenerateAnother={handleGenerateAnother}
+          />
+        </div>
+      </div>
+
       {recipe && (
         <ShoppingListModal
           open={shoppingListOpen}
@@ -301,7 +314,7 @@ export default function PizzaNight() {
           generatorType="pizza"
         />
       )}
-      <footer className="text-center py-4 mt-6 pb-safe">
+      <footer className="text-center py-4 mt-6 pb-20 lg:pb-8">
         <p className="text-xs text-muted-foreground/60">
           Powered by{" "}
           <a
