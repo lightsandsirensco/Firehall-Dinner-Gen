@@ -4,6 +4,7 @@
 
 import { z } from "zod";
 import { IMAGE_STYLE_PRESET_IDS } from "../image-style-presets.js";
+import { curatedRecipeMetadataSchema } from "./metadata/schema.js";
 
 const score0to100 = z.number().int().min(0).max(100);
 const cleanup1to5 = z.union([
@@ -76,7 +77,9 @@ export const curatedScoresSchema = z.object({
 export const curatedRecipeInsertSchema = z.object({
   recipeId: z.string().min(3).max(120),
   slug: z.string().min(2).max(100).regex(/^[a-z0-9-]+$/),
-  status: z.enum(["draft", "review", "published", "archived"]).optional(),
+  status: z
+    .enum(["draft", "review", "approved", "published", "rejected", "archived"])
+    .optional(),
 
   title: z.string().min(3).max(200),
   summary: z.string().max(2000).optional(),
@@ -105,6 +108,10 @@ export const curatedRecipeInsertSchema = z.object({
   mealArchetype: z.string().min(1).max(40),
   archetypeFamily: z.string().max(40).optional(),
   archetypeVariation: z.string().max(80).optional(),
+  archetypeId: z.string().max(80).optional(),
+  parentRecipeId: z.string().max(120).optional(),
+  recipeRole: z.enum(["standalone", "canonical", "variant"]).optional(),
+  variantKey: z.string().max(80).optional(),
   qualityBreakdown: z
     .object({
       appetite: score0to100,
@@ -134,6 +141,15 @@ export const curatedRecipeInsertSchema = z.object({
 
   featured: z.boolean().optional(),
   trendingRank: z.number().int().min(0).optional(),
+
+  editorialNotes: z.string().max(6000).optional(),
+  reviewedBy: z.string().max(120).optional(),
+  reviewedAt: z.string().max(40).optional(),
+  approvedBy: z.string().max(120).optional(),
+  approvedAt: z.string().max(40).optional(),
+  publishedAt: z.string().max(40).optional(),
+
+  metadata: curatedRecipeMetadataSchema.optional(),
 
   editorialImage: z
     .object({

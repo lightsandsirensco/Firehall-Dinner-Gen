@@ -10,6 +10,7 @@ import type {
   CuratedRecipeInsert,
   CuratedRecipeListQuery,
   CuratedRecipeSummary,
+  CuratedRecipeStatus,
 } from "../shared/curated-recipe/types.js";
 import { validateCuratedRecipeInsert } from "../shared/curated-recipe/validation.js";
 import {
@@ -23,6 +24,13 @@ import { GOLDEN_100_RECIPES } from "../shared/golden-100/manifest.js";
 import { parseEditorialImageMetadata } from "../shared/editorial-image-metadata.js";
 import { safeJsonParseNullable } from "./lib/safe-json.js";
 import { normalizeImagePath } from "../shared/media/normalize-image-path.js";
+import {
+  resolveRecipeMetadata,
+  metadataToDbColumns,
+  parseMetadataFromRow,
+  appendMetadataFilterSql,
+} from "./curated-recipe-metadata.js";
+import type { CuratedRecipeMetadata, CuratedRecipeMetadataOverrides } from "../shared/curated-recipe/metadata/types.js";
 
 const GOLDEN_100_SLUGS = new Set(GOLDEN_100_RECIPES.map((r) => r.slug));
 import type { IngestRecipeDraft } from "../shared/ingestion/recipe-ingest-schema.js";
@@ -34,6 +42,8 @@ export async function initCuratedRecipeStore(): Promise<void> {
   db = await getSharedLocalDb();
   const { setExpansionDb } = await import("./expansion/db-access.js");
   setExpansionDb(db);
+  const { ensureRecipeArchetypesSeeded } = await import("./recipe-archetype-store.js");
+  await ensureRecipeArchetypesSeeded();
   log("Curated recipe store initialized", "catalog");
 }
 
@@ -176,6 +186,17 @@ export function upsertCuratedRecipe(input: CuratedRecipeInsert): CuratedRecipe {
   const cookMinutes =
     data.cookMinutes ?? Math.max(0, data.totalMinutes - data.prepMinutes);
 
+  const existingRow = database
+    .prepare("SELECT metadata_json FROM curated_recipes WHERE recipe_id = ?")
+    .get(data.recipeId) as { metadata_json?: string } | undefined;
+  const existingMeta = existingRow?.metadata_json
+    ? parseMetadataFromRow({ metadata_json: existingRow.metadata_json })
+    : undefined;
+
+  const insertPayload = data as CuratedRecipeInsert;
+  const metadata = resolveRecipeMetadata(insertPayload, existingMeta);
+  const metaCols = metadataToDbColumns(metadata);
+
   const txn = database.transaction(() => {
     database
       .prepare(
@@ -183,7 +204,11 @@ export function upsertCuratedRecipe(input: CuratedRecipeInsert): CuratedRecipe {
           recipe_id, slug, status, title, summary, hero_image, hero_image_alt,
           prep_minutes, cook_minutes, total_minutes, servings_base, cleanup_difficulty,
           protein, cuisine, category, meal_format, meal_archetype, cooking_style,
-          archetype_family, archetype_variation, quality_breakdown_json, editorial_image_json,
+          archetype_family, archetype_variation, archetype_id, parent_recipe_id, recipe_role, variant_key,
+          quality_breakdown_json, editorial_image_json,
+          editorial_notes, reviewed_by, reviewed_at, approved_by, approved_at, published_at,
+          metadata_json, difficulty, cook_time_bucket, meal_style, nutrition_category,
+          leftovers_quality, crew_size_bucket, hall_tested, busy_night_suitable, equipment_json,
           comfort_score, healthy_score, firehall_suitability_score, quality_score, appetite_score, trend_score,
           source_kind, source_name, source_url, source_license, external_id,
           legacy_catalog_id, generate_response_json, featured, trending_rank, updated_at
@@ -191,7 +216,10 @@ export function upsertCuratedRecipe(input: CuratedRecipeInsert): CuratedRecipe {
           ?, ?, ?, ?, ?, ?, ?,
           ?, ?, ?, ?, ?,
           ?, ?, ?, ?, ?, ?,
+          ?, ?, ?, ?, ?, ?,
           ?, ?, ?, ?,
+          ?, ?, ?, ?, ?, ?,
+          ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,
           ?, ?, ?, ?, ?, ?,
           ?, ?, ?, ?, ?,
           ?, ?, ?, ?, datetime('now')
@@ -216,8 +244,28 @@ export function upsertCuratedRecipe(input: CuratedRecipeInsert): CuratedRecipe {
           cooking_style = excluded.cooking_style,
           archetype_family = excluded.archetype_family,
           archetype_variation = excluded.archetype_variation,
+          archetype_id = excluded.archetype_id,
+          parent_recipe_id = excluded.parent_recipe_id,
+          recipe_role = excluded.recipe_role,
+          variant_key = excluded.variant_key,
           quality_breakdown_json = excluded.quality_breakdown_json,
           editorial_image_json = excluded.editorial_image_json,
+          editorial_notes = excluded.editorial_notes,
+          reviewed_by = excluded.reviewed_by,
+          reviewed_at = excluded.reviewed_at,
+          approved_by = excluded.approved_by,
+          approved_at = excluded.approved_at,
+          published_at = COALESCE(curated_recipes.published_at, excluded.published_at),
+          metadata_json = excluded.metadata_json,
+          difficulty = excluded.difficulty,
+          cook_time_bucket = excluded.cook_time_bucket,
+          meal_style = excluded.meal_style,
+          nutrition_category = excluded.nutrition_category,
+          leftovers_quality = excluded.leftovers_quality,
+          crew_size_bucket = excluded.crew_size_bucket,
+          hall_tested = excluded.hall_tested,
+          busy_night_suitable = excluded.busy_night_suitable,
+          equipment_json = excluded.equipment_json,
           comfort_score = excluded.comfort_score,
           healthy_score = excluded.healthy_score,
           firehall_suitability_score = excluded.firehall_suitability_score,
@@ -247,17 +295,38 @@ export function upsertCuratedRecipe(input: CuratedRecipeInsert): CuratedRecipe {
         cookMinutes,
         data.totalMinutes,
         data.servingsBase,
-        data.cleanupDifficulty,
-        data.protein,
-        data.cuisine,
+        metadata.cleanupDifficulty,
+        metadata.protein,
+        metadata.cuisine,
         data.category,
         data.mealFormat,
         data.mealArchetype,
         data.cookingStyle ?? null,
         data.archetypeFamily ?? null,
         data.archetypeVariation ?? null,
+        data.archetypeId ?? null,
+        data.parentRecipeId ?? null,
+        data.recipeRole ?? "standalone",
+        data.variantKey ?? null,
         data.qualityBreakdown ? JSON.stringify(data.qualityBreakdown) : null,
         data.editorialImage ? JSON.stringify(data.editorialImage) : null,
+        data.editorialNotes ?? null,
+        data.reviewedBy ?? null,
+        data.reviewedAt ?? null,
+        data.approvedBy ?? null,
+        data.approvedAt ?? null,
+        // publishedAt is set only when caller intentionally publishes; otherwise null.
+        status === "published" ? (data.publishedAt ?? new Date().toISOString()) : (data.publishedAt ?? null),
+        metaCols.metadataJson,
+        metaCols.difficulty,
+        metaCols.cookTimeBucket,
+        metaCols.mealStyle,
+        metaCols.nutritionCategory,
+        metaCols.leftoversQuality,
+        metaCols.crewSizeBucket,
+        metaCols.hallTested,
+        metaCols.busyNightSuitable,
+        metaCols.equipmentJson,
         data.scores.comfort,
         data.scores.healthy,
         data.scores.firehallSuitability,
@@ -271,7 +340,7 @@ export function upsertCuratedRecipe(input: CuratedRecipeInsert): CuratedRecipe {
         data.source.externalId ?? null,
         data.legacyCatalogId ?? null,
         data.generateResponse ? JSON.stringify(data.generateResponse) : null,
-        data.featured ? 1 : 0,
+        metaCols.featured,
         data.trendingRank ?? null,
       );
 
@@ -319,6 +388,22 @@ function rowToSummary(row: Record<string, unknown>): CuratedRecipeSummary {
     summary: String(row.summary || ""),
     status: row.status as CuratedRecipeSummary["status"],
     featured: Boolean(row.featured),
+    metadata: row.difficulty
+      ? {
+          difficulty: String(row.difficulty) as NonNullable<CuratedRecipeSummary["metadata"]>["difficulty"],
+          cookTimeBucket: String(row.cook_time_bucket || "") as NonNullable<
+            CuratedRecipeSummary["metadata"]
+          >["cookTimeBucket"],
+          mealStyle: String(row.meal_style || "") as NonNullable<CuratedRecipeSummary["metadata"]>["mealStyle"],
+          nutritionCategory: String(row.nutrition_category || "") as NonNullable<
+            CuratedRecipeSummary["metadata"]
+          >["nutritionCategory"],
+          busyNightSuitable: Boolean(row.busy_night_suitable),
+          hallTested: String(row.hall_tested || "not_tested") as NonNullable<
+            CuratedRecipeSummary["metadata"]
+          >["hallTested"],
+        }
+      : undefined,
   };
 }
 
@@ -442,6 +527,8 @@ export function listCuratedRecipeSummaries(query: CuratedRecipeListQuery = {}): 
     conditions.push("featured = 1");
   }
 
+  appendMetadataFilterSql(query.metadata, conditions, params);
+
   let join = "";
   if (query.explorePool) {
     join = " INNER JOIN curated_recipe_categories c ON c.recipe_id = curated_recipes.recipe_id AND c.category_key = ?";
@@ -527,6 +614,54 @@ export function getCuratedRecipeBySpoonacularId(spoonacularId: number): CuratedR
   return hydrateCuratedRecipe(database, row);
 }
 
+export function updateCuratedEditorialFields(input: {
+  recipeId: string;
+  status?: CuratedRecipeStatus;
+  editorialNotes?: string | null;
+  reviewedBy?: string | null;
+  approvedBy?: string | null;
+}): CuratedRecipe {
+  const database = requireDb();
+  const existing = getCuratedRecipeById(input.recipeId);
+  if (!existing) throw new Error("Recipe not found");
+
+  const nextStatus = input.status ?? existing.status;
+  const nowIso = new Date().toISOString();
+
+  const reviewedAt = input.reviewedBy ? nowIso : existing.reviewedAt ?? null;
+  const approvedAt = input.approvedBy ? nowIso : existing.approvedAt ?? null;
+  const publishedAt =
+    nextStatus === "published" ? existing.publishedAt ?? nowIso : existing.publishedAt ?? null;
+
+  database
+    .prepare(
+      `UPDATE curated_recipes
+       SET status = ?,
+           editorial_notes = ?,
+           reviewed_by = ?,
+           reviewed_at = ?,
+           approved_by = ?,
+           approved_at = ?,
+           published_at = ?,
+           updated_at = datetime('now')
+       WHERE recipe_id = ?`,
+    )
+    .run(
+      nextStatus,
+      input.editorialNotes ?? existing.editorialNotes ?? null,
+      input.reviewedBy ?? existing.reviewedBy ?? null,
+      reviewedAt,
+      input.approvedBy ?? existing.approvedBy ?? null,
+      approvedAt,
+      publishedAt,
+      input.recipeId,
+    );
+
+  const refreshed = getCuratedRecipeById(input.recipeId);
+  if (!refreshed) throw new Error("Failed to read updated recipe");
+  return refreshed;
+}
+
 function hydrateCuratedRecipe(database: SqliteDatabase, row: Record<string, unknown>): CuratedRecipe {
   const recipeId = String(row.recipe_id);
 
@@ -609,6 +744,10 @@ function hydrateCuratedRecipe(database: SqliteDatabase, row: Record<string, unkn
     mealArchetype: row.meal_archetype as CuratedRecipe["mealArchetype"],
     archetypeFamily: row.archetype_family ? String(row.archetype_family) : undefined,
     archetypeVariation: row.archetype_variation ? String(row.archetype_variation) : undefined,
+    archetypeId: row.archetype_id ? String(row.archetype_id) : undefined,
+    parentRecipeId: row.parent_recipe_id ? String(row.parent_recipe_id) : undefined,
+    recipeRole: (row.recipe_role as CuratedRecipe["recipeRole"]) || "standalone",
+    variantKey: row.variant_key ? String(row.variant_key) : undefined,
     qualityBreakdown: row.quality_breakdown_json
       ? (safeJsonParseNullable<CuratedRecipe["qualityBreakdown"]>(
           String(row.quality_breakdown_json),
@@ -645,7 +784,80 @@ function hydrateCuratedRecipe(database: SqliteDatabase, row: Record<string, unkn
     schemaVersion: Number(row.schema_version) || 1,
     createdAt: String(row.created_at),
     updatedAt: String(row.updated_at),
+    editorialNotes: row.editorial_notes ? String(row.editorial_notes) : undefined,
+    reviewedBy: row.reviewed_by ? String(row.reviewed_by) : undefined,
+    reviewedAt: row.reviewed_at ? String(row.reviewed_at) : undefined,
+    approvedBy: row.approved_by ? String(row.approved_by) : undefined,
+    approvedAt: row.approved_at ? String(row.approved_at) : undefined,
+    publishedAt: row.published_at ? String(row.published_at) : undefined,
+    metadata: parseMetadataFromRow(row),
+    qaOverrides: parseQaOverridesFromRow(row),
   };
+}
+
+function parseQaOverridesFromRow(row: Record<string, unknown>) {
+  const raw = row.qa_overrides_json;
+  if (!raw || typeof raw !== "string") return undefined;
+  try {
+    return JSON.parse(raw) as CuratedRecipe["qaOverrides"];
+  } catch {
+    return undefined;
+  }
+}
+
+export function updateCuratedRecipeMetadata(input: {
+  recipeId: string;
+  metadata?: CuratedRecipeMetadata;
+  overrides?: CuratedRecipeMetadataOverrides;
+}): CuratedRecipe {
+  const existing = getCuratedRecipeById(input.recipeId);
+  if (!existing) throw new Error("Recipe not found");
+
+  const mergedOverrides: CuratedRecipeMetadataOverrides = {
+    ...existing.metadata?.overrides,
+    ...input.overrides,
+  };
+
+  const insertLike: CuratedRecipeInsert = {
+    recipeId: existing.recipeId,
+    slug: existing.slug,
+    status: existing.status,
+    title: existing.title,
+    summary: existing.summary,
+    heroImage: existing.heroImage,
+    images: existing.images,
+    ingredients: existing.ingredients,
+    instructions: existing.instructions,
+    prepMinutes: existing.prepMinutes,
+    cookMinutes: existing.cookMinutes,
+    totalMinutes: existing.totalMinutes,
+    servingsBase: existing.servingsBase,
+    cleanupDifficulty: existing.cleanupDifficulty,
+    protein: existing.protein,
+    cuisine: existing.cuisine,
+    category: existing.category,
+    mealFormat: existing.mealFormat,
+    mealArchetype: existing.mealArchetype,
+    scores: existing.scores,
+    source: existing.source,
+    tags: existing.tags,
+    categories: existing.categories,
+    featured: existing.featured,
+    generateResponse: existing.generateResponse,
+    editorialNotes: existing.editorialNotes,
+    metadata: input.metadata ?? undefined,
+  };
+
+  if (!input.metadata) {
+    insertLike.metadata = resolveRecipeMetadata(insertLike, {
+      ...(existing.metadata ?? ({} as CuratedRecipeMetadata)),
+      overrides: mergedOverrides,
+    });
+  } else if (mergedOverrides && Object.keys(mergedOverrides).length > 0) {
+    insertLike.metadata = { ...input.metadata, overrides: mergedOverrides };
+  }
+
+  return upsertCuratedRecipe(insertLike);
 }
 
 export function findExistingCuratedForDraft(
@@ -813,21 +1025,35 @@ export interface CuratedTagSummary {
   quality: number;
   sourceKind: string;
   status: string;
+  publishedAt?: string;
 }
 
-/** Published recipes carrying an editorial tag (e.g. golden_100). */
-export function listCuratedSummariesByTag(tag: string, limit = 200): CuratedTagSummary[] {
+/** Recipes carrying an editorial tag (e.g. golden_100). Defaults to non-archived. */
+export function listCuratedSummariesByTag(
+  tag: string,
+  limit = 200,
+  status: CuratedRecipeStatus | "any" = "any",
+): CuratedTagSummary[] {
   const database = requireDb();
+  const where =
+    status === "any"
+      ? "cr.status != 'archived'"
+      : status === "archived"
+        ? "cr.status = 'archived'"
+        : "cr.status = ?";
   const rows = database
     .prepare(
-      `SELECT cr.recipe_id, cr.slug, cr.title, cr.hero_image, cr.protein, cr.quality_score, cr.source_kind, cr.status
+      `SELECT cr.recipe_id, cr.slug, cr.title, cr.hero_image, cr.protein, cr.quality_score, cr.source_kind, cr.status, cr.published_at
        FROM curated_recipes cr
        INNER JOIN curated_recipe_tags t ON t.recipe_id = cr.recipe_id AND t.tag = ?
-       WHERE cr.status = 'published'
+       WHERE ${where}
        ORDER BY cr.quality_score DESC
        LIMIT ?`,
     )
-    .all(tag, limit) as Record<string, unknown>[];
+    .all(...(status === "any" || status === "archived" ? [tag] : [tag, status]), limit) as Record<
+    string,
+    unknown
+  >[];
 
   return rows.map((row) => ({
     recipeId: String(row.recipe_id),
@@ -838,5 +1064,6 @@ export function listCuratedSummariesByTag(tag: string, limit = 200): CuratedTagS
     quality: Number(row.quality_score) || 0,
     sourceKind: String(row.source_kind),
     status: String(row.status),
+    publishedAt: row.published_at ? String(row.published_at) : undefined,
   }));
 }
