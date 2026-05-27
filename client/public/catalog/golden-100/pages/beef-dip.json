@@ -1,0 +1,148 @@
+{
+  "slug": "beef-dip",
+  "title": "Blackstone Steak Sandwiches",
+  "subtitle": "Au jus dip energy without the fuss",
+  "category": "firehall_classics",
+  "cuisine": "american",
+  "description": "Canadian hall legend",
+  "crewSize": 8,
+  "cookTime": 45,
+  "prepTime": 15,
+  "difficulty": "medium",
+  "calories": 720,
+  "protein": 40,
+  "carbs": 68,
+  "fats": 36,
+  "tags": [
+    "protein:beef",
+    "format:sandwich",
+    "category:firehall_classics",
+    "trending",
+    "beef",
+    "golden_100"
+  ],
+  "equipment": [
+    "Large sheet trays",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "ingredients": [
+    {
+      "name": "Deli roast beef",
+      "quantity": "5.3",
+      "unit": "lb"
+    },
+    {
+      "name": "Hoagie rolls",
+      "quantity": "24"
+    },
+    {
+      "name": "Au jus concentrate",
+      "quantity": "5.3",
+      "unit": "packets"
+    },
+    {
+      "name": "Provolone cheese",
+      "quantity": "24",
+      "unit": "slices"
+    },
+    {
+      "name": "Frozen fries",
+      "quantity": "4",
+      "unit": "lb"
+    },
+    {
+      "name": "Coleslaw mix",
+      "quantity": "2.7",
+      "unit": "bags"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Simmer au jus (medium, 10 min)",
+      "instruction": "Prepare jus per packet; keep hot in pitchers. Watch color and texture — if it smells sharp or looks pale, give it another minute before moving on.",
+      "minutes": 10,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Bake fries (425°F, 20 min)",
+      "instruction": "Season fries; bake until crisp. Watch color and texture — if it smells sharp or looks pale, give it another minute before moving on.",
+      "minutes": 20,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Build sandwiches (medium, 12 min)",
+      "instruction": "Warm rolls, pile beef and cheese, brief oven melt if desired.",
+      "minutes": 12,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Dress coleslaw (no heat, 5 min)",
+      "instruction": "Toss slaw; keep cold. Watch color and texture — if it smells sharp or looks pale, give it another minute before moving on.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Open dip line (serve)",
+      "instruction": "Sandwiches, jus cups, fries, and slaw on the counter. Watch color and texture — if it smells sharp or looks pale, give it another minute before moving on.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Warm rolls before building — cold bread kills the line.",
+    "Serve jus in mugs for easy dipping.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Taste for salt at the end — hall palates run salty after long shifts."
+  ],
+  "tonightSpread": [
+    "Plate Blackstone Steak Sandwiches with sides in separate pans so the crew can mix portions.",
+    "Line up Blackstone Steak Sandwiches on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+  ],
+  "leftovers": [
+    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
+    "Label trays with date and reheat to 165°F minimum before second shift.",
+    "Store components separate — assemble fresh; buns go soggy overnight."
+  ],
+  "nutrition": {
+    "calories": 720,
+    "protein": 40,
+    "carbs": 68,
+    "fats": 36,
+    "label": "per serving (hall portion)"
+  },
+  "heroImage": "/images/golden-100/beef-dip.jpg",
+  "mobileImage": "/images/mobile/beef-dip.jpg",
+  "thumbImage": "/images/thumbs/beef-dip.jpg",
+  "railImage": "/images/rails/beef-dip.jpg",
+  "realismScore": 100,
+  "firefighterScore": 100,
+  "popularityWeight": 3.6,
+  "searchTerms": [
+    "blackstone steak sandwiches",
+    "beef dip",
+    "american",
+    "beef",
+    "sandwich",
+    "trending",
+    "golden_100"
+  ],
+  "relatedSlugs": [
+    "steak-sandwiches",
+    "chili-garlic-bread",
+    "smash-burgers",
+    "meatball-hoagies",
+    "loaded-baked-potato-bar",
+    "philly-cheesesteak-skillet"
+  ],
+  "sourceName": "Firehall Classics",
+  "classicSlug": "beef-dip",
+  "generatedAt": "2026-05-27T15:03:06.117Z",
+  "contentVersion": 1
+}

@@ -1,4 +1,3 @@
-import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Slider } from "@/components/ui/slider";
@@ -20,6 +19,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { app } from "@/lib/design-tokens";
 
 export type PizzaGenerationMode =
   | "standard"
@@ -159,9 +159,10 @@ export function PizzaFilterPanel({
   };
 
   return (
-    <div className="space-y-4">
-      <Card className="border-primary/20 shadow-lg shadow-primary/5">
-        <CardContent className="p-4 space-y-4">
+    <div className="space-y-3 lg:space-y-4">
+      <div className={cn(app.panel, "lg:border-primary/20 lg:shadow-lg lg:shadow-primary/5")}>
+        <div className="p-0 lg:p-4 space-y-3.5 lg:space-y-4">
+          <p className="lg:hidden text-[11px] font-medium text-muted-foreground">Pizza modes</p>
           <div>
             <Label className="text-xs uppercase tracking-wider text-muted-foreground font-medium mb-2 block">
               Pizza Night Modes
@@ -378,8 +379,8 @@ export function PizzaFilterPanel({
               testIdPrefix="pizza-toggle-allergen"
             />
           </div>
-        </CardContent>
-      </Card>
+        </div>
+      </div>
 
       <PizzaGenerateButtons
         className="max-lg:hidden"

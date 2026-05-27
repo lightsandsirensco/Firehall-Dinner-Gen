@@ -1,6 +1,11 @@
 import type { FoodImageryContext, FoodImageryPromptSpec } from "./types.js";
 import { assembleEditorialPromptSpec, assembleFinalModelPrompt } from "./prompt-assembler.js";
 import { resolveShotPreset } from "./shot-presets.js";
+import {
+  enrichImageryContextFromCategories,
+  resolvePrimaryCategoryFromContext,
+  categoryPromptFragments,
+} from "../categories/imagery.js";
 
 const FORMAT_PLATING_HINT: Record<string, string> = {
   burger: "stacked handheld on glossy bun, visible layers",
@@ -57,19 +62,30 @@ function textureLine(ctx: FoodImageryContext): string {
 
 /** Structured spec — logging, cache keys, vision QA. */
 export function buildFoodImageryPromptSpec(ctx: FoodImageryContext): FoodImageryPromptSpec {
-  const dish = ctx.displayTitle || ctx.title;
-  const shotPreset = resolveShotPreset(ctx);
-  const platingHint = inferPlatingHint(ctx.mealFormat, ctx.title);
-  const ingredients = topIngredients(ctx).join(", ");
+  const enriched = enrichImageryContextFromCategories(ctx);
+  const dish = enriched.displayTitle || enriched.title;
+  const shotPreset = resolveShotPreset(enriched);
+  const platingHint = inferPlatingHint(enriched.mealFormat, enriched.title);
+  const ingredients = topIngredients(enriched).join(", ");
+  const primaryCat = enriched.categoryEnrichment.masterCategoryIds[0]
+    || resolvePrimaryCategoryFromContext(enriched);
+  const catFragments = categoryPromptFragments(primaryCat);
+
+  const texture = [textureLine(enriched), enriched.categoryEnrichment.texture]
+    .filter(Boolean)
+    .join("; ");
 
   return assembleEditorialPromptSpec({
     dishTitle: dish,
-    cuisineLine: `${ctx.cuisine || "American comfort"} cuisine`,
-    proteinLine: `${ctx.protein || "mixed"} protein forward`,
+    cuisineLine: `${enriched.cuisine || "American comfort"} cuisine`,
+    proteinLine: `${enriched.protein || "mixed"} protein forward`,
     ingredientLine: ingredients || undefined,
-    textureLine: textureLine(ctx),
+    textureLine: texture,
     shotPreset,
     dishSpecificPlating: platingHint,
+    categoryMood: enriched.categoryEnrichment.mood || catFragments.mood,
+    categoryLighting: enriched.categoryEnrichment.lighting || catFragments.lighting,
+    extraNegative: enriched.categoryEnrichment.negativeHints,
   });
 }
 

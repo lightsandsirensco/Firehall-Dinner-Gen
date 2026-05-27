@@ -48,11 +48,16 @@ function getAppliedVersions(db: SqliteDatabase): Set<number> {
 
 function applyMigration(db: SqliteDatabase, migration: MigrationFile): void {
   log(`[db] Applying migration ${migration.version}: ${migration.name}`, "catalog");
-  db.exec(migration.sql);
-  db.prepare("INSERT INTO schema_migrations (version, name) VALUES (?, ?)").run(
-    migration.version,
-    migration.name,
-  );
+  try {
+    db.exec(migration.sql);
+    db.prepare("INSERT INTO schema_migrations (version, name) VALUES (?, ?)").run(
+      migration.version,
+      migration.name,
+    );
+  } catch (err: unknown) {
+    const msg = err instanceof Error ? err.message : String(err);
+    throw new Error(`Migration ${migration.version} (${migration.name}) failed: ${msg}`);
+  }
 }
 
 let migrated = false;
@@ -73,7 +78,12 @@ export async function runDbMigrations(): Promise<{ applied: number; current: num
   const pending = listMigrationFiles().filter((m) => !applied.has(m.version));
 
   for (const migration of pending) {
-    applyMigration(db, migration);
+    try {
+      applyMigration(db, migration);
+    } catch (err: unknown) {
+      log(`[db] Migration halted at v${migration.version}: ${(err as Error).message}`, "catalog");
+      throw err;
+    }
   }
 
   migrated = true;

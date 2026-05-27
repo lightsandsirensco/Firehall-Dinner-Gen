@@ -14,6 +14,8 @@ import { log } from "./index";
 import { type StructureType, pickStructure, STRUCTURE_DISPLAY } from "./structure-variety";
 import { buildFallbackRecipe } from "./fallback-recipe";
 import { buildSafeFallbackRecipe } from "./ai";
+import { runCuratedGenerationFallback } from "./curated-generation-fallback.js";
+import { prepareRecipePreValidation } from "./generation-reliability.js";
 import { TEMPLATE_FALLBACK_ATTRIBUTION } from "./recipe-fallback-policy";
 import type { RecipeSourceAttribution } from "../shared/canonical-recipe.js";
 
@@ -108,6 +110,18 @@ export async function runV2Fallback(
     `[fallback] last_resort=true | reason=${reason} | format=${fmt ?? "random"} → structure=${targetStructure} (${structureSource}) | protein=${protein}`,
     "fallback",
   );
+
+  const curated = await runCuratedGenerationFallback(request, recentSigs, reason);
+  if (curated?.recipe?.title) {
+    return {
+      recipe: prepareRecipePreValidation(curated.recipe),
+      protein: curated.protein,
+      structure: targetStructure,
+      structureDisplay: STRUCTURE_DISPLAY[targetStructure] || targetStructure,
+      usedFallback: true,
+      recipeSource: curated.recipeSource,
+    };
+  }
 
   // ── Build recipe ───────────────────────────────────────────────────────────
   let recipe: GenerateResponse;

@@ -16,18 +16,13 @@
  *   - Title and step content never invent new ingredients or meal types
  */
 
-import OpenAI from "openai";
-import { log } from "./index";
+import { createOpenAIClient } from "./openai-client.js";
+import { log } from "./logger.js";
 import { inferActualProtein } from "./spoonacular-converter";
 import { healthinessForVoice } from "./firehall-voice";
 import type { RecipeStep } from "@shared/schema";
 import { FIREHALL_VOICE_RULES } from "@shared/firehall-instruction-voice";
 import { CHEF_RECIPE_RULES, TITLE_QUALITY_EXAMPLES } from "@shared/chef-quality-prompt";
-
-const openai = new OpenAI({
-  apiKey: process.env.AI_INTEGRATIONS_OPENAI_API_KEY,
-  baseURL: process.env.AI_INTEGRATIONS_OPENAI_BASE_URL,
-});
 
 const POLISH_CACHE_TTL_MS = 60 * 60 * 1000;
 
@@ -263,7 +258,7 @@ export async function polishRecipeCopy(
 
   try {
     const response = await Promise.race([
-      openai.chat.completions.create({
+      createOpenAIClient().chat.completions.create({
         model: "gpt-4o-mini",
         messages: [{ role: "user", content: prompt }],
         max_tokens: 2400,

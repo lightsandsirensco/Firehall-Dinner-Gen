@@ -7,6 +7,7 @@
 
 import type { MealArchetype } from "../canonical-recipe.js";
 import type { GenerateResponse } from "../schema.js";
+import type { EditorialImageMetadata } from "../editorial-image-metadata.js";
 
 /** Lifecycle for editorial / ingestion workflow */
 export type CuratedRecipeStatus = "draft" | "review" | "published" | "archived";
@@ -119,6 +120,8 @@ export interface CuratedRecipe {
 
   heroImage: string;
   images: CuratedImageMeta[];
+  /** Editorial imagery pipeline — heroes, variants, approval */
+  editorialImage?: EditorialImageMetadata;
 
   ingredients: CuratedIngredient[];
   instructions: CuratedInstruction[];
@@ -173,6 +176,7 @@ export interface CuratedRecipeInsert {
 
   heroImage: string;
   images?: CuratedImageMeta[];
+  editorialImage?: EditorialImageMetadata;
 
   ingredients: CuratedIngredient[];
   instructions: CuratedInstruction[];

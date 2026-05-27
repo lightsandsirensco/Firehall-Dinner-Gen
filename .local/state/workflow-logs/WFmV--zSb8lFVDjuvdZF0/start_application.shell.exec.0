@@ -1,0 +1,43 @@
+
+> rest-express@1.0.0 dev
+> NODE_ENV=development tsx server/index.ts
+
+[1G[0K4:55:00 PM [cache] Cache store initialized
+4:55:00 PM [vote] Hall vote tables initialized
+4:55:00 PM [klaviyo] Klaviyo API key configured
+4:55:00 PM [pool] Pool warmup disabled (ENABLE_POOL_WARMUP != true). Recipes will be generated on-demand.
+4:55:01 PM [express] serving on port 5000
+Browserslist: browsers data (caniuse-lite) is 7 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+
+A PostCSS plugin did not pass the `from` option to `postcss.parse`. This may cause imported assets to be incorrectly transformed. If you've recently added a PostCSS plugin that raised this warning, please contact the package author to fix the issue.
+4:55:07 PM [perf] Warm-up ping received
+4:55:07 PM [express] GET /api/warm 200 in 2ms :: {"status":"warm","uptime":6.540125441}
+4:55:07 PM [v2] [v2] Selected filters | protein="chicken" cuisine="any" format="random" time="25-40" crew=6 allergens=[none] pantry=[none]
+4:55:07 PM [v2] [v2] Mapped Spoonacular params | query="chicken" cuisine="any" type="main course" maxReadyTime=40 intolerances="none" excludeIngredients="beef,ground beef,steak,pork,bacon,ham,sausage,shrimp,salmon,tuna" includeIngredients="chicken" diet="none" minServings=2
+4:55:07 PM [v2] [v2] Spoonacular search called | query="chicken" cuisine="any" type="main course" maxTime=40 allergens="none"
+4:55:07 PM [spoonacular] [spoonacular-cache] MISS search: query="chicken" | Spoonacular API called=yes
+4:55:07 PM [spoonacular] [spoonacular] Searching: query="chicken" cuisine=any diet=any limit=5
+4:55:07 PM [spoonacular] [spoonacular] Search returned 5 recipes (total available: 50)
+4:55:07 PM [spoonacular] [spoonacular-cache] Stored: search:query=chicken&number=5&offset=0&addRecipeInformation=true&fillIngredients | expires=2026-05-01T17:55:07.502Z
+4:55:07 PM [v2] [v2] Recipe candidates returned: 5
+4:55:07 PM [v2] [v2] Candidate pool: 3 after title-level filter (from 5 total)
+4:55:07 PM [v2] [v2] Selected candidate: id=1098350 title="Light Greek Lemon Chicken Orzo Soup" (pool size=3)
+4:55:07 PM [spoonacular] [spoonacular-cache] MISS detail: id=1098350 | Spoonacular API called=yes | includeNutrition=true
+4:55:07 PM [spoonacular] [spoonacular-cache] Stored: detail:1098350:nutrition=true | expires=2026-05-01T17:55:07.671Z
+4:55:07 PM [v2] [validator] selectedProtein=chicken
+4:55:07 PM [v2] [validator] inferredProtein=chicken
+4:55:07 PM [v2] [validator] mealStyle=random
+4:55:07 PM [v2] [validator] result=accepted
+4:55:07 PM [v2] [v2] ✓ Accepted "Light Greek Lemon Chicken Orzo Soup" | protein=chicken | ingredients=11 | steps=8 | source=spoonacular_v2
+4:55:07 PM [polish] [polish] cache MISS id=1098350 — calling gpt-4o-mini (steps=8)
+4:55:11 PM [polish] [polish] polished id=1098350 title="Light Greek Lemon Chicken Orzo Soup" steps=8
+4:55:11 PM [validator] [validator] firehouse flavor auto-improved: basic_seasoning_injected
+4:55:11 PM [validator] [validator] recipe validation errors (31): ingredient_unused:Garlic powder, ingredient_unused:Smoked paprika, step_mentions_unlisted:large, step_mentions_unlisted:soup, step_mentions_unlisted:shimmering, step_mentions_unlisted:indicating, step_mentions_unlisted:cooking, step_mentions_unlisted:diced, step_mentions_unlisted:occasionally, step_mentions_unlisted:soften, step_mentions_unlisted:slightly, step_mentions_unlisted:vegetable, step_mentions_unlisted:ground, step_mentions_unlisted:distribute, step_mentions_unlisted:cooked, step_mentions_unlisted:diced, step_mentions_unlisted:fresh, step_mentions_unlisted:increase, step_mentions_unlisted:soup, step_mentions_unlisted:stirring, step_mentions_unlisted:occasionally, step_mentions_unlisted:zest, step_mentions_unlisted:juice, step_mentions_unlisted:one, step_mentions_unlisted:large, step_mentions_unlisted:mixing, step_mentions_unlisted:ladle, step_mentions_unlisted:soup, format_has_forbidden:soup-stew must NOT include rice, format_missing_step:soup-stew steps must mention simmer time, firehouse_missing_technique:recipe steps lack a real cooking technique (sear, roast, braise, caramelize, etc.)
+4:55:11 PM [validator] [validator] ok=false, action=firehouse_flavor_improved:basic_seasoning_injected+recipe_validation_failed, issues=31, meal_style=soup/chili, protein=chicken, cuisine=mediterranean, baseCarb=pasta, method=stovetop, sig=soup/chili|chicken|mediterranean|pasta|stovetop|carrots,cele..., title="Light Greek Lemon Chicken Orzo Soup" [BLOCKED - format violation]
+4:55:11 PM [v2] [v2] Served "Light Greek Lemon Chicken Orzo Soup" in 4723ms | source=spoonacular_v2
+4:55:11 PM [fallback] [fallback] used=false
+4:55:11 PM [audit] [audit] fixes=[] issues=0 reqStyle=random infStyle=pasta finStyle=soup-stew cuisine=mediterranean baseCarb=pasta method=stovetop health=balanced budget=standard appFit=true allergenOk=true
+4:55:11 PM [api] [api] returning recipe id=1cbad79e-47ac-423f-8ac1-1f9713bc9e69 signature=soup/chili|chicken|mediterranean|pasta|stovetop|ca title="Light Greek Lemon Chicken Orzo Soup" ingredientsCount=14 stepsCount=8
+4:55:11 PM [rate] [rate] Generation counted — request_id=auto-1777654507135 signature=soup/chili|chicken|mediterranean|pasta|stovetop|carrots,celery stalks,chicken breasts,ground thyme,lemon,orzo pasta,smoked paprika,thyme session=ae7299d6-9537-45c0-8225-8acfb57f45c9

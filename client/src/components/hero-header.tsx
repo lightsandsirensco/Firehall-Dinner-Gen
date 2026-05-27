@@ -76,12 +76,12 @@ export function HeroHeader({
           )}
           <h1
             className={cn(
-              "font-heading leading-none tracking-[0.15em] uppercase text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)] transition-all duration-500",
+              "font-heading leading-tight text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)] transition-all duration-500",
               isUtility
-                ? "text-base sm:text-lg tracking-[0.12em]"
+                ? "text-sm sm:text-lg tracking-wide"
                 : isFull
-                  ? "text-2xl sm:text-4xl md:text-5xl"
-                  : "text-lg sm:text-2xl",
+                  ? "text-2xl tracking-tight sm:text-4xl sm:tracking-[0.08em] md:text-5xl"
+                  : "text-xl tracking-tight sm:text-2xl",
             )}
             data-testid="text-page-title"
           >
@@ -99,7 +99,7 @@ export function HeroHeader({
 
         {headline && !isUtility && (
           <p
-            className="text-primary/90 text-xs sm:text-sm font-semibold uppercase tracking-[0.25em] transition-opacity duration-500"
+            className="text-primary/95 text-sm sm:text-base font-semibold tracking-tight transition-opacity duration-500 max-w-[20rem] sm:max-w-lg"
             data-testid="text-hero-headline"
           >
             {headline}
@@ -143,7 +143,7 @@ export function HeroHeader({
         )}
 
         {showCTAs && isFull && (
-          <div className="flex flex-wrap items-center justify-center gap-3 mt-3">
+          <div className="hidden lg:flex flex-wrap items-center justify-center gap-3 mt-3">
             <Link href="/">
               <button
                 className="px-5 py-2.5 bg-primary text-primary-foreground rounded-lg font-heading text-xs tracking-wider uppercase hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20"

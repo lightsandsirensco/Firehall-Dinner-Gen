@@ -1,4 +1,4 @@
-import 'dotenv/config';
+import "./env-bootstrap.js";
 import express, { type Request, Response, NextFunction } from "express";
 import helmet from "helmet";
 import { registerRoutes } from "./routes";
@@ -83,49 +83,57 @@ app.use((req, res, next) => {
 });
 
 (async () => {
-  await registerRoutes(httpServer, app);
+  try {
+    await registerRoutes(httpServer, app);
 
-  app.use((err: unknown, _req: Request, res: Response, next: NextFunction) => {
-    const error = err as { status?: number; statusCode?: number; message?: string; type?: string };
-    if (error.type === "entity.too.large") {
-      return res.status(413).json({ message: "Request body is too large." });
-    }
-    const status = error.status || error.statusCode || 500;
-    const message = error.message || "Internal Server Error";
+    app.use((err: unknown, _req: Request, res: Response, next: NextFunction) => {
+      const error = err as { status?: number; statusCode?: number; message?: string; type?: string };
+      if (error.type === "entity.too.large") {
+        return res.status(413).json({ message: "Request body is too large." });
+      }
+      const status = error.status || error.statusCode || 500;
+      const message =
+        isProduction && status >= 500
+          ? "Internal Server Error"
+          : error.message || "Internal Server Error";
 
-    logError("express", "Internal Server Error", err);
+      logError("express", "Internal Server Error", err);
 
-    if (res.headersSent) {
-      return next(err);
-    }
+      if (res.headersSent) {
+        return next(err);
+      }
 
-    return res.status(status).json({ message });
-  });
-
-  if (process.env.NODE_ENV === "production") {
-    serveStatic(app);
-  } else {
-    const { setupVite } = await import("./vite");
-    await setupVite(httpServer, app);
-  }
-
-  const port = parseInt(process.env.PORT || "5000", 10);
-  httpServer.listen(port, "0.0.0.0", () => {
-    log(`serving on port ${port}`);
-  });
-
-  const shutdown = (signal: string) => {
-    log(`${signal} received. Shutting down gracefully...`, "system");
-    httpServer.close(() => {
-      log("HTTP server closed.", "system");
-      process.exit(0);
+      return res.status(status).json({ message });
     });
-    setTimeout(() => {
-      log("Forcefully shutting down after 10s timeout.", "system");
-      process.exit(1);
-    }, 10_000).unref();
-  };
 
-  process.on("SIGTERM", () => shutdown("SIGTERM"));
-  process.on("SIGINT", () => shutdown("SIGINT"));
+    if (process.env.NODE_ENV === "production") {
+      serveStatic(app);
+    } else {
+      const { setupVite } = await import("./vite");
+      await setupVite(httpServer, app);
+    }
+
+    const port = parseInt(process.env.PORT || "5000", 10);
+    httpServer.listen(port, "0.0.0.0", () => {
+      log(`serving on port ${port}`);
+    });
+
+    const shutdown = (signal: string) => {
+      log(`${signal} received. Shutting down gracefully...`, "system");
+      httpServer.close(() => {
+        log("HTTP server closed.", "system");
+        process.exit(0);
+      });
+      setTimeout(() => {
+        log("Forcefully shutting down after 10s timeout.", "system");
+        process.exit(1);
+      }, 10_000).unref();
+    };
+
+    process.on("SIGTERM", () => shutdown("SIGTERM"));
+    process.on("SIGINT", () => shutdown("SIGINT"));
+  } catch (err: unknown) {
+    logError("startup", "Fatal — server did not start", err);
+    process.exit(1);
+  }
 })();

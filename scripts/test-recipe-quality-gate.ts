@@ -6,6 +6,13 @@ import {
   applyQualityTitleFix,
 } from "../shared/recipe-quality-gate.js";
 import { titleMatchesIngredients } from "../shared/meal-format-contract.js";
+import {
+  isRoboticTitle,
+  suggestHumanMealTitle,
+  repairRecipeTitle,
+} from "../shared/generation-reliability.js";
+import { scoreRecipeTitle } from "../shared/recipe-title-quality.js";
+import { heroPathConflictsTitle } from "../shared/meal-image-title-match.js";
 import type { GenerateResponse } from "../shared/schema.js";
 
 function assert(cond: boolean, msg: string) {
@@ -66,5 +73,56 @@ const goodGate = runRecipeQualityGate(goodBowl, {
   protein: "chicken",
 });
 assert(goodGate.score >= 50, "reasonable bowl should score ok");
+
+assert(isRoboticTitle("Asian Beef Plated Main"), "plated main metadata title");
+assert(isRoboticTitle("Chicken Comfort Bowl"), "comfort bowl metadata title");
+assert(isRoboticTitle("Protein Skillet"), "protein skillet metadata title");
+assert(!isRoboticTitle("Sticky Garlic Beef Bowls"), "human bowl title");
+assert(!isRoboticTitle("Firehall Steak Sandwiches"), "human sandwich title");
+assert(!isRoboticTitle("Crispy Honey Chili Chicken"), "human chicken title");
+
+const repaired = repairRecipeTitle({
+  title: "Asian Beef Plated Main",
+  chosen_protein: "beef",
+  meal_style: "bowl",
+  ingredients: [
+    { item: "Garlic cloves", amount: "4", notes: "" },
+    { item: "Flank steak", amount: "2 lb", notes: "" },
+    { item: "Jasmine rice", amount: "2 cups", notes: "" },
+  ],
+  steps: [{ heading: "Cook", body: "Sear steak and serve over rice." }],
+} as GenerateResponse);
+assert(!isRoboticTitle(repaired.title), `repaired title should be human: ${repaired.title}`);
+assert(/\b(bowl|beef|garlic|steak)/i.test(repaired.title), "repaired title mentions meal");
+
+const humanSuggest = suggestHumanMealTitle({
+  protein: "beef",
+  mealFormat: "bowl",
+  ingredients: [{ item: "garlic" }, { item: "flank steak" }],
+});
+assert(!isRoboticTitle(humanSuggest), `suggest: ${humanSuggest}`);
+
+const badSkillet = scoreRecipeTitle("Any Lemon Beef Skillet With Quinoa", {
+  mealFormat: "skillet",
+  protein: "beef",
+});
+assert(!badSkillet.pass, "awkward skillet+quinoa title should fail");
+assert(badSkillet.suggestedTitle && !isRoboticTitle(badSkillet.suggestedTitle), "suggested repair");
+
+const goodTaco = scoreRecipeTitle("Chimichurri Steak Tacos", {
+  mealFormat: "tacos",
+  protein: "beef",
+  ingredients: [{ item: "flour tortillas" }, { item: "flank steak" }],
+});
+assert(goodTaco.pass, "chimichurri tacos should pass title quality");
+
+assert(
+  heroPathConflictsTitle("/images/classics/steak-tacos.jpg", "Garlic Butter Beef Skillet With Quinoa", "skillet"),
+  "taco hero should not pair with skillet title",
+);
+assert(
+  !heroPathConflictsTitle("/images/classics/steak-tacos.jpg", "Chimichurri Steak Tacos", "tacos"),
+  "taco hero should pair with taco title",
+);
 
 console.log("[test-recipe-quality-gate] OK");

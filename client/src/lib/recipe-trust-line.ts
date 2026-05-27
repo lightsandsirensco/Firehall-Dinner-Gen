@@ -1,6 +1,7 @@
 import type { ClientRecipeResponse } from "@shared/schema";
+import { customerHallPickLine } from "@shared/customer-facing";
 
-const FALLBACK_LINES = [
+const TRUST_LINES = [
   "Crew-ready dinner for busy shifts",
   "Practical spread for a real hall night",
   "Built for firefighters — not food bloggers",
@@ -48,8 +49,8 @@ function crewCount(recipe: ClientRecipeResponse, crewSize?: number): number {
 
 /** Deterministic, context-aware trust line for the recipe card (S7). */
 export function buildRecipeTrustLine(recipe: ClientRecipeResponse, crewSize?: number): string {
-  if (recipe._fallback) {
-    return "Station kitchen template — loosen a filter for a linked publisher recipe";
+  if (recipe.hall_curated || recipe._fallback) {
+    return customerHallPickLine(recipe);
   }
 
   const blob = tagBlob(recipe);
@@ -137,5 +138,5 @@ export function buildRecipeTrustLine(recipe: ClientRecipeResponse, crewSize?: nu
   }
 
   const key = `${recipe._signature || recipe.title}::${format}::${cuisine}::${crew}`;
-  return FALLBACK_LINES[stableIndex(key, FALLBACK_LINES.length)];
+  return TRUST_LINES[stableIndex(key, TRUST_LINES.length)];
 }

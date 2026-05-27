@@ -1,0 +1,151 @@
+{
+  "slug": "memphis-dry-rub-ribs",
+  "title": "Memphis Dry Rub Ribs",
+  "subtitle": "Sticky bark, fall-off-bone ribs",
+  "category": "bbq_grill_nights",
+  "cuisine": "american",
+  "description": "Memphis Dry Rub Ribs is a american grill built for a hungry firehall crew — Sticky bark, fall-off-bone ribs. Hearty portions, station-kitchen timing, and flavors everyone recognizes after a long shift.",
+  "crewSize": 8,
+  "cookTime": 90,
+  "prepTime": 30,
+  "difficulty": "hard",
+  "calories": 600,
+  "protein": 40,
+  "carbs": 48,
+  "fats": 28,
+  "tags": [
+    "protein:pork",
+    "format:grill",
+    "category:bbq_grill_nights",
+    "bbq",
+    "golden_100"
+  ],
+  "equipment": [
+    "Grill or flat-top",
+    "Tongs",
+    "Heat-resistant gloves",
+    "Large sheet trays",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "ingredients": [
+    {
+      "name": "Pork (shoulder or chops)",
+      "quantity": "3",
+      "unit": "lb"
+    },
+    {
+      "name": "Kosher salt",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "Black pepper",
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "Cooking oil",
+      "quantity": "0.3",
+      "unit": "cup"
+    },
+    {
+      "name": "Yellow onion",
+      "quantity": "2",
+      "unit": "large"
+    },
+    {
+      "name": "Garlic",
+      "quantity": "6",
+      "unit": "cloves"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Prep the line",
+      "instruction": "Set out all ingredients for Memphis Dry Rub Ribs before you turn on heat — firefighters eat on a schedule. Pat proteins dry and season aggressively with salt and pepper; dry surfaces brown instead of steam.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Build the base",
+      "instruction": "Heat oil in your largest skillet, Dutch oven, or on the flat-top over medium-high until it shimmers. Add aromatics (onion first) and cook until the edges turn golden and the smell sweetens — usually 4–6 minutes. If garlic is in the recipe, add it after the onion softens so it doesn't burn.",
+      "minutes": 8,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Cook the main",
+      "instruction": "Cook the primary protein or base for Memphis Dry Rub Ribs until it hits proper color and safe internal temperature. Don't crowd the pan — work in batches if needed so you get browning, not gray stew. Listen for a steady sizzle; if it's silent, the heat is too low.",
+      "minutes": 20,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Finish and season",
+      "instruction": "Bring components together, taste, and adjust salt. Sauce should coat, not pool. If cheese is involved, melt it just until glossy — another 1–2 minutes under a lid or broiler. Let heavy proteins rest 5 minutes before slicing.",
+      "minutes": 10,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Serve the hall",
+      "instruction": "Transfer to sheet trays or a serving line immediately. Keep backup warm at 200°F. Call the crew while it's hot — this meal is built for a hungry hall, not a photo shoot.",
+      "minutes": 5,
+      "heatLevel": "low"
+    }
+  ],
+  "proTips": [
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Taste for salt at the end — hall palates run salty after long shifts.",
+    "Rest grilled proteins 5–8 minutes under foil before slicing — juices stay in the meat."
+  ],
+  "tonightSpread": [
+    "Plate Memphis Dry Rub Ribs with sides in separate pans so the crew can mix portions.",
+    "Line up Memphis Dry Rub Ribs on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run.",
+    "Slice proteins on a cutting board at the end of the line so everyone sees the smoke ring and char.",
+    "Set sauce and pickles on the side — sauced meat holds better on the backup tray."
+  ],
+  "leftovers": [
+    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
+    "Label trays with date and reheat to 165°F minimum before second shift.",
+    "Slice cold protein thin for next-day wraps or salads — faster reheat, less dry-out."
+  ],
+  "nutrition": {
+    "calories": 600,
+    "protein": 40,
+    "carbs": 48,
+    "fats": 28,
+    "label": "per serving (hall portion)"
+  },
+  "heroImage": "/images/golden-100/memphis-dry-rub-ribs.jpg",
+  "mobileImage": "/images/mobile/memphis-dry-rub-ribs.jpg",
+  "thumbImage": "/images/thumbs/memphis-dry-rub-ribs.jpg",
+  "railImage": "/images/rails/memphis-dry-rub-ribs.jpg",
+  "realismScore": 100,
+  "firefighterScore": 100,
+  "popularityWeight": 3.2,
+  "searchTerms": [
+    "memphis dry rub ribs",
+    "american",
+    "pork",
+    "grill",
+    "bbq",
+    "memphis dry rub pork ribs",
+    "golden_100"
+  ],
+  "relatedSlugs": [
+    "grilled-pork-chops",
+    "honey-garlic-pork-tenderloin",
+    "carolina-mustard-pork",
+    "bbq-brisket-burnt-ends",
+    "beer-can-chicken",
+    "cedar-plank-salmon"
+  ],
+  "sourceName": "AmazingRibs",
+  "generatedAt": "2026-05-27T15:03:06.140Z",
+  "contentVersion": 1
+}

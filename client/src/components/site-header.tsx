@@ -37,25 +37,24 @@ export function SiteHeader({ activePage, favCount = 0 }: SiteHeaderProps) {
 
   return (
     <header
-      className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-border/30 pt-safe"
+      className="sticky top-0 z-50 bg-background/80 backdrop-blur-xl border-b border-white/[0.06] pt-safe supports-[backdrop-filter]:bg-background/65"
       data-testid="site-header"
     >
       <div className="max-w-[1400px] mx-auto px-page">
         <nav
-          className="flex items-center justify-between h-[3.25rem] sm:h-16 gap-2"
+          className="flex items-center justify-between h-11 sm:h-16 gap-1"
           data-testid="nav-links"
         >
-          <Link href="/" className="flex items-center gap-2 shrink-0 group min-h-11 min-w-11" data-testid="nav-logo">
+          <Link href="/" className="flex items-center gap-1.5 shrink-0 group min-h-10 min-w-10" data-testid="nav-logo">
             <Flame
-              className="w-6 h-6 sm:w-7 sm:h-7 transition-transform duration-200 group-hover:scale-110"
+              className="w-5 h-5 sm:w-7 sm:h-7 transition-transform duration-200 group-active:scale-95"
               style={{ color: "#C62828" }}
             />
             <span
-              className="font-heading text-lg sm:text-[24px] leading-none tracking-[0.5px] text-foreground"
-              style={{ letterSpacing: "0.5px" }}
+              className="font-heading text-base sm:text-[24px] leading-none tracking-wide text-foreground"
             >
-              <span className="sm:hidden">FIREHALL</span>
-              <span className="hidden sm:inline">FIREHALL MEALS</span>
+              <span className="md:hidden">Firehall</span>
+              <span className="hidden md:inline">FIREHALL MEALS</span>
             </span>
           </Link>
 
@@ -125,7 +124,7 @@ export function SiteHeader({ activePage, favCount = 0 }: SiteHeaderProps) {
           </div>
 
           {/* Mobile: favorites + menu */}
-          <div className="flex md:hidden items-center gap-1">
+          <div className="flex md:hidden items-center gap-0.5">
             {activePage !== "favorites" && (
               <Link
                 href="/favorites"

@@ -4,6 +4,7 @@ import { ExploreRecipeImage } from "@/components/explore-recipe-image";
 import { buildExploreTrustLine } from "@/lib/explore-trust-line";
 import { HERO_LAYOUT_FRAME } from "@/lib/hero-image";
 import { cn } from "@/lib/utils";
+import { app } from "@/lib/design-tokens";
 
 export interface ExploreSpotlightCardProps {
   recipe: ExploreRecipeCard;
@@ -27,12 +28,7 @@ export function ExploreSpotlightCard({
     <button
       type="button"
       onClick={onClick}
-      className={cn(
-        "group relative w-full text-left overflow-hidden rounded-3xl",
-        "ring-1 ring-white/15 shadow-2xl shadow-black/40",
-        "transition-transform duration-300 active:scale-[0.99] motion-reduce:transition-none",
-        className,
-      )}
+      className={cn(app.cardCinematic, "group w-full text-left rounded-3xl", className)}
       data-testid="explore-spotlight-card"
     >
       <div className={cn("relative overflow-hidden", HERO_LAYOUT_FRAME.cinematic)}>

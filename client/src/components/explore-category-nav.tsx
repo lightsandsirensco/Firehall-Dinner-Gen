@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 
 export interface ExploreCategoryNavProps {
-  items: { id: string; label: string }[];
+  items: { id: string; label: string; emoji?: string }[];
   activeId?: string;
   onSelect: (sectionId: string) => void;
   className?: string;
@@ -45,6 +45,11 @@ export function ExploreCategoryNav({
               )}
               data-testid={`nav-category-${item.id}`}
             >
+              {item.emoji && (
+                <span className="mr-1.5 text-sm leading-none" aria-hidden>
+                  {item.emoji}
+                </span>
+              )}
               {item.label}
             </button>
           );

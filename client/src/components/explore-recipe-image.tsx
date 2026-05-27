@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Flame } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { HeroImage } from "@/components/hero-image";
+import { FoodImage } from "@/components/mobile/food-image";
 import { HERO_SIZES } from "@/lib/hero-image";
 import {
   exploreImageSrcSet,
@@ -19,6 +19,7 @@ interface ExploreRecipeImageProps {
   cinematic?: boolean;
   sizesHint?: "rail" | "grid" | "spotlight";
   priority?: boolean;
+  bleed?: boolean;
 }
 
 export function ExploreRecipeImage({
@@ -29,6 +30,7 @@ export function ExploreRecipeImage({
   cinematic = false,
   sizesHint = "grid",
   priority = false,
+  bleed = variant === "detail",
 }: ExploreRecipeImageProps) {
   const [src, setSrc] = useState(() => normalizeMediaUrl(recipe.image));
   const [failed, setFailed] = useState(false);
@@ -76,7 +78,7 @@ export function ExploreRecipeImage({
       )}
     >
       <Flame className="w-10 h-10 text-primary/30" />
-      <p className="text-[10px] uppercase tracking-widest text-white/40 font-medium line-clamp-2 px-4 text-center">
+      <p className="text-[11px] font-medium text-white/50 line-clamp-2 px-4 text-center">
         {recipe.title}
       </p>
     </div>
@@ -87,18 +89,20 @@ export function ExploreRecipeImage({
   }
 
   return (
-    <HeroImage
+    <FoodImage
       key={`explore-hero-${recipe.id}-${src}`}
       src={src}
       alt={recipe.imageAlt || recipe.title}
       layout={variant === "detail" ? "detail" : "card-fill"}
       focal="food-plate"
       overlay={overlay}
-      cinematicGrade={cinematic}
+      cinematicGrade={cinematic || variant === "detail"}
       srcSet={srcSet}
       sizes={sizes}
       priority={priority}
-      className={className}
+      bleed={bleed}
+      rounded={variant === "detail" ? "none" : "lg"}
+      className={cn(variant === "detail" && "sm:rounded-2xl", className)}
       imgClassName={imgClassName}
       fallback={fallback}
       onError={() => {

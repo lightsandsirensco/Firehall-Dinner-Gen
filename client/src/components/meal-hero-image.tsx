@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { HeroImage } from "@/components/hero-image";
+import { FoodImage } from "@/components/mobile/food-image";
 
 interface MealHeroImageProps {
   src: string;
@@ -51,14 +51,19 @@ export function MealHeroImage({
   );
 
   return (
-    <HeroImage
+    <FoodImage
       src={src}
       alt={alt}
       layout={variant === "cinematic" ? "cinematic" : "card-fill"}
       focal="food-plate"
       overlay={variant === "cinematic" ? "minimal" : "minimal"}
       priority={priority}
-      className={className}
+      bleed={variant === "cinematic"}
+      rounded={variant === "cinematic" ? "none" : "lg"}
+      className={cn(
+        variant === "cinematic" && "sm:rounded-2xl sm:ring-1 sm:ring-border/40 sm:shadow-xl sm:shadow-black/25",
+        className,
+      )}
       imgClassName={imgClassName}
       fallback={fallback}
     />

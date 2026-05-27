@@ -42,6 +42,10 @@ export interface ExploreEditorialSection {
   layout: "rail" | "grid";
   theme?: ExploreSectionTheme;
   recipes: ExploreRecipeCard[];
+  /** Stage 4 — master category taxonomy */
+  masterCategoryId?: string;
+  /** Editorial hook for mobile discovery */
+  firefighterHook?: string;
 }
 
 /** Spoonacular-backed discovery rails — see explore-discovery-catalog.ts */
@@ -97,9 +101,9 @@ export function sortByAppetiteAppeal(
 }
 
 /** Deterministic index from calendar day + section id (no Math.random) */
-export function editorialDaySeed(): number {
+export function editorialDaySeed(at: Date = new Date()): number {
   return Math.floor(
-    (Date.now() - new Date(new Date().getFullYear(), 0, 0).getTime()) / 86400000,
+    (at.getTime() - new Date(at.getFullYear(), 0, 0).getTime()) / 86400000,
   );
 }
 

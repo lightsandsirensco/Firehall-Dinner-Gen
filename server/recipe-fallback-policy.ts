@@ -2,7 +2,7 @@
  * Fallback policy — template/LLM paths are explicit last resort only.
  *
  * Default order for /api/generate (non-pantry):
- *   catalog → Spoonacular V2 → relaxed catalog → relaxed V2 → session cache → template
+ *   curated editorial → Golden 100 → cache/catalog → emergency pools → live API (timeout) → emergency
  *
  * LLM remix (fallbackRemix) is opt-in via ALLOW_LLM_FALLBACK=true.
  * Template fallback can be disabled via DISABLE_TEMPLATE_FALLBACK=true (503 instead).

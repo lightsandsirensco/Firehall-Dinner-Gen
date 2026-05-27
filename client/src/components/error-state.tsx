@@ -17,7 +17,7 @@ export function ErrorState({ type, message }: ErrorStateProps) {
           Nothing fit those picks
         </h2>
         <p className="text-muted-foreground text-sm max-w-sm mb-1 leading-relaxed" data-testid="text-no-match-description">
-          Loosen allergies, add an appliance, or try a different protein — then spin again.
+          Try fewer allergy restrictions, add an appliance, or switch protein — then spin again.
         </p>
         <p className="text-muted-foreground/60 text-xs max-w-xs" data-testid="text-no-match-hint">
           Broad filters first. Narrow once you see a winner.

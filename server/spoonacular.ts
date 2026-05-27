@@ -1,9 +1,10 @@
-import { log, clip, isProductionEnv } from "./logger";
+import { log, clip, isProductionEnv, formatLogFields } from "./logger";
 import {
   normalizeExploreRecipeCard,
   normalizeExploreRecipeDetail,
   type ExploreRecipeCard,
 } from "../shared/explore-recipe.js";
+import { Agent } from "undici";
 
 const SPOONACULAR_BASE = "https://api.spoonacular.com";
 const SEARCH_CACHE_TTL_MS = 60 * 60 * 1000;       // 1 hour
@@ -12,6 +13,130 @@ const MAX_CACHE_SIZE = 500;
 const DEFAULT_RESULTS_PER_REQUEST = 5;
 
 const apiCache = new Map<string, { data: any; expires: number; ttl: number }>();
+
+const SPOONACULAR_TIMEOUT_MS = parseInt(process.env.SPOONACULAR_TIMEOUT_MS || "15000", 10);
+const SPOONACULAR_RETRY_MAX = Math.max(0, parseInt(process.env.SPOONACULAR_RETRY_MAX || "3", 10));
+
+function isDev(): boolean {
+  return process.env.NODE_ENV !== "production";
+}
+
+function redactApiKey(url: string): string {
+  try {
+    const u = new URL(url);
+    if (u.searchParams.has("apiKey")) u.searchParams.set("apiKey", "***");
+    return u.toString();
+  } catch {
+    return url.replace(/apiKey=[^&]+/i, "apiKey=***");
+  }
+}
+
+function isTlsCertError(err: unknown): boolean {
+  const msg = err instanceof Error ? err.message : String(err ?? "");
+  const code = (err as { code?: string } | null)?.code;
+  return (
+    code === "UNABLE_TO_VERIFY_LEAF_SIGNATURE" ||
+    code === "SELF_SIGNED_CERT_IN_CHAIN" ||
+    /unable to verify the first certificate/i.test(msg) ||
+    /UNABLE_TO_VERIFY_LEAF_SIGNATURE/i.test(msg)
+  );
+}
+
+let spoonacularDevDispatcher: Agent | null = null;
+function getSpoonacularDispatcher(): Agent | undefined {
+  // Scoped dev-only bypass: doesn't modify global TLS verification.
+  if (!isDev()) return undefined;
+  if (process.env.SPOONACULAR_INSECURE_TLS !== "true") return undefined;
+  if (!spoonacularDevDispatcher) {
+    spoonacularDevDispatcher = new Agent({ connect: { rejectUnauthorized: false } });
+    log("[spoonacular] SPOONACULAR_INSECURE_TLS=true — using scoped TLS dispatcher (dev only)", "spoonacular");
+  }
+  return spoonacularDevDispatcher;
+}
+
+async function sleep(ms: number): Promise<void> {
+  await new Promise((r) => setTimeout(r, ms));
+}
+
+function backoffMs(attempt: number): number {
+  const base = Math.min(2500, 250 * 2 ** Math.max(0, attempt - 1));
+  const jitter = Math.floor(Math.random() * 150);
+  return base + jitter;
+}
+
+async function spoonacularFetch(url: string, init: RequestInit = {}): Promise<Response> {
+  const dispatcher = getSpoonacularDispatcher();
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), SPOONACULAR_TIMEOUT_MS);
+  const startedAt = Date.now();
+  try {
+    const res = await fetch(url, {
+      ...init,
+      signal: controller.signal,
+      ...(dispatcher ? ({ dispatcher } as any) : {}),
+    } as any);
+    const ms = Date.now() - startedAt;
+    if (ms > 2000 && !isProductionEnv()) {
+      log(`[spoonacular] slow_fetch ${formatLogFields({ ms, url: redactApiKey(url) })}`, "spoonacular");
+    }
+    return res;
+  } catch (err: any) {
+    const ms = Date.now() - startedAt;
+    log(
+      `[spoonacular] fetch_error ${formatLogFields({
+        url: redactApiKey(url),
+        ms,
+        code: err?.code,
+        cause: err?.cause?.code || err?.cause?.message,
+        tlsBypass: process.env.SPOONACULAR_INSECURE_TLS === "true",
+      })}`,
+      "spoonacular",
+    );
+    throw err;
+  } finally {
+    clearTimeout(timeout);
+  }
+}
+
+async function spoonacularFetchJson<T>(url: string): Promise<T> {
+  let lastErr: unknown = null;
+  const attempts = Math.max(1, SPOONACULAR_RETRY_MAX + 1);
+  for (let attempt = 1; attempt <= attempts; attempt++) {
+    try {
+      const res = await spoonacularFetch(url);
+      const text = await res.text();
+      if (!res.ok) {
+        const msg = `[spoonacular] http_error ${formatLogFields({
+          status: res.status,
+          url: redactApiKey(url),
+          body: isProductionEnv() ? "" : clip(text, 240),
+        })}`;
+        // retry 429/5xx only
+        if (res.status === 429 || (res.status >= 500 && res.status <= 599)) {
+          lastErr = new Error(msg);
+          if (attempt < attempts) {
+            await sleep(backoffMs(attempt));
+            continue;
+          }
+        }
+        throw new Error(msg);
+      }
+      return JSON.parse(text) as T;
+    } catch (err: any) {
+      lastErr = err;
+      const transient =
+        err?.name === "AbortError" ||
+        /fetch failed/i.test(String(err?.message ?? "")) ||
+        isTlsCertError(err);
+      if (transient && attempt < attempts) {
+        await sleep(backoffMs(attempt));
+        continue;
+      }
+      break;
+    }
+  }
+  throw lastErr instanceof Error ? lastErr : new Error(String(lastErr ?? "Spoonacular fetch failed"));
+}
 
 function getCached<T>(key: string): T | null {
   const entry = apiCache.get(key);
@@ -164,18 +289,7 @@ export async function searchRecipes(query: string, options: SearchOptions = {}):
   log(`[spoonacular-cache] MISS search: query="${query}" | Spoonacular API called=yes`, "spoonacular");
   const url = `${SPOONACULAR_BASE}/recipes/complexSearch?${params}`;
   log(`[spoonacular] Searching: query="${query}" cuisine=${options.cuisine || "any"} diet=${options.diet || "any"} limit=${requestCount}`, "spoonacular");
-
-  const res = await fetch(url);
-  if (!res.ok) {
-    const text = await res.text();
-    log(
-      `[spoonacular] search failed status=${res.status}${isProductionEnv() ? "" : ` body=${clip(text, 80)}`}`,
-      "spoonacular",
-    );
-    throw new Error(`Spoonacular API error: ${res.status}`);
-  }
-
-  const data = await res.json();
+  const data = await spoonacularFetchJson<any>(url);
   const result: SpoonacularSearchResponse = {
     results: (data.results || [])
       .map((r: SpoonacularSearchResult) =>
@@ -221,11 +335,15 @@ async function fetchRecipeInformation(
   const apiKey = getApiKey();
   const nutritionParam = includeNutrition ? "true" : "false";
   const url = `${SPOONACULAR_BASE}/recipes/${id}/information?apiKey=${apiKey}&includeNutrition=${nutritionParam}`;
-  const res = await fetch(url);
+  const res = await spoonacularFetch(url);
   const text = await res.text();
   if (!res.ok) {
     log(
-      `[spoonacular] detail failed id=${id} status=${res.status}${isProductionEnv() ? "" : ` body=${clip(text, 80)}`}`,
+      `[spoonacular] detail failed ${formatLogFields({
+        id,
+        status: res.status,
+        body: isProductionEnv() ? "" : clip(text, 160),
+      })}`,
       "spoonacular",
     );
     const err = new Error(`Spoonacular detail error ${res.status} for recipe ${id}`);

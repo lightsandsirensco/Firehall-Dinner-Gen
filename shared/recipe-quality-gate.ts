@@ -13,6 +13,8 @@ import {
 import { scoreHallRealism } from "./firehall-instruction-voice.js";
 import { validateMealSteps } from "./meal-step-validation.js";
 import type { MealIdentity } from "./meal-semantics.js";
+import { isRoboticTitle, repairRecipeTitle } from "./generation-reliability.js";
+import { scoreRecipeTitle } from "./recipe-title-quality.js";
 
 const BANNED_COPY_PHRASES: RegExp[] = [
   /\bfeeds hard\b/gi,
@@ -35,6 +37,7 @@ export type QualityIssueCode =
   | "taco_with_rice"
   | "banned_copy"
   | "generic_title"
+  | "robotic_title"
   | "shallow_steps"
   | "hall_realism_low"
   | "step_validation_failed"
@@ -110,6 +113,26 @@ export function runRecipeQualityGate(
     score -= 15;
   }
 
+  if (isRoboticTitle(title)) {
+    issues.push("robotic_title");
+    messages.push("robotic_title");
+    score -= 25;
+  }
+
+  const titleQuality = scoreRecipeTitle(title, {
+    mealFormat: fmt,
+    protein: ctx.protein || recipe.chosen_protein,
+    ingredients,
+    cuisine: recipe.tags?.cuisine,
+  });
+  if (!titleQuality.pass) {
+    if (!issues.includes("robotic_title")) {
+      issues.push("robotic_title");
+      messages.push(`title_quality:${titleQuality.score}`);
+    }
+    score -= Math.max(8, 100 - titleQuality.score);
+  }
+
   const banned = scanBannedCopy(combined);
   if (banned.length > 0) {
     issues.push("banned_copy");
@@ -163,6 +186,7 @@ export function runRecipeQualityGate(
     "format_taco_no_tortilla",
     "taco_with_rice",
     "title_ingredient_mismatch",
+    "robotic_title",
   ]);
 
   const blocking = issues.filter((i) => hardFail.has(i));
@@ -194,5 +218,5 @@ export function applyQualityTitleFix(recipe: GenerateResponse, mealFormat?: stri
     fixed.meal_style = "bowl";
   }
 
-  return fixed;
+  return repairRecipeTitle(fixed, mealFormat);
 }

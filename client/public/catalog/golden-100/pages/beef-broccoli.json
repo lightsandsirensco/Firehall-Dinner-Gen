@@ -1,0 +1,146 @@
+{
+  "slug": "beef-broccoli",
+  "title": "Quick Beef and Broccoli",
+  "subtitle": "Takeout vibes, hall timing",
+  "category": "quick_shift_meals",
+  "cuisine": "chinese",
+  "description": "Quick Beef and Broccoli is a chinese skillet built for a hungry firehall crew — Takeout vibes, hall timing. Hearty portions, station-kitchen timing, and flavors everyone recognizes after a long shift.",
+  "crewSize": 8,
+  "cookTime": 35,
+  "prepTime": 15,
+  "difficulty": "easy",
+  "calories": 600,
+  "protein": 40,
+  "carbs": 48,
+  "fats": 28,
+  "tags": [
+    "protein:beef",
+    "format:skillet",
+    "category:quick_shift_meals",
+    "quick",
+    "golden_100"
+  ],
+  "equipment": [
+    "Large cast iron skillet or Dutch oven",
+    "Large sheet trays",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "ingredients": [
+    {
+      "name": "Beef (main cut for recipe)",
+      "quantity": "3",
+      "unit": "lb"
+    },
+    {
+      "name": "Kosher salt",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "Black pepper",
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "Cooking oil",
+      "quantity": "0.3",
+      "unit": "cup"
+    },
+    {
+      "name": "Yellow onion",
+      "quantity": "2",
+      "unit": "large"
+    },
+    {
+      "name": "Garlic",
+      "quantity": "6",
+      "unit": "cloves"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Prep the line",
+      "instruction": "Set out all ingredients for Quick Beef and Broccoli before you turn on heat — firefighters eat on a schedule. Pat proteins dry and season aggressively with salt and pepper; dry surfaces brown instead of steam.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Build the base",
+      "instruction": "Heat oil in your largest skillet, Dutch oven, or on the flat-top over medium-high until it shimmers. Add aromatics (onion first) and cook until the edges turn golden and the smell sweetens — usually 4–6 minutes. If garlic is in the recipe, add it after the onion softens so it doesn't burn.",
+      "minutes": 8,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Cook the main",
+      "instruction": "Cook the primary protein or base for Quick Beef and Broccoli until it hits proper color and safe internal temperature. Don't crowd the pan — work in batches if needed so you get browning, not gray stew. Listen for a steady sizzle; if it's silent, the heat is too low.",
+      "minutes": 20,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Finish and season",
+      "instruction": "Bring components together, taste, and adjust salt. Sauce should coat, not pool. If cheese is involved, melt it just until glossy — another 1–2 minutes under a lid or broiler. Let heavy proteins rest 5 minutes before slicing.",
+      "minutes": 10,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Serve the hall",
+      "instruction": "Transfer to sheet trays or a serving line immediately. Keep backup warm at 200°F. Call the crew while it's hot — this meal is built for a hungry hall, not a photo shoot.",
+      "minutes": 5,
+      "heatLevel": "low"
+    }
+  ],
+  "proTips": [
+    "Prep all mise en place before the bell — this meal wins on organization, not speed hacks.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Taste for salt at the end — hall palates run salty after long shifts."
+  ],
+  "tonightSpread": [
+    "Plate Quick Beef and Broccoli with sides in separate pans so the crew can mix portions.",
+    "Line up Quick Beef and Broccoli on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+  ],
+  "leftovers": [
+    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
+    "Label trays with date and reheat to 165°F minimum before second shift."
+  ],
+  "nutrition": {
+    "calories": 600,
+    "protein": 40,
+    "carbs": 48,
+    "fats": 28,
+    "label": "per serving (hall portion)"
+  },
+  "heroImage": "/images/golden-100/beef-broccoli.jpg",
+  "mobileImage": "/images/mobile/beef-broccoli.jpg",
+  "thumbImage": "/images/thumbs/beef-broccoli.jpg",
+  "railImage": "/images/rails/beef-broccoli.jpg",
+  "realismScore": 100,
+  "firefighterScore": 100,
+  "popularityWeight": 3.2,
+  "searchTerms": [
+    "quick beef and broccoli",
+    "beef broccoli",
+    "chinese",
+    "beef",
+    "skillet",
+    "quick",
+    "beef broccoli stir fry dinner",
+    "golden_100"
+  ],
+  "relatedSlugs": [
+    "chili-mac",
+    "fast-philly-skillet",
+    "garlic-butter-shrimp",
+    "pad-thai",
+    "philly-cheesesteak-skillet",
+    "bulgogi-bowls"
+  ],
+  "generatedAt": "2026-05-27T15:03:06.183Z",
+  "contentVersion": 1
+}

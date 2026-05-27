@@ -1,0 +1,150 @@
+{
+  "slug": "mediterranean-chickpea",
+  "title": "Mediterranean Chickpea Bowls",
+  "subtitle": "Plant-forward without feeling light",
+  "category": "healthy_performance",
+  "cuisine": "mediterranean",
+  "description": "Mediterranean Chickpea Bowls is a mediterranean bowl built for a hungry firehall crew — Plant-forward without feeling light. Hearty portions, station-kitchen timing, and flavors everyone recognizes after a long shift.",
+  "crewSize": 8,
+  "cookTime": 55,
+  "prepTime": 20,
+  "difficulty": "medium",
+  "calories": 380,
+  "protein": 22,
+  "carbs": 50,
+  "fats": 16,
+  "tags": [
+    "protein:vegetarian",
+    "format:bowl",
+    "category:healthy_performance",
+    "healthy",
+    "bowl",
+    "golden_100"
+  ],
+  "equipment": [
+    "Large cast iron skillet or Dutch oven",
+    "Large sheet trays",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "ingredients": [
+    {
+      "name": "Primary protein or hearty veg base",
+      "quantity": "2",
+      "unit": "lb"
+    },
+    {
+      "name": "Kosher salt",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "Black pepper",
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "Cooking oil",
+      "quantity": "0.3",
+      "unit": "cup"
+    },
+    {
+      "name": "Cooked rice or grains",
+      "quantity": "4",
+      "unit": "cups"
+    },
+    {
+      "name": "Mixed vegetables",
+      "quantity": "4",
+      "unit": "cups"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Prep the line",
+      "instruction": "Set out all ingredients for Mediterranean Chickpea Bowls before you turn on heat — firefighters eat on a schedule. Pat proteins dry and season aggressively with salt and pepper; dry surfaces brown instead of steam.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Build the base",
+      "instruction": "Heat oil in your largest skillet, Dutch oven, or on the flat-top over medium-high until it shimmers. Add aromatics (onion first) and cook until the edges turn golden and the smell sweetens — usually 4–6 minutes. If garlic is in the recipe, add it after the onion softens so it doesn't burn.",
+      "minutes": 8,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Cook the main",
+      "instruction": "Cook the primary protein or base for Mediterranean Chickpea Bowls until it hits proper color and safe internal temperature. Don't crowd the pan — work in batches if needed so you get browning, not gray stew. Listen for a steady sizzle; if it's silent, the heat is too low.",
+      "minutes": 20,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Finish and season",
+      "instruction": "Bring components together, taste, and adjust salt. Sauce should coat, not pool. If cheese is involved, melt it just until glossy — another 1–2 minutes under a lid or broiler. Let heavy proteins rest 5 minutes before slicing.",
+      "minutes": 10,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Serve the hall",
+      "instruction": "Transfer to sheet trays or a serving line immediately. Keep backup warm at 200°F. Call the crew while it's hot — this meal is built for a hungry hall, not a photo shoot.",
+      "minutes": 5,
+      "heatLevel": "low"
+    }
+  ],
+  "proTips": [
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Taste for salt at the end — hall palates run salty after long shifts."
+  ],
+  "tonightSpread": [
+    "Build bowls base → grain → protein → toppings so the line moves in one direction.",
+    "Put hot components closest to the crew, cold crunch at the far end.",
+    "Portion bowls on the line with protein visible on top — crew eats with their eyes first.",
+    "Keep dressing and crunchy toppings in side bowls so greens stay crisp through second servings.",
+    "Line up Mediterranean Chickpea Bowls on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+  ],
+  "leftovers": [
+    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
+    "Label trays with date and reheat to 165°F minimum before second shift."
+  ],
+  "nutrition": {
+    "calories": 380,
+    "protein": 22,
+    "carbs": 50,
+    "fats": 16,
+    "label": "per serving (hall portion)"
+  },
+  "heroImage": "/images/golden-100/mediterranean-chickpea.jpg",
+  "mobileImage": "/images/mobile/mediterranean-chickpea.jpg",
+  "thumbImage": "/images/thumbs/mediterranean-chickpea.jpg",
+  "railImage": "/images/rails/mediterranean-chickpea.jpg",
+  "realismScore": 100,
+  "firefighterScore": 100,
+  "popularityWeight": 2.9,
+  "searchTerms": [
+    "mediterranean chickpea bowls",
+    "mediterranean chickpea",
+    "mediterranean",
+    "vegetarian",
+    "bowl",
+    "healthy",
+    "mediterranean chickpea bowl dinner",
+    "golden_100"
+  ],
+  "relatedSlugs": [
+    "ginger-salmon-bowls",
+    "greek-chicken-bowls",
+    "performance-burrito-bowls",
+    "lemon-herb-salmon",
+    "french-toast-casserole",
+    "mac-and-cheese-bake"
+  ],
+  "sourceName": "Bon Appétit",
+  "generatedAt": "2026-05-27T15:03:06.177Z",
+  "contentVersion": 1
+}

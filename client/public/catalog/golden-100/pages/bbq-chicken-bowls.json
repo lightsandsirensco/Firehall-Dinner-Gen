@@ -1,0 +1,150 @@
+{
+  "slug": "bbq-chicken-bowls",
+  "title": "BBQ Chicken Bowls",
+  "subtitle": "Built bowls, big flavor, one line",
+  "category": "firehall_classics",
+  "cuisine": "american",
+  "description": "Sweet smoke, rice base, everyone eats happy.",
+  "crewSize": 8,
+  "cookTime": 50,
+  "prepTime": 20,
+  "difficulty": "medium",
+  "calories": 560,
+  "protein": 38,
+  "carbs": 52,
+  "fats": 18,
+  "tags": [
+    "protein:chicken",
+    "format:bowl",
+    "category:firehall_classics",
+    "trending",
+    "bowl",
+    "golden_100"
+  ],
+  "equipment": [
+    "Large cast iron skillet or Dutch oven",
+    "Large sheet trays",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "ingredients": [
+    {
+      "name": "Chicken thighs",
+      "quantity": "8",
+      "unit": "lb",
+      "notes": "8 lb Chicken thighs"
+    },
+    {
+      "name": "BBQ sauce",
+      "quantity": "3",
+      "unit": "cups",
+      "notes": "3 cups BBQ sauce"
+    },
+    {
+      "name": "Jasmine rice",
+      "quantity": "3",
+      "unit": "cups",
+      "notes": "3 cups Jasmine rice"
+    },
+    {
+      "name": "Corn kernels",
+      "quantity": "4",
+      "unit": "cups",
+      "notes": "4 cups Corn kernels"
+    },
+    {
+      "name": "Coleslaw mix",
+      "quantity": "2",
+      "unit": "bags",
+      "notes": "2 bags Coleslaw mix"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Step 1",
+      "instruction": "Cook rice (simmer, 18 min): Fluffy rice in the steamer or pot; hold warm.",
+      "minutes": 18,
+      "heatLevel": "medium-low"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Step 2",
+      "instruction": "Grill BBQ chicken (medium-high, 18 min): Grill thighs, glaze with sauce last 5 min; 165°F internal.",
+      "minutes": 18,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Step 3",
+      "instruction": "Warm corn (medium, 6 min): Butter-season corn; hold on the line.",
+      "minutes": 6,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Step 4",
+      "instruction": "Toss slaw (no heat, 5 min): Dress coleslaw; keep cold. Watch color and texture — if it smells sharp or looks pale, give it another minute before moving on.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Step 5",
+      "instruction": "Run bowl line (serve): Rice, chicken, corn, slaw — crew builds bowls.",
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Glaze sauce at the end so it doesn't burn on the grill.",
+    "Keep slaw on ice under the counter.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Taste for salt at the end — hall palates run salty after long shifts.",
+    "Pull chicken at 160°F and let carryover hit 165°F — dry breast ruins crew morale."
+  ],
+  "tonightSpread": [
+    "Build bowls base → grain → protein → toppings so the line moves in one direction.",
+    "Put hot components closest to the crew, cold crunch at the far end.",
+    "Line up BBQ Chicken Bowls on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+  ],
+  "leftovers": [
+    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
+    "Label trays with date and reheat to 165°F minimum before second shift."
+  ],
+  "nutrition": {
+    "calories": 560,
+    "protein": 38,
+    "carbs": 52,
+    "fats": 18,
+    "label": "per serving (hall portion)"
+  },
+  "heroImage": "/images/golden-100/bbq-chicken-bowls.jpg",
+  "mobileImage": "/images/mobile/bbq-chicken-bowls.jpg",
+  "thumbImage": "/images/thumbs/bbq-chicken-bowls.jpg",
+  "railImage": "/images/rails/bbq-chicken-bowls.jpg",
+  "realismScore": 100,
+  "firefighterScore": 100,
+  "popularityWeight": 3.6,
+  "searchTerms": [
+    "bbq chicken bowls",
+    "american",
+    "chicken",
+    "bowl",
+    "trending",
+    "golden_100"
+  ],
+  "relatedSlugs": [
+    "chicken-caesar",
+    "chicken-dumpling-soup",
+    "chicken-pot-pie",
+    "chicken-parm",
+    "crispy-chicken-cutlets",
+    "jerk-chicken"
+  ],
+  "sourceName": "Firehall Classics",
+  "sourceUrl": "",
+  "classicSlug": "bbq-chicken-bowls",
+  "generatedAt": "2026-05-27T15:03:06.122Z",
+  "contentVersion": 1
+}

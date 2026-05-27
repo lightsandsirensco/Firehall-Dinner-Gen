@@ -1,4 +1,3 @@
-import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
@@ -57,6 +56,7 @@ import {
 } from "@/lib/meal-outcome-copy";
 import { forwardRef, memo, useState, type ComponentPropsWithoutRef } from "react";
 import { cn } from "@/lib/utils";
+import { FilterChipScroller } from "@/components/mobile/filter-chips";
 
 export type { TonightVibe };
 
@@ -114,31 +114,42 @@ function ChipRow<T extends string | number>({
   onChange,
   testIdPrefix,
   layout = "wrap",
+  scrollHorizontal = false,
 }: {
   options: readonly { value: T; label: string }[];
   value: T;
   onChange: (val: T) => void;
   testIdPrefix: string;
   layout?: "wrap" | "grid";
+  scrollHorizontal?: boolean;
 }) {
+  const chips = options.map((opt) => {
+    const isActive = value === opt.value;
+    return (
+      <Badge
+        key={String(opt.value)}
+        variant={isActive ? "default" : "outline"}
+        className={cn(
+          "cursor-pointer select-none text-sm font-medium px-3.5 py-2.5 min-h-11 toggle-elevate transition-colors touch-manipulation snap-start shrink-0",
+          layout === "grid" && !scrollHorizontal ? "w-full justify-center" : "",
+          scrollHorizontal && "rounded-full",
+          isActive ? "toggle-elevated bg-primary text-primary-foreground ring-2 ring-primary/30" : "",
+        )}
+        onClick={() => onChange(opt.value)}
+        data-testid={`${testIdPrefix}-${opt.value}`}
+      >
+        {opt.label}
+      </Badge>
+    );
+  });
+
+  if (scrollHorizontal) {
+    return <FilterChipScroller>{chips}</FilterChipScroller>;
+  }
+
   return (
     <div className={layout === "grid" ? "grid grid-cols-4 gap-2" : "flex flex-wrap gap-2"}>
-      {options.map((opt) => {
-        const isActive = value === opt.value;
-        return (
-          <Badge
-            key={String(opt.value)}
-            variant={isActive ? "default" : "outline"}
-            className={`cursor-pointer select-none text-sm font-medium px-3 py-2.5 min-h-11 toggle-elevate transition-colors ${
-              layout === "grid" ? "w-full justify-center" : ""
-            } ${isActive ? "toggle-elevated bg-primary text-primary-foreground ring-2 ring-primary/30" : ""}`}
-            onClick={() => onChange(opt.value)}
-            data-testid={`${testIdPrefix}-${opt.value}`}
-          >
-            {opt.label}
-          </Badge>
-        );
-      })}
+      {chips}
     </div>
   );
 }
@@ -447,6 +458,7 @@ function GenerateButtons({
   onForward,
   onScrollToFilters,
   className,
+  compact = false,
 }: {
   filters: FilterState;
   hasRecipe: boolean;
@@ -459,6 +471,7 @@ function GenerateButtons({
   onForward?: () => void;
   onScrollToFilters?: () => void;
   className?: string;
+  compact?: boolean;
 }) {
   const disabled =
     isLoading ||
@@ -467,12 +480,12 @@ function GenerateButtons({
   const outcomeLine = formatDinnerOutcomeLine(filters, true);
 
   return (
-    <div className={`flex flex-col gap-2.5 ${className ?? ""}`}>
+    <div className={cn("flex flex-col gap-2.5", className)}>
       {!hasRecipe ? (
         <>
           <Button
             size="lg"
-            className="btn-generate w-full font-heading text-lg tracking-wider min-h-12 active:scale-[0.98] transition-transform"
+            className="btn-generate w-full font-heading text-base sm:text-lg tracking-wide min-h-[3.25rem] active:scale-[0.98] transition-transform rounded-xl"
             onClick={onGenerate}
             disabled={disabled}
             data-testid="button-generate"
@@ -484,14 +497,17 @@ function GenerateButtons({
             )}
             {isLoading ? INITIAL_MEAL_LOADING : ONE_TAP_MEAL_LABEL}
           </Button>
-          <p className="text-center text-xs text-muted-foreground leading-snug">{outcomeLine}</p>
-          <p className="text-center text-[10px] text-muted-foreground/70">{formatTonightAtHallLine()}</p>
+          {!compact && (
+            <p className="text-center text-xs text-muted-foreground leading-snug">{outcomeLine}</p>
+          )}
         </>
       ) : (
         <>
-          <p className="text-center text-[10px] font-medium uppercase tracking-[0.2em] text-primary/80">
-            {formatTonightAtHallLine()}
-          </p>
+          {!compact && (
+            <p className="text-center text-xs font-medium text-primary/80">
+              {formatTonightAtHallLine()}
+            </p>
+          )}
           <Button
             size="lg"
             className="btn-generate w-full font-heading text-lg tracking-wider min-h-[3.25rem] sm:min-h-12 active:scale-[0.98] transition-transform shadow-md shadow-primary/10"
@@ -506,9 +522,11 @@ function GenerateButtons({
             )}
             {isLoading ? DIFFERENT_MEAL_LOADING : DIFFERENT_MEAL_LABEL}
           </Button>
-          <p className="text-center text-xs text-muted-foreground leading-snug px-1">
-            {formatDifferentMealSubcopy(filters)}
-          </p>
+          {!compact && (
+            <p className="text-center text-xs text-muted-foreground leading-snug px-1">
+              {formatDifferentMealSubcopy(filters)}
+            </p>
+          )}
           {(canGoBack || canGoForward) && (
             <div className="flex gap-2">
               <Button
@@ -587,44 +605,28 @@ export const FilterPanel = memo(function FilterPanel({
   );
 
   return (
-    <div className="space-y-4" id="filters-panel">
-      <Card className="premium-card">
-        <CardContent className="p-4 sm:p-5 space-y-4">
-          <div>
+    <div className="space-y-3 lg:space-y-4" id="filters-panel">
+      <div className="lg:premium-card lg:rounded-xl lg:border lg:border-border/30 lg:bg-card/40 lg:backdrop-blur-sm">
+        <div className="p-0 sm:p-0 lg:p-5 space-y-3.5 lg:space-y-4">
+          <div className="hidden lg:block">
             <h2 className="font-heading text-xl tracking-wide text-foreground">Pick tonight&apos;s dinner</h2>
             <p className="text-xs text-muted-foreground mt-1">
               {hasRecipe ? "Three taps · full crew meal." : "Defaults set — one tap or fine-tune below."}
             </p>
           </div>
+          <p className="lg:hidden text-[11px] font-medium text-muted-foreground">Quick picks</p>
 
-          {!hasRecipe && (
-            <Button
-              size="lg"
-              className="btn-generate w-full font-heading text-lg tracking-wider min-h-[3.25rem] lg:hidden shadow-md shadow-primary/10 active:scale-[0.98] transition-transform"
-              onClick={onGenerate}
-              disabled={
-                isLoading ||
-                filters.appliances.length === 0 ||
-                (filters.use_what_we_have && filters.ingredients_on_hand_text.trim().length === 0)
-              }
-              data-testid="button-one-tap-generate-mobile"
-            >
-              {isLoading ? (
-                <RefreshCw className="w-5 h-5 mr-2 animate-spin" />
-              ) : (
-                <Flame className="w-5 h-5 mr-2" />
-              )}
-              {isLoading ? INITIAL_MEAL_LOADING : ONE_TAP_MEAL_LABEL}
-            </Button>
-          )}
-
-          <div className="space-y-2">
+          <div className="space-y-1.5 lg:space-y-2">
             <FieldLabel icon={Users}>
-              {!hasRecipe && <span className="text-muted-foreground/70 font-normal">Optional · </span>}
-              Crew size
+              <span className="lg:hidden sr-only">Crew size</span>
+              <span className="hidden lg:inline">
+                {!hasRecipe && <span className="text-muted-foreground/70 font-normal">Optional · </span>}
+                Crew size
+              </span>
             </FieldLabel>
             <ChipRow
-              layout="grid"
+              layout={isMobile ? "wrap" : "grid"}
+              scrollHorizontal={isMobile}
               options={CREW_CHIPS}
               value={
                 CREW_CHIPS.some((c) => c.value === filters.crew_size)
@@ -636,12 +638,15 @@ export const FilterPanel = memo(function FilterPanel({
             />
           </div>
 
-          <div className="space-y-2">
+          <div className="space-y-1.5 lg:space-y-2">
             <FieldLabel icon={Clock}>
-              {!hasRecipe && <span className="text-muted-foreground/70 font-normal">Optional · </span>}
-              Time available
+              <span className="hidden lg:inline">
+                {!hasRecipe && <span className="text-muted-foreground/70 font-normal">Optional · </span>}
+                Time available
+              </span>
             </FieldLabel>
             <ChipRow
+              scrollHorizontal={isMobile}
               options={TIME_CHIPS}
               value={
                 TIME_CHIPS.some((t) => t.value === filters.time_available)
@@ -654,12 +659,15 @@ export const FilterPanel = memo(function FilterPanel({
           </div>
 
           {!filters.use_what_we_have && (
-            <div className="space-y-2">
+            <div className="space-y-1.5 lg:space-y-2">
               <FieldLabel icon={Dumbbell}>
-                {!hasRecipe && <span className="text-muted-foreground/70 font-normal">Optional · </span>}
-                Protein
+                <span className="hidden lg:inline">
+                  {!hasRecipe && <span className="text-muted-foreground/70 font-normal">Optional · </span>}
+                  Protein
+                </span>
               </FieldLabel>
               <ChipRow
+                scrollHorizontal={isMobile}
                 options={PROTEIN_CHIPS}
                 value={
                   PROTEIN_CHIPS.some((p) => p.value === filters.protein)
@@ -677,9 +685,13 @@ export const FilterPanel = memo(function FilterPanel({
               <SheetTrigger asChild>
                 <MoreOptionsTrigger customized={customized} open={moreOptionsOpen} />
               </SheetTrigger>
-              <SheetContent side="bottom" className="max-h-[90dvh] overflow-y-auto rounded-t-2xl pb-safe">
+              <SheetContent
+                side="bottom"
+                className="max-h-[90dvh] overflow-y-auto rounded-t-[1.25rem] pb-safe border-t border-border/50 bg-background/98 backdrop-blur-xl scroll-momentum"
+              >
                 <SheetHeader className="text-left pb-2">
-                  <SheetTitle className="font-heading text-lg tracking-wide">More options</SheetTitle>
+                  <div className="mx-auto mb-3 h-1 w-10 rounded-full bg-muted-foreground/30 lg:hidden" aria-hidden />
+                  <SheetTitle className="font-heading text-lg tracking-tight">Fine-tune dinner</SheetTitle>
                 </SheetHeader>
                 {advancedSections}
               </SheetContent>
@@ -692,8 +704,8 @@ export const FilterPanel = memo(function FilterPanel({
               <CollapsibleContent className="pt-4">{advancedSections}</CollapsibleContent>
             </Collapsible>
           )}
-        </CardContent>
-      </Card>
+        </div>
+      </div>
 
       <GenerateButtons
         className="hidden lg:flex"

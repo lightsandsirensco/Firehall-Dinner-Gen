@@ -1,0 +1,288 @@
+{
+  "slug": "chili-garlic-bread",
+  "title": "Firehall Chili",
+  "subtitle": "Post-call comfort in a deep bowl",
+  "category": "firehall_classics",
+  "cuisine": "american",
+  "description": "Crew Favorite · Best for Cold Nights · Medium spice · Feeds 8+ firefighters",
+  "crewSize": 8,
+  "cookTime": 75,
+  "prepTime": 25,
+  "difficulty": "medium",
+  "calories": 580,
+  "protein": 36,
+  "carbs": 48,
+  "fats": 26,
+  "tags": [
+    "protein:beef",
+    "format:soup_chili",
+    "category:firehall_classics",
+    "trending",
+    "hearty",
+    "golden_100"
+  ],
+  "equipment": [
+    "8-quart stock pot",
+    "Large sheet trays",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "ingredients": [
+    {
+      "name": "Ground beef (80/20)",
+      "quantity": "4",
+      "unit": "lb",
+      "notes": "4 lb Ground beef (80/20)"
+    },
+    {
+      "name": "Yellow onions",
+      "quantity": "3",
+      "unit": "large",
+      "notes": "3 large Yellow onions"
+    },
+    {
+      "name": "Bell peppers (mixed)",
+      "quantity": "3",
+      "notes": "3 Bell peppers (mixed)"
+    },
+    {
+      "name": "Garlic cloves",
+      "quantity": "8",
+      "notes": "8 Garlic cloves"
+    },
+    {
+      "name": "Fire-roasted diced tomatoes",
+      "quantity": "3",
+      "unit": "cans (14 oz)",
+      "notes": "3 cans (14 oz) Fire-roasted diced tomatoes"
+    },
+    {
+      "name": "Crushed fire-roasted tomatoes",
+      "quantity": "2",
+      "unit": "cans (28 oz)",
+      "notes": "2 cans (28 oz) Crushed fire-roasted tomatoes"
+    },
+    {
+      "name": "Tomato paste",
+      "quantity": "3",
+      "unit": "tbsp",
+      "notes": "3 tbsp Tomato paste"
+    },
+    {
+      "name": "Beef broth",
+      "quantity": "4",
+      "unit": "cups",
+      "notes": "4 cups Beef broth"
+    },
+    {
+      "name": "Kidney beans",
+      "quantity": "3",
+      "unit": "cans",
+      "notes": "3 cans Kidney beans"
+    },
+    {
+      "name": "Chili powder",
+      "quantity": "3",
+      "unit": "tbsp",
+      "notes": "3 tbsp Chili powder"
+    },
+    {
+      "name": "Smoked paprika",
+      "quantity": "2",
+      "unit": "tbsp",
+      "notes": "2 tbsp Smoked paprika"
+    },
+    {
+      "name": "Ground cumin",
+      "quantity": "2",
+      "unit": "tsp",
+      "notes": "2 tsp Ground cumin"
+    },
+    {
+      "name": "Dried oregano",
+      "quantity": "1",
+      "unit": "tsp",
+      "notes": "1 tsp Dried oregano"
+    },
+    {
+      "name": "Chipotle in adobo",
+      "quantity": "2",
+      "unit": "tbsp sauce",
+      "notes": "2 tbsp sauce Chipotle in adobo"
+    },
+    {
+      "name": "Brown sugar",
+      "quantity": "1",
+      "unit": "tbsp",
+      "notes": "1 tbsp Brown sugar"
+    },
+    {
+      "name": "Worcestershire sauce",
+      "quantity": "2",
+      "unit": "tbsp",
+      "notes": "2 tbsp Worcestershire sauce"
+    },
+    {
+      "name": "Italian bread or baguettes",
+      "quantity": "4",
+      "unit": "loaves",
+      "notes": "4 loaves Italian bread or baguettes"
+    },
+    {
+      "name": "Unsalted butter (softened)",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "1 cup Unsalted butter (softened)"
+    },
+    {
+      "name": "Shredded sharp cheddar",
+      "quantity": "12",
+      "unit": "oz",
+      "notes": "12 oz Shredded sharp cheddar"
+    },
+    {
+      "name": "Shredded mozzarella",
+      "quantity": "12",
+      "unit": "oz",
+      "notes": "12 oz Shredded mozzarella"
+    },
+    {
+      "name": "Fresh jalapeños",
+      "quantity": "4",
+      "notes": "4 Fresh jalapeños"
+    },
+    {
+      "name": "Sour cream",
+      "quantity": "2",
+      "unit": "cups",
+      "notes": "2 cups Sour cream"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Step 1",
+      "instruction": "Prep the station (no heat, 15 min): Dice onions into ¼-inch pieces (you want even pieces so they caramelize together). Dice bell peppers. Mince garlic. Drain and rinse beans. Open all tomatoes. Line two sheet pans with parchment for garlic bread. Set out a large Dutch oven or stock pot — chili needs room to reduce without splashing.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Step 2",
+      "instruction": "Caramelize the onions (medium, 12–15 min): Heat 2 tbsp oil in the pot over medium. Add onions with a pinch of salt and cook, stirring every 2–3 minutes, until edges turn golden and the centers are soft and sweet — not raw, not burnt. They should look like wet golden ribbons and smell sweet. Push onions to the side; you'll brown beef in the same pot.",
+      "minutes": 14,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Step 3",
+      "instruction": "Brown the beef hard (medium-high, 10 min): Raise heat to medium-high. Add beef in two batches so the pan sears instead of steams. Break into crumbles; cook until deeply browned with no pink (160°F). Drain excess grease if the pot looks oily — leave about 1 tbsp fat for flavor. Stir browned beef back with onions.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Step 4",
+      "instruction": "Bloom spices & build the base (medium, 5 min): Add garlic, chili powder, smoked paprika, and cumin; stir 45 seconds until the kitchen smells smoky (don't let garlic burn). Stir in tomato paste and brown sugar; cook 1 minute until the paste darkens slightly. Add Worcestershire and chipotle adobo — taste later for heat.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Step 5",
+      "instruction": "Simmer the chili (low, 35–40 min): Pour in fire-roasted diced tomatoes, crushed tomatoes, and beef broth. Add beans. Bring to a gentle bubble, then lower to a steady simmer — small bubbles breaking the surface, not a rolling boil. Cook uncovered 30 minutes, stirring every 10 minutes. Chili is ready when it coats the back of a spoon and a drag through the pot leaves a clear trail (like thick stew, not soup). If it's still thin, simmer 10 more minutes. Season with salt, pepper, and a splash of broth if too thick.",
+      "minutes": 38,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Step 6",
+      "instruction": "Make garlic butter & prep bread (no heat, 5 min): Mix softened butter with 3 minced garlic cloves, pinch of salt, and ½ tsp dried oregano. Halve loaves lengthwise. Spread cut sides generously — edge to edge. Combine cheddar and mozzarella in a bowl.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Step 7",
+      "instruction": "Toast cheesy garlic bread (425°F, 10–12 min): Preheat oven to 425°F while chili simmers. Lay bread cut-side up on sheet pans. Pile cheese evenly on buttered surfaces. Bake on the middle rack until cheese is fully melted with light golden spots and bread edges are crisp — about 10–12 minutes. Rotate pans halfway. Bread is done when you press the center and it springs back with melted cheese, not pale or raw dough.",
+      "minutes": 11,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Step 8",
+      "instruction": "Optional jalapeño finish (low, 3 min): For medium spice, stir sliced jalapeños into the chili for the last 3 minutes of simmer. For mild, keep jalapeños on the topping bar only. Skim any extra fat from the chili surface if needed.",
+      "minutes": 3,
+      "heatLevel": "medium-low"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Step 9",
+      "instruction": "Topping bar & serve (no heat, 5 min): Set sour cream, extra cheese, diced onion, cilantro, and jalapeños on the counter. Slice garlic bread into thick sticks. Ladle chili into bowls — deep fill, not skimpy. Serve bread hot on platters. Tell the crew to add toppings at the table so bread stays crisp.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Step 10",
+      "instruction": "Leftovers & storage (cool, 10 min): Chili keeps 4 days refrigerated in shallow containers — reheat on the stove with a splash of broth. Freeze portions up to 3 months; thaw overnight. Garlic bread is best fresh; day-old bread can be rebaked 5 min at 400°F. Never store bread sealed with hot chili or it steams soggy.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "If chili tastes flat, add ½ tsp more smoked paprika and a pinch of salt — not more sugar.",
+    "Hold garlic bread under loose foil on the counter; cut open only when the line forms.",
+    "Scale beef + tomatoes 1.25× for 10+ crew; keep spice levels the same first, adjust heat on the bar.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Taste for salt at the end — hall palates run salty after long shifts."
+  ],
+  "tonightSpread": [
+    "Keep the pot on low simmer on the stove — ladle from the side so the bottom doesn't scorch.",
+    "Set shredded cheese, crackers, and hot sauce in a row beside the pot.",
+    "Line up Firehall Chili on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+  ],
+  "leftovers": [
+    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
+    "Label trays with date and reheat to 165°F minimum before second shift.",
+    "Add a splash of stock or water when reheating — thick sauces tighten in the fridge."
+  ],
+  "nutrition": {
+    "calories": 580,
+    "protein": 36,
+    "carbs": 48,
+    "fats": 26,
+    "label": "per serving (hall portion)"
+  },
+  "heroImage": "/images/golden-100/chili-garlic-bread.jpg",
+  "mobileImage": "/images/mobile/chili-garlic-bread.jpg",
+  "thumbImage": "/images/thumbs/chili-garlic-bread.jpg",
+  "railImage": "/images/rails/chili-garlic-bread.jpg",
+  "realismScore": 100,
+  "firefighterScore": 100,
+  "popularityWeight": 3.6,
+  "searchTerms": [
+    "firehall chili",
+    "chili garlic bread",
+    "american",
+    "beef",
+    "soup chili",
+    "trending",
+    "hearty",
+    "golden_100"
+  ],
+  "relatedSlugs": [
+    "beef-barley-soup",
+    "beef-dip",
+    "smash-burgers",
+    "steak-sandwiches",
+    "big-chili",
+    "sunday-chili-batch"
+  ],
+  "sourceName": "Firehall Classics",
+  "sourceUrl": "",
+  "classicSlug": "chili-garlic-bread",
+  "generatedAt": "2026-05-27T15:03:06.112Z",
+  "contentVersion": 1
+}

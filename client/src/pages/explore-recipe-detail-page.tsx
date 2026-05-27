@@ -37,6 +37,8 @@ import {
 import { ExploreRecipeImage } from "@/components/explore-recipe-image";
 import { HERO_CONTENT_FADE } from "@/lib/hero-image";
 import { cn } from "@/lib/utils";
+import { app } from "@/lib/design-tokens";
+import { FoodImageSkeleton } from "@/components/mobile/loading-skeletons";
 import type { ClientRecipeResponse, ClientIngredient } from "@shared/schema";
 
 const DEFAULT_CREW_SIZE = 6;
@@ -235,9 +237,9 @@ export function ExploreRecipeDetailPage({ registryRef }: ExploreRecipeDetailPage
       detailPreview,
     );
     return (
-      <div className="min-h-screen min-h-[100dvh] bg-background overflow-x-hidden">
+      <div className={app.page}>
         <SiteHeader activePage="explore" favCount={favCount} />
-        <main className="max-w-[900px] mx-auto pb-safe-cta sm:pb-8">
+        <main className={cn(app.mainDetail, "pb-safe-cta sm:pb-8")}>
           <RecipeDetailView
             recipe={displayDetail}
             crewSize={DEFAULT_CREW_SIZE}
@@ -258,7 +260,7 @@ export function ExploreRecipeDetailPage({ registryRef }: ExploreRecipeDetailPage
             {detailPreview ? (
               <ExploreRecipeImage recipe={detailPreview} variant="detail" priority />
             ) : (
-              <div className="w-full aspect-[5/4] max-h-[min(48vh,440px)] sm:aspect-[16/9] skeleton-shimmer" />
+              <FoodImageSkeleton layout="detail" />
             )}
             <Button
               variant="secondary"
@@ -390,10 +392,9 @@ function RecipeDetailView({
   const cookMin = Math.max(10, recipe.readyInMinutes - prepMin);
 
   return (
-    <div className="fade-up" data-testid="explore-recipe-detail">
-      {/* Full-bleed hero */}
-      <div className="relative sm:rounded-2xl sm:overflow-hidden sm:ring-1 sm:ring-border/40 sm:shadow-xl sm:shadow-black/20 sm:mt-4 sm:mx-4 md:mx-6">
-        <ExploreRecipeImage recipe={heroRecipe} variant="detail" priority />
+    <div className={cn("fade-up", app.mealReveal)} data-testid="explore-recipe-detail">
+      <div className="relative sm:rounded-2xl sm:overflow-hidden sm:ring-1 sm:ring-border/40 sm:shadow-xl sm:shadow-black/20 sm:mt-3 sm:mx-0">
+        <ExploreRecipeImage recipe={heroRecipe} variant="detail" priority bleed />
         <div
           className={cn(
             "pointer-events-none absolute inset-0 z-[4]",
@@ -409,14 +410,14 @@ function RecipeDetailView({
           data-testid="button-back-to-results"
         >
           <ChevronLeft className="w-4 h-4" />
-          <span className="text-xs font-semibold uppercase tracking-wider">Explore</span>
+          <span className="text-xs font-semibold">Explore</span>
         </Button>
       </div>
 
       <div className="px-4 sm:px-6 pt-5 sm:pt-6 space-y-6">
         <div>
           <h1
-            className="font-heading text-[1.75rem] sm:text-3xl tracking-wide text-foreground leading-[1.1] mb-3"
+            className={cn(app.titleMeal, "mb-3")}
             data-testid="text-detail-title"
           >
             {recipe.title}

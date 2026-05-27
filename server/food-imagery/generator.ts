@@ -2,6 +2,11 @@ import { createHash } from "node:crypto";
 import { createOpenAIClient } from "../openai-client.js";
 import { log } from "../logger.js";
 import { getFoodImageryConfig } from "./config.js";
+import {
+  GPT_IMAGE_SIZE_SQUARE,
+  normalizeGptImageSize,
+  type GptImageApiSize,
+} from "../lib/image-sizes.js";
 
 export function hashPrompt(prompt: string): string {
   return createHash("sha256").update(prompt).digest("hex").slice(0, 24);
@@ -9,11 +14,11 @@ export function hashPrompt(prompt: string): string {
 
 export async function generateFoodImageBuffer(
   prompt: string,
-  size?: "1024x1024" | "512x512",
+  size?: GptImageApiSize,
 ): Promise<Buffer> {
   const cfg = getFoodImageryConfig();
   const client = createOpenAIClient();
-  const outputSize = size ?? cfg.size;
+  const outputSize = normalizeGptImageSize(size ?? cfg.size, GPT_IMAGE_SIZE_SQUARE);
 
   let response;
   try {

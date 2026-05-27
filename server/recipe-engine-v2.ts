@@ -31,6 +31,7 @@ import { validateV2Candidate } from "./v2-validator";
 import { shouldTryNextCandidate } from "./meal-composition";
 import { applyCrewPortionFloors, hallCleanupTip, hallProTips } from "./firehall-voice";
 import { isWeakTitle, resolvePolishTitle } from "./meal-plate";
+import { normalizeIngredientsUsed } from "../shared/generation-reliability.js";
 import { polishRecipeCopy } from "./recipe-polish";
 import { normalizeRecipeTags } from "@shared/recipe-tags.js";
 import { getRecentSpoonacularIds, addRecentSpoonacularId } from "./cache-store";
@@ -470,31 +471,50 @@ export async function runV2Generate(
     const spoonacularTitle = detail.title;
     const keyIngredients = (recipe.ingredients || []).slice(0, 12).map((ing) => ing.item);
 
-    const polish = await polishRecipeCopy(
-      detail.id,
-      spoonacularTitle,
-      chosenProtein,
-      cuisine,
-      recipe.timing?.total_minutes ?? 0,
-      request.crew_size,
-      keyIngredients,
-      recipe.steps ?? [],
-      request.healthiness_preference || "balanced",
-    );
+    const largeCrew = (request.crew_size ?? 4) >= 10;
+    let polishedTitle = spoonacularTitle;
+    let polishedWhy = recipe.why_it_fits_tonight || "";
 
-    const finalRecipe: GenerateResponse = {
+    if (!largeCrew) {
+      const polish = await polishRecipeCopy(
+        detail.id,
+        spoonacularTitle,
+        chosenProtein,
+        cuisine,
+        recipe.timing?.total_minutes ?? 0,
+        request.crew_size,
+        keyIngredients,
+        recipe.steps ?? [],
+        request.healthiness_preference || "balanced",
+      );
+      polishedTitle = resolvePolishTitle(polish.title, recipe.title, spoonacularTitle);
+      polishedWhy = polish.why_it_fits_tonight;
+    }
+
+    let finalRecipe: GenerateResponse = normalizeIngredientsUsed({
       ...recipe,
-      title: resolvePolishTitle(polish.title, recipe.title, spoonacularTitle),
-      why_it_fits_tonight: polish.why_it_fits_tonight,
+      title: polishedTitle,
+      why_it_fits_tonight: polishedWhy,
       steps: recipe.steps,
       ingredients: applyCrewPortionFloors(recipe.ingredients || [], request.crew_size),
       cleanup_tip: hallCleanupTip(),
       pro_tips: hallProTips(request.crew_size, detail.servings || 4),
       tags: normalizeRecipeTags(recipe.tags, { cuisine }),
-    };
+    });
 
     if (isWeakTitle(finalRecipe.title)) {
       finalRecipe.title = spoonacularTitle;
+    }
+
+    const { isRoboticTitle, suggestHumanMealTitle } = await import("../shared/generation-reliability.js");
+    if (isRoboticTitle(finalRecipe.title)) {
+      finalRecipe.title = suggestHumanMealTitle({
+        protein: chosenProtein,
+        mealFormat: validationFormat,
+        fallbackTitle: spoonacularTitle,
+        ingredients: finalRecipe.ingredients,
+        cuisine,
+      });
     }
 
     const { runRecipeQualityGate, applyQualityTitleFix } = await import(
@@ -517,7 +537,14 @@ export async function runV2Generate(
         crewSize: request.crew_size,
         importedSource: true,
       });
-      if (!q.pass && q.issues.some((i) => i === "taco_with_rice" || i === "title_taco_no_tortilla")) {
+      if (
+        !q.pass &&
+        q.issues.some((i) =>
+          i === "taco_with_rice" ||
+          i === "title_taco_no_tortilla" ||
+          i === "robotic_title",
+        )
+      ) {
         failures.push({
           id: detail.id,
           title: detail.title,

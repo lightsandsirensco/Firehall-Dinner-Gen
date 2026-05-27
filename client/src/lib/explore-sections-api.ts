@@ -9,11 +9,17 @@ export interface ExploreFeedMeta {
     string,
     { curated: number; spoonacular: number; catalog: number; seed: number }
   >;
+  /** Stage 4 recommendation engine */
+  engineVersion?: number;
+  daySeed?: number;
+  contextHints?: string[];
+  railsBuilt?: number;
 }
 
 export interface ExploreSectionsResponse {
   sections: ExploreEditorialSection[];
   _editorial?: boolean;
+  _recommendation?: boolean;
   _meta?: ExploreFeedMeta;
 }
 
@@ -22,6 +28,9 @@ export interface ExploreSectionsParams {
   intolerances?: string;
   excludeIngredients?: string;
   seen?: number[];
+  crewSize?: number;
+  maxReadyMinutes?: number;
+  performanceMode?: number;
 }
 
 export async function fetchExploreSections(
@@ -32,6 +41,9 @@ export async function fetchExploreSections(
   if (params.intolerances) qs.set("intolerances", params.intolerances);
   if (params.excludeIngredients) qs.set("excludeIngredients", params.excludeIngredients);
   if (params.seen?.length) qs.set("seen", params.seen.join(","));
+  if (params.crewSize) qs.set("crew_size", String(params.crewSize));
+  if (params.maxReadyMinutes) qs.set("max_ready_minutes", String(params.maxReadyMinutes));
+  if (params.performanceMode != null) qs.set("performance_mode", String(params.performanceMode));
 
   const res = await fetch(`/api/explore/sections?${qs.toString()}`);
   if (!res.ok) {

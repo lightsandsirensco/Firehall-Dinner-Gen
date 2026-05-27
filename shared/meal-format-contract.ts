@@ -55,7 +55,7 @@ export const FORMAT_CONTRACTS: Record<string, FormatContract> = {
     starchPool: [],
     requiresTortillaForTacoTitle: true,
     forbiddenStarches: RICE_AS_BASE,
-    tortillaPattern: /\b(tortilla|taco shell|corn tortilla|flour tortilla|hard shell|soft shell)\b/i,
+    tortillaPattern: /\b(tortillas?|taco shells?|corn tortillas?|flour tortillas?|hard shells?|soft shells?)\b/i,
     skipAutoStarch: true,
   },
   wrap: {

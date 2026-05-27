@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Flame } from "lucide-react";
 
 const LOADING_MESSAGES = [
+  "Kitchen's working on tonight's plate...",
   "Checking what's on the truck...",
   "Sizing it up for the crew...",
   "Picking a main the hall will actually eat...",
@@ -10,6 +11,7 @@ const LOADING_MESSAGES = [
 ];
 
 const ALT_LOADING_MESSAGES = [
+  "Couldn't cook one up — trying another...",
   "Shuffling another dinner idea…",
   "Checking what else plays at the hall…",
   "Rounding up a new plate for the crew…",

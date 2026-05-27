@@ -37,7 +37,7 @@ let dbPath = "";
 let openPromise: Promise<SqliteDatabase> | null = null;
 let saveTimer: ReturnType<typeof setTimeout> | null = null;
 
-function wasmPath(): string {
+export function wasmPath(): string {
   return path.join(process.cwd(), "node_modules", "sql.js", "dist", "sql-wasm.wasm");
 }
 
@@ -168,8 +168,19 @@ export async function openSqliteDatabase(filePath: string): Promise<SqliteDataba
     }
 
     if (fs.existsSync(filePath)) {
-      const fileBuffer = fs.readFileSync(filePath);
-      rawDb = new SQL.Database(fileBuffer);
+      try {
+        const fileBuffer = fs.readFileSync(filePath);
+        rawDb = new SQL.Database(fileBuffer);
+      } catch (openErr) {
+        const corruptPath = `${filePath}.corrupt.${Date.now()}`;
+        try {
+          fs.renameSync(filePath, corruptPath);
+          console.error(`[sqlite] Corrupt database moved to ${corruptPath}`);
+        } catch {
+          console.error("[sqlite] Corrupt database — could not rename, creating fresh DB");
+        }
+        rawDb = new SQL.Database();
+      }
     } else {
       rawDb = new SQL.Database();
     }

@@ -32,7 +32,7 @@ export function validateImageBufferHeuristic(
   if (!isPng && !isJpeg) return { ok: false, reason: "unknown_format" };
 
   const dims = isPng ? readPngDimensions(buf) : null;
-  const target = parseSizeDimensions(FOOD_IMAGERY_HERO_SIZE);
+  const target = parseSizeDimensions("1024x1024");
   if (dims && (dims.width < 512 || dims.height < 512)) {
     return { ok: false, reason: "resolution_low", notes: `${dims.width}x${dims.height}` };
   }

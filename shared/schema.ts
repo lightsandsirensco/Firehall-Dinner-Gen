@@ -284,6 +284,8 @@ export interface GenerateResponse {
   tags?: RecipeTags;
   /** Template / catalog / V2 path markers */
   _fallback?: boolean;
+  /** Customer-facing: meal from curated hall catalog (not internal fallback). */
+  hall_curated?: boolean;
   _source?: string;
   _catalog_id?: string;
   _recipe_source?: RecipeSourceAttribution;
@@ -333,6 +335,8 @@ export interface ClientRecipeResponse {
   recipe_tags?: RecipeTags;
   template_id?: number;
   _fallback?: boolean;
+  /** Customer-facing: meal from curated hall catalog (not internal fallback). */
+  hall_curated?: boolean;
   /** Server generate path: catalog, spoonacular_v2, template_fallback, etc. */
   _source?: string;
   _signature?: string;

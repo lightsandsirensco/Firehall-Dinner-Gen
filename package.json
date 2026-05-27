@@ -7,7 +7,7 @@
     "dev": "cross-env NODE_ENV=development tsx server/index.ts",
     "build": "tsx script/build.ts",
     "start": "NODE_ENV=production node dist/index.cjs",
-    "check": "tsc && tsx scripts/validate-generate-request-defaults.ts && tsx scripts/test-generation-reliability.ts && tsx scripts/test-meal-instructions.ts && tsx scripts/test-burger-sourcing.ts && tsx scripts/test-recipe-quality-gate.ts && tsx scripts/validate-food-imagery-style.ts && tsx scripts/test-food-imagery-prompt.ts",
+    "check": "tsc && tsx scripts/validate-generate-request-defaults.ts && tsx scripts/test-generation-reliability.ts && tsx scripts/test-meal-realism-firewall.ts && tsx scripts/test-meal-instructions.ts && tsx scripts/test-burger-sourcing.ts && tsx scripts/test-recipe-quality-gate.ts && tsx scripts/test-canonical-recipe-schema.ts && tsx scripts/test-recipe-trust-pipeline.ts && tsx scripts/test-master-categories.ts && tsx scripts/test-recommendation-engine.ts && tsx scripts/test-golden-100-manifest.ts && tsx scripts/test-editorial-image-prompt.ts && tsx scripts/test-editorial-imagery-system.ts && tsx scripts/validate-food-imagery-style.ts && tsx scripts/test-food-imagery-prompt.ts && tsx scripts/stage5-validate-platform.ts",
     "db:push": "drizzle-kit push",
     "ingest:discover": "tsx scripts/ingest-discovery.ts",
     "ingest:apify": "tsx scripts/apify-export-trends.ts",
@@ -17,6 +17,13 @@
     "db:sync-curated": "tsx scripts/sync-catalog-to-curated.ts",
     "seed:explore": "tsx scripts/seed-curated-explore.ts",
     "audit:explore": "tsx scripts/audit-explore-flow.ts",
+    "audit:golden-100": "tsx scripts/audit-golden-100.ts",
+    "seed:golden-100": "tsx scripts/seed-golden-100.ts",
+    "imagery:golden-100": "tsx scripts/generate-golden-100-imagery.ts",
+    "catalog:generate-pages": "tsx scripts/catalog-generate-pages.ts",
+    "catalog:generate-images": "tsx scripts/catalog-generate-images.ts",
+    "catalog:verify": "tsx scripts/catalog-verify.ts",
+    "catalog:fix-image-paths": "tsx scripts/catalog-fix-image-paths.ts",
     "seed:publisher": "tsx scripts/seed-publisher-explore.ts",
     "expand:recipes": "tsx scripts/expand-recipes.ts",
     "expand:recipes:promote": "tsx scripts/expand-recipes.ts --promote",
@@ -30,7 +37,11 @@
     "imagery:sync:classics": "tsx scripts/sync-hall-classics-curated.ts",
     "imagery:audit": "tsx scripts/audit-food-imagery.ts",
     "deploy:prep": "tsx scripts/replit-post-deploy.ts",
-    "deploy:prep:imagery": "tsx scripts/replit-post-deploy.ts --imagery"
+    "deploy:prep:imagery": "tsx scripts/replit-post-deploy.ts --imagery",
+    "stage5:health": "tsx scripts/stage5-startup-health.ts",
+    "stage5:validate": "tsx scripts/stage5-validate-platform.ts",
+    "stage5:scan-images": "tsx scripts/stage5-scan-editorial-images.ts",
+    "test:openai-image": "tsx scripts/test-openai-image.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
@@ -102,6 +113,7 @@
     "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7",
     "tw-animate-css": "^1.2.5",
+    "undici": "^7.26.0",
     "vaul": "^1.1.2",
     "wouter": "^3.3.5",
     "ws": "^8.18.0",
@@ -140,6 +152,7 @@
     }
   },
   "optionalDependencies": {
-    "bufferutil": "^4.0.8"
+    "bufferutil": "^4.0.8",
+    "sharp": "^0.33.5"
   }
 }

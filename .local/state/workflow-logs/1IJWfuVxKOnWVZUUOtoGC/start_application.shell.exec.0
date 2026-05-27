@@ -1,0 +1,9 @@
+
+> rest-express@1.0.0 dev
+> NODE_ENV=development tsx server/index.ts
+
+[1G[0K5:02:38 PM [cache] Cache store initialized
+5:02:38 PM [vote] Hall vote tables initialized
+5:02:38 PM [klaviyo] Klaviyo API key configured
+5:02:38 PM [pool] Pool warmup disabled (ENABLE_POOL_WARMUP != true). Recipes will be generated on-demand.
+5:02:38 PM [express] serving on port 5000

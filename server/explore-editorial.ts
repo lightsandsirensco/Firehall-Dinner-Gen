@@ -10,17 +10,14 @@ import { buildSeededExploreCards } from "../shared/explore-section-seeds.js";
 import type { CanonicalRecipe } from "../shared/canonical-recipe.js";
 import { log } from "./logger";
 import {
-  EXPLORE_EDITORIAL_SECTIONS,
   type ExploreEditorialSection,
   type ExploreSectionDef,
+  EXPLORE_EDITORIAL_SECTIONS,
   editorialDaySeed,
   pickSectionQuery,
   dedupeExploreCards,
 } from "../shared/explore-editorial.js";
-import {
-  sortExploreCardsByRank,
-  sequenceExploreCardsForDisplay,
-} from "../shared/recipe-ranking.js";
+import { sortExploreCardsByRank } from "../shared/recipe-ranking.js";
 import { getClassicHallMeal, resolveClassicHeroImage } from "../shared/classic-hall-meals.js";
 import {
   filterDisplayableExploreCards,
@@ -40,7 +37,7 @@ export interface ExploreFeedSafetyFilters {
   excludeIngredients?: string;
 }
 
-function enrichCard(card: ExploreRecipeCard, section: ExploreSectionDef): ExploreRecipeCard {
+export function enrichCard(card: ExploreRecipeCard, section: ExploreSectionDef): ExploreRecipeCard {
   const isCurated = Boolean(card._curatedSlug);
   const presentation = computeCardPresentation(card, { isCurated });
   const keepPublisherHook =
@@ -85,7 +82,7 @@ function catalogToExploreCard(recipe: CanonicalRecipe, section: ExploreSectionDe
   return card ? enrichCard(card, section) : null;
 }
 
-function exploreUsesCuratedOnly(): boolean {
+export function exploreUsesCuratedOnly(): boolean {
   if (process.env.EXPLORE_CURATED_ONLY === "false") return false;
   return countPublishedCuratedRecipes() >= 15;
 }
@@ -207,7 +204,7 @@ export type ExploreSectionSourceCounts = {
   seed: number;
 };
 
-async function fetchSectionRecipes(
+export async function fetchSectionRecipes(
   section: ExploreSectionDef,
   safety: ExploreFeedSafetyFilters,
   daySeed: number,
@@ -318,7 +315,7 @@ async function fetchSectionRecipes(
 }
 
 /** Crew favorites — curated DB first, then hall packages */
-async function buildHallFavoritesSection(
+export async function buildHallFavoritesSection(
   seenIds: Set<number>,
   seenTitles: Set<string>,
 ): Promise<ExploreEditorialSection | null> {
@@ -414,21 +411,10 @@ async function buildHallFavoritesSection(
   };
 }
 
-const feedCache = new Map<string, { at: number; sections: ExploreEditorialSection[] }>();
-const FEED_CACHE_TTL_MS = 10 * 60 * 1000;
-
-function feedCacheKey(safety: ExploreFeedSafetyFilters, daySeed: number): string {
-  const published = countPublishedCuratedRecipes();
-  return `${daySeed}:pub${published}:${safety.diet || ""}:${safety.intolerances || ""}:${safety.excludeIngredients || ""}`;
-}
-
-function imageHostKey(url: string): string {
-  try {
-    return new URL(url).hostname.replace(/^www\./i, "").toLowerCase();
-  } catch {
-    return "";
-  }
-}
+import {
+  buildIntelligentExploreFeed,
+  type BuildIntelligentExploreFeedOptions,
+} from "./recommendation/feeds/build-explore-feed.js";
 
 export interface ExploreEditorialFeedResult {
   sections: ExploreEditorialSection[];
@@ -437,120 +423,55 @@ export interface ExploreEditorialFeedResult {
     curatedOnly: boolean;
     sectionSources: Record<string, ExploreSectionSourceCounts>;
     totalRecipes: number;
+    engineVersion?: number;
+    daySeed?: number;
+    contextHints?: string[];
+    railsBuilt?: number;
   };
 }
 
 export async function buildExploreEditorialFeed(
   safety: ExploreFeedSafetyFilters,
+  options: BuildIntelligentExploreFeedOptions = {},
 ): Promise<ExploreEditorialFeedResult> {
-  const daySeed = editorialDaySeed();
-  const cacheKey = feedCacheKey(safety, daySeed);
-  const cached = feedCache.get(cacheKey);
-  if (cached && Date.now() - cached.at < FEED_CACHE_TTL_MS) {
-    const stats = getCuratedStoreStats();
-    return {
-      sections: cached.sections,
+  let result: Awaited<ReturnType<typeof buildIntelligentExploreFeed>>;
+  try {
+    result = await buildIntelligentExploreFeed(safety, options);
+  } catch (err: unknown) {
+    const msg = err instanceof Error ? err.message : String(err);
+    log(`[explore] intelligent feed failed, using seed fallback: ${msg}`, "catalog");
+    const daySeed = editorialDaySeed();
+    const def: ExploreSectionDef =
+      EXPLORE_EDITORIAL_SECTIONS.find((s) => s.id === "comfort_food") ??
+      EXPLORE_EDITORIAL_SECTIONS[0]!;
+    const cards = buildSeededExploreCards(def, daySeed, def.limit).map((c) => enrichCard(c, def));
+    result = {
+      sections: cards.length
+        ? [{ id: def.id, title: def.title, subtitle: def.subtitle, layout: def.layout, theme: def.theme, recipes: cards }]
+        : [],
       meta: {
-        curatedPublished: stats.published,
-        curatedOnly: exploreUsesCuratedOnly(),
+        engineVersion: 0,
+        daySeed,
+        contextHints: ["fallback_feed"],
+        curatedPublished: 0,
+        curatedOnly: false,
+        totalRecipes: cards.length,
         sectionSources: {},
-        totalRecipes: cached.sections.reduce((n, s) => n + s.recipes.length, 0),
+        railsBuilt: cards.length ? 1 : 0,
       },
     };
   }
-
-  const sections: ExploreEditorialSection[] = [];
-  const sectionSources: Record<string, ExploreSectionSourceCounts> = {};
-  const globalSeenIds = new Set<number>();
-  const globalSeenTitles = new Set<string>();
-  const feedProteins = new Set<string>();
-  const feedImageHosts = new Set<string>();
-
-  const orderedDefs = [...EXPLORE_EDITORIAL_SECTIONS].sort((a, b) => a.priority - b.priority);
-
-  const BATCH = 4;
-  for (let i = 0; i < orderedDefs.length; i += BATCH) {
-    const batch = orderedDefs.slice(i, i + BATCH);
-    const batchResults = await Promise.all(
-      batch.map((def) => fetchSectionRecipes(def, safety, daySeed)),
-    );
-
-    for (let j = 0; j < batch.length; j++) {
-      const def = batch[j]!;
-      const result = batchResults[j] || { cards: [], sources: { curated: 0, spoonacular: 0, catalog: 0, seed: 0 } };
-      sectionSources[def.id] = result.sources;
-      let raw = result.cards;
-
-      if (
-        raw.length === 0 &&
-        !exploreUsesCuratedOnly() &&
-        process.env.EXPLORE_ALLOW_SEED_FALLBACK === "true"
-      ) {
-        raw = buildSeededExploreCards(def, daySeed, def.limit).map((c) => enrichCard(c, def));
-        sectionSources[def.id] = { ...result.sources, seed: raw.length };
-      }
-
-      raw = sortExploreCardsByRank(raw, {
-        sectionBoost: def.appetiteBoost ?? 0,
-        feedProteins,
-        feedImageHosts,
-        daySeed,
-      });
-
-      const deduped = dedupeExploreCards(raw, globalSeenIds, globalSeenTitles);
-      if (deduped.length === 0) continue;
-
-      const sequenced = sequenceExploreCardsForDisplay(deduped, daySeed + def.priority);
-      for (const card of sequenced) {
-        const pk = (card.primaryProtein || card.title).toLowerCase().slice(0, 20);
-        feedProteins.add(pk);
-        const host = imageHostKey(card.image);
-        if (host) feedImageHosts.add(host);
-      }
-
-      sections.push({
-        id: def.id,
-        title: def.title,
-        subtitle: def.subtitle,
-        layout: def.layout,
-        theme: def.theme,
-        recipes: sequenced,
-      });
-    }
-
-    if (i + BATCH < orderedDefs.length) {
-      await new Promise((resolve) => setTimeout(resolve, 80));
-    }
-  }
-
-  const staplesSeenIds = new Set(globalSeenIds);
-  const staplesSeenTitles = new Set(globalSeenTitles);
-  const staplesSection = await buildHallFavoritesSection(staplesSeenIds, staplesSeenTitles);
-  if (staplesSection) {
-    sections.unshift(staplesSection);
-  }
-
-  /** De-dupe trending rail if it duplicated Crew Favorites at top */
-  const trendingIdx = sections.findIndex((s) => s.id === "trending_tonight");
-  if (trendingIdx > 1 && sections[trendingIdx]!.recipes.length < 3) {
-    sections.splice(trendingIdx, 1);
-  }
-
-  const stats = getCuratedStoreStats();
-  const totalRecipes = sections.reduce((n, s) => n + s.recipes.length, 0);
-  log(
-    `[explore] Editorial feed: ${sections.length} sections, ${totalRecipes} recipes, curated_published=${stats.published} curated_only=${exploreUsesCuratedOnly()}`,
-    "catalog",
-  );
-
-  feedCache.set(cacheKey, { at: Date.now(), sections });
   return {
-    sections,
+    sections: result.sections,
     meta: {
-      curatedPublished: stats.published,
-      curatedOnly: exploreUsesCuratedOnly(),
-      sectionSources,
-      totalRecipes,
+      curatedPublished: result.meta.curatedPublished,
+      curatedOnly: result.meta.curatedOnly,
+      sectionSources: result.meta.sectionSources,
+      totalRecipes: result.meta.totalRecipes,
+      engineVersion: result.meta.engineVersion,
+      daySeed: result.meta.daySeed,
+      contextHints: result.meta.contextHints,
+      railsBuilt: result.meta.railsBuilt,
     },
   };
 }

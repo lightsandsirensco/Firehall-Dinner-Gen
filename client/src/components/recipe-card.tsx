@@ -3,12 +3,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import type { ClientRecipeResponse, MealPlateLine } from "@shared/schema";
-import { formatAdaptationLabel } from "@shared/imported-recipe";
+import { customerSourceAttribution } from "@shared/customer-facing";
 import type { RecipeSourceAttribution } from "@shared/canonical-recipe";
-
-function formatSourceAttribution(source: NonNullable<ClientRecipeResponse["_recipe_source"]>): string {
-  return formatAdaptationLabel(source as RecipeSourceAttribution) || "Recipe from";
-}
 import { resolveMealPlate } from "@/lib/meal-plate-ui";
 import { MealHeroImage } from "@/components/meal-hero-image";
 import { resolveEditorialFallbackHero } from "@shared/meal-hero-fallback";
@@ -55,7 +51,7 @@ function PlateSection({
   if (!items.length) return null;
   return (
     <div className="space-y-2" data-testid={testId}>
-      <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary/90">{label.toUpperCase()}</p>
+      <p className="text-[11px] font-semibold text-primary/90">{label}</p>
       <ul className="space-y-2">
         {items.map((item, i) => (
           <li key={`${item.name}-${i}`} className="text-sm text-foreground leading-snug">
@@ -291,7 +287,7 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
   });
 
   return (
-    <div className="space-y-5 animate-in fade-in slide-in-from-bottom-4 duration-500">
+    <div className="space-y-4 sm:space-y-5 meal-reveal motion-reduce:animate-none animate-in fade-in slide-in-from-bottom-3 duration-500">
       {recipe.hero_image && recipe.hero_image_status === "ready" ? (
         <MealHeroImage
           src={recipe.hero_image}
@@ -300,7 +296,6 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
           emoji="🔥"
           variant="cinematic"
           priority
-          className="rounded-2xl overflow-hidden ring-1 ring-border/40 shadow-xl shadow-black/25"
         />
       ) : recipe.hero_image_status === "pending" ? (
         <div
@@ -330,7 +325,6 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
           emoji="🔥"
           variant="cinematic"
           priority
-          className="rounded-2xl overflow-hidden ring-1 ring-border/40 shadow-xl shadow-black/25"
         />
       ) : null}
       {(recipe as any)._filters_adjusted && (
@@ -340,7 +334,10 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
         </div>
       )}
       <div className="space-y-1">
-        <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl tracking-wide text-foreground leading-tight" data-testid="text-recipe-title">
+        <h2
+          className="font-heading text-[1.65rem] leading-[1.15] sm:text-4xl md:text-5xl tracking-tight text-foreground"
+          data-testid="text-recipe-title"
+        >
           {displayTitle}
         </h2>
         <p
@@ -350,11 +347,11 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
           <ShieldCheck className="w-3.5 h-3.5 text-primary/55 shrink-0" aria-hidden />
           <span>{trustLine}</span>
         </p>
-        {recipe._recipe_source?.name && !recipe._fallback && (
+        {recipe._recipe_source?.name && !recipe.hall_curated && !recipe._fallback && (
           <p className="text-xs text-muted-foreground/80 mt-1 max-w-xl" data-testid="text-recipe-source">
             {recipe._recipe_source.url ? (
               <>
-                {formatSourceAttribution(recipe._recipe_source)}{" "}
+                {customerSourceAttribution(recipe._recipe_source as RecipeSourceAttribution) || "Inspired by"}{" "}
                 <a
                   href={recipe._recipe_source.url}
                   target="_blank"
@@ -365,18 +362,16 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
                 </a>
               </>
             ) : (
-              <>{formatSourceAttribution(recipe._recipe_source) || `Recipe from ${recipe._recipe_source.name}`}</>
+              <>
+                {customerSourceAttribution(recipe._recipe_source as RecipeSourceAttribution) ||
+                  `Inspired by ${recipe._recipe_source.name}`}
+              </>
             )}
           </p>
         )}
-        {recipe._fallback && (
-          <p className="text-xs text-amber-700/90 dark:text-amber-500/90 mt-1 max-w-xl" data-testid="text-template-fallback">
-            Backup recipe while we find a better match — try different filters for a publisher-sourced meal.
-          </p>
-        )}
         {mealPlate?.cuisine_label && (
-          <p className="text-xs uppercase tracking-widest text-primary/80 mt-2" data-testid="text-cuisine-label">
-            {mealPlate.cuisine_label} · Hall spread
+          <p className="text-xs font-medium text-primary/75 mt-2" data-testid="text-cuisine-label">
+            {mealPlate.cuisine_label}
           </p>
         )}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-3">

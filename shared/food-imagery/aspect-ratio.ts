@@ -1,10 +1,16 @@
 /**
- * Consistent generation dimensions — heroes are square for cache + mobile crop safety.
+ * Consistent generation dimensions — GPT Image API sizes.
  */
 
-export type FoodImageryOutputSize = "1024x1024" | "512x512";
+import {
+  GPT_IMAGE_SIZE_SQUARE,
+  parseGptImageDimensions,
+  type GptImageApiSize,
+} from "../openai-image-sizes.js";
 
-export const FOOD_IMAGERY_HERO_SIZE: FoodImageryOutputSize = "1024x1024";
+export type FoodImageryOutputSize = GptImageApiSize;
+
+export const FOOD_IMAGERY_HERO_SIZE = GPT_IMAGE_SIZE_SQUARE;
 
 export const FOOD_IMAGERY_DISPLAY_ASPECT = {
   /** CSS / layout target for heroes */
@@ -17,7 +23,9 @@ export function resolveGenerationSize(_mealFormat?: string): FoodImageryOutputSi
   return FOOD_IMAGERY_HERO_SIZE;
 }
 
-export function parseSizeDimensions(size: FoodImageryOutputSize): { width: number; height: number } {
-  const [w, h] = size.split("x").map(Number);
-  return { width: w || 1024, height: h || 1024 };
+export function parseSizeDimensions(size: Exclude<FoodImageryOutputSize, "auto">): {
+  width: number;
+  height: number;
+} {
+  return parseGptImageDimensions(size);
 }

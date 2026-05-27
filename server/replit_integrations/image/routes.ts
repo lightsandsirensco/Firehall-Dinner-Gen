@@ -1,20 +1,23 @@
 import type { Express, Request, Response } from "express";
 import { openai } from "./client";
+import { normalizeGptImageSize, type GptImageApiSize } from "../../lib/image-sizes.js";
 
 export function registerImageRoutes(app: Express): void {
   app.post("/api/generate-image", async (req: Request, res: Response) => {
     try {
-      const { prompt, size = "1024x1024" } = req.body;
+      const { prompt, size } = req.body as { prompt?: string; size?: string };
 
       if (!prompt) {
         return res.status(400).json({ error: "Prompt is required" });
       }
 
+      const outputSize = normalizeGptImageSize(size, "1024x1024");
+
       const response = await openai.images.generate({
         model: "gpt-image-1",
         prompt,
         n: 1,
-        size: size as "1024x1024" | "512x512" | "256x256",
+        size: outputSize as GptImageApiSize,
       });
 
       const imageData = response.data[0];
@@ -28,4 +31,3 @@ export function registerImageRoutes(app: Express): void {
     }
   });
 }
-

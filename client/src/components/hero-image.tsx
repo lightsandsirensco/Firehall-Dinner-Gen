@@ -28,6 +28,8 @@ export interface HeroImageProps {
   fallback?: ReactNode;
   /** Return true if the error was handled (e.g. fallback URL) — image stays mounted */
   onError?: () => boolean | void;
+  /** LQIP / blur placeholder data URL — shown until full image loads */
+  blurDataUrl?: string;
 }
 
 /**
@@ -47,6 +49,7 @@ export function HeroImage({
   imgClassName,
   fallback,
   onError,
+  blurDataUrl,
 }: HeroImageProps) {
   const [loaded, setLoaded] = useState(false);
   const [failed, setFailed] = useState(false);
@@ -85,9 +88,22 @@ export function HeroImage({
     >
       {!loaded && (
         <div
-          className="absolute inset-0 skeleton-shimmer z-[1]"
+          className="absolute inset-0 z-[1]"
+          style={
+            blurDataUrl
+              ? {
+                  backgroundImage: `url(${blurDataUrl})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  filter: "blur(12px)",
+                  transform: "scale(1.05)",
+                }
+              : undefined
+          }
           aria-hidden
-        />
+        >
+          {!blurDataUrl && <div className="absolute inset-0 skeleton-shimmer" />}
+        </div>
       )}
 
       <img

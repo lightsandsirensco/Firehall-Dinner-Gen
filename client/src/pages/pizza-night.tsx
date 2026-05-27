@@ -21,6 +21,7 @@ import type { PizzaResponse, ClientRecipeResponse, ClientIngredient } from "@sha
 import { usePizzaHeroPoll } from "@/lib/recipe-hero";
 import { getPizzaConceptMeta } from "@shared/pizza-concepts";
 import { SiteHeader } from "@/components/site-header";
+import { app } from "@/lib/design-tokens";
 import { cn } from "@/lib/utils";
 import { Flame } from "lucide-react";
 import { hapticLight, hapticSuccess } from "@/lib/haptics";
@@ -180,7 +181,7 @@ export default function PizzaNight() {
     : null;
 
   return (
-    <div className="page-shell min-h-screen min-h-[100dvh] bg-background">
+    <div className={app.page}>
       <SiteHeader activePage="pizza" favCount={favCount} />
 
       <PizzaHero
@@ -193,11 +194,9 @@ export default function PizzaNight() {
       />
 
       {!recipe && featuredCards.length > 0 && (
-        <section className="max-w-[1400px] mx-auto px-page py-6 border-b border-border/40">
-          <p className="text-[10px] uppercase tracking-[0.3em] text-primary font-semibold mb-3">
-            Tonight&apos;s rotation
-          </p>
-          <div className="flex gap-3 overflow-x-auto pb-2 snap-x snap-mandatory scrollbar-thin">
+        <section className={cn(app.main, "py-4 border-b border-border/30")}>
+          <p className={cn(app.label, "mb-2.5")}>Tonight&apos;s rotation</p>
+          <div className="flex gap-2.5 overflow-x-auto pb-1 snap-x snap-mandatory scrollbar-hide -mx-0.5 px-0.5">
             {featuredCards.map((card) => (
               <button
                 key={card.id}
@@ -208,7 +207,7 @@ export default function PizzaNight() {
                   handleGenerate({ ...filters, generation_mode: "specialty_slice" }, "specialty_slice");
                 }}
                 className={cn(
-                  "snap-start shrink-0 w-[140px] sm:w-[160px] rounded-xl overflow-hidden ring-1 ring-white/10",
+                  "snap-start shrink-0 w-[132px] sm:w-[152px] rounded-2xl overflow-hidden ring-1 ring-white/10 shadow-md shadow-black/20",
                   "transition-transform active:scale-95 text-left",
                   wheelHighlight === card.id && "ring-2 ring-primary",
                 )}
@@ -228,8 +227,8 @@ export default function PizzaNight() {
         </section>
       )}
 
-      <main className="max-w-[1400px] mx-auto px-page py-6 pb-safe-sticky lg:pb-8">
-        <div className="flex flex-col lg:flex-row gap-6">
+      <main className={cn(app.main, "py-4 pb-safe-sticky lg:pb-8")}>
+        <div className={cn("flex flex-col-reverse lg:flex-row", app.sectionGap)}>
           <div className="w-full lg:w-[400px] flex-shrink-0 lg:sticky lg:top-20 lg:self-start">
             <PizzaFilterPanel
               filters={filters}
@@ -255,7 +254,7 @@ export default function PizzaNight() {
               {!loading && !error && recipeWithHero && (
                 <div
                   key={recipeWithHero.pizza_style_id + recipeWithHero.title}
-                  className="meal-reveal motion-reduce:animate-none"
+                  className={app.mealReveal}
                 >
                   <PizzaCard
                     recipe={recipeWithHero}
@@ -271,10 +270,10 @@ export default function PizzaNight() {
                     <Flame className="w-12 h-12 text-primary/70" />
                   </div>
                   <h2
-                    className="font-heading text-3xl tracking-wide text-foreground mb-2"
+                    className={cn(app.titleMeal, "mb-2")}
                     data-testid="pizza-text-empty-title"
                   >
-                    READY FOR PIZZA NIGHT
+                    Ready for pizza night
                   </h2>
                   <p className="text-muted-foreground text-sm max-w-md leading-relaxed">
                     Pick a mode — wheel spin, specialty slice, fridge raid, or classic generate.
@@ -296,8 +295,8 @@ export default function PizzaNight() {
           healthinessLevel={filters.style_preference}
         />
       )}
-      <div className="mobile-sticky-bar lg:hidden" data-testid="pizza-mobile-generate-bar">
-        <div className="px-page pt-3">
+      <div className={app.stickyBar} data-testid="pizza-mobile-generate-bar">
+        <div className="px-page pt-2.5 pb-1">
           <PizzaGenerateButtons
             hasRecipe={!!recipeWithHero}
             isLoading={loading}

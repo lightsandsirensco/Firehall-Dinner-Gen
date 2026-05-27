@@ -1,0 +1,144 @@
+{
+  "slug": "pancake-short-stack",
+  "title": "Pancake Short Stack for the Crew",
+  "subtitle": "Fluffy stacks, bacon on the side",
+  "category": "breakfast_brunch",
+  "cuisine": "american",
+  "description": "Pancake Short Stack for the Crew is a american breakfast built for a hungry firehall crew — Fluffy stacks, bacon on the side. Hearty portions, station-kitchen timing, and flavors everyone recognizes after a long shift.",
+  "crewSize": 8,
+  "cookTime": 55,
+  "prepTime": 20,
+  "difficulty": "medium",
+  "calories": 460,
+  "protein": 22,
+  "carbs": 60,
+  "fats": 22,
+  "tags": [
+    "protein:vegetarian",
+    "format:breakfast",
+    "category:breakfast_brunch",
+    "breakfast",
+    "golden_100"
+  ],
+  "equipment": [
+    "Large sheet trays",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "ingredients": [
+    {
+      "name": "Primary protein or hearty veg base",
+      "quantity": "2",
+      "unit": "lb"
+    },
+    {
+      "name": "Kosher salt",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "Black pepper",
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "Cooking oil",
+      "quantity": "0.3",
+      "unit": "cup"
+    },
+    {
+      "name": "Yellow onion",
+      "quantity": "2",
+      "unit": "large"
+    },
+    {
+      "name": "Garlic",
+      "quantity": "6",
+      "unit": "cloves"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Prep the line",
+      "instruction": "Set out all ingredients for Pancake Short Stack for the Crew before you turn on heat — firefighters eat on a schedule. Pat proteins dry and season aggressively with salt and pepper; dry surfaces brown instead of steam.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Build the base",
+      "instruction": "Heat oil in your largest skillet, Dutch oven, or on the flat-top over medium-high until it shimmers. Add aromatics (onion first) and cook until the edges turn golden and the smell sweetens — usually 4–6 minutes. If garlic is in the recipe, add it after the onion softens so it doesn't burn.",
+      "minutes": 8,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Cook the main",
+      "instruction": "Cook the primary protein or base for Pancake Short Stack for the Crew until it hits proper color and safe internal temperature. Don't crowd the pan — work in batches if needed so you get browning, not gray stew. Listen for a steady sizzle; if it's silent, the heat is too low.",
+      "minutes": 20,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Finish and season",
+      "instruction": "Bring components together, taste, and adjust salt. Sauce should coat, not pool. If cheese is involved, melt it just until glossy — another 1–2 minutes under a lid or broiler. Let heavy proteins rest 5 minutes before slicing.",
+      "minutes": 10,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Serve the hall",
+      "instruction": "Transfer to sheet trays or a serving line immediately. Keep backup warm at 200°F. Call the crew while it's hot — this meal is built for a hungry hall, not a photo shoot.",
+      "minutes": 5,
+      "heatLevel": "low"
+    }
+  ],
+  "proTips": [
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Taste for salt at the end — hall palates run salty after long shifts."
+  ],
+  "tonightSpread": [
+    "Plate Pancake Short Stack for the Crew with sides in separate pans so the crew can mix portions.",
+    "Keep hot items on one side of the table and cold on the other — eggs stay hot, fruit stays cold.",
+    "Line up Pancake Short Stack for the Crew on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+  ],
+  "leftovers": [
+    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
+    "Label trays with date and reheat to 165°F minimum before second shift."
+  ],
+  "nutrition": {
+    "calories": 460,
+    "protein": 22,
+    "carbs": 60,
+    "fats": 22,
+    "label": "per serving (hall portion)"
+  },
+  "heroImage": "/images/golden-100/pancake-short-stack.jpg",
+  "mobileImage": "/images/mobile/pancake-short-stack.jpg",
+  "thumbImage": "/images/thumbs/pancake-short-stack.jpg",
+  "railImage": "/images/rails/pancake-short-stack.jpg",
+  "realismScore": 100,
+  "firefighterScore": 98,
+  "popularityWeight": 3.2,
+  "searchTerms": [
+    "pancake short stack for the crew",
+    "pancake short stack",
+    "american",
+    "vegetarian",
+    "breakfast",
+    "buttermilk pancakes bacon breakfast",
+    "golden_100"
+  ],
+  "relatedSlugs": [
+    "french-toast-casserole",
+    "biscuits-gravy",
+    "mac-and-cheese-bake",
+    "bacon-egg-hash",
+    "margherita-pizza",
+    "breakfast-sausage-pizza"
+  ],
+  "generatedAt": "2026-05-27T15:03:06.204Z",
+  "contentVersion": 1
+}

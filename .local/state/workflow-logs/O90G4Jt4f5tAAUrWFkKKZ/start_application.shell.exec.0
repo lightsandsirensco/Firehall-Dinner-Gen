@@ -1,0 +1,80 @@
+
+> rest-express@1.0.0 dev
+> NODE_ENV=development tsx server/index.ts
+
+[1G[0K1:27:35 AM [cache] Cache store initialized
+1:27:35 AM [vote] Hall vote tables initialized
+1:27:35 AM [klaviyo] Klaviyo API key configured
+1:27:35 AM [pool] Pool warmup disabled (ENABLE_POOL_WARMUP != true). Recipes will be generated on-demand.
+1:27:36 AM [express] serving on port 5000
+Browserslist: browsers data (caniuse-lite) is 7 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+
+A PostCSS plugin did not pass the `from` option to `postcss.parse`. This may cause imported assets to be incorrectly transformed. If you've recently added a PostCSS plugin that raised this warning, please contact the package author to fix the issue.
+1:27:43 AM [perf] Warm-up ping received
+1:27:43 AM [express] GET /api/warm 200 in 2ms :: {"status":"warm","uptime":8.293149246}
+1:27:43 AM [v2] [v2] Selected filters | protein="chicken" cuisine="any" format="random" time="25-40" crew=6 allergens=[none] pantry=[none]
+1:27:43 AM [v2] [v2] Mapped Spoonacular params | query="chicken" cuisine="any" type="main course" maxReadyTime=40 intolerances="none" excludeIngredients="beef,ground beef,steak,pork,bacon,ham,sausage,shrimp,salmon,tuna" includeIngredients="chicken" diet="none" minServings=2
+1:27:43 AM [v2] [v2] Spoonacular search called | query="chicken" cuisine="any" type="main course" maxTime=40 allergens="none"
+1:27:43 AM [spoonacular] [spoonacular-cache] MISS search: query="chicken" | Spoonacular API called=yes
+1:27:43 AM [spoonacular] [spoonacular] Searching: query="chicken" cuisine=any diet=any limit=5
+1:27:43 AM [spoonacular] [spoonacular] Search returned 5 recipes (total available: 50)
+1:27:43 AM [spoonacular] [spoonacular-cache] Stored: search:query=chicken&number=5&offset=0&addRecipeInformation=true&fillIngredients | expires=2026-05-20T02:27:43.802Z
+1:27:43 AM [v2] [v2] Recipe candidates returned: 5
+1:27:43 AM [v2] [v2] Candidate pool: 3 after title-level filter (from 5 total)
+1:27:43 AM [v2] [v2] Selected candidate: id=982365 title="Instant Pot Hawaiian Chicken" (pool size=3)
+1:27:43 AM [spoonacular] [spoonacular-cache] MISS detail: id=982365 | Spoonacular API called=yes | includeNutrition=true
+1:27:43 AM [spoonacular] [spoonacular-cache] Stored: detail:982365:nutrition=true | expires=2026-05-20T02:27:43.970Z
+1:27:43 AM [v2] [validator] selectedProtein=chicken
+1:27:43 AM [v2] [validator] inferredProtein=chicken
+1:27:43 AM [v2] [validator] mealStyle=random
+1:27:43 AM [v2] [validator] result=accepted
+1:27:43 AM [v2] [v2] ✓ Accepted "Instant Pot Hawaiian Chicken" | protein=chicken | ingredients=3 | steps=5 | source=spoonacular_v2
+1:27:43 AM [polish] [polish] cache MISS id=982365 — calling gpt-4o-mini (steps=5)
+1:27:47 AM [polish] [polish] polished id=982365 title="Instant Pot Hawaiian Chicken" steps=6
+1:27:47 AM [validator] [validator] firehouse flavor auto-improved: garnish_added, vegetable_flagged_for_repair
+1:27:47 AM [validator] [validator] recipe validation errors (35): step_mentions_unlisted:trivet, step_mentions_unlisted:instant, step_mentions_unlisted:juice, step_mentions_unlisted:mixed, step_mentions_unlisted:trivet, step_mentions_unlisted:secure, step_mentions_unlisted:instant, step_mentions_unlisted:manual, step_mentions_unlisted:mode, step_mentions_unlisted:pressure, step_mentions_unlisted:minute, step_mentions_unlisted:ensure, step_mentions_unlisted:steam, step_mentions_unlisted:valve, step_mentions_unlisted:sealing, step_mentions_unlisted:cooking, step_mentions_unlisted:pres, step_mentions_unlisted:cancel, step_mentions_unlisted:pressure, step_mentions_unlisted:release, step_mentions_unlisted:naturally, step_mentions_unlisted:minute, step_mentions_unlisted:using, step_mentions_unlisted:tong, step_mentions_unlisted:rice, step_mentions_unlisted:lettuce, step_mentions_unlisted:healthier, step_mentions_unlisted:option, step_mentions_unlisted:toasted, step_mentions_unlisted:sesame, step_mentions_unlisted:seed, step_mentions_unlisted:sliced, step_mentions_unlisted:green, step_mentions_unlisted:onion, firehouse_missing_vegetable:recipe lacks a substantial vegetable component
+1:27:47 AM [validator] [validator] ok=false, action=firehouse_flavor_improved:garnish_added,vegetable_flagged_for_repair+recipe_validation_failed, issues=35, meal_style=plated main, protein=chicken, cuisine=any, baseCarb=none, method=grill, sig=plated main|chicken|any|none|grill|barbecue sauce,chicken br..., title="Instant Pot Hawaiian Chicken"
+1:27:47 AM [v2] [v2] Served "Instant Pot Hawaiian Chicken" in 4253ms | source=spoonacular_v2
+1:27:47 AM [fallback] [fallback] used=false
+1:27:47 AM [audit] [audit] fixes=[cooking_method: "grill" → "instant pot"] issues=1 reqStyle=random infStyle=grill finStyle=plated main cuisine=any baseCarb=none method=instant pot health=balanced budget=standard appFit=false allergenOk=true
+1:27:47 AM [audit] [label-audit] Applied 1 fixes: cooking_method: "grill" → "instant pot"
+1:27:47 AM [api] [api] returning recipe id=36a95060-1626-4ce0-a017-0a26ad2bd67a signature=plated main|chicken|any|none|grill|barbecue sauce, title="Instant Pot Hawaiian Chicken" ingredientsCount=3 stepsCount=6
+1:27:47 AM [rate] [rate] Generation counted — request_id=auto-1779240463123 signature=plated main|chicken|any|none|grill|barbecue sauce,chicken breasts,dole pineapple tidbits session=0aa545a9-a483-4c21-990a-750ef514563d
+1:31:36 AM [perf] Warm-up ping received
+1:31:36 AM [express] GET /api/warm 200 in 1ms :: {"status":"warm","uptime":242.004626165}
+1:35:14 AM [perf] Warm-up ping received
+1:35:14 AM [express] GET /api/warm 200 in 1ms :: {"status":"warm","uptime":460.11912027}
+1:35:14 AM [v2] [v2] Selected filters | protein="chicken" cuisine="any" format="random" time="25-40" crew=6 allergens=[gluten] pantry=[none]
+1:35:14 AM [v2] [v2] Mapped Spoonacular params | query="chicken" cuisine="any" type="main course" maxReadyTime=40 intolerances="gluten" excludeIngredients="wheat flour,breadcrumbs,soy sauce,beef,ground beef,steak,pork,bacon,ham,sausage,shrimp,salmon,tuna" includeIngredients="chicken" diet="none" minServings=2
+1:35:14 AM [v2] [v2] Spoonacular search called | query="chicken" cuisine="any" type="main course" maxTime=40 allergens="gluten"
+1:35:14 AM [spoonacular] [spoonacular-cache] MISS search: query="chicken" | Spoonacular API called=yes
+1:35:14 AM [spoonacular] [spoonacular] Searching: query="chicken" cuisine=any diet=any limit=5
+1:35:17 AM [spoonacular] [spoonacular] Search returned 5 recipes (total available: 29)
+1:35:17 AM [spoonacular] [spoonacular-cache] Stored: search:query=chicken&number=5&offset=0&addRecipeInformation=true&fillIngredients | expires=2026-05-20T02:35:17.764Z
+1:35:17 AM [v2] [v2] Recipe candidates returned: 5
+1:35:17 AM [v2] [v2] Candidate pool: 3 after title-level filter (from 5 total)
+1:35:17 AM [v2] [v2] Selected candidate: id=982365 title="Instant Pot Hawaiian Chicken" (pool size=3)
+1:35:17 AM [spoonacular] [spoonacular-cache] HIT detail: id=982365 | Spoonacular API called=no
+1:35:17 AM [v2] [validator] selectedProtein=chicken
+1:35:17 AM [v2] [validator] inferredProtein=chicken
+1:35:17 AM [v2] [validator] mealStyle=random
+1:35:17 AM [v2] [validator] result=accepted
+1:35:17 AM [v2] [v2] ✓ Accepted "Instant Pot Hawaiian Chicken" | protein=chicken | ingredients=3 | steps=5 | source=spoonacular_v2
+1:35:17 AM [polish] [polish] cache HIT id=982365 title="Instant Pot Hawaiian Chicken"
+1:35:17 AM [validator] [validator] firehouse flavor auto-improved: garnish_added, vegetable_flagged_for_repair
+1:35:17 AM [validator] [validator] recipe validation errors (33): step_mentions_unlisted:trivet, step_mentions_unlisted:instant, step_mentions_unlisted:juice, step_mentions_unlisted:mixed, step_mentions_unlisted:trivet, step_mentions_unlisted:secure, step_mentions_unlisted:instant, step_mentions_unlisted:manual, step_mentions_unlisted:mode, step_mentions_unlisted:pressure, step_mentions_unlisted:minute, step_mentions_unlisted:ensure, step_mentions_unlisted:steam, step_mentions_unlisted:valve, step_mentions_unlisted:sealing, step_mentions_unlisted:cooking, step_mentions_unlisted:pres, step_mentions_unlisted:cancel, step_mentions_unlisted:pressure, step_mentions_unlisted:release, step_mentions_unlisted:naturally, step_mentions_unlisted:minute, step_mentions_unlisted:using, step_mentions_unlisted:tong, step_mentions_unlisted:rice, step_mentions_unlisted:lettuce, step_mentions_unlisted:healthier, step_mentions_unlisted:option, step_mentions_unlisted:crumbled, step_mentions_unlisted:feta, step_mentions_unlisted:balsamic, firehouse_missing_technique:recipe steps lack a real cooking technique (sear, roast, braise, caramelize, etc.), firehouse_missing_vegetable:recipe lacks a substantial vegetable component
+1:35:17 AM [validator] [validator] ok=false, action=firehouse_flavor_improved:garnish_added,vegetable_flagged_for_repair+recipe_validation_failed+duplicate_detected, issues=34, meal_style=plated main, protein=chicken, cuisine=any, baseCarb=none, method=grill, sig=plated main|chicken|any|none|grill|barbecue sauce,chicken br..., title="Instant Pot Hawaiian Chicken"
+1:35:17 AM [v2] [v2] Served "Instant Pot Hawaiian Chicken" in 2892ms | source=spoonacular_v2
+1:35:17 AM [fallback] [fallback] used=false
+1:35:17 AM [allergen] [allergen-postcheck] Clean — no allergen violations found
+1:35:17 AM [audit] [audit] fixes=[cooking_method: "grill" → "instant pot"; healthiness: "lean" → "balanced"] issues=1 reqStyle=random infStyle=grill finStyle=plated main cuisine=any baseCarb=none method=instant pot health=balanced budget=standard appFit=false allergenOk=true
+1:35:17 AM [audit] [label-audit] Applied 2 fixes: cooking_method: "grill" → "instant pot"; healthiness: "lean" → "balanced"
+1:35:17 AM [api] [api] returning recipe id=cca8d4d7-46af-477a-ba07-3f3d395b7b33 signature=plated main|chicken|any|none|grill|barbecue sauce, title="Instant Pot Hawaiian Chicken" ingredientsCount=3 stepsCount=6
+1:35:17 AM [rate] [rate] Generation counted — request_id=auto-1779240914880 signature=plated main|chicken|any|none|grill|barbecue sauce,chicken breasts,dole pineapple tidbits session=d50a18e5-c368-4080-b408-2875c64f37e9
+1:35:17 AM [express] POST /api/generate 200 in 2900ms :: {"title":"Instant Pot Hawaiian Chicken","meal_format":"random","servings":6,"tags":["any","instant pot","High Protein","Quick Cleanup","none"],"timing":{"prep_min":5,"cook_min":13,"total_min":18},"protein_safety":{"protein":"Chicken","internal_temp_f":165,"rest_min":0,"notes":"thickest part of breast or thigh, away from bone. Cook to 165°F (74°C) internal temperature."},"ingredients":[{"name":"barbecue sauce","qty":24,"unit":"oz","category":"sauce"},{"name":"chicken breasts","qty":5,"unit":"","category":"protein"},{"name":"dole pineapple tidbits","qty":30,"unit":"oz","category":"other"}],"steps":[{"n":1,"title":"Prepare the pot (no heat, 5 min)","heat":"no heat","minutes":5,"instructions":"Place the trivet in the Instant Pot. Add about a cup of water and a tablespoon of pineapple juice."},{"n":2,"title":"Mix ingredients (no heat, 3 min)","heat":"no heat","minutes":3,"instructions":"In a bowl, combine Dole pineapple tidbits and barbecue sauce. Stir until well mixed."},{"n":3,"title":"Add chicken (no heat, 2 min)","heat":"no heat","minutes":2,"instructions":"Cover the chicken breasts with the pineapple barbecue mixture. Place the chicken on the trivet in the pot."},{"n":4,"title":"Seal and cook (high pressure, 13 min)","heat":"high pressure","minutes":13,"instructions":"Secure the lid on the Instant Pot. Set to manual mode and cook on high pressure for 13 minutes. Ensure the steam valve is set to 'sealing'."},{"n":5,"title":"Release pressure (no heat, 10 min)","heat":"no heat","minutes":10,"instructions":"After cooking, press cancel and let the pressure release naturally for 5-10 minutes."},{"n":6,"title":"Serve chicken (no heat, 5 min)","heat":"no heat","minutes":5,"instructions":"Carefully remove the chicken using tongs. Serve it over rice or lettuce for a healthier option. Garnish with crumbled feta and a drizzle of balsamic glaze."}],"plating":{"serve_style":"plated main","assembly_instructions":"","optional_toppings":[]},"macros_per_serving":{"calories":473,"protein_g":38,"carbs_g":68,"fat_g":5},"chosen_protein":"chicken","primary_protein_source":"chicken","meal_style":"plated main","why_it_fits_tonight":"Quick and easy Hawaiian chicken for the crew.","cleanup_tip":"Soak pots and pans right after plating while they're still warm. Wipe down prep surfaces and return unused ingredients to storage immediately.","pro_tips":["Scaled from 4 servings to 6 — check single-use items (whole cans, eggs) individually.","Taste and adjust seasoning after scaling — salt doesn't always scale linearly."],"recipe_tags":{"cuisine":"any","cooking_method":"instant pot","base_carb":"none","key_ingredients":["barbecue sauce","chicken breasts","dole pineapple tidbits"],"high_protein":true,"high_fiber":false,"quick_cleanup":true},"template_id":0,"_signature":"plated main|chicken|any|none|grill|barbecue sauce,chicken breasts,dole pineapple tidbits","_id":"cca8d4d7-46af-477a-ba07-3f3d395b7b33"}
+1:35:36 AM [perf] Warm-up ping received
+1:35:36 AM [express] GET /api/warm 200 in 1ms :: {"status":"warm","uptime":482.002990255}
+1:39:36 AM [perf] Warm-up ping received
+1:39:36 AM [express] GET /api/warm 200 in 1ms :: {"status":"warm","uptime":722.003362296}

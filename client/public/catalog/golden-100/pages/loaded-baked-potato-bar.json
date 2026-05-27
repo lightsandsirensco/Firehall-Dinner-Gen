@@ -1,0 +1,147 @@
+{
+  "slug": "loaded-baked-potato-bar",
+  "title": "Loaded Baked Potato Bar",
+  "subtitle": "Build-your-own spuds for the crew",
+  "category": "comfort_food",
+  "cuisine": "american",
+  "description": "Loaded Baked Potato Bar is a american bowl built for a hungry firehall crew — Build-your-own spuds for the crew. Hearty portions, station-kitchen timing, and flavors everyone recognizes after a long shift.",
+  "crewSize": 8,
+  "cookTime": 55,
+  "prepTime": 20,
+  "difficulty": "medium",
+  "calories": 720,
+  "protein": 40,
+  "carbs": 68,
+  "fats": 36,
+  "tags": [
+    "protein:beef",
+    "format:bowl",
+    "category:comfort_food",
+    "comfort",
+    "beef",
+    "golden_100"
+  ],
+  "equipment": [
+    "Large cast iron skillet or Dutch oven",
+    "Large sheet trays",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "ingredients": [
+    {
+      "name": "Beef (main cut for recipe)",
+      "quantity": "3",
+      "unit": "lb"
+    },
+    {
+      "name": "Kosher salt",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "Black pepper",
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "Cooking oil",
+      "quantity": "0.3",
+      "unit": "cup"
+    },
+    {
+      "name": "Cooked rice or grains",
+      "quantity": "4",
+      "unit": "cups"
+    },
+    {
+      "name": "Mixed vegetables",
+      "quantity": "4",
+      "unit": "cups"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Prep the line",
+      "instruction": "Set out all ingredients for Loaded Baked Potato Bar before you turn on heat — firefighters eat on a schedule. Pat proteins dry and season aggressively with salt and pepper; dry surfaces brown instead of steam.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Build the base",
+      "instruction": "Heat oil in your largest skillet, Dutch oven, or on the flat-top over medium-high until it shimmers. Add aromatics (onion first) and cook until the edges turn golden and the smell sweetens — usually 4–6 minutes. If garlic is in the recipe, add it after the onion softens so it doesn't burn.",
+      "minutes": 8,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Cook the main",
+      "instruction": "Cook the primary protein or base for Loaded Baked Potato Bar until it hits proper color and safe internal temperature. Don't crowd the pan — work in batches if needed so you get browning, not gray stew. Listen for a steady sizzle; if it's silent, the heat is too low.",
+      "minutes": 20,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Finish and season",
+      "instruction": "Bring components together, taste, and adjust salt. Sauce should coat, not pool. If cheese is involved, melt it just until glossy — another 1–2 minutes under a lid or broiler. Let heavy proteins rest 5 minutes before slicing.",
+      "minutes": 10,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Serve the hall",
+      "instruction": "Transfer to sheet trays or a serving line immediately. Keep backup warm at 200°F. Call the crew while it's hot — this meal is built for a hungry hall, not a photo shoot.",
+      "minutes": 5,
+      "heatLevel": "low"
+    }
+  ],
+  "proTips": [
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Taste for salt at the end — hall palates run salty after long shifts."
+  ],
+  "tonightSpread": [
+    "Build bowls base → grain → protein → toppings so the line moves in one direction.",
+    "Put hot components closest to the crew, cold crunch at the far end.",
+    "Line up Loaded Baked Potato Bar on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+  ],
+  "leftovers": [
+    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
+    "Label trays with date and reheat to 165°F minimum before second shift."
+  ],
+  "nutrition": {
+    "calories": 720,
+    "protein": 40,
+    "carbs": 68,
+    "fats": 36,
+    "label": "per serving (hall portion)"
+  },
+  "heroImage": "/images/golden-100/loaded-baked-potato-bar.jpg",
+  "mobileImage": "/images/mobile/loaded-baked-potato-bar.jpg",
+  "thumbImage": "/images/thumbs/loaded-baked-potato-bar.jpg",
+  "railImage": "/images/rails/loaded-baked-potato-bar.jpg",
+  "realismScore": 100,
+  "firefighterScore": 100,
+  "popularityWeight": 3.6,
+  "searchTerms": [
+    "loaded baked potato bar",
+    "american",
+    "beef",
+    "bowl",
+    "comfort",
+    "loaded baked potato bar dinner",
+    "golden_100"
+  ],
+  "relatedSlugs": [
+    "philly-cheesesteak-skillet",
+    "beef-barley-soup",
+    "meatloaf-mashed",
+    "loaded-potato-feed",
+    "beef-dip",
+    "steak-sandwiches"
+  ],
+  "sourceName": "Firehall Classics",
+  "generatedAt": "2026-05-27T15:03:06.164Z",
+  "contentVersion": 1
+}

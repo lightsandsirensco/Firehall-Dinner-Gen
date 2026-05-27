@@ -1,0 +1,176 @@
+{
+  "slug": "chicken-caesar",
+  "title": "Hall Caesar Chicken",
+  "subtitle": "Crispy chicken, real parmesan, crew salad night",
+  "category": "firehall_classics",
+  "cuisine": "american",
+  "description": "Big bowls, hot chicken, all the fixings",
+  "crewSize": 8,
+  "cookTime": 60,
+  "prepTime": 25,
+  "difficulty": "medium",
+  "calories": 640,
+  "protein": 32,
+  "carbs": 68,
+  "fats": 30,
+  "tags": [
+    "protein:chicken",
+    "format:salad",
+    "category:firehall_classics",
+    "healthy",
+    "chicken",
+    "golden_100"
+  ],
+  "equipment": [
+    "Large sheet trays",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "ingredients": [
+    {
+      "name": "Chicken breast",
+      "quantity": "13.3",
+      "unit": "lb"
+    },
+    {
+      "name": "Romaine hearts",
+      "quantity": "13.3",
+      "unit": "heads"
+    },
+    {
+      "name": "Caesar dressing",
+      "quantity": "5.3",
+      "unit": "cups"
+    },
+    {
+      "name": "Thick-cut bacon",
+      "quantity": "2.7",
+      "unit": "lb"
+    },
+    {
+      "name": "Parmesan wedge",
+      "quantity": "1.3",
+      "unit": "lb"
+    },
+    {
+      "name": "French bread / baguette",
+      "quantity": "4",
+      "unit": "loaves"
+    },
+    {
+      "name": "Butter + garlic",
+      "quantity": "1.3",
+      "unit": "batch"
+    },
+    {
+      "name": "Day-old bread cubes",
+      "quantity": "10.7",
+      "unit": "cups"
+    },
+    {
+      "name": "Olive oil",
+      "quantity": "0.7",
+      "unit": "cup"
+    },
+    {
+      "name": "Lemon",
+      "quantity": "8"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Prep the station (no heat, 12 min)",
+      "instruction": "Lay out chicken, romaine, dressing, parmesan, bread, sheet pans, and a large skillet or grill pan before any heat goes on. In a busy hall, cooking gets messy fast if you're hunting for ingredients halfway through.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Cook the chicken (medium-high, 14–16 min)",
+      "instruction": "Heat a large skillet over medium-high until a drop of water sizzles on contact. Season chicken with salt, pepper, garlic powder, and a little paprika. Add oil, then chicken in a single layer — overcrowd and it steams instead of coloring. Cook 5–6 minutes per side until golden outside and 165°F in the center. Rest 5 minutes, then slice across the grain so juices stay in the meat.",
+      "minutes": 16,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Make the garlic bread (400°F oven, 8–10 min)",
+      "instruction": "Spread garlic butter on halved loaves and sprinkle parmesan and parsley if you have them. Bake at 400°F until edges are crisp and the top is golden. Keep an eye on it — garlic burns fast and nobody wants black toast at the table.",
+      "minutes": 10,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Toast the croutons (400°F, 8–10 min)",
+      "instruction": "Toss bread cubes with oil, salt, and garlic powder. Spread on a sheet pan and bake until crunchy all the way through — soft centers will sog out the salad in minutes.",
+      "minutes": 10,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Build the Caesar salad (no heat, 10 min)",
+      "instruction": "Chop romaine into bite-sized pieces and dry it well so dressing sticks instead of pooling. Toss lightly with Caesar dressing, parmesan, croutons, and a squeeze of lemon. Add dressing gradually — coated lettuce, not soup.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Slice and serve (no heat, 5 min)",
+      "instruction": "Slice rested chicken across the grain and lay it over the Caesar while still warm. Serve with hot garlic bread on the side and extra parmesan at the table for the crew.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Slice chicken thick and against the grain so it feels like a main, not a garnish.",
+    "Keep bacon and croutons in warm pans so the line stays loud and crunchy.",
+    "Dress each bowl to order — soggy Caesar kills the vibe.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Taste for salt at the end — hall palates run salty after long shifts.",
+    "Pull chicken at 160°F and let carryover hit 165°F — dry breast ruins crew morale."
+  ],
+  "tonightSpread": [
+    "Plate Hall Caesar Chicken with sides in separate pans so the crew can mix portions.",
+    "Line up Hall Caesar Chicken on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+  ],
+  "leftovers": [
+    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
+    "Label trays with date and reheat to 165°F minimum before second shift."
+  ],
+  "nutrition": {
+    "calories": 640,
+    "protein": 32,
+    "carbs": 68,
+    "fats": 30,
+    "label": "per serving (hall portion)"
+  },
+  "heroImage": "/images/golden-100/chicken-caesar.jpg",
+  "mobileImage": "/images/mobile/chicken-caesar.jpg",
+  "thumbImage": "/images/thumbs/chicken-caesar.jpg",
+  "railImage": "/images/rails/chicken-caesar.jpg",
+  "realismScore": 100,
+  "firefighterScore": 100,
+  "popularityWeight": 3.6,
+  "searchTerms": [
+    "hall caesar chicken",
+    "chicken caesar",
+    "american",
+    "chicken",
+    "salad",
+    "healthy",
+    "golden_100"
+  ],
+  "relatedSlugs": [
+    "bbq-chicken-bowls",
+    "chicken-pot-pie",
+    "herb-roasted-thighs",
+    "chicken-dumpling-soup",
+    "crispy-chicken-cutlets",
+    "jerk-chicken"
+  ],
+  "sourceName": "Firehall Classics",
+  "classicSlug": "chicken-caesar",
+  "generatedAt": "2026-05-27T15:03:06.127Z",
+  "contentVersion": 1
+}

@@ -19,6 +19,12 @@ import {
 import { exploreIdFromRecipeId, isSyntheticExploreId } from "../shared/explore-curated-id.js";
 import type { CatalogBalanceSnapshot } from "../shared/feed-balance.js";
 import { recipeFingerprint, normalizeTitleKey } from "../shared/ingestion/dedupe.js";
+import { GOLDEN_100_RECIPES } from "../shared/golden-100/manifest.js";
+import { parseEditorialImageMetadata } from "../shared/editorial-image-metadata.js";
+import { safeJsonParseNullable } from "./lib/safe-json.js";
+import { normalizeImagePath } from "../shared/media/normalize-image-path.js";
+
+const GOLDEN_100_SLUGS = new Set(GOLDEN_100_RECIPES.map((r) => r.slug));
 import type { IngestRecipeDraft } from "../shared/ingestion/recipe-ingest-schema.js";
 
 let db: SqliteDatabase | null = null;
@@ -132,7 +138,34 @@ function insertChildRows(database: SqliteDatabase, input: CuratedRecipeInsert): 
 }
 
 export function upsertCuratedRecipe(input: CuratedRecipeInsert): CuratedRecipe {
-  const validation = validateCuratedRecipeInsert(input);
+  // Normalize media paths before strict validation. This ensures all stored media
+  // paths are either absolute URLs or site-root /images/* paths.
+  const editorialNormalized = input.editorialImage
+    ? {
+        ...input.editorialImage,
+        heroImage: normalizeImagePath(input.editorialImage.heroImage),
+        thumbnailImage: normalizeImagePath(input.editorialImage.thumbnailImage),
+        mobileHeroImage: normalizeImagePath(input.editorialImage.mobileHeroImage),
+        ...(typeof input.editorialImage.railPreviewImage === "string"
+          ? { railPreviewImage: normalizeImagePath(input.editorialImage.railPreviewImage) }
+          : {}),
+        ...(typeof input.editorialImage.manualOverridePath === "string"
+          ? { manualOverridePath: normalizeImagePath(input.editorialImage.manualOverridePath) }
+          : {}),
+      }
+    : undefined;
+
+  const normalized: CuratedRecipeInsert = {
+    ...input,
+    heroImage: normalizeImagePath(input.heroImage),
+    images: input.images?.map((img) => ({
+      ...img,
+      url: normalizeImagePath(img.url),
+    })),
+    editorialImage: editorialNormalized ?? input.editorialImage,
+  };
+
+  const validation = validateCuratedRecipeInsert(normalized);
   if (!validation.ok) {
     throw new Error(`Invalid curated recipe: ${validation.errors.join("; ")}`);
   }
@@ -150,7 +183,7 @@ export function upsertCuratedRecipe(input: CuratedRecipeInsert): CuratedRecipe {
           recipe_id, slug, status, title, summary, hero_image, hero_image_alt,
           prep_minutes, cook_minutes, total_minutes, servings_base, cleanup_difficulty,
           protein, cuisine, category, meal_format, meal_archetype, cooking_style,
-          archetype_family, archetype_variation, quality_breakdown_json,
+          archetype_family, archetype_variation, quality_breakdown_json, editorial_image_json,
           comfort_score, healthy_score, firehall_suitability_score, quality_score, appetite_score, trend_score,
           source_kind, source_name, source_url, source_license, external_id,
           legacy_catalog_id, generate_response_json, featured, trending_rank, updated_at
@@ -158,7 +191,7 @@ export function upsertCuratedRecipe(input: CuratedRecipeInsert): CuratedRecipe {
           ?, ?, ?, ?, ?, ?, ?,
           ?, ?, ?, ?, ?,
           ?, ?, ?, ?, ?, ?,
-          ?, ?, ?,
+          ?, ?, ?, ?,
           ?, ?, ?, ?, ?, ?,
           ?, ?, ?, ?, ?,
           ?, ?, ?, ?, datetime('now')
@@ -184,6 +217,7 @@ export function upsertCuratedRecipe(input: CuratedRecipeInsert): CuratedRecipe {
           archetype_family = excluded.archetype_family,
           archetype_variation = excluded.archetype_variation,
           quality_breakdown_json = excluded.quality_breakdown_json,
+          editorial_image_json = excluded.editorial_image_json,
           comfort_score = excluded.comfort_score,
           healthy_score = excluded.healthy_score,
           firehall_suitability_score = excluded.firehall_suitability_score,
@@ -223,6 +257,7 @@ export function upsertCuratedRecipe(input: CuratedRecipeInsert): CuratedRecipe {
         data.archetypeFamily ?? null,
         data.archetypeVariation ?? null,
         data.qualityBreakdown ? JSON.stringify(data.qualityBreakdown) : null,
+        data.editorialImage ? JSON.stringify(data.editorialImage) : null,
         data.scores.comfort,
         data.scores.healthy,
         data.scores.firehallSuitability,
@@ -313,6 +348,7 @@ function sortByEditorialPriority(rows: CuratedRecipeSummary[]): CuratedRecipeSum
       });
       if (isAggregatorSourceName(row.sourceName)) editorial -= 28;
       if (row.heroImage.includes("spoonacular.com")) editorial -= 12;
+      if (GOLDEN_100_SLUGS.has(row.slug)) editorial += 45;
       return { row, editorial };
     })
     .sort((a, b) => {
@@ -525,14 +561,10 @@ function hydrateCuratedRecipe(database: SqliteDatabase, row: Record<string, unkn
     )
     .all(recipeId) as Record<string, unknown>[];
 
-  let generateResponse: CuratedRecipe["generateResponse"];
-  if (row.generate_response_json) {
-    try {
-      generateResponse = JSON.parse(String(row.generate_response_json));
-    } catch {
-      generateResponse = undefined;
-    }
-  }
+  const generateResponse = row.generate_response_json
+    ? safeJsonParseNullable<CuratedRecipe["generateResponse"]>(String(row.generate_response_json)) ??
+      undefined
+    : undefined;
 
   return {
     recipeId,
@@ -578,9 +610,16 @@ function hydrateCuratedRecipe(database: SqliteDatabase, row: Record<string, unkn
     archetypeFamily: row.archetype_family ? String(row.archetype_family) : undefined,
     archetypeVariation: row.archetype_variation ? String(row.archetype_variation) : undefined,
     qualityBreakdown: row.quality_breakdown_json
-      ? (JSON.parse(String(row.quality_breakdown_json)) as CuratedRecipe["qualityBreakdown"])
+      ? (safeJsonParseNullable<CuratedRecipe["qualityBreakdown"]>(
+          String(row.quality_breakdown_json),
+        ) ?? undefined)
       : undefined,
     cookingStyle: row.cooking_style ? String(row.cooking_style) : undefined,
+    editorialImage: row.editorial_image_json
+      ? parseEditorialImageMetadata(
+          safeJsonParseNullable(String(row.editorial_image_json)),
+        ) ?? undefined
+      : undefined,
     tags: tags.map((t) => t.tag),
     categories: categories.map((c) => c.category_key),
     scores: {
@@ -763,4 +802,41 @@ export function getCuratedStoreStats(): {
     .prepare("SELECT MAX(version) AS v FROM schema_migrations")
     .get() as { v: number | null };
   return { total, published, draft, migrationVersion: mig?.v ?? 0 };
+}
+
+export interface CuratedTagSummary {
+  recipeId: string;
+  slug: string;
+  title: string;
+  heroImage: string;
+  protein: string;
+  quality: number;
+  sourceKind: string;
+  status: string;
+}
+
+/** Published recipes carrying an editorial tag (e.g. golden_100). */
+export function listCuratedSummariesByTag(tag: string, limit = 200): CuratedTagSummary[] {
+  const database = requireDb();
+  const rows = database
+    .prepare(
+      `SELECT cr.recipe_id, cr.slug, cr.title, cr.hero_image, cr.protein, cr.quality_score, cr.source_kind, cr.status
+       FROM curated_recipes cr
+       INNER JOIN curated_recipe_tags t ON t.recipe_id = cr.recipe_id AND t.tag = ?
+       WHERE cr.status = 'published'
+       ORDER BY cr.quality_score DESC
+       LIMIT ?`,
+    )
+    .all(tag, limit) as Record<string, unknown>[];
+
+  return rows.map((row) => ({
+    recipeId: String(row.recipe_id),
+    slug: String(row.slug),
+    title: String(row.title),
+    heroImage: String(row.hero_image),
+    protein: String(row.protein),
+    quality: Number(row.quality_score) || 0,
+    sourceKind: String(row.source_kind),
+    status: String(row.status),
+  }));
 }

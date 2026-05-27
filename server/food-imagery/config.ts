@@ -1,6 +1,11 @@
 import path from "node:path";
 import { hasOpenAIKey } from "../openai-client.js";
 import { resolvePublicAppUrl } from "../../shared/replit-public-url.js";
+import {
+  GPT_IMAGE_SIZE_SQUARE,
+  normalizeGptImageSize,
+  type GptImageApiSize,
+} from "../lib/image-sizes.js";
 
 function defaultStorageDir(): string {
   const custom = process.env.FOOD_IMAGERY_STORAGE_DIR?.trim();
@@ -12,7 +17,7 @@ function defaultStorageDir(): string {
 export interface FoodImageryConfig {
   enabled: boolean;
   model: string;
-  size: "1024x1024" | "512x512" | "256x256";
+  size: GptImageApiSize;
   maxConcurrent: number;
   maxRetries: number;
   visionValidate: boolean;
@@ -27,10 +32,13 @@ export interface FoodImageryConfig {
 
 export function getFoodImageryConfig(): FoodImageryConfig {
   const publicBase = resolvePublicAppUrl();
+  const rawSize = process.env.FOOD_IMAGERY_SIZE?.trim();
+  const size = normalizeGptImageSize(rawSize, GPT_IMAGE_SIZE_SQUARE);
+
   return {
     enabled: process.env.FOOD_IMAGERY_ENABLED === "true" && hasOpenAIKey(),
     model: process.env.FOOD_IMAGERY_MODEL?.trim() || "gpt-image-1",
-    size: (process.env.FOOD_IMAGERY_SIZE as FoodImageryConfig["size"]) || "1024x1024",
+    size,
     maxConcurrent: Math.max(1, parseInt(process.env.FOOD_IMAGERY_MAX_CONCURRENT || "2", 10)),
     maxRetries: Math.max(0, parseInt(process.env.FOOD_IMAGERY_MAX_RETRIES || "2", 10)),
     visionValidate: process.env.FOOD_IMAGERY_VISION_VALIDATE === "true",

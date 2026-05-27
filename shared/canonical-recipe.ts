@@ -1,6 +1,9 @@
 /**
  * Canonical recipe catalog — internal source-of-truth for real, attributed meals.
  * Populated via Spoonacular V2 write-through (not AI invention).
+ *
+ * Platform recipe document schema (identity, ingredients, media, scoring):
+ * @see `./recipe/index.js` — `FirehallRecipe` + Zod validators + legacy adapters.
  */
 
 import type { GenerateResponse } from "./schema.js";

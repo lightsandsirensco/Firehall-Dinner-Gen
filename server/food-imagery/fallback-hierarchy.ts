@@ -1,6 +1,7 @@
 import { getClassicHallMeal } from "../../shared/classic-hall-meals.js";
 import { isFirehallOwnedHeroUrl } from "../../shared/food-imagery/paths.js";
 import { resolveEditorialFallbackHero } from "../../shared/meal-hero-fallback.js";
+import { heroPathConflictsTitle } from "../../shared/meal-image-title-match.js";
 import { getLatestAssetForRecipe } from "./asset-store.js";
 import type { HeroImageStatus } from "./meal-integration.js";
 
@@ -43,6 +44,10 @@ export async function resolveHeroHierarchy(opts: {
   for (const key of opts.recipeKeys) {
     const asset = await getLatestAssetForRecipe(key);
     if (asset?.publicPath) {
+      const title = opts.title || "";
+      if (title && heroPathConflictsTitle(asset.publicPath, title, opts.mealFormat)) {
+        continue;
+      }
       return {
         hero_image: asset.publicPath,
         hero_image_alt: alt,
@@ -82,7 +87,7 @@ export async function resolveHeroHierarchy(opts: {
     mealFormat: opts.mealFormat,
     protein: opts.protein,
   });
-  if (fb) {
+  if (fb && !heroPathConflictsTitle(fb, opts.title || "", opts.mealFormat)) {
     return {
       hero_image: fb,
       hero_image_alt: alt,

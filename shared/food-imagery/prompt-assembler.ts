@@ -13,6 +13,9 @@ export interface AssemblePromptInput {
   shotPreset: MealShotPreset;
   dishSpecificPlating?: string;
   extraNegative?: string[];
+  /** Master category editorial overrides */
+  categoryMood?: string;
+  categoryLighting?: string;
 }
 
 /**
@@ -42,9 +45,12 @@ export function assembleEditorialPromptSpec(input: AssemblePromptInput): FoodIma
     negative,
     styleTags: ["firehall-editorial", "cinematic-dark", "comfort-food", "menu-hero"],
     composition: input.shotPreset.plating,
-    lighting: getMasterStylePromptLines().find((l) => l.startsWith("Lighting:"))?.replace("Lighting: ", "") ?? "",
+    lighting:
+      input.categoryLighting ||
+      getMasterStylePromptLines().find((l) => l.startsWith("Lighting:"))?.replace("Lighting: ", "") ||
+      "",
     camera: `${input.shotPreset.angle}; ${input.shotPreset.lens}`,
-    mood: "premium firehall comfort, single-brand consistency",
+    mood: input.categoryMood || "premium firehall comfort, single-brand consistency",
     styleVersion: FOOD_IMAGERY_STYLE_VERSION,
     shotPresetId: input.shotPreset.id,
     aspectRatio: "1:1",

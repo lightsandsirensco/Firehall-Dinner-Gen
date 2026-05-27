@@ -1,5 +1,5 @@
 import { randomUUID } from "node:crypto";
-import pLimit from "p-limit";
+import { createConcurrencyLimiter, type ConcurrencyLimiter } from "../lib/concurrency-limit.js";
 import { log } from "../logger.js";
 import type { FoodImageryContext } from "../../shared/food-imagery/types.js";
 import { getFoodImageryConfig } from "./config.js";
@@ -10,15 +10,19 @@ import { buildPromptForContext } from "./prompt-resolve.js";
 
 const pending = new Map<string, Promise<unknown>>();
 
-function limiter() {
-  const cfg = getFoodImageryConfig();
-  return pLimit(cfg.maxConcurrent);
+let limit: ConcurrencyLimiter | null = null;
+
+async function getLimiter(): Promise<ConcurrencyLimiter> {
+  if (!limit) {
+    const cfg = getFoodImageryConfig();
+    limit = await createConcurrencyLimiter(cfg.maxConcurrent);
+  }
+  return limit;
 }
 
-let limit = limiter();
-
-export function resetFoodImageryQueue(): void {
-  limit = limiter();
+export async function resetFoodImageryQueue(): Promise<void> {
+  const cfg = getFoodImageryConfig();
+  limit = await createConcurrencyLimiter(cfg.maxConcurrent);
 }
 
 export async function enqueueFoodImageryJob(
@@ -36,7 +40,8 @@ export async function enqueueFoodImageryJob(
   const promptHash = hashPrompt(buildPromptForContext(ctx));
   await upsertFoodImageryJob(jobId, key, promptHash, "queued");
 
-  const task = limit(async () => {
+  const runLimit = await getLimiter();
+  const task = runLimit(async () => {
     try {
       await generateFoodImageryForRecipe(ctx, { ...options, sync: true, force: options.force });
     } catch (err: unknown) {

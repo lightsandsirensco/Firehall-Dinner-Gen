@@ -1,5 +1,5 @@
-import pLimit from "p-limit";
 import pRetry from "p-retry";
+import { createConcurrencyLimiter } from "../../lib/concurrency-limit.js";
 
 /**
  * Batch Processing Utilities
@@ -90,7 +90,7 @@ export async function batchProcess<T, R>(
     onProgress,
   } = options;
 
-  const limit = pLimit(concurrency);
+  const limit = await createConcurrencyLimiter(concurrency);
   let completed = 0;
 
   const promises = items.map((item, index) =>

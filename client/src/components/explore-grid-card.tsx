@@ -6,6 +6,7 @@ import {
 } from "@/lib/explore-recipe";
 import { ExploreRecipeImage } from "@/components/explore-recipe-image";
 import { cn } from "@/lib/utils";
+import { app } from "@/lib/design-tokens";
 
 export interface ExploreGridCardProps {
   recipe: ExploreRecipeCard;
@@ -36,13 +37,7 @@ export function ExploreGridCard({
 
   return (
     <article
-      className={cn(
-        "group relative cursor-pointer overflow-hidden rounded-xl sm:rounded-2xl",
-        "transition-transform duration-300 ease-out",
-        "hover:scale-[1.02] hover:shadow-2xl hover:shadow-black/40",
-        "active:scale-[0.98] touch-manipulation motion-reduce:transition-none motion-reduce:hover:scale-100",
-        className,
-      )}
+      className={cn(app.cardCinematic, "group", className)}
       onClick={onClick}
       data-testid={`card-explore-result-${recipe.id}`}
     >

@@ -1,11 +1,12 @@
 import { memo, useMemo } from "react";
-import { Clock, Flame } from "lucide-react";
+import { Clock, Flame, Sparkles } from "lucide-react";
 import type { ExploreRecipeCard } from "@/lib/explore-recipe";
 import { computeCardPresentation } from "@/lib/explore-recipe";
 import { buildExploreTrustLine } from "@/lib/explore-trust-line";
 import { ExploreRecipeImage } from "@/components/explore-recipe-image";
 import { EXPLORE_CARD_ASPECT } from "@/lib/hero-image";
 import { cn } from "@/lib/utils";
+import { app } from "@/lib/design-tokens";
 
 export interface ExploreCinematicCardProps {
   recipe: ExploreRecipeCard;
@@ -15,6 +16,9 @@ export interface ExploreCinematicCardProps {
   onClick: () => void;
   className?: string;
   priority?: boolean;
+  /** Recommendation storytelling — overrides generic trust line */
+  whyThisMeal?: string;
+  recommendationChip?: string | null;
 }
 
 function ExploreCinematicCardInner({
@@ -25,6 +29,8 @@ function ExploreCinematicCardInner({
   onClick,
   className,
   priority = false,
+  whyThisMeal,
+  recommendationChip,
 }: ExploreCinematicCardProps) {
   const presentation = useMemo(() => {
     const computed = computeCardPresentation(recipe, { crewSize, isCurated });
@@ -34,7 +40,10 @@ function ExploreCinematicCardInner({
     };
   }, [recipe, crewSize, isCurated]);
 
-  const trustLine = useMemo(() => buildExploreTrustLine(recipe), [recipe]);
+  const trustLine = useMemo(
+    () => whyThisMeal?.trim() || buildExploreTrustLine(recipe),
+    [recipe, whyThisMeal],
+  );
   const isGrid = layout === "grid";
 
   const traitPills = presentation.quickPills.filter(
@@ -49,15 +58,7 @@ function ExploreCinematicCardInner({
 
   return (
     <article
-      className={cn(
-        "group relative cursor-pointer overflow-hidden rounded-2xl sm:rounded-[1.35rem]",
-        "ring-1 ring-white/[0.14] shadow-lg shadow-black/30",
-        "transition-[transform,box-shadow,ring-color] duration-300 ease-out",
-        "hover:ring-primary/50 hover:shadow-[0_24px_56px_-14px_rgba(0,0,0,0.85)]",
-        "active:scale-[0.98] motion-reduce:transition-none",
-        "touch-manipulation select-none",
-        className,
-      )}
+      className={cn(app.cardCinematic, "group", className)}
       onClick={onClick}
       role="button"
       tabIndex={0}
@@ -85,11 +86,23 @@ function ExploreCinematicCardInner({
           />
         </div>
 
-        <div className="absolute top-3 left-3 right-3 flex flex-wrap items-start gap-1.5 z-10 max-w-[85%]">
-          {isCurated && (
+        <div className="absolute top-3 left-3 right-3 flex flex-wrap items-start gap-1.5 z-10 max-w-[90%]">
+          {recommendationChip && (
+            <span className="inline-flex items-center gap-1 bg-violet-600/90 text-white text-[9px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-lg border border-white/15">
+              <Sparkles className="w-3 h-3 opacity-90" aria-hidden />
+              {recommendationChip}
+            </span>
+          )}
+          {isCurated && !recommendationChip && (
             <span className="inline-flex items-center gap-1 bg-primary text-primary-foreground text-[9px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-lg shadow-primary/20">
               <Flame className="w-3 h-3" />
               Hall Pick
+            </span>
+          )}
+          {isCurated && recommendationChip && (
+            <span className="inline-flex items-center gap-1 bg-primary/90 text-primary-foreground text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full">
+              <Flame className="w-2.5 h-2.5" />
+              Curated
             </span>
           )}
           {presentation.displayBadges.slice(0, 1).map((badge) => (
@@ -124,8 +137,20 @@ function ExploreCinematicCardInner({
             <h3 className="font-heading text-xl sm:text-2xl leading-[1.12] text-white line-clamp-2 drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]">
               {recipe.title}
             </h3>
-            <p className="mt-1.5 text-xs sm:text-sm text-white/88 line-clamp-2 font-medium leading-snug">
-              {trustLine}
+            <p
+              className="mt-1.5 text-xs sm:text-sm text-white/90 line-clamp-2 font-medium leading-snug"
+              data-testid="why-this-meal"
+            >
+              {whyThisMeal ? (
+                <>
+                  <span className="text-white/70 font-semibold uppercase text-[9px] tracking-wider block mb-0.5">
+                    Why this meal
+                  </span>
+                  {trustLine}
+                </>
+              ) : (
+                trustLine
+              )}
             </p>
           </div>
         </div>

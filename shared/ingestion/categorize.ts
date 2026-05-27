@@ -1,6 +1,11 @@
 import type { IngestRecipeDraft } from "./recipe-ingest-schema.js";
 import type { MealArchetype } from "../canonical-recipe.js";
 
+/**
+ * Legacy explore pool ids — maps to explore-discovery-catalog poolTag.
+ * New editorial taxonomy: @shared/categories (12 master categories).
+ */
+
 /** Explore editorial pool ids — maps to explore-discovery-catalog poolTag */
 export const EXPLORE_POOL_IDS = [
   "trending",

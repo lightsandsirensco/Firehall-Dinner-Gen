@@ -1,5 +1,6 @@
-import OpenAI from "openai";
+import type OpenAI from "openai";
 import type { TemplateRow, GenerateRequest, GenerateResponse, ProteinSafetyItem, RecipeTags } from "@shared/schema";
+import { createOpenAIClient } from "./openai-client.js";
 import { log, logVerbose, clip, clipReasons, formatLogFields, isDebugLogs } from "./logger";
 import { getForbiddenProteinsText, validateProteinCompliance, validateTitleConsistency, validateStructure, validateVegVariety, commitVegBase, getRecentVegBases } from "./protein-validator";
 import { validateFirehouseFlavor } from "./validateRecipe";
@@ -14,10 +15,9 @@ import { isLlmFallbackAllowed } from "./recipe-fallback-policy";
 import { formatUserDataBlock, sanitizePromptStringList } from "./prompt-sanitize.js";
 import { enhanceRecipeStepsSync, buildEnhanceContextFromTitle } from "./instruction-enhancer.js";
 
-const openai = new OpenAI({
-  apiKey: process.env.AI_INTEGRATIONS_OPENAI_API_KEY,
-  baseURL: process.env.AI_INTEGRATIONS_OPENAI_BASE_URL,
-});
+function getOpenAIClient(): OpenAI {
+  return createOpenAIClient();
+}
 
 const MAX_PROTEIN_RETRIES = 4;
 
@@ -294,7 +294,7 @@ async function callAI(
 
   try {
     const startMs = Date.now();
-    const apiPromise = openai.chat.completions.create({
+    const apiPromise = getOpenAIClient().chat.completions.create({
       model: "gpt-5-mini",
       messages: [
         { role: "system", content: finalSystem },
@@ -549,7 +549,7 @@ RECIPE COMPOSITION (mandatory — every recipe must have ALL of these):
 2. VEGETABLE: At least one substantial vegetable component (roasted broccoli, charred corn, sautéed peppers, caramelized onions, roasted root vegetables, wilted greens, etc.). Not just a garnish.
 3. SAUCE/SEASONING: A named, flavorful sauce, marinade, glaze, rub, or seasoning blend listed as an ingredient or built in a step. Examples: "garlic butter", "soy-ginger glaze", "chipotle crema", "smoky BBQ rub", "honey-sriracha sauce", "lemon-herb vinaigrette", "cajun seasoning", "creamy pesto". Plain "salt and pepper" alone does NOT count.
 4. GARNISH/FINISH: A finishing element in the last step — fresh herbs, citrus squeeze, cheese crumble, toasted seeds, pickled onion, drizzle of hot sauce, etc.
-TITLE RULES (mandatory): Use this formula: {Cooking Method or Texture Word} + {Flavor Descriptor} + {Protein} + {Meal Style or Base}. Use 1-2 vivid adjectives max. Only use descriptors that are supported by actual ingredients/spices (e.g. "Smoky" only if using smoked paprika/chipotle/BBQ; "Zesty" only if using lime/lemon; "Creamy" only if using cream/cheese/coconut milk; "Crispy" only if a frying/roasting step produces crispness). Use texture words only if supported by cooking method in steps (crispy, roasted, grilled, charred, seared, caramelized). NEVER use clickbait words: "ultimate", "insane", "crazy", "life-changing", "best-ever", "epic". Examples of great firehouse titles: "Garlic Butter Chicken with Roasted Vegetables and Herbed Rice", "Firehouse BBQ Pulled Pork Bowls with Charred Corn and Slaw", "Crispy Cajun Shrimp Tacos with Chipotle Crema", "Seared Honey-Soy Salmon with Caramelized Bok Choy", "Smoky Chipotle Beef Skillet with Roasted Peppers", "Braised Italian Sausage Rigatoni with San Marzano Sauce", "Korean BBQ Chicken Bowls with Pickled Cucumber and Sriracha Mayo". Bland titles like "Chicken Rice Bowl" or "Beef Pasta" are NOT acceptable — every title must hint at the sauce/technique/flavor profile.
+TITLE RULES (mandatory): Use this formula: {Cooking Method or Texture Word} + {Flavor Descriptor} + {Protein} + {Meal Style or Base}. Use 1-2 vivid adjectives max. Only use descriptors that are supported by actual ingredients/spices (e.g. "Smoky" only if using smoked paprika/chipotle/BBQ; "Zesty" only if using lime/lemon; "Creamy" only if using cream/cheese/coconut milk; "Crispy" only if a frying/roasting step produces crispness). Use texture words only if supported by cooking method in steps (crispy, roasted, grilled, charred, seared, caramelized). NEVER use clickbait words: "ultimate", "insane", "crazy", "life-changing", "best-ever", "epic". Examples of great firehouse titles: "Garlic Butter Chicken with Roasted Vegetables and Herbed Rice", "Firehouse BBQ Pulled Pork Bowls with Charred Corn and Slaw", "Crispy Cajun Shrimp Tacos with Chipotle Crema", "Seared Honey-Soy Salmon with Caramelized Bok Choy", "Smoky Chipotle Beef Skillet with Roasted Peppers", "Braised Italian Sausage Rigatoni with San Marzano Sauce", "Korean BBQ Chicken Bowls with Pickled Cucumber and Sriracha Mayo". Bland titles like "Chicken Rice Bowl" or "Beef Pasta" are NOT acceptable — every title must hint at the sauce/technique/flavor profile. NEVER use metadata labels as titles: "Plated Main", "Comfort Bowl", "Protein Skillet", "Asian Beef Plated Main", or "{Cuisine} {Protein} {Format}". GOOD short titles: "Sticky Garlic Beef Bowls", "Firehall Steak Sandwiches", "Crispy Honey Chili Chicken".
 DESCRIPTION RULES ("why_it_fits_tonight"): Write 1-2 punchy sentences that sell the meal to the crew. Mention texture + flavor + protein + sauce/seasoning. Explain why it works for the shift (quick, filling, easy cleanup, budget-friendly, one-pan, feeds a crowd). Example: "Seared chicken thighs smothered in a smoky honey-chipotle glaze with charred corn and cilantro-lime rice — big flavors, one skillet, zero complaints from the crew." Do NOT use generic lines like "A hearty meal for the crew."
 FLAVOR AMPLIFIER MAP (use ONLY when ingredients justify it): lime/lemon→"zesty" or "bright"; chili powder/smoked paprika/chipotle→"smoky" or "bold"; garlic+butter→"savory garlic-butter"; BBQ sauce→"sticky BBQ" or "tangy BBQ"; soy sauce/ginger→"umami-packed" or "savory soy-ginger"; roasted vegetables→"caramelized"; cream/cheese→"creamy"; honey/brown sugar→"sweet heat" or "honey-glazed"; cumin/coriander→"warmly spiced"; fresh herbs→"herb-bright"; hot sauce/sriracha→"fiery" or "spicy"; balsamic→"balsamic-kissed".
 STEP FORMAT (each step MUST follow this): heading = "Action (heat level, time)" e.g. "${isVegetarian ? "Sauté the chickpeas (medium-high, 4-5 min)" : "Sear the chicken (medium-high, 5-7 min)"}". body = firehall station HOW-TO (3-5 sentences, ~60-90 words) for a tired beginner. Each step MUST include: (1) clear action + order, (2) heat level and pan/pot/oven size, (3) what it should look/smell/feel like (golden, sizzling, 165°F, etc.) — NOT the phrase "visual cues", (4) what goes wrong and the fix, (5) when safe to pause for a call. Start with "Prep the station". End with "Serve the hall". Coordinate timing between components. FORBIDDEN phrases: "watch for visual cues", "spread evenly", "wooden bowl", "prepare ingredients carefully", "work over medium heat" without context. AVOID vague "cook until done". No chef jargon or mommy-blog tone.
@@ -637,7 +637,7 @@ RECIPE COMPOSITION (mandatory — every recipe must have ALL of these):
 2. VEGETABLE: At least one substantial vegetable component. Not just a garnish.
 3. SAUCE/SEASONING: A named sauce, marinade, glaze, rub, or seasoning blend. Plain "salt and pepper" alone does NOT count.
 4. GARNISH/FINISH: A finishing element in the last step — fresh herbs, citrus, cheese, seeds, pickled elements, hot sauce drizzle, etc.
-TITLE RULES (mandatory): Use this formula: {Cooking Method or Texture Word} + {Flavor Descriptor} + {Protein} + {Meal Style or Base}. Use 1-2 vivid adjectives max. Only use descriptors supported by actual ingredients/spices. Use texture words only if supported by cooking method. NEVER use clickbait words: "ultimate", "insane", "crazy", "life-changing", "best-ever", "epic". Examples: "Garlic Butter Chicken with Roasted Vegetables", "Smoky BBQ Pork Skillet with Charred Peppers", "Crispy Cajun Shrimp Bowls with Lime Crema". Bland titles like "Chicken Bowl" or "Beef Pasta" are NOT acceptable — every title must hint at the sauce/technique/flavor.
+TITLE RULES (mandatory): Use this formula: {Cooking Method or Texture Word} + {Flavor Descriptor} + {Protein} + {Meal Style or Base}. Use 1-2 vivid adjectives max. Only use descriptors supported by actual ingredients/spices. Use texture words only if supported by cooking method. NEVER use clickbait words: "ultimate", "insane", "crazy", "life-changing", "best-ever", "epic". Examples: "Garlic Butter Chicken with Roasted Vegetables", "Smoky BBQ Pork Skillet with Charred Peppers", "Crispy Cajun Shrimp Bowls with Lime Crema". Bland titles like "Chicken Bowl" or "Beef Pasta" are NOT acceptable — every title must hint at the sauce/technique/flavor. NEVER use "Plated Main", "Comfort Bowl", "Protein Skillet", or "{Cuisine} {Protein} {Format}". Prefer: "Sticky Garlic Beef Bowls", "Crispy Honey Chili Chicken".
 DESCRIPTION RULES ("why_it_fits_tonight"): Write 1-2 punchy sentences that sell the meal to the crew. Mention texture + flavor + protein + sauce/seasoning. Explain why it works for the shift. Example: "Seared chicken thighs smothered in a smoky honey-chipotle glaze with charred corn — big flavors, one skillet, zero complaints."
 FLAVOR AMPLIFIER MAP (use ONLY when ingredients justify it): lime/lemon→"zesty"; chili powder/smoked paprika→"smoky"; garlic+butter→"savory garlic-butter"; BBQ sauce→"sticky BBQ"; soy/ginger→"umami-packed"; cream/cheese→"creamy"; honey/brown sugar→"honey-glazed"; cumin/coriander→"warmly spiced"; fresh herbs→"herb-bright"; hot sauce→"fiery".
 STEP FORMAT (each step MUST follow this): heading = "Action (heat level, time)" e.g. "Sear the chicken (medium-high, 5-7 min)". body = firehall station HOW-TO (3-5 sentences, ~60-90 words). Each step: action + heat + specific look/temp/smell cues, mistakes + fixes, pause-safe notes. Prep the station first; serve the hall last. No filler phrases ("visual cues", "spread evenly", "wooden bowl"). AVOID "cook until done". No chef jargon.
@@ -1017,6 +1017,62 @@ INSTRUCTIONS:
     return null;
   } catch (err: any) {
     log(`[repair] Repair LLM call failed: ${err.message}`, "ai");
+    return null;
+  }
+}
+
+const CURATED_VARIATION_SYSTEM_PROMPT = `You are adapting a REAL, recognizable dish from a curated recipe catalog for a firefighter crew. Your job is to keep the dish identity intact while adjusting to requested filters (protein, allergens, time, appliances, cuisine layer).\n\nHARD RULES:\n- Output ONLY valid JSON matching the recipe schema. No markdown, no commentary.\n- Do NOT invent fake meal names. The title must sound like a real menu / TikTok comfort meal.\n- Preserve the original dish identity (e.g. tacos stay tacos; smash burger stays a smash burger; alfredo stays alfredo).\n- Do NOT generate ingredient-soup mashups or nutrition-slop bowls.\n- Sides must culturally match: burgers→fries/slaw, tacos→chips/elote/rice, pasta→garlic bread/Caesar, BBQ→mac/slaw/cornbread, jerk→rice & peas/plantains.\n- Never force random broccoli/vegetables into everything; include vegetables only when culturally appropriate.\n- If constraints conflict, make the smallest possible adaptation and keep it coherent.`;
+
+const CURATED_VARIATION_TEMPLATE: TemplateRow = {
+  template_id: "0",
+  template_name: "CuratedVariation",
+  style: "",
+  base_idea_description: "",
+  appliances_needed: "",
+  time_range_minutes: "",
+  busy_level_fit: "",
+  healthiness_level: "",
+  proteins_allowed: "",
+  allergens_possible: "",
+  mess_level: "",
+  reheat_friendly: "",
+};
+
+export async function generateCuratedVariation(
+  baseRecipe: GenerateResponse,
+  request: GenerateRequest,
+  chosenProtein: string,
+  budgetLevel: string,
+): Promise<AIResult | null> {
+  const prompt = `You are given a curated base recipe JSON. Adapt it to the requested filters with minimal changes while keeping the SAME dish identity.\n\nREQUEST FILTERS:\n${buildFilterSummary(request)}\n${buildMealFormatBlock(request.meal_format)}\n${buildCuisineDirective(request.cuisine_style || "any")}\n\nBASE RECIPE JSON:\n${JSON.stringify(baseRecipe, null, 2)}\n\nINSTRUCTIONS:\n- Keep the recipe structure consistent with meal_format.\n- Only use the requested protein: ${chosenProtein}.\n- Respect allergens_to_avoid: ${JSON.stringify(request.allergens_to_avoid || [])}.\n- Adjust timing to fit time_available=${request.time_available} when possible.\n- Keep title recognizable and not generic (no \"Plates\").\n- Return ONLY corrected JSON.`;
+
+  try {
+    const start = Date.now();
+    log(
+      `[curated-variation] start base=\"${clip(baseRecipe.title, 50)}\" protein=${chosenProtein} time=${request.time_available}`,
+      "ai",
+    );
+    const { content, tokensIn, tokensOut } = await callAI(
+      prompt,
+      CURATED_VARIATION_SYSTEM_PROMPT,
+      false,
+      12_000,
+    );
+    const parsed = tryParseRecipe(content, CURATED_VARIATION_TEMPLATE, chosenProtein, budgetLevel);
+    if (!parsed) return null;
+    const elapsed = Date.now() - start;
+    log(
+      `[curated-variation] success ${formatLogFields({
+        title: clip(parsed.title, 50),
+        duration: `${elapsed}ms`,
+        tokens_in: tokensIn,
+        tokens_out: tokensOut,
+      })}`,
+      "ai",
+    );
+    return { recipe: parsed, tokensIn, tokensOut };
+  } catch (err: any) {
+    log(`[curated-variation] failed: ${err.message}`, "ai");
     return null;
   }
 }

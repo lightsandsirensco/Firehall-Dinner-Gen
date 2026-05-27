@@ -1,0 +1,210 @@
+{
+  "slug": "pork-carnitas-tacos",
+  "title": "Quick Pork Carnitas Tacos",
+  "subtitle": "Crispy edges, fast tortilla night",
+  "category": "quick_shift_meals",
+  "cuisine": "mexican",
+  "description": "The kind of spread that ends the \"what's for dinner?\" argument fast. Mexican pork crew dinner for 8 — about 45 min. Works great when you've got one person on the stove and another on sides.",
+  "crewSize": 8,
+  "cookTime": 45,
+  "prepTime": 15,
+  "difficulty": "easy",
+  "calories": 550,
+  "protein": 40,
+  "carbs": 35,
+  "fats": 20,
+  "tags": [
+    "protein:pork",
+    "format:tacos",
+    "category:quick_shift_meals",
+    "quick",
+    "handheld",
+    "golden_100"
+  ],
+  "equipment": [
+    "Large sheet trays",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "ingredients": [
+    {
+      "name": "water",
+      "quantity": "7",
+      "notes": "7 cups water 7 cups water"
+    },
+    {
+      "name": "pork butt",
+      "quantity": "4",
+      "notes": "4 lbs pork butt 2 pounds Pork butt trimmed, and cut in 2\" cubes; hall portion"
+    },
+    {
+      "name": "garlic",
+      "quantity": "4",
+      "notes": "4 cloves garlic 4 cloves garlic, crushed"
+    },
+    {
+      "name": "sea salt and ground pepper",
+      "quantity": "8",
+      "notes": "8 sea salt and ground pepper sea salt and ground pepper to taste"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "1",
+      "notes": "1 tsp olive oil 1 teaspoon olive oil"
+    },
+    {
+      "name": "orange juice",
+      "quantity": "0.5",
+      "notes": "0.5 cups orange juice 1/2 cup orange juice"
+    },
+    {
+      "name": "milk",
+      "quantity": "0.5",
+      "notes": "0.5 cups milk 1/2 cup milk"
+    },
+    {
+      "name": "corn tortillas",
+      "quantity": "24",
+      "notes": "24 corn tortillas 24 Corn Tortillas"
+    },
+    {
+      "name": "salsa fresca",
+      "quantity": "8",
+      "notes": "8 salsa fresca Salsa Fresca"
+    },
+    {
+      "name": "avocado",
+      "quantity": "1",
+      "notes": "1 slices avocado Avocado slices"
+    },
+    {
+      "name": "cilantro",
+      "quantity": "8",
+      "notes": "8 cilantro Chopped cilantro"
+    },
+    {
+      "name": "onion",
+      "quantity": "8",
+      "notes": "8 onion Chopped onion"
+    },
+    {
+      "name": "limes",
+      "quantity": "8",
+      "notes": "8 limes Limes cut into wedges"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Step 1",
+      "instruction": "In a large Dutch oven add the pork, garlic, salt and pepper, and water. Bring to a boil, then reduce heat, cover and simmer over medium low for 45 minutes to one hour.",
+      "minutes": 45,
+      "heatLevel": "medium-low"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Step 2",
+      "instruction": "Drain well. Watch color and texture — if it smells sharp or looks pale, give it another minute before moving on.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Step 3",
+      "instruction": "When cool enough to handle, shred the meat by hand or with the tines of a fork.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Step 4",
+      "instruction": "Remove and discard any remaining fat. Watch color and texture — if it smells sharp or looks pale, give it another minute before moving on.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Step 5",
+      "instruction": "Transfer back to Dutch oven and heat the olive oil. Watch color and texture — if it smells sharp or looks pale, give it another minute before moving on.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Step 6",
+      "instruction": "Add the orange juice and milk and cook until liquid has evaporated and pork has browned; stirring occasionally. Season with salt and pepper to taste.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Step 7",
+      "instruction": "Chop onions and cilantro, and slice avocado and limes. Watch color and texture — if it smells sharp or looks pale, give it another minute before moving on.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Step 8",
+      "instruction": "Place each in small individual bowls for serving. Watch color and texture — if it smells sharp or looks pale, give it another minute before moving on.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
+      "title": "Step 9",
+      "instruction": "Heat tortillas in a dry frying pan and keep warm. Watch color and texture — if it smells sharp or looks pale, give it another minute before moving on.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Step 10",
+      "instruction": "For each taco, stack 2 tortillas and layer with warm carnitas, chopped cilantro, onion and avocado slices and give it a good squeeze of lemon juice.",
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Prep all mise en place before the bell — this meal wins on organization, not speed hacks.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Taste for salt at the end — hall palates run salty after long shifts."
+  ],
+  "tonightSpread": [
+    "Warm tortillas in a dry skillet stack — wrap in foil so the line stays soft.",
+    "Set proteins, salsa, and toppings in separate bowls for build-your-own station flow.",
+    "Line up Quick Pork Carnitas Tacos on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+  ],
+  "leftovers": [
+    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
+    "Label trays with date and reheat to 165°F minimum before second shift."
+  ],
+  "nutrition": {
+    "calories": 550,
+    "protein": 40,
+    "carbs": 35,
+    "fats": 20,
+    "label": "per serving (hall portion)"
+  },
+  "heroImage": "/images/golden-100/pork-carnitas-tacos.jpg",
+  "mobileImage": "/images/mobile/pork-carnitas-tacos.jpg",
+  "thumbImage": "/images/thumbs/pork-carnitas-tacos.jpg",
+  "railImage": "/images/rails/pork-carnitas-tacos.jpg",
+  "realismScore": 100,
+  "firefighterScore": 100,
+  "popularityWeight": 3.2,
+  "searchTerms": [
+    "quick pork carnitas tacos",
+    "pork carnitas tacos",
+    "mexican",
+    "pork",
+    "tacos",
+    "quick",
+    "handheld",
+    "golden_100"
+  ],
+  "relatedSlugs": [
+    "chorizo-breakfast-tacos",
+    "breakfast-burrito-bar",
+    "sheet-pan-sausage-peppers",
+    "chicken-quesadillas",
+    "hall-taco-bar",
+    "steak-tacos"
+  ],
+  "sourceName": "Foodista",
+  "sourceUrl": "https://www.foodista.com/recipe/76ZPMZJN/pork-carnitas-tacos",
+  "generatedAt": "2026-05-27T15:03:06.186Z",
+  "contentVersion": 1
+}

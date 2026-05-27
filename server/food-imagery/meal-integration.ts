@@ -16,6 +16,8 @@ import { getPizzaConceptMeta } from "../../shared/pizza-concepts.js";
 import { buildFoodImageryPrompt } from "../../shared/food-imagery/prompt-builder.js";
 import { hashPrompt } from "./generator.js";
 import { resolveHeroHierarchy } from "./fallback-hierarchy.js";
+import { heroPathConflictsTitle } from "../../shared/meal-image-title-match.js";
+import { resolveEditorialFallbackHero } from "../../shared/meal-hero-fallback.js";
 
 export type HeroImageStatus = "ready" | "pending" | "unavailable";
 
@@ -93,10 +95,32 @@ export async function enrichClientRecipeWithHero(
   const title = String(client.title || "");
   const mealFormat = String(client.meal_style || client.meal_format || "");
   const protein = String(client.chosen_protein || "");
-  const hero = await resolveMealHeroImage(signature, recipeId || undefined, title, {
+  let hero = await resolveMealHeroImage(signature, recipeId || undefined, title, {
     mealFormat,
     protein,
   });
+
+  if (
+    hero.hero_image &&
+    title &&
+    heroPathConflictsTitle(hero.hero_image, title, mealFormat)
+  ) {
+    const editorial = resolveEditorialFallbackHero(title, { mealFormat, protein });
+    if (editorial && !heroPathConflictsTitle(editorial, title, mealFormat)) {
+      hero = {
+        hero_image: editorial,
+        hero_image_alt: hero.hero_image_alt,
+        hero_image_status: "ready",
+        hero_image_source: "editorial_fallback",
+      };
+    } else {
+      hero = {
+        hero_image_status: "pending",
+        hero_image_alt: hero.hero_image_alt,
+      };
+    }
+  }
+
   const out: Record<string, unknown> = { ...client, ...hero };
   if (signature) out._signature = signature;
   return out;

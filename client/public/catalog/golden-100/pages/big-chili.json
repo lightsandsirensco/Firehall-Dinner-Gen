@@ -1,0 +1,151 @@
+{
+  "slug": "big-chili",
+  "title": "Hall-Sized Beef and Bean Chili",
+  "subtitle": "Double pot, triple appetite",
+  "category": "big_crew_feeders",
+  "cuisine": "american",
+  "description": "Hall-Sized Beef and Bean Chili is a american soup chili built for a hungry firehall crew — Double pot, triple appetite. Hearty portions, station-kitchen timing, and flavors everyone recognizes after a long shift.",
+  "crewSize": 8,
+  "cookTime": 90,
+  "prepTime": 30,
+  "difficulty": "hard",
+  "calories": 600,
+  "protein": 40,
+  "carbs": 48,
+  "fats": 28,
+  "tags": [
+    "protein:beef",
+    "format:soup_chili",
+    "category:big_crew_feeders",
+    "hearty",
+    "beef",
+    "golden_100"
+  ],
+  "equipment": [
+    "8-quart stock pot",
+    "Large sheet trays",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "ingredients": [
+    {
+      "name": "Beef (main cut for recipe)",
+      "quantity": "3",
+      "unit": "lb"
+    },
+    {
+      "name": "Kosher salt",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "Black pepper",
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "Cooking oil",
+      "quantity": "0.3",
+      "unit": "cup"
+    },
+    {
+      "name": "Yellow onion",
+      "quantity": "2",
+      "unit": "large"
+    },
+    {
+      "name": "Garlic",
+      "quantity": "6",
+      "unit": "cloves"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Prep the line",
+      "instruction": "Set out all ingredients for Hall-Sized Beef and Bean Chili before you turn on heat — firefighters eat on a schedule. Pat proteins dry and season aggressively with salt and pepper; dry surfaces brown instead of steam.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Build the base",
+      "instruction": "Heat oil in your largest skillet, Dutch oven, or on the flat-top over medium-high until it shimmers. Add aromatics (onion first) and cook until the edges turn golden and the smell sweetens — usually 4–6 minutes. If garlic is in the recipe, add it after the onion softens so it doesn't burn.",
+      "minutes": 8,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Cook the main",
+      "instruction": "Cook the primary protein or base for Hall-Sized Beef and Bean Chili until it hits proper color and safe internal temperature. Don't crowd the pan — work in batches if needed so you get browning, not gray stew. Listen for a steady sizzle; if it's silent, the heat is too low.",
+      "minutes": 20,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Finish and season",
+      "instruction": "Bring components together, taste, and adjust salt. Sauce should coat, not pool. If cheese is involved, melt it just until glossy — another 1–2 minutes under a lid or broiler. Let heavy proteins rest 5 minutes before slicing.",
+      "minutes": 10,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Serve the hall",
+      "instruction": "Transfer to sheet trays or a serving line immediately. Keep backup warm at 200°F. Call the crew while it's hot — this meal is built for a hungry hall, not a photo shoot.",
+      "minutes": 5,
+      "heatLevel": "low"
+    }
+  ],
+  "proTips": [
+    "Firefighters eat heavy after rough nights — double the protein if the hall had a busy shift.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Taste for salt at the end — hall palates run salty after long shifts."
+  ],
+  "tonightSpread": [
+    "Keep the pot on low simmer on the stove — ladle from the side so the bottom doesn't scorch.",
+    "Set shredded cheese, crackers, and hot sauce in a row beside the pot.",
+    "Serve family-style from two full-size trays — never let the line run dry on a busy night.",
+    "Put starch and protein on separate trays so vegetarians can load up on sides.",
+    "Line up Hall-Sized Beef and Bean Chili on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+  ],
+  "leftovers": [
+    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
+    "Label trays with date and reheat to 165°F minimum before second shift.",
+    "Add a splash of stock or water when reheating — thick sauces tighten in the fridge."
+  ],
+  "nutrition": {
+    "calories": 600,
+    "protein": 40,
+    "carbs": 48,
+    "fats": 28,
+    "label": "per serving (hall portion)"
+  },
+  "heroImage": "/images/golden-100/big-chili.jpg",
+  "mobileImage": "/images/mobile/big-chili.jpg",
+  "thumbImage": "/images/thumbs/big-chili.jpg",
+  "railImage": "/images/rails/big-chili.jpg",
+  "realismScore": 100,
+  "firefighterScore": 100,
+  "popularityWeight": 3.6,
+  "searchTerms": [
+    "hall-sized beef and bean chili",
+    "big chili",
+    "american",
+    "beef",
+    "soup chili",
+    "hearty",
+    "large batch beef chili",
+    "golden_100"
+  ],
+  "relatedSlugs": [
+    "sunday-chili-batch",
+    "loaded-potato-feed",
+    "beef-barley-soup",
+    "chili-garlic-bread",
+    "bbq-brisket-burnt-ends",
+    "ny-strip-herb-butter"
+  ],
+  "generatedAt": "2026-05-27T15:03:06.198Z",
+  "contentVersion": 1
+}

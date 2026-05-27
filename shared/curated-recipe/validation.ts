@@ -3,6 +3,7 @@
  */
 
 import { z } from "zod";
+import { IMAGE_STYLE_PRESET_IDS } from "../image-style-presets.js";
 
 const score0to100 = z.number().int().min(0).max(100);
 const cleanup1to5 = z.union([
@@ -133,6 +134,29 @@ export const curatedRecipeInsertSchema = z.object({
 
   featured: z.boolean().optional(),
   trendingRank: z.number().int().min(0).optional(),
+
+  editorialImage: z
+    .object({
+      schemaVersion: z.number().int().optional(),
+      heroImage: z.string().max(2000),
+      thumbnailImage: z.string().max(2000),
+      mobileHeroImage: z.string().max(2000),
+      railPreviewImage: z.string().max(2000).optional(),
+      stylePreset: z.enum(IMAGE_STYLE_PRESET_IDS),
+      imageVersion: z.number().int().min(0),
+      imageApproved: z.boolean(),
+      imagePromptSeed: z.string().max(64),
+      promptHash: z.string().max(64).optional(),
+      generatedAt: z.string().max(40).optional(),
+      model: z.string().max(80).optional(),
+      manualOverridePath: z.string().max(2000).nullable().optional(),
+      regenerationCount: z.number().int().min(0).optional(),
+      lqip: z.string().max(8000).optional(),
+      delivery: z.record(z.unknown()).optional(),
+      quality: z.record(z.unknown()).optional(),
+      social: z.record(z.unknown()).optional(),
+    })
+    .optional(),
 });
 
 export type CuratedRecipeInsertInput = z.infer<typeof curatedRecipeInsertSchema>;

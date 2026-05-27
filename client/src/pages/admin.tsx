@@ -81,6 +81,12 @@ export default function AdminPage() {
               <Activity className="w-4 h-4 mr-2" />
               Load Usage Data
             </Button>
+            <Link href="/admin/golden-100">
+              <Button variant="outline" data-testid="button-golden-100-admin">
+                <ChefHat className="w-4 h-4 mr-2" />
+                Golden 100 catalog
+              </Button>
+            </Link>
             <Link href="/admin/ingestion">
               <Button variant="outline" data-testid="button-ingestion-admin">
                 <ChefHat className="w-4 h-4 mr-2" />

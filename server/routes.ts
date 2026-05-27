@@ -56,6 +56,31 @@ import {
   filterDisplayableExploreCards,
 } from "../shared/explore-recipe.js";
 import { buildExploreEditorialFeed } from "./explore-editorial.js";
+import {
+  buildContextualSuggestions,
+  parseSeenIds,
+  parseRecentProteins,
+  getMasterCategoryRailMeta,
+} from "./recommendation/index.js";
+import { auditGolden100Dataset } from "./golden-100/audit.js";
+import { golden100HeroAvailable, golden100HeroUrl } from "./golden-100/local-hero.js";
+import {
+  goldenManifestSummary,
+  GOLDEN_100_RECIPES,
+  validateGoldenManifest,
+} from "../shared/golden-100/index.js";
+import { listCuratedSummariesByTag } from "./curated-recipe-store.js";
+import { scoreRecipeTitle } from "../shared/recipe-title-quality.js";
+import { normalizeTitleKey } from "../shared/ingestion/dedupe.js";
+import { buildGoldenHeroPrompt } from "../shared/golden-100/imagery.js";
+import { readGoldenRecipePage, listGoldenPageSlugs } from "./golden-100/page-store.js";
+import { buildGoldenRecipePage } from "./golden-100/recipe-page-builder.js";
+import { getGoldenRecipeBySlug } from "../shared/golden-100/manifest.js";
+import { checkGoldenPageAssets } from "./golden-100/page-assets.js";
+import { validateGoldenRecipePage } from "./golden-100/recipe-page-validator.js";
+import fs from "node:fs";
+import path from "node:path";
+import { GOLDEN_CATALOG_PUBLIC_DIR } from "./golden-100/page-store.js";
 import { fetchExploreRecipeDetailPayload } from "./explore-recipe-detail.js";
 import {
   parseGenerationRateContext,
@@ -65,6 +90,25 @@ import {
   recordPizzaGenerationRateLimit,
 } from "./generation-rate-limit.js";
 import { generationTimeoutMs, pizzaTimeoutMs, withTimeout } from "./generation-timeout.js";
+import {
+  runLocalFirstGeneratePipeline,
+  resolveEmergencyGenerateHit,
+} from "./generation/local-first-pipeline.js";
+import { logGenerateTelemetry } from "./generation/generation-telemetry.js";
+import { resolveSafeCuratedFallback } from "./generation/safe-curated-fallback.js";
+import { runRealismFirewall } from "./generation/realism-firewall.js";
+import {
+  prepareRecipePreValidation,
+  evaluateClientSendGate,
+  RecipeNotSendableError,
+  GENERATION_USER_FAILURE_MESSAGE,
+  isLargeCrewGeneration,
+  recordReliabilityEvent,
+} from "./generation-reliability.js";
+import { runCuratedGenerationFallback } from "./curated-generation-fallback.js";
+import { curateRecipeForClient } from "./generation-curation.js";
+import { stripInternalClientFields } from "../shared/customer-facing.js";
+import { isRoboticTitle, suggestHumanMealTitle } from "../shared/generation-reliability.js";
 import { generationError } from "../shared/generation-errors.js";
 import {
   formatZodValidationForClient,
@@ -80,7 +124,13 @@ import {
   updateStagingStatus,
 } from "./ingestion/ingestion-store.js";
 import { promoteDraftByFingerprint } from "./ingestion/promote.js";
-import { initCuratedRecipeStore, getCuratedStoreStats, getCuratedRecipeById, listCuratedRecipeSummaries } from "./curated-recipe-store.js";
+import {
+  initCuratedRecipeStore,
+  getCuratedStoreStats,
+  getCuratedRecipeById,
+  getCuratedRecipeBySlug,
+  listCuratedRecipeSummaries,
+} from "./curated-recipe-store.js";
 import {
   pickCatalogExploreFallback,
   pickCatalogRecipeForGenerate,
@@ -136,6 +186,8 @@ import {
   getRecentSpoonacularIds,
   addRecentSpoonacularId,
 } from "./cache-store";
+import { runStartupBootstrap, getStartupDiagnostics } from "./startup/bootstrap.js";
+import { exploreApiErrorMessage, sanitizeApiErrorMessage } from "./lib/api-errors.js";
 
 const COST_PER_1K_INPUT = 0.00015;
 const COST_PER_1K_OUTPUT = 0.0006;
@@ -155,11 +207,13 @@ export async function registerRoutes(
   httpServer: Server,
   app: Express
 ): Promise<Server> {
-  await initCacheStore();
-  await initCuratedRecipeStore();
-  await initRecipeCatalog();
-  await initIngestionStore();
-  await initHallVoteTables();
+  await runStartupBootstrap({
+    initCacheStore,
+    initCuratedRecipeStore,
+    initRecipeCatalog,
+    initIngestionStore,
+    initHallVoteTables,
+  });
 
   const klaviyoCheck = validateKlaviyoConfig();
   if (klaviyoCheck.ok) {
@@ -225,6 +279,17 @@ export async function registerRoutes(
   app.get("/api/warm", (_req: Request, res: Response) => {
     log("Warm-up ping received", "perf");
     return res.json({ status: "warm", uptime: process.uptime() });
+  });
+
+  app.get("/api/health", (_req: Request, res: Response) => {
+    const diag = getStartupDiagnostics();
+    const ok = diag?.ok !== false;
+    res.status(ok ? 200 : 503).json({
+      status: ok ? "healthy" : "degraded",
+      uptime: process.uptime(),
+      nodeEnv: process.env.NODE_ENV || "development",
+      diagnostics: diag,
+    });
   });
 
   function parseQtyUnit(amount: string): { qty: number; unit: string } {
@@ -445,7 +510,7 @@ export async function registerRoutes(
   }
 
   function buildResponse(validation: import("./validateRecipe").ValidationResult, extras: Record<string, any>, debug: boolean, crewSize: number = 0, mealFormat: string = "", allergens: string[] = [], auditCtx?: LabelAuditContext, sessionKey?: string): Record<string, any> {
-    let recipe = validation.recipe;
+    let recipe = prepareRecipePreValidation(validation.recipe);
     if (extras._recipe_source) {
       recipe = { ...recipe, _recipe_source: extras._recipe_source };
     }
@@ -583,7 +648,11 @@ export async function registerRoutes(
 
     const importedSource =
       extras._source === "spoonacular_v2" ||
+      extras._source === "spoonacular_v2_relaxed" ||
       extras._source === "catalog" ||
+      extras._source === "catalog_relaxed" ||
+      extras._source === "session_cache" ||
+      extras._source === "curated_fallback" ||
       recipe._imported === true;
     let quality = runRecipeQualityGate(recipe, {
       mealFormat,
@@ -592,7 +661,7 @@ export async function registerRoutes(
       crewSize: effectiveCrewSize,
       importedSource,
     });
-    if (!quality.pass) {
+    if (!quality.pass || isRoboticTitle(recipe.title || "")) {
       recipe = applyQualityTitleFix(recipe, mealFormat);
       quality = runRecipeQualityGate(recipe, {
         mealFormat,
@@ -615,10 +684,16 @@ export async function registerRoutes(
     const recipeId = crypto.randomUUID();
     const merged = { ...recipe, ...extras, _signature: validation.signature, _id: recipeId };
     const client = normalizeToClientFormat(merged, crewSize, mealFormat);
-    const base: Record<string, any> = { ...client };
+    const base: Record<string, any> = stripInternalClientFields(
+      { ...client },
+      debug,
+    );
     base._id = recipeId;
-    if (extras._fallback === true) base._fallback = true;
-    if (extras._source) base._source = extras._source;
+    if (extras._fallback === true) {
+      if (debug) base._fallback = true;
+      else base.hall_curated = true;
+    }
+    if (debug && extras._source) base._source = extras._source;
     if (extras._catalog_id) base._catalog_id = extras._catalog_id;
     if (extras._recipe_source) base._recipe_source = extras._recipe_source;
 
@@ -647,6 +722,21 @@ export async function registerRoutes(
       base._adjustment_note = "Adjusted meal style to meet allergy requirements.";
     }
 
+    const curation = curateRecipeForClient(recipe, validation, {
+      mealFormat,
+      protein: ctx.chosenProtein || recipe.chosen_protein || "any",
+      importedSource,
+    });
+    recipe = curation.recipe;
+    quality = curation.qualityGate;
+
+    const sendCheck = evaluateClientSendGate({ validation, recipe, quality, extras });
+    if (!sendCheck.sendable || !curation.sendable) {
+      const reasons = [...sendCheck.reasons, ...curation.reasons];
+      recordReliabilityEvent("blocked_client_send", reasons.join(","));
+      throw new RecipeNotSendableError(reasons);
+    }
+
     if (debug) {
       const recipeValidationErrors = validation.issues.filter((i: string) =>
         i.startsWith("ingredient_unused:") ||
@@ -658,6 +748,7 @@ export async function registerRoutes(
       );
       base._debug = {
         validation_ok: validation.ok,
+        send_gate_ok: sendCheck.sendable,
         issues: validation.issues,
         validation_errors: recipeValidationErrors,
         action: validation.actionTaken,
@@ -678,24 +769,94 @@ export async function registerRoutes(
     return base;
   }
 
-  async function sendRecipeResponse(res: Response, validation: import("./validateRecipe").ValidationResult, extras: Record<string, any>, debug: boolean, crewSize: number, mealFormat: string, allergens: string[], auditCtx: LabelAuditContext | undefined, ipHash: string, sessionId: string, rateCtx: ReturnType<typeof parseGenerationRateContext>) {
+  async function sendRecipeResponse(
+    res: Response,
+    validation: import("./validateRecipe").ValidationResult,
+    extras: Record<string, any>,
+    debug: boolean,
+    crewSize: number,
+    mealFormat: string,
+    allergens: string[],
+    auditCtx: LabelAuditContext | undefined,
+    ipHash: string,
+    sessionId: string,
+    rateCtx: ReturnType<typeof parseGenerationRateContext>,
+    request?: GenerateRequest,
+    clientRecentSigs: string[] = [],
+    fallbackDepth = 0,
+  ) {
     const sessKey = `${ipHash}:${sessionId}`;
-    const result = buildResponse(validation, extras, debug, crewSize, mealFormat, allergens, auditCtx, sessKey);
-    if (extras._spoonacular_title && result.title !== extras._spoonacular_title) {
-      log(`[spoonacular-generator] Label audit changed title — restoring: "${extras._spoonacular_title}"`, "spoonacular");
-      result.title = extras._spoonacular_title;
+    try {
+      const result = buildResponse(validation, extras, debug, crewSize, mealFormat, allergens, auditCtx, sessKey);
+      if (extras._spoonacular_title && result.title !== extras._spoonacular_title) {
+        log(`[spoonacular-generator] Label audit changed title — restoring: "${extras._spoonacular_title}"`, "spoonacular");
+        result.title = extras._spoonacular_title;
+      }
+      const signature = validation.signature || result._signature || "";
+      const { enrichClientRecipeWithHero, queueMealHeroAfterGenerate } = await import(
+        "./food-imagery/meal-integration.js",
+      );
+      const enriched = await enrichClientRecipeWithHero(result, signature);
+      if (validation.recipe && enriched._id) {
+        queueMealHeroAfterGenerate(validation.recipe, String(enriched._id), signature);
+      }
+      addSessionSignature(sessKey, signature);
+      recordSuccessfulGeneration(ipHash, sessionId, rateCtx, signature);
+      return res.json(enriched);
+    } catch (err) {
+      if (err instanceof RecipeNotSendableError && request && fallbackDepth < 1) {
+        log(
+          `[generate] send gate blocked (${err.reasons.join(",")}) — safe curated fallback`,
+          "generate",
+        );
+        const safe = await resolveSafeCuratedFallback(
+          request,
+          clientRecentSigs,
+          `send_gate:${err.reasons.slice(0, 3).join(",")}`,
+        );
+        const fbValCtx: RecipeValidationContext = {
+          chosenProtein: safe.protein,
+          meal_style: safe.recipe.meal_style || mealFormat,
+          cuisine: request.cuisine_style || "any",
+          appliances: request.appliances,
+          allergens,
+          recentSignatures: clientRecentSigs,
+        };
+        const fbVal = validateAndFixRecipe(
+          prepareRecipePreValidation(safe.recipe),
+          fbValCtx,
+        );
+        return sendRecipeResponse(
+          res,
+          fbVal,
+          {
+            _fallback: true,
+            _source: safe.source,
+            _recipe_source: safe.recipeSource,
+            _catalog_id: safe.catalogId,
+            _realism_firewall_fallback: true,
+          },
+          debug,
+          crewSize,
+          mealFormat,
+          allergens,
+          auditCtx ? { ...auditCtx, chosenProtein: safe.protein } : auditCtx,
+          ipHash,
+          sessionId,
+          rateCtx,
+          request,
+          clientRecentSigs,
+          fallbackDepth + 1,
+        );
+      }
+      logError("generate", "sendRecipeResponse failed", err);
+      return res.status(503).json(
+        generationError("generation_failed", GENERATION_USER_FAILURE_MESSAGE, {
+          request_id: rateCtx.requestId,
+          retry_after_seconds: 8,
+        }),
+      );
     }
-    const signature = validation.signature || result._signature || "";
-    const { enrichClientRecipeWithHero, queueMealHeroAfterGenerate } = await import(
-      "./food-imagery/meal-integration.js",
-    );
-    const enriched = await enrichClientRecipeWithHero(result, signature);
-    if (validation.recipe && enriched._id) {
-      queueMealHeroAfterGenerate(validation.recipe, String(enriched._id), signature);
-    }
-    addSessionSignature(sessKey, signature);
-    recordSuccessfulGeneration(ipHash, sessionId, rateCtx, signature);
-    return res.json(enriched);
   }
 
   function recordSuccessfulGeneration(
@@ -766,11 +927,15 @@ export async function registerRoutes(
       }
     }
 
-    const proteinDisplay = protein.charAt(0).toUpperCase() + protein.slice(1);
-    const styleDisplay = remixed.meal_style || currentStructure;
     const flavorWord = chosenSauce ? chosenSauce.split(" ")[0] : "";
-    const titleFlavor = flavorWord ? flavorWord.charAt(0).toUpperCase() + flavorWord.slice(1) + " " : "";
-    remixed.title = `${titleFlavor}${proteinDisplay} ${styleDisplay}`;
+    remixed.title = suggestHumanMealTitle({
+      protein,
+      mealFormat: remixed.meal_style || currentStructure,
+      flavorHint: flavorWord,
+      fallbackTitle: remixed.title,
+      ingredients: remixed.ingredients,
+      cuisine: remixed.tags?.cuisine,
+    });
 
     return remixed;
   }
@@ -841,15 +1006,18 @@ export async function registerRoutes(
         return res.status(400).json({ message: "Please enter at least one ingredient when using 'Use What's in the Fridge' mode." });
       }
 
-      // ─── GENERATE PIPELINE (imported recipes first) ─────────────────────────
+      // ─── GENERATE PIPELINE (local-first) ────────────────────────────────────
       //
-      // 1. Catalog (publisher + Spoonacular imports) → 2. Live Spoonacular V2 →
-      // 3. Catalog relaxed → 4. V2 relaxed → 5. Session cache (real meals only) →
-      // 6. Template fallback (last resort — never cached)
-      // Pantry: AI from on-hand ingredients; template only if AI fails (no LLM remix by default)
+      // A. Curated editorial → B. Golden 100 → C. cache/catalog →
+      // D. emergency pools → E. live Spoonacular (hard timeout) → D if E fails
+      // Pantry: AI from on-hand ingredients; safe template if AI fails
       //
       const allergens = request.allergens_to_avoid || [];
       const startTime = Date.now();
+      const genTimeoutMs = generationTimeoutMs(request.crew_size);
+      if (isLargeCrewGeneration(request.crew_size)) {
+        recordReliabilityEvent("large_crew_path", `crew=${request.crew_size}`);
+      }
       const debugMode = req.query.debug === "1" || (req.body as any).debug === true;
       const clientMeta = sanitizeClientGenerationMeta((req.body as Record<string, unknown>) || {});
       const clientCurrentSig = clientMeta.currentRecipeSignature;
@@ -892,7 +1060,7 @@ export async function registerRoutes(
         let ptRecipe: GenerateResponse | null = null;
         try {
           if (ptChosen) {
-            const ptAI = await withTimeout("pantry_ai", generationTimeoutMs(), () =>
+            const ptAI = await withTimeout("pantry_ai", genTimeoutMs, () =>
               generateRecipeFromPantry(ptChosen, request, ptVariety, ptStructure),
             );
             ptRecipe = ptAI.recipe;
@@ -901,14 +1069,29 @@ export async function registerRoutes(
           log(`[pantry] AI error: ${ptErr.message} — using safe fallback`, "ai");
         }
 
-        const ptUsedTemplateFallback = !ptRecipe;
-        const ptFinal = ptRecipe ?? buildSafeFallbackRecipe(request.meal_format || ptStyle, request.crew_size);
+        let ptUsedTemplateFallback = !ptRecipe;
+        let ptSource = ptUsedTemplateFallback ? "pantry_template" : "pantry";
+        let ptFinal = ptRecipe ?? buildSafeFallbackRecipe(request.meal_format || ptStyle, request.crew_size);
+
+        if (ptRecipe) {
+          const ptExtras = { _source: "pantry", _fallback: false };
+          const ptFw = runRealismFirewall(ptRecipe, ptExtras);
+          if (ptFw && !ptFw.pass) {
+            log("[pantry] AI output rejected by realism firewall — safe curated fallback", "generate");
+            const safe = await resolveSafeCuratedFallback(request, clientRecentSigs, "pantry_firewall");
+            ptFinal = safe.recipe;
+            ptSource = safe.source;
+            ptUsedTemplateFallback = true;
+            ptAuditCtx.chosenProtein = safe.protein;
+          }
+        }
+
         const ptWithStyle = { ...ptFinal, meal_style: ptStyle };
         const ptVal = validateAndFixRecipe(ptWithStyle as any, ptValCtx);
         logUsage({ cacheKey: `pantry-${sessionId}`, templateId: 0, cacheHit: false, latencyMs: Date.now() - startTime, ipHash, sessionId });
         log(
           `[generate] success ${formatLogFields({
-            source: ptUsedTemplateFallback ? "pantry_template" : "pantry",
+            source: ptSource,
             title: clip(ptVal.recipe.title, 60),
             duration: `${Date.now() - startTime}ms`,
             pantry_items: (request.ingredients_on_hand || []).length,
@@ -920,7 +1103,7 @@ export async function registerRoutes(
         return sendRecipeResponse(
           res,
           ptVal,
-          { _source: ptUsedTemplateFallback ? "pantry_template" : "pantry", _fallback: ptUsedTemplateFallback },
+          { _source: ptSource, _fallback: ptUsedTemplateFallback },
           debugMode,
           request.crew_size,
           request.meal_format || "random",
@@ -929,10 +1112,11 @@ export async function registerRoutes(
           ipHash,
           sessionId,
           rateCtx,
+          request,
+          clientRecentSigs,
         );
       }
 
-      // ── CATALOG-FIRST, then V2 Spoonacular ─────────────────────────────────
       const v2SessionKey = `${ipHash}:${sessionId}`;
       const catalogVarietySeed = (() => {
         const rid = String((req.body as { request_id?: string }).request_id || "");
@@ -960,331 +1144,21 @@ export async function registerRoutes(
         crewSize: request.crew_size || 4,
       };
 
-      const varietyCtxBase: RecipeValidationContext = {
-        chosenProtein: request.protein === "any" ? "chicken" : request.protein,
-        meal_style: request.meal_format || "plated main",
-        cuisine: request.cuisine_style || "any",
-        appliances: request.appliances,
-        allergens,
+      const pipelineHit = await runLocalFirstGeneratePipeline({
+        request,
+        v2SessionKey,
+        catalogPickOptions,
+        varietySeed: catalogVarietySeed,
         recentSignatures: clientRecentSigs,
         currentRecipeSignature: clientCurrentSig || undefined,
-      };
-
-      const catalogHit = request.prefer_different_style
-        ? null
-        : pickCatalogRecipeForGenerate(request, catalogPickOptions);
-
-      if (catalogHit) {
-        const chosenProtein = catalogHit.protein;
-        auditCtx.chosenProtein = chosenProtein;
-        const v2CacheKey = buildCacheKey("v2", request, chosenProtein);
-        const catalogValCtx: RecipeValidationContext = {
-          chosenProtein,
-          meal_style: catalogHit.recipe.meal_style || "plated main",
-          cuisine: request.cuisine_style || "any",
-          appliances: request.appliances,
-          allergens,
-          recentSignatures: clientRecentSigs,
-          currentRecipeSignature: clientCurrentSig || undefined,
-        };
-
-        let catalogVal = validateAndFixRecipe(catalogHit.recipe, catalogValCtx);
-        if (catalogVal.recipe.title !== catalogHit.originalTitle) {
-          log(`[catalog] Validator changed title — restoring "${catalogHit.originalTitle}"`, "catalog");
-          catalogVal = { ...catalogVal, recipe: { ...catalogVal.recipe, title: catalogHit.originalTitle } };
-        }
-
-        if (catalogVal.issues.includes("duplicate_signature")) {
-          log("[catalog] Skipping hit — duplicate_signature (fall through to V2)", "catalog");
-        } else {
-          setCachedRecipe(v2CacheKey, 0, catalogVal.recipe);
-          logUsage({
-            cacheKey: v2CacheKey,
-            templateId: 0,
-            cacheHit: true,
-            latencyMs: Date.now() - startTime,
-            ipHash,
-            sessionId,
-          });
-          log(
-            `[generate] success ${formatLogFields({
-              source: "catalog",
-              title: clip(catalogHit.originalTitle, 60),
-              cuisine: request.cuisine_style || "any",
-              protein: chosenProtein,
-              duration: `${Date.now() - startTime}ms`,
-            })}`,
-            "generate",
-          );
-          recordSignature(chosenProtein, catalogVal.signature);
-          if (catalogHit.spoonacularId && catalogHit.spoonacularId > 0) {
-            addRecentSpoonacularId(v2SessionKey, catalogHit.spoonacularId);
-          }
-          return sendRecipeResponse(
-            res,
-            catalogVal,
-            {
-              _source: "catalog",
-              _spoonacular_title: catalogHit.originalTitle,
-              _catalog_id: catalogHit.catalogId,
-              _recipe_source: catalogHit.recipeSource,
-            },
-            debugMode,
-            request.crew_size,
-            request.meal_format || "random",
-            allergens,
-            auditCtx,
-            ipHash,
-            sessionId,
-            rateCtx,
-          );
-        }
-      }
-
-      const v2Result = await withTimeout("spoonacular_v2", generationTimeoutMs(), () =>
-        runV2Generate(request, { sessionKey: v2SessionKey }),
-      );
-      const chosenProtein = v2Result?.protein ?? request.protein ?? "chicken";
-      auditCtx.chosenProtein = chosenProtein;
-      const v2CacheKey = buildCacheKey("v2", request, chosenProtein);
-
-      if (v2Result) {
-        const originalTitle = v2Result.originalTitle;
-        const v2ValCtx: RecipeValidationContext = {
-          chosenProtein,
-          meal_style: v2Result.recipe.meal_style || "plated main",
-          cuisine: request.cuisine_style || "any",
-          appliances: request.appliances,
-          allergens,
-          recentSignatures: clientRecentSigs,
-          currentRecipeSignature: clientCurrentSig || undefined,
-        };
-
-        let v2Val = validateAndFixRecipe(v2Result.recipe, v2ValCtx);
-
-        // Restore original Spoonacular title — validator must not rename it
-        if (v2Val.recipe.title !== originalTitle) {
-          log(`[v2] Validator changed title — restoring "${originalTitle}"`, "v2");
-          v2Val = { ...v2Val, recipe: { ...v2Val.recipe, title: originalTitle } };
-        }
-
-        setCachedRecipe(v2CacheKey, 0, v2Val.recipe);
-        logUsage({ cacheKey: v2CacheKey, templateId: 0, cacheHit: false, latencyMs: Date.now() - startTime, ipHash, sessionId });
-        log(
-          `[generate] success ${formatLogFields({
-            source: "spoonacular_v2",
-            title: clip(originalTitle, 60),
-            cuisine: request.cuisine_style || "any",
-            protein: chosenProtein,
-            duration: `${Date.now() - startTime}ms`,
-          })}`,
-          "generate",
-        );
-        recordSignature(chosenProtein, v2Val.signature);
-        return sendRecipeResponse(
-          res,
-          v2Val,
-          {
-            _source: "spoonacular_v2",
-            _spoonacular_title: originalTitle,
-            _catalog_id: v2Result.catalogId,
-            _recipe_source: v2Result.recipeSource,
-          },
-          debugMode,
-          request.crew_size,
-          request.meal_format || "random",
-          allergens,
-          auditCtx,
-          ipHash,
-          sessionId,
-          rateCtx,
-        );
-      }
-
-      // ── Relaxed catalog (lower bar, format-agnostic) ───────────────────────
-      const catalogRelaxed = pickCatalogRecipeForGenerate(request, {
-        ...catalogPickOptions,
-        relaxed: true,
+        preferDifferentStyle: Boolean(request.prefer_different_style),
+        startTime,
       });
-      if (catalogRelaxed) {
-        const relaxedProtein = catalogRelaxed.protein;
-        auditCtx.chosenProtein = relaxedProtein;
-        const relaxedValCtx: RecipeValidationContext = {
-          chosenProtein: relaxedProtein,
-          meal_style: catalogRelaxed.recipe.meal_style || "plated main",
-          cuisine: request.cuisine_style || "any",
-          appliances: request.appliances,
-          allergens,
-          recentSignatures: clientRecentSigs,
-          currentRecipeSignature: clientCurrentSig || undefined,
-        };
-        let relaxedVal = validateAndFixRecipe(catalogRelaxed.recipe, relaxedValCtx);
-        if (relaxedVal.recipe.title !== catalogRelaxed.originalTitle) {
-          relaxedVal = {
-            ...relaxedVal,
-            recipe: { ...relaxedVal.recipe, title: catalogRelaxed.originalTitle },
-          };
-        }
-        setCachedRecipe(v2CacheKey, 0, relaxedVal.recipe);
-        logUsage({
-          cacheKey: v2CacheKey,
-          templateId: 0,
-          cacheHit: true,
-          latencyMs: Date.now() - startTime,
-          ipHash,
-          sessionId,
-        });
-        log(
-          `[generate] success ${formatLogFields({
-            source: "catalog_relaxed",
-            title: clip(catalogRelaxed.originalTitle, 60),
-            protein: relaxedProtein,
-            duration: `${Date.now() - startTime}ms`,
-          })}`,
-          "generate",
-        );
-        recordSignature(relaxedProtein, relaxedVal.signature);
-        return sendRecipeResponse(
-          res,
-          relaxedVal,
-          {
-            _source: "catalog_relaxed",
-            _spoonacular_title: catalogRelaxed.originalTitle,
-            _catalog_id: catalogRelaxed.catalogId,
-            _recipe_source: catalogRelaxed.recipeSource,
-          },
-          debugMode,
-          request.crew_size,
-          request.meal_format || "random",
-          allergens,
-          auditCtx,
-          ipHash,
-          sessionId,
-          rateCtx,
-        );
-      }
 
-      // ── Relaxed Spoonacular V2 ─────────────────────────────────────────────
-      const v2Relaxed = await withTimeout("spoonacular_v2_relaxed", generationTimeoutMs(), () =>
-        runV2Generate(request, { sessionKey: v2SessionKey, relaxed: true }),
-      );
-      if (v2Relaxed) {
-        const relaxedProtein = v2Relaxed.protein;
-        auditCtx.chosenProtein = relaxedProtein;
-        const relaxedOriginalTitle = v2Relaxed.originalTitle;
-        const v2RelaxedValCtx: RecipeValidationContext = {
-          chosenProtein: relaxedProtein,
-          meal_style: v2Relaxed.recipe.meal_style || "plated main",
-          cuisine: request.cuisine_style || "any",
-          appliances: request.appliances,
-          allergens,
-          recentSignatures: clientRecentSigs,
-          currentRecipeSignature: clientCurrentSig || undefined,
-        };
-        let v2RelaxedVal = validateAndFixRecipe(v2Relaxed.recipe, v2RelaxedValCtx);
-        if (v2RelaxedVal.recipe.title !== relaxedOriginalTitle) {
-          v2RelaxedVal = {
-            ...v2RelaxedVal,
-            recipe: { ...v2RelaxedVal.recipe, title: relaxedOriginalTitle },
-          };
-        }
-        setCachedRecipe(v2CacheKey, 0, v2RelaxedVal.recipe);
-        logUsage({ cacheKey: v2CacheKey, templateId: 0, cacheHit: false, latencyMs: Date.now() - startTime, ipHash, sessionId });
-        log(
-          `[generate] success ${formatLogFields({
-            source: "spoonacular_v2_relaxed",
-            title: clip(relaxedOriginalTitle, 60),
-            protein: relaxedProtein,
-            duration: `${Date.now() - startTime}ms`,
-          })}`,
-          "generate",
-        );
-        recordSignature(relaxedProtein, v2RelaxedVal.signature);
-        return sendRecipeResponse(
-          res,
-          v2RelaxedVal,
-          {
-            _source: "spoonacular_v2_relaxed",
-            _spoonacular_title: relaxedOriginalTitle,
-            _catalog_id: v2Relaxed.catalogId,
-            _recipe_source: v2Relaxed.recipeSource,
-          },
-          debugMode,
-          request.crew_size,
-          request.meal_format || "random",
-          allergens,
-          auditCtx,
-          ipHash,
-          sessionId,
-          rateCtx,
-        );
-      }
-
-      // ── Session cache (prior real recipe for same filters) ─────────────────
-      const sessionCached = getCachedRecipe(v2CacheKey);
-      if (sessionCached?.title && !sessionCached._fallback && !request.prefer_different_style) {
-        const cacheValCtx: RecipeValidationContext = {
-          ...varietyCtxBase,
-          chosenProtein: auditCtx.chosenProtein,
-          meal_style: sessionCached.meal_style || varietyCtxBase.meal_style,
-        };
-        const sessionSig = computeSignature(sessionCached);
-        if (!isBlockedByRecentVariety(sessionSig, cacheValCtx)) {
-          const cacheVal = validateAndFixRecipe(sessionCached, cacheValCtx);
-          if (!cacheVal.issues.includes("duplicate_signature")) {
-            logUsage({ cacheKey: v2CacheKey, templateId: 0, cacheHit: true, latencyMs: Date.now() - startTime, ipHash, sessionId });
-            log(
-              `[generate] success ${formatLogFields({
-                source: "session_cache",
-                title: clip(cacheVal.recipe.title, 60),
-                protein: auditCtx.chosenProtein,
-                duration: `${Date.now() - startTime}ms`,
-              })}`,
-              "generate",
-            );
-            recordSignature(auditCtx.chosenProtein, cacheVal.signature);
-            return sendRecipeResponse(
-              res,
-              cacheVal,
-              { _source: "session_cache", _recipe_source: sessionCached._recipe_source },
-              debugMode,
-              request.crew_size,
-              request.meal_format || "random",
-              allergens,
-              auditCtx,
-              ipHash,
-              sessionId,
-              rateCtx,
-            );
-          }
-          log("[generate] session_cache skip: duplicate_signature", "generate");
-        } else {
-          log("[generate] session_cache skip: blocked by recent variety", "generate");
-        }
-      }
-
-      // ── LAST RESORT: deterministic template (no Spoonacular / catalog) ─────
-      if (!isTemplateFallbackAllowed()) {
-        cancelRequest(sessionKey, requestId);
-        log("[generate] template_fallback blocked DISABLE_TEMPLATE_FALLBACK=true", "generate");
-        return res.status(503).json({
-          message:
-            "No matching real recipes right now. Try a different protein, meal style, or cuisine — or turn off strict filters.",
-          retry_after_seconds: 30,
-          _source: "none",
-        });
-      }
-
-      log("[generate] last_resort template_fallback reason=all_real_sources_exhausted", "generate");
-
-      const fb = await withTimeout("template_fallback", 15_000, () =>
-        runV2Fallback(request, "all_real_sources_exhausted", clientRecentSigs),
-      );
-
-      const fbAuditCtx: LabelAuditContext = { ...auditCtx, chosenProtein: fb.protein };
-      const fbValCtx: RecipeValidationContext = {
-        chosenProtein: fb.protein,
-        meal_style: fb.structureDisplay,
+      auditCtx.chosenProtein = pipelineHit.protein;
+      const valCtx: RecipeValidationContext = {
+        chosenProtein: pipelineHit.protein,
+        meal_style: pipelineHit.recipe.meal_style || request.meal_format || "plated main",
         cuisine: request.cuisine_style || "any",
         appliances: request.appliances,
         allergens,
@@ -1292,48 +1166,147 @@ export async function registerRoutes(
         currentRecipeSignature: clientCurrentSig || undefined,
       };
 
-      const fbWithStyle = { ...fb.recipe, _fallback: true, meal_style: fb.structureDisplay };
-      const fbVal = validateAndFixRecipe(fbWithStyle as any, fbValCtx);
-      logUsage({ cacheKey: v2CacheKey, templateId: 0, cacheHit: false, latencyMs: Date.now() - startTime, ipHash, sessionId });
+      let validated = validateAndFixRecipe(
+        prepareRecipePreValidation(pipelineHit.recipe),
+        valCtx,
+      );
+
+      const preserveTitle = pipelineHit.originalTitle;
+      if (preserveTitle && validated.recipe.title !== preserveTitle) {
+        validated = { ...validated, recipe: { ...validated.recipe, title: preserveTitle } };
+      }
+
+      logUsage({
+        cacheKey: pipelineHit.cacheKey,
+        templateId: 0,
+        cacheHit: pipelineHit.cacheHit,
+        latencyMs: Date.now() - startTime,
+        ipHash,
+        sessionId,
+      });
+
       log(
-        `[generate] last_resort success structure=${fb.structure} protein=${fb.protein} duration=${Date.now() - startTime}ms`,
+        `[generate] success ${formatLogFields({
+          source: String(pipelineHit.extras._source || pipelineHit.layer),
+          layer: pipelineHit.layer,
+          sourceKind: pipelineHit.telemetry.sourceKind,
+          cacheHit: pipelineHit.cacheHit,
+          ai: pipelineHit.aiInvoked,
+          title: clip(validated.recipe.title, 60),
+          protein: pipelineHit.protein,
+          duration: `${pipelineHit.telemetry.durationMs}ms`,
+        })}`,
         "generate",
       );
-      recordSignature(fb.protein, fbVal.signature);
+
+      recordSignature(pipelineHit.protein, validated.signature);
+      if (pipelineHit.spoonacularId && pipelineHit.spoonacularId > 0) {
+        addRecentSpoonacularId(v2SessionKey, pipelineHit.spoonacularId);
+      }
+
       return sendRecipeResponse(
         res,
-        fbVal,
-        {
-          _fallback: true,
-          _source: "template_fallback",
-          _recipe_source: fb.recipeSource,
-        },
+        validated,
+        pipelineHit.extras,
         debugMode,
         request.crew_size,
-        request.meal_format,
+        request.meal_format || "random",
         allergens,
-        fbAuditCtx,
+        auditCtx,
         ipHash,
         sessionId,
         rateCtx,
+        request,
+        clientRecentSigs,
       );
 
     } catch (error: unknown) {
       const failCtx = parseGenerationRateContext(req);
       const failKey = `${hashIp(getClientIp(req))}:${(req as any)._sessionId || "unknown"}`;
-      cancelRequest(failKey, failCtx.requestId);
       const msg = error instanceof Error ? error.message : String(error);
-      logError("generate", "request failed", error);
-      const isTimeout = /timed out/i.test(msg);
-      return res.status(isTimeout ? 504 : 500).json(
-        generationError(
-          isTimeout ? "upstream_timeout" : "generation_failed",
-          isTimeout
-            ? "Generation took too long. Try again — cached meals load faster."
-            : msg || "Failed to generate recipe",
-          { request_id: failCtx.requestId, retry_after_seconds: isTimeout ? 10 : 5 },
-        ),
-      );
+      logError("generate", "request failed — serving emergency fallback", error);
+
+      if (error instanceof RecipeNotSendableError) {
+        cancelRequest(failKey, failCtx.requestId);
+        return res.status(500).json(
+          generationError("generation_failed", GENERATION_USER_FAILURE_MESSAGE, {
+            request_id: failCtx.requestId,
+          }),
+        );
+      }
+
+      try {
+        const parsed = generateRequestSchema.safeParse(req.body);
+        if (!parsed.success) {
+          cancelRequest(failKey, failCtx.requestId);
+          return res.status(500).json(
+            generationError("generation_failed", GENERATION_USER_FAILURE_MESSAGE, {
+              request_id: failCtx.requestId,
+            }),
+          );
+        }
+
+        const emergencyRequest = sanitizeGenerateRequest({
+          ...parsed.data,
+          busy_level: inferBusyLevelFromTime(parsed.data.time_available),
+        });
+        const emergencyStart = Date.now();
+        const emergencyHit = resolveEmergencyGenerateHit(
+          emergencyRequest,
+          emergencyStart,
+          `catch:${msg.slice(0, 80)}`,
+        );
+        logGenerateTelemetry(emergencyHit.telemetry);
+
+        const allergens = emergencyRequest.allergens_to_avoid || [];
+        const valCtx: RecipeValidationContext = {
+          chosenProtein: emergencyHit.protein,
+          meal_style: emergencyHit.recipe.meal_style || emergencyRequest.meal_format || "random",
+          cuisine: emergencyRequest.cuisine_style || "any",
+          appliances: emergencyRequest.appliances,
+          allergens,
+        };
+        const validated = validateAndFixRecipe(
+          prepareRecipePreValidation(emergencyHit.recipe),
+          valCtx,
+        );
+        const auditCtx: LabelAuditContext = {
+          selectedAppliances: emergencyRequest.appliances || [],
+          selectedAllergens: allergens,
+          selectedHealthiness: emergencyRequest.healthiness_preference || "balanced",
+          selectedBudget: emergencyRequest.budget_level || "standard",
+          selectedCuisine: emergencyRequest.cuisine_style || "",
+          selectedMealFormat: emergencyRequest.meal_format || "",
+          selectedProtein: emergencyRequest.protein || "any",
+          chosenProtein: emergencyHit.protein,
+          crewSize: emergencyRequest.crew_size || 4,
+        };
+
+        recordSignature(emergencyHit.protein, validated.signature);
+        return sendRecipeResponse(
+          res,
+          validated,
+          emergencyHit.extras,
+          false,
+          emergencyRequest.crew_size,
+          emergencyRequest.meal_format || "random",
+          allergens,
+          auditCtx,
+          failKey.split(":")[0] || "unknown",
+          (req as any)._sessionId || "unknown",
+          failCtx,
+          emergencyRequest,
+          [],
+        );
+      } catch (innerErr: unknown) {
+        cancelRequest(failKey, failCtx.requestId);
+        logError("generate", "emergency fallback failed", innerErr);
+        return res.status(500).json(
+          generationError("generation_failed", GENERATION_USER_FAILURE_MESSAGE, {
+            request_id: failCtx.requestId,
+          }),
+        );
+      }
     }
   });
 
@@ -1850,16 +1823,36 @@ export async function registerRoutes(
       const diet = (req.query.diet as string) || "";
       const intolerances = (req.query.intolerances as string) || "";
       const excludeIngredients = (req.query.excludeIngredients as string) || "";
-      const feed = await buildExploreEditorialFeed({
-        diet: diet || undefined,
-        intolerances: intolerances || undefined,
-        excludeIngredients: excludeIngredients || undefined,
-      });
+      const seen = parseSeenIds(req.query.seen as string | undefined);
+      const recentProteins = parseRecentProteins(req.query.recent_proteins as string | undefined);
+      const crewSize = req.query.crew_size ? Number(req.query.crew_size) : undefined;
+      const maxReadyMinutes = req.query.max_ready_minutes
+        ? Number(req.query.max_ready_minutes)
+        : undefined;
+      const performanceMode = req.query.performance_mode
+        ? Number(req.query.performance_mode)
+        : undefined;
+
+      const feed = await buildExploreEditorialFeed(
+        {
+          diet: diet || undefined,
+          intolerances: intolerances || undefined,
+          excludeIngredients: excludeIngredients || undefined,
+        },
+        {
+          seenRecipeIds: seen,
+          recentProteins,
+          crewSize: Number.isFinite(crewSize) ? crewSize : undefined,
+          maxReadyMinutes: Number.isFinite(maxReadyMinutes) ? maxReadyMinutes : undefined,
+          performanceMode: Number.isFinite(performanceMode) ? performanceMode : undefined,
+        },
+      );
 
       res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
       return res.json({
         sections: feed.sections,
         _editorial: true,
+        _recommendation: true,
         _meta: feed.meta,
       });
     } catch (err: unknown) {
@@ -1868,13 +1861,221 @@ export async function registerRoutes(
         return res.status(503).json({ message: "Recipe search is not configured. SPOONACULAR_API_KEY is missing." });
       }
       log(`[explore] Sections error: ${msg}`, "spoonacular");
-      return res.status(500).json({ message: "Failed to load editorial sections. Please try again." });
+      return res.status(500).json({ message: exploreApiErrorMessage(err) });
     }
+  });
+
+  app.get("/api/recommendations/context", async (req: Request, res: Response) => {
+    try {
+      const crewSize = req.query.crew_size ? Number(req.query.crew_size) : undefined;
+      const maxReadyMinutes = req.query.max_ready_minutes
+        ? Number(req.query.max_ready_minutes)
+        : undefined;
+      const performanceMode = req.query.performance_mode
+        ? Number(req.query.performance_mode)
+        : undefined;
+      const payload = buildContextualSuggestions({
+        crewSize: Number.isFinite(crewSize) ? crewSize : undefined,
+        maxReadyMinutes: Number.isFinite(maxReadyMinutes) ? maxReadyMinutes : undefined,
+        performanceMode: Number.isFinite(performanceMode) ? performanceMode : undefined,
+      });
+      res.setHeader("Cache-Control", "public, max-age=120");
+      return res.json(payload);
+    } catch (err: unknown) {
+      return res.status(500).json({
+        message: sanitizeApiErrorMessage(err, "Recommendations unavailable. Please try again."),
+      });
+    }
+  });
+
+  app.get("/api/recommendations/rails", async (_req: Request, res: Response) => {
+    res.setHeader("Cache-Control", "public, max-age=600");
+    return res.json({ rails: getMasterCategoryRailMeta() });
   });
 
   app.get("/api/admin/curated-recipes/stats", async (_req: Request, res: Response) => {
     try {
       return res.json(getCuratedStoreStats());
+    } catch (err: unknown) {
+      return res.status(500).json({ message: (err as Error).message });
+    }
+  });
+
+  app.get("/api/catalog/golden-100", async (_req: Request, res: Response) => {
+    res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
+    const indexFile = path.join(GOLDEN_CATALOG_PUBLIC_DIR, "index.json");
+    if (fs.existsSync(indexFile)) {
+      return res.type("json").send(fs.readFileSync(indexFile, "utf8"));
+    }
+    const pages = GOLDEN_100_RECIPES.map((def) => {
+      const page = buildGoldenRecipePage(def);
+      return {
+        slug: page.slug,
+        title: page.title,
+        subtitle: page.subtitle,
+        category: page.category,
+        cuisine: page.cuisine,
+        protein: def.protein,
+        mealFormat: def.mealFormat,
+        cookTime: page.cookTime,
+        difficulty: page.difficulty,
+        heroImage: page.heroImage,
+        thumbImage: page.thumbImage,
+        tags: page.tags,
+        firefighterScore: page.firefighterScore,
+        popularityWeight: page.popularityWeight,
+        searchTerms: page.searchTerms,
+      };
+    });
+    return res.json({
+      version: 1,
+      contentVersion: 1,
+      generatedAt: new Date().toISOString(),
+      recipeCount: pages.length,
+      recipes: pages,
+    });
+  });
+
+  app.get("/api/catalog/golden-100/:slug", async (req: Request, res: Response) => {
+    const slug = decodeURIComponent(String(req.params.slug)).trim().toLowerCase();
+    const def = getGoldenRecipeBySlug(slug);
+    if (!def) {
+      return res.status(404).json({ message: "Recipe not in Golden 100 catalog" });
+    }
+    res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
+    const onDisk = readGoldenRecipePage(slug);
+    const page = onDisk ?? buildGoldenRecipePage(def);
+    return res.json(page);
+  });
+
+  app.get("/api/admin/golden-100/manifest", async (_req: Request, res: Response) => {
+    res.setHeader("Cache-Control", "private, max-age=60");
+    return res.json({
+      summary: goldenManifestSummary(),
+      staticIssues: validateGoldenManifest().filter((i) => i.severity === "error"),
+      recipeCount: GOLDEN_100_RECIPES.length,
+      recipes: GOLDEN_100_RECIPES.map((r) => {
+        const inDb = getCuratedRecipeBySlug(r.slug);
+        const heroAvailable = golden100HeroAvailable(r.slug);
+        const assets = checkGoldenPageAssets(r.slug);
+        const pageOnDisk = listGoldenPageSlugs().includes(r.slug);
+        const page = readGoldenRecipePage(r.slug) ?? buildGoldenRecipePage(r);
+        const pageValidation = validateGoldenRecipePage(page);
+        return {
+          slug: r.slug,
+          title: r.title,
+          category: r.masterCategoryId,
+          masterCategoryId: r.masterCategoryId,
+          protein: r.protein,
+          cuisine: r.cuisine,
+          mealFormat: r.mealFormat,
+          hookLine: r.hookLine,
+          heroImage: golden100HeroUrl(r.slug),
+          heroAvailable,
+          status: inDb?.status ?? "unseeded",
+          recipeId: inDb?.recipeId,
+          featured: r.featured ?? false,
+          pageComplete: pageOnDisk && pageValidation.pass,
+          realismScore: page.realismScore,
+          firefighterScore: page.firefighterScore,
+          assetsComplete: assets.complete,
+          missingAssets: [
+            !assets.hero && "hero",
+            !assets.mobile && "mobile",
+            !assets.thumb && "thumb",
+            !assets.rail && "rail",
+          ].filter(Boolean),
+        };
+      }),
+    });
+  });
+
+  app.get("/api/admin/golden-100/recipe/:slug", async (req: Request, res: Response) => {
+    try {
+      const slug = decodeURIComponent(String(req.params.slug)).trim().toLowerCase();
+      const manifest = GOLDEN_100_RECIPES.find((r) => r.slug === slug);
+      if (!manifest) {
+        return res.status(404).json({ message: "Recipe not in Golden 100 manifest" });
+      }
+      const curated = getCuratedRecipeBySlug(slug);
+      const heroAvailable = golden100HeroAvailable(manifest.slug);
+      return res.json({
+        slug: manifest.slug,
+        title: manifest.title,
+        category: manifest.masterCategoryId,
+        masterCategoryId: manifest.masterCategoryId,
+        protein: manifest.protein,
+        cuisine: manifest.cuisine,
+        mealFormat: manifest.mealFormat,
+        hookLine: manifest.hookLine,
+        heroImage: golden100HeroUrl(manifest.slug),
+        heroAvailable,
+        status: curated?.status ?? "unseeded",
+        recipeId: curated?.recipeId,
+        featured: manifest.featured ?? false,
+        curated,
+      });
+    } catch (err: unknown) {
+      return res.status(500).json({ message: (err as Error).message });
+    }
+  });
+
+  app.get("/api/admin/golden-100/audit", async (_req: Request, res: Response) => {
+    try {
+      return res.json(auditGolden100Dataset());
+    } catch (err: unknown) {
+      return res.status(500).json({ message: (err as Error).message });
+    }
+  });
+
+  app.get("/api/admin/curated-recipes/list", async (req: Request, res: Response) => {
+    try {
+      const tag = (req.query.tag as string) || "golden_100";
+      const limit = Math.min(parseInt(String(req.query.limit || "120"), 10) || 120, 200);
+      const weakOnly = req.query.weakTitles === "1" || req.query.weakTitles === "true";
+
+      const rows = listCuratedSummariesByTag(tag, limit);
+      const titleKeys = new Map<string, string[]>();
+
+      const items = rows.map((row) => {
+        const recipe = getCuratedRecipeBySlug(row.slug);
+        const titleQ = scoreRecipeTitle(row.title, {
+          protein: row.protein,
+          mealFormat: recipe?.mealFormat,
+          cuisine: recipe?.cuisine,
+        });
+        const key = normalizeTitleKey(row.title);
+        const dupList = titleKeys.get(key) || [];
+        dupList.push(row.slug);
+        titleKeys.set(key, dupList);
+
+        const manifest = GOLDEN_100_RECIPES.find((m) => m.slug === row.slug);
+        const missingImagery =
+          !row.heroImage?.trim() ||
+          (row.heroImage.includes("spoonacular.com") && !manifest?.classicSlug);
+
+        return {
+          ...row,
+          weakTitle: !titleQ.pass,
+          titleIssues: titleQ.issues,
+          missingImagery,
+          masterCategoryId: manifest?.masterCategoryId,
+          imageryPromptPreview: manifest ? buildGoldenHeroPrompt(manifest).slice(0, 200) : undefined,
+        };
+      });
+
+      const duplicates = [...titleKeys.entries()]
+        .filter(([, slugs]) => slugs.length > 1)
+        .map(([key, slugs]) => ({ titleKey: key, slugs }));
+
+      const filtered = weakOnly ? items.filter((i) => i.weakTitle || i.missingImagery) : items;
+
+      return res.json({
+        tag,
+        count: filtered.length,
+        duplicates,
+        recipes: filtered,
+      });
     } catch (err: unknown) {
       return res.status(500).json({ message: (err as Error).message });
     }

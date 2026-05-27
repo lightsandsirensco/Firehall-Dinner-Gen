@@ -1,0 +1,157 @@
+{
+  "slug": "jerk-chicken",
+  "title": "Jerk Chicken",
+  "subtitle": "Island heat that still feeds eight",
+  "category": "firehall_classics",
+  "cuisine": "caribbean",
+  "description": "Char, spice, and Caribbean hall swagger.",
+  "crewSize": 8,
+  "cookTime": 60,
+  "prepTime": 25,
+  "difficulty": "medium",
+  "calories": 590,
+  "protein": 40,
+  "carbs": 44,
+  "fats": 26,
+  "tags": [
+    "protein:chicken",
+    "format:grill",
+    "category:firehall_classics",
+    "trending",
+    "chicken",
+    "golden_100"
+  ],
+  "equipment": [
+    "Grill or flat-top",
+    "Tongs",
+    "Heat-resistant gloves",
+    "Large sheet trays",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "ingredients": [
+    {
+      "name": "Chicken thighs",
+      "quantity": "24",
+      "unit": "pieces",
+      "notes": "24 pieces Chicken thighs"
+    },
+    {
+      "name": "Jerk seasoning",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "1 cup Jerk seasoning"
+    },
+    {
+      "name": "Jasmine rice",
+      "quantity": "3",
+      "unit": "cups",
+      "notes": "3 cups Jasmine rice"
+    },
+    {
+      "name": "Coconut milk",
+      "quantity": "2",
+      "unit": "cans",
+      "notes": "2 cans Coconut milk"
+    },
+    {
+      "name": "Cucumbers",
+      "quantity": "6",
+      "notes": "6 Cucumbers"
+    },
+    {
+      "name": "Lime",
+      "quantity": "10",
+      "notes": "10 Lime"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Step 1",
+      "instruction": "Marinate chicken (no heat, 20 min): Coat thighs in jerk paste; longer if time allows.",
+      "minutes": 20,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Step 2",
+      "instruction": "Cook coconut rice (simmer, 18 min): Simmer rice in coconut milk and water until fluffy.",
+      "minutes": 18,
+      "heatLevel": "medium-low"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Step 3",
+      "instruction": "Grill chicken (medium-high, 20 min): Grill to 165°F with char marks; hold warm.",
+      "minutes": 20,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Step 4",
+      "instruction": "Toss cucumber salad (no heat, 8 min): Slice cucumbers, dress with lime, salt, and a touch of oil.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Step 5",
+      "instruction": "Plate for the hall (serve): Rice base, chicken on top, salad on the side.",
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Use thighs — they forgive the grill and stay juicy.",
+    "Keep extra lime at the end of the line.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Taste for salt at the end — hall palates run salty after long shifts.",
+    "Rest grilled proteins 5–8 minutes under foil before slicing — juices stay in the meat.",
+    "Pull chicken at 160°F and let carryover hit 165°F — dry breast ruins crew morale."
+  ],
+  "tonightSpread": [
+    "Plate Jerk Chicken with sides in separate pans so the crew can mix portions.",
+    "Line up Jerk Chicken on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+  ],
+  "leftovers": [
+    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
+    "Label trays with date and reheat to 165°F minimum before second shift.",
+    "Slice cold protein thin for next-day wraps or salads — faster reheat, less dry-out."
+  ],
+  "nutrition": {
+    "calories": 590,
+    "protein": 40,
+    "carbs": 44,
+    "fats": 26,
+    "label": "per serving (hall portion)"
+  },
+  "heroImage": "/images/golden-100/jerk-chicken.jpg",
+  "mobileImage": "/images/mobile/jerk-chicken.jpg",
+  "thumbImage": "/images/thumbs/jerk-chicken.jpg",
+  "railImage": "/images/rails/jerk-chicken.jpg",
+  "realismScore": 100,
+  "firefighterScore": 100,
+  "popularityWeight": 3.6,
+  "searchTerms": [
+    "jerk chicken",
+    "caribbean",
+    "chicken",
+    "grill",
+    "trending",
+    "golden_100"
+  ],
+  "relatedSlugs": [
+    "crispy-chicken-cutlets",
+    "bbq-chicken-bowls",
+    "chicken-caesar",
+    "chicken-parm",
+    "parm-hero-subs",
+    "chicken-souvlaki"
+  ],
+  "sourceName": "Firehall Classics",
+  "sourceUrl": "",
+  "classicSlug": "jerk-chicken",
+  "generatedAt": "2026-05-27T15:03:06.119Z",
+  "contentVersion": 1
+}

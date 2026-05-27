@@ -16,6 +16,7 @@ import { buildShoppingListFromClientMeal } from "@/lib/shopping-list";
 import { getSavedCount } from "@/lib/saved-meals";
 import { apiRequest } from "@/lib/queryClient";
 import { parseApiError } from "@/lib/parse-api-error";
+import { GENERATION_USER_FAILURE_MESSAGE, GENERATION_USER_RETRY_MESSAGE } from "@shared/generation-reliability";
 import { buildFilterKey, putCached, addRecentSignature, getRecentSignatures } from "@/lib/recipe-cache";
 import {
   schedulePrefetchAfterGeneration,
@@ -41,6 +42,7 @@ import { Flame } from "lucide-react";
 import { HeroHeader, type HeroVariant } from "@/components/hero-header";
 import { cn } from "@/lib/utils";
 import { SiteHeader } from "@/components/site-header";
+import { StickyCTA } from "@/components/mobile/sticky-cta";
 import { FirstShiftTip } from "@/components/first-shift-tip";
 import { useToast } from "@/hooks/use-toast";
 import { hapticLight, hapticSuccess, hapticWarning } from "@/lib/haptics";
@@ -530,13 +532,13 @@ export default function Home() {
       } else if (parsed.code === "upstream_timeout" || parsed.status === 504) {
         errorMsg = parsed.message;
       } else if (parsed.code === "validation_error" || parsed.status === 400) {
-        errorMsg = parsed.message || "Generator temporarily failed. Retrying with a simplified request…";
+        errorMsg = parsed.message || GENERATION_USER_RETRY_MESSAGE;
       } else if (parsed.status === 503 || parsed.message.includes("budget")) {
-        errorMsg = "No matching real recipes right now. Try different filters or again in a minute.";
+        errorMsg = GENERATION_USER_FAILURE_MESSAGE;
       } else if (parsed.status === 403) {
         errorMsg = "Security check failed. Refresh the page and try again.";
       } else {
-        errorMsg = parsed.message || "Generation failed. Please try again.";
+        errorMsg = parsed.message || GENERATION_USER_FAILURE_MESSAGE;
       }
 
       setError(errorMsg);
@@ -659,8 +661,8 @@ export default function Home() {
 
       <main
         className={cn(
-          "max-w-[1400px] mx-auto px-page pb-safe-sticky lg:pb-8 transition-[padding] duration-500 ease-out scroll-momentum",
-          mealFocusMode ? "py-2 sm:py-3 lg:py-4" : heroVariant === "compact" ? "py-4 sm:py-5" : "py-8",
+          "max-w-[min(1600px,100%)] mx-auto px-page pb-safe-sticky lg:pb-10 transition-[padding] duration-500 ease-out scroll-momentum",
+          mealFocusMode ? "py-2 lg:py-4" : heroVariant === "compact" ? "py-3 sm:py-5" : "py-4 sm:py-8",
         )}
       >
         {oneTapMode && showFirstShiftTip && (
@@ -668,15 +670,20 @@ export default function Home() {
         )}
         <div
           className={cn(
-            "flex flex-col lg:flex-row transition-[gap] duration-500",
+            "flex flex-col transition-[gap] duration-500",
             mealFocusMode
-              ? "gap-4 flex-col-reverse lg:flex-row"
+              ? "gap-3 flex-col-reverse lg:grid lg:grid-cols-[minmax(260px,300px)_minmax(0,1fr)] lg:gap-10 lg:items-start"
               : oneTapMode
-                ? "gap-4 flex-col-reverse lg:flex-row lg:gap-8"
-                : "gap-8",
+                ? "gap-3 flex-col-reverse lg:grid lg:grid-cols-[minmax(260px,300px)_minmax(0,1fr)] lg:gap-10 lg:items-start"
+                : "gap-6 lg:grid lg:grid-cols-[minmax(280px,320px)_minmax(0,1fr)] lg:gap-10 lg:items-start",
           )}
         >
-          <div className="w-full lg:w-[380px] flex-shrink-0">
+          <aside
+            className={cn(
+              "w-full flex-shrink-0 lg:sticky lg:top-[calc(3.5rem+env(safe-area-inset-top,0px))] lg:self-start",
+              mealFocusMode && "lg:max-h-[calc(100dvh-5rem)] lg:overflow-y-auto lg:overscroll-contain",
+            )}
+          >
             <FilterPanel
               filters={filters}
               onFiltersChange={onFiltersChange}
@@ -690,9 +697,9 @@ export default function Home() {
               onForward={handleForward}
               onScrollToFilters={scrollToFilters}
             />
-          </div>
+          </aside>
 
-          <div ref={recipeRef} className="scroll-section min-w-0 flex-1">
+          <div ref={recipeRef} className="scroll-section min-w-0 w-full">
             <ResultsPanel
               loading={loading}
               error={error}
@@ -748,22 +755,19 @@ export default function Home() {
         />
       )}
 
-      <div className="mobile-sticky-bar lg:hidden" data-testid="mobile-generate-bar">
-        <div className="px-page pt-3">
-          <GenerateButtons
-            filters={filters}
-            hasRecipe={!!recipe}
-            isLoading={loading}
-            canGoBack={historyNav.index > 0}
-            canGoForward={historyNav.index < historyNav.total - 1}
-            onGenerate={handleGenerateClick}
-            onGenerateAnother={handleGenerateAnother}
-            onBack={handleBack}
-            onForward={handleForward}
-            onScrollToFilters={scrollToFilters}
-          />
-        </div>
-      </div>
+      <StickyCTA
+        filters={filters}
+        hasRecipe={!!recipe}
+        isLoading={loading}
+        compact
+        canGoBack={historyNav.index > 0}
+        canGoForward={historyNav.index < historyNav.total - 1}
+        onGenerate={handleGenerateClick}
+        onGenerateAnother={handleGenerateAnother}
+        onBack={handleBack}
+        onForward={handleForward}
+        onScrollToFilters={scrollToFilters}
+      />
 
       <footer className="border-t border-border/20 mt-10 pb-20 lg:pb-0">
         <div className="max-w-[1400px] mx-auto px-page py-6 flex items-center justify-center gap-2">

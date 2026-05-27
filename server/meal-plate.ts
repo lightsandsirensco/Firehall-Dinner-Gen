@@ -13,6 +13,7 @@ import {
   BREAD_BASE_PATTERN,
 } from "@shared/meal-semantics";
 import { inferActualProtein } from "./spoonacular-converter";
+import { isRoboticTitle, suggestHumanMealTitle } from "../shared/generation-reliability.js";
 import { log } from "./index";
 
 export type PlateRole = "main" | "starch" | "veg" | "optional";
@@ -123,6 +124,7 @@ export function isWeakTitle(title: string): boolean {
   if (t.split(/\s+/).length <= 1) return true;
   if (WEAK_TITLE.test(t)) return true;
   if (BLOG_TITLE.test(t)) return true;
+  if (isRoboticTitle(t)) return true;
   return false;
 }
 
@@ -269,8 +271,14 @@ export function finalizeMealPlate(
   });
   let title = plate.display_title;
 
-  if (isWeakTitle(title)) {
-    title = `${plate.cuisine_label} ${PROTEIN_MAIN[protein] || "Crew Dinner"}`.trim();
+  if (isWeakTitle(title) || isRoboticTitle(title)) {
+    title = suggestHumanMealTitle({
+      protein,
+      mealFormat: ctx.mealFormat,
+      fallbackTitle: title,
+      ingredients: recipe.ingredients,
+      cuisine: plate.cuisine_label || ctx.cuisine,
+    });
   }
 
   log(`[plate] title="${title}" main=${plate.main.length} sides=${plate.sides.length} opt=${plate.optional.length}`, "plate");

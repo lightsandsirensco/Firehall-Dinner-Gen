@@ -7,6 +7,7 @@ import { buildFoodImageryPromptSpec } from "../../shared/food-imagery/prompt-bui
 import { buildPizzaFoodImageryPromptSpec } from "../../shared/food-imagery/pizza-prompt-builder.js";
 import { getPizzaConceptMeta } from "../../shared/pizza-concepts.js";
 import { resolveGenerationSize } from "../../shared/food-imagery/aspect-ratio.js";
+import type { GptImageApiSize } from "../lib/image-sizes.js";
 import { FOOD_IMAGERY_STYLE_VERSION } from "../../shared/food-imagery/master-style.js";
 import { resolveShotPreset } from "../../shared/food-imagery/shot-presets.js";
 
@@ -19,7 +20,7 @@ export interface FoodImageryPreflightResult {
   spec?: FoodImageryPromptSpec;
   styleVersion: string;
   shotPresetId: string;
-  size: "1024x1024" | "512x512";
+  size: GptImageApiSize;
 }
 
 function resolveSpec(ctx: FoodImageryContext): FoodImageryPromptSpec {

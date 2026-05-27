@@ -1,0 +1,264 @@
+{
+  "slug": "steak-tacos",
+  "title": "Chimichurri Steak Tacos",
+  "subtitle": "Charred steak, bright chimichurri, tortilla night",
+  "category": "firehall_classics",
+  "cuisine": "mexican",
+  "description": "Crew Favorite · Grill Night · Medium spice · Street tacos (no rice sides)",
+  "crewSize": 8,
+  "cookTime": 55,
+  "prepTime": 25,
+  "difficulty": "medium",
+  "calories": 520,
+  "protein": 34,
+  "carbs": 38,
+  "fats": 26,
+  "tags": [
+    "protein:beef",
+    "format:tacos",
+    "category:firehall_classics",
+    "trending",
+    "handheld",
+    "golden_100"
+  ],
+  "equipment": [
+    "Large sheet trays",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "ingredients": [
+    {
+      "name": "Skirt or flank steak",
+      "quantity": "3.5",
+      "unit": "lb",
+      "notes": "3.5 lb Skirt or flank steak"
+    },
+    {
+      "name": "Smoked paprika",
+      "quantity": "2",
+      "unit": "tbsp",
+      "notes": "2 tbsp Smoked paprika"
+    },
+    {
+      "name": "Chili powder",
+      "quantity": "1",
+      "unit": "tbsp",
+      "notes": "1 tbsp Chili powder"
+    },
+    {
+      "name": "Ground cumin",
+      "quantity": "2",
+      "unit": "tsp",
+      "notes": "2 tsp Ground cumin"
+    },
+    {
+      "name": "Garlic powder",
+      "quantity": "1",
+      "unit": "tbsp",
+      "notes": "1 tbsp Garlic powder"
+    },
+    {
+      "name": "Kosher salt",
+      "quantity": "2",
+      "unit": "tbsp",
+      "notes": "2 tbsp Kosher salt"
+    },
+    {
+      "name": "Black pepper",
+      "quantity": "1",
+      "unit": "tbsp",
+      "notes": "1 tbsp Black pepper"
+    },
+    {
+      "name": "Fresh parsley (flat-leaf)",
+      "quantity": "2",
+      "unit": "cups packed",
+      "notes": "2 cups packed Fresh parsley (flat-leaf)"
+    },
+    {
+      "name": "Fresh cilantro",
+      "quantity": "1",
+      "unit": "cup packed",
+      "notes": "1 cup packed Fresh cilantro"
+    },
+    {
+      "name": "Garlic cloves",
+      "quantity": "6",
+      "notes": "6 Garlic cloves"
+    },
+    {
+      "name": "Red wine vinegar",
+      "quantity": "6",
+      "unit": "tbsp",
+      "notes": "6 tbsp Red wine vinegar"
+    },
+    {
+      "name": "Extra-virgin olive oil",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "1 cup Extra-virgin olive oil"
+    },
+    {
+      "name": "Red onion",
+      "quantity": "2",
+      "unit": "large",
+      "notes": "2 large Red onion"
+    },
+    {
+      "name": "White vinegar (pickling)",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "1 cup White vinegar (pickling)"
+    },
+    {
+      "name": "Sugar",
+      "quantity": "2",
+      "unit": "tbsp",
+      "notes": "2 tbsp Sugar"
+    },
+    {
+      "name": "Corn tortillas",
+      "quantity": "36",
+      "notes": "36 Corn tortillas"
+    },
+    {
+      "name": "Cotija cheese",
+      "quantity": "12",
+      "unit": "oz",
+      "notes": "12 oz Cotija cheese"
+    },
+    {
+      "name": "Sour cream",
+      "quantity": "2",
+      "unit": "cups",
+      "notes": "2 cups Sour cream"
+    },
+    {
+      "name": "Limes",
+      "quantity": "10",
+      "notes": "10 Limes"
+    },
+    {
+      "name": "Jalapeños",
+      "quantity": "4",
+      "notes": "4 Jalapeños"
+    },
+    {
+      "name": "Neutral oil (high heat)",
+      "quantity": "3",
+      "unit": "tbsp",
+      "notes": "3 tbsp Neutral oil (high heat)"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Step 1",
+      "instruction": "Prep chimichurri (no heat, 10 min): Finely chop parsley and cilantro — you want small pieces, not a wet purée (blending too long turns chimichurri muddy). Mince garlic. Whisk olive oil, red wine vinegar, garlic, herbs, 1 tsp salt, and cracked pepper. Chimichurri should look like loose green confetti in glossy oil — sharp, herb-forward, not mayonnaise-thick. Taste: it should hit acid first, then garlic, then peppery herbs. Hold at room temp 20 minutes so flavors meld.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Step 2",
+      "instruction": "Quick-pickle the onions (no heat, 8 min): Slice red onions paper-thin on a mandoline if you have one — thick rings stay crunchy-raw instead of pickle-soft. Cover with white vinegar, pinch of salt, and sugar; toss and let sit at least 15 minutes. Done when rings turn hot pink and taste tangy-sweet (not harsh raw onion). Drain lightly before the line — keep a little brine for brightness.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Step 3",
+      "instruction": "Season the steak (no heat, 5 min): Pat skirt or flank completely dry — wet steak steams instead of chars. Rub with smoked paprika, chili powder, cumin, garlic powder, salt, and pepper. Skirt has more fat and forgiving texture; flank is leaner — either works, but slice against the grain extra thin for flank. Let sit 10 minutes at room temp so the salt seasons the interior.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Step 4",
+      "instruction": "Sear steak hard (high, 8–10 min): Heat cast iron or grill to screaming hot — oil should shimmer and barely smoke. Sear steak in batches; don't crowd. You want deep brown crust with grill marks, not gray steamed meat. Flip once. Skirt: 3–4 min per side for medium-rare. Flank: 4–5 min per side. Internal 125–130°F for pink center — carryover cooking will rise 5° while resting. Common mistake: flipping too early; wait until the crust releases cleanly.",
+      "minutes": 9,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Step 5",
+      "instruction": "Rest & slice against the grain (no heat, 12 min): Transfer steak to a cutting board and rest uncovered 8–10 minutes — juices redistribute so slices stay juicy, not a puddle on the board. Slice at a sharp angle against the grain into thin ribbons (⅛-inch). You should see short muscle fibers, not long chewy lines. Hold loosely covered with foil — don't stack hot slices or they'll steam soggy.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Step 6",
+      "instruction": "Char tortillas (high, 6 min): Work in batches over open flame, hot cast iron, or dry skillet. 20–40 seconds per side until you see leopard char spots and smell toasted corn — pliable in the center, not cracker-crisp. Stack wrapped in a towel so they steam slightly and stay warm. Cold tortillas crack when folded — warm is non-negotiable for street tacos.",
+      "minutes": 6,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Step 7",
+      "instruction": "Lime crema & taco line (no heat, 8 min): Whisk sour cream with lime juice and zest until pourable — balance fat (crema) with acid (lime) so each bite isn't heavy. Crumble cotija. Set chimichurri, pickled onions, crema, cilantro, and optional jalapeño slices on the counter. Assembly order for best texture: tortilla → thin steak → chimichurri → onions → cotija → crema → cilantro. Acid and herbs cut the rich steak; crema cools heat from jalapeños.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Step 8",
+      "instruction": "Serve immediately (no heat, 3 min): Call the crew when steak and tortillas are hot — street tacos fall apart when held under heat lamps. Lime wedges on the side for a final squeeze. Balance check on your first taco: char (steak/tortilla), fat (crema/cotija), acid (pickled onion/lime/chimichurri), spice (jalapeño/chili rub). Adjust chimichurri vinegar or salt at the line if needed.",
+      "minutes": 3,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Slice steak only after resting — rushing guarantees chewy tacos.",
+    "Keep chimichurri loose; a thick paste won't cling to sliced steak.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Taste for salt at the end — hall palates run salty after long shifts."
+  ],
+  "tonightSpread": [
+    "Warm tortillas in a dry skillet stack — wrap in foil so the line stays soft.",
+    "Set proteins, salsa, and toppings in separate bowls for build-your-own station flow.",
+    "Line up Chimichurri Steak Tacos on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+  ],
+  "leftovers": [
+    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
+    "Label trays with date and reheat to 165°F minimum before second shift."
+  ],
+  "nutrition": {
+    "calories": 520,
+    "protein": 34,
+    "carbs": 38,
+    "fats": 26,
+    "label": "per serving (hall portion)"
+  },
+  "heroImage": "/images/golden-100/steak-tacos.jpg",
+  "mobileImage": "/images/mobile/steak-tacos.jpg",
+  "thumbImage": "/images/thumbs/steak-tacos.jpg",
+  "railImage": "/images/rails/steak-tacos.jpg",
+  "realismScore": 100,
+  "firefighterScore": 100,
+  "popularityWeight": 3.6,
+  "searchTerms": [
+    "chimichurri steak tacos",
+    "steak tacos",
+    "mexican",
+    "beef",
+    "tacos",
+    "trending",
+    "handheld",
+    "golden_100"
+  ],
+  "relatedSlugs": [
+    "hall-taco-bar",
+    "loaded-nacho-skillet",
+    "meatball-hoagies",
+    "smash-burgers",
+    "beef-dip",
+    "chili-garlic-bread"
+  ],
+  "sourceName": "Firehall Classics",
+  "sourceUrl": "",
+  "classicSlug": "steak-tacos",
+  "generatedAt": "2026-05-27T15:03:06.106Z",
+  "contentVersion": 1
+}

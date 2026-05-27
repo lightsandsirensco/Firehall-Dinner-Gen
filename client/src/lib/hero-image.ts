@@ -25,11 +25,11 @@ export type HeroOverlayPreset =
 /** Outer frame: aspect ratio + max height caps (prevents giant mobile blobs) */
 export const HERO_LAYOUT_FRAME: Record<HeroImageLayout, string> = {
   detail:
-    "w-full aspect-[5/4] max-h-[min(48vh,440px)] sm:aspect-[16/9] sm:max-h-[min(400px,52vh)]",
+    "w-full aspect-[4/5] max-h-[min(56vh,520px)] sm:aspect-[16/9] sm:max-h-[min(400px,52vh)]",
   cinematic:
-    "w-full aspect-[5/4] max-h-[min(48vh,440px)] sm:aspect-[16/9] sm:max-h-[min(400px,52vh)]",
+    "w-full aspect-[4/5] max-h-[min(58vh,540px)] sm:aspect-[16/9] sm:max-h-[min(420px,54vh)]",
   "card-fill": "w-full h-full min-h-0",
-  "banner-full": "w-full h-[min(32vh,200px)] sm:h-[280px] md:h-[340px]",
+  "banner-full": "w-full h-[min(42vh,300px)] sm:h-[260px] md:h-[340px]",
   "banner-compact": "w-full h-[100px] sm:h-[152px]",
   "banner-utility": "w-full h-[52px] sm:h-[60px]",
 };

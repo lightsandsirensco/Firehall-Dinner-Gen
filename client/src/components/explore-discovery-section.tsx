@@ -1,42 +1,21 @@
-import type { ExploreEditorialSection, ExploreSectionTheme } from "@shared/explore-editorial";
+import type { ExploreEditorialSection } from "@shared/explore-editorial";
 import type { ExploreRecipeCard } from "@/lib/explore-recipe";
 import { ExploreCinematicCard } from "@/components/explore-cinematic-card";
 import { ExploreCinematicCardSkeleton } from "@/components/explore-cinematic-card";
+import { ExploreRailHeader } from "@/components/explore-rail-header";
+import {
+  buildRailPresentation,
+  buildWhyThisMeal,
+  buildRecommendationChip,
+  type ExploreFeedContext,
+} from "@/lib/explore-recommendation-ux";
 import { cn } from "@/lib/utils";
-
-const THEME_STYLES: Record<
-  ExploreSectionTheme,
-  { accent: string; glow: string }
-> = {
-  ember: {
-    accent: "from-primary via-orange-500 to-amber-600",
-    glow: "shadow-[0_0_40px_-8px_rgba(234,88,12,0.35)]",
-  },
-  smoke: {
-    accent: "from-zinc-400 via-zinc-600 to-zinc-800",
-    glow: "shadow-[0_0_32px_-10px_rgba(120,120,120,0.25)]",
-  },
-  gold: {
-    accent: "from-amber-400 via-amber-500 to-yellow-700",
-    glow: "shadow-[0_0_36px_-8px_rgba(245,158,11,0.3)]",
-  },
-  steel: {
-    accent: "from-slate-300 via-slate-500 to-slate-700",
-    glow: "",
-  },
-  copper: {
-    accent: "from-orange-600 via-amber-700 to-amber-900",
-    glow: "",
-  },
-  ocean: {
-    accent: "from-cyan-400 via-teal-500 to-blue-800",
-    glow: "shadow-[0_0_36px_-10px_rgba(34,211,238,0.2)]",
-  },
-};
 
 export interface ExploreDiscoverySectionProps {
   section: ExploreEditorialSection;
   crewSize: number;
+  feedContext: ExploreFeedContext;
+  sectionIndex: number;
   priorityImageCount?: number;
   onRecipeClick: (recipe: ExploreRecipeCard) => void;
 }
@@ -44,15 +23,16 @@ export interface ExploreDiscoverySectionProps {
 export function ExploreDiscoverySection({
   section,
   crewSize,
+  feedContext,
+  sectionIndex,
   priorityImageCount = 0,
   onRecipeClick,
 }: ExploreDiscoverySectionProps) {
   if (section.recipes.length === 0) return null;
 
   const theme = section.theme ?? "ember";
-  const themeStyle = THEME_STYLES[theme] ?? THEME_STYLES.ember;
+  const rail = buildRailPresentation(section, feedContext, sectionIndex);
   const isGrid = section.layout === "grid";
-  const isHeroRail = section.id === "firehouse_staples" || section.id === "trending_tonight";
 
   return (
     <section
@@ -60,30 +40,11 @@ export function ExploreDiscoverySection({
       className={cn(
         "mb-11 sm:mb-14 scroll-mt-20",
         "[content-visibility:auto] [contain-intrinsic-size:auto_420px]",
+        rail.isHeroRail && "explore-rail-hero",
       )}
       data-testid={`section-discovery-${section.id}`}
     >
-      <div className={cn("mb-4 sm:mb-5 px-0.5", isHeroRail && "mb-5 sm:mb-6")}>
-        <div
-          className={cn(
-            "h-1 rounded-full bg-gradient-to-r mb-3",
-            themeStyle.accent,
-            isHeroRail && "h-1.5 w-20",
-          )}
-          aria-hidden
-        />
-        <h2
-          className={cn(
-            "font-heading tracking-wide text-foreground",
-            isHeroRail ? "text-2xl sm:text-3xl" : "text-xl sm:text-2xl",
-          )}
-        >
-          {section.title}
-        </h2>
-        <p className="text-sm text-muted-foreground mt-1.5 max-w-lg leading-relaxed">
-          {section.subtitle}
-        </p>
-      </div>
+      <ExploreRailHeader presentation={rail} theme={theme} />
 
       {isGrid ? (
         <div className="grid grid-cols-2 gap-2.5 sm:gap-4 md:grid-cols-3">
@@ -95,6 +56,8 @@ export function ExploreDiscoverySection({
               isCurated={Boolean(recipe._curatedSlug)}
               layout="grid"
               priority={index < priorityImageCount}
+              whyThisMeal={buildWhyThisMeal(recipe, section, feedContext)}
+              recommendationChip={buildRecommendationChip(recipe, section, feedContext)}
               onClick={() => onRecipeClick(recipe)}
             />
           ))}
@@ -106,7 +69,7 @@ export function ExploreDiscoverySection({
             "snap-x snap-mandatory scroll-smooth overscroll-x-contain",
             "[-webkit-overflow-scrolling:touch]",
             "scrollbar-hide sm:scrollbar-thin",
-            isHeroRail && themeStyle.glow,
+            rail.isHeroRail && "explore-rail-glow",
           )}
         >
           {section.recipes.map((recipe, index) => (
@@ -114,7 +77,7 @@ export function ExploreDiscoverySection({
               key={`${section.id}-${recipe.id}-${recipe._curatedSlug ?? ""}`}
               className={cn(
                 "snap-start shrink-0",
-                isHeroRail
+                rail.isHeroRail
                   ? "w-[min(86vw,340px)] sm:w-[360px]"
                   : "w-[min(82vw,300px)] sm:w-[300px] md:w-[320px]",
               )}
@@ -125,6 +88,8 @@ export function ExploreDiscoverySection({
                 isCurated={Boolean(recipe._curatedSlug)}
                 layout="rail"
                 priority={index < priorityImageCount}
+                whyThisMeal={buildWhyThisMeal(recipe, section, feedContext)}
+                recommendationChip={buildRecommendationChip(recipe, section, feedContext)}
                 onClick={() => onRecipeClick(recipe)}
               />
             </div>

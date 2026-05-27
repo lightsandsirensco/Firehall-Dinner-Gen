@@ -6,6 +6,7 @@ import {
 } from "../shared/recipe-signature.js";
 import { recipeSignatureFingerprint } from "./recipe-signature-hash.js";
 import { generationError, type GenerationErrorCode } from "../shared/generation-errors.js";
+import { GENERATION_USER_RETRY_MESSAGE } from "../shared/generation-reliability.js";
 import { log } from "./logger.js";
 
 function signatureField(path: (string | number)[]): boolean {
@@ -37,10 +38,7 @@ export function formatZodValidationForClient(error: ZodError): {
   status: number;
   body: ReturnType<typeof generationError>;
 } {
-  const sigIssue = error.issues.some((i) => signatureField(i.path));
-  const message = sigIssue
-    ? "Generator temporarily failed. Retrying with a simplified request…"
-    : "Generator temporarily failed. Check your filters and try again.";
+  const message = GENERATION_USER_RETRY_MESSAGE;
 
   const code: GenerationErrorCode = "validation_error";
   return {
