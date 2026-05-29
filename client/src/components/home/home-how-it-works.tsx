@@ -18,7 +18,7 @@ const STEPS = [
   {
     step: "03",
     title: "Get dinner on the table",
-    body: "Find a Meal, browse Explore, or spin the Classics Wheel when nobody agrees.",
+    body: "Open a firefighter recipe, browse the catalog, or use Find a Meal when you want a fast pick.",
     icon: ChefHat,
   },
 ] as const;

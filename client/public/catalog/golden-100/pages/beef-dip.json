@@ -7,7 +7,7 @@
   "subtitle": "Au jus dip energy without the fuss",
   "category": "firehall_classics",
   "cuisine": "american",
-  "description": "Canadian hall legend",
+  "description": "Canadian hall legend. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
   "baseServings": 8,
   "cookTime": 45,
@@ -32,70 +32,70 @@
   ],
   "ingredients": [
     {
-      "name": "Deli roast beef",
-      "quantity": "5.3",
-      "unit": "lb"
-    },
-    {
-      "name": "Hoagie rolls",
-      "quantity": "24"
-    },
-    {
-      "name": "Au jus concentrate",
-      "quantity": "5.3",
-      "unit": "packets"
-    },
-    {
-      "name": "Provolone cheese",
-      "quantity": "24",
-      "unit": "slices"
-    },
-    {
-      "name": "Frozen fries",
+      "name": "NY strip or flank steak",
       "quantity": "4",
-      "unit": "lb"
+      "unit": "lb",
+      "group": "Main"
     },
     {
-      "name": "Coleslaw mix",
-      "quantity": "2.7",
-      "unit": "bags"
+      "name": "Kosher salt",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Black pepper",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Unsalted butter",
+      "quantity": "6",
+      "unit": "tbsp",
+      "group": "Herb butter"
+    },
+    {
+      "name": "Fresh parsley",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Herb butter"
+    },
+    {
+      "name": "Garlic cloves, minced",
+      "quantity": "3",
+      "unit": "cloves",
+      "group": "Herb butter"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Simmer au jus (medium, 10 min)",
-      "instruction": "Prepare jus per packet; keep hot in pitchers. Watch color and texture — if it smells sharp or looks pale, give it another minute before moving on.",
-      "minutes": 10,
-      "heatLevel": "medium"
+      "title": "Season and temper",
+      "instruction": "Pat steaks dry. Salt heavily 40 minutes ahead (or right before if rushed). Pepper just before cooking. Let meat sit out 20 minutes — cold centers overcook the exterior.",
+      "minutes": 45,
+      "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Bake fries (425°F, 20 min)",
-      "instruction": "Season fries; bake until crisp. Watch color and texture — if it smells sharp or looks pale, give it another minute before moving on.",
-      "minutes": 20,
+      "title": "Grill over high heat",
+      "instruction": "Grill over high heat (450–500°F surface) 3–5 minutes per side for strip to 130°F medium-rare. Flank: sear 4 minutes per side, then medium until 125°F; rest and slice thin against the grain.",
+      "minutes": 12,
       "heatLevel": "high"
     },
     {
       "stepNumber": 3,
-      "title": "Build sandwiches (medium, 12 min)",
-      "instruction": "Warm rolls, pile beef and cheese, brief oven melt if desired.",
-      "minutes": 12,
-      "heatLevel": "medium"
+      "title": "Baste with herb butter",
+      "instruction": "Melt butter with garlic and parsley. Rest steaks 8 minutes tented with foil, then slice and spoon butter over. Hold on warm trays at 180°F no more than 20 minutes.",
+      "minutes": 10,
+      "heatLevel": "low"
     },
     {
       "stepNumber": 4,
-      "title": "Dress coleslaw (no heat, 5 min)",
-      "instruction": "Toss slaw; keep cold. Watch color and texture — if it smells sharp or looks pale, give it another minute before moving on.",
+      "title": "Serve on sheet trays",
+      "instruction": "Blackstone Steak Sandwiches goes out sliced on trays with extra herb butter melting on top — crew grabs with tongs, not forks and knives.",
       "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 5,
-      "title": "Open dip line (serve)",
-      "instruction": "Sandwiches, jus cups, fries, and slaw on the counter. Watch color and texture — if it smells sharp or looks pale, give it another minute before moving on.",
-      "minutes": 5,
-      "heatLevel": ""
+      "heatLevel": "low"
     }
   ],
   "proTips": [
@@ -152,6 +152,6 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "classicSlug": "beef-dip",
-  "generatedAt": "2026-05-28T12:06:14.952Z",
+  "generatedAt": "2026-05-29T01:43:09.321Z",
   "contentVersion": 2
 }

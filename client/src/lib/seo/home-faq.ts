@@ -32,7 +32,7 @@ export const HOME_FAQ_ITEMS: FaqItem[] = [
 
     answer:
 
-      "Portions, timing, and steps are written for station kitchens — not single-plate blog cooking. Browse recipes, use Find a Meal with your crew picks, or spin the Classics Wheel when nobody can decide.",
+      "Portions, timing, and steps are written for station kitchens — not single-plate blog cooking. Start with the firefighter recipe catalog; use Find a Meal or the Classics Wheel when you want a faster pick.",
 
   },
 

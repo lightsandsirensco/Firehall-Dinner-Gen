@@ -7,7 +7,7 @@
   "subtitle": "Slow-smoked pull, soft buns, fast line",
   "category": "firehall_classics",
   "cuisine": "american",
-  "description": "Sandwich line for the whole hall",
+  "description": "Sandwich line for the whole hall. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
   "baseServings": 8,
   "cookTime": 260,
@@ -33,79 +33,69 @@
   "ingredients": [
     {
       "name": "Pork shoulder",
-      "quantity": "10.7",
-      "unit": "lb"
-    },
-    {
-      "name": "BBQ rub",
-      "quantity": "1.3",
-      "unit": "cup"
-    },
-    {
-      "name": "BBQ sauce",
-      "quantity": "5.3",
-      "unit": "cups"
-    },
-    {
-      "name": "Brioche buns",
-      "quantity": "32"
-    },
-    {
-      "name": "Coleslaw mix",
       "quantity": "4",
-      "unit": "bags"
+      "unit": "lb",
+      "group": "Main"
     },
     {
-      "name": "Coleslaw dressing",
-      "quantity": "2.7",
-      "unit": "cups"
+      "name": "Hoagie rolls",
+      "quantity": "8",
+      "unit": "count",
+      "group": "Buns"
     },
     {
-      "name": "Baked beans",
-      "quantity": "5.3",
-      "unit": "cans"
+      "name": "Provolone slices",
+      "quantity": "12",
+      "unit": "count",
+      "group": "Cheese"
     },
     {
-      "name": "Pickles",
-      "quantity": "2.7",
-      "unit": "jars"
+      "name": "Marinara sauce",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Sauce"
+    },
+    {
+      "name": "Yellow onion",
+      "quantity": "1",
+      "unit": "large",
+      "group": "Aromatics"
+    },
+    {
+      "name": "Garlic cloves",
+      "quantity": "4",
+      "unit": "cloves",
+      "group": "Aromatics"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Rub & slow-cook pork (low, 4 hr)",
-      "instruction": "Season shoulder, slow cook until pull-apart tender. Rest 20 min, then shred.",
-      "minutes": 180,
-      "heatLevel": "low"
+      "title": "Cook and sauce filling",
+      "instruction": "Slow-cook or simmer filling until shreddable (pork 203°F, meatballs cooked through). Simmer in sauce 15 minutes so flavor penetrates.",
+      "minutes": 30,
+      "heatLevel": "medium-low"
     },
     {
       "stepNumber": 2,
-      "title": "Toss pork with sauce (low, 15 min)",
-      "instruction": "Mix shredded pork with BBQ sauce; hold warm. Watch color and texture — if it smells sharp or looks pale, give it another minute before moving on.",
-      "minutes": 15,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 3,
-      "title": "Warm beans & toast buns (medium, 12 min)",
-      "instruction": "Heat beans with extra sauce; warm split buns on sheet pan. Watch color and texture — if it smells sharp or looks pale, give it another minute before moving on.",
-      "minutes": 12,
+      "title": "Toast buns",
+      "instruction": "Toast split buns on a dry griddle until golden. Melt cheese on top if desired.",
+      "minutes": 6,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 4,
-      "title": "Toss coleslaw (no heat, 8 min)",
-      "instruction": "Dress slaw just before line opens so it stays crisp. Watch color and texture — if it smells sharp or looks pale, give it another minute before moving on.",
+      "stepNumber": 3,
+      "title": "Build the sandwich line",
+      "instruction": "Pulled Pork Sandwiches on sheet trays: bottom bun, meat, sauce, cheese, top bun. Serve immediately; hold wrapped sandwiches at 200°F up to 20 minutes.",
       "minutes": 8,
-      "heatLevel": ""
+      "heatLevel": "low"
     },
     {
-      "stepNumber": 5,
-      "title": "Run the sandwich line (serve)",
-      "instruction": "Bun, pork, slaw, pickles — crew adds extra sauce if they want.",
+      "stepNumber": 4,
+      "title": "Hold for late calls",
+      "instruction": "Keep backup sandwiches foil-wrapped at 200°F. Slice hoagies in half for easier grabbing — crew eats with one hand when tones are quiet.",
       "minutes": 5,
-      "heatLevel": ""
+      "heatLevel": "low"
     }
   ],
   "proTips": [
@@ -163,6 +153,6 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "classicSlug": "pulled-pork",
-  "generatedAt": "2026-05-28T12:06:14.948Z",
+  "generatedAt": "2026-05-29T01:43:09.319Z",
   "contentVersion": 2
 }

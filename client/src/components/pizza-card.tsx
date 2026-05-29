@@ -226,7 +226,7 @@ export function PizzaCard({ recipe, crewSize, onEmailClick, onShoppingListClick 
           src={recipe.hero_image}
           alt={recipe.hero_image_alt || recipe.title}
           title={recipe.title}
-          emoji={heroEmoji}
+          heldLabel="Pizza Night"
           variant="cinematic"
           priority
           className="rounded-2xl overflow-hidden ring-1 ring-primary/25 shadow-xl shadow-black/30"

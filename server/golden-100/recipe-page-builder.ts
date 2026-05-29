@@ -30,7 +30,7 @@ import {
   buildEditorialBlueprint,
   buildRecipeTitleFields,
   isPlaceholderCuratedRecipe,
-  resolveSlugInstructionPack,
+  resolveExplicitSlugInstructionPack,
   stepsFailQualityBar,
   usesGenericGrillTemplate,
 } from "../../shared/golden-100/recipe-quality/index.js";
@@ -118,7 +118,11 @@ function inferStepMinutes(text: string): number | undefined {
 function enrichInstruction(body: string): string {
   const t = body.trim();
   if (t.length >= 60) return t;
-  return `${t} Watch color and texture — if it smells sharp or looks pale, give it another minute before moving on.`;
+  const coldOrServe = /\b(no heat|serve|plate|toss slaw|cold|hold on ice|garnish)\b/i.test(t);
+  if (coldOrServe) {
+    return `${t} Keep cold components on ice until the line opens — warm food waits on the hot side only.`;
+  }
+  return `${t} Watch color and texture at the pan — if it smells sharp or looks pale, give it another minute before moving on.`;
 }
 
 function nutritionFromCurated(curated: CuratedRecipe, def: GoldenRecipeDefinition) {
@@ -211,46 +215,48 @@ export function buildGoldenRecipePage(
 
   const curatedUsable =
     curated?.ingredients?.length && !isPlaceholderCuratedRecipe(curated.ingredients);
+  const curatedSteps = curatedUsable ? stepsFromCurated(curated!) : [];
+  const curatedStepsOk =
+    curatedSteps.length >= 4 &&
+    !stepsFailQualityBar(curatedSteps) &&
+    !usesGenericGrillTemplate(curatedSteps);
 
-  if (curatedUsable) {
+  const pkgSteps = pkg ? stepsFromPackage(pkg) : [];
+  const pkgStepsOk =
+    pkgSteps.length >= 4 &&
+    !stepsFailQualityBar(pkgSteps) &&
+    !usesGenericGrillTemplate(pkgSteps);
+
+  if (curatedUsable && curatedStepsOk) {
     ingredients = ingredientsFromCurated(curated!, crewSize);
-    const curatedSteps = stepsFromCurated(curated!);
-    const stepsOk =
-      curatedSteps.length >= 4 &&
-      !stepsFailQualityBar(curatedSteps) &&
-      !usesGenericGrillTemplate(curatedSteps);
-    if (stepsOk) {
-      steps = curatedSteps;
-    }
+    steps = curatedSteps;
     prepTime = curated!.prepMinutes;
     cookTime = curated!.cookMinutes;
     totalTime = curated!.totalMinutes;
   } else if (pkg) {
     ingredients = ingredientsFromPackage(pkg, crewSize);
-    const pkgSteps = stepsFromPackage(pkg);
-    if (
-      pkgSteps.length >= 4 &&
-      !stepsFailQualityBar(pkgSteps) &&
-      !usesGenericGrillTemplate(pkgSteps)
-    ) {
-      steps = pkgSteps;
-    }
+    if (pkgStepsOk) steps = pkgSteps;
     prepTime = pkg.prepMin;
     cookTime = pkg.cookMin;
     totalTime = pkg.prepMin + pkg.cookMin;
+  } else if (curatedUsable) {
+    ingredients = ingredientsFromCurated(curated!, crewSize);
+    prepTime = curated!.prepMinutes;
+    cookTime = curated!.cookMinutes;
+    totalTime = curated!.totalMinutes;
   }
 
   const timing = estimateTiming(def);
-  const handPack = resolveSlugInstructionPack(def, crewSize);
+  const explicitPack = resolveExplicitSlugInstructionPack(def, crewSize);
   const needsEditorial =
     !steps.length ||
     stepsFailQualityBar(steps) ||
     usesGenericGrillTemplate(steps);
 
-  if (handPack && !stepsFailQualityBar(handPack.steps)) {
-    ingredients = handPack.ingredients;
-    steps = handPack.steps;
-  } else if (needsEditorial || !ingredients.length || (handPack && stepsFailQualityBar(handPack.steps))) {
+  if (explicitPack && !stepsFailQualityBar(explicitPack.steps)) {
+    ingredients = explicitPack.ingredients;
+    steps = explicitPack.steps;
+  } else if (needsEditorial || !ingredients.length) {
     const blueprint = buildEditorialBlueprint(def, crewSize);
     ingredients = blueprint.ingredients;
     steps = blueprint.steps;
@@ -385,18 +391,23 @@ function inferSpiceLevel(def: GoldenRecipeDefinition): "mild" | "medium" | "hot"
   return "mild";
 }
 
+function expandShortEditorialLine(line: string): string {
+  const trimmed = line.trim();
+  if (!trimmed) return trimmed;
+  if (trimmed.length >= 50) return trimmed;
+  const lead = /[.!?]$/.test(trimmed) ? trimmed : `${trimmed}.`;
+  return `${lead} Sized for a full crew, with timing that still works when the kitchen gets interrupted.`;
+}
+
 function buildDescription(
   def: GoldenRecipeDefinition,
   curated: CuratedRecipe | null,
   pkg: ReturnType<typeof getCuratedPackageDef>,
 ): string {
-  if (curated?.summary?.trim()) return curated.summary.trim();
-  if (pkg?.tagline?.trim()) return pkg.tagline.trim();
+  if (curated?.summary?.trim()) return expandShortEditorialLine(curated.summary.trim());
+  if (pkg?.tagline?.trim()) return expandShortEditorialLine(pkg.tagline.trim());
   const hook = def.hookLine?.trim();
-  if (hook) {
-    const lead = /[.!?]$/.test(hook) ? hook : `${hook}.`;
-    return `${lead} Sized for a full crew, with timing that still works when the kitchen gets interrupted.`;
-  }
+  if (hook) return expandShortEditorialLine(hook);
   return `${def.title} — crew portions, familiar flavors, no fussy plating.`;
 }
 
@@ -406,7 +417,13 @@ function buildWhyCrewsLikeIt(
   quick: boolean,
   feedsHard: boolean,
 ): string {
-  if (curated?.summary?.trim()) return curated.summary.trim();
+  if (curated?.summary?.trim()) {
+    const s = curated.summary.trim();
+    if (s.length >= 50) return s;
+    const lead = /[.!?]$/.test(s) ? s : `${s}.`;
+    const night = quick ? "tight shifts" : feedsHard ? "big-appetite nights" : "regular dinner nights";
+    return `${lead} A hall pick for ${night} — one line, real portions, no drama at the stove.`;
+  }
   const hook = def.hookLine?.trim();
   const night = quick ? "tight shifts" : feedsHard ? "big-appetite nights" : "regular dinner nights";
   if (hook) {

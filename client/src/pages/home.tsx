@@ -26,20 +26,19 @@ function pickFeaturedMeals(recipes: GoldenCatalogIndexEntry[]): GoldenCatalogInd
 const GOLDEN_CATEGORY_COUNT = 12;
 
 export default function Home() {
-  useHomeSeo();
-
   const { data: catalog } = useQuery({
     queryKey: ["golden-catalog-home"],
     queryFn: fetchGoldenCatalogIndex,
     staleTime: 120_000,
   });
 
+  const recipeCount = catalog?.recipeCount ?? 150;
+  useHomeSeo(recipeCount);
+
   const featured = useMemo(
     () => (catalog?.recipes?.length ? pickFeaturedMeals(catalog.recipes) : []),
     [catalog],
   );
-
-  const recipeCount = catalog?.recipeCount ?? 100;
 
   return (
     <div className="home-page page-shell min-h-screen min-h-[100dvh] bg-background overflow-x-hidden">

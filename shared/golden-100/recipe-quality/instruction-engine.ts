@@ -1611,6 +1611,14 @@ function buildPlated(def: GoldenRecipeDefinition, scale: number): { ingredients:
   };
 }
 
+/** Slug-specific hand packs only — does not fall back to class blueprints. */
+export function resolveExplicitSlugInstructionPack(
+  def: GoldenRecipeDefinition,
+  crewSize: number,
+): { ingredients: Ing[]; steps: Step[] } | null {
+  return slugPack(def, crewSize / 8);
+}
+
 export function resolveSlugInstructionPack(
   def: GoldenRecipeDefinition,
   crewSize: number,

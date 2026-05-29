@@ -13,6 +13,7 @@ import { MealTrustBadges } from "@/components/trust/meal-trust-badges";
 import { MealShareCard, shareMealNative } from "@/components/share/meal-share-card";
 import { Share2 } from "lucide-react";
 import { MealHeroImage } from "@/components/meal-hero-image";
+import { cn } from "@/lib/utils";
 
 const SEGMENT_COUNT = WHEEL_CLASSICS.length;
 const SEGMENT_ANGLE = 360 / SEGMENT_COUNT;
@@ -157,7 +158,15 @@ export function ClassicsWheel({ disabled, winnerIndex, onLanded, onSpinStart }: 
                 width: "28%",
               }}
             >
-              <span className="text-lg leading-none mb-0.5">{classic.emoji}</span>
+              <span
+                className={cn(
+                  "mb-1 flex h-7 w-7 items-center justify-center rounded-full bg-black/35 ring-1 ring-white/25 text-[10px] font-bold uppercase tracking-wide text-white/95",
+                  isActive && "ring-primary/60 bg-primary/25",
+                )}
+                aria-hidden
+              >
+                {classic.shortLabel.slice(0, 2)}
+              </span>
               <span
                 className={`text-[9px] sm:text-[10px] font-semibold uppercase tracking-wide leading-tight drop-shadow-md ${
                   isActive ? "text-white font-bold brightness-110" : "text-white/95"
@@ -241,7 +250,7 @@ export function WheelReveal({
             subtitle={landLine}
             heroImage={classic.heroImage}
             imageAlt={classic.imageAlt}
-            emoji={classic.emoji}
+            heldLabel={classic.heldImageryLabel}
             eyebrow={intro}
             trustInput={{ tags: classic.tags, cuisine: classic.cuisine }}
           />
@@ -251,7 +260,7 @@ export function WheelReveal({
           <MealHeroImage
             src={classic.heroImage}
             alt={classic.imageAlt}
-            emoji={classic.emoji}
+            heldLabel={classic.heldImageryLabel}
             title={classic.title}
             variant="cinematic"
             className="w-full"

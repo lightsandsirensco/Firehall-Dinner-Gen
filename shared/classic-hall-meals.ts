@@ -4,6 +4,7 @@
  */
 
 import { isDevRuntime } from "./runtime-env.js";
+import { resolveClassicWheelImagery } from "./classic-wheel-imagery.js";
 
 export type SpoonacularImageSize = "556x370" | "636x393" | "312x231";
 
@@ -65,18 +66,19 @@ export function spoonacularHeroImage(
   return `https://img.spoonacular.com/recipes/${recipeId}-${size}.jpg`;
 }
 
-/** Resolve Explore / wheel hero URL for a classic meal (single source of truth). */
+export type { ClassicWheelImagery } from "./classic-wheel-imagery.js";
+export {
+  resolveClassicWheelImagery,
+  isOwnedCatalogHeroPath,
+  isSpoonacularOrExternalHeroUrl,
+} from "./classic-wheel-imagery.js";
+
+/** Resolve Explore / wheel hero URL — owned catalog paths only (no Spoonacular CDN). */
 export function resolveClassicHeroImage(
   meal: ClassicHallMealMeta,
-  size: SpoonacularImageSize = "636x393",
+  _size: SpoonacularImageSize = "636x393",
 ): string {
-  if (meal.heroImagePath?.trim()) {
-    return meal.heroImagePath.trim();
-  }
-  if (meal.spoonacularRecipeId > 0) {
-    return spoonacularHeroImage(meal.spoonacularRecipeId, size);
-  }
-  return "";
+  return resolveClassicWheelImagery(meal).heroImage;
 }
 
 /** Verified Spoonacular IDs (titles confirmed via API, May 2026). */
@@ -104,6 +106,7 @@ export const CLASSIC_HALL_MEALS: ClassicHallMealMeta[] = [
     segmentColorAlt: "#C62828",
     searchQuery: "chicken parmesan",
     generatorFilters: { meal_format: "pasta", proteins: ["chicken"], cuisine_style: "italian" },
+    heroImagePath: "/images/golden-100/chicken-parm.jpg",
   },
   {
     id: "steak-tacos",
@@ -159,6 +162,7 @@ export const CLASSIC_HALL_MEALS: ClassicHallMealMeta[] = [
     segmentColorAlt: "#BF360C",
     searchQuery: "pulled pork sandwich",
     generatorFilters: { meal_format: "sandwich", proteins: ["pork"], cuisine_style: "bbq" },
+    heroImagePath: "/images/golden-100/pulled-pork.jpg",
   },
   {
     id: "smash-burgers",
@@ -254,6 +258,7 @@ export const CLASSIC_HALL_MEALS: ClassicHallMealMeta[] = [
     segmentColorAlt: "#40916C",
     searchQuery: "grilled chicken caesar salad",
     generatorFilters: { meal_format: "salad", proteins: ["chicken"], cuisine_style: "any" },
+    heroImagePath: "/images/golden-100/chicken-caesar.jpg",
   },
   {
     id: "jerk-chicken",
@@ -302,6 +307,7 @@ export const CLASSIC_HALL_MEALS: ClassicHallMealMeta[] = [
     segmentColorAlt: "#8D6E63",
     searchQuery: "french dip beef sandwich",
     generatorFilters: { meal_format: "sandwich", proteins: ["beef"], cuisine_style: "canadian" },
+    heroImagePath: "/images/golden-100/beef-dip.jpg",
   },
   {
     id: "bbq-chicken-bowls",
@@ -354,6 +360,7 @@ export const CLASSIC_HALL_MEALS: ClassicHallMealMeta[] = [
     segmentColorAlt: "#8B4513",
     searchQuery: "steak sandwich grilled",
     generatorFilters: { meal_format: "sandwich", proteins: ["beef"], cuisine_style: "any" },
+    heroImagePath: "/images/golden-100/steak-sandwiches.jpg",
   },
 ];
 

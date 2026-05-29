@@ -5,12 +5,14 @@ import { CTA } from "@/lib/brand-copy";
 export type InternalLink = { href: string; label: string; description?: string };
 
 const HUB_LINKS: InternalLink[] = [
-  { href: "/generator", label: CTA.findDinner, description: "Match dinner to your crew" },
-  { href: "/wheel", label: CTA.classicsWheel, description: "Spin when nobody can decide" },
-  { href: "/recipes", label: CTA.viewRecipes, description: "Hall-tested crew dinners" },
-  { href: "/explore", label: CTA.exploreMeals, description: "Browse by situation" },
-  { href: "/guides", label: "Hall guides", description: "Shift cooking notes" },
-  { href: "/about", label: "About", description: "Who we are" },
+  { href: "/recipes", label: "Firefighter recipes", description: "Full catalog — 150+ crew dinners" },
+  { href: "/explore", label: "Browse recipes", description: "Search by protein, time & category" },
+  { href: "/categories/crew_favorites", label: "Hall favorites", description: "Popular firehouse meals" },
+  { href: "/categories/quick_meals", label: "Quick shift meals", description: "Under 45 minutes" },
+  { href: "/categories/healthy_options", label: "Healthy meals", description: "High-protein hall picks" },
+  { href: "/categories/bbq_smoker", label: "BBQ & grill", description: "Smoker and grill nights" },
+  { href: "/generator", label: CTA.findDinner, description: "Optional meal picker tool" },
+  { href: "/guides", label: "Cooking guides", description: "Shift & nutrition notes" },
 ];
 
 const POPULAR_RECIPES: InternalLink[] = [

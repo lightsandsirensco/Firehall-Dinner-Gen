@@ -1,0 +1,130 @@
+{
+  "generatedAt": "2026-05-29T02:08:38.737Z",
+  "total": 10,
+  "approvedCount": 10,
+  "placeholderCount": 0,
+  "pass": true,
+  "rows": [
+    {
+      "slug": "chicken-parm",
+      "title": "Chicken Parm",
+      "heroImage": "/images/golden-100/chicken-parm.jpg",
+      "thumbImage": "/images/thumbs/chicken-parm.jpg",
+      "mobileImage": "/images/mobile/chicken-parm.jpg",
+      "imageApproved": true,
+      "imageryStatus": "approved",
+      "heroOnDisk": true,
+      "thumbOnDisk": true,
+      "issues": []
+    },
+    {
+      "slug": "steak-tacos",
+      "title": "Street-Style Chimichurri Steak Tacos",
+      "heroImage": "/images/explore/chimichurri-steak-tacos-hero.jpg",
+      "thumbImage": "/images/thumbs/steak-tacos.jpg",
+      "mobileImage": "/images/mobile/steak-tacos.jpg",
+      "imageApproved": true,
+      "imageryStatus": "approved",
+      "heroOnDisk": true,
+      "thumbOnDisk": true,
+      "issues": []
+    },
+    {
+      "slug": "pulled-pork",
+      "title": "Pulled Pork Sandwiches",
+      "heroImage": "/images/golden-100/pulled-pork.jpg",
+      "thumbImage": "/images/thumbs/pulled-pork.jpg",
+      "mobileImage": "/images/mobile/pulled-pork.jpg",
+      "imageApproved": true,
+      "imageryStatus": "approved",
+      "heroOnDisk": true,
+      "thumbOnDisk": true,
+      "issues": []
+    },
+    {
+      "slug": "smash-burgers",
+      "title": "Double Smash Burgers with Caramelized Onions & Dirty Sauce",
+      "heroImage": "/images/explore/double-smash-burgers-hero.jpg",
+      "thumbImage": "/images/thumbs/smash-burgers.jpg",
+      "mobileImage": "/images/mobile/smash-burgers.jpg",
+      "imageApproved": true,
+      "imageryStatus": "approved",
+      "heroOnDisk": true,
+      "thumbOnDisk": true,
+      "issues": []
+    },
+    {
+      "slug": "chili-garlic-bread",
+      "title": "Firehouse Smoked Beef Chili with Cheesy Garlic Bread",
+      "heroImage": "/images/explore/firehouse-smoked-beef-chili-hero.jpg",
+      "thumbImage": "/images/thumbs/chili-garlic-bread.jpg",
+      "mobileImage": "/images/mobile/chili-garlic-bread.jpg",
+      "imageApproved": true,
+      "imageryStatus": "approved",
+      "heroOnDisk": true,
+      "thumbOnDisk": true,
+      "issues": []
+    },
+    {
+      "slug": "chicken-caesar",
+      "title": "Chicken Caesar Salad",
+      "heroImage": "/images/golden-100/chicken-caesar.jpg",
+      "thumbImage": "/images/thumbs/chicken-caesar.jpg",
+      "mobileImage": "/images/mobile/chicken-caesar.jpg",
+      "imageApproved": true,
+      "imageryStatus": "approved",
+      "heroOnDisk": true,
+      "thumbOnDisk": true,
+      "issues": []
+    },
+    {
+      "slug": "jerk-chicken",
+      "title": "Jerk Chicken",
+      "heroImage": "/images/explore/jerk-chicken-hero.jpg",
+      "thumbImage": "/images/thumbs/jerk-chicken.jpg",
+      "mobileImage": "/images/mobile/jerk-chicken.jpg",
+      "imageApproved": true,
+      "imageryStatus": "approved",
+      "heroOnDisk": true,
+      "thumbOnDisk": true,
+      "issues": []
+    },
+    {
+      "slug": "beef-dip",
+      "title": "Beef Dip Sandwiches",
+      "heroImage": "/images/golden-100/beef-dip.jpg",
+      "thumbImage": "/images/thumbs/beef-dip.jpg",
+      "mobileImage": "/images/mobile/beef-dip.jpg",
+      "imageApproved": true,
+      "imageryStatus": "approved",
+      "heroOnDisk": true,
+      "thumbOnDisk": true,
+      "issues": []
+    },
+    {
+      "slug": "bbq-chicken-bowls",
+      "title": "BBQ Chicken Bowls",
+      "heroImage": "/images/explore/bbq-chicken-bowls-hero.jpg",
+      "thumbImage": "/images/thumbs/bbq-chicken-bowls.jpg",
+      "mobileImage": "/images/mobile/bbq-chicken-bowls.jpg",
+      "imageApproved": true,
+      "imageryStatus": "approved",
+      "heroOnDisk": true,
+      "thumbOnDisk": true,
+      "issues": []
+    },
+    {
+      "slug": "steak-sandwiches",
+      "title": "Steak Sandwiches",
+      "heroImage": "/images/golden-100/steak-sandwiches.jpg",
+      "thumbImage": "/images/thumbs/steak-sandwiches.jpg",
+      "mobileImage": "/images/mobile/steak-sandwiches.jpg",
+      "imageApproved": true,
+      "imageryStatus": "approved",
+      "heroOnDisk": true,
+      "thumbOnDisk": true,
+      "issues": []
+    }
+  ],
+  "errors": []
+}

@@ -2,10 +2,13 @@ import { Link } from "wouter";
 import { CTA, HOME } from "@/lib/brand-copy";
 
 const LINKS = [
+  { href: "/recipes", label: "All firefighter recipes" },
+  { href: "/explore", label: "Browse recipe catalog" },
+  { href: "/categories/quick_meals", label: "Quick shift meals" },
+  { href: "/categories/healthy_options", label: "Healthy firefighter meals" },
+  { href: "/categories/bbq_smoker", label: "BBQ firehall favorites" },
   { href: "/generator", label: CTA.findDinner },
-  { href: "/recipes", label: CTA.viewRecipes },
-  { href: "/wheel", label: CTA.classicsWheel },
-  { href: "/guides", label: "Hall guides" },
+  { href: "/guides", label: "Firehouse cooking guides" },
 ] as const;
 
 export function HomeSeoEditorial() {
@@ -21,13 +24,14 @@ export function HomeSeoEditorial() {
           </h2>
           <div className="mt-5 space-y-4 text-[15px] sm:text-base text-muted-foreground leading-[1.75] max-w-prose">
             <p>
-              Firehall Meals is for station kitchens — crew-sized recipes, honest timing, and guides
-              on nutrition and hall life. No influencer food. No fake blog fluff. Just solid meals
-              crews actually make.
+              FirehallMeals is the largest collection of firefighter recipes and firehouse meals
+              online — sized for crews, written for station kitchens, and organized by how halls
+              actually cook: quick shifts, BBQ nights, healthy options, and feeds for a crowd.
             </p>
             <p>
-              Built by a firefighter and his wife after years around the kitchen table. Browse recipes,
-              read the guides, or hit Find a Meal when you need a plan tonight.
+              Built by a firefighter and his wife after years around the kitchen table. Browse the
+              recipe catalog, explore categories, or use Find a Meal when you want a fast pick for
+              tonight.
             </p>
           </div>
           <nav aria-label="Explore" className="mt-8 flex flex-wrap gap-x-6 gap-y-2">

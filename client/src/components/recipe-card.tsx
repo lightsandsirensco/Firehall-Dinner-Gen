@@ -304,7 +304,7 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
           src={recipe.hero_image}
           alt={recipe.hero_image_alt || displayTitle}
           title={displayTitle}
-          emoji="🔥"
+          heldLabel="Tonight's Pick"
           variant="cinematic"
           priority
         />
@@ -333,7 +333,7 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
           src={fallbackHero}
           alt={displayTitle}
           title={displayTitle}
-          emoji="🔥"
+          heldLabel="Tonight's Pick"
           variant="cinematic"
           priority
         />

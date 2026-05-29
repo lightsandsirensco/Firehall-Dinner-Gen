@@ -2,8 +2,9 @@ import type { FilterState } from "@/components/filter-panel";
 import {
   CLASSIC_HALL_MEALS,
   getClassicHallMeal,
-  resolveClassicHeroImage,
+  resolveClassicWheelImagery,
   type ClassicHallMealMeta,
+  type ClassicWheelImagery,
 } from "@shared/classic-hall-meals";
 import {
   resolveCuratedSlugFromTitle,
@@ -25,12 +26,18 @@ export interface WheelClassic {
   slug: string;
   title: string;
   shortLabel: string;
+  /** @deprecated Display only — never used as recipe imagery fallback */
   emoji: string;
   protein: string;
   crewLine: string;
   tagline: string;
   description: string;
   heroImage: string;
+  thumbImage: string;
+  mobileImage: string;
+  imageApproved: boolean;
+  imageryStatus: ClassicWheelImagery["imageryStatus"];
+  heldImageryLabel: string;
   imageAlt: string;
   cuisine: string;
   mealFormat: string;
@@ -43,6 +50,7 @@ export interface WheelClassic {
 
 function metaToWheelClassic(meta: ClassicHallMealMeta): WheelClassic {
   const pkg = getCuratedPackageDef(meta.slug);
+  const imagery = resolveClassicWheelImagery(meta);
   return {
     slug: meta.slug,
     title: meta.title,
@@ -52,7 +60,12 @@ function metaToWheelClassic(meta: ClassicHallMealMeta): WheelClassic {
     crewLine: meta.description,
     tagline: meta.tagline,
     description: meta.description,
-    heroImage: resolveClassicHeroImage(meta),
+    heroImage: imagery.heroImage,
+    thumbImage: imagery.thumbImage,
+    mobileImage: imagery.mobileImage,
+    imageApproved: imagery.imageApproved,
+    imageryStatus: imagery.imageryStatus,
+    heldImageryLabel: imagery.heldImageryLabel,
     imageAlt: meta.imageAlt,
     cuisine: meta.cuisine,
     mealFormat: meta.mealFormat,
@@ -105,7 +118,8 @@ export function pickWeightedWheelClassic(seed: string): { classic: WheelClassic;
   const weights = WHEEL_CLASSICS.map((c) => {
     const idx = recent.lastIndexOf(c.slug);
     const penalty = idx === -1 ? 0 : (recent.length - idx) * 30;
-    return Math.max(8, 100 - penalty);
+    const approvedBoost = c.imageApproved ? 12 : 0;
+    return Math.max(8, 100 - penalty + approvedBoost);
   });
   let total = weights.reduce((a, b) => a + b, 0);
   let r = Math.abs(seed.split("").reduce((h, ch) => (Math.imul(31, h) + ch.charCodeAt(0)) | 0, 0)) % total;
@@ -122,6 +136,11 @@ export function pickWeightedWheelClassic(seed: string): { classic: WheelClassic;
 
 export function pickRandomWheelClassic(): WheelClassic {
   return pickWeightedWheelClassic(String(Date.now())).classic;
+}
+
+/** First wheel classic with approved owned imagery (stable landing / QA). */
+export function getDefaultWheelClassic(): WheelClassic {
+  return WHEEL_CLASSICS.find((c) => c.imageApproved) ?? WHEEL_CLASSICS[0]!;
 }
 
 export function applyWheelClassicToFilters(

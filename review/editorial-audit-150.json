@@ -2,7 +2,7 @@
   "total": 150,
   "bySeverity": {
     "critical": 0,
-    "warning": 210,
+    "warning": 207,
     "info": 0
   },
   "rows": [
@@ -130,23 +130,17 @@
       "findings": [
         {
           "severity": "warning",
-          "code": "intro_thin",
-          "message": "intro/description is too short",
-          "field": "description",
-          "sample": "Built bowls, big flavor, one line"
-        },
-        {
-          "severity": "warning",
-          "code": "ingredients_thin",
-          "message": "only 5 ingredients",
-          "field": "ingredients"
-        },
-        {
-          "severity": "warning",
           "code": "ingredient_vague",
           "message": "vague ingredient: \"BBQ sauce\"",
           "field": "ingredients",
           "sample": "BBQ sauce"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Sesame oil\"",
+          "field": "ingredients",
+          "sample": "Sesame oil"
         }
       ]
     },
@@ -208,13 +202,6 @@
       "title": "Blackstone Steak Sandwiches",
       "file": "client\\public\\catalog\\golden-100\\pages\\beef-dip.json",
       "findings": [
-        {
-          "severity": "warning",
-          "code": "intro_thin",
-          "message": "intro/description is too short",
-          "field": "description",
-          "sample": "Canadian hall legend"
-        },
         {
           "severity": "warning",
           "code": "ingredient_vague",
@@ -282,6 +269,13 @@
       "title": "Breakfast Burrito Bar",
       "file": "client\\public\\catalog\\golden-100\\pages\\breakfast-burrito-bar.json",
       "findings": [
+        {
+          "severity": "warning",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests a rewrite",
+          "field": "title",
+          "sample": "Breakfast Burrito Bar"
+        },
         {
           "severity": "warning",
           "code": "ingredients_thin",
@@ -420,13 +414,6 @@
       "findings": [
         {
           "severity": "warning",
-          "code": "intro_thin",
-          "message": "intro/description is too short",
-          "field": "description",
-          "sample": "Big bowls, hot chicken, all the fixings"
-        },
-        {
-          "severity": "warning",
           "code": "ingredient_vague",
           "message": "vague ingredient: \"Olive oil\"",
           "field": "ingredients",
@@ -462,13 +449,6 @@
       "title": "Chicken Parm",
       "file": "client\\public\\catalog\\golden-100\\pages\\chicken-parm.json",
       "findings": [
-        {
-          "severity": "warning",
-          "code": "intro_thin",
-          "message": "intro/description is too short",
-          "field": "description",
-          "sample": "Italian night at the station"
-        },
         {
           "severity": "warning",
           "code": "ingredient_vague",
@@ -522,6 +502,13 @@
       "findings": [
         {
           "severity": "warning",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests a rewrite",
+          "field": "title",
+          "sample": "Shredded Chicken Quesadillas"
+        },
+        {
+          "severity": "warning",
           "code": "ingredient_vague",
           "message": "vague ingredient: \"Marinara sauce\"",
           "field": "ingredients",
@@ -565,13 +552,6 @@
       "title": "Firehall Chili",
       "file": "client\\public\\catalog\\golden-100\\pages\\chili-garlic-bread.json",
       "findings": [
-        {
-          "severity": "warning",
-          "code": "intro_thin",
-          "message": "intro/description is too short",
-          "field": "description",
-          "sample": "Post-call comfort in a deep bowl"
-        },
         {
           "severity": "warning",
           "code": "ingredient_vague",
@@ -765,6 +745,13 @@
       "findings": [
         {
           "severity": "warning",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests a rewrite",
+          "field": "title",
+          "sample": "Chicken Enchilada Casserole"
+        },
+        {
+          "severity": "warning",
           "code": "ingredient_vague",
           "message": "vague ingredient: \"Olive oil\"",
           "field": "ingredients",
@@ -851,6 +838,13 @@
       "title": "Loaded Game Day Nachos",
       "file": "client\\public\\catalog\\golden-100\\pages\\game-day-nachos.json",
       "findings": [
+        {
+          "severity": "warning",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests a rewrite",
+          "field": "title",
+          "sample": "Loaded Game Day Nachos"
+        },
         {
           "severity": "warning",
           "code": "ingredient_vague",
@@ -1138,17 +1132,10 @@
       "findings": [
         {
           "severity": "warning",
-          "code": "intro_thin",
-          "message": "intro/description is too short",
-          "field": "description",
-          "sample": "Island heat that still feeds eight"
-        },
-        {
-          "severity": "warning",
           "code": "ingredient_vague",
-          "message": "vague ingredient: \"Jerk seasoning\"",
+          "message": "vague ingredient: \"Vegetable oil\"",
           "field": "ingredients",
-          "sample": "Jerk seasoning"
+          "sample": "Vegetable oil"
         }
       ]
     },
@@ -1644,6 +1631,13 @@
       "findings": [
         {
           "severity": "warning",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests a rewrite",
+          "field": "title",
+          "sample": "Performance Chicken Burrito Bowls"
+        },
+        {
+          "severity": "warning",
           "code": "ingredient_vague",
           "message": "vague ingredient: \"Soy sauce\"",
           "field": "ingredients",
@@ -1738,13 +1732,6 @@
       "title": "Pulled Pork Sandwiches",
       "file": "client\\public\\catalog\\golden-100\\pages\\pulled-pork.json",
       "findings": [
-        {
-          "severity": "warning",
-          "code": "intro_thin",
-          "message": "intro/description is too short",
-          "field": "description",
-          "sample": "Sandwich line for the whole hall"
-        },
         {
           "severity": "warning",
           "code": "ingredient_vague",
@@ -2081,13 +2068,6 @@
           "message": "title quality gate suggests a rewrite",
           "field": "title",
           "sample": "Chimichurri Steak Tacos"
-        },
-        {
-          "severity": "warning",
-          "code": "ingredient_vague",
-          "message": "vague ingredient: \"Cotija cheese\"",
-          "field": "ingredients",
-          "sample": "Cotija cheese"
         }
       ]
     },

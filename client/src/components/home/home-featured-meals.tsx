@@ -40,6 +40,14 @@ const HOME_CATS: FirehallCategoryId[] = [
   "healthy_options",
 ];
 
+/** SEO-facing section headings (maps to category rails). */
+const HOME_CAT_SEO_HEADINGS: Partial<Record<FirehallCategoryId, string>> = {
+  crew_favorites: "Popular firefighter recipes",
+  quick_meals: "Quick firehouse meal ideas",
+  bbq_smoker: "BBQ firehall favorites",
+  healthy_options: "Healthy firefighter meals",
+};
+
 export function HomeFeaturedMeals({ meals }: HomeFeaturedMealsProps) {
   if (meals.length === 0) return null;
 
@@ -75,7 +83,7 @@ export function HomeFeaturedMeals({ meals }: HomeFeaturedMealsProps) {
             <div className="max-w-[1400px] mx-auto px-page mb-4 flex items-end justify-between gap-4">
               <div>
                 <h3 className="font-heading text-xl sm:text-2xl tracking-tight">
-                  {FIREHALL_CATEGORY_LABEL[section.cat]}
+                  {HOME_CAT_SEO_HEADINGS[section.cat] ?? FIREHALL_CATEGORY_LABEL[section.cat]}
                 </h3>
                 <p className="mt-1 text-sm text-muted-foreground">
                   Built around station nights — not cuisines.

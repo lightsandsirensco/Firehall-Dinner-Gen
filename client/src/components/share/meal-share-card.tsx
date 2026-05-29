@@ -13,7 +13,7 @@ export type MealShareCardProps = {
   subtitle?: string;
   heroImage: string;
   imageAlt: string;
-  emoji?: string;
+  heldLabel?: string;
   trustInput?: MealTrustInput;
   /** e.g. wheel result, generator pick */
   eyebrow?: string;
@@ -26,7 +26,7 @@ export function MealShareCard({
   subtitle,
   heroImage,
   imageAlt,
-  emoji,
+  heldLabel,
   trustInput,
   eyebrow = "Tonight's hall meal",
   className,
@@ -40,7 +40,7 @@ export function MealShareCard({
         <MealHeroImage
           src={heroImage}
           alt={imageAlt}
-          emoji={emoji}
+          heldLabel={heldLabel}
           title={title}
           variant="cinematic"
           className="h-full w-full object-cover"

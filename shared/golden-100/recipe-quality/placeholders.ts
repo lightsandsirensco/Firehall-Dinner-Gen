@@ -142,6 +142,10 @@ export function isGenericStep(step: { title?: string; instruction: string }): bo
 
   if (isBannedStepTitle(title)) return true;
 
+  if (/^step\s*\d+$/i.test(title)) return true;
+
+  if (/Watch color and texture/i.test(body)) return true;
+
   if (GENERIC_STEP.test(body)) return true;
 
   if (GENERIC_STEP_PHRASE.test(body)) return true;

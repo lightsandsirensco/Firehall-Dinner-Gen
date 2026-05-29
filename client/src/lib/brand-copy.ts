@@ -42,9 +42,12 @@ export const GENERATOR = {
 } as const;
 
 export const HOME = {
+  /** Visible H1 — primary SEO target (see shared/seo/constants SEO_HOME_H1). */
+  h1: "Firefighter Recipes Built for the Crew",
+  heroEyebrow: "Firefighter recipes · Firehouse meals · Hall-tested",
   eyebrow: "Station kitchen · Crew dinners",
   subline:
-    "Real meals for shift life — built by a firefighter and his wife after years around the kitchen table.",
+    "The largest collection of firefighter recipes and firehouse meals — crew-sized portions, honest timing, and steps written for station kitchens.",
   trust: {
     built: "Firefighter built",
     crew: "Feeds the crew",
@@ -60,11 +63,11 @@ export const HOME = {
   },
   howTitle: "How it works",
   howLead: "Three steps. One dinner on the table.",
-  featuredTitle: "Hall favorites",
-  featuredLead: "Meals crews actually make — not influencer food.",
+  featuredTitle: "Popular firefighter recipes",
+  featuredLead: "Hall-tested firehouse meals crews actually cook — browse the full catalog anytime.",
   whyTitle: "Why halls use it",
   whyLead: "Written for the station, not the recipe scroll.",
-  seoTitle: "Recipes, guides, and hall know-how",
+  seoTitle: "Firefighter recipes, firehouse meals & hall guides",
   ctaBandTitle: "Feed the crew.",
   ctaBandBody: "Dinners with realistic timing and portions that survive a busy night.",
   faqTitle: "Questions",

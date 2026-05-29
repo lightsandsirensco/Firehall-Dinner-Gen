@@ -7,7 +7,7 @@
   "subtitle": "Island heat that still feeds eight",
   "category": "firehall_classics",
   "cuisine": "caribbean",
-  "description": "Island heat that still feeds eight",
+  "description": "Island heat that still feeds eight. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
   "baseServings": 8,
   "cookTime": 60,
@@ -35,74 +35,71 @@
   ],
   "ingredients": [
     {
-      "name": "Chicken thighs",
-      "quantity": "24",
-      "unit": "pieces",
-      "notes": "24 pieces Chicken thighs"
+      "name": "Whole chicken or bone-in thighs",
+      "quantity": "5",
+      "unit": "lb",
+      "group": "Main"
     },
     {
-      "name": "Jerk seasoning",
+      "name": "Beer can",
       "quantity": "1",
-      "unit": "cup",
-      "notes": "1 cup Jerk seasoning"
+      "unit": "count",
+      "notes": "room temp, half full",
+      "group": "Roast"
     },
     {
-      "name": "Jasmine rice",
+      "name": "Jerk or poultry rub",
       "quantity": "3",
-      "unit": "cups",
-      "notes": "3 cups Jasmine rice"
+      "unit": "tbsp",
+      "group": "Seasoning"
     },
     {
-      "name": "Coconut milk",
+      "name": "Kosher salt",
       "quantity": "2",
-      "unit": "cans",
-      "notes": "2 cans Coconut milk"
+      "unit": "tbsp",
+      "group": "Seasoning"
     },
     {
-      "name": "Cucumbers",
-      "quantity": "6",
-      "notes": "6 Cucumbers"
+      "name": "Lime juice",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Finish"
     },
     {
-      "name": "Lime",
-      "quantity": "10",
-      "notes": "10 Lime"
+      "name": "Vegetable oil",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Seasoning"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Step 1",
-      "instruction": "Marinate chicken (no heat, 20 min): Coat thighs in jerk paste; longer if time allows.",
-      "minutes": 20,
+      "title": "Season under the skin",
+      "instruction": "Dry chicken thoroughly. Season under skin and in cavity. For beer-can method: open a room-temp beer, set can in cavity, stand bird on indirect zone.",
+      "minutes": 15,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Step 2",
-      "instruction": "Cook coconut rice (simmer, 18 min): Simmer rice in coconut milk and water until fluffy.",
-      "minutes": 18,
-      "heatLevel": "medium-low"
+      "title": "Grill indirect then crisp",
+      "instruction": "Run grill 375°F indirect with lid down until thickest part reads 165°F (60–75 minutes for a whole bird). Move to direct heat 5 minutes to crisp skin. Juices should run clear, not pink.",
+      "minutes": 70,
+      "heatLevel": "medium"
     },
     {
       "stepNumber": 3,
-      "title": "Step 3",
-      "instruction": "Grill chicken (medium-high, 20 min): Grill to 165°F with char marks; hold warm.",
-      "minutes": 20,
-      "heatLevel": "medium-high"
+      "title": "Rest and portion",
+      "instruction": "Rest 10 minutes before carving. Jerk Chicken stays juicier if you don't slice immediately. Hold quarters on sheet trays at 180°F for late eaters.",
+      "minutes": 12,
+      "heatLevel": "low"
     },
     {
       "stepNumber": 4,
-      "title": "Step 4",
-      "instruction": "Toss cucumber salad (no heat, 8 min): Slice cucumbers, dress with lime, salt, and a touch of oil.",
+      "title": "Carve for the line",
+      "instruction": "Quarter birds or slice thighs. Serve on sheet trays with pan juices — backup bird stays whole in a 180°F oven up to 25 minutes.",
       "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 5,
-      "title": "Step 5",
-      "instruction": "Plate for the hall (serve): Rice base, chicken on top, salad on the side.",
-      "heatLevel": ""
+      "heatLevel": "low"
     }
   ],
   "proTips": [
@@ -123,7 +120,7 @@
     "Label trays with date and reheat to 165°F minimum before second shift.",
     "Slice cold protein thin for next-day wraps or salads — faster reheat, less dry-out."
   ],
-  "whyCrewsLikeIt": "Island heat that still feeds eight",
+  "whyCrewsLikeIt": "Island heat that still feeds eight. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
   "substitutions": [
     "Chicken thighs ↔ breasts (thighs forgive overcooking on the flat-top)."
   ],
@@ -162,6 +159,6 @@
   "sourceName": "Firehall Classics",
   "sourceUrl": "",
   "classicSlug": "jerk-chicken",
-  "generatedAt": "2026-05-28T12:06:14.955Z",
+  "generatedAt": "2026-05-29T01:43:09.323Z",
   "contentVersion": 2
 }

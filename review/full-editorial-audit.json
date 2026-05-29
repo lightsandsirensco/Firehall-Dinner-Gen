@@ -1,0 +1,3228 @@
+{
+  "summary": {
+    "generatedAt": "2026-05-29T01:43:15.754Z",
+    "total": 150,
+    "mode": "audit",
+    "fixedCount": 0,
+    "criticalRecipeCount": 0,
+    "contentFailCount": 0,
+    "manualReviewCount": 0,
+    "duplicateTitles": [],
+    "fixed": [],
+    "critical": [],
+    "manualReview": []
+  },
+  "rows": [
+    {
+      "catalog": "golden-100",
+      "slug": "bacon-egg-hash",
+      "title": "Bacon Egg Hash Brown Skillet",
+      "file": "client\\public\\catalog\\golden-100\\pages\\bacon-egg-hash.json",
+      "contentScore": 90,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "title_robotic",
+          "message": "title is generic (optional flavor cue)",
+          "field": "title",
+          "sample": "Bacon Egg Hash Brown Skillet"
+        },
+        {
+          "severity": "info",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests optional rewrite",
+          "field": "title",
+          "sample": "Garlic Butter Pork Skillet"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Large eggs, Buttermilk, All-purpose flour, Thick-cut bacon",
+          "field": "steps"
+        },
+        {
+          "severity": "warning",
+          "code": "weak_title",
+          "message": "robotic_title",
+          "field": "content"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "baked-ziti",
+      "title": "Baked Ziti",
+      "file": "client\\public\\catalog\\golden-100\\pages\\baked-ziti.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Dried pasta, Ground beef, Crushed tomatoes, Heavy cream",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "batch-lasagna",
+      "title": "Giant Batch Lasagna",
+      "file": "client\\public\\catalog\\golden-100\\pages\\batch-lasagna.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Dried pasta, Ground beef, Crushed tomatoes, Heavy cream",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "bbq-brisket-burnt-ends",
+      "title": "BBQ Burnt Ends",
+      "file": "client\\public\\catalog\\golden-100\\pages\\bbq-brisket-burnt-ends.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Chuck or brisket point, cubed, Kosher salt, Black pepper, Unsalted butter",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "bbq-chicken-bowls",
+      "title": "BBQ Chicken Bowls",
+      "file": "client\\public\\catalog\\golden-100\\pages\\bbq-chicken-bowls.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Jasmine rice, uncooked, Broccoli florets, Sesame oil, Red onion, sliced",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "bbq-chicken-pizza",
+      "title": "BBQ Chicken Pizza",
+      "file": "client\\public\\catalog\\golden-100\\pages\\bbq-chicken-pizza.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Bread flour, Active dry yeast, Olive oil, Kosher salt",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "bbq-chicken-sliders",
+      "title": "BBQ Chicken Sliders",
+      "file": "client\\public\\catalog\\golden-100\\pages\\bbq-chicken-sliders.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Ground beef, Provolone slices, Yellow onion",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "beef-barley-soup",
+      "title": "Beef Barley Soup",
+      "file": "client\\public\\catalog\\golden-100\\pages\\beef-barley-soup.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Ground beef (80/20), Yellow onion, Kidney beans, drained, Crushed tomatoes",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "beef-broccoli",
+      "title": "Quick Beef and Broccoli",
+      "file": "client\\public\\catalog\\golden-100\\pages\\beef-broccoli.json",
+      "contentScore": 90,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests optional rewrite",
+          "field": "title",
+          "sample": "Quick Beef and Broccoli"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Unsalted butter, Yellow onion",
+          "field": "steps"
+        },
+        {
+          "severity": "warning",
+          "code": "weak_title",
+          "message": "generic_opener",
+          "field": "content"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "beef-dip",
+      "title": "Blackstone Steak Sandwiches",
+      "file": "client\\public\\catalog\\golden-100\\pages\\beef-dip.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Kosher salt, Unsalted butter, Fresh parsley",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "beef-stroganoff",
+      "title": "Beef Stroganoff",
+      "file": "client\\public\\catalog\\golden-100\\pages\\beef-stroganoff.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Dried pasta, Ground beef, Crushed tomatoes, Heavy cream",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "beer-can-chicken",
+      "title": "Beer Can Chicken",
+      "file": "client\\public\\catalog\\golden-100\\pages\\beer-can-chicken.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Kosher salt, Vegetable oil",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "big-chili",
+      "title": "Hall-Sized Beef and Bean Chili",
+      "file": "client\\public\\catalog\\golden-100\\pages\\big-chili.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Yellow onion, Kidney beans, drained, Kosher salt",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "biscuits-gravy",
+      "title": "Biscuits and Gravy",
+      "file": "client\\public\\catalog\\golden-100\\pages\\biscuits-gravy.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Breakfast sausage, All-purpose flour, Whole milk, Buttermilk biscuit mix",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "breakfast-burrito-bar",
+      "title": "Breakfast Burrito Bar",
+      "file": "client\\public\\catalog\\golden-100\\pages\\breakfast-burrito-bar.json",
+      "contentScore": 90,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests optional rewrite",
+          "field": "title",
+          "sample": "Breakfast Burrito Bar"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Large eggs, Buttermilk, All-purpose flour, Thick-cut bacon",
+          "field": "steps"
+        },
+        {
+          "severity": "warning",
+          "code": "weak_title",
+          "message": "title_taco_no_tortilla",
+          "field": "content"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "breakfast-sausage-pizza",
+      "title": "Breakfast Sausage Gravy Pizza",
+      "file": "client\\public\\catalog\\golden-100\\pages\\breakfast-sausage-pizza.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Bread flour, Active dry yeast, Olive oil, Kosher salt",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "buffalo-chicken-dip",
+      "title": "Buffalo Chicken Dip",
+      "file": "client\\public\\catalog\\golden-100\\pages\\buffalo-chicken-dip.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Cooked chicken, shredded, Frank's hot sauce, Shredded cheddar",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "bulgogi-bowls",
+      "title": "Korean Bulgogi Rice Bowls",
+      "file": "client\\public\\catalog\\golden-100\\pages\\bulgogi-bowls.json",
+      "contentScore": 90,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "title_robotic",
+          "message": "title is generic (optional flavor cue)",
+          "field": "title",
+          "sample": "Korean Bulgogi Rice Bowls"
+        },
+        {
+          "severity": "info",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests optional rewrite",
+          "field": "title",
+          "sample": "Smoky Beef Bowls"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Jasmine rice, uncooked, Broccoli florets, Red onion, sliced",
+          "field": "steps"
+        },
+        {
+          "severity": "warning",
+          "code": "weak_title",
+          "message": "robotic_title",
+          "field": "content"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "butter-chicken",
+      "title": "Butter Chicken",
+      "file": "client\\public\\catalog\\golden-100\\pages\\butter-chicken.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Yellow onion, Crushed tomatoes or broth, Black pepper, freshly cracked, Olive oil",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "carolina-mustard-pork",
+      "title": "Carolina Mustard Pulled Pork",
+      "file": "client\\public\\catalog\\golden-100\\pages\\carolina-mustard-pork.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Brown sugar, Kosher salt",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "cedar-plank-salmon",
+      "title": "Cedar Plank Grilled Salmon",
+      "file": "client\\public\\catalog\\golden-100\\pages\\cedar-plank-salmon.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Brown sugar, Fresh ginger, grated",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "chicken-alfredo-bake",
+      "title": "Chicken Alfredo Bake",
+      "file": "client\\public\\catalog\\golden-100\\pages\\chicken-alfredo-bake.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Dried pasta, Boneless chicken thighs, Crushed tomatoes, Heavy cream",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "chicken-caesar",
+      "title": "Hall Caesar Chicken",
+      "file": "client\\public\\catalog\\golden-100\\pages\\chicken-caesar.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Thick-cut bacon, French bread / baguette, Olive oil",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "chicken-dumpling-soup",
+      "title": "Chicken and Dumplings",
+      "file": "client\\public\\catalog\\golden-100\\pages\\chicken-dumpling-soup.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Ground beef (80/20), Yellow onion, Kidney beans, drained, Crushed tomatoes",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "chicken-parm",
+      "title": "Chicken Parm",
+      "file": "client\\public\\catalog\\golden-100\\pages\\chicken-parm.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Dried pasta, Boneless chicken thighs, Crushed tomatoes, Heavy cream",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "chicken-pot-pie",
+      "title": "Chicken Pot Pie",
+      "file": "client\\public\\catalog\\golden-100\\pages\\chicken-pot-pie.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Yellow onion, Crushed tomatoes or broth, Black pepper, freshly cracked, Olive oil",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "chicken-quesadillas",
+      "title": "Shredded Chicken Quesadillas",
+      "file": "client\\public\\catalog\\golden-100\\pages\\chicken-quesadillas.json",
+      "contentScore": 90,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests optional rewrite",
+          "field": "title",
+          "sample": "Shredded Chicken Quesadillas"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Ground beef, Provolone slices, Yellow onion",
+          "field": "steps"
+        },
+        {
+          "severity": "warning",
+          "code": "weak_title",
+          "message": "title_taco_no_tortilla",
+          "field": "content"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "chicken-souvlaki",
+      "title": "Grilled Chicken Souvlaki",
+      "file": "client\\public\\catalog\\golden-100\\pages\\chicken-souvlaki.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Kosher salt, Vegetable oil",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "chicken-tikka-masala",
+      "title": "Chicken Tikka Masala",
+      "file": "client\\public\\catalog\\golden-100\\pages\\chicken-tikka-masala.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Yellow onion, Crushed tomatoes or broth, Black pepper, freshly cracked, Olive oil",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "chili-garlic-bread",
+      "title": "Firehall Chili",
+      "file": "client\\public\\catalog\\golden-100\\pages\\chili-garlic-bread.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Ground beef (80/20), Yellow onions, Kidney beans, Ground cumin",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "chili-mac",
+      "title": "Chili Mac Skillet",
+      "file": "client\\public\\catalog\\golden-100\\pages\\chili-mac.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Ground beef (80/20), Yellow onion, Kidney beans, drained, Crushed tomatoes",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "chorizo-breakfast-tacos",
+      "title": "Chorizo Breakfast Tacos",
+      "file": "client\\public\\catalog\\golden-100\\pages\\chorizo-breakfast-tacos.json",
+      "contentScore": 90,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests optional rewrite",
+          "field": "title",
+          "sample": "Chorizo Breakfast Tacos"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Large eggs, Buttermilk, All-purpose flour, Thick-cut bacon",
+          "field": "steps"
+        },
+        {
+          "severity": "warning",
+          "code": "weak_title",
+          "message": "title_taco_no_tortilla",
+          "field": "content"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "creamy-tuscan-chicken",
+      "title": "Creamy Tuscan Chicken",
+      "file": "client\\public\\catalog\\golden-100\\pages\\creamy-tuscan-chicken.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Yellow onion, Crushed tomatoes or broth, Black pepper, freshly cracked, Olive oil",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "crispy-chicken-cutlets",
+      "title": "Crispy Chicken Cutlets Marinara",
+      "file": "client\\public\\catalog\\golden-100\\pages\\crispy-chicken-cutlets.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Chicken cutlets, pounded thin, All-purpose flour, Fresh mozzarella, sliced",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "detroit-style-pizza",
+      "title": "Detroit-Style Pepperoni Pizza",
+      "file": "client\\public\\catalog\\golden-100\\pages\\detroit-style-pizza.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Bread flour, Active dry yeast, Olive oil, Kosher salt",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "enchilada-casserole",
+      "title": "Chicken Enchilada Casserole",
+      "file": "client\\public\\catalog\\golden-100\\pages\\enchilada-casserole.json",
+      "contentScore": 90,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests optional rewrite",
+          "field": "title",
+          "sample": "Chicken Enchilada Casserole"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Yellow onion, Crushed tomatoes or broth, Black pepper, freshly cracked, Olive oil",
+          "field": "steps"
+        },
+        {
+          "severity": "warning",
+          "code": "weak_title",
+          "message": "title_taco_no_tortilla",
+          "field": "content"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "fast-philly-skillet",
+      "title": "Fast Philly Cheesesteak Skillet",
+      "file": "client\\public\\catalog\\golden-100\\pages\\fast-philly-skillet.json",
+      "contentScore": 90,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "title_robotic",
+          "message": "title is generic (optional flavor cue)",
+          "field": "title",
+          "sample": "Fast Philly Cheesesteak Skillet"
+        },
+        {
+          "severity": "info",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests optional rewrite",
+          "field": "title",
+          "sample": "Garlic Butter Beef Skillet"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Unsalted butter, Yellow onion",
+          "field": "steps"
+        },
+        {
+          "severity": "warning",
+          "code": "weak_title",
+          "message": "robotic_title",
+          "field": "content"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "five-ingredient-pasta",
+      "title": "Garlic Butter Pasta",
+      "file": "client\\public\\catalog\\golden-100\\pages\\five-ingredient-pasta.json",
+      "contentScore": 90,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests optional rewrite",
+          "field": "title",
+          "sample": "Garlic Butter Pasta"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Dried spaghetti, Unsalted butter, Kosher salt, Black pepper, freshly cracked",
+          "field": "steps"
+        },
+        {
+          "severity": "warning",
+          "code": "weak_title",
+          "message": "title_pasta_no_pasta",
+          "field": "content"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "flank-chimichurri",
+      "title": "Grilled Flank Steak with Chimichurri",
+      "file": "client\\public\\catalog\\golden-100\\pages\\flank-chimichurri.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Fresh parsley, Fresh oregano, Olive oil, Kosher salt",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "french-toast-casserole",
+      "title": "French Toast Casserole",
+      "file": "client\\public\\catalog\\golden-100\\pages\\french-toast-casserole.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Large eggs, Buttermilk, All-purpose flour, Thick-cut bacon",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "game-day-nachos",
+      "title": "Loaded Game Day Nachos",
+      "file": "client\\public\\catalog\\golden-100\\pages\\game-day-nachos.json",
+      "contentScore": 90,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests optional rewrite",
+          "field": "title",
+          "sample": "Loaded Game Day Nachos"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Jasmine rice, uncooked, Broccoli florets, Red onion, sliced",
+          "field": "steps"
+        },
+        {
+          "severity": "warning",
+          "code": "weak_title",
+          "message": "title_taco_no_tortilla",
+          "field": "content"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "garlic-butter-shrimp",
+      "title": "Garlic Butter Shrimp",
+      "file": "client\\public\\catalog\\golden-100\\pages\\garlic-butter-shrimp.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Unsalted butter, Fresh parsley, chopped, Dry white wine or chicken broth",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "ginger-salmon-bowls",
+      "title": "Ginger Salmon Rice Bowls",
+      "file": "client\\public\\catalog\\golden-100\\pages\\ginger-salmon-bowls.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Jasmine rice, uncooked, Broccoli florets, Red onion, sliced",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "greek-chicken-bowls",
+      "title": "Greek Chicken Bowls",
+      "file": "client\\public\\catalog\\golden-100\\pages\\greek-chicken-bowls.json",
+      "contentScore": 90,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "title_robotic",
+          "message": "title is generic (optional flavor cue)",
+          "field": "title",
+          "sample": "Greek Chicken Bowls"
+        },
+        {
+          "severity": "info",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests optional rewrite",
+          "field": "title",
+          "sample": "Smoky Chicken Bowls"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Jasmine rice, uncooked, Broccoli florets, Red onion, sliced",
+          "field": "steps"
+        },
+        {
+          "severity": "warning",
+          "code": "weak_title",
+          "message": "robotic_title",
+          "field": "content"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "grilled-corn-cotija",
+      "title": "Grilled Street Corn with Cotija",
+      "file": "client\\public\\catalog\\golden-100\\pages\\grilled-corn-cotija.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Mayonnaise, Fresh lime",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "grilled-pork-chops",
+      "title": "Charcoal Grilled Pork Chops",
+      "file": "client\\public\\catalog\\golden-100\\pages\\grilled-pork-chops.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Brown sugar, Kosher salt",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "hall-taco-bar",
+      "title": "Hall Taco Bar Night",
+      "file": "client\\public\\catalog\\golden-100\\pages\\hall-taco-bar.json",
+      "contentScore": 90,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests optional rewrite",
+          "field": "title",
+          "sample": "Hall Taco Bar Night"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Flank or skirt steak, White onion, Fresh cilantro",
+          "field": "steps"
+        },
+        {
+          "severity": "warning",
+          "code": "weak_title",
+          "message": "title_taco_no_tortilla",
+          "field": "content"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "herb-roasted-thighs",
+      "title": "Herb Roasted Chicken Thighs",
+      "file": "client\\public\\catalog\\golden-100\\pages\\herb-roasted-thighs.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Fresh thyme, Fresh rosemary, Olive oil, Kosher salt",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "honey-garlic-pork-tenderloin",
+      "title": "Honey Garlic Grilled Pork Tenderloin",
+      "file": "client\\public\\catalog\\golden-100\\pages\\honey-garlic-pork-tenderloin.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Brown sugar, Kosher salt",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "honey-soppressata-pizza",
+      "title": "Hot Honey Soppressata Pizza",
+      "file": "client\\public\\catalog\\golden-100\\pages\\honey-soppressata-pizza.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Bread flour, Active dry yeast, Olive oil, Kosher salt",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "jambalaya",
+      "title": "Cajun Jambalaya for the Hall",
+      "file": "client\\public\\catalog\\golden-100\\pages\\jambalaya.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Andouille sausage, Boneless chicken thighs, Crushed tomatoes",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "jerk-chicken",
+      "title": "Jerk Chicken",
+      "file": "client\\public\\catalog\\golden-100\\pages\\jerk-chicken.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Kosher salt, Vegetable oil",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "lemon-herb-salmon",
+      "title": "Lemon Herb Grilled Salmon",
+      "file": "client\\public\\catalog\\golden-100\\pages\\lemon-herb-salmon.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Brown sugar, Fresh ginger, grated",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "loaded-baked-potato-bar",
+      "title": "Loaded Baked Potato Bar",
+      "file": "client\\public\\catalog\\golden-100\\pages\\loaded-baked-potato-bar.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Jasmine rice, uncooked, Broccoli florets, Red onion, sliced",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "loaded-nacho-skillet",
+      "title": "Loaded Nacho Skillet",
+      "file": "client\\public\\catalog\\golden-100\\pages\\loaded-nacho-skillet.json",
+      "contentScore": 90,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "title_robotic",
+          "message": "title is generic (optional flavor cue)",
+          "field": "title",
+          "sample": "Loaded Nacho Skillet"
+        },
+        {
+          "severity": "info",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests optional rewrite",
+          "field": "title",
+          "sample": "Smoky Beef Bowls"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Jasmine rice, uncooked, Broccoli florets, Red onion, sliced",
+          "field": "steps"
+        },
+        {
+          "severity": "warning",
+          "code": "weak_title",
+          "message": "robotic_title; title_taco_no_tortilla",
+          "field": "content"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "loaded-potato-feed",
+      "title": "Loaded Potato Feed",
+      "file": "client\\public\\catalog\\golden-100\\pages\\loaded-potato-feed.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Jasmine rice, uncooked, Broccoli florets, Red onion, sliced",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "mac-and-cheese-bake",
+      "title": "Baked Mac and Cheese",
+      "file": "client\\public\\catalog\\golden-100\\pages\\mac-and-cheese-bake.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Dried pasta, Boneless chicken thighs, Crushed tomatoes, Heavy cream",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "margherita-pizza",
+      "title": "Fresh Margherita Pizza",
+      "file": "client\\public\\catalog\\golden-100\\pages\\margherita-pizza.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Bread flour, Active dry yeast, Olive oil, Kosher salt",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "meat-lovers-sheet-pizza",
+      "title": "Meat Lover's Sheet Pan Pizza",
+      "file": "client\\public\\catalog\\golden-100\\pages\\meat-lovers-sheet-pizza.json",
+      "contentScore": 90,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "title_robotic",
+          "message": "title is generic (optional flavor cue)",
+          "field": "title",
+          "sample": "Meat Lover's Sheet Pan Pizza"
+        },
+        {
+          "severity": "info",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests optional rewrite",
+          "field": "title",
+          "sample": "Crispy Honey Chili Pork"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Bread flour, Active dry yeast, Olive oil, Kosher salt",
+          "field": "steps"
+        },
+        {
+          "severity": "warning",
+          "code": "weak_title",
+          "message": "robotic_title",
+          "field": "content"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "meatball-hoagies",
+      "title": "Firehall Meatball Hoagies",
+      "file": "client\\public\\catalog\\golden-100\\pages\\meatball-hoagies.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Ground beef, Provolone slices, Yellow onion",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "meatloaf-mashed",
+      "title": "Classic Meatloaf with Mashed Potatoes",
+      "file": "client\\public\\catalog\\golden-100\\pages\\meatloaf-mashed.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Yellow onion, Crushed tomatoes or broth, Black pepper, freshly cracked, Olive oil",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "mediterranean-chickpea",
+      "title": "Mediterranean Chickpea Bowls",
+      "file": "client\\public\\catalog\\golden-100\\pages\\mediterranean-chickpea.json",
+      "contentScore": 90,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "title_robotic",
+          "message": "title is generic (optional flavor cue)",
+          "field": "title",
+          "sample": "Mediterranean Chickpea Bowls"
+        },
+        {
+          "severity": "info",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests optional rewrite",
+          "field": "title",
+          "sample": "Smoky Chickpea Bowls"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Jasmine rice, uncooked, Broccoli florets, Red onion, sliced",
+          "field": "steps"
+        },
+        {
+          "severity": "warning",
+          "code": "weak_title",
+          "message": "robotic_title",
+          "field": "content"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "memphis-dry-rub-ribs",
+      "title": "Memphis Dry Rub Ribs",
+      "file": "client\\public\\catalog\\golden-100\\pages\\memphis-dry-rub-ribs.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: St. Louis spare ribs, Brown sugar, Paprika, Cayenne",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "moroccan-meatballs",
+      "title": "Moroccan Spiced Lamb Meatballs",
+      "file": "client\\public\\catalog\\golden-100\\pages\\moroccan-meatballs.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Yellow onion, Crushed tomatoes or broth, Black pepper, freshly cracked, Olive oil",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "ny-strip-herb-butter",
+      "title": "Grilled NY Strip with Herb Butter",
+      "file": "client\\public\\catalog\\golden-100\\pages\\ny-strip-herb-butter.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Kosher salt, Black pepper, Unsalted butter, Fresh parsley",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "one-pot-chicken-rice",
+      "title": "One-Pot Chicken and Rice",
+      "file": "client\\public\\catalog\\golden-100\\pages\\one-pot-chicken-rice.json",
+      "contentScore": 90,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "title_robotic",
+          "message": "title is generic (optional flavor cue)",
+          "field": "title",
+          "sample": "One-Pot Chicken and Rice"
+        },
+        {
+          "severity": "info",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests optional rewrite",
+          "field": "title",
+          "sample": "Crispy Honey Chili Chicken"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Andouille sausage, Boneless chicken thighs, Crushed tomatoes",
+          "field": "steps"
+        },
+        {
+          "severity": "warning",
+          "code": "weak_title",
+          "message": "robotic_title",
+          "field": "content"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "pad-thai",
+      "title": "Hall Rush Pad Thai",
+      "file": "client\\public\\catalog\\golden-100\\pages\\pad-thai.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Unsalted butter, Yellow onion",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "pancake-short-stack",
+      "title": "Pancake Short Stack for the Crew",
+      "file": "client\\public\\catalog\\golden-100\\pages\\pancake-short-stack.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Large eggs, Buttermilk, All-purpose flour, Thick-cut bacon",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "parm-hero-subs",
+      "title": "Chicken Parm Hero Subs",
+      "file": "client\\public\\catalog\\golden-100\\pages\\parm-hero-subs.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Ground beef, Provolone slices, Yellow onion",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "pepperoni-pizza-night",
+      "title": "Classic Pepperoni Pizza",
+      "file": "client\\public\\catalog\\golden-100\\pages\\pepperoni-pizza-night.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Bread flour, Active dry yeast, Olive oil, Kosher salt",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "performance-burrito-bowls",
+      "title": "Performance Chicken Burrito Bowls",
+      "file": "client\\public\\catalog\\golden-100\\pages\\performance-burrito-bowls.json",
+      "contentScore": 90,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests optional rewrite",
+          "field": "title",
+          "sample": "Performance Chicken Burrito Bowls"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Jasmine rice, uncooked, Broccoli florets, Red onion, sliced",
+          "field": "steps"
+        },
+        {
+          "severity": "warning",
+          "code": "weak_title",
+          "message": "title_taco_no_tortilla",
+          "field": "content"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "philly-cheesesteak-skillet",
+      "title": "Philly Cheesesteak Skillet",
+      "file": "client\\public\\catalog\\golden-100\\pages\\philly-cheesesteak-skillet.json",
+      "contentScore": 90,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "title_robotic",
+          "message": "title is generic (optional flavor cue)",
+          "field": "title",
+          "sample": "Philly Cheesesteak Skillet"
+        },
+        {
+          "severity": "info",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests optional rewrite",
+          "field": "title",
+          "sample": "Garlic Butter Beef Skillet"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Unsalted butter, Yellow onion",
+          "field": "steps"
+        },
+        {
+          "severity": "warning",
+          "code": "weak_title",
+          "message": "robotic_title",
+          "field": "content"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "philly-egg-rolls",
+      "title": "Philly Cheesesteak Egg Rolls",
+      "file": "client\\public\\catalog\\golden-100\\pages\\philly-egg-rolls.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Ground beef, Provolone slices, Yellow onion",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "pork-carnitas-tacos",
+      "title": "Quick Pork Carnitas Tacos",
+      "file": "client\\public\\catalog\\golden-100\\pages\\pork-carnitas-tacos.json",
+      "contentScore": 90,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests optional rewrite",
+          "field": "title",
+          "sample": "Quick Pork Carnitas Tacos"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Boneless chicken thighs, White onion, Fresh cilantro",
+          "field": "steps"
+        },
+        {
+          "severity": "warning",
+          "code": "weak_title",
+          "message": "generic_opener; title_taco_no_tortilla",
+          "field": "content"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "pulled-pork-mac",
+      "title": "Pulled Pork Mac and Cheese",
+      "file": "client\\public\\catalog\\golden-100\\pages\\pulled-pork-mac.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Dried pasta, Boneless chicken thighs, Crushed tomatoes, Heavy cream",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "pulled-pork",
+      "title": "Pulled Pork Sandwiches",
+      "file": "client\\public\\catalog\\golden-100\\pages\\pulled-pork.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Provolone slices, Yellow onion",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "sausage-egg-bake",
+      "title": "Sausage Egg Bake for the Crew",
+      "file": "client\\public\\catalog\\golden-100\\pages\\sausage-egg-bake.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Large eggs, Buttermilk, All-purpose flour, Thick-cut bacon",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "sausage-peppers-onions",
+      "title": "Sausage Peppers and Onions",
+      "file": "client\\public\\catalog\\golden-100\\pages\\sausage-peppers-onions.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Unsalted butter, Yellow onion",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "sheet-pan-fajitas",
+      "title": "Sheet Pan Chicken Fajitas",
+      "file": "client\\public\\catalog\\golden-100\\pages\\sheet-pan-fajitas.json",
+      "contentScore": 90,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "title_robotic",
+          "message": "title is generic (optional flavor cue)",
+          "field": "title",
+          "sample": "Sheet Pan Chicken Fajitas"
+        },
+        {
+          "severity": "info",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests optional rewrite",
+          "field": "title",
+          "sample": "Crispy Honey Chili Chicken"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Boneless chicken thighs, Red onion, sliced, Olive oil",
+          "field": "steps"
+        },
+        {
+          "severity": "warning",
+          "code": "weak_title",
+          "message": "robotic_title; title_taco_no_tortilla",
+          "field": "content"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "sheet-pan-meal-prep",
+      "title": "Sheet Pan Chicken Trays",
+      "file": "client\\public\\catalog\\golden-100\\pages\\sheet-pan-meal-prep.json",
+      "contentScore": 90,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "title_robotic",
+          "message": "title is generic (optional flavor cue)",
+          "field": "title",
+          "sample": "Sheet Pan Chicken Trays"
+        },
+        {
+          "severity": "info",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests optional rewrite",
+          "field": "title",
+          "sample": "Crispy Honey Chili Chicken"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Boneless chicken thighs, Red onion, sliced, Olive oil",
+          "field": "steps"
+        },
+        {
+          "severity": "warning",
+          "code": "weak_title",
+          "message": "robotic_title",
+          "field": "content"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "sheet-pan-sausage-peppers",
+      "title": "Sheet Pan Sausage and Peppers",
+      "file": "client\\public\\catalog\\golden-100\\pages\\sheet-pan-sausage-peppers.json",
+      "contentScore": 90,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "title_robotic",
+          "message": "title is generic (optional flavor cue)",
+          "field": "title",
+          "sample": "Sheet Pan Sausage and Peppers"
+        },
+        {
+          "severity": "info",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests optional rewrite",
+          "field": "title",
+          "sample": "Crispy Honey Chili Pork"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Boneless chicken thighs, Red onion, sliced, Olive oil",
+          "field": "steps"
+        },
+        {
+          "severity": "warning",
+          "code": "weak_title",
+          "message": "robotic_title",
+          "field": "content"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "shepherds-pie",
+      "title": "Shepherd's Pie",
+      "file": "client\\public\\catalog\\golden-100\\pages\\shepherds-pie.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Yellow onion, Crushed tomatoes or broth, Black pepper, freshly cracked, Olive oil",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "skillet-chicken-alfredo",
+      "title": "One-Skillet Chicken Alfredo",
+      "file": "client\\public\\catalog\\golden-100\\pages\\skillet-chicken-alfredo.json",
+      "contentScore": 90,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "title_robotic",
+          "message": "title is generic (optional flavor cue)",
+          "field": "title",
+          "sample": "One-Skillet Chicken Alfredo"
+        },
+        {
+          "severity": "info",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests optional rewrite",
+          "field": "title",
+          "sample": "Chicken Pasta Night"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Dried pasta, Boneless chicken thighs, Crushed tomatoes, Heavy cream",
+          "field": "steps"
+        },
+        {
+          "severity": "warning",
+          "code": "weak_title",
+          "message": "robotic_title",
+          "field": "content"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "slider-bar",
+      "title": "Hall Slider Bar",
+      "file": "client\\public\\catalog\\golden-100\\pages\\slider-bar.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Ground beef (80/20), Potato buns, Mayonnaise, Yellow mustard",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "smash-burgers",
+      "title": "Double Smash Burgers",
+      "file": "client\\public\\catalog\\golden-100\\pages\\smash-burgers.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Ground beef (80/20), Yellow onions, Unsalted butter, Mayonnaise",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "smoked-brisket",
+      "title": "Kansas City Smoked Brisket",
+      "file": "client\\public\\catalog\\golden-100\\pages\\smoked-brisket.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Whole packer brisket, trimmed, Kosher salt, Coarse black pepper, Yellow mustard",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "smoked-wings-white-sauce",
+      "title": "Smoked Wings with White BBQ Sauce",
+      "file": "client\\public\\catalog\\golden-100\\pages\\smoked-wings-white-sauce.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Chicken wings, split and tips trimmed, Kosher salt, Black pepper, Mayonnaise",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "steak-sandwiches",
+      "title": "Steak Sandwiches",
+      "file": "client\\public\\catalog\\golden-100\\pages\\steak-sandwiches.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Frozen steak fries, Olive oil, Yellow onions, Mayonnaise",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "steak-tacos",
+      "title": "Chimichurri Steak Tacos",
+      "file": "client\\public\\catalog\\golden-100\\pages\\steak-tacos.json",
+      "contentScore": 90,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests optional rewrite",
+          "field": "title",
+          "sample": "Chimichurri Steak Tacos"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Ground cumin, Kosher salt, Black pepper, Fresh parsley (flat-leaf)",
+          "field": "steps"
+        },
+        {
+          "severity": "warning",
+          "code": "weak_title",
+          "message": "title_taco_no_tortilla",
+          "field": "content"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "street-corn-chicken",
+      "title": "Mexican Street Corn Chicken Bowls",
+      "file": "client\\public\\catalog\\golden-100\\pages\\street-corn-chicken.json",
+      "contentScore": 90,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "title_robotic",
+          "message": "title is generic (optional flavor cue)",
+          "field": "title",
+          "sample": "Mexican Street Corn Chicken Bowls"
+        },
+        {
+          "severity": "info",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests optional rewrite",
+          "field": "title",
+          "sample": "Smoky Chicken Bowls"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Jasmine rice, uncooked, Broccoli florets, Red onion, sliced",
+          "field": "steps"
+        },
+        {
+          "severity": "warning",
+          "code": "weak_title",
+          "message": "robotic_title",
+          "field": "content"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "stuffed-peppers",
+      "title": "Quinoa Stuffed Peppers",
+      "file": "client\\public\\catalog\\golden-100\\pages\\stuffed-peppers.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Yellow onion, Crushed tomatoes or broth, Black pepper, freshly cracked, Olive oil",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "sunday-chili-batch",
+      "title": "Sunday Batch Chili",
+      "file": "client\\public\\catalog\\golden-100\\pages\\sunday-chili-batch.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Yellow onion, Kidney beans, drained, Kosher salt",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "teriyaki-donburi",
+      "title": "Teriyaki Chicken Donburi",
+      "file": "client\\public\\catalog\\golden-100\\pages\\teriyaki-donburi.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Jasmine rice, uncooked, Broccoli florets, Red onion, sliced",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "teriyaki-salmon-grill",
+      "title": "Teriyaki Grilled Salmon",
+      "file": "client\\public\\catalog\\golden-100\\pages\\teriyaki-salmon-grill.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Brown sugar, Fresh ginger, grated",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "texas-beef-ribs",
+      "title": "Texas-Style Beef Ribs",
+      "file": "client\\public\\catalog\\golden-100\\pages\\texas-beef-ribs.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Kosher salt, Coarse black pepper, Apple cider vinegar",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "thai-basil-chicken",
+      "title": "Thai Basil Chicken Stir Fry",
+      "file": "client\\public\\catalog\\golden-100\\pages\\thai-basil-chicken.json",
+      "contentScore": 90,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "title_robotic",
+          "message": "title is generic (optional flavor cue)",
+          "field": "title",
+          "sample": "Thai Basil Chicken Stir Fry"
+        },
+        {
+          "severity": "info",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests optional rewrite",
+          "field": "title",
+          "sample": "Garlic Butter Chicken Skillet"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Unsalted butter, Yellow onion",
+          "field": "steps"
+        },
+        {
+          "severity": "warning",
+          "code": "weak_title",
+          "message": "robotic_title",
+          "field": "content"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "turkey-burgers",
+      "title": "Black Bean Turkey Burgers",
+      "file": "client\\public\\catalog\\golden-100\\pages\\turkey-burgers.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Ground beef (80/20), Potato buns, Mayonnaise, Yellow mustard",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "turkey-chili",
+      "title": "High-Protein Turkey Chili",
+      "file": "client\\public\\catalog\\golden-100\\pages\\turkey-chili.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Yellow onion, Kidney beans, drained, Kosher salt",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "turkey-meatball-zoodles",
+      "title": "Turkey Meatballs with Zucchini Noodles",
+      "file": "client\\public\\catalog\\golden-100\\pages\\turkey-meatball-zoodles.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Dried pasta, Boneless chicken thighs, Crushed tomatoes, Heavy cream",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "white-garlic-chicken-pizza",
+      "title": "White Garlic Chicken Pizza",
+      "file": "client\\public\\catalog\\golden-100\\pages\\white-garlic-chicken-pizza.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Bread flour, Active dry yeast, Olive oil, Kosher salt",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "asian-chicken-lettuce-cups",
+      "title": "Asian Chicken Lettuce Cups",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\asian-chicken-lettuce-cups.json",
+      "contentScore": 90,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "title_robotic",
+          "message": "title is generic (optional flavor cue)",
+          "field": "title",
+          "sample": "Asian Chicken Lettuce Cups"
+        },
+        {
+          "severity": "info",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests optional rewrite",
+          "field": "title",
+          "sample": "Crispy Honey Chili Chicken"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: green onions, fresh ginger, low-sodium soy sauce, crushed roasted peanuts",
+          "field": "steps"
+        },
+        {
+          "severity": "warning",
+          "code": "weak_title",
+          "message": "robotic_title",
+          "field": "content"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "baked-falafel-hall-bowls",
+      "title": "Baked Falafel Hall Bowls",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\baked-falafel-hall-bowls.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: dried chickpeas, fresh parsley, fresh cilantro, yellow onion",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "baked-turkey-meatball-marinara",
+      "title": "Baked Turkey Meatball Marinara",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\baked-turkey-meatball-marinara.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: plain breadcrumbs, large eggs, fresh parsley, fresh basil leaves",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "blackened-cod-taco-night",
+      "title": "Blackened Cod Taco Night",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\blackened-cod-taco-night.json",
+      "contentScore": 90,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests optional rewrite",
+          "field": "title",
+          "sample": "Blackened Cod Taco Night"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: cod fillets, smoked paprika, dried thyme, green cabbage",
+          "field": "steps"
+        },
+        {
+          "severity": "warning",
+          "code": "weak_title",
+          "message": "title_taco_no_tortilla",
+          "field": "content"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "cajun-chicken-rice-bowl",
+      "title": "Cajun Chicken Rice Bowl",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\cajun-chicken-rice-bowl.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: boneless chicken thighs, green bell pepper, yellow onion, smoked paprika",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "caprese-chicken-bake",
+      "title": "Caprese Chicken Bake",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\caprese-chicken-bake.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: boneless chicken breasts, grape tomatoes, fresh mozzarella, fresh basil",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "chicken-enchilada-skillet-light",
+      "title": "Light Chicken Enchilada Skillet",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\chicken-enchilada-skillet-light.json",
+      "contentScore": 90,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "title_robotic",
+          "message": "title is generic (optional flavor cue)",
+          "field": "title",
+          "sample": "Light Chicken Enchilada Skillet"
+        },
+        {
+          "severity": "info",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests optional rewrite",
+          "field": "title",
+          "sample": "Garlic Butter Chicken Skillet"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: boneless chicken breasts, black beans, frozen corn, yellow onion",
+          "field": "steps"
+        },
+        {
+          "severity": "warning",
+          "code": "weak_title",
+          "message": "robotic_title; title_taco_no_tortilla",
+          "field": "content"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "chipotle-lime-chicken-tacos",
+      "title": "Chipotle Lime Chicken Tacos",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\chipotle-lime-chicken-tacos.json",
+      "contentScore": 90,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests optional rewrite",
+          "field": "title",
+          "sample": "Chipotle Lime Chicken Tacos"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: boneless chicken thighs, ground cumin, green cabbage, Greek yogurt",
+          "field": "steps"
+        },
+        {
+          "severity": "warning",
+          "code": "weak_title",
+          "message": "title_taco_no_tortilla",
+          "field": "content"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "coconut-curry-chicken-pot",
+      "title": "Coconut Curry Chicken Pot",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\coconut-curry-chicken-pot.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: boneless chicken thighs, yellow onion, fresh ginger, fresh spinach",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "cottage-cheese-protein-pasta",
+      "title": "Cottage Cheese Protein Pasta Bake",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\cottage-cheese-protein-pasta.json",
+      "contentScore": 90,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests optional rewrite",
+          "field": "title",
+          "sample": "Cottage Cheese Protein Pasta Bake"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: whole-wheat penne, dried basil, dried oregano, kosher salt",
+          "field": "steps"
+        },
+        {
+          "severity": "warning",
+          "code": "weak_title",
+          "message": "title_pasta_no_pasta",
+          "field": "content"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "crispy-fish-taco-night",
+      "title": "Crispy Fish Taco Night",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\crispy-fish-taco-night.json",
+      "contentScore": 90,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests optional rewrite",
+          "field": "title",
+          "sample": "Crispy Fish Taco Night"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: all-purpose flour, large eggs, green cabbage, Greek yogurt",
+          "field": "steps"
+        },
+        {
+          "severity": "warning",
+          "code": "weak_title",
+          "message": "title_taco_no_tortilla",
+          "field": "content"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "crock-barbacoa-chicken",
+      "title": "Crock Barbacoa Chicken",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\crock-barbacoa-chicken.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: boneless chicken thighs, apple cider vinegar, ground cumin, dried oregano",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "greek-lemon-chicken-potatoes",
+      "title": "Greek Lemon Chicken and Potatoes",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\greek-lemon-chicken-potatoes.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Yukon gold potatoes, dried oregano, extra-virgin olive oil, kosher salt",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "grilled-shrimp-quinoa-bowls",
+      "title": "Grilled Shrimp Quinoa Bowls",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\grilled-shrimp-quinoa-bowls.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: large shrimp, cherry tomatoes, extra-virgin olive oil, dried oregano",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "herb-baked-salmon-tray",
+      "title": "Herb-Crusted Baked Salmon Tray",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\herb-baked-salmon-tray.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: fresh dill, fresh parsley, extra-virgin olive oil, kosher salt",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "honey-garlic-chicken-rice-bowls",
+      "title": "Honey Garlic Chicken Rice Bowls",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\honey-garlic-chicken-rice-bowls.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: boneless chicken thighs, low-sodium soy sauce, fresh ginger, toasted sesame seeds",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "honey-lime-chicken-tray",
+      "title": "Honey Lime Chicken Tray",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\honey-lime-chicken-tray.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: green bell pepper, olive oil, kosher salt, black pepper",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "hummus-chicken-platter",
+      "title": "Hummus Chicken Platter",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\hummus-chicken-platter.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: boneless chicken breasts, canned chickpeas, ground cumin, smoked paprika",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "italian-sausage-veg-sheet-pan",
+      "title": "Italian Sausage and Veg Sheet Pan",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\italian-sausage-veg-sheet-pan.json",
+      "contentScore": 90,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "title_robotic",
+          "message": "title is generic (optional flavor cue)",
+          "field": "title",
+          "sample": "Italian Sausage and Veg Sheet Pan"
+        },
+        {
+          "severity": "info",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests optional rewrite",
+          "field": "title",
+          "sample": "Crispy Honey Chili Pork"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: sweet Italian sausage, green bell pepper, yellow onion, cherry tomatoes",
+          "field": "steps"
+        },
+        {
+          "severity": "warning",
+          "code": "weak_title",
+          "message": "robotic_title",
+          "field": "content"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "korean-beef-rice-bowls",
+      "title": "Korean Beef Rice Bowls",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\korean-beef-rice-bowls.json",
+      "contentScore": 90,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "title_robotic",
+          "message": "title is generic (optional flavor cue)",
+          "field": "title",
+          "sample": "Korean Beef Rice Bowls"
+        },
+        {
+          "severity": "info",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests optional rewrite",
+          "field": "title",
+          "sample": "Smoky Beef Bowls"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: low-sodium soy sauce, fresh ginger, Asian pear, English cucumber",
+          "field": "steps"
+        },
+        {
+          "severity": "warning",
+          "code": "weak_title",
+          "message": "robotic_title",
+          "field": "content"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "lean-beef-broccoli-rice",
+      "title": "Lean Beef and Broccoli Rice",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\lean-beef-broccoli-rice.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: flank steak, low-sodium soy sauce, fresh ginger",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "lean-turkey-bean-chili",
+      "title": "Lean Turkey and Bean Chili",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\lean-turkey-bean-chili.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: yellow onion, kidney beans, black beans, smoked paprika",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "lemon-chicken-orzo-soup",
+      "title": "Lemon Chicken Orzo Soup",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\lemon-chicken-orzo-soup.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: boneless chicken breasts, carrots, yellow onion, fresh dill",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "lemon-garlic-chicken-tray",
+      "title": "Lemon Garlic Chicken Tray Bake",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\lemon-garlic-chicken-tray.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: fresh lemons, extra-virgin olive oil, dried oregano, kosher salt",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "lemon-garlic-shrimp-pasta",
+      "title": "Lemon Garlic Shrimp Pasta",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\lemon-garlic-shrimp-pasta.json",
+      "contentScore": 90,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests optional rewrite",
+          "field": "title",
+          "sample": "Lemon Garlic Shrimp Pasta"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: whole-wheat linguine, extra-virgin olive oil, unsalted butter, fresh parsley",
+          "field": "steps"
+        },
+        {
+          "severity": "warning",
+          "code": "weak_title",
+          "message": "title_pasta_no_pasta",
+          "field": "content"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "lemon-salmon-orzo-skillet",
+      "title": "Lemon Salmon Orzo Skillet",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\lemon-salmon-orzo-skillet.json",
+      "contentScore": 90,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests optional rewrite",
+          "field": "title",
+          "sample": "Lemon Salmon Orzo Skillet"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: fresh spinach, chicken broth, extra-virgin olive oil, kosher salt",
+          "field": "steps"
+        },
+        {
+          "severity": "warning",
+          "code": "weak_title",
+          "message": "title quality failed",
+          "field": "content"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "lentil-mushroom-bolognese",
+      "title": "Lentil Mushroom Bolognese",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\lentil-mushroom-bolognese.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: green lentils, cremini mushrooms, whole-wheat spaghetti, yellow onion",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "maple-mustard-salmon-tray",
+      "title": "Maple Mustard Salmon Tray",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\maple-mustard-salmon-tray.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Dijon mustard, whole-grain mustard, apple cider vinegar, olive oil",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "maple-soy-salmon-bowls",
+      "title": "Maple Soy Salmon Bowls",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\maple-soy-salmon-bowls.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: shelled edamame, carrots, low-sodium soy sauce, fresh ginger",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "mediterranean-baked-fish-tray",
+      "title": "Mediterranean Baked Fish Tray",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\mediterranean-baked-fish-tray.json",
+      "contentScore": 90,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "title_robotic",
+          "message": "title is generic (optional flavor cue)",
+          "field": "title",
+          "sample": "Mediterranean Baked Fish Tray"
+        },
+        {
+          "severity": "info",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests optional rewrite",
+          "field": "title",
+          "sample": "Crispy Honey Chili Fish"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: cod or halibut fillets, cherry tomatoes, Kalamata olives, extra-virgin olive oil",
+          "field": "steps"
+        },
+        {
+          "severity": "warning",
+          "code": "weak_title",
+          "message": "robotic_title",
+          "field": "content"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "moroccan-chicken-chickpea-tray",
+      "title": "Moroccan Chicken Chickpea Tray",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\moroccan-chicken-chickpea-tray.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: canned chickpeas, dried apricots, yellow onion, ground cumin",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "pesto-tomato-chicken-tray",
+      "title": "Pesto Tomato Chicken Tray",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\pesto-tomato-chicken-tray.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: cherry tomatoes, extra-virgin olive oil, kosher salt, black pepper",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "salsa-verde-crock-chicken",
+      "title": "Salsa Verde Crock Chicken",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\salsa-verde-crock-chicken.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: boneless chicken thighs, yellow onion, ground cumin, fresh cilantro",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "shawarma-chicken-rice-bowls",
+      "title": "Shawarma Chicken Rice Bowls",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\shawarma-chicken-rice-bowls.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: boneless chicken thighs, Greek yogurt, English cucumber, ground cumin",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "sheet-pan-chicken-fajitas-lite",
+      "title": "Sheet Pan Chicken Fajitas Lite",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\sheet-pan-chicken-fajitas-lite.json",
+      "contentScore": 90,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "title_robotic",
+          "message": "title is generic (optional flavor cue)",
+          "field": "title",
+          "sample": "Sheet Pan Chicken Fajitas Lite"
+        },
+        {
+          "severity": "info",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests optional rewrite",
+          "field": "title",
+          "sample": "Crispy Honey Chili Chicken"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: green bell pepper, yellow bell pepper, olive oil, ground cumin",
+          "field": "steps"
+        },
+        {
+          "severity": "warning",
+          "code": "weak_title",
+          "message": "robotic_title; title_taco_no_tortilla",
+          "field": "content"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "smoky-lentil-kale-soup",
+      "title": "Smoky Lentil and Kale Soup",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\smoky-lentil-kale-soup.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: yellow onion, carrots, lacinato kale, vegetable broth",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "spanish-chicken-chorizo-rice",
+      "title": "Spanish Chicken and Chorizo Rice",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\spanish-chicken-chorizo-rice.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: Spanish chorizo, short-grain rice, yellow onion, smoked paprika",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "tabbouleh-chicken-bowls",
+      "title": "Tabbouleh Chicken Bowls",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\tabbouleh-chicken-bowls.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: boneless chicken breasts, fresh parsley, fresh mint, cherry tomatoes",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "turkey-lettuce-wrap-night",
+      "title": "Turkey Lettuce Wrap Night",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\turkey-lettuce-wrap-night.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: green onions, fresh ginger, low-sodium soy sauce, crushed roasted peanuts",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "turkey-quinoa-stuffed-peppers",
+      "title": "Turkey Quinoa Stuffed Peppers",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\turkey-quinoa-stuffed-peppers.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: large bell peppers, yellow onion, dried Italian seasoning, Monterey Jack cheese",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "turkey-sausage-egg-muffins",
+      "title": "Turkey Sausage Egg Muffins",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\turkey-sausage-egg-muffins.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: fresh spinach, yellow onion, sharp cheddar cheese, kosher salt",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "turkey-shepherds-sweet-potato",
+      "title": "Turkey Shepherd's with Sweet Potato Top",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\turkey-shepherds-sweet-potato.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: frozen mixed vegetables, yellow onion, chicken broth, dried thyme",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "turkey-sweet-potato-chili",
+      "title": "Turkey Sweet Potato Chili",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\turkey-sweet-potato-chili.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: black beans, yellow onion, chicken broth, ground cumin",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "turkey-taco-skillet",
+      "title": "Turkey Taco Skillet",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\turkey-taco-skillet.json",
+      "contentScore": 90,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "title_robotic",
+          "message": "title is generic (optional flavor cue)",
+          "field": "title",
+          "sample": "Turkey Taco Skillet"
+        },
+        {
+          "severity": "info",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests optional rewrite",
+          "field": "title",
+          "sample": "Garlic Butter Turkey Skillet"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: yellow onion, frozen corn, black beans, diced tomatoes with green chiles",
+          "field": "steps"
+        },
+        {
+          "severity": "warning",
+          "code": "weak_title",
+          "message": "robotic_title; title_taco_no_tortilla; title_taco_format_mismatch",
+          "field": "content"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "turkey-zoodle-bolognese",
+      "title": "Turkey Zoodle Bolognese",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\turkey-zoodle-bolognese.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: yellow onion, carrots, dried Italian seasoning",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "veggie-egg-casserole-tray",
+      "title": "Veggie Egg Casserole Tray",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\veggie-egg-casserole-tray.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: large eggs, fresh spinach, yellow onion, all-purpose flour",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "white-bean-chicken-chili",
+      "title": "White Bean Chicken Chili",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\white-bean-chicken-chili.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: boneless chicken breasts, cannellini beans, yellow onion, ground cumin",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "white-bean-kale-soup",
+      "title": "White Bean and Kale Soup",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\white-bean-kale-soup.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: cannellini beans, lacinato kale, yellow onion, carrots",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "yogurt-marinated-grill-chicken",
+      "title": "Yogurt Marinated Grill Chicken",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\yogurt-marinated-grill-chicken.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: plain Greek yogurt, ground cumin, smoked paprika, ground coriander",
+          "field": "steps"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "zaatar-roasted-chicken-thighs",
+      "title": "Za'atar Roasted Chicken Thighs",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\zaatar-roasted-chicken-thighs.json",
+      "contentScore": 100,
+      "contentPass": true,
+      "needsManualReview": false,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_step_gap",
+          "message": "key ingredients not referenced in steps: extra-virgin olive oil, kosher salt, black pepper, fresh parsley",
+          "field": "steps"
+        }
+      ]
+    }
+  ]
+}

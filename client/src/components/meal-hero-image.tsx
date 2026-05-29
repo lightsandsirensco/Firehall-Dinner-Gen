@@ -1,11 +1,13 @@
 import { cn } from "@/lib/utils";
 import { FoodImage } from "@/components/mobile/food-image";
+import { ExploreHeldImageryPlaceholder } from "@/components/explore-held-imagery-placeholder";
 
 interface MealHeroImageProps {
   src: string;
   alt: string;
-  emoji?: string;
   title?: string;
+  /** Branded held label when hero is missing or fails to load */
+  heldLabel?: string;
   className?: string;
   imgClassName?: string;
   /** Cinematic full-bleed vs contained card header */
@@ -14,41 +16,35 @@ interface MealHeroImageProps {
 }
 
 /**
- * Meal / wheel reveal hero — uses shared HeroImage system.
+ * Meal / wheel reveal hero — owned imagery or branded Firehall placeholder (no emoji).
  */
 export function MealHeroImage({
   src,
   alt,
-  emoji = "🔥",
   title,
+  heldLabel = "Hall Classic",
   className,
   imgClassName,
   variant = "cinematic",
   priority = true,
 }: MealHeroImageProps) {
-  const fallback = (
-    <div
-      className={cn(
-        "relative flex flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-zinc-900 via-zinc-950 to-black",
-        variant === "cinematic"
-          ? "w-full aspect-[5/4] max-h-[min(48vh,440px)] sm:aspect-[16/9] sm:max-h-[min(400px,52vh)]"
-          : "w-full aspect-[16/10]",
-        className,
-      )}
-      role="img"
-      aria-label={alt || title || "Meal"}
-    >
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(198,40,40,0.22),transparent_70%)]" />
-      <span className="text-5xl sm:text-6xl relative z-10 drop-shadow-lg" aria-hidden>
-        {emoji}
-      </span>
-      {title && (
-        <p className="relative z-10 mt-3 font-heading text-sm uppercase tracking-widest text-foreground/80 px-4 text-center">
-          {title}
-        </p>
-      )}
-    </div>
+  const frameClass =
+    variant === "cinematic"
+      ? "w-full aspect-[5/4] max-h-[min(48vh,440px)] sm:aspect-[16/9] sm:max-h-[min(400px,52vh)]"
+      : "w-full aspect-[16/10]";
+
+  const brandedFallback = (
+    <ExploreHeldImageryPlaceholder
+      label={heldLabel}
+      title={title || alt}
+      variant={variant === "cinematic" ? "detail" : "card"}
+      className={cn(frameClass, className)}
+    />
   );
+
+  if (!src?.trim()) {
+    return brandedFallback;
+  }
 
   return (
     <FoodImage
@@ -65,7 +61,7 @@ export function MealHeroImage({
         className,
       )}
       imgClassName={imgClassName}
-      fallback={fallback}
+      fallback={brandedFallback}
     />
   );
 }

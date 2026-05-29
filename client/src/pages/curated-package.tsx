@@ -100,15 +100,12 @@ export default function CuratedPackagePage() {
               <MealHeroImage
                 src={data.heroImage}
                 alt={data.imageAlt || data.title}
-                emoji={data.emoji}
+                heldLabel="Hall Classic"
                 title={data.title}
                 variant="cinematic"
                 className="w-full"
               />
               <div className="relative p-5 sm:p-8 -mt-8 sm:-mt-16 bg-gradient-to-t from-card via-card/95 to-transparent">
-                <span className="text-4xl sm:text-5xl block mb-3" role="img" aria-hidden>
-                  {data.emoji}
-                </span>
                 <p className="text-xs uppercase tracking-[0.35em] text-primary font-semibold mb-2">
                   Complete dinner package
                 </p>

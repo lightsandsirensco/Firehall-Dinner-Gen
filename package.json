@@ -24,6 +24,8 @@
     "audit:editorial-copy": "tsx scripts/audit-editorial-copy.ts",
     "audit:editorial-150": "tsx scripts/audit-editorial-150.ts",
     "fix:editorial-150": "tsx scripts/audit-editorial-150.ts --fix",
+    "audit:full-editorial": "tsx scripts/curated-full-editorial-audit.ts",
+    "fix:full-editorial": "tsx scripts/curated-full-editorial-audit.ts --fix --rebuild-weak",
     "assign:firehall-categories": "tsx scripts/assign-firehall-categories.ts",
     "audit:smoothie-sources": "tsx scripts/audit-smoothie-guide-sources.ts",
     "fuel:generate-smoothies": "tsx scripts/fuel-smoothies-generate-pages.ts",

@@ -28,7 +28,7 @@ export function DinnerWheelReveal({
           <MealHeroImage
             src={recipe.heroImage}
             alt={recipe.title}
-            emoji="🔥"
+            heldLabel="Hall Pick"
             title={recipe.title}
             variant="cinematic"
             className="w-full"

@@ -40,7 +40,7 @@ export function buildWebSiteSchema(origin: string) {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: SEO_SITE_NAME,
-    alternateName: SEO_BRAND,
+    alternateName: [SEO_BRAND, "Firefighter Recipes", "Firehouse Meals"],
     url: absoluteUrl(origin, "/"),
     inLanguage: "en-US",
     description: SEO_DEFAULT_DESCRIPTION,
@@ -52,6 +52,37 @@ export function buildWebSiteSchema(origin: string) {
       },
       "query-input": "required name=search_term_string",
     },
+  };
+}
+
+/** Homepage collection hub — reinforces recipe-catalog positioning. */
+export function buildHomeRecipeCollectionSchema(
+  origin: string,
+  recipeCount: number,
+  categoryLinks: Array<{ name: string; path: string }>,
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": `${absoluteUrl(origin, "/")}#recipe-collection`,
+    name: "Firefighter Recipes & Firehouse Meals",
+    description: SEO_DEFAULT_DESCRIPTION,
+    url: absoluteUrl(origin, "/"),
+    isPartOf: {
+      "@type": "WebSite",
+      name: SEO_SITE_NAME,
+      url: absoluteUrl(origin, "/"),
+    },
+    about: {
+      "@type": "Thing",
+      name: "Firefighter and firehouse cooking",
+    },
+    numberOfItems: recipeCount,
+    hasPart: categoryLinks.map((c) => ({
+      "@type": "CollectionPage",
+      name: c.name,
+      url: absoluteUrl(origin, c.path),
+    })),
   };
 }
 

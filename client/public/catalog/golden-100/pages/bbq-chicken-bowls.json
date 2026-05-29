@@ -7,7 +7,7 @@
   "subtitle": "Built bowls, big flavor, one line",
   "category": "firehall_classics",
   "cuisine": "american",
-  "description": "Built bowls, big flavor, one line",
+  "description": "Built bowls, big flavor, one line. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
   "baseServings": 8,
   "cookTime": 50,
@@ -33,69 +33,69 @@
   ],
   "ingredients": [
     {
+      "name": "Jasmine rice, uncooked",
+      "quantity": "3",
+      "unit": "cups",
+      "group": "Base"
+    },
+    {
       "name": "Chicken thighs",
-      "quantity": "8",
+      "quantity": "2.5",
       "unit": "lb",
-      "notes": "8 lb Chicken thighs"
+      "group": "Main"
+    },
+    {
+      "name": "Broccoli florets",
+      "quantity": "2",
+      "unit": "lb",
+      "group": "Veg"
     },
     {
       "name": "BBQ sauce",
-      "quantity": "3",
-      "unit": "cups",
-      "notes": "3 cups BBQ sauce"
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Sauce"
     },
     {
-      "name": "Jasmine rice",
-      "quantity": "3",
-      "unit": "cups",
-      "notes": "3 cups Jasmine rice"
-    },
-    {
-      "name": "Corn kernels",
-      "quantity": "4",
-      "unit": "cups",
-      "notes": "4 cups Corn kernels"
-    },
-    {
-      "name": "Coleslaw mix",
+      "name": "Sesame oil",
       "quantity": "2",
-      "unit": "bags",
-      "notes": "2 bags Coleslaw mix"
+      "unit": "tbsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "Red onion, sliced",
+      "quantity": "1",
+      "unit": "large",
+      "group": "Toppings"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Step 1",
-      "instruction": "Cook rice (simmer, 18 min): Fluffy rice in the steamer or pot; hold warm.",
-      "minutes": 18,
-      "heatLevel": "medium-low"
+      "title": "Cook rice",
+      "instruction": "Rinse rice until water runs clear. Cook 1:1.5 rice to water with salt; fluff and hold covered.",
+      "minutes": 20,
+      "heatLevel": "medium"
     },
     {
       "stepNumber": 2,
-      "title": "Step 2",
-      "instruction": "Grill BBQ chicken (medium-high, 18 min): Grill thighs, glaze with sauce last 5 min; 165°F internal.",
-      "minutes": 18,
+      "title": "Sear protein and veg",
+      "instruction": "Sear protein in batches over medium-high until browned and cooked through (165°F chicken, 125°F salmon). Stir-fry veg 4–5 minutes until bright with char.",
+      "minutes": 14,
       "heatLevel": "medium-high"
     },
     {
       "stepNumber": 3,
-      "title": "Step 3",
-      "instruction": "Warm corn (medium, 6 min): Butter-season corn; hold on the line.",
-      "minutes": 6,
-      "heatLevel": ""
+      "title": "Warm the sauce",
+      "instruction": "Warm BBQ sauce in a small pot over low heat — do not boil or it turns candy-sweet. Keep a ladle on the line.",
+      "minutes": 5,
+      "heatLevel": "low"
     },
     {
       "stepNumber": 4,
-      "title": "Step 4",
-      "instruction": "Toss slaw (no heat, 5 min): Dress coleslaw; keep cold. Watch color and texture — if it smells sharp or looks pale, give it another minute before moving on.",
+      "title": "Assembly line",
+      "instruction": "Rice, protein, veg, sauce on the side. BBQ Chicken Bowls feeds fastest as a build-your-own line.",
       "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 5,
-      "title": "Step 5",
-      "instruction": "Run bowl line (serve): Rice, chicken, corn, slaw — crew builds bowls.",
       "heatLevel": ""
     }
   ],
@@ -116,7 +116,7 @@
     "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
     "Label trays with date and reheat to 165°F minimum before second shift."
   ],
-  "whyCrewsLikeIt": "Built bowls, big flavor, one line",
+  "whyCrewsLikeIt": "Built bowls, big flavor, one line. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
   "substitutions": [
     "Chicken thighs ↔ breasts (thighs forgive overcooking on the flat-top)."
   ],
@@ -155,6 +155,6 @@
   "sourceName": "Firehall Classics",
   "sourceUrl": "",
   "classicSlug": "bbq-chicken-bowls",
-  "generatedAt": "2026-05-28T12:06:14.958Z",
+  "generatedAt": "2026-05-29T01:43:09.325Z",
   "contentVersion": 2
 }

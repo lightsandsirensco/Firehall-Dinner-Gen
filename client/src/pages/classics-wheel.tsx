@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Users, Sparkles } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
@@ -12,6 +12,7 @@ import {
   type WheelClassic,
   buildPackageUrl,
   buildExplorePackageUrl,
+  getDefaultWheelClassic,
   isClassicPinned,
   toggleClassicPin,
 } from "@/lib/firehall-classics-wheel";
@@ -35,6 +36,10 @@ export default function ClassicsWheelPage() {
   const [suspenseLine, setSuspenseLine] = useState<string>(CLASSICS_WHEEL.suspense);
   const [subtitle] = useState(
     () => CLASSICS_WHEEL.subtitles[Math.floor(Math.random() * CLASSICS_WHEEL.subtitles.length)]!,
+  );
+  const defaultClassicIndex = useMemo(
+    () => WHEEL_CLASSICS.findIndex((c) => c.slug === getDefaultWheelClassic().slug),
+    [],
   );
 
   const handleSpinStart = useCallback((line: string) => {
@@ -112,7 +117,13 @@ export default function ClassicsWheelPage() {
             <ClassicsWheel
               key={wheelSession}
               disabled={phase === "spinning" || phase === "reveal"}
-              winnerIndex={winnerIndex}
+              winnerIndex={
+                phase === "reveal"
+                  ? winnerIndex
+                  : phase === "ready" && defaultClassicIndex >= 0
+                    ? defaultClassicIndex
+                    : winnerIndex
+              }
               onSpinStart={handleSpinStart}
               onLanded={handleLanded}
             />

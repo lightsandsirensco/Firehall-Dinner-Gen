@@ -1,8 +1,8 @@
 # Editorial Audit (150)
 
 - Total recipes: **150**
-- Findings: **0 critical**, **210 warning**, **0 info**
-- Mode: **audit only**
+- Findings: **0 critical**, **207 warning**, **0 info**
+- Mode: **fix + audit**
 
 ## Critical blockers (0 recipes)
 
@@ -43,9 +43,8 @@
 ### golden-100 / bbq-chicken-bowls
 - Title: **BBQ Chicken Bowls**
 - File: `client\public\catalog\golden-100\pages\bbq-chicken-bowls.json`
-- **warning** `intro_thin` (description): intro/description is too short — `Built bowls, big flavor, one line`
-- **warning** `ingredients_thin` (ingredients): only 5 ingredients
 - **warning** `ingredient_vague` (ingredients): vague ingredient: "BBQ sauce" — `BBQ sauce`
+- **warning** `ingredient_vague` (ingredients): vague ingredient: "Sesame oil" — `Sesame oil`
 
 ### golden-100 / bbq-chicken-pizza
 - Title: **BBQ Chicken Pizza**
@@ -66,7 +65,6 @@
 ### golden-100 / beef-dip
 - Title: **Blackstone Steak Sandwiches**
 - File: `client\public\catalog\golden-100\pages\beef-dip.json`
-- **warning** `intro_thin` (description): intro/description is too short — `Canadian hall legend`
 - **warning** `ingredient_vague` (ingredients): vague ingredient: "Provolone cheese" — `Provolone cheese`
 
 ### golden-100 / beer-can-chicken
@@ -88,6 +86,7 @@
 ### golden-100 / breakfast-burrito-bar
 - Title: **Breakfast Burrito Bar**
 - File: `client\public\catalog\golden-100\pages\breakfast-burrito-bar.json`
+- **warning** `title_quality_gate` (title): title quality gate suggests a rewrite — `Breakfast Burrito Bar`
 - **warning** `ingredients_thin` (ingredients): only 5 ingredients
 
 ### golden-100 / breakfast-sausage-pizza
@@ -128,7 +127,6 @@
 ### golden-100 / chicken-caesar
 - Title: **Hall Caesar Chicken**
 - File: `client\public\catalog\golden-100\pages\chicken-caesar.json`
-- **warning** `intro_thin` (description): intro/description is too short — `Big bowls, hot chicken, all the fixings`
 - **warning** `ingredient_vague` (ingredients): vague ingredient: "Olive oil" — `Olive oil`
 
 ### performance-meals / chicken-enchilada-skillet-light
@@ -140,7 +138,6 @@
 ### golden-100 / chicken-parm
 - Title: **Chicken Parm**
 - File: `client\public\catalog\golden-100\pages\chicken-parm.json`
-- **warning** `intro_thin` (description): intro/description is too short — `Italian night at the station`
 - **warning** `ingredient_vague` (ingredients): vague ingredient: "Marinara sauce" — `Marinara sauce`
 - **warning** `ingredient_vague` (ingredients): vague ingredient: "Mozzarella cheese" — `Mozzarella cheese`
 - **warning** `ingredient_vague` (ingredients): vague ingredient: "Parmesan cheese" — `Parmesan cheese`
@@ -154,6 +151,7 @@
 ### golden-100 / chicken-quesadillas
 - Title: **Shredded Chicken Quesadillas**
 - File: `client\public\catalog\golden-100\pages\chicken-quesadillas.json`
+- **warning** `title_quality_gate` (title): title quality gate suggests a rewrite — `Shredded Chicken Quesadillas`
 - **warning** `ingredient_vague` (ingredients): vague ingredient: "Marinara sauce" — `Marinara sauce`
 
 ### golden-100 / chicken-souvlaki
@@ -169,7 +167,6 @@
 ### golden-100 / chili-garlic-bread
 - Title: **Firehall Chili**
 - File: `client\public\catalog\golden-100\pages\chili-garlic-bread.json`
-- **warning** `intro_thin` (description): intro/description is too short — `Post-call comfort in a deep bowl`
 - **warning** `ingredient_vague` (ingredients): vague ingredient: "Worcestershire sauce" — `Worcestershire sauce`
 
 ### performance-meals / chipotle-lime-chicken-tacos
@@ -226,6 +223,7 @@
 ### golden-100 / enchilada-casserole
 - Title: **Chicken Enchilada Casserole**
 - File: `client\public\catalog\golden-100\pages\enchilada-casserole.json`
+- **warning** `title_quality_gate` (title): title quality gate suggests a rewrite — `Chicken Enchilada Casserole`
 - **warning** `ingredient_vague` (ingredients): vague ingredient: "Olive oil" — `Olive oil`
 
 ### golden-100 / fast-philly-skillet
@@ -253,6 +251,7 @@
 ### golden-100 / game-day-nachos
 - Title: **Loaded Game Day Nachos**
 - File: `client\public\catalog\golden-100\pages\game-day-nachos.json`
+- **warning** `title_quality_gate` (title): title quality gate suggests a rewrite — `Loaded Game Day Nachos`
 - **warning** `ingredient_vague` (ingredients): vague ingredient: "Soy sauce" — `Soy sauce`
 - **warning** `ingredient_vague` (ingredients): vague ingredient: "Sesame oil" — `Sesame oil`
 
@@ -337,8 +336,7 @@
 ### golden-100 / jerk-chicken
 - Title: **Jerk Chicken**
 - File: `client\public\catalog\golden-100\pages\jerk-chicken.json`
-- **warning** `intro_thin` (description): intro/description is too short — `Island heat that still feeds eight`
-- **warning** `ingredient_vague` (ingredients): vague ingredient: "Jerk seasoning" — `Jerk seasoning`
+- **warning** `ingredient_vague` (ingredients): vague ingredient: "Vegetable oil" — `Vegetable oil`
 
 ### performance-meals / korean-beef-rice-bowls
 - Title: **Korean Beef Rice Bowls**
@@ -481,6 +479,7 @@
 ### golden-100 / performance-burrito-bowls
 - Title: **Performance Chicken Burrito Bowls**
 - File: `client\public\catalog\golden-100\pages\performance-burrito-bowls.json`
+- **warning** `title_quality_gate` (title): title quality gate suggests a rewrite — `Performance Chicken Burrito Bowls`
 - **warning** `ingredient_vague` (ingredients): vague ingredient: "Soy sauce" — `Soy sauce`
 - **warning** `ingredient_vague` (ingredients): vague ingredient: "Sesame oil" — `Sesame oil`
 
@@ -509,7 +508,6 @@
 ### golden-100 / pulled-pork
 - Title: **Pulled Pork Sandwiches**
 - File: `client\public\catalog\golden-100\pages\pulled-pork.json`
-- **warning** `intro_thin` (description): intro/description is too short — `Sandwich line for the whole hall`
 - **warning** `ingredient_vague` (ingredients): vague ingredient: "BBQ sauce" — `BBQ sauce`
 
 ### golden-100 / sausage-egg-bake
@@ -604,7 +602,6 @@
 - Title: **Chimichurri Steak Tacos**
 - File: `client\public\catalog\golden-100\pages\steak-tacos.json`
 - **warning** `title_quality_gate` (title): title quality gate suggests a rewrite — `Chimichurri Steak Tacos`
-- **warning** `ingredient_vague` (ingredients): vague ingredient: "Cotija cheese" — `Cotija cheese`
 
 ### golden-100 / street-corn-chicken
 - Title: **Mexican Street Corn Chicken Bowls**

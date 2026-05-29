@@ -42,10 +42,10 @@ function readGoldenSlugs(): Array<{ slug: string; generatedAt?: string }> {
 
 const STATIC_PATHS: Array<{ path: string; changefreq: string; priority: string }> = [
   { path: "/", changefreq: "daily", priority: "1.0" },
-  { path: "/generator", changefreq: "daily", priority: "0.95" },
+  { path: "/recipes", changefreq: "daily", priority: "0.95" },
+  { path: "/explore", changefreq: "daily", priority: "0.95" },
+  { path: "/generator", changefreq: "weekly", priority: "0.7" },
   { path: "/faq", changefreq: "monthly", priority: "0.6" },
-  { path: "/explore", changefreq: "daily", priority: "0.9" },
-  { path: "/recipes", changefreq: "weekly", priority: "0.9" },
   { path: "/categories/crew_favorites", changefreq: "weekly", priority: "0.85" },
   { path: "/categories/quick_meals", changefreq: "weekly", priority: "0.85" },
   { path: "/categories/comfort_food", changefreq: "weekly", priority: "0.85" },

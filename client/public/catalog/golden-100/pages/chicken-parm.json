@@ -7,7 +7,7 @@
   "subtitle": "The hall's Italian night spread",
   "category": "firehall_classics",
   "cuisine": "italian",
-  "description": "Italian night at the station",
+  "description": "Italian night at the station. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
   "baseServings": 8,
   "cookTime": 60,
@@ -33,110 +33,90 @@
   ],
   "ingredients": [
     {
-      "name": "Chicken breast cutlets",
-      "quantity": "16"
+      "name": "Dried pasta",
+      "quantity": "1.5",
+      "unit": "lb",
+      "group": "Main"
     },
     {
-      "name": "Marinara sauce",
+      "name": "Boneless chicken thighs",
+      "quantity": "2.5",
+      "unit": "lb",
+      "group": "Main"
+    },
+    {
+      "name": "Crushed tomatoes",
+      "quantity": "2",
+      "unit": "cans",
+      "notes": "28 oz",
+      "group": "Sauce"
+    },
+    {
+      "name": "Heavy cream",
+      "quantity": "1",
+      "unit": "cup",
+      "group": "Sauce"
+    },
+    {
+      "name": "Parmesan, grated",
       "quantity": "8",
-      "unit": "cups"
+      "unit": "oz",
+      "group": "Finish"
     },
     {
-      "name": "Penne pasta",
-      "quantity": "4",
-      "unit": "lb"
+      "name": "Yellow onion",
+      "quantity": "2",
+      "unit": "large",
+      "group": "Aromatics"
     },
     {
-      "name": "Mozzarella cheese",
-      "quantity": "2.7",
-      "unit": "lb"
+      "name": "Garlic cloves, minced",
+      "quantity": "6",
+      "unit": "cloves",
+      "group": "Aromatics"
     },
     {
-      "name": "Parmesan cheese",
-      "quantity": "2.7",
-      "unit": "cups"
-    },
-    {
-      "name": "Breadcrumbs",
-      "quantity": "5.3",
-      "unit": "cups"
-    },
-    {
-      "name": "Eggs",
-      "quantity": "8"
-    },
-    {
-      "name": "Romaine lettuce",
-      "quantity": "5.3",
-      "unit": "heads"
-    },
-    {
-      "name": "Caesar dressing",
-      "quantity": "2.7",
-      "unit": "cups"
-    },
-    {
-      "name": "Croutons",
-      "quantity": "2.7",
-      "unit": "cups"
-    },
-    {
-      "name": "Italian bread loaves",
-      "quantity": "4"
-    },
-    {
-      "name": "Garlic butter",
-      "quantity": "1.3",
-      "unit": "cup"
-    },
-    {
-      "name": "Italian seasoning",
-      "quantity": "4",
-      "unit": "tbsp"
+      "name": "Kosher salt",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Seasoning"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Bread the chicken (medium, 15 min)",
-      "instruction": "Dredge cutlets in flour, egg, then seasoned breadcrumbs. Lay on sheet pans.",
+      "title": "Salt the pasta water",
+      "instruction": "Bring a large pot of water to a rolling boil with enough salt that it tastes like the sea. This is your only chance to season the pasta itself.",
+      "minutes": 10,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Cook sauce base",
+      "instruction": "Meanwhile, brown meat, add onions and garlic, then tomatoes (and cream if Alfredo-style). Simmer 15 minutes while pasta cooks.",
       "minutes": 15,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 2,
-      "title": "Bake the chicken (425°F, 18 min)",
-      "instruction": "Bake until golden and 165°F internal. Top with sauce and mozzarella; broil until bubbly.",
-      "minutes": 18,
-      "heatLevel": "high"
-    },
-    {
       "stepNumber": 3,
-      "title": "Cook the pasta (boil, 12 min)",
-      "instruction": "Boil penne al dente. Toss with warm marinara and hold. Watch color and texture — if it smells sharp or looks pale, give it another minute before moving on.",
+      "title": "Boil pasta al dente",
+      "instruction": "Cook pasta 1 minute shy of package time. Reserve 2 cups pasta water. Drain — do not rinse.",
       "minutes": 12,
       "heatLevel": "high"
     },
     {
       "stepNumber": 4,
-      "title": "Build Caesar salad (no heat, 10 min)",
-      "instruction": "Chop romaine, toss with dressing and croutons. Keep cold until serve.",
-      "minutes": 10,
-      "heatLevel": ""
+      "title": "Finish in the pan",
+      "instruction": "Toss pasta in sauce over medium heat, splashing pasta water until glossy and clinging. Chicken Parm should coat a spoon — if it pools, reduce another minute.",
+      "minutes": 4,
+      "heatLevel": "medium"
     },
     {
       "stepNumber": 5,
-      "title": "Toast garlic bread (425°F, 8 min)",
-      "instruction": "Split loaves, spread garlic butter, bake until edges are crisp.",
-      "minutes": 8,
-      "heatLevel": "high"
-    },
-    {
-      "stepNumber": 6,
-      "title": "Plate for the hall (serve)",
-      "instruction": "Family-style: chicken and pasta center, salad and bread on the sides.",
-      "minutes": 5,
-      "heatLevel": ""
+      "title": "Serve from the pot",
+      "instruction": "Fold in Parmesan off heat. Serve immediately — pasta waits for no one. Backup tray: cover lightly with foil at 200°F up to 15 minutes, add water if it tightens.",
+      "minutes": 3,
+      "heatLevel": "low"
     }
   ],
   "proTips": [
@@ -197,6 +177,6 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "classicSlug": "chicken-parm",
-  "generatedAt": "2026-05-28T12:06:14.926Z",
+  "generatedAt": "2026-05-29T01:43:09.303Z",
   "contentVersion": 2
 }
