@@ -1,11 +1,15 @@
 {
   "slug": "philly-egg-rolls",
   "title": "Philly Cheesesteak Egg Rolls",
+  "displayTitle": "Philly Cheesesteak Egg Rolls",
+  "seoTitle": "Philly Cheesesteak Egg Rolls | Firefighter Meal",
+  "shortDescription": "Crunchy handhelds for watch night",
   "subtitle": "Crunchy handhelds for watch night",
   "category": "game_day_watch_party",
   "cuisine": "american",
-  "description": "Philly Cheesesteak Egg Rolls is a american handheld built for a hungry firehall crew — Crunchy handhelds for watch night. Hearty portions, station-kitchen timing, and flavors everyone recognizes after a long shift.",
+  "description": "Crunchy handhelds for watch night. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
@@ -28,69 +32,68 @@
   ],
   "ingredients": [
     {
-      "name": "Beef (main cut for recipe)",
-      "quantity": "3",
-      "unit": "lb"
+      "name": "Ground beef",
+      "quantity": "4",
+      "unit": "lb",
+      "group": "Main"
     },
     {
-      "name": "Kosher salt",
+      "name": "Hoagie rolls",
+      "quantity": "8",
+      "unit": "count",
+      "group": "Buns"
+    },
+    {
+      "name": "Provolone slices",
+      "quantity": "12",
+      "unit": "count",
+      "group": "Cheese"
+    },
+    {
+      "name": "Marinara sauce",
       "quantity": "2",
-      "unit": "tbsp"
-    },
-    {
-      "name": "Black pepper",
-      "quantity": "1",
-      "unit": "tbsp"
-    },
-    {
-      "name": "Cooking oil",
-      "quantity": "0.3",
-      "unit": "cup"
+      "unit": "cups",
+      "group": "Sauce"
     },
     {
       "name": "Yellow onion",
-      "quantity": "2",
-      "unit": "large"
+      "quantity": "1",
+      "unit": "large",
+      "group": "Aromatics"
     },
     {
-      "name": "Garlic",
-      "quantity": "6",
-      "unit": "cloves"
+      "name": "Garlic cloves",
+      "quantity": "4",
+      "unit": "cloves",
+      "group": "Aromatics"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Prep the line",
-      "instruction": "Set out all ingredients for Philly Cheesesteak Egg Rolls before you turn on heat — firefighters eat on a schedule. Pat proteins dry and season aggressively with salt and pepper; dry surfaces brown instead of steam.",
-      "minutes": 15,
-      "heatLevel": ""
+      "title": "Cook and sauce filling",
+      "instruction": "Slow-cook or simmer filling until shreddable (pork 203°F, meatballs cooked through). Simmer in sauce 15 minutes so flavor penetrates.",
+      "minutes": 30,
+      "heatLevel": "medium-low"
     },
     {
       "stepNumber": 2,
-      "title": "Build the base",
-      "instruction": "Heat oil in your largest skillet, Dutch oven, or on the flat-top over medium-high until it shimmers. Add aromatics (onion first) and cook until the edges turn golden and the smell sweetens — usually 4–6 minutes. If garlic is in the recipe, add it after the onion softens so it doesn't burn.",
-      "minutes": 8,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
-      "title": "Cook the main",
-      "instruction": "Cook the primary protein or base for Philly Cheesesteak Egg Rolls until it hits proper color and safe internal temperature. Don't crowd the pan — work in batches if needed so you get browning, not gray stew. Listen for a steady sizzle; if it's silent, the heat is too low.",
-      "minutes": 20,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 4,
-      "title": "Finish and season",
-      "instruction": "Bring components together, taste, and adjust salt. Sauce should coat, not pool. If cheese is involved, melt it just until glossy — another 1–2 minutes under a lid or broiler. Let heavy proteins rest 5 minutes before slicing.",
-      "minutes": 10,
+      "title": "Toast buns",
+      "instruction": "Toast split buns on a dry griddle until golden. Melt cheese on top if desired.",
+      "minutes": 6,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 5,
-      "title": "Serve the hall",
-      "instruction": "Transfer to sheet trays or a serving line immediately. Keep backup warm at 200°F. Call the crew while it's hot — this meal is built for a hungry hall, not a photo shoot.",
+      "stepNumber": 3,
+      "title": "Build the sandwich line",
+      "instruction": "Philly Cheesesteak Egg Rolls on sheet trays: bottom bun, meat, sauce, cheese, top bun. Serve immediately; hold wrapped sandwiches at 200°F up to 20 minutes.",
+      "minutes": 8,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Hold for late calls",
+      "instruction": "Keep backup sandwiches foil-wrapped at 200°F. Slice hoagies in half for easier grabbing — crew eats with one hand when tones are quiet.",
       "minutes": 5,
       "heatLevel": "low"
     }
@@ -110,6 +113,10 @@
     "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
     "Label trays with date and reheat to 165°F minimum before second shift."
   ],
+  "whyCrewsLikeIt": "Crunchy handhelds for watch night. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
+  "substitutions": [],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
   "nutrition": {
     "calories": 600,
     "protein": 40,
@@ -142,6 +149,8 @@
     "buffalo-chicken-dip",
     "bbq-brisket-burnt-ends"
   ],
-  "generatedAt": "2026-05-27T15:03:06.215Z",
-  "contentVersion": 1
+  "sourceName": "Firehall Meals",
+  "sourceUrl": "",
+  "generatedAt": "2026-05-28T12:06:15.105Z",
+  "contentVersion": 2
 }

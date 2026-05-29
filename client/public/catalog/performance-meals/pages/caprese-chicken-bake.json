@@ -1,0 +1,177 @@
+{
+  "slug": "caprese-chicken-bake",
+  "title": "Caprese Chicken Bake",
+  "displayTitle": "Caprese Chicken Bake",
+  "seoTitle": "Caprese Chicken Bake | Firefighter Meal",
+  "shortDescription": "Baked chicken breasts with tomato, mozzarella, and balsamic glaze",
+  "subtitle": "Baked chicken breasts with tomato, mozzarella, and balsamic glaze",
+  "category": "healthy_performance",
+  "cuisine": "Italian",
+  "description": "Chicken breasts bake with grape tomatoes, fresh mozzarella, and basil, finished with balsamic reduction for a colorful hall tray.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 25,
+  "prepTime": 15,
+  "difficulty": "easy",
+  "calories": 385,
+  "protein": 42,
+  "carbs": 12,
+  "fats": 18,
+  "tags": [
+    "protein:chicken",
+    "format:bake",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "Two half-sheet pans",
+    "Small saucepan"
+  ],
+  "ingredients": [
+    {
+      "name": "boneless chicken breasts",
+      "quantity": "4",
+      "unit": "lb",
+      "notes": "pounded even"
+    },
+    {
+      "name": "grape tomatoes",
+      "quantity": "2",
+      "unit": "lb",
+      "notes": "halved"
+    },
+    {
+      "name": "fresh mozzarella",
+      "quantity": "1.5",
+      "unit": "lb",
+      "notes": "sliced or torn"
+    },
+    {
+      "name": "fresh basil",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "torn"
+    },
+    {
+      "name": "balsamic vinegar",
+      "quantity": "1",
+      "unit": "cup"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "4",
+      "unit": "cloves",
+      "notes": "minced"
+    },
+    {
+      "name": "extra-virgin olive oil",
+      "quantity": "3",
+      "unit": "tbsp"
+    },
+    {
+      "name": "dried Italian seasoning",
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "1.5",
+      "unit": "tsp"
+    },
+    {
+      "name": "black pepper",
+      "quantity": "1",
+      "unit": "tsp"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Reduce balsamic",
+      "instruction": "Simmer balsamic vinegar in a small pot 10–12 minutes until reduced by half and coats a spoon with syrupy consistency, not thin and runny.",
+      "minutes": 12,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Season chicken and tomatoes",
+      "instruction": "Rub chicken with olive oil, Italian seasoning, salt, and pepper. Arrange on two half-sheets with halved tomatoes tucked around edges.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Bake chicken through",
+      "instruction": "Bake at 400°F 16–18 minutes until chicken reads 165°F and tomatoes begin to burst and release juice into the pan.",
+      "minutes": 18,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Add mozzarella",
+      "instruction": "Top each breast with mozzarella slices. Return to oven 6–8 minutes until cheese melts with light golden spots, not rubbery and stiff.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Finish with basil and balsamic",
+      "instruction": "Scatter basil over tray. Drizzle balsamic reduction at the line. Chicken should slice cleanly with juices running clear.",
+      "minutes": 3,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Use ciliegine mozzarella for faster, even melting.",
+    "Serve over arugula for a one-plate meal without extra cooking.",
+    "Store balsamic reduction in squeeze bottle for consistent drizzle."
+  ],
+  "tonightSpread": [
+    "Whole-wheat pasta with olive oil and garlic.",
+    "Simple green salad."
+  ],
+  "leftovers": [
+    "Slice into caprese chicken sandwiches on ciabatta.",
+    "Chop over a grain bowl with extra balsamic."
+  ],
+  "whyCrewsLikeIt": "Looks impressive with almost no skill required. Bright flavors after weeks of heavy comfort food.",
+  "mealPrepNotes": "Pound chicken to even thickness for uniform baking. Reduce balsamic while chicken roasts. Station: Pound breasts to ¾-inch even thickness—thick spots dry before thin spots finish. Station: Add mozzarella last 8 minutes so it melts without rubberizing. Station: Drizzle balsamic at the line, not before hold—reduction stays glossy.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 385,
+    "protein": 42,
+    "carbs": 12,
+    "fats": 18,
+    "label": "~385 cal/serving · 42g protein · 2g fiber (est.)"
+  },
+  "heroImage": "/images/golden-100/caprese-chicken-bake.jpg",
+  "mobileImage": "/images/mobile/caprese-chicken-bake.jpg",
+  "thumbImage": "/images/thumbs/caprese-chicken-bake.jpg",
+  "railImage": "/images/rails/caprese-chicken-bake.jpg",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "caprese chicken bake",
+    "chicken",
+    "Italian",
+    "bake",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "lemon-garlic-chicken-tray",
+    "sheet-pan-chicken-fajitas-lite",
+    "baked-turkey-meatball-marinara",
+    "honey-garlic-chicken-rice-bowls",
+    "white-bean-chicken-chili",
+    "crock-barbacoa-chicken"
+  ],
+  "generatedAt": "2026-05-28T12:57:50.894Z",
+  "contentVersion": 2
+}

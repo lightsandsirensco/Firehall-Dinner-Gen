@@ -1,0 +1,80 @@
+{
+  "slug": "planning-tonights-station-dinner",
+  "title": "Planning Tonight's Station Dinner (Without the 6 PM Panic)",
+  "subtitle": "A simple decision tree for firehall dinner ideas",
+  "description": "How to pick tonight's fire station meal: time, crew size, appliances, and hall-tested recipe picks crews actually cook.",
+  "topic": "meal_planning",
+  "pillar": "operations_how_to",
+  "intro": "The hardest part of dinner is not cooking — it is deciding. On shift, decision fatigue hits early. Use a simple filter: how much time, how many mouths, what appliance is free, and whether the board feels loud or quiet. Then pick a format, not a Pinterest fantasy.",
+  "sections": [
+    {
+      "id": "decision-tree",
+      "heading": "A hall-tested decision tree",
+      "paragraphs": [
+        "Start with time. Under 35 minutes? Handhelds, stir-fry, quesadillas. 35–60? Sheet pan, pasta, rice bowls. Over 60? Bakes, BBQ, big batches.",
+        "Next, crew size. Above ten? Think lines and batches, not individual plating.",
+        "Last, appliance: if the oven is occupied with gear drying (it happens), pivot to flat-top or slow cooker."
+      ]
+    },
+    {
+      "id": "when-stuck",
+      "heading": "When nobody will pick",
+      "paragraphs": [
+        "Put two options on the whiteboard, not ten. Run a quick vote, then commit. Indecision burns more time than cooking the wrong pasta.",
+        "If the board is still loud, default to a line meal. Tacos and bowls end debates because people customize."
+      ]
+    }
+  ],
+  "practicalAdvice": [
+    "Quiet board + 60 minutes → bake, braise, or BBQ.",
+    "Busy board + 40 minutes → skillet, sheet pan, tacos, pasta.",
+    "Unknown board → chili, taco bar, or bowls — hold and serve.",
+    "Ask about allergies once, write it on a sticky, stop re-asking mid-cook.",
+    "When stuck, use the generator on the home page — it respects crew size and time."
+  ],
+  "mealRecommendations": [
+    {
+      "slug": "smash-burgers",
+      "title": "Double Smash Burgers",
+      "blurb": "Fast crowd-pleaser when time is medium."
+    },
+    {
+      "slug": "enchilada-casserole",
+      "title": "Enchilada Casserole",
+      "blurb": "Oven bake — hands-off middle."
+    },
+    {
+      "slug": "teriyaki-donburi",
+      "title": "Teriyaki Donburi",
+      "blurb": "Bowl line — balanced and quick."
+    },
+    {
+      "slug": "stuffed-peppers",
+      "title": "Stuffed Peppers",
+      "blurb": "Make-ahead friendly bake."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What if nobody agrees on dinner?",
+      "answer": "Default to a line format (tacos, bowls, baked potato bar). Agreement is easier when people assemble their own plate. If two factions remain, make one base protein and two sauces."
+    },
+    {
+      "question": "Where do I find firefighter-tested recipes?",
+      "answer": "Browse all recipes — every one is structured for crew scale, realistic timing, and station kitchens. Use Explore to browse by situation, or Find a Meal when you need a pick for tonight."
+    }
+  ],
+  "relatedArticleSlugs": [
+    "quick-meals-between-calls",
+    "feeding-a-firehall-crew"
+  ],
+  "keywords": [
+    "firehall dinner ideas",
+    "firefighter dinner ideas",
+    "tonight's dinner",
+    "station meal planning"
+  ],
+  "publishedAt": "2026-05-27T12:00:00.000Z",
+  "updatedAt": "2026-05-27T12:00:00.000Z",
+  "readMinutes": 6
+}

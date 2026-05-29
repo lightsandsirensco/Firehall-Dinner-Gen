@@ -1,0 +1,188 @@
+{
+  "slug": "turkey-lettuce-wrap-night",
+  "title": "Turkey Lettuce Wrap Night",
+  "displayTitle": "Turkey Lettuce Wrap Night",
+  "seoTitle": "Turkey Lettuce Wrap Night | Firefighter Meal",
+  "shortDescription": "Ginger-garlic ground turkey in crisp romaine with hoisin and peanuts",
+  "subtitle": "Ginger-garlic ground turkey in crisp romaine with hoisin and peanuts",
+  "category": "healthy_performance",
+  "cuisine": "Asian-American",
+  "description": "Lean ground turkey cooks with water chestnuts, ginger, and soy, served in romaine leaves with hoisin, lime, and crushed peanuts.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 15,
+  "prepTime": 20,
+  "difficulty": "easy",
+  "calories": 275,
+  "protein": 34,
+  "carbs": 10,
+  "fats": 11,
+  "tags": [
+    "protein:turkey",
+    "format:handheld",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "Large skillet",
+    "Sheet pans"
+  ],
+  "ingredients": [
+    {
+      "name": "lean ground turkey",
+      "quantity": "3",
+      "unit": "lb"
+    },
+    {
+      "name": "romaine lettuce hearts",
+      "quantity": "4",
+      "unit": "heads",
+      "notes": "leaves separated"
+    },
+    {
+      "name": "water chestnuts",
+      "quantity": "1",
+      "unit": "can",
+      "notes": "8 oz, minced"
+    },
+    {
+      "name": "green onions",
+      "quantity": "8",
+      "unit": "whole",
+      "notes": "sliced"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "5",
+      "unit": "cloves",
+      "notes": "minced"
+    },
+    {
+      "name": "fresh ginger",
+      "quantity": "2",
+      "unit": "tbsp",
+      "notes": "grated"
+    },
+    {
+      "name": "low-sodium soy sauce",
+      "quantity": "0.25",
+      "unit": "cup"
+    },
+    {
+      "name": "hoisin sauce",
+      "quantity": "0.33",
+      "unit": "cup"
+    },
+    {
+      "name": "sesame oil",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "rice vinegar",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "crushed roasted peanuts",
+      "quantity": "0.5",
+      "unit": "cup"
+    },
+    {
+      "name": "lime",
+      "quantity": "3",
+      "unit": "whole",
+      "notes": "wedged"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Prep lettuce cups",
+      "instruction": "Wash romaine leaves and dry completely on towels. Store chilled on sheet pans so cups stay rigid and snap lightly when folded.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Brown turkey",
+      "instruction": "Cook ground turkey in batches over medium-high 8–10 minutes, crumbling until fully cooked with lightly golden edges and no pink remaining.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Add aromatics",
+      "instruction": "Stir in ginger, garlic, and water chestnuts. Cook 3–4 minutes until fragrant and chestnuts heated through with slight crunch remaining.",
+      "minutes": 4,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Finish sauce",
+      "instruction": "Add soy sauce, 2 tbsp hoisin, sesame oil, and vinegar. Simmer 2 minutes until liquid mostly absorbs and turkey looks glossy, not soupy.",
+      "minutes": 2,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Assemble at the line",
+      "instruction": "Fill each leaf with ¼ cup turkey, drizzle hoisin, sprinkle peanuts and scallions. Serve with lime wedges for squeezing.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Offer jasmine rice on the side for crew who want more carbs.",
+    "Use butter lettuce if romaine cups tear—more flexible for heavy fills.",
+    "Check for peanut allergies before serving crushed peanuts."
+  ],
+  "tonightSpread": [
+    "Steamed jasmine rice.",
+    "Cucumber salad with rice vinegar."
+  ],
+  "leftovers": [
+    "Turkey filling over rice bowls—skip lettuce next day.",
+    "Wrap in rice paper with fresh herbs."
+  ],
+  "whyCrewsLikeIt": "Low-carb option without feeling like punishment. Interactive assembly keeps dinner fun on quiet nights.",
+  "mealPrepNotes": "Wash and dry lettuce cups early. Keep filling warm in a hotel pan at the line. Station: Keep lettuce on ice until service—warm filling wilts leaves instantly. Station: Cook turkey in batches for better browning and crisper texture. Station: Build station: lettuce, turkey, hoisin, peanuts, lime, scallions.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 275,
+    "protein": 34,
+    "carbs": 10,
+    "fats": 11,
+    "label": "~275 cal/serving · 34g protein · 2g fiber (est.)"
+  },
+  "heroImage": "/images/golden-100/turkey-lettuce-wrap-night.jpg",
+  "mobileImage": "/images/mobile/turkey-lettuce-wrap-night.jpg",
+  "thumbImage": "/images/thumbs/turkey-lettuce-wrap-night.jpg",
+  "railImage": "/images/rails/turkey-lettuce-wrap-night.jpg",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "turkey lettuce wrap night",
+    "turkey",
+    "Asian-American",
+    "handheld",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "lean-turkey-bean-chili",
+    "turkey-sausage-egg-muffins",
+    "baked-turkey-meatball-marinara",
+    "turkey-taco-skillet",
+    "turkey-sweet-potato-chili",
+    "asian-chicken-lettuce-cups"
+  ],
+  "generatedAt": "2026-05-28T12:57:50.894Z",
+  "contentVersion": 2
+}

@@ -1,0 +1,87 @@
+{
+  "slug": "big-pot-savory-oats",
+  "title": "Big-Pot Savory Oats",
+  "filters": [
+    "healthy_breakfasts",
+    "feed_a_crew"
+  ],
+  "tags": [
+    "oats",
+    "one-pot",
+    "topping-bar"
+  ],
+  "crewSize": 10,
+  "baseServings": 10,
+  "prepTime": 10,
+  "cookTime": 18,
+  "totalTime": 28,
+  "difficulty": "easy",
+  "heroImage": "/images/breakfast/big-pot-savory-oats.jpg",
+  "thumbImage": "/images/thumbs/breakfast/big-pot-savory-oats.jpg",
+  "seoTitle": "Big-Pot Savory Oats | Firehall Breakfast",
+  "subtitle": "A practical station breakfast that scales from 4 to 12.",
+  "description": "A single pot of oats that tastes like a real breakfast, not diet culture. We finish with salt, butter, and a sensible topping bar so everyone can customize without slowing the line.",
+  "ingredients": [
+    {
+      "quantity": "14",
+      "name": "large eggs"
+    },
+    {
+      "quantity": "1 1/2 tsp",
+      "name": "kosher salt",
+      "notes": "start low; adjust at the end"
+    },
+    {
+      "quantity": "2 tbsp",
+      "name": "butter or oil"
+    },
+    {
+      "quantity": "1",
+      "name": "black pepper",
+      "notes": "to taste"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Get your station set",
+      "minutes": 5,
+      "instruction": "Set a warm holding zone (200°F oven). Lay out a tray for finished food, a tray for clean toast/tortillas, and a trash bowl so you’re not chasing scraps mid-cook."
+    },
+    {
+      "stepNumber": 2,
+      "title": "Cook the main",
+      "minutes": 13,
+      "instruction": "Cook the main components over medium to medium-high heat. Keep things in a single layer for browning, and season in layers so the finished plate doesn’t taste flat."
+    },
+    {
+      "stepNumber": 3,
+      "title": "Eggs last",
+      "minutes": 6,
+      "instruction": "Cook eggs last so they stay tender. For scrambled: low heat and pull early. For fried: cover to set whites without blasting the yolk."
+    },
+    {
+      "stepNumber": 4,
+      "title": "Serve and hold",
+      "minutes": 0,
+      "instruction": "Serve immediately; hold the rest warm. If a call hits, cover soft items; keep crispy items uncovered so they don’t steam."
+    }
+  ],
+  "stationWorkflow": [
+    "Assign one cook to the hot surface and one to assembly. Keep the line moving; don’t crowd the griddle.",
+    "Set a warm holding zone (oven 200°F or covered hotel pan) so staggered eaters still get a hot plate.",
+    "Run a quick call-proof check: anything crispy stays uncovered; anything soft stays covered."
+  ],
+  "cleanupNotes": [
+    "While plates are served, scrape the griddle/pan and wipe with a damp towel (use tongs + folded towel).",
+    "Soak the mixing bowl and sheet pan immediately—breakfast starch sets fast when it cools."
+  ],
+  "leftovers": [
+    "Cool fast: spread on a sheet pan 10 minutes, then portion into containers so it doesn’t sweat.",
+    "Reheat rule: eggs reheat best covered at 50% power or low oven heat; don’t nuke on high."
+  ],
+  "imageAlt": "Warm station-kitchen breakfast: Big-Pot Savory Oats",
+  "publishedAt": "2026-05-28T13:26:37.645Z",
+  "updatedAt": "2026-05-28T13:26:37.645Z",
+  "readMinutes": 4
+}

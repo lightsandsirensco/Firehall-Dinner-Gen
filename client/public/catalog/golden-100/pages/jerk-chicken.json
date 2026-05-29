@@ -1,11 +1,15 @@
 {
   "slug": "jerk-chicken",
   "title": "Jerk Chicken",
+  "displayTitle": "Jerk Chicken",
+  "seoTitle": "Jerk Chicken | Firefighter Meal",
+  "shortDescription": "Island heat that still feeds eight",
   "subtitle": "Island heat that still feeds eight",
   "category": "firehall_classics",
   "cuisine": "caribbean",
-  "description": "Char, spice, and Caribbean hall swagger.",
+  "description": "Island heat that still feeds eight",
   "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 60,
   "prepTime": 25,
   "difficulty": "medium",
@@ -119,6 +123,12 @@
     "Label trays with date and reheat to 165°F minimum before second shift.",
     "Slice cold protein thin for next-day wraps or salads — faster reheat, less dry-out."
   ],
+  "whyCrewsLikeIt": "Island heat that still feeds eight",
+  "substitutions": [
+    "Chicken thighs ↔ breasts (thighs forgive overcooking on the flat-top)."
+  ],
+  "spiceLevel": "hot",
+  "cleanupDifficulty": "medium",
   "nutrition": {
     "calories": 590,
     "protein": 40,
@@ -152,6 +162,6 @@
   "sourceName": "Firehall Classics",
   "sourceUrl": "",
   "classicSlug": "jerk-chicken",
-  "generatedAt": "2026-05-27T15:03:06.119Z",
-  "contentVersion": 1
+  "generatedAt": "2026-05-28T12:06:14.955Z",
+  "contentVersion": 2
 }

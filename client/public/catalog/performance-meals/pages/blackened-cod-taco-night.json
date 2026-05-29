@@ -1,0 +1,184 @@
+{
+  "slug": "blackened-cod-taco-night",
+  "title": "Blackened Cod Taco Night",
+  "displayTitle": "Blackened Cod Taco Night",
+  "seoTitle": "Blackened Cod Taco Night | Firefighter Meal",
+  "shortDescription": "Spice-crusted cod with lime slaw and avocado crema in corn tortillas",
+  "subtitle": "Spice-crusted cod with lime slaw and avocado crema in corn tortillas",
+  "category": "healthy_performance",
+  "cuisine": "Mexican",
+  "description": "Cod fillets crust with blackening spice in a hot skillet, then tuck into corn tortillas with cabbage slaw and avocado crema.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 12,
+  "prepTime": 25,
+  "difficulty": "medium",
+  "calories": 365,
+  "protein": 30,
+  "carbs": 32,
+  "fats": 14,
+  "tags": [
+    "protein:fish",
+    "format:tacos",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "Cast iron skillet",
+    "Blender for crema"
+  ],
+  "ingredients": [
+    {
+      "name": "cod fillets",
+      "quantity": "3.5",
+      "unit": "lb",
+      "notes": "1-inch thick"
+    },
+    {
+      "name": "smoked paprika",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "garlic powder",
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "onion powder",
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "dried thyme",
+      "quantity": "1",
+      "unit": "tsp"
+    },
+    {
+      "name": "cayenne pepper",
+      "quantity": "1",
+      "unit": "tsp"
+    },
+    {
+      "name": "green cabbage",
+      "quantity": "1",
+      "unit": "head",
+      "notes": "shredded fine"
+    },
+    {
+      "name": "avocado",
+      "quantity": "3",
+      "unit": "whole",
+      "notes": "ripe"
+    },
+    {
+      "name": "Greek yogurt",
+      "quantity": "1",
+      "unit": "cup"
+    },
+    {
+      "name": "lime juice",
+      "quantity": "0.25",
+      "unit": "cup",
+      "notes": "fresh"
+    },
+    {
+      "name": "corn tortillas",
+      "quantity": "24",
+      "unit": "whole",
+      "notes": "6-inch"
+    },
+    {
+      "name": "vegetable oil",
+      "quantity": "3",
+      "unit": "tbsp"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Mix blackening spice",
+      "instruction": "Combine paprika, garlic powder, onion powder, thyme, cayenne, 1 tbsp salt, and 1 tsp pepper. Rub should smell smoky and evenly blended.",
+      "minutes": 3,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Prep slaw and crema",
+      "instruction": "Toss cabbage with half the lime juice and pinch of salt until lightly wilted but still crunchy. Blend avocado, yogurt, and remaining lime for crema.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Coat and sear cod",
+      "instruction": "Pat cod dry, coat generously with blackening spice. Sear in hot oiled skillet 3–4 minutes per side until crust is dark and fish reads 145°F.",
+      "minutes": 10,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Rest and flake fish",
+      "instruction": "Rest fish 3 minutes, break into large chunks. Flesh should be opaque, moist, and flake cleanly without drying into strings.",
+      "minutes": 3,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Assemble tacos",
+      "instruction": "Warm tortillas in foil. Fill with fish, slaw, and crema. Crust should stay spicy and crisp-tender, not soggy from over-filling.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Do not move fish early—crust releases when properly seared.",
+    "Reduce cayenne for mild crews; offer hot sauce at the line instead.",
+    "Double-stack tortillas for sturdier handhelds."
+  ],
+  "tonightSpread": [
+    "Black beans with cumin.",
+    "Pickled red onion."
+  ],
+  "leftovers": [
+    "Fish over rice bowl with slaw and crema.",
+    "Blackened fish salad—skip tortillas."
+  ],
+  "whyCrewsLikeIt": "Big spice and fresh crunch. Handheld format keeps service moving when everyone hits the kitchen at once.",
+  "mealPrepNotes": "Mix blackening spice in bulk. Pat cod dry right before cooking. Station: Vent hood on—blackening spice smokes at high heat. Station: Cook fish in batches in cast iron for best crust. Station: Taco bar: fish, slaw, crema, pico, lime, hot sauce.",
+  "spiceLevel": "hot",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 365,
+    "protein": 30,
+    "carbs": 32,
+    "fats": 14,
+    "label": "~365 cal/serving · 30g protein · 6g fiber (est.)"
+  },
+  "heroImage": "/images/golden-100/blackened-cod-taco-night.jpg",
+  "mobileImage": "/images/mobile/blackened-cod-taco-night.jpg",
+  "thumbImage": "/images/thumbs/blackened-cod-taco-night.jpg",
+  "railImage": "/images/rails/blackened-cod-taco-night.jpg",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "blackened cod taco night",
+    "fish",
+    "Mexican",
+    "tacos",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "crispy-fish-taco-night",
+    "mediterranean-baked-fish-tray",
+    "chipotle-lime-chicken-tacos"
+  ],
+  "generatedAt": "2026-05-28T12:57:50.894Z",
+  "contentVersion": 2
+}

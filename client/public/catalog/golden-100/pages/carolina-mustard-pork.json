@@ -1,11 +1,15 @@
 {
   "slug": "carolina-mustard-pork",
   "title": "Carolina Mustard Pulled Pork",
+  "displayTitle": "Carolina Mustard Pulled Pork",
+  "seoTitle": "Carolina Mustard Pulled Pork | Firefighter Meal",
+  "shortDescription": "Tangy mustard pull, soft buns",
   "subtitle": "Tangy mustard pull, soft buns",
   "category": "bbq_grill_nights",
   "cuisine": "american",
-  "description": "Carolina Mustard Pulled Pork is a american sandwich built for a hungry firehall crew — Tangy mustard pull, soft buns. Hearty portions, station-kitchen timing, and flavors everyone recognizes after a long shift.",
+  "description": "Tangy mustard pull, soft buns. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 90,
   "prepTime": 30,
   "difficulty": "hard",
@@ -31,69 +35,62 @@
   ],
   "ingredients": [
     {
-      "name": "Pork (shoulder or chops)",
+      "name": "Pork chops or tenderloin",
+      "quantity": "4",
+      "unit": "lb",
+      "group": "Main"
+    },
+    {
+      "name": "Brown sugar",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Glaze"
+    },
+    {
+      "name": "Soy sauce",
       "quantity": "3",
-      "unit": "lb"
+      "unit": "tbsp",
+      "group": "Glaze"
+    },
+    {
+      "name": "Garlic cloves, minced",
+      "quantity": "4",
+      "unit": "cloves",
+      "group": "Glaze"
     },
     {
       "name": "Kosher salt",
-      "quantity": "2",
-      "unit": "tbsp"
-    },
-    {
-      "name": "Black pepper",
       "quantity": "1",
-      "unit": "tbsp"
-    },
-    {
-      "name": "Cooking oil",
-      "quantity": "0.3",
-      "unit": "cup"
-    },
-    {
-      "name": "Yellow onion",
-      "quantity": "2",
-      "unit": "large"
-    },
-    {
-      "name": "Garlic",
-      "quantity": "6",
-      "unit": "cloves"
+      "unit": "tbsp",
+      "group": "Seasoning"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Prep the line",
-      "instruction": "Set out all ingredients for Carolina Mustard Pulled Pork before you turn on heat — firefighters eat on a schedule. Pat proteins dry and season aggressively with salt and pepper; dry surfaces brown instead of steam.",
-      "minutes": 15,
+      "title": "Brine or season",
+      "instruction": "Pat pork dry. Salt 30 minutes ahead. Whisk glaze ingredients. Chops should be 1–1½ inches thick for even cooking.",
+      "minutes": 30,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Build the base",
-      "instruction": "Heat oil in your largest skillet, Dutch oven, or on the flat-top over medium-high until it shimmers. Add aromatics (onion first) and cook until the edges turn golden and the smell sweetens — usually 4–6 minutes. If garlic is in the recipe, add it after the onion softens so it doesn't burn.",
-      "minutes": 8,
+      "title": "Grill to 145°F",
+      "instruction": "Grill over medium-high 4–5 minutes per side until 140°F, then glaze and cook 1 minute per side until 145°F. Tenderloin: sear all sides, finish indirect to 145°F. Meat should spring back lightly.",
+      "minutes": 18,
       "heatLevel": "medium-high"
     },
     {
       "stepNumber": 3,
-      "title": "Cook the main",
-      "instruction": "Cook the primary protein or base for Carolina Mustard Pulled Pork until it hits proper color and safe internal temperature. Don't crowd the pan — work in batches if needed so you get browning, not gray stew. Listen for a steady sizzle; if it's silent, the heat is too low.",
-      "minutes": 20,
-      "heatLevel": "medium-high"
+      "title": "Rest and slice",
+      "instruction": "Rest 5 minutes. Slice tenderloin on a bias. Hold chops on warm trays — pork dries out above 160°F, so don't overcook while waiting for the crew.",
+      "minutes": 8,
+      "heatLevel": "low"
     },
     {
       "stepNumber": 4,
-      "title": "Finish and season",
-      "instruction": "Bring components together, taste, and adjust salt. Sauce should coat, not pool. If cheese is involved, melt it just until glossy — another 1–2 minutes under a lid or broiler. Let heavy proteins rest 5 minutes before slicing.",
-      "minutes": 10,
-      "heatLevel": "medium"
-    },
-    {
-      "stepNumber": 5,
-      "title": "Serve the hall",
-      "instruction": "Transfer to sheet trays or a serving line immediately. Keep backup warm at 200°F. Call the crew while it's hot — this meal is built for a hungry hall, not a photo shoot.",
+      "title": "Glaze and hold",
+      "instruction": "Brush any remaining glaze over slices. Keep backup chops on a rack at 180°F — stacked pork steams and loses crust.",
       "minutes": 5,
       "heatLevel": "low"
     }
@@ -115,6 +112,10 @@
     "Label trays with date and reheat to 165°F minimum before second shift.",
     "Store components separate — assemble fresh; buns go soggy overnight."
   ],
+  "whyCrewsLikeIt": "Tangy mustard pull, soft buns. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
+  "substitutions": [],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
   "nutrition": {
     "calories": 600,
     "protein": 40,
@@ -147,7 +148,8 @@
     "pulled-pork",
     "pulled-pork-mac"
   ],
-  "sourceName": "AmazingRibs",
-  "generatedAt": "2026-05-27T15:03:06.156Z",
-  "contentVersion": 1
+  "sourceName": "Firehall Meals",
+  "sourceUrl": "",
+  "generatedAt": "2026-05-28T12:06:14.999Z",
+  "contentVersion": 2
 }

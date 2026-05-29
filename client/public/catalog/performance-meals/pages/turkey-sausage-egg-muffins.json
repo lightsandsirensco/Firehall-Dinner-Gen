@@ -1,0 +1,179 @@
+{
+  "slug": "turkey-sausage-egg-muffins",
+  "title": "Turkey Sausage Egg Muffins",
+  "displayTitle": "Turkey Sausage Egg Muffins",
+  "seoTitle": "Turkey Sausage Egg Muffins | Firefighter Meal",
+  "shortDescription": "Grab-and-go protein cups with spinach and bell pepper for shift breakfast",
+  "subtitle": "Grab-and-go protein cups with spinach and bell pepper for shift breakfast",
+  "category": "healthy_performance",
+  "cuisine": "American",
+  "description": "Lean turkey sausage browns with spinach and diced bell pepper, then bakes in muffin tins with eggs and a touch of cheddar for portable morning protein.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 22,
+  "prepTime": 20,
+  "difficulty": "easy",
+  "calories": 195,
+  "protein": 18,
+  "carbs": 4,
+  "fats": 11,
+  "tags": [
+    "protein:turkey",
+    "format:breakfast",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "Two 12-cup muffin tins",
+    "Large skillet",
+    "Mixing bowls"
+  ],
+  "ingredients": [
+    {
+      "name": "lean turkey breakfast sausage",
+      "quantity": "1.5",
+      "unit": "lb",
+      "notes": "casings removed"
+    },
+    {
+      "name": "large eggs",
+      "quantity": "18",
+      "unit": "whole"
+    },
+    {
+      "name": "egg whites",
+      "quantity": "2",
+      "unit": "cups"
+    },
+    {
+      "name": "fresh spinach",
+      "quantity": "4",
+      "unit": "cups",
+      "notes": "chopped"
+    },
+    {
+      "name": "red bell pepper",
+      "quantity": "1",
+      "unit": "large",
+      "notes": "finely diced"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "1",
+      "unit": "medium",
+      "notes": "finely diced"
+    },
+    {
+      "name": "sharp cheddar cheese",
+      "quantity": "1.5",
+      "unit": "cups",
+      "notes": "shredded"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "3",
+      "unit": "cloves",
+      "notes": "minced"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "1",
+      "unit": "tsp"
+    },
+    {
+      "name": "black pepper",
+      "quantity": "0.5",
+      "unit": "tsp"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Preheat and brown sausage",
+      "instruction": "Heat oven to 375°F. Cook turkey sausage in a skillet over medium heat 8–10 minutes, crumbling until fully browned and no pink remains.",
+      "minutes": 10,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Wilt spinach and soften pepper",
+      "instruction": "Add onion, bell pepper, and garlic to the skillet. Cook 4 minutes until softened. Stir in spinach until wilted and moisture mostly evaporates.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Whisk egg base",
+      "instruction": "Whisk whole eggs, egg whites, salt, and pepper in a large bowl until frothy and uniform in color with no streaks of yolk.",
+      "minutes": 3,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Fill muffin cups",
+      "instruction": "Divide sausage-vegetable mix among 24 greased muffin cups. Top each with shredded cheddar. Pour egg mixture evenly until cups are ¾ full.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Bake until set",
+      "instruction": "Bake 20–24 minutes until centers are puffed and firm to the touch, not jiggly. A knife inserted in center should come out clean.",
+      "minutes": 22,
+      "heatLevel": "medium"
+    }
+  ],
+  "proTips": [
+    "Cool muffins on a rack so bottoms do not steam soggy in the tin.",
+    "Add hot sauce to the egg mix for crews who want morning heat without extra dishes.",
+    "Freeze individually wrapped; thaw overnight in the walk-in for backup breakfasts."
+  ],
+  "tonightSpread": [
+    "Fresh fruit platter and coffee for a full morning line.",
+    "Whole-grain English muffins for crew who want a bread base."
+  ],
+  "leftovers": [
+    "Crumble muffins into a breakfast burrito with salsa.",
+    "Chop and toss into a hash with diced potatoes and hot sauce."
+  ],
+  "whyCrewsLikeIt": "Hands-free breakfast that survives a delayed alarm. Each muffin packs protein without the grease of traditional breakfast sandwiches.",
+  "mealPrepNotes": "Bake Sunday for Monday shift. Cool completely before storing in labeled containers. Reheat 45 seconds per muffin. Station: Use two 12-cup muffin tins or one 24-cup commercial tin for even batch timing. Station: Spray tins generously—egg sticks badly on rushed cleanup nights. Station: Line a sheet pan under tins to catch overflow and protect the oven floor.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 195,
+    "protein": 18,
+    "carbs": 4,
+    "fats": 11,
+    "label": "~195 cal/serving · 18g protein · 1g fiber (est.)"
+  },
+  "heroImage": "/images/golden-100/turkey-sausage-egg-muffins.jpg",
+  "mobileImage": "/images/mobile/turkey-sausage-egg-muffins.jpg",
+  "thumbImage": "/images/thumbs/turkey-sausage-egg-muffins.jpg",
+  "railImage": "/images/rails/turkey-sausage-egg-muffins.jpg",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "turkey sausage egg muffins",
+    "turkey",
+    "American",
+    "breakfast",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "lean-turkey-bean-chili",
+    "baked-turkey-meatball-marinara",
+    "turkey-taco-skillet",
+    "turkey-sweet-potato-chili",
+    "turkey-lettuce-wrap-night",
+    "turkey-zoodle-bolognese"
+  ],
+  "generatedAt": "2026-05-28T12:57:50.893Z",
+  "contentVersion": 2
+}

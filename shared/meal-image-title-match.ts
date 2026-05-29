@@ -4,6 +4,11 @@
  */
 
 import { normalizeFormatKey, titleClaimsTacos } from "./meal-format-contract.js";
+import {
+  inferPlatingType,
+  inferPlatingTypeFromHeroPath,
+  platingTypesConflict,
+} from "./plating-type.js";
 
 export type MealVisualSignal =
   | "taco"
@@ -30,7 +35,8 @@ const SIGNAL_PATTERNS: Array<{ signal: MealVisualSignal; re: RegExp }> = [
   { signal: "skillet", re: /\b(skillet|one.?pan|cast iron)\b/i },
   { signal: "stir_fry", re: /\b(stir.?fry|wok)\b/i },
   { signal: "soup", re: /\b(soup|chili|chowder|stew|bisque)\b/i },
-  { signal: "sandwich", re: /\b(sandwich|sub|hoagie|panini|wrap)\b/i },
+  { signal: "sandwich", re: /\b(sandwich|sub|hoagie|panini)\b/i },
+  { signal: "sandwich", re: /\b(lettuce cups?|lettuce wraps?)\b/i },
   { signal: "salad", re: /\b(salad|caesar|greens)\b/i },
   { signal: "sheet_pan", re: /\b(sheet.?pan|tray bake|roasted vegetables)\b/i },
   { signal: "grill", re: /\b(grill|grilled|bbq|barbecue|charred)\b/i },
@@ -57,6 +63,8 @@ export function inferVisualSignalsFromTitle(title: string, mealFormat?: string):
   if (fmt === "salad") signals.add("salad");
   if (fmt === "sheet_pan") signals.add("sheet_pan");
   if (fmt === "grill") signals.add("grill");
+  if (/\bpizza\b/i.test(text)) signals.add("pizza");
+  if (fmt === "plated_main") signals.add("generic");
 
   if (signals.size === 0) signals.add("generic");
   return signals;
@@ -67,10 +75,30 @@ export function allowedHeroSignals(title: string, mealFormat?: string): Set<Meal
   const titleSignals = inferVisualSignalsFromTitle(title, mealFormat);
   const allowed = new Set<MealVisualSignal>(titleSignals);
 
-  if (titleClaimsTacos(title) || normalizeFormatKey(mealFormat) === "tacos") {
+  const tacoSkilletMeal =
+    /\b(taco|nacho|enchilada|burrito|fajita|quesadilla)\b/i.test(title) &&
+    /\b(skillet|one.?pot)\b/i.test(title);
+  const stuffedSquashMeal = /\b(spaghetti squash|stuffed squash)\b/i.test(title);
+  if (
+    (titleClaimsTacos(title) || normalizeFormatKey(mealFormat) === "tacos") &&
+    !tacoSkilletMeal &&
+    !stuffedSquashMeal
+  ) {
     allowed.delete("bowl");
     allowed.delete("skillet");
     allowed.delete("pasta");
+  }
+  if (stuffedSquashMeal) {
+    allowed.add("pasta");
+    allowed.add("generic");
+  }
+  if (/\b(egg casserole|breakfast casserole|casserole tray)\b/i.test(title)) {
+    allowed.add("sheet_pan");
+    allowed.add("breakfast");
+  }
+  if (tacoSkilletMeal) {
+    allowed.add("taco");
+    allowed.add("skillet");
   }
 
   if (/\b(quinoa|couscous|farro)\b/i.test(title)) {
@@ -79,10 +107,28 @@ export function allowedHeroSignals(title: string, mealFormat?: string): Set<Meal
     allowed.delete("pasta");
   }
 
-  if (/\b(skillet|stir.?fry|one.?pot)\b/i.test(title)) {
+  const claimsMexicanHandheld =
+    titleClaimsTacos(title) ||
+    /\b(nacho|enchilada|burrito|fajita|quesadilla|tortilla)\b/i.test(title);
+  if (/\b(skillet|stir.?fry|one.?pot)\b/i.test(title) && !claimsMexicanHandheld) {
     allowed.delete("taco");
     allowed.delete("burger");
     allowed.delete("salad");
+  }
+  if (/\b(casserole|bake)\b/i.test(title) && claimsMexicanHandheld) {
+    allowed.add("taco");
+  }
+  if (/\bnacho\b/i.test(title)) {
+    allowed.add("taco");
+  }
+
+  if (/\b(bowls?|rice bowl|grain bowl)\b/i.test(title) && !/\b(lettuce cups?|wraps?)\b/i.test(title)) {
+    allowed.delete("sandwich");
+  }
+
+  if (/\b(lettuce cups?|lettuce wraps?)\b/i.test(title)) {
+    allowed.add("sandwich");
+    allowed.delete("bowl");
   }
 
   return allowed;
@@ -153,31 +199,104 @@ export function scoreImageTitleAlignment(
   return { pass, score, conflicts, dominantTitle: dominant };
 }
 
+/** Infer visual meal signals from an owned image path / alt text (no pixels). */
+export function inferVisualSignalsFromImagePath(
+  heroPath: string,
+  altText = "",
+): Set<MealVisualSignal> {
+  const blob = `${heroPath} ${altText}`.toLowerCase();
+  const signals = new Set<MealVisualSignal>();
+  for (const { signal, re } of SIGNAL_PATTERNS) {
+    if (re.test(blob)) signals.add(signal);
+  }
+  if (/pizza/.test(blob)) signals.add("pizza");
+  if (/skillet|one-pan|one_pan/.test(blob)) signals.add("skillet");
+  if (signals.size === 0) signals.add("generic");
+  return signals;
+}
+
 /** Heuristic: known hero URL paths vs meal title (editorial/classic assets). */
 export function heroPathConflictsTitle(
   heroPath: string,
   title: string,
   mealFormat?: string,
 ): boolean {
+  const expectedPlating = inferPlatingType(title, mealFormat);
+  const depictedPlating = inferPlatingTypeFromHeroPath(heroPath, title);
+  if (depictedPlating && platingTypesConflict(expectedPlating, depictedPlating)) {
+    return true;
+  }
+
   const path = heroPath.toLowerCase();
   const allowed = allowedHeroSignals(title, mealFormat);
 
-  const pathSignals: MealVisualSignal[] = [];
-  if (/taco|fajita|burrito/.test(path)) pathSignals.push("taco");
-  if (/burger|smash/.test(path)) pathSignals.push("burger");
-  if (/pasta|lasagna|spaghetti/.test(path)) pathSignals.push("pasta");
-  if (/bowl/.test(path)) pathSignals.push("bowl");
-  if (/chili|stew|soup/.test(path)) pathSignals.push("soup");
-  if (/pizza/.test(path)) pathSignals.push("pizza");
+  const pathSignals = [...inferVisualSignalsFromImagePath(heroPath, title)];
 
   for (const s of pathSignals) {
-    if (!allowed.has(s)) return true;
+    if (!allowed.has(s) && s !== "generic") return true;
   }
 
   const titleDominant = [...inferVisualSignalsFromTitle(title, mealFormat)].find((s) => s !== "generic");
-  if (titleDominant === "skillet" && pathSignals.includes("taco")) return true;
+  if (
+    titleDominant === "skillet" &&
+    pathSignals.includes("taco") &&
+    !/\b(taco|nacho|enchilada|burrito|fajita|quesadilla)\b/i.test(title)
+  ) {
+    return true;
+  }
   if (titleDominant === "taco" && pathSignals.includes("bowl") && !pathSignals.includes("taco")) return true;
-  if (/\bquinoa\b/i.test(title) && pathSignals.includes("taco")) return true;
+  if (
+    expectedPlating === "bowl" &&
+    (pathSignals.includes("sandwich") || /lettuce-cup|lettuce-wrap/.test(path)) &&
+    !/\b(lettuce cups?|wraps?)\b/i.test(title)
+  ) {
+    return true;
+  }
+  if (
+    /\bquinoa\b/i.test(title) &&
+    pathSignals.includes("taco") &&
+    !/\b(enchilada|taco|burrito|fajita|quesadilla)\b/i.test(title)
+  ) {
+    return true;
+  }
+
+  // Plated / plate meals must not use taco or wrap imagery.
+  if (
+    (/\b(plate|plated|platter)\b/i.test(title) || normalizeFormatKey(mealFormat) === "plated_main") &&
+    !titleClaimsTacos(title) &&
+    !/\b(enchilada|quesadilla|burrito|fajita|nacho)\b/i.test(title) &&
+    (pathSignals.includes("taco") || /\bwrap\b/.test(path))
+  ) {
+    return true;
+  }
+
+  // Protein in title vs path (shrimp image for beef title, etc.)
+  const titleProtein =
+    /\b(shrimp|prawn)\b/i.test(title)
+      ? "seafood"
+      : /\b(salmon|cod|fish|tuna)\b/i.test(title)
+        ? "fish"
+        : /\bbeef|steak|brisket\b/i.test(title)
+          ? "beef"
+          : /\bchicken\b/i.test(title)
+            ? "chicken"
+            : /\bpork|sausage\b/i.test(title)
+              ? "pork"
+              : null;
+
+  if (titleProtein === "beef" && /\b(shrimp|salmon|fish|taco)\b/.test(path) && !/\bbeef|steak|brisket\b/.test(path)) {
+    return true;
+  }
+  if (
+    titleProtein === "chicken" &&
+    /\b(shrimp|salmon|beef|steak)\b/.test(path) &&
+    !/\b(chicken|turkey)\b/.test(path)
+  ) {
+    return true;
+  }
+  if (titleProtein === "fish" && /\b(beef|steak|taco|burger)\b/.test(path) && !/\b(fish|salmon|cod|shrimp)\b/.test(path)) {
+    return true;
+  }
 
   return false;
 }

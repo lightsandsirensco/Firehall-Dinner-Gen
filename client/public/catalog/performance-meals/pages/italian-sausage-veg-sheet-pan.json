@@ -1,0 +1,185 @@
+{
+  "slug": "italian-sausage-veg-sheet-pan",
+  "title": "Italian Sausage and Veg Sheet Pan",
+  "displayTitle": "Italian Sausage and Veg Sheet Pan",
+  "seoTitle": "Italian Sausage and Veg Sheet Pan | Firefighter Meal",
+  "shortDescription": "Sweet Italian sausage with roasted peppers, onion, and zucchini",
+  "subtitle": "Sweet Italian sausage with roasted peppers, onion, and zucchini",
+  "category": "healthy_performance",
+  "cuisine": "Italian",
+  "description": "Sweet Italian sausage links roast with bell peppers, red onion, and zucchini until caramelized and ready for hoagie rolls or straight tray service.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 28,
+  "prepTime": 15,
+  "difficulty": "easy",
+  "calories": 485,
+  "protein": 24,
+  "carbs": 18,
+  "fats": 36,
+  "tags": [
+    "protein:pork",
+    "format:sheet_pan",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "Two half-sheet pans",
+    "Instant-read thermometer"
+  ],
+  "ingredients": [
+    {
+      "name": "sweet Italian sausage",
+      "quantity": "3",
+      "unit": "lb",
+      "notes": "cut into 2-inch pieces"
+    },
+    {
+      "name": "red bell pepper",
+      "quantity": "3",
+      "unit": "whole",
+      "notes": "chunked"
+    },
+    {
+      "name": "green bell pepper",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "chunked"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "2",
+      "unit": "large",
+      "notes": "wedge-cut"
+    },
+    {
+      "name": "zucchini",
+      "quantity": "3",
+      "unit": "large",
+      "notes": "thick half-moons"
+    },
+    {
+      "name": "cherry tomatoes",
+      "quantity": "2",
+      "unit": "cups",
+      "notes": "halved"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "0.25",
+      "unit": "cup"
+    },
+    {
+      "name": "dried Italian seasoning",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "6",
+      "unit": "cloves",
+      "notes": "smashed"
+    },
+    {
+      "name": "red pepper flakes",
+      "quantity": "0.5",
+      "unit": "tsp"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "1",
+      "unit": "tbsp"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Heat oven and toss ingredients",
+      "instruction": "Heat oven to 425°F. Toss sausage, peppers, onion, zucchini, tomatoes, garlic, oil, Italian seasoning, salt, and pepper until evenly coated.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Spread on sheet pans",
+      "instruction": "Divide between two half-sheets in a single layer with sausage pieces spaced for airflow and veg in gaps between meat.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Roast until sausage is done",
+      "instruction": "Roast 24–28 minutes, stirring once halfway, until sausage reads 165°F and pepper edges char lightly with softened centers.",
+      "minutes": 26,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Rest and check texture",
+      "instruction": "Rest 3 minutes. Sausage should snap when bitten with juicy interior; vegetables tender with slight char, not mushy.",
+      "minutes": 3,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Serve on rolls or tray",
+      "instruction": "Pile onto hoagie rolls with provolone or serve straight from tray with crusty bread for soaking pan juices.",
+      "minutes": 3,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Hot Italian sausage swap adds heat—offer separately for mixed crews.",
+    "Provolone under broiler 2 minutes makes instant sausage subs.",
+    "Line pans with foil for faster cleanup of rendered sausage fat."
+  ],
+  "tonightSpread": [
+    "Hoagie rolls and sliced provolone.",
+    "Mixed green salad with vinaigrette."
+  ],
+  "leftovers": [
+    "Sausage and veg over polenta next day.",
+    "Chop into a pasta skillet with olive oil and parmesan."
+  ],
+  "whyCrewsLikeIt": "Minimal prep, maximum flavor. Familiar Italian combo that feels like a sub shop without leaving the hall.",
+  "mealPrepNotes": "Slice sausage links into 2-inch pieces for faster cooking. Cut veg uniform for even roast. Station: Use two half-sheets so sausage browns instead of steaming in released fat. Station: Rotate pans halfway for even caramelization in a crowded oven. Station: Offer hoagie rolls at the line for sausage-and-pepper subs.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 485,
+    "protein": 24,
+    "carbs": 18,
+    "fats": 36,
+    "label": "~485 cal/serving · 24g protein · 4g fiber (est.)"
+  },
+  "heroImage": "/images/golden-100/italian-sausage-veg-sheet-pan.jpg",
+  "mobileImage": "/images/mobile/italian-sausage-veg-sheet-pan.jpg",
+  "thumbImage": "/images/thumbs/italian-sausage-veg-sheet-pan.jpg",
+  "railImage": "/images/rails/italian-sausage-veg-sheet-pan.jpg",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "italian sausage and veg sheet pan",
+    "italian sausage veg sheet pan",
+    "pork",
+    "Italian",
+    "sheet pan",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "lemon-garlic-chicken-tray",
+    "herb-baked-salmon-tray",
+    "sheet-pan-chicken-fajitas-lite",
+    "honey-lime-chicken-tray",
+    "mediterranean-baked-fish-tray",
+    "moroccan-chicken-chickpea-tray"
+  ],
+  "generatedAt": "2026-05-28T12:57:50.894Z",
+  "contentVersion": 2
+}

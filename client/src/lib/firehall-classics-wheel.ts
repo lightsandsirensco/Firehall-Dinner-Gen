@@ -74,8 +74,54 @@ export function getWheelClassicBySlug(slug: string | null): WheelClassic | undef
   return SLUG_MAP.get(slug.toLowerCase().trim());
 }
 
+const WHEEL_RECENT_KEY = "firehall_wheel_recent_slugs_v1";
+
+function getWheelRecentSlugs(): string[] {
+  try {
+    const raw = localStorage.getItem(WHEEL_RECENT_KEY);
+    if (!raw) return [];
+    const parsed = JSON.parse(raw) as unknown;
+    return Array.isArray(parsed)
+      ? parsed.filter((s): s is string => typeof s === "string").slice(-8)
+      : [];
+  } catch {
+    return [];
+  }
+}
+
+export function recordWheelClassicSlug(slug: string): void {
+  try {
+    const prev = getWheelRecentSlugs().filter((s) => s !== slug);
+    prev.push(slug);
+    localStorage.setItem(WHEEL_RECENT_KEY, JSON.stringify(prev.slice(-8)));
+  } catch {
+    /* ignore */
+  }
+}
+
+/** Weighted pick — suppresses recent wheel results to reduce fatigue. */
+export function pickWeightedWheelClassic(seed: string): { classic: WheelClassic; index: number } {
+  const recent = getWheelRecentSlugs();
+  const weights = WHEEL_CLASSICS.map((c) => {
+    const idx = recent.lastIndexOf(c.slug);
+    const penalty = idx === -1 ? 0 : (recent.length - idx) * 30;
+    return Math.max(8, 100 - penalty);
+  });
+  let total = weights.reduce((a, b) => a + b, 0);
+  let r = Math.abs(seed.split("").reduce((h, ch) => (Math.imul(31, h) + ch.charCodeAt(0)) | 0, 0)) % total;
+  let pickIdx = 0;
+  for (let i = 0; i < weights.length; i++) {
+    r -= weights[i]!;
+    if (r < 0) {
+      pickIdx = i;
+      break;
+    }
+  }
+  return { classic: WHEEL_CLASSICS[pickIdx]!, index: pickIdx };
+}
+
 export function pickRandomWheelClassic(): WheelClassic {
-  return WHEEL_CLASSICS[Math.floor(Math.random() * WHEEL_CLASSICS.length)];
+  return pickWeightedWheelClassic(String(Date.now())).classic;
 }
 
 export function applyWheelClassicToFilters(

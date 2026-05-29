@@ -1,0 +1,79 @@
+{
+  "slug": "best-station-chili-recipes",
+  "title": "Best Station Chili Recipes",
+  "subtitle": "The hall's default batch — beef, turkey, and big pots",
+  "description": "Best station chili recipes for firefighters: classic beef chili, turkey lean batch, and hall-sized pots that hold across the shift.",
+  "topic": "meal_planning",
+  "pillar": "recipes_meals",
+  "intro": "Chili is the station's universal backup plan. It scales, holds on the stove, tops potatoes or hot dogs, and tastes better the next day. The best station chili recipes are not secret — they are consistent batches with enough seasoning to stand up to cheese and crackers.",
+  "sections": [
+    {
+      "id": "variations",
+      "heading": "Beef vs turkey vs double pot",
+      "paragraphs": [
+        "Beef for classic nights, turkey when the crew wants leaner, double pot when appetite is unknown. Same line setup for all three."
+      ]
+    },
+    {
+      "id": "toppings",
+      "heading": "Toppings bar that actually gets used",
+      "paragraphs": [
+        "Cheese, onion, jalapeño, sour cream, and something crunchy. Label mild vs hot — it prevents the usual salsa argument."
+      ]
+    }
+  ],
+  "practicalAdvice": [
+    "Brown meat before the pot — depth matters.",
+    "Simmer longer than you think after adding beans.",
+    "Offer toppings bar: cheese, onion, jalapeño, Fritos — crew happiness multiplier."
+  ],
+  "mealRecommendations": [
+    {
+      "slug": "chili-garlic-bread",
+      "title": "Firehall Chili",
+      "blurb": "Garlic bread night pairing built in."
+    },
+    {
+      "slug": "big-chili",
+      "title": "Hall-Sized Beef and Bean Chili",
+      "blurb": "Maximum batch when appetite is unknown."
+    },
+    {
+      "slug": "turkey-chili",
+      "title": "High-Protein Turkey Chili",
+      "blurb": "Leaner pot — still hearty."
+    },
+    {
+      "slug": "sunday-chili-batch",
+      "title": "Sunday Batch Chili",
+      "blurb": "Meal-prep chili base."
+    },
+    {
+      "slug": "loaded-potato-feed",
+      "title": "Loaded Potato Feed",
+      "blurb": "Chili topping option on potato bar."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Where do these recipes come from?",
+      "answer": "Each link goes to a full recipe on Firehall Meals — crew-sized portions, station timing, and steps written for a shared kitchen. Not home-blog scaling."
+    },
+    {
+      "question": "What if crew size or time changes tonight?",
+      "answer": "Use Find a Meal with your headcount and minutes available. It pulls from the same hall-tested dinners these guides recommend."
+    }
+  ],
+  "relatedArticleSlugs": [
+    "firehouse-comfort-meals"
+  ],
+  "keywords": [
+    "station chili recipes",
+    "firefighter chili",
+    "fire hall chili",
+    "batch chili"
+  ],
+  "publishedAt": "2026-05-27T18:00:00.000Z",
+  "updatedAt": "2026-05-27T18:00:00.000Z",
+  "readMinutes": 7
+}

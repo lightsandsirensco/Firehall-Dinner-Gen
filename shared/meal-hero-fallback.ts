@@ -1,5 +1,4 @@
-import { resolveCuratedSlugFromTitle } from "./curated-hall-packages.js";
-import { getClassicHallMeal, resolveClassicHeroImage } from "./classic-hall-meals.js";
+import { CLASSIC_HALL_MEALS, getClassicHallMeal, resolveClassicHeroImage } from "./classic-hall-meals.js";
 import { GENERATED_IMAGE_URL_PREFIX } from "./food-imagery/paths.js";
 
 /** Editorial / pinned hero for a generated meal when AI imagery is not ready. */
@@ -7,32 +6,17 @@ export function resolveEditorialFallbackHero(
   title: string,
   opts?: { mealFormat?: string; protein?: string },
 ): string | null {
-  const slug = resolveCuratedSlugFromTitle(title);
-  if (slug) {
-    const meta = getClassicHallMeal(slug);
-    if (meta) {
+  const t = title.trim().toLowerCase();
+  // STRICT: Only return a pinned hero when the title is clearly the classic itself.
+  // No heuristic remapping ("bbq chicken" -> bowls) — that caused broad image reuse.
+  for (const meta of CLASSIC_HALL_MEALS) {
+    const mt = meta.title.trim().toLowerCase();
+    if (t === mt) {
       const path = resolveClassicHeroImage(meta);
       if (path.startsWith("/images/")) return path;
+      if (meta.heroImagePath?.startsWith("/images/")) return meta.heroImagePath;
+      return null;
     }
-  }
-
-  const t = `${title} ${opts?.mealFormat || ""} ${opts?.protein || ""}`.toLowerCase();
-  if (/pizza/.test(t)) return null;
-  if (/taco|burrito/.test(t)) {
-    const meta = getClassicHallMeal("steak-tacos");
-    if (meta?.heroImagePath) return meta.heroImagePath;
-  }
-  if (/burger|smash/.test(t)) {
-    const meta = getClassicHallMeal("smash-burgers");
-    if (meta?.heroImagePath) return meta.heroImagePath;
-  }
-  if (/chili|stew/.test(t)) {
-    const meta = getClassicHallMeal("chili-garlic-bread");
-    if (meta?.heroImagePath) return meta.heroImagePath;
-  }
-  if (/chicken/.test(t) && /bowl|bbq/.test(t)) {
-    const meta = getClassicHallMeal("bbq-chicken-bowls");
-    if (meta?.heroImagePath) return meta.heroImagePath;
   }
 
   return null;

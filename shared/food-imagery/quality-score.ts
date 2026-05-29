@@ -3,17 +3,19 @@ import { FIREHALL_MASTER_EDITORIAL_STYLE } from "./master-style.js";
 
 /** Minimum scores for generated image acceptance (vision QA). */
 export const FOOD_IMAGERY_QUALITY_THRESHOLDS = {
-  realismMin: 7,
+  realismMin: 8,
   brandConsistencyMin: 7,
   titleMatchRequired: true,
 } as const;
 
 export const VISION_QA_RUBRIC = `Score this image against Firehall Meals brand standards:
-- Dark cinematic food photography with warm directional light (not flat, not neon, not cold blue)
-- Shallow depth of field, center-weighted hero dish
-- Ultra realistic textures (no plastic cheese, no waxy meat, no AI gloss)
-- Masculine premium comfort food mood (not fast-food commercial, not illustration)
+- Must look like a REAL photograph (DSLR/menu editorial), NOT generative AI, NOT CGI, NOT illustration
+- Dark firehall kitchen styling with warm directional light (not flat, not neon, not cold blue)
+- Shallow natural depth of field, center-weighted hero dish
+- Photorealistic textures (no plastic cheese, no waxy meat, no AI gloss, no airbrushed smoothness)
+- Premium comfort food mood (not fast-food commercial, not fantasy food art)
 - No floating ingredients, no garnish explosion, no text/logos/hands
+- Reject if: obvious AI artifacts, hyper-saturated HDR, synthetic bokeh, uncanny symmetry
 Return JSON only:
 {
   "pass": boolean,

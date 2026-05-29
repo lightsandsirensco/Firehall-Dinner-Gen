@@ -1,0 +1,185 @@
+{
+  "slug": "tabbouleh-chicken-bowls",
+  "title": "Tabbouleh Chicken Bowls",
+  "displayTitle": "Tabbouleh Chicken Bowls",
+  "seoTitle": "Tabbouleh Chicken Bowls | Firefighter Meal",
+  "shortDescription": "Herb-heavy bulgur salad topped with lemon grilled chicken",
+  "subtitle": "Herb-heavy bulgur salad topped with lemon grilled chicken",
+  "category": "healthy_performance",
+  "cuisine": "Lebanese",
+  "description": "Fine bulgur tabbouleh with parsley, mint, tomato, and cucumber tops with grilled lemon chicken for a bright, herb-forward bowl line.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 18,
+  "prepTime": 30,
+  "difficulty": "medium",
+  "calories": 410,
+  "protein": 40,
+  "carbs": 32,
+  "fats": 14,
+  "tags": [
+    "protein:chicken",
+    "format:bowl",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "Grill or half-sheet pan",
+    "Large mixing bowl"
+  ],
+  "ingredients": [
+    {
+      "name": "boneless chicken breasts",
+      "quantity": "3.5",
+      "unit": "lb"
+    },
+    {
+      "name": "fine bulgur",
+      "quantity": "2",
+      "unit": "cups",
+      "notes": "dry"
+    },
+    {
+      "name": "fresh parsley",
+      "quantity": "3",
+      "unit": "cups",
+      "notes": "finely chopped"
+    },
+    {
+      "name": "fresh mint",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "finely chopped"
+    },
+    {
+      "name": "cherry tomatoes",
+      "quantity": "2",
+      "unit": "cups",
+      "notes": "diced small"
+    },
+    {
+      "name": "English cucumber",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "diced small"
+    },
+    {
+      "name": "lemon juice",
+      "quantity": "0.5",
+      "unit": "cup",
+      "notes": "fresh"
+    },
+    {
+      "name": "extra-virgin olive oil",
+      "quantity": "0.33",
+      "unit": "cup"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "4",
+      "unit": "cloves",
+      "notes": "minced"
+    },
+    {
+      "name": "green onions",
+      "quantity": "6",
+      "unit": "whole",
+      "notes": "sliced"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "1.5",
+      "unit": "tsp"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Soak bulgur",
+      "instruction": "Cover bulgur with boiling water, cover bowl, soak 15–20 minutes until tender and fluffy. Drain thoroughly and fluff with a fork.",
+      "minutes": 20,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Build tabbouleh",
+      "instruction": "Toss bulgur with parsley, mint, tomato, cucumber, half the lemon juice, olive oil, garlic, and salt until herbs evenly distributed.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Season and cook chicken",
+      "instruction": "Rub chicken with remaining lemon juice, salt, and pepper. Grill or roast 16–18 minutes until 165°F with light char marks on exterior.",
+      "minutes": 18,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Rest and slice",
+      "instruction": "Rest chicken 5 minutes, slice thin. Meat should be white throughout with juices running clear, not pink at the center.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Assemble bowls",
+      "instruction": "Portion tabbouleh into bowls, top with sliced chicken and green onions. Salad should taste bright and herb-forward, not oily.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "More parsley than bulgur is traditional—do not skimp on herbs.",
+    "Prep tabbouleh 2 hours ahead so flavors meld; add chicken at service.",
+    "Feta crumble adds salt if crew finds tabbouleh too lean."
+  ],
+  "tonightSpread": [
+    "Warm pita wedges.",
+    "Baba ganoush if available from store."
+  ],
+  "leftovers": [
+    "Tabbouleh keeps 2 days; add fresh chicken when serving.",
+    "Wrap in pita with hummus spread."
+  ],
+  "whyCrewsLikeIt": "Reset meal after heavy comfort-food weeks. Huge flavor from herbs without heavy sauces.",
+  "mealPrepNotes": "Soak bulgur while prepping herbs. Chop herbs coarse—not puréed—for authentic texture. Station: Drain bulgur well or bowls turn watery at the line. Station: Grill chicken on flat-top or roast on sheet pan depending on equipment. Station: Bowl line: tabbouleh base, sliced chicken, extra lemon, feta optional.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 410,
+    "protein": 40,
+    "carbs": 32,
+    "fats": 14,
+    "label": "~410 cal/serving · 40g protein · 7g fiber (est.)"
+  },
+  "heroImage": "/images/golden-100/tabbouleh-chicken-bowls.jpg",
+  "mobileImage": "/images/mobile/tabbouleh-chicken-bowls.jpg",
+  "thumbImage": "/images/thumbs/tabbouleh-chicken-bowls.jpg",
+  "railImage": "/images/rails/tabbouleh-chicken-bowls.jpg",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "tabbouleh chicken bowls",
+    "chicken",
+    "Lebanese",
+    "bowl",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "lemon-garlic-chicken-tray",
+    "sheet-pan-chicken-fajitas-lite",
+    "honey-garlic-chicken-rice-bowls",
+    "white-bean-chicken-chili",
+    "korean-beef-rice-bowls",
+    "crock-barbacoa-chicken"
+  ],
+  "generatedAt": "2026-05-28T12:57:50.894Z",
+  "contentVersion": 2
+}

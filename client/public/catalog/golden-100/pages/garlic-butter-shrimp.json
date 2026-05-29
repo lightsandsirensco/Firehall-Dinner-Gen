@@ -1,11 +1,15 @@
 {
   "slug": "garlic-butter-shrimp",
   "title": "Garlic Butter Shrimp",
+  "displayTitle": "Garlic Butter Shrimp",
+  "seoTitle": "Garlic Butter Shrimp | Firefighter Meal",
+  "shortDescription": "Twenty minutes, max flavor",
   "subtitle": "Twenty minutes, max flavor",
   "category": "quick_shift_meals",
   "cuisine": "american",
-  "description": "Garlic Butter Shrimp is a american skillet built for a hungry firehall crew — Twenty minutes, max flavor. Hearty portions, station-kitchen timing, and flavors everyone recognizes after a long shift.",
+  "description": "Twenty minutes, max flavor. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 35,
   "prepTime": 15,
   "difficulty": "easy",
@@ -28,70 +32,77 @@
   ],
   "ingredients": [
     {
-      "name": "Seafood (salmon or white fish fillets)",
+      "name": "Large shrimp, peeled and deveined",
       "quantity": "2.5",
-      "unit": "lb"
+      "unit": "lb",
+      "notes": "pat dry",
+      "group": "Main"
     },
     {
-      "name": "Kosher salt",
-      "quantity": "2",
-      "unit": "tbsp"
+      "name": "Unsalted butter",
+      "quantity": "0.5",
+      "unit": "lb",
+      "group": "Garlic butter"
     },
     {
-      "name": "Black pepper",
-      "quantity": "1",
-      "unit": "tbsp"
+      "name": "Garlic cloves, minced",
+      "quantity": "8",
+      "unit": "cloves",
+      "group": "Garlic butter"
     },
     {
-      "name": "Cooking oil",
-      "quantity": "0.3",
-      "unit": "cup"
+      "name": "Fresh parsley, chopped",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Garnish"
     },
     {
-      "name": "Yellow onion",
-      "quantity": "2",
-      "unit": "large"
+      "name": "Lemon juice",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Garnish"
     },
     {
-      "name": "Garlic",
-      "quantity": "6",
-      "unit": "cloves"
+      "name": "Dry white wine or chicken broth",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Sauce"
+    },
+    {
+      "name": "Red pepper flakes",
+      "quantity": "0.5",
+      "unit": "tsp",
+      "notes": "optional heat",
+      "group": "Seasoning"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Prep the line",
-      "instruction": "Set out all ingredients for Garlic Butter Shrimp before you turn on heat — firefighters eat on a schedule. Pat proteins dry and season aggressively with salt and pepper; dry surfaces brown instead of steam.",
-      "minutes": 15,
+      "title": "Prep shrimp",
+      "instruction": "Pat shrimp completely dry with paper towels — moisture is the enemy of browning. Season with salt and pepper. Mince garlic and chop parsley. Have butter measured; this moves fast.",
+      "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Build the base",
-      "instruction": "Heat oil in your largest skillet, Dutch oven, or on the flat-top over medium-high until it shimmers. Add aromatics (onion first) and cook until the edges turn golden and the smell sweetens — usually 4–6 minutes. If garlic is in the recipe, add it after the onion softens so it doesn't burn.",
-      "minutes": 8,
+      "title": "Sear shrimp",
+      "instruction": "Heat a large skillet over medium-high until just smoking. Add 1 tbsp oil, then shrimp in a single layer (work in batches). Cook 60–90 seconds per side until pink with light browning. Remove immediately to a warm tray — do not overcook.",
+      "minutes": 6,
       "heatLevel": "medium-high"
     },
     {
       "stepNumber": 3,
-      "title": "Cook the main",
-      "instruction": "Cook the primary protein or base for Garlic Butter Shrimp until it hits proper color and safe internal temperature. Don't crowd the pan — work in batches if needed so you get browning, not gray stew. Listen for a steady sizzle; if it's silent, the heat is too low.",
-      "minutes": 20,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 4,
-      "title": "Finish and season",
-      "instruction": "Bring components together, taste, and adjust salt. Sauce should coat, not pool. If cheese is involved, melt it just until glossy — another 1–2 minutes under a lid or broiler. Let heavy proteins rest 5 minutes before slicing.",
-      "minutes": 10,
+      "title": "Garlic butter sauce",
+      "instruction": "Lower heat to medium. Add butter and garlic; swirl until butter foams and garlic smells sweet (30–45 seconds). Deglaze with wine or broth, scraping brown bits. Simmer 1 minute until slightly thickened. Return shrimp and any juices; toss to coat.",
+      "minutes": 4,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 5,
-      "title": "Serve the hall",
-      "instruction": "Transfer to sheet trays or a serving line immediately. Keep backup warm at 200°F. Call the crew while it's hot — this meal is built for a hungry hall, not a photo shoot.",
-      "minutes": 5,
+      "stepNumber": 4,
+      "title": "Plate with lemon",
+      "instruction": "Finish with lemon juice, parsley, and red pepper flakes if using. Garlic Butter Shrimp should smell like butter and garlic, not fishy. Serve over rice, pasta, or with crusty bread on a warm tray — keep backup covered at 200°F for late calls so shrimp do not overcook.",
+      "minutes": 2,
       "heatLevel": "low"
     }
   ],
@@ -109,6 +120,13 @@
     "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
     "Label trays with date and reheat to 165°F minimum before second shift."
   ],
+  "whyCrewsLikeIt": "Twenty minutes, max flavor. A hall pick for tight shifts — one line, real portions, no drama at the stove.",
+  "mealPrepNotes": "Minimal prep — chop aromatics before shift change so you can cook as soon as the board quiets.",
+  "substitutions": [
+    "Frozen shrimp is fine — thaw under cold running water and pat very dry."
+  ],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
   "nutrition": {
     "calories": 480,
     "protein": 36,
@@ -140,6 +158,8 @@
     "pad-thai",
     "bacon-egg-hash"
   ],
-  "generatedAt": "2026-05-27T15:03:06.181Z",
-  "contentVersion": 1
+  "sourceName": "Firehall Meals",
+  "sourceUrl": "",
+  "generatedAt": "2026-05-28T12:06:15.043Z",
+  "contentVersion": 2
 }

@@ -1,15 +1,15 @@
 /**
- * Explore recipe detail — curated DB first, Spoonacular API fallback.
+ * Explore recipe detail — Golden 100 catalog only (no Spoonacular fallback).
  */
 
 import type { CuratedRecipe } from "../shared/curated-recipe/types.js";
 import { isSyntheticExploreId } from "../shared/explore-curated-id.js";
+import { isApprovedCatalogSlug } from "../shared/hall-catalog/gate.js";
 import {
   getCuratedRecipeByExploreId,
   getCuratedRecipeById,
   getCuratedRecipeBySlug,
 } from "./curated-recipe-store.js";
-import { getRecipeById } from "./spoonacular.js";
 import { log } from "./logger.js";
 import { enhanceRecipeSteps, buildEnhanceContextFromTitle } from "./instruction-enhancer.js";
 import { preserveSourceStepsLight } from "./meal-instructions.js";
@@ -24,6 +24,9 @@ import type {
   ExploreDetailLookupHints,
   ExploreRecipeDetailPayload,
 } from "./explore-detail-types.js";
+import { isFirehallOwnedHeroUrl, normalizeOwnedMediaPath } from "../shared/food-imagery/paths.js";
+import { applyImageryGovernanceToCard } from "../shared/explore-imagery-status.js";
+import { resolveFoodImageryHero } from "./food-imagery/hero-resolver.js";
 
 export type { ExploreDetailLookupHints, ExploreRecipeDetailPayload } from "./explore-detail-types.js";
 
@@ -79,6 +82,7 @@ async function detailFromCurated(
   curated: CuratedRecipe,
   spoonacularId: number,
 ): Promise<ExploreRecipeDetailPayload> {
+  const imageApproved = curated.editorialImage?.imageApproved;
   const gr = curated.generateResponse;
   const ingredientNames =
     curated.ingredients.length > 0
@@ -134,11 +138,52 @@ async function detailFromCurated(
 
   const macros = gr?.macros_per_serving;
 
+  const hero = await resolveFoodImageryHero(curated.slug, curated.heroImage, {
+    title: curated.title,
+    protein: curated.protein,
+    cuisine: curated.cuisine,
+    mealFormat: curated.mealFormat,
+  });
+  const hasApprovedHero = Boolean(
+    hero.url &&
+      (hero.source === "generated" || hero.source === "pinned") &&
+      isFirehallOwnedHeroUrl(hero.url) &&
+      imageApproved !== false,
+  );
+  const heroUrl =
+    hasApprovedHero && hero.url ? normalizeOwnedMediaPath(hero.url) : curated.heroImage;
+
+  const baseCard = applyImageryGovernanceToCard(
+    {
+      id: spoonacularId,
+      title: curated.title,
+      image: heroUrl,
+      imageAlt: curated.title,
+      readyInMinutes: curated.totalMinutes,
+      servings: curated.servingsBase,
+      summary: curated.summary || gr?.why_it_fits_tonight || "",
+      sourceUrl: curated.source.url || "",
+      cuisines: curated.cuisine ? [curated.cuisine] : [],
+      diets: [],
+      _curatedSlug: curated.slug,
+      fromCuratedDb: true,
+      curatedRecipeId: curated.recipeId,
+    },
+    {
+      status: curated.status,
+      imageApproved,
+      hasApprovedHero,
+      slug: curated.slug,
+    },
+  );
+
   return {
     id: spoonacularId,
     title: curated.title,
-    image: curated.heroImage,
+    image: baseCard.image,
     imageAlt: curated.title,
+    imageryStatus: baseCard.imageryStatus,
+    heldImageryLabel: baseCard.heldImageryLabel,
     readyInMinutes: curated.totalMinutes,
     servings: curated.servingsBase,
     sourceUrl: curated.source.url || "",
@@ -176,6 +221,10 @@ export async function fetchExploreRecipeDetailPayload(
 
   const curated = resolveCuratedForExplore(exploreId, hints);
   if (curated) {
+    if (!isApprovedCatalogSlug(curated.slug)) {
+      log(`[explore] detail blocked non-catalog slug=${curated.slug} id=${exploreId}`, "catalog");
+      throw new Error("This recipe is not in the Firehall Meals catalog.");
+    }
     log(
       `[explore] detail curated id=${exploreId} recipeId=${curated.recipeId} source=${curated.source.kind}/${curated.source.name} ings=${curated.ingredients.length} steps=${curated.instructions.length}`,
       "catalog",
@@ -189,70 +238,6 @@ export async function fetchExploreRecipeDetailPayload(
     );
   }
 
-  const detail = await getRecipeById(exploreId, includeNutrition);
-  const nutrients = detail.nutrition?.nutrients || [];
-  const findNutrient = (name: string) =>
-    nutrients.find((n) => n.name.toLowerCase() === name.toLowerCase())?.amount || 0;
-
-  let steps = detail.analyzedInstructions?.[0]?.steps || [];
-  if (steps.length === 0 && detail.instructions) {
-    const plain = detail.instructions.replace(/<[^>]*>/g, "").trim();
-    if (plain) {
-      steps = plain
-        .split(/\.\s+/)
-        .filter(Boolean)
-        .map((sentence, i) => ({ number: i + 1, step: sentence.trim() }));
-    }
-  }
-
-  log(`[explore] detail spoonacular fallback id=${exploreId}`, "spoonacular");
-
-  const ingredientNames = (detail.extendedIngredients || []).map((i) => i.name);
-  const rawSteps: RecipeStep[] =
-    steps.length > 0
-      ? steps.map((s) => ({
-          heading: `Step ${s.number}`,
-          body: s.step,
-        }))
-      : [{ heading: "Cook", body: "Follow the recipe method, scaling for your crew size." }];
-
-  const ctx = buildEnhanceContextFromTitle(detail.title, {
-    totalMinutes: detail.readyInMinutes,
-    crewSize: detail.servings,
-    ingredients: ingredientNames,
-  });
-  const shallow = isShallowInstructionSet(
-    rawSteps.map((s) => ({ heading: s.heading, body: s.body })),
-  );
-  const finalSteps = shallow
-    ? await enhanceRecipeSteps(rawSteps, ctx)
-    : preserveSourceStepsLight(rawSteps);
-
-  return {
-    id: detail.id,
-    title: detail.title,
-    image: detail.image,
-    imageAlt: detail.title,
-    readyInMinutes: detail.readyInMinutes,
-    servings: detail.servings,
-    sourceUrl: detail.sourceUrl,
-    summary: (detail.summary || "").replace(/<[^>]*>/g, ""),
-    cuisines: detail.cuisines || [],
-    diets: detail.diets || [],
-    dishTypes: detail.dishTypes || [],
-    ingredients: (detail.extendedIngredients || []).map((ing) => ({
-      name: ing.name,
-      amount: ing.amount,
-      unit: ing.unit,
-      original: ing.original || `${ing.amount} ${ing.unit} ${ing.name}`.trim(),
-    })),
-    steps: payloadStepsFromRecipeSteps(finalSteps),
-    macros: {
-      calories: Math.round(findNutrient("Calories")),
-      protein_g: Math.round(findNutrient("Protein")),
-      carbs_g: Math.round(findNutrient("Carbohydrates")),
-      fat_g: Math.round(findNutrient("Fat")),
-    },
-    _fromCurated: false,
-  };
+  log(`[explore] detail blocked spoonacular fallback id=${exploreId}`, "catalog");
+  throw new Error("This recipe is not available in the Firehall Meals catalog.");
 }

@@ -1,0 +1,190 @@
+{
+  "slug": "turkey-zoodle-bolognese",
+  "title": "Turkey Zoodle Bolognese",
+  "displayTitle": "Turkey Zoodle Bolognese",
+  "seoTitle": "Turkey Zoodle Bolognese | Firefighter Meal",
+  "shortDescription": "Lean turkey ragu over spiralized zucchini with parmesan",
+  "subtitle": "Lean turkey ragu over spiralized zucchini with parmesan",
+  "category": "healthy_performance",
+  "cuisine": "Italian-American",
+  "description": "Ground turkey simmers in tomato-wine bolognese while zucchini noodles stay separate for a lighter hall pasta alternative.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 30,
+  "prepTime": 25,
+  "difficulty": "medium",
+  "calories": 320,
+  "protein": 32,
+  "carbs": 18,
+  "fats": 14,
+  "tags": [
+    "protein:turkey",
+    "format:pasta",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "Spiralizer",
+    "Large sauté pan",
+    "Colander"
+  ],
+  "ingredients": [
+    {
+      "name": "lean ground turkey",
+      "quantity": "2.5",
+      "unit": "lb"
+    },
+    {
+      "name": "zucchini",
+      "quantity": "6",
+      "unit": "large",
+      "notes": "spiralized"
+    },
+    {
+      "name": "crushed tomatoes",
+      "quantity": "2",
+      "unit": "cans",
+      "notes": "28 oz"
+    },
+    {
+      "name": "tomato paste",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "1",
+      "unit": "large",
+      "notes": "finely diced"
+    },
+    {
+      "name": "carrots",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "finely diced"
+    },
+    {
+      "name": "celery stalks",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "finely diced"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "5",
+      "unit": "cloves",
+      "notes": "minced"
+    },
+    {
+      "name": "dry red wine",
+      "quantity": "0.75",
+      "unit": "cup"
+    },
+    {
+      "name": "dried Italian seasoning",
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "Parmesan cheese",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "grated"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "3",
+      "unit": "tbsp"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Salt and drain zoodles",
+      "instruction": "Toss spiralized zucchini with 1 tsp salt, rest 10 minutes in a colander. Squeeze out moisture with towels so noodles stay firm when sauced.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Brown turkey",
+      "instruction": "Cook ground turkey in olive oil over medium-high 8–10 minutes, breaking into fine crumbles until no pink remains and edges look lightly golden.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Build bolognese base",
+      "instruction": "Add onion, carrot, celery; cook 6 minutes. Add garlic, tomato paste, Italian seasoning; cook 2 minutes until paste darkens to brick red.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Simmer sauce",
+      "instruction": "Add wine, reduce 3 minutes. Add crushed tomatoes, simmer 20 minutes uncovered until thick and spoon-coating with visible turkey throughout.",
+      "minutes": 23,
+      "heatLevel": "medium-low"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Sear zoodles and plate",
+      "instruction": "Sauté zoodles in hot oiled skillet 2–3 minutes until just warmed and slightly tender. Top with bolognese and parmesan at the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Do not sauce zoodles until plating—they turn soggy in holding pans.",
+    "A pinch of nutmeg in bolognese adds classic depth.",
+    "Regular spaghetti on the side keeps both camps happy."
+  ],
+  "tonightSpread": [
+    "Garlic bread for crew who skip zoodles.",
+    "Simple arugula salad."
+  ],
+  "leftovers": [
+    "Sauce over regular pasta next day—zoodles do not reheat well.",
+    "Freeze bolognese without zoodles for future pasta nights."
+  ],
+  "whyCrewsLikeIt": "Comfort food flavor without carb coma. Crew gets protein-heavy sauce with fresh vegetable base.",
+  "mealPrepNotes": "Spiralize zucchini day-of—pre-spiralized zoodles weep water. Salt and drain 10 minutes before cooking. Station: Cook zoodles in batches in hot skillet 2 minutes only—overcooking makes watery plates. Station: Keep sauce and zoodles separate until plating for best texture. Station: Offer regular pasta on the side for crew who want both options.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 320,
+    "protein": 32,
+    "carbs": 18,
+    "fats": 14,
+    "label": "~320 cal/serving · 32g protein · 5g fiber (est.)"
+  },
+  "heroImage": "/images/golden-100/turkey-zoodle-bolognese.jpg",
+  "mobileImage": "/images/mobile/turkey-zoodle-bolognese.jpg",
+  "thumbImage": "/images/thumbs/turkey-zoodle-bolognese.jpg",
+  "railImage": "/images/rails/turkey-zoodle-bolognese.jpg",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "turkey zoodle bolognese",
+    "turkey",
+    "Italian-American",
+    "pasta",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "lean-turkey-bean-chili",
+    "turkey-sausage-egg-muffins",
+    "lemon-garlic-shrimp-pasta",
+    "baked-turkey-meatball-marinara",
+    "cottage-cheese-protein-pasta",
+    "turkey-taco-skillet"
+  ],
+  "generatedAt": "2026-05-28T12:57:50.894Z",
+  "contentVersion": 2
+}

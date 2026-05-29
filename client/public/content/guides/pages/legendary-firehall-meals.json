@@ -1,0 +1,74 @@
+{
+  "slug": "legendary-firehall-meals",
+  "title": "Legendary Firehall Meals",
+  "subtitle": "The dishes halls still talk about",
+  "description": "Legendary firehall meals crews remember: chili, BBQ pulls, parm nights, and the recipes that become tradition — not one-off experiments.",
+  "topic": "station_lifestyle",
+  "pillar": "station_lifestyle",
+  "intro": "Every hall has a short list of meals that became lore — the chili after the big job, the rookie's first burnt burgers, the BBQ that fed two companies. Legendary firehall meals are rarely complicated. They are reliable, generous, and tied to a story.",
+  "sections": [
+    {
+      "id": "patterns",
+      "heading": "What legends have in common",
+      "paragraphs": [
+        "Big batches, strong flavor, enough for seconds, and someone who owned the cook without drama."
+      ]
+    },
+    {
+      "id": "stories",
+      "heading": "Why stories stick",
+      "paragraphs": [
+        "Legendary meals are tied to nights — the storm, the transfer, the rookie who nailed it. Write the recipe down so the food survives the story."
+      ]
+    }
+  ],
+  "practicalAdvice": [
+    "Repeat winners beat novelty — tradition is comfort.",
+    "Document the recipe when a meal hits — 'Dave's chili' should be cookable after Dave transfers.",
+    "Feed enough for seconds — legendary nights rarely end with empty pans."
+  ],
+  "mealRecommendations": [
+    {
+      "slug": "chili-garlic-bread",
+      "title": "Firehall Chili",
+      "blurb": "The universal candidate."
+    },
+    {
+      "slug": "pulled-pork",
+      "title": "Pulled Pork Sandwiches",
+      "blurb": "BBQ lore starter at many halls."
+    },
+    {
+      "slug": "chicken-parm",
+      "title": "Chicken Parm",
+      "blurb": "Italian night legend."
+    },
+    {
+      "slug": "smoked-brisket",
+      "title": "Kansas City Smoked Brisket",
+      "blurb": "When the hall has time and a pit."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Where do these recipes come from?",
+      "answer": "Each link goes to a full recipe on Firehall Meals — crew-sized portions, station timing, and steps written for a shared kitchen. Not home-blog scaling."
+    },
+    {
+      "question": "What if crew size or time changes tonight?",
+      "answer": "Use Find a Meal with your headcount and minutes available. It pulls from the same hall-tested dinners these guides recommend."
+    }
+  ],
+  "relatedArticleSlugs": [
+    "meals-every-firefighter-knows",
+    "bbq-night-at-the-station"
+  ],
+  "keywords": [
+    "legendary firehall meals",
+    "fire station famous meals",
+    "hall traditions"
+  ],
+  "publishedAt": "2026-05-27T18:00:00.000Z",
+  "updatedAt": "2026-05-27T18:00:00.000Z",
+  "readMinutes": 7
+}

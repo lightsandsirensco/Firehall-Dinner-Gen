@@ -72,7 +72,7 @@ const COMFORT = [
 
 const HEALTHY = [
   goldenEntry({ slug: "lemon-herb-salmon", title: "Lemon Herb Grilled Salmon", cat: "healthy_performance", protein: "seafood", cuisine: "mediterranean", format: "grill", pools: ["healthy"], hook: "High protein, light cleanup", search: "lemon herb grilled salmon", inspiration: "NYT Cooking" }),
-  goldenEntry({ slug: "greek-chicken-bowls", title: "Greek Chicken Power Bowls", cat: "healthy_performance", protein: "chicken", cuisine: "greek", format: "bowl", pools: ["healthy", "bowl"], hook: "Tzatziki, crisp veg, lean chicken", search: "greek chicken power bowl", inspiration: "Bon Appétit" }),
+  goldenEntry({ slug: "greek-chicken-bowls", title: "Greek Chicken Bowls", cat: "healthy_performance", protein: "chicken", cuisine: "greek", format: "bowl", pools: ["healthy", "bowl"], hook: "Tzatziki, crisp veg, lean chicken", search: "greek chicken bowl", inspiration: "Bon Appétit" }),
   goldenEntry({ slug: "turkey-chili", title: "High-Protein Turkey Chili", cat: "healthy_performance", protein: "turkey", cuisine: "american", format: "soup_chili", pools: ["healthy", "hearty"], hook: "Big pot, lean protein, hall fuel", search: "turkey chili healthy dinner", inspiration: "Serious Eats" }),
   goldenEntry({ slug: "sheet-pan-fajitas", title: "Sheet Pan Chicken Fajitas", cat: "healthy_performance", protein: "chicken", cuisine: "mexican", format: "sheet_pan", pools: ["healthy", "quick"], hook: "One pan, peppers, lean strips", search: "sheet pan chicken fajitas", inspiration: "Budget Bytes" }),
   goldenEntry({ slug: "stuffed-peppers", title: "Quinoa Stuffed Peppers", cat: "healthy_performance", protein: "beef", cuisine: "american", format: "plated_main", pools: ["healthy"], hook: "Colorful, balanced, batch-friendly", search: "quinoa stuffed bell peppers beef", inspiration: "NYT Cooking" }),
@@ -147,7 +147,7 @@ const GAME_DAY = [
 
 const MEAL_PREP = [
   goldenEntry({ slug: "sunday-chili-batch", title: "Sunday Batch Chili", cat: "meal_prep_leftovers", protein: "beef", cuisine: "american", format: "soup_chili", pools: ["slow", "hearty"], hook: "Cook once, feed the week", search: "big batch beef chili meal prep", rec: { mealPrepFriendly: true } }),
-  goldenEntry({ slug: "sheet-pan-meal-prep", title: "Sheet Pan Chicken Meal Prep", cat: "meal_prep_leftovers", protein: "chicken", cuisine: "american", format: "sheet_pan", pools: ["healthy", "quick"], hook: "Portioned trays, reheat-ready", search: "sheet pan chicken meal prep", rec: { mealPrepFriendly: true } }),
+  goldenEntry({ slug: "sheet-pan-meal-prep", title: "Sheet Pan Chicken Trays", cat: "meal_prep_leftovers", protein: "chicken", cuisine: "american", format: "sheet_pan", pools: ["healthy", "quick"], hook: "Portioned trays, reheat-ready", search: "sheet pan chicken trays", rec: { mealPrepFriendly: true } }),
 ];
 
 const ROOKIE = [

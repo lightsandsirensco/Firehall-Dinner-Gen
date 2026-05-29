@@ -1,11 +1,15 @@
 {
   "slug": "jambalaya",
   "title": "Cajun Jambalaya for the Hall",
+  "displayTitle": "Cajun Jambalaya for the Hall",
+  "seoTitle": "Cajun Jambalaya for the Hall | Firefighter Meal",
+  "shortDescription": "One pot, loud flavor, full table",
   "subtitle": "One pot, loud flavor, full table",
   "category": "big_crew_feeders",
   "cuisine": "cajun",
-  "description": "Cajun Jambalaya for the Hall is a cajun one pot built for a hungry firehall crew — One pot, loud flavor, full table. Hearty portions, station-kitchen timing, and flavors everyone recognizes after a long shift.",
+  "description": "One pot, loud flavor, full table. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 90,
   "prepTime": 30,
   "difficulty": "hard",
@@ -27,69 +31,69 @@
   ],
   "ingredients": [
     {
-      "name": "Primary protein or hearty veg base",
-      "quantity": "2",
-      "unit": "lb"
+      "name": "Andouille sausage",
+      "quantity": "1.5",
+      "unit": "lb",
+      "group": "Main"
     },
     {
-      "name": "Kosher salt",
-      "quantity": "2",
-      "unit": "tbsp"
+      "name": "Boneless chicken thighs",
+      "quantity": "1.5",
+      "unit": "lb",
+      "group": "Main"
     },
     {
-      "name": "Black pepper",
+      "name": "Long-grain rice",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Main"
+    },
+    {
+      "name": "Crushed tomatoes",
       "quantity": "1",
-      "unit": "tbsp"
+      "unit": "can",
+      "notes": "28 oz",
+      "group": "Sauce"
     },
     {
-      "name": "Cooking oil",
-      "quantity": "0.3",
-      "unit": "cup"
+      "name": "Chicken broth",
+      "quantity": "4",
+      "unit": "cups",
+      "group": "Broth"
     },
     {
-      "name": "Yellow onion",
-      "quantity": "2",
-      "unit": "large"
-    },
-    {
-      "name": "Garlic",
-      "quantity": "6",
-      "unit": "cloves"
+      "name": "Cajun seasoning",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Seasoning"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Prep the line",
-      "instruction": "Set out all ingredients for Cajun Jambalaya for the Hall before you turn on heat — firefighters eat on a schedule. Pat proteins dry and season aggressively with salt and pepper; dry surfaces brown instead of steam.",
+      "title": "Brown sausage and chicken",
+      "instruction": "In a large Dutch oven, brown sliced sausage and chicken over medium-high. Remove — fond is flavor.",
       "minutes": 15,
-      "heatLevel": ""
+      "heatLevel": "medium-high"
     },
     {
       "stepNumber": 2,
-      "title": "Build the base",
-      "instruction": "Heat oil in your largest skillet, Dutch oven, or on the flat-top over medium-high until it shimmers. Add aromatics (onion first) and cook until the edges turn golden and the smell sweetens — usually 4–6 minutes. If garlic is in the recipe, add it after the onion softens so it doesn't burn.",
-      "minutes": 8,
-      "heatLevel": "medium-high"
+      "title": "Toast rice and simmer",
+      "instruction": "Sauté trinity vegetables, stir in rice 1 minute, add tomatoes, broth, and Cajun seasoning. Nestle meat back in. Simmer covered 25 minutes.",
+      "minutes": 30,
+      "heatLevel": "medium-low"
     },
     {
       "stepNumber": 3,
-      "title": "Cook the main",
-      "instruction": "Cook the primary protein or base for Cajun Jambalaya for the Hall until it hits proper color and safe internal temperature. Don't crowd the pan — work in batches if needed so you get browning, not gray stew. Listen for a steady sizzle; if it's silent, the heat is too low.",
-      "minutes": 20,
-      "heatLevel": "medium-high"
+      "title": "Rest and fluff",
+      "instruction": "Off heat 10 minutes covered, then fluff. Cajun Jambalaya for the Hall should be moist but not soupy — add broth if rice is chalky.",
+      "minutes": 12,
+      "heatLevel": ""
     },
     {
       "stepNumber": 4,
-      "title": "Finish and season",
-      "instruction": "Bring components together, taste, and adjust salt. Sauce should coat, not pool. If cheese is involved, melt it just until glossy — another 1–2 minutes under a lid or broiler. Let heavy proteins rest 5 minutes before slicing.",
-      "minutes": 10,
-      "heatLevel": "medium"
-    },
-    {
-      "stepNumber": 5,
-      "title": "Serve the hall",
-      "instruction": "Transfer to sheet trays or a serving line immediately. Keep backup warm at 200°F. Call the crew while it's hot — this meal is built for a hungry hall, not a photo shoot.",
+      "title": "Serve from the pot",
+      "instruction": "Serve straight from the Dutch oven or transfer to a cambro on warm. Scrape the fond from the bottom — that's free flavor.",
       "minutes": 5,
       "heatLevel": "low"
     }
@@ -110,6 +114,10 @@
     "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
     "Label trays with date and reheat to 165°F minimum before second shift."
   ],
+  "whyCrewsLikeIt": "One pot, loud flavor, full table. A hall pick for big-appetite nights — one line, real portions, no drama at the stove.",
+  "substitutions": [],
+  "spiceLevel": "medium",
+  "cleanupDifficulty": "medium",
   "nutrition": {
     "calories": 520,
     "protein": 32,
@@ -142,6 +150,8 @@
     "loaded-potato-feed",
     "pulled-pork-mac"
   ],
-  "generatedAt": "2026-05-27T15:03:06.201Z",
-  "contentVersion": 1
+  "sourceName": "Firehall Meals",
+  "sourceUrl": "",
+  "generatedAt": "2026-05-28T12:06:15.078Z",
+  "contentVersion": 2
 }

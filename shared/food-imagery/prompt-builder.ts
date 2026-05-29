@@ -6,6 +6,7 @@ import {
   resolvePrimaryCategoryFromContext,
   categoryPromptFragments,
 } from "../categories/imagery.js";
+import { inferPlatingType, buildPlatingPromptLine, platingNegativeHints } from "../plating-type.js";
 
 const FORMAT_PLATING_HINT: Record<string, string> = {
   burger: "stacked handheld on glossy bun, visible layers",
@@ -21,14 +22,13 @@ const FORMAT_PLATING_HINT: Record<string, string> = {
 };
 
 function inferPlatingHint(mealFormat?: string, title?: string): string | undefined {
+  const plating = inferPlatingType(title || "", mealFormat);
+  if (title?.trim()) {
+    return buildPlatingPromptLine(plating, title, "American");
+  }
   const fmt = (mealFormat || "").toLowerCase().replace(/-/g, "_");
   if (FORMAT_PLATING_HINT[fmt]) return FORMAT_PLATING_HINT[fmt];
-  const t = (title || "").toLowerCase();
-  if (/burger|smash/.test(t)) return FORMAT_PLATING_HINT.burger;
-  if (/taco/.test(t)) return FORMAT_PLATING_HINT.tacos;
-  if (/pasta/.test(t)) return FORMAT_PLATING_HINT.pasta;
-  if (/pizza/.test(t)) return FORMAT_PLATING_HINT.pizza;
-  return undefined;
+  return buildPlatingPromptLine(plating, title || "Firehall crew meal", "American");
 }
 
 function topIngredients(ctx: FoodImageryContext, limit = 8): string[] {
@@ -55,7 +55,7 @@ function textureLine(ctx: FoodImageryContext): string {
   if (/creamy|crema|sour cream/.test(t)) bits.push("creamy contrast");
   if (/grill|sear/.test(t)) bits.push("grill marks");
   if (/steam|hot|fresh/.test(t)) bits.push("gentle steam");
-  if (/pull|stretch/.test(t)) bits.push("cheese pull moment");
+  if (/pull|stretch/.test(t)) bits.push("natural cheese stretch where appropriate");
   if (bits.length === 0) bits.push("natural moisture and appetizing texture");
   return bits.join(", ");
 }
@@ -66,6 +66,7 @@ export function buildFoodImageryPromptSpec(ctx: FoodImageryContext): FoodImagery
   const dish = enriched.displayTitle || enriched.title;
   const shotPreset = resolveShotPreset(enriched);
   const platingHint = inferPlatingHint(enriched.mealFormat, enriched.title);
+  const platingType = inferPlatingType(enriched.title, enriched.mealFormat);
   const ingredients = topIngredients(enriched).join(", ");
   const primaryCat = enriched.categoryEnrichment.masterCategoryIds[0]
     || resolvePrimaryCategoryFromContext(enriched);
@@ -85,7 +86,7 @@ export function buildFoodImageryPromptSpec(ctx: FoodImageryContext): FoodImagery
     dishSpecificPlating: platingHint,
     categoryMood: enriched.categoryEnrichment.mood || catFragments.mood,
     categoryLighting: enriched.categoryEnrichment.lighting || catFragments.lighting,
-    extraNegative: enriched.categoryEnrichment.negativeHints,
+    extraNegative: [...(enriched.categoryEnrichment.negativeHints || []), ...platingNegativeHints(platingType)],
   });
 }
 

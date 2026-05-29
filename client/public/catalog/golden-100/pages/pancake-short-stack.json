@@ -1,11 +1,15 @@
 {
   "slug": "pancake-short-stack",
   "title": "Pancake Short Stack for the Crew",
+  "displayTitle": "Pancake Short Stack for the Crew",
+  "seoTitle": "Pancake Short Stack for the Crew | Firefighter Meal",
+  "shortDescription": "Fluffy stacks, bacon on the side",
   "subtitle": "Fluffy stacks, bacon on the side",
   "category": "breakfast_brunch",
   "cuisine": "american",
-  "description": "Pancake Short Stack for the Crew is a american breakfast built for a hungry firehall crew — Fluffy stacks, bacon on the side. Hearty portions, station-kitchen timing, and flavors everyone recognizes after a long shift.",
+  "description": "Fluffy stacks, bacon on the side. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
@@ -27,69 +31,62 @@
   ],
   "ingredients": [
     {
-      "name": "Primary protein or hearty veg base",
+      "name": "Large eggs",
+      "quantity": "18",
+      "unit": "count",
+      "group": "Main"
+    },
+    {
+      "name": "Buttermilk",
+      "quantity": "4",
+      "unit": "cups",
+      "group": "Batter"
+    },
+    {
+      "name": "All-purpose flour",
+      "quantity": "4",
+      "unit": "cups",
+      "group": "Batter"
+    },
+    {
+      "name": "Thick-cut bacon",
       "quantity": "2",
-      "unit": "lb"
+      "unit": "lb",
+      "group": "Side"
     },
     {
-      "name": "Kosher salt",
+      "name": "Maple syrup",
       "quantity": "2",
-      "unit": "tbsp"
-    },
-    {
-      "name": "Black pepper",
-      "quantity": "1",
-      "unit": "tbsp"
-    },
-    {
-      "name": "Cooking oil",
-      "quantity": "0.3",
-      "unit": "cup"
-    },
-    {
-      "name": "Yellow onion",
-      "quantity": "2",
-      "unit": "large"
-    },
-    {
-      "name": "Garlic",
-      "quantity": "6",
-      "unit": "cloves"
+      "unit": "cups",
+      "group": "Serve"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Prep the line",
-      "instruction": "Set out all ingredients for Pancake Short Stack for the Crew before you turn on heat — firefighters eat on a schedule. Pat proteins dry and season aggressively with salt and pepper; dry surfaces brown instead of steam.",
-      "minutes": 15,
+      "title": "Mix batter gently",
+      "instruction": "Whisk dry and wet separately; combine until just mixed. Lumps are fine — over-mixing makes tough pancakes.",
+      "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Build the base",
-      "instruction": "Heat oil in your largest skillet, Dutch oven, or on the flat-top over medium-high until it shimmers. Add aromatics (onion first) and cook until the edges turn golden and the smell sweetens — usually 4–6 minutes. If garlic is in the recipe, add it after the onion softens so it doesn't burn.",
-      "minutes": 8,
-      "heatLevel": "medium-high"
+      "title": "Bake bacon, hold oven",
+      "instruction": "Bake bacon at 400°F on sheet pans 15–18 minutes until crisp. Set oven to 200°F to hold finished pancakes and eggs.",
+      "minutes": 18,
+      "heatLevel": "high"
     },
     {
       "stepNumber": 3,
-      "title": "Cook the main",
-      "instruction": "Cook the primary protein or base for Pancake Short Stack for the Crew until it hits proper color and safe internal temperature. Don't crowd the pan — work in batches if needed so you get browning, not gray stew. Listen for a steady sizzle; if it's silent, the heat is too low.",
+      "title": "Griddle in batches",
+      "instruction": "Griddle at 375°F: pancakes 2–3 minutes per side until golden; eggs if serving scrambled in batches. Common mistake: heat too high — outside burns before center sets.",
       "minutes": 20,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 4,
-      "title": "Finish and season",
-      "instruction": "Bring components together, taste, and adjust salt. Sauce should coat, not pool. If cheese is involved, melt it just until glossy — another 1–2 minutes under a lid or broiler. Let heavy proteins rest 5 minutes before slicing.",
-      "minutes": 10,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 5,
-      "title": "Serve the hall",
-      "instruction": "Transfer to sheet trays or a serving line immediately. Keep backup warm at 200°F. Call the crew while it's hot — this meal is built for a hungry hall, not a photo shoot.",
+      "stepNumber": 4,
+      "title": "Serve the line",
+      "instruction": "Pancake Short Stack for the Crew does not wait — call the crew as batches finish. Syrup and butter on the table; backup tray in the 200°F oven.",
       "minutes": 5,
       "heatLevel": "low"
     }
@@ -108,6 +105,10 @@
     "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
     "Label trays with date and reheat to 165°F minimum before second shift."
   ],
+  "whyCrewsLikeIt": "Fluffy stacks, bacon on the side. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
+  "substitutions": [],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
   "nutrition": {
     "calories": 460,
     "protein": 22,
@@ -139,6 +140,8 @@
     "margherita-pizza",
     "breakfast-sausage-pizza"
   ],
-  "generatedAt": "2026-05-27T15:03:06.204Z",
-  "contentVersion": 1
+  "sourceName": "Firehall Meals",
+  "sourceUrl": "",
+  "generatedAt": "2026-05-28T12:06:15.083Z",
+  "contentVersion": 2
 }

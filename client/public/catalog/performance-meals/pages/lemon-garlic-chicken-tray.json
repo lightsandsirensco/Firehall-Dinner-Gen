@@ -1,0 +1,178 @@
+{
+  "slug": "lemon-garlic-chicken-tray",
+  "title": "Lemon Garlic Chicken Tray Bake",
+  "displayTitle": "Lemon Garlic Chicken Tray Bake",
+  "seoTitle": "Lemon Garlic Chicken Tray Bake | Firefighter Meal",
+  "shortDescription": "Bright citrus thighs with roasted broccoli and baby potatoes for eight",
+  "subtitle": "Bright citrus thighs with roasted broccoli and baby potatoes for eight",
+  "category": "healthy_performance",
+  "cuisine": "American",
+  "description": "Bone-in chicken thighs roast on a half-sheet with lemon, garlic, broccoli, and halved baby potatoes. The pan juices become a simple finishing sauce at the line.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 35,
+  "prepTime": 20,
+  "difficulty": "easy",
+  "calories": 485,
+  "protein": 42,
+  "carbs": 28,
+  "fats": 24,
+  "tags": [
+    "protein:chicken",
+    "format:sheet_pan",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "Two half-sheet pans",
+    "Instant-read thermometer",
+    "Large mixing bowls"
+  ],
+  "ingredients": [
+    {
+      "name": "bone-in chicken thighs",
+      "quantity": "16",
+      "unit": "pieces",
+      "notes": "skin-on, about 6 lb total"
+    },
+    {
+      "name": "baby Yukon gold potatoes",
+      "quantity": "3",
+      "unit": "lb",
+      "notes": "halved"
+    },
+    {
+      "name": "broccoli crowns",
+      "quantity": "2",
+      "unit": "lb",
+      "notes": "cut into florets"
+    },
+    {
+      "name": "fresh lemons",
+      "quantity": "4",
+      "unit": "whole",
+      "notes": "zested and juiced"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "12",
+      "unit": "cloves",
+      "notes": "minced"
+    },
+    {
+      "name": "extra-virgin olive oil",
+      "quantity": "0.5",
+      "unit": "cup"
+    },
+    {
+      "name": "dried oregano",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "black pepper",
+      "quantity": "1",
+      "unit": "tbsp",
+      "notes": "freshly cracked"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Heat oven and prep pans",
+      "instruction": "Heat oven to 425°F. Line two half-sheet pans with parchment. Pat chicken dry so skin crisps instead of steaming in the oven.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Build the lemon garlic marinade",
+      "instruction": "Whisk olive oil, lemon zest, lemon juice, minced garlic, oregano, salt, and pepper until emulsified and fragrant.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Season chicken and vegetables",
+      "instruction": "Toss thighs with half the marinade until coated. Toss potatoes and broccoli with remaining marinade until glossy and evenly seasoned.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Roast until chicken is done",
+      "instruction": "Arrange thighs skin-side up with potatoes around edges and broccoli in gaps. Roast 32–38 minutes until internal temp hits 165°F and skin is golden.",
+      "minutes": 35,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Rest and serve from the tray",
+      "instruction": "Rest pans 5 minutes. Spoon pan juices over portions at the line. Chicken should feel firm with clear juices, not pink at the bone.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Dry thighs thoroughly—wet skin never crisps on a crowded hall tray.",
+    "Rotate pans top to bottom halfway for even browning in a busy oven.",
+    "Add lemon slices only for the last 10 minutes so they caramelize, not burn."
+  ],
+  "tonightSpread": [
+    "Warm whole-wheat pita with tzatziki for scooping pan juices.",
+    "Simple arugula salad with shaved parmesan and lemon vinaigrette."
+  ],
+  "leftovers": [
+    "Shred leftover thighs into a next-day grain bowl with cucumber and feta.",
+    "Chop roasted potatoes into a breakfast hash with scrambled eggs."
+  ],
+  "whyCrewsLikeIt": "High-protein comfort without heavy cream. Everything finishes on one tray, portions fast, and reheats cleanly on the next shift.",
+  "mealPrepNotes": "Marinate thighs up to 24 hours. Chop veg the night before in labeled bins. Hold finished trays at 170°F up to 90 minutes. Station: Split two half-sheet pans so thighs char instead of steam across eight portions. Station: Rest trays 5 minutes before portioning so juices redistribute into the meat. Station: Line a sheet pan with foil under the serving tray for fast post-meal cleanup.",
+  "substitutions": [
+    "Swap broccoli for green beans or asparagus in season."
+  ],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 485,
+    "protein": 42,
+    "carbs": 28,
+    "fats": 24,
+    "label": "~485 cal/serving · 42g protein · 5g fiber (est.)"
+  },
+  "heroImage": "/images/golden-100/lemon-garlic-chicken-tray.jpg",
+  "mobileImage": "/images/mobile/lemon-garlic-chicken-tray.jpg",
+  "thumbImage": "/images/thumbs/lemon-garlic-chicken-tray.jpg",
+  "railImage": "/images/rails/lemon-garlic-chicken-tray.jpg",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "lemon garlic chicken tray bake",
+    "lemon garlic chicken tray",
+    "chicken",
+    "American",
+    "sheet pan",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "herb-baked-salmon-tray",
+    "sheet-pan-chicken-fajitas-lite",
+    "honey-garlic-chicken-rice-bowls",
+    "white-bean-chicken-chili",
+    "crock-barbacoa-chicken",
+    "shawarma-chicken-rice-bowls"
+  ],
+  "generatedAt": "2026-05-28T12:57:50.893Z",
+  "contentVersion": 2
+}

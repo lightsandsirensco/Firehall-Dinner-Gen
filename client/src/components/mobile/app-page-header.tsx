@@ -37,7 +37,7 @@ export function AppPageHeader({
             className={cn(
               "absolute inset-0",
               isEvent
-                ? "bg-gradient-to-br from-orange-950/90 via-red-950/80 to-zinc-950"
+                ? "bg-gradient-to-br from-red-950/90 via-red-950/80 to-zinc-950"
                 : "bg-gradient-to-b from-zinc-950 via-zinc-900/95 to-background",
             )}
             aria-hidden
@@ -53,10 +53,10 @@ export function AppPageHeader({
           />
         </>
       )}
-      <div className={cn(app.mainFeed, "relative py-5 sm:py-8")}>
-        {eyebrow && <div className="flex flex-wrap items-center gap-2 mb-2.5">{eyebrow}</div>}
-        <h1 className={cn(app.titlePage, "max-w-2xl")}>{title}</h1>
-        {subtitle && <p className={cn(app.subtitle, "mt-2.5 max-w-lg")}>{subtitle}</p>}
+      <div className={cn(app.mainFeed, "relative py-7 sm:py-10 md:py-12")}>
+        {eyebrow && <div className="mb-3">{eyebrow}</div>}
+        <h1 className={cn(app.titlePage, "max-w-[16ch] sm:max-w-2xl")}>{title}</h1>
+        {subtitle && <p className={cn(app.lead, "mt-3 max-w-md")}>{subtitle}</p>}
         {children}
       </div>
     </header>

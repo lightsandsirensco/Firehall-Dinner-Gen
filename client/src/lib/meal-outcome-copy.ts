@@ -16,12 +16,13 @@ function timeChipLabel(timeAvailable: string): string {
   }
 }
 
-export const DIFFERENT_MEAL_LABEL = "Different Meal";
-export const DIFFERENT_MEAL_LOADING = "Shuffling dinner ideas…";
-export const INITIAL_MEAL_LOADING = "Working the line…";
-export const INITIAL_MEAL_LABEL = "Put dinner on the board";
-/** S9 — primary one-tap CTA before first meal */
-export const ONE_TAP_MEAL_LABEL = "Feed the hall";
+import { CTA, GENERATOR } from "@/lib/brand-copy";
+
+export const DIFFERENT_MEAL_LABEL = CTA.tryAnother;
+export const DIFFERENT_MEAL_LOADING = GENERATOR.loadingAlt;
+export const INITIAL_MEAL_LOADING = GENERATOR.loading;
+export const INITIAL_MEAL_LABEL = CTA.pickDinner;
+export const ONE_TAP_MEAL_LABEL = CTA.pickDinner;
 
 export function crewLabel(crewSize: number): string {
   return crewSize >= 10 ? "10+" : String(crewSize);
@@ -39,10 +40,10 @@ export function formatDinnerOutcomeLine(filters: FilterState, includeProtein = t
 
 /** Supporting copy under the Different Meal button */
 export function formatDifferentMealSubcopy(filters: FilterState): string {
-  return `Something different for tonight · ${formatDinnerOutcomeLine(filters, false)}`;
+  return `${formatDinnerOutcomeLine(filters, false)}`;
 }
 
 /** Short tag for results / hall context */
 export function formatTonightAtHallLine(): string {
-  return "Tonight at the hall";
+  return "On the board";
 }

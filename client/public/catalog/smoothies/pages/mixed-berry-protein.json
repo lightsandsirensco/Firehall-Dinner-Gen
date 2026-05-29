@@ -1,0 +1,100 @@
+{
+  "slug": "mixed-berry-protein",
+  "title": "Mixed Berry Protein Smoothie",
+  "seoTitle": "Mixed Berry Protein Smoothie | Firefighter Smoothie",
+  "subtitle": "Protein · High protein",
+  "description": "Frozen berries and Greek yogurt give this one milkshake thickness without ice cream. It is the hall default when someone wants protein after a workout or before a long night.",
+  "fuelType": "smoothie",
+  "taxonomyCategory": "protein_smoothie",
+  "taxonomyLabel": "Protein",
+  "intro": "Frozen berries and Greek yogurt give this one milkshake thickness without ice cream. It is the hall default when someone wants protein after a workout or before a long night.",
+  "ingredients": [
+    {
+      "name": "frozen mixed berries",
+      "quantity": "4",
+      "unit": "cups"
+    },
+    {
+      "name": "plain Greek yogurt",
+      "quantity": "2",
+      "unit": "cups",
+      "notes": "2% or whole"
+    },
+    {
+      "name": "milk",
+      "quantity": "1.5",
+      "unit": "cups",
+      "notes": "dairy or unsweetened oat"
+    },
+    {
+      "name": "vanilla extract",
+      "quantity": "1",
+      "unit": "tsp"
+    },
+    {
+      "name": "honey or maple syrup",
+      "quantity": "2",
+      "unit": "tbsp",
+      "notes": "optional"
+    },
+    {
+      "name": "ice cubes",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "only if berries are soft/thawed"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "instruction": "Add yogurt, milk, and berries to the blender. Pulse a few times to break up frozen fruit before blending on high."
+    },
+    {
+      "stepNumber": 2,
+      "instruction": "Blend 45–60 seconds until completely smooth — no berry seeds stuck to the sides. Texture should pour like thick cream, not run like juice."
+    },
+    {
+      "stepNumber": 3,
+      "instruction": "Taste once. Add honey only if the berries were tart; frozen commercial blends are often sweet enough on their own."
+    },
+    {
+      "stepNumber": 4,
+      "instruction": "Serve immediately in tall cups, or hold in the fridge up to 4 hours — stir before drinking because separation is normal."
+    }
+  ],
+  "nutrition": {
+    "calories": 280,
+    "protein": 22,
+    "carbs": 32,
+    "fats": 8,
+    "highlights": "~280 cal per 12 oz serving · ~22 g protein · fiber from whole fruit · no added sugar required if berries are ripe"
+  },
+  "substitutions": [
+    "Swap Greek yogurt for skyr for even more protein per cup.",
+    "Use whey or plant protein powder (1 scoop) if you need a bigger protein bump."
+  ],
+  "shiftNote": "Works when the crew wants something cold and filling between meals without firing up the stove. Cleanup is one blender jar.",
+  "heroImage": "/images/editorial/smoothies/mixed-berry-protein.webp",
+  "thumbImage": "/images/editorial/smoothies/mixed-berry-protein.webp",
+  "tags": [
+    "fuel_smoothie",
+    "taxonomy:protein_smoothie",
+    "smoothie",
+    "performance_fuel",
+    "shift_nutrition"
+  ],
+  "searchTerms": [
+    "mixed berry protein smoothie",
+    "healthy smoothies",
+    "smoothies for firefighters",
+    "firefighter breakfast",
+    "recovery smoothie",
+    "protein smoothie",
+    "station blender",
+    "shift nutrition"
+  ],
+  "relatedSlugs": [],
+  "catalogSet": "fuel_smoothie",
+  "generatedAt": "2026-05-28T00:37:54.583Z",
+  "contentVersion": 1
+}

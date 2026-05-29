@@ -1,0 +1,111 @@
+{
+  "slug": "station-breakfast-33",
+  "title": "Station Breakfast 33",
+  "filters": [
+    "feed_a_crew"
+  ],
+  "tags": [
+    "egg-bake",
+    "9x13",
+    "line-friendly"
+  ],
+  "crewSize": 8,
+  "baseServings": 8,
+  "prepTime": 15,
+  "cookTime": 40,
+  "totalTime": 55,
+  "difficulty": "easy",
+  "heroImage": "/images/breakfast/station-breakfast-33.jpg",
+  "thumbImage": "/images/thumbs/breakfast/station-breakfast-33.jpg",
+  "seoTitle": "Station Breakfast 33 | Firehall Breakfast",
+  "subtitle": "A crew-sized bake that feeds staggered eaters without turning rubbery.",
+  "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+  "ingredients": [
+    {
+      "quantity": "14",
+      "name": "large eggs"
+    },
+    {
+      "quantity": "2 cups",
+      "name": "whole milk",
+      "notes": "or half-and-half for richer"
+    },
+    {
+      "quantity": "1 1/2 lb",
+      "name": "turkey sausage or lean pork sausage",
+      "notes": "browned"
+    },
+    {
+      "quantity": "1",
+      "name": "onion",
+      "notes": "diced"
+    },
+    {
+      "quantity": "8–10 oz",
+      "name": "baby spinach",
+      "notes": "or chopped kale, sautéed and squeezed dry"
+    },
+    {
+      "quantity": "2 cups",
+      "name": "shredded cheese",
+      "notes": "cheddar + mozzarella works well"
+    },
+    {
+      "quantity": "1",
+      "name": "loaf day-old bread",
+      "notes": "cubed (optional), turns it into a strata",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Heat the oven",
+      "tempF": 375,
+      "minutes": 0,
+      "instruction": "Heat oven to 375°F. Grease a deep 9x13 pan. If using bread cubes, toast them 6–8 minutes so the bake doesn’t go soggy."
+    },
+    {
+      "stepNumber": 2,
+      "title": "Build the pan",
+      "minutes": 10,
+      "instruction": "Spread sausage, onion, and spinach in the pan. Add half the cheese. (If using bread cubes, fold them through now.)"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Egg mix",
+      "minutes": 5,
+      "instruction": "Whisk eggs with milk, salt, pepper, and a pinch of paprika. Pour evenly. Top with remaining cheese."
+    },
+    {
+      "stepNumber": 4,
+      "title": "Bake to set",
+      "tempF": 375,
+      "minutes": 35,
+      "instruction": "Bake until the center is set and the edges are browned. If it jiggles like loose custard, give it 5 more minutes."
+    },
+    {
+      "stepNumber": 5,
+      "title": "Rest for clean slices",
+      "minutes": 10,
+      "instruction": "Rest 10 minutes so slices hold for the line. Cut into squares; hold warm covered."
+    }
+  ],
+  "stationWorkflow": [
+    "Assign one cook to the hot surface and one to assembly. Keep the line moving; don’t crowd the griddle.",
+    "Set a warm holding zone (oven 200°F or covered hotel pan) so staggered eaters still get a hot plate.",
+    "Run a quick call-proof check: anything crispy stays uncovered; anything soft stays covered."
+  ],
+  "cleanupNotes": [
+    "While plates are served, scrape the griddle/pan and wipe with a damp towel (use tongs + folded towel).",
+    "Soak the mixing bowl and sheet pan immediately—breakfast starch sets fast when it cools."
+  ],
+  "leftovers": [
+    "Cool fast: spread on a sheet pan 10 minutes, then portion into containers so it doesn’t sweat.",
+    "Reheat rule: eggs reheat best covered at 50% power or low oven heat; don’t nuke on high."
+  ],
+  "imageAlt": "Warm station-kitchen breakfast: Station Breakfast 33",
+  "publishedAt": "2026-05-28T13:26:37.645Z",
+  "updatedAt": "2026-05-28T13:26:37.645Z",
+  "readMinutes": 6
+}

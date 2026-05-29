@@ -28,6 +28,8 @@ export const EDITORIAL_IMAGE_DIRS = {
 
   golden100: "golden-100",
 
+  smoothies: "smoothies",
+
   mobile: "mobile",
 
   thumbs: "thumbs",
@@ -45,6 +47,8 @@ export type EditorialImageSubdir = keyof typeof EDITORIAL_IMAGE_DIRS;
 const SUBDIR_TO_ROLE: Record<EditorialImageSubdir, EditorialVariantRole> = {
 
   golden100: "hero",
+
+  smoothies: "hero",
 
   mobile: "mobile",
 
@@ -67,6 +71,16 @@ export function editorialSlugFilename(slug: string, ext: EditorialImageFormat = 
 export function golden100HeroPath(slug: string): string {
 
   return editorialPathForRole("hero", slug, "jpg");
+
+}
+
+
+
+export function smoothieHeroPath(slug: string): string {
+
+  const file = editorialSlugFilename(slug, "jpg");
+
+  return `/images/smoothies/${file}`;
 
 }
 
@@ -169,9 +183,14 @@ export function mirrorEditorialImageFile(
 
   const role = SUBDIR_TO_ROLE[subdir];
 
+  const publicPath =
+    subdir === "smoothies"
+      ? `/images/smoothies/${filename}`
+      : editorialPathForRole(role, slug, ext);
+
   return {
 
-    publicPath: editorialPathForRole(role, slug, ext),
+    publicPath,
 
     absolutePath,
 

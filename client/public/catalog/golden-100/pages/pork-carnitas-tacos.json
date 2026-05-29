@@ -1,18 +1,22 @@
 {
   "slug": "pork-carnitas-tacos",
   "title": "Quick Pork Carnitas Tacos",
+  "displayTitle": "Quick Pork Carnitas Tacos",
+  "seoTitle": "Quick Pork Carnitas Tacos | Firefighter Meal",
+  "shortDescription": "Crispy edges, fast tortilla night",
   "subtitle": "Crispy edges, fast tortilla night",
   "category": "quick_shift_meals",
   "cuisine": "mexican",
-  "description": "The kind of spread that ends the \"what's for dinner?\" argument fast. Mexican pork crew dinner for 8 — about 45 min. Works great when you've got one person on the stove and another on sides.",
+  "description": "Crispy edges, fast tortilla night. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
-  "cookTime": 45,
+  "baseServings": 8,
+  "cookTime": 35,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 550,
+  "calories": 600,
   "protein": 40,
-  "carbs": 35,
-  "fats": 20,
+  "carbs": 48,
+  "fats": 28,
   "tags": [
     "protein:pork",
     "format:tacos",
@@ -28,131 +32,69 @@
   ],
   "ingredients": [
     {
-      "name": "water",
-      "quantity": "7",
-      "notes": "7 cups water 7 cups water"
+      "name": "Boneless chicken thighs",
+      "quantity": "3",
+      "unit": "lb",
+      "group": "Main"
     },
     {
-      "name": "pork butt",
-      "quantity": "4",
-      "notes": "4 lbs pork butt 2 pounds Pork butt trimmed, and cut in 2\" cubes; hall portion"
-    },
-    {
-      "name": "garlic",
-      "quantity": "4",
-      "notes": "4 cloves garlic 4 cloves garlic, crushed"
-    },
-    {
-      "name": "sea salt and ground pepper",
-      "quantity": "8",
-      "notes": "8 sea salt and ground pepper sea salt and ground pepper to taste"
-    },
-    {
-      "name": "olive oil",
-      "quantity": "1",
-      "notes": "1 tsp olive oil 1 teaspoon olive oil"
-    },
-    {
-      "name": "orange juice",
-      "quantity": "0.5",
-      "notes": "0.5 cups orange juice 1/2 cup orange juice"
-    },
-    {
-      "name": "milk",
-      "quantity": "0.5",
-      "notes": "0.5 cups milk 1/2 cup milk"
-    },
-    {
-      "name": "corn tortillas",
+      "name": "Flour or corn tortillas",
       "quantity": "24",
-      "notes": "24 corn tortillas 24 Corn Tortillas"
+      "unit": "count",
+      "group": "Serve"
     },
     {
-      "name": "salsa fresca",
-      "quantity": "8",
-      "notes": "8 salsa fresca Salsa Fresca"
+      "name": "White onion",
+      "quantity": "2",
+      "unit": "large",
+      "group": "Toppings"
     },
     {
-      "name": "avocado",
+      "name": "Fresh cilantro",
       "quantity": "1",
-      "notes": "1 slices avocado Avocado slices"
+      "unit": "bunch",
+      "group": "Toppings"
     },
     {
-      "name": "cilantro",
-      "quantity": "8",
-      "notes": "8 cilantro Chopped cilantro"
+      "name": "Lime",
+      "quantity": "6",
+      "unit": "count",
+      "group": "Finish"
     },
     {
-      "name": "onion",
-      "quantity": "8",
-      "notes": "8 onion Chopped onion"
-    },
-    {
-      "name": "limes",
-      "quantity": "8",
-      "notes": "8 limes Limes cut into wedges"
+      "name": "Cumin",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Seasoning"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Step 1",
-      "instruction": "In a large Dutch oven add the pork, garlic, salt and pepper, and water. Bring to a boil, then reduce heat, cover and simmer over medium low for 45 minutes to one hour.",
-      "minutes": 45,
-      "heatLevel": "medium-low"
+      "title": "Prep toppings",
+      "instruction": "Dice onion, pick cilantro leaves, cut limes into wedges. Warm a sheet tray for holding cooked protein — tacos move fast once meat hits the board.",
+      "minutes": 10,
+      "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Step 2",
-      "instruction": "Drain well. Watch color and texture — if it smells sharp or looks pale, give it another minute before moving on.",
-      "heatLevel": ""
+      "title": "Cook the filling",
+      "instruction": "Season protein with salt and cumin. Sear over medium-high until cooked through (chicken 165°F, steak 130°F then rest). Rest steak 8 minutes; slice thin against the grain.",
+      "minutes": 18,
+      "heatLevel": "medium-high"
     },
     {
       "stepNumber": 3,
-      "title": "Step 3",
-      "instruction": "When cool enough to handle, shred the meat by hand or with the tines of a fork.",
-      "heatLevel": ""
+      "title": "Warm tortillas",
+      "instruction": "Char tortillas on a dry griddle 20 seconds per side or wrap in foil at 300°F 10 minutes. Stack in a towel so they stay pliable.",
+      "minutes": 10,
+      "heatLevel": "medium"
     },
     {
       "stepNumber": 4,
-      "title": "Step 4",
-      "instruction": "Remove and discard any remaining fat. Watch color and texture — if it smells sharp or looks pale, give it another minute before moving on.",
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 5,
-      "title": "Step 5",
-      "instruction": "Transfer back to Dutch oven and heat the olive oil. Watch color and texture — if it smells sharp or looks pale, give it another minute before moving on.",
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 6,
-      "title": "Step 6",
-      "instruction": "Add the orange juice and milk and cook until liquid has evaporated and pork has browned; stirring occasionally. Season with salt and pepper to taste.",
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 7,
-      "title": "Step 7",
-      "instruction": "Chop onions and cilantro, and slice avocado and limes. Watch color and texture — if it smells sharp or looks pale, give it another minute before moving on.",
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "Step 8",
-      "instruction": "Place each in small individual bowls for serving. Watch color and texture — if it smells sharp or looks pale, give it another minute before moving on.",
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 9,
-      "title": "Step 9",
-      "instruction": "Heat tortillas in a dry frying pan and keep warm. Watch color and texture — if it smells sharp or looks pale, give it another minute before moving on.",
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
-      "title": "Step 10",
-      "instruction": "For each taco, stack 2 tortillas and layer with warm carnitas, chopped cilantro, onion and avocado slices and give it a good squeeze of lemon juice.",
+      "title": "Run the taco line",
+      "instruction": "Quick Pork Carnitas Tacos: protein, onion, cilantro, lime. Crew builds their own — fastest way to feed eight without cold plates.",
+      "minutes": 5,
       "heatLevel": ""
     }
   ],
@@ -171,18 +113,23 @@
     "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
     "Label trays with date and reheat to 165°F minimum before second shift."
   ],
+  "whyCrewsLikeIt": "Crispy edges, fast tortilla night. A hall pick for tight shifts — one line, real portions, no drama at the stove.",
+  "mealPrepNotes": "Minimal prep — chop aromatics before shift change so you can cook as soon as the board quiets.",
+  "substitutions": [],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 550,
+    "calories": 600,
     "protein": 40,
-    "carbs": 35,
-    "fats": 20,
+    "carbs": 48,
+    "fats": 28,
     "label": "per serving (hall portion)"
   },
   "heroImage": "/images/golden-100/pork-carnitas-tacos.jpg",
   "mobileImage": "/images/mobile/pork-carnitas-tacos.jpg",
   "thumbImage": "/images/thumbs/pork-carnitas-tacos.jpg",
   "railImage": "/images/rails/pork-carnitas-tacos.jpg",
-  "realismScore": 100,
+  "realismScore": 94,
   "firefighterScore": 100,
   "popularityWeight": 3.2,
   "searchTerms": [
@@ -203,8 +150,8 @@
     "hall-taco-bar",
     "steak-tacos"
   ],
-  "sourceName": "Foodista",
-  "sourceUrl": "https://www.foodista.com/recipe/76ZPMZJN/pork-carnitas-tacos",
-  "generatedAt": "2026-05-27T15:03:06.186Z",
-  "contentVersion": 1
+  "sourceName": "Firehall Meals",
+  "sourceUrl": "",
+  "generatedAt": "2026-05-28T12:06:15.052Z",
+  "contentVersion": 2
 }

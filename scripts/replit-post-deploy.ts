@@ -24,6 +24,16 @@ async function main(): Promise<void> {
   execSync("npx tsx scripts/sync-hall-classics-curated.ts", { stdio: "inherit" });
   execSync("npx tsx scripts/fix-localhost-hero-urls.ts", { stdio: "inherit" });
 
+  console.log("[replit-post-deploy] golden-100 catalog verify…");
+  try {
+    execSync("npm run catalog:verify", { stdio: "inherit" });
+  } catch {
+    console.warn("[replit-post-deploy] catalog:verify failed — check pages/images before traffic");
+  }
+
+  console.log("[replit-post-deploy] sitemap…");
+  execSync("npx tsx scripts/generate-sitemap.ts", { stdio: "inherit" });
+
   const cfg = getFoodImageryConfig();
   if (runImagery && cfg.enabled) {
     console.log("[replit-post-deploy] imagery backfill (pizza + classics slugs)…");

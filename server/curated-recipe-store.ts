@@ -22,7 +22,14 @@ import type { CatalogBalanceSnapshot } from "../shared/feed-balance.js";
 import { recipeFingerprint, normalizeTitleKey } from "../shared/ingestion/dedupe.js";
 import { GOLDEN_100_RECIPES } from "../shared/golden-100/manifest.js";
 import { parseEditorialImageMetadata } from "../shared/editorial-image-metadata.js";
+import {
+  detectSubjectDrift,
+  invalidateEditorialImageOnDrift,
+  applySubjectLockToMetadata,
+} from "../shared/image-subject-lock.js";
+import { scoreImageIntegrity } from "../shared/image-integrity.js";
 import { safeJsonParseNullable } from "./lib/safe-json.js";
+import { isExcludedFromDinnerFeeds } from "../shared/fuel-catalog/isolation.js";
 import { normalizeImagePath } from "../shared/media/normalize-image-path.js";
 import {
   resolveRecipeMetadata,
@@ -175,6 +182,46 @@ export function upsertCuratedRecipe(input: CuratedRecipeInsert): CuratedRecipe {
     editorialImage: editorialNormalized ?? input.editorialImage,
   };
 
+  const existingRecipe = getCuratedRecipeById(normalized.recipeId);
+  if (existingRecipe) {
+    const drift = detectSubjectDrift(existingRecipe, {
+      title: normalized.title,
+      cuisine: normalized.cuisine,
+      mealFormat: normalized.mealFormat,
+    });
+    let nextEditorial = normalized.editorialImage ?? existingRecipe.editorialImage;
+    if (drift.drifted && nextEditorial) {
+      nextEditorial = invalidateEditorialImageOnDrift(nextEditorial, drift.reasons);
+    }
+    if (nextEditorial) {
+      const integrity = scoreImageIntegrity({
+        slug: normalized.slug,
+        title: normalized.title,
+        protein: normalized.protein,
+        cuisine: normalized.cuisine,
+        mealFormat: normalized.mealFormat,
+        heroImage: normalized.heroImage || nextEditorial.heroImage,
+        heroAlt: normalized.title,
+        imageApproved: nextEditorial.imageApproved,
+      });
+      nextEditorial = applySubjectLockToMetadata(
+        nextEditorial,
+        {
+          title: normalized.title,
+          cuisine: normalized.cuisine,
+          mealFormat: normalized.mealFormat,
+        },
+        { score: integrity.score, flags: integrity.flags },
+      );
+      if (!integrity.pass) {
+        nextEditorial = { ...nextEditorial, imageApproved: false };
+      }
+    }
+    if (nextEditorial) {
+      normalized.editorialImage = nextEditorial;
+    }
+  }
+
   const validation = validateCuratedRecipeInsert(normalized);
   if (!validation.ok) {
     throw new Error(`Invalid curated recipe: ${validation.errors.join("; ")}`);
@@ -217,9 +264,10 @@ export function upsertCuratedRecipe(input: CuratedRecipeInsert): CuratedRecipe {
           ?, ?, ?, ?, ?,
           ?, ?, ?, ?, ?, ?,
           ?, ?, ?, ?, ?, ?,
-          ?, ?, ?, ?,
+          ?, ?,
           ?, ?, ?, ?, ?, ?,
-          ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,
+          ?, ?, ?, ?, ?,
+          ?, ?, ?, ?, ?,
           ?, ?, ?, ?, ?, ?,
           ?, ?, ?, ?, ?,
           ?, ?, ?, ?, datetime('now')
@@ -364,6 +412,15 @@ function parseSpoonacularId(recipeId: string, externalId: unknown): number | nul
   return null;
 }
 
+function parseSummaryImageApproved(row: Record<string, unknown>): boolean | undefined {
+  if (!row.editorial_image_json) return undefined;
+  const meta = safeJsonParseNullable<{ imageApproved?: boolean }>(
+    String(row.editorial_image_json),
+  );
+  if (!meta || meta.imageApproved === undefined) return undefined;
+  return Boolean(meta.imageApproved);
+}
+
 function rowToSummary(row: Record<string, unknown>): CuratedRecipeSummary {
   const recipeId = String(row.recipe_id);
   return {
@@ -388,6 +445,7 @@ function rowToSummary(row: Record<string, unknown>): CuratedRecipeSummary {
     summary: String(row.summary || ""),
     status: row.status as CuratedRecipeSummary["status"],
     featured: Boolean(row.featured),
+    imageApproved: parseSummaryImageApproved(row),
     metadata: row.difficulty
       ? {
           difficulty: String(row.difficulty) as NonNullable<CuratedRecipeSummary["metadata"]>["difficulty"],
@@ -420,6 +478,7 @@ function isAggregatorSourceName(name: string): boolean {
 
 function sortByEditorialPriority(rows: CuratedRecipeSummary[]): CuratedRecipeSummary[] {
   return [...rows]
+    .filter((row) => !isExcludedFromDinnerFeeds(row))
     .filter((row) => !row.sourceUrl || !isLowQualityRecipeHost(row.sourceUrl))
     .map((row) => {
       let editorial = scoreEditorialQuality({
@@ -488,6 +547,30 @@ export function listCuratedForExplorePool(poolTag: string, limit = 12): CuratedR
     };
     const re = poolHints[pool];
     return re ? re.test(hay) : true;
+    }),
+  ).slice(0, limit);
+}
+
+/** Review-queue meals — shown in Explore as editorial held placeholders (no hero). */
+export function listCuratedHeldForExplore(poolTag: string, limit = 3): CuratedRecipeSummary[] {
+  const pool = poolTag.toLowerCase();
+  const tagged = sortByEditorialPriority(
+    listCuratedRecipeSummaries({
+      status: "review",
+      explorePool: pool,
+      minQuality: 30,
+      limit: limit * 4,
+      orderBy: "publisherFirst",
+    }),
+  );
+  if (tagged.length > 0) return tagged.slice(0, limit);
+
+  return sortByEditorialPriority(
+    listCuratedRecipeSummaries({
+      status: "review",
+      minQuality: 30,
+      limit: limit * 4,
+      orderBy: "publisherFirst",
     }),
   ).slice(0, limit);
 }
@@ -858,6 +941,52 @@ export function updateCuratedRecipeMetadata(input: {
   }
 
   return upsertCuratedRecipe(insertLike);
+}
+
+export function replaceCuratedRecipeCategoryKeys(recipeId: string, categoryKeys: string[]): void {
+  const database = requireDb();
+  const keys = [...new Set(categoryKeys.map((k) => k.trim().toLowerCase()).filter(Boolean))];
+  const txn = database.transaction(() => {
+    database.prepare("DELETE FROM curated_recipe_categories WHERE recipe_id = ?").run(recipeId);
+    for (const key of keys) {
+      database
+        .prepare(
+          `INSERT OR REPLACE INTO curated_recipe_categories (recipe_id, category_key, weight)
+           VALUES (?, ?, 1)`,
+        )
+        .run(recipeId, key);
+      database
+        .prepare(
+          `INSERT OR IGNORE INTO curated_recipe_tags (recipe_id, tag, tag_kind)
+           VALUES (?, ?, 'explore_pool')`,
+        )
+        .run(recipeId, key);
+    }
+  });
+  txn();
+}
+
+export function replaceCuratedRecipeFirehallTags(recipeId: string, tags: string[]): void {
+  const database = requireDb();
+  const next = [...new Set(tags.map((t) => t.trim().toLowerCase()).filter(Boolean))];
+  const txn = database.transaction(() => {
+    // Remove prior Firehall-category tags only.
+    database
+      .prepare(
+        `DELETE FROM curated_recipe_tags
+         WHERE recipe_id = ? AND (tag LIKE 'fh_primary:%' OR tag LIKE 'fh_tag:%')`,
+      )
+      .run(recipeId);
+    for (const t of next) {
+      database
+        .prepare(
+          `INSERT OR IGNORE INTO curated_recipe_tags (recipe_id, tag, tag_kind)
+           VALUES (?, ?, 'editorial')`,
+        )
+        .run(recipeId, t);
+    }
+  });
+  txn();
 }
 
 export function findExistingCuratedForDraft(

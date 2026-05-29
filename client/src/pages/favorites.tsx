@@ -6,8 +6,8 @@ import { FavoriteMealCard } from "@/components/mobile/favorite-meal-card";
 import { getSavedMeals, removeMeal, type SavedMeal } from "@/lib/saved-meals";
 import { Heart, ChevronLeft } from "lucide-react";
 import { Link } from "wouter";
-import { HeroHeader } from "@/components/hero-header";
 import { SiteHeader } from "@/components/site-header";
+import { AppPageHeader } from "@/components/mobile/app-page-header";
 import { app } from "@/lib/design-tokens";
 import { cn } from "@/lib/utils";
 
@@ -38,41 +38,32 @@ export default function FavoritesPage() {
 
   return (
     <div className={app.page}>
-      <SiteHeader activePage="favorites" />
+      <SiteHeader activePage="favorites" favCount={meals.length} />
 
-      <HeroHeader
-        variant="compact"
-        title="Hall Favorites"
+      <AppPageHeader
+        variant="minimal"
+        title="Saved meals"
         subtitle={
           meals.length === 0
-            ? "Save your best crew meals here"
-            : `${meals.length} saved ${meals.length === 1 ? "meal" : "meals"}`
+            ? "Hall favorites land here after you save a dinner."
+            : `${meals.length} ${meals.length === 1 ? "meal" : "meals"} ready to cook again`
         }
       />
 
-      <main className={cn(app.main, "py-4 sm:py-6 pb-safe-nav max-w-[1000px]")}>
+      <main className={cn(app.main, "py-6 sm:py-8 pb-safe-nav max-w-[1000px]")}>
         {meals.length === 0 ? (
-          <div className="text-center py-16 px-4">
-            <Heart className="w-12 h-12 mx-auto text-muted-foreground/20 mb-4" />
-            <p className="text-muted-foreground text-sm mb-4">Your favorites are empty.</p>
-            <Link href="/">
-              <Button
-                variant="outline"
-                className="font-heading tracking-wide min-h-11 touch-manipulation rounded-xl"
-                data-testid="button-go-generate"
-              >
+          <div className="text-center py-20 px-4">
+            <Heart className="w-10 h-10 mx-auto text-muted-foreground/25 mb-4" />
+            <p className={app.subtitle}>Nothing saved yet.</p>
+            <Link href="/generator">
+              <Button variant="outline" className="mt-6 min-h-11 touch-manipulation rounded-xl" data-testid="button-go-generate">
                 <ChevronLeft className="w-4 h-4 mr-1" />
-                Generate a meal
+                Set tonight&apos;s meal
               </Button>
             </Link>
           </div>
         ) : (
-          <div
-            className={cn(
-              "grid gap-3 sm:gap-4 sm:grid-cols-2 lg:grid-cols-3",
-              app.stagger,
-            )}
-          >
+          <div className={cn("grid gap-4 sm:grid-cols-2 lg:grid-cols-3", app.stagger)}>
             {meals.map((meal) => (
               <FavoriteMealCard
                 key={meal.id}
@@ -87,42 +78,21 @@ export default function FavoritesPage() {
       </main>
 
       <Dialog open={!!viewingMeal} onOpenChange={(open) => !open && setViewingMeal(null)}>
-        <DialogContent className="max-w-3xl max-h-[90dvh] overflow-y-auto max-sm:fixed max-sm:inset-x-0 max-sm:bottom-0 max-sm:top-auto max-sm:left-0 max-sm:translate-x-0 max-sm:translate-y-0 max-sm:max-h-[92dvh] max-sm:rounded-t-2xl max-sm:w-full pb-safe scroll-momentum">
+        <DialogContent className="max-w-3xl max-h-[90dvh] overflow-y-auto scroll-momentum">
           <DialogHeader>
-            <DialogTitle className="font-heading text-xl tracking-tight flex items-center gap-2">
-              <Heart className="w-5 h-5 text-primary" />
-              Saved meal
+            <DialogTitle className="font-heading text-xl tracking-wide">
+              {viewingMeal?.recipe.title}
             </DialogTitle>
           </DialogHeader>
           {viewingMeal && (
-            <div className="space-y-4">
-              <RecipeCard recipe={viewingMeal.recipe} crewSize={6} hideSave />
-              <Button
-                variant="outline"
-                className="w-full text-destructive hover:text-destructive min-h-11 rounded-xl"
-                onClick={() => handleRemove(viewingMeal.id)}
-                data-testid="button-remove-from-view"
-              >
-                Remove from favorites
-              </Button>
-            </div>
+            <RecipeCard
+              recipe={viewingMeal.recipe}
+              crewSize={viewingMeal.recipe.servings || 6}
+              hideSave
+            />
           )}
         </DialogContent>
       </Dialog>
-
-      <footer className="text-center py-4 mt-4 pb-safe">
-        <p className="text-xs text-muted-foreground/60">
-          Powered by{" "}
-          <a
-            href="https://www.lightsandsirensco.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-muted-foreground transition-colors"
-          >
-            Lights &amp; Sirens Co.
-          </a>
-        </p>
-      </footer>
     </div>
   );
 }

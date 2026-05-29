@@ -1,0 +1,187 @@
+{
+  "slug": "grilled-shrimp-quinoa-bowls",
+  "title": "Grilled Shrimp Quinoa Bowls",
+  "displayTitle": "Grilled Shrimp Quinoa Bowls",
+  "seoTitle": "Grilled Shrimp Quinoa Bowls | Firefighter Meal",
+  "shortDescription": "Charred shrimp skewers over quinoa with roasted vegetables",
+  "subtitle": "Charred shrimp skewers over quinoa with roasted vegetables",
+  "category": "healthy_performance",
+  "cuisine": "Mediterranean",
+  "description": "Large shrimp marinate in lemon-garlic oil, grill on skewers, and serve over quinoa with roasted zucchini and cherry tomatoes.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 20,
+  "prepTime": 25,
+  "difficulty": "medium",
+  "calories": 395,
+  "protein": 38,
+  "carbs": 36,
+  "fats": 12,
+  "tags": [
+    "protein:shrimp",
+    "format:grill",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "Grill",
+    "Half-sheet pan",
+    "Skewers"
+  ],
+  "ingredients": [
+    {
+      "name": "large shrimp",
+      "quantity": "3",
+      "unit": "lb",
+      "notes": "peeled, deveined, 16–20 count"
+    },
+    {
+      "name": "quinoa",
+      "quantity": "2",
+      "unit": "cups",
+      "notes": "dry, rinsed"
+    },
+    {
+      "name": "zucchini",
+      "quantity": "3",
+      "unit": "medium",
+      "notes": "chunked"
+    },
+    {
+      "name": "cherry tomatoes",
+      "quantity": "2",
+      "unit": "cups",
+      "notes": "halved"
+    },
+    {
+      "name": "lemon juice",
+      "quantity": "0.25",
+      "unit": "cup",
+      "notes": "fresh"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "6",
+      "unit": "cloves",
+      "notes": "minced"
+    },
+    {
+      "name": "extra-virgin olive oil",
+      "quantity": "0.33",
+      "unit": "cup"
+    },
+    {
+      "name": "dried oregano",
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "feta cheese",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "crumbled"
+    },
+    {
+      "name": "fresh parsley",
+      "quantity": "0.5",
+      "unit": "cup",
+      "notes": "chopped"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "1.5",
+      "unit": "tsp"
+    },
+    {
+      "name": "black pepper",
+      "quantity": "1",
+      "unit": "tsp"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Cook quinoa",
+      "instruction": "Simmer quinoa in 4 cups water 15 minutes until tails appear and grains are tender but not mushy. Fluff with fork and season lightly.",
+      "minutes": 18,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Roast vegetables",
+      "instruction": "Toss zucchini and tomatoes with 2 tbsp oil, salt, and pepper. Roast at 425°F 18–20 minutes until zucchini tender and tomatoes burst.",
+      "minutes": 20,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Marinate shrimp",
+      "instruction": "Toss shrimp with remaining oil, lemon juice, garlic, oregano, salt, and pepper. Marinate 15 minutes while vegetables roast.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Grill shrimp skewers",
+      "instruction": "Thread shrimp on skewers. Grill over medium-high 2 minutes per side until pink, opaque, and lightly charred—not curled tight or rubbery.",
+      "minutes": 6,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Assemble bowls",
+      "instruction": "Portion quinoa, roasted veg, and shrimp skewers. Top with feta and parsley. Shrimp should snap cleanly when bitten.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Pat shrimp dry before marinating—wet shrimp will not char.",
+    "Offer tahini drizzle for crews who want creamy richness.",
+    "Metal skewers skip soaking and speed up prep."
+  ],
+  "tonightSpread": [
+    "Warm pita wedges.",
+    "Hummus for dipping."
+  ],
+  "leftovers": [
+    "Chop into a cold quinoa salad next day.",
+    "Shrimp do not reheat well—plan portions carefully."
+  ],
+  "whyCrewsLikeIt": "Light but protein-heavy. Grill marks make it feel like a cookout even on a Tuesday shift.",
+  "mealPrepNotes": "Soak wooden skewers 30 minutes. Cook quinoa ahead—it holds well. Station: Thread shrimp uniform for even grill timing—3 per skewer works well. Station: Grill shrimp 2 minutes per side max—overcooked shrimp ruin the bowl. Station: Bowl line: quinoa, veg, shrimp, lemon wedge, feta optional.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 395,
+    "protein": 38,
+    "carbs": 36,
+    "fats": 12,
+    "label": "~395 cal/serving · 38g protein · 5g fiber (est.)"
+  },
+  "heroImage": "/images/golden-100/grilled-shrimp-quinoa-bowls.jpg",
+  "mobileImage": "/images/mobile/grilled-shrimp-quinoa-bowls.jpg",
+  "thumbImage": "/images/thumbs/grilled-shrimp-quinoa-bowls.jpg",
+  "railImage": "/images/rails/grilled-shrimp-quinoa-bowls.jpg",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "grilled shrimp quinoa bowls",
+    "shrimp",
+    "Mediterranean",
+    "grill",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "lemon-garlic-shrimp-pasta",
+    "yogurt-marinated-grill-chicken"
+  ],
+  "generatedAt": "2026-05-28T12:57:50.894Z",
+  "contentVersion": 2
+}

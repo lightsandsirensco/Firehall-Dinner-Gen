@@ -1,0 +1,105 @@
+{
+  "slug": "mocha-protein",
+  "title": "Mocha Protein Smoothie",
+  "seoTitle": "Mocha Protein Smoothie | Firefighter Smoothie",
+  "subtitle": "Coffee · Coffee",
+  "description": "Cold brew, cocoa, and yogurt give you coffee-shop flavor without the drive-thru sugar bomb. Popular on tours that start early and stay loud.",
+  "fuelType": "smoothie",
+  "taxonomyCategory": "coffee_smoothie",
+  "taxonomyLabel": "Coffee",
+  "intro": "Cold brew, cocoa, and yogurt give you coffee-shop flavor without the drive-thru sugar bomb. Popular on tours that start early and stay loud.",
+  "ingredients": [
+    {
+      "name": "cold brew coffee",
+      "quantity": "1.5",
+      "unit": "cups",
+      "notes": "chilled or ice cubes + strong coffee"
+    },
+    {
+      "name": "plain Greek yogurt",
+      "quantity": "1.5",
+      "unit": "cups"
+    },
+    {
+      "name": "milk",
+      "quantity": "1",
+      "unit": "cup"
+    },
+    {
+      "name": "unsweetened cocoa powder",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "banana",
+      "quantity": "1",
+      "unit": "medium",
+      "notes": "frozen slices optional"
+    },
+    {
+      "name": "honey or maple syrup",
+      "quantity": "1",
+      "unit": "tbsp",
+      "notes": "optional"
+    },
+    {
+      "name": "vanilla protein powder",
+      "quantity": "1",
+      "unit": "scoop",
+      "notes": "optional"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "instruction": "Blend yogurt, milk, cocoa, and coffee until the cocoa is fully dissolved — no dry cocoa pockets."
+    },
+    {
+      "stepNumber": 2,
+      "instruction": "Add banana or protein powder if using. Blend until frothy on top, about 60 seconds."
+    },
+    {
+      "stepNumber": 3,
+      "instruction": "Taste before adding sweetener — coffee bitterness varies batch to batch."
+    },
+    {
+      "stepNumber": 4,
+      "instruction": "Serve over ice if you want it colder; foam on top is normal from the yogurt."
+    }
+  ],
+  "nutrition": {
+    "calories": 220,
+    "protein": 18,
+    "carbs": 32,
+    "fats": 8,
+    "highlights": "~220 cal base · ~18 g protein with yogurt · caffeine for alertness · lower sugar than flavored lattes"
+  },
+  "substitutions": [
+    "Instant espresso (2 tsp + ½ cup water) works if cold brew is not stocked.",
+    "Skip protein powder if the crew prefers whole-food protein only."
+  ],
+  "shiftNote": "Caffeine plus protein in one cup — useful when the pot is empty but the board is not.",
+  "heroImage": "/images/editorial/smoothies/mocha-protein.webp",
+  "thumbImage": "/images/editorial/smoothies/mocha-protein.webp",
+  "tags": [
+    "fuel_smoothie",
+    "taxonomy:coffee_smoothie",
+    "smoothie",
+    "performance_fuel",
+    "shift_nutrition"
+  ],
+  "searchTerms": [
+    "mocha protein smoothie",
+    "healthy smoothies",
+    "smoothies for firefighters",
+    "firefighter breakfast",
+    "recovery smoothie",
+    "coffee smoothie",
+    "station blender",
+    "shift nutrition"
+  ],
+  "relatedSlugs": [],
+  "catalogSet": "fuel_smoothie",
+  "generatedAt": "2026-05-28T00:37:54.583Z",
+  "contentVersion": 1
+}

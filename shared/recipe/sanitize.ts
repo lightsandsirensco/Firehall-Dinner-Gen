@@ -3,6 +3,7 @@
  */
 
 import type { GenerateResponse } from "../schema.js";
+import { normalizeGenerateResponseCopy, normalizeRecipeSpacing } from "./spacing.js";
 
 const INTERNAL_LEAK =
   /\b(fallback recipe|template fallback|loosen filter|publisher recipe|validation failed|schema error|station kitchen|plated main|protein bowl|archetype|meal format)\b/i;
@@ -10,7 +11,7 @@ const INTERNAL_LEAK =
 const MULTI_SPACE = /\s{2,}/g;
 
 export function sanitizeDisplayText(text: string): string {
-  let t = (text || "").trim().replace(MULTI_SPACE, " ");
+  let t = normalizeRecipeSpacing((text || "").trim().replace(MULTI_SPACE, " "));
   if (INTERNAL_LEAK.test(t)) {
     return "A crew-ready dinner built for real shift nights.";
   }
@@ -25,13 +26,14 @@ export function sanitizeRecipeTitle(title: string): string {
 }
 
 export function sanitizeGenerateResponseCopy(recipe: GenerateResponse): GenerateResponse {
+  const base = normalizeGenerateResponseCopy(recipe as unknown as Record<string, unknown>) as unknown as GenerateResponse;
   return {
-    ...recipe,
-    title: sanitizeRecipeTitle(recipe.title || ""),
-    why_it_fits_tonight: sanitizeDisplayText(recipe.why_it_fits_tonight || ""),
-    cleanup_tip: sanitizeDisplayText(recipe.cleanup_tip || ""),
-    pro_tips: (recipe.pro_tips || []).map((t) => sanitizeDisplayText(t)).filter(Boolean),
-    steps: (recipe.steps || []).map((s) => ({
+    ...base,
+    title: sanitizeRecipeTitle(base.title || ""),
+    why_it_fits_tonight: sanitizeDisplayText(base.why_it_fits_tonight || ""),
+    cleanup_tip: sanitizeDisplayText(base.cleanup_tip || ""),
+    pro_tips: (base.pro_tips || []).map((t) => sanitizeDisplayText(t)).filter(Boolean),
+    steps: (base.steps || []).map((s) => ({
       ...s,
       heading: sanitizeDisplayText(s.heading || ""),
       body: sanitizeDisplayText(s.body || ""),

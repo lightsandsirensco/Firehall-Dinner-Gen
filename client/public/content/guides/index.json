@@ -1,0 +1,547 @@
+{
+  "version": 3,
+  "generatedAt": "2026-05-28T22:22:42.439Z",
+  "articleCount": 54,
+  "articles": [
+    {
+      "slug": "feeding-a-firehall-crew",
+      "title": "How to Feed a Firehall Crew Without Losing the Shift",
+      "subtitle": "Scaling, timing, and station-kitchen reality — not food-blog fantasy",
+      "description": "Practical guide to feeding a firehall crew on a busy shift: portion math, hold times, line setup, and meal picks that survive interruptions.",
+      "topic": "shift_operations",
+      "pillar": "operations_how_to",
+      "readMinutes": 8,
+      "publishedAt": "2026-05-27T12:00:00.000Z"
+    },
+    {
+      "slug": "quick-meals-between-calls",
+      "title": "Quick Firefighter Meals Between Calls",
+      "subtitle": "When the shift is hot and dinner cannot be a two-hour project",
+      "description": "Operational guide to fast fire station meals: what to cook when time is tight, how to cheat smart, and recipe picks under 45 minutes.",
+      "topic": "shift_operations",
+      "pillar": "recipes_meals",
+      "readMinutes": 7,
+      "publishedAt": "2026-05-27T12:00:00.000Z"
+    },
+    {
+      "slug": "bbq-night-at-the-station",
+      "title": "BBQ Night at the Fire Station",
+      "subtitle": "Smoke, grills, and feeding a crew without babysitting the pit all shift",
+      "description": "How to run a fire station BBQ night: timing, safety, sides, and firefighter meal picks for grill-forward crews.",
+      "topic": "station_cooking",
+      "pillar": "recipes_meals",
+      "readMinutes": 7,
+      "publishedAt": "2026-05-27T12:00:00.000Z"
+    },
+    {
+      "slug": "comfort-food-after-a-long-shift",
+      "title": "Comfort Food After a Long Call",
+      "subtitle": "What crews actually want when the shift finally slows down",
+      "description": "Firefighter comfort meals for post-call nights: what works, what to avoid, and hall-tested recipes that hit the spot.",
+      "topic": "crew_culture",
+      "pillar": "station_lifestyle",
+      "readMinutes": 6,
+      "publishedAt": "2026-05-27T12:00:00.000Z"
+    },
+    {
+      "slug": "firehall-breakfast-and-brunch",
+      "title": "Firehall Breakfast and Brunch That Actually Get Eaten",
+      "subtitle": "Morning shift fuel without turning the kitchen into a disaster zone",
+      "description": "Breakfast and brunch ideas for fire stations: timing, line setup, and recipes crews finish — not tray waste.",
+      "topic": "station_cooking",
+      "pillar": "recipes_meals",
+      "readMinutes": 6,
+      "publishedAt": "2026-05-27T12:00:00.000Z"
+    },
+    {
+      "slug": "meal-prep-for-shift-workers",
+      "title": "Meal Prep for Firefighters and Shift Workers",
+      "subtitle": "Leftovers that crews will eat — not Tupperware archaeology",
+      "description": "Shift-worker meal prep for fire halls: batch cooking, storage, reheat rules, and recipes that eat well the second day.",
+      "topic": "meal_planning",
+      "pillar": "operations_how_to",
+      "readMinutes": 7,
+      "publishedAt": "2026-05-27T12:00:00.000Z"
+    },
+    {
+      "slug": "planning-tonights-station-dinner",
+      "title": "Planning Tonight's Station Dinner (Without the 6 PM Panic)",
+      "subtitle": "A simple decision tree for firehall dinner ideas",
+      "description": "How to pick tonight's fire station meal: time, crew size, appliances, and hall-tested recipe picks crews actually cook.",
+      "topic": "meal_planning",
+      "pillar": "operations_how_to",
+      "readMinutes": 6,
+      "publishedAt": "2026-05-27T12:00:00.000Z"
+    },
+    {
+      "slug": "healthy-meals-for-active-crews",
+      "title": "Healthy Meals for Active Crews (Without the Lecture)",
+      "subtitle": "Performance-friendly firehall food that still feels like dinner",
+      "description": "Lighter firefighter meals for active crews: protein-forward bowls, grill options, and how to balance comfort with performance on shift.",
+      "topic": "nutrition_performance",
+      "pillar": "nutrition_performance",
+      "readMinutes": 6,
+      "publishedAt": "2026-05-27T12:00:00.000Z"
+    },
+    {
+      "slug": "best-firehall-meals-busy-nights",
+      "title": "Best Firehall Meals for Busy Nights",
+      "subtitle": "Crew dinners that still happen when the board stays loud",
+      "description": "The best firehall meals for busy nights hold on the stove, scale fast, and taste good when eaters show up late — skillet, sheet-pan, and line meals crews actually finish.",
+      "topic": "meal_planning",
+      "pillar": "recipes_meals",
+      "readMinutes": 7,
+      "publishedAt": "2026-05-27T18:00:00.000Z"
+    },
+    {
+      "slug": "25-firefighter-dinner-ideas",
+      "title": "25 Firefighter Dinner Ideas",
+      "subtitle": "Hall-tested picks — not random internet lists",
+      "description": "Twenty-five firefighter dinner ideas for station kitchens: handhelds, bakes, grills, and bowls crews actually cook on shift — each links to a full crew-sized recipe.",
+      "topic": "meal_planning",
+      "pillar": "recipes_meals",
+      "readMinutes": 12,
+      "publishedAt": "2026-05-27T18:00:00.000Z"
+    },
+    {
+      "slug": "best-firehouse-meals-large-crews",
+      "title": "Best Firehouse Meals for Large Crews",
+      "subtitle": "When you are cooking for ten, twelve, or the whole hall",
+      "description": "Best firehouse meals for large crews: batches, lines, and bakes that scale past eight eaters without doubling your stress or your grocery bill.",
+      "topic": "meal_planning",
+      "pillar": "recipes_meals",
+      "readMinutes": 7,
+      "publishedAt": "2026-05-27T18:00:00.000Z"
+    },
+    {
+      "slug": "meals-firefighters-actually-cook",
+      "title": "Meals Firefighters Actually Cook",
+      "subtitle": "What shows up on station tables — not food-blog fiction",
+      "description": "Meals firefighters actually cook at the station: chili, tacos, pasta bakes, grill nights, and skillets — real patterns from hall kitchens, with recipes attached.",
+      "topic": "crew_culture",
+      "pillar": "station_lifestyle",
+      "readMinutes": 7,
+      "publishedAt": "2026-05-27T18:00:00.000Z"
+    },
+    {
+      "slug": "best-meals-24-hour-shift",
+      "title": "Best Meals for a 24 Hour Shift",
+      "subtitle": "Dinner, overnight, and next-day fuel without kitchen burnout",
+      "description": "Best meals for a 24-hour shift: hold-friendly dinners, lighter overnight options, and breakfast that does not wreck the kitchen for the next crew.",
+      "topic": "meal_planning",
+      "pillar": "recipes_meals",
+      "readMinutes": 7,
+      "publishedAt": "2026-05-27T18:00:00.000Z"
+    },
+    {
+      "slug": "healthy-firefighter-meals-fill-you-up",
+      "title": "Healthy Firefighter Meals That Fill You Up",
+      "subtitle": "Protein-forward hall food that is not sad lettuce",
+      "description": "Protein-forward hall food that still fills a crew: bowls, grills, and lean batches with real flavor — not sad plates that send everyone to pizza.",
+      "topic": "meal_planning",
+      "pillar": "recipes_meals",
+      "readMinutes": 7,
+      "publishedAt": "2026-05-27T18:00:00.000Z"
+    },
+    {
+      "slug": "fast-firehall-meals-under-30-minutes",
+      "title": "Fast Firehall Meals Under 30 Minutes",
+      "subtitle": "From walk-in to eating — realistic station timers",
+      "description": "Skillet, pasta, shrimp, quesadillas, and flat-top dinners that respect a real hall clock — not magazine prep times.",
+      "topic": "meal_planning",
+      "pillar": "recipes_meals",
+      "readMinutes": 7,
+      "publishedAt": "2026-05-27T18:00:00.000Z"
+    },
+    {
+      "slug": "best-firefighter-crockpot-meals",
+      "title": "Best Firefighter Crockpot Meals",
+      "subtitle": "Set it, cover it, and survive a busy board",
+      "description": "Best firefighter crockpot meals for station kitchens: pulled pork, chili, soups, and braises that hold hot while the crew runs calls.",
+      "topic": "meal_planning",
+      "pillar": "recipes_meals",
+      "readMinutes": 7,
+      "publishedAt": "2026-05-27T18:00:00.000Z"
+    },
+    {
+      "slug": "firehouse-comfort-meals",
+      "title": "Firehouse Comfort Meals",
+      "subtitle": "Post-call food that hits — mac, parm, chili, and bakes",
+      "description": "Firehouse comfort meals crews ask for again: cheesy bakes, chili, parm, mashed plates, and loaded bowls after long jobs.",
+      "topic": "meal_planning",
+      "pillar": "recipes_meals",
+      "readMinutes": 7,
+      "publishedAt": "2026-05-27T18:00:00.000Z"
+    },
+    {
+      "slug": "easy-firehall-pasta-recipes",
+      "title": "Easy Firehall Pasta Recipes",
+      "subtitle": "Feeds a crew without a culinary degree",
+      "description": "Easy firehall pasta recipes: baked ziti, garlic butter pasta, stroganoff, chicken parm, and one-skillet alfredo for station dinners.",
+      "topic": "meal_planning",
+      "pillar": "recipes_meals",
+      "readMinutes": 7,
+      "publishedAt": "2026-05-27T18:00:00.000Z"
+    },
+    {
+      "slug": "firefighter-bbq-recipes",
+      "title": "Firefighter BBQ Recipes",
+      "subtitle": "Grill, smoke, and flat-top nights for the hall",
+      "description": "Firefighter BBQ recipes for station grills: brisket, pulled pork, chicken, ribs, and sides that keep the line moving.",
+      "topic": "meal_planning",
+      "pillar": "recipes_meals",
+      "readMinutes": 7,
+      "publishedAt": "2026-05-27T18:00:00.000Z"
+    },
+    {
+      "slug": "meals-feeding-10-firefighters",
+      "title": "Meals for Feeding 10 Firefighters",
+      "subtitle": "Portion math, line setup, and recipes that land",
+      "description": "Portion math, shopping lists, and recipe picks when you are cooking for ten at the table.",
+      "topic": "meal_planning",
+      "pillar": "recipes_meals",
+      "readMinutes": 7,
+      "publishedAt": "2026-05-27T18:00:00.000Z"
+    },
+    {
+      "slug": "cheap-firehall-meals",
+      "title": "Cheap Firehall Meals That Still Taste Good",
+      "subtitle": "Stretch the grocery budget without crew complaints",
+      "description": "Pasta, chili, tacos, egg bakes, and chicken thighs that taste good on a tight budget — flavor from technique, not price tags.",
+      "topic": "meal_planning",
+      "pillar": "recipes_meals",
+      "readMinutes": 7,
+      "publishedAt": "2026-05-27T18:00:00.000Z"
+    },
+    {
+      "slug": "best-station-chili-recipes",
+      "title": "Best Station Chili Recipes",
+      "subtitle": "The hall's default batch — beef, turkey, and big pots",
+      "description": "Best station chili recipes for firefighters: classic beef chili, turkey lean batch, and hall-sized pots that hold across the shift.",
+      "topic": "meal_planning",
+      "pillar": "recipes_meals",
+      "readMinutes": 7,
+      "publishedAt": "2026-05-27T18:00:00.000Z"
+    },
+    {
+      "slug": "firehall-taco-night-ideas",
+      "title": "Firehall Taco Night Ideas",
+      "subtitle": "Lines, proteins, and toppings that keep peace",
+      "description": "Ground beef bars, carnitas, chicken, and toppings that let ten people build without kitchen chaos.",
+      "topic": "meal_planning",
+      "pillar": "recipes_meals",
+      "readMinutes": 7,
+      "publishedAt": "2026-05-27T18:00:00.000Z"
+    },
+    {
+      "slug": "best-meals-after-busy-shift",
+      "title": "Best Meals After a Busy Shift",
+      "subtitle": "When the job was hard and the crew needs hot food",
+      "description": "Best meals after a busy shift: comfort trays, chili, pasta bakes, and proteins that hold while people decompress.",
+      "topic": "meal_planning",
+      "pillar": "recipes_meals",
+      "readMinutes": 7,
+      "publishedAt": "2026-05-27T18:00:00.000Z"
+    },
+    {
+      "slug": "firefighter-breakfast-ideas",
+      "title": "Firefighter Breakfast Ideas",
+      "subtitle": "Morning crew fuel — bakes, burritos, and pancake stacks",
+      "description": "Firefighter breakfast ideas for station mornings: burrito bars, egg bakes, pancakes, and tacos that feed staggered eaters.",
+      "topic": "meal_planning",
+      "pillar": "recipes_meals",
+      "readMinutes": 7,
+      "publishedAt": "2026-05-27T18:00:00.000Z"
+    },
+    {
+      "slug": "firehall-meal-prep-ideas",
+      "title": "Firehall Meal Prep Ideas",
+      "subtitle": "Cook once on a slow day — feed the loud ones",
+      "description": "Firehall meal prep ideas: batch chili, sheet-pan components, pulled pork, and rice bases that reheat clean on busy shifts.",
+      "topic": "meal_planning",
+      "pillar": "recipes_meals",
+      "readMinutes": 7,
+      "publishedAt": "2026-05-27T18:00:00.000Z"
+    },
+    {
+      "slug": "dutch-oven-meals-firefighters",
+      "title": "Best Dutch Oven Meals for Firefighters",
+      "subtitle": "Braises, chili, and bake-from-coals when the station allows",
+      "description": "Best Dutch oven meals for firefighters: chili, braised beef, jambalaya, and cobblers when outdoor cooks or kitchen ovens fit the plan.",
+      "topic": "meal_planning",
+      "pillar": "recipes_meals",
+      "readMinutes": 7,
+      "publishedAt": "2026-05-27T18:00:00.000Z"
+    },
+    {
+      "slug": "one-pot-firehall-meals",
+      "title": "One-Pot Firehall Meals",
+      "subtitle": "Fewer dishes, fewer arguments, faster cleanup",
+      "description": "One-pot firehall meals: jambalaya, chicken and rice, chili, and skillets that keep the crew fed and the sink empty.",
+      "topic": "meal_planning",
+      "pillar": "recipes_meals",
+      "readMinutes": 7,
+      "publishedAt": "2026-05-27T18:00:00.000Z"
+    },
+    {
+      "slug": "healthy-meals-that-still-taste-good",
+      "title": "Healthy Meals That Still Taste Good",
+      "subtitle": "Protein-forward hall dinners that feel like dinner — not a lecture",
+      "description": "Healthy firefighter meals do not have to be sad salads. Practical station-friendly ways to keep meals lighter without losing flavor, plus recipe picks crews actually finish.",
+      "topic": "nutrition_performance",
+      "pillar": "nutrition_performance",
+      "readMinutes": 7,
+      "publishedAt": "2026-05-27T18:00:00.000Z"
+    },
+    {
+      "slug": "eating-well-on-24-hour-shifts",
+      "title": "Eating Well on 24-Hour Shifts",
+      "subtitle": "Three meals in one tour — without living on gas-station food",
+      "description": "How firefighters can eat well across a full tour: dinner that holds, overnight snacks that help, and breakfast that does not wreck the kitchen for the next crew.",
+      "topic": "nutrition_performance",
+      "pillar": "nutrition_performance",
+      "readMinutes": 8,
+      "publishedAt": "2026-05-27T18:00:00.000Z"
+    },
+    {
+      "slug": "best-foods-for-long-shifts",
+      "title": "Best Foods for Long Shifts",
+      "subtitle": "What keeps you steady — not what spikes and crashes",
+      "description": "Best foods for long firefighter shifts: protein-forward plates, smart carbs, hydration, and hall meals that do not leave the crew crashing at hour ten.",
+      "topic": "nutrition_performance",
+      "pillar": "nutrition_performance",
+      "readMinutes": 7,
+      "publishedAt": "2026-05-27T18:00:00.000Z"
+    },
+    {
+      "slug": "firefighter-recovery-nutrition",
+      "title": "Firefighter Recovery Nutrition",
+      "subtitle": "After the hard job — food that helps you come down",
+      "description": "Recovery nutrition for firefighters after tough calls: protein, fluids, and familiar meals that support sleep and next-day function — not guilt-driven diet talk.",
+      "topic": "nutrition_performance",
+      "pillar": "nutrition_performance",
+      "readMinutes": 7,
+      "publishedAt": "2026-05-27T18:00:00.000Z"
+    },
+    {
+      "slug": "hydration-for-firefighters",
+      "title": "Hydration for Firefighters",
+      "subtitle": "Water, electrolytes, and the habits that actually stick",
+      "description": "Hydration guide for firefighters: how much to drink on shift, when electrolytes matter, and how hall meals support fluid balance without gimmicks.",
+      "topic": "nutrition_performance",
+      "pillar": "nutrition_performance",
+      "readMinutes": 7,
+      "publishedAt": "2026-05-27T18:00:00.000Z"
+    },
+    {
+      "slug": "nutrition-after-overnight-calls",
+      "title": "Nutrition After Overnight Calls",
+      "subtitle": "When the board never really went quiet",
+      "description": "What to eat after overnight firefighter activity: light morning options, rehydration, and meals that do not compound exhaustion with a sugar crash.",
+      "topic": "nutrition_performance",
+      "pillar": "nutrition_performance",
+      "readMinutes": 7,
+      "publishedAt": "2026-05-27T18:00:00.000Z"
+    },
+    {
+      "slug": "high-protein-firehall-meals",
+      "title": "High-Protein Firehall Meals",
+      "subtitle": "Crew portions that actually deliver protein — not powder hype",
+      "description": "High-protein firehall meals for active crews: chili, bowls, grilled chicken, turkey batches, and hall recipes with realistic protein per plate.",
+      "topic": "nutrition_performance",
+      "pillar": "nutrition_performance",
+      "readMinutes": 7,
+      "publishedAt": "2026-05-27T18:00:00.000Z"
+    },
+    {
+      "slug": "avoid-living-on-takeout",
+      "title": "How Firefighters Can Avoid Living on Takeout",
+      "subtitle": "Station cooking beats delivery — when the system supports it",
+      "description": "Practical ways firefighter crews cut takeout dependence: batch cooking, grocery splits, fast hall formats, and meals cheaper than delivery for eight.",
+      "topic": "nutrition_performance",
+      "pillar": "nutrition_performance",
+      "readMinutes": 7,
+      "publishedAt": "2026-05-27T18:00:00.000Z"
+    },
+    {
+      "slug": "performance-nutrition-firefighters",
+      "title": "Performance Nutrition for Firefighters",
+      "subtitle": "Fuel for work that is not predictable",
+      "description": "Performance nutrition for firefighters: balanced plates on shift, timing around calls, and hall meals that support strength and endurance without fad diets.",
+      "topic": "nutrition_performance",
+      "pillar": "nutrition_performance",
+      "readMinutes": 7,
+      "publishedAt": "2026-05-27T18:00:00.000Z"
+    },
+    {
+      "slug": "healthy-station-snacks",
+      "title": "Healthy Station Snacks",
+      "subtitle": "Fridge and shelf ideas that crews actually eat",
+      "description": "Healthy snacks for fire stations: fruit, yogurt, nuts, hummus, and protein options that beat vending machines between meals.",
+      "topic": "nutrition_performance",
+      "pillar": "nutrition_performance",
+      "readMinutes": 7,
+      "publishedAt": "2026-05-27T18:00:00.000Z"
+    },
+    {
+      "slug": "meals-wont-wreck-energy-levels",
+      "title": "Meals That Won't Wreck Energy Levels",
+      "subtitle": "Avoid the 21:00 food coma",
+      "description": "Firefighter meals that keep energy steady: balanced bowls, reasonable portions of fat, and hall dinners that do not leave the crew useless on the couch.",
+      "topic": "nutrition_performance",
+      "pillar": "nutrition_performance",
+      "readMinutes": 7,
+      "publishedAt": "2026-05-27T18:00:00.000Z"
+    },
+    {
+      "slug": "eating-during-high-stress-shifts",
+      "title": "Eating During High-Stress Shifts",
+      "subtitle": "When appetite disappears — and still need fuel",
+      "description": "How to eat during high-stress firefighter shifts when crews skip meals, and which hall foods are easy to eat when adrenaline is high.",
+      "topic": "nutrition_performance",
+      "pillar": "nutrition_performance",
+      "readMinutes": 7,
+      "publishedAt": "2026-05-27T18:00:00.000Z"
+    },
+    {
+      "slug": "recovery-meals-after-hard-calls",
+      "title": "Recovery Meals After Hard Calls",
+      "subtitle": "Hot food when the room needs to exhale",
+      "description": "Recovery meals for firefighters after difficult calls: comfort, protein, hydration, and hall food that supports the crew without performative 'wellness.'",
+      "topic": "nutrition_performance",
+      "pillar": "nutrition_performance",
+      "readMinutes": 7,
+      "publishedAt": "2026-05-27T18:00:00.000Z"
+    },
+    {
+      "slug": "firehall-kitchen-culture",
+      "title": "Firehall Kitchen Culture",
+      "subtitle": "How meals build (or break) a crew",
+      "description": "Firehall kitchen culture: who cooks, who cleans, how dinner decisions get made, and why food matters beyond calories on shift.",
+      "topic": "station_lifestyle",
+      "pillar": "station_lifestyle",
+      "readMinutes": 7,
+      "publishedAt": "2026-05-27T18:00:00.000Z"
+    },
+    {
+      "slug": "how-crews-split-groceries",
+      "title": "How Crews Split Groceries",
+      "subtitle": "Fair splits without spreadsheet wars",
+      "description": "How firefighter crews split grocery costs for station dinners: apps, receipts, rotation, and simple rules that keep dinner from becoming politics.",
+      "topic": "station_lifestyle",
+      "pillar": "station_lifestyle",
+      "readMinutes": 7,
+      "publishedAt": "2026-05-27T18:00:00.000Z"
+    },
+    {
+      "slug": "legendary-firehall-meals",
+      "title": "Legendary Firehall Meals",
+      "subtitle": "The dishes halls still talk about",
+      "description": "Legendary firehall meals crews remember: chili, BBQ pulls, parm nights, and the recipes that become tradition — not one-off experiments.",
+      "topic": "station_lifestyle",
+      "pillar": "station_lifestyle",
+      "readMinutes": 7,
+      "publishedAt": "2026-05-27T18:00:00.000Z"
+    },
+    {
+      "slug": "meals-every-firefighter-knows",
+      "title": "Meals Every Firefighter Knows",
+      "subtitle": "The short list — chili, burgers, tacos, pasta",
+      "description": "Meals every firefighter knows from station kitchens: chili, burgers, tacos, pasta bakes, and BBQ — the shared vocabulary of hall food.",
+      "topic": "station_lifestyle",
+      "pillar": "station_lifestyle",
+      "readMinutes": 7,
+      "publishedAt": "2026-05-27T18:00:00.000Z"
+    },
+    {
+      "slug": "rookie-cooking-mistakes",
+      "title": "Rookie Cooking Mistakes at the Hall",
+      "subtitle": "What to skip your first year on the stove",
+      "description": "Common rookie cooking mistakes in fire station kitchens: oversalting, crowding pans, ambitious menus, and cleanup failures that hurt trust.",
+      "topic": "station_lifestyle",
+      "pillar": "station_lifestyle",
+      "readMinutes": 7,
+      "publishedAt": "2026-05-27T18:00:00.000Z"
+    },
+    {
+      "slug": "feeding-ten-firefighters",
+      "title": "Feeding Ten Firefighters",
+      "subtitle": "Portion math and formats that scale",
+      "description": "How to feed ten firefighters: grocery quantities, line vs plated service, and recipes that scale without doubling cook stress.",
+      "topic": "station_lifestyle",
+      "pillar": "operations_how_to",
+      "readMinutes": 7,
+      "publishedAt": "2026-05-27T18:00:00.000Z"
+    },
+    {
+      "slug": "busy-shift-dinner-strategies",
+      "title": "Busy Shift Dinner Strategies",
+      "subtitle": "Dinner when the board will not cooperate",
+      "description": "Busy shift dinner strategies for fire stations: default meals, hold plans, and communication so food still happens when calls stack.",
+      "topic": "station_lifestyle",
+      "pillar": "station_lifestyle",
+      "readMinutes": 7,
+      "publishedAt": "2026-05-27T18:00:00.000Z"
+    },
+    {
+      "slug": "better-station-food-culture",
+      "title": "Building a Better Station Food Culture",
+      "subtitle": "Small changes that stick",
+      "description": "How to build better fire station food culture: fair rotations, better groceries, rookie support, and meals that make cooking worth the effort.",
+      "topic": "station_lifestyle",
+      "pillar": "station_lifestyle",
+      "readMinutes": 7,
+      "publishedAt": "2026-05-27T18:00:00.000Z"
+    },
+    {
+      "slug": "cooking-for-10-firefighters",
+      "title": "Cooking for 10 Firefighters",
+      "subtitle": "Portion math, line setup, and recipes that scale without chaos",
+      "description": "A practical guide to cooking for 10 firefighters: pick the right format, scale ingredients, and use hall-tested recipes built for volume and hold time.",
+      "topic": "station_cooking",
+      "pillar": "operations_how_to",
+      "readMinutes": 8,
+      "publishedAt": "2026-05-27T18:00:00.000Z"
+    },
+    {
+      "slug": "firehall-grocery-planning",
+      "title": "Firehall Grocery Planning",
+      "subtitle": "Lists that match crew size — not random cart chaos",
+      "description": "Firehall grocery planning for station dinners: quantity lists, staple pantry, and shopping once for the week instead of three emergency runs.",
+      "topic": "meal_planning",
+      "pillar": "operations_how_to",
+      "readMinutes": 7,
+      "publishedAt": "2026-05-27T18:00:00.000Z"
+    },
+    {
+      "slug": "station-kitchen-essentials",
+      "title": "Station Kitchen Essentials",
+      "subtitle": "What every hall should have before dinner night",
+      "description": "Fire station kitchen essentials: pans, thermometers, foil, storage, and tools that make crew cooking possible without borrowing from three trucks.",
+      "topic": "station_cooking",
+      "pillar": "operations_how_to",
+      "readMinutes": 7,
+      "publishedAt": "2026-05-27T18:00:00.000Z"
+    },
+    {
+      "slug": "organize-firehall-dinners",
+      "title": "How to Organize Firehall Dinners",
+      "subtitle": "Whiteboard, roles, and timing that works",
+      "description": "How to organize firehall dinners: who decides, who cooks, when to shop, and how to run the line so dinner happens on busy shifts.",
+      "topic": "shift_operations",
+      "pillar": "operations_how_to",
+      "readMinutes": 7,
+      "publishedAt": "2026-05-27T18:00:00.000Z"
+    },
+    {
+      "slug": "healthy-smoothies-at-the-hall",
+      "title": "10 Healthy Smoothies to Make at the Hall",
+      "subtitle": "Fast protein, easy cleanup, and flavors crews actually finish",
+      "description": "Ten healthy smoothies adapted for fire station kitchens: high-protein, recovery, breakfast, and green options with realistic ingredients and shift-friendly cleanup.",
+      "topic": "nutrition_performance",
+      "pillar": "nutrition_performance",
+      "readMinutes": 12,
+      "publishedAt": "2026-05-28T12:00:00.000Z"
+    }
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "slug": "crock-barbacoa-chicken",
+  "title": "Crock Barbacoa Chicken",
+  "displayTitle": "Crock Barbacoa Chicken",
+  "seoTitle": "Crock Barbacoa Chicken | Firefighter Meal",
+  "shortDescription": "Slow-cooked chipotle chicken that shreds for tacos and bowls",
+  "subtitle": "Slow-cooked chipotle chicken that shreds for tacos and bowls",
+  "category": "healthy_performance",
+  "cuisine": "Mexican",
+  "description": "Chicken thighs braise low with chipotle, lime, cumin, and oregano until pull-apart tender. Shred for tacos, rice bowls, or lettuce wraps.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 360,
+  "prepTime": 15,
+  "difficulty": "easy",
+  "calories": 395,
+  "protein": 42,
+  "carbs": 6,
+  "fats": 22,
+  "tags": [
+    "protein:chicken",
+    "format:slow_cooker",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "8-quart slow cooker",
+    "Two forks"
+  ],
+  "ingredients": [
+    {
+      "name": "boneless chicken thighs",
+      "quantity": "5",
+      "unit": "lb"
+    },
+    {
+      "name": "chipotle peppers in adobo",
+      "quantity": "3",
+      "unit": "whole",
+      "notes": "minced"
+    },
+    {
+      "name": "adobo sauce",
+      "quantity": "3",
+      "unit": "tbsp",
+      "notes": "from can"
+    },
+    {
+      "name": "lime juice",
+      "quantity": "0.33",
+      "unit": "cup",
+      "notes": "fresh"
+    },
+    {
+      "name": "apple cider vinegar",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "ground cumin",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "dried oregano",
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "6",
+      "unit": "cloves",
+      "notes": "minced"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "1",
+      "unit": "large",
+      "notes": "sliced"
+    },
+    {
+      "name": "chicken broth",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "low sodium"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "1.5",
+      "unit": "tsp"
+    },
+    {
+      "name": "black pepper",
+      "quantity": "1",
+      "unit": "tsp"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Layer crock ingredients",
+      "instruction": "Place onion slices in bottom of 8-quart slow cooker. Arrange chicken thighs on top in an even layer without stacking too deep.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Mix braising liquid",
+      "instruction": "Whisk chipotle, adobo sauce, lime juice, vinegar, cumin, oregano, garlic, salt, pepper, and broth until smooth.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Slow cook until tender",
+      "instruction": "Pour liquid over chicken. Cover and cook on low 6–8 hours until meat pulls apart easily and internal temp reaches 165°F throughout.",
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Shred in pot",
+      "instruction": "Transfer thighs to a cutting board if easier, or shred in crock with two forks. Meat should separate into moist strands, not dry clumps.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Reduce juices if needed",
+      "instruction": "If liquid is thin, simmer shredded chicken on high 20–30 minutes uncovered until sauce clings to meat with a glossy coat.",
+      "minutes": 25,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Thighs beat breast here—long cook needs fat for tender shred.",
+    "Offer both corn tortillas and rice bowls to split crew preferences.",
+    "Freeze shredded portions in cooking liquid for fast taco nights."
+  ],
+  "tonightSpread": [
+    "Warm corn tortillas and pickled red onion.",
+    "Cilantro-lime rice in a hotel pan."
+  ],
+  "leftovers": [
+    "Barbacoa breakfast burritos with eggs and salsa.",
+    "Quesadillas with melted pepper jack."
+  ],
+  "whyCrewsLikeIt": "Set-and-forget protein that feeds multiple formats. Smoky heat without standing over a smoker all day.",
+  "mealPrepNotes": "Start crock on low by mid-morning. Shred with two forks directly in the pot to save dishes. Station: Do not lift lid during first 3 hours—each peek adds 15 minutes cook time. Station: Skim fat before shredding for cleaner flavor and easier cleanup. Station: Hold shredded chicken in juice at 165°F—dry holding ruins barbacoa texture.",
+  "spiceLevel": "medium",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 395,
+    "protein": 42,
+    "carbs": 6,
+    "fats": 22,
+    "label": "~395 cal/serving · 42g protein · 1g fiber (est.)"
+  },
+  "heroImage": "/images/golden-100/crock-barbacoa-chicken.jpg",
+  "mobileImage": "/images/mobile/crock-barbacoa-chicken.jpg",
+  "thumbImage": "/images/thumbs/crock-barbacoa-chicken.jpg",
+  "railImage": "/images/rails/crock-barbacoa-chicken.jpg",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "crock barbacoa chicken",
+    "chicken",
+    "Mexican",
+    "slow cooker",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "lemon-garlic-chicken-tray",
+    "lean-turkey-bean-chili",
+    "sheet-pan-chicken-fajitas-lite",
+    "honey-garlic-chicken-rice-bowls",
+    "white-bean-chicken-chili",
+    "shawarma-chicken-rice-bowls"
+  ],
+  "generatedAt": "2026-05-28T12:57:50.893Z",
+  "contentVersion": 2
+}

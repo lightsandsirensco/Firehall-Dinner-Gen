@@ -1,0 +1,180 @@
+{
+  "slug": "cottage-cheese-protein-pasta",
+  "title": "Cottage Cheese Protein Pasta Bake",
+  "displayTitle": "Cottage Cheese Protein Pasta Bake",
+  "seoTitle": "Cottage Cheese Protein Pasta Bake | Firefighter Meal",
+  "shortDescription": "High-protein baked penne with marinara and melted mozzarella",
+  "subtitle": "High-protein baked penne with marinara and melted mozzarella",
+  "category": "healthy_performance",
+  "cuisine": "Italian-American",
+  "description": "Blended cottage cheese creates a high-protein sauce layered with penne, marinara, and part-skim mozzarella. Bakes in a deep hotel pan for easy hold.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 35,
+  "prepTime": 20,
+  "difficulty": "medium",
+  "calories": 465,
+  "protein": 32,
+  "carbs": 58,
+  "fats": 14,
+  "tags": [
+    "protein:mixed",
+    "format:pasta",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "Blender",
+    "Deep hotel pan",
+    "Large stock pot"
+  ],
+  "ingredients": [
+    {
+      "name": "whole-wheat penne",
+      "quantity": "2",
+      "unit": "lb"
+    },
+    {
+      "name": "low-fat cottage cheese",
+      "quantity": "3",
+      "unit": "cups"
+    },
+    {
+      "name": "marinara sauce",
+      "quantity": "4",
+      "unit": "cups"
+    },
+    {
+      "name": "part-skim mozzarella",
+      "quantity": "3",
+      "unit": "cups",
+      "notes": "shredded"
+    },
+    {
+      "name": "Parmesan cheese",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "grated"
+    },
+    {
+      "name": "large eggs",
+      "quantity": "2",
+      "unit": "whole"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "4",
+      "unit": "cloves",
+      "notes": "minced"
+    },
+    {
+      "name": "dried basil",
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "dried oregano",
+      "quantity": "1",
+      "unit": "tsp"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "1.5",
+      "unit": "tsp"
+    },
+    {
+      "name": "black pepper",
+      "quantity": "0.5",
+      "unit": "tsp"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Par-cook penne",
+      "instruction": "Boil penne in salted water 7–8 minutes until flexible but still firm in the center. Drain well so excess water does not thin the bake.",
+      "minutes": 8,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Blend cottage cheese sauce",
+      "instruction": "Blend cottage cheese, eggs, garlic, basil, oregano, salt, and pepper until completely smooth with no curd texture remaining.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Layer pasta and sauces",
+      "instruction": "Toss penne with cottage cheese mixture and half the marinara in a large bowl until evenly coated and glossy.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Assemble and top with cheese",
+      "instruction": "Spread half the pasta in a greased hotel pan. Drizzle remaining marinara, then top with remaining pasta and mozzarella-parmesan blend.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Bake until bubbling",
+      "instruction": "Bake at 375°F for 30–35 minutes until edges bubble and cheese turns golden brown with a few crisp spots on top.",
+      "minutes": 35,
+      "heatLevel": "medium"
+    }
+  ],
+  "proTips": [
+    "Blend cottage cheese while cold—warm curds resist smoothing.",
+    "Add sautéed spinach or roasted red peppers for color and fiber without changing bake time.",
+    "Portion with a square cutter for uniform macros across the crew."
+  ],
+  "tonightSpread": [
+    "Caesar salad with light dressing.",
+    "Steamed broccoli with lemon and chili flakes."
+  ],
+  "leftovers": [
+    "Reheat squares covered with foil; add splash of marinara to restore moisture.",
+    "Cut cold leftovers into meal-prep cubes for shift lunches."
+  ],
+  "whyCrewsLikeIt": "Mac-and-cheese energy with better macros. One pan feeds the whole hall and slices into clean portions.",
+  "mealPrepNotes": "Blend cottage cheese smooth ahead of time. Undercook penne by 2 minutes—it finishes in the oven. Station: Use a 4-inch deep hotel pan so the bake holds heat without drying at the edges. Station: Tent foil first 20 minutes, uncover last 10 for golden cheese without overcooking pasta. Station: Rest pan 10 minutes before cutting so layers set and portions stay intact.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 465,
+    "protein": 32,
+    "carbs": 58,
+    "fats": 14,
+    "label": "~465 cal/serving · 32g protein · 7g fiber (est.)"
+  },
+  "heroImage": "/images/golden-100/cottage-cheese-protein-pasta.jpg",
+  "mobileImage": "/images/mobile/cottage-cheese-protein-pasta.jpg",
+  "thumbImage": "/images/thumbs/cottage-cheese-protein-pasta.jpg",
+  "railImage": "/images/rails/cottage-cheese-protein-pasta.jpg",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "cottage cheese protein pasta bake",
+    "cottage cheese protein pasta",
+    "mixed",
+    "Italian-American",
+    "pasta",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "lemon-garlic-shrimp-pasta",
+    "lemon-salmon-orzo-skillet",
+    "lentil-mushroom-bolognese",
+    "turkey-zoodle-bolognese"
+  ],
+  "generatedAt": "2026-05-28T12:57:50.893Z",
+  "contentVersion": 2
+}

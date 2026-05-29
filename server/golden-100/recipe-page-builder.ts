@@ -25,8 +25,18 @@ import {
   inferDifficulty,
 } from "./editorial-templates.js";
 import { getCuratedRecipeBySlug } from "../curated-recipe-store.js";
+import {
+  auditGoldenRecipeContent,
+  buildEditorialBlueprint,
+  buildRecipeTitleFields,
+  isPlaceholderCuratedRecipe,
+  resolveSlugInstructionPack,
+  stepsFailQualityBar,
+  usesGenericGrillTemplate,
+} from "../../shared/golden-100/recipe-quality/index.js";
 
 const CREW_SIZE_DEFAULT = 8;
+const BASE_SERVINGS_DEFAULT = 8;
 
 function ingredientsFromCurated(curated: CuratedRecipe, crewSize: number): GoldenRecipePageIngredient[] {
   const scale = crewSize / Math.max(curated.servingsBase, 4);
@@ -199,26 +209,51 @@ export function buildGoldenRecipePage(
   let cookTime: number | undefined;
   let totalTime: number | undefined;
 
-  if (curated?.ingredients?.length) {
-    ingredients = ingredientsFromCurated(curated, crewSize);
-    steps = stepsFromCurated(curated);
-    prepTime = curated.prepMinutes;
-    cookTime = curated.cookMinutes;
-    totalTime = curated.totalMinutes;
+  const curatedUsable =
+    curated?.ingredients?.length && !isPlaceholderCuratedRecipe(curated.ingredients);
+
+  if (curatedUsable) {
+    ingredients = ingredientsFromCurated(curated!, crewSize);
+    const curatedSteps = stepsFromCurated(curated!);
+    const stepsOk =
+      curatedSteps.length >= 4 &&
+      !stepsFailQualityBar(curatedSteps) &&
+      !usesGenericGrillTemplate(curatedSteps);
+    if (stepsOk) {
+      steps = curatedSteps;
+    }
+    prepTime = curated!.prepMinutes;
+    cookTime = curated!.cookMinutes;
+    totalTime = curated!.totalMinutes;
   } else if (pkg) {
     ingredients = ingredientsFromPackage(pkg, crewSize);
-    steps = stepsFromPackage(pkg);
+    const pkgSteps = stepsFromPackage(pkg);
+    if (
+      pkgSteps.length >= 4 &&
+      !stepsFailQualityBar(pkgSteps) &&
+      !usesGenericGrillTemplate(pkgSteps)
+    ) {
+      steps = pkgSteps;
+    }
     prepTime = pkg.prepMin;
     cookTime = pkg.cookMin;
     totalTime = pkg.prepMin + pkg.cookMin;
   }
 
   const timing = estimateTiming(def);
-  if (!ingredients.length) {
-    ingredients = synthesizeIngredients(def, crewSize);
-  }
-  if (!steps.length) {
-    steps = synthesizeSteps(def);
+  const handPack = resolveSlugInstructionPack(def, crewSize);
+  const needsEditorial =
+    !steps.length ||
+    stepsFailQualityBar(steps) ||
+    usesGenericGrillTemplate(steps);
+
+  if (handPack && !stepsFailQualityBar(handPack.steps)) {
+    ingredients = handPack.ingredients;
+    steps = handPack.steps;
+  } else if (needsEditorial || !ingredients.length || (handPack && stepsFailQualityBar(handPack.steps))) {
+    const blueprint = buildEditorialBlueprint(def, crewSize);
+    ingredients = blueprint.ingredients;
+    steps = blueprint.steps;
   }
 
   const images = goldenPageImageSet(def.slug);
@@ -239,15 +274,21 @@ export function buildGoldenRecipePage(
 
   const relatedPool = options.relatedPool ?? GOLDEN_100_RECIPES;
   const relatedSlugs = pickRelatedSlugs(def, relatedPool, 6);
+  const titleFields = buildRecipeTitleFields(def);
+  const editorial = buildEditorialMeta(def, curatedUsable ? curated : null);
 
   const page: GoldenRecipePage = {
     slug: def.slug,
-    title: def.title,
+    title: titleFields.displayTitle,
+    displayTitle: titleFields.displayTitle,
+    seoTitle: titleFields.seoTitle,
+    shortDescription: titleFields.shortDescription,
     subtitle: def.hookLine,
     category: def.masterCategoryId,
     cuisine: def.cuisine,
-    description: buildDescription(def, curated, pkg),
+    description: buildDescription(def, curatedUsable ? curated : null, pkg),
     crewSize,
+    baseServings: BASE_SERVINGS_DEFAULT,
     prepTime: prepTime ?? timing.prep,
     cookTime: cookTime ?? timing.cook,
     difficulty: inferDifficulty(def),
@@ -262,6 +303,11 @@ export function buildGoldenRecipePage(
     proTips: uniqueProTips,
     tonightSpread: buildTonightSpread(def),
     leftovers: buildLeftoversStrategy(def),
+    whyCrewsLikeIt: editorial.whyCrewsLikeIt,
+    mealPrepNotes: editorial.mealPrepNotes,
+    substitutions: editorial.substitutions,
+    spiceLevel: editorial.spiceLevel,
+    cleanupDifficulty: editorial.cleanupDifficulty,
     nutrition: {
       ...nutrition,
       label: "per serving (hall portion)",
@@ -285,12 +331,58 @@ export function buildGoldenRecipePage(
     page.cookTime = page.prepTime + (cookTime ?? timing.cook);
   }
   const scores = computeScores(def, page);
-  page.realismScore = scores.realismScore;
+  const contentAudit = auditGoldenRecipeContent(page);
+  page.realismScore = Math.round((scores.realismScore + contentAudit.score) / 2);
   page.firefighterScore = scores.firefighterScore;
   page.popularityWeight = scores.popularityWeight;
   page.searchTerms = buildSearchTerms(def, page);
 
   return page;
+}
+
+function buildEditorialMeta(
+  def: GoldenRecipeDefinition,
+  curated: CuratedRecipe | null,
+): {
+  whyCrewsLikeIt: string;
+  mealPrepNotes?: string;
+  substitutions: string[];
+  spiceLevel: "mild" | "medium" | "hot";
+  cleanupDifficulty: "easy" | "medium" | "heavy";
+} {
+  const quick = def.recommendation.quickShiftMeal;
+  const feedsHard = def.recommendation.feedsHardScore >= 8;
+  return {
+    whyCrewsLikeIt: buildWhyCrewsLikeIt(def, curated, quick, feedsHard),
+    mealPrepNotes: def.recommendation.mealPrepFriendly
+      ? "Cook protein and sauce ahead; assemble day-of in under 20 minutes. Label and date everything in the fridge."
+      : quick
+        ? "Minimal prep — chop aromatics before shift change so you can cook as soon as the board quiets."
+        : undefined,
+    substitutions: buildSubstitutions(def),
+    spiceLevel: inferSpiceLevel(def),
+    cleanupDifficulty: def.recommendation.cleanupScore >= 8 ? "easy" : def.recommendation.cleanupScore <= 4 ? "heavy" : "medium",
+  };
+}
+
+function buildSubstitutions(def: GoldenRecipeDefinition): string[] {
+  const subs: string[] = [];
+  if (def.protein === "chicken")
+    subs.push("Chicken thighs ↔ breasts (thighs forgive overcooking on the flat-top).");
+  if (def.mealFormat === "pasta")
+    subs.push("Any short pasta shape works — penne, rigatoni, or spaghetti.");
+  if (def.mealFormat === "soup_chili")
+    subs.push("Ground turkey swaps 1:1 for beef in chili if the crew wants leaner.");
+  if (def.protein === "seafood")
+    subs.push("Frozen shrimp is fine — thaw under cold running water and pat very dry.");
+  return subs.slice(0, 5);
+}
+
+function inferSpiceLevel(def: GoldenRecipeDefinition): "mild" | "medium" | "hot" {
+  const t = `${def.title} ${def.cuisine} ${def.slug}`.toLowerCase();
+  if (/\b(jerk|buffalo|habanero|ghost|extra hot)\b/.test(t)) return "hot";
+  if (/\b(chili|chipotle|cajun|sriracha|thai|korean)\b/.test(t)) return "medium";
+  return "mild";
 }
 
 function buildDescription(
@@ -300,98 +392,28 @@ function buildDescription(
 ): string {
   if (curated?.summary?.trim()) return curated.summary.trim();
   if (pkg?.tagline?.trim()) return pkg.tagline.trim();
-  return `${def.title} is a ${def.cuisine.replace(/_/g, " ")} ${def.mealFormat.replace(/_/g, " ")} built for a hungry firehall crew — ${def.hookLine}. Hearty portions, station-kitchen timing, and flavors everyone recognizes after a long shift.`;
+  const hook = def.hookLine?.trim();
+  if (hook) {
+    const lead = /[.!?]$/.test(hook) ? hook : `${hook}.`;
+    return `${lead} Sized for a full crew, with timing that still works when the kitchen gets interrupted.`;
+  }
+  return `${def.title} — crew portions, familiar flavors, no fussy plating.`;
 }
 
-/** Fallback ingredients when DB/package not seeded — recognizable meal skeleton. */
-function synthesizeIngredients(def: GoldenRecipeDefinition, crewSize: number): GoldenRecipePageIngredient[] {
-  const scale = crewSize / 8;
-  const mult = (n: number) => String(Math.round(n * scale * 10) / 10);
-  const p = def.protein;
-  const base: GoldenRecipePageIngredient[] = [
-    { name: "Kosher salt", quantity: mult(2), unit: "tbsp" },
-    { name: "Black pepper", quantity: mult(1), unit: "tbsp" },
-    { name: "Cooking oil", quantity: mult(0.25), unit: "cup" },
-  ];
-
-  if (p === "beef") {
-    base.unshift({ name: "Beef (main cut for recipe)", quantity: mult(3), unit: "lb" });
-  } else if (p === "chicken") {
-    base.unshift({ name: "Chicken (boneless thighs or breasts)", quantity: mult(3), unit: "lb" });
-  } else if (p === "pork") {
-    base.unshift({ name: "Pork (shoulder or chops)", quantity: mult(3), unit: "lb" });
-  } else if (p === "seafood") {
-    base.unshift({ name: "Seafood (salmon or white fish fillets)", quantity: mult(2.5), unit: "lb" });
-  } else if (p === "turkey") {
-    base.unshift({ name: "Ground turkey", quantity: mult(2.5), unit: "lb" });
-  } else {
-    base.unshift({ name: "Primary protein or hearty veg base", quantity: mult(2), unit: "lb" });
+function buildWhyCrewsLikeIt(
+  def: GoldenRecipeDefinition,
+  curated: CuratedRecipe | null,
+  quick: boolean,
+  feedsHard: boolean,
+): string {
+  if (curated?.summary?.trim()) return curated.summary.trim();
+  const hook = def.hookLine?.trim();
+  const night = quick ? "tight shifts" : feedsHard ? "big-appetite nights" : "regular dinner nights";
+  if (hook) {
+    const lead = /[.!?]$/.test(hook) ? hook : `${hook}.`;
+    return `${lead} A hall pick for ${night} — one line, real portions, no drama at the stove.`;
   }
-
-  if (def.mealFormat === "pasta") {
-    base.push({ name: "Dried pasta", quantity: mult(2), unit: "lb" });
-    base.push({ name: "Garlic", quantity: mult(8), unit: "cloves" });
-    base.push({ name: "Crushed tomatoes", quantity: mult(2), unit: "cans" });
-  } else if (def.mealFormat === "tacos") {
-    base.push({ name: "Flour or corn tortillas", quantity: mult(24), unit: "count" });
-    base.push({ name: "Onion", quantity: mult(3), unit: "large" });
-    base.push({ name: "Fresh lime", quantity: mult(6), unit: "count" });
-  } else if (def.mealFormat === "burger") {
-    base.push({ name: "Burger buns", quantity: mult(8), unit: "count" });
-    base.push({ name: "American cheese slices", quantity: mult(16), unit: "count" });
-  } else if (def.mealFormat === "bowl") {
-    base.push({ name: "Cooked rice or grains", quantity: mult(4), unit: "cups" });
-    base.push({ name: "Mixed vegetables", quantity: mult(4), unit: "cups" });
-  } else {
-    base.push({ name: "Yellow onion", quantity: mult(2), unit: "large" });
-    base.push({ name: "Garlic", quantity: mult(6), unit: "cloves" });
-  }
-
-  return base;
-}
-
-function synthesizeSteps(def: GoldenRecipeDefinition): GoldenRecipePageStep[] {
-  const title = def.title;
-  return [
-    {
-      stepNumber: 1,
-      title: "Prep the line",
-      instruction: `Set out all ingredients for ${title} before you turn on heat — firefighters eat on a schedule. Pat proteins dry and season aggressively with salt and pepper; dry surfaces brown instead of steam.`,
-      minutes: 15,
-      heatLevel: "",
-    },
-    {
-      stepNumber: 2,
-      title: "Build the base",
-      instruction:
-        "Heat oil in your largest skillet, Dutch oven, or on the flat-top over medium-high until it shimmers. Add aromatics (onion first) and cook until the edges turn golden and the smell sweetens — usually 4–6 minutes. If garlic is in the recipe, add it after the onion softens so it doesn't burn.",
-      minutes: 8,
-      heatLevel: "medium-high",
-    },
-    {
-      stepNumber: 3,
-      title: "Cook the main",
-      instruction: `Cook the primary protein or base for ${title} until it hits proper color and safe internal temperature. Don't crowd the pan — work in batches if needed so you get browning, not gray stew. Listen for a steady sizzle; if it's silent, the heat is too low.`,
-      minutes: 20,
-      heatLevel: "medium-high",
-    },
-    {
-      stepNumber: 4,
-      title: "Finish and season",
-      instruction:
-        "Bring components together, taste, and adjust salt. Sauce should coat, not pool. If cheese is involved, melt it just until glossy — another 1–2 minutes under a lid or broiler. Let heavy proteins rest 5 minutes before slicing.",
-      minutes: 10,
-      heatLevel: "medium",
-    },
-    {
-      stepNumber: 5,
-      title: "Serve the hall",
-      instruction:
-        "Transfer to sheet trays or a serving line immediately. Keep backup warm at 200°F. Call the crew while it's hot — this meal is built for a hungry hall, not a photo shoot.",
-      minutes: 5,
-      heatLevel: "low",
-    },
-  ];
+  return `Straightforward to run on ${night}. Scales on one line and still eats like dinner, not a shortcut.`;
 }
 
 export function buildAllGoldenRecipePages(): GoldenRecipePage[] {

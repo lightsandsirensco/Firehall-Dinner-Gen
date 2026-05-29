@@ -22,7 +22,7 @@ const AWKWARD_WITH =
 const STACKED_INGREDIENTS =
   /\b(any|every|simple|easy|quick|healthy|hearty)\s+(\w+\s+){0,2}(beef|chicken|pork|turkey|fish)\s+(skillet|bowl|plate|dinner)\s+with\b/i;
 
-const GENERIC_OPENERS = /^(any|simple|easy|quick|healthy|hearty|classic|traditional)\s+/i;
+const GENERIC_OPENERS = /^(any|simple|easy|quick|healthy|hearty|traditional)\s+/i;
 
 const CRAVE_SIGNAL =
   /\b(sticky|crispy|smoky|garlic|honey|chili|chipotle|lemon|herb|bbq|barbecue|buffalo|teriyaki|ginger|sesame|maple|sriracha|chimichurri|firehall|cajun|roasted|grilled|seared|zesty|tangy|spicy|savory|balsamic|mustard|pesto|curry|miso|street|loaded|smash|crispy|braised|caramelized|honey-glazed|garlic-butter)\b/i;

@@ -1,0 +1,189 @@
+{
+  "slug": "smoky-lentil-kale-soup",
+  "title": "Smoky Lentil and Kale Soup",
+  "displayTitle": "Smoky Lentil and Kale Soup",
+  "seoTitle": "Smoky Lentil and Kale Soup | Firefighter Meal",
+  "shortDescription": "Hearty vegetarian pot with fire-roasted tomatoes and smoked paprika",
+  "subtitle": "Hearty vegetarian pot with fire-roasted tomatoes and smoked paprika",
+  "category": "healthy_performance",
+  "cuisine": "American",
+  "description": "Green lentils simmer with onion, carrot, celery, kale, and fire-roasted tomatoes until thick. Smoked paprika adds depth without meat.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 40,
+  "prepTime": 20,
+  "difficulty": "easy",
+  "calories": 310,
+  "protein": 18,
+  "carbs": 48,
+  "fats": 6,
+  "tags": [
+    "protein:plant",
+    "format:soup",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "8-quart stock pot",
+    "Wooden spoon"
+  ],
+  "ingredients": [
+    {
+      "name": "green lentils",
+      "quantity": "2",
+      "unit": "lb",
+      "notes": "rinsed"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "2",
+      "unit": "large",
+      "notes": "diced"
+    },
+    {
+      "name": "carrots",
+      "quantity": "4",
+      "unit": "whole",
+      "notes": "diced"
+    },
+    {
+      "name": "celery stalks",
+      "quantity": "4",
+      "unit": "whole",
+      "notes": "diced"
+    },
+    {
+      "name": "lacinato kale",
+      "quantity": "1",
+      "unit": "bunch",
+      "notes": "stemmed, chopped"
+    },
+    {
+      "name": "fire-roasted diced tomatoes",
+      "quantity": "2",
+      "unit": "cans",
+      "notes": "28 oz"
+    },
+    {
+      "name": "vegetable broth",
+      "quantity": "10",
+      "unit": "cups",
+      "notes": "low sodium"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "6",
+      "unit": "cloves",
+      "notes": "minced"
+    },
+    {
+      "name": "smoked paprika",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "ground cumin",
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "3",
+      "unit": "tbsp"
+    },
+    {
+      "name": "bay leaves",
+      "quantity": "2",
+      "unit": "whole"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Sweat aromatics",
+      "instruction": "Heat olive oil in an 8-quart pot over medium. Cook onion, carrot, and celery 8–10 minutes until softened and onion edges turn translucent.",
+      "minutes": 10,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Bloom spices",
+      "instruction": "Add garlic, smoked paprika, and cumin. Stir 1–2 minutes until spices smell toasty and paste-like, not raw or dusty.",
+      "minutes": 2,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Simmer lentils",
+      "instruction": "Add lentils, tomatoes, broth, and bay leaves. Bring to a boil, reduce to simmer, cook 30–35 minutes until lentils are tender but hold shape.",
+      "minutes": 35,
+      "heatLevel": "medium-low"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Wilt kale",
+      "instruction": "Stir in kale and simmer 5 minutes until leaves soften and turn deep green. Soup should be thick enough to coat a spoon lightly.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Season and serve",
+      "instruction": "Remove bay leaves. Adjust salt and pepper. Lentils should be tender with slight bite, not mushy or split open.",
+      "minutes": 3,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Rinse lentils well—dusty lentils make cloudy, gritty soup.",
+    "A parmesan rind simmered in the pot adds umami without meat.",
+    "Portion with a 12-oz ladle; crew can add bread for extra calories."
+  ],
+  "tonightSpread": [
+    "Crusty whole-grain bread with olive oil.",
+    "Shaved parmesan and red pepper flakes."
+  ],
+  "leftovers": [
+    "Blend half into a creamy base and return to pot for texture variety.",
+    "Freeze flat bags for emergency vegetarian nights."
+  ],
+  "whyCrewsLikeIt": "Budget-friendly and fiber-rich. Gives vegetarian crew a main dish that feels as substantial as meat nights.",
+  "mealPrepNotes": "Chop mirepoix ahead. Soup thickens overnight—thin with broth when reheating. Station: Use widest pot available so lentils cook evenly without scorching bottom. Station: Stir kale in during last 5 minutes so it stays bright green, not army drab. Station: Offer hot sauce and parmesan at side station for crew who want extra punch.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 310,
+    "protein": 18,
+    "carbs": 48,
+    "fats": 6,
+    "label": "~310 cal/serving · 18g protein · 14g fiber (est.)"
+  },
+  "heroImage": "/images/golden-100/smoky-lentil-kale-soup.jpg",
+  "mobileImage": "/images/mobile/smoky-lentil-kale-soup.jpg",
+  "thumbImage": "/images/thumbs/smoky-lentil-kale-soup.jpg",
+  "railImage": "/images/rails/smoky-lentil-kale-soup.jpg",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "smoky lentil and kale soup",
+    "smoky lentil kale soup",
+    "plant",
+    "American",
+    "soup",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "white-bean-chicken-chili",
+    "white-bean-kale-soup",
+    "lemon-chicken-orzo-soup",
+    "lentil-mushroom-bolognese"
+  ],
+  "generatedAt": "2026-05-28T12:57:50.893Z",
+  "contentVersion": 2
+}

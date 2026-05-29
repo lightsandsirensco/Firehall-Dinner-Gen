@@ -57,11 +57,12 @@ export async function writeEditorialImageVariants(
   heroBuffer: Buffer,
   stylePreset: ImageStylePresetId,
   imageVersion: number,
+  heroSubdir: "golden100" | "smoothies" = "golden100",
 ): Promise<EditorialImageVariantResult> {
   const cropRule = getMobileCropRule(stylePreset);
   const specs = cropRule.variants;
 
-  const heroWrite = mirrorEditorialImageFile("golden100", slug, heroBuffer);
+  const heroWrite = mirrorEditorialImageFile(heroSubdir, slug, heroBuffer);
 
   const mobileBuf =
     (await resizeVariant(
@@ -107,7 +108,7 @@ export async function writeEditorialImageVariants(
     "webp",
   );
   if (heroWebpBuf) {
-    heroWebp = mirrorEditorialImageFile("golden100", slug, heroWebpBuf, "webp").publicPath;
+    heroWebp = mirrorEditorialImageFile(heroSubdir, slug, heroWebpBuf, "webp").publicPath;
   }
 
   const mobileWebpBuf = await resizeVariant(
@@ -151,7 +152,7 @@ export async function writeEditorialImageVariants(
   if (railWebp) delivery.paths.railWebp = railWebp;
 
   return {
-    hero: heroWrite.publicPath || golden100HeroPath(slug),
+    hero: heroWrite.publicPath || (heroSubdir === "smoothies" ? `/images/smoothies/${slug}.jpg` : golden100HeroPath(slug)),
     mobile: mobileHeroPath(slug),
     thumb: thumbImagePath(slug),
     rail: railPreviewPath(slug),
@@ -162,4 +163,13 @@ export async function writeEditorialImageVariants(
     lqip,
     delivery,
   };
+}
+
+/** Smoothie catalog — hero in /images/smoothies/, shared mobile/thumb/rail by slug. */
+export async function writeSmoothieCatalogImageVariants(
+  slug: string,
+  heroBuffer: Buffer,
+  imageVersion: number,
+): Promise<EditorialImageVariantResult> {
+  return writeEditorialImageVariants(slug, heroBuffer, "healthy_performance", imageVersion, "smoothies");
 }

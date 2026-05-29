@@ -1,11 +1,15 @@
 {
   "slug": "chorizo-breakfast-tacos",
   "title": "Chorizo Breakfast Tacos",
+  "displayTitle": "Chorizo Breakfast Tacos",
+  "seoTitle": "Chorizo Breakfast Tacos | Firefighter Meal",
+  "shortDescription": "Spicy chorizo, warm tortillas",
   "subtitle": "Spicy chorizo, warm tortillas",
   "category": "breakfast_brunch",
   "cuisine": "mexican",
-  "description": "Chorizo Breakfast Tacos is a mexican tacos built for a hungry firehall crew — Spicy chorizo, warm tortillas. Hearty portions, station-kitchen timing, and flavors everyone recognizes after a long shift.",
+  "description": "Spicy chorizo, warm tortillas. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
@@ -28,74 +32,62 @@
   ],
   "ingredients": [
     {
-      "name": "Pork (shoulder or chops)",
-      "quantity": "3",
-      "unit": "lb"
+      "name": "Large eggs",
+      "quantity": "18",
+      "unit": "count",
+      "group": "Main"
     },
     {
-      "name": "Kosher salt",
+      "name": "Buttermilk",
+      "quantity": "4",
+      "unit": "cups",
+      "group": "Batter"
+    },
+    {
+      "name": "All-purpose flour",
+      "quantity": "4",
+      "unit": "cups",
+      "group": "Batter"
+    },
+    {
+      "name": "Thick-cut bacon",
       "quantity": "2",
-      "unit": "tbsp"
+      "unit": "lb",
+      "group": "Side"
     },
     {
-      "name": "Black pepper",
-      "quantity": "1",
-      "unit": "tbsp"
-    },
-    {
-      "name": "Cooking oil",
-      "quantity": "0.3",
-      "unit": "cup"
-    },
-    {
-      "name": "Flour or corn tortillas",
-      "quantity": "24",
-      "unit": "count"
-    },
-    {
-      "name": "Onion",
-      "quantity": "3",
-      "unit": "large"
-    },
-    {
-      "name": "Fresh lime",
-      "quantity": "6",
-      "unit": "count"
+      "name": "Maple syrup",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Serve"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Prep the line",
-      "instruction": "Set out all ingredients for Chorizo Breakfast Tacos before you turn on heat — firefighters eat on a schedule. Pat proteins dry and season aggressively with salt and pepper; dry surfaces brown instead of steam.",
-      "minutes": 15,
+      "title": "Mix batter gently",
+      "instruction": "Whisk dry and wet separately; combine until just mixed. Lumps are fine — over-mixing makes tough pancakes.",
+      "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Build the base",
-      "instruction": "Heat oil in your largest skillet, Dutch oven, or on the flat-top over medium-high until it shimmers. Add aromatics (onion first) and cook until the edges turn golden and the smell sweetens — usually 4–6 minutes. If garlic is in the recipe, add it after the onion softens so it doesn't burn.",
-      "minutes": 8,
-      "heatLevel": "medium-high"
+      "title": "Bake bacon, hold oven",
+      "instruction": "Bake bacon at 400°F on sheet pans 15–18 minutes until crisp. Set oven to 200°F to hold finished pancakes and eggs.",
+      "minutes": 18,
+      "heatLevel": "high"
     },
     {
       "stepNumber": 3,
-      "title": "Cook the main",
-      "instruction": "Cook the primary protein or base for Chorizo Breakfast Tacos until it hits proper color and safe internal temperature. Don't crowd the pan — work in batches if needed so you get browning, not gray stew. Listen for a steady sizzle; if it's silent, the heat is too low.",
+      "title": "Griddle in batches",
+      "instruction": "Griddle at 375°F: pancakes 2–3 minutes per side until golden; eggs if serving scrambled in batches. Common mistake: heat too high — outside burns before center sets.",
       "minutes": 20,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 4,
-      "title": "Finish and season",
-      "instruction": "Bring components together, taste, and adjust salt. Sauce should coat, not pool. If cheese is involved, melt it just until glossy — another 1–2 minutes under a lid or broiler. Let heavy proteins rest 5 minutes before slicing.",
-      "minutes": 10,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 5,
-      "title": "Serve the hall",
-      "instruction": "Transfer to sheet trays or a serving line immediately. Keep backup warm at 200°F. Call the crew while it's hot — this meal is built for a hungry hall, not a photo shoot.",
+      "stepNumber": 4,
+      "title": "Serve the line",
+      "instruction": "Chorizo Breakfast Tacos does not wait — call the crew as batches finish. Syrup and butter on the table; backup tray in the 200°F oven.",
       "minutes": 5,
       "heatLevel": "low"
     }
@@ -115,6 +107,10 @@
     "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
     "Label trays with date and reheat to 165°F minimum before second shift."
   ],
+  "whyCrewsLikeIt": "Spicy chorizo, warm tortillas. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
+  "substitutions": [],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
   "nutrition": {
     "calories": 600,
     "protein": 40,
@@ -126,7 +122,7 @@
   "mobileImage": "/images/mobile/chorizo-breakfast-tacos.jpg",
   "thumbImage": "/images/thumbs/chorizo-breakfast-tacos.jpg",
   "railImage": "/images/rails/chorizo-breakfast-tacos.jpg",
-  "realismScore": 100,
+  "realismScore": 95,
   "firefighterScore": 100,
   "popularityWeight": 3.2,
   "searchTerms": [
@@ -146,6 +142,8 @@
     "breakfast-sausage-pizza",
     "hall-taco-bar"
   ],
-  "generatedAt": "2026-05-27T15:03:06.206Z",
-  "contentVersion": 1
+  "sourceName": "Firehall Meals",
+  "sourceUrl": "",
+  "generatedAt": "2026-05-28T12:06:15.087Z",
+  "contentVersion": 2
 }

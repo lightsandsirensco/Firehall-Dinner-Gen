@@ -1,0 +1,70 @@
+{
+  "slug": "firehall-grocery-planning",
+  "title": "Firehall Grocery Planning",
+  "subtitle": "Lists that match crew size — not random cart chaos",
+  "description": "Firehall grocery planning for station dinners: quantity lists, staple pantry, and shopping once for the week instead of three emergency runs.",
+  "topic": "meal_planning",
+  "pillar": "operations_how_to",
+  "intro": "Grocery planning for the hall is half the battle. A list tied to one meal beats a cart full of 'maybe.' Start with crew count, pick a format (batch, line, grill), then buy protein first and starch second — everything else supports those two.",
+  "sections": [
+    {
+      "id": "list",
+      "heading": "Build the list from the meal",
+      "paragraphs": [
+        "Chili: meat, beans, tomatoes, onions, spices. Taco bar: protein, tortillas, toppings. Sheet pan: protein, peppers, oil, seasoning."
+      ]
+    },
+    {
+      "id": "pantry",
+      "heading": "Pantry staples to keep stocked",
+      "paragraphs": [
+        "Oil, salt, pepper, garlic, onions, rice, pasta, canned tomatoes, and foil. When these exist, dinner is a decision — not a store run."
+      ]
+    }
+  ],
+  "practicalAdvice": [
+    "Shop protein and starch first — veg and extras follow.",
+    "Buy one extra pound of protein — surprise visitors are normal.",
+    "Keep a laminated pantry list on the fridge.",
+    "Photo the receipt before you leave the store."
+  ],
+  "mealRecommendations": [
+    {
+      "slug": "hall-taco-bar",
+      "title": "Hall Taco Bar Night",
+      "blurb": "Predictable shopping list."
+    },
+    {
+      "slug": "big-chili",
+      "title": "Hall-Sized Beef and Bean Chili",
+      "blurb": "Staple batch — repeat monthly."
+    },
+    {
+      "slug": "sheet-pan-fajitas",
+      "title": "Sheet Pan Chicken Fajitas",
+      "blurb": "Short grocery list — one pan."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Where do these recipes come from?",
+      "answer": "Each link goes to a full recipe on Firehall Meals — crew-sized portions, station timing, and steps written for a shared kitchen. Not home-blog scaling."
+    },
+    {
+      "question": "What if crew size or time changes tonight?",
+      "answer": "Use Find a Meal with your headcount and minutes available. It pulls from the same hall-tested dinners these guides recommend."
+    }
+  ],
+  "relatedArticleSlugs": [
+    "how-crews-split-groceries",
+    "feeding-a-firehall-crew"
+  ],
+  "keywords": [
+    "firehall grocery list",
+    "fire station shopping",
+    "crew grocery planning"
+  ],
+  "publishedAt": "2026-05-27T18:00:00.000Z",
+  "updatedAt": "2026-05-27T18:00:00.000Z",
+  "readMinutes": 7
+}

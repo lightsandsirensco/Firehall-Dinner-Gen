@@ -1,0 +1,1600 @@
+{
+  "generatedAt": "2026-05-28T22:23:02.225Z",
+  "tag": "golden_100",
+  "threshold": 72,
+  "total": 100,
+  "failed": 0,
+  "platingMismatches": 0,
+  "rows": [
+    {
+      "slug": "game-day-nachos",
+      "title": "Loaded Game Day Nachos",
+      "status": "published",
+      "heroImage": "/images/golden-100/game-day-nachos.jpg",
+      "platingType": "taco",
+      "depictedPlating": null,
+      "imageIntegrityScore": 75,
+      "pass": true,
+      "flags": [
+        "unapproved_image"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "smash-burgers",
+      "title": "Double Smash Burgers",
+      "status": "published",
+      "heroImage": "/images/explore/double-smash-burgers-hero.jpg",
+      "platingType": "burger",
+      "depictedPlating": "burger",
+      "imageIntegrityScore": 87,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "chicken-parm",
+      "title": "Chicken Parm",
+      "status": "published",
+      "heroImage": "/images/golden-100/chicken-parm.jpg",
+      "platingType": "pasta",
+      "depictedPlating": null,
+      "imageIntegrityScore": 87,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "pulled-pork",
+      "title": "Pulled Pork Sandwiches",
+      "status": "published",
+      "heroImage": "/images/golden-100/pulled-pork.jpg",
+      "platingType": "sandwich",
+      "depictedPlating": null,
+      "imageIntegrityScore": 87,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "beef-dip",
+      "title": "Blackstone Steak Sandwiches",
+      "status": "published",
+      "heroImage": "/images/golden-100/beef-dip.jpg",
+      "platingType": "sandwich",
+      "depictedPlating": null,
+      "imageIntegrityScore": 87,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "jerk-chicken",
+      "title": "Jerk Chicken",
+      "status": "published",
+      "heroImage": "/images/explore/jerk-chicken-hero.jpg",
+      "platingType": "plated",
+      "depictedPlating": null,
+      "imageIntegrityScore": 87,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "steak-sandwiches",
+      "title": "Steak Sandwiches",
+      "status": "published",
+      "heroImage": "/images/golden-100/steak-sandwiches.jpg",
+      "platingType": "sandwich",
+      "depictedPlating": null,
+      "imageIntegrityScore": 87,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "crispy-chicken-cutlets",
+      "title": "Crispy Chicken Cutlets Marinara",
+      "status": "published",
+      "heroImage": "/images/golden-100/crispy-chicken-cutlets.jpg",
+      "platingType": "plated",
+      "depictedPlating": null,
+      "imageIntegrityScore": 87,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "meatball-hoagies",
+      "title": "Firehall Meatball Hoagies",
+      "status": "published",
+      "heroImage": "/images/golden-100/meatball-hoagies.jpg",
+      "platingType": "sandwich",
+      "depictedPlating": null,
+      "imageIntegrityScore": 87,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "parm-hero-subs",
+      "title": "Chicken Parm Hero Subs",
+      "status": "published",
+      "heroImage": "/images/golden-100/parm-hero-subs.jpg",
+      "platingType": "sandwich",
+      "depictedPlating": null,
+      "imageIntegrityScore": 87,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "smoked-brisket",
+      "title": "Kansas City Smoked Brisket",
+      "status": "published",
+      "heroImage": "/images/golden-100/smoked-brisket.jpg",
+      "platingType": "plated",
+      "depictedPlating": null,
+      "imageIntegrityScore": 87,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "memphis-dry-rub-ribs",
+      "title": "Memphis Dry Rub Ribs",
+      "status": "published",
+      "heroImage": "/images/golden-100/memphis-dry-rub-ribs.jpg",
+      "platingType": "plated",
+      "depictedPlating": null,
+      "imageIntegrityScore": 87,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "beer-can-chicken",
+      "title": "Beer Can Chicken",
+      "status": "published",
+      "heroImage": "/images/golden-100/beer-can-chicken.jpg",
+      "platingType": "plated",
+      "depictedPlating": null,
+      "imageIntegrityScore": 87,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "texas-beef-ribs",
+      "title": "Texas-Style Beef Ribs",
+      "status": "published",
+      "heroImage": "/images/golden-100/texas-beef-ribs.jpg",
+      "platingType": "plated",
+      "depictedPlating": null,
+      "imageIntegrityScore": 87,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "carolina-mustard-pork",
+      "title": "Carolina Mustard Pulled Pork",
+      "status": "published",
+      "heroImage": "/images/golden-100/carolina-mustard-pork.jpg",
+      "platingType": "sandwich",
+      "depictedPlating": null,
+      "imageIntegrityScore": 87,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "mac-and-cheese-bake",
+      "title": "Baked Mac and Cheese",
+      "status": "published",
+      "heroImage": "/images/golden-100/mac-and-cheese-bake.jpg",
+      "platingType": "pasta",
+      "depictedPlating": null,
+      "imageIntegrityScore": 87,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "shepherds-pie",
+      "title": "Shepherd's Pie",
+      "status": "published",
+      "heroImage": "/images/golden-100/shepherds-pie.jpg",
+      "platingType": "plated",
+      "depictedPlating": null,
+      "imageIntegrityScore": 87,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "meatloaf-mashed",
+      "title": "Classic Meatloaf with Mashed Potatoes",
+      "status": "published",
+      "heroImage": "/images/golden-100/meatloaf-mashed.jpg",
+      "platingType": "plated",
+      "depictedPlating": null,
+      "imageIntegrityScore": 87,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "chicken-pot-pie",
+      "title": "Chicken Pot Pie",
+      "status": "published",
+      "heroImage": "/images/golden-100/chicken-pot-pie.jpg",
+      "platingType": "plated",
+      "depictedPlating": null,
+      "imageIntegrityScore": 87,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "beef-stroganoff",
+      "title": "Beef Stroganoff",
+      "status": "published",
+      "heroImage": "/images/golden-100/beef-stroganoff.jpg",
+      "platingType": "pasta",
+      "depictedPlating": null,
+      "imageIntegrityScore": 87,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "loaded-baked-potato-bar",
+      "title": "Loaded Baked Potato Bar",
+      "status": "published",
+      "heroImage": "/images/golden-100/loaded-baked-potato-bar.jpg",
+      "platingType": "bowl",
+      "depictedPlating": null,
+      "imageIntegrityScore": 87,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "creamy-tuscan-chicken",
+      "title": "Creamy Tuscan Chicken",
+      "status": "published",
+      "heroImage": "/images/golden-100/creamy-tuscan-chicken.jpg",
+      "platingType": "plated",
+      "depictedPlating": null,
+      "imageIntegrityScore": 87,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "sausage-peppers-onions",
+      "title": "Sausage Peppers and Onions",
+      "status": "published",
+      "heroImage": "/images/golden-100/sausage-peppers-onions.jpg",
+      "platingType": "skillet",
+      "depictedPlating": null,
+      "imageIntegrityScore": 87,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "baked-ziti",
+      "title": "Baked Ziti",
+      "status": "published",
+      "heroImage": "/images/golden-100/baked-ziti.jpg",
+      "platingType": "pasta",
+      "depictedPlating": "pasta",
+      "imageIntegrityScore": 87,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "greek-chicken-bowls",
+      "title": "Greek Chicken Power Bowls",
+      "status": "published",
+      "heroImage": "/images/golden-100/greek-chicken-bowls.jpg",
+      "platingType": "bowl",
+      "depictedPlating": null,
+      "imageIntegrityScore": 87,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "stuffed-peppers",
+      "title": "Quinoa Stuffed Peppers",
+      "status": "published",
+      "heroImage": "/images/golden-100/stuffed-peppers.jpg",
+      "platingType": "plated",
+      "depictedPlating": null,
+      "imageIntegrityScore": 87,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "turkey-burgers",
+      "title": "Black Bean Turkey Burgers",
+      "status": "published",
+      "heroImage": "/images/golden-100/turkey-burgers.jpg",
+      "platingType": "burger",
+      "depictedPlating": null,
+      "imageIntegrityScore": 87,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "ginger-salmon-bowls",
+      "title": "Ginger Salmon Rice Bowls",
+      "status": "published",
+      "heroImage": "/images/golden-100/ginger-salmon-bowls.jpg",
+      "platingType": "bowl",
+      "depictedPlating": null,
+      "imageIntegrityScore": 87,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "mediterranean-chickpea",
+      "title": "Mediterranean Chickpea Bowls",
+      "status": "published",
+      "heroImage": "/images/golden-100/mediterranean-chickpea.jpg",
+      "platingType": "bowl",
+      "depictedPlating": null,
+      "imageIntegrityScore": 87,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "turkey-meatball-zoodles",
+      "title": "Turkey Meatballs with Zucchini Noodles",
+      "status": "published",
+      "heroImage": "/images/golden-100/turkey-meatball-zoodles.jpg",
+      "platingType": "pasta",
+      "depictedPlating": null,
+      "imageIntegrityScore": 87,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "herb-roasted-thighs",
+      "title": "Herb Roasted Chicken Thighs",
+      "status": "published",
+      "heroImage": "/images/golden-100/herb-roasted-thighs.jpg",
+      "platingType": "plated",
+      "depictedPlating": null,
+      "imageIntegrityScore": 87,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "garlic-butter-shrimp",
+      "title": "Garlic Butter Shrimp",
+      "status": "published",
+      "heroImage": "/images/golden-100/garlic-butter-shrimp.jpg",
+      "platingType": "skillet",
+      "depictedPlating": null,
+      "imageIntegrityScore": 87,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "beef-broccoli",
+      "title": "Quick Beef and Broccoli",
+      "status": "published",
+      "heroImage": "/images/golden-100/beef-broccoli.jpg",
+      "platingType": "skillet",
+      "depictedPlating": null,
+      "imageIntegrityScore": 87,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "chicken-tikka-masala",
+      "title": "Chicken Tikka Masala",
+      "status": "published",
+      "heroImage": "/images/golden-100/chicken-tikka-masala.jpg",
+      "platingType": "plated",
+      "depictedPlating": null,
+      "imageIntegrityScore": 87,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "chicken-quesadillas",
+      "title": "Shredded Chicken Quesadillas",
+      "status": "published",
+      "heroImage": "/images/golden-100/chicken-quesadillas.jpg",
+      "platingType": "taco",
+      "depictedPlating": null,
+      "imageIntegrityScore": 87,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "pad-thai",
+      "title": "Hall Rush Pad Thai",
+      "status": "published",
+      "heroImage": "/images/golden-100/pad-thai.jpg",
+      "platingType": "skillet",
+      "depictedPlating": null,
+      "imageIntegrityScore": 87,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "pulled-pork-mac",
+      "title": "Pulled Pork Mac and Cheese",
+      "status": "published",
+      "heroImage": "/images/golden-100/pulled-pork-mac.jpg",
+      "platingType": "pasta",
+      "depictedPlating": null,
+      "imageIntegrityScore": 87,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "chicken-alfredo-bake",
+      "title": "Chicken Alfredo Bake",
+      "status": "published",
+      "heroImage": "/images/golden-100/chicken-alfredo-bake.jpg",
+      "platingType": "pasta",
+      "depictedPlating": null,
+      "imageIntegrityScore": 87,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "sausage-egg-bake",
+      "title": "Sausage Egg Bake for the Crew",
+      "status": "published",
+      "heroImage": "/images/golden-100/sausage-egg-bake.jpg",
+      "platingType": "casserole",
+      "depictedPlating": null,
+      "imageIntegrityScore": 87,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "jambalaya",
+      "title": "Cajun Jambalaya for the Hall",
+      "status": "published",
+      "heroImage": "/images/golden-100/jambalaya.jpg",
+      "platingType": "skillet",
+      "depictedPlating": null,
+      "imageIntegrityScore": 87,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "loaded-potato-feed",
+      "title": "Loaded Potato Feed",
+      "status": "published",
+      "heroImage": "/images/golden-100/loaded-potato-feed.jpg",
+      "platingType": "bowl",
+      "depictedPlating": null,
+      "imageIntegrityScore": 87,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "french-toast-casserole",
+      "title": "French Toast Casserole",
+      "status": "published",
+      "heroImage": "/images/golden-100/french-toast-casserole.jpg",
+      "platingType": "casserole",
+      "depictedPlating": "casserole",
+      "imageIntegrityScore": 87,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "biscuits-gravy",
+      "title": "Biscuits and Gravy",
+      "status": "published",
+      "heroImage": "/images/golden-100/biscuits-gravy.jpg",
+      "platingType": "plated",
+      "depictedPlating": null,
+      "imageIntegrityScore": 87,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "bulgogi-bowls",
+      "title": "Korean Bulgogi Rice Bowls",
+      "status": "published",
+      "heroImage": "/images/golden-100/bulgogi-bowls.jpg",
+      "platingType": "bowl",
+      "depictedPlating": null,
+      "imageIntegrityScore": 87,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "butter-chicken",
+      "title": "Butter Chicken",
+      "status": "published",
+      "heroImage": "/images/golden-100/butter-chicken.jpg",
+      "platingType": "plated",
+      "depictedPlating": null,
+      "imageIntegrityScore": 87,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "street-corn-chicken",
+      "title": "Mexican Street Corn Chicken Bowls",
+      "status": "published",
+      "heroImage": "/images/golden-100/street-corn-chicken.jpg",
+      "platingType": "bowl",
+      "depictedPlating": null,
+      "imageIntegrityScore": 87,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "moroccan-meatballs",
+      "title": "Moroccan Spiced Lamb Meatballs",
+      "status": "published",
+      "heroImage": "/images/golden-100/moroccan-meatballs.jpg",
+      "platingType": "plated",
+      "depictedPlating": null,
+      "imageIntegrityScore": 87,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "teriyaki-donburi",
+      "title": "Teriyaki Chicken Donburi",
+      "status": "published",
+      "heroImage": "/images/golden-100/teriyaki-donburi.jpg",
+      "platingType": "bowl",
+      "depictedPlating": null,
+      "imageIntegrityScore": 87,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "buffalo-chicken-dip",
+      "title": "Buffalo Chicken Dip",
+      "status": "published",
+      "heroImage": "/images/golden-100/buffalo-chicken-dip.jpg",
+      "platingType": "plated",
+      "depictedPlating": null,
+      "imageIntegrityScore": 87,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "slider-bar",
+      "title": "Hall Slider Bar",
+      "status": "published",
+      "heroImage": "/images/golden-100/slider-bar.jpg",
+      "platingType": "burger",
+      "depictedPlating": "burger",
+      "imageIntegrityScore": 87,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "philly-egg-rolls",
+      "title": "Philly Cheesesteak Egg Rolls",
+      "status": "published",
+      "heroImage": "/images/golden-100/philly-egg-rolls.jpg",
+      "platingType": "plated",
+      "depictedPlating": null,
+      "imageIntegrityScore": 87,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "one-pot-chicken-rice",
+      "title": "One-Pot Chicken and Rice",
+      "status": "published",
+      "heroImage": "/images/golden-100/one-pot-chicken-rice.jpg",
+      "platingType": "skillet",
+      "depictedPlating": null,
+      "imageIntegrityScore": 87,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "chili-garlic-bread",
+      "title": "Firehall Chili",
+      "status": "published",
+      "heroImage": "/images/golden-100/big-chili.jpg",
+      "platingType": "soup",
+      "depictedPlating": "soup",
+      "imageIntegrityScore": 92,
+      "pass": true,
+      "flags": [],
+      "conflicts": [],
+      "imageApproved": true
+    },
+    {
+      "slug": "steak-tacos",
+      "title": "Chimichurri Steak Tacos",
+      "status": "published",
+      "heroImage": "/images/explore/chimichurri-steak-tacos-hero.jpg",
+      "platingType": "taco",
+      "depictedPlating": "taco",
+      "imageIntegrityScore": 92,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "bbq-chicken-bowls",
+      "title": "BBQ Chicken Bowls",
+      "status": "published",
+      "heroImage": "/images/explore/bbq-chicken-bowls-hero.jpg",
+      "platingType": "bowl",
+      "depictedPlating": null,
+      "imageIntegrityScore": 92,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "chicken-caesar",
+      "title": "Hall Caesar Chicken",
+      "status": "published",
+      "heroImage": "/images/golden-100/chicken-caesar.jpg",
+      "platingType": "salad",
+      "depictedPlating": "salad",
+      "imageIntegrityScore": 92,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "loaded-nacho-skillet",
+      "title": "Loaded Nacho Skillet",
+      "status": "published",
+      "heroImage": "/images/golden-100/loaded-nacho-skillet.jpg",
+      "platingType": "taco",
+      "depictedPlating": "taco",
+      "imageIntegrityScore": 92,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "hall-taco-bar",
+      "title": "Hall Taco Bar Night",
+      "status": "published",
+      "heroImage": "/images/golden-100/hall-taco-bar.jpg",
+      "platingType": "taco",
+      "depictedPlating": "taco",
+      "imageIntegrityScore": 92,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "ny-strip-herb-butter",
+      "title": "Grilled NY Strip with Herb Butter",
+      "status": "published",
+      "heroImage": "/images/golden-100/ny-strip-herb-butter.jpg",
+      "platingType": "plated",
+      "depictedPlating": null,
+      "imageIntegrityScore": 92,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "bbq-chicken-sliders",
+      "title": "BBQ Chicken Sliders",
+      "status": "published",
+      "heroImage": "/images/golden-100/bbq-chicken-sliders.jpg",
+      "platingType": "burger",
+      "depictedPlating": null,
+      "imageIntegrityScore": 92,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "grilled-pork-chops",
+      "title": "Charcoal Grilled Pork Chops",
+      "status": "published",
+      "heroImage": "/images/golden-100/grilled-pork-chops.jpg",
+      "platingType": "plated",
+      "depictedPlating": null,
+      "imageIntegrityScore": 92,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "smoked-wings-white-sauce",
+      "title": "Smoked Wings with White BBQ Sauce",
+      "status": "published",
+      "heroImage": "/images/golden-100/smoked-wings-white-sauce.jpg",
+      "platingType": "plated",
+      "depictedPlating": null,
+      "imageIntegrityScore": 92,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "cedar-plank-salmon",
+      "title": "Cedar Plank Grilled Salmon",
+      "status": "published",
+      "heroImage": "/images/golden-100/cedar-plank-salmon.jpg",
+      "platingType": "plated",
+      "depictedPlating": null,
+      "imageIntegrityScore": 92,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "honey-garlic-pork-tenderloin",
+      "title": "Honey Garlic Grilled Pork Tenderloin",
+      "status": "published",
+      "heroImage": "/images/golden-100/honey-garlic-pork-tenderloin.jpg",
+      "platingType": "plated",
+      "depictedPlating": null,
+      "imageIntegrityScore": 92,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "flank-chimichurri",
+      "title": "Grilled Flank Steak with Chimichurri",
+      "status": "published",
+      "heroImage": "/images/golden-100/flank-chimichurri.jpg",
+      "platingType": "plated",
+      "depictedPlating": null,
+      "imageIntegrityScore": 92,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "grilled-corn-cotija",
+      "title": "Grilled Street Corn with Cotija",
+      "status": "published",
+      "heroImage": "/images/golden-100/grilled-corn-cotija.jpg",
+      "platingType": "plated",
+      "depictedPlating": null,
+      "imageIntegrityScore": 92,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "teriyaki-salmon-grill",
+      "title": "Teriyaki Grilled Salmon",
+      "status": "published",
+      "heroImage": "/images/golden-100/teriyaki-salmon-grill.jpg",
+      "platingType": "plated",
+      "depictedPlating": null,
+      "imageIntegrityScore": 92,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "bbq-brisket-burnt-ends",
+      "title": "BBQ Burnt Ends",
+      "status": "published",
+      "heroImage": "/images/golden-100/bbq-brisket-burnt-ends.jpg",
+      "platingType": "plated",
+      "depictedPlating": null,
+      "imageIntegrityScore": 92,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "philly-cheesesteak-skillet",
+      "title": "Philly Cheesesteak Skillet",
+      "status": "published",
+      "heroImage": "/images/golden-100/philly-cheesesteak-skillet.jpg",
+      "platingType": "skillet",
+      "depictedPlating": "skillet",
+      "imageIntegrityScore": 92,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "beef-barley-soup",
+      "title": "Beef Barley Soup",
+      "status": "published",
+      "heroImage": "/images/golden-100/beef-barley-soup.jpg",
+      "platingType": "soup",
+      "depictedPlating": "soup",
+      "imageIntegrityScore": 92,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "chicken-dumpling-soup",
+      "title": "Chicken and Dumplings",
+      "status": "published",
+      "heroImage": "/images/golden-100/chicken-dumpling-soup.jpg",
+      "platingType": "soup",
+      "depictedPlating": "soup",
+      "imageIntegrityScore": 92,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "lemon-herb-salmon",
+      "title": "Lemon Herb Grilled Salmon",
+      "status": "published",
+      "heroImage": "/images/golden-100/lemon-herb-salmon.jpg",
+      "platingType": "plated",
+      "depictedPlating": null,
+      "imageIntegrityScore": 92,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "turkey-chili",
+      "title": "High-Protein Turkey Chili",
+      "status": "published",
+      "heroImage": "/images/golden-100/turkey-chili.jpg",
+      "platingType": "soup",
+      "depictedPlating": "soup",
+      "imageIntegrityScore": 92,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "sheet-pan-fajitas",
+      "title": "Sheet Pan Chicken Fajitas",
+      "status": "published",
+      "heroImage": "/images/golden-100/sheet-pan-fajitas.jpg",
+      "platingType": "taco",
+      "depictedPlating": "tray",
+      "imageIntegrityScore": 92,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "chicken-souvlaki",
+      "title": "Grilled Chicken Souvlaki",
+      "status": "published",
+      "heroImage": "/images/golden-100/chicken-souvlaki.jpg",
+      "platingType": "plated",
+      "depictedPlating": null,
+      "imageIntegrityScore": 92,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "performance-burrito-bowls",
+      "title": "Performance Chicken Burrito Bowls",
+      "status": "published",
+      "heroImage": "/images/golden-100/performance-burrito-bowls.jpg",
+      "platingType": "bowl",
+      "depictedPlating": "bowl",
+      "imageIntegrityScore": 92,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "sheet-pan-sausage-peppers",
+      "title": "Sheet Pan Sausage and Peppers",
+      "status": "published",
+      "heroImage": "/images/golden-100/sheet-pan-sausage-peppers.jpg",
+      "platingType": "tray",
+      "depictedPlating": "tray",
+      "imageIntegrityScore": 92,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "skillet-chicken-alfredo",
+      "title": "One-Skillet Chicken Alfredo",
+      "status": "published",
+      "heroImage": "/images/golden-100/skillet-chicken-alfredo.jpg",
+      "platingType": "pasta",
+      "depictedPlating": "skillet",
+      "imageIntegrityScore": 92,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "fast-philly-skillet",
+      "title": "Fast Philly Cheesesteak Skillet",
+      "status": "published",
+      "heroImage": "/images/golden-100/fast-philly-skillet.jpg",
+      "platingType": "skillet",
+      "depictedPlating": "skillet",
+      "imageIntegrityScore": 92,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "pork-carnitas-tacos",
+      "title": "Quick Pork Carnitas Tacos",
+      "status": "published",
+      "heroImage": "/images/golden-100/pork-carnitas-tacos.jpg",
+      "platingType": "taco",
+      "depictedPlating": "taco",
+      "imageIntegrityScore": 92,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "chili-mac",
+      "title": "Chili Mac Skillet",
+      "status": "published",
+      "heroImage": "/images/golden-100/chili-mac.jpg",
+      "platingType": "soup",
+      "depictedPlating": "soup",
+      "imageIntegrityScore": 92,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "pepperoni-pizza-night",
+      "title": "Classic Pepperoni Pizza",
+      "status": "published",
+      "heroImage": "/images/golden-100/pepperoni-pizza-night.jpg",
+      "platingType": "pizza",
+      "depictedPlating": "pizza",
+      "imageIntegrityScore": 92,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "detroit-style-pizza",
+      "title": "Detroit-Style Pepperoni Pizza",
+      "status": "published",
+      "heroImage": "/images/golden-100/detroit-style-pizza.jpg",
+      "platingType": "pizza",
+      "depictedPlating": "pizza",
+      "imageIntegrityScore": 92,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "bbq-chicken-pizza",
+      "title": "BBQ Chicken Pizza",
+      "status": "published",
+      "heroImage": "/images/golden-100/bbq-chicken-pizza.jpg",
+      "platingType": "pizza",
+      "depictedPlating": "pizza",
+      "imageIntegrityScore": 92,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "white-garlic-chicken-pizza",
+      "title": "White Garlic Chicken Pizza",
+      "status": "published",
+      "heroImage": "/images/golden-100/white-garlic-chicken-pizza.jpg",
+      "platingType": "pizza",
+      "depictedPlating": "pizza",
+      "imageIntegrityScore": 92,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "meat-lovers-sheet-pizza",
+      "title": "Meat Lover's Sheet Pan Pizza",
+      "status": "published",
+      "heroImage": "/images/golden-100/meat-lovers-sheet-pizza.jpg",
+      "platingType": "pizza",
+      "depictedPlating": "pizza",
+      "imageIntegrityScore": 92,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "margherita-pizza",
+      "title": "Fresh Margherita Pizza",
+      "status": "published",
+      "heroImage": "/images/golden-100/margherita-pizza.jpg",
+      "platingType": "pizza",
+      "depictedPlating": "pizza",
+      "imageIntegrityScore": 92,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "honey-soppressata-pizza",
+      "title": "Hot Honey Soppressata Pizza",
+      "status": "published",
+      "heroImage": "/images/golden-100/honey-soppressata-pizza.jpg",
+      "platingType": "pizza",
+      "depictedPlating": "pizza",
+      "imageIntegrityScore": 92,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "breakfast-sausage-pizza",
+      "title": "Breakfast Sausage Gravy Pizza",
+      "status": "published",
+      "heroImage": "/images/golden-100/breakfast-sausage-pizza.jpg",
+      "platingType": "pizza",
+      "depictedPlating": "pizza",
+      "imageIntegrityScore": 92,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "batch-lasagna",
+      "title": "Giant Batch Lasagna",
+      "status": "published",
+      "heroImage": "/images/golden-100/batch-lasagna.jpg",
+      "platingType": "pasta",
+      "depictedPlating": "pasta",
+      "imageIntegrityScore": 92,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "big-chili",
+      "title": "Hall-Sized Beef and Bean Chili",
+      "status": "published",
+      "heroImage": "/images/golden-100/big-chili.jpg",
+      "platingType": "soup",
+      "depictedPlating": "soup",
+      "imageIntegrityScore": 92,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "enchilada-casserole",
+      "title": "Chicken Enchilada Casserole",
+      "status": "published",
+      "heroImage": "/images/golden-100/enchilada-casserole.jpg",
+      "platingType": "taco",
+      "depictedPlating": "taco",
+      "imageIntegrityScore": 92,
+      "pass": true,
+      "flags": [],
+      "conflicts": [],
+      "imageApproved": true
+    },
+    {
+      "slug": "breakfast-burrito-bar",
+      "title": "Breakfast Burrito Bar",
+      "status": "published",
+      "heroImage": "/images/golden-100/breakfast-burrito-bar.jpg",
+      "platingType": "taco",
+      "depictedPlating": "taco",
+      "imageIntegrityScore": 92,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "pancake-short-stack",
+      "title": "Pancake Short Stack for the Crew",
+      "status": "published",
+      "heroImage": "/images/golden-100/pancake-short-stack.jpg",
+      "platingType": "plated",
+      "depictedPlating": null,
+      "imageIntegrityScore": 92,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "bacon-egg-hash",
+      "title": "Bacon Egg Hash Brown Skillet",
+      "status": "published",
+      "heroImage": "/images/golden-100/bacon-egg-hash.jpg",
+      "platingType": "skillet",
+      "depictedPlating": "skillet",
+      "imageIntegrityScore": 92,
+      "pass": true,
+      "flags": [],
+      "conflicts": [],
+      "imageApproved": true
+    },
+    {
+      "slug": "chorizo-breakfast-tacos",
+      "title": "Chorizo Breakfast Tacos",
+      "status": "published",
+      "heroImage": "/images/golden-100/chorizo-breakfast-tacos.jpg",
+      "platingType": "taco",
+      "depictedPlating": "taco",
+      "imageIntegrityScore": 92,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "thai-basil-chicken",
+      "title": "Thai Basil Chicken Stir Fry",
+      "status": "published",
+      "heroImage": "/images/golden-100/thai-basil-chicken.jpg",
+      "platingType": "skillet",
+      "depictedPlating": null,
+      "imageIntegrityScore": 92,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "sunday-chili-batch",
+      "title": "Sunday Batch Chili",
+      "status": "published",
+      "heroImage": "/images/golden-100/sunday-chili-batch.jpg",
+      "platingType": "soup",
+      "depictedPlating": "soup",
+      "imageIntegrityScore": 92,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "sheet-pan-meal-prep",
+      "title": "Sheet Pan Chicken Meal Prep",
+      "status": "published",
+      "heroImage": "/images/golden-100/sheet-pan-meal-prep.jpg",
+      "platingType": "tray",
+      "depictedPlating": "tray",
+      "imageIntegrityScore": 92,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    },
+    {
+      "slug": "five-ingredient-pasta",
+      "title": "Garlic Butter Pasta",
+      "status": "published",
+      "heroImage": "/images/golden-100/five-ingredient-pasta.jpg",
+      "platingType": "pasta",
+      "depictedPlating": "pasta",
+      "imageIntegrityScore": 92,
+      "pass": true,
+      "flags": [
+        "missing_locked_thumb",
+        "missing_locked_mobile"
+      ],
+      "conflicts": [],
+      "imageApproved": false
+    }
+  ]
+}

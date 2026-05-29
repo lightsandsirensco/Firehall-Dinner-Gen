@@ -1,11 +1,15 @@
 {
   "slug": "smoked-wings-white-sauce",
   "title": "Smoked Wings with White BBQ Sauce",
+  "displayTitle": "Smoked Wings with White BBQ Sauce",
+  "seoTitle": "Smoked Wings with White BBQ Sauce | Firefighter Meal",
+  "shortDescription": "Smoked wings, tangy Alabama sauce",
   "subtitle": "Smoked wings, tangy Alabama sauce",
   "category": "bbq_grill_nights",
   "cuisine": "american",
-  "description": "Smoked Wings with White BBQ Sauce is a american grill built for a hungry firehall crew — Smoked wings, tangy Alabama sauce. Hearty portions, station-kitchen timing, and flavors everyone recognizes after a long shift.",
+  "description": "Smoked wings, tangy Alabama sauce. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 90,
   "prepTime": 30,
   "difficulty": "hard",
@@ -31,69 +35,120 @@
   ],
   "ingredients": [
     {
-      "name": "Chicken (boneless thighs or breasts)",
-      "quantity": "3",
-      "unit": "lb"
+      "name": "Chicken wings, split and tips trimmed",
+      "quantity": "5",
+      "unit": "lb",
+      "notes": "pat very dry",
+      "group": "Main"
     },
     {
       "name": "Kosher salt",
       "quantity": "2",
-      "unit": "tbsp"
+      "unit": "tbsp",
+      "group": "Rub"
     },
     {
       "name": "Black pepper",
       "quantity": "1",
-      "unit": "tbsp"
+      "unit": "tbsp",
+      "group": "Rub"
     },
     {
-      "name": "Cooking oil",
-      "quantity": "0.3",
-      "unit": "cup"
-    },
-    {
-      "name": "Yellow onion",
+      "name": "Smoked paprika",
       "quantity": "2",
-      "unit": "large"
+      "unit": "tbsp",
+      "group": "Rub"
     },
     {
-      "name": "Garlic",
-      "quantity": "6",
-      "unit": "cloves"
+      "name": "Garlic powder",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Rub"
+    },
+    {
+      "name": "Brown sugar",
+      "quantity": "1",
+      "unit": "tbsp",
+      "notes": "helps bronzing",
+      "group": "Rub"
+    },
+    {
+      "name": "Mayonnaise",
+      "quantity": "1",
+      "unit": "cup",
+      "group": "White BBQ sauce"
+    },
+    {
+      "name": "Apple cider vinegar",
+      "quantity": "0.3",
+      "unit": "cup",
+      "group": "White BBQ sauce"
+    },
+    {
+      "name": "Prepared horseradish",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "White BBQ sauce"
+    },
+    {
+      "name": "Fresh lemon juice",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "White BBQ sauce"
+    },
+    {
+      "name": "Worcestershire sauce",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "White BBQ sauce"
+    },
+    {
+      "name": "Cayenne pepper",
+      "quantity": "0.3",
+      "unit": "tsp",
+      "group": "White BBQ sauce"
+    },
+    {
+      "name": "Celery seed",
+      "quantity": "0.5",
+      "unit": "tsp",
+      "notes": "optional",
+      "group": "White BBQ sauce"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Prep the line",
-      "instruction": "Set out all ingredients for Smoked Wings with White BBQ Sauce before you turn on heat — firefighters eat on a schedule. Pat proteins dry and season aggressively with salt and pepper; dry surfaces brown instead of steam.",
+      "title": "Dry and season wings",
+      "instruction": "Pat wings completely dry with paper towels — moisture blocks smoke and crisping. Toss with salt, pepper, smoked paprika, garlic powder, and brown sugar. Arrange skin-side up on wire racks set over sheet pans with space between each wing so smoke circulates.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Build the base",
-      "instruction": "Heat oil in your largest skillet, Dutch oven, or on the flat-top over medium-high until it shimmers. Add aromatics (onion first) and cook until the edges turn golden and the smell sweetens — usually 4–6 minutes. If garlic is in the recipe, add it after the onion softens so it doesn't burn.",
-      "minutes": 8,
-      "heatLevel": "medium-high"
+      "title": "Smoke low and slow",
+      "instruction": "Run smoker at 250°F with hickory or oak. Smoke wings 45–60 minutes until the skin looks dry, lightly bronzed, and pulls tight — internal temp at the thickest joint should read 165°F. Avoid saucing now; sugars will burn before the skin crisps.",
+      "minutes": 55,
+      "heatLevel": "low"
     },
     {
       "stepNumber": 3,
-      "title": "Cook the main",
-      "instruction": "Cook the primary protein or base for Smoked Wings with White BBQ Sauce until it hits proper color and safe internal temperature. Don't crowd the pan — work in batches if needed so you get browning, not gray stew. Listen for a steady sizzle; if it's silent, the heat is too low.",
-      "minutes": 20,
-      "heatLevel": "medium-high"
+      "title": "Crisp the skin",
+      "instruction": "Finish over high heat on the grill (lid open) or under a broiler 3–5 minutes per side until the skin crackles and blisters lightly. Work in batches so wings are not stacked — steam softens skin. Hold crisped wings on a rack, not a closed container.",
+      "minutes": 8,
+      "heatLevel": "high"
     },
     {
       "stepNumber": 4,
-      "title": "Finish and season",
-      "instruction": "Bring components together, taste, and adjust salt. Sauce should coat, not pool. If cheese is involved, melt it just until glossy — another 1–2 minutes under a lid or broiler. Let heavy proteins rest 5 minutes before slicing.",
+      "title": "Mix white BBQ sauce",
+      "instruction": "Whisk mayo, cider vinegar, horseradish, lemon juice, Worcestershire, cayenne, and celery seed until smooth. Taste — it should be tangy, creamy, and peppery. Chill 20 minutes if time allows so flavors settle; thin with a splash of vinegar if too thick.",
       "minutes": 10,
-      "heatLevel": "medium"
+      "heatLevel": ""
     },
     {
       "stepNumber": 5,
-      "title": "Serve the hall",
-      "instruction": "Transfer to sheet trays or a serving line immediately. Keep backup warm at 200°F. Call the crew while it's hot — this meal is built for a hungry hall, not a photo shoot.",
+      "title": "Toss and serve hot",
+      "instruction": "Toss wings with just enough sauce to coat — add more at the table. Serve immediately on sheet trays with extra sauce and lemon wedges. Hold backup wings uncovered at 200°F up to 20 minutes; do not cover sauced wings or they steam soggy.",
       "minutes": 5,
       "heatLevel": "low"
     }
@@ -116,6 +171,12 @@
     "Label trays with date and reheat to 165°F minimum before second shift.",
     "Slice cold protein thin for next-day wraps or salads — faster reheat, less dry-out."
   ],
+  "whyCrewsLikeIt": "Smoked wings, tangy Alabama sauce. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
+  "substitutions": [
+    "Chicken thighs ↔ breasts (thighs forgive overcooking on the flat-top)."
+  ],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
   "nutrition": {
     "calories": 520,
     "protein": 32,
@@ -150,7 +211,8 @@
     "grilled-pork-chops",
     "honey-garlic-pork-tenderloin"
   ],
-  "sourceName": "AmazingRibs",
-  "generatedAt": "2026-05-27T15:03:06.150Z",
-  "contentVersion": 1
+  "sourceName": "Firehall Meals",
+  "sourceUrl": "",
+  "generatedAt": "2026-05-28T12:06:14.989Z",
+  "contentVersion": 2
 }

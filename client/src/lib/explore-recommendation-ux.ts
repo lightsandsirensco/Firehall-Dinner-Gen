@@ -9,7 +9,18 @@ import type { ExploreRecipeCard } from "@/lib/explore-recipe";
 import type { ExploreContextResponse } from "@/lib/explore-context-api";
 
 export type ExploreTimeSlot = "morning" | "afternoon" | "evening" | "late";
-export type ExploreShiftMode = "default" | "quick_shift" | "comfort" | "performance" | "game_day";
+export type ExploreShiftMode =
+  | "default"
+  | "quick_shift"
+  | "comfort"
+  | "healthy"
+  | "high_protein"
+  | "bbq"
+  | "breakfast"
+  /** @deprecated use `healthy` */
+  | "performance"
+  /** @deprecated optional mood; not shown in primary chips */
+  | "game_day";
 
 export interface ExploreFeedContext {
   timeSlot: ExploreTimeSlot;
@@ -93,11 +104,13 @@ export function detectExploreFeedContext(
 }
 
 const SHIFT_CHIPS: ExploreRecommendationChip[] = [
-  { id: "default", label: "Tonight at the hall", mode: "default" },
-  { id: "quick", label: "Busy shift", mode: "quick_shift" },
-  { id: "comfort", label: "Comfort night", mode: "comfort" },
-  { id: "performance", label: "Recovery fuel", mode: "performance" },
-  { id: "game", label: "Game day", mode: "game_day" },
+  { id: "default", label: "All meals", mode: "default" },
+  { id: "healthy", label: "Healthy", mode: "healthy" },
+  { id: "high_protein", label: "High protein", mode: "high_protein" },
+  { id: "quick", label: "Quick", mode: "quick_shift" },
+  { id: "comfort", label: "Comfort", mode: "comfort" },
+  { id: "bbq", label: "BBQ", mode: "bbq" },
+  { id: "breakfast", label: "Breakfast", mode: "breakfast" },
 ];
 
 export function defaultShiftChips(): ExploreRecommendationChip[] {
@@ -107,31 +120,39 @@ export function defaultShiftChips(): ExploreRecommendationChip[] {
 export function buildExploreHeroCopy(ctx: ExploreFeedContext): ExploreHeroCopy {
   const { timeSlot, isFriday, isWeekend, shiftMode, serverHints } = ctx;
 
-  let title = "Meals picked for your hall tonight";
-  let subtitle =
-    "Curated rails ranked for appetite, crew reality, and shift energy — swipe like a feed, cook like firefighters.";
+  let title = "Explore hall meals";
+  let subtitle = "Classics, comfort, BBQ, and lighter plates — meals crews actually make.";
 
   if (shiftMode === "quick_shift") {
-    title = "Built for a busy shift tonight";
-    subtitle = "Under 40 minutes, minimal chaos — the engine surfaces quick hall wins first.";
+    title = "Quick shift picks";
+    subtitle = "Under 40 minutes. Minimal chaos. Still feeds the whole table.";
   } else if (shiftMode === "comfort") {
-    title = "Post-call comfort is calling";
-    subtitle = "Hearty, familiar spreads when the rig's back and the crew wants something real.";
-  } else if (shiftMode === "performance") {
-    title = "High-protein recovery meals";
-    subtitle = "Lean, satisfying plates that still feel like dinner — not diet food.";
+    title = "Comfort night";
+    subtitle = "Hearty, familiar spreads when the crew wants something that hits.";
+  } else if (shiftMode === "healthy" || shiftMode === "performance") {
+    title = "Healthy hall plates";
+    subtitle = "Lighter, protein-forward meals mixed in with the usual lineup — still real dinner.";
+  } else if (shiftMode === "high_protein") {
+    title = "High-protein picks";
+    subtitle = "Satisfying protein without the gym-meal vibe — built for hungry crews.";
+  } else if (shiftMode === "bbq") {
+    title = "BBQ & grill night";
+    subtitle = "Smoke, char, and outdoor station energy when the crew wants fire.";
+  } else if (shiftMode === "breakfast") {
+    title = "Breakfast at the hall";
+    subtitle = "Skillets, burritos, and morning-for-dinner when the shift runs long.";
   } else if (shiftMode === "game_day") {
-    title = "Game-day hall spread";
-    subtitle = "Handhelds, dips, and feeds that keep the couch crew happy.";
+    title = "Game day at the hall";
+    subtitle = "Handhelds, dips, and spreads built for the couch crew.";
   } else if (isFriday && timeSlot !== "morning") {
-    title = "Trending at halls this Friday";
-    subtitle = "BBQ, pizza, and watch-party energy — what crews are actually cooking tonight.";
+    title = "Friday at the hall";
+    subtitle = "BBQ, pizza, and watch-night energy — what crews actually cook.";
   } else if (timeSlot === "morning" || timeSlot === "afternoon") {
-    title = "Fuel before the next run";
+    title = "Before the next run";
     subtitle = "Breakfast-for-dinner and quick turns while the station's still moving.";
   } else if (timeSlot === "late") {
-    title = "Late shift, real food";
-    subtitle = "Satisfying plates when you're past dinner time but the hall's still hungry.";
+    title = "Late shift plates";
+    subtitle = "Satisfying food when you're past dinner time but the hall's still hungry.";
   }
 
   if (serverHints[0] && shiftMode === "default") {
@@ -149,7 +170,7 @@ export function buildExploreHeroCopy(ctx: ExploreFeedContext): ExploreHeroCopy {
   }));
 
   return {
-    eyebrow: isWeekend ? "Weekend watch · curated discovery" : "Shift-aware · curated discovery",
+    eyebrow: isWeekend ? "Weekend at the hall" : "Curated for crews",
     title,
     subtitle,
     chips,
@@ -175,7 +196,9 @@ const CONTEXTUAL_SUBTITLES: Partial<
   },
   healthy_performance: {
     default: "Lean protein that still satisfies a hungry hall",
-    performance: "Recovery fuel — high protein, practical cleanup",
+    healthy: "Lighter plates that still feel like hall dinner",
+    high_protein: "Protein-forward without the meal-prep lecture",
+    performance: "Lighter plates that still feel like hall dinner",
   },
   bbq_grill_nights: {
     default: "Smoke, char, and grill marks — outdoor station energy",
@@ -207,7 +230,7 @@ const CONTEXTUAL_SUBTITLES: Partial<
 const RAIL_CHIPS: Partial<Record<MasterCategoryId, string[]>> = {
   quick_shift_meals: ["≤40 min", "One-pan friendly", "Busy shift"],
   comfort_food: ["Post-call", "Crew favorite", "Hearty"],
-  healthy_performance: ["High protein", "Recovery", "Lean grill"],
+  healthy_performance: ["High protein", "Hall-tested", "Lean grill"],
   bbq_grill_nights: ["Smoked & grilled", "Friday energy"],
   pizza_night: ["Hall pizza night", "Feeds the table"],
   game_day_watch_party: ["Game day", "Shareable"],
@@ -248,11 +271,16 @@ export function buildRailPresentation(
     sectionIndex === 0;
 
   let editorialBadge: string | undefined;
-  if (isHeroRail) editorialBadge = "Top picks";
+  if (isHeroRail) editorialBadge = "Hall favorites";
   else if (ctx.isFriday && (catId === "pizza_night" || catId === "game_day_watch_party")) {
-    editorialBadge = "Friday night";
-  } else if (ctx.shiftMode === "performance" && catId === "healthy_performance") {
-    editorialBadge = "Recovery";
+    editorialBadge = "Friday at the hall";
+  } else if (
+    (ctx.shiftMode === "healthy" ||
+      ctx.shiftMode === "high_protein" ||
+      ctx.shiftMode === "performance") &&
+    catId === "healthy_performance"
+  ) {
+    editorialBadge = "Crew-tested";
   }
 
   return {
@@ -283,8 +311,13 @@ export function buildWhyThisMeal(
   if (ctx.shiftMode === "comfort" && /chili|mac|stew|comfort|cheese|mashed/.test(text)) {
     return "Crew favorite comfort food — exactly what the hall wants after a long call";
   }
-  if (ctx.shiftMode === "performance" && /grilled|lean|salmon|turkey|bowl|protein/.test(text)) {
-    return "High-protein recovery meal — satisfies without feeling like diet food";
+  if (
+    (ctx.shiftMode === "healthy" ||
+      ctx.shiftMode === "high_protein" ||
+      ctx.shiftMode === "performance") &&
+    /grilled|lean|salmon|turkey|bowl|protein/.test(text)
+  ) {
+    return "High-protein hall meal — satisfies without feeling like diet food";
   }
   if (ctx.shiftMode === "game_day" && /nacho|wing|slider|dip|burger|pizza/.test(text)) {
     return "Game-day hall meal — built for sharing around the watch";
@@ -313,11 +346,16 @@ export function buildRecommendationChip(
   const text = `${recipe.title} ${recipe.summary || ""}`.toLowerCase();
   const mins = recipe.readyInMinutes;
 
-  if (recipe.fromCuratedDb && recipe.publisherMedia) return "Hall curated";
+  if (recipe.fromCuratedDb && recipe.publisherMedia) return "Hall-tested";
   if (section.id === "firehouse_staples") return "Crew favorite";
   if (ctx.shiftMode === "quick_shift" && mins > 0 && mins <= 30) return "Quick shift";
-  if (ctx.shiftMode === "performance" && /salmon|grilled|lean|turkey|bowl/.test(text)) {
-    return "Recovery fuel";
+  if (
+    (ctx.shiftMode === "healthy" ||
+      ctx.shiftMode === "high_protein" ||
+      ctx.shiftMode === "performance") &&
+    /salmon|grilled|lean|turkey|bowl/.test(text)
+  ) {
+    return "High protein";
   }
   if (ctx.shiftMode === "comfort") return "Comfort pick";
   if (ctx.isFriday && /bbq|pizza|wing|smoke/.test(text)) return "Friday trending";
@@ -362,7 +400,8 @@ export function rankSectionsForShiftMode(
 }
 
 export function performanceModeValue(mode: ExploreShiftMode): number | undefined {
-  if (mode === "performance") return 0.75;
+  if (mode === "high_protein") return 0.85;
+  if (mode === "healthy" || mode === "performance") return 0.65;
   if (mode === "comfort") return 0.2;
   return undefined;
 }

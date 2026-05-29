@@ -1,4 +1,4 @@
-import type { Express, Request, Response, NextFunction } from "express";
+﻿import type { Express, Request, Response, NextFunction } from "express";
 import { type Server } from "http";
 import crypto from "crypto";
 import cookieParser from "cookie-parser";
@@ -42,6 +42,7 @@ import {
   closeHallVote,
   hashVoterFingerprint,
 } from "./hall-vote-store";
+import { registerHallFeedbackRoutes } from "./hall-feedback-routes.js";
 
 function routeParam(value: string | string[] | undefined): string {
   return Array.isArray(value) ? (value[0] ?? "") : (value ?? "");
@@ -71,6 +72,7 @@ import {
 } from "../shared/golden-100/index.js";
 import { listCuratedSummariesByTag } from "./curated-recipe-store.js";
 import { scoreRecipeTitle } from "../shared/recipe-title-quality.js";
+import { scoreImageIntegrity } from "../shared/image-integrity.js";
 import { normalizeTitleKey } from "../shared/ingestion/dedupe.js";
 import { buildGoldenHeroPrompt } from "../shared/golden-100/imagery.js";
 import { readGoldenRecipePage, listGoldenPageSlugs } from "./golden-100/page-store.js";
@@ -81,6 +83,28 @@ import { validateGoldenRecipePage } from "./golden-100/recipe-page-validator.js"
 import fs from "node:fs";
 import path from "node:path";
 import { GOLDEN_CATALOG_PUBLIC_DIR } from "./golden-100/page-store.js";
+import {
+  PERFORMANCE_CATALOG_PUBLIC_DIR,
+  readPerformanceRecipePage,
+} from "./performance-meals/page-store.js";
+import { buildPerformanceRecipePage } from "./performance-meals/page-builder.js";
+import { getPerformanceRecipeBySlug } from "../shared/performance-meals/adapted/index.js";
+import { loadMergedHallCatalogIndex, resolveHallRecipePage } from "./meal-catalog/load-index.js";
+import { hallCatalogExploreCards } from "./meal-catalog/search-golden.js";
+import { buildApprovedCatalog } from "./approved-catalog.js";
+import {
+  SMOOTHIE_CATALOG_PUBLIC_DIR,
+  readSmoothieRecipePage,
+} from "./fuel-catalog/page-store.js";
+import { buildSmoothieRecipePage } from "./fuel-catalog/page-builder.js";
+import { getSmoothieCatalogItem } from "../shared/fuel-catalog/smoothies/catalog-data.js";
+import { buildRobotsTxt, buildSitemapXml, resolvePublicSiteOrigin } from "./seo/sitemap.js";
+import {
+  readEditorialArticle,
+  readEditorialIndex,
+  EDITORIAL_PUBLIC_DIR,
+} from "./editorial/page-store.js";
+import { getEditorialArticleBySlug, EDITORIAL_ARTICLES } from "../shared/editorial/articles-data.js";
 import { fetchExploreRecipeDetailPayload } from "./explore-recipe-detail.js";
 import {
   parseGenerationRateContext,
@@ -92,7 +116,6 @@ import {
 import { generationTimeoutMs, pizzaTimeoutMs, withTimeout } from "./generation-timeout.js";
 import {
   runLocalFirstGeneratePipeline,
-  resolveEmergencyGenerateHit,
 } from "./generation/local-first-pipeline.js";
 import { logGenerateTelemetry } from "./generation/generation-telemetry.js";
 import { resolveSafeCuratedFallback } from "./generation/safe-curated-fallback.js";
@@ -102,12 +125,21 @@ import {
   evaluateClientSendGate,
   RecipeNotSendableError,
   GENERATION_USER_FAILURE_MESSAGE,
+  GENERATION_GAME_DAY_MESSAGE,
   isLargeCrewGeneration,
   recordReliabilityEvent,
 } from "./generation-reliability.js";
-import { runCuratedGenerationFallback } from "./curated-generation-fallback.js";
 import { curateRecipeForClient } from "./generation-curation.js";
 import { stripInternalClientFields } from "../shared/customer-facing.js";
+import {
+  applyCatalogGateToClientPayload,
+  mustApproveCatalogRecipe,
+} from "./meal-catalog/catalog-response-gate.js";
+import {
+  getCatalogTitle,
+  isApprovedCatalogSlug,
+  resolveCatalogTraitBadges,
+} from "../shared/hall-catalog/gate.js";
 import { isRoboticTitle, suggestHumanMealTitle } from "../shared/generation-reliability.js";
 import { generationError } from "../shared/generation-errors.js";
 import {
@@ -219,7 +251,7 @@ export async function registerRoutes(
   if (klaviyoCheck.ok) {
     log("Klaviyo API key configured", "klaviyo");
   } else {
-    log(`WARNING: ${klaviyoCheck.error} — email features will fail`, "klaviyo");
+    log(`WARNING: ${klaviyoCheck.error} â€” email features will fail`, "klaviyo");
   }
 
   const { getFoodImageryConfig } = await import("./food-imagery/config.js");
@@ -228,7 +260,7 @@ export async function registerRoutes(
     log(`Food imagery pipeline enabled (model=${imageryCfg.model})`, "catalog");
   } else {
     log(
-      "Food imagery pipeline disabled — set FOOD_IMAGERY_ENABLED=true and OPENAI_API_KEY in Secrets",
+      "Food imagery pipeline disabled â€” set FOOD_IMAGERY_ENABLED=true and OPENAI_API_KEY in Secrets",
       "catalog",
     );
   }
@@ -345,14 +377,14 @@ export async function registerRoutes(
         const parts = parenMatch[1].split(",").map((p: string) => p.trim());
         if (parts.length >= 2) {
           if (!heat) heat = parts[0];
-          const timeMatch = parts[1].match(/(\d+)[–\-](\d+)|(\d+)/);
+          const timeMatch = parts[1].match(/(\d+)[â€“\-](\d+)|(\d+)/);
           if (timeMatch && !minutes) {
             const lo = parseInt(timeMatch[1] || timeMatch[3] || "0");
             const hi = timeMatch[2] ? parseInt(timeMatch[2]) : lo;
             minutes = Math.round((lo + hi) / 2);
           }
         } else if (parts.length === 1) {
-          const timeOnly = parts[0].match(/^(\d+)[–\-]?(\d+)?\s*min/);
+          const timeOnly = parts[0].match(/^(\d+)[â€“\-]?(\d+)?\s*min/);
           if (timeOnly) {
             const lo = parseInt(timeOnly[1]);
             const hi = timeOnly[2] ? parseInt(timeOnly[2]) : lo;
@@ -468,7 +500,7 @@ export async function registerRoutes(
     safeIngredients.push(
       { item: "Mixed vegetables (bell pepper, broccoli, carrots)", amount: scaleAmt(4, "cups"), notes: "" },
       { item: "Salt", amount: "1 tsp", notes: "" },
-      { item: "Black pepper", amount: "½ tsp", notes: "" },
+      { item: "Black pepper", amount: "Â½ tsp", notes: "" },
       { item: "Paprika", amount: "1 tsp", notes: "" },
       { item: "Lemon juice", amount: "2 tbsp", notes: "" },
     );
@@ -483,7 +515,7 @@ export async function registerRoutes(
 
     const safeSteps = [
       { heading: `Season and cook ${proteinStepName} (medium-high, 8 min)`, body: `Season ${proteinStepName} with salt, pepper, and paprika. Heat olive oil in a large skillet over medium-high heat. Cook until golden and cooked through, about 6-8 minutes.` },
-      { heading: "Sauté vegetables (medium, 5 min)", body: "In the same pan, add garlic and mixed vegetables. Cook 4-5 minutes until tender-crisp." },
+      { heading: "SautÃ© vegetables (medium, 5 min)", body: "In the same pan, add garlic and mixed vegetables. Cook 4-5 minutes until tender-crisp." },
       { heading: "Combine and finish (medium, 2 min)", body: `Return ${proteinStepName} to the pan. Toss everything together. Squeeze lemon juice over the top.` },
       { heading: "Plate and serve (no heat, 2 min)", body: `Plate ${proteinStepName} and vegetable mixture. Serve family-style.` },
     ];
@@ -521,7 +553,7 @@ export async function registerRoutes(
     if (allergens.length > 0) {
       const scan = scanRecipeForAllergens(recipe.ingredients, recipe.steps, recipe.title, allergens);
       if (scan.found) {
-        log(`[allergen-postcheck] Found ${scan.violations.length} allergen violations — auto-substituting: ${scan.violations.join("; ")}`, "allergen");
+        log(`[allergen-postcheck] Found ${scan.violations.length} allergen violations â€” auto-substituting: ${scan.violations.join("; ")}`, "allergen");
         const fixed = autoSubstituteAllergens(recipe.ingredients, recipe.steps, recipe.title, allergens);
         recipe = { ...recipe, ingredients: fixed.ingredients, steps: fixed.steps, title: fixed.title };
         if (fixed.substitutionsMade.length > 0) {
@@ -530,12 +562,11 @@ export async function registerRoutes(
 
         const rescan = scanRecipeForAllergens(recipe.ingredients, recipe.steps, recipe.title, allergens);
         if (rescan.found) {
-          log(`[allergen-postcheck] Still found violations after substitution — switching to allergen-safe fallback: ${rescan.violations.join("; ")}`, "allergen");
-          const safeRecipe = buildAllergenSafeFallback(recipe, allergens, crewSize);
-          recipe = safeRecipe;
+          log(`[allergen-postcheck] Still found violations after substitution â€” catalog fallback required: ${rescan.violations.join("; ")}`, "allergen");
+          throw new RecipeNotSendableError(["allergen_no_catalog_match"]);
         }
       } else {
-        log(`[allergen-postcheck] Clean — no allergen violations found`, "allergen");
+        log(`[allergen-postcheck] Clean â€” no allergen violations found`, "allergen");
       }
 
       if (recipe.pro_tips && Array.isArray(recipe.pro_tips)) {
@@ -646,13 +677,20 @@ export async function registerRoutes(
       pro_tips: recipe.pro_tips?.length ? recipe.pro_tips : hallProTips(effectiveCrewSize, 4),
     };
 
+    const catalogSlug =
+      typeof extras._slug === "string" && isApprovedCatalogSlug(extras._slug) ? extras._slug : null;
+    if (catalogSlug) {
+      const catalogTitle = getCatalogTitle(catalogSlug);
+      if (catalogTitle) {
+        recipe = { ...recipe, title: catalogTitle };
+      }
+    }
+
     const importedSource =
-      extras._source === "spoonacular_v2" ||
-      extras._source === "spoonacular_v2_relaxed" ||
-      extras._source === "catalog" ||
-      extras._source === "catalog_relaxed" ||
-      extras._source === "session_cache" ||
-      extras._source === "curated_fallback" ||
+      extras._source === "golden_100" ||
+      extras._source === "hall_catalog" ||
+      extras._fallback === true ||
+      Boolean(catalogSlug) ||
       recipe._imported === true;
     let quality = runRecipeQualityGate(recipe, {
       mealFormat,
@@ -661,7 +699,10 @@ export async function registerRoutes(
       crewSize: effectiveCrewSize,
       importedSource,
     });
-    if (!quality.pass || isRoboticTitle(recipe.title || "")) {
+    if (
+      !catalogSlug &&
+      (!quality.pass || isRoboticTitle(recipe.title || ""))
+    ) {
       recipe = applyQualityTitleFix(recipe, mealFormat);
       quality = runRecipeQualityGate(recipe, {
         mealFormat,
@@ -695,6 +736,7 @@ export async function registerRoutes(
     }
     if (debug && extras._source) base._source = extras._source;
     if (extras._catalog_id) base._catalog_id = extras._catalog_id;
+    if (extras._slug) base._slug = extras._slug;
     if (extras._recipe_source) base._recipe_source = extras._recipe_source;
 
     const ingsCount = (client.ingredients || []).length;
@@ -730,11 +772,36 @@ export async function registerRoutes(
     recipe = curation.recipe;
     quality = curation.qualityGate;
 
+    const trustedCuratedDelivery =
+      Boolean(catalogSlug) ||
+      extras._source === "golden_100" ||
+      extras._source === "hall_catalog";
+
     const sendCheck = evaluateClientSendGate({ validation, recipe, quality, extras });
-    if (!sendCheck.sendable || !curation.sendable) {
+    if (
+      !trustedCuratedDelivery &&
+      (!sendCheck.sendable || !curation.sendable)
+    ) {
       const reasons = [...sendCheck.reasons, ...curation.reasons];
       recordReliabilityEvent("blocked_client_send", reasons.join(","));
       throw new RecipeNotSendableError(reasons);
+    }
+
+    if (catalogSlug) {
+      Object.assign(
+        base,
+        applyCatalogGateToClientPayload(base, {
+          slug: catalogSlug,
+          title: base.title,
+          heroImage: (base as Record<string, unknown>).hero_image as string | undefined,
+          source: extras._source,
+          recipeSource: extras._recipe_source,
+        }),
+      );
+      base.catalog_trait_badges = resolveCatalogTraitBadges(catalogSlug, {
+        sourceKind: (extras._recipe_source as { kind?: string } | undefined)?.kind,
+      }).filter((b) => b !== base.catalog_badge);
+      base.hall_curated = true;
     }
 
     if (debug) {
@@ -789,24 +856,67 @@ export async function registerRoutes(
     try {
       const result = buildResponse(validation, extras, debug, crewSize, mealFormat, allergens, auditCtx, sessKey);
       if (extras._spoonacular_title && result.title !== extras._spoonacular_title) {
-        log(`[spoonacular-generator] Label audit changed title — restoring: "${extras._spoonacular_title}"`, "spoonacular");
+        log(`[spoonacular-generator] Label audit changed title â€” restoring: "${extras._spoonacular_title}"`, "spoonacular");
         result.title = extras._spoonacular_title;
       }
+
+      const outboundSlug = String(extras._slug || (result as Record<string, unknown>)._slug || "");
+      const catalogCheck = mustApproveCatalogRecipe({
+        slug: outboundSlug,
+        title: result.title,
+        heroImage: (result as Record<string, unknown>).hero_image as string | undefined,
+        source: extras._source,
+        recipeSource: extras._recipe_source,
+      });
+      if (!catalogCheck.approved) {
+        recordReliabilityEvent("blocked_client_send", `catalog_gate:${catalogCheck.reasons.join(",")}`);
+        throw new RecipeNotSendableError([`catalog_gate:${catalogCheck.reasons.join(",")}`]);
+      }
+
+      // Enforce "More options" protein filter at the final boundary.
+      // Some curated/editorial layers intentionally prioritize speed and quality; if they
+      // return a different protein than requested, force a curated fallback that matches.
+      if (request?.protein && request.protein !== "any") {
+        const want = request.protein;
+        const got = String((result as any).chosen_protein || "").toLowerCase();
+        const ok =
+          want === "seafood"
+            ? got === "seafood" || got === "fish"
+            : got === String(want).toLowerCase();
+        if (!ok) {
+          recordReliabilityEvent("blocked_client_send", `protein_mismatch:${want}->${got || "unknown"}`);
+          throw new RecipeNotSendableError([`protein_mismatch:${want}`]);
+        }
+      }
+
       const signature = validation.signature || result._signature || "";
-      const { enrichClientRecipeWithHero, queueMealHeroAfterGenerate } = await import(
-        "./food-imagery/meal-integration.js",
-      );
-      const enriched = await enrichClientRecipeWithHero(result, signature);
-      if (validation.recipe && enriched._id) {
-        queueMealHeroAfterGenerate(validation.recipe, String(enriched._id), signature);
+      // Curated platform rule: no runtime AI imagery generation/enrichment.
+      // Meals must ship with curated hero assets (or client-side editorial fallbacks).
+      let payload = result as any;
+      try {
+        if ((!payload.hero_image || payload.hero_image_status === "unavailable") && extras?._catalog_id) {
+          const { getCuratedRecipeById } = await import("./curated-recipe-store.js");
+          const curated = getCuratedRecipeById(String(extras._catalog_id));
+          if (curated?.heroImage) {
+            payload = {
+              ...payload,
+              hero_image: curated.heroImage,
+              hero_image_alt: payload.hero_image_alt || payload.title || curated.title,
+              hero_image_status: "ready",
+            };
+          }
+        }
+      } catch (heroErr) {
+        // Never block response on hero lookup; UI has local fallbacks.
+        logError("generate", "curated_hero_lookup_failed", heroErr);
       }
       addSessionSignature(sessKey, signature);
       recordSuccessfulGeneration(ipHash, sessionId, rateCtx, signature);
-      return res.json(enriched);
+      return res.json(payload);
     } catch (err) {
-      if (err instanceof RecipeNotSendableError && request && fallbackDepth < 1) {
+      if (err instanceof RecipeNotSendableError && request && fallbackDepth < 2) {
         log(
-          `[generate] send gate blocked (${err.reasons.join(",")}) — safe curated fallback`,
+          `[generate] send gate blocked (${err.reasons.join(",")}) â€” safe curated fallback`,
           "generate",
         );
         const safe = await resolveSafeCuratedFallback(
@@ -849,12 +959,66 @@ export async function registerRoutes(
           fallbackDepth + 1,
         );
       }
+
+      // Last line of defense: if ANY unexpected error happens during response shaping,
+      // re-pick from curated catalog instead of 5xx to the public client.
+      if (request && fallbackDepth < 2) {
+        try {
+          log(
+            `[generate] sendRecipeResponse unexpected error â€” curated re-pick`,
+            "generate",
+          );
+          const safe = await resolveSafeCuratedFallback(
+            request,
+            clientRecentSigs,
+            `send_unexpected:${rateCtx.requestId}`,
+          );
+          const emValCtx: RecipeValidationContext = {
+            chosenProtein: safe.protein,
+            meal_style: safe.recipe.meal_style || mealFormat,
+            cuisine: request.cuisine_style || "any",
+            appliances: request.appliances,
+            allergens,
+            recentSignatures: clientRecentSigs,
+          };
+          const emVal = validateAndFixRecipe(prepareRecipePreValidation(safe.recipe), emValCtx);
+          return sendRecipeResponse(
+            res,
+            emVal,
+            {
+              _fallback: true,
+              _source: safe.source,
+              _recipe_source: safe.recipeSource,
+              _catalog_id: safe.catalogId,
+              _realism_firewall_fallback: true,
+            },
+            debug,
+            crewSize,
+            mealFormat,
+            allergens,
+            auditCtx ? { ...auditCtx, chosenProtein: safe.protein } : auditCtx,
+            ipHash,
+            sessionId,
+            rateCtx,
+            request,
+            clientRecentSigs,
+            fallbackDepth + 1,
+          );
+        } catch (lastErr) {
+          logError("generate", "sendRecipeResponse emergency fallback failed", lastErr);
+        }
+      }
       logError("generate", "sendRecipeResponse failed", err);
+      const gameDay = request?.firehall_category === "game_day";
       return res.status(503).json(
-        generationError("generation_failed", GENERATION_USER_FAILURE_MESSAGE, {
-          request_id: rateCtx.requestId,
-          retry_after_seconds: 8,
-        }),
+        generationError(
+          gameDay ? "category_thinned" : "generation_failed",
+          gameDay ? GENERATION_GAME_DAY_MESSAGE : GENERATION_USER_FAILURE_MESSAGE,
+          {
+            request_id: rateCtx.requestId,
+            retry_after_seconds: 8,
+          },
+        ),
       );
     }
   }
@@ -959,7 +1123,7 @@ export async function registerRoutes(
 
       const reserveCheck = checkAndReserveRequest(sessionKey, requestId);
       if (reserveCheck.isDuplicate) {
-        log(`[rate] Duplicate request_id=${requestId} — already completed`, "rate");
+        log(`[rate] Duplicate request_id=${requestId} â€” already completed`, "rate");
         return res.status(409).json(
           generationError("duplicate_request", "This request already completed. Wait a moment or tap Generate again.", {
             retry_after_seconds: 3,
@@ -968,7 +1132,7 @@ export async function registerRoutes(
         );
       }
       if (reserveCheck.isInFlight) {
-        log(`[rate] In-flight request_id=${requestId} — blocking concurrent duplicate`, "rate");
+        log(`[rate] In-flight request_id=${requestId} â€” blocking concurrent duplicate`, "rate");
         return res.status(409).json(
           generationError("in_flight", "A recipe is already generating for this session. Please wait.", {
             retry_after_seconds: 5,
@@ -1006,11 +1170,9 @@ export async function registerRoutes(
         return res.status(400).json({ message: "Please enter at least one ingredient when using 'Use What's in the Fridge' mode." });
       }
 
-      // ─── GENERATE PIPELINE (local-first) ────────────────────────────────────
-      //
-      // A. Curated editorial → B. Golden 100 → C. cache/catalog →
-      // D. emergency pools → E. live Spoonacular (hard timeout) → D if E fails
-      // Pantry: AI from on-hand ingredients; safe template if AI fails
+      // â”€â”€â”€ GENERATE PIPELINE (curated-only) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+      // Hall catalog (Golden 100 + Performance Meals) with smart broadening.
+      // No runtime AI meal generation, no live Spoonacular, no pantry AI.
       //
       const allergens = request.allergens_to_avoid || [];
       const startTime = Date.now();
@@ -1022,99 +1184,18 @@ export async function registerRoutes(
       const clientMeta = sanitizeClientGenerationMeta((req.body as Record<string, unknown>) || {});
       const clientCurrentSig = clientMeta.currentRecipeSignature;
       const clientRecentSigs = clientMeta.recentSignatures;
+      const clientRecentSlugs = clientMeta.recentSlugs;
 
       if (clientCurrentSig) {
         addSessionSignature(`${ipHash}:${sessionId}`, clientCurrentSig);
       }
 
-      // ── PANTRY MODE: AI generation from ingredients on hand ─────────────────
+      // NOTE: Curated-only generator â€” pantry AI is disabled.
+      // If "Use what's in the fridge" is enabled, we still return a curated hall recipe
+      // (ingredients_on_hand is ignored for now).
       if (request.use_what_we_have) {
-        const ptTemplates = await loadTemplates();
-        const { candidates: ptCandidates } = filterTemplatesWithRelaxation(ptTemplates, request);
-        const ptChosen = ptCandidates.length > 0 ? pickTemplate(ptCandidates, request.last_template_id) : null;
-        const ptProtein = "pantry";
-        const ptStructure = pickStructure(request.appliances, request.time_available, request.recent_meal_styles || [], request.prefer_different_style || false);
-        const ptStyle = STRUCTURE_DISPLAY[ptStructure] || ptStructure;
-        const ptVariety = getVarietyConstraints(request.cuisine_style);
-        const ptAuditCtx: LabelAuditContext = {
-          selectedAppliances: request.appliances || [],
-          selectedAllergens: allergens,
-          selectedHealthiness: request.healthiness_preference || "balanced",
-          selectedBudget: request.budget_level || "standard",
-          selectedCuisine: request.cuisine_style || "",
-          selectedMealFormat: request.meal_format || "",
-          selectedProtein: request.protein || "any",
-          chosenProtein: ptProtein,
-          crewSize: request.crew_size || 4,
-        };
-        const ptValCtx: RecipeValidationContext = {
-          chosenProtein: ptProtein,
-          meal_style: ptStyle,
-          cuisine: request.cuisine_style || "any",
-          appliances: request.appliances,
-          allergens,
-          recentSignatures: clientRecentSigs,
-          currentRecipeSignature: clientCurrentSig || undefined,
-        };
-
-        let ptRecipe: GenerateResponse | null = null;
-        try {
-          if (ptChosen) {
-            const ptAI = await withTimeout("pantry_ai", genTimeoutMs, () =>
-              generateRecipeFromPantry(ptChosen, request, ptVariety, ptStructure),
-            );
-            ptRecipe = ptAI.recipe;
-          }
-        } catch (ptErr: any) {
-          log(`[pantry] AI error: ${ptErr.message} — using safe fallback`, "ai");
-        }
-
-        let ptUsedTemplateFallback = !ptRecipe;
-        let ptSource = ptUsedTemplateFallback ? "pantry_template" : "pantry";
-        let ptFinal = ptRecipe ?? buildSafeFallbackRecipe(request.meal_format || ptStyle, request.crew_size);
-
-        if (ptRecipe) {
-          const ptExtras = { _source: "pantry", _fallback: false };
-          const ptFw = runRealismFirewall(ptRecipe, ptExtras);
-          if (ptFw && !ptFw.pass) {
-            log("[pantry] AI output rejected by realism firewall — safe curated fallback", "generate");
-            const safe = await resolveSafeCuratedFallback(request, clientRecentSigs, "pantry_firewall");
-            ptFinal = safe.recipe;
-            ptSource = safe.source;
-            ptUsedTemplateFallback = true;
-            ptAuditCtx.chosenProtein = safe.protein;
-          }
-        }
-
-        const ptWithStyle = { ...ptFinal, meal_style: ptStyle };
-        const ptVal = validateAndFixRecipe(ptWithStyle as any, ptValCtx);
-        logUsage({ cacheKey: `pantry-${sessionId}`, templateId: 0, cacheHit: false, latencyMs: Date.now() - startTime, ipHash, sessionId });
-        log(
-          `[generate] success ${formatLogFields({
-            source: ptSource,
-            title: clip(ptVal.recipe.title, 60),
-            duration: `${Date.now() - startTime}ms`,
-            pantry_items: (request.ingredients_on_hand || []).length,
-            fallback: ptUsedTemplateFallback,
-          })}`,
-          "generate",
-        );
-        recordSignature(ptProtein, ptVal.signature);
-        return sendRecipeResponse(
-          res,
-          ptVal,
-          { _source: ptSource, _fallback: ptUsedTemplateFallback },
-          debugMode,
-          request.crew_size,
-          request.meal_format || "random",
-          allergens,
-          ptAuditCtx,
-          ipHash,
-          sessionId,
-          rateCtx,
-          request,
-          clientRecentSigs,
-        );
+        request.use_what_we_have = false;
+        request.ingredients_on_hand = [];
       }
 
       const v2SessionKey = `${ipHash}:${sessionId}`;
@@ -1147,9 +1228,9 @@ export async function registerRoutes(
       const pipelineHit = await runLocalFirstGeneratePipeline({
         request,
         v2SessionKey,
-        catalogPickOptions,
         varietySeed: catalogVarietySeed,
         recentSignatures: clientRecentSigs,
+        recentSlugs: clientRecentSlugs,
         currentRecipeSignature: clientCurrentSig || undefined,
         preferDifferentStyle: Boolean(request.prefer_different_style),
         startTime,
@@ -1224,52 +1305,109 @@ export async function registerRoutes(
       const failCtx = parseGenerationRateContext(req);
       const failKey = `${hashIp(getClientIp(req))}:${(req as any)._sessionId || "unknown"}`;
       const msg = error instanceof Error ? error.message : String(error);
-      logError("generate", "request failed — serving emergency fallback", error);
+      logError("generate", "request failed â€” serving emergency fallback", error);
 
-      if (error instanceof RecipeNotSendableError) {
-        cancelRequest(failKey, failCtx.requestId);
-        return res.status(500).json(
-          generationError("generation_failed", GENERATION_USER_FAILURE_MESSAGE, {
-            request_id: failCtx.requestId,
-          }),
-        );
-      }
+      // Public reliability requirement: never 5xx for generation.
+      // Even send-gate issues should resolve to a usable emergency recipe.
 
       try {
         const parsed = generateRequestSchema.safeParse(req.body);
-        if (!parsed.success) {
-          cancelRequest(failKey, failCtx.requestId);
-          return res.status(500).json(
-            generationError("generation_failed", GENERATION_USER_FAILURE_MESSAGE, {
-              request_id: failCtx.requestId,
-            }),
-          );
-        }
+        const raw = (req.body || {}) as Record<string, unknown>;
+        const fallbackTime =
+          typeof raw.time_available === "string" && raw.time_available.trim()
+            ? raw.time_available
+            : "45-60";
 
+        // If parsing fails, salvage what we can from the request body and
+        // fall back to safe defaults. This keeps the endpoint stable even
+        // when the client sends partial/invalid payloads.
         const emergencyRequest = sanitizeGenerateRequest({
-          ...parsed.data,
-          busy_level: inferBusyLevelFromTime(parsed.data.time_available),
-        });
+          ...(parsed.success ? parsed.data : ({} as any)),
+          firehall_category: undefined,
+          crew_size:
+            parsed.success
+              ? parsed.data.crew_size
+              : typeof raw.crew_size === "number" && Number.isFinite(raw.crew_size)
+                ? raw.crew_size
+                : 6,
+          time_available: parsed.success ? parsed.data.time_available : fallbackTime,
+          appliances:
+            parsed.success
+              ? parsed.data.appliances
+              : Array.isArray(raw.appliances) && raw.appliances.length > 0
+                ? (raw.appliances as string[])
+                : ["stove", "oven"],
+          protein:
+            parsed.success
+              ? parsed.data.protein
+              : typeof raw.protein === "string" && raw.protein.trim()
+                ? raw.protein
+                : "chicken",
+          healthiness_preference:
+            parsed.success
+              ? parsed.data.healthiness_preference
+              : typeof raw.healthiness_preference === "string"
+                ? raw.healthiness_preference
+                : "balanced",
+          budget_level:
+            parsed.success
+              ? parsed.data.budget_level
+              : typeof raw.budget_level === "string"
+                ? raw.budget_level
+                : "standard",
+          cuisine_style:
+            parsed.success
+              ? parsed.data.cuisine_style
+              : typeof raw.cuisine_style === "string"
+                ? raw.cuisine_style
+                : "any",
+          meal_format:
+            parsed.success
+              ? parsed.data.meal_format
+              : typeof raw.meal_format === "string"
+                ? raw.meal_format
+                : "random",
+          allergens_to_avoid:
+            parsed.success
+              ? parsed.data.allergens_to_avoid
+              : Array.isArray(raw.allergens_to_avoid)
+                ? (raw.allergens_to_avoid as string[])
+                : [],
+          vegetarian_swap_needed:
+            parsed.success
+              ? parsed.data.vegetarian_swap_needed
+              : Boolean(raw.vegetarian_swap_needed),
+          use_what_we_have: false,
+          ingredients_on_hand: [],
+          busy_level: inferBusyLevelFromTime(fallbackTime),
+        } as any);
         const emergencyStart = Date.now();
-        const emergencyHit = resolveEmergencyGenerateHit(
-          emergencyRequest,
-          emergencyStart,
-          `catch:${msg.slice(0, 80)}`,
-        );
-        logGenerateTelemetry(emergencyHit.telemetry);
+        const pipelineHit = await runLocalFirstGeneratePipeline({
+          request: emergencyRequest,
+          v2SessionKey: `catch:${failKey}`,
+          varietySeed: emergencyStart % 100000,
+          recentSignatures: [],
+          currentRecipeSignature: undefined,
+          preferDifferentStyle: false,
+          startTime: emergencyStart,
+        });
+        logGenerateTelemetry(pipelineHit.telemetry);
 
         const allergens = emergencyRequest.allergens_to_avoid || [];
         const valCtx: RecipeValidationContext = {
-          chosenProtein: emergencyHit.protein,
-          meal_style: emergencyHit.recipe.meal_style || emergencyRequest.meal_format || "random",
+          chosenProtein: pipelineHit.protein,
+          meal_style: pipelineHit.recipe.meal_style || emergencyRequest.meal_format || "random",
           cuisine: emergencyRequest.cuisine_style || "any",
           appliances: emergencyRequest.appliances,
           allergens,
         };
-        const validated = validateAndFixRecipe(
-          prepareRecipePreValidation(emergencyHit.recipe),
+        let validated = validateAndFixRecipe(
+          prepareRecipePreValidation(pipelineHit.recipe),
           valCtx,
         );
+        if (pipelineHit.originalTitle && validated.recipe.title !== pipelineHit.originalTitle) {
+          validated = { ...validated, recipe: { ...validated.recipe, title: pipelineHit.originalTitle } };
+        }
         const auditCtx: LabelAuditContext = {
           selectedAppliances: emergencyRequest.appliances || [],
           selectedAllergens: allergens,
@@ -1278,15 +1416,15 @@ export async function registerRoutes(
           selectedCuisine: emergencyRequest.cuisine_style || "",
           selectedMealFormat: emergencyRequest.meal_format || "",
           selectedProtein: emergencyRequest.protein || "any",
-          chosenProtein: emergencyHit.protein,
+          chosenProtein: pipelineHit.protein,
           crewSize: emergencyRequest.crew_size || 4,
         };
 
-        recordSignature(emergencyHit.protein, validated.signature);
+        recordSignature(pipelineHit.protein, validated.signature);
         return sendRecipeResponse(
           res,
           validated,
-          emergencyHit.extras,
+          pipelineHit.extras,
           false,
           emergencyRequest.crew_size,
           emergencyRequest.meal_format || "random",
@@ -1301,14 +1439,67 @@ export async function registerRoutes(
       } catch (innerErr: unknown) {
         cancelRequest(failKey, failCtx.requestId);
         logError("generate", "emergency fallback failed", innerErr);
-        return res.status(500).json(
-          generationError("generation_failed", GENERATION_USER_FAILURE_MESSAGE, {
-            request_id: failCtx.requestId,
-          }),
-        );
+        try {
+          const parsed = generateRequestSchema.safeParse(req.body);
+          const salvage = sanitizeGenerateRequest({
+            ...(parsed.success ? parsed.data : ({} as GenerateRequest)),
+            firehall_category: undefined,
+            protein: parsed.success && parsed.data.protein === "vegetarian" ? "vegetarian" : "any",
+            meal_format: "random",
+            cuisine_style: "any",
+            time_available: "60-90",
+            use_what_we_have: false,
+            ingredients_on_hand: [],
+          } as GenerateRequest);
+          const safe = await resolveSafeCuratedFallback(salvage, [], `emergency_catch:${failCtx.requestId}`);
+          const allergens = salvage.allergens_to_avoid || [];
+          const valCtx: RecipeValidationContext = {
+            chosenProtein: safe.protein,
+            meal_style: safe.recipe.meal_style || salvage.meal_format || "random",
+            cuisine: salvage.cuisine_style || "any",
+            appliances: salvage.appliances,
+            allergens,
+          };
+          const validated = validateAndFixRecipe(prepareRecipePreValidation(safe.recipe), valCtx);
+          return sendRecipeResponse(
+            res,
+            validated,
+            {
+              _fallback: true,
+              _source: safe.source,
+              _recipe_source: safe.recipeSource,
+              _catalog_id: safe.catalogId,
+              _slug: safe.slug,
+              _realism_firewall_fallback: true,
+            },
+            false,
+            salvage.crew_size,
+            salvage.meal_format || "random",
+            allergens,
+            undefined,
+            failKey.split(":")[0] || "unknown",
+            (req as any)._sessionId || "unknown",
+            failCtx,
+            salvage,
+            [],
+          );
+        } catch {
+          const gameDay =
+            typeof (req.body as { firehall_category?: string }).firehall_category === "string" &&
+            (req.body as { firehall_category?: string }).firehall_category === "game_day";
+          return res.status(503).json(
+            generationError(
+              gameDay ? "category_thinned" : "generation_failed",
+              gameDay ? GENERATION_GAME_DAY_MESSAGE : GENERATION_USER_FAILURE_MESSAGE,
+              { request_id: failCtx.requestId, retry_after_seconds: 2 },
+            ),
+          );
+        }
       }
     }
   });
+
+  await registerHallFeedbackRoutes(app);
 
   app.get("/api/csrf-token", (req: Request, res: Response) => {
     let token = req.cookies?.csrf_token;
@@ -1437,7 +1628,7 @@ export async function registerRoutes(
           shopping_list_sections: (shopping_list_sections || []).map((section) => ({
             title: section.title,
             items: section.items.map((item) =>
-              [item.name, item.amount, item.notes].filter(Boolean).join(" — "),
+              [item.name, item.amount, item.notes].filter(Boolean).join(" â€” "),
             ),
           })),
           generator_type: generator_type || "meal",
@@ -1556,7 +1747,7 @@ export async function registerRoutes(
       const budgetExceeded = currentSpend >= dailyBudget;
 
       if (budgetExceeded) {
-        log(`[pizza] LLM budget exceeded — serving hall template (${conceptId})`, "budget");
+        log(`[pizza] LLM budget exceeded â€” serving hall template (${conceptId})`, "budget");
         const templateRecipe = finalizePizzaRecipe(
           buildPizzaTemplate(conceptId, request),
           request,
@@ -1901,50 +2092,127 @@ export async function registerRoutes(
     }
   });
 
-  app.get("/api/catalog/golden-100", async (_req: Request, res: Response) => {
+  app.get("/sitemap.xml", (req: Request, res: Response) => {
+    const origin = resolvePublicSiteOrigin(
+      req.get("host") ?? undefined,
+      req.get("x-forwarded-proto") ?? undefined,
+    );
+    res.setHeader("Cache-Control", "public, max-age=3600, stale-while-revalidate=86400");
+    res.type("application/xml").send(buildSitemapXml(origin));
+  });
+
+  app.get("/robots.txt", (req: Request, res: Response) => {
+    const origin = resolvePublicSiteOrigin(
+      req.get("host") ?? undefined,
+      req.get("x-forwarded-proto") ?? undefined,
+    );
+    res.setHeader("Cache-Control", "public, max-age=86400");
+    res.type("text/plain").send(buildRobotsTxt(origin));
+  });
+
+  app.get("/api/content/guides", async (_req: Request, res: Response) => {
     res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
-    const indexFile = path.join(GOLDEN_CATALOG_PUBLIC_DIR, "index.json");
+    const indexFile = path.join(EDITORIAL_PUBLIC_DIR, "index.json");
     if (fs.existsSync(indexFile)) {
       return res.type("json").send(fs.readFileSync(indexFile, "utf8"));
     }
-    const pages = GOLDEN_100_RECIPES.map((def) => {
-      const page = buildGoldenRecipePage(def);
-      return {
-        slug: page.slug,
-        title: page.title,
-        subtitle: page.subtitle,
-        category: page.category,
-        cuisine: page.cuisine,
-        protein: def.protein,
-        mealFormat: def.mealFormat,
-        cookTime: page.cookTime,
-        difficulty: page.difficulty,
-        heroImage: page.heroImage,
-        thumbImage: page.thumbImage,
-        tags: page.tags,
-        firefighterScore: page.firefighterScore,
-        popularityWeight: page.popularityWeight,
-        searchTerms: page.searchTerms,
-      };
-    });
+    const articles = EDITORIAL_ARTICLES.map((a) => ({
+      slug: a.slug,
+      title: a.title,
+      subtitle: a.subtitle,
+      description: a.description,
+      topic: a.topic,
+      readMinutes: a.readMinutes,
+      publishedAt: a.publishedAt,
+    }));
     return res.json({
       version: 1,
-      contentVersion: 1,
       generatedAt: new Date().toISOString(),
-      recipeCount: pages.length,
-      recipes: pages,
+      articleCount: articles.length,
+      articles,
     });
+  });
+
+  app.get("/api/content/guides/:slug", async (req: Request, res: Response) => {
+    const slug = decodeURIComponent(String(req.params.slug)).trim().toLowerCase();
+    const onDisk = readEditorialArticle(slug);
+    const fromSource = getEditorialArticleBySlug(slug);
+    const article = onDisk ?? fromSource;
+    if (!article) {
+      return res.status(404).json({ message: "Guide not found" });
+    }
+    res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
+    return res.json(article);
+  });
+
+  app.get("/api/catalog/golden-100", async (_req: Request, res: Response) => {
+    res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
+    const merged = loadMergedHallCatalogIndex();
+    return res.json(merged);
+  });
+
+  app.get("/api/catalog/approved", async (_req: Request, res: Response) => {
+    try {
+      const catalog = buildApprovedCatalog();
+      res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
+      log(`[catalog] Approved browse: ${catalog.recipeCount} recipes`, "catalog");
+      return res.json(catalog);
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : "Approved catalog failed";
+      log(`[catalog] Approved browse error: ${msg}`, "catalog");
+      return res.status(500).json({ message: "Approved catalog failed. Please try again." });
+    }
   });
 
   app.get("/api/catalog/golden-100/:slug", async (req: Request, res: Response) => {
     const slug = decodeURIComponent(String(req.params.slug)).trim().toLowerCase();
-    const def = getGoldenRecipeBySlug(slug);
-    if (!def) {
-      return res.status(404).json({ message: "Recipe not in Golden 100 catalog" });
+    const page = resolveHallRecipePage(slug);
+    if (!page) {
+      return res.status(404).json({ message: "Recipe not in hall catalog" });
     }
     res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
-    const onDisk = readGoldenRecipePage(slug);
-    const page = onDisk ?? buildGoldenRecipePage(def);
+    return res.json(page);
+  });
+
+  app.get("/api/catalog/performance-meals", async (_req: Request, res: Response) => {
+    res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
+    const indexFile = path.join(PERFORMANCE_CATALOG_PUBLIC_DIR, "index.json");
+    if (fs.existsSync(indexFile)) {
+      return res.type("json").send(fs.readFileSync(indexFile, "utf8"));
+    }
+    return res.status(404).json({ message: "Performance catalog not generated" });
+  });
+
+  app.get("/api/catalog/performance-meals/:slug", async (req: Request, res: Response) => {
+    const slug = decodeURIComponent(String(req.params.slug)).trim().toLowerCase();
+    const adapted = getPerformanceRecipeBySlug(slug);
+    if (!adapted) {
+      return res.status(404).json({ message: "Recipe not in Performance Meals catalog" });
+    }
+    res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
+    const onDisk = readPerformanceRecipePage(slug);
+    const page = onDisk ?? buildPerformanceRecipePage(adapted);
+    return res.json(page);
+  });
+
+  app.get("/api/catalog/smoothies", async (_req: Request, res: Response) => {
+    res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
+    const indexFile = path.join(SMOOTHIE_CATALOG_PUBLIC_DIR, "index.json");
+    if (fs.existsSync(indexFile)) {
+      return res.type("json").send(fs.readFileSync(indexFile, "utf8"));
+    }
+    return res.status(404).json({ message: "Smoothie catalog not generated" });
+  });
+
+  app.get("/api/catalog/smoothies/:slug", async (req: Request, res: Response) => {
+    const slug = decodeURIComponent(String(req.params.slug)).trim().toLowerCase();
+    const item = getSmoothieCatalogItem(slug);
+    if (!item) {
+      return res.status(404).json({ message: "Recipe not in smoothie catalog" });
+    }
+    res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
+    const onDisk = readSmoothieRecipePage(slug);
+    const page = onDisk ?? buildSmoothieRecipePage(item);
     return res.json(page);
   });
 
@@ -1961,6 +2229,19 @@ export async function registerRoutes(
         const pageOnDisk = listGoldenPageSlugs().includes(r.slug);
         const page = readGoldenRecipePage(r.slug) ?? buildGoldenRecipePage(r);
         const pageValidation = validateGoldenRecipePage(page);
+        const heroUrl = golden100HeroUrl(r.slug);
+        const integrity = inDb
+          ? scoreImageIntegrity({
+              slug: r.slug,
+              title: inDb.title,
+              protein: inDb.protein,
+              cuisine: inDb.cuisine,
+              mealFormat: inDb.mealFormat,
+              heroImage: heroUrl,
+              heroAlt: inDb.title,
+              imageApproved: inDb.editorialImage?.imageApproved,
+            })
+          : null;
         return {
           slug: r.slug,
           title: r.title,
@@ -1985,6 +2266,12 @@ export async function registerRoutes(
             !assets.thumb && "thumb",
             !assets.rail && "rail",
           ].filter(Boolean),
+          imageIntegrityScore: integrity?.score,
+          platingType: integrity?.platingType,
+          depictedPlating: integrity?.depictedPlating,
+          imageIntegrityPass: integrity?.pass,
+          imageIntegrityFlags: integrity?.flags,
+          imageTitleMismatch: integrity ? !integrity.pass : false,
         };
       }),
     });
@@ -2054,6 +2341,19 @@ export async function registerRoutes(
           !row.heroImage?.trim() ||
           (row.heroImage.includes("spoonacular.com") && !manifest?.classicSlug);
 
+        const integrity = recipe
+          ? scoreImageIntegrity({
+              slug: row.slug,
+              title: row.title,
+              protein: row.protein,
+              cuisine: recipe.cuisine,
+              mealFormat: recipe.mealFormat,
+              heroImage: row.heroImage,
+              heroAlt: row.title,
+              imageApproved: recipe.editorialImage?.imageApproved,
+            })
+          : null;
+
         return {
           ...row,
           weakTitle: !titleQ.pass,
@@ -2061,6 +2361,12 @@ export async function registerRoutes(
           missingImagery,
           masterCategoryId: manifest?.masterCategoryId,
           imageryPromptPreview: manifest ? buildGoldenHeroPrompt(manifest).slice(0, 200) : undefined,
+          imageIntegrityScore: integrity?.score,
+          platingType: integrity?.platingType,
+          depictedPlating: integrity?.depictedPlating,
+          imageIntegrityPass: integrity?.pass,
+          imageIntegrityFlags: integrity?.flags,
+          imageTitleMismatch: integrity ? !integrity.pass : false,
         };
       });
 
@@ -2160,7 +2466,7 @@ export async function registerRoutes(
     try {
       const fp = decodeURIComponent(String(req.params.fingerprint));
       const ok = await promoteDraftByFingerprint(fp);
-      if (!ok) return res.status(400).json({ message: "Promote failed — needs Spoonacular id and valid draft" });
+      if (!ok) return res.status(400).json({ message: "Promote failed â€” needs Spoonacular id and valid draft" });
       return res.json({ ok: true, status: "promoted" });
     } catch (err: unknown) {
       return res.status(500).json({ message: (err as Error).message });
@@ -2199,7 +2505,7 @@ export async function registerRoutes(
         const score = cr.hit_count * 2;
         if (!existing || score > existing.score) {
           titleMap.set(key, {
-            title: cr.title.replace(/\s*\(.*?\)\s*$/, "").replace(/\s*—.*$/, "").trim(),
+            title: cr.title.replace(/\s*\(.*?\)\s*$/, "").replace(/\s*â€”.*$/, "").trim(),
             protein: cr.chosen_protein,
             score,
             source: "generated",
@@ -2298,205 +2604,20 @@ export async function registerRoutes(
   app.get("/api/explore/discover", async (req: Request, res: Response) => {
     if (!enforceExploreRateLimit(req, res)) return;
     try {
-      const diet = (req.query.diet as string) || "";
-      const intolerances = (req.query.intolerances as string) || "";
-      const excludeIngredients = (req.query.excludeIngredients as string) || "";
-      const seenParam = (req.query.seen as string) || "";
       const limitParam = parseInt(req.query.limit as string) || 12;
       const limit = Math.min(Math.max(limitParam, 4), 20);
-      const seenIds = new Set([
-        ...discoverSeenIds,
-        ...seenParam.split(",").map(s => parseInt(s)).filter(Number.isFinite),
-      ]);
-
-      const safetyFilters: Record<string, string> = {};
-      if (diet) safetyFilters.diet = diet;
-      if (intolerances) safetyFilters.intolerances = intolerances;
-      if (excludeIngredients) safetyFilters.excludeIngredients = excludeIngredients;
-
-      const pools: { name: string; queries: { q: string; cuisine?: string }[] }[] = [
-        {
-          name: "chicken",
-          queries: [
-            { q: "chicken dinner" },
-            { q: "chicken bowl", cuisine: "mediterranean,greek" },
-            { q: "chicken stir fry", cuisine: "chinese,thai,korean" },
-            { q: "grilled chicken" },
-            { q: "chicken sheet pan" },
-          ],
-        },
-        {
-          name: "beef",
-          queries: [
-            { q: "beef dinner" },
-            { q: "beef stew" },
-            { q: "burger" },
-            { q: "steak dinner" },
-            { q: "beef tacos", cuisine: "mexican" },
-          ],
-        },
-        {
-          name: "pork",
-          queries: [
-            { q: "pork dinner" },
-            { q: "pork chops" },
-            { q: "bbq pork" },
-            { q: "pulled pork" },
-            { q: "pork tenderloin" },
-          ],
-        },
-        {
-          name: "vegetarian",
-          queries: [
-            { q: "vegetarian dinner" },
-            { q: "vegetable stir fry" },
-            { q: "vegetarian pasta", cuisine: "italian" },
-            { q: "bean bowl", cuisine: "mexican" },
-            { q: "tofu dinner" },
-          ],
-        },
-        {
-          name: "comfort",
-          queries: [
-            { q: "comfort food dinner" },
-            { q: "mac and cheese" },
-            { q: "casserole" },
-            { q: "one pot meal" },
-            { q: "slow cooker dinner" },
-          ],
-        },
-        {
-          name: "healthy",
-          queries: [
-            { q: "high protein meal" },
-            { q: "healthy dinner" },
-            { q: "lean protein meal" },
-            { q: "quinoa bowl" },
-            { q: "grilled fish" },
-          ],
-        },
-        {
-          name: "international",
-          queries: [
-            { q: "cajun dinner", cuisine: "cajun" },
-            { q: "tacos", cuisine: "mexican" },
-            { q: "pasta", cuisine: "italian" },
-            { q: "curry", cuisine: "indian,thai" },
-            { q: "mediterranean bowl", cuisine: "mediterranean,greek" },
-            { q: "korean dinner", cuisine: "korean" },
-            { q: "japanese dinner", cuisine: "japanese" },
-          ],
-        },
-      ];
-
-      const poolResults = new Map<string, any[]>();
-
-      const poolEntries = pools.map(pool => ({
-        pool,
-        query: pool.queries[Math.floor(Math.random() * pool.queries.length)],
-      }));
-
-      const batch1 = poolEntries.slice(0, 4);
-      const batch2 = poolEntries.slice(4);
-
-      const fetchBatch = async (entries: typeof poolEntries) => {
-        await Promise.all(entries.map(({ pool, query }) =>
-          searchRecipes(query.q, {
-            cuisine: query.cuisine || undefined,
-            number: 6,
-            sort: "random",
-            ...safetyFilters,
-          })
-            .then(result => {
-              const cleaned = result.results
-                .filter((r: any) => !seenIds.has(r.id))
-                .filter((r: { id: number; title?: string }) => Number.isFinite(r.id) && r.id > 0 && !!r.title?.trim())
-                .map((r: any) =>
-                  normalizeExploreRecipeCard(
-                    {
-                      id: r.id,
-                      title: r.title,
-                      image: r.image || "",
-                      readyInMinutes: r.readyInMinutes || 0,
-                      servings: r.servings || 0,
-                      sourceUrl: r.sourceUrl || "",
-                      summary: (r.summary || "").replace(/<[^>]*>/g, "").substring(0, 200),
-                      cuisines: r.cuisines || [],
-                      diets: r.diets || [],
-                      _pool: pool.name,
-                    },
-                    "discover",
-                  ),
-                )
-                .filter((r): r is NonNullable<typeof r> => r !== null);
-              poolResults.set(pool.name, cleaned);
-            })
-            .catch(() => {
-              poolResults.set(pool.name, []);
-            })
-        ));
-      };
-
-      await fetchBatch(batch1);
-      await new Promise(resolve => setTimeout(resolve, 1100));
-      await fetchBatch(batch2);
-
-      const diverse: any[] = [];
-      const seenTitles = new Set<string>();
-      const usedTitleWords = new Map<string, number>();
-
-      const pickFromPool = (poolName: string, count: number) => {
-        const candidates = poolResults.get(poolName) || [];
-        const shuffledCandidates = [...candidates].sort(() => Math.random() - 0.5);
-        let picked = 0;
-        for (const r of shuffledCandidates) {
-          if (picked >= count) break;
-          const titleKey = r.title.toLowerCase().replace(/[^a-z]/g, "");
-          if (seenTitles.has(titleKey)) continue;
-          const titleWords = r.title.toLowerCase().split(/\s+/).filter((w: string) => w.length > 3);
-          const wordOverlap = titleWords.reduce((sum: number, w: string) => sum + (usedTitleWords.get(w) || 0), 0);
-          if (wordOverlap > 2 && shuffledCandidates.length > picked + 1) continue;
-          seenTitles.add(titleKey);
-          for (const w of titleWords) {
-            usedTitleWords.set(w, (usedTitleWords.get(w) || 0) + 1);
-          }
-          diverse.push(r);
-          picked++;
-        }
-      };
-
-      const poolOrder = pools.map(p => p.name).sort(() => Math.random() - 0.5);
-      const firstPassPick = Math.max(1, Math.ceil(limit / pools.length));
-      for (const poolName of poolOrder) {
-        if (diverse.length >= limit) break;
-        pickFromPool(poolName, firstPassPick);
-      }
-
-      for (const poolName of poolOrder) {
-        if (diverse.length >= limit) break;
-        pickFromPool(poolName, 3);
-      }
-
-      const trimmed = filterDisplayableExploreCards(
-        normalizeExploreRecipeList(diverse, "discover-merge"),
-      ).slice(0, limit);
-      trimmed.sort(() => Math.random() - 0.5);
-
-      addToDiscoverMemory(trimmed.map((r: { id: number }) => r.id));
-
-      log(`[explore] Discover feed: ${trimmed.length}/${limit} diverse recipes from ${pools.length} pools | memory=${discoverSeenIds.length}`, "spoonacular");
+      const catalogCards = hallCatalogExploreCards("", limit * 2);
+      const trimmed = filterDisplayableExploreCards(catalogCards).slice(0, limit);
+      log(`[explore] Discover feed: ${trimmed.length}/${limit} golden catalog recipes`, "catalog");
       return res.json({
         results: trimmed,
         totalResults: trimmed.length,
-        _source: "spoonacular",
+        _source: "hall_catalog",
         _discover: true,
       });
-    } catch (err: any) {
-      const msg = err.message || "Discover failed";
-      if (msg.includes("SPOONACULAR_API_KEY is not configured")) {
-        return res.status(503).json({ message: "Recipe search is not configured. SPOONACULAR_API_KEY is missing." });
-      }
-      log(`[spoonacular] Discover error: ${msg}`, "spoonacular");
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : "Discover failed";
+      log(`[explore] Discover error: ${msg}`, "catalog");
       return res.status(500).json({ message: "Recipe discovery failed. Please try again." });
     }
   });
@@ -2505,234 +2626,36 @@ export async function registerRoutes(
     if (!enforceExploreRateLimit(req, res)) return;
     try {
       const query = (req.query.q as string) || "";
-      const cuisine = (req.query.cuisine as string) || "";
-      const diet = (req.query.diet as string) || "";
-      const type = (req.query.type as string) || "";
-      const intolerances = (req.query.intolerances as string) || "";
-      const excludeIngredients = (req.query.excludeIngredients as string) || "";
-      const includeIngredients = (req.query.includeIngredients as string) || "";
-      const equipment = (req.query.equipment as string) || "";
-      const rawMaxReadyTime = parseInt(req.query.maxReadyTime as string);
-      const maxReadyTime = Number.isFinite(rawMaxReadyTime) && rawMaxReadyTime > 0 ? Math.min(rawMaxReadyTime, 480) : undefined;
       const rawNumber = parseInt((req.query.number as string) || "15");
       const number = Number.isFinite(rawNumber) && rawNumber > 0 ? Math.min(rawNumber, 20) : 15;
-      const rawOffset = parseInt((req.query.offset as string) || "0");
-      const offset = Number.isFinite(rawOffset) && rawOffset >= 0 ? rawOffset : 0;
-      const rawMinServings = parseInt(req.query.minServings as string);
-      const minServings = Number.isFinite(rawMinServings) && rawMinServings > 0 ? rawMinServings : undefined;
-      const rawMaxServings = parseInt(req.query.maxServings as string);
-      const maxServings = Number.isFinite(rawMaxServings) && rawMaxServings > 0 ? rawMaxServings : undefined;
-      const sort = (req.query.sort as string) || "";
-      const baseQuery = (req.query._baseQuery as string) || "";
-
-      if (!query.trim()) {
-        const results = await getRandomRecipes(cuisine || undefined, number);
-        log(`[explore] Random recipes returned ${results.length} results | source=spoonacular`, "spoonacular");
-        return res.json({
-          results: normalizeExploreRecipeList(
-            results.map((r) => ({
-              id: r.id,
-              title: r.title,
-              image: r.image,
-              readyInMinutes: r.readyInMinutes,
-              servings: r.servings,
-              sourceUrl: r.sourceUrl || "",
-              summary: (r.summary || "").replace(/<[^>]*>/g, "").substring(0, 200),
-              cuisines: r.cuisines || [],
-              diets: r.diets || [],
-            })),
-            "random",
-          ),
-          totalResults: results.length,
-          _source: "spoonacular",
-        });
-      }
-
-      const safetyFilters = { intolerances, excludeIngredients, diet };
-
-      const relaxationSteps: { label: string; opts: SearchOptions; q: string }[] = [
-        {
-          label: "original",
-          q: query,
-          opts: { cuisine, type, maxReadyTime, number, offset, includeIngredients, equipment, minServings, maxServings, sort, ...safetyFilters },
-        },
-        {
-          label: "relax-cuisine",
-          q: query,
-          opts: { type, maxReadyTime, number, offset, includeIngredients, equipment, minServings, maxServings, sort, ...safetyFilters },
-        },
-        {
-          label: "relax-meal-style",
-          q: baseQuery || "dinner",
-          opts: { maxReadyTime, number, offset, includeIngredients, equipment, minServings, maxServings, sort, ...safetyFilters },
-        },
-        {
-          label: "relax-time",
-          q: baseQuery || "dinner",
-          opts: { number, offset, includeIngredients, equipment, sort, ...safetyFilters },
-        },
-      ];
-
-      for (const step of relaxationSteps) {
-        const searchResults = await searchRecipes(step.q, step.opts);
-        if (searchResults.results.length > 0) {
-          if (step.label !== "original") {
-            logVerbose(
-              `[explore] relaxation="${step.label}" count=${searchResults.results.length} query="${clip(step.q, 40)}"`,
-              "explore",
-            );
-          } else {
-            logVerbose(`[explore] search count=${searchResults.results.length}`, "explore");
-          }
-          return res.json({
-            results: normalizeExploreRecipeList(searchResults.results, "search"),
-            totalResults: searchResults.totalResults,
-            _source: "spoonacular",
-            _relaxed: step.label !== "original" ? step.label : undefined,
-          });
-        }
-        if (step.label !== relaxationSteps[relaxationSteps.length - 1].label) {
-          logVerbose(`[explore] step="${step.label}" count=0 — relaxing`, "explore");
-        }
-      }
-
-      log(`[explore] All Spoonacular relaxation steps exhausted — trying curated/catalog before template`, "spoonacular");
-
-      const curatedExplore = pickCuratedExploreSearchCard();
-      if (curatedExplore) {
-        const curatedCard = normalizeExploreRecipeCard(
-          {
-            id: curatedExplore.exploreId,
-            title: curatedExplore.title,
-            image: curatedExplore.image,
-            readyInMinutes: curatedExplore.readyInMinutes,
-            servings: 6,
-            summary: curatedExplore.summary,
-            sourceUrl: curatedExplore.sourceUrl,
-            _catalogFallback: true,
-          },
-          "curated",
-        );
-        if (curatedCard) {
-          log(`[explore] Curated import hit: "${curatedExplore.title}" slug=${curatedExplore.slug}`, "spoonacular");
-          return res.json({
-            results: [curatedCard],
-            totalResults: 1,
-            _source: "curated",
-          });
-        }
-      }
-
-      const catalogExplore = pickCatalogExploreFallback();
-      if (catalogExplore) {
-        const catalogCard = normalizeExploreRecipeCard(
-          {
-            id: catalogExplore.spoonacularId,
-            title: catalogExplore.title,
-            image: catalogExplore.heroImage,
-            readyInMinutes: catalogExplore.readyInMinutes,
-            servings: 4,
-            summary: catalogExplore.summary,
-            _catalogFallback: true,
-          },
-          "catalog",
-        );
-        if (catalogCard) {
-          log(`[explore] Catalog last-tier hit: "${catalogExplore.title}" id=${catalogExplore.catalogId}`, "spoonacular");
-          return res.json({
-            results: [catalogCard],
-            totalResults: 1,
-            _source: "catalog",
-          });
-        }
-      }
-
-      if (!isTemplateFallbackAllowed()) {
-        log(`[explore] template_fallback blocked — returning empty`, "spoonacular");
-        return res.json({ results: [], totalResults: 0, _source: "none" });
-      }
-
-      log(`[explore] Catalog empty — last_resort template_fallback`, "spoonacular");
-      try {
-        const rawCrewParam = parseInt(req.query._crewSize as string);
-        const crewSize = Number.isFinite(rawCrewParam) && rawCrewParam >= 2 ? rawCrewParam : 6;
-        const allergenList = [
-          ...(intolerances || "").split(",").map(a => a.trim().toLowerCase()).filter(Boolean),
-          ...(excludeIngredients || "").split(",").map(a => a.trim().toLowerCase()).filter(Boolean),
-        ];
-        const isVegetarian = diet === "vegetarian";
-        let detectedProtein = "chicken";
-        if (isVegetarian) {
-          detectedProtein = "vegetarian";
-        } else {
-          const queryLower = query.toLowerCase();
-          for (const p of ["chicken", "beef", "pork", "turkey", "fish", "seafood"]) {
-            if (queryLower.includes(p)) { detectedProtein = p; break; }
-          }
-        }
-
-        const equipList = (equipment || "").split(",").map(e => e.trim().toLowerCase()).filter(Boolean);
-        const applianceMap: Record<string, string> = { oven: "oven", stove: "stove", "slow cooker": "slow cooker", grill: "grill", "rice cooker": "rice cooker" };
-        const appliances = equipList.map(e => applianceMap[e]).filter(Boolean);
-        if (appliances.length === 0) appliances.push("stove", "oven");
-
-        const exploreTime =
-          maxReadyTime && maxReadyTime <= 25
-            ? "15-25"
-            : maxReadyTime && maxReadyTime <= 40
-              ? "25-40"
-              : "30-45";
-        const fallbackRequest = createDefaultGenerateRequest({
-          crew_size: crewSize,
-          busy_level: inferBusyLevelFromTime(exploreTime),
-          time_available: exploreTime,
-          appliances,
-          protein: detectedProtein as GenerateRequest["protein"],
-          allergens_to_avoid: allergenList,
-        });
-
-        const templates = await loadTemplates();
-        const filterResult = filterTemplatesWithRelaxation(templates, fallbackRequest);
-        if (filterResult.candidates.length === 0) {
-          log(`[explore] Firehall fallback: no matching templates`, "spoonacular");
-          return res.json({ results: [], totalResults: 0, _source: "none" });
-        }
-        const template = pickTemplate(filterResult.candidates);
-        const protein = chooseProtein(template, fallbackRequest.protein, fallbackRequest.healthiness_preference);
-        const fallback = buildFallbackRecipe(template, fallbackRequest, protein);
-
-        const fbResult = normalizeExploreRecipeCard(
-          {
-            id: -1,
-            title: fallback.title,
-            image: "",
-            readyInMinutes: fallback.timing?.total_minutes || 30,
-            servings: crewSize,
-            summary: fallback.why_it_fits_tonight || "AI-generated crew meal from the Firehall generator.",
-            _firehallFallback: true,
-          },
-          "firehall-fallback",
-        );
-
-        log(`[explore] template_fallback served: "${fallback.title}" crew=${crewSize}`, "spoonacular");
-        return res.json({
-          results: fbResult ? [fbResult] : [],
-          totalResults: fbResult ? 1 : 0,
-          _source: "template_fallback",
-        });
-      } catch (fbErr: any) {
-        log(`[explore] Firehall fallback failed: ${fbErr.message}`, "spoonacular");
-        return res.json({ results: [], totalResults: 0, _source: "none" });
-      }
-    } catch (err: any) {
-      const msg = err.message || "Search failed";
-      if (msg.includes("SPOONACULAR_API_KEY is not configured")) {
-        return res.status(503).json({ message: "Recipe search is not configured. SPOONACULAR_API_KEY is missing." });
-      }
-      log(`[spoonacular] Search error: ${msg}`, "spoonacular");
+      const catalogCards = hallCatalogExploreCards(query.trim(), number);
+      const results = filterDisplayableExploreCards(catalogCards);
+      log(`[explore] Golden catalog search q="${query.slice(0, 40)}" count=${results.length}`, "catalog");
+      return res.json({
+        results,
+        totalResults: results.length,
+        _source: "hall_catalog",
+      });
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : "Search failed";
+      log(`[explore] Search error: ${msg}`, "catalog");
       return res.status(500).json({ message: "Recipe search failed. Please try again." });
     }
   });
+
+  app.get("/api/explore/catalog", async (_req: Request, res: Response) => {
+    try {
+      const catalog = buildApprovedCatalog();
+      res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
+      log(`[explore] Catalog browse: ${catalog.recipeCount} approved recipes`, "catalog");
+      return res.json(catalog);
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : "Catalog browse failed";
+      log(`[explore] Catalog browse error: ${msg}`, "catalog");
+      return res.status(500).json({ message: "Catalog browse failed. Please try again." });
+    }
+  });
+
 
   app.get("/api/curated/:slug", async (req: Request, res: Response) => {
     try {

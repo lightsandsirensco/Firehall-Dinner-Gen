@@ -1,0 +1,100 @@
+{
+  "slug": "blueberry-almond",
+  "title": "Blueberry Almond Smoothie",
+  "seoTitle": "Blueberry Almond Smoothie | Firefighter Smoothie",
+  "subtitle": "Fruit · Berry",
+  "description": "Blueberries and almond butter give you antioxidants and staying power without a long ingredient list. Mild, crowd-friendly, not “health food” weird.",
+  "fuelType": "smoothie",
+  "taxonomyCategory": "fruit_smoothie",
+  "taxonomyLabel": "Fruit",
+  "intro": "Blueberries and almond butter give you antioxidants and staying power without a long ingredient list. Mild, crowd-friendly, not “health food” weird.",
+  "ingredients": [
+    {
+      "name": "frozen blueberries",
+      "quantity": "3",
+      "unit": "cups"
+    },
+    {
+      "name": "almond butter",
+      "quantity": "4",
+      "unit": "tbsp"
+    },
+    {
+      "name": "milk",
+      "quantity": "2",
+      "unit": "cups"
+    },
+    {
+      "name": "plain Greek yogurt",
+      "quantity": "1",
+      "unit": "cup"
+    },
+    {
+      "name": "rolled oats",
+      "quantity": "0.25",
+      "unit": "cup",
+      "notes": "optional for thickness"
+    },
+    {
+      "name": "lemon juice",
+      "quantity": "1",
+      "unit": "tsp",
+      "notes": "brightens flavor"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "instruction": "Combine blueberries, almond butter, milk, and yogurt in the blender."
+    },
+    {
+      "stepNumber": 2,
+      "instruction": "Blend on high until the purple color is even and the almond butter is fully incorporated."
+    },
+    {
+      "stepNumber": 3,
+      "instruction": "Add oats and lemon if using; blend 30 seconds more until smooth."
+    },
+    {
+      "stepNumber": 4,
+      "instruction": "Should taste nutty and fruity, not bitter — add a teaspoon of honey only if blueberries were tart."
+    }
+  ],
+  "nutrition": {
+    "calories": 290,
+    "protein": 17,
+    "carbs": 32,
+    "fats": 8,
+    "highlights": "~290 cal · ~17 g protein · vitamin E and fats from almond butter · anthocyanins from blueberries"
+  },
+  "substitutions": [
+    "Peanut butter swaps in if almond butter is not on hand.",
+    "Silken tofu (½ cup) can replace part of the yogurt for a dairy-free batch."
+  ],
+  "shiftNote": "Berries hide in the freezer well — good pantry item for halls trying to stock healthier grab-and-go options.",
+  "heroImage": "/images/editorial/smoothies/blueberry-almond.webp",
+  "thumbImage": "/images/editorial/smoothies/blueberry-almond.webp",
+  "tags": [
+    "fuel_smoothie",
+    "taxonomy:fruit_smoothie",
+    "smoothie",
+    "performance_fuel",
+    "shift_nutrition"
+  ],
+  "searchTerms": [
+    "blueberry almond smoothie",
+    "healthy smoothies",
+    "smoothies for firefighters",
+    "firefighter breakfast",
+    "recovery smoothie",
+    "fruit smoothie",
+    "station blender",
+    "shift nutrition"
+  ],
+  "relatedSlugs": [
+    "tropical-mango-greek"
+  ],
+  "catalogSet": "fuel_smoothie",
+  "generatedAt": "2026-05-28T00:37:54.583Z",
+  "contentVersion": 1
+}

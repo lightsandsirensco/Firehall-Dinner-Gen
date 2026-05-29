@@ -1,0 +1,105 @@
+{
+  "slug": "chocolate-banana-recovery",
+  "title": "Chocolate Banana Recovery Smoothie",
+  "seoTitle": "Chocolate Banana Recovery Smoothie | Firefighter Smoothie",
+  "subtitle": "Recovery · Recovery",
+  "description": "Tastes like a treat, behaves like recovery food. Cocoa and banana do the heavy lifting — no syrup, no ice cream required.",
+  "fuelType": "smoothie",
+  "taxonomyCategory": "recovery_smoothie",
+  "taxonomyLabel": "Recovery",
+  "intro": "Tastes like a treat, behaves like recovery food. Cocoa and banana do the heavy lifting — no syrup, no ice cream required.",
+  "ingredients": [
+    {
+      "name": "frozen banana slices",
+      "quantity": "4",
+      "unit": "medium bananas worth"
+    },
+    {
+      "name": "unsweetened cocoa powder",
+      "quantity": "3",
+      "unit": "tbsp"
+    },
+    {
+      "name": "milk",
+      "quantity": "2",
+      "unit": "cups"
+    },
+    {
+      "name": "plain Greek yogurt",
+      "quantity": "1",
+      "unit": "cup"
+    },
+    {
+      "name": "peanut butter or almond butter",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "pinch of kosher salt",
+      "quantity": "1",
+      "unit": "pinch"
+    },
+    {
+      "name": "ice",
+      "quantity": "0.5",
+      "unit": "cup",
+      "notes": "optional"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "instruction": "Blend banana, cocoa, milk, yogurt, nut butter, and salt until the color is uniform chocolate brown."
+    },
+    {
+      "stepNumber": 2,
+      "instruction": "Scrape the sides and blend again — cocoa can cling to the jar."
+    },
+    {
+      "stepNumber": 3,
+      "instruction": "Texture should be thick and shake-like. Thin with milk 2 tbsp at a time if needed."
+    },
+    {
+      "stepNumber": 4,
+      "instruction": "Serve right away for best flavor; salt is small but makes the chocolate taste deeper."
+    }
+  ],
+  "nutrition": {
+    "calories": 320,
+    "protein": 18,
+    "carbs": 32,
+    "fats": 8,
+    "highlights": "~320 cal · ~18 g protein · potassium · satisfies sweet cravings without bakery sugar levels"
+  },
+  "substitutions": [
+    "Chocolate protein powder (1 scoop) replaces cocoa + some yogurt.",
+    "Dairy-free milk and yogurt alternatives work fine."
+  ],
+  "shiftNote": "This one works well after workouts or overnight calls because it is higher in protein but still light.",
+  "heroImage": "/images/editorial/smoothies/chocolate-banana-recovery.webp",
+  "thumbImage": "/images/editorial/smoothies/chocolate-banana-recovery.webp",
+  "tags": [
+    "fuel_smoothie",
+    "taxonomy:recovery_smoothie",
+    "smoothie",
+    "performance_fuel",
+    "shift_nutrition"
+  ],
+  "searchTerms": [
+    "chocolate banana recovery smoothie",
+    "healthy smoothies",
+    "smoothies for firefighters",
+    "firefighter breakfast",
+    "recovery smoothie",
+    "recovery smoothie",
+    "station blender",
+    "shift nutrition"
+  ],
+  "relatedSlugs": [
+    "peanut-butter-banana-recovery",
+    "citrus-ginger"
+  ],
+  "catalogSet": "fuel_smoothie",
+  "generatedAt": "2026-05-28T00:37:54.583Z",
+  "contentVersion": 1
+}

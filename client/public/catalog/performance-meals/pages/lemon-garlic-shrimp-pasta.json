@@ -1,0 +1,177 @@
+{
+  "slug": "lemon-garlic-shrimp-pasta",
+  "title": "Lemon Garlic Shrimp Pasta",
+  "displayTitle": "Lemon Garlic Shrimp Pasta",
+  "seoTitle": "Lemon Garlic Shrimp Pasta | Firefighter Meal",
+  "shortDescription": "Fast skillet pasta with parsley, capers, and peeled shrimp",
+  "subtitle": "Fast skillet pasta with parsley, capers, and peeled shrimp",
+  "category": "healthy_performance",
+  "cuisine": "Italian-American",
+  "description": "Large shrimp sauté with garlic and red pepper flakes, then tossed with whole-wheat linguine, lemon, capers, and parsley. Built for two large skillets on the station range.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 18,
+  "prepTime": 15,
+  "difficulty": "medium",
+  "calories": 445,
+  "protein": 36,
+  "carbs": 52,
+  "fats": 12,
+  "tags": [
+    "protein:shrimp",
+    "format:pasta",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "Large stock pot",
+    "Two 12-inch skillets",
+    "Tongs"
+  ],
+  "ingredients": [
+    {
+      "name": "large shrimp",
+      "quantity": "3",
+      "unit": "lb",
+      "notes": "peeled and deveined, 16–20 count"
+    },
+    {
+      "name": "whole-wheat linguine",
+      "quantity": "2",
+      "unit": "lb"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "10",
+      "unit": "cloves",
+      "notes": "thinly sliced"
+    },
+    {
+      "name": "lemon",
+      "quantity": "3",
+      "unit": "whole",
+      "notes": "zested and juiced"
+    },
+    {
+      "name": "extra-virgin olive oil",
+      "quantity": "0.33",
+      "unit": "cup"
+    },
+    {
+      "name": "unsalted butter",
+      "quantity": "4",
+      "unit": "tbsp"
+    },
+    {
+      "name": "capers",
+      "quantity": "0.25",
+      "unit": "cup",
+      "notes": "drained"
+    },
+    {
+      "name": "fresh parsley",
+      "quantity": "0.75",
+      "unit": "cup",
+      "notes": "chopped"
+    },
+    {
+      "name": "red pepper flakes",
+      "quantity": "0.5",
+      "unit": "tsp"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "2",
+      "unit": "tsp"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Boil pasta in salted water",
+      "instruction": "Bring a large pot of water to a rolling boil with 2 tbsp salt. Cook linguine 9–11 minutes until al dente with a slight firm bite at the center.",
+      "minutes": 11,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Sear shrimp quickly",
+      "instruction": "Heat olive oil in two large skillets over medium-high. Sear shrimp 1–2 minutes per side until pink and curled, not rubbery. Work in batches.",
+      "minutes": 6,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Build lemon garlic sauce",
+      "instruction": "Reduce heat to medium. Add butter and garlic to skillets; cook 45 seconds until fragrant. Add lemon zest, juice, capers, and pepper flakes.",
+      "minutes": 2,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Toss pasta with shrimp",
+      "instruction": "Add drained pasta with 1 cup pasta water. Toss 2–3 minutes until sauce emulsifies and coats noodles with a silky gloss, not a pool of oil.",
+      "minutes": 3,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Finish with parsley and serve",
+      "instruction": "Fold in parsley off heat. Shrimp should be opaque throughout; pasta should slide on the plate without clumping.",
+      "minutes": 2,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Pat shrimp bone-dry before searing—wet shrimp steam instead of caramelize.",
+    "Reserve extra pasta water; whole-wheat pasta absorbs more liquid than white.",
+    "Serve immediately—this dish does not hold well on a steam table."
+  ],
+  "tonightSpread": [
+    "Simple mixed green salad with balsamic vinaigrette.",
+    "Garlic bread made from split baguette under the broiler."
+  ],
+  "leftovers": [
+    "Reheat gently with splash of water; avoid microwave on high or shrimp turn rubbery.",
+    "Chill leftovers into a next-day pasta salad with cherry tomatoes."
+  ],
+  "whyCrewsLikeIt": "Feels indulgent but stays lean. Comes together fast when the crew is hungry and the clock is short.",
+  "mealPrepNotes": "Peel and devein shrimp ahead; keep on ice. Pre-measure pasta water salt and lemon juice in squeeze bottles. Station: Boil pasta in the biggest pot available—crowded pasta water returns to boil slowly. Station: Finish shrimp in two skillets so they sear rather than stew in their own liquid. Station: Toss pasta off heat so shrimp stay tender and garlic does not scorch.",
+  "spiceLevel": "medium",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 445,
+    "protein": 36,
+    "carbs": 52,
+    "fats": 12,
+    "label": "~445 cal/serving · 36g protein · 6g fiber (est.)"
+  },
+  "heroImage": "/images/golden-100/lemon-garlic-shrimp-pasta.jpg",
+  "mobileImage": "/images/mobile/lemon-garlic-shrimp-pasta.jpg",
+  "thumbImage": "/images/thumbs/lemon-garlic-shrimp-pasta.jpg",
+  "railImage": "/images/rails/lemon-garlic-shrimp-pasta.jpg",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "lemon garlic shrimp pasta",
+    "shrimp",
+    "Italian-American",
+    "pasta",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "cottage-cheese-protein-pasta",
+    "lemon-salmon-orzo-skillet",
+    "lentil-mushroom-bolognese",
+    "turkey-zoodle-bolognese",
+    "grilled-shrimp-quinoa-bowls"
+  ],
+  "generatedAt": "2026-05-28T12:57:50.893Z",
+  "contentVersion": 2
+}

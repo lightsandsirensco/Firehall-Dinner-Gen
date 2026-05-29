@@ -42,6 +42,7 @@ export function curateRecipeForClient(
     mealFormat: ctx.mealFormat,
     protein: ctx.protein,
     importedSource: ctx.importedSource,
+    skipRepair: ctx.importedSource,
   });
 
   const fmt = ctx.mealFormat || trust.recipe.meal_style || "bowl";
@@ -53,9 +54,14 @@ export function curateRecipeForClient(
     importedSource: ctx.importedSource,
   });
 
+  const sendable =
+    ctx.importedSource && trust.quality.composite >= 45
+      ? true
+      : trust.sendable;
+
   return {
     recipe: trust.recipe,
-    sendable: trust.sendable,
+    sendable,
     scores: {
       title: trust.quality.titleQuality,
       crave: trust.quality.titleQuality,

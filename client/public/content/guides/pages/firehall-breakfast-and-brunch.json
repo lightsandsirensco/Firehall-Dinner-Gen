@@ -1,0 +1,76 @@
+{
+  "slug": "firehall-breakfast-and-brunch",
+  "title": "Firehall Breakfast and Brunch That Actually Get Eaten",
+  "subtitle": "Morning shift fuel without turning the kitchen into a disaster zone",
+  "description": "Breakfast and brunch ideas for fire stations: timing, line setup, and recipes crews finish — not tray waste.",
+  "topic": "station_cooking",
+  "pillar": "recipes_meals",
+  "intro": "Breakfast at the hall is either the best meal of the shift or a pile of cold eggs and guilt. The difference is format: bakes and bars beat made-to-order unless you have a dedicated cook and a quiet board.",
+  "sections": [
+    {
+      "id": "formats",
+      "heading": "Formats that survive a busy morning",
+      "paragraphs": [
+        "Breakfast burrito bars, frittata bakes, and pancake short stacks (held warm) fit staggered eating. Avoid eggs benedict for eight unless someone volunteers their sanity."
+      ]
+    },
+    {
+      "id": "cleanup",
+      "heading": "Cleanup and handoff to the day shift",
+      "paragraphs": [
+        "Breakfast mess at 08:00 makes enemies. Line everything into one trash, soak pans immediately, and wipe the flat-top while it is still warm. The crew that follows should find coffee, not crust."
+      ]
+    }
+  ],
+  "practicalAdvice": [
+    "Egg bakes, burrito bars, and sheet-pan breakfast beat standing at the stove for twelve orders.",
+    "Cook sausage and bacon in the oven on racks — splatter control matters in shared kitchens.",
+    "Coffee first, food second — morale is a ingredient.",
+    "If brunch runs long, keep proteins warm and acids cold (salsa, hot sauce, fruit)."
+  ],
+  "mealRecommendations": [
+    {
+      "slug": "breakfast-burrito-bar",
+      "title": "Breakfast Burrito Bar",
+      "blurb": "Build-your-own — handles staggered eaters."
+    },
+    {
+      "slug": "sausage-egg-bake",
+      "title": "Sausage Egg Bake",
+      "blurb": "One pan, slice and serve, minimal active time."
+    },
+    {
+      "slug": "pancake-short-stack",
+      "title": "Pancake Short Stack",
+      "blurb": "Crowd pleaser — hold warm in oven between waves."
+    },
+    {
+      "slug": "chorizo-breakfast-tacos",
+      "title": "Chorizo Breakfast Tacos",
+      "blurb": "Bold flavor, fast line, easy scale."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How early should we start breakfast for a big crew?",
+      "answer": "For a bake, 60–75 minutes before you want to eat. For a burrito bar, cook components in the hour before — assemble at the line so latecomers still get a hot tortilla."
+    },
+    {
+      "question": "What is the easiest hall breakfast for a rookie cook?",
+      "answer": "Sausage egg bake or a burrito bar. Both forgive timing, scale cleanly, and do not require plating eight individual orders at once."
+    }
+  ],
+  "relatedArticleSlugs": [
+    "feeding-a-firehall-crew",
+    "meal-prep-for-shift-workers"
+  ],
+  "keywords": [
+    "fire station breakfast",
+    "firehall brunch",
+    "firefighter breakfast",
+    "shift meals"
+  ],
+  "publishedAt": "2026-05-27T12:00:00.000Z",
+  "updatedAt": "2026-05-27T12:00:00.000Z",
+  "readMinutes": 6
+}

@@ -26,7 +26,7 @@ export function ExploreCategoryNav({
       <div
         className={cn(
           "flex gap-2 overflow-x-auto pb-0.5",
-          "scrollbar-thin scroll-smooth snap-x snap-mandatory",
+          "scrollbar-none scroll-smooth snap-x snap-mandatory",
         )}
       >
         {items.map((item) => {
@@ -37,7 +37,7 @@ export function ExploreCategoryNav({
               type="button"
               onClick={() => onSelect(item.id)}
               className={cn(
-                "snap-start shrink-0 rounded-full px-4 py-2.5 text-xs font-semibold uppercase tracking-wider min-h-11",
+                "snap-start shrink-0 rounded-full px-3.5 py-2 text-xs font-semibold uppercase tracking-wider min-h-11",
                 "transition-colors duration-200 border touch-manipulation active:scale-[0.97]",
                 active
                   ? "bg-primary text-primary-foreground border-primary shadow-md shadow-primary/20"

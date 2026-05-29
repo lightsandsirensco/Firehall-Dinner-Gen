@@ -35,6 +35,13 @@ const allowlist = [
 async function buildAll() {
   await rm("dist", { recursive: true, force: true });
 
+  console.log("generating editorial guides…");
+  const { execSync } = await import("node:child_process");
+  execSync("npx tsx scripts/generate-editorial-content.ts", { stdio: "inherit" });
+
+  console.log("generating sitemap…");
+  execSync("npx tsx scripts/generate-sitemap.ts", { stdio: "inherit" });
+
   console.log("building client...");
   await viteBuild();
 

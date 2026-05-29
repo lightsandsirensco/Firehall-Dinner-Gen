@@ -73,7 +73,11 @@ export async function resolveHeroHierarchy(opts: {
   }
 
   const caller = opts.callerHero?.trim() || "";
-  if (caller && isFirehallOwnedHeroUrl(caller)) {
+  if (
+    caller &&
+    isFirehallOwnedHeroUrl(caller) &&
+    !heroPathConflictsTitle(caller, opts.title || "", opts.mealFormat)
+  ) {
     return {
       hero_image: caller,
       hero_image_alt: alt,

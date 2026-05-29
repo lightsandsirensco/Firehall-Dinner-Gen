@@ -17,12 +17,18 @@ import { requiresRealismFirewall } from "../shared/meal-realism-firewall.js";
 import { realismFirewallBlocksSend } from "./generation/realism-firewall.js";
 import { log } from "./logger.js";
 
-export { GENERATION_USER_RETRY_MESSAGE, GENERATION_USER_FAILURE_MESSAGE } from "../shared/generation-reliability.js";
+export {
+  GENERATION_USER_RETRY_MESSAGE,
+  GENERATION_USER_FAILURE_MESSAGE,
+  GENERATION_GAME_DAY_MESSAGE,
+  GENERATION_GAME_DAY_EMPTY_MESSAGE,
+} from "../shared/generation-reliability.js";
 
 export type ReliabilityEvent =
   | "validation_retry"
   | "blocked_client_send"
   | "curated_fallback"
+  | "hero_enrichment_failed"
   | "title_repaired"
   | "ingredients_used_filled"
   | "large_crew_path"
@@ -32,6 +38,7 @@ const metrics: Record<string, number> = {
   validation_retry: 0,
   blocked_client_send: 0,
   curated_fallback: 0,
+  hero_enrichment_failed: 0,
   title_repaired: 0,
   ingredients_used_filled: 0,
   large_crew_path: 0,

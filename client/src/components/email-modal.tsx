@@ -12,6 +12,8 @@ import {
   type EmailCaptureTrigger,
 } from "@/lib/email-capture";
 import { fetchWithCsrf } from "@/lib/csrf-fetch";
+import { LightsAndSirensCredit } from "@/components/brand/lights-and-sirens-credit";
+import { LIGHTS_COPY } from "@/lib/lights-and-sirens";
 
 export type EmailModalVariant = "manual" | "earned";
 
@@ -216,6 +218,12 @@ export function EmailModal({
                   ? "Occasional crew-ready dinners — unsubscribe anytime."
                   : "We'll send this recipe and sometimes share new hall meal ideas."}
               </p>
+              <div className="pt-2 border-t border-border/20 text-center">
+                <p className="text-[11px] text-muted-foreground leading-relaxed">{LIGHTS_COPY.emailNote}</p>
+                <div className="mt-2 flex justify-center">
+                  <LightsAndSirensCredit variant="compact" className="text-[11px]" />
+                </div>
+              </div>
             </form>
           )}
         </div>

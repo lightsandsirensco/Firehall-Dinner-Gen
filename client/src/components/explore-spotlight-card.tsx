@@ -5,6 +5,7 @@ import { buildExploreTrustLine } from "@/lib/explore-trust-line";
 import { HERO_LAYOUT_FRAME } from "@/lib/hero-image";
 import { cn } from "@/lib/utils";
 import { app } from "@/lib/design-tokens";
+import { isSoftHeldExploreCard } from "@shared/explore-imagery-status";
 
 export interface ExploreSpotlightCardProps {
   recipe: ExploreRecipeCard;
@@ -22,6 +23,7 @@ export function ExploreSpotlightCard({
   onClick,
   className,
 }: ExploreSpotlightCardProps) {
+  const softHeld = isSoftHeldExploreCard(recipe);
   const trust = buildExploreTrustLine(recipe);
 
   return (
@@ -30,16 +32,23 @@ export function ExploreSpotlightCard({
       onClick={onClick}
       className={cn(app.cardCinematic, "group w-full text-left rounded-3xl", className)}
       data-testid="explore-spotlight-card"
+      data-soft-held-imagery={softHeld ? "true" : undefined}
     >
       <div className={cn("relative overflow-hidden", HERO_LAYOUT_FRAME.cinematic)}>
         <div className="absolute inset-0 transition-transform duration-700 group-hover:scale-[1.03] motion-reduce:group-hover:scale-100">
           <ExploreRecipeImage recipe={recipe} variant="card" cinematic sizesHint="spotlight" priority />
         </div>
         <div className="absolute top-4 left-4 z-10 flex flex-wrap gap-2">
-          <span className="inline-flex items-center gap-1.5 bg-primary text-primary-foreground text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">
-            <Flame className="w-3.5 h-3.5" />
-            Tonight&apos;s pick
-          </span>
+          {softHeld ? (
+            <span className="inline-flex items-center gap-1.5 bg-black/60 backdrop-blur-md text-white/85 text-[10px] font-medium uppercase tracking-[0.14em] px-3 py-1 rounded-full border border-white/12">
+              {recipe.heldImageryLabel || "Finalizing"}
+            </span>
+          ) : (
+            <span className="inline-flex items-center gap-1.5 bg-primary text-primary-foreground text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">
+              <Flame className="w-3.5 h-3.5" />
+              Tonight&apos;s pick
+            </span>
+          )}
           {isCurated && (
             <span className="inline-flex bg-black/70 backdrop-blur-md text-white text-[10px] font-semibold uppercase tracking-wide px-2.5 py-1 rounded-full border border-white/15">
               Hall classic

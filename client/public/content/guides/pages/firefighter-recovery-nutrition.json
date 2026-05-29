@@ -1,0 +1,75 @@
+{
+  "slug": "firefighter-recovery-nutrition",
+  "title": "Firefighter Recovery Nutrition",
+  "subtitle": "After the hard job — food that helps you come down",
+  "description": "Recovery nutrition for firefighters after tough calls: protein, fluids, and familiar meals that support sleep and next-day function — not guilt-driven diet talk.",
+  "topic": "nutrition_performance",
+  "pillar": "nutrition_performance",
+  "intro": "Recovery nutrition is not a powder tub in the gear room. After a hard job, your crew needs fluids, protein, and food that feels normal — hot, salty, familiar. The body recovers better when you eat real food and hydrate than when you skip dinner because the shift 'was not a workout.'",
+  "sections": [
+    {
+      "id": "fluids",
+      "heading": "Fluids first",
+      "paragraphs": [
+        "Heat, gear, and adrenaline pull fluid. Rehydrate with water and electrolytes before you treat beer as recovery."
+      ]
+    },
+    {
+      "id": "food",
+      "heading": "Food that matches the night",
+      "paragraphs": [
+        "Post-call meals should be easy to eat, plentiful, and warm. Mac and cheese is not a failure — it is a signal that the room can breathe again."
+      ]
+    }
+  ],
+  "practicalAdvice": [
+    "Drink water before alcohol — always.",
+    "Include protein within a few hours of a demanding job when you can — chili, chicken, eggs, yogurt.",
+    "Do not punish the crew with 'light' food after a bad call — comfort and recovery can coexist.",
+    "Magnesium-rich foods (beans, greens, nuts) help some people sleep — not magic, just useful."
+  ],
+  "mealRecommendations": [
+    {
+      "slug": "chili-garlic-bread",
+      "title": "Firehall Chili",
+      "blurb": "Protein-rich batch — communal bowls."
+    },
+    {
+      "slug": "chicken-pot-pie",
+      "title": "Chicken Pot Pie",
+      "blurb": "Warm, familiar, filling."
+    },
+    {
+      "slug": "ginger-salmon-bowls",
+      "title": "Ginger Salmon Rice Bowls",
+      "blurb": "Lighter recovery night option."
+    },
+    {
+      "slug": "beef-barley-soup",
+      "title": "Beef Barley Soup",
+      "blurb": "Hydrating broth base."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is this medical advice?",
+      "answer": "No. This is practical shift nutrition for station kitchens. Follow your department's health guidance and consult professionals for personal medical questions."
+    },
+    {
+      "question": "Where do these recipes come from?",
+      "answer": "Each link goes to a full recipe on Firehall Meals — crew-sized portions, station timing, and steps written for a shared kitchen. Not home-blog scaling."
+    }
+  ],
+  "relatedArticleSlugs": [
+    "recovery-meals-after-hard-calls",
+    "comfort-food-after-a-long-shift"
+  ],
+  "keywords": [
+    "firefighter recovery nutrition",
+    "post call meals",
+    "recovery food shift work"
+  ],
+  "publishedAt": "2026-05-27T18:00:00.000Z",
+  "updatedAt": "2026-05-27T18:00:00.000Z",
+  "readMinutes": 7
+}

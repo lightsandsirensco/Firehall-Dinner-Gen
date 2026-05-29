@@ -1,0 +1,69 @@
+{
+  "slug": "healthy-station-snacks",
+  "title": "Healthy Station Snacks",
+  "subtitle": "Fridge and shelf ideas that crews actually eat",
+  "description": "Healthy snacks for fire stations: fruit, yogurt, nuts, hummus, and protein options that beat vending machines between meals.",
+  "topic": "nutrition_performance",
+  "pillar": "nutrition_performance",
+  "intro": "Station snacks fail when they are 'healthy' but invisible. A fruit bowl on the counter beats asparagus wilting in the crisper. The goal is credible options between meals — not a lecture while someone eats chips because nothing else is ready.",
+  "sections": [
+    {
+      "id": "fridge",
+      "heading": "Fridge that works",
+      "paragraphs": [
+        "Designate a snack shelf. Date labels. One person owns rotation. Chaos fridges become takeout fridges."
+      ]
+    },
+    {
+      "id": "counter",
+      "heading": "Counter snacks that disappear",
+      "paragraphs": [
+        "Bananas, oranges, and a nut bin on the counter beat hidden 'healthy' food in the back of the fridge. Visibility drives use on busy tours."
+      ]
+    }
+  ],
+  "practicalAdvice": [
+    "Stock snacks at eye level — yogurt, fruit, string cheese, hummus.",
+    "Keep nuts and trail mix in labeled bins — portion beats mindless bag eating.",
+    "Rotate weekly — old fruit erodes trust in the whole program."
+  ],
+  "mealRecommendations": [
+    {
+      "slug": "mediterranean-chickpea",
+      "title": "Mediterranean Chickpea Bowls",
+      "blurb": "Plant protein tray for lunch bowls."
+    },
+    {
+      "slug": "greek-chicken-bowls",
+      "title": "Greek Chicken Power Bowls",
+      "blurb": "Prep components for quick plates."
+    },
+    {
+      "slug": "turkey-chili",
+      "title": "High-Protein Turkey Chili",
+      "blurb": "Reheat cup between meals."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is this medical advice?",
+      "answer": "No. This is practical shift nutrition for station kitchens. Follow your department's health guidance and consult professionals for personal medical questions."
+    },
+    {
+      "question": "Where do these recipes come from?",
+      "answer": "Each link goes to a full recipe on Firehall Meals — crew-sized portions, station timing, and steps written for a shared kitchen. Not home-blog scaling."
+    }
+  ],
+  "relatedArticleSlugs": [
+    "avoid-living-on-takeout",
+    "best-foods-for-long-shifts"
+  ],
+  "keywords": [
+    "fire station snacks",
+    "healthy firefighter snacks",
+    "hall fridge snacks"
+  ],
+  "publishedAt": "2026-05-27T18:00:00.000Z",
+  "updatedAt": "2026-05-27T18:00:00.000Z",
+  "readMinutes": 7
+}

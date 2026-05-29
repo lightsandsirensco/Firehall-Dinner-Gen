@@ -1,11 +1,15 @@
 {
   "slug": "grilled-corn-cotija",
   "title": "Grilled Street Corn with Cotija",
+  "displayTitle": "Grilled Street Corn with Cotija",
+  "seoTitle": "Grilled Street Corn with Cotija | Firefighter Meal",
+  "shortDescription": "Charred corn, creamy cotija finish",
   "subtitle": "Charred corn, creamy cotija finish",
   "category": "bbq_grill_nights",
   "cuisine": "mexican",
-  "description": "Grilled Street Corn with Cotija is a mexican grill built for a hungry firehall crew — Charred corn, creamy cotija finish. Hearty portions, station-kitchen timing, and flavors everyone recognizes after a long shift.",
+  "description": "Charred corn, creamy cotija finish. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 90,
   "prepTime": 30,
   "difficulty": "hard",
@@ -30,69 +34,62 @@
   ],
   "ingredients": [
     {
-      "name": "Primary protein or hearty veg base",
-      "quantity": "2",
-      "unit": "lb"
+      "name": "Corn on the cob, husks peeled",
+      "quantity": "12",
+      "unit": "ears",
+      "group": "Main"
     },
     {
-      "name": "Kosher salt",
-      "quantity": "2",
-      "unit": "tbsp"
+      "name": "Mayonnaise",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Coating"
     },
     {
-      "name": "Black pepper",
+      "name": "Cotija cheese, crumbled",
+      "quantity": "8",
+      "unit": "oz",
+      "group": "Finish"
+    },
+    {
+      "name": "Chili powder",
       "quantity": "1",
-      "unit": "tbsp"
+      "unit": "tbsp",
+      "group": "Finish"
     },
     {
-      "name": "Cooking oil",
-      "quantity": "0.3",
-      "unit": "cup"
-    },
-    {
-      "name": "Yellow onion",
-      "quantity": "2",
-      "unit": "large"
-    },
-    {
-      "name": "Garlic",
-      "quantity": "6",
-      "unit": "cloves"
+      "name": "Fresh lime",
+      "quantity": "4",
+      "unit": "count",
+      "group": "Finish"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Prep the line",
-      "instruction": "Set out all ingredients for Grilled Street Corn with Cotija before you turn on heat — firefighters eat on a schedule. Pat proteins dry and season aggressively with salt and pepper; dry surfaces brown instead of steam.",
-      "minutes": 15,
-      "heatLevel": ""
+      "title": "Char the corn",
+      "instruction": "Grill corn over high heat 10–12 minutes, turning until kernels blister and smell sweet. Do not boil first — you want smoke and char.",
+      "minutes": 12,
+      "heatLevel": "high"
     },
     {
       "stepNumber": 2,
-      "title": "Build the base",
-      "instruction": "Heat oil in your largest skillet, Dutch oven, or on the flat-top over medium-high until it shimmers. Add aromatics (onion first) and cook until the edges turn golden and the smell sweetens — usually 4–6 minutes. If garlic is in the recipe, add it after the onion softens so it doesn't burn.",
+      "title": "Coat elote-style",
+      "instruction": "Brush warm corn with mayo, roll in cotija and chili powder, squeeze lime. Serve on sheet trays — street corn is best within 15 minutes but holds 30 minutes warm.",
       "minutes": 8,
-      "heatLevel": "medium-high"
+      "heatLevel": ""
     },
     {
       "stepNumber": 3,
-      "title": "Cook the main",
-      "instruction": "Cook the primary protein or base for Grilled Street Corn with Cotija until it hits proper color and safe internal temperature. Don't crowd the pan — work in batches if needed so you get browning, not gray stew. Listen for a steady sizzle; if it's silent, the heat is too low.",
-      "minutes": 20,
-      "heatLevel": "medium-high"
+      "title": "Set up the station",
+      "instruction": "Stand corn in shallow pans for easy grabbing. Keep cotija and lime wedges in bowls for touch-ups — corn dries out under heat lamps.",
+      "minutes": 5,
+      "heatLevel": ""
     },
     {
       "stepNumber": 4,
-      "title": "Finish and season",
-      "instruction": "Bring components together, taste, and adjust salt. Sauce should coat, not pool. If cheese is involved, melt it just until glossy — another 1–2 minutes under a lid or broiler. Let heavy proteins rest 5 minutes before slicing.",
-      "minutes": 10,
-      "heatLevel": "medium"
-    },
-    {
-      "stepNumber": 5,
-      "title": "Serve the hall",
-      "instruction": "Transfer to sheet trays or a serving line immediately. Keep backup warm at 200°F. Call the crew while it's hot — this meal is built for a hungry hall, not a photo shoot.",
+      "title": "Hold and refill",
+      "instruction": "Grill backup ears while the first batch goes out. Hold finished corn at 200°F up to 20 minutes; do not wrap in foil or mayo turns oily.",
       "minutes": 5,
       "heatLevel": "low"
     }
@@ -114,6 +111,10 @@
     "Label trays with date and reheat to 165°F minimum before second shift.",
     "Slice cold protein thin for next-day wraps or salads — faster reheat, less dry-out."
   ],
+  "whyCrewsLikeIt": "Charred corn, creamy cotija finish. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
+  "substitutions": [],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
   "nutrition": {
     "calories": 460,
     "protein": 22,
@@ -146,7 +147,8 @@
     "grilled-pork-chops",
     "honey-garlic-pork-tenderloin"
   ],
-  "sourceName": "Bon Appétit",
-  "generatedAt": "2026-05-27T15:03:06.157Z",
-  "contentVersion": 1
+  "sourceName": "Firehall Meals",
+  "sourceUrl": "",
+  "generatedAt": "2026-05-28T12:06:15.001Z",
+  "contentVersion": 2
 }

@@ -2,11 +2,12 @@
  * Prefetch lazy route chunks + warm likely navigations (mobile Safari perceived speed).
  */
 
-const PREFETCH_ROUTES = ["/explore", "/pizza", "/favorites", "/wheel"] as const;
+const PREFETCH_ROUTES = ["/generator", "/explore", "/pizza", "/favorites", "/wheel"] as const;
 
 type Prefetchable = (typeof PREFETCH_ROUTES)[number];
 
 const loaders: Record<Prefetchable, () => Promise<unknown>> = {
+  "/generator": () => import("@/pages/generator"),
   "/explore": () => import("@/pages/explore"),
   "/pizza": () => import("@/pages/pizza-night"),
   "/favorites": () => import("@/pages/favorites"),
@@ -28,13 +29,15 @@ export function prefetchRoute(path: Prefetchable): void {
 export function prefetchLikelyRoutes(currentPath = "/"): void {
   let order: Prefetchable[];
   if (currentPath === "/") {
-    order = ["/explore", "/pizza", "/favorites"];
+    order = ["/generator", "/explore", "/pizza"];
+  } else if (currentPath === "/generator") {
+    order = ["/explore", "/favorites", "/pizza"];
   } else if (currentPath.startsWith("/explore")) {
-    order = ["/pizza", "/favorites", "/wheel"];
+    order = ["/generator", "/pizza", "/favorites", "/wheel"];
   } else if (currentPath.startsWith("/pizza")) {
-    order = ["/explore", "/favorites", "/wheel"];
+    order = ["/generator", "/explore", "/favorites", "/wheel"];
   } else {
-    order = ["/explore", "/pizza", "/favorites"];
+    order = ["/generator", "/explore", "/pizza", "/favorites"];
   }
 
   const run = () => {
@@ -73,7 +76,7 @@ export function initRoutePrefetch(): void {
   if (conn?.saveData) return;
 
   globalThis.setTimeout(() => {
+    prefetchRoute("/generator");
     prefetchRoute("/explore");
-    prefetchRoute("/pizza");
   }, 2500);
 }

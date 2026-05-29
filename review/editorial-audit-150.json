@@ -1,0 +1,2637 @@
+{
+  "total": 150,
+  "bySeverity": {
+    "critical": 0,
+    "warning": 210,
+    "info": 0
+  },
+  "rows": [
+    {
+      "catalog": "performance-meals",
+      "slug": "asian-chicken-lettuce-cups",
+      "title": "Asian Chicken Lettuce Cups",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\asian-chicken-lettuce-cups.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "title_robotic",
+          "message": "title is very generic (consider adding a specific flavor cue)",
+          "field": "title",
+          "sample": "Asian Chicken Lettuce Cups"
+        },
+        {
+          "severity": "warning",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests a rewrite",
+          "field": "title",
+          "sample": "Smoky 35 Bowls"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"hoisin sauce\"",
+          "field": "ingredients",
+          "sample": "hoisin sauce"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"sesame oil\"",
+          "field": "ingredients",
+          "sample": "sesame oil"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "bacon-egg-hash",
+      "title": "Bacon Egg Hash Brown Skillet",
+      "file": "client\\public\\catalog\\golden-100\\pages\\bacon-egg-hash.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "title_robotic",
+          "message": "title is very generic (consider adding a specific flavor cue)",
+          "field": "title",
+          "sample": "Bacon Egg Hash Brown Skillet"
+        },
+        {
+          "severity": "warning",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests a rewrite",
+          "field": "title",
+          "sample": "Smoky 40 Bowls"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredients_thin",
+          "message": "only 5 ingredients",
+          "field": "ingredients"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "baked-falafel-hall-bowls",
+      "title": "Baked Falafel Hall Bowls",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\baked-falafel-hall-bowls.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"olive oil\"",
+          "field": "ingredients",
+          "sample": "olive oil"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "baked-turkey-meatball-marinara",
+      "title": "Baked Turkey Meatball Marinara",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\baked-turkey-meatball-marinara.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Parmesan cheese\"",
+          "field": "ingredients",
+          "sample": "Parmesan cheese"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"olive oil\"",
+          "field": "ingredients",
+          "sample": "olive oil"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "bbq-brisket-burnt-ends",
+      "title": "BBQ Burnt Ends",
+      "file": "client\\public\\catalog\\golden-100\\pages\\bbq-brisket-burnt-ends.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"BBQ sauce\"",
+          "field": "ingredients",
+          "sample": "BBQ sauce"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "bbq-chicken-bowls",
+      "title": "BBQ Chicken Bowls",
+      "file": "client\\public\\catalog\\golden-100\\pages\\bbq-chicken-bowls.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "intro_thin",
+          "message": "intro/description is too short",
+          "field": "description",
+          "sample": "Built bowls, big flavor, one line"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredients_thin",
+          "message": "only 5 ingredients",
+          "field": "ingredients"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"BBQ sauce\"",
+          "field": "ingredients",
+          "sample": "BBQ sauce"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "bbq-chicken-pizza",
+      "title": "BBQ Chicken Pizza",
+      "file": "client\\public\\catalog\\golden-100\\pages\\bbq-chicken-pizza.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Olive oil\"",
+          "field": "ingredients",
+          "sample": "Olive oil"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "bbq-chicken-sliders",
+      "title": "BBQ Chicken Sliders",
+      "file": "client\\public\\catalog\\golden-100\\pages\\bbq-chicken-sliders.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Marinara sauce\"",
+          "field": "ingredients",
+          "sample": "Marinara sauce"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "beef-broccoli",
+      "title": "Quick Beef and Broccoli",
+      "file": "client\\public\\catalog\\golden-100\\pages\\beef-broccoli.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests a rewrite",
+          "field": "title",
+          "sample": "Quick Beef and Broccoli"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Soy sauce\"",
+          "field": "ingredients",
+          "sample": "Soy sauce"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "beef-dip",
+      "title": "Blackstone Steak Sandwiches",
+      "file": "client\\public\\catalog\\golden-100\\pages\\beef-dip.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "intro_thin",
+          "message": "intro/description is too short",
+          "field": "description",
+          "sample": "Canadian hall legend"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Provolone cheese\"",
+          "field": "ingredients",
+          "sample": "Provolone cheese"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "beer-can-chicken",
+      "title": "Beer Can Chicken",
+      "file": "client\\public\\catalog\\golden-100\\pages\\beer-can-chicken.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Vegetable oil\"",
+          "field": "ingredients",
+          "sample": "Vegetable oil"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "big-chili",
+      "title": "Hall-Sized Beef and Bean Chili",
+      "file": "client\\public\\catalog\\golden-100\\pages\\big-chili.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Worcestershire sauce\"",
+          "field": "ingredients",
+          "sample": "Worcestershire sauce"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "blackened-cod-taco-night",
+      "title": "Blackened Cod Taco Night",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\blackened-cod-taco-night.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests a rewrite",
+          "field": "title",
+          "sample": "Blackened Cod Taco Night"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"vegetable oil\"",
+          "field": "ingredients",
+          "sample": "vegetable oil"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "breakfast-burrito-bar",
+      "title": "Breakfast Burrito Bar",
+      "file": "client\\public\\catalog\\golden-100\\pages\\breakfast-burrito-bar.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredients_thin",
+          "message": "only 5 ingredients",
+          "field": "ingredients"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "breakfast-sausage-pizza",
+      "title": "Breakfast Sausage Gravy Pizza",
+      "file": "client\\public\\catalog\\golden-100\\pages\\breakfast-sausage-pizza.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Olive oil\"",
+          "field": "ingredients",
+          "sample": "Olive oil"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "buffalo-chicken-dip",
+      "title": "Buffalo Chicken Dip",
+      "file": "client\\public\\catalog\\golden-100\\pages\\buffalo-chicken-dip.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredients_thin",
+          "message": "only 5 ingredients",
+          "field": "ingredients"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "bulgogi-bowls",
+      "title": "Korean Bulgogi Rice Bowls",
+      "file": "client\\public\\catalog\\golden-100\\pages\\bulgogi-bowls.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "title_robotic",
+          "message": "title is very generic (consider adding a specific flavor cue)",
+          "field": "title",
+          "sample": "Korean Bulgogi Rice Bowls"
+        },
+        {
+          "severity": "warning",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests a rewrite",
+          "field": "title",
+          "sample": "Smoky 40 Bowls"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Soy sauce\"",
+          "field": "ingredients",
+          "sample": "Soy sauce"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Sesame oil\"",
+          "field": "ingredients",
+          "sample": "Sesame oil"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "butter-chicken",
+      "title": "Butter Chicken",
+      "file": "client\\public\\catalog\\golden-100\\pages\\butter-chicken.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Olive oil\"",
+          "field": "ingredients",
+          "sample": "Olive oil"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "carolina-mustard-pork",
+      "title": "Carolina Mustard Pulled Pork",
+      "file": "client\\public\\catalog\\golden-100\\pages\\carolina-mustard-pork.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredients_thin",
+          "message": "only 5 ingredients",
+          "field": "ingredients"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Soy sauce\"",
+          "field": "ingredients",
+          "sample": "Soy sauce"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "cedar-plank-salmon",
+      "title": "Cedar Plank Grilled Salmon",
+      "file": "client\\public\\catalog\\golden-100\\pages\\cedar-plank-salmon.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredients_thin",
+          "message": "only 5 ingredients",
+          "field": "ingredients"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Soy sauce\"",
+          "field": "ingredients",
+          "sample": "Soy sauce"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "chicken-caesar",
+      "title": "Hall Caesar Chicken",
+      "file": "client\\public\\catalog\\golden-100\\pages\\chicken-caesar.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "intro_thin",
+          "message": "intro/description is too short",
+          "field": "description",
+          "sample": "Big bowls, hot chicken, all the fixings"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Olive oil\"",
+          "field": "ingredients",
+          "sample": "Olive oil"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "chicken-enchilada-skillet-light",
+      "title": "Light Chicken Enchilada Skillet",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\chicken-enchilada-skillet-light.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "title_robotic",
+          "message": "title is very generic (consider adding a specific flavor cue)",
+          "field": "title",
+          "sample": "Light Chicken Enchilada Skillet"
+        },
+        {
+          "severity": "warning",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests a rewrite",
+          "field": "title",
+          "sample": "Smoky 38 Bowls"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "chicken-parm",
+      "title": "Chicken Parm",
+      "file": "client\\public\\catalog\\golden-100\\pages\\chicken-parm.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "intro_thin",
+          "message": "intro/description is too short",
+          "field": "description",
+          "sample": "Italian night at the station"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Marinara sauce\"",
+          "field": "ingredients",
+          "sample": "Marinara sauce"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Mozzarella cheese\"",
+          "field": "ingredients",
+          "sample": "Mozzarella cheese"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Parmesan cheese\"",
+          "field": "ingredients",
+          "sample": "Parmesan cheese"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Italian seasoning\"",
+          "field": "ingredients",
+          "sample": "Italian seasoning"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "chicken-pot-pie",
+      "title": "Chicken Pot Pie",
+      "file": "client\\public\\catalog\\golden-100\\pages\\chicken-pot-pie.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Olive oil\"",
+          "field": "ingredients",
+          "sample": "Olive oil"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "chicken-quesadillas",
+      "title": "Shredded Chicken Quesadillas",
+      "file": "client\\public\\catalog\\golden-100\\pages\\chicken-quesadillas.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Marinara sauce\"",
+          "field": "ingredients",
+          "sample": "Marinara sauce"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "chicken-souvlaki",
+      "title": "Grilled Chicken Souvlaki",
+      "file": "client\\public\\catalog\\golden-100\\pages\\chicken-souvlaki.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Vegetable oil\"",
+          "field": "ingredients",
+          "sample": "Vegetable oil"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "chicken-tikka-masala",
+      "title": "Chicken Tikka Masala",
+      "file": "client\\public\\catalog\\golden-100\\pages\\chicken-tikka-masala.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Olive oil\"",
+          "field": "ingredients",
+          "sample": "Olive oil"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "chili-garlic-bread",
+      "title": "Firehall Chili",
+      "file": "client\\public\\catalog\\golden-100\\pages\\chili-garlic-bread.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "intro_thin",
+          "message": "intro/description is too short",
+          "field": "description",
+          "sample": "Post-call comfort in a deep bowl"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Worcestershire sauce\"",
+          "field": "ingredients",
+          "sample": "Worcestershire sauce"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "chipotle-lime-chicken-tacos",
+      "title": "Chipotle Lime Chicken Tacos",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\chipotle-lime-chicken-tacos.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests a rewrite",
+          "field": "title",
+          "sample": "Chipotle Lime Chicken Tacos"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"adobo sauce\"",
+          "field": "ingredients",
+          "sample": "adobo sauce"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"olive oil\"",
+          "field": "ingredients",
+          "sample": "olive oil"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "chorizo-breakfast-tacos",
+      "title": "Chorizo Breakfast Tacos",
+      "file": "client\\public\\catalog\\golden-100\\pages\\chorizo-breakfast-tacos.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests a rewrite",
+          "field": "title",
+          "sample": "Chorizo Breakfast Tacos"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredients_thin",
+          "message": "only 5 ingredients",
+          "field": "ingredients"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "coconut-curry-chicken-pot",
+      "title": "Coconut Curry Chicken Pot",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\coconut-curry-chicken-pot.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"fish sauce\"",
+          "field": "ingredients",
+          "sample": "fish sauce"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"vegetable oil\"",
+          "field": "ingredients",
+          "sample": "vegetable oil"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "cottage-cheese-protein-pasta",
+      "title": "Cottage Cheese Protein Pasta Bake",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\cottage-cheese-protein-pasta.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests a rewrite",
+          "field": "title",
+          "sample": "Cottage Cheese Protein Pasta Bake"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"marinara sauce\"",
+          "field": "ingredients",
+          "sample": "marinara sauce"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Parmesan cheese\"",
+          "field": "ingredients",
+          "sample": "Parmesan cheese"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "creamy-tuscan-chicken",
+      "title": "Creamy Tuscan Chicken",
+      "file": "client\\public\\catalog\\golden-100\\pages\\creamy-tuscan-chicken.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Olive oil\"",
+          "field": "ingredients",
+          "sample": "Olive oil"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "crispy-chicken-cutlets",
+      "title": "Crispy Chicken Cutlets Marinara",
+      "file": "client\\public\\catalog\\golden-100\\pages\\crispy-chicken-cutlets.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Marinara sauce\"",
+          "field": "ingredients",
+          "sample": "Marinara sauce"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "crispy-fish-taco-night",
+      "title": "Crispy Fish Taco Night",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\crispy-fish-taco-night.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests a rewrite",
+          "field": "title",
+          "sample": "Crispy Fish Taco Night"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "crock-barbacoa-chicken",
+      "title": "Crock Barbacoa Chicken",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\crock-barbacoa-chicken.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"adobo sauce\"",
+          "field": "ingredients",
+          "sample": "adobo sauce"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "detroit-style-pizza",
+      "title": "Detroit-Style Pepperoni Pizza",
+      "file": "client\\public\\catalog\\golden-100\\pages\\detroit-style-pizza.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Olive oil\"",
+          "field": "ingredients",
+          "sample": "Olive oil"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "enchilada-casserole",
+      "title": "Chicken Enchilada Casserole",
+      "file": "client\\public\\catalog\\golden-100\\pages\\enchilada-casserole.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Olive oil\"",
+          "field": "ingredients",
+          "sample": "Olive oil"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "fast-philly-skillet",
+      "title": "Fast Philly Cheesesteak Skillet",
+      "file": "client\\public\\catalog\\golden-100\\pages\\fast-philly-skillet.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "title_robotic",
+          "message": "title is very generic (consider adding a specific flavor cue)",
+          "field": "title",
+          "sample": "Fast Philly Cheesesteak Skillet"
+        },
+        {
+          "severity": "warning",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests a rewrite",
+          "field": "title",
+          "sample": "Smoky 40 Bowls"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Soy sauce\"",
+          "field": "ingredients",
+          "sample": "Soy sauce"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "five-ingredient-pasta",
+      "title": "Garlic Butter Pasta",
+      "file": "client\\public\\catalog\\golden-100\\pages\\five-ingredient-pasta.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests a rewrite",
+          "field": "title",
+          "sample": "Garlic Butter Pasta"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "flank-chimichurri",
+      "title": "Grilled Flank Steak with Chimichurri",
+      "file": "client\\public\\catalog\\golden-100\\pages\\flank-chimichurri.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Olive oil\"",
+          "field": "ingredients",
+          "sample": "Olive oil"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "french-toast-casserole",
+      "title": "French Toast Casserole",
+      "file": "client\\public\\catalog\\golden-100\\pages\\french-toast-casserole.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredients_thin",
+          "message": "only 5 ingredients",
+          "field": "ingredients"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "game-day-nachos",
+      "title": "Loaded Game Day Nachos",
+      "file": "client\\public\\catalog\\golden-100\\pages\\game-day-nachos.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Soy sauce\"",
+          "field": "ingredients",
+          "sample": "Soy sauce"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Sesame oil\"",
+          "field": "ingredients",
+          "sample": "Sesame oil"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "ginger-salmon-bowls",
+      "title": "Ginger Salmon Rice Bowls",
+      "file": "client\\public\\catalog\\golden-100\\pages\\ginger-salmon-bowls.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Soy sauce\"",
+          "field": "ingredients",
+          "sample": "Soy sauce"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Sesame oil\"",
+          "field": "ingredients",
+          "sample": "Sesame oil"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "greek-chicken-bowls",
+      "title": "Greek Chicken Bowls",
+      "file": "client\\public\\catalog\\golden-100\\pages\\greek-chicken-bowls.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "title_robotic",
+          "message": "title is very generic (consider adding a specific flavor cue)",
+          "field": "title",
+          "sample": "Greek Chicken Bowls"
+        },
+        {
+          "severity": "warning",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests a rewrite",
+          "field": "title",
+          "sample": "Smoky 32 Bowls"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Soy sauce\"",
+          "field": "ingredients",
+          "sample": "Soy sauce"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Sesame oil\"",
+          "field": "ingredients",
+          "sample": "Sesame oil"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "grilled-corn-cotija",
+      "title": "Grilled Street Corn with Cotija",
+      "file": "client\\public\\catalog\\golden-100\\pages\\grilled-corn-cotija.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredients_thin",
+          "message": "only 5 ingredients",
+          "field": "ingredients"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "grilled-pork-chops",
+      "title": "Charcoal Grilled Pork Chops",
+      "file": "client\\public\\catalog\\golden-100\\pages\\grilled-pork-chops.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredients_thin",
+          "message": "only 5 ingredients",
+          "field": "ingredients"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Soy sauce\"",
+          "field": "ingredients",
+          "sample": "Soy sauce"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "grilled-shrimp-quinoa-bowls",
+      "title": "Grilled Shrimp Quinoa Bowls",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\grilled-shrimp-quinoa-bowls.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"feta cheese\"",
+          "field": "ingredients",
+          "sample": "feta cheese"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "hall-taco-bar",
+      "title": "Hall Taco Bar Night",
+      "file": "client\\public\\catalog\\golden-100\\pages\\hall-taco-bar.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests a rewrite",
+          "field": "title",
+          "sample": "Hall Taco Bar Night"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "herb-roasted-thighs",
+      "title": "Herb Roasted Chicken Thighs",
+      "file": "client\\public\\catalog\\golden-100\\pages\\herb-roasted-thighs.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Olive oil\"",
+          "field": "ingredients",
+          "sample": "Olive oil"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "honey-garlic-chicken-rice-bowls",
+      "title": "Honey Garlic Chicken Rice Bowls",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\honey-garlic-chicken-rice-bowls.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"sesame oil\"",
+          "field": "ingredients",
+          "sample": "sesame oil"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "honey-garlic-pork-tenderloin",
+      "title": "Honey Garlic Grilled Pork Tenderloin",
+      "file": "client\\public\\catalog\\golden-100\\pages\\honey-garlic-pork-tenderloin.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredients_thin",
+          "message": "only 5 ingredients",
+          "field": "ingredients"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Soy sauce\"",
+          "field": "ingredients",
+          "sample": "Soy sauce"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "honey-lime-chicken-tray",
+      "title": "Honey Lime Chicken Tray",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\honey-lime-chicken-tray.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"olive oil\"",
+          "field": "ingredients",
+          "sample": "olive oil"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "honey-soppressata-pizza",
+      "title": "Hot Honey Soppressata Pizza",
+      "file": "client\\public\\catalog\\golden-100\\pages\\honey-soppressata-pizza.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Olive oil\"",
+          "field": "ingredients",
+          "sample": "Olive oil"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "hummus-chicken-platter",
+      "title": "Hummus Chicken Platter",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\hummus-chicken-platter.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"olive oil\"",
+          "field": "ingredients",
+          "sample": "olive oil"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "italian-sausage-veg-sheet-pan",
+      "title": "Italian Sausage and Veg Sheet Pan",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\italian-sausage-veg-sheet-pan.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "title_robotic",
+          "message": "title is very generic (consider adding a specific flavor cue)",
+          "field": "title",
+          "sample": "Italian Sausage and Veg Sheet Pan"
+        },
+        {
+          "severity": "warning",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests a rewrite",
+          "field": "title",
+          "sample": "Smoky 24 Bowls"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"olive oil\"",
+          "field": "ingredients",
+          "sample": "olive oil"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "jambalaya",
+      "title": "Cajun Jambalaya for the Hall",
+      "file": "client\\public\\catalog\\golden-100\\pages\\jambalaya.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Cajun seasoning\"",
+          "field": "ingredients",
+          "sample": "Cajun seasoning"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "jerk-chicken",
+      "title": "Jerk Chicken",
+      "file": "client\\public\\catalog\\golden-100\\pages\\jerk-chicken.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "intro_thin",
+          "message": "intro/description is too short",
+          "field": "description",
+          "sample": "Island heat that still feeds eight"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Jerk seasoning\"",
+          "field": "ingredients",
+          "sample": "Jerk seasoning"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "korean-beef-rice-bowls",
+      "title": "Korean Beef Rice Bowls",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\korean-beef-rice-bowls.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "title_robotic",
+          "message": "title is very generic (consider adding a specific flavor cue)",
+          "field": "title",
+          "sample": "Korean Beef Rice Bowls"
+        },
+        {
+          "severity": "warning",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests a rewrite",
+          "field": "title",
+          "sample": "Smoky 36 Bowls"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"sesame oil\"",
+          "field": "ingredients",
+          "sample": "sesame oil"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "lean-beef-broccoli-rice",
+      "title": "Lean Beef and Broccoli Rice",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\lean-beef-broccoli-rice.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"oyster sauce\"",
+          "field": "ingredients",
+          "sample": "oyster sauce"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"sesame oil\"",
+          "field": "ingredients",
+          "sample": "sesame oil"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"vegetable oil\"",
+          "field": "ingredients",
+          "sample": "vegetable oil"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "lemon-garlic-shrimp-pasta",
+      "title": "Lemon Garlic Shrimp Pasta",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\lemon-garlic-shrimp-pasta.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests a rewrite",
+          "field": "title",
+          "sample": "Lemon Garlic Shrimp Pasta"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "lemon-herb-salmon",
+      "title": "Lemon Herb Grilled Salmon",
+      "file": "client\\public\\catalog\\golden-100\\pages\\lemon-herb-salmon.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredients_thin",
+          "message": "only 5 ingredients",
+          "field": "ingredients"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Soy sauce\"",
+          "field": "ingredients",
+          "sample": "Soy sauce"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "lemon-salmon-orzo-skillet",
+      "title": "Lemon Salmon Orzo Skillet",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\lemon-salmon-orzo-skillet.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Parmesan cheese\"",
+          "field": "ingredients",
+          "sample": "Parmesan cheese"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "lentil-mushroom-bolognese",
+      "title": "Lentil Mushroom Bolognese",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\lentil-mushroom-bolognese.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"olive oil\"",
+          "field": "ingredients",
+          "sample": "olive oil"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "loaded-baked-potato-bar",
+      "title": "Loaded Baked Potato Bar",
+      "file": "client\\public\\catalog\\golden-100\\pages\\loaded-baked-potato-bar.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Soy sauce\"",
+          "field": "ingredients",
+          "sample": "Soy sauce"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Sesame oil\"",
+          "field": "ingredients",
+          "sample": "Sesame oil"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "loaded-nacho-skillet",
+      "title": "Loaded Nacho Skillet",
+      "file": "client\\public\\catalog\\golden-100\\pages\\loaded-nacho-skillet.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "title_robotic",
+          "message": "title is very generic (consider adding a specific flavor cue)",
+          "field": "title",
+          "sample": "Loaded Nacho Skillet"
+        },
+        {
+          "severity": "warning",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests a rewrite",
+          "field": "title",
+          "sample": "Smoky 40 Bowls"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Soy sauce\"",
+          "field": "ingredients",
+          "sample": "Soy sauce"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Sesame oil\"",
+          "field": "ingredients",
+          "sample": "Sesame oil"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "loaded-potato-feed",
+      "title": "Loaded Potato Feed",
+      "file": "client\\public\\catalog\\golden-100\\pages\\loaded-potato-feed.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Soy sauce\"",
+          "field": "ingredients",
+          "sample": "Soy sauce"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Sesame oil\"",
+          "field": "ingredients",
+          "sample": "Sesame oil"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "maple-mustard-salmon-tray",
+      "title": "Maple Mustard Salmon Tray",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\maple-mustard-salmon-tray.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"olive oil\"",
+          "field": "ingredients",
+          "sample": "olive oil"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "maple-soy-salmon-bowls",
+      "title": "Maple Soy Salmon Bowls",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\maple-soy-salmon-bowls.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"sesame oil\"",
+          "field": "ingredients",
+          "sample": "sesame oil"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "margherita-pizza",
+      "title": "Fresh Margherita Pizza",
+      "file": "client\\public\\catalog\\golden-100\\pages\\margherita-pizza.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Olive oil\"",
+          "field": "ingredients",
+          "sample": "Olive oil"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "meat-lovers-sheet-pizza",
+      "title": "Meat Lover's Sheet Pan Pizza",
+      "file": "client\\public\\catalog\\golden-100\\pages\\meat-lovers-sheet-pizza.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "title_robotic",
+          "message": "title is very generic (consider adding a specific flavor cue)",
+          "field": "title",
+          "sample": "Meat Lover's Sheet Pan Pizza"
+        },
+        {
+          "severity": "warning",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests a rewrite",
+          "field": "title",
+          "sample": "Smoky 40 Bowls"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Olive oil\"",
+          "field": "ingredients",
+          "sample": "Olive oil"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "meatball-hoagies",
+      "title": "Firehall Meatball Hoagies",
+      "file": "client\\public\\catalog\\golden-100\\pages\\meatball-hoagies.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Marinara sauce\"",
+          "field": "ingredients",
+          "sample": "Marinara sauce"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "meatloaf-mashed",
+      "title": "Classic Meatloaf with Mashed Potatoes",
+      "file": "client\\public\\catalog\\golden-100\\pages\\meatloaf-mashed.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Olive oil\"",
+          "field": "ingredients",
+          "sample": "Olive oil"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "mediterranean-baked-fish-tray",
+      "title": "Mediterranean Baked Fish Tray",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\mediterranean-baked-fish-tray.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "title_robotic",
+          "message": "title is very generic (consider adding a specific flavor cue)",
+          "field": "title",
+          "sample": "Mediterranean Baked Fish Tray"
+        },
+        {
+          "severity": "warning",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests a rewrite",
+          "field": "title",
+          "sample": "Smoky 34 Bowls"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "mediterranean-chickpea",
+      "title": "Mediterranean Chickpea Bowls",
+      "file": "client\\public\\catalog\\golden-100\\pages\\mediterranean-chickpea.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "title_robotic",
+          "message": "title is very generic (consider adding a specific flavor cue)",
+          "field": "title",
+          "sample": "Mediterranean Chickpea Bowls"
+        },
+        {
+          "severity": "warning",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests a rewrite",
+          "field": "title",
+          "sample": "Smoky 22 Bowls"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Soy sauce\"",
+          "field": "ingredients",
+          "sample": "Soy sauce"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Sesame oil\"",
+          "field": "ingredients",
+          "sample": "Sesame oil"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "moroccan-chicken-chickpea-tray",
+      "title": "Moroccan Chicken Chickpea Tray",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\moroccan-chicken-chickpea-tray.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"olive oil\"",
+          "field": "ingredients",
+          "sample": "olive oil"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "moroccan-meatballs",
+      "title": "Moroccan Spiced Lamb Meatballs",
+      "file": "client\\public\\catalog\\golden-100\\pages\\moroccan-meatballs.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Olive oil\"",
+          "field": "ingredients",
+          "sample": "Olive oil"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "one-pot-chicken-rice",
+      "title": "One-Pot Chicken and Rice",
+      "file": "client\\public\\catalog\\golden-100\\pages\\one-pot-chicken-rice.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "title_robotic",
+          "message": "title is very generic (consider adding a specific flavor cue)",
+          "field": "title",
+          "sample": "One-Pot Chicken and Rice"
+        },
+        {
+          "severity": "warning",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests a rewrite",
+          "field": "title",
+          "sample": "Smoky 32 Bowls"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Cajun seasoning\"",
+          "field": "ingredients",
+          "sample": "Cajun seasoning"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "pad-thai",
+      "title": "Hall Rush Pad Thai",
+      "file": "client\\public\\catalog\\golden-100\\pages\\pad-thai.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Soy sauce\"",
+          "field": "ingredients",
+          "sample": "Soy sauce"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "pancake-short-stack",
+      "title": "Pancake Short Stack for the Crew",
+      "file": "client\\public\\catalog\\golden-100\\pages\\pancake-short-stack.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredients_thin",
+          "message": "only 5 ingredients",
+          "field": "ingredients"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "parm-hero-subs",
+      "title": "Chicken Parm Hero Subs",
+      "file": "client\\public\\catalog\\golden-100\\pages\\parm-hero-subs.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Marinara sauce\"",
+          "field": "ingredients",
+          "sample": "Marinara sauce"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "pepperoni-pizza-night",
+      "title": "Classic Pepperoni Pizza",
+      "file": "client\\public\\catalog\\golden-100\\pages\\pepperoni-pizza-night.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Olive oil\"",
+          "field": "ingredients",
+          "sample": "Olive oil"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "performance-burrito-bowls",
+      "title": "Performance Chicken Burrito Bowls",
+      "file": "client\\public\\catalog\\golden-100\\pages\\performance-burrito-bowls.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Soy sauce\"",
+          "field": "ingredients",
+          "sample": "Soy sauce"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Sesame oil\"",
+          "field": "ingredients",
+          "sample": "Sesame oil"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "pesto-tomato-chicken-tray",
+      "title": "Pesto Tomato Chicken Tray",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\pesto-tomato-chicken-tray.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Parmesan cheese\"",
+          "field": "ingredients",
+          "sample": "Parmesan cheese"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "philly-cheesesteak-skillet",
+      "title": "Philly Cheesesteak Skillet",
+      "file": "client\\public\\catalog\\golden-100\\pages\\philly-cheesesteak-skillet.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "title_robotic",
+          "message": "title is very generic (consider adding a specific flavor cue)",
+          "field": "title",
+          "sample": "Philly Cheesesteak Skillet"
+        },
+        {
+          "severity": "warning",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests a rewrite",
+          "field": "title",
+          "sample": "Smoky 40 Bowls"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Soy sauce\"",
+          "field": "ingredients",
+          "sample": "Soy sauce"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "philly-egg-rolls",
+      "title": "Philly Cheesesteak Egg Rolls",
+      "file": "client\\public\\catalog\\golden-100\\pages\\philly-egg-rolls.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Marinara sauce\"",
+          "field": "ingredients",
+          "sample": "Marinara sauce"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "pork-carnitas-tacos",
+      "title": "Quick Pork Carnitas Tacos",
+      "file": "client\\public\\catalog\\golden-100\\pages\\pork-carnitas-tacos.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests a rewrite",
+          "field": "title",
+          "sample": "Quick Pork Carnitas Tacos"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "pulled-pork",
+      "title": "Pulled Pork Sandwiches",
+      "file": "client\\public\\catalog\\golden-100\\pages\\pulled-pork.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "intro_thin",
+          "message": "intro/description is too short",
+          "field": "description",
+          "sample": "Sandwich line for the whole hall"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"BBQ sauce\"",
+          "field": "ingredients",
+          "sample": "BBQ sauce"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "sausage-egg-bake",
+      "title": "Sausage Egg Bake for the Crew",
+      "file": "client\\public\\catalog\\golden-100\\pages\\sausage-egg-bake.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredients_thin",
+          "message": "only 5 ingredients",
+          "field": "ingredients"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "sausage-peppers-onions",
+      "title": "Sausage Peppers and Onions",
+      "file": "client\\public\\catalog\\golden-100\\pages\\sausage-peppers-onions.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Soy sauce\"",
+          "field": "ingredients",
+          "sample": "Soy sauce"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "shawarma-chicken-rice-bowls",
+      "title": "Shawarma Chicken Rice Bowls",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\shawarma-chicken-rice-bowls.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"olive oil\"",
+          "field": "ingredients",
+          "sample": "olive oil"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "sheet-pan-chicken-fajitas-lite",
+      "title": "Sheet Pan Chicken Fajitas Lite",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\sheet-pan-chicken-fajitas-lite.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "title_robotic",
+          "message": "title is very generic (consider adding a specific flavor cue)",
+          "field": "title",
+          "sample": "Sheet Pan Chicken Fajitas Lite"
+        },
+        {
+          "severity": "warning",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests a rewrite",
+          "field": "title",
+          "sample": "Smoky 38 Bowls"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"olive oil\"",
+          "field": "ingredients",
+          "sample": "olive oil"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "sheet-pan-fajitas",
+      "title": "Sheet Pan Chicken Fajitas",
+      "file": "client\\public\\catalog\\golden-100\\pages\\sheet-pan-fajitas.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "title_robotic",
+          "message": "title is very generic (consider adding a specific flavor cue)",
+          "field": "title",
+          "sample": "Sheet Pan Chicken Fajitas"
+        },
+        {
+          "severity": "warning",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests a rewrite",
+          "field": "title",
+          "sample": "Smoky 32 Bowls"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Olive oil\"",
+          "field": "ingredients",
+          "sample": "Olive oil"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Fajita seasoning\"",
+          "field": "ingredients",
+          "sample": "Fajita seasoning"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "sheet-pan-meal-prep",
+      "title": "Sheet Pan Chicken Trays",
+      "file": "client\\public\\catalog\\golden-100\\pages\\sheet-pan-meal-prep.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "title_robotic",
+          "message": "title is very generic (consider adding a specific flavor cue)",
+          "field": "title",
+          "sample": "Sheet Pan Chicken Trays"
+        },
+        {
+          "severity": "warning",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests a rewrite",
+          "field": "title",
+          "sample": "Smoky 32 Bowls"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Olive oil\"",
+          "field": "ingredients",
+          "sample": "Olive oil"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Fajita seasoning\"",
+          "field": "ingredients",
+          "sample": "Fajita seasoning"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "sheet-pan-sausage-peppers",
+      "title": "Sheet Pan Sausage and Peppers",
+      "file": "client\\public\\catalog\\golden-100\\pages\\sheet-pan-sausage-peppers.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "title_robotic",
+          "message": "title is very generic (consider adding a specific flavor cue)",
+          "field": "title",
+          "sample": "Sheet Pan Sausage and Peppers"
+        },
+        {
+          "severity": "warning",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests a rewrite",
+          "field": "title",
+          "sample": "Smoky 40 Bowls"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Olive oil\"",
+          "field": "ingredients",
+          "sample": "Olive oil"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Fajita seasoning\"",
+          "field": "ingredients",
+          "sample": "Fajita seasoning"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "shepherds-pie",
+      "title": "Shepherd's Pie",
+      "file": "client\\public\\catalog\\golden-100\\pages\\shepherds-pie.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Olive oil\"",
+          "field": "ingredients",
+          "sample": "Olive oil"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "skillet-chicken-alfredo",
+      "title": "One-Skillet Chicken Alfredo",
+      "file": "client\\public\\catalog\\golden-100\\pages\\skillet-chicken-alfredo.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "title_robotic",
+          "message": "title is very generic (consider adding a specific flavor cue)",
+          "field": "title",
+          "sample": "One-Skillet Chicken Alfredo"
+        },
+        {
+          "severity": "warning",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests a rewrite",
+          "field": "title",
+          "sample": "Smoky 32 Bowls"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "slider-bar",
+      "title": "Hall Slider Bar",
+      "file": "client\\public\\catalog\\golden-100\\pages\\slider-bar.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"American cheese\"",
+          "field": "ingredients",
+          "sample": "American cheese"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "smash-burgers",
+      "title": "Double Smash Burgers",
+      "file": "client\\public\\catalog\\golden-100\\pages\\smash-burgers.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Olive oil\"",
+          "field": "ingredients",
+          "sample": "Olive oil"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "smoked-wings-white-sauce",
+      "title": "Smoked Wings with White BBQ Sauce",
+      "file": "client\\public\\catalog\\golden-100\\pages\\smoked-wings-white-sauce.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Worcestershire sauce\"",
+          "field": "ingredients",
+          "sample": "Worcestershire sauce"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "smoky-lentil-kale-soup",
+      "title": "Smoky Lentil and Kale Soup",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\smoky-lentil-kale-soup.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"olive oil\"",
+          "field": "ingredients",
+          "sample": "olive oil"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "spanish-chicken-chorizo-rice",
+      "title": "Spanish Chicken and Chorizo Rice",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\spanish-chicken-chorizo-rice.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"olive oil\"",
+          "field": "ingredients",
+          "sample": "olive oil"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "steak-sandwiches",
+      "title": "Steak Sandwiches",
+      "file": "client\\public\\catalog\\golden-100\\pages\\steak-sandwiches.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Olive oil\"",
+          "field": "ingredients",
+          "sample": "Olive oil"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Provolone cheese\"",
+          "field": "ingredients",
+          "sample": "Provolone cheese"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "steak-tacos",
+      "title": "Chimichurri Steak Tacos",
+      "file": "client\\public\\catalog\\golden-100\\pages\\steak-tacos.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests a rewrite",
+          "field": "title",
+          "sample": "Chimichurri Steak Tacos"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Cotija cheese\"",
+          "field": "ingredients",
+          "sample": "Cotija cheese"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "street-corn-chicken",
+      "title": "Mexican Street Corn Chicken Bowls",
+      "file": "client\\public\\catalog\\golden-100\\pages\\street-corn-chicken.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "title_robotic",
+          "message": "title is very generic (consider adding a specific flavor cue)",
+          "field": "title",
+          "sample": "Mexican Street Corn Chicken Bowls"
+        },
+        {
+          "severity": "warning",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests a rewrite",
+          "field": "title",
+          "sample": "Smoky 32 Bowls"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Soy sauce\"",
+          "field": "ingredients",
+          "sample": "Soy sauce"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Sesame oil\"",
+          "field": "ingredients",
+          "sample": "Sesame oil"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "stuffed-peppers",
+      "title": "Quinoa Stuffed Peppers",
+      "file": "client\\public\\catalog\\golden-100\\pages\\stuffed-peppers.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Olive oil\"",
+          "field": "ingredients",
+          "sample": "Olive oil"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "sunday-chili-batch",
+      "title": "Sunday Batch Chili",
+      "file": "client\\public\\catalog\\golden-100\\pages\\sunday-chili-batch.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Worcestershire sauce\"",
+          "field": "ingredients",
+          "sample": "Worcestershire sauce"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "teriyaki-donburi",
+      "title": "Teriyaki Chicken Donburi",
+      "file": "client\\public\\catalog\\golden-100\\pages\\teriyaki-donburi.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Soy sauce\"",
+          "field": "ingredients",
+          "sample": "Soy sauce"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Sesame oil\"",
+          "field": "ingredients",
+          "sample": "Sesame oil"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "teriyaki-salmon-grill",
+      "title": "Teriyaki Grilled Salmon",
+      "file": "client\\public\\catalog\\golden-100\\pages\\teriyaki-salmon-grill.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredients_thin",
+          "message": "only 5 ingredients",
+          "field": "ingredients"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Soy sauce\"",
+          "field": "ingredients",
+          "sample": "Soy sauce"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "thai-basil-chicken",
+      "title": "Thai Basil Chicken Stir Fry",
+      "file": "client\\public\\catalog\\golden-100\\pages\\thai-basil-chicken.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "title_robotic",
+          "message": "title is very generic (consider adding a specific flavor cue)",
+          "field": "title",
+          "sample": "Thai Basil Chicken Stir Fry"
+        },
+        {
+          "severity": "warning",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests a rewrite",
+          "field": "title",
+          "sample": "Smoky 32 Bowls"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Soy sauce\"",
+          "field": "ingredients",
+          "sample": "Soy sauce"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "turkey-burgers",
+      "title": "Black Bean Turkey Burgers",
+      "file": "client\\public\\catalog\\golden-100\\pages\\turkey-burgers.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"American cheese\"",
+          "field": "ingredients",
+          "sample": "American cheese"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "turkey-chili",
+      "title": "High-Protein Turkey Chili",
+      "file": "client\\public\\catalog\\golden-100\\pages\\turkey-chili.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Worcestershire sauce\"",
+          "field": "ingredients",
+          "sample": "Worcestershire sauce"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "turkey-lettuce-wrap-night",
+      "title": "Turkey Lettuce Wrap Night",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\turkey-lettuce-wrap-night.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"hoisin sauce\"",
+          "field": "ingredients",
+          "sample": "hoisin sauce"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"sesame oil\"",
+          "field": "ingredients",
+          "sample": "sesame oil"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "turkey-quinoa-stuffed-peppers",
+      "title": "Turkey Quinoa Stuffed Peppers",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\turkey-quinoa-stuffed-peppers.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"olive oil\"",
+          "field": "ingredients",
+          "sample": "olive oil"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "turkey-shepherds-sweet-potato",
+      "title": "Turkey Shepherd's with Sweet Potato Top",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\turkey-shepherds-sweet-potato.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Worcestershire sauce\"",
+          "field": "ingredients",
+          "sample": "Worcestershire sauce"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "turkey-taco-skillet",
+      "title": "Turkey Taco Skillet",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\turkey-taco-skillet.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "title_robotic",
+          "message": "title is very generic (consider adding a specific flavor cue)",
+          "field": "title",
+          "sample": "Turkey Taco Skillet"
+        },
+        {
+          "severity": "warning",
+          "code": "title_quality_gate",
+          "message": "title quality gate suggests a rewrite",
+          "field": "title",
+          "sample": "Smoky 36 Bowls"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "turkey-zoodle-bolognese",
+      "title": "Turkey Zoodle Bolognese",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\turkey-zoodle-bolognese.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Parmesan cheese\"",
+          "field": "ingredients",
+          "sample": "Parmesan cheese"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"olive oil\"",
+          "field": "ingredients",
+          "sample": "olive oil"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "veggie-egg-casserole-tray",
+      "title": "Veggie Egg Casserole Tray",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\veggie-egg-casserole-tray.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"feta cheese\"",
+          "field": "ingredients",
+          "sample": "feta cheese"
+        },
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"olive oil\"",
+          "field": "ingredients",
+          "sample": "olive oil"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "white-bean-chicken-chili",
+      "title": "White Bean Chicken Chili",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\white-bean-chicken-chili.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"cream cheese\"",
+          "field": "ingredients",
+          "sample": "cream cheese"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "white-bean-kale-soup",
+      "title": "White Bean and Kale Soup",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\white-bean-kale-soup.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"olive oil\"",
+          "field": "ingredients",
+          "sample": "olive oil"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "white-garlic-chicken-pizza",
+      "title": "White Garlic Chicken Pizza",
+      "file": "client\\public\\catalog\\golden-100\\pages\\white-garlic-chicken-pizza.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"Olive oil\"",
+          "field": "ingredients",
+          "sample": "Olive oil"
+        }
+      ]
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "yogurt-marinated-grill-chicken",
+      "title": "Yogurt Marinated Grill Chicken",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\yogurt-marinated-grill-chicken.json",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "ingredient_vague",
+          "message": "vague ingredient: \"olive oil\"",
+          "field": "ingredients",
+          "sample": "olive oil"
+        }
+      ]
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "baked-ziti",
+      "title": "Baked Ziti",
+      "file": "client\\public\\catalog\\golden-100\\pages\\baked-ziti.json",
+      "findings": []
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "batch-lasagna",
+      "title": "Giant Batch Lasagna",
+      "file": "client\\public\\catalog\\golden-100\\pages\\batch-lasagna.json",
+      "findings": []
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "beef-barley-soup",
+      "title": "Beef Barley Soup",
+      "file": "client\\public\\catalog\\golden-100\\pages\\beef-barley-soup.json",
+      "findings": []
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "beef-stroganoff",
+      "title": "Beef Stroganoff",
+      "file": "client\\public\\catalog\\golden-100\\pages\\beef-stroganoff.json",
+      "findings": []
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "biscuits-gravy",
+      "title": "Biscuits and Gravy",
+      "file": "client\\public\\catalog\\golden-100\\pages\\biscuits-gravy.json",
+      "findings": []
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "cajun-chicken-rice-bowl",
+      "title": "Cajun Chicken Rice Bowl",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\cajun-chicken-rice-bowl.json",
+      "findings": []
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "caprese-chicken-bake",
+      "title": "Caprese Chicken Bake",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\caprese-chicken-bake.json",
+      "findings": []
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "chicken-alfredo-bake",
+      "title": "Chicken Alfredo Bake",
+      "file": "client\\public\\catalog\\golden-100\\pages\\chicken-alfredo-bake.json",
+      "findings": []
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "chicken-dumpling-soup",
+      "title": "Chicken and Dumplings",
+      "file": "client\\public\\catalog\\golden-100\\pages\\chicken-dumpling-soup.json",
+      "findings": []
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "chili-mac",
+      "title": "Chili Mac Skillet",
+      "file": "client\\public\\catalog\\golden-100\\pages\\chili-mac.json",
+      "findings": []
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "garlic-butter-shrimp",
+      "title": "Garlic Butter Shrimp",
+      "file": "client\\public\\catalog\\golden-100\\pages\\garlic-butter-shrimp.json",
+      "findings": []
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "greek-lemon-chicken-potatoes",
+      "title": "Greek Lemon Chicken and Potatoes",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\greek-lemon-chicken-potatoes.json",
+      "findings": []
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "herb-baked-salmon-tray",
+      "title": "Herb-Crusted Baked Salmon Tray",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\herb-baked-salmon-tray.json",
+      "findings": []
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "lean-turkey-bean-chili",
+      "title": "Lean Turkey and Bean Chili",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\lean-turkey-bean-chili.json",
+      "findings": []
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "lemon-chicken-orzo-soup",
+      "title": "Lemon Chicken Orzo Soup",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\lemon-chicken-orzo-soup.json",
+      "findings": []
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "lemon-garlic-chicken-tray",
+      "title": "Lemon Garlic Chicken Tray Bake",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\lemon-garlic-chicken-tray.json",
+      "findings": []
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "mac-and-cheese-bake",
+      "title": "Baked Mac and Cheese",
+      "file": "client\\public\\catalog\\golden-100\\pages\\mac-and-cheese-bake.json",
+      "findings": []
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "memphis-dry-rub-ribs",
+      "title": "Memphis Dry Rub Ribs",
+      "file": "client\\public\\catalog\\golden-100\\pages\\memphis-dry-rub-ribs.json",
+      "findings": []
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "ny-strip-herb-butter",
+      "title": "Grilled NY Strip with Herb Butter",
+      "file": "client\\public\\catalog\\golden-100\\pages\\ny-strip-herb-butter.json",
+      "findings": []
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "pulled-pork-mac",
+      "title": "Pulled Pork Mac and Cheese",
+      "file": "client\\public\\catalog\\golden-100\\pages\\pulled-pork-mac.json",
+      "findings": []
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "salsa-verde-crock-chicken",
+      "title": "Salsa Verde Crock Chicken",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\salsa-verde-crock-chicken.json",
+      "findings": []
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "smoked-brisket",
+      "title": "Kansas City Smoked Brisket",
+      "file": "client\\public\\catalog\\golden-100\\pages\\smoked-brisket.json",
+      "findings": []
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "tabbouleh-chicken-bowls",
+      "title": "Tabbouleh Chicken Bowls",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\tabbouleh-chicken-bowls.json",
+      "findings": []
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "texas-beef-ribs",
+      "title": "Texas-Style Beef Ribs",
+      "file": "client\\public\\catalog\\golden-100\\pages\\texas-beef-ribs.json",
+      "findings": []
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "turkey-meatball-zoodles",
+      "title": "Turkey Meatballs with Zucchini Noodles",
+      "file": "client\\public\\catalog\\golden-100\\pages\\turkey-meatball-zoodles.json",
+      "findings": []
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "turkey-sausage-egg-muffins",
+      "title": "Turkey Sausage Egg Muffins",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\turkey-sausage-egg-muffins.json",
+      "findings": []
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "turkey-sweet-potato-chili",
+      "title": "Turkey Sweet Potato Chili",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\turkey-sweet-potato-chili.json",
+      "findings": []
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "zaatar-roasted-chicken-thighs",
+      "title": "Za'atar Roasted Chicken Thighs",
+      "file": "client\\public\\catalog\\performance-meals\\pages\\zaatar-roasted-chicken-thighs.json",
+      "findings": []
+    }
+  ]
+}

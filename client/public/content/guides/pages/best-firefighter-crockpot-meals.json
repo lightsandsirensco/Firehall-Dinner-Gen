@@ -1,0 +1,78 @@
+{
+  "slug": "best-firefighter-crockpot-meals",
+  "title": "Best Firefighter Crockpot Meals",
+  "subtitle": "Set it, cover it, and survive a busy board",
+  "description": "Best firefighter crockpot meals for station kitchens: pulled pork, chili, soups, and braises that hold hot while the crew runs calls.",
+  "topic": "meal_planning",
+  "pillar": "recipes_meals",
+  "intro": "A crockpot is not cheating — it is shift scheduling. The best firefighter crockpot meals turn low-attention time into hot food when people finally sit down. The trap is recipes that need last-minute precision; lean toward braises, beans, and pulls.",
+  "sections": [
+    {
+      "id": "safety",
+      "heading": "Slow cooker station etiquette",
+      "paragraphs": [
+        "Keep cords off walk paths, vent lids away from faces, and label 'hot' on the counter. Overnight cooks need a signed-off plan — not surprise at 03:00."
+      ]
+    },
+    {
+      "id": "when",
+      "heading": "When to start the pot",
+      "paragraphs": [
+        "Start pulls and chili mid-afternoon on training days. On busy nights, use the crockpot as a hold vessel after a quick stove sear — not as a gamble at 18:00."
+      ]
+    }
+  ],
+  "practicalAdvice": [
+    "Brown meat when you can — color still matters in slow cookers.",
+    "Do not overfill — two medium pots beat one overflowing.",
+    "Transfer to cambro for service — easier than scooping from ceramic insert on the line."
+  ],
+  "mealRecommendations": [
+    {
+      "slug": "pulled-pork",
+      "title": "Pulled Pork Sandwiches",
+      "blurb": "Classic slow-cooker win."
+    },
+    {
+      "slug": "sunday-chili-batch",
+      "title": "Sunday Batch Chili",
+      "blurb": "Bean and beef — holds all shift."
+    },
+    {
+      "slug": "beef-barley-soup",
+      "title": "Beef Barley Soup",
+      "blurb": "Cold-night pot — filling."
+    },
+    {
+      "slug": "chicken-dumpling-soup",
+      "title": "Chicken and Dumplings",
+      "blurb": "Comfort in a slow pot."
+    },
+    {
+      "slug": "carolina-mustard-pork",
+      "title": "Carolina Mustard Pulled Pork",
+      "blurb": "Tangy pull — low labor."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Where do these recipes come from?",
+      "answer": "Each link goes to a full recipe on Firehall Meals — crew-sized portions, station timing, and steps written for a shared kitchen. Not home-blog scaling."
+    },
+    {
+      "question": "What if crew size or time changes tonight?",
+      "answer": "Use Find a Meal with your headcount and minutes available. It pulls from the same hall-tested dinners these guides recommend."
+    }
+  ],
+  "relatedArticleSlugs": [
+    "one-pot-firehall-meals"
+  ],
+  "keywords": [
+    "firefighter crockpot meals",
+    "slow cooker fire station",
+    "crockpot crew dinner"
+  ],
+  "publishedAt": "2026-05-27T18:00:00.000Z",
+  "updatedAt": "2026-05-27T18:00:00.000Z",
+  "readMinutes": 7
+}

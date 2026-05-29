@@ -1,11 +1,15 @@
 {
   "slug": "steak-tacos",
   "title": "Chimichurri Steak Tacos",
+  "displayTitle": "Chimichurri Steak Tacos",
+  "seoTitle": "Chimichurri Steak Tacos | Firefighter Meal",
+  "shortDescription": "Charred steak, bright chimichurri, tortilla night",
   "subtitle": "Charred steak, bright chimichurri, tortilla night",
   "category": "firehall_classics",
   "cuisine": "mexican",
-  "description": "Crew Favorite · Grill Night · Medium spice · Street tacos (no rice sides)",
+  "description": "Charred steak, bright chimichurri, tortilla night",
   "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 55,
   "prepTime": 25,
   "difficulty": "medium",
@@ -224,6 +228,10 @@
     "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
     "Label trays with date and reheat to 165°F minimum before second shift."
   ],
+  "whyCrewsLikeIt": "Charred steak, bright chimichurri, tortilla night",
+  "substitutions": [],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
   "nutrition": {
     "calories": 520,
     "protein": 34,
@@ -235,7 +243,7 @@
   "mobileImage": "/images/mobile/steak-tacos.jpg",
   "thumbImage": "/images/thumbs/steak-tacos.jpg",
   "railImage": "/images/rails/steak-tacos.jpg",
-  "realismScore": 100,
+  "realismScore": 95,
   "firefighterScore": 100,
   "popularityWeight": 3.6,
   "searchTerms": [
@@ -259,6 +267,6 @@
   "sourceName": "Firehall Classics",
   "sourceUrl": "",
   "classicSlug": "steak-tacos",
-  "generatedAt": "2026-05-27T15:03:06.106Z",
-  "contentVersion": 1
+  "generatedAt": "2026-05-28T12:06:14.936Z",
+  "contentVersion": 2
 }

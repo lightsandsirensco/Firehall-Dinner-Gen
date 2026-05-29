@@ -1,0 +1,93 @@
+{
+  "slug": "quick-meals-between-calls",
+  "title": "Quick Firefighter Meals Between Calls",
+  "subtitle": "When the shift is hot and dinner cannot be a two-hour project",
+  "description": "Operational guide to fast fire station meals: what to cook when time is tight, how to cheat smart, and recipe picks under 45 minutes.",
+  "topic": "shift_operations",
+  "pillar": "recipes_meals",
+  "intro": "Some nights the board is quiet until it is not. You do not need a lecture about meal prep — you need a dinner that respects the clock. Quick firehall meals are not 'lazy'; they are operational. The trick is picking formats that taste like you meant it, not like you gave up.",
+  "sections": [
+    {
+      "id": "formats",
+      "heading": "Formats that actually finish on time",
+      "paragraphs": [
+        "Skillet meals, sheet-pan dinners, and handhelds (tacos, burgers, quesadillas) are the backbone of quick shift cooking. They hit hot, portion fast, and do not require plating finesse.",
+        "Pasta is underrated for speed if you sauce in the same pan and accept a slightly less Instagram final toss. Crews care about flavor and volume, not swirl geometry."
+      ]
+    },
+    {
+      "id": "cheats",
+      "heading": "Cheats that crews respect",
+      "paragraphs": [
+        "Rotisserie chicken is not a failure — it is resource management. Shred it for tacos, bowls, or soup and add one fresh element (lime, cilantro, pickled onion) so it tastes intentional.",
+        "Frozen fries in the air fryer plus a real protein is a legitimate meal when the alternative is gas station pizza."
+      ],
+      "tips": [
+        "Season at every layer — salt in the pan, acid at the end.",
+        "One bold flavor (chipotle, garlic butter, lemon) beats five mild ones."
+      ]
+    }
+  ],
+  "practicalAdvice": [
+    "Use high-heat tools you already trust: flat-top, air fryer, ripping-hot oven — not a new technique on a busy night.",
+    "Buy pre-cut vegetables when the labor savings beat the cost (fajitas, stir-fry, sheet pan).",
+    "Default to one-pan or one-pot formats — fewer dishes means faster turn-around for the next run.",
+    "Keep a hall stash: taco shells, burger buns, rice, frozen protein, quality jarred sauce.",
+    "If you are under 30 minutes, do not launch a recipe with a long rest or multi-stage bake."
+  ],
+  "mealRecommendations": [
+    {
+      "slug": "fast-philly-skillet",
+      "title": "Fast Philly Cheesesteak Skillet",
+      "blurb": "Flat-top friendly, feeds fast, tastes like effort."
+    },
+    {
+      "slug": "garlic-butter-shrimp",
+      "title": "Garlic Butter Shrimp",
+      "blurb": "Minutes on heat — pair with bread or rice."
+    },
+    {
+      "slug": "five-ingredient-pasta",
+      "title": "Garlic Butter Pasta",
+      "blurb": "Pantry pasta when the shift needs food now."
+    },
+    {
+      "slug": "one-pot-chicken-rice",
+      "title": "One-Pot Chicken and Rice",
+      "blurb": "Minimal dishes, predictable timing."
+    },
+    {
+      "slug": "chicken-quesadillas",
+      "title": "Chicken Quesadillas",
+      "blurb": "Handheld line — great when people eat staggered."
+    },
+    {
+      "slug": "pad-thai",
+      "title": "Hall Rush Pad Thai",
+      "blurb": "High flavor, wok-or-skillet fast finish."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What is a realistic cook time for a busy firehall night?",
+      "answer": "Under 45 minutes total is the sweet spot for most halls. That includes prep. If the recipe says 60 minutes without a hold window, save it for a slower night or start earlier than you think."
+    },
+    {
+      "question": "Are frozen ingredients bad for crew meals?",
+      "answer": "No — unmaintained freezers are the problem, not frozen food. Frozen veg, fries, and portioned protein reduce labor and waste. Fresh garnishes at the end sell the plate."
+    }
+  ],
+  "relatedArticleSlugs": [
+    "feeding-a-firehall-crew",
+    "planning-tonights-station-dinner"
+  ],
+  "keywords": [
+    "quick firefighter meals",
+    "busy shift dinner",
+    "firehall dinner ideas",
+    "fast crew meals"
+  ],
+  "publishedAt": "2026-05-27T12:00:00.000Z",
+  "updatedAt": "2026-05-27T12:00:00.000Z",
+  "readMinutes": 7
+}

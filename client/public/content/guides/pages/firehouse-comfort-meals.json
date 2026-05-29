@@ -1,0 +1,84 @@
+{
+  "slug": "firehouse-comfort-meals",
+  "title": "Firehouse Comfort Meals",
+  "subtitle": "Post-call food that hits — mac, parm, chili, and bakes",
+  "description": "Firehouse comfort meals crews ask for again: cheesy bakes, chili, parm, mashed plates, and loaded bowls after long jobs.",
+  "topic": "meal_planning",
+  "pillar": "recipes_meals",
+  "intro": "Comfort food at the station is half the reset after a tough job. Crews want salt, starch, and enough volume that nobody hits the vending machine later. These meals are not gourmet — they are familiar, hot, and big.",
+  "sections": [
+    {
+      "id": "hits",
+      "heading": "Hall hits that never get voted off",
+      "paragraphs": [
+        "Mac and cheese, chicken parm, chili, meatloaf, pot pie, and loaded potatoes. These are not creative — they are effective."
+      ]
+    },
+    {
+      "id": "serve",
+      "heading": "How to serve comfort without a mess",
+      "paragraphs": [
+        "Tray format, one ladle per pot, and buns or garlic bread on the side. Comfort food fails when the line backs up — keep movement simple."
+      ]
+    }
+  ],
+  "practicalAdvice": [
+    "Serve something crunchy or toasted if the main is soft.",
+    "Keep hot sauce on the table — instant customization.",
+    "Do not apologize for comfort night — balance the week instead."
+  ],
+  "mealRecommendations": [
+    {
+      "slug": "mac-and-cheese-bake",
+      "title": "Baked Mac and Cheese",
+      "blurb": "Cheesy tray — universal."
+    },
+    {
+      "slug": "chicken-parm",
+      "title": "Chicken Parm",
+      "blurb": "Italian comfort king."
+    },
+    {
+      "slug": "chili-garlic-bread",
+      "title": "Firehall Chili",
+      "blurb": "Bowl food after hard weather."
+    },
+    {
+      "slug": "meatloaf-mashed",
+      "title": "Classic Meatloaf with Mashed Potatoes",
+      "blurb": "Sunday-dinner energy on a weeknight."
+    },
+    {
+      "slug": "chicken-pot-pie",
+      "title": "Chicken Pot Pie",
+      "blurb": "All-in-one bowl meal."
+    },
+    {
+      "slug": "beef-stroganoff",
+      "title": "Beef Stroganoff",
+      "blurb": "Rich, savory noodles."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Where do these recipes come from?",
+      "answer": "Each link goes to a full recipe on Firehall Meals — crew-sized portions, station timing, and steps written for a shared kitchen. Not home-blog scaling."
+    },
+    {
+      "question": "What if crew size or time changes tonight?",
+      "answer": "Use Find a Meal with your headcount and minutes available. It pulls from the same hall-tested dinners these guides recommend."
+    }
+  ],
+  "relatedArticleSlugs": [
+    "comfort-food-after-a-long-shift",
+    "firehouse-comfort-meals"
+  ],
+  "keywords": [
+    "firehouse comfort meals",
+    "firefighter comfort food",
+    "post call meal"
+  ],
+  "publishedAt": "2026-05-27T18:00:00.000Z",
+  "updatedAt": "2026-05-27T18:00:00.000Z",
+  "readMinutes": 7
+}

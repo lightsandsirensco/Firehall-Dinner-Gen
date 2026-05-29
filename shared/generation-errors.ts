@@ -12,6 +12,7 @@ export type GenerationErrorCode =
   | "upstream_failure"
   | "budget_exceeded"
   | "generation_failed"
+  | "category_thinned"
   | "csrf_failed";
 
 export interface GenerationErrorBody {

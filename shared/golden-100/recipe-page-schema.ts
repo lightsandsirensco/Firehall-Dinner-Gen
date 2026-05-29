@@ -16,6 +16,7 @@ export const goldenRecipePageIngredientSchema = z.object({
   quantity: z.string().trim().max(80).optional(),
   unit: z.string().trim().max(32).optional(),
   notes: z.string().trim().max(200).optional(),
+  group: z.string().trim().max(40).optional(),
   optional: z.boolean().optional(),
 });
 
@@ -38,11 +39,15 @@ export const goldenRecipePageNutritionSchema = z.object({
 export const goldenRecipePageSchema = z.object({
   slug: slugSchema,
   title: z.string().trim().min(3).max(120),
+  displayTitle: z.string().trim().min(3).max(72).optional(),
+  seoTitle: z.string().trim().max(80).optional(),
+  shortDescription: z.string().trim().max(200).optional(),
   subtitle: z.string().trim().max(160),
   category: z.string().trim().min(1).max(80),
   cuisine: z.string().trim().min(1).max(48),
   description: z.string().trim().min(20).max(800),
-  crewSize: z.number().int().min(4).max(16),
+  crewSize: z.number().int().min(2).max(16),
+  baseServings: z.number().int().min(2).max(16).optional(),
   cookTime: z.number().int().min(5).max(480),
   prepTime: z.number().int().min(0).max(240).optional(),
   difficulty: z.enum(["easy", "medium", "hard"]),
@@ -57,6 +62,11 @@ export const goldenRecipePageSchema = z.object({
   proTips: z.array(z.string().trim().min(12).max(500)).min(2).max(8),
   tonightSpread: z.array(z.string().trim().min(12).max(500)).min(1).max(6),
   leftovers: z.array(z.string().trim().min(12).max(500)).min(1).max(5),
+  whyCrewsLikeIt: z.string().trim().max(500).optional(),
+  mealPrepNotes: z.string().trim().max(500).optional(),
+  substitutions: z.array(z.string().trim().min(8).max(200)).max(8).optional(),
+  spiceLevel: z.enum(["mild", "medium", "hot"]).optional(),
+  cleanupDifficulty: z.enum(["easy", "medium", "heavy"]).optional(),
   nutrition: goldenRecipePageNutritionSchema,
   heroImage: z.string().trim().max(500),
   mobileImage: z.string().trim().max(500),
@@ -78,7 +88,7 @@ export type GoldenRecipePage = z.infer<typeof goldenRecipePageSchema>;
 export type GoldenRecipePageIngredient = z.infer<typeof goldenRecipePageIngredientSchema>;
 export type GoldenRecipePageStep = z.infer<typeof goldenRecipePageStepSchema>;
 
-export const GOLDEN_RECIPE_PAGE_CONTENT_VERSION = 1 as const;
+export const GOLDEN_RECIPE_PAGE_CONTENT_VERSION = 2 as const;
 
 export interface GoldenCatalogIndexEntry {
   slug: string;

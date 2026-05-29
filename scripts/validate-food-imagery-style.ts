@@ -40,8 +40,11 @@ if (spec.shotPresetId !== "burger") {
 if (!prompt.includes(FOOD_IMAGERY_STYLE_VERSION)) {
   throw new Error("Prompt must embed style version for cache busting");
 }
-if (!prompt.includes("warm directional key light")) {
+if (!prompt.includes("warm key light")) {
   throw new Error("Prompt missing master lighting block");
+}
+if (!prompt.includes("full-frame DSLR")) {
+  throw new Error("Prompt missing photoreal camera baseline");
 }
 if (!prompt.includes("Camera angle (locked preset burger)")) {
   throw new Error("Prompt missing locked shot preset");

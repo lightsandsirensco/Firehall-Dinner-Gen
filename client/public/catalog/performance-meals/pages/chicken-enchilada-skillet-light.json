@@ -1,0 +1,189 @@
+{
+  "slug": "chicken-enchilada-skillet-light",
+  "title": "Light Chicken Enchilada Skillet",
+  "displayTitle": "Light Chicken Enchilada Skillet",
+  "seoTitle": "Light Chicken Enchilada Skillet | Firefighter Meal",
+  "shortDescription": "One-pan shredded chicken with tortillas, enchilada sauce, and cheese",
+  "subtitle": "One-pan shredded chicken with tortillas, enchilada sauce, and cheese",
+  "category": "healthy_performance",
+  "cuisine": "Mexican",
+  "description": "Shredded chicken simmers with black beans, corn, enchilada sauce, and torn tortillas, topped with melted cheese for a deconstructed enchilada skillet.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 25,
+  "prepTime": 20,
+  "difficulty": "easy",
+  "calories": 445,
+  "protein": 38,
+  "carbs": 42,
+  "fats": 16,
+  "tags": [
+    "protein:chicken",
+    "format:skillet",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "14-inch skillet with lid",
+    "Tongs"
+  ],
+  "ingredients": [
+    {
+      "name": "boneless chicken breasts",
+      "quantity": "2.5",
+      "unit": "lb"
+    },
+    {
+      "name": "corn tortillas",
+      "quantity": "12",
+      "unit": "whole",
+      "notes": "cut into strips"
+    },
+    {
+      "name": "red enchilada sauce",
+      "quantity": "4",
+      "unit": "cups"
+    },
+    {
+      "name": "black beans",
+      "quantity": "2",
+      "unit": "cans",
+      "notes": "15 oz, drained"
+    },
+    {
+      "name": "frozen corn",
+      "quantity": "2",
+      "unit": "cups"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "1",
+      "unit": "large",
+      "notes": "diced"
+    },
+    {
+      "name": "green chiles",
+      "quantity": "1",
+      "unit": "can",
+      "notes": "4 oz, diced"
+    },
+    {
+      "name": "Monterey Jack cheese",
+      "quantity": "2",
+      "unit": "cups",
+      "notes": "shredded"
+    },
+    {
+      "name": "chili powder",
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "ground cumin",
+      "quantity": "1",
+      "unit": "tsp"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "4",
+      "unit": "cloves",
+      "notes": "minced"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "1",
+      "unit": "tsp"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Poach and shred chicken",
+      "instruction": "Simmer chicken in salted water 15–18 minutes until 165°F. Rest, shred into bite-size strands that hold together when sauced.",
+      "minutes": 20,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Sweat onion and spices",
+      "instruction": "Sauté onion in a large skillet 5 minutes until soft. Add garlic, chili powder, and cumin; cook 1 minute until fragrant and toasty.",
+      "minutes": 6,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Simmer filling",
+      "instruction": "Add enchilada sauce, beans, corn, green chiles, and shredded chicken. Simmer 10 minutes until mixture thickens slightly and smells rich.",
+      "minutes": 10,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Add tortilla strips",
+      "instruction": "Stir in tortilla strips, simmer 5 minutes until they soften and absorb sauce like dumplings, not dissolve into paste.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Melt cheese and serve",
+      "instruction": "Remove from heat, top with cheese, cover 3 minutes until melted and glossy. Skillet should look bubbly at edges, not dry.",
+      "minutes": 3,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Use two skillets if your largest pan cannot fit eight portions comfortably.",
+    "Top with avocado and cilantro at the line for fresh contrast.",
+    "Green enchilada sauce swap works for milder, tangier flavor."
+  ],
+  "tonightSpread": [
+    "Shredded lettuce and diced tomato.",
+    "Greek yogurt instead of sour cream."
+  ],
+  "leftovers": [
+    "Reheat covered with extra sauce to restore moisture.",
+    "Scoop into burritos with rice next day."
+  ],
+  "whyCrewsLikeIt": "All the comfort of enchiladas with half the prep. One skillet from stove to table.",
+  "mealPrepNotes": "Poach and shred chicken ahead. Use corn tortillas torn—not flour—for better texture. Station: Tear tortillas into strips—they thicken sauce like dumplings. Station: Add cheese off heat and cover so it melts without oil separating. Station: Serve straight from skillet with toppings bar adjacent.",
+  "spiceLevel": "medium",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 445,
+    "protein": 38,
+    "carbs": 42,
+    "fats": 16,
+    "label": "~445 cal/serving · 38g protein · 8g fiber (est.)"
+  },
+  "heroImage": "/images/golden-100/chicken-enchilada-skillet-light.jpg",
+  "mobileImage": "/images/mobile/chicken-enchilada-skillet-light.jpg",
+  "thumbImage": "/images/thumbs/chicken-enchilada-skillet-light.jpg",
+  "railImage": "/images/rails/chicken-enchilada-skillet-light.jpg",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "light chicken enchilada skillet",
+    "chicken enchilada skillet light",
+    "chicken",
+    "Mexican",
+    "skillet",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "lemon-garlic-chicken-tray",
+    "sheet-pan-chicken-fajitas-lite",
+    "honey-garlic-chicken-rice-bowls",
+    "white-bean-chicken-chili",
+    "crock-barbacoa-chicken",
+    "shawarma-chicken-rice-bowls"
+  ],
+  "generatedAt": "2026-05-28T12:57:50.894Z",
+  "contentVersion": 2
+}

@@ -4,6 +4,7 @@
 
 import type { MasterCategoryDefinition } from "./schema.js";
 import { MASTER_CATEGORY_SCHEMA_VERSION } from "./constants.js";
+import { FOOD_IMAGERY_STYLE_VERSION } from "../food-imagery/master-style.js";
 
 type CategoryInput = Omit<MasterCategoryDefinition, "schemaVersion" | "imagery"> & {
   imagery: Omit<MasterCategoryDefinition["imagery"], "styleVersion"> & {
@@ -16,7 +17,7 @@ function cat(partial: CategoryInput): MasterCategoryDefinition {
   return {
     schemaVersion: MASTER_CATEGORY_SCHEMA_VERSION,
     ...rest,
-    imagery: { styleVersion: "3.0", ...imagery },
+    imagery: { styleVersion: FOOD_IMAGERY_STYLE_VERSION, ...imagery },
   };
 }
 

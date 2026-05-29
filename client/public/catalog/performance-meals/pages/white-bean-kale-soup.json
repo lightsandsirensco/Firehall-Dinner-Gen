@@ -1,0 +1,190 @@
+{
+  "slug": "white-bean-kale-soup",
+  "title": "White Bean and Kale Soup",
+  "displayTitle": "White Bean and Kale Soup",
+  "seoTitle": "White Bean and Kale Soup | Firefighter Meal",
+  "shortDescription": "Tuscan-style cannellini soup with garlic, rosemary, and parmesan rind",
+  "subtitle": "Tuscan-style cannellini soup with garlic, rosemary, and parmesan rind",
+  "category": "healthy_performance",
+  "cuisine": "Italian",
+  "description": "Cannellini beans simmer with kale, garlic, rosemary, and parmesan rind into a thick, rustic soup. Blend partial batch for creamy body.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 35,
+  "prepTime": 20,
+  "difficulty": "easy",
+  "calories": 285,
+  "protein": 14,
+  "carbs": 42,
+  "fats": 8,
+  "tags": [
+    "protein:plant",
+    "format:soup",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "8-quart stock pot",
+    "Immersion blender"
+  ],
+  "ingredients": [
+    {
+      "name": "cannellini beans",
+      "quantity": "4",
+      "unit": "cans",
+      "notes": "15 oz, drained"
+    },
+    {
+      "name": "lacinato kale",
+      "quantity": "1",
+      "unit": "bunch",
+      "notes": "stemmed, chopped"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "1",
+      "unit": "large",
+      "notes": "diced"
+    },
+    {
+      "name": "carrots",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "diced"
+    },
+    {
+      "name": "celery stalks",
+      "quantity": "3",
+      "unit": "whole",
+      "notes": "diced"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "8",
+      "unit": "cloves",
+      "notes": "minced"
+    },
+    {
+      "name": "vegetable broth",
+      "quantity": "8",
+      "unit": "cups",
+      "notes": "low sodium"
+    },
+    {
+      "name": "fresh rosemary",
+      "quantity": "2",
+      "unit": "sprigs"
+    },
+    {
+      "name": "Parmesan rind",
+      "quantity": "1",
+      "unit": "piece",
+      "notes": "2-inch chunk"
+    },
+    {
+      "name": "crushed tomatoes",
+      "quantity": "1",
+      "unit": "can",
+      "notes": "14.5 oz"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "3",
+      "unit": "tbsp"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "1.5",
+      "unit": "tsp"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Sweat mirepoix",
+      "instruction": "Heat olive oil in an 8-quart pot over medium. Cook onion, carrot, and celery 8 minutes until softened and onion turns translucent at edges.",
+      "minutes": 8,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Add garlic and tomatoes",
+      "instruction": "Stir in garlic, cook 1 minute until fragrant. Add crushed tomatoes and cook 3 minutes until color deepens slightly and raw tomato smell fades.",
+      "minutes": 4,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Simmer beans and broth",
+      "instruction": "Add 3 cans beans, broth, rosemary, and parmesan rind. Simmer 20 minutes so flavors meld and broth reduces slightly.",
+      "minutes": 20,
+      "heatLevel": "medium-low"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Blend partial batch",
+      "instruction": "Blend 1 can beans with 1 cup soup until smooth. Return to pot for creamy body without heavy cream.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Wilt kale and serve",
+      "instruction": "Stir in kale, simmer 5 minutes until tender-bright green. Soup should coat a spoon; adjust salt before ladle service.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Parmesan rind is free flavor—never throw them away.",
+    "Crusty bread for dipping turns this into a full hall meal.",
+    "Red pepper flakes at the line add heat without changing the pot."
+  ],
+  "tonightSpread": [
+    "Crusty Italian bread.",
+    "Shaved parmesan and olive oil drizzle."
+  ],
+  "leftovers": [
+    "Thickens overnight—thin with broth when reheating.",
+    "Freeze quart portions for backup vegetarian nights."
+  ],
+  "whyCrewsLikeIt": "Vegetarian main that still fills up firefighters. Cheap, hearty, and holds well on the back burner.",
+  "mealPrepNotes": "Save parmesan rinds in the freezer for soup weeks. Chop kale day-of so it stays green. Station: Blend one can of beans for body without adding cream. Station: Add kale last 5 minutes—longer cooking turns it bitter and drab. Station: Serve with parmesan and olive oil drizzle at the line.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 285,
+    "protein": 14,
+    "carbs": 42,
+    "fats": 8,
+    "label": "~285 cal/serving · 14g protein · 12g fiber (est.)"
+  },
+  "heroImage": "/images/golden-100/white-bean-kale-soup.jpg",
+  "mobileImage": "/images/mobile/white-bean-kale-soup.jpg",
+  "thumbImage": "/images/thumbs/white-bean-kale-soup.jpg",
+  "railImage": "/images/rails/white-bean-kale-soup.jpg",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "white bean and kale soup",
+    "white bean kale soup",
+    "plant",
+    "Italian",
+    "soup",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "white-bean-chicken-chili",
+    "smoky-lentil-kale-soup",
+    "lemon-chicken-orzo-soup",
+    "lentil-mushroom-bolognese"
+  ],
+  "generatedAt": "2026-05-28T12:57:50.894Z",
+  "contentVersion": 2
+}

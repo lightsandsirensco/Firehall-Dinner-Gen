@@ -5,6 +5,10 @@ export function normalizeMediaUrl(url: string | undefined | null): string {
   const raw = (url || "").trim();
   if (!raw) return "";
 
+  // Common data sources sometimes store `/images/...` without the leading slash.
+  // Treat `images/...` as a site-root path so it doesn't resolve relative to the current route.
+  if (raw.startsWith("images/")) return `/${raw}`;
+
   if (raw.startsWith("/")) return raw;
 
   try {

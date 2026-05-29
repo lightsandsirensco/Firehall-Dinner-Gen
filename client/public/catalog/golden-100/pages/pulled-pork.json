@@ -1,18 +1,22 @@
 {
   "slug": "pulled-pork",
   "title": "Pulled Pork Sandwiches",
+  "displayTitle": "Pulled Pork Sandwiches",
+  "seoTitle": "Pulled Pork Sandwiches | Firefighter Meal",
+  "shortDescription": "Slow-smoked pull, soft buns, fast line",
   "subtitle": "Slow-smoked pull, soft buns, fast line",
   "category": "firehall_classics",
   "cuisine": "american",
   "description": "Sandwich line for the whole hall",
   "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 260,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 720,
-  "protein": 40,
-  "carbs": 68,
-  "fats": 36,
+  "calories": 620,
+  "protein": 38,
+  "carbs": 42,
+  "fats": 32,
   "tags": [
     "protein:pork",
     "format:sandwich",
@@ -120,11 +124,15 @@
     "Label trays with date and reheat to 165°F minimum before second shift.",
     "Store components separate — assemble fresh; buns go soggy overnight."
   ],
+  "whyCrewsLikeIt": "Slow-smoked pull, soft buns, fast line. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
+  "substitutions": [],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 720,
-    "protein": 40,
-    "carbs": 68,
-    "fats": 36,
+    "calories": 620,
+    "protein": 38,
+    "carbs": 42,
+    "fats": 32,
     "label": "per serving (hall portion)"
   },
   "heroImage": "/images/golden-100/pulled-pork.jpg",
@@ -152,8 +160,9 @@
     "detroit-style-pizza",
     "meat-lovers-sheet-pizza"
   ],
-  "sourceName": "Hey Grill Hey",
+  "sourceName": "Firehall Meals",
+  "sourceUrl": "",
   "classicSlug": "pulled-pork",
-  "generatedAt": "2026-05-27T15:03:06.115Z",
-  "contentVersion": 1
+  "generatedAt": "2026-05-28T12:06:14.948Z",
+  "contentVersion": 2
 }

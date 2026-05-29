@@ -1,0 +1,85 @@
+{
+  "slug": "eating-well-on-24-hour-shifts",
+  "title": "Eating Well on 24-Hour Shifts",
+  "subtitle": "Three meals in one tour — without living on gas-station food",
+  "description": "How firefighters can eat well across a full tour: dinner that holds, overnight snacks that help, and breakfast that does not wreck the kitchen for the next crew.",
+  "topic": "nutrition_performance",
+  "pillar": "nutrition_performance",
+  "intro": "A full tour is not one dinner. It is an evening meal for the arriving crew, optional fuel overnight if the board stays loud, and breakfast before handoff. Eating well on a 24-hour shift means planning hold-friendly food and stopping the slow drift toward vending machines — not eating perfectly every hour.",
+  "sections": [
+    {
+      "id": "dinner",
+      "heading": "Dinner that survives the first half",
+      "paragraphs": [
+        "Anchor the tour with protein and starch you can reheat. Bowls, batches, and lines let late eaters build a plate without reheating the whole kitchen.",
+        "Skip meals that only taste right in a two-minute window after plating. After a long call, nobody is eating on your schedule."
+      ]
+    },
+    {
+      "id": "overnight",
+      "heading": "Overnight without a second production",
+      "paragraphs": [
+        "If the hall stocks the fridge, keep credible snacks visible — not buried behind condiments. Crews grab what they see.",
+        "A pot of chili on low is not glamorous. It is effective when four people eat between 23:00 and 03:00."
+      ]
+    },
+    {
+      "id": "morning",
+      "heading": "Breakfast and handoff",
+      "paragraphs": [
+        "Egg bakes and burrito bars tolerate a ninety-minute eating window. Pancakes hold in a warm oven between waves.",
+        "Clean as you go. The crew on next owes you the same courtesy."
+      ]
+    }
+  ],
+  "practicalAdvice": [
+    "Cook dinner so it still eats well at 22:00 — chili, pulled pork, and baked pasta beat crispy food that dies on hold.",
+    "Keep overnight options simple: fruit, yogurt, sandwich fixings — not a second full cook at 02:00.",
+    "Breakfast should be a line or a bake, not twelve individual omelets.",
+    "Drink water before coffee number three — dehydration feels like hunger."
+  ],
+  "mealRecommendations": [
+    {
+      "slug": "big-chili",
+      "title": "Hall-Sized Beef and Bean Chili",
+      "blurb": "Reheats across the tour."
+    },
+    {
+      "slug": "breakfast-burrito-bar",
+      "title": "Breakfast Burrito Bar",
+      "blurb": "Morning line for staggered eaters."
+    },
+    {
+      "slug": "pulled-pork",
+      "title": "Pulled Pork Sandwiches",
+      "blurb": "Late-night sandwiches still work."
+    },
+    {
+      "slug": "sausage-egg-bake",
+      "title": "Sausage Egg Bake",
+      "blurb": "Hands-off morning bake."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is this medical advice?",
+      "answer": "No. This is practical shift nutrition for station kitchens. Follow your department's health guidance and consult professionals for personal medical questions."
+    },
+    {
+      "question": "Where do these recipes come from?",
+      "answer": "Each link goes to a full recipe on Firehall Meals — crew-sized portions, station timing, and steps written for a shared kitchen. Not home-blog scaling."
+    }
+  ],
+  "relatedArticleSlugs": [
+    "best-meals-24-hour-shift",
+    "hydration-for-firefighters"
+  ],
+  "keywords": [
+    "24 hour shift nutrition",
+    "firefighter shift meals",
+    "fire station eating"
+  ],
+  "publishedAt": "2026-05-27T18:00:00.000Z",
+  "updatedAt": "2026-05-27T18:00:00.000Z",
+  "readMinutes": 8
+}

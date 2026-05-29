@@ -1,0 +1,190 @@
+{
+  "slug": "turkey-shepherds-sweet-potato",
+  "title": "Turkey Shepherd's with Sweet Potato Top",
+  "displayTitle": "Turkey Shepherd's with Sweet Potato Top",
+  "seoTitle": "Turkey Shepherd's with Sweet Potato Top | Firefighter Meal",
+  "shortDescription": "Lean turkey and vegetable filling under whipped sweet potato mash",
+  "subtitle": "Lean turkey and vegetable filling under whipped sweet potato mash",
+  "category": "healthy_performance",
+  "cuisine": "British-American",
+  "description": "Ground turkey and mixed vegetables simmer in savory gravy, topped with whipped sweet potato mash and baked until golden.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 40,
+  "prepTime": 30,
+  "difficulty": "medium",
+  "calories": 425,
+  "protein": 34,
+  "carbs": 42,
+  "fats": 14,
+  "tags": [
+    "protein:turkey",
+    "format:bake",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "Deep hotel pan",
+    "Large pot for potatoes",
+    "Large skillet"
+  ],
+  "ingredients": [
+    {
+      "name": "lean ground turkey",
+      "quantity": "3",
+      "unit": "lb"
+    },
+    {
+      "name": "sweet potatoes",
+      "quantity": "4",
+      "unit": "lb",
+      "notes": "peeled, cubed"
+    },
+    {
+      "name": "frozen mixed vegetables",
+      "quantity": "4",
+      "unit": "cups",
+      "notes": "carrots, peas, corn"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "1",
+      "unit": "large",
+      "notes": "diced"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "4",
+      "unit": "cloves",
+      "notes": "minced"
+    },
+    {
+      "name": "tomato paste",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "chicken broth",
+      "quantity": "2",
+      "unit": "cups",
+      "notes": "low sodium"
+    },
+    {
+      "name": "Worcestershire sauce",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "dried thyme",
+      "quantity": "1",
+      "unit": "tsp"
+    },
+    {
+      "name": "milk",
+      "quantity": "0.5",
+      "unit": "cup",
+      "notes": "warm"
+    },
+    {
+      "name": "butter",
+      "quantity": "3",
+      "unit": "tbsp"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "2",
+      "unit": "tsp"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Boil and mash sweet potatoes",
+      "instruction": "Boil sweet potato cubes 15–18 minutes until fork-tender. Drain well, mash with butter, milk, and 1 tsp salt until smooth and spreadable.",
+      "minutes": 20,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Brown turkey and onion",
+      "instruction": "Cook ground turkey and onion over medium-high 10 minutes, breaking into crumbles until no pink remains and onion turns translucent at edges.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Build savory filling",
+      "instruction": "Add garlic, tomato paste, thyme; cook 2 minutes. Stir in mixed vegetables, broth, Worcestershire. Simmer 10 minutes until thick and gravy-coated.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Assemble and top",
+      "instruction": "Spread filling in greased hotel pan. Pipe or spread sweet potato mash evenly over top with textured peaks for browning.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Bake until golden",
+      "instruction": "Bake at 400°F 25–30 minutes until mash peaks turn golden and filling bubbles at edges. Center should be hot throughout when pierced.",
+      "minutes": 28,
+      "heatLevel": "medium-high"
+    }
+  ],
+  "proTips": [
+    "A pinch of cinnamon in sweet potato mash complements savory filling.",
+    "Add rosemary to turkey filling for depth without extra salt.",
+    "Portion with a square cutter for uniform crew servings."
+  ],
+  "tonightSpread": [
+    "Steamed green beans with lemon.",
+    "Simple mixed green salad."
+  ],
+  "leftovers": [
+    "Reheat squares covered with foil—add broth if filling dried.",
+    "Freeze individual portions for emergency comfort meals."
+  ],
+  "whyCrewsLikeIt": "Classic comfort food without heavy beef grease. Sweet potato top adds color and fiber crews appreciate.",
+  "mealPrepNotes": "Boil sweet potatoes while turkey filling simmers. Pipe or spread mash evenly for pretty portions. Station: Use a 4-inch deep hotel pan for clean slice portions across eight servings. Station: Let filling cool slightly before topping—hot filling melts mash into the gravy layer. Station: Broil last 3 minutes for golden peaks if oven time allows.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 425,
+    "protein": 34,
+    "carbs": 42,
+    "fats": 14,
+    "label": "~425 cal/serving · 34g protein · 7g fiber (est.)"
+  },
+  "heroImage": "/images/golden-100/turkey-shepherds-sweet-potato.jpg",
+  "mobileImage": "/images/mobile/turkey-shepherds-sweet-potato.jpg",
+  "thumbImage": "/images/thumbs/turkey-shepherds-sweet-potato.jpg",
+  "railImage": "/images/rails/turkey-shepherds-sweet-potato.jpg",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "turkey shepherd's with sweet potato top",
+    "turkey shepherds sweet potato",
+    "turkey",
+    "British-American",
+    "bake",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "lean-turkey-bean-chili",
+    "turkey-sausage-egg-muffins",
+    "baked-turkey-meatball-marinara",
+    "turkey-taco-skillet",
+    "turkey-sweet-potato-chili",
+    "turkey-lettuce-wrap-night"
+  ],
+  "generatedAt": "2026-05-28T12:57:50.894Z",
+  "contentVersion": 2
+}

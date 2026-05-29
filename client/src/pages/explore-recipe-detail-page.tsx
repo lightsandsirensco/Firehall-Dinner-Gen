@@ -386,6 +386,8 @@ function RecipeDetailView({
     sourceUrl: recipe.sourceUrl,
     cuisines: recipe.cuisines,
     diets: recipe.diets,
+    imageryStatus: recipe.imageryStatus,
+    heldImageryLabel: recipe.heldImageryLabel,
   };
 
   const prepMin = Math.max(5, Math.round(recipe.readyInMinutes * 0.3));

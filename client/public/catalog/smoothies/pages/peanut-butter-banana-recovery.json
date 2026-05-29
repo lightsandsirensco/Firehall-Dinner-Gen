@@ -1,0 +1,102 @@
+{
+  "slug": "peanut-butter-banana-recovery",
+  "title": "Peanut Butter Banana Recovery Shake",
+  "seoTitle": "Peanut Butter Banana Recovery Shake | Firefighter Smoothie",
+  "subtitle": "Recovery · Recovery",
+  "description": "Banana and peanut butter are the hall’s answer to a recovery shake that does not taste like chalk. Frozen banana keeps the texture thick without needing ice cream or sweetened yogurt.",
+  "fuelType": "smoothie",
+  "taxonomyCategory": "recovery_smoothie",
+  "taxonomyLabel": "Recovery",
+  "intro": "Banana and peanut butter are the hall’s answer to a recovery shake that does not taste like chalk. Frozen banana keeps the texture thick without needing ice cream or sweetened yogurt.",
+  "ingredients": [
+    {
+      "name": "ripe bananas",
+      "quantity": "4",
+      "unit": "medium",
+      "notes": "peeled, sliced and frozen"
+    },
+    {
+      "name": "natural peanut butter",
+      "quantity": "6",
+      "unit": "tbsp"
+    },
+    {
+      "name": "milk",
+      "quantity": "2",
+      "unit": "cups"
+    },
+    {
+      "name": "plain Greek yogurt",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "optional but recommended"
+    },
+    {
+      "name": "cocoa powder",
+      "quantity": "1",
+      "unit": "tbsp",
+      "notes": "optional"
+    },
+    {
+      "name": "pinch of kosher salt",
+      "quantity": "1",
+      "unit": "pinch"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "instruction": "Break frozen banana slices apart and add to the blender with peanut butter, milk, yogurt, and salt."
+    },
+    {
+      "stepNumber": 2,
+      "instruction": "Blend on high 60–90 seconds, stopping once to scrape down the sides if the blade stalls."
+    },
+    {
+      "stepNumber": 3,
+      "instruction": "The shake should be thick enough to coat a spoon and slowly fall off — add ¼ cup milk if your blender struggles."
+    },
+    {
+      "stepNumber": 4,
+      "instruction": "Pour into cups right away; this one thickens as it sits."
+    }
+  ],
+  "nutrition": {
+    "calories": 340,
+    "protein": 16,
+    "carbs": 32,
+    "fats": 8,
+    "highlights": "~340 cal · ~16 g protein (higher with yogurt) · potassium from banana · healthy fats from peanut butter"
+  },
+  "substitutions": [
+    "Sunflower seed butter works for nut-free halls.",
+    "Add a scoop of chocolate protein powder after hard training days."
+  ],
+  "shiftNote": "Higher in calories by design — good after workouts, yard work, or a physically heavy call when someone needs fuel fast.",
+  "heroImage": "/images/editorial/smoothies/peanut-butter-banana-recovery.webp",
+  "thumbImage": "/images/editorial/smoothies/peanut-butter-banana-recovery.webp",
+  "tags": [
+    "fuel_smoothie",
+    "taxonomy:recovery_smoothie",
+    "smoothie",
+    "performance_fuel",
+    "shift_nutrition"
+  ],
+  "searchTerms": [
+    "peanut butter banana recovery shake",
+    "healthy smoothies",
+    "smoothies for firefighters",
+    "firefighter breakfast",
+    "recovery smoothie",
+    "recovery smoothie",
+    "station blender",
+    "shift nutrition"
+  ],
+  "relatedSlugs": [
+    "chocolate-banana-recovery",
+    "citrus-ginger"
+  ],
+  "catalogSet": "fuel_smoothie",
+  "generatedAt": "2026-05-28T00:37:54.583Z",
+  "contentVersion": 1
+}

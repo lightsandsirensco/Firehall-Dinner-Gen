@@ -1,11 +1,15 @@
 {
   "slug": "texas-beef-ribs",
   "title": "Texas-Style Beef Ribs",
+  "displayTitle": "Texas-Style Beef Ribs",
+  "seoTitle": "Texas-Style Beef Ribs | Firefighter Meal",
+  "shortDescription": "Massive bones, pepper crust, smoke",
   "subtitle": "Massive bones, pepper crust, smoke",
   "category": "bbq_grill_nights",
   "cuisine": "american",
-  "description": "Texas-Style Beef Ribs is a american grill built for a hungry firehall crew — Massive bones, pepper crust, smoke. Hearty portions, station-kitchen timing, and flavors everyone recognizes after a long shift.",
+  "description": "Massive bones, pepper crust, smoke. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 90,
   "prepTime": 30,
   "difficulty": "hard",
@@ -31,69 +35,69 @@
   ],
   "ingredients": [
     {
-      "name": "Beef (main cut for recipe)",
-      "quantity": "3",
-      "unit": "lb"
+      "name": "Beef short ribs, plate style",
+      "quantity": "8",
+      "unit": "lb",
+      "group": "Main"
     },
     {
       "name": "Kosher salt",
-      "quantity": "2",
-      "unit": "tbsp"
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Rub"
     },
     {
-      "name": "Black pepper",
+      "name": "Coarse black pepper",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Rub"
+    },
+    {
+      "name": "Garlic powder",
       "quantity": "1",
-      "unit": "tbsp"
+      "unit": "tbsp",
+      "group": "Rub"
     },
     {
-      "name": "Cooking oil",
+      "name": "Beef broth",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "for spritz",
+      "group": "Hold"
+    },
+    {
+      "name": "Apple cider vinegar",
       "quantity": "0.3",
-      "unit": "cup"
-    },
-    {
-      "name": "Yellow onion",
-      "quantity": "2",
-      "unit": "large"
-    },
-    {
-      "name": "Garlic",
-      "quantity": "6",
-      "unit": "cloves"
+      "unit": "cup",
+      "group": "Spritz"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Prep the line",
-      "instruction": "Set out all ingredients for Texas-Style Beef Ribs before you turn on heat — firefighters eat on a schedule. Pat proteins dry and season aggressively with salt and pepper; dry surfaces brown instead of steam.",
-      "minutes": 15,
+      "title": "Season the beef ribs",
+      "instruction": "Pull silver skin if present. Coat ribs with salt and pepper (heavy — Texas style). Let sit 30 minutes while smoker preheats to 275°F with oak.",
+      "minutes": 30,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Build the base",
-      "instruction": "Heat oil in your largest skillet, Dutch oven, or on the flat-top over medium-high until it shimmers. Add aromatics (onion first) and cook until the edges turn golden and the smell sweetens — usually 4–6 minutes. If garlic is in the recipe, add it after the onion softens so it doesn't burn.",
-      "minutes": 8,
-      "heatLevel": "medium-high"
+      "title": "Smoke until tender",
+      "instruction": "Smoke bone-side down 6–8 hours until meat pulls back from bone and internal temp reads 200–205°F. Wrap in butcher paper if bark gets too dark before tenderness. Meat should jiggle when you shake the rack.",
+      "minutes": 180,
+      "heatLevel": "low"
     },
     {
       "stepNumber": 3,
-      "title": "Cook the main",
-      "instruction": "Cook the primary protein or base for Texas-Style Beef Ribs until it hits proper color and safe internal temperature. Don't crowd the pan — work in batches if needed so you get browning, not gray stew. Listen for a steady sizzle; if it's silent, the heat is too low.",
-      "minutes": 20,
-      "heatLevel": "medium-high"
+      "title": "Rest and portion",
+      "instruction": "Rest 20 minutes tented with foil. Cut between bones. Hold on sheet trays at 180°F — beef ribs dry out fast, so keep a backup pan lightly spritzed with broth.",
+      "minutes": 25,
+      "heatLevel": "low"
     },
     {
       "stepNumber": 4,
-      "title": "Finish and season",
-      "instruction": "Bring components together, taste, and adjust salt. Sauce should coat, not pool. If cheese is involved, melt it just until glossy — another 1–2 minutes under a lid or broiler. Let heavy proteins rest 5 minutes before slicing.",
-      "minutes": 10,
-      "heatLevel": "medium"
-    },
-    {
-      "stepNumber": 5,
-      "title": "Serve the hall",
-      "instruction": "Transfer to sheet trays or a serving line immediately. Keep backup warm at 200°F. Call the crew while it's hot — this meal is built for a hungry hall, not a photo shoot.",
+      "title": "Serve on the line",
+      "instruction": "Pile ribs on sheet trays with extra pepper on the side. Backup pan in a warm oven — do not cover tightly or bark softens.",
       "minutes": 5,
       "heatLevel": "low"
     }
@@ -115,6 +119,10 @@
     "Label trays with date and reheat to 165°F minimum before second shift.",
     "Slice cold protein thin for next-day wraps or salads — faster reheat, less dry-out."
   ],
+  "whyCrewsLikeIt": "Massive bones, pepper crust, smoke. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
+  "substitutions": [],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
   "nutrition": {
     "calories": 600,
     "protein": 40,
@@ -147,7 +155,8 @@
     "beer-can-chicken",
     "cedar-plank-salmon"
   ],
-  "sourceName": "Traeger",
-  "generatedAt": "2026-05-27T15:03:06.151Z",
-  "contentVersion": 1
+  "sourceName": "Firehall Meals",
+  "sourceUrl": "",
+  "generatedAt": "2026-05-28T12:06:14.991Z",
+  "contentVersion": 2
 }

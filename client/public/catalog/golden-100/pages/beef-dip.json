@@ -1,18 +1,22 @@
 {
   "slug": "beef-dip",
   "title": "Blackstone Steak Sandwiches",
+  "displayTitle": "Blackstone Steak Sandwiches",
+  "seoTitle": "Blackstone Steak Sandwiches | Firefighter Meal",
+  "shortDescription": "Au jus dip energy without the fuss",
   "subtitle": "Au jus dip energy without the fuss",
   "category": "firehall_classics",
   "cuisine": "american",
   "description": "Canadian hall legend",
   "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 45,
   "prepTime": 15,
   "difficulty": "medium",
-  "calories": 720,
-  "protein": 40,
-  "carbs": 68,
-  "fats": 36,
+  "calories": 680,
+  "protein": 42,
+  "carbs": 50,
+  "fats": 30,
   "tags": [
     "protein:beef",
     "format:sandwich",
@@ -110,11 +114,15 @@
     "Label trays with date and reheat to 165°F minimum before second shift.",
     "Store components separate — assemble fresh; buns go soggy overnight."
   ],
+  "whyCrewsLikeIt": "Au jus dip energy without the fuss. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
+  "substitutions": [],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 720,
-    "protein": 40,
-    "carbs": 68,
-    "fats": 36,
+    "calories": 680,
+    "protein": 42,
+    "carbs": 50,
+    "fats": 30,
     "label": "per serving (hall portion)"
   },
   "heroImage": "/images/golden-100/beef-dip.jpg",
@@ -141,8 +149,9 @@
     "loaded-baked-potato-bar",
     "philly-cheesesteak-skillet"
   ],
-  "sourceName": "Firehall Classics",
+  "sourceName": "Firehall Meals",
+  "sourceUrl": "",
   "classicSlug": "beef-dip",
-  "generatedAt": "2026-05-27T15:03:06.117Z",
-  "contentVersion": 1
+  "generatedAt": "2026-05-28T12:06:14.952Z",
+  "contentVersion": 2
 }

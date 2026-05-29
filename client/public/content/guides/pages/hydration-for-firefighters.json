@@ -1,0 +1,76 @@
+{
+  "slug": "hydration-for-firefighters",
+  "title": "Hydration for Firefighters",
+  "subtitle": "Water, electrolytes, and the habits that actually stick",
+  "description": "Hydration guide for firefighters: how much to drink on shift, when electrolytes matter, and how hall meals support fluid balance without gimmicks.",
+  "topic": "nutrition_performance",
+  "pillar": "nutrition_performance",
+  "intro": "Hydration on shift is boring until it is not. Headaches, cramps, and bad decisions show up when water intake drifts. Firefighters lose fluid in heat, gear, and dry station air — coffee does not count as a hydration strategy.",
+  "sections": [
+    {
+      "id": "when",
+      "heading": "When electrolytes matter",
+      "paragraphs": [
+        "Long hot jobs, back-to-back calls, and tours where you sweat more than you notice. Lightheadedness with clear urine can still mean sodium need on heavy days."
+      ]
+    },
+    {
+      "id": "hall",
+      "heading": "Hall habits that help",
+      "paragraphs": [
+        "Keep a water cooler visible in the kitchen. Out of sight is out of mind.",
+        "Broth-based soups at dinner add sodium and fluid — useful when appetites are low."
+      ]
+    }
+  ],
+  "practicalAdvice": [
+    "Start the shift with a full bottle — not an empty one you 'will fill later.'",
+    "Add electrolytes on hot days or after heavy work — especially if you sweat through gear.",
+    "Soup, fruit, and chili count toward fluid — not only plain water.",
+    "Alcohol after the job dehydrates — pair it with water if you drink."
+  ],
+  "mealRecommendations": [
+    {
+      "slug": "beef-barley-soup",
+      "title": "Beef Barley Soup",
+      "blurb": "Broth-forward bowl — fluids and protein."
+    },
+    {
+      "slug": "chicken-dumpling-soup",
+      "title": "Chicken and Dumplings",
+      "blurb": "Hydrating comfort pot."
+    },
+    {
+      "slug": "greek-chicken-bowls",
+      "title": "Greek Chicken Power Bowls",
+      "blurb": "Cucumber and tzatziki add fluid."
+    },
+    {
+      "slug": "big-chili",
+      "title": "Hall-Sized Beef and Bean Chili",
+      "blurb": "Salty batch — sip water with it."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is this medical advice?",
+      "answer": "No. This is practical shift nutrition for station kitchens. Follow your department's health guidance and consult professionals for personal medical questions."
+    },
+    {
+      "question": "Where do these recipes come from?",
+      "answer": "Each link goes to a full recipe on Firehall Meals — crew-sized portions, station timing, and steps written for a shared kitchen. Not home-blog scaling."
+    }
+  ],
+  "relatedArticleSlugs": [
+    "eating-well-on-24-hour-shifts",
+    "best-foods-for-long-shifts"
+  ],
+  "keywords": [
+    "firefighter hydration",
+    "shift hydration",
+    "electrolytes firefighters"
+  ],
+  "publishedAt": "2026-05-27T18:00:00.000Z",
+  "updatedAt": "2026-05-27T18:00:00.000Z",
+  "readMinutes": 7
+}

@@ -3,7 +3,11 @@
  * Single visual identity across Golden 100, Hall Classics, and Explore heroes.
  */
 
-export const IMAGE_STYLE_PRESET_VERSION = "1.0" as const;
+export const IMAGE_STYLE_PRESET_VERSION = "2.0" as const;
+
+/** Every preset shares this photographic baseline — category only changes mood/lighting nuance. */
+const PRESET_PHOTO_CORE =
+  "Photorealistic DSLR menu photograph, natural color, same dark firehall plate styling, locked camera angle from shot preset";
 
 export const IMAGE_STYLE_PRESET_IDS = [
   "hall_bbq_dark",
@@ -39,9 +43,9 @@ export const IMAGE_STYLE_PRESETS: Record<ImageStylePresetId, ImageStylePreset> =
   hall_bbq_dark: {
     id: "hall_bbq_dark",
     displayName: "Hall BBQ — Dark & Charred",
-    identity: "Smoky firehall grill night — char, ember glow, masculine appetite",
+    identity: `${PRESET_PHOTO_CORE} — smoky grill night`,
     lighting:
-      "low-key warm key from grill side, orange ember rim light, subtle smoke haze, char highlights on protein",
+      "low-key warm key from grill side, subtle smoke haze, real char highlights on protein, no fantasy ember glow",
     cameraAngle: "45° three-quarter hero angle, eye-level, slight off-center for depth",
     mood: "confident BBQ hall night — indulgent, smoky, crew-scale appetite",
     atmosphere: "dark station kitchen after grill service, embers and cast iron implied",
@@ -50,14 +54,14 @@ export const IMAGE_STYLE_PRESETS: Record<ImageStylePresetId, ImageStylePreset> =
     colorGrading:
       "deep amber highlights, chocolate shadows, controlled orange in char, no neon, not oversaturated",
     cropPreference: "center",
-    textureEmphasis: "real char crust, smoke-kissed surface, juicy interior cues, no plastic shine",
-    avoid: ["daylight flat lighting", "salad-forward framing", "pastel props"],
+    textureEmphasis: "real char crust, smoke-kissed surface, natural fat sheen, no plastic shine",
+    avoid: ["daylight flat lighting", "salad-forward framing", "pastel props", "AI gloss", "CGI smoke"],
   },
 
   comfort_firehall: {
     id: "comfort_firehall",
     displayName: "Comfort Firehall",
-    identity: "Hearty station-house comfort — steam, cheese, familiar indulgence",
+    identity: `${PRESET_PHOTO_CORE} — station-house comfort`,
     lighting:
       "warm tungsten key from camera-left, soft fill, gentle steam when hot, golden highlights on cheese and sauce",
     cameraAngle: "slightly elevated 40° angle, intimate plate-forward framing",
@@ -67,14 +71,14 @@ export const IMAGE_STYLE_PRESETS: Record<ImageStylePresetId, ImageStylePreset> =
       "single generous plate or bowl, melted cheese and sauce gloss where appropriate, center-weighted for 4:5 mobile",
     colorGrading: "cinematic warm amber, rich midtones, soft roll-off in shadows",
     cropPreference: "center",
-    textureEmphasis: "melty cheese pull, glossy sauce control, steam, hearty portion density",
+    textureEmphasis: "natural melted cheese, controlled sauce sheen, gentle steam, hearty portion density",
     avoid: ["clinical white plates", "diet portions", "cold blue cast", "sparse minimalist plating"],
   },
 
   healthy_performance: {
     id: "healthy_performance",
     displayName: "Healthy Performance",
-    identity: "Lean hall fuel — vibrant but realistic, not diet-food sterile",
+    identity: `${PRESET_PHOTO_CORE} — lean hall fuel`,
     lighting:
       "bright natural-window key with soft diffusion, clean shadows, fresh herb speculars",
     cameraAngle: "45° angle, bowl or plate with clear protein zone, slight overhead hint",
@@ -91,7 +95,7 @@ export const IMAGE_STYLE_PRESETS: Record<ImageStylePresetId, ImageStylePreset> =
   breakfast_shift: {
     id: "breakfast_shift",
     displayName: "Breakfast Shift",
-    identity: "Morning hall energy — golden hour breakfast-for-crew",
+    identity: `${PRESET_PHOTO_CORE} — morning shift breakfast`,
     lighting:
       "soft morning window light from side, golden yolk highlights, gentle steam from hot elements",
     cameraAngle: "slightly above 35° — classic breakfast editorial, approachable",
@@ -107,24 +111,24 @@ export const IMAGE_STYLE_PRESETS: Record<ImageStylePresetId, ImageStylePreset> =
   pizza_night: {
     id: "pizza_night",
     displayName: "Pizza Night",
-    identity: "Hall pizzeria night — oven glow, cheese bubble, communal pie",
+    identity: `${PRESET_PHOTO_CORE} — hall pizza night`,
     lighting:
-      "warm oven-glow key from behind-left, cheese highlight speculars, rustic board or peel edge",
-    cameraAngle: "low 30° angle emphasizing crust edge and cheese stretch moment",
+      "warm oven-side key from behind-left, natural cheese highlight speculars, rustic board or peel edge",
+    cameraAngle: "low 30° angle emphasizing crust edge — same preset family as catalog pizza shots",
     mood: "Friday hall pizza — fun, communal, craveable not greasy",
     atmosphere: "neighborhood pizzeria meets fire station — warm, lively, authentic",
     composition:
       "whole pie or controlled slice pull, leopard crust visible, center crop safe for cheese focus",
     colorGrading: "warm red-gold cheese tones, toasted crust browns, controlled oil sheen",
     cropPreference: "center",
-    textureEmphasis: "bubbling mozzarella, blistered crust, controlled oil—not soggy center",
-    avoid: ["delivery box", "frozen pizza look", "flat overhead only", "neon cheese"],
+    textureEmphasis: "bubbling mozzarella, blistered crust, natural oil sheen—not soggy center",
+    avoid: ["delivery box", "frozen pizza look", "flat overhead only", "neon cheese", "AI cheese stretch"],
   },
 
   post_call_comfort: {
     id: "post_call_comfort",
     displayName: "Post-Call Comfort",
-    identity: "Deep comfort after the call — chili, stew, mash, soul food gravity",
+    identity: `${PRESET_PHOTO_CORE} — post-call comfort`,
     lighting:
       "low warm key, deep shadows, steam rising from bowl, candle-adjacent warmth without showing flame",
     cameraAngle: "eye-level bowl-forward or deep plate, intimate and heavy",

@@ -1,4 +1,5 @@
 import type { ExploreRecipeCard } from "./explore-recipe.js";
+import { isSoftHeldExploreCard } from "./explore-imagery-status.js";
 
 export type ExploreBadge =
   | "high_protein"
@@ -141,6 +142,7 @@ function buildHookLine(
 export function isDisplayableExploreCard(card: ExploreRecipeCard): boolean {
   if (card._firehallFallback) return false;
   if (!card.id || card.id <= 0) return false;
+  if (isSoftHeldExploreCard(card)) return true;
   return Boolean(card.image?.trim());
 }
 

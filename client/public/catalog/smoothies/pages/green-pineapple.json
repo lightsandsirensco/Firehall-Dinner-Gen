@@ -1,0 +1,102 @@
+{
+  "slug": "green-pineapple",
+  "title": "Green Pineapple Smoothie",
+  "seoTitle": "Green Pineapple Smoothie | Firefighter Smoothie",
+  "subtitle": "Green · Green",
+  "description": "Spinach disappears behind pineapple and coconut water. This is how you get greens in without the “salad in a cup” face from the crew.",
+  "fuelType": "smoothie",
+  "taxonomyCategory": "green_smoothie",
+  "taxonomyLabel": "Green",
+  "intro": "Spinach disappears behind pineapple and coconut water. This is how you get greens in without the “salad in a cup” face from the crew.",
+  "ingredients": [
+    {
+      "name": "baby spinach",
+      "quantity": "3",
+      "unit": "cups",
+      "notes": "packed"
+    },
+    {
+      "name": "frozen pineapple chunks",
+      "quantity": "3",
+      "unit": "cups"
+    },
+    {
+      "name": "coconut water",
+      "quantity": "2",
+      "unit": "cups",
+      "notes": "chilled"
+    },
+    {
+      "name": "banana",
+      "quantity": "1",
+      "unit": "medium",
+      "notes": "fresh or frozen"
+    },
+    {
+      "name": "fresh lime juice",
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "ice",
+      "quantity": "0.5",
+      "unit": "cup",
+      "notes": "optional"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "instruction": "Blend spinach with coconut water first until no leaf flecks remain — this step prevents green stringiness."
+    },
+    {
+      "stepNumber": 2,
+      "instruction": "Add pineapple, banana, and lime. Blend on high until smooth and bright green."
+    },
+    {
+      "stepNumber": 3,
+      "instruction": "The color should look tropical, not muddy. Add ice only if you want it colder and thicker."
+    },
+    {
+      "stepNumber": 4,
+      "instruction": "Serve cold within a few hours; oxidation will dull the color but it is still fine to drink."
+    }
+  ],
+  "nutrition": {
+    "calories": 180,
+    "protein": 15,
+    "carbs": 32,
+    "fats": 8,
+    "highlights": "~180 cal · light on fat · hydration from coconut water · fiber from fruit and spinach"
+  },
+  "substitutions": [
+    "Kale works but blanch flavor is stronger — use half spinach, half kale.",
+    "Regular water replaces coconut water in a pinch."
+  ],
+  "shiftNote": "Light enough for early morning or post-call when heavy food sounds wrong. Good “reset” option.",
+  "heroImage": "/images/editorial/smoothies/green-pineapple.webp",
+  "thumbImage": "/images/editorial/smoothies/green-pineapple.webp",
+  "tags": [
+    "fuel_smoothie",
+    "taxonomy:green_smoothie",
+    "smoothie",
+    "performance_fuel",
+    "shift_nutrition"
+  ],
+  "searchTerms": [
+    "green pineapple smoothie",
+    "healthy smoothies",
+    "smoothies for firefighters",
+    "firefighter breakfast",
+    "recovery smoothie",
+    "green smoothie",
+    "station blender",
+    "shift nutrition"
+  ],
+  "relatedSlugs": [
+    "strawberry-spinach"
+  ],
+  "catalogSet": "fuel_smoothie",
+  "generatedAt": "2026-05-28T00:37:54.583Z",
+  "contentVersion": 1
+}

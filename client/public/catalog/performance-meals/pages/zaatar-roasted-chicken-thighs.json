@@ -1,0 +1,173 @@
+{
+  "slug": "zaatar-roasted-chicken-thighs",
+  "title": "Za'atar Roasted Chicken Thighs",
+  "displayTitle": "Za'atar Roasted Chicken Thighs",
+  "seoTitle": "Za'atar Roasted Chicken Thighs | Firefighter Meal",
+  "shortDescription": "Middle Eastern spice-crusted thighs with roasted onions and lemon",
+  "subtitle": "Middle Eastern spice-crusted thighs with roasted onions and lemon",
+  "category": "healthy_performance",
+  "cuisine": "Middle Eastern",
+  "description": "Chicken thighs roast with za'atar, olive oil, lemon, and red onion until the spice crust is fragrant and skin crisps.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 38,
+  "prepTime": 15,
+  "difficulty": "easy",
+  "calories": 475,
+  "protein": 40,
+  "carbs": 8,
+  "fats": 32,
+  "tags": [
+    "protein:chicken",
+    "format:roast",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "Two half-sheet pans",
+    "Instant-read thermometer"
+  ],
+  "ingredients": [
+    {
+      "name": "bone-in chicken thighs",
+      "quantity": "16",
+      "unit": "pieces",
+      "notes": "about 6 lb"
+    },
+    {
+      "name": "za'atar spice blend",
+      "quantity": "0.33",
+      "unit": "cup"
+    },
+    {
+      "name": "extra-virgin olive oil",
+      "quantity": "0.5",
+      "unit": "cup"
+    },
+    {
+      "name": "lemon",
+      "quantity": "4",
+      "unit": "whole",
+      "notes": "juiced and wedged"
+    },
+    {
+      "name": "red onion",
+      "quantity": "3",
+      "unit": "large",
+      "notes": "thick slices"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "6",
+      "unit": "cloves",
+      "notes": "smashed"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "black pepper",
+      "quantity": "1",
+      "unit": "tsp"
+    },
+    {
+      "name": "fresh parsley",
+      "quantity": "0.5",
+      "unit": "cup",
+      "notes": "chopped"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Mix za'atar oil",
+      "instruction": "Stir za'atar, olive oil, lemon juice, salt, and pepper until combined into a loose paste that coats the back of a spoon evenly.",
+      "minutes": 3,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Coat chicken and onion",
+      "instruction": "Pat thighs dry. Rub generously with za'atar oil. Nest among onion slices and garlic on two half-sheets, skin-side up.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Roast until crisp",
+      "instruction": "Roast at 425°F 35–40 minutes until skin is deep golden, za'atar fragrant, and internal temp hits 165°F at the thickest point.",
+      "minutes": 38,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Rest with lemon wedges",
+      "instruction": "Rest 5 minutes. Tuck lemon wedges on tray for squeezing. Onion should be soft with charred edges; skin should crackle lightly.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Garnish and portion",
+      "instruction": "Scatter parsley over tray before portioning. Pan juices should smell lemony and herbal, not acrid or burnt.",
+      "minutes": 3,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Make your own za'atar if blend is stale—sumac should taste tart, not dusty.",
+    "Pair with simple rice or pita—let the chicken be the star.",
+    "Leftover za'atar oil works as salad dressing next day."
+  ],
+  "tonightSpread": [
+    "Cucumber yogurt sauce.",
+    "Warm pita and hummus."
+  ],
+  "leftovers": [
+    "Slice into wraps with tahini drizzle.",
+    "Shred over a grain bowl with pickled onions."
+  ],
+  "whyCrewsLikeIt": "Three-ingredient vibe with serious flavor. Smells incredible when crew walks in the door.",
+  "mealPrepNotes": "Mix za'atar oil ahead. Marinate thighs 30 minutes if time allows. Station: Skin-side up always—za'atar crust needs exposed skin to toast. Station: Roast on parchment for easy cleanup of stuck spice crust. Station: Serve with extra za'atar oil drizzle at the line for brightness.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 475,
+    "protein": 40,
+    "carbs": 8,
+    "fats": 32,
+    "label": "~475 cal/serving · 40g protein · 2g fiber (est.)"
+  },
+  "heroImage": "/images/golden-100/zaatar-roasted-chicken-thighs.jpg",
+  "mobileImage": "/images/mobile/zaatar-roasted-chicken-thighs.jpg",
+  "thumbImage": "/images/thumbs/zaatar-roasted-chicken-thighs.jpg",
+  "railImage": "/images/rails/zaatar-roasted-chicken-thighs.jpg",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "za'atar roasted chicken thighs",
+    "zaatar roasted chicken thighs",
+    "chicken",
+    "Middle Eastern",
+    "roast",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "lemon-garlic-chicken-tray",
+    "sheet-pan-chicken-fajitas-lite",
+    "honey-garlic-chicken-rice-bowls",
+    "white-bean-chicken-chili",
+    "crock-barbacoa-chicken",
+    "shawarma-chicken-rice-bowls"
+  ],
+  "generatedAt": "2026-05-28T12:57:50.894Z",
+  "contentVersion": 2
+}

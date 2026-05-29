@@ -10,6 +10,15 @@ export {
   upgradeSpoonacularImageSize,
 } from "@shared/explore-recipe";
 export {
+  isSoftHeldExploreCard,
+  isHardHeldExploreCard,
+  isExploreImageryPlaceholder,
+  isHeldInReviewExploreCard,
+  resolveSoftHeldImageryLabel,
+  type ExploreImageryStatus,
+  type ExploreHeldImageryLabel,
+} from "@shared/explore-imagery-status";
+export {
   computeCardPresentation,
   isDisplayableExploreCard,
   exploreImageSrcSet,
@@ -37,18 +46,28 @@ export class ExploreRecipeCardRegistry {
   }
 }
 
-export function mergeDetailWithCardPreview<D extends { id: number; title: string; image?: string; imageAlt?: string }>(
-  detail: D,
-  preview: ExploreRecipeCard | null | undefined,
-): D {
+export function mergeDetailWithCardPreview<
+  D extends {
+    id: number;
+    title: string;
+    image?: string;
+    imageAlt?: string;
+    imageryStatus?: ExploreRecipeCard["imageryStatus"];
+    heldImageryLabel?: ExploreRecipeCard["heldImageryLabel"];
+  },
+>(detail: D, preview: ExploreRecipeCard | null | undefined): D {
   if (!preview || preview.id !== detail.id) {
     return detail;
   }
+  const tier = preview.imageryStatus ?? detail.imageryStatus;
+  const softHeld = tier === "soft_held";
   return {
     ...detail,
     title: detail.title || preview.title,
-    image: detail.image || preview.image,
+    image: softHeld ? "" : detail.image || preview.image,
     imageAlt: detail.imageAlt || preview.title,
+    imageryStatus: tier,
+    heldImageryLabel: preview.heldImageryLabel ?? detail.heldImageryLabel,
   };
 }
 
@@ -58,10 +77,10 @@ export function imageUrlForRecipeCard(card: Pick<ExploreRecipeCard, "id" | "imag
     return custom;
   }
   if (custom.includes("spoonacular.com")) {
-    return custom;
-  }
-  if (card.id > 0) {
-    return spoonacularImageUrl(card.id);
+    // Curated platform rule: never fall back to external Spoonacular images at runtime.
+    // If a curated card still carries a Spoonacular URL, we treat it as missing so the UI
+    // can use a local editorial fallback instead of pulling external content.
+    return "";
   }
   return "";
 }

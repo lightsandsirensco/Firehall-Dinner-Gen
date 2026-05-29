@@ -1,11 +1,15 @@
 {
   "slug": "hall-taco-bar",
   "title": "Hall Taco Bar Night",
+  "displayTitle": "Hall Taco Bar Night",
+  "seoTitle": "Hall Taco Bar Night | Firefighter Meal",
+  "shortDescription": "Build-your-own tacos at the table",
   "subtitle": "Build-your-own tacos at the table",
   "category": "firehall_classics",
   "cuisine": "mexican",
-  "description": "Hall Taco Bar Night is a mexican tacos built for a hungry firehall crew — Build-your-own tacos at the table. Hearty portions, station-kitchen timing, and flavors everyone recognizes after a long shift.",
+  "description": "Build-your-own tacos at the table. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
@@ -28,76 +32,70 @@
   ],
   "ingredients": [
     {
-      "name": "Beef (main cut for recipe)",
+      "name": "Flank or skirt steak",
       "quantity": "3",
-      "unit": "lb"
-    },
-    {
-      "name": "Kosher salt",
-      "quantity": "2",
-      "unit": "tbsp"
-    },
-    {
-      "name": "Black pepper",
-      "quantity": "1",
-      "unit": "tbsp"
-    },
-    {
-      "name": "Cooking oil",
-      "quantity": "0.3",
-      "unit": "cup"
+      "unit": "lb",
+      "group": "Main"
     },
     {
       "name": "Flour or corn tortillas",
       "quantity": "24",
-      "unit": "count"
+      "unit": "count",
+      "group": "Serve"
     },
     {
-      "name": "Onion",
-      "quantity": "3",
-      "unit": "large"
+      "name": "White onion",
+      "quantity": "2",
+      "unit": "large",
+      "group": "Toppings"
     },
     {
-      "name": "Fresh lime",
+      "name": "Fresh cilantro",
+      "quantity": "1",
+      "unit": "bunch",
+      "group": "Toppings"
+    },
+    {
+      "name": "Lime",
       "quantity": "6",
-      "unit": "count"
+      "unit": "count",
+      "group": "Finish"
+    },
+    {
+      "name": "Cumin",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Seasoning"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Prep the line",
-      "instruction": "Set out all ingredients for Hall Taco Bar Night before you turn on heat — firefighters eat on a schedule. Pat proteins dry and season aggressively with salt and pepper; dry surfaces brown instead of steam.",
-      "minutes": 15,
+      "title": "Prep toppings",
+      "instruction": "Dice onion, pick cilantro leaves, cut limes into wedges. Warm a sheet tray for holding cooked protein — tacos move fast once meat hits the board.",
+      "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Build the base",
-      "instruction": "Heat oil in your largest skillet, Dutch oven, or on the flat-top over medium-high until it shimmers. Add aromatics (onion first) and cook until the edges turn golden and the smell sweetens — usually 4–6 minutes. If garlic is in the recipe, add it after the onion softens so it doesn't burn.",
-      "minutes": 8,
+      "title": "Cook the filling",
+      "instruction": "Season protein with salt and cumin. Sear over medium-high until cooked through (chicken 165°F, steak 130°F then rest). Rest steak 8 minutes; slice thin against the grain.",
+      "minutes": 18,
       "heatLevel": "medium-high"
     },
     {
       "stepNumber": 3,
-      "title": "Cook the main",
-      "instruction": "Cook the primary protein or base for Hall Taco Bar Night until it hits proper color and safe internal temperature. Don't crowd the pan — work in batches if needed so you get browning, not gray stew. Listen for a steady sizzle; if it's silent, the heat is too low.",
-      "minutes": 20,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 4,
-      "title": "Finish and season",
-      "instruction": "Bring components together, taste, and adjust salt. Sauce should coat, not pool. If cheese is involved, melt it just until glossy — another 1–2 minutes under a lid or broiler. Let heavy proteins rest 5 minutes before slicing.",
+      "title": "Warm tortillas",
+      "instruction": "Char tortillas on a dry griddle 20 seconds per side or wrap in foil at 300°F 10 minutes. Stack in a towel so they stay pliable.",
       "minutes": 10,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 5,
-      "title": "Serve the hall",
-      "instruction": "Transfer to sheet trays or a serving line immediately. Keep backup warm at 200°F. Call the crew while it's hot — this meal is built for a hungry hall, not a photo shoot.",
+      "stepNumber": 4,
+      "title": "Run the taco line",
+      "instruction": "Hall Taco Bar Night: protein, onion, cilantro, lime. Crew builds their own — fastest way to feed eight without cold plates.",
       "minutes": 5,
-      "heatLevel": "low"
+      "heatLevel": ""
     }
   ],
   "proTips": [
@@ -114,6 +112,10 @@
     "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
     "Label trays with date and reheat to 165°F minimum before second shift."
   ],
+  "whyCrewsLikeIt": "Build-your-own tacos at the table. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
+  "substitutions": [],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
   "nutrition": {
     "calories": 720,
     "protein": 40,
@@ -125,7 +127,7 @@
   "mobileImage": "/images/mobile/hall-taco-bar.jpg",
   "thumbImage": "/images/thumbs/hall-taco-bar.jpg",
   "railImage": "/images/rails/hall-taco-bar.jpg",
-  "realismScore": 100,
+  "realismScore": 95,
   "firefighterScore": 100,
   "popularityWeight": 3.6,
   "searchTerms": [
@@ -147,7 +149,8 @@
     "beef-dip",
     "chili-garlic-bread"
   ],
-  "sourceName": "Firehall Classics",
-  "generatedAt": "2026-05-27T15:03:06.137Z",
-  "contentVersion": 1
+  "sourceName": "Firehall Meals",
+  "sourceUrl": "",
+  "generatedAt": "2026-05-28T12:06:14.974Z",
+  "contentVersion": 2
 }

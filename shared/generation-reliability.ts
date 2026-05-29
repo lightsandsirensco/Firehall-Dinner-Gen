@@ -11,6 +11,13 @@ export const GENERATION_USER_RETRY_MESSAGE =
 export const GENERATION_USER_FAILURE_MESSAGE =
   "Couldn't cook up a good meal right now — tap Generate to try again.";
 
+/** Shown when Game Day filter could not match but a retry may succeed after broadening. */
+export const GENERATION_GAME_DAY_MESSAGE =
+  "Game Day picks were tight for that combo — we widened to BBQ and crowd favorites. Tap Pick dinner again.";
+
+export const GENERATION_GAME_DAY_EMPTY_MESSAGE =
+  "Nothing in the Game Day lineup matched those filters. Try any protein or fewer restrictions, then pick again.";
+
 const PANTRY_STAPLES =
   /^(salt|pepper|black pepper|water|oil|olive oil|vegetable oil|cooking spray|garlic powder|onion powder|paprika)$/i;
 

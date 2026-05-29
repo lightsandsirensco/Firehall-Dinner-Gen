@@ -7,6 +7,8 @@ import { getCuratedRecipeBySlug, getCuratedRecipeById, upsertCuratedRecipe } fro
 import type { CuratedRecipeInsert } from "../../shared/curated-recipe/types.js";
 import type { EditorialImageMetadata } from "../../shared/editorial-image-metadata.js";
 import { parseEditorialImageMetadata } from "../../shared/editorial-image-metadata.js";
+import { applySubjectLockToMetadata } from "../../shared/image-subject-lock.js";
+import { scoreImageIntegrity } from "../../shared/image-integrity.js";
 
 export interface AttachEditorialImagesOptions {
   slug: string;
@@ -20,11 +22,29 @@ function recipeToInsert(
   metadata: EditorialImageMetadata,
   markApproved: boolean,
 ): CuratedRecipeInsert {
-  const meta: EditorialImageMetadata = {
-    ...metadata,
-    imageApproved: markApproved ? metadata.imageApproved : false,
-    imageVersion: (metadata.imageVersion || 0) + 1,
-  };
+  const integrity = scoreImageIntegrity({
+      slug: existing.slug,
+      title: existing.title,
+      protein: existing.protein,
+      cuisine: existing.cuisine,
+      mealFormat: existing.mealFormat,
+      heroImage: metadata.heroImage,
+      heroAlt: existing.title,
+      imageApproved: markApproved ? metadata.imageApproved : false,
+    });
+  const meta: EditorialImageMetadata = applySubjectLockToMetadata(
+    {
+      ...metadata,
+      imageApproved: markApproved && integrity.pass ? metadata.imageApproved : false,
+      imageVersion: (metadata.imageVersion || 0) + 1,
+    },
+    {
+      title: existing.title,
+      cuisine: existing.cuisine,
+      mealFormat: existing.mealFormat,
+    },
+    { score: integrity.score, flags: integrity.flags },
+  );
 
   const heroUrl = metadata.heroImage;
   const images = [

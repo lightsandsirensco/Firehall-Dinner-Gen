@@ -1,0 +1,181 @@
+{
+  "slug": "maple-mustard-salmon-tray",
+  "title": "Maple Mustard Salmon Tray",
+  "displayTitle": "Maple Mustard Salmon Tray",
+  "seoTitle": "Maple Mustard Salmon Tray | Firefighter Meal",
+  "shortDescription": "Glazed salmon fillets with roasted Brussels sprouts and carrots",
+  "subtitle": "Glazed salmon fillets with roasted Brussels sprouts and carrots",
+  "category": "healthy_performance",
+  "cuisine": "American",
+  "description": "Salmon fillets bake with maple-mustard glaze alongside halved Brussels sprouts and carrot coins for a complete performance tray.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 20,
+  "prepTime": 18,
+  "difficulty": "easy",
+  "calories": 410,
+  "protein": 36,
+  "carbs": 22,
+  "fats": 22,
+  "tags": [
+    "protein:salmon",
+    "format:sheet_pan",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "Two half-sheet pans",
+    "Pastry brush"
+  ],
+  "ingredients": [
+    {
+      "name": "salmon fillets",
+      "quantity": "4",
+      "unit": "lb",
+      "notes": "skin-on, 6 oz portions"
+    },
+    {
+      "name": "Brussels sprouts",
+      "quantity": "2",
+      "unit": "lb",
+      "notes": "halved"
+    },
+    {
+      "name": "carrots",
+      "quantity": "1",
+      "unit": "lb",
+      "notes": "cut into coins"
+    },
+    {
+      "name": "maple syrup",
+      "quantity": "0.25",
+      "unit": "cup"
+    },
+    {
+      "name": "Dijon mustard",
+      "quantity": "3",
+      "unit": "tbsp"
+    },
+    {
+      "name": "whole-grain mustard",
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "apple cider vinegar",
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "3",
+      "unit": "cloves",
+      "notes": "minced"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "3",
+      "unit": "tbsp"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "1.5",
+      "unit": "tsp"
+    },
+    {
+      "name": "black pepper",
+      "quantity": "1",
+      "unit": "tsp"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Heat oven and prep vegetables",
+      "instruction": "Heat oven to 400°F. Toss Brussels sprouts and carrots with 2 tbsp oil, salt, and pepper. Arrange cut-side down on two half-sheets.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Mix maple mustard glaze",
+      "instruction": "Whisk maple syrup, both mustards, vinegar, garlic, and remaining oil until smooth and emulsified with no mustard clumps.",
+      "minutes": 3,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Season salmon",
+      "instruction": "Pat salmon dry, place skin-down among vegetables. Brush half the glaze over flesh side until evenly coated and glossy.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Bake until done",
+      "instruction": "Roast 14–18 minutes, brushing glaze again halfway, until salmon reads 125–130°F and sprouts are caramelized at cut edges.",
+      "minutes": 16,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Rest and serve",
+      "instruction": "Rest 3 minutes. Salmon should flake with gentle pressure and stay moist pink at center, not chalky throughout.",
+      "minutes": 3,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Real maple syrup matters—fake syrup burns and tastes one-note.",
+    "Add dried cranberries to glaze for holiday-adjacent flavor crews love.",
+    "Farro or wild rice pairs well with the sweet glaze."
+  ],
+  "tonightSpread": [
+    "Wild rice pilaf.",
+    "Arugula salad with lemon vinaigrette."
+  ],
+  "leftovers": [
+    "Flake salmon into a grain bowl with roasted veg.",
+    "Salmon salad with extra mustard dressing next day."
+  ],
+  "whyCrewsLikeIt": "Omega-3 dinner that feels special. Glaze caramelizes beautifully without a grill.",
+  "mealPrepNotes": "Halve Brussels sprouts through the stem so they stay intact. Mix glaze in squeeze bottle. Station: Place sprouts cut-side down for maximum caramelization on the flat cut surface. Station: Glaze salmon twice—mid-cook and final 3 minutes—for lacquered finish. Station: Hold at 150°F max—overholding dries salmon fast.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 410,
+    "protein": 36,
+    "carbs": 22,
+    "fats": 22,
+    "label": "~410 cal/serving · 36g protein · 6g fiber (est.)"
+  },
+  "heroImage": "/images/golden-100/maple-mustard-salmon-tray.jpg",
+  "mobileImage": "/images/mobile/maple-mustard-salmon-tray.jpg",
+  "thumbImage": "/images/thumbs/maple-mustard-salmon-tray.jpg",
+  "railImage": "/images/rails/maple-mustard-salmon-tray.jpg",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "maple mustard salmon tray",
+    "salmon",
+    "American",
+    "sheet pan",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "lemon-garlic-chicken-tray",
+    "herb-baked-salmon-tray",
+    "sheet-pan-chicken-fajitas-lite",
+    "honey-lime-chicken-tray",
+    "maple-soy-salmon-bowls",
+    "mediterranean-baked-fish-tray"
+  ],
+  "generatedAt": "2026-05-28T12:57:50.894Z",
+  "contentVersion": 2
+}

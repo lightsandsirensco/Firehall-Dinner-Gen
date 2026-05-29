@@ -1,0 +1,185 @@
+{
+  "slug": "mediterranean-baked-fish-tray",
+  "title": "Mediterranean Baked Fish Tray",
+  "displayTitle": "Mediterranean Baked Fish Tray",
+  "seoTitle": "Mediterranean Baked Fish Tray | Firefighter Meal",
+  "shortDescription": "White fish with cherry tomatoes, olives, and capers on one sheet",
+  "subtitle": "White fish with cherry tomatoes, olives, and capers on one sheet",
+  "category": "healthy_performance",
+  "cuisine": "Mediterranean",
+  "description": "Cod or halibut bakes with cherry tomatoes, Kalamata olives, capers, garlic, and olive oil until flaky. Designed for hall-scale portioning.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 20,
+  "prepTime": 18,
+  "difficulty": "easy",
+  "calories": 320,
+  "protein": 34,
+  "carbs": 10,
+  "fats": 16,
+  "tags": [
+    "protein:fish",
+    "format:sheet_pan",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "Two half-sheet pans",
+    "Parchment paper"
+  ],
+  "ingredients": [
+    {
+      "name": "cod or halibut fillets",
+      "quantity": "4",
+      "unit": "lb",
+      "notes": "6 oz portions"
+    },
+    {
+      "name": "cherry tomatoes",
+      "quantity": "2",
+      "unit": "lb",
+      "notes": "halved"
+    },
+    {
+      "name": "Kalamata olives",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "pitted, halved"
+    },
+    {
+      "name": "capers",
+      "quantity": "0.25",
+      "unit": "cup",
+      "notes": "drained"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "8",
+      "unit": "cloves",
+      "notes": "sliced"
+    },
+    {
+      "name": "red onion",
+      "quantity": "1",
+      "unit": "large",
+      "notes": "thinly sliced"
+    },
+    {
+      "name": "extra-virgin olive oil",
+      "quantity": "0.33",
+      "unit": "cup"
+    },
+    {
+      "name": "dried oregano",
+      "quantity": "2",
+      "unit": "tsp"
+    },
+    {
+      "name": "lemon",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "juiced and sliced"
+    },
+    {
+      "name": "fresh parsley",
+      "quantity": "0.5",
+      "unit": "cup",
+      "notes": "chopped"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "1.5",
+      "unit": "tsp"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Heat oven and toss vegetables",
+      "instruction": "Heat oven to 400°F. Toss tomatoes, olives, capers, onion, garlic, oregano, half the olive oil, and salt on two half-sheets until evenly coated.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Season fish",
+      "instruction": "Pat fish dry. Nest fillets among vegetables. Drizzle remaining oil and lemon juice over fish so surfaces look lightly glossed.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Roast until flaky",
+      "instruction": "Roast 16–20 minutes until fish reads 145°F and flakes with gentle pressure. Tomatoes should burst and release juice into the pan.",
+      "minutes": 18,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Finish with lemon and herbs",
+      "instruction": "Top with lemon slices and parsley. Fish flesh should look opaque and moist, not chalky or separating into dry strands.",
+      "minutes": 2,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Portion with pan juices",
+      "instruction": "Serve each fillet with a spoonful of tomato-olive mixture and pan juices spooned over the top for brightness.",
+      "minutes": 3,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Do not use fish thinner than 1 inch—it overcooks before tomatoes soften.",
+    "Add crumbled feta after baking for extra salt and creaminess.",
+    "Crusty bread for sopping pan juices keeps crew happy without extra cooking."
+  ],
+  "tonightSpread": [
+    "Orzo with lemon and parsley.",
+    "Simple arugula salad with shaved parmesan."
+  ],
+  "leftovers": [
+    "Flake fish into a Mediterranean grain salad next day.",
+    "Fish tacos with leftover tomato-olive mix as salsa."
+  ],
+  "whyCrewsLikeIt": "Light but satisfying after heavy training days. Minimal dishes and big flavor from pantry staples.",
+  "mealPrepNotes": "Pit olives if needed. Keep fish cold until it hits the oven. Station: Use parchment on half-sheets for fish release without sticking. Station: Nest fish between tomatoes so fillets stay moist during high-heat roast. Station: Spoon pan juices over portions at the line for extra flavor.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 320,
+    "protein": 34,
+    "carbs": 10,
+    "fats": 16,
+    "label": "~320 cal/serving · 34g protein · 3g fiber (est.)"
+  },
+  "heroImage": "/images/golden-100/mediterranean-baked-fish-tray.jpg",
+  "mobileImage": "/images/mobile/mediterranean-baked-fish-tray.jpg",
+  "thumbImage": "/images/thumbs/mediterranean-baked-fish-tray.jpg",
+  "railImage": "/images/rails/mediterranean-baked-fish-tray.jpg",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "mediterranean baked fish tray",
+    "fish",
+    "Mediterranean",
+    "sheet pan",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "lemon-garlic-chicken-tray",
+    "herb-baked-salmon-tray",
+    "sheet-pan-chicken-fajitas-lite",
+    "crispy-fish-taco-night",
+    "honey-lime-chicken-tray",
+    "moroccan-chicken-chickpea-tray"
+  ],
+  "generatedAt": "2026-05-28T12:57:50.894Z",
+  "contentVersion": 2
+}

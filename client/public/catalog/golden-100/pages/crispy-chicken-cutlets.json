@@ -1,11 +1,15 @@
 {
   "slug": "crispy-chicken-cutlets",
   "title": "Crispy Chicken Cutlets Marinara",
+  "displayTitle": "Crispy Chicken Cutlets Marinara",
+  "seoTitle": "Crispy Chicken Cutlets Marinara | Firefighter Meal",
+  "shortDescription": "Golden cutlets, bubbling sauce",
   "subtitle": "Golden cutlets, bubbling sauce",
   "category": "firehall_classics",
   "cuisine": "italian",
-  "description": "Crispy Chicken Cutlets Marinara is a italian plated main built for a hungry firehall crew — Golden cutlets, bubbling sauce. Hearty portions, station-kitchen timing, and flavors everyone recognizes after a long shift.",
+  "description": "Golden cutlets, bubbling sauce. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
@@ -28,71 +32,76 @@
   ],
   "ingredients": [
     {
-      "name": "Chicken (boneless thighs or breasts)",
+      "name": "Chicken cutlets, pounded thin",
       "quantity": "3",
-      "unit": "lb"
+      "unit": "lb",
+      "group": "Main"
     },
     {
-      "name": "Kosher salt",
+      "name": "All-purpose flour",
       "quantity": "2",
-      "unit": "tbsp"
+      "unit": "cups",
+      "group": "Breading"
     },
     {
-      "name": "Black pepper",
-      "quantity": "1",
-      "unit": "tbsp"
+      "name": "Eggs, beaten",
+      "quantity": "4",
+      "unit": "count",
+      "group": "Breading"
     },
     {
-      "name": "Cooking oil",
-      "quantity": "0.3",
-      "unit": "cup"
+      "name": "Panko breadcrumbs",
+      "quantity": "3",
+      "unit": "cups",
+      "group": "Breading"
     },
     {
-      "name": "Yellow onion",
-      "quantity": "2",
-      "unit": "large"
+      "name": "Marinara sauce",
+      "quantity": "3",
+      "unit": "cups",
+      "group": "Sauce"
     },
     {
-      "name": "Garlic",
-      "quantity": "6",
-      "unit": "cloves"
+      "name": "Fresh mozzarella, sliced",
+      "quantity": "12",
+      "unit": "oz",
+      "group": "Cheese"
+    },
+    {
+      "name": "Parmesan, grated",
+      "quantity": "4",
+      "unit": "oz",
+      "group": "Finish"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Prep the line",
-      "instruction": "Set out all ingredients for Crispy Chicken Cutlets Marinara before you turn on heat — firefighters eat on a schedule. Pat proteins dry and season aggressively with salt and pepper; dry surfaces brown instead of steam.",
-      "minutes": 15,
+      "title": "Bread the cutlets",
+      "instruction": "Season cutlets with salt. Dredge flour → egg → panko, pressing crumbs to adhere. Rest breaded cutlets on a rack 10 minutes so coating sets.",
+      "minutes": 20,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Build the base",
-      "instruction": "Heat oil in your largest skillet, Dutch oven, or on the flat-top over medium-high until it shimmers. Add aromatics (onion first) and cook until the edges turn golden and the smell sweetens — usually 4–6 minutes. If garlic is in the recipe, add it after the onion softens so it doesn't burn.",
-      "minutes": 8,
-      "heatLevel": "medium-high"
+      "title": "Fry until golden",
+      "instruction": "Fry in 350°F oil in batches 3–4 minutes per side until deep golden and 165°F inside. Drain on a rack, not paper-only — steam softens crust.",
+      "minutes": 15,
+      "heatLevel": "high"
     },
     {
       "stepNumber": 3,
-      "title": "Cook the main",
-      "instruction": "Cook the primary protein or base for Crispy Chicken Cutlets Marinara until it hits proper color and safe internal temperature. Don't crowd the pan — work in batches if needed so you get browning, not gray stew. Listen for a steady sizzle; if it's silent, the heat is too low.",
-      "minutes": 20,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 4,
-      "title": "Finish and season",
-      "instruction": "Bring components together, taste, and adjust salt. Sauce should coat, not pool. If cheese is involved, melt it just until glossy — another 1–2 minutes under a lid or broiler. Let heavy proteins rest 5 minutes before slicing.",
-      "minutes": 10,
+      "title": "Simmer marinara",
+      "instruction": "Warm marinara in a wide skillet over medium heat. Season with a pinch of salt and basil if you have it — sauce should bubble gently, not spit.",
+      "minutes": 8,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 5,
-      "title": "Serve the hall",
-      "instruction": "Transfer to sheet trays or a serving line immediately. Keep backup warm at 200°F. Call the crew while it's hot — this meal is built for a hungry hall, not a photo shoot.",
-      "minutes": 5,
-      "heatLevel": "low"
+      "stepNumber": 4,
+      "title": "Melt cheese and serve",
+      "instruction": "Nestle cutlets in sauce, top with mozzarella, cover 2–3 minutes until cheese melts. Finish with Parmesan. Serve from the skillet or transfer to sheet trays at 200°F for late eaters.",
+      "minutes": 6,
+      "heatLevel": "medium-low"
     }
   ],
   "proTips": [
@@ -109,6 +118,12 @@
     "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
     "Label trays with date and reheat to 165°F minimum before second shift."
   ],
+  "whyCrewsLikeIt": "Golden cutlets, bubbling sauce. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
+  "substitutions": [
+    "Chicken thighs ↔ breasts (thighs forgive overcooking on the flat-top)."
+  ],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
   "nutrition": {
     "calories": 640,
     "protein": 32,
@@ -141,7 +156,8 @@
     "chicken-pot-pie",
     "bbq-chicken-bowls"
   ],
-  "sourceName": "NYT Cooking",
-  "generatedAt": "2026-05-27T15:03:06.128Z",
-  "contentVersion": 1
+  "sourceName": "Firehall Meals",
+  "sourceUrl": "",
+  "generatedAt": "2026-05-28T12:06:14.965Z",
+  "contentVersion": 2
 }

@@ -1,0 +1,196 @@
+{
+  "slug": "baked-turkey-meatball-marinara",
+  "title": "Baked Turkey Meatball Marinara",
+  "displayTitle": "Baked Turkey Meatball Marinara",
+  "seoTitle": "Baked Turkey Meatball Marinara | Firefighter Meal",
+  "shortDescription": "Oven-baked lean meatballs in slow-simmered tomato basil sauce",
+  "subtitle": "Oven-baked lean meatballs in slow-simmered tomato basil sauce",
+  "category": "healthy_performance",
+  "cuisine": "Italian-American",
+  "description": "Turkey meatballs with parmesan and herbs bake on sheet pans, then simmer in a big pot of marinara. Serve over whole-wheat spaghetti or polenta.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 28,
+  "prepTime": 25,
+  "difficulty": "medium",
+  "calories": 420,
+  "protein": 38,
+  "carbs": 32,
+  "fats": 16,
+  "tags": [
+    "protein:turkey",
+    "format:bake",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "Two half-sheet pans",
+    "Large Dutch oven or stock pot"
+  ],
+  "ingredients": [
+    {
+      "name": "lean ground turkey",
+      "quantity": "3",
+      "unit": "lb"
+    },
+    {
+      "name": "plain breadcrumbs",
+      "quantity": "1.5",
+      "unit": "cups"
+    },
+    {
+      "name": "Parmesan cheese",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "grated"
+    },
+    {
+      "name": "large eggs",
+      "quantity": "3",
+      "unit": "whole"
+    },
+    {
+      "name": "fresh parsley",
+      "quantity": "0.5",
+      "unit": "cup",
+      "notes": "chopped"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "6",
+      "unit": "cloves",
+      "notes": "minced"
+    },
+    {
+      "name": "crushed tomatoes",
+      "quantity": "2",
+      "unit": "cans",
+      "notes": "28 oz",
+      "group": "Marinara sauce"
+    },
+    {
+      "name": "tomato paste",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Marinara sauce"
+    },
+    {
+      "name": "fresh basil leaves",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "torn",
+      "group": "Marinara sauce"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "1",
+      "unit": "large",
+      "notes": "finely diced"
+    },
+    {
+      "name": "dried Italian seasoning",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "3",
+      "unit": "tbsp"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "2",
+      "unit": "tsp"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Mix and shape meatballs",
+      "instruction": "Combine turkey, breadcrumbs, parmesan, eggs, parsley, half the garlic, Italian seasoning, and 1 tsp salt. Roll 48 golf-ball-size meatballs without overworking the mix.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Bake meatballs until set",
+      "instruction": "Arrange on two parchment-lined half-sheets. Bake at 400°F for 18–22 minutes until internal temp reaches 165°F and exteriors look lightly browned.",
+      "minutes": 20,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Start marinara base",
+      "instruction": "Sauté onion in olive oil over medium heat 6 minutes until soft. Add remaining garlic and tomato paste; cook 2 minutes until paste deepens to brick red.",
+      "minutes": 8,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Simmer sauce and add meatballs",
+      "instruction": "Pour in crushed tomatoes with 1 cup water. Simmer 15 minutes, stirring occasionally, until sauce thickens enough to coat a spoon. Add baked meatballs.",
+      "minutes": 15,
+      "heatLevel": "medium-low"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Rest and portion at the line",
+      "instruction": "Simmer gently 10 more minutes so meatballs absorb sauce. Meatballs should feel springy, not dense, when cut open.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "A panade of breadcrumbs and milk (2 tbsp per lb) keeps turkey meatballs juicy.",
+    "Flash meatballs under broiler 2 minutes before saucing for extra browning.",
+    "Freeze half the batch sauced for an emergency pasta night."
+  ],
+  "tonightSpread": [
+    "Whole-wheat spaghetti with grated parmesan at the line.",
+    "Garlic sautéed green beans with lemon."
+  ],
+  "leftovers": [
+    "Meatball subs on whole-grain rolls with melted mozzarella.",
+    "Meatball soup: slice and simmer in chicken broth with orzo."
+  ],
+  "whyCrewsLikeIt": "Comfort food that feels like Sunday dinner. Baking keeps grease down and makes portioning predictable for eight hungry firefighters.",
+  "mealPrepNotes": "Roll meatballs uniform golf-ball size for even baking. Sauce can simmer 2 hours ahead on low and hold. Station: Bake meatballs on parchment so they release cleanly and brown on all sides with one flip. Station: Simmer sauce in the widest pot on the range for fast meatball absorption. Station: Hold sauced meatballs in a hotel pan at 165°F—do not boil or turkey dries out.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 420,
+    "protein": 38,
+    "carbs": 32,
+    "fats": 16,
+    "label": "~420 cal/serving · 38g protein · 5g fiber (est.)"
+  },
+  "heroImage": "/images/golden-100/baked-turkey-meatball-marinara.jpg",
+  "mobileImage": "/images/mobile/baked-turkey-meatball-marinara.jpg",
+  "thumbImage": "/images/thumbs/baked-turkey-meatball-marinara.jpg",
+  "railImage": "/images/rails/baked-turkey-meatball-marinara.jpg",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "baked turkey meatball marinara",
+    "turkey",
+    "Italian-American",
+    "bake",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "lean-turkey-bean-chili",
+    "turkey-sausage-egg-muffins",
+    "turkey-taco-skillet",
+    "turkey-sweet-potato-chili",
+    "turkey-lettuce-wrap-night",
+    "caprese-chicken-bake"
+  ],
+  "generatedAt": "2026-05-28T12:57:50.893Z",
+  "contentVersion": 2
+}

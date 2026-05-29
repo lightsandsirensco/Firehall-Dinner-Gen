@@ -1,18 +1,22 @@
 {
   "slug": "chicken-caesar",
   "title": "Hall Caesar Chicken",
+  "displayTitle": "Hall Caesar Chicken",
+  "seoTitle": "Hall Caesar Chicken | Firefighter Meal",
+  "shortDescription": "Crispy chicken, real parmesan, crew salad night",
   "subtitle": "Crispy chicken, real parmesan, crew salad night",
   "category": "firehall_classics",
   "cuisine": "american",
   "description": "Big bowls, hot chicken, all the fixings",
   "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 60,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 640,
-  "protein": 32,
-  "carbs": 68,
-  "fats": 30,
+  "calories": 620,
+  "protein": 48,
+  "carbs": 38,
+  "fats": 32,
   "tags": [
     "protein:chicken",
     "format:salad",
@@ -138,11 +142,17 @@
     "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
     "Label trays with date and reheat to 165°F minimum before second shift."
   ],
+  "whyCrewsLikeIt": "Crispy chicken, real parmesan, crew salad night. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
+  "substitutions": [
+    "Chicken thighs ↔ breasts (thighs forgive overcooking on the flat-top)."
+  ],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 640,
-    "protein": 32,
-    "carbs": 68,
-    "fats": 30,
+    "calories": 620,
+    "protein": 48,
+    "carbs": 38,
+    "fats": 32,
     "label": "per serving (hall portion)"
   },
   "heroImage": "/images/golden-100/chicken-caesar.jpg",
@@ -169,8 +179,9 @@
     "crispy-chicken-cutlets",
     "jerk-chicken"
   ],
-  "sourceName": "Firehall Classics",
+  "sourceName": "Firehall Meals",
+  "sourceUrl": "",
   "classicSlug": "chicken-caesar",
-  "generatedAt": "2026-05-27T15:03:06.127Z",
-  "contentVersion": 1
+  "generatedAt": "2026-05-28T12:06:14.963Z",
+  "contentVersion": 2
 }

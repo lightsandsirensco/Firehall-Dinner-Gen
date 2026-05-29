@@ -1,0 +1,189 @@
+{
+  "slug": "korean-beef-rice-bowls",
+  "title": "Korean Beef Rice Bowls",
+  "displayTitle": "Korean Beef Rice Bowls",
+  "seoTitle": "Korean Beef Rice Bowls | Firefighter Meal",
+  "shortDescription": "Bulgogi-style ground beef over rice with quick cucumber pickle",
+  "subtitle": "Bulgogi-style ground beef over rice with quick cucumber pickle",
+  "category": "healthy_performance",
+  "cuisine": "Korean",
+  "description": "Ground beef caramelizes in a soy-sesame-ginger glaze with grated pear for tenderness. Served over steamed rice with scallions, sesame seeds, and quick pickled cucumber.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 15,
+  "prepTime": 25,
+  "difficulty": "medium",
+  "calories": 545,
+  "protein": 36,
+  "carbs": 52,
+  "fats": 22,
+  "tags": [
+    "protein:beef",
+    "format:bowl",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "Rice cooker",
+    "Large skillet",
+    "Mixing bowls"
+  ],
+  "ingredients": [
+    {
+      "name": "lean ground beef",
+      "quantity": "3",
+      "unit": "lb"
+    },
+    {
+      "name": "jasmine rice",
+      "quantity": "3",
+      "unit": "cups",
+      "notes": "uncooked"
+    },
+    {
+      "name": "low-sodium soy sauce",
+      "quantity": "0.5",
+      "unit": "cup"
+    },
+    {
+      "name": "brown sugar",
+      "quantity": "0.25",
+      "unit": "cup"
+    },
+    {
+      "name": "sesame oil",
+      "quantity": "3",
+      "unit": "tbsp"
+    },
+    {
+      "name": "fresh ginger",
+      "quantity": "3",
+      "unit": "tbsp",
+      "notes": "grated"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "8",
+      "unit": "cloves",
+      "notes": "minced"
+    },
+    {
+      "name": "Asian pear",
+      "quantity": "1",
+      "unit": "whole",
+      "notes": "grated, or 1 apple"
+    },
+    {
+      "name": "English cucumber",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "thinly sliced"
+    },
+    {
+      "name": "rice vinegar",
+      "quantity": "0.25",
+      "unit": "cup"
+    },
+    {
+      "name": "green onions",
+      "quantity": "8",
+      "unit": "whole",
+      "notes": "sliced"
+    },
+    {
+      "name": "toasted sesame seeds",
+      "quantity": "3",
+      "unit": "tbsp"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Quick pickle cucumbers",
+      "instruction": "Toss cucumber slices with rice vinegar and a pinch of salt. Refrigerate while cooking so they stay crisp-tender with a bright tang.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Cook rice",
+      "instruction": "Rinse jasmine rice and cook per package directions until fluffy grains separate easily with a fork, not sticky or gummy.",
+      "minutes": 20,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Mix bulgogi-style sauce",
+      "instruction": "Whisk soy sauce, brown sugar, sesame oil, ginger, garlic, and grated pear until sugar dissolves and mixture smells sweet-savory.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Brown beef in batches",
+      "instruction": "Cook ground beef over medium-high in a large skillet 8–10 minutes per batch until deeply browned and crumbly with crisp edges, not gray and steaming.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Glaze and build bowls",
+      "instruction": "Return all beef to pan, pour sauce, simmer 3–4 minutes until glaze coats meat and pan looks shiny, not soupy. Serve over rice with pickles and scallions.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Grated pear tenderizes lean beef—do not skip even if it feels unusual.",
+    "Offer gochujang at the line for crews who want fermented heat.",
+    "Drain excess fat after browning so the glaze stays glossy."
+  ],
+  "tonightSpread": [
+    "Steamed edamame with flaky salt.",
+    "Kimchi or quick cabbage slaw for crunch."
+  ],
+  "leftovers": [
+    "Beef in lettuce cups next day with extra cucumber pickle.",
+    "Fried rice with leftover beef, egg, and frozen peas."
+  ],
+  "whyCrewsLikeIt": "Big flavor without a marinade wait. Bowl format lets crew customize heat and keeps service moving on busy nights.",
+  "mealPrepNotes": "Mix sauce and slice cucumbers the night before. Marinate beef up to 4 hours for deeper flavor. Station: Cook rice first in a cooker so the skillet stays free for beef batches. Station: Sear beef in two batches—crowded meat steams instead of browning. Station: Set bowl line: rice, beef, cucumber, kimchi optional, sesame and scallion.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 545,
+    "protein": 36,
+    "carbs": 52,
+    "fats": 22,
+    "label": "~545 cal/serving · 36g protein · 2g fiber (est.)"
+  },
+  "heroImage": "/images/golden-100/korean-beef-rice-bowls.jpg",
+  "mobileImage": "/images/mobile/korean-beef-rice-bowls.jpg",
+  "thumbImage": "/images/thumbs/korean-beef-rice-bowls.jpg",
+  "railImage": "/images/rails/korean-beef-rice-bowls.jpg",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "korean beef rice bowls",
+    "beef",
+    "Korean",
+    "bowl",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "honey-garlic-chicken-rice-bowls",
+    "shawarma-chicken-rice-bowls",
+    "maple-soy-salmon-bowls",
+    "tabbouleh-chicken-bowls",
+    "lean-beef-broccoli-rice",
+    "cajun-chicken-rice-bowl"
+  ],
+  "generatedAt": "2026-05-28T12:57:50.893Z",
+  "contentVersion": 2
+}

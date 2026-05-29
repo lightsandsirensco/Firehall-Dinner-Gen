@@ -1,11 +1,15 @@
 {
   "slug": "buffalo-chicken-dip",
   "title": "Buffalo Chicken Dip",
+  "displayTitle": "Buffalo Chicken Dip",
+  "seoTitle": "Buffalo Chicken Dip | Firefighter Meal",
+  "shortDescription": "Spicy dip, chips, zero utensils",
   "subtitle": "Spicy dip, chips, zero utensils",
   "category": "game_day_watch_party",
   "cuisine": "american",
-  "description": "Buffalo Chicken Dip is a american bake built for a hungry firehall crew — Spicy dip, chips, zero utensils. Hearty portions, station-kitchen timing, and flavors everyone recognizes after a long shift.",
+  "description": "Spicy dip, chips, zero utensils. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
@@ -28,70 +32,63 @@
   ],
   "ingredients": [
     {
-      "name": "Chicken (boneless thighs or breasts)",
-      "quantity": "3",
-      "unit": "lb"
-    },
-    {
-      "name": "Kosher salt",
+      "name": "Cooked chicken, shredded",
       "quantity": "2",
-      "unit": "tbsp"
+      "unit": "lb",
+      "group": "Main"
     },
     {
-      "name": "Black pepper",
+      "name": "Cream cheese, softened",
+      "quantity": "16",
+      "unit": "oz",
+      "group": "Dip base"
+    },
+    {
+      "name": "Frank's hot sauce",
+      "quantity": "0.8",
+      "unit": "cup",
+      "group": "Dip"
+    },
+    {
+      "name": "Ranch dressing",
       "quantity": "1",
-      "unit": "tbsp"
+      "unit": "cup",
+      "group": "Dip"
     },
     {
-      "name": "Cooking oil",
-      "quantity": "0.3",
-      "unit": "cup"
-    },
-    {
-      "name": "Yellow onion",
-      "quantity": "2",
-      "unit": "large"
-    },
-    {
-      "name": "Garlic",
-      "quantity": "6",
-      "unit": "cloves"
+      "name": "Shredded cheddar",
+      "quantity": "8",
+      "unit": "oz",
+      "group": "Top"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Prep the line",
-      "instruction": "Set out all ingredients for Buffalo Chicken Dip before you turn on heat — firefighters eat on a schedule. Pat proteins dry and season aggressively with salt and pepper; dry surfaces brown instead of steam.",
-      "minutes": 15,
+      "title": "Fold the buffalo dip",
+      "instruction": "Mix cream cheese, hot sauce, ranch, and chicken until smooth. Spread in a buttered baking dish; top with cheddar.",
+      "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Build the base",
-      "instruction": "Heat oil in your largest skillet, Dutch oven, or on the flat-top over medium-high until it shimmers. Add aromatics (onion first) and cook until the edges turn golden and the smell sweetens — usually 4–6 minutes. If garlic is in the recipe, add it after the onion softens so it doesn't burn.",
-      "minutes": 8,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
-      "title": "Cook the main",
-      "instruction": "Cook the primary protein or base for Buffalo Chicken Dip until it hits proper color and safe internal temperature. Don't crowd the pan — work in batches if needed so you get browning, not gray stew. Listen for a steady sizzle; if it's silent, the heat is too low.",
-      "minutes": 20,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 4,
-      "title": "Finish and season",
-      "instruction": "Bring components together, taste, and adjust salt. Sauce should coat, not pool. If cheese is involved, melt it just until glossy — another 1–2 minutes under a lid or broiler. Let heavy proteins rest 5 minutes before slicing.",
-      "minutes": 10,
+      "title": "Bake until bubbling",
+      "instruction": "Bake at 375°F 20–25 minutes until edges bubble and center reaches 165°F. Rest 5 minutes — molten cheese burns tongues.",
+      "minutes": 25,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 5,
-      "title": "Serve the hall",
-      "instruction": "Transfer to sheet trays or a serving line immediately. Keep backup warm at 200°F. Call the crew while it's hot — this meal is built for a hungry hall, not a photo shoot.",
+      "stepNumber": 3,
+      "title": "Serve with chips",
+      "instruction": "Serve hot with chips and celery. Hold in a slow cooker on warm — do not reheat cold dip in microwave (greasy separation).",
       "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Refresh the dip",
+      "instruction": "Stir dip between waves of eaters. If skin forms on top, fold it in — add a splash of hot sauce if it tastes flat.",
+      "minutes": 3,
       "heatLevel": "low"
     }
   ],
@@ -111,6 +108,12 @@
     "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
     "Label trays with date and reheat to 165°F minimum before second shift."
   ],
+  "whyCrewsLikeIt": "Spicy dip, chips, zero utensils. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
+  "substitutions": [
+    "Chicken thighs ↔ breasts (thighs forgive overcooking on the flat-top)."
+  ],
+  "spiceLevel": "hot",
+  "cleanupDifficulty": "medium",
   "nutrition": {
     "calories": 520,
     "protein": 32,
@@ -144,6 +147,8 @@
     "slider-bar",
     "beer-can-chicken"
   ],
-  "generatedAt": "2026-05-27T15:03:06.213Z",
-  "contentVersion": 1
+  "sourceName": "Firehall Meals",
+  "sourceUrl": "",
+  "generatedAt": "2026-05-28T12:06:15.102Z",
+  "contentVersion": 2
 }

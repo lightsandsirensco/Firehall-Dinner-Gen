@@ -1,0 +1,125 @@
+{
+  "slug": "station-breakfast-29",
+  "title": "Station Breakfast 29",
+  "filters": [
+    "high_protein"
+  ],
+  "tags": [
+    "burritos",
+    "handheld",
+    "make-ahead"
+  ],
+  "crewSize": 4,
+  "baseServings": 4,
+  "prepTime": 15,
+  "cookTime": 22,
+  "totalTime": 37,
+  "difficulty": "easy",
+  "heroImage": "/images/breakfast/station-breakfast-29.jpg",
+  "thumbImage": "/images/thumbs/breakfast/station-breakfast-29.jpg",
+  "seoTitle": "Station Breakfast 29 | Firehall Breakfast",
+  "subtitle": "Big-batch burritos that hold on the line and reheat clean.",
+  "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+  "ingredients": [
+    {
+      "group": "Eggs",
+      "quantity": "10",
+      "name": "large eggs",
+      "notes": "whisked with a pinch of salt"
+    },
+    {
+      "group": "Eggs",
+      "quantity": "1 1/2 cups",
+      "name": "shredded cheddar or pepper jack"
+    },
+    {
+      "group": "Fillings",
+      "quantity": "2.5 lb",
+      "name": "frozen hash browns",
+      "notes": "or diced par-cooked potatoes"
+    },
+    {
+      "group": "Fillings",
+      "quantity": "1 1/2 lb",
+      "name": "breakfast sausage or chorizo",
+      "notes": "browned and drained"
+    },
+    {
+      "group": "Fillings",
+      "quantity": "1",
+      "name": "yellow onion",
+      "notes": "diced"
+    },
+    {
+      "group": "Fillings",
+      "quantity": "1–2",
+      "name": "bell peppers",
+      "notes": "diced"
+    },
+    {
+      "group": "Build",
+      "quantity": "12",
+      "name": "10-inch flour tortillas"
+    },
+    {
+      "group": "Build",
+      "quantity": "1 cup",
+      "name": "salsa or pico de gallo"
+    },
+    {
+      "group": "Build",
+      "quantity": "1",
+      "name": "hot sauce",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Crisp the potatoes",
+      "minutes": 12,
+      "instruction": "Heat a large skillet or griddle over medium-high. Add hash browns in an even layer; press with a spatula. Let them sit until browned, flip in sections, and season with salt and pepper. Move to a warm tray."
+    },
+    {
+      "stepNumber": 2,
+      "title": "Brown the meat + veg",
+      "minutes": 10,
+      "instruction": "In the same pan, brown sausage/chorizo. Add onion and peppers; cook until softened. Drain excess fat if needed so burritos don’t get greasy."
+    },
+    {
+      "stepNumber": 3,
+      "title": "Soft-scramble the eggs",
+      "minutes": 6,
+      "instruction": "Lower heat to medium. Add a touch of butter, then the eggs. Stir gently until just set (slightly glossy). Fold in cheese off heat so it melts without overcooking."
+    },
+    {
+      "stepNumber": 4,
+      "title": "Build and wrap for the line",
+      "minutes": 10,
+      "instruction": "Warm tortillas briefly. Add potatoes, meat/veg, eggs, and a spoon of salsa. Roll tight: fold sides, then roll forward. Hold wrapped burritos seam-side down on a warm sheet pan."
+    },
+    {
+      "stepNumber": 5,
+      "title": "Serve + hold",
+      "minutes": 0,
+      "instruction": "Keep burritos warm in a 200°F oven (uncovered for crispy tortillas; covered for softer). If you’re feeding in waves, build half, serve, then build the rest."
+    }
+  ],
+  "stationWorkflow": [
+    "Assign one cook to the hot surface and one to assembly. Keep the line moving; don’t crowd the griddle.",
+    "Set a warm holding zone (oven 200°F or covered hotel pan) so staggered eaters still get a hot plate.",
+    "Run a quick call-proof check: anything crispy stays uncovered; anything soft stays covered."
+  ],
+  "cleanupNotes": [
+    "While plates are served, scrape the griddle/pan and wipe with a damp towel (use tongs + folded towel).",
+    "Soak the mixing bowl and sheet pan immediately—breakfast starch sets fast when it cools."
+  ],
+  "leftovers": [
+    "Cool fast: spread on a sheet pan 10 minutes, then portion into containers so it doesn’t sweat.",
+    "Reheat rule: eggs reheat best covered at 50% power or low oven heat; don’t nuke on high."
+  ],
+  "imageAlt": "Warm station-kitchen breakfast: Station Breakfast 29",
+  "publishedAt": "2026-05-28T13:26:37.645Z",
+  "updatedAt": "2026-05-28T13:26:37.645Z",
+  "readMinutes": 7
+}

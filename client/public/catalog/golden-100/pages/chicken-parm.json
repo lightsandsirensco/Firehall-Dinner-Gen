@@ -1,18 +1,22 @@
 {
   "slug": "chicken-parm",
   "title": "Chicken Parm",
+  "displayTitle": "Chicken Parm",
+  "seoTitle": "Chicken Parm | Firefighter Meal",
+  "shortDescription": "The hall's Italian night spread",
   "subtitle": "The hall's Italian night spread",
   "category": "firehall_classics",
   "cuisine": "italian",
   "description": "Italian night at the station",
   "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 60,
   "prepTime": 25,
   "difficulty": "medium",
   "calories": 640,
-  "protein": 32,
-  "carbs": 68,
-  "fats": 30,
+  "protein": 44,
+  "carbs": 52,
+  "fats": 26,
   "tags": [
     "protein:chicken",
     "format:pasta",
@@ -152,11 +156,18 @@
     "Label trays with date and reheat to 165°F minimum before second shift.",
     "Add a splash of stock or water when reheating — thick sauces tighten in the fridge."
   ],
+  "whyCrewsLikeIt": "The hall's Italian night spread. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
+  "substitutions": [
+    "Chicken thighs ↔ breasts (thighs forgive overcooking on the flat-top).",
+    "Any short pasta shape works — penne, rigatoni, or spaghetti."
+  ],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
   "nutrition": {
     "calories": 640,
-    "protein": 32,
-    "carbs": 68,
-    "fats": 30,
+    "protein": 44,
+    "carbs": 52,
+    "fats": 26,
     "label": "per serving (hall portion)"
   },
   "heroImage": "/images/golden-100/chicken-parm.jpg",
@@ -183,9 +194,9 @@
     "skillet-chicken-alfredo",
     "bbq-chicken-bowls"
   ],
-  "sourceName": "Firehall Classics",
-  "sourceUrl": "https://www.allrecipes.com/recipe/223042/chicken-parmesan/",
+  "sourceName": "Firehall Meals",
+  "sourceUrl": "",
   "classicSlug": "chicken-parm",
-  "generatedAt": "2026-05-27T15:03:06.095Z",
-  "contentVersion": 1
+  "generatedAt": "2026-05-28T12:06:14.926Z",
+  "contentVersion": 2
 }

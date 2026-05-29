@@ -1,0 +1,70 @@
+{
+  "slug": "rookie-cooking-mistakes",
+  "title": "Rookie Cooking Mistakes at the Hall",
+  "subtitle": "What to skip your first year on the stove",
+  "description": "Common rookie cooking mistakes in fire station kitchens: oversalting, crowding pans, ambitious menus, and cleanup failures that hurt trust.",
+  "topic": "station_lifestyle",
+  "pillar": "station_lifestyle",
+  "intro": "Rookies want to impress. The hall wants dinner on time and the kitchen usable after. Rookie cooking mistakes usually come from trying too hard — twelve-ingredient fusion on a busy night — or from basics: crowded pans, raw centers, and dishes left for 'later.'",
+  "sections": [
+    {
+      "id": "mistakes",
+      "heading": "Mistakes halls remember",
+      "paragraphs": [
+        "Undercooked chicken, oversalted pasta water, smoke from oil past smoke point, and 'I'll do dishes tomorrow.'"
+      ]
+    },
+    {
+      "id": "recovery",
+      "heading": "Recovering trust",
+      "paragraphs": [
+        "A bad meal is fixable with honesty and cleanup. Own the miss, feed the crew something simple next time, and cook with a partner until basics are solid."
+      ]
+    }
+  ],
+  "practicalAdvice": [
+    "Cook with a senior on your first three hall meals.",
+    "Pick one-pot or line formats — not a timing puzzle.",
+    "Taste before you serve — salt is fixable before the line opens.",
+    "Cleanup starts while food cooks — not after everyone leaves."
+  ],
+  "mealRecommendations": [
+    {
+      "slug": "one-pot-chicken-rice",
+      "title": "One-Pot Chicken and Rice",
+      "blurb": "Forgiving first cook."
+    },
+    {
+      "slug": "hall-taco-bar",
+      "title": "Hall Taco Bar Night",
+      "blurb": "Hard to ruin the whole meal."
+    },
+    {
+      "slug": "sunday-chili-batch",
+      "title": "Sunday Batch Chili",
+      "blurb": "Teaches batch timing."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Where do these recipes come from?",
+      "answer": "Each link goes to a full recipe on Firehall Meals — crew-sized portions, station timing, and steps written for a shared kitchen. Not home-blog scaling."
+    },
+    {
+      "question": "What if crew size or time changes tonight?",
+      "answer": "Use Find a Meal with your headcount and minutes available. It pulls from the same hall-tested dinners these guides recommend."
+    }
+  ],
+  "relatedArticleSlugs": [
+    "feeding-a-firehall-crew",
+    "firehall-kitchen-culture"
+  ],
+  "keywords": [
+    "rookie firefighter cooking",
+    "station kitchen mistakes",
+    "first hall meal"
+  ],
+  "publishedAt": "2026-05-27T18:00:00.000Z",
+  "updatedAt": "2026-05-27T18:00:00.000Z",
+  "readMinutes": 7
+}

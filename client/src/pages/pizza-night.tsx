@@ -185,10 +185,9 @@ export default function PizzaNight() {
       <SiteHeader activePage="pizza" favCount={favCount} />
 
       <PizzaHero
-        title="Pizza Night"
-        subtitle={`${menu?.total ?? "40+"} hall-tested pies · crew-sized · step-by-step for beginners`}
-        emoji={recipeWithHero?.hero_emoji ?? recipeMeta?.heroEmoji ?? "🍕"}
-        gradient={recipeMeta?.heroGradient ?? "from-orange-950 via-red-950 to-zinc-950"}
+        title="Pizza night at the hall"
+        subtitle={`${menu?.total ?? "40+"} hall-tested pies · crew-sized · oven-ready steps`}
+        gradient={recipeMeta?.heroGradient ?? "from-red-950/90 via-zinc-950 to-background"}
         heroImage={recipeWithHero?.hero_image}
         heroImageAlt={recipeWithHero?.hero_image_alt}
       />

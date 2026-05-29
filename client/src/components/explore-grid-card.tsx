@@ -7,6 +7,7 @@ import {
 import { ExploreRecipeImage } from "@/components/explore-recipe-image";
 import { cn } from "@/lib/utils";
 import { app } from "@/lib/design-tokens";
+import { isSoftHeldExploreCard } from "@shared/explore-imagery-status";
 
 export interface ExploreGridCardProps {
   recipe: ExploreRecipeCard;
@@ -27,6 +28,7 @@ export function ExploreGridCard({
   onClick,
   className,
 }: ExploreGridCardProps) {
+  const softHeld = isSoftHeldExploreCard(recipe);
   const presentation =
     presentationProp ??
     computeCardPresentation(recipe, {
@@ -39,10 +41,19 @@ export function ExploreGridCard({
     <article
       className={cn(app.cardCinematic, "group", className)}
       onClick={onClick}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          onClick();
+        }
+      }}
       data-testid={`card-explore-result-${recipe.id}`}
+      data-soft-held-imagery={softHeld ? "true" : undefined}
     >
       <div className="relative aspect-[4/5] w-full overflow-hidden">
-        <div className="absolute inset-0 transition-transform duration-500 ease-out group-hover:scale-105 motion-reduce:group-hover:scale-100">
+        <div className="absolute inset-0 transition-transform duration-500 ease-out group-hover:scale-[1.02] motion-reduce:group-hover:scale-100">
           <ExploreRecipeImage recipe={recipe} variant="card" cinematic />
         </div>
 
@@ -58,6 +69,11 @@ export function ExploreGridCard({
               <span className="inline-flex items-center gap-1 bg-primary/95 text-primary-foreground text-[10px] font-semibold px-2 py-0.5 rounded-full shadow-lg">
                 <Flame className="w-3 h-3" />
                 Firehall AI
+              </span>
+            )}
+            {softHeld && (
+              <span className="inline-flex items-center bg-black/60 backdrop-blur-sm text-white/80 text-[10px] font-medium uppercase tracking-[0.12em] px-2 py-0.5 rounded-full border border-white/10">
+                {recipe.heldImageryLabel || "Finalizing"}
               </span>
             )}
             {presentation.displayBadges.map((label) => (

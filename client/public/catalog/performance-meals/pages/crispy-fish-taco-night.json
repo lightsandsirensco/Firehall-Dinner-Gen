@@ -1,0 +1,185 @@
+{
+  "slug": "crispy-fish-taco-night",
+  "title": "Crispy Fish Taco Night",
+  "displayTitle": "Crispy Fish Taco Night",
+  "seoTitle": "Crispy Fish Taco Night | Firefighter Meal",
+  "shortDescription": "Oven-crisp cod with cabbage slaw and lime crema for eight",
+  "subtitle": "Oven-crisp cod with cabbage slaw and lime crema for eight",
+  "category": "healthy_performance",
+  "cuisine": "Mexican",
+  "description": "Cod fillets bake with a panko crust until flaky, then tuck into warm corn tortillas with shredded cabbage, pico, and lime crema.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 18,
+  "prepTime": 25,
+  "difficulty": "medium",
+  "calories": 380,
+  "protein": 32,
+  "carbs": 38,
+  "fats": 12,
+  "tags": [
+    "protein:fish",
+    "format:tacos",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "Wire cooling racks",
+    "Half-sheet pans",
+    "Three shallow bowls"
+  ],
+  "ingredients": [
+    {
+      "name": "cod fillets",
+      "quantity": "3.5",
+      "unit": "lb",
+      "notes": "1-inch thick portions"
+    },
+    {
+      "name": "panko breadcrumbs",
+      "quantity": "2",
+      "unit": "cups"
+    },
+    {
+      "name": "all-purpose flour",
+      "quantity": "1",
+      "unit": "cup"
+    },
+    {
+      "name": "large eggs",
+      "quantity": "3",
+      "unit": "whole",
+      "notes": "beaten"
+    },
+    {
+      "name": "green cabbage",
+      "quantity": "1",
+      "unit": "head",
+      "notes": "shredded fine"
+    },
+    {
+      "name": "Greek yogurt",
+      "quantity": "1",
+      "unit": "cup"
+    },
+    {
+      "name": "lime juice",
+      "quantity": "0.25",
+      "unit": "cup",
+      "notes": "fresh"
+    },
+    {
+      "name": "corn tortillas",
+      "quantity": "24",
+      "unit": "whole",
+      "notes": "6-inch"
+    },
+    {
+      "name": "pico de gallo",
+      "quantity": "2",
+      "unit": "cups"
+    },
+    {
+      "name": "chili powder",
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "garlic powder",
+      "quantity": "1",
+      "unit": "tsp"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "1.5",
+      "unit": "tsp"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Prep slaw and crema",
+      "instruction": "Toss shredded cabbage with half the lime juice and a pinch of salt until lightly wilted but still crunchy. Stir yogurt with remaining lime for crema.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Set up breading station",
+      "instruction": "Season flour with chili powder, garlic powder, and salt. Mix panko with 2 tbsp oil on a sheet pan for extra oven crispness.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Bread cod fillets",
+      "instruction": "Pat cod dry. Dredge in flour, dip in egg, press into panko until fully coated with no bare spots showing through.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Bake until flaky",
+      "instruction": "Bake at 425°F on a wire rack 14–18 minutes until crust is golden and fish flakes at 145°F with opaque flesh throughout.",
+      "minutes": 16,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Assemble tacos at the line",
+      "instruction": "Break fish into strips. Fill warm tortillas with slaw, fish, pico, and crema. Fish should feel firm but moist, not dry or stringy.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Pat fish extremely dry— moisture is the enemy of crispy panko.",
+    "Double-stack tortillas for crews who want sturdier handhelds.",
+    "Serve fish immediately; hold slaw and toppings separately."
+  ],
+  "tonightSpread": [
+    "Black beans with cumin and cilantro.",
+    "Baked tortilla chips with salsa verde."
+  ],
+  "leftovers": [
+    "Flake fish into a salad with slaw and extra crema.",
+    "Fish tacos do not reheat well—plan portions carefully."
+  ],
+  "whyCrewsLikeIt": "Fresh and light but still filling. Assembly keeps the crew engaged and portions stay consistent.",
+  "mealPrepNotes": "Shred cabbage and mix slaw dressing ahead. Keep cod chilled until breading—warm fish makes coating slide off. Station: Bake fish on wire racks set over sheet pans for airflow and even crisping. Station: Warm tortillas wrapped in foil in a low oven so they stay flexible at the line. Station: Set taco bar: fish, slaw, pico, crema, hot sauce, lime wedges.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 380,
+    "protein": 32,
+    "carbs": 38,
+    "fats": 12,
+    "label": "~380 cal/serving · 32g protein · 5g fiber (est.)"
+  },
+  "heroImage": "/images/golden-100/crispy-fish-taco-night.jpg",
+  "mobileImage": "/images/mobile/crispy-fish-taco-night.jpg",
+  "thumbImage": "/images/thumbs/crispy-fish-taco-night.jpg",
+  "railImage": "/images/rails/crispy-fish-taco-night.jpg",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "crispy fish taco night",
+    "fish",
+    "Mexican",
+    "tacos",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "mediterranean-baked-fish-tray",
+    "blackened-cod-taco-night",
+    "chipotle-lime-chicken-tacos"
+  ],
+  "generatedAt": "2026-05-28T12:57:50.893Z",
+  "contentVersion": 2
+}

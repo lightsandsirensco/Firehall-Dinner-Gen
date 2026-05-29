@@ -1,0 +1,265 @@
+{
+  "version": 1,
+  "contentVersion": 2,
+  "generatedAt": "2026-05-28T12:06:17.497Z",
+  "recipeCount": 8,
+  "recipes": [
+    {
+      "slug": "bacon-egg-hash",
+      "title": "Bacon Egg Hash Brown Skillet",
+      "subtitle": "Crispy potatoes, runny eggs",
+      "category": "breakfast_brunch",
+      "cuisine": "american",
+      "protein": "pork",
+      "mealFormat": "skillet",
+      "cookTime": 55,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/bacon-egg-hash.jpg",
+      "thumbImage": "/images/thumbs/bacon-egg-hash.jpg",
+      "tags": [
+        "protein:pork",
+        "format:skillet",
+        "category:breakfast_brunch",
+        "breakfast",
+        "golden_100"
+      ],
+      "firefighterScore": 98,
+      "popularityWeight": 3.2,
+      "searchTerms": [
+        "bacon egg hash brown skillet",
+        "bacon egg hash",
+        "american",
+        "pork",
+        "skillet",
+        "breakfast",
+        "golden_100"
+      ]
+    },
+    {
+      "slug": "biscuits-gravy",
+      "title": "Biscuits and Gravy",
+      "subtitle": "Southern comfort for a slow morning",
+      "category": "breakfast_brunch",
+      "cuisine": "american",
+      "protein": "pork",
+      "mealFormat": "breakfast",
+      "cookTime": 55,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/biscuits-gravy.jpg",
+      "thumbImage": "/images/thumbs/biscuits-gravy.jpg",
+      "tags": [
+        "protein:pork",
+        "format:breakfast",
+        "category:breakfast_brunch",
+        "breakfast",
+        "comfort",
+        "golden_100"
+      ],
+      "firefighterScore": 98,
+      "popularityWeight": 3.2,
+      "searchTerms": [
+        "biscuits and gravy",
+        "biscuits gravy",
+        "american",
+        "pork",
+        "breakfast",
+        "comfort",
+        "sausage biscuits and gravy",
+        "golden_100"
+      ]
+    },
+    {
+      "slug": "breakfast-burrito-bar",
+      "title": "Breakfast Burrito Bar",
+      "subtitle": "Build burritos before the rig rolls",
+      "category": "breakfast_brunch",
+      "cuisine": "mexican",
+      "protein": "pork",
+      "mealFormat": "handheld",
+      "cookTime": 55,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/breakfast-burrito-bar.jpg",
+      "thumbImage": "/images/thumbs/breakfast-burrito-bar.jpg",
+      "tags": [
+        "protein:pork",
+        "format:handheld",
+        "category:breakfast_brunch",
+        "breakfast",
+        "handheld",
+        "golden_100"
+      ],
+      "firefighterScore": 98,
+      "popularityWeight": 3.2,
+      "searchTerms": [
+        "breakfast burrito bar",
+        "mexican",
+        "pork",
+        "handheld",
+        "breakfast",
+        "breakfast burrito bar chorizo",
+        "golden_100"
+      ]
+    },
+    {
+      "slug": "chorizo-breakfast-tacos",
+      "title": "Chorizo Breakfast Tacos",
+      "subtitle": "Spicy chorizo, warm tortillas",
+      "category": "breakfast_brunch",
+      "cuisine": "mexican",
+      "protein": "pork",
+      "mealFormat": "tacos",
+      "cookTime": 55,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/chorizo-breakfast-tacos.jpg",
+      "thumbImage": "/images/thumbs/chorizo-breakfast-tacos.jpg",
+      "tags": [
+        "protein:pork",
+        "format:tacos",
+        "category:breakfast_brunch",
+        "breakfast",
+        "handheld",
+        "golden_100"
+      ],
+      "firefighterScore": 100,
+      "popularityWeight": 3.2,
+      "searchTerms": [
+        "chorizo breakfast tacos",
+        "mexican",
+        "pork",
+        "tacos",
+        "breakfast",
+        "handheld",
+        "golden_100"
+      ]
+    },
+    {
+      "slug": "french-toast-casserole",
+      "title": "French Toast Casserole",
+      "subtitle": "Feed the hall before the bell",
+      "category": "breakfast_brunch",
+      "cuisine": "american",
+      "protein": "vegetarian",
+      "mealFormat": "bake",
+      "cookTime": 55,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/french-toast-casserole.jpg",
+      "thumbImage": "/images/thumbs/french-toast-casserole.jpg",
+      "tags": [
+        "protein:vegetarian",
+        "format:bake",
+        "category:breakfast_brunch",
+        "breakfast",
+        "golden_100"
+      ],
+      "firefighterScore": 98,
+      "popularityWeight": 3.2,
+      "searchTerms": [
+        "french toast casserole",
+        "american",
+        "vegetarian",
+        "bake",
+        "breakfast",
+        "french toast casserole bake",
+        "golden_100"
+      ]
+    },
+    {
+      "slug": "pancake-short-stack",
+      "title": "Pancake Short Stack for the Crew",
+      "subtitle": "Fluffy stacks, bacon on the side",
+      "category": "breakfast_brunch",
+      "cuisine": "american",
+      "protein": "vegetarian",
+      "mealFormat": "breakfast",
+      "cookTime": 55,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/pancake-short-stack.jpg",
+      "thumbImage": "/images/thumbs/pancake-short-stack.jpg",
+      "tags": [
+        "protein:vegetarian",
+        "format:breakfast",
+        "category:breakfast_brunch",
+        "breakfast",
+        "golden_100"
+      ],
+      "firefighterScore": 98,
+      "popularityWeight": 3.2,
+      "searchTerms": [
+        "pancake short stack for the crew",
+        "pancake short stack",
+        "american",
+        "vegetarian",
+        "breakfast",
+        "buttermilk pancakes bacon breakfast",
+        "golden_100"
+      ]
+    },
+    {
+      "slug": "turkey-sausage-egg-muffins",
+      "title": "Turkey Sausage Egg Muffins",
+      "subtitle": "Grab-and-go protein cups with spinach and bell pepper for shift breakfast",
+      "category": "healthy_performance",
+      "cuisine": "American",
+      "protein": "turkey",
+      "mealFormat": "breakfast",
+      "cookTime": 22,
+      "difficulty": "easy",
+      "heroImage": "/images/performance-meals/turkey-sausage-egg-muffins.jpg",
+      "thumbImage": "/images/performance-meals/turkey-sausage-egg-muffins.webp",
+      "tags": [
+        "protein:turkey",
+        "format:breakfast",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "turkey sausage egg muffins",
+        "turkey",
+        "American",
+        "breakfast",
+        "performance meal",
+        "firefighter healthy"
+      ]
+    },
+    {
+      "slug": "veggie-egg-casserole-tray",
+      "title": "Veggie Egg Casserole Tray",
+      "subtitle": "Baked egg casserole with spinach, bell pepper, and feta for eight",
+      "category": "healthy_performance",
+      "cuisine": "American",
+      "protein": "egg",
+      "mealFormat": "breakfast",
+      "cookTime": 35,
+      "difficulty": "easy",
+      "heroImage": "/images/performance-meals/veggie-egg-casserole-tray.jpg",
+      "thumbImage": "/images/performance-meals/veggie-egg-casserole-tray.webp",
+      "tags": [
+        "protein:egg",
+        "format:breakfast",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "veggie egg casserole tray",
+        "egg",
+        "American",
+        "breakfast",
+        "performance meal",
+        "firefighter healthy"
+      ]
+    }
+  ],
+  "catalogSet": "breakfast_meals"
+}

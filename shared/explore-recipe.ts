@@ -10,6 +10,18 @@ import { getClassicHallMeal, resolveClassicHeroImage } from "./classic-hall-meal
 import { isExploreFeedBlocked } from "./explore-feed-blocklist.js";
 import { isFirehallOwnedHeroUrl, normalizeOwnedMediaPath } from "./food-imagery/paths.js";
 import { isDevRuntime } from "./runtime-env.js";
+import {
+  buildCuratedMealImageProfile,
+  validateCuratedImageGovernance,
+} from "./curated-image-governance/index.js";
+import { heroPathConflictsTitle } from "./meal-image-title-match.js";
+import type { ExploreHeldImageryLabel, ExploreImageryStatus } from "./explore-imagery-status.js";
+import {
+  applyImageryGovernanceToCard,
+  isHardHeldExploreCard,
+  isSoftHeldExploreCard,
+  migrateImageryStatus,
+} from "./explore-imagery-status.js";
 
 /** Atomic Explore card — title, image, and id always travel together. */
 export interface ExploreRecipeCard {
@@ -45,6 +57,18 @@ export interface ExploreRecipeCard {
   /** Hero image is original publisher/editorial photography (not Spoonacular CDN) */
   publisherMedia?: boolean;
   sourceKind?: string;
+  /** Tiered imagery: approved | soft_held (placeholder, clickable) | hard_held (hidden from Explore) */
+  imageryStatus?: ExploreImageryStatus;
+  /** Anticipation label on soft-held cards */
+  heldImageryLabel?: ExploreHeldImageryLabel;
+  /** Customer-facing catalog lineage badge */
+  catalogBadge?:
+    | "Firehall Meals Catalog"
+    | "Performance Meal"
+    | "Hall Classic"
+    | "Crew Favorite"
+    | "High Protein"
+    | "Quick Shift Meal";
 }
 
 export function spoonacularImageUrl(
@@ -124,13 +148,41 @@ export function normalizeExploreRecipeCard(
     image = normalizeOwnedMediaPath(fromApi);
   }
 
+  // Curated governance: never show owned heroes that conflict with title/protein/format.
+  if (image && isFirehallOwnedHeroUrl(image)) {
+    if (heroPathConflictsTitle(image, title, raw.primaryProtein)) {
+      image = "";
+    } else {
+      const profile = buildCuratedMealImageProfile({
+        slug: String(raw._curatedSlug || id),
+        title,
+        protein: raw.primaryProtein,
+        mealFormat: undefined,
+      });
+      const gov = validateCuratedImageGovernance({ profile, heroImage: image });
+      if (!gov.pass && gov.mismatchConfidence >= 72) {
+        image = "";
+      }
+    }
+  }
+
   let imageAlt = (raw.imageAlt || title).trim() || title;
   const publisherMedia = Boolean(raw.publisherMedia);
-  if (raw._curatedSlug && !publisherMedia) {
+  if (raw._curatedSlug && !publisherMedia && !image) {
     const meta = getClassicHallMeal(String(raw._curatedSlug));
     if (meta) {
-      image = resolveClassicHeroImage(meta);
-      imageAlt = meta.imageAlt || imageAlt;
+      const candidate = resolveClassicHeroImage(meta);
+      const profile = buildCuratedMealImageProfile({
+        slug: meta.slug,
+        title,
+        protein: raw.primaryProtein || meta.protein,
+        mealFormat: meta.mealFormat,
+      });
+      const gov = validateCuratedImageGovernance({ profile, heroImage: candidate });
+      if (gov.pass) {
+        image = candidate;
+        imageAlt = meta.imageAlt || imageAlt;
+      }
     }
   }
 
@@ -159,6 +211,8 @@ export function normalizeExploreRecipeCard(
     publisherName: raw.publisherName,
     fromCuratedDb: raw.fromCuratedDb,
     curatedRecipeId: raw.curatedRecipeId,
+    imageryStatus: migrateImageryStatus(raw.imageryStatus as string | undefined) ?? raw.imageryStatus,
+    heldImageryLabel: raw.heldImageryLabel,
     imageVariants: image.includes("spoonacular.com")
       ? {
           w312: spoonacularImageUrl(id, "312x231"),
@@ -172,16 +226,27 @@ export function normalizeExploreRecipeCard(
         },
   };
 
+  const tier = migrateImageryStatus(raw.imageryStatus as string | undefined) ?? raw.imageryStatus;
+  if (!image && tier && tier !== "approved") {
+    return applyImageryGovernanceToCard(card, {
+      status: undefined,
+      imageApproved: tier === "hard_held" ? false : undefined,
+      hasApprovedHero: false,
+      slug: raw._curatedSlug,
+    });
+  }
+
   return card;
 }
 
-/** Omit cards without real photography from browse grids */
+/** Omit invalid / hard-held cards; keep approved + capped soft-held */
 export function filterDisplayableExploreCards(cards: ExploreRecipeCard[]): ExploreRecipeCard[] {
   return cards.filter(
     (c) =>
       !c._firehallFallback &&
       c.id > 0 &&
-      Boolean(c.image?.trim()) &&
+      !isHardHeldExploreCard(c) &&
+      (Boolean(c.image?.trim()) || isSoftHeldExploreCard(c)) &&
       !isExploreFeedBlocked(c.title),
   );
 }

@@ -20,6 +20,11 @@ import {
 import { sortExploreCardsByRank } from "../shared/recipe-ranking.js";
 import { getClassicHallMeal, resolveClassicHeroImage } from "../shared/classic-hall-meals.js";
 import {
+  isApprovedCatalogSlug,
+  resolvePrimaryCatalogBadge,
+  resolveCatalogTraitBadges,
+} from "../shared/hall-catalog/gate.js";
+import {
   filterDisplayableExploreCards,
   normalizeExploreRecipeCard,
   type ExploreRecipeCard,
@@ -27,6 +32,14 @@ import {
 import { isExploreFeedBlocked } from "../shared/explore-feed-blocklist.js";
 import { isFirehallOwnedHeroUrl, normalizeOwnedMediaPath } from "../shared/food-imagery/paths.js";
 import { resolveFoodImageryHero } from "./food-imagery/hero-resolver.js";
+import { applyImageryGovernanceToCard } from "../shared/explore-imagery-status.js";
+import {
+  adjacentPoolsForTag,
+  balanceExploreSectionCards,
+  countSoftHeldInCards,
+  maxSoftHeldSlots,
+  prioritizeCuratedRowsForExplore,
+} from "../shared/explore-held-feed-policy.js";
 import { computeCardPresentation } from "../shared/explore-card-presentation.js";
 import { exploreIdFromRecipeId } from "../shared/explore-curated-id.js";
 import { buildPublisherAttribution } from "../shared/editorial-quality.js";
@@ -83,14 +96,18 @@ function catalogToExploreCard(recipe: CanonicalRecipe, section: ExploreSectionDe
 }
 
 export function exploreUsesCuratedOnly(): boolean {
-  if (process.env.EXPLORE_CURATED_ONLY === "false") return false;
-  return countPublishedCuratedRecipes() >= 15;
+  // Firehall Meals Explore is curated-first. We do not mix in live external results.
+  return true;
 }
 
 function curatedSummaryToExploreCard(
   row: CuratedRecipeSummary,
   section: ExploreSectionDef,
 ): ExploreRecipeCard | null {
+  if (!isApprovedCatalogSlug(row.slug)) {
+    return null;
+  }
+
   const publisherMedia =
     isFirehallOwnedHeroUrl(row.heroImage || "") ||
     (Boolean(row.heroImage?.trim()) && !row.heroImage.includes("spoonacular.com"));
@@ -123,10 +140,98 @@ function curatedSummaryToExploreCard(
       publisherMedia,
       sourceKind: row.sourceKind,
       hookLine: attribution,
+      catalogBadge: resolvePrimaryCatalogBadge(row.slug),
     },
     `curated-${section.id}`,
   );
   return card ? enrichCard(card, section) : null;
+}
+
+function applyCuratedHeroGovernance(
+  card: ExploreRecipeCard,
+  row: CuratedRecipeSummary,
+  hero: { url?: string; source: string },
+): ExploreRecipeCard {
+  const hasApprovedHero = Boolean(
+    hero.url &&
+      (hero.source === "generated" || hero.source === "pinned") &&
+      isFirehallOwnedHeroUrl(hero.url) &&
+      row.imageApproved !== false,
+  );
+
+  if (hasApprovedHero && hero.url) {
+    return applyImageryGovernanceToCard(
+      {
+        ...card,
+        image: normalizeOwnedMediaPath(hero.url),
+        publisherMedia: true,
+        catalogBadge: resolvePrimaryCatalogBadge(row.slug),
+      },
+      {
+        status: row.status,
+        imageApproved: row.imageApproved,
+        hasApprovedHero: true,
+        slug: row.slug,
+      },
+    );
+  }
+
+  return applyImageryGovernanceToCard(card, {
+    status: row.status,
+    imageApproved: row.imageApproved,
+    hasApprovedHero: false,
+    slug: row.slug,
+  });
+}
+
+async function curatedRowToGovernedCard(
+  row: CuratedRecipeSummary,
+  section: ExploreSectionDef,
+): Promise<ExploreRecipeCard | null> {
+  let card = curatedSummaryToExploreCard(row, section);
+  if (!card) return null;
+
+  const hero = await resolveFoodImageryHero(row.slug, card.image, {
+    title: row.title,
+    protein: row.protein,
+    cuisine: row.cuisine,
+    mealFormat: row.category,
+  });
+  card = applyCuratedHeroGovernance(card, row, hero);
+  if (filterDisplayableExploreCards([card]).length === 0) return null;
+  return card;
+}
+
+async function fetchApprovedCardsFromPool(
+  poolTag: string,
+  section: ExploreSectionDef,
+  daySeed: number,
+  needed: number,
+  seenSlugs: Set<string>,
+): Promise<ExploreRecipeCard[]> {
+  if (needed <= 0) return [];
+
+  const rows = prioritizeCuratedRowsForExplore(
+    listCuratedForExplorePool(poolTag, Math.max(needed * 3, 12)),
+  );
+  if (rows.length === 0) return [];
+
+  const hash = `${section.id}:${poolTag}`.split("").reduce((s, c) => s + c.charCodeAt(0), 0);
+  const start = (daySeed + hash) % Math.max(1, rows.length);
+  const rotated = [...rows.slice(start), ...rows.slice(0, start)];
+
+  const approved: ExploreRecipeCard[] = [];
+  for (const row of rotated) {
+    if (approved.length >= needed) break;
+    if (seenSlugs.has(row.slug)) continue;
+
+    const card = await curatedRowToGovernedCard(row, section);
+    if (!card || card.imageryStatus !== "approved") continue;
+
+    seenSlugs.add(row.slug);
+    approved.push(card);
+  }
+  return approved;
 }
 
 async function fetchCuratedSectionRecipes(
@@ -135,29 +240,63 @@ async function fetchCuratedSectionRecipes(
   limit: number,
 ): Promise<ExploreRecipeCard[]> {
   try {
-    const rows = listCuratedForExplorePool(section.poolTag, Math.max(limit * 2, 10));
+    const rows = prioritizeCuratedRowsForExplore(
+      listCuratedForExplorePool(section.poolTag, Math.max(limit * 3, 14)),
+    );
     if (rows.length === 0) return [];
 
     const hash = section.id.split("").reduce((s, c) => s + c.charCodeAt(0), 0);
     const start = (daySeed + hash) % Math.max(1, rows.length);
     const rotated = [...rows.slice(start), ...rows.slice(0, start)];
 
-    const cards: ExploreRecipeCard[] = [];
-    for (const row of rotated) {
-      if (cards.length >= limit) break;
-      let card = curatedSummaryToExploreCard(row, section);
-      if (!card || filterDisplayableExploreCards([card]).length === 0) continue;
+    const approvedCandidates: ExploreRecipeCard[] = [];
+    const softHeldCandidates: ExploreRecipeCard[] = [];
+    const seenSlugs = new Set<string>();
 
-      const hero = await resolveFoodImageryHero(row.slug, card.image);
-      if (hero.source === "generated" || isFirehallOwnedHeroUrl(hero.url)) {
-        card = {
-          ...card,
-          image: normalizeOwnedMediaPath(hero.url),
-          publisherMedia: true,
-        };
-      }
-      cards.push(card);
+    for (const row of rotated) {
+      if (approvedCandidates.length + softHeldCandidates.length >= limit * 4) break;
+      if (seenSlugs.has(row.slug)) continue;
+
+      const card = await curatedRowToGovernedCard(row, section);
+      if (!card) continue;
+      seenSlugs.add(row.slug);
+
+      if (card.imageryStatus === "approved") approvedCandidates.push(card);
+      else if (card.imageryStatus === "soft_held") softHeldCandidates.push(card);
     }
+
+    let cards = balanceExploreSectionCards(approvedCandidates, softHeldCandidates, limit);
+
+    if (cards.length < limit) {
+      for (const adjPool of adjacentPoolsForTag(section.poolTag)) {
+        if (cards.length >= limit) break;
+        const backfill = await fetchApprovedCardsFromPool(
+          adjPool,
+          section,
+          daySeed,
+          limit - cards.length,
+          seenSlugs,
+        );
+        if (backfill.length > 0) {
+          cards = [...cards, ...backfill];
+        }
+      }
+    }
+
+    if (cards.length < limit && softHeldCandidates.length > 0) {
+      const maxSoft = maxSoftHeldSlots(limit);
+      const existingSoft = countSoftHeldInCards(cards);
+      let slotsLeft = Math.min(maxSoft - existingSoft, limit - cards.length);
+      const inFeed = new Set(cards.map((c) => c._curatedSlug).filter(Boolean));
+      for (const soft of softHeldCandidates) {
+        if (slotsLeft <= 0) break;
+        if (soft._curatedSlug && inFeed.has(soft._curatedSlug)) continue;
+        cards.push(soft);
+        if (soft._curatedSlug) inFeed.add(soft._curatedSlug);
+        slotsLeft -= 1;
+      }
+    }
+
     return sortExploreCardsByRank(cards, { sectionBoost: section.appetiteBoost ?? 0 })
       .slice(0, limit);
   } catch (err: unknown) {
@@ -332,10 +471,15 @@ export async function buildHallFavoritesSection(
       queries: [{ q: "crew favorite dinner" }],
       limit: 8,
     };
-    const cards = crewRows
-      .map((row) => curatedSummaryToExploreCard(row, def))
-      .filter((c): c is ExploreRecipeCard => c !== null)
-      .filter((c) => !isExploreFeedBlocked(c.title));
+    const approved: ExploreRecipeCard[] = [];
+    const softHeld: ExploreRecipeCard[] = [];
+    for (const row of prioritizeCuratedRowsForExplore(crewRows)) {
+      const card = await curatedRowToGovernedCard(row, def);
+      if (!card || isExploreFeedBlocked(card.title)) continue;
+      if (card.imageryStatus === "approved") approved.push(card);
+      else if (card.imageryStatus === "soft_held") softHeld.push(card);
+    }
+    const cards = balanceExploreSectionCards(approved, softHeld, def.limit);
     const deduped = dedupeExploreCards(cards, seenIds, seenTitles);
     if (deduped.length >= 3) {
       return {

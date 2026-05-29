@@ -201,7 +201,7 @@ export function PizzaFilterPanel({
                 htmlFor="pizza-oven-available"
                 className="flex items-center gap-2 text-xs uppercase tracking-wider text-muted-foreground font-medium cursor-pointer select-none"
               >
-                <ThermometerSun className="w-3.5 h-3.5 text-orange-500" />
+                <ThermometerSun className="w-3.5 h-3.5 text-red-500" />
                 Oven Available
               </Label>
             </div>

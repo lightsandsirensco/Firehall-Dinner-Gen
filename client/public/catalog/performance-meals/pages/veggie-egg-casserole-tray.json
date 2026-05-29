@@ -1,0 +1,184 @@
+{
+  "slug": "veggie-egg-casserole-tray",
+  "title": "Veggie Egg Casserole Tray",
+  "displayTitle": "Veggie Egg Casserole Tray",
+  "seoTitle": "Veggie Egg Casserole Tray | Firefighter Meal",
+  "shortDescription": "Baked egg casserole with spinach, bell pepper, and feta for eight",
+  "subtitle": "Baked egg casserole with spinach, bell pepper, and feta for eight",
+  "category": "healthy_performance",
+  "cuisine": "American",
+  "description": "Eggs whisk with milk and bake in a deep tray with spinach, bell pepper, onion, and feta into a sliceable morning casserole for the whole crew.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 35,
+  "prepTime": 20,
+  "difficulty": "easy",
+  "calories": 245,
+  "protein": 16,
+  "carbs": 8,
+  "fats": 17,
+  "tags": [
+    "protein:egg",
+    "format:breakfast",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "Deep hotel pan",
+    "Large skillet",
+    "Whisk"
+  ],
+  "ingredients": [
+    {
+      "name": "large eggs",
+      "quantity": "24",
+      "unit": "whole"
+    },
+    {
+      "name": "milk",
+      "quantity": "1.5",
+      "unit": "cups",
+      "notes": "2% or whole"
+    },
+    {
+      "name": "fresh spinach",
+      "quantity": "6",
+      "unit": "cups",
+      "notes": "chopped, squeezed dry"
+    },
+    {
+      "name": "red bell pepper",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "diced"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "1",
+      "unit": "large",
+      "notes": "diced"
+    },
+    {
+      "name": "feta cheese",
+      "quantity": "1.5",
+      "unit": "cups",
+      "notes": "crumbled"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "4",
+      "unit": "cloves",
+      "notes": "minced"
+    },
+    {
+      "name": "all-purpose flour",
+      "quantity": "0.25",
+      "unit": "cup"
+    },
+    {
+      "name": "baking powder",
+      "quantity": "1",
+      "unit": "tsp"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "1.5",
+      "unit": "tsp"
+    },
+    {
+      "name": "black pepper",
+      "quantity": "0.5",
+      "unit": "tsp"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Preheat and sauté vegetables",
+      "instruction": "Heat oven to 375°F. Sauté onion and bell pepper in olive oil 6 minutes until softened. Add garlic and spinach, cook 2 minutes until wilted and dry.",
+      "minutes": 8,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Whisk egg base",
+      "instruction": "Whisk eggs, milk, flour, baking powder, salt, and pepper until smooth with no flour lumps visible at the bottom of the bowl.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Combine filling",
+      "instruction": "Fold sautéed vegetables and feta into egg mixture until evenly distributed with vegetables suspended throughout, not sunk to bottom.",
+      "minutes": 3,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Bake casserole",
+      "instruction": "Pour into greased deep hotel pan. Bake 32–38 minutes until center is set, puffed, and knife inserted in middle comes out clean.",
+      "minutes": 35,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Rest and slice",
+      "instruction": "Rest 10 minutes. Cut into 12 squares. Texture should be firm and springy, not wet or rubbery in the center.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Add turkey sausage crumbles for extra protein without changing bake time much.",
+    "Reheat squares covered with foil at 325°F for 15 minutes.",
+    "Hot sauce at the line wakes up mild morning palates."
+  ],
+  "tonightSpread": [
+    "Fresh fruit platter.",
+    "Whole-grain toast and jam."
+  ],
+  "leftovers": [
+    "Casserole squares in breakfast burritos with salsa.",
+    "Freeze individually wrapped for backup shift breakfasts."
+  ],
+  "whyCrewsLikeIt": "Grab a square and go. High protein start without frying eggs to order during a busy turnover.",
+  "mealPrepNotes": "Bake night before and reheat morning of. Cut into 12 squares for easy portions. Station: Use a 4-inch deep hotel pan for even bake and clean slicing. Station: Squeeze spinach dry—excess moisture makes a soggy casserole center. Station: Rest pan 10 minutes before cutting so squares hold their shape.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 245,
+    "protein": 16,
+    "carbs": 8,
+    "fats": 17,
+    "label": "~245 cal/serving · 16g protein · 2g fiber (est.)"
+  },
+  "heroImage": "/images/golden-100/veggie-egg-casserole-tray.jpg",
+  "mobileImage": "/images/mobile/veggie-egg-casserole-tray.jpg",
+  "thumbImage": "/images/thumbs/veggie-egg-casserole-tray.jpg",
+  "railImage": "/images/rails/veggie-egg-casserole-tray.jpg",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "veggie egg casserole tray",
+    "egg",
+    "American",
+    "breakfast",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "turkey-sausage-egg-muffins"
+  ],
+  "generatedAt": "2026-05-28T12:57:50.894Z",
+  "contentVersion": 2
+}

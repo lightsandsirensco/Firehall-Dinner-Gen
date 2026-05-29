@@ -28,7 +28,8 @@ import {
   type EditorialQaReport,
   type EditorialQaOverrides,
 } from "../shared/curated-recipe/qa-engine/index.js";
-import { findNearDuplicatePairs } from "../shared/curated-recipe/families/similarity.js";
+import { listCuratedRecipesForEditorialQa, runCatalogEditorialQa } from "../server/curated-recipe-qa.js";
+import { normalizeRecipeSpacing } from "../shared/recipe/spacing.js";
 import { checkImageAvailability } from "../shared/curated-recipe/qa-engine/assets.js";
 import { summarizeEditorialQaReports } from "../shared/curated-recipe/qa-engine/summarize.js";
 import { parseQaOverridesJson } from "../server/curated-recipe-qa.js";
@@ -144,7 +145,7 @@ const OUT_HTML = path.join(OUT_DIR, "index.html");
 const OUT_MD = path.join(OUT_DIR, "golden-100-review.md");
 
 function e(s: string): string {
-  return (s || "")
+  return normalizeRecipeSpacing(s || "")
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
@@ -261,31 +262,10 @@ function hydratedToQaInput(r: HydratedRecipe): EditorialQaInput {
   };
 }
 
-function runCatalogQa(recipes: HydratedRecipe[]): Map<string, EditorialQaReport> {
-  const inputs = recipes.map(hydratedToQaInput);
-  const simInputs = recipes.map((r) => ({
-    recipeId: r.recipeId,
-    slug: r.slug,
-    title: r.title,
-    mealFormat: r.mealFormat,
-    equipment: r.metadata?.equipment,
-    ingredients: r.ingredients.map((i) => ({ name: i.name })),
-    steps: r.steps.map((s) => ({ heading: s.heading, body: s.body })),
-  }));
-  const archetypeById = new Map(recipes.map((r) => [r.recipeId, r.archetypeId || ""]));
-  const nearDupes = findNearDuplicatePairs(simInputs, { sameArchetypeOnly: true, archetypeById }).map(
-    (p) => ({
-      recipeIdA: p.recipeIdA,
-      recipeIdB: p.recipeIdB,
-      slugA: p.slugA,
-      slugB: p.slugB,
-      similarity: p.overall,
-    }),
-  );
-  const reports = runEditorialQaBatch(inputs, {
-    imageContext: { cwd: process.cwd(), reviewAssetsDir: OUT_ASSETS },
-    variantNearDuplicates: nearDupes,
-  });
+async function runCatalogQa(): Promise<Map<string, EditorialQaReport>> {
+  // Use the exact same QA pipeline as `npm run catalog:editorial-qa`.
+  const recipes = await listCuratedRecipesForEditorialQa();
+  const reports = await runCatalogEditorialQa(recipes);
   return new Map(reports.map((rep) => [rep.recipeId, rep]));
 }
 
@@ -474,16 +454,6 @@ function buildHtml(
       const m = r.metadata;
       const diff = m?.difficulty ?? "medium";
 
-      const manualQaChecklist = [
-        "image correct",
-        "instructions clear",
-        "realistic timing",
-        "no duplicate recipe",
-        "beginner friendly",
-        "firefighter appropriate",
-        "publish approved",
-      ];
-
       const familyBadge =
         r.recipeRole && r.recipeRole !== "standalone"
           ? `<span class="badge family">${e(r.recipeRole)}${r.variantKey ? ` · ${e(r.variantKey)}` : ""}</span>`
@@ -578,13 +548,6 @@ function buildHtml(
         )
         .join("");
 
-      const qaHtml = manualQaChecklist
-        .map(
-          (label, i) =>
-            `<label class="qa"><input type="checkbox" data-qa="${i}"> <span>${e(label)}</span></label>`,
-        )
-        .join("");
-
       const metadataTable = m
         ? `<table class="meta-table">
             ${metaRow("Protein", METADATA_LABELS.protein[m.protein] || m.protein)}
@@ -647,8 +610,6 @@ function buildHtml(
           ${tagsHtml}
           <h4>CMS metadata</h4>
           ${metadataTable}
-          <h4>Editorial QA</h4>
-          <div class="qa-grid">${qaHtml}</div>
         </div>
 
         <div>
@@ -924,15 +885,6 @@ function buildGoldenMd(
   lines.push(`Generated: **${generatedAt}**`);
   lines.push(`Total Golden-tagged recipes: **${golden.length}**`);
   lines.push("");
-  lines.push(`QA legend (check when approved):`);
-  lines.push(`- [ ] image correct`);
-  lines.push(`- [ ] instructions clear`);
-  lines.push(`- [ ] realistic timing`);
-  lines.push(`- [ ] no duplicate recipe`);
-  lines.push(`- [ ] beginner friendly`);
-  lines.push(`- [ ] firefighter appropriate`);
-  lines.push(`- [ ] publish approved`);
-  lines.push("");
 
   for (const r of golden) {
     const qaReport = qaById.get(r.recipeId);
@@ -957,15 +909,6 @@ function buildGoldenMd(
     if (qaReport?.suppressedFlags?.length) {
       lines.push(`- **suppressed**: ${qaReport.suppressedFlags.map((f) => f.code).join(", ")}`);
     }
-    lines.push("");
-    lines.push(`### Editorial QA`);
-    lines.push(`- [ ] image correct`);
-    lines.push(`- [ ] instructions clear`);
-    lines.push(`- [ ] realistic timing`);
-    lines.push(`- [ ] no duplicate recipe`);
-    lines.push(`- [ ] beginner friendly`);
-    lines.push(`- [ ] firefighter appropriate`);
-    lines.push(`- [ ] publish approved`);
     lines.push("");
     lines.push(`### Description`);
     lines.push(r.summary ? r.summary : "_(missing)_");
@@ -1051,7 +994,7 @@ async function main(): Promise<void> {
     }
   }
 
-  const qaById = runCatalogQa(recipes);
+  const qaById = await runCatalogQa();
   const qaSummary = summarizeEditorialQaReports([...qaById.values()]);
   const html = buildHtml(recipes, qaById, generatedAt, {
     total: cacheTotal,

@@ -1,0 +1,74 @@
+{
+  "slug": "feeding-ten-firefighters",
+  "title": "Feeding Ten Firefighters",
+  "subtitle": "Portion math and formats that scale",
+  "description": "How to feed ten firefighters: grocery quantities, line vs plated service, and recipes that scale without doubling cook stress.",
+  "topic": "station_lifestyle",
+  "pillar": "operations_how_to",
+  "intro": "Ten eaters is the point where home-recipe math breaks. Feeding ten firefighters means rounding up protein, using lines and batches, and accepting that two sheet pans beat one crowded pan. The goal is full plates, not perfect presentation.",
+  "sections": [
+    {
+      "id": "formats",
+      "heading": "Formats for ten",
+      "paragraphs": [
+        "Chili, lasagna, taco bar, pulled pork, jambalaya — all proven at ten plus."
+      ]
+    },
+    {
+      "id": "quantities",
+      "heading": "Quantity shortcuts",
+      "paragraphs": [
+        "Double sheet pans, two pots of chili, or two pork shoulders beat one crowded vessel. Uneven heat at ten portions is how dinner fails quietly."
+      ]
+    }
+  ],
+  "practicalAdvice": [
+    "Plan one pound raw protein per three to four eaters for mixed plates.",
+    "Use two half-sheet pans or two pots — even heat matters.",
+    "Taco bars and potato bars scale cleaner than ten plated entrees."
+  ],
+  "mealRecommendations": [
+    {
+      "slug": "batch-lasagna",
+      "title": "Giant Batch Lasagna",
+      "blurb": "Built for big tables."
+    },
+    {
+      "slug": "hall-taco-bar",
+      "title": "Hall Taco Bar Night",
+      "blurb": "Self-serve at scale."
+    },
+    {
+      "slug": "jambalaya",
+      "title": "Cajun Jambalaya for the Hall",
+      "blurb": "One pot — loud flavor."
+    },
+    {
+      "slug": "loaded-potato-feed",
+      "title": "Loaded Potato Feed",
+      "blurb": "Ten-plus friendly self-serve line."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Where do these recipes come from?",
+      "answer": "Each link goes to a full recipe on Firehall Meals — crew-sized portions, station timing, and steps written for a shared kitchen. Not home-blog scaling."
+    },
+    {
+      "question": "What if crew size or time changes tonight?",
+      "answer": "Use Find a Meal with your headcount and minutes available. It pulls from the same hall-tested dinners these guides recommend."
+    }
+  ],
+  "relatedArticleSlugs": [
+    "best-firehouse-meals-large-crews",
+    "feeding-a-firehall-crew"
+  ],
+  "keywords": [
+    "feed 10 firefighters",
+    "large crew dinner",
+    "fire station portions"
+  ],
+  "publishedAt": "2026-05-27T18:00:00.000Z",
+  "updatedAt": "2026-05-27T18:00:00.000Z",
+  "readMinutes": 7
+}

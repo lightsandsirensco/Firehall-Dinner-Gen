@@ -16,6 +16,7 @@ import { getCuratedRecipeById } from "./curated-recipe-store.js";
 import { getSharedLocalDb } from "./sqlite.js";
 import { deriveCuratedRecipeMetadata } from "../shared/curated-recipe/metadata/derive.js";
 import { metadataCompletenessScore } from "../shared/curated-recipe/metadata/qa.js";
+import { collectGenerateResponseCopy } from "../shared/recipe/spacing.js";
 
 export function parseQaOverridesJson(raw: string | null | undefined): EditorialQaOverrides | undefined {
   if (!raw) return undefined;
@@ -87,6 +88,12 @@ export function curatedRecipeToQaInput(recipe: CuratedRecipe): EditorialQaInput 
       heading: s.heading,
       body: s.body,
     })),
+    extraCopy: [
+      recipe.editorialNotes,
+      ...collectGenerateResponseCopy(
+        (recipe.generateResponse ?? null) as unknown as Record<string, unknown>,
+      ),
+    ].filter((x): x is string => typeof x === "string" && x.trim().length > 0),
     metadata: meta,
     metadataCompleteness: metadataCompletenessScore(meta),
     qaOverrides: recipe.qaOverrides,

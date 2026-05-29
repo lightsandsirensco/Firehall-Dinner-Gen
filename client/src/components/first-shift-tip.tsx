@@ -1,12 +1,12 @@
 import { X, Flame } from "lucide-react";
 import { dismissFirstShiftTip } from "@/lib/app-session";
 import { hapticLight } from "@/lib/haptics";
+import { CTA } from "@/lib/brand-copy";
 
 interface FirstShiftTipProps {
   onDismiss: () => void;
 }
 
-/** One-time calm onboarding strip — dismissible, no modal */
 export function FirstShiftTip({ onDismiss }: FirstShiftTipProps) {
   const handleDismiss = () => {
     hapticLight();
@@ -22,9 +22,11 @@ export function FirstShiftTip({ onDismiss }: FirstShiftTipProps) {
     >
       <Flame className="w-4 h-4 text-primary shrink-0 mt-0.5" aria-hidden />
       <div className="flex-1 min-w-0 text-left">
-        <p className="text-xs font-semibold uppercase tracking-wider text-primary">First shift tonight?</p>
+        <p className="text-xs font-semibold uppercase tracking-wider text-primary">First time?</p>
         <p className="text-sm text-muted-foreground mt-0.5 leading-snug">
-          Tap <span className="text-foreground font-medium">Feed the hall</span> — defaults are set. Change crew or time only if you need to.
+          Crew size is already set. Tap{" "}
+          <span className="text-foreground font-medium">{CTA.pickDinner}</span> or open More options
+          if you need to tweak protein and time.
         </p>
       </div>
       <button

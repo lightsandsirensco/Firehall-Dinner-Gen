@@ -1,0 +1,90 @@
+/**
+ * Approved curated catalog — Explore and public browse source of truth.
+ */
+
+import type { CatalogPublicBadge } from "./hall-catalog/gate.js";
+import {
+  isHallClassicSlug,
+  isPerformance50Slug,
+} from "./hall-catalog/gate.js";
+import {
+  slugLockedImagePaths,
+  type ExploreCatalogImageKind,
+} from "./explore-image-paths.js";
+
+export type ApprovedCatalogKind = ExploreCatalogImageKind;
+
+export type ApprovedCatalogPrimaryFilter = "all" | "healthy" | "bbq_grill" | "smoothies";
+
+export type ApprovedCatalogCookTimeBucket = "under_30" | "30_to_60" | "over_60";
+
+export interface ApprovedCatalogEntry {
+  slug: string;
+  title: string;
+  kind: ApprovedCatalogKind;
+  category: string;
+  categoryLabel: string;
+  cuisine: string;
+  protein: string;
+  mealFormat: string;
+  cookTime: number;
+  cookTimeBucket: ApprovedCatalogCookTimeBucket;
+  heroImage: string;
+  thumbImage: string;
+  tags: string[];
+  searchText: string;
+  catalogBadge: CatalogPublicBadge;
+  traitBadges: CatalogPublicBadge[];
+  isSmoothie: boolean;
+  isHealthy: boolean;
+  isBbqGrill: boolean;
+  isHighProtein: boolean;
+  isLowCleanup: boolean;
+}
+
+export interface ApprovedCatalogResponse {
+  version: 1;
+  recipeCount: number;
+  recipes: ApprovedCatalogEntry[];
+}
+
+export const APPROVED_CATALOG_COOK_TIME_LABELS: Record<ApprovedCatalogCookTimeBucket, string> = {
+  under_30: "Under 30 min",
+  "30_to_60": "30–60 min",
+  over_60: "Over 60 min",
+};
+
+export const APPROVED_CATALOG_PRIMARY_LABELS: Record<ApprovedCatalogPrimaryFilter, string> = {
+  all: "All",
+  healthy: "Healthy",
+  bbq_grill: "BBQ & Grill",
+  smoothies: "Smoothies",
+};
+
+export function formatApprovedCatalogCategory(id: string): string {
+  return id.replace(/_/g, " ");
+}
+
+export function approvedCatalogCookTimeBucket(minutes: number): ApprovedCatalogCookTimeBucket {
+  if (minutes < 30) return "under_30";
+  if (minutes <= 60) return "30_to_60";
+  return "over_60";
+}
+
+/** Canonical curated hero paths for Explore cards (slug-locked). */
+export function approvedCatalogHeroPath(slug: string, kind: ApprovedCatalogKind): string {
+  return slugLockedImagePaths(slug, kind).hero;
+}
+
+/** Card-optimized image — prefer thumb, then hero (same slug only). */
+export function approvedCatalogCardImagePath(slug: string, kind: ApprovedCatalogKind): string {
+  const paths = slugLockedImagePaths(slug, kind);
+  return paths.cardCandidates[0] ?? paths.hero;
+}
+
+export function resolveApprovedCatalogKind(slug: string, isSmoothie = false): ApprovedCatalogKind {
+  if (isSmoothie) return "smoothie";
+  if (isHallClassicSlug(slug)) return "hall_classic";
+  if (isPerformance50Slug(slug)) return "performance_meal";
+  return "firehall_catalog";
+}

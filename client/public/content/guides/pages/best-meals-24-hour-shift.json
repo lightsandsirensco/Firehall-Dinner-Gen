@@ -1,0 +1,81 @@
+{
+  "slug": "best-meals-24-hour-shift",
+  "title": "Best Meals for a 24 Hour Shift",
+  "subtitle": "Dinner, overnight, and next-day fuel without kitchen burnout",
+  "description": "Best meals for a 24-hour shift: hold-friendly dinners, lighter overnight options, and breakfast that does not wreck the kitchen for the next crew.",
+  "topic": "meal_planning",
+  "pillar": "recipes_meals",
+  "intro": "A full tour is three kitchens in one: evening dinner for the arriving crew, something manageable overnight if the board stays up, and breakfast before handoff. The best 24-hour shift meals are not one heroic dinner — they are a plan that spreads effort and uses hold-friendly food.",
+  "sections": [
+    {
+      "id": "dinner",
+      "heading": "Dinner that survives the first half",
+      "paragraphs": [
+        "Chili, pulled pork, baked pasta, and rice bowls reheat well when the second run goes out at 22:00."
+      ]
+    },
+    {
+      "id": "morning",
+      "heading": "Breakfast without chaos",
+      "paragraphs": [
+        "Egg bakes and burrito bars let people eat across a two-hour window. Pancakes hold warm in the oven between waves."
+      ]
+    }
+  ],
+  "practicalAdvice": [
+    "Cook dinner so it holds until late eaters arrive — do not peak at 18:00 sharp.",
+    "Keep overnight snacks off the formal menu — fruit, yogurt, sandwich fixings in the fridge.",
+    "Breakfast should be bake-or-line format — not made-to-order eggs for twelve.",
+    "Label leftovers with time and date for the next shift."
+  ],
+  "mealRecommendations": [
+    {
+      "slug": "big-chili",
+      "title": "Hall-Sized Beef and Bean Chili",
+      "blurb": "Dinner anchor — reheats all tour."
+    },
+    {
+      "slug": "pulled-pork",
+      "title": "Pulled Pork Sandwiches",
+      "blurb": "Late-night sandwiches still work."
+    },
+    {
+      "slug": "breakfast-burrito-bar",
+      "title": "Breakfast Burrito Bar",
+      "blurb": "Morning line — staggered eaters."
+    },
+    {
+      "slug": "sausage-egg-bake",
+      "title": "Sausage Egg Bake",
+      "blurb": "Hands-off morning bake."
+    },
+    {
+      "slug": "sunday-chili-batch",
+      "title": "Sunday Batch Chili",
+      "blurb": "If dinner doubles as overnight option."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Where do these recipes come from?",
+      "answer": "Each link goes to a full recipe on Firehall Meals — crew-sized portions, station timing, and steps written for a shared kitchen. Not home-blog scaling."
+    },
+    {
+      "question": "What if crew size or time changes tonight?",
+      "answer": "Use Find a Meal with your headcount and minutes available. It pulls from the same hall-tested dinners these guides recommend."
+    }
+  ],
+  "relatedArticleSlugs": [
+    "firefighter-breakfast-ideas",
+    "meal-prep-for-shift-workers"
+  ],
+  "keywords": [
+    "24 hour shift meals",
+    "firefighter shift meals",
+    "fire station food",
+    "overnight crew meals"
+  ],
+  "publishedAt": "2026-05-27T18:00:00.000Z",
+  "updatedAt": "2026-05-27T18:00:00.000Z",
+  "readMinutes": 7
+}

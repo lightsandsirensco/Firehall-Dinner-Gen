@@ -1,0 +1,83 @@
+{
+  "slug": "bbq-night-at-the-station",
+  "title": "BBQ Night at the Fire Station",
+  "subtitle": "Smoke, grills, and feeding a crew without babysitting the pit all shift",
+  "description": "How to run a fire station BBQ night: timing, safety, sides, and firefighter meal picks for grill-forward crews.",
+  "topic": "station_cooking",
+  "pillar": "recipes_meals",
+  "intro": "BBQ night is morale food — but it is also a logistics exercise. You are managing heat, smoke, grease, and a crew that will absolutely 'just check the grill' until someone opens the lid too often. A good station BBQ has a simple protein plan, one reliable side, and a backup if weather or calls kill the outdoor cook.",
+  "sections": [
+    {
+      "id": "plan",
+      "heading": "Plan the cook around the shift, not the recipe clock",
+      "paragraphs": [
+        "Low-and-slow fits weekends and training days. On a weeknight, think hot-and-fast: thighs, burgers, sausages, or a partial smoke then finish in the oven.",
+        "If you are feeding eight or more, pulled pork or batch chicken beats individual steaks for cost and stress."
+      ]
+    },
+    {
+      "id": "sides",
+      "heading": "Sides that do not fight the grill",
+      "paragraphs": [
+        "Coleslaw, corn, beans, and simple potatoes travel well on a BBQ line. Mac and cheese can hold warm; green salads wilt — serve them last."
+      ]
+    }
+  ],
+  "practicalAdvice": [
+    "Pick one star protein (pulled pork, chicken thighs, burgers) — not three competing timelines.",
+    "Prep sides indoors so the grill person is not also chopping onions during the cook.",
+    "Use probe temps — guessing is how halls serve pink chicken and tough brisket.",
+    "Keep a flat-top or oven finish for stragglers and post-call eaters.",
+    "Grease management is safety: empty traps, keep a lid nearby, know your extinguisher class."
+  ],
+  "mealRecommendations": [
+    {
+      "slug": "pulled-pork",
+      "title": "Pulled Pork Sandwiches",
+      "blurb": "Feeds a crowd, forgives hold time, classic hall win."
+    },
+    {
+      "slug": "smoked-brisket",
+      "title": "Smoked Brisket",
+      "blurb": "When you have time and want a centerpiece."
+    },
+    {
+      "slug": "beer-can-chicken",
+      "title": "Beer Can Chicken",
+      "blurb": "Grill showpiece that still scales to multiple birds."
+    },
+    {
+      "slug": "bbq-chicken-bowls",
+      "title": "BBQ Chicken Bowls",
+      "blurb": "Line-friendly if you want bowls instead of buns."
+    },
+    {
+      "slug": "grilled-corn-cotija",
+      "title": "Grilled Street Corn",
+      "blurb": "Fast side that feels like an event."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Can we BBQ if we might get a call?",
+      "answer": "Yes — choose proteins that tolerate hold (pulled pork, thighs) or finish indoors. Avoid recipes where the only safe window is a two-minute rest at perfect temp."
+    },
+    {
+      "question": "What is the easiest BBQ for a rookie cook?",
+      "answer": "Burgers or chicken thighs on medium heat with a probe thermometer. Pull pork is easy on labor but needs time — start early or use a slow cooker assist."
+    }
+  ],
+  "relatedArticleSlugs": [
+    "comfort-food-after-a-long-shift",
+    "feeding-a-firehall-crew"
+  ],
+  "keywords": [
+    "fire station BBQ",
+    "firefighter BBQ meals",
+    "grill night",
+    "firehall meals"
+  ],
+  "publishedAt": "2026-05-27T12:00:00.000Z",
+  "updatedAt": "2026-05-27T12:00:00.000Z",
+  "readMinutes": 7
+}

@@ -43,6 +43,8 @@ export interface EditorialQaInput {
   tags?: string[];
   ingredients: Array<{ name: string; originalText?: string }>;
   steps: Array<{ n: number; heading?: string; body: string }>;
+  /** Extra user-facing copy (pro tips, leftovers, editorial notes) for QA scans */
+  extraCopy?: string[];
   metadata?: CuratedRecipeMetadata | null;
   metadataCompleteness?: number;
   /** Optional reviewer overrides */

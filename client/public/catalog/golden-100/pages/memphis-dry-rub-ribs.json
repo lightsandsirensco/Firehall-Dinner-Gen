@@ -1,11 +1,15 @@
 {
   "slug": "memphis-dry-rub-ribs",
   "title": "Memphis Dry Rub Ribs",
+  "displayTitle": "Memphis Dry Rub Ribs",
+  "seoTitle": "Memphis Dry Rub Ribs | Firefighter Meal",
+  "shortDescription": "Sticky bark, fall-off-bone ribs",
   "subtitle": "Sticky bark, fall-off-bone ribs",
   "category": "bbq_grill_nights",
   "cuisine": "american",
-  "description": "Memphis Dry Rub Ribs is a american grill built for a hungry firehall crew — Sticky bark, fall-off-bone ribs. Hearty portions, station-kitchen timing, and flavors everyone recognizes after a long shift.",
+  "description": "Sticky bark, fall-off-bone ribs. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 90,
   "prepTime": 30,
   "difficulty": "hard",
@@ -30,69 +34,75 @@
   ],
   "ingredients": [
     {
-      "name": "Pork (shoulder or chops)",
+      "name": "St. Louis spare ribs",
+      "quantity": "6",
+      "unit": "racks",
+      "notes": "about 3 lb each",
+      "group": "Main"
+    },
+    {
+      "name": "Brown sugar",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Rub"
+    },
+    {
+      "name": "Paprika",
       "quantity": "3",
-      "unit": "lb"
+      "unit": "tbsp",
+      "group": "Rub"
+    },
+    {
+      "name": "Garlic powder",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Rub"
+    },
+    {
+      "name": "Onion powder",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Rub"
+    },
+    {
+      "name": "Cayenne",
+      "quantity": "1",
+      "unit": "tsp",
+      "group": "Rub"
     },
     {
       "name": "Kosher salt",
       "quantity": "2",
-      "unit": "tbsp"
-    },
-    {
-      "name": "Black pepper",
-      "quantity": "1",
-      "unit": "tbsp"
-    },
-    {
-      "name": "Cooking oil",
-      "quantity": "0.3",
-      "unit": "cup"
-    },
-    {
-      "name": "Yellow onion",
-      "quantity": "2",
-      "unit": "large"
-    },
-    {
-      "name": "Garlic",
-      "quantity": "6",
-      "unit": "cloves"
+      "unit": "tbsp",
+      "group": "Rub"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Prep the line",
-      "instruction": "Set out all ingredients for Memphis Dry Rub Ribs before you turn on heat — firefighters eat on a schedule. Pat proteins dry and season aggressively with salt and pepper; dry surfaces brown instead of steam.",
-      "minutes": 15,
+      "title": "Remove membrane",
+      "instruction": "Peel the silverskin off the bone side with a paper towel grip — it will not soften in smoke. Mix dry rub and coat both sides. Rest 30 minutes at room temp.",
+      "minutes": 25,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Build the base",
-      "instruction": "Heat oil in your largest skillet, Dutch oven, or on the flat-top over medium-high until it shimmers. Add aromatics (onion first) and cook until the edges turn golden and the smell sweetens — usually 4–6 minutes. If garlic is in the recipe, add it after the onion softens so it doesn't burn.",
-      "minutes": 8,
-      "heatLevel": "medium-high"
+      "title": "Smoke 3-2-1 style",
+      "instruction": "Smoke at 250°F meat-side up for 3 hours. Spritz with apple juice if bark looks dry. Wrap in foil with a splash of juice for 2 hours. Unwrap, sauce if desired, finish 1 hour to set bark. Ribs bend without breaking when done.",
+      "minutes": 180,
+      "heatLevel": "low"
     },
     {
       "stepNumber": 3,
-      "title": "Cook the main",
-      "instruction": "Cook the primary protein or base for Memphis Dry Rub Ribs until it hits proper color and safe internal temperature. Don't crowd the pan — work in batches if needed so you get browning, not gray stew. Listen for a steady sizzle; if it's silent, the heat is too low.",
-      "minutes": 20,
-      "heatLevel": "medium-high"
+      "title": "Slice and serve",
+      "instruction": "Rest 10 minutes, slice between bones. Memphis dry rub ribs should have sticky bark and pull clean — not mush. Serve on trays; hold backup rack at 180°F.",
+      "minutes": 15,
+      "heatLevel": "low"
     },
     {
       "stepNumber": 4,
-      "title": "Finish and season",
-      "instruction": "Bring components together, taste, and adjust salt. Sauce should coat, not pool. If cheese is involved, melt it just until glossy — another 1–2 minutes under a lid or broiler. Let heavy proteins rest 5 minutes before slicing.",
-      "minutes": 10,
-      "heatLevel": "medium"
-    },
-    {
-      "stepNumber": 5,
-      "title": "Serve the hall",
-      "instruction": "Transfer to sheet trays or a serving line immediately. Keep backup warm at 200°F. Call the crew while it's hot — this meal is built for a hungry hall, not a photo shoot.",
+      "title": "Hold for late eaters",
+      "instruction": "Wrap cut ribs in foil on a sheet tray at 180°F up to 30 minutes. Spritz apple juice if edges look dry before the second tray goes out.",
       "minutes": 5,
       "heatLevel": "low"
     }
@@ -114,6 +124,10 @@
     "Label trays with date and reheat to 165°F minimum before second shift.",
     "Slice cold protein thin for next-day wraps or salads — faster reheat, less dry-out."
   ],
+  "whyCrewsLikeIt": "Sticky bark, fall-off-bone ribs. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
+  "substitutions": [],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
   "nutrition": {
     "calories": 600,
     "protein": 40,
@@ -145,7 +159,8 @@
     "beer-can-chicken",
     "cedar-plank-salmon"
   ],
-  "sourceName": "AmazingRibs",
-  "generatedAt": "2026-05-27T15:03:06.140Z",
-  "contentVersion": 1
+  "sourceName": "Firehall Meals",
+  "sourceUrl": "",
+  "generatedAt": "2026-05-28T12:06:14.978Z",
+  "contentVersion": 2
 }

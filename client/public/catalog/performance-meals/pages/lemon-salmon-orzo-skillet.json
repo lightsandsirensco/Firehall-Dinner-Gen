@@ -1,0 +1,184 @@
+{
+  "slug": "lemon-salmon-orzo-skillet",
+  "title": "Lemon Salmon Orzo Skillet",
+  "displayTitle": "Lemon Salmon Orzo Skillet",
+  "seoTitle": "Lemon Salmon Orzo Skillet | Firefighter Meal",
+  "shortDescription": "One-pan salmon with orzo, spinach, and capers",
+  "subtitle": "One-pan salmon with orzo, spinach, and capers",
+  "category": "healthy_performance",
+  "cuisine": "Mediterranean",
+  "description": "Salmon sears in a large skillet while orzo simmers with lemon, spinach, and capers into a one-pan crew dinner.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 25,
+  "prepTime": 18,
+  "difficulty": "medium",
+  "calories": 520,
+  "protein": 38,
+  "carbs": 48,
+  "fats": 20,
+  "tags": [
+    "protein:salmon",
+    "format:pasta",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "Two 12-inch skillets with lids",
+    "Wooden spoon"
+  ],
+  "ingredients": [
+    {
+      "name": "salmon fillets",
+      "quantity": "3.5",
+      "unit": "lb",
+      "notes": "6 oz portions, skin-on"
+    },
+    {
+      "name": "orzo pasta",
+      "quantity": "1.5",
+      "unit": "lb"
+    },
+    {
+      "name": "fresh spinach",
+      "quantity": "8",
+      "unit": "cups",
+      "notes": "packed"
+    },
+    {
+      "name": "lemon",
+      "quantity": "3",
+      "unit": "whole",
+      "notes": "zested and juiced"
+    },
+    {
+      "name": "capers",
+      "quantity": "0.25",
+      "unit": "cup",
+      "notes": "drained"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "6",
+      "unit": "cloves",
+      "notes": "minced"
+    },
+    {
+      "name": "chicken broth",
+      "quantity": "5",
+      "unit": "cups",
+      "notes": "low sodium"
+    },
+    {
+      "name": "extra-virgin olive oil",
+      "quantity": "0.25",
+      "unit": "cup"
+    },
+    {
+      "name": "Parmesan cheese",
+      "quantity": "0.75",
+      "unit": "cup",
+      "notes": "grated"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "1.5",
+      "unit": "tsp"
+    },
+    {
+      "name": "black pepper",
+      "quantity": "0.5",
+      "unit": "tsp"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Sear salmon",
+      "instruction": "Heat 2 tbsp oil in large skillets over medium-high. Sear salmon skin-side down 4 minutes until skin crisps, flip, cook 2 minutes. Remove.",
+      "minutes": 8,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Toast orzo",
+      "instruction": "Add 1 tbsp oil and orzo to pan. Toast 2–3 minutes, stirring, until grains smell nutty and turn lightly golden at edges.",
+      "minutes": 3,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Simmer orzo in broth",
+      "instruction": "Add garlic, broth, lemon zest, salt, and pepper. Simmer 10–12 minutes, stirring often, until orzo is tender and broth mostly absorbed.",
+      "minutes": 12,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Fold in spinach and capers",
+      "instruction": "Stir spinach, capers, lemon juice, and parmesan off heat until spinach wilts and orzo looks creamy, not soupy or stuck.",
+      "minutes": 3,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Top with salmon and serve",
+      "instruction": "Nest salmon on orzo, cover 2 minutes to reheat. Salmon should flake at 125°F center, orzo glossy and al dente.",
+      "minutes": 3,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Stir orzo frequently—it sticks faster than long pasta in a wide pan.",
+    "Pull salmon early; it finishes during the covered reheat step.",
+    "Add halved cherry tomatoes with spinach for color and sweetness."
+  ],
+  "tonightSpread": [
+    "Garlic bread from split baguette.",
+    "Simple mixed green salad."
+  ],
+  "leftovers": [
+    "Reheat gently with splash of broth—microwave on medium power.",
+    "Orzo salad cold next day with extra lemon."
+  ],
+  "whyCrewsLikeIt": "Feels restaurant-plated but cooks on one burner line. Omega-3 plus carbs in one ladle portion.",
+  "mealPrepNotes": "Use two skillets if station range is tight on space. Pat salmon dry before searing. Station: Sear salmon first, remove, finish orzo in same pan for flavor absorption. Station: Wilt spinach off heat so it stays bright green, not olive drab. Station: Return salmon on top for final 3 minutes to reheat without overcooking.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 520,
+    "protein": 38,
+    "carbs": 48,
+    "fats": 20,
+    "label": "~520 cal/serving · 38g protein · 4g fiber (est.)"
+  },
+  "heroImage": "/images/golden-100/lemon-salmon-orzo-skillet.jpg",
+  "mobileImage": "/images/mobile/lemon-salmon-orzo-skillet.jpg",
+  "thumbImage": "/images/thumbs/lemon-salmon-orzo-skillet.jpg",
+  "railImage": "/images/rails/lemon-salmon-orzo-skillet.jpg",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "lemon salmon orzo skillet",
+    "salmon",
+    "Mediterranean",
+    "pasta",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "herb-baked-salmon-tray",
+    "lemon-garlic-shrimp-pasta",
+    "cottage-cheese-protein-pasta",
+    "maple-soy-salmon-bowls",
+    "lentil-mushroom-bolognese",
+    "turkey-zoodle-bolognese"
+  ],
+  "generatedAt": "2026-05-28T12:57:50.894Z",
+  "contentVersion": 2
+}

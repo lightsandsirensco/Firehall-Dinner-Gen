@@ -1,11 +1,15 @@
 {
   "slug": "slider-bar",
   "title": "Hall Slider Bar",
+  "displayTitle": "Hall Slider Bar",
+  "seoTitle": "Hall Slider Bar | Firefighter Meal",
+  "shortDescription": "Mini burgers, max variety",
   "subtitle": "Mini burgers, max variety",
   "category": "game_day_watch_party",
   "cuisine": "american",
-  "description": "Hall Slider Bar is a american burger built for a hungry firehall crew — Mini burgers, max variety. Hearty portions, station-kitchen timing, and flavors everyone recognizes after a long shift.",
+  "description": "Mini burgers, max variety. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
@@ -30,69 +34,68 @@
   ],
   "ingredients": [
     {
-      "name": "Beef (main cut for recipe)",
+      "name": "Ground beef (80/20)",
       "quantity": "3",
-      "unit": "lb"
+      "unit": "lb",
+      "group": "Main"
     },
     {
-      "name": "Kosher salt",
-      "quantity": "2",
-      "unit": "tbsp"
-    },
-    {
-      "name": "Black pepper",
-      "quantity": "1",
-      "unit": "tbsp"
-    },
-    {
-      "name": "Cooking oil",
-      "quantity": "0.3",
-      "unit": "cup"
-    },
-    {
-      "name": "Burger buns",
+      "name": "Potato buns",
       "quantity": "8",
-      "unit": "count"
+      "unit": "count",
+      "group": "Buns"
     },
     {
-      "name": "American cheese slices",
-      "quantity": "16",
-      "unit": "count"
+      "name": "American cheese",
+      "quantity": "12",
+      "unit": "slices",
+      "group": "Cheese"
+    },
+    {
+      "name": "Mayonnaise",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Sauce"
+    },
+    {
+      "name": "Yellow mustard",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "Dill pickles",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Toppings"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Prep the line",
-      "instruction": "Set out all ingredients for Hall Slider Bar before you turn on heat — firefighters eat on a schedule. Pat proteins dry and season aggressively with salt and pepper; dry surfaces brown instead of steam.",
-      "minutes": 15,
+      "title": "Form loose balls",
+      "instruction": "Mix sauce. Split buns. Form beef into loose 3 oz balls — tight patties steam instead of crisp.",
+      "minutes": 12,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Build the base",
-      "instruction": "Heat oil in your largest skillet, Dutch oven, or on the flat-top over medium-high until it shimmers. Add aromatics (onion first) and cook until the edges turn golden and the smell sweetens — usually 4–6 minutes. If garlic is in the recipe, add it after the onion softens so it doesn't burn.",
+      "title": "Smash for crust",
+      "instruction": "Heat griddle until smoking. Smash balls immediately; season with salt. Cook 2 minutes until edges lace brown. Flip, add cheese, melt 1 minute.",
       "minutes": 8,
-      "heatLevel": "medium-high"
+      "heatLevel": "high"
     },
     {
       "stepNumber": 3,
-      "title": "Cook the main",
-      "instruction": "Cook the primary protein or base for Hall Slider Bar until it hits proper color and safe internal temperature. Don't crowd the pan — work in batches if needed so you get browning, not gray stew. Listen for a steady sizzle; if it's silent, the heat is too low.",
-      "minutes": 20,
-      "heatLevel": "medium-high"
+      "title": "Build and run",
+      "instruction": "Toast buns in fat. Stack and serve within 2 minutes — smash burgers go soft fast. Run a sheet-tray line, not plated dinners.",
+      "minutes": 5,
+      "heatLevel": ""
     },
     {
       "stepNumber": 4,
-      "title": "Finish and season",
-      "instruction": "Bring components together, taste, and adjust salt. Sauce should coat, not pool. If cheese is involved, melt it just until glossy — another 1–2 minutes under a lid or broiler. Let heavy proteins rest 5 minutes before slicing.",
-      "minutes": 10,
-      "heatLevel": "medium"
-    },
-    {
-      "stepNumber": 5,
-      "title": "Serve the hall",
-      "instruction": "Transfer to sheet trays or a serving line immediately. Keep backup warm at 200°F. Call the crew while it's hot — this meal is built for a hungry hall, not a photo shoot.",
+      "title": "Batch the next round",
+      "instruction": "Wipe griddle between batches. Keep cooked burgers on a rack in a 200°F oven — max 10 minutes or edges soften.",
       "minutes": 5,
       "heatLevel": "low"
     }
@@ -114,6 +117,10 @@
     "Label trays with date and reheat to 165°F minimum before second shift.",
     "Store components separate — assemble fresh; buns go soggy overnight."
   ],
+  "whyCrewsLikeIt": "Mini burgers, max variety. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
+  "substitutions": [],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
   "nutrition": {
     "calories": 600,
     "protein": 40,
@@ -148,6 +155,8 @@
     "buffalo-chicken-dip",
     "bbq-brisket-burnt-ends"
   ],
-  "generatedAt": "2026-05-27T15:03:06.214Z",
-  "contentVersion": 1
+  "sourceName": "Firehall Meals",
+  "sourceUrl": "",
+  "generatedAt": "2026-05-28T12:06:15.103Z",
+  "contentVersion": 2
 }

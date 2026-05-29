@@ -1,0 +1,188 @@
+{
+  "slug": "chipotle-lime-chicken-tacos",
+  "title": "Chipotle Lime Chicken Tacos",
+  "displayTitle": "Chipotle Lime Chicken Tacos",
+  "seoTitle": "Chipotle Lime Chicken Tacos | Firefighter Meal",
+  "shortDescription": "Adobo-marinated grilled chicken with slaw and lime crema",
+  "subtitle": "Adobo-marinated grilled chicken with slaw and lime crema",
+  "category": "healthy_performance",
+  "cuisine": "Mexican",
+  "description": "Chicken thighs marinate in chipotle-lime adobo, grill until charred, and serve in corn tortillas with cabbage slaw and crema.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 18,
+  "prepTime": 25,
+  "difficulty": "medium",
+  "calories": 385,
+  "protein": 36,
+  "carbs": 28,
+  "fats": 16,
+  "tags": [
+    "protein:chicken",
+    "format:tacos",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "Grill or cast iron skillet",
+    "Mixing bowls"
+  ],
+  "ingredients": [
+    {
+      "name": "boneless chicken thighs",
+      "quantity": "4",
+      "unit": "lb"
+    },
+    {
+      "name": "chipotle peppers in adobo",
+      "quantity": "4",
+      "unit": "whole",
+      "notes": "minced"
+    },
+    {
+      "name": "adobo sauce",
+      "quantity": "3",
+      "unit": "tbsp"
+    },
+    {
+      "name": "lime juice",
+      "quantity": "0.33",
+      "unit": "cup",
+      "notes": "fresh"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "6",
+      "unit": "cloves",
+      "notes": "minced"
+    },
+    {
+      "name": "ground cumin",
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "green cabbage",
+      "quantity": "1",
+      "unit": "head",
+      "notes": "shredded"
+    },
+    {
+      "name": "Greek yogurt",
+      "quantity": "1",
+      "unit": "cup"
+    },
+    {
+      "name": "corn tortillas",
+      "quantity": "24",
+      "unit": "whole",
+      "notes": "6-inch"
+    },
+    {
+      "name": "fresh cilantro",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "chopped"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "3",
+      "unit": "tbsp"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "1.5",
+      "unit": "tsp"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Marinate chicken",
+      "instruction": "Blend chipotle, adobo, lime juice, garlic, cumin, oil, and salt. Coat thighs, marinate at least 2 hours so flavors penetrate deep into meat.",
+      "minutes": 120,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Prep slaw and crema",
+      "instruction": "Toss cabbage with 2 tbsp lime juice and pinch of salt until lightly wilted but crunchy. Mix yogurt with remaining lime for crema.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Grill chicken",
+      "instruction": "Grill or sear thighs over medium-high 6–7 minutes per side until charred edges form and internal temp reaches 165°F throughout.",
+      "minutes": 16,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Rest and slice",
+      "instruction": "Rest chicken 5 minutes, slice against grain into strips. Meat should be moist with visible smoke char, not dry or stringy.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Assemble tacos",
+      "instruction": "Fill warm tortillas with chicken, slaw, crema, and cilantro. Each taco should hold together when picked up without filling falling out.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Double-stack tortillas for crews eating one-handed between tasks.",
+    "Offer pickled red onion for extra tang without more prep.",
+    "Reduce chipotle count for mild shift—start with 2 peppers."
+  ],
+  "tonightSpread": [
+    "Black beans with cumin.",
+    "Mexican rice in a hotel pan."
+  ],
+  "leftovers": [
+    "Chicken over rice bowl with slaw and crema.",
+    "Quesadillas with leftover chicken and cheese."
+  ],
+  "whyCrewsLikeIt": "Smoky heat with bright lime balance. Taco assembly keeps dinner interactive and fast.",
+  "mealPrepNotes": "Marinate 2–24 hours. Warm tortillas in foil before service. Station: Grill or sear chicken for char—oven alone misses smoky taco-shop vibe. Station: Keep slaw chilled until assembly so tacos stay crisp. Station: Taco bar: chicken, slaw, crema, pico, cilantro, lime.",
+  "spiceLevel": "medium",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 385,
+    "protein": 36,
+    "carbs": 28,
+    "fats": 16,
+    "label": "~385 cal/serving · 36g protein · 5g fiber (est.)"
+  },
+  "heroImage": "/images/golden-100/chipotle-lime-chicken-tacos.jpg",
+  "mobileImage": "/images/mobile/chipotle-lime-chicken-tacos.jpg",
+  "thumbImage": "/images/thumbs/chipotle-lime-chicken-tacos.jpg",
+  "railImage": "/images/rails/chipotle-lime-chicken-tacos.jpg",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "chipotle lime chicken tacos",
+    "chicken",
+    "Mexican",
+    "tacos",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "lemon-garlic-chicken-tray",
+    "sheet-pan-chicken-fajitas-lite",
+    "honey-garlic-chicken-rice-bowls",
+    "white-bean-chicken-chili",
+    "crispy-fish-taco-night",
+    "crock-barbacoa-chicken"
+  ],
+  "generatedAt": "2026-05-28T12:57:50.894Z",
+  "contentVersion": 2
+}

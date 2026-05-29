@@ -323,6 +323,8 @@ export interface CuratedRecipeSummary {
   summary: string;
   status: CuratedRecipeStatus;
   featured: boolean;
+  /** From editorial_image_json — false keeps card in held placeholder state */
+  imageApproved?: boolean;
   metadata?: Pick<
     CuratedRecipeMetadata,
     | "difficulty"

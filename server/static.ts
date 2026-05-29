@@ -55,7 +55,10 @@ export function serveStatic(app: Express) {
 
   app.use("/{*path}", (req: Request, res: Response) => {
     const p = req.path.toLowerCase();
-    if (/\.(jpg|jpeg|png|webp|gif|svg|ico|woff2?|css|js|map|txt)$/i.test(p)) {
+    if (p === "/sitemap.xml" || p === "/robots.txt") {
+      return res.status(404).type("text/plain").send("Not found — configure SEO routes before static fallback.");
+    }
+    if (/\.(jpg|jpeg|png|webp|gif|svg|ico|woff2?|css|js|map|xml)$/i.test(p)) {
       return res.status(404).end();
     }
     res.setHeader("Cache-Control", "no-cache");

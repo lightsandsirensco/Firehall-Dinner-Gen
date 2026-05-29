@@ -1,0 +1,69 @@
+{
+  "slug": "better-station-food-culture",
+  "title": "Building a Better Station Food Culture",
+  "subtitle": "Small changes that stick",
+  "description": "How to build better fire station food culture: fair rotations, better groceries, rookie support, and meals that make cooking worth the effort.",
+  "topic": "station_lifestyle",
+  "pillar": "station_lifestyle",
+  "intro": "Better station food culture is not a wellness poster — it is fair labor, decent groceries, and meals people want to eat. Crews cook when cooking feels worth it: clear roles, reimbursement that works, and less public griping about the result.",
+  "sections": [
+    {
+      "id": "start",
+      "heading": "Where to start",
+      "paragraphs": [
+        "Fix cleanup fairness first. Then grocery splits. Then one recurring cook night with a reliable recipe."
+      ]
+    },
+    {
+      "id": "habits",
+      "heading": "Habits that compound",
+      "paragraphs": [
+        "Stock basics, rotate cooks, and celebrate wins on the whiteboard. Culture shifts when cooking feels fair — not when someone gives a speech about wellness."
+      ]
+    }
+  ],
+  "practicalAdvice": [
+    "Rotate cooks weekly — visibility prevents burnout.",
+    "Stock the pantry with basics so dinner is not 'shop from zero.'",
+    "Celebrate good meals — photos on the board, not only complaints."
+  ],
+  "mealRecommendations": [
+    {
+      "slug": "hall-taco-bar",
+      "title": "Hall Taco Bar Night",
+      "blurb": "Low-risk culture win."
+    },
+    {
+      "slug": "big-chili",
+      "title": "Hall-Sized Beef and Bean Chili",
+      "blurb": "Teaches batch cooperation."
+    },
+    {
+      "slug": "sheet-pan-fajitas",
+      "title": "Sheet Pan Chicken Fajitas",
+      "blurb": "Shared cook night — low drama."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Where do these recipes come from?",
+      "answer": "Each link goes to a full recipe on Firehall Meals — crew-sized portions, station timing, and steps written for a shared kitchen. Not home-blog scaling."
+    },
+    {
+      "question": "What if crew size or time changes tonight?",
+      "answer": "Use Find a Meal with your headcount and minutes available. It pulls from the same hall-tested dinners these guides recommend."
+    }
+  ],
+  "relatedArticleSlugs": [
+    "firehall-kitchen-culture",
+    "how-crews-split-groceries"
+  ],
+  "keywords": [
+    "station food culture",
+    "improve firehall meals",
+    "crew food culture"
+  ],
+  "publishedAt": "2026-05-27T18:00:00.000Z",
+  "updatedAt": "2026-05-27T18:00:00.000Z",
+  "readMinutes": 7
+}

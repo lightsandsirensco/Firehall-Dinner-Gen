@@ -1,11 +1,15 @@
 {
   "slug": "bbq-chicken-bowls",
   "title": "BBQ Chicken Bowls",
+  "displayTitle": "BBQ Chicken Bowls",
+  "seoTitle": "BBQ Chicken Bowls | Firefighter Meal",
+  "shortDescription": "Built bowls, big flavor, one line",
   "subtitle": "Built bowls, big flavor, one line",
   "category": "firehall_classics",
   "cuisine": "american",
-  "description": "Sweet smoke, rice base, everyone eats happy.",
+  "description": "Built bowls, big flavor, one line",
   "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 50,
   "prepTime": 20,
   "difficulty": "medium",
@@ -112,6 +116,12 @@
     "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
     "Label trays with date and reheat to 165°F minimum before second shift."
   ],
+  "whyCrewsLikeIt": "Built bowls, big flavor, one line",
+  "substitutions": [
+    "Chicken thighs ↔ breasts (thighs forgive overcooking on the flat-top)."
+  ],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
   "nutrition": {
     "calories": 560,
     "protein": 38,
@@ -145,6 +155,6 @@
   "sourceName": "Firehall Classics",
   "sourceUrl": "",
   "classicSlug": "bbq-chicken-bowls",
-  "generatedAt": "2026-05-27T15:03:06.122Z",
-  "contentVersion": 1
+  "generatedAt": "2026-05-28T12:06:14.958Z",
+  "contentVersion": 2
 }

@@ -1,0 +1,188 @@
+{
+  "slug": "sheet-pan-chicken-fajitas-lite",
+  "title": "Sheet Pan Chicken Fajitas Lite",
+  "displayTitle": "Sheet Pan Chicken Fajitas Lite",
+  "seoTitle": "Sheet Pan Chicken Fajitas Lite | Firefighter Meal",
+  "shortDescription": "Charred peppers and onions with spiced chicken strips—no heavy oil",
+  "subtitle": "Charred peppers and onions with spiced chicken strips—no heavy oil",
+  "category": "healthy_performance",
+  "cuisine": "Mexican",
+  "description": "Chicken breast strips roast with tri-color bell peppers and red onion on two sheet pans. Warm tortillas and lime finish the line.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 22,
+  "prepTime": 20,
+  "difficulty": "easy",
+  "calories": 320,
+  "protein": 38,
+  "carbs": 18,
+  "fats": 11,
+  "tags": [
+    "protein:chicken",
+    "format:sheet_pan",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "Two half-sheet pans",
+    "Instant-read thermometer"
+  ],
+  "ingredients": [
+    {
+      "name": "chicken breast",
+      "quantity": "4",
+      "unit": "lb",
+      "notes": "cut into ½-inch strips"
+    },
+    {
+      "name": "red bell pepper",
+      "quantity": "3",
+      "unit": "whole",
+      "notes": "sliced"
+    },
+    {
+      "name": "green bell pepper",
+      "quantity": "3",
+      "unit": "whole",
+      "notes": "sliced"
+    },
+    {
+      "name": "yellow bell pepper",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "sliced"
+    },
+    {
+      "name": "red onion",
+      "quantity": "2",
+      "unit": "large",
+      "notes": "sliced into half-moons"
+    },
+    {
+      "name": "lime juice",
+      "quantity": "0.25",
+      "unit": "cup",
+      "notes": "fresh"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "3",
+      "unit": "tbsp"
+    },
+    {
+      "name": "chili powder",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "ground cumin",
+      "quantity": "1.5",
+      "unit": "tbsp"
+    },
+    {
+      "name": "smoked paprika",
+      "quantity": "1",
+      "unit": "tsp"
+    },
+    {
+      "name": "garlic powder",
+      "quantity": "1",
+      "unit": "tsp"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "1.5",
+      "unit": "tbsp"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Heat oven and mix spice blend",
+      "instruction": "Heat oven to 425°F. Combine chili powder, cumin, paprika, garlic powder, and salt in a small bowl until evenly blended.",
+      "minutes": 3,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Season chicken and vegetables",
+      "instruction": "Toss chicken strips with half the spice blend, lime juice, and 2 tbsp oil. Toss peppers and onion with remaining spice and 1 tbsp oil until coated.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Spread on sheet pans",
+      "instruction": "Divide chicken and vegetables across two parchment-lined half-sheets in a single layer. Strips should not overlap or they will steam instead of roast.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Roast until chicken is cooked",
+      "instruction": "Roast 18–22 minutes, stirring once halfway, until chicken reads 165°F and pepper edges blister and char lightly.",
+      "minutes": 22,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Rest and serve with warm tortillas",
+      "instruction": "Rest 3 minutes off heat. Vegetables should still have bite; chicken should be juicy when sliced, not chalky in the center.",
+      "minutes": 3,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Cut chicken uniform so thin ends do not dry before thick pieces finish.",
+    "A cast-iron under the sheet pan boosts bottom char if your oven runs cool.",
+    "Offer Greek yogurt instead of sour cream for a lighter topping that still cools spice."
+  ],
+  "tonightSpread": [
+    "Warm flour or corn tortillas in foil.",
+    "Pico de gallo, shredded lettuce, and light shredded cheese at the line."
+  ],
+  "leftovers": [
+    "Fajita filling in breakfast burritos with scrambled eggs.",
+    "Toss leftovers over romaine for a taco salad with crushed baked tortilla chips."
+  ],
+  "whyCrewsLikeIt": "Build-your-own format keeps everyone happy. Less grease than traditional fajitas but still delivers char and smoke from a hot oven.",
+  "mealPrepNotes": "Slice peppers and onion into uniform strips for even roasting. Marinate chicken up to 4 hours in the walk-in. Station: Broil the last 2 minutes if you want more char without overcooking lean breast strips. Station: Keep tortillas wrapped in foil in a low oven so they stay pliable at the line. Station: Portion chicken and veg into hotel pans for fast assembly during a short dinner window.",
+  "spiceLevel": "medium",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 320,
+    "protein": 38,
+    "carbs": 18,
+    "fats": 11,
+    "label": "~320 cal/serving · 38g protein · 4g fiber (est.)"
+  },
+  "heroImage": "/images/golden-100/sheet-pan-chicken-fajitas-lite.jpg",
+  "mobileImage": "/images/mobile/sheet-pan-chicken-fajitas-lite.jpg",
+  "thumbImage": "/images/thumbs/sheet-pan-chicken-fajitas-lite.jpg",
+  "railImage": "/images/rails/sheet-pan-chicken-fajitas-lite.jpg",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "sheet pan chicken fajitas lite",
+    "chicken",
+    "Mexican",
+    "sheet pan",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "lemon-garlic-chicken-tray",
+    "herb-baked-salmon-tray",
+    "honey-garlic-chicken-rice-bowls",
+    "white-bean-chicken-chili",
+    "crock-barbacoa-chicken",
+    "shawarma-chicken-rice-bowls"
+  ],
+  "generatedAt": "2026-05-28T12:57:50.893Z",
+  "contentVersion": 2
+}

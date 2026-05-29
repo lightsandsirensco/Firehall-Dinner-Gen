@@ -7,6 +7,7 @@
 
 
 import type { ImageStylePresetId } from "./image-style-presets.js";
+import type { PlatingType } from "./plating-type.js";
 
 import {
 
@@ -24,7 +25,7 @@ import { buildSocialPackStub, type EditorialSocialPack } from "./editorial-image
 
 
 
-export const EDITORIAL_IMAGE_SCHEMA_VERSION = 2 as const;
+export const EDITORIAL_IMAGE_SCHEMA_VERSION = 3 as const;
 
 
 
@@ -83,6 +84,24 @@ export interface EditorialImageMetadata {
   /** Future social exports (metadata only) */
 
   social?: EditorialSocialPack;
+
+  /** Subject lock — recipe identity bound to hero assets */
+
+  lockedTitle?: string;
+
+  lockedCuisine?: string;
+
+  lockedMealFormat?: string;
+
+  platingType?: PlatingType;
+
+  subjectLockVersion?: number;
+
+  /** 0–100 unified integrity score */
+
+  imageIntegrityScore?: number;
+
+  integrityFlags?: string[];
 
 }
 
@@ -269,6 +288,22 @@ export function parseEditorialImageMetadata(raw: unknown): EditorialImageMetadat
         ? (o.social as EditorialSocialPack)
 
         : undefined,
+
+    lockedTitle: o.lockedTitle != null ? String(o.lockedTitle) : undefined,
+
+    lockedCuisine: o.lockedCuisine != null ? String(o.lockedCuisine) : undefined,
+
+    lockedMealFormat: o.lockedMealFormat != null ? String(o.lockedMealFormat) : undefined,
+
+    platingType: o.platingType != null ? (String(o.platingType) as PlatingType) : undefined,
+
+    subjectLockVersion: o.subjectLockVersion != null ? Number(o.subjectLockVersion) : undefined,
+
+    imageIntegrityScore:
+
+      o.imageIntegrityScore != null ? Number(o.imageIntegrityScore) : undefined,
+
+    integrityFlags: Array.isArray(o.integrityFlags) ? o.integrityFlags.map(String) : undefined,
 
   };
 

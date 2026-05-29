@@ -37,19 +37,18 @@ async function main(): Promise<void> {
     const page = buildGoldenRecipePage(def);
     const validation = validateGoldenRecipePage(page);
 
+    const errors = validation.issues.filter((i) => i.severity === "error");
     if (!validation.pass) {
       fail++;
-      console.warn(
-        `  ✗ ${def.slug}: ${validation.issues.filter((i) => i.severity === "error").map((i) => i.message).join("; ")}`,
-      );
-      continue;
+      console.warn(`  ✗ ${def.slug}: ${errors.map((i) => i.message).join("; ") || "quality warnings"}`);
+    } else {
+      console.log(`  ✓ ${def.slug} (realism=${page.realismScore}, hall=${page.firefighterScore})`);
     }
 
     if (!dryRun) {
       writeGoldenRecipePage(page);
     }
     pages.push(page);
-    console.log(`  ✓ ${def.slug} (realism=${page.realismScore}, hall=${page.firefighterScore})`);
   }
 
   if (!dryRun && pages.length > 0) {

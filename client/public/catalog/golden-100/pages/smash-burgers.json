@@ -1,11 +1,15 @@
 {
   "slug": "smash-burgers",
   "title": "Double Smash Burgers",
+  "displayTitle": "Double Smash Burgers",
+  "seoTitle": "Double Smash Burgers | Firefighter Meal",
+  "shortDescription": "Crispy edges, melty cheese, crew-approved",
   "subtitle": "Crispy edges, melty cheese, crew-approved",
   "category": "firehall_classics",
   "cuisine": "american",
-  "description": "Crew Favorite · Comfort Food · Diner griddle night · Feeds 8+",
+  "description": "Crispy edges, melty cheese, crew-approved",
   "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 50,
   "prepTime": 25,
   "difficulty": "medium",
@@ -33,172 +37,98 @@
       "name": "Ground beef (80/20)",
       "quantity": "3",
       "unit": "lb",
-      "notes": "3 lb Ground beef (80/20)"
+      "group": "Main"
     },
     {
-      "name": "Potato slider/burger buns",
+      "name": "Potato burger buns",
       "quantity": "8",
-      "notes": "8 Potato slider/burger buns"
+      "unit": "count",
+      "group": "Buns"
     },
     {
       "name": "American cheese slices",
       "quantity": "16",
-      "notes": "16 American cheese slices"
+      "unit": "count",
+      "group": "Cheese"
     },
     {
-      "name": "Yellow onions",
-      "quantity": "3",
+      "name": "Yellow onion, thinly sliced",
+      "quantity": "2",
       "unit": "large",
-      "notes": "3 large Yellow onions"
-    },
-    {
-      "name": "Unsalted butter",
-      "quantity": "6",
-      "unit": "tbsp",
-      "notes": "6 tbsp Unsalted butter"
-    },
-    {
-      "name": "Mayonnaise",
-      "quantity": "0.5",
-      "unit": "cup",
-      "notes": "0.5 cup Mayonnaise"
-    },
-    {
-      "name": "Ketchup",
-      "quantity": "3",
-      "unit": "tbsp",
-      "notes": "3 tbsp Ketchup"
-    },
-    {
-      "name": "Yellow mustard",
-      "quantity": "2",
-      "unit": "tbsp",
-      "notes": "2 tbsp Yellow mustard"
-    },
-    {
-      "name": "Dill pickle relish",
-      "quantity": "2",
-      "unit": "tbsp",
-      "notes": "2 tbsp Dill pickle relish"
-    },
-    {
-      "name": "Worcestershire sauce",
-      "quantity": "1",
-      "unit": "tsp",
-      "notes": "1 tsp Worcestershire sauce"
-    },
-    {
-      "name": "Garlic powder",
-      "quantity": "0.5",
-      "unit": "tsp",
-      "notes": "0.5 tsp Garlic powder"
-    },
-    {
-      "name": "Smoked paprika",
-      "quantity": "0.5",
-      "unit": "tsp",
-      "notes": "0.5 tsp Smoked paprika"
-    },
-    {
-      "name": "Iceberg lettuce",
-      "quantity": "1",
-      "unit": "head",
-      "notes": "1 head Iceberg lettuce"
+      "group": "Toppings"
     },
     {
       "name": "Dill pickle chips",
       "quantity": "2",
       "unit": "cups",
-      "notes": "2 cups Dill pickle chips"
+      "group": "Toppings"
     },
     {
-      "name": "Bacon (optional)",
-      "quantity": "16",
-      "unit": "strips",
-      "notes": "16 strips Bacon (optional)"
-    },
-    {
-      "name": "Frozen crinkle or diner fries",
+      "name": "Unsalted butter",
       "quantity": "4",
-      "unit": "lb",
-      "notes": "4 lb Frozen crinkle or diner fries"
-    },
-    {
-      "name": "Neutral high-heat oil",
-      "quantity": "2",
       "unit": "tbsp",
-      "notes": "2 tbsp Neutral high-heat oil"
+      "notes": "for buns",
+      "group": "Garlic butter"
     },
     {
-      "name": "Kosher salt & black pepper",
+      "name": "Mayonnaise",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Sauce"
+    },
+    {
+      "name": "Yellow mustard",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "Ketchup",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "Black pepper, freshly cracked",
       "quantity": "1",
-      "unit": "set",
-      "notes": "1 set Kosher salt & black pepper"
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Olive oil",
+      "quantity": "0.3",
+      "unit": "cup",
+      "group": "Aromatics"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Step 1",
-      "instruction": "Make dirty sauce (no heat, 5 min): Whisk mayo, ketchup, mustard, relish, Worcestershire, garlic powder, and smoked paprika until creamy and pink-tan. Dirty sauce should taste tangy-savory-sweet — not plain mayo. Hold refrigerated until service; room-temp sauce on hot burgers is fine, but don't water it down.",
-      "minutes": 5,
+      "title": "Mix sauce & prep",
+      "instruction": "Stir mayo, mustard, and ketchup into a quick burger sauce. Slice onions paper-thin. Split buns. Form beef into loose balls (about 3 oz each) — don't pack tight or burgers steam instead of crisp.",
+      "minutes": 15,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Step 2",
-      "instruction": "Caramelize onions (medium-low, 25–30 min): Slice onions into thin half-moons. Melt butter in a wide pan over medium-low — gentle heat is the secret (high heat burns before sweet). Stir every 3–4 minutes until onions turn jammy, mahogany, and smell like candy (25–30 min). They should melt when pressed, not hold crunch. Season lightly with salt. Common mistake: rushing — pale onions taste sharp, not diner-sweet.",
-      "minutes": 28,
+      "title": "Smash on the flat-top",
+      "instruction": "Heat griddle or cast iron over high until smoking. Ball down, smash immediately with a stiff spatula into a thin patty. Season with salt. Cook 2 minutes until edges lace and brown. Flip, add cheese, stack if doing doubles. Toast buns in leftover fat.",
+      "minutes": 8,
       "heatLevel": "high"
     },
     {
       "stepNumber": 3,
-      "title": "Step 3",
-      "instruction": "Prep & portion beef (no heat, 10 min): Divide beef into 2.5–3 oz loose balls per patty (16 balls for 8 double stacks). Do not pack tight — air pockets help the smash spread. Chill until smash time if kitchen is warm; cold fat renders into crispy edges. Shred iceberg fine; drain pickle chips on paper towels so buns don't sog.",
-      "minutes": 10,
+      "title": "Stack the burgers",
+      "instruction": "Bottom bun → sauce → pickles → patty with melted cheese → onions → top bun. Serve within 2 minutes — smash burgers lose their crisp edge fast. Run a sheet-tray line, not individual plating.",
+      "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 4,
-      "title": "Step 4",
-      "instruction": "Toast potato buns (medium, 4 min): Butter cut sides of potato buns generously. Toast on griddle or skillet until edges are golden and centers still soft — you want a glossy, buttery shell that won't dissolve under sauce. Toast just before smashing so buns stay warm. Stack cut-side up on a sheet pan.",
-      "minutes": 4,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 5,
-      "title": "Step 5",
-      "instruction": "Smash first patty — crust formation (high, 2 min): Heat cast iron or flat griddle until a water droplet dances and evaporates in 2 seconds — that's smash heat. Oil lightly. Place a beef ball, immediately smash flat with a stiff spatula (use parchment on spatula if it sticks). Press 10 seconds so meat spreads thin with lacy edges creeping past the ball. Season with salt and pepper. Don't move — crust is forming. Cook until edges look deep brown and lacey, top still pink-red, about 90 seconds.",
-      "minutes": 2,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 6,
-      "title": "Step 6",
-      "instruction": "Flip, cheese, stack second patty (high, 2 min): Scrape and flip with confidence — the crust should release cleanly. Lay American cheese on the cooked side immediately; residual heat melts cheese in 30–45 seconds (cheese should drape, not sit solid). Add a fresh beef ball on the cheese, smash again, season, and cook second crust 90 seconds. Flip once more, add second cheese slice, and stack both patties cheese-side-in so you get a molten core. Timing matters: cheese goes on the hot face right after flip, not before — otherwise it oils out.",
-      "minutes": 2,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 7,
-      "title": "Step 7",
-      "instruction": "Optional bacon (medium, 8 min): Lay bacon in cold pan, turn to medium, cook until shatter-crisp. Blot on towels — wet bacon steams the bun. Hold warm; add only at assembly so it stays crisp.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "Step 8",
-      "instruction": "Bake diner fries (425°F, 22 min): Spread fries in a single layer — crowded pans steam instead of crisp. Bake until deeply golden with audible crunch when shaken. Season with salt immediately out of the oven (hot fat grabs seasoning). Hold in warm oven with door cracked.",
-      "minutes": 22,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 9,
-      "title": "Step 9",
-      "instruction": "Assembly order (no heat, 3 min each): Bottom bun → dirty sauce → shredded lettuce (barrier against juice) → pickles → double stack (cheese melted between patties) → spoon of caramelized onions → optional bacon → more dirty sauce on top bun → crown. Press lightly so stack sets. Serve within 2 minutes — smash burgers lose their crisp edge fast. Crew eats open-faced at the line if stacks are tall.",
-      "minutes": 3,
-      "heatLevel": ""
+      "title": "Hold the batch",
+      "instruction": "Keep finished burgers on a rack in a 200°F oven up to 8 minutes. Wipe the griddle between batches so fat does not burn the next round.",
+      "minutes": 5,
+      "heatLevel": "low"
     }
   ],
   "proTips": [
@@ -218,6 +148,10 @@
     "Label trays with date and reheat to 165°F minimum before second shift.",
     "Store components separate — assemble fresh; buns go soggy overnight."
   ],
+  "whyCrewsLikeIt": "Crispy edges, melty cheese, crew-approved",
+  "substitutions": [],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
   "nutrition": {
     "calories": 780,
     "protein": 42,
@@ -250,9 +184,9 @@
     "hall-taco-bar",
     "meatball-hoagies"
   ],
-  "sourceName": "Firehall Classics",
+  "sourceName": "Serious Eats",
   "sourceUrl": "",
   "classicSlug": "smash-burgers",
-  "generatedAt": "2026-05-27T15:03:06.109Z",
-  "contentVersion": 1
+  "generatedAt": "2026-05-28T12:06:14.941Z",
+  "contentVersion": 2
 }

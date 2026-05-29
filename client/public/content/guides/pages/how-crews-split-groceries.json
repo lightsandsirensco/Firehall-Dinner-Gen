@@ -1,0 +1,70 @@
+{
+  "slug": "how-crews-split-groceries",
+  "title": "How Crews Split Groceries",
+  "subtitle": "Fair splits without spreadsheet wars",
+  "description": "How firefighter crews split grocery costs for station dinners: apps, receipts, rotation, and simple rules that keep dinner from becoming politics.",
+  "topic": "station_lifestyle",
+  "pillar": "station_lifestyle",
+  "intro": "Someone always pays first. The question is whether they get paid back before payday. Crews that split groceries cleanly cook more often; crews that 'figure it out later' order pizza. A simple system beats a perfect one.",
+  "sections": [
+    {
+      "id": "math",
+      "heading": "Simple math",
+      "paragraphs": [
+        "Total ÷ eaters = share. Round up a dollar for staples (oil, salt, foil) that stay at the hall."
+      ]
+    },
+    {
+      "id": "tools",
+      "heading": "Tools that prevent drama",
+      "paragraphs": [
+        "A shared payment app, one hall card, or a weekly cash float — pick one and stick with it. Mixed personal tabs are where grocery splits die."
+      ]
+    }
+  ],
+  "practicalAdvice": [
+    "One receipt per shop — photo it to the group chat immediately.",
+    "Split by eaters on duty, not by seniority.",
+    "Rotate who shops — spreads labor and catches price drift.",
+    "Keep a hall card or Venmo dedicated to food — not mixed with personal tabs."
+  ],
+  "mealRecommendations": [
+    {
+      "slug": "turkey-chili",
+      "title": "High-Protein Turkey Chili",
+      "blurb": "Budget-friendly batch."
+    },
+    {
+      "slug": "hall-taco-bar",
+      "title": "Hall Taco Bar Night",
+      "blurb": "Predictable cost per person."
+    },
+    {
+      "slug": "big-chili",
+      "title": "Hall-Sized Beef and Bean Chili",
+      "blurb": "Stretches ground beef with beans."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Where do these recipes come from?",
+      "answer": "Each link goes to a full recipe on Firehall Meals — crew-sized portions, station timing, and steps written for a shared kitchen. Not home-blog scaling."
+    },
+    {
+      "question": "What if crew size or time changes tonight?",
+      "answer": "Use Find a Meal with your headcount and minutes available. It pulls from the same hall-tested dinners these guides recommend."
+    }
+  ],
+  "relatedArticleSlugs": [
+    "firehall-grocery-planning",
+    "avoid-living-on-takeout"
+  ],
+  "keywords": [
+    "fire station groceries",
+    "crew grocery split",
+    "firehall food budget"
+  ],
+  "publishedAt": "2026-05-27T18:00:00.000Z",
+  "updatedAt": "2026-05-27T18:00:00.000Z",
+  "readMinutes": 7
+}

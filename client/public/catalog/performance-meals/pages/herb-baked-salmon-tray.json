@@ -1,0 +1,180 @@
+{
+  "slug": "herb-baked-salmon-tray",
+  "title": "Herb-Crusted Baked Salmon Tray",
+  "displayTitle": "Herb-Crusted Baked Salmon Tray",
+  "seoTitle": "Herb-Crusted Baked Salmon Tray | Firefighter Meal",
+  "shortDescription": "Flaky fillets with dill, parsley, and roasted asparagus for the crew",
+  "subtitle": "Flaky fillets with dill, parsley, and roasted asparagus for the crew",
+  "category": "healthy_performance",
+  "cuisine": "American",
+  "description": "Salmon fillets bake on a sheet with a fresh herb crust, lemon, and asparagus spears. Designed for quick portioning and gentle hold in a low oven.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 18,
+  "prepTime": 15,
+  "difficulty": "easy",
+  "calories": 390,
+  "protein": 38,
+  "carbs": 6,
+  "fats": 24,
+  "tags": [
+    "protein:salmon",
+    "format:sheet_pan",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "Half-sheet pans",
+    "Parchment paper",
+    "Fish spatula"
+  ],
+  "ingredients": [
+    {
+      "name": "salmon fillets",
+      "quantity": "4",
+      "unit": "lb",
+      "notes": "skin-on, 6–8 oz portions"
+    },
+    {
+      "name": "asparagus spears",
+      "quantity": "2",
+      "unit": "lb",
+      "notes": "woody ends trimmed"
+    },
+    {
+      "name": "fresh dill",
+      "quantity": "0.5",
+      "unit": "cup",
+      "notes": "chopped"
+    },
+    {
+      "name": "fresh parsley",
+      "quantity": "0.5",
+      "unit": "cup",
+      "notes": "chopped"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "6",
+      "unit": "cloves",
+      "notes": "minced"
+    },
+    {
+      "name": "lemon",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "zested and sliced"
+    },
+    {
+      "name": "extra-virgin olive oil",
+      "quantity": "0.25",
+      "unit": "cup"
+    },
+    {
+      "name": "Dijon mustard",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "1.5",
+      "unit": "tbsp"
+    },
+    {
+      "name": "black pepper",
+      "quantity": "1",
+      "unit": "tsp"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Preheat and prep asparagus",
+      "instruction": "Heat oven to 400°F. Toss asparagus with 1 tbsp olive oil and a pinch of salt until spears look lightly coated, not dripping.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Make herb crust paste",
+      "instruction": "Combine dill, parsley, garlic, lemon zest, Dijon, remaining olive oil, salt, and pepper into a thick paste that clings to fish.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Season salmon fillets",
+      "instruction": "Pat salmon dry. Spread herb paste evenly on flesh side of each fillet, pressing gently so it adheres during baking.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Bake until just opaque",
+      "instruction": "Place salmon on parchment-lined pans with asparagus alongside. Bake 12–16 minutes until thickest part reads 125–130°F and flakes with gentle pressure.",
+      "minutes": 16,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Finish with lemon and rest",
+      "instruction": "Top with lemon slices, rest 3 minutes off heat. Flesh should look opaque pink at center, not chalky or gray throughout.",
+      "minutes": 3,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Pull salmon 5°F early—it keeps cooking on the hot tray during rest.",
+    "Buy center-cut fillets of similar thickness so nothing overcooks while waiting on thick pieces.",
+    "Wipe pans immediately after service; baked-on herb crust comes off easier when warm."
+  ],
+  "tonightSpread": [
+    "Farro or brown rice pilaf with toasted almonds.",
+    "Cucumber-dill yogurt sauce for spooning over salmon."
+  ],
+  "leftovers": [
+    "Flake cold salmon into a green salad with capers and red onion.",
+    "Salmon cakes next shift: mix flakes with egg, panko, and herbs, pan-sear until crisp."
+  ],
+  "whyCrewsLikeIt": "Lean protein that feels like a treat. Cooks fast after calls and does not leave the kitchen smelling like fried fish.",
+  "mealPrepNotes": "Pat fillets dry ahead and keep chilled. Mix herb topping in a squeeze bottle for fast application before baking. Station: Space fillets 2 inches apart so heat circulates and edges stay tender, not rubbery. Station: Use a fish spatula at the line to keep fillets intact during portioning. Station: Hold finished salmon at 150°F max—higher heat dries omega-3-rich fillets quickly.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 390,
+    "protein": 38,
+    "carbs": 6,
+    "fats": 24,
+    "label": "~390 cal/serving · 38g protein · 3g fiber (est.)"
+  },
+  "heroImage": "/images/golden-100/herb-baked-salmon-tray.jpg",
+  "mobileImage": "/images/mobile/herb-baked-salmon-tray.jpg",
+  "thumbImage": "/images/thumbs/herb-baked-salmon-tray.jpg",
+  "railImage": "/images/rails/herb-baked-salmon-tray.jpg",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "herb-crusted baked salmon tray",
+    "herb baked salmon tray",
+    "salmon",
+    "American",
+    "sheet pan",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "lemon-garlic-chicken-tray",
+    "sheet-pan-chicken-fajitas-lite",
+    "honey-lime-chicken-tray",
+    "maple-soy-salmon-bowls",
+    "mediterranean-baked-fish-tray",
+    "moroccan-chicken-chickpea-tray"
+  ],
+  "generatedAt": "2026-05-28T12:57:50.893Z",
+  "contentVersion": 2
+}

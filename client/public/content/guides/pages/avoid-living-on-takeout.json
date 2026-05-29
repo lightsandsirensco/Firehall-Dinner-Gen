@@ -1,0 +1,74 @@
+{
+  "slug": "avoid-living-on-takeout",
+  "title": "How Firefighters Can Avoid Living on Takeout",
+  "subtitle": "Station cooking beats delivery — when the system supports it",
+  "description": "Practical ways firefighter crews cut takeout dependence: batch cooking, grocery splits, fast hall formats, and meals cheaper than delivery for eight.",
+  "topic": "nutrition_performance",
+  "pillar": "nutrition_performance",
+  "intro": "Takeout is easy when the board is loud and nobody planned dinner. The fix is not willpower — it is a hall system: a default fast meal, a shared grocery run, and cooks who know three reliable formats. When station food is credible, delivery stops being the nightly fallback.",
+  "sections": [
+    {
+      "id": "system",
+      "heading": "Systems beat motivation",
+      "paragraphs": [
+        "A whiteboard dinner plan and a stocked pantry matter more than recipe ambition. Crews that cook twice a week break the takeout habit."
+      ]
+    },
+    {
+      "id": "fallback",
+      "heading": "The fallback meal list",
+      "paragraphs": [
+        "Post three dinners the hall can cook in under forty-five minutes. When the board goes loud, you pick from the list — not from a delivery app."
+      ]
+    }
+  ],
+  "practicalAdvice": [
+    "Keep one 'always possible' dinner: taco bar, chili, sheet pan — under 45 minutes.",
+    "Split grocery costs weekly — takeout is expensive at crew scale.",
+    "Assign a cook before 17:00 — ambiguity becomes pizza."
+  ],
+  "mealRecommendations": [
+    {
+      "slug": "hall-taco-bar",
+      "title": "Hall Taco Bar Night",
+      "blurb": "Cheaper than eight delivered burritos."
+    },
+    {
+      "slug": "sheet-pan-fajitas",
+      "title": "Sheet Pan Chicken Fajitas",
+      "blurb": "One pan — minimal cleanup."
+    },
+    {
+      "slug": "one-pot-chicken-rice",
+      "title": "One-Pot Chicken and Rice",
+      "blurb": "Pantry-friendly crew dinner."
+    },
+    {
+      "slug": "chili-garlic-bread",
+      "title": "Firehall Chili",
+      "blurb": "Batch beats delivery buckets."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is this medical advice?",
+      "answer": "No. This is practical shift nutrition for station kitchens. Follow your department's health guidance and consult professionals for personal medical questions."
+    },
+    {
+      "question": "Where do these recipes come from?",
+      "answer": "Each link goes to a full recipe on Firehall Meals — crew-sized portions, station timing, and steps written for a shared kitchen. Not home-blog scaling."
+    }
+  ],
+  "relatedArticleSlugs": [
+    "planning-tonights-station-dinner",
+    "firehall-grocery-planning"
+  ],
+  "keywords": [
+    "firefighter meal planning",
+    "station cooking vs takeout",
+    "firehall groceries"
+  ],
+  "publishedAt": "2026-05-27T18:00:00.000Z",
+  "updatedAt": "2026-05-27T18:00:00.000Z",
+  "readMinutes": 7
+}

@@ -1,0 +1,189 @@
+{
+  "slug": "maple-soy-salmon-bowls",
+  "title": "Maple Soy Salmon Bowls",
+  "displayTitle": "Maple Soy Salmon Bowls",
+  "seoTitle": "Maple Soy Salmon Bowls | Firefighter Meal",
+  "shortDescription": "Glazed salmon over brown rice with edamame and shredded carrot",
+  "subtitle": "Glazed salmon over brown rice with edamame and shredded carrot",
+  "category": "healthy_performance",
+  "cuisine": "Asian-American",
+  "description": "Salmon fillets roast with maple-soy glaze, served over brown rice with shelled edamame, shredded carrot, and sliced scallions.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 18,
+  "prepTime": 20,
+  "difficulty": "medium",
+  "calories": 495,
+  "protein": 36,
+  "carbs": 52,
+  "fats": 16,
+  "tags": [
+    "protein:salmon",
+    "format:bowl",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "Half-sheet pans",
+    "Rice cooker or large pot"
+  ],
+  "ingredients": [
+    {
+      "name": "salmon fillets",
+      "quantity": "4",
+      "unit": "lb",
+      "notes": "skin-on, 6 oz portions"
+    },
+    {
+      "name": "brown rice",
+      "quantity": "3",
+      "unit": "cups",
+      "notes": "uncooked"
+    },
+    {
+      "name": "shelled edamame",
+      "quantity": "3",
+      "unit": "cups",
+      "notes": "thawed if frozen"
+    },
+    {
+      "name": "carrots",
+      "quantity": "3",
+      "unit": "whole",
+      "notes": "shredded"
+    },
+    {
+      "name": "maple syrup",
+      "quantity": "0.25",
+      "unit": "cup"
+    },
+    {
+      "name": "low-sodium soy sauce",
+      "quantity": "0.25",
+      "unit": "cup"
+    },
+    {
+      "name": "rice vinegar",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "4",
+      "unit": "cloves",
+      "notes": "minced"
+    },
+    {
+      "name": "fresh ginger",
+      "quantity": "1",
+      "unit": "tbsp",
+      "notes": "grated"
+    },
+    {
+      "name": "sesame oil",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "green onions",
+      "quantity": "6",
+      "unit": "whole",
+      "notes": "sliced"
+    },
+    {
+      "name": "toasted sesame seeds",
+      "quantity": "2",
+      "unit": "tbsp"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Cook brown rice",
+      "instruction": "Simmer brown rice until tender and chewy, about 35–40 minutes. Fluff with fork so grains stay separate, not mashed or sticky.",
+      "minutes": 40,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Mix maple soy glaze",
+      "instruction": "Whisk maple syrup, soy sauce, vinegar, garlic, ginger, and 1 tbsp sesame oil until combined and slightly thickened.",
+      "minutes": 3,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Roast salmon",
+      "instruction": "Place salmon on parchment-lined pans. Brush half the glaze. Bake at 400°F 12–14 minutes, brush again, finish 2–4 minutes until 125–130°F at center.",
+      "minutes": 16,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Warm edamame",
+      "instruction": "Steam or microwave edamame 2–3 minutes until bright green and heated through. Toss with pinch of salt and remaining sesame oil.",
+      "minutes": 3,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Assemble bowls",
+      "instruction": "Flake or slice salmon over rice with edamame and carrot. Drizzle extra glaze, top with scallions and sesame seeds.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Do not overcook salmon—it keeps cooking on hot rice during assembly.",
+    "Use real maple syrup; pancake syrup burns faster and tastes flat.",
+    "Offer sriracha mayo for crews who want creamy heat."
+  ],
+  "tonightSpread": [
+    "Miso soup in cups.",
+    "Seaweed salad from the store if available."
+  ],
+  "leftovers": [
+    "Salmon flaked into a grain salad with extra edamame.",
+    "Cold salmon on greens with ginger dressing next shift."
+  ],
+  "whyCrewsLikeIt": "Brain food after a long shift. Balanced macros in a bowl that looks as good as it tastes.",
+  "mealPrepNotes": "Cook brown rice ahead—it takes longer than white. Mix glaze in advance. Station: Roast salmon on parchment for easy release and quick pan cleanup. Station: Keep edamame warm in a small hotel pan separate from rice to avoid sogginess. Station: Glaze salmon twice—mid-cook and final 2 minutes—for shiny lacquered finish.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 495,
+    "protein": 36,
+    "carbs": 52,
+    "fats": 16,
+    "label": "~495 cal/serving · 36g protein · 5g fiber (est.)"
+  },
+  "heroImage": "/images/golden-100/maple-soy-salmon-bowls.jpg",
+  "mobileImage": "/images/mobile/maple-soy-salmon-bowls.jpg",
+  "thumbImage": "/images/thumbs/maple-soy-salmon-bowls.jpg",
+  "railImage": "/images/rails/maple-soy-salmon-bowls.jpg",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "maple soy salmon bowls",
+    "salmon",
+    "Asian-American",
+    "bowl",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "herb-baked-salmon-tray",
+    "honey-garlic-chicken-rice-bowls",
+    "korean-beef-rice-bowls",
+    "shawarma-chicken-rice-bowls",
+    "tabbouleh-chicken-bowls",
+    "lemon-salmon-orzo-skillet"
+  ],
+  "generatedAt": "2026-05-28T12:57:50.893Z",
+  "contentVersion": 2
+}

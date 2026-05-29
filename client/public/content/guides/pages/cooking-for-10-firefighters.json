@@ -1,0 +1,101 @@
+{
+  "slug": "cooking-for-10-firefighters",
+  "title": "Cooking for 10 Firefighters",
+  "subtitle": "Portion math, line setup, and recipes that scale without chaos",
+  "description": "A practical guide to cooking for 10 firefighters: pick the right format, scale ingredients, and use hall-tested recipes built for volume and hold time.",
+  "topic": "station_cooking",
+  "pillar": "operations_how_to",
+  "intro": "Cooking for ten is not just doubling a recipe. It is choosing a format that scales, buying the right quantities, and setting up service so dinner does not turn into a traffic jam. The best meals for ten firefighters are forgiving: big pots, trays, and build-your-own lines that stay hot when the board interrupts everything.",
+  "sections": [
+    {
+      "id": "choose-format",
+      "heading": "Pick the right format first",
+      "paragraphs": [
+        "For ten people, formats beat fancy menus. Big pot (chili, soup), tray bake (ziti, lasagna), and bar night (tacos, loaded potatoes) are the station defaults because they survive interruptions.",
+        "Avoid anything that needs precise batch timing in small pans. If it requires eight separate finish steps, it will fail when the tones drop."
+      ],
+      "tips": [
+        "If you can hold it on low heat for 30–60 minutes, it is a good choice for ten.",
+        "If everyone can build their own plate, you just solved picky eaters and portion differences."
+      ]
+    },
+    {
+      "id": "portion-math",
+      "heading": "Portion math crews actually use",
+      "paragraphs": [
+        "Protein disappears first. Plan protein for ten, then backfill with starch and a cooked vegetable or salad. If you are short, the meal feels light no matter how many sides you make.",
+        "The fastest way to keep portions fair is to run a line: protein first, then starch, then toppings. People pace themselves when the order is consistent."
+      ]
+    },
+    {
+      "id": "service-and-hold",
+      "heading": "Service flow and hold time",
+      "paragraphs": [
+        "Ten people rarely sit down at the exact same minute. Plan for staggered eating: a pot on low, an oven on warm, or covered trays. Dinner should still be good after the second run comes back.",
+        "Label one tray \"late eaters\" and keep it covered in a warm oven. You will prevent the pan-picking that makes a meal look wrecked."
+      ]
+    }
+  ],
+  "practicalAdvice": [
+    "Start the cook with the hold plan: where does the food live if the tones drop?",
+    "Scale protein first. The rest of the plate is easier to stretch.",
+    "Use trays and sheet pans for sides. Keep the stove for the main.",
+    "Run a line when possible: protein first, then starch, then toppings."
+  ],
+  "mealRecommendations": [
+    {
+      "slug": "big-chili",
+      "title": "Hall-Sized Beef and Bean Chili",
+      "blurb": "A true big-crew feeder that holds hot and improves over the shift."
+    },
+    {
+      "slug": "baked-ziti",
+      "title": "Baked Ziti",
+      "blurb": "Tray-format, easy to portion, and rookie-proof once it is in the oven."
+    },
+    {
+      "slug": "batch-lasagna",
+      "title": "Batch Lasagna",
+      "blurb": "Comfort-night volume with a clean service line."
+    },
+    {
+      "slug": "hall-taco-bar",
+      "title": "Hall Taco Bar Night",
+      "blurb": "Build-your-own solves preferences and keeps the kitchen from getting crowded."
+    },
+    {
+      "slug": "loaded-baked-potato-bar",
+      "title": "Loaded Baked Potato Bar",
+      "blurb": "Cheap to scale, filling, and the topping line keeps plates consistent."
+    },
+    {
+      "slug": "pulled-pork",
+      "title": "Pulled Pork",
+      "blurb": "Hold food for busy boards — serve as sandwiches or bowls."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Where do these recipes come from?",
+      "answer": "Each link goes to a full recipe on Firehall Meals — crew-sized portions, station timing, and steps written for a shared kitchen. Not home-blog scaling."
+    },
+    {
+      "question": "What if crew size or time changes tonight?",
+      "answer": "Use Find a Meal with your headcount and minutes available. It pulls from the same hall-tested dinners these guides recommend."
+    }
+  ],
+  "relatedArticleSlugs": [
+    "feeding-a-firehall-crew",
+    "best-firehouse-meals-large-crews",
+    "meals-feeding-10-firefighters"
+  ],
+  "keywords": [
+    "cooking for 10 firefighters",
+    "feeding a firehall crew",
+    "firehouse meals for large crews",
+    "station cooking"
+  ],
+  "publishedAt": "2026-05-27T18:00:00.000Z",
+  "updatedAt": "2026-05-27T18:00:00.000Z",
+  "readMinutes": 8
+}

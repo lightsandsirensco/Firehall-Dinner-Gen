@@ -1,0 +1,179 @@
+{
+  "slug": "greek-lemon-chicken-potatoes",
+  "title": "Greek Lemon Chicken and Potatoes",
+  "displayTitle": "Greek Lemon Chicken and Potatoes",
+  "seoTitle": "Greek Lemon Chicken and Potatoes | Firefighter Meal",
+  "shortDescription": "Roast chicken thighs with oregano potatoes and pan jus",
+  "subtitle": "Roast chicken thighs with oregano potatoes and pan jus",
+  "category": "healthy_performance",
+  "cuisine": "Greek",
+  "description": "Bone-in chicken thighs roast over lemon-garlic potatoes until golden. Pan juices become the finishing sauce at the line.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 45,
+  "prepTime": 20,
+  "difficulty": "medium",
+  "calories": 520,
+  "protein": 42,
+  "carbs": 38,
+  "fats": 24,
+  "tags": [
+    "protein:chicken",
+    "format:roast",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "Two half-sheet pans",
+    "Instant-read thermometer"
+  ],
+  "ingredients": [
+    {
+      "name": "bone-in chicken thighs",
+      "quantity": "16",
+      "unit": "pieces",
+      "notes": "about 6 lb"
+    },
+    {
+      "name": "Yukon gold potatoes",
+      "quantity": "4",
+      "unit": "lb",
+      "notes": "cut into wedges"
+    },
+    {
+      "name": "lemon",
+      "quantity": "4",
+      "unit": "whole",
+      "notes": "juiced and wedged"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "10",
+      "unit": "cloves",
+      "notes": "smashed"
+    },
+    {
+      "name": "dried oregano",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "extra-virgin olive oil",
+      "quantity": "0.5",
+      "unit": "cup"
+    },
+    {
+      "name": "chicken broth",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "low sodium"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "black pepper",
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "fresh parsley",
+      "quantity": "0.5",
+      "unit": "cup",
+      "notes": "chopped"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Heat oven and season potatoes",
+      "instruction": "Heat oven to 425°F. Toss potato wedges with half the oil, oregano, salt, and pepper until evenly coated and lightly glossy on all sides.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Arrange chicken over potatoes",
+      "instruction": "Nest seasoned chicken thighs skin-side up among potatoes on two half-sheets. Tuck lemon wedges and smashed garlic around the pan.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Roast and baste",
+      "instruction": "Roast 35–40 minutes, basting once with pan juices, until chicken reads 165°F and potato edges turn golden and crisp.",
+      "minutes": 38,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Deglaze pan juices",
+      "instruction": "Transfer chicken to a holding pan. Add broth to sheet pans, scrape browned bits, simmer on stovetop 2 minutes into a thin jus.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Serve with parsley",
+      "instruction": "Portion chicken and potatoes, spoon jus over top. Potatoes should be tender inside with crisp exterior; chicken skin should crackle lightly.",
+      "minutes": 3,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Dry chicken skin thoroughly—moist skin never crisps in a hall oven.",
+    "Add halved cherry tomatoes last 15 minutes for color and acidity.",
+    "Feta crumble at the line adds salt without extra cooking."
+  ],
+  "tonightSpread": [
+    "Horiatiki salad with cucumber and tomato.",
+    "Warm pita bread."
+  ],
+  "leftovers": [
+    "Shred chicken into a lemon-oregano wrap with potatoes.",
+    "Chop potatoes into a breakfast hash with eggs."
+  ],
+  "whyCrewsLikeIt": "Sunday-roast energy on a weeknight. Potatoes soak up chicken fat and lemon for maximum flavor per bite.",
+  "mealPrepNotes": "Par-boil potatoes 8 minutes for extra crisp edges if time allows. Station: Arrange potatoes in a single layer beneath chicken so they fry in rendered fat. Station: Rotate pans and baste chicken with pan juices halfway through roast. Station: Rest tray 5 minutes before portioning so juices redistribute into meat.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 520,
+    "protein": 42,
+    "carbs": 38,
+    "fats": 24,
+    "label": "~520 cal/serving · 42g protein · 4g fiber (est.)"
+  },
+  "heroImage": "/images/golden-100/greek-lemon-chicken-potatoes.jpg",
+  "mobileImage": "/images/mobile/greek-lemon-chicken-potatoes.jpg",
+  "thumbImage": "/images/thumbs/greek-lemon-chicken-potatoes.jpg",
+  "railImage": "/images/rails/greek-lemon-chicken-potatoes.jpg",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "greek lemon chicken and potatoes",
+    "greek lemon chicken potatoes",
+    "chicken",
+    "Greek",
+    "roast",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "lemon-garlic-chicken-tray",
+    "sheet-pan-chicken-fajitas-lite",
+    "honey-garlic-chicken-rice-bowls",
+    "white-bean-chicken-chili",
+    "crock-barbacoa-chicken",
+    "shawarma-chicken-rice-bowls"
+  ],
+  "generatedAt": "2026-05-28T12:57:50.894Z",
+  "contentVersion": 2
+}

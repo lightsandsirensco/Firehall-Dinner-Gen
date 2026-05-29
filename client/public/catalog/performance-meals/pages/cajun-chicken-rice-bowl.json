@@ -1,0 +1,188 @@
+{
+  "slug": "cajun-chicken-rice-bowl",
+  "title": "Cajun Chicken Rice Bowl",
+  "displayTitle": "Cajun Chicken Rice Bowl",
+  "seoTitle": "Cajun Chicken Rice Bowl | Firefighter Meal",
+  "shortDescription": "Blackened chicken thighs over rice with bell pepper and creole spices",
+  "subtitle": "Blackened chicken thighs over rice with bell pepper and creole spices",
+  "category": "healthy_performance",
+  "cuisine": "Cajun",
+  "description": "Cajun-spiced chicken thighs grill or sear until blackened, served over rice with sautéed trinity peppers and a light creole sauce.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 25,
+  "prepTime": 20,
+  "difficulty": "medium",
+  "calories": 495,
+  "protein": 38,
+  "carbs": 52,
+  "fats": 14,
+  "tags": [
+    "protein:chicken",
+    "format:bowl",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "Cast iron skillet",
+    "Rice cooker"
+  ],
+  "ingredients": [
+    {
+      "name": "boneless chicken thighs",
+      "quantity": "4",
+      "unit": "lb"
+    },
+    {
+      "name": "long-grain white rice",
+      "quantity": "3",
+      "unit": "cups",
+      "notes": "uncooked"
+    },
+    {
+      "name": "red bell pepper",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "diced"
+    },
+    {
+      "name": "green bell pepper",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "diced"
+    },
+    {
+      "name": "celery stalks",
+      "quantity": "4",
+      "unit": "whole",
+      "notes": "diced"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "1",
+      "unit": "large",
+      "notes": "diced"
+    },
+    {
+      "name": "smoked paprika",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "garlic powder",
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "onion powder",
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "dried thyme",
+      "quantity": "1",
+      "unit": "tsp"
+    },
+    {
+      "name": "cayenne pepper",
+      "quantity": "1",
+      "unit": "tsp"
+    },
+    {
+      "name": "chicken broth",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "for sauce"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Mix Cajun spice blend",
+      "instruction": "Combine paprika, garlic powder, onion powder, thyme, cayenne, 1 tbsp salt, and 1 tsp pepper until evenly blended and deeply red in color.",
+      "minutes": 3,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Cook rice",
+      "instruction": "Simmer rice in salted water or broth until fluffy grains separate easily with a fork, not sticky, gummy, or wet at the bottom.",
+      "minutes": 20,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Sauté trinity vegetables",
+      "instruction": "Cook onion, bell peppers, and celery in oil over medium 8 minutes until softened and edges lightly caramelized with sweet aroma.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Blacken chicken",
+      "instruction": "Coat thighs generously with Cajun blend. Sear in hot oiled skillet 5–6 minutes per side until dark crust forms and internal temp hits 165°F.",
+      "minutes": 14,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Build bowls",
+      "instruction": "Slice chicken, portion over rice with sautéed trinity. Deglaze pan with broth for light sauce drizzle. Chicken should be juicy inside, charred outside.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Reduce cayenne for mild crews—offer Louisiana hot sauce at the line.",
+    "Cast iron delivers best blackening crust on flat-top or range.",
+    "Andouille sausage slices optional for extra smoky depth."
+  ],
+  "tonightSpread": [
+    "Cornbread muffins.",
+    "Collard greens sautéed with garlic."
+  ],
+  "leftovers": [
+    "Cajun chicken salad over romaine with ranch.",
+    "Slice into wraps with remoulade-style mayo."
+  ],
+  "whyCrewsLikeIt": "Big flavor wake-up after bland meal weeks. Bowl format handles mixed spice tolerances with hot sauce at the line.",
+  "mealPrepNotes": "Mix Cajun spice in bulk jar. Cook rice while chicken sears. Station: Vent hood on—blackening creates smoke at high heat. Station: Sear chicken in batches for proper crust, not steamed gray meat. Station: Bowl line: rice, chicken, peppers, sauce drizzle, green onion.",
+  "spiceLevel": "hot",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 495,
+    "protein": 38,
+    "carbs": 52,
+    "fats": 14,
+    "label": "~495 cal/serving · 38g protein · 3g fiber (est.)"
+  },
+  "heroImage": "/images/golden-100/cajun-chicken-rice-bowl.jpg",
+  "mobileImage": "/images/mobile/cajun-chicken-rice-bowl.jpg",
+  "thumbImage": "/images/thumbs/cajun-chicken-rice-bowl.jpg",
+  "railImage": "/images/rails/cajun-chicken-rice-bowl.jpg",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "cajun chicken rice bowl",
+    "chicken",
+    "Cajun",
+    "bowl",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "lemon-garlic-chicken-tray",
+    "sheet-pan-chicken-fajitas-lite",
+    "honey-garlic-chicken-rice-bowls",
+    "white-bean-chicken-chili",
+    "korean-beef-rice-bowls",
+    "crock-barbacoa-chicken"
+  ],
+  "generatedAt": "2026-05-28T12:57:50.894Z",
+  "contentVersion": 2
+}

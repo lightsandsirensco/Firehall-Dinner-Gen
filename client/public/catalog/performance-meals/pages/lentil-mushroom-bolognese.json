@@ -1,0 +1,191 @@
+{
+  "slug": "lentil-mushroom-bolognese",
+  "title": "Lentil Mushroom Bolognese",
+  "displayTitle": "Lentil Mushroom Bolognese",
+  "seoTitle": "Lentil Mushroom Bolognese | Firefighter Meal",
+  "shortDescription": "Plant-forward ragu with green lentils, cremini, and whole-wheat pasta",
+  "subtitle": "Plant-forward ragu with green lentils, cremini, and whole-wheat pasta",
+  "category": "healthy_performance",
+  "cuisine": "Italian",
+  "description": "Green lentils and finely chopped mushrooms simmer with tomato, wine, and herbs into a rich bolognese served over whole-wheat spaghetti.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 40,
+  "prepTime": 25,
+  "difficulty": "medium",
+  "calories": 420,
+  "protein": 20,
+  "carbs": 68,
+  "fats": 10,
+  "tags": [
+    "protein:plant",
+    "format:pasta",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "Large stock pot",
+    "Wide sauté pan",
+    "Food processor"
+  ],
+  "ingredients": [
+    {
+      "name": "green lentils",
+      "quantity": "2",
+      "unit": "cups",
+      "notes": "dry, rinsed"
+    },
+    {
+      "name": "cremini mushrooms",
+      "quantity": "2",
+      "unit": "lb",
+      "notes": "finely chopped"
+    },
+    {
+      "name": "whole-wheat spaghetti",
+      "quantity": "2",
+      "unit": "lb"
+    },
+    {
+      "name": "crushed tomatoes",
+      "quantity": "2",
+      "unit": "cans",
+      "notes": "28 oz"
+    },
+    {
+      "name": "tomato paste",
+      "quantity": "3",
+      "unit": "tbsp"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "1",
+      "unit": "large",
+      "notes": "finely diced"
+    },
+    {
+      "name": "carrots",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "finely diced"
+    },
+    {
+      "name": "celery stalks",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "finely diced"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "6",
+      "unit": "cloves",
+      "notes": "minced"
+    },
+    {
+      "name": "dry red wine",
+      "quantity": "1",
+      "unit": "cup"
+    },
+    {
+      "name": "vegetable broth",
+      "quantity": "2",
+      "unit": "cups",
+      "notes": "low sodium"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "3",
+      "unit": "tbsp"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Cook lentils",
+      "instruction": "Simmer lentils in broth 20–25 minutes until tender but holding shape. Drain excess liquid so sauce does not turn watery.",
+      "minutes": 25,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Brown mushrooms",
+      "instruction": "Cook mushrooms in olive oil over high heat in batches 8–10 minutes until deeply browned and moisture evaporates, not gray and wet.",
+      "minutes": 10,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Build soffritto base",
+      "instruction": "Sauté onion, carrot, celery 8 minutes until softened. Add garlic and tomato paste, cook 2 minutes until paste darkens to brick red.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Simmer ragu",
+      "instruction": "Add wine, reduce 3 minutes. Add crushed tomatoes and cooked lentils. Simmer 20 minutes uncovered until thick and spoon-coating.",
+      "minutes": 23,
+      "heatLevel": "medium-low"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Toss with pasta",
+      "instruction": "Boil spaghetti al dente, drain, toss with ragu. Sauce should cling to noodles with visible mushroom and lentil pieces throughout.",
+      "minutes": 12,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "A parmesan rind simmered in sauce adds umami without meat.",
+    "Offer grated parmesan at the line for crew who want extra richness.",
+    "Sauce freezes well—thaw and toss with fresh pasta."
+  ],
+  "tonightSpread": [
+    "Garlic bread from split baguette.",
+    "Simple arugula salad."
+  ],
+  "leftovers": [
+    "Bolognese baked ziti with mozzarella top.",
+    "Lasagna layers with ricotta and sauce."
+  ],
+  "whyCrewsLikeIt": "Meaty texture without meat. Budget-friendly and fiber-rich for crews trying to eat more plants.",
+  "mealPrepNotes": "Pulse mushrooms in food processor for fine crumb texture. Cook lentils separately if using pre-cooked. Station: Brown mushrooms in batches—crowded mushrooms steam instead of caramelize. Station: Simmer sauce wide and uncovered so it reduces to thick ragu consistency. Station: Toss pasta with sauce in largest pot or hotel pan for even coating.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 420,
+    "protein": 20,
+    "carbs": 68,
+    "fats": 10,
+    "label": "~420 cal/serving · 20g protein · 14g fiber (est.)"
+  },
+  "heroImage": "/images/golden-100/lentil-mushroom-bolognese.jpg",
+  "mobileImage": "/images/mobile/lentil-mushroom-bolognese.jpg",
+  "thumbImage": "/images/thumbs/lentil-mushroom-bolognese.jpg",
+  "railImage": "/images/rails/lentil-mushroom-bolognese.jpg",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "lentil mushroom bolognese",
+    "plant",
+    "Italian",
+    "pasta",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "lemon-garlic-shrimp-pasta",
+    "cottage-cheese-protein-pasta",
+    "smoky-lentil-kale-soup",
+    "lemon-salmon-orzo-skillet",
+    "white-bean-kale-soup",
+    "turkey-zoodle-bolognese"
+  ],
+  "generatedAt": "2026-05-28T12:57:50.894Z",
+  "contentVersion": 2
+}

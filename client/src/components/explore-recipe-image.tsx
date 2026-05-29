@@ -3,16 +3,16 @@ import { Flame } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { FoodImage } from "@/components/mobile/food-image";
 import { HERO_SIZES } from "@/lib/hero-image";
-import {
-  exploreImageSrcSet,
-  spoonacularImageUrl,
-  extractRecipeIdFromSpoonacularImage,
-} from "@/lib/explore-recipe";
 import type { ExploreRecipeCard } from "@/lib/explore-recipe";
 import { normalizeMediaUrl } from "@/lib/media-url";
+import { isSoftHeldExploreCard } from "@shared/explore-imagery-status";
+import { ExploreHeldImageryPlaceholder } from "@/components/explore-held-imagery-placeholder";
 
 interface ExploreRecipeImageProps {
-  recipe: Pick<ExploreRecipeCard, "id" | "title" | "image" | "imageAlt">;
+  recipe: Pick<
+    ExploreRecipeCard,
+    "id" | "title" | "image" | "imageAlt" | "imageryStatus" | "heldImageryLabel"
+  >;
   className?: string;
   imgClassName?: string;
   variant?: "card" | "detail";
@@ -32,27 +32,17 @@ export function ExploreRecipeImage({
   priority = false,
   bleed = variant === "detail",
 }: ExploreRecipeImageProps) {
+  const held = isSoftHeldExploreCard(recipe);
+
   const [src, setSrc] = useState(() => normalizeMediaUrl(recipe.image));
   const [failed, setFailed] = useState(false);
-
-  const imageRecipeId =
-    extractRecipeIdFromSpoonacularImage(recipe.image) ??
-    (recipe.image?.includes("spoonacular.com") && recipe.id > 0 && recipe.id < 500_000
-      ? recipe.id
-      : 0);
 
   useEffect(() => {
     setSrc(normalizeMediaUrl(recipe.image));
     setFailed(false);
   }, [recipe.id, recipe.image]);
 
-  const canSpoonacularFallback =
-    imageRecipeId > 0 &&
-    imageRecipeId < 500_000 &&
-    (recipe.image?.includes("spoonacular.com") || !recipe.image);
-  const fallbackSrc = canSpoonacularFallback ? spoonacularImageUrl(imageRecipeId) : "";
-  const srcSet = canSpoonacularFallback ? exploreImageSrcSet(imageRecipeId) : undefined;
-  const showImage = Boolean(src) && !failed;
+  const showImage = Boolean(src) && !failed && !held;
 
   const sizes =
     variant === "detail"
@@ -63,13 +53,20 @@ export function ExploreRecipeImage({
           ? HERO_SIZES.rail
           : HERO_SIZES.grid;
 
-  const overlay = cinematic
-    ? "card-cinematic"
-    : variant === "detail"
-      ? "detail"
-      : "card";
+  const overlay = cinematic ? "card-cinematic" : variant === "detail" ? "detail" : "card";
 
-  const fallback = (
+  if (held) {
+    return (
+      <ExploreHeldImageryPlaceholder
+        label={recipe.heldImageryLabel || "Finalizing"}
+        title={recipe.title}
+        variant={variant}
+        className={className}
+      />
+    );
+  }
+
+  const brokenFallback = (
     <div
       className={cn(
         "relative flex flex-col items-center justify-center gap-2 overflow-hidden bg-gradient-to-br from-zinc-900 to-zinc-950",
@@ -85,7 +82,7 @@ export function ExploreRecipeImage({
   );
 
   if (!showImage) {
-    return fallback;
+    return brokenFallback;
   }
 
   return (
@@ -95,21 +92,18 @@ export function ExploreRecipeImage({
       alt={recipe.imageAlt || recipe.title}
       layout={variant === "detail" ? "detail" : "card-fill"}
       focal="food-plate"
+      fit="cover"
       overlay={overlay}
       cinematicGrade={cinematic || variant === "detail"}
-      srcSet={srcSet}
       sizes={sizes}
       priority={priority}
       bleed={bleed}
       rounded={variant === "detail" ? "none" : "lg"}
       className={cn(variant === "detail" && "sm:rounded-2xl", className)}
       imgClassName={imgClassName}
-      fallback={fallback}
+      fallback={brokenFallback}
+      debugId={{ context: `explore-${variant}`, title: recipe.title, slug: String(recipe.id) }}
       onError={() => {
-        if (fallbackSrc && src !== fallbackSrc) {
-          setSrc(fallbackSrc);
-          return true;
-        }
         setFailed(true);
         return false;
       }}

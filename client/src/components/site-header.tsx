@@ -11,10 +11,27 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
+import { app } from "@/lib/design-tokens";
 import { hapticLight } from "@/lib/haptics";
+import { BRAND_NAME, CTA, NAV } from "@/lib/brand-copy";
+import { LightsAndSirensMobilePanel } from "@/components/brand/lights-and-sirens-mobile-panel";
+import { LightsAndSirensLink } from "@/components/brand/lights-and-sirens-link";
+
+export type SiteHeaderActivePage =
+  | "home"
+  | "generator"
+  | "explore"
+  | "smoothies"
+  | "breakfast"
+  | "performance"
+  | "guides"
+  | "faq"
+  | "wheel"
+  | "pizza"
+  | "favorites";
 
 interface SiteHeaderProps {
-  activePage: "generator" | "pizza" | "explore" | "wheel" | "favorites";
+  activePage: SiteHeaderActivePage;
   favCount?: number;
 }
 
@@ -22,11 +39,12 @@ export function SiteHeader({ activePage, favCount = 0 }: SiteHeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [, navigate] = useLocation();
 
-  const navItems = [
-    { key: "generator" as const, label: "Generator", short: "Gen", href: "/" },
-    { key: "wheel" as const, label: "Classics Wheel", short: "Wheel", href: "/wheel" },
-    { key: "pizza" as const, label: "Pizza Night", short: "Pizza", href: "/pizza" },
-    { key: "explore" as const, label: "Explore", short: "Explore", href: "/explore" },
+  const navItems: Array<{ key: SiteHeaderActivePage; label: string; href: string }> = [
+    { key: "home", label: NAV.home, href: "/" },
+    { key: "generator", label: NAV.generator, href: "/generator" },
+    { key: "explore", label: NAV.explore, href: "/explore" },
+    { key: "wheel", label: NAV.wheel, href: "/wheel" },
+    { key: "guides", label: NAV.ideas, href: "/guides" },
   ];
 
   const go = (href: string) => {
@@ -35,37 +53,54 @@ export function SiteHeader({ activePage, favCount = 0 }: SiteHeaderProps) {
     navigate(href);
   };
 
+  const linkClass = (active: boolean) =>
+    cn(
+      "text-sm font-medium px-3 py-2 rounded-lg min-h-10 inline-flex items-center transition-colors",
+      active
+        ? "text-foreground bg-muted/50"
+        : "text-muted-foreground hover:text-foreground hover:bg-white/[0.04]",
+    );
+
+  const brand = (
+    <>
+      <Flame className="w-5 h-5 sm:w-6 sm:h-6 text-primary transition-transform group-active:scale-95 shrink-0" />
+      <span className="font-heading text-base sm:text-lg leading-none tracking-wide text-foreground whitespace-nowrap">
+        {BRAND_NAME}
+      </span>
+    </>
+  );
+
   return (
     <header
-      className="sticky top-0 z-50 bg-background/80 backdrop-blur-xl border-b border-white/[0.06] pt-safe supports-[backdrop-filter]:bg-background/65"
+      className="sticky top-0 z-50 bg-background/85 backdrop-blur-xl border-b border-border/30 pt-safe"
       data-testid="site-header"
     >
-      <div className="max-w-[1400px] mx-auto px-page">
+      <div className={app.main}>
         <nav
-          className="flex items-center justify-between h-11 sm:h-16 gap-1"
+          className="flex items-center justify-between h-12 sm:h-14 gap-2"
           data-testid="nav-links"
         >
-          <Link href="/" className="flex items-center gap-1.5 shrink-0 group min-h-10 min-w-10" data-testid="nav-logo">
-            <Flame
-              className="w-5 h-5 sm:w-7 sm:h-7 transition-transform duration-200 group-active:scale-95"
-              style={{ color: "#C62828" }}
-            />
-            <span
-              className="font-heading text-base sm:text-[24px] leading-none tracking-wide text-foreground"
-            >
-              <span className="md:hidden">Firehall</span>
-              <span className="hidden md:inline">FIREHALL MEALS</span>
-            </span>
+          <Link
+            href="/"
+            className="flex items-center gap-2 shrink-0 group min-h-10 min-w-0"
+            data-testid="nav-logo"
+          >
+            {brand}
           </Link>
 
-          {/* Desktop nav */}
-          <div className="hidden md:flex items-center gap-1">
+          <div className="hidden lg:flex items-center gap-2 shrink-0 mr-2">
+            <LightsAndSirensLink variant="badge" className="hidden xl:inline-flex">
+              L&amp;S Co.
+            </LightsAndSirensLink>
+          </div>
+
+          <div className="hidden xl:flex items-center gap-0.5 flex-1 justify-center min-w-0">
             {navItems.map((item) => {
               const isActive = activePage === item.key;
               return isActive ? (
                 <span
                   key={item.key}
-                  className="text-[13px] sm:text-[14px] uppercase tracking-wider text-foreground font-semibold px-3 py-2 rounded-md bg-primary/10 border border-primary/20 min-h-10 inline-flex items-center"
+                  className={linkClass(true)}
                   data-testid={`nav-link-${item.key}-active`}
                 >
                   {item.label}
@@ -74,34 +109,36 @@ export function SiteHeader({ activePage, favCount = 0 }: SiteHeaderProps) {
                 <Link
                   key={item.key}
                   href={item.href}
-                  className="text-[13px] sm:text-[14px] uppercase tracking-wider text-muted-foreground font-medium px-3 py-2 rounded-md hover:text-foreground hover:bg-white/[0.04] transition-all duration-200 min-h-10 inline-flex items-center"
+                  className={linkClass(false)}
                   data-testid={`nav-link-${item.key}`}
                 >
                   {item.label}
                 </Link>
               );
             })}
+          </div>
 
+          <div className="hidden md:flex items-center gap-2 shrink-0">
             {activePage === "favorites" ? (
               <span
-                className="text-[13px] uppercase tracking-wider text-foreground font-semibold px-3 py-2 rounded-md bg-primary/10 border border-primary/20 flex items-center gap-1.5 min-h-10"
+                className={cn(linkClass(true), "gap-1.5")}
                 data-testid="nav-link-favorites-active"
               >
                 <Heart className="w-3.5 h-3.5" />
-                Favorites
+                {NAV.saved}
               </span>
             ) : (
               <Link
                 href="/favorites"
-                className="text-[13px] uppercase tracking-wider text-muted-foreground font-medium px-3 py-2 rounded-md hover:text-foreground hover:bg-white/[0.04] transition-all duration-200 flex items-center gap-1.5 min-h-10"
+                className={cn(linkClass(false), "gap-1.5")}
                 data-testid="nav-link-favorites"
               >
                 <Heart className="w-3.5 h-3.5" />
-                Favorites
+                {NAV.saved}
                 {favCount > 0 && (
                   <Badge
                     variant="secondary"
-                    className="text-[9px] px-1.5 py-0 h-4 min-w-[16px] leading-none"
+                    className="text-[10px] px-1.5 py-0 h-4 min-w-[16px] leading-none"
                     data-testid="badge-fav-count"
                   >
                     {favCount}
@@ -110,27 +147,30 @@ export function SiteHeader({ activePage, favCount = 0 }: SiteHeaderProps) {
               </Link>
             )}
 
-            <span className="text-border/40 mx-1 select-none">·</span>
-            <a
-              href="https://www.lightsandsirensco.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[11px] tracking-wide text-muted-foreground/40 hover:text-muted-foreground/70 transition-colors px-1.5 py-1 inline-flex items-center gap-1 whitespace-nowrap"
-              data-testid="nav-link-brand"
-            >
-              <Flame className="w-2.5 h-2.5 shrink-0" style={{ color: "#C62828" }} />
-              Lights & Sirens Co.
-            </a>
+            {activePage !== "generator" && (
+              <Button asChild size="sm" className="font-heading tracking-wide text-xs uppercase">
+                <Link href="/generator" data-testid="nav-cta-generator">
+                  {CTA.findDinner}
+                </Link>
+              </Button>
+            )}
           </div>
 
-          {/* Mobile: favorites + menu */}
-          <div className="flex md:hidden items-center gap-0.5">
+          <div className="flex md:hidden items-center gap-0.5 shrink-0">
+            {activePage !== "generator" && (
+              <Button asChild size="sm" className="h-9 px-3 text-[11px] font-heading uppercase tracking-wide">
+                <Link href="/generator" data-testid="nav-cta-generator-mobile">
+                  {CTA.findDinner}
+                </Link>
+              </Button>
+            )}
+
             {activePage !== "favorites" && (
               <Link
                 href="/favorites"
-                className="relative flex items-center justify-center min-h-11 min-w-11 rounded-lg hover:bg-white/[0.06] active:bg-white/[0.1] touch-manipulation"
+                className="relative flex items-center justify-center min-h-11 min-w-11 rounded-lg hover:bg-muted/40 touch-manipulation"
                 data-testid="nav-link-favorites-mobile"
-                aria-label="Favorites"
+                aria-label="Saved meals"
               >
                 <Heart className="w-5 h-5 text-muted-foreground" />
                 {favCount > 0 && (
@@ -153,10 +193,11 @@ export function SiteHeader({ activePage, favCount = 0 }: SiteHeaderProps) {
                   <Menu className="w-5 h-5" />
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[min(100vw-2rem,320px)] pb-safe scroll-momentum">
+              <SheetContent side="right" className="w-[min(100vw-2rem,300px)] pb-safe scroll-momentum">
                 <SheetHeader>
-                  <SheetTitle className="font-heading text-left tracking-wide text-xl">
-                    Firehall Meals
+                  <SheetTitle className="font-heading text-left text-xl tracking-wide flex items-center gap-2">
+                    <Flame className="w-5 h-5 text-primary" />
+                    {BRAND_NAME}
                   </SheetTitle>
                 </SheetHeader>
                 <nav className="flex flex-col gap-1 mt-6" aria-label="Mobile navigation">
@@ -168,10 +209,10 @@ export function SiteHeader({ activePage, favCount = 0 }: SiteHeaderProps) {
                         type="button"
                         onClick={() => go(item.href)}
                         className={cn(
-                          "w-full text-left rounded-xl px-4 py-3.5 text-sm font-semibold uppercase tracking-wider min-h-[52px] touch-manipulation transition-colors",
+                          "w-full text-left rounded-xl px-4 py-3.5 text-base font-medium min-h-[52px] touch-manipulation",
                           isActive
-                            ? "bg-primary/15 text-primary border border-primary/25"
-                            : "text-foreground hover:bg-muted/60 active:bg-muted",
+                            ? "bg-primary/12 text-foreground"
+                            : "text-foreground hover:bg-muted/50",
                         )}
                         data-testid={`nav-mobile-${item.key}`}
                       >
@@ -183,33 +224,32 @@ export function SiteHeader({ activePage, favCount = 0 }: SiteHeaderProps) {
                     type="button"
                     onClick={() => go("/favorites")}
                     className={cn(
-                      "w-full text-left rounded-xl px-4 py-3.5 text-sm font-semibold uppercase tracking-wider min-h-[52px] touch-manipulation flex items-center gap-2",
+                      "w-full text-left rounded-xl px-4 py-3.5 text-base font-medium min-h-[52px] touch-manipulation flex items-center gap-2",
                       activePage === "favorites"
-                        ? "bg-primary/15 text-primary border border-primary/25"
-                        : "text-foreground hover:bg-muted/60",
+                        ? "bg-primary/12 text-foreground"
+                        : "text-foreground hover:bg-muted/50",
                     )}
                     data-testid="nav-mobile-favorites"
                   >
                     <Heart className="w-4 h-4" />
-                    Favorites
+                    {NAV.saved}
                     {favCount > 0 && (
                       <Badge variant="secondary" className="ml-auto text-[10px]">
                         {favCount}
                       </Badge>
                     )}
                   </button>
+                  {activePage !== "generator" && (
+                    <Button
+                      className="mt-4 w-full font-heading uppercase tracking-wide"
+                      onClick={() => go("/generator")}
+                      data-testid="nav-mobile-cta-generator"
+                    >
+                      {CTA.findDinner}
+                    </Button>
+                  )}
+                  <LightsAndSirensMobilePanel />
                 </nav>
-                <div className="mt-8 pt-6 border-t border-border/40">
-                  <a
-                    href="https://www.lightsandsirensco.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xs text-muted-foreground flex items-center gap-2 min-h-11"
-                  >
-                    <Flame className="w-3 h-3 text-primary" />
-                    Lights & Sirens Co.
-                  </a>
-                </div>
               </SheetContent>
             </Sheet>
           </div>

@@ -1,0 +1,178 @@
+{
+  "slug": "pesto-tomato-chicken-tray",
+  "title": "Pesto Tomato Chicken Tray",
+  "displayTitle": "Pesto Tomato Chicken Tray",
+  "seoTitle": "Pesto Tomato Chicken Tray | Firefighter Meal",
+  "shortDescription": "Basil pesto chicken with roasted cherry tomatoes and zucchini",
+  "subtitle": "Basil pesto chicken with roasted cherry tomatoes and zucchini",
+  "category": "healthy_performance",
+  "cuisine": "Italian",
+  "description": "Chicken thighs roast with cherry tomatoes and zucchini, brushed with basil pesto until golden and fragrant.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 28,
+  "prepTime": 18,
+  "difficulty": "easy",
+  "calories": 465,
+  "protein": 40,
+  "carbs": 10,
+  "fats": 30,
+  "tags": [
+    "protein:chicken",
+    "format:sheet_pan",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "Two half-sheet pans",
+    "Pastry brush"
+  ],
+  "ingredients": [
+    {
+      "name": "bone-in chicken thighs",
+      "quantity": "16",
+      "unit": "pieces",
+      "notes": "about 6 lb"
+    },
+    {
+      "name": "cherry tomatoes",
+      "quantity": "2",
+      "unit": "lb",
+      "notes": "halved"
+    },
+    {
+      "name": "zucchini",
+      "quantity": "3",
+      "unit": "large",
+      "notes": "thick half-moons"
+    },
+    {
+      "name": "basil pesto",
+      "quantity": "1",
+      "unit": "cup"
+    },
+    {
+      "name": "extra-virgin olive oil",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "4",
+      "unit": "cloves",
+      "notes": "minced"
+    },
+    {
+      "name": "Parmesan cheese",
+      "quantity": "0.5",
+      "unit": "cup",
+      "notes": "grated"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "black pepper",
+      "quantity": "1",
+      "unit": "tsp"
+    },
+    {
+      "name": "fresh basil",
+      "quantity": "0.5",
+      "unit": "cup",
+      "notes": "for garnish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Heat oven and prep vegetables",
+      "instruction": "Heat oven to 425°F. Toss tomatoes and zucchini with olive oil, salt, and pepper on two half-sheets until lightly coated.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Season chicken",
+      "instruction": "Pat thighs dry, season with salt and pepper. Nest skin-side up among vegetables with space between pieces for air circulation.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Initial roast",
+      "instruction": "Roast 18 minutes until chicken skin renders fat and turns lightly golden while tomatoes begin to soften at edges.",
+      "minutes": 18,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Brush with pesto",
+      "instruction": "Brush pesto over chicken and vegetables. Sprinkle parmesan. Roast 10–12 more minutes until chicken hits 165°F and pesto edges caramelize.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Garnish and serve",
+      "instruction": "Top with fresh basil. Tomatoes should burst with juice; zucchini tender with slight bite at center.",
+      "minutes": 3,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Thin pesto with 1 tbsp olive oil if too thick to brush evenly.",
+    "Serve over polenta or pasta for a fuller plate.",
+    "Sun-dried tomato pesto swap works if basil pesto is unavailable."
+  ],
+  "tonightSpread": [
+    "Creamy polenta in a hotel pan.",
+    "Arugula salad with lemon."
+  ],
+  "leftovers": [
+    "Slice chicken into pesto pasta next day.",
+    "Chop into a wrap with extra pesto and mozzarella."
+  ],
+  "whyCrewsLikeIt": "Summer flavors year-round. One tray, minimal cleanup, and the kitchen smells incredible.",
+  "mealPrepNotes": "Use store pesto or make a batch ahead. Zucchini adds moisture—do not skip. Station: Brush pesto last 12 minutes—early application burns basil. Station: Cut zucchini thick so it roasts, not steams, under chicken. Station: Finish with fresh basil at the line for bright color.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 465,
+    "protein": 40,
+    "carbs": 10,
+    "fats": 30,
+    "label": "~465 cal/serving · 40g protein · 3g fiber (est.)"
+  },
+  "heroImage": "/images/golden-100/pesto-tomato-chicken-tray.jpg",
+  "mobileImage": "/images/mobile/pesto-tomato-chicken-tray.jpg",
+  "thumbImage": "/images/thumbs/pesto-tomato-chicken-tray.jpg",
+  "railImage": "/images/rails/pesto-tomato-chicken-tray.jpg",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "pesto tomato chicken tray",
+    "chicken",
+    "Italian",
+    "sheet pan",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "lemon-garlic-chicken-tray",
+    "herb-baked-salmon-tray",
+    "sheet-pan-chicken-fajitas-lite",
+    "honey-garlic-chicken-rice-bowls",
+    "white-bean-chicken-chili",
+    "crock-barbacoa-chicken"
+  ],
+  "generatedAt": "2026-05-28T12:57:50.894Z",
+  "contentVersion": 2
+}

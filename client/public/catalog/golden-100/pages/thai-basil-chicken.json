@@ -1,11 +1,15 @@
 {
   "slug": "thai-basil-chicken",
   "title": "Thai Basil Chicken Stir Fry",
+  "displayTitle": "Thai Basil Chicken Stir Fry",
+  "seoTitle": "Thai Basil Chicken Stir Fry | Firefighter Meal",
+  "shortDescription": "Wok heat, holy basil, jasmine rice",
   "subtitle": "Wok heat, holy basil, jasmine rice",
   "category": "global_flavors",
   "cuisine": "thai",
-  "description": "Thai Basil Chicken Stir Fry is a thai skillet built for a hungry firehall crew — Wok heat, holy basil, jasmine rice. Hearty portions, station-kitchen timing, and flavors everyone recognizes after a long shift.",
+  "description": "Wok heat, holy basil, jasmine rice. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
@@ -29,70 +33,69 @@
   ],
   "ingredients": [
     {
-      "name": "Chicken (boneless thighs or breasts)",
+      "name": "Chicken breast",
+      "quantity": "2.5",
+      "unit": "lb",
+      "group": "Main"
+    },
+    {
+      "name": "Unsalted butter",
+      "quantity": "6",
+      "unit": "tbsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "Garlic cloves, minced",
+      "quantity": "6",
+      "unit": "cloves",
+      "group": "Sauce"
+    },
+    {
+      "name": "Soy sauce",
       "quantity": "3",
-      "unit": "lb"
-    },
-    {
-      "name": "Kosher salt",
-      "quantity": "2",
-      "unit": "tbsp"
-    },
-    {
-      "name": "Black pepper",
-      "quantity": "1",
-      "unit": "tbsp"
-    },
-    {
-      "name": "Cooking oil",
-      "quantity": "0.3",
-      "unit": "cup"
+      "unit": "tbsp",
+      "group": "Sauce"
     },
     {
       "name": "Yellow onion",
       "quantity": "2",
-      "unit": "large"
+      "unit": "large",
+      "group": "Aromatics"
     },
     {
-      "name": "Garlic",
+      "name": "Garlic cloves, minced",
       "quantity": "6",
-      "unit": "cloves"
+      "unit": "cloves",
+      "group": "Aromatics"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Prep the line",
-      "instruction": "Set out all ingredients for Thai Basil Chicken Stir Fry before you turn on heat — firefighters eat on a schedule. Pat proteins dry and season aggressively with salt and pepper; dry surfaces brown instead of steam.",
-      "minutes": 15,
+      "title": "Prep and dry protein",
+      "instruction": "Pat protein dry. Mince garlic. Measure sauce ingredients — wok moves fast once heat is on.",
+      "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Build the base",
-      "instruction": "Heat oil in your largest skillet, Dutch oven, or on the flat-top over medium-high until it shimmers. Add aromatics (onion first) and cook until the edges turn golden and the smell sweetens — usually 4–6 minutes. If garlic is in the recipe, add it after the onion softens so it doesn't burn.",
-      "minutes": 8,
-      "heatLevel": "medium-high"
+      "title": "Sear over high heat",
+      "instruction": "Heat skillet until just smoking. Sear in batches; shrimp 90 seconds per side, chicken to 165°F. Do not crowd.",
+      "minutes": 10,
+      "heatLevel": "high"
     },
     {
       "stepNumber": 3,
-      "title": "Cook the main",
-      "instruction": "Cook the primary protein or base for Thai Basil Chicken Stir Fry until it hits proper color and safe internal temperature. Don't crowd the pan — work in batches if needed so you get browning, not gray stew. Listen for a steady sizzle; if it's silent, the heat is too low.",
-      "minutes": 20,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 4,
-      "title": "Finish and season",
-      "instruction": "Bring components together, taste, and adjust salt. Sauce should coat, not pool. If cheese is involved, melt it just until glossy — another 1–2 minutes under a lid or broiler. Let heavy proteins rest 5 minutes before slicing.",
-      "minutes": 10,
+      "title": "Finish sauce in pan",
+      "instruction": "Lower to medium. Add butter, garlic, and sauce; toss 1–2 minutes until glossy. Thai Basil Chicken Stir Fry should smell bright, not burnt garlic.",
+      "minutes": 4,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 5,
-      "title": "Serve the hall",
-      "instruction": "Transfer to sheet trays or a serving line immediately. Keep backup warm at 200°F. Call the crew while it's hot — this meal is built for a hungry hall, not a photo shoot.",
-      "minutes": 5,
+      "stepNumber": 4,
+      "title": "Serve immediately",
+      "instruction": "Serve from the skillet or transfer to warm trays. Backup: foil at 200°F up to 12 minutes — seafood toughens if held too long.",
+      "minutes": 3,
       "heatLevel": "low"
     }
   ],
@@ -110,6 +113,12 @@
     "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
     "Label trays with date and reheat to 165°F minimum before second shift."
   ],
+  "whyCrewsLikeIt": "Wok heat, holy basil, jasmine rice. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
+  "substitutions": [
+    "Chicken thighs ↔ breasts (thighs forgive overcooking on the flat-top)."
+  ],
+  "spiceLevel": "medium",
+  "cleanupDifficulty": "medium",
   "nutrition": {
     "calories": 520,
     "protein": 32,
@@ -121,7 +130,7 @@
   "mobileImage": "/images/mobile/thai-basil-chicken.jpg",
   "thumbImage": "/images/thumbs/thai-basil-chicken.jpg",
   "railImage": "/images/rails/thai-basil-chicken.jpg",
-  "realismScore": 100,
+  "realismScore": 95,
   "firefighterScore": 99,
   "popularityWeight": 3.2,
   "searchTerms": [
@@ -142,7 +151,8 @@
     "bbq-chicken-pizza",
     "buffalo-chicken-dip"
   ],
-  "sourceName": "Serious Eats",
-  "generatedAt": "2026-05-27T15:03:06.207Z",
-  "contentVersion": 1
+  "sourceName": "Firehall Meals",
+  "sourceUrl": "",
+  "generatedAt": "2026-05-28T12:06:15.090Z",
+  "contentVersion": 2
 }

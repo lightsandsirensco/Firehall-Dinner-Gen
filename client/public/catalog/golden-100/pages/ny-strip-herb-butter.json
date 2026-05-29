@@ -1,11 +1,15 @@
 {
   "slug": "ny-strip-herb-butter",
   "title": "Grilled NY Strip with Herb Butter",
+  "displayTitle": "Grilled NY Strip with Herb Butter",
+  "seoTitle": "Grilled NY Strip with Herb Butter | Firefighter Meal",
+  "shortDescription": "Steakhouse night at the station",
   "subtitle": "Steakhouse night at the station",
   "category": "bbq_grill_nights",
   "cuisine": "american",
-  "description": "Grilled NY Strip with Herb Butter is a american grill built for a hungry firehall crew — Steakhouse night at the station. Hearty portions, station-kitchen timing, and flavors everyone recognizes after a long shift.",
+  "description": "Steakhouse night at the station. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 90,
   "prepTime": 30,
   "difficulty": "hard",
@@ -31,69 +35,68 @@
   ],
   "ingredients": [
     {
-      "name": "Beef (main cut for recipe)",
-      "quantity": "3",
-      "unit": "lb"
+      "name": "NY strip or flank steak",
+      "quantity": "4",
+      "unit": "lb",
+      "group": "Main"
     },
     {
       "name": "Kosher salt",
       "quantity": "2",
-      "unit": "tbsp"
+      "unit": "tbsp",
+      "group": "Seasoning"
     },
     {
       "name": "Black pepper",
       "quantity": "1",
-      "unit": "tbsp"
+      "unit": "tbsp",
+      "group": "Seasoning"
     },
     {
-      "name": "Cooking oil",
-      "quantity": "0.3",
-      "unit": "cup"
-    },
-    {
-      "name": "Yellow onion",
-      "quantity": "2",
-      "unit": "large"
-    },
-    {
-      "name": "Garlic",
+      "name": "Unsalted butter",
       "quantity": "6",
-      "unit": "cloves"
+      "unit": "tbsp",
+      "group": "Herb butter"
+    },
+    {
+      "name": "Fresh parsley",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Herb butter"
+    },
+    {
+      "name": "Garlic cloves, minced",
+      "quantity": "3",
+      "unit": "cloves",
+      "group": "Herb butter"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Prep the line",
-      "instruction": "Set out all ingredients for Grilled NY Strip with Herb Butter before you turn on heat — firefighters eat on a schedule. Pat proteins dry and season aggressively with salt and pepper; dry surfaces brown instead of steam.",
-      "minutes": 15,
+      "title": "Season and temper",
+      "instruction": "Pat steaks dry. Salt heavily 40 minutes ahead (or right before if rushed). Pepper just before cooking. Let meat sit out 20 minutes — cold centers overcook the exterior.",
+      "minutes": 45,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Build the base",
-      "instruction": "Heat oil in your largest skillet, Dutch oven, or on the flat-top over medium-high until it shimmers. Add aromatics (onion first) and cook until the edges turn golden and the smell sweetens — usually 4–6 minutes. If garlic is in the recipe, add it after the onion softens so it doesn't burn.",
-      "minutes": 8,
-      "heatLevel": "medium-high"
+      "title": "Grill over high heat",
+      "instruction": "Grill over high heat (450–500°F surface) 3–5 minutes per side for strip to 130°F medium-rare. Flank: sear 4 minutes per side, then medium until 125°F; rest and slice thin against the grain.",
+      "minutes": 12,
+      "heatLevel": "high"
     },
     {
       "stepNumber": 3,
-      "title": "Cook the main",
-      "instruction": "Cook the primary protein or base for Grilled NY Strip with Herb Butter until it hits proper color and safe internal temperature. Don't crowd the pan — work in batches if needed so you get browning, not gray stew. Listen for a steady sizzle; if it's silent, the heat is too low.",
-      "minutes": 20,
-      "heatLevel": "medium-high"
+      "title": "Baste with herb butter",
+      "instruction": "Melt butter with garlic and parsley. Rest steaks 8 minutes tented with foil, then slice and spoon butter over. Hold on warm trays at 180°F no more than 20 minutes.",
+      "minutes": 10,
+      "heatLevel": "low"
     },
     {
       "stepNumber": 4,
-      "title": "Finish and season",
-      "instruction": "Bring components together, taste, and adjust salt. Sauce should coat, not pool. If cheese is involved, melt it just until glossy — another 1–2 minutes under a lid or broiler. Let heavy proteins rest 5 minutes before slicing.",
-      "minutes": 10,
-      "heatLevel": "medium"
-    },
-    {
-      "stepNumber": 5,
-      "title": "Serve the hall",
-      "instruction": "Transfer to sheet trays or a serving line immediately. Keep backup warm at 200°F. Call the crew while it's hot — this meal is built for a hungry hall, not a photo shoot.",
+      "title": "Serve on sheet trays",
+      "instruction": "Grilled NY Strip with Herb Butter goes out sliced on trays with extra herb butter melting on top — crew grabs with tongs, not forks and knives.",
       "minutes": 5,
       "heatLevel": "low"
     }
@@ -115,6 +118,10 @@
     "Label trays with date and reheat to 165°F minimum before second shift.",
     "Slice cold protein thin for next-day wraps or salads — faster reheat, less dry-out."
   ],
+  "whyCrewsLikeIt": "Steakhouse night at the station. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
+  "substitutions": [],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
   "nutrition": {
     "calories": 600,
     "protein": 40,
@@ -147,7 +154,8 @@
     "beer-can-chicken",
     "cedar-plank-salmon"
   ],
-  "sourceName": "Serious Eats",
-  "generatedAt": "2026-05-27T15:03:06.143Z",
-  "contentVersion": 1
+  "sourceName": "Firehall Meals",
+  "sourceUrl": "",
+  "generatedAt": "2026-05-28T12:06:14.981Z",
+  "contentVersion": 2
 }

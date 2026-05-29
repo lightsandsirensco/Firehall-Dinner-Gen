@@ -1,11 +1,15 @@
 {
   "slug": "pulled-pork-mac",
   "title": "Pulled Pork Mac and Cheese",
+  "displayTitle": "Pulled Pork Mac and Cheese",
+  "seoTitle": "Pulled Pork Mac and Cheese | Firefighter Meal",
+  "shortDescription": "BBQ meets mac — hall legend",
   "subtitle": "BBQ meets mac — hall legend",
   "category": "big_crew_feeders",
   "cuisine": "american",
-  "description": "Pulled Pork Mac and Cheese is a american pasta built for a hungry firehall crew — BBQ meets mac — hall legend. Hearty portions, station-kitchen timing, and flavors everyone recognizes after a long shift.",
+  "description": "BBQ meets mac — hall legend. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 90,
   "prepTime": 30,
   "difficulty": "hard",
@@ -29,75 +33,89 @@
   ],
   "ingredients": [
     {
-      "name": "Pork (shoulder or chops)",
-      "quantity": "3",
-      "unit": "lb"
-    },
-    {
-      "name": "Kosher salt",
-      "quantity": "2",
-      "unit": "tbsp"
-    },
-    {
-      "name": "Black pepper",
-      "quantity": "1",
-      "unit": "tbsp"
-    },
-    {
-      "name": "Cooking oil",
-      "quantity": "0.3",
-      "unit": "cup"
-    },
-    {
       "name": "Dried pasta",
-      "quantity": "2",
-      "unit": "lb"
+      "quantity": "1.5",
+      "unit": "lb",
+      "group": "Main"
     },
     {
-      "name": "Garlic",
-      "quantity": "8",
-      "unit": "cloves"
+      "name": "Boneless chicken thighs",
+      "quantity": "2.5",
+      "unit": "lb",
+      "group": "Main"
     },
     {
       "name": "Crushed tomatoes",
       "quantity": "2",
-      "unit": "cans"
+      "unit": "cans",
+      "notes": "28 oz",
+      "group": "Sauce"
+    },
+    {
+      "name": "Heavy cream",
+      "quantity": "1",
+      "unit": "cup",
+      "group": "Sauce"
+    },
+    {
+      "name": "Parmesan, grated",
+      "quantity": "8",
+      "unit": "oz",
+      "group": "Finish"
+    },
+    {
+      "name": "Yellow onion",
+      "quantity": "2",
+      "unit": "large",
+      "group": "Aromatics"
+    },
+    {
+      "name": "Garlic cloves, minced",
+      "quantity": "6",
+      "unit": "cloves",
+      "group": "Aromatics"
+    },
+    {
+      "name": "Kosher salt",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Seasoning"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Prep the line",
-      "instruction": "Set out all ingredients for Pulled Pork Mac and Cheese before you turn on heat — firefighters eat on a schedule. Pat proteins dry and season aggressively with salt and pepper; dry surfaces brown instead of steam.",
-      "minutes": 15,
-      "heatLevel": ""
+      "title": "Salt the pasta water",
+      "instruction": "Bring a large pot of water to a rolling boil with enough salt that it tastes like the sea. This is your only chance to season the pasta itself.",
+      "minutes": 10,
+      "heatLevel": "high"
     },
     {
       "stepNumber": 2,
-      "title": "Build the base",
-      "instruction": "Heat oil in your largest skillet, Dutch oven, or on the flat-top over medium-high until it shimmers. Add aromatics (onion first) and cook until the edges turn golden and the smell sweetens — usually 4–6 minutes. If garlic is in the recipe, add it after the onion softens so it doesn't burn.",
-      "minutes": 8,
-      "heatLevel": "medium-high"
+      "title": "Cook sauce base",
+      "instruction": "Meanwhile, brown meat, add onions and garlic, then tomatoes (and cream if Alfredo-style). Simmer 15 minutes while pasta cooks.",
+      "minutes": 15,
+      "heatLevel": "medium"
     },
     {
       "stepNumber": 3,
-      "title": "Cook the main",
-      "instruction": "Cook the primary protein or base for Pulled Pork Mac and Cheese until it hits proper color and safe internal temperature. Don't crowd the pan — work in batches if needed so you get browning, not gray stew. Listen for a steady sizzle; if it's silent, the heat is too low.",
-      "minutes": 20,
-      "heatLevel": "medium-high"
+      "title": "Boil pasta al dente",
+      "instruction": "Cook pasta 1 minute shy of package time. Reserve 2 cups pasta water. Drain — do not rinse.",
+      "minutes": 12,
+      "heatLevel": "high"
     },
     {
       "stepNumber": 4,
-      "title": "Finish and season",
-      "instruction": "Bring components together, taste, and adjust salt. Sauce should coat, not pool. If cheese is involved, melt it just until glossy — another 1–2 minutes under a lid or broiler. Let heavy proteins rest 5 minutes before slicing.",
-      "minutes": 10,
+      "title": "Finish in the pan",
+      "instruction": "Toss pasta in sauce over medium heat, splashing pasta water until glossy and clinging. Pulled Pork Mac and Cheese should coat a spoon — if it pools, reduce another minute.",
+      "minutes": 4,
       "heatLevel": "medium"
     },
     {
       "stepNumber": 5,
-      "title": "Serve the hall",
-      "instruction": "Transfer to sheet trays or a serving line immediately. Keep backup warm at 200°F. Call the crew while it's hot — this meal is built for a hungry hall, not a photo shoot.",
-      "minutes": 5,
+      "title": "Serve from the pot",
+      "instruction": "Fold in Parmesan off heat. Serve immediately — pasta waits for no one. Backup tray: cover lightly with foil at 200°F up to 15 minutes, add water if it tightens.",
+      "minutes": 3,
       "heatLevel": "low"
     }
   ],
@@ -118,6 +136,12 @@
     "Label trays with date and reheat to 165°F minimum before second shift.",
     "Add a splash of stock or water when reheating — thick sauces tighten in the fridge."
   ],
+  "whyCrewsLikeIt": "BBQ meets mac — hall legend. A hall pick for big-appetite nights — one line, real portions, no drama at the stove.",
+  "substitutions": [
+    "Any short pasta shape works — penne, rigatoni, or spaghetti."
+  ],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
   "nutrition": {
     "calories": 600,
     "protein": 40,
@@ -151,6 +175,8 @@
     "memphis-dry-rub-ribs",
     "biscuits-gravy"
   ],
-  "generatedAt": "2026-05-27T15:03:06.197Z",
-  "contentVersion": 1
+  "sourceName": "Firehall Meals",
+  "sourceUrl": "",
+  "generatedAt": "2026-05-28T12:06:15.071Z",
+  "contentVersion": 2
 }

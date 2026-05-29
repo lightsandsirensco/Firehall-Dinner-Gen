@@ -1,35 +1,32 @@
 import { useEffect, useState } from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Flame } from "lucide-react";
+import { app } from "@/lib/design-tokens";
+import { cn } from "@/lib/utils";
 
 const LOADING_MESSAGES = [
-  "Kitchen's working on tonight's plate...",
-  "Checking what's on the truck...",
-  "Sizing it up for the crew...",
-  "Picking a main the hall will actually eat...",
-  "Rounding out the sides for the table...",
+  "On the line…",
+  "Scaling for the crew…",
+  "Pulling sides…",
+  "Almost there…",
 ];
 
 const ALT_LOADING_MESSAGES = [
-  "Couldn't cook one up — trying another...",
-  "Shuffling another dinner idea…",
-  "Checking what else plays at the hall…",
-  "Rounding up a new plate for the crew…",
-  "One more option for tonight's table…",
+  "Trying another plate…",
+  "One more option…",
+  "Shuffling…",
 ];
 
 function ShimmerBlock({ className }: { className?: string }) {
-  return <div className={`premium-skeleton rounded-md ${className ?? ""}`} />;
+  return <div className={cn("premium-skeleton rounded-lg", className)} />;
 }
 
 function LoadingProgressBar() {
   return (
     <div
-      className="h-1 w-full overflow-hidden rounded-full bg-primary/10"
+      className="h-0.5 w-full overflow-hidden rounded-full bg-border/40"
       role="progressbar"
       aria-label="Loading recipe"
     >
-      <div className="h-full w-1/3 rounded-full bg-primary/70 animate-[loading-bar_1.4s_ease-in-out_infinite] motion-reduce:animate-none" />
+      <div className="h-full w-2/5 rounded-full bg-primary/80 animate-[loading-bar_1.4s_ease-in-out_infinite] motion-reduce:animate-none" />
     </div>
   );
 }
@@ -48,22 +45,21 @@ function LoadingStatus({
     setMessageIndex(0);
     const id = window.setInterval(() => {
       setMessageIndex((i) => (i + 1) % messages.length);
-    }, 2800);
+    }, 2600);
     return () => window.clearInterval(id);
   }, [messages.length, mode]);
 
   return (
-    <div
-      className={`flex items-center justify-center gap-2 ${variant === "compact" ? "pt-2" : "pt-1"}`}
+    <p
+      className={cn(
+        app.subtitle,
+        "text-center animate-in fade-in duration-300",
+        variant === "compact" ? "text-sm" : "mt-1",
+      )}
+      data-testid="text-loading-message"
     >
-      <Flame className="w-4 h-4 text-primary/60 animate-pulse shrink-0" />
-      <p
-        className="text-sm text-muted-foreground tracking-wide text-center animate-in fade-in duration-300"
-        data-testid="text-loading-message"
-      >
-        {messages[messageIndex]}
-      </p>
-    </div>
+      {messages[messageIndex]}
+    </p>
   );
 }
 
@@ -77,7 +73,10 @@ export function LoadingState({
   if (variant === "compact") {
     return (
       <div
-        className="rounded-lg border border-primary/20 bg-background/95 backdrop-blur-sm px-4 py-3 shadow-lg animate-in fade-in duration-300"
+        className={cn(
+          app.panel,
+          "px-4 py-3 space-y-2.5 animate-in fade-in duration-300",
+        )}
         data-testid="loading-state-compact"
         data-loading-mode={mode}
       >
@@ -88,67 +87,41 @@ export function LoadingState({
   }
 
   return (
-    <div className="space-y-5 animate-in fade-in duration-500" data-testid="loading-state">
+    <div className="space-y-6 animate-in fade-in duration-500" data-testid="loading-state">
       <LoadingProgressBar />
 
       <div
-        className="w-full aspect-[5/4] max-h-[min(40vh,320px)] sm:aspect-[16/9] sm:max-h-[min(360px,48vh)] rounded-2xl overflow-hidden ring-1 ring-border/30 premium-skeleton"
+        className="w-full aspect-[5/4] max-h-[min(42vh,340px)] sm:aspect-[16/9] sm:max-h-[min(380px,50vh)] rounded-2xl sm:rounded-3xl overflow-hidden ring-1 ring-border/25 premium-skeleton"
         aria-hidden
       />
 
-      <div className="flex items-center gap-4 mb-1 fade-up">
-        <div className="w-12 h-12 rounded-md bg-primary/15 flex items-center justify-center shrink-0">
-          <Flame className="w-6 h-6 text-primary animate-pulse" />
-        </div>
-        <div className="space-y-2.5 flex-1 min-w-0">
-          <ShimmerBlock className="h-7 w-3/4 max-w-xs" />
-          <ShimmerBlock className="h-4 w-1/2 max-w-[10rem]" />
-        </div>
+      <div className="space-y-3">
+        <ShimmerBlock className="h-9 w-4/5 max-w-md" />
+        <ShimmerBlock className="h-4 w-2/5 max-w-[12rem]" />
       </div>
 
-      <Card className="premium-card">
-        <CardContent className="p-5">
-          <ShimmerBlock className="h-5 w-36 mb-4" />
-          <div className="grid grid-cols-2 sm:flex sm:gap-5 gap-3">
-            {[1, 2, 3, 4].map((i) => (
-              <div
-                key={i}
-                className="flex flex-col items-center gap-2.5 sm:flex-1"
-                style={{ animationDelay: `${i * 80}ms` }}
-              >
-                <ShimmerBlock className="h-5 w-5 rounded-full" />
-                <ShimmerBlock className="h-7 w-12" />
-                <ShimmerBlock className="h-3.5 w-14" />
-              </div>
-            ))}
-          </div>
-        </CardContent>
-      </Card>
+      <div className="flex gap-3">
+        {[1, 2, 3].map((i) => (
+          <ShimmerBlock key={i} className="h-9 flex-1 max-w-[7rem] rounded-full" />
+        ))}
+      </div>
 
-      <Card className="premium-card">
-        <CardContent className="p-5">
-          <ShimmerBlock className="h-5 w-32 mb-4" />
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-            {[1, 2, 3, 4, 5, 6].map((i) => (
-              <ShimmerBlock key={i} className="h-5" />
-            ))}
-          </div>
-        </CardContent>
-      </Card>
+      <div className="space-y-3 pt-2 border-t border-border/20">
+        <ShimmerBlock className="h-5 w-28" />
+        {[1, 2, 3, 4].map((i) => (
+          <ShimmerBlock key={i} className="h-4 w-full" />
+        ))}
+      </div>
 
-      <Card className="premium-card">
-        <CardContent className="p-5">
-          <ShimmerBlock className="h-5 w-28 mb-4" />
-          <div className="space-y-3.5">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="flex gap-3.5">
-                <ShimmerBlock className="h-5 w-7 flex-shrink-0 rounded-full" />
-                <ShimmerBlock className="h-5 flex-1" />
-              </div>
-            ))}
+      <div className="space-y-3 pt-2 border-t border-border/20">
+        <ShimmerBlock className="h-5 w-24" />
+        {[1, 2, 3].map((i) => (
+          <div key={i} className="flex gap-3">
+            <ShimmerBlock className="h-8 w-8 rounded-full shrink-0" />
+            <ShimmerBlock className="h-4 flex-1 mt-1.5" />
           </div>
-        </CardContent>
-      </Card>
+        ))}
+      </div>
 
       <LoadingStatus variant="full" mode={mode} />
     </div>

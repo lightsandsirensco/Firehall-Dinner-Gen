@@ -1,0 +1,194 @@
+{
+  "slug": "shawarma-chicken-rice-bowls",
+  "title": "Shawarma Chicken Rice Bowls",
+  "displayTitle": "Shawarma Chicken Rice Bowls",
+  "seoTitle": "Shawarma Chicken Rice Bowls | Firefighter Meal",
+  "shortDescription": "Sheet-pan spiced chicken with turmeric rice and cucumber yogurt",
+  "subtitle": "Sheet-pan spiced chicken with turmeric rice and cucumber yogurt",
+  "category": "healthy_performance",
+  "cuisine": "Middle Eastern",
+  "description": "Chicken thighs roast with shawarma spices on sheet pans, served over turmeric rice with cucumber yogurt, tomatoes, and pickled onions.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 28,
+  "prepTime": 30,
+  "difficulty": "medium",
+  "calories": 510,
+  "protein": 38,
+  "carbs": 48,
+  "fats": 18,
+  "tags": [
+    "protein:chicken",
+    "format:bowl",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "Two half-sheet pans",
+    "Rice cooker",
+    "Mixing bowls"
+  ],
+  "ingredients": [
+    {
+      "name": "boneless chicken thighs",
+      "quantity": "4",
+      "unit": "lb"
+    },
+    {
+      "name": "basmati rice",
+      "quantity": "3",
+      "unit": "cups",
+      "notes": "uncooked"
+    },
+    {
+      "name": "Greek yogurt",
+      "quantity": "2",
+      "unit": "cups"
+    },
+    {
+      "name": "English cucumber",
+      "quantity": "1",
+      "unit": "whole",
+      "notes": "grated, drained"
+    },
+    {
+      "name": "ground cumin",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "ground coriander",
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "smoked paprika",
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "ground turmeric",
+      "quantity": "1",
+      "unit": "tsp"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "8",
+      "unit": "cloves",
+      "notes": "minced"
+    },
+    {
+      "name": "lemon juice",
+      "quantity": "0.33",
+      "unit": "cup",
+      "notes": "fresh"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "0.33",
+      "unit": "cup"
+    },
+    {
+      "name": "cherry tomatoes",
+      "quantity": "2",
+      "unit": "cups",
+      "notes": "halved"
+    },
+    {
+      "name": "red onion",
+      "quantity": "1",
+      "unit": "large",
+      "notes": "thinly sliced"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Marinate chicken",
+      "instruction": "Toss thighs with half the olive oil, cumin, coriander, paprika, half the garlic, and 2 tbsp lemon juice. Marinate at least 30 minutes.",
+      "minutes": 30,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Cook turmeric rice",
+      "instruction": "Cook basmati with a pinch of turmeric and salt until fluffy. Grains should be separate and lightly golden, not clumped or wet.",
+      "minutes": 20,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Roast chicken",
+      "instruction": "Roast marinated thighs at 425°F on two sheet pans 22–28 minutes until charred at edges and internal temp hits 165°F.",
+      "minutes": 25,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Make cucumber yogurt",
+      "instruction": "Mix yogurt, grated drained cucumber, remaining garlic, 2 tbsp lemon juice, and salt until creamy with no watery separation.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Build bowls",
+      "instruction": "Slice chicken and portion over rice with tomatoes and pickled onion. Drizzle yogurt. Chicken should be juicy with crisp spice crust.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Drain grated cucumber or yogurt sauce turns watery at the line.",
+    "Quick-pickle onion in vinegar 15 minutes if you forgot overnight prep.",
+    "Offer harissa paste for crews who want extra heat."
+  ],
+  "tonightSpread": [
+    "Warm pita wedges.",
+    "Hummus with olive oil and paprika."
+  ],
+  "leftovers": [
+    "Shawarma wrap with leftover chicken and extra yogurt.",
+    "Rice and chicken salad bowl with lemon dressing."
+  ],
+  "whyCrewsLikeIt": "Big flavor profile without a vertical rotisserie. Bowls travel well for crew eating at different times.",
+  "mealPrepNotes": "Marinate chicken up to 24 hours. Pickle onions overnight for best tang. Station: Roast chicken on two pans with space between thighs for even char. Station: Keep cucumber yogurt chilled on ice at the line—it balances hot chicken. Station: Bowl assembly: rice, sliced chicken, tomato, onion, yogurt drizzle, parsley.",
+  "spiceLevel": "medium",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 510,
+    "protein": 38,
+    "carbs": 48,
+    "fats": 18,
+    "label": "~510 cal/serving · 38g protein · 3g fiber (est.)"
+  },
+  "heroImage": "/images/golden-100/shawarma-chicken-rice-bowls.jpg",
+  "mobileImage": "/images/mobile/shawarma-chicken-rice-bowls.jpg",
+  "thumbImage": "/images/thumbs/shawarma-chicken-rice-bowls.jpg",
+  "railImage": "/images/rails/shawarma-chicken-rice-bowls.jpg",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "shawarma chicken rice bowls",
+    "chicken",
+    "Middle Eastern",
+    "bowl",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "lemon-garlic-chicken-tray",
+    "sheet-pan-chicken-fajitas-lite",
+    "honey-garlic-chicken-rice-bowls",
+    "white-bean-chicken-chili",
+    "korean-beef-rice-bowls",
+    "crock-barbacoa-chicken"
+  ],
+  "generatedAt": "2026-05-28T12:57:50.893Z",
+  "contentVersion": 2
+}

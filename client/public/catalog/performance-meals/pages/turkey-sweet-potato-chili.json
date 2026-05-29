@@ -1,0 +1,188 @@
+{
+  "slug": "turkey-sweet-potato-chili",
+  "title": "Turkey Sweet Potato Chili",
+  "displayTitle": "Turkey Sweet Potato Chili",
+  "seoTitle": "Turkey Sweet Potato Chili | Firefighter Meal",
+  "shortDescription": "Crock chili with diced sweet potato, black beans, and warm spices",
+  "subtitle": "Crock chili with diced sweet potato, black beans, and warm spices",
+  "category": "healthy_performance",
+  "cuisine": "American",
+  "description": "Ground turkey simmers with sweet potato cubes, black beans, fire-roasted tomatoes, and chili spices until thick and fragrant.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 300,
+  "prepTime": 25,
+  "difficulty": "easy",
+  "calories": 355,
+  "protein": 32,
+  "carbs": 42,
+  "fats": 8,
+  "tags": [
+    "protein:turkey",
+    "format:slow_cooker",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "8-quart slow cooker",
+    "Large skillet"
+  ],
+  "ingredients": [
+    {
+      "name": "lean ground turkey",
+      "quantity": "2.5",
+      "unit": "lb"
+    },
+    {
+      "name": "sweet potatoes",
+      "quantity": "2",
+      "unit": "lb",
+      "notes": "peeled, ½-inch dice"
+    },
+    {
+      "name": "black beans",
+      "quantity": "3",
+      "unit": "cans",
+      "notes": "15 oz, drained"
+    },
+    {
+      "name": "fire-roasted diced tomatoes",
+      "quantity": "2",
+      "unit": "cans",
+      "notes": "28 oz"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "1",
+      "unit": "large",
+      "notes": "diced"
+    },
+    {
+      "name": "red bell pepper",
+      "quantity": "1",
+      "unit": "whole",
+      "notes": "diced"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "6",
+      "unit": "cloves",
+      "notes": "minced"
+    },
+    {
+      "name": "chicken broth",
+      "quantity": "3",
+      "unit": "cups",
+      "notes": "low sodium"
+    },
+    {
+      "name": "chili powder",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "ground cumin",
+      "quantity": "1.5",
+      "unit": "tbsp"
+    },
+    {
+      "name": "smoked paprika",
+      "quantity": "1",
+      "unit": "tsp"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "1.5",
+      "unit": "tsp"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Brown turkey and aromatics",
+      "instruction": "Brown turkey with onion and bell pepper in a skillet 10–12 minutes until turkey is crumbly and vegetables soften with lightly golden edges.",
+      "minutes": 12,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Bloom spices",
+      "instruction": "Add garlic, chili powder, cumin, and paprika. Cook 2 minutes until spices smell toasted and coat the turkey evenly.",
+      "minutes": 2,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Transfer to crock",
+      "instruction": "Scrape mixture into slow cooker. Add sweet potato, beans, tomatoes, broth, and salt. Stir until combined and potatoes submerged.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Slow cook until tender",
+      "instruction": "Cook on low 5–6 hours until sweet potato pierces easily with a fork but still holds cube shape, not falling apart.",
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Adjust and serve",
+      "instruction": "Taste and adjust salt. Chili should be thick enough to mound on a spoon without running off immediately.",
+      "minutes": 3,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Do not stir aggressively—broken sweet potato thickens too much and turns paste-like.",
+    "Top with avocado and cilantro for fresh contrast to long-simmered flavors.",
+    "Swap half sweet potato for butternut squash in fall without changing cook time."
+  ],
+  "tonightSpread": [
+    "Cornbread baked in a 9x13 pan.",
+    "Greek yogurt and hot sauce at the line."
+  ],
+  "leftovers": [
+    "Chili baked over tater tots with cheese for a quick casserole.",
+    "Freeze portions for backup meals—reheat with extra broth."
+  ],
+  "whyCrewsLikeIt": "Familiar chili night with a lighter twist. Sweet potato adds body and keeps the pot gluten-free and filling.",
+  "mealPrepNotes": "Dice sweet potato uniform ½-inch so pieces cook evenly. Brown turkey before adding to crock. Station: Brown turkey in skillet first—raw turkey in crock makes greasy, bland chili. Station: Add sweet potato in last 2 hours on high if starting from cold crock. Station: Hold on warm with lid slightly vented so potatoes do not turn to mush.",
+  "spiceLevel": "medium",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 355,
+    "protein": 32,
+    "carbs": 42,
+    "fats": 8,
+    "label": "~355 cal/serving · 32g protein · 11g fiber (est.)"
+  },
+  "heroImage": "/images/golden-100/turkey-sweet-potato-chili.jpg",
+  "mobileImage": "/images/mobile/turkey-sweet-potato-chili.jpg",
+  "thumbImage": "/images/thumbs/turkey-sweet-potato-chili.jpg",
+  "railImage": "/images/rails/turkey-sweet-potato-chili.jpg",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "turkey sweet potato chili",
+    "turkey",
+    "American",
+    "slow cooker",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "lean-turkey-bean-chili",
+    "turkey-sausage-egg-muffins",
+    "baked-turkey-meatball-marinara",
+    "crock-barbacoa-chicken",
+    "turkey-taco-skillet",
+    "turkey-lettuce-wrap-night"
+  ],
+  "generatedAt": "2026-05-28T12:57:50.894Z",
+  "contentVersion": 2
+}

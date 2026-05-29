@@ -1,11 +1,15 @@
 {
   "slug": "sheet-pan-fajitas",
   "title": "Sheet Pan Chicken Fajitas",
+  "displayTitle": "Sheet Pan Chicken Fajitas",
+  "seoTitle": "Sheet Pan Chicken Fajitas | Firefighter Meal",
+  "shortDescription": "One pan, peppers, lean strips",
   "subtitle": "One pan, peppers, lean strips",
   "category": "healthy_performance",
   "cuisine": "mexican",
-  "description": "Sheet Pan Chicken Fajitas is a mexican sheet pan built for a hungry firehall crew — One pan, peppers, lean strips. Hearty portions, station-kitchen timing, and flavors everyone recognizes after a long shift.",
+  "description": "One pan, peppers, lean strips. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
@@ -30,71 +34,70 @@
   ],
   "ingredients": [
     {
-      "name": "Chicken (boneless thighs or breasts)",
+      "name": "Boneless chicken thighs",
       "quantity": "3",
-      "unit": "lb"
+      "unit": "lb",
+      "group": "Main"
     },
     {
-      "name": "Kosher salt",
+      "name": "Bell peppers, sliced",
+      "quantity": "4",
+      "unit": "count",
+      "group": "Veg"
+    },
+    {
+      "name": "Red onion, sliced",
       "quantity": "2",
-      "unit": "tbsp"
+      "unit": "large",
+      "group": "Veg"
     },
     {
-      "name": "Black pepper",
-      "quantity": "1",
-      "unit": "tbsp"
-    },
-    {
-      "name": "Cooking oil",
+      "name": "Olive oil",
       "quantity": "0.3",
-      "unit": "cup"
+      "unit": "cup",
+      "group": "Aromatics"
     },
     {
-      "name": "Yellow onion",
-      "quantity": "2",
-      "unit": "large"
+      "name": "Fajita seasoning",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Seasoning"
     },
     {
-      "name": "Garlic",
-      "quantity": "6",
-      "unit": "cloves"
+      "name": "Lime",
+      "quantity": "4",
+      "unit": "count",
+      "group": "Finish"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Prep the line",
-      "instruction": "Set out all ingredients for Sheet Pan Chicken Fajitas before you turn on heat — firefighters eat on a schedule. Pat proteins dry and season aggressively with salt and pepper; dry surfaces brown instead of steam.",
-      "minutes": 15,
+      "title": "Heat oven and prep pans",
+      "instruction": "Preheat 425°F. Toss chicken and veg with oil and seasoning on two rimmed pans — single layer only or you'll steam.",
+      "minutes": 12,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Build the base",
-      "instruction": "Heat oil in your largest skillet, Dutch oven, or on the flat-top over medium-high until it shimmers. Add aromatics (onion first) and cook until the edges turn golden and the smell sweetens — usually 4–6 minutes. If garlic is in the recipe, add it after the onion softens so it doesn't burn.",
-      "minutes": 8,
-      "heatLevel": "medium-high"
+      "title": "Roast until charred",
+      "instruction": "Roast 18–22 minutes, swap racks halfway, until chicken reads 165°F and peppers have blistered edges.",
+      "minutes": 22,
+      "heatLevel": "high"
     },
     {
       "stepNumber": 3,
-      "title": "Cook the main",
-      "instruction": "Cook the primary protein or base for Sheet Pan Chicken Fajitas until it hits proper color and safe internal temperature. Don't crowd the pan — work in batches if needed so you get browning, not gray stew. Listen for a steady sizzle; if it's silent, the heat is too low.",
-      "minutes": 20,
-      "heatLevel": "medium-high"
+      "title": "Serve family-style",
+      "instruction": "Pile Sheet Pan Chicken Fajitas onto trays. Hold backup pan foil-covered at 200°F. Squeeze lime at the line if using.",
+      "minutes": 5,
+      "heatLevel": "low"
     },
     {
       "stepNumber": 4,
-      "title": "Finish and season",
-      "instruction": "Bring components together, taste, and adjust salt. Sauce should coat, not pool. If cheese is involved, melt it just until glossy — another 1–2 minutes under a lid or broiler. Let heavy proteins rest 5 minutes before slicing.",
+      "title": "Batch the next pan",
+      "instruction": "While the crew eats, start a second batch on clean pans if you're feeding stragglers. Scrape burned bits — they smoke up the hall.",
       "minutes": 10,
-      "heatLevel": "medium"
-    },
-    {
-      "stepNumber": 5,
-      "title": "Serve the hall",
-      "instruction": "Transfer to sheet trays or a serving line immediately. Keep backup warm at 200°F. Call the crew while it's hot — this meal is built for a hungry hall, not a photo shoot.",
-      "minutes": 5,
-      "heatLevel": "low"
+      "heatLevel": ""
     }
   ],
   "proTips": [
@@ -113,6 +116,12 @@
     "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
     "Label trays with date and reheat to 165°F minimum before second shift."
   ],
+  "whyCrewsLikeIt": "One pan, peppers, lean strips. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
+  "substitutions": [
+    "Chicken thighs ↔ breasts (thighs forgive overcooking on the flat-top)."
+  ],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
   "nutrition": {
     "calories": 440,
     "protein": 32,
@@ -124,7 +133,7 @@
   "mobileImage": "/images/mobile/sheet-pan-fajitas.jpg",
   "thumbImage": "/images/thumbs/sheet-pan-fajitas.jpg",
   "railImage": "/images/rails/sheet-pan-fajitas.jpg",
-  "realismScore": 100,
+  "realismScore": 95,
   "firefighterScore": 100,
   "popularityWeight": 2.9,
   "searchTerms": [
@@ -145,7 +154,8 @@
     "street-corn-chicken",
     "chicken-quesadillas"
   ],
-  "sourceName": "Budget Bytes",
-  "generatedAt": "2026-05-27T15:03:06.173Z",
-  "contentVersion": 1
+  "sourceName": "Firehall Meals",
+  "sourceUrl": "",
+  "generatedAt": "2026-05-28T12:06:15.030Z",
+  "contentVersion": 2
 }

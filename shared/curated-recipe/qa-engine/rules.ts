@@ -8,7 +8,13 @@ import {
   tokenJaccard,
 } from "./similarity.js";
 import { scanRecipeForAiWording } from "./wording.js";
+import { scanTextBlocksForSpacingIssues } from "../../recipe/spacing.js";
 import { checkImageAvailability, isValidImageReference } from "./assets.js";
+import {
+  buildCuratedMealImageProfile,
+  governanceFailsBuild,
+  validateCuratedImageGovernance,
+} from "../../curated-image-governance/index.js";
 import { hasImpliedEquipment, inferEquipmentFromSteps } from "./equipment-infer.js";
 
 const FILLER_STEP =
@@ -306,12 +312,74 @@ export function runRecipeQaRules(input: EditorialQaInput, ctx: RuleContext): Edi
     flags.push(flag("missing_local_image", "info", "thumbnail not on disk (hero may still render)", "media"));
   }
 
+  if (hero) {
+    const profile = buildCuratedMealImageProfile({
+      slug: input.slug,
+      title: input.title,
+      protein: input.protein,
+      cuisine: input.cuisine,
+      mealFormat: input.mealFormat,
+    });
+    const gov = validateCuratedImageGovernance({
+      profile,
+      heroImage: hero,
+      thumbImage: thumb,
+      publishGate,
+    });
+    for (const m of gov.mismatches) {
+      const sev =
+        m.severity === "critical" && publishGate
+          ? "critical"
+          : m.severity === "critical"
+            ? "warning"
+            : m.severity;
+      flags.push(flag("image_governance", sev, m.message, "media", { code: m.code, confidence: m.confidence }));
+    }
+    if (publishGate && governanceFailsBuild(gov)) {
+      flags.push(
+        flag(
+          "image_governance",
+          "critical",
+          `image fails curated governance (confidence ${gov.mismatchConfidence})`,
+          "media",
+        ),
+      );
+    }
+  }
+
   // 12. Short description
   const summary = (input.summary || "").trim();
   if (!summary || summary.length < 10) {
     flags.push(flag("short_description", "warning", "missing or unusable description", "summary"));
   } else if (summary.length < 40) {
     flags.push(flag("short_description", "info", "description is brief (acceptable)", "summary"));
+  }
+
+  // 12b. Punctuation / spacing formatting
+  const spacingBlocks: Array<{ text: string; field: string }> = [];
+  if (summary) spacingBlocks.push({ text: summary, field: "summary" });
+  for (const s of input.steps) {
+    if (s.heading) spacingBlocks.push({ text: s.heading, field: `step-${s.n}-heading` });
+    if (s.body) spacingBlocks.push({ text: s.body, field: `step-${s.n}-body` });
+  }
+  for (const block of input.extraCopy || []) {
+    if (block.trim()) spacingBlocks.push({ text: block, field: "copy" });
+  }
+  const spacingIssues = scanTextBlocksForSpacingIssues(spacingBlocks);
+  if (spacingIssues.length > 0) {
+    const samples = [...new Set(spacingIssues.map((i) => i.sample))].slice(0, 4);
+    const sev = spacingIssues.some((i) => i.kind === "no_space_after_punct" || i.kind === "numbered_step")
+      ? "warning"
+      : "info";
+    flags.push(
+      flag(
+        "formatting_spacing_issue",
+        sev,
+        `spacing: ${samples.join(", ")}`,
+        "copy",
+        { kinds: [...new Set(spacingIssues.map((i) => i.kind))], samples },
+      ),
+    );
   }
 
   // 13. Generic AI wording

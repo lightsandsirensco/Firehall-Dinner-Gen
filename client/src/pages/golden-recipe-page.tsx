@@ -1,337 +1,771 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, type ReactNode } from "react";
+
 import { useQuery } from "@tanstack/react-query";
+
 import { Link, useRoute } from "wouter";
-import {
-  ChevronLeft,
-  Clock,
-  Users,
-  ChefHat,
-  Flame,
-  Lightbulb,
-  UtensilsCrossed,
-  Recycle,
-  Loader2,
-} from "lucide-react";
+
+import { Clock, Users, ChefHat, Loader2 } from "lucide-react";
+
 import { SiteHeader } from "@/components/site-header";
+import { RecipeBrandStrip } from "@/components/brand/recipe-brand-strip";
+import { SiteFooter } from "@/components/site-footer";
+
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+
 import { getSavedCount } from "@/lib/saved-meals";
-import { fetchGoldenRecipePage } from "@/lib/golden-recipe-api";
+
+import { fetchGoldenCatalogIndex, fetchGoldenRecipePage } from "@/lib/golden-recipe-api";
+import { buildRecipeLinkClusters } from "@shared/golden-100/internal-link-clusters";
+import { RecipeInternalLinks } from "@/components/seo/recipe-internal-links";
+
 import { golden100HeroPath } from "@/lib/golden-100-hero";
+
 import { cn } from "@/lib/utils";
-import { HERO_CONTENT_FADE } from "@/lib/hero-image";
+
+import { app } from "@/lib/design-tokens";
+
+import { FoodImage } from "@/components/mobile/food-image";
+
+import { SeoBreadcrumbs } from "@/components/seo/breadcrumbs";
+
+import { InternalLinkHub } from "@/components/seo/internal-link-hub";
+
+import { usePageSeo } from "@/lib/seo/use-page-seo";
+
+import { getSiteOrigin } from "@/lib/seo/site-origin";
+
+import { buildRecipePageSeo } from "@shared/seo/metadata";
+
+import {
+
+  buildBreadcrumbListSchema,
+
+  buildRecipeSchema,
+
+  type BreadcrumbItem,
+
+} from "@shared/seo/schema";
+
 import type { GoldenRecipePage } from "@shared/golden-100/recipe-page-schema";
+import { MealTrustBadges } from "@/components/trust/meal-trust-badges";
+import {
+  adjustCookTimeForCrew,
+  CREW_SIZE_OPTIONS,
+  scaleGoldenIngredients,
+} from "@shared/golden-100/recipe-quality/crew-scale";
+
+
 
 function formatCategory(id: string): string {
+
   return id.replace(/_/g, " ");
+
 }
+
+
 
 function RelatedCard({ slug, title, thumb }: { slug: string; title: string; thumb: string }) {
+
   return (
-    <Link href={`/recipes/${slug}`}>
-      <div className="group rounded-lg border overflow-hidden bg-card hover:border-primary/40 transition-colors">
-        <div className="aspect-square bg-muted overflow-hidden">
-          <img
-            src={thumb}
-            alt=""
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-            loading="lazy"
-            onError={(e) => {
-              (e.target as HTMLImageElement).src = golden100HeroPath(slug);
-            }}
-          />
-        </div>
-        <p className="p-2 text-xs font-semibold line-clamp-2 leading-tight">{title}</p>
-      </div>
-    </Link>
+
+    <li>
+
+      <Link href={`/recipes/${slug}`} className="group block h-full">
+
+        <article className="rounded-2xl overflow-hidden bg-card/40 ring-1 ring-border/20 hover:ring-primary/30 transition-all h-full">
+
+          <div className="aspect-[4/5] bg-zinc-950 overflow-hidden">
+
+            <FoodImage
+
+              src={thumb}
+
+              alt={`${title} — firefighter meal`}
+
+              layout="card-fill"
+
+              fit="cover"
+
+              focal="center"
+
+              overlay="none"
+
+              cinematicGrade
+
+              rounded="none"
+
+              debugId={{ context: "golden-related", slug, title }}
+
+            />
+
+          </div>
+
+          <h3 className="p-3 text-sm font-medium line-clamp-2 leading-snug">{title}</h3>
+
+        </article>
+
+      </Link>
+
+    </li>
+
   );
+
 }
+
+
 
 function RecipeHero({ page }: { page: GoldenRecipePage }) {
-  const [loaded, setLoaded] = useState(false);
+
   const src = page.heroImage || golden100HeroPath(page.slug);
 
+
+
   return (
-    <div className="relative w-full aspect-[4/3] sm:aspect-[16/9] max-h-[min(52vh,480px)] rounded-2xl overflow-hidden bg-muted">
-      {!loaded && <div className="absolute inset-0 skeleton-shimmer" />}
-      <img
-        src={src}
-        alt={page.title}
-        className={cn(
-          "w-full h-full object-cover transition-opacity duration-500",
-          loaded ? "opacity-100" : "opacity-0",
-        )}
-        fetchPriority="high"
-        onLoad={() => setLoaded(true)}
-        onError={(e) => {
-          (e.target as HTMLImageElement).src = golden100HeroPath(page.slug);
-          setLoaded(true);
-        }}
-      />
-      <div className={cn("absolute inset-0", HERO_CONTENT_FADE)} />
-      <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 text-white">
-        <Badge className="mb-2 bg-white/15 text-white border-white/20 capitalize">
-          {formatCategory(page.category)}
-        </Badge>
-        <h1 className="font-heading text-2xl sm:text-4xl tracking-wide leading-tight drop-shadow-md">
-          {page.title}
-        </h1>
-        <p className="mt-1 text-sm sm:text-base text-white/85 max-w-2xl">{page.subtitle}</p>
+
+    <header className="relative -mx-page sm:mx-0 sm:rounded-3xl overflow-hidden bg-zinc-950">
+
+      <div className="relative w-full aspect-[16/13] sm:aspect-[16/10] max-h-[min(56vh,520px)] sm:max-h-[min(70vh,560px)]">
+
+        <FoodImage
+
+          src={src}
+
+          alt={`${page.title} — firehall meal for firefighters`}
+
+          layout="detail"
+
+          fit="cover"
+
+          focal="food"
+
+          overlay="detail"
+
+          priority
+
+          cinematicGrade
+
+          rounded="none"
+
+          className="absolute inset-0"
+
+          debugId={{ context: "golden-hero", slug: page.slug, title: page.title }}
+
+        />
+
+        <div
+
+          className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent"
+
+          aria-hidden
+
+        />
+
+        <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-8">
+
+          <p className={app.eyebrowMuted}>{formatCategory(page.category)}</p>
+
+          <h1 className={cn(app.titlePage, "mt-2 text-white drop-shadow-lg max-w-2xl")}>
+
+            {page.displayTitle || page.title}
+
+          </h1>
+
+          {page.subtitle && (
+
+            <p className="mt-2 text-base sm:text-lg text-white/80 max-w-xl leading-relaxed">
+
+              {page.subtitle}
+
+            </p>
+
+          )}
+
+          <MealTrustBadges
+            input={{
+              category: page.category,
+              tags: page.tags,
+              cookTime: page.cookTime,
+              difficulty: page.difficulty,
+              cleanupDifficulty: page.cleanupDifficulty,
+              protein: page.protein,
+              popularityWeight: page.popularityWeight,
+              cuisine: page.cuisine,
+            }}
+            max={4}
+            size="md"
+            className="mt-4"
+          />
+
+        </div>
+
       </div>
-    </div>
+
+    </header>
+
   );
+
 }
 
+
+
+function RecipeSection({
+
+  title,
+
+  children,
+
+  className,
+
+  id,
+
+}: {
+
+  title: string;
+
+  children: ReactNode;
+
+  className?: string;
+
+  id: string;
+
+}) {
+
+  return (
+
+    <section className={cn("space-y-4", className)} aria-labelledby={id}>
+
+      <h2 id={id} className={app.titleMeal}>
+
+        {title}
+
+      </h2>
+
+      {children}
+
+    </section>
+
+  );
+
+}
+
+
+
 export default function GoldenRecipePageView() {
+
   const [, params] = useRoute("/recipes/:slug");
+
   const slug = params?.slug ?? "";
+
   const [favCount] = useState(() => getSavedCount());
+  const [crewSize, setCrewSize] = useState<number>(8);
+
+
 
   const { data: page, isLoading, error } = useQuery({
+
     queryKey: ["golden-recipe", slug],
+
     queryFn: () => fetchGoldenRecipePage(slug),
+
     enabled: !!slug,
+
+    staleTime: Infinity,
+
+  });
+
+
+
+  const origin = getSiteOrigin();
+
+
+
+  const breadcrumbs: BreadcrumbItem[] = useMemo(() => {
+
+    if (!page) return [{ name: "Home", path: "/" }, { name: "Recipes", path: "/recipes" }];
+
+    return [
+
+      { name: "Home", path: "/" },
+
+      { name: "Recipes", path: "/recipes" },
+
+      { name: page.title, path: `/recipes/${page.slug}` },
+
+    ];
+
+  }, [page]);
+
+
+
+  const seoConfig = useMemo(
+
+    () => (page ? buildRecipePageSeo(page, origin) : null),
+
+    [page, origin],
+
+  );
+
+
+
+  const seoJsonLd = useMemo(() => {
+
+    if (!page) return undefined;
+
+    return [
+
+      buildRecipeSchema(origin, page),
+
+      buildBreadcrumbListSchema(origin, breadcrumbs),
+
+    ];
+
+  }, [page, origin, breadcrumbs]);
+
+
+
+  usePageSeo(seoConfig, seoJsonLd);
+
+  const { data: catalog } = useQuery({
+    queryKey: ["golden-catalog-index"],
+    queryFn: fetchGoldenCatalogIndex,
     staleTime: Infinity,
   });
 
-  useEffect(() => {
-    if (page?.title) {
-      document.title = `${page.title} | Firehall Meals`;
-    }
-    return () => {
-      document.title = "Firehall Meals";
-    };
-  }, [page?.title]);
+  const linkClusters = useMemo(() => {
+    if (!page || !catalog?.recipes?.length) return [];
+    const entry = catalog.recipes.find((r) => r.slug === page.slug);
+    if (!entry) return [];
+    return buildRecipeLinkClusters(entry, catalog.recipes, { equipment: page.equipment });
+  }, [page, catalog?.recipes]);
 
   const relatedQueries = useQuery({
+
     queryKey: ["golden-recipe-related", slug, page?.relatedSlugs],
+
     queryFn: async () => {
+
       if (!page?.relatedSlugs?.length) return [];
+
       const results = await Promise.all(
+
         page.relatedSlugs.slice(0, 6).map(async (s) => {
+
           try {
+
             const p = await fetchGoldenRecipePage(s);
+
             return { slug: p.slug, title: p.title, thumb: p.thumbImage };
+
           } catch {
+
             return { slug: s, title: s.replace(/-/g, " "), thumb: golden100HeroPath(s) };
+
           }
+
         }),
+
       );
+
       return results;
+
     },
+
     enabled: !!page?.relatedSlugs?.length,
+
     staleTime: Infinity,
+
   });
+
+
+
+  useEffect(() => {
+    if (page) setCrewSize(page.baseServings ?? page.crewSize ?? 8);
+  }, [page?.slug, page?.baseServings, page?.crewSize]);
+
+  const baseServings = page?.baseServings ?? page?.crewSize ?? 8;
+
+  const scaledIngredients = useMemo(() => {
+    if (!page) return [];
+    return scaleGoldenIngredients(page.ingredients, baseServings, crewSize);
+  }, [page, baseServings, crewSize]);
+
+  const displayCookTime = useMemo(() => {
+    if (!page) return 0;
+    return adjustCookTimeForCrew(page.cookTime, baseServings, crewSize);
+  }, [page, baseServings, crewSize]);
+
+  const ingredientGroups = useMemo(() => {
+    const groups = new Map<string, typeof scaledIngredients>();
+    for (const ing of scaledIngredients) {
+      const key = ing.group || "Ingredients";
+      if (!groups.has(key)) groups.set(key, []);
+      groups.get(key)!.push(ing);
+    }
+    return [...groups.entries()];
+  }, [scaledIngredients]);
 
   const metaRow = useMemo(() => {
     if (!page) return [];
     return [
-      { icon: Clock, label: `${page.cookTime} min` },
-      { icon: Users, label: `${page.crewSize} crew` },
+      { icon: Clock, label: `${displayCookTime} min`, datetime: `PT${displayCookTime}M` },
+      { icon: Users, label: `${crewSize} crew` },
       { icon: ChefHat, label: page.difficulty },
-      { icon: Flame, label: `${page.firefighterScore} hall score` },
     ];
-  }, [page]);
+  }, [page, crewSize, displayCookTime]);
+
+
 
   return (
-    <div className="page-shell min-h-screen min-h-[100dvh] bg-background flex flex-col">
+
+    <div className={cn(app.page, "page-shell flex flex-col min-h-[100dvh] pb-safe-nav")}>
+
       <SiteHeader activePage="explore" favCount={favCount} />
 
-      <main className="flex-1 max-w-[900px] mx-auto w-full px-page py-6 sm:py-10 pb-safe-nav">
-        <Link href="/explore">
-          <Button variant="ghost" className="gap-1.5 mb-4 min-h-11">
-            <ChevronLeft className="w-4 h-4" />
-            Explore catalog
-          </Button>
-        </Link>
+
+
+      <main className={cn(app.mainDetail, "flex-1 py-4 sm:py-8")} id="main-content">
+
+        <SeoBreadcrumbs items={breadcrumbs} className="mb-4" />
+
+
 
         {isLoading && (
-          <div className="flex justify-center py-24">
+
+          <div className="flex justify-center py-24" aria-busy="true" aria-live="polite">
+
             <Loader2 className="w-8 h-8 animate-spin text-muted-foreground" />
+
+            <span className="sr-only">Loading recipe</span>
+
           </div>
+
         )}
+
+
 
         {error && (
-          <Card className="border-destructive">
-            <CardContent className="pt-6 text-destructive text-sm">
-              {(error as Error).message || "Recipe not found"}
-            </CardContent>
-          </Card>
+
+          <div className={cn(app.panel, "p-6 text-destructive text-sm")} role="alert">
+
+            {(error as Error).message || "Recipe not found"}
+
+          </div>
+
         )}
 
+
+
         {page && (
-          <article className="space-y-8">
+
+          <article className={app.sectionGap}>
+
             <RecipeHero page={page} />
 
-            <div className="flex flex-wrap gap-3">
-              {metaRow.map(({ icon: Icon, label }) => (
-                <Badge key={label} variant="secondary" className="gap-1.5 py-1.5 px-3 capitalize">
-                  <Icon className="w-3.5 h-3.5" />
-                  {label}
-                </Badge>
+            <RecipeBrandStrip className="mt-4" />
+
+            <div className="flex flex-wrap gap-2 pt-2">
+
+              {metaRow.map(({ icon: Icon, label, datetime }) => (
+
+                <span key={label} className={app.pill}>
+
+                  <Icon className="w-3.5 h-3.5 mr-1.5 inline opacity-70" aria-hidden />
+
+                  {datetime ? <time dateTime={datetime}>{label}</time> : label}
+
+                </span>
+
               ))}
-              <Badge variant="outline" className="capitalize">
-                {page.cuisine}
-              </Badge>
+
+              <span className={app.pill}>{page.cuisine}</span>
+
             </div>
 
-            <p className="text-muted-foreground leading-relaxed">{page.description}</p>
 
-            <section>
-              <h2 className="font-heading text-lg tracking-wide mb-3 flex items-center gap-2">
-                <UtensilsCrossed className="w-5 h-5 text-primary" />
-                Ingredients
-              </h2>
-              <ul className="grid gap-2 sm:grid-cols-2">
-                {page.ingredients.map((ing, i) => (
-                  <li
-                    key={`${ing.name}-${i}`}
-                    className="flex gap-2 text-sm py-2 px-3 rounded-lg bg-muted/50 border border-border/50"
-                  >
-                    <span className="text-muted-foreground shrink-0">
-                      {[ing.quantity, ing.unit].filter(Boolean).join(" ") || "—"}
-                    </span>
-                    <span className="font-medium">{ing.name}</span>
-                  </li>
+
+            <p className={cn(app.lead, "max-w-2xl")}>{page.shortDescription || page.description}</p>
+
+            {page.whyCrewsLikeIt && (
+              <p className="text-[15px] text-muted-foreground max-w-2xl leading-relaxed">
+                <span className="text-foreground font-medium">Why crews like it: </span>
+                {page.whyCrewsLikeIt}
+              </p>
+            )}
+
+            <div className="flex flex-wrap items-center gap-2" role="group" aria-label="Crew size">
+              <span className="text-sm text-muted-foreground mr-1">Scale for</span>
+              {CREW_SIZE_OPTIONS.map((n) => (
+                <button
+                  key={n}
+                  type="button"
+                  onClick={() => setCrewSize(n)}
+                  className={cn(
+                    app.pill,
+                    "cursor-pointer transition-colors",
+                    crewSize === n && "bg-primary/20 ring-1 ring-primary/40 text-foreground",
+                  )}
+                  aria-pressed={crewSize === n}
+                >
+                  {n} firefighters
+                </button>
+              ))}
+            </div>
+
+            <RecipeSection title="Ingredients" id="recipe-ingredients">
+              <div className="space-y-6">
+                {ingredientGroups.map(([group, items]) => (
+                  <div key={group}>
+                    {ingredientGroups.length > 1 && (
+                      <h3 className="text-sm font-semibold text-foreground/90 mb-2">{group}</h3>
+                    )}
+                    <ul className="space-y-0 divide-y divide-border/30">
+                      {items.map((ing, i) => (
+                        <li
+                          key={`${ing.name}-${i}`}
+                          className="flex justify-between gap-4 py-3.5 text-[15px]"
+                        >
+                          <span className="font-medium">
+                            {ing.name}
+                            {ing.notes && (
+                              <span className="block text-xs text-muted-foreground font-normal mt-0.5">
+                                {ing.notes}
+                              </span>
+                            )}
+                          </span>
+                          <span className="text-muted-foreground tabular-nums shrink-0">
+                            {[ing.quantity, ing.unit].filter(Boolean).join(" ") || "—"}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 ))}
-              </ul>
-            </section>
+              </div>
+            </RecipeSection>
 
-            <section>
-              <h2 className="font-heading text-lg tracking-wide mb-4">Instructions</h2>
-              <ol className="space-y-4">
+
+
+            <RecipeSection title="How to cook it" id="recipe-steps">
+
+              <ol className="space-y-8">
+
                 {page.steps.map((step) => (
-                  <li key={step.stepNumber} className="flex gap-4">
-                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground text-sm font-bold">
+
+                  <li
+
+                    key={step.stepNumber}
+
+                    className="flex gap-4 sm:gap-5"
+
+                  >
+
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-muted/60 text-sm font-semibold tabular-nums">
+
                       {step.stepNumber}
+
                     </span>
+
                     <div className="flex-1 min-w-0 pt-0.5">
-                      <p className="font-semibold text-sm">{step.title}</p>
-                      <p className="mt-1 text-sm text-muted-foreground leading-relaxed">
+
+                      <p className="font-medium text-foreground">{step.title}</p>
+
+                      <p className="mt-2 text-[15px] text-muted-foreground leading-relaxed">
+
                         {step.instruction}
+
                       </p>
+
                       {(step.minutes || step.heatLevel) && (
-                        <p className="mt-1.5 text-xs text-muted-foreground/80">
+
+                        <p className="mt-2 text-xs text-muted-foreground/70">
+
                           {[step.heatLevel && `${step.heatLevel} heat`, step.minutes && `~${step.minutes} min`]
+
                             .filter(Boolean)
+
                             .join(" · ")}
+
                         </p>
+
                       )}
+
                     </div>
+
                   </li>
+
                 ))}
+
               </ol>
-            </section>
 
-            <Card>
-              <CardHeader className="pb-2">
-                <CardTitle className="text-base font-heading tracking-wide flex items-center gap-2">
-                  <UtensilsCrossed className="w-4 h-4 text-primary" />
-                  Tonight&apos;s spread
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-sm text-muted-foreground">
+            </RecipeSection>
+
+
+
+            {page.tonightSpread.length > 0 && (
+
+              <RecipeSection title="Tonight's spread" id="recipe-spread">
+
+                <ul className="space-y-2 text-[15px] text-muted-foreground leading-relaxed">
+
                   {page.tonightSpread.map((line, i) => (
-                    <li key={i} className="flex gap-2">
-                      <span className="text-primary">•</span>
-                      {line}
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
 
-            <Card>
-              <CardHeader className="pb-2">
-                <CardTitle className="text-base font-heading tracking-wide flex items-center gap-2">
-                  <Lightbulb className="w-4 h-4 text-amber-500" />
-                  Pro tips
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-sm">
+                    <li key={i}>{line}</li>
+
+                  ))}
+
+                </ul>
+
+              </RecipeSection>
+
+            )}
+
+
+
+            {page.proTips.length > 0 && (
+
+              <RecipeSection title="Hall tips" id="recipe-tips">
+
+                <ul className="space-y-3 text-[15px] text-muted-foreground leading-relaxed">
+
                   {page.proTips.map((tip, i) => (
-                    <li key={i} className="text-muted-foreground leading-relaxed">
-                      {tip}
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
 
-            <Card>
-              <CardHeader className="pb-2">
-                <CardTitle className="text-base font-heading tracking-wide flex items-center gap-2">
-                  <Recycle className="w-4 h-4" />
-                  Leftovers
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  {page.leftovers.map((line, i) => (
+                    <li key={i}>{tip}</li>
+
+                  ))}
+
+                </ul>
+
+              </RecipeSection>
+
+            )}
+
+
+
+            {page.substitutions && page.substitutions.length > 0 && (
+              <RecipeSection title="Substitutions" id="recipe-substitutions">
+                <ul className="space-y-2 text-[15px] text-muted-foreground leading-relaxed">
+                  {page.substitutions.map((line, i) => (
                     <li key={i}>{line}</li>
                   ))}
                 </ul>
-              </CardContent>
-            </Card>
+              </RecipeSection>
+            )}
 
-            <section className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center text-sm">
-              <div className="rounded-lg border p-3">
-                <p className="text-muted-foreground text-xs">Calories</p>
-                <p className="font-semibold">{page.nutrition.calories}</p>
-              </div>
-              <div className="rounded-lg border p-3">
-                <p className="text-muted-foreground text-xs">Protein</p>
-                <p className="font-semibold">{page.nutrition.protein}g</p>
-              </div>
-              <div className="rounded-lg border p-3">
-                <p className="text-muted-foreground text-xs">Carbs</p>
-                <p className="font-semibold">{page.nutrition.carbs}g</p>
-              </div>
-              <div className="rounded-lg border p-3">
-                <p className="text-muted-foreground text-xs">Fat</p>
-                <p className="font-semibold">{page.nutrition.fats}g</p>
-              </div>
-            </section>
+            {page.mealPrepNotes && (
+              <RecipeSection title="Meal prep" id="recipe-meal-prep">
+                <p className="text-[15px] text-muted-foreground leading-relaxed">{page.mealPrepNotes}</p>
+              </RecipeSection>
+            )}
+
+            {page.leftovers.length > 0 && (
+              <RecipeSection title="Leftovers" id="recipe-leftovers">
+
+                <ul className="space-y-2 text-[15px] text-muted-foreground leading-relaxed">
+
+                  {page.leftovers.map((line, i) => (
+
+                    <li key={i}>{line}</li>
+
+                  ))}
+
+                </ul>
+
+              </RecipeSection>
+
+            )}
+
+
+
+            <div className="flex gap-6 pt-2 text-sm text-muted-foreground border-t border-border/20">
+
+              <span>
+
+                <span className="text-foreground font-medium tabular-nums">{page.nutrition.calories}</span>{" "}
+
+                cal
+
+              </span>
+
+              <span>
+
+                <span className="text-foreground font-medium tabular-nums">{page.nutrition.protein}g</span>{" "}
+
+                protein
+
+              </span>
+
+            </div>
+
+
 
             {page.equipment.length > 0 && (
-              <section>
-                <h2 className="font-heading text-sm tracking-wide mb-2 text-muted-foreground uppercase">
-                  Equipment
-                </h2>
-                <div className="flex flex-wrap gap-2">
-                  {page.equipment.map((eq) => (
-                    <Badge key={eq} variant="outline" className="text-xs">
-                      {eq}
-                    </Badge>
-                  ))}
-                </div>
-              </section>
+
+              <div className="flex flex-wrap gap-2">
+
+                {page.equipment.map((eq) => (
+
+                  <span key={eq} className={app.pill}>
+
+                    {eq}
+
+                  </span>
+
+                ))}
+
+              </div>
+
             )}
+
+
 
             {relatedQueries.data && relatedQueries.data.length > 0 && (
-              <section>
-                <h2 className="font-heading text-lg tracking-wide mb-4">Related meals</h2>
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                  {relatedQueries.data.map((r) => (
-                    <RelatedCard key={r.slug} slug={r.slug} title={r.title} thumb={r.thumb} />
-                  ))}
-                </div>
-              </section>
+
+              <RecipeSection title="Related firefighter meals" id="recipe-related">
+
+                <nav aria-label="Related recipes">
+
+                  <ul className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
+
+                    {relatedQueries.data.map((r) => (
+
+                      <RelatedCard key={r.slug} slug={r.slug} title={r.title} thumb={r.thumb} />
+
+                    ))}
+
+                  </ul>
+
+                </nav>
+
+              </RecipeSection>
+
             )}
 
+
+
+            <RecipeInternalLinks clusters={linkClusters} className="mt-4" />
+
+
+
             {page.classicSlug && (
+
               <Link href={`/package/${page.classicSlug}`}>
-                <Button variant="outline" className="w-full">
-                  Open hall crew package
-                </Button>
+
+                <Button className="btn-tonight w-full">Open crew package</Button>
+
               </Link>
+
             )}
+
           </article>
+
         )}
+
       </main>
+
+      <SiteFooter variant="compact" pbSafe />
     </div>
+
   );
+
 }
+

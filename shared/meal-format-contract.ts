@@ -114,9 +114,9 @@ export function mealHasTortillas(ingredients: { item?: string; notes?: string }[
   return contract.tortillaPattern.test(ingredientsText(ingredients));
 }
 
-/** Title claims tacos but plate does not support it */
+/** Title claims tacos / handheld Mexican format */
 export function titleClaimsTacos(title: string): boolean {
-  return /\btaco(s)?\b/i.test(title || "");
+  return /\b(tacos?|burritos?|nachos?|fajitas?|enchiladas?|quesadillas?)\b/i.test(title || "");
 }
 
 export function titleMatchesIngredients(

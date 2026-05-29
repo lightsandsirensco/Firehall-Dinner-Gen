@@ -27,6 +27,7 @@ const INSTRUCTION_CODES = new Set([
   "ingredient_missing_in_steps",
   "unrealistic_total_time",
   "unrealistic_prep_cook_split",
+  "formatting_spacing_issue",
 ]);
 
 const MEDIA_CODES = new Set(["invalid_image_path", "missing_local_image"]);

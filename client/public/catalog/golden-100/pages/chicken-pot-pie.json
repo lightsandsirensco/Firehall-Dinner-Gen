@@ -1,11 +1,15 @@
 {
   "slug": "chicken-pot-pie",
   "title": "Chicken Pot Pie",
+  "displayTitle": "Chicken Pot Pie",
+  "seoTitle": "Chicken Pot Pie | Firefighter Meal",
+  "shortDescription": "Flaky crust, creamy filling",
   "subtitle": "Flaky crust, creamy filling",
   "category": "comfort_food",
   "cuisine": "american",
-  "description": "Chicken Pot Pie is a american plated main built for a hungry firehall crew — Flaky crust, creamy filling. Hearty portions, station-kitchen timing, and flavors everyone recognizes after a long shift.",
+  "description": "Flaky crust, creamy filling. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
@@ -28,69 +32,68 @@
   ],
   "ingredients": [
     {
-      "name": "Chicken (boneless thighs or breasts)",
+      "name": "Chicken breasts",
       "quantity": "3",
-      "unit": "lb"
-    },
-    {
-      "name": "Kosher salt",
-      "quantity": "2",
-      "unit": "tbsp"
-    },
-    {
-      "name": "Black pepper",
-      "quantity": "1",
-      "unit": "tbsp"
-    },
-    {
-      "name": "Cooking oil",
-      "quantity": "0.3",
-      "unit": "cup"
+      "unit": "lb",
+      "group": "Main"
     },
     {
       "name": "Yellow onion",
       "quantity": "2",
-      "unit": "large"
+      "unit": "large",
+      "group": "Aromatics"
     },
     {
-      "name": "Garlic",
-      "quantity": "6",
-      "unit": "cloves"
+      "name": "Garlic cloves",
+      "quantity": "5",
+      "unit": "cloves",
+      "group": "Aromatics"
+    },
+    {
+      "name": "Crushed tomatoes or broth",
+      "quantity": "2",
+      "unit": "cans",
+      "group": "Sauce"
+    },
+    {
+      "name": "Black pepper, freshly cracked",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Olive oil",
+      "quantity": "0.3",
+      "unit": "cup",
+      "group": "Aromatics"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Prep the line",
-      "instruction": "Set out all ingredients for Chicken Pot Pie before you turn on heat — firefighters eat on a schedule. Pat proteins dry and season aggressively with salt and pepper; dry surfaces brown instead of steam.",
+      "title": "Prep components",
+      "instruction": "Dice vegetables; measure sauce ingredients. Chicken Pot Pie moves smoother when everything is on the counter before the burner goes on.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Build the base",
-      "instruction": "Heat oil in your largest skillet, Dutch oven, or on the flat-top over medium-high until it shimmers. Add aromatics (onion first) and cook until the edges turn golden and the smell sweetens — usually 4–6 minutes. If garlic is in the recipe, add it after the onion softens so it doesn't burn.",
-      "minutes": 8,
+      "title": "Sear and finish",
+      "instruction": "Sear protein over medium-high until browned, then finish in sauce or oven until safe temp (165°F poultry, 160°F ground beef). Watch for color and spring-back, not clock alone.",
+      "minutes": 25,
       "heatLevel": "medium-high"
     },
     {
       "stepNumber": 3,
-      "title": "Cook the main",
-      "instruction": "Cook the primary protein or base for Chicken Pot Pie until it hits proper color and safe internal temperature. Don't crowd the pan — work in batches if needed so you get browning, not gray stew. Listen for a steady sizzle; if it's silent, the heat is too low.",
-      "minutes": 20,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 4,
-      "title": "Finish and season",
-      "instruction": "Bring components together, taste, and adjust salt. Sauce should coat, not pool. If cheese is involved, melt it just until glossy — another 1–2 minutes under a lid or broiler. Let heavy proteins rest 5 minutes before slicing.",
-      "minutes": 10,
+      "title": "Reduce and season",
+      "instruction": "Simmer sauce until it coats a spoon. Taste for salt and acid — add a splash of vinegar or lemon if flat.",
+      "minutes": 12,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 5,
-      "title": "Serve the hall",
-      "instruction": "Transfer to sheet trays or a serving line immediately. Keep backup warm at 200°F. Call the crew while it's hot — this meal is built for a hungry hall, not a photo shoot.",
+      "stepNumber": 4,
+      "title": "Plate for the hall",
+      "instruction": "Serve on sheet trays for family-style or portioned plates. Hold backup at 200°F; cover lightly with foil so skins stay crisp where applicable.",
       "minutes": 5,
       "heatLevel": "low"
     }
@@ -109,6 +112,12 @@
     "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
     "Label trays with date and reheat to 165°F minimum before second shift."
   ],
+  "whyCrewsLikeIt": "Flaky crust, creamy filling. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
+  "substitutions": [
+    "Chicken thighs ↔ breasts (thighs forgive overcooking on the flat-top)."
+  ],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
   "nutrition": {
     "calories": 640,
     "protein": 32,
@@ -140,7 +149,8 @@
     "crispy-chicken-cutlets",
     "bbq-chicken-bowls"
   ],
-  "sourceName": "NYT Cooking",
-  "generatedAt": "2026-05-27T15:03:06.162Z",
-  "contentVersion": 1
+  "sourceName": "Firehall Meals",
+  "sourceUrl": "",
+  "generatedAt": "2026-05-28T12:06:15.010Z",
+  "contentVersion": 2
 }

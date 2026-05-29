@@ -56,7 +56,7 @@ export const imageryStyleSchema = z.object({
   promptMood: z.string().trim().max(200),
   promptTexture: z.string().trim().max(300),
   negativePromptHints: z.array(z.string().trim().max(80)).max(8).default([]),
-  styleVersion: z.string().trim().max(16).default("3.0"),
+  styleVersion: z.string().trim().max(16).default("4.0"),
 });
 
 export const recommendationWeightsSchema = z.object({

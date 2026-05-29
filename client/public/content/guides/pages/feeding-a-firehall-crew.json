@@ -1,0 +1,96 @@
+{
+  "slug": "feeding-a-firehall-crew",
+  "title": "How to Feed a Firehall Crew Without Losing the Shift",
+  "subtitle": "Scaling, timing, and station-kitchen reality — not food-blog fantasy",
+  "description": "Practical guide to feeding a firehall crew on a busy shift: portion math, hold times, line setup, and meal picks that survive interruptions.",
+  "topic": "shift_operations",
+  "pillar": "operations_how_to",
+  "intro": "Feeding a hall is not the same as cooking dinner at home. You are planning for mixed appetites, uneven arrival times, and the very real chance that tones drop mid-prep. The goal is not a perfect plate — it is a reliable spread that still tastes good when someone eats at 7:10 and someone else eats at 8:45. This is how crews actually run dinner on shift.",
+  "sections": [
+    {
+      "id": "crew-size",
+      "heading": "Start with honest crew size",
+      "paragraphs": [
+        "Most station meals land between six and twelve people eating, but you should cook for the people who actually show — plus one or two floaters from neighboring companies. Round up on starches before you round up on expensive protein.",
+        "A practical rule on our hall: one pound of raw protein per three hungry firefighters for handhelds (burgers, sandwiches), and one pound per four for mixed plates (bowls, pasta bakes). Adjust down only if you know the crew is eating elsewhere."
+      ],
+      "tips": [
+        "Count who is on duty at 17:00, not who was on the board at 08:00.",
+        "Keep a backup frozen protein in the freezer for surprise visitors."
+      ]
+    },
+    {
+      "id": "timing",
+      "heading": "Cook for interruption, not for applause",
+      "paragraphs": [
+        "The best firehall meals have a window where they are 'done enough' to eat but not ruined if they sit twenty minutes. Chili, sheet-pan chicken, pulled pork, and casserole bakes tolerate delay better than seared fish or crispy tempura.",
+        "Build prep so the last ten minutes are assembly, not panic. If tones drop at minute forty, you should still have something edible when you return — not a burned skillet and a cold oven."
+      ]
+    },
+    {
+      "id": "line-setup",
+      "heading": "Run the line like a small incident",
+      "paragraphs": [
+        "Assign one cook, one runner, one cleanup lead. Everyone else stays out of the kitchen unless called. Chaos in a station kitchen is how people get burned and meals get oversalted by committee.",
+        "Put hot food hot, cold food cold, and sauces on the side. Sauces on the side save diets, spice tolerance, and leftovers."
+      ]
+    }
+  ],
+  "practicalAdvice": [
+    "Cook the protein and starch as separate anchors so you can hold, reheat, or scale without starting over.",
+    "Set up a self-serve line when possible — it cuts complaints and speeds second helpings.",
+    "Plan one 'always ready' side (bread, rice, or salad) that can sit while the main finishes.",
+    "If you expect a busy night, pick a recipe with a 15-minute 'good enough' checkpoint, not an all-or-nothing finish.",
+    "Label allergens and spice level on the line — it prevents the 'what's in this?' loop during the meal."
+  ],
+  "mealRecommendations": [
+    {
+      "slug": "big-chili",
+      "title": "Big Chili Batch",
+      "blurb": "Holds on the stove, scales clean, and still eats well after a call."
+    },
+    {
+      "slug": "hall-taco-bar",
+      "title": "Hall Taco Bar",
+      "blurb": "Self-serve line — people build what they want, when they show up."
+    },
+    {
+      "slug": "batch-lasagna",
+      "title": "Giant Batch Lasagna",
+      "blurb": "Oven does the work; slice and feed when the crew trickles in."
+    },
+    {
+      "slug": "sheet-pan-fajitas",
+      "title": "Sheet Pan Fajitas",
+      "blurb": "One pan, fast cleanup, easy to rewarm on the flat-top."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How much food should I make for a firehall crew?",
+      "answer": "Plan for everyone on duty plus one or two extras. For mixed plates, about ¼ to ⅓ lb raw protein per person is a solid starting point; for sandwiches and burgers, go closer to ⅓ lb. Starches are cheap insurance — rice, pasta, or bread fix 'still hungry' without cooking a second main."
+    },
+    {
+      "question": "What meals hold up best if we get a call during dinner?",
+      "answer": "Batches and braises: chili, pulled pork, baked pasta, rice bowls with protein on the side. Avoid meals that die on the pass — crispy fried chicken, medium-rare steaks held too long, anything that needs a last-second sear for texture."
+    },
+    {
+      "question": "Should we do plated dinners or a line?",
+      "answer": "For crews over six, a line almost always wins. It reduces waste, handles late eaters, and keeps the kitchen from becoming a traffic jam when second shift wanders in."
+    }
+  ],
+  "relatedArticleSlugs": [
+    "planning-tonights-station-dinner",
+    "quick-meals-between-calls"
+  ],
+  "keywords": [
+    "firefighter meals",
+    "firehall meals",
+    "feed a crew",
+    "fire station meals",
+    "crew dinner"
+  ],
+  "publishedAt": "2026-05-27T12:00:00.000Z",
+  "updatedAt": "2026-05-27T12:00:00.000Z",
+  "readMinutes": 8
+}

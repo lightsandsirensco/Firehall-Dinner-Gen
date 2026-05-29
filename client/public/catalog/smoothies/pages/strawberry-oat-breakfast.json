@@ -1,0 +1,103 @@
+{
+  "slug": "strawberry-oat-breakfast",
+  "title": "Strawberry Oatmeal Breakfast Smoothie",
+  "seoTitle": "Strawberry Oatmeal Breakfast Smoothie | Firefighter Smoothie",
+  "subtitle": "Breakfast · Breakfast",
+  "description": "Rolled oats blend into a creamy breakfast shake — filling enough to last until lunch on a busy tour. Tastes like strawberry oatmeal, not raw oats.",
+  "fuelType": "smoothie",
+  "taxonomyCategory": "breakfast_smoothie",
+  "taxonomyLabel": "Breakfast",
+  "intro": "Rolled oats blend into a creamy breakfast shake — filling enough to last until lunch on a busy tour. Tastes like strawberry oatmeal, not raw oats.",
+  "ingredients": [
+    {
+      "name": "rolled oats",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "old-fashioned, not steel-cut"
+    },
+    {
+      "name": "frozen strawberries",
+      "quantity": "3",
+      "unit": "cups"
+    },
+    {
+      "name": "milk",
+      "quantity": "2",
+      "unit": "cups"
+    },
+    {
+      "name": "plain Greek yogurt",
+      "quantity": "1",
+      "unit": "cup"
+    },
+    {
+      "name": "ground cinnamon",
+      "quantity": "0.5",
+      "unit": "tsp"
+    },
+    {
+      "name": "honey or maple syrup",
+      "quantity": "2",
+      "unit": "tbsp",
+      "notes": "to taste"
+    },
+    {
+      "name": "vanilla extract",
+      "quantity": "0.5",
+      "unit": "tsp"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "instruction": "Add oats and half the milk to the blender. Let sit 5 minutes if you have time — softens oats for a smoother texture."
+    },
+    {
+      "stepNumber": 2,
+      "instruction": "Add strawberries, remaining milk, yogurt, cinnamon, and vanilla. Blend 90 seconds until completely smooth."
+    },
+    {
+      "stepNumber": 3,
+      "instruction": "If you feel grit, blend 30 seconds more on high. Sweeten with honey to taste."
+    },
+    {
+      "stepNumber": 4,
+      "instruction": "Serve immediately for best texture; can refrigerate up to 6 hours and shake before drinking."
+    }
+  ],
+  "nutrition": {
+    "calories": 310,
+    "protein": 20,
+    "carbs": 32,
+    "fats": 8,
+    "highlights": "~310 cal · ~20 g protein · soluble fiber from oats · steady energy vs. a sugar-only fruit blend"
+  },
+  "substitutions": [
+    "Use a frozen banana instead of some strawberries for extra thickness.",
+    "Dairy-free: oat milk + soy yogurt."
+  ],
+  "shiftNote": "Strong choice for breakfast handoff or crews eating light before a busy morning block.",
+  "heroImage": "/images/editorial/smoothies/strawberry-oat-breakfast.webp",
+  "thumbImage": "/images/editorial/smoothies/strawberry-oat-breakfast.webp",
+  "tags": [
+    "fuel_smoothie",
+    "taxonomy:breakfast_smoothie",
+    "smoothie",
+    "performance_fuel",
+    "shift_nutrition"
+  ],
+  "searchTerms": [
+    "strawberry oatmeal breakfast smoothie",
+    "healthy smoothies",
+    "smoothies for firefighters",
+    "firefighter breakfast",
+    "recovery smoothie",
+    "breakfast smoothie",
+    "station blender",
+    "shift nutrition"
+  ],
+  "relatedSlugs": [],
+  "catalogSet": "fuel_smoothie",
+  "generatedAt": "2026-05-28T00:37:54.583Z",
+  "contentVersion": 1
+}

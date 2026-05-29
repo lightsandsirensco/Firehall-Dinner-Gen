@@ -1,11 +1,15 @@
 {
   "slug": "herb-roasted-thighs",
   "title": "Herb Roasted Chicken Thighs",
+  "displayTitle": "Herb Roasted Chicken Thighs",
+  "seoTitle": "Herb Roasted Chicken Thighs | Firefighter Meal",
+  "shortDescription": "Crispy skin, lean protein, oven ease",
   "subtitle": "Crispy skin, lean protein, oven ease",
   "category": "healthy_performance",
   "cuisine": "american",
-  "description": "Herb Roasted Chicken Thighs is a american roast built for a hungry firehall crew — Crispy skin, lean protein, oven ease. Hearty portions, station-kitchen timing, and flavors everyone recognizes after a long shift.",
+  "description": "Crispy skin, lean protein, oven ease. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
@@ -28,71 +32,70 @@
   ],
   "ingredients": [
     {
-      "name": "Chicken (boneless thighs or breasts)",
+      "name": "Bone-in chicken thighs",
+      "quantity": "4",
+      "unit": "lb",
+      "group": "Main"
+    },
+    {
+      "name": "Fresh thyme",
       "quantity": "3",
-      "unit": "lb"
+      "unit": "tbsp",
+      "group": "Herbs"
+    },
+    {
+      "name": "Fresh rosemary",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Herbs"
+    },
+    {
+      "name": "Olive oil",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Roast"
     },
     {
       "name": "Kosher salt",
       "quantity": "2",
-      "unit": "tbsp"
+      "unit": "tbsp",
+      "group": "Seasoning"
     },
     {
       "name": "Black pepper",
       "quantity": "1",
-      "unit": "tbsp"
-    },
-    {
-      "name": "Cooking oil",
-      "quantity": "0.3",
-      "unit": "cup"
-    },
-    {
-      "name": "Yellow onion",
-      "quantity": "2",
-      "unit": "large"
-    },
-    {
-      "name": "Garlic",
-      "quantity": "6",
-      "unit": "cloves"
+      "unit": "tbsp",
+      "group": "Seasoning"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Prep the line",
-      "instruction": "Set out all ingredients for Herb Roasted Chicken Thighs before you turn on heat — firefighters eat on a schedule. Pat proteins dry and season aggressively with salt and pepper; dry surfaces brown instead of steam.",
-      "minutes": 15,
+      "title": "Season and arrange",
+      "instruction": "Pat thighs dry; season under and over skin. Arrange skin-up on oiled sheet pans with space between pieces.",
+      "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Build the base",
-      "instruction": "Heat oil in your largest skillet, Dutch oven, or on the flat-top over medium-high until it shimmers. Add aromatics (onion first) and cook until the edges turn golden and the smell sweetens — usually 4–6 minutes. If garlic is in the recipe, add it after the onion softens so it doesn't burn.",
-      "minutes": 8,
-      "heatLevel": "medium-high"
+      "title": "Roast until crisp",
+      "instruction": "Roast at 425°F 35–42 minutes until skin crackles and thickest part reads 165°F. Juices run clear when pierced.",
+      "minutes": 40,
+      "heatLevel": "high"
     },
     {
       "stepNumber": 3,
-      "title": "Cook the main",
-      "instruction": "Cook the primary protein or base for Herb Roasted Chicken Thighs until it hits proper color and safe internal temperature. Don't crowd the pan — work in batches if needed so you get browning, not gray stew. Listen for a steady sizzle; if it's silent, the heat is too low.",
-      "minutes": 20,
-      "heatLevel": "medium-high"
+      "title": "Rest and hold",
+      "instruction": "Rest 5 minutes. Hold on racks at 200°F — stacking steams skin soft.",
+      "minutes": 8,
+      "heatLevel": "low"
     },
     {
       "stepNumber": 4,
-      "title": "Finish and season",
-      "instruction": "Bring components together, taste, and adjust salt. Sauce should coat, not pool. If cheese is involved, melt it just until glossy — another 1–2 minutes under a lid or broiler. Let heavy proteins rest 5 minutes before slicing.",
-      "minutes": 10,
-      "heatLevel": "medium"
-    },
-    {
-      "stepNumber": 5,
-      "title": "Serve the hall",
-      "instruction": "Transfer to sheet trays or a serving line immediately. Keep backup warm at 200°F. Call the crew while it's hot — this meal is built for a hungry hall, not a photo shoot.",
-      "minutes": 5,
-      "heatLevel": "low"
+      "title": "Crisp skin under broiler",
+      "instruction": "If skin softened while holding, broil 1–2 minutes skin-up until crackly. Watch closely — thighs go from crisp to burnt fast.",
+      "minutes": 3,
+      "heatLevel": "high"
     }
   ],
   "proTips": [
@@ -111,6 +114,12 @@
     "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
     "Label trays with date and reheat to 165°F minimum before second shift."
   ],
+  "whyCrewsLikeIt": "Crispy skin, lean protein, oven ease. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
+  "substitutions": [
+    "Chicken thighs ↔ breasts (thighs forgive overcooking on the flat-top)."
+  ],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
   "nutrition": {
     "calories": 440,
     "protein": 32,
@@ -143,7 +152,8 @@
     "performance-burrito-bowls",
     "sheet-pan-fajitas"
   ],
-  "sourceName": "NYT Cooking",
-  "generatedAt": "2026-05-27T15:03:06.180Z",
-  "contentVersion": 1
+  "sourceName": "Firehall Meals",
+  "sourceUrl": "",
+  "generatedAt": "2026-05-28T12:06:15.042Z",
+  "contentVersion": 2
 }

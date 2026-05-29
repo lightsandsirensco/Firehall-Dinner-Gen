@@ -1,0 +1,104 @@
+{
+  "slug": "citrus-ginger",
+  "title": "Citrus Ginger Smoothie",
+  "seoTitle": "Citrus Ginger Smoothie | Firefighter Smoothie",
+  "subtitle": "Recovery · Recovery",
+  "description": "Orange, carrot, and ginger taste sharp and clean — good when the crew wants something refreshing, not heavy. Ginger is optional but worth it.",
+  "fuelType": "smoothie",
+  "taxonomyCategory": "recovery_smoothie",
+  "taxonomyLabel": "Recovery",
+  "intro": "Orange, carrot, and ginger taste sharp and clean — good when the crew wants something refreshing, not heavy. Ginger is optional but worth it.",
+  "ingredients": [
+    {
+      "name": "navel oranges",
+      "quantity": "3",
+      "unit": "large",
+      "notes": "peeled, seeds removed"
+    },
+    {
+      "name": "carrot",
+      "quantity": "1",
+      "unit": "large",
+      "notes": "peeled, chopped"
+    },
+    {
+      "name": "fresh ginger",
+      "quantity": "1",
+      "unit": "tbsp",
+      "notes": "peeled, or ½ tsp ground"
+    },
+    {
+      "name": "frozen pineapple",
+      "quantity": "1.5",
+      "unit": "cups",
+      "notes": "optional for sweetness"
+    },
+    {
+      "name": "ice",
+      "quantity": "1",
+      "unit": "cup"
+    },
+    {
+      "name": "water or coconut water",
+      "quantity": "0.5",
+      "unit": "cup",
+      "notes": "to thin"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "instruction": "Blend orange segments, carrot, ginger, and liquid until completely smooth — carrot should not leave fibers."
+    },
+    {
+      "stepNumber": 2,
+      "instruction": "Add pineapple and ice. Blend until slushy and bright orange."
+    },
+    {
+      "stepNumber": 3,
+      "instruction": "Ginger heat should be noticeable but not burning — reduce ginger next batch if the crew complains."
+    },
+    {
+      "stepNumber": 4,
+      "instruction": "Serve immediately over ice; separates faster than creamy smoothies — stir before drinking."
+    }
+  ],
+  "nutrition": {
+    "calories": 160,
+    "protein": 15,
+    "carbs": 32,
+    "fats": 8,
+    "highlights": "~160 cal · vitamin C · lighter than cream-based shakes · ginger for digestion comfort"
+  },
+  "substitutions": [
+    "Bottled 100% orange juice (1.5 cups) replaces fresh oranges in a pinch.",
+    "Skip carrot if the blender is weak — add more pineapple instead."
+  ],
+  "shiftNote": "Hydration-forward option on hot days or after heat exposure — not a meal replacement, but a solid bridge.",
+  "heroImage": "/images/editorial/smoothies/citrus-ginger.webp",
+  "thumbImage": "/images/editorial/smoothies/citrus-ginger.webp",
+  "tags": [
+    "fuel_smoothie",
+    "taxonomy:recovery_smoothie",
+    "smoothie",
+    "performance_fuel",
+    "shift_nutrition"
+  ],
+  "searchTerms": [
+    "citrus ginger smoothie",
+    "healthy smoothies",
+    "smoothies for firefighters",
+    "firefighter breakfast",
+    "recovery smoothie",
+    "recovery smoothie",
+    "station blender",
+    "shift nutrition"
+  ],
+  "relatedSlugs": [
+    "peanut-butter-banana-recovery",
+    "chocolate-banana-recovery"
+  ],
+  "catalogSet": "fuel_smoothie",
+  "generatedAt": "2026-05-28T00:37:54.583Z",
+  "contentVersion": 1
+}

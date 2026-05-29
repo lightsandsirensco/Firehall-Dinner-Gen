@@ -6,7 +6,6 @@ import { app } from "@/lib/design-tokens";
 interface PizzaHeroProps {
   title?: string;
   subtitle?: string;
-  emoji?: string;
   gradient?: string;
   badges?: string[];
   heroImage?: string;
@@ -15,24 +14,20 @@ interface PizzaHeroProps {
 }
 
 /**
- * Pizza Night — event-mode hero (ember + optional food imagery).
+ * Pizza Night — restrained event hero.
  */
 export function PizzaHero({
-  title = "Pizza Night at the Hall",
-  subtitle = "Crew-sized pies · oven-tested · beginner-friendly steps",
-  emoji = "🍕",
-  gradient = "from-orange-950 via-red-950 to-zinc-950",
-  badges = ["Feeds 4–8", "Quick Shift Meal"],
+  title = "Pizza night at the hall",
+  subtitle = "Crew-sized pies with oven temps and hall-friendly steps.",
+  gradient = "from-red-950/90 via-zinc-950 to-background",
+  badges = ["Feeds the crew", "Oven-ready"],
   heroImage,
   heroImageAlt,
   className,
 }: PizzaHeroProps) {
   return (
     <section
-      className={cn(
-        "relative w-full overflow-hidden border-b border-primary/20",
-        className,
-      )}
+      className={cn("relative w-full overflow-hidden border-b border-border/30", className)}
       data-testid="pizza-hero"
     >
       {heroImage ? (
@@ -46,49 +41,41 @@ export function PizzaHero({
           bleed
           rounded="none"
           cinematicGrade
-          className="absolute inset-0 min-h-[min(38vh,280px)] sm:min-h-0"
+          className="absolute inset-0 min-h-[min(36vh,260px)] sm:min-h-0"
         />
       ) : (
-        <div className={cn("absolute inset-0 bg-gradient-to-br min-h-[200px]", gradient)} aria-hidden />
+        <div className={cn("absolute inset-0 bg-gradient-to-b min-h-[220px]", gradient)} aria-hidden />
       )}
       {!heroImage && (
         <div
-          className="absolute inset-0 bg-[radial-gradient(ellipse_70%_80%_at_50%_120%,rgba(234,88,12,0.35),transparent)]"
+          className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-10%,hsl(0_72%_38%/0.2),transparent)]"
           aria-hidden
         />
       )}
 
-      <div className={cn(app.main, "relative py-8 sm:py-12")}>
-        <div className="flex items-end justify-between gap-4">
-          <div className="flex-1 min-w-0">
-            <div className="flex items-center gap-2 mb-2">
-              <Flame className="w-4 h-4 text-primary shrink-0" />
-              <span className={app.eyebrow}>Pizza Night</span>
-            </div>
-            <h1
-              className={cn(app.titlePage, "text-white drop-shadow-lg")}
-              data-testid="pizza-hero-title"
-            >
-              {title}
-            </h1>
-            <p className="text-sm text-white/80 mt-2 max-w-xl leading-relaxed">{subtitle}</p>
-            <div className="flex flex-wrap gap-2 mt-3">
-              {badges.map((b) => (
-                <span
-                  key={b}
-                  className="inline-flex text-[10px] font-semibold tracking-wide px-2.5 py-1 rounded-full bg-black/40 border border-white/15 text-white/90 backdrop-blur-sm"
-                >
-                  {b}
-                </span>
-              ))}
-            </div>
+      <div className={cn(app.main, "relative py-10 sm:py-14")}>
+        <p className={cn(app.eyebrowMuted, "inline-flex items-center gap-1.5")}>
+          <Flame className="w-3 h-3 text-primary/80" aria-hidden />
+          Pizza night
+        </p>
+        <h1 className={cn(app.titlePage, "mt-3 text-white drop-shadow-md max-w-lg")} data-testid="pizza-hero-title">
+          {title}
+        </h1>
+        <p className="text-base text-white/75 mt-3 max-w-md leading-relaxed">{subtitle}</p>
+        {badges.length > 0 && (
+          <div className="flex flex-wrap gap-2 mt-4">
+            {badges.slice(0, 2).map((b) => (
+              <span
+                key={b}
+                className="inline-flex text-xs font-medium px-3 py-1 rounded-full bg-black/40 border border-white/10 text-white/85 backdrop-blur-sm"
+              >
+                {b}
+              </span>
+            ))}
           </div>
-          <div className="text-[4rem] sm:text-[5.5rem] leading-none drop-shadow-2xl select-none shrink-0" aria-hidden>
-            {emoji}
-          </div>
-        </div>
+        )}
       </div>
-      <div className="absolute inset-x-0 bottom-0 h-12 bg-gradient-to-t from-background to-transparent pointer-events-none z-[5]" />
+      <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-background to-transparent pointer-events-none z-[5]" />
     </section>
   );
 }

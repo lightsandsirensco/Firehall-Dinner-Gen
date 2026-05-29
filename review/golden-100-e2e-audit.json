@@ -1,0 +1,177 @@
+{
+  "generatedAt": "2026-05-28T20:56:15.487Z",
+  "pass": 79,
+  "fail": 0,
+  "warn": 21,
+  "total": 100,
+  "issues": [
+    {
+      "slug": "steak-tacos",
+      "severity": "warn",
+      "code": "page_weak_title",
+      "message": "title_taco_no_tortilla",
+      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\steak-tacos.json",
+      "fix": "Regenerate page copy or manually edit weak steps/title."
+    },
+    {
+      "slug": "loaded-nacho-skillet",
+      "severity": "warn",
+      "code": "page_weak_title",
+      "message": "robotic_title",
+      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\loaded-nacho-skillet.json",
+      "fix": "Regenerate page copy or manually edit weak steps/title."
+    },
+    {
+      "slug": "hall-taco-bar",
+      "severity": "warn",
+      "code": "page_weak_title",
+      "message": "title_taco_no_tortilla",
+      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\hall-taco-bar.json",
+      "fix": "Regenerate page copy or manually edit weak steps/title."
+    },
+    {
+      "slug": "philly-cheesesteak-skillet",
+      "severity": "warn",
+      "code": "page_weak_title",
+      "message": "robotic_title",
+      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\philly-cheesesteak-skillet.json",
+      "fix": "Regenerate page copy or manually edit weak steps/title."
+    },
+    {
+      "slug": "greek-chicken-bowls",
+      "severity": "warn",
+      "code": "page_weak_title",
+      "message": "robotic_title",
+      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\greek-chicken-bowls.json",
+      "fix": "Regenerate page copy or manually edit weak steps/title."
+    },
+    {
+      "slug": "sheet-pan-fajitas",
+      "severity": "warn",
+      "code": "page_weak_title",
+      "message": "robotic_title",
+      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\sheet-pan-fajitas.json",
+      "fix": "Regenerate page copy or manually edit weak steps/title."
+    },
+    {
+      "slug": "mediterranean-chickpea",
+      "severity": "warn",
+      "code": "page_weak_title",
+      "message": "robotic_title",
+      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\mediterranean-chickpea.json",
+      "fix": "Regenerate page copy or manually edit weak steps/title."
+    },
+    {
+      "slug": "sheet-pan-sausage-peppers",
+      "severity": "warn",
+      "code": "page_weak_title",
+      "message": "robotic_title",
+      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\sheet-pan-sausage-peppers.json",
+      "fix": "Regenerate page copy or manually edit weak steps/title."
+    },
+    {
+      "slug": "skillet-chicken-alfredo",
+      "severity": "warn",
+      "code": "page_weak_title",
+      "message": "robotic_title",
+      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\skillet-chicken-alfredo.json",
+      "fix": "Regenerate page copy or manually edit weak steps/title."
+    },
+    {
+      "slug": "beef-broccoli",
+      "severity": "warn",
+      "code": "page_weak_title",
+      "message": "generic_opener",
+      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\beef-broccoli.json",
+      "fix": "Regenerate page copy or manually edit weak steps/title."
+    },
+    {
+      "slug": "fast-philly-skillet",
+      "severity": "warn",
+      "code": "page_weak_title",
+      "message": "robotic_title",
+      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\fast-philly-skillet.json",
+      "fix": "Regenerate page copy or manually edit weak steps/title."
+    },
+    {
+      "slug": "pork-carnitas-tacos",
+      "severity": "warn",
+      "code": "page_weak_title",
+      "message": "generic_opener; title_taco_no_tortilla",
+      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\pork-carnitas-tacos.json",
+      "fix": "Regenerate page copy or manually edit weak steps/title."
+    },
+    {
+      "slug": "meat-lovers-sheet-pizza",
+      "severity": "warn",
+      "code": "page_weak_title",
+      "message": "robotic_title",
+      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\meat-lovers-sheet-pizza.json",
+      "fix": "Regenerate page copy or manually edit weak steps/title."
+    },
+    {
+      "slug": "bacon-egg-hash",
+      "severity": "warn",
+      "code": "page_weak_title",
+      "message": "robotic_title",
+      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\bacon-egg-hash.json",
+      "fix": "Regenerate page copy or manually edit weak steps/title."
+    },
+    {
+      "slug": "chorizo-breakfast-tacos",
+      "severity": "warn",
+      "code": "page_weak_title",
+      "message": "title_taco_no_tortilla",
+      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\chorizo-breakfast-tacos.json",
+      "fix": "Regenerate page copy or manually edit weak steps/title."
+    },
+    {
+      "slug": "thai-basil-chicken",
+      "severity": "warn",
+      "code": "page_weak_title",
+      "message": "robotic_title",
+      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\thai-basil-chicken.json",
+      "fix": "Regenerate page copy or manually edit weak steps/title."
+    },
+    {
+      "slug": "bulgogi-bowls",
+      "severity": "warn",
+      "code": "page_weak_title",
+      "message": "robotic_title",
+      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\bulgogi-bowls.json",
+      "fix": "Regenerate page copy or manually edit weak steps/title."
+    },
+    {
+      "slug": "street-corn-chicken",
+      "severity": "warn",
+      "code": "page_weak_title",
+      "message": "robotic_title",
+      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\street-corn-chicken.json",
+      "fix": "Regenerate page copy or manually edit weak steps/title."
+    },
+    {
+      "slug": "sheet-pan-meal-prep",
+      "severity": "warn",
+      "code": "page_weak_title",
+      "message": "robotic_title",
+      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\sheet-pan-meal-prep.json",
+      "fix": "Regenerate page copy or manually edit weak steps/title."
+    },
+    {
+      "slug": "one-pot-chicken-rice",
+      "severity": "warn",
+      "code": "page_weak_title",
+      "message": "robotic_title",
+      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\one-pot-chicken-rice.json",
+      "fix": "Regenerate page copy or manually edit weak steps/title."
+    },
+    {
+      "slug": "five-ingredient-pasta",
+      "severity": "warn",
+      "code": "page_weak_title",
+      "message": "title_pasta_no_pasta",
+      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\five-ingredient-pasta.json",
+      "fix": "Regenerate page copy or manually edit weak steps/title."
+    }
+  ]
+}

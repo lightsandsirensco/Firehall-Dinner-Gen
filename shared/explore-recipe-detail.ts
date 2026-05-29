@@ -1,3 +1,5 @@
+import type { ExploreHeldImageryLabel, ExploreImageryStatus } from "./explore-imagery-status.js";
+
 /**
  * Canonical Explore full-recipe detail shape (API + client).
  * Server `ExploreRecipeDetailPayload` extends this with curation metadata.
@@ -39,6 +41,9 @@ export interface ExploreRecipeDetail {
   ingredients: ExploreRecipeIngredient[];
   steps: ExploreRecipeStep[];
   macros: ExploreRecipeMacros;
+  /** Matches Explore card tier — soft-held uses branded placeholder hero */
+  imageryStatus?: ExploreImageryStatus;
+  heldImageryLabel?: ExploreHeldImageryLabel;
 }
 
 /** Alias used in product docs / older references */

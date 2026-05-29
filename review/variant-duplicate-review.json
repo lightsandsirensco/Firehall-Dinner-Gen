@@ -1,0 +1,148 @@
+{
+  "generatedAt": "2026-05-27T17:52:35.687Z",
+  "pairCount": 6,
+  "families": [
+    {
+      "family": "arch:pasta_night",
+      "pairs": [
+        {
+          "recipeIdA": "curated:chicken-alfredo-bake",
+          "recipeIdB": "curated:skillet-chicken-alfredo",
+          "slugA": "chicken-alfredo-bake",
+          "slugB": "skillet-chicken-alfredo",
+          "overall": 87,
+          "ingredients": 100,
+          "steps": 100,
+          "title": 50,
+          "equipment": 0,
+          "isNearDuplicate": true
+        }
+      ]
+    },
+    {
+      "family": "arch:bbq_night",
+      "pairs": [
+        {
+          "recipeIdA": "curated:cedar-plank-salmon",
+          "recipeIdB": "curated:teriyaki-salmon-grill",
+          "slugA": "cedar-plank-salmon",
+          "slugB": "teriyaki-salmon-grill",
+          "overall": 85,
+          "ingredients": 100,
+          "steps": 100,
+          "title": 40,
+          "equipment": 0,
+          "isNearDuplicate": true
+        },
+        {
+          "recipeIdA": "curated:flank-chimichurri",
+          "recipeIdB": "curated:ny-strip-herb-butter",
+          "slugA": "flank-chimichurri",
+          "slugB": "ny-strip-herb-butter",
+          "overall": 82,
+          "ingredients": 100,
+          "steps": 100,
+          "title": 25,
+          "equipment": 0,
+          "isNearDuplicate": true
+        }
+      ]
+    },
+    {
+      "family": "arch:pizza_night",
+      "pairs": [
+        {
+          "recipeIdA": "curated:pepperoni-pizza-night",
+          "recipeIdB": "curated:detroit-style-pizza",
+          "slugA": "pepperoni-pizza-night",
+          "slugB": "detroit-style-pizza",
+          "overall": 85,
+          "ingredients": 100,
+          "steps": 100,
+          "title": 40,
+          "equipment": 0,
+          "isNearDuplicate": true
+        }
+      ]
+    },
+    {
+      "family": "arch:healthy_bowl_night",
+      "pairs": [
+        {
+          "recipeIdA": "curated:loaded-baked-potato-bar",
+          "recipeIdB": "curated:loaded-potato-feed",
+          "slugA": "loaded-baked-potato-bar",
+          "slugB": "loaded-potato-feed",
+          "overall": 85,
+          "ingredients": 100,
+          "steps": 100,
+          "title": 40,
+          "equipment": 0,
+          "isNearDuplicate": true
+        },
+        {
+          "recipeIdA": "curated:greek-chicken-bowls",
+          "recipeIdB": "curated:street-corn-chicken",
+          "slugA": "greek-chicken-bowls",
+          "slugB": "street-corn-chicken",
+          "overall": 83,
+          "ingredients": 100,
+          "steps": 100,
+          "title": 29,
+          "equipment": 0,
+          "isNearDuplicate": true
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    {
+      "slugA": "chicken-alfredo-bake",
+      "slugB": "skillet-chicken-alfredo",
+      "similarity": 87,
+      "family": "arch:pasta_night",
+      "recommendation": "rewrite",
+      "rationale": "Strong overlap — differentiate steps or protein focus before publish."
+    },
+    {
+      "slugA": "cedar-plank-salmon",
+      "slugB": "teriyaki-salmon-grill",
+      "similarity": 85,
+      "family": "arch:bbq_night",
+      "recommendation": "rewrite",
+      "rationale": "Strong overlap — differentiate steps or protein focus before publish."
+    },
+    {
+      "slugA": "pepperoni-pizza-night",
+      "slugB": "detroit-style-pizza",
+      "similarity": 85,
+      "family": "arch:pizza_night",
+      "recommendation": "rewrite",
+      "rationale": "Strong overlap — differentiate steps or protein focus before publish."
+    },
+    {
+      "slugA": "loaded-baked-potato-bar",
+      "slugB": "loaded-potato-feed",
+      "similarity": 85,
+      "family": "arch:healthy_bowl_night",
+      "recommendation": "rewrite",
+      "rationale": "Strong overlap — differentiate steps or protein focus before publish."
+    },
+    {
+      "slugA": "greek-chicken-bowls",
+      "slugB": "street-corn-chicken",
+      "similarity": 83,
+      "family": "arch:healthy_bowl_night",
+      "recommendation": "keep",
+      "rationale": "Similar but distinct enough to keep both variants."
+    },
+    {
+      "slugA": "flank-chimichurri",
+      "slugB": "ny-strip-herb-butter",
+      "similarity": 82,
+      "family": "arch:bbq_night",
+      "recommendation": "keep",
+      "rationale": "Similar but distinct enough to keep both variants."
+    }
+  ]
+}

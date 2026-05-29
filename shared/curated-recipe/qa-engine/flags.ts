@@ -19,6 +19,7 @@ export const EDITORIAL_QA_FLAG_CODES = [
   "missing_cook_temperature",
   "ingredient_missing_in_steps",
   "invalid_image_path",
+  "image_governance",
   "missing_local_image",
   "short_description",
   "generic_ai_wording",
@@ -32,6 +33,7 @@ export const EDITORIAL_QA_FLAG_CODES = [
   "variant_missing_parent",
   "family_orphan_variant",
   "family_missing_archetype",
+  "formatting_spacing_issue",
 ] as const;
 
 export type EditorialQaFlagCode = (typeof EDITORIAL_QA_FLAG_CODES)[number];

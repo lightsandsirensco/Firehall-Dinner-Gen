@@ -1,0 +1,79 @@
+{
+  "slug": "firehall-taco-night-ideas",
+  "title": "Firehall Taco Night Ideas",
+  "subtitle": "Lines, proteins, and toppings that keep peace",
+  "description": "Ground beef bars, carnitas, chicken, and toppings that let ten people build without kitchen chaos.",
+  "topic": "meal_planning",
+  "pillar": "recipes_meals",
+  "intro": "Taco night works because it is a line, not a plating job. Firehall taco night ideas center on two proteins max, warm tortillas in a cooler, and toppings in bowls with spoons — not one cook assembling to order.",
+  "sections": [
+    {
+      "id": "proteins",
+      "heading": "Pick your proteins",
+      "paragraphs": [
+        "Ground beef seasoned simple, shredded chicken, or carnitas for busy nights. Veg option: seasoned beans in its own pan."
+      ]
+    },
+    {
+      "id": "tortillas",
+      "heading": "Tortillas and toppings",
+      "paragraphs": [
+        "Warm tortillas in a cooler, keep cold toppings cold, and put hot salsa where people expect heat. Two tortillas per person in the warmer."
+      ]
+    }
+  ],
+  "practicalAdvice": [
+    "Two tortillas per person in the warmer.",
+    "Keep lettuce and tomato cold — separate from hot line.",
+    "Label mild vs hot salsa — prevents drama."
+  ],
+  "mealRecommendations": [
+    {
+      "slug": "hall-taco-bar",
+      "title": "Hall Taco Bar Night",
+      "blurb": "The baseline hall taco spread."
+    },
+    {
+      "slug": "pork-carnitas-tacos",
+      "title": "Quick Pork Carnitas Tacos",
+      "blurb": "Crispy pork — fast line."
+    },
+    {
+      "slug": "steak-tacos",
+      "title": "Chimichurri Steak Tacos",
+      "blurb": "Steak night upgrade."
+    },
+    {
+      "slug": "street-corn-chicken",
+      "title": "Street Corn Chicken Tacos",
+      "blurb": "Bright street-corn vibe."
+    },
+    {
+      "slug": "sheet-pan-fajitas",
+      "title": "Sheet Pan Chicken Fajitas",
+      "blurb": "Fajita filling crossover."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Where do these recipes come from?",
+      "answer": "Each link goes to a full recipe on Firehall Meals — crew-sized portions, station timing, and steps written for a shared kitchen. Not home-blog scaling."
+    },
+    {
+      "question": "What if crew size or time changes tonight?",
+      "answer": "Use Find a Meal with your headcount and minutes available. It pulls from the same hall-tested dinners these guides recommend."
+    }
+  ],
+  "relatedArticleSlugs": [
+    "best-firehall-meals-busy-nights"
+  ],
+  "keywords": [
+    "firehall taco night",
+    "taco bar fire station",
+    "firefighter tacos",
+    "crew taco night"
+  ],
+  "publishedAt": "2026-05-27T18:00:00.000Z",
+  "updatedAt": "2026-05-27T18:00:00.000Z",
+  "readMinutes": 7
+}

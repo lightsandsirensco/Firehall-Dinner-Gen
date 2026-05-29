@@ -1,0 +1,74 @@
+{
+  "slug": "meals-every-firefighter-knows",
+  "title": "Meals Every Firefighter Knows",
+  "subtitle": "The short list — chili, burgers, tacos, pasta",
+  "description": "Meals every firefighter knows from station kitchens: chili, burgers, tacos, pasta bakes, and BBQ — the shared vocabulary of hall food.",
+  "topic": "station_lifestyle",
+  "pillar": "station_lifestyle",
+  "intro": "You can walk into most halls and predict three dinners from the freezer and whiteboard. Chili, burgers, tacos, pasta bake, BBQ chicken — these are not clichés. They are the shared language of crews who cook under interruption.",
+  "sections": [
+    {
+      "id": "list",
+      "heading": "The hall canon",
+      "paragraphs": [
+        "Chili, smash burgers, taco bar, chicken parm, pulled pork, mac and cheese, sheet-pan fajitas. If you can cook these, you can feed most crews."
+      ]
+    },
+    {
+      "id": "why",
+      "heading": "Why the canon works",
+      "paragraphs": [
+        "These meals scale, survive holds, and need no fine dining timing. They are what crews suggest when someone asks 'what should we make?'"
+      ]
+    }
+  ],
+  "practicalAdvice": [
+    "Master one meal in each category — your hall will thank you.",
+    "Teach rookies one batch meal and one line meal.",
+    "Keep the shopping list for your hall canon posted — repetition builds speed."
+  ],
+  "mealRecommendations": [
+    {
+      "slug": "chili-garlic-bread",
+      "title": "Firehall Chili",
+      "blurb": "The baseline hall chili — batch friendly."
+    },
+    {
+      "slug": "smash-burgers",
+      "title": "Double Smash Burgers",
+      "blurb": "Handheld standard on flat-top night."
+    },
+    {
+      "slug": "hall-taco-bar",
+      "title": "Hall Taco Bar Night",
+      "blurb": "Line classic — self-serve tacos."
+    },
+    {
+      "slug": "chicken-parm",
+      "title": "Chicken Parm",
+      "blurb": "Table spread classic."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Where do these recipes come from?",
+      "answer": "Each link goes to a full recipe on Firehall Meals — crew-sized portions, station timing, and steps written for a shared kitchen. Not home-blog scaling."
+    },
+    {
+      "question": "What if crew size or time changes tonight?",
+      "answer": "Use Find a Meal with your headcount and minutes available. It pulls from the same hall-tested dinners these guides recommend."
+    }
+  ],
+  "relatedArticleSlugs": [
+    "meals-firefighters-actually-cook",
+    "legendary-firehall-meals"
+  ],
+  "keywords": [
+    "meals firefighters know",
+    "classic fire station food",
+    "firehall classics"
+  ],
+  "publishedAt": "2026-05-27T18:00:00.000Z",
+  "updatedAt": "2026-05-27T18:00:00.000Z",
+  "readMinutes": 7
+}

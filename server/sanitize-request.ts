@@ -38,9 +38,23 @@ export function sanitizePizzaRequest(request: PizzaRequest): PizzaRequest {
 }
 
 /** Fields sent outside Zod on generate — sanitize before session/signature use. */
+function sanitizeRecentSlugs(raw: unknown): string[] {
+  if (!Array.isArray(raw)) return [];
+  const out: string[] = [];
+  for (const item of raw) {
+    if (typeof item !== "string") continue;
+    const s = item.trim().toLowerCase().slice(0, 120);
+    if (!s || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(s)) continue;
+    if (!out.includes(s)) out.push(s);
+    if (out.length >= 32) break;
+  }
+  return out;
+}
+
 export function sanitizeClientGenerationMeta(body: Record<string, unknown>): {
   currentRecipeSignature: string;
   recentSignatures: string[];
+  recentSlugs: string[];
 } {
   const fromRecent = sanitizeRecipeSignatureList(body.recentSignatures);
   const fromExclude = sanitizeRecipeSignatureList(body.exclude_signatures);
@@ -48,5 +62,6 @@ export function sanitizeClientGenerationMeta(body: Record<string, unknown>): {
   return {
     currentRecipeSignature: normalizeRecipeSignature(body.currentRecipeSignature),
     recentSignatures: merged,
+    recentSlugs: sanitizeRecentSlugs(body.recentSlugs),
   };
 }

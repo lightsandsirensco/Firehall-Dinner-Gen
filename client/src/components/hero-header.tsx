@@ -144,12 +144,12 @@ export function HeroHeader({
 
         {showCTAs && isFull && (
           <div className="hidden lg:flex flex-wrap items-center justify-center gap-3 mt-3">
-            <Link href="/">
+            <Link href="/generator">
               <button
                 className="px-5 py-2.5 bg-primary text-primary-foreground rounded-lg font-heading text-xs tracking-wider uppercase hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20"
                 data-testid="button-hero-generate"
               >
-                Generate Meal
+                Find a Meal
               </button>
             </Link>
             <Link href="/explore">
@@ -157,7 +157,7 @@ export function HeroHeader({
                 className="px-5 py-2.5 bg-white/10 text-white border border-white/20 rounded-lg font-heading text-xs tracking-wider uppercase hover:bg-white/15 transition-colors backdrop-blur-sm"
                 data-testid="button-hero-explore"
               >
-                Explore Recipes
+                Explore Meals
               </button>
             </Link>
             <Link href="/favorites">

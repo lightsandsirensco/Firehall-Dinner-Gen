@@ -1,0 +1,70 @@
+{
+  "slug": "station-kitchen-essentials",
+  "title": "Station Kitchen Essentials",
+  "subtitle": "What every hall should have before dinner night",
+  "description": "Fire station kitchen essentials: pans, thermometers, foil, storage, and tools that make crew cooking possible without borrowing from three trucks.",
+  "topic": "station_cooking",
+  "pillar": "operations_how_to",
+  "intro": "A hall kitchen without basics turns every meal into improvisation. Station kitchen essentials are not luxury — they are force multipliers: sheet pans, a large pot, a probe thermometer, and enough foil to survive a week of holds.",
+  "sections": [
+    {
+      "id": "gear",
+      "heading": "Gear worth funding",
+      "paragraphs": [
+        "Dutch oven or large stock pot, cast iron or flat-top spatula, tongs, ladle, and a sharp chef knife someone actually maintains."
+      ]
+    },
+    {
+      "id": "storage",
+      "heading": "Storage and hold",
+      "paragraphs": [
+        "Half-sheet pans with lids, a roll of foil, and labeled containers turn leftovers into tomorrow's lunch instead of science experiments."
+      ]
+    }
+  ],
+  "practicalAdvice": [
+    "Two large sheet pans minimum — one pan crowds food.",
+    "Probe thermometer — stops pink chicken debates.",
+    "Large aluminum foil and zip bags — hold and storage.",
+    "Label maker or tape — dates on leftovers."
+  ],
+  "mealRecommendations": [
+    {
+      "slug": "sheet-pan-fajitas",
+      "title": "Sheet Pan Chicken Fajitas",
+      "blurb": "Uses the pans you should already own."
+    },
+    {
+      "slug": "big-chili",
+      "title": "Hall-Sized Beef and Bean Chili",
+      "blurb": "Tests your largest pot."
+    },
+    {
+      "slug": "one-pot-chicken-rice",
+      "title": "One-Pot Chicken and Rice",
+      "blurb": "Minimal tools — one pot dinner."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Where do these recipes come from?",
+      "answer": "Each link goes to a full recipe on Firehall Meals — crew-sized portions, station timing, and steps written for a shared kitchen. Not home-blog scaling."
+    },
+    {
+      "question": "What if crew size or time changes tonight?",
+      "answer": "Use Find a Meal with your headcount and minutes available. It pulls from the same hall-tested dinners these guides recommend."
+    }
+  ],
+  "relatedArticleSlugs": [
+    "feeding-a-firehall-crew",
+    "organize-firehall-dinners"
+  ],
+  "keywords": [
+    "fire station kitchen equipment",
+    "hall kitchen essentials",
+    "station cooking tools"
+  ],
+  "publishedAt": "2026-05-27T18:00:00.000Z",
+  "updatedAt": "2026-05-27T18:00:00.000Z",
+  "readMinutes": 7
+}

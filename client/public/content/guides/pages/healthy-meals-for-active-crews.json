@@ -1,0 +1,82 @@
+{
+  "slug": "healthy-meals-for-active-crews",
+  "title": "Healthy Meals for Active Crews (Without the Lecture)",
+  "subtitle": "Performance-friendly firehall food that still feels like dinner",
+  "description": "Lighter firefighter meals for active crews: protein-forward bowls, grill options, and how to balance comfort with performance on shift.",
+  "topic": "nutrition_performance",
+  "pillar": "nutrition_performance",
+  "intro": "Healthy at the hall does not mean sad salads while everyone else eats real food. It means protein forward, reasonable portions of starch, and flavor that does not taste like punishment. Crews accept lighter meals when they are filling and seasoned — not when they are obviously 'diet food.'",
+  "sections": [
+    {
+      "id": "balance",
+      "heading": "Balance the week, not every single plate",
+      "paragraphs": [
+        "One lighter dinner after a heavy weekend BBQ is smart. Seven days of grilled chicken breast is how halls order pizza at 22:00."
+      ]
+    },
+    {
+      "id": "flavor",
+      "heading": "Flavor tricks that are not 'diet food'",
+      "paragraphs": [
+        "Acid at the end (lemon, vinegar, pickled onion), char from the grill pan, and enough salt on the protein beat bland healthy every time.",
+        "Use bold sauces on the side — crews will use more sauce on comfort nights anyway; this just formalizes the habit."
+      ]
+    }
+  ],
+  "practicalAdvice": [
+    "Build bowls: protein + grain + veg + sauce — people control their own ratio.",
+    "Grill or roast instead of fry when you want lighter — flavor comes from char and acid.",
+    "Serve sauce on the side so healthy does not mean dry.",
+    "Pair lighter mains with one indulgent side if morale needs it — corn, garlic bread, etc."
+  ],
+  "mealRecommendations": [
+    {
+      "slug": "greek-chicken-bowls",
+      "title": "Greek Chicken Bowls",
+      "blurb": "Bright, line-friendly, easy to portion."
+    },
+    {
+      "slug": "ginger-salmon-bowls",
+      "title": "Ginger Salmon Rice Bowls",
+      "blurb": "Omega-rich protein with big flavor."
+    },
+    {
+      "slug": "turkey-meatball-zoodles",
+      "title": "Turkey Meatball Zoodles",
+      "blurb": "Lighter tray when carbs need a break."
+    },
+    {
+      "slug": "cedar-plank-salmon",
+      "title": "Cedar Plank Salmon",
+      "blurb": "Grill night without heavy sides required."
+    },
+    {
+      "slug": "mediterranean-chickpea",
+      "title": "Mediterranean Chickpea Tray",
+      "blurb": "Plant-forward option that still satisfies."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Will the crew actually eat healthy meals?",
+      "answer": "They will eat flavorful, filling meals with protein. Lead with taste and portion choice. A optional side of fries beats preaching — let people self-select."
+    },
+    {
+      "question": "How do I add lighter options without cooking two full meals?",
+      "answer": "One base protein, two sauces, and a big salad or roasted veg on the side. Bowls make this easy — the hall builds their own plate."
+    }
+  ],
+  "relatedArticleSlugs": [
+    "comfort-food-after-a-long-shift",
+    "planning-tonights-station-dinner"
+  ],
+  "keywords": [
+    "healthy firefighter meals",
+    "performance meals",
+    "fire station nutrition",
+    "crew meals"
+  ],
+  "publishedAt": "2026-05-27T12:00:00.000Z",
+  "updatedAt": "2026-05-27T12:00:00.000Z",
+  "readMinutes": 6
+}

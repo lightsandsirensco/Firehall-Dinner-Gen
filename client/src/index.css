@@ -12,7 +12,7 @@ html {
 }
 
 html, body {
-  background-color: #141414 !important;
+  background-color: #0c0c0c !important;
   min-height: 100vh;
   min-height: 100dvh;
   overflow-x: hidden;
@@ -31,37 +31,37 @@ html, body {
   --opaque-button-border-intensity: 9;
   --elevate-1: rgba(255,255,255, .04);
   --elevate-2: rgba(255,255,255, .09);
-  --background: 0 0% 8%;
-  --foreground: 0 0% 93%;
-  --border: 0 0% 18%;
-  --card: 0 0% 11%;
-  --card-foreground: 0 0% 93%;
-  --card-border: 0 0% 15%;
+  --background: 0 0% 5%;
+  --foreground: 40 12% 94%;
+  --border: 0 0% 14%;
+  --card: 0 0% 10%;
+  --card-foreground: 40 12% 94%;
+  --card-border: 0 0% 13%;
   --sidebar: 0 0% 10%;
   --sidebar-foreground: 0 0% 93%;
   --sidebar-border: 0 0% 15%;
-  --sidebar-primary: 6 78% 50%;
-  --sidebar-primary-foreground: 0 0% 98%;
+  --sidebar-primary: 0 72% 46%;
+  --sidebar-primary-foreground: 40 15% 97%;
   --sidebar-accent: 0 0% 15%;
   --sidebar-accent-foreground: 0 0% 93%;
-  --sidebar-ring: 6 78% 50%;
+  --sidebar-ring: 0 72% 46%;
   --popover: 0 0% 13%;
   --popover-foreground: 0 0% 93%;
   --popover-border: 0 0% 18%;
-  --primary: 6 78% 50%;
-  --primary-foreground: 0 0% 98%;
-  --secondary: 0 0% 18%;
-  --secondary-foreground: 0 0% 93%;
-  --muted: 0 2% 16%;
-  --muted-foreground: 0 0% 55%;
-  --accent: 6 8% 16%;
-  --accent-foreground: 0 0% 93%;
+  --primary: 0 72% 46%;
+  --primary-foreground: 40 15% 97%;
+  --secondary: 0 4% 18%;
+  --secondary-foreground: 40 10% 92%;
+  --muted: 0 3% 14%;
+  --muted-foreground: 0 0% 58%;
+  --accent: 0 55% 22%;
+  --accent-foreground: 40 12% 94%;
   --destructive: 0 84% 42%;
   --destructive-foreground: 0 0% 98%;
   --input: 0 0% 25%;
-  --ring: 6 78% 50%;
-  --chart-1: 6 78% 55%;
-  --chart-2: 30 85% 55%;
+  --ring: 0 72% 46%;
+  --chart-1: 0 72% 50%;
+  --chart-2: 0 55% 38%;
   --chart-3: 188 95% 55%;
   --chart-4: 280 75% 55%;
   --chart-5: 148 70% 55%;
@@ -124,28 +124,28 @@ html, body {
   --sidebar: 0 0% 11%;
   --sidebar-foreground: 0 0% 95%;
   --sidebar-border: 0 0% 14%;
-  --sidebar-primary: 4 84% 52%;
-  --sidebar-primary-foreground: 0 0% 98%;
+  --sidebar-primary: 0 72% 48%;
+  --sidebar-primary-foreground: 40 15% 97%;
   --sidebar-accent: 0 0% 14%;
   --sidebar-accent-foreground: 0 0% 95%;
-  --sidebar-ring: 4 84% 52%;
+  --sidebar-ring: 0 72% 48%;
   --popover: 0 0% 13%;
   --popover-foreground: 0 0% 95%;
   --popover-border: 0 0% 16%;
-  --primary: 4 84% 48%;
-  --primary-foreground: 0 0% 98%;
-  --secondary: 0 0% 16%;
-  --secondary-foreground: 0 0% 95%;
-  --muted: 0 2% 15%;
-  --muted-foreground: 0 0% 70%;
-  --accent: 4 6% 14%;
-  --accent-foreground: 0 0% 95%;
+  --primary: 0 72% 48%;
+  --primary-foreground: 40 15% 97%;
+  --secondary: 0 4% 16%;
+  --secondary-foreground: 40 10% 92%;
+  --muted: 0 3% 14%;
+  --muted-foreground: 0 0% 62%;
+  --accent: 0 55% 20%;
+  --accent-foreground: 40 12% 94%;
   --destructive: 0 84% 42%;
   --destructive-foreground: 0 0% 98%;
   --input: 0 0% 30%;
-  --ring: 4 84% 52%;
-  --chart-1: 4 84% 65%;
-  --chart-2: 24 85% 68%;
+  --ring: 0 72% 48%;
+  --chart-1: 0 72% 55%;
+  --chart-2: 0 50% 40%;
   --chart-3: 188 95% 68%;
   --chart-4: 280 75% 68%;
   --chart-5: 148 70% 65%;
@@ -268,6 +268,20 @@ html, body {
     padding-bottom: calc(6.75rem + env(safe-area-inset-bottom, 0px));
   }
 
+  /** Floating Hall Feedback — above mobile sticky CTA, bottom-right on desktop */
+  .hall-feedback-fab {
+    position: fixed;
+    z-index: 45;
+    right: max(1rem, env(safe-area-inset-right, 0px));
+    bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  @media (max-width: 1023px) {
+    .hall-feedback-fab {
+      bottom: calc(5.75rem + env(safe-area-inset-bottom, 0px));
+    }
+  }
+
   .mobile-sticky-bar {
     position: fixed;
     bottom: 0;
@@ -306,8 +320,13 @@ html, body {
   }
 
   .px-page {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 1.125rem;
+    padding-right: 1.125rem;
+  }
+
+  .-mx-page {
+    margin-left: -1.125rem;
+    margin-right: -1.125rem;
   }
 
   @media (min-width: 640px) {
@@ -315,6 +334,27 @@ html, body {
       padding-left: 1.5rem;
       padding-right: 1.5rem;
     }
+
+    .-mx-page {
+      margin-left: -1.5rem;
+      margin-right: -1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .px-page {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+
+    .-mx-page {
+      margin-left: -2rem;
+      margin-right: -2rem;
+    }
+  }
+
+  .btn-tonight {
+    @apply font-heading tracking-wide text-lg sm:text-xl min-h-[3.5rem] rounded-2xl shadow-lg shadow-primary/20;
   }
 
   .touch-manipulation {
@@ -341,7 +381,7 @@ html, body {
   }
 
   .explore-rail-glow {
-    box-shadow: 0 12px 48px -16px rgba(234, 88, 12, 0.22);
+    box-shadow: 0 12px 48px -16px rgba(185, 28, 28, 0.22);
     border-radius: 1rem;
   }
 
@@ -349,12 +389,24 @@ html, body {
     position: relative;
   }
 
+  /** Subtle film grain for marketing hero */
+  .home-film-grain {
+    opacity: 0.045;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 180px 180px;
+  }
+
+  .home-page main > section {
+    scroll-margin-top: calc(3.5rem + env(safe-area-inset-top, 0px));
+  }
+
   .explore-rail-hero::before {
     content: "";
     position: absolute;
     inset: -0.5rem -0.25rem auto;
     height: 120px;
-    background: radial-gradient(ellipse 80% 100% at 50% 0%, rgba(234, 88, 12, 0.08), transparent);
+    background: radial-gradient(ellipse 80% 100% at 50% 0%, rgba(185, 28, 28, 0.1), transparent);
     pointer-events: none;
     z-index: 0;
   }
@@ -582,4 +634,32 @@ html, body {
 .section-divider {
   height: 1px;
   background: linear-gradient(90deg, transparent, hsl(var(--border) / 0.5) 20%, hsl(var(--border) / 0.5) 80%, transparent);
+}
+
+/* Hall premium surfaces — industrial station-kitchen feel */
+.hall-surface {
+  background-color: hsl(var(--card));
+  background-image:
+    radial-gradient(ellipse 120% 80% at 50% -20%, hsl(var(--primary) / 0.06), transparent 55%),
+    linear-gradient(180deg, hsl(var(--elevate-1)), transparent 40%);
+}
+
+.hall-metallic-border {
+  border: 1px solid hsl(var(--border) / 0.5);
+  box-shadow:
+    inset 0 1px 0 hsl(0 0% 100% / 0.04),
+    0 4px 24px -8px hsl(0 0% 0% / 0.55);
+}
+
+.wheel-stage {
+  filter: drop-shadow(0 24px 48px hsl(0 0% 0% / 0.65));
+}
+
+@keyframes wheel-celebrate {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.15); opacity: 1; }
+}
+
+.wheel-celebrate-glow {
+  animation: wheel-celebrate 1.8s ease-in-out infinite;
 }

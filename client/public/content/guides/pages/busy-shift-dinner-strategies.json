@@ -1,0 +1,74 @@
+{
+  "slug": "busy-shift-dinner-strategies",
+  "title": "Busy Shift Dinner Strategies",
+  "subtitle": "Dinner when the board will not cooperate",
+  "description": "Busy shift dinner strategies for fire stations: default meals, hold plans, and communication so food still happens when calls stack.",
+  "topic": "station_lifestyle",
+  "pillar": "station_lifestyle",
+  "intro": "Busy shift dinner is a strategy problem. You need a default meal everyone knows, a cook assigned early, and formats that survive pause. Waiting until 18:30 to 'see how the board looks' is how halls end up with nothing.",
+  "sections": [
+    {
+      "id": "defaults",
+      "heading": "Default meals",
+      "paragraphs": [
+        "Chili, quesadillas, sheet pan, pasta — rotate defaults monthly so shopping stays automatic."
+      ]
+    },
+    {
+      "id": "hold",
+      "heading": "Hold and communicate",
+      "paragraphs": [
+        "Tell the crew when food is ready and what format — line at 18:30, not 'food sometime.' Holds on low beat reheating twelve individual plates after a call."
+      ]
+    }
+  ],
+  "practicalAdvice": [
+    "Pick dinner by 16:00 — adjust format, not whether you eat.",
+    "Keep a 30-minute fallback in the freezer.",
+    "Communicate on the whiteboard: 'Chili 18:30 — line.'"
+  ],
+  "mealRecommendations": [
+    {
+      "slug": "chili-mac",
+      "title": "Chili Mac Skillet",
+      "blurb": "One pan — fast when the board stays loud."
+    },
+    {
+      "slug": "chicken-quesadillas",
+      "title": "Chicken Quesadillas",
+      "blurb": "Handheld — staggered eating."
+    },
+    {
+      "slug": "garlic-butter-shrimp",
+      "title": "Garlic Butter Shrimp",
+      "blurb": "Minutes on heat — high flavor."
+    },
+    {
+      "slug": "fast-philly-skillet",
+      "title": "Fast Philly Cheesesteak Skillet",
+      "blurb": "Flat-top speed for busy nights."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Where do these recipes come from?",
+      "answer": "Each link goes to a full recipe on Firehall Meals — crew-sized portions, station timing, and steps written for a shared kitchen. Not home-blog scaling."
+    },
+    {
+      "question": "What if crew size or time changes tonight?",
+      "answer": "Use Find a Meal with your headcount and minutes available. It pulls from the same hall-tested dinners these guides recommend."
+    }
+  ],
+  "relatedArticleSlugs": [
+    "quick-meals-between-calls",
+    "best-firehall-meals-busy-nights"
+  ],
+  "keywords": [
+    "busy shift dinner",
+    "fire station dinner strategy",
+    "dinner between calls"
+  ],
+  "publishedAt": "2026-05-27T18:00:00.000Z",
+  "updatedAt": "2026-05-27T18:00:00.000Z",
+  "readMinutes": 7
+}

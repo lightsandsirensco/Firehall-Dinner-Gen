@@ -1,0 +1,69 @@
+{
+  "slug": "organize-firehall-dinners",
+  "title": "How to Organize Firehall Dinners",
+  "subtitle": "Whiteboard, roles, and timing that works",
+  "description": "How to organize firehall dinners: who decides, who cooks, when to shop, and how to run the line so dinner happens on busy shifts.",
+  "topic": "shift_operations",
+  "pillar": "operations_how_to",
+  "intro": "Organized hall dinners do not happen by accident. Someone owns the decision by mid-afternoon, someone owns the cook, and the whiteboard says what time food is ready. Without that, you get seventeen opinions and delivery apps.",
+  "sections": [
+    {
+      "id": "timeline",
+      "heading": "Sample timeline",
+      "paragraphs": [
+        "15:00 decide meal. 16:00 shop. 17:00 prep. 18:30 serve window opens. Cleanup assigned at start, not end."
+      ]
+    },
+    {
+      "id": "roles",
+      "heading": "Roles on the whiteboard",
+      "paragraphs": [
+        "Cook, prep, cleanup lead, and shopper — even when one person does two jobs, names on the board prevent the 'everyone helped' trap."
+      ]
+    }
+  ],
+  "practicalAdvice": [
+    "Post menu and time on the whiteboard by 16:00.",
+    "Assign cook and cleanup before shopping.",
+    "Run lines for crews over six — plated service rarely scales."
+  ],
+  "mealRecommendations": [
+    {
+      "slug": "hall-taco-bar",
+      "title": "Hall Taco Bar Night",
+      "blurb": "Organized as a line."
+    },
+    {
+      "slug": "batch-lasagna",
+      "title": "Giant Batch Lasagna",
+      "blurb": "Prep ahead bake — feeds the line."
+    },
+    {
+      "slug": "sausage-egg-bake",
+      "title": "Sausage Egg Bake",
+      "blurb": "Morning timeline practice."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Where do these recipes come from?",
+      "answer": "Each link goes to a full recipe on Firehall Meals — crew-sized portions, station timing, and steps written for a shared kitchen. Not home-blog scaling."
+    },
+    {
+      "question": "What if crew size or time changes tonight?",
+      "answer": "Use Find a Meal with your headcount and minutes available. It pulls from the same hall-tested dinners these guides recommend."
+    }
+  ],
+  "relatedArticleSlugs": [
+    "planning-tonights-station-dinner",
+    "busy-shift-dinner-strategies"
+  ],
+  "keywords": [
+    "organize fire station dinner",
+    "firehall dinner planning",
+    "crew dinner organization"
+  ],
+  "publishedAt": "2026-05-27T18:00:00.000Z",
+  "updatedAt": "2026-05-27T18:00:00.000Z",
+  "readMinutes": 7
+}

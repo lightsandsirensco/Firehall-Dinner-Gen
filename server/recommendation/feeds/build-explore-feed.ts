@@ -23,6 +23,7 @@ import type { BuildRecommendationContextInput } from "../context/build-context.j
 import { getMasterCategoryRailSections } from "../rails/master-rails.js";
 import { FeedRotationMemory } from "../rotation/memory.js";
 import { rankExploreCardsForRail } from "../ranking/rank-cards.js";
+import { diversifyExploreRail } from "./diversify.js";
 import {
   currentDaySeed,
   exploreFeedCacheKey,
@@ -87,6 +88,7 @@ export async function buildIntelligentExploreFeed(
 
       const ranked = rankExploreCardsForRail(raw, def, ctx, rotation);
       if (ranked.length === 0) continue;
+      const diversified = diversifyExploreRail(ranked, { window: 2 });
 
       const masterId = def.id as MasterCategoryId;
       const cat = MASTER_CATEGORIES_BY_ID[masterId];
@@ -97,7 +99,7 @@ export async function buildIntelligentExploreFeed(
         subtitle: def.subtitle,
         layout: def.layout,
         theme: def.theme,
-        recipes: ranked,
+        recipes: diversified,
         masterCategoryId: masterId,
         firefighterHook: cat?.emotional.firefighterHook,
       });

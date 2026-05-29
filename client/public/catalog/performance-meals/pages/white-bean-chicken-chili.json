@@ -1,0 +1,190 @@
+{
+  "slug": "white-bean-chicken-chili",
+  "title": "White Bean Chicken Chili",
+  "displayTitle": "White Bean Chicken Chili",
+  "seoTitle": "White Bean Chicken Chili | Firefighter Meal",
+  "shortDescription": "Creamy cannellini chili with green chiles and shredded rotisserie-style chicken",
+  "subtitle": "Creamy cannellini chili with green chiles and shredded rotisserie-style chicken",
+  "category": "healthy_performance",
+  "cuisine": "American",
+  "description": "Shredded chicken simmers with cannellini beans, green chiles, cumin, and a touch of cream cheese for body. Cup-and-bowl service for the whole crew.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 35,
+  "prepTime": 20,
+  "difficulty": "easy",
+  "calories": 385,
+  "protein": 42,
+  "carbs": 35,
+  "fats": 10,
+  "tags": [
+    "protein:chicken",
+    "format:soup",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "8-quart stock pot",
+    "Immersion blender (optional)"
+  ],
+  "ingredients": [
+    {
+      "name": "boneless chicken breasts",
+      "quantity": "2.5",
+      "unit": "lb"
+    },
+    {
+      "name": "cannellini beans",
+      "quantity": "4",
+      "unit": "cans",
+      "notes": "15 oz, drained and rinsed"
+    },
+    {
+      "name": "green chiles",
+      "quantity": "2",
+      "unit": "cans",
+      "notes": "4 oz, diced"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "1",
+      "unit": "large",
+      "notes": "diced"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "6",
+      "unit": "cloves",
+      "notes": "minced"
+    },
+    {
+      "name": "chicken broth",
+      "quantity": "6",
+      "unit": "cups",
+      "notes": "low sodium"
+    },
+    {
+      "name": "cream cheese",
+      "quantity": "8",
+      "unit": "oz",
+      "notes": "light, cubed"
+    },
+    {
+      "name": "ground cumin",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "dried oregano",
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "lime juice",
+      "quantity": "3",
+      "unit": "tbsp",
+      "notes": "fresh"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "1.5",
+      "unit": "tsp"
+    },
+    {
+      "name": "cilantro",
+      "quantity": "0.5",
+      "unit": "cup",
+      "notes": "chopped"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Poach and shred chicken",
+      "instruction": "Simmer chicken breasts in 4 cups broth 15–18 minutes until internal temp hits 165°F. Rest 5 minutes, then shred into bite-size strands with two forks.",
+      "minutes": 20,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Sweat onion and garlic",
+      "instruction": "In a large pot, sauté onion in 1 tbsp oil over medium heat 5–6 minutes until translucent. Add garlic and cumin; cook 1 minute until fragrant.",
+      "minutes": 6,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Simmer beans and chiles",
+      "instruction": "Add remaining broth, beans, green chiles, oregano, and shredded chicken. Bring to a gentle simmer and cook 15 minutes so flavors meld.",
+      "minutes": 15,
+      "heatLevel": "medium-low"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Stir in cream cheese",
+      "instruction": "Reduce heat to low. Whisk in cream cheese cubes until fully melted and chili looks creamy with no white streaks remaining.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Finish with lime and serve",
+      "instruction": "Stir in lime juice and cilantro. Chili should coat a ladle lightly; adjust salt before cup service at the line.",
+      "minutes": 3,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Blend one can of beans for extra body without adding more cream cheese.",
+    "Hold lime and cilantro off the pot until serving so bright flavors stay fresh.",
+    "Rotisserie chicken works in a pinch—add at the end to avoid stringy overcooked breast."
+  ],
+  "tonightSpread": [
+    "Cornbread muffins baked in a muffin tin.",
+    "Shredded Monterey Jack and sliced jalapeños at the line."
+  ],
+  "leftovers": [
+    "Thicken leftovers into a dip with extra cheese for game-day snack.",
+    "Freeze in quart containers; thin with broth when reheating."
+  ],
+  "whyCrewsLikeIt": "Lighter than red chili but still hearty. Perfect after cold-weather calls when the crew wants something warm and sippable.",
+  "mealPrepNotes": "Poach chicken breasts ahead and shred. Chili thickens as it rests—add broth when reheating. Station: Keep pot on back burner at gentle simmer, not rolling boil, so cream cheese stays smooth. Station: Offer crushed tortilla chips and cilantro at a side station to keep soup texture crisp. Station: Use 12-oz bowls as default portion—crew can come back for seconds without draining the pot.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 385,
+    "protein": 42,
+    "carbs": 35,
+    "fats": 10,
+    "label": "~385 cal/serving · 42g protein · 9g fiber (est.)"
+  },
+  "heroImage": "/images/golden-100/white-bean-chicken-chili.jpg",
+  "mobileImage": "/images/mobile/white-bean-chicken-chili.jpg",
+  "thumbImage": "/images/thumbs/white-bean-chicken-chili.jpg",
+  "railImage": "/images/rails/white-bean-chicken-chili.jpg",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "white bean chicken chili",
+    "chicken",
+    "American",
+    "soup",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "lemon-garlic-chicken-tray",
+    "sheet-pan-chicken-fajitas-lite",
+    "honey-garlic-chicken-rice-bowls",
+    "smoky-lentil-kale-soup",
+    "crock-barbacoa-chicken",
+    "shawarma-chicken-rice-bowls"
+  ],
+  "generatedAt": "2026-05-28T12:57:50.893Z",
+  "contentVersion": 2
+}

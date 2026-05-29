@@ -1,18 +1,22 @@
 {
   "slug": "baked-ziti",
   "title": "Baked Ziti",
+  "displayTitle": "Baked Ziti",
+  "seoTitle": "Baked Ziti | Firefighter Meal",
+  "shortDescription": "Cheesy pasta bake for the table",
   "subtitle": "Cheesy pasta bake for the table",
   "category": "comfort_food",
   "cuisine": "italian",
-  "description": "The kind of spread that ends the \"what's for dinner?\" argument fast. Mediterranean vegetarian crew dinner for 8 — about 45 min. Works great when you've got one person on the stove and another on sides.",
+  "description": "Cheesy pasta bake for the table. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
-  "cookTime": 45,
-  "prepTime": 15,
+  "baseServings": 8,
+  "cookTime": 55,
+  "prepTime": 20,
   "difficulty": "medium",
-  "calories": 550,
+  "calories": 720,
   "protein": 40,
-  "carbs": 35,
-  "fats": 20,
+  "carbs": 68,
+  "fats": 36,
   "tags": [
     "protein:beef",
     "format:pasta",
@@ -29,98 +33,90 @@
   ],
   "ingredients": [
     {
-      "name": "ziti",
-      "quantity": "0.5",
-      "notes": "0.5 lbs ziti 1/2 lb ziti (or other shape pasta)"
+      "name": "Dried pasta",
+      "quantity": "1.5",
+      "unit": "lb",
+      "group": "Main"
     },
     {
-      "name": "ricotta cheese",
-      "quantity": "16",
-      "notes": "16 oz ricotta cheese 16 ounces ricotta cheese"
+      "name": "Ground beef",
+      "quantity": "2.5",
+      "unit": "lb",
+      "group": "Main"
     },
     {
-      "name": "mozzarella cheese",
-      "quantity": "3",
-      "notes": "3 cups mozzarella cheese 3 cups mozzarella cheese , grated"
+      "name": "Crushed tomatoes",
+      "quantity": "2",
+      "unit": "cans",
+      "notes": "28 oz",
+      "group": "Sauce"
     },
     {
-      "name": "spaghetti sauce",
-      "quantity": "3",
-      "notes": "3 cups spaghetti sauce 3 cups spaghetti sauce"
+      "name": "Heavy cream",
+      "quantity": "1",
+      "unit": "cup",
+      "group": "Sauce"
     },
     {
-      "name": "parmesan cheese",
-      "quantity": "0.5",
-      "notes": "0.5 cups parmesan cheese 1/2 cup parmesan cheese , grated"
+      "name": "Parmesan, grated",
+      "quantity": "8",
+      "unit": "oz",
+      "group": "Finish"
+    },
+    {
+      "name": "Yellow onion",
+      "quantity": "2",
+      "unit": "large",
+      "group": "Aromatics"
+    },
+    {
+      "name": "Garlic cloves, minced",
+      "quantity": "6",
+      "unit": "cloves",
+      "group": "Aromatics"
+    },
+    {
+      "name": "Kosher salt",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Seasoning"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Step 1",
-      "instruction": "Preheat oven to 35 Watch color and texture — if it smells sharp or looks pale, give it another minute before moving on.",
-      "heatLevel": ""
+      "title": "Salt the pasta water",
+      "instruction": "Bring a large pot of water to a rolling boil with enough salt that it tastes like the sea. This is your only chance to season the pasta itself.",
+      "minutes": 10,
+      "heatLevel": "high"
     },
     {
       "stepNumber": 2,
-      "title": "Step 2",
-      "instruction": "Boil ziti or other pasta, i.e. rigatoni, penne, farfalle, rotini, following package directions, drain and place in a large bowl.",
-      "heatLevel": ""
+      "title": "Cook sauce base",
+      "instruction": "Meanwhile, brown meat, add onions and garlic, then tomatoes (and cream if Alfredo-style). Simmer 15 minutes while pasta cooks.",
+      "minutes": 15,
+      "heatLevel": "medium"
     },
     {
       "stepNumber": 3,
-      "title": "Step 3",
-      "instruction": "To ricotta, add salt and pepper (about 1tsp each), dried parsley and blend.",
-      "heatLevel": ""
+      "title": "Boil pasta al dente",
+      "instruction": "Cook pasta 1 minute shy of package time. Reserve 2 cups pasta water. Drain — do not rinse.",
+      "minutes": 12,
+      "heatLevel": "high"
     },
     {
       "stepNumber": 4,
-      "title": "Step 4",
-      "instruction": "Mix all the ricotta cheese and half of the mozzarella with the ziti.",
-      "heatLevel": ""
+      "title": "Finish in the pan",
+      "instruction": "Toss pasta in sauce over medium heat, splashing pasta water until glossy and clinging. Baked Ziti should coat a spoon — if it pools, reduce another minute.",
+      "minutes": 4,
+      "heatLevel": "medium"
     },
     {
       "stepNumber": 5,
-      "title": "Step 5",
-      "instruction": "Spray a 13x9 pan with Pam. Watch color and texture — if it smells sharp or looks pale, give it another minute before moving on.",
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 6,
-      "title": "Step 6",
-      "instruction": "Cover the bottom half of the pan with about half the sauce. Watch color and texture — if it smells sharp or looks pale, give it another minute before moving on.",
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 7,
-      "title": "Step 7",
-      "instruction": "Put the ziti mixture on top of sauce. Watch color and texture — if it smells sharp or looks pale, give it another minute before moving on.",
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "Step 8",
-      "instruction": "Pour remaining sauce on top of ziti. Watch color and texture — if it smells sharp or looks pale, give it another minute before moving on.",
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 9,
-      "title": "Step 9",
-      "instruction": "Sprinkle with the parmesan cheese. Watch color and texture — if it smells sharp or looks pale, give it another minute before moving on.",
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
-      "title": "Step 10",
-      "instruction": "Top with the remaining mozzarella cheese. Watch color and texture — if it smells sharp or looks pale, give it another minute before moving on.",
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 11,
-      "title": "Step 11",
-      "instruction": "Bake for 20-30 minutes until cheese is melted and it is lightly golden.",
-      "minutes": 25,
-      "heatLevel": ""
+      "title": "Serve from the pot",
+      "instruction": "Fold in Parmesan off heat. Serve immediately — pasta waits for no one. Backup tray: cover lightly with foil at 200°F up to 15 minutes, add water if it tightens.",
+      "minutes": 3,
+      "heatLevel": "low"
     }
   ],
   "proTips": [
@@ -137,11 +133,17 @@
     "Label trays with date and reheat to 165°F minimum before second shift.",
     "Add a splash of stock or water when reheating — thick sauces tighten in the fridge."
   ],
+  "whyCrewsLikeIt": "Cheesy pasta bake for the table. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
+  "substitutions": [
+    "Any short pasta shape works — penne, rigatoni, or spaghetti."
+  ],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 550,
+    "calories": 720,
     "protein": 40,
-    "carbs": 35,
-    "fats": 20,
+    "carbs": 68,
+    "fats": 36,
     "label": "per serving (hall portion)"
   },
   "heroImage": "/images/golden-100/baked-ziti.jpg",
@@ -168,8 +170,8 @@
     "loaded-baked-potato-bar",
     "meatloaf-mashed"
   ],
-  "sourceName": "Foodista",
-  "sourceUrl": "https://www.foodista.com/recipe/QJCRNHC6/baked-ziti",
-  "generatedAt": "2026-05-27T15:03:06.169Z",
-  "contentVersion": 1
+  "sourceName": "Firehall Meals",
+  "sourceUrl": "",
+  "generatedAt": "2026-05-28T12:06:15.022Z",
+  "contentVersion": 2
 }

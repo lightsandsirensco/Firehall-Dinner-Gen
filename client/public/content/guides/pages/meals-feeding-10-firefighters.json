@@ -1,0 +1,80 @@
+{
+  "slug": "meals-feeding-10-firefighters",
+  "title": "Meals for Feeding 10 Firefighters",
+  "subtitle": "Portion math, line setup, and recipes that land",
+  "description": "Portion math, shopping lists, and recipe picks when you are cooking for ten at the table.",
+  "topic": "meal_planning",
+  "pillar": "recipes_meals",
+  "intro": "Ten eaters is the point where home-cooking instincts break. You are officially running a small cafeteria. Meals for feeding ten firefighters need one main format, one reliable starch, and a line — not ten custom plates.",
+  "sections": [
+    {
+      "id": "shop",
+      "heading": "Shopping for ten",
+      "paragraphs": [
+        "Rough guide: 3–4 lb raw protein for mixed plates, 2 lb pasta dry for bakes, two dozen buns for handhelds. Adjust up if your hall runs hungry."
+      ]
+    },
+    {
+      "id": "line",
+      "heading": "Line setup for ten eaters",
+      "paragraphs": [
+        "One person plates, everyone else stays out. Two trays of main, one starch, toppings in bowls — not a free-for-all at the stove."
+      ]
+    }
+  ],
+  "practicalAdvice": [
+    "Shop for 12 portions — you will feed floaters.",
+    "Two full trays of protein beat one overcrowded pan.",
+    "Write portions on a card at the line: 'two tacos / one cup chili.'"
+  ],
+  "mealRecommendations": [
+    {
+      "slug": "hall-taco-bar",
+      "title": "Hall Taco Bar Night",
+      "blurb": "Built for ten-plus builds."
+    },
+    {
+      "slug": "big-chili",
+      "title": "Hall-Sized Beef and Bean Chili",
+      "blurb": "Double-pot energy for ten-plus eaters."
+    },
+    {
+      "slug": "batch-lasagna",
+      "title": "Giant Batch Lasagna",
+      "blurb": "Slices for the whole table."
+    },
+    {
+      "slug": "smash-burgers",
+      "title": "Double Smash Burgers",
+      "blurb": "Two burgers each if hungry."
+    },
+    {
+      "slug": "bbq-chicken-bowls",
+      "title": "BBQ Chicken Bowls",
+      "blurb": "Rice line — predictable."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Where do these recipes come from?",
+      "answer": "Each link goes to a full recipe on Firehall Meals — crew-sized portions, station timing, and steps written for a shared kitchen. Not home-blog scaling."
+    },
+    {
+      "question": "What if crew size or time changes tonight?",
+      "answer": "Use Find a Meal with your headcount and minutes available. It pulls from the same hall-tested dinners these guides recommend."
+    }
+  ],
+  "relatedArticleSlugs": [
+    "feeding-a-firehall-crew",
+    "meals-feeding-10-firefighters"
+  ],
+  "keywords": [
+    "feeding 10 firefighters",
+    "meals for 10 people",
+    "fire station portions",
+    "crew size 10"
+  ],
+  "publishedAt": "2026-05-27T18:00:00.000Z",
+  "updatedAt": "2026-05-27T18:00:00.000Z",
+  "readMinutes": 7
+}

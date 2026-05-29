@@ -1,11 +1,15 @@
 {
   "slug": "bulgogi-bowls",
   "title": "Korean Bulgogi Rice Bowls",
+  "displayTitle": "Korean Bulgogi Rice Bowls",
+  "seoTitle": "Korean Bulgogi Rice Bowls | Firefighter Meal",
+  "shortDescription": "Sweet soy beef, pickled crunch",
   "subtitle": "Sweet soy beef, pickled crunch",
   "category": "global_flavors",
   "cuisine": "korean",
-  "description": "Korean Bulgogi Rice Bowls is a korean bowl built for a hungry firehall crew — Sweet soy beef, pickled crunch. Hearty portions, station-kitchen timing, and flavors everyone recognizes after a long shift.",
+  "description": "Sweet soy beef, pickled crunch. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
@@ -29,71 +33,70 @@
   ],
   "ingredients": [
     {
-      "name": "Beef (main cut for recipe)",
+      "name": "Jasmine rice, uncooked",
       "quantity": "3",
-      "unit": "lb"
+      "unit": "cups",
+      "group": "Base"
     },
     {
-      "name": "Kosher salt",
+      "name": "Chicken thighs",
+      "quantity": "2.5",
+      "unit": "lb",
+      "group": "Main"
+    },
+    {
+      "name": "Broccoli florets",
       "quantity": "2",
-      "unit": "tbsp"
+      "unit": "lb",
+      "group": "Veg"
     },
     {
-      "name": "Black pepper",
+      "name": "Soy sauce",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Sauce"
+    },
+    {
+      "name": "Sesame oil",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "Red onion, sliced",
       "quantity": "1",
-      "unit": "tbsp"
-    },
-    {
-      "name": "Cooking oil",
-      "quantity": "0.3",
-      "unit": "cup"
-    },
-    {
-      "name": "Cooked rice or grains",
-      "quantity": "4",
-      "unit": "cups"
-    },
-    {
-      "name": "Mixed vegetables",
-      "quantity": "4",
-      "unit": "cups"
+      "unit": "large",
+      "group": "Toppings"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Prep the line",
-      "instruction": "Set out all ingredients for Korean Bulgogi Rice Bowls before you turn on heat — firefighters eat on a schedule. Pat proteins dry and season aggressively with salt and pepper; dry surfaces brown instead of steam.",
-      "minutes": 15,
-      "heatLevel": ""
+      "title": "Cook rice",
+      "instruction": "Rinse rice until water runs clear. Cook 1:1.5 rice to water with salt; fluff and hold covered.",
+      "minutes": 20,
+      "heatLevel": "medium"
     },
     {
       "stepNumber": 2,
-      "title": "Build the base",
-      "instruction": "Heat oil in your largest skillet, Dutch oven, or on the flat-top over medium-high until it shimmers. Add aromatics (onion first) and cook until the edges turn golden and the smell sweetens — usually 4–6 minutes. If garlic is in the recipe, add it after the onion softens so it doesn't burn.",
-      "minutes": 8,
+      "title": "Sear protein and veg",
+      "instruction": "Sear protein in batches over medium-high until browned and cooked through (165°F chicken, 125°F salmon). Stir-fry veg 4–5 minutes until bright with char.",
+      "minutes": 14,
       "heatLevel": "medium-high"
     },
     {
       "stepNumber": 3,
-      "title": "Cook the main",
-      "instruction": "Cook the primary protein or base for Korean Bulgogi Rice Bowls until it hits proper color and safe internal temperature. Don't crowd the pan — work in batches if needed so you get browning, not gray stew. Listen for a steady sizzle; if it's silent, the heat is too low.",
-      "minutes": 20,
-      "heatLevel": "medium-high"
+      "title": "Warm the sauce",
+      "instruction": "Whisk soy and sesame oil; add a splash of rice water if it needs to loosen for drizzling.",
+      "minutes": 5,
+      "heatLevel": "low"
     },
     {
       "stepNumber": 4,
-      "title": "Finish and season",
-      "instruction": "Bring components together, taste, and adjust salt. Sauce should coat, not pool. If cheese is involved, melt it just until glossy — another 1–2 minutes under a lid or broiler. Let heavy proteins rest 5 minutes before slicing.",
-      "minutes": 10,
-      "heatLevel": "medium"
-    },
-    {
-      "stepNumber": 5,
-      "title": "Serve the hall",
-      "instruction": "Transfer to sheet trays or a serving line immediately. Keep backup warm at 200°F. Call the crew while it's hot — this meal is built for a hungry hall, not a photo shoot.",
+      "title": "Assembly line",
+      "instruction": "Rice, protein, veg, sauce on the side. Korean Bulgogi Rice Bowls feeds fastest as a build-your-own line.",
       "minutes": 5,
-      "heatLevel": "low"
+      "heatLevel": ""
     }
   ],
   "proTips": [
@@ -110,6 +113,10 @@
     "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
     "Label trays with date and reheat to 165°F minimum before second shift."
   ],
+  "whyCrewsLikeIt": "Sweet soy beef, pickled crunch. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
+  "substitutions": [],
+  "spiceLevel": "medium",
+  "cleanupDifficulty": "medium",
   "nutrition": {
     "calories": 600,
     "protein": 40,
@@ -121,7 +128,7 @@
   "mobileImage": "/images/mobile/bulgogi-bowls.jpg",
   "thumbImage": "/images/thumbs/bulgogi-bowls.jpg",
   "railImage": "/images/rails/bulgogi-bowls.jpg",
-  "realismScore": 100,
+  "realismScore": 95,
   "firefighterScore": 98,
   "popularityWeight": 3.2,
   "searchTerms": [
@@ -141,7 +148,8 @@
     "street-corn-chicken",
     "teriyaki-donburi"
   ],
-  "sourceName": "NYT Cooking",
-  "generatedAt": "2026-05-27T15:03:06.208Z",
-  "contentVersion": 1
+  "sourceName": "Firehall Meals",
+  "sourceUrl": "",
+  "generatedAt": "2026-05-28T12:06:15.092Z",
+  "contentVersion": 2
 }

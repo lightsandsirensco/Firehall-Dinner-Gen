@@ -1,0 +1,188 @@
+{
+  "slug": "turkey-taco-skillet",
+  "title": "Turkey Taco Skillet",
+  "displayTitle": "Turkey Taco Skillet",
+  "seoTitle": "Turkey Taco Skillet | Firefighter Meal",
+  "shortDescription": "One-pan seasoned turkey with peppers, corn, and melted cheese",
+  "subtitle": "One-pan seasoned turkey with peppers, corn, and melted cheese",
+  "category": "healthy_performance",
+  "cuisine": "Mexican",
+  "description": "Lean ground turkey browns with taco seasoning, bell pepper, corn, and black beans, finished with melted cheddar for scooping into tortillas or bowls.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 20,
+  "prepTime": 15,
+  "difficulty": "easy",
+  "calories": 385,
+  "protein": 36,
+  "carbs": 28,
+  "fats": 14,
+  "tags": [
+    "protein:turkey",
+    "format:skillet",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "14-inch skillet with lid",
+    "Wooden spoon"
+  ],
+  "ingredients": [
+    {
+      "name": "lean ground turkey",
+      "quantity": "3",
+      "unit": "lb"
+    },
+    {
+      "name": "red bell pepper",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "diced"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "1",
+      "unit": "large",
+      "notes": "diced"
+    },
+    {
+      "name": "frozen corn",
+      "quantity": "2",
+      "unit": "cups",
+      "notes": "thawed"
+    },
+    {
+      "name": "black beans",
+      "quantity": "2",
+      "unit": "cans",
+      "notes": "15 oz, drained"
+    },
+    {
+      "name": "diced tomatoes with green chiles",
+      "quantity": "1",
+      "unit": "can",
+      "notes": "14.5 oz"
+    },
+    {
+      "name": "chili powder",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "ground cumin",
+      "quantity": "1.5",
+      "unit": "tbsp"
+    },
+    {
+      "name": "smoked paprika",
+      "quantity": "1",
+      "unit": "tsp"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "4",
+      "unit": "cloves",
+      "notes": "minced"
+    },
+    {
+      "name": "shredded cheddar",
+      "quantity": "2",
+      "unit": "cups"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "1",
+      "unit": "tsp"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Brown turkey",
+      "instruction": "Cook ground turkey in a large skillet over medium-high 8–10 minutes, breaking into fine crumbles until no pink remains and edges look lightly browned.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Add vegetables",
+      "instruction": "Stir in onion and bell pepper. Cook 5–6 minutes until softened and onion turns translucent with slightly softened pepper pieces.",
+      "minutes": 6,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Season and simmer",
+      "instruction": "Add garlic, chili powder, cumin, paprika, corn, beans, tomatoes, and salt. Simmer 8 minutes until liquid reduces and mixture looks thick, not soupy.",
+      "minutes": 8,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Melt cheese",
+      "instruction": "Remove from heat, sprinkle cheddar evenly, cover 2 minutes until cheese melts into a glossy layer on top.",
+      "minutes": 2,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Serve immediately",
+      "instruction": "Scoop into tortillas or bowls. Turkey should stay moist with visible corn and pepper pieces throughout each portion.",
+      "minutes": 2,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Add a splash of lime at the end—acid lifts turkey from bland to bright.",
+    "Offer Greek yogurt as a cool topping instead of sour cream.",
+    "Double recipe fits two skillets for faster browning on busy nights."
+  ],
+  "tonightSpread": [
+    "Warm flour tortillas and shredded lettuce.",
+    "Salsa and sliced jalapeños."
+  ],
+  "leftovers": [
+    "Taco salad over romaine with crushed baked chips.",
+    "Stuffed into bell pepper halves and baked 15 minutes."
+  ],
+  "whyCrewsLikeIt": "High protein, low grease, and one pan to wash. Familiar taco flavors without frying shells.",
+  "mealPrepNotes": "Pre-measure taco spice blend. Open and drain beans before the call comes in. Station: Use a 14-inch skillet or two 12-inch pans so turkey browns instead of steaming. Station: Add cheese off heat so it melts without oil separating at the edges. Station: Serve straight from skillet to warm tortillas at the adjacent counter.",
+  "spiceLevel": "medium",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 385,
+    "protein": 36,
+    "carbs": 28,
+    "fats": 14,
+    "label": "~385 cal/serving · 36g protein · 7g fiber (est.)"
+  },
+  "heroImage": "/images/golden-100/turkey-taco-skillet.jpg",
+  "mobileImage": "/images/mobile/turkey-taco-skillet.jpg",
+  "thumbImage": "/images/thumbs/turkey-taco-skillet.jpg",
+  "railImage": "/images/rails/turkey-taco-skillet.jpg",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "turkey taco skillet",
+    "turkey",
+    "Mexican",
+    "skillet",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "lean-turkey-bean-chili",
+    "turkey-sausage-egg-muffins",
+    "baked-turkey-meatball-marinara",
+    "turkey-sweet-potato-chili",
+    "turkey-lettuce-wrap-night",
+    "chicken-enchilada-skillet-light"
+  ],
+  "generatedAt": "2026-05-28T12:57:50.893Z",
+  "contentVersion": 2
+}

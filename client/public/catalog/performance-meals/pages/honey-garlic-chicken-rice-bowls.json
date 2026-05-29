@@ -1,0 +1,189 @@
+{
+  "slug": "honey-garlic-chicken-rice-bowls",
+  "title": "Honey Garlic Chicken Rice Bowls",
+  "displayTitle": "Honey Garlic Chicken Rice Bowls",
+  "seoTitle": "Honey Garlic Chicken Rice Bowls | Firefighter Meal",
+  "shortDescription": "Skillet glazed chicken thighs over jasmine rice with steamed broccoli",
+  "subtitle": "Skillet glazed chicken thighs over jasmine rice with steamed broccoli",
+  "category": "healthy_performance",
+  "cuisine": "Asian-American",
+  "description": "Boneless chicken thighs sear in a honey-garlic-soy glaze, then serve over fluffy jasmine rice with steamed broccoli and sesame seeds.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 25,
+  "prepTime": 20,
+  "difficulty": "medium",
+  "calories": 520,
+  "protein": 40,
+  "carbs": 58,
+  "fats": 14,
+  "tags": [
+    "protein:chicken",
+    "format:bowl",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "Rice cooker",
+    "Two 12-inch skillets",
+    "Steamer basket"
+  ],
+  "ingredients": [
+    {
+      "name": "boneless chicken thighs",
+      "quantity": "4",
+      "unit": "lb",
+      "notes": "trimmed"
+    },
+    {
+      "name": "jasmine rice",
+      "quantity": "3",
+      "unit": "cups",
+      "notes": "uncooked"
+    },
+    {
+      "name": "broccoli crowns",
+      "quantity": "2",
+      "unit": "lb",
+      "notes": "cut into florets"
+    },
+    {
+      "name": "low-sodium soy sauce",
+      "quantity": "0.5",
+      "unit": "cup"
+    },
+    {
+      "name": "honey",
+      "quantity": "0.33",
+      "unit": "cup"
+    },
+    {
+      "name": "rice vinegar",
+      "quantity": "3",
+      "unit": "tbsp"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "8",
+      "unit": "cloves",
+      "notes": "minced"
+    },
+    {
+      "name": "fresh ginger",
+      "quantity": "2",
+      "unit": "tbsp",
+      "notes": "grated"
+    },
+    {
+      "name": "sesame oil",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "cornstarch",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "green onions",
+      "quantity": "6",
+      "unit": "whole",
+      "notes": "sliced"
+    },
+    {
+      "name": "toasted sesame seeds",
+      "quantity": "3",
+      "unit": "tbsp"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Cook rice and steam broccoli",
+      "instruction": "Cook jasmine rice per package directions. Steam broccoli 4–5 minutes until bright green and tender-crisp, not olive drab or mushy.",
+      "minutes": 20,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Sear chicken thighs",
+      "instruction": "Heat 1 tbsp oil in two skillets over medium-high. Sear thighs 4–5 minutes per side until golden and internal temp reaches 165°F.",
+      "minutes": 12,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Prepare honey garlic glaze",
+      "instruction": "Whisk soy sauce, honey, vinegar, garlic, ginger, sesame oil, and cornstarch until smooth with no starch lumps at the bottom.",
+      "minutes": 3,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Glaze chicken in pan",
+      "instruction": "Pour glaze over seared thighs. Simmer 3–4 minutes, turning often, until sauce thickens to a glossy coat that clings to the meat.",
+      "minutes": 4,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Build bowls at the line",
+      "instruction": "Slice chicken and portion over rice with broccoli. Drizzle extra glaze, top with green onion and sesame seeds.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Do not crowd the pan—searing in batches keeps the glaze from turning soupy.",
+    "Use low-sodium soy so the honey sweetness does not taste cloying.",
+    "Offer sriracha at the line for heat without changing the base recipe."
+  ],
+  "tonightSpread": [
+    "Quick miso soup cups for a light starter.",
+    "Cucumber salad with rice vinegar and sesame."
+  ],
+  "leftovers": [
+    "Pack rice and chicken together; refresh with microwave and extra soy-honey drizzle.",
+    "Shred chicken into fried rice next shift with frozen peas and carrots."
+  ],
+  "whyCrewsLikeIt": "Takeout-style bowls with less sodium and more protein. Assembly line keeps service fast when everyone hits the kitchen at once.",
+  "mealPrepNotes": "Cook rice in a rice cooker while chicken sears. Mix glaze in a jar and shake before adding to the pan. Station: Set up bowl line: rice base, chicken, broccoli, sauce drizzle, sesame and green onion. Station: Keep glaze warm in a squeeze bottle for portion control and consistent sweetness. Station: Use two skillets so all thighs finish searing at the same time.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 520,
+    "protein": 40,
+    "carbs": 58,
+    "fats": 14,
+    "label": "~520 cal/serving · 40g protein · 4g fiber (est.)"
+  },
+  "heroImage": "/images/golden-100/honey-garlic-chicken-rice-bowls.jpg",
+  "mobileImage": "/images/mobile/honey-garlic-chicken-rice-bowls.jpg",
+  "thumbImage": "/images/thumbs/honey-garlic-chicken-rice-bowls.jpg",
+  "railImage": "/images/rails/honey-garlic-chicken-rice-bowls.jpg",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "honey garlic chicken rice bowls",
+    "chicken",
+    "Asian-American",
+    "bowl",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "lemon-garlic-chicken-tray",
+    "sheet-pan-chicken-fajitas-lite",
+    "white-bean-chicken-chili",
+    "korean-beef-rice-bowls",
+    "crock-barbacoa-chicken",
+    "shawarma-chicken-rice-bowls"
+  ],
+  "generatedAt": "2026-05-28T12:57:50.893Z",
+  "contentVersion": 2
+}

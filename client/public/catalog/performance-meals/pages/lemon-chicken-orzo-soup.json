@@ -1,0 +1,190 @@
+{
+  "slug": "lemon-chicken-orzo-soup",
+  "title": "Lemon Chicken Orzo Soup",
+  "displayTitle": "Lemon Chicken Orzo Soup",
+  "seoTitle": "Lemon Chicken Orzo Soup | Firefighter Meal",
+  "shortDescription": "Bright broth with shredded chicken, orzo, and tender carrots",
+  "subtitle": "Bright broth with shredded chicken, orzo, and tender carrots",
+  "category": "healthy_performance",
+  "cuisine": "Greek",
+  "description": "Shredded chicken simmers in lemony broth with orzo, carrots, and dill until the soup is bright, silky, and filling.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 35,
+  "prepTime": 20,
+  "difficulty": "easy",
+  "calories": 340,
+  "protein": 32,
+  "carbs": 36,
+  "fats": 8,
+  "tags": [
+    "protein:chicken",
+    "format:soup",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "8-quart stock pot",
+    "Medium saucepan for orzo"
+  ],
+  "ingredients": [
+    {
+      "name": "boneless chicken breasts",
+      "quantity": "2",
+      "unit": "lb"
+    },
+    {
+      "name": "orzo pasta",
+      "quantity": "1.5",
+      "unit": "cups",
+      "notes": "dry"
+    },
+    {
+      "name": "carrots",
+      "quantity": "3",
+      "unit": "whole",
+      "notes": "diced small"
+    },
+    {
+      "name": "celery stalks",
+      "quantity": "3",
+      "unit": "whole",
+      "notes": "diced small"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "1",
+      "unit": "medium",
+      "notes": "diced"
+    },
+    {
+      "name": "chicken broth",
+      "quantity": "10",
+      "unit": "cups",
+      "notes": "low sodium"
+    },
+    {
+      "name": "lemon juice",
+      "quantity": "0.33",
+      "unit": "cup",
+      "notes": "fresh"
+    },
+    {
+      "name": "lemon zest",
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "fresh dill",
+      "quantity": "0.33",
+      "unit": "cup",
+      "notes": "chopped"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "4",
+      "unit": "cloves",
+      "notes": "minced"
+    },
+    {
+      "name": "bay leaves",
+      "quantity": "2",
+      "unit": "whole"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "1.5",
+      "unit": "tsp"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Poach chicken",
+      "instruction": "Simmer chicken breasts in 6 cups broth with bay leaves 15–18 minutes until 165°F. Rest, shred into bite-size strands with two forks.",
+      "minutes": 20,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Cook orzo separately",
+      "instruction": "Boil orzo in salted water 8–9 minutes until al dente. Drain, toss with 1 tsp oil to prevent clumping.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Build soup base",
+      "instruction": "Sauté onion, carrot, celery, and garlic in pot 6 minutes until softened. Add remaining broth and shredded chicken, simmer 10 minutes.",
+      "minutes": 16,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Finish with lemon",
+      "instruction": "Remove from heat. Stir lemon juice, zest, and dill. Broth should taste bright and balanced, not harsh or overly tart.",
+      "minutes": 3,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Serve with orzo",
+      "instruction": "Add cooked orzo to bowls, ladle soup over top. Orzo should stay separate, not swollen and mushy in the pot.",
+      "minutes": 3,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Never boil after adding lemon—it dulls the bright flavor.",
+    "Rotisserie chicken works in a pinch—add at the end.",
+    "Extra dill at the line makes the soup smell incredible."
+  ],
+  "tonightSpread": [
+    "Warm pita or crusty rolls.",
+    "Greek salad on the side."
+  ],
+  "leftovers": [
+    "Store orzo separate from soup or it absorbs all broth overnight.",
+    "Freeze soup base without orzo for easy reheat."
+  ],
+  "whyCrewsLikeIt": "Avgolemono vibes without the egg tempering fuss. Gentle on the stomach after a rough shift.",
+  "mealPrepNotes": "Cook orzo separately and add at service to prevent bloating in the pot. Station: Poach chicken in broth for maximum flavor—do not use plain water. Station: Stir lemon juice off heat so broth stays bright, not curdled-looking. Station: Keep orzo in a separate hotel pan and add per bowl for best texture.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 340,
+    "protein": 32,
+    "carbs": 36,
+    "fats": 8,
+    "label": "~340 cal/serving · 32g protein · 3g fiber (est.)"
+  },
+  "heroImage": "/images/golden-100/lemon-chicken-orzo-soup.jpg",
+  "mobileImage": "/images/mobile/lemon-chicken-orzo-soup.jpg",
+  "thumbImage": "/images/thumbs/lemon-chicken-orzo-soup.jpg",
+  "railImage": "/images/rails/lemon-chicken-orzo-soup.jpg",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "lemon chicken orzo soup",
+    "chicken",
+    "Greek",
+    "soup",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "lemon-garlic-chicken-tray",
+    "sheet-pan-chicken-fajitas-lite",
+    "honey-garlic-chicken-rice-bowls",
+    "white-bean-chicken-chili",
+    "smoky-lentil-kale-soup",
+    "crock-barbacoa-chicken"
+  ],
+  "generatedAt": "2026-05-28T12:57:50.894Z",
+  "contentVersion": 2
+}

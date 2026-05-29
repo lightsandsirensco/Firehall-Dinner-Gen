@@ -1,0 +1,179 @@
+{
+  "slug": "salsa-verde-crock-chicken",
+  "title": "Salsa Verde Crock Chicken",
+  "displayTitle": "Salsa Verde Crock Chicken",
+  "seoTitle": "Salsa Verde Crock Chicken | Firefighter Meal",
+  "shortDescription": "Slow-cooked tomatillo chicken that shreds for bowls and tacos",
+  "subtitle": "Slow-cooked tomatillo chicken that shreds for bowls and tacos",
+  "category": "healthy_performance",
+  "cuisine": "Mexican",
+  "description": "Chicken thighs braise in salsa verde with onion and jalapeño until pull-apart tender for tacos, rice bowls, or lettuce wraps.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 360,
+  "prepTime": 15,
+  "difficulty": "easy",
+  "calories": 375,
+  "protein": 40,
+  "carbs": 8,
+  "fats": 20,
+  "tags": [
+    "protein:chicken",
+    "format:slow_cooker",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "8-quart slow cooker",
+    "Two forks"
+  ],
+  "ingredients": [
+    {
+      "name": "boneless chicken thighs",
+      "quantity": "5",
+      "unit": "lb"
+    },
+    {
+      "name": "salsa verde",
+      "quantity": "4",
+      "unit": "cups",
+      "notes": "store-bought or homemade"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "1",
+      "unit": "large",
+      "notes": "sliced"
+    },
+    {
+      "name": "jalapeño peppers",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "seeded, minced"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "4",
+      "unit": "cloves",
+      "notes": "minced"
+    },
+    {
+      "name": "ground cumin",
+      "quantity": "1",
+      "unit": "tsp"
+    },
+    {
+      "name": "chicken broth",
+      "quantity": "0.5",
+      "unit": "cup",
+      "notes": "low sodium"
+    },
+    {
+      "name": "lime juice",
+      "quantity": "3",
+      "unit": "tbsp",
+      "notes": "fresh"
+    },
+    {
+      "name": "fresh cilantro",
+      "quantity": "0.5",
+      "unit": "cup",
+      "notes": "chopped"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "1",
+      "unit": "tsp"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Layer crock",
+      "instruction": "Place onion slices in bottom of 8-quart slow cooker. Arrange chicken thighs on top in even layer without stacking too deep.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Add salsa verde",
+      "instruction": "Pour salsa verde over chicken. Add jalapeño, garlic, cumin, broth, and salt. Stir lightly so thighs are mostly submerged in liquid.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Slow cook until tender",
+      "instruction": "Cover and cook on low 6–8 hours until chicken shreds easily with forks and internal temp reaches 165°F throughout.",
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Shred and combine",
+      "instruction": "Shred chicken in crock with two forks. Mix with cooking liquid until meat is moist and coated, not dry or stringy.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Finish with lime and cilantro",
+      "instruction": "Stir in lime juice and cilantro off heat. Sauce should taste bright and tangy, not flat or overly salty.",
+      "minutes": 3,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Homemade salsa verde: blend tomatillos, jalapeño, onion, cilantro, lime.",
+    "Offer both corn tortillas and rice bowls at the line.",
+    "Freeze shredded portions in cooking liquid for fast taco nights."
+  ],
+  "tonightSpread": [
+    "Warm corn tortillas.",
+    "Cilantro-lime rice.",
+    "Pickled red onion."
+  ],
+  "leftovers": [
+    "Salsa verde chicken enchiladas baked with cheese.",
+    "Huevos rancheros with leftover chicken next morning."
+  ],
+  "whyCrewsLikeIt": "Tangy tomatillo flavor without standing at the stove. One crock feeds tacos and bowls simultaneously.",
+  "mealPrepNotes": "Start crock by 11 a.m. for 6 p.m. dinner. Shred in pot to save dishes. Station: Do not lift lid first 3 hours—each peek adds significant cook time. Station: Skim excess fat before shredding for cleaner tangy flavor. Station: Hold shredded chicken in salsa at 165°F—dry hold kills texture.",
+  "spiceLevel": "medium",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 375,
+    "protein": 40,
+    "carbs": 8,
+    "fats": 20,
+    "label": "~375 cal/serving · 40g protein · 2g fiber (est.)"
+  },
+  "heroImage": "/images/golden-100/salsa-verde-crock-chicken.jpg",
+  "mobileImage": "/images/mobile/salsa-verde-crock-chicken.jpg",
+  "thumbImage": "/images/thumbs/salsa-verde-crock-chicken.jpg",
+  "railImage": "/images/rails/salsa-verde-crock-chicken.jpg",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "salsa verde crock chicken",
+    "chicken",
+    "Mexican",
+    "slow cooker",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "lemon-garlic-chicken-tray",
+    "lean-turkey-bean-chili",
+    "sheet-pan-chicken-fajitas-lite",
+    "honey-garlic-chicken-rice-bowls",
+    "white-bean-chicken-chili",
+    "crock-barbacoa-chicken"
+  ],
+  "generatedAt": "2026-05-28T12:57:50.894Z",
+  "contentVersion": 2
+}

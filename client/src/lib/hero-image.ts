@@ -46,8 +46,10 @@ export const HERO_FOCAL_CLASS: Record<HeroFocalPoint, string> = {
 export const HERO_IMAGE_BASE =
   "absolute inset-0 w-full h-full transition-opacity duration-500 ease-out";
 
+/** Subtle unified grade — photoreal, not oversaturated AI-pop. */
 export const HERO_CINEMATIC_GRADE =
-  "saturate-[1.08] contrast-[1.03] brightness-[1.02]";
+  // Slightly flatter saturation + a touch of contrast to avoid "AI pop" and glossy food styling.
+  "saturate-[0.98] contrast-[1.03] brightness-[0.99]";
 
 export const HERO_ROUNDED = {
   none: "",

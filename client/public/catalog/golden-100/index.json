@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "contentVersion": 1,
-  "generatedAt": "2026-05-27T15:03:06.220Z",
+  "contentVersion": 2,
+  "generatedAt": "2026-05-28T12:06:15.113Z",
   "recipeCount": 100,
   "recipes": [
     {
@@ -1319,7 +1319,7 @@
       "cuisine": "italian",
       "protein": "beef",
       "mealFormat": "pasta",
-      "cookTime": 45,
+      "cookTime": 55,
       "difficulty": "medium",
       "heroImage": "/images/golden-100/baked-ziti.jpg",
       "thumbImage": "/images/thumbs/baked-ziti.jpg",
@@ -1410,7 +1410,7 @@
     },
     {
       "slug": "greek-chicken-bowls",
-      "title": "Greek Chicken Power Bowls",
+      "title": "Greek Chicken Bowls",
       "subtitle": "Tzatziki, crisp veg, lean chicken",
       "category": "healthy_performance",
       "cuisine": "greek",
@@ -1431,13 +1431,12 @@
       "firefighterScore": 100,
       "popularityWeight": 2.9,
       "searchTerms": [
-        "greek chicken power bowls",
         "greek chicken bowls",
         "greek",
         "chicken",
         "bowl",
         "healthy",
-        "greek chicken power bowl",
+        "greek chicken bowl",
         "golden_100"
       ]
     },
@@ -1974,7 +1973,7 @@
       "cuisine": "mexican",
       "protein": "pork",
       "mealFormat": "tacos",
-      "cookTime": 45,
+      "cookTime": 35,
       "difficulty": "easy",
       "heroImage": "/images/golden-100/pork-carnitas-tacos.jpg",
       "thumbImage": "/images/thumbs/pork-carnitas-tacos.jpg",
@@ -3174,7 +3173,7 @@
     },
     {
       "slug": "sheet-pan-meal-prep",
-      "title": "Sheet Pan Chicken Meal Prep",
+      "title": "Sheet Pan Chicken Trays",
       "subtitle": "Portioned trays, reheat-ready",
       "category": "meal_prep_leftovers",
       "cuisine": "american",
@@ -3195,7 +3194,7 @@
       "firefighterScore": 100,
       "popularityWeight": 3.2,
       "searchTerms": [
-        "sheet pan chicken meal prep",
+        "sheet pan chicken trays",
         "sheet pan meal prep",
         "american",
         "chicken",

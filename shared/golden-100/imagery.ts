@@ -45,10 +45,9 @@ export function goldenImageryContext(def: GoldenRecipeDefinition): FoodImageryCo
   };
 }
 
-/** Base hero prompt (legacy food-imagery + preset fragment). Use buildEditorialModelPrompt in server for full pipeline. */
+/** Base hero prompt — uses unified food-imagery assembler (same as Explore + generator heroes). */
 export function buildGoldenHeroPrompt(def: GoldenRecipeDefinition): string {
-  const meta = buildGoldenImageryMeta(def);
-  return `${buildGoldenImagePositivePrompt(def)} ${buildFoodImageryPrompt(goldenImageryContext(def))} ${meta.promptFragment}`;
+  return buildFoodImageryPrompt(goldenImageryContext(def));
 }
 
 export { buildGoldenImagePositivePrompt, buildGoldenImageNegativePrompt } from "./image-style-system.js";

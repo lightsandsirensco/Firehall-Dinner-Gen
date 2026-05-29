@@ -1,0 +1,101 @@
+{
+  "slug": "tropical-mango-greek",
+  "title": "Tropical Mango Greek Yogurt Smoothie",
+  "seoTitle": "Tropical Mango Greek Yogurt Smoothie | Firefighter Smoothie",
+  "subtitle": "Fruit · Tropical",
+  "description": "Frozen mango and lime read like vacation, but Greek yogurt keeps it from being pure sugar. Crews who think they do not like “healthy smoothies” usually finish this one.",
+  "fuelType": "smoothie",
+  "taxonomyCategory": "fruit_smoothie",
+  "taxonomyLabel": "Fruit",
+  "intro": "Frozen mango and lime read like vacation, but Greek yogurt keeps it from being pure sugar. Crews who think they do not like “healthy smoothies” usually finish this one.",
+  "ingredients": [
+    {
+      "name": "frozen mango chunks",
+      "quantity": "4",
+      "unit": "cups"
+    },
+    {
+      "name": "plain Greek yogurt",
+      "quantity": "1.5",
+      "unit": "cups"
+    },
+    {
+      "name": "orange juice",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "calcium-fortified works fine"
+    },
+    {
+      "name": "fresh lime juice",
+      "quantity": "3",
+      "unit": "tbsp"
+    },
+    {
+      "name": "honey",
+      "quantity": "1",
+      "unit": "tbsp",
+      "notes": "optional"
+    },
+    {
+      "name": "shredded coconut",
+      "quantity": "2",
+      "unit": "tbsp",
+      "notes": "to garnish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "instruction": "Blend mango, yogurt, and orange juice on high until the mixture is completely smooth and pale orange."
+    },
+    {
+      "stepNumber": 2,
+      "instruction": "Add lime juice and blend 10 seconds more — the acid should taste bright, not sour."
+    },
+    {
+      "stepNumber": 3,
+      "instruction": "Adjust sweetness with honey only if needed; ripe frozen mango is often enough."
+    },
+    {
+      "stepNumber": 4,
+      "instruction": "Pour into cups and top with a pinch of coconut if you have it — skip if the pantry is bare."
+    }
+  ],
+  "nutrition": {
+    "calories": 260,
+    "protein": 18,
+    "carbs": 32,
+    "fats": 8,
+    "highlights": "~260 cal · ~18 g protein · vitamin C from citrus · natural sweetness mostly from mango"
+  },
+  "substitutions": [
+    "Pineapple replaces half the mango for a sharper tropical flavor.",
+    "Coconut milk (¼ cup) adds richness if the smoothie tastes too sharp."
+  ],
+  "shiftNote": "Bright flavor helps on afternoon shifts when coffee alone is not cutting it. No cooking, minimal dishes.",
+  "heroImage": "/images/editorial/smoothies/tropical-mango-greek.webp",
+  "thumbImage": "/images/editorial/smoothies/tropical-mango-greek.webp",
+  "tags": [
+    "fuel_smoothie",
+    "taxonomy:fruit_smoothie",
+    "smoothie",
+    "performance_fuel",
+    "shift_nutrition"
+  ],
+  "searchTerms": [
+    "tropical mango greek yogurt smoothie",
+    "healthy smoothies",
+    "smoothies for firefighters",
+    "firefighter breakfast",
+    "recovery smoothie",
+    "fruit smoothie",
+    "station blender",
+    "shift nutrition"
+  ],
+  "relatedSlugs": [
+    "blueberry-almond"
+  ],
+  "catalogSet": "fuel_smoothie",
+  "generatedAt": "2026-05-28T00:37:54.583Z",
+  "contentVersion": 1
+}

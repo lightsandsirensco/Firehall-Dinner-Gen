@@ -8,3 +8,4 @@ export * from "./image-style-system.js";
 export * from "./recipe-page-schema.js";
 export * from "./recipe-page-paths.js";
 export * from "./related-recipes.js";
+export * from "./internal-link-clusters.js";

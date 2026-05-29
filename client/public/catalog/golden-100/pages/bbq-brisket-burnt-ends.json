@@ -1,11 +1,15 @@
 {
   "slug": "bbq-brisket-burnt-ends",
   "title": "BBQ Burnt Ends",
+  "displayTitle": "BBQ Burnt Ends",
+  "seoTitle": "BBQ Burnt Ends | Firefighter Meal",
+  "shortDescription": "Caramelized burnt ends, pure smoke",
   "subtitle": "Caramelized burnt ends, pure smoke",
   "category": "bbq_grill_nights",
   "cuisine": "american",
-  "description": "BBQ Burnt Ends is a american grill built for a hungry firehall crew — Caramelized burnt ends, pure smoke. Hearty portions, station-kitchen timing, and flavors everyone recognizes after a long shift.",
+  "description": "Caramelized burnt ends, pure smoke. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 90,
   "prepTime": 30,
   "difficulty": "hard",
@@ -31,69 +35,74 @@
   ],
   "ingredients": [
     {
-      "name": "Beef (main cut for recipe)",
-      "quantity": "3",
-      "unit": "lb"
+      "name": "Chuck or brisket point, cubed",
+      "quantity": "6",
+      "unit": "lb",
+      "group": "Main"
     },
     {
       "name": "Kosher salt",
       "quantity": "2",
-      "unit": "tbsp"
+      "unit": "tbsp",
+      "group": "Rub"
     },
     {
       "name": "Black pepper",
-      "quantity": "1",
-      "unit": "tbsp"
-    },
-    {
-      "name": "Cooking oil",
-      "quantity": "0.3",
-      "unit": "cup"
-    },
-    {
-      "name": "Yellow onion",
       "quantity": "2",
-      "unit": "large"
+      "unit": "tbsp",
+      "group": "Rub"
     },
     {
-      "name": "Garlic",
-      "quantity": "6",
-      "unit": "cloves"
+      "name": "Brown sugar",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Glaze"
+    },
+    {
+      "name": "BBQ sauce",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Glaze"
+    },
+    {
+      "name": "Honey",
+      "quantity": "0.3",
+      "unit": "cup",
+      "group": "Glaze"
+    },
+    {
+      "name": "Unsalted butter",
+      "quantity": "4",
+      "unit": "tbsp",
+      "group": "Glaze"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Prep the line",
-      "instruction": "Set out all ingredients for BBQ Burnt Ends before you turn on heat — firefighters eat on a schedule. Pat proteins dry and season aggressively with salt and pepper; dry surfaces brown instead of steam.",
-      "minutes": 15,
+      "title": "Cube and season",
+      "instruction": "Cut point into 1-inch cubes. Toss with salt and pepper. Preheat smoker to 275°F.",
+      "minutes": 20,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Build the base",
-      "instruction": "Heat oil in your largest skillet, Dutch oven, or on the flat-top over medium-high until it shimmers. Add aromatics (onion first) and cook until the edges turn golden and the smell sweetens — usually 4–6 minutes. If garlic is in the recipe, add it after the onion softens so it doesn't burn.",
-      "minutes": 8,
-      "heatLevel": "medium-high"
+      "title": "Smoke the cubes",
+      "instruction": "Smoke cubes 3–4 hours until deeply browned and tender (internal 195°F+). Toss halfway for even color.",
+      "minutes": 180,
+      "heatLevel": "low"
     },
     {
       "stepNumber": 3,
-      "title": "Cook the main",
-      "instruction": "Cook the primary protein or base for BBQ Burnt Ends until it hits proper color and safe internal temperature. Don't crowd the pan — work in batches if needed so you get browning, not gray stew. Listen for a steady sizzle; if it's silent, the heat is too low.",
-      "minutes": 20,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 4,
-      "title": "Finish and season",
-      "instruction": "Bring components together, taste, and adjust salt. Sauce should coat, not pool. If cheese is involved, melt it just until glossy — another 1–2 minutes under a lid or broiler. Let heavy proteins rest 5 minutes before slicing.",
-      "minutes": 10,
+      "title": "Glaze in the pan",
+      "instruction": "Transfer to a foil pan with butter, brown sugar, honey, and BBQ sauce. Cover and cook 1–2 hours until saucy and sticky. Uncover last 15 minutes to caramelize edges — watch for burning.",
+      "minutes": 90,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 5,
-      "title": "Serve the hall",
-      "instruction": "Transfer to sheet trays or a serving line immediately. Keep backup warm at 200°F. Call the crew while it's hot — this meal is built for a hungry hall, not a photo shoot.",
+      "stepNumber": 4,
+      "title": "Serve with toothpicks",
+      "instruction": "Burnt ends should be lacquered, not soupy. Serve in pans with picks for the line. Hold at 180°F up to 45 minutes.",
       "minutes": 5,
       "heatLevel": "low"
     }
@@ -115,6 +124,10 @@
     "Label trays with date and reheat to 165°F minimum before second shift.",
     "Slice cold protein thin for next-day wraps or salads — faster reheat, less dry-out."
   ],
+  "whyCrewsLikeIt": "Caramelized burnt ends, pure smoke. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
+  "substitutions": [],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
   "nutrition": {
     "calories": 600,
     "protein": 40,
@@ -147,7 +160,8 @@
     "beer-can-chicken",
     "cedar-plank-salmon"
   ],
-  "sourceName": "AmazingRibs",
-  "generatedAt": "2026-05-27T15:03:06.159Z",
-  "contentVersion": 1
+  "sourceName": "Firehall Meals",
+  "sourceUrl": "",
+  "generatedAt": "2026-05-28T12:06:15.004Z",
+  "contentVersion": 2
 }

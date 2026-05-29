@@ -1,11 +1,15 @@
 {
   "slug": "big-chili",
   "title": "Hall-Sized Beef and Bean Chili",
+  "displayTitle": "Hall-Sized Beef and Bean Chili",
+  "seoTitle": "Hall-Sized Beef and Bean Chili | Firefighter Meal",
+  "shortDescription": "Double pot, triple appetite",
   "subtitle": "Double pot, triple appetite",
   "category": "big_crew_feeders",
   "cuisine": "american",
-  "description": "Hall-Sized Beef and Bean Chili is a american soup chili built for a hungry firehall crew — Double pot, triple appetite. Hearty portions, station-kitchen timing, and flavors everyone recognizes after a long shift.",
+  "description": "Double pot, triple appetite. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 90,
   "prepTime": 30,
   "difficulty": "hard",
@@ -29,69 +33,132 @@
   ],
   "ingredients": [
     {
-      "name": "Beef (main cut for recipe)",
+      "name": "Ground beef (80/20)",
+      "quantity": "3.5",
+      "unit": "lb",
+      "group": "Main"
+    },
+    {
+      "name": "Yellow onion",
       "quantity": "3",
-      "unit": "lb"
+      "unit": "large",
+      "group": "Aromatics"
+    },
+    {
+      "name": "Bell peppers, diced",
+      "quantity": "3",
+      "unit": "count",
+      "group": "Aromatics"
+    },
+    {
+      "name": "Garlic cloves, minced",
+      "quantity": "8",
+      "unit": "cloves",
+      "group": "Aromatics"
+    },
+    {
+      "name": "Kidney beans, drained",
+      "quantity": "3",
+      "unit": "cans",
+      "notes": "15 oz cans",
+      "group": "Main"
+    },
+    {
+      "name": "Crushed tomatoes",
+      "quantity": "2",
+      "unit": "cans",
+      "notes": "28 oz",
+      "group": "Main"
+    },
+    {
+      "name": "Diced tomatoes",
+      "quantity": "2",
+      "unit": "cans",
+      "notes": "14 oz",
+      "group": "Main"
+    },
+    {
+      "name": "Tomato paste",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "Beef or chicken broth",
+      "quantity": "4",
+      "unit": "cups",
+      "group": "Sauce"
+    },
+    {
+      "name": "Chili powder",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Smoked paprika",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Ground cumin",
+      "quantity": "2",
+      "unit": "tsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Brown sugar",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Worcestershire sauce",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Sauce"
     },
     {
       "name": "Kosher salt",
       "quantity": "2",
-      "unit": "tbsp"
-    },
-    {
-      "name": "Black pepper",
-      "quantity": "1",
-      "unit": "tbsp"
-    },
-    {
-      "name": "Cooking oil",
-      "quantity": "0.3",
-      "unit": "cup"
-    },
-    {
-      "name": "Yellow onion",
-      "quantity": "2",
-      "unit": "large"
-    },
-    {
-      "name": "Garlic",
-      "quantity": "6",
-      "unit": "cloves"
+      "unit": "tbsp",
+      "group": "Seasoning"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Prep the line",
-      "instruction": "Set out all ingredients for Hall-Sized Beef and Bean Chili before you turn on heat — firefighters eat on a schedule. Pat proteins dry and season aggressively with salt and pepper; dry surfaces brown instead of steam.",
+      "title": "Prep the pots",
+      "instruction": "Dice onions and peppers into even ¼-inch pieces. Mince garlic. Drain beans. Open tomatoes. Set out your largest stock pot (or two medium pots if feeding 10+). Line a sheet pan if you're making garlic bread on the side.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Build the base",
-      "instruction": "Heat oil in your largest skillet, Dutch oven, or on the flat-top over medium-high until it shimmers. Add aromatics (onion first) and cook until the edges turn golden and the smell sweetens — usually 4–6 minutes. If garlic is in the recipe, add it after the onion softens so it doesn't burn.",
-      "minutes": 8,
+      "title": "Brown the meat",
+      "instruction": "Heat 2 tbsp oil in the pot over medium-high until it shimmers. Add ground beef in two batches — don't crowd. Break into crumbles and cook until deeply browned with no pink (160°F+). You want fond on the bottom, not gray steam. Drain excess grease if the pot looks oily.",
+      "minutes": 12,
       "heatLevel": "medium-high"
     },
     {
       "stepNumber": 3,
-      "title": "Cook the main",
-      "instruction": "Cook the primary protein or base for Hall-Sized Beef and Bean Chili until it hits proper color and safe internal temperature. Don't crowd the pan — work in batches if needed so you get browning, not gray stew. Listen for a steady sizzle; if it's silent, the heat is too low.",
-      "minutes": 20,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 4,
-      "title": "Finish and season",
-      "instruction": "Bring components together, taste, and adjust salt. Sauce should coat, not pool. If cheese is involved, melt it just until glossy — another 1–2 minutes under a lid or broiler. Let heavy proteins rest 5 minutes before slicing.",
+      "title": "Bloom spices",
+      "instruction": "Add onions and peppers; cook 6–8 minutes until edges soften and smell sweet. Stir in garlic, chili powder, smoked paprika, and cumin for 45 seconds until fragrant. Add tomato paste and brown sugar; cook 1 minute until the paste darkens slightly.",
       "minutes": 10,
       "heatLevel": "medium"
     },
     {
+      "stepNumber": 4,
+      "title": "Simmer the chili",
+      "instruction": "Pour in crushed tomatoes, diced tomatoes, broth, and beans. Bring to a gentle bubble, then lower to a steady simmer — small bubbles, not a rolling boil. Cook uncovered 35–40 minutes, stirring every 10 minutes. Hall-Sized Beef and Bean Chili is ready when it coats the back of a spoon and a drag through the pot leaves a clear trail. Season with salt and Worcestershire.",
+      "minutes": 40,
+      "heatLevel": "medium-low"
+    },
+    {
       "stepNumber": 5,
-      "title": "Serve the hall",
-      "instruction": "Transfer to sheet trays or a serving line immediately. Keep backup warm at 200°F. Call the crew while it's hot — this meal is built for a hungry hall, not a photo shoot.",
+      "title": "Hold and serve the hall",
+      "instruction": "Keep on low (or transfer to a cambro) for late eaters. Set a topping bar: shredded cheese, diced onion, jalapeños, sour cream. Call the crew while it's hot — chili holds well but the first bowl is always the best.",
       "minutes": 5,
       "heatLevel": "low"
     }
@@ -114,6 +181,12 @@
     "Label trays with date and reheat to 165°F minimum before second shift.",
     "Add a splash of stock or water when reheating — thick sauces tighten in the fridge."
   ],
+  "whyCrewsLikeIt": "Double pot, triple appetite. A hall pick for big-appetite nights — one line, real portions, no drama at the stove.",
+  "substitutions": [
+    "Ground turkey swaps 1:1 for beef in chili if the crew wants leaner."
+  ],
+  "spiceLevel": "medium",
+  "cleanupDifficulty": "medium",
   "nutrition": {
     "calories": 600,
     "protein": 40,
@@ -146,6 +219,8 @@
     "bbq-brisket-burnt-ends",
     "ny-strip-herb-butter"
   ],
-  "generatedAt": "2026-05-27T15:03:06.198Z",
-  "contentVersion": 1
+  "sourceName": "Firehall Meals",
+  "sourceUrl": "",
+  "generatedAt": "2026-05-28T12:06:15.073Z",
+  "contentVersion": 2
 }

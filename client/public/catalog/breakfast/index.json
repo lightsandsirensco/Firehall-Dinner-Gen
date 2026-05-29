@@ -1,0 +1,943 @@
+{
+  "version": 1,
+  "generatedAt": "2026-05-28T13:26:37.645Z",
+  "recipeCount": 50,
+  "recipes": [
+    {
+      "slug": "bacon-egg-hash-skillet",
+      "title": "Bacon Egg Hash Skillet",
+      "subtitle": "Cast-iron breakfast built for crispy edges and fast cleanup.",
+      "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+      "filters": [
+        "skillets"
+      ],
+      "tags": [
+        "bacon",
+        "hash",
+        "cast-iron",
+        "eggs"
+      ],
+      "totalTime": 34,
+      "heroImage": "/images/breakfast/bacon-egg-hash-skillet.jpg",
+      "thumbImage": "/images/thumbs/breakfast/bacon-egg-hash-skillet.jpg",
+      "publishedAt": "2026-05-28T13:26:37.645Z"
+    },
+    {
+      "slug": "bacon-hash-burritos",
+      "title": "Bacon Hash Burritos",
+      "subtitle": "Big-batch burritos that hold on the line and reheat clean.",
+      "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+      "filters": [
+        "feed_a_crew"
+      ],
+      "tags": [
+        "burritos",
+        "bacon",
+        "hash",
+        "hot-sauce"
+      ],
+      "totalTime": 37,
+      "heroImage": "/images/breakfast/bacon-hash-burritos.jpg",
+      "thumbImage": "/images/thumbs/breakfast/bacon-hash-burritos.jpg",
+      "publishedAt": "2026-05-28T13:26:37.645Z"
+    },
+    {
+      "slug": "bbq-breakfast-hash",
+      "title": "BBQ Breakfast Hash",
+      "subtitle": "A practical station breakfast that scales from 4 to 12.",
+      "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+      "filters": [
+        "bbq_breakfast",
+        "feed_a_crew"
+      ],
+      "tags": [
+        "bbq",
+        "hash",
+        "cast-iron",
+        "eggs"
+      ],
+      "totalTime": 43,
+      "heroImage": "/images/breakfast/bbq-breakfast-hash.jpg",
+      "thumbImage": "/images/thumbs/breakfast/bbq-breakfast-hash.jpg",
+      "publishedAt": "2026-05-28T13:26:37.645Z"
+    },
+    {
+      "slug": "big-pot-savory-oats",
+      "title": "Big-Pot Savory Oats",
+      "subtitle": "A practical station breakfast that scales from 4 to 12.",
+      "description": "A single pot of oats that tastes like a real breakfast, not diet culture. We finish with salt, butter, and a sensible topping bar so everyone can customize without slowing the line.",
+      "filters": [
+        "healthy_breakfasts",
+        "feed_a_crew"
+      ],
+      "tags": [
+        "oats",
+        "one-pot",
+        "topping-bar"
+      ],
+      "totalTime": 28,
+      "heroImage": "/images/breakfast/big-pot-savory-oats.jpg",
+      "thumbImage": "/images/thumbs/breakfast/big-pot-savory-oats.jpg",
+      "publishedAt": "2026-05-28T13:26:37.645Z"
+    },
+    {
+      "slug": "breakfast-sandwich-trays",
+      "title": "Breakfast Sandwich Trays",
+      "subtitle": "A practical station breakfast that scales from 4 to 12.",
+      "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+      "filters": [
+        "feed_a_crew",
+        "breakfast_sandwiches"
+      ],
+      "tags": [
+        "sandwiches",
+        "tray",
+        "eggs",
+        "cheddar"
+      ],
+      "totalTime": 33,
+      "heroImage": "/images/breakfast/breakfast-sandwich-trays.jpg",
+      "thumbImage": "/images/thumbs/breakfast/breakfast-sandwich-trays.jpg",
+      "publishedAt": "2026-05-28T13:26:37.645Z"
+    },
+    {
+      "slug": "buttermilk-pancakes",
+      "title": "Buttermilk Pancakes for the Crew",
+      "subtitle": "A practical station breakfast that scales from 4 to 12.",
+      "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+      "filters": [
+        "feed_a_crew"
+      ],
+      "tags": [
+        "pancakes",
+        "griddle",
+        "classic"
+      ],
+      "totalTime": 30,
+      "heroImage": "/images/breakfast/buttermilk-pancakes.jpg",
+      "thumbImage": "/images/thumbs/breakfast/buttermilk-pancakes.jpg",
+      "publishedAt": "2026-05-28T13:26:37.645Z"
+    },
+    {
+      "slug": "cast-iron-breakfast-skillet",
+      "title": "Cast Iron Breakfast Skillet",
+      "subtitle": "Cast-iron breakfast built for crispy edges and fast cleanup.",
+      "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+      "filters": [
+        "skillets",
+        "feed_a_crew"
+      ],
+      "tags": [
+        "cast-iron",
+        "potatoes",
+        "sausage",
+        "eggs"
+      ],
+      "totalTime": 37,
+      "heroImage": "/images/breakfast/cast-iron-breakfast-skillet.jpg",
+      "thumbImage": "/images/thumbs/breakfast/cast-iron-breakfast-skillet.jpg",
+      "publishedAt": "2026-05-28T13:26:37.645Z"
+    },
+    {
+      "slug": "chorizo-breakfast-burritos",
+      "title": "Chorizo Breakfast Burritos",
+      "subtitle": "Big-batch burritos that hold on the line and reheat clean.",
+      "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+      "filters": [
+        "feed_a_crew",
+        "high_protein"
+      ],
+      "tags": [
+        "burritos",
+        "chorizo",
+        "spicy",
+        "handheld"
+      ],
+      "totalTime": 33,
+      "heroImage": "/images/breakfast/chorizo-breakfast-burritos.jpg",
+      "thumbImage": "/images/thumbs/breakfast/chorizo-breakfast-burritos.jpg",
+      "publishedAt": "2026-05-28T13:26:37.645Z"
+    },
+    {
+      "slug": "crew-french-toast-bake",
+      "title": "Crew French Toast Bake",
+      "subtitle": "A practical station breakfast that scales from 4 to 12.",
+      "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+      "filters": [
+        "feed_a_crew"
+      ],
+      "tags": [
+        "french-toast",
+        "bake",
+        "make-ahead",
+        "9x13"
+      ],
+      "totalTime": 60,
+      "heroImage": "/images/breakfast/crew-french-toast-bake.jpg",
+      "thumbImage": "/images/thumbs/breakfast/crew-french-toast-bake.jpg",
+      "publishedAt": "2026-05-28T13:26:37.645Z"
+    },
+    {
+      "slug": "hall-breakfast-burritos",
+      "title": "Hall Breakfast Burritos",
+      "subtitle": "Big-batch burritos that hold on the line and reheat clean.",
+      "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+      "filters": [
+        "feed_a_crew",
+        "high_protein"
+      ],
+      "tags": [
+        "burritos",
+        "make-ahead",
+        "line-friendly",
+        "cheddar"
+      ],
+      "totalTime": 35,
+      "heroImage": "/images/breakfast/hall-breakfast-burritos.jpg",
+      "thumbImage": "/images/thumbs/breakfast/hall-breakfast-burritos.jpg",
+      "publishedAt": "2026-05-28T13:26:37.645Z"
+    },
+    {
+      "slug": "ham-cheddar-egg-bake",
+      "title": "Ham & Cheddar Egg Bake",
+      "subtitle": "A crew-sized bake that feeds staggered eaters without turning rubbery.",
+      "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+      "filters": [
+        "feed_a_crew",
+        "high_protein"
+      ],
+      "tags": [
+        "egg-bake",
+        "ham",
+        "cheddar",
+        "9x13"
+      ],
+      "totalTime": 56,
+      "heroImage": "/images/breakfast/ham-cheddar-egg-bake.jpg",
+      "thumbImage": "/images/thumbs/breakfast/ham-cheddar-egg-bake.jpg",
+      "publishedAt": "2026-05-28T13:26:37.645Z"
+    },
+    {
+      "slug": "ham-pepper-skillet",
+      "title": "Ham & Pepper Breakfast Skillet",
+      "subtitle": "Cast-iron breakfast built for crispy edges and fast cleanup.",
+      "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+      "filters": [
+        "skillets",
+        "quick_breakfasts"
+      ],
+      "tags": [
+        "ham",
+        "peppers",
+        "eggs",
+        "one-pan"
+      ],
+      "totalTime": 28,
+      "heroImage": "/images/breakfast/ham-pepper-skillet.jpg",
+      "thumbImage": "/images/thumbs/breakfast/ham-pepper-skillet.jpg",
+      "publishedAt": "2026-05-28T13:26:37.645Z"
+    },
+    {
+      "slug": "high-protein-parfaits",
+      "title": "High-Protein Yogurt Parfaits",
+      "subtitle": "A practical station breakfast that scales from 4 to 12.",
+      "description": "For mornings when the crew wants fast protein without firing up the stove. These parfaits use sturdy add-ins that stay crisp, and a build order that prevents a sad, watery bowl.",
+      "filters": [
+        "quick_breakfasts",
+        "healthy_breakfasts",
+        "high_protein"
+      ],
+      "tags": [
+        "yogurt",
+        "parfaits",
+        "no-cook",
+        "granola"
+      ],
+      "totalTime": 12,
+      "heroImage": "/images/breakfast/high-protein-parfaits.jpg",
+      "thumbImage": "/images/thumbs/breakfast/high-protein-parfaits.jpg",
+      "publishedAt": "2026-05-28T13:26:37.645Z"
+    },
+    {
+      "slug": "protein-pancake-tray",
+      "title": "Protein Pancake Tray",
+      "subtitle": "A practical station breakfast that scales from 4 to 12.",
+      "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+      "filters": [
+        "feed_a_crew",
+        "high_protein"
+      ],
+      "tags": [
+        "pancakes",
+        "tray-bake",
+        "make-ahead"
+      ],
+      "totalTime": 37,
+      "heroImage": "/images/breakfast/protein-pancake-tray.jpg",
+      "thumbImage": "/images/thumbs/breakfast/protein-pancake-tray.jpg",
+      "publishedAt": "2026-05-28T13:26:37.645Z"
+    },
+    {
+      "slug": "quick-egg-tacos",
+      "title": "Quick Egg Tacos",
+      "subtitle": "A practical station breakfast that scales from 4 to 12.",
+      "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+      "filters": [
+        "quick_breakfasts"
+      ],
+      "tags": [
+        "tacos",
+        "eggs",
+        "handheld",
+        "salsa"
+      ],
+      "totalTime": 22,
+      "heroImage": "/images/breakfast/quick-egg-tacos.jpg",
+      "thumbImage": "/images/thumbs/breakfast/quick-egg-tacos.jpg",
+      "publishedAt": "2026-05-28T13:26:37.645Z"
+    },
+    {
+      "slug": "sausage-egg-cheese-sandwiches",
+      "title": "Sausage Egg & Cheese Sandwiches",
+      "subtitle": "Station sandwiches with real structure—no soggy bottoms.",
+      "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+      "filters": [
+        "breakfast_sandwiches"
+      ],
+      "tags": [
+        "sandwiches",
+        "sausage",
+        "eggs",
+        "cheese"
+      ],
+      "totalTime": 27,
+      "heroImage": "/images/breakfast/sausage-egg-cheese-sandwiches.jpg",
+      "thumbImage": "/images/thumbs/breakfast/sausage-egg-cheese-sandwiches.jpg",
+      "publishedAt": "2026-05-28T13:26:37.645Z"
+    },
+    {
+      "slug": "sheet-pan-breakfast-hash",
+      "title": "Sheet Pan Breakfast Hash",
+      "subtitle": "A practical station breakfast that scales from 4 to 12.",
+      "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+      "filters": [
+        "feed_a_crew"
+      ],
+      "tags": [
+        "sheet-pan",
+        "potatoes",
+        "easy-cleanup",
+        "eggs"
+      ],
+      "totalTime": 45,
+      "heroImage": "/images/breakfast/sheet-pan-breakfast-hash.jpg",
+      "thumbImage": "/images/thumbs/breakfast/sheet-pan-breakfast-hash.jpg",
+      "publishedAt": "2026-05-28T13:26:37.645Z"
+    },
+    {
+      "slug": "southwest-egg-bake",
+      "title": "Southwest Egg Bake",
+      "subtitle": "A crew-sized bake that feeds staggered eaters without turning rubbery.",
+      "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+      "filters": [
+        "feed_a_crew",
+        "high_protein"
+      ],
+      "tags": [
+        "egg-bake",
+        "peppers",
+        "salsa",
+        "pepper-jack"
+      ],
+      "totalTime": 58,
+      "heroImage": "/images/breakfast/southwest-egg-bake.jpg",
+      "thumbImage": "/images/thumbs/breakfast/southwest-egg-bake.jpg",
+      "publishedAt": "2026-05-28T13:26:37.645Z"
+    },
+    {
+      "slug": "station-breakfast-23",
+      "title": "Station Breakfast 23",
+      "subtitle": "Big-batch burritos that hold on the line and reheat clean.",
+      "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+      "filters": [
+        "high_protein"
+      ],
+      "tags": [
+        "burritos",
+        "handheld",
+        "make-ahead"
+      ],
+      "totalTime": 37,
+      "heroImage": "/images/breakfast/station-breakfast-23.jpg",
+      "thumbImage": "/images/thumbs/breakfast/station-breakfast-23.jpg",
+      "publishedAt": "2026-05-28T13:26:37.645Z"
+    },
+    {
+      "slug": "station-breakfast-24",
+      "title": "Station Breakfast 24",
+      "subtitle": "A crew-sized bake that feeds staggered eaters without turning rubbery.",
+      "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+      "filters": [
+        "feed_a_crew"
+      ],
+      "tags": [
+        "egg-bake",
+        "9x13",
+        "line-friendly"
+      ],
+      "totalTime": 55,
+      "heroImage": "/images/breakfast/station-breakfast-24.jpg",
+      "thumbImage": "/images/thumbs/breakfast/station-breakfast-24.jpg",
+      "publishedAt": "2026-05-28T13:26:37.645Z"
+    },
+    {
+      "slug": "station-breakfast-25",
+      "title": "Station Breakfast 25",
+      "subtitle": "Cast-iron breakfast built for crispy edges and fast cleanup.",
+      "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+      "filters": [
+        "skillets"
+      ],
+      "tags": [
+        "cast-iron",
+        "potatoes",
+        "eggs"
+      ],
+      "totalTime": 37,
+      "heroImage": "/images/breakfast/station-breakfast-25.jpg",
+      "thumbImage": "/images/thumbs/breakfast/station-breakfast-25.jpg",
+      "publishedAt": "2026-05-28T13:26:37.645Z"
+    },
+    {
+      "slug": "station-breakfast-26",
+      "title": "Station Breakfast 26",
+      "subtitle": "Big-batch burritos that hold on the line and reheat clean.",
+      "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+      "filters": [
+        "high_protein"
+      ],
+      "tags": [
+        "burritos",
+        "handheld",
+        "make-ahead"
+      ],
+      "totalTime": 37,
+      "heroImage": "/images/breakfast/station-breakfast-26.jpg",
+      "thumbImage": "/images/thumbs/breakfast/station-breakfast-26.jpg",
+      "publishedAt": "2026-05-28T13:26:37.645Z"
+    },
+    {
+      "slug": "station-breakfast-27",
+      "title": "Station Breakfast 27",
+      "subtitle": "A crew-sized bake that feeds staggered eaters without turning rubbery.",
+      "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+      "filters": [
+        "feed_a_crew"
+      ],
+      "tags": [
+        "egg-bake",
+        "9x13",
+        "line-friendly"
+      ],
+      "totalTime": 55,
+      "heroImage": "/images/breakfast/station-breakfast-27.jpg",
+      "thumbImage": "/images/thumbs/breakfast/station-breakfast-27.jpg",
+      "publishedAt": "2026-05-28T13:26:37.645Z"
+    },
+    {
+      "slug": "station-breakfast-28",
+      "title": "Station Breakfast 28",
+      "subtitle": "Cast-iron breakfast built for crispy edges and fast cleanup.",
+      "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+      "filters": [
+        "skillets"
+      ],
+      "tags": [
+        "cast-iron",
+        "potatoes",
+        "eggs"
+      ],
+      "totalTime": 37,
+      "heroImage": "/images/breakfast/station-breakfast-28.jpg",
+      "thumbImage": "/images/thumbs/breakfast/station-breakfast-28.jpg",
+      "publishedAt": "2026-05-28T13:26:37.645Z"
+    },
+    {
+      "slug": "station-breakfast-29",
+      "title": "Station Breakfast 29",
+      "subtitle": "Big-batch burritos that hold on the line and reheat clean.",
+      "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+      "filters": [
+        "high_protein"
+      ],
+      "tags": [
+        "burritos",
+        "handheld",
+        "make-ahead"
+      ],
+      "totalTime": 37,
+      "heroImage": "/images/breakfast/station-breakfast-29.jpg",
+      "thumbImage": "/images/thumbs/breakfast/station-breakfast-29.jpg",
+      "publishedAt": "2026-05-28T13:26:37.645Z"
+    },
+    {
+      "slug": "station-breakfast-30",
+      "title": "Station Breakfast 30",
+      "subtitle": "A crew-sized bake that feeds staggered eaters without turning rubbery.",
+      "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+      "filters": [
+        "feed_a_crew"
+      ],
+      "tags": [
+        "egg-bake",
+        "9x13",
+        "line-friendly"
+      ],
+      "totalTime": 55,
+      "heroImage": "/images/breakfast/station-breakfast-30.jpg",
+      "thumbImage": "/images/thumbs/breakfast/station-breakfast-30.jpg",
+      "publishedAt": "2026-05-28T13:26:37.645Z"
+    },
+    {
+      "slug": "station-breakfast-31",
+      "title": "Station Breakfast 31",
+      "subtitle": "Cast-iron breakfast built for crispy edges and fast cleanup.",
+      "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+      "filters": [
+        "skillets"
+      ],
+      "tags": [
+        "cast-iron",
+        "potatoes",
+        "eggs"
+      ],
+      "totalTime": 37,
+      "heroImage": "/images/breakfast/station-breakfast-31.jpg",
+      "thumbImage": "/images/thumbs/breakfast/station-breakfast-31.jpg",
+      "publishedAt": "2026-05-28T13:26:37.645Z"
+    },
+    {
+      "slug": "station-breakfast-32",
+      "title": "Station Breakfast 32",
+      "subtitle": "Big-batch burritos that hold on the line and reheat clean.",
+      "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+      "filters": [
+        "high_protein"
+      ],
+      "tags": [
+        "burritos",
+        "handheld",
+        "make-ahead"
+      ],
+      "totalTime": 37,
+      "heroImage": "/images/breakfast/station-breakfast-32.jpg",
+      "thumbImage": "/images/thumbs/breakfast/station-breakfast-32.jpg",
+      "publishedAt": "2026-05-28T13:26:37.645Z"
+    },
+    {
+      "slug": "station-breakfast-33",
+      "title": "Station Breakfast 33",
+      "subtitle": "A crew-sized bake that feeds staggered eaters without turning rubbery.",
+      "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+      "filters": [
+        "feed_a_crew"
+      ],
+      "tags": [
+        "egg-bake",
+        "9x13",
+        "line-friendly"
+      ],
+      "totalTime": 55,
+      "heroImage": "/images/breakfast/station-breakfast-33.jpg",
+      "thumbImage": "/images/thumbs/breakfast/station-breakfast-33.jpg",
+      "publishedAt": "2026-05-28T13:26:37.645Z"
+    },
+    {
+      "slug": "station-breakfast-34",
+      "title": "Station Breakfast 34",
+      "subtitle": "Cast-iron breakfast built for crispy edges and fast cleanup.",
+      "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+      "filters": [
+        "skillets"
+      ],
+      "tags": [
+        "cast-iron",
+        "potatoes",
+        "eggs"
+      ],
+      "totalTime": 37,
+      "heroImage": "/images/breakfast/station-breakfast-34.jpg",
+      "thumbImage": "/images/thumbs/breakfast/station-breakfast-34.jpg",
+      "publishedAt": "2026-05-28T13:26:37.645Z"
+    },
+    {
+      "slug": "station-breakfast-35",
+      "title": "Station Breakfast 35",
+      "subtitle": "Big-batch burritos that hold on the line and reheat clean.",
+      "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+      "filters": [
+        "high_protein"
+      ],
+      "tags": [
+        "burritos",
+        "handheld",
+        "make-ahead"
+      ],
+      "totalTime": 37,
+      "heroImage": "/images/breakfast/station-breakfast-35.jpg",
+      "thumbImage": "/images/thumbs/breakfast/station-breakfast-35.jpg",
+      "publishedAt": "2026-05-28T13:26:37.645Z"
+    },
+    {
+      "slug": "station-breakfast-36",
+      "title": "Station Breakfast 36",
+      "subtitle": "A crew-sized bake that feeds staggered eaters without turning rubbery.",
+      "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+      "filters": [
+        "feed_a_crew"
+      ],
+      "tags": [
+        "egg-bake",
+        "9x13",
+        "line-friendly"
+      ],
+      "totalTime": 55,
+      "heroImage": "/images/breakfast/station-breakfast-36.jpg",
+      "thumbImage": "/images/thumbs/breakfast/station-breakfast-36.jpg",
+      "publishedAt": "2026-05-28T13:26:37.645Z"
+    },
+    {
+      "slug": "station-breakfast-37",
+      "title": "Station Breakfast 37",
+      "subtitle": "Cast-iron breakfast built for crispy edges and fast cleanup.",
+      "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+      "filters": [
+        "skillets"
+      ],
+      "tags": [
+        "cast-iron",
+        "potatoes",
+        "eggs"
+      ],
+      "totalTime": 37,
+      "heroImage": "/images/breakfast/station-breakfast-37.jpg",
+      "thumbImage": "/images/thumbs/breakfast/station-breakfast-37.jpg",
+      "publishedAt": "2026-05-28T13:26:37.645Z"
+    },
+    {
+      "slug": "station-breakfast-38",
+      "title": "Station Breakfast 38",
+      "subtitle": "Big-batch burritos that hold on the line and reheat clean.",
+      "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+      "filters": [
+        "high_protein"
+      ],
+      "tags": [
+        "burritos",
+        "handheld",
+        "make-ahead"
+      ],
+      "totalTime": 37,
+      "heroImage": "/images/breakfast/station-breakfast-38.jpg",
+      "thumbImage": "/images/thumbs/breakfast/station-breakfast-38.jpg",
+      "publishedAt": "2026-05-28T13:26:37.645Z"
+    },
+    {
+      "slug": "station-breakfast-39",
+      "title": "Station Breakfast 39",
+      "subtitle": "A crew-sized bake that feeds staggered eaters without turning rubbery.",
+      "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+      "filters": [
+        "feed_a_crew"
+      ],
+      "tags": [
+        "egg-bake",
+        "9x13",
+        "line-friendly"
+      ],
+      "totalTime": 55,
+      "heroImage": "/images/breakfast/station-breakfast-39.jpg",
+      "thumbImage": "/images/thumbs/breakfast/station-breakfast-39.jpg",
+      "publishedAt": "2026-05-28T13:26:37.645Z"
+    },
+    {
+      "slug": "station-breakfast-40",
+      "title": "Station Breakfast 40",
+      "subtitle": "Cast-iron breakfast built for crispy edges and fast cleanup.",
+      "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+      "filters": [
+        "skillets"
+      ],
+      "tags": [
+        "cast-iron",
+        "potatoes",
+        "eggs"
+      ],
+      "totalTime": 37,
+      "heroImage": "/images/breakfast/station-breakfast-40.jpg",
+      "thumbImage": "/images/thumbs/breakfast/station-breakfast-40.jpg",
+      "publishedAt": "2026-05-28T13:26:37.645Z"
+    },
+    {
+      "slug": "station-breakfast-41",
+      "title": "Station Breakfast 41",
+      "subtitle": "Big-batch burritos that hold on the line and reheat clean.",
+      "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+      "filters": [
+        "high_protein"
+      ],
+      "tags": [
+        "burritos",
+        "handheld",
+        "make-ahead"
+      ],
+      "totalTime": 37,
+      "heroImage": "/images/breakfast/station-breakfast-41.jpg",
+      "thumbImage": "/images/thumbs/breakfast/station-breakfast-41.jpg",
+      "publishedAt": "2026-05-28T13:26:37.645Z"
+    },
+    {
+      "slug": "station-breakfast-42",
+      "title": "Station Breakfast 42",
+      "subtitle": "A crew-sized bake that feeds staggered eaters without turning rubbery.",
+      "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+      "filters": [
+        "feed_a_crew"
+      ],
+      "tags": [
+        "egg-bake",
+        "9x13",
+        "line-friendly"
+      ],
+      "totalTime": 55,
+      "heroImage": "/images/breakfast/station-breakfast-42.jpg",
+      "thumbImage": "/images/thumbs/breakfast/station-breakfast-42.jpg",
+      "publishedAt": "2026-05-28T13:26:37.645Z"
+    },
+    {
+      "slug": "station-breakfast-43",
+      "title": "Station Breakfast 43",
+      "subtitle": "Cast-iron breakfast built for crispy edges and fast cleanup.",
+      "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+      "filters": [
+        "skillets"
+      ],
+      "tags": [
+        "cast-iron",
+        "potatoes",
+        "eggs"
+      ],
+      "totalTime": 37,
+      "heroImage": "/images/breakfast/station-breakfast-43.jpg",
+      "thumbImage": "/images/thumbs/breakfast/station-breakfast-43.jpg",
+      "publishedAt": "2026-05-28T13:26:37.645Z"
+    },
+    {
+      "slug": "station-breakfast-44",
+      "title": "Station Breakfast 44",
+      "subtitle": "Big-batch burritos that hold on the line and reheat clean.",
+      "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+      "filters": [
+        "high_protein"
+      ],
+      "tags": [
+        "burritos",
+        "handheld",
+        "make-ahead"
+      ],
+      "totalTime": 37,
+      "heroImage": "/images/breakfast/station-breakfast-44.jpg",
+      "thumbImage": "/images/thumbs/breakfast/station-breakfast-44.jpg",
+      "publishedAt": "2026-05-28T13:26:37.645Z"
+    },
+    {
+      "slug": "station-breakfast-45",
+      "title": "Station Breakfast 45",
+      "subtitle": "A crew-sized bake that feeds staggered eaters without turning rubbery.",
+      "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+      "filters": [
+        "feed_a_crew"
+      ],
+      "tags": [
+        "egg-bake",
+        "9x13",
+        "line-friendly"
+      ],
+      "totalTime": 55,
+      "heroImage": "/images/breakfast/station-breakfast-45.jpg",
+      "thumbImage": "/images/thumbs/breakfast/station-breakfast-45.jpg",
+      "publishedAt": "2026-05-28T13:26:37.645Z"
+    },
+    {
+      "slug": "station-breakfast-46",
+      "title": "Station Breakfast 46",
+      "subtitle": "Cast-iron breakfast built for crispy edges and fast cleanup.",
+      "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+      "filters": [
+        "skillets"
+      ],
+      "tags": [
+        "cast-iron",
+        "potatoes",
+        "eggs"
+      ],
+      "totalTime": 37,
+      "heroImage": "/images/breakfast/station-breakfast-46.jpg",
+      "thumbImage": "/images/thumbs/breakfast/station-breakfast-46.jpg",
+      "publishedAt": "2026-05-28T13:26:37.645Z"
+    },
+    {
+      "slug": "station-breakfast-47",
+      "title": "Station Breakfast 47",
+      "subtitle": "Big-batch burritos that hold on the line and reheat clean.",
+      "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+      "filters": [
+        "high_protein"
+      ],
+      "tags": [
+        "burritos",
+        "handheld",
+        "make-ahead"
+      ],
+      "totalTime": 37,
+      "heroImage": "/images/breakfast/station-breakfast-47.jpg",
+      "thumbImage": "/images/thumbs/breakfast/station-breakfast-47.jpg",
+      "publishedAt": "2026-05-28T13:26:37.645Z"
+    },
+    {
+      "slug": "station-breakfast-48",
+      "title": "Station Breakfast 48",
+      "subtitle": "A crew-sized bake that feeds staggered eaters without turning rubbery.",
+      "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+      "filters": [
+        "feed_a_crew"
+      ],
+      "tags": [
+        "egg-bake",
+        "9x13",
+        "line-friendly"
+      ],
+      "totalTime": 55,
+      "heroImage": "/images/breakfast/station-breakfast-48.jpg",
+      "thumbImage": "/images/thumbs/breakfast/station-breakfast-48.jpg",
+      "publishedAt": "2026-05-28T13:26:37.645Z"
+    },
+    {
+      "slug": "station-breakfast-49",
+      "title": "Station Breakfast 49",
+      "subtitle": "Cast-iron breakfast built for crispy edges and fast cleanup.",
+      "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+      "filters": [
+        "skillets"
+      ],
+      "tags": [
+        "cast-iron",
+        "potatoes",
+        "eggs"
+      ],
+      "totalTime": 37,
+      "heroImage": "/images/breakfast/station-breakfast-49.jpg",
+      "thumbImage": "/images/thumbs/breakfast/station-breakfast-49.jpg",
+      "publishedAt": "2026-05-28T13:26:37.645Z"
+    },
+    {
+      "slug": "station-breakfast-50",
+      "title": "Station Breakfast 50",
+      "subtitle": "Big-batch burritos that hold on the line and reheat clean.",
+      "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+      "filters": [
+        "high_protein"
+      ],
+      "tags": [
+        "burritos",
+        "handheld",
+        "make-ahead"
+      ],
+      "totalTime": 37,
+      "heroImage": "/images/breakfast/station-breakfast-50.jpg",
+      "thumbImage": "/images/thumbs/breakfast/station-breakfast-50.jpg",
+      "publishedAt": "2026-05-28T13:26:37.645Z"
+    },
+    {
+      "slug": "steakhouse-hash-skillet",
+      "title": "Steakhouse Hash Skillet",
+      "subtitle": "A practical station breakfast that scales from 4 to 12.",
+      "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+      "filters": [
+        "skillets",
+        "high_protein"
+      ],
+      "tags": [
+        "steak",
+        "eggs",
+        "potatoes",
+        "cast-iron"
+      ],
+      "totalTime": 40,
+      "heroImage": "/images/breakfast/steakhouse-hash-skillet.jpg",
+      "thumbImage": "/images/thumbs/breakfast/steakhouse-hash-skillet.jpg",
+      "publishedAt": "2026-05-28T13:26:37.645Z"
+    },
+    {
+      "slug": "turkey-sausage-burritos",
+      "title": "Turkey Sausage Breakfast Burritos",
+      "subtitle": "Big-batch burritos that hold on the line and reheat clean.",
+      "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+      "filters": [
+        "healthy_breakfasts",
+        "high_protein"
+      ],
+      "tags": [
+        "burritos",
+        "turkey",
+        "make-ahead",
+        "pepper-jack"
+      ],
+      "totalTime": 33,
+      "heroImage": "/images/breakfast/turkey-sausage-burritos.jpg",
+      "thumbImage": "/images/thumbs/breakfast/turkey-sausage-burritos.jpg",
+      "publishedAt": "2026-05-28T13:26:37.645Z"
+    },
+    {
+      "slug": "turkey-sausage-egg-bake",
+      "title": "Turkey Sausage Egg Bake",
+      "subtitle": "A crew-sized bake that feeds staggered eaters without turning rubbery.",
+      "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+      "filters": [
+        "feed_a_crew",
+        "healthy_breakfasts",
+        "high_protein"
+      ],
+      "tags": [
+        "egg-bake",
+        "turkey",
+        "spinach",
+        "9x13"
+      ],
+      "totalTime": 60,
+      "heroImage": "/images/breakfast/turkey-sausage-egg-bake.jpg",
+      "thumbImage": "/images/thumbs/breakfast/turkey-sausage-egg-bake.jpg",
+      "publishedAt": "2026-05-28T13:26:37.645Z"
+    },
+    {
+      "slug": "veggie-egg-burritos",
+      "title": "Veggie Egg Burritos",
+      "subtitle": "Big-batch burritos that hold on the line and reheat clean.",
+      "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+      "filters": [
+        "healthy_breakfasts",
+        "feed_a_crew"
+      ],
+      "tags": [
+        "burritos",
+        "vegetarian",
+        "peppers",
+        "spinach"
+      ],
+      "totalTime": 34,
+      "heroImage": "/images/breakfast/veggie-egg-burritos.jpg",
+      "thumbImage": "/images/thumbs/breakfast/veggie-egg-burritos.jpg",
+      "publishedAt": "2026-05-28T13:26:37.645Z"
+    }
+  ]
+}

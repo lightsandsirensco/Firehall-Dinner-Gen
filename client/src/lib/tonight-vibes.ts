@@ -13,37 +13,43 @@ export const DEFAULT_TONIGHT_VIBE: TonightVibe = "classic_hall";
 
 const VIBE_BACKEND: Record<
   TonightVibe,
-  Pick<FilterState, "healthiness_preference" | "meal_format" | "cuisine_style">
+  Pick<FilterState, "healthiness_preference" | "meal_format" | "cuisine_style" | "firehall_category">
 > = {
   classic_hall: {
     healthiness_preference: "balanced",
     meal_format: "random",
     cuisine_style: "any",
+    firehall_category: "crew_favorites",
   },
   quick_easy: {
     healthiness_preference: "balanced",
     meal_format: "skillet",
     cuisine_style: "any",
+    firehall_category: "quick_meals",
   },
   healthy: {
     healthiness_preference: "lean",
     meal_format: "random",
     cuisine_style: "any",
+    firehall_category: "healthy_options",
   },
   big_appetite: {
     healthiness_preference: "comfort",
     meal_format: "plated_main",
     cuisine_style: "any",
+    firehall_category: "feed_a_crowd",
   },
   comfort: {
     healthiness_preference: "comfort",
     meal_format: "one_pot",
     cuisine_style: "any",
+    firehall_category: "comfort_food",
   },
   surprise_meal: {
     healthiness_preference: "balanced",
     meal_format: "random",
     cuisine_style: "any",
+    firehall_category: undefined,
   },
 };
 
@@ -129,6 +135,7 @@ export function applyTonightVibe(filters: FilterState, vibe: TonightVibe): Filte
     healthiness_preference: mapped.healthiness_preference,
     meal_format: mapped.meal_format,
     cuisine_style: mapped.cuisine_style,
+    firehall_category: mapped.firehall_category,
   };
 }
 

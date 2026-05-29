@@ -1,5 +1,5 @@
 import { memo, useMemo } from "react";
-import { Clock, Flame, Sparkles } from "lucide-react";
+import { Clock, Flame } from "lucide-react";
 import type { ExploreRecipeCard } from "@/lib/explore-recipe";
 import { computeCardPresentation } from "@/lib/explore-recipe";
 import { buildExploreTrustLine } from "@/lib/explore-trust-line";
@@ -7,6 +7,7 @@ import { ExploreRecipeImage } from "@/components/explore-recipe-image";
 import { EXPLORE_CARD_ASPECT } from "@/lib/hero-image";
 import { cn } from "@/lib/utils";
 import { app } from "@/lib/design-tokens";
+import { isSoftHeldExploreCard } from "@shared/explore-imagery-status";
 
 export interface ExploreCinematicCardProps {
   recipe: ExploreRecipeCard;
@@ -32,6 +33,7 @@ function ExploreCinematicCardInner({
   whyThisMeal,
   recommendationChip,
 }: ExploreCinematicCardProps) {
+  const softHeld = isSoftHeldExploreCard(recipe);
   const presentation = useMemo(() => {
     const computed = computeCardPresentation(recipe, { crewSize, isCurated });
     return {
@@ -69,6 +71,7 @@ function ExploreCinematicCardInner({
         }
       }}
       data-testid={`card-discovery-${recipe.id}`}
+      data-soft-held-imagery={softHeld ? "true" : undefined}
     >
       <div
         className={cn(
@@ -76,7 +79,7 @@ function ExploreCinematicCardInner({
           isGrid ? EXPLORE_CARD_ASPECT.grid : EXPLORE_CARD_ASPECT.rail,
         )}
       >
-        <div className="absolute inset-0 transition-transform duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.05] motion-reduce:group-hover:scale-100">
+        <div className="absolute inset-0 transition-transform duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.02] motion-reduce:group-hover:scale-100">
           <ExploreRecipeImage
             recipe={recipe}
             variant="card"
@@ -87,32 +90,32 @@ function ExploreCinematicCardInner({
         </div>
 
         <div className="absolute top-3 left-3 right-3 flex flex-wrap items-start gap-1.5 z-10 max-w-[90%]">
-          {recommendationChip && (
-            <span className="inline-flex items-center gap-1 bg-violet-600/90 text-white text-[9px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-lg border border-white/15">
-              <Sparkles className="w-3 h-3 opacity-90" aria-hidden />
-              {recommendationChip}
+          {recipe.catalogBadge && !softHeld && (
+            <span className="inline-flex items-center gap-1 backdrop-blur-md text-[10px] font-semibold tracking-wide px-2.5 py-1 rounded-full border bg-black/55 text-white/95 border-white/10">
+              {recipe.catalogBadge}
             </span>
           )}
-          {isCurated && !recommendationChip && (
-            <span className="inline-flex items-center gap-1 bg-primary text-primary-foreground text-[9px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-lg shadow-primary/20">
-              <Flame className="w-3 h-3" />
-              Hall Pick
-            </span>
-          )}
-          {isCurated && recommendationChip && (
-            <span className="inline-flex items-center gap-1 bg-primary/90 text-primary-foreground text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full">
-              <Flame className="w-2.5 h-2.5" />
-              Curated
-            </span>
-          )}
-          {presentation.displayBadges.slice(0, 1).map((badge) => (
+          {(softHeld || recommendationChip || (isCurated && !recipe.catalogBadge)) && (
             <span
-              key={badge}
-              className="inline-flex bg-black/75 backdrop-blur-md text-white text-[9px] font-semibold uppercase tracking-wide px-2 py-0.5 rounded-full border border-white/12"
+              className={cn(
+                "inline-flex items-center gap-1 backdrop-blur-md text-[10px] font-medium tracking-wide px-2.5 py-1 rounded-full border",
+                softHeld
+                  ? "bg-black/50 text-white/80 border-white/10"
+                  : "bg-black/55 text-white/95 border-white/10",
+              )}
             >
-              {badge}
+              {softHeld ? (
+                recipe.heldImageryLabel || "Finalizing"
+              ) : (
+                <>
+                  {isCurated && !recipe.catalogBadge && (
+                    <Flame className="w-3 h-3 text-primary" aria-hidden />
+                  )}
+                  {recommendationChip || (isCurated && !recipe.catalogBadge ? "Hall pick" : null)}
+                </>
+              )}
             </span>
-          ))}
+          )}
         </div>
 
         <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-5 z-10 space-y-2.5">
@@ -134,24 +137,17 @@ function ExploreCinematicCardInner({
           </div>
 
           <div>
-            <h3 className="font-heading text-xl sm:text-2xl leading-[1.12] text-white line-clamp-2 drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]">
+            <h3 className="font-heading text-xl sm:text-[1.65rem] leading-[1.1] text-white line-clamp-2 drop-shadow-[0_2px_16px_rgba(0,0,0,0.85)]">
               {recipe.title}
             </h3>
-            <p
-              className="mt-1.5 text-xs sm:text-sm text-white/90 line-clamp-2 font-medium leading-snug"
-              data-testid="why-this-meal"
-            >
-              {whyThisMeal ? (
-                <>
-                  <span className="text-white/70 font-semibold uppercase text-[9px] tracking-wider block mb-0.5">
-                    Why this meal
-                  </span>
-                  {trustLine}
-                </>
-              ) : (
-                trustLine
-              )}
-            </p>
+            {trustLine && (
+              <p
+                className="mt-2 text-sm text-white/75 line-clamp-2 leading-snug"
+                data-testid="why-this-meal"
+              >
+                {trustLine}
+              </p>
+            )}
           </div>
         </div>
       </div>

@@ -42,6 +42,12 @@ interface ManifestRecipe {
   firefighterScore?: number;
   assetsComplete?: boolean;
   missingAssets?: string[];
+  imageIntegrityScore?: number;
+  platingType?: string;
+  depictedPlating?: string | null;
+  imageIntegrityPass?: boolean;
+  imageIntegrityFlags?: string[];
+  imageTitleMismatch?: boolean;
 }
 
 interface ManifestResponse {
@@ -234,7 +240,12 @@ export default function AdminGolden100Page() {
                   >
                     {statusLabel(r.status)}
                   </Badge>
-                  {r.pageComplete === false && (
+                  {r.imageTitleMismatch && (
+                    <Badge className="absolute bottom-1.5 left-1.5 text-[9px] bg-destructive">
+                      image mismatch
+                    </Badge>
+                  )}
+                  {r.pageComplete === false && !r.imageTitleMismatch && (
                     <Badge className="absolute bottom-1.5 left-1.5 text-[9px] bg-amber-600">
                       page
                     </Badge>
@@ -261,6 +272,19 @@ export default function AdminGolden100Page() {
                     <Badge variant="secondary" className="text-[9px] px-1 py-0 capitalize">
                       {r.protein}
                     </Badge>
+                    {r.platingType && (
+                      <Badge variant="outline" className="text-[9px] px-1 py-0">
+                        {r.platingType}
+                      </Badge>
+                    )}
+                    {r.imageIntegrityScore != null && (
+                      <Badge
+                        variant={r.imageIntegrityPass ? "secondary" : "destructive"}
+                        className="text-[9px] px-1 py-0 tabular-nums"
+                      >
+                        img {r.imageIntegrityScore}
+                      </Badge>
+                    )}
                   </div>
                 </div>
               </button>
@@ -329,6 +353,23 @@ export default function AdminGolden100Page() {
 
               {(detail?.realismScore != null || detail?.firefighterScore != null) && (
                 <dl className="mt-4 grid grid-cols-2 gap-2 text-xs">
+                  <div>
+                    <dt className="text-muted-foreground">Image integrity</dt>
+                    <dd className="font-medium">
+                      {selectedManifest?.imageIntegrityScore ?? "—"}
+                      {selectedManifest?.imageIntegrityPass === false ? " · mismatch" : ""}
+                    </dd>
+                  </div>
+                  <div>
+                    <dt className="text-muted-foreground">Plating lock</dt>
+                    <dd className="font-medium capitalize">
+                      {selectedManifest?.platingType ?? "—"}
+                      {selectedManifest?.depictedPlating &&
+                      selectedManifest.depictedPlating !== selectedManifest.platingType
+                        ? ` → depicts ${selectedManifest.depictedPlating}`
+                        : ""}
+                    </dd>
+                  </div>
                   <div>
                     <dt className="text-muted-foreground">Realism</dt>
                     <dd className="font-medium">{detail?.realismScore ?? "—"}</dd>

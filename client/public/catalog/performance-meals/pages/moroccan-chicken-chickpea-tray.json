@@ -1,0 +1,188 @@
+{
+  "slug": "moroccan-chicken-chickpea-tray",
+  "title": "Moroccan Chicken Chickpea Tray",
+  "displayTitle": "Moroccan Chicken Chickpea Tray",
+  "seoTitle": "Moroccan Chicken Chickpea Tray | Firefighter Meal",
+  "shortDescription": "Warm-spiced thighs with chickpeas, apricots, and roasted carrots",
+  "subtitle": "Warm-spiced thighs with chickpeas, apricots, and roasted carrots",
+  "category": "healthy_performance",
+  "cuisine": "Moroccan",
+  "description": "Chicken thighs roast with chickpeas, carrots, dried apricots, and ras el hanout-inspired spices until fragrant and caramelized.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 35,
+  "prepTime": 22,
+  "difficulty": "medium",
+  "calories": 495,
+  "protein": 40,
+  "carbs": 42,
+  "fats": 20,
+  "tags": [
+    "protein:chicken",
+    "format:sheet_pan",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "Two half-sheet pans",
+    "Large mixing bowl"
+  ],
+  "ingredients": [
+    {
+      "name": "bone-in chicken thighs",
+      "quantity": "16",
+      "unit": "pieces",
+      "notes": "about 6 lb"
+    },
+    {
+      "name": "canned chickpeas",
+      "quantity": "3",
+      "unit": "cans",
+      "notes": "15 oz, drained, patted dry"
+    },
+    {
+      "name": "carrots",
+      "quantity": "1.5",
+      "unit": "lb",
+      "notes": "cut into batons"
+    },
+    {
+      "name": "dried apricots",
+      "quantity": "1.5",
+      "unit": "cups",
+      "notes": "quartered"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "2",
+      "unit": "large",
+      "notes": "wedge-cut"
+    },
+    {
+      "name": "ground cumin",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "ground cinnamon",
+      "quantity": "1",
+      "unit": "tsp"
+    },
+    {
+      "name": "ground ginger",
+      "quantity": "1",
+      "unit": "tsp"
+    },
+    {
+      "name": "smoked paprika",
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "0.33",
+      "unit": "cup"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "6",
+      "unit": "cloves",
+      "notes": "minced"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "2",
+      "unit": "tsp"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Mix spice blend",
+      "instruction": "Combine cumin, cinnamon, ginger, paprika, garlic, salt, and olive oil into a paste that coats a spoon without separating.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Coat chicken and vegetables",
+      "instruction": "Toss thighs, chickpeas, carrots, onion, and apricots with spice paste until every piece looks evenly coated and lightly glossy.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Roast until chicken is done",
+      "instruction": "Spread on two half-sheets in a single layer. Roast at 425°F 32–38 minutes until chicken reads 165°F and chickpeas crisp at edges.",
+      "minutes": 35,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Rest and check texture",
+      "instruction": "Rest 5 minutes. Apricots should be plump and lightly caramelized; carrots tender with slight bite at the center.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Serve with couscous",
+      "instruction": "Portion chicken with chickpea mixture. Pan should smell warm-spiced, not burnt; chicken juices should run clear.",
+      "minutes": 3,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Ras el hanout blend works if you have it—use 2 tbsp instead of individual spices.",
+    "Offer harissa at the line for heat without changing the base tray.",
+    "Couscous cooks in 5 minutes—ideal side while tray rests."
+  ],
+  "tonightSpread": [
+    "Fluffy couscous with lemon.",
+    "Plain Greek yogurt for cooling contrast."
+  ],
+  "leftovers": [
+    "Moroccan grain bowl with leftover couscous and chickpeas.",
+    "Shred chicken into a wrap with hummus spread."
+  ],
+  "whyCrewsLikeIt": "Adventurous flavor without exotic equipment. Sweet apricots balance warm spices for broad crew appeal.",
+  "mealPrepNotes": "Mix spice blend in bulk for future trays. Soak apricots 10 minutes if very dry. Station: Drain and pat chickpeas dry—they crisp better when not dripping. Station: Use two pans so chickpeas roast instead of steam under crowded chicken. Station: Scatter fresh cilantro at the line, not before hold—herbs wilt in hot pans.",
+  "spiceLevel": "medium",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 495,
+    "protein": 40,
+    "carbs": 42,
+    "fats": 20,
+    "label": "~495 cal/serving · 40g protein · 9g fiber (est.)"
+  },
+  "heroImage": "/images/golden-100/moroccan-chicken-chickpea-tray.jpg",
+  "mobileImage": "/images/mobile/moroccan-chicken-chickpea-tray.jpg",
+  "thumbImage": "/images/thumbs/moroccan-chicken-chickpea-tray.jpg",
+  "railImage": "/images/rails/moroccan-chicken-chickpea-tray.jpg",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "moroccan chicken chickpea tray",
+    "chicken",
+    "Moroccan",
+    "sheet pan",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "lemon-garlic-chicken-tray",
+    "herb-baked-salmon-tray",
+    "sheet-pan-chicken-fajitas-lite",
+    "honey-garlic-chicken-rice-bowls",
+    "white-bean-chicken-chili",
+    "crock-barbacoa-chicken"
+  ],
+  "generatedAt": "2026-05-28T12:57:50.894Z",
+  "contentVersion": 2
+}

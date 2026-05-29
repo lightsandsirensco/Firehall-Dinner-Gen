@@ -1,0 +1,183 @@
+{
+  "slug": "honey-lime-chicken-tray",
+  "title": "Honey Lime Chicken Tray",
+  "displayTitle": "Honey Lime Chicken Tray",
+  "seoTitle": "Honey Lime Chicken Tray | Firefighter Meal",
+  "shortDescription": "Glazed chicken with roasted peppers and red onion on one sheet",
+  "subtitle": "Glazed chicken with roasted peppers and red onion on one sheet",
+  "category": "healthy_performance",
+  "cuisine": "American",
+  "description": "Bone-in chicken thighs roast with bell peppers and red onion, brushed with honey-lime glaze until sticky and golden at the edges.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 28,
+  "prepTime": 18,
+  "difficulty": "easy",
+  "calories": 455,
+  "protein": 40,
+  "carbs": 22,
+  "fats": 24,
+  "tags": [
+    "protein:chicken",
+    "format:sheet_pan",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "Two half-sheet pans",
+    "Pastry brush"
+  ],
+  "ingredients": [
+    {
+      "name": "bone-in chicken thighs",
+      "quantity": "16",
+      "unit": "pieces",
+      "notes": "about 6 lb"
+    },
+    {
+      "name": "red bell pepper",
+      "quantity": "3",
+      "unit": "whole",
+      "notes": "chunked"
+    },
+    {
+      "name": "green bell pepper",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "chunked"
+    },
+    {
+      "name": "red onion",
+      "quantity": "2",
+      "unit": "large",
+      "notes": "wedge-cut"
+    },
+    {
+      "name": "honey",
+      "quantity": "0.33",
+      "unit": "cup"
+    },
+    {
+      "name": "lime juice",
+      "quantity": "0.25",
+      "unit": "cup",
+      "notes": "fresh"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "3",
+      "unit": "tbsp"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "6",
+      "unit": "cloves",
+      "notes": "minced"
+    },
+    {
+      "name": "chili powder",
+      "quantity": "1",
+      "unit": "tsp"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "1.5",
+      "unit": "tbsp"
+    },
+    {
+      "name": "black pepper",
+      "quantity": "1",
+      "unit": "tsp"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Heat oven and prep vegetables",
+      "instruction": "Heat oven to 425°F. Toss peppers and onion with 2 tbsp oil, salt, and pepper until evenly coated and lightly glossy.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Season chicken",
+      "instruction": "Pat thighs dry. Season with chili powder, salt, and pepper. Arrange skin-side up on two half-sheet pans with vegetables around edges.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Initial roast",
+      "instruction": "Roast 18 minutes without glaze until chicken skin starts to render fat and turn lightly golden at the edges.",
+      "minutes": 18,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Glaze and finish",
+      "instruction": "Whisk honey, lime juice, garlic, and remaining oil. Brush over chicken and vegetables. Roast 10–12 more minutes until glaze bubbles and temp hits 165°F.",
+      "minutes": 12,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Rest and portion",
+      "instruction": "Rest 5 minutes. Peppers should be tender with slight char; chicken juices should run clear, not pink, when pierced at the bone.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Watch glaze in last minutes—honey burns quickly above 425°F.",
+    "Serve with extra lime wedges for crew who want sharper acidity.",
+    "Swap thighs for drumsticks using same timing if that is what is in the walk-in."
+  ],
+  "tonightSpread": [
+    "Cilantro-lime rice.",
+    "Black beans with cumin."
+  ],
+  "leftovers": [
+    "Slice chicken into salads with avocado and remaining peppers.",
+    "Shred into wraps with the sticky pan glaze as sauce."
+  ],
+  "whyCrewsLikeIt": "Sweet-tart flavor wakes up a tired crew. One tray means less cleanup after a long shift.",
+  "mealPrepNotes": "Mix glaze ahead in a jar. Line pans with foil for faster cleanup. Station: Brush glaze during last 10 minutes only—early application burns sugar. Station: Rotate pans halfway for even caramelization in a crowded station oven. Station: Rest 5 minutes before slicing so glaze sets instead of running off the tray.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 455,
+    "protein": 40,
+    "carbs": 22,
+    "fats": 24,
+    "label": "~455 cal/serving · 40g protein · 3g fiber (est.)"
+  },
+  "heroImage": "/images/golden-100/honey-lime-chicken-tray.jpg",
+  "mobileImage": "/images/mobile/honey-lime-chicken-tray.jpg",
+  "thumbImage": "/images/thumbs/honey-lime-chicken-tray.jpg",
+  "railImage": "/images/rails/honey-lime-chicken-tray.jpg",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "honey lime chicken tray",
+    "chicken",
+    "American",
+    "sheet pan",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "lemon-garlic-chicken-tray",
+    "herb-baked-salmon-tray",
+    "sheet-pan-chicken-fajitas-lite",
+    "honey-garlic-chicken-rice-bowls",
+    "white-bean-chicken-chili",
+    "crock-barbacoa-chicken"
+  ],
+  "generatedAt": "2026-05-28T12:57:50.893Z",
+  "contentVersion": 2
+}

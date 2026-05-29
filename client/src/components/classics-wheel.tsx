@@ -5,11 +5,24 @@ import {
   WHEEL_CLASSICS,
   type WheelClassic,
   playWheelSound,
+  pickWeightedWheelClassic,
+  recordWheelClassicSlug,
 } from "@/lib/firehall-classics-wheel";
+import { pickWheelLandLine, pickWheelIntro, pickWheelSuspense } from "@/lib/wheel-personality";
+import { MealTrustBadges } from "@/components/trust/meal-trust-badges";
+import { MealShareCard, shareMealNative } from "@/components/share/meal-share-card";
+import { Share2 } from "lucide-react";
 import { MealHeroImage } from "@/components/meal-hero-image";
 
 const SEGMENT_COUNT = WHEEL_CLASSICS.length;
 const SEGMENT_ANGLE = 360 / SEGMENT_COUNT;
+
+/** Stable layout footprint — never derive size from animation state. */
+export const WHEEL_LAYOUT = {
+  width: "min(92vw, 400px)",
+  widthSm: "420px",
+  minWidth: "280px",
+} as const;
 
 function buildConicGradient(): string {
   const stops = WHEEL_CLASSICS.map((c, i) => {
@@ -27,25 +40,32 @@ function computeSpinRotation(winIndex: number, extraSpins: number): number {
 
 interface ClassicsWheelProps {
   disabled?: boolean;
+  /** Highlight winning segment after land (wheel stays mounted). */
+  winnerIndex?: number | null;
   onLanded: (classic: WheelClassic) => void;
-  onSpinStart?: () => void;
+  onSpinStart?: (suspenseLine: string) => void;
 }
 
-export function ClassicsWheel({ disabled, onLanded, onSpinStart }: ClassicsWheelProps) {
+export function ClassicsWheel({ disabled, winnerIndex, onLanded, onSpinStart }: ClassicsWheelProps) {
   const [rotation, setRotation] = useState(0);
   const [spinning, setSpinning] = useState(false);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const rotationRef = useRef(0);
   const conic = useMemo(() => buildConicGradient(), []);
 
+  const highlightedIndex =
+    winnerIndex != null && !spinning ? winnerIndex : activeIndex;
+
   const spin = useCallback(() => {
     if (spinning || disabled) return;
-    onSpinStart?.();
     setSpinning(true);
     setActiveIndex(null);
+    onSpinStart?.(pickWheelSuspense(String(Date.now())));
     playWheelSound("tick");
 
-    const winIndex = Math.floor(Math.random() * SEGMENT_COUNT);
+    const seed = `${Date.now()}:${rotationRef.current}`;
+    const { classic: winner, index: winIndex } = pickWeightedWheelClassic(seed);
+    recordWheelClassicSlug(winner.slug);
     const extraSpins = 5 + Math.floor(Math.random() * 3);
     const target = rotationRef.current + computeSpinRotation(winIndex, extraSpins);
     rotationRef.current = target;
@@ -55,13 +75,17 @@ export function ClassicsWheel({ disabled, onLanded, onSpinStart }: ClassicsWheel
       setSpinning(false);
       setActiveIndex(winIndex);
       playWheelSound("land");
-      onLanded(WHEEL_CLASSICS[winIndex]);
+      onLanded(winner);
       window.setTimeout(() => playWheelSound("reveal"), 400);
     }, 5200);
   }, [spinning, disabled, onLanded, onSpinStart]);
 
   return (
-    <div className="relative mx-auto w-full max-w-[min(92vw,400px)] sm:max-w-[420px] aspect-square touch-manipulation" data-testid="classics-wheel">
+    <div
+      className="relative mx-auto shrink-0 grow-0 touch-manipulation w-[min(92vw,400px)] min-w-[280px] sm:w-[420px] aspect-square [contain:layout]"
+      style={{ aspectRatio: "1 / 1" }}
+      data-testid="classics-wheel"
+    >
       {/* Pointer */}
       <div
         className="absolute left-1/2 -translate-x-1/2 -top-1 z-30 flex flex-col items-center"
@@ -70,28 +94,36 @@ export function ClassicsWheel({ disabled, onLanded, onSpinStart }: ClassicsWheel
         <div className="w-0 h-0 border-l-[14px] border-r-[14px] border-b-[22px] border-l-transparent border-r-transparent border-b-primary drop-shadow-[0_0_12px_rgba(198,40,40,0.8)]" />
       </div>
 
-      {/* Outer glow ring */}
+      {/* Metallic outer ring */}
       <div
-        className={`absolute inset-2 rounded-full transition-all duration-700 ${
-          activeIndex !== null && !spinning
-            ? "shadow-[0_0_56px_rgba(198,40,40,0.65)] ring-2 ring-primary/70 animate-pulse"
+        className={`absolute inset-1 rounded-full pointer-events-none transition-all duration-700 ${
+          highlightedIndex !== null && !spinning
+            ? "shadow-[0_0_64px_rgba(198,40,40,0.7),inset_0_0_24px_rgba(255,255,255,0.08)] ring-2 ring-primary/80"
             : spinning
-              ? "shadow-[0_0_40px_rgba(198,40,40,0.45)] ring-2 ring-primary/40"
-              : "shadow-[0_0_24px_rgba(198,40,40,0.2)] ring-1 ring-primary/20"
+              ? "shadow-[0_0_48px_rgba(198,40,40,0.5)] ring-2 ring-primary/50 animate-pulse"
+              : "shadow-[0_0_28px_rgba(0,0,0,0.6)] ring-1 ring-white/10"
         }`}
+        style={{
+          background:
+            "conic-gradient(from 0deg, hsl(0 0% 22%), hsl(0 0% 12%), hsl(0 55% 18%), hsl(0 0% 12%), hsl(0 0% 22%))",
+        }}
       />
 
-      {/* Spinning wheel */}
-      <motion.div
-        className="absolute inset-3 rounded-full overflow-hidden border-4 border-border/60"
-        animate={{ rotate: rotation }}
-        transition={
-          spinning
-            ? { duration: 5.2, ease: [0.12, 0.8, 0.2, 1] }
-            : { duration: 0 }
-        }
-        style={{ willChange: spinning ? "transform" : "auto" }}
-      >
+      {/* Spinning wheel — transform isolated; outer box size never changes */}
+      <div className="absolute inset-3 rounded-full overflow-visible">
+        <motion.div
+          className="relative h-full w-full rounded-full overflow-hidden border-4 border-border/60 origin-center"
+          animate={{ rotate: rotation }}
+          transition={
+            spinning
+              ? { duration: 5.2, ease: [0.12, 0.8, 0.2, 1] }
+              : { duration: 0 }
+          }
+          style={{
+            transformOrigin: "50% 50%",
+            willChange: spinning ? "transform" : undefined,
+          }}
+        >
         <div
           className="absolute inset-0 rounded-full"
           style={{ background: conic }}
@@ -113,7 +145,7 @@ export function ClassicsWheel({ disabled, onLanded, onSpinStart }: ClassicsWheel
           const radius = 38;
           const x = 50 + radius * Math.cos(angleRad);
           const y = 50 + radius * Math.sin(angleRad);
-          const isActive = activeIndex === i && !spinning;
+          const isActive = highlightedIndex === i && !spinning;
           return (
             <div
               key={classic.slug}
@@ -128,7 +160,7 @@ export function ClassicsWheel({ disabled, onLanded, onSpinStart }: ClassicsWheel
               <span className="text-lg leading-none mb-0.5">{classic.emoji}</span>
               <span
                 className={`text-[9px] sm:text-[10px] font-semibold uppercase tracking-wide leading-tight drop-shadow-md ${
-                  isActive ? "text-white scale-110" : "text-white/95"
+                  isActive ? "text-white font-bold brightness-110" : "text-white/95"
                 }`}
               >
                 {classic.shortLabel}
@@ -136,14 +168,15 @@ export function ClassicsWheel({ disabled, onLanded, onSpinStart }: ClassicsWheel
             </div>
           );
         })}
-      </motion.div>
+        </motion.div>
+      </div>
 
       {/* Center hub */}
       <button
         type="button"
         onClick={spin}
         disabled={spinning || disabled}
-        className="absolute left-1/2 top-1/2 z-20 -translate-x-1/2 -translate-y-1/2 w-[30%] min-w-[92px] max-w-[124px] aspect-square rounded-full bg-gradient-to-br from-primary to-primary/80 text-primary-foreground font-heading tracking-widest uppercase text-xs sm:text-sm shadow-lg shadow-primary/30 border-4 border-background/90 hover:scale-105 active:scale-[0.92] transition-transform disabled:opacity-70 disabled:pointer-events-none disabled:scale-100 touch-manipulation"
+        className="absolute left-1/2 top-1/2 z-20 -translate-x-1/2 -translate-y-1/2 w-[30%] min-w-[92px] max-w-[124px] aspect-square rounded-full bg-gradient-to-br from-primary via-primary/90 to-[hsl(0_55%_22%)] text-primary-foreground font-heading tracking-widest uppercase text-xs sm:text-sm shadow-[0_8px_32px_rgba(198,40,40,0.45)] border-4 border-[hsl(0_0%_8%)] ring-2 ring-white/15 hover:brightness-110 active:scale-[0.97] transition-all disabled:opacity-70 disabled:pointer-events-none touch-manipulation"
         data-testid="button-spin-wheel"
       >
         {spinning ? (
@@ -179,16 +212,41 @@ export function WheelReveal({
   onTogglePin,
   onExplore,
 }: WheelRevealProps) {
+  const landSeed = `${classic.slug}:${Date.now()}`;
+  const intro = pickWheelIntro(landSeed);
+  const landLine = pickWheelLandLine(landSeed, classic.tags.includes("rookie_friendly"));
+
+  const handleShare = async () => {
+    await shareMealNative({
+      title: classic.title,
+      text: `${intro} ${classic.title} — ${landLine}`,
+      url: typeof window !== "undefined" ? `${window.location.origin}/classics-wheel` : undefined,
+    });
+  };
+
   return (
     <AnimatePresence>
       <motion.div
-        initial={{ opacity: 0, y: 24, scale: 0.96 }}
-        animate={{ opacity: 1, y: 0, scale: 1 }}
-        exit={{ opacity: 0, y: 12 }}
+        initial={{ opacity: 0, y: 16 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 8 }}
         transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-        className="w-full max-w-xl mx-auto px-0 sm:px-0"
+        className="w-full max-w-xl mx-auto shrink-0 space-y-6"
         data-testid="wheel-reveal"
       >
+        {/* Off-screen share surface for screenshots */}
+        <div className="sr-only" aria-hidden>
+          <MealShareCard
+            title={classic.title}
+            subtitle={landLine}
+            heroImage={classic.heroImage}
+            imageAlt={classic.imageAlt}
+            emoji={classic.emoji}
+            eyebrow={intro}
+            trustInput={{ tags: classic.tags, cuisine: classic.cuisine }}
+          />
+        </div>
+
         <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl border border-primary/40 bg-card shadow-2xl shadow-primary/20 ring-1 ring-primary/30">
           <MealHeroImage
             src={classic.heroImage}
@@ -211,7 +269,7 @@ export function WheelReveal({
               transition={{ delay: 0.15 }}
               className="text-xs uppercase tracking-[0.35em] text-primary font-semibold mb-3 drop-shadow-sm"
             >
-              Tonight&apos;s hall pick
+              {intro}
             </motion.p>
             <h2
               className="font-heading text-2xl sm:text-3xl tracking-wide text-foreground mb-2"
@@ -219,19 +277,22 @@ export function WheelReveal({
             >
               {classic.title}
             </h2>
+            <p className="text-sm font-medium text-primary/90 mb-1">{landLine}</p>
             <p className="text-sm text-muted-foreground mb-1">{classic.tagline}</p>
-            <p className="text-sm text-foreground/80 leading-relaxed max-w-md mx-auto mb-6">
+            <p className="text-sm text-foreground/80 leading-relaxed max-w-md mx-auto mb-4">
               {classic.crewLine}
             </p>
+            <MealTrustBadges
+              input={{ tags: classic.tags, cuisine: classic.cuisine }}
+              max={3}
+              className="justify-center mb-6"
+            />
             <div className="flex flex-wrap justify-center gap-2 mb-6">
               <span className="text-[10px] font-medium uppercase tracking-wider px-2.5 py-1 rounded-full bg-primary/10 text-primary border border-primary/20">
                 {classic.protein}
               </span>
               <span className="text-[10px] font-medium uppercase tracking-wider px-2.5 py-1 rounded-full bg-muted text-muted-foreground border border-border/40">
                 {classic.cuisine}
-              </span>
-              <span className="text-[10px] font-medium uppercase tracking-wider px-2.5 py-1 rounded-full bg-muted text-muted-foreground border border-border/40">
-                Hall classic
               </span>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
@@ -242,7 +303,16 @@ export function WheelReveal({
                 data-testid="button-wheel-cook"
               >
                 <Flame className="w-4 h-4" />
-                Open dinner package
+                Cook this one
+              </button>
+              <button
+                type="button"
+                onClick={handleShare}
+                className="inline-flex items-center justify-center gap-2 rounded-lg border border-primary/30 bg-primary/10 text-primary font-medium text-sm py-3 px-3 min-h-11 hover:bg-primary/20 transition-colors touch-manipulation active:scale-[0.98]"
+                data-testid="button-wheel-share"
+              >
+                <Share2 className="w-4 h-4" />
+                Share pick
               </button>
               <button
                 type="button"
@@ -250,7 +320,7 @@ export function WheelReveal({
                 className="inline-flex items-center justify-center gap-2 rounded-lg border border-border/50 bg-muted/40 text-foreground font-medium text-sm py-3 px-3 min-h-11 hover:bg-muted/70 transition-colors touch-manipulation active:scale-[0.98]"
                 data-testid="button-wheel-explore"
               >
-                Browse similar recipes
+                Similar meals
               </button>
               <button
                 type="button"

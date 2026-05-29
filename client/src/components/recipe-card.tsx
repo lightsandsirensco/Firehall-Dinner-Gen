@@ -13,7 +13,9 @@ import { Flame, Droplets, Wheat, Beef, Sparkles, Trash2, Clock, Timer, ShieldChe
 import { saveMeal, isMealSaved } from "@/lib/saved-meals";
 import { hapticSuccess } from "@/lib/haptics";
 import { escapeHtml } from "@/lib/escape-html";
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, type ReactNode } from "react";
+import { app } from "@/lib/design-tokens";
+import { cn } from "@/lib/utils";
 
 let sessionProTipsCollapsed = false;
 
@@ -28,14 +30,24 @@ interface RecipeCardProps {
   hideSave?: boolean;
 }
 
-function MacroBar({ label, value, unit, icon, color }: { label: string; value: number; unit: string; icon: any; color: string }) {
-  const Icon = icon;
+function MealSection({
+  title,
+  children,
+  className,
+  ...rest
+}: {
+  title: string;
+  children: ReactNode;
+  className?: string;
+} & React.HTMLAttributes<HTMLElement>) {
   return (
-    <div className="flex flex-col items-center gap-1 flex-1">
-      <Icon className={`w-4 h-4 ${color}`} />
-      <span className="font-heading text-xl leading-none">{value}</span>
-      <span className="text-[10px] uppercase tracking-wider text-muted-foreground">{unit}</span>
-    </div>
+    <section
+      className={cn("space-y-4 pt-6 border-t border-border/20 first:border-0 first:pt-0", className)}
+      {...rest}
+    >
+      <h3 className={app.titleMeal}>{title}</h3>
+      {children}
+    </section>
   );
 }
 
@@ -268,7 +280,6 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
     }
   };
 
-  const recipeTags = recipe.recipe_tags;
   const mealPlate = useMemo(() => resolveMealPlate(recipe), [recipe]);
   const trustLine = useMemo(() => buildRecipeTrustLine(recipe, crewSize), [recipe, crewSize]);
   const starchSides = mealPlate?.sides.filter((s) => s.role === "starch") || [];
@@ -287,7 +298,7 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
   });
 
   return (
-    <div className="space-y-4 sm:space-y-5 meal-reveal motion-reduce:animate-none animate-in fade-in slide-in-from-bottom-3 duration-500">
+    <div className={cn(app.sectionGap, "meal-reveal motion-reduce:animate-none animate-in fade-in slide-in-from-bottom-3 duration-500")}>
       {recipe.hero_image && recipe.hero_image_status === "ready" ? (
         <MealHeroImage
           src={recipe.hero_image}
@@ -333,19 +344,12 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
           {(recipe as any)._adjustment_note || "Adjusted meal style to meet allergy requirements."}
         </div>
       )}
-      <div className="space-y-1">
-        <h2
-          className="font-heading text-[1.65rem] leading-[1.15] sm:text-4xl md:text-5xl tracking-tight text-foreground"
-          data-testid="text-recipe-title"
-        >
+      <div className="space-y-3">
+        <h2 className={cn(app.titlePage, "max-w-2xl")} data-testid="text-recipe-title">
           {displayTitle}
         </h2>
-        <p
-          className="flex items-center gap-1.5 text-sm text-muted-foreground leading-snug mt-2 max-w-xl"
-          data-testid="text-recipe-trust-line"
-        >
-          <ShieldCheck className="w-3.5 h-3.5 text-primary/55 shrink-0" aria-hidden />
-          <span>{trustLine}</span>
+        <p className={cn(app.subtitle, "max-w-xl")} data-testid="text-recipe-trust-line">
+          {trustLine}
         </p>
         {recipe._recipe_source?.name && !recipe.hall_curated && !recipe._fallback && (
           <p className="text-xs text-muted-foreground/80 mt-1 max-w-xl" data-testid="text-recipe-source">
@@ -370,47 +374,74 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
           </p>
         )}
         {mealPlate?.cuisine_label && (
-          <p className="text-xs font-medium text-primary/75 mt-2" data-testid="text-cuisine-label">
+          <p className={app.caption} data-testid="text-cuisine-label">
             {mealPlate.cuisine_label}
           </p>
         )}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-3">
+
+        <div className="flex flex-wrap gap-2">
+          {(recipe as ClientRecipeResponse).catalog_badge && (
+            <span className={app.pill} data-testid="badge-catalog-source">
+              {(recipe as ClientRecipeResponse).catalog_badge}
+            </span>
+          )}
+          {((recipe as ClientRecipeResponse).catalog_trait_badges || []).map((badge) => (
+            <span key={badge} className={app.pill} data-testid="badge-catalog-trait">
+              {badge}
+            </span>
+          ))}
+          {hasTiming && (
+            <span className={app.pill}>
+              <Clock className="w-3.5 h-3.5 mr-1.5 inline opacity-70" aria-hidden />
+              {recipe.timing.total_min} min
+            </span>
+          )}
+          {recipe.chosen_protein && (
+            <span className={app.pill} data-testid="text-chosen-protein">
+              {recipe.chosen_protein}
+            </span>
+          )}
+          {recipe.meal_format && (
+            <span className={app.pill} data-testid="badge-meal-format">
+              {recipe.meal_format}
+            </span>
+          )}
+          {recipe.budget_level === "low" && (
+            <span className={app.pill} data-testid="badge-budget-friendly">
+              Budget-friendly
+            </span>
+          )}
+        </div>
+
+        <div className="flex flex-wrap gap-2">
           {!hideSave && (
             <Button
-              variant={saved ? "default" : "outline"}
+              variant={saved ? "secondary" : "outline"}
+              size="sm"
               onClick={handleSave}
               disabled={saved}
-              className={`w-full justify-start ${saved ? "bg-primary/20 text-primary border-primary/30" : ""}`}
+              className="min-h-10 touch-manipulation"
               data-testid="button-save-favorite"
             >
-              {saved ? (
-                <>
-                  <Check className="w-4 h-4 mr-2 flex-shrink-0" />
-                  <span className="truncate">Saved</span>
-                </>
-              ) : (
-                <>
-                  <Heart className="w-4 h-4 mr-2 flex-shrink-0" />
-                  <span className="truncate">Save</span>
-                </>
-              )}
+              {saved ? <Check className="w-4 h-4 mr-1.5" /> : <Heart className="w-4 h-4 mr-1.5" />}
+              {saved ? "Saved" : "Save"}
             </Button>
           )}
           {onShoppingListClick && (
-            <Button onClick={onShoppingListClick} className="w-full justify-start" data-testid="button-shopping-list">
-              <List className="w-4 h-4 mr-2 flex-shrink-0" />
-              <span className="truncate">Shopping List</span>
+            <Button size="sm" variant="outline" onClick={onShoppingListClick} className="min-h-10 touch-manipulation" data-testid="button-shopping-list">
+              <List className="w-4 h-4 mr-1.5" />
+              List
             </Button>
           )}
           {onEmailClick && (
-            <Button variant="outline" onClick={onEmailClick} className="w-full justify-start" data-testid="button-email-recipe">
-              <Mail className="w-4 h-4 mr-2 flex-shrink-0" />
-              <span className="truncate">Email</span>
+            <Button size="sm" variant="outline" onClick={onEmailClick} className="min-h-10 touch-manipulation" data-testid="button-email-recipe">
+              <Mail className="w-4 h-4 mr-1.5" />
+              Email
             </Button>
           )}
-          <Button variant="outline" onClick={handlePrint} className="w-full justify-start" data-testid="button-print">
-            <Printer className="w-4 h-4 mr-2 flex-shrink-0" />
-            <span className="truncate">Print</span>
+          <Button size="sm" variant="ghost" onClick={handlePrint} className="min-h-10 touch-manipulation" data-testid="button-print">
+            <Printer className="w-4 h-4 mr-1.5" />
+            Print
           </Button>
         </div>
         {showConfirm && (
@@ -419,392 +450,163 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
             Saved to Hall Favorites.
           </div>
         )}
-        <div className="rounded-lg border border-primary/15 bg-primary/5 px-3 py-2.5 mt-1">
-          <p className="text-[10px] uppercase tracking-widest text-primary/80 font-semibold mb-1">
-            Tonight at the hall
-          </p>
-          <p className="text-sm text-foreground/90 leading-relaxed" data-testid="text-recipe-why">
-            {recipe.why_it_fits_tonight}
-          </p>
-        </div>
-        <div className="flex items-center gap-2 mt-1 flex-wrap">
-          {recipe.chosen_protein && (
-            <div className="flex items-center gap-2">
-              <Beef className="w-4 h-4 text-primary" />
-              <span className="text-sm font-medium text-foreground" data-testid="text-chosen-protein">
-                Protein: {recipe.chosen_protein}
-              </span>
-            </div>
-          )}
-          {recipe.meal_format && (
-            <Badge className="text-[10px] font-bold uppercase tracking-widest bg-primary/15 text-primary border border-primary/30 px-2 py-0.5" data-testid="badge-meal-format">
-              {recipe.meal_format}
-            </Badge>
-          )}
-          {recipe.meal_style && recipe.meal_style !== recipe.meal_format && (
-            <Badge variant="outline" className="text-xs" data-testid="badge-meal-style">
-              {recipe.meal_style}
-            </Badge>
-          )}
-          {recipe.budget_level === "low" && (
-            <Badge variant="secondary" className="text-xs" data-testid="badge-budget-friendly">
-              <DollarSign className="w-3 h-3 mr-1" />
-              Budget-friendly
-            </Badge>
-          )}
-        </div>
-        {recipeTags && (recipeTags.cuisine || recipeTags.cooking_method || recipeTags.high_protein || recipeTags.high_fiber || recipeTags.quick_cleanup || !recipeTags.base_carb || recipeTags.base_carb === "none" || recipeTags.base_carb === "greens") && (
-          <div className="flex items-center gap-1.5 mt-1.5 flex-wrap" data-testid="section-recipe-tags">
-            {recipeTags.cuisine && (
-              <Badge variant="outline" className="text-xs" data-testid="badge-tag-cuisine">
-                <Globe className="w-3 h-3 mr-1" />
-                {recipeTags.cuisine}
-              </Badge>
-            )}
-            {recipeTags.cooking_method && (
-              <Badge variant="outline" className="text-xs" data-testid="badge-tag-method">
-                <UtensilsCrossed className="w-3 h-3 mr-1" />
-                {recipeTags.cooking_method}
-              </Badge>
-            )}
-            {recipeTags.high_protein && (
-              <Badge variant="secondary" className="text-xs" data-testid="badge-tag-high-protein">
-                <Flame className="w-3 h-3 mr-1" />
-                Feeds hard
-              </Badge>
-            )}
-            {recipeTags.quick_cleanup && (
-              <Badge variant="secondary" className="text-xs" data-testid="badge-tag-quick-cleanup">
-                <Sparkles className="w-3 h-3 mr-1" />
-                Easy cleanup
-              </Badge>
-            )}
-            {(recipeTags.base_carb === "none" || !recipeTags.base_carb) && (
-              <Badge variant="secondary" className="text-xs" data-testid="badge-no-carb">
-                <Leaf className="w-3 h-3 mr-1" />
-                No starch side
-              </Badge>
-            )}
-            {recipeTags.base_carb === "greens" && (
-              <Badge variant="secondary" className="text-xs" data-testid="badge-lower-carb">
-                <Leaf className="w-3 h-3 mr-1" />
-                Greens base
-              </Badge>
-            )}
-          </div>
-        )}
+        <p className={cn(app.lead, "max-w-2xl")} data-testid="text-recipe-why">
+          {recipe.why_it_fits_tonight}
+        </p>
       </div>
 
       {mealPlate && (mealPlate.main.length > 0 || mealPlate.sides.length > 0) && (
-        <Card className="border-primary/25 bg-gradient-to-br from-primary/5 to-transparent" data-testid="section-meal-plate">
-          <CardContent className="p-5 space-y-4">
-            <div className="flex items-center gap-2">
-              <UtensilsCrossed className="w-4 h-4 text-primary" />
-              <h3 className="font-heading text-lg tracking-wider uppercase text-foreground">
-                Tonight&apos;s table
-              </h3>
-            </div>
-            <PlateSection label="Main" items={mealPlate.main} testId="plate-main" />
-            <PlateSection
-              label="Sides"
-              items={[...starchSides, ...vegSides]}
-              testId="plate-sides"
-            />
-            <PlateSection label="Optional" items={mealPlate.optional} testId="plate-optional" />
-          </CardContent>
-        </Card>
+        <MealSection title="Tonight's table" data-testid="section-meal-plate">
+          <PlateSection label="Main" items={mealPlate.main} testId="plate-main" />
+          <PlateSection
+            label="Sides"
+            items={[...starchSides, ...vegSides]}
+            testId="plate-sides"
+          />
+          <PlateSection label="Optional" items={mealPlate.optional} testId="plate-optional" />
+        </MealSection>
       )}
 
       {recipe.ingredients_used && recipe.ingredients_used.length > 0 && (
-        <Card data-testid="section-ingredients-used">
-          <CardContent className="p-5">
-            <div className="flex items-center gap-2 mb-3">
-              <Package className="w-4 h-4 text-primary" />
-              <h3 className="font-heading text-lg tracking-wider uppercase text-foreground">Using What's in the Fridge</h3>
-            </div>
-            <div className="flex flex-wrap gap-2">
-              {recipe.ingredients_used.map((item, i) => (
-                <Badge key={i} variant="outline" className="capitalize px-3 py-1" data-testid={`badge-ingredient-used-${i}`}>
-                  {item}
-                </Badge>
-              ))}
-            </div>
-            {recipe.extra_items_needed && recipe.extra_items_needed.length > 0 && (
-              <div className="mt-3 pt-3 border-t border-border/40">
-                <div className="flex items-center gap-2 mb-2">
-                  <ShoppingCart className="w-3.5 h-3.5 text-muted-foreground" />
-                  <span className="text-xs uppercase tracking-wider text-muted-foreground font-medium">You may need to grab</span>
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  {recipe.extra_items_needed.map((item, i) => (
-                    <Badge key={i} variant="secondary" className="capitalize px-3 py-1" data-testid={`badge-extra-item-${i}`}>
-                      {item}
-                    </Badge>
-                  ))}
-                </div>
-              </div>
-            )}
-          </CardContent>
-        </Card>
-      )}
-
-      <div className="flex flex-wrap gap-3" data-testid="section-timing-macros">
-        {hasTiming && (
-          <Card className="flex-1 min-w-[200px]">
-            <CardContent className="p-5">
-              <div className="flex items-center gap-2 mb-3">
-                <Clock className="w-4 h-4 text-primary" />
-                <h3 className="font-heading text-lg tracking-wider uppercase text-foreground">Timing</h3>
-              </div>
-              <div className="flex gap-2" data-testid="section-timing">
-                <div className="flex flex-col items-center gap-1 flex-1">
-                  <Timer className="w-4 h-4 text-blue-400" />
-                  <span className="font-heading text-xl leading-none">{recipe.timing.prep_min}</span>
-                  <span className="text-[10px] uppercase tracking-wider text-muted-foreground">prep</span>
-                </div>
-                <Separator orientation="vertical" className="h-14 self-center" />
-                <div className="flex flex-col items-center gap-1 flex-1">
-                  <Flame className="w-4 h-4 text-orange-400" />
-                  <span className="font-heading text-xl leading-none">{recipe.timing.cook_min}</span>
-                  <span className="text-[10px] uppercase tracking-wider text-muted-foreground">cook</span>
-                </div>
-                <Separator orientation="vertical" className="h-14 self-center" />
-                <div className="flex flex-col items-center gap-1 flex-1">
-                  <Clock className="w-4 h-4 text-green-400" />
-                  <span className="font-heading text-xl leading-none">{recipe.timing.total_min}</span>
-                  <span className="text-[10px] uppercase tracking-wider text-muted-foreground">total</span>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        )}
-
-        <Card className="flex-1 min-w-[200px]">
-          <CardContent className="p-5">
-            <div className="flex items-center gap-2 mb-3">
-              <Sparkles className="w-4 h-4 text-primary" />
-              <h3 className="font-heading text-sm tracking-wider uppercase text-muted-foreground">
-                Rough nutrition per seat
-              </h3>
-              <Badge variant="outline" className="ml-auto text-xs">
-                {crewSize} at the table
-              </Badge>
-            </div>
-            <p className="text-[11px] text-muted-foreground/80 mb-2 -mt-1">
-              {recipe.macros_estimated
-                ? "Estimated after sides were added — ballpark for planning, not lab-precise."
-                : "Ballpark only — we feed the crew first, count macros second."}
-            </p>
-            <div className="flex gap-2 opacity-90" data-testid="section-macros">
-              <MacroBar label="Calories" value={recipe.macros_per_serving.calories} unit="cal" icon={Flame} color="text-orange-400" />
-              <Separator orientation="vertical" className="h-14 self-center" />
-              <MacroBar label="Protein" value={recipe.macros_per_serving.protein_g} unit="protein" icon={Beef} color="text-red-400" />
-              <Separator orientation="vertical" className="h-14 self-center" />
-              <MacroBar label="Carbs" value={recipe.macros_per_serving.carbs_g} unit="carbs" icon={Wheat} color="text-amber-400" />
-              <Separator orientation="vertical" className="h-14 self-center" />
-              <MacroBar label="Fat" value={recipe.macros_per_serving.fat_g} unit="fat" icon={Droplets} color="text-blue-400" />
-            </div>
-          </CardContent>
-        </Card>
-      </div>
-
-      {hasSafety && (
-        <Card>
-          <CardContent className="p-5">
-            <div className="flex items-center gap-2 mb-3">
-              <ShieldCheck className="w-4 h-4 text-primary" />
-              <h3 className="font-heading text-lg tracking-wider uppercase text-foreground">Protein Safety</h3>
-            </div>
-            <div
-              className="rounded-md border border-border/40 p-3 space-y-2"
-              data-testid="section-protein-safety"
-            >
-              <div className="flex items-center gap-2">
-                <Thermometer className="w-4 h-4 text-primary flex-shrink-0" />
-                <span className="font-bold text-sm text-foreground">{recipe.protein_safety.protein}</span>
-              </div>
-              <div className="flex flex-wrap gap-x-4 gap-y-1">
-                <div className="flex items-baseline gap-1">
-                  <span className="text-xs text-muted-foreground">Internal Temp:</span>
-                  <span className="text-sm font-heading text-primary">{recipe.protein_safety.internal_temp_f}°F</span>
-                </div>
-                {recipe.protein_safety.rest_min > 0 && (
-                  <div className="flex items-baseline gap-1">
-                    <span className="text-xs text-muted-foreground">Rest:</span>
-                    <span className="text-sm font-medium text-foreground">{recipe.protein_safety.rest_min} min</span>
-                  </div>
-                )}
-              </div>
-              {recipe.protein_safety.notes && (
-                <p className="text-xs text-muted-foreground leading-relaxed">
-                  {recipe.protein_safety.notes}
-                </p>
-              )}
-            </div>
-          </CardContent>
-        </Card>
-      )}
-
-      <Card>
-        <CardContent className="p-5">
-          <div className="flex items-center gap-2 mb-4">
-            <List className="w-4 h-4 text-primary" />
-            <h3 className="font-heading text-lg tracking-wider uppercase text-foreground">
-              {mealPlate ? "Full ingredient list" : "Ingredients"}
-            </h3>
-          </div>
-          <div
-            className="grid grid-cols-1 md:grid-cols-2 gap-3"
-            data-testid="section-ingredients"
-          >
-            {recipe.ingredients.map((ing, i) => (
-              <div
-                key={i}
-                className="flex flex-col gap-1.5 rounded-md border border-border/50 p-3.5 leading-relaxed transition-colors duration-150"
-                style={{ overflowWrap: "anywhere", wordBreak: "break-word" }}
-                data-testid={`ingredient-row-${i}`}
-              >
-                <p className="text-sm whitespace-normal break-words">
-                  <span className="font-bold text-foreground">{ing.name}</span>
-                  {(ing.qty > 0 || ing.unit) && (
-                    <span className="text-primary font-medium"> — {fmtQty(ing.qty, ing.unit)}</span>
-                  )}
-                </p>
-                {ing.category && ing.category !== "other" && (
-                  <p className="text-xs text-muted-foreground whitespace-normal break-words capitalize">
-                    {ing.category}
-                  </p>
-                )}
-              </div>
+        <MealSection title="From the fridge" data-testid="section-ingredients-used">
+          <div className="flex flex-wrap gap-2">
+            {recipe.ingredients_used.map((item, i) => (
+              <span key={i} className={app.pill} data-testid={`badge-ingredient-used-${i}`}>
+                {item}
+              </span>
             ))}
           </div>
-        </CardContent>
-      </Card>
+          {recipe.extra_items_needed && recipe.extra_items_needed.length > 0 && (
+            <p className={cn(app.subtitle, "mt-3")}>
+              <span className="text-foreground/80">Grab if needed:</span>{" "}
+              {recipe.extra_items_needed.join(", ")}
+            </p>
+          )}
+        </MealSection>
+      )}
 
-      <Card>
-        <CardContent className="p-5">
-          <div className="flex items-center gap-2 mb-4">
-            <UtensilsCrossed className="w-4 h-4 text-primary" />
-            <h3 className="font-heading text-lg tracking-wider uppercase text-foreground">
-              Steps
-            </h3>
-          </div>
-          <ol className="space-y-5" data-testid="section-steps">
-            {recipe.steps.map((step, i) => {
-              return (
-                <li key={i} className="flex gap-3 sm:gap-4" data-testid={`step-${i}`}>
-                  <span className="font-heading text-xl sm:text-2xl font-bold text-primary flex-shrink-0 w-8 sm:w-7 text-center leading-8 sm:leading-7 rounded-md bg-primary/10 h-8 sm:h-7 flex items-center justify-center">
-                    {step.n}
-                  </span>
-                  <div className="flex-1 min-w-0 pt-0.5">
-                    {step.title && (
-                      <p className="text-[15px] sm:text-sm font-bold text-foreground mb-1 leading-snug">
-                        {step.title}
-                      </p>
-                    )}
-                    <p className="text-[15px] sm:text-sm text-foreground/85 leading-relaxed">{step.instructions}</p>
-                  </div>
-                </li>
-              );
-            })}
-          </ol>
-        </CardContent>
-      </Card>
+      <p className={cn(app.caption, "flex flex-wrap gap-x-4 gap-y-1")} data-testid="section-timing-macros">
+        {hasTiming && (
+          <>
+            <span data-testid="section-timing">
+              <span className="text-foreground/80">{recipe.timing.prep_min}</span> min prep ·{" "}
+              <span className="text-foreground/80">{recipe.timing.cook_min}</span> min cook
+            </span>
+          </>
+        )}
+        <span data-testid="section-macros">
+          <span className="text-foreground font-medium">{recipe.macros_per_serving.calories}</span> cal ·{" "}
+          <span className="text-foreground font-medium">{recipe.macros_per_serving.protein_g}g</span> protein per seat
+        </span>
+      </p>
+
+      {hasSafety && (
+        <MealSection title="Cook to temp" data-testid="section-protein-safety">
+          <p className={app.subtitle}>
+            <span className="text-foreground font-medium">{recipe.protein_safety.protein}</span>
+            {" — "}
+            <span className="text-foreground">{recipe.protein_safety.internal_temp_f}°F internal</span>
+            {recipe.protein_safety.rest_min > 0 && (
+              <>, rest {recipe.protein_safety.rest_min} min</>
+            )}
+          </p>
+          {recipe.protein_safety.notes && (
+            <p className={app.caption}>{recipe.protein_safety.notes}</p>
+          )}
+        </MealSection>
+      )}
+
+      <MealSection title={mealPlate ? "Full ingredient list" : "Ingredients"}>
+        <ul className="divide-y divide-border/25" data-testid="section-ingredients">
+          {recipe.ingredients.map((ing, i) => (
+            <li
+              key={i}
+              className="flex justify-between gap-4 py-3.5 text-[15px]"
+              data-testid={`ingredient-row-${i}`}
+            >
+              <span className="font-medium">{ing.name}</span>
+              <span className="text-muted-foreground tabular-nums shrink-0">
+                {fmtQty(ing.qty, ing.unit) || "—"}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </MealSection>
+
+      <MealSection title="How to cook it">
+        <ol className="space-y-8" data-testid="section-steps">
+          {recipe.steps.map((step, i) => (
+            <li key={i} className="flex gap-4" data-testid={`step-${i}`}>
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-muted/60 text-sm font-semibold tabular-nums">
+                {step.n}
+              </span>
+              <div className="flex-1 min-w-0 pt-0.5">
+                {step.title && (
+                  <p className="font-medium text-foreground mb-1">{step.title}</p>
+                )}
+                <p className="text-[15px] text-muted-foreground leading-relaxed">{step.instructions}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </MealSection>
 
       {recipe.plating && recipe.plating.assembly_instructions && (
-        <Card data-testid="section-plating">
-          <CardContent className="p-5">
-            <div className="flex items-center gap-2 mb-3">
-              <UtensilsCrossed className="w-4 h-4 text-primary" />
-              <h3 className="font-heading text-lg tracking-wider uppercase text-foreground">Tonight&apos;s spread</h3>
-            </div>
-            {recipe.plating.serve_style && (
-              <Badge variant="outline" className="text-xs mb-2" data-testid="badge-serve-style">
-                {recipe.plating.serve_style}
-              </Badge>
-            )}
-            <p className="text-sm text-foreground/80 leading-relaxed" data-testid="text-plating-instructions">
-              {recipe.plating.assembly_instructions}
+        <MealSection title="Tonight's spread" data-testid="section-plating">
+          {recipe.plating.serve_style && (
+            <p className={app.caption} data-testid="badge-serve-style">
+              {recipe.plating.serve_style}
             </p>
-            {recipe.plating.optional_toppings && recipe.plating.optional_toppings.length > 0 && (
-              <div className="mt-2 flex flex-wrap gap-1.5">
-                {recipe.plating.optional_toppings.map((topping, i) => (
-                  <Badge key={i} variant="secondary" className="text-xs" data-testid={`badge-topping-${i}`}>
-                    {topping}
-                  </Badge>
-                ))}
-              </div>
-            )}
-          </CardContent>
-        </Card>
+          )}
+          <p className={app.subtitle} data-testid="text-plating-instructions">
+            {recipe.plating.assembly_instructions}
+          </p>
+        </MealSection>
       )}
 
       {recipe.pro_tips && recipe.pro_tips.length > 0 && (
-        <Card data-testid="section-pro-tips">
-          <CardContent className="p-5">
-            <button
-              type="button"
-              onClick={toggleProTips}
-              className="flex items-center justify-between w-full text-left cursor-pointer"
-              data-testid="button-toggle-pro-tips"
-            >
-              <div className="flex items-center gap-2">
-                <Lightbulb className="w-4 h-4 text-amber-500" />
-                <h3 className="font-heading text-lg tracking-wider uppercase text-foreground">
-                  Pro Tips
-                </h3>
-              </div>
-              <ChevronDown
-                className={`w-5 h-5 text-muted-foreground transition-transform duration-200 ${proTipsOpen ? "" : "-rotate-90"}`}
-              />
-            </button>
-            {proTipsOpen && (
-              <ul className="mt-3 space-y-2" data-testid="list-pro-tips">
-                {recipe.pro_tips.map((tip, i) => (
-                  <li key={i} className="flex gap-2 text-sm text-foreground/80" data-testid={`pro-tip-${i}`}>
-                    <Sparkles className="w-3.5 h-3.5 text-amber-500 flex-shrink-0 mt-0.5" />
-                    <span>{tip}</span>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </CardContent>
-        </Card>
-      )}
-
-      {recipe.cleanup_tip?.trim() && (
-        <Card>
-          <CardContent className="p-5">
-            <div className="flex items-start gap-3">
-              <Trash2 className="w-4 h-4 text-muted-foreground mt-0.5 flex-shrink-0" />
-              <div>
-                <h3 className="font-heading text-sm tracking-wider uppercase text-muted-foreground mb-1">
-                  Kitchen shutdown
-                </h3>
-                <p className="text-sm text-foreground/80" data-testid="text-cleanup-tip">{recipe.cleanup_tip}</p>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-      )}
-
-      {recipe.budget_tips && recipe.budget_tips.length > 0 && (
-        <Card data-testid="section-budget-tips">
-          <CardContent className="p-5">
-            <div className="flex items-center gap-2 mb-3">
-              <Lightbulb className="w-4 h-4 text-amber-500" />
-              <h3 className="font-heading text-lg tracking-wider uppercase text-foreground">Budget Tips</h3>
-            </div>
-            <ul className="space-y-2">
-              {recipe.budget_tips.map((tip, i) => (
-                <li key={i} className="flex gap-2 text-sm text-foreground/80" data-testid={`budget-tip-${i}`}>
-                  <DollarSign className="w-3.5 h-3.5 text-amber-500 flex-shrink-0 mt-0.5" />
-                  <span>{tip}</span>
+        <MealSection title="Hall tips" data-testid="section-pro-tips">
+          <button
+            type="button"
+            onClick={toggleProTips}
+            className="flex items-center gap-2 text-sm text-muted-foreground -mt-2 mb-1"
+            data-testid="button-toggle-pro-tips"
+          >
+            <ChevronDown
+              className={cn("w-4 h-4 transition-transform", !proTipsOpen && "-rotate-90")}
+            />
+            {proTipsOpen ? "Hide tips" : "Show tips"}
+          </button>
+          {proTipsOpen && (
+            <ul className="space-y-3" data-testid="list-pro-tips">
+              {recipe.pro_tips.map((tip, i) => (
+                <li key={i} className={app.subtitle} data-testid={`pro-tip-${i}`}>
+                  {tip}
                 </li>
               ))}
             </ul>
-          </CardContent>
-        </Card>
+          )}
+        </MealSection>
+      )}
+
+      {recipe.cleanup_tip?.trim() && (
+        <MealSection title="Kitchen shutdown">
+          <p className={app.subtitle} data-testid="text-cleanup-tip">
+            {recipe.cleanup_tip}
+          </p>
+        </MealSection>
+      )}
+
+      {recipe.budget_tips && recipe.budget_tips.length > 0 && (
+        <MealSection title="Budget tips" data-testid="section-budget-tips">
+          <ul className="space-y-2">
+            {recipe.budget_tips.map((tip, i) => (
+              <li key={i} className={app.subtitle} data-testid={`budget-tip-${i}`}>
+                {tip}
+              </li>
+            ))}
+          </ul>
+        </MealSection>
       )}
 
       {recipe.veg_option?.enabled && (

@@ -1,0 +1,94 @@
+{
+  "generatedAt": "2026-05-27T17:52:35.691Z",
+  "before": {
+    "recipeCount": 194,
+    "publishSafe": 171,
+    "blocked": 23,
+    "totals": {
+      "critical": 25,
+      "warning": 665,
+      "info": 376
+    },
+    "blockedReasons": {
+      "missing_local_image": 6,
+      "variant_near_duplicate": 12,
+      "duplicate_title": 5
+    }
+  },
+  "imageFixes": [
+    {
+      "slug": "bbq-chicken-pizza",
+      "before": "/images/golden-100/bbq-chicken-pizza.jpg",
+      "after": "/images/golden-100/bbq-chicken-pizza.jpg",
+      "action": "downloaded_spoonacular",
+      "note": "https://img.spoonacular.com/recipes/634476-636x393.jpg"
+    },
+    {
+      "slug": "breakfast-burrito-bar",
+      "before": "/images/golden-100/breakfast-burrito-bar.jpg",
+      "after": "/images/golden-100/breakfast-burrito-bar.jpg",
+      "action": "downloaded_spoonacular",
+      "note": "https://img.spoonacular.com/recipes/661117-636x393.jpg"
+    },
+    {
+      "slug": "creamy-tuscan-chicken",
+      "before": "/images/golden-100/creamy-tuscan-chicken.jpg",
+      "after": "/images/golden-100/creamy-tuscan-chicken.jpg",
+      "action": "downloaded_spoonacular",
+      "note": "https://img.spoonacular.com/recipes/634476-636x393.jpg"
+    },
+    {
+      "slug": "crispy-chicken-cutlets",
+      "before": "/images/golden-100/crispy-chicken-cutlets.jpg",
+      "after": "/images/golden-100/crispy-chicken-cutlets.jpg",
+      "action": "downloaded_spoonacular",
+      "note": "https://img.spoonacular.com/recipes/634476-636x393.jpg"
+    },
+    {
+      "slug": "french-toast-casserole",
+      "before": "/images/golden-100/french-toast-casserole.jpg",
+      "after": "/images/golden-100/french-toast-casserole.jpg",
+      "action": "downloaded_spoonacular",
+      "note": "https://img.spoonacular.com/recipes/660730-636x393.jpg"
+    },
+    {
+      "slug": "philly-egg-rolls",
+      "before": "/images/golden-100/philly-egg-rolls.jpg",
+      "after": "/images/golden-100/philly-egg-rolls.jpg",
+      "action": "downloaded_spoonacular",
+      "note": "https://img.spoonacular.com/recipes/635796-636x393.jpg"
+    }
+  ],
+  "titleFixes": [
+    {
+      "slug": "loaded-nacho-skillet",
+      "before": "Game-Night Loaded Nacho Skillet",
+      "after": "Nacho Beef Bowls"
+    },
+    {
+      "slug": "italian-meatloaf-with-hard-boiled-eggs",
+      "before": "Italian Stuffed Meatloaf",
+      "after": "Seared Garlic Beef"
+    },
+    {
+      "slug": "bulgogi-bowls",
+      "before": "Korean Bulgogi Rice Bowls",
+      "after": "Sweet soy beef, pickled crunch"
+    },
+    {
+      "slug": "meat-lovers-sheet-pizza",
+      "before": "Meat Lover's Sheet Pan Pizza",
+      "after": "Feeds the crew from one tray"
+    },
+    {
+      "slug": "street-corn-chicken",
+      "before": "Mexican Street Corn Chicken Bowls",
+      "after": "Elote flavors in a bowl"
+    },
+    {
+      "slug": "skillet-chicken-alfredo",
+      "before": "Skillet Chicken Alfredo",
+      "after": "Creamy pasta without the marathon"
+    }
+  ]
+}

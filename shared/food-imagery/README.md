@@ -1,4 +1,4 @@
-# Firehall editorial food imagery (style system v3.0)
+# Firehall editorial food imagery (style system v4.0 — photoreal)
 
 **Principle: consistency > creativity.** Every generated hero uses the same master grade, lighting, and shadow rules. Only dish-specific lines and **locked shot presets** vary by meal category.
 
@@ -25,8 +25,8 @@
 
 ## Regenerating after a style bump
 
-1. Set `FOOD_IMAGERY_STYLE_VERSION` in `master-style.ts` (e.g. `3.0` → `3.1`)
-2. Run `npm run imagery:generate` with `--force` or delete stale rows in `food_imagery_assets`
+1. Set `FOOD_IMAGERY_STYLE_VERSION` in `master-style.ts` (e.g. `4.0` → `4.1`)
+2. Run `npm run imagery:golden-100 -- --force` (or `npm run imagery:generate -- --force`) to replace hero files
 3. New prompts hash differently → new assets versioned on disk
 
 ## Enable in production

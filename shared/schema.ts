@@ -7,6 +7,7 @@ import {
   RECIPE_SIGNATURE_MAX_LEN,
   RECIPE_MEAL_STYLE_MAX_LEN,
 } from "./recipe-signature.js";
+import { FIREHALL_CATEGORY_IDS } from "./firehall-categories.js";
 
 const safeLabel = z.string().trim().min(1).max(80);
 const safeAllergen = z.string().trim().min(1).max(40);
@@ -33,6 +34,10 @@ export const generateRequestSchema = z.object({
   appliances: z.array(z.string().trim().min(1).max(40)).min(1).max(8),
   protein: z.enum(["chicken", "beef", "pork", "turkey", "fish", "seafood", "vegetarian", "any"]),
   healthiness_preference: z.enum(["lean", "balanced", "comfort"]),
+  /** Firehall Meals primary browsing category (practical situations). */
+  firehall_category: z
+    .enum(FIREHALL_CATEGORY_IDS)
+    .optional(),
   budget_level: z.enum(["low", "standard", "splurge"]).optional().default("standard"),
   allergens_to_avoid: z.array(safeAllergen).max(12),
   vegetarian_swap_needed: z.boolean().optional().default(false),
@@ -353,6 +358,26 @@ export interface ClientRecipeResponse {
   hero_image?: string;
   hero_image_alt?: string;
   hero_image_status?: HeroImageStatus;
+  /** Curated catalog slug (Golden 100 or Performance 50 internally) */
+  _slug?: string;
+  /** Customer-facing catalog lineage badge */
+  /** Customer-facing catalog lineage badge */
+  catalog_badge?:
+    | "Firehall Meals Catalog"
+    | "Performance Meal"
+    | "Hall Classic"
+    | "Crew Favorite"
+    | "High Protein"
+    | "Quick Shift Meal";
+  /** Optional trait badges (High Protein, Quick Shift Meal, etc.) */
+  catalog_trait_badges?: Array<
+    | "Firehall Meals Catalog"
+    | "Performance Meal"
+    | "Hall Classic"
+    | "Crew Favorite"
+    | "High Protein"
+    | "Quick Shift Meal"
+  >;
 }
 
 export const pizzaRequestSchema = z.object({

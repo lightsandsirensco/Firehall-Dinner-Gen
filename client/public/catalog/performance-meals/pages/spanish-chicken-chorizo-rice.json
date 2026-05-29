@@ -1,0 +1,190 @@
+{
+  "slug": "spanish-chicken-chorizo-rice",
+  "title": "Spanish Chicken and Chorizo Rice",
+  "displayTitle": "Spanish Chicken and Chorizo Rice",
+  "seoTitle": "Spanish Chicken and Chorizo Rice | Firefighter Meal",
+  "shortDescription": "One-pot saffron rice with chicken thighs, chorizo, and peas",
+  "subtitle": "One-pot saffron rice with chicken thighs, chorizo, and peas",
+  "category": "healthy_performance",
+  "cuisine": "Spanish",
+  "description": "Chicken thighs and chorizo cook with bomba or short-grain rice, saffron, bell pepper, and peas into a fragrant one-pot crew dinner.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 45,
+  "prepTime": 25,
+  "difficulty": "medium",
+  "calories": 545,
+  "protein": 38,
+  "carbs": 52,
+  "fats": 22,
+  "tags": [
+    "protein:chicken",
+    "format:one_pot",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "7-quart Dutch oven with lid",
+    "Wooden spoon"
+  ],
+  "ingredients": [
+    {
+      "name": "bone-in chicken thighs",
+      "quantity": "12",
+      "unit": "pieces",
+      "notes": "about 4.5 lb"
+    },
+    {
+      "name": "Spanish chorizo",
+      "quantity": "12",
+      "unit": "oz",
+      "notes": "sliced into coins"
+    },
+    {
+      "name": "short-grain rice",
+      "quantity": "3",
+      "unit": "cups",
+      "notes": "bomba or arborio"
+    },
+    {
+      "name": "red bell pepper",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "diced"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "1",
+      "unit": "large",
+      "notes": "diced"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "5",
+      "unit": "cloves",
+      "notes": "minced"
+    },
+    {
+      "name": "chicken broth",
+      "quantity": "5",
+      "unit": "cups",
+      "notes": "low sodium"
+    },
+    {
+      "name": "saffron threads",
+      "quantity": "0.5",
+      "unit": "tsp"
+    },
+    {
+      "name": "smoked paprika",
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "frozen peas",
+      "quantity": "1.5",
+      "unit": "cups"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "3",
+      "unit": "tbsp"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "1.5",
+      "unit": "tsp"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Bloom saffron",
+      "instruction": "Steep saffron in warm broth 10 minutes until liquid turns golden and smells distinctly floral and earthy.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Crisp chorizo and brown chicken",
+      "instruction": "Cook chorizo in Dutch oven until fat renders and edges crisp. Remove. Brown chicken thighs in chorizo fat 4 minutes per side until golden.",
+      "minutes": 15,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Build rice base",
+      "instruction": "Sauté onion and pepper 5 minutes. Add garlic, paprika, and rice. Toast 2 minutes until rice edges look translucent and smell nutty.",
+      "minutes": 7,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Simmer covered",
+      "instruction": "Add saffron broth, nest chicken and chorizo on top. Simmer covered 25–30 minutes without stirring until rice absorbs liquid and is tender.",
+      "minutes": 30,
+      "heatLevel": "medium-low"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Add peas and rest",
+      "instruction": "Stir in peas off heat, cover 5 minutes. Rice should be fluffy with slight socarrat crust at bottom if heat was even.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Wide pot is essential—deep narrow pots cook unevenly.",
+    "Lemon wedges at the line brighten rich chorizo fat.",
+    "Substitute andouille if Spanish chorizo unavailable—adjust salt."
+  ],
+  "tonightSpread": [
+    "Simple green salad with sherry vinaigrette.",
+    "Crusty bread for scraping pan."
+  ],
+  "leftovers": [
+    "Reheat covered with splash of broth to restore moisture.",
+    "Arancini-style balls from leftover rice—deep fry or bake."
+  ],
+  "whyCrewsLikeIt": "Bold Spanish flavors feel like a special occasion. One pot means one cleanup after a long shift.",
+  "mealPrepNotes": "Bloom saffron in warm broth 10 minutes before cooking. Use wide Dutch oven for even rice. Station: Do not stir rice after initial mix—stirring releases starch and makes mush. Station: Crisp chorizo first and reserve fat for browning chicken. Station: Rest pot 5 minutes covered off heat before serving for fluffy rice.",
+  "spiceLevel": "medium",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 545,
+    "protein": 38,
+    "carbs": 52,
+    "fats": 22,
+    "label": "~545 cal/serving · 38g protein · 4g fiber (est.)"
+  },
+  "heroImage": "/images/golden-100/spanish-chicken-chorizo-rice.jpg",
+  "mobileImage": "/images/mobile/spanish-chicken-chorizo-rice.jpg",
+  "thumbImage": "/images/thumbs/spanish-chicken-chorizo-rice.jpg",
+  "railImage": "/images/rails/spanish-chicken-chorizo-rice.jpg",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "spanish chicken and chorizo rice",
+    "spanish chicken chorizo rice",
+    "chicken",
+    "Spanish",
+    "one pot",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "lemon-garlic-chicken-tray",
+    "sheet-pan-chicken-fajitas-lite",
+    "honey-garlic-chicken-rice-bowls",
+    "white-bean-chicken-chili",
+    "crock-barbacoa-chicken",
+    "shawarma-chicken-rice-bowls"
+  ],
+  "generatedAt": "2026-05-28T12:57:50.894Z",
+  "contentVersion": 2
+}

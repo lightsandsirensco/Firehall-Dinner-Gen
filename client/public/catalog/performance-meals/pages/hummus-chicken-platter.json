@@ -1,0 +1,189 @@
+{
+  "slug": "hummus-chicken-platter",
+  "title": "Hummus Chicken Platter",
+  "displayTitle": "Hummus Chicken Platter",
+  "seoTitle": "Hummus Chicken Platter | Firefighter Meal",
+  "shortDescription": "Sliced spiced chicken over creamy hummus with veg and pita",
+  "subtitle": "Sliced spiced chicken over creamy hummus with veg and pita",
+  "category": "healthy_performance",
+  "cuisine": "Middle Eastern",
+  "description": "Spiced grilled or roasted chicken breast slices fan over a base of hummus with cucumber, tomato, olives, and warm pita for scooping.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 22,
+  "prepTime": 25,
+  "difficulty": "medium",
+  "calories": 445,
+  "protein": 42,
+  "carbs": 38,
+  "fats": 16,
+  "tags": [
+    "protein:chicken",
+    "format:plated",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "Food processor",
+    "Half-sheet pan",
+    "Large serving platter or hotel pan"
+  ],
+  "ingredients": [
+    {
+      "name": "boneless chicken breasts",
+      "quantity": "4",
+      "unit": "lb"
+    },
+    {
+      "name": "canned chickpeas",
+      "quantity": "3",
+      "unit": "cans",
+      "notes": "15 oz, drained"
+    },
+    {
+      "name": "tahini",
+      "quantity": "0.5",
+      "unit": "cup"
+    },
+    {
+      "name": "lemon juice",
+      "quantity": "0.33",
+      "unit": "cup",
+      "notes": "fresh"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "8",
+      "unit": "cloves",
+      "notes": "4 for hummus, 4 minced"
+    },
+    {
+      "name": "ground cumin",
+      "quantity": "2",
+      "unit": "tsp"
+    },
+    {
+      "name": "smoked paprika",
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "English cucumber",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "diced"
+    },
+    {
+      "name": "cherry tomatoes",
+      "quantity": "2",
+      "unit": "cups",
+      "notes": "halved"
+    },
+    {
+      "name": "Kalamata olives",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "pitted"
+    },
+    {
+      "name": "whole-wheat pita",
+      "quantity": "12",
+      "unit": "rounds"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "0.25",
+      "unit": "cup"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Make hummus base",
+      "instruction": "Blend chickpeas, tahini, half the lemon juice, 4 garlic cloves, cumin, and 2 tbsp olive oil until silky smooth, adding ice water as needed.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Season and cook chicken",
+      "instruction": "Rub chicken with paprika, minced garlic, salt, and 2 tbsp oil. Roast at 425°F 18–22 minutes until 165°F with lightly charred edges.",
+      "minutes": 20,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Rest and slice chicken",
+      "instruction": "Rest chicken 5 minutes, then slice ¼-inch against the grain. Slices should be moist with no pink center and clean cut edges.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Assemble platter",
+      "instruction": "Spread hummus in a large pan, drizzle olive oil and paprika. Arrange chicken over hummus with cucumber, tomatoes, and olives around edges.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Warm pita and serve",
+      "instruction": "Warm pita 5 minutes wrapped in foil at 300°F until soft and pliable. Serve for scooping hummus and chicken together.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Ice water in hummus makes it fluffier—add 2 tbsp at a time while blending.",
+    "Sumac sprinkle at the line adds tartness without extra prep.",
+    "Grill chicken on flat-top if oven is occupied—same spice rub works."
+  ],
+  "tonightSpread": [
+    "Pickled red onion.",
+    "Tabbouleh salad on the side."
+  ],
+  "leftovers": [
+    "Chicken and hummus wrap with extra cucumber.",
+    "Hummus dip with raw veg for next-shift snack."
+  ],
+  "whyCrewsLikeIt": "Interactive platter format feels special but scales easily. High protein from chicken with fiber from hummus and veg.",
+  "mealPrepNotes": "Make hummus smooth in a food processor ahead. Slice chicken against the grain for tender bites. Station: Spread hummus in a large shallow hotel pan for maximum scoop surface. Station: Arrange chicken in overlapping rows so portions look generous at the line. Station: Keep pita wrapped in foil in low oven until service.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 445,
+    "protein": 42,
+    "carbs": 38,
+    "fats": 16,
+    "label": "~445 cal/serving · 42g protein · 8g fiber (est.)"
+  },
+  "heroImage": "/images/golden-100/hummus-chicken-platter.jpg",
+  "mobileImage": "/images/mobile/hummus-chicken-platter.jpg",
+  "thumbImage": "/images/thumbs/hummus-chicken-platter.jpg",
+  "railImage": "/images/rails/hummus-chicken-platter.jpg",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "hummus chicken platter",
+    "chicken",
+    "Middle Eastern",
+    "plated",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "lemon-garlic-chicken-tray",
+    "sheet-pan-chicken-fajitas-lite",
+    "honey-garlic-chicken-rice-bowls",
+    "white-bean-chicken-chili",
+    "crock-barbacoa-chicken",
+    "shawarma-chicken-rice-bowls"
+  ],
+  "generatedAt": "2026-05-28T12:57:50.894Z",
+  "contentVersion": 2
+}

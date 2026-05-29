@@ -1,5 +1,5 @@
 import type { GenerateResponse } from "@shared/schema";
-import { log } from "./index";
+import { log } from "./logger.js";
 import { scoreHallRealism } from "@shared/firehall-instruction-voice";
 import { containsAllergen } from "./allergens";
 import { normalizeRecipeSignature } from "../shared/recipe-signature.js";

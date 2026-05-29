@@ -1,11 +1,15 @@
 {
   "slug": "biscuits-gravy",
   "title": "Biscuits and Gravy",
+  "displayTitle": "Biscuits and Gravy",
+  "seoTitle": "Biscuits and Gravy | Firefighter Meal",
+  "shortDescription": "Southern comfort for a slow morning",
   "subtitle": "Southern comfort for a slow morning",
   "category": "breakfast_brunch",
   "cuisine": "american",
-  "description": "Biscuits and Gravy is a american breakfast built for a hungry firehall crew — Southern comfort for a slow morning. Hearty portions, station-kitchen timing, and flavors everyone recognizes after a long shift.",
+  "description": "Southern comfort for a slow morning. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
@@ -28,69 +32,68 @@
   ],
   "ingredients": [
     {
-      "name": "Pork (shoulder or chops)",
-      "quantity": "3",
-      "unit": "lb"
+      "name": "Breakfast sausage",
+      "quantity": "2",
+      "unit": "lb",
+      "group": "Gravy"
     },
     {
-      "name": "Kosher salt",
-      "quantity": "2",
-      "unit": "tbsp"
+      "name": "All-purpose flour",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Gravy"
+    },
+    {
+      "name": "Whole milk",
+      "quantity": "4",
+      "unit": "cups",
+      "group": "Gravy"
     },
     {
       "name": "Black pepper",
       "quantity": "1",
-      "unit": "tbsp"
+      "unit": "tbsp",
+      "group": "Gravy"
     },
     {
-      "name": "Cooking oil",
-      "quantity": "0.3",
-      "unit": "cup"
+      "name": "Buttermilk biscuit mix",
+      "quantity": "4",
+      "unit": "cups",
+      "group": "Biscuits"
     },
     {
-      "name": "Yellow onion",
-      "quantity": "2",
-      "unit": "large"
-    },
-    {
-      "name": "Garlic",
-      "quantity": "6",
-      "unit": "cloves"
+      "name": "Cold butter",
+      "quantity": "8",
+      "unit": "tbsp",
+      "group": "Biscuits"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Prep the line",
-      "instruction": "Set out all ingredients for Biscuits and Gravy before you turn on heat — firefighters eat on a schedule. Pat proteins dry and season aggressively with salt and pepper; dry surfaces brown instead of steam.",
-      "minutes": 15,
-      "heatLevel": ""
+      "title": "Bake the biscuits",
+      "instruction": "Bake biscuits at 425°F per mix directions until tall and golden — 14–18 minutes. Split and hold in a towel while gravy finishes.",
+      "minutes": 18,
+      "heatLevel": "high"
     },
     {
       "stepNumber": 2,
-      "title": "Build the base",
-      "instruction": "Heat oil in your largest skillet, Dutch oven, or on the flat-top over medium-high until it shimmers. Add aromatics (onion first) and cook until the edges turn golden and the smell sweetens — usually 4–6 minutes. If garlic is in the recipe, add it after the onion softens so it doesn't burn.",
-      "minutes": 8,
+      "title": "Brown the sausage",
+      "instruction": "Crumble sausage in a large skillet over medium-high until no pink remains. Leave the fat — that's the gravy body.",
+      "minutes": 10,
       "heatLevel": "medium-high"
     },
     {
       "stepNumber": 3,
-      "title": "Cook the main",
-      "instruction": "Cook the primary protein or base for Biscuits and Gravy until it hits proper color and safe internal temperature. Don't crowd the pan — work in batches if needed so you get browning, not gray stew. Listen for a steady sizzle; if it's silent, the heat is too low.",
-      "minutes": 20,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 4,
-      "title": "Finish and season",
-      "instruction": "Bring components together, taste, and adjust salt. Sauce should coat, not pool. If cheese is involved, melt it just until glossy — another 1–2 minutes under a lid or broiler. Let heavy proteins rest 5 minutes before slicing.",
+      "title": "Make the pepper gravy",
+      "instruction": "Sprinkle flour over sausage; stir 1 minute. Whisk in milk gradually. Simmer 5–8 minutes until thick enough to coat a spoon. Season with plenty of black pepper.",
       "minutes": 10,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 5,
-      "title": "Serve the hall",
-      "instruction": "Transfer to sheet trays or a serving line immediately. Keep backup warm at 200°F. Call the crew while it's hot — this meal is built for a hungry hall, not a photo shoot.",
+      "stepNumber": 4,
+      "title": "Split and smother",
+      "instruction": "Split biscuits on sheet trays. Ladle hot gravy over the line. Hold gravy in a warm pot on low — stir before each ladle so it doesn't skin over.",
       "minutes": 5,
       "heatLevel": "low"
     }
@@ -109,6 +112,10 @@
     "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
     "Label trays with date and reheat to 165°F minimum before second shift."
   ],
+  "whyCrewsLikeIt": "Southern comfort for a slow morning. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
+  "substitutions": [],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
   "nutrition": {
     "calories": 600,
     "protein": 40,
@@ -141,6 +148,8 @@
     "meat-lovers-sheet-pizza",
     "pulled-pork-mac"
   ],
-  "generatedAt": "2026-05-27T15:03:06.207Z",
-  "contentVersion": 1
+  "sourceName": "Firehall Meals",
+  "sourceUrl": "",
+  "generatedAt": "2026-05-28T12:06:15.089Z",
+  "contentVersion": 2
 }

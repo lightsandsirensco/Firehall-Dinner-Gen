@@ -1,0 +1,101 @@
+{
+  "slug": "strawberry-spinach",
+  "title": "Strawberry Spinach Smoothie",
+  "seoTitle": "Strawberry Spinach Smoothie | Firefighter Smoothie",
+  "subtitle": "Green · Green",
+  "description": "Strawberry-banana sweetness hides the spinach completely. A good first step when the hall wants to eat better without a lecture.",
+  "fuelType": "smoothie",
+  "taxonomyCategory": "green_smoothie",
+  "taxonomyLabel": "Green",
+  "intro": "Strawberry-banana sweetness hides the spinach completely. A good first step when the hall wants to eat better without a lecture.",
+  "ingredients": [
+    {
+      "name": "frozen strawberries",
+      "quantity": "3",
+      "unit": "cups"
+    },
+    {
+      "name": "banana",
+      "quantity": "2",
+      "unit": "medium",
+      "notes": "ripe, fresh or frozen"
+    },
+    {
+      "name": "baby spinach",
+      "quantity": "2",
+      "unit": "cups",
+      "notes": "packed"
+    },
+    {
+      "name": "milk",
+      "quantity": "1.5",
+      "unit": "cups"
+    },
+    {
+      "name": "plain Greek yogurt",
+      "quantity": "1",
+      "unit": "cup"
+    },
+    {
+      "name": "chia seeds",
+      "quantity": "2",
+      "unit": "tbsp",
+      "notes": "optional"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "instruction": "Blend spinach with milk first until smooth — no visible leaves."
+    },
+    {
+      "stepNumber": 2,
+      "instruction": "Add strawberries, banana, and yogurt. Blend until thick and pink, not brown."
+    },
+    {
+      "stepNumber": 3,
+      "instruction": "Stir in chia at the end if using, or blend 10 seconds on low."
+    },
+    {
+      "stepNumber": 4,
+      "instruction": "Drink within a few hours; chia will thicken if it sits overnight."
+    }
+  ],
+  "nutrition": {
+    "calories": 250,
+    "protein": 16,
+    "carbs": 32,
+    "fats": 8,
+    "highlights": "~250 cal · ~16 g protein · fiber from fruit and optional chia · greens without salad fatigue"
+  },
+  "substitutions": [
+    "Frozen mixed berries replace strawberries.",
+    "Flax meal (1 tbsp) instead of chia."
+  ],
+  "shiftNote": "Easy sell to crews skeptical of green food — looks and tastes like a berry shake.",
+  "heroImage": "/images/editorial/smoothies/strawberry-spinach.webp",
+  "thumbImage": "/images/editorial/smoothies/strawberry-spinach.webp",
+  "tags": [
+    "fuel_smoothie",
+    "taxonomy:green_smoothie",
+    "smoothie",
+    "performance_fuel",
+    "shift_nutrition"
+  ],
+  "searchTerms": [
+    "strawberry spinach smoothie",
+    "healthy smoothies",
+    "smoothies for firefighters",
+    "firefighter breakfast",
+    "recovery smoothie",
+    "green smoothie",
+    "station blender",
+    "shift nutrition"
+  ],
+  "relatedSlugs": [
+    "green-pineapple"
+  ],
+  "catalogSet": "fuel_smoothie",
+  "generatedAt": "2026-05-28T00:37:54.583Z",
+  "contentVersion": 1
+}

@@ -1,0 +1,85 @@
+{
+  "slug": "meals-firefighters-actually-cook",
+  "title": "Meals Firefighters Actually Cook",
+  "subtitle": "What shows up on station tables — not food-blog fiction",
+  "description": "Meals firefighters actually cook at the station: chili, tacos, pasta bakes, grill nights, and skillets — real patterns from hall kitchens, with recipes attached.",
+  "topic": "crew_culture",
+  "pillar": "station_lifestyle",
+  "intro": "Scroll long enough and you will see truffle risotto pitched for shift dinner. Most halls are not cooking that. What shows up again and again is big, familiar food: chili, burgers, tacos, pasta bakes, grilled chicken, sheet pans. The job favors volume, hold time, and a kitchen that can survive interruptions.",
+  "sections": [
+    {
+      "id": "patterns",
+      "heading": "Patterns you see again and again",
+      "paragraphs": [
+        "Handheld nights (burgers, tacos, subs), one-pot batches (chili, jambalaya), and oven bakes (lasagna, ziti, mac) dominate because they scale and reheat."
+      ]
+    },
+    {
+      "id": "why",
+      "heading": "Why halls avoid 'chef food' on shift",
+      "paragraphs": [
+        "Interruptions, mixed skill levels, and cleanup limits push crews toward forgiving recipes. That is not lack of ambition — it is operational reality."
+      ]
+    }
+  ],
+  "practicalAdvice": [
+    "If a recipe needs constant attention at the stove, it loses on busy nights.",
+    "Crews vote with volume — protein + starch + optional heat wins.",
+    "The best cooks at the hall are organizers, not magicians."
+  ],
+  "mealRecommendations": [
+    {
+      "slug": "chili-garlic-bread",
+      "title": "Firehall Chili",
+      "blurb": "The universal hall baseline."
+    },
+    {
+      "slug": "smash-burgers",
+      "title": "Double Smash Burgers",
+      "blurb": "Flat-top culture is real."
+    },
+    {
+      "slug": "hall-taco-bar",
+      "title": "Hall Taco Bar Night",
+      "blurb": "Weekly at many halls."
+    },
+    {
+      "slug": "chicken-parm",
+      "title": "Chicken Parm",
+      "blurb": "Italian night never dies."
+    },
+    {
+      "slug": "pulled-pork",
+      "title": "Pulled Pork Sandwiches",
+      "blurb": "BBQ hold food — crew favorite."
+    },
+    {
+      "slug": "sheet-pan-sausage-peppers",
+      "title": "Sheet Pan Sausage and Peppers",
+      "blurb": "Low drama, high yield."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Where do these recipes come from?",
+      "answer": "Each link goes to a full recipe on Firehall Meals — crew-sized portions, station timing, and steps written for a shared kitchen. Not home-blog scaling."
+    },
+    {
+      "question": "What if crew size or time changes tonight?",
+      "answer": "Use Find a Meal with your headcount and minutes available. It pulls from the same hall-tested dinners these guides recommend."
+    }
+  ],
+  "relatedArticleSlugs": [
+    "25-firefighter-dinner-ideas",
+    "feeding-a-firehall-crew"
+  ],
+  "keywords": [
+    "meals firefighters actually cook",
+    "fire station cooking",
+    "firehall meals",
+    "crew food"
+  ],
+  "publishedAt": "2026-05-27T18:00:00.000Z",
+  "updatedAt": "2026-05-27T18:00:00.000Z",
+  "readMinutes": 7
+}

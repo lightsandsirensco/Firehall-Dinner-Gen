@@ -170,7 +170,7 @@ export default function VotePage() {
           <Flame className="w-10 h-10 mx-auto" style={{ color: "#C62828" }} />
           <h1 className="font-heading text-3xl tracking-wide text-foreground">VOTE NOT FOUND</h1>
           <p className="text-sm text-muted-foreground">{error}</p>
-          <Link href="/">
+          <Link href="/generator">
             <Button variant="outline" className="font-heading tracking-wider" data-testid="button-back-home">
               BACK TO MEALS
             </Button>
@@ -200,7 +200,7 @@ export default function VotePage() {
               <Flame className="w-6 h-6" style={{ color: "#C62828" }} />
               <span className="font-heading text-base leading-none tracking-wide text-foreground">FIREHALL MEALS</span>
             </div>
-            <Link href="/">
+            <Link href="/generator">
               <span className="text-xs text-muted-foreground hover:text-foreground transition-colors cursor-pointer flex items-center gap-1">
                 Generator <ChevronRight className="w-3 h-3" />
               </span>

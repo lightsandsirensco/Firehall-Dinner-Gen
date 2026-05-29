@@ -17,6 +17,11 @@ import { buildMasterNegativePrompt } from "../../shared/food-imagery/negative-pr
 import { getVisualLockPromptLines, getVisualLockNegatives } from "../../shared/visual-lock.js";
 import { getMobileCropPromptLines } from "../../shared/mobile-crop-rules.js";
 import {
+  inferPlatingType,
+  buildPlatingPromptLine,
+  platingNegativeHints,
+} from "../../shared/plating-type.js";
+import {
   composeEditorialMealPrompt,
   getEditorialNegativePromptBlock,
   EDITORIAL_IMAGE_STYLE_VERSION,
@@ -44,10 +49,10 @@ export interface EditorialImagePromptResult {
 }
 
 const EDITORIAL_QUALITY_RULES = [
-  "Ultra realistic food photography only — believable geometry, natural portion scale",
-  "Premium editorial menu quality — Bon Appétit / Serious Eats hero shot discipline",
-  "Cinematic but truthful — no AI slop, no waxy textures, no oversaturated neon food",
-  "Consistent camera discipline — same brand look across every image in the set",
+  "Photorealistic food photograph only — believable geometry, natural portion scale, shot on real camera",
+  "Premium editorial menu quality — Serious Eats / Bon Appétit test-kitchen realism",
+  "Must look like a real photograph — no AI slop, no waxy textures, no synthetic gloss, no HDR neon food",
+  "Same brand look on every image — locked shot preset angle, shared lighting and grade",
   "Mobile-first hero crop — subject centered with safe margins for 4:5 vertical cards",
   "No text, logos, watermarks, people, hands, faces, or delivery packaging",
 ] as const;
@@ -64,20 +69,8 @@ function stablePromptSeed(input: BuildEditorialImagePromptInput, presetId: Image
 }
 
 function dishPlatingLine(mealFormat?: string, title?: string): string {
-  const fmt = (mealFormat || "").toLowerCase();
-  const t = (title || "").toLowerCase();
-  if (fmt === "burger" || /burger|smash/.test(t)) {
-    return "stacked handheld on glossy bun, visible layers, napkin at edge only";
-  }
-  if (fmt === "tacos" || /taco/.test(t)) return "street-style tacos on dark plate, charred edges visible";
-  if (fmt === "pasta" || /pasta|spaghetti|lasagna|ziti/.test(t)) {
-    return "twirled pasta in wide bowl, restrained garnish, generous portion";
-  }
-  if (fmt === "pizza" || /pizza|pie/.test(t)) return "whole pie or controlled slice, cheese bubble and crust char";
-  if (fmt === "soup_chili" || /chili|stew|soup/.test(t)) return "deep bowl, toppings centered, visible steam";
-  if (fmt === "bowl" || /bowl/.test(t)) return "generous bowl, distinct zones, protein forward";
-  if (fmt === "grill" || /grill|bbq|smoked/.test(t)) return "protein on rustic platter, grill marks visible";
-  return "single generous plate, sides soft at edges, firehall portion scale";
+  const plating = inferPlatingType(title || "", mealFormat);
+  return buildPlatingPromptLine(plating, title || "Firehall crew meal", "American comfort");
 }
 
 /**
@@ -133,10 +126,12 @@ export function buildEditorialImagePrompt(
     positiveParts.push(`Story: ${input.hookLine.trim()}`);
   }
 
+  const platingType = inferPlatingType(dish, input.mealFormat);
   const negativeParts = [
     getEditorialNegativePromptBlock([buildMasterNegativePrompt()]),
     ...getVisualLockNegatives(presetId),
     ...preset.avoid,
+    ...platingNegativeHints(platingType),
     "oversaturated colors",
     "fake plastic food",
     "unrealistic geometry",

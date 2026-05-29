@@ -1,0 +1,78 @@
+{
+  "slug": "one-pot-firehall-meals",
+  "title": "One-Pot Firehall Meals",
+  "subtitle": "Fewer dishes, fewer arguments, faster cleanup",
+  "description": "One-pot firehall meals: jambalaya, chicken and rice, chili, and skillets that keep the crew fed and the sink empty.",
+  "topic": "meal_planning",
+  "pillar": "recipes_meals",
+  "intro": "Cleanup drives what halls cook more than cookbooks admit. One-pot firehall meals trade a little browning glamour for dishes that fit in one sink. On busy nights, that trade is always worth it.",
+  "sections": [
+    {
+      "id": "types",
+      "heading": "Skillet vs Dutch oven vs deep pot",
+      "paragraphs": [
+        "Skillets for fast. Dutch ovens and stock pots for simmer. Pick one vessel and commit — do not migrate mid-recipe."
+      ]
+    },
+    {
+      "id": "cleanup",
+      "heading": "Cleanup is the real win",
+      "paragraphs": [
+        "One pot means one soak. Assign washer before you start cooking — otherwise the cook owns dishes and morale drops."
+      ]
+    }
+  ],
+  "practicalAdvice": [
+    "Brown in the pot before liquid — always.",
+    "Deglaze with stock or water — free flavor.",
+    "Serve from the pot or one cambro — not twelve individual pans."
+  ],
+  "mealRecommendations": [
+    {
+      "slug": "one-pot-chicken-rice",
+      "title": "One-Pot Chicken and Rice",
+      "blurb": "Hall rookie classic."
+    },
+    {
+      "slug": "jambalaya",
+      "title": "Cajun Jambalaya for the Hall",
+      "blurb": "Deep pot — big flavor."
+    },
+    {
+      "slug": "chili-garlic-bread",
+      "title": "Firehall Chili",
+      "blurb": "One deep pot — holds hot across the shift."
+    },
+    {
+      "slug": "sausage-peppers-onions",
+      "title": "Sausage Peppers and Onions",
+      "blurb": "Skillet one-pan — low dish count."
+    },
+    {
+      "slug": "pad-thai",
+      "title": "Hall Rush Pad Thai",
+      "blurb": "One wok finish — one wash."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Where do these recipes come from?",
+      "answer": "Each link goes to a full recipe on Firehall Meals — crew-sized portions, station timing, and steps written for a shared kitchen. Not home-blog scaling."
+    },
+    {
+      "question": "What if crew size or time changes tonight?",
+      "answer": "Use Find a Meal with your headcount and minutes available. It pulls from the same hall-tested dinners these guides recommend."
+    }
+  ],
+  "relatedArticleSlugs": [
+    "easy-firehall-pasta-recipes"
+  ],
+  "keywords": [
+    "one pot firehall meals",
+    "one pot firefighter dinner",
+    "single pot crew meal"
+  ],
+  "publishedAt": "2026-05-27T18:00:00.000Z",
+  "updatedAt": "2026-05-27T18:00:00.000Z",
+  "readMinutes": 7
+}

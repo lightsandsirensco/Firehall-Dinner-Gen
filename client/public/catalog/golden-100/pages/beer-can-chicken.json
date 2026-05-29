@@ -1,11 +1,15 @@
 {
   "slug": "beer-can-chicken",
   "title": "Beer Can Chicken",
+  "displayTitle": "Beer Can Chicken",
+  "seoTitle": "Beer Can Chicken | Firefighter Meal",
+  "shortDescription": "Juicy bird, crispy skin, grill marks",
   "subtitle": "Juicy bird, crispy skin, grill marks",
   "category": "bbq_grill_nights",
   "cuisine": "american",
-  "description": "Beer Can Chicken is a american grill built for a hungry firehall crew — Juicy bird, crispy skin, grill marks. Hearty portions, station-kitchen timing, and flavors everyone recognizes after a long shift.",
+  "description": "Juicy bird, crispy skin, grill marks. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 90,
   "prepTime": 30,
   "difficulty": "hard",
@@ -31,70 +35,70 @@
   ],
   "ingredients": [
     {
-      "name": "Chicken (boneless thighs or breasts)",
+      "name": "Whole chicken or bone-in thighs",
+      "quantity": "5",
+      "unit": "lb",
+      "group": "Main"
+    },
+    {
+      "name": "Beer can",
+      "quantity": "1",
+      "unit": "count",
+      "notes": "room temp, half full",
+      "group": "Roast"
+    },
+    {
+      "name": "Jerk or poultry rub",
       "quantity": "3",
-      "unit": "lb"
+      "unit": "tbsp",
+      "group": "Seasoning"
     },
     {
       "name": "Kosher salt",
       "quantity": "2",
-      "unit": "tbsp"
+      "unit": "tbsp",
+      "group": "Seasoning"
     },
     {
-      "name": "Black pepper",
-      "quantity": "1",
-      "unit": "tbsp"
+      "name": "Lime juice",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Finish"
     },
     {
-      "name": "Cooking oil",
-      "quantity": "0.3",
-      "unit": "cup"
-    },
-    {
-      "name": "Yellow onion",
+      "name": "Vegetable oil",
       "quantity": "2",
-      "unit": "large"
-    },
-    {
-      "name": "Garlic",
-      "quantity": "6",
-      "unit": "cloves"
+      "unit": "tbsp",
+      "group": "Seasoning"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Prep the line",
-      "instruction": "Set out all ingredients for Beer Can Chicken before you turn on heat — firefighters eat on a schedule. Pat proteins dry and season aggressively with salt and pepper; dry surfaces brown instead of steam.",
+      "title": "Season under the skin",
+      "instruction": "Dry chicken thoroughly. Season under skin and in cavity. For beer-can method: open a room-temp beer, set can in cavity, stand bird on indirect zone.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Build the base",
-      "instruction": "Heat oil in your largest skillet, Dutch oven, or on the flat-top over medium-high until it shimmers. Add aromatics (onion first) and cook until the edges turn golden and the smell sweetens — usually 4–6 minutes. If garlic is in the recipe, add it after the onion softens so it doesn't burn.",
-      "minutes": 8,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
-      "title": "Cook the main",
-      "instruction": "Cook the primary protein or base for Beer Can Chicken until it hits proper color and safe internal temperature. Don't crowd the pan — work in batches if needed so you get browning, not gray stew. Listen for a steady sizzle; if it's silent, the heat is too low.",
-      "minutes": 20,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 4,
-      "title": "Finish and season",
-      "instruction": "Bring components together, taste, and adjust salt. Sauce should coat, not pool. If cheese is involved, melt it just until glossy — another 1–2 minutes under a lid or broiler. Let heavy proteins rest 5 minutes before slicing.",
-      "minutes": 10,
+      "title": "Grill indirect then crisp",
+      "instruction": "Run grill 375°F indirect with lid down until thickest part reads 165°F (60–75 minutes for a whole bird). Move to direct heat 5 minutes to crisp skin. Juices should run clear, not pink.",
+      "minutes": 70,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 5,
-      "title": "Serve the hall",
-      "instruction": "Transfer to sheet trays or a serving line immediately. Keep backup warm at 200°F. Call the crew while it's hot — this meal is built for a hungry hall, not a photo shoot.",
-      "minutes": 5,
+      "stepNumber": 3,
+      "title": "Rest and portion",
+      "instruction": "Rest 10 minutes before carving. Beer Can Chicken stays juicier if you don't slice immediately. Hold quarters on sheet trays at 180°F for late eaters.",
+      "minutes": 12,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Carve for the line",
+      "instruction": "Quarter birds or slice thighs. Serve on sheet trays with pan juices — backup bird stays whole in a 180°F oven up to 25 minutes.",
+      "minutes": 8,
       "heatLevel": "low"
     }
   ],
@@ -116,6 +120,12 @@
     "Label trays with date and reheat to 165°F minimum before second shift.",
     "Slice cold protein thin for next-day wraps or salads — faster reheat, less dry-out."
   ],
+  "whyCrewsLikeIt": "Juicy bird, crispy skin, grill marks. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
+  "substitutions": [
+    "Chicken thighs ↔ breasts (thighs forgive overcooking on the flat-top)."
+  ],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
   "nutrition": {
     "calories": 520,
     "protein": 32,
@@ -147,7 +157,8 @@
     "grilled-pork-chops",
     "honey-garlic-pork-tenderloin"
   ],
-  "sourceName": "Hey Grill Hey",
-  "generatedAt": "2026-05-27T15:03:06.141Z",
-  "contentVersion": 1
+  "sourceName": "Firehall Meals",
+  "sourceUrl": "",
+  "generatedAt": "2026-05-28T12:06:14.979Z",
+  "contentVersion": 2
 }

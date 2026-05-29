@@ -1,0 +1,181 @@
+{
+  "slug": "yogurt-marinated-grill-chicken",
+  "title": "Yogurt Marinated Grill Chicken",
+  "displayTitle": "Yogurt Marinated Grill Chicken",
+  "seoTitle": "Yogurt Marinated Grill Chicken | Firefighter Meal",
+  "shortDescription": "Tender spiced chicken thighs from an overnight yogurt marinade",
+  "subtitle": "Tender spiced chicken thighs from an overnight yogurt marinade",
+  "category": "healthy_performance",
+  "cuisine": "Middle Eastern",
+  "description": "Chicken thighs marinate in Greek yogurt with lemon, garlic, and warm spices, then grill until charred outside and juicy inside.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 20,
+  "prepTime": 20,
+  "difficulty": "medium",
+  "calories": 455,
+  "protein": 40,
+  "carbs": 4,
+  "fats": 30,
+  "tags": [
+    "protein:chicken",
+    "format:grill",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "Grill or flat-top",
+    "Large mixing bowl",
+    "Instant-read thermometer"
+  ],
+  "ingredients": [
+    {
+      "name": "bone-in chicken thighs",
+      "quantity": "16",
+      "unit": "pieces",
+      "notes": "about 6 lb"
+    },
+    {
+      "name": "plain Greek yogurt",
+      "quantity": "2",
+      "unit": "cups"
+    },
+    {
+      "name": "lemon juice",
+      "quantity": "0.33",
+      "unit": "cup",
+      "notes": "fresh"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "8",
+      "unit": "cloves",
+      "notes": "minced"
+    },
+    {
+      "name": "ground cumin",
+      "quantity": "2",
+      "unit": "tsp"
+    },
+    {
+      "name": "smoked paprika",
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "ground coriander",
+      "quantity": "1",
+      "unit": "tsp"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "black pepper",
+      "quantity": "1",
+      "unit": "tsp"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "3",
+      "unit": "tbsp"
+    },
+    {
+      "name": "fresh parsley",
+      "quantity": "0.5",
+      "unit": "cup",
+      "notes": "chopped"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Mix marinade",
+      "instruction": "Combine yogurt, lemon juice, garlic, cumin, paprika, coriander, salt, pepper, and 2 tbsp oil until smooth and evenly spiced throughout.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Marinate chicken",
+      "instruction": "Coat thighs thoroughly in marinade. Refrigerate at least 4 hours or overnight so yogurt enzymes tenderize meat and flavors penetrate.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Preheat grill",
+      "instruction": "Heat grill to medium-high 400–450°F. Scrape and oil grates so chicken releases cleanly without tearing skin.",
+      "minutes": 10,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Grill until done",
+      "instruction": "Grill skin-side down 6–7 minutes until charred. Flip, cook 8–10 more minutes until internal temp hits 165°F and juices run clear.",
+      "minutes": 18,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Rest and garnish",
+      "instruction": "Rest 5 minutes in foil. Scatter parsley. Meat should pull cleanly from bone with moist, white interior near bone.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Oven backup at 425°F works if rain cancels grill night—same marinade.",
+    "Serve with toum or tzatziki for cooling contrast.",
+    "Save marinade never—discard after raw chicken contact."
+  ],
+  "tonightSpread": [
+    "Grilled pita and hummus.",
+    "Tomato-cucumber salad."
+  ],
+  "leftovers": [
+    "Slice into wraps with yogurt sauce.",
+    "Chop over a grain bowl with pickled onions."
+  ],
+  "whyCrewsLikeIt": "Yogurt tenderizes lean meat for foolproof grilling. Smoky char without drying out—ideal for summer hall nights.",
+  "mealPrepNotes": "Marinate 4–24 hours. Bring to room temp 20 minutes before grilling. Station: Oil grill grates well—yogurt marinade sticks if grates are dry. Station: Grill skin-side down first for crisp char, finish flesh-side down. Station: Hold finished chicken in foil at 170°F max to prevent drying.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 455,
+    "protein": 40,
+    "carbs": 4,
+    "fats": 30,
+    "label": "~455 cal/serving · 40g protein · 0g fiber (est.)"
+  },
+  "heroImage": "/images/golden-100/yogurt-marinated-grill-chicken.jpg",
+  "mobileImage": "/images/mobile/yogurt-marinated-grill-chicken.jpg",
+  "thumbImage": "/images/thumbs/yogurt-marinated-grill-chicken.jpg",
+  "railImage": "/images/rails/yogurt-marinated-grill-chicken.jpg",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "yogurt marinated grill chicken",
+    "chicken",
+    "Middle Eastern",
+    "grill",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "lemon-garlic-chicken-tray",
+    "sheet-pan-chicken-fajitas-lite",
+    "honey-garlic-chicken-rice-bowls",
+    "white-bean-chicken-chili",
+    "crock-barbacoa-chicken",
+    "shawarma-chicken-rice-bowls"
+  ],
+  "generatedAt": "2026-05-28T12:57:50.894Z",
+  "contentVersion": 2
+}

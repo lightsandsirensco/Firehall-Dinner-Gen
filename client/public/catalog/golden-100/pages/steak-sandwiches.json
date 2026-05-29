@@ -1,17 +1,21 @@
 {
   "slug": "steak-sandwiches",
   "title": "Steak Sandwiches",
+  "displayTitle": "Steak Sandwiches",
+  "seoTitle": "Steak Sandwiches | Firefighter Meal",
+  "shortDescription": "Thin-sliced steak, toasted roll, hall classic",
   "subtitle": "Thin-sliced steak, toasted roll, hall classic",
   "category": "firehall_classics",
   "cuisine": "american",
   "description": "Grill marks, melted cheese, sandwich line",
   "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 60,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 720,
-  "protein": 40,
-  "carbs": 68,
+  "calories": 710,
+  "protein": 46,
+  "carbs": 48,
   "fats": 36,
   "tags": [
     "protein:beef",
@@ -179,10 +183,14 @@
     "Label trays with date and reheat to 165°F minimum before second shift.",
     "Store components separate — assemble fresh; buns go soggy overnight."
   ],
+  "whyCrewsLikeIt": "Thin-sliced steak, toasted roll, hall classic. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
+  "substitutions": [],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 720,
-    "protein": 40,
-    "carbs": 68,
+    "calories": 710,
+    "protein": 46,
+    "carbs": 48,
     "fats": 36,
     "label": "per serving (hall portion)"
   },
@@ -209,8 +217,9 @@
     "pulled-pork",
     "loaded-baked-potato-bar"
   ],
-  "sourceName": "Firehall Classics",
+  "sourceName": "Firehall Meals",
+  "sourceUrl": "",
   "classicSlug": "steak-sandwiches",
-  "generatedAt": "2026-05-27T15:03:06.124Z",
-  "contentVersion": 1
+  "generatedAt": "2026-05-28T12:06:14.960Z",
+  "contentVersion": 2
 }

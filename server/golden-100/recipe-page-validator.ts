@@ -3,10 +3,13 @@
  */
 
 import { goldenRecipePageSchema, type GoldenRecipePage } from "../../shared/golden-100/recipe-page-schema.js";
-import { scoreRecipeTitle } from "../../shared/recipe-title-quality.js";
+import { auditGoldenRecipeContent } from "../../shared/golden-100/recipe-quality/audit.js";
+import {
+  countPlaceholderIngredients,
+  isGenericStep,
+} from "../../shared/golden-100/recipe-quality/placeholders.js";
 import type { GoldenRecipeAuditIssue } from "../../shared/golden-100/types.js";
 
-const VAGUE_STEP = /^(cook|add|mix|stir|serve|prepare)\s+(the\s+)?\w+\s*(until done|until ready)?\.?$/i;
 const FAKE_TITLE = /\b(plated main|protein bowl|mystery|fusion surprise|deconstructed)\b/i;
 
 export interface PageValidationResult {
@@ -23,7 +26,7 @@ function scoreInstructions(steps: GoldenRecipePage["steps"]): number {
     if (step.instruction.length >= 80) score += 8;
     if (step.minutes != null && step.minutes > 0) score += 4;
     if (step.heatLevel) score += 3;
-    if (VAGUE_STEP.test(step.instruction.trim())) score -= 15;
+    if (isGenericStep(step)) score -= 15;
   }
   return Math.min(100, Math.max(0, score));
 }
@@ -71,56 +74,27 @@ export function validateGoldenRecipePage(raw: unknown): PageValidationResult {
     });
   }
 
-  const titleCheck = scoreRecipeTitle(page.title, {
-    mealFormat: page.tags.find((t) => t.startsWith("format:"))?.replace("format:", ""),
-    protein: page.tags.find((t) => t.startsWith("protein:"))?.replace("protein:", ""),
-    cuisine: page.cuisine,
-  });
-  if (!titleCheck.pass) {
+  const contentAudit = auditGoldenRecipeContent(page);
+  issues.push(...contentAudit.issues);
+
+  const placeholderCount = countPlaceholderIngredients(page.ingredients);
+  if (placeholderCount > 0) {
     issues.push({
       slug: page.slug,
-      code: "weak_title",
-      message: (titleCheck.messages ?? []).join("; ") || "title quality gate failed",
-      severity: "warn",
-    });
-  }
-
-  for (const step of page.steps) {
-    if (step.instruction.length < 40) {
-      issues.push({
-        slug: page.slug,
-        code: "vague_step",
-        message: `step ${step.stepNumber} too short`,
-        severity: "error",
-      });
-    }
-    if (VAGUE_STEP.test(step.instruction)) {
-      issues.push({
-        slug: page.slug,
-        code: "vague_step",
-        message: `step ${step.stepNumber} is too generic`,
-        severity: "error",
-      });
-    }
-  }
-
-  if (page.ingredients.length < 4) {
-    issues.push({
-      slug: page.slug,
-      code: "thin_ingredients",
-      message: "not enough ingredients for a recognizable meal",
+      code: "placeholder_ingredient",
+      message: `${placeholderCount} placeholder ingredient(s)`,
       severity: "error",
     });
   }
 
   const realismScore = Math.round(
-    (scoreInstructions(page.steps) + scoreCoherence(page) + page.realismScore) / 3,
+    (scoreInstructions(page.steps) + scoreCoherence(page) + contentAudit.score) / 3,
   );
   const firefighterScore = page.firefighterScore;
 
   const errors = issues.filter((i) => i.severity === "error");
   return {
-    pass: errors.length === 0,
+    pass: errors.length === 0 && contentAudit.pass,
     page,
     issues,
     realismScore,

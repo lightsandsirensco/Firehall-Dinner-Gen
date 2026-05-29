@@ -1,33 +1,34 @@
 /**
  * Central Firehall editorial image style — single source for all meal imagery prompts.
- * Every generated image: MASTER_STYLE + meal-specific prompt.
+ * Every generated image: MASTER_STYLE + meal-specific prompt + locked shot preset.
  */
 
 import {
   FIREHALL_MASTER_EDITORIAL_STYLE,
+  FIREHALL_PHOTO_BASELINE,
   FOOD_IMAGERY_STYLE_VERSION,
   getMasterStylePromptLines,
 } from "../../shared/food-imagery/master-style.js";
 
 export const EDITORIAL_IMAGE_STYLE_VERSION = `editorial-prompts-${FOOD_IMAGERY_STYLE_VERSION}`;
 
-/** One master visual identity — gritty firehall kitchen, cinematic food photography. */
+/** One master visual identity — real kitchen, photoreal menu photography. */
 export const MASTER_EDITORIAL_VISUAL_STYLE = {
   aesthetic:
-    "gritty firefighter kitchen aesthetic, cinematic commercial food photography, masculine hearty firehall portions",
+    "photorealistic restaurant food photography in a real firehall kitchen — not illustration, not 3D, not AI fantasy food",
   lighting:
-    "warm tungsten key light from camera-left 45°, controlled fill from right, moody contrast, subtle steam only when dish is hot",
+    "single warm practical key from camera-left 45°, soft fill, believable contrast, steam only when dish is hot",
   grade:
-    "cinematic warm grade — amber highlights, rich chocolate shadows, restrained saturation, no cold blue cast",
-  plating: "realistic plating on dark surfaces, believable portion scale for hungry crew",
+    "natural color grade — true food tones, restrained saturation, soft shadow roll-off, no cold blue cast",
+  plating: "realistic plating on dark surfaces, believable portion scale, slight natural asymmetry",
   textures:
-    "stainless steel and weathered firehall kitchen textures in soft background bokeh, cast iron accents when natural",
+    "weathered wood and brushed steel in soft background bokeh, cast iron accents when natural",
   lens:
-    "consistent 50mm equivalent perspective, center-weighted hero, 12% safe margin for mobile vertical crop, no fisheye",
+    "50mm full-frame perspective, center-weighted hero, 12% safe margin for mobile crop, no fisheye",
   realism:
-    "highly realistic commercial photography — natural moisture, real char, no plastic shine, no AI gloss",
+    "looks like a professional food photographer shot it on location — natural moisture, real char, no plastic shine, no AI gloss",
   restrictions:
-    "no Pinterest aesthetic, no bright white seamless backgrounds, no blog-style flat lay, no lifestyle influencer staging",
+    "no Pinterest flat lay blog aesthetic, no bright white seamless studio, no influencer brunch staging, no oversaturated social filter",
 } as const;
 
 export const BANNED_AESTHETICS = [
@@ -40,7 +41,9 @@ export const BANNED_AESTHETICS = [
   "neon cyberpunk grading",
   "cartoon or illustration",
   "3D render or CGI",
+  "generative AI food art",
   "oversaturated Instagram filter",
+  "hyperreal CGI food",
 ] as const;
 
 export const BANNED_COMPOSITIONS = [
@@ -52,7 +55,8 @@ export const BANNED_COMPOSITIONS = [
   "microgreen avalanche",
   "hands or faces in frame",
   "text overlays or watermarks",
-  "utensils dominating the frame",
+  "utensiles dominating the frame",
+  "perfectly symmetrical AI plating",
 ] as const;
 
 export const BANNED_PROPS = [
@@ -67,10 +71,10 @@ export const BANNED_PROPS = [
 
 /** Normalized capture parameters — keep Golden 100 catalog visually cohesive. */
 export const NORMALIZED_CAPTURE = {
-  cameraAngle: "three-quarter hero angle, eye-level to slightly above, dish centered",
+  cameraAngle: "three-quarter hero angle per locked shot preset — eye-level to slightly above",
   lightingDirection: "key from camera-left 45°, fill from right, single shadow direction",
-  saturation: "moderate — rich but not oversaturated, natural food colors",
-  contrast: "moody mid-high contrast, readable shadows, no crushed blacks",
+  saturation: "moderate — rich but natural, true ingredient colors",
+  contrast: "realistic mid contrast, readable shadows, not crushed blacks or HDR halos",
   backgroundStyle:
     "dark matte firehall surface — weathered wood or slate, brushed steel blurred behind, shallow depth of field",
 } as const;
@@ -79,6 +83,7 @@ export function getMasterEditorialStyleBlock(): string {
   const s = MASTER_EDITORIAL_VISUAL_STYLE;
   const n = NORMALIZED_CAPTURE;
   return [
+    FIREHALL_PHOTO_BASELINE,
     s.aesthetic,
     `Lighting: ${s.lighting}`,
     `Color grade: ${s.grade}`,

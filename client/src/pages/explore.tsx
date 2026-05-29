@@ -12,5 +12,5 @@ export default function ExplorePage() {
     return <ExploreRecipeDetailPage registryRef={registryRef} />;
   }
 
-  return <ExploreDiscoveryPage registryRef={registryRef} />;
+  return <ExploreDiscoveryPage />;
 }

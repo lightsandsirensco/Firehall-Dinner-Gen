@@ -1,0 +1,119 @@
+{
+  "version": 1,
+  "contentVersion": 1,
+  "generatedAt": "2026-05-28T00:37:54.591Z",
+  "catalogSet": "fuel_smoothie",
+  "recipeCount": 10,
+  "recipes": [
+    {
+      "slug": "mixed-berry-protein",
+      "title": "Mixed Berry Protein Smoothie",
+      "subtitle": "Protein · High protein",
+      "taxonomyCategory": "protein_smoothie",
+      "taxonomyLabel": "Protein",
+      "heroImage": "/images/editorial/smoothies/mixed-berry-protein.webp",
+      "thumbImage": "/images/editorial/smoothies/mixed-berry-protein.webp",
+      "calories": 280,
+      "protein": 22
+    },
+    {
+      "slug": "peanut-butter-banana-recovery",
+      "title": "Peanut Butter Banana Recovery Shake",
+      "subtitle": "Recovery · Recovery",
+      "taxonomyCategory": "recovery_smoothie",
+      "taxonomyLabel": "Recovery",
+      "heroImage": "/images/editorial/smoothies/peanut-butter-banana-recovery.webp",
+      "thumbImage": "/images/editorial/smoothies/peanut-butter-banana-recovery.webp",
+      "calories": 340,
+      "protein": 16
+    },
+    {
+      "slug": "tropical-mango-greek",
+      "title": "Tropical Mango Greek Yogurt Smoothie",
+      "subtitle": "Fruit · Tropical",
+      "taxonomyCategory": "fruit_smoothie",
+      "taxonomyLabel": "Fruit",
+      "heroImage": "/images/editorial/smoothies/tropical-mango-greek.webp",
+      "thumbImage": "/images/editorial/smoothies/tropical-mango-greek.webp",
+      "calories": 260,
+      "protein": 18
+    },
+    {
+      "slug": "green-pineapple",
+      "title": "Green Pineapple Smoothie",
+      "subtitle": "Green · Green",
+      "taxonomyCategory": "green_smoothie",
+      "taxonomyLabel": "Green",
+      "heroImage": "/images/editorial/smoothies/green-pineapple.webp",
+      "thumbImage": "/images/editorial/smoothies/green-pineapple.webp",
+      "calories": 180,
+      "protein": 15
+    },
+    {
+      "slug": "strawberry-oat-breakfast",
+      "title": "Strawberry Oatmeal Breakfast Smoothie",
+      "subtitle": "Breakfast · Breakfast",
+      "taxonomyCategory": "breakfast_smoothie",
+      "taxonomyLabel": "Breakfast",
+      "heroImage": "/images/editorial/smoothies/strawberry-oat-breakfast.webp",
+      "thumbImage": "/images/editorial/smoothies/strawberry-oat-breakfast.webp",
+      "calories": 310,
+      "protein": 20
+    },
+    {
+      "slug": "mocha-protein",
+      "title": "Mocha Protein Smoothie",
+      "subtitle": "Coffee · Coffee",
+      "taxonomyCategory": "coffee_smoothie",
+      "taxonomyLabel": "Coffee",
+      "heroImage": "/images/editorial/smoothies/mocha-protein.webp",
+      "thumbImage": "/images/editorial/smoothies/mocha-protein.webp",
+      "calories": 220,
+      "protein": 18
+    },
+    {
+      "slug": "blueberry-almond",
+      "title": "Blueberry Almond Smoothie",
+      "subtitle": "Fruit · Berry",
+      "taxonomyCategory": "fruit_smoothie",
+      "taxonomyLabel": "Fruit",
+      "heroImage": "/images/editorial/smoothies/blueberry-almond.webp",
+      "thumbImage": "/images/editorial/smoothies/blueberry-almond.webp",
+      "calories": 290,
+      "protein": 17
+    },
+    {
+      "slug": "chocolate-banana-recovery",
+      "title": "Chocolate Banana Recovery Smoothie",
+      "subtitle": "Recovery · Recovery",
+      "taxonomyCategory": "recovery_smoothie",
+      "taxonomyLabel": "Recovery",
+      "heroImage": "/images/editorial/smoothies/chocolate-banana-recovery.webp",
+      "thumbImage": "/images/editorial/smoothies/chocolate-banana-recovery.webp",
+      "calories": 320,
+      "protein": 18
+    },
+    {
+      "slug": "citrus-ginger",
+      "title": "Citrus Ginger Smoothie",
+      "subtitle": "Recovery · Recovery",
+      "taxonomyCategory": "recovery_smoothie",
+      "taxonomyLabel": "Recovery",
+      "heroImage": "/images/editorial/smoothies/citrus-ginger.webp",
+      "thumbImage": "/images/editorial/smoothies/citrus-ginger.webp",
+      "calories": 160,
+      "protein": 15
+    },
+    {
+      "slug": "strawberry-spinach",
+      "title": "Strawberry Spinach Smoothie",
+      "subtitle": "Green · Green",
+      "taxonomyCategory": "green_smoothie",
+      "taxonomyLabel": "Green",
+      "heroImage": "/images/editorial/smoothies/strawberry-spinach.webp",
+      "thumbImage": "/images/editorial/smoothies/strawberry-spinach.webp",
+      "calories": 250,
+      "protein": 16
+    }
+  ]
+}
