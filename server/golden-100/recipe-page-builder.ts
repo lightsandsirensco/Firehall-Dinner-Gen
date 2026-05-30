@@ -36,6 +36,7 @@ import {
   usesGenericGrillTemplate,
 } from "../../shared/golden-100/recipe-quality/index.js";
 import { getMealSpecificPack } from "../../shared/golden-100/recipe-quality/meal-specific-packs.js";
+import { clampGoldenIngredientsForCrew } from "../../shared/recipe/crew-portion-limits.js";
 import { resolveGoldenSlugTiming } from "../../shared/golden-100/recipe-quality/slug-timing-overrides.js";
 
 const CREW_SIZE_DEFAULT = 8;
@@ -67,11 +68,12 @@ function ingredientsFromPackage(
 ): GoldenRecipePageIngredient[] {
   if (!pkg) return [];
   const scale = crewSize / 6;
-  return pkg.ingredients.map((ing) => ({
+  const scaled = pkg.ingredients.map((ing) => ({
     name: ing.name,
     quantity: ing.qty > 0 ? String(Math.round(ing.qty * scale * 10) / 10) : undefined,
     unit: ing.unit || undefined,
   }));
+  return clampGoldenIngredientsForCrew(scaled, crewSize).ingredients;
 }
 
 function capStepMinutes(minutes: number | undefined): number | undefined {

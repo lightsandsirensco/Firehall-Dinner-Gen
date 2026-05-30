@@ -14,6 +14,11 @@ import { smoothieRecipePath, smoothiesIndexPath } from "@shared/fuel-catalog/pat
 import { cn } from "@/lib/utils";
 import { RecipeCrewRatingPanel } from "@/components/recipe-crew-rating/recipe-crew-rating-panel";
 import { RecipeNutritionPanel } from "@/components/recipe-nutrition-panel";
+import {
+  MeasurementUnitToggle,
+  useMeasurementSystem,
+} from "@/components/measurement-unit-toggle";
+import { formatIngredientAmount } from "@shared/measurements";
 
 export default function SmoothieRecipePage() {
   const [, smoothieParams] = useRoute("/smoothies/:slug");
@@ -22,6 +27,7 @@ export default function SmoothieRecipePage() {
   const recipePath = slug ? `/recipes/${slug}` : smoothiesIndexPath();
   const favCount = useMemo(() => getSavedCount(), []);
   const origin = getSiteOrigin();
+  const [measurementSystem] = useMeasurementSystem();
 
   const { data: page, isLoading, isError } = useQuery({
     queryKey: ["smoothie-page", slug],
@@ -131,12 +137,14 @@ export default function SmoothieRecipePage() {
           <h2 id="ingredients-heading" className="font-heading text-xl">
             Ingredients
           </h2>
+          <MeasurementUnitToggle className="mt-3" />
           <ul className="mt-3 space-y-2 text-[15px]">
             {page.ingredients.map((ing, i) => (
               <li key={i} className="flex gap-2">
                 <span className="text-primary shrink-0">·</span>
                 <span>
-                  {[ing.quantity, ing.unit].filter(Boolean).join(" ")} {ing.name}
+                  {formatIngredientAmount(ing.quantity, ing.unit, measurementSystem)}{" "}
+                  {ing.name}
                   {ing.notes ? (
                     <span className="text-muted-foreground"> ({ing.notes})</span>
                   ) : null}

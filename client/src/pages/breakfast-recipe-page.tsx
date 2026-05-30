@@ -11,11 +11,21 @@ import { RecipeBrandStrip } from "@/components/brand/recipe-brand-strip";
 import { RecipeCrewRatingPanel } from "@/components/recipe-crew-rating/recipe-crew-rating-panel";
 import { RecipeNutritionPanel } from "@/components/recipe-nutrition-panel";
 import { SiteFooter } from "@/components/site-footer";
+import {
+  MeasurementUnitToggle,
+  useMeasurementSystem,
+} from "@/components/measurement-unit-toggle";
+import {
+  convertTemperaturesInText,
+  formatIngredientAmount,
+  formatStepTemperature,
+} from "@shared/measurements";
 
 export default function BreakfastRecipePage() {
   const [, params] = useRoute("/breakfast/:slug");
   const slug = String(params?.slug || "").trim();
   const favCount = useMemo(() => getSavedCount(), []);
+  const [measurementSystem] = useMeasurementSystem();
 
   const { data: page, isLoading, error } = useQuery({
     queryKey: ["breakfast-page", slug],
@@ -108,6 +118,7 @@ export default function BreakfastRecipePage() {
                 <h2 id="ingredients" className="font-heading text-xl">
                   Ingredients
                 </h2>
+                <MeasurementUnitToggle className="mt-3" />
                 <ul className="mt-4 space-y-2.5">
                   {page.ingredients.map((ing, idx) => (
                     <li
@@ -118,7 +129,7 @@ export default function BreakfastRecipePage() {
                       )}
                     >
                       <span className="font-medium">
-                        {[ing.quantity, ing.unit].filter(Boolean).join(" ")}
+                        {formatIngredientAmount(ing.quantity, ing.unit, measurementSystem)}
                       </span>{" "}
                       {ing.quantity || ing.unit ? "· " : ""}
                       {ing.name}
@@ -145,13 +156,15 @@ export default function BreakfastRecipePage() {
                           </p>
                           {(s.minutes || s.tempF) && (
                             <p className="text-xs text-muted-foreground whitespace-nowrap">
-                              {s.tempF ? `${s.tempF}°F` : ""}
+                              {s.tempF ? formatStepTemperature(s.tempF, measurementSystem) : ""}
                               {s.tempF && s.minutes ? " · " : ""}
                               {s.minutes ? `${s.minutes} min` : ""}
                             </p>
                           )}
                         </div>
-                        <p className="mt-2 text-sm leading-relaxed text-foreground/90">{s.instruction}</p>
+                        <p className="mt-2 text-sm leading-relaxed text-foreground/90">
+                          {convertTemperaturesInText(s.instruction, measurementSystem)}
+                        </p>
                       </li>
                     ))}
                 </ol>

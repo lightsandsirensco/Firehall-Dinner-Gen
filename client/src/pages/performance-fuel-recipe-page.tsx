@@ -12,12 +12,21 @@ import { getSiteOrigin } from "@/lib/seo/site-origin";
 import { buildBreadcrumbListSchema } from "@shared/seo/schema";
 import { performanceFuelPath, performanceFuelRecipePath } from "@shared/fuel-catalog/paths";
 import { FoodImage } from "@/components/mobile/food-image";
+import {
+  MeasurementUnitToggle,
+  useMeasurementSystem,
+} from "@/components/measurement-unit-toggle";
+import {
+  convertTemperaturesInText,
+  formatIngredientAmount,
+} from "@shared/measurements";
 
 export default function PerformanceFuelRecipePage() {
   const [, params] = useRoute("/performance-fuel/:slug");
   const slug = params?.slug ?? "";
   const favCount = useMemo(() => getSavedCount(), []);
   const origin = getSiteOrigin();
+  const [measurementSystem] = useMeasurementSystem();
 
   const { data: page, isLoading, isError } = useQuery({
     queryKey: ["performance-fuel-page", slug],
@@ -129,10 +138,12 @@ export default function PerformanceFuelRecipePage() {
           <h2 id="ingredients-heading" className="font-heading text-xl">
             Ingredients
           </h2>
+          <MeasurementUnitToggle className="mt-3" />
           <ul className="mt-3 space-y-2 text-[15px]">
             {page.ingredients.map((ing, i) => (
               <li key={i}>
-                {ing.quantity} {ing.unit} {ing.name}
+                {formatIngredientAmount(ing.quantity, ing.unit, measurementSystem)}{" "}
+                {ing.name}
                 {ing.notes ? <span className="text-muted-foreground"> — {ing.notes}</span> : null}
               </li>
             ))}
@@ -145,7 +156,9 @@ export default function PerformanceFuelRecipePage() {
           </h2>
           <ol className="mt-3 space-y-4 list-decimal list-inside text-[15px] leading-relaxed">
             {page.steps.map((s) => (
-              <li key={s.stepNumber}>{s.instruction}</li>
+              <li key={s.stepNumber}>
+                {convertTemperaturesInText(s.instruction, measurementSystem)}
+              </li>
             ))}
           </ol>
         </section>

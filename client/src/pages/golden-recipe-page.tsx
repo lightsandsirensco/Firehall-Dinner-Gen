@@ -56,6 +56,14 @@ import {
   CREW_SIZE_OPTIONS,
   scaleGoldenIngredients,
 } from "@shared/golden-100/recipe-quality/crew-scale";
+import {
+  convertTemperaturesInText,
+  formatIngredientAmount,
+} from "@shared/measurements";
+import {
+  MeasurementUnitToggle,
+  useMeasurementSystem,
+} from "@/components/measurement-unit-toggle";
 
 
 
@@ -386,6 +394,7 @@ export default function GoldenRecipePageView() {
   }, [page?.slug, page?.baseServings, page?.crewSize]);
 
   const baseServings = page?.baseServings ?? page?.crewSize ?? 8;
+  const [measurementSystem] = useMeasurementSystem();
 
   const scaledIngredients = useMemo(() => {
     if (!page) return [];
@@ -517,6 +526,7 @@ export default function GoldenRecipePageView() {
             </div>
 
             <RecipeSection title="Ingredients" id="recipe-ingredients">
+              <MeasurementUnitToggle className="mb-4" />
               <div className="space-y-6">
                 {ingredientGroups.map(([group, items]) => (
                   <div key={group}>
@@ -538,7 +548,7 @@ export default function GoldenRecipePageView() {
                             )}
                           </span>
                           <span className="text-muted-foreground tabular-nums shrink-0">
-                            {[ing.quantity, ing.unit].filter(Boolean).join(" ") || "—"}
+                            {formatIngredientAmount(ing.quantity, ing.unit, measurementSystem) || "—"}
                           </span>
                         </li>
                       ))}
@@ -576,7 +586,7 @@ export default function GoldenRecipePageView() {
 
                       <p className="mt-2 text-[15px] text-muted-foreground leading-relaxed">
 
-                        {step.instruction}
+                        {convertTemperaturesInText(step.instruction, measurementSystem)}
 
                       </p>
 
@@ -634,7 +644,7 @@ export default function GoldenRecipePageView() {
 
                   {page.proTips.map((tip, i) => (
 
-                    <li key={i}>{tip}</li>
+                    <li key={i}>{convertTemperaturesInText(tip, measurementSystem)}</li>
 
                   ))}
 

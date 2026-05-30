@@ -1,5 +1,11 @@
 import type { GenerateResponse } from "@shared/schema";
 import { log } from "./index";
+import {
+  auditProteinOzPerFirefighter,
+  classifyProtein,
+  formatKitchenQuantity,
+  PROTEIN_OZ_PER_FIREFIGHTER,
+} from "../shared/recipe/crew-portion-limits.js";
 
 export interface CrewScaleAuditResult {
   ok: boolean;
@@ -186,6 +192,40 @@ export function auditCrewScale(recipe: GenerateResponse, crewSize: number): Crew
       }
     }
     proteinLbs = needed;
+  }
+
+  if (proteinLbs > 0) {
+    const ozPer = (proteinLbs * 16) / crewSize;
+    let targetOz = PROTEIN_OZ_PER_FIREFIGHTER.other.targetOz;
+    let hardMaxOz = PROTEIN_OZ_PER_FIREFIGHTER.other.hardMaxOz;
+    for (const ing of recipe.ingredients) {
+      if (PROTEIN_KEYWORDS.test(ing.item)) {
+        const limits = PROTEIN_OZ_PER_FIREFIGHTER[classifyProtein(ing.item)];
+        targetOz = limits.targetOz;
+        hardMaxOz = limits.hardMaxOz;
+        break;
+      }
+    }
+    if (ozPer > hardMaxOz) {
+      const cappedLbs = (targetOz * crewSize) / 16;
+      for (let i = 0; i < recipe.ingredients.length; i++) {
+        if (PROTEIN_KEYWORDS.test(recipe.ingredients[i].item)) {
+          const { qty, unit } = parseQty(recipe.ingredients[i].amount);
+          const weight = toWeight(qty, unit);
+          if (weight > 0) {
+            const share = weight / proteinLbs;
+            const newQty = cappedLbs * share;
+            recipe.ingredients[i] = {
+              ...recipe.ingredients[i],
+              amount: roundToKitchenFriendly(newQty, unit || "lbs"),
+            };
+          }
+        }
+      }
+      fixes.push(`protein capped: ${Math.round(ozPer * 10) / 10} oz/person → ${targetOz} oz/person for ${crewSize}`);
+      proteinLbs = cappedLbs;
+      issues.push(`protein_too_high: was ${Math.round(ozPer * 10) / 10} oz/serving`);
+    }
   }
 
   if (carbCups > 0 && carbCups < minCarb) {

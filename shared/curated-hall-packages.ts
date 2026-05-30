@@ -5,6 +5,9 @@ import type {
   MealPlate,
 } from "./schema";
 import {
+  clampGoldenIngredientsForCrew,
+} from "./recipe/crew-portion-limits.js";
+import {
   getClassicHallMeal,
   resolveClassicHeroImage,
   validateClassicMealConsistency,
@@ -61,11 +64,18 @@ export function buildCuratedClientRecipe(
   def: CuratedPackageDef,
   crewSize: number = BASE_CREW,
 ): ClientRecipeResponse {
-  const ingredients: ClientIngredient[] = def.ingredients.map((ing) => ({
+  const goldenIngs = def.ingredients.map((ing) => ({
     name: ing.name,
-    qty: scaleQty(ing.qty, crewSize),
-    unit: ing.unit,
-    category: ing.category,
+    quantity: ing.qty > 0 ? String(scaleQty(ing.qty, crewSize)) : undefined,
+    unit: ing.unit || undefined,
+  }));
+  const clamped = clampGoldenIngredientsForCrew(goldenIngs, crewSize).ingredients;
+
+  const ingredients: ClientIngredient[] = clamped.map((ing, i) => ({
+    name: ing.name,
+    qty: parseFloat(ing.quantity || "0") || def.ingredients[i]?.qty || 0,
+    unit: ing.unit || def.ingredients[i]?.unit || "",
+    category: def.ingredients[i]?.category || "",
   }));
 
   const steps: ClientStep[] = def.steps.map((s, i) => ({
@@ -655,8 +665,8 @@ const CURATED_HALL_PACKAGES_RAW: CuratedPackageInput[] = [
       cuisine_label: "American",
     },
     ingredients: [
-      { name: "Chicken breast", qty: 10, unit: "lb", category: "Proteins" },
-      { name: "Romaine hearts", qty: 10, unit: "heads", category: "Produce" },
+      { name: "Chicken breast", qty: 3, unit: "lb", category: "Proteins" },
+      { name: "Romaine hearts", qty: 6, unit: "heads", category: "Produce" },
       { name: "Caesar dressing", qty: 4, unit: "cups", category: "Pantry" },
       { name: "Thick-cut bacon", qty: 2, unit: "lb", category: "Proteins" },
       { name: "Parmesan wedge", qty: 1, unit: "lb", category: "Dairy" },
@@ -828,7 +838,7 @@ const CURATED_HALL_PACKAGES_RAW: CuratedPackageInput[] = [
       cuisine_label: "BBQ",
     },
     ingredients: [
-      { name: "Chicken thighs", qty: 8, unit: "lb", category: "Proteins" },
+      { name: "Chicken thighs", qty: 3.5, unit: "lb", category: "Proteins" },
       { name: "BBQ sauce", qty: 3, unit: "cups", category: "Pantry" },
       { name: "Jasmine rice", qty: 3, unit: "cups", category: "Grains" },
       { name: "Corn kernels", qty: 4, unit: "cups", category: "Frozen" },
@@ -876,7 +886,7 @@ const CURATED_HALL_PACKAGES_RAW: CuratedPackageInput[] = [
       cuisine_label: "American",
     },
     ingredients: [
-      { name: "Sirloin or flank steak", qty: 8, unit: "lb", category: "Proteins" },
+      { name: "Sirloin or flank steak", qty: 4, unit: "lb", category: "Proteins" },
       { name: "Sub rolls / ciabatta", qty: 18, unit: "", category: "Bakery" },
       { name: "Butter", qty: 1, unit: "lb", category: "Dairy" },
       { name: "Garlic", qty: 8, unit: "cloves", category: "Produce" },

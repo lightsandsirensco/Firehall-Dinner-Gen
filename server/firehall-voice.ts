@@ -3,8 +3,14 @@
  */
 
 import type { GenerateResponse, IngredientItem } from "@shared/schema";
+import {
+  auditProteinOzPerFirefighter,
+  classifyProtein,
+  formatKitchenQuantity,
+  PROTEIN_OZ_PER_FIREFIGHTER,
+} from "../shared/recipe/crew-portion-limits.js";
 
-const PROTEIN_LB_FLOOR_PER_SEAT = 0.45; // ~7 oz raw per firefighter — hall portions, not meal-prep
+const PROTEIN_LB_FLOOR_PER_SEAT = 0.375; // ~6 oz raw per firefighter minimum
 
 const PROTEIN_ITEM_PATTERN =
   /\b(chicken|beef|pork|turkey|sausage|ground beef|steak|thigh|breast|drumstick|pork chop|ribs|ham|bacon|shrimp|salmon|fish|cod|tuna)\b/i;
@@ -101,10 +107,22 @@ export function applyCrewPortionFloors(
     const lb = ing.amount.match(LB_PATTERN);
     if (lb) {
       const current = parseFloat(lb[1]);
+      let nextLbs = current;
       if (current < proteinFloorLbs) {
+        nextLbs = proteinFloorLbs;
+      } else {
+        const ozPer = auditProteinOzPerFirefighter(item, current, "lb", crewSize);
+        if (ozPer != null) {
+          const limits = PROTEIN_OZ_PER_FIREFIGHTER[classifyProtein(item)];
+          if (ozPer > limits.hardMaxOz) {
+            nextLbs = (limits.targetOz * crewSize) / 16;
+          }
+        }
+      }
+      if (nextLbs !== current) {
         return {
           ...ing,
-          amount: `${proteinFloorLbs} lbs`,
+          amount: `${formatKitchenQuantity(nextLbs)} lbs`,
           notes: ing.notes ? `${ing.notes}; hall portion` : "Hall portion",
         };
       }

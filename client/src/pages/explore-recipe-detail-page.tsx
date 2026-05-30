@@ -40,6 +40,14 @@ import { cn } from "@/lib/utils";
 import { app } from "@/lib/design-tokens";
 import { FoodImageSkeleton } from "@/components/mobile/loading-skeletons";
 import type { ClientRecipeResponse, ClientIngredient } from "@shared/schema";
+import {
+  MeasurementUnitToggle,
+  useMeasurementSystem,
+} from "@/components/measurement-unit-toggle";
+import {
+  convertTemperaturesInText,
+  formatClientIngredientQty,
+} from "@shared/measurements";
 
 const DEFAULT_CREW_SIZE = 6;
 
@@ -349,6 +357,7 @@ function RecipeDetailView({
   });
   const [emailOpen, setEmailOpen] = useState(false);
   const [shoppingOpen, setShoppingOpen] = useState(false);
+  const [measurementSystem] = useMeasurementSystem();
 
   const clientRecipe = useMemo(() => spoonacularToClientRecipe(recipe, crewSize), [recipe, crewSize]);
   const shoppingList = useMemo(
@@ -366,7 +375,7 @@ function RecipeDetailView({
   };
 
   const handlePrint = () => {
-    const html = buildPrintHtml(clientRecipe, crewSize);
+    const html = buildPrintHtml(clientRecipe, crewSize, measurementSystem);
     const printWindow = window.open("", "_blank");
     if (printWindow) {
       printWindow.document.write(html);
@@ -548,16 +557,21 @@ function RecipeDetailView({
               <ChefHat className="w-3.5 h-3.5 text-primary/60" />
               Ingredients
             </h3>
+            <MeasurementUnitToggle className="mb-4" />
             <ul className="space-y-3" data-testid="section-detail-ingredients">
-              {recipe.ingredients.map((ing, i) => (
+              {clientRecipe.ingredients.map((ing, i) => {
+                const qty = formatClientIngredientQty(ing.qty, ing.unit, measurementSystem);
+                const line = qty ? `${qty} ${ing.name}` : ing.name;
+                return (
                 <li
                   key={i}
                   className="text-[15px] sm:text-sm text-foreground flex items-start gap-3 py-2 border-b border-border/20 last:border-0"
                 >
                   <span className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <span className="leading-relaxed">{ing.original}</span>
+                  <span className="leading-relaxed">{line}</span>
                 </li>
-              ))}
+                );
+              })}
             </ul>
           </CardContent>
         </Card>
@@ -579,7 +593,9 @@ function RecipeDetailView({
                       {step.heading && step.heading !== `Step ${step.number}` && (
                         <p className="text-[15px] font-semibold text-foreground leading-snug">{step.heading}</p>
                       )}
-                      <p className="text-[15px] sm:text-sm text-foreground/90 leading-[1.65]">{step.step}</p>
+                      <p className="text-[15px] sm:text-sm text-foreground/90 leading-[1.65]">
+                        {convertTemperaturesInText(step.step, measurementSystem)}
+                      </p>
                     </div>
                   </li>
                 ))}

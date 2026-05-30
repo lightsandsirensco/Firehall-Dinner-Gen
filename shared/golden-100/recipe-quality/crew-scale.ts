@@ -3,6 +3,9 @@
  */
 
 import type { GoldenRecipePageIngredient } from "../recipe-page-schema.js";
+import { clampGoldenIngredientsForCrew, type PortionFix } from "../../recipe/crew-portion-limits.js";
+
+export type { PortionFix as CrewPortionFix };
 
 export const CREW_SIZE_OPTIONS = [2, 4, 6, 8, 10, 12] as const;
 export type CrewSizeOption = (typeof CREW_SIZE_OPTIONS)[number];
@@ -55,24 +58,28 @@ export function scaleGoldenIngredients(
   baseServings: number,
   targetCrew: number,
 ): GoldenRecipePageIngredient[] {
-  if (targetCrew === baseServings) return ingredients;
+  if (targetCrew === baseServings) {
+    return clampGoldenIngredientsForCrew(ingredients, targetCrew).ingredients;
+  }
 
-  return ingredients.map((ing) => {
+  const scaled = ingredients.map((ing) => {
     const qty = parseQuantity(ing.quantity);
     if (qty <= 0) return { ...ing };
 
     const factor = scaleFactor(baseServings, targetCrew, ing.unit);
-    let scaled = qty * factor;
+    let scaledQty = qty * factor;
 
     if (ing.unit && COUNT_UNITS.test(ing.unit.trim())) {
-      scaled = Math.max(1, Math.round(scaled));
+      scaledQty = Math.max(1, Math.round(scaledQty));
     }
 
     return {
       ...ing,
-      quantity: formatQuantity(scaled) || ing.quantity,
+      quantity: formatQuantity(scaledQty) || ing.quantity,
     };
   });
+
+  return clampGoldenIngredientsForCrew(scaled, targetCrew).ingredients;
 }
 
 export function adjustCookTimeForCrew(

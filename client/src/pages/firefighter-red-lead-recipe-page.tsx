@@ -28,9 +28,22 @@ import {
 import { app } from "@/lib/design-tokens";
 import { cn } from "@/lib/utils";
 import { BRAND_TAGLINE } from "@/lib/brand-copy";
+import {
+  MeasurementUnitToggle,
+  useMeasurementSystem,
+} from "@/components/measurement-unit-toggle";
+import {
+  convertTemperaturesInText,
+  formatIngredientAmount,
+  formatStepTemperature,
+  type MeasurementSystem,
+} from "@shared/measurements";
 
-function formatIngredient(ing: (typeof FIREFIGHTER_RED_LEAD_RECIPE.ingredients)[number]) {
-  const qty = [ing.quantity, ing.unit].filter(Boolean).join(" ");
+function formatIngredient(
+  ing: (typeof FIREFIGHTER_RED_LEAD_RECIPE.ingredients)[number],
+  system: MeasurementSystem,
+) {
+  const qty = formatIngredientAmount(ing.quantity, ing.unit, system);
   const base = qty ? `${qty} ${ing.name}` : ing.name;
   const notes = [ing.notes, ing.optional ? "optional" : undefined].filter(Boolean).join(", ");
   return notes ? `${base} (${notes})` : base;
@@ -39,6 +52,7 @@ function formatIngredient(ing: (typeof FIREFIGHTER_RED_LEAD_RECIPE.ingredients)[
 export default function FirefighterRedLeadRecipePage() {
   const recipe = FIREFIGHTER_RED_LEAD_RECIPE;
   const origin = getSiteOrigin();
+  const [measurementSystem] = useMeasurementSystem();
   const seoConfig = useMemo(() => buildFirefighterRedLeadRecipeSeo(), []);
 
   const jsonLd = useMemo(
@@ -163,13 +177,14 @@ export default function FirefighterRedLeadRecipePage() {
                 Scaled for a hall table of {recipe.crewSize}. Read through once before you start the rest
                 of the breakfast — timing matters when the crew is actually sitting down.
               </p>
+              <MeasurementUnitToggle className="mt-4" />
               <ul className="mt-5 space-y-2 text-sm sm:text-base">
                 {recipe.ingredients.map((ing) => (
                   <li key={ing.name} className="flex gap-2">
                     <span className="text-primary shrink-0" aria-hidden>
                       •
                     </span>
-                    <span>{formatIngredient(ing)}</span>
+                    <span>{formatIngredient(ing, measurementSystem)}</span>
                   </li>
                 ))}
               </ul>
@@ -191,13 +206,15 @@ export default function FirefighterRedLeadRecipePage() {
                     <div className="min-w-0">
                       <h3 className="font-medium text-foreground">{step.title}</h3>
                       <p className="mt-2 text-sm sm:text-base text-muted-foreground leading-relaxed">
-                        {step.instruction}
+                        {convertTemperaturesInText(step.instruction, measurementSystem)}
                       </p>
                       {(step.minutes || step.tempF) && (
                         <p className="mt-2 text-xs text-muted-foreground">
                           {step.minutes ? `~${step.minutes} min` : null}
                           {step.minutes && step.tempF ? " · " : null}
-                          {step.tempF ? `Target ${step.tempF}°F on whites` : null}
+                          {step.tempF
+                            ? `Target ${formatStepTemperature(step.tempF, measurementSystem)} on whites`
+                            : null}
                         </p>
                       )}
                     </div>

@@ -16,6 +16,16 @@ import { escapeHtml } from "@/lib/escape-html";
 import { useState, useEffect, useMemo, type ReactNode } from "react";
 import { app } from "@/lib/design-tokens";
 import { cn } from "@/lib/utils";
+import {
+  MeasurementUnitToggle,
+  useMeasurementSystem,
+} from "@/components/measurement-unit-toggle";
+import {
+  convertTemperaturesInText,
+  formatClientIngredientQty,
+  formatStepTemperature,
+  type MeasurementSystem,
+} from "@shared/measurements";
 
 let sessionProTipsCollapsed = false;
 
@@ -78,18 +88,20 @@ function PlateSection({
   );
 }
 
-function fmtQty(qty: number, unit: string): string {
-  if (!qty && !unit) return "";
-  const display = qty % 1 === 0 ? qty.toString() : qty.toFixed(1);
-  return unit ? `${display} ${unit}` : display;
+function fmtQty(qty: number, unit: string, system: MeasurementSystem = "us"): string {
+  return formatClientIngredientQty(qty, unit, system);
 }
 
-export function buildPrintHtml(recipe: ClientRecipeResponse, crewSize: number): string {
+export function buildPrintHtml(
+  recipe: ClientRecipeResponse,
+  crewSize: number,
+  measurementSystem: MeasurementSystem = "us",
+): string {
   const e = escapeHtml;
   const safetyHtml = recipe.protein_safety && recipe.protein_safety.internal_temp_f > 0
     ? `<tr>
         <td style="font-weight:700;padding:6px 12px 6px 0">${e(recipe.protein_safety.protein)}</td>
-        <td style="padding:6px 12px">${e(recipe.protein_safety.internal_temp_f)}&deg;F</td>
+        <td style="padding:6px 12px">${measurementSystem === "metric" ? formatStepTemperature(recipe.protein_safety.internal_temp_f, "metric") : `${e(recipe.protein_safety.internal_temp_f)}&deg;F`}</td>
         <td style="padding:6px 12px">${recipe.protein_safety.rest_min > 0 ? e(recipe.protein_safety.rest_min) + " min" : "—"}</td>
         <td style="padding:6px 12px;font-size:13px">${e(recipe.protein_safety.notes)}</td>
       </tr>`
@@ -100,7 +112,7 @@ export function buildPrintHtml(recipe: ClientRecipeResponse, crewSize: number): 
       (ing) =>
         `<tr>
           <td style="padding:4px 16px 4px 0;font-weight:600">${e(ing.name)}</td>
-          <td style="padding:4px 0">${e(fmtQty(ing.qty, ing.unit))}</td>
+          <td style="padding:4px 0">${e(fmtQty(ing.qty, ing.unit, measurementSystem))}</td>
           <td style="padding:4px 0 4px 16px;color:#555;font-size:13px">${e(ing.category)}</td>
         </tr>`
     )
@@ -110,7 +122,7 @@ export function buildPrintHtml(recipe: ClientRecipeResponse, crewSize: number): 
     .map((step) => {
       return `<li style="margin-bottom:12px;page-break-inside:avoid">
         ${step.title ? `<strong>${e(step.title)}</strong><br/>` : ""}
-        ${e(step.instructions)}
+        ${e(convertTemperaturesInText(step.instructions, measurementSystem))}
       </li>`;
     })
     .join("");
@@ -247,6 +259,7 @@ export function buildPrintHtml(recipe: ClientRecipeResponse, crewSize: number): 
 export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick, hideSave }: RecipeCardProps) {
   const hasTiming = recipe.timing && (recipe.timing.prep_min || recipe.timing.cook_min || recipe.timing.total_min);
   const hasSafety = recipe.protein_safety && recipe.protein_safety.internal_temp_f > 0;
+  const [measurementSystem] = useMeasurementSystem();
   const [saved, setSaved] = useState(false);
   const [showConfirm, setShowConfirm] = useState(false);
   const [proTipsOpen, setProTipsOpen] = useState(!sessionProTipsCollapsed);
@@ -510,7 +523,12 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
           <p className={app.subtitle}>
             <span className="text-foreground font-medium">{recipe.protein_safety.protein}</span>
             {" — "}
-            <span className="text-foreground">{recipe.protein_safety.internal_temp_f}°F internal</span>
+            <span className="text-foreground">
+              {measurementSystem === "metric"
+                ? formatStepTemperature(recipe.protein_safety.internal_temp_f, "metric")
+                : `${recipe.protein_safety.internal_temp_f}°F`}{" "}
+              internal
+            </span>
             {recipe.protein_safety.rest_min > 0 && (
               <>, rest {recipe.protein_safety.rest_min} min</>
             )}
@@ -522,6 +540,7 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
       )}
 
       <MealSection title={mealPlate ? "Full ingredient list" : "Ingredients"}>
+        <MeasurementUnitToggle className="-mt-1 mb-2" />
         <ul className="divide-y divide-border/25" data-testid="section-ingredients">
           {recipe.ingredients.map((ing, i) => (
             <li
@@ -531,7 +550,7 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
             >
               <span className="font-medium">{ing.name}</span>
               <span className="text-muted-foreground tabular-nums shrink-0">
-                {fmtQty(ing.qty, ing.unit) || "—"}
+                {fmtQty(ing.qty, ing.unit, measurementSystem) || "—"}
               </span>
             </li>
           ))}
@@ -549,7 +568,9 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
                 {step.title && (
                   <p className="font-medium text-foreground mb-1">{step.title}</p>
                 )}
-                <p className="text-[15px] text-muted-foreground leading-relaxed">{step.instructions}</p>
+                <p className="text-[15px] text-muted-foreground leading-relaxed">
+                  {convertTemperaturesInText(step.instructions, measurementSystem)}
+                </p>
               </div>
             </li>
           ))}
