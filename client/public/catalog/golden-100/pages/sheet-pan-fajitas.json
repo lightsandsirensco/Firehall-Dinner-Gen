@@ -13,10 +13,10 @@
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 440,
-  "protein": 32,
-  "carbs": 38,
-  "fats": 16,
+  "calories": 403,
+  "protein": 54,
+  "carbs": 11,
+  "fats": 15,
   "tags": [
     "protein:chicken",
     "format:sheet_pan",
@@ -101,7 +101,7 @@
     }
   ],
   "proTips": [
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts.",
     "Pull chicken at 160°F and let carryover hit 165°F — dry breast ruins crew morale."
   ],
@@ -123,11 +123,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 440,
-    "protein": 32,
-    "carbs": 38,
-    "fats": 16,
-    "label": "per serving (hall portion)"
+    "calories": 403,
+    "protein": 54,
+    "carbs": 11,
+    "fats": 15,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": true,
+      "performanceMeal": true
+    }
   },
   "heroImage": "/images/golden-100/sheet-pan-fajitas.jpg",
   "mobileImage": "/images/mobile/sheet-pan-fajitas.jpg",
@@ -156,6 +170,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-29T01:43:09.379Z",
+  "generatedAt": "2026-05-30T03:28:01.891Z",
   "contentVersion": 2
 }

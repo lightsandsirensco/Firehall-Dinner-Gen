@@ -13,10 +13,10 @@
   "cookTime": 35,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 520,
-  "protein": 32,
-  "carbs": 48,
-  "fats": 22,
+  "calories": 286,
+  "protein": 31,
+  "carbs": 2,
+  "fats": 16,
   "tags": [
     "protein:chicken",
     "format:skillet",
@@ -32,75 +32,75 @@
   ],
   "ingredients": [
     {
-      "name": "Chicken breast",
-      "quantity": "2.5",
+      "name": "Rice noodles, soaked",
+      "quantity": "2",
+      "unit": "lb",
+      "group": "Base"
+    },
+    {
+      "name": "Large shrimp, peeled",
+      "quantity": "2",
       "unit": "lb",
       "group": "Main"
     },
     {
-      "name": "Unsalted butter",
-      "quantity": "6",
-      "unit": "tbsp",
-      "group": "Sauce"
+      "name": "Eggs",
+      "quantity": "4",
+      "unit": "count",
+      "group": "Main"
     },
     {
-      "name": "Garlic cloves, minced",
-      "quantity": "6",
-      "unit": "cloves",
-      "group": "Sauce"
-    },
-    {
-      "name": "Soy sauce",
+      "name": "Bean sprouts",
       "quantity": "3",
-      "unit": "tbsp",
+      "unit": "cups",
+      "group": "Veg"
+    },
+    {
+      "name": "Pad Thai sauce (tamarind, fish sauce, sugar)",
+      "quantity": "1",
+      "unit": "cup",
       "group": "Sauce"
     },
     {
-      "name": "Yellow onion",
-      "quantity": "2",
-      "unit": "large",
-      "group": "Aromatics"
-    },
-    {
-      "name": "Garlic cloves, minced",
-      "quantity": "6",
-      "unit": "cloves",
-      "group": "Aromatics"
+      "name": "Roasted peanuts, crushed",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Garnish"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Prep and dry protein",
-      "instruction": "Pat protein dry. Mince garlic. Measure sauce ingredients — wok moves fast once heat is on.",
-      "minutes": 10,
+      "title": "Soak rice noodles",
+      "instruction": "Soak rice noodles in hot water 20 minutes until pliable; drain.",
+      "minutes": 20,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Sear over high heat",
-      "instruction": "Heat skillet until just smoking. Sear in batches; shrimp 90 seconds per side, chicken to 165°F. Do not crowd.",
-      "minutes": 10,
+      "title": "Sear shrimp and scramble eggs",
+      "instruction": "Sear shrimp in hot oil until pink; push aside. Scramble eggs in the same wok; break into pieces.",
+      "minutes": 8,
       "heatLevel": "high"
     },
     {
       "stepNumber": 3,
-      "title": "Finish sauce in pan",
-      "instruction": "Lower to medium. Add butter, garlic, and sauce; toss 1–2 minutes until glossy. Hall Rush Pad Thai should smell bright, not burnt garlic.",
-      "minutes": 4,
-      "heatLevel": "medium"
+      "title": "Toss noodles and sauce",
+      "instruction": "Add noodles and pad Thai sauce; toss over high heat 2–3 minutes until noodles absorb sauce and char slightly.",
+      "minutes": 5,
+      "heatLevel": "high"
     },
     {
       "stepNumber": 4,
-      "title": "Serve immediately",
-      "instruction": "Serve from the skillet or transfer to warm trays. Backup: foil at 200°F up to 12 minutes — seafood toughens if held too long.",
-      "minutes": 3,
-      "heatLevel": "low"
+      "title": "Finish with crunch",
+      "instruction": "Fold in bean sprouts and peanuts off heat. Serve with lime wedges. Pad Thai should be tangy, salty, and a little sweet — not oily.",
+      "minutes": 5,
+      "heatLevel": ""
     }
   ],
   "proTips": [
     "Prep all mise en place before the bell — this meal wins on organization, not speed hacks.",
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts.",
     "Pull chicken at 160°F and let carryover hit 165°F — dry breast ruins crew morale."
   ],
@@ -121,11 +121,25 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 520,
-    "protein": 32,
-    "carbs": 48,
-    "fats": 22,
-    "label": "per serving (hall portion)"
+    "calories": 286,
+    "protein": 31,
+    "carbs": 2,
+    "fats": 16,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": true
+    }
   },
   "heroImage": "/images/golden-100/pad-thai.jpg",
   "mobileImage": "/images/mobile/pad-thai.jpg",
@@ -154,6 +168,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-29T01:43:09.399Z",
+  "generatedAt": "2026-05-30T03:28:01.931Z",
   "contentVersion": 2
 }

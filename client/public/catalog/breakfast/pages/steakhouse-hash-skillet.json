@@ -1,6 +1,8 @@
 {
   "slug": "steakhouse-hash-skillet",
   "title": "Steakhouse Hash Skillet",
+  "subtitle": "A practical station breakfast that scales from 4 to 12.",
+  "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
   "filters": [
     "skillets",
     "high_protein"
@@ -17,57 +19,87 @@
   "cookTime": 25,
   "totalTime": 40,
   "difficulty": "medium",
-  "heroImage": "/images/breakfast/steakhouse-hash-skillet.jpg",
-  "thumbImage": "/images/thumbs/breakfast/steakhouse-hash-skillet.jpg",
-  "seoTitle": "Steakhouse Hash Skillet | Firehall Breakfast",
-  "subtitle": "A practical station breakfast that scales from 4 to 12.",
-  "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
   "ingredients": [
     {
-      "quantity": "14",
-      "name": "large eggs"
+      "name": "Yukon gold potatoes",
+      "quantity": "3.5 lb",
+      "notes": "diced 1/2-inch"
     },
     {
-      "quantity": "1 1/2 tsp",
-      "name": "kosher salt",
-      "notes": "start low; adjust at the end"
+      "name": "large eggs",
+      "quantity": "14"
     },
     {
-      "quantity": "2 tbsp",
-      "name": "butter or oil"
+      "name": "sirloin or flat iron steak",
+      "quantity": "2 lb",
+      "notes": "cut in bite-size pieces"
     },
     {
+      "name": "yellow onion",
       "quantity": "1",
-      "name": "black pepper",
-      "notes": "to taste"
+      "notes": "diced"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "3",
+      "notes": "minced"
+    },
+    {
+      "name": "butter",
+      "quantity": "2 tbsp"
+    },
+    {
+      "name": "shredded cheddar",
+      "quantity": "1–2 cups"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Get your station set",
-      "minutes": 5,
-      "instruction": "Set a warm holding zone (200°F oven). Lay out a tray for finished food, a tray for clean toast/tortillas, and a trash bowl so you’re not chasing scraps mid-cook."
+      "title": "Sear the steak",
+      "instruction": "Pat steak dry; season with salt and pepper. Sear in hot cast iron in batches until browned but still pink inside. Rest on a tray.",
+      "minutes": 8
     },
     {
       "stepNumber": 2,
-      "title": "Cook the main",
-      "minutes": 20,
-      "instruction": "Cook the main components over medium to medium-high heat. Keep things in a single layer for browning, and season in layers so the finished plate doesn’t taste flat."
+      "title": "Crisp the hash",
+      "instruction": "In the same pan, cook potatoes until golden. Add onion and garlic; toss until softened.",
+      "minutes": 12
     },
     {
       "stepNumber": 3,
-      "title": "Eggs last",
-      "minutes": 6,
-      "instruction": "Cook eggs last so they stay tender. For scrambled: low heat and pull early. For fried: cover to set whites without blasting the yolk."
+      "title": "Combine and make wells",
+      "instruction": "Return steak and any juices to the hash. Make wells; crack eggs in. Cover until whites set.",
+      "minutes": 4
     },
     {
       "stepNumber": 4,
-      "title": "Serve and hold",
-      "minutes": 0,
-      "instruction": "Serve immediately; hold the rest warm. If a call hits, cover soft items; keep crispy items uncovered so they don’t steam."
+      "title": "Finish with cheese",
+      "instruction": "Top with cheese; cover 60 seconds to melt. Serve from the skillet for the crew.",
+      "minutes": 2
     }
   ],
+  "nutrition": {
+    "calories": 714,
+    "protein": 50,
+    "carbs": 49,
+    "fat": 36,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
   "stationWorkflow": [
     "Assign one cook to the hot surface and one to assembly. Keep the line moving; don’t crowd the griddle.",
     "Set a warm holding zone (oven 200°F or covered hotel pan) so staggered eaters still get a hot plate.",
@@ -81,8 +113,11 @@
     "Cool fast: spread on a sheet pan 10 minutes, then portion into containers so it doesn’t sweat.",
     "Reheat rule: eggs reheat best covered at 50% power or low oven heat; don’t nuke on high."
   ],
+  "heroImage": "/images/breakfast/steakhouse-hash-skillet.jpg",
+  "thumbImage": "/images/thumbs/breakfast/steakhouse-hash-skillet.jpg",
   "imageAlt": "Warm station-kitchen breakfast: Steakhouse Hash Skillet",
-  "publishedAt": "2026-05-28T13:26:37.645Z",
-  "updatedAt": "2026-05-28T13:26:37.645Z",
-  "readMinutes": 4
+  "publishedAt": "2026-05-30T03:14:16.261Z",
+  "updatedAt": "2026-05-30T03:14:16.261Z",
+  "readMinutes": 6,
+  "seoTitle": "Steakhouse Hash Skillet | Firehall Breakfast"
 }

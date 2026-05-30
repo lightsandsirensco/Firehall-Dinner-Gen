@@ -1,6 +1,8 @@
 {
   "slug": "bbq-breakfast-hash",
   "title": "BBQ Breakfast Hash",
+  "subtitle": "A practical station breakfast that scales from 4 to 12.",
+  "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
   "filters": [
     "bbq_breakfast",
     "feed_a_crew"
@@ -17,57 +19,88 @@
   "cookTime": 28,
   "totalTime": 43,
   "difficulty": "medium",
-  "heroImage": "/images/breakfast/bbq-breakfast-hash.jpg",
-  "thumbImage": "/images/thumbs/breakfast/bbq-breakfast-hash.jpg",
-  "seoTitle": "BBQ Breakfast Hash | Firehall Breakfast",
-  "subtitle": "A practical station breakfast that scales from 4 to 12.",
-  "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
   "ingredients": [
     {
-      "quantity": "14",
-      "name": "large eggs"
+      "name": "Yukon gold potatoes",
+      "quantity": "3.5 lb",
+      "notes": "diced"
     },
     {
-      "quantity": "1 1/2 tsp",
-      "name": "kosher salt",
-      "notes": "start low; adjust at the end"
+      "name": "large eggs",
+      "quantity": "14"
     },
     {
-      "quantity": "2 tbsp",
-      "name": "butter or oil"
+      "name": "pulled pork or brisket",
+      "quantity": "1 1/2 lb",
+      "notes": "warm leftover BBQ"
     },
     {
+      "name": "BBQ sauce",
+      "quantity": "1/2 cup",
+      "notes": "your hall favorite"
+    },
+    {
+      "name": "yellow onion",
       "quantity": "1",
-      "name": "black pepper",
-      "notes": "to taste"
+      "notes": "diced"
+    },
+    {
+      "name": "vegetable oil",
+      "quantity": "2 tbsp"
+    },
+    {
+      "name": "shredded cheddar",
+      "quantity": "1 cup",
+      "optional": true
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Get your station set",
-      "minutes": 5,
-      "instruction": "Set a warm holding zone (200°F oven). Lay out a tray for finished food, a tray for clean toast/tortillas, and a trash bowl so you’re not chasing scraps mid-cook."
+      "title": "Crisp the potatoes",
+      "instruction": "Heat cast iron over medium-high with oil. Add potatoes in one layer; let them sit 4 minutes before tossing for crust. Season with salt and pepper.",
+      "minutes": 14
     },
     {
       "stepNumber": 2,
-      "title": "Cook the main",
-      "minutes": 23,
-      "instruction": "Cook the main components over medium to medium-high heat. Keep things in a single layer for browning, and season in layers so the finished plate doesn’t taste flat."
+      "title": "Warm the BBQ",
+      "instruction": "Fold in onion and pulled pork with a splash of BBQ sauce. Heat through without drying the meat.",
+      "minutes": 5
     },
     {
       "stepNumber": 3,
-      "title": "Eggs last",
-      "minutes": 6,
-      "instruction": "Cook eggs last so they stay tender. For scrambled: low heat and pull early. For fried: cover to set whites without blasting the yolk."
+      "title": "Eggs on top",
+      "instruction": "Make wells in the hash. Crack eggs in, cover until whites set. Finish with cheese if using.",
+      "minutes": 6
     },
     {
       "stepNumber": 4,
-      "title": "Serve and hold",
-      "minutes": 0,
-      "instruction": "Serve immediately; hold the rest warm. If a call hits, cover soft items; keep crispy items uncovered so they don’t steam."
+      "title": "Serve with extra sauce",
+      "instruction": "Serve straight from the skillet with extra BBQ sauce on the side for the crew.",
+      "minutes": 0
     }
   ],
+  "nutrition": {
+    "calories": 371,
+    "protein": 18,
+    "carbs": 43,
+    "fat": 14,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": false
+    }
+  },
   "stationWorkflow": [
     "Assign one cook to the hot surface and one to assembly. Keep the line moving; don’t crowd the griddle.",
     "Set a warm holding zone (oven 200°F or covered hotel pan) so staggered eaters still get a hot plate.",
@@ -81,8 +114,11 @@
     "Cool fast: spread on a sheet pan 10 minutes, then portion into containers so it doesn’t sweat.",
     "Reheat rule: eggs reheat best covered at 50% power or low oven heat; don’t nuke on high."
   ],
+  "heroImage": "/images/breakfast/bbq-breakfast-hash.jpg",
+  "thumbImage": "/images/thumbs/breakfast/bbq-breakfast-hash.jpg",
   "imageAlt": "Warm station-kitchen breakfast: BBQ Breakfast Hash",
-  "publishedAt": "2026-05-28T13:26:37.645Z",
-  "updatedAt": "2026-05-28T13:26:37.645Z",
-  "readMinutes": 4
+  "publishedAt": "2026-05-30T03:14:16.261Z",
+  "updatedAt": "2026-05-30T03:14:16.261Z",
+  "readMinutes": 6,
+  "seoTitle": "BBQ Breakfast Hash | Firehall Breakfast"
 }

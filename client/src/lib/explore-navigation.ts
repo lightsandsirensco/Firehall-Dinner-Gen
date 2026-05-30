@@ -1,7 +1,12 @@
 import type { ExploreRecipeCard } from "@/lib/explore-recipe";
 import { normalizeExploreRecipeId } from "@/lib/explore-api";
-import { isApprovedCatalogSlug } from "@shared/hall-catalog/gate";
+import { isApprovedCatalogSlug, isBreakfastCatalogSlug } from "@shared/hall-catalog/gate";
+import { approvedCatalogRecipePath } from "@shared/approved-catalog";
 import { isHardHeldExploreCard } from "@shared/explore-imagery-status";
+
+function catalogRecipePath(slug: string): string {
+  return approvedCatalogRecipePath(slug);
+}
 
 /**
  * Explore detail path — numeric explore id + optional DB hints for lookup fallback.
@@ -10,7 +15,7 @@ import { isHardHeldExploreCard } from "@shared/explore-imagery-status";
 export function buildExploreRecipeDetailPath(card: ExploreRecipeCard): string | null {
   const slug = card._curatedSlug?.trim();
   if (slug && isApprovedCatalogSlug(slug)) {
-    return `/recipes/${encodeURIComponent(slug)}`;
+    return catalogRecipePath(slug);
   }
 
   const id = normalizeExploreRecipeId(card.id);
@@ -36,7 +41,7 @@ export function resolveExploreCardNavigation(card: ExploreRecipeCard): {
 
   const slug = card._curatedSlug?.trim();
   if (slug && isApprovedCatalogSlug(slug)) {
-    return { kind: "catalog-recipe", path: `/recipes/${encodeURIComponent(slug)}` };
+    return { kind: "catalog-recipe", path: catalogRecipePath(slug) };
   }
 
   const detailPath = buildExploreRecipeDetailPath(card);

@@ -6,7 +6,7 @@
  *   npx tsx scripts/sync-hall-classics-curated.ts smash-burgers steak-tacos
  */
 import "dotenv/config";
-import { initCuratedRecipeStore, upsertCuratedRecipe } from "../server/curated-recipe-store.js";
+import { initCuratedRecipeStore, upsertCuratedRecipe, getCuratedRecipeBySlug } from "../server/curated-recipe-store.js";
 import { curatedInsertFromIngestDraft } from "../server/curated-recipe-bridge.js";
 import { CLASSIC_HALL_MEALS, resolveClassicHeroImage } from "../shared/classic-hall-meals.js";
 import { getCuratedPackageDef } from "../shared/curated-hall-packages.js";
@@ -98,6 +98,10 @@ async function main(): Promise<void> {
     const insert = curatedInsertFromIngestDraft(draft);
     insert.status = "published";
     insert.slug = meal.slug;
+    const existingBySlug = getCuratedRecipeBySlug(meal.slug);
+    if (existingBySlug) {
+      insert.recipeId = existingBySlug.recipeId;
+    }
     insert.categories = [...new Set([...(insert.categories || []), "crew_favorite", "trending"])];
     upsertCuratedRecipe(insert);
     console.log(`[sync] ${meal.slug} → ${insert.recipeId}`);

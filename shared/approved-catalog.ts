@@ -5,7 +5,9 @@
 import type { CatalogPublicBadge } from "./hall-catalog/gate.js";
 import {
   isHallClassicSlug,
+  isHallExpansionSlug,
   isPerformance50Slug,
+  isBreakfastCatalogSlug,
 } from "./hall-catalog/gate.js";
 import {
   slugLockedImagePaths,
@@ -84,7 +86,19 @@ export function approvedCatalogCardImagePath(slug: string, kind: ApprovedCatalog
 
 export function resolveApprovedCatalogKind(slug: string, isSmoothie = false): ApprovedCatalogKind {
   if (isSmoothie) return "smoothie";
+  if (isBreakfastCatalogSlug(slug)) return "breakfast_catalog";
   if (isHallClassicSlug(slug)) return "hall_classic";
+  if (isHallExpansionSlug(slug)) return "hall_expansion";
   if (isPerformance50Slug(slug)) return "performance_meal";
   return "firehall_catalog";
+}
+
+/** Public recipe detail route for an approved catalog slug. */
+export function approvedCatalogRecipePath(slug: string): string {
+  const s = (slug || "").trim().toLowerCase();
+  if (!s) return "/recipes";
+  if (isBreakfastCatalogSlug(s)) {
+    return `/breakfast/${encodeURIComponent(s)}`;
+  }
+  return `/recipes/${encodeURIComponent(s)}`;
 }

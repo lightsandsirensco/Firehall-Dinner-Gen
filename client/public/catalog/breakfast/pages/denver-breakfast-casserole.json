@@ -1,0 +1,147 @@
+{
+  "slug": "denver-breakfast-casserole",
+  "title": "Denver Breakfast Casserole",
+  "subtitle": "Ham, bell peppers, and onion baked into a make-ahead egg strata.",
+  "description": "Classic Denver omelette flavors in a 9x13 bake: diced ham, peppers, and onion folded through cubed bread and an egg-milk custard. Assembles the night before for an easy oven push on busy mornings.",
+  "filters": [
+    "feed_a_crew",
+    "high_protein"
+  ],
+  "tags": [
+    "casserole",
+    "ham",
+    "peppers",
+    "make-ahead",
+    "strata"
+  ],
+  "crewSize": 12,
+  "baseServings": 12,
+  "prepTime": 25,
+  "cookTime": 45,
+  "totalTime": 70,
+  "difficulty": "easy",
+  "ingredients": [
+    {
+      "name": "large eggs",
+      "quantity": "18",
+      "group": "Base"
+    },
+    {
+      "name": "whole milk",
+      "quantity": "3 cups",
+      "notes": "or half-and-half for richer custard",
+      "group": "Base"
+    },
+    {
+      "name": "day-old bread",
+      "quantity": "1 loaf",
+      "notes": "cubed and lightly toasted",
+      "group": "Base"
+    },
+    {
+      "name": "diced ham",
+      "quantity": "2 lb",
+      "notes": "deli or leftover spiral ham",
+      "group": "Fillings"
+    },
+    {
+      "name": "bell peppers",
+      "quantity": "2",
+      "notes": "diced, any color",
+      "group": "Fillings"
+    },
+    {
+      "name": "large onion",
+      "quantity": "1",
+      "notes": "diced and lightly sautéed",
+      "group": "Fillings"
+    },
+    {
+      "name": "shredded cheddar",
+      "quantity": "3 cups",
+      "notes": "divided",
+      "group": "Fillings"
+    },
+    {
+      "name": "dry mustard",
+      "quantity": "1 1/2 tsp",
+      "notes": "plus salt, pepper, and paprika",
+      "group": "Seasoning"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Toast the bread cubes",
+      "instruction": "Heat oven to 350°F. Spread bread cubes on a sheet pan and toast 6–8 minutes until dry at the edges. Cool slightly so they don't turn the custard soggy.",
+      "minutes": 8,
+      "tempF": 350
+    },
+    {
+      "stepNumber": 2,
+      "title": "Build the pan",
+      "instruction": "Butter a deep 9x13 dish. Layer half the bread, ham, peppers, onion, and half the cheese. Repeat layers, finishing with cheese on top.",
+      "minutes": 12
+    },
+    {
+      "stepNumber": 3,
+      "title": "Whisk the custard",
+      "instruction": "Whisk eggs with milk, dry mustard, salt, pepper, and a pinch of paprika until smooth. Pour evenly over the bread—press gently so cubes soak without compacting.",
+      "minutes": 5
+    },
+    {
+      "stepNumber": 4,
+      "title": "Rest or refrigerate",
+      "instruction": "Rest 30 minutes at room temperature, or cover and refrigerate overnight for a true make-ahead. Bring closer to room temp before baking if chilled.",
+      "minutes": 30
+    },
+    {
+      "stepNumber": 5,
+      "title": "Bake until set",
+      "instruction": "Bake at 375°F until puffed, golden at the edges, and a knife inserted in the center comes out clean. Rest 10 minutes before cutting into squares for the line.",
+      "minutes": 40,
+      "tempF": 375
+    }
+  ],
+  "nutrition": {
+    "calories": 483,
+    "protein": 39,
+    "carbs": 26,
+    "fat": 25,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": true
+    }
+  },
+  "stationWorkflow": [
+    "Prep and refrigerate the casserole the night before a busy shift; pull it 30 minutes before baking.",
+    "Assign one cook to oven checks while another sets up a warm holding pan with foil for staggered eaters.",
+    "Cut with a sharp serrated knife in the pan, then lift squares with a offset spatula to keep layers intact."
+  ],
+  "cleanupNotes": [
+    "Soak the 9x13 in warm soapy water immediately after serving—egg custard bonds to metal if left to dry.",
+    "Line the sheet pan with parchment when toasting bread cubes for a one-wipe cleanup."
+  ],
+  "leftovers": [
+    "Wrap individual squares in foil and reheat at 325°F for 12 minutes until steaming in the center.",
+    "Dice cold casserole into a breakfast fried rice with soy, green onion, and a fried egg on top."
+  ],
+  "heroImage": "/images/breakfast/denver-breakfast-casserole.jpg",
+  "thumbImage": "/images/thumbs/breakfast/denver-breakfast-casserole.jpg",
+  "imageAlt": "Golden Denver breakfast casserole squares with ham and bell peppers",
+  "publishedAt": "2026-05-30T03:14:16.260Z",
+  "updatedAt": "2026-05-30T03:14:16.260Z",
+  "readMinutes": 8,
+  "seoTitle": "Denver Breakfast Casserole | Firehall Breakfast"
+}

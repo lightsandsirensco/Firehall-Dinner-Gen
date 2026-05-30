@@ -10,10 +10,25 @@ import {
 } from "../performance-meals/adapted/index.js";
 import { getClassicHallMeal, CLASSIC_HALL_MEALS } from "../classic-hall-meals.js";
 import { performancePageHeroPath } from "../performance-meals/recipe-page-paths.js";
+import {
+  HALL_EXPANSION_ADAPTED_RECIPES,
+  getHallExpansionRecipeBySlug,
+} from "../hall-expansion/adapted/index.js";
+import { hallExpansionHeroPath } from "../hall-expansion/recipe-page-paths.js";
+import {
+  BREAKFAST_SLUG_SET,
+  breakfastCatalogHeroPath,
+  getBreakfastCatalogTitle,
+  isBreakfastCatalogSlug,
+} from "../breakfast-catalog/slug-registry.js";
 import type { RecipeSourceAttribution } from "../canonical-recipe.js";
 
 /** Internal editorial collection ids (admin / telemetry only). */
-export type CatalogCollectionId = "golden_100" | "performance_50";
+export type CatalogCollectionId =
+  | "golden_100"
+  | "performance_50"
+  | "hall_expansion_56"
+  | "breakfast_catalog";
 
 /** Customer-facing catalog badges — never use internal collection names. */
 export type CatalogPublicBadge =
@@ -56,6 +71,7 @@ export interface CatalogGateResult {
 
 const GOLDEN_SLUG_SET = new Set(GOLDEN_100_RECIPES.map((r) => r.slug));
 const PERFORMANCE_SLUG_SET = new Set(PERFORMANCE_ADAPTED_RECIPES.map((r) => r.manifest.slug));
+const HALL_EXPANSION_SLUG_SET = new Set(HALL_EXPANSION_ADAPTED_RECIPES.map((r) => r.slug));
 const CLASSIC_SLUG_SET = new Set(CLASSIC_HALL_MEALS.map((m) => m.slug));
 
 const DISALLOWED_SOURCES = new Set([
@@ -71,6 +87,8 @@ const DISALLOWED_SOURCES = new Set([
 const OWNED_IMAGE_PREFIXES = [
   "/images/golden-100/",
   "/images/performance-50/",
+  "/images/hall-expansion/",
+  "/images/breakfast/",
   "/images/mobile/",
   "/images/thumbs/",
   "/images/rails/",
@@ -91,8 +109,20 @@ export function isPerformance50Slug(slug: string | null | undefined): boolean {
   return s.length > 0 && PERFORMANCE_SLUG_SET.has(s);
 }
 
+export function isHallExpansionSlug(slug: string | null | undefined): boolean {
+  const s = normalizeCatalogSlug(slug);
+  return s.length > 0 && HALL_EXPANSION_SLUG_SET.has(s);
+}
+
+export { isBreakfastCatalogSlug };
+
 export function isApprovedCatalogSlug(slug: string | null | undefined): boolean {
-  return isGolden100Slug(slug) || isPerformance50Slug(slug);
+  return (
+    isGolden100Slug(slug) ||
+    isPerformance50Slug(slug) ||
+    isHallExpansionSlug(slug) ||
+    isBreakfastCatalogSlug(slug)
+  );
 }
 
 /** @deprecated Prefer isApprovedCatalogSlug */
@@ -109,6 +139,8 @@ export function isHallClassicSlug(slug: string | null | undefined): boolean {
 
 export function resolveCatalogCollection(slug: string): CatalogCollectionId | null {
   const s = normalizeCatalogSlug(slug);
+  if (BREAKFAST_SLUG_SET.has(s)) return "breakfast_catalog";
+  if (HALL_EXPANSION_SLUG_SET.has(s)) return "hall_expansion_56";
   if (PERFORMANCE_SLUG_SET.has(s)) return "performance_50";
   if (GOLDEN_SLUG_SET.has(s)) return "golden_100";
   return null;
@@ -120,6 +152,10 @@ export function getCatalogTitle(slug: string): string | null {
   if (golden?.title) return golden.title;
   const perf = getPerformanceRecipeBySlug(s);
   if (perf?.manifest.title) return perf.manifest.title;
+  const expansion = getHallExpansionRecipeBySlug(s);
+  if (expansion?.title) return expansion.title;
+  const breakfastTitle = getBreakfastCatalogTitle(s);
+  if (breakfastTitle) return breakfastTitle;
   return null;
 }
 
@@ -133,6 +169,12 @@ export function performance50HeroPath(slug: string): string {
 
 export function resolveCatalogHeroPath(slug: string): string {
   const s = normalizeCatalogSlug(slug);
+  if (isBreakfastCatalogSlug(s)) {
+    return breakfastCatalogHeroPath(s);
+  }
+  if (isHallExpansionSlug(s)) {
+    return hallExpansionHeroPath(s);
+  }
   if (isPerformance50Slug(s)) {
     return performancePageHeroPath(s);
   }
@@ -223,6 +265,9 @@ function isApprovedSourceAttribution(source: CatalogGateInput["recipeSource"]): 
     kind === "catalog" ||
     kind === "golden_100" ||
     kind === "performance_meals_50" ||
+    kind === "hall_expansion_56" ||
+    kind === "hall_expansion_30" ||
+    kind === "breakfast_catalog" ||
     kind === "hall_classic" ||
     kind === "publisher"
   );
@@ -287,7 +332,14 @@ export function evaluateCatalogRecipe(
   }
 
   const badge = resolvePrimaryCatalogBadge(slug);
-  const matchedBy = collection === "performance_50" ? "performance_50_index" : "golden_100_index";
+  const matchedBy =
+    collection === "performance_50"
+      ? "performance_50_index"
+      : collection === "hall_expansion_56"
+        ? "hall_expansion_index"
+        : collection === "breakfast_catalog"
+          ? "breakfast_catalog_index"
+          : "golden_100_index";
 
   if (input.source && DISALLOWED_SOURCES.has(String(input.source).toLowerCase())) {
     reasons.push(`disallowed_source:${input.source}`);
@@ -385,6 +437,14 @@ export function searchHallCatalog(query: string, limit = 15): HallCatalogSearchH
       })
     : PERFORMANCE_ADAPTED_RECIPES;
 
+  const expansionPool = q
+    ? HALL_EXPANSION_ADAPTED_RECIPES.filter((r) => {
+        const hay =
+          `${r.title} ${r.slug} ${r.cuisine} ${r.protein} ${r.mealFormat} ${r.category}`.toLowerCase();
+        return hay.includes(q);
+      })
+    : HALL_EXPANSION_ADAPTED_RECIPES;
+
   const hits: HallCatalogSearchHit[] = [
     ...goldenPool.map((r) => ({
       slug: r.slug,
@@ -403,6 +463,15 @@ export function searchHallCatalog(query: string, limit = 15): HallCatalogSearchH
       cuisine: r.manifest.cuisine,
       mealFormat: r.manifest.mealFormat,
       collection: "performance_50" as const,
+    })),
+    ...expansionPool.map((r) => ({
+      slug: r.slug,
+      title: r.title,
+      heroImage: hallExpansionHeroPath(r.slug),
+      protein: r.protein,
+      cuisine: r.cuisine,
+      mealFormat: r.mealFormat,
+      collection: "hall_expansion_56" as const,
     })),
   ];
 

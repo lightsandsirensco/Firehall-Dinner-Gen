@@ -1,0 +1,189 @@
+{
+  "slug": "green-chile-chicken-stew",
+  "title": "Green Chile Chicken Stew",
+  "displayTitle": "Green Chile Chicken Stew",
+  "seoTitle": "Green Chile Chicken Stew | Firefighter Meal",
+  "shortDescription": "Tomatillo and green chile stew with white beans for ten",
+  "subtitle": "Tomatillo and green chile stew with white beans for ten",
+  "category": "hall_expansion",
+  "cuisine": "southwestern",
+  "description": "Chicken thighs braise with tomatillos, green chiles, and white beans until tender and tangy. Cumin and cilantro finish the pot for a bright, warming stew that is not standard chili.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 50,
+  "prepTime": 30,
+  "difficulty": "medium",
+  "calories": 360,
+  "protein": 32,
+  "carbs": 34,
+  "fats": 12,
+  "tags": [
+    "protein:chicken",
+    "format:soup",
+    "category:crew_feeders",
+    "soup",
+    "chicken",
+    "hearty",
+    "hall_expansion",
+    "hall_expansion_56",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Large Dutch oven",
+    "Blender",
+    "Instant-read thermometer",
+    "Ladle",
+    "Sheet pan"
+  ],
+  "ingredients": [
+    {
+      "name": "bone-in chicken thighs",
+      "quantity": "4",
+      "unit": "lb",
+      "group": "Main"
+    },
+    {
+      "name": "tomatillos",
+      "quantity": "2",
+      "unit": "lb",
+      "notes": "husked and halved",
+      "group": "Base"
+    },
+    {
+      "name": "canned green chiles",
+      "quantity": "2",
+      "unit": "cans",
+      "notes": "4 oz each",
+      "group": "Base"
+    },
+    {
+      "name": "cannellini beans",
+      "quantity": "2",
+      "unit": "cans",
+      "notes": "15 oz each, drained",
+      "group": "Base"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "1",
+      "unit": "whole",
+      "notes": "diced",
+      "group": "Aromatics"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "5",
+      "unit": "cloves",
+      "notes": "minced",
+      "group": "Aromatics"
+    },
+    {
+      "name": "ground cumin",
+      "quantity": "2",
+      "unit": "tsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "chicken broth",
+      "quantity": "6",
+      "unit": "cups",
+      "group": "Liquid"
+    },
+    {
+      "name": "fresh cilantro",
+      "quantity": "0.5",
+      "unit": "cup",
+      "notes": "chopped",
+      "group": "Finish"
+    },
+    {
+      "name": "lime",
+      "quantity": "3",
+      "unit": "whole",
+      "notes": "wedged",
+      "group": "Finish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Char the tomatillos",
+      "instruction": "Broil tomatillos and onion at 500°F 5–7 minutes until blistered. Blend with green chiles and half the garlic until smooth. Target oven/smoker temperature: 500°F.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Sear the chicken",
+      "instruction": "Season chicken thighs and sear in oil 4 minutes per side until golden. Set aside.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Simmer the stew",
+      "instruction": "Sauté remaining garlic and cumin 1 minute. Add tomatillo puree and broth. Return chicken and simmer 30 minutes until internal temp reaches 165°F. Target oven/smoker temperature: 165°F.",
+      "minutes": 30,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Shred and finish",
+      "instruction": "Remove chicken, shred meat, discard bones. Return meat to pot with beans and simmer 10 minutes. Stir in half the cilantro.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Serve with garnishes",
+      "instruction": "Ladle into bowls and top with remaining cilantro and lime wedges. Offer hot sauce at the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Roasted poblano peppers diced in add smoky depth beyond canned chiles.",
+    "Corn kernels stirred in at the end make this feel like a complete bowl.",
+    "This thickens overnight—thin reheats with broth, not water."
+  ],
+  "tonightSpread": [
+    "Stew with warm flour tortillas for dunking.",
+    "Shredded Monterey Jack and sour cream at the line."
+  ],
+  "leftovers": [
+    "Layer over rice with fried egg for a green chile bowl breakfast.",
+    "Use as enchilada filling with extra cheese and sauce."
+  ],
+  "whyCrewsLikeIt": "Green chile stew feels different from the usual tomato chili rotation. It is hearty, tangy, and the heat level is easy to control for mixed spice tolerances on the crew.",
+  "mealPrepNotes": "Roast fresh tomatillos under broiler for depth if using raw. Canned green chiles work fine for speed. Shred chicken in the pot after braising.",
+  "spiceLevel": "medium",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 360,
+    "protein": 32,
+    "carbs": 34,
+    "fats": 12,
+    "label": "~360 cal/serving · 32g protein · 8g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/green-chile-chicken-stew.jpg",
+  "heroImageAlt": "Green Chile Chicken Stew — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/green-chile-chicken-stew.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/green-chile-chicken-stew.jpg",
+  "railImage": "/images/rails/hall-expansion/green-chile-chicken-stew.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "green chile chicken stew",
+    "crew feeders"
+  ],
+  "relatedSlugs": [
+    "shawarma-bar-night",
+    "fajita-bar-night",
+    "hall-burger-bar",
+    "pasta-bar-night"
+  ],
+  "generatedAt": "2026-05-30T03:14:19.188Z",
+  "contentVersion": 2
+}

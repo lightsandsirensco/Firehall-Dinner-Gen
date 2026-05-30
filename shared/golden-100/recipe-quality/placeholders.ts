@@ -15,6 +15,10 @@ import {
   usesGenericGrillTemplate,
 
 } from "./recipe-instruction-class.js";
+import {
+  findTemplateLanguageInText,
+  TEMPLATE_STEP_TITLES,
+} from "./template-language.js";
 
 
 
@@ -36,7 +40,7 @@ const GENERIC_STEP =
 
 const GENERIC_STEP_PHRASE =
 
-  /\b(cook (the )?protein until done|pat the protein dry and season with salt and pepper|season to taste|cook until done)\b/i;
+  /\b(cook (the )?protein until done|pat the protein dry and season with salt and pepper|season to taste|cook until done|sear protein\b|cook protein\b|protein and veg\b|rice, protein, veg\b)\b/i;
 
 
 
@@ -128,7 +132,7 @@ export function isBannedStepTitle(title: string): boolean {
 
   const t = title.trim().toLowerCase();
 
-  return BANNED_STEP_TITLES.has(t) || GENERIC_GRILL_STEP_TITLES.has(t);
+  return BANNED_STEP_TITLES.has(t) || GENERIC_GRILL_STEP_TITLES.has(t) || TEMPLATE_STEP_TITLES.has(t);
 
 }
 
@@ -151,6 +155,7 @@ export function isGenericStep(step: { title?: string; instruction: string }): bo
   if (GENERIC_STEP_PHRASE.test(body)) return true;
 
   if (TEMPLATE_STEP_PHRASE.test(body)) return true;
+  if (findTemplateLanguageInText(body).length > 0) return true;
 
   if (body.length < 55) return true;
 

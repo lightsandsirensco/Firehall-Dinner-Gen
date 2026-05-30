@@ -13,10 +13,10 @@
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 600,
-  "protein": 40,
-  "carbs": 48,
-  "fats": 28,
+  "calories": 1388,
+  "protein": 63,
+  "carbs": 45,
+  "fats": 90,
   "tags": [
     "protein:pork",
     "format:pizza",
@@ -34,102 +34,130 @@
   ],
   "ingredients": [
     {
-      "name": "Bread flour",
+      "name": "Pizza dough balls (15 oz)",
+      "quantity": "4",
+      "unit": "count",
+      "group": "Crust"
+    },
+    {
+      "name": "Breakfast sausage, bulk",
+      "quantity": "3",
+      "unit": "lb",
+      "group": "Main"
+    },
+    {
+      "name": "Whole milk",
       "quantity": "4",
       "unit": "cups",
-      "group": "Dough"
+      "group": "Gravy"
     },
     {
-      "name": "Active dry yeast",
-      "quantity": "2",
-      "unit": "tsp",
-      "group": "Dough"
-    },
-    {
-      "name": "Warm water",
-      "quantity": "1.5",
-      "unit": "cups",
-      "notes": "110°F",
-      "group": "Dough"
-    },
-    {
-      "name": "Olive oil",
-      "quantity": "3",
+      "name": "Unsalted butter",
+      "quantity": "6",
       "unit": "tbsp",
-      "group": "Dough"
+      "group": "Gravy"
     },
     {
-      "name": "Kosher salt",
+      "name": "All-purpose flour",
+      "quantity": "6",
+      "unit": "tbsp",
+      "group": "Gravy"
+    },
+    {
+      "name": "Country sausage gravy mix",
       "quantity": "2",
-      "unit": "tsp",
-      "group": "Dough"
+      "unit": "packets",
+      "notes": "optional shortcut",
+      "group": "Gravy"
     },
     {
-      "name": "Crushed tomatoes",
-      "quantity": "2",
-      "unit": "cans",
-      "notes": "28 oz",
-      "group": "Sauce"
+      "name": "Large eggs",
+      "quantity": "12",
+      "unit": "count",
+      "group": "Topping"
     },
     {
-      "name": "Fresh mozzarella, torn",
+      "name": "Shredded cheddar-mozzarella blend",
       "quantity": "24",
       "unit": "oz",
       "group": "Cheese"
     },
     {
-      "name": "Pepperoni or toppings",
-      "quantity": "12",
-      "unit": "oz",
-      "group": "Toppings"
+      "name": "Black pepper",
+      "quantity": "2",
+      "unit": "tsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Dried sage",
+      "quantity": "1",
+      "unit": "tsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Kosher salt",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Vegetable oil",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Pan"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Proof the dough",
-      "instruction": "Stir yeast into warm water with a pinch of sugar; bloom 5 minutes until foamy. Mix flour, salt, oil, and yeast water until a shaggy dough forms. Knead 8–10 minutes until smooth. Rise covered 1–1½ hours until doubled — Breakfast Sausage Gravy Pizza needs relaxed gluten for an open crumb.",
-      "minutes": 90,
-      "heatLevel": ""
+      "title": "Brown breakfast sausage",
+      "instruction": "Cook bulk sausage in a skillet over medium-high, breaking into small crumbles until fully cooked and browned. Drain grease — greasy gravy splits on the pizza.",
+      "minutes": 15,
+      "heatLevel": "medium-high"
     },
     {
       "stepNumber": 2,
-      "title": "Heat oven and stone",
-      "instruction": "Place a pizza stone or inverted sheet pan in the oven. Preheat to 500°F for at least 45 minutes — surface temp matters more than air temp. Prep sauce and cheese while the oven saturates.",
-      "minutes": 45,
-      "heatLevel": "high"
+      "title": "Make country gravy",
+      "instruction": "Melt butter in a pot; whisk in flour 1 minute. Whisk in milk and simmer until thick. Stir in half the cooked sausage. Season with salt, pepper, and sage. Gravy should coat a spoon — thin gravy soaks the crust.",
+      "minutes": 12,
+      "heatLevel": "medium"
     },
     {
       "stepNumber": 3,
-      "title": "Stretch and top",
-      "instruction": "Divide dough; stretch by hand (don't roll with a pin unless Detroit-style). Sauce lightly — wet centers sag. Add cheese and toppings. Work on parchment or floured peel; jiggle to confirm it slides.",
-      "minutes": 15,
-      "heatLevel": ""
+      "title": "Par-bake crusts",
+      "instruction": "Oil two sheet pans or large rectangular pans. Stretch dough to fit; dock with a fork. Par-bake at 400°F 8 minutes until set but pale — this prevents a soggy breakfast pizza.",
+      "minutes": 10,
+      "heatLevel": "medium"
     },
     {
       "stepNumber": 4,
-      "title": "Bake until blistered",
-      "instruction": "Slide onto the hot stone. Bake 10–14 minutes until cheese bubbles with brown spots and the underside sounds hollow when tapped. Rotate once if your oven has hot spots.",
-      "minutes": 12,
-      "heatLevel": "high"
+      "title": "Top with gravy, sausage, cheese, and eggs",
+      "instruction": "Spread sausage gravy on par-baked crusts. Scatter remaining sausage and cheese. Crack eggs over the top — space them so each slice gets half an egg.",
+      "minutes": 10,
+      "heatLevel": ""
     },
     {
       "stepNumber": 5,
-      "title": "Rest and cut",
-      "instruction": "Rest 2 minutes before cutting so cheese sets. Cut on sheet trays for the hall line. Hold backup pies at 200°F uncovered up to 15 minutes — covering traps steam and softens crust.",
-      "minutes": 3,
+      "title": "Bake until eggs set",
+      "instruction": "Bake at 400°F 12–15 minutes until cheese melts and egg whites are set with jammy yolks. Rotate pans once if your oven runs hot in back.",
+      "minutes": 15,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Cut and serve breakfast pizza",
+      "instruction": "Rest 3 minutes, then cut into squares for the hall line. Breakfast Sausage Gravy Pizza — sausage, gravy, eggs, cheese. Not pepperoni night.",
+      "minutes": 5,
       "heatLevel": "low"
     }
   ],
   "proTips": [
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts."
   ],
   "tonightSpread": [
-    "Cut pies into hall slices (8 per pie minimum) and fan on sheet trays.",
-    "Keep a fresh pie warming in the oven — pizza dies fast on the counter.",
-    "Line up Breakfast Sausage Gravy Pizza on the main counter with serving spoons — firefighters grab fast between calls.",
-    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+    "Cut breakfast pizza into squares on sheet trays — eggs should look set, not runny, for grab-and-go.",
+    "Keep hot sauce optional on the side; gravy pizza does not need pepperoni backup."
   ],
   "leftovers": [
     "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
@@ -140,18 +168,32 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 600,
-    "protein": 40,
-    "carbs": 48,
-    "fats": 28,
-    "label": "per serving (hall portion)"
+    "calories": 1388,
+    "protein": 63,
+    "carbs": 45,
+    "fats": 90,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/breakfast-sausage-pizza.jpg",
   "mobileImage": "/images/mobile/breakfast-sausage-pizza.jpg",
   "thumbImage": "/images/thumbs/breakfast-sausage-pizza.jpg",
   "railImage": "/images/rails/breakfast-sausage-pizza.jpg",
   "realismScore": 100,
-  "firefighterScore": 98,
+  "firefighterScore": 94,
   "popularityWeight": 3.2,
   "searchTerms": [
     "breakfast sausage gravy pizza",
@@ -173,6 +215,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-29T01:43:09.407Z",
+  "generatedAt": "2026-05-30T03:28:01.950Z",
   "contentVersion": 2
 }

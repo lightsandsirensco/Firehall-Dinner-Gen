@@ -38,6 +38,32 @@ export const breakfastStepSchema = z.object({
   tempF: z.number().int().min(0).max(600).optional(),
 });
 
+export const breakfastNutritionSchema = z.object({
+  calories: z.number().int().min(0).max(5000),
+  protein: z.number().int().min(0).max(500),
+  carbs: z.number().int().min(0).max(500),
+  fat: z.number().int().min(0).max(500),
+  label: z.string().trim().max(80).optional(),
+  source: z.enum(["calculated", "curated", "estimated"]).optional(),
+  filterFlags: z
+    .object({
+      highProtein: z.boolean(),
+      under700Calories: z.boolean(),
+      under30gFat: z.boolean(),
+      highCarb: z.boolean(),
+      lowCarb: z.boolean(),
+      mealPrepFriendly: z.boolean(),
+    })
+    .optional(),
+  badgeCandidates: z
+    .object({
+      highProtein: z.boolean(),
+      lighterOption: z.boolean(),
+      performanceMeal: z.boolean(),
+    })
+    .optional(),
+});
+
 export const breakfastRecipePageSchema = z.object({
   slug: slugSchema,
   title: z.string().trim().min(3).max(120),
@@ -55,6 +81,8 @@ export const breakfastRecipePageSchema = z.object({
 
   ingredients: z.array(breakfastIngredientSchema).min(6).max(80),
   steps: z.array(breakfastStepSchema).min(4).max(22),
+
+  nutrition: breakfastNutritionSchema,
 
   stationWorkflow: z.array(z.string().trim().min(12).max(240)).min(3).max(10),
   cleanupNotes: z.array(z.string().trim().min(12).max(240)).min(2).max(8),

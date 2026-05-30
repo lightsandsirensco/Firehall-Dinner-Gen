@@ -1,0 +1,1245 @@
+{
+  "generatedAt": "2026-05-30T01:22:41.285Z",
+  "totals": {
+    "recipesAudited": 50,
+    "hallExpansion": 30,
+    "breakfastNew": 20,
+    "errors": 0,
+    "warnings": 96,
+    "heroesOnDisk": 50,
+    "thumbsOnDisk": 50,
+    "productionReadinessScore": 100
+  },
+  "inventory": [
+    {
+      "name": "Smoked Turkey Breast for the Crew",
+      "slug": "smoked-turkey-breast",
+      "category": "smoker_recipes",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/smoked-turkey-breast.jpg",
+      "published": true,
+      "heroBytes": 1701958,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Smoked Meatloaf with Glaze",
+      "slug": "smoked-meatloaf",
+      "category": "smoker_recipes",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/smoked-meatloaf.jpg",
+      "published": true,
+      "heroBytes": 1664992,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Smoked Mac and Cheese",
+      "slug": "smoked-mac-and-cheese",
+      "category": "smoker_recipes",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/smoked-mac-and-cheese.jpg",
+      "published": true,
+      "heroBytes": 1542643,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Pork Belly Burnt Ends",
+      "slug": "pork-belly-burnt-ends",
+      "category": "smoker_recipes",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/pork-belly-burnt-ends.jpg",
+      "published": true,
+      "heroBytes": 1492038,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Smoked Sausage Platter",
+      "slug": "smoked-sausage-platter",
+      "category": "smoker_recipes",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/smoked-sausage-platter.jpg",
+      "published": true,
+      "heroBytes": 1597136,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Smoked Queso Fundido",
+      "slug": "smoked-queso-fundido",
+      "category": "smoker_recipes",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/smoked-queso-fundido.jpg",
+      "published": true,
+      "heroBytes": 1693706,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Hickory Smoked Turkey Legs",
+      "slug": "hickory-turkey-legs",
+      "category": "smoker_recipes",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/hickory-turkey-legs.jpg",
+      "published": true,
+      "heroBytes": 1539909,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Smoked Tri-Tip Roast",
+      "slug": "smoked-tri-tip",
+      "category": "smoker_recipes",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/smoked-tri-tip.jpg",
+      "published": true,
+      "heroBytes": 1838517,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Smoked Corned Beef Brisket",
+      "slug": "smoked-corned-beef",
+      "category": "smoker_recipes",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/smoked-corned-beef.jpg",
+      "published": true,
+      "heroBytes": 1634451,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Pellet Smoked Chicken Quarters",
+      "slug": "pellet-smoked-chicken-quarters",
+      "category": "smoker_recipes",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/pellet-smoked-chicken-quarters.jpg",
+      "published": true,
+      "heroBytes": 1650598,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Loaded Potato Skins",
+      "slug": "loaded-potato-skins",
+      "category": "game_day_recipes",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/loaded-potato-skins.jpg",
+      "published": true,
+      "heroBytes": 1713918,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Game Day Pizza Sliders",
+      "slug": "game-day-pizza-sliders",
+      "category": "game_day_recipes",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/game-day-pizza-sliders.jpg",
+      "published": true,
+      "heroBytes": 1766587,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Pretzel Bite Platter with Beer Cheese",
+      "slug": "pretzel-bite-platter",
+      "category": "game_day_recipes",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/pretzel-bite-platter.jpg",
+      "published": true,
+      "heroBytes": 1572322,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Jalapeño Popper Dip",
+      "slug": "jalapeno-popper-dip",
+      "category": "game_day_recipes",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/jalapeno-popper-dip.jpg",
+      "published": true,
+      "heroBytes": 1521274,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Philly Cheesesteak Sliders",
+      "slug": "philly-cheesesteak-sliders",
+      "category": "game_day_recipes",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/philly-cheesesteak-sliders.jpg",
+      "published": true,
+      "heroBytes": 1669484,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Chicken Wing Bar Night",
+      "slug": "chicken-wing-bar-night",
+      "category": "game_day_recipes",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/chicken-wing-bar-night.jpg",
+      "published": true,
+      "heroBytes": 1564590,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "BBQ Meatball Skewers",
+      "slug": "bbq-meatball-skewers",
+      "category": "game_day_recipes",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/bbq-meatball-skewers.jpg",
+      "published": true,
+      "heroBytes": 1577559,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Soft Pretzel Hot Dogs",
+      "slug": "soft-pretzel-dogs",
+      "category": "game_day_recipes",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/soft-pretzel-dogs.jpg",
+      "published": true,
+      "heroBytes": 1714246,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Firehall Charcuterie Board",
+      "slug": "firehall-charcuterie-board",
+      "category": "game_day_recipes",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/firehall-charcuterie-board.jpg",
+      "published": true,
+      "heroBytes": 1755169,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Cheesy Beef Nacho Bake",
+      "slug": "cheesy-beef-nacho-bake",
+      "category": "game_day_recipes",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/cheesy-beef-nacho-bake.jpg",
+      "published": true,
+      "heroBytes": 1581321,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Shawarma Bar Night",
+      "slug": "shawarma-bar-night",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/shawarma-bar-night.jpg",
+      "published": true,
+      "heroBytes": 1644682,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Fajita Bar Night",
+      "slug": "fajita-bar-night",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/fajita-bar-night.jpg",
+      "published": true,
+      "heroBytes": 1626488,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Hall Burger Bar",
+      "slug": "hall-burger-bar",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/hall-burger-bar.jpg",
+      "published": true,
+      "heroBytes": 1766407,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Pasta Bar Night",
+      "slug": "pasta-bar-night",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/pasta-bar-night.jpg",
+      "published": true,
+      "heroBytes": 1615827,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Rice Bowl Bar Night",
+      "slug": "rice-bowl-bar-night",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/rice-bowl-bar-night.jpg",
+      "published": true,
+      "heroBytes": 1494833,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Sandwich Board Night",
+      "slug": "sandwich-board-night",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/sandwich-board-night.jpg",
+      "published": true,
+      "heroBytes": 1537339,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Mediterranean Feast Night",
+      "slug": "mediterranean-feast-night",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/mediterranean-feast-night.jpg",
+      "published": true,
+      "heroBytes": 1610902,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Burrito Bowl Bar Night",
+      "slug": "burrito-bowl-bar-night",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/burrito-bowl-bar-night.jpg",
+      "published": true,
+      "heroBytes": 1633561,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Loaded Nacho Bar Night",
+      "slug": "loaded-nacho-bar-night",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/loaded-nacho-bar-night.jpg",
+      "published": true,
+      "heroBytes": 1653197,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Build-Your-Own Pho Bar",
+      "slug": "build-your-own-pho-bar",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/build-your-own-pho-bar.jpg",
+      "published": true,
+      "heroBytes": 1433410,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Red Lead Skillet",
+      "slug": "red-lead-skillet",
+      "category": "firehall_breakfasts",
+      "catalog": "breakfast",
+      "imagePath": "/images/breakfast/red-lead-skillet.jpg",
+      "published": true,
+      "heroBytes": 1708780,
+      "thumbOk": true,
+      "mobileOk": false
+    },
+    {
+      "name": "Firehall Breakfast Pizza",
+      "slug": "firehall-breakfast-pizza",
+      "category": "firehall_breakfasts",
+      "catalog": "breakfast",
+      "imagePath": "/images/breakfast/firehall-breakfast-pizza.jpg",
+      "published": true,
+      "heroBytes": 1521849,
+      "thumbOk": true,
+      "mobileOk": false
+    },
+    {
+      "name": "Breakfast Enchiladas for the Crew",
+      "slug": "breakfast-enchiladas",
+      "category": "firehall_breakfasts",
+      "catalog": "breakfast",
+      "imagePath": "/images/breakfast/breakfast-enchiladas.jpg",
+      "published": true,
+      "heroBytes": 1643258,
+      "thumbOk": true,
+      "mobileOk": false
+    },
+    {
+      "name": "Breakfast Crunchwraps",
+      "slug": "breakfast-crunchwraps",
+      "category": "firehall_breakfasts",
+      "catalog": "breakfast",
+      "imagePath": "/images/breakfast/breakfast-crunchwraps.jpg",
+      "published": true,
+      "heroBytes": 1573333,
+      "thumbOk": true,
+      "mobileOk": false
+    },
+    {
+      "name": "Denver Breakfast Casserole",
+      "slug": "denver-breakfast-casserole",
+      "category": "firehall_breakfasts",
+      "catalog": "breakfast",
+      "imagePath": "/images/breakfast/denver-breakfast-casserole.jpg",
+      "published": true,
+      "heroBytes": 1682767,
+      "thumbOk": true,
+      "mobileOk": false
+    },
+    {
+      "name": "Breakfast Sliders",
+      "slug": "breakfast-sliders",
+      "category": "firehall_breakfasts",
+      "catalog": "breakfast",
+      "imagePath": "/images/breakfast/breakfast-sliders.jpg",
+      "published": true,
+      "heroBytes": 1632119,
+      "thumbOk": true,
+      "mobileOk": false
+    },
+    {
+      "name": "Breakfast Quesadillas",
+      "slug": "breakfast-quesadillas",
+      "category": "firehall_breakfasts",
+      "catalog": "breakfast",
+      "imagePath": "/images/breakfast/breakfast-quesadillas.jpg",
+      "published": true,
+      "heroBytes": 1679247,
+      "thumbOk": true,
+      "mobileOk": false
+    },
+    {
+      "name": "Protein French Toast",
+      "slug": "protein-french-toast",
+      "category": "firehall_breakfasts",
+      "catalog": "breakfast",
+      "imagePath": "/images/breakfast/protein-french-toast.jpg",
+      "published": true,
+      "heroBytes": 1608474,
+      "thumbOk": true,
+      "mobileOk": false
+    },
+    {
+      "name": "Breakfast Poutine",
+      "slug": "breakfast-poutine",
+      "category": "firehall_breakfasts",
+      "catalog": "breakfast",
+      "imagePath": "/images/breakfast/breakfast-poutine.jpg",
+      "published": true,
+      "heroBytes": 1540323,
+      "thumbOk": true,
+      "mobileOk": false
+    },
+    {
+      "name": "Monte Cristo Sandwiches",
+      "slug": "monte-cristo-sandwiches",
+      "category": "firehall_breakfasts",
+      "catalog": "breakfast",
+      "imagePath": "/images/breakfast/monte-cristo-sandwiches.jpg",
+      "published": true,
+      "heroBytes": 1747296,
+      "thumbOk": true,
+      "mobileOk": false
+    },
+    {
+      "name": "Apple Cinnamon Baked Oatmeal",
+      "slug": "apple-cinnamon-baked-oatmeal",
+      "category": "firehall_breakfasts",
+      "catalog": "breakfast",
+      "imagePath": "/images/breakfast/apple-cinnamon-baked-oatmeal.jpg",
+      "published": true,
+      "heroBytes": 1680198,
+      "thumbOk": true,
+      "mobileOk": false
+    },
+    {
+      "name": "Cowboy Breakfast Skillet",
+      "slug": "cowboy-breakfast-skillet",
+      "category": "firehall_breakfasts",
+      "catalog": "breakfast",
+      "imagePath": "/images/breakfast/cowboy-breakfast-skillet.jpg",
+      "published": true,
+      "heroBytes": 1772002,
+      "thumbOk": true,
+      "mobileOk": false
+    },
+    {
+      "name": "Hall Breakfast Wraps",
+      "slug": "hall-breakfast-wraps",
+      "category": "firehall_breakfasts",
+      "catalog": "breakfast",
+      "imagePath": "/images/breakfast/hall-breakfast-wraps.jpg",
+      "published": true,
+      "heroBytes": 1542524,
+      "thumbOk": true,
+      "mobileOk": false
+    },
+    {
+      "name": "Sheet Pan Breakfast Sandwiches",
+      "slug": "sheet-pan-breakfast-sandwiches",
+      "category": "firehall_breakfasts",
+      "catalog": "breakfast",
+      "imagePath": "/images/breakfast/sheet-pan-breakfast-sandwiches.jpg",
+      "published": true,
+      "heroBytes": 1616868,
+      "thumbOk": true,
+      "mobileOk": false
+    },
+    {
+      "name": "Chorizo Breakfast Hash",
+      "slug": "chorizo-breakfast-hash",
+      "category": "firehall_breakfasts",
+      "catalog": "breakfast",
+      "imagePath": "/images/breakfast/chorizo-breakfast-hash.jpg",
+      "published": true,
+      "heroBytes": 1752940,
+      "thumbOk": true,
+      "mobileOk": false
+    },
+    {
+      "name": "Hall Sausage Biscuits & Gravy",
+      "slug": "hall-sausage-biscuits-gravy",
+      "category": "firehall_breakfasts",
+      "catalog": "breakfast",
+      "imagePath": "/images/breakfast/hall-sausage-biscuits-gravy.jpg",
+      "published": true,
+      "heroBytes": 1612753,
+      "thumbOk": true,
+      "mobileOk": false
+    },
+    {
+      "name": "Overnight French Toast Bake",
+      "slug": "overnight-french-toast-bake",
+      "category": "firehall_breakfasts",
+      "catalog": "breakfast",
+      "imagePath": "/images/breakfast/overnight-french-toast-bake.jpg",
+      "published": true,
+      "heroBytes": 1760032,
+      "thumbOk": true,
+      "mobileOk": false
+    },
+    {
+      "name": "Fire Captain Omelette Bar",
+      "slug": "fire-captain-omelette-bar",
+      "category": "firehall_breakfasts",
+      "catalog": "breakfast",
+      "imagePath": "/images/breakfast/fire-captain-omelette-bar.jpg",
+      "published": true,
+      "heroBytes": 1806011,
+      "thumbOk": true,
+      "mobileOk": false
+    },
+    {
+      "name": "Breakfast Nachos Supreme",
+      "slug": "breakfast-nachos-supreme",
+      "category": "firehall_breakfasts",
+      "catalog": "breakfast",
+      "imagePath": "/images/breakfast/breakfast-nachos-supreme.jpg",
+      "published": true,
+      "heroBytes": 1870164,
+      "thumbOk": true,
+      "mobileOk": false
+    },
+    {
+      "name": "Maple Sausage Pinwheels",
+      "slug": "maple-sausage-pinwheels",
+      "category": "firehall_breakfasts",
+      "catalog": "breakfast",
+      "imagePath": "/images/breakfast/maple-sausage-pinwheels.jpg",
+      "published": true,
+      "heroBytes": 1660947,
+      "thumbOk": true,
+      "mobileOk": false
+    }
+  ],
+  "issues": [
+    {
+      "slug": "cheesy-beef-nacho-bake",
+      "phase": "content",
+      "severity": "warn",
+      "code": "weak_title",
+      "message": "title_taco_no_tortilla"
+    },
+    {
+      "slug": "fajita-bar-night",
+      "phase": "content",
+      "severity": "warn",
+      "code": "weak_title",
+      "message": "title_taco_no_tortilla"
+    },
+    {
+      "slug": "hall-burger-bar",
+      "phase": "content",
+      "severity": "warn",
+      "code": "weak_title",
+      "message": "title_burger_no_bun"
+    },
+    {
+      "slug": "pasta-bar-night",
+      "phase": "content",
+      "severity": "warn",
+      "code": "weak_title",
+      "message": "title_pasta_no_pasta"
+    },
+    {
+      "slug": "mediterranean-feast-night",
+      "phase": "content",
+      "severity": "warn",
+      "code": "weak_title",
+      "message": "robotic_title"
+    },
+    {
+      "slug": "burrito-bowl-bar-night",
+      "phase": "content",
+      "severity": "warn",
+      "code": "weak_title",
+      "message": "title_taco_no_tortilla"
+    },
+    {
+      "slug": "loaded-nacho-bar-night",
+      "phase": "content",
+      "severity": "warn",
+      "code": "weak_title",
+      "message": "title_taco_no_tortilla"
+    },
+    {
+      "slug": "red-lead-skillet",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: sirloin or flank steak"
+    },
+    {
+      "slug": "red-lead-skillet",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: large eggs"
+    },
+    {
+      "slug": "red-lead-skillet",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: Yukon gold potatoes"
+    },
+    {
+      "slug": "firehall-breakfast-pizza",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: store-bought pizza dough balls"
+    },
+    {
+      "slug": "firehall-breakfast-pizza",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: country gravy"
+    },
+    {
+      "slug": "firehall-breakfast-pizza",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: shredded mozzarella"
+    },
+    {
+      "slug": "firehall-breakfast-pizza",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: breakfast sausage"
+    },
+    {
+      "slug": "firehall-breakfast-pizza",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: shredded cheddar"
+    },
+    {
+      "slug": "breakfast-enchiladas",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: Mexican chorizo"
+    },
+    {
+      "slug": "breakfast-enchiladas",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: shredded Monterey Jack"
+    },
+    {
+      "slug": "breakfast-enchiladas",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: 8-inch flour tortillas"
+    },
+    {
+      "slug": "breakfast-enchiladas",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: green enchilada sauce"
+    },
+    {
+      "slug": "breakfast-enchiladas",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: sour cream"
+    },
+    {
+      "slug": "breakfast-enchiladas",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: cilantro"
+    },
+    {
+      "slug": "breakfast-crunchwraps",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: large eggs"
+    },
+    {
+      "slug": "breakfast-crunchwraps",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: breakfast sausage"
+    },
+    {
+      "slug": "breakfast-crunchwraps",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: frozen hash browns"
+    },
+    {
+      "slug": "breakfast-crunchwraps",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: shredded cheddar"
+    },
+    {
+      "slug": "breakfast-crunchwraps",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: 12-inch flour tortillas"
+    },
+    {
+      "slug": "breakfast-crunchwraps",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: 6-inch tostada shells"
+    },
+    {
+      "slug": "breakfast-crunchwraps",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: sour cream"
+    },
+    {
+      "slug": "denver-breakfast-casserole",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: large eggs"
+    },
+    {
+      "slug": "denver-breakfast-casserole",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: whole milk"
+    },
+    {
+      "slug": "denver-breakfast-casserole",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: day-old bread"
+    },
+    {
+      "slug": "denver-breakfast-casserole",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: diced ham"
+    },
+    {
+      "slug": "denver-breakfast-casserole",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: shredded cheddar"
+    },
+    {
+      "slug": "breakfast-sliders",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: packages Hawaiian sweet rolls"
+    },
+    {
+      "slug": "breakfast-sliders",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: breakfast sausage patties"
+    },
+    {
+      "slug": "breakfast-sliders",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: large eggs"
+    },
+    {
+      "slug": "breakfast-sliders",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: cheddar cheese"
+    },
+    {
+      "slug": "breakfast-sliders",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: everything bagel seasoning"
+    },
+    {
+      "slug": "breakfast-quesadillas",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: 10-inch flour tortillas"
+    },
+    {
+      "slug": "breakfast-quesadillas",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: fresh cilantro"
+    },
+    {
+      "slug": "protein-french-toast",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: whole milk"
+    },
+    {
+      "slug": "protein-french-toast",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: thick-cut bread slices"
+    },
+    {
+      "slug": "protein-french-toast",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: mixed berries"
+    },
+    {
+      "slug": "breakfast-poutine",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: frozen straight-cut fries"
+    },
+    {
+      "slug": "breakfast-poutine",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: breakfast sausage"
+    },
+    {
+      "slug": "breakfast-poutine",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: all-purpose flour"
+    },
+    {
+      "slug": "breakfast-poutine",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: whole milk"
+    },
+    {
+      "slug": "breakfast-poutine",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: large eggs"
+    },
+    {
+      "slug": "monte-cristo-sandwiches",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: thick white bread slices"
+    },
+    {
+      "slug": "monte-cristo-sandwiches",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: sliced deli ham"
+    },
+    {
+      "slug": "monte-cristo-sandwiches",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: sliced deli turkey"
+    },
+    {
+      "slug": "apple-cinnamon-baked-oatmeal",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: rolled oats"
+    },
+    {
+      "slug": "apple-cinnamon-baked-oatmeal",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: steel-cut oats"
+    },
+    {
+      "slug": "apple-cinnamon-baked-oatmeal",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: whole milk"
+    },
+    {
+      "slug": "apple-cinnamon-baked-oatmeal",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: large eggs"
+    },
+    {
+      "slug": "apple-cinnamon-baked-oatmeal",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: large apples"
+    },
+    {
+      "slug": "apple-cinnamon-baked-oatmeal",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: ground cinnamon"
+    },
+    {
+      "slug": "apple-cinnamon-baked-oatmeal",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: chopped walnuts"
+    },
+    {
+      "slug": "cowboy-breakfast-skillet",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: Yukon gold potatoes"
+    },
+    {
+      "slug": "cowboy-breakfast-skillet",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: Mexican chorizo"
+    },
+    {
+      "slug": "cowboy-breakfast-skillet",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: 15-oz cans ranch-style beans"
+    },
+    {
+      "slug": "cowboy-breakfast-skillet",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: shredded cheddar"
+    },
+    {
+      "slug": "hall-breakfast-wraps",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: large eggs"
+    },
+    {
+      "slug": "hall-breakfast-wraps",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: lean turkey breakfast sausage"
+    },
+    {
+      "slug": "hall-breakfast-wraps",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: baby spinach"
+    },
+    {
+      "slug": "hall-breakfast-wraps",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: crumbled feta"
+    },
+    {
+      "slug": "hall-breakfast-wraps",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: 10-inch whole-wheat tortillas"
+    },
+    {
+      "slug": "sheet-pan-breakfast-sandwiches",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: 24-count slider roll package"
+    },
+    {
+      "slug": "sheet-pan-breakfast-sandwiches",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: large eggs"
+    },
+    {
+      "slug": "sheet-pan-breakfast-sandwiches",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: pre-cooked sausage patties"
+    },
+    {
+      "slug": "sheet-pan-breakfast-sandwiches",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: American or cheddar cheese"
+    },
+    {
+      "slug": "chorizo-breakfast-hash",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: russet potatoes"
+    },
+    {
+      "slug": "chorizo-breakfast-hash",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: Mexican chorizo"
+    },
+    {
+      "slug": "chorizo-breakfast-hash",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: smoked paprika"
+    },
+    {
+      "slug": "chorizo-breakfast-hash",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: crumbled cotija"
+    },
+    {
+      "slug": "hall-sausage-biscuits-gravy",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: breakfast sausage"
+    },
+    {
+      "slug": "hall-sausage-biscuits-gravy",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: all-purpose flour"
+    },
+    {
+      "slug": "hall-sausage-biscuits-gravy",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: whole milk"
+    },
+    {
+      "slug": "hall-sausage-biscuits-gravy",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: poultry seasoning"
+    },
+    {
+      "slug": "hall-sausage-biscuits-gravy",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: chopped parsley"
+    },
+    {
+      "slug": "overnight-french-toast-bake",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: large eggs"
+    },
+    {
+      "slug": "overnight-french-toast-bake",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: whole milk"
+    },
+    {
+      "slug": "overnight-french-toast-bake",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: chopped pecans"
+    },
+    {
+      "slug": "fire-captain-omelette-bar",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: large eggs"
+    },
+    {
+      "slug": "fire-captain-omelette-bar",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: whole milk"
+    },
+    {
+      "slug": "fire-captain-omelette-bar",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: shredded cheddar"
+    },
+    {
+      "slug": "fire-captain-omelette-bar",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: diced ham"
+    },
+    {
+      "slug": "fire-captain-omelette-bar",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: sautéed mushrooms"
+    },
+    {
+      "slug": "fire-captain-omelette-bar",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: diced tomatoes"
+    },
+    {
+      "slug": "fire-captain-omelette-bar",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: salsa and hot sauce"
+    },
+    {
+      "slug": "breakfast-nachos-supreme",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: large bags tortilla chips"
+    },
+    {
+      "slug": "breakfast-nachos-supreme",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: large eggs"
+    },
+    {
+      "slug": "maple-sausage-pinwheels",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: breakfast sausage"
+    },
+    {
+      "slug": "maple-sausage-pinwheels",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: shredded cheddar"
+    },
+    {
+      "slug": "maple-sausage-pinwheels",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: 8-count crescent roll tubes"
+    },
+    {
+      "slug": "maple-sausage-pinwheels",
+      "phase": "content",
+      "severity": "warn",
+      "code": "orphan_ingredient",
+      "message": "Ingredient may be unused in steps: everything bagel seasoning"
+    }
+  ],
+  "errorsByPhase": {
+    "content": {
+      "errors": 0,
+      "warnings": 96
+    }
+  }
+}

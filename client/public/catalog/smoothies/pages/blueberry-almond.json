@@ -61,19 +61,34 @@
     }
   ],
   "nutrition": {
-    "calories": 290,
-    "protein": 17,
-    "carbs": 32,
+    "calories": 156,
+    "protein": 8,
+    "carbs": 15,
     "fats": 8,
-    "highlights": "~290 cal · ~17 g protein · vitamin E and fats from almond butter · anthocyanins from blueberries"
+    "highlights": "~290 cal · ~17 g protein · vitamin E and fats from almond butter · anthocyanins from blueberries",
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": true
+    }
   },
   "substitutions": [
     "Peanut butter swaps in if almond butter is not on hand.",
     "Silken tofu (½ cup) can replace part of the yogurt for a dairy-free batch."
   ],
   "shiftNote": "Berries hide in the freezer well — good pantry item for halls trying to stock healthier grab-and-go options.",
-  "heroImage": "/images/editorial/smoothies/blueberry-almond.webp",
-  "thumbImage": "/images/editorial/smoothies/blueberry-almond.webp",
+  "heroImage": "/images/smoothies/blueberry-almond.webp",
+  "thumbImage": "/images/smoothies/blueberry-almond.webp",
   "tags": [
     "fuel_smoothie",
     "taxonomy:fruit_smoothie",

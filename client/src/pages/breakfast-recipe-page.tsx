@@ -8,6 +8,8 @@ import { fetchBreakfastRecipePage } from "@/lib/breakfast-api";
 import { FoodImage } from "@/components/mobile/food-image";
 import { cn } from "@/lib/utils";
 import { RecipeBrandStrip } from "@/components/brand/recipe-brand-strip";
+import { RecipeCrewRatingPanel } from "@/components/recipe-crew-rating/recipe-crew-rating-panel";
+import { RecipeNutritionPanel } from "@/components/recipe-nutrition-panel";
 import { SiteFooter } from "@/components/site-footer";
 
 export default function BreakfastRecipePage() {
@@ -71,6 +73,16 @@ export default function BreakfastRecipePage() {
             </div>
 
             <RecipeBrandStrip className="mt-5" />
+
+            <RecipeCrewRatingPanel slug={page.slug} category="breakfast_brunch" className="mt-6" />
+
+            <RecipeNutritionPanel
+              calories={page.nutrition.calories}
+              protein={page.nutrition.protein}
+              carbs={page.nutrition.carbs}
+              fat={page.nutrition.fat}
+              className="mt-6"
+            />
 
             <p className="mt-6 text-[15px] sm:text-[16px] leading-relaxed text-foreground/90 max-w-3xl">
               {page.description}

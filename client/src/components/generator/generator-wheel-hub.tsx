@@ -8,6 +8,12 @@ import type { FilterState } from "@/components/filter-panel";
 import { useQuery } from "@tanstack/react-query";
 import type { GoldenCatalogIndexEntry } from "@shared/golden-100/recipe-page-schema";
 import { fetchGoldenCatalogIndex } from "@/lib/golden-recipe-api";
+import { approvedCatalogTotalQueryKey, fetchApprovedCatalogTotal } from "@/lib/approved-catalog-api";
+import {
+  APPROVED_CATALOG_TOTAL,
+  formatMarketingRecipeCount,
+} from "@shared/meal-catalog/curated-count";
+import { approvedCatalogRecipePath } from "@shared/approved-catalog";
 import { DinnerWheel, DINNER_WHEEL_LAYOUT, type DinnerWheelResult } from "@/components/generator/dinner-wheel";
 import { DinnerWheelReveal } from "@/components/generator/dinner-wheel-reveal";
 import { CREW_CHIPS } from "@/lib/tonight-vibes";
@@ -44,6 +50,12 @@ export function GeneratorWheelHub({
     queryKey: ["hall-catalog-index-wheel"],
     queryFn: fetchGoldenCatalogIndex,
     staleTime: 5 * 60 * 1000,
+  });
+
+  const { data: recipeCount = APPROVED_CATALOG_TOTAL } = useQuery({
+    queryKey: approvedCatalogTotalQueryKey,
+    queryFn: fetchApprovedCatalogTotal,
+    staleTime: 120_000,
   });
 
   const recipes: GoldenCatalogIndexEntry[] = catalog?.recipes ?? [];
@@ -86,7 +98,7 @@ export function GeneratorWheelHub({
         <header className="text-center mb-7 sm:mb-9 max-w-xl">
           <p className={cn(app.eyebrowMuted, "justify-center inline-flex items-center gap-2")}>
             <Sparkles className="w-3.5 h-3.5 opacity-80" aria-hidden />
-            Hall-tested · 150 meals
+            Hall-tested · {formatMarketingRecipeCount(recipeCount)} meals
           </p>
           <h1 className={cn(app.display, "mt-3")}>
             {GENERATOR.headline}
@@ -145,7 +157,7 @@ export function GeneratorWheelHub({
           <DinnerWheelReveal
             recipe={winner.recipe}
             sliceLabel={winner.slice.label}
-            onOpenRecipe={() => navigate(`/recipes/${encodeURIComponent(winner.recipe.slug)}`)}
+            onOpenRecipe={() => navigate(approvedCatalogRecipePath(winner.recipe.slug))}
             onSpinAgain={handleSpinAgain}
           />
         </div>

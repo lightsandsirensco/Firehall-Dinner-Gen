@@ -1,0 +1,148 @@
+{
+  "slug": "breakfast-enchiladas",
+  "title": "Breakfast Enchiladas for the Crew",
+  "subtitle": "Rolled tortillas stuffed with eggs and chorizo under green chili sauce.",
+  "description": "A hotel-pan bake of flour tortillas rolled tight with scrambled eggs, chorizo, and cheese, then smothered in verde sauce and baked until bubbling. Cuts into clean portions for a crew that wants something bolder than a standard egg bake.",
+  "filters": [
+    "feed_a_crew",
+    "high_protein"
+  ],
+  "tags": [
+    "enchiladas",
+    "chorizo",
+    "verde",
+    "bake",
+    "9x13"
+  ],
+  "crewSize": 10,
+  "baseServings": 10,
+  "prepTime": 25,
+  "cookTime": 35,
+  "totalTime": 60,
+  "difficulty": "medium",
+  "ingredients": [
+    {
+      "name": "large eggs",
+      "quantity": "16",
+      "notes": "soft-scrambled with salt and pepper",
+      "group": "Filling"
+    },
+    {
+      "name": "Mexican chorizo",
+      "quantity": "1 1/2 lb",
+      "notes": "cooked and crumbled, fat drained",
+      "group": "Filling"
+    },
+    {
+      "name": "shredded Monterey Jack",
+      "quantity": "2 cups",
+      "notes": "divided for filling and top",
+      "group": "Filling"
+    },
+    {
+      "name": "8-inch flour tortillas",
+      "quantity": "14",
+      "notes": "warmed briefly to stay pliable",
+      "group": "Build"
+    },
+    {
+      "name": "green enchilada sauce",
+      "quantity": "3 cups",
+      "notes": "jarred or homemade",
+      "group": "Sauce"
+    },
+    {
+      "name": "sour cream",
+      "quantity": "1/2 cup",
+      "notes": "whisked into half the sauce for creaminess",
+      "group": "Sauce"
+    },
+    {
+      "name": "cotija or feta",
+      "quantity": "1 cup",
+      "notes": "crumbled",
+      "group": "Finish"
+    },
+    {
+      "name": "cilantro",
+      "quantity": "1/2 cup",
+      "notes": "chopped, plus lime wedges",
+      "group": "Finish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Heat the oven",
+      "instruction": "Heat oven to 375°F. Grease a deep 9x13 pan or two smaller hotel pans. Warm tortillas in a dry skillet or wrapped in foil so they roll without tearing.",
+      "minutes": 0,
+      "tempF": 375
+    },
+    {
+      "stepNumber": 2,
+      "title": "Cook the filling",
+      "instruction": "Brown chorizo in a large skillet, drain fat, then add soft-scrambled eggs and half the Jack cheese. Mix gently—the eggs should stay fluffy, not mashed.",
+      "minutes": 15
+    },
+    {
+      "stepNumber": 3,
+      "title": "Roll the enchiladas",
+      "instruction": "Spread a thin layer of sauce in the pan. Fill each tortilla with a generous scoop of filling, roll tight, and place seam-side down in a snug single layer.",
+      "minutes": 12
+    },
+    {
+      "stepNumber": 4,
+      "title": "Sauce and cheese",
+      "instruction": "Pour remaining sauce evenly over the rolls. Top with remaining Jack and cotija. Cover with foil for the first half of baking to keep tortillas soft.",
+      "minutes": 5
+    },
+    {
+      "stepNumber": 5,
+      "title": "Bake and rest",
+      "instruction": "Bake covered 20 minutes, uncover, and bake 10 more until sauce bubbles at the edges. Rest 10 minutes before cutting into portions so slices hold on the plate.",
+      "minutes": 25,
+      "tempF": 375
+    }
+  ],
+  "nutrition": {
+    "calories": 465,
+    "protein": 23,
+    "carbs": 34,
+    "fat": 27,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "stationWorkflow": [
+    "Set up a rolling station with warm tortillas, filling bowl, and sauced pan ready before scrambling eggs.",
+    "One cook rolls while another manages sauce and oven timing—don't let rolled enchiladas sit dry on the counter.",
+    "Garnish with cilantro and lime at the line; hold extra sauce warm for second passes."
+  ],
+  "cleanupNotes": [
+    "Soak the chorizo skillet immediately with hot water and a drop of dish soap to cut grease before it sets.",
+    "Scrape baked-on cheese from the 9x13 while still warm using a plastic scraper, not a metal blade on glass."
+  ],
+  "leftovers": [
+    "Portion enchiladas into containers with extra sauce on top; reheat covered at 325°F until steaming in the center.",
+    "Chop leftovers into a breakfast burrito filling with scrambled eggs and hot sauce for handheld service."
+  ],
+  "heroImage": "/images/breakfast/breakfast-enchiladas.jpg",
+  "thumbImage": "/images/thumbs/breakfast/breakfast-enchiladas.jpg",
+  "imageAlt": "Baked breakfast enchiladas with green sauce, melted cheese, and cilantro garnish",
+  "publishedAt": "2026-05-30T03:14:16.260Z",
+  "updatedAt": "2026-05-30T03:14:16.260Z",
+  "readMinutes": 9,
+  "seoTitle": "Breakfast Enchiladas for the Crew | Firehall Breakfast"
+}

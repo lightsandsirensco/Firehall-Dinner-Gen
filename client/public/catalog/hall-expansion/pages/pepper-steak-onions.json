@@ -1,0 +1,188 @@
+{
+  "slug": "pepper-steak-onions",
+  "title": "Pepper Steak with Onions",
+  "displayTitle": "Pepper Steak with Onions",
+  "seoTitle": "Pepper Steak with Onions | Firefighter Meal",
+  "shortDescription": "Sliced round steak with bell peppers over rice for ten",
+  "subtitle": "Sliced round steak with bell peppers over rice for ten",
+  "category": "hall_expansion",
+  "cuisine": "chinese-american",
+  "description": "Round steak strips marinate in soy and ginger, stir-fry with peppers and onions, and finish in a savory gravy. Serve over steamed rice for a filling hall plate.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 25,
+  "prepTime": 30,
+  "difficulty": "medium",
+  "calories": 490,
+  "protein": 40,
+  "carbs": 54,
+  "fats": 12,
+  "tags": [
+    "protein:beef",
+    "format:skillet",
+    "category:crew_feeders",
+    "beef",
+    "comfort",
+    "hall_expansion",
+    "hall_expansion_56",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Wok or large skillet",
+    "Stock pot",
+    "Mixing bowls",
+    "Rice paddle",
+    "Chef knife"
+  ],
+  "ingredients": [
+    {
+      "name": "round steak",
+      "quantity": "3.5",
+      "unit": "lb",
+      "notes": "sliced thin",
+      "group": "Main"
+    },
+    {
+      "name": "long-grain white rice",
+      "quantity": "3",
+      "unit": "cups",
+      "notes": "uncooked",
+      "group": "Base"
+    },
+    {
+      "name": "green bell pepper",
+      "quantity": "3",
+      "unit": "whole",
+      "notes": "sliced",
+      "group": "Vegetables"
+    },
+    {
+      "name": "red bell pepper",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "sliced",
+      "group": "Vegetables"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "sliced",
+      "group": "Vegetables"
+    },
+    {
+      "name": "soy sauce",
+      "quantity": "0.33",
+      "unit": "cup",
+      "group": "Marinade"
+    },
+    {
+      "name": "fresh ginger",
+      "quantity": "2",
+      "unit": "tbsp",
+      "notes": "grated",
+      "group": "Marinade"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "5",
+      "unit": "cloves",
+      "notes": "minced",
+      "group": "Marinade"
+    },
+    {
+      "name": "beef broth",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Gravy"
+    },
+    {
+      "name": "cornstarch",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Gravy"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Marinate and prep rice",
+      "instruction": "Toss sliced steak with half the soy sauce and ginger. Start rice in a pot with 6 cups water—bring to boil, cover, simmer 18 minutes, then rest off heat.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Sear the beef",
+      "instruction": "Heat oil in a wok over high heat. Stir-fry beef in batches 2–3 minutes until browned but still tender. Set aside.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Stir-fry vegetables",
+      "instruction": "Add peppers and onion to the wok. Stir-fry 4–5 minutes until charred at edges and slightly softened.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Build the gravy",
+      "instruction": "Stir remaining soy sauce, garlic, broth, and cornstarch slurry into the wok. Simmer 2 minutes until glossy and thickened.",
+      "minutes": 3,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Combine and serve",
+      "instruction": "Return beef and juices to gravy, toss 1 minute to coat. Fluff rice and serve pepper steak over rice at the line.",
+      "minutes": 4,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "A splash of rice vinegar at the end brightens heavy soy gravy.",
+    "Use baking soda pinch in marinade for extra tender beef if your cut is tough.",
+    "Sesame oil drizzle at service adds aroma—do not cook it on high heat."
+  ],
+  "tonightSpread": [
+    "Pepper steak over rice with steamed broccoli on the side.",
+    "Chili garlic crisp at the table for crew who want more heat."
+  ],
+  "leftovers": [
+    "Wrap in flour tortillas with extra sauce for quick lunch wraps.",
+    "Stir into fried rice the next day with scrambled eggs."
+  ],
+  "whyCrewsLikeIt": "Pepper steak delivers big savory flavor with ingredients already in the station pantry. Rice stretches the protein and keeps everyone full through a second call.",
+  "mealPrepNotes": "Slice steak against the grain paper-thin. Mix gravy slurry before you start cooking—no time to measure mid-stir-fry. Cook rice in a separate pot or rice cooker.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 490,
+    "protein": 40,
+    "carbs": 54,
+    "fats": 12,
+    "label": "~490 cal/serving · 40g protein · 3g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/pepper-steak-onions.jpg",
+  "heroImageAlt": "Pepper Steak with Onions — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/pepper-steak-onions.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/pepper-steak-onions.jpg",
+  "railImage": "/images/rails/hall-expansion/pepper-steak-onions.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "pepper steak with onions",
+    "crew feeders"
+  ],
+  "relatedSlugs": [
+    "shawarma-bar-night",
+    "fajita-bar-night",
+    "hall-burger-bar",
+    "pasta-bar-night"
+  ],
+  "generatedAt": "2026-05-30T03:14:19.188Z",
+  "contentVersion": 2
+}

@@ -32,6 +32,8 @@ export const editorialMealPickSchema = z.object({
   slug: z.string().trim().min(1).max(80),
   title: z.string().trim().min(2).max(120),
   blurb: z.string().trim().min(20).max(280),
+  /** Route breakfast picks to /breakfast/{slug} instead of /recipes/{slug} */
+  catalog: z.enum(["breakfast", "recipes"]).optional(),
 });
 
 export const editorialFaqSchema = z.object({

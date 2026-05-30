@@ -94,6 +94,11 @@ export function SiteFooter({ variant = "full", className, pbSafe = false }: Site
                   </Link>
                 </li>
                 <li>
+                  <Link href="/pizza" className="text-foreground/85 hover:text-primary transition-colors">
+                    Pizza Night
+                  </Link>
+                </li>
+                <li>
                   <Link href="/recipes" className="text-foreground/85 hover:text-primary transition-colors">
                     {CTA.viewRecipes}
                   </Link>

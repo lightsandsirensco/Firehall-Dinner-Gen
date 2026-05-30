@@ -13,10 +13,10 @@
   "cookTime": 35,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 600,
-  "protein": 40,
-  "carbs": 48,
-  "fats": 28,
+  "calories": 403,
+  "protein": 54,
+  "carbs": 11,
+  "fats": 15,
   "tags": [
     "protein:pork",
     "format:sheet_pan",
@@ -102,7 +102,7 @@
   ],
   "proTips": [
     "Prep all mise en place before the bell — this meal wins on organization, not speed hacks.",
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts."
   ],
   "tonightSpread": [
@@ -120,11 +120,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 600,
-    "protein": 40,
-    "carbs": 48,
-    "fats": 28,
-    "label": "per serving (hall portion)"
+    "calories": 403,
+    "protein": 54,
+    "carbs": 11,
+    "fats": 15,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": true,
+      "performanceMeal": true
+    }
   },
   "heroImage": "/images/golden-100/sheet-pan-sausage-peppers.jpg",
   "mobileImage": "/images/mobile/sheet-pan-sausage-peppers.jpg",
@@ -155,6 +169,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-29T01:43:09.391Z",
+  "generatedAt": "2026-05-30T03:28:01.914Z",
   "contentVersion": 2
 }

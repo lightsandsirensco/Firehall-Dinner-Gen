@@ -13,10 +13,10 @@
   "cookTime": 75,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 580,
-  "protein": 36,
-  "carbs": 48,
-  "fats": 26,
+  "calories": 1400,
+  "protein": 120,
+  "carbs": 110,
+  "fats": 90,
   "tags": [
     "protein:beef",
     "format:soup_chili",
@@ -216,7 +216,7 @@
     "If chili tastes flat, add ½ tsp more smoked paprika and a pinch of salt — not more sugar.",
     "Hold garlic bread under loose foil on the counter; cut open only when the line forms.",
     "Scale beef + tomatoes 1.25× for 10+ crew; keep spice levels the same first, adjust heat on the bar.",
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts."
   ],
   "tonightSpread": [
@@ -237,11 +237,25 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 580,
-    "protein": 36,
-    "carbs": 48,
-    "fats": 26,
-    "label": "per serving (hall portion)"
+    "calories": 1400,
+    "protein": 120,
+    "carbs": 110,
+    "fats": 90,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/chili-garlic-bread.jpg",
   "mobileImage": "/images/mobile/chili-garlic-bread.jpg",
@@ -271,6 +285,6 @@
   "sourceName": "Firehall Classics",
   "sourceUrl": "",
   "classicSlug": "chili-garlic-bread",
-  "generatedAt": "2026-05-29T01:43:09.316Z",
+  "generatedAt": "2026-05-30T03:28:01.765Z",
   "contentVersion": 2
 }

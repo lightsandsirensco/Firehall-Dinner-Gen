@@ -1,0 +1,186 @@
+{
+  "slug": "fajita-bar-night",
+  "title": "Fajita Bar Night",
+  "displayTitle": "Fajita Bar Night",
+  "seoTitle": "Fajita Bar Night | Firefighter Meal",
+  "shortDescription": "Sizzling chicken and pepper fajitas with fixings for ten",
+  "subtitle": "Sizzling chicken and pepper fajitas with fixings for ten",
+  "category": "hall_expansion",
+  "cuisine": "mexican",
+  "description": "Chicken strips and peppers are seared with fajita seasoning on a hot griddle, then served on cast-iron platters with tortillas, guacamole, sour cream, cheese, and salsa. Crew builds their own fajitas or burrito bowls.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 20,
+  "prepTime": 30,
+  "difficulty": "easy",
+  "calories": 450,
+  "protein": 38,
+  "carbs": 32,
+  "fats": 18,
+  "tags": [
+    "protein:chicken",
+    "format:bar_line",
+    "category:crew_feeders",
+    "bar_line",
+    "chicken",
+    "handheld",
+    "hall_expansion",
+    "hall_expansion_56",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Griddle or cast-iron skillet",
+    "Cast-iron platters",
+    "Trivets",
+    "Hotel pans",
+    "Instant-read thermometer"
+  ],
+  "ingredients": [
+    {
+      "name": "chicken breast",
+      "quantity": "4",
+      "unit": "lb",
+      "notes": "thin-sliced",
+      "group": "Main"
+    },
+    {
+      "name": "bell peppers",
+      "quantity": "4",
+      "unit": "whole",
+      "notes": "mixed colors, sliced",
+      "group": "Veg"
+    },
+    {
+      "name": "yellow onions",
+      "quantity": "3",
+      "unit": "whole",
+      "notes": "sliced",
+      "group": "Veg"
+    },
+    {
+      "name": "fajita seasoning",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "lime juice",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Marinade"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Cook"
+    },
+    {
+      "name": "flour tortillas",
+      "quantity": "20",
+      "unit": "whole",
+      "notes": "warm",
+      "group": "Bar"
+    },
+    {
+      "name": "shredded cheddar",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Bar"
+    },
+    {
+      "name": "sour cream",
+      "quantity": "1.5",
+      "unit": "cups",
+      "group": "Bar"
+    },
+    {
+      "name": "guacamole",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Bar"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Marinate the chicken",
+      "instruction": "Toss sliced chicken with half the fajita seasoning, lime juice, and 1 tbsp oil. Rest 30 minutes minimum while you prep peppers, onions, and the fixings bar.",
+      "minutes": 35,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Sear chicken in batches",
+      "instruction": "Heat griddle or cast-iron skillet over high heat. Sear chicken in single layers 3–4 minutes per side until char marks appear and internal temp hits 165°F.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Cook peppers and onions",
+      "instruction": "Add remaining oil, peppers, and onions to the same pan. Season with remaining fajita spice and cook until softened with charred edges, about 6–8 minutes.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Plate on hot skillets",
+      "instruction": "Combine chicken with peppers and onions on preheated cast-iron platters so the mix sizzles when it hits the table. Verify chicken still reads 165°F before serving.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Open the fajita bar",
+      "instruction": "Set tortillas, cheese, sour cream, guacamole, and salsa in a line. Let crew build wraps or bowls while platters stay hot on trivets at the end of the table.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Freeze chicken 20 minutes before slicing—it cuts cleaner into uniform strips.",
+    "A splash of soy sauce in the marinade adds savory depth crews cannot identify but always notice.",
+    "Offer lettuce leaves as tortilla swaps for anyone avoiding carbs."
+  ],
+  "tonightSpread": [
+    "Sizzling fajita platters with full fixings bar and lime wedges.",
+    "Mexican rice and refried beans for crews building hearty burrito bowls."
+  ],
+  "leftovers": [
+    "Chop into breakfast burritos with scrambled eggs and hot sauce.",
+    "Simmer with broth and tortillas into a quick fajita soup."
+  ],
+  "whyCrewsLikeIt": "The sizzle when platters hit the table sets the mood instantly. Fajita bars offer flexibility—tortilla wraps, bowl builds, or straight protein-and-pepper plates for low-carb eaters.",
+  "mealPrepNotes": "Slice peppers and onions ahead into uniform strips for even cooking. Marinate chicken 2–24 hours. Pre-warm tortillas wrapped in foil. Cast-iron platters can heat in a 400°F oven during the sear.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 450,
+    "protein": 38,
+    "carbs": 32,
+    "fats": 18,
+    "label": "~450 cal/serving · 38g protein · 4g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/fajita-bar-night.jpg",
+  "heroImageAlt": "Fajita Bar Night — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/fajita-bar-night.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/fajita-bar-night.jpg",
+  "railImage": "/images/rails/hall-expansion/fajita-bar-night.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "fajita bar night",
+    "crew feeders"
+  ],
+  "relatedSlugs": [
+    "shawarma-bar-night",
+    "hall-burger-bar",
+    "pasta-bar-night",
+    "rice-bowl-bar-night"
+  ],
+  "generatedAt": "2026-05-30T03:14:19.188Z",
+  "contentVersion": 2
+}

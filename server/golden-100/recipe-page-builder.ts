@@ -24,16 +24,19 @@ import {
   estimateTiming,
   inferDifficulty,
 } from "./editorial-templates.js";
+import { calculateNutritionFromIngredients } from "../../shared/nutrition/calculate.js";
 import { getCuratedRecipeBySlug } from "../curated-recipe-store.js";
 import {
   auditGoldenRecipeContent,
   buildEditorialBlueprint,
   buildRecipeTitleFields,
   isPlaceholderCuratedRecipe,
-  resolveExplicitSlugInstructionPack,
+  mainProteinLabel,
   stepsFailQualityBar,
   usesGenericGrillTemplate,
 } from "../../shared/golden-100/recipe-quality/index.js";
+import { getMealSpecificPack } from "../../shared/golden-100/recipe-quality/meal-specific-packs.js";
+import { resolveGoldenSlugTiming } from "../../shared/golden-100/recipe-quality/slug-timing-overrides.js";
 
 const CREW_SIZE_DEFAULT = 8;
 const BASE_SERVINGS_DEFAULT = 8;
@@ -247,7 +250,7 @@ export function buildGoldenRecipePage(
   }
 
   const timing = estimateTiming(def);
-  const explicitPack = resolveExplicitSlugInstructionPack(def, crewSize);
+  const explicitPack = getMealSpecificPack(def, crewSize / 8);
   const needsEditorial =
     !steps.length ||
     stepsFailQualityBar(steps) ||
@@ -256,14 +259,56 @@ export function buildGoldenRecipePage(
   if (explicitPack && !stepsFailQualityBar(explicitPack.steps)) {
     ingredients = explicitPack.ingredients;
     steps = explicitPack.steps;
+    if (explicitPack.prepMinutes != null) prepTime = explicitPack.prepMinutes;
+    if (explicitPack.cookMinutes != null) cookTime = explicitPack.cookMinutes;
+    if (prepTime != null && cookTime != null) totalTime = prepTime + cookTime;
   } else if (needsEditorial || !ingredients.length) {
     const blueprint = buildEditorialBlueprint(def, crewSize);
     ingredients = blueprint.ingredients;
     steps = blueprint.steps;
   }
 
+  const resolvedTiming = resolveGoldenSlugTiming(
+    def,
+    steps,
+    { prep: prepTime, cook: cookTime },
+    timing,
+  );
+  if (prepTime == null) prepTime = resolvedTiming.prep;
+  if (cookTime == null) cookTime = resolvedTiming.cook;
+  totalTime = resolvedTiming.total;
+
   const images = goldenPageImageSet(def.slug);
-  const nutrition = curated ? nutritionFromCurated(curated, def) : estimateNutrition(def);
+  const fallbackNutrition = curated ? nutritionFromCurated(curated, def) : estimateNutrition(def);
+  const nutritionRecord = calculateNutritionFromIngredients(
+    ingredients.map((i) => ({
+      name: i.name,
+      quantity: i.quantity,
+      unit: i.unit,
+      optional: i.optional,
+    })),
+    {
+      servings: crewSize,
+      mealType: "dinner",
+      mealPrepFriendly: def.masterCategoryId === "meal_prep_leftovers",
+      existing: {
+        calories: fallbackNutrition.calories,
+        protein: fallbackNutrition.protein,
+        carbs: fallbackNutrition.carbs,
+        fat: fallbackNutrition.fats,
+      },
+    },
+  );
+  const nutrition = {
+    calories: nutritionRecord.calories,
+    protein: nutritionRecord.protein,
+    carbs: nutritionRecord.carbs,
+    fats: nutritionRecord.fat,
+    label: "per serving (hall portion)" as const,
+    source: nutritionRecord.source,
+    filterFlags: nutritionRecord.filterFlags,
+    badgeCandidates: nutritionRecord.badgeCandidates,
+  };
   const proTips = [
     ...(pkg?.proTips ?? []),
     ...buildProTips(def, crewSize),
@@ -316,7 +361,6 @@ export function buildGoldenRecipePage(
     cleanupDifficulty: editorial.cleanupDifficulty,
     nutrition: {
       ...nutrition,
-      label: "per serving (hall portion)",
     },
     ...images,
     realismScore: 0,
@@ -361,7 +405,7 @@ function buildEditorialMeta(
   return {
     whyCrewsLikeIt: buildWhyCrewsLikeIt(def, curated, quick, feedsHard),
     mealPrepNotes: def.recommendation.mealPrepFriendly
-      ? "Cook protein and sauce ahead; assemble day-of in under 20 minutes. Label and date everything in the fridge."
+      ? `Cook ${mainProteinLabel(def)} and sauce ahead; assemble day-of in under 20 minutes. Label and date everything in the fridge.`
       : quick
         ? "Minimal prep — chop aromatics before shift change so you can cook as soon as the board quiets."
         : undefined,

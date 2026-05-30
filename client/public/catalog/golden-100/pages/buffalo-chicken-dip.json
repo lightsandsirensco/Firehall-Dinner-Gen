@@ -13,10 +13,10 @@
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 520,
-  "protein": 32,
-  "carbs": 48,
-  "fats": 22,
+  "calories": 313,
+  "protein": 11,
+  "carbs": 4,
+  "fats": 28,
   "tags": [
     "protein:chicken",
     "format:bake",
@@ -93,7 +93,7 @@
     }
   ],
   "proTips": [
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts.",
     "Pull chicken at 160°F and let carryover hit 165°F — dry breast ruins crew morale."
   ],
@@ -115,11 +115,25 @@
   "spiceLevel": "hot",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 520,
-    "protein": 32,
-    "carbs": 48,
-    "fats": 22,
-    "label": "per serving (hall portion)"
+    "calories": 313,
+    "protein": 11,
+    "carbs": 4,
+    "fats": 28,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/buffalo-chicken-dip.jpg",
   "mobileImage": "/images/mobile/buffalo-chicken-dip.jpg",
@@ -149,6 +163,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-29T01:43:09.431Z",
+  "generatedAt": "2026-05-30T03:28:01.998Z",
   "contentVersion": 2
 }

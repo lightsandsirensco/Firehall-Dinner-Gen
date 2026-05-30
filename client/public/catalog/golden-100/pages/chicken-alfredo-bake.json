@@ -10,13 +10,13 @@
   "description": "Creamy tray bake for seconds. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
   "baseServings": 8,
-  "cookTime": 90,
-  "prepTime": 30,
+  "cookTime": 70,
+  "prepTime": 25,
   "difficulty": "hard",
-  "calories": 520,
-  "protein": 32,
-  "carbs": 48,
-  "fats": 22,
+  "calories": 1400,
+  "protein": 112,
+  "carbs": 91,
+  "fats": 90,
   "tags": [
     "protein:chicken",
     "format:pasta",
@@ -33,95 +33,119 @@
   ],
   "ingredients": [
     {
-      "name": "Dried pasta",
-      "quantity": "1.5",
-      "unit": "lb",
-      "group": "Main"
-    },
-    {
-      "name": "Boneless chicken thighs",
-      "quantity": "2.5",
-      "unit": "lb",
-      "group": "Main"
-    },
-    {
-      "name": "Crushed tomatoes",
+      "name": "Penne or rigatoni",
       "quantity": "2",
-      "unit": "cans",
-      "notes": "28 oz",
+      "unit": "lb",
+      "group": "Main"
+    },
+    {
+      "name": "Boneless chicken breasts or thighs",
+      "quantity": "4",
+      "unit": "lb",
+      "group": "Main"
+    },
+    {
+      "name": "Unsalted butter",
+      "quantity": "8",
+      "unit": "tbsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "Garlic cloves, minced",
+      "quantity": "8",
+      "unit": "cloves",
       "group": "Sauce"
     },
     {
       "name": "Heavy cream",
-      "quantity": "1",
-      "unit": "cup",
+      "quantity": "4",
+      "unit": "cups",
       "group": "Sauce"
     },
     {
-      "name": "Parmesan, grated",
-      "quantity": "8",
+      "name": "Grated parmesan",
+      "quantity": "12",
       "unit": "oz",
-      "group": "Finish"
+      "group": "Sauce"
     },
     {
-      "name": "Yellow onion",
-      "quantity": "2",
-      "unit": "large",
-      "group": "Aromatics"
+      "name": "Mozzarella, shredded",
+      "quantity": "16",
+      "unit": "oz",
+      "group": "Cheese"
     },
     {
-      "name": "Garlic cloves, minced",
-      "quantity": "6",
-      "unit": "cloves",
-      "group": "Aromatics"
+      "name": "Olive oil",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Cooking"
     },
     {
       "name": "Kosher salt",
       "quantity": "2",
       "unit": "tbsp",
       "group": "Seasoning"
+    },
+    {
+      "name": "Black pepper",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Fresh parsley, chopped",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Finish"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Salt the pasta water",
-      "instruction": "Bring a large pot of water to a rolling boil with enough salt that it tastes like the sea. This is your only chance to season the pasta itself.",
+      "title": "Season and sear chicken",
+      "instruction": "Pat chicken dry; season with salt and pepper. Sear in olive oil until golden and 160°F; rest and slice or cube.",
+      "minutes": 15,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Par-cook pasta",
+      "instruction": "Boil penne in well-salted water 2 minutes shy of al dente — it finishes in the oven. Drain thoroughly and spread on sheet pans so it does not clump before saucing.",
       "minutes": 10,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 2,
-      "title": "Cook sauce base",
-      "instruction": "Meanwhile, brown meat, add onions and garlic, then tomatoes (and cream if Alfredo-style). Simmer 15 minutes while pasta cooks.",
-      "minutes": 15,
-      "heatLevel": "medium"
-    },
-    {
       "stepNumber": 3,
-      "title": "Boil pasta al dente",
-      "instruction": "Cook pasta 1 minute shy of package time. Reserve 2 cups pasta water. Drain — do not rinse.",
+      "title": "Make alfredo sauce",
+      "instruction": "Melt butter; cook garlic 30 seconds. Add cream and simmer; whisk in parmesan until silky. No crushed tomatoes — this is alfredo.",
       "minutes": 12,
-      "heatLevel": "high"
+      "heatLevel": "medium"
     },
     {
       "stepNumber": 4,
-      "title": "Finish in the pan",
-      "instruction": "Toss pasta in sauce over medium heat, splashing pasta water until glossy and clinging. Chicken Alfredo Bake should coat a spoon — if it pools, reduce another minute.",
-      "minutes": 4,
-      "heatLevel": "medium"
+      "title": "Combine and pan up",
+      "instruction": "Toss pasta and chicken with alfredo. Transfer to buttered hotel pans; top with mozzarella.",
+      "minutes": 10,
+      "heatLevel": ""
     },
     {
       "stepNumber": 5,
-      "title": "Serve from the pot",
-      "instruction": "Fold in Parmesan off heat. Serve immediately — pasta waits for no one. Backup tray: cover lightly with foil at 200°F up to 15 minutes, add water if it tightens.",
-      "minutes": 3,
+      "title": "Bake until bubbling",
+      "instruction": "Bake at 375°F 20–25 minutes until cheese browns at edges.",
+      "minutes": 25,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Serve Chicken Alfredo Bake",
+      "instruction": "Rest 5 minutes; scoop portions with a spatula. Finish with parsley.",
+      "minutes": 5,
       "heatLevel": "low"
     }
   ],
   "proTips": [
     "Firefighters eat heavy after rough nights — double the protein if the hall had a busy shift.",
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts.",
     "Pull chicken at 160°F and let carryover hit 165°F — dry breast ruins crew morale."
   ],
@@ -145,11 +169,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 520,
-    "protein": 32,
-    "carbs": 48,
-    "fats": 22,
-    "label": "per serving (hall portion)"
+    "calories": 1400,
+    "protein": 112,
+    "carbs": 91,
+    "fats": 90,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/chicken-alfredo-bake.jpg",
   "mobileImage": "/images/mobile/chicken-alfredo-bake.jpg",
@@ -176,6 +214,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-29T01:43:09.411Z",
+  "generatedAt": "2026-05-30T03:28:01.957Z",
   "contentVersion": 2
 }

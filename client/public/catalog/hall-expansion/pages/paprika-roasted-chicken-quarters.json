@@ -1,0 +1,184 @@
+{
+  "slug": "paprika-roasted-chicken-quarters",
+  "title": "Paprika Roasted Chicken Quarters",
+  "displayTitle": "Paprika Roasted Chicken Quarters",
+  "seoTitle": "Paprika Roasted Chicken Quarters | Firefighter Meal",
+  "shortDescription": "Budget-friendly leg quarters with smoked paprika rub for ten",
+  "subtitle": "Budget-friendly leg quarters with smoked paprika rub for ten",
+  "category": "hall_expansion",
+  "cuisine": "american",
+  "description": "Chicken leg quarters get a smoky paprika rub and roast on sheet pans until skin crackles and meat pulls cleanly from the bone at 165°F. Simple, filling, and built for hall budgets.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 50,
+  "prepTime": 15,
+  "difficulty": "easy",
+  "calories": 410,
+  "protein": 38,
+  "carbs": 4,
+  "fats": 28,
+  "tags": [
+    "protein:chicken",
+    "format:baked",
+    "category:crew_feeders",
+    "chicken",
+    "budget",
+    "hall_expansion",
+    "hall_expansion_56",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Sheet pans",
+    "Parchment paper",
+    "Instant-read thermometer",
+    "Mixing bowls",
+    "Platters"
+  ],
+  "ingredients": [
+    {
+      "name": "chicken leg quarters",
+      "quantity": "6",
+      "unit": "lb",
+      "notes": "about 12 pieces",
+      "group": "Main"
+    },
+    {
+      "name": "smoked paprika",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Rub"
+    },
+    {
+      "name": "sweet paprika",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Rub"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Rub"
+    },
+    {
+      "name": "garlic powder",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Rub"
+    },
+    {
+      "name": "onion powder",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Rub"
+    },
+    {
+      "name": "black pepper",
+      "quantity": "1",
+      "unit": "tsp",
+      "group": "Rub"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "0.25",
+      "unit": "cup",
+      "group": "Rub"
+    },
+    {
+      "name": "lemon wedges",
+      "quantity": "4",
+      "unit": "whole",
+      "notes": "for serving",
+      "group": "Finish"
+    },
+    {
+      "name": "fresh parsley",
+      "quantity": "0.25",
+      "unit": "cup",
+      "notes": "chopped",
+      "group": "Finish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Mix the rub",
+      "instruction": "Combine smoked paprika, sweet paprika, salt, garlic powder, onion powder, and black pepper. Toss quarters with olive oil, then coat evenly with rub.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Prep the pans",
+      "instruction": "Line two sheet pans with parchment. Arrange quarters skin-side up with at least an inch between pieces.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Roast until done",
+      "instruction": "Roast at 400°F for 45–50 minutes until skin is deep golden and thickest part reaches 165°F without touching bone. Target oven/smoker temperature: 400°F.",
+      "minutes": 48,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Crisp under broiler",
+      "instruction": "Optional: broil 2–3 minutes for extra crackly skin. Watch closely so paprika does not scorch.",
+      "minutes": 3,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Serve family-style",
+      "instruction": "Rest 5 minutes, scatter parsley, and pile quarters on platters with lemon wedges for squeezing at the table.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Quarters are done when juices run clear and leg joint moves easily—probe confirms.",
+    "Roast quartered potatoes on the same pans during the last 30 minutes.",
+    "Hold finished quarters at 165°F max—higher dries dark meat fast."
+  ],
+  "tonightSpread": [
+    "Paprika quarters with roasted potatoes and buttered corn.",
+    "White rice with pan drippings spooned over for a simple plate."
+  ],
+  "leftovers": [
+    "Pull meat for chicken tacos with shredded lettuce and salsa.",
+    "Simmer bones into stock for next week's soup base."
+  ],
+  "whyCrewsLikeIt": "Leg quarters are the most forgiving cut on the roster—cheap, hard to overcook, and satisfying after a hard shift. Two pans feed ten without fuss.",
+  "mealPrepNotes": "Season quarters up to 12 hours ahead for deeper flavor. Use parchment on pans for easier cleanup. Portion one leg quarter per person with extra for big eaters.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 410,
+    "protein": 38,
+    "carbs": 4,
+    "fats": 28,
+    "label": "~410 cal/serving · 38g protein · 0g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/paprika-roasted-chicken-quarters.jpg",
+  "heroImageAlt": "Paprika Roasted Chicken Quarters — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/paprika-roasted-chicken-quarters.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/paprika-roasted-chicken-quarters.jpg",
+  "railImage": "/images/rails/hall-expansion/paprika-roasted-chicken-quarters.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "paprika roasted chicken quarters",
+    "crew feeders"
+  ],
+  "relatedSlugs": [
+    "shawarma-bar-night",
+    "fajita-bar-night",
+    "hall-burger-bar",
+    "pasta-bar-night"
+  ],
+  "generatedAt": "2026-05-30T03:14:19.188Z",
+  "contentVersion": 2
+}

@@ -1,0 +1,187 @@
+{
+  "slug": "smoked-tri-tip",
+  "title": "Smoked Tri-Tip Roast",
+  "displayTitle": "Smoked Tri-Tip Roast",
+  "seoTitle": "Smoked Tri-Tip Roast | Firefighter Meal",
+  "shortDescription": "Santa Maria-style tri-tip with garlic herb crust for ten",
+  "subtitle": "Santa Maria-style tri-tip with garlic herb crust for ten",
+  "category": "hall_expansion",
+  "cuisine": "american",
+  "description": "Tri-tip roasts are rubbed with garlic, herbs, and pepper, smoked to medium-rare, then seared over high heat for a crisp crust. Slice thin against the grain and serve with chimichurri and grilled bread.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 90,
+  "prepTime": 20,
+  "difficulty": "medium",
+  "calories": 390,
+  "protein": 42,
+  "carbs": 14,
+  "fats": 20,
+  "tags": [
+    "protein:beef",
+    "format:smoker",
+    "category:smoker_recipes",
+    "bbq",
+    "smoker",
+    "beef",
+    "hall_expansion",
+    "hall_expansion_56",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Smoker",
+    "Cast-iron skillet",
+    "Instant-read thermometer",
+    "Sharp slicing knife",
+    "Cutting board"
+  ],
+  "ingredients": [
+    {
+      "name": "tri-tip roast",
+      "quantity": "6",
+      "unit": "lb",
+      "notes": "2 roasts",
+      "group": "Main"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Rub"
+    },
+    {
+      "name": "black pepper",
+      "quantity": "2",
+      "unit": "tbsp",
+      "notes": "coarse",
+      "group": "Rub"
+    },
+    {
+      "name": "garlic powder",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Rub"
+    },
+    {
+      "name": "dried oregano",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Rub"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Rub"
+    },
+    {
+      "name": "fresh parsley",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "chopped",
+      "group": "Chimichurri"
+    },
+    {
+      "name": "red wine vinegar",
+      "quantity": "0.25",
+      "unit": "cup",
+      "group": "Chimichurri"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "4",
+      "unit": "cloves",
+      "notes": "minced",
+      "group": "Chimichurri"
+    },
+    {
+      "name": "crusty bread",
+      "quantity": "2",
+      "unit": "loaves",
+      "notes": "grilled",
+      "group": "Serve"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Season the tri-tip",
+      "instruction": "Pat roasts dry, rub with olive oil, then coat generously with salt, black pepper, garlic powder, and oregano. Rest at room temperature 30 minutes while the smoker preheats.",
+      "minutes": 35,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Smoke to medium-rare",
+      "instruction": "Heat smoker to 225°F. Smoke roasts until internal temperature reaches 120°F in the thickest part, about 45–60 minutes depending on size. Target oven/smoker temperature: 225°F.",
+      "minutes": 55,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Sear the crust",
+      "instruction": "Transfer roasts to direct high heat or a preheated cast-iron pan and sear 2–3 minutes per side until a deep crust forms. Pull when internal temp hits 130°F for medium-rare. Target oven/smoker temperature: 500°F.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Rest before slicing",
+      "instruction": "Rest roasts tented in foil 15 minutes so juices redistribute. Internal temp will climb to about 135°F—do not skip rest or slices will bleed on the board.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Slice and serve",
+      "instruction": "Slice thin against the grain on a bias. Fan slices on a platter with chimichurri pooled alongside and grilled bread for soaking up juices.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "130°F pull gives medium-rare after rest—push to 140°F only if the crew prefers no pink.",
+    "Freeze roasts 20 minutes before slicing if you need cleaner, thinner slices for sandwiches.",
+    "Save drippings and whisk into chimichurri for an extra beefy sauce without extra work."
+  ],
+  "tonightSpread": [
+    "Sliced tri-tip with chimichurri, grilled bread, and a simple tomato-cucumber salad.",
+    "Roasted fingerling potatoes tossed in garlic oil for a classic Santa Maria-style plate."
+  ],
+  "leftovers": [
+    "Layer cold slices into steak sandwiches with horseradish mayo and arugula.",
+    "Dice and toss into a hearty beef barley soup for next-day comfort food."
+  ],
+  "whyCrewsLikeIt": "Tri-tip delivers steak-house vibes at BBQ-night cost. The cook timeline fits a shift better than brisket, and thin slices feed a line fast with minimal waste.",
+  "mealPrepNotes": "Trim silver skin the night before and apply dry rub so flavor penetrates. Chimichurri can be blended ahead and held refrigerated. Rest roasts fully before slicing—rushing ruins the presentation.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 390,
+    "protein": 42,
+    "carbs": 14,
+    "fats": 20,
+    "label": "~390 cal/serving · 42g protein · 1g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/smoked-tri-tip.jpg",
+  "heroImageAlt": "Smoked Tri-Tip Roast — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/smoked-tri-tip.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/smoked-tri-tip.jpg",
+  "railImage": "/images/rails/hall-expansion/smoked-tri-tip.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "smoked tri-tip roast",
+    "smoker recipes"
+  ],
+  "relatedSlugs": [
+    "smoked-turkey-breast",
+    "smoked-meatloaf",
+    "smoked-mac-and-cheese",
+    "pork-belly-burnt-ends"
+  ],
+  "generatedAt": "2026-05-30T03:14:19.188Z",
+  "contentVersion": 2
+}

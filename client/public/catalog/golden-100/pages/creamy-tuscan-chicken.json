@@ -13,10 +13,10 @@
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 640,
-  "protein": 32,
-  "carbs": 68,
-  "fats": 30,
+  "calories": 498,
+  "protein": 58,
+  "carbs": 3,
+  "fats": 27,
   "tags": [
     "protein:chicken",
     "format:plated_main",
@@ -32,74 +32,74 @@
   ],
   "ingredients": [
     {
-      "name": "Chicken breasts",
+      "name": "Boneless chicken breasts",
       "quantity": "3",
       "unit": "lb",
       "group": "Main"
     },
     {
-      "name": "Yellow onion",
-      "quantity": "2",
-      "unit": "large",
-      "group": "Aromatics"
-    },
-    {
-      "name": "Garlic cloves",
-      "quantity": "5",
-      "unit": "cloves",
-      "group": "Aromatics"
-    },
-    {
-      "name": "Crushed tomatoes or broth",
-      "quantity": "2",
-      "unit": "cans",
+      "name": "Sun-dried tomatoes, chopped",
+      "quantity": "0.5",
+      "unit": "cup",
       "group": "Sauce"
     },
     {
-      "name": "Black pepper, freshly cracked",
-      "quantity": "1",
-      "unit": "tbsp",
-      "group": "Seasoning"
+      "name": "Fresh spinach",
+      "quantity": "8",
+      "unit": "oz",
+      "group": "Veg"
     },
     {
-      "name": "Olive oil",
-      "quantity": "0.3",
-      "unit": "cup",
+      "name": "Heavy cream",
+      "quantity": "1.5",
+      "unit": "cups",
+      "group": "Sauce"
+    },
+    {
+      "name": "Parmesan, grated",
+      "quantity": "4",
+      "unit": "oz",
+      "group": "Sauce"
+    },
+    {
+      "name": "Garlic cloves, minced",
+      "quantity": "5",
+      "unit": "cloves",
       "group": "Aromatics"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Prep components",
-      "instruction": "Dice vegetables; measure sauce ingredients. Creamy Tuscan Chicken moves smoother when everything is on the counter before the burner goes on.",
-      "minutes": 15,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Sear and finish",
-      "instruction": "Sear protein over medium-high until browned, then finish in sauce or oven until safe temp (165°F poultry, 160°F ground beef). Watch for color and spring-back, not clock alone.",
-      "minutes": 25,
+      "title": "Sear chicken breasts",
+      "instruction": "Season chicken breasts; sear in olive oil over medium-high 6 minutes per side until 165°F. Rest and slice.",
+      "minutes": 18,
       "heatLevel": "medium-high"
     },
     {
+      "stepNumber": 2,
+      "title": "Build Tuscan cream sauce",
+      "instruction": "In the same pan, sauté garlic and sun-dried tomatoes 1 minute. Add cream and parmesan; simmer until coats a spoon.",
+      "minutes": 10,
+      "heatLevel": "medium"
+    },
+    {
       "stepNumber": 3,
-      "title": "Reduce and season",
-      "instruction": "Simmer sauce until it coats a spoon. Taste for salt and acid — add a splash of vinegar or lemon if flat.",
-      "minutes": 12,
+      "title": "Wilt spinach",
+      "instruction": "Fold spinach into sauce until just wilted — bright green, not army drab.",
+      "minutes": 3,
       "heatLevel": "medium"
     },
     {
       "stepNumber": 4,
-      "title": "Plate for the hall",
-      "instruction": "Serve on sheet trays for family-style or portioned plates. Hold backup at 200°F; cover lightly with foil so skins stay crisp where applicable.",
+      "title": "Serve over pasta or rice",
+      "instruction": "Return sliced chicken to sauce. Serve over penne or rice with extra parmesan. Creamy Tuscan Chicken should smell like garlic and wine, not boiled cream.",
       "minutes": 5,
       "heatLevel": "low"
     }
   ],
   "proTips": [
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts.",
     "Pull chicken at 160°F and let carryover hit 165°F — dry breast ruins crew morale."
   ],
@@ -119,11 +119,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 640,
-    "protein": 32,
-    "carbs": 68,
-    "fats": 30,
-    "label": "per serving (hall portion)"
+    "calories": 498,
+    "protein": 58,
+    "carbs": 3,
+    "fats": 27,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/creamy-tuscan-chicken.jpg",
   "mobileImage": "/images/mobile/creamy-tuscan-chicken.jpg",
@@ -151,6 +165,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-29T01:43:09.367Z",
+  "generatedAt": "2026-05-30T03:28:01.869Z",
   "contentVersion": 2
 }

@@ -64,19 +64,34 @@
     }
   ],
   "nutrition": {
-    "calories": 160,
-    "protein": 15,
-    "carbs": 32,
-    "fats": 8,
-    "highlights": "~160 cal · vitamin C · lighter than cream-based shakes · ginger for digestion comfort"
+    "calories": 80,
+    "protein": 1,
+    "carbs": 13,
+    "fats": 0,
+    "highlights": "~160 cal · vitamin C · lighter than cream-based shakes · ginger for digestion comfort",
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": true
+    }
   },
   "substitutions": [
     "Bottled 100% orange juice (1.5 cups) replaces fresh oranges in a pinch.",
     "Skip carrot if the blender is weak — add more pineapple instead."
   ],
   "shiftNote": "Hydration-forward option on hot days or after heat exposure — not a meal replacement, but a solid bridge.",
-  "heroImage": "/images/editorial/smoothies/citrus-ginger.webp",
-  "thumbImage": "/images/editorial/smoothies/citrus-ginger.webp",
+  "heroImage": "/images/smoothies/citrus-ginger.webp",
+  "thumbImage": "/images/smoothies/citrus-ginger.webp",
   "tags": [
     "fuel_smoothie",
     "taxonomy:recovery_smoothie",

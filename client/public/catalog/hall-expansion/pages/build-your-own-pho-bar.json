@@ -1,0 +1,186 @@
+{
+  "slug": "build-your-own-pho-bar",
+  "title": "Build-Your-Own Pho Bar",
+  "displayTitle": "Build-Your-Own Pho Bar",
+  "seoTitle": "Build-Your-Own Pho Bar | Firefighter Meal",
+  "shortDescription": "Vietnamese pho bar with broth, noodles, and herbs for ten",
+  "subtitle": "Vietnamese pho bar with broth, noodles, and herbs for ten",
+  "category": "hall_expansion",
+  "cuisine": "vietnamese",
+  "description": "A rich beef broth stays hot in a large pot while rice noodles, thin-sliced beef, herbs, bean sprouts, and sauces fill a build bar. Each bowl is assembled fresh so noodles stay separate from broth until serving.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 120,
+  "prepTime": 40,
+  "difficulty": "hard",
+  "calories": 420,
+  "protein": 28,
+  "carbs": 48,
+  "fats": 12,
+  "tags": [
+    "protein:beef",
+    "format:bar_line",
+    "category:crew_feeders",
+    "bar_line",
+    "bowl",
+    "beef",
+    "healthy",
+    "hall_expansion",
+    "hall_expansion_56",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Large stock pot",
+    "Strainer",
+    "Hotel pans",
+    "Ladle",
+    "Sharp slicing knife"
+  ],
+  "ingredients": [
+    {
+      "name": "beef broth",
+      "quantity": "1.5",
+      "unit": "gallons",
+      "group": "Broth"
+    },
+    {
+      "name": "star anise",
+      "quantity": "4",
+      "unit": "whole",
+      "group": "Broth"
+    },
+    {
+      "name": "cinnamon stick",
+      "quantity": "1",
+      "unit": "whole",
+      "group": "Broth"
+    },
+    {
+      "name": "fresh ginger",
+      "quantity": "3",
+      "unit": "inches",
+      "notes": "charred, sliced",
+      "group": "Broth"
+    },
+    {
+      "name": "rice noodles",
+      "quantity": "1.5",
+      "unit": "lb",
+      "group": "Noodles"
+    },
+    {
+      "name": "sirloin steak",
+      "quantity": "2",
+      "unit": "lb",
+      "notes": "thin-sliced frozen",
+      "group": "Protein"
+    },
+    {
+      "name": "bean sprouts",
+      "quantity": "4",
+      "unit": "cups",
+      "group": "Bar"
+    },
+    {
+      "name": "Thai basil",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Bar"
+    },
+    {
+      "name": "green onions",
+      "quantity": "1",
+      "unit": "bunch",
+      "notes": "sliced",
+      "group": "Bar"
+    },
+    {
+      "name": "hoisin and sriracha",
+      "quantity": "0.5",
+      "unit": "cup each",
+      "group": "Sauce"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Build aromatic broth",
+      "instruction": "Char ginger and onion under broiler 5 minutes. Simmer broth with star anise, cinnamon, ginger, and onion 90 minutes. Strain and keep at a bare simmer at 200°F for service.",
+      "minutes": 100,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Prep proteins and noodles",
+      "instruction": "Slice partially frozen sirloin paper-thin across the grain. Cook rice noodles per package, rinse, toss with oil, and hold warm in a hotel pan.",
+      "minutes": 20,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Set the pho bar",
+      "instruction": "Arrange noodles, raw beef slices, bean sprouts, basil, cilantro, lime wedges, and green onions in separate pans. Place hoisin, sriracha, and fish sauce at the end.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Assemble bowls to order",
+      "instruction": "Portion noodles into bowls, top with raw beef slices, and ladle boiling broth over top—the hot broth cooks beef to medium-rare in the bowl. Verify broth reads 190°F when ladled.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Finish with herbs and serve",
+      "instruction": "Crew adds sprouts, herbs, lime, and hoisin or sriracha as each person prefers. Serve immediately while broth is steaming—pho does not hold well once noodles and beef are in the bowl.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Fish sauce added at the table lets individuals control funk level without scaring newcomers.",
+    "Mushrooms or tofu slices offer a vegetarian path through the same bar setup.",
+    "Wide bowls dissipate heat slower—crew can eat sooner without tongue burns."
+  ],
+  "tonightSpread": [
+    "Pho bar with simmering broth, noodles, beef, and full herb plate.",
+    "Spring rolls or edamame from the store for a light starter while broth finishes."
+  ],
+  "leftovers": [
+    "Broth freezes excellently—reheat and run pho bar again with fresh noodles.",
+    "Slice leftover beef into stir-fry with the bean sprouts and green onions."
+  ],
+  "whyCrewsLikeIt": "Pho feels like a treat but scales well for a hall. The build-your-own format handles different spice tolerances and the hot broth is genuinely restorative after cold-weather calls.",
+  "mealPrepNotes": "Broth can simmer hours ahead or use a doctored store base on tight timelines. Freeze beef 30 minutes for easy thin slicing. Cook noodles just before service and toss with oil.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 420,
+    "protein": 28,
+    "carbs": 48,
+    "fats": 12,
+    "label": "~420 cal/serving · 28g protein · 3g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/build-your-own-pho-bar.jpg",
+  "heroImageAlt": "Build-Your-Own Pho Bar — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/build-your-own-pho-bar.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/build-your-own-pho-bar.jpg",
+  "railImage": "/images/rails/hall-expansion/build-your-own-pho-bar.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "build-your-own pho bar",
+    "crew feeders"
+  ],
+  "relatedSlugs": [
+    "shawarma-bar-night",
+    "fajita-bar-night",
+    "hall-burger-bar",
+    "pasta-bar-night"
+  ],
+  "generatedAt": "2026-05-30T03:14:19.188Z",
+  "contentVersion": 2
+}

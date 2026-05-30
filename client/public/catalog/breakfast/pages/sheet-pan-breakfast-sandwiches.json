@@ -1,0 +1,149 @@
+{
+  "slug": "sheet-pan-breakfast-sandwiches",
+  "title": "Sheet Pan Breakfast Sandwiches",
+  "subtitle": "A dozen eggs and cheese baked between two layers of slider rolls.",
+  "description": "One sheet-pan hack produces twelve breakfast sandwiches at once: eggs baked in a parchment frame, layered with cheese and sausage on slider rolls, then topped and baked again. Cut along seams and serve—no griddle bottleneck on busy mornings.",
+  "filters": [
+    "breakfast_sandwiches",
+    "feed_a_crew",
+    "quick_breakfasts"
+  ],
+  "tags": [
+    "sheet-pan",
+    "sliders",
+    "eggs",
+    "sausage",
+    "batch-cook"
+  ],
+  "crewSize": 12,
+  "baseServings": 12,
+  "prepTime": 15,
+  "cookTime": 22,
+  "totalTime": 37,
+  "difficulty": "easy",
+  "ingredients": [
+    {
+      "name": "24-count slider roll package",
+      "quantity": "1",
+      "notes": "connected, not separated",
+      "group": "Build"
+    },
+    {
+      "name": "large eggs",
+      "quantity": "14",
+      "notes": "whisked with 2 tbsp milk",
+      "group": "Egg layer"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "1/2 tsp",
+      "notes": "and black pepper",
+      "group": "Egg layer"
+    },
+    {
+      "name": "pre-cooked sausage patties",
+      "quantity": "12",
+      "notes": "thin, fit slider size",
+      "group": "Protein"
+    },
+    {
+      "name": "American or cheddar cheese",
+      "quantity": "12 slices",
+      "group": "Protein"
+    },
+    {
+      "name": "butter",
+      "quantity": "3 tbsp",
+      "notes": "melted for brushing tops",
+      "group": "Finish"
+    },
+    {
+      "name": "everything bagel seasoning",
+      "quantity": "1 tsp",
+      "notes": "optional",
+      "group": "Finish"
+    },
+    {
+      "name": "hot sauce or ketchup",
+      "quantity": "1/2 cup",
+      "notes": "at the line",
+      "group": "Serve"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Heat the oven",
+      "instruction": "Heat oven to 350°F. Slice the connected roll block horizontally into tops and bottoms without separating individual rolls.",
+      "minutes": 0,
+      "tempF": 350
+    },
+    {
+      "stepNumber": 2,
+      "title": "Bake the egg sheet",
+      "instruction": "Whisk eggs with milk, salt, and pepper. Pour into a parchment-lined quarter sheet pan to roughly slider dimensions. Bake until just set—don't overbake or eggs turn rubbery.",
+      "minutes": 12,
+      "tempF": 350
+    },
+    {
+      "stepNumber": 3,
+      "title": "Trim and assemble",
+      "instruction": "Trim egg sheet to fit the roll block. Place bottom halves on a lined sheet pan, add sausage, egg sheet, cheese, and top halves. Press gently to align seams.",
+      "minutes": 8
+    },
+    {
+      "stepNumber": 4,
+      "title": "Final bake",
+      "instruction": "Brush tops with melted butter and optional everything seasoning. Bake until cheese melts and tops turn lightly golden.",
+      "minutes": 10,
+      "tempF": 350
+    },
+    {
+      "stepNumber": 5,
+      "title": "Cut and serve",
+      "instruction": "Rest 5 minutes, then cut along roll seams with a sharp knife. Serve warm from the pan or transfer to a hotel pan for the line.",
+      "minutes": 5
+    }
+  ],
+  "nutrition": {
+    "calories": 736,
+    "protein": 40,
+    "carbs": 4,
+    "fat": 62,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "stationWorkflow": [
+    "Measure the roll block before baking the egg sheet—trim once, not twice, for clean sandwich edges.",
+    "Use parchment to lift the egg sheet out of the quarter pan for easier trimming and placement.",
+    "Cut seams with a long serrated knife in one pass per row to avoid squashing the stacks."
+  ],
+  "cleanupNotes": [
+    "Discard parchment with baked-on egg residue instead of scraping—saves time on busy mornings.",
+    "Wipe the sheet pan while warm with a damp towel before butter glaze hardens on the rim."
+  ],
+  "leftovers": [
+    "Wrap sandwiches individually in foil and reheat at 325°F for 10 minutes until cheese remelts.",
+    "Split leftovers and griddle cut-side down for a crisp second-day version with fresh hot sauce."
+  ],
+  "heroImage": "/images/breakfast/sheet-pan-breakfast-sandwiches.jpg",
+  "thumbImage": "/images/thumbs/breakfast/sheet-pan-breakfast-sandwiches.jpg",
+  "imageAlt": "Sheet pan of pull-apart breakfast slider sandwiches with egg and sausage",
+  "publishedAt": "2026-05-30T03:14:16.260Z",
+  "updatedAt": "2026-05-30T03:14:16.260Z",
+  "readMinutes": 7,
+  "seoTitle": "Sheet Pan Breakfast Sandwiches | Firehall Breakfast"
+}

@@ -1,6 +1,8 @@
 {
   "slug": "high-protein-parfaits",
   "title": "High-Protein Yogurt Parfaits",
+  "subtitle": "A practical station breakfast that scales from 4 to 12.",
+  "description": "For mornings when the crew wants fast protein without firing up the stove. These parfaits use sturdy add-ins that stay crisp, and a build order that prevents a sad, watery bowl.",
   "filters": [
     "quick_breakfasts",
     "healthy_breakfasts",
@@ -15,60 +17,87 @@
   "crewSize": 6,
   "baseServings": 6,
   "prepTime": 12,
-  "cookTime": 0,
-  "totalTime": 12,
+  "cookTime": 5,
+  "totalTime": 17,
   "difficulty": "easy",
-  "heroImage": "/images/breakfast/high-protein-parfaits.jpg",
-  "thumbImage": "/images/thumbs/breakfast/high-protein-parfaits.jpg",
-  "seoTitle": "High-Protein Yogurt Parfaits | Firehall Breakfast",
-  "subtitle": "A practical station breakfast that scales from 4 to 12.",
-  "description": "For mornings when the crew wants fast protein without firing up the stove. These parfaits use sturdy add-ins that stay crisp, and a build order that prevents a sad, watery bowl.",
   "ingredients": [
     {
-      "quantity": "10",
-      "name": "large eggs"
+      "name": "Greek yogurt",
+      "quantity": "48 oz",
+      "notes": "plain, 2% or full-fat"
     },
     {
-      "quantity": "1 1/2 tsp",
-      "name": "kosher salt",
-      "notes": "start low; adjust at the end"
+      "name": "granola",
+      "quantity": "4 cups",
+      "notes": "sturdy, not dust-fine"
     },
     {
-      "quantity": "2 tbsp",
-      "name": "butter or oil"
+      "name": "mixed berries",
+      "quantity": "4 cups",
+      "notes": "fresh or thawed"
     },
     {
-      "quantity": "1",
-      "name": "black pepper",
-      "notes": "to taste"
+      "name": "honey or maple syrup",
+      "quantity": "1/2 cup"
+    },
+    {
+      "name": "chia seeds or ground flax",
+      "quantity": "1/2 cup",
+      "notes": "optional protein boost"
+    },
+    {
+      "name": "vanilla extract",
+      "quantity": "1 tsp",
+      "optional": true
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Get your station set",
-      "minutes": 5,
-      "instruction": "Set a warm holding zone (200°F oven). Lay out a tray for finished food, a tray for clean toast/tortillas, and a trash bowl so you’re not chasing scraps mid-cook."
+      "title": "Prep the line",
+      "instruction": "Set yogurt, granola, berries, and honey in separate bowls so the crew can build without cross-contamination.",
+      "minutes": 5
     },
     {
       "stepNumber": 2,
-      "title": "Cook the main",
-      "minutes": 10,
-      "instruction": "Cook the main components over medium to medium-high heat. Keep things in a single layer for browning, and season in layers so the finished plate doesn’t taste flat."
+      "title": "Build order",
+      "instruction": "Layer yogurt, then granola, then berries. Drizzle honey last so granola stays crisp until eaten.",
+      "minutes": 8
     },
     {
       "stepNumber": 3,
-      "title": "Eggs last",
-      "minutes": 6,
-      "instruction": "Cook eggs last so they stay tender. For scrambled: low heat and pull early. For fried: cover to set whites without blasting the yolk."
+      "title": "Hold briefly",
+      "instruction": "Parfaits hold 15–20 minutes covered in the fridge. Don't assemble more than one wave ahead.",
+      "minutes": 0
     },
     {
       "stepNumber": 4,
-      "title": "Serve and hold",
-      "minutes": 0,
-      "instruction": "Serve immediately; hold the rest warm. If a call hits, cover soft items; keep crispy items uncovered so they don’t steam."
+      "title": "Serve cold",
+      "instruction": "Pass spoons and napkins—this is a fast, no-stove breakfast when the hall is busy.",
+      "minutes": 0
     }
   ],
+  "nutrition": {
+    "calories": 360,
+    "protein": 21,
+    "carbs": 46,
+    "fat": 12,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": false
+    }
+  },
   "stationWorkflow": [
     "Assign one cook to the hot surface and one to assembly. Keep the line moving; don’t crowd the griddle.",
     "Set a warm holding zone (oven 200°F or covered hotel pan) so staggered eaters still get a hot plate.",
@@ -82,8 +111,11 @@
     "Cool fast: spread on a sheet pan 10 minutes, then portion into containers so it doesn’t sweat.",
     "Reheat rule: eggs reheat best covered at 50% power or low oven heat; don’t nuke on high."
   ],
+  "heroImage": "/images/breakfast/high-protein-parfaits.jpg",
+  "thumbImage": "/images/thumbs/breakfast/high-protein-parfaits.jpg",
   "imageAlt": "Warm station-kitchen breakfast: High-Protein Yogurt Parfaits",
-  "publishedAt": "2026-05-28T13:26:37.645Z",
-  "updatedAt": "2026-05-28T13:26:37.645Z",
-  "readMinutes": 4
+  "publishedAt": "2026-05-30T03:14:16.261Z",
+  "updatedAt": "2026-05-30T03:14:16.261Z",
+  "readMinutes": 5,
+  "seoTitle": "High-Protein Yogurt Parfaits | Firehall Breakfast"
 }

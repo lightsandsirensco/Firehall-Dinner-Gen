@@ -13,10 +13,10 @@
   "cookTime": 90,
   "prepTime": 30,
   "difficulty": "hard",
-  "calories": 520,
-  "protein": 32,
-  "carbs": 48,
-  "fats": 22,
+  "calories": 605,
+  "protein": 42,
+  "carbs": 45,
+  "fats": 27,
   "tags": [
     "protein:mixed",
     "format:one_pot",
@@ -100,7 +100,7 @@
   ],
   "proTips": [
     "Firefighters eat heavy after rough nights — double the protein if the hall had a busy shift.",
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts."
   ],
   "tonightSpread": [
@@ -119,11 +119,25 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 520,
-    "protein": 32,
-    "carbs": 48,
-    "fats": 22,
-    "label": "per serving (hall portion)"
+    "calories": 605,
+    "protein": 42,
+    "carbs": 45,
+    "fats": 27,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/jambalaya.jpg",
   "mobileImage": "/images/mobile/jambalaya.jpg",
@@ -152,6 +166,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-29T01:43:09.415Z",
+  "generatedAt": "2026-05-30T03:28:01.966Z",
   "contentVersion": 2
 }

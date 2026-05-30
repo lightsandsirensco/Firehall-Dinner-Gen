@@ -1,0 +1,186 @@
+{
+  "slug": "sheet-pan-meatball-marinara",
+  "title": "Sheet Pan Meatball Marinara Feed",
+  "displayTitle": "Sheet Pan Meatball Marinara Feed",
+  "seoTitle": "Sheet Pan Meatball Marinara Feed | Firefighter Meal",
+  "shortDescription": "Oven-baked beef meatballs with marinara for ten",
+  "subtitle": "Oven-baked beef meatballs with marinara for ten",
+  "category": "hall_expansion",
+  "cuisine": "italian",
+  "description": "Beef meatballs mix fast, bake on sheet pans until browned, then simmer in marinara until saucy. Serve over spaghetti or in sub rolls for a big crew feed that scales easy.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 40,
+  "prepTime": 30,
+  "difficulty": "easy",
+  "calories": 580,
+  "protein": 42,
+  "carbs": 52,
+  "fats": 24,
+  "tags": [
+    "protein:beef",
+    "format:sheet_pan",
+    "category:crew_feeders",
+    "beef",
+    "hearty",
+    "crew_feed",
+    "hall_expansion",
+    "hall_expansion_56",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Two sheet pans",
+    "Parchment paper",
+    "Large stock pot",
+    "Mixing bowls",
+    "Instant-read thermometer"
+  ],
+  "ingredients": [
+    {
+      "name": "ground beef (80/20)",
+      "quantity": "4",
+      "unit": "lb",
+      "group": "Main"
+    },
+    {
+      "name": "breadcrumbs",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Main"
+    },
+    {
+      "name": "eggs",
+      "quantity": "3",
+      "unit": "whole",
+      "group": "Main"
+    },
+    {
+      "name": "grated Parmesan",
+      "quantity": "1",
+      "unit": "cup",
+      "group": "Main"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "6",
+      "unit": "cloves",
+      "notes": "minced",
+      "group": "Main"
+    },
+    {
+      "name": "marinara sauce",
+      "quantity": "8",
+      "unit": "cups",
+      "group": "Sauce"
+    },
+    {
+      "name": "spaghetti",
+      "quantity": "2",
+      "unit": "lb",
+      "group": "Base"
+    },
+    {
+      "name": "fresh basil",
+      "quantity": "0.33",
+      "unit": "cup",
+      "notes": "chopped",
+      "group": "Finish"
+    },
+    {
+      "name": "sub rolls",
+      "quantity": "10",
+      "unit": "rolls",
+      "notes": "optional for sandwiches",
+      "group": "Service"
+    },
+    {
+      "name": "shredded mozzarella",
+      "quantity": "2",
+      "unit": "cups",
+      "notes": "optional for subs",
+      "group": "Service"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Mix the meatballs",
+      "instruction": "Combine beef, breadcrumbs, eggs, Parmesan, garlic, salt, and pepper until just mixed. Roll into about 60 golf-ball-size meatballs.",
+      "minutes": 20,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Bake on sheet pans",
+      "instruction": "Arrange meatballs on two parchment-lined sheet pans. Bake at 425°F 18–20 minutes until browned and internal temp reaches 160°F. Target oven/smoker temperature: 425°F.",
+      "minutes": 20,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Simmer in marinara",
+      "instruction": "Transfer meatballs to large pots, cover with marinara, and simmer 15 minutes until sauce coats meatballs and centers reach 165°F. Target oven/smoker temperature: 165°F.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Boil spaghetti",
+      "instruction": "Cook spaghetti in salted water until al dente while meatballs simmer. Drain and toss with a ladle of sauce.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Serve the spread",
+      "instruction": "Serve meatballs and sauce over spaghetti with basil. Toast sub rolls with mozzarella for meatball subs on the same line.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Bake a test meatball first if you are unsure on seasoning—adjust mix before rolling all 60.",
+    "Italian seasoning tablespoon in the mix saves chopping extra herbs.",
+    "Meatballs freeze raw on sheet pans—transfer to bags for emergency feeds."
+  ],
+  "tonightSpread": [
+    "Spaghetti and meatballs with garlic bread and extra Parmesan.",
+    "Meatball subs with melted mozzarella for handheld eaters."
+  ],
+  "leftovers": [
+    "Meatball parm bake: layer in dish with mozzarella and bake 375°F.",
+    "Crush into pizza topping for a quick flatbread night."
+  ],
+  "whyCrewsLikeIt": "Meatballs feed a crowd without carving or portion guesswork. Sheet pan bake beats standing at a skillet forming batches, and subs plus pasta covers different appetites.",
+  "mealPrepNotes": "Use a scoop for uniform meatballs—they bake evenly. Bake at high heat for color, then finish in sauce. Spaghetti can boil while meatballs bake.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 580,
+    "protein": 42,
+    "carbs": 52,
+    "fats": 24,
+    "label": "~580 cal/serving · 42g protein · 4g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/sheet-pan-meatball-marinara.jpg",
+  "heroImageAlt": "Sheet Pan Meatball Marinara Feed — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/sheet-pan-meatball-marinara.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/sheet-pan-meatball-marinara.jpg",
+  "railImage": "/images/rails/hall-expansion/sheet-pan-meatball-marinara.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "sheet pan meatball marinara feed",
+    "crew feeders"
+  ],
+  "relatedSlugs": [
+    "shawarma-bar-night",
+    "fajita-bar-night",
+    "hall-burger-bar",
+    "pasta-bar-night"
+  ],
+  "generatedAt": "2026-05-30T03:14:19.188Z",
+  "contentVersion": 2
+}

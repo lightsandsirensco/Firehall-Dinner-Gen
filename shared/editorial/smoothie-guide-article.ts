@@ -32,7 +32,7 @@ export const HEALTHY_HALL_SMOOTHIES_ARTICLE: EditorialArticle = {
     "firehall breakfast",
     "station blender recipes",
   ],
-  heroImage: "/images/editorial/healthy-hall-smoothies-hero.webp",
+  heroImage: "/images/smoothies/mixed-berry-protein.webp",
   heroImageAlt: "Assorted healthy smoothies on a fire station kitchen counter",
   intro:
     "Smoothies are not dinner — and they do not need to be. At the hall they fill the gaps: between calls, after a workout, or on a morning when nobody wants to run a full cook. A decent blender, frozen fruit, and yogurt or milk in the fridge beat gas-station shakes on price and protein. Rinse the jar right away and cleanup stays honest. These ten blends use normal station ingredients — no obscure powders, no lecture, just drinks crews will finish.",

@@ -10,13 +10,13 @@
   "description": "Cheesy pasta bake for the table. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
   "baseServings": 8,
-  "cookTime": 55,
-  "prepTime": 20,
+  "cookTime": 75,
+  "prepTime": 25,
   "difficulty": "medium",
-  "calories": 720,
-  "protein": 40,
-  "carbs": 68,
-  "fats": 36,
+  "calories": 973,
+  "protein": 70,
+  "carbs": 21,
+  "fats": 70,
   "tags": [
     "protein:beef",
     "format:pasta",
@@ -33,94 +33,137 @@
   ],
   "ingredients": [
     {
-      "name": "Dried pasta",
-      "quantity": "1.5",
+      "name": "Ziti or rigatoni",
+      "quantity": "2",
       "unit": "lb",
       "group": "Main"
     },
     {
-      "name": "Ground beef",
+      "name": "Ground beef (80/20)",
       "quantity": "2.5",
       "unit": "lb",
       "group": "Main"
     },
     {
+      "name": "Marinara sauce",
+      "quantity": "4",
+      "unit": "cups",
+      "group": "Sauce"
+    },
+    {
       "name": "Crushed tomatoes",
-      "quantity": "2",
-      "unit": "cans",
+      "quantity": "1",
+      "unit": "can",
       "notes": "28 oz",
       "group": "Sauce"
     },
     {
-      "name": "Heavy cream",
-      "quantity": "1",
-      "unit": "cup",
-      "group": "Sauce"
+      "name": "Whole-milk ricotta",
+      "quantity": "24",
+      "unit": "oz",
+      "group": "Cheese"
     },
     {
-      "name": "Parmesan, grated",
+      "name": "Low-moisture mozzarella, shredded",
+      "quantity": "24",
+      "unit": "oz",
+      "group": "Cheese"
+    },
+    {
+      "name": "Grated parmesan",
       "quantity": "8",
       "unit": "oz",
-      "group": "Finish"
+      "group": "Cheese"
     },
     {
-      "name": "Yellow onion",
-      "quantity": "2",
+      "name": "Yellow onion, diced",
+      "quantity": "1",
       "unit": "large",
       "group": "Aromatics"
     },
     {
       "name": "Garlic cloves, minced",
-      "quantity": "6",
+      "quantity": "5",
       "unit": "cloves",
       "group": "Aromatics"
+    },
+    {
+      "name": "Dried Italian seasoning",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Olive oil",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Cooking"
     },
     {
       "name": "Kosher salt",
       "quantity": "2",
       "unit": "tbsp",
       "group": "Seasoning"
+    },
+    {
+      "name": "Black pepper",
+      "quantity": "1",
+      "unit": "tsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Fresh basil, chopped",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Finish"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Salt the pasta water",
-      "instruction": "Bring a large pot of water to a rolling boil with enough salt that it tastes like the sea. This is your only chance to season the pasta itself.",
+      "title": "Brown beef and build sauce",
+      "instruction": "Brown ground beef in olive oil with onion until deeply colored. Add garlic and Italian seasoning; cook 1 minute. Stir in crushed tomatoes and marinara; simmer 15 minutes until thick enough to coat a spoon.",
+      "minutes": 20,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Par-cook ziti",
+      "instruction": "Boil ziti in salted water 3 minutes shy of al dente. Drain — baked ziti finishes in the oven, not the pot.",
       "minutes": 10,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 2,
-      "title": "Cook sauce base",
-      "instruction": "Meanwhile, brown meat, add onions and garlic, then tomatoes (and cream if Alfredo-style). Simmer 15 minutes while pasta cooks.",
-      "minutes": 15,
-      "heatLevel": "medium"
-    },
-    {
       "stepNumber": 3,
-      "title": "Boil pasta al dente",
-      "instruction": "Cook pasta 1 minute shy of package time. Reserve 2 cups pasta water. Drain — do not rinse.",
-      "minutes": 12,
-      "heatLevel": "high"
+      "title": "Mix ricotta filling",
+      "instruction": "Stir ricotta with half the parmesan, salt, and pepper until smooth. This layer keeps the bake creamy — skipping ricotta gives you red pasta, not baked ziti.",
+      "minutes": 8,
+      "heatLevel": ""
     },
     {
       "stepNumber": 4,
-      "title": "Finish in the pan",
-      "instruction": "Toss pasta in sauce over medium heat, splashing pasta water until glossy and clinging. Baked Ziti should coat a spoon — if it pools, reduce another minute.",
-      "minutes": 4,
-      "heatLevel": "medium"
+      "title": "Layer in hotel pans",
+      "instruction": "Spread half the meat sauce, then half the pasta, dollops of ricotta, and half the mozzarella. Repeat layers. Top with remaining sauce, mozzarella, and parmesan.",
+      "minutes": 12,
+      "heatLevel": ""
     },
     {
       "stepNumber": 5,
-      "title": "Serve from the pot",
-      "instruction": "Fold in Parmesan off heat. Serve immediately — pasta waits for no one. Backup tray: cover lightly with foil at 200°F up to 15 minutes, add water if it tightens.",
-      "minutes": 3,
+      "title": "Bake until bubbling",
+      "instruction": "Bake covered at 375°F 25 minutes, then uncover and bake 10–15 minutes until cheese browns at the edges. Rest 10 minutes before cutting — molten cheese needs to set.",
+      "minutes": 35,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Serve Baked Ziti",
+      "instruction": "Scoop squares from the pan onto sheet trays. Finish with basil. This is a cheesy pasta bake, not a cream-pasta toss.",
+      "minutes": 5,
       "heatLevel": "low"
     }
   ],
   "proTips": [
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts."
   ],
   "tonightSpread": [
@@ -140,11 +183,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 720,
-    "protein": 40,
-    "carbs": 68,
-    "fats": 36,
-    "label": "per serving (hall portion)"
+    "calories": 973,
+    "protein": 70,
+    "carbs": 21,
+    "fats": 70,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/baked-ziti.jpg",
   "mobileImage": "/images/mobile/baked-ziti.jpg",
@@ -172,6 +229,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-29T01:43:09.372Z",
+  "generatedAt": "2026-05-30T03:28:01.877Z",
   "contentVersion": 2
 }

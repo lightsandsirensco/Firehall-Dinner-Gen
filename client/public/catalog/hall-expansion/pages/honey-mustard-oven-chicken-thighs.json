@@ -1,0 +1,183 @@
+{
+  "slug": "honey-mustard-oven-chicken-thighs",
+  "title": "Honey Mustard Baked Chicken Thighs",
+  "displayTitle": "Honey Mustard Baked Chicken Thighs",
+  "seoTitle": "Honey Mustard Baked Chicken Thighs | Firefighter Meal",
+  "shortDescription": "Crispy-skinned thighs with tangy honey-mustard glaze for ten",
+  "subtitle": "Crispy-skinned thighs with tangy honey-mustard glaze for ten",
+  "category": "hall_expansion",
+  "cuisine": "american",
+  "description": "Bone-in chicken thighs are seasoned, roasted on a wire rack until skin crisps, then brushed with honey-mustard glaze during the final minutes. Finish under the broiler for color if needed.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 45,
+  "prepTime": 20,
+  "difficulty": "easy",
+  "calories": 390,
+  "protein": 36,
+  "carbs": 12,
+  "fats": 22,
+  "tags": [
+    "protein:chicken",
+    "format:baked",
+    "category:crew_feeders",
+    "chicken",
+    "comfort",
+    "hall_expansion",
+    "hall_expansion_56",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Sheet pans",
+    "Wire cooling rack",
+    "Instant-read thermometer",
+    "Mixing bowls",
+    "Basting brush"
+  ],
+  "ingredients": [
+    {
+      "name": "bone-in chicken thighs",
+      "quantity": "5",
+      "unit": "lb",
+      "notes": "about 16 pieces",
+      "group": "Main"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "black pepper",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "smoked paprika",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "garlic powder",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "honey",
+      "quantity": "0.33",
+      "unit": "cup",
+      "group": "Glaze"
+    },
+    {
+      "name": "Dijon mustard",
+      "quantity": "0.33",
+      "unit": "cup",
+      "group": "Glaze"
+    },
+    {
+      "name": "apple cider vinegar",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Glaze"
+    },
+    {
+      "name": "fresh parsley",
+      "quantity": "0.25",
+      "unit": "cup",
+      "notes": "chopped",
+      "group": "Finish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Season the thighs",
+      "instruction": "Pat chicken thighs dry. Toss with olive oil, salt, pepper, smoked paprika, and garlic powder until evenly coated.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Roast on a rack",
+      "instruction": "Arrange thighs skin-side up on a wire rack over a foil-lined sheet pan. Roast at 425°F until skin crisps and internal temp reaches 155°F, about 30 minutes. Target oven/smoker temperature: 425°F.",
+      "minutes": 30,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Build the glaze",
+      "instruction": "Whisk honey, Dijon, and vinegar until smooth. Taste and adjust tang with a splash more vinegar if too sweet.",
+      "minutes": 3,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Glaze and finish",
+      "instruction": "Brush thighs with glaze and roast 8–10 more minutes until internal temp hits 165°F and glaze sets glossy. Broil 1–2 minutes for extra color if needed. Target oven/smoker temperature: 425°F.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Rest and serve",
+      "instruction": "Rest thighs 5 minutes. Portion two per plate with pan juices spooned over and parsley scattered at the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Use a leave-in probe on the largest thigh so you are not guessing on doneness.",
+    "Roast green beans on a second rack below the chicken to use oven space efficiently.",
+    "Save rendered fat from the pan for roasting potatoes on the next shift."
+  ],
+  "tonightSpread": [
+    "Glazed thighs with roasted baby potatoes and steamed green beans.",
+    "Extra glaze in a squeeze bottle for crew who want more tang at the table."
+  ],
+  "leftovers": [
+    "Pull meat and chop into a chicken salad with celery and light mayo.",
+    "Slice and stack on toasted bread with Swiss cheese for quick melts."
+  ],
+  "whyCrewsLikeIt": "Thighs forgive timing better than breast meat and stay juicy on the hold line. One sheet pan feeds ten without standing over a grill between calls.",
+  "mealPrepNotes": "Pat thighs completely dry for crisp skin. Line sheet pans with foil for fast cleanup. Glaze can be mixed ahead in squeeze bottles.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 390,
+    "protein": 36,
+    "carbs": 12,
+    "fats": 22,
+    "label": "~390 cal/serving · 36g protein · 0g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/honey-mustard-oven-chicken-thighs.jpg",
+  "heroImageAlt": "Honey Mustard Baked Chicken Thighs — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/honey-mustard-oven-chicken-thighs.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/honey-mustard-oven-chicken-thighs.jpg",
+  "railImage": "/images/rails/hall-expansion/honey-mustard-oven-chicken-thighs.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "honey mustard baked chicken thighs",
+    "crew feeders"
+  ],
+  "relatedSlugs": [
+    "shawarma-bar-night",
+    "fajita-bar-night",
+    "hall-burger-bar",
+    "pasta-bar-night"
+  ],
+  "generatedAt": "2026-05-30T03:14:19.188Z",
+  "contentVersion": 2
+}

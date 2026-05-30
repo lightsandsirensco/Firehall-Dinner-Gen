@@ -1,0 +1,184 @@
+{
+  "slug": "smoked-meatloaf",
+  "title": "Smoked Meatloaf with Glaze",
+  "displayTitle": "Smoked Meatloaf with Glaze",
+  "seoTitle": "Smoked Meatloaf with Glaze | Firefighter Meal",
+  "shortDescription": "Individual smoked loaves with sweet-spicy ketchup glaze for ten",
+  "subtitle": "Individual smoked loaves with sweet-spicy ketchup glaze for ten",
+  "category": "hall_expansion",
+  "cuisine": "american",
+  "description": "Ground beef loaves are formed into individual portions, smoked until set, then glazed until sticky and caramelized. Each loaf slices cleanly and holds well on the line without crumbling.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 90,
+  "prepTime": 25,
+  "difficulty": "easy",
+  "calories": 420,
+  "protein": 32,
+  "carbs": 22,
+  "fats": 24,
+  "tags": [
+    "protein:beef",
+    "format:smoker",
+    "category:smoker_recipes",
+    "bbq",
+    "smoker",
+    "beef",
+    "comfort",
+    "hall_expansion",
+    "hall_expansion_56",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Smoker",
+    "Perforated smoking rack",
+    "Instant-read thermometer",
+    "Mixing bowls",
+    "Sheet pans"
+  ],
+  "ingredients": [
+    {
+      "name": "ground beef (80/20)",
+      "quantity": "5",
+      "unit": "lb",
+      "group": "Main"
+    },
+    {
+      "name": "breadcrumbs",
+      "quantity": "1.5",
+      "unit": "cups",
+      "group": "Main"
+    },
+    {
+      "name": "eggs",
+      "quantity": "3",
+      "unit": "whole",
+      "group": "Main"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "1",
+      "unit": "whole",
+      "notes": "finely diced",
+      "group": "Main"
+    },
+    {
+      "name": "Worcestershire sauce",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Main"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "black pepper",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "ketchup",
+      "quantity": "0.75",
+      "unit": "cup",
+      "group": "Glaze"
+    },
+    {
+      "name": "brown sugar",
+      "quantity": "0.25",
+      "unit": "cup",
+      "group": "Glaze"
+    },
+    {
+      "name": "apple cider vinegar",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Glaze"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Mix the meatloaf base",
+      "instruction": "Combine ground beef, breadcrumbs, eggs, onion, Worcestershire, salt, and pepper until just mixed—overworking makes dense, tough loaves instead of tender slices.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Shape individual loaves",
+      "instruction": "Divide into ten equal portions and shape into mini loaves about 5 inches long. Place on a perforated rack or foil-lined pan with space between each loaf.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Smoke until nearly set",
+      "instruction": "Heat smoker to 275°F. Smoke loaves until internal temperature reaches 140°F and the exterior takes on light smoke color, about 45–60 minutes. Target oven/smoker temperature: 275°F.",
+      "minutes": 55,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Glaze and finish",
+      "instruction": "Whisk ketchup, brown sugar, and vinegar. Brush loaves and continue smoking until internal temp hits 160°F and glaze turns tacky and lightly charred at the edges. Target oven/smoker temperature: 275°F.",
+      "minutes": 25,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Rest and serve",
+      "instruction": "Rest loaves 10 minutes before slicing into half-inch portions. Serve with mashed potatoes or mac and cheese, keeping extra glaze warm for second passes at the line.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Soak breadcrumbs in a splash of milk for 5 minutes before mixing for a softer crumb.",
+    "Insert a small cube of cheddar in the center of each loaf for a surprise melt if you want extra crew hype.",
+    "If loaves threaten to fall apart, chill shaped loaves 30 minutes before smoking to help them set."
+  ],
+  "tonightSpread": [
+    "Sliced meatloaf on a tray with warm glaze, garlic mashed potatoes, and buttered green beans.",
+    "Soft dinner rolls and jarred pepper relish for quick meatloaf sliders at the end of the line."
+  ],
+  "leftovers": [
+    "Crumble cold meatloaf into a breakfast hash with diced potatoes and fried eggs.",
+    "Slice thin for grilled meatloaf sandwiches with melted provolone and sautéed onions."
+  ],
+  "whyCrewsLikeIt": "Meatloaf is familiar comfort that feels like home cooking, not cafeteria food. Individual loaves mean no fighting over the end piece and faster service when the tones drop mid-meal.",
+  "mealPrepNotes": "Mix and shape loaves the night before on sheet pans lined with parchment. Glaze can be mixed ahead in squeeze bottles. Smoke loaves early shift and reheat slices in a 325°F oven if needed.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 420,
+    "protein": 32,
+    "carbs": 22,
+    "fats": 24,
+    "label": "~420 cal/serving · 32g protein · 1g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/smoked-meatloaf.jpg",
+  "heroImageAlt": "Smoked Meatloaf with Glaze — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/smoked-meatloaf.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/smoked-meatloaf.jpg",
+  "railImage": "/images/rails/hall-expansion/smoked-meatloaf.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "smoked meatloaf with glaze",
+    "smoker recipes"
+  ],
+  "relatedSlugs": [
+    "smoked-turkey-breast",
+    "smoked-mac-and-cheese",
+    "pork-belly-burnt-ends",
+    "smoked-sausage-platter"
+  ],
+  "generatedAt": "2026-05-30T03:14:19.187Z",
+  "contentVersion": 2
+}

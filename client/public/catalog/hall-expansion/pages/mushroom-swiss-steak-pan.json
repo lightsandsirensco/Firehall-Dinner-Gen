@@ -1,0 +1,187 @@
+{
+  "slug": "mushroom-swiss-steak-pan",
+  "title": "Mushroom Swiss Steak Pan",
+  "displayTitle": "Mushroom Swiss Steak Pan",
+  "seoTitle": "Mushroom Swiss Steak Pan | Firefighter Meal",
+  "shortDescription": "Seared round steak with mushrooms and Swiss over mashed potatoes for ten",
+  "subtitle": "Seared round steak with mushrooms and Swiss over mashed potatoes for ten",
+  "category": "hall_expansion",
+  "cuisine": "russian",
+  "description": "Sirloin strips sear fast, simmer with mushrooms and onions in a rich broth base, then finish off heat with sour cream for a silky sauce. Serve over wide egg noodles with parsley.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 35,
+  "prepTime": 25,
+  "difficulty": "medium",
+  "calories": 520,
+  "protein": 38,
+  "carbs": 48,
+  "fats": 22,
+  "tags": [
+    "protein:beef",
+    "format:pasta",
+    "category:crew_feeders",
+    "beef",
+    "comfort",
+    "pasta",
+    "hall_expansion",
+    "hall_expansion_56",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Large Dutch oven",
+    "Stock pot",
+    "Tongs",
+    "Whisk",
+    "Chef knife"
+  ],
+  "ingredients": [
+    {
+      "name": "sirloin steak",
+      "quantity": "3",
+      "unit": "lb",
+      "notes": "sliced thin",
+      "group": "Main"
+    },
+    {
+      "name": "wide egg noodles",
+      "quantity": "2",
+      "unit": "lb",
+      "group": "Main"
+    },
+    {
+      "name": "cremini mushrooms",
+      "quantity": "1.5",
+      "unit": "lb",
+      "notes": "sliced",
+      "group": "Vegetables"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "1",
+      "unit": "whole",
+      "notes": "diced",
+      "group": "Vegetables"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "4",
+      "unit": "cloves",
+      "notes": "minced",
+      "group": "Aromatics"
+    },
+    {
+      "name": "beef broth",
+      "quantity": "3",
+      "unit": "cups",
+      "group": "Sauce"
+    },
+    {
+      "name": "sour cream",
+      "quantity": "1.5",
+      "unit": "cups",
+      "group": "Sauce"
+    },
+    {
+      "name": "Dijon mustard",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "unsalted butter",
+      "quantity": "4",
+      "unit": "tbsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "fresh parsley",
+      "quantity": "0.33",
+      "unit": "cup",
+      "notes": "chopped",
+      "group": "Finish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Sear the beef",
+      "instruction": "Pat sirloin strips dry and season with salt and pepper. Sear in butter over high heat in batches 30–45 seconds per side until browned but still pink inside. Set aside.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Cook mushrooms and onion",
+      "instruction": "In the same pot, sauté mushrooms and onion 8 minutes until moisture evaporates and edges brown. Add garlic and cook 1 minute.",
+      "minutes": 9,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Build the sauce",
+      "instruction": "Pour in beef broth and simmer 5 minutes, scraping fond from the bottom. Whisk Dijon into sour cream, then stir off heat into the warm broth until smooth.",
+      "minutes": 6,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Cook the noodles",
+      "instruction": "Boil egg noodles in salted water until al dente, about 8 minutes. Drain and toss with a tablespoon of butter.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Combine and serve",
+      "instruction": "Return beef and any juices to sauce and warm 2 minutes—do not boil. Serve noodles topped with stroganoff and parsley at the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Partially freeze sirloin 20 minutes for easier thin slicing.",
+    "If sauce breaks, whisk in a spoonful of cold sour cream off heat to bring it back.",
+    "Frozen peas stirred in at the end add color and stretch the dish cheaply."
+  ],
+  "tonightSpread": [
+    "Stroganoff over noodles with crusty bread for sauce mopping.",
+    "Simple cucumber salad with dill for a cool contrast."
+  ],
+  "leftovers": [
+    "Reheat gently with splash of broth—microwave on medium, not full blast.",
+    "Fill baked potato skins with stroganoff and melted cheese."
+  ],
+  "whyCrewsLikeIt": "Stroganoff is pure comfort after cold calls. The sauce feels indulgent but comes together in one pot plus a noodle boil—manageable even for newer cooks.",
+  "mealPrepNotes": "Slice beef against the grain thin for tender bites. Stir sour cream off heat so it does not break. Hold sauce and noodles separately if holding more than 30 minutes.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 520,
+    "protein": 38,
+    "carbs": 48,
+    "fats": 22,
+    "label": "~520 cal/serving · 38g protein · 3g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/mushroom-swiss-steak-pan.jpg",
+  "heroImageAlt": "Mushroom Swiss Steak Pan — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/mushroom-swiss-steak-pan.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/mushroom-swiss-steak-pan.jpg",
+  "railImage": "/images/rails/hall-expansion/mushroom-swiss-steak-pan.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "mushroom swiss steak pan",
+    "crew feeders"
+  ],
+  "relatedSlugs": [
+    "shawarma-bar-night",
+    "fajita-bar-night",
+    "hall-burger-bar",
+    "pasta-bar-night"
+  ],
+  "generatedAt": "2026-05-30T03:14:19.188Z",
+  "contentVersion": 2
+}

@@ -11,12 +11,12 @@
   "crewSize": 8,
   "baseServings": 8,
   "cookTime": 55,
-  "prepTime": 20,
+  "prepTime": 30,
   "difficulty": "medium",
-  "calories": 600,
-  "protein": 40,
-  "carbs": 48,
-  "fats": 28,
+  "calories": 1400,
+  "protein": 85,
+  "carbs": 144,
+  "fats": 80,
   "tags": [
     "protein:beef",
     "format:burger",
@@ -28,6 +28,7 @@
   "equipment": [
     "Flat griddle or cast iron",
     "Burger press or heavy spatula",
+    "Small dome lids for melting cheese",
     "Large sheet trays",
     "Instant-read thermometer",
     "Aluminum foil"
@@ -35,82 +36,143 @@
   "ingredients": [
     {
       "name": "Ground beef (80/20)",
-      "quantity": "3",
+      "quantity": "4",
       "unit": "lb",
       "group": "Main"
     },
     {
-      "name": "Potato buns",
-      "quantity": "8",
+      "name": "Slider buns",
+      "quantity": "36",
       "unit": "count",
+      "notes": "3–4 per person",
       "group": "Buns"
     },
     {
-      "name": "American cheese",
-      "quantity": "12",
-      "unit": "slices",
+      "name": "American cheese slices",
+      "quantity": "36",
+      "unit": "count",
       "group": "Cheese"
     },
     {
-      "name": "Mayonnaise",
-      "quantity": "0.5",
-      "unit": "cup",
-      "group": "Sauce"
+      "name": "Kosher salt",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Black pepper",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Unsalted butter",
+      "quantity": "4",
+      "unit": "tbsp",
+      "group": "Buns"
+    },
+    {
+      "name": "Iceberg lettuce, shredded",
+      "quantity": "1",
+      "unit": "head",
+      "group": "Toppings bar"
+    },
+    {
+      "name": "Roma tomatoes, sliced",
+      "quantity": "6",
+      "unit": "count",
+      "group": "Toppings bar"
+    },
+    {
+      "name": "Red onion, thin sliced",
+      "quantity": "2",
+      "unit": "count",
+      "group": "Toppings bar"
+    },
+    {
+      "name": "Dill pickle chips",
+      "quantity": "3",
+      "unit": "cups",
+      "group": "Toppings bar"
+    },
+    {
+      "name": "Ketchup",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Sauces"
     },
     {
       "name": "Yellow mustard",
-      "quantity": "3",
-      "unit": "tbsp",
-      "group": "Sauce"
+      "quantity": "1",
+      "unit": "cup",
+      "group": "Sauces"
     },
     {
-      "name": "Dill pickles",
-      "quantity": "2",
-      "unit": "cups",
-      "group": "Toppings"
+      "name": "Mayonnaise",
+      "quantity": "1",
+      "unit": "cup",
+      "group": "Sauces"
+    },
+    {
+      "name": "BBQ sauce",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "optional",
+      "group": "Sauces"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Form loose balls",
-      "instruction": "Mix sauce. Split buns. Form beef into loose 3 oz balls — tight patties steam instead of crisp.",
-      "minutes": 12,
+      "title": "Form mini patties",
+      "instruction": "Divide ground beef into 2-ounce portions (about 32–36 patties for a full hall). Roll gently into balls, then flatten into thin patties slightly wider than the buns — they shrink on the griddle. Indent the center with your thumb so they cook flat.",
+      "minutes": 20,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Smash for crust",
-      "instruction": "Heat griddle until smoking. Smash balls immediately; season with salt. Cook 2 minutes until edges lace brown. Flip, add cheese, melt 1 minute.",
-      "minutes": 8,
-      "heatLevel": "high"
+      "title": "Season and griddle in batches",
+      "instruction": "Season patties with salt and pepper. Griddle over medium-high 2–3 minutes per side until browned and 160°F. Work in batches so the griddle stays hot — crowded patties steam.",
+      "minutes": 15,
+      "heatLevel": "medium-high"
     },
     {
       "stepNumber": 3,
-      "title": "Build and run",
-      "instruction": "Toast buns in fat. Stack and serve within 2 minutes — smash burgers go soft fast. Run a sheet-tray line, not plated dinners.",
+      "title": "Melt cheese on patties",
+      "instruction": "Top each patty with American cheese in the last minute; cover with a dome lid or foil tent until melted. Transfer finished sliders to sheet trays in a warm oven at 200°F.",
       "minutes": 5,
-      "heatLevel": ""
+      "heatLevel": "medium"
     },
     {
       "stepNumber": 4,
-      "title": "Batch the next round",
-      "instruction": "Wipe griddle between batches. Keep cooked burgers on a rack in a 200°F oven — max 10 minutes or edges soften.",
-      "minutes": 5,
+      "title": "Toast buns",
+      "instruction": "Butter cut slider buns and toast cut-side down on the griddle until golden. Pile toasted bottoms and tops in separate foil-lined pans.",
+      "minutes": 8,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Build the toppings bar",
+      "instruction": "Line up lettuce, tomato, onion, pickles, ketchup, mustard, and mayo in labeled bowls with tongs and spoons. Put cold toppings on ice if service runs past an hour.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Serve build-your-own sliders",
+      "instruction": "Crew grabs a bottom bun, adds patty with cheese, builds toppings, and caps with the top bun. Hall Slider Bar feeds 8–12 hungry firefighters when you have enough buns and patties — plan seconds before the line opens.",
+      "minutes": 10,
       "heatLevel": "low"
     }
   ],
   "proTips": [
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts."
   ],
   "tonightSpread": [
-    "Toast buns in batches and hold in a warm pan — soggy buns kill the line.",
-    "Keep cheese slices under a dome so they melt fast when patties come off the griddle.",
-    "Build a long snack board: mains down the center, dips and chips at both ends.",
-    "Use disposable boats for handhelds so cleanup stays under five minutes after the game.",
-    "Line up Hall Slider Bar on the main counter with serving spoons — firefighters grab fast between calls.",
-    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+    "Line mini patties with cheese on sheet trays; toasted buns split into top and bottom pans.",
+    "Build toppings bar in order: lettuce, tomato, onion, pickles, then ketchup, mustard, and mayo at the end.",
+    "Plan 3–4 sliders per firefighter — count buns before the line opens so nobody gets shorted."
   ],
   "leftovers": [
     "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
@@ -122,18 +184,32 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 600,
-    "protein": 40,
-    "carbs": 48,
-    "fats": 28,
-    "label": "per serving (hall portion)"
+    "calories": 1400,
+    "protein": 85,
+    "carbs": 144,
+    "fats": 80,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/slider-bar.jpg",
   "mobileImage": "/images/mobile/slider-bar.jpg",
   "thumbImage": "/images/thumbs/slider-bar.jpg",
   "railImage": "/images/rails/slider-bar.jpg",
   "realismScore": 100,
-  "firefighterScore": 100,
+  "firefighterScore": 96,
   "popularityWeight": 3.2,
   "searchTerms": [
     "hall slider bar",
@@ -157,6 +233,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-29T01:43:09.432Z",
+  "generatedAt": "2026-05-30T03:28:02.001Z",
   "contentVersion": 2
 }

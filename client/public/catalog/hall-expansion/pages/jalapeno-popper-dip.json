@@ -1,0 +1,187 @@
+{
+  "slug": "jalapeno-popper-dip",
+  "title": "Jalapeño Popper Dip",
+  "displayTitle": "Jalapeño Popper Dip",
+  "seoTitle": "Jalapeño Popper Dip | Firefighter Meal",
+  "shortDescription": "Creamy bacon jalapeño dip with crostini for ten",
+  "subtitle": "Creamy bacon jalapeño dip with crostini for ten",
+  "category": "hall_expansion",
+  "cuisine": "american",
+  "description": "Cream cheese, sour cream, cheddar, bacon, and diced jalapeños bake until bubbly and lightly browned. Serve hot with crostini, tortilla chips, and celery for scooping through the whole game.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 30,
+  "prepTime": 20,
+  "difficulty": "easy",
+  "calories": 510,
+  "protein": 16,
+  "carbs": 24,
+  "fats": 40,
+  "tags": [
+    "protein:pork",
+    "format:bar_line",
+    "category:game_day_recipes",
+    "game_day",
+    "comfort",
+    "handheld",
+    "hall_expansion",
+    "hall_expansion_56",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "9x13 baking dish",
+    "Mixing bowls",
+    "Hand mixer",
+    "Sheet pans",
+    "Aluminum foil"
+  ],
+  "ingredients": [
+    {
+      "name": "cream cheese",
+      "quantity": "16",
+      "unit": "oz",
+      "notes": "softened",
+      "group": "Main"
+    },
+    {
+      "name": "sour cream",
+      "quantity": "1",
+      "unit": "cup",
+      "group": "Main"
+    },
+    {
+      "name": "mayonnaise",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Main"
+    },
+    {
+      "name": "sharp cheddar cheese",
+      "quantity": "2",
+      "unit": "cups",
+      "notes": "shredded",
+      "group": "Main"
+    },
+    {
+      "name": "cooked bacon",
+      "quantity": "1",
+      "unit": "lb",
+      "notes": "crumbled",
+      "group": "Main"
+    },
+    {
+      "name": "jalapeño peppers",
+      "quantity": "6",
+      "unit": "whole",
+      "notes": "deseeded, diced",
+      "group": "Main"
+    },
+    {
+      "name": "garlic powder",
+      "quantity": "1",
+      "unit": "tsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "onion powder",
+      "quantity": "1",
+      "unit": "tsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "tortilla chips",
+      "quantity": "1",
+      "unit": "lb",
+      "group": "Serve"
+    },
+    {
+      "name": "baguette",
+      "quantity": "2",
+      "unit": "loaves",
+      "notes": "sliced and toasted",
+      "group": "Serve"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Prep jalapeños and bacon",
+      "instruction": "Deseed and finely dice jalapeños wearing gloves. Crumble cooked bacon into bite-size pieces and measure shredded cheddar so assembly moves fast.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Mix the creamy dip base",
+      "instruction": "Beat cream cheese until smooth, then fold in sour cream, mayonnaise, garlic powder, and onion powder until fully combined and no cream cheese lumps remain.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Fold in mix-ins",
+      "instruction": "Stir in three-quarters of the cheddar, bacon, and jalapeños. Reserve the rest for topping so the surface browns with visible bacon and cheese pockets.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Bake until bubbly",
+      "instruction": "Spread in a buttered 9x13 dish, top with reserved cheese and bacon, and bake at 375°F until edges bubble and center reaches 165°F, about 25–30 minutes. Target oven/smoker temperature: 375°F.",
+      "minutes": 30,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Serve hot",
+      "instruction": "Rest 5 minutes so the dip sets slightly. Serve with chips and toasted baguette slices. Keep backup dip warm in the oven if the first dish empties fast.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Roast jalapeños first for milder heat and deeper flavor if the crew includes spice-sensitive members.",
+    "A tablespoon of cornstarch mixed into the cheddar helps the dip stay thick on hold.",
+    "Label 'hot' clearly if using full-strength jalapeños—surprise heat ruins goodwill fast."
+  ],
+  "tonightSpread": [
+    "Hot popper dip with chips, crostini, celery sticks, and extra bacon bits.",
+    "Cold beer or sparkling water station—rich dip needs something crisp to reset palates."
+  ],
+  "leftovers": [
+    "Spread cold dip on tortillas and griddle into quesadillas.",
+    "Stuff into hollowed mini peppers and rebake for actual poppers on night two."
+  ],
+  "whyCrewsLikeIt": "Jalapeño popper dip delivers the same spicy-creamy-bacon hit as stuffed peppers with a fraction of the prep. One casserole dish feeds the hall and stays hot in a low oven.",
+  "mealPrepNotes": "Dice and deseed jalapeños wearing gloves. Cook bacon ahead. Assemble dip in a buttered dish up to 24 hours ahead and bake from cold, adding 10 minutes.",
+  "spiceLevel": "medium",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 510,
+    "protein": 16,
+    "carbs": 24,
+    "fats": 40,
+    "label": "~510 cal/serving · 16g protein · 2g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/jalapeno-popper-dip.jpg",
+  "heroImageAlt": "Jalapeño Popper Dip — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/jalapeno-popper-dip.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/jalapeno-popper-dip.jpg",
+  "railImage": "/images/rails/hall-expansion/jalapeno-popper-dip.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "jalapeño popper dip",
+    "game day recipes"
+  ],
+  "relatedSlugs": [
+    "loaded-potato-skins",
+    "game-day-pizza-sliders",
+    "pretzel-bite-platter",
+    "philly-cheesesteak-sliders"
+  ],
+  "generatedAt": "2026-05-30T03:14:19.188Z",
+  "contentVersion": 2
+}

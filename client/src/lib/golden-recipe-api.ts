@@ -1,59 +1,75 @@
 import type { GoldenCatalogIndex, GoldenRecipePage } from "@shared/golden-100/recipe-page-schema";
 import { goldenCatalogIndexPath, goldenPageJsonPath } from "@shared/golden-100/recipe-page-paths";
+import { pizzaNightPageJsonPath } from "@shared/pizza-night/recipe-page-paths";
+import { isPizzaNightSlug } from "@shared/pizza-night/manifest";
 import { performanceCatalogIndexPath, performancePageJsonPath } from "@shared/performance-meals/recipe-page-paths";
+import {
+  hallExpansionCatalogIndexPath,
+  hallExpansionCatalogPagePath,
+} from "@shared/hall-expansion/recipe-page-paths";
 import { mergeHallCatalogIndexes } from "@shared/meal-catalog/unified-index";
 import { hallCatalogIndexPath } from "@shared/hall-catalog/paths";
+import { fetchApprovedCatalogTotal } from "@/lib/approved-catalog-api";
+import { fetchJsonResource } from "@/lib/fetch-json";
 
 const API_INDEX = "/api/catalog/golden-100";
 const API_PAGE = (slug: string) => `/api/catalog/golden-100/${encodeURIComponent(slug)}`;
 
 async function loadStaticCatalogIndex(): Promise<GoldenCatalogIndex> {
   // Preferred: unified hall file (Golden + Performance, breakfast excluded).
-  try {
-    const hallRes = await fetch(hallCatalogIndexPath());
-    if (hallRes.ok) return hallRes.json();
-  } catch {
-    /* fall through */
-  }
+  const hall = await fetchJsonResource<GoldenCatalogIndex>(hallCatalogIndexPath());
+  if (hall) return hall;
 
-  const goldenRes = await fetch(goldenCatalogIndexPath());
-  if (!goldenRes.ok) throw new Error(`Catalog index ${goldenRes.status}`);
-  const golden = (await goldenRes.json()) as GoldenCatalogIndex;
-  try {
-    const perfRes = await fetch(performanceCatalogIndexPath());
-    if (perfRes.ok) {
-      const performance = (await perfRes.json()) as GoldenCatalogIndex;
-      return mergeHallCatalogIndexes(golden, performance);
+  const golden = await fetchJsonResource<GoldenCatalogIndex>(goldenCatalogIndexPath());
+  if (!golden) throw new Error("Catalog index unavailable");
+
+  const performance = await fetchJsonResource<GoldenCatalogIndex>(performanceCatalogIndexPath());
+  if (performance) {
+    let merged = mergeHallCatalogIndexes(golden, performance);
+    const expansion = await fetchJsonResource<GoldenCatalogIndex>(hallExpansionCatalogIndexPath());
+    if (expansion) {
+      merged = mergeHallCatalogIndexes(golden, performance, expansion);
     }
-  } catch {
-    /* performance index optional offline */
+    return merged;
   }
   return golden;
 }
 
 export async function fetchGoldenCatalogIndex(): Promise<GoldenCatalogIndex> {
-  try {
-    const res = await fetch(API_INDEX);
-    if (res.ok) return res.json();
-  } catch {
-    /* static fallback */
-  }
+  const apiIndex = await fetchJsonResource<GoldenCatalogIndex>(API_INDEX);
+  if (apiIndex) return apiIndex;
   return loadStaticCatalogIndex();
 }
 
+/** Approved catalog total — homepage / marketing counts. */
+export async function fetchCuratedRecipeTotal(): Promise<number> {
+  return fetchApprovedCatalogTotal();
+}
+
 export async function fetchGoldenRecipePage(slug: string): Promise<GoldenRecipePage> {
-  try {
-    const res = await fetch(API_PAGE(slug));
-    if (res.ok) return res.json();
-    if (res.status !== 404) throw new Error(`Recipe ${res.status}`);
-  } catch (e) {
-    if (e instanceof Error && !e.message.includes("404")) {
-      /* try static */
-    }
+  const normalized = slug.trim().toLowerCase();
+  const pizzaNightFirst = isPizzaNightSlug(normalized);
+
+  const candidates = pizzaNightFirst
+    ? [
+        pizzaNightPageJsonPath(normalized),
+        API_PAGE(normalized),
+        goldenPageJsonPath(normalized),
+        performancePageJsonPath(normalized),
+        hallExpansionCatalogPagePath(normalized),
+      ]
+    : [
+        API_PAGE(normalized),
+        goldenPageJsonPath(normalized),
+        pizzaNightPageJsonPath(normalized),
+        performancePageJsonPath(normalized),
+        hallExpansionCatalogPagePath(normalized),
+      ];
+
+  for (const url of candidates) {
+    const page = await fetchJsonResource<GoldenRecipePage>(url);
+    if (page?.slug && page.title) return page;
   }
-  let res = await fetch(goldenPageJsonPath(slug));
-  if (res.ok) return res.json();
-  res = await fetch(performancePageJsonPath(slug));
-  if (!res.ok) throw new Error("Recipe not found");
-  return res.json();
+
+  throw new Error("Recipe not found");
 }

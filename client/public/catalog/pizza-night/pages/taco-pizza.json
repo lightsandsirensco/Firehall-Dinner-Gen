@@ -1,0 +1,214 @@
+{
+  "slug": "taco-pizza",
+  "title": "Taco Pizza",
+  "displayTitle": "Taco Pizza",
+  "seoTitle": "Taco Pizza | Firefighter Meal",
+  "shortDescription": "Seasoned beef, lettuce, chips on top",
+  "subtitle": "Seasoned beef, lettuce, chips on top",
+  "category": "pizza_night",
+  "cuisine": "american",
+  "description": "Seasoned beef, lettuce, chips on top. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 80,
+  "prepTime": 30,
+  "difficulty": "medium",
+  "calories": 1159,
+  "protein": 72,
+  "carbs": 50,
+  "fats": 75,
+  "tags": [
+    "protein:beef",
+    "format:pizza",
+    "category:pizza_night",
+    "handheld",
+    "game_day",
+    "golden_100"
+  ],
+  "equipment": [
+    "Pizza stone or steel",
+    "Peel or inverted sheet pan",
+    "Large sheet trays",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "ingredients": [
+    {
+      "name": "Pizza dough balls (15 oz)",
+      "quantity": "4",
+      "unit": "count",
+      "group": "Crust"
+    },
+    {
+      "name": "Ground beef (80/20)",
+      "quantity": "2.5",
+      "unit": "lb",
+      "group": "Main"
+    },
+    {
+      "name": "Taco seasoning",
+      "quantity": "4",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Refried beans, warmed",
+      "quantity": "2",
+      "unit": "cans",
+      "group": "Base"
+    },
+    {
+      "name": "Low-moisture mozzarella, shredded",
+      "quantity": "20",
+      "unit": "oz",
+      "group": "Cheese"
+    },
+    {
+      "name": "Cheddar, shredded",
+      "quantity": "8",
+      "unit": "oz",
+      "group": "Cheese"
+    },
+    {
+      "name": "Pico de gallo",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Finish"
+    },
+    {
+      "name": "Shredded iceberg lettuce",
+      "quantity": "4",
+      "unit": "cups",
+      "group": "Finish"
+    },
+    {
+      "name": "Crushed tortilla chips",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Finish"
+    },
+    {
+      "name": "Sour cream",
+      "quantity": "1.5",
+      "unit": "cups",
+      "group": "Finish"
+    },
+    {
+      "name": "Pickled jalapeños",
+      "quantity": "1",
+      "unit": "cup",
+      "group": "Topping"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Brown taco meat",
+      "instruction": "Brown ground beef over medium-high, breaking into fine crumbles. Drain grease. Stir in taco seasoning and ½ cup water; simmer 5 minutes until thick and glossy. Taste for salt.",
+      "minutes": 15,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat stone to 475°F",
+      "instruction": "Heat stone or steel at 475°F at least 35 minutes. Warm refried beans gently so they spread — cold beans tear the dough.",
+      "minutes": 35,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Stretch and thin bean layer",
+      "instruction": "Stretch four 12–14 inch rounds. Spread a thin layer of refried beans instead of pizza sauce. Beans are thick; use the back of a spoon in an even smear.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Cheese, meat, jalapeños",
+      "instruction": "Layer mozzarella, cheddar, seasoned beef, and pickled jalapeños. Save lettuce, pico, chips, and sour cream for after the bake — they go limp or soggy if baked.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Bake until cheese browns at edges",
+      "instruction": "Bake 11–14 minutes until cheese is fully melted and crust is crisp. Taco Pizza should cut clean; if beans squeeze out, you spread too thick.",
+      "minutes": 13,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Cold toppings and cut",
+      "instruction": "Rest 2 minutes. Top with lettuce, pico, crushed chips, and sour cream in stripes. Cut 8 slices per pie and serve immediately — this pie does not hold well on a steam table.",
+      "minutes": 5,
+      "heatLevel": "low"
+    }
+  ],
+  "proTips": [
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
+    "Taste for salt at the end — hall palates run salty after long shifts."
+  ],
+  "tonightSpread": [
+    "Cut pies into hall slices (8 per pie minimum) and fan on sheet trays.",
+    "Keep a fresh pie warming in the oven — pizza dies fast on the counter.",
+    "Line up Taco Pizza on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+  ],
+  "leftovers": [
+    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
+    "Label trays with date and reheat to 165°F minimum before second shift."
+  ],
+  "whyCrewsLikeIt": "Seasoned beef, lettuce, chips on top. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
+  "substitutions": [],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 1159,
+    "protein": 72,
+    "carbs": 50,
+    "fats": 75,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "heroImage": "/images/golden-100/taco-pizza.jpg",
+  "mobileImage": "/images/mobile/taco-pizza.jpg",
+  "thumbImage": "/images/thumbs/taco-pizza.jpg",
+  "railImage": "/images/rails/taco-pizza.jpg",
+  "realismScore": 95,
+  "firefighterScore": 98,
+  "popularityWeight": 3.2,
+  "searchTerms": [
+    "taco pizza",
+    "american",
+    "beef",
+    "pizza",
+    "handheld",
+    "game day",
+    "taco pizza ground beef",
+    "game_day",
+    "golden_100"
+  ],
+  "relatedSlugs": [
+    "philly-cheesesteak-pizza",
+    "smoked-brisket-bbq-pizza",
+    "buffalo-chicken-pizza",
+    "jalapeno-popper-pizza",
+    "bbq-chicken-pizza",
+    "breakfast-sausage-pizza"
+  ],
+  "generatedAt": "2026-05-30T03:45:01.620Z",
+  "contentVersion": 2
+}

@@ -30,7 +30,8 @@ export type RecipeInstructionClass =
   | "dip"
   | "one_pot"
   | "roast"
-  | "salad";
+  | "salad"
+  | "bar";
 
 const SLUG_CLASS: Partial<Record<string, RecipeInstructionClass>> = {
   "smoked-wings-white-sauce": "wings_smoke",
@@ -65,7 +66,10 @@ const SLUG_CLASS: Partial<Record<string, RecipeInstructionClass>> = {
   "buffalo-chicken-dip": "dip",
   "pancake-short-stack": "breakfast",
   "biscuits-gravy": "breakfast",
-  "breakfast-burrito-bar": "breakfast",
+  "loaded-baked-potato-bar": "bar",
+  "loaded-potato-feed": "bar",
+  "game-day-nachos": "bar",
+  "loaded-nacho-skillet": "bar",
   "chorizo-breakfast-tacos": "breakfast",
   "herb-roasted-thighs": "roast",
   "chicken-caesar": "salad",
@@ -98,6 +102,7 @@ export function inferRecipeInstructionClass(def: GoldenRecipeDefinition): Recipe
   if (def.mealFormat === "salad") return "salad";
   if (def.mealFormat === "roast") return "roast";
   if (/\bdip\b/.test(title)) return "dip";
+  if (/\bbar\b/.test(title) || /\bpotato feed\b/.test(title) || /\bnachos\b/.test(title)) return "bar";
   if (def.protein === "seafood" && def.mealFormat === "grill") return "salmon_grill";
   if (def.protein === "vegetarian" && def.mealFormat === "grill") return "veg_grill";
   if (def.protein === "beef" && def.mealFormat === "grill") return "steak_grill";
@@ -123,6 +128,8 @@ export const BANNED_STEP_TITLES = new Set([
   "prep the line",
   "sear and simmer",
   "serve the hall",
+  "sear protein and veg",
+  "assembly line",
 ]);
 
 export function usesGenericGrillTemplate(

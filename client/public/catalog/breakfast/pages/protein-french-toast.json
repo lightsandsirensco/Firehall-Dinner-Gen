@@ -1,0 +1,146 @@
+{
+  "slug": "protein-french-toast",
+  "title": "Protein French Toast",
+  "subtitle": "Cottage cheese and egg batter for a high-protein griddle classic.",
+  "description": "Blended cottage cheese in the custard adds protein without chalky protein powder. Thick-cut bread soaks briefly, griddles to a crisp shell, and serves with berries and maple for a crew that wants comfort food with staying power.",
+  "filters": [
+    "high_protein",
+    "healthy_breakfasts",
+    "feed_a_crew"
+  ],
+  "tags": [
+    "french-toast",
+    "cottage-cheese",
+    "griddle",
+    "berries",
+    "maple"
+  ],
+  "crewSize": 8,
+  "baseServings": 8,
+  "prepTime": 15,
+  "cookTime": 20,
+  "totalTime": 35,
+  "difficulty": "easy",
+  "ingredients": [
+    {
+      "name": "large eggs",
+      "quantity": "12",
+      "group": "Batter"
+    },
+    {
+      "name": "cottage cheese",
+      "quantity": "2 cups",
+      "notes": "blended smooth",
+      "group": "Batter"
+    },
+    {
+      "name": "whole milk",
+      "quantity": "1 cup",
+      "notes": "plus 1 tsp vanilla and pinch of cinnamon",
+      "group": "Batter"
+    },
+    {
+      "name": "maple syrup",
+      "quantity": "2 tbsp",
+      "notes": "in batter, more for serving",
+      "group": "Batter"
+    },
+    {
+      "name": "thick-cut bread slices",
+      "quantity": "16",
+      "notes": "brioche or Texas toast",
+      "group": "Bread"
+    },
+    {
+      "name": "butter",
+      "quantity": "3 tbsp",
+      "notes": "for griddling in batches",
+      "group": "Cook"
+    },
+    {
+      "name": "mixed berries",
+      "quantity": "2 cups",
+      "notes": "fresh or thawed and drained",
+      "group": "Serve"
+    },
+    {
+      "name": "Greek yogurt",
+      "quantity": "1/2 cup",
+      "notes": "optional dollop at the line",
+      "group": "Serve"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Blend the batter",
+      "instruction": "Blend cottage cheese, eggs, milk, vanilla, cinnamon, and maple until completely smooth—no curds. Pour into a shallow hotel pan for fast dipping.",
+      "minutes": 5
+    },
+    {
+      "stepNumber": 2,
+      "title": "Heat the griddle",
+      "instruction": "Heat a large griddle or cast iron over medium. Add butter until foaming but not brown. Work in batches so slices aren't crowded.",
+      "minutes": 3
+    },
+    {
+      "stepNumber": 3,
+      "title": "Soak and griddle",
+      "instruction": "Dip bread 3–4 seconds per side—don't oversaturate or centers stay raw. Griddle 3 minutes per side until deep golden and custard sets; adjust heat if browning too fast.",
+      "minutes": 15
+    },
+    {
+      "stepNumber": 4,
+      "title": "Hold warm",
+      "instruction": "Transfer finished slices to a wire rack on a sheet pan in a 200°F oven. Uncovered keeps the crust; cover only if holding longer than 20 minutes.",
+      "minutes": 0
+    },
+    {
+      "stepNumber": 5,
+      "title": "Plate and serve",
+      "instruction": "Stack two slices per plate, top with berries and a drizzle of maple. Offer Greek yogurt for extra protein without slowing the line.",
+      "minutes": 5
+    }
+  ],
+  "nutrition": {
+    "calories": 430,
+    "protein": 24,
+    "carbs": 43,
+    "fat": 18,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": false
+    }
+  },
+  "stationWorkflow": [
+    "Blend batter first and keep the dip pan shallow so slices don't over-soak during rush assembly.",
+    "One cook griddles while another plates berries and maple—sync batches to two slices per firefighter.",
+    "Use a wire rack for holding; stacking hot French toast steams the crust soft before service."
+  ],
+  "cleanupNotes": [
+    "Rinse the blender immediately with warm water before cottage cheese dries on the blade assembly.",
+    "Scrape the griddle while warm with a bench scraper, then wipe with a butter-damp towel."
+  ],
+  "leftovers": [
+    "Reheat slices on a sheet pan at 325°F for 8 minutes directly on the rack for a crisp re-crisp.",
+    "Chop cold slices into a bread pudding base with extra eggs, milk, and raisins for tomorrow's bake."
+  ],
+  "heroImage": "/images/breakfast/protein-french-toast.jpg",
+  "thumbImage": "/images/thumbs/breakfast/protein-french-toast.jpg",
+  "imageAlt": "Golden protein French toast stacks with fresh berries and maple drizzle",
+  "publishedAt": "2026-05-30T03:14:16.260Z",
+  "updatedAt": "2026-05-30T03:14:16.260Z",
+  "readMinutes": 7,
+  "seoTitle": "Protein French Toast | Firehall Breakfast"
+}

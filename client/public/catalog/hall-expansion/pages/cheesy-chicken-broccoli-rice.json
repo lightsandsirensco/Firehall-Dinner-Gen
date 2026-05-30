@@ -1,0 +1,185 @@
+{
+  "slug": "cheesy-chicken-broccoli-rice",
+  "title": "Cheesy Chicken Broccoli Rice",
+  "displayTitle": "Cheesy Chicken Broccoli Rice",
+  "seoTitle": "Cheesy Chicken Broccoli Rice | Firefighter Meal",
+  "shortDescription": "One-pot cheddar chicken and rice for ten",
+  "subtitle": "One-pot cheddar chicken and rice for ten",
+  "category": "hall_expansion",
+  "cuisine": "american",
+  "description": "Chicken breast cubes cook with rice and broccoli in one pot, then finish with sharp cheddar until creamy and cohesive. Simple seasoning, big portions, minimal dishes.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 35,
+  "prepTime": 15,
+  "difficulty": "easy",
+  "calories": 460,
+  "protein": 38,
+  "carbs": 48,
+  "fats": 14,
+  "tags": [
+    "protein:chicken",
+    "format:one_pot",
+    "category:crew_feeders",
+    "one_pot",
+    "comfort",
+    "chicken",
+    "hall_expansion",
+    "hall_expansion_56",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Large pot with tight lid",
+    "Instant-read thermometer",
+    "Wooden spoon",
+    "Chef knife",
+    "Measuring cups"
+  ],
+  "ingredients": [
+    {
+      "name": "boneless chicken breast",
+      "quantity": "3",
+      "unit": "lb",
+      "notes": "cubed",
+      "group": "Main"
+    },
+    {
+      "name": "long-grain white rice",
+      "quantity": "3",
+      "unit": "cups",
+      "group": "Main"
+    },
+    {
+      "name": "broccoli florets",
+      "quantity": "2",
+      "unit": "lb",
+      "group": "Vegetables"
+    },
+    {
+      "name": "chicken broth",
+      "quantity": "5.5",
+      "unit": "cups",
+      "group": "Liquid"
+    },
+    {
+      "name": "sharp cheddar cheese",
+      "quantity": "2",
+      "unit": "cups",
+      "notes": "shredded",
+      "group": "Cheese"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "1",
+      "unit": "whole",
+      "notes": "diced",
+      "group": "Aromatics"
+    },
+    {
+      "name": "garlic powder",
+      "quantity": "1",
+      "unit": "tsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "onion powder",
+      "quantity": "1",
+      "unit": "tsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "unsalted butter",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Finish"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "2",
+      "unit": "tsp",
+      "group": "Seasoning"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Sear the chicken",
+      "instruction": "Season cubed chicken with salt, garlic powder, and onion powder. Sear in butter 4–5 minutes until lightly golden—not fully cooked through.",
+      "minutes": 6,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Add rice and broth",
+      "instruction": "Stir in rice and onion, toast 1 minute, then pour in broth. Bring to boil, cover, reduce to low simmer.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Simmer covered",
+      "instruction": "Cook covered 18 minutes without lifting lid until rice absorbs liquid and chicken reaches 165°F internal. Target oven/smoker temperature: 165°F.",
+      "minutes": 18,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Steam the broccoli",
+      "instruction": "Nestle broccoli on top, cover, and cook 8 more minutes until broccoli tender and rice fluffy.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Finish with cheese",
+      "instruction": "Remove from heat, stir in cheddar and remaining butter until melted and creamy. Rest 5 minutes before serving.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Rotisserie chicken shredded in at the end skips the sear step on busy nights.",
+    "A teaspoon of mustard powder in the cheese adds depth without tasting like mustard.",
+    "Hot sauce on the table beats cooking spice into the whole pot."
+  ],
+  "tonightSpread": [
+    "One-pot scoops with dinner rolls and simple mixed greens.",
+    "Extra shredded cheese at the line for crew who want it cheesier."
+  ],
+  "leftovers": [
+    "Reheat with splash of broth in a covered pan on low.",
+    "Press cold leftovers into patties and pan-fry for crispy rice cakes."
+  ],
+  "whyCrewsLikeIt": "Every hall has a version of this dish because it works. One pot, familiar flavors, and even rookies can follow the steps without burning the house down.",
+  "mealPrepNotes": "Cut chicken uniform so it cooks with the rice. Add broccoli in the last 8 minutes so it stays green. Stir cheese off heat for smoothest melt.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 460,
+    "protein": 38,
+    "carbs": 48,
+    "fats": 14,
+    "label": "~460 cal/serving · 38g protein · 4g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/cheesy-chicken-broccoli-rice.jpg",
+  "heroImageAlt": "Cheesy Chicken Broccoli Rice — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/cheesy-chicken-broccoli-rice.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/cheesy-chicken-broccoli-rice.jpg",
+  "railImage": "/images/rails/hall-expansion/cheesy-chicken-broccoli-rice.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "cheesy chicken broccoli rice",
+    "crew feeders"
+  ],
+  "relatedSlugs": [
+    "shawarma-bar-night",
+    "fajita-bar-night",
+    "hall-burger-bar",
+    "pasta-bar-night"
+  ],
+  "generatedAt": "2026-05-30T03:14:19.188Z",
+  "contentVersion": 2
+}

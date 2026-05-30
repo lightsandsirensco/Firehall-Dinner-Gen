@@ -1,0 +1,184 @@
+{
+  "slug": "creamy-chicken-penne-alfredo",
+  "title": "Creamy Chicken Penne Alfredo",
+  "displayTitle": "Creamy Chicken Penne Alfredo",
+  "seoTitle": "Creamy Chicken Penne Alfredo | Firefighter Meal",
+  "shortDescription": "Grilled chicken strips in garlic-Parmesan cream sauce for ten",
+  "subtitle": "Grilled chicken strips in garlic-Parmesan cream sauce for ten",
+  "category": "hall_expansion",
+  "cuisine": "italian",
+  "description": "Chicken breasts season and sear, then slice into strips. Penne tosses with a stabilized garlic-Parmesan cream sauce and finishes with parsley and cracked pepper.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 30,
+  "prepTime": 25,
+  "difficulty": "medium",
+  "calories": 560,
+  "protein": 42,
+  "carbs": 50,
+  "fats": 24,
+  "tags": [
+    "protein:chicken",
+    "format:pasta",
+    "category:crew_feeders",
+    "pasta",
+    "chicken",
+    "comfort",
+    "hall_expansion",
+    "hall_expansion_56",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Stock pot",
+    "Large sauté pan",
+    "Instant-read thermometer",
+    "Whisk",
+    "Tongs"
+  ],
+  "ingredients": [
+    {
+      "name": "penne pasta",
+      "quantity": "2",
+      "unit": "lb",
+      "group": "Main"
+    },
+    {
+      "name": "chicken breast",
+      "quantity": "3",
+      "unit": "lb",
+      "group": "Main"
+    },
+    {
+      "name": "heavy cream",
+      "quantity": "4",
+      "unit": "cups",
+      "group": "Sauce"
+    },
+    {
+      "name": "unsalted butter",
+      "quantity": "6",
+      "unit": "tbsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "6",
+      "unit": "cloves",
+      "notes": "minced",
+      "group": "Sauce"
+    },
+    {
+      "name": "grated Parmesan",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Sauce"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Chicken"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "2",
+      "unit": "tsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "black pepper",
+      "quantity": "1",
+      "unit": "tsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "fresh parsley",
+      "quantity": "0.33",
+      "unit": "cup",
+      "notes": "chopped",
+      "group": "Finish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Cook the penne",
+      "instruction": "Boil penne in salted water until al dente, about 10 minutes. Reserve 2 cups pasta water before draining.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Sear the chicken",
+      "instruction": "Season chicken with salt and pepper. Sear in olive oil over medium-high heat 6–7 minutes per side until internal temp reaches 165°F. Rest 5 minutes and slice. Target oven/smoker temperature: 165°F.",
+      "minutes": 20,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Build the sauce",
+      "instruction": "Melt butter in a large pot, sauté garlic 1 minute. Pour in warmed cream and simmer gently 3 minutes—do not boil hard.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Finish the sauce",
+      "instruction": "Whisk in Parmesan until melted and smooth. Thin with pasta water if too thick. Season with pepper.",
+      "minutes": 3,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Toss and serve",
+      "instruction": "Add penne and sliced chicken to sauce off heat. Toss until coated. Garnish with parsley and serve immediately or hold warm.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Nutmeg pinch in cream sauce adds depth without changing the classic profile.",
+    "Broccoli florets blanched and folded in at the end makes this a full plate.",
+    "If sauce tightens on hold, loosen with reserved pasta water, not more cream."
+  ],
+  "tonightSpread": [
+    "Alfredo with garlic bread and a simple mixed green salad.",
+    "Extra cracked black pepper and Parmesan at the line."
+  ],
+  "leftovers": [
+    "Reheat gently with pasta water in a covered pan on low heat.",
+    "Bake leftovers in a dish topped with mozzarella for quick alfredo bake."
+  ],
+  "whyCrewsLikeIt": "Alfredo night feels like a treat without leaving the hall. Chicken adds protein crews expect, and the sauce stays silky when held properly in a warm pan.",
+  "mealPrepNotes": "Warm cream before adding to the pan to reduce curdling risk. Reserve pasta water—it saves a broken sauce. Slice chicken after resting so juices stay in the meat.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 560,
+    "protein": 42,
+    "carbs": 50,
+    "fats": 24,
+    "label": "~560 cal/serving · 42g protein · 3g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/creamy-chicken-penne-alfredo.jpg",
+  "heroImageAlt": "Creamy Chicken Penne Alfredo — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/creamy-chicken-penne-alfredo.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/creamy-chicken-penne-alfredo.jpg",
+  "railImage": "/images/rails/hall-expansion/creamy-chicken-penne-alfredo.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "creamy chicken penne alfredo",
+    "crew feeders"
+  ],
+  "relatedSlugs": [
+    "shawarma-bar-night",
+    "fajita-bar-night",
+    "hall-burger-bar",
+    "pasta-bar-night"
+  ],
+  "generatedAt": "2026-05-30T03:14:19.188Z",
+  "contentVersion": 2
+}

@@ -209,7 +209,7 @@ export function DinnerWheel({ disabled, catalog, onLanded, onSpinStart }: Dinner
             />
           ))}
 
-          {/* Labels */}
+          {/* Labels — emojis only while spinning; text abbreviations when idle */}
           {DINNER_WHEEL_SLICES.map((slice, i) => {
             const angleDeg = i * SEGMENT_ANGLE + SEGMENT_ANGLE / 2 - 90;
             const angleRad = (angleDeg * Math.PI) / 180;
@@ -227,7 +227,18 @@ export function DinnerWheel({ disabled, catalog, onLanded, onSpinStart }: Dinner
                   width: "28%",
                 }}
               >
-                <span className="text-lg leading-none mb-0.5">{slice.emoji}</span>
+                {spinning ? (
+                  <span className="text-lg leading-none mb-0.5" aria-hidden>
+                    {slice.emoji}
+                  </span>
+                ) : (
+                  <span
+                    className="mb-1 flex h-7 w-7 items-center justify-center rounded-full bg-black/35 ring-1 ring-white/25 text-[10px] font-bold uppercase tracking-wide text-white/95"
+                    aria-hidden
+                  >
+                    {slice.label.slice(0, 2)}
+                  </span>
+                )}
                 <span className="text-[9px] sm:text-[10px] font-semibold uppercase tracking-wide leading-tight drop-shadow-md text-white/95">
                   {slice.label}
                 </span>

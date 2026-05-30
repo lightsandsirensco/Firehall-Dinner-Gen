@@ -1,0 +1,186 @@
+{
+  "slug": "hall-burger-bar",
+  "title": "Hall Burger Bar",
+  "displayTitle": "Hall Burger Bar",
+  "seoTitle": "Hall Burger Bar | Firefighter Meal",
+  "shortDescription": "Smash burgers with toppings bar for ten",
+  "subtitle": "Smash burgers with toppings bar for ten",
+  "category": "hall_expansion",
+  "cuisine": "american",
+  "description": "Beef balls are smashed on a hot griddle into thin crispy patties, then served with toasted buns and a full toppings bar—lettuce, tomato, onion, pickles, bacon, and multiple cheeses. Crew assembles at the line.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 20,
+  "prepTime": 25,
+  "difficulty": "easy",
+  "calories": 620,
+  "protein": 34,
+  "carbs": 36,
+  "fats": 38,
+  "tags": [
+    "protein:beef",
+    "format:bar_line",
+    "category:crew_feeders",
+    "bar_line",
+    "beef",
+    "handheld",
+    "hall_expansion",
+    "hall_expansion_56",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Griddle or cast-iron skillet",
+    "Sturdy spatula",
+    "Hotel pans",
+    "Wire rack",
+    "Instant-read thermometer"
+  ],
+  "ingredients": [
+    {
+      "name": "ground beef (80/20)",
+      "quantity": "3",
+      "unit": "lb",
+      "group": "Main"
+    },
+    {
+      "name": "burger buns",
+      "quantity": "12",
+      "unit": "whole",
+      "notes": "extra for doubles",
+      "group": "Bar"
+    },
+    {
+      "name": "American cheese",
+      "quantity": "12",
+      "unit": "slices",
+      "group": "Bar"
+    },
+    {
+      "name": "bacon",
+      "quantity": "1.5",
+      "unit": "lb",
+      "group": "Bar"
+    },
+    {
+      "name": "iceberg lettuce",
+      "quantity": "1",
+      "unit": "head",
+      "notes": "shredded",
+      "group": "Bar"
+    },
+    {
+      "name": "beefsteak tomatoes",
+      "quantity": "4",
+      "unit": "whole",
+      "notes": "sliced",
+      "group": "Bar"
+    },
+    {
+      "name": "red onion",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "sliced",
+      "group": "Bar"
+    },
+    {
+      "name": "dill pickle chips",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Bar"
+    },
+    {
+      "name": "ketchup and mustard",
+      "quantity": "1",
+      "unit": "cup each",
+      "group": "Bar"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Prep toppings and bacon",
+      "instruction": "Cook bacon on a wire rack at 400°F until crisp, about 18 minutes. Slice and arrange all burger bar toppings in labeled hotel pans while bacon cooks. Target oven/smoker temperature: 400°F.",
+      "minutes": 20,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Form beef balls",
+      "instruction": "Divide beef into loose 3-ounce balls without compacting—tight balls resist smashing and cook unevenly. Season the griddle surface lightly with salt.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Smash and sear patties",
+      "instruction": "Heat griddle ripping hot. Place balls on surface, smash flat with a sturdy spatula within 10 seconds, and sear 2 minutes until deep brown crust forms on the bottom.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Flip, cheese, and finish",
+      "instruction": "Scrape and flip patties, add cheese, and cook 1 minute until cheese melts and internal temp reaches 160°F. Toast buns on the griddle during the last minute.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Open the burger bar",
+      "instruction": "Transfer patties to a warm holding pan. Line up buns, patties, bacon, cheeses, and toppings. Call crew to build custom burgers while patties are still hot.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Use parchment over the patty when smashing if your spatula sticks to raw beef.",
+    "One slice of cheese on the patty plus one on the bun top doubles melt coverage.",
+    "Keep a sheet pan under the griddle edge to catch grease and simplify cleanup."
+  ],
+  "tonightSpread": [
+    "Smash burger bar with bacon, cheese, and full condiment station.",
+    "Oven fries or tater tots seasoned with ranch powder for classic diner vibes."
+  ],
+  "leftovers": [
+    "Chop patties into a cheeseburger mac bake with pasta and cheddar.",
+    "Crumble cold patties over salad for a hearty lunch bowl."
+  ],
+  "whyCrewsLikeIt": "Burger bar night is democratic—pickles but no onions, double bacon, triple cheese, all acceptable. Smash technique delivers diner-quality crust in minutes on a flat-top or cast-iron.",
+  "mealPrepNotes": "Form loose 3-ounce beef balls ahead and refrigerate on a sheet pan. Pre-slice all toppings into hotel pans. Cook bacon in the oven on racks while burgers smash on the griddle.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 620,
+    "protein": 34,
+    "carbs": 36,
+    "fats": 38,
+    "label": "~620 cal/serving · 34g protein · 2g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/hall-burger-bar.jpg",
+  "heroImageAlt": "Hall Burger Bar — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/hall-burger-bar.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/hall-burger-bar.jpg",
+  "railImage": "/images/rails/hall-expansion/hall-burger-bar.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "hall burger bar",
+    "crew feeders"
+  ],
+  "relatedSlugs": [
+    "shawarma-bar-night",
+    "fajita-bar-night",
+    "pasta-bar-night",
+    "rice-bowl-bar-night"
+  ],
+  "generatedAt": "2026-05-30T03:14:19.188Z",
+  "contentVersion": 2
+}

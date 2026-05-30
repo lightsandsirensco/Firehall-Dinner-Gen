@@ -2,9 +2,11 @@ import { useMemo } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { SiteHeader } from "@/components/site-header";
 import { useHomeSeo } from "@/lib/seo/use-home-seo";
-import { fetchGoldenCatalogIndex } from "@/lib/golden-recipe-api";
+import { fetchCuratedRecipeTotal, fetchGoldenCatalogIndex } from "@/lib/golden-recipe-api";
+import { APPROVED_CATALOG_TOTAL } from "@shared/meal-catalog/curated-count";
 import type { GoldenCatalogIndexEntry } from "@shared/golden-100/recipe-page-schema";
 import { HomeHero } from "@/components/home/home-hero";
+import { HomeSeoIntro } from "@/components/home/home-seo-intro";
 import { HomeTrustStrip } from "@/components/home/home-trust-strip";
 import { HomeHowItWorks } from "@/components/home/home-how-it-works";
 import { HomeFeaturedMeals } from "@/components/home/home-featured-meals";
@@ -32,7 +34,12 @@ export default function Home() {
     staleTime: 120_000,
   });
 
-  const recipeCount = catalog?.recipeCount ?? 150;
+  const { data: recipeCount = APPROVED_CATALOG_TOTAL } = useQuery({
+    queryKey: ["curated-recipe-total-home"],
+    queryFn: fetchCuratedRecipeTotal,
+    staleTime: 120_000,
+  });
+
   useHomeSeo(recipeCount);
 
   const featured = useMemo(
@@ -44,7 +51,8 @@ export default function Home() {
     <div className="home-page page-shell min-h-screen min-h-[100dvh] bg-background overflow-x-hidden">
       <SiteHeader activePage="home" />
 
-      <HomeHero />
+      <HomeHero recipeCount={recipeCount} />
+      <HomeSeoIntro recipeCount={recipeCount} />
 
       <main>
         <HomeLightsAuthenticity />

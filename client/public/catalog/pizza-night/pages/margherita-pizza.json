@@ -1,0 +1,216 @@
+{
+  "slug": "margherita-pizza",
+  "title": "Fresh Margherita Pizza",
+  "displayTitle": "Fresh Margherita Pizza",
+  "seoTitle": "Fresh Margherita Pizza | Firefighter Meal",
+  "shortDescription": "Basil, mozzarella, blistered crust",
+  "subtitle": "Basil, mozzarella, blistered crust",
+  "category": "pizza_night",
+  "cuisine": "italian",
+  "description": "Basil, mozzarella, blistered crust. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 90,
+  "prepTime": 30,
+  "difficulty": "medium",
+  "calories": 945,
+  "protein": 39,
+  "carbs": 80,
+  "fats": 52,
+  "tags": [
+    "protein:vegetarian",
+    "format:pizza",
+    "category:pizza_night",
+    "handheld",
+    "golden_100"
+  ],
+  "equipment": [
+    "Pizza stone or steel",
+    "Peel or inverted sheet pan",
+    "Large sheet trays",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "ingredients": [
+    {
+      "name": "Bread flour",
+      "quantity": "6",
+      "unit": "cups",
+      "group": "Dough"
+    },
+    {
+      "name": "Active dry yeast",
+      "quantity": "2.5",
+      "unit": "tsp",
+      "group": "Dough"
+    },
+    {
+      "name": "Warm water",
+      "quantity": "2",
+      "unit": "cups",
+      "notes": "110°F",
+      "group": "Dough"
+    },
+    {
+      "name": "Olive oil",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Dough"
+    },
+    {
+      "name": "Kosher salt",
+      "quantity": "2",
+      "unit": "tsp",
+      "group": "Dough"
+    },
+    {
+      "name": "San Marzano crushed tomatoes",
+      "quantity": "2",
+      "unit": "cans",
+      "notes": "28 oz",
+      "group": "Sauce"
+    },
+    {
+      "name": "Garlic cloves, smashed",
+      "quantity": "3",
+      "unit": "cloves",
+      "group": "Sauce"
+    },
+    {
+      "name": "Fresh mozzarella, sliced",
+      "quantity": "32",
+      "unit": "oz",
+      "group": "Cheese"
+    },
+    {
+      "name": "Fresh basil leaves",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Finish"
+    },
+    {
+      "name": "Extra-virgin olive oil",
+      "quantity": "0.3",
+      "unit": "cup",
+      "group": "Finish"
+    },
+    {
+      "name": "Flaky sea salt",
+      "quantity": "1",
+      "unit": "tsp",
+      "group": "Finish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Proof dough for blistered crust",
+      "instruction": "Bloom yeast in warm water 5 minutes. Mix flour, salt, oil, and yeast water; knead 8–10 minutes until smooth. Rise 1–1½ hours until doubled. Margherita needs relaxed gluten for leopard spotting on the rim.",
+      "minutes": 90,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Make quick tomato sauce",
+      "instruction": "Simmer crushed tomatoes with smashed garlic 12 minutes until slightly thickened. Season lightly with salt — fresh mozzarella brings salt too. Cool briefly; hot sauce melts dough.",
+      "minutes": 12,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Heat stone to maximum practical temp",
+      "instruction": "Preheat stone or steel at 500°F at least 45 minutes. Drain mozzarella on paper towels and slice evenly — wet cheese makes a soggy center.",
+      "minutes": 45,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Stretch, light sauce, mozzarella only",
+      "instruction": "Stretch dough to 12–14 inch rounds. Sauce sparingly — red should peek through cheese. Arrange mozzarella slices in one layer with slight overlap. No toppings yet; basil goes on after the bake.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Bake for leopard spots",
+      "instruction": "Bake 9–12 minutes until crust is spotted brown and cheese has melted with a few golden blisters. Rotate once. Underbaked Margherita tastes like cheese on raw bread — look for color on the underside.",
+      "minutes": 11,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Basil, olive oil, rest, and cut",
+      "instruction": "Immediately scatter whole basil leaves and drizzle olive oil. Finish with flaky salt. Rest 2 minutes, cut into 8 slices. Fresh Margherita Pizza — tomato, mozzarella, basil. Serve fast; basil wilts on a hot hold.",
+      "minutes": 5,
+      "heatLevel": "low"
+    }
+  ],
+  "proTips": [
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
+    "Taste for salt at the end — hall palates run salty after long shifts."
+  ],
+  "tonightSpread": [
+    "Cut pies into hall slices (8 per pie minimum) and fan on sheet trays.",
+    "Keep a fresh pie warming in the oven — pizza dies fast on the counter.",
+    "Line up Fresh Margherita Pizza on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+  ],
+  "leftovers": [
+    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
+    "Label trays with date and reheat to 165°F minimum before second shift."
+  ],
+  "whyCrewsLikeIt": "Basil, mozzarella, blistered crust. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
+  "substitutions": [],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 945,
+    "protein": 39,
+    "carbs": 80,
+    "fats": 52,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "heroImage": "/images/golden-100/margherita-pizza.jpg",
+  "mobileImage": "/images/mobile/margherita-pizza.jpg",
+  "thumbImage": "/images/thumbs/margherita-pizza.jpg",
+  "railImage": "/images/rails/margherita-pizza.jpg",
+  "realismScore": 100,
+  "firefighterScore": 98,
+  "popularityWeight": 3.2,
+  "searchTerms": [
+    "fresh margherita pizza",
+    "margherita pizza",
+    "italian",
+    "vegetarian",
+    "pizza",
+    "handheld",
+    "margherita pizza fresh mozzarella",
+    "golden_100"
+  ],
+  "relatedSlugs": [
+    "four-cheese-white-pizza",
+    "veggie-supreme-pizza",
+    "honey-soppressata-pizza",
+    "pepperoni-pizza-night",
+    "pesto-chicken-pizza",
+    "sicilian-sheet-pizza"
+  ],
+  "sourceName": "Firehall Meals",
+  "sourceUrl": "",
+  "generatedAt": "2026-05-30T03:45:01.601Z",
+  "contentVersion": 2
+}

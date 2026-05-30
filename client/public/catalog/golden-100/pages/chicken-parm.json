@@ -10,13 +10,13 @@
   "description": "Italian night at the station. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
   "baseServings": 8,
-  "cookTime": 60,
-  "prepTime": 25,
+  "cookTime": 95,
+  "prepTime": 35,
   "difficulty": "medium",
-  "calories": 640,
-  "protein": 44,
-  "carbs": 52,
-  "fats": 26,
+  "calories": 1400,
+  "protein": 120,
+  "carbs": 156,
+  "fats": 63,
   "tags": [
     "protein:chicken",
     "format:pasta",
@@ -27,109 +27,155 @@
   ],
   "equipment": [
     "8-quart stock pot",
+    "Large skillets for frying",
+    "Wire cooling racks",
+    "Hotel pans for baking",
     "Large sheet trays",
     "Instant-read thermometer",
     "Aluminum foil"
   ],
   "ingredients": [
     {
-      "name": "Dried pasta",
+      "name": "Boneless chicken breasts, pounded ½ inch",
+      "quantity": "4",
+      "unit": "lb",
+      "group": "Main"
+    },
+    {
+      "name": "All-purpose flour",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Breading"
+    },
+    {
+      "name": "Large eggs, beaten",
+      "quantity": "4",
+      "unit": "count",
+      "group": "Breading"
+    },
+    {
+      "name": "Italian seasoned breadcrumbs",
+      "quantity": "3",
+      "unit": "cups",
+      "group": "Breading"
+    },
+    {
+      "name": "Grated parmesan cheese",
       "quantity": "1.5",
-      "unit": "lb",
-      "group": "Main"
+      "unit": "cups",
+      "group": "Breading"
     },
     {
-      "name": "Boneless chicken thighs",
-      "quantity": "2.5",
-      "unit": "lb",
-      "group": "Main"
-    },
-    {
-      "name": "Crushed tomatoes",
-      "quantity": "2",
-      "unit": "cans",
-      "notes": "28 oz",
+      "name": "Marinara sauce",
+      "quantity": "4",
+      "unit": "cups",
       "group": "Sauce"
     },
     {
-      "name": "Heavy cream",
-      "quantity": "1",
-      "unit": "cup",
-      "group": "Sauce"
-    },
-    {
-      "name": "Parmesan, grated",
-      "quantity": "8",
+      "name": "Fresh mozzarella, sliced",
+      "quantity": "24",
       "unit": "oz",
-      "group": "Finish"
+      "group": "Cheese"
     },
     {
-      "name": "Yellow onion",
+      "name": "Provolone slices",
+      "quantity": "16",
+      "unit": "count",
+      "group": "Cheese"
+    },
+    {
+      "name": "Spaghetti",
       "quantity": "2",
-      "unit": "large",
-      "group": "Aromatics"
+      "unit": "lb",
+      "group": "Pasta"
     },
     {
-      "name": "Garlic cloves, minced",
-      "quantity": "6",
-      "unit": "cloves",
-      "group": "Aromatics"
+      "name": "Olive oil",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Frying"
     },
     {
       "name": "Kosher salt",
       "quantity": "2",
       "unit": "tbsp",
       "group": "Seasoning"
+    },
+    {
+      "name": "Black pepper",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Fresh basil, torn",
+      "quantity": "1",
+      "unit": "cup",
+      "group": "Finish"
+    },
+    {
+      "name": "Garlic bread loaves",
+      "quantity": "2",
+      "unit": "count",
+      "notes": "optional",
+      "group": "Side"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Salt the pasta water",
-      "instruction": "Bring a large pot of water to a rolling boil with enough salt that it tastes like the sea. This is your only chance to season the pasta itself.",
-      "minutes": 10,
-      "heatLevel": "high"
+      "title": "Pound and season cutlets",
+      "instruction": "Place chicken between plastic wrap and pound to an even ½ inch. Pat dry, then season both sides with salt and pepper. Set up a breading station: flour in one pan, beaten eggs in the second, breadcrumbs mixed with half the parmesan in the third.",
+      "minutes": 15,
+      "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Cook sauce base",
-      "instruction": "Meanwhile, brown meat, add onions and garlic, then tomatoes (and cream if Alfredo-style). Simmer 15 minutes while pasta cooks.",
+      "title": "Bread the cutlets",
+      "instruction": "Dredge each cutlet in flour, shake off excess, dip in egg, then press into breadcrumb-parm mixture until fully coated. Place breaded cutlets on a rack and rest 10 minutes so the coating sets — wet breading falls off in the pan.",
+      "minutes": 20,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Pan-fry until golden",
+      "instruction": "Heat olive oil in large skillets over medium-high until shimmering. Fry cutlets 3–4 minutes per side until deep golden and 155°F in the center. Work in batches; transfer to sheet pans lined with racks. Wipe excess oil if needed.",
+      "minutes": 25,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Boil pasta and warm sauce",
+      "instruction": "Boil spaghetti in salted water until al dente; drain and toss with a ladle of marinara. Warm remaining marinara in a saucepan — do not boil hard or it splatters on the line.",
       "minutes": 15,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 3,
-      "title": "Boil pasta al dente",
-      "instruction": "Cook pasta 1 minute shy of package time. Reserve 2 cups pasta water. Drain — do not rinse.",
-      "minutes": 12,
+      "stepNumber": 5,
+      "title": "Top with cheese and bake",
+      "instruction": "Lay fried cutlets in buttered hotel pans. Spoon marinara over each, then layer mozzarella and provolone. Bake at 425°F 12–15 minutes until cheese bubbles and edges brown. Rest 3 minutes before serving — molten cheese burns rookies.",
+      "minutes": 15,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 4,
-      "title": "Finish in the pan",
-      "instruction": "Toss pasta in sauce over medium heat, splashing pasta water until glossy and clinging. Chicken Parm should coat a spoon — if it pools, reduce another minute.",
-      "minutes": 4,
-      "heatLevel": "medium"
-    },
-    {
-      "stepNumber": 5,
-      "title": "Serve from the pot",
-      "instruction": "Fold in Parmesan off heat. Serve immediately — pasta waits for no one. Backup tray: cover lightly with foil at 200°F up to 15 minutes, add water if it tightens.",
-      "minutes": 3,
+      "stepNumber": 6,
+      "title": "Serve Chicken Parm for the crew",
+      "instruction": "Plate cutlets with spaghetti and extra marinara on sheet trays. Finish with remaining parmesan and basil. Garlic bread goes on a separate tray so crust stays crisp.",
+      "minutes": 5,
       "heatLevel": "low"
     }
   ],
   "proTips": [
     "Hold sauced pasta separate from cutlets so breading stays crisp.",
     "Broil mozzarella only 1–2 min — watch the hall oven.",
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts.",
     "Pull chicken at 160°F and let carryover hit 165°F — dry breast ruins crew morale."
   ],
   "tonightSpread": [
-    "Plate Chicken Parm with sides in separate pans so the crew can mix portions.",
-    "Line up Chicken Parm on the main counter with serving spoons — firefighters grab fast between calls.",
-    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+    "Serve breaded cutlets with spaghetti and garlic bread on separate trays — sauce stays on the chicken, pasta stays al dente.",
+    "Keep extra marinara and parmesan at the end of the line for seconds.",
+    "Cutlets go out whole when possible so cheese pulls look like Chicken Parm, not pasta night."
   ],
   "leftovers": [
     "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
@@ -144,11 +190,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 640,
-    "protein": 44,
-    "carbs": 52,
-    "fats": 26,
-    "label": "per serving (hall portion)"
+    "calories": 1400,
+    "protein": 120,
+    "carbs": 156,
+    "fats": 63,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/chicken-parm.jpg",
   "mobileImage": "/images/mobile/chicken-parm.jpg",
@@ -177,6 +237,6 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "classicSlug": "chicken-parm",
-  "generatedAt": "2026-05-29T01:43:09.303Z",
+  "generatedAt": "2026-05-30T03:28:01.745Z",
   "contentVersion": 2
 }

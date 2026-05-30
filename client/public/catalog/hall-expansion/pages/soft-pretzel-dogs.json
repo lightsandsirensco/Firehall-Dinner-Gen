@@ -1,0 +1,187 @@
+{
+  "slug": "soft-pretzel-dogs",
+  "title": "Soft Pretzel Hot Dogs",
+  "displayTitle": "Soft Pretzel Hot Dogs",
+  "seoTitle": "Soft Pretzel Hot Dogs | Firefighter Meal",
+  "shortDescription": "Baked pretzel-wrapped hot dogs with mustard bar for ten",
+  "subtitle": "Baked pretzel-wrapped hot dogs with mustard bar for ten",
+  "category": "hall_expansion",
+  "cuisine": "american",
+  "description": "Hot dogs are wrapped in soft pretzel dough, boiled briefly in baking soda water, and baked until deep brown. Serve with a mustard bar, sauerkraut, and quick cheddar sauce for a full stadium spread.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 20,
+  "prepTime": 35,
+  "difficulty": "medium",
+  "calories": 490,
+  "protein": 16,
+  "carbs": 52,
+  "fats": 24,
+  "tags": [
+    "protein:pork",
+    "format:handheld",
+    "category:game_day_recipes",
+    "game_day",
+    "handheld",
+    "comfort",
+    "hall_expansion",
+    "hall_expansion_56",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Large pot",
+    "Slotted spoon",
+    "Sheet pans",
+    "Parchment paper",
+    "Pastry brush"
+  ],
+  "ingredients": [
+    {
+      "name": "beef hot dogs",
+      "quantity": "10",
+      "unit": "whole",
+      "group": "Main"
+    },
+    {
+      "name": "pretzel dough",
+      "quantity": "2",
+      "unit": "lb",
+      "notes": "store-bought or homemade",
+      "group": "Main"
+    },
+    {
+      "name": "baking soda",
+      "quantity": "0.5",
+      "unit": "cup",
+      "notes": "for boil bath",
+      "group": "Boil"
+    },
+    {
+      "name": "egg",
+      "quantity": "1",
+      "unit": "whole",
+      "notes": "beaten, for wash",
+      "group": "Finish"
+    },
+    {
+      "name": "coarse salt",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Finish"
+    },
+    {
+      "name": "yellow mustard",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Mustard bar"
+    },
+    {
+      "name": "whole-grain mustard",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Mustard bar"
+    },
+    {
+      "name": "spicy brown mustard",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Mustard bar"
+    },
+    {
+      "name": "sauerkraut",
+      "quantity": "2",
+      "unit": "cups",
+      "notes": "warmed",
+      "group": "Toppings"
+    },
+    {
+      "name": "cheddar cheese sauce",
+      "quantity": "2",
+      "unit": "cups",
+      "notes": "warm",
+      "group": "Toppings"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Wrap the hot dogs",
+      "instruction": "Divide dough into ten pieces. Roll each into a rope and wrap tightly around a hot dog from end to end, pinching seams so dough does not unravel during boiling.",
+      "minutes": 20,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Prep the baking soda bath",
+      "instruction": "Bring 8 cups water with baking soda to a gentle boil in a wide pot. Work in batches so dogs do not crowd and stick together.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Boil and transfer",
+      "instruction": "Boil wrapped dogs 30 seconds per side until dough puffs slightly. Transfer to parchment-lined sheet pans with a slotted spoon.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Bake until brown",
+      "instruction": "Brush with egg wash, sprinkle coarse salt, and bake at 425°F for 12–15 minutes until deep mahogany brown and internal hot dog temp reaches 165°F. Target oven/smoker temperature: 425°F.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Set the mustard bar",
+      "instruction": "Serve pretzel dogs on a board with mustards, sauerkraut, and cheddar sauce. Cut one dog open at the line to verify cheese sauce and dog are steaming hot.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Pizza dough works in a pinch—add a tablespoon of barley malt to the boil for color.",
+    "Score dough lightly before baking if wraps split—controlled vents beat blowouts.",
+    "Hold baked dogs at 200°F uncovered 20 minutes max or crust softens."
+  ],
+  "tonightSpread": [
+    "Pretzel dogs with full mustard bar, kraut, and cheddar sauce.",
+    "Baked onion rings or oven fries for crews wanting a full stadium plate."
+  ],
+  "leftovers": [
+    "Reheat at 350°F 8 minutes directly on the rack for restored crunch.",
+    "Slice and pan-fry for pretzel-dog breakfast hash with eggs."
+  ],
+  "whyCrewsLikeIt": "Pretzel dogs eat with one hand and feel like ballpark food. Baking instead of frying keeps the kitchen calm, and the mustard bar lets everyone customize without custom orders.",
+  "mealPrepNotes": "Use store-bought pretzel dough or pizza dough with extra flour if time is tight. Form wraps up to 4 hours ahead and refrigerate on parchment. Baking soda bath must be at a gentle boil.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 490,
+    "protein": 16,
+    "carbs": 52,
+    "fats": 24,
+    "label": "~490 cal/serving · 16g protein · 2g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/soft-pretzel-dogs.jpg",
+  "heroImageAlt": "Soft Pretzel Hot Dogs — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/soft-pretzel-dogs.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/soft-pretzel-dogs.jpg",
+  "railImage": "/images/rails/hall-expansion/soft-pretzel-dogs.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "soft pretzel hot dogs",
+    "game day recipes"
+  ],
+  "relatedSlugs": [
+    "loaded-potato-skins",
+    "game-day-pizza-sliders",
+    "pretzel-bite-platter",
+    "jalapeno-popper-dip"
+  ],
+  "generatedAt": "2026-05-30T03:14:19.188Z",
+  "contentVersion": 2
+}

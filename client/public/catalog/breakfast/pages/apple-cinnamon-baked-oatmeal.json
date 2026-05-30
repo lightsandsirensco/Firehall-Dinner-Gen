@@ -1,0 +1,148 @@
+{
+  "slug": "apple-cinnamon-baked-oatmeal",
+  "title": "Apple Cinnamon Baked Oatmeal",
+  "subtitle": "Warm spiced oat squares with tender apple chunks for easy portioning.",
+  "description": "Steel-cut and rolled oats bake with diced apples, cinnamon, and brown sugar into sliceable squares—more satisfying than instant packets and easier to serve than stovetop porridge for ten. Holds warm in the oven between waves of eaters.",
+  "filters": [
+    "healthy_breakfasts",
+    "feed_a_crew"
+  ],
+  "tags": [
+    "oatmeal",
+    "apple",
+    "cinnamon",
+    "bake",
+    "make-ahead"
+  ],
+  "crewSize": 10,
+  "baseServings": 10,
+  "prepTime": 15,
+  "cookTime": 40,
+  "totalTime": 55,
+  "difficulty": "easy",
+  "ingredients": [
+    {
+      "name": "rolled oats",
+      "quantity": "3 cups",
+      "notes": "old-fashioned, not instant",
+      "group": "Base"
+    },
+    {
+      "name": "steel-cut oats",
+      "quantity": "1 cup",
+      "notes": "adds texture; optional",
+      "group": "Base"
+    },
+    {
+      "name": "whole milk",
+      "quantity": "4 cups",
+      "notes": "or oat milk for dairy-free",
+      "group": "Base"
+    },
+    {
+      "name": "large eggs",
+      "quantity": "2",
+      "notes": "whisked in for structure",
+      "group": "Base"
+    },
+    {
+      "name": "large apples",
+      "quantity": "3",
+      "notes": "peeled, cored, diced",
+      "group": "Fruit"
+    },
+    {
+      "name": "ground cinnamon",
+      "quantity": "2 tsp",
+      "notes": "plus 1/2 tsp nutmeg",
+      "group": "Spice"
+    },
+    {
+      "name": "brown sugar",
+      "quantity": "1/2 cup",
+      "notes": "plus maple for serving",
+      "group": "Sweet"
+    },
+    {
+      "name": "chopped walnuts",
+      "quantity": "1/2 cup",
+      "notes": "and butter pats at the line",
+      "group": "Finish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Heat the oven",
+      "instruction": "Heat oven to 375°F. Grease a 9x13 baking dish. Toss diced apples with half the cinnamon and spread in the bottom of the dish.",
+      "minutes": 0,
+      "tempF": 375
+    },
+    {
+      "stepNumber": 2,
+      "title": "Mix the oat base",
+      "instruction": "Whisk oats, milk, eggs, brown sugar, remaining cinnamon, nutmeg, and a pinch of salt until combined. The mixture should look like thick pourable batter.",
+      "minutes": 8
+    },
+    {
+      "stepNumber": 3,
+      "title": "Pour and top",
+      "instruction": "Pour oat mixture over apples and scatter walnuts on top. Tap the dish to settle the batter evenly for uniform slices.",
+      "minutes": 3
+    },
+    {
+      "stepNumber": 4,
+      "title": "Bake until set",
+      "instruction": "Bake until the center is set, edges are golden, and a knife inserted in the middle comes out clean. The top should spring back lightly when pressed.",
+      "minutes": 38,
+      "tempF": 375
+    },
+    {
+      "stepNumber": 5,
+      "title": "Rest and portion",
+      "instruction": "Rest 10 minutes before cutting into squares. Serve warm with maple syrup and optional butter pats. Hold uncovered at 200°F for up to 30 minutes.",
+      "minutes": 10
+    }
+  ],
+  "nutrition": {
+    "calories": 267,
+    "protein": 10,
+    "carbs": 44,
+    "fat": 7,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": false
+    }
+  },
+  "stationWorkflow": [
+    "Dice apples and mix batter while the oven preheats—this bake is forgiving on timing.",
+    "Cut squares in the pan with a sharp knife wiped between cuts for clean portions.",
+    "Set maple and walnuts at the line so customization doesn't bottleneck the hot squares."
+  ],
+  "cleanupNotes": [
+    "Soak the 9x13 in warm water immediately—baked oatmeal cement is easier to release when warm.",
+    "Line the prep bowl with a thin film of oil before mixing sticky oat batter for faster cleanup."
+  ],
+  "leftovers": [
+    "Wrap squares individually and reheat at 325°F for 10 minutes with a splash of milk on top.",
+    "Crumble cold squares into a skillet with butter and pan-fry until crisp for oatmeal hash browns."
+  ],
+  "heroImage": "/images/breakfast/apple-cinnamon-baked-oatmeal.jpg",
+  "thumbImage": "/images/thumbs/breakfast/apple-cinnamon-baked-oatmeal.jpg",
+  "imageAlt": "Baked apple cinnamon oatmeal squares with walnuts and maple drizzle",
+  "publishedAt": "2026-05-30T03:14:16.260Z",
+  "updatedAt": "2026-05-30T03:14:16.260Z",
+  "readMinutes": 7,
+  "seoTitle": "Apple Cinnamon Baked Oatmeal | Firehall Breakfast"
+}

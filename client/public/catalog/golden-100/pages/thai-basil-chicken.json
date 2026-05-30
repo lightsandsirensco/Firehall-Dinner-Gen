@@ -13,10 +13,10 @@
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 520,
-  "protein": 32,
-  "carbs": 48,
-  "fats": 22,
+  "calories": 80,
+  "protein": 1,
+  "carbs": 1,
+  "fats": 0,
   "tags": [
     "protein:chicken",
     "format:skillet",
@@ -33,74 +33,74 @@
   ],
   "ingredients": [
     {
-      "name": "Chicken breast",
-      "quantity": "2.5",
+      "name": "Ground chicken or thigh, minced",
+      "quantity": "3",
       "unit": "lb",
       "group": "Main"
     },
     {
-      "name": "Unsalted butter",
-      "quantity": "6",
-      "unit": "tbsp",
-      "group": "Sauce"
+      "name": "Thai basil leaves",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Herbs"
     },
     {
       "name": "Garlic cloves, minced",
       "quantity": "6",
       "unit": "cloves",
-      "group": "Sauce"
+      "group": "Aromatics"
     },
     {
-      "name": "Soy sauce",
+      "name": "Fish sauce",
       "quantity": "3",
       "unit": "tbsp",
       "group": "Sauce"
     },
     {
-      "name": "Yellow onion",
+      "name": "Oyster sauce",
       "quantity": "2",
-      "unit": "large",
-      "group": "Aromatics"
+      "unit": "tbsp",
+      "group": "Sauce"
     },
     {
-      "name": "Garlic cloves, minced",
-      "quantity": "6",
-      "unit": "cloves",
-      "group": "Aromatics"
+      "name": "Bird's eye chilies, sliced",
+      "quantity": "4",
+      "unit": "count",
+      "group": "Heat"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Prep and dry protein",
-      "instruction": "Pat protein dry. Mince garlic. Measure sauce ingredients — wok moves fast once heat is on.",
+      "title": "Prep stir-fry mise",
+      "instruction": "Mince garlic and chilies. Pick basil leaves; leave stems behind — they taste bitter.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Sear over high heat",
-      "instruction": "Heat skillet until just smoking. Sear in batches; shrimp 90 seconds per side, chicken to 165°F. Do not crowd.",
+      "title": "Sear ground chicken",
+      "instruction": "Heat wok until smoking. Sear minced chicken in batches, breaking into crumbles until no pink remains.",
       "minutes": 10,
       "heatLevel": "high"
     },
     {
       "stepNumber": 3,
-      "title": "Finish sauce in pan",
-      "instruction": "Lower to medium. Add butter, garlic, and sauce; toss 1–2 minutes until glossy. Thai Basil Chicken Stir Fry should smell bright, not burnt garlic.",
+      "title": "Glaze and basil",
+      "instruction": "Add garlic, chilies, fish sauce, and oyster sauce; toss 1 minute. Pull off heat; fold in Thai basil until wilted.",
       "minutes": 4,
-      "heatLevel": "medium"
+      "heatLevel": "high"
     },
     {
       "stepNumber": 4,
-      "title": "Serve immediately",
-      "instruction": "Serve from the skillet or transfer to warm trays. Backup: foil at 200°F up to 12 minutes — seafood toughens if held too long.",
-      "minutes": 3,
-      "heatLevel": "low"
+      "title": "Serve over jasmine rice",
+      "instruction": "Serve Thai Basil Chicken over steamed jasmine rice with fried eggs on top if the crew wants extra protein.",
+      "minutes": 5,
+      "heatLevel": ""
     }
   ],
   "proTips": [
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts.",
     "Pull chicken at 160°F and let carryover hit 165°F — dry breast ruins crew morale."
   ],
@@ -120,11 +120,25 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 520,
-    "protein": 32,
-    "carbs": 48,
-    "fats": 22,
-    "label": "per serving (hall portion)"
+    "calories": 80,
+    "protein": 1,
+    "carbs": 1,
+    "fats": 0,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/thai-basil-chicken.jpg",
   "mobileImage": "/images/mobile/thai-basil-chicken.jpg",
@@ -153,6 +167,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-29T01:43:09.424Z",
+  "generatedAt": "2026-05-30T03:28:01.982Z",
   "contentVersion": 2
 }

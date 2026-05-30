@@ -1,0 +1,187 @@
+{
+  "slug": "dutch-oven-pot-roast",
+  "title": "Dutch Oven Pot Roast",
+  "displayTitle": "Dutch Oven Pot Roast",
+  "seoTitle": "Dutch Oven Pot Roast | Firefighter Meal",
+  "shortDescription": "Chuck roast with carrots and potatoes braised for ten",
+  "subtitle": "Chuck roast with carrots and potatoes braised for ten",
+  "category": "hall_expansion",
+  "cuisine": "american",
+  "description": "Beef chuck sears in a Dutch oven, then braises low with broth, tomato paste, and aromatics until fork-tender. Carrots and potatoes cook in the same pot for a complete meal.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 210,
+  "prepTime": 30,
+  "difficulty": "easy",
+  "calories": 540,
+  "protein": 44,
+  "carbs": 38,
+  "fats": 24,
+  "tags": [
+    "protein:beef",
+    "format:braise",
+    "category:crew_feeders",
+    "beef",
+    "comfort",
+    "hearty",
+    "hall_expansion",
+    "hall_expansion_56",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Large Dutch oven",
+    "Instant-read thermometer",
+    "Wooden spoon",
+    "Carving knife",
+    "Ladle"
+  ],
+  "ingredients": [
+    {
+      "name": "boneless chuck roast",
+      "quantity": "5",
+      "unit": "lb",
+      "group": "Main"
+    },
+    {
+      "name": "Yukon Gold potatoes",
+      "quantity": "3",
+      "unit": "lb",
+      "notes": "quartered",
+      "group": "Vegetables"
+    },
+    {
+      "name": "carrots",
+      "quantity": "1.5",
+      "unit": "lb",
+      "notes": "chunked",
+      "group": "Vegetables"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "quartered",
+      "group": "Aromatics"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "6",
+      "unit": "cloves",
+      "notes": "smashed",
+      "group": "Aromatics"
+    },
+    {
+      "name": "beef broth",
+      "quantity": "4",
+      "unit": "cups",
+      "group": "Braise"
+    },
+    {
+      "name": "tomato paste",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Braise"
+    },
+    {
+      "name": "Worcestershire sauce",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Braise"
+    },
+    {
+      "name": "fresh thyme",
+      "quantity": "4",
+      "unit": "sprigs",
+      "group": "Braise"
+    },
+    {
+      "name": "all-purpose flour",
+      "quantity": "3",
+      "unit": "tbsp",
+      "notes": "for gravy",
+      "group": "Finish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Sear the roast",
+      "instruction": "Pat chuck dry and season generously. Sear in oil in a Dutch oven over medium-high heat 3–4 minutes per side until deeply browned. Set aside.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Build the braise",
+      "instruction": "Sauté onion and garlic 3 minutes. Stir in tomato paste and cook 1 minute. Add broth, Worcestershire, and thyme, scraping fond from the bottom.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Braise low and slow",
+      "instruction": "Return roast to pot, cover, and braise at 325°F until fork-tender and internal temp reaches 203°F, about 2.5–3 hours. Target oven/smoker temperature: 325°F.",
+      "minutes": 165,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Add vegetables",
+      "instruction": "Nestle potatoes and carrots around roast. Cover and continue braising at 325°F until vegetables pierce easily, about 60–75 minutes. Target oven/smoker temperature: 325°F.",
+      "minutes": 70,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Rest and serve",
+      "instruction": "Rest roast 15 minutes. Whisk flour slurry into simmering braising liquid for gravy. Slice or shred beef and serve with vegetables and gravy.",
+      "minutes": 20,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Do not skip the sear—gray pot roast tastes flat no matter how long it braises.",
+    "If gravy is thin, simmer uncovered 10 minutes before adding slurry.",
+    "Celery stalks added with carrots deepen the savory base cheaply."
+  ],
+  "tonightSpread": [
+    "Sliced pot roast with gravy, potatoes, and carrots on platters.",
+    "Crusty bread for soaking up extra gravy at the end of the line."
+  ],
+  "leftovers": [
+    "Shred leftovers for French dip sandwiches with strained gravy.",
+    "Dice into a beef and vegetable soup with leftover braising liquid."
+  ],
+  "whyCrewsLikeIt": "Pot roast is the definition of hall comfort—fork-tender beef, rich gravy, and vegetables in one pot. It holds warm for late eaters and tastes better the next day.",
+  "mealPrepNotes": "Sear roast hard for deep color before braising. Cut vegetables large so they do not turn to mush. Shred or slice roast after resting 15 minutes.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 540,
+    "protein": 44,
+    "carbs": 38,
+    "fats": 24,
+    "label": "~540 cal/serving · 44g protein · 5g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/dutch-oven-pot-roast.jpg",
+  "heroImageAlt": "Dutch Oven Pot Roast — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/dutch-oven-pot-roast.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/dutch-oven-pot-roast.jpg",
+  "railImage": "/images/rails/hall-expansion/dutch-oven-pot-roast.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "dutch oven pot roast",
+    "crew feeders"
+  ],
+  "relatedSlugs": [
+    "shawarma-bar-night",
+    "fajita-bar-night",
+    "hall-burger-bar",
+    "pasta-bar-night"
+  ],
+  "generatedAt": "2026-05-30T03:14:19.188Z",
+  "contentVersion": 2
+}

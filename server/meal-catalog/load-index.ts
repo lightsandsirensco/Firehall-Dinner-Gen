@@ -20,6 +20,10 @@ import { GOLDEN_100_RECIPES } from "../../shared/golden-100/index.js";
 import { readPerformanceRecipePage } from "../performance-meals/page-store.js";
 import { buildPerformanceRecipePage } from "../performance-meals/page-builder.js";
 import { getPerformanceRecipeBySlug } from "../../shared/performance-meals/adapted/index.js";
+import { HALL_EXPANSION_CATALOG_PUBLIC_DIR } from "../hall-expansion/page-store.js";
+import { readHallExpansionRecipePage } from "../hall-expansion/page-store.js";
+import { buildHallExpansionRecipePage } from "../hall-expansion/page-builder.js";
+import { getHallExpansionRecipeBySlug } from "../../shared/hall-expansion/adapted/index.js";
 
 function readCatalogIndexFile(dir: string): GoldenCatalogIndex | null {
   const indexFile = path.join(dir, "index.json");
@@ -61,7 +65,8 @@ function goldenIndexFromManifest(): GoldenCatalogIndex {
 export function loadMergedHallCatalogIndex(): GoldenCatalogIndex {
   const golden = readCatalogIndexFile(GOLDEN_CATALOG_PUBLIC_DIR) ?? goldenIndexFromManifest();
   const performance = readCatalogIndexFile(PERFORMANCE_CATALOG_PUBLIC_DIR);
-  const merged = mergeHallCatalogIndexes(golden, performance);
+  const expansion = readCatalogIndexFile(HALL_EXPANSION_CATALOG_PUBLIC_DIR);
+  const merged = mergeHallCatalogIndexes(golden, performance, expansion);
   // Breakfast meals must live in a separate file/catalog.
   const recipes = merged.recipes.filter((r) => !isBreakfastMeal(r));
   return { ...merged, recipeCount: recipes.length, recipes };
@@ -77,6 +82,10 @@ export function resolveHallRecipePage(slug: string): GoldenRecipePage | null {
   const performance = getPerformanceRecipeBySlug(normalized);
   if (performance) {
     return readPerformanceRecipePage(normalized) ?? buildPerformanceRecipePage(performance);
+  }
+  const expansion = getHallExpansionRecipeBySlug(normalized);
+  if (expansion) {
+    return readHallExpansionRecipePage(normalized) ?? buildHallExpansionRecipePage(expansion);
   }
   return null;
 }

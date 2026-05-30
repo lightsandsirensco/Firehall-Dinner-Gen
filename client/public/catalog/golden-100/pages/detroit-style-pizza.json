@@ -10,13 +10,13 @@
   "description": "Crispy cheese edges, thick crust. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
   "baseServings": 8,
-  "cookTime": 55,
-  "prepTime": 20,
+  "cookTime": 155,
+  "prepTime": 110,
   "difficulty": "medium",
-  "calories": 600,
-  "protein": 40,
-  "carbs": 48,
-  "fats": 28,
+  "calories": 1150,
+  "protein": 49,
+  "carbs": 67,
+  "fats": 75,
   "tags": [
     "protein:pork",
     "format:pizza",
@@ -25,8 +25,8 @@
     "golden_100"
   ],
   "equipment": [
-    "Pizza stone or steel",
-    "Peel or inverted sheet pan",
+    "Two 9x13 steel or dark cake pans",
+    "Stand mixer or large bowl",
     "Large sheet trays",
     "Instant-read thermometer",
     "Aluminum foil"
@@ -34,27 +34,27 @@
   "ingredients": [
     {
       "name": "Bread flour",
-      "quantity": "4",
+      "quantity": "5",
       "unit": "cups",
       "group": "Dough"
     },
     {
-      "name": "Active dry yeast",
+      "name": "Instant yeast",
       "quantity": "2",
       "unit": "tsp",
       "group": "Dough"
     },
     {
       "name": "Warm water",
-      "quantity": "1.5",
+      "quantity": "2",
       "unit": "cups",
       "notes": "110°F",
       "group": "Dough"
     },
     {
-      "name": "Olive oil",
-      "quantity": "3",
-      "unit": "tbsp",
+      "name": "Granulated sugar",
+      "quantity": "2",
+      "unit": "tsp",
       "group": "Dough"
     },
     {
@@ -64,71 +64,100 @@
       "group": "Dough"
     },
     {
-      "name": "Crushed tomatoes",
-      "quantity": "2",
-      "unit": "cans",
-      "notes": "28 oz",
-      "group": "Sauce"
+      "name": "Olive oil",
+      "quantity": "4",
+      "unit": "tbsp",
+      "group": "Dough"
     },
     {
-      "name": "Fresh mozzarella, torn",
-      "quantity": "24",
+      "name": "Brick cheese or mild cheddar, shredded",
+      "quantity": "32",
       "unit": "oz",
+      "notes": "to the edges",
       "group": "Cheese"
     },
     {
-      "name": "Pepperoni or toppings",
-      "quantity": "12",
+      "name": "Cup-and-char pepperoni",
+      "quantity": "16",
       "unit": "oz",
-      "group": "Toppings"
+      "group": "Topping"
+    },
+    {
+      "name": "Crushed tomatoes",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Sauce"
+    },
+    {
+      "name": "Dried oregano",
+      "quantity": "2",
+      "unit": "tsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "Garlic powder",
+      "quantity": "1",
+      "unit": "tsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "Unsalted butter",
+      "quantity": "4",
+      "unit": "tbsp",
+      "group": "Pan"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Proof the dough",
-      "instruction": "Stir yeast into warm water with a pinch of sugar; bloom 5 minutes until foamy. Mix flour, salt, oil, and yeast water until a shaggy dough forms. Knead 8–10 minutes until smooth. Rise covered 1–1½ hours until doubled — Detroit-Style Pepperoni Pizza needs relaxed gluten for an open crumb.",
+      "title": "Mix and rise the dough",
+      "instruction": "Stir yeast into warm water with sugar; rest 5 minutes until foamy. Mix flour, salt, oil, and yeast water until a sticky dough forms. Knead 8 minutes. Rise covered 1–1½ hours until doubled — Detroit crust needs an airy, relaxed dough.",
       "minutes": 90,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Heat oven and stone",
-      "instruction": "Place a pizza stone or inverted sheet pan in the oven. Preheat to 500°F for at least 45 minutes — surface temp matters more than air temp. Prep sauce and cheese while the oven saturates.",
-      "minutes": 45,
-      "heatLevel": "high"
-    },
-    {
-      "stepNumber": 3,
-      "title": "Stretch and top",
-      "instruction": "Divide dough; stretch by hand (don't roll with a pin unless Detroit-style). Sauce lightly — wet centers sag. Add cheese and toppings. Work on parchment or floured peel; jiggle to confirm it slides.",
+      "title": "Press into oiled pans",
+      "instruction": "Generously butter and oil two 9x13 steel or dark cake pans — not a round stone. Press dough into corners and up sides slightly. Do not stretch thin; Detroit is thick and airy.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
+      "stepNumber": 3,
+      "title": "Cheese to the edges",
+      "instruction": "Scatter cheese edge-to-edge so it touches the pan walls — this creates the frico crispy cheese skirt. Top with pepperoni if using. Rest 15–20 minutes while the oven preheats to 550°F or your oven max on the bottom rack.",
+      "minutes": 20,
+      "heatLevel": ""
+    },
+    {
       "stepNumber": 4,
-      "title": "Bake until blistered",
-      "instruction": "Slide onto the hot stone. Bake 10–14 minutes until cheese bubbles with brown spots and the underside sounds hollow when tapped. Rotate once if your oven has hot spots.",
-      "minutes": 12,
+      "title": "First bake",
+      "instruction": "Bake on the bottom rack 12–14 minutes until cheese caramelizes at the edges and the bottom sounds hollow when tapped. Edges should look fried, not pale.",
+      "minutes": 14,
       "heatLevel": "high"
     },
     {
       "stepNumber": 5,
-      "title": "Rest and cut",
-      "instruction": "Rest 2 minutes before cutting so cheese sets. Cut on sheet trays for the hall line. Hold backup pies at 200°F uncovered up to 15 minutes — covering traps steam and softens crust.",
-      "minutes": 3,
+      "title": "Sauce stripes on top",
+      "instruction": "Whisk crushed tomatoes with oregano and garlic powder. Remove pizza from oven and spoon sauce in two or three lengthwise stripes ON TOP of the baked cheese — Detroit puts sauce after the bake. Return to oven 5–7 minutes.",
+      "minutes": 7,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Rest and cut rectangles",
+      "instruction": "Rest 5 minutes, then cut into rectangular slices with a bench scraper. Serve on sheet trays — crispy cheese edges face out so the crew sees the Detroit signature.",
+      "minutes": 5,
       "heatLevel": "low"
     }
   ],
   "proTips": [
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts."
   ],
   "tonightSpread": [
-    "Cut pies into hall slices (8 per pie minimum) and fan on sheet trays.",
-    "Keep a fresh pie warming in the oven — pizza dies fast on the counter.",
-    "Line up Detroit-Style Pepperoni Pizza on the main counter with serving spoons — firefighters grab fast between calls.",
-    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+    "Cut Detroit pies into rectangles so crispy cheese edges face out — that is the signature.",
+    "Serve from sheet trays, not round pie servers — these are 9x13 pan pizzas."
   ],
   "leftovers": [
     "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
@@ -139,18 +168,32 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 600,
-    "protein": 40,
-    "carbs": 48,
-    "fats": 28,
-    "label": "per serving (hall portion)"
+    "calories": 1150,
+    "protein": 49,
+    "carbs": 67,
+    "fats": 75,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/detroit-style-pizza.jpg",
   "mobileImage": "/images/mobile/detroit-style-pizza.jpg",
   "thumbImage": "/images/thumbs/detroit-style-pizza.jpg",
   "railImage": "/images/rails/detroit-style-pizza.jpg",
   "realismScore": 100,
-  "firefighterScore": 98,
+  "firefighterScore": 94,
   "popularityWeight": 3.2,
   "searchTerms": [
     "detroit-style pepperoni pizza",
@@ -172,6 +215,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-29T01:43:09.401Z",
+  "generatedAt": "2026-05-30T03:28:01.936Z",
   "contentVersion": 2
 }

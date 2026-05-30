@@ -169,8 +169,11 @@ export function buildPrintHtml(recipe: ClientRecipeResponse, crewSize: number): 
   </div>` : ""}
 
   <div class="macros">
-    <strong>Macros per serving:</strong>
-    Calories: ${recipe.macros_per_serving.calories} | Protein: ${recipe.macros_per_serving.protein_g}g | Carbs: ${recipe.macros_per_serving.carbs_g}g | Fat: ${recipe.macros_per_serving.fat_g}g
+    <strong>Nutrition (Per Serving)</strong><br/>
+    Calories: ${recipe.macros_per_serving.calories}<br/>
+    Protein: ${recipe.macros_per_serving.protein_g}g<br/>
+    Carbs: ${recipe.macros_per_serving.carbs_g}g<br/>
+    Fat: ${recipe.macros_per_serving.fat_g}g
   </div>
 
   ${safetyHtml ? `
@@ -496,7 +499,9 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
         )}
         <span data-testid="section-macros">
           <span className="text-foreground font-medium">{recipe.macros_per_serving.calories}</span> cal ·{" "}
-          <span className="text-foreground font-medium">{recipe.macros_per_serving.protein_g}g</span> protein per seat
+          <span className="text-foreground font-medium">{recipe.macros_per_serving.protein_g}g</span> protein ·{" "}
+          <span className="text-foreground font-medium">{recipe.macros_per_serving.carbs_g}g</span> carbs ·{" "}
+          <span className="text-foreground font-medium">{recipe.macros_per_serving.fat_g}g</span> fat per seat
         </span>
       </p>
 

@@ -1,0 +1,185 @@
+{
+  "slug": "warm-spinach-chicken-salad",
+  "title": "Warm Spinach Chicken Salad",
+  "displayTitle": "Warm Spinach Chicken Salad",
+  "seoTitle": "Warm Spinach Chicken Salad | Firefighter Meal",
+  "shortDescription": "Sliced chicken over wilted spinach with bacon vinaigrette for ten",
+  "subtitle": "Sliced chicken over wilted spinach with bacon vinaigrette for ten",
+  "category": "hall_expansion",
+  "cuisine": "american",
+  "description": "Chicken thighs roast and slice, then serve over lightly wilted spinach with warm bacon-mustard vinaigrette, sliced mushrooms, and hard-boiled egg. Hearty enough for a cold-night shift.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 35,
+  "prepTime": 25,
+  "difficulty": "easy",
+  "calories": 380,
+  "protein": 34,
+  "carbs": 8,
+  "fats": 24,
+  "tags": [
+    "protein:chicken",
+    "format:salad",
+    "category:game_day_recipes",
+    "salad",
+    "healthy",
+    "chicken",
+    "hall_expansion",
+    "hall_expansion_56",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Sheet pan",
+    "Large skillet",
+    "Mixing bowls",
+    "Instant-read thermometer",
+    "Whisk"
+  ],
+  "ingredients": [
+    {
+      "name": "boneless chicken thighs",
+      "quantity": "3",
+      "unit": "lb",
+      "group": "Main"
+    },
+    {
+      "name": "baby spinach",
+      "quantity": "2",
+      "unit": "lb",
+      "group": "Base"
+    },
+    {
+      "name": "thick-cut bacon",
+      "quantity": "12",
+      "unit": "slices",
+      "group": "Dressing"
+    },
+    {
+      "name": "cremini mushrooms",
+      "quantity": "1",
+      "unit": "lb",
+      "notes": "sliced",
+      "group": "Vegetables"
+    },
+    {
+      "name": "hard-boiled eggs",
+      "quantity": "6",
+      "unit": "whole",
+      "notes": "quartered",
+      "group": "Protein"
+    },
+    {
+      "name": "red wine vinegar",
+      "quantity": "0.33",
+      "unit": "cup",
+      "group": "Dressing"
+    },
+    {
+      "name": "Dijon mustard",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Dressing"
+    },
+    {
+      "name": "shallot",
+      "quantity": "1",
+      "unit": "whole",
+      "notes": "minced",
+      "group": "Dressing"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Chicken"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Roast the chicken",
+      "instruction": "Season thighs with salt and olive oil. Roast at 425°F on a sheet pan 25–30 minutes until internal temp reaches 165°F. Rest and slice. Target oven/smoker temperature: 425°F.",
+      "minutes": 30,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Cook bacon and mushrooms",
+      "instruction": "Render bacon in a skillet until crisp. Remove and chop. Sauté mushrooms in bacon fat 6–8 minutes until golden. Set aside.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Build warm vinaigrette",
+      "instruction": "Whisk vinegar, mustard, and shallot into warm bacon fat off heat. Crumble half the bacon into the dressing.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Wilt the spinach",
+      "instruction": "Toss spinach in a large bowl with warm dressing until leaves just wilt—about 30 seconds of gentle tossing.",
+      "minutes": 2,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Plate and serve",
+      "instruction": "Top wilted spinach with sliced chicken, mushrooms, egg quarters, and remaining bacon crumbles. Serve immediately.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Baby spinach handles warm dressing better than mature spinach leaves.",
+    "Add sliced red grapes for sweet contrast if your crew likes fruit in salad.",
+    "This does not hold—plate to order or assemble in small batches."
+  ],
+  "tonightSpread": [
+    "Warm spinach salad plated with crusty rolls on the side.",
+    "Roasted sweet potato wedges for crew who want more carbs."
+  ],
+  "leftovers": [
+    "Slice cold chicken for sandwiches with leftover bacon.",
+    "Use wilted spinach in a frittata the next morning."
+  ],
+  "whyCrewsLikeIt": "Warm salad sounds fancy but it is just smart hall cooking—hot dressing wilts spinach slightly and makes the plate feel like dinner, not diet food.",
+  "mealPrepNotes": "Render bacon slowly for best vinaigrette fat. Dress spinach lightly at service—too much and it collapses. Mushrooms sauté just before plating.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 380,
+    "protein": 34,
+    "carbs": 8,
+    "fats": 24,
+    "label": "~380 cal/serving · 34g protein · 4g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/warm-spinach-chicken-salad.jpg",
+  "heroImageAlt": "Warm Spinach Chicken Salad — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/warm-spinach-chicken-salad.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/warm-spinach-chicken-salad.jpg",
+  "railImage": "/images/rails/hall-expansion/warm-spinach-chicken-salad.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "warm spinach chicken salad",
+    "game day recipes"
+  ],
+  "relatedSlugs": [
+    "loaded-potato-skins",
+    "game-day-pizza-sliders",
+    "pretzel-bite-platter",
+    "jalapeno-popper-dip"
+  ],
+  "generatedAt": "2026-05-30T03:14:19.188Z",
+  "contentVersion": 2
+}

@@ -63,19 +63,34 @@
     }
   ],
   "nutrition": {
-    "calories": 180,
-    "protein": 15,
-    "carbs": 32,
-    "fats": 8,
-    "highlights": "~180 cal · light on fat · hydration from coconut water · fiber from fruit and spinach"
+    "calories": 80,
+    "protein": 1,
+    "carbs": 14,
+    "fats": 0,
+    "highlights": "~180 cal · light on fat · hydration from coconut water · fiber from fruit and spinach",
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": true
+    }
   },
   "substitutions": [
     "Kale works but blanch flavor is stronger — use half spinach, half kale.",
     "Regular water replaces coconut water in a pinch."
   ],
   "shiftNote": "Light enough for early morning or post-call when heavy food sounds wrong. Good “reset” option.",
-  "heroImage": "/images/editorial/smoothies/green-pineapple.webp",
-  "thumbImage": "/images/editorial/smoothies/green-pineapple.webp",
+  "heroImage": "/images/smoothies/green-pineapple.webp",
+  "thumbImage": "/images/smoothies/green-pineapple.webp",
   "tags": [
     "fuel_smoothie",
     "taxonomy:green_smoothie",

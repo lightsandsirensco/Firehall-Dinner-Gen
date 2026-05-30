@@ -1,0 +1,186 @@
+{
+  "slug": "smoked-sausage-platter",
+  "title": "Smoked Sausage Platter",
+  "displayTitle": "Smoked Sausage Platter",
+  "seoTitle": "Smoked Sausage Platter | Firefighter Meal",
+  "shortDescription": "Mixed links with peppers, onions, and mustard bar for ten",
+  "subtitle": "Mixed links with peppers, onions, and mustard bar for ten",
+  "category": "hall_expansion",
+  "cuisine": "american",
+  "description": "A mix of smoked sausages—kielbasa, andouille, and sweet Italian—slow-smoke alongside peppers and onions until snappy and juicy. Serve on a platter with mustards, buns, and sauerkraut for build-your-own plates.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 75,
+  "prepTime": 15,
+  "difficulty": "easy",
+  "calories": 480,
+  "protein": 22,
+  "carbs": 28,
+  "fats": 32,
+  "tags": [
+    "protein:pork",
+    "format:smoker",
+    "category:smoker_recipes",
+    "bbq",
+    "smoker",
+    "pork",
+    "handheld",
+    "hall_expansion",
+    "hall_expansion_56",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Smoker",
+    "Cast-iron skillet",
+    "Cutting board",
+    "Instant-read thermometer",
+    "Serving platter"
+  ],
+  "ingredients": [
+    {
+      "name": "kielbasa links",
+      "quantity": "10",
+      "unit": "links",
+      "group": "Sausage"
+    },
+    {
+      "name": "andouille sausage",
+      "quantity": "10",
+      "unit": "links",
+      "group": "Sausage"
+    },
+    {
+      "name": "sweet Italian sausage",
+      "quantity": "10",
+      "unit": "links",
+      "group": "Sausage"
+    },
+    {
+      "name": "bell peppers",
+      "quantity": "4",
+      "unit": "whole",
+      "notes": "mixed colors, sliced",
+      "group": "Veg"
+    },
+    {
+      "name": "yellow onions",
+      "quantity": "3",
+      "unit": "whole",
+      "notes": "sliced",
+      "group": "Veg"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Veg"
+    },
+    {
+      "name": "smoked paprika",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "sauerkraut",
+      "quantity": "3",
+      "unit": "cups",
+      "notes": "drained",
+      "group": "Toppings"
+    },
+    {
+      "name": "sub rolls",
+      "quantity": "10",
+      "unit": "whole",
+      "group": "Serve"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Prep links and vegetables",
+      "instruction": "Score each sausage lightly on two sides. Toss peppers and onions with olive oil, smoked paprika, and salt until evenly coated and lightly glossy.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Smoke the sausage",
+      "instruction": "Heat smoker to 275°F. Arrange links with space between each piece and smoke until internal temperature reaches 165°F and casings snap when bent, about 45–60 minutes. Target oven/smoker temperature: 275°F.",
+      "minutes": 55,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Cook the pepper mixture",
+      "instruction": "During the last 30 minutes, cook peppers and onions in a cast-iron pan on the smoker until softened and lightly charred at the edges. Target oven/smoker temperature: 275°F.",
+      "minutes": 30,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Warm the sauerkraut",
+      "instruction": "Heat sauerkraut in a small saucepan with a splash of beer or broth until steaming. Keep warm on the sideboard away from direct heat so it does not dry out.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Build the platter",
+      "instruction": "Pile links on a board with pepper-onion mix, sauerkraut, rolls, and a mustard bar. Verify every link hits at least 165°F before calling the meal ready.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Mix link types for variety—one spicy, one smoky, one sweet keeps the platter interesting.",
+    "Hold links in a foil-lined pan with a splash of beer to stay juicy if service delays.",
+    "Add pickled jalapeños to the bar for crews that want heat without touching the smoker settings."
+  ],
+  "tonightSpread": [
+    "Full sausage board with mustards, peppers, onions, kraut, and toasted rolls.",
+    "Quick potato salad and chips for a classic cookout spread that needs no extra oven time."
+  ],
+  "leftovers": [
+    "Slice links into a breakfast scramble with peppers and cheddar.",
+    "Chop and simmer in marinara for a fast smoky pasta sauce on the next shift."
+  ],
+  "whyCrewsLikeIt": "Sausage platters feed fast with almost zero knife work. Links forgive timing, reheat well, and let picky eaters choose their own adventure with toppings.",
+  "mealPrepNotes": "Score links lightly so smoke penetrates without splitting open. Slice peppers and onions the night before into labeled bins. Mustard bar can be set up 30 minutes before service.",
+  "spiceLevel": "medium",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 480,
+    "protein": 22,
+    "carbs": 28,
+    "fats": 32,
+    "label": "~480 cal/serving · 22g protein · 3g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/smoked-sausage-platter.jpg",
+  "heroImageAlt": "Smoked Sausage Platter — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/smoked-sausage-platter.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/smoked-sausage-platter.jpg",
+  "railImage": "/images/rails/hall-expansion/smoked-sausage-platter.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "smoked sausage platter",
+    "smoker recipes"
+  ],
+  "relatedSlugs": [
+    "smoked-turkey-breast",
+    "smoked-meatloaf",
+    "smoked-mac-and-cheese",
+    "pork-belly-burnt-ends"
+  ],
+  "generatedAt": "2026-05-30T03:14:19.187Z",
+  "contentVersion": 2
+}

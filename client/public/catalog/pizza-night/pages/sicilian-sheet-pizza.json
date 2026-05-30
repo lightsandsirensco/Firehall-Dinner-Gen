@@ -1,0 +1,222 @@
+{
+  "slug": "sicilian-sheet-pizza",
+  "title": "Sicilian Sheet Pan Pizza",
+  "displayTitle": "Sicilian Sheet Pan Pizza",
+  "seoTitle": "Sicilian Sheet Pan Pizza | Firefighter Meal",
+  "shortDescription": "Thick focaccia-style squares",
+  "subtitle": "Thick focaccia-style squares",
+  "category": "pizza_night",
+  "cuisine": "italian",
+  "description": "Thick focaccia-style squares. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 140,
+  "prepTime": 100,
+  "difficulty": "medium",
+  "calories": 941,
+  "protein": 39,
+  "carbs": 67,
+  "fats": 57,
+  "tags": [
+    "protein:pork",
+    "format:pizza",
+    "category:pizza_night",
+    "handheld",
+    "big_crew",
+    "golden_100"
+  ],
+  "equipment": [
+    "Pizza stone or steel",
+    "Peel or inverted sheet pan",
+    "Large sheet trays",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "ingredients": [
+    {
+      "name": "Bread flour",
+      "quantity": "5",
+      "unit": "cups",
+      "group": "Dough"
+    },
+    {
+      "name": "Instant yeast",
+      "quantity": "2",
+      "unit": "tsp",
+      "group": "Dough"
+    },
+    {
+      "name": "Warm water",
+      "quantity": "2",
+      "unit": "cups",
+      "notes": "110°F",
+      "group": "Dough"
+    },
+    {
+      "name": "Olive oil",
+      "quantity": "4",
+      "unit": "tbsp",
+      "group": "Dough"
+    },
+    {
+      "name": "Kosher salt",
+      "quantity": "2",
+      "unit": "tsp",
+      "group": "Dough"
+    },
+    {
+      "name": "Crushed tomatoes",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Sauce"
+    },
+    {
+      "name": "Garlic cloves, minced",
+      "quantity": "4",
+      "unit": "cloves",
+      "group": "Sauce"
+    },
+    {
+      "name": "Dried oregano",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "Low-moisture mozzarella, shredded",
+      "quantity": "24",
+      "unit": "oz",
+      "group": "Cheese"
+    },
+    {
+      "name": "Grated parmesan",
+      "quantity": "0.8",
+      "unit": "cup",
+      "group": "Cheese"
+    },
+    {
+      "name": "Pepperoni slices",
+      "quantity": "8",
+      "unit": "oz",
+      "notes": "optional",
+      "group": "Topping"
+    },
+    {
+      "name": "Olive oil",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Pan"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Mix soft Sicilian dough",
+      "instruction": "Bloom yeast in warm water 5 minutes. Mix flour, salt, 2 tbsp oil, and yeast water until a sticky, soft dough forms. Knead 6–8 minutes. Rise 1 hour until puffy — Sicilian is thick and airy, not cracker-thin.",
+      "minutes": 75,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Oil pans and press dough",
+      "instruction": "Oil two 9x13 or half-sheet pans generously. Press dough to fill corners; do not over-stretch thin. Dimple surface with oiled fingertips — those dimples hold olive oil and sauce.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Second rise in the pan",
+      "instruction": "Cover and rise 30–45 minutes until dough looks pillowy and fills the pan edge to edge. Preheat oven to 475°F with racks in lower third.",
+      "minutes": 40,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Sauce stripes and cheese",
+      "instruction": "Whisk crushed tomatoes with garlic and oregano. Spoon sauce in stripes or patches on top — Sicilian often shows dough between sauce. Top with mozzarella, parmesan, and pepperoni if using.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Bake until bottom is fried-crisp",
+      "instruction": "Bake on the lower rack 22–28 minutes until the bottom is deep golden and the center reads 190°F through the cheese. Edges should look fried in oil, not pale steamed bread.",
+      "minutes": 25,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Rest and cut squares",
+      "instruction": "Rest 5 minutes in the pan, then lift or cut in the pan into squares. Sicilian Sheet Pan Pizza feeds eight from two trays with thick crust and crisp underside — crew grabs with napkins.",
+      "minutes": 5,
+      "heatLevel": "low"
+    }
+  ],
+  "proTips": [
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
+    "Taste for salt at the end — hall palates run salty after long shifts."
+  ],
+  "tonightSpread": [
+    "Cut pies into hall slices (8 per pie minimum) and fan on sheet trays.",
+    "Keep a fresh pie warming in the oven — pizza dies fast on the counter.",
+    "Line up Sicilian Sheet Pan Pizza on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+  ],
+  "leftovers": [
+    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
+    "Label trays with date and reheat to 165°F minimum before second shift."
+  ],
+  "whyCrewsLikeIt": "Thick focaccia-style squares. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
+  "substitutions": [],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 941,
+    "protein": 39,
+    "carbs": 67,
+    "fats": 57,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "heroImage": "/images/golden-100/sicilian-sheet-pizza.jpg",
+  "mobileImage": "/images/mobile/sicilian-sheet-pizza.jpg",
+  "thumbImage": "/images/thumbs/sicilian-sheet-pizza.jpg",
+  "railImage": "/images/rails/sicilian-sheet-pizza.jpg",
+  "realismScore": 95,
+  "firefighterScore": 98,
+  "popularityWeight": 3.2,
+  "searchTerms": [
+    "sicilian sheet pan pizza",
+    "sicilian sheet pizza",
+    "italian",
+    "pork",
+    "pizza",
+    "handheld",
+    "big crew",
+    "big_crew",
+    "golden_100"
+  ],
+  "relatedSlugs": [
+    "honey-soppressata-pizza",
+    "pepperoni-pizza-night",
+    "firehall-supreme-pizza",
+    "meat-lovers-sheet-pizza",
+    "breakfast-sausage-pizza",
+    "detroit-style-pizza"
+  ],
+  "generatedAt": "2026-05-30T03:45:01.617Z",
+  "contentVersion": 2
+}

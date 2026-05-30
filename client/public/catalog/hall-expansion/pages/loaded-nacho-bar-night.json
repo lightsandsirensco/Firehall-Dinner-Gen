@@ -1,0 +1,185 @@
+{
+  "slug": "loaded-nacho-bar-night",
+  "title": "Loaded Nacho Bar Night",
+  "displayTitle": "Loaded Nacho Bar Night",
+  "seoTitle": "Loaded Nacho Bar Night | Firefighter Meal",
+  "shortDescription": "Build-your-own nacho bar with proteins and toppings for ten",
+  "subtitle": "Build-your-own nacho bar with proteins and toppings for ten",
+  "category": "hall_expansion",
+  "cuisine": "mexican-american",
+  "description": "Seasoned ground beef, queso, beans, and a full topping bar let each crew member build nachos on oven-warmed chips. Individual sheet pans or plates prevent the classic soggy-center problem.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 20,
+  "prepTime": 25,
+  "difficulty": "easy",
+  "calories": 580,
+  "protein": 28,
+  "carbs": 44,
+  "fats": 34,
+  "tags": [
+    "protein:beef",
+    "format:bar_line",
+    "category:crew_feeders",
+    "bar_line",
+    "beef",
+    "game_day",
+    "handheld",
+    "hall_expansion",
+    "hall_expansion_56",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Slow cooker",
+    "Sheet pans",
+    "Hotel pans",
+    "Broiler",
+    "Large skillet"
+  ],
+  "ingredients": [
+    {
+      "name": "ground beef (85/15)",
+      "quantity": "2",
+      "unit": "lb",
+      "group": "Protein"
+    },
+    {
+      "name": "taco seasoning",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Protein"
+    },
+    {
+      "name": "tortilla chips",
+      "quantity": "2",
+      "unit": "lb",
+      "notes": "sturdy restaurant style",
+      "group": "Base"
+    },
+    {
+      "name": "queso dip",
+      "quantity": "3",
+      "unit": "cups",
+      "group": "Cheese"
+    },
+    {
+      "name": "shredded cheddar",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Cheese"
+    },
+    {
+      "name": "black beans",
+      "quantity": "2",
+      "unit": "cans",
+      "notes": "15 oz, drained, warmed",
+      "group": "Bar"
+    },
+    {
+      "name": "jalapeño slices",
+      "quantity": "1",
+      "unit": "cup",
+      "group": "Bar"
+    },
+    {
+      "name": "pico de gallo",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Bar"
+    },
+    {
+      "name": "sour cream",
+      "quantity": "1.5",
+      "unit": "cups",
+      "group": "Bar"
+    },
+    {
+      "name": "guacamole",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Bar"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Brown the beef",
+      "instruction": "Cook ground beef over medium-high heat, breaking into fine crumbles until no pink remains. Drain fat, add taco seasoning and 0.25 cup water, and simmer until coated and thick.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Warm queso and beans",
+      "instruction": "Heat queso in a slow cooker on warm, stirring occasionally. Season and warm black beans in a separate hotel pan. Verify both reach 165°F for safe holding.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Prep chip bases",
+      "instruction": "Spread chips in single layers on sheet pans and warm at 250°F while the bar sets up. Chips should feel hot to touch but not brown. Target oven/smoker temperature: 250°F.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Set the nacho bar",
+      "instruction": "Line up warm chip pans, beef, queso, cheddar, beans, jalapeños, pico, sour cream, and guacamole with serving spoons and clear labels.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Build and broil to order",
+      "instruction": "Crew tops their chip base at the line. Run finished plates under the broiler 1–2 minutes to melt cheddar if desired, then add cold toppings after.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Offer a 'nacho ladle' of queso instead of free-pour—portion control prevents swampy chips.",
+    "Pickled jalapeños beat fresh for consistent heat without watering down builds.",
+    "Keep backup chip pans in the oven—first batches disappear fast on nacho night."
+  ],
+  "tonightSpread": [
+    "Personal nacho bar with beef, queso, and full cold topping station.",
+    "Margarita mix mocktail pitcher or lime agua fresca for a festive touch."
+  ],
+  "leftovers": [
+    "Layer leftover toppings into a nacho casserole bake with fresh chips on top.",
+    "Beef and beans become tomorrow's taco filling with minimal extra work."
+  ],
+  "whyCrewsLikeIt": "Loaded nacho bar night solves the biggest nacho complaint—soggy chips in the middle. Personal builds mean maximum crunch and custom heat levels without separate cooking requests.",
+  "mealPrepNotes": "Brown beef with taco seasoning ahead. Warm queso in a slow cooker on hold. Pre-portion chips on sheet pans so crew grabs a base and builds at the topping line.",
+  "spiceLevel": "medium",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 580,
+    "protein": 28,
+    "carbs": 44,
+    "fats": 34,
+    "label": "~580 cal/serving · 28g protein · 6g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/loaded-nacho-bar-night.jpg",
+  "heroImageAlt": "Loaded Nacho Bar Night — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/loaded-nacho-bar-night.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/loaded-nacho-bar-night.jpg",
+  "railImage": "/images/rails/hall-expansion/loaded-nacho-bar-night.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "loaded nacho bar night",
+    "crew feeders"
+  ],
+  "relatedSlugs": [
+    "shawarma-bar-night",
+    "fajita-bar-night",
+    "hall-burger-bar",
+    "pasta-bar-night"
+  ],
+  "generatedAt": "2026-05-30T03:14:19.188Z",
+  "contentVersion": 2
+}

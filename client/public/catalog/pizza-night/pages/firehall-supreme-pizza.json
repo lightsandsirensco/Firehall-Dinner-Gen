@@ -1,0 +1,214 @@
+{
+  "slug": "firehall-supreme-pizza",
+  "title": "Firehall Supreme Pizza",
+  "displayTitle": "Firehall Supreme Pizza",
+  "seoTitle": "Firehall Supreme Pizza | Firefighter Meal",
+  "shortDescription": "Pepperoni, sausage, peppers, mushrooms",
+  "subtitle": "Pepperoni, sausage, peppers, mushrooms",
+  "category": "pizza_night",
+  "cuisine": "american",
+  "description": "Pepperoni, sausage, peppers, mushrooms. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 95,
+  "prepTime": 35,
+  "difficulty": "medium",
+  "calories": 1027,
+  "protein": 50,
+  "carbs": 43,
+  "fats": 72,
+  "tags": [
+    "protein:pork",
+    "format:pizza",
+    "category:pizza_night",
+    "handheld",
+    "big_crew",
+    "golden_100"
+  ],
+  "equipment": [
+    "Pizza stone or steel",
+    "Peel or inverted sheet pan",
+    "Large sheet trays",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "ingredients": [
+    {
+      "name": "Pizza dough balls (15 oz)",
+      "quantity": "4",
+      "unit": "count",
+      "group": "Crust"
+    },
+    {
+      "name": "Pizza sauce",
+      "quantity": "3",
+      "unit": "cups",
+      "group": "Sauce"
+    },
+    {
+      "name": "Low-moisture mozzarella, shredded",
+      "quantity": "28",
+      "unit": "oz",
+      "group": "Cheese"
+    },
+    {
+      "name": "Pepperoni slices",
+      "quantity": "8",
+      "unit": "oz",
+      "group": "Toppings"
+    },
+    {
+      "name": "Italian sausage, cooked crumbles",
+      "quantity": "1.5",
+      "unit": "lb",
+      "group": "Toppings"
+    },
+    {
+      "name": "Bell peppers, diced",
+      "quantity": "3",
+      "unit": "count",
+      "group": "Toppings"
+    },
+    {
+      "name": "Yellow onion, diced",
+      "quantity": "2",
+      "unit": "large",
+      "group": "Toppings"
+    },
+    {
+      "name": "Mushrooms, sliced",
+      "quantity": "12",
+      "unit": "oz",
+      "group": "Toppings"
+    },
+    {
+      "name": "Black olives, sliced",
+      "quantity": "1",
+      "unit": "cup",
+      "group": "Toppings"
+    },
+    {
+      "name": "Grated parmesan",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Finish"
+    },
+    {
+      "name": "Dried oregano",
+      "quantity": "2",
+      "unit": "tsp",
+      "group": "Seasoning"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Prep and sauté vegetables",
+      "instruction": "Sauté peppers, onion, and mushrooms in a dry-hot skillet 8 minutes until moisture evaporates — wet veg steams supreme pies. Brown sausage crumbles separately and drain grease.",
+      "minutes": 15,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat stone to 500°F",
+      "instruction": "Heat stone or steel at 500°F at least 40 minutes. Portion all toppings in bowls so the line moves fast — supreme night is a topping sprint.",
+      "minutes": 40,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Stretch four loaded rounds",
+      "instruction": "Stretch dough to 12–14 inches. Sauce evenly with a ½ inch clean rim. First layer: half the mozzarella. This locks toppings so they do not slide off in the peel jiggle.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Layer meats, veg, cheese, pepperoni",
+      "instruction": "Add sausage, peppers, onions, mushrooms, olives, remaining mozzarella, and pepperoni. Sprinkle oregano. Firehall Supreme means every slice has something — distribute, don't dump in the middle.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Bake until loaded center sets",
+      "instruction": "Bake 12–15 minutes until cheese is browned at edges and the center is fully set — loaded pies need the longer end of the range. Rotate once. If center looks wet, give 2 more minutes; soggy supreme disappoints the hall.",
+      "minutes": 14,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Parmesan, rest, and crew cut",
+      "instruction": "Rest 3 minutes, parmesan, cut 8 slices per pie. Fan on sheet trays for the line. Keep backup pie at 200°F on a rack — stacked boxes soften the crust.",
+      "minutes": 5,
+      "heatLevel": "low"
+    }
+  ],
+  "proTips": [
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
+    "Taste for salt at the end — hall palates run salty after long shifts."
+  ],
+  "tonightSpread": [
+    "Cut pies into hall slices (8 per pie minimum) and fan on sheet trays.",
+    "Keep a fresh pie warming in the oven — pizza dies fast on the counter.",
+    "Line up Firehall Supreme Pizza on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+  ],
+  "leftovers": [
+    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
+    "Label trays with date and reheat to 165°F minimum before second shift."
+  ],
+  "whyCrewsLikeIt": "Pepperoni, sausage, peppers, mushrooms. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
+  "substitutions": [],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 1027,
+    "protein": 50,
+    "carbs": 43,
+    "fats": 72,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "heroImage": "/images/golden-100/firehall-supreme-pizza.jpg",
+  "mobileImage": "/images/mobile/firehall-supreme-pizza.jpg",
+  "thumbImage": "/images/thumbs/firehall-supreme-pizza.jpg",
+  "railImage": "/images/rails/firehall-supreme-pizza.jpg",
+  "realismScore": 100,
+  "firefighterScore": 98,
+  "popularityWeight": 3.2,
+  "searchTerms": [
+    "firehall supreme pizza",
+    "american",
+    "pork",
+    "pizza",
+    "handheld",
+    "big crew",
+    "supreme pizza loaded toppings",
+    "big_crew",
+    "golden_100"
+  ],
+  "relatedSlugs": [
+    "meat-lovers-sheet-pizza",
+    "breakfast-sausage-pizza",
+    "detroit-style-pizza",
+    "hawaiian-pizza",
+    "jalapeno-popper-pizza",
+    "sicilian-sheet-pizza"
+  ],
+  "generatedAt": "2026-05-30T03:45:01.597Z",
+  "contentVersion": 2
+}

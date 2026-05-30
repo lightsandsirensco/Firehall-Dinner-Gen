@@ -1,0 +1,183 @@
+{
+  "slug": "shawarma-bar-night",
+  "title": "Shawarma Bar Night",
+  "displayTitle": "Shawarma Bar Night",
+  "seoTitle": "Shawarma Bar Night | Firefighter Meal",
+  "shortDescription": "Spiced chicken shawarma with flatbread and fixings for ten",
+  "subtitle": "Spiced chicken shawarma with flatbread and fixings for ten",
+  "category": "hall_expansion",
+  "cuisine": "middle-eastern",
+  "description": "Marinated chicken thighs roast on sheet pans with shawarma spices, then slice thin for a build bar with flatbread, tahini, pickles, tomatoes, and onions. Each crew member assembles their own wrap at the line.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 35,
+  "prepTime": 35,
+  "difficulty": "medium",
+  "calories": 480,
+  "protein": 36,
+  "carbs": 38,
+  "fats": 20,
+  "tags": [
+    "protein:chicken",
+    "format:bar_line",
+    "category:crew_feeders",
+    "bar_line",
+    "chicken",
+    "handheld",
+    "hall_expansion",
+    "hall_expansion_56",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Sheet pans",
+    "Hotel pans",
+    "Instant-read thermometer",
+    "Sharp slicing knife",
+    "Serving spoons"
+  ],
+  "ingredients": [
+    {
+      "name": "boneless chicken thighs",
+      "quantity": "5",
+      "unit": "lb",
+      "group": "Main"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "0.25",
+      "unit": "cup",
+      "group": "Marinade"
+    },
+    {
+      "name": "lemon juice",
+      "quantity": "0.25",
+      "unit": "cup",
+      "group": "Marinade"
+    },
+    {
+      "name": "ground cumin",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Spice"
+    },
+    {
+      "name": "smoked paprika",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Spice"
+    },
+    {
+      "name": "ground turmeric",
+      "quantity": "1",
+      "unit": "tsp",
+      "group": "Spice"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "6",
+      "unit": "cloves",
+      "notes": "minced",
+      "group": "Marinade"
+    },
+    {
+      "name": "pita or flatbread",
+      "quantity": "15",
+      "unit": "pieces",
+      "group": "Bar"
+    },
+    {
+      "name": "tahini sauce",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Bar"
+    },
+    {
+      "name": "pickled turnips",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Bar"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Marinate the chicken",
+      "instruction": "Whisk olive oil, lemon juice, cumin, paprika, turmeric, garlic, and 2 tbsp salt. Coat thighs and marinate at least 2 hours or overnight for deepest flavor penetration.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Roast the chicken",
+      "instruction": "Arrange thighs on oiled sheet pans skin-side up. Roast at 425°F for 25–30 minutes until charred at edges and internal temp reaches 175°F in the thickest piece. Target oven/smoker temperature: 425°F.",
+      "minutes": 30,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Rest and slice thin",
+      "instruction": "Rest chicken 10 minutes, then slice as thin as possible against the grain. Pile into a hotel pan and tent with foil for holding at the bar.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Set the shawarma bar",
+      "instruction": "Warm flatbread wrapped in towels. Arrange sliced chicken, tahini, pickles, diced tomatoes, sliced onions, and fresh parsley in separate labeled pans along the line.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Service and replenish",
+      "instruction": "Call the meal and demonstrate one wrap build. Replenish chicken and bread from backup pans kept warm in a low oven throughout the meal.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "A pinch of cinnamon in the marinade adds authentic shawarma depth without tasting sweet.",
+    "Double-stack sheet pans if thighs release a lot of fat—crisp bottoms need airflow.",
+    "Offer hot sauce and garlic sauce in squeeze bottles to keep the line moving fast."
+  ],
+  "tonightSpread": [
+    "Full shawarma bar with chicken, flatbread, tahini, pickles, and herb salad.",
+    "Cucumber yogurt dip and hummus for crews building bowls instead of wraps."
+  ],
+  "leftovers": [
+    "Chop chicken into a grain bowl with leftover bar toppings and lemon dressing.",
+    "Stuff into pita with feta for a cold lunch wrap the next shift."
+  ],
+  "whyCrewsLikeIt": "Shawarma bar night feels like takeout but costs a fraction and scales cleanly. Warm spiced chicken smells incredible in the hall and the DIY format means no one gets stuck with toppings they hate.",
+  "mealPrepNotes": "Marinate chicken up to 24 hours. Prep all bar toppings in labeled hotel pans the night before. Slice chicken just before service and hold at 165°F in a covered pan with a splash of lemon juice.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 480,
+    "protein": 36,
+    "carbs": 38,
+    "fats": 20,
+    "label": "~480 cal/serving · 36g protein · 4g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/shawarma-bar-night.jpg",
+  "heroImageAlt": "Shawarma Bar Night — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/shawarma-bar-night.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/shawarma-bar-night.jpg",
+  "railImage": "/images/rails/hall-expansion/shawarma-bar-night.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "shawarma bar night",
+    "crew feeders"
+  ],
+  "relatedSlugs": [
+    "fajita-bar-night",
+    "hall-burger-bar",
+    "pasta-bar-night",
+    "rice-bowl-bar-night"
+  ],
+  "generatedAt": "2026-05-30T03:14:19.188Z",
+  "contentVersion": 2
+}

@@ -7,10 +7,17 @@ import fs from "node:fs";
 import { getClassicHallMeal } from "./classic-hall-meals.js";
 import { editorialPathForRole } from "./editorial-image-delivery.js";
 import { resolveCatalogHeroPath, normalizeCatalogSlug } from "./hall-catalog/gate.js";
+import { hallExpansionHeroPath, hallExpansionThumbPath } from "./hall-expansion/recipe-page-paths.js";
+import {
+  breakfastCatalogHeroPath,
+  breakfastCatalogThumbPath,
+} from "./breakfast-catalog/slug-registry.js";
 
 export type ExploreCatalogImageKind =
   | "firehall_catalog"
   | "performance_meal"
+  | "hall_expansion"
+  | "breakfast_catalog"
   | "hall_classic"
   | "smoothie";
 
@@ -52,6 +59,30 @@ export function slugLockedImagePaths(slug: string, kind: ExploreCatalogImageKind
       mobile,
       rail,
       cardCandidates,
+    };
+  }
+
+  if (kind === "hall_expansion") {
+    const hero = hallExpansionHeroPath(s);
+    const expansionThumb = hallExpansionThumbPath(s);
+    return {
+      hero,
+      thumb: expansionThumb,
+      mobile: `/images/mobile/hall-expansion/${s}.jpg`,
+      rail: `/images/rails/hall-expansion/${s}.jpg`,
+      cardCandidates: [expansionThumb, hero, mobile, rail],
+    };
+  }
+
+  if (kind === "breakfast_catalog") {
+    const hero = breakfastCatalogHeroPath(s);
+    const breakfastThumb = breakfastCatalogThumbPath(s);
+    return {
+      hero,
+      thumb: breakfastThumb,
+      mobile: `/images/mobile/breakfast/${s}.jpg`,
+      rail: `/images/rails/breakfast/${s}.jpg`,
+      cardCandidates: [breakfastThumb, hero, mobile, rail],
     };
   }
 

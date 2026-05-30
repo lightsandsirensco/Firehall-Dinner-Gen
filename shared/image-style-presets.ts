@@ -162,6 +162,17 @@ export function isImageStylePresetId(value: string): value is ImageStylePresetId
   return (IMAGE_STYLE_PRESET_IDS as readonly string[]).includes(value);
 }
 
+/** Legacy preset ids from older imagery pipeline — normalize before DB validation. */
+const LEGACY_IMAGE_STYLE_PRESET_MAP: Record<string, ImageStylePresetId> = {
+  firehall_editorial_v1: "comfort_firehall",
+};
+
+export function normalizeImageStylePresetId(value: string | undefined): ImageStylePresetId {
+  if (!value) return "comfort_firehall";
+  if (isImageStylePresetId(value)) return value;
+  return LEGACY_IMAGE_STYLE_PRESET_MAP[value] ?? "comfort_firehall";
+}
+
 export function getImageStylePreset(id: ImageStylePresetId): ImageStylePreset {
   return IMAGE_STYLE_PRESETS[id];
 }

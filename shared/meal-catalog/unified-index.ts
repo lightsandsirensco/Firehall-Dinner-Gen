@@ -5,7 +5,7 @@
 
 import type { GoldenCatalogIndex, GoldenCatalogIndexEntry } from "../golden-100/recipe-page-schema.js";
 
-export const HALL_CATALOG_RECIPE_COUNT = 150 as const;
+export const HALL_CATALOG_RECIPE_COUNT = 198 as const;
 
 export function performanceEntryToCatalogIndex(entry: {
   slug: string;
@@ -43,10 +43,11 @@ export function performanceEntryToCatalogIndex(entry: {
   };
 }
 
-/** Merge Golden index with Performance Meals; Golden wins on slug collision. */
+/** Merge Golden + Performance + Hall Expansion; first catalog wins on slug collision. */
 export function mergeHallCatalogIndexes(
   golden: GoldenCatalogIndex,
   performance: GoldenCatalogIndex | null | undefined,
+  expansion?: GoldenCatalogIndex | null,
 ): GoldenCatalogIndex {
   const bySlug = new Map<string, GoldenCatalogIndexEntry>();
   for (const r of golden.recipes) {
@@ -57,10 +58,19 @@ export function mergeHallCatalogIndexes(
       bySlug.set(r.slug, r);
     }
   }
+  for (const r of expansion?.recipes ?? []) {
+    if (!bySlug.has(r.slug)) {
+      bySlug.set(r.slug, r);
+    }
+  }
   const recipes = [...bySlug.values()].sort((a, b) => a.title.localeCompare(b.title));
   return {
-    version: Math.max(golden.version, performance?.version ?? 1),
-    contentVersion: Math.max(golden.contentVersion, performance?.contentVersion ?? 1),
+    version: Math.max(golden.version, performance?.version ?? 1, expansion?.version ?? 1),
+    contentVersion: Math.max(
+      golden.contentVersion,
+      performance?.contentVersion ?? 1,
+      expansion?.contentVersion ?? 1,
+    ),
     generatedAt: new Date().toISOString(),
     recipeCount: recipes.length,
     recipes,

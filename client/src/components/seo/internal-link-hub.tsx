@@ -1,18 +1,32 @@
 import { Link } from "wouter";
 import { cn } from "@/lib/utils";
 import { CTA } from "@/lib/brand-copy";
+import {
+  APPROVED_CATALOG_TOTAL,
+  marketingRecipeCountCopy,
+} from "@shared/meal-catalog/curated-count";
 
 export type InternalLink = { href: string; label: string; description?: string };
 
 const HUB_LINKS: InternalLink[] = [
-  { href: "/recipes", label: "Firefighter recipes", description: "Full catalog — 150+ crew dinners" },
+  { href: "/firefighter-meals", label: "Firefighter meals", description: "Crew dinners for the hall" },
+  {
+    href: "/firefighter-recipes",
+    label: "Firefighter recipes",
+    description: marketingRecipeCountCopy(APPROVED_CATALOG_TOTAL),
+  },
+  { href: "/firehouse-recipes", label: "Firehouse recipes", description: "Classic station cooking" },
+  { href: "/recipes", label: "Full recipe catalog", description: "Browse every firefighter meal" },
   { href: "/explore", label: "Browse recipes", description: "Search by protein, time & category" },
   { href: "/categories/crew_favorites", label: "Hall favorites", description: "Popular firehouse meals" },
   { href: "/categories/quick_meals", label: "Quick shift meals", description: "Under 45 minutes" },
-  { href: "/categories/healthy_options", label: "Healthy meals", description: "High-protein hall picks" },
-  { href: "/categories/bbq_smoker", label: "BBQ & grill", description: "Smoker and grill nights" },
-  { href: "/generator", label: CTA.findDinner, description: "Optional meal picker tool" },
-  { href: "/guides", label: "Cooking guides", description: "Shift & nutrition notes" },
+  { href: "/categories/healthy_options", label: "Healthy firefighter meals", description: "High-protein hall picks" },
+  { href: "/categories/bbq_smoker", label: "BBQ firefighter recipes", description: "Grill and smoker nights" },
+  { href: "/healthy-firefighter-meals", label: "Healthy firefighter meals", description: "Performance station plates" },
+  { href: "/firefighter-breakfast-recipes", label: "Firefighter breakfast recipes", description: "After night shift" },
+  { href: "/wheel", label: "Classics Wheel", description: "Hall kitchen-table picks" },
+  { href: "/guides", label: "Firehouse cooking guides", description: "Shift & nutrition notes" },
+  { href: "/generator", label: CTA.findDinner, description: "Fast crew meal picker" },
 ];
 
 const POPULAR_RECIPES: InternalLink[] = [

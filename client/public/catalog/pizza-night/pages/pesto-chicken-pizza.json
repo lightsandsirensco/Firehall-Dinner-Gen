@@ -1,0 +1,201 @@
+{
+  "slug": "pesto-chicken-pizza",
+  "title": "Pesto Chicken Pizza",
+  "displayTitle": "Pesto Chicken Pizza",
+  "seoTitle": "Pesto Chicken Pizza | Firefighter Meal",
+  "shortDescription": "Basil pesto, sun-dried tomato, chicken",
+  "subtitle": "Basil pesto, sun-dried tomato, chicken",
+  "category": "pizza_night",
+  "cuisine": "italian",
+  "description": "Basil pesto, sun-dried tomato, chicken. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 80,
+  "prepTime": 30,
+  "difficulty": "medium",
+  "calories": 781,
+  "protein": 80,
+  "carbs": 26,
+  "fats": 37,
+  "tags": [
+    "protein:chicken",
+    "format:pizza",
+    "category:pizza_night",
+    "handheld",
+    "golden_100"
+  ],
+  "equipment": [
+    "Pizza stone or steel",
+    "Peel or inverted sheet pan",
+    "Large sheet trays",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "ingredients": [
+    {
+      "name": "Pizza dough balls (15 oz)",
+      "quantity": "4",
+      "unit": "count",
+      "group": "Crust"
+    },
+    {
+      "name": "Basil pesto",
+      "quantity": "1.5",
+      "unit": "cups",
+      "group": "Sauce"
+    },
+    {
+      "name": "Cooked chicken breast, sliced",
+      "quantity": "3",
+      "unit": "lb",
+      "group": "Main"
+    },
+    {
+      "name": "Fresh mozzarella, torn",
+      "quantity": "24",
+      "unit": "oz",
+      "group": "Cheese"
+    },
+    {
+      "name": "Cherry tomatoes, halved",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Topping"
+    },
+    {
+      "name": "Grated parmesan",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Cheese"
+    },
+    {
+      "name": "Pine nuts, toasted",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Finish"
+    },
+    {
+      "name": "Balsamic glaze",
+      "quantity": "0.3",
+      "unit": "cup",
+      "group": "Finish"
+    },
+    {
+      "name": "Kosher salt",
+      "quantity": "1",
+      "unit": "tsp",
+      "group": "Seasoning"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Season chicken and prep toppings",
+      "instruction": "Slice cooked chicken and season lightly with salt. Halve cherry tomatoes and toast pine nuts in a dry skillet until golden — watch them; pine nuts go from toast to trash in seconds.",
+      "minutes": 10,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat stone to 500°F",
+      "instruction": "Heat stone or steel at 500°F at least 40 minutes. Pesto burns if the stone is not fully saturated.",
+      "minutes": 40,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Stretch and pesto base",
+      "instruction": "Stretch dough to 12–14 inches. Spread pesto in a thin even layer — thick pesto globs stay raw-tasting in the center. Leave a clean rim for blistering.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Mozzarella, chicken, tomatoes",
+      "instruction": "Layer fresh mozzarella, chicken, and cherry tomatoes cut-side up so they roast. Sprinkle parmesan. No tomato sauce on pesto night.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Bake until pesto edges darken",
+      "instruction": "Bake 10–13 minutes until cheese melts and pesto oil sizzles at the edges. Tomatoes should wrinkle slightly. Rotate once.",
+      "minutes": 12,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Pine nuts, balsamic, and cut",
+      "instruction": "Scatter pine nuts and drizzle balsamic glaze after the bake. Rest 2 minutes, cut 8 slices. Pesto Chicken Pizza — green sauce, bright finish, hall-approved.",
+      "minutes": 5,
+      "heatLevel": "low"
+    }
+  ],
+  "proTips": [
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
+    "Taste for salt at the end — hall palates run salty after long shifts.",
+    "Pull chicken at 160°F and let carryover hit 165°F — dry breast ruins crew morale."
+  ],
+  "tonightSpread": [
+    "Cut pies into hall slices (8 per pie minimum) and fan on sheet trays.",
+    "Keep a fresh pie warming in the oven — pizza dies fast on the counter.",
+    "Line up Pesto Chicken Pizza on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+  ],
+  "leftovers": [
+    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
+    "Label trays with date and reheat to 165°F minimum before second shift."
+  ],
+  "whyCrewsLikeIt": "Basil pesto, sun-dried tomato, chicken. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
+  "substitutions": [
+    "Chicken thighs ↔ breasts (thighs forgive overcooking on the flat-top)."
+  ],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 781,
+    "protein": 80,
+    "carbs": 26,
+    "fats": 37,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "heroImage": "/images/golden-100/pesto-chicken-pizza.jpg",
+  "mobileImage": "/images/mobile/pesto-chicken-pizza.jpg",
+  "thumbImage": "/images/thumbs/pesto-chicken-pizza.jpg",
+  "railImage": "/images/rails/pesto-chicken-pizza.jpg",
+  "realismScore": 100,
+  "firefighterScore": 100,
+  "popularityWeight": 3.2,
+  "searchTerms": [
+    "pesto chicken pizza",
+    "italian",
+    "chicken",
+    "pizza",
+    "handheld",
+    "golden_100"
+  ],
+  "relatedSlugs": [
+    "white-garlic-chicken-pizza",
+    "bbq-chicken-pizza",
+    "buffalo-chicken-pizza",
+    "nashville-hot-chicken-pizza",
+    "four-cheese-white-pizza",
+    "honey-soppressata-pizza"
+  ],
+  "generatedAt": "2026-05-30T03:45:01.613Z",
+  "contentVersion": 2
+}

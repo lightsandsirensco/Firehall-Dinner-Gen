@@ -1,32 +1,47 @@
 /** Core brand + target keyword phrases for metadata and copy. */
 
+import {
+  APPROVED_CATALOG_TOTAL,
+  formatMarketingRecipeCount,
+} from "../meal-catalog/curated-count.js";
+
 export const SEO_SITE_NAME = "Firehall Meals";
 export const SEO_BRAND = "FirehallMeals";
-export const SEO_TAGLINE = "Firefighter Built · Firehall Tested";
+export const SEO_TAGLINE = "Built by Firefighters. Tested in the Firehall.";
+export const SEO_MISSION =
+  "Get rid of the \"What's for Dinner?\" debate every shift.";
+
+/** Preferred canonical origin (www). */
+export const SEO_CANONICAL_ORIGIN = "https://www.firehallmeals.com";
 
 export const SEO_TARGET_KEYWORDS = [
-  "firefighter recipes",
   "firefighter meals",
-  "firehouse recipes",
-  "fire station meals",
-  "firefighter dinner ideas",
-  "meals for firefighters",
+  "firefighter recipes",
   "firehall meals",
-  "firehall dinner ideas",
-  "healthy firefighter recipes",
+  "fire station meals",
+  "firehouse recipes",
+  "meals for firefighters",
+  "firefighter dinner ideas",
+  "crew meals",
+  "station meals",
   "firehouse cooking",
+  "healthy firefighter meals",
+  "firefighter breakfast recipes",
+  "firehall recipes",
+  "firehall dinner ideas",
 ] as const;
 
-/** Homepage title — primary keywords first; brand for CTR recognition. */
-export const SEO_DEFAULT_TITLE = "Firefighter Recipes & Firefighter Meals | FirehallMeals";
+/** Homepage title — primary keyword first; brand for CTR recognition. */
+export const SEO_DEFAULT_TITLE = "Firefighter Meals & Firehall Recipes | Firehall Meals";
 
 export const SEO_DEFAULT_DESCRIPTION =
-  "Browse 150+ firefighter recipes and firehouse meals sized for the crew — shift dinners, healthy hall picks, BBQ favorites, and rookie-friendly steps. Built by firefighters for station kitchens.";
+  `Discover ${formatMarketingRecipeCount(APPROVED_CATALOG_TOTAL)} firefighter meals, firehall recipes, crew dinners, BBQ ideas, healthy station meals, and firefighter cooking classics. Built by firefighters. Tested in the firehall.`;
 
-/** Visible homepage H1 (matches title intent; not the legal brand string). */
-export const SEO_HOME_H1 = "Firefighter Recipes Built for the Crew";
+/** Visible homepage H1 (matches title intent). */
+export const SEO_HOME_H1 = "Firefighter Meals & Firehall Recipes";
 
-export const SEO_HOME_HERO_EYEBROW = "Firefighter recipes · Firehouse meals · Hall-tested";
+export const SEO_HOME_HERO_EYEBROW =
+  "Firefighter meals · Firehall recipes · Crew-tested";
 
 export const SEO_DEFAULT_OG_IMAGE_PATH = "/images/golden-100/chicken-parm.jpg";
 

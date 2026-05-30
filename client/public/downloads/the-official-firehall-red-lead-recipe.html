@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Official Firehall Red Lead Recipe | Firehall Meals</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Oswald:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ink: #1a1210;
+        --muted: #5c4f4a;
+        --line: #d9cfc8;
+        --paper: #fbf7f2;
+        --cream: #f3ebe1;
+        --red: #b91c1c;
+        --red-dark: #7f1d1d;
+        --gold: #b45309;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: #e8e0d8;
+        color: var(--ink);
+        font-family: "Libre Baskerville", Georgia, "Times New Roman", serif;
+        font-size: 11pt;
+        line-height: 1.55;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .sheet {
+        width: 8.5in;
+        min-height: 11in;
+        margin: 0 auto 16px;
+        padding: 0.65in 0.72in 0.7in;
+        background: var(--paper);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .sheet::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(circle at 100% 0%, rgba(185, 28, 28, 0.05), transparent 42%),
+          linear-gradient(180deg, rgba(255, 255, 255, 0.35), transparent 120px);
+        pointer-events: none;
+      }
+
+      .content {
+        position: relative;
+        z-index: 1;
+      }
+
+      h1,
+      h2,
+      h3,
+      .label {
+        font-family: Oswald, "Arial Narrow", sans-serif;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin: 0;
+      }
+
+      h1 {
+        font-size: 2.35rem;
+        line-height: 0.95;
+        color: var(--red-dark);
+      }
+
+      h2 {
+        font-size: 1.15rem;
+        color: var(--red-dark);
+        border-bottom: 2px solid var(--red);
+        padding-bottom: 0.35rem;
+        margin-bottom: 0.85rem;
+      }
+
+      h3 {
+        font-size: 0.92rem;
+        color: var(--ink);
+        margin-top: 1rem;
+        margin-bottom: 0.35rem;
+      }
+
+      p {
+        margin: 0 0 0.75rem;
+      }
+
+      .brand-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 0.55rem;
+        margin-bottom: 1.25rem;
+      }
+
+      .brand-mark {
+        display: flex;
+        align-items: center;
+        gap: 0.55rem;
+      }
+
+      .brand-flame {
+        width: 28px;
+        height: 28px;
+        border-radius: 999px;
+        background: linear-gradient(145deg, var(--red), var(--red-dark));
+        display: grid;
+        place-items: center;
+        color: white;
+        font-size: 0.95rem;
+      }
+
+      .brand-name {
+        font-family: Oswald, sans-serif;
+        font-size: 0.95rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .brand-tag {
+        font-size: 0.68rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .cover {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 9.5in;
+      }
+
+      .cover-hero {
+        margin-top: 0.35in;
+      }
+
+      .cover-kicker {
+        font-family: Oswald, sans-serif;
+        font-size: 0.78rem;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: var(--red);
+        margin-bottom: 0.85rem;
+      }
+
+      .cover-subtitle {
+        font-size: 1.05rem;
+        font-style: italic;
+        color: var(--muted);
+        max-width: 5.8in;
+        margin-top: 0.85rem;
+      }
+
+      .cover-intro {
+        margin-top: 1.35rem;
+        max-width: 6in;
+        font-size: 0.98rem;
+      }
+
+      .cover-rule {
+        width: 2.4in;
+        height: 3px;
+        background: linear-gradient(90deg, var(--red), var(--gold));
+        margin: 1.1rem 0 1rem;
+      }
+
+      .cover-meta {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.75rem;
+        margin-top: 1.5rem;
+      }
+
+      .meta-card {
+        background: var(--cream);
+        border: 1px solid var(--line);
+        padding: 0.65rem 0.75rem;
+      }
+
+      .meta-card .label {
+        font-size: 0.62rem;
+        color: var(--muted);
+        margin-bottom: 0.2rem;
+      }
+
+      .meta-card strong {
+        font-family: Oswald, sans-serif;
+        font-size: 1rem;
+        letter-spacing: 0.06em;
+      }
+
+      .cover-footer {
+        border-top: 1px solid var(--line);
+        padding-top: 0.75rem;
+        font-size: 0.78rem;
+        color: var(--muted);
+      }
+
+      .two-col {
+        columns: 2;
+        column-gap: 1.1rem;
+      }
+
+      .callout {
+        background: var(--cream);
+        border-left: 4px solid var(--red);
+        padding: 0.75rem 0.85rem;
+        margin: 0.85rem 0 1rem;
+        break-inside: avoid;
+      }
+
+      .callout p:last-child {
+        margin-bottom: 0;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 0.5rem 0 1rem;
+        font-size: 0.88rem;
+      }
+
+      th,
+      td {
+        border: 1px solid var(--line);
+        padding: 0.42rem 0.5rem;
+        vertical-align: top;
+        text-align: left;
+      }
+
+      th {
+        font-family: Oswald, sans-serif;
+        font-size: 0.72rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        background: var(--cream);
+      }
+
+      .serve-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.65rem;
+        margin-top: 0.75rem;
+      }
+
+      .serve-card {
+        border: 1px solid var(--line);
+        background: white;
+        padding: 0.55rem 0.6rem 0.65rem;
+        break-inside: avoid;
+      }
+
+      .serve-card h3 {
+        margin-top: 0;
+        color: var(--red-dark);
+        font-size: 0.95rem;
+      }
+
+      .serve-card ul {
+        margin: 0;
+        padding-left: 1rem;
+      }
+
+      .serve-card li {
+        margin-bottom: 0.28rem;
+      }
+
+      ol.steps {
+        margin: 0;
+        padding-left: 1.15rem;
+      }
+
+      ol.steps > li {
+        margin-bottom: 0.95rem;
+        break-inside: avoid;
+      }
+
+      .step-title {
+        font-family: Oswald, sans-serif;
+        font-size: 0.82rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--red-dark);
+        margin-bottom: 0.25rem;
+      }
+
+      .step-meta {
+        font-size: 0.78rem;
+        color: var(--muted);
+        margin-top: 0.35rem;
+      }
+
+      ul.tight {
+        margin: 0.2rem 0 0.75rem;
+        padding-left: 1.1rem;
+      }
+
+      ul.tight li {
+        margin-bottom: 0.35rem;
+      }
+
+      .pairing-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.65rem;
+      }
+
+      .pairing {
+        border: 1px solid var(--line);
+        padding: 0.65rem 0.7rem;
+        background: white;
+        break-inside: avoid;
+      }
+
+      .pairing h3 {
+        margin-top: 0;
+        color: var(--red);
+      }
+
+      .closing {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 9.2in;
+        text-align: center;
+      }
+
+      .closing h2 {
+        border: 0;
+        font-size: 1.45rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .closing-url {
+        font-family: Oswald, sans-serif;
+        font-size: 1.35rem;
+        letter-spacing: 0.08em;
+        color: var(--red);
+        margin: 1rem 0 0.35rem;
+      }
+
+      .closing-tagline {
+        font-size: 0.82rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .page-num {
+        position: absolute;
+        right: 0.72in;
+        bottom: 0.45in;
+        font-size: 0.68rem;
+        color: var(--muted);
+        letter-spacing: 0.08em;
+      }
+
+      @media print {
+        html,
+        body {
+          background: white;
+        }
+
+        .sheet {
+          margin: 0;
+          box-shadow: none;
+          page-break-after: always;
+          break-after: page;
+        }
+
+        .sheet:last-child {
+          page-break-after: auto;
+          break-after: auto;
+        }
+      }
+
+      @page {
+        size: letter;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- PAGE 1 — COVER -->
+    <section class="sheet cover">
+      <div class="content">
+        <div class="brand-bar">
+          <div class="brand-mark">
+            <div class="brand-flame" aria-hidden="true">🔥</div>
+            <div>
+              <div class="brand-name">Firehall Meals</div>
+              <div class="brand-tag">Built by Firefighters · Tested in the Firehall</div>
+            </div>
+          </div>
+          <div class="brand-tag">Free Hall Kitchen Recipe Card</div>
+        </div>
+
+        <div class="cover-hero">
+          <p class="cover-kicker">Sunday Morning · Kitchen Table Tradition</p>
+          <h1>The Official Firehall<br />Red Lead Recipe</h1>
+          <div class="cover-rule"></div>
+          <p class="cover-subtitle">
+            The senior cook’s cast-iron centerpiece — seared steak, peppers, potatoes, and eggs — for the
+            spread that gathers the crew around the table.
+          </p>
+          <div class="cover-intro">
+            <p>
+              Red Lead is not a grab-and-go breakfast. In halls that still run a proper Sunday morning,
+              it sits at the center of a long, unhurried spread — bacon on sheet pans, toast stacked
+              warm, beans simmering, coffee refilled, and firefighters drifting in from the bunk room
+              one conversation at a time.
+            </p>
+            <p>
+              This card documents the skillet itself: one proud pan in a larger tradition. The meal
+              matters, but the people around the kitchen table matter more. Print it, cook it on a
+              morning when the tones are quiet, and leave room at the table for the crew to actually
+              sit down together.
+            </p>
+          </div>
+
+          <div class="cover-meta">
+            <div class="meta-card">
+              <div class="label">Cook time</div>
+              <strong>About 40 min</strong>
+            </div>
+            <div class="meta-card">
+              <div class="label">Best for</div>
+              <strong>Sunday table spread</strong>
+            </div>
+            <div class="meta-card">
+              <div class="label">Best pan</div>
+              <strong>12-inch cast iron</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="cover-footer">
+          © Firehall Meals · FirehallMeals.com · For personal and station kitchen use.
+        </div>
+      </div>
+      <div class="page-num">1</div>
+    </section>
+
+    <!-- PAGE 2 — HISTORY -->
+    <section class="sheet">
+      <div class="content">
+        <div class="brand-bar">
+          <div class="brand-mark">
+            <div class="brand-flame" aria-hidden="true">🔥</div>
+            <div class="brand-name">Firehall Meals</div>
+          </div>
+          <div class="brand-tag">The Official Firehall Red Lead Recipe</div>
+        </div>
+
+        <h2>What Red Lead Is — and Why the Table Still Matters</h2>
+
+        <div class="two-col">
+          <p>
+            <strong>Red Lead</strong> is hall language for the senior cook’s showpiece skillet — the pan
+            that lands on the kitchen table when breakfast is a crew event, not a pit stop. You will hear
+            the name in stations across North America, often tied to the officer’s red helmet tradition
+            or simply to whoever is <em>leading</em> the line that morning. It is respect earned at the
+            range, not a brand name printed on a box.
+          </p>
+          <p>
+            The tradition runs slow. Sunday after a busy night, or any morning when the hall is not
+            chasing tones, the kitchen fills with the smell of bacon, coffee on its second pot, and cast
+            iron that has been working long enough to build real color. People pull chairs up. Rookies
+            learn how your hall takes eggs. Old hands tell the same stories. Nobody is watching the clock.
+          </p>
+          <p>
+            Red Lead is <strong>one piece</strong> of that spread — not the whole breakfast. The table
+            still carries eggs done your way, toast, baked beans, hash browns or home fries, bacon or
+            peameal, sausage, orange juice, and sometimes a bowl of Greek yogurt with granola and
+            berries for whoever wants something lighter. The skillet earns its place because it anchors
+            the table; it does not replace everything else on it.
+          </p>
+          <p>
+            Firefighters remember these mornings for the room, not the recipe card. Steak strips and eggs
+            from cast iron give the cook something to be proud of, but the crew gathers for the
+            camaraderie — coffee poured twice, plates passed, ten extra minutes at the table before
+            anyone checks their phone. <strong>This Firehall Meals version</strong> documents the
+            skillet: seared protein, crisp potatoes, peppers, eggs cracked over the top — meant to be
+            carried to a table already set for a proper hall breakfast.
+          </p>
+        </div>
+
+        <div class="callout">
+          <p>
+            <strong>The meal matters. The people around the table matter more.</strong> Cook your hall’s
+            full spread your way — use this card for the Red Lead pan itself: batch searing, par-cooked
+            potatoes, egg wells, and a gentle covered finish so whites set without ruining the yolks
+            someone will dip their toast into.
+          </p>
+        </div>
+
+        <h3>When halls run it</h3>
+        <ul class="tight">
+          <li>Sunday morning, when the crew can eat together without rushing</li>
+          <li>After a long night shift, when the kitchen table is the debrief</li>
+          <li>Training weekends or family days, when visitors stay for coffee</li>
+          <li>Any morning the officer says, “Sit down — we’re doing breakfast properly”</li>
+        </ul>
+      </div>
+      <div class="page-num">2</div>
+    </section>
+
+    <!-- PAGE 3 — INGREDIENTS -->
+    <section class="sheet">
+      <div class="content">
+        <div class="brand-bar">
+          <div class="brand-mark">
+            <div class="brand-flame" aria-hidden="true">🔥</div>
+            <div class="brand-name">Firehall Meals</div>
+          </div>
+          <div class="brand-tag">Ingredients · Serves 4, 8, or 12</div>
+        </div>
+
+        <h2>Ingredients</h2>
+        <p>
+          Read the full list before you touch a knife. This is the Red Lead pan only — the rest of the
+          hall spread (bacon, beans, toast, extra eggs, juice) gets its own prep. Scale the skillet
+          exactly; the senior cook’s credibility is partly in not running out of the centerpiece.
+        </p>
+
+        <div class="serve-grid">
+          <div class="serve-card">
+            <h3>Serves 4</h3>
+            <ul>
+              <li>1 lb sirloin or flank steak, sliced thin against the grain</li>
+              <li>7 large eggs</li>
+              <li>2 bell peppers, mixed colors, sliced</li>
+              <li>½ medium red onion, sliced thin</li>
+              <li>1¾ lb Yukon gold potatoes, diced ½-inch</li>
+              <li>1½ tbsp steak seasoning (or equal parts salt, pepper, garlic powder)</li>
+              <li>1½ tbsp vegetable oil, plus butter for finishing</li>
+              <li>¾ cup shredded pepper jack (optional)</li>
+              <li>Salt and black pepper to taste</li>
+            </ul>
+          </div>
+
+          <div class="serve-card">
+            <h3>Serves 8</h3>
+            <ul>
+              <li>2 lb sirloin or flank steak, sliced thin against the grain</li>
+              <li>14 large eggs</li>
+              <li>3 bell peppers, mixed colors, sliced</li>
+              <li>1 medium red onion, sliced thin</li>
+              <li>3½ lb Yukon gold potatoes, diced ½-inch</li>
+              <li>3 tbsp steak seasoning (or equal parts salt, pepper, garlic powder)</li>
+              <li>3 tbsp vegetable oil, plus butter for finishing</li>
+              <li>1½ cups shredded pepper jack (optional)</li>
+              <li>Salt and black pepper to taste</li>
+            </ul>
+          </div>
+
+          <div class="serve-card">
+            <h3>Serves 12</h3>
+            <ul>
+              <li>3 lb sirloin or flank steak, sliced thin against the grain</li>
+              <li>21 large eggs</li>
+              <li>4–5 bell peppers, mixed colors, sliced</li>
+              <li>1½ medium red onions, sliced thin</li>
+              <li>5¼ lb Yukon gold potatoes, diced ½-inch</li>
+              <li>4½ tbsp steak seasoning (or equal parts salt, pepper, garlic powder)</li>
+              <li>4½ tbsp vegetable oil, plus butter for finishing</li>
+              <li>2¼ cups shredded pepper jack (optional)</li>
+              <li>Salt and black pepper to taste</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3>Before you start — rookie prep checklist</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Task</th>
+              <th>Why it matters</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Slice steak thin, against the grain</td>
+              <td>Thick strips stay chewy; thin strips sear in minutes.</td>
+            </tr>
+            <tr>
+              <td>Dice potatoes uniform ½-inch</td>
+              <td>Even pieces par-cook and crisp at the same rate.</td>
+            </tr>
+            <tr>
+              <td>Pat steak and potatoes dry</td>
+              <td>Water kills sear color and steams instead of browning.</td>
+            </tr>
+            <tr>
+              <td>Preheat cast iron 5 minutes</td>
+              <td>Cold iron absorbs heat; steak grays instead of browning.</td>
+            </tr>
+            <tr>
+              <td>Have a lid or sheet pan ready</td>
+              <td>Egg finish needs covered steam — no lid means dry whites.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p class="step-meta">
+          For 12 servings, use two 12-inch skillets or one large griddle plus a finishing pan. Do not
+          crowd a single pan — batch the steak and potatoes, then combine for the egg stage.
+        </p>
+      </div>
+      <div class="page-num">3</div>
+    </section>
+
+    <!-- PAGE 4 — INSTRUCTIONS (part 1) -->
+    <section class="sheet">
+      <div class="content">
+        <div class="brand-bar">
+          <div class="brand-mark">
+            <div class="brand-flame" aria-hidden="true">🔥</div>
+            <div class="brand-name">Firehall Meals</div>
+          </div>
+          <div class="brand-tag">Cooking Instructions</div>
+        </div>
+
+        <h2>Step-by-Step — Assume You Have Never Made It</h2>
+        <p>
+          Follow the order. The pan has a rhythm: potatoes first, steak second, veg third, eggs last.
+          Start the rest of the spread before the skillet — bacon in the oven, beans warming, toast
+          ready — so when the eggs go on, the table is set and the crew can sit. If the tones drop, turn
+          off heat, cover the pan, and pick up where you left off. A proper breakfast waits for the room,
+          not the other way around.
+        </p>
+
+        <ol class="steps">
+          <li>
+            <div class="step-title">Step 1 · Par-cook the potatoes (about 8 minutes)</div>
+            Place diced potatoes in a microwave-safe bowl with a splash of water. Cover and microwave
+            until just tender when pierced with a fork — not mushy. Drain well, spread on a towel, and pat
+            completely dry. <strong>Visual cue:</strong> pieces bend slightly but still hold their shape.
+            Wet potatoes steam in the skillet and never crisp.
+            <div class="step-meta">Hold covered off heat up to 20 minutes if you need to pause.</div>
+          </li>
+          <li>
+            <div class="step-title">Step 2 · Sear the steak strips (about 8 minutes)</div>
+            Heat cast iron over <strong>high</strong> with oil until the oil shimmers and the pan surface
+            reads about <strong>400°F</strong> (water droplets should skitter). Working in batches so the
+            meat is not crowded, lay steak in a single layer. Sear <strong>2–3 minutes per side</strong>
+            until deeply browned. Target <strong>130°F internal</strong> for medium-rare strips — they
+            finish gently later. Transfer to a warm tray, loosely covered with foil.
+            <div class="step-meta">
+              <strong>Visual cue:</strong> dark crust on the edges, pink center when you cut a test piece.
+              Gray, steaming meat means the pan was not hot enough.
+            </div>
+          </li>
+          <li>
+            <div class="step-title">Step 3 · Crisp potatoes and peppers (about 10 minutes)</div>
+            Add another tablespoon of oil to the same pan. Add potatoes in one layer — do not stir for the
+            first <strong>3 minutes</strong>. Let them sit so they pick up color. Toss, then add onion and
+            peppers. Cook over <strong>medium-high</strong>, stirring occasionally, until edges char and
+            onions turn translucent with golden spots.
+            <div class="step-meta">
+              <strong>Visual cue:</strong> potato faces show golden-brown patches; peppers blister at the
+              edges.
+            </div>
+          </li>
+        </ol>
+      </div>
+      <div class="page-num">4</div>
+    </section>
+
+    <!-- PAGE 5 — INSTRUCTIONS (part 2) + ROOKIE TIPS -->
+    <section class="sheet">
+      <div class="content">
+        <div class="brand-bar">
+          <div class="brand-mark">
+            <div class="brand-flame" aria-hidden="true">🔥</div>
+            <div class="brand-name">Firehall Meals</div>
+          </div>
+          <div class="brand-tag">Finish · Rookie Tips</div>
+        </div>
+
+        <ol class="steps" start="4">
+          <li>
+            <div class="step-title">Step 4 · Combine and make egg wells (about 3 minutes)</div>
+            Fold seared steak and any resting juices back into the skillet. Lower heat to
+            <strong>medium</strong>. With the back of a spoon, make shallow wells across the surface — one
+            well per egg. Crack an egg into each well. Season with salt and pepper.
+            <div class="step-meta">
+              <strong>Visual cue:</strong> whites begin to turn opaque at the edges while yolks stay
+              bright and domed.
+            </div>
+          </li>
+          <li>
+            <div class="step-title">Step 5 · Cover and finish (about 6 minutes)</div>
+            Cover with a tight lid or inverted sheet pan. Cook over <strong>medium-low</strong> until egg
+            whites are fully set — <strong>165°F</strong> on the white if you temp — and yolks are runny or
+            jammy, your call. Scatter pepper jack if using, cover <strong>60 seconds</strong> to melt, then
+            serve straight from the pan or onto warm plates.
+            <div class="step-meta">
+              <strong>Visual cue:</strong> whites opaque all the way through; yolk jiggles when you shake
+              the pan gently. Green ring around the yolk means overcooked — next time lower heat and shorten
+              the cover time.
+            </div>
+          </li>
+        </ol>
+
+        <h2>Rookie Tips — Read Before Your First Shift Cook</h2>
+
+        <h3>Common mistakes</h3>
+        <ul class="tight">
+          <li><strong>Crowding the pan.</strong> Steak steams; potatoes boil. Batch cook, then combine.</li>
+          <li><strong>Skipping the potato par-cook.</strong> Raw centers mean either burnt outsides or raw middles.</li>
+          <li><strong>Cracking eggs onto a screaming-hot surface.</strong> Whites seize and brown before they spread. Medium heat for the egg stage.</li>
+          <li><strong>No cover on the eggs.</strong> You get slick raw whites on top and dry bottoms underneath.</li>
+        </ul>
+
+        <h3>How to avoid burning it</h3>
+        <ul class="tight">
+          <li>Use medium-high for veg, not full blast — cast iron keeps getting hotter.</li>
+          <li>Keep moving the pan off heat for 30 seconds if you smell acrid oil, then adjust.</li>
+          <li>Finish eggs on medium-low. Patience beats a blackened bottom.</li>
+        </ul>
+
+        <h3>Best tomatoes (and peppers) for the hall</h3>
+        <p>
+          This skillet builds flavor from peppers and onion, not tomato sauce — but most halls still put
+          something red on the table. For a side of pico or warmed salsa, use <strong>Roma or vine-ripe
+          tomatoes</strong> with salt ten minutes before serving so they taste bright, not watery. Avoid
+          pre-diced supermarket tubs — they weep and dilute everything. For the pan itself, pick peppers
+          with tight skin; bell peppers should feel heavy and snap when you slice.
+        </p>
+
+        <h3>Best side dishes on the same spread</h3>
+        <p>
+          The skillet is the centerpiece — not the whole table. Most halls still set out baked beans,
+          extra eggs (scrambled or fried to order), toast, hash browns or home fries if the pan potatoes
+          are not enough, bacon or peameal bacon, link sausage, orange juice, and sometimes Greek yogurt
+          with granola, strawberries, and blueberries for crew who want something lighter. Let people
+          build their own plate and stay at the table.
+        </p>
+      </div>
+      <div class="page-num">5</div>
+    </section>
+
+    <!-- PAGE 6 — FIREHALL PAIRINGS -->
+    <section class="sheet">
+      <div class="content">
+        <div class="brand-bar">
+          <div class="brand-mark">
+            <div class="brand-flame" aria-hidden="true">🔥</div>
+            <div class="brand-name">Firehall Meals</div>
+          </div>
+          <div class="brand-tag">Firehall Pairings</div>
+        </div>
+
+        <h2>The Full Sunday Kitchen Table</h2>
+        <p>
+          Red Lead belongs in the middle of a traditional firehall breakfast — one proud pan among many
+          bowls and platters. The senior runs cast iron; everyone else keeps the table alive with sides,
+          coffee, and conversation. Nobody should be standing alone at the range while the crew eats
+          without them.
+        </p>
+
+        <div class="pairing-grid">
+          <div class="pairing">
+            <h3>Eggs</h3>
+            <p>
+              The skillet carries cracked eggs in the pan — that is the Red Lead showpiece. Still put
+              extra eggs on the table: scrambled in a hotel pan, fried to order on a flat griddle, or
+              soft-boiled for crew who want them separate. Second helpings happen; plan for it.
+            </p>
+          </div>
+          <div class="pairing">
+            <h3>Bacon &amp; peameal</h3>
+            <p>
+              Lay bacon on rimmed sheet pans and bake at <strong>400°F for 15–18 minutes</strong> until
+              crisp. Peameal slices get the same treatment or a light sear on the griddle. Stack on paper
+              towels, hold warm, refill the platter when the first batch disappears — which it will.
+            </p>
+          </div>
+          <div class="pairing">
+            <h3>Sausage</h3>
+            <p>
+              Link sausage in the oven alongside the bacon, or bulk sausage broken into crumbles in a
+              second pan. Keep it simple — salt and pepper. Serve in a warm bowl at the table with tongs;
+              let people take what they want while the coffee pot makes another round.
+            </p>
+          </div>
+          <div class="pairing">
+            <h3>Toast</h3>
+            <p>
+              Thick bread through the toaster or under <strong>low broil, 2–3 minutes per side</strong>.
+              Stack loosely in foil in a warm oven. Butter and jam on the table — not pre-buttered stacks
+              that sit and sweat while the crew is still talking.
+            </p>
+          </div>
+          <div class="pairing">
+            <h3>Beans</h3>
+            <p>
+              Baked beans warmed in a pot or slow oven — the quiet side that anchors a Canadian hall
+              breakfast. A can simmered with a spoon of mustard and molasses is honest work. Keep a ladle
+              on the table next to the toast.
+            </p>
+          </div>
+          <div class="pairing">
+            <h3>Potatoes &amp; hash browns</h3>
+            <p>
+              The skillet already carries diced Yukon golds. If your hall always sets out hash browns or
+              extra home fries, run them on a flat griddle while the Red Lead finishes under cover — keep
+              them separate so neither pan fights for temperature.
+            </p>
+          </div>
+          <div class="pairing">
+            <h3>Orange juice</h3>
+            <p>
+              Pitcher on the table, refilled once without being asked. It sounds small; it is not. The
+              crew notices when the little things are handled before anyone has to ask.
+            </p>
+          </div>
+          <div class="pairing">
+            <h3>Greek yogurt (optional)</h3>
+            <p>
+              Some halls put out Greek yogurt with granola, strawberries, and blueberries — for crew who
+              want something lighter or who eat around the heavy plate and still stay at the table for
+              the conversation.
+            </p>
+          </div>
+          <div class="pairing">
+            <h3>Coffee &amp; the table</h3>
+            <p>
+              Start the first pot before the steak hits the pan. When the eggs go under cover, call the
+              crew to the table — not to a line, to <em>chairs</em>. The skillet comes last, placed in
+              the middle where everyone can reach it. That is the tradition.
+            </p>
+          </div>
+        </div>
+
+        <div class="callout">
+          <p>
+            <strong>Station workflow:</strong> One cook on the Red Lead pan, others on bacon, beans,
+            toast, and coffee. The goal is a full table and an empty bunk room — firefighters sitting
+            together long enough to remember why they like this job.
+          </p>
+        </div>
+      </div>
+      <div class="page-num">6</div>
+    </section>
+
+    <!-- PAGE 7 — CLOSING -->
+    <section class="sheet">
+      <div class="content closing">
+        <div class="brand-mark" style="justify-content: center; margin-bottom: 1.25rem">
+          <div class="brand-flame" aria-hidden="true">🔥</div>
+          <div class="brand-name">Firehall Meals</div>
+        </div>
+
+        <h2>Keep the Tradition at Your Table</h2>
+        <p style="max-width: 5.5in; margin: 0 auto 1rem">
+          You just read the recipe for one pan in a morning that is really about the room — chairs pulled
+          up, coffee going cold while nobody notices, stories that do not need a punchline. Keep this
+          card in the kitchen for the technique. Keep the table set for the crew.
+        </p>
+
+        <p style="max-width: 5.5in; margin: 0 auto">
+          When it is not a Sunday and the hall needs dinner instead of breakfast, Firehall Meals carries
+          <strong>250+ firehall-tested recipes</strong> sized for real crews — the same respect for
+          portions, timing, and station kitchens, written by firefighters who know what interruption
+          feels like at the range.
+        </p>
+
+        <div class="closing-url">FirehallMeals.com</div>
+        <div class="closing-tagline">Built by Firefighters · Tested in the Firehall</div>
+
+        <div class="callout" style="margin: 1.5rem auto 0; max-width: 5.5in; text-align: left">
+          <p><strong>Try the meal generator.</strong> Set crew size, protein, and time — get a hall-tested
+          dinner pick in seconds when nobody wants to argue about what is for supper.</p>
+          <p style="margin-bottom: 0"><strong>Explore the catalog.</strong> From chicken parm to post-call
+          breakfast skillets — every recipe includes crew scaling, honest timing, and steps written for
+          station kitchens.</p>
+        </div>
+
+        <p style="margin-top: 1.5rem; font-size: 0.82rem; color: var(--muted)">
+          © Firehall Meals · A Lights &amp; Sirens Co. project · FirehallMeals.com/generator
+        </p>
+      </div>
+      <div class="page-num">7</div>
+    </section>
+  </body>
+</html>

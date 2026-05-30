@@ -1,0 +1,186 @@
+{
+  "slug": "sandwich-board-night",
+  "title": "Sandwich Board Night",
+  "displayTitle": "Sandwich Board Night",
+  "seoTitle": "Sandwich Board Night | Firefighter Meal",
+  "shortDescription": "Deli-style sandwich board with meats, cheeses, and spreads for ten",
+  "subtitle": "Deli-style sandwich board with meats, cheeses, and spreads for ten",
+  "category": "hall_expansion",
+  "cuisine": "american",
+  "description": "A long sandwich board offers sliced turkey, ham, roast beef, three cheeses, and spreads with sub rolls and condiments. Crew assembles foot-long style sandwiches or half subs depending on appetite.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 10,
+  "prepTime": 35,
+  "difficulty": "easy",
+  "calories": 480,
+  "protein": 28,
+  "carbs": 42,
+  "fats": 22,
+  "tags": [
+    "protein:mixed",
+    "format:bar_line",
+    "category:crew_feeders",
+    "bar_line",
+    "handheld",
+    "comfort",
+    "hall_expansion",
+    "hall_expansion_56",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Cutting board",
+    "Hotel pans",
+    "Squeeze bottles",
+    "Sheet pan",
+    "Tongs"
+  ],
+  "ingredients": [
+    {
+      "name": "sliced turkey breast",
+      "quantity": "2",
+      "unit": "lb",
+      "group": "Meat"
+    },
+    {
+      "name": "sliced ham",
+      "quantity": "1.5",
+      "unit": "lb",
+      "group": "Meat"
+    },
+    {
+      "name": "sliced roast beef",
+      "quantity": "1.5",
+      "unit": "lb",
+      "group": "Meat"
+    },
+    {
+      "name": "provolone cheese",
+      "quantity": "1",
+      "unit": "lb",
+      "notes": "sliced",
+      "group": "Cheese"
+    },
+    {
+      "name": "cheddar cheese",
+      "quantity": "1",
+      "unit": "lb",
+      "notes": "sliced",
+      "group": "Cheese"
+    },
+    {
+      "name": "Swiss cheese",
+      "quantity": "0.5",
+      "unit": "lb",
+      "notes": "sliced",
+      "group": "Cheese"
+    },
+    {
+      "name": "sub rolls",
+      "quantity": "12",
+      "unit": "whole",
+      "group": "Bread"
+    },
+    {
+      "name": "mayonnaise",
+      "quantity": "1",
+      "unit": "cup",
+      "group": "Spreads"
+    },
+    {
+      "name": "mustard assortment",
+      "quantity": "1",
+      "unit": "cup",
+      "group": "Spreads"
+    },
+    {
+      "name": "lettuce and tomato",
+      "quantity": "1",
+      "unit": "tray each",
+      "notes": "prepped",
+      "group": "Produce"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Slice and arrange proteins",
+      "instruction": "Fan sliced turkey, ham, and roast beef in separate rows on the board or in hotel pans. Fold rather than stack flat so slices lift easily without tearing.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Prep cheeses and produce",
+      "instruction": "Arrange provolone, cheddar, and Swiss alongside meats. Set lettuce, tomato, and onion in produce pans with tongs for easy grabbing.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Warm the rolls",
+      "instruction": "Split sub rolls and warm cut-side up at 325°F for 5–6 minutes until soft inside and lightly crisp at the edges. Wrap in towels until the board opens. Target oven/smoker temperature: 325°F.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Set spreads and condiments",
+      "instruction": "Fill squeeze bottles and ramekins with mayo, mustard, oil-vinegar, pickles, and pepperoncini. Place salt and pepper grinders at the end of the line.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Open the sandwich board",
+      "instruction": "Call crew to build sandwiches assembly-line style. Offer to press built subs on a griddle for crews wanting melted cheese without extra cook time.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "A drizzle of red wine vinegar on the board keeps deli flavors bright and authentic.",
+    "Pre-toast one side of each roll for structural integrity on saucy builds.",
+    "Leftover sliced meats freeze well for the next sandwich board night."
+  ],
+  "tonightSpread": [
+    "Full deli board with three meats, three cheeses, and warm sub rolls.",
+    "Chips and pickles for classic sub shop completeness."
+  ],
+  "leftovers": [
+    "Chop meats and cheese into a breakfast scramble with peppers.",
+    "Layer into pressed panini the next day with leftover spreads."
+  ],
+  "whyCrewsLikeIt": "Sandwich board night requires zero cooking during service if prep is done right. It works after training nights, during paperwork evenings, or whenever the oven is occupied elsewhere.",
+  "mealPrepNotes": "Slice all meats and cheeses the night before on a deli slicer or with a sharp knife. Store in separate containers with parchment between layers. Rolls can be warmed in the oven just before service.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 480,
+    "protein": 28,
+    "carbs": 42,
+    "fats": 22,
+    "label": "~480 cal/serving · 28g protein · 3g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/sandwich-board-night.jpg",
+  "heroImageAlt": "Sandwich Board Night — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/sandwich-board-night.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/sandwich-board-night.jpg",
+  "railImage": "/images/rails/hall-expansion/sandwich-board-night.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "sandwich board night",
+    "crew feeders"
+  ],
+  "relatedSlugs": [
+    "shawarma-bar-night",
+    "fajita-bar-night",
+    "hall-burger-bar",
+    "pasta-bar-night"
+  ],
+  "generatedAt": "2026-05-30T03:14:19.188Z",
+  "contentVersion": 2
+}

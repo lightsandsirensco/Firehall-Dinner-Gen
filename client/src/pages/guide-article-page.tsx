@@ -15,6 +15,7 @@ import {
   buildGuideArticleBreadcrumbs,
 } from "@shared/seo/schema";
 import { guidePath } from "@shared/editorial/content-schema";
+import { approvedCatalogRecipePath } from "@shared/approved-catalog";
 import { PILLAR_LABELS, type EditorialPillar } from "@shared/editorial/content-pillar";
 import { Loader2, Clock, ChefHat } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -23,8 +24,9 @@ import { GuideEmbeddedRecipes } from "@/components/guide-embedded-recipes";
 import { FoodImage } from "@/components/mobile/food-image";
 
 export default function GuideArticlePage() {
-  const [, params] = useRoute("/guides/:slug");
-  const slug = params?.slug ?? "";
+  const [, guideParams] = useRoute("/guides/:slug");
+  const [, blogParams] = useRoute("/blog/:slug");
+  const slug = guideParams?.slug ?? blogParams?.slug ?? "";
   const favCount = useMemo(() => getSavedCount(), []);
   const origin = getSiteOrigin();
 
@@ -194,26 +196,53 @@ export default function GuideArticlePage() {
                 Crew-sized portions and station-realistic timing — same recipes as the rest of the site.
               </p>
               <ul className="mt-6 space-y-4">
-                {article.mealRecommendations.map((meal) => (
-                  <li
-                    key={meal.slug}
-                    className="rounded-xl border border-border/25 bg-muted/10 p-4 sm:p-5"
-                  >
-                    <h3 className="font-semibold text-foreground">
-                      <Link
-                        href={`/recipes/${meal.slug}`}
-                        className="text-primary hover:underline"
-                      >
-                        {meal.title}
-                      </Link>
-                    </h3>
-                    <p className="mt-1.5 text-sm text-muted-foreground leading-relaxed">
-                      {meal.blurb}
-                    </p>
-                  </li>
-                ))}
+                {article.mealRecommendations.map((meal) => {
+                  const href = approvedCatalogRecipePath(meal.slug);
+                  return (
+                    <li
+                      key={meal.slug}
+                      className="rounded-xl border border-border/25 bg-muted/10 p-4 sm:p-5"
+                    >
+                      <h3 className="font-semibold text-foreground">
+                        <Link href={href} className="text-primary hover:underline">
+                          {meal.title}
+                        </Link>
+                      </h3>
+                      <p className="mt-1.5 text-sm text-muted-foreground leading-relaxed">
+                        {meal.blurb}
+                      </p>
+                    </li>
+                  );
+                })}
               </ul>
             </section>
+
+            <aside
+              className="mt-12 rounded-2xl border border-primary/25 bg-primary/5 p-5 sm:p-6"
+              aria-labelledby="firehall-cta-heading"
+            >
+              <h2 id="firehall-cta-heading" className="font-heading text-lg sm:text-xl">
+                Get rid of the &ldquo;What&apos;s for Dinner?&rdquo; debate
+              </h2>
+              <p className="mt-3 text-[15px] text-foreground/85 leading-relaxed">
+                Built by Firefighters. Tested in the Firehall. Browse crew-sized recipes or use Find a Meal when
+                the whiteboard goes quiet.
+              </p>
+              <div className="mt-4 flex flex-wrap gap-3">
+                <Link
+                  href="/recipes"
+                  className="inline-flex items-center rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground hover:bg-primary/90"
+                >
+                  Browse recipes
+                </Link>
+                <Link
+                  href="/explore"
+                  className="inline-flex items-center rounded-lg border border-border px-4 py-2 text-sm font-semibold text-foreground hover:bg-muted/50"
+                >
+                  Explore meals
+                </Link>
+              </div>
+            </aside>
 
             <section className="mt-12" aria-labelledby="faq-heading">
               <h2 id="faq-heading" className="font-heading text-xl sm:text-2xl">

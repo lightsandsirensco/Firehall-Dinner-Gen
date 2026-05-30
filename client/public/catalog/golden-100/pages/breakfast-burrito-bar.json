@@ -13,10 +13,10 @@
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 600,
-  "protein": 40,
-  "carbs": 48,
-  "fats": 28,
+  "calories": 1400,
+  "protein": 64,
+  "carbs": 120,
+  "fats": 90,
   "tags": [
     "protein:pork",
     "format:handheld",
@@ -93,11 +93,13 @@
     }
   ],
   "proTips": [
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts."
   ],
   "tonightSpread": [
-    "Plate Breakfast Burrito Bar with sides in separate pans so the crew can mix portions.",
+    "Label every topping bowl — rookies grab faster when they can read the line.",
+    "Keep hot bases (potatoes, chips) in cambros at 200°F and cold toppings on ice if service runs long.",
+    "Put forks, napkins, and a trash can at the end of the bar — self-serve feeds get messy fast.",
     "Keep hot items on one side of the table and cold on the other — eggs stay hot, fruit stays cold.",
     "Line up Breakfast Burrito Bar on the main counter with serving spoons — firefighters grab fast between calls.",
     "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
@@ -111,18 +113,32 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 600,
-    "protein": 40,
-    "carbs": 48,
-    "fats": 28,
-    "label": "per serving (hall portion)"
+    "calories": 1400,
+    "protein": 64,
+    "carbs": 120,
+    "fats": 90,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/breakfast-burrito-bar.jpg",
   "mobileImage": "/images/mobile/breakfast-burrito-bar.jpg",
   "thumbImage": "/images/thumbs/breakfast-burrito-bar.jpg",
   "railImage": "/images/rails/breakfast-burrito-bar.jpg",
   "realismScore": 95,
-  "firefighterScore": 98,
+  "firefighterScore": 100,
   "popularityWeight": 3.2,
   "searchTerms": [
     "breakfast burrito bar",
@@ -143,6 +159,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-29T01:43:09.418Z",
+  "generatedAt": "2026-05-30T03:28:01.970Z",
   "contentVersion": 2
 }

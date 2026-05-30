@@ -1,6 +1,6 @@
 # Editorial copy audit
 
-Articles: 52
+Articles: 58
 Pass: yes
 
 ## Schema

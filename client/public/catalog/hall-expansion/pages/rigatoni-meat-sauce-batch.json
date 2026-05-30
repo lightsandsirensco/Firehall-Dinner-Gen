@@ -1,0 +1,186 @@
+{
+  "slug": "rigatoni-meat-sauce-batch",
+  "title": "Rigatoni with Meat Sauce",
+  "displayTitle": "Rigatoni with Meat Sauce",
+  "seoTitle": "Rigatoni with Meat Sauce | Firefighter Meal",
+  "shortDescription": "Slow-simmered beef and pork ragù over rigatoni for ten",
+  "subtitle": "Slow-simmered beef and pork ragù over rigatoni for ten",
+  "category": "hall_expansion",
+  "cuisine": "italian",
+  "description": "Ground beef and pork simmer with onion, garlic, and crushed tomatoes until thick and rich. Toss with rigatoni and finish with Parmesan for a proper Italian-American hall feed.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 60,
+  "prepTime": 20,
+  "difficulty": "easy",
+  "calories": 540,
+  "protein": 36,
+  "carbs": 56,
+  "fats": 20,
+  "tags": [
+    "protein:beef",
+    "format:pasta",
+    "category:crew_feeders",
+    "pasta",
+    "beef",
+    "comfort",
+    "hall_expansion",
+    "hall_expansion_56",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Large Dutch oven",
+    "Stock pot",
+    "Wooden spoon",
+    "Ladle",
+    "Colander"
+  ],
+  "ingredients": [
+    {
+      "name": "rigatoni pasta",
+      "quantity": "2",
+      "unit": "lb",
+      "group": "Main"
+    },
+    {
+      "name": "ground beef (80/20)",
+      "quantity": "2",
+      "unit": "lb",
+      "group": "Sauce"
+    },
+    {
+      "name": "ground pork",
+      "quantity": "1",
+      "unit": "lb",
+      "group": "Sauce"
+    },
+    {
+      "name": "crushed tomatoes",
+      "quantity": "2",
+      "unit": "cans",
+      "notes": "28 oz each",
+      "group": "Sauce"
+    },
+    {
+      "name": "tomato paste",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "1",
+      "unit": "whole",
+      "notes": "finely diced",
+      "group": "Aromatics"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "6",
+      "unit": "cloves",
+      "notes": "minced",
+      "group": "Aromatics"
+    },
+    {
+      "name": "dry red wine",
+      "quantity": "1",
+      "unit": "cup",
+      "group": "Sauce"
+    },
+    {
+      "name": "dried oregano",
+      "quantity": "2",
+      "unit": "tsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "grated Parmesan",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "for serving",
+      "group": "Finish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Brown the meats",
+      "instruction": "Cook beef and pork with onion over medium-high heat 12–15 minutes, breaking into crumbles until well browned. Drain excess fat.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Build the sauce",
+      "instruction": "Add garlic and tomato paste, cook 2 minutes. Pour in wine and simmer until mostly reduced, about 4 minutes.",
+      "minutes": 6,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Simmer low",
+      "instruction": "Add crushed tomatoes and oregano. Simmer uncovered 40–45 minutes, stirring occasionally, until sauce thickens and oil pools at edges.",
+      "minutes": 42,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Cook rigatoni",
+      "instruction": "Boil rigatoni in salted water until al dente, about 11 minutes. Drain and toss with a cup of sauce.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Serve family-style",
+      "instruction": "Portion pasta into bowls or hotel pan, top with remaining sauce and Parmesan. Serve with extra cheese at the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "A parmesan rind simmered in the sauce adds savory depth—fish it out before serving.",
+    "Red pepper flake pinch in the browning stage wakes up canned tomatoes.",
+    "Double the batch and freeze half sauce for an emergency pasta night."
+  ],
+  "tonightSpread": [
+    "Rigatoni with meat sauce, garlic bread, and simple green salad.",
+    "Roasted zucchini on the side for crew who want vegetables."
+  ],
+  "leftovers": [
+    "Bake into a pasta casserole with extra mozzarella on top.",
+    "Stuff into hoagie rolls with melted provolone for meatball-less subs."
+  ],
+  "whyCrewsLikeIt": "Meat sauce is the pasta baseline everyone recognizes. It scales cheap, simmers while you handle other duties, and holds hot in a hotel pan for late eaters.",
+  "mealPrepNotes": "Simmer sauce at least 45 minutes for depth—longer is better. Salt pasta water heavily. Sauce and pasta can stay separate until service if holding.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 540,
+    "protein": 36,
+    "carbs": 56,
+    "fats": 20,
+    "label": "~540 cal/serving · 36g protein · 5g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/rigatoni-meat-sauce-batch.jpg",
+  "heroImageAlt": "Rigatoni with Meat Sauce — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/rigatoni-meat-sauce-batch.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/rigatoni-meat-sauce-batch.jpg",
+  "railImage": "/images/rails/hall-expansion/rigatoni-meat-sauce-batch.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "rigatoni with meat sauce",
+    "crew feeders"
+  ],
+  "relatedSlugs": [
+    "shawarma-bar-night",
+    "fajita-bar-night",
+    "hall-burger-bar",
+    "pasta-bar-night"
+  ],
+  "generatedAt": "2026-05-30T03:14:19.188Z",
+  "contentVersion": 2
+}

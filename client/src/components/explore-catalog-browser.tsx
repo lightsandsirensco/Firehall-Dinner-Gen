@@ -13,6 +13,8 @@ import { FoodImage } from "@/components/mobile/food-image";
 import { FilterChip, FilterChipScroller } from "@/components/mobile/filter-chips";
 import { Button } from "@/components/ui/button";
 import { approvedCatalogQueryKey, fetchApprovedCatalog } from "@/lib/approved-catalog-api";
+import { fetchRecipeRatingSortMap } from "@/lib/recipe-crew-ratings-api";
+import { ExploreRatingCollections } from "@/components/explore-rating-collections";
 import {
   buildApprovedCatalogFacetOptions,
   DEFAULT_APPROVED_CATALOG_FILTERS,
@@ -30,6 +32,21 @@ const PRIMARY_FILTERS: ApprovedCatalogPrimaryFilter[] = [
 ];
 
 const COOK_TIME_FILTERS: ApprovedCatalogCookTimeBucket[] = ["under_30", "30_to_60", "over_60"];
+
+export type CatalogSortMode =
+  | "curated"
+  | "most_popular"
+  | "highest_rated"
+  | "most_votes"
+  | "trending";
+
+const SORT_LABELS: Record<CatalogSortMode, string> = {
+  curated: "Curated",
+  most_popular: "Most Popular",
+  highest_rated: "Highest Rated",
+  most_votes: "Most Votes",
+  trending: "Trending",
+};
 
 function CatalogImagePlaceholder({ title }: { title: string }) {
   return (
@@ -115,6 +132,7 @@ export function ExploreCatalogBrowser({ onRecipeClick, className }: ExploreCatal
   const [filters, setFilters] = useState<ApprovedCatalogFilterState>(
     DEFAULT_APPROVED_CATALOG_FILTERS,
   );
+  const [sort, setSort] = useState<CatalogSortMode>("curated");
 
   const { data, isLoading, error, refetch } = useQuery({
     queryKey: approvedCatalogQueryKey,
@@ -124,21 +142,62 @@ export function ExploreCatalogBrowser({ onRecipeClick, className }: ExploreCatal
     refetchOnWindowFocus: false,
   });
 
+  const { data: sortMap } = useQuery({
+    queryKey: ["recipe-rating-sort-map"],
+    queryFn: fetchRecipeRatingSortMap,
+    staleTime: 60_000,
+  });
+
   const facets = useMemo(
     () => buildApprovedCatalogFacetOptions(data?.recipes ?? []),
     [data?.recipes],
   );
 
-  const filtered = useMemo(
-    () => filterApprovedCatalogEntries(data?.recipes ?? [], filters),
-    [data?.recipes, filters],
-  );
+  const filtered = useMemo(() => {
+    let rows = filterApprovedCatalogEntries(data?.recipes ?? [], filters);
+    if (sort === "curated" || !sortMap) {
+      return rows.sort((a, b) => a.title.localeCompare(b.title));
+    }
+    const score = (slug: string) => sortMap[slug];
+    if (sort === "most_popular" || sort === "most_votes") {
+      rows = [...rows].sort(
+        (a, b) => (score(b.slug)?.totalVotes ?? 0) - (score(a.slug)?.totalVotes ?? 0),
+      );
+    } else if (sort === "highest_rated") {
+      rows = [...rows].sort(
+        (a, b) => (score(b.slug)?.approvalScore ?? 0) - (score(a.slug)?.approvalScore ?? 0),
+      );
+    } else if (sort === "trending") {
+      rows = [...rows].sort(
+        (a, b) => (score(b.slug)?.trendingScore ?? 0) - (score(a.slug)?.trendingScore ?? 0),
+      );
+    }
+    return rows;
+  }, [data?.recipes, filters, sort, sortMap]);
 
   const resetFilters = () => setFilters(DEFAULT_APPROVED_CATALOG_FILTERS);
 
   return (
     <section className={cn("space-y-6", className)} data-testid="explore-catalog-browser">
+      <ExploreRatingCollections onRecipeClick={onRecipeClick} />
+
       <div className="space-y-4">
+        <label className="block space-y-1 text-xs font-medium text-muted-foreground max-w-xs">
+          Sort by
+          <select
+            value={sort}
+            onChange={(e) => setSort(e.target.value as CatalogSortMode)}
+            className="min-h-11 w-full rounded-xl border border-border/30 bg-background px-3 text-sm text-foreground"
+            data-testid="explore-catalog-sort"
+          >
+            {(Object.keys(SORT_LABELS) as CatalogSortMode[]).map((mode) => (
+              <option key={mode} value={mode}>
+                {SORT_LABELS[mode]}
+              </option>
+            ))}
+          </select>
+        </label>
+
         <FilterChipScroller>
           {PRIMARY_FILTERS.map((primary) => (
             <FilterChip

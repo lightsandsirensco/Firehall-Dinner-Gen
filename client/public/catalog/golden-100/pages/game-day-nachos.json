@@ -13,10 +13,10 @@
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 600,
-  "protein": 40,
-  "carbs": 48,
-  "fats": 28,
+  "calories": 1373,
+  "protein": 68,
+  "carbs": 129,
+  "fats": 67,
   "tags": [
     "protein:beef",
     "format:bowl",
@@ -33,83 +33,89 @@
   ],
   "ingredients": [
     {
-      "name": "Jasmine rice, uncooked",
-      "quantity": "3",
-      "unit": "cups",
+      "name": "Restaurant-style tortilla chips",
+      "quantity": "4",
+      "unit": "lb",
       "group": "Base"
     },
     {
-      "name": "Chicken thighs",
-      "quantity": "2.5",
+      "name": "Ground beef (80/20)",
+      "quantity": "3",
       "unit": "lb",
       "group": "Main"
     },
     {
-      "name": "Broccoli florets",
-      "quantity": "2",
-      "unit": "lb",
-      "group": "Veg"
-    },
-    {
-      "name": "Soy sauce",
-      "quantity": "0.5",
-      "unit": "cup",
-      "group": "Sauce"
-    },
-    {
-      "name": "Sesame oil",
-      "quantity": "2",
+      "name": "Taco seasoning",
+      "quantity": "4",
       "unit": "tbsp",
-      "group": "Sauce"
+      "group": "Seasoning"
     },
     {
-      "name": "Red onion, sliced",
-      "quantity": "1",
-      "unit": "large",
+      "name": "Shredded Mexican cheese blend",
+      "quantity": "20",
+      "unit": "oz",
+      "group": "Cheese"
+    },
+    {
+      "name": "Pickled jalapeños, sliced",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Toppings"
+    },
+    {
+      "name": "Fresh pico de gallo",
+      "quantity": "3",
+      "unit": "cups",
+      "group": "Toppings"
+    },
+    {
+      "name": "Sour cream",
+      "quantity": "2",
+      "unit": "cups",
       "group": "Toppings"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Cook rice",
-      "instruction": "Rinse rice until water runs clear. Cook 1:1.5 rice to water with salt; fluff and hold covered.",
-      "minutes": 20,
-      "heatLevel": "medium"
-    },
-    {
-      "stepNumber": 2,
-      "title": "Sear protein and veg",
-      "instruction": "Sear protein in batches over medium-high until browned and cooked through (165°F chicken, 125°F salmon). Stir-fry veg 4–5 minutes until bright with char.",
-      "minutes": 14,
+      "title": "Brown the beef",
+      "instruction": "Brown ground beef in a large skillet over medium-high, breaking it into fine crumbles. Drain excess grease — wet beef makes soggy chips. Stir in taco seasoning and ½ cup water; simmer 5 minutes until saucy.",
+      "minutes": 15,
       "heatLevel": "medium-high"
     },
     {
+      "stepNumber": 2,
+      "title": "Build chip trays",
+      "instruction": "Spread chips in a single layer on two full-size sheet pans — double layers steam instead of crisp. Scatter half the cheese over chips.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
       "stepNumber": 3,
-      "title": "Warm the sauce",
-      "instruction": "Whisk soy and sesame oil; add a splash of rice water if it needs to loosen for drizzling.",
-      "minutes": 5,
-      "heatLevel": "low"
+      "title": "Melt and load",
+      "instruction": "Broil at 450°F 3–4 minutes until cheese bubbles at the edges. Pull pans, add seasoned beef, remaining cheese, and jalapeños. Broil 2 more minutes until cheese is fully melted.",
+      "minutes": 8,
+      "heatLevel": "high"
     },
     {
       "stepNumber": 4,
-      "title": "Assembly line",
-      "instruction": "Rice, protein, veg, sauce on the side. Loaded Game Day Nachos feeds fastest as a build-your-own line.",
+      "title": "Serve immediately",
+      "instruction": "Top with pico and sour cream at the table — not before, or chips wilt. Loaded Game Day Nachos die fast; make a second tray when the first is half gone.",
       "minutes": 5,
-      "heatLevel": ""
+      "heatLevel": "low"
     }
   ],
   "proTips": [
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts."
   ],
   "tonightSpread": [
-    "Build bowls base → grain → protein → toppings so the line moves in one direction.",
-    "Put hot components closest to the crew, cold crunch at the far end.",
+    "Label every topping bowl — rookies grab faster when they can read the line.",
+    "Keep hot bases (potatoes, chips) in cambros at 200°F and cold toppings on ice if service runs long.",
+    "Put forks, napkins, and a trash can at the end of the bar — self-serve feeds get messy fast.",
     "Build a long snack board: mains down the center, dips and chips at both ends.",
     "Use disposable boats for handhelds so cleanup stays under five minutes after the game.",
-    "Line up Loaded Game Day Nachos on the main counter with serving spoons — firefighters grab fast between calls.",
-    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+    "Line up Loaded Game Day Nachos on the main counter with serving spoons — firefighters grab fast between calls."
   ],
   "leftovers": [
     "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
@@ -120,11 +126,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 600,
-    "protein": 40,
-    "carbs": 48,
-    "fats": 28,
-    "label": "per serving (hall portion)"
+    "calories": 1373,
+    "protein": 68,
+    "carbs": 129,
+    "fats": 67,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/game-day-nachos.jpg",
   "mobileImage": "/images/mobile/game-day-nachos.jpg",
@@ -155,6 +175,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-29T01:43:09.430Z",
+  "generatedAt": "2026-05-30T03:28:01.996Z",
   "contentVersion": 2
 }

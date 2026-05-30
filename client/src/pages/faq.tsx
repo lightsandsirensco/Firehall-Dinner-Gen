@@ -18,9 +18,9 @@ export default function FaqPage() {
 
       <main className={cn(app.main, "py-10 sm:py-14 max-w-3xl")}>
         <p className={app.eyebrowMuted}>FAQ</p>
-        <h1 className={cn(app.titlePage, "mt-3")}>Questions</h1>
+        <h1 className={cn(app.titlePage, "mt-3")}>Firefighter & Firehall Meal FAQ</h1>
         <p className={cn(app.lead, "mt-4")}>
-          Straight answers about cooking for the crew on {BRAND_NAME}.
+          Straight answers about firefighter meals, station cooking, and crew dinners on {BRAND_NAME}.
         </p>
 
         <dl className="mt-10 space-y-8">

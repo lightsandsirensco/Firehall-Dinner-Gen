@@ -1,0 +1,186 @@
+{
+  "slug": "loaded-potato-skins",
+  "title": "Loaded Potato Skins",
+  "displayTitle": "Loaded Potato Skins",
+  "seoTitle": "Loaded Potato Skins | Firefighter Meal",
+  "shortDescription": "Crispy skins with bacon, cheddar, and sour cream for ten",
+  "subtitle": "Crispy skins with bacon, cheddar, and sour cream for ten",
+  "category": "hall_expansion",
+  "cuisine": "american",
+  "description": "Baked potatoes are halved, scooped, and crisped until the skins shatter. Each shell is loaded with bacon, cheddar, and green onion, then broiled until bubbly. Sour cream and hot sauce finish at the line.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 45,
+  "prepTime": 30,
+  "difficulty": "easy",
+  "calories": 480,
+  "protein": 18,
+  "carbs": 38,
+  "fats": 28,
+  "tags": [
+    "protein:pork",
+    "format:sheet_pan",
+    "category:game_day_recipes",
+    "game_day",
+    "comfort",
+    "handheld",
+    "hall_expansion",
+    "hall_expansion_56",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Sheet pans",
+    "Wire rack",
+    "Mixing bowls",
+    "Basting brush",
+    "Aluminum foil"
+  ],
+  "ingredients": [
+    {
+      "name": "russet potatoes",
+      "quantity": "10",
+      "unit": "large",
+      "notes": "about 6 lb",
+      "group": "Main"
+    },
+    {
+      "name": "bacon",
+      "quantity": "2",
+      "unit": "lb",
+      "group": "Topping"
+    },
+    {
+      "name": "sharp cheddar cheese",
+      "quantity": "1.5",
+      "unit": "lb",
+      "notes": "shredded",
+      "group": "Topping"
+    },
+    {
+      "name": "green onions",
+      "quantity": "1",
+      "unit": "bunch",
+      "notes": "sliced",
+      "group": "Topping"
+    },
+    {
+      "name": "sour cream",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Serve"
+    },
+    {
+      "name": "unsalted butter",
+      "quantity": "0.5",
+      "unit": "cup",
+      "notes": "melted",
+      "group": "Main"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "black pepper",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "hot sauce",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Serve"
+    },
+    {
+      "name": "smoked paprika",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Bake the potatoes",
+      "instruction": "Scrub potatoes, pierce with a fork, and bake at 400°F on a sheet pan until fork-tender, about 50–60 minutes. Cool until safe to handle before scooping. Target oven/smoker temperature: 400°F.",
+      "minutes": 55,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Scoop and crisp the skins",
+      "instruction": "Halve potatoes lengthwise and scoop flesh leaving quarter-inch shells. Brush inside and out with melted butter, season with salt and paprika, and bake at 425°F until edges crisp, about 15 minutes. Target oven/smoker temperature: 425°F.",
+      "minutes": 20,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Cook and crumble bacon",
+      "instruction": "Bake bacon on a rack at 400°F until fully crisp, about 18 minutes. Drain on paper towels and crumble into bite-size pieces once cool enough to handle. Target oven/smoker temperature: 400°F.",
+      "minutes": 20,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Load and broil",
+      "instruction": "Fill each skin with cheddar and bacon. Broil on high 2–3 minutes until cheese bubbles and edges brown. Watch closely—broilers turn skins from perfect to burnt in seconds. Target oven/smoker temperature: 500°F.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Top and serve loaded skins",
+      "instruction": "Top with green onion and serve sour cream and hot sauce on the side. Verify shells are steaming hot in the center before putting the tray on the table.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Save scooped potato flesh for tomorrow's soup or mash—do not waste the insides.",
+    "A light dusting of cornstarch on shells before the second bake adds extra shatter.",
+    "Pre-broil shells without cheese if you need to hold more than 30 minutes before service."
+  ],
+  "tonightSpread": [
+    "Two sheet pans of loaded skins with sour cream, hot sauce, and extra bacon bits.",
+    "Celery sticks and ranch for crews who want something green between rich bites."
+  ],
+  "leftovers": [
+    "Re-crisp in a 425°F oven 5 minutes—microwaving turns skins rubbery.",
+    "Chop and fold into a breakfast hash with the saved potato flesh and eggs."
+  ],
+  "whyCrewsLikeIt": "Potato skins are finger food that feels indulgent without slowing down service. They reheat in a hot oven between periods and disappear fast during movie nights or playoff games.",
+  "mealPrepNotes": "Bake potatoes the night before and store scooped shells on sheet pans with parchment. Cook bacon ahead and crumble into labeled containers. Assemble skins up to 2 hours before the final broil.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 480,
+    "protein": 18,
+    "carbs": 38,
+    "fats": 28,
+    "label": "~480 cal/serving · 18g protein · 4g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/loaded-potato-skins.jpg",
+  "heroImageAlt": "Loaded Potato Skins — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/loaded-potato-skins.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/loaded-potato-skins.jpg",
+  "railImage": "/images/rails/hall-expansion/loaded-potato-skins.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "loaded potato skins",
+    "game day recipes"
+  ],
+  "relatedSlugs": [
+    "game-day-pizza-sliders",
+    "pretzel-bite-platter",
+    "jalapeno-popper-dip",
+    "philly-cheesesteak-sliders"
+  ],
+  "generatedAt": "2026-05-30T03:14:19.188Z",
+  "contentVersion": 2
+}

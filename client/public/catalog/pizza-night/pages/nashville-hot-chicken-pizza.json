@@ -1,0 +1,229 @@
+{
+  "slug": "nashville-hot-chicken-pizza",
+  "title": "Nashville Hot Chicken Pizza",
+  "displayTitle": "Nashville Hot Chicken Pizza",
+  "seoTitle": "Nashville Hot Chicken Pizza | Firefighter Meal",
+  "shortDescription": "Cayenne heat, pickles, ranch drizzle",
+  "subtitle": "Cayenne heat, pickles, ranch drizzle",
+  "category": "pizza_night",
+  "cuisine": "american",
+  "description": "Cayenne heat, pickles, ranch drizzle. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 100,
+  "prepTime": 45,
+  "difficulty": "medium",
+  "calories": 1400,
+  "protein": 85,
+  "carbs": 70,
+  "fats": 90,
+  "tags": [
+    "protein:chicken",
+    "format:pizza",
+    "category:pizza_night",
+    "handheld",
+    "trending",
+    "golden_100"
+  ],
+  "equipment": [
+    "Pizza stone or steel",
+    "Peel or inverted sheet pan",
+    "Large sheet trays",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "ingredients": [
+    {
+      "name": "Pizza dough balls (15 oz)",
+      "quantity": "4",
+      "unit": "count",
+      "group": "Crust"
+    },
+    {
+      "name": "Boneless chicken thighs",
+      "quantity": "3",
+      "unit": "lb",
+      "group": "Main"
+    },
+    {
+      "name": "Buttermilk",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Chicken"
+    },
+    {
+      "name": "Hot sauce",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Chicken"
+    },
+    {
+      "name": "All-purpose flour",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Chicken"
+    },
+    {
+      "name": "Cayenne pepper",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Heat"
+    },
+    {
+      "name": "Brown sugar",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Heat"
+    },
+    {
+      "name": "Paprika",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Heat"
+    },
+    {
+      "name": "Vegetable oil",
+      "quantity": "2",
+      "unit": "cups",
+      "notes": "for shallow fry",
+      "group": "Frying"
+    },
+    {
+      "name": "Pickle brine",
+      "quantity": "0.3",
+      "unit": "cup",
+      "group": "Heat paste"
+    },
+    {
+      "name": "Low-moisture mozzarella, shredded",
+      "quantity": "24",
+      "unit": "oz",
+      "group": "Cheese"
+    },
+    {
+      "name": "Pickle chips",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Finish"
+    },
+    {
+      "name": "White bread slices, toasted and crumbled",
+      "quantity": "8",
+      "unit": "count",
+      "notes": "optional crunch",
+      "group": "Finish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Marinate and fry hot chicken",
+      "instruction": "Soak chicken in buttermilk and hot sauce 20 minutes (or overnight if time allows). Mix flour with half the cayenne, paprika, and salt. Fry chicken in 350°F oil until 165°F inside and deeply golden. Drain on a rack — wet fried chicken steams the pizza.",
+      "minutes": 30,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Coat chicken in Nashville paste",
+      "instruction": "Stir remaining cayenne, brown sugar, paprika, and pickle brine into a paste. Toss hot fried chicken in the paste until glossy and fiery. Slice into strips.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Preheat stone to 500°F",
+      "instruction": "Heat stone or steel at 500°F at least 40 minutes while chicken rests. Shred mozzarella.",
+      "minutes": 40,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Stretch, light sauce, cheese, hot chicken",
+      "instruction": "Stretch four rounds. Use only a thin smear of pizza sauce or skip red entirely. Mozzarella first, then Nashville chicken strips and optional bread crumb crunch.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Bake to set cheese and crust",
+      "instruction": "Bake 10–12 minutes until cheese bubbles — chicken is already cooked. You're marrying hot chicken to crisp crust. Rotate once.",
+      "minutes": 11,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Pickles, rest, and cut",
+      "instruction": "Top with pickle chips after the bake. Rest 2 minutes, cut 8 slices. Nashville Hot Chicken Pizza hits fast — have milk on the table for rookies who underestimated cayenne.",
+      "minutes": 5,
+      "heatLevel": "low"
+    }
+  ],
+  "proTips": [
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
+    "Taste for salt at the end — hall palates run salty after long shifts.",
+    "Pull chicken at 160°F and let carryover hit 165°F — dry breast ruins crew morale."
+  ],
+  "tonightSpread": [
+    "Cut pies into hall slices (8 per pie minimum) and fan on sheet trays.",
+    "Keep a fresh pie warming in the oven — pizza dies fast on the counter.",
+    "Line up Nashville Hot Chicken Pizza on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+  ],
+  "leftovers": [
+    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
+    "Label trays with date and reheat to 165°F minimum before second shift."
+  ],
+  "whyCrewsLikeIt": "Cayenne heat, pickles, ranch drizzle. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
+  "substitutions": [
+    "Chicken thighs ↔ breasts (thighs forgive overcooking on the flat-top)."
+  ],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 1400,
+    "protein": 85,
+    "carbs": 70,
+    "fats": 90,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "heroImage": "/images/golden-100/nashville-hot-chicken-pizza.jpg",
+  "mobileImage": "/images/mobile/nashville-hot-chicken-pizza.jpg",
+  "thumbImage": "/images/thumbs/nashville-hot-chicken-pizza.jpg",
+  "railImage": "/images/rails/nashville-hot-chicken-pizza.jpg",
+  "realismScore": 100,
+  "firefighterScore": 100,
+  "popularityWeight": 3.2,
+  "searchTerms": [
+    "nashville hot chicken pizza",
+    "american",
+    "chicken",
+    "pizza",
+    "handheld",
+    "trending",
+    "golden_100"
+  ],
+  "relatedSlugs": [
+    "bbq-chicken-pizza",
+    "buffalo-chicken-pizza",
+    "pesto-chicken-pizza",
+    "white-garlic-chicken-pizza",
+    "breakfast-sausage-pizza",
+    "detroit-style-pizza"
+  ],
+  "generatedAt": "2026-05-30T03:45:01.612Z",
+  "contentVersion": 2
+}

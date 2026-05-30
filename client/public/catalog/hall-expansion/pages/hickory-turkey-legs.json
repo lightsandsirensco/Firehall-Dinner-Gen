@@ -1,0 +1,185 @@
+{
+  "slug": "hickory-turkey-legs",
+  "title": "Hickory Smoked Turkey Legs",
+  "displayTitle": "Hickory Smoked Turkey Legs",
+  "seoTitle": "Hickory Smoked Turkey Legs | Firefighter Meal",
+  "shortDescription": "Fair-style turkey legs with hickory smoke and spice rub for ten",
+  "subtitle": "Fair-style turkey legs with hickory smoke and spice rub for ten",
+  "category": "hall_expansion",
+  "cuisine": "american",
+  "description": "Large turkey legs are brined, rubbed with a sweet-spice blend, and smoked over hickory until the meat pulls cleanly from the bone. Serve with corn on the cob and slaw for a fair-food spread at the hall.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 210,
+  "prepTime": 20,
+  "difficulty": "medium",
+  "calories": 410,
+  "protein": 52,
+  "carbs": 18,
+  "fats": 16,
+  "tags": [
+    "protein:turkey",
+    "format:smoker",
+    "category:smoker_recipes",
+    "bbq",
+    "smoker",
+    "turkey",
+    "handheld",
+    "hall_expansion",
+    "hall_expansion_56",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Smoker with hickory wood",
+    "Rib rack",
+    "Spritz bottle",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "ingredients": [
+    {
+      "name": "whole turkey legs",
+      "quantity": "10",
+      "unit": "legs",
+      "notes": "about 1 lb each",
+      "group": "Main"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Brine"
+    },
+    {
+      "name": "brown sugar",
+      "quantity": "0.25",
+      "unit": "cup",
+      "group": "Brine"
+    },
+    {
+      "name": "smoked paprika",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Rub"
+    },
+    {
+      "name": "garlic powder",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Rub"
+    },
+    {
+      "name": "onion powder",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Rub"
+    },
+    {
+      "name": "cayenne pepper",
+      "quantity": "1",
+      "unit": "tsp",
+      "group": "Rub"
+    },
+    {
+      "name": "apple juice",
+      "quantity": "2",
+      "unit": "cups",
+      "notes": "for spritz",
+      "group": "Spritz"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "0.25",
+      "unit": "cup",
+      "group": "Rub"
+    },
+    {
+      "name": "corn on the cob",
+      "quantity": "10",
+      "unit": "ears",
+      "group": "Side"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Brine the turkey legs",
+      "instruction": "Dissolve salt and brown sugar in 1 gallon cold water. Submerge legs and refrigerate 8–12 hours so seasoning penetrates deep into the dense leg meat.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Apply the spice rub",
+      "instruction": "Pat legs completely dry, rub with olive oil, then coat evenly with smoked paprika, garlic powder, onion powder, and cayenne until no wet spots remain.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Smoke over hickory",
+      "instruction": "Heat smoker to 275°F with hickory wood. Smoke legs upright in a rib rack until internal temp reaches 175°F in the thickest part, about 3–3.5 hours, spritzing hourly. Target oven/smoker temperature: 275°F.",
+      "minutes": 180,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Crisp the skin",
+      "instruction": "Increase smoker temp to 325°F for the final 15 minutes until skin darkens and crackles slightly. Verify 175°F internal before pulling—dark meat needs higher finish temps. Target oven/smoker temperature: 325°F.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Rest and serve handheld",
+      "instruction": "Rest legs 10 minutes tented in foil. Serve with buttered corn and coleslaw. Provide extra napkins and a bowl for bones at the end of the table.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "175°F internal is the target for turkey legs—lower temps leave sinew, higher dries the outer meat.",
+    "If legs outrun the corn, grill corn during the last 20 minutes on the smoker for one-fire cooking.",
+    "Offer a mild BBQ sauce on the side for crews who want sticky fingers and extra flavor."
+  ],
+  "tonightSpread": [
+    "Smoked turkey legs on a tray with buttered corn and vinegar coleslaw.",
+    "Pickle spears and watermelon wedges for a fair-food vibe that feels like a reward meal."
+  ],
+  "leftovers": [
+    "Pull meat from bones and toss into a smoky turkey pot pie.",
+    "Shred and mix with BBQ sauce for pulled turkey sandwiches on soft buns."
+  ],
+  "whyCrewsLikeIt": "Turkey legs are fun, photogenic, and eat with one hand—perfect for game nights or casual smoke feeds. The hickory profile feels classic BBQ without needing a full pit crew.",
+  "mealPrepNotes": "Brine legs overnight for maximum juiciness. Pat dry and apply rub 2 hours before smoking. Legs can hold wrapped in foil in a warm box for 45 minutes after reaching temp.",
+  "spiceLevel": "medium",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 410,
+    "protein": 52,
+    "carbs": 18,
+    "fats": 16,
+    "label": "~410 cal/serving · 52g protein · 2g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/hickory-turkey-legs.jpg",
+  "heroImageAlt": "Hickory Smoked Turkey Legs — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/hickory-turkey-legs.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/hickory-turkey-legs.jpg",
+  "railImage": "/images/rails/hall-expansion/hickory-turkey-legs.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "hickory smoked turkey legs",
+    "smoker recipes"
+  ],
+  "relatedSlugs": [
+    "smoked-turkey-breast",
+    "smoked-meatloaf",
+    "smoked-mac-and-cheese",
+    "pork-belly-burnt-ends"
+  ],
+  "generatedAt": "2026-05-30T03:14:19.187Z",
+  "contentVersion": 2
+}

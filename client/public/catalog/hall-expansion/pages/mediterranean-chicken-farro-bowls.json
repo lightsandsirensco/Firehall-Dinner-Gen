@@ -1,0 +1,188 @@
+{
+  "slug": "mediterranean-chicken-farro-bowls",
+  "title": "Mediterranean Chicken Farro Bowls",
+  "displayTitle": "Mediterranean Chicken Farro Bowls",
+  "seoTitle": "Mediterranean Chicken Farro Bowls | Firefighter Meal",
+  "shortDescription": "Herb chicken with farro, cucumber, and hummus for ten",
+  "subtitle": "Herb chicken with farro, cucumber, and hummus for ten",
+  "category": "hall_expansion",
+  "cuisine": "mediterranean",
+  "description": "Lemon-oregano chicken roasts and slices over chewy farro with cucumber, tomato, olives, and hummus. A bright, filling bowl that breaks up heavy comfort-food rotations.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 40,
+  "prepTime": 30,
+  "difficulty": "easy",
+  "calories": 450,
+  "protein": 40,
+  "carbs": 44,
+  "fats": 14,
+  "tags": [
+    "protein:chicken",
+    "format:bowl",
+    "category:crew_feeders",
+    "bowl",
+    "healthy",
+    "chicken",
+    "hall_expansion",
+    "hall_expansion_56",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Sheet pan",
+    "Stock pot",
+    "Instant-read thermometer",
+    "Mixing bowls",
+    "Serving containers"
+  ],
+  "ingredients": [
+    {
+      "name": "chicken breast",
+      "quantity": "3.5",
+      "unit": "lb",
+      "group": "Main"
+    },
+    {
+      "name": "farro",
+      "quantity": "3",
+      "unit": "cups",
+      "notes": "dry",
+      "group": "Base"
+    },
+    {
+      "name": "English cucumber",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "diced",
+      "group": "Vegetables"
+    },
+    {
+      "name": "cherry tomatoes",
+      "quantity": "2",
+      "unit": "cups",
+      "notes": "halved",
+      "group": "Vegetables"
+    },
+    {
+      "name": "kalamata olives",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "pitted, halved",
+      "group": "Vegetables"
+    },
+    {
+      "name": "hummus",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Topping"
+    },
+    {
+      "name": "lemon",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "juiced",
+      "group": "Marinade"
+    },
+    {
+      "name": "dried oregano",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Marinade"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "0.33",
+      "unit": "cup",
+      "group": "Dressing"
+    },
+    {
+      "name": "feta cheese",
+      "quantity": "1.5",
+      "unit": "cups",
+      "notes": "crumbled",
+      "group": "Finish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Cook the farro",
+      "instruction": "Simmer farro in salted water 25–30 minutes until chewy-tender. Drain and toss with 2 tablespoons olive oil.",
+      "minutes": 30,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Roast the chicken",
+      "instruction": "Coat chicken with lemon juice, oregano, salt, pepper, and 2 tablespoons olive oil. Roast at 425°F 22–25 minutes until internal temp reaches 165°F. Slice. Target oven/smoker temperature: 425°F.",
+      "minutes": 25,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Prep the vegetables",
+      "instruction": "Combine cucumber, tomatoes, and olives. Dress lightly with remaining olive oil and lemon juice.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Build the bowl line",
+      "instruction": "Set out farro, sliced chicken, vegetable mix, hummus, and feta in labeled containers.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Assemble and serve",
+      "instruction": "Portion farro into bowls, top with chicken, vegetables, dollop of hummus, and crumbled feta.",
+      "minutes": 8,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Pearl farro cooks faster than whole—check package time and adjust.",
+    "Pickled red onions add punch without extra prep mid-service.",
+    "Grilled zucchini strips use the same oven time as chicken."
+  ],
+  "tonightSpread": [
+    "Bowls with warm pita wedges and extra lemon wedges.",
+    "Simple tabbouleh on the side if you want more veg volume cheaply."
+  ],
+  "leftovers": [
+    "Stuff into pita with extra hummus for quick lunches.",
+    "Farro and veg mix makes a cold grain salad the next day."
+  ],
+  "whyCrewsLikeIt": "Farro is nutty, filling, and different from the usual rice line-up. Mediterranean flavors feel light but the portions are hall-sized, not spa-sized.",
+  "mealPrepNotes": "Cook farro ahead—it holds well. Dice vegetables uniform. Chicken can roast while farro simmers to save time.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 450,
+    "protein": 40,
+    "carbs": 44,
+    "fats": 14,
+    "label": "~450 cal/serving · 40g protein · 8g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/mediterranean-chicken-farro-bowls.jpg",
+  "heroImageAlt": "Mediterranean Chicken Farro Bowls — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/mediterranean-chicken-farro-bowls.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/mediterranean-chicken-farro-bowls.jpg",
+  "railImage": "/images/rails/hall-expansion/mediterranean-chicken-farro-bowls.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "mediterranean chicken farro bowls",
+    "crew feeders"
+  ],
+  "relatedSlugs": [
+    "shawarma-bar-night",
+    "fajita-bar-night",
+    "hall-burger-bar",
+    "pasta-bar-night"
+  ],
+  "generatedAt": "2026-05-30T03:14:19.188Z",
+  "contentVersion": 2
+}

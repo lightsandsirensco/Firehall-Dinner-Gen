@@ -1,0 +1,143 @@
+{
+  "slug": "monte-cristo-sandwiches",
+  "title": "Monte Cristo Sandwiches",
+  "subtitle": "Ham and turkey dipped in egg batter, griddled, and dusted with powdered sugar.",
+  "description": "Sweet-savory club sandwiches dipped in custard and griddled until golden, then finished with powdered sugar and jam. A special-occasion breakfast that feels like diner food but scales to ten with an assembly-line griddle setup.",
+  "filters": [
+    "breakfast_sandwiches",
+    "feed_a_crew"
+  ],
+  "tags": [
+    "monte-cristo",
+    "ham",
+    "turkey",
+    "griddle",
+    "diner"
+  ],
+  "crewSize": 10,
+  "baseServings": 10,
+  "prepTime": 20,
+  "cookTime": 25,
+  "totalTime": 45,
+  "difficulty": "medium",
+  "ingredients": [
+    {
+      "name": "thick white bread slices",
+      "quantity": "20",
+      "notes": "crusts trimmed optional",
+      "group": "Sandwich"
+    },
+    {
+      "name": "sliced deli ham",
+      "quantity": "1 lb",
+      "group": "Sandwich"
+    },
+    {
+      "name": "sliced deli turkey",
+      "quantity": "1 lb",
+      "group": "Sandwich"
+    },
+    {
+      "name": "Swiss cheese",
+      "quantity": "10 slices",
+      "group": "Sandwich"
+    },
+    {
+      "name": "Dijon mustard",
+      "quantity": "3 tbsp",
+      "notes": "spread thin on half the slices",
+      "group": "Sandwich"
+    },
+    {
+      "name": "large eggs",
+      "quantity": "6",
+      "notes": "whisked with 1 cup milk and pinch of salt",
+      "group": "Batter"
+    },
+    {
+      "name": "butter",
+      "quantity": "4 tbsp",
+      "notes": "for griddling in batches",
+      "group": "Cook"
+    },
+    {
+      "name": "powdered sugar",
+      "quantity": "1/4 cup",
+      "notes": "plus raspberry jam for dipping",
+      "group": "Finish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Build the sandwiches",
+      "instruction": "Layer ham, turkey, and Swiss between bread slices with a thin smear of Dijon. Press gently and set aside while the griddle heats.",
+      "minutes": 12
+    },
+    {
+      "stepNumber": 2,
+      "title": "Set the dip station",
+      "instruction": "Whisk eggs and milk in a shallow pan wide enough to fit a sandwich. Heat a large griddle over medium and melt butter until foaming.",
+      "minutes": 3
+    },
+    {
+      "stepNumber": 3,
+      "title": "Dip and griddle",
+      "instruction": "Dip each sandwich briefly in egg batter—don't soak or bread falls apart. Griddle 3–4 minutes per side until deep golden and cheese melts.",
+      "minutes": 18
+    },
+    {
+      "stepNumber": 4,
+      "title": "Hold and slice",
+      "instruction": "Transfer to a wire rack in a 200°F oven between batches. Slice diagonally before serving so jam dipping is easier.",
+      "minutes": 5
+    },
+    {
+      "stepNumber": 5,
+      "title": "Dust and serve",
+      "instruction": "Dust lightly with powdered sugar through a fine sieve—go easy so it doesn't clump. Serve with warm raspberry jam for dipping at the line.",
+      "minutes": 3
+    }
+  ],
+  "nutrition": {
+    "calories": 652,
+    "protein": 39,
+    "carbs": 37,
+    "fat": 39,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "stationWorkflow": [
+    "Build all sandwiches before dipping so the griddle never waits for assembly mid-batch.",
+    "Keep batter shallow and replace when it gets thick with bread crumbs for clean dips.",
+    "Dust sugar at the line, not in the oven—steam makes powdered sugar disappear on held sandwiches."
+  ],
+  "cleanupNotes": [
+    "Wipe the griddle between batches to prevent burnt egg batter from scorching the next sandwich.",
+    "Wash the dip pan immediately; egg-milk residue glues to stainless once it dries."
+  ],
+  "leftovers": [
+    "Reheat sliced halves on a dry griddle over medium-low until cheese remelts and crust re-crisp.",
+    "Turn leftover halves into a savory bread pudding by cubing, adding custard, and baking at 350°F."
+  ],
+  "heroImage": "/images/breakfast/monte-cristo-sandwiches.jpg",
+  "thumbImage": "/images/thumbs/breakfast/monte-cristo-sandwiches.jpg",
+  "imageAlt": "Golden Monte Cristo sandwiches dusted with powdered sugar and served with jam",
+  "publishedAt": "2026-05-30T03:14:16.260Z",
+  "updatedAt": "2026-05-30T03:14:16.260Z",
+  "readMinutes": 8,
+  "seoTitle": "Monte Cristo Sandwiches | Firehall Breakfast"
+}

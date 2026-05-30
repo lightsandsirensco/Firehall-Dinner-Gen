@@ -5,6 +5,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { SeoBreadcrumbs } from "@/components/seo/breadcrumbs";
 import { ExploreCatalogBrowser } from "@/components/explore-catalog-browser";
 import { getSavedCount } from "@/lib/saved-meals";
+import { approvedCatalogRecipePath } from "@shared/approved-catalog";
 import { usePageSeo } from "@/lib/seo/use-page-seo";
 import { buildExploreSeo } from "@shared/seo/metadata";
 import { getSiteOrigin } from "@/lib/seo/site-origin";
@@ -12,12 +13,25 @@ import { buildBreadcrumbListSchema } from "@shared/seo/schema";
 import { cn } from "@/lib/utils";
 import { app } from "@/lib/design-tokens";
 import { useMemo } from "react";
+import { useQuery } from "@tanstack/react-query";
+import { approvedCatalogTotalQueryKey, fetchApprovedCatalogTotal } from "@/lib/approved-catalog-api";
+import {
+  APPROVED_CATALOG_TOTAL,
+  formatMarketingRecipeCount,
+} from "@shared/meal-catalog/curated-count";
 
 export function ExploreDiscoveryPage() {
   const [, navigate] = useLocation();
   const favCount = getSavedCount();
   const origin = getSiteOrigin();
-  const exploreSeo = buildExploreSeo();
+
+  const { data: recipeCount = APPROVED_CATALOG_TOTAL } = useQuery({
+    queryKey: approvedCatalogTotalQueryKey,
+    queryFn: fetchApprovedCatalogTotal,
+    staleTime: 120_000,
+  });
+
+  const exploreSeo = useMemo(() => buildExploreSeo(recipeCount), [recipeCount]);
   const exploreJsonLd = useMemo(
     () => [
       buildBreadcrumbListSchema(origin, [
@@ -45,12 +59,12 @@ export function ExploreDiscoveryPage() {
       <AppPageHeader
         variant="feed"
         title="Full Catalog"
-        subtitle="Browse every approved Firehall Meals recipe."
+        subtitle={`Browse ${formatMarketingRecipeCount(recipeCount)} approved Firehall Meals recipes.`}
       />
 
       <main className={cn(app.mainFeed, "pb-10 pt-2 sm:pb-14")}>
         <ExploreCatalogBrowser
-          onRecipeClick={(slug) => navigate(`/recipes/${encodeURIComponent(slug)}`)}
+          onRecipeClick={(slug) => navigate(approvedCatalogRecipePath(slug))}
         />
       </main>
 

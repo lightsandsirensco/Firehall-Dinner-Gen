@@ -1,0 +1,146 @@
+{
+  "slug": "overnight-french-toast-bake",
+  "title": "Overnight French Toast Bake",
+  "subtitle": "Prep tonight, bake tomorrow—a custard-soaked tray for the whole crew.",
+  "description": "Cubed brioche soaks overnight in a cinnamon-vanilla custard, then bakes into a puffed golden casserole that feeds twelve without standing at the griddle. Ideal before early training days when the cook needs hands-free oven time.",
+  "filters": [
+    "feed_a_crew",
+    "healthy_breakfasts"
+  ],
+  "tags": [
+    "french-toast",
+    "overnight",
+    "make-ahead",
+    "casserole",
+    "brioche"
+  ],
+  "crewSize": 12,
+  "baseServings": 12,
+  "prepTime": 20,
+  "cookTime": 45,
+  "totalTime": 65,
+  "difficulty": "easy",
+  "ingredients": [
+    {
+      "name": "brioche or challah",
+      "quantity": "2 loaves",
+      "notes": "cubed into 1-inch pieces",
+      "group": "Base"
+    },
+    {
+      "name": "large eggs",
+      "quantity": "12",
+      "group": "Custard"
+    },
+    {
+      "name": "whole milk",
+      "quantity": "4 cups",
+      "notes": "or half-and-half",
+      "group": "Custard"
+    },
+    {
+      "name": "maple syrup",
+      "quantity": "1/2 cup",
+      "notes": "plus extra for serving",
+      "group": "Custard"
+    },
+    {
+      "name": "vanilla extract",
+      "quantity": "2 tsp",
+      "notes": "and 1 tbsp cinnamon",
+      "group": "Custard"
+    },
+    {
+      "name": "brown sugar",
+      "quantity": "1/2 cup",
+      "notes": "sprinkled before baking",
+      "group": "Topping"
+    },
+    {
+      "name": "chopped pecans",
+      "quantity": "1/2 cup",
+      "notes": "optional crunch",
+      "group": "Topping"
+    },
+    {
+      "name": "powdered sugar",
+      "quantity": "1/4 cup",
+      "notes": "and fresh berries at the line",
+      "group": "Finish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Prep the bread",
+      "instruction": "Cube brioche and spread on sheet pans to dry slightly for 30 minutes, or toast lightly at 300°F for 6 minutes. Day-old bread absorbs custard without turning mushy.",
+      "minutes": 8
+    },
+    {
+      "stepNumber": 2,
+      "title": "Whisk the custard",
+      "instruction": "Whisk eggs, milk, maple syrup, vanilla, cinnamon, and a pinch of salt until smooth. The mixture should look like thin pancake batter.",
+      "minutes": 5
+    },
+    {
+      "stepNumber": 3,
+      "title": "Assemble and refrigerate",
+      "instruction": "Layer bread cubes in a buttered 9x13 dish. Pour custard evenly, pressing gently so all cubes soak. Cover and refrigerate 8–12 hours.",
+      "minutes": 10
+    },
+    {
+      "stepNumber": 4,
+      "title": "Bake until puffed",
+      "instruction": "Remove from fridge 30 minutes before baking. Heat oven to 375°F, sprinkle brown sugar and pecans on top, and bake until puffed, golden, and set in the center.",
+      "minutes": 42,
+      "tempF": 375
+    },
+    {
+      "stepNumber": 5,
+      "title": "Rest and serve",
+      "instruction": "Rest 10 minutes before cutting into squares. Dust with powdered sugar and serve with maple syrup and berries at the line.",
+      "minutes": 10
+    }
+  ],
+  "nutrition": {
+    "calories": 213,
+    "protein": 9,
+    "carbs": 28,
+    "fat": 8,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": false
+    }
+  },
+  "stationWorkflow": [
+    "Label the covered dish with bake time and oven temp so the morning cook doesn't guess.",
+    "Pull the dish while the oven preheats so the glass or metal pan doesn't crack from cold shock.",
+    "Cut in the pan with a serrated knife wiped between rows for clean squares on the line."
+  ],
+  "cleanupNotes": [
+    "Soak the 9x13 while still warm—custard and sugar caramelize on the edges once cooled.",
+    "Line sheet pans with parchment when drying bread cubes for one-wipe cleanup."
+  ],
+  "leftovers": [
+    "Wrap squares in foil and reheat at 325°F for 12 minutes until steaming in the center.",
+    "Cube cold leftovers into a skillet with butter and pan-fry until crisp edges form for French toast hash."
+  ],
+  "heroImage": "/images/breakfast/overnight-french-toast-bake.jpg",
+  "thumbImage": "/images/thumbs/breakfast/overnight-french-toast-bake.jpg",
+  "imageAlt": "Golden overnight French toast bake cut into squares with berries and maple",
+  "publishedAt": "2026-05-30T03:14:16.260Z",
+  "updatedAt": "2026-05-30T03:14:16.260Z",
+  "readMinutes": 8,
+  "seoTitle": "Overnight French Toast Bake | Firehall Breakfast"
+}

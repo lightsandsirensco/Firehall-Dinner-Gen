@@ -1,0 +1,149 @@
+{
+  "slug": "breakfast-nachos-supreme",
+  "title": "Breakfast Nachos Supreme",
+  "subtitle": "Tortilla chips loaded with eggs, bacon, cheese, and salsa on sheet pans.",
+  "description": "Two sheet pans of loaded breakfast nachos feed ten fast: chips layered with queso, scrambled eggs, crisp bacon, pico, and avocado. Built in waves so the bottom layer stays crisp while the top gets melty and golden under the broiler.",
+  "filters": [
+    "feed_a_crew",
+    "quick_breakfasts",
+    "high_protein"
+  ],
+  "tags": [
+    "nachos",
+    "bacon",
+    "eggs",
+    "sheet-pan",
+    "shareable"
+  ],
+  "crewSize": 10,
+  "baseServings": 10,
+  "prepTime": 15,
+  "cookTime": 15,
+  "totalTime": 30,
+  "difficulty": "easy",
+  "ingredients": [
+    {
+      "name": "large bags tortilla chips",
+      "quantity": "2",
+      "notes": "thick restaurant-style",
+      "group": "Base"
+    },
+    {
+      "name": "large eggs",
+      "quantity": "14",
+      "notes": "soft-scrambled",
+      "group": "Protein"
+    },
+    {
+      "name": "bacon",
+      "quantity": "1 lb",
+      "notes": "cooked crisp and crumbled",
+      "group": "Protein"
+    },
+    {
+      "name": "shredded cheddar",
+      "quantity": "3 cups",
+      "notes": "and 2 cups shredded Monterey Jack",
+      "group": "Cheese"
+    },
+    {
+      "name": "nacho cheese sauce",
+      "quantity": "1 1/2 cups",
+      "notes": "warmed",
+      "group": "Cheese"
+    },
+    {
+      "name": "pico de gallo",
+      "quantity": "1 1/2 cups",
+      "notes": "drained well",
+      "group": "Toppings"
+    },
+    {
+      "name": "avocados",
+      "quantity": "2",
+      "notes": "diced, added after broil",
+      "group": "Toppings"
+    },
+    {
+      "name": "sour cream",
+      "quantity": "1/2 cup",
+      "notes": "crema, and sliced jalapeños",
+      "group": "Finish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Prep components",
+      "instruction": "Cook bacon until crisp and crumble. Soft-scramble eggs—they should still look glossy. Warm nacho cheese. Drain pico thoroughly so chips don't sog out.",
+      "minutes": 12
+    },
+    {
+      "stepNumber": 2,
+      "title": "Layer the chips",
+      "instruction": "Spread chips on two rimmed sheet pans in a single thick layer. Drizzle half the nacho cheese, then scatter half the shredded cheeses over each pan.",
+      "minutes": 3
+    },
+    {
+      "stepNumber": 3,
+      "title": "First melt",
+      "instruction": "Bake at 400°F until cheese melts and chips at the edges toast lightly. Remove and distribute scrambled eggs and bacon evenly across both pans.",
+      "minutes": 5,
+      "tempF": 400
+    },
+    {
+      "stepNumber": 4,
+      "title": "Broil to finish",
+      "instruction": "Add remaining cheese and broil on high 2–3 minutes until bubbling and spotty golden. Watch constantly—chips burn fast under the broiler.",
+      "minutes": 3,
+      "tempF": 500
+    },
+    {
+      "stepNumber": 5,
+      "title": "Top and serve",
+      "instruction": "Add pico, avocado, sour cream, and jalapeños immediately. Serve straight from the sheet pans at the line with extra hot sauce on the side.",
+      "minutes": 2
+    }
+  ],
+  "nutrition": {
+    "calories": 601,
+    "protein": 37,
+    "carbs": 10,
+    "fat": 46,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "stationWorkflow": [
+    "Build on two pans so the crew can attack from both ends of the table without a traffic jam.",
+    "Hold avocado and sour cream cold until the nachos leave the broiler—hot chips wilt them fast.",
+    "Serve within 5 minutes of broiling; nachos don't hold, so call the crew as soon as pans hit the counter."
+  ],
+  "cleanupNotes": [
+    "Line sheet pans with foil for easier cleanup after melted cheese and queso bond to the metal.",
+    "Discard soggy bottom chips rather than scraping—foil lift-and-toss is faster on busy mornings."
+  ],
+  "leftovers": [
+    "Nachos don't reheat well; repurpose leftover toppings into breakfast burritos with fresh tortillas.",
+    "Use extra scrambled eggs and bacon in a hash with diced potatoes for the next shift."
+  ],
+  "heroImage": "/images/breakfast/breakfast-nachos-supreme.jpg",
+  "thumbImage": "/images/thumbs/breakfast/breakfast-nachos-supreme.jpg",
+  "imageAlt": "Breakfast nachos supreme loaded with eggs, bacon, melted cheese, and pico",
+  "publishedAt": "2026-05-30T03:14:16.260Z",
+  "updatedAt": "2026-05-30T03:14:16.260Z",
+  "readMinutes": 7,
+  "seoTitle": "Breakfast Nachos Supreme | Firehall Breakfast"
+}

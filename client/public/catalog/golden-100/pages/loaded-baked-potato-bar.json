@@ -10,13 +10,13 @@
   "description": "Build-your-own spuds for the crew. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
   "baseServings": 8,
-  "cookTime": 55,
-  "prepTime": 20,
+  "cookTime": 125,
+  "prepTime": 25,
   "difficulty": "medium",
-  "calories": 720,
-  "protein": 40,
-  "carbs": 68,
-  "fats": 36,
+  "calories": 1400,
+  "protein": 71,
+  "carbs": 101,
+  "fats": 90,
   "tags": [
     "protein:beef",
     "format:bowl",
@@ -33,79 +33,86 @@
   ],
   "ingredients": [
     {
-      "name": "Jasmine rice, uncooked",
-      "quantity": "3",
-      "unit": "cups",
+      "name": "Russet potatoes, scrubbed",
+      "quantity": "24",
+      "unit": "count",
       "group": "Base"
     },
     {
-      "name": "Chicken thighs",
-      "quantity": "2.5",
-      "unit": "lb",
-      "group": "Main"
-    },
-    {
-      "name": "Broccoli florets",
+      "name": "Unsalted butter, softened",
       "quantity": "2",
-      "unit": "lb",
-      "group": "Veg"
-    },
-    {
-      "name": "Soy sauce",
-      "quantity": "0.5",
-      "unit": "cup",
-      "group": "Sauce"
-    },
-    {
-      "name": "Sesame oil",
-      "quantity": "2",
-      "unit": "tbsp",
-      "group": "Sauce"
-    },
-    {
-      "name": "Red onion, sliced",
-      "quantity": "1",
-      "unit": "large",
+      "unit": "cups",
       "group": "Toppings"
+    },
+    {
+      "name": "Shredded sharp cheddar",
+      "quantity": "16",
+      "unit": "oz",
+      "group": "Toppings"
+    },
+    {
+      "name": "Thick-cut bacon, cooked and crumbled",
+      "quantity": "2",
+      "unit": "lb",
+      "group": "Toppings"
+    },
+    {
+      "name": "Sour cream",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Toppings"
+    },
+    {
+      "name": "Green onions, sliced",
+      "quantity": "6",
+      "unit": "bunches",
+      "group": "Toppings"
+    },
+    {
+      "name": "Warm chili or pulled beef (optional)",
+      "quantity": "2",
+      "unit": "lb",
+      "group": "Optional topping"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Cook rice",
-      "instruction": "Rinse rice until water runs clear. Cook 1:1.5 rice to water with salt; fluff and hold covered.",
-      "minutes": 20,
-      "heatLevel": "medium"
+      "title": "Scrub and poke potatoes",
+      "instruction": "Scrub russet potatoes dry. Poke each potato 6–8 times with a fork so steam escapes. Rub skins with vegetable oil and coarse salt — this gives crackly jackets.",
+      "minutes": 15,
+      "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Sear protein and veg",
-      "instruction": "Sear protein in batches over medium-high until browned and cooked through (165°F chicken, 125°F salmon). Stir-fry veg 4–5 minutes until bright with char.",
-      "minutes": 14,
-      "heatLevel": "medium-high"
+      "title": "Bake until fork-tender",
+      "instruction": "Bake directly on the oven rack at 400°F for 50–65 minutes until a skewer slides in with no resistance. Wrap finished potatoes in foil and hold at 200°F — do not stack hot potatoes or skins go soggy.",
+      "minutes": 60,
+      "heatLevel": "medium"
     },
     {
       "stepNumber": 3,
-      "title": "Warm the sauce",
-      "instruction": "Whisk soy and sesame oil; add a splash of rice water if it needs to loosen for drizzling.",
-      "minutes": 5,
-      "heatLevel": "low"
+      "title": "Prep the topping station",
+      "instruction": "Line up butter, shredded cheddar, crumbled bacon, sour cream, and green onions in separate bowls with serving spoons. Keep warm toppings near the potatoes; keep sour cream cold on ice if service runs long.",
+      "minutes": 15,
+      "heatLevel": ""
     },
     {
       "stepNumber": 4,
-      "title": "Assembly line",
-      "instruction": "Rice, protein, veg, sauce on the side. Loaded Baked Potato Bar feeds fastest as a build-your-own line.",
-      "minutes": 5,
-      "heatLevel": ""
+      "title": "Run the potato bar",
+      "instruction": "Split hot potatoes with a cross-cut and fluff the insides with a fork. Crew builds their own: butter first, then cheddar so it melts, then bacon, sour cream, and green onions. Loaded Baked Potato Bar works best as a self-serve line down the counter.",
+      "minutes": 10,
+      "heatLevel": "low"
     }
   ],
   "proTips": [
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts."
   ],
   "tonightSpread": [
-    "Build bowls base → grain → protein → toppings so the line moves in one direction.",
-    "Put hot components closest to the crew, cold crunch at the far end.",
+    "Label every topping bowl — rookies grab faster when they can read the line.",
+    "Keep hot bases (potatoes, chips) in cambros at 200°F and cold toppings on ice if service runs long.",
+    "Put forks, napkins, and a trash can at the end of the bar — self-serve feeds get messy fast.",
     "Line up Loaded Baked Potato Bar on the main counter with serving spoons — firefighters grab fast between calls.",
     "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
   ],
@@ -118,11 +125,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 720,
-    "protein": 40,
-    "carbs": 68,
-    "fats": 36,
-    "label": "per serving (hall portion)"
+    "calories": 1400,
+    "protein": 71,
+    "carbs": 101,
+    "fats": 90,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/loaded-baked-potato-bar.jpg",
   "mobileImage": "/images/mobile/loaded-baked-potato-bar.jpg",
@@ -150,6 +171,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-29T01:43:09.365Z",
+  "generatedAt": "2026-05-30T03:28:01.866Z",
   "contentVersion": 2
 }

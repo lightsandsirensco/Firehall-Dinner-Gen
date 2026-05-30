@@ -1,0 +1,214 @@
+{
+  "slug": "honey-soppressata-pizza",
+  "title": "Hot Honey Soppressata Pizza",
+  "displayTitle": "Hot Honey Soppressata Pizza",
+  "seoTitle": "Hot Honey Soppressata Pizza | Firefighter Meal",
+  "shortDescription": "Sweet heat, charred salami",
+  "subtitle": "Sweet heat, charred salami",
+  "category": "pizza_night",
+  "cuisine": "italian",
+  "description": "Sweet heat, charred salami. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 85,
+  "prepTime": 30,
+  "difficulty": "medium",
+  "calories": 1021,
+  "protein": 48,
+  "carbs": 52,
+  "fats": 69,
+  "tags": [
+    "protein:pork",
+    "format:pizza",
+    "category:pizza_night",
+    "handheld",
+    "golden_100"
+  ],
+  "equipment": [
+    "Pizza stone or steel",
+    "Peel or inverted sheet pan",
+    "Large sheet trays",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "ingredients": [
+    {
+      "name": "Pizza dough balls (15 oz)",
+      "quantity": "4",
+      "unit": "count",
+      "group": "Crust"
+    },
+    {
+      "name": "Crushed tomatoes",
+      "quantity": "2",
+      "unit": "cans",
+      "notes": "28 oz",
+      "group": "Sauce"
+    },
+    {
+      "name": "Garlic cloves, minced",
+      "quantity": "4",
+      "unit": "cloves",
+      "group": "Sauce"
+    },
+    {
+      "name": "Dried oregano",
+      "quantity": "2",
+      "unit": "tsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "Fresh mozzarella, torn",
+      "quantity": "24",
+      "unit": "oz",
+      "group": "Cheese"
+    },
+    {
+      "name": "Low-moisture mozzarella, shredded",
+      "quantity": "8",
+      "unit": "oz",
+      "group": "Cheese"
+    },
+    {
+      "name": "Soppressata or spicy salami, sliced",
+      "quantity": "16",
+      "unit": "oz",
+      "group": "Topping"
+    },
+    {
+      "name": "Hot honey",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Finish"
+    },
+    {
+      "name": "Red pepper flakes",
+      "quantity": "1",
+      "unit": "tsp",
+      "group": "Finish"
+    },
+    {
+      "name": "Grated parmesan",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Finish"
+    },
+    {
+      "name": "Olive oil",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Crust"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Simmer quick pizza sauce",
+      "instruction": "Simmer crushed tomatoes with garlic and oregano 12 minutes until slightly thick. Cool 5 minutes — hot sauce on raw dough makes a wet center.",
+      "minutes": 12,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat stone to 500°F",
+      "instruction": "Heat stone or steel at 500°F at least 40 minutes. Tear mozzarella and slice soppressata thin — thick coins curl and shield the cheese from browning.",
+      "minutes": 40,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Stretch rounds and sauce lightly",
+      "instruction": "Stretch dough to 12–14 inches with a defined rim. Sauce in a thin layer; leave the rim clean for blistering. Brush rims with olive oil.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Cheese and soppressata",
+      "instruction": "Layer fresh and shredded mozzarella, then soppressata in an even shingle pattern — gaps mean bare bites, piles mean greasy pools. A light dusting of parmesan is optional before the bake.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Bake until salami edges curl",
+      "instruction": "Bake 10–13 minutes until cheese bubbles and soppressata edges crisp and cup slightly. Rotate for even color. Hot Honey Soppressata needs char on the meat, not pale pink disks.",
+      "minutes": 12,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Hot honey drizzle and cut",
+      "instruction": "Rest 2 minutes. Drizzle hot honey in thin zigzags and hit with a pinch of red pepper flakes. Cut into 8 slices per pie. Sweet heat hits after the bake — honey burns if added too early.",
+      "minutes": 5,
+      "heatLevel": "low"
+    }
+  ],
+  "proTips": [
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
+    "Taste for salt at the end — hall palates run salty after long shifts."
+  ],
+  "tonightSpread": [
+    "Cut pies into hall slices (8 per pie minimum) and fan on sheet trays.",
+    "Keep a fresh pie warming in the oven — pizza dies fast on the counter.",
+    "Line up Hot Honey Soppressata Pizza on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+  ],
+  "leftovers": [
+    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
+    "Label trays with date and reheat to 165°F minimum before second shift."
+  ],
+  "whyCrewsLikeIt": "Sweet heat, charred salami. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
+  "substitutions": [],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 1021,
+    "protein": 48,
+    "carbs": 52,
+    "fats": 69,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "heroImage": "/images/golden-100/honey-soppressata-pizza.jpg",
+  "mobileImage": "/images/mobile/honey-soppressata-pizza.jpg",
+  "thumbImage": "/images/thumbs/honey-soppressata-pizza.jpg",
+  "railImage": "/images/rails/honey-soppressata-pizza.jpg",
+  "realismScore": 100,
+  "firefighterScore": 98,
+  "popularityWeight": 3.2,
+  "searchTerms": [
+    "hot honey soppressata pizza",
+    "honey soppressata pizza",
+    "italian",
+    "pork",
+    "pizza",
+    "handheld",
+    "golden_100"
+  ],
+  "relatedSlugs": [
+    "pepperoni-pizza-night",
+    "sicilian-sheet-pizza",
+    "breakfast-sausage-pizza",
+    "detroit-style-pizza",
+    "firehall-supreme-pizza",
+    "hawaiian-pizza"
+  ],
+  "sourceName": "Firehall Meals",
+  "sourceUrl": "",
+  "generatedAt": "2026-05-30T03:45:01.605Z",
+  "contentVersion": 2
+}

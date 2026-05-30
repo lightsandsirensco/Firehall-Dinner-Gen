@@ -13,10 +13,10 @@
   "cookTime": 90,
   "prepTime": 30,
   "difficulty": "hard",
-  "calories": 460,
-  "protein": 22,
-  "carbs": 60,
-  "fats": 22,
+  "calories": 208,
+  "protein": 4,
+  "carbs": 26,
+  "fats": 12,
   "tags": [
     "protein:vegetarian",
     "format:grill",
@@ -95,7 +95,7 @@
     }
   ],
   "proTips": [
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts.",
     "Rest grilled proteins 5–8 minutes under foil before slicing — juices stay in the meat."
   ],
@@ -116,11 +116,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 460,
-    "protein": 22,
-    "carbs": 60,
-    "fats": 22,
-    "label": "per serving (hall portion)"
+    "calories": 208,
+    "protein": 4,
+    "carbs": 26,
+    "fats": 12,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/grilled-corn-cotija.jpg",
   "mobileImage": "/images/mobile/grilled-corn-cotija.jpg",
@@ -149,6 +163,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-29T01:43:09.355Z",
+  "generatedAt": "2026-05-30T03:28:01.845Z",
   "contentVersion": 2
 }

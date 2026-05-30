@@ -13,10 +13,10 @@
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 720,
-  "protein": 40,
-  "carbs": 68,
-  "fats": 36,
+  "calories": 972,
+  "protein": 62,
+  "carbs": 77,
+  "fats": 48,
   "tags": [
     "protein:beef",
     "format:bowl",
@@ -33,79 +33,86 @@
   ],
   "ingredients": [
     {
-      "name": "Jasmine rice, uncooked",
-      "quantity": "3",
-      "unit": "cups",
-      "group": "Base"
-    },
-    {
-      "name": "Chicken thighs",
+      "name": "Ground beef (80/20)",
       "quantity": "2.5",
       "unit": "lb",
       "group": "Main"
     },
     {
-      "name": "Broccoli florets",
-      "quantity": "2",
-      "unit": "lb",
-      "group": "Veg"
-    },
-    {
-      "name": "Soy sauce",
-      "quantity": "0.5",
-      "unit": "cup",
-      "group": "Sauce"
-    },
-    {
-      "name": "Sesame oil",
-      "quantity": "2",
-      "unit": "tbsp",
-      "group": "Sauce"
-    },
-    {
-      "name": "Red onion, sliced",
+      "name": "Yellow onion, diced",
       "quantity": "1",
       "unit": "large",
+      "group": "Aromatics"
+    },
+    {
+      "name": "Taco seasoning",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Tortilla chips",
+      "quantity": "2",
+      "unit": "lb",
+      "group": "Base"
+    },
+    {
+      "name": "Shredded cheddar",
+      "quantity": "12",
+      "unit": "oz",
+      "group": "Cheese"
+    },
+    {
+      "name": "Black beans, drained",
+      "quantity": "2",
+      "unit": "cans",
+      "group": "Toppings"
+    },
+    {
+      "name": "Pickled jalapeños",
+      "quantity": "1",
+      "unit": "cup",
       "group": "Toppings"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Cook rice",
-      "instruction": "Rinse rice until water runs clear. Cook 1:1.5 rice to water with salt; fluff and hold covered.",
-      "minutes": 20,
-      "heatLevel": "medium"
-    },
-    {
-      "stepNumber": 2,
-      "title": "Sear protein and veg",
-      "instruction": "Sear protein in batches over medium-high until browned and cooked through (165°F chicken, 125°F salmon). Stir-fry veg 4–5 minutes until bright with char.",
+      "title": "Brown beef and onion",
+      "instruction": "In a 12-inch cast iron skillet over medium-high, brown ground beef with diced onion until no pink remains. Drain grease. Add taco seasoning and ⅓ cup water; simmer until thick.",
       "minutes": 14,
       "heatLevel": "medium-high"
     },
     {
-      "stepNumber": 3,
-      "title": "Warm the sauce",
-      "instruction": "Whisk soy and sesame oil; add a splash of rice water if it needs to loosen for drizzling.",
+      "stepNumber": 2,
+      "title": "Layer chips and cheese",
+      "instruction": "Off heat, scatter tortilla chips over the beef in the skillet. Top with black beans, shredded cheddar, and jalapeños.",
       "minutes": 5,
-      "heatLevel": "low"
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Bake until bubbling",
+      "instruction": "Bake at 425°F 8–10 minutes until cheese is fully melted and edges bubble. Watch the broiler side — cast iron holds heat and can burn chip edges fast.",
+      "minutes": 10,
+      "heatLevel": "high"
     },
     {
       "stepNumber": 4,
-      "title": "Assembly line",
-      "instruction": "Rice, protein, veg, sauce on the side. Loaded Nacho Skillet feeds fastest as a build-your-own line.",
-      "minutes": 5,
-      "heatLevel": ""
+      "title": "Serve from the skillet",
+      "instruction": "Set the hot skillet on a trivet at the table with sour cream and salsa on the side. Loaded Nacho Skillet is communal — provide a big spoon and expect fingers.",
+      "minutes": 3,
+      "heatLevel": "low"
     }
   ],
   "proTips": [
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts."
   ],
   "tonightSpread": [
-    "Build bowls base → grain → protein → toppings so the line moves in one direction.",
-    "Put hot components closest to the crew, cold crunch at the far end.",
+    "Label every topping bowl — rookies grab faster when they can read the line.",
+    "Keep hot bases (potatoes, chips) in cambros at 200°F and cold toppings on ice if service runs long.",
+    "Put forks, napkins, and a trash can at the end of the bar — self-serve feeds get messy fast.",
     "Line up Loaded Nacho Skillet on the main counter with serving spoons — firefighters grab fast between calls.",
     "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
   ],
@@ -118,11 +125,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 720,
-    "protein": 40,
-    "carbs": 68,
-    "fats": 36,
-    "label": "per serving (hall portion)"
+    "calories": 972,
+    "protein": 62,
+    "carbs": 77,
+    "fats": 48,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/loaded-nacho-skillet.jpg",
   "mobileImage": "/images/mobile/loaded-nacho-skillet.jpg",
@@ -152,6 +173,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-29T01:43:09.331Z",
+  "generatedAt": "2026-05-30T03:28:01.799Z",
   "contentVersion": 2
 }

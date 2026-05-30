@@ -4,12 +4,15 @@ import { useQuery } from "@tanstack/react-query";
 import { SiteHeader } from "@/components/site-header";
 import { getSavedCount } from "@/lib/saved-meals";
 import { fetchGoldenCatalogIndex } from "@/lib/golden-recipe-api";
+import { approvedCatalogTotalQueryKey, fetchApprovedCatalogTotal } from "@/lib/approved-catalog-api";
+import { APPROVED_CATALOG_TOTAL } from "@shared/meal-catalog/curated-count";
 import { golden100HeroPath } from "@/lib/golden-100-hero";
 import { FoodImage } from "@/components/mobile/food-image";
 import { Search } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { usePageSeo } from "@/lib/seo/use-page-seo";
 import { buildRecipesIndexSeo } from "@shared/seo/metadata";
+import { buildRecipeCardAlt } from "@shared/seo/recipe-image-seo";
 import { getSiteOrigin } from "@/lib/seo/site-origin";
 import { buildBreadcrumbListSchema, buildWebSiteSchema } from "@shared/seo/schema";
 import { SeoBreadcrumbs } from "@/components/seo/breadcrumbs";
@@ -34,7 +37,13 @@ export default function RecipesIndexPage() {
     staleTime: Infinity,
   });
 
-  const recipeCount = catalog?.recipeCount ?? 100;
+  const { data: approvedTotal = APPROVED_CATALOG_TOTAL } = useQuery({
+    queryKey: approvedCatalogTotalQueryKey,
+    queryFn: fetchApprovedCatalogTotal,
+    staleTime: 120_000,
+  });
+
+  const recipeCount = approvedTotal;
   const origin = getSiteOrigin();
 
   const seoConfig = useMemo(() => buildRecipesIndexSeo(recipeCount), [recipeCount]);
@@ -136,7 +145,7 @@ export default function RecipesIndexPage() {
                       <div className="aspect-[4/5] bg-zinc-950 overflow-hidden">
                         <FoodImage
                           src={r.thumbImage || golden100HeroPath(r.slug)}
-                          alt={`${r.title} — firefighter meal`}
+                          alt={buildRecipeCardAlt(r.title)}
                           layout="card-fill"
                           fit="cover"
                           focal="center"

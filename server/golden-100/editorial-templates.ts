@@ -4,6 +4,7 @@
 
 import type { GoldenRecipeDefinition } from "../../shared/golden-100/types.js";
 import type { MasterCategoryId } from "../../shared/categories/constants.js";
+import { GOLDEN_SLUG_TIMING_OVERRIDES } from "../../shared/golden-100/recipe-quality/slug-timing-overrides.js";
 
 function categorySpread(category: MasterCategoryId, title: string): string[] {
   const base = [
@@ -59,8 +60,14 @@ function formatSpread(format: string, title: string): string[] {
       ];
     case "bowl":
       return [
-        "Build bowls base → grain → protein → toppings so the line moves in one direction.",
-        "Put hot components closest to the crew, cold crunch at the far end.",
+        "Set rice or grain in the first pan, main in the second, crunchy toppings last so textures stay distinct.",
+        "Put hot components closest to the crew, cold crunch at the far end of the line.",
+      ];
+    case "bar":
+      return [
+        "Label every topping bowl — rookies grab faster when they can read the line.",
+        "Keep hot bases (potatoes, chips) in cambros at 200°F and cold toppings on ice if service runs long.",
+        "Put forks, napkins, and a trash can at the end of the bar — self-serve feeds get messy fast.",
       ];
     case "pizza":
       return [
@@ -77,9 +84,65 @@ function formatSpread(format: string, title: string): string[] {
   }
 }
 
+const SLUG_TONIGHT_SPREAD: Record<string, string[]> = {
+  "chicken-parm": [
+    "Serve breaded cutlets with spaghetti and garlic bread on separate trays — sauce stays on the chicken, pasta stays al dente.",
+    "Keep extra marinara and parmesan at the end of the line for seconds.",
+    "Cutlets go out whole when possible so cheese pulls look like Chicken Parm, not pasta night.",
+  ],
+  "pulled-pork": [
+    "Pile shredded pork in a deep hotel pan with warm buns stacked beside — BBQ sandwich line, not sub shop night.",
+    "Set coleslaw, pickles, and extra BBQ sauce in separate bowls so buns do not go soggy.",
+    "Keep pork covered at 180°F; add vinegar splash before refills so the pull stays moist.",
+  ],
+  "slider-bar": [
+    "Line mini patties with cheese on sheet trays; toasted buns split into top and bottom pans.",
+    "Build toppings bar in order: lettuce, tomato, onion, pickles, then ketchup, mustard, and mayo at the end.",
+    "Plan 3–4 sliders per firefighter — count buns before the line opens so nobody gets shorted.",
+  ],
+  "breakfast-sausage-pizza": [
+    "Cut breakfast pizza into squares on sheet trays — eggs should look set, not runny, for grab-and-go.",
+    "Keep hot sauce optional on the side; gravy pizza does not need pepperoni backup.",
+  ],
+  "detroit-style-pizza": [
+    "Cut Detroit pies into rectangles so crispy cheese edges face out — that is the signature.",
+    "Serve from sheet trays, not round pie servers — these are 9x13 pan pizzas.",
+  ],
+  "pepperoni-pizza-night": [
+    "Fan pepperoni slices on sheet trays — keep a backup pie warming at 200°F uncovered.",
+    "Cut each pie into at least 8 slices for hall portions; label plain cheese backup if you make one.",
+  ],
+  "beef-stroganoff": [
+    "Serve wide egg noodles with stroganoff sauce ladled over — sour cream sauce stays separate from any tomato pan.",
+    "Keep extra parsley and black pepper at the line; mushrooms should be visible in every scoop.",
+  ],
+  "mac-and-cheese-bake": [
+    "Scoop baked mac from hotel pans with a spatula so the breadcrumb lid stays intact.",
+    "Keep backup pan warming at 200°F — mac tightens as it holds; splash milk when reheating.",
+  ],
+  "chili-mac": [
+    "Serve straight from the Dutch oven or ladle into bowls — mac elbows should be visible in the chili.",
+    "Sour cream and green onions stay cold on the side.",
+  ],
+  "one-pot-chicken-rice": [
+    "Fluff rice with a fork at the table — chicken thighs stay skin-side up for crisp skin.",
+    "Lemon wedges and parsley on the side; no hot sauce bar needed for this one.",
+  ],
+};
+
 export function buildTonightSpread(def: GoldenRecipeDefinition): string[] {
+  const slugSpread = SLUG_TONIGHT_SPREAD[def.slug];
+  if (slugSpread) return [...new Set(slugSpread)].slice(0, 6);
+
+  const spreadFormat =
+    /\b(bar|nachos|potato feed)\b/i.test(def.title) ||
+    ["loaded-baked-potato-bar", "loaded-potato-feed", "game-day-nachos", "loaded-nacho-skillet"].includes(
+      def.slug,
+    )
+      ? "bar"
+      : def.mealFormat;
   const lines = [
-    ...formatSpread(def.mealFormat, def.title),
+    ...formatSpread(spreadFormat, def.title),
     ...categorySpread(def.masterCategoryId, def.title),
   ];
   return [...new Set(lines)].slice(0, 6);
@@ -108,7 +171,7 @@ export function buildProTips(def: GoldenRecipeDefinition, crewSize: number): str
   if (crewSize >= 10) {
     tips.push(`At ${crewSize} servings, split into two pans halfway through so the bottom doesn't overcook while the top waits.`);
   }
-  tips.push("Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.");
+  tips.push("Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.");
   tips.push("Taste for salt at the end — hall palates run salty after long shifts.");
 
   if (def.mealFormat === "grill" || def.masterCategoryId === "bbq_grill_nights") {
@@ -161,14 +224,32 @@ export function buildEquipmentList(def: GoldenRecipeDefinition): string[] {
   if (fmt === "burger") {
     extra.push("Flat griddle or cast iron", "Burger press or heavy spatula");
   }
-  if (def.masterCategoryId === "pizza_night") {
+  if (def.slug === "detroit-style-pizza") {
+    extra.push("Two 9x13 steel or dark cake pans", "Stand mixer or large bowl");
+  } else if (def.masterCategoryId === "pizza_night") {
     extra.push("Pizza stone or steel", "Peel or inverted sheet pan");
+  }
+  if (def.slug === "pulled-pork" || def.slug === "carolina-mustard-pork") {
+    extra.push("Large covered roaster or slow cooker", "Two forks for shredding");
+  }
+  if (def.slug === "slider-bar") {
+    extra.push("Flat griddle or cast iron", "Small dome lids for melting cheese");
+  }
+  if (def.slug === "chicken-parm") {
+    extra.push("Large skillets for frying", "Wire cooling racks", "Hotel pans for baking");
+  }
+  if (def.slug === "mac-and-cheese-bake" || def.slug === "chili-mac") {
+    extra.push("8-quart stock pot", "Hotel pans or large baking dishes");
+  }
+  if (def.slug === "one-pot-chicken-rice") {
+    extra.push("Large Dutch oven with tight lid");
   }
 
   return [...new Set([...extra, ...base])].slice(0, 12);
 }
 
 export function inferDifficulty(def: GoldenRecipeDefinition): "easy" | "medium" | "hard" {
+  if (GOLDEN_SLUG_TIMING_OVERRIDES[def.slug]?.cook >= 360) return "hard";
   if (def.recommendation.rookieFriendly >= 8) return "easy";
   if (def.masterCategoryId === "bbq_grill_nights" || def.masterCategoryId === "big_crew_feeders") {
     return "hard";
@@ -178,6 +259,11 @@ export function inferDifficulty(def: GoldenRecipeDefinition): "easy" | "medium" 
 }
 
 export function estimateTiming(def: GoldenRecipeDefinition): { prep: number; cook: number; total: number } {
+  const override = GOLDEN_SLUG_TIMING_OVERRIDES[def.slug];
+  if (override) {
+    return { prep: override.prep, cook: override.cook, total: override.prep + override.cook };
+  }
+
   const cat = def.masterCategoryId;
   if (cat === "quick_shift_meals" || cat === "rookie_friendly") {
     return { prep: 15, cook: 20, total: 35 };

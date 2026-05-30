@@ -1,7 +1,7 @@
 {
   "version": 1,
   "contentVersion": 2,
-  "generatedAt": "2026-05-28T12:06:17.497Z",
+  "generatedAt": "2026-05-30T01:43:59.221Z",
   "recipeCount": 8,
   "recipes": [
     {
@@ -204,8 +204,8 @@
       "mealFormat": "breakfast",
       "cookTime": 22,
       "difficulty": "easy",
-      "heroImage": "/images/performance-meals/turkey-sausage-egg-muffins.jpg",
-      "thumbImage": "/images/performance-meals/turkey-sausage-egg-muffins.webp",
+      "heroImage": "/images/golden-100/turkey-sausage-egg-muffins.jpg",
+      "thumbImage": "/images/thumbs/turkey-sausage-egg-muffins.jpg",
       "tags": [
         "protein:turkey",
         "format:breakfast",
@@ -237,8 +237,8 @@
       "mealFormat": "breakfast",
       "cookTime": 35,
       "difficulty": "easy",
-      "heroImage": "/images/performance-meals/veggie-egg-casserole-tray.jpg",
-      "thumbImage": "/images/performance-meals/veggie-egg-casserole-tray.webp",
+      "heroImage": "/images/golden-100/veggie-egg-casserole-tray.jpg",
+      "thumbImage": "/images/thumbs/veggie-egg-casserole-tray.jpg",
       "tags": [
         "protein:egg",
         "format:breakfast",

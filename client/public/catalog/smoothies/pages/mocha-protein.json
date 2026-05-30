@@ -68,19 +68,34 @@
     }
   ],
   "nutrition": {
-    "calories": 220,
-    "protein": 18,
-    "carbs": 32,
-    "fats": 8,
-    "highlights": "~220 cal base · ~18 g protein with yogurt · caffeine for alertness · lower sugar than flavored lattes"
+    "calories": 99,
+    "protein": 8,
+    "carbs": 9,
+    "fats": 4,
+    "highlights": "~220 cal base · ~18 g protein with yogurt · caffeine for alertness · lower sugar than flavored lattes",
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": true
+    }
   },
   "substitutions": [
     "Instant espresso (2 tsp + ½ cup water) works if cold brew is not stocked.",
     "Skip protein powder if the crew prefers whole-food protein only."
   ],
   "shiftNote": "Caffeine plus protein in one cup — useful when the pot is empty but the board is not.",
-  "heroImage": "/images/editorial/smoothies/mocha-protein.webp",
-  "thumbImage": "/images/editorial/smoothies/mocha-protein.webp",
+  "heroImage": "/images/smoothies/mocha-protein.webp",
+  "thumbImage": "/images/smoothies/mocha-protein.webp",
   "tags": [
     "fuel_smoothie",
     "taxonomy:coffee_smoothie",

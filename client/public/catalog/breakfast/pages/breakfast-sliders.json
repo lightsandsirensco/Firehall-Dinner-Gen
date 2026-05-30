@@ -1,0 +1,149 @@
+{
+  "slug": "breakfast-sliders",
+  "title": "Breakfast Sliders",
+  "subtitle": "Mini sandwiches with sausage, egg, and maple glaze baked on one tray.",
+  "description": "A full sheet pan of sweet Hawaiian rolls stuffed with sausage patties, folded eggs, and cheddar, brushed with maple-butter and baked until the tops turn glossy. Pull-apart portions feed a crew fast without a griddle bottleneck.",
+  "filters": [
+    "breakfast_sandwiches",
+    "feed_a_crew",
+    "quick_breakfasts"
+  ],
+  "tags": [
+    "sliders",
+    "sheet-pan",
+    "sausage",
+    "maple",
+    "handheld"
+  ],
+  "crewSize": 10,
+  "baseServings": 10,
+  "prepTime": 18,
+  "cookTime": 22,
+  "totalTime": 40,
+  "difficulty": "easy",
+  "ingredients": [
+    {
+      "name": "packages Hawaiian sweet rolls",
+      "quantity": "2",
+      "notes": "24 rolls total, connected",
+      "group": "Build"
+    },
+    {
+      "name": "breakfast sausage patties",
+      "quantity": "12",
+      "notes": "pre-cooked or thin frozen",
+      "group": "Protein"
+    },
+    {
+      "name": "large eggs",
+      "quantity": "12",
+      "notes": "folded into thin sheets on the griddle",
+      "group": "Protein"
+    },
+    {
+      "name": "cheddar cheese",
+      "quantity": "12 slices",
+      "notes": "cut to fit rolls",
+      "group": "Protein"
+    },
+    {
+      "name": "butter",
+      "quantity": "1/2 cup",
+      "notes": "melted",
+      "group": "Glaze"
+    },
+    {
+      "name": "maple syrup",
+      "quantity": "3 tbsp",
+      "notes": "plus extra for drizzling",
+      "group": "Glaze"
+    },
+    {
+      "name": "Dijon mustard",
+      "quantity": "1 tsp",
+      "notes": "whisked into glaze",
+      "group": "Glaze"
+    },
+    {
+      "name": "everything bagel seasoning",
+      "quantity": "1 tbsp",
+      "notes": "optional crunch on top",
+      "group": "Finish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Heat the oven",
+      "instruction": "Heat oven to 350°F. Line a rimmed sheet pan with parchment. Cook sausage patties until done and fold eggs into thin rectangles roughly the size of each roll.",
+      "minutes": 0,
+      "tempF": 350
+    },
+    {
+      "stepNumber": 2,
+      "title": "Slice the roll block",
+      "instruction": "Without separating individual rolls, slice the connected block horizontally into tops and bottoms. Keep the shape intact so assembly stays fast.",
+      "minutes": 5
+    },
+    {
+      "stepNumber": 3,
+      "title": "Layer the sliders",
+      "instruction": "Place bottom halves on the pan. Add sausage, egg, and cheese to each roll. Cap with tops and press gently so stacks stay level.",
+      "minutes": 10
+    },
+    {
+      "stepNumber": 4,
+      "title": "Glaze and bake",
+      "instruction": "Whisk melted butter, maple syrup, and Dijon. Brush generously over roll tops. Bake until cheese melts and tops turn golden and sticky.",
+      "minutes": 18,
+      "tempF": 350
+    },
+    {
+      "stepNumber": 5,
+      "title": "Rest and pull apart",
+      "instruction": "Rest 5 minutes, then cut along roll seams with a sharp knife or bench scraper. Serve warm from the pan or transfer to a hotel pan for the line.",
+      "minutes": 5
+    }
+  ],
+  "nutrition": {
+    "calories": 937,
+    "protein": 46,
+    "carbs": 10,
+    "fat": 79,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "stationWorkflow": [
+    "Cook all sausage and egg sheets before touching the rolls—cold protein slows the bake and steams the bread.",
+    "Brush glaze right before the oven; a second light brush at the 10-minute mark adds shine without sogginess.",
+    "Cut and serve from the sheet pan at the line so the crew pulls their own portion without a bottleneck."
+  ],
+  "cleanupNotes": [
+    "Discard parchment with stuck glaze rather than scraping—it saves time on a busy morning cleanup.",
+    "Soak the griddle used for egg sheets immediately; folded egg residue hardens fast once cooled."
+  ],
+  "leftovers": [
+    "Wrap sliders individually in foil and reheat at 325°F for 10 minutes; add a fresh glaze drizzle after warming.",
+    "Split leftover sliders and griddle cut-side down for a crisp second-day breakfast with extra maple on top."
+  ],
+  "heroImage": "/images/breakfast/breakfast-sliders.jpg",
+  "thumbImage": "/images/thumbs/breakfast/breakfast-sliders.jpg",
+  "imageAlt": "Sheet pan of maple-glazed breakfast sliders with sausage, egg, and cheese",
+  "publishedAt": "2026-05-30T03:14:16.260Z",
+  "updatedAt": "2026-05-30T03:14:16.260Z",
+  "readMinutes": 7,
+  "seoTitle": "Breakfast Sliders | Firehall Breakfast"
+}

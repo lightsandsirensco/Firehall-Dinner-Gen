@@ -1,6 +1,8 @@
 {
   "slug": "hall-breakfast-burritos",
   "title": "Hall Breakfast Burritos",
+  "subtitle": "Big-batch burritos that hold on the line and reheat clean.",
+  "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
   "filters": [
     "feed_a_crew",
     "high_protein"
@@ -17,61 +19,56 @@
   "cookTime": 20,
   "totalTime": 35,
   "difficulty": "easy",
-  "heroImage": "/images/breakfast/hall-breakfast-burritos.jpg",
-  "thumbImage": "/images/thumbs/breakfast/hall-breakfast-burritos.jpg",
-  "seoTitle": "Hall Breakfast Burritos | Firehall Breakfast",
-  "subtitle": "Big-batch burritos that hold on the line and reheat clean.",
-  "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
   "ingredients": [
     {
-      "group": "Eggs",
-      "quantity": "14",
       "name": "large eggs",
-      "notes": "whisked with a pinch of salt"
+      "quantity": "14",
+      "notes": "whisked with a pinch of salt",
+      "group": "Eggs"
     },
     {
-      "group": "Eggs",
+      "name": "shredded cheddar or pepper jack",
       "quantity": "2 cups",
-      "name": "shredded cheddar or pepper jack"
+      "group": "Eggs"
     },
     {
-      "group": "Fillings",
-      "quantity": "3.5 lb",
       "name": "frozen hash browns",
-      "notes": "or diced par-cooked potatoes"
+      "quantity": "3.5 lb",
+      "notes": "or diced par-cooked potatoes",
+      "group": "Fillings"
     },
     {
-      "group": "Fillings",
-      "quantity": "2 lb",
       "name": "breakfast sausage or chorizo",
-      "notes": "browned and drained"
+      "quantity": "2 lb",
+      "notes": "browned and drained",
+      "group": "Fillings"
     },
     {
-      "group": "Fillings",
-      "quantity": "1",
       "name": "yellow onion",
-      "notes": "diced"
-    },
-    {
-      "group": "Fillings",
-      "quantity": "1–2",
-      "name": "bell peppers",
-      "notes": "diced"
-    },
-    {
-      "group": "Build",
-      "quantity": "16",
-      "name": "10-inch flour tortillas"
-    },
-    {
-      "group": "Build",
-      "quantity": "1 cup",
-      "name": "salsa or pico de gallo"
-    },
-    {
-      "group": "Build",
       "quantity": "1",
+      "notes": "diced",
+      "group": "Fillings"
+    },
+    {
+      "name": "bell peppers",
+      "quantity": "1–2",
+      "notes": "diced",
+      "group": "Fillings"
+    },
+    {
+      "name": "10-inch flour tortillas",
+      "quantity": "16",
+      "group": "Build"
+    },
+    {
+      "name": "salsa or pico de gallo",
+      "quantity": "1 cup",
+      "group": "Build"
+    },
+    {
       "name": "hot sauce",
+      "quantity": "1",
+      "group": "Build",
       "optional": true
     }
   ],
@@ -79,34 +76,55 @@
     {
       "stepNumber": 1,
       "title": "Crisp the potatoes",
-      "minutes": 12,
-      "instruction": "Heat a large skillet or griddle over medium-high. Add hash browns in an even layer; press with a spatula. Let them sit until browned, flip in sections, and season with salt and pepper. Move to a warm tray."
+      "instruction": "Heat a large skillet or griddle over medium-high. Add hash browns in an even layer; press with a spatula. Let them sit until browned, flip in sections, and season with salt and pepper. Move to a warm tray.",
+      "minutes": 12
     },
     {
       "stepNumber": 2,
       "title": "Brown the meat + veg",
-      "minutes": 10,
-      "instruction": "In the same pan, brown sausage/chorizo. Add onion and peppers; cook until softened. Drain excess fat if needed so burritos don’t get greasy."
+      "instruction": "In the same pan, brown sausage/chorizo. Add onion and peppers; cook until softened. Drain excess fat if needed so burritos don’t get greasy.",
+      "minutes": 10
     },
     {
       "stepNumber": 3,
       "title": "Soft-scramble the eggs",
-      "minutes": 6,
-      "instruction": "Lower heat to medium. Add a touch of butter, then the eggs. Stir gently until just set (slightly glossy). Fold in cheese off heat so it melts without overcooking."
+      "instruction": "Lower heat to medium. Add a touch of butter, then the eggs. Stir gently until just set (slightly glossy). Fold in cheese off heat so it melts without overcooking.",
+      "minutes": 6
     },
     {
       "stepNumber": 4,
       "title": "Build and wrap for the line",
-      "minutes": 10,
-      "instruction": "Warm tortillas briefly. Add potatoes, meat/veg, eggs, and a spoon of salsa. Roll tight: fold sides, then roll forward. Hold wrapped burritos seam-side down on a warm sheet pan."
+      "instruction": "Warm tortillas briefly. Add potatoes, meat/veg, eggs, and a spoon of salsa. Roll tight: fold sides, then roll forward. Hold wrapped burritos seam-side down on a warm sheet pan.",
+      "minutes": 10
     },
     {
       "stepNumber": 5,
       "title": "Serve + hold",
-      "minutes": 0,
-      "instruction": "Keep burritos warm in a 200°F oven (uncovered for crispy tortillas; covered for softer). If you’re feeding in waves, build half, serve, then build the rest."
+      "instruction": "Keep burritos warm in a 200°F oven (uncovered for crispy tortillas; covered for softer). If you’re feeding in waves, build half, serve, then build the rest.",
+      "minutes": 0
     }
   ],
+  "nutrition": {
+    "calories": 830,
+    "protein": 35,
+    "carbs": 71,
+    "fat": 45,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
   "stationWorkflow": [
     "Assign one cook to the hot surface and one to assembly. Keep the line moving; don’t crowd the griddle.",
     "Set a warm holding zone (oven 200°F or covered hotel pan) so staggered eaters still get a hot plate.",
@@ -120,8 +138,11 @@
     "Cool fast: spread on a sheet pan 10 minutes, then portion into containers so it doesn’t sweat.",
     "Reheat rule: eggs reheat best covered at 50% power or low oven heat; don’t nuke on high."
   ],
+  "heroImage": "/images/breakfast/hall-breakfast-burritos.jpg",
+  "thumbImage": "/images/thumbs/breakfast/hall-breakfast-burritos.jpg",
   "imageAlt": "Warm station-kitchen breakfast: Hall Breakfast Burritos",
-  "publishedAt": "2026-05-28T13:26:37.645Z",
-  "updatedAt": "2026-05-28T13:26:37.645Z",
-  "readMinutes": 7
+  "publishedAt": "2026-05-30T03:14:16.261Z",
+  "updatedAt": "2026-05-30T03:14:16.261Z",
+  "readMinutes": 7,
+  "seoTitle": "Hall Breakfast Burritos | Firehall Breakfast"
 }

@@ -1,0 +1,146 @@
+{
+  "slug": "chorizo-breakfast-hash",
+  "title": "Chorizo Breakfast Hash",
+  "subtitle": "Spicy crumbled chorizo with crispy potatoes and jammy eggs.",
+  "description": "Bold Mexican chorizo drives this one-pan hash: potatoes crisped in rendered chorizo fat, onions and peppers charred at the edges, and eggs finished on top. Faster than a full skillet bake but with enough heat to wake up a crew coming off a night call.",
+  "filters": [
+    "skillets",
+    "high_protein",
+    "quick_breakfasts"
+  ],
+  "tags": [
+    "chorizo",
+    "hash",
+    "potatoes",
+    "spicy",
+    "one-pan"
+  ],
+  "crewSize": 8,
+  "baseServings": 8,
+  "prepTime": 12,
+  "cookTime": 25,
+  "totalTime": 37,
+  "difficulty": "easy",
+  "ingredients": [
+    {
+      "name": "russet potatoes",
+      "quantity": "3.5 lb",
+      "notes": "diced 1/2-inch, par-cooked",
+      "group": "Base"
+    },
+    {
+      "name": "Mexican chorizo",
+      "quantity": "1 1/2 lb",
+      "notes": "casings removed",
+      "group": "Protein"
+    },
+    {
+      "name": "large eggs",
+      "quantity": "12",
+      "group": "Protein"
+    },
+    {
+      "name": "large onion",
+      "quantity": "1",
+      "notes": "diced",
+      "group": "Veg"
+    },
+    {
+      "name": "bell peppers",
+      "quantity": "2",
+      "notes": "diced, any color",
+      "group": "Veg"
+    },
+    {
+      "name": "smoked paprika",
+      "quantity": "1 tsp",
+      "notes": "plus salt if needed",
+      "group": "Seasoning"
+    },
+    {
+      "name": "crumbled cotija",
+      "quantity": "1 cup",
+      "notes": "or queso fresco",
+      "group": "Finish"
+    },
+    {
+      "name": "cilantro",
+      "quantity": "1/2 cup",
+      "notes": "chopped, plus lime wedges",
+      "group": "Finish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Par-cook potatoes",
+      "instruction": "Microwave diced potatoes with a splash of water until just tender, then drain and pat completely dry. Wet potatoes steam instead of crisp in the chorizo fat.",
+      "minutes": 8
+    },
+    {
+      "stepNumber": 2,
+      "title": "Render chorizo",
+      "instruction": "Cook chorizo in a large skillet over medium-high, breaking it up until browned and fat renders. Push chorizo to one side and add potatoes to the hot fat in a single layer.",
+      "minutes": 8
+    },
+    {
+      "stepNumber": 3,
+      "title": "Crisp and combine",
+      "instruction": "Let potatoes sit undisturbed 3 minutes for crust, then toss with chorizo, onion, and peppers. Cook until edges are deeply golden and vegetables soften.",
+      "minutes": 10
+    },
+    {
+      "stepNumber": 4,
+      "title": "Eggs on top",
+      "instruction": "Make wells in the hash and crack eggs into each. Cover over medium-low heat until egg whites are fully set (165°F) and yolks are jammy. Season with paprika and salt only if the chorizo is not already salty enough.",
+      "minutes": 7
+    },
+    {
+      "stepNumber": 5,
+      "title": "Top and serve",
+      "instruction": "Scatter cotija and cilantro over the top. Serve with lime wedges and hot sauce at the line straight from the skillet or scooped onto warm plates.",
+      "minutes": 2
+    }
+  ],
+  "nutrition": {
+    "calories": 308,
+    "protein": 15,
+    "carbs": 38,
+    "fat": 11,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": false
+    }
+  },
+  "stationWorkflow": [
+    "Use the widest skillet you have—crowded potatoes steam and never develop the hash crust.",
+    "Hold rendered chorizo fat in the pan; if lean, add a tablespoon of oil before potatoes hit.",
+    "Cover with a sheet pan lid to set eggs fast while the crew lines up at the counter."
+  ],
+  "cleanupNotes": [
+    "Deglaze the skillet with hot water immediately after service—chorizo fat polymerizes if left to cool.",
+    "Wash pepper and onion boards before switching to egg cracking to keep raw prep zones separate."
+  ],
+  "leftovers": [
+    "Reheat hash base covered at 325°F, then top with freshly fried eggs rather than reheating set yolks.",
+    "Stuff leftovers into warm tortillas with extra cheese and salsa for quick breakfast tacos."
+  ],
+  "heroImage": "/images/breakfast/chorizo-breakfast-hash.jpg",
+  "thumbImage": "/images/thumbs/breakfast/chorizo-breakfast-hash.jpg",
+  "imageAlt": "Chorizo breakfast hash with crispy potatoes, peppers, and jammy eggs",
+  "publishedAt": "2026-05-30T03:14:16.260Z",
+  "updatedAt": "2026-05-30T03:14:16.260Z",
+  "readMinutes": 7,
+  "seoTitle": "Chorizo Breakfast Hash | Firehall Breakfast"
+}

@@ -10,13 +10,13 @@
   "description": "BBQ meets mac — hall legend. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
   "baseServings": 8,
-  "cookTime": 90,
-  "prepTime": 30,
+  "cookTime": 555,
+  "prepTime": 45,
   "difficulty": "hard",
-  "calories": 600,
-  "protein": 40,
-  "carbs": 48,
-  "fats": 28,
+  "calories": 1400,
+  "protein": 120,
+  "carbs": 122,
+  "fats": 90,
   "tags": [
     "protein:pork",
     "format:pasta",
@@ -33,95 +33,144 @@
   ],
   "ingredients": [
     {
-      "name": "Dried pasta",
-      "quantity": "1.5",
-      "unit": "lb",
-      "group": "Main"
-    },
-    {
-      "name": "Boneless chicken thighs",
-      "quantity": "2.5",
-      "unit": "lb",
-      "group": "Main"
-    },
-    {
-      "name": "Crushed tomatoes",
-      "quantity": "2",
-      "unit": "cans",
-      "notes": "28 oz",
-      "group": "Sauce"
-    },
-    {
-      "name": "Heavy cream",
-      "quantity": "1",
-      "unit": "cup",
-      "group": "Sauce"
-    },
-    {
-      "name": "Parmesan, grated",
+      "name": "Boneless pork shoulder",
       "quantity": "8",
-      "unit": "oz",
-      "group": "Finish"
+      "unit": "lb",
+      "group": "Main"
     },
     {
-      "name": "Yellow onion",
+      "name": "Brown sugar",
+      "quantity": "0.3",
+      "unit": "cup",
+      "group": "Rub"
+    },
+    {
+      "name": "Smoked paprika",
       "quantity": "2",
-      "unit": "large",
-      "group": "Aromatics"
+      "unit": "tbsp",
+      "group": "Rub"
     },
     {
-      "name": "Garlic cloves, minced",
-      "quantity": "6",
-      "unit": "cloves",
-      "group": "Aromatics"
+      "name": "Garlic powder",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Rub"
     },
     {
       "name": "Kosher salt",
       "quantity": "2",
       "unit": "tbsp",
-      "group": "Seasoning"
+      "group": "Rub"
+    },
+    {
+      "name": "Black pepper",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Rub"
+    },
+    {
+      "name": "Apple cider vinegar",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "BBQ"
+    },
+    {
+      "name": "BBQ sauce",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "BBQ"
+    },
+    {
+      "name": "Elbow macaroni",
+      "quantity": "2",
+      "unit": "lb",
+      "group": "Pasta"
+    },
+    {
+      "name": "Unsalted butter",
+      "quantity": "6",
+      "unit": "tbsp",
+      "group": "Cheese sauce"
+    },
+    {
+      "name": "All-purpose flour",
+      "quantity": "6",
+      "unit": "tbsp",
+      "group": "Cheese sauce"
+    },
+    {
+      "name": "Whole milk",
+      "quantity": "6",
+      "unit": "cups",
+      "group": "Cheese sauce"
+    },
+    {
+      "name": "Sharp cheddar, shredded",
+      "quantity": "20",
+      "unit": "oz",
+      "group": "Cheese"
+    },
+    {
+      "name": "Monterey Jack, shredded",
+      "quantity": "12",
+      "unit": "oz",
+      "group": "Cheese"
+    },
+    {
+      "name": "Panko breadcrumbs",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "optional",
+      "group": "Topping"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Salt the pasta water",
-      "instruction": "Bring a large pot of water to a rolling boil with enough salt that it tastes like the sea. This is your only chance to season the pasta itself.",
-      "minutes": 10,
-      "heatLevel": "high"
+      "title": "Rub and slow-cook pork",
+      "instruction": "Coat pork shoulder with brown sugar, paprika, garlic powder, salt, and pepper. Slow-roast covered at 275°F or slow-cooker on low 8 hours until shreddable at 203°F.",
+      "minutes": 480,
+      "heatLevel": "low"
     },
     {
       "stepNumber": 2,
-      "title": "Cook sauce base",
-      "instruction": "Meanwhile, brown meat, add onions and garlic, then tomatoes (and cream if Alfredo-style). Simmer 15 minutes while pasta cooks.",
-      "minutes": 15,
-      "heatLevel": "medium"
+      "title": "Shred and sauce pork",
+      "instruction": "Rest pork 20 minutes, then shred. Toss with vinegar and BBQ sauce — pulled pork mac needs actual pulled pork, not marinara chicken pasta.",
+      "minutes": 25,
+      "heatLevel": "low"
     },
     {
       "stepNumber": 3,
-      "title": "Boil pasta al dente",
-      "instruction": "Cook pasta 1 minute shy of package time. Reserve 2 cups pasta water. Drain — do not rinse.",
-      "minutes": 12,
-      "heatLevel": "high"
-    },
-    {
-      "stepNumber": 4,
-      "title": "Finish in the pan",
-      "instruction": "Toss pasta in sauce over medium heat, splashing pasta water until glossy and clinging. Pulled Pork Mac and Cheese should coat a spoon — if it pools, reduce another minute.",
-      "minutes": 4,
+      "title": "Make mac and cheese",
+      "instruction": "Boil macaroni al dente. Make cheese sauce with butter, flour, milk, cheddar, and Monterey Jack. Fold pasta into sauce.",
+      "minutes": 20,
       "heatLevel": "medium"
     },
     {
+      "stepNumber": 4,
+      "title": "Combine and pan up",
+      "instruction": "Fold shredded BBQ pork into mac and cheese. Transfer to buttered hotel pans; top with optional panko.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
       "stepNumber": 5,
-      "title": "Serve from the pot",
-      "instruction": "Fold in Parmesan off heat. Serve immediately — pasta waits for no one. Backup tray: cover lightly with foil at 200°F up to 15 minutes, add water if it tightens.",
-      "minutes": 3,
+      "title": "Bake until bubbling",
+      "instruction": "Bake at 375°F 20–25 minutes until edges bubble and top browns. Hold at 200°F for the line.",
+      "minutes": 25,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Serve for a big crew feed",
+      "instruction": "Scoop hearty portions — protein and mac in every serving. Extra BBQ sauce on the side for crews who want more smoke.",
+      "minutes": 5,
       "heatLevel": "low"
     }
   ],
   "proTips": [
     "Firefighters eat heavy after rough nights — double the protein if the hall had a busy shift.",
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts."
   ],
   "tonightSpread": [
@@ -143,11 +192,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 600,
-    "protein": 40,
-    "carbs": 48,
-    "fats": 28,
-    "label": "per serving (hall portion)"
+    "calories": 1400,
+    "protein": 120,
+    "carbs": 122,
+    "fats": 90,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/pulled-pork-mac.jpg",
   "mobileImage": "/images/mobile/pulled-pork-mac.jpg",
@@ -177,6 +240,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-29T01:43:09.410Z",
+  "generatedAt": "2026-05-30T03:28:01.955Z",
   "contentVersion": 2
 }

@@ -1,0 +1,189 @@
+{
+  "slug": "smoked-queso-fundido",
+  "title": "Smoked Queso Fundido",
+  "displayTitle": "Smoked Queso Fundido",
+  "seoTitle": "Smoked Queso Fundido | Firefighter Meal",
+  "shortDescription": "Melted cheese dip with chorizo finished on the smoker for ten",
+  "subtitle": "Melted cheese dip with chorizo finished on the smoker for ten",
+  "category": "hall_expansion",
+  "cuisine": "mexican",
+  "description": "Chorizo is browned, combined with a blend of melting cheeses and roasted peppers, then finished in a cast-iron skillet on the smoker until bubbling and lightly smoke-kissed. Tortilla chips and warm flour tortillas complete the spread.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 45,
+  "prepTime": 20,
+  "difficulty": "easy",
+  "calories": 540,
+  "protein": 26,
+  "carbs": 22,
+  "fats": 40,
+  "tags": [
+    "protein:pork",
+    "format:smoker",
+    "category:smoker_recipes",
+    "bbq",
+    "smoker",
+    "game_day",
+    "hall_expansion",
+    "hall_expansion_56",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Smoker",
+    "12-inch cast-iron skillet",
+    "Instant-read thermometer",
+    "Trivet",
+    "Serving spoons"
+  ],
+  "ingredients": [
+    {
+      "name": "Mexican chorizo",
+      "quantity": "2",
+      "unit": "lb",
+      "notes": "casings removed",
+      "group": "Main"
+    },
+    {
+      "name": "Oaxaca cheese",
+      "quantity": "1",
+      "unit": "lb",
+      "notes": "shredded",
+      "group": "Cheese"
+    },
+    {
+      "name": "Monterey Jack cheese",
+      "quantity": "1",
+      "unit": "lb",
+      "notes": "shredded",
+      "group": "Cheese"
+    },
+    {
+      "name": "cream cheese",
+      "quantity": "8",
+      "unit": "oz",
+      "group": "Cheese"
+    },
+    {
+      "name": "poblano peppers",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "roasted, diced",
+      "group": "Veg"
+    },
+    {
+      "name": "white onion",
+      "quantity": "1",
+      "unit": "whole",
+      "notes": "diced",
+      "group": "Veg"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "4",
+      "unit": "cloves",
+      "notes": "minced",
+      "group": "Veg"
+    },
+    {
+      "name": "heavy cream",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Sauce"
+    },
+    {
+      "name": "tortilla chips",
+      "quantity": "2",
+      "unit": "lb",
+      "group": "Serve"
+    },
+    {
+      "name": "flour tortillas",
+      "quantity": "12",
+      "unit": "whole",
+      "notes": "warmed",
+      "group": "Serve"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Brown the chorizo",
+      "instruction": "Cook crumbled chorizo in a skillet over medium heat until fully browned and fat renders, about 8 minutes. Drain excess fat, leaving just enough to coat the pan.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Sweat aromatics",
+      "instruction": "Add diced onion and garlic to the chorizo fat and cook until softened and translucent, about 5 minutes. Stir in roasted poblano peppers and remove from direct heat.",
+      "minutes": 6,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Build the cheese base",
+      "instruction": "Fold in cream cheese until melted, then gradually add Oaxaca, Monterey Jack, and heavy cream, stirring until the mixture is smooth and evenly combined.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Smoke until bubbling",
+      "instruction": "Transfer skillet to smoker at 275°F and smoke uncovered 25–30 minutes until surface bubbles, edges brown lightly, and center reaches 165°F for safe holding. Target oven/smoker temperature: 275°F.",
+      "minutes": 30,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Serve immediately",
+      "instruction": "Place hot skillet on a trivet with chips and warm tortillas around the board. Replenish chips as needed and keep backup queso warm at 170°F in a crock if the first batch disappears fast.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "A tablespoon of cornstarch whisked into the cream helps queso stay emulsified during long holds.",
+    "Add diced tomatoes only after smoking so they stay fresh, not mushy.",
+    "For extra smoke, put a small foil pouch of wood chips directly on the burner side of a pellet grill."
+  ],
+  "tonightSpread": [
+    "Smoking-hot queso skillet with chips, tortillas, pickled jalapeños, and lime wedges.",
+    "Simple black bean salad with cilantro for a fresh counterpoint to the rich cheese."
+  ],
+  "leftovers": [
+    "Reheat gently with a splash of milk and serve over grilled chicken rice bowls.",
+    "Spread cold queso on flour tortillas and griddle into crispy quesadillas for lunch."
+  ],
+  "whyCrewsLikeIt": "Queso fundido is built for grazing while watching the game or debriefing after a call. Smoking the skillet adds depth that stovetop-only versions miss, and the format scales to a hungry hall.",
+  "mealPrepNotes": "Brown chorizo ahead and refrigerate. Shred cheese into labeled bags. Assemble cold in the skillet and smoke from chilled, adding 10 minutes to the cook time.",
+  "spiceLevel": "medium",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 540,
+    "protein": 26,
+    "carbs": 22,
+    "fats": 40,
+    "label": "~540 cal/serving · 26g protein · 2g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/smoked-queso-fundido.jpg",
+  "heroImageAlt": "Smoked Queso Fundido — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/smoked-queso-fundido.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/smoked-queso-fundido.jpg",
+  "railImage": "/images/rails/hall-expansion/smoked-queso-fundido.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "smoked queso fundido",
+    "smoker recipes"
+  ],
+  "relatedSlugs": [
+    "smoked-turkey-breast",
+    "smoked-meatloaf",
+    "smoked-mac-and-cheese",
+    "pork-belly-burnt-ends"
+  ],
+  "generatedAt": "2026-05-30T03:14:19.187Z",
+  "contentVersion": 2
+}

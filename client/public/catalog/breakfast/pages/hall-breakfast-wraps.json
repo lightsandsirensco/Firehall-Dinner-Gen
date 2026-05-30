@@ -1,0 +1,147 @@
+{
+  "slug": "hall-breakfast-wraps",
+  "title": "Hall Breakfast Wraps",
+  "subtitle": "Soft flour wraps rolled with eggs, turkey sausage, and spinach.",
+  "description": "A lighter handheld option that still feeds ten: whole-wheat wraps stuffed with scrambled eggs, lean turkey sausage, sautéed spinach, and feta. Rolls tight, cuts in half on the bias, and holds in foil for eaters heading out on early rigs.",
+  "filters": [
+    "healthy_breakfasts",
+    "quick_breakfasts",
+    "high_protein"
+  ],
+  "tags": [
+    "wraps",
+    "turkey",
+    "spinach",
+    "handheld",
+    "make-ahead"
+  ],
+  "crewSize": 10,
+  "baseServings": 10,
+  "prepTime": 18,
+  "cookTime": 15,
+  "totalTime": 33,
+  "difficulty": "easy",
+  "ingredients": [
+    {
+      "name": "large eggs",
+      "quantity": "16",
+      "notes": "soft-scrambled",
+      "group": "Fillings"
+    },
+    {
+      "name": "lean turkey breakfast sausage",
+      "quantity": "1 1/2 lb",
+      "notes": "browned and crumbled",
+      "group": "Fillings"
+    },
+    {
+      "name": "baby spinach",
+      "quantity": "10 oz",
+      "notes": "wilted and squeezed dry",
+      "group": "Fillings"
+    },
+    {
+      "name": "crumbled feta",
+      "quantity": "1 cup",
+      "notes": "or goat cheese",
+      "group": "Fillings"
+    },
+    {
+      "name": "10-inch whole-wheat tortillas",
+      "quantity": "10",
+      "notes": "warmed",
+      "group": "Build"
+    },
+    {
+      "name": "salsa verde",
+      "quantity": "1/2 cup",
+      "notes": "drained, spread thin",
+      "group": "Build"
+    },
+    {
+      "name": "avocado",
+      "quantity": "1",
+      "notes": "sliced, optional",
+      "group": "Build"
+    },
+    {
+      "name": "foil",
+      "quantity": "10 sheets",
+      "notes": "for wrapping to-go portions",
+      "group": "Hold"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Cook the components",
+      "instruction": "Brown turkey sausage and drain. Wilt spinach in the same pan, squeeze dry in a towel. Soft-scramble eggs over low heat—they should still look glossy when done.",
+      "minutes": 12
+    },
+    {
+      "stepNumber": 2,
+      "title": "Warm tortillas",
+      "instruction": "Heat tortillas in a dry skillet or wrapped in foil at 300°F until pliable. Stiff tortillas tear when rolled tight.",
+      "minutes": 3
+    },
+    {
+      "stepNumber": 3,
+      "title": "Build each wrap",
+      "instruction": "Spread a thin line of salsa verde on each tortilla. Layer eggs, sausage, spinach, feta, and optional avocado off-center. Roll tight, tucking sides as you go.",
+      "minutes": 10
+    },
+    {
+      "stepNumber": 4,
+      "title": "Cut and wrap",
+      "instruction": "Cut each wrap in half on the bias with a sharp knife. Wrap halves in foil for grab-and-go or arrange cut-side up on a tray for dine-in.",
+      "minutes": 5
+    },
+    {
+      "stepNumber": 5,
+      "title": "Hold and serve",
+      "instruction": "Hold wrapped portions in a 200°F oven up to 20 minutes. Serve with extra salsa and hot sauce at the line for self-serve heat.",
+      "minutes": 0
+    }
+  ],
+  "nutrition": {
+    "calories": 1021,
+    "protein": 16,
+    "carbs": 27,
+    "fat": 90,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "stationWorkflow": [
+    "Squeeze spinach thoroughly—wet greens turn wraps soggy within minutes on the holding rack.",
+    "Roll on a flat cutting board with tortillas oriented like a burrito, not a fajita fold.",
+    "Cut with a serrated knife using a gentle saw motion so fillings don't get pushed out the ends."
+  ],
+  "cleanupNotes": [
+    "Rinse the spinach skillet while warm to prevent green film from baking onto stainless.",
+    "Collect foil wrappers in a dedicated bin during service so cleanup doesn't scatter across the hall."
+  ],
+  "leftovers": [
+    "Reheat foil-wrapped halves at 325°F for 12 minutes—open foil last 3 minutes to refresh the tortilla.",
+    "Chop leftover wraps into a scramble with extra eggs and hot sauce for a second-pass skillet."
+  ],
+  "heroImage": "/images/breakfast/hall-breakfast-wraps.jpg",
+  "thumbImage": "/images/thumbs/breakfast/hall-breakfast-wraps.jpg",
+  "imageAlt": "Hall breakfast wraps cut in half showing eggs, turkey sausage, and spinach",
+  "publishedAt": "2026-05-30T03:14:16.260Z",
+  "updatedAt": "2026-05-30T03:14:16.260Z",
+  "readMinutes": 7,
+  "seoTitle": "Hall Breakfast Wraps | Firehall Breakfast"
+}

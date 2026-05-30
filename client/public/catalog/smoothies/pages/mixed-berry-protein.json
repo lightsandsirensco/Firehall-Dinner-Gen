@@ -63,19 +63,34 @@
     }
   ],
   "nutrition": {
-    "calories": 280,
-    "protein": 22,
-    "carbs": 32,
-    "fats": 8,
-    "highlights": "~280 cal per 12 oz serving · ~22 g protein · fiber from whole fruit · no added sugar required if berries are ripe"
+    "calories": 146,
+    "protein": 8,
+    "carbs": 19,
+    "fats": 5,
+    "highlights": "~280 cal per 12 oz serving · ~22 g protein · fiber from whole fruit · no added sugar required if berries are ripe",
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": true
+    }
   },
   "substitutions": [
     "Swap Greek yogurt for skyr for even more protein per cup.",
     "Use whey or plant protein powder (1 scoop) if you need a bigger protein bump."
   ],
   "shiftNote": "Works when the crew wants something cold and filling between meals without firing up the stove. Cleanup is one blender jar.",
-  "heroImage": "/images/editorial/smoothies/mixed-berry-protein.webp",
-  "thumbImage": "/images/editorial/smoothies/mixed-berry-protein.webp",
+  "heroImage": "/images/smoothies/mixed-berry-protein.webp",
+  "thumbImage": "/images/smoothies/mixed-berry-protein.webp",
   "tags": [
     "fuel_smoothie",
     "taxonomy:protein_smoothie",

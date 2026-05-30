@@ -99,7 +99,7 @@
   "updatedAt": "2026-05-28T12:00:00.000Z",
   "readMinutes": 12,
   "seoTitle": "Healthy Smoothies for Firefighters",
-  "heroImage": "/images/editorial/healthy-hall-smoothies-hero.webp",
+  "heroImage": "/images/smoothies/mixed-berry-protein.webp",
   "heroImageAlt": "Assorted healthy smoothies on a fire station kitchen counter",
   "embeddedRecipes": [
     {
@@ -155,7 +155,7 @@
         "Use whey or plant protein powder (1 scoop) if you need a bigger protein bump."
       ],
       "shiftNote": "Works when the crew wants something cold and filling between meals without firing up the stove. Cleanup is one blender jar.",
-      "imagePath": "/images/editorial/smoothies/mixed-berry-protein.webp",
+      "imagePath": "/images/smoothies/mixed-berry-protein.jpg",
       "imageAlt": "Mixed berry protein smoothie in a glass on a station counter"
     },
     {
@@ -210,7 +210,7 @@
         "Add a scoop of chocolate protein powder after hard training days."
       ],
       "shiftNote": "Higher in calories by design — good after workouts, yard work, or a physically heavy call when someone needs fuel fast.",
-      "imagePath": "/images/editorial/smoothies/peanut-butter-banana-recovery.webp",
+      "imagePath": "/images/smoothies/peanut-butter-banana-recovery.jpg",
       "imageAlt": "Peanut butter banana recovery shake in a tall glass"
     },
     {
@@ -265,7 +265,7 @@
         "Coconut milk (¼ cup) adds richness if the smoothie tastes too sharp."
       ],
       "shiftNote": "Bright flavor helps on afternoon shifts when coffee alone is not cutting it. No cooking, minimal dishes.",
-      "imagePath": "/images/editorial/smoothies/tropical-mango-greek.webp",
+      "imagePath": "/images/smoothies/tropical-mango-greek.jpg",
       "imageAlt": "Tropical mango Greek yogurt smoothie with lime"
     },
     {
@@ -321,7 +321,7 @@
         "Regular water replaces coconut water in a pinch."
       ],
       "shiftNote": "Light enough for early morning or post-call when heavy food sounds wrong. Good “reset” option.",
-      "imagePath": "/images/editorial/smoothies/green-pineapple.webp",
+      "imagePath": "/images/smoothies/green-pineapple.jpg",
       "imageAlt": "Green pineapple spinach smoothie in a clear glass"
     },
     {
@@ -380,7 +380,7 @@
         "Dairy-free: oat milk + soy yogurt."
       ],
       "shiftNote": "Strong choice for breakfast handoff or crews eating light before a busy morning block.",
-      "imagePath": "/images/editorial/smoothies/strawberry-oat-breakfast.webp",
+      "imagePath": "/images/smoothies/strawberry-oat-breakfast.jpg",
       "imageAlt": "Strawberry oatmeal breakfast smoothie with cinnamon"
     },
     {
@@ -441,7 +441,7 @@
         "Skip protein powder if the crew prefers whole-food protein only."
       ],
       "shiftNote": "Caffeine plus protein in one cup — useful when the pot is empty but the board is not.",
-      "imagePath": "/images/editorial/smoothies/mocha-protein.webp",
+      "imagePath": "/images/smoothies/mocha-protein.jpg",
       "imageAlt": "Mocha protein smoothie with foam on top"
     },
     {
@@ -495,7 +495,7 @@
         "Silken tofu (½ cup) can replace part of the yogurt for a dairy-free batch."
       ],
       "shiftNote": "Berries hide in the freezer well — good pantry item for halls trying to stock healthier grab-and-go options.",
-      "imagePath": "/images/editorial/smoothies/blueberry-almond.webp",
+      "imagePath": "/images/smoothies/blueberry-almond.jpg",
       "imageAlt": "Blueberry almond smoothie with purple color"
     },
     {
@@ -553,7 +553,7 @@
         "Dairy-free milk and yogurt alternatives work fine."
       ],
       "shiftNote": "This one works well after workouts or overnight calls because it is higher in protein but still light.",
-      "imagePath": "/images/editorial/smoothies/chocolate-banana-recovery.webp",
+      "imagePath": "/images/smoothies/chocolate-banana-recovery.jpg",
       "imageAlt": "Chocolate banana recovery smoothie"
     },
     {
@@ -610,7 +610,7 @@
         "Skip carrot if the blender is weak — add more pineapple instead."
       ],
       "shiftNote": "Hydration-forward option on hot days or after heat exposure — not a meal replacement, but a solid bridge.",
-      "imagePath": "/images/editorial/smoothies/citrus-ginger.webp",
+      "imagePath": "/images/smoothies/citrus-ginger.jpg",
       "imageAlt": "Citrus ginger smoothie with orange color"
     },
     {
@@ -665,7 +665,7 @@
         "Flax meal (1 tbsp) instead of chia."
       ],
       "shiftNote": "Easy sell to crews skeptical of green food — looks and tastes like a berry shake.",
-      "imagePath": "/images/editorial/smoothies/strawberry-spinach.webp",
+      "imagePath": "/images/smoothies/strawberry-spinach.jpg",
       "imageAlt": "Strawberry spinach smoothie pink color"
     }
   ]

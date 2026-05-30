@@ -13,10 +13,10 @@
   "cookTime": 35,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 520,
-  "protein": 32,
-  "carbs": 48,
-  "fats": 22,
+  "calories": 731,
+  "protein": 65,
+  "carbs": 68,
+  "fats": 21,
   "tags": [
     "protein:chicken",
     "format:plated_main",
@@ -31,75 +31,75 @@
   ],
   "ingredients": [
     {
-      "name": "Chicken breasts",
+      "name": "Boneless chicken thighs, cubed",
       "quantity": "3",
       "unit": "lb",
       "group": "Main"
     },
     {
-      "name": "Yellow onion",
+      "name": "Tikka marinade (yogurt, spices)",
       "quantity": "2",
-      "unit": "large",
-      "group": "Aromatics"
+      "unit": "cups",
+      "group": "Marinade"
     },
     {
-      "name": "Garlic cloves",
-      "quantity": "5",
-      "unit": "cloves",
-      "group": "Aromatics"
-    },
-    {
-      "name": "Crushed tomatoes or broth",
+      "name": "Crushed tomatoes",
       "quantity": "2",
       "unit": "cans",
       "group": "Sauce"
     },
     {
-      "name": "Black pepper, freshly cracked",
+      "name": "Heavy cream",
       "quantity": "1",
-      "unit": "tbsp",
-      "group": "Seasoning"
+      "unit": "cup",
+      "group": "Sauce"
     },
     {
-      "name": "Olive oil",
-      "quantity": "0.3",
-      "unit": "cup",
+      "name": "Yellow onion, diced",
+      "quantity": "1",
+      "unit": "large",
       "group": "Aromatics"
+    },
+    {
+      "name": "Basmati rice, uncooked",
+      "quantity": "3",
+      "unit": "cups",
+      "group": "Base"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Prep components",
-      "instruction": "Dice vegetables; measure sauce ingredients. Chicken Tikka Masala moves smoother when everything is on the counter before the burner goes on.",
-      "minutes": 15,
+      "title": "Marinate chicken",
+      "instruction": "Coat cubed chicken thighs in tikka marinade; rest at least 30 minutes.",
+      "minutes": 35,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Sear and finish",
-      "instruction": "Sear protein over medium-high until browned, then finish in sauce or oven until safe temp (165°F poultry, 160°F ground beef). Watch for color and spring-back, not clock alone.",
-      "minutes": 25,
-      "heatLevel": "medium-high"
+      "title": "Char the chicken",
+      "instruction": "Broil or grill marinated chicken on racks until edges char and centers reach 165°F.",
+      "minutes": 15,
+      "heatLevel": "high"
     },
     {
       "stepNumber": 3,
-      "title": "Reduce and season",
-      "instruction": "Simmer sauce until it coats a spoon. Taste for salt and acid — add a splash of vinegar or lemon if flat.",
-      "minutes": 12,
+      "title": "Build the masala",
+      "instruction": "Sweat diced onion in oil 8 minutes. Add crushed tomatoes and cream; simmer 15 minutes. Fold in charred chicken; simmer 10 minutes more.",
+      "minutes": 25,
       "heatLevel": "medium"
     },
     {
       "stepNumber": 4,
-      "title": "Plate for the hall",
-      "instruction": "Serve on sheet trays for family-style or portioned plates. Hold backup at 200°F; cover lightly with foil so skins stay crisp where applicable.",
-      "minutes": 5,
-      "heatLevel": "low"
+      "title": "Serve with basmati",
+      "instruction": "Fluff basmati rice. Ladle tikka masala over rice with naan on the side if you have it.",
+      "minutes": 8,
+      "heatLevel": ""
     }
   ],
   "proTips": [
     "Prep all mise en place before the bell — this meal wins on organization, not speed hacks.",
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts.",
     "Pull chicken at 160°F and let carryover hit 165°F — dry breast ruins crew morale."
   ],
@@ -120,11 +120,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 520,
-    "protein": 32,
-    "carbs": 48,
-    "fats": 22,
-    "label": "per serving (hall portion)"
+    "calories": 731,
+    "protein": 65,
+    "carbs": 68,
+    "fats": 21,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/chicken-tikka-masala.jpg",
   "mobileImage": "/images/mobile/chicken-tikka-masala.jpg",
@@ -152,6 +166,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-29T01:43:09.394Z",
+  "generatedAt": "2026-05-30T03:28:01.920Z",
   "contentVersion": 2
 }

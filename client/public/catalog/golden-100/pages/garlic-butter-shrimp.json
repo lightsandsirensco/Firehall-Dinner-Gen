@@ -13,10 +13,10 @@
   "cookTime": 35,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 480,
-  "protein": 36,
-  "carbs": 48,
-  "fats": 24,
+  "calories": 504,
+  "protein": 32,
+  "carbs": 2,
+  "fats": 40,
   "tags": [
     "protein:seafood",
     "format:skillet",
@@ -108,7 +108,7 @@
   ],
   "proTips": [
     "Prep all mise en place before the bell — this meal wins on organization, not speed hacks.",
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts."
   ],
   "tonightSpread": [
@@ -128,11 +128,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 480,
-    "protein": 36,
-    "carbs": 48,
-    "fats": 24,
-    "label": "per serving (hall portion)"
+    "calories": 504,
+    "protein": 32,
+    "carbs": 2,
+    "fats": 40,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/garlic-butter-shrimp.jpg",
   "mobileImage": "/images/mobile/garlic-butter-shrimp.jpg",
@@ -160,6 +174,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-29T01:43:09.390Z",
+  "generatedAt": "2026-05-30T03:28:01.911Z",
   "contentVersion": 2
 }

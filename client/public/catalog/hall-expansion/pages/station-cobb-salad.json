@@ -1,0 +1,186 @@
+{
+  "slug": "station-cobb-salad",
+  "title": "Station Cobb Salad",
+  "displayTitle": "Station Cobb Salad",
+  "seoTitle": "Station Cobb Salad | Firefighter Meal",
+  "shortDescription": "Chopped salad with chicken, bacon, egg, and blue cheese for ten",
+  "subtitle": "Chopped salad with chicken, bacon, egg, and blue cheese for ten",
+  "category": "hall_expansion",
+  "cuisine": "american",
+  "description": "Grilled chicken, crisp bacon, hard-boiled eggs, avocado, and blue cheese top chopped romaine in rows for a classic Cobb spread. Crews build bowls at the line with ranch or vinaigrette.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 25,
+  "prepTime": 40,
+  "difficulty": "easy",
+  "calories": 420,
+  "protein": 38,
+  "carbs": 12,
+  "fats": 26,
+  "tags": [
+    "protein:chicken",
+    "format:salad",
+    "category:game_day_recipes",
+    "salad",
+    "game_day",
+    "chicken",
+    "hall_expansion",
+    "hall_expansion_56",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Sheet pans",
+    "Grill or cast iron",
+    "Instant-read thermometer",
+    "Large platters",
+    "Mixing bowls"
+  ],
+  "ingredients": [
+    {
+      "name": "romaine lettuce hearts",
+      "quantity": "5",
+      "unit": "heads",
+      "notes": "chopped",
+      "group": "Base"
+    },
+    {
+      "name": "chicken breast",
+      "quantity": "2.5",
+      "unit": "lb",
+      "group": "Protein"
+    },
+    {
+      "name": "thick-cut bacon",
+      "quantity": "1",
+      "unit": "lb",
+      "group": "Protein"
+    },
+    {
+      "name": "hard-boiled eggs",
+      "quantity": "8",
+      "unit": "whole",
+      "notes": "quartered",
+      "group": "Protein"
+    },
+    {
+      "name": "ripe avocados",
+      "quantity": "3",
+      "unit": "whole",
+      "notes": "sliced",
+      "group": "Vegetables"
+    },
+    {
+      "name": "cherry tomatoes",
+      "quantity": "2",
+      "unit": "cups",
+      "notes": "halved",
+      "group": "Vegetables"
+    },
+    {
+      "name": "crumbled blue cheese",
+      "quantity": "1",
+      "unit": "cup",
+      "group": "Cheese"
+    },
+    {
+      "name": "red wine vinegar",
+      "quantity": "0.25",
+      "unit": "cup",
+      "group": "Dressing"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Dressing"
+    },
+    {
+      "name": "Dijon mustard",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Dressing"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Cook the chicken",
+      "instruction": "Season chicken breasts and grill or sear over medium-high heat 6–7 minutes per side until internal temp reaches 165°F. Rest and slice. Target oven/smoker temperature: 165°F.",
+      "minutes": 18,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Crisp the bacon",
+      "instruction": "Bake bacon on sheet pans at 400°F until crisp, about 15 minutes. Drain on paper towels and crumble. Target oven/smoker temperature: 400°F.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Prep the components",
+      "instruction": "Hard-boil eggs 10 minutes, ice bath, peel and quarter. Chop romaine and wash tomatoes. Slice avocados just before assembly.",
+      "minutes": 20,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Make the dressing",
+      "instruction": "Whisk vinegar, Dijon, salt, and pepper, then stream in olive oil until emulsified.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Assemble and serve",
+      "instruction": "Spread romaine on platters. Arrange chicken, bacon, eggs, avocado, tomatoes, and blue cheese in rows. Serve dressing on the side.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Rotisserie chicken works in a pinch if grill time is tight—season with extra pepper.",
+    "Red onion slices add bite—soak in cold water 5 minutes if raw onion runs strong.",
+    "Grilled corn kernels mixed in turn this into a summer station favorite."
+  ],
+  "tonightSpread": [
+    "Cobb platters with dressing choice and warm dinner rolls.",
+    "Fresh fruit bowl for crew who want something sweet after the meal."
+  ],
+  "leftovers": [
+    "Pack components separately—do not dress until eating or salad turns soggy.",
+    "Chop leftovers into a wrap with ranch for quick lunch."
+  ],
+  "whyCrewsLikeIt": "Salad night does not have to feel like punishment when there is bacon, egg, and grilled chicken in the mix. The row presentation looks sharp for visiting crews and photos.",
+  "mealPrepNotes": "Cook chicken and bacon ahead. Hard-boil eggs ice-bath immediately for clean peels. Keep avocado sliced just before service to prevent browning.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 420,
+    "protein": 38,
+    "carbs": 12,
+    "fats": 26,
+    "label": "~420 cal/serving · 38g protein · 6g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/station-cobb-salad.jpg",
+  "heroImageAlt": "Station Cobb Salad — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/station-cobb-salad.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/station-cobb-salad.jpg",
+  "railImage": "/images/rails/hall-expansion/station-cobb-salad.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "station cobb salad",
+    "game day recipes"
+  ],
+  "relatedSlugs": [
+    "loaded-potato-skins",
+    "game-day-pizza-sliders",
+    "pretzel-bite-platter",
+    "jalapeno-popper-dip"
+  ],
+  "generatedAt": "2026-05-30T03:14:19.188Z",
+  "contentVersion": 2
+}

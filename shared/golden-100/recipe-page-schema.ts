@@ -24,7 +24,7 @@ export const goldenRecipePageStepSchema = z.object({
   stepNumber: z.number().int().min(1).max(40),
   title: z.string().trim().min(2).max(120),
   instruction: z.string().trim().min(20).max(2000),
-  minutes: z.number().int().min(0).max(180).optional(),
+  minutes: z.number().int().min(0).max(480).optional(),
   heatLevel: z.enum(["low", "medium-low", "medium", "medium-high", "high", ""]).optional(),
 });
 
@@ -34,6 +34,24 @@ export const goldenRecipePageNutritionSchema = z.object({
   carbs: z.number().int().min(0).max(500),
   fats: z.number().int().min(0).max(500),
   label: z.string().trim().max(80).optional(),
+  source: z.enum(["calculated", "curated", "estimated"]).optional(),
+  filterFlags: z
+    .object({
+      highProtein: z.boolean(),
+      under700Calories: z.boolean(),
+      under30gFat: z.boolean(),
+      highCarb: z.boolean(),
+      lowCarb: z.boolean(),
+      mealPrepFriendly: z.boolean(),
+    })
+    .optional(),
+  badgeCandidates: z
+    .object({
+      highProtein: z.boolean(),
+      lighterOption: z.boolean(),
+      performanceMeal: z.boolean(),
+    })
+    .optional(),
 });
 
 export const goldenRecipePageSchema = z.object({
@@ -48,7 +66,7 @@ export const goldenRecipePageSchema = z.object({
   description: z.string().trim().min(20).max(800),
   crewSize: z.number().int().min(2).max(16),
   baseServings: z.number().int().min(2).max(16).optional(),
-  cookTime: z.number().int().min(5).max(480),
+  cookTime: z.number().int().min(5).max(720),
   prepTime: z.number().int().min(0).max(240).optional(),
   difficulty: z.enum(["easy", "medium", "hard"]),
   calories: z.number().int().min(0).max(5000),
@@ -69,6 +87,7 @@ export const goldenRecipePageSchema = z.object({
   cleanupDifficulty: z.enum(["easy", "medium", "heavy"]).optional(),
   nutrition: goldenRecipePageNutritionSchema,
   heroImage: z.string().trim().max(500),
+  heroImageAlt: z.string().trim().max(160).optional(),
   mobileImage: z.string().trim().max(500),
   thumbImage: z.string().trim().max(500),
   railImage: z.string().trim().max(500),

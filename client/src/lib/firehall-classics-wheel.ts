@@ -26,7 +26,7 @@ export interface WheelClassic {
   slug: string;
   title: string;
   shortLabel: string;
-  /** @deprecated Display only — never used as recipe imagery fallback */
+  /** Spinning-wheel decoration only — never used as recipe/card imagery */
   emoji: string;
   protein: string;
   crewLine: string;

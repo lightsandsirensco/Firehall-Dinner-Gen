@@ -1,0 +1,186 @@
+{
+  "slug": "smoked-turkey-breast",
+  "title": "Smoked Turkey Breast for the Crew",
+  "displayTitle": "Smoked Turkey Breast for the Crew",
+  "seoTitle": "Smoked Turkey Breast for the Crew | Firefighter Meal",
+  "shortDescription": "Herb-brined turkey breast with cranberry-mustard glaze for ten",
+  "subtitle": "Herb-brined turkey breast with cranberry-mustard glaze for ten",
+  "category": "hall_expansion",
+  "cuisine": "american",
+  "description": "Bone-in turkey breasts get a simple herb brine, then smoke low and slow until juicy and sliceable. A bright cranberry-mustard glaze finishes on the smoker for color without burning the lean meat.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 180,
+  "prepTime": 30,
+  "difficulty": "medium",
+  "calories": 320,
+  "protein": 48,
+  "carbs": 12,
+  "fats": 9,
+  "tags": [
+    "protein:turkey",
+    "format:smoker",
+    "category:smoker_recipes",
+    "bbq",
+    "smoker",
+    "turkey",
+    "hall_expansion",
+    "hall_expansion_56",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Pellet or offset smoker",
+    "Instant-read thermometer",
+    "Hotel pans",
+    "Aluminum foil",
+    "Basting brush"
+  ],
+  "ingredients": [
+    {
+      "name": "bone-in turkey breast halves",
+      "quantity": "2",
+      "unit": "halves",
+      "notes": "about 6 lb total",
+      "group": "Main"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Brine"
+    },
+    {
+      "name": "brown sugar",
+      "quantity": "0.25",
+      "unit": "cup",
+      "group": "Brine"
+    },
+    {
+      "name": "fresh thyme",
+      "quantity": "3",
+      "unit": "tbsp",
+      "notes": "chopped",
+      "group": "Brine"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "6",
+      "unit": "cloves",
+      "notes": "smashed",
+      "group": "Brine"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Rub"
+    },
+    {
+      "name": "smoked paprika",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Rub"
+    },
+    {
+      "name": "black pepper",
+      "quantity": "1",
+      "unit": "tbsp",
+      "notes": "coarse",
+      "group": "Rub"
+    },
+    {
+      "name": "whole-grain mustard",
+      "quantity": "0.25",
+      "unit": "cup",
+      "group": "Glaze"
+    },
+    {
+      "name": "cranberry sauce",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Glaze"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Build the brine",
+      "instruction": "Dissolve salt and brown sugar in 1 gallon cold water with thyme and garlic. Submerge turkey breasts and refrigerate 8–12 hours so seasoning penetrates evenly.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Dry and season",
+      "instruction": "Remove breasts from brine, pat completely dry, and rub with olive oil, smoked paprika, and black pepper until the surface looks matte and evenly coated.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Smoke low and slow",
+      "instruction": "Heat smoker to 225°F with fruit wood. Place breasts skin-side up and smoke until internal temperature reaches 150°F in the thickest part, about 2–2.5 hours. Target oven/smoker temperature: 225°F.",
+      "minutes": 150,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Glaze and finish",
+      "instruction": "Whisk mustard with cranberry sauce. Brush over breasts during the final 15 minutes until internal temp hits 165°F and glaze sets glossy without scorching. Target oven/smoker temperature: 225°F.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Rest and slice for service",
+      "instruction": "Tent with foil and rest 15 minutes. Slice against the grain into half-inch portions. Hold covered at 165°F with a tablespoon of broth per pan until the crew lines up.",
+      "minutes": 20,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Pull at 165°F—turkey dries fast if you chase higher numbers on lean breast meat.",
+    "Use a water pan in the smoker to keep the environment humid and the bark from cracking.",
+    "Save pan drippings, skim fat, and whisk into the glaze for a richer service sauce."
+  ],
+  "tonightSpread": [
+    "Sliced turkey on a hotel pan with extra glaze, soft rolls, and quick pickles on the side.",
+    "Simple green salad with lemon vinaigrette to cut the richness of the smoked glaze."
+  ],
+  "leftovers": [
+    "Chop into smoked turkey club sandwiches with bacon and sharp cheddar.",
+    "Dice and fold into a creamy turkey tetrazzini bake for the next shift lunch."
+  ],
+  "whyCrewsLikeIt": "Turkey breast feels lighter than brisket but still reads as a special smoke night. It slices fast on the line, portions evenly, and reheats without turning stringy when held properly.",
+  "mealPrepNotes": "Brine breasts up to 24 hours ahead in labeled cambros. Pat completely dry before smoking so the skin sets instead of steaming. Hold sliced turkey at 165°F max in a covered hotel pan with a splash of broth.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 320,
+    "protein": 48,
+    "carbs": 12,
+    "fats": 9,
+    "label": "~320 cal/serving · 48g protein · 1g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/smoked-turkey-breast.jpg",
+  "heroImageAlt": "Smoked Turkey Breast for the Crew — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/smoked-turkey-breast.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/smoked-turkey-breast.jpg",
+  "railImage": "/images/rails/hall-expansion/smoked-turkey-breast.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "smoked turkey breast for the crew",
+    "smoker recipes"
+  ],
+  "relatedSlugs": [
+    "smoked-meatloaf",
+    "smoked-mac-and-cheese",
+    "pork-belly-burnt-ends",
+    "smoked-sausage-platter"
+  ],
+  "generatedAt": "2026-05-30T03:14:19.187Z",
+  "contentVersion": 2
+}

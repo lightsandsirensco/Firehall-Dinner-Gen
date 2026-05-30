@@ -13,10 +13,10 @@
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 380,
-  "protein": 22,
-  "carbs": 50,
-  "fats": 16,
+  "calories": 329,
+  "protein": 17,
+  "carbs": 60,
+  "fats": 3,
   "tags": [
     "protein:vegetarian",
     "format:bowl",
@@ -33,79 +33,85 @@
   ],
   "ingredients": [
     {
-      "name": "Jasmine rice, uncooked",
-      "quantity": "3",
+      "name": "Quinoa, uncooked",
+      "quantity": "2",
       "unit": "cups",
       "group": "Base"
     },
     {
-      "name": "Chicken thighs",
-      "quantity": "2.5",
-      "unit": "lb",
+      "name": "Chickpeas, drained and rinsed",
+      "quantity": "4",
+      "unit": "cans",
       "group": "Main"
     },
     {
-      "name": "Broccoli florets",
+      "name": "Cherry tomatoes, halved",
       "quantity": "2",
-      "unit": "lb",
+      "unit": "pints",
       "group": "Veg"
     },
     {
-      "name": "Soy sauce",
-      "quantity": "0.5",
-      "unit": "cup",
-      "group": "Sauce"
-    },
-    {
-      "name": "Sesame oil",
+      "name": "Cucumber, diced",
       "quantity": "2",
-      "unit": "tbsp",
-      "group": "Sauce"
+      "unit": "count",
+      "group": "Veg"
     },
     {
-      "name": "Red onion, sliced",
+      "name": "Red onion, thinly sliced",
       "quantity": "1",
       "unit": "large",
+      "group": "Veg"
+    },
+    {
+      "name": "Feta cheese, crumbled",
+      "quantity": "8",
+      "unit": "oz",
       "group": "Toppings"
+    },
+    {
+      "name": "Lemon-tahini dressing",
+      "quantity": "1.5",
+      "unit": "cups",
+      "group": "Sauce"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Cook rice",
-      "instruction": "Rinse rice until water runs clear. Cook 1:1.5 rice to water with salt; fluff and hold covered.",
-      "minutes": 20,
+      "title": "Cook quinoa",
+      "instruction": "Rinse quinoa; simmer in salted water 15 minutes until tails pop. Spread on a sheet pan to cool slightly so it does not steam the toppings soggy.",
+      "minutes": 18,
       "heatLevel": "medium"
     },
     {
       "stepNumber": 2,
-      "title": "Sear protein and veg",
-      "instruction": "Sear protein in batches over medium-high until browned and cooked through (165°F chicken, 125°F salmon). Stir-fry veg 4–5 minutes until bright with char.",
-      "minutes": 14,
-      "heatLevel": "medium-high"
+      "title": "Crisp the chickpeas",
+      "instruction": "Toss drained chickpeas with olive oil, cumin, and salt. Roast at 425°F 20–25 minutes until golden and crisp on the outside.",
+      "minutes": 25,
+      "heatLevel": "high"
     },
     {
       "stepNumber": 3,
-      "title": "Warm the sauce",
-      "instruction": "Whisk soy and sesame oil; add a splash of rice water if it needs to loosen for drizzling.",
-      "minutes": 5,
-      "heatLevel": "low"
+      "title": "Prep vegetables",
+      "instruction": "Halve tomatoes, dice cucumber, and soak red onion slices in cold water 10 minutes to tame bite; drain well.",
+      "minutes": 12,
+      "heatLevel": ""
     },
     {
       "stepNumber": 4,
-      "title": "Assembly line",
-      "instruction": "Rice, protein, veg, sauce on the side. Mediterranean Chickpea Bowls feeds fastest as a build-your-own line.",
-      "minutes": 5,
+      "title": "Build chickpea bowls",
+      "instruction": "Quinoa base, crisp chickpeas, vegetables, crumbled feta, and lemon-tahini drizzle. Mediterranean Chickpea Bowls stay plant-forward and filling without feeling like a sad salad.",
+      "minutes": 8,
       "heatLevel": ""
     }
   ],
   "proTips": [
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts."
   ],
   "tonightSpread": [
-    "Build bowls base → grain → protein → toppings so the line moves in one direction.",
-    "Put hot components closest to the crew, cold crunch at the far end.",
+    "Set rice or grain in the first pan, main in the second, crunchy toppings last so textures stay distinct.",
+    "Put hot components closest to the crew, cold crunch at the far end of the line.",
     "Portion bowls on the line with protein visible on top — crew eats with their eyes first.",
     "Keep dressing and crunchy toppings in side bowls so greens stay crisp through second servings.",
     "Line up Mediterranean Chickpea Bowls on the main counter with serving spoons — firefighters grab fast between calls.",
@@ -120,11 +126,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 380,
-    "protein": 22,
-    "carbs": 50,
-    "fats": 16,
-    "label": "per serving (hall portion)"
+    "calories": 329,
+    "protein": 17,
+    "carbs": 60,
+    "fats": 3,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/mediterranean-chickpea.jpg",
   "mobileImage": "/images/mobile/mediterranean-chickpea.jpg",
@@ -153,6 +173,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-29T01:43:09.385Z",
+  "generatedAt": "2026-05-30T03:28:01.902Z",
   "contentVersion": 2
 }

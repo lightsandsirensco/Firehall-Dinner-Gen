@@ -128,6 +128,24 @@ export const recipeNutritionSchema = z.object({
   proteinEstimate: z.number().finite().min(0).max(500).optional(),
   carbEstimate: z.number().finite().min(0).max(500).optional(),
   fatEstimate: z.number().finite().min(0).max(500).optional(),
+  source: z.enum(["calculated", "curated", "estimated"]).optional(),
+  filterFlags: z
+    .object({
+      highProtein: z.boolean(),
+      under700Calories: z.boolean(),
+      under30gFat: z.boolean(),
+      highCarb: z.boolean(),
+      lowCarb: z.boolean(),
+      mealPrepFriendly: z.boolean(),
+    })
+    .optional(),
+  badgeCandidates: z
+    .object({
+      highProtein: z.boolean(),
+      lighterOption: z.boolean(),
+      performanceMeal: z.boolean(),
+    })
+    .optional(),
 });
 
 export const recipeSourceSchema = z.object({

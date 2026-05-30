@@ -1,6 +1,8 @@
 {
   "slug": "quick-egg-tacos",
   "title": "Quick Egg Tacos",
+  "subtitle": "A practical station breakfast that scales from 4 to 12.",
+  "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
   "filters": [
     "quick_breakfasts"
   ],
@@ -16,57 +18,89 @@
   "cookTime": 12,
   "totalTime": 22,
   "difficulty": "easy",
-  "heroImage": "/images/breakfast/quick-egg-tacos.jpg",
-  "thumbImage": "/images/thumbs/breakfast/quick-egg-tacos.jpg",
-  "seoTitle": "Quick Egg Tacos | Firehall Breakfast",
-  "subtitle": "A practical station breakfast that scales from 4 to 12.",
-  "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
   "ingredients": [
     {
+      "name": "large eggs",
       "quantity": "10",
-      "name": "large eggs"
+      "notes": "whisked with salt"
     },
     {
-      "quantity": "1 1/2 tsp",
-      "name": "kosher salt",
-      "notes": "start low; adjust at the end"
+      "name": "6-inch corn or flour tortillas",
+      "quantity": "12"
     },
     {
-      "quantity": "2 tbsp",
-      "name": "butter or oil"
+      "name": "shredded cheese",
+      "quantity": "1 cup",
+      "notes": "cheddar or pepper jack"
     },
     {
+      "name": "salsa or pico de gallo",
+      "quantity": "1 cup"
+    },
+    {
+      "name": "avocado",
       "quantity": "1",
-      "name": "black pepper",
-      "notes": "to taste"
+      "notes": "sliced",
+      "optional": true
+    },
+    {
+      "name": "sour cream or crema",
+      "quantity": "1/2 cup",
+      "optional": true
+    },
+    {
+      "name": "hot sauce",
+      "quantity": "1",
+      "optional": true
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Get your station set",
-      "minutes": 5,
-      "instruction": "Set a warm holding zone (200°F oven). Lay out a tray for finished food, a tray for clean toast/tortillas, and a trash bowl so you’re not chasing scraps mid-cook."
+      "title": "Warm tortillas",
+      "instruction": "Warm tortillas in a dry skillet or wrapped in foil in a 200°F oven so they stay pliable and don't crack when folded.",
+      "minutes": 3
     },
     {
       "stepNumber": 2,
-      "title": "Cook the main",
-      "minutes": 10,
-      "instruction": "Cook the main components over medium to medium-high heat. Keep things in a single layer for browning, and season in layers so the finished plate doesn’t taste flat."
+      "title": "Scramble the eggs",
+      "instruction": "Scramble eggs over medium-low heat until just set and still glossy. Fold in cheese off heat.",
+      "minutes": 6
     },
     {
       "stepNumber": 3,
-      "title": "Eggs last",
-      "minutes": 6,
-      "instruction": "Cook eggs last so they stay tender. For scrambled: low heat and pull early. For fried: cover to set whites without blasting the yolk."
+      "title": "Build tacos for the line",
+      "instruction": "Fill each tortilla with eggs, salsa, and optional avocado. Keep built tacos seam-side down on a warm tray.",
+      "minutes": 5
     },
     {
       "stepNumber": 4,
-      "title": "Serve and hold",
-      "minutes": 0,
-      "instruction": "Serve immediately; hold the rest warm. If a call hits, cover soft items; keep crispy items uncovered so they don’t steam."
+      "title": "Serve immediately",
+      "instruction": "Tacos don't hold well—serve in two waves if needed. Pass hot sauce and crema on the side.",
+      "minutes": 0
     }
   ],
+  "nutrition": {
+    "calories": 490,
+    "protein": 23,
+    "carbs": 50,
+    "fat": 22,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
   "stationWorkflow": [
     "Assign one cook to the hot surface and one to assembly. Keep the line moving; don’t crowd the griddle.",
     "Set a warm holding zone (oven 200°F or covered hotel pan) so staggered eaters still get a hot plate.",
@@ -80,8 +114,11 @@
     "Cool fast: spread on a sheet pan 10 minutes, then portion into containers so it doesn’t sweat.",
     "Reheat rule: eggs reheat best covered at 50% power or low oven heat; don’t nuke on high."
   ],
+  "heroImage": "/images/breakfast/quick-egg-tacos.jpg",
+  "thumbImage": "/images/thumbs/breakfast/quick-egg-tacos.jpg",
   "imageAlt": "Warm station-kitchen breakfast: Quick Egg Tacos",
-  "publishedAt": "2026-05-28T13:26:37.645Z",
-  "updatedAt": "2026-05-28T13:26:37.645Z",
-  "readMinutes": 4
+  "publishedAt": "2026-05-30T03:14:16.261Z",
+  "updatedAt": "2026-05-30T03:14:16.261Z",
+  "readMinutes": 6,
+  "seoTitle": "Quick Egg Tacos | Firehall Breakfast"
 }

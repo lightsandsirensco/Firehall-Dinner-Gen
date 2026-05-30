@@ -65,19 +65,34 @@
     }
   ],
   "nutrition": {
-    "calories": 320,
-    "protein": 18,
-    "carbs": 32,
-    "fats": 8,
-    "highlights": "~320 cal · ~18 g protein · potassium · satisfies sweet cravings without bakery sugar levels"
+    "calories": 144,
+    "protein": 6,
+    "carbs": 19,
+    "fats": 6,
+    "highlights": "~320 cal · ~18 g protein · potassium · satisfies sweet cravings without bakery sugar levels",
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": true
+    }
   },
   "substitutions": [
     "Chocolate protein powder (1 scoop) replaces cocoa + some yogurt.",
     "Dairy-free milk and yogurt alternatives work fine."
   ],
   "shiftNote": "This one works well after workouts or overnight calls because it is higher in protein but still light.",
-  "heroImage": "/images/editorial/smoothies/chocolate-banana-recovery.webp",
-  "thumbImage": "/images/editorial/smoothies/chocolate-banana-recovery.webp",
+  "heroImage": "/images/smoothies/chocolate-banana-recovery.webp",
+  "thumbImage": "/images/smoothies/chocolate-banana-recovery.webp",
   "tags": [
     "fuel_smoothie",
     "taxonomy:recovery_smoothie",

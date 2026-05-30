@@ -1,0 +1,184 @@
+{
+  "slug": "mostaccioli-sausage-bake",
+  "title": "Baked Mostaccioli with Sausage",
+  "displayTitle": "Baked Mostaccioli with Sausage",
+  "seoTitle": "Baked Mostaccioli with Sausage | Firefighter Meal",
+  "shortDescription": "Cheesy mostaccioli with hot Italian sausage baked for ten",
+  "subtitle": "Cheesy mostaccioli with hot Italian sausage baked for ten",
+  "category": "hall_expansion",
+  "cuisine": "italian",
+  "description": "Hot Italian sausage browns with garlic and marinara, tosses with par-cooked ziti and ricotta, then bakes under a mozzarella cap until golden and bubbling.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 45,
+  "prepTime": 30,
+  "difficulty": "easy",
+  "calories": 580,
+  "protein": 32,
+  "carbs": 52,
+  "fats": 28,
+  "tags": [
+    "protein:pork",
+    "format:pasta",
+    "category:crew_feeders",
+    "pasta",
+    "comfort",
+    "hall_expansion",
+    "hall_expansion_56",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Large stock pot",
+    "Hotel pan or baking dish",
+    "Aluminum foil",
+    "Mixing bowls",
+    "Wooden spoon"
+  ],
+  "ingredients": [
+    {
+      "name": "mostaccioli pasta",
+      "quantity": "2",
+      "unit": "lb",
+      "group": "Main"
+    },
+    {
+      "name": "hot Italian sausage",
+      "quantity": "3",
+      "unit": "lb",
+      "notes": "casings removed",
+      "group": "Main"
+    },
+    {
+      "name": "marinara sauce",
+      "quantity": "6",
+      "unit": "cups",
+      "group": "Sauce"
+    },
+    {
+      "name": "whole-milk ricotta",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Cheese"
+    },
+    {
+      "name": "shredded mozzarella",
+      "quantity": "3",
+      "unit": "cups",
+      "group": "Cheese"
+    },
+    {
+      "name": "grated Parmesan",
+      "quantity": "1",
+      "unit": "cup",
+      "group": "Cheese"
+    },
+    {
+      "name": "egg",
+      "quantity": "1",
+      "unit": "whole",
+      "group": "Cheese"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "5",
+      "unit": "cloves",
+      "notes": "minced",
+      "group": "Aromatics"
+    },
+    {
+      "name": "fresh basil",
+      "quantity": "0.33",
+      "unit": "cup",
+      "notes": "chopped",
+      "group": "Finish"
+    },
+    {
+      "name": "red pepper flakes",
+      "quantity": "1",
+      "unit": "tsp",
+      "group": "Seasoning"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Par-cook the pasta",
+      "instruction": "Boil ziti in salted water until just shy of al dente, about 8 minutes. Drain and toss with a teaspoon of oil.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Brown the sausage",
+      "instruction": "Cook sausage with garlic over medium-high heat 10 minutes, breaking into crumbles until browned. Stir in marinara and simmer 5 minutes.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Mix the cheese layer",
+      "instruction": "Combine ricotta, half the mozzarella, Parmesan, egg, basil, and red pepper flakes until smooth.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Assemble and bake",
+      "instruction": "Toss ziti with sausage sauce, dollop ricotta mix throughout, top with remaining mozzarella. Cover and bake at 375°F 25 minutes, uncover and bake 15 more until golden. Target oven/smoker temperature: 375°F.",
+      "minutes": 40,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Rest and portion",
+      "instruction": "Rest 10 minutes so cheese sets. Cut into ten portions and serve with extra marinara at the line.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Sweet Italian sausage works if your hall does not love heat—swap half and half.",
+    "A thin layer of sauce on the pan bottom prevents sticking on cleanup.",
+    "Freeze half a pan before baking for an emergency meal on a future shift."
+  ],
+  "tonightSpread": [
+    "Baked ziti squares with garlic bread and simple Caesar salad.",
+    "Extra red pepper flakes and grated Parmesan at the table."
+  ],
+  "leftovers": [
+    "Reheat covered at 350°F with splash of water to loosen sauce.",
+    "Pan-fry cold squares in oil for crispy-edged ziti bites."
+  ],
+  "whyCrewsLikeIt": "Baked ziti is crew comfort math—cheap pasta, big flavor, one pan to scrub. It slices into portions for fast service and tastes even better as leftovers.",
+  "mealPrepNotes": "Undercook ziti by 2 minutes—it finishes in the oven. Assemble in disposable pans for easy cleanup. Rest 10 minutes before cutting so layers set.",
+  "spiceLevel": "medium",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 580,
+    "protein": 32,
+    "carbs": 52,
+    "fats": 28,
+    "label": "~580 cal/serving · 32g protein · 4g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/mostaccioli-sausage-bake.jpg",
+  "heroImageAlt": "Baked Mostaccioli with Sausage — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/mostaccioli-sausage-bake.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/mostaccioli-sausage-bake.jpg",
+  "railImage": "/images/rails/hall-expansion/mostaccioli-sausage-bake.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "baked mostaccioli with sausage",
+    "crew feeders"
+  ],
+  "relatedSlugs": [
+    "shawarma-bar-night",
+    "fajita-bar-night",
+    "hall-burger-bar",
+    "pasta-bar-night"
+  ],
+  "generatedAt": "2026-05-30T03:14:19.188Z",
+  "contentVersion": 2
+}

@@ -1,0 +1,147 @@
+{
+  "slug": "fire-captain-omelette-bar",
+  "title": "Fire Captain Omelette Bar",
+  "subtitle": "Made-to-order omelettes with a prep line of fillings for ten.",
+  "description": "A station-style omelette bar keeps the captain happy and the line moving: prepped fillings, beaten eggs in pitchers, and two pans running staggered. Everyone builds their own combo while the cook focuses on fold technique and heat control.",
+  "filters": [
+    "feed_a_crew",
+    "high_protein",
+    "quick_breakfasts"
+  ],
+  "tags": [
+    "omelette",
+    "bar",
+    "custom",
+    "eggs",
+    "station"
+  ],
+  "crewSize": 10,
+  "baseServings": 10,
+  "prepTime": 25,
+  "cookTime": 20,
+  "totalTime": 45,
+  "difficulty": "medium",
+  "ingredients": [
+    {
+      "name": "large eggs",
+      "quantity": "24",
+      "notes": "beaten in batches of 3 per omelette",
+      "group": "Eggs"
+    },
+    {
+      "name": "whole milk",
+      "quantity": "1/2 cup",
+      "notes": "whisked into beaten eggs",
+      "group": "Eggs"
+    },
+    {
+      "name": "shredded cheddar",
+      "quantity": "2 cups",
+      "notes": "and 2 cups shredded mozzarella",
+      "group": "Fillings"
+    },
+    {
+      "name": "diced ham",
+      "quantity": "2 cups",
+      "notes": "and 1 lb cooked crumbled bacon",
+      "group": "Fillings"
+    },
+    {
+      "name": "sautéed mushrooms",
+      "quantity": "2 cups",
+      "notes": "and 1 cup diced bell peppers",
+      "group": "Fillings"
+    },
+    {
+      "name": "diced tomatoes",
+      "quantity": "1 cup",
+      "notes": "drained, plus 1 cup spinach",
+      "group": "Fillings"
+    },
+    {
+      "name": "butter",
+      "quantity": "4 tbsp",
+      "notes": "for pans, plus oil as needed",
+      "group": "Fat"
+    },
+    {
+      "name": "salsa and hot sauce",
+      "quantity": "1/2 cup",
+      "notes": "at the line",
+      "group": "Serve"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Prep the filling line",
+      "instruction": "Set all fillings in labeled hotel pans with spoons. Sauté mushrooms and peppers ahead; drain tomatoes well. Beat eggs with milk in a pitcher for fast pours.",
+      "minutes": 20
+    },
+    {
+      "stepNumber": 2,
+      "title": "Heat two pans",
+      "instruction": "Heat two nonstick skillets over medium. Add a knob of butter until foaming but not brown. Work one omelette per pan for steady throughput.",
+      "minutes": 3
+    },
+    {
+      "stepNumber": 3,
+      "title": "Cook and fill",
+      "instruction": "Pour 3-egg portion into each pan, swirl to coat, and let set briefly. Add chosen fillings to one half when the top looks mostly set but still glossy.",
+      "minutes": 12
+    },
+    {
+      "stepNumber": 4,
+      "title": "Fold and plate",
+      "instruction": "Fold omelettes in half with a spatula and slide onto warm plates. Wipe pans quickly between batches if residue builds.",
+      "minutes": 8
+    },
+    {
+      "stepNumber": 5,
+      "title": "Keep the line moving",
+      "instruction": "Call orders two at a time, not ten at once. Hold finished omelettes in a 200°F oven uncovered for no more than 5 minutes before quality drops.",
+      "minutes": 0
+    }
+  ],
+  "nutrition": {
+    "calories": 360,
+    "protein": 28,
+    "carbs": 5,
+    "fat": 26,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "stationWorkflow": [
+    "Post a simple order card at the line: pick three fillings max so the cook doesn't get buried.",
+    "Run two pans staggered—pour pan B while folding pan A to maintain a steady rhythm.",
+    "Keep a damp towel and oil brush at the station for quick pan resets between omelettes."
+  ],
+  "cleanupNotes": [
+    "Wipe nonstick pans with warm soapy water only after cooling—thermal shock warps lightweight pans.",
+    "Consolidate leftover fillings into labeled containers for omelette scrambles the next morning."
+  ],
+  "leftovers": [
+    "Chop leftover omelettes into a breakfast fried rice with soy, green onion, and sesame oil.",
+    "Combine extra fillings with beaten eggs and bake as a frittata at 375°F for 25 minutes."
+  ],
+  "heroImage": "/images/breakfast/fire-captain-omelette-bar.jpg",
+  "thumbImage": "/images/thumbs/breakfast/fire-captain-omelette-bar.jpg",
+  "imageAlt": "Fire captain omelette bar with fillings and folded omelettes on warm plates",
+  "publishedAt": "2026-05-30T03:14:16.260Z",
+  "updatedAt": "2026-05-30T03:14:16.260Z",
+  "readMinutes": 9,
+  "seoTitle": "Fire Captain Omelette Bar | Firehall Breakfast"
+}

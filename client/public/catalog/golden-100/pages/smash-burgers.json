@@ -13,10 +13,10 @@
   "cookTime": 50,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 780,
-  "protein": 42,
-  "carbs": 46,
-  "fats": 44,
+  "calories": 1400,
+  "protein": 120,
+  "carbs": 47,
+  "fats": 90,
   "tags": [
     "protein:beef",
     "format:burger",
@@ -190,7 +190,7 @@
   "proTips": [
     "Smash once per side — re-smashing after crust forms tears the lace.",
     "American cheese melts faster than cheddar; use it for that diner drape.",
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts."
   ],
   "tonightSpread": [
@@ -209,11 +209,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 780,
-    "protein": 42,
-    "carbs": 46,
-    "fats": 44,
-    "label": "per serving (hall portion)"
+    "calories": 1400,
+    "protein": 120,
+    "carbs": 47,
+    "fats": 90,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/smash-burgers.jpg",
   "mobileImage": "/images/mobile/smash-burgers.jpg",
@@ -243,6 +257,6 @@
   "sourceName": "Serious Eats",
   "sourceUrl": "",
   "classicSlug": "smash-burgers",
-  "generatedAt": "2026-05-29T01:43:09.313Z",
+  "generatedAt": "2026-05-30T03:28:01.759Z",
   "contentVersion": 2
 }

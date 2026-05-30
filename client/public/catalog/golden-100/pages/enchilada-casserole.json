@@ -13,10 +13,10 @@
   "cookTime": 90,
   "prepTime": 30,
   "difficulty": "hard",
-  "calories": 520,
-  "protein": 32,
-  "carbs": 48,
-  "fats": 22,
+  "calories": 848,
+  "protein": 63,
+  "carbs": 41,
+  "fats": 50,
   "tags": [
     "protein:chicken",
     "format:plated_main",
@@ -32,75 +32,69 @@
   ],
   "ingredients": [
     {
-      "name": "Chicken breasts",
+      "name": "Ground beef (80/20)",
       "quantity": "3",
       "unit": "lb",
       "group": "Main"
     },
     {
-      "name": "Yellow onion",
-      "quantity": "2",
-      "unit": "large",
-      "group": "Aromatics"
+      "name": "Corn tortillas",
+      "quantity": "24",
+      "unit": "count",
+      "group": "Layers"
     },
     {
-      "name": "Garlic cloves",
-      "quantity": "5",
-      "unit": "cloves",
-      "group": "Aromatics"
-    },
-    {
-      "name": "Crushed tomatoes or broth",
-      "quantity": "2",
-      "unit": "cans",
+      "name": "Red enchilada sauce",
+      "quantity": "4",
+      "unit": "cups",
       "group": "Sauce"
     },
     {
-      "name": "Black pepper, freshly cracked",
-      "quantity": "1",
-      "unit": "tbsp",
-      "group": "Seasoning"
+      "name": "Shredded cheddar",
+      "quantity": "16",
+      "unit": "oz",
+      "group": "Cheese"
     },
     {
-      "name": "Olive oil",
-      "quantity": "0.3",
+      "name": "Black olives, sliced",
+      "quantity": "1",
       "unit": "cup",
-      "group": "Aromatics"
+      "group": "Topping"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Prep components",
-      "instruction": "Dice vegetables; measure sauce ingredients. Chicken Enchilada Casserole moves smoother when everything is on the counter before the burner goes on.",
+      "title": "Brown seasoned beef",
+      "instruction": "Brown ground beef with taco seasoning and diced onion. Drain grease; stir in 1 cup enchilada sauce.",
+      "minutes": 15,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Layer the casserole",
+      "instruction": "In a deep hotel pan: sauce, tortillas torn to fit, beef, cheese — repeat twice. Finish with sauce and cheese on top.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
-      "stepNumber": 2,
-      "title": "Sear and finish",
-      "instruction": "Sear protein over medium-high until browned, then finish in sauce or oven until safe temp (165°F poultry, 160°F ground beef). Watch for color and spring-back, not clock alone.",
-      "minutes": 25,
-      "heatLevel": "medium-high"
-    },
-    {
       "stepNumber": 3,
-      "title": "Reduce and season",
-      "instruction": "Simmer sauce until it coats a spoon. Taste for salt and acid — add a splash of vinegar or lemon if flat.",
-      "minutes": 12,
+      "title": "Bake until bubbling",
+      "instruction": "Bake covered at 375°F 30 minutes; uncover and bake 15 more until cheese browns at edges.",
+      "minutes": 45,
       "heatLevel": "medium"
     },
     {
       "stepNumber": 4,
-      "title": "Plate for the hall",
-      "instruction": "Serve on sheet trays for family-style or portioned plates. Hold backup at 200°F; cover lightly with foil so skins stay crisp where applicable.",
-      "minutes": 5,
+      "title": "Rest and scoop",
+      "instruction": "Rest 10 minutes so layers set. Scoop Enchilada Casserole with a square spatula — it should hold its shape, not slide like soup.",
+      "minutes": 10,
       "heatLevel": "low"
     }
   ],
   "proTips": [
     "Firefighters eat heavy after rough nights — double the protein if the hall had a busy shift.",
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts.",
     "Pull chicken at 160°F and let carryover hit 165°F — dry breast ruins crew morale."
   ],
@@ -122,11 +116,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 520,
-    "protein": 32,
-    "carbs": 48,
-    "fats": 22,
-    "label": "per serving (hall portion)"
+    "calories": 848,
+    "protein": 63,
+    "carbs": 41,
+    "fats": 50,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/enchilada-casserole.jpg",
   "mobileImage": "/images/mobile/enchilada-casserole.jpg",
@@ -155,6 +163,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-29T01:43:09.413Z",
+  "generatedAt": "2026-05-30T03:28:01.962Z",
   "contentVersion": 2
 }

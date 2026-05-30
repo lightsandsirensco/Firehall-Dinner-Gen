@@ -27,6 +27,7 @@ import {
 import { getPizzaConceptMeta } from "@shared/pizza-concepts";
 import { cn } from "@/lib/utils";
 import { MealHeroImage } from "@/components/meal-hero-image";
+import { ExploreHeldImageryPlaceholder } from "@/components/explore-held-imagery-placeholder";
 
 interface PizzaCardProps {
   recipe: PizzaResponse;
@@ -204,8 +205,6 @@ function buildPizzaPrintHtml(recipe: PizzaResponse, crewSize: number): string {
 
 export function PizzaCard({ recipe, crewSize, onEmailClick, onShoppingListClick }: PizzaCardProps) {
   const meta = getPizzaConceptMeta(recipe.pizza_style_id);
-  const heroEmoji = recipe.hero_emoji ?? meta?.heroEmoji ?? "🍕";
-  const heroGradient = meta?.heroGradient ?? "from-orange-950 via-red-950 to-zinc-950";
   const badges = recipe.badges?.length ? recipe.badges : meta?.badges ?? [];
   const hasTiming = recipe.timing && (recipe.timing.prep_minutes || recipe.timing.bake_minutes || recipe.timing.total_minutes);
   const hasSafety = recipe.protein_safety && recipe.protein_safety.length > 0;
@@ -232,61 +231,12 @@ export function PizzaCard({ recipe, crewSize, onEmailClick, onShoppingListClick 
           className="rounded-2xl overflow-hidden ring-1 ring-primary/25 shadow-xl shadow-black/30"
         />
       ) : (
-      <div
-        className={cn(
-          "relative overflow-hidden rounded-2xl ring-1 ring-primary/25 shadow-xl shadow-black/30",
-          recipe.hero_image_status === "pending" && "animate-pulse",
-          "bg-gradient-to-br",
-          heroGradient,
-        )}
-        data-testid="pizza-recipe-hero"
-      >
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_20%,rgba(255,255,255,0.08),transparent)]" />
-        <div className="relative flex items-center justify-between gap-4 p-6 sm:p-8">
-          <div className="min-w-0 flex-1">
-            <p className="text-[10px] uppercase tracking-[0.35em] text-primary font-semibold mb-2">
-              {recipe.category?.replace(/_/g, " ") ?? "Hall Pizza"}
-            </p>
-            <h2
-              className="font-heading text-2xl sm:text-4xl tracking-wide text-white leading-tight drop-shadow-md"
-              data-testid="pizza-text-recipe-title"
-            >
-              {recipe.title}
-            </h2>
-            {recipe.hall_line && (
-              <p className="text-sm text-white/75 mt-2 max-w-lg">{recipe.hall_line}</p>
-            )}
-            <div className="flex flex-wrap gap-1.5 mt-3">
-              {badges.map((b) => (
-                <span
-                  key={b}
-                  className="text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-black/40 text-white border border-white/15"
-                >
-                  {b}
-                </span>
-              ))}
-              {recipe.spice_level && (
-                <span className="text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-primary/80 text-primary-foreground">
-                  {recipe.spice_level}
-                </span>
-              )}
-              {recipe.difficulty && (
-                <span className="text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-white/15 text-white">
-                  {recipe.difficulty}
-                </span>
-              )}
-              {recipe.estimated_cost && (
-                <span className="text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-white/15 text-white">
-                  Est. {recipe.estimated_cost}
-                </span>
-              )}
-            </div>
-          </div>
-          <span className="text-6xl sm:text-7xl shrink-0 drop-shadow-2xl" aria-hidden>
-            {heroEmoji}
-          </span>
-        </div>
-      </div>
+        <ExploreHeldImageryPlaceholder
+          label="Pizza Night"
+          title={recipe.title}
+          variant="detail"
+          className="w-full aspect-[5/4] max-h-[min(48vh,440px)] sm:aspect-[16/9] sm:max-h-[min(400px,52vh)] rounded-2xl ring-1 ring-primary/25 shadow-xl shadow-black/30"
+        />
       )}
 
       <div className="space-y-1 px-0.5">

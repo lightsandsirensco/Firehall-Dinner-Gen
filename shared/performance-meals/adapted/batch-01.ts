@@ -744,7 +744,7 @@ export const batch01: PerformanceAdaptedRecipe[] = [
     description:
       "Boneless chicken thighs sear in a honey-garlic-soy glaze, then serve over fluffy jasmine rice with steamed broccoli and sesame seeds.",
     whyCrewsLikeIt:
-      "Takeout-style bowls with less sodium and more protein. Assembly line keeps service fast when everyone hits the kitchen at once.",
+      "Takeout-style bowls with less sodium and more protein. A build-your-own line keeps service fast when everyone hits the kitchen at once.",
     mealPrepNotes:
       "Cook rice in a rice cooker while chicken sears. Mix glaze in a jar and shake before adding to the pan.",
     stationWorkflow: [

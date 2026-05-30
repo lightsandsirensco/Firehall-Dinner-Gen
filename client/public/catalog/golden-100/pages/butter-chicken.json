@@ -13,10 +13,10 @@
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 520,
-  "protein": 32,
-  "carbs": 48,
-  "fats": 22,
+  "calories": 744,
+  "protein": 62,
+  "carbs": 65,
+  "fats": 25,
   "tags": [
     "protein:chicken",
     "format:plated_main",
@@ -31,74 +31,80 @@
   ],
   "ingredients": [
     {
-      "name": "Chicken breasts",
+      "name": "Boneless chicken thighs, cubed",
       "quantity": "3",
       "unit": "lb",
       "group": "Main"
     },
     {
-      "name": "Yellow onion",
+      "name": "Greek yogurt",
+      "quantity": "1",
+      "unit": "cup",
+      "group": "Marinade"
+    },
+    {
+      "name": "Garam masala",
       "quantity": "2",
-      "unit": "large",
-      "group": "Aromatics"
+      "unit": "tbsp",
+      "group": "Spices"
     },
     {
-      "name": "Garlic cloves",
-      "quantity": "5",
-      "unit": "cloves",
-      "group": "Aromatics"
-    },
-    {
-      "name": "Crushed tomatoes or broth",
+      "name": "Crushed tomatoes",
       "quantity": "2",
       "unit": "cans",
       "group": "Sauce"
     },
     {
-      "name": "Black pepper, freshly cracked",
+      "name": "Heavy cream",
       "quantity": "1",
-      "unit": "tbsp",
-      "group": "Seasoning"
+      "unit": "cup",
+      "group": "Sauce"
     },
     {
-      "name": "Olive oil",
-      "quantity": "0.3",
-      "unit": "cup",
-      "group": "Aromatics"
+      "name": "Unsalted butter",
+      "quantity": "4",
+      "unit": "tbsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "Basmati rice, uncooked",
+      "quantity": "3",
+      "unit": "cups",
+      "group": "Base"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Prep components",
-      "instruction": "Dice vegetables; measure sauce ingredients. Butter Chicken moves smoother when everything is on the counter before the burner goes on.",
-      "minutes": 15,
+      "title": "Marinate chicken",
+      "instruction": "Toss cubed chicken thighs with yogurt, garam masala, garlic, ginger, and salt. Rest 30 minutes (or overnight in the fridge).",
+      "minutes": 35,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Sear and finish",
-      "instruction": "Sear protein over medium-high until browned, then finish in sauce or oven until safe temp (165°F poultry, 160°F ground beef). Watch for color and spring-back, not clock alone.",
-      "minutes": 25,
+      "title": "Sear marinated chicken",
+      "instruction": "Sear chicken in butter over medium-high in batches until golden — not fully cooked through. Set aside.",
+      "minutes": 12,
       "heatLevel": "medium-high"
     },
     {
       "stepNumber": 3,
-      "title": "Reduce and season",
-      "instruction": "Simmer sauce until it coats a spoon. Taste for salt and acid — add a splash of vinegar or lemon if flat.",
-      "minutes": 12,
+      "title": "Simmer the makhani sauce",
+      "instruction": "In the same pot, melt butter; add crushed tomatoes, cream, and remaining spices. Simmer 15 minutes until silky. Return chicken; cook 10 minutes until 165°F.",
+      "minutes": 25,
       "heatLevel": "medium"
     },
     {
       "stepNumber": 4,
-      "title": "Plate for the hall",
-      "instruction": "Serve on sheet trays for family-style or portioned plates. Hold backup at 200°F; cover lightly with foil so skins stay crisp where applicable.",
-      "minutes": 5,
+      "title": "Serve over rice",
+      "instruction": "Cook basmati separately. Ladle butter chicken over rice with cilantro. The sauce should coat a spoon — add cream if it breaks.",
+      "minutes": 8,
       "heatLevel": "low"
     }
   ],
   "proTips": [
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts.",
     "Pull chicken at 160°F and let carryover hit 165°F — dry breast ruins crew morale."
   ],
@@ -118,11 +124,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 520,
-    "protein": 32,
-    "carbs": 48,
-    "fats": 22,
-    "label": "per serving (hall portion)"
+    "calories": 744,
+    "protein": 62,
+    "carbs": 65,
+    "fats": 25,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/butter-chicken.jpg",
   "mobileImage": "/images/mobile/butter-chicken.jpg",
@@ -150,6 +170,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-29T01:43:09.426Z",
+  "generatedAt": "2026-05-30T03:28:01.987Z",
   "contentVersion": 2
 }

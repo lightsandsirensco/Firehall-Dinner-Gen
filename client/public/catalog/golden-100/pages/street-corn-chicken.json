@@ -13,10 +13,10 @@
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 520,
-  "protein": 32,
-  "carbs": 48,
-  "fats": 22,
+  "calories": 693,
+  "protein": 60,
+  "carbs": 72,
+  "fats": 18,
   "tags": [
     "protein:chicken",
     "format:bowl",
@@ -39,74 +39,80 @@
       "group": "Base"
     },
     {
-      "name": "Chicken thighs",
-      "quantity": "2.5",
+      "name": "Boneless chicken thighs",
+      "quantity": "3",
       "unit": "lb",
       "group": "Main"
     },
     {
-      "name": "Broccoli florets",
-      "quantity": "2",
-      "unit": "lb",
+      "name": "Corn kernels",
+      "quantity": "3",
+      "unit": "cups",
       "group": "Veg"
     },
     {
-      "name": "Soy sauce",
+      "name": "Mayonnaise",
       "quantity": "0.5",
       "unit": "cup",
-      "group": "Sauce"
+      "group": "Elote sauce"
     },
     {
-      "name": "Sesame oil",
-      "quantity": "2",
-      "unit": "tbsp",
-      "group": "Sauce"
-    },
-    {
-      "name": "Red onion, sliced",
-      "quantity": "1",
-      "unit": "large",
+      "name": "Cotija cheese, crumbled",
+      "quantity": "6",
+      "unit": "oz",
       "group": "Toppings"
+    },
+    {
+      "name": "Chili powder",
+      "quantity": "2",
+      "unit": "tsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Lime wedges",
+      "quantity": "6",
+      "unit": "count",
+      "group": "Finish"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Cook rice",
-      "instruction": "Rinse rice until water runs clear. Cook 1:1.5 rice to water with salt; fluff and hold covered.",
-      "minutes": 20,
+      "title": "Cook jasmine rice",
+      "instruction": "Rinse and cook jasmine rice 1:1.25 with water 15 minutes; fluff and hold warm.",
+      "minutes": 18,
       "heatLevel": "medium"
     },
     {
       "stepNumber": 2,
-      "title": "Sear protein and veg",
-      "instruction": "Sear protein in batches over medium-high until browned and cooked through (165°F chicken, 125°F salmon). Stir-fry veg 4–5 minutes until bright with char.",
-      "minutes": 14,
+      "title": "Grill chicken and char corn",
+      "instruction": "Season chicken thighs with chili powder, salt, and cumin; grill to 165°F. Char corn in a dry skillet 4–5 minutes until blistered.",
+      "minutes": 18,
       "heatLevel": "medium-high"
     },
     {
       "stepNumber": 3,
-      "title": "Warm the sauce",
-      "instruction": "Whisk soy and sesame oil; add a splash of rice water if it needs to loosen for drizzling.",
-      "minutes": 5,
-      "heatLevel": "low"
+      "title": "Mix elote sauce",
+      "instruction": "Stir mayo, cotija, lime juice, and chili powder into charred corn until creamy.",
+      "minutes": 8,
+      "heatLevel": ""
     },
     {
       "stepNumber": 4,
-      "title": "Assembly line",
-      "instruction": "Rice, protein, veg, sauce on the side. Mexican Street Corn Chicken Bowls feeds fastest as a build-your-own line.",
-      "minutes": 5,
+      "title": "Build street corn bowls",
+      "instruction": "Rice, sliced chicken, elote corn, extra cotija, and lime wedges. Mexican Street Corn Chicken Bowls should taste like elote in a bowl — bright, salty, and a little messy.",
+      "minutes": 8,
       "heatLevel": ""
     }
   ],
   "proTips": [
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts.",
     "Pull chicken at 160°F and let carryover hit 165°F — dry breast ruins crew morale."
   ],
   "tonightSpread": [
-    "Build bowls base → grain → protein → toppings so the line moves in one direction.",
-    "Put hot components closest to the crew, cold crunch at the far end.",
+    "Set rice or grain in the first pan, main in the second, crunchy toppings last so textures stay distinct.",
+    "Put hot components closest to the crew, cold crunch at the far end of the line.",
     "Line up Mexican Street Corn Chicken Bowls on the main counter with serving spoons — firefighters grab fast between calls.",
     "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
   ],
@@ -121,11 +127,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 520,
-    "protein": 32,
-    "carbs": 48,
-    "fats": 22,
-    "label": "per serving (hall portion)"
+    "calories": 693,
+    "protein": 60,
+    "carbs": 72,
+    "fats": 18,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/street-corn-chicken.jpg",
   "mobileImage": "/images/mobile/street-corn-chicken.jpg",
@@ -154,6 +174,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-29T01:43:09.427Z",
+  "generatedAt": "2026-05-30T03:28:01.989Z",
   "contentVersion": 2
 }

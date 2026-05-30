@@ -10,13 +10,13 @@
   "description": "Silky sauce, wide noodles. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
   "baseServings": 8,
-  "cookTime": 55,
+  "cookTime": 65,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 720,
-  "protein": 40,
-  "carbs": 68,
-  "fats": 36,
+  "calories": 1177,
+  "protein": 68,
+  "carbs": 101,
+  "fats": 57,
   "tags": [
     "protein:beef",
     "format:pasta",
@@ -33,38 +33,25 @@
   ],
   "ingredients": [
     {
-      "name": "Dried pasta",
+      "name": "Beef sirloin or chuck, sliced thin",
+      "quantity": "3",
+      "unit": "lb",
+      "group": "Main"
+    },
+    {
+      "name": "Wide egg noodles",
+      "quantity": "2",
+      "unit": "lb",
+      "group": "Pasta"
+    },
+    {
+      "name": "Cremini mushrooms, sliced",
       "quantity": "1.5",
       "unit": "lb",
-      "group": "Main"
+      "group": "Aromatics"
     },
     {
-      "name": "Ground beef",
-      "quantity": "2.5",
-      "unit": "lb",
-      "group": "Main"
-    },
-    {
-      "name": "Crushed tomatoes",
-      "quantity": "2",
-      "unit": "cans",
-      "notes": "28 oz",
-      "group": "Sauce"
-    },
-    {
-      "name": "Heavy cream",
-      "quantity": "1",
-      "unit": "cup",
-      "group": "Sauce"
-    },
-    {
-      "name": "Parmesan, grated",
-      "quantity": "8",
-      "unit": "oz",
-      "group": "Finish"
-    },
-    {
-      "name": "Yellow onion",
+      "name": "Yellow onion, sliced",
       "quantity": "2",
       "unit": "large",
       "group": "Aromatics"
@@ -76,57 +63,118 @@
       "group": "Aromatics"
     },
     {
-      "name": "Kosher salt",
+      "name": "Unsalted butter",
+      "quantity": "4",
+      "unit": "tbsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "All-purpose flour",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "Beef broth",
+      "quantity": "4",
+      "unit": "cups",
+      "group": "Sauce"
+    },
+    {
+      "name": "Sour cream",
+      "quantity": "2",
+      "unit": "cups",
+      "notes": "room temperature",
+      "group": "Sauce"
+    },
+    {
+      "name": "Worcestershire sauce",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "Dijon mustard",
       "quantity": "2",
       "unit": "tbsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "Smoked paprika",
+      "quantity": "1",
+      "unit": "tbsp",
       "group": "Seasoning"
+    },
+    {
+      "name": "Kosher salt",
+      "quantity": "1.5",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Black pepper",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Fresh parsley, chopped",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Finish"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Salt the pasta water",
-      "instruction": "Bring a large pot of water to a rolling boil with enough salt that it tastes like the sea. This is your only chance to season the pasta itself.",
-      "minutes": 10,
-      "heatLevel": "high"
+      "title": "Slice beef and prep mushrooms",
+      "instruction": "Slice beef across the grain into thin strips. Pat dry and season with salt, pepper, and paprika. Slice mushrooms and onion — uniform pieces cook evenly in one pan.",
+      "minutes": 15,
+      "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Cook sauce base",
-      "instruction": "Meanwhile, brown meat, add onions and garlic, then tomatoes (and cream if Alfredo-style). Simmer 15 minutes while pasta cooks.",
-      "minutes": 15,
-      "heatLevel": "medium"
-    },
-    {
-      "stepNumber": 3,
-      "title": "Boil pasta al dente",
-      "instruction": "Cook pasta 1 minute shy of package time. Reserve 2 cups pasta water. Drain — do not rinse.",
+      "title": "Sear beef in batches",
+      "instruction": "Melt 2 tbsp butter in a large skillet over high heat. Sear beef in a single layer 2 minutes per side until browned but still pink inside. Transfer to a plate — do not crowd or you steam instead of sear.",
       "minutes": 12,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 4,
-      "title": "Finish in the pan",
-      "instruction": "Toss pasta in sauce over medium heat, splashing pasta water until glossy and clinging. Beef Stroganoff should coat a spoon — if it pools, reduce another minute.",
-      "minutes": 4,
+      "stepNumber": 3,
+      "title": "Cook mushrooms and onions",
+      "instruction": "Add remaining butter to the pan. Cook mushrooms and onions over medium heat 10–12 minutes until deeply browned and moisture evaporates. Stir in garlic 30 seconds until fragrant.",
+      "minutes": 12,
       "heatLevel": "medium"
     },
     {
+      "stepNumber": 4,
+      "title": "Build the stroganoff sauce",
+      "instruction": "Sprinkle flour over vegetables; cook 1 minute. Whisk in beef broth and Worcestershire; simmer 5 minutes until thickened. Remove from heat, stir in Dijon, then fold in sour cream — boiling curdles sour cream.",
+      "minutes": 12,
+      "heatLevel": "medium-low"
+    },
+    {
       "stepNumber": 5,
-      "title": "Serve from the pot",
-      "instruction": "Fold in Parmesan off heat. Serve immediately — pasta waits for no one. Backup tray: cover lightly with foil at 200°F up to 15 minutes, add water if it tightens.",
-      "minutes": 3,
+      "title": "Return beef and simmer gently",
+      "instruction": "Return beef and any juices to the pan. Simmer 5–8 minutes on low until beef is tender and sauce coats a spoon. Taste for salt — beef broth varies.",
+      "minutes": 8,
       "heatLevel": "low"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Boil noodles and serve",
+      "instruction": "Boil egg noodles in salted water until tender; drain well. Toss noodles with stroganoff on sheet trays or serve noodles first with sauce ladled over. Finish with parsley.",
+      "minutes": 12,
+      "heatLevel": "medium"
     }
   ],
   "proTips": [
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts."
   ],
   "tonightSpread": [
-    "Plate Beef Stroganoff with sides in separate pans so the crew can mix portions.",
-    "Line up Beef Stroganoff on the main counter with serving spoons — firefighters grab fast between calls.",
-    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+    "Serve wide egg noodles with stroganoff sauce ladled over — sour cream sauce stays separate from any tomato pan.",
+    "Keep extra parsley and black pepper at the line; mushrooms should be visible in every scoop."
   ],
   "leftovers": [
     "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
@@ -140,18 +188,32 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 720,
-    "protein": 40,
-    "carbs": 68,
-    "fats": 36,
-    "label": "per serving (hall portion)"
+    "calories": 1177,
+    "protein": 68,
+    "carbs": 101,
+    "fats": 57,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/beef-stroganoff.jpg",
   "mobileImage": "/images/mobile/beef-stroganoff.jpg",
   "thumbImage": "/images/thumbs/beef-stroganoff.jpg",
   "railImage": "/images/rails/beef-stroganoff.jpg",
   "realismScore": 100,
-  "firefighterScore": 100,
+  "firefighterScore": 98,
   "popularityWeight": 3.6,
   "searchTerms": [
     "beef stroganoff",
@@ -172,6 +234,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-29T01:43:09.364Z",
+  "generatedAt": "2026-05-30T03:28:01.863Z",
   "contentVersion": 2
 }

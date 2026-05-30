@@ -1,0 +1,189 @@
+{
+  "slug": "cheesy-beef-nacho-bake",
+  "title": "Cheesy Beef Nacho Bake",
+  "displayTitle": "Cheesy Beef Nacho Bake",
+  "seoTitle": "Cheesy Beef Nacho Bake | Firefighter Meal",
+  "shortDescription": "Layered chip bake with seasoned beef and queso for ten",
+  "subtitle": "Layered chip bake with seasoned beef and queso for ten",
+  "category": "hall_expansion",
+  "cuisine": "mexican-american",
+  "description": "Tortilla chips are layered with seasoned ground beef, black beans, jalapeños, and two cheeses, then baked until everything melts into a scoopable nacho casserole. Top with sour cream, salsa, and cilantro at the line.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 25,
+  "prepTime": 20,
+  "difficulty": "easy",
+  "calories": 560,
+  "protein": 32,
+  "carbs": 42,
+  "fats": 30,
+  "tags": [
+    "protein:beef",
+    "format:sheet_pan",
+    "category:game_day_recipes",
+    "game_day",
+    "beef",
+    "comfort",
+    "handheld",
+    "hall_expansion",
+    "hall_expansion_56",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Large skillet",
+    "Sheet pan or 9x13 dish",
+    "Mixing spoon",
+    "Aluminum foil",
+    "Instant-read thermometer"
+  ],
+  "ingredients": [
+    {
+      "name": "ground beef (85/15)",
+      "quantity": "2",
+      "unit": "lb",
+      "group": "Main"
+    },
+    {
+      "name": "taco seasoning",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Main"
+    },
+    {
+      "name": "tortilla chips",
+      "quantity": "1.5",
+      "unit": "lb",
+      "notes": "sturdy style",
+      "group": "Main"
+    },
+    {
+      "name": "black beans",
+      "quantity": "2",
+      "unit": "cans",
+      "notes": "15 oz, drained",
+      "group": "Main"
+    },
+    {
+      "name": "cheddar cheese",
+      "quantity": "1",
+      "unit": "lb",
+      "notes": "shredded",
+      "group": "Cheese"
+    },
+    {
+      "name": "Monterey Jack cheese",
+      "quantity": "0.5",
+      "unit": "lb",
+      "notes": "shredded",
+      "group": "Cheese"
+    },
+    {
+      "name": "jalapeño peppers",
+      "quantity": "4",
+      "unit": "whole",
+      "notes": "sliced",
+      "group": "Main"
+    },
+    {
+      "name": "salsa",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Topping"
+    },
+    {
+      "name": "sour cream",
+      "quantity": "1",
+      "unit": "cup",
+      "group": "Topping"
+    },
+    {
+      "name": "fresh cilantro",
+      "quantity": "0.5",
+      "unit": "cup",
+      "notes": "chopped",
+      "group": "Topping"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Brown the beef",
+      "instruction": "Cook ground beef in a large skillet over medium-high heat, breaking into crumbles until no pink remains. Drain excess fat, stir in taco seasoning and 0.25 cup water until coated.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Prep the baking pan",
+      "instruction": "Lightly grease a large sheet pan or 9x13 dish. Spread half the chips in an even layer, then half the beef, beans, jalapeños, and cheeses.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Layer and repeat",
+      "instruction": "Repeat layers with remaining chips, beef, beans, jalapeños, and cheese. Press gently so layers contact each other and melt into one cohesive bake.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Bake until melted",
+      "instruction": "Bake at 375°F for 18–22 minutes until cheese bubbles at edges and center reaches 165°F where beef is exposed. Rest 5 minutes before topping. Target oven/smoker temperature: 375°F.",
+      "minutes": 22,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Garnish and serve",
+      "instruction": "Dollop salsa and sour cream over the hot bake and scatter cilantro. Serve with extra chips on the side for scooping the cheesy bottom layer.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Add a thin layer of queso between chip layers for extra hold if the crew loves maximum cheese.",
+    "Drain beans thoroughly—wet beans steam chips into mush during baking.",
+    "Cut into squares for plate service or leave whole for communal scooping."
+  ],
+  "tonightSpread": [
+    "Hot nacho bake with salsa, sour cream, guacamole, and lime wedges.",
+    "Jalapeño poppers or pickled veggies for crews who want extra heat on the side."
+  ],
+  "leftovers": [
+    "Reheat covered at 325°F with a splash of broth to loosen cheese.",
+    "Press cold leftovers into a pan and griddle into nacho patty melts."
+  ],
+  "whyCrewsLikeIt": "Traditional nachos get soggy in the middle—this bake solves that with even cheese distribution. One pan feeds ten hungry people and stays hot longer than plated nachos.",
+  "mealPrepNotes": "Brown beef with taco seasoning ahead and refrigerate. Assemble bake up to 2 hours before oven time. Hold finished bake at 170°F with foil if kickoff delays.",
+  "spiceLevel": "medium",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 560,
+    "protein": 32,
+    "carbs": 42,
+    "fats": 30,
+    "label": "~560 cal/serving · 32g protein · 6g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/cheesy-beef-nacho-bake.jpg",
+  "heroImageAlt": "Cheesy Beef Nacho Bake — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/cheesy-beef-nacho-bake.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/cheesy-beef-nacho-bake.jpg",
+  "railImage": "/images/rails/hall-expansion/cheesy-beef-nacho-bake.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "cheesy beef nacho bake",
+    "game day recipes"
+  ],
+  "relatedSlugs": [
+    "loaded-potato-skins",
+    "game-day-pizza-sliders",
+    "pretzel-bite-platter",
+    "jalapeno-popper-dip"
+  ],
+  "generatedAt": "2026-05-30T03:14:19.188Z",
+  "contentVersion": 2
+}

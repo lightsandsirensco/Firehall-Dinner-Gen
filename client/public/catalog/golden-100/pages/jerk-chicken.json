@@ -13,10 +13,10 @@
   "cookTime": 60,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 590,
-  "protein": 40,
-  "carbs": 44,
-  "fats": 26,
+  "calories": 501,
+  "protein": 88,
+  "carbs": 0,
+  "fats": 14,
   "tags": [
     "protein:chicken",
     "format:grill",
@@ -105,7 +105,7 @@
   "proTips": [
     "Use thighs — they forgive the grill and stay juicy.",
     "Keep extra lime at the end of the line.",
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts.",
     "Rest grilled proteins 5–8 minutes under foil before slicing — juices stay in the meat.",
     "Pull chicken at 160°F and let carryover hit 165°F — dry breast ruins crew morale."
@@ -127,11 +127,25 @@
   "spiceLevel": "hot",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 590,
-    "protein": 40,
-    "carbs": 44,
-    "fats": 26,
-    "label": "per serving (hall portion)"
+    "calories": 501,
+    "protein": 88,
+    "carbs": 0,
+    "fats": 14,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": true,
+      "performanceMeal": true
+    }
   },
   "heroImage": "/images/golden-100/jerk-chicken.jpg",
   "mobileImage": "/images/mobile/jerk-chicken.jpg",
@@ -159,6 +173,6 @@
   "sourceName": "Firehall Classics",
   "sourceUrl": "",
   "classicSlug": "jerk-chicken",
-  "generatedAt": "2026-05-29T01:43:09.323Z",
+  "generatedAt": "2026-05-30T03:28:01.780Z",
   "contentVersion": 2
 }

@@ -10,13 +10,13 @@
   "description": "Friday hall pie — not delivery. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
   "baseServings": 8,
-  "cookTime": 55,
-  "prepTime": 20,
+  "cookTime": 175,
+  "prepTime": 30,
   "difficulty": "medium",
-  "calories": 600,
-  "protein": 40,
-  "carbs": 48,
-  "fats": 28,
+  "calories": 1400,
+  "protein": 70,
+  "carbs": 86,
+  "fats": 90,
   "tags": [
     "protein:pork",
     "format:pizza",
@@ -35,19 +35,19 @@
   "ingredients": [
     {
       "name": "Bread flour",
-      "quantity": "4",
+      "quantity": "6",
       "unit": "cups",
       "group": "Dough"
     },
     {
       "name": "Active dry yeast",
-      "quantity": "2",
+      "quantity": "2.5",
       "unit": "tsp",
       "group": "Dough"
     },
     {
       "name": "Warm water",
-      "quantity": "1.5",
+      "quantity": "2",
       "unit": "cups",
       "notes": "110°F",
       "group": "Dough"
@@ -66,70 +66,99 @@
     },
     {
       "name": "Crushed tomatoes",
-      "quantity": "2",
+      "quantity": "3",
       "unit": "cans",
       "notes": "28 oz",
       "group": "Sauce"
     },
     {
+      "name": "Garlic cloves, minced",
+      "quantity": "4",
+      "unit": "cloves",
+      "group": "Sauce"
+    },
+    {
+      "name": "Dried oregano",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Sauce"
+    },
+    {
       "name": "Fresh mozzarella, torn",
-      "quantity": "24",
+      "quantity": "32",
       "unit": "oz",
       "group": "Cheese"
     },
     {
-      "name": "Pepperoni or toppings",
-      "quantity": "12",
+      "name": "Low-moisture mozzarella, shredded",
+      "quantity": "16",
       "unit": "oz",
-      "group": "Toppings"
+      "group": "Cheese"
+    },
+    {
+      "name": "Pepperoni slices",
+      "quantity": "16",
+      "unit": "oz",
+      "group": "Topping"
+    },
+    {
+      "name": "Grated parmesan",
+      "quantity": "1",
+      "unit": "cup",
+      "group": "Finish"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Proof the dough",
-      "instruction": "Stir yeast into warm water with a pinch of sugar; bloom 5 minutes until foamy. Mix flour, salt, oil, and yeast water until a shaggy dough forms. Knead 8–10 minutes until smooth. Rise covered 1–1½ hours until doubled — Classic Pepperoni Pizza needs relaxed gluten for an open crumb.",
+      "title": "Proof dough for multiple pies",
+      "instruction": "Bloom yeast in warm water 5 minutes. Mix flour, salt, oil, and yeast water; knead 8–10 minutes until smooth. Rise 1–1½ hours until doubled. For eight hungry firefighters, plan three large pies or four medium — scale dough portions accordingly.",
       "minutes": 90,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Heat oven and stone",
-      "instruction": "Place a pizza stone or inverted sheet pan in the oven. Preheat to 500°F for at least 45 minutes — surface temp matters more than air temp. Prep sauce and cheese while the oven saturates.",
+      "title": "Simmer pizza sauce",
+      "instruction": "Simmer crushed tomatoes with garlic and oregano 15 minutes until slightly thickened. Cool briefly — hot sauce melts dough and makes a soggy center.",
+      "minutes": 15,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Heat oven and stone or steel",
+      "instruction": "Place pizza stone or steel in the oven; preheat to 500°F at least 45 minutes. Prep cheese and pepperoni while the oven saturates — surface temp matters more than air temp.",
       "minutes": 45,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 3,
-      "title": "Stretch and top",
-      "instruction": "Divide dough; stretch by hand (don't roll with a pin unless Detroit-style). Sauce lightly — wet centers sag. Add cheese and toppings. Work on parchment or floured peel; jiggle to confirm it slides.",
-      "minutes": 15,
+      "stepNumber": 4,
+      "title": "Stretch, sauce, cheese, pepperoni",
+      "instruction": "Divide dough; stretch by hand to 12–14 inch rounds. Sauce lightly — wet centers sag. Layer mozzarella and pepperoni; leave a ½ inch rim. Work on parchment or a floured peel.",
+      "minutes": 20,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 5,
       "title": "Bake until blistered",
-      "instruction": "Slide onto the hot stone. Bake 10–14 minutes until cheese bubbles with brown spots and the underside sounds hollow when tapped. Rotate once if your oven has hot spots.",
+      "instruction": "Bake each pie 10–14 minutes until cheese bubbles with brown spots and the underside sounds hollow. Rotate once for hot spots. Keep finished pies on racks, not stacked — steam kills crust.",
       "minutes": 12,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 5,
-      "title": "Rest and cut",
-      "instruction": "Rest 2 minutes before cutting so cheese sets. Cut on sheet trays for the hall line. Hold backup pies at 200°F uncovered up to 15 minutes — covering traps steam and softens crust.",
-      "minutes": 3,
+      "stepNumber": 6,
+      "title": "Rest, cut, and run the line",
+      "instruction": "Rest 2 minutes, cut into 8 slices per pie, and fan on sheet trays. Classic Pepperoni Pizza night — dough, tomato sauce, mozzarella, pepperoni. Keep a backup pie warming at 200°F.",
+      "minutes": 5,
       "heatLevel": "low"
     }
   ],
   "proTips": [
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts."
   ],
   "tonightSpread": [
-    "Cut pies into hall slices (8 per pie minimum) and fan on sheet trays.",
-    "Keep a fresh pie warming in the oven — pizza dies fast on the counter.",
-    "Line up Classic Pepperoni Pizza on the main counter with serving spoons — firefighters grab fast between calls.",
-    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+    "Fan pepperoni slices on sheet trays — keep a backup pie warming at 200°F uncovered.",
+    "Cut each pie into at least 8 slices for hall portions; label plain cheese backup if you make one."
   ],
   "leftovers": [
     "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
@@ -140,18 +169,32 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 600,
-    "protein": 40,
-    "carbs": 48,
-    "fats": 28,
-    "label": "per serving (hall portion)"
+    "calories": 1400,
+    "protein": 70,
+    "carbs": 86,
+    "fats": 90,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/pepperoni-pizza-night.jpg",
   "mobileImage": "/images/mobile/pepperoni-pizza-night.jpg",
   "thumbImage": "/images/thumbs/pepperoni-pizza-night.jpg",
   "railImage": "/images/rails/pepperoni-pizza-night.jpg",
   "realismScore": 100,
-  "firefighterScore": 98,
+  "firefighterScore": 94,
   "popularityWeight": 3.2,
   "searchTerms": [
     "classic pepperoni pizza",
@@ -174,6 +217,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-29T01:43:09.400Z",
+  "generatedAt": "2026-05-30T03:28:01.934Z",
   "contentVersion": 2
 }

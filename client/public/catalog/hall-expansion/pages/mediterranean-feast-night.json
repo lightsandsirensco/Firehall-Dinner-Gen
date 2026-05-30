@@ -1,0 +1,185 @@
+{
+  "slug": "mediterranean-feast-night",
+  "title": "Mediterranean Feast Night",
+  "displayTitle": "Mediterranean Feast Night",
+  "seoTitle": "Mediterranean Feast Night | Firefighter Meal",
+  "shortDescription": "Mezze bar with chicken, hummus, and flatbread for ten",
+  "subtitle": "Mezze bar with chicken, hummus, and flatbread for ten",
+  "category": "hall_expansion",
+  "cuisine": "mediterranean",
+  "description": "Grilled lemon-herb chicken, hummus, tzatziki, tabbouleh, feta, olives, and warm pita fill a mezze-style bar. Crew builds plates or wraps with Mediterranean flavors and plenty of fresh herbs.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 25,
+  "prepTime": 40,
+  "difficulty": "medium",
+  "calories": 460,
+  "protein": 34,
+  "carbs": 36,
+  "fats": 20,
+  "tags": [
+    "protein:chicken",
+    "format:bar_line",
+    "category:crew_feeders",
+    "bar_line",
+    "healthy",
+    "chicken",
+    "hall_expansion",
+    "hall_expansion_56",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Grill or grill pan",
+    "Hotel pans",
+    "Serving bowls",
+    "Instant-read thermometer",
+    "Sheet pan"
+  ],
+  "ingredients": [
+    {
+      "name": "chicken thighs",
+      "quantity": "4",
+      "unit": "lb",
+      "notes": "boneless",
+      "group": "Main"
+    },
+    {
+      "name": "lemon juice",
+      "quantity": "0.25",
+      "unit": "cup",
+      "group": "Marinade"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "0.33",
+      "unit": "cup",
+      "group": "Marinade"
+    },
+    {
+      "name": "dried oregano",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Marinade"
+    },
+    {
+      "name": "hummus",
+      "quantity": "3",
+      "unit": "cups",
+      "group": "Bar"
+    },
+    {
+      "name": "tzatziki",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Bar"
+    },
+    {
+      "name": "tabbouleh salad",
+      "quantity": "4",
+      "unit": "cups",
+      "group": "Bar"
+    },
+    {
+      "name": "feta cheese",
+      "quantity": "1",
+      "unit": "lb",
+      "notes": "crumbled",
+      "group": "Bar"
+    },
+    {
+      "name": "Kalamata olives",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Bar"
+    },
+    {
+      "name": "pita bread",
+      "quantity": "12",
+      "unit": "pieces",
+      "notes": "warm",
+      "group": "Bar"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Marinate and grill chicken",
+      "instruction": "Marinate thighs in lemon, olive oil, oregano, garlic, and salt 2–24 hours. Grill over medium-high heat 6–7 minutes per side until internal temp reaches 175°F and char marks appear.",
+      "minutes": 25,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Rest and slice chicken",
+      "instruction": "Rest grilled chicken 10 minutes, then slice into strips. Hold in a hotel pan at 165°F with a light drizzle of olive oil to prevent drying.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Prep cold mezze components",
+      "instruction": "Portion hummus, tzatziki, tabbouleh, feta, and olives into separate bowls. Garnish hummus with paprika and olive oil drizzle for visual appeal.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Warm pita and set the bar",
+      "instruction": "Wrap pita in foil and warm at 350°F for 8 minutes. Arrange all components along the line with serving spoons and label each dish clearly. Target oven/smoker temperature: 350°F.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Guide plate builds",
+      "instruction": "Suggest a sample plate: hummus, chicken, tabbouleh, feta, olives, pita. Encourage wraps or bowls and replenish warm pita from the oven as needed.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Add a bowl of marinated chickpeas for a vegetarian protein that fits the theme.",
+    "Sumac sprinkled over chicken at service adds authentic tang without extra sauce.",
+    "Cucumber rounds and cherry tomatoes fill gaps on the board and add fresh crunch."
+  ],
+  "tonightSpread": [
+    "Full Mediterranean mezze bar with grilled chicken, dips, and warm pita.",
+    "Simple orzo salad with lemon for crews wanting extra carbs beyond pita."
+  ],
+  "leftovers": [
+    "Wrap chicken and dips into lunch pitas with extra tabbouleh.",
+    "Stir leftover components into a lemony grain salad for tomorrow."
+  ],
+  "whyCrewsLikeIt": "Mediterranean night breaks the heavy comfort-food cycle without feeling like diet food. Most components are make-ahead, and the spread looks impressive with minimal last-minute cooking.",
+  "mealPrepNotes": "Marinate chicken overnight. Make hummus and tzatziki up to 2 days ahead. Tabbouleh improves after a few hours in the fridge—make it in the morning.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 460,
+    "protein": 34,
+    "carbs": 36,
+    "fats": 20,
+    "label": "~460 cal/serving · 34g protein · 6g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/mediterranean-feast-night.jpg",
+  "heroImageAlt": "Mediterranean Feast Night — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/mediterranean-feast-night.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/mediterranean-feast-night.jpg",
+  "railImage": "/images/rails/hall-expansion/mediterranean-feast-night.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "mediterranean feast night",
+    "crew feeders"
+  ],
+  "relatedSlugs": [
+    "shawarma-bar-night",
+    "fajita-bar-night",
+    "hall-burger-bar",
+    "pasta-bar-night"
+  ],
+  "generatedAt": "2026-05-30T03:14:19.188Z",
+  "contentVersion": 2
+}

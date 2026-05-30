@@ -1,7 +1,14 @@
 import type { EditorialArticle } from "../editorial/content-schema.js";
 import type { GoldenRecipePage } from "../golden-100/recipe-page-schema.js";
+import type { SeoLandingPageDef } from "./landing-pages-data.js";
+import { FIREFIGHTER_RED_LEAD_RECIPE } from "./firefighter-red-lead-recipe-data.js";
 import { guidePath, guidesIndexPath } from "../editorial/content-schema.js";
 import { FIREHALL_CATEGORY_LABEL, type FirehallCategoryId } from "../firehall-categories.js";
+import {
+  APPROVED_CATALOG_TOTAL,
+  formatMarketingRecipeCount,
+  marketingRecipeCountCopy,
+} from "../meal-catalog/curated-count.js";
 import {
   SEO_DEFAULT_DESCRIPTION,
   SEO_DEFAULT_OG_IMAGE_PATH,
@@ -46,18 +53,18 @@ export function buildHomeSeo(): PageSeoConfig {
   };
 }
 
-export function buildGeneratorSeo(): PageSeoConfig {
+export function buildGeneratorSeo(recipeCount = APPROVED_CATALOG_TOTAL): PageSeoConfig {
   return {
-    title: `Find Tonight's Firefighter Meal | FirehallMeals`,
+    title: `Find a Firefighter Meal for Tonight | Firehall Meals`,
     description: clipDescription(
-      "Use our meal picker when you want a fast answer — crew size, protein, and time — from the FirehallMeals recipe collection. Browse 150+ firefighter recipes anytime.",
+      `Pick crew size, protein, and time — get a firefighter meal from the Firehall Meals catalog. Browse ${marketingRecipeCountCopy(recipeCount)} anytime.`,
     ),
     canonicalPath: "/generator",
     ogType: "website",
     keywords: [
       ...SEO_TARGET_KEYWORDS,
       "tonight's firefighter dinner",
-      "fire station meal planner",
+      "crew meal picker",
     ],
   };
 }
@@ -73,11 +80,11 @@ export function buildFaqSeo(): PageSeoConfig {
   };
 }
 
-export function buildExploreSeo(): PageSeoConfig {
+export function buildExploreSeo(recipeCount = APPROVED_CATALOG_TOTAL): PageSeoConfig {
   return {
-    title: `Browse Firefighter Recipes | FirehallMeals`,
+    title: `Browse Firefighter Meals & Recipes | Firehall Meals`,
     description: clipDescription(
-      "Search the full firefighter recipe catalog — healthy meals, BBQ hall nights, quick shift dinners, smoothies, and crew-sized firehouse favorites.",
+      `Search ${formatMarketingRecipeCount(recipeCount)} firefighter meals and firehall recipes — healthy station plates, BBQ hall nights, quick shift dinners, and crew-sized firehouse favorites.`,
     ),
     canonicalPath: "/explore",
     ogType: "website",
@@ -85,11 +92,11 @@ export function buildExploreSeo(): PageSeoConfig {
   };
 }
 
-export function buildRecipesIndexSeo(recipeCount = 100): PageSeoConfig {
+export function buildRecipesIndexSeo(recipeCount = APPROVED_CATALOG_TOTAL): PageSeoConfig {
   return {
-    title: `Firefighter Recipes & Firehouse Meals (${recipeCount}+) | FirehallMeals`,
+    title: `Firefighter Meals & Recipes (${recipeCount}+) | Firehall Meals`,
     description: clipDescription(
-      `${recipeCount}+ firefighter recipes and fire station meals — crew portions, clear steps, and categories for quick shifts, BBQ nights, and healthy hall cooking.`,
+      `${recipeCount}+ firefighter meals and fire station recipes — crew portions, clear steps, and categories for quick shifts, BBQ nights, and healthy hall cooking.`,
     ),
     canonicalPath: "/recipes",
     ogType: "website",
@@ -126,7 +133,7 @@ export function buildFirehallCategorySeo(categoryId: FirehallCategoryId, recipeC
             : label;
 
   return {
-    title: `${titlePrefix} | FirehallMeals`,
+    title: `${titlePrefix} | Firehall Meals`,
     description: clipDescription(recipeCount > 0 ? `${descBase} ${recipeCount} recipes.` : descBase),
     canonicalPath: `/categories/${categoryId}`,
     ogType: "website",
@@ -244,6 +251,27 @@ export function buildGuideArticleSeo(article: EditorialArticle): PageSeoConfig {
     ogType: "article",
     ogImage: article.heroImage,
     keywords: [...SEO_TARGET_KEYWORDS, ...article.keywords],
+  };
+}
+
+export function buildSeoLandingPageSeo(page: SeoLandingPageDef): PageSeoConfig {
+  return {
+    title: page.title,
+    description: clipDescription(page.description),
+    canonicalPath: page.path,
+    ogType: "website",
+    keywords: page.keywords,
+  };
+}
+
+export function buildFirefighterRedLeadRecipeSeo(): PageSeoConfig {
+  return {
+    title: titleWithBrand(FIREFIGHTER_RED_LEAD_RECIPE.seoTitle),
+    description: clipDescription(FIREFIGHTER_RED_LEAD_RECIPE.description),
+    canonicalPath: FIREFIGHTER_RED_LEAD_RECIPE.path,
+    ogType: "article",
+    ogImage: FIREFIGHTER_RED_LEAD_RECIPE.heroImage,
+    keywords: [...SEO_TARGET_KEYWORDS, ...FIREFIGHTER_RED_LEAD_RECIPE.keywords],
   };
 }
 

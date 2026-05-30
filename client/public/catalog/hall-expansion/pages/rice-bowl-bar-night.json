@@ -1,0 +1,187 @@
+{
+  "slug": "rice-bowl-bar-night",
+  "title": "Rice Bowl Bar Night",
+  "displayTitle": "Rice Bowl Bar Night",
+  "seoTitle": "Rice Bowl Bar Night | Firefighter Meal",
+  "shortDescription": "Build-your-own grain bowls with proteins and toppings for ten",
+  "subtitle": "Build-your-own grain bowls with proteins and toppings for ten",
+  "category": "hall_expansion",
+  "cuisine": "asian-fusion",
+  "description": "Steamed rice anchors a build bar with teriyaki chicken, roasted vegetables, edamame, pickled ginger, and sauces. Crew assembles bowls to taste—extra protein, light on sauce, or loaded with crunch.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 35,
+  "prepTime": 30,
+  "difficulty": "easy",
+  "calories": 490,
+  "protein": 32,
+  "carbs": 58,
+  "fats": 14,
+  "tags": [
+    "protein:chicken",
+    "format:bar_line",
+    "category:crew_feeders",
+    "bar_line",
+    "bowl",
+    "chicken",
+    "healthy",
+    "hall_expansion",
+    "hall_expansion_56",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Rice cooker",
+    "Sheet pans",
+    "Hotel pans",
+    "Instant-read thermometer",
+    "Serving spoons"
+  ],
+  "ingredients": [
+    {
+      "name": "jasmine rice",
+      "quantity": "3",
+      "unit": "cups",
+      "notes": "dry",
+      "group": "Base"
+    },
+    {
+      "name": "chicken thighs",
+      "quantity": "4",
+      "unit": "lb",
+      "notes": "boneless",
+      "group": "Protein"
+    },
+    {
+      "name": "teriyaki sauce",
+      "quantity": "1.5",
+      "unit": "cups",
+      "group": "Protein"
+    },
+    {
+      "name": "broccoli florets",
+      "quantity": "2",
+      "unit": "lb",
+      "group": "Veg"
+    },
+    {
+      "name": "carrots",
+      "quantity": "1",
+      "unit": "lb",
+      "notes": "julienned",
+      "group": "Veg"
+    },
+    {
+      "name": "edamame",
+      "quantity": "2",
+      "unit": "cups",
+      "notes": "shelled, thawed",
+      "group": "Toppings"
+    },
+    {
+      "name": "pickled ginger",
+      "quantity": "1",
+      "unit": "cup",
+      "group": "Toppings"
+    },
+    {
+      "name": "sesame seeds",
+      "quantity": "0.25",
+      "unit": "cup",
+      "group": "Toppings"
+    },
+    {
+      "name": "sriracha mayo",
+      "quantity": "1",
+      "unit": "cup",
+      "group": "Sauce"
+    },
+    {
+      "name": "soy sauce",
+      "quantity": "0.25",
+      "unit": "cup",
+      "group": "Sauce"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Cook the rice",
+      "instruction": "Rinse jasmine rice and cook with 4.5 cups water in a rice cooker or covered pot until fluffy. Fluff with a fork and hold covered with a damp towel until service.",
+      "minutes": 25,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Prepare teriyaki chicken",
+      "instruction": "Season thighs with salt and pepper. Bake at 425°F for 22–25 minutes until internal temp reaches 175°F. Glaze with teriyaki during last 5 minutes, then slice. Target oven/smoker temperature: 425°F.",
+      "minutes": 28,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Roast vegetables",
+      "instruction": "Toss broccoli and carrots with oil and salt. Roast at 425°F on sheet pans 18–20 minutes until tender and lightly charred at the edges. Target oven/smoker temperature: 425°F.",
+      "minutes": 20,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Prep the bowl bar",
+      "instruction": "Arrange rice, sliced chicken, roasted veg, edamame, pickled ginger, sesame seeds, sriracha mayo, and soy sauce in labeled hotel pans along the line.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Service and guide builds",
+      "instruction": "Suggest a base build: rice, chicken, veg, edamame, sauce, sesame. Let crew customize from there while you replenish hot components from backup pans.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Mix a little rice vinegar into the rice after cooking for subtle sushi-bar brightness.",
+    "Soft-boil eggs as an optional topping—runny yolk doubles as sauce.",
+    "Keep sriracha mayo cold until the line opens so it stays stable on hot rice."
+  ],
+  "tonightSpread": [
+    "Full rice bowl bar with teriyaki chicken, roasted veg, and sauce station.",
+    "Miso soup in a thermos for crews wanting something warm to sip alongside bowls."
+  ],
+  "leftovers": [
+    "Fry rice with leftover components and scrambled eggs for breakfast.",
+    "Pack bowls in containers for members heading out on early shift."
+  ],
+  "whyCrewsLikeIt": "Rice bowls balance indulgence and nutrition without preaching. The bar format handles dietary preferences naturally and portions scale easily when extra members show up.",
+  "mealPrepNotes": "Cook rice in a rice cooker and hold on warm. Roast vegetables on sheet pans ahead. Teriyaki chicken can be grilled or baked and sliced before service.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 490,
+    "protein": 32,
+    "carbs": 58,
+    "fats": 14,
+    "label": "~490 cal/serving · 32g protein · 5g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/rice-bowl-bar-night.jpg",
+  "heroImageAlt": "Rice Bowl Bar Night — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/rice-bowl-bar-night.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/rice-bowl-bar-night.jpg",
+  "railImage": "/images/rails/hall-expansion/rice-bowl-bar-night.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "rice bowl bar night",
+    "crew feeders"
+  ],
+  "relatedSlugs": [
+    "shawarma-bar-night",
+    "fajita-bar-night",
+    "hall-burger-bar",
+    "pasta-bar-night"
+  ],
+  "generatedAt": "2026-05-30T03:14:19.188Z",
+  "contentVersion": 2
+}

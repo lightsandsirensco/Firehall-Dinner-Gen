@@ -1,0 +1,187 @@
+{
+  "slug": "hall-chicken-noodle-soup",
+  "title": "Hall Chicken Noodle Soup",
+  "displayTitle": "Hall Chicken Noodle Soup",
+  "seoTitle": "Hall Chicken Noodle Soup | Firefighter Meal",
+  "shortDescription": "Classic chicken noodle soup with egg noodles for ten",
+  "subtitle": "Classic chicken noodle soup with egg noodles for ten",
+  "category": "hall_expansion",
+  "cuisine": "american",
+  "description": "Chicken thighs simmer with mirepoix and herbs until tender, then shred into a rich broth with egg noodles and carrots. Simple, restorative, and built for the biggest stock pot in the hall.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 60,
+  "prepTime": 25,
+  "difficulty": "easy",
+  "calories": 340,
+  "protein": 28,
+  "carbs": 36,
+  "fats": 10,
+  "tags": [
+    "protein:chicken",
+    "format:soup",
+    "category:crew_feeders",
+    "soup",
+    "comfort",
+    "chicken",
+    "hall_expansion",
+    "hall_expansion_56",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Large stock pot",
+    "Colander",
+    "Ladle",
+    "Tongs",
+    "Cutting board"
+  ],
+  "ingredients": [
+    {
+      "name": "bone-in chicken thighs",
+      "quantity": "4",
+      "unit": "lb",
+      "group": "Main"
+    },
+    {
+      "name": "wide egg noodles",
+      "quantity": "1",
+      "unit": "lb",
+      "group": "Main"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "1",
+      "unit": "whole",
+      "notes": "diced",
+      "group": "Aromatics"
+    },
+    {
+      "name": "carrots",
+      "quantity": "4",
+      "unit": "whole",
+      "notes": "sliced",
+      "group": "Vegetables"
+    },
+    {
+      "name": "celery stalks",
+      "quantity": "4",
+      "unit": "stalks",
+      "notes": "sliced",
+      "group": "Vegetables"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "4",
+      "unit": "cloves",
+      "notes": "minced",
+      "group": "Aromatics"
+    },
+    {
+      "name": "chicken broth",
+      "quantity": "8",
+      "unit": "cups",
+      "group": "Broth"
+    },
+    {
+      "name": "fresh thyme",
+      "quantity": "4",
+      "unit": "sprigs",
+      "group": "Herbs"
+    },
+    {
+      "name": "bay leaves",
+      "quantity": "2",
+      "unit": "whole",
+      "group": "Herbs"
+    },
+    {
+      "name": "fresh parsley",
+      "quantity": "0.33",
+      "unit": "cup",
+      "notes": "chopped",
+      "group": "Finish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Poach the chicken",
+      "instruction": "Simmer chicken thighs in broth with onion, bay leaves, and thyme 30–35 minutes until internal temp reaches 165°F and meat pulls easily from bone. Target oven/smoker temperature: 165°F.",
+      "minutes": 35,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Shred and strain",
+      "instruction": "Remove chicken, shred meat, discard skin and bones. Strain broth if cloudy, return to pot, and skim excess fat.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Build the soup base",
+      "instruction": "Add carrots, celery, and garlic to broth. Simmer 15 minutes until vegetables tender.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Cook noodles separately",
+      "instruction": "Boil egg noodles in salted water until al dente, about 7 minutes. Drain and toss with a little oil.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Ladle and garnish",
+      "instruction": "Return shredded chicken to soup. Season with salt and pepper. Portion noodles into bowls, ladle hot soup over, and garnish with parsley.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "A splash of lemon juice at service brightens heavy broth instantly.",
+    "Turmeric pinch adds golden color without changing the classic flavor.",
+    "Freeze half the shredded chicken and broth base separately for fast future soup."
+  ],
+  "tonightSpread": [
+    "Soup with saltine crackers and buttered bread on the side.",
+    "Simple green salad for crew who want crunch alongside the bowl."
+  ],
+  "leftovers": [
+    "Store noodles separate from broth or they absorb everything overnight.",
+    "Reduce broth and add cream for a quick chicken pot pie filling."
+  ],
+  "whyCrewsLikeIt": "Chicken noodle soup is the universal reset meal. It reheats perfectly, fills the hall with comfort smell, and nobody complains when they are tired or under the weather.",
+  "mealPrepNotes": "Poach thighs gently—boiling toughens meat. Cook noodles separately and add at service so they do not bloat in the pot. Skim fat from broth for cleaner flavor.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 340,
+    "protein": 28,
+    "carbs": 36,
+    "fats": 10,
+    "label": "~340 cal/serving · 28g protein · 3g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/hall-chicken-noodle-soup.jpg",
+  "heroImageAlt": "Hall Chicken Noodle Soup — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/hall-chicken-noodle-soup.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/hall-chicken-noodle-soup.jpg",
+  "railImage": "/images/rails/hall-expansion/hall-chicken-noodle-soup.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "hall chicken noodle soup",
+    "crew feeders"
+  ],
+  "relatedSlugs": [
+    "shawarma-bar-night",
+    "fajita-bar-night",
+    "hall-burger-bar",
+    "pasta-bar-night"
+  ],
+  "generatedAt": "2026-05-30T03:14:19.188Z",
+  "contentVersion": 2
+}

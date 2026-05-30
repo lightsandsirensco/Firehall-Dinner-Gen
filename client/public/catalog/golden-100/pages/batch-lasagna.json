@@ -10,13 +10,13 @@
   "description": "Feeds 12+ without drama. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
   "baseServings": 8,
-  "cookTime": 90,
-  "prepTime": 30,
+  "cookTime": 100,
+  "prepTime": 35,
   "difficulty": "hard",
-  "calories": 600,
-  "protein": 40,
-  "carbs": 48,
-  "fats": 28,
+  "calories": 1364,
+  "protein": 64,
+  "carbs": 33,
+  "fats": 90,
   "tags": [
     "protein:beef",
     "format:pasta",
@@ -33,38 +33,50 @@
   ],
   "ingredients": [
     {
-      "name": "Dried pasta",
-      "quantity": "1.5",
+      "name": "Lasagna noodles",
+      "quantity": "2",
       "unit": "lb",
       "group": "Main"
     },
     {
-      "name": "Ground beef",
-      "quantity": "2.5",
+      "name": "Ground beef and Italian sausage",
+      "quantity": "4",
       "unit": "lb",
       "group": "Main"
+    },
+    {
+      "name": "Marinara sauce",
+      "quantity": "6",
+      "unit": "cups",
+      "group": "Sauce"
     },
     {
       "name": "Crushed tomatoes",
-      "quantity": "2",
-      "unit": "cans",
+      "quantity": "1",
+      "unit": "can",
       "notes": "28 oz",
       "group": "Sauce"
     },
     {
-      "name": "Heavy cream",
-      "quantity": "1",
-      "unit": "cup",
-      "group": "Sauce"
+      "name": "Whole-milk ricotta",
+      "quantity": "32",
+      "unit": "oz",
+      "group": "Cheese"
+    },
+    {
+      "name": "Mozzarella, shredded",
+      "quantity": "24",
+      "unit": "oz",
+      "group": "Cheese"
     },
     {
       "name": "Parmesan, grated",
       "quantity": "8",
       "unit": "oz",
-      "group": "Finish"
+      "group": "Cheese"
     },
     {
-      "name": "Yellow onion",
+      "name": "Yellow onion, diced",
       "quantity": "2",
       "unit": "large",
       "group": "Aromatics"
@@ -76,52 +88,83 @@
       "group": "Aromatics"
     },
     {
+      "name": "Dried Italian seasoning",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Eggs",
+      "quantity": "2",
+      "unit": "count",
+      "group": "Cheese"
+    },
+    {
+      "name": "Olive oil",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Cooking"
+    },
+    {
       "name": "Kosher salt",
       "quantity": "2",
       "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Black pepper",
+      "quantity": "1",
+      "unit": "tsp",
       "group": "Seasoning"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Salt the pasta water",
-      "instruction": "Bring a large pot of water to a rolling boil with enough salt that it tastes like the sea. This is your only chance to season the pasta itself.",
-      "minutes": 10,
-      "heatLevel": "high"
+      "title": "Brown meat sauce",
+      "instruction": "Brown beef and sausage with onion and garlic. Add crushed tomatoes and marinara; simmer 20 minutes until thick. Season with Italian seasoning, salt, and pepper.",
+      "minutes": 25,
+      "heatLevel": "medium-high"
     },
     {
       "stepNumber": 2,
-      "title": "Cook sauce base",
-      "instruction": "Meanwhile, brown meat, add onions and garlic, then tomatoes (and cream if Alfredo-style). Simmer 15 minutes while pasta cooks.",
-      "minutes": 15,
-      "heatLevel": "medium"
+      "title": "Mix ricotta filling",
+      "instruction": "Stir ricotta with eggs, half the parmesan, salt, and pepper until smooth.",
+      "minutes": 10,
+      "heatLevel": ""
     },
     {
       "stepNumber": 3,
-      "title": "Boil pasta al dente",
-      "instruction": "Cook pasta 1 minute shy of package time. Reserve 2 cups pasta water. Drain — do not rinse.",
+      "title": "Cook lasagna sheets",
+      "instruction": "Boil lasagna noodles in salted water until pliable; drain and lay flat on oiled sheet pans so they do not stick.",
       "minutes": 12,
       "heatLevel": "high"
     },
     {
       "stepNumber": 4,
-      "title": "Finish in the pan",
-      "instruction": "Toss pasta in sauce over medium heat, splashing pasta water until glossy and clinging. Giant Batch Lasagna should coat a spoon — if it pools, reduce another minute.",
-      "minutes": 4,
-      "heatLevel": "medium"
+      "title": "Layer in hotel pans",
+      "instruction": "Spread meat sauce, noodles, ricotta dollops, mozzarella, and repeat. Finish with sauce and cheese on top — batch lasagna is layered, not tossed in a pot.",
+      "minutes": 20,
+      "heatLevel": ""
     },
     {
       "stepNumber": 5,
-      "title": "Serve from the pot",
-      "instruction": "Fold in Parmesan off heat. Serve immediately — pasta waits for no one. Backup tray: cover lightly with foil at 200°F up to 15 minutes, add water if it tightens.",
-      "minutes": 3,
+      "title": "Bake covered then brown",
+      "instruction": "Bake covered at 375°F 45 minutes, then uncover and bake 15–20 minutes until bubbling and golden.",
+      "minutes": 60,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Rest and cut squares",
+      "instruction": "Rest 15 minutes before cutting so layers hold. Serve squares from the pan for crew portions.",
+      "minutes": 15,
       "heatLevel": "low"
     }
   ],
   "proTips": [
     "Firefighters eat heavy after rough nights — double the protein if the hall had a busy shift.",
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts."
   ],
   "tonightSpread": [
@@ -143,11 +186,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 600,
-    "protein": 40,
-    "carbs": 48,
-    "fats": 28,
-    "label": "per serving (hall portion)"
+    "calories": 1364,
+    "protein": 64,
+    "carbs": 33,
+    "fats": 90,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/batch-lasagna.jpg",
   "mobileImage": "/images/mobile/batch-lasagna.jpg",
@@ -176,6 +233,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-29T01:43:09.408Z",
+  "generatedAt": "2026-05-30T03:28:01.953Z",
   "contentVersion": 2
 }

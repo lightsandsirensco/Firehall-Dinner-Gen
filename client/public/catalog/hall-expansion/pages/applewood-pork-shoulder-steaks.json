@@ -1,0 +1,185 @@
+{
+  "slug": "applewood-pork-shoulder-steaks",
+  "title": "Applewood Grilled Pork Shoulder Steaks",
+  "displayTitle": "Applewood Grilled Pork Shoulder Steaks",
+  "seoTitle": "Applewood Grilled Pork Shoulder Steaks | Firefighter Meal",
+  "shortDescription": "Thick-cut shoulder steaks with apple glaze for ten on the grill",
+  "subtitle": "Thick-cut shoulder steaks with apple glaze for ten on the grill",
+  "category": "hall_expansion",
+  "cuisine": "american",
+  "description": "Boneless pork shoulder is sliced into thick steaks, marinated overnight, then grilled over medium-high heat until charred outside and juicy inside. A reduced apple cider glaze finishes on the grill for shine and tang.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 35,
+  "prepTime": 30,
+  "difficulty": "easy",
+  "calories": 460,
+  "protein": 44,
+  "carbs": 14,
+  "fats": 26,
+  "tags": [
+    "protein:pork",
+    "format:grill",
+    "category:smoker_recipes",
+    "bbq",
+    "grill",
+    "pork",
+    "hall_expansion",
+    "hall_expansion_56",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Charcoal or gas grill",
+    "Instant-read thermometer",
+    "Basting brush",
+    "Sheet pans",
+    "Mixing bowls"
+  ],
+  "ingredients": [
+    {
+      "name": "boneless pork shoulder",
+      "quantity": "6",
+      "unit": "lb",
+      "notes": "cut into 10 steaks",
+      "group": "Main"
+    },
+    {
+      "name": "apple cider",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Marinade"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "0.33",
+      "unit": "cup",
+      "group": "Marinade"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "6",
+      "unit": "cloves",
+      "notes": "smashed",
+      "group": "Marinade"
+    },
+    {
+      "name": "fresh rosemary",
+      "quantity": "3",
+      "unit": "tbsp",
+      "notes": "chopped",
+      "group": "Marinade"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "black pepper",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "brown sugar",
+      "quantity": "0.25",
+      "unit": "cup",
+      "group": "Glaze"
+    },
+    {
+      "name": "Dijon mustard",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Glaze"
+    },
+    {
+      "name": "apple cider vinegar",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Glaze"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Marinate the steaks",
+      "instruction": "Whisk cider, olive oil, garlic, rosemary, salt, and pepper. Coat pork steaks and refrigerate at least 4 hours or overnight so flavor penetrates the thick cut.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Build the glaze",
+      "instruction": "Simmer 1 cup cider with brown sugar, Dijon, and vinegar until reduced to a syrupy glaze that coats the back of a spoon, about 12 minutes. Keep warm off heat.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Preheat the grill",
+      "instruction": "Heat grill to medium-high, about 400°F on the grates. Oil grates well so sticky marinade does not tear the crust when you flip. Target oven/smoker temperature: 400°F.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Grill the steaks",
+      "instruction": "Grill steaks 5–6 minutes per side until grill marks set and internal temperature reaches 145°F in the thickest part. Brush with glaze during the final 2 minutes on each side. Target oven/smoker temperature: 400°F.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Rest and slice",
+      "instruction": "Tent steaks 5 minutes, then slice across the grain into half-inch strips. Fan on platters and serve with remaining glaze at the line.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Ask the butcher to slice shoulder steaks if your knife skills are still developing—uniform thickness matters.",
+    "Keep a spray bottle of water near the grill to tame flare-ups from cider sugars.",
+    "Pair with grilled apple halves brushed with the same glaze for a seasonal smoke-night side."
+  ],
+  "tonightSpread": [
+    "Sliced pork steaks with extra glaze, roasted potatoes, and quick pickled red onions.",
+    "Soft rolls for building apple-glazed pork sandwiches with slaw."
+  ],
+  "leftovers": [
+    "Chop cold steak into a hash with diced potatoes and fried eggs for breakfast shift.",
+    "Slice thin for Cuban-style pressed sandwiches with pickles and mustard."
+  ],
+  "whyCrewsLikeIt": "Shoulder steaks give you pork BBQ flavor without a twelve-hour smoke commitment. They cook in under thirty minutes on the grill and portion cleanly for a hungry line.",
+  "mealPrepNotes": "Slice steaks uniform—about 1 inch thick—so they finish together. Marinate up to 24 hours in labeled cambros. Glaze can simmer ahead and reheat on the side burner.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 460,
+    "protein": 44,
+    "carbs": 14,
+    "fats": 26,
+    "label": "~460 cal/serving · 44g protein · 0g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/applewood-pork-shoulder-steaks.jpg",
+  "heroImageAlt": "Applewood Grilled Pork Shoulder Steaks — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/applewood-pork-shoulder-steaks.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/applewood-pork-shoulder-steaks.jpg",
+  "railImage": "/images/rails/hall-expansion/applewood-pork-shoulder-steaks.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "applewood grilled pork shoulder steaks",
+    "smoker recipes"
+  ],
+  "relatedSlugs": [
+    "smoked-turkey-breast",
+    "smoked-meatloaf",
+    "smoked-mac-and-cheese",
+    "pork-belly-burnt-ends"
+  ],
+  "generatedAt": "2026-05-30T03:14:19.188Z",
+  "contentVersion": 2
+}

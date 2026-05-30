@@ -1,0 +1,210 @@
+{
+  "slug": "philly-cheesesteak-pizza",
+  "title": "Philly Cheesesteak Pizza",
+  "displayTitle": "Philly Cheesesteak Pizza",
+  "seoTitle": "Philly Cheesesteak Pizza | Firefighter Meal",
+  "shortDescription": "Steak, peppers, provolone on dough",
+  "subtitle": "Steak, peppers, provolone on dough",
+  "category": "pizza_night",
+  "cuisine": "american",
+  "description": "Steak, peppers, provolone on dough. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 90,
+  "prepTime": 35,
+  "difficulty": "medium",
+  "calories": 860,
+  "protein": 61,
+  "carbs": 36,
+  "fats": 51,
+  "tags": [
+    "protein:beef",
+    "format:pizza",
+    "category:pizza_night",
+    "handheld",
+    "golden_100"
+  ],
+  "equipment": [
+    "Pizza stone or steel",
+    "Peel or inverted sheet pan",
+    "Large sheet trays",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "ingredients": [
+    {
+      "name": "Pizza dough balls (15 oz)",
+      "quantity": "4",
+      "unit": "count",
+      "group": "Crust"
+    },
+    {
+      "name": "Ribeye or sirloin, thin sliced",
+      "quantity": "3",
+      "unit": "lb",
+      "group": "Main"
+    },
+    {
+      "name": "Bell peppers, sliced",
+      "quantity": "3",
+      "unit": "count",
+      "group": "Veg"
+    },
+    {
+      "name": "Yellow onions, sliced",
+      "quantity": "3",
+      "unit": "large",
+      "group": "Veg"
+    },
+    {
+      "name": "Provolone slices",
+      "quantity": "24",
+      "unit": "count",
+      "group": "Cheese"
+    },
+    {
+      "name": "Low-moisture mozzarella, shredded",
+      "quantity": "12",
+      "unit": "oz",
+      "group": "Cheese"
+    },
+    {
+      "name": "Garlic aioli or mayo",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Base"
+    },
+    {
+      "name": "Worcestershire sauce",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Kosher salt",
+      "quantity": "1.5",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Black pepper",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Vegetable oil",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Pan"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Sear steak and vegetables",
+      "instruction": "Heat oil in a large skillet over high heat. Sear steak in batches 2 minutes until browned but not overcooked — it finishes on the pie. Sauté peppers and onions in the same pan 10 minutes until soft and charred at edges. Season with salt, pepper, and Worcestershire.",
+      "minutes": 20,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Combine steak, veg, and provolone",
+      "instruction": "Chop steak roughly and toss with peppers, onions, and torn provolone off heat so cheese starts to melt. This is your cheesesteak topping — keep warm.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Preheat stone to 500°F",
+      "instruction": "Heat stone or steel at 500°F at least 40 minutes. Stretch dough while the stone saturates.",
+      "minutes": 40,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Aioli base and load topping",
+      "instruction": "Stretch rounds to 12–14 inches. Spread a thin layer of garlic aioli instead of tomato sauce. Layer mozzarella, then the hot steak-pepper-onion-provolone mix evenly.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Bake until provolone browns",
+      "instruction": "Bake 11–14 minutes until cheese on top browns and the crust is crisp. Philly Cheesesteak Pizza should smell like the sandwich — if it smells only like bread, you skimped on the filling.",
+      "minutes": 13,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Rest and cut",
+      "instruction": "Rest 3 minutes so molten cheese sets. Cut 8 slices per pie. Serve fast — cheesesteak topping stays best when the pie is hot off the stone.",
+      "minutes": 5,
+      "heatLevel": "low"
+    }
+  ],
+  "proTips": [
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
+    "Taste for salt at the end — hall palates run salty after long shifts."
+  ],
+  "tonightSpread": [
+    "Cut pies into hall slices (8 per pie minimum) and fan on sheet trays.",
+    "Keep a fresh pie warming in the oven — pizza dies fast on the counter.",
+    "Line up Philly Cheesesteak Pizza on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+  ],
+  "leftovers": [
+    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
+    "Label trays with date and reheat to 165°F minimum before second shift."
+  ],
+  "whyCrewsLikeIt": "Steak, peppers, provolone on dough. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
+  "substitutions": [],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 860,
+    "protein": 61,
+    "carbs": 36,
+    "fats": 51,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "heroImage": "/images/golden-100/philly-cheesesteak-pizza.jpg",
+  "mobileImage": "/images/mobile/philly-cheesesteak-pizza.jpg",
+  "thumbImage": "/images/thumbs/philly-cheesesteak-pizza.jpg",
+  "railImage": "/images/rails/philly-cheesesteak-pizza.jpg",
+  "realismScore": 100,
+  "firefighterScore": 98,
+  "popularityWeight": 3.2,
+  "searchTerms": [
+    "philly cheesesteak pizza",
+    "american",
+    "beef",
+    "pizza",
+    "handheld",
+    "golden_100"
+  ],
+  "relatedSlugs": [
+    "smoked-brisket-bbq-pizza",
+    "taco-pizza",
+    "bbq-chicken-pizza",
+    "breakfast-sausage-pizza",
+    "buffalo-chicken-pizza",
+    "detroit-style-pizza"
+  ],
+  "generatedAt": "2026-05-30T03:45:01.616Z",
+  "contentVersion": 2
+}

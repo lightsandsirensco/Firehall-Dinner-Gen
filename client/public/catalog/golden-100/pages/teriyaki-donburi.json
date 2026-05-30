@@ -13,10 +13,10 @@
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 520,
-  "protein": 32,
-  "carbs": 48,
-  "fats": 22,
+  "calories": 600,
+  "protein": 61,
+  "carbs": 70,
+  "fats": 7,
   "tags": [
     "protein:chicken",
     "format:bowl",
@@ -33,16 +33,22 @@
   ],
   "ingredients": [
     {
-      "name": "Jasmine rice, uncooked",
+      "name": "Short-grain rice, uncooked",
       "quantity": "3",
       "unit": "cups",
       "group": "Base"
     },
     {
-      "name": "Chicken thighs",
-      "quantity": "2.5",
+      "name": "Boneless chicken thighs",
+      "quantity": "3",
       "unit": "lb",
       "group": "Main"
+    },
+    {
+      "name": "Teriyaki sauce",
+      "quantity": "1.5",
+      "unit": "cups",
+      "group": "Glaze"
     },
     {
       "name": "Broccoli florets",
@@ -51,62 +57,56 @@
       "group": "Veg"
     },
     {
-      "name": "Soy sauce",
-      "quantity": "0.5",
-      "unit": "cup",
-      "group": "Sauce"
-    },
-    {
-      "name": "Sesame oil",
+      "name": "Sesame seeds",
       "quantity": "2",
       "unit": "tbsp",
-      "group": "Sauce"
+      "group": "Garnish"
     },
     {
-      "name": "Red onion, sliced",
-      "quantity": "1",
-      "unit": "large",
-      "group": "Toppings"
+      "name": "Green onions, sliced",
+      "quantity": "4",
+      "unit": "count",
+      "group": "Garnish"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Cook rice",
-      "instruction": "Rinse rice until water runs clear. Cook 1:1.5 rice to water with salt; fluff and hold covered.",
-      "minutes": 20,
+      "title": "Steam rice",
+      "instruction": "Cook short-grain rice 1:1.25 with water; keep covered and warm.",
+      "minutes": 18,
       "heatLevel": "medium"
     },
     {
       "stepNumber": 2,
-      "title": "Sear protein and veg",
-      "instruction": "Sear protein in batches over medium-high until browned and cooked through (165°F chicken, 125°F salmon). Stir-fry veg 4–5 minutes until bright with char.",
-      "minutes": 14,
+      "title": "Sear chicken thighs",
+      "instruction": "Pat chicken thighs dry; sear in oiled skillet over medium-high 5 minutes skin-side down until golden. Flip; cook 4 more minutes.",
+      "minutes": 12,
       "heatLevel": "medium-high"
     },
     {
       "stepNumber": 3,
-      "title": "Warm the sauce",
-      "instruction": "Whisk soy and sesame oil; add a splash of rice water if it needs to loosen for drizzling.",
-      "minutes": 5,
-      "heatLevel": "low"
+      "title": "Glaze and steam broccoli",
+      "instruction": "Add teriyaki sauce to the pan; simmer 3–4 minutes until chicken reads 165°F and sauce thickens to a glaze. Steam broccoli 4 minutes until bright green.",
+      "minutes": 10,
+      "heatLevel": "medium"
     },
     {
       "stepNumber": 4,
-      "title": "Assembly line",
-      "instruction": "Rice, protein, veg, sauce on the side. Teriyaki Chicken Donburi feeds fastest as a build-your-own line.",
-      "minutes": 5,
+      "title": "Build donburi bowls",
+      "instruction": "Mound rice in bowls, slice glazed chicken over top, add broccoli, sesame seeds, and green onions. Teriyaki Chicken Donburi should glisten — thin with a splash of sauce if it tightens too much.",
+      "minutes": 6,
       "heatLevel": ""
     }
   ],
   "proTips": [
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts.",
     "Pull chicken at 160°F and let carryover hit 165°F — dry breast ruins crew morale."
   ],
   "tonightSpread": [
-    "Build bowls base → grain → protein → toppings so the line moves in one direction.",
-    "Put hot components closest to the crew, cold crunch at the far end.",
+    "Set rice or grain in the first pan, main in the second, crunchy toppings last so textures stay distinct.",
+    "Put hot components closest to the crew, cold crunch at the far end of the line.",
     "Line up Teriyaki Chicken Donburi on the main counter with serving spoons — firefighters grab fast between calls.",
     "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
   ],
@@ -121,11 +121,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 520,
-    "protein": 32,
-    "carbs": 48,
-    "fats": 22,
-    "label": "per serving (hall portion)"
+    "calories": 600,
+    "protein": 61,
+    "carbs": 70,
+    "fats": 7,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": true
+    }
   },
   "heroImage": "/images/golden-100/teriyaki-donburi.jpg",
   "mobileImage": "/images/mobile/teriyaki-donburi.jpg",
@@ -154,6 +168,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-29T01:43:09.429Z",
+  "generatedAt": "2026-05-30T03:28:01.994Z",
   "contentVersion": 2
 }

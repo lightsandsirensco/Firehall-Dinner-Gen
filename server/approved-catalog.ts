@@ -20,6 +20,8 @@ import {
   resolvePrimaryCatalogBadge,
 } from "../shared/hall-catalog/gate.js";
 import { loadMergedHallCatalogIndex } from "./meal-catalog/load-index.js";
+import { readBreakfastCatalogIndexFromDisk } from "./breakfast-catalog/catalog.js";
+import type { BreakfastIndexEntry } from "../shared/breakfast-schema.js";
 
 const SMOOTHIE_COOK_MINUTES = 5;
 
@@ -155,6 +157,58 @@ function smoothieEntryToApproved(item: (typeof SMOOTHIE_CATALOG_ITEMS)[number]):
   };
 }
 
+function breakfastEntryToApproved(entry: BreakfastIndexEntry): ApprovedCatalogEntry {
+  const slug = entry.slug.trim().toLowerCase();
+  const kind = resolveApprovedCatalogKind(slug);
+  const catalogBadge = resolvePrimaryCatalogBadge(slug);
+  const traitBadges = resolveCatalogTraitBadges(slug, {
+    firehallCategory: "breakfast_brunch",
+    explorePool: entry.filters.join(" "),
+  }).filter((badge) => badge !== catalogBadge);
+  const images = resolveExistingSlugImage(slug, kind);
+  const tagHay = entry.tags.join(" ").toLowerCase();
+  const isHighProtein =
+    entry.filters.includes("high_protein") ||
+    tagHay.includes("protein") ||
+    tagHay.includes("high-protein");
+
+  return {
+    slug,
+    title: entry.title,
+    kind,
+    category: "breakfast_brunch",
+    categoryLabel: "Breakfast & Brunch",
+    cuisine: "American",
+    protein: tagHay.includes("sausage")
+      ? "Sausage"
+      : tagHay.includes("bacon")
+        ? "Bacon"
+        : tagHay.includes("steak")
+          ? "Steak"
+          : "Eggs",
+    mealFormat: "breakfast",
+    cookTime: entry.totalTime,
+    cookTimeBucket: approvedCatalogCookTimeBucket(entry.totalTime),
+    heroImage: images.hero,
+    thumbImage: images.cardImage,
+    tags: entry.tags,
+    searchText: buildSearchText([
+      entry.title,
+      entry.slug,
+      "breakfast",
+      ...entry.filters,
+      ...entry.tags,
+    ]),
+    catalogBadge,
+    traitBadges,
+    isSmoothie: false,
+    isHealthy: entry.filters.includes("healthy_breakfasts"),
+    isBbqGrill: entry.filters.includes("bbq_breakfast"),
+    isHighProtein,
+    isLowCleanup: entry.totalTime <= 45,
+  };
+}
+
 export function buildApprovedCatalog(): ApprovedCatalogResponse {
   const index = loadMergedHallCatalogIndex();
   const mealSlugs = new Set<string>();
@@ -166,11 +220,21 @@ export function buildApprovedCatalog(): ApprovedCatalogResponse {
       return mealEntryToApproved(entry);
     });
 
+  const breakfastIndex = readBreakfastCatalogIndexFromDisk();
+  const breakfasts = (breakfastIndex?.recipes ?? [])
+    .filter((entry) => isApprovedCatalogSlug(entry.slug) && !mealSlugs.has(entry.slug))
+    .map((entry) => {
+      mealSlugs.add(entry.slug.trim().toLowerCase());
+      return breakfastEntryToApproved(entry);
+    });
+
   const smoothies = SMOOTHIE_CATALOG_ITEMS.filter((item) => !mealSlugs.has(item.slug)).map(
     smoothieEntryToApproved,
   );
 
-  const recipes = [...meals, ...smoothies].sort((a, b) => a.title.localeCompare(b.title));
+  const recipes = [...meals, ...breakfasts, ...smoothies].sort((a, b) =>
+    a.title.localeCompare(b.title),
+  );
 
   return {
     version: 1,

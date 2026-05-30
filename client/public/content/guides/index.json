@@ -1,7 +1,7 @@
 {
   "version": 3,
-  "generatedAt": "2026-05-28T22:22:42.439Z",
-  "articleCount": 54,
+  "generatedAt": "2026-05-30T03:48:39.374Z",
+  "articleCount": 58,
   "articles": [
     {
       "slug": "feeding-a-firehall-crew",
@@ -531,6 +531,46 @@
       "topic": "shift_operations",
       "pillar": "operations_how_to",
       "readMinutes": 7,
+      "publishedAt": "2026-05-27T18:00:00.000Z"
+    },
+    {
+      "slug": "top-firehall-classics",
+      "title": "Top 20 Firehall Classics Every Firefighter Should Know",
+      "subtitle": "The meals that show up in every hall — and why crews still make them",
+      "description": "The top 20 firehall classics every firefighter should know: chicken parm, chili, lasagna, BBQ, and the station meals that became tradition — not trends.",
+      "topic": "station_lifestyle",
+      "pillar": "station_lifestyle",
+      "readMinutes": 12,
+      "publishedAt": "2026-05-27T18:00:00.000Z"
+    },
+    {
+      "slug": "most-popular-firefighter-meals",
+      "title": "20 Most Popular Firefighter Meals",
+      "subtitle": "What crews actually cook — not what sounds good in a survey",
+      "description": "The 20 most popular firefighter meals in station kitchens: big batches, line meals, and crew feeds that scale to 6–12 and survive interrupted dinners.",
+      "topic": "meal_planning",
+      "pillar": "recipes_meals",
+      "readMinutes": 11,
+      "publishedAt": "2026-05-27T18:00:00.000Z"
+    },
+    {
+      "slug": "firefighter-breakfast-guide",
+      "title": "The Firefighter Breakfast Guide",
+      "subtitle": "Sunday mornings, post-call fuel, and feeding a crew that eats in waves",
+      "description": "Firefighter breakfast guide for station mornings: why the meal matters, weekend hall culture, feeding large crews, and ten hall-tested breakfasts with crew-sized recipes.",
+      "topic": "station_cooking",
+      "pillar": "recipes_meals",
+      "readMinutes": 10,
+      "publishedAt": "2026-05-27T18:00:00.000Z"
+    },
+    {
+      "slug": "rookie-firefighter-meal-guide",
+      "title": "10 Rookie-Proof Firehall Meals",
+      "subtitle": "Build confidence, feed the crew, and avoid the legendary kitchen disaster",
+      "description": "Ten rookie-proof firehall meals: chili, pulled pork, tacos, lasagna, and more — hard to ruin, crew-sized, with common mistakes and success tips for new firefighters cooking on shift.",
+      "topic": "station_cooking",
+      "pillar": "recipes_meals",
+      "readMinutes": 9,
       "publishedAt": "2026-05-27T18:00:00.000Z"
     },
     {

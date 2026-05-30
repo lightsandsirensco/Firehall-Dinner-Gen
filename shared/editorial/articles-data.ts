@@ -8,6 +8,7 @@ import { OPERATIONS_HOWTO_ARTICLES } from "./operations-articles-data.js";
 import { SEO_TRAFFIC_ARTICLES } from "./seo-articles-data.js";
 import { STATION_LIFESTYLE_ARTICLES } from "./lifestyle-articles-data.js";
 import { HEALTHY_HALL_SMOOTHIES_ARTICLE } from "./smoothie-guide-article.js";
+import { CORNERSTONE_BLOG_ARTICLES } from "./cornerstone-articles-data.js";
 
 const PUBLISHED = "2026-05-27T12:00:00.000Z";
 
@@ -535,6 +536,7 @@ export const EDITORIAL_ARTICLES: EditorialArticle[] = [
   ...NUTRITION_PERFORMANCE_ARTICLES,
   ...STATION_LIFESTYLE_ARTICLES,
   ...OPERATIONS_HOWTO_ARTICLES,
+  ...CORNERSTONE_BLOG_ARTICLES,
   HEALTHY_HALL_SMOOTHIES_ARTICLE,
 ];
 

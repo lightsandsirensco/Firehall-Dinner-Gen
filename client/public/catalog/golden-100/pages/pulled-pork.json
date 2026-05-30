@@ -10,13 +10,13 @@
   "description": "Sandwich line for the whole hall. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
   "baseServings": 8,
-  "cookTime": 260,
-  "prepTime": 20,
-  "difficulty": "medium",
-  "calories": 620,
-  "protein": 38,
-  "carbs": 42,
-  "fats": 32,
+  "cookTime": 570,
+  "prepTime": 45,
+  "difficulty": "hard",
+  "calories": 1400,
+  "protein": 120,
+  "carbs": 144,
+  "fats": 90,
   "tags": [
     "protein:pork",
     "format:sandwich",
@@ -26,88 +26,165 @@
     "golden_100"
   ],
   "equipment": [
+    "Large covered roaster or slow cooker",
+    "Two forks for shredding",
     "Large sheet trays",
     "Instant-read thermometer",
     "Aluminum foil"
   ],
   "ingredients": [
     {
-      "name": "Pork shoulder",
-      "quantity": "4",
+      "name": "Boneless pork shoulder (butt)",
+      "quantity": "10",
       "unit": "lb",
       "group": "Main"
     },
     {
-      "name": "Hoagie rolls",
-      "quantity": "8",
+      "name": "Brown sugar",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Dry rub"
+    },
+    {
+      "name": "Smoked paprika",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Dry rub"
+    },
+    {
+      "name": "Garlic powder",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Dry rub"
+    },
+    {
+      "name": "Onion powder",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Dry rub"
+    },
+    {
+      "name": "Ground cumin",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Dry rub"
+    },
+    {
+      "name": "Chili powder",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Dry rub"
+    },
+    {
+      "name": "Kosher salt",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Dry rub"
+    },
+    {
+      "name": "Black pepper",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Dry rub"
+    },
+    {
+      "name": "Apple cider vinegar",
+      "quantity": "1",
+      "unit": "cup",
+      "group": "Finishing"
+    },
+    {
+      "name": "BBQ sauce",
+      "quantity": "3",
+      "unit": "cups",
+      "group": "Finishing"
+    },
+    {
+      "name": "Brioche buns or kaiser rolls",
+      "quantity": "24",
       "unit": "count",
       "group": "Buns"
     },
     {
-      "name": "Provolone slices",
-      "quantity": "12",
-      "unit": "count",
-      "group": "Cheese"
+      "name": "Coleslaw mix",
+      "quantity": "2",
+      "unit": "lb",
+      "group": "Slaw"
     },
     {
-      "name": "Marinara sauce",
+      "name": "Mayonnaise",
+      "quantity": "1",
+      "unit": "cup",
+      "group": "Slaw"
+    },
+    {
+      "name": "Pickle chips",
       "quantity": "2",
       "unit": "cups",
-      "group": "Sauce"
+      "group": "Toppings"
     },
     {
-      "name": "Yellow onion",
-      "quantity": "1",
-      "unit": "large",
-      "group": "Aromatics"
-    },
-    {
-      "name": "Garlic cloves",
-      "quantity": "4",
-      "unit": "cloves",
-      "group": "Aromatics"
+      "name": "Yellow mustard",
+      "quantity": "0.5",
+      "unit": "cup",
+      "notes": "optional",
+      "group": "Toppings"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Cook and sauce filling",
-      "instruction": "Slow-cook or simmer filling until shreddable (pork 203°F, meatballs cooked through). Simmer in sauce 15 minutes so flavor penetrates.",
+      "title": "Apply dry rub",
+      "instruction": "Trim excess hard fat from pork shoulder, leaving about ¼ inch. Mix brown sugar, paprika, garlic powder, onion powder, cumin, chili powder, salt, and pepper. Coat pork all over and press rub into the surface. Rest at room temp 30 minutes while the oven or slow cooker comes up.",
       "minutes": 30,
-      "heatLevel": "medium-low"
+      "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Toast buns",
-      "instruction": "Toast split buns on a dry griddle until golden. Melt cheese on top if desired.",
-      "minutes": 6,
-      "heatLevel": "medium"
+      "title": "Low-and-slow cook",
+      "instruction": "Roast at 275°F in a covered roaster or run a slow cooker on low 8–10 hours until pork probes tender at 203°F and shreds with a fork. Add a splash of water if the pan looks dry halfway through — you want steam, not a dry roast.",
+      "minutes": 480,
+      "heatLevel": "low"
     },
     {
       "stepNumber": 3,
-      "title": "Build the sandwich line",
-      "instruction": "Pulled Pork Sandwiches on sheet trays: bottom bun, meat, sauce, cheese, top bun. Serve immediately; hold wrapped sandwiches at 200°F up to 20 minutes.",
-      "minutes": 8,
+      "title": "Rest and shred",
+      "instruction": "Rest pork covered 30 minutes — juices redistribute. Shred with two forks, discarding large fat chunks. Toss with apple cider vinegar first, then fold in BBQ sauce to taste. Keep some sauce on the side for the line.",
+      "minutes": 30,
       "heatLevel": "low"
     },
     {
       "stepNumber": 4,
-      "title": "Hold for late calls",
-      "instruction": "Keep backup sandwiches foil-wrapped at 200°F. Slice hoagies in half for easier grabbing — crew eats with one hand when tones are quiet.",
-      "minutes": 5,
+      "title": "Quick slaw",
+      "instruction": "Toss coleslaw mix with mayonnaise, a splash of vinegar, salt, and pepper. Keep cold until service — hot pork plus cold slaw is the move.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Warm buns and set the line",
+      "instruction": "Split buns and warm in a 300°F oven 5 minutes wrapped in foil. Set pork in a deep hotel pan, buns stacked beside, slaw and pickles in separate bowls.",
+      "minutes": 10,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Build pulled pork sandwiches",
+      "instruction": "Crew piles pork on buns and tops with slaw and pickles. This is BBQ pulled pork — soft buns and tangy slaw, not Italian subs.",
+      "minutes": 10,
       "heatLevel": "low"
     }
   ],
   "proTips": [
     "Start pork early — shoulder needs time more than attention.",
     "Keep slaw cold until the last minute.",
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts."
   ],
   "tonightSpread": [
-    "Plate Pulled Pork Sandwiches with sides in separate pans so the crew can mix portions.",
-    "Line up Pulled Pork Sandwiches on the main counter with serving spoons — firefighters grab fast between calls.",
-    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+    "Pile shredded pork in a deep hotel pan with warm buns stacked beside — BBQ sandwich line, not sub shop night.",
+    "Set coleslaw, pickles, and extra BBQ sauce in separate bowls so buns do not go soggy.",
+    "Keep pork covered at 180°F; add vinegar splash before refills so the pull stays moist."
   ],
   "leftovers": [
     "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
@@ -119,17 +196,31 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 620,
-    "protein": 38,
-    "carbs": 42,
-    "fats": 32,
-    "label": "per serving (hall portion)"
+    "calories": 1400,
+    "protein": 120,
+    "carbs": 144,
+    "fats": 90,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/pulled-pork.jpg",
   "mobileImage": "/images/mobile/pulled-pork.jpg",
   "thumbImage": "/images/thumbs/pulled-pork.jpg",
   "railImage": "/images/rails/pulled-pork.jpg",
-  "realismScore": 100,
+  "realismScore": 98,
   "firefighterScore": 100,
   "popularityWeight": 3.6,
   "searchTerms": [
@@ -153,6 +244,6 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "classicSlug": "pulled-pork",
-  "generatedAt": "2026-05-29T01:43:09.319Z",
+  "generatedAt": "2026-05-30T03:28:01.768Z",
   "contentVersion": 2
 }

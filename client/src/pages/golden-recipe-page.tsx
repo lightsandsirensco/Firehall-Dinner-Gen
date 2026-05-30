@@ -16,6 +16,7 @@ import { getSavedCount } from "@/lib/saved-meals";
 
 import { fetchGoldenCatalogIndex, fetchGoldenRecipePage } from "@/lib/golden-recipe-api";
 import { buildRecipeLinkClusters } from "@shared/golden-100/internal-link-clusters";
+import { buildRecipeHeroAlt } from "@shared/seo/recipe-image-seo";
 import { RecipeInternalLinks } from "@/components/seo/recipe-internal-links";
 
 import { golden100HeroPath } from "@/lib/golden-100-hero";
@@ -48,6 +49,8 @@ import {
 
 import type { GoldenRecipePage } from "@shared/golden-100/recipe-page-schema";
 import { MealTrustBadges } from "@/components/trust/meal-trust-badges";
+import { RecipeCrewRatingPanel } from "@/components/recipe-crew-rating/recipe-crew-rating-panel";
+import { RecipeNutritionPanel } from "@/components/recipe-nutrition-panel";
 import {
   adjustCookTimeForCrew,
   CREW_SIZE_OPTIONS,
@@ -80,7 +83,7 @@ function RelatedCard({ slug, title, thumb }: { slug: string; title: string; thum
 
               src={thumb}
 
-              alt={`${title} — firefighter meal`}
+              alt={buildRecipeHeroAlt(title)}
 
               layout="card-fill"
 
@@ -130,7 +133,7 @@ function RecipeHero({ page }: { page: GoldenRecipePage }) {
 
           src={src}
 
-          alt={`${page.title} — firehall meal for firefighters`}
+          alt={buildRecipeHeroAlt(page.title)}
 
           layout="detail"
 
@@ -485,6 +488,8 @@ export default function GoldenRecipePageView() {
 
             <p className={cn(app.lead, "max-w-2xl")}>{page.shortDescription || page.description}</p>
 
+            <RecipeCrewRatingPanel slug={page.slug} category={page.category} className="max-w-2xl" />
+
             {page.whyCrewsLikeIt && (
               <p className="text-[15px] text-muted-foreground max-w-2xl leading-relaxed">
                 <span className="text-foreground font-medium">Why crews like it: </span>
@@ -676,27 +681,13 @@ export default function GoldenRecipePageView() {
 
 
 
-            <div className="flex gap-6 pt-2 text-sm text-muted-foreground border-t border-border/20">
-
-              <span>
-
-                <span className="text-foreground font-medium tabular-nums">{page.nutrition.calories}</span>{" "}
-
-                cal
-
-              </span>
-
-              <span>
-
-                <span className="text-foreground font-medium tabular-nums">{page.nutrition.protein}g</span>{" "}
-
-                protein
-
-              </span>
-
-            </div>
-
-
+            <RecipeNutritionPanel
+              calories={page.nutrition.calories}
+              protein={page.nutrition.protein}
+              carbs={page.nutrition.carbs}
+              fat={page.nutrition.fats}
+              className="max-w-2xl"
+            />
 
             {page.equipment.length > 0 && (
 

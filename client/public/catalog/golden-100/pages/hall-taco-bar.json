@@ -13,10 +13,10 @@
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 720,
-  "protein": 40,
-  "carbs": 68,
-  "fats": 36,
+  "calories": 689,
+  "protein": 50,
+  "carbs": 49,
+  "fats": 33,
   "tags": [
     "protein:beef",
     "format:tacos",
@@ -99,12 +99,13 @@
     }
   ],
   "proTips": [
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts."
   ],
   "tonightSpread": [
-    "Warm tortillas in a dry skillet stack — wrap in foil so the line stays soft.",
-    "Set proteins, salsa, and toppings in separate bowls for build-your-own station flow.",
+    "Label every topping bowl — rookies grab faster when they can read the line.",
+    "Keep hot bases (potatoes, chips) in cambros at 200°F and cold toppings on ice if service runs long.",
+    "Put forks, napkins, and a trash can at the end of the bar — self-serve feeds get messy fast.",
     "Line up Hall Taco Bar Night on the main counter with serving spoons — firefighters grab fast between calls.",
     "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
   ],
@@ -117,11 +118,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 720,
-    "protein": 40,
-    "carbs": 68,
-    "fats": 36,
-    "label": "per serving (hall portion)"
+    "calories": 689,
+    "protein": 50,
+    "carbs": 49,
+    "fats": 33,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/hall-taco-bar.jpg",
   "mobileImage": "/images/mobile/hall-taco-bar.jpg",
@@ -151,6 +166,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-29T01:43:09.337Z",
+  "generatedAt": "2026-05-30T03:28:01.810Z",
   "contentVersion": 2
 }

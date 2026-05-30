@@ -1,0 +1,185 @@
+{
+  "slug": "mesquite-chuck-roast",
+  "title": "Mesquite Smoked Chuck Roast",
+  "displayTitle": "Mesquite Smoked Chuck Roast",
+  "seoTitle": "Mesquite Smoked Chuck Roast | Firefighter Meal",
+  "shortDescription": "Low-and-slow chuck roast sliced for sandwiches and plates for ten",
+  "subtitle": "Low-and-slow chuck roast sliced for sandwiches and plates for ten",
+  "category": "hall_expansion",
+  "cuisine": "american",
+  "description": "Beef chuck roasts get a simple salt-and-pepper crust, then smoke until probe-tender and sliceable. Rest, slice against the grain, and serve with quick pickles and soft rolls for a true smoke-night spread.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 360,
+  "prepTime": 25,
+  "difficulty": "medium",
+  "calories": 410,
+  "protein": 42,
+  "carbs": 18,
+  "fats": 20,
+  "tags": [
+    "protein:beef",
+    "format:smoker",
+    "category:smoker_recipes",
+    "bbq",
+    "smoker",
+    "beef",
+    "hall_expansion",
+    "hall_expansion_56",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Pellet or offset smoker",
+    "Instant-read thermometer",
+    "Butcher paper",
+    "Wire rack",
+    "Hotel pans"
+  ],
+  "ingredients": [
+    {
+      "name": "boneless beef chuck roast",
+      "quantity": "6",
+      "unit": "lb",
+      "notes": "two 3 lb roasts",
+      "group": "Main"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Rub"
+    },
+    {
+      "name": "coarse black pepper",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Rub"
+    },
+    {
+      "name": "garlic powder",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Rub"
+    },
+    {
+      "name": "onion powder",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Rub"
+    },
+    {
+      "name": "smoked paprika",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Rub"
+    },
+    {
+      "name": "yellow mustard",
+      "quantity": "0.25",
+      "unit": "cup",
+      "notes": "as binder",
+      "group": "Rub"
+    },
+    {
+      "name": "beef broth",
+      "quantity": "2",
+      "unit": "cups",
+      "notes": "for holding",
+      "group": "Service"
+    },
+    {
+      "name": "apple cider vinegar",
+      "quantity": "0.25",
+      "unit": "cup",
+      "group": "Service"
+    },
+    {
+      "name": "soft potato rolls",
+      "quantity": "16",
+      "unit": "rolls",
+      "group": "Service"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Season the roasts",
+      "instruction": "Coat chuck roasts with mustard, then pack evenly with salt, pepper, garlic powder, onion powder, and smoked paprika. Rest on a wire rack 30 minutes while the smoker preheats.",
+      "minutes": 35,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Smoke until tender",
+      "instruction": "Heat smoker to 250°F with mesquite or oak. Place roasts fat-side up and smoke until internal temperature reaches 165°F and a probe slides in with light resistance, about 5–6 hours. Target oven/smoker temperature: 250°F.",
+      "minutes": 180,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Wrap and finish",
+      "instruction": "Wrap roasts in butcher paper and return to smoker until probe-tender at 203°F internal, about 1–1.5 hours more. Fat should render and meat should pull apart with gentle pressure. Target oven/smoker temperature: 250°F.",
+      "minutes": 75,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Rest before slicing",
+      "instruction": "Rest wrapped roasts 30 minutes in a dry cooler or warm oven so juices redistribute. Unwrap and slice against the grain into quarter-inch portions.",
+      "minutes": 30,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Hold and serve",
+      "instruction": "Toss sliced beef lightly with warm broth and vinegar. Hold covered at 165°F. Pile on rolls with pickles and extra pepper at the line.",
+      "minutes": 15,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Two smaller roasts cook more evenly than one massive roast and give you backup if one finishes early.",
+    "Save pan drippings, skim fat, and whisk into warmed broth for a quick au jus.",
+    "If bark gets too dark before tenderness, drop smoker temp to 225°F and stay patient."
+  ],
+  "tonightSpread": [
+    "Sliced chuck on a hotel pan with soft rolls, dill pickles, and sliced raw onion.",
+    "Quick coleslaw with vinegar dressing to cut the rich smoke and fat."
+  ],
+  "leftovers": [
+    "Chop and simmer in BBQ sauce for fast smoked beef sandwiches the next shift.",
+    "Dice into a hearty beef and barley soup with leftover broth."
+  ],
+  "whyCrewsLikeIt": "Chuck roast delivers rich beef smoke flavor on a station budget. It shreds or slices cleanly, holds warm in hotel pans, and feeds a full hall without babysitting a brisket all day.",
+  "mealPrepNotes": "Season roasts the night before uncovered on a rack so the rub sets. Bring to room temperature 45 minutes before smoking. Hold sliced beef at 165°F max with a splash of beef broth.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 410,
+    "protein": 42,
+    "carbs": 18,
+    "fats": 20,
+    "label": "~410 cal/serving · 42g protein · 1g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/mesquite-chuck-roast.jpg",
+  "heroImageAlt": "Mesquite Smoked Chuck Roast — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/mesquite-chuck-roast.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/mesquite-chuck-roast.jpg",
+  "railImage": "/images/rails/hall-expansion/mesquite-chuck-roast.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "mesquite smoked chuck roast",
+    "smoker recipes"
+  ],
+  "relatedSlugs": [
+    "smoked-turkey-breast",
+    "smoked-meatloaf",
+    "smoked-mac-and-cheese",
+    "pork-belly-burnt-ends"
+  ],
+  "generatedAt": "2026-05-30T03:14:19.188Z",
+  "contentVersion": 2
+}

@@ -1,0 +1,147 @@
+{
+  "slug": "breakfast-crunchwraps",
+  "title": "Breakfast Crunchwraps",
+  "subtitle": "Griddled tortilla bundles with eggs, hash, and a crunchy tostada center.",
+  "description": "Inspired by the drive-through classic but built for ten hungry firefighters. Each crunchwrap stacks eggs, sausage, cheese, and a crisp tostada inside a large flour tortilla, folded hex-style and griddled until golden and structurally sound.",
+  "filters": [
+    "breakfast_sandwiches",
+    "high_protein",
+    "quick_breakfasts"
+  ],
+  "tags": [
+    "crunchwrap",
+    "handheld",
+    "griddle",
+    "sausage",
+    "eggs"
+  ],
+  "crewSize": 10,
+  "baseServings": 10,
+  "prepTime": 20,
+  "cookTime": 25,
+  "totalTime": 45,
+  "difficulty": "medium",
+  "ingredients": [
+    {
+      "name": "large eggs",
+      "quantity": "14",
+      "notes": "scrambled soft",
+      "group": "Fillings"
+    },
+    {
+      "name": "breakfast sausage",
+      "quantity": "1 1/2 lb",
+      "notes": "browned and crumbled",
+      "group": "Fillings"
+    },
+    {
+      "name": "frozen hash browns",
+      "quantity": "3 cups",
+      "notes": "crisped on the griddle",
+      "group": "Fillings"
+    },
+    {
+      "name": "shredded cheddar",
+      "quantity": "2 cups",
+      "notes": "plus slices for sealing",
+      "group": "Fillings"
+    },
+    {
+      "name": "12-inch flour tortillas",
+      "quantity": "10",
+      "notes": "burrito size",
+      "group": "Build"
+    },
+    {
+      "name": "6-inch tostada shells",
+      "quantity": "10",
+      "notes": "or crisp fried corn tortillas",
+      "group": "Build"
+    },
+    {
+      "name": "nacho cheese sauce",
+      "quantity": "1 cup",
+      "notes": "warm, not boiling",
+      "group": "Build"
+    },
+    {
+      "name": "sour cream",
+      "quantity": "1/2 cup",
+      "notes": "and salsa for the line",
+      "group": "Finish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Prep all fillings",
+      "instruction": "Crisp hash browns on a lightly oiled griddle in a thin layer, season with salt, and hold warm. Brown sausage and drain. Soft-scramble eggs last so they stay tender.",
+      "minutes": 15
+    },
+    {
+      "stepNumber": 2,
+      "title": "Set the build station",
+      "instruction": "Lay out tortillas, tostadas, cheese sauce, and a small bowl of cheese slices cut to seal the bottom fold. Warm nacho cheese so it spreads without tearing tortillas.",
+      "minutes": 5
+    },
+    {
+      "stepNumber": 3,
+      "title": "Stack and fold",
+      "instruction": "Center tostada on tortilla, layer hash, sausage, eggs, cheddar, and a drizzle of nacho cheese. Fold edges to center in a hex pattern; place a cheese slice on the bottom seam to glue it shut.",
+      "minutes": 12
+    },
+    {
+      "stepNumber": 4,
+      "title": "Griddle both sides",
+      "instruction": "Cook seam-side down on a medium griddle with a light press until golden and sealed, 3–4 minutes. Flip carefully and griddle the top until crisp and cheese melts through.",
+      "minutes": 10
+    },
+    {
+      "stepNumber": 5,
+      "title": "Serve immediately",
+      "instruction": "Cut in half on a bias for the line or serve whole in parchment wraps. Hold finished wraps in a 200°F oven seam-side down—don't stack or you'll lose the crunch.",
+      "minutes": 0
+    }
+  ],
+  "nutrition": {
+    "calories": 423,
+    "protein": 21,
+    "carbs": 31,
+    "fat": 24,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "stationWorkflow": [
+    "One cook runs the griddle press while another builds—pre-cut all seal cheese slices before the rush.",
+    "Keep tostadas in a warm dry pan so they stay shatter-crisp until the moment of assembly.",
+    "Build in batches of four; griddle while the next batch stacks so nothing sits and steams."
+  ],
+  "cleanupNotes": [
+    "Scrape the griddle between batches with a bench scraper while still warm to prevent cheese carbon buildup.",
+    "Wipe the press or second skillet with a damp towel held by tongs—never submerge hot cast iron."
+  ],
+  "leftovers": [
+    "Crunchwraps do not hold well; plan portions tightly and turn extras into deconstructed bowls with salsa.",
+    "If you must reheat, use a dry skillet over low heat with a lid—microwave destroys the tostada crunch."
+  ],
+  "heroImage": "/images/breakfast/breakfast-crunchwraps.jpg",
+  "thumbImage": "/images/thumbs/breakfast/breakfast-crunchwraps.jpg",
+  "imageAlt": "Golden griddled breakfast crunchwraps cut in half showing layers of egg and hash",
+  "publishedAt": "2026-05-30T03:14:16.260Z",
+  "updatedAt": "2026-05-30T03:14:16.260Z",
+  "readMinutes": 8,
+  "seoTitle": "Breakfast Crunchwraps | Firehall Breakfast"
+}

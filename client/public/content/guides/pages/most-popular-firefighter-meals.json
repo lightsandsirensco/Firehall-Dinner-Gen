@@ -1,0 +1,175 @@
+{
+  "slug": "most-popular-firefighter-meals",
+  "title": "20 Most Popular Firefighter Meals",
+  "subtitle": "What crews actually cook — not what sounds good in a survey",
+  "description": "The 20 most popular firefighter meals in station kitchens: big batches, line meals, and crew feeds that scale to 6–12 and survive interrupted dinners.",
+  "topic": "meal_planning",
+  "pillar": "recipes_meals",
+  "intro": "Popular firefighter meals share the same DNA: they feed six to twelve without a catering budget, survive tones mid-cook, and do not require everyone to eat at the same minute. This list is what we see on whiteboards and group chats — batch pots, sheet pans, lines, and handhelds that crews actually finish.",
+  "sections": [
+    {
+      "id": "why-popular",
+      "heading": "Why firefighters love these meals",
+      "paragraphs": [
+        "Volume, flavor, and forgiveness. A popular hall meal still eats well at lukewarm, portions fast, and leaves room for seconds without recooking. Nobody wants a beautiful plate that dies the minute the tones drop."
+      ]
+    },
+    {
+      "id": "prep",
+      "heading": "Prep practicality on shift",
+      "paragraphs": [
+        "The meals below split into three hall formats: batch and hold (chili, pulled pork), oven hands-off (lasagna, enchilada bake), and lines (tacos, bowls, potato bar). Match the format to your clock — not your ambition.",
+        "Buy pre-cut veg when labor matters more than cost. On a busy night, fajita strips from the bag beat a hero knife session."
+      ]
+    },
+    {
+      "id": "crew-size",
+      "heading": "Crew-size and interruption math",
+      "paragraphs": [
+        "Plan for everyone on duty plus one floater from a neighboring rig. Batch meals need a deep pot or two hotel pans — not a home-sized Dutch oven pretending it is enough.",
+        "If you expect calls during dinner, avoid meals with a thirty-second finish window. Choose food that waits: pulled pork, baked pasta, rice bowls with protein held separately."
+      ]
+    }
+  ],
+  "practicalAdvice": [
+    "Round up on starches and lines before you cheap out on protein — hungry crews notice bread and rice first.",
+    "Pick one hold-friendly format when the board feels loud — chili beats seared fish on busy nights.",
+    "Post allergens on the line once — saves ten conversations during the meal."
+  ],
+  "mealRecommendations": [
+    {
+      "slug": "hall-taco-bar",
+      "title": "Hall Taco Bar Night",
+      "blurb": "Most halls run a taco line monthly — fast custom plates, easy scale, broad appeal."
+    },
+    {
+      "slug": "big-chili",
+      "title": "Hall-Sized Beef and Bean Chili",
+      "blurb": "Top pot meal — cheap stretch, holds for late eaters, tops dogs and potatoes day two."
+    },
+    {
+      "slug": "pulled-pork",
+      "title": "Pulled Pork Sandwiches",
+      "blurb": "Feeds a crowd from one shoulder — buns portion for you, sauce on the side."
+    },
+    {
+      "slug": "smash-burgers",
+      "title": "Double Smash Burgers",
+      "blurb": "Flat-top speed — eight burgers faster than eight plated steaks."
+    },
+    {
+      "slug": "batch-lasagna",
+      "title": "Giant Batch Lasagna",
+      "blurb": "Oven batch — one cut, many plates, minimal active time once it is in."
+    },
+    {
+      "slug": "chicken-parm",
+      "title": "Chicken Parm",
+      "blurb": "Crowd Italian — cutlets in pans, cheese melts, crew eats family-style."
+    },
+    {
+      "slug": "sheet-pan-fajitas",
+      "title": "Sheet Pan Fajitas",
+      "blurb": "One pan protein and peppers — tortillas turn it into a line."
+    },
+    {
+      "slug": "one-pot-chicken-rice",
+      "title": "One-Pot Chicken and Rice",
+      "blurb": "Rookie-friendly batch — one pot, predictable timing, easy cleanup."
+    },
+    {
+      "slug": "buffalo-chicken-dip",
+      "title": "Buffalo Chicken Dip",
+      "blurb": "Game-day share — stays hot in a low oven, chips do the work."
+    },
+    {
+      "slug": "loaded-baked-potato-bar",
+      "title": "Loaded Baked Potato Bar",
+      "blurb": "Self-serve — baked potatoes hold in warmers while toppings stay cold."
+    },
+    {
+      "slug": "sunday-chili-batch",
+      "title": "Sunday Batch Chili",
+      "blurb": "Weekend batch — same chili logic, bigger pot, slower shift pace."
+    },
+    {
+      "slug": "enchilada-casserole",
+      "title": "Enchilada Casserole",
+      "blurb": "Stack-and-bake — feeds heavy, slices like lasagna, mild by default."
+    },
+    {
+      "slug": "teriyaki-donburi",
+      "title": "Teriyaki Donburi",
+      "blurb": "Bowl line — rice base, protein, veg, sauce — everyone builds their ratio."
+    },
+    {
+      "slug": "bbq-chicken-bowls",
+      "title": "BBQ Chicken Bowls",
+      "blurb": "Line bowls — grilled or roasted chicken over rice with sharp slaw."
+    },
+    {
+      "slug": "fast-philly-skillet",
+      "title": "Fast Philly Cheesesteak Skillet",
+      "blurb": "Flat-top cheesesteak without the food-truck wait — feeds fast."
+    },
+    {
+      "slug": "chicken-quesadillas",
+      "title": "Chicken Quesadillas",
+      "blurb": "Handheld stagger eating — griddle in batches, slice into wedges."
+    },
+    {
+      "slug": "game-day-nachos",
+      "title": "Game Day Nachos",
+      "blurb": "Sheet nachos — build layers, broil, feed the couch crew at the hall."
+    },
+    {
+      "slug": "pork-carnitas-tacos",
+      "title": "Pork Carnitas Tacos",
+      "blurb": "Crisp-edged pork — line tacos with bold flavor, holds in a warmer."
+    },
+    {
+      "slug": "mac-and-cheese-bake",
+      "title": "Baked Mac and Cheese",
+      "blurb": "Comfort anchor — pairs with anything grilled or smoked."
+    },
+    {
+      "slug": "slider-bar",
+      "title": "Slider Bar Night",
+      "blurb": "Mini sandwiches — two proteins, one line, fast second helpings."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How much food do I need for a typical firehall dinner?",
+      "answer": "Start with one pound of raw protein per three to four eaters for mixed plates, closer to one pound per three for burgers and sandwiches. Starches are cheap insurance — extra rice, bread, or tortillas fix hungry crews without a second main."
+    },
+    {
+      "question": "What meals hold up best if tones drop during dinner?",
+      "answer": "Chili, pulled pork, baked pasta, and line meals with components held separately. Avoid crispy-only mains that turn soggy in a warmer — fry to order or serve sauce on the side."
+    },
+    {
+      "question": "Are these meals only for big career halls?",
+      "answer": "No — volunteer and combination halls run the same formats with smaller pots. Scale down the batch, keep the format. A taco line for six beats a fragile plated dinner for six."
+    },
+    {
+      "question": "Where do these recipes come from?",
+      "answer": "Each link goes to a full recipe on Firehall Meals — crew-sized portions, station timing, and steps written for a shared kitchen. Not home-blog scaling."
+    }
+  ],
+  "relatedArticleSlugs": [
+    "top-firehall-classics",
+    "feeding-a-firehall-crew",
+    "25-firefighter-dinner-ideas"
+  ],
+  "keywords": [
+    "most popular firefighter meals",
+    "fire station meals",
+    "firehall dinner ideas",
+    "crew meals",
+    "feed a fire crew"
+  ],
+  "publishedAt": "2026-05-27T18:00:00.000Z",
+  "updatedAt": "2026-05-27T18:00:00.000Z",
+  "readMinutes": 11,
+  "seoTitle": "20 Most Popular Firefighter Meals for Station Kitchens"
+}

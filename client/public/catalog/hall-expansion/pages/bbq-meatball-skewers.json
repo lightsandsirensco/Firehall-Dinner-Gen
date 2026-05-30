@@ -1,0 +1,183 @@
+{
+  "slug": "bbq-meatball-skewers",
+  "title": "BBQ Meatball Skewers",
+  "displayTitle": "BBQ Meatball Skewers",
+  "seoTitle": "BBQ Meatball Skewers | Firefighter Meal",
+  "shortDescription": "Glazed beef meatballs on skewers with quick slaw for ten",
+  "subtitle": "Glazed beef meatballs on skewers with quick slaw for ten",
+  "category": "hall_expansion",
+  "cuisine": "american",
+  "description": "Seasoned beef meatballs are baked, glazed with sticky BBQ sauce, and threaded onto skewers with pickled onions and cherry tomatoes. A quick vinegar slaw on the side keeps the bite balanced.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 25,
+  "prepTime": 25,
+  "difficulty": "easy",
+  "calories": 380,
+  "protein": 28,
+  "carbs": 22,
+  "fats": 20,
+  "tags": [
+    "protein:beef",
+    "format:handheld",
+    "category:game_day_recipes",
+    "game_day",
+    "beef",
+    "handheld",
+    "bbq",
+    "hall_expansion",
+    "hall_expansion_56",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Wire rack",
+    "Sheet pans",
+    "Skewers",
+    "Mixing bowls",
+    "Instant-read thermometer"
+  ],
+  "ingredients": [
+    {
+      "name": "ground beef (85/15)",
+      "quantity": "3",
+      "unit": "lb",
+      "group": "Main"
+    },
+    {
+      "name": "breadcrumbs",
+      "quantity": "1",
+      "unit": "cup",
+      "group": "Main"
+    },
+    {
+      "name": "eggs",
+      "quantity": "2",
+      "unit": "whole",
+      "group": "Main"
+    },
+    {
+      "name": "garlic powder",
+      "quantity": "2",
+      "unit": "tsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "onion powder",
+      "quantity": "2",
+      "unit": "tsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "2",
+      "unit": "tsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "BBQ sauce",
+      "quantity": "1.5",
+      "unit": "cups",
+      "group": "Glaze"
+    },
+    {
+      "name": "cherry tomatoes",
+      "quantity": "20",
+      "unit": "whole",
+      "group": "Skewer"
+    },
+    {
+      "name": "pickled red onions",
+      "quantity": "1",
+      "unit": "cup",
+      "group": "Skewer"
+    },
+    {
+      "name": "shredded cabbage mix",
+      "quantity": "8",
+      "unit": "cups",
+      "group": "Slaw"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Mix and roll meatballs",
+      "instruction": "Combine beef, breadcrumbs, eggs, garlic powder, onion powder, and salt until just mixed. Roll into 40 equal meatballs about 1.5 inches across for two per skewer.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Bake the meatballs",
+      "instruction": "Arrange on a wire rack over a sheet pan. Bake at 425°F for 18–20 minutes until browned and internal temp reaches 160°F in the center. Target oven/smoker temperature: 425°F.",
+      "minutes": 20,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Glaze and finish",
+      "instruction": "Brush generously with BBQ sauce and bake 5 more minutes at 425°F until glaze sets sticky. Internal temp should still read at least 160°F after glazing. Target oven/smoker temperature: 425°F.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Quick slaw",
+      "instruction": "Toss cabbage with apple cider vinegar, a tablespoon of oil, salt, and pepper. Drain excess liquid so slaw stays crisp on the platter.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Skewer and serve",
+      "instruction": "Thread two meatballs, a tomato, and pickled onion on each skewer. Arrange on a platter with slaw cups for grabbing between plays.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Wet hands when rolling meatballs—they stick less and stay round.",
+    "Reduce BBQ sauce by half before glazing if store sauce is thin and runs off.",
+    "Swap beef for half turkey if you want lighter skewers without changing the format."
+  ],
+  "tonightSpread": [
+    "BBQ meatball skewers with slaw cups and extra glaze for dunking.",
+    "Cornbread muffins for crews who want something sweet alongside smoky meatballs."
+  ],
+  "leftovers": [
+    "Slide meatballs off skewers into sub rolls with extra slaw.",
+    "Chop into a rice bowl with the slaw and hot sauce."
+  ],
+  "whyCrewsLikeIt": "Skewers turn meatballs into portable game food without buns getting soggy. They reheat in minutes and look intentional on a platter—not like leftover spaghetti night.",
+  "mealPrepNotes": "Roll meatballs uniform so they bake evenly. Soak wooden skewers 30 minutes if grilling for presentation. Glaze can be reduced ahead for a thicker stick.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 380,
+    "protein": 28,
+    "carbs": 22,
+    "fats": 20,
+    "label": "~380 cal/serving · 28g protein · 2g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/bbq-meatball-skewers.jpg",
+  "heroImageAlt": "BBQ Meatball Skewers — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/bbq-meatball-skewers.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/bbq-meatball-skewers.jpg",
+  "railImage": "/images/rails/hall-expansion/bbq-meatball-skewers.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "bbq meatball skewers",
+    "game day recipes"
+  ],
+  "relatedSlugs": [
+    "loaded-potato-skins",
+    "game-day-pizza-sliders",
+    "pretzel-bite-platter",
+    "jalapeno-popper-dip"
+  ],
+  "generatedAt": "2026-05-30T03:14:19.188Z",
+  "contentVersion": 2
+}

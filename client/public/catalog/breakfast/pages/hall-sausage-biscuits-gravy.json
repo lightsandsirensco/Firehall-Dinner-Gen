@@ -1,0 +1,148 @@
+{
+  "slug": "hall-sausage-biscuits-gravy",
+  "title": "Hall Sausage Biscuits & Gravy",
+  "subtitle": "Flaky biscuits split and smothered in peppery sausage gravy for twelve.",
+  "description": "Classic hall comfort: bulk breakfast sausage gravy thick enough to coat a spoon, ladled over split baking-powder biscuits. Uses shortcut biscuits from the oven so the cook focuses on gravy that stays smooth and seasoned while feeding a full shift.",
+  "filters": [
+    "feed_a_crew",
+    "breakfast_sandwiches",
+    "high_protein"
+  ],
+  "tags": [
+    "biscuits",
+    "gravy",
+    "sausage",
+    "classic",
+    "comfort"
+  ],
+  "crewSize": 12,
+  "baseServings": 12,
+  "prepTime": 10,
+  "cookTime": 25,
+  "totalTime": 35,
+  "difficulty": "easy",
+  "ingredients": [
+    {
+      "name": "large refrigerated biscuits",
+      "quantity": "12",
+      "notes": "or scratch-baked equivalents",
+      "group": "Biscuits"
+    },
+    {
+      "name": "butter",
+      "quantity": "2 tbsp",
+      "notes": "melted for brushing tops",
+      "group": "Biscuits"
+    },
+    {
+      "name": "breakfast sausage",
+      "quantity": "2 lb",
+      "notes": "bulk or casings removed",
+      "group": "Gravy"
+    },
+    {
+      "name": "all-purpose flour",
+      "quantity": "1/2 cup",
+      "notes": "whisked into rendered fat",
+      "group": "Gravy"
+    },
+    {
+      "name": "whole milk",
+      "quantity": "5 cups",
+      "notes": "warmed slightly for smoother whisking",
+      "group": "Gravy"
+    },
+    {
+      "name": "black pepper",
+      "quantity": "2 tsp",
+      "notes": "freshly ground, plus salt to taste",
+      "group": "Seasoning"
+    },
+    {
+      "name": "poultry seasoning",
+      "quantity": "1/2 tsp",
+      "notes": "optional depth",
+      "group": "Seasoning"
+    },
+    {
+      "name": "chopped parsley",
+      "quantity": "1/4 cup",
+      "notes": "and hot sauce at the line",
+      "group": "Serve"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Bake the biscuits",
+      "instruction": "Heat oven to 375°F. Arrange biscuits on a sheet pan and brush tops with melted butter. Bake until golden and cooked through—split one to check the center isn't doughy.",
+      "minutes": 15,
+      "tempF": 375
+    },
+    {
+      "stepNumber": 2,
+      "title": "Brown the sausage",
+      "instruction": "In a large Dutch oven or deep skillet, brown sausage over medium-high, breaking it into fine crumbles. Don't drain all the fat—you need it for the roux.",
+      "minutes": 8
+    },
+    {
+      "stepNumber": 3,
+      "title": "Build the roux",
+      "instruction": "Sprinkle flour over the sausage and fat, stirring constantly for 1–2 minutes until the raw flour smell cooks off and the mixture looks sandy.",
+      "minutes": 3
+    },
+    {
+      "stepNumber": 4,
+      "title": "Whisk in milk",
+      "instruction": "Add warm milk gradually, whisking to prevent lumps. Simmer until gravy thickens enough to coat a spoon. Season aggressively with black pepper and salt.",
+      "minutes": 10
+    },
+    {
+      "stepNumber": 5,
+      "title": "Split and ladle",
+      "instruction": "Split warm biscuits and place two halves per bowl or plate. Ladle hot gravy over the top until generously covered. Garnish with parsley and serve immediately.",
+      "minutes": 5
+    }
+  ],
+  "nutrition": {
+    "calories": 326,
+    "protein": 13,
+    "carbs": 10,
+    "fat": 26,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "stationWorkflow": [
+    "Warm milk in a microwave or small pot before whisking—cold milk shocks the roux and causes lumps.",
+    "Hold biscuits uncovered at 200°F while gravy finishes; covered biscuits steam soft tops.",
+    "Keep gravy on the lowest simmer with a ladle in the pot at the line for second portions."
+  ],
+  "cleanupNotes": [
+    "Fill the gravy pot with hot soapy water immediately—flour-milk paste sets hard within minutes.",
+    "Discard any biscuit crumbs on the sheet pan before they bake onto the metal during cleanup."
+  ],
+  "leftovers": [
+    "Gravy reheats smoothly with extra milk over low heat; thin until pourable before ladling.",
+    "Split leftover biscuits and griddle cut-side down, then top with reheated gravy and a fried egg."
+  ],
+  "heroImage": "/images/breakfast/hall-sausage-biscuits-gravy.jpg",
+  "thumbImage": "/images/thumbs/breakfast/hall-sausage-biscuits-gravy.jpg",
+  "imageAlt": "Split biscuits smothered in peppery sausage gravy on a firehall breakfast plate",
+  "publishedAt": "2026-05-30T03:14:16.260Z",
+  "updatedAt": "2026-05-30T03:14:16.260Z",
+  "readMinutes": 7,
+  "seoTitle": "Hall Sausage Biscuits & Gravy | Firehall Breakfast"
+}

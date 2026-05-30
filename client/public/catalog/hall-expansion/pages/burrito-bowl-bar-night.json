@@ -1,0 +1,187 @@
+{
+  "slug": "burrito-bowl-bar-night",
+  "title": "Burrito Bowl Bar Night",
+  "displayTitle": "Burrito Bowl Bar Night",
+  "seoTitle": "Burrito Bowl Bar Night | Firefighter Meal",
+  "shortDescription": "Chipotle-style bowl bar with carnitas and fixings for ten",
+  "subtitle": "Chipotle-style bowl bar with carnitas and fixings for ten",
+  "category": "hall_expansion",
+  "cuisine": "mexican",
+  "description": "Slow-roasted carnitas, cilantro-lime rice, black beans, corn salsa, and classic burrito toppings fill a build bar. Crew assembles bowls or burritos with as much or as little heat as they want.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 180,
+  "prepTime": 35,
+  "difficulty": "medium",
+  "calories": 540,
+  "protein": 32,
+  "carbs": 52,
+  "fats": 22,
+  "tags": [
+    "protein:pork",
+    "format:bar_line",
+    "category:crew_feeders",
+    "bar_line",
+    "bowl",
+    "pork",
+    "handheld",
+    "hall_expansion",
+    "hall_expansion_56",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Dutch oven or roasting pan",
+    "Sheet pans",
+    "Hotel pans",
+    "Instant-read thermometer",
+    "Broiler"
+  ],
+  "ingredients": [
+    {
+      "name": "pork shoulder",
+      "quantity": "5",
+      "unit": "lb",
+      "notes": "cubed",
+      "group": "Main"
+    },
+    {
+      "name": "orange juice",
+      "quantity": "1",
+      "unit": "cup",
+      "group": "Carnitas"
+    },
+    {
+      "name": "lime juice",
+      "quantity": "0.25",
+      "unit": "cup",
+      "group": "Carnitas"
+    },
+    {
+      "name": "cumin",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Spice"
+    },
+    {
+      "name": "cilantro-lime rice",
+      "quantity": "8",
+      "unit": "cups",
+      "notes": "cooked",
+      "group": "Base"
+    },
+    {
+      "name": "black beans",
+      "quantity": "3",
+      "unit": "cups",
+      "notes": "seasoned",
+      "group": "Bar"
+    },
+    {
+      "name": "corn salsa",
+      "quantity": "3",
+      "unit": "cups",
+      "group": "Bar"
+    },
+    {
+      "name": "shredded lettuce",
+      "quantity": "4",
+      "unit": "cups",
+      "group": "Bar"
+    },
+    {
+      "name": "shredded cheese",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Bar"
+    },
+    {
+      "name": "flour tortillas",
+      "quantity": "12",
+      "unit": "whole",
+      "notes": "optional wraps",
+      "group": "Bar"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Slow-cook carnitas",
+      "instruction": "Season pork with cumin, salt, and pepper. Braise with orange juice and lime covered at 300°F until tender and internal temp reaches 195°F, about 3 hours. Shred with forks. Target oven/smoker temperature: 300°F.",
+      "minutes": 180,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Crisp for service",
+      "instruction": "Spread shredded carnitas on sheet pans and broil 5 minutes until edges crisp and brown. Verify held temp stays above 165°F before placing at the bar.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Prepare rice and beans",
+      "instruction": "Cook rice and finish with lime juice and chopped cilantro. Season black beans with cumin and garlic. Keep both hot in hotel pans on the line.",
+      "minutes": 30,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Set the bowl bar",
+      "instruction": "Arrange rice, carnitas, beans, corn salsa, lettuce, cheese, sour cream, and hot sauce in order. Warm tortillas wrapped in foil as an optional wrap upgrade.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Service and portion guidance",
+      "instruction": "Suggest starting with rice, protein, beans, salsa, then cold toppings. Replenish crisped carnitas from backup pans under the broiler as needed.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "A spoon of carnitas fat crisped in the pan before broiling adds authentic flavor.",
+    "Pickled red onions as a topping cut richness and elevate the whole bar.",
+    "Offer half-rice/half-lettuce base for anyone avoiding heavy carb loads."
+  ],
+  "tonightSpread": [
+    "Burrito bowl bar with crispy carnitas, rice, beans, and full topping station.",
+    "Tortilla chips and queso on the side for crews wanting chips-and-dip alongside bowls."
+  ],
+  "leftovers": [
+    "Carnitas freeze well—re-crisp and reuse on taco night next week.",
+    "Mix leftover bowl components into a baked enchilada casserole."
+  ],
+  "whyCrewsLikeIt": "Burrito bowl bars are familiar, fast, and filling. Carnitas can be made ahead and crisped before service, and the format handles extra hungry members without recipe changes.",
+  "mealPrepNotes": "Cook carnitas low and slow the day before, then crisp under the broiler before service. Rice should be cilantro-lime finished just before the bar opens. Keep hot and cold zones separate.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 540,
+    "protein": 32,
+    "carbs": 52,
+    "fats": 22,
+    "label": "~540 cal/serving · 32g protein · 8g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/burrito-bowl-bar-night.jpg",
+  "heroImageAlt": "Burrito Bowl Bar Night — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/burrito-bowl-bar-night.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/burrito-bowl-bar-night.jpg",
+  "railImage": "/images/rails/hall-expansion/burrito-bowl-bar-night.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "burrito bowl bar night",
+    "crew feeders"
+  ],
+  "relatedSlugs": [
+    "shawarma-bar-night",
+    "fajita-bar-night",
+    "hall-burger-bar",
+    "pasta-bar-night"
+  ],
+  "generatedAt": "2026-05-30T03:14:19.188Z",
+  "contentVersion": 2
+}

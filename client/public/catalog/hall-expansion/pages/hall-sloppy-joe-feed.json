@@ -1,0 +1,186 @@
+{
+  "slug": "hall-sloppy-joe-feed",
+  "title": "Hall Sloppy Joe Feed",
+  "displayTitle": "Hall Sloppy Joe Feed",
+  "seoTitle": "Hall Sloppy Joe Feed | Firefighter Meal",
+  "shortDescription": "Sweet-tangy beef sloppy joes with buns and chips for ten",
+  "subtitle": "Sweet-tangy beef sloppy joes with buns and chips for ten",
+  "category": "hall_expansion",
+  "cuisine": "american",
+  "description": "Ground beef browns with onion and bell pepper, then simmers in a sweet-tangy tomato sauce until thick and scoopable. Pile on toasted buns with pickles and chips for a classic hall feed.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 35,
+  "prepTime": 15,
+  "difficulty": "easy",
+  "calories": 520,
+  "protein": 36,
+  "carbs": 42,
+  "fats": 24,
+  "tags": [
+    "protein:beef",
+    "format:sandwich",
+    "category:crew_feeders",
+    "beef",
+    "hearty",
+    "crew_feed",
+    "handheld",
+    "hall_expansion",
+    "hall_expansion_56",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Large Dutch oven",
+    "Wooden spoon",
+    "Sheet pan",
+    "Hotel pan",
+    "Spatula"
+  ],
+  "ingredients": [
+    {
+      "name": "ground beef (80/20)",
+      "quantity": "5",
+      "unit": "lb",
+      "group": "Main"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "diced",
+      "group": "Vegetables"
+    },
+    {
+      "name": "green bell pepper",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "diced",
+      "group": "Vegetables"
+    },
+    {
+      "name": "ketchup",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Sauce"
+    },
+    {
+      "name": "tomato paste",
+      "quantity": "0.25",
+      "unit": "cup",
+      "group": "Sauce"
+    },
+    {
+      "name": "Worcestershire sauce",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "apple cider vinegar",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "brown sugar",
+      "quantity": "0.25",
+      "unit": "cup",
+      "group": "Sauce"
+    },
+    {
+      "name": "hamburger buns",
+      "quantity": "12",
+      "unit": "whole",
+      "notes": "toasted",
+      "group": "Service"
+    },
+    {
+      "name": "dill pickle chips",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Service"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Brown the beef",
+      "instruction": "Cook ground beef with onion and bell pepper over medium-high heat 12–15 minutes, breaking into crumbles until well browned. Drain excess fat.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Build the sauce",
+      "instruction": "Stir in ketchup, tomato paste, Worcestershire, vinegar, and brown sugar until combined.",
+      "minutes": 3,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Simmer until thick",
+      "instruction": "Reduce heat and simmer uncovered 15–20 minutes, stirring often, until sauce mounds on a spoon and flavors meld.",
+      "minutes": 18,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Toast the buns",
+      "instruction": "Split buns and toast cut-side down in a dry skillet or under broiler at 400°F until golden, about 3 minutes. Target oven/smoker temperature: 400°F.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Serve the line",
+      "instruction": "Hold beef warm at 165°F in a hotel pan. Crews build sandwiches with pickles and extra onion if desired. Serve with chips.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "A tablespoon of mustard adds tang without making it taste like mustard.",
+    "Smoked paprika pinch makes canned-sauce flavors taste more homemade.",
+    "Coleslaw on the sandwich is messy but worth it if you have time."
+  ],
+  "tonightSpread": [
+    "Sloppy joes with kettle chips and dill pickles.",
+    "Baked beans from a can, doctored with molasses and mustard, for a cookout vibe."
+  ],
+  "leftovers": [
+    "Serve over baked potatoes with shredded cheese.",
+    "Fold into a casserole with tater tots and cheddar for sloppy joe hot dish."
+  ],
+  "whyCrewsLikeIt": "Sloppy joes are cheap, fast, and universally loved—especially by crews who grew up on cafeteria versions. This recipe is thicker and meatier, built for ten hungry firefighters.",
+  "mealPrepNotes": "Brown beef hard and drain fat or sandwiches get greasy. Sauce should mound on a spoon, not run off the bun. Toast buns so they survive the saucy filling.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 520,
+    "protein": 36,
+    "carbs": 42,
+    "fats": 24,
+    "label": "~520 cal/serving · 36g protein · 3g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/hall-sloppy-joe-feed.jpg",
+  "heroImageAlt": "Hall Sloppy Joe Feed — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/hall-sloppy-joe-feed.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/hall-sloppy-joe-feed.jpg",
+  "railImage": "/images/rails/hall-expansion/hall-sloppy-joe-feed.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "hall sloppy joe feed",
+    "crew feeders"
+  ],
+  "relatedSlugs": [
+    "shawarma-bar-night",
+    "fajita-bar-night",
+    "hall-burger-bar",
+    "pasta-bar-night"
+  ],
+  "generatedAt": "2026-05-30T03:14:19.188Z",
+  "contentVersion": 2
+}

@@ -12,6 +12,8 @@ import { getSiteOrigin } from "@/lib/seo/site-origin";
 import { buildBreadcrumbListSchema } from "@shared/seo/schema";
 import { smoothieRecipePath, smoothiesIndexPath } from "@shared/fuel-catalog/paths";
 import { cn } from "@/lib/utils";
+import { RecipeCrewRatingPanel } from "@/components/recipe-crew-rating/recipe-crew-rating-panel";
+import { RecipeNutritionPanel } from "@/components/recipe-nutrition-panel";
 
 export default function SmoothieRecipePage() {
   const [, smoothieParams] = useRoute("/smoothies/:slug");
@@ -101,6 +103,16 @@ export default function SmoothieRecipePage() {
         <h1 className="mt-2 font-heading tracking-tight text-3xl sm:text-4xl">{page.title}</h1>
         <p className="mt-3 text-muted-foreground leading-relaxed">{page.intro}</p>
 
+        <RecipeCrewRatingPanel slug={page.slug} category="smoothies" className="mt-6" />
+
+        <RecipeNutritionPanel
+          calories={page.nutrition.calories}
+          protein={page.nutrition.protein}
+          carbs={page.nutrition.carbs}
+          fat={page.nutrition.fats}
+          className="mt-6"
+        />
+
         <div className="mt-6 aspect-[16/10] rounded-2xl overflow-hidden border border-border/20 bg-gradient-to-br from-emerald-950/40 to-muted/20">
           {page.heroImage ? (
             <img
@@ -111,7 +123,7 @@ export default function SmoothieRecipePage() {
           ) : null}
         </div>
 
-        <p className="mt-4 text-sm text-muted-foreground rounded-xl bg-muted/20 border border-border/20 p-4">
+        <p className="mt-4 text-sm text-muted-foreground rounded-xl bg-muted/20 border border-border/20 p-4 print:hidden">
           {page.nutrition.highlights}
         </p>
 

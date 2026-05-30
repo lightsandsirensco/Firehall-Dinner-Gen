@@ -10,13 +10,13 @@
   "description": "Two cravings, one pan. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
   "baseServings": 8,
-  "cookTime": 35,
+  "cookTime": 55,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 600,
-  "protein": 40,
-  "carbs": 48,
-  "fats": 28,
+  "calories": 1377,
+  "protein": 82,
+  "carbs": 83,
+  "fats": 82,
   "tags": [
     "protein:beef",
     "format:skillet",
@@ -27,6 +27,8 @@
   ],
   "equipment": [
     "Large cast iron skillet or Dutch oven",
+    "8-quart stock pot",
+    "Hotel pans or large baking dishes",
     "Large sheet trays",
     "Instant-read thermometer",
     "Aluminum foil"
@@ -34,41 +36,57 @@
   "ingredients": [
     {
       "name": "Ground beef (80/20)",
-      "quantity": "3.5",
+      "quantity": "3",
       "unit": "lb",
       "group": "Main"
     },
     {
-      "name": "Yellow onion",
-      "quantity": "3",
+      "name": "Elbow macaroni",
+      "quantity": "1.5",
+      "unit": "lb",
+      "group": "Pasta"
+    },
+    {
+      "name": "Yellow onion, diced",
+      "quantity": "2",
       "unit": "large",
       "group": "Aromatics"
     },
     {
-      "name": "Bell peppers, diced",
-      "quantity": "3",
+      "name": "Bell pepper, diced",
+      "quantity": "2",
       "unit": "count",
       "group": "Aromatics"
     },
     {
       "name": "Garlic cloves, minced",
-      "quantity": "8",
+      "quantity": "6",
       "unit": "cloves",
       "group": "Aromatics"
     },
     {
       "name": "Kidney beans, drained",
-      "quantity": "3",
-      "unit": "cans",
-      "notes": "15 oz",
-      "group": "Main"
-    },
-    {
-      "name": "Crushed tomatoes",
       "quantity": "2",
       "unit": "cans",
-      "notes": "28 oz",
-      "group": "Main"
+      "group": "Chili"
+    },
+    {
+      "name": "Diced tomatoes",
+      "quantity": "2",
+      "unit": "cans",
+      "group": "Chili"
+    },
+    {
+      "name": "Tomato paste",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Chili"
+    },
+    {
+      "name": "Beef broth",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Chili"
     },
     {
       "name": "Chili powder",
@@ -77,64 +95,112 @@
       "group": "Seasoning"
     },
     {
-      "name": "Smoked paprika",
+      "name": "Ground cumin",
       "quantity": "2",
       "unit": "tbsp",
       "group": "Seasoning"
     },
     {
-      "name": "Beef or chicken broth",
-      "quantity": "4",
+      "name": "Smoked paprika",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Dried oregano",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Vegetable oil",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Cooking"
+    },
+    {
+      "name": "Kosher salt",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Black pepper",
+      "quantity": "1",
+      "unit": "tsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Shredded cheddar",
+      "quantity": "16",
+      "unit": "oz",
+      "group": "Finish"
+    },
+    {
+      "name": "Sour cream",
+      "quantity": "2",
       "unit": "cups",
-      "group": "Sauce"
+      "group": "Topping"
+    },
+    {
+      "name": "Green onions, sliced",
+      "quantity": "4",
+      "unit": "count",
+      "group": "Topping"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Dice and open cans",
-      "instruction": "Dice onions and peppers ¼ inch. Drain beans. Open tomatoes. Set out your largest stock pot — chili splatters, so have a lid nearby.",
+      "title": "Brown the beef",
+      "instruction": "Heat oil in a large Dutch oven over medium-high. Brown ground beef with onion and bell pepper, breaking into fine crumbles. Drain excess grease — greasy chili mac separates on the line.",
       "minutes": 15,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Brown the meat hard",
-      "instruction": "Brown beef in batches over medium-high until deeply colored (160°F+). Don't crowd the pot or you'll steam gray meat.",
-      "minutes": 12,
       "heatLevel": "medium-high"
     },
     {
-      "stepNumber": 3,
-      "title": "Bloom the spices",
-      "instruction": "Add vegetables; cook 6–8 minutes. Stir in garlic, chili powder, and paprika 45 seconds until fragrant. Add tomatoes, broth, and beans.",
-      "minutes": 10,
-      "heatLevel": "medium"
-    },
-    {
-      "stepNumber": 4,
-      "title": "Simmer until thick",
-      "instruction": "Simmer uncovered 35–45 minutes at a gentle bubble until a spoon dragged through leaves a clear trail. Taste for salt — chili should be bold, not flat.",
-      "minutes": 40,
+      "stepNumber": 2,
+      "title": "Simmer the chili base",
+      "instruction": "Add garlic, chili powder, cumin, paprika, and oregano; cook 1 minute. Stir in tomato paste, diced tomatoes, beans, and beef broth. Simmer 20–25 minutes until thickened and flavors meld. Season with salt and pepper.",
+      "minutes": 25,
       "heatLevel": "medium-low"
     },
     {
+      "stepNumber": 3,
+      "title": "Cook macaroni separately",
+      "instruction": "Boil elbow macaroni in salted water until just al dente. Drain well — starch makes the pot gluey if you cook pasta in the chili too long.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Combine chili and mac",
+      "instruction": "Stir cooked macaroni into the chili pot until evenly coated. The mix should look saucy, not dry — add a splash of broth if needed.",
+      "minutes": 5,
+      "heatLevel": "medium"
+    },
+    {
       "stepNumber": 5,
-      "title": "Hold for the hall",
-      "instruction": "Keep on low or in a cambro for late eaters. Topping bar: cheese, onion, jalapeños, sour cream. First bowl is best; stir before each refill.",
+      "title": "Melt cheese on top",
+      "instruction": "Top with shredded cheddar. Cover 2 minutes to melt, or broil 2–3 minutes for browned cheese edges. Keep the pot on low for seconds.",
+      "minutes": 5,
+      "heatLevel": "medium-low"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Serve Chili Mac Skillet",
+      "instruction": "Ladle into bowls or serve straight from the Dutch oven with sour cream and green onions on the side. This is chili AND mac — both should be obvious in every bite.",
       "minutes": 5,
       "heatLevel": "low"
     }
   ],
   "proTips": [
     "Prep all mise en place before the bell — this meal wins on organization, not speed hacks.",
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts."
   ],
   "tonightSpread": [
-    "Plate Chili Mac Skillet with sides in separate pans so the crew can mix portions.",
-    "Line up Chili Mac Skillet on the main counter with serving spoons — firefighters grab fast between calls.",
-    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+    "Serve straight from the Dutch oven or ladle into bowls — mac elbows should be visible in the chili.",
+    "Sour cream and green onions stay cold on the side."
   ],
   "leftovers": [
     "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
@@ -146,11 +212,25 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 600,
-    "protein": 40,
-    "carbs": 48,
-    "fats": 28,
-    "label": "per serving (hall portion)"
+    "calories": 1377,
+    "protein": 82,
+    "carbs": 83,
+    "fats": 82,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/chili-mac.jpg",
   "mobileImage": "/images/mobile/chili-mac.jpg",
@@ -180,6 +260,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-29T01:43:09.398Z",
+  "generatedAt": "2026-05-30T03:28:01.929Z",
   "contentVersion": 2
 }

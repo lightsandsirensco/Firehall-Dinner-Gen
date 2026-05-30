@@ -58,7 +58,10 @@ export function serveStatic(app: Express) {
     if (p === "/sitemap.xml" || p === "/robots.txt") {
       return res.status(404).type("text/plain").send("Not found — configure SEO routes before static fallback.");
     }
-    if (/\.(jpg|jpeg|png|webp|gif|svg|ico|woff2?|css|js|map|xml)$/i.test(p)) {
+    if (/\.(jpg|jpeg|png|webp|gif|svg|ico|woff2?|css|js|map|xml|json)$/i.test(p)) {
+      if (p.endsWith(".json")) {
+        return res.status(404).json({ message: "Catalog asset not found", path: req.path });
+      }
       return res.status(404).end();
     }
     res.setHeader("Cache-Control", "no-cache");

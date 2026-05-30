@@ -10,13 +10,13 @@
   "description": "Smoked wings, tangy Alabama sauce. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
   "baseServings": 8,
-  "cookTime": 90,
-  "prepTime": 30,
+  "cookTime": 116,
+  "prepTime": 23,
   "difficulty": "hard",
-  "calories": 520,
-  "protein": 32,
-  "carbs": 48,
-  "fats": 22,
+  "calories": 204,
+  "protein": 1,
+  "carbs": 4,
+  "fats": 21,
   "tags": [
     "protein:chicken",
     "format:grill",
@@ -154,7 +154,7 @@
     }
   ],
   "proTips": [
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts.",
     "Rest grilled proteins 5–8 minutes under foil before slicing — juices stay in the meat.",
     "Pull chicken at 160°F and let carryover hit 165°F — dry breast ruins crew morale."
@@ -178,11 +178,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 520,
-    "protein": 32,
-    "carbs": 48,
-    "fats": 22,
-    "label": "per serving (hall portion)"
+    "calories": 204,
+    "protein": 1,
+    "carbs": 4,
+    "fats": 21,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/smoked-wings-white-sauce.jpg",
   "mobileImage": "/images/mobile/smoked-wings-white-sauce.jpg",
@@ -213,6 +227,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-29T01:43:09.347Z",
+  "generatedAt": "2026-05-30T03:28:01.830Z",
   "contentVersion": 2
 }

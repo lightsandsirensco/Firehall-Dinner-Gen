@@ -44,6 +44,7 @@ export function SiteHeader({ activePage, favCount = 0 }: SiteHeaderProps) {
     { key: "generator", label: NAV.generator, href: "/generator" },
     { key: "explore", label: NAV.explore, href: "/explore" },
     { key: "wheel", label: NAV.wheel, href: "/wheel" },
+    { key: "pizza", label: NAV.pizza, href: "/pizza" },
     { key: "guides", label: NAV.ideas, href: "/guides" },
   ];
 

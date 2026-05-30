@@ -1,0 +1,184 @@
+{
+  "slug": "pellet-smoked-chicken-quarters",
+  "title": "Pellet Smoked Chicken Quarters",
+  "displayTitle": "Pellet Smoked Chicken Quarters",
+  "seoTitle": "Pellet Smoked Chicken Quarters | Firefighter Meal",
+  "shortDescription": "Crisp-skinned leg quarters with BBQ rub for ten",
+  "subtitle": "Crisp-skinned leg quarters with BBQ rub for ten",
+  "category": "hall_expansion",
+  "cuisine": "american",
+  "description": "Chicken leg quarters are dry-brined, rubbed with a sweet-spice BBQ blend, and smoked on a pellet grill until skin crisps and dark meat hits 175°F. Finish with a light glaze and serve with corn and beans.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 75,
+  "prepTime": 15,
+  "difficulty": "easy",
+  "calories": 450,
+  "protein": 38,
+  "carbs": 28,
+  "fats": 22,
+  "tags": [
+    "protein:chicken",
+    "format:smoker",
+    "category:smoker_recipes",
+    "bbq",
+    "smoker",
+    "chicken",
+    "hall_expansion",
+    "hall_expansion_56",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Pellet smoker",
+    "Wire rack",
+    "Instant-read thermometer",
+    "Basting brush",
+    "Sheet pans"
+  ],
+  "ingredients": [
+    {
+      "name": "chicken leg quarters",
+      "quantity": "10",
+      "unit": "pieces",
+      "notes": "about 5 lb",
+      "group": "Main"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Brine"
+    },
+    {
+      "name": "brown sugar",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Rub"
+    },
+    {
+      "name": "smoked paprika",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Rub"
+    },
+    {
+      "name": "garlic powder",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Rub"
+    },
+    {
+      "name": "onion powder",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Rub"
+    },
+    {
+      "name": "chili powder",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Rub"
+    },
+    {
+      "name": "BBQ sauce",
+      "quantity": "1",
+      "unit": "cup",
+      "group": "Glaze"
+    },
+    {
+      "name": "baked beans",
+      "quantity": "2",
+      "unit": "cans",
+      "notes": "28 oz, warmed",
+      "group": "Side"
+    },
+    {
+      "name": "cornbread",
+      "quantity": "10",
+      "unit": "pieces",
+      "group": "Side"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Dry-brine the quarters",
+      "instruction": "Pat quarters dry and season all sides with kosher salt. Refrigerate uncovered on a wire rack 2–24 hours so skin dries and seasons deeply.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Apply BBQ rub",
+      "instruction": "Mix brown sugar, smoked paprika, garlic powder, onion powder, and chili powder. Coat quarters evenly, pressing rub into skin and under loosened skin where possible.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Smoke until nearly done",
+      "instruction": "Heat pellet smoker to 275°F. Smoke quarters skin-side up until thickest part of thigh hits 170°F and skin begins to tighten, about 55–65 minutes. Target oven/smoker temperature: 275°F.",
+      "minutes": 60,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Glaze and crisp",
+      "instruction": "Brush with BBQ sauce and raise smoker temp to 375°F for 10 minutes until glaze sets and skin crisps. Verify 175°F internal in the thigh before pulling. Target oven/smoker temperature: 375°F.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Rest and plate",
+      "instruction": "Rest quarters 5 minutes. Serve two per person with warm baked beans and cornbread. Keep extra sauce at the line for second passes.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "175°F in the thigh is the target—legs stay juicy while breast-only cuts would be dry at that temp.",
+    "Pat quarters dry right before smoking even after dry-brining—surface moisture kills crisp skin.",
+    "Spatchcock quarters if you need faster cooks on a night with early tones."
+  ],
+  "tonightSpread": [
+    "Smoked leg quarters with baked beans, cornbread, and dill pickles.",
+    "Simple iceberg salad with ranch for crews wanting something cold alongside smoky chicken."
+  ],
+  "leftovers": [
+    "Pull meat and mix into smoky chicken salad with celery and mayo.",
+    "Shred and simmer in white beans for a fast smoked chicken chili."
+  ],
+  "whyCrewsLikeIt": "Leg quarters are cheap, hard to overcook, and eat like a feast. Pellet smokers make temperature control easy on busy shift days when nobody can babysit a fire.",
+  "mealPrepNotes": "Dry-brine quarters uncovered on a rack in the walk-in for up to 24 hours for crispier skin. Rub can be applied hours ahead. Quarters hold well wrapped at 170°F for 45 minutes.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 450,
+    "protein": 38,
+    "carbs": 28,
+    "fats": 22,
+    "label": "~450 cal/serving · 38g protein · 3g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/pellet-smoked-chicken-quarters.jpg",
+  "heroImageAlt": "Pellet Smoked Chicken Quarters — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/pellet-smoked-chicken-quarters.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/pellet-smoked-chicken-quarters.jpg",
+  "railImage": "/images/rails/hall-expansion/pellet-smoked-chicken-quarters.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "pellet smoked chicken quarters",
+    "smoker recipes"
+  ],
+  "relatedSlugs": [
+    "smoked-turkey-breast",
+    "smoked-meatloaf",
+    "smoked-mac-and-cheese",
+    "pork-belly-burnt-ends"
+  ],
+  "generatedAt": "2026-05-30T03:14:19.188Z",
+  "contentVersion": 2
+}

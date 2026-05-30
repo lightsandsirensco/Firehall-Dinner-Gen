@@ -1,0 +1,222 @@
+{
+  "slug": "pepperoni-pizza-night",
+  "title": "Classic Pepperoni Pizza",
+  "displayTitle": "Classic Pepperoni Pizza",
+  "seoTitle": "Classic Pepperoni Pizza | Firefighter Meal",
+  "shortDescription": "Friday hall pie — not delivery",
+  "subtitle": "Friday hall pie — not delivery",
+  "category": "pizza_night",
+  "cuisine": "italian",
+  "description": "Friday hall pie — not delivery. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 175,
+  "prepTime": 30,
+  "difficulty": "medium",
+  "calories": 1400,
+  "protein": 70,
+  "carbs": 86,
+  "fats": 90,
+  "tags": [
+    "protein:pork",
+    "format:pizza",
+    "category:pizza_night",
+    "handheld",
+    "trending",
+    "golden_100"
+  ],
+  "equipment": [
+    "Pizza stone or steel",
+    "Peel or inverted sheet pan",
+    "Large sheet trays",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "ingredients": [
+    {
+      "name": "Bread flour",
+      "quantity": "6",
+      "unit": "cups",
+      "group": "Dough"
+    },
+    {
+      "name": "Active dry yeast",
+      "quantity": "2.5",
+      "unit": "tsp",
+      "group": "Dough"
+    },
+    {
+      "name": "Warm water",
+      "quantity": "2",
+      "unit": "cups",
+      "notes": "110°F",
+      "group": "Dough"
+    },
+    {
+      "name": "Olive oil",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Dough"
+    },
+    {
+      "name": "Kosher salt",
+      "quantity": "2",
+      "unit": "tsp",
+      "group": "Dough"
+    },
+    {
+      "name": "Crushed tomatoes",
+      "quantity": "3",
+      "unit": "cans",
+      "notes": "28 oz",
+      "group": "Sauce"
+    },
+    {
+      "name": "Garlic cloves, minced",
+      "quantity": "4",
+      "unit": "cloves",
+      "group": "Sauce"
+    },
+    {
+      "name": "Dried oregano",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "Fresh mozzarella, torn",
+      "quantity": "32",
+      "unit": "oz",
+      "group": "Cheese"
+    },
+    {
+      "name": "Low-moisture mozzarella, shredded",
+      "quantity": "16",
+      "unit": "oz",
+      "group": "Cheese"
+    },
+    {
+      "name": "Pepperoni slices",
+      "quantity": "16",
+      "unit": "oz",
+      "group": "Topping"
+    },
+    {
+      "name": "Grated parmesan",
+      "quantity": "1",
+      "unit": "cup",
+      "group": "Finish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Proof dough for multiple pies",
+      "instruction": "Bloom yeast in warm water 5 minutes. Mix flour, salt, oil, and yeast water; knead 8–10 minutes until smooth. Rise 1–1½ hours until doubled. For eight hungry firefighters, plan three large pies or four medium — scale dough portions accordingly.",
+      "minutes": 90,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Simmer pizza sauce",
+      "instruction": "Simmer crushed tomatoes with garlic and oregano 15 minutes until slightly thickened. Cool briefly — hot sauce melts dough and makes a soggy center.",
+      "minutes": 15,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Heat oven and stone or steel",
+      "instruction": "Place pizza stone or steel in the oven; preheat to 500°F at least 45 minutes. Prep cheese and pepperoni while the oven saturates — surface temp matters more than air temp.",
+      "minutes": 45,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Stretch, sauce, cheese, pepperoni",
+      "instruction": "Divide dough; stretch by hand to 12–14 inch rounds. Sauce lightly — wet centers sag. Layer mozzarella and pepperoni; leave a ½ inch rim. Work on parchment or a floured peel.",
+      "minutes": 20,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Bake until blistered",
+      "instruction": "Bake each pie 10–14 minutes until cheese bubbles with brown spots and the underside sounds hollow. Rotate once for hot spots. Keep finished pies on racks, not stacked — steam kills crust.",
+      "minutes": 12,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Rest, cut, and run the line",
+      "instruction": "Rest 2 minutes, cut into 8 slices per pie, and fan on sheet trays. Classic Pepperoni Pizza night — dough, tomato sauce, mozzarella, pepperoni. Keep a backup pie warming at 200°F.",
+      "minutes": 5,
+      "heatLevel": "low"
+    }
+  ],
+  "proTips": [
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
+    "Taste for salt at the end — hall palates run salty after long shifts."
+  ],
+  "tonightSpread": [
+    "Fan pepperoni slices on sheet trays — keep a backup pie warming at 200°F uncovered.",
+    "Cut each pie into at least 8 slices for hall portions; label plain cheese backup if you make one."
+  ],
+  "leftovers": [
+    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
+    "Label trays with date and reheat to 165°F minimum before second shift."
+  ],
+  "whyCrewsLikeIt": "Friday hall pie — not delivery. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
+  "substitutions": [],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 1400,
+    "protein": 70,
+    "carbs": 86,
+    "fats": 90,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "heroImage": "/images/golden-100/pepperoni-pizza-night.jpg",
+  "mobileImage": "/images/mobile/pepperoni-pizza-night.jpg",
+  "thumbImage": "/images/thumbs/pepperoni-pizza-night.jpg",
+  "railImage": "/images/rails/pepperoni-pizza-night.jpg",
+  "realismScore": 100,
+  "firefighterScore": 94,
+  "popularityWeight": 3.2,
+  "searchTerms": [
+    "classic pepperoni pizza",
+    "pepperoni pizza night",
+    "italian",
+    "pork",
+    "pizza",
+    "handheld",
+    "trending",
+    "homemade pepperoni pizza",
+    "golden_100"
+  ],
+  "relatedSlugs": [
+    "honey-soppressata-pizza",
+    "sicilian-sheet-pizza",
+    "breakfast-sausage-pizza",
+    "detroit-style-pizza",
+    "firehall-supreme-pizza",
+    "hawaiian-pizza"
+  ],
+  "sourceName": "Firehall Meals",
+  "sourceUrl": "",
+  "generatedAt": "2026-05-30T03:45:01.593Z",
+  "contentVersion": 2
+}

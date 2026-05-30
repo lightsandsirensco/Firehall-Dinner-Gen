@@ -13,10 +13,10 @@
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 440,
-  "protein": 32,
-  "carbs": 38,
-  "fats": 16,
+  "calories": 723,
+  "protein": 69,
+  "carbs": 94,
+  "fats": 8,
   "tags": [
     "protein:chicken",
     "format:bowl",
@@ -33,80 +33,86 @@
   ],
   "ingredients": [
     {
-      "name": "Jasmine rice, uncooked",
+      "name": "Brown rice, uncooked",
       "quantity": "3",
       "unit": "cups",
       "group": "Base"
     },
     {
-      "name": "Chicken thighs",
-      "quantity": "2.5",
+      "name": "Boneless chicken breasts",
+      "quantity": "3",
       "unit": "lb",
       "group": "Main"
     },
     {
-      "name": "Broccoli florets",
-      "quantity": "2",
-      "unit": "lb",
-      "group": "Veg"
-    },
-    {
-      "name": "Soy sauce",
-      "quantity": "0.5",
-      "unit": "cup",
-      "group": "Sauce"
-    },
-    {
-      "name": "Sesame oil",
-      "quantity": "2",
-      "unit": "tbsp",
-      "group": "Sauce"
-    },
-    {
-      "name": "Red onion, sliced",
-      "quantity": "1",
-      "unit": "large",
+      "name": "Black beans, drained",
+      "quantity": "3",
+      "unit": "cans",
       "group": "Toppings"
+    },
+    {
+      "name": "Corn kernels",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Toppings"
+    },
+    {
+      "name": "Pico de gallo",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Toppings"
+    },
+    {
+      "name": "Shredded lettuce",
+      "quantity": "1",
+      "unit": "head",
+      "group": "Toppings"
+    },
+    {
+      "name": "Lime wedges",
+      "quantity": "6",
+      "unit": "count",
+      "group": "Finish"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Cook rice",
-      "instruction": "Rinse rice until water runs clear. Cook 1:1.5 rice to water with salt; fluff and hold covered.",
-      "minutes": 20,
-      "heatLevel": "medium"
+      "title": "Cook brown rice",
+      "instruction": "Simmer brown rice in salted water 40–45 minutes until tender; fluff and hold warm.",
+      "minutes": 45,
+      "heatLevel": "medium-low"
     },
     {
       "stepNumber": 2,
-      "title": "Sear protein and veg",
-      "instruction": "Sear protein in batches over medium-high until browned and cooked through (165°F chicken, 125°F salmon). Stir-fry veg 4–5 minutes until bright with char.",
-      "minutes": 14,
+      "title": "Grill chicken breasts",
+      "instruction": "Season chicken breasts with cumin, chili powder, salt, and pepper. Grill over medium-high 6–7 minutes per side until 165°F. Rest 5 minutes; dice.",
+      "minutes": 20,
       "heatLevel": "medium-high"
     },
     {
       "stepNumber": 3,
-      "title": "Warm the sauce",
-      "instruction": "Whisk soy and sesame oil; add a splash of rice water if it needs to loosen for drizzling.",
-      "minutes": 5,
-      "heatLevel": "low"
+      "title": "Warm beans and corn",
+      "instruction": "Heat black beans and corn in separate pans with a splash of water and salt. Keep pico and lettuce cold.",
+      "minutes": 10,
+      "heatLevel": "medium"
     },
     {
       "stepNumber": 4,
-      "title": "Assembly line",
-      "instruction": "Rice, protein, veg, sauce on the side. Performance Chicken Burrito Bowls feeds fastest as a build-your-own line.",
-      "minutes": 5,
+      "title": "Build burrito bowls",
+      "instruction": "Brown rice, diced chicken, beans, corn, lettuce, and pico. Squeeze lime at the line. Performance Chicken Burrito Bowls hit macros without tasting like punishment.",
+      "minutes": 8,
       "heatLevel": ""
     }
   ],
   "proTips": [
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts.",
     "Pull chicken at 160°F and let carryover hit 165°F — dry breast ruins crew morale."
   ],
   "tonightSpread": [
-    "Build bowls base → grain → protein → toppings so the line moves in one direction.",
-    "Put hot components closest to the crew, cold crunch at the far end.",
+    "Set rice or grain in the first pan, main in the second, crunchy toppings last so textures stay distinct.",
+    "Put hot components closest to the crew, cold crunch at the far end of the line.",
     "Portion bowls on the line with protein visible on top — crew eats with their eyes first.",
     "Keep dressing and crunchy toppings in side bowls so greens stay crisp through second servings.",
     "Line up Performance Chicken Burrito Bowls on the main counter with serving spoons — firefighters grab fast between calls.",
@@ -123,11 +129,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 440,
-    "protein": 32,
-    "carbs": 38,
-    "fats": 16,
-    "label": "per serving (hall portion)"
+    "calories": 723,
+    "protein": 69,
+    "carbs": 94,
+    "fats": 8,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/performance-burrito-bowls.jpg",
   "mobileImage": "/images/mobile/performance-burrito-bowls.jpg",
@@ -156,6 +176,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-29T01:43:09.387Z",
+  "generatedAt": "2026-05-30T03:28:01.907Z",
   "contentVersion": 2
 }

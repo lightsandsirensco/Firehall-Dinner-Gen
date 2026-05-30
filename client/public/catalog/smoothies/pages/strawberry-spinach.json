@@ -62,19 +62,34 @@
     }
   ],
   "nutrition": {
-    "calories": 250,
-    "protein": 16,
-    "carbs": 32,
-    "fats": 8,
-    "highlights": "~250 cal · ~16 g protein · fiber from fruit and optional chia · greens without salad fatigue"
+    "calories": 118,
+    "protein": 5,
+    "carbs": 18,
+    "fats": 3,
+    "highlights": "~250 cal · ~16 g protein · fiber from fruit and optional chia · greens without salad fatigue",
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": true
+    }
   },
   "substitutions": [
     "Frozen mixed berries replace strawberries.",
     "Flax meal (1 tbsp) instead of chia."
   ],
   "shiftNote": "Easy sell to crews skeptical of green food — looks and tastes like a berry shake.",
-  "heroImage": "/images/editorial/smoothies/strawberry-spinach.webp",
-  "thumbImage": "/images/editorial/smoothies/strawberry-spinach.webp",
+  "heroImage": "/images/smoothies/strawberry-spinach.webp",
+  "thumbImage": "/images/smoothies/strawberry-spinach.webp",
   "tags": [
     "fuel_smoothie",
     "taxonomy:green_smoothie",

@@ -1,0 +1,148 @@
+{
+  "slug": "maple-sausage-pinwheels",
+  "title": "Maple Sausage Pinwheels",
+  "subtitle": "Crescent dough spirals with sausage and maple glaze baked golden.",
+  "description": "Refrigerated crescent dough rolled with seasoned sausage and a touch of maple, sliced into pinwheels and baked until puffed and sticky-sweet. A handheld crowd-pleaser that scales to ten with two sheet pans and minimal active cooking time.",
+  "filters": [
+    "feed_a_crew",
+    "quick_breakfasts",
+    "breakfast_sandwiches"
+  ],
+  "tags": [
+    "pinwheels",
+    "sausage",
+    "maple",
+    "crescent",
+    "handheld"
+  ],
+  "crewSize": 10,
+  "baseServings": 10,
+  "prepTime": 15,
+  "cookTime": 22,
+  "totalTime": 37,
+  "difficulty": "easy",
+  "ingredients": [
+    {
+      "name": "breakfast sausage",
+      "quantity": "1 1/2 lb",
+      "notes": "browned and crumbled fine",
+      "group": "Filling"
+    },
+    {
+      "name": "shredded cheddar",
+      "quantity": "1 1/2 cups",
+      "notes": "mixed into warm sausage",
+      "group": "Filling"
+    },
+    {
+      "name": "maple syrup",
+      "quantity": "3 tbsp",
+      "notes": "stirred into sausage off heat",
+      "group": "Filling"
+    },
+    {
+      "name": "8-count crescent roll tubes",
+      "quantity": "2",
+      "notes": "or seamless dough sheets",
+      "group": "Dough"
+    },
+    {
+      "name": "butter",
+      "quantity": "1/4 cup",
+      "notes": "melted",
+      "group": "Glaze"
+    },
+    {
+      "name": "maple syrup",
+      "quantity": "2 tbsp",
+      "notes": "for brushing before bake",
+      "group": "Glaze"
+    },
+    {
+      "name": "black pepper",
+      "quantity": "1/2 tsp",
+      "notes": "in sausage mix",
+      "group": "Seasoning"
+    },
+    {
+      "name": "everything bagel seasoning",
+      "quantity": "1 tbsp",
+      "notes": "optional on top",
+      "group": "Finish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Make the filling",
+      "instruction": "Brown sausage, drain well, and mix with cheddar, maple syrup, and black pepper while warm so cheese starts to melt and bind the filling.",
+      "minutes": 10
+    },
+    {
+      "stepNumber": 2,
+      "title": "Roll the dough",
+      "instruction": "Press crescent dough into two rectangles, sealing seams. Spread sausage filling evenly, roll tight into logs, and pinch seams closed.",
+      "minutes": 8
+    },
+    {
+      "stepNumber": 3,
+      "title": "Slice pinwheels",
+      "instruction": "Cut each log into 8–10 pinwheels with a sharp serrated knife. Place cut-side up on parchment-lined sheet pans with space between each spiral.",
+      "minutes": 5
+    },
+    {
+      "stepNumber": 4,
+      "title": "Glaze and bake",
+      "instruction": "Brush tops with melted butter and maple syrup. Bake at 375°F until golden, puffed, and sausage reaches 165°F in the center.",
+      "minutes": 18,
+      "tempF": 375
+    },
+    {
+      "stepNumber": 5,
+      "title": "Cool slightly and serve",
+      "instruction": "Rest 5 minutes so filling sets—hot maple cheese burns tongues. Serve from sheet pans or stack in a warm hotel pan for grab-and-go.",
+      "minutes": 5
+    }
+  ],
+  "nutrition": {
+    "calories": 131,
+    "protein": 3,
+    "carbs": 9,
+    "fat": 9,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": false
+    }
+  },
+  "stationWorkflow": [
+    "Chill rolled logs 10 minutes before slicing if dough gets soft—clean spirals need a firm log.",
+    "Bake both sheet pans on middle and upper racks, swapping halfway for even browning.",
+    "Serve with napkins stacked high—these are sticky, handheld, and popular on the way to rigs."
+  ],
+  "cleanupNotes": [
+    "Use parchment on sheet pans so maple glaze doesn't weld to the metal during baking.",
+    "Soak the sausage mixing bowl immediately—maple and cheese set into a glue once cooled."
+  ],
+  "leftovers": [
+    "Reheat pinwheels on a sheet pan at 325°F for 8 minutes until warmed through and crust re-crisp.",
+    "Split cold pinwheels and griddle cut-side down with extra maple for a caramelized second-day treat."
+  ],
+  "heroImage": "/images/breakfast/maple-sausage-pinwheels.jpg",
+  "thumbImage": "/images/thumbs/breakfast/maple-sausage-pinwheels.jpg",
+  "imageAlt": "Golden maple sausage pinwheels on a sheet pan fresh from the oven",
+  "publishedAt": "2026-05-30T03:14:16.260Z",
+  "updatedAt": "2026-05-30T03:14:16.260Z",
+  "readMinutes": 7,
+  "seoTitle": "Maple Sausage Pinwheels | Firehall Breakfast"
+}

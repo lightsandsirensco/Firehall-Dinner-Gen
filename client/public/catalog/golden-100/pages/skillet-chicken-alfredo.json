@@ -10,13 +10,13 @@
   "description": "Creamy pasta without the marathon. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
   "baseServings": 8,
-  "cookTime": 35,
+  "cookTime": 45,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 520,
-  "protein": 32,
-  "carbs": 48,
-  "fats": 22,
+  "calories": 1228,
+  "protein": 77,
+  "carbs": 89,
+  "fats": 61,
   "tags": [
     "protein:chicken",
     "format:pasta",
@@ -33,95 +33,106 @@
   ],
   "ingredients": [
     {
-      "name": "Dried pasta",
-      "quantity": "1.5",
+      "name": "Fettuccine or penne",
+      "quantity": "2",
       "unit": "lb",
       "group": "Main"
     },
     {
-      "name": "Boneless chicken thighs",
-      "quantity": "2.5",
+      "name": "Boneless chicken breasts, sliced",
+      "quantity": "3",
       "unit": "lb",
       "group": "Main"
     },
     {
-      "name": "Crushed tomatoes",
-      "quantity": "2",
-      "unit": "cans",
-      "notes": "28 oz",
+      "name": "Unsalted butter",
+      "quantity": "6",
+      "unit": "tbsp",
       "group": "Sauce"
-    },
-    {
-      "name": "Heavy cream",
-      "quantity": "1",
-      "unit": "cup",
-      "group": "Sauce"
-    },
-    {
-      "name": "Parmesan, grated",
-      "quantity": "8",
-      "unit": "oz",
-      "group": "Finish"
-    },
-    {
-      "name": "Yellow onion",
-      "quantity": "2",
-      "unit": "large",
-      "group": "Aromatics"
     },
     {
       "name": "Garlic cloves, minced",
       "quantity": "6",
       "unit": "cloves",
-      "group": "Aromatics"
+      "group": "Sauce"
+    },
+    {
+      "name": "Heavy cream",
+      "quantity": "3",
+      "unit": "cups",
+      "group": "Sauce"
+    },
+    {
+      "name": "Grated parmesan",
+      "quantity": "8",
+      "unit": "oz",
+      "group": "Sauce"
+    },
+    {
+      "name": "Olive oil",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Cooking"
     },
     {
       "name": "Kosher salt",
-      "quantity": "2",
+      "quantity": "1.5",
       "unit": "tbsp",
       "group": "Seasoning"
+    },
+    {
+      "name": "Black pepper",
+      "quantity": "1",
+      "unit": "tsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Fresh parsley, chopped",
+      "quantity": "0.3",
+      "unit": "cup",
+      "group": "Finish"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Salt the pasta water",
-      "instruction": "Bring a large pot of water to a rolling boil with enough salt that it tastes like the sea. This is your only chance to season the pasta itself.",
-      "minutes": 10,
-      "heatLevel": "high"
-    },
-    {
-      "stepNumber": 2,
-      "title": "Cook sauce base",
-      "instruction": "Meanwhile, brown meat, add onions and garlic, then tomatoes (and cream if Alfredo-style). Simmer 15 minutes while pasta cooks.",
-      "minutes": 15,
-      "heatLevel": "medium"
-    },
-    {
-      "stepNumber": 3,
-      "title": "Boil pasta al dente",
-      "instruction": "Cook pasta 1 minute shy of package time. Reserve 2 cups pasta water. Drain — do not rinse.",
+      "title": "Cook pasta",
+      "instruction": "Boil pasta in salted water to al dente; reserve 1 cup pasta water before draining.",
       "minutes": 12,
       "heatLevel": "high"
     },
     {
+      "stepNumber": 2,
+      "title": "Sear chicken strips",
+      "instruction": "Season and sear chicken in olive oil until 165°F; set aside.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Build alfredo in the skillet",
+      "instruction": "Melt butter; cook garlic. Add cream and parmesan; simmer until thick. Splash pasta water if needed.",
+      "minutes": 8,
+      "heatLevel": "medium"
+    },
+    {
       "stepNumber": 4,
-      "title": "Finish in the pan",
-      "instruction": "Toss pasta in sauce over medium heat, splashing pasta water until glossy and clinging. One-Skillet Chicken Alfredo should coat a spoon — if it pools, reduce another minute.",
-      "minutes": 4,
+      "title": "Toss pasta and chicken",
+      "instruction": "Add pasta and chicken to the skillet; toss until coated. Adjust consistency with pasta water — glossy, not tomato-red.",
+      "minutes": 5,
       "heatLevel": "medium"
     },
     {
       "stepNumber": 5,
-      "title": "Serve from the pot",
-      "instruction": "Fold in Parmesan off heat. Serve immediately — pasta waits for no one. Backup tray: cover lightly with foil at 200°F up to 15 minutes, add water if it tightens.",
-      "minutes": 3,
+      "title": "Serve from the skillet",
+      "instruction": "Finish with parsley and extra parmesan. Skillet Chicken Alfredo goes straight from pan to sheet trays.",
+      "minutes": 5,
       "heatLevel": "low"
     }
   ],
   "proTips": [
     "Prep all mise en place before the bell — this meal wins on organization, not speed hacks.",
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts.",
     "Pull chicken at 160°F and let carryover hit 165°F — dry breast ruins crew morale."
   ],
@@ -144,11 +155,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 520,
-    "protein": 32,
-    "carbs": 48,
-    "fats": 22,
-    "label": "per serving (hall portion)"
+    "calories": 1228,
+    "protein": 77,
+    "carbs": 89,
+    "fats": 61,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/skillet-chicken-alfredo.jpg",
   "mobileImage": "/images/mobile/skillet-chicken-alfredo.jpg",
@@ -177,6 +202,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-29T01:43:09.392Z",
+  "generatedAt": "2026-05-30T03:28:01.915Z",
   "contentVersion": 2
 }

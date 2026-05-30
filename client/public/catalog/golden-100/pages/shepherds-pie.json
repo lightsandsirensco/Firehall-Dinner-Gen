@@ -10,13 +10,13 @@
   "description": "Rich filling, golden potato cap. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
   "baseServings": 8,
-  "cookTime": 55,
-  "prepTime": 20,
+  "cookTime": 113,
+  "prepTime": 23,
   "difficulty": "medium",
-  "calories": 720,
-  "protein": 40,
-  "carbs": 68,
-  "fats": 36,
+  "calories": 330,
+  "protein": 8,
+  "carbs": 55,
+  "fats": 9,
   "tags": [
     "protein:beef",
     "format:plated_main",
@@ -32,74 +32,74 @@
   ],
   "ingredients": [
     {
-      "name": "Ground beef",
-      "quantity": "3",
+      "name": "Ground lamb or beef",
+      "quantity": "4",
       "unit": "lb",
       "group": "Main"
     },
     {
-      "name": "Yellow onion",
+      "name": "Yellow onion, diced",
       "quantity": "2",
       "unit": "large",
       "group": "Aromatics"
     },
     {
-      "name": "Garlic cloves",
-      "quantity": "5",
-      "unit": "cloves",
-      "group": "Aromatics"
+      "name": "Frozen peas and carrots",
+      "quantity": "4",
+      "unit": "cups",
+      "group": "Veg"
     },
     {
-      "name": "Crushed tomatoes or broth",
+      "name": "Beef broth",
       "quantity": "2",
-      "unit": "cans",
+      "unit": "cups",
       "group": "Sauce"
     },
     {
-      "name": "Black pepper, freshly cracked",
-      "quantity": "1",
-      "unit": "tbsp",
-      "group": "Seasoning"
+      "name": "Russet potatoes",
+      "quantity": "5",
+      "unit": "lb",
+      "group": "Topping"
     },
     {
-      "name": "Olive oil",
-      "quantity": "0.3",
-      "unit": "cup",
-      "group": "Aromatics"
+      "name": "Butter and cream",
+      "quantity": "1",
+      "unit": "batch",
+      "group": "Potato topping"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Prep components",
-      "instruction": "Dice vegetables; measure sauce ingredients. Shepherd's Pie moves smoother when everything is on the counter before the burner goes on.",
-      "minutes": 15,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Sear and finish",
-      "instruction": "Sear protein over medium-high until browned, then finish in sauce or oven until safe temp (165°F poultry, 160°F ground beef). Watch for color and spring-back, not clock alone.",
+      "title": "Brown the filling",
+      "instruction": "Brown ground lamb with diced onion until deeply colored. Drain excess fat. Add peas, carrots, broth, and tomato paste; simmer 15 minutes until thick.",
       "minutes": 25,
       "heatLevel": "medium-high"
     },
     {
-      "stepNumber": 3,
-      "title": "Reduce and season",
-      "instruction": "Simmer sauce until it coats a spoon. Taste for salt and acid — add a splash of vinegar or lemon if flat.",
-      "minutes": 12,
+      "stepNumber": 2,
+      "title": "Mash the topping",
+      "instruction": "Boil russets until tender; mash with butter and cream until smooth. Season with salt and white pepper.",
+      "minutes": 25,
       "heatLevel": "medium"
     },
     {
+      "stepNumber": 3,
+      "title": "Assemble and bake",
+      "instruction": "Spread filling in hotel pans; pipe or spread mashed potatoes over top. Fork ridges for crispy peaks. Bake at 400°F 25–30 minutes until golden and bubbling at edges.",
+      "minutes": 30,
+      "heatLevel": "high"
+    },
+    {
       "stepNumber": 4,
-      "title": "Plate for the hall",
-      "instruction": "Serve on sheet trays for family-style or portioned plates. Hold backup at 200°F; cover lightly with foil so skins stay crisp where applicable.",
-      "minutes": 5,
+      "title": "Rest before serving",
+      "instruction": "Rest 10 minutes so filling sets — scoops stay clean on the line. Shepherd's Pie feeds a hall that wants something hearty after a cold call.",
+      "minutes": 10,
       "heatLevel": "low"
     }
   ],
   "proTips": [
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts."
   ],
   "tonightSpread": [
@@ -116,11 +116,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 720,
-    "protein": 40,
-    "carbs": 68,
-    "fats": 36,
-    "label": "per serving (hall portion)"
+    "calories": 330,
+    "protein": 8,
+    "carbs": 55,
+    "fats": 9,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/shepherds-pie.jpg",
   "mobileImage": "/images/mobile/shepherds-pie.jpg",
@@ -150,6 +164,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-29T01:43:09.360Z",
+  "generatedAt": "2026-05-30T03:28:01.856Z",
   "contentVersion": 2
 }

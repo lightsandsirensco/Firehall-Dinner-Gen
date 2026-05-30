@@ -13,10 +13,10 @@
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 640,
-  "protein": 32,
-  "carbs": 68,
-  "fats": 30,
+  "calories": 394,
+  "protein": 56,
+  "carbs": 6,
+  "fats": 15,
   "tags": [
     "protein:chicken",
     "format:plated_main",
@@ -32,74 +32,74 @@
   ],
   "ingredients": [
     {
-      "name": "Chicken breasts",
+      "name": "Boneless chicken thighs, diced",
       "quantity": "3",
       "unit": "lb",
       "group": "Main"
     },
     {
-      "name": "Yellow onion",
-      "quantity": "2",
+      "name": "Frozen peas and carrots",
+      "quantity": "4",
+      "unit": "cups",
+      "group": "Veg"
+    },
+    {
+      "name": "Yellow onion, diced",
+      "quantity": "1",
       "unit": "large",
       "group": "Aromatics"
     },
     {
-      "name": "Garlic cloves",
-      "quantity": "5",
-      "unit": "cloves",
-      "group": "Aromatics"
-    },
-    {
-      "name": "Crushed tomatoes or broth",
-      "quantity": "2",
-      "unit": "cans",
+      "name": "Chicken broth",
+      "quantity": "4",
+      "unit": "cups",
       "group": "Sauce"
     },
     {
-      "name": "Black pepper, freshly cracked",
-      "quantity": "1",
-      "unit": "tbsp",
-      "group": "Seasoning"
+      "name": "Pie crust or puff pastry",
+      "quantity": "2",
+      "unit": "sheets",
+      "group": "Top"
     },
     {
-      "name": "Olive oil",
-      "quantity": "0.3",
-      "unit": "cup",
-      "group": "Aromatics"
+      "name": "Butter and flour",
+      "quantity": "1",
+      "unit": "batch",
+      "group": "Roux"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Prep components",
-      "instruction": "Dice vegetables; measure sauce ingredients. Chicken Pot Pie moves smoother when everything is on the counter before the burner goes on.",
-      "minutes": 15,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Sear and finish",
-      "instruction": "Sear protein over medium-high until browned, then finish in sauce or oven until safe temp (165°F poultry, 160°F ground beef). Watch for color and spring-back, not clock alone.",
-      "minutes": 25,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
-      "title": "Reduce and season",
-      "instruction": "Simmer sauce until it coats a spoon. Taste for salt and acid — add a splash of vinegar or lemon if flat.",
-      "minutes": 12,
+      "title": "Cook the chicken",
+      "instruction": "Simmer diced chicken thighs in salted broth until 165°F; shred or dice. Reserve broth.",
+      "minutes": 20,
       "heatLevel": "medium"
     },
     {
+      "stepNumber": 2,
+      "title": "Make the velouté",
+      "instruction": "Melt butter; whisk flour 2 minutes. Whisk in 3 cups broth until thick. Fold in chicken, peas, carrots, and onion.",
+      "minutes": 15,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Top and bake",
+      "instruction": "Transfer filling to hotel pans; cover with pie crust or puff pastry. Vent slits. Brush with egg wash.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
       "stepNumber": 4,
-      "title": "Plate for the hall",
-      "instruction": "Serve on sheet trays for family-style or portioned plates. Hold backup at 200°F; cover lightly with foil so skins stay crisp where applicable.",
-      "minutes": 5,
-      "heatLevel": "low"
+      "title": "Bake until golden",
+      "instruction": "Bake at 400°F 30–35 minutes until crust is deep golden and filling bubbles at vents. Rest 10 minutes — molten filling burns tongues.",
+      "minutes": 35,
+      "heatLevel": "high"
     }
   ],
   "proTips": [
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts.",
     "Pull chicken at 160°F and let carryover hit 165°F — dry breast ruins crew morale."
   ],
@@ -119,11 +119,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 640,
-    "protein": 32,
-    "carbs": 68,
-    "fats": 30,
-    "label": "per serving (hall portion)"
+    "calories": 394,
+    "protein": 56,
+    "carbs": 6,
+    "fats": 15,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": true,
+      "performanceMeal": true
+    }
   },
   "heroImage": "/images/golden-100/chicken-pot-pie.jpg",
   "mobileImage": "/images/mobile/chicken-pot-pie.jpg",
@@ -151,6 +165,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-29T01:43:09.363Z",
+  "generatedAt": "2026-05-30T03:28:01.860Z",
   "contentVersion": 2
 }

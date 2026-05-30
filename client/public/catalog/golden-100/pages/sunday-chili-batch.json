@@ -13,10 +13,10 @@
   "cookTime": 100,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 600,
-  "protein": 40,
-  "carbs": 48,
-  "fats": 28,
+  "calories": 766,
+  "protein": 66,
+  "carbs": 51,
+  "fats": 36,
   "tags": [
     "protein:beef",
     "format:soup_chili",
@@ -165,7 +165,7 @@
   ],
   "proTips": [
     "Cool portions in shallow trays before the fridge — deep containers stay in the danger zone too long.",
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts."
   ],
   "tonightSpread": [
@@ -181,18 +181,32 @@
     "Add a splash of stock or water when reheating — thick sauces tighten in the fridge."
   ],
   "whyCrewsLikeIt": "Cook once, feed the week. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
-  "mealPrepNotes": "Cook protein and sauce ahead; assemble day-of in under 20 minutes. Label and date everything in the fridge.",
+  "mealPrepNotes": "Cook ground beef and sauce ahead; assemble day-of in under 20 minutes. Label and date everything in the fridge.",
   "substitutions": [
     "Ground turkey swaps 1:1 for beef in chili if the crew wants leaner."
   ],
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 600,
-    "protein": 40,
-    "carbs": 48,
-    "fats": 28,
-    "label": "per serving (hall portion)"
+    "calories": 766,
+    "protein": 66,
+    "carbs": 51,
+    "fats": 36,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/sunday-chili-batch.jpg",
   "mobileImage": "/images/mobile/sunday-chili-batch.jpg",
@@ -222,6 +236,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-29T01:43:09.434Z",
+  "generatedAt": "2026-05-30T03:28:02.004Z",
   "contentVersion": 2
 }

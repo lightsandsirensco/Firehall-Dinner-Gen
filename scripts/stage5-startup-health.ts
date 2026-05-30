@@ -11,6 +11,7 @@ import { initCuratedRecipeStore } from "../server/curated-recipe-store.js";
 import { initRecipeCatalog } from "../server/recipe-catalog.js";
 import { initIngestionStore } from "../server/ingestion/ingestion-store.js";
 import { initHallVoteTables } from "../server/hall-vote-store.js";
+import { initRecipeCrewRatingsStore } from "../server/recipe-crew-ratings/store.js";
 import { releaseSqliteTimersForTests } from "../server/sqlite.js";
 
 const distPublic = path.join(process.cwd(), "dist", "public", "index.html");
@@ -30,6 +31,7 @@ async function main(): Promise<void> {
     initRecipeCatalog,
     initIngestionStore,
     initHallVoteTables,
+    initRecipeCrewRatingsStore,
   });
 
   checks.push({ name: "startup bootstrap", ok: diag.ok });

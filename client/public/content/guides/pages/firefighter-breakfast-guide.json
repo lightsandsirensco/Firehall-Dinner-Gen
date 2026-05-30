@@ -1,0 +1,126 @@
+{
+  "slug": "firefighter-breakfast-guide",
+  "title": "The Firefighter Breakfast Guide",
+  "subtitle": "Sunday mornings, post-call fuel, and feeding a crew that eats in waves",
+  "description": "Firefighter breakfast guide for station mornings: why the meal matters, weekend hall culture, feeding large crews, and ten hall-tested breakfasts with crew-sized recipes.",
+  "topic": "station_cooking",
+  "pillar": "recipes_meals",
+  "intro": "Breakfast at the hall is more than calories — it is the table where the crew lands before the day gets loud. Coffee, eggs, something sizzling on the flat-top, guys giving each other a hard time while the news plays in the background. A good firefighter breakfast feeds people who eat at 07:00 and people who wander in at 09:30 after apparatus checks. This guide covers why that meal matters, how Sunday tradition shows up in kitchens, and ten breakfasts that actually work on shift.",
+  "sections": [
+    {
+      "id": "why-breakfast",
+      "heading": "Why breakfast matters on shift",
+      "paragraphs": [
+        "Morning is when the crew syncs — who is tired, who is wired, who forgot lunch money. A real breakfast steadies the room before training, inspections, and whatever the board throws at you. It is also practical fuel: you may not get a proper sit-down meal again until dinner.",
+        "Post-night-call breakfasts hit different. After a long run, hot food at the table beats protein bars in the rig bay. The meal does not need to be fancy — it needs to be hot, plentiful, and ready when people sit."
+      ]
+    },
+    {
+      "id": "sunday-culture",
+      "heading": "Weekend firehall breakfast culture",
+      "paragraphs": [
+        "Lots of halls treat Sunday like pancake-and-egg day — slower start, more people in the kitchen, someone on coffee detail. It is part commissary, part tradition. The cook is often whoever got roped in last night, but the food still lands because the format is forgiving.",
+        "Red lead skillets, big bakes, and burrito lines show up on Sundays because they feed the whole hall from one or two pans. That is the point — nobody should still be flipping single orders when the church bells stop and the tones might drop."
+      ]
+    },
+    {
+      "id": "large-crews",
+      "heading": "Feeding large crews in the morning",
+      "paragraphs": [
+        "Count who is eating, then add two — visitors, training staff, the officer who smelled bacon from the office. Bakes and lines scale; made-to-order plates do not.",
+        "Hold proteins warm in a low oven, keep cold toppings cold, and put tortillas in a warmer not a microwave stack. Staggered eating is normal — design for it."
+      ]
+    }
+  ],
+  "practicalAdvice": [
+    "Run a line or a bake — not eight individual omelette orders unless someone volunteered their sanity.",
+    "Cook bacon and sausage on sheet pans — controls splatter in a shared kitchen.",
+    "Coffee owner is a real assignment — assign it before the eggs go on."
+  ],
+  "mealRecommendations": [
+    {
+      "slug": "sausage-egg-bake",
+      "title": "1. Sausage and Egg Bake",
+      "blurb": "Senior-cook eggs, sausage, and cheese in one hotel pan — the post-call showpiece."
+    },
+    {
+      "slug": "breakfast-burrito-bar",
+      "title": "2. Hall Breakfast Burritos",
+      "blurb": "Wrap-and-go line — scramble, protein, cheese, salsa; handles staggered eaters."
+    },
+    {
+      "slug": "french-toast-casserole",
+      "title": "3. Overnight French Toast Bake",
+      "blurb": "Prep the night before, bake in the morning — slice and feed without griddle chaos."
+    },
+    {
+      "slug": "sausage-egg-bake",
+      "title": "4. Sheet Pan Breakfast Bake",
+      "blurb": "Eggs, cheese, and sausage from one pan — portion control built in."
+    },
+    {
+      "slug": "breakfast-burrito-bar",
+      "title": "5. Hall Breakfast Wraps",
+      "blurb": "Warm tortilla line — lighter than burritos, still scales for eight-plus."
+    },
+    {
+      "slug": "pancake-short-stack",
+      "title": "6. Firehall Pancakes",
+      "blurb": "Short stack held warm between waves — syrup on the table, not on the plates."
+    },
+    {
+      "slug": "chorizo-breakfast-tacos",
+      "title": "7. Chorizo Breakfast Hash",
+      "blurb": "Crisp potato base with bold sausage — one skillet, big flavor, easy double batch."
+    },
+    {
+      "slug": "bacon-egg-hash",
+      "title": "8. Loaded Breakfast Hash",
+      "blurb": "Bacon, potato, and egg in one pan — the everything-in-the-skillet morning feed."
+    },
+    {
+      "slug": "biscuits-gravy",
+      "title": "9. Sausage Gravy and Biscuits",
+      "blurb": "Southern hall favorite — gravy hides timing mistakes if the biscuits are warm."
+    },
+    {
+      "slug": "breakfast-burrito-bar",
+      "title": "10. Breakfast Burrito Bar (Hall Classic)",
+      "blurb": "Golden-catalog line format — same burrito logic crews already know from dinner planning."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What is the easiest breakfast for a rookie cook on Sunday?",
+      "answer": "Overnight French toast bake or a burrito line. Both forgive timing, scale cleanly, and do not require flipping twelve individual omelettes while the crew watches."
+    },
+    {
+      "question": "How early should we start cooking for a big hall breakfast?",
+      "answer": "For a bake, prep the night before and start the oven sixty to seventy-five minutes before you want to eat. For a line, cook components in the hour before — assemble at the counter so latecomers still get hot food."
+    },
+    {
+      "question": "Does breakfast matter on a busy shift?",
+      "answer": "Yes — even a simple line beats running empty until lunch. A fifteen-minute burrito assembly saves morale and keeps people from living on gas station pastries."
+    },
+    {
+      "question": "Where do these recipes come from?",
+      "answer": "Each link goes to a full recipe on Firehall Meals — crew-sized portions, station timing, and steps written for a shared kitchen. Not home-blog scaling."
+    }
+  ],
+  "relatedArticleSlugs": [
+    "firehall-breakfast-and-brunch",
+    "firefighter-breakfast-ideas",
+    "feeding-a-firehall-crew"
+  ],
+  "keywords": [
+    "firefighter breakfast",
+    "fire station breakfast",
+    "firehall breakfast",
+    "Sunday breakfast shift",
+    "crew breakfast"
+  ],
+  "publishedAt": "2026-05-27T18:00:00.000Z",
+  "updatedAt": "2026-05-27T18:00:00.000Z",
+  "readMinutes": 10,
+  "seoTitle": "Firefighter Breakfast Guide: 10 Hall Morning Meals"
+}

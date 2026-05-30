@@ -1,0 +1,185 @@
+{
+  "slug": "pasta-bar-night",
+  "title": "Pasta Bar Night",
+  "displayTitle": "Pasta Bar Night",
+  "seoTitle": "Pasta Bar Night | Firefighter Meal",
+  "shortDescription": "Choose-your-sauce pasta bar with garlic bread for ten",
+  "subtitle": "Choose-your-sauce pasta bar with garlic bread for ten",
+  "category": "hall_expansion",
+  "cuisine": "italian",
+  "description": "A large batch of penne stays hot in a hotel pan while three sauces—marinara, Alfredo, and pesto—sit ready for crew to mix and match. Grated cheese, chili flakes, and garlic bread complete the bar.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 30,
+  "prepTime": 25,
+  "difficulty": "easy",
+  "calories": 520,
+  "protein": 16,
+  "carbs": 68,
+  "fats": 20,
+  "tags": [
+    "protein:vegetarian",
+    "format:bar_line",
+    "category:crew_feeders",
+    "bar_line",
+    "pasta",
+    "comfort",
+    "hall_expansion",
+    "hall_expansion_56",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Large stock pot",
+    "Hotel pans",
+    "Saucepans",
+    "Ladles",
+    "Sheet pan"
+  ],
+  "ingredients": [
+    {
+      "name": "penne pasta",
+      "quantity": "2",
+      "unit": "lb",
+      "group": "Main"
+    },
+    {
+      "name": "marinara sauce",
+      "quantity": "4",
+      "unit": "cups",
+      "group": "Sauces"
+    },
+    {
+      "name": "heavy cream",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Alfredo"
+    },
+    {
+      "name": "Parmesan cheese",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "grated",
+      "group": "Alfredo"
+    },
+    {
+      "name": "unsalted butter",
+      "quantity": "4",
+      "unit": "tbsp",
+      "group": "Alfredo"
+    },
+    {
+      "name": "basil pesto",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Sauces"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "4",
+      "unit": "cloves",
+      "notes": "minced",
+      "group": "Alfredo"
+    },
+    {
+      "name": "French bread",
+      "quantity": "2",
+      "unit": "loaves",
+      "group": "Side"
+    },
+    {
+      "name": "mozzarella cheese",
+      "quantity": "2",
+      "unit": "cups",
+      "notes": "shredded",
+      "group": "Bar"
+    },
+    {
+      "name": "red pepper flakes",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Bar"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Cook the pasta",
+      "instruction": "Boil penne in well-salted water until just shy of al dente, about 9 minutes. Drain, toss with 2 tbsp olive oil, and hold covered in a hotel pan with a splash of reserved pasta water.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Make Alfredo sauce",
+      "instruction": "Simmer cream with butter and minced garlic 3 minutes. Whisk in Parmesan until smooth and thick enough to coat a spoon. Keep warm on lowest heat.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Warm all sauces",
+      "instruction": "Heat marinara and pesto separately in saucepans until simmering. Stir Alfredo occasionally so it does not break. Verify all sauces reach 165°F for safe holding.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Prepare garlic bread",
+      "instruction": "Split French bread, spread with butter and minced garlic, top with mozzarella, and bake at 375°F until golden and cheese melts, about 10 minutes. Target oven/smoker temperature: 375°F.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Set the pasta bar",
+      "instruction": "Line up pasta, three sauce pans with ladles, cheese, pepper flakes, and sliced garlic bread. Demonstrate mixing sauces—half marinara plus Alfredo is a crowd favorite.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Reserve a cup of pasta water at the bar for loosening Alfredo if it tightens on hold.",
+    "Add grilled chicken strips as an optional protein upgrade without changing the bar format.",
+    "Label pesto 'contains nuts' if the crew includes allergy-sensitive members."
+  ],
+  "tonightSpread": [
+    "Three-sauce pasta bar with garlic bread and simple Caesar salad.",
+    "Grated Parmesan and fresh basil in bowls for crews who want restaurant finish."
+  ],
+  "leftovers": [
+    "Bake sauced pasta with extra cheese into a next-day casserole.",
+    "Toss cold pasta with olive oil, veggies, and feta for a lunch salad."
+  ],
+  "whyCrewsLikeIt": "Pasta bar night is cheap, filling, and forgiving of late arrivals—sauce stays hot and pasta reheats well. Everyone customizes without cooking separate entrees for picky eaters.",
+  "mealPrepNotes": "Cook pasta to just shy of al dente and toss with olive oil so it holds. Sauces can be made a day ahead and reheated gently. Reserve pasta water for adjusting sauce consistency at the bar.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 520,
+    "protein": 16,
+    "carbs": 68,
+    "fats": 20,
+    "label": "~520 cal/serving · 16g protein · 4g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/pasta-bar-night.jpg",
+  "heroImageAlt": "Pasta Bar Night — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/pasta-bar-night.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/pasta-bar-night.jpg",
+  "railImage": "/images/rails/hall-expansion/pasta-bar-night.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "pasta bar night",
+    "crew feeders"
+  ],
+  "relatedSlugs": [
+    "shawarma-bar-night",
+    "fajita-bar-night",
+    "hall-burger-bar",
+    "rice-bowl-bar-night"
+  ],
+  "generatedAt": "2026-05-30T03:14:19.188Z",
+  "contentVersion": 2
+}

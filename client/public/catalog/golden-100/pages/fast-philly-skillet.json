@@ -13,10 +13,10 @@
   "cookTime": 35,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 600,
-  "protein": 40,
-  "carbs": 48,
-  "fats": 28,
+  "calories": 492,
+  "protein": 44,
+  "carbs": 0,
+  "fats": 34,
   "tags": [
     "protein:beef",
     "format:skillet",
@@ -33,75 +33,75 @@
   ],
   "ingredients": [
     {
-      "name": "Chicken breast",
-      "quantity": "2.5",
+      "name": "Deli roast beef or shaved steak",
+      "quantity": "3",
       "unit": "lb",
       "group": "Main"
     },
     {
-      "name": "Unsalted butter",
-      "quantity": "6",
-      "unit": "tbsp",
-      "group": "Sauce"
+      "name": "Hoagie rolls",
+      "quantity": "8",
+      "unit": "count",
+      "group": "Buns"
     },
     {
-      "name": "Garlic cloves, minced",
-      "quantity": "6",
-      "unit": "cloves",
-      "group": "Sauce"
+      "name": "Provolone slices",
+      "quantity": "12",
+      "unit": "count",
+      "group": "Cheese"
     },
     {
-      "name": "Soy sauce",
-      "quantity": "3",
-      "unit": "tbsp",
-      "group": "Sauce"
+      "name": "Onion and pepper mix, frozen",
+      "quantity": "1",
+      "unit": "bag",
+      "group": "Veg"
     },
     {
-      "name": "Yellow onion",
+      "name": "Vegetable oil",
       "quantity": "2",
-      "unit": "large",
-      "group": "Aromatics"
+      "unit": "tbsp",
+      "group": "Cooking"
     },
     {
-      "name": "Garlic cloves, minced",
-      "quantity": "6",
-      "unit": "cloves",
-      "group": "Aromatics"
+      "name": "Kosher salt and black pepper",
+      "quantity": "1",
+      "unit": "batch",
+      "group": "Seasoning"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Prep and dry protein",
-      "instruction": "Pat protein dry. Mince garlic. Measure sauce ingredients — wok moves fast once heat is on.",
-      "minutes": 10,
-      "heatLevel": ""
+      "title": "Heat the flat-top",
+      "instruction": "Preheat cast iron or flat-top to medium-high. This is a shift-night shortcut — speed over perfection.",
+      "minutes": 5,
+      "heatLevel": "medium-high"
     },
     {
       "stepNumber": 2,
-      "title": "Sear over high heat",
-      "instruction": "Heat skillet until just smoking. Sear in batches; shrimp 90 seconds per side, chicken to 165°F. Do not crowd.",
-      "minutes": 10,
+      "title": "Sear beef and peppers",
+      "instruction": "Sear shaved beef with frozen pepper-onion mix 6–8 minutes until beef edges crisp and vegetables soften. Season with salt and pepper.",
+      "minutes": 8,
       "heatLevel": "high"
     },
     {
       "stepNumber": 3,
-      "title": "Finish sauce in pan",
-      "instruction": "Lower to medium. Add butter, garlic, and sauce; toss 1–2 minutes until glossy. Fast Philly Cheesesteak Skillet should smell bright, not burnt garlic.",
-      "minutes": 4,
+      "title": "Melt provolone",
+      "instruction": "Lay provolone slices over the hot beef and pepper mixture; cover the skillet 1 minute until cheese melts into the meat and starts to lace the pan edges.",
+      "minutes": 2,
       "heatLevel": "medium"
     },
     {
       "stepNumber": 4,
-      "title": "Serve immediately",
-      "instruction": "Serve from the skillet or transfer to warm trays. Backup: foil at 200°F up to 12 minutes — seafood toughens if held too long.",
-      "minutes": 3,
+      "title": "Load hoagies",
+      "instruction": "Pile into toasted rolls. Fast Philly Skillet feeds the hall in under twenty minutes.",
+      "minutes": 5,
       "heatLevel": "low"
     }
   ],
   "proTips": [
     "Prep all mise en place before the bell — this meal wins on organization, not speed hacks.",
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts."
   ],
   "tonightSpread": [
@@ -119,11 +119,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 600,
-    "protein": 40,
-    "carbs": 48,
-    "fats": 28,
-    "label": "per serving (hall portion)"
+    "calories": 492,
+    "protein": 44,
+    "carbs": 0,
+    "fats": 34,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/fast-philly-skillet.jpg",
   "mobileImage": "/images/mobile/fast-philly-skillet.jpg",
@@ -152,6 +166,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-29T01:43:09.395Z",
+  "generatedAt": "2026-05-30T03:28:01.923Z",
   "contentVersion": 2
 }

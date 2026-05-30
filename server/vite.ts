@@ -34,6 +34,16 @@ export async function setupVite(server: Server, app: Express) {
   // Serve /images/* from client/public before SPA fallback (avoids HTML responses for JPGs)
   app.use(express.static(CLIENT_PUBLIC, { index: false, maxAge: "1h" }));
 
+  app.use((req, res, next) => {
+    if (!req.path.endsWith(".json")) return next();
+    const rel = req.path.replace(/^\//, "");
+    const abs = path.join(CLIENT_PUBLIC, rel);
+    if (!fs.existsSync(abs)) {
+      return res.status(404).json({ message: "Catalog asset not found", path: req.path });
+    }
+    next();
+  });
+
   app.use(vite.middlewares);
 
   app.use("/{*path}", async (req, res, next) => {

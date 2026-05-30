@@ -27,14 +27,18 @@ function writeJson(p: string, data: unknown): void {
 function main(): void {
   const goldenPath = path.join(process.cwd(), "client/public/catalog/golden-100/index.json");
   const perfPath = path.join(process.cwd(), "client/public/catalog/performance-meals/index.json");
+  const expansionPath = path.join(process.cwd(), "client/public/catalog/hall-expansion/index.json");
 
   if (!fs.existsSync(goldenPath)) throw new Error("Missing Golden index.json — run npm run catalog:generate-pages");
   if (!fs.existsSync(perfPath)) throw new Error("Missing performance index.json — run npm run performance:generate-pages");
 
   const golden = readJson<GoldenCatalogIndex>(goldenPath);
   const perf = readJson<GoldenCatalogIndex>(perfPath);
+  const expansion = fs.existsSync(expansionPath)
+    ? readJson<GoldenCatalogIndex>(expansionPath)
+    : null;
 
-  const merged = mergeHallCatalogIndexes(golden, perf);
+  const merged = mergeHallCatalogIndexes(golden, perf, expansion);
 
   const breakfast = {
     ...merged,

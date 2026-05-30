@@ -13,10 +13,10 @@
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 600,
-  "protein": 40,
-  "carbs": 48,
-  "fats": 28,
+  "calories": 768,
+  "protein": 50,
+  "carbs": 61,
+  "fats": 35,
   "tags": [
     "protein:beef",
     "format:bowl",
@@ -33,79 +33,85 @@
   ],
   "ingredients": [
     {
-      "name": "Jasmine rice, uncooked",
+      "name": "Short-grain rice, uncooked",
       "quantity": "3",
       "unit": "cups",
       "group": "Base"
     },
     {
-      "name": "Chicken thighs",
-      "quantity": "2.5",
+      "name": "Ribeye or sirloin, thinly sliced",
+      "quantity": "3",
       "unit": "lb",
       "group": "Main"
-    },
-    {
-      "name": "Broccoli florets",
-      "quantity": "2",
-      "unit": "lb",
-      "group": "Veg"
     },
     {
       "name": "Soy sauce",
       "quantity": "0.5",
       "unit": "cup",
-      "group": "Sauce"
+      "group": "Marinade"
+    },
+    {
+      "name": "Brown sugar",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Marinade"
     },
     {
       "name": "Sesame oil",
       "quantity": "2",
       "unit": "tbsp",
-      "group": "Sauce"
+      "group": "Marinade"
     },
     {
-      "name": "Red onion, sliced",
-      "quantity": "1",
-      "unit": "large",
+      "name": "Kimchi",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Toppings"
+    },
+    {
+      "name": "Cucumber, julienned",
+      "quantity": "2",
+      "unit": "count",
       "group": "Toppings"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Cook rice",
-      "instruction": "Rinse rice until water runs clear. Cook 1:1.5 rice to water with salt; fluff and hold covered.",
-      "minutes": 20,
-      "heatLevel": "medium"
+      "title": "Marinate sliced beef",
+      "instruction": "Toss thinly sliced ribeye with soy sauce, brown sugar, grated pear or apple, garlic, and sesame oil. Marinate 20 minutes while rice cooks.",
+      "minutes": 25,
+      "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Sear protein and veg",
-      "instruction": "Sear protein in batches over medium-high until browned and cooked through (165°F chicken, 125°F salmon). Stir-fry veg 4–5 minutes until bright with char.",
-      "minutes": 14,
-      "heatLevel": "medium-high"
+      "title": "Cook short-grain rice",
+      "instruction": "Rinse rice; cook 1:1.25 with water 15 minutes. Rest covered 10 minutes.",
+      "minutes": 25,
+      "heatLevel": "medium"
     },
     {
       "stepNumber": 3,
-      "title": "Warm the sauce",
-      "instruction": "Whisk soy and sesame oil; add a splash of rice water if it needs to loosen for drizzling.",
-      "minutes": 5,
-      "heatLevel": "low"
+      "title": "Sear bulgogi in batches",
+      "instruction": "Heat a cast iron skillet until smoking. Sear beef in single layers 2–3 minutes per side until caramelized edges appear — do not crowd or meat steams instead of chars.",
+      "minutes": 12,
+      "heatLevel": "high"
     },
     {
       "stepNumber": 4,
-      "title": "Assembly line",
-      "instruction": "Rice, protein, veg, sauce on the side. Korean Bulgogi Rice Bowls feeds fastest as a build-your-own line.",
-      "minutes": 5,
+      "title": "Build bulgogi bowls",
+      "instruction": "Rice, seared beef, kimchi, and julienned cucumber. Korean Bulgogi Rice Bowls need that char on the beef — batch the skillet if the crew is hungry.",
+      "minutes": 6,
       "heatLevel": ""
     }
   ],
   "proTips": [
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts."
   ],
   "tonightSpread": [
-    "Build bowls base → grain → protein → toppings so the line moves in one direction.",
-    "Put hot components closest to the crew, cold crunch at the far end.",
+    "Set rice or grain in the first pan, main in the second, crunchy toppings last so textures stay distinct.",
+    "Put hot components closest to the crew, cold crunch at the far end of the line.",
     "Line up Korean Bulgogi Rice Bowls on the main counter with serving spoons — firefighters grab fast between calls.",
     "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
   ],
@@ -118,11 +124,25 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 600,
-    "protein": 40,
-    "carbs": 48,
-    "fats": 28,
-    "label": "per serving (hall portion)"
+    "calories": 768,
+    "protein": 50,
+    "carbs": 61,
+    "fats": 35,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/bulgogi-bowls.jpg",
   "mobileImage": "/images/mobile/bulgogi-bowls.jpg",
@@ -150,6 +170,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-29T01:43:09.425Z",
+  "generatedAt": "2026-05-30T03:28:01.984Z",
   "contentVersion": 2
 }

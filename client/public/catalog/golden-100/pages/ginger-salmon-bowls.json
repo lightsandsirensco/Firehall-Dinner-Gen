@@ -13,10 +13,10 @@
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 400,
-  "protein": 36,
-  "carbs": 38,
-  "fats": 18,
+  "calories": 674,
+  "protein": 46,
+  "carbs": 71,
+  "fats": 21,
   "tags": [
     "protein:seafood",
     "format:bowl",
@@ -39,16 +39,16 @@
       "group": "Base"
     },
     {
-      "name": "Salmon fillets",
-      "quantity": "2.5",
+      "name": "Skin-on salmon fillets",
+      "quantity": "3",
       "unit": "lb",
       "group": "Main"
     },
     {
-      "name": "Broccoli florets",
-      "quantity": "2",
-      "unit": "lb",
-      "group": "Veg"
+      "name": "Fresh ginger, grated",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Sauce"
     },
     {
       "name": "Soy sauce",
@@ -57,55 +57,61 @@
       "group": "Sauce"
     },
     {
-      "name": "Sesame oil",
-      "quantity": "2",
+      "name": "Honey",
+      "quantity": "3",
       "unit": "tbsp",
       "group": "Sauce"
     },
     {
-      "name": "Red onion, sliced",
-      "quantity": "1",
-      "unit": "large",
-      "group": "Toppings"
+      "name": "Broccoli florets",
+      "quantity": "2",
+      "unit": "lb",
+      "group": "Veg"
+    },
+    {
+      "name": "Sesame seeds",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Garnish"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Cook rice",
-      "instruction": "Rinse rice until water runs clear. Cook 1:1.5 rice to water with salt; fluff and hold covered.",
-      "minutes": 20,
+      "title": "Cook jasmine rice",
+      "instruction": "Rinse jasmine rice; cook 1:1.25 with water 15 minutes. Fluff and hold covered.",
+      "minutes": 18,
       "heatLevel": "medium"
     },
     {
       "stepNumber": 2,
-      "title": "Sear protein and veg",
-      "instruction": "Sear protein in batches over medium-high until browned and cooked through (165°F chicken, 125°F salmon). Stir-fry veg 4–5 minutes until bright with char.",
-      "minutes": 14,
+      "title": "Sear salmon fillets",
+      "instruction": "Pat salmon fillets dry; salt lightly. Sear skin-side down in a hot oiled skillet 4 minutes until skin crisps. Flip; cook 2–3 minutes until center is 125°F for medium or 145°F if the crew prefers well-done.",
+      "minutes": 10,
       "heatLevel": "medium-high"
     },
     {
       "stepNumber": 3,
-      "title": "Warm the sauce",
-      "instruction": "Whisk soy and sesame oil; add a splash of rice water if it needs to loosen for drizzling.",
-      "minutes": 5,
-      "heatLevel": "low"
+      "title": "Steam broccoli and glaze",
+      "instruction": "Steam broccoli 4 minutes until bright green. Whisk soy, grated ginger, and honey; brush over salmon in the last minute of cooking.",
+      "minutes": 8,
+      "heatLevel": "medium"
     },
     {
       "stepNumber": 4,
-      "title": "Assembly line",
-      "instruction": "Rice, protein, veg, sauce on the side. Ginger Salmon Rice Bowls feeds fastest as a build-your-own line.",
-      "minutes": 5,
+      "title": "Build ginger salmon bowls",
+      "instruction": "Rice, flaked salmon, broccoli, extra ginger glaze, and sesame seeds. Ginger Salmon Rice Bowls taste best when the glaze is warm and broccoli still has snap.",
+      "minutes": 6,
       "heatLevel": ""
     }
   ],
   "proTips": [
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts."
   ],
   "tonightSpread": [
-    "Build bowls base → grain → protein → toppings so the line moves in one direction.",
-    "Put hot components closest to the crew, cold crunch at the far end.",
+    "Set rice or grain in the first pan, main in the second, crunchy toppings last so textures stay distinct.",
+    "Put hot components closest to the crew, cold crunch at the far end of the line.",
     "Portion bowls on the line with protein visible on top — crew eats with their eyes first.",
     "Keep dressing and crunchy toppings in side bowls so greens stay crisp through second servings.",
     "Line up Ginger Salmon Rice Bowls on the main counter with serving spoons — firefighters grab fast between calls.",
@@ -122,11 +128,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 400,
-    "protein": 36,
-    "carbs": 38,
-    "fats": 18,
-    "label": "per serving (hall portion)"
+    "calories": 674,
+    "protein": 46,
+    "carbs": 71,
+    "fats": 21,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/ginger-salmon-bowls.jpg",
   "mobileImage": "/images/mobile/ginger-salmon-bowls.jpg",
@@ -155,6 +175,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-29T01:43:09.384Z",
+  "generatedAt": "2026-05-30T03:28:01.900Z",
   "contentVersion": 2
 }

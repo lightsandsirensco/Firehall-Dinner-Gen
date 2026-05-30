@@ -1,0 +1,147 @@
+{
+  "slug": "breakfast-quesadillas",
+  "title": "Breakfast Quesadillas",
+  "subtitle": "Crisp flour tortillas packed with eggs, bacon, and pepper jack.",
+  "description": "Griddled quesadillas cut into wedges feed eight fast without plates full of crumbs. Scrambled eggs, crisp bacon, and pepper jack get pressed between flour tortillas until shatter-crisp outside and molten inside.",
+  "filters": [
+    "quick_breakfasts",
+    "high_protein",
+    "breakfast_sandwiches"
+  ],
+  "tags": [
+    "quesadillas",
+    "bacon",
+    "pepper-jack",
+    "griddle",
+    "handheld"
+  ],
+  "crewSize": 8,
+  "baseServings": 8,
+  "prepTime": 15,
+  "cookTime": 20,
+  "totalTime": 35,
+  "difficulty": "easy",
+  "ingredients": [
+    {
+      "name": "large eggs",
+      "quantity": "12",
+      "notes": "soft-scrambled",
+      "group": "Fillings"
+    },
+    {
+      "name": "bacon",
+      "quantity": "1 lb",
+      "notes": "cooked crisp and crumbled",
+      "group": "Fillings"
+    },
+    {
+      "name": "shredded pepper jack",
+      "quantity": "2 cups",
+      "notes": "plus extra for sealing edges",
+      "group": "Fillings"
+    },
+    {
+      "name": "pico de gallo",
+      "quantity": "1/2 cup",
+      "notes": "drained well",
+      "group": "Fillings"
+    },
+    {
+      "name": "10-inch flour tortillas",
+      "quantity": "8",
+      "notes": "burrito size",
+      "group": "Build"
+    },
+    {
+      "name": "butter",
+      "quantity": "2 tbsp",
+      "notes": "or oil for griddling",
+      "group": "Build"
+    },
+    {
+      "name": "sour cream",
+      "quantity": "1 cup",
+      "notes": "and salsa verde at the line",
+      "group": "Serve"
+    },
+    {
+      "name": "fresh cilantro",
+      "quantity": "1/4 cup",
+      "notes": "chopped, optional",
+      "group": "Serve"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Prep the fillings",
+      "instruction": "Cook bacon until crisp, drain, and crumble. Soft-scramble eggs over medium-low heat—they should still look glossy. Drain pico well so quesadillas don't steam and split.",
+      "minutes": 12
+    },
+    {
+      "stepNumber": 2,
+      "title": "Build on half the tortilla",
+      "instruction": "On one half of each tortilla, layer cheese, eggs, bacon, a spoon of pico, and more cheese. Fold over and press gently to compact without tearing.",
+      "minutes": 8
+    },
+    {
+      "stepNumber": 3,
+      "title": "Griddle until golden",
+      "instruction": "Heat a large griddle or skillet over medium with butter. Cook quesadillas 3–4 minutes per side with a spatula press until deeply golden and cheese melts through.",
+      "minutes": 10
+    },
+    {
+      "stepNumber": 4,
+      "title": "Hold and cut",
+      "instruction": "Transfer to a cutting board and rest 2 minutes so cheese sets. Cut each into 3 wedges with a sharp knife or pizza wheel. Hold warm on a sheet pan at 200°F.",
+      "minutes": 5
+    },
+    {
+      "stepNumber": 5,
+      "title": "Serve with dips",
+      "instruction": "Serve wedges with sour cream and salsa verde at the line. Keep crispy wedges uncovered; cover only if holding longer than 15 minutes.",
+      "minutes": 0
+    }
+  ],
+  "nutrition": {
+    "calories": 797,
+    "protein": 43,
+    "carbs": 27,
+    "fat": 57,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "stationWorkflow": [
+    "Griddle two quesadillas at a time while a second cook builds the next pair—never stack uncooked folds.",
+    "Use a flat press or second spatula to maximize crust contact; pale quesadillas mean cold centers.",
+    "Cut on a dedicated board and slide wedges directly into a warm hotel pan for self-serve."
+  ],
+  "cleanupNotes": [
+    "Wipe the griddle between batches with a damp towel and tongs to prevent burnt cheese buildup.",
+    "Drain pico through a fine mesh strainer over a bowl—wet salsa is the number-one cause of soggy quesadillas."
+  ],
+  "leftovers": [
+    "Reheat wedges in a dry skillet over medium-low with a lid until cheese remelts—microwave makes them rubbery.",
+    "Chop leftover wedges into a breakfast nacho topping with extra cheese and pickled jalapeños."
+  ],
+  "heroImage": "/images/breakfast/breakfast-quesadillas.jpg",
+  "thumbImage": "/images/thumbs/breakfast/breakfast-quesadillas.jpg",
+  "imageAlt": "Crisp breakfast quesadilla wedges with bacon, eggs, and melted pepper jack",
+  "publishedAt": "2026-05-30T03:14:16.260Z",
+  "updatedAt": "2026-05-30T03:14:16.260Z",
+  "readMinutes": 7,
+  "seoTitle": "Breakfast Quesadillas | Firehall Breakfast"
+}

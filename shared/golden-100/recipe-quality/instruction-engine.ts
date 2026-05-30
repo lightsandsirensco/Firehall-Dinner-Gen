@@ -9,6 +9,7 @@ import {
   type RecipeInstructionClass,
 } from "./recipe-instruction-class.js";
 import { buildLegacySlugBlueprint } from "./blueprints-legacy-slugs.js";
+import { getMealSpecificPack } from "./meal-specific-packs.js";
 
 type Ing = GoldenRecipePageIngredient;
 type Step = GoldenRecipePageStep;
@@ -27,6 +28,33 @@ function mult(n: number, scale: number): number {
   return Math.round(n * scale * 10) / 10;
 }
 
+export function mainProteinLabel(def: GoldenRecipeDefinition): string {
+  switch (def.protein) {
+    case "seafood":
+      return /salmon/i.test(def.title) ? "salmon fillets" : "large shrimp";
+    case "beef":
+      return /ground|burger|nacho|chili|meatloaf/i.test(def.title)
+        ? "ground beef"
+        : "thinly sliced beef sirloin";
+    case "pork":
+      return "boneless pork chops";
+    case "vegetarian":
+      return /chickpea/i.test(def.title) ? "chickpeas" : "extra-firm tofu";
+    default:
+      return "boneless chicken thighs";
+  }
+}
+
+function mainProteinDoneTemp(def: GoldenRecipeDefinition): string {
+  if (def.protein === "seafood") {
+    return /salmon/i.test(def.title) ? "125°F for medium salmon" : "145°F for shrimp";
+  }
+  if (def.protein === "beef" && !/ground|meatloaf/i.test(def.title)) return "145°F for beef slices";
+  if (def.protein === "pork") return "145°F for pork";
+  if (def.protein === "vegetarian") return "heated through";
+  return "165°F for chicken";
+}
+
 function aromatics(scale: number): Ing[] {
   return [
     m("Yellow onion", mult(2, scale), "large", "Aromatics"),
@@ -43,6 +71,9 @@ function slugPack(
   def: GoldenRecipeDefinition,
   scale: number,
 ): { ingredients: Ing[]; steps: Step[] } | null {
+  const specific = getMealSpecificPack(def, scale);
+  if (specific) return specific;
+
   const slug = def.slug;
 
   if (slug === "smoked-wings-white-sauce") {
@@ -573,6 +604,8 @@ function buildForClass(
       return buildBreakfast(def, scale);
     case "sheet_pan":
       return buildSheetPan(def, scale);
+    case "bar":
+      return getMealSpecificPack(def, scale) ?? buildBowl(def, scale);
     case "bowl":
       return buildBowl(def, scale);
     case "sandwich":
@@ -1175,11 +1208,14 @@ function buildSheetPan(def: GoldenRecipeDefinition, scale: number): { ingredient
 
 function buildBowl(def: GoldenRecipeDefinition, scale: number): { ingredients: Ing[]; steps: Step[] } {
   const hasBbq = /bbq/i.test(def.title);
+  const proteinName = mainProteinLabel(def);
+  const doneTemp = mainProteinDoneTemp(def);
+  const vegName = def.protein === "vegetarian" ? "cherry tomatoes and cucumber" : "broccoli florets";
   return {
     ingredients: [
       m("Jasmine rice, uncooked", mult(3, scale), "cups", "Base"),
-      m(def.protein === "seafood" ? "Salmon fillets" : "Chicken thighs", mult(2.5, scale), "lb", "Main"),
-      m("Broccoli florets", mult(2, scale), "lb", "Veg"),
+      m(proteinName.charAt(0).toUpperCase() + proteinName.slice(1), mult(2.5, scale), "lb", "Main"),
+      m(def.protein === "vegetarian" ? "Cherry tomatoes, halved" : "Broccoli florets", mult(2, scale), def.protein === "vegetarian" ? "pints" : "lb", "Veg"),
       m(hasBbq ? "BBQ sauce" : "Soy sauce", mult(0.5, scale), "cup", "Sauce"),
       m("Sesame oil", mult(2, scale), "tbsp", "Sauce"),
       m("Red onion, sliced", mult(1, scale), "large", "Toppings"),
@@ -1189,15 +1225,14 @@ function buildBowl(def: GoldenRecipeDefinition, scale: number): { ingredients: I
         stepNumber: 1,
         title: "Cook rice",
         instruction:
-          "Rinse rice until water runs clear. Cook 1:1.5 rice to water with salt; fluff and hold covered.",
+          "Rinse rice until water runs clear. Cook 1:1.5 rice to water with salt; fluff and hold covered at 200°F.",
         minutes: 20,
         heatLevel: "medium",
       },
       {
         stepNumber: 2,
-        title: "Sear protein and veg",
-        instruction:
-          "Sear protein in batches over medium-high until browned and cooked through (165°F chicken, 125°F salmon). Stir-fry veg 4–5 minutes until bright with char.",
+        title: `Cook ${proteinName} and vegetables`,
+        instruction: `Sear ${proteinName} in batches over medium-high heat until browned and cooked through (${doneTemp}). Stir-fry ${vegName} 4–5 minutes in the same pan until bright with light char.`,
         minutes: 14,
         heatLevel: "medium-high",
       },
@@ -1206,14 +1241,14 @@ function buildBowl(def: GoldenRecipeDefinition, scale: number): { ingredients: I
         title: "Warm the sauce",
         instruction: hasBbq
           ? "Warm BBQ sauce in a small pot over low heat — do not boil or it turns candy-sweet. Keep a ladle on the line."
-          : "Whisk soy and sesame oil; add a splash of rice water if it needs to loosen for drizzling.",
+          : "Whisk soy sauce and sesame oil; add a splash of rice water if it needs to loosen for drizzling.",
         minutes: 5,
         heatLevel: "low",
       },
       {
         stepNumber: 4,
-        title: "Assembly line",
-        instruction: `Rice, protein, veg, sauce on the side. ${def.title} feeds fastest as a build-your-own line.`,
+        title: "Build the bowls",
+        instruction: `Set out rice, ${proteinName}, vegetables, and sauce in separate pans. ${def.title} moves fastest when the crew builds bowls in one direction down the counter.`,
         minutes: 5,
         heatLevel: "",
       },
@@ -1308,9 +1343,11 @@ function buildSoup(def: GoldenRecipeDefinition, scale: number): { ingredients: I
 
 function buildSkillet(def: GoldenRecipeDefinition, scale: number): { ingredients: Ing[]; steps: Step[] } {
   const title = def.title;
+  const proteinName = mainProteinLabel(def);
+  const doneTemp = mainProteinDoneTemp(def);
   return {
     ingredients: [
-      m(def.protein === "seafood" ? "Large shrimp" : "Chicken breast", mult(2.5, scale), "lb", "Main"),
+      m(proteinName.charAt(0).toUpperCase() + proteinName.slice(1), mult(2.5, scale), "lb", "Main"),
       m("Unsalted butter", mult(6, scale), "tbsp", "Sauce"),
       m("Garlic cloves, minced", mult(6, scale), "cloves", "Sauce"),
       m("Soy sauce", mult(3, scale), "tbsp", "Sauce"),
@@ -1319,17 +1356,15 @@ function buildSkillet(def: GoldenRecipeDefinition, scale: number): { ingredients
     steps: [
       {
         stepNumber: 1,
-        title: "Prep and dry protein",
-        instruction:
-          "Pat protein dry. Mince garlic. Measure sauce ingredients — wok moves fast once heat is on.",
+        title: `Prep ${proteinName}`,
+        instruction: `Pat ${proteinName} dry with paper towels. Mince garlic. Measure sauce ingredients — the skillet moves fast once heat is on.`,
         minutes: 10,
         heatLevel: "",
       },
       {
         stepNumber: 2,
         title: "Sear over high heat",
-        instruction:
-          "Heat skillet until just smoking. Sear in batches; shrimp 90 seconds per side, chicken to 165°F. Do not crowd.",
+        instruction: `Heat a large skillet until just smoking. Sear ${proteinName} in batches until browned and cooked through (${doneTemp}). Do not crowd the pan.`,
         minutes: 10,
         heatLevel: "high",
       },
@@ -1567,9 +1602,11 @@ function buildSalad(def: GoldenRecipeDefinition, scale: number): { ingredients: 
 
 function buildPlated(def: GoldenRecipeDefinition, scale: number): { ingredients: Ing[]; steps: Step[] } {
   const title = def.title;
+  const proteinName = mainProteinLabel(def);
+  const doneTemp = mainProteinDoneTemp(def);
   return {
     ingredients: [
-      m(def.protein === "chicken" ? "Chicken breasts" : "Ground beef", mult(3, scale), "lb", "Main"),
+      m(proteinName.charAt(0).toUpperCase() + proteinName.slice(1), mult(3, scale), "lb", "Main"),
       m("Yellow onion", mult(2, scale), "large", "Aromatics"),
       m("Garlic cloves", mult(5, scale), "cloves", "Aromatics"),
       m("Crushed tomatoes or broth", mult(2, scale), "cans", "Sauce"),
@@ -1585,9 +1622,8 @@ function buildPlated(def: GoldenRecipeDefinition, scale: number): { ingredients:
       },
       {
         stepNumber: 2,
-        title: "Sear and finish",
-        instruction:
-          "Sear protein over medium-high until browned, then finish in sauce or oven until safe temp (165°F poultry, 160°F ground beef). Watch for color and spring-back, not clock alone.",
+        title: `Brown ${proteinName}`,
+        instruction: `Brown ${proteinName} over medium-high heat in batches until deeply colored, then finish in sauce or the oven until ${doneTemp}. Watch for color and spring-back, not the clock alone.`,
         minutes: 25,
         heatLevel: "medium-high",
       },

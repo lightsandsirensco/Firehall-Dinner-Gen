@@ -13,10 +13,10 @@
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 720,
-  "protein": 40,
-  "carbs": 68,
-  "fats": 36,
+  "calories": 486,
+  "protein": 45,
+  "carbs": 5,
+  "fats": 31,
   "tags": [
     "protein:beef",
     "format:skillet",
@@ -33,74 +33,68 @@
   ],
   "ingredients": [
     {
-      "name": "Chicken breast",
-      "quantity": "2.5",
+      "name": "Ribeye or sirloin, sliced thin",
+      "quantity": "3",
       "unit": "lb",
       "group": "Main"
     },
     {
-      "name": "Unsalted butter",
-      "quantity": "6",
-      "unit": "tbsp",
-      "group": "Sauce"
+      "name": "Hoagie rolls",
+      "quantity": "8",
+      "unit": "count",
+      "group": "Buns"
     },
     {
-      "name": "Garlic cloves, minced",
-      "quantity": "6",
-      "unit": "cloves",
-      "group": "Sauce"
+      "name": "Provolone slices",
+      "quantity": "16",
+      "unit": "count",
+      "group": "Cheese"
     },
     {
-      "name": "Soy sauce",
-      "quantity": "3",
-      "unit": "tbsp",
-      "group": "Sauce"
+      "name": "Bell peppers, sliced",
+      "quantity": "2",
+      "unit": "count",
+      "group": "Veg"
     },
     {
-      "name": "Yellow onion",
+      "name": "Yellow onion, sliced",
       "quantity": "2",
       "unit": "large",
-      "group": "Aromatics"
-    },
-    {
-      "name": "Garlic cloves, minced",
-      "quantity": "6",
-      "unit": "cloves",
-      "group": "Aromatics"
+      "group": "Veg"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Prep and dry protein",
-      "instruction": "Pat protein dry. Mince garlic. Measure sauce ingredients — wok moves fast once heat is on.",
-      "minutes": 10,
+      "title": "Slice beef paper-thin",
+      "instruction": "Partially freeze ribeye 20 minutes; slice as thin as possible against the grain.",
+      "minutes": 25,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Sear over high heat",
-      "instruction": "Heat skillet until just smoking. Sear in batches; shrimp 90 seconds per side, chicken to 165°F. Do not crowd.",
-      "minutes": 10,
+      "title": "Sear beef and peppers",
+      "instruction": "Hot cast iron: sear beef in batches with onions and peppers until edges char. Season with salt and pepper.",
+      "minutes": 12,
       "heatLevel": "high"
     },
     {
       "stepNumber": 3,
-      "title": "Finish sauce in pan",
-      "instruction": "Lower to medium. Add butter, garlic, and sauce; toss 1–2 minutes until glossy. Philly Cheesesteak Skillet should smell bright, not burnt garlic.",
-      "minutes": 4,
+      "title": "Melt provolone",
+      "instruction": "Pile beef mixture; lay provolone over top. Cover 1 minute until cheese melts into the meat.",
+      "minutes": 3,
       "heatLevel": "medium"
     },
     {
       "stepNumber": 4,
-      "title": "Serve immediately",
-      "instruction": "Serve from the skillet or transfer to warm trays. Backup: foil at 200°F up to 12 minutes — seafood toughens if held too long.",
-      "minutes": 3,
+      "title": "Fill hoagies",
+      "instruction": "Scoop into toasted hoagie rolls. Philly Cheesesteak Skillet should drip a little — that's the point.",
+      "minutes": 5,
       "heatLevel": "low"
     }
   ],
   "proTips": [
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts."
   ],
   "tonightSpread": [
@@ -117,11 +111,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 720,
-    "protein": 40,
-    "carbs": 68,
-    "fats": 36,
-    "label": "per serving (hall portion)"
+    "calories": 486,
+    "protein": 45,
+    "carbs": 5,
+    "fats": 31,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/philly-cheesesteak-skillet.jpg",
   "mobileImage": "/images/mobile/philly-cheesesteak-skillet.jpg",
@@ -149,6 +157,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-29T01:43:09.368Z",
+  "generatedAt": "2026-05-30T03:28:01.871Z",
   "contentVersion": 2
 }

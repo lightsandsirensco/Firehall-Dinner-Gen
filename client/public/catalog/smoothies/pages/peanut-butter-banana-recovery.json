@@ -62,19 +62,34 @@
     }
   ],
   "nutrition": {
-    "calories": 340,
-    "protein": 16,
-    "carbs": 32,
-    "fats": 8,
-    "highlights": "~340 cal · ~16 g protein (higher with yogurt) · potassium from banana · healthy fats from peanut butter"
+    "calories": 190,
+    "protein": 8,
+    "carbs": 20,
+    "fats": 10,
+    "highlights": "~340 cal · ~16 g protein (higher with yogurt) · potassium from banana · healthy fats from peanut butter",
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": true
+    }
   },
   "substitutions": [
     "Sunflower seed butter works for nut-free halls.",
     "Add a scoop of chocolate protein powder after hard training days."
   ],
   "shiftNote": "Higher in calories by design — good after workouts, yard work, or a physically heavy call when someone needs fuel fast.",
-  "heroImage": "/images/editorial/smoothies/peanut-butter-banana-recovery.webp",
-  "thumbImage": "/images/editorial/smoothies/peanut-butter-banana-recovery.webp",
+  "heroImage": "/images/smoothies/peanut-butter-banana-recovery.webp",
+  "thumbImage": "/images/smoothies/peanut-butter-banana-recovery.webp",
   "tags": [
     "fuel_smoothie",
     "taxonomy:recovery_smoothie",

@@ -10,13 +10,13 @@
   "description": "Caramelized burnt ends, pure smoke. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
   "baseServings": 8,
-  "cookTime": 90,
-  "prepTime": 30,
+  "cookTime": 600,
+  "prepTime": 60,
   "difficulty": "hard",
-  "calories": 600,
-  "protein": 40,
-  "carbs": 48,
-  "fats": 28,
+  "calories": 1109,
+  "protein": 89,
+  "carbs": 52,
+  "fats": 64,
   "tags": [
     "protein:beef",
     "format:grill",
@@ -108,7 +108,7 @@
     }
   ],
   "proTips": [
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts.",
     "Rest grilled proteins 5–8 minutes under foil before slicing — juices stay in the meat."
   ],
@@ -129,11 +129,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 600,
-    "protein": 40,
-    "carbs": 48,
-    "fats": 28,
-    "label": "per serving (hall portion)"
+    "calories": 1109,
+    "protein": 89,
+    "carbs": 52,
+    "fats": 64,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/bbq-brisket-burnt-ends.jpg",
   "mobileImage": "/images/mobile/bbq-brisket-burnt-ends.jpg",
@@ -162,6 +176,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-29T01:43:09.357Z",
+  "generatedAt": "2026-05-30T03:28:01.850Z",
   "contentVersion": 2
 }

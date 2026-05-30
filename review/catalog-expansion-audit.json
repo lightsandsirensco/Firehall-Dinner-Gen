@@ -1,0 +1,20 @@
+{
+  "generatedAt": "2026-05-30T01:40:06.169Z",
+  "totals": {
+    "golden100": 100,
+    "performance": 50,
+    "hallExpansion": 30,
+    "breakfastCatalog": 42,
+    "breakfastNewAdded": 20,
+    "hallDinnerTotal": 180
+  },
+  "slugCollisions": [],
+  "titleCollisions": [],
+  "missingHeroImages": 0,
+  "missingHeroImageSlugs": [],
+  "categoryCoverage": {
+    "smoker": 10,
+    "game_day": 10,
+    "crew_feeders": 11
+  }
+}

@@ -10,13 +10,13 @@
   "description": "Self-serve spuds for twenty. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
   "baseServings": 8,
-  "cookTime": 90,
+  "cookTime": 150,
   "prepTime": 30,
   "difficulty": "hard",
-  "calories": 600,
-  "protein": 40,
-  "carbs": 48,
-  "fats": 28,
+  "calories": 1400,
+  "protein": 109,
+  "carbs": 165,
+  "fats": 90,
   "tags": [
     "protein:beef",
     "format:bowl",
@@ -33,84 +33,91 @@
   ],
   "ingredients": [
     {
-      "name": "Jasmine rice, uncooked",
-      "quantity": "3",
-      "unit": "cups",
+      "name": "Russet potatoes, scrubbed",
+      "quantity": "40",
+      "unit": "count",
+      "notes": "large crew feed",
       "group": "Base"
     },
     {
-      "name": "Chicken thighs",
-      "quantity": "2.5",
-      "unit": "lb",
-      "group": "Main"
-    },
-    {
-      "name": "Broccoli florets",
-      "quantity": "2",
-      "unit": "lb",
-      "group": "Veg"
-    },
-    {
-      "name": "Soy sauce",
-      "quantity": "0.5",
-      "unit": "cup",
-      "group": "Sauce"
-    },
-    {
-      "name": "Sesame oil",
-      "quantity": "2",
-      "unit": "tbsp",
-      "group": "Sauce"
-    },
-    {
-      "name": "Red onion, sliced",
-      "quantity": "1",
-      "unit": "large",
+      "name": "Unsalted butter, softened",
+      "quantity": "3",
+      "unit": "cups",
       "group": "Toppings"
+    },
+    {
+      "name": "Shredded cheddar blend",
+      "quantity": "24",
+      "unit": "oz",
+      "group": "Toppings"
+    },
+    {
+      "name": "Crispy bacon, crumbled",
+      "quantity": "3",
+      "unit": "lb",
+      "group": "Toppings"
+    },
+    {
+      "name": "Sour cream",
+      "quantity": "3",
+      "unit": "cups",
+      "group": "Toppings"
+    },
+    {
+      "name": "Green onions, sliced",
+      "quantity": "8",
+      "unit": "bunches",
+      "group": "Toppings"
+    },
+    {
+      "name": "Warm pulled beef or chili",
+      "quantity": "4",
+      "unit": "lb",
+      "group": "Protein topping"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Cook rice",
-      "instruction": "Rinse rice until water runs clear. Cook 1:1.5 rice to water with salt; fluff and hold covered.",
+      "title": "Stage two oven racks",
+      "instruction": "Heat two ovens (or rotate batches) to 400°F. Scrub and poke all russets; oil and salt the skins. For twenty-plus eaters, bake in waves on sheet pans if rack space is tight.",
       "minutes": 20,
-      "heatLevel": "medium"
+      "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Sear protein and veg",
-      "instruction": "Sear protein in batches over medium-high until browned and cooked through (165°F chicken, 125°F salmon). Stir-fry veg 4–5 minutes until bright with char.",
-      "minutes": 14,
-      "heatLevel": "medium-high"
+      "title": "Bake potatoes in batches",
+      "instruction": "Bake 50–65 minutes until fork-tender. Transfer finished potatoes to foil-lined cambros at 200°F while the next batch bakes. Never cover hot potatoes tightly — steam softens skins.",
+      "minutes": 65,
+      "heatLevel": "medium"
     },
     {
       "stepNumber": 3,
-      "title": "Warm the sauce",
-      "instruction": "Whisk soy and sesame oil; add a splash of rice water if it needs to loosen for drizzling.",
-      "minutes": 5,
-      "heatLevel": "low"
+      "title": "Set a long topping line",
+      "instruction": "Arrange butter, cheddar, bacon, sour cream, green onions, and warm pulled beef in a row with labels. Put a trash can and extra forks at the end — this feed gets messy in the best way.",
+      "minutes": 20,
+      "heatLevel": ""
     },
     {
       "stepNumber": 4,
-      "title": "Assembly line",
-      "instruction": "Rice, protein, veg, sauce on the side. Loaded Potato Feed feeds fastest as a build-your-own line.",
-      "minutes": 5,
-      "heatLevel": ""
+      "title": "Serve family-style",
+      "instruction": "Call the crew when the first cambro is full. Split potatoes at the line; let everyone build their own loaded spud. Refill toppings before the pan looks empty — empty cheddar bowls cause hall riots.",
+      "minutes": 15,
+      "heatLevel": "low"
     }
   ],
   "proTips": [
     "Firefighters eat heavy after rough nights — double the protein if the hall had a busy shift.",
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts."
   ],
   "tonightSpread": [
-    "Build bowls base → grain → protein → toppings so the line moves in one direction.",
-    "Put hot components closest to the crew, cold crunch at the far end.",
+    "Label every topping bowl — rookies grab faster when they can read the line.",
+    "Keep hot bases (potatoes, chips) in cambros at 200°F and cold toppings on ice if service runs long.",
+    "Put forks, napkins, and a trash can at the end of the bar — self-serve feeds get messy fast.",
     "Serve family-style from two full-size trays — never let the line run dry on a busy night.",
     "Put starch and protein on separate trays so vegetarians can load up on sides.",
-    "Line up Loaded Potato Feed on the main counter with serving spoons — firefighters grab fast between calls.",
-    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+    "Line up Loaded Potato Feed on the main counter with serving spoons — firefighters grab fast between calls."
   ],
   "leftovers": [
     "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
@@ -121,11 +128,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 600,
-    "protein": 40,
-    "carbs": 48,
-    "fats": 28,
-    "label": "per serving (hall portion)"
+    "calories": 1400,
+    "protein": 109,
+    "carbs": 165,
+    "fats": 90,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/loaded-potato-feed.jpg",
   "mobileImage": "/images/mobile/loaded-potato-feed.jpg",
@@ -153,6 +174,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-29T01:43:09.416Z",
+  "generatedAt": "2026-05-30T03:28:01.968Z",
   "contentVersion": 2
 }

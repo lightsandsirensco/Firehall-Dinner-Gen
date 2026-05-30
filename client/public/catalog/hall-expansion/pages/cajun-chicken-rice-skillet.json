@@ -1,0 +1,187 @@
+{
+  "slug": "cajun-chicken-rice-skillet",
+  "title": "Cajun Chicken and Rice Skillet",
+  "displayTitle": "Cajun Chicken and Rice Skillet",
+  "seoTitle": "Cajun Chicken and Rice Skillet | Firefighter Meal",
+  "shortDescription": "One-skillet spiced chicken with peppers and rice for ten",
+  "subtitle": "One-skillet spiced chicken with peppers and rice for ten",
+  "category": "hall_expansion",
+  "cuisine": "cajun",
+  "description": "Chicken thighs are seared with Cajun seasoning, then simmered with trinity vegetables, rice, and broth until fluffy and fragrant. Finish with scallions and hot sauce at the line.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 40,
+  "prepTime": 25,
+  "difficulty": "easy",
+  "calories": 480,
+  "protein": 34,
+  "carbs": 52,
+  "fats": 16,
+  "tags": [
+    "protein:chicken",
+    "format:skillet",
+    "category:crew_feeders",
+    "chicken",
+    "one_pot",
+    "hall_expansion",
+    "hall_expansion_56",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Large cast iron skillet or Dutch oven",
+    "Instant-read thermometer",
+    "Tight lid",
+    "Wooden spoon",
+    "Hotel pan"
+  ],
+  "ingredients": [
+    {
+      "name": "bone-in chicken thighs",
+      "quantity": "4",
+      "unit": "lb",
+      "notes": "about 12 pieces",
+      "group": "Main"
+    },
+    {
+      "name": "long-grain white rice",
+      "quantity": "3",
+      "unit": "cups",
+      "group": "Main"
+    },
+    {
+      "name": "Cajun seasoning",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "1",
+      "unit": "whole",
+      "notes": "diced",
+      "group": "Trinity"
+    },
+    {
+      "name": "green bell pepper",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "diced",
+      "group": "Trinity"
+    },
+    {
+      "name": "celery stalks",
+      "quantity": "3",
+      "unit": "stalks",
+      "notes": "diced",
+      "group": "Trinity"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "5",
+      "unit": "cloves",
+      "notes": "minced",
+      "group": "Trinity"
+    },
+    {
+      "name": "chicken broth",
+      "quantity": "5",
+      "unit": "cups",
+      "group": "Liquid"
+    },
+    {
+      "name": "tomato paste",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Liquid"
+    },
+    {
+      "name": "green onions",
+      "quantity": "6",
+      "unit": "whole",
+      "notes": "sliced",
+      "group": "Finish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Season and sear chicken",
+      "instruction": "Toss chicken thighs with half the Cajun seasoning. Sear skin-side down in a large skillet over medium-high heat 5 minutes per side until golden. Set aside.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Cook the trinity",
+      "instruction": "In the same pan, sauté onion, bell pepper, celery, and garlic 6–8 minutes until softened and lightly caramelized at the edges.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Toast rice and build",
+      "instruction": "Stir in rice and remaining Cajun seasoning, toast 2 minutes, then add tomato paste and broth. Nestle seared chicken skin-side up into the rice.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Simmer covered",
+      "instruction": "Cover and simmer on low 25–30 minutes until rice absorbs liquid and chicken reaches 165°F internal. Avoid stirring so rice stays fluffy.",
+      "minutes": 28,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Rest and serve",
+      "instruction": "Rest covered 5 minutes off heat. Fluff rice gently around chicken, scatter green onions, and serve straight from the skillet or transfer to a hotel pan.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "If rice looks dry before chicken finishes, add broth ¼ cup at a time—not water.",
+    "Andouille sausage slices stirred in at step 2 add smoke without extra pans.",
+    "A tight-fitting lid or foil seal is critical—steam escapes and rice stays crunchy."
+  ],
+  "tonightSpread": [
+    "Skillet served with cornbread muffins and extra hot sauce on the side.",
+    "Simple iceberg salad with ranch for crew who want something cool."
+  ],
+  "leftovers": [
+    "Reheat covered with splash of broth for lunch bowls the next day.",
+    "Stuff into bell pepper halves and bake for a quick round-two dinner."
+  ],
+  "whyCrewsLikeIt": "One pan means fewer dishes after a busy day. Bold Cajun flavor reads as a proper meal, not a rookie rice packet, and the skillet format holds warm on the stove between calls.",
+  "mealPrepNotes": "Dice trinity uniform so it cooks evenly. Use a large cast iron or hotel pan for ten portions. Keep hot sauce off to the side for heat-sensitive crew.",
+  "spiceLevel": "medium",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 480,
+    "protein": 34,
+    "carbs": 52,
+    "fats": 16,
+    "label": "~480 cal/serving · 34g protein · 3g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/cajun-chicken-rice-skillet.jpg",
+  "heroImageAlt": "Cajun Chicken and Rice Skillet — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/cajun-chicken-rice-skillet.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/cajun-chicken-rice-skillet.jpg",
+  "railImage": "/images/rails/hall-expansion/cajun-chicken-rice-skillet.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "cajun chicken and rice skillet",
+    "crew feeders"
+  ],
+  "relatedSlugs": [
+    "shawarma-bar-night",
+    "fajita-bar-night",
+    "hall-burger-bar",
+    "pasta-bar-night"
+  ],
+  "generatedAt": "2026-05-30T03:14:19.188Z",
+  "contentVersion": 2
+}

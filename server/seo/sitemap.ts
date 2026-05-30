@@ -6,8 +6,12 @@ import fs from "node:fs";
 import path from "node:path";
 import { GOLDEN_CATALOG_PUBLIC_DIR } from "../golden-100/page-store.js";
 import { PERFORMANCE_CATALOG_PUBLIC_DIR } from "../performance-meals/page-store.js";
+import { HALL_EXPANSION_CATALOG_PUBLIC_DIR } from "../hall-expansion/page-store.js";
 import { SMOOTHIE_CATALOG_PUBLIC_DIR } from "../fuel-catalog/page-store.js";
+import { SEO_CANONICAL_ORIGIN } from "../../shared/seo/constants.js";
+import { allSeoLandingPagePaths } from "../../shared/seo/landing-pages-data.js";
 import { EDITORIAL_PUBLIC_DIR } from "../editorial/page-store.js";
+import { guidePath } from "../../shared/editorial/content-schema.js";
 
 export function resolvePublicSiteOrigin(reqHost?: string, forwardedProto?: string): string {
   const fromEnv =
@@ -22,7 +26,7 @@ export function resolvePublicSiteOrigin(reqHost?: string, forwardedProto?: strin
     const proto = forwardedProto === "http" ? "http" : "https";
     return `${proto}://${reqHost.replace(/\/+$/, "")}`;
   }
-  return "https://firehallmeals.com";
+  return SEO_CANONICAL_ORIGIN;
 }
 
 function readGoldenSlugs(): Array<{ slug: string; generatedAt?: string }> {
@@ -65,7 +69,13 @@ const STATIC_PATHS: Array<{ path: string; changefreq: string; priority: string }
   { path: "/wheel", changefreq: "weekly", priority: "0.7" },
   { path: "/smoothies", changefreq: "weekly", priority: "0.85" },
   { path: "/breakfast", changefreq: "weekly", priority: "0.8" },
+  { path: "/firefighter-red-lead-recipe", changefreq: "monthly", priority: "0.9" },
   { path: "/about", changefreq: "monthly", priority: "0.5" },
+  ...allSeoLandingPagePaths().map((path) => ({
+    path,
+    changefreq: "weekly",
+    priority: "0.9",
+  })),
 ];
 
 function readSmoothieSlugs(): Array<{ slug: string; generatedAt?: string }> {
@@ -126,10 +136,45 @@ function toLastmod(iso?: string): string {
   return Number.isNaN(d.getTime()) ? new Date().toISOString().slice(0, 10) : d.toISOString().slice(0, 10);
 }
 
+const BREAKFAST_CATALOG_PUBLIC_DIR = path.join(process.cwd(), "client", "public", "catalog", "breakfast");
+
+function readBreakfastSlugs(): Array<{ slug: string; generatedAt?: string }> {
+  const indexFile = path.join(BREAKFAST_CATALOG_PUBLIC_DIR, "index.json");
+  if (!fs.existsSync(indexFile)) return [];
+  try {
+    const index = JSON.parse(fs.readFileSync(indexFile, "utf8")) as {
+      generatedAt?: string;
+      recipes?: Array<{ slug: string }>;
+    };
+    const generatedAt = index.generatedAt;
+    return (index.recipes ?? []).map((r) => ({ slug: r.slug, generatedAt }));
+  } catch {
+    return [];
+  }
+}
+
+function readExpansionSlugs(): Array<{ slug: string; generatedAt?: string }> {
+  const indexFile = path.join(HALL_EXPANSION_CATALOG_PUBLIC_DIR, "index.json");
+  if (!fs.existsSync(indexFile)) return [];
+  try {
+    const index = JSON.parse(fs.readFileSync(indexFile, "utf8")) as {
+      generatedAt?: string;
+      recipes?: Array<{ slug: string }>;
+    };
+    const generatedAt = index.generatedAt;
+    return (index.recipes ?? []).map((r) => ({ slug: r.slug, generatedAt }));
+  } catch {
+    return [];
+  }
+}
+
 function readHallRecipeSlugs(): Array<{ slug: string; generatedAt?: string }> {
   const golden = readGoldenSlugs();
   const bySlug = new Map(golden.map((r) => [r.slug, r]));
   for (const row of readPerformanceSlugs()) {
+    if (!bySlug.has(row.slug)) bySlug.set(row.slug, row);
+  }
+  for (const row of readExpansionSlugs()) {
     if (!bySlug.has(row.slug)) bySlug.set(row.slug, row);
   }
   return [...bySlug.values()];
@@ -177,9 +222,18 @@ export function buildSitemapXml(origin: string): string {
   </url>`);
   }
 
+  for (const { slug, generatedAt } of readBreakfastSlugs()) {
+    urls.push(`  <url>
+    <loc>${xmlEscape(`${base}/breakfast/${slug}`)}</loc>
+    <lastmod>${toLastmod(generatedAt)}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>`);
+  }
+
   for (const { slug, publishedAt } of readGuideSlugs()) {
     urls.push(`  <url>
-    <loc>${xmlEscape(`${base}/guides/${slug}`)}</loc>
+    <loc>${xmlEscape(`${base}${guidePath(slug)}`)}</loc>
     <lastmod>${toLastmod(publishedAt)}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>

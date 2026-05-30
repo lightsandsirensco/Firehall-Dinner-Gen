@@ -2,13 +2,19 @@ import { Link } from "wouter";
 import { CTA, HOME } from "@/lib/brand-copy";
 
 const LINKS = [
+  { href: "/firefighter-meals", label: "Firefighter meals" },
+  { href: "/firefighter-recipes", label: "Firefighter recipes" },
+  { href: "/firehouse-recipes", label: "Firehouse recipes" },
+  { href: "/fire-station-meals", label: "Fire station meals" },
   { href: "/recipes", label: "All firefighter recipes" },
   { href: "/explore", label: "Browse recipe catalog" },
   { href: "/categories/quick_meals", label: "Quick shift meals" },
   { href: "/categories/healthy_options", label: "Healthy firefighter meals" },
-  { href: "/categories/bbq_smoker", label: "BBQ firehall favorites" },
-  { href: "/generator", label: CTA.findDinner },
+  { href: "/categories/bbq_smoker", label: "BBQ firefighter recipes" },
+  { href: "/firefighter-breakfast-recipes", label: "Firefighter breakfast recipes" },
+  { href: "/wheel", label: "Classics Wheel" },
   { href: "/guides", label: "Firehouse cooking guides" },
+  { href: "/generator", label: CTA.findDinner },
 ] as const;
 
 export function HomeSeoEditorial() {
@@ -24,17 +30,16 @@ export function HomeSeoEditorial() {
           </h2>
           <div className="mt-5 space-y-4 text-[15px] sm:text-base text-muted-foreground leading-[1.75] max-w-prose">
             <p>
-              FirehallMeals is the largest collection of firefighter recipes and firehouse meals
-              online — sized for crews, written for station kitchens, and organized by how halls
-              actually cook: quick shifts, BBQ nights, healthy options, and feeds for a crowd.
+              Firehall Meals is the largest collection of firefighter meals and firehall recipes online
+              — sized for crews, written for station kitchens, and organized by how halls actually cook:
+              quick shifts, BBQ nights, healthy options, and feeds for a crowd.
             </p>
             <p>
-              Built by a firefighter and his wife after years around the kitchen table. Browse the
-              recipe catalog, explore categories, or use Find a Meal when you want a fast pick for
-              tonight.
+              Built by firefighters. Tested in the firehall. Browse firefighter recipes, explore station
+              meals by category, or use Find a Meal when the crew wants a fast pick for tonight.
             </p>
           </div>
-          <nav aria-label="Explore" className="mt-8 flex flex-wrap gap-x-6 gap-y-2">
+          <nav aria-label="Explore firefighter meals" className="mt-8 flex flex-wrap gap-x-6 gap-y-2">
             {LINKS.map((link) => (
               <Link
                 key={link.href}

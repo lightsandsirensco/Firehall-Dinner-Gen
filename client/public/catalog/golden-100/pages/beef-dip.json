@@ -13,10 +13,10 @@
   "cookTime": 45,
   "prepTime": 15,
   "difficulty": "medium",
-  "calories": 680,
-  "protein": 42,
-  "carbs": 50,
-  "fats": 30,
+  "calories": 692,
+  "protein": 59,
+  "carbs": 0,
+  "fats": 49,
   "tags": [
     "protein:beef",
     "format:sandwich",
@@ -101,7 +101,7 @@
   "proTips": [
     "Warm rolls before building — cold bread kills the line.",
     "Serve jus in mugs for easy dipping.",
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts."
   ],
   "tonightSpread": [
@@ -119,11 +119,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 680,
-    "protein": 42,
-    "carbs": 50,
-    "fats": 30,
-    "label": "per serving (hall portion)"
+    "calories": 692,
+    "protein": 59,
+    "carbs": 0,
+    "fats": 49,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/beef-dip.jpg",
   "mobileImage": "/images/mobile/beef-dip.jpg",
@@ -152,6 +166,6 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "classicSlug": "beef-dip",
-  "generatedAt": "2026-05-29T01:43:09.321Z",
+  "generatedAt": "2026-05-30T03:28:01.774Z",
   "contentVersion": 2
 }

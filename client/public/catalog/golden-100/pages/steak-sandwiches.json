@@ -13,10 +13,10 @@
   "cookTime": 60,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 710,
-  "protein": 46,
-  "carbs": 48,
-  "fats": 36,
+  "calories": 1400,
+  "protein": 120,
+  "carbs": 94,
+  "fats": 90,
   "tags": [
     "protein:beef",
     "format:sandwich",
@@ -170,7 +170,7 @@
     "Slice steak thin after the rest — crew eats better and portions stretch.",
     "Toast buns hard enough to hold juice without falling apart.",
     "Keep Caesar and aioli on ice until the line opens.",
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts."
   ],
   "tonightSpread": [
@@ -188,11 +188,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 710,
-    "protein": 46,
-    "carbs": 48,
-    "fats": 36,
-    "label": "per serving (hall portion)"
+    "calories": 1400,
+    "protein": 120,
+    "carbs": 94,
+    "fats": 90,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/steak-sandwiches.jpg",
   "mobileImage": "/images/mobile/steak-sandwiches.jpg",
@@ -220,6 +234,6 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "classicSlug": "steak-sandwiches",
-  "generatedAt": "2026-05-29T01:43:09.327Z",
+  "generatedAt": "2026-05-30T03:28:01.788Z",
   "contentVersion": 2
 }

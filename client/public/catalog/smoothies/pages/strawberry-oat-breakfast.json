@@ -66,19 +66,34 @@
     }
   ],
   "nutrition": {
-    "calories": 310,
-    "protein": 20,
-    "carbs": 32,
-    "fats": 8,
-    "highlights": "~310 cal · ~20 g protein · soluble fiber from oats · steady energy vs. a sugar-only fruit blend"
+    "calories": 154,
+    "protein": 7,
+    "carbs": 23,
+    "fats": 4,
+    "highlights": "~310 cal · ~20 g protein · soluble fiber from oats · steady energy vs. a sugar-only fruit blend",
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": true
+    }
   },
   "substitutions": [
     "Use a frozen banana instead of some strawberries for extra thickness.",
     "Dairy-free: oat milk + soy yogurt."
   ],
   "shiftNote": "Strong choice for breakfast handoff or crews eating light before a busy morning block.",
-  "heroImage": "/images/editorial/smoothies/strawberry-oat-breakfast.webp",
-  "thumbImage": "/images/editorial/smoothies/strawberry-oat-breakfast.webp",
+  "heroImage": "/images/smoothies/strawberry-oat-breakfast.webp",
+  "thumbImage": "/images/smoothies/strawberry-oat-breakfast.webp",
   "tags": [
     "fuel_smoothie",
     "taxonomy:breakfast_smoothie",

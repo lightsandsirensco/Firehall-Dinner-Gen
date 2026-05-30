@@ -10,16 +10,16 @@
   "description": "Creamy, bubbling, hall-approved mac. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
   "baseServings": 8,
-  "cookTime": 55,
+  "cookTime": 65,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 580,
-  "protein": 22,
-  "carbs": 80,
-  "fats": 30,
+  "calories": 1358,
+  "protein": 60,
+  "carbs": 96,
+  "fats": 81,
   "tags": [
     "protein:vegetarian",
-    "format:pasta",
+    "format:bake",
     "category:comfort_food",
     "comfort",
     "pasta",
@@ -27,152 +27,194 @@
   ],
   "equipment": [
     "8-quart stock pot",
+    "Hotel pans or large baking dishes",
     "Large sheet trays",
     "Instant-read thermometer",
     "Aluminum foil"
   ],
   "ingredients": [
     {
-      "name": "Dried pasta",
-      "quantity": "1.5",
+      "name": "Elbow macaroni",
+      "quantity": "2",
       "unit": "lb",
       "group": "Main"
     },
     {
-      "name": "Boneless chicken thighs",
-      "quantity": "2.5",
-      "unit": "lb",
-      "group": "Main"
-    },
-    {
-      "name": "Crushed tomatoes",
-      "quantity": "2",
-      "unit": "cans",
-      "notes": "28 oz",
-      "group": "Sauce"
-    },
-    {
-      "name": "Heavy cream",
-      "quantity": "1",
-      "unit": "cup",
-      "group": "Sauce"
-    },
-    {
-      "name": "Parmesan, grated",
-      "quantity": "8",
-      "unit": "oz",
-      "group": "Finish"
-    },
-    {
-      "name": "Yellow onion",
-      "quantity": "2",
-      "unit": "large",
-      "group": "Aromatics"
-    },
-    {
-      "name": "Garlic cloves, minced",
+      "name": "Unsalted butter",
       "quantity": "6",
-      "unit": "cloves",
-      "group": "Aromatics"
+      "unit": "tbsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "All-purpose flour",
+      "quantity": "6",
+      "unit": "tbsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "Whole milk",
+      "quantity": "8",
+      "unit": "cups",
+      "group": "Sauce"
+    },
+    {
+      "name": "Sharp cheddar, shredded",
+      "quantity": "24",
+      "unit": "oz",
+      "group": "Cheese"
+    },
+    {
+      "name": "Gruyere or Monterey Jack, shredded",
+      "quantity": "12",
+      "unit": "oz",
+      "group": "Cheese"
+    },
+    {
+      "name": "Dijon mustard",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Seasoning"
     },
     {
       "name": "Kosher salt",
       "quantity": "2",
       "unit": "tbsp",
       "group": "Seasoning"
+    },
+    {
+      "name": "Black pepper",
+      "quantity": "1",
+      "unit": "tsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Panko breadcrumbs",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Topping"
+    },
+    {
+      "name": "Unsalted butter, melted",
+      "quantity": "4",
+      "unit": "tbsp",
+      "group": "Topping"
+    },
+    {
+      "name": "Grated parmesan",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Topping"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Salt the pasta water",
-      "instruction": "Bring a large pot of water to a rolling boil with enough salt that it tastes like the sea. This is your only chance to season the pasta itself.",
-      "minutes": 10,
-      "heatLevel": "high"
+      "title": "Par-cook the macaroni",
+      "instruction": "Boil elbow macaroni in well-salted water 2 minutes shy of al dente — it finishes in the oven. Drain thoroughly; wet pasta makes a soupy bake.",
+      "minutes": 12,
+      "heatLevel": "medium-high"
     },
     {
       "stepNumber": 2,
-      "title": "Cook sauce base",
-      "instruction": "Meanwhile, brown meat, add onions and garlic, then tomatoes (and cream if Alfredo-style). Simmer 15 minutes while pasta cooks.",
+      "title": "Make the cheese sauce",
+      "instruction": "Melt butter in a large pot over medium heat. Whisk in flour; cook 1 minute. Whisk in milk in steady streams until smooth. Simmer until thick enough to coat a spoon, then melt in cheddar and gruyere off the heat. Stir in Dijon, salt, and pepper.",
       "minutes": 15,
       "heatLevel": "medium"
     },
     {
       "stepNumber": 3,
-      "title": "Boil pasta al dente",
-      "instruction": "Cook pasta 1 minute shy of package time. Reserve 2 cups pasta water. Drain — do not rinse.",
-      "minutes": 12,
-      "heatLevel": "high"
+      "title": "Combine pasta and sauce",
+      "instruction": "Fold drained macaroni into cheese sauce until every piece is coated. The sauce should look slightly loose — pasta absorbs liquid in the oven.",
+      "minutes": 5,
+      "heatLevel": ""
     },
     {
       "stepNumber": 4,
-      "title": "Finish in the pan",
-      "instruction": "Toss pasta in sauce over medium heat, splashing pasta water until glossy and clinging. Baked Mac and Cheese should coat a spoon — if it pools, reduce another minute.",
-      "minutes": 4,
-      "heatLevel": "medium"
+      "title": "Pan up and add topping",
+      "instruction": "Transfer to buttered hotel pans. Mix panko with melted butter and parmesan; scatter evenly over the top for a crunchy lid.",
+      "minutes": 10,
+      "heatLevel": ""
     },
     {
       "stepNumber": 5,
-      "title": "Serve from the pot",
-      "instruction": "Fold in Parmesan off heat. Serve immediately — pasta waits for no one. Backup tray: cover lightly with foil at 200°F up to 15 minutes, add water if it tightens.",
-      "minutes": 3,
+      "title": "Bake until bubbling",
+      "instruction": "Bake at 375°F 25–30 minutes until edges bubble and topping is deep golden. If the top browns before the center is hot, cover with foil and continue baking.",
+      "minutes": 25,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Rest and serve",
+      "instruction": "Rest 5 minutes so the bake sets — scoops hold together on the line. Serve with a spatula, not a spoon, for clean portions.",
+      "minutes": 5,
       "heatLevel": "low"
     }
   ],
   "proTips": [
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts."
   ],
   "tonightSpread": [
-    "Plate Baked Mac and Cheese with sides in separate pans so the crew can mix portions.",
-    "Line up Baked Mac and Cheese on the main counter with serving spoons — firefighters grab fast between calls.",
-    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+    "Scoop baked mac from hotel pans with a spatula so the breadcrumb lid stays intact.",
+    "Keep backup pan warming at 200°F — mac tightens as it holds; splash milk when reheating."
   ],
   "leftovers": [
     "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
-    "Label trays with date and reheat to 165°F minimum before second shift.",
-    "Add a splash of stock or water when reheating — thick sauces tighten in the fridge."
+    "Label trays with date and reheat to 165°F minimum before second shift."
   ],
   "whyCrewsLikeIt": "Creamy, bubbling, hall-approved mac. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
-  "substitutions": [
-    "Any short pasta shape works — penne, rigatoni, or spaghetti."
-  ],
+  "substitutions": [],
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 580,
-    "protein": 22,
-    "carbs": 80,
-    "fats": 30,
-    "label": "per serving (hall portion)"
+    "calories": 1358,
+    "protein": 60,
+    "carbs": 96,
+    "fats": 81,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/mac-and-cheese-bake.jpg",
   "mobileImage": "/images/mobile/mac-and-cheese-bake.jpg",
   "thumbImage": "/images/thumbs/mac-and-cheese-bake.jpg",
   "railImage": "/images/rails/mac-and-cheese-bake.jpg",
   "realismScore": 100,
-  "firefighterScore": 100,
+  "firefighterScore": 98,
   "popularityWeight": 3.6,
   "searchTerms": [
     "baked mac and cheese",
     "mac and cheese bake",
     "american",
     "vegetarian",
-    "pasta",
+    "bake",
     "comfort",
+    "pasta",
     "baked mac and cheese dinner",
     "golden_100"
   ],
   "relatedSlugs": [
-    "baked-ziti",
-    "beef-stroganoff",
     "french-toast-casserole",
     "pancake-short-stack",
     "beef-barley-soup",
-    "chicken-dumpling-soup"
+    "chicken-dumpling-soup",
+    "chicken-pot-pie",
+    "loaded-baked-potato-bar"
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-29T01:43:09.358Z",
+  "generatedAt": "2026-05-30T03:28:01.852Z",
   "contentVersion": 2
 }

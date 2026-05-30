@@ -1,0 +1,185 @@
+{
+  "slug": "philly-cheesesteak-sliders",
+  "title": "Philly Cheesesteak Sliders",
+  "displayTitle": "Philly Cheesesteak Sliders",
+  "seoTitle": "Philly Cheesesteak Sliders | Firefighter Meal",
+  "shortDescription": "Chopped steak sliders with peppers and provolone for ten",
+  "subtitle": "Chopped steak sliders with peppers and provolone for ten",
+  "category": "hall_expansion",
+  "cuisine": "american",
+  "description": "Thin-sliced ribeye is chopped with peppers and onions on a griddle, piled onto slider buns with provolone, and baked until melted. A quick au jus on the side keeps everything juicy.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 25,
+  "prepTime": 25,
+  "difficulty": "medium",
+  "calories": 440,
+  "protein": 28,
+  "carbs": 32,
+  "fats": 24,
+  "tags": [
+    "protein:beef",
+    "format:sheet_pan",
+    "category:game_day_recipes",
+    "game_day",
+    "handheld",
+    "beef",
+    "hall_expansion",
+    "hall_expansion_56",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Griddle or large skillet",
+    "Flat spatulas",
+    "Sheet pan",
+    "Saucepan",
+    "Aluminum foil"
+  ],
+  "ingredients": [
+    {
+      "name": "ribeye steak",
+      "quantity": "3",
+      "unit": "lb",
+      "notes": "thin-sliced",
+      "group": "Main"
+    },
+    {
+      "name": "slider buns",
+      "quantity": "20",
+      "unit": "whole",
+      "group": "Main"
+    },
+    {
+      "name": "provolone cheese",
+      "quantity": "12",
+      "unit": "slices",
+      "group": "Main"
+    },
+    {
+      "name": "bell peppers",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "sliced",
+      "group": "Veg"
+    },
+    {
+      "name": "yellow onions",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "sliced",
+      "group": "Veg"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Cook"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "2",
+      "unit": "tsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "black pepper",
+      "quantity": "1",
+      "unit": "tsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "beef broth",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Au jus"
+    },
+    {
+      "name": "Worcestershire sauce",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Au jus"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Sauté peppers and onions",
+      "instruction": "Heat oil on a griddle or large skillet over medium-high. Cook peppers and onions with salt until softened and lightly charred, about 8 minutes. Push to the side.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Chop and cook steak",
+      "instruction": "Add sliced ribeye in a single layer, season with salt and pepper, and sear 2 minutes. Chop with spatulas and cook until no pink remains and edges crisp, about 5–6 minutes total.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Combine and melt cheese",
+      "instruction": "Mix steak with peppers and onions. Lay provolone over the mixture and cover until cheese melts completely, about 2 minutes. Keep warm while you prep buns.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Assemble and bake",
+      "instruction": "Split slider buns in connected sheets on a foil-lined pan. Pile steak mixture on bottoms, cap with tops, and bake at 350°F for 10 minutes until buns toast lightly. Target oven/smoker temperature: 350°F.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Make au jus and serve",
+      "instruction": "Simmer beef broth with Worcestershire 5 minutes. Slice sliders along seams, serve with small cups of au jus for dunking while cheese is still melted.",
+      "minutes": 8,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Partially frozen ribeye slices thin like deli meat—warm steak shreds instead of slicing.",
+    "American cheese melts smoother than provolone if you want maximum goo factor.",
+    "Do not overfill—sliders need room to close without blowing out during baking."
+  ],
+  "tonightSpread": [
+    "Cheesesteak sliders with au jus cups and a tray of oven fries.",
+    "Shaker of dried oregano and hot cherry peppers for Philly purists at the table."
+  ],
+  "leftovers": [
+    "Reheat in foil at 325°F with a splash of broth to restore juiciness.",
+    "Chop filling into a breakfast omelet with hot sauce."
+  ],
+  "whyCrewsLikeIt": "Cheesesteaks are messy in a good way—these sliders keep the flavor but reduce drip risk on the couch. They portion cleanly and reheat in foil packs for second-half hunger.",
+  "mealPrepNotes": "Slice ribeye paper-thin when partially frozen for easier cutting. Peppers and onions can be sautéed ahead and reheated on the griddle. Freeze steak 20 minutes before slicing.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 440,
+    "protein": 28,
+    "carbs": 32,
+    "fats": 24,
+    "label": "~440 cal/serving · 28g protein · 2g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/philly-cheesesteak-sliders.jpg",
+  "heroImageAlt": "Philly Cheesesteak Sliders — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/philly-cheesesteak-sliders.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/philly-cheesesteak-sliders.jpg",
+  "railImage": "/images/rails/hall-expansion/philly-cheesesteak-sliders.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "philly cheesesteak sliders",
+    "game day recipes"
+  ],
+  "relatedSlugs": [
+    "loaded-potato-skins",
+    "game-day-pizza-sliders",
+    "pretzel-bite-platter",
+    "jalapeno-popper-dip"
+  ],
+  "generatedAt": "2026-05-30T03:14:19.188Z",
+  "contentVersion": 2
+}

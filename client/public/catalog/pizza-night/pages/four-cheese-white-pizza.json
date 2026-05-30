@@ -1,0 +1,211 @@
+{
+  "slug": "four-cheese-white-pizza",
+  "title": "Four-Cheese White Pizza",
+  "displayTitle": "Four-Cheese White Pizza",
+  "seoTitle": "Four-Cheese White Pizza | Firefighter Meal",
+  "shortDescription": "Creamy white pie, no red sauce",
+  "subtitle": "Creamy white pie, no red sauce",
+  "category": "pizza_night",
+  "cuisine": "italian",
+  "description": "Creamy white pie, no red sauce. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 90,
+  "prepTime": 35,
+  "difficulty": "medium",
+  "calories": 800,
+  "protein": 41,
+  "carbs": 30,
+  "fats": 57,
+  "tags": [
+    "protein:vegetarian",
+    "format:pizza",
+    "category:pizza_night",
+    "handheld",
+    "golden_100"
+  ],
+  "equipment": [
+    "Pizza stone or steel",
+    "Peel or inverted sheet pan",
+    "Large sheet trays",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "ingredients": [
+    {
+      "name": "Pizza dough balls (15 oz)",
+      "quantity": "4",
+      "unit": "count",
+      "group": "Crust"
+    },
+    {
+      "name": "Whole milk ricotta",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Cheese"
+    },
+    {
+      "name": "Fresh mozzarella, torn",
+      "quantity": "24",
+      "unit": "oz",
+      "group": "Cheese"
+    },
+    {
+      "name": "Low-moisture mozzarella, shredded",
+      "quantity": "12",
+      "unit": "oz",
+      "group": "Cheese"
+    },
+    {
+      "name": "Grated parmesan",
+      "quantity": "1",
+      "unit": "cup",
+      "group": "Cheese"
+    },
+    {
+      "name": "Grated fontina or provolone",
+      "quantity": "8",
+      "unit": "oz",
+      "group": "Cheese"
+    },
+    {
+      "name": "Garlic cloves, minced",
+      "quantity": "6",
+      "unit": "cloves",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Extra-virgin olive oil",
+      "quantity": "4",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Kosher salt",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Black pepper",
+      "quantity": "1",
+      "unit": "tsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Fresh thyme leaves",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Finish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Season ricotta and garlic oil",
+      "instruction": "Stir ricotta with half the garlic, salt, pepper, and a drizzle of olive oil until creamy. Warm remaining garlic gently in olive oil 2 minutes — do not brown or it tastes bitter on a white pie.",
+      "minutes": 10,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat stone to 500°F",
+      "instruction": "Heat stone or steel at 500°F at least 40 minutes. Tear fresh mozzarella and grate hard cheeses while the oven saturates.",
+      "minutes": 40,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Stretch and schmear ricotta",
+      "instruction": "Stretch dough to 12–14 inch rounds. Spread seasoned ricotta in a thin even layer — thick ricotta pockets stay cold in the center. Brush rims with garlic oil.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Four-cheese layer",
+      "instruction": "Add fresh mozzarella, shredded mozzarella, fontina, and parmesan. Four-Cheese White Pizza has no tomato — if you see red sauce, you grabbed the wrong pan.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Bake until golden and bubbling",
+      "instruction": "Bake 11–14 minutes until cheeses melt together with golden spots and the crust underside is crisp. White pies show doneness on cheese color, not pepperoni curl.",
+      "minutes": 13,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Thyme, rest, and cut",
+      "instruction": "Scatter thyme leaves after the bake. Rest 2 minutes, cut 8 slices per pie. Rich pie — one backup tray at 200°F is enough for seconds without turning greasy.",
+      "minutes": 5,
+      "heatLevel": "low"
+    }
+  ],
+  "proTips": [
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
+    "Taste for salt at the end — hall palates run salty after long shifts."
+  ],
+  "tonightSpread": [
+    "Cut pies into hall slices (8 per pie minimum) and fan on sheet trays.",
+    "Keep a fresh pie warming in the oven — pizza dies fast on the counter.",
+    "Line up Four-Cheese White Pizza on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+  ],
+  "leftovers": [
+    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
+    "Label trays with date and reheat to 165°F minimum before second shift."
+  ],
+  "whyCrewsLikeIt": "Creamy white pie, no red sauce. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
+  "substitutions": [],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 800,
+    "protein": 41,
+    "carbs": 30,
+    "fats": 57,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "heroImage": "/images/golden-100/four-cheese-white-pizza.jpg",
+  "mobileImage": "/images/mobile/four-cheese-white-pizza.jpg",
+  "thumbImage": "/images/thumbs/four-cheese-white-pizza.jpg",
+  "railImage": "/images/rails/four-cheese-white-pizza.jpg",
+  "realismScore": 100,
+  "firefighterScore": 98,
+  "popularityWeight": 3.2,
+  "searchTerms": [
+    "four-cheese white pizza",
+    "four cheese white pizza",
+    "italian",
+    "vegetarian",
+    "pizza",
+    "handheld",
+    "golden_100"
+  ],
+  "relatedSlugs": [
+    "margherita-pizza",
+    "veggie-supreme-pizza",
+    "honey-soppressata-pizza",
+    "pepperoni-pizza-night",
+    "pesto-chicken-pizza",
+    "sicilian-sheet-pizza"
+  ],
+  "generatedAt": "2026-05-30T03:45:01.599Z",
+  "contentVersion": 2
+}

@@ -11,6 +11,7 @@ import {
   isApprovedCatalogSlug,
   isPerformance50Slug,
 } from "../shared/hall-catalog/gate.js";
+import { APPROVED_CATALOG_TOTAL } from "../shared/meal-catalog/curated-count.js";
 import { resolveExistingSlugImage } from "../shared/explore-image-paths.js";
 import {
   filterApprovedCatalogEntries,
@@ -22,7 +23,6 @@ const FORBIDDEN_PUBLIC_LABELS = ["Golden 100", "Performance 50", "golden_100", "
 function main(): void {
   const catalog = buildApprovedCatalog();
   const index = loadMergedHallCatalogIndex();
-  const expectedMeals = index.recipes.filter((entry) => isApprovedCatalogSlug(entry.slug));
   const errors: string[] = [];
 
   if (catalog.recipeCount !== catalog.recipes.length) {
@@ -30,12 +30,21 @@ function main(): void {
   }
 
   const mealCount = catalog.recipes.filter((entry) => !entry.isSmoothie).length;
-  if (mealCount !== expectedMeals.length) {
-    errors.push(`Meal count mismatch: expected ${expectedMeals.length}, got ${mealCount}`);
+  const expectedMeals =
+    index.recipes.filter((entry) => isApprovedCatalogSlug(entry.slug)).length +
+    catalog.recipes.filter((entry) => entry.kind === "breakfast_catalog").length;
+  if (mealCount !== expectedMeals) {
+    errors.push(`Meal count mismatch: expected ${expectedMeals}, got ${mealCount}`);
+  }
+
+  if (catalog.recipeCount !== APPROVED_CATALOG_TOTAL) {
+    errors.push(`Approved catalog total mismatch: expected ${APPROVED_CATALOG_TOTAL}, got ${catalog.recipeCount}`);
   }
 
   const smoothieCount = catalog.recipes.filter((entry) => entry.isSmoothie).length;
-  const mealSlugs = new Set(expectedMeals.map((entry) => entry.slug.trim().toLowerCase()));
+  const mealSlugs = new Set(
+    index.recipes.filter((entry) => isApprovedCatalogSlug(entry.slug)).map((entry) => entry.slug.trim().toLowerCase()),
+  );
   const expectedSmoothies = SMOOTHIE_CATALOG_ITEMS.filter(
     (item) => !mealSlugs.has(item.slug.trim().toLowerCase()),
   ).length;

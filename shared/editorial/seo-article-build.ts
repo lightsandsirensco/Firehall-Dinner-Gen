@@ -13,8 +13,13 @@ import type {
 
 const PUBLISHED = "2026-05-27T18:00:00.000Z";
 
-export function meal(slug: string, title: string, blurb: string): EditorialMealPick {
-  return { slug, title, blurb };
+export function meal(
+  slug: string,
+  title: string,
+  blurb: string,
+  catalog?: EditorialMealPick["catalog"],
+): EditorialMealPick {
+  return catalog ? { slug, title, blurb, catalog } : { slug, title, blurb };
 }
 
 function defaultPillar(topic: EditorialTopic): EditorialPillar {
@@ -39,11 +44,13 @@ export function buildSeoGuide(input: {
   topic?: EditorialTopic;
   pillar?: EditorialPillar;
   readMinutes?: number;
+  seoTitle?: string;
 }): EditorialArticle {
   const topic = input.topic ?? "meal_planning";
   return {
     slug: input.slug,
     title: input.title,
+    ...(input.seoTitle ? { seoTitle: input.seoTitle } : {}),
     subtitle: input.subtitle,
     description: input.description,
     topic,

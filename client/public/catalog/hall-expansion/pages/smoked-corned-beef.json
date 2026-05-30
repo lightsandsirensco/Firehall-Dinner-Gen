@@ -1,0 +1,184 @@
+{
+  "slug": "smoked-corned-beef",
+  "title": "Smoked Corned Beef Brisket",
+  "displayTitle": "Smoked Corned Beef Brisket",
+  "seoTitle": "Smoked Corned Beef Brisket | Firefighter Meal",
+  "shortDescription": "Spiced corned beef with smoke and mustard glaze for ten",
+  "subtitle": "Spiced corned beef with smoke and mustard glaze for ten",
+  "category": "hall_expansion",
+  "cuisine": "american",
+  "description": "Store-bought or house-cured corned beef brisket is rinsed, smoked until tender, and finished with a sweet mustard glaze. Slice thick for sandwiches or plate with cabbage and potatoes for a one-tray meal.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 300,
+  "prepTime": 15,
+  "difficulty": "hard",
+  "calories": 520,
+  "protein": 38,
+  "carbs": 32,
+  "fats": 28,
+  "tags": [
+    "protein:beef",
+    "format:smoker",
+    "category:smoker_recipes",
+    "bbq",
+    "smoker",
+    "beef",
+    "hall_expansion",
+    "hall_expansion_56",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Smoker",
+    "Heavy-duty foil",
+    "Instant-read thermometer",
+    "Slicing knife",
+    "Hotel pans"
+  ],
+  "ingredients": [
+    {
+      "name": "corned beef brisket flat",
+      "quantity": "8",
+      "unit": "lb",
+      "group": "Main"
+    },
+    {
+      "name": "brown sugar",
+      "quantity": "0.25",
+      "unit": "cup",
+      "group": "Glaze"
+    },
+    {
+      "name": "whole-grain mustard",
+      "quantity": "0.25",
+      "unit": "cup",
+      "group": "Glaze"
+    },
+    {
+      "name": "apple cider vinegar",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Glaze"
+    },
+    {
+      "name": "guinness or dark beer",
+      "quantity": "12",
+      "unit": "oz",
+      "notes": "for wrap",
+      "group": "Cook"
+    },
+    {
+      "name": "green cabbage",
+      "quantity": "2",
+      "unit": "heads",
+      "notes": "quartered",
+      "group": "Side"
+    },
+    {
+      "name": "baby potatoes",
+      "quantity": "3",
+      "unit": "lb",
+      "group": "Side"
+    },
+    {
+      "name": "caraway seeds",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Side"
+    },
+    {
+      "name": "rye bread",
+      "quantity": "20",
+      "unit": "slices",
+      "group": "Serve"
+    },
+    {
+      "name": "swiss cheese",
+      "quantity": "10",
+      "unit": "slices",
+      "group": "Serve"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Rinse and prep the brisket",
+      "instruction": "Rinse corned beef under cold water to remove surface brine, pat completely dry, and let sit at room temperature 30 minutes while the smoker heats to 250°F.",
+      "minutes": 35,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Smoke uncovered to color",
+      "instruction": "Place brisket fat-side up on the smoker grate and cook until bark develops and internal temp reaches 165°F, about 3–4 hours without wrapping. Target oven/smoker temperature: 250°F.",
+      "minutes": 180,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Wrap and braise in smoke",
+      "instruction": "Wrap tightly in foil with beer, return to smoker, and continue until probe-tender and internal temp hits 200°F, about 1.5–2 hours more. Target oven/smoker temperature: 250°F.",
+      "minutes": 105,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Glaze and set",
+      "instruction": "Mix brown sugar, mustard, and vinegar. Unwrap, brush glaze over the top, and smoke 20 minutes at 275°F until sticky and lightly caramelized. Target oven/smoker temperature: 275°F.",
+      "minutes": 20,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Rest, slice, and serve",
+      "instruction": "Rest wrapped 20 minutes, then slice against the grain quarter-inch thick. Serve with smoked cabbage-potato packets and rye for Reuben-style plates.",
+      "minutes": 25,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Taste a thin slice before salting anything else—corned beef carries plenty of seasoning already.",
+    "If the flat dries at the tip, chop the end into hash rather than serving dry slices.",
+    "Leftover corned beef makes elite grilled Reubens with sauerkraut and Thousand Island."
+  ],
+  "tonightSpread": [
+    "Sliced corned beef with smoked cabbage, potatoes, and rye bread for sandwiches.",
+    "Strong mustard and pickles on the side for crews building their own Reuben plates."
+  ],
+  "leftovers": [
+    "Chop into corned beef hash with fried eggs for post-shift breakfast.",
+    "Layer into grilled cheese with sauerkraut and swiss for quick Reuben melts."
+  ],
+  "whyCrewsLikeIt": "Corned beef feels like a holiday meal but works any time the crew wants salty, smoky comfort. Smoking instead of boiling adds depth while keeping the familiar spice profile everyone recognizes.",
+  "mealPrepNotes": "Rinse corned beef well to control salt level—pat dry before smoking. Cabbage and potatoes can roast in foil packets on the smoker during the last hour.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 520,
+    "protein": 38,
+    "carbs": 32,
+    "fats": 28,
+    "label": "~520 cal/serving · 38g protein · 4g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/smoked-corned-beef.jpg",
+  "heroImageAlt": "Smoked Corned Beef Brisket — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/smoked-corned-beef.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/smoked-corned-beef.jpg",
+  "railImage": "/images/rails/hall-expansion/smoked-corned-beef.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "smoked corned beef brisket",
+    "smoker recipes"
+  ],
+  "relatedSlugs": [
+    "smoked-turkey-breast",
+    "smoked-meatloaf",
+    "smoked-mac-and-cheese",
+    "pork-belly-burnt-ends"
+  ],
+  "generatedAt": "2026-05-30T03:14:19.188Z",
+  "contentVersion": 2
+}

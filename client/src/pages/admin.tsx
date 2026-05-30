@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Link } from "wouter";
-import { Shield, DollarSign, Database, Activity, RefreshCw, Users, Globe, ChefHat } from "lucide-react";
+import { Shield, DollarSign, Database, Activity, RefreshCw, Users, Globe, ChefHat, ThumbsUp } from "lucide-react";
 import { adminFetch } from "@/lib/admin-api";
 
 interface UsageData {
@@ -93,6 +93,12 @@ export default function AdminPage() {
                 Recipe Ingestion
               </Button>
             </Link>
+            <Link href="/admin/recipe-ratings">
+              <Button variant="outline" data-testid="button-recipe-ratings-admin">
+                <ThumbsUp className="w-4 h-4 mr-2" />
+                Crew Ratings
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
@@ -109,6 +115,27 @@ export default function AdminPage() {
             <RefreshCw className={`w-4 h-4 mr-2 ${loading ? "animate-spin" : ""}`} />
             Refresh
           </Button>
+        </div>
+
+        <div className="flex flex-wrap gap-2">
+          <Link href="/admin/golden-100">
+            <Button variant="outline" size="sm" data-testid="button-golden-100-admin-nav">
+              <ChefHat className="w-4 h-4 mr-2" />
+              Golden 100
+            </Button>
+          </Link>
+          <Link href="/admin/ingestion">
+            <Button variant="outline" size="sm" data-testid="button-ingestion-admin-nav">
+              <ChefHat className="w-4 h-4 mr-2" />
+              Ingestion
+            </Button>
+          </Link>
+          <Link href="/admin/recipe-ratings">
+            <Button variant="outline" size="sm" data-testid="button-recipe-ratings-admin-nav">
+              <ThumbsUp className="w-4 h-4 mr-2" />
+              Crew Ratings
+            </Button>
+          </Link>
         </div>
 
         {error && (

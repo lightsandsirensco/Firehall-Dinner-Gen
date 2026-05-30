@@ -1,0 +1,23 @@
+{
+  "generatedAt": "2026-05-30T03:47:26.080Z",
+  "publicRoot": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public",
+  "requiredAssets": [
+    {
+      "path": "/downloads/the-official-firehall-red-lead-recipe.html",
+      "exists": true,
+      "bytes": 34074
+    },
+    {
+      "path": "/downloads/the-official-firehall-red-lead-recipe.pdf",
+      "exists": true,
+      "bytes": 336763
+    }
+  ],
+  "referencedCount": 980,
+  "missingCount": 0,
+  "missing": [],
+  "catalogImageErrors": [],
+  "orphanDownloads": [],
+  "distMissing": [],
+  "pass": true
+}

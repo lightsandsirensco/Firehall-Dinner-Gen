@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { cn } from "@/lib/utils";
 import type { RecipeLinkCluster } from "@shared/golden-100/internal-link-clusters";
+import { approvedCatalogRecipePath } from "@shared/approved-catalog";
 
 interface RecipeInternalLinksProps {
   clusters: RecipeLinkCluster[];
@@ -41,7 +42,7 @@ export function RecipeInternalLinks({ clusters, className }: RecipeInternalLinks
               {group.links.map((link) => (
                 <li key={link.slug}>
                   <Link
-                    href={`/recipes/${link.slug}`}
+                    href={approvedCatalogRecipePath(link.slug)}
                     className="text-sm text-primary hover:underline underline-offset-2 leading-snug"
                   >
                     {link.title}

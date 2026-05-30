@@ -1,0 +1,218 @@
+{
+  "slug": "veggie-supreme-pizza",
+  "title": "Veggie Supreme Pizza",
+  "displayTitle": "Veggie Supreme Pizza",
+  "seoTitle": "Veggie Supreme Pizza | Firefighter Meal",
+  "shortDescription": "Roasted peppers, mushrooms, olives",
+  "subtitle": "Roasted peppers, mushrooms, olives",
+  "category": "pizza_night",
+  "cuisine": "italian",
+  "description": "Roasted peppers, mushrooms, olives. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 90,
+  "prepTime": 35,
+  "difficulty": "medium",
+  "calories": 676,
+  "protein": 35,
+  "carbs": 44,
+  "fats": 40,
+  "tags": [
+    "protein:vegetarian",
+    "format:pizza",
+    "category:pizza_night",
+    "handheld",
+    "healthy",
+    "golden_100"
+  ],
+  "equipment": [
+    "Pizza stone or steel",
+    "Peel or inverted sheet pan",
+    "Large sheet trays",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "ingredients": [
+    {
+      "name": "Pizza dough balls (15 oz)",
+      "quantity": "4",
+      "unit": "count",
+      "group": "Crust"
+    },
+    {
+      "name": "Pizza sauce",
+      "quantity": "3",
+      "unit": "cups",
+      "group": "Sauce"
+    },
+    {
+      "name": "Low-moisture mozzarella, shredded",
+      "quantity": "28",
+      "unit": "oz",
+      "group": "Cheese"
+    },
+    {
+      "name": "Bell peppers, diced",
+      "quantity": "4",
+      "unit": "count",
+      "group": "Veg"
+    },
+    {
+      "name": "Red onion, diced",
+      "quantity": "2",
+      "unit": "large",
+      "group": "Veg"
+    },
+    {
+      "name": "Mushrooms, sliced",
+      "quantity": "16",
+      "unit": "oz",
+      "group": "Veg"
+    },
+    {
+      "name": "Black olives, sliced",
+      "quantity": "1.5",
+      "unit": "cups",
+      "group": "Veg"
+    },
+    {
+      "name": "Baby spinach, chopped",
+      "quantity": "6",
+      "unit": "oz",
+      "group": "Veg"
+    },
+    {
+      "name": "Marinated artichoke hearts, drained",
+      "quantity": "12",
+      "unit": "oz",
+      "group": "Veg"
+    },
+    {
+      "name": "Grated parmesan",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Finish"
+    },
+    {
+      "name": "Dried oregano",
+      "quantity": "2",
+      "unit": "tsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Olive oil",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Veg"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Sauté watery vegetables",
+      "instruction": "Sauté mushrooms, peppers, and onion in olive oil over medium-high 10 minutes until moisture evaporates and edges brown. Wilt spinach 1 minute; squeeze dry. Wet veg on pizza = soggy Veggie Supreme.",
+      "minutes": 15,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat stone to 500°F",
+      "instruction": "Heat stone or steel at 500°F at least 40 minutes. Drain artichokes and quarter if large.",
+      "minutes": 40,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Stretch, sauce, first cheese",
+      "instruction": "Stretch four 12–14 inch rounds. Sauce evenly; layer half the mozzarella. This anchors vegetables so they do not slide off at the peel.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Load vegetables and top cheese",
+      "instruction": "Distribute sautéed veg, olives, and artichokes evenly. Top with remaining mozzarella and oregano. Veggie Supreme should look crowded but color still peeks through.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Bake until center is fully set",
+      "instruction": "Bake 12–15 minutes until cheese browns at edges and the vegetable center is hot through. Loaded veg pies need the full time — pale cheese over wet veg means underbaked. Rotate once.",
+      "minutes": 14,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Parmesan, rest, and cut",
+      "instruction": "Rest 3 minutes, sprinkle parmesan, cut 8 slices per pie. Fan on sheet trays for eight. No meat does not mean light eaters — keep a backup pie at 200°F on a rack.",
+      "minutes": 5,
+      "heatLevel": "low"
+    }
+  ],
+  "proTips": [
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
+    "Taste for salt at the end — hall palates run salty after long shifts."
+  ],
+  "tonightSpread": [
+    "Cut pies into hall slices (8 per pie minimum) and fan on sheet trays.",
+    "Keep a fresh pie warming in the oven — pizza dies fast on the counter.",
+    "Line up Veggie Supreme Pizza on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+  ],
+  "leftovers": [
+    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
+    "Label trays with date and reheat to 165°F minimum before second shift."
+  ],
+  "whyCrewsLikeIt": "Roasted peppers, mushrooms, olives. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
+  "substitutions": [],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 676,
+    "protein": 35,
+    "carbs": 44,
+    "fats": 40,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "heroImage": "/images/golden-100/veggie-supreme-pizza.jpg",
+  "mobileImage": "/images/mobile/veggie-supreme-pizza.jpg",
+  "thumbImage": "/images/thumbs/veggie-supreme-pizza.jpg",
+  "railImage": "/images/rails/veggie-supreme-pizza.jpg",
+  "realismScore": 100,
+  "firefighterScore": 98,
+  "popularityWeight": 3.2,
+  "searchTerms": [
+    "veggie supreme pizza",
+    "italian",
+    "vegetarian",
+    "pizza",
+    "handheld",
+    "healthy",
+    "golden_100"
+  ],
+  "relatedSlugs": [
+    "four-cheese-white-pizza",
+    "margherita-pizza",
+    "honey-soppressata-pizza",
+    "pepperoni-pizza-night",
+    "pesto-chicken-pizza",
+    "sicilian-sheet-pizza"
+  ],
+  "generatedAt": "2026-05-30T03:45:01.622Z",
+  "contentVersion": 2
+}

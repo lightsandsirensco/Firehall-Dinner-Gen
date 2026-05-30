@@ -1,0 +1,184 @@
+{
+  "slug": "molasses-bourbon-pork-ribs",
+  "title": "Molasses Bourbon Pork Ribs",
+  "displayTitle": "Molasses Bourbon Pork Ribs",
+  "seoTitle": "Molasses Bourbon Pork Ribs | Firefighter Meal",
+  "shortDescription": "St. Louis ribs with sticky molasses-bourbon glaze for ten",
+  "subtitle": "St. Louis ribs with sticky molasses-bourbon glaze for ten",
+  "category": "hall_expansion",
+  "cuisine": "american",
+  "description": "St. Louis-cut ribs get a brown-sugar rub, smoke wrapped until tender, then finish unwrapped with a molasses-bourbon glaze until sticky and lightly charred. Cut into three-bone sections for fast service.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 300,
+  "prepTime": 30,
+  "difficulty": "medium",
+  "calories": 580,
+  "protein": 38,
+  "carbs": 28,
+  "fats": 36,
+  "tags": [
+    "protein:pork",
+    "format:smoker",
+    "category:smoker_recipes",
+    "bbq",
+    "smoker",
+    "pork",
+    "hall_expansion",
+    "hall_expansion_56",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Smoker",
+    "Aluminum foil",
+    "Spray bottle",
+    "Basting brush",
+    "Instant-read thermometer"
+  ],
+  "ingredients": [
+    {
+      "name": "St. Louis pork ribs",
+      "quantity": "4",
+      "unit": "racks",
+      "notes": "about 8 lb total",
+      "group": "Main"
+    },
+    {
+      "name": "brown sugar",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Rub"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Rub"
+    },
+    {
+      "name": "smoked paprika",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Rub"
+    },
+    {
+      "name": "garlic powder",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Rub"
+    },
+    {
+      "name": "black pepper",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Rub"
+    },
+    {
+      "name": "molasses",
+      "quantity": "0.33",
+      "unit": "cup",
+      "group": "Glaze"
+    },
+    {
+      "name": "bourbon",
+      "quantity": "0.25",
+      "unit": "cup",
+      "group": "Glaze"
+    },
+    {
+      "name": "BBQ sauce",
+      "quantity": "1",
+      "unit": "cup",
+      "group": "Glaze"
+    },
+    {
+      "name": "apple juice",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "for spritz and wrap",
+      "group": "Glaze"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Prep and rub the racks",
+      "instruction": "Remove silver skin from the bone side of each rack. Coat both sides with brown sugar, salt, smoked paprika, garlic powder, and black pepper. Let sit 20 minutes while smoker preheats.",
+      "minutes": 25,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Smoke the ribs",
+      "instruction": "Heat smoker to 275°F with fruit or hickory wood. Place ribs bone-side down and smoke 2 hours, spritzing with apple juice every 45 minutes. Target oven/smoker temperature: 275°F.",
+      "minutes": 120,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Wrap for tenderness",
+      "instruction": "Lay each rack on foil, add 2 tablespoons apple juice, wrap tight, and return to smoker until meat pulls back from bones and internal temp hits 195°F, about 1.5–2 hours. Target oven/smoker temperature: 275°F.",
+      "minutes": 105,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Glaze and finish",
+      "instruction": "Unwrap ribs, brush with molasses-bourbon glaze mixed with BBQ sauce, and smoke uncovered 20–30 minutes until sticky and lightly charred at the edges. Target oven/smoker temperature: 275°F.",
+      "minutes": 25,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Rest and portion",
+      "instruction": "Rest racks 10 minutes, slice into three-bone sections, and pile on platters. Serve with extra glaze and wet wipes at the line.",
+      "minutes": 15,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "If ribs finish early, hold wrapped in a cooler up to 90 minutes without losing texture.",
+    "Keep bourbon away from open flame—add to glaze off heat, then brush on the smoker.",
+    "Offer extra napkins. This is not a fork-and-knife meal and crews will respect you for knowing that."
+  ],
+  "tonightSpread": [
+    "Rib sections on sheet pans with extra glaze and cornbread muffins.",
+    "Cool cucumber salad with sour cream to reset between sweet, sticky bites."
+  ],
+  "leftovers": [
+    "Pull meat from bones and fold into mac and cheese for smoky rib mac.",
+    "Chop and pile on loaded fries with shredded cheese and scallions."
+  ],
+  "whyCrewsLikeIt": "Ribs are pure game-day energy—hands-on, satisfying, and impossible to eat just one. Pre-cutting racks into sections means faster plating when the tones drop mid-meal.",
+  "mealPrepNotes": "Remove silver skin the day before and keep seasoned racks on sheet pans in the fridge. Glaze can be mixed ahead. Hold finished ribs loosely tented at 170°F—tight foil steams away bark.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 580,
+    "protein": 38,
+    "carbs": 28,
+    "fats": 36,
+    "label": "~580 cal/serving · 38g protein · 1g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/molasses-bourbon-pork-ribs.jpg",
+  "heroImageAlt": "Molasses Bourbon Pork Ribs — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/molasses-bourbon-pork-ribs.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/molasses-bourbon-pork-ribs.jpg",
+  "railImage": "/images/rails/hall-expansion/molasses-bourbon-pork-ribs.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "molasses bourbon pork ribs",
+    "smoker recipes"
+  ],
+  "relatedSlugs": [
+    "smoked-turkey-breast",
+    "smoked-meatloaf",
+    "smoked-mac-and-cheese",
+    "pork-belly-burnt-ends"
+  ],
+  "generatedAt": "2026-05-30T03:14:19.188Z",
+  "contentVersion": 2
+}

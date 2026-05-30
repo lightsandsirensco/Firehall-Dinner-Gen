@@ -5,7 +5,10 @@
 
 export const BRAND_NAME = "Firehall Meals";
 
-export const BRAND_TAGLINE = "Firefighter Built. Firehall Tested.";
+export const BRAND_TAGLINE = "Built by Firefighters. Tested in the Firehall.";
+
+export const BRAND_MISSION =
+  "Get rid of the \"What's for Dinner?\" debate every shift.";
 
 /** @deprecated Prefer `@/lib/lights-and-sirens` and brand components */
 export const BRAND_CREDIT = {
@@ -16,7 +19,7 @@ export const BRAND_CREDIT = {
 export const CTA = {
   findDinner: "Find a Meal",
   pickDinner: "Pick dinner",
-  exploreMeals: "Explore Meals",
+  exploreMeals: "Browse Recipes",
   viewRecipes: "All recipes",
   fullFaq: "All questions",
   spinAgain: "Spin again",
@@ -31,23 +34,22 @@ export const GENERATOR = {
   headline: "Find a meal for the crew.",
   headlineWithMeal: "Tonight's pick",
   subline:
-    "Set crew size, protein, and time — we'll match you with a dinner that actually works on shift.",
+    "Set crew size, protein, and time — we'll match you with a firefighter meal that works on shift.",
   sublineFocus: "Shuffle or tweak your picks below.",
   loading: "Finding a plate…",
   loadingAlt: "Trying another…",
   emptyTitle: "Ready when you are",
-  emptyBody: "Set the crew, hit Pick dinner, or browse Explore if you want to look around first.",
+  emptyBody: "Set the crew, hit Pick dinner, or browse firefighter recipes if you want to look around first.",
   emptyHint: "More controls below if you want to narrow it down.",
   wheelLink: "Can't decide? Try the Classics Wheel →",
 } as const;
 
 export const HOME = {
-  /** Visible H1 — primary SEO target (see shared/seo/constants SEO_HOME_H1). */
-  h1: "Firefighter Recipes Built for the Crew",
-  heroEyebrow: "Firefighter recipes · Firehouse meals · Hall-tested",
+  h1: "Firefighter Meals & Firehall Recipes",
+  heroEyebrow: "Firefighter meals · Firehall recipes · Crew-tested",
   eyebrow: "Station kitchen · Crew dinners",
   subline:
-    "The largest collection of firefighter recipes and firehouse meals — crew-sized portions, honest timing, and steps written for station kitchens.",
+    "The largest collection of firefighter meals and firehall recipes — crew-sized portions, honest timing, and steps written for station kitchens.",
   trust: {
     built: "Firefighter built",
     crew: "Feeds the crew",
@@ -56,29 +58,31 @@ export const HOME = {
     cleanup: "Easy cleanup",
   },
   stats: {
-    recipes: "Recipes",
+    recipes: "Curated Recipes",
     categories: "Categories",
     crew: "Crew size",
     time: "Time windows",
   },
   howTitle: "How it works",
   howLead: "Three steps. One dinner on the table.",
-  featuredTitle: "Popular firefighter recipes",
+  featuredTitle: "Popular firefighter meals",
   featuredLead: "Hall-tested firehouse meals crews actually cook — browse the full catalog anytime.",
   whyTitle: "Why halls use it",
   whyLead: "Written for the station, not the recipe scroll.",
-  seoTitle: "Firefighter recipes, firehouse meals & hall guides",
+  seoTitle: "Firefighter meals, firehall recipes & hall guides",
+  introTitle: "Firefighter meals for every shift",
   ctaBandTitle: "Feed the crew.",
-  ctaBandBody: "Dinners with realistic timing and portions that survive a busy night.",
-  faqTitle: "Questions",
+  ctaBandBody: "Firefighter meals with realistic timing and portions that survive a busy night.",
+  faqTitle: "Hall questions",
 } as const;
 
 export const NAV = {
   home: "Home",
   generator: "Find a Meal",
-  explore: "Explore Meals",
+  explore: "Browse Recipes",
   ideas: "Hall Ideas",
   wheel: "Classics Wheel",
+  pizza: "Pizza Night",
   faq: "FAQ",
   saved: "Saved",
 } as const;
@@ -94,6 +98,6 @@ export const CLASSICS_WHEEL = {
   eyebrow: "Crew tradition",
   hint: "Tap Spin or the center button. What lands is what you cook.",
   suspense: "Still spinning…",
-  browseLink: "Rather browse? Explore all meals →",
+  browseLink: "Rather browse? Explore firefighter recipes →",
   shareCta: "Share tonight's pick",
 } as const;

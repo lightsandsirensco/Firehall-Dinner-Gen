@@ -13,10 +13,10 @@
   "cookTime": 100,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 520,
-  "protein": 32,
-  "carbs": 48,
-  "fats": 22,
+  "calories": 403,
+  "protein": 54,
+  "carbs": 11,
+  "fats": 15,
   "tags": [
     "protein:chicken",
     "format:sheet_pan",
@@ -102,7 +102,7 @@
   ],
   "proTips": [
     "Cool portions in shallow trays before the fridge — deep containers stay in the danger zone too long.",
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts.",
     "Pull chicken at 160°F and let carryover hit 165°F — dry breast ruins crew morale."
   ],
@@ -117,18 +117,32 @@
     "Portion into individual containers on night one — locker-friendly for shift two."
   ],
   "whyCrewsLikeIt": "Portioned trays, reheat-ready. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
-  "mealPrepNotes": "Cook protein and sauce ahead; assemble day-of in under 20 minutes. Label and date everything in the fridge.",
+  "mealPrepNotes": "Cook boneless chicken thighs and sauce ahead; assemble day-of in under 20 minutes. Label and date everything in the fridge.",
   "substitutions": [
     "Chicken thighs ↔ breasts (thighs forgive overcooking on the flat-top)."
   ],
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 520,
-    "protein": 32,
-    "carbs": 48,
-    "fats": 22,
-    "label": "per serving (hall portion)"
+    "calories": 403,
+    "protein": 54,
+    "carbs": 11,
+    "fats": 15,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": true,
+      "performanceMeal": true
+    }
   },
   "heroImage": "/images/golden-100/sheet-pan-meal-prep.jpg",
   "mobileImage": "/images/mobile/sheet-pan-meal-prep.jpg",
@@ -157,6 +171,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-29T01:43:09.435Z",
+  "generatedAt": "2026-05-30T03:28:02.007Z",
   "contentVersion": 2
 }

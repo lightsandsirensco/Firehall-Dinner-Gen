@@ -1,0 +1,187 @@
+{
+  "slug": "spatchcock-lemon-roast-chicken",
+  "title": "Spatchcock Lemon Roast Chicken",
+  "displayTitle": "Spatchcock Lemon Roast Chicken",
+  "seoTitle": "Spatchcock Lemon Roast Chicken | Firefighter Meal",
+  "shortDescription": "Whole birds flattened with lemon-garlic butter for ten",
+  "subtitle": "Whole birds flattened with lemon-garlic butter for ten",
+  "category": "hall_expansion",
+  "cuisine": "american",
+  "description": "Whole chickens are spatchcocked, seasoned under the skin with lemon-garlic butter, and roasted on sheet pans until golden. Carve into quarters and eighths for fast hall service.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 60,
+  "prepTime": 35,
+  "difficulty": "medium",
+  "calories": 420,
+  "protein": 40,
+  "carbs": 8,
+  "fats": 26,
+  "tags": [
+    "protein:chicken",
+    "format:roast",
+    "category:crew_feeders",
+    "chicken",
+    "comfort",
+    "hall_expansion",
+    "hall_expansion_56",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Kitchen shears",
+    "Sheet pans",
+    "Instant-read thermometer",
+    "Carving knife",
+    "Mixing bowls"
+  ],
+  "ingredients": [
+    {
+      "name": "whole chickens",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "about 5 lb each",
+      "group": "Main"
+    },
+    {
+      "name": "unsalted butter",
+      "quantity": "0.5",
+      "unit": "cup",
+      "notes": "softened",
+      "group": "Butter"
+    },
+    {
+      "name": "lemon",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "zested and juiced",
+      "group": "Butter"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "8",
+      "unit": "cloves",
+      "notes": "minced",
+      "group": "Butter"
+    },
+    {
+      "name": "fresh thyme",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Butter"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "black pepper",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "quartered",
+      "group": "Roast"
+    },
+    {
+      "name": "carrots",
+      "quantity": "4",
+      "unit": "whole",
+      "notes": "chunked",
+      "group": "Roast"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Spatchcock the birds",
+      "instruction": "Remove backbones with shears, flatten chickens breast-side up, and tuck wing tips under. Pat completely dry inside and out.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Season under the skin",
+      "instruction": "Mix butter with lemon zest, juice, garlic, and thyme. Loosen breast skin and spread half the butter mix under skin on each bird. Season outside with salt, pepper, and olive oil.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Roast on vegetables",
+      "instruction": "Scatter onion and carrots on two sheet pans. Place spatchcocked birds on top and roast at 425°F until thickest breast hits 165°F and skin is golden, about 50–60 minutes. Target oven/smoker temperature: 425°F.",
+      "minutes": 55,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Rest before carving",
+      "instruction": "Tent birds with foil and rest 15 minutes so juices settle. Save pan juices and roasted vegetables for service.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Carve for the line",
+      "instruction": "Carve each bird into ten portions: legs, thighs, and breast pieces. Arrange on hotel pans with pan juices spooned over.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Insert probe in the thickest part of the breast, not touching bone, for accurate reads.",
+    "If skin browns too fast, tent loosely with foil and keep roasting to 165°F internal.",
+    "Roasted pan vegetables make an easy side without another pot to wash."
+  ],
+  "tonightSpread": [
+    "Carved chicken on platters with pan juices and roasted carrots and onions.",
+    "Mashed potatoes or crusty bread to soak up lemon-garlic butter."
+  ],
+  "leftovers": [
+    "Strip bones for chicken soup with the roasted vegetable base.",
+    "Slice cold breast for sandwiches with mayo and crisp lettuce."
+  ],
+  "whyCrewsLikeIt": "Spatchcocking cuts roast time nearly in half and gives every piece crisp skin. Whole bird night feels special without the stress of grilling twenty individual pieces.",
+  "mealPrepNotes": "Spatchcock birds the morning of and keep on sheet pans in the fridge. Soften butter mix ahead. Rest birds 15 minutes before carving or juices run everywhere.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 420,
+    "protein": 40,
+    "carbs": 8,
+    "fats": 26,
+    "label": "~420 cal/serving · 40g protein · 2g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/spatchcock-lemon-roast-chicken.jpg",
+  "heroImageAlt": "Spatchcock Lemon Roast Chicken — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/spatchcock-lemon-roast-chicken.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/spatchcock-lemon-roast-chicken.jpg",
+  "railImage": "/images/rails/hall-expansion/spatchcock-lemon-roast-chicken.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "spatchcock lemon roast chicken",
+    "crew feeders"
+  ],
+  "relatedSlugs": [
+    "shawarma-bar-night",
+    "fajita-bar-night",
+    "hall-burger-bar",
+    "pasta-bar-night"
+  ],
+  "generatedAt": "2026-05-30T03:14:19.188Z",
+  "contentVersion": 2
+}

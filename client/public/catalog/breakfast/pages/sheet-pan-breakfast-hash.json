@@ -1,6 +1,8 @@
 {
   "slug": "sheet-pan-breakfast-hash",
   "title": "Sheet Pan Breakfast Hash",
+  "subtitle": "A practical station breakfast that scales from 4 to 12.",
+  "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
   "filters": [
     "feed_a_crew"
   ],
@@ -16,57 +18,90 @@
   "cookTime": 30,
   "totalTime": 45,
   "difficulty": "easy",
-  "heroImage": "/images/breakfast/sheet-pan-breakfast-hash.jpg",
-  "thumbImage": "/images/thumbs/breakfast/sheet-pan-breakfast-hash.jpg",
-  "seoTitle": "Sheet Pan Breakfast Hash | Firehall Breakfast",
-  "subtitle": "A practical station breakfast that scales from 4 to 12.",
-  "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
   "ingredients": [
     {
-      "quantity": "14",
-      "name": "large eggs"
+      "name": "Yukon gold potatoes",
+      "quantity": "3.5 lb",
+      "notes": "diced 1/2-inch"
     },
     {
-      "quantity": "1 1/2 tsp",
-      "name": "kosher salt",
-      "notes": "start low; adjust at the end"
+      "name": "large eggs",
+      "quantity": "14"
     },
     {
-      "quantity": "2 tbsp",
-      "name": "butter or oil"
+      "name": "breakfast sausage",
+      "quantity": "2 lb",
+      "notes": "browned and crumbled"
     },
     {
+      "name": "yellow onion",
       "quantity": "1",
-      "name": "black pepper",
-      "notes": "to taste"
+      "notes": "diced"
+    },
+    {
+      "name": "bell peppers",
+      "quantity": "1–2",
+      "notes": "diced"
+    },
+    {
+      "name": "olive oil or bacon fat",
+      "quantity": "2 tbsp"
+    },
+    {
+      "name": "shredded cheddar",
+      "quantity": "1–2 cups",
+      "notes": "optional finish"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Get your station set",
-      "minutes": 5,
-      "instruction": "Set a warm holding zone (200°F oven). Lay out a tray for finished food, a tray for clean toast/tortillas, and a trash bowl so you’re not chasing scraps mid-cook."
+      "title": "Heat the oven",
+      "instruction": "Heat oven to 425°F. Line a full sheet pan with parchment or foil for easy cleanup.",
+      "minutes": 0,
+      "tempF": 425
     },
     {
       "stepNumber": 2,
-      "title": "Cook the main",
-      "minutes": 25,
-      "instruction": "Cook the main components over medium to medium-high heat. Keep things in a single layer for browning, and season in layers so the finished plate doesn’t taste flat."
+      "title": "Roast the hash base",
+      "instruction": "Toss potatoes with oil, salt, and pepper. Spread in one layer and roast 15 minutes. Add sausage, onion, and peppers; roast until potatoes are browned and sausage is hot.",
+      "minutes": 18
     },
     {
       "stepNumber": 3,
-      "title": "Eggs last",
-      "minutes": 6,
-      "instruction": "Cook eggs last so they stay tender. For scrambled: low heat and pull early. For fried: cover to set whites without blasting the yolk."
+      "title": "Make wells for eggs",
+      "instruction": "Pull pan from oven. Make shallow wells across the hash. Crack eggs into wells and season lightly.",
+      "minutes": 3
     },
     {
       "stepNumber": 4,
-      "title": "Serve and hold",
-      "minutes": 0,
-      "instruction": "Serve immediately; hold the rest warm. If a call hits, cover soft items; keep crispy items uncovered so they don’t steam."
+      "title": "Bake until eggs set",
+      "instruction": "Return to oven until whites are set and yolks are still slightly soft (or longer for firm yolks). Finish with cheese if using.",
+      "minutes": 10,
+      "tempF": 425
     }
   ],
+  "nutrition": {
+    "calories": 562,
+    "protein": 25,
+    "carbs": 31,
+    "fat": 37,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
   "stationWorkflow": [
     "Assign one cook to the hot surface and one to assembly. Keep the line moving; don’t crowd the griddle.",
     "Set a warm holding zone (oven 200°F or covered hotel pan) so staggered eaters still get a hot plate.",
@@ -80,8 +115,11 @@
     "Cool fast: spread on a sheet pan 10 minutes, then portion into containers so it doesn’t sweat.",
     "Reheat rule: eggs reheat best covered at 50% power or low oven heat; don’t nuke on high."
   ],
+  "heroImage": "/images/breakfast/sheet-pan-breakfast-hash.jpg",
+  "thumbImage": "/images/thumbs/breakfast/sheet-pan-breakfast-hash.jpg",
   "imageAlt": "Warm station-kitchen breakfast: Sheet Pan Breakfast Hash",
-  "publishedAt": "2026-05-28T13:26:37.645Z",
-  "updatedAt": "2026-05-28T13:26:37.645Z",
-  "readMinutes": 4
+  "publishedAt": "2026-05-30T03:14:16.261Z",
+  "updatedAt": "2026-05-30T03:14:16.261Z",
+  "readMinutes": 6,
+  "seoTitle": "Sheet Pan Breakfast Hash | Firehall Breakfast"
 }

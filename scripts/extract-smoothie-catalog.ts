@@ -28,7 +28,7 @@ function ing(
   return { name, quantity, unit, notes };
 }
 
-const SMOOTHIE_IMAGE = (id: string) => \`/images/editorial/smoothies/\${id}.webp\`;
+const SMOOTHIE_IMAGE = (id: string) => `/images/smoothies/${id}.webp`;
 
 export const SMOOTHIE_RECIPES_SOURCE: EditorialEmbeddedRecipe[] = `;
 

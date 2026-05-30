@@ -42,6 +42,18 @@ import {
   closeHallVote,
   hashVoterFingerprint,
 } from "./hall-vote-store";
+import {
+  initRecipeCrewRatingsStore,
+  getRecipeCrewRatingPublicView,
+  castRecipeCrewRatingVote,
+  hashCrewRatingFingerprint,
+  getRecipeCrewRatingCollectionsForCatalog,
+  getRecipeCrewRatingAnalytics,
+  getRatingSortMap,
+} from "./recipe-crew-ratings/store.js";
+import { buildApprovedCatalog } from "./approved-catalog.js";
+import { castCrewRatingVoteSchema } from "../shared/recipe-crew-ratings/schema.js";
+import { EMPTY_RECIPE_CREW_RATING_COLLECTIONS } from "../shared/recipe-crew-ratings/types.js";
 import { registerHallFeedbackRoutes } from "./hall-feedback-routes.js";
 
 function routeParam(value: string | string[] | undefined): string {
@@ -84,14 +96,23 @@ import fs from "node:fs";
 import path from "node:path";
 import { GOLDEN_CATALOG_PUBLIC_DIR } from "./golden-100/page-store.js";
 import {
+  PIZZA_NIGHT_CATALOG_PUBLIC_DIR,
+  readPizzaNightRecipePage,
+} from "./pizza-night/page-store.js";
+import {
   PERFORMANCE_CATALOG_PUBLIC_DIR,
   readPerformanceRecipePage,
 } from "./performance-meals/page-store.js";
 import { buildPerformanceRecipePage } from "./performance-meals/page-builder.js";
 import { getPerformanceRecipeBySlug } from "../shared/performance-meals/adapted/index.js";
+import {
+  HALL_EXPANSION_CATALOG_PUBLIC_DIR,
+  readHallExpansionRecipePage,
+} from "./hall-expansion/page-store.js";
+import { buildHallExpansionRecipePage } from "./hall-expansion/page-builder.js";
+import { getHallExpansionRecipeBySlug } from "../shared/hall-expansion/adapted/index.js";
 import { loadMergedHallCatalogIndex, resolveHallRecipePage } from "./meal-catalog/load-index.js";
 import { hallCatalogExploreCards } from "./meal-catalog/search-golden.js";
-import { buildApprovedCatalog } from "./approved-catalog.js";
 import {
   SMOOTHIE_CATALOG_PUBLIC_DIR,
   readSmoothieRecipePage,
@@ -245,6 +266,7 @@ export async function registerRoutes(
     initRecipeCatalog,
     initIngestionStore,
     initHallVoteTables,
+    initRecipeCrewRatingsStore,
   });
 
   const klaviyoCheck = validateKlaviyoConfig();
@@ -1921,6 +1943,88 @@ export async function registerRoutes(
     }
   });
 
+  app.get("/api/recipe-ratings/collections", (_req: Request, res: Response) => {
+    try {
+      const catalog = buildApprovedCatalog();
+      const collections = getRecipeCrewRatingCollectionsForCatalog(
+        catalog.recipes.map((r) => ({ slug: r.slug, category: r.category })),
+      );
+      return res.json(collections);
+    } catch (error: unknown) {
+      logError("crew-rating", "collections failed", error);
+      return res.json(EMPTY_RECIPE_CREW_RATING_COLLECTIONS);
+    }
+  });
+
+  app.get("/api/recipe-ratings/sort-map", (_req: Request, res: Response) => {
+    try {
+      const map = getRatingSortMap();
+      const slugs: Record<string, { approvalScore: number | null; totalVotes: number; trendingScore: number }> = {};
+      for (const [slug, v] of map.entries()) {
+        slugs[slug] = v;
+      }
+      return res.json({ slugs });
+    } catch (error: unknown) {
+      logError("crew-rating", "sort-map failed", error);
+      return res.status(500).json({ message: "Failed to load sort map" });
+    }
+  });
+
+  app.get("/api/recipe-ratings/:slug", (req: Request, res: Response) => {
+    try {
+      const slug = routeParam(req.params.slug);
+      const category = typeof req.query.category === "string" ? req.query.category : undefined;
+      const clientIp = getClientIp(req);
+      const ua = req.headers["user-agent"] || "";
+      const fingerprint = hashCrewRatingFingerprint(clientIp, ua);
+      const view = getRecipeCrewRatingPublicView(slug, { fingerprint, category });
+      return res.json(view);
+    } catch (error: unknown) {
+      logError("crew-rating", "get failed", error);
+      return res.status(500).json({ message: "Failed to load crew rating" });
+    }
+  });
+
+  app.post("/api/recipe-ratings/:slug/vote", requireCsrf, (req: Request, res: Response) => {
+    try {
+      const slug = routeParam(req.params.slug);
+      const parsed = castCrewRatingVoteSchema.safeParse(req.body);
+      if (!parsed.success) {
+        return res.status(400).json({ message: "Invalid vote payload" });
+      }
+      const clientIp = getClientIp(req);
+      const ua = req.headers["user-agent"] || "";
+      const ipHash = hashIp(clientIp);
+      const voteLimit = checkRateLimit(`crew-rating:${ipHash}`, 60 * 60 * 1000, 40);
+      if (!voteLimit.allowed) {
+        return res.status(429).json({ message: "Too many ratings — try again later." });
+      }
+      const fingerprint = hashCrewRatingFingerprint(clientIp, ua);
+      const sessionId = (req as any)._sessionId || "";
+      const result = castRecipeCrewRatingVote(slug, parsed.data, fingerprint, sessionId);
+      if (!result.ok) {
+        return res.status(result.status).json({ message: result.error });
+      }
+      return res.json(result.view);
+    } catch (error: unknown) {
+      logError("crew-rating", "vote failed", error);
+      return res.status(500).json({ message: "Failed to record vote" });
+    }
+  });
+
+  app.get("/api/admin/recipe-ratings/analytics", (_req: Request, res: Response) => {
+    try {
+      const catalog = buildApprovedCatalog();
+      const analytics = getRecipeCrewRatingAnalytics(
+        catalog.recipes.map((r) => ({ slug: r.slug, category: r.category })),
+      );
+      return res.json(analytics);
+    } catch (error: unknown) {
+      logError("crew-rating", "analytics failed", error);
+      return res.status(500).json({ message: "Failed to load analytics" });
+    }
+  });
+
   app.get("/health", (_req: Request, res: Response) => {
     return res.json({ status: "ok", uptime: process.uptime() });
   });
@@ -2166,9 +2270,33 @@ export async function registerRoutes(
 
   app.get("/api/catalog/golden-100/:slug", async (req: Request, res: Response) => {
     const slug = decodeURIComponent(String(req.params.slug)).trim().toLowerCase();
+    const pizzaPage = readPizzaNightRecipePage(slug);
+    if (pizzaPage) {
+      res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
+      return res.json(pizzaPage);
+    }
     const page = resolveHallRecipePage(slug);
     if (!page) {
       return res.status(404).json({ message: "Recipe not in hall catalog" });
+    }
+    res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
+    return res.json(page);
+  });
+
+  app.get("/api/catalog/pizza-night", async (_req: Request, res: Response) => {
+    const indexFile = path.join(PIZZA_NIGHT_CATALOG_PUBLIC_DIR, "index.json");
+    if (!fs.existsSync(indexFile)) {
+      return res.status(404).json({ message: "Pizza Night catalog not found" });
+    }
+    res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
+    return res.json(JSON.parse(fs.readFileSync(indexFile, "utf8")));
+  });
+
+  app.get("/api/catalog/pizza-night/:slug", async (req: Request, res: Response) => {
+    const slug = decodeURIComponent(String(req.params.slug)).trim().toLowerCase();
+    const page = readPizzaNightRecipePage(slug);
+    if (!page) {
+      return res.status(404).json({ message: "Recipe not in Pizza Night catalog" });
     }
     res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
     return res.json(page);
@@ -2192,6 +2320,27 @@ export async function registerRoutes(
     res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
     const onDisk = readPerformanceRecipePage(slug);
     const page = onDisk ?? buildPerformanceRecipePage(adapted);
+    return res.json(page);
+  });
+
+  app.get("/api/catalog/hall-expansion", async (_req: Request, res: Response) => {
+    res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
+    const indexFile = path.join(HALL_EXPANSION_CATALOG_PUBLIC_DIR, "index.json");
+    if (fs.existsSync(indexFile)) {
+      return res.type("json").send(fs.readFileSync(indexFile, "utf8"));
+    }
+    return res.status(404).json({ message: "Hall expansion catalog not generated" });
+  });
+
+  app.get("/api/catalog/hall-expansion/:slug", async (req: Request, res: Response) => {
+    const slug = decodeURIComponent(String(req.params.slug)).trim().toLowerCase();
+    const adapted = getHallExpansionRecipeBySlug(slug);
+    if (!adapted) {
+      return res.status(404).json({ message: "Recipe not in Hall Expansion catalog" });
+    }
+    res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
+    const onDisk = readHallExpansionRecipePage(slug);
+    const page = onDisk ?? buildHallExpansionRecipePage(adapted);
     return res.json(page);
   });
 

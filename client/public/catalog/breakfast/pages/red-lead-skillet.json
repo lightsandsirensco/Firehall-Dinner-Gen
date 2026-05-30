@@ -1,0 +1,146 @@
+{
+  "slug": "red-lead-skillet",
+  "title": "Red Lead Skillet",
+  "subtitle": "Senior cook specialty—steak, peppers, and eggs in one cast-iron pan.",
+  "description": "The red lead's signature skillet: seared steak strips, blistered peppers, and eggs cracked over the top. Built for a hungry crew after a long night shift with real heat cues and a workflow that keeps everything hot between calls.",
+  "filters": [
+    "skillets",
+    "high_protein",
+    "feed_a_crew"
+  ],
+  "tags": [
+    "steak",
+    "cast-iron",
+    "peppers",
+    "eggs",
+    "senior-cook"
+  ],
+  "crewSize": 8,
+  "baseServings": 8,
+  "prepTime": 15,
+  "cookTime": 25,
+  "totalTime": 40,
+  "difficulty": "medium",
+  "ingredients": [
+    {
+      "name": "sirloin or flank steak",
+      "quantity": "2 lb",
+      "notes": "sliced thin against the grain",
+      "group": "Protein"
+    },
+    {
+      "name": "large eggs",
+      "quantity": "14",
+      "group": "Protein"
+    },
+    {
+      "name": "bell peppers",
+      "quantity": "3",
+      "notes": "mixed colors, sliced",
+      "group": "Veg"
+    },
+    {
+      "name": "red onion",
+      "quantity": "1",
+      "notes": "sliced thin",
+      "group": "Veg"
+    },
+    {
+      "name": "Yukon gold potatoes",
+      "quantity": "3.5 lb",
+      "notes": "diced 1/2-inch",
+      "group": "Veg"
+    },
+    {
+      "name": "steak seasoning",
+      "quantity": "3 tbsp",
+      "notes": "or equal parts salt, pepper, garlic powder",
+      "group": "Seasoning"
+    },
+    {
+      "name": "vegetable oil",
+      "quantity": "3 tbsp",
+      "notes": "plus butter for finishing",
+      "group": "Fat"
+    },
+    {
+      "name": "shredded pepper jack",
+      "quantity": "1 1/2 cups",
+      "notes": "optional melt on top",
+      "group": "Finish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Par-cook the potatoes",
+      "instruction": "Microwave diced potatoes with a splash of water in a covered bowl until just tender. Drain well and pat dry so the skillet gets crust instead of steam.",
+      "minutes": 8
+    },
+    {
+      "stepNumber": 2,
+      "title": "Sear steak strips",
+      "instruction": "Heat cast iron over high with oil until shimmering (about 400°F surface). Sear steak in batches without crowding, 2–3 minutes per side, until deeply browned and internal temperature reaches 130°F for medium-rare strips. Rest on a warm tray while you build the base.",
+      "minutes": 8
+    },
+    {
+      "stepNumber": 3,
+      "title": "Crisp potatoes and peppers",
+      "instruction": "Add more oil to the pan, then potatoes in a single layer. Let them sit 3 minutes for color, toss, then add onion and peppers. Cook over medium-high until charred at the edges.",
+      "minutes": 10
+    },
+    {
+      "stepNumber": 4,
+      "title": "Combine and make wells",
+      "instruction": "Fold steak back into the skillet. Make shallow wells across the surface and crack an egg into each well. Season with salt and pepper.",
+      "minutes": 3
+    },
+    {
+      "stepNumber": 5,
+      "title": "Cover and finish",
+      "instruction": "Cover with a lid or inverted sheet pan over medium-low heat until egg whites are fully set (165°F) and yolks are runny or jammy to your crew's preference. Scatter cheese, cover 60 seconds to melt, and serve straight from the pan.",
+      "minutes": 6
+    }
+  ],
+  "nutrition": {
+    "calories": 701,
+    "protein": 48,
+    "carbs": 40,
+    "fat": 38,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "stationWorkflow": [
+    "Assign one cook to the cast iron and one to toast or warm plates so service doesn't stall when eggs finish.",
+    "Sear steak in batches before the crew lines up—hold sliced on a warm tray covered loosely with foil.",
+    "Serve family-style from the skillet or portion onto warm plates immediately; eggs wait for no one."
+  ],
+  "cleanupNotes": [
+    "Deglaze the cast iron with hot water while still warm, then scrape with a chain-mail scrubber once cooled enough to handle safely.",
+    "Wipe cutting boards and knives immediately after raw steak prep to avoid cross-contamination during egg service."
+  ],
+  "leftovers": [
+    "Reheat potato-steak base covered at 325°F for 10 minutes; fry fresh eggs to order rather than reheating set yolks.",
+    "Chop leftovers into breakfast burrito filling with hot sauce and shredded cheese for the next shift."
+  ],
+  "heroImage": "/images/breakfast/red-lead-skillet.jpg",
+  "thumbImage": "/images/thumbs/breakfast/red-lead-skillet.jpg",
+  "imageAlt": "Cast-iron skillet with seared steak, peppers, and sunny-side eggs for the crew",
+  "publishedAt": "2026-05-30T03:14:16.260Z",
+  "updatedAt": "2026-05-30T03:14:16.260Z",
+  "readMinutes": 7,
+  "seoTitle": "Red Lead Skillet | Firehall Breakfast"
+}

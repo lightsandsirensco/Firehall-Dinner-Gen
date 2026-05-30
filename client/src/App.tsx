@@ -19,6 +19,7 @@ const PizzaNight = lazy(() => import("@/pages/pizza-night"));
 const ExplorePage = lazy(() => import("@/pages/explore"));
 const AdminPage = lazy(() => import("@/pages/admin"));
 const AdminIngestionPage = lazy(() => import("@/pages/admin-ingestion"));
+const AdminRecipeRatingsPage = lazy(() => import("@/pages/admin-recipe-ratings"));
 const VotePage = lazy(() => import("@/pages/vote"));
 const FavoritesPage = lazy(() => import("@/pages/favorites"));
 const ClassicsWheelPage = lazy(() => import("@/pages/classics-wheel"));
@@ -37,6 +38,8 @@ const SmoothieRecipePage = lazy(() => import("@/pages/smoothie-recipe-page"));
 const BreakfastIndexPage = lazy(() => import("@/pages/breakfast-index"));
 const BreakfastRecipePage = lazy(() => import("@/pages/breakfast-recipe-page"));
 const PerformanceFuelRedirect = lazy(() => import("@/pages/performance-fuel-redirect"));
+const SeoLandingPage = lazy(() => import("@/pages/seo-landing-page"));
+const FirefighterRedLeadRecipePage = lazy(() => import("@/pages/firefighter-red-lead-recipe-page"));
 const NotFound = lazy(() => import("@/pages/not-found"));
 
 function AppRoutes() {
@@ -62,13 +65,23 @@ function AppRoutes() {
       <Route path="/breakfast" component={BreakfastIndexPage} />
       <Route path="/breakfast/:slug" component={BreakfastRecipePage} />
       <Route path="/performance-fuel/:slug?" component={PerformanceFuelRedirect} />
+      <Route path="/firefighter-meals">{() => <SeoLandingPage slug="firefighter-meals" />}</Route>
+      <Route path="/firefighter-recipes">{() => <SeoLandingPage slug="firefighter-recipes" />}</Route>
+      <Route path="/firehouse-recipes">{() => <SeoLandingPage slug="firehouse-recipes" />}</Route>
+      <Route path="/fire-station-meals">{() => <SeoLandingPage slug="fire-station-meals" />}</Route>
+      <Route path="/healthy-firefighter-meals">{() => <SeoLandingPage slug="healthy-firefighter-meals" />}</Route>
+      <Route path="/firefighter-breakfast-recipes">{() => <SeoLandingPage slug="firefighter-breakfast-recipes" />}</Route>
+      <Route path="/firefighter-red-lead-recipe" component={FirefighterRedLeadRecipePage} />
+      <Route path="/firefighter-bbq-recipes">{() => <SeoLandingPage slug="firefighter-bbq-recipes" />}</Route>
       <Route path="/guides" component={GuidesIndexPage} />
       <Route path="/guides/topic/:clusterId" component={GuidesClusterPage} />
       <Route path="/guides/:slug" component={GuideArticlePage} />
+      <Route path="/blog/:slug" component={GuideArticlePage} />
       <Route path="/families" component={FamiliesIndexPage} />
       {/* Admin: longest paths first — never let /admin swallow sub-routes */}
       <Route path="/admin/golden-100" component={AdminGolden100Page} />
       <Route path="/admin/ingestion" component={AdminIngestionPage} />
+      <Route path="/admin/recipe-ratings" component={AdminRecipeRatingsPage} />
       <Route path="/admin" component={AdminPage} />
       <Route path="/vote/:voteId" component={VotePage} />
       <Route path="/favorites" component={FavoritesPage} />

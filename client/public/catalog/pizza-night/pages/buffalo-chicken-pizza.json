@@ -1,0 +1,211 @@
+{
+  "slug": "buffalo-chicken-pizza",
+  "title": "Buffalo Chicken Pizza",
+  "displayTitle": "Buffalo Chicken Pizza",
+  "seoTitle": "Buffalo Chicken Pizza | Firefighter Meal",
+  "shortDescription": "Blue cheese, hot sauce, crispy chicken",
+  "subtitle": "Blue cheese, hot sauce, crispy chicken",
+  "category": "pizza_night",
+  "cuisine": "american",
+  "description": "Blue cheese, hot sauce, crispy chicken. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 85,
+  "prepTime": 35,
+  "difficulty": "medium",
+  "calories": 875,
+  "protein": 79,
+  "carbs": 36,
+  "fats": 44,
+  "tags": [
+    "protein:chicken",
+    "format:pizza",
+    "category:pizza_night",
+    "handheld",
+    "game_day",
+    "golden_100"
+  ],
+  "equipment": [
+    "Pizza stone or steel",
+    "Peel or inverted sheet pan",
+    "Large sheet trays",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "ingredients": [
+    {
+      "name": "Pizza dough balls (15 oz)",
+      "quantity": "4",
+      "unit": "count",
+      "group": "Crust"
+    },
+    {
+      "name": "Cooked chicken breast, diced",
+      "quantity": "3",
+      "unit": "lb",
+      "group": "Main"
+    },
+    {
+      "name": "Frank's-style hot sauce",
+      "quantity": "1",
+      "unit": "cup",
+      "group": "Sauce"
+    },
+    {
+      "name": "Unsalted butter, melted",
+      "quantity": "6",
+      "unit": "tbsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "Ranch dressing",
+      "quantity": "1.5",
+      "unit": "cups",
+      "notes": "for drizzle",
+      "group": "Sauce"
+    },
+    {
+      "name": "Low-moisture mozzarella, shredded",
+      "quantity": "24",
+      "unit": "oz",
+      "group": "Cheese"
+    },
+    {
+      "name": "Blue cheese crumbles",
+      "quantity": "8",
+      "unit": "oz",
+      "group": "Cheese"
+    },
+    {
+      "name": "Celery, thin sliced",
+      "quantity": "4",
+      "unit": "stalks",
+      "group": "Finish"
+    },
+    {
+      "name": "Green onions, sliced",
+      "quantity": "4",
+      "unit": "stalks",
+      "group": "Finish"
+    },
+    {
+      "name": "Kosher salt",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Toss chicken in buffalo butter",
+      "instruction": "Whisk hot sauce with melted butter. Toss diced chicken until coated; taste for heat — cheese and ranch mellow it. Reserve a few tablespoons of plain buffalo for after the bake.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat stone to 500°F",
+      "instruction": "Heat stone or steel at 500°F at least 40 minutes. Shred mozzarella and crumble blue cheese while the oven saturates.",
+      "minutes": 40,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Stretch dough — light red sauce optional",
+      "instruction": "Stretch four 12–14 inch rounds. Buffalo Chicken is a white-ish pie: skip tomato or use only a whisper of pizza sauce if your crew expects red. Brush rims with butter from the buffalo bowl.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Mozzarella, buffalo chicken, blue cheese",
+      "instruction": "Layer mozzarella, then buffalo chicken, then blue cheese crumbles. Do not drown in sauce before baking — wet buffalo pools in the center.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Bake until cheese browns",
+      "instruction": "Bake 10–13 minutes until cheese bubbles and edges spot brown. Chicken is already cooked; you are setting cheese and finishing crust. Rotate once for hot spots.",
+      "minutes": 12,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Ranch drizzle, celery, and cut",
+      "instruction": "Rest 2 minutes. Drizzle ranch and reserved buffalo in thin lines. Scatter celery and green onions for crunch — not baked in or they go limp. Cut into 8 slices; Buffalo Chicken Pizza eats like game day on a crust.",
+      "minutes": 5,
+      "heatLevel": "low"
+    }
+  ],
+  "proTips": [
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
+    "Taste for salt at the end — hall palates run salty after long shifts.",
+    "Pull chicken at 160°F and let carryover hit 165°F — dry breast ruins crew morale."
+  ],
+  "tonightSpread": [
+    "Cut pies into hall slices (8 per pie minimum) and fan on sheet trays.",
+    "Keep a fresh pie warming in the oven — pizza dies fast on the counter.",
+    "Line up Buffalo Chicken Pizza on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+  ],
+  "leftovers": [
+    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
+    "Label trays with date and reheat to 165°F minimum before second shift."
+  ],
+  "whyCrewsLikeIt": "Blue cheese, hot sauce, crispy chicken. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
+  "substitutions": [
+    "Chicken thighs ↔ breasts (thighs forgive overcooking on the flat-top)."
+  ],
+  "spiceLevel": "hot",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 875,
+    "protein": 79,
+    "carbs": 36,
+    "fats": 44,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "heroImage": "/images/golden-100/buffalo-chicken-pizza.jpg",
+  "mobileImage": "/images/mobile/buffalo-chicken-pizza.jpg",
+  "thumbImage": "/images/thumbs/buffalo-chicken-pizza.jpg",
+  "railImage": "/images/rails/buffalo-chicken-pizza.jpg",
+  "realismScore": 100,
+  "firefighterScore": 100,
+  "popularityWeight": 3.2,
+  "searchTerms": [
+    "buffalo chicken pizza",
+    "american",
+    "chicken",
+    "pizza",
+    "handheld",
+    "game day",
+    "game_day",
+    "golden_100"
+  ],
+  "relatedSlugs": [
+    "bbq-chicken-pizza",
+    "nashville-hot-chicken-pizza",
+    "pesto-chicken-pizza",
+    "white-garlic-chicken-pizza",
+    "jalapeno-popper-pizza",
+    "taco-pizza"
+  ],
+  "generatedAt": "2026-05-30T03:45:01.591Z",
+  "contentVersion": 2
+}

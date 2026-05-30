@@ -1,0 +1,4205 @@
+{
+  "generatedAt": "2026-05-30T01:50:43.050Z",
+  "approvedCount": 250,
+  "productionScore": 100,
+  "batch250Slugs": [
+    {
+      "slug": "mesquite-chuck-roast",
+      "title": "Mesquite Smoked Chuck Roast"
+    },
+    {
+      "slug": "molasses-bourbon-pork-ribs",
+      "title": "Molasses Bourbon Pork Ribs"
+    },
+    {
+      "slug": "applewood-pork-shoulder-steaks",
+      "title": "Applewood Grilled Pork Shoulder Steaks"
+    },
+    {
+      "slug": "pepper-smoked-brisket-flat",
+      "title": "Pepper-Crusted Smoked Brisket Flat"
+    },
+    {
+      "slug": "honey-mustard-oven-chicken-thighs",
+      "title": "Honey Mustard Baked Chicken Thighs"
+    },
+    {
+      "slug": "spatchcock-lemon-roast-chicken",
+      "title": "Spatchcock Lemon Roast Chicken"
+    },
+    {
+      "slug": "cajun-chicken-rice-skillet",
+      "title": "Cajun Chicken and Rice Skillet"
+    },
+    {
+      "slug": "paprika-roasted-chicken-quarters",
+      "title": "Paprika Roasted Chicken Quarters"
+    },
+    {
+      "slug": "cast-iron-chicken-fajitas",
+      "title": "Cast Iron Chicken Fajitas"
+    },
+    {
+      "slug": "mushroom-swiss-steak-pan",
+      "title": "Mushroom Swiss Steak Pan"
+    },
+    {
+      "slug": "pepper-steak-onions",
+      "title": "Pepper Steak with Onions"
+    },
+    {
+      "slug": "dutch-oven-pot-roast",
+      "title": "Dutch Oven Pot Roast"
+    },
+    {
+      "slug": "enchilada-beef-skillet",
+      "title": "Beef Enchilada Skillet"
+    },
+    {
+      "slug": "mostaccioli-sausage-bake",
+      "title": "Baked Mostaccioli with Sausage"
+    },
+    {
+      "slug": "creamy-chicken-penne-alfredo",
+      "title": "Creamy Chicken Penne Alfredo"
+    },
+    {
+      "slug": "rigatoni-meat-sauce-batch",
+      "title": "Rigatoni with Meat Sauce"
+    },
+    {
+      "slug": "station-cobb-salad",
+      "title": "Station Cobb Salad"
+    },
+    {
+      "slug": "warm-spinach-chicken-salad",
+      "title": "Warm Spinach Chicken Salad"
+    },
+    {
+      "slug": "hall-chicken-noodle-soup",
+      "title": "Hall Chicken Noodle Soup"
+    },
+    {
+      "slug": "green-chile-chicken-stew",
+      "title": "Green Chile Chicken Stew"
+    },
+    {
+      "slug": "ginger-soy-chicken-rice-bowls",
+      "title": "Ginger Soy Chicken Rice Bowls"
+    },
+    {
+      "slug": "mediterranean-chicken-farro-bowls",
+      "title": "Mediterranean Chicken Farro Bowls"
+    },
+    {
+      "slug": "kielbasa-cabbage-potato-skillet",
+      "title": "Kielbasa Cabbage Potato Skillet"
+    },
+    {
+      "slug": "cheesy-chicken-broccoli-rice",
+      "title": "Cheesy Chicken Broccoli Rice"
+    },
+    {
+      "slug": "sheet-pan-meatball-marinara",
+      "title": "Sheet Pan Meatball Marinara Feed"
+    },
+    {
+      "slug": "hall-sloppy-joe-feed",
+      "title": "Hall Sloppy Joe Feed"
+    }
+  ],
+  "duplicatePairs70Plus": [
+    {
+      "slugA": "bacon-egg-hash-skillet",
+      "slugB": "cast-iron-breakfast-skillet",
+      "score": 100,
+      "titleA": "Bacon Egg Hash Skillet",
+      "titleB": "Cast Iron Breakfast Skillet"
+    },
+    {
+      "slugA": "bacon-egg-hash-skillet",
+      "slugB": "ham-pepper-skillet",
+      "score": 100,
+      "titleA": "Bacon Egg Hash Skillet",
+      "titleB": "Ham & Pepper Breakfast Skillet"
+    },
+    {
+      "slugA": "bacon-hash-burritos",
+      "slugB": "chorizo-breakfast-burritos",
+      "score": 100,
+      "titleA": "Bacon Hash Burritos",
+      "titleB": "Chorizo Breakfast Burritos"
+    },
+    {
+      "slugA": "bacon-hash-burritos",
+      "slugB": "hall-breakfast-burritos",
+      "score": 100,
+      "titleA": "Bacon Hash Burritos",
+      "titleB": "Hall Breakfast Burritos"
+    },
+    {
+      "slugA": "bacon-hash-burritos",
+      "slugB": "turkey-sausage-burritos",
+      "score": 100,
+      "titleA": "Bacon Hash Burritos",
+      "titleB": "Turkey Sausage Breakfast Burritos"
+    },
+    {
+      "slugA": "bacon-hash-burritos",
+      "slugB": "veggie-egg-burritos",
+      "score": 100,
+      "titleA": "Bacon Hash Burritos",
+      "titleB": "Veggie Egg Burritos"
+    },
+    {
+      "slugA": "mac-and-cheese-bake",
+      "slugB": "chicken-alfredo-bake",
+      "score": 100,
+      "titleA": "Baked Mac and Cheese",
+      "titleB": "Chicken Alfredo Bake"
+    },
+    {
+      "slugA": "mac-and-cheese-bake",
+      "slugB": "chicken-parm",
+      "score": 100,
+      "titleA": "Baked Mac and Cheese",
+      "titleB": "Chicken Parm"
+    },
+    {
+      "slugA": "mac-and-cheese-bake",
+      "slugB": "skillet-chicken-alfredo",
+      "score": 100,
+      "titleA": "Baked Mac and Cheese",
+      "titleB": "One-Skillet Chicken Alfredo"
+    },
+    {
+      "slugA": "mac-and-cheese-bake",
+      "slugB": "pulled-pork-mac",
+      "score": 100,
+      "titleA": "Baked Mac and Cheese",
+      "titleB": "Pulled Pork Mac and Cheese"
+    },
+    {
+      "slugA": "mac-and-cheese-bake",
+      "slugB": "turkey-meatball-zoodles",
+      "score": 100,
+      "titleA": "Baked Mac and Cheese",
+      "titleB": "Turkey Meatballs with Zucchini Noodles"
+    },
+    {
+      "slugA": "baked-ziti",
+      "slugB": "beef-stroganoff",
+      "score": 100,
+      "titleA": "Baked Ziti",
+      "titleB": "Beef Stroganoff"
+    },
+    {
+      "slugA": "baked-ziti",
+      "slugB": "batch-lasagna",
+      "score": 100,
+      "titleA": "Baked Ziti",
+      "titleB": "Giant Batch Lasagna"
+    },
+    {
+      "slugA": "bbq-chicken-pizza",
+      "slugB": "breakfast-sausage-pizza",
+      "score": 100,
+      "titleA": "BBQ Chicken Pizza",
+      "titleB": "Breakfast Sausage Gravy Pizza"
+    },
+    {
+      "slugA": "bbq-chicken-pizza",
+      "slugB": "pepperoni-pizza-night",
+      "score": 100,
+      "titleA": "BBQ Chicken Pizza",
+      "titleB": "Classic Pepperoni Pizza"
+    },
+    {
+      "slugA": "bbq-chicken-pizza",
+      "slugB": "detroit-style-pizza",
+      "score": 100,
+      "titleA": "BBQ Chicken Pizza",
+      "titleB": "Detroit-Style Pepperoni Pizza"
+    },
+    {
+      "slugA": "bbq-chicken-pizza",
+      "slugB": "margherita-pizza",
+      "score": 100,
+      "titleA": "BBQ Chicken Pizza",
+      "titleB": "Fresh Margherita Pizza"
+    },
+    {
+      "slugA": "bbq-chicken-pizza",
+      "slugB": "honey-soppressata-pizza",
+      "score": 100,
+      "titleA": "BBQ Chicken Pizza",
+      "titleB": "Hot Honey Soppressata Pizza"
+    },
+    {
+      "slugA": "bbq-chicken-pizza",
+      "slugB": "meat-lovers-sheet-pizza",
+      "score": 100,
+      "titleA": "BBQ Chicken Pizza",
+      "titleB": "Meat Lover's Sheet Pan Pizza"
+    },
+    {
+      "slugA": "bbq-chicken-pizza",
+      "slugB": "white-garlic-chicken-pizza",
+      "score": 100,
+      "titleA": "BBQ Chicken Pizza",
+      "titleB": "White Garlic Chicken Pizza"
+    },
+    {
+      "slugA": "bbq-chicken-sliders",
+      "slugB": "parm-hero-subs",
+      "score": 100,
+      "titleA": "BBQ Chicken Sliders",
+      "titleB": "Chicken Parm Hero Subs"
+    },
+    {
+      "slugA": "bbq-chicken-sliders",
+      "slugB": "meatball-hoagies",
+      "score": 100,
+      "titleA": "BBQ Chicken Sliders",
+      "titleB": "Firehall Meatball Hoagies"
+    },
+    {
+      "slugA": "bbq-chicken-sliders",
+      "slugB": "philly-egg-rolls",
+      "score": 100,
+      "titleA": "BBQ Chicken Sliders",
+      "titleB": "Philly Cheesesteak Egg Rolls"
+    },
+    {
+      "slugA": "bbq-chicken-sliders",
+      "slugB": "chicken-quesadillas",
+      "score": 100,
+      "titleA": "BBQ Chicken Sliders",
+      "titleB": "Shredded Chicken Quesadillas"
+    },
+    {
+      "slugA": "beef-barley-soup",
+      "slugB": "chicken-dumpling-soup",
+      "score": 100,
+      "titleA": "Beef Barley Soup",
+      "titleB": "Chicken and Dumplings"
+    },
+    {
+      "slugA": "beef-barley-soup",
+      "slugB": "chili-mac",
+      "score": 100,
+      "titleA": "Beef Barley Soup",
+      "titleB": "Chili Mac Skillet"
+    },
+    {
+      "slugA": "beef-barley-soup",
+      "slugB": "big-chili",
+      "score": 100,
+      "titleA": "Beef Barley Soup",
+      "titleB": "Hall-Sized Beef and Bean Chili"
+    },
+    {
+      "slugA": "beef-barley-soup",
+      "slugB": "sunday-chili-batch",
+      "score": 100,
+      "titleA": "Beef Barley Soup",
+      "titleB": "Sunday Batch Chili"
+    },
+    {
+      "slugA": "beef-stroganoff",
+      "slugB": "batch-lasagna",
+      "score": 100,
+      "titleA": "Beef Stroganoff",
+      "titleB": "Giant Batch Lasagna"
+    },
+    {
+      "slugA": "beer-can-chicken",
+      "slugB": "chicken-souvlaki",
+      "score": 100,
+      "titleA": "Beer Can Chicken",
+      "titleB": "Grilled Chicken Souvlaki"
+    },
+    {
+      "slugA": "beer-can-chicken",
+      "slugB": "jerk-chicken",
+      "score": 100,
+      "titleA": "Beer Can Chicken",
+      "titleB": "Jerk Chicken"
+    },
+    {
+      "slugA": "turkey-burgers",
+      "slugB": "slider-bar",
+      "score": 100,
+      "titleA": "Black Bean Turkey Burgers",
+      "titleB": "Hall Slider Bar"
+    },
+    {
+      "slugA": "beef-dip",
+      "slugB": "ny-strip-herb-butter",
+      "score": 100,
+      "titleA": "Blackstone Steak Sandwiches",
+      "titleB": "Grilled NY Strip with Herb Butter"
+    },
+    {
+      "slugA": "breakfast-sandwich-trays",
+      "slugB": "sausage-egg-cheese-sandwiches",
+      "score": 100,
+      "titleA": "Breakfast Sandwich Trays",
+      "titleB": "Sausage Egg & Cheese Sandwiches"
+    },
+    {
+      "slugA": "breakfast-sausage-pizza",
+      "slugB": "pepperoni-pizza-night",
+      "score": 100,
+      "titleA": "Breakfast Sausage Gravy Pizza",
+      "titleB": "Classic Pepperoni Pizza"
+    },
+    {
+      "slugA": "breakfast-sausage-pizza",
+      "slugB": "detroit-style-pizza",
+      "score": 100,
+      "titleA": "Breakfast Sausage Gravy Pizza",
+      "titleB": "Detroit-Style Pepperoni Pizza"
+    },
+    {
+      "slugA": "breakfast-sausage-pizza",
+      "slugB": "margherita-pizza",
+      "score": 100,
+      "titleA": "Breakfast Sausage Gravy Pizza",
+      "titleB": "Fresh Margherita Pizza"
+    },
+    {
+      "slugA": "breakfast-sausage-pizza",
+      "slugB": "honey-soppressata-pizza",
+      "score": 100,
+      "titleA": "Breakfast Sausage Gravy Pizza",
+      "titleB": "Hot Honey Soppressata Pizza"
+    },
+    {
+      "slugA": "breakfast-sausage-pizza",
+      "slugB": "meat-lovers-sheet-pizza",
+      "score": 100,
+      "titleA": "Breakfast Sausage Gravy Pizza",
+      "titleB": "Meat Lover's Sheet Pan Pizza"
+    },
+    {
+      "slugA": "breakfast-sausage-pizza",
+      "slugB": "white-garlic-chicken-pizza",
+      "score": 100,
+      "titleA": "Breakfast Sausage Gravy Pizza",
+      "titleB": "White Garlic Chicken Pizza"
+    },
+    {
+      "slugA": "butter-chicken",
+      "slugB": "enchilada-casserole",
+      "score": 100,
+      "titleA": "Butter Chicken",
+      "titleB": "Chicken Enchilada Casserole"
+    },
+    {
+      "slugA": "butter-chicken",
+      "slugB": "chicken-pot-pie",
+      "score": 100,
+      "titleA": "Butter Chicken",
+      "titleB": "Chicken Pot Pie"
+    },
+    {
+      "slugA": "butter-chicken",
+      "slugB": "chicken-tikka-masala",
+      "score": 100,
+      "titleA": "Butter Chicken",
+      "titleB": "Chicken Tikka Masala"
+    },
+    {
+      "slugA": "butter-chicken",
+      "slugB": "creamy-tuscan-chicken",
+      "score": 100,
+      "titleA": "Butter Chicken",
+      "titleB": "Creamy Tuscan Chicken"
+    },
+    {
+      "slugA": "buttermilk-pancakes",
+      "slugB": "protein-pancake-tray",
+      "score": 100,
+      "titleA": "Buttermilk Pancakes for the Crew",
+      "titleB": "Protein Pancake Tray"
+    },
+    {
+      "slugA": "jambalaya",
+      "slugB": "one-pot-chicken-rice",
+      "score": 100,
+      "titleA": "Cajun Jambalaya for the Hall",
+      "titleB": "One-Pot Chicken and Rice"
+    },
+    {
+      "slugA": "cast-iron-breakfast-skillet",
+      "slugB": "ham-pepper-skillet",
+      "score": 100,
+      "titleA": "Cast Iron Breakfast Skillet",
+      "titleB": "Ham & Pepper Breakfast Skillet"
+    },
+    {
+      "slugA": "chicken-alfredo-bake",
+      "slugB": "chicken-parm",
+      "score": 100,
+      "titleA": "Chicken Alfredo Bake",
+      "titleB": "Chicken Parm"
+    },
+    {
+      "slugA": "chicken-alfredo-bake",
+      "slugB": "skillet-chicken-alfredo",
+      "score": 100,
+      "titleA": "Chicken Alfredo Bake",
+      "titleB": "One-Skillet Chicken Alfredo"
+    },
+    {
+      "slugA": "chicken-alfredo-bake",
+      "slugB": "pulled-pork-mac",
+      "score": 100,
+      "titleA": "Chicken Alfredo Bake",
+      "titleB": "Pulled Pork Mac and Cheese"
+    },
+    {
+      "slugA": "chicken-alfredo-bake",
+      "slugB": "turkey-meatball-zoodles",
+      "score": 100,
+      "titleA": "Chicken Alfredo Bake",
+      "titleB": "Turkey Meatballs with Zucchini Noodles"
+    },
+    {
+      "slugA": "chicken-dumpling-soup",
+      "slugB": "chili-mac",
+      "score": 100,
+      "titleA": "Chicken and Dumplings",
+      "titleB": "Chili Mac Skillet"
+    },
+    {
+      "slugA": "chicken-dumpling-soup",
+      "slugB": "big-chili",
+      "score": 100,
+      "titleA": "Chicken and Dumplings",
+      "titleB": "Hall-Sized Beef and Bean Chili"
+    },
+    {
+      "slugA": "chicken-dumpling-soup",
+      "slugB": "sunday-chili-batch",
+      "score": 100,
+      "titleA": "Chicken and Dumplings",
+      "titleB": "Sunday Batch Chili"
+    },
+    {
+      "slugA": "enchilada-casserole",
+      "slugB": "chicken-pot-pie",
+      "score": 100,
+      "titleA": "Chicken Enchilada Casserole",
+      "titleB": "Chicken Pot Pie"
+    },
+    {
+      "slugA": "enchilada-casserole",
+      "slugB": "chicken-tikka-masala",
+      "score": 100,
+      "titleA": "Chicken Enchilada Casserole",
+      "titleB": "Chicken Tikka Masala"
+    },
+    {
+      "slugA": "enchilada-casserole",
+      "slugB": "creamy-tuscan-chicken",
+      "score": 100,
+      "titleA": "Chicken Enchilada Casserole",
+      "titleB": "Creamy Tuscan Chicken"
+    },
+    {
+      "slugA": "chicken-parm",
+      "slugB": "skillet-chicken-alfredo",
+      "score": 100,
+      "titleA": "Chicken Parm",
+      "titleB": "One-Skillet Chicken Alfredo"
+    },
+    {
+      "slugA": "chicken-parm",
+      "slugB": "pulled-pork-mac",
+      "score": 100,
+      "titleA": "Chicken Parm",
+      "titleB": "Pulled Pork Mac and Cheese"
+    },
+    {
+      "slugA": "chicken-parm",
+      "slugB": "turkey-meatball-zoodles",
+      "score": 100,
+      "titleA": "Chicken Parm",
+      "titleB": "Turkey Meatballs with Zucchini Noodles"
+    },
+    {
+      "slugA": "parm-hero-subs",
+      "slugB": "meatball-hoagies",
+      "score": 100,
+      "titleA": "Chicken Parm Hero Subs",
+      "titleB": "Firehall Meatball Hoagies"
+    },
+    {
+      "slugA": "parm-hero-subs",
+      "slugB": "philly-egg-rolls",
+      "score": 100,
+      "titleA": "Chicken Parm Hero Subs",
+      "titleB": "Philly Cheesesteak Egg Rolls"
+    },
+    {
+      "slugA": "parm-hero-subs",
+      "slugB": "chicken-quesadillas",
+      "score": 100,
+      "titleA": "Chicken Parm Hero Subs",
+      "titleB": "Shredded Chicken Quesadillas"
+    },
+    {
+      "slugA": "chicken-pot-pie",
+      "slugB": "chicken-tikka-masala",
+      "score": 100,
+      "titleA": "Chicken Pot Pie",
+      "titleB": "Chicken Tikka Masala"
+    },
+    {
+      "slugA": "chicken-pot-pie",
+      "slugB": "creamy-tuscan-chicken",
+      "score": 100,
+      "titleA": "Chicken Pot Pie",
+      "titleB": "Creamy Tuscan Chicken"
+    },
+    {
+      "slugA": "chicken-tikka-masala",
+      "slugB": "creamy-tuscan-chicken",
+      "score": 100,
+      "titleA": "Chicken Tikka Masala",
+      "titleB": "Creamy Tuscan Chicken"
+    },
+    {
+      "slugA": "chili-mac",
+      "slugB": "big-chili",
+      "score": 100,
+      "titleA": "Chili Mac Skillet",
+      "titleB": "Hall-Sized Beef and Bean Chili"
+    },
+    {
+      "slugA": "chili-mac",
+      "slugB": "sunday-chili-batch",
+      "score": 100,
+      "titleA": "Chili Mac Skillet",
+      "titleB": "Sunday Batch Chili"
+    },
+    {
+      "slugA": "chorizo-breakfast-burritos",
+      "slugB": "hall-breakfast-burritos",
+      "score": 100,
+      "titleA": "Chorizo Breakfast Burritos",
+      "titleB": "Hall Breakfast Burritos"
+    },
+    {
+      "slugA": "chorizo-breakfast-burritos",
+      "slugB": "turkey-sausage-burritos",
+      "score": 100,
+      "titleA": "Chorizo Breakfast Burritos",
+      "titleB": "Turkey Sausage Breakfast Burritos"
+    },
+    {
+      "slugA": "chorizo-breakfast-burritos",
+      "slugB": "veggie-egg-burritos",
+      "score": 100,
+      "titleA": "Chorizo Breakfast Burritos",
+      "titleB": "Veggie Egg Burritos"
+    },
+    {
+      "slugA": "meatloaf-mashed",
+      "slugB": "moroccan-meatballs",
+      "score": 100,
+      "titleA": "Classic Meatloaf with Mashed Potatoes",
+      "titleB": "Moroccan Spiced Lamb Meatballs"
+    },
+    {
+      "slugA": "meatloaf-mashed",
+      "slugB": "stuffed-peppers",
+      "score": 100,
+      "titleA": "Classic Meatloaf with Mashed Potatoes",
+      "titleB": "Quinoa Stuffed Peppers"
+    },
+    {
+      "slugA": "meatloaf-mashed",
+      "slugB": "shepherds-pie",
+      "score": 100,
+      "titleA": "Classic Meatloaf with Mashed Potatoes",
+      "titleB": "Shepherd's Pie"
+    },
+    {
+      "slugA": "pepperoni-pizza-night",
+      "slugB": "detroit-style-pizza",
+      "score": 100,
+      "titleA": "Classic Pepperoni Pizza",
+      "titleB": "Detroit-Style Pepperoni Pizza"
+    },
+    {
+      "slugA": "pepperoni-pizza-night",
+      "slugB": "margherita-pizza",
+      "score": 100,
+      "titleA": "Classic Pepperoni Pizza",
+      "titleB": "Fresh Margherita Pizza"
+    },
+    {
+      "slugA": "pepperoni-pizza-night",
+      "slugB": "honey-soppressata-pizza",
+      "score": 100,
+      "titleA": "Classic Pepperoni Pizza",
+      "titleB": "Hot Honey Soppressata Pizza"
+    },
+    {
+      "slugA": "pepperoni-pizza-night",
+      "slugB": "meat-lovers-sheet-pizza",
+      "score": 100,
+      "titleA": "Classic Pepperoni Pizza",
+      "titleB": "Meat Lover's Sheet Pan Pizza"
+    },
+    {
+      "slugA": "pepperoni-pizza-night",
+      "slugB": "white-garlic-chicken-pizza",
+      "score": 100,
+      "titleA": "Classic Pepperoni Pizza",
+      "titleB": "White Garlic Chicken Pizza"
+    },
+    {
+      "slugA": "detroit-style-pizza",
+      "slugB": "margherita-pizza",
+      "score": 100,
+      "titleA": "Detroit-Style Pepperoni Pizza",
+      "titleB": "Fresh Margherita Pizza"
+    },
+    {
+      "slugA": "detroit-style-pizza",
+      "slugB": "honey-soppressata-pizza",
+      "score": 100,
+      "titleA": "Detroit-Style Pepperoni Pizza",
+      "titleB": "Hot Honey Soppressata Pizza"
+    },
+    {
+      "slugA": "detroit-style-pizza",
+      "slugB": "meat-lovers-sheet-pizza",
+      "score": 100,
+      "titleA": "Detroit-Style Pepperoni Pizza",
+      "titleB": "Meat Lover's Sheet Pan Pizza"
+    },
+    {
+      "slugA": "detroit-style-pizza",
+      "slugB": "white-garlic-chicken-pizza",
+      "score": 100,
+      "titleA": "Detroit-Style Pepperoni Pizza",
+      "titleB": "White Garlic Chicken Pizza"
+    },
+    {
+      "slugA": "fast-philly-skillet",
+      "slugB": "pad-thai",
+      "score": 100,
+      "titleA": "Fast Philly Cheesesteak Skillet",
+      "titleB": "Hall Rush Pad Thai"
+    },
+    {
+      "slugA": "fast-philly-skillet",
+      "slugB": "philly-cheesesteak-skillet",
+      "score": 100,
+      "titleA": "Fast Philly Cheesesteak Skillet",
+      "titleB": "Philly Cheesesteak Skillet"
+    },
+    {
+      "slugA": "fast-philly-skillet",
+      "slugB": "beef-broccoli",
+      "score": 100,
+      "titleA": "Fast Philly Cheesesteak Skillet",
+      "titleB": "Quick Beef and Broccoli"
+    },
+    {
+      "slugA": "fast-philly-skillet",
+      "slugB": "sausage-peppers-onions",
+      "score": 100,
+      "titleA": "Fast Philly Cheesesteak Skillet",
+      "titleB": "Sausage Peppers and Onions"
+    },
+    {
+      "slugA": "fast-philly-skillet",
+      "slugB": "thai-basil-chicken",
+      "score": 100,
+      "titleA": "Fast Philly Cheesesteak Skillet",
+      "titleB": "Thai Basil Chicken Stir Fry"
+    },
+    {
+      "slugA": "meatball-hoagies",
+      "slugB": "philly-egg-rolls",
+      "score": 100,
+      "titleA": "Firehall Meatball Hoagies",
+      "titleB": "Philly Cheesesteak Egg Rolls"
+    },
+    {
+      "slugA": "meatball-hoagies",
+      "slugB": "chicken-quesadillas",
+      "score": 100,
+      "titleA": "Firehall Meatball Hoagies",
+      "titleB": "Shredded Chicken Quesadillas"
+    },
+    {
+      "slugA": "margherita-pizza",
+      "slugB": "honey-soppressata-pizza",
+      "score": 100,
+      "titleA": "Fresh Margherita Pizza",
+      "titleB": "Hot Honey Soppressata Pizza"
+    },
+    {
+      "slugA": "margherita-pizza",
+      "slugB": "meat-lovers-sheet-pizza",
+      "score": 100,
+      "titleA": "Fresh Margherita Pizza",
+      "titleB": "Meat Lover's Sheet Pan Pizza"
+    },
+    {
+      "slugA": "margherita-pizza",
+      "slugB": "white-garlic-chicken-pizza",
+      "score": 100,
+      "titleA": "Fresh Margherita Pizza",
+      "titleB": "White Garlic Chicken Pizza"
+    },
+    {
+      "slugA": "greek-chicken-bowls",
+      "slugB": "bulgogi-bowls",
+      "score": 100,
+      "titleA": "Greek Chicken Bowls",
+      "titleB": "Korean Bulgogi Rice Bowls"
+    },
+    {
+      "slugA": "greek-chicken-bowls",
+      "slugB": "loaded-baked-potato-bar",
+      "score": 100,
+      "titleA": "Greek Chicken Bowls",
+      "titleB": "Loaded Baked Potato Bar"
+    },
+    {
+      "slugA": "greek-chicken-bowls",
+      "slugB": "game-day-nachos",
+      "score": 100,
+      "titleA": "Greek Chicken Bowls",
+      "titleB": "Loaded Game Day Nachos"
+    },
+    {
+      "slugA": "greek-chicken-bowls",
+      "slugB": "loaded-nacho-skillet",
+      "score": 100,
+      "titleA": "Greek Chicken Bowls",
+      "titleB": "Loaded Nacho Skillet"
+    },
+    {
+      "slugA": "greek-chicken-bowls",
+      "slugB": "loaded-potato-feed",
+      "score": 100,
+      "titleA": "Greek Chicken Bowls",
+      "titleB": "Loaded Potato Feed"
+    },
+    {
+      "slugA": "greek-chicken-bowls",
+      "slugB": "mediterranean-chickpea",
+      "score": 100,
+      "titleA": "Greek Chicken Bowls",
+      "titleB": "Mediterranean Chickpea Bowls"
+    },
+    {
+      "slugA": "greek-chicken-bowls",
+      "slugB": "street-corn-chicken",
+      "score": 100,
+      "titleA": "Greek Chicken Bowls",
+      "titleB": "Mexican Street Corn Chicken Bowls"
+    },
+    {
+      "slugA": "greek-chicken-bowls",
+      "slugB": "performance-burrito-bowls",
+      "score": 100,
+      "titleA": "Greek Chicken Bowls",
+      "titleB": "Performance Chicken Burrito Bowls"
+    },
+    {
+      "slugA": "greek-chicken-bowls",
+      "slugB": "teriyaki-donburi",
+      "score": 100,
+      "titleA": "Greek Chicken Bowls",
+      "titleB": "Teriyaki Chicken Donburi"
+    },
+    {
+      "slugA": "chicken-souvlaki",
+      "slugB": "jerk-chicken",
+      "score": 100,
+      "titleA": "Grilled Chicken Souvlaki",
+      "titleB": "Jerk Chicken"
+    },
+    {
+      "slugA": "hall-breakfast-burritos",
+      "slugB": "turkey-sausage-burritos",
+      "score": 100,
+      "titleA": "Hall Breakfast Burritos",
+      "titleB": "Turkey Sausage Breakfast Burritos"
+    },
+    {
+      "slugA": "hall-breakfast-burritos",
+      "slugB": "veggie-egg-burritos",
+      "score": 100,
+      "titleA": "Hall Breakfast Burritos",
+      "titleB": "Veggie Egg Burritos"
+    },
+    {
+      "slugA": "pad-thai",
+      "slugB": "philly-cheesesteak-skillet",
+      "score": 100,
+      "titleA": "Hall Rush Pad Thai",
+      "titleB": "Philly Cheesesteak Skillet"
+    },
+    {
+      "slugA": "pad-thai",
+      "slugB": "beef-broccoli",
+      "score": 100,
+      "titleA": "Hall Rush Pad Thai",
+      "titleB": "Quick Beef and Broccoli"
+    },
+    {
+      "slugA": "pad-thai",
+      "slugB": "sausage-peppers-onions",
+      "score": 100,
+      "titleA": "Hall Rush Pad Thai",
+      "titleB": "Sausage Peppers and Onions"
+    },
+    {
+      "slugA": "pad-thai",
+      "slugB": "thai-basil-chicken",
+      "score": 100,
+      "titleA": "Hall Rush Pad Thai",
+      "titleB": "Thai Basil Chicken Stir Fry"
+    },
+    {
+      "slugA": "big-chili",
+      "slugB": "sunday-chili-batch",
+      "score": 100,
+      "titleA": "Hall-Sized Beef and Bean Chili",
+      "titleB": "Sunday Batch Chili"
+    },
+    {
+      "slugA": "ham-cheddar-egg-bake",
+      "slugB": "southwest-egg-bake",
+      "score": 100,
+      "titleA": "Ham & Cheddar Egg Bake",
+      "titleB": "Southwest Egg Bake"
+    },
+    {
+      "slugA": "ham-cheddar-egg-bake",
+      "slugB": "turkey-sausage-egg-bake",
+      "score": 100,
+      "titleA": "Ham & Cheddar Egg Bake",
+      "titleB": "Turkey Sausage Egg Bake"
+    },
+    {
+      "slugA": "honey-soppressata-pizza",
+      "slugB": "meat-lovers-sheet-pizza",
+      "score": 100,
+      "titleA": "Hot Honey Soppressata Pizza",
+      "titleB": "Meat Lover's Sheet Pan Pizza"
+    },
+    {
+      "slugA": "honey-soppressata-pizza",
+      "slugB": "white-garlic-chicken-pizza",
+      "score": 100,
+      "titleA": "Hot Honey Soppressata Pizza",
+      "titleB": "White Garlic Chicken Pizza"
+    },
+    {
+      "slugA": "bulgogi-bowls",
+      "slugB": "loaded-baked-potato-bar",
+      "score": 100,
+      "titleA": "Korean Bulgogi Rice Bowls",
+      "titleB": "Loaded Baked Potato Bar"
+    },
+    {
+      "slugA": "bulgogi-bowls",
+      "slugB": "game-day-nachos",
+      "score": 100,
+      "titleA": "Korean Bulgogi Rice Bowls",
+      "titleB": "Loaded Game Day Nachos"
+    },
+    {
+      "slugA": "bulgogi-bowls",
+      "slugB": "loaded-nacho-skillet",
+      "score": 100,
+      "titleA": "Korean Bulgogi Rice Bowls",
+      "titleB": "Loaded Nacho Skillet"
+    },
+    {
+      "slugA": "bulgogi-bowls",
+      "slugB": "loaded-potato-feed",
+      "score": 100,
+      "titleA": "Korean Bulgogi Rice Bowls",
+      "titleB": "Loaded Potato Feed"
+    },
+    {
+      "slugA": "bulgogi-bowls",
+      "slugB": "mediterranean-chickpea",
+      "score": 100,
+      "titleA": "Korean Bulgogi Rice Bowls",
+      "titleB": "Mediterranean Chickpea Bowls"
+    },
+    {
+      "slugA": "bulgogi-bowls",
+      "slugB": "street-corn-chicken",
+      "score": 100,
+      "titleA": "Korean Bulgogi Rice Bowls",
+      "titleB": "Mexican Street Corn Chicken Bowls"
+    },
+    {
+      "slugA": "bulgogi-bowls",
+      "slugB": "performance-burrito-bowls",
+      "score": 100,
+      "titleA": "Korean Bulgogi Rice Bowls",
+      "titleB": "Performance Chicken Burrito Bowls"
+    },
+    {
+      "slugA": "bulgogi-bowls",
+      "slugB": "teriyaki-donburi",
+      "score": 100,
+      "titleA": "Korean Bulgogi Rice Bowls",
+      "titleB": "Teriyaki Chicken Donburi"
+    },
+    {
+      "slugA": "loaded-baked-potato-bar",
+      "slugB": "game-day-nachos",
+      "score": 100,
+      "titleA": "Loaded Baked Potato Bar",
+      "titleB": "Loaded Game Day Nachos"
+    },
+    {
+      "slugA": "loaded-baked-potato-bar",
+      "slugB": "loaded-nacho-skillet",
+      "score": 100,
+      "titleA": "Loaded Baked Potato Bar",
+      "titleB": "Loaded Nacho Skillet"
+    },
+    {
+      "slugA": "loaded-baked-potato-bar",
+      "slugB": "loaded-potato-feed",
+      "score": 100,
+      "titleA": "Loaded Baked Potato Bar",
+      "titleB": "Loaded Potato Feed"
+    },
+    {
+      "slugA": "loaded-baked-potato-bar",
+      "slugB": "mediterranean-chickpea",
+      "score": 100,
+      "titleA": "Loaded Baked Potato Bar",
+      "titleB": "Mediterranean Chickpea Bowls"
+    },
+    {
+      "slugA": "loaded-baked-potato-bar",
+      "slugB": "street-corn-chicken",
+      "score": 100,
+      "titleA": "Loaded Baked Potato Bar",
+      "titleB": "Mexican Street Corn Chicken Bowls"
+    },
+    {
+      "slugA": "loaded-baked-potato-bar",
+      "slugB": "performance-burrito-bowls",
+      "score": 100,
+      "titleA": "Loaded Baked Potato Bar",
+      "titleB": "Performance Chicken Burrito Bowls"
+    },
+    {
+      "slugA": "loaded-baked-potato-bar",
+      "slugB": "teriyaki-donburi",
+      "score": 100,
+      "titleA": "Loaded Baked Potato Bar",
+      "titleB": "Teriyaki Chicken Donburi"
+    },
+    {
+      "slugA": "game-day-nachos",
+      "slugB": "loaded-nacho-skillet",
+      "score": 100,
+      "titleA": "Loaded Game Day Nachos",
+      "titleB": "Loaded Nacho Skillet"
+    },
+    {
+      "slugA": "game-day-nachos",
+      "slugB": "loaded-potato-feed",
+      "score": 100,
+      "titleA": "Loaded Game Day Nachos",
+      "titleB": "Loaded Potato Feed"
+    },
+    {
+      "slugA": "game-day-nachos",
+      "slugB": "mediterranean-chickpea",
+      "score": 100,
+      "titleA": "Loaded Game Day Nachos",
+      "titleB": "Mediterranean Chickpea Bowls"
+    },
+    {
+      "slugA": "game-day-nachos",
+      "slugB": "street-corn-chicken",
+      "score": 100,
+      "titleA": "Loaded Game Day Nachos",
+      "titleB": "Mexican Street Corn Chicken Bowls"
+    },
+    {
+      "slugA": "game-day-nachos",
+      "slugB": "performance-burrito-bowls",
+      "score": 100,
+      "titleA": "Loaded Game Day Nachos",
+      "titleB": "Performance Chicken Burrito Bowls"
+    },
+    {
+      "slugA": "game-day-nachos",
+      "slugB": "teriyaki-donburi",
+      "score": 100,
+      "titleA": "Loaded Game Day Nachos",
+      "titleB": "Teriyaki Chicken Donburi"
+    },
+    {
+      "slugA": "loaded-nacho-skillet",
+      "slugB": "loaded-potato-feed",
+      "score": 100,
+      "titleA": "Loaded Nacho Skillet",
+      "titleB": "Loaded Potato Feed"
+    },
+    {
+      "slugA": "loaded-nacho-skillet",
+      "slugB": "mediterranean-chickpea",
+      "score": 100,
+      "titleA": "Loaded Nacho Skillet",
+      "titleB": "Mediterranean Chickpea Bowls"
+    },
+    {
+      "slugA": "loaded-nacho-skillet",
+      "slugB": "street-corn-chicken",
+      "score": 100,
+      "titleA": "Loaded Nacho Skillet",
+      "titleB": "Mexican Street Corn Chicken Bowls"
+    },
+    {
+      "slugA": "loaded-nacho-skillet",
+      "slugB": "performance-burrito-bowls",
+      "score": 100,
+      "titleA": "Loaded Nacho Skillet",
+      "titleB": "Performance Chicken Burrito Bowls"
+    },
+    {
+      "slugA": "loaded-nacho-skillet",
+      "slugB": "teriyaki-donburi",
+      "score": 100,
+      "titleA": "Loaded Nacho Skillet",
+      "titleB": "Teriyaki Chicken Donburi"
+    },
+    {
+      "slugA": "loaded-potato-feed",
+      "slugB": "mediterranean-chickpea",
+      "score": 100,
+      "titleA": "Loaded Potato Feed",
+      "titleB": "Mediterranean Chickpea Bowls"
+    },
+    {
+      "slugA": "loaded-potato-feed",
+      "slugB": "street-corn-chicken",
+      "score": 100,
+      "titleA": "Loaded Potato Feed",
+      "titleB": "Mexican Street Corn Chicken Bowls"
+    },
+    {
+      "slugA": "loaded-potato-feed",
+      "slugB": "performance-burrito-bowls",
+      "score": 100,
+      "titleA": "Loaded Potato Feed",
+      "titleB": "Performance Chicken Burrito Bowls"
+    },
+    {
+      "slugA": "loaded-potato-feed",
+      "slugB": "teriyaki-donburi",
+      "score": 100,
+      "titleA": "Loaded Potato Feed",
+      "titleB": "Teriyaki Chicken Donburi"
+    },
+    {
+      "slugA": "meat-lovers-sheet-pizza",
+      "slugB": "white-garlic-chicken-pizza",
+      "score": 100,
+      "titleA": "Meat Lover's Sheet Pan Pizza",
+      "titleB": "White Garlic Chicken Pizza"
+    },
+    {
+      "slugA": "mediterranean-chickpea",
+      "slugB": "street-corn-chicken",
+      "score": 100,
+      "titleA": "Mediterranean Chickpea Bowls",
+      "titleB": "Mexican Street Corn Chicken Bowls"
+    },
+    {
+      "slugA": "mediterranean-chickpea",
+      "slugB": "performance-burrito-bowls",
+      "score": 100,
+      "titleA": "Mediterranean Chickpea Bowls",
+      "titleB": "Performance Chicken Burrito Bowls"
+    },
+    {
+      "slugA": "mediterranean-chickpea",
+      "slugB": "teriyaki-donburi",
+      "score": 100,
+      "titleA": "Mediterranean Chickpea Bowls",
+      "titleB": "Teriyaki Chicken Donburi"
+    },
+    {
+      "slugA": "street-corn-chicken",
+      "slugB": "performance-burrito-bowls",
+      "score": 100,
+      "titleA": "Mexican Street Corn Chicken Bowls",
+      "titleB": "Performance Chicken Burrito Bowls"
+    },
+    {
+      "slugA": "street-corn-chicken",
+      "slugB": "teriyaki-donburi",
+      "score": 100,
+      "titleA": "Mexican Street Corn Chicken Bowls",
+      "titleB": "Teriyaki Chicken Donburi"
+    },
+    {
+      "slugA": "moroccan-meatballs",
+      "slugB": "stuffed-peppers",
+      "score": 100,
+      "titleA": "Moroccan Spiced Lamb Meatballs",
+      "titleB": "Quinoa Stuffed Peppers"
+    },
+    {
+      "slugA": "moroccan-meatballs",
+      "slugB": "shepherds-pie",
+      "score": 100,
+      "titleA": "Moroccan Spiced Lamb Meatballs",
+      "titleB": "Shepherd's Pie"
+    },
+    {
+      "slugA": "skillet-chicken-alfredo",
+      "slugB": "pulled-pork-mac",
+      "score": 100,
+      "titleA": "One-Skillet Chicken Alfredo",
+      "titleB": "Pulled Pork Mac and Cheese"
+    },
+    {
+      "slugA": "skillet-chicken-alfredo",
+      "slugB": "turkey-meatball-zoodles",
+      "score": 100,
+      "titleA": "One-Skillet Chicken Alfredo",
+      "titleB": "Turkey Meatballs with Zucchini Noodles"
+    },
+    {
+      "slugA": "performance-burrito-bowls",
+      "slugB": "teriyaki-donburi",
+      "score": 100,
+      "titleA": "Performance Chicken Burrito Bowls",
+      "titleB": "Teriyaki Chicken Donburi"
+    },
+    {
+      "slugA": "philly-egg-rolls",
+      "slugB": "chicken-quesadillas",
+      "score": 100,
+      "titleA": "Philly Cheesesteak Egg Rolls",
+      "titleB": "Shredded Chicken Quesadillas"
+    },
+    {
+      "slugA": "philly-cheesesteak-skillet",
+      "slugB": "beef-broccoli",
+      "score": 100,
+      "titleA": "Philly Cheesesteak Skillet",
+      "titleB": "Quick Beef and Broccoli"
+    },
+    {
+      "slugA": "philly-cheesesteak-skillet",
+      "slugB": "sausage-peppers-onions",
+      "score": 100,
+      "titleA": "Philly Cheesesteak Skillet",
+      "titleB": "Sausage Peppers and Onions"
+    },
+    {
+      "slugA": "philly-cheesesteak-skillet",
+      "slugB": "thai-basil-chicken",
+      "score": 100,
+      "titleA": "Philly Cheesesteak Skillet",
+      "titleB": "Thai Basil Chicken Stir Fry"
+    },
+    {
+      "slugA": "pulled-pork-mac",
+      "slugB": "turkey-meatball-zoodles",
+      "score": 100,
+      "titleA": "Pulled Pork Mac and Cheese",
+      "titleB": "Turkey Meatballs with Zucchini Noodles"
+    },
+    {
+      "slugA": "beef-broccoli",
+      "slugB": "sausage-peppers-onions",
+      "score": 100,
+      "titleA": "Quick Beef and Broccoli",
+      "titleB": "Sausage Peppers and Onions"
+    },
+    {
+      "slugA": "beef-broccoli",
+      "slugB": "thai-basil-chicken",
+      "score": 100,
+      "titleA": "Quick Beef and Broccoli",
+      "titleB": "Thai Basil Chicken Stir Fry"
+    },
+    {
+      "slugA": "stuffed-peppers",
+      "slugB": "shepherds-pie",
+      "score": 100,
+      "titleA": "Quinoa Stuffed Peppers",
+      "titleB": "Shepherd's Pie"
+    },
+    {
+      "slugA": "sausage-peppers-onions",
+      "slugB": "thai-basil-chicken",
+      "score": 100,
+      "titleA": "Sausage Peppers and Onions",
+      "titleB": "Thai Basil Chicken Stir Fry"
+    },
+    {
+      "slugA": "sheet-pan-fajitas",
+      "slugB": "sheet-pan-meal-prep",
+      "score": 100,
+      "titleA": "Sheet Pan Chicken Fajitas",
+      "titleB": "Sheet Pan Chicken Trays"
+    },
+    {
+      "slugA": "sheet-pan-fajitas",
+      "slugB": "sheet-pan-sausage-peppers",
+      "score": 100,
+      "titleA": "Sheet Pan Chicken Fajitas",
+      "titleB": "Sheet Pan Sausage and Peppers"
+    },
+    {
+      "slugA": "sheet-pan-meal-prep",
+      "slugB": "sheet-pan-sausage-peppers",
+      "score": 100,
+      "titleA": "Sheet Pan Chicken Trays",
+      "titleB": "Sheet Pan Sausage and Peppers"
+    },
+    {
+      "slugA": "southwest-egg-bake",
+      "slugB": "turkey-sausage-egg-bake",
+      "score": 100,
+      "titleA": "Southwest Egg Bake",
+      "titleB": "Turkey Sausage Egg Bake"
+    },
+    {
+      "slugA": "turkey-sausage-burritos",
+      "slugB": "veggie-egg-burritos",
+      "score": 100,
+      "titleA": "Turkey Sausage Breakfast Burritos",
+      "titleB": "Veggie Egg Burritos"
+    },
+    {
+      "slugA": "big-chili",
+      "slugB": "turkey-chili",
+      "score": 93,
+      "titleA": "Hall-Sized Beef and Bean Chili",
+      "titleB": "High-Protein Turkey Chili"
+    },
+    {
+      "slugA": "turkey-chili",
+      "slugB": "sunday-chili-batch",
+      "score": 93,
+      "titleA": "High-Protein Turkey Chili",
+      "titleB": "Sunday Batch Chili"
+    },
+    {
+      "slugA": "beef-barley-soup",
+      "slugB": "turkey-chili",
+      "score": 89,
+      "titleA": "Beef Barley Soup",
+      "titleB": "High-Protein Turkey Chili"
+    },
+    {
+      "slugA": "chicken-dumpling-soup",
+      "slugB": "turkey-chili",
+      "score": 89,
+      "titleA": "Chicken and Dumplings",
+      "titleB": "High-Protein Turkey Chili"
+    },
+    {
+      "slugA": "chili-mac",
+      "slugB": "turkey-chili",
+      "score": 89,
+      "titleA": "Chili Mac Skillet",
+      "titleB": "High-Protein Turkey Chili"
+    },
+    {
+      "slugA": "mac-and-cheese-bake",
+      "slugB": "baked-ziti",
+      "score": 88,
+      "titleA": "Baked Mac and Cheese",
+      "titleB": "Baked Ziti"
+    },
+    {
+      "slugA": "mac-and-cheese-bake",
+      "slugB": "beef-stroganoff",
+      "score": 88,
+      "titleA": "Baked Mac and Cheese",
+      "titleB": "Beef Stroganoff"
+    },
+    {
+      "slugA": "mac-and-cheese-bake",
+      "slugB": "batch-lasagna",
+      "score": 88,
+      "titleA": "Baked Mac and Cheese",
+      "titleB": "Giant Batch Lasagna"
+    },
+    {
+      "slugA": "baked-ziti",
+      "slugB": "chicken-alfredo-bake",
+      "score": 88,
+      "titleA": "Baked Ziti",
+      "titleB": "Chicken Alfredo Bake"
+    },
+    {
+      "slugA": "baked-ziti",
+      "slugB": "chicken-parm",
+      "score": 88,
+      "titleA": "Baked Ziti",
+      "titleB": "Chicken Parm"
+    },
+    {
+      "slugA": "baked-ziti",
+      "slugB": "skillet-chicken-alfredo",
+      "score": 88,
+      "titleA": "Baked Ziti",
+      "titleB": "One-Skillet Chicken Alfredo"
+    },
+    {
+      "slugA": "baked-ziti",
+      "slugB": "pulled-pork-mac",
+      "score": 88,
+      "titleA": "Baked Ziti",
+      "titleB": "Pulled Pork Mac and Cheese"
+    },
+    {
+      "slugA": "baked-ziti",
+      "slugB": "turkey-meatball-zoodles",
+      "score": 88,
+      "titleA": "Baked Ziti",
+      "titleB": "Turkey Meatballs with Zucchini Noodles"
+    },
+    {
+      "slugA": "beef-stroganoff",
+      "slugB": "chicken-alfredo-bake",
+      "score": 88,
+      "titleA": "Beef Stroganoff",
+      "titleB": "Chicken Alfredo Bake"
+    },
+    {
+      "slugA": "beef-stroganoff",
+      "slugB": "chicken-parm",
+      "score": 88,
+      "titleA": "Beef Stroganoff",
+      "titleB": "Chicken Parm"
+    },
+    {
+      "slugA": "beef-stroganoff",
+      "slugB": "skillet-chicken-alfredo",
+      "score": 88,
+      "titleA": "Beef Stroganoff",
+      "titleB": "One-Skillet Chicken Alfredo"
+    },
+    {
+      "slugA": "beef-stroganoff",
+      "slugB": "pulled-pork-mac",
+      "score": 88,
+      "titleA": "Beef Stroganoff",
+      "titleB": "Pulled Pork Mac and Cheese"
+    },
+    {
+      "slugA": "beef-stroganoff",
+      "slugB": "turkey-meatball-zoodles",
+      "score": 88,
+      "titleA": "Beef Stroganoff",
+      "titleB": "Turkey Meatballs with Zucchini Noodles"
+    },
+    {
+      "slugA": "chicken-alfredo-bake",
+      "slugB": "batch-lasagna",
+      "score": 88,
+      "titleA": "Chicken Alfredo Bake",
+      "titleB": "Giant Batch Lasagna"
+    },
+    {
+      "slugA": "chicken-parm",
+      "slugB": "batch-lasagna",
+      "score": 88,
+      "titleA": "Chicken Parm",
+      "titleB": "Giant Batch Lasagna"
+    },
+    {
+      "slugA": "batch-lasagna",
+      "slugB": "skillet-chicken-alfredo",
+      "score": 88,
+      "titleA": "Giant Batch Lasagna",
+      "titleB": "One-Skillet Chicken Alfredo"
+    },
+    {
+      "slugA": "batch-lasagna",
+      "slugB": "pulled-pork-mac",
+      "score": 88,
+      "titleA": "Giant Batch Lasagna",
+      "titleB": "Pulled Pork Mac and Cheese"
+    },
+    {
+      "slugA": "batch-lasagna",
+      "slugB": "turkey-meatball-zoodles",
+      "score": 88,
+      "titleA": "Giant Batch Lasagna",
+      "titleB": "Turkey Meatballs with Zucchini Noodles"
+    },
+    {
+      "slugA": "bbq-brisket-burnt-ends",
+      "slugB": "pork-belly-burnt-ends",
+      "score": 86,
+      "titleA": "BBQ Burnt Ends",
+      "titleB": "Pork Belly Burnt Ends"
+    },
+    {
+      "slugA": "smoked-brisket",
+      "slugB": "mesquite-chuck-roast",
+      "score": 86,
+      "titleA": "Kansas City Smoked Brisket",
+      "titleB": "Mesquite Smoked Chuck Roast"
+    },
+    {
+      "slugA": "asian-chicken-lettuce-cups",
+      "slugB": "turkey-lettuce-wrap-night",
+      "score": 83,
+      "titleA": "Asian Chicken Lettuce Cups",
+      "titleB": "Turkey Lettuce Wrap Night"
+    },
+    {
+      "slugA": "bbq-chicken-bowls",
+      "slugB": "greek-chicken-bowls",
+      "score": 83,
+      "titleA": "BBQ Chicken Bowls",
+      "titleB": "Greek Chicken Bowls"
+    },
+    {
+      "slugA": "bbq-chicken-bowls",
+      "slugB": "bulgogi-bowls",
+      "score": 83,
+      "titleA": "BBQ Chicken Bowls",
+      "titleB": "Korean Bulgogi Rice Bowls"
+    },
+    {
+      "slugA": "bbq-chicken-bowls",
+      "slugB": "loaded-baked-potato-bar",
+      "score": 83,
+      "titleA": "BBQ Chicken Bowls",
+      "titleB": "Loaded Baked Potato Bar"
+    },
+    {
+      "slugA": "bbq-chicken-bowls",
+      "slugB": "game-day-nachos",
+      "score": 83,
+      "titleA": "BBQ Chicken Bowls",
+      "titleB": "Loaded Game Day Nachos"
+    },
+    {
+      "slugA": "bbq-chicken-bowls",
+      "slugB": "loaded-nacho-skillet",
+      "score": 83,
+      "titleA": "BBQ Chicken Bowls",
+      "titleB": "Loaded Nacho Skillet"
+    },
+    {
+      "slugA": "bbq-chicken-bowls",
+      "slugB": "loaded-potato-feed",
+      "score": 83,
+      "titleA": "BBQ Chicken Bowls",
+      "titleB": "Loaded Potato Feed"
+    },
+    {
+      "slugA": "bbq-chicken-bowls",
+      "slugB": "mediterranean-chickpea",
+      "score": 83,
+      "titleA": "BBQ Chicken Bowls",
+      "titleB": "Mediterranean Chickpea Bowls"
+    },
+    {
+      "slugA": "bbq-chicken-bowls",
+      "slugB": "street-corn-chicken",
+      "score": 83,
+      "titleA": "BBQ Chicken Bowls",
+      "titleB": "Mexican Street Corn Chicken Bowls"
+    },
+    {
+      "slugA": "bbq-chicken-bowls",
+      "slugB": "performance-burrito-bowls",
+      "score": 83,
+      "titleA": "BBQ Chicken Bowls",
+      "titleB": "Performance Chicken Burrito Bowls"
+    },
+    {
+      "slugA": "bbq-chicken-bowls",
+      "slugB": "teriyaki-donburi",
+      "score": 83,
+      "titleA": "BBQ Chicken Bowls",
+      "titleB": "Teriyaki Chicken Donburi"
+    },
+    {
+      "slugA": "bbq-chicken-sliders",
+      "slugB": "pulled-pork",
+      "score": 83,
+      "titleA": "BBQ Chicken Sliders",
+      "titleB": "Pulled Pork Sandwiches"
+    },
+    {
+      "slugA": "beef-dip",
+      "slugB": "creamy-chicken-penne-alfredo",
+      "score": 83,
+      "titleA": "Blackstone Steak Sandwiches",
+      "titleB": "Creamy Chicken Penne Alfredo"
+    },
+    {
+      "slugA": "beef-dip",
+      "slugB": "five-ingredient-pasta",
+      "score": 83,
+      "titleA": "Blackstone Steak Sandwiches",
+      "titleB": "Garlic Butter Pasta"
+    },
+    {
+      "slugA": "butter-chicken",
+      "slugB": "meatloaf-mashed",
+      "score": 83,
+      "titleA": "Butter Chicken",
+      "titleB": "Classic Meatloaf with Mashed Potatoes"
+    },
+    {
+      "slugA": "butter-chicken",
+      "slugB": "moroccan-meatballs",
+      "score": 83,
+      "titleA": "Butter Chicken",
+      "titleB": "Moroccan Spiced Lamb Meatballs"
+    },
+    {
+      "slugA": "butter-chicken",
+      "slugB": "stuffed-peppers",
+      "score": 83,
+      "titleA": "Butter Chicken",
+      "titleB": "Quinoa Stuffed Peppers"
+    },
+    {
+      "slugA": "butter-chicken",
+      "slugB": "shepherds-pie",
+      "score": 83,
+      "titleA": "Butter Chicken",
+      "titleB": "Shepherd's Pie"
+    },
+    {
+      "slugA": "carolina-mustard-pork",
+      "slugB": "grilled-pork-chops",
+      "score": 83,
+      "titleA": "Carolina Mustard Pulled Pork",
+      "titleB": "Charcoal Grilled Pork Chops"
+    },
+    {
+      "slugA": "carolina-mustard-pork",
+      "slugB": "honey-garlic-pork-tenderloin",
+      "score": 83,
+      "titleA": "Carolina Mustard Pulled Pork",
+      "titleB": "Honey Garlic Grilled Pork Tenderloin"
+    },
+    {
+      "slugA": "cedar-plank-salmon",
+      "slugB": "lemon-herb-salmon",
+      "score": 83,
+      "titleA": "Cedar Plank Grilled Salmon",
+      "titleB": "Lemon Herb Grilled Salmon"
+    },
+    {
+      "slugA": "cedar-plank-salmon",
+      "slugB": "teriyaki-salmon-grill",
+      "score": 83,
+      "titleA": "Cedar Plank Grilled Salmon",
+      "titleB": "Teriyaki Grilled Salmon"
+    },
+    {
+      "slugA": "grilled-pork-chops",
+      "slugB": "honey-garlic-pork-tenderloin",
+      "score": 83,
+      "titleA": "Charcoal Grilled Pork Chops",
+      "titleB": "Honey Garlic Grilled Pork Tenderloin"
+    },
+    {
+      "slugA": "enchilada-casserole",
+      "slugB": "meatloaf-mashed",
+      "score": 83,
+      "titleA": "Chicken Enchilada Casserole",
+      "titleB": "Classic Meatloaf with Mashed Potatoes"
+    },
+    {
+      "slugA": "enchilada-casserole",
+      "slugB": "moroccan-meatballs",
+      "score": 83,
+      "titleA": "Chicken Enchilada Casserole",
+      "titleB": "Moroccan Spiced Lamb Meatballs"
+    },
+    {
+      "slugA": "enchilada-casserole",
+      "slugB": "stuffed-peppers",
+      "score": 83,
+      "titleA": "Chicken Enchilada Casserole",
+      "titleB": "Quinoa Stuffed Peppers"
+    },
+    {
+      "slugA": "enchilada-casserole",
+      "slugB": "shepherds-pie",
+      "score": 83,
+      "titleA": "Chicken Enchilada Casserole",
+      "titleB": "Shepherd's Pie"
+    },
+    {
+      "slugA": "parm-hero-subs",
+      "slugB": "pulled-pork",
+      "score": 83,
+      "titleA": "Chicken Parm Hero Subs",
+      "titleB": "Pulled Pork Sandwiches"
+    },
+    {
+      "slugA": "chicken-pot-pie",
+      "slugB": "meatloaf-mashed",
+      "score": 83,
+      "titleA": "Chicken Pot Pie",
+      "titleB": "Classic Meatloaf with Mashed Potatoes"
+    },
+    {
+      "slugA": "chicken-pot-pie",
+      "slugB": "moroccan-meatballs",
+      "score": 83,
+      "titleA": "Chicken Pot Pie",
+      "titleB": "Moroccan Spiced Lamb Meatballs"
+    },
+    {
+      "slugA": "chicken-pot-pie",
+      "slugB": "stuffed-peppers",
+      "score": 83,
+      "titleA": "Chicken Pot Pie",
+      "titleB": "Quinoa Stuffed Peppers"
+    },
+    {
+      "slugA": "chicken-pot-pie",
+      "slugB": "shepherds-pie",
+      "score": 83,
+      "titleA": "Chicken Pot Pie",
+      "titleB": "Shepherd's Pie"
+    },
+    {
+      "slugA": "chicken-tikka-masala",
+      "slugB": "meatloaf-mashed",
+      "score": 83,
+      "titleA": "Chicken Tikka Masala",
+      "titleB": "Classic Meatloaf with Mashed Potatoes"
+    },
+    {
+      "slugA": "chicken-tikka-masala",
+      "slugB": "moroccan-meatballs",
+      "score": 83,
+      "titleA": "Chicken Tikka Masala",
+      "titleB": "Moroccan Spiced Lamb Meatballs"
+    },
+    {
+      "slugA": "chicken-tikka-masala",
+      "slugB": "stuffed-peppers",
+      "score": 83,
+      "titleA": "Chicken Tikka Masala",
+      "titleB": "Quinoa Stuffed Peppers"
+    },
+    {
+      "slugA": "chicken-tikka-masala",
+      "slugB": "shepherds-pie",
+      "score": 83,
+      "titleA": "Chicken Tikka Masala",
+      "titleB": "Shepherd's Pie"
+    },
+    {
+      "slugA": "meatloaf-mashed",
+      "slugB": "creamy-tuscan-chicken",
+      "score": 83,
+      "titleA": "Classic Meatloaf with Mashed Potatoes",
+      "titleB": "Creamy Tuscan Chicken"
+    },
+    {
+      "slugA": "creamy-chicken-penne-alfredo",
+      "slugB": "ny-strip-herb-butter",
+      "score": 83,
+      "titleA": "Creamy Chicken Penne Alfredo",
+      "titleB": "Grilled NY Strip with Herb Butter"
+    },
+    {
+      "slugA": "creamy-tuscan-chicken",
+      "slugB": "moroccan-meatballs",
+      "score": 83,
+      "titleA": "Creamy Tuscan Chicken",
+      "titleB": "Moroccan Spiced Lamb Meatballs"
+    },
+    {
+      "slugA": "creamy-tuscan-chicken",
+      "slugB": "stuffed-peppers",
+      "score": 83,
+      "titleA": "Creamy Tuscan Chicken",
+      "titleB": "Quinoa Stuffed Peppers"
+    },
+    {
+      "slugA": "creamy-tuscan-chicken",
+      "slugB": "shepherds-pie",
+      "score": 83,
+      "titleA": "Creamy Tuscan Chicken",
+      "titleB": "Shepherd's Pie"
+    },
+    {
+      "slugA": "meatball-hoagies",
+      "slugB": "pulled-pork",
+      "score": 83,
+      "titleA": "Firehall Meatball Hoagies",
+      "titleB": "Pulled Pork Sandwiches"
+    },
+    {
+      "slugA": "five-ingredient-pasta",
+      "slugB": "ny-strip-herb-butter",
+      "score": 83,
+      "titleA": "Garlic Butter Pasta",
+      "titleB": "Grilled NY Strip with Herb Butter"
+    },
+    {
+      "slugA": "ginger-salmon-bowls",
+      "slugB": "greek-chicken-bowls",
+      "score": 83,
+      "titleA": "Ginger Salmon Rice Bowls",
+      "titleB": "Greek Chicken Bowls"
+    },
+    {
+      "slugA": "ginger-salmon-bowls",
+      "slugB": "bulgogi-bowls",
+      "score": 83,
+      "titleA": "Ginger Salmon Rice Bowls",
+      "titleB": "Korean Bulgogi Rice Bowls"
+    },
+    {
+      "slugA": "ginger-salmon-bowls",
+      "slugB": "loaded-baked-potato-bar",
+      "score": 83,
+      "titleA": "Ginger Salmon Rice Bowls",
+      "titleB": "Loaded Baked Potato Bar"
+    },
+    {
+      "slugA": "ginger-salmon-bowls",
+      "slugB": "game-day-nachos",
+      "score": 83,
+      "titleA": "Ginger Salmon Rice Bowls",
+      "titleB": "Loaded Game Day Nachos"
+    },
+    {
+      "slugA": "ginger-salmon-bowls",
+      "slugB": "loaded-nacho-skillet",
+      "score": 83,
+      "titleA": "Ginger Salmon Rice Bowls",
+      "titleB": "Loaded Nacho Skillet"
+    },
+    {
+      "slugA": "ginger-salmon-bowls",
+      "slugB": "loaded-potato-feed",
+      "score": 83,
+      "titleA": "Ginger Salmon Rice Bowls",
+      "titleB": "Loaded Potato Feed"
+    },
+    {
+      "slugA": "ginger-salmon-bowls",
+      "slugB": "mediterranean-chickpea",
+      "score": 83,
+      "titleA": "Ginger Salmon Rice Bowls",
+      "titleB": "Mediterranean Chickpea Bowls"
+    },
+    {
+      "slugA": "ginger-salmon-bowls",
+      "slugB": "street-corn-chicken",
+      "score": 83,
+      "titleA": "Ginger Salmon Rice Bowls",
+      "titleB": "Mexican Street Corn Chicken Bowls"
+    },
+    {
+      "slugA": "ginger-salmon-bowls",
+      "slugB": "performance-burrito-bowls",
+      "score": 83,
+      "titleA": "Ginger Salmon Rice Bowls",
+      "titleB": "Performance Chicken Burrito Bowls"
+    },
+    {
+      "slugA": "ginger-salmon-bowls",
+      "slugB": "teriyaki-donburi",
+      "score": 83,
+      "titleA": "Ginger Salmon Rice Bowls",
+      "titleB": "Teriyaki Chicken Donburi"
+    },
+    {
+      "slugA": "hall-taco-bar",
+      "slugB": "pork-carnitas-tacos",
+      "score": 83,
+      "titleA": "Hall Taco Bar Night",
+      "titleB": "Quick Pork Carnitas Tacos"
+    },
+    {
+      "slugA": "smoked-brisket",
+      "slugB": "texas-beef-ribs",
+      "score": 83,
+      "titleA": "Kansas City Smoked Brisket",
+      "titleB": "Texas-Style Beef Ribs"
+    },
+    {
+      "slugA": "lean-turkey-bean-chili",
+      "slugB": "turkey-sweet-potato-chili",
+      "score": 83,
+      "titleA": "Lean Turkey and Bean Chili",
+      "titleB": "Turkey Sweet Potato Chili"
+    },
+    {
+      "slugA": "lemon-herb-salmon",
+      "slugB": "teriyaki-salmon-grill",
+      "score": 83,
+      "titleA": "Lemon Herb Grilled Salmon",
+      "titleB": "Teriyaki Grilled Salmon"
+    },
+    {
+      "slugA": "mesquite-chuck-roast",
+      "slugB": "texas-beef-ribs",
+      "score": 83,
+      "titleA": "Mesquite Smoked Chuck Roast",
+      "titleB": "Texas-Style Beef Ribs"
+    },
+    {
+      "slugA": "philly-egg-rolls",
+      "slugB": "pulled-pork",
+      "score": 83,
+      "titleA": "Philly Cheesesteak Egg Rolls",
+      "titleB": "Pulled Pork Sandwiches"
+    },
+    {
+      "slugA": "pulled-pork",
+      "slugB": "chicken-quesadillas",
+      "score": 83,
+      "titleA": "Pulled Pork Sandwiches",
+      "titleB": "Shredded Chicken Quesadillas"
+    },
+    {
+      "slugA": "ginger-soy-chicken-rice-bowls",
+      "slugB": "honey-garlic-chicken-rice-bowls",
+      "score": 80,
+      "titleA": "Ginger Soy Chicken Rice Bowls",
+      "titleB": "Honey Garlic Chicken Rice Bowls"
+    },
+    {
+      "slugA": "beef-barley-soup",
+      "slugB": "chili-garlic-bread",
+      "score": 78,
+      "titleA": "Beef Barley Soup",
+      "titleB": "Firehall Chili"
+    },
+    {
+      "slugA": "chicken-dumpling-soup",
+      "slugB": "chili-garlic-bread",
+      "score": 78,
+      "titleA": "Chicken and Dumplings",
+      "titleB": "Firehall Chili"
+    },
+    {
+      "slugA": "chili-mac",
+      "slugB": "chili-garlic-bread",
+      "score": 78,
+      "titleA": "Chili Mac Skillet",
+      "titleB": "Firehall Chili"
+    },
+    {
+      "slugA": "greek-lemon-chicken-potatoes",
+      "slugB": "zaatar-roasted-chicken-thighs",
+      "score": 78,
+      "titleA": "Greek Lemon Chicken and Potatoes",
+      "titleB": "Za'atar Roasted Chicken Thighs"
+    },
+    {
+      "slugA": "turkey-sweet-potato-chili",
+      "slugB": "turkey-taco-skillet",
+      "score": 75,
+      "titleA": "Turkey Sweet Potato Chili",
+      "titleB": "Turkey Taco Skillet"
+    },
+    {
+      "slugA": "chili-garlic-bread",
+      "slugB": "big-chili",
+      "score": 73,
+      "titleA": "Firehall Chili",
+      "titleB": "Hall-Sized Beef and Bean Chili"
+    },
+    {
+      "slugA": "chili-garlic-bread",
+      "slugB": "sunday-chili-batch",
+      "score": 73,
+      "titleA": "Firehall Chili",
+      "titleB": "Sunday Batch Chili"
+    },
+    {
+      "slugA": "bacon-egg-hash-skillet",
+      "slugB": "steakhouse-hash-skillet",
+      "score": 71,
+      "titleA": "Bacon Egg Hash Skillet",
+      "titleB": "Steakhouse Hash Skillet"
+    },
+    {
+      "slugA": "bacon-hash-burritos",
+      "slugB": "sheet-pan-breakfast-hash",
+      "score": 71,
+      "titleA": "Bacon Hash Burritos",
+      "titleB": "Sheet Pan Breakfast Hash"
+    },
+    {
+      "slugA": "bbq-brisket-burnt-ends",
+      "slugB": "chicken-wing-bar-night",
+      "score": 71,
+      "titleA": "BBQ Burnt Ends",
+      "titleB": "Chicken Wing Bar Night"
+    },
+    {
+      "slugA": "cast-iron-breakfast-skillet",
+      "slugB": "steakhouse-hash-skillet",
+      "score": 71,
+      "titleA": "Cast Iron Breakfast Skillet",
+      "titleB": "Steakhouse Hash Skillet"
+    },
+    {
+      "slugA": "chorizo-breakfast-burritos",
+      "slugB": "sheet-pan-breakfast-hash",
+      "score": 71,
+      "titleA": "Chorizo Breakfast Burritos",
+      "titleB": "Sheet Pan Breakfast Hash"
+    },
+    {
+      "slugA": "creamy-chicken-penne-alfredo",
+      "slugB": "five-ingredient-pasta",
+      "score": 71,
+      "titleA": "Creamy Chicken Penne Alfredo",
+      "titleB": "Garlic Butter Pasta"
+    },
+    {
+      "slugA": "garlic-butter-shrimp",
+      "slugB": "lemon-garlic-shrimp-pasta",
+      "score": 71,
+      "titleA": "Garlic Butter Shrimp",
+      "titleB": "Lemon Garlic Shrimp Pasta"
+    },
+    {
+      "slugA": "hall-breakfast-burritos",
+      "slugB": "sheet-pan-breakfast-hash",
+      "score": 71,
+      "titleA": "Hall Breakfast Burritos",
+      "titleB": "Sheet Pan Breakfast Hash"
+    },
+    {
+      "slugA": "ham-pepper-skillet",
+      "slugB": "steakhouse-hash-skillet",
+      "score": 71,
+      "titleA": "Ham & Pepper Breakfast Skillet",
+      "titleB": "Steakhouse Hash Skillet"
+    },
+    {
+      "slugA": "smoked-brisket",
+      "slugB": "pepper-smoked-brisket-flat",
+      "score": 71,
+      "titleA": "Kansas City Smoked Brisket",
+      "titleB": "Pepper-Crusted Smoked Brisket Flat"
+    },
+    {
+      "slugA": "sheet-pan-breakfast-hash",
+      "slugB": "turkey-sausage-burritos",
+      "score": 71,
+      "titleA": "Sheet Pan Breakfast Hash",
+      "titleB": "Turkey Sausage Breakfast Burritos"
+    },
+    {
+      "slugA": "sheet-pan-breakfast-hash",
+      "slugB": "veggie-egg-burritos",
+      "score": 71,
+      "titleA": "Sheet Pan Breakfast Hash",
+      "titleB": "Veggie Egg Burritos"
+    },
+    {
+      "slugA": "cast-iron-chicken-fajitas",
+      "slugB": "sheet-pan-chicken-fajitas-lite",
+      "score": 70,
+      "titleA": "Cast Iron Chicken Fajitas",
+      "titleB": "Sheet Pan Chicken Fajitas Lite"
+    },
+    {
+      "slugA": "crock-barbacoa-chicken",
+      "slugB": "salsa-verde-crock-chicken",
+      "score": 70,
+      "titleA": "Crock Barbacoa Chicken",
+      "titleB": "Salsa Verde Crock Chicken"
+    },
+    {
+      "slugA": "salsa-verde-crock-chicken",
+      "slugB": "white-bean-chicken-chili",
+      "score": 70,
+      "titleA": "Salsa Verde Crock Chicken",
+      "titleB": "White Bean Chicken Chili"
+    },
+    {
+      "slugA": "shawarma-bar-night",
+      "slugB": "shawarma-chicken-rice-bowls",
+      "score": 70,
+      "titleA": "Shawarma Bar Night",
+      "titleB": "Shawarma Chicken Rice Bowls"
+    }
+  ],
+  "batch250DuplicatePairs70Plus": [
+    {
+      "slugA": "smoked-brisket",
+      "slugB": "mesquite-chuck-roast",
+      "score": 86,
+      "titleA": "Kansas City Smoked Brisket",
+      "titleB": "Mesquite Smoked Chuck Roast"
+    },
+    {
+      "slugA": "beef-dip",
+      "slugB": "creamy-chicken-penne-alfredo",
+      "score": 83,
+      "titleA": "Blackstone Steak Sandwiches",
+      "titleB": "Creamy Chicken Penne Alfredo"
+    },
+    {
+      "slugA": "creamy-chicken-penne-alfredo",
+      "slugB": "ny-strip-herb-butter",
+      "score": 83,
+      "titleA": "Creamy Chicken Penne Alfredo",
+      "titleB": "Grilled NY Strip with Herb Butter"
+    },
+    {
+      "slugA": "mesquite-chuck-roast",
+      "slugB": "texas-beef-ribs",
+      "score": 83,
+      "titleA": "Mesquite Smoked Chuck Roast",
+      "titleB": "Texas-Style Beef Ribs"
+    },
+    {
+      "slugA": "ginger-soy-chicken-rice-bowls",
+      "slugB": "honey-garlic-chicken-rice-bowls",
+      "score": 80,
+      "titleA": "Ginger Soy Chicken Rice Bowls",
+      "titleB": "Honey Garlic Chicken Rice Bowls"
+    },
+    {
+      "slugA": "creamy-chicken-penne-alfredo",
+      "slugB": "five-ingredient-pasta",
+      "score": 71,
+      "titleA": "Creamy Chicken Penne Alfredo",
+      "titleB": "Garlic Butter Pasta"
+    },
+    {
+      "slugA": "smoked-brisket",
+      "slugB": "pepper-smoked-brisket-flat",
+      "score": 71,
+      "titleA": "Kansas City Smoked Brisket",
+      "titleB": "Pepper-Crusted Smoked Brisket Flat"
+    },
+    {
+      "slugA": "cast-iron-chicken-fajitas",
+      "slugB": "sheet-pan-chicken-fajitas-lite",
+      "score": 70,
+      "titleA": "Cast Iron Chicken Fajitas",
+      "titleB": "Sheet Pan Chicken Fajitas Lite"
+    }
+  ],
+  "imageMatchConfidenceBelow90": [
+    {
+      "slug": "bacon-egg-hash-skillet",
+      "title": "Bacon Egg Hash Skillet",
+      "confidence": 10,
+      "mismatches": [
+        "missing mobile crop image",
+        "image protein cues (pork) do not match bacon"
+      ]
+    },
+    {
+      "slug": "bacon-hash-burritos",
+      "title": "Bacon Hash Burritos",
+      "confidence": 10,
+      "mismatches": [
+        "missing mobile crop image",
+        "image protein cues (pork) do not match bacon"
+      ]
+    },
+    {
+      "slug": "hall-sausage-biscuits-gravy",
+      "title": "Hall Sausage Biscuits & Gravy",
+      "confidence": 10,
+      "mismatches": [
+        "missing mobile crop image",
+        "image protein cues (pork) do not match sausage"
+      ]
+    },
+    {
+      "slug": "ham-cheddar-egg-bake",
+      "title": "Ham & Cheddar Egg Bake",
+      "confidence": 10,
+      "mismatches": [
+        "missing mobile crop image",
+        "image protein cues (pork) do not match eggs"
+      ]
+    },
+    {
+      "slug": "ham-pepper-skillet",
+      "title": "Ham & Pepper Breakfast Skillet",
+      "confidence": 10,
+      "mismatches": [
+        "missing mobile crop image",
+        "image protein cues (pork) do not match eggs"
+      ]
+    },
+    {
+      "slug": "maple-sausage-pinwheels",
+      "title": "Maple Sausage Pinwheels",
+      "confidence": 10,
+      "mismatches": [
+        "missing mobile crop image",
+        "image protein cues (pork) do not match sausage"
+      ]
+    },
+    {
+      "slug": "sausage-egg-cheese-sandwiches",
+      "title": "Sausage Egg & Cheese Sandwiches",
+      "confidence": 10,
+      "mismatches": [
+        "missing mobile crop image",
+        "image protein cues (pork) do not match sausage"
+      ]
+    },
+    {
+      "slug": "turkey-sausage-burritos",
+      "title": "Turkey Sausage Breakfast Burritos",
+      "confidence": 10,
+      "mismatches": [
+        "missing mobile crop image",
+        "image protein cues (pork, turkey) do not match eggs"
+      ]
+    },
+    {
+      "slug": "turkey-sausage-egg-bake",
+      "title": "Turkey Sausage Egg Bake",
+      "confidence": 10,
+      "mismatches": [
+        "missing mobile crop image",
+        "image protein cues (pork, turkey) do not match eggs"
+      ]
+    },
+    {
+      "slug": "burrito-bowl-bar-night",
+      "title": "Burrito Bowl Bar Night",
+      "confidence": 12,
+      "mismatches": [
+        "missing mobile crop image",
+        "hero path conflicts with meal title/format (Burrito Bowl Bar Night)"
+      ]
+    },
+    {
+      "slug": "cast-iron-chicken-fajitas",
+      "title": "Cast Iron Chicken Fajitas",
+      "confidence": 12,
+      "mismatches": [
+        "missing mobile crop image",
+        "hero path conflicts with meal title/format (Cast Iron Chicken Fajitas)"
+      ]
+    },
+    {
+      "slug": "pepper-smoked-brisket-flat",
+      "title": "Pepper-Crusted Smoked Brisket Flat",
+      "confidence": 18,
+      "mismatches": [
+        "missing mobile crop image",
+        "image depicts grill but meal is grill (Pepper-Crusted Smoked Brisket Flat)"
+      ]
+    },
+    {
+      "slug": "protein-pancake-tray",
+      "title": "Protein Pancake Tray",
+      "confidence": 18,
+      "mismatches": [
+        "missing mobile crop image",
+        "image depicts sheet_pan but meal is breakfast (Protein Pancake Tray)"
+      ]
+    },
+    {
+      "slug": "smoked-corned-beef",
+      "title": "Smoked Corned Beef Brisket",
+      "confidence": 18,
+      "mismatches": [
+        "missing mobile crop image",
+        "image depicts grill but meal is grill (Smoked Corned Beef Brisket)"
+      ]
+    },
+    {
+      "slug": "apple-cinnamon-baked-oatmeal",
+      "title": "Apple Cinnamon Baked Oatmeal",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "applewood-pork-shoulder-steaks",
+      "title": "Applewood Grilled Pork Shoulder Steaks",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "asian-chicken-lettuce-cups",
+      "title": "Asian Chicken Lettuce Cups",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "baked-falafel-hall-bowls",
+      "title": "Baked Falafel Hall Bowls",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "mac-and-cheese-bake",
+      "title": "Baked Mac and Cheese",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "mostaccioli-sausage-bake",
+      "title": "Baked Mostaccioli with Sausage",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "baked-turkey-meatball-marinara",
+      "title": "Baked Turkey Meatball Marinara",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "baked-ziti",
+      "title": "Baked Ziti",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "bbq-breakfast-hash",
+      "title": "BBQ Breakfast Hash",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "bbq-brisket-burnt-ends",
+      "title": "BBQ Burnt Ends",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "bbq-chicken-bowls",
+      "title": "BBQ Chicken Bowls",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "bbq-chicken-pizza",
+      "title": "BBQ Chicken Pizza",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "bbq-chicken-sliders",
+      "title": "BBQ Chicken Sliders",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "bbq-meatball-skewers",
+      "title": "BBQ Meatball Skewers",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "beef-barley-soup",
+      "title": "Beef Barley Soup",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "enchilada-beef-skillet",
+      "title": "Beef Enchilada Skillet",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "beef-stroganoff",
+      "title": "Beef Stroganoff",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "beer-can-chicken",
+      "title": "Beer Can Chicken",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "big-pot-savory-oats",
+      "title": "Big-Pot Savory Oats",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "turkey-burgers",
+      "title": "Black Bean Turkey Burgers",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "blackened-cod-taco-night",
+      "title": "Blackened Cod Taco Night",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "beef-dip",
+      "title": "Blackstone Steak Sandwiches",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "blueberry-almond",
+      "title": "Blueberry Almond Smoothie",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "breakfast-crunchwraps",
+      "title": "Breakfast Crunchwraps",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "breakfast-enchiladas",
+      "title": "Breakfast Enchiladas for the Crew",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "breakfast-nachos-supreme",
+      "title": "Breakfast Nachos Supreme",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "breakfast-poutine",
+      "title": "Breakfast Poutine",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "breakfast-quesadillas",
+      "title": "Breakfast Quesadillas",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "breakfast-sandwich-trays",
+      "title": "Breakfast Sandwich Trays",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "breakfast-sausage-pizza",
+      "title": "Breakfast Sausage Gravy Pizza",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "breakfast-sliders",
+      "title": "Breakfast Sliders",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "buffalo-chicken-dip",
+      "title": "Buffalo Chicken Dip",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "build-your-own-pho-bar",
+      "title": "Build-Your-Own Pho Bar",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "butter-chicken",
+      "title": "Butter Chicken",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "buttermilk-pancakes",
+      "title": "Buttermilk Pancakes for the Crew",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "cajun-chicken-rice-skillet",
+      "title": "Cajun Chicken and Rice Skillet",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "cajun-chicken-rice-bowl",
+      "title": "Cajun Chicken Rice Bowl",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "jambalaya",
+      "title": "Cajun Jambalaya for the Hall",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "caprese-chicken-bake",
+      "title": "Caprese Chicken Bake",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "carolina-mustard-pork",
+      "title": "Carolina Mustard Pulled Pork",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "cast-iron-breakfast-skillet",
+      "title": "Cast Iron Breakfast Skillet",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "cedar-plank-salmon",
+      "title": "Cedar Plank Grilled Salmon",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "grilled-pork-chops",
+      "title": "Charcoal Grilled Pork Chops",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "cheesy-beef-nacho-bake",
+      "title": "Cheesy Beef Nacho Bake",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "cheesy-chicken-broccoli-rice",
+      "title": "Cheesy Chicken Broccoli Rice",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "chicken-alfredo-bake",
+      "title": "Chicken Alfredo Bake",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "chicken-dumpling-soup",
+      "title": "Chicken and Dumplings",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "enchilada-casserole",
+      "title": "Chicken Enchilada Casserole",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "chicken-parm",
+      "title": "Chicken Parm",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "parm-hero-subs",
+      "title": "Chicken Parm Hero Subs",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "chicken-pot-pie",
+      "title": "Chicken Pot Pie",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "chicken-tikka-masala",
+      "title": "Chicken Tikka Masala",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "chicken-wing-bar-night",
+      "title": "Chicken Wing Bar Night",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "chili-mac",
+      "title": "Chili Mac Skillet",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "steak-tacos",
+      "title": "Chimichurri Steak Tacos",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "chipotle-lime-chicken-tacos",
+      "title": "Chipotle Lime Chicken Tacos",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "chocolate-banana-recovery",
+      "title": "Chocolate Banana Recovery Smoothie",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "chorizo-breakfast-burritos",
+      "title": "Chorizo Breakfast Burritos",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "chorizo-breakfast-hash",
+      "title": "Chorizo Breakfast Hash",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "citrus-ginger",
+      "title": "Citrus Ginger Smoothie",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "meatloaf-mashed",
+      "title": "Classic Meatloaf with Mashed Potatoes",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "pepperoni-pizza-night",
+      "title": "Classic Pepperoni Pizza",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "coconut-curry-chicken-pot",
+      "title": "Coconut Curry Chicken Pot",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "cottage-cheese-protein-pasta",
+      "title": "Cottage Cheese Protein Pasta Bake",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "cowboy-breakfast-skillet",
+      "title": "Cowboy Breakfast Skillet",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "creamy-chicken-penne-alfredo",
+      "title": "Creamy Chicken Penne Alfredo",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "creamy-tuscan-chicken",
+      "title": "Creamy Tuscan Chicken",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "crew-french-toast-bake",
+      "title": "Crew French Toast Bake",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "crispy-chicken-cutlets",
+      "title": "Crispy Chicken Cutlets Marinara",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "crispy-fish-taco-night",
+      "title": "Crispy Fish Taco Night",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "crock-barbacoa-chicken",
+      "title": "Crock Barbacoa Chicken",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "denver-breakfast-casserole",
+      "title": "Denver Breakfast Casserole",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "detroit-style-pizza",
+      "title": "Detroit-Style Pepperoni Pizza",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "smash-burgers",
+      "title": "Double Smash Burgers",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "dutch-oven-pot-roast",
+      "title": "Dutch Oven Pot Roast",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "fajita-bar-night",
+      "title": "Fajita Bar Night",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "fast-philly-skillet",
+      "title": "Fast Philly Cheesesteak Skillet",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "fire-captain-omelette-bar",
+      "title": "Fire Captain Omelette Bar",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "firehall-breakfast-pizza",
+      "title": "Firehall Breakfast Pizza",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "firehall-charcuterie-board",
+      "title": "Firehall Charcuterie Board",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "chili-garlic-bread",
+      "title": "Firehall Chili",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "meatball-hoagies",
+      "title": "Firehall Meatball Hoagies",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "margherita-pizza",
+      "title": "Fresh Margherita Pizza",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "game-day-pizza-sliders",
+      "title": "Game Day Pizza Sliders",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "five-ingredient-pasta",
+      "title": "Garlic Butter Pasta",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "garlic-butter-shrimp",
+      "title": "Garlic Butter Shrimp",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "batch-lasagna",
+      "title": "Giant Batch Lasagna",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "ginger-salmon-bowls",
+      "title": "Ginger Salmon Rice Bowls",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "ginger-soy-chicken-rice-bowls",
+      "title": "Ginger Soy Chicken Rice Bowls",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "greek-chicken-bowls",
+      "title": "Greek Chicken Bowls",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "greek-lemon-chicken-potatoes",
+      "title": "Greek Lemon Chicken and Potatoes",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "green-chile-chicken-stew",
+      "title": "Green Chile Chicken Stew",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "green-pineapple",
+      "title": "Green Pineapple Smoothie",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "chicken-souvlaki",
+      "title": "Grilled Chicken Souvlaki",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "flank-chimichurri",
+      "title": "Grilled Flank Steak with Chimichurri",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "ny-strip-herb-butter",
+      "title": "Grilled NY Strip with Herb Butter",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "grilled-shrimp-quinoa-bowls",
+      "title": "Grilled Shrimp Quinoa Bowls",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "grilled-corn-cotija",
+      "title": "Grilled Street Corn with Cotija",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "hall-breakfast-burritos",
+      "title": "Hall Breakfast Burritos",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "hall-breakfast-wraps",
+      "title": "Hall Breakfast Wraps",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "hall-burger-bar",
+      "title": "Hall Burger Bar",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "chicken-caesar",
+      "title": "Hall Caesar Chicken",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "hall-chicken-noodle-soup",
+      "title": "Hall Chicken Noodle Soup",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "pad-thai",
+      "title": "Hall Rush Pad Thai",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "slider-bar",
+      "title": "Hall Slider Bar",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "hall-sloppy-joe-feed",
+      "title": "Hall Sloppy Joe Feed",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "hall-taco-bar",
+      "title": "Hall Taco Bar Night",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "big-chili",
+      "title": "Hall-Sized Beef and Bean Chili",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "herb-roasted-thighs",
+      "title": "Herb Roasted Chicken Thighs",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "herb-baked-salmon-tray",
+      "title": "Herb-Crusted Baked Salmon Tray",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "hickory-turkey-legs",
+      "title": "Hickory Smoked Turkey Legs",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "turkey-chili",
+      "title": "High-Protein Turkey Chili",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "high-protein-parfaits",
+      "title": "High-Protein Yogurt Parfaits",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "honey-garlic-chicken-rice-bowls",
+      "title": "Honey Garlic Chicken Rice Bowls",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "honey-garlic-pork-tenderloin",
+      "title": "Honey Garlic Grilled Pork Tenderloin",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "honey-lime-chicken-tray",
+      "title": "Honey Lime Chicken Tray",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "honey-mustard-oven-chicken-thighs",
+      "title": "Honey Mustard Baked Chicken Thighs",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "honey-soppressata-pizza",
+      "title": "Hot Honey Soppressata Pizza",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "hummus-chicken-platter",
+      "title": "Hummus Chicken Platter",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "italian-sausage-veg-sheet-pan",
+      "title": "Italian Sausage and Veg Sheet Pan",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "jalapeno-popper-dip",
+      "title": "Jalapeño Popper Dip",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "jerk-chicken",
+      "title": "Jerk Chicken",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "smoked-brisket",
+      "title": "Kansas City Smoked Brisket",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "kielbasa-cabbage-potato-skillet",
+      "title": "Kielbasa Cabbage Potato Skillet",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "korean-beef-rice-bowls",
+      "title": "Korean Beef Rice Bowls",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "bulgogi-bowls",
+      "title": "Korean Bulgogi Rice Bowls",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "lean-beef-broccoli-rice",
+      "title": "Lean Beef and Broccoli Rice",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "lean-turkey-bean-chili",
+      "title": "Lean Turkey and Bean Chili",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "lemon-chicken-orzo-soup",
+      "title": "Lemon Chicken Orzo Soup",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "lemon-garlic-chicken-tray",
+      "title": "Lemon Garlic Chicken Tray Bake",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "lemon-garlic-shrimp-pasta",
+      "title": "Lemon Garlic Shrimp Pasta",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "lemon-herb-salmon",
+      "title": "Lemon Herb Grilled Salmon",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "lemon-salmon-orzo-skillet",
+      "title": "Lemon Salmon Orzo Skillet",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "lentil-mushroom-bolognese",
+      "title": "Lentil Mushroom Bolognese",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "chicken-enchilada-skillet-light",
+      "title": "Light Chicken Enchilada Skillet",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "loaded-baked-potato-bar",
+      "title": "Loaded Baked Potato Bar",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "game-day-nachos",
+      "title": "Loaded Game Day Nachos",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "loaded-nacho-bar-night",
+      "title": "Loaded Nacho Bar Night",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "loaded-nacho-skillet",
+      "title": "Loaded Nacho Skillet",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "loaded-potato-feed",
+      "title": "Loaded Potato Feed",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "loaded-potato-skins",
+      "title": "Loaded Potato Skins",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "maple-mustard-salmon-tray",
+      "title": "Maple Mustard Salmon Tray",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "maple-soy-salmon-bowls",
+      "title": "Maple Soy Salmon Bowls",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "meat-lovers-sheet-pizza",
+      "title": "Meat Lover's Sheet Pan Pizza",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "mediterranean-baked-fish-tray",
+      "title": "Mediterranean Baked Fish Tray",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "mediterranean-chicken-farro-bowls",
+      "title": "Mediterranean Chicken Farro Bowls",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "mediterranean-chickpea",
+      "title": "Mediterranean Chickpea Bowls",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "mediterranean-feast-night",
+      "title": "Mediterranean Feast Night",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "memphis-dry-rub-ribs",
+      "title": "Memphis Dry Rub Ribs",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "mesquite-chuck-roast",
+      "title": "Mesquite Smoked Chuck Roast",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "street-corn-chicken",
+      "title": "Mexican Street Corn Chicken Bowls",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "mixed-berry-protein",
+      "title": "Mixed Berry Protein Smoothie",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "mocha-protein",
+      "title": "Mocha Protein Smoothie",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "molasses-bourbon-pork-ribs",
+      "title": "Molasses Bourbon Pork Ribs",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "monte-cristo-sandwiches",
+      "title": "Monte Cristo Sandwiches",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "moroccan-chicken-chickpea-tray",
+      "title": "Moroccan Chicken Chickpea Tray",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "moroccan-meatballs",
+      "title": "Moroccan Spiced Lamb Meatballs",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "mushroom-swiss-steak-pan",
+      "title": "Mushroom Swiss Steak Pan",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "one-pot-chicken-rice",
+      "title": "One-Pot Chicken and Rice",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "skillet-chicken-alfredo",
+      "title": "One-Skillet Chicken Alfredo",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "overnight-french-toast-bake",
+      "title": "Overnight French Toast Bake",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "paprika-roasted-chicken-quarters",
+      "title": "Paprika Roasted Chicken Quarters",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "pasta-bar-night",
+      "title": "Pasta Bar Night",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "peanut-butter-banana-recovery",
+      "title": "Peanut Butter Banana Recovery Shake",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "pellet-smoked-chicken-quarters",
+      "title": "Pellet Smoked Chicken Quarters",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "pepper-steak-onions",
+      "title": "Pepper Steak with Onions",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "performance-burrito-bowls",
+      "title": "Performance Chicken Burrito Bowls",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "pesto-tomato-chicken-tray",
+      "title": "Pesto Tomato Chicken Tray",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "philly-egg-rolls",
+      "title": "Philly Cheesesteak Egg Rolls",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "philly-cheesesteak-skillet",
+      "title": "Philly Cheesesteak Skillet",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "philly-cheesesteak-sliders",
+      "title": "Philly Cheesesteak Sliders",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "pork-belly-burnt-ends",
+      "title": "Pork Belly Burnt Ends",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "pretzel-bite-platter",
+      "title": "Pretzel Bite Platter with Beer Cheese",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "protein-french-toast",
+      "title": "Protein French Toast",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "pulled-pork-mac",
+      "title": "Pulled Pork Mac and Cheese",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "pulled-pork",
+      "title": "Pulled Pork Sandwiches",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "beef-broccoli",
+      "title": "Quick Beef and Broccoli",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "quick-egg-tacos",
+      "title": "Quick Egg Tacos",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "pork-carnitas-tacos",
+      "title": "Quick Pork Carnitas Tacos",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "stuffed-peppers",
+      "title": "Quinoa Stuffed Peppers",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "red-lead-skillet",
+      "title": "Red Lead Skillet",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "rice-bowl-bar-night",
+      "title": "Rice Bowl Bar Night",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "rigatoni-meat-sauce-batch",
+      "title": "Rigatoni with Meat Sauce",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "salsa-verde-crock-chicken",
+      "title": "Salsa Verde Crock Chicken",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "sandwich-board-night",
+      "title": "Sandwich Board Night",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "sausage-egg-bake",
+      "title": "Sausage Egg Bake for the Crew",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "sausage-peppers-onions",
+      "title": "Sausage Peppers and Onions",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "shawarma-bar-night",
+      "title": "Shawarma Bar Night",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "shawarma-chicken-rice-bowls",
+      "title": "Shawarma Chicken Rice Bowls",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "sheet-pan-breakfast-hash",
+      "title": "Sheet Pan Breakfast Hash",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "sheet-pan-breakfast-sandwiches",
+      "title": "Sheet Pan Breakfast Sandwiches",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "sheet-pan-fajitas",
+      "title": "Sheet Pan Chicken Fajitas",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "sheet-pan-chicken-fajitas-lite",
+      "title": "Sheet Pan Chicken Fajitas Lite",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "sheet-pan-meal-prep",
+      "title": "Sheet Pan Chicken Trays",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "sheet-pan-meatball-marinara",
+      "title": "Sheet Pan Meatball Marinara Feed",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "sheet-pan-sausage-peppers",
+      "title": "Sheet Pan Sausage and Peppers",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "shepherds-pie",
+      "title": "Shepherd's Pie",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "chicken-quesadillas",
+      "title": "Shredded Chicken Quesadillas",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "smoked-mac-and-cheese",
+      "title": "Smoked Mac and Cheese",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "smoked-meatloaf",
+      "title": "Smoked Meatloaf with Glaze",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "smoked-queso-fundido",
+      "title": "Smoked Queso Fundido",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "smoked-sausage-platter",
+      "title": "Smoked Sausage Platter",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "smoked-tri-tip",
+      "title": "Smoked Tri-Tip Roast",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "smoked-turkey-breast",
+      "title": "Smoked Turkey Breast for the Crew",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "smoked-wings-white-sauce",
+      "title": "Smoked Wings with White BBQ Sauce",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "smoky-lentil-kale-soup",
+      "title": "Smoky Lentil and Kale Soup",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "soft-pretzel-dogs",
+      "title": "Soft Pretzel Hot Dogs",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "southwest-egg-bake",
+      "title": "Southwest Egg Bake",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "spanish-chicken-chorizo-rice",
+      "title": "Spanish Chicken and Chorizo Rice",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "spatchcock-lemon-roast-chicken",
+      "title": "Spatchcock Lemon Roast Chicken",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "station-cobb-salad",
+      "title": "Station Cobb Salad",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "steak-sandwiches",
+      "title": "Steak Sandwiches",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "steakhouse-hash-skillet",
+      "title": "Steakhouse Hash Skillet",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "strawberry-oat-breakfast",
+      "title": "Strawberry Oatmeal Breakfast Smoothie",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "strawberry-spinach",
+      "title": "Strawberry Spinach Smoothie",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "sunday-chili-batch",
+      "title": "Sunday Batch Chili",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "tabbouleh-chicken-bowls",
+      "title": "Tabbouleh Chicken Bowls",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "teriyaki-donburi",
+      "title": "Teriyaki Chicken Donburi",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "teriyaki-salmon-grill",
+      "title": "Teriyaki Grilled Salmon",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "texas-beef-ribs",
+      "title": "Texas-Style Beef Ribs",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "thai-basil-chicken",
+      "title": "Thai Basil Chicken Stir Fry",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "tropical-mango-greek",
+      "title": "Tropical Mango Greek Yogurt Smoothie",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "turkey-lettuce-wrap-night",
+      "title": "Turkey Lettuce Wrap Night",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "turkey-meatball-zoodles",
+      "title": "Turkey Meatballs with Zucchini Noodles",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "turkey-quinoa-stuffed-peppers",
+      "title": "Turkey Quinoa Stuffed Peppers",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "turkey-shepherds-sweet-potato",
+      "title": "Turkey Shepherd's with Sweet Potato Top",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "turkey-sweet-potato-chili",
+      "title": "Turkey Sweet Potato Chili",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "turkey-taco-skillet",
+      "title": "Turkey Taco Skillet",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "turkey-zoodle-bolognese",
+      "title": "Turkey Zoodle Bolognese",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "veggie-egg-burritos",
+      "title": "Veggie Egg Burritos",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "warm-spinach-chicken-salad",
+      "title": "Warm Spinach Chicken Salad",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "white-bean-kale-soup",
+      "title": "White Bean and Kale Soup",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "white-bean-chicken-chili",
+      "title": "White Bean Chicken Chili",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "white-garlic-chicken-pizza",
+      "title": "White Garlic Chicken Pizza",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "yogurt-marinated-grill-chicken",
+      "title": "Yogurt Marinated Grill Chicken",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    },
+    {
+      "slug": "zaatar-roasted-chicken-thighs",
+      "title": "Za'atar Roasted Chicken Thighs",
+      "confidence": 70,
+      "mismatches": [
+        "missing mobile crop image"
+      ]
+    }
+  ],
+  "needsManualImageReview": [
+    {
+      "slug": "pepper-smoked-brisket-flat",
+      "title": "Pepper-Crusted Smoked Brisket Flat",
+      "confidence": 82
+    },
+    {
+      "slug": "protein-pancake-tray",
+      "title": "Protein Pancake Tray",
+      "confidence": 82
+    },
+    {
+      "slug": "smoked-corned-beef",
+      "title": "Smoked Corned Beef Brisket",
+      "confidence": 82
+    },
+    {
+      "slug": "burrito-bowl-bar-night",
+      "title": "Burrito Bowl Bar Night",
+      "confidence": 88
+    },
+    {
+      "slug": "cast-iron-chicken-fajitas",
+      "title": "Cast Iron Chicken Fajitas",
+      "confidence": 88
+    },
+    {
+      "slug": "bacon-egg-hash-skillet",
+      "title": "Bacon Egg Hash Skillet",
+      "confidence": 90
+    },
+    {
+      "slug": "bacon-hash-burritos",
+      "title": "Bacon Hash Burritos",
+      "confidence": 90
+    },
+    {
+      "slug": "hall-sausage-biscuits-gravy",
+      "title": "Hall Sausage Biscuits & Gravy",
+      "confidence": 90
+    },
+    {
+      "slug": "ham-cheddar-egg-bake",
+      "title": "Ham & Cheddar Egg Bake",
+      "confidence": 90
+    },
+    {
+      "slug": "ham-pepper-skillet",
+      "title": "Ham & Pepper Breakfast Skillet",
+      "confidence": 90
+    },
+    {
+      "slug": "maple-sausage-pinwheels",
+      "title": "Maple Sausage Pinwheels",
+      "confidence": 90
+    },
+    {
+      "slug": "sausage-egg-cheese-sandwiches",
+      "title": "Sausage Egg & Cheese Sandwiches",
+      "confidence": 90
+    },
+    {
+      "slug": "turkey-sausage-burritos",
+      "title": "Turkey Sausage Breakfast Burritos",
+      "confidence": 90
+    },
+    {
+      "slug": "turkey-sausage-egg-bake",
+      "title": "Turkey Sausage Egg Bake",
+      "confidence": 90
+    }
+  ]
+}

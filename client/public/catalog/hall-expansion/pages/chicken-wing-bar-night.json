@@ -1,0 +1,185 @@
+{
+  "slug": "chicken-wing-bar-night",
+  "title": "Chicken Wing Bar Night",
+  "displayTitle": "Chicken Wing Bar Night",
+  "seoTitle": "Chicken Wing Bar Night | Firefighter Meal",
+  "shortDescription": "Crispy baked wings with three sauce options for ten",
+  "subtitle": "Crispy baked wings with three sauce options for ten",
+  "category": "hall_expansion",
+  "cuisine": "american",
+  "description": "Wings are baked on racks until skin crisps, then tossed in separate bowls of buffalo, honey-garlic, and BBQ sauce. Celery, carrots, and ranch complete a classic wing bar that scales to any appetite.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 50,
+  "prepTime": 20,
+  "difficulty": "easy",
+  "calories": 520,
+  "protein": 38,
+  "carbs": 12,
+  "fats": 36,
+  "tags": [
+    "protein:chicken",
+    "format:bar_line",
+    "category:game_day_recipes",
+    "game_day",
+    "chicken",
+    "handheld",
+    "hall_expansion",
+    "hall_expansion_56",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Wire cooling racks",
+    "Sheet pans",
+    "Large mixing bowls",
+    "Instant-read thermometer",
+    "Serving platters"
+  ],
+  "ingredients": [
+    {
+      "name": "chicken wings",
+      "quantity": "8",
+      "unit": "lb",
+      "notes": "split into flats and drums",
+      "group": "Main"
+    },
+    {
+      "name": "baking powder",
+      "quantity": "2",
+      "unit": "tbsp",
+      "notes": "aluminum-free",
+      "group": "Main"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "black pepper",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "hot sauce",
+      "quantity": "1",
+      "unit": "cup",
+      "group": "Buffalo sauce"
+    },
+    {
+      "name": "unsalted butter",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Buffalo sauce"
+    },
+    {
+      "name": "BBQ sauce",
+      "quantity": "1.5",
+      "unit": "cups",
+      "group": "BBQ sauce"
+    },
+    {
+      "name": "honey",
+      "quantity": "0.25",
+      "unit": "cup",
+      "group": "Honey garlic"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "6",
+      "unit": "cloves",
+      "notes": "minced",
+      "group": "Honey garlic"
+    },
+    {
+      "name": "celery sticks",
+      "quantity": "2",
+      "unit": "bunches",
+      "group": "Serve"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Dry and season wings",
+      "instruction": "Pat wings completely dry. Toss with baking powder, salt, and pepper until evenly coated. Arrange skin-side up on wire racks with space between each piece.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Bake until crisp",
+      "instruction": "Bake at 425°F for 25 minutes, flip, then bake 20–25 minutes more until skin is golden and thickest drum hits 175°F internal. Target oven/smoker temperature: 425°F.",
+      "minutes": 50,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Build the three sauces",
+      "instruction": "Simmer butter with hot sauce for buffalo. Warm BBQ sauce separately. Sauté minced garlic 1 minute, stir in honey and a splash of soy for honey-garlic.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Toss and line up the bar",
+      "instruction": "Divide wings into three bowls and toss each batch in its sauce. Arrange on a long board with labeled sauce ramekins for second passes.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Set the wing bar",
+      "instruction": "Lay out celery, carrot sticks, and ranch dressing. Verify all wings hit 165°F minimum before service—even sauced wings must be safely cooked.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Baking powder dries the skin—do not substitute cornstarch; results differ.",
+    "Hold unsauced wings at 200°F and toss to order if you need maximum crunch late in the game.",
+    "Save wing tips for stock or discard—flats and drums portion cleaner for a hall feed."
+  ],
+  "tonightSpread": [
+    "Three-sauce wing bar with celery, carrots, ranch, and blue cheese dressing.",
+    "Waffle fries or tater tots from the oven for a full sports-bar spread."
+  ],
+  "leftovers": [
+    "Re-crisp sauced wings in a 400°F oven 5 minutes on a rack.",
+    "Pull meat for buffalo chicken mac and cheese tomorrow."
+  ],
+  "whyCrewsLikeIt": "Wing bars let everyone pick their heat level without cooking three separate batches from scratch. Baking keeps the kitchen cleaner than deep frying while still delivering crisp skin.",
+  "mealPrepNotes": "Dry wings overnight uncovered in the fridge for maximum crispness. Sauce can be mixed ahead and held warm. Bake in two batches on double racks if your oven is standard size.",
+  "spiceLevel": "medium",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 520,
+    "protein": 38,
+    "carbs": 12,
+    "fats": 36,
+    "label": "~520 cal/serving · 38g protein · 1g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/chicken-wing-bar-night.jpg",
+  "heroImageAlt": "Chicken Wing Bar Night — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/chicken-wing-bar-night.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/chicken-wing-bar-night.jpg",
+  "railImage": "/images/rails/hall-expansion/chicken-wing-bar-night.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "chicken wing bar night",
+    "game day recipes"
+  ],
+  "relatedSlugs": [
+    "loaded-potato-skins",
+    "game-day-pizza-sliders",
+    "pretzel-bite-platter",
+    "jalapeno-popper-dip"
+  ],
+  "generatedAt": "2026-05-30T03:14:19.188Z",
+  "contentVersion": 2
+}

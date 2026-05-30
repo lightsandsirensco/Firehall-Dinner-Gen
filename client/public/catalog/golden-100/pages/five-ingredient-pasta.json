@@ -13,10 +13,10 @@
   "cookTime": 35,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 460,
+  "calories": 694,
   "protein": 22,
-  "carbs": 60,
-  "fats": 22,
+  "carbs": 66,
+  "fats": 38,
   "tags": [
     "protein:vegetarian",
     "format:pasta",
@@ -108,7 +108,7 @@
   "proTips": [
     "Assign one cook to proteins and one to sides — rookies stay on timing, not multitasking.",
     "Prep all mise en place before the bell — this meal wins on organization, not speed hacks.",
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts."
   ],
   "tonightSpread": [
@@ -129,11 +129,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 460,
+    "calories": 694,
     "protein": 22,
-    "carbs": 60,
-    "fats": 22,
-    "label": "per serving (hall portion)"
+    "carbs": 66,
+    "fats": 38,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/five-ingredient-pasta.jpg",
   "mobileImage": "/images/mobile/five-ingredient-pasta.jpg",
@@ -156,13 +170,13 @@
   "relatedSlugs": [
     "skillet-chicken-alfredo",
     "margherita-pizza",
-    "mac-and-cheese-bake",
     "chicken-alfredo-bake",
     "baked-ziti",
-    "batch-lasagna"
+    "batch-lasagna",
+    "sheet-pan-sausage-peppers"
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-29T01:43:09.438Z",
+  "generatedAt": "2026-05-30T03:28:02.011Z",
   "contentVersion": 2
 }

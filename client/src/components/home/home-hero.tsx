@@ -2,16 +2,24 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { HeroImage } from "@/components/hero-image";
 import { cn } from "@/lib/utils";
-import { BRAND_NAME, BRAND_TAGLINE, CTA, HOME } from "@/lib/brand-copy";
+import { BRAND_MISSION, BRAND_NAME, BRAND_TAGLINE, CTA, HOME } from "@/lib/brand-copy";
 import { LightsAndSirensCredit } from "@/components/brand/lights-and-sirens-credit";
 import { HOME_HERO_IMAGE } from "./home-constants";
+import {
+  APPROVED_CATALOG_TOTAL,
+  marketingRecipeCountPhrase,
+} from "@shared/meal-catalog/curated-count";
+
+interface HomeHeroProps {
+  recipeCount?: number;
+}
 
 /**
  * Homepage brand hero — blurred firetruck (not food photography).
  * Mobile: contain + blurred fill so the rig stays recognizable.
  * Desktop: cover with right-weighted focal so text on the left stays clear.
  */
-export function HomeHero() {
+export function HomeHero({ recipeCount = APPROVED_CATALOG_TOTAL }: HomeHeroProps) {
   return (
     <section
       className="relative w-full min-h-[min(88dvh,720px)] sm:min-h-[min(82vh,680px)] md:min-h-[min(78vh,760px)] flex flex-col justify-end overflow-hidden bg-black"
@@ -74,11 +82,33 @@ export function HomeHero() {
           className={cn(
             "mt-3 font-heading uppercase",
             "text-primary/95 drop-shadow-[0_1px_16px_rgba(0,0,0,0.85)]",
-            "text-sm sm:text-base tracking-[0.22em] sm:tracking-[0.28em]",
+            "text-sm sm:text-base tracking-[0.14em] sm:tracking-[0.18em]",
+          )}
+          data-testid="home-hero-catalog-count"
+        >
+          {marketingRecipeCountPhrase(recipeCount)}
+        </p>
+        <p
+          className={cn(
+            "mt-3 font-heading uppercase",
+            "text-primary/95 drop-shadow-[0_1px_16px_rgba(0,0,0,0.85)]",
+            "text-sm sm:text-base tracking-[0.18em] sm:tracking-[0.22em]",
           )}
           data-testid="home-hero-tagline"
         >
-          {BRAND_NAME} · {BRAND_TAGLINE}
+          {BRAND_TAGLINE}
+        </p>
+        <p
+          className="mt-3 text-sm sm:text-base text-foreground/85 font-medium italic max-w-md sm:max-w-xl drop-shadow-[0_1px_12px_rgba(0,0,0,0.75)]"
+          data-testid="home-hero-mission"
+        >
+          {BRAND_MISSION}
+        </p>
+        <p
+          className="mt-2 text-[11px] sm:text-xs font-semibold uppercase tracking-[0.2em] text-foreground/60 drop-shadow-[0_1px_12px_rgba(0,0,0,0.75)]"
+          data-testid="home-hero-brand-name"
+        >
+          {BRAND_NAME}
         </p>
         <div className="mt-4 drop-shadow-[0_1px_12px_rgba(0,0,0,0.75)]">
           <LightsAndSirensCredit variant="hero" showFirefighterOwned />
@@ -99,8 +129,8 @@ export function HomeHero() {
               "transition-[transform,box-shadow] duration-300 hover:scale-[1.02] active:scale-[0.98]",
             )}
           >
-            <Link href="/generator" data-testid="home-cta-generator">
-              {CTA.findDinner}
+            <Link href="/recipes" data-testid="home-cta-recipes">
+              {CTA.viewRecipes}
             </Link>
           </Button>
           <Button
@@ -113,8 +143,8 @@ export function HomeHero() {
               "hover:bg-foreground/[0.06] transition-[transform,background] duration-300 hover:scale-[1.01] active:scale-[0.98]",
             )}
           >
-            <Link href="/explore" data-testid="home-cta-explore">
-              {CTA.exploreMeals}
+            <Link href="/generator" data-testid="home-cta-generator">
+              {CTA.findDinner}
             </Link>
           </Button>
         </div>
@@ -122,4 +152,4 @@ export function HomeHero() {
     </section>
   );
 }
-
+

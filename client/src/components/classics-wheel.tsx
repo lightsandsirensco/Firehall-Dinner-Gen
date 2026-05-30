@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Flame } from "lucide-react";
 import {
@@ -8,6 +8,11 @@ import {
   pickWeightedWheelClassic,
   recordWheelClassicSlug,
 } from "@/lib/firehall-classics-wheel";
+import {
+  assertWheelClassicImage,
+  CLASSICS_WHEEL_SPIN_EMOJIS,
+  validateWheelClassicImage,
+} from "@shared/classic-wheel-image-guard";
 import { pickWheelLandLine, pickWheelIntro, pickWheelSuspense } from "@/lib/wheel-personality";
 import { MealTrustBadges } from "@/components/trust/meal-trust-badges";
 import { MealShareCard, shareMealNative } from "@/components/share/meal-share-card";
@@ -76,6 +81,7 @@ export function ClassicsWheel({ disabled, winnerIndex, onLanded, onSpinStart }: 
       setSpinning(false);
       setActiveIndex(winIndex);
       playWheelSound("land");
+      assertWheelClassicImage(winner, "wheel-landed");
       onLanded(winner);
       window.setTimeout(() => playWheelSound("reveal"), 400);
     }, 5200);
@@ -110,6 +116,35 @@ export function ClassicsWheel({ disabled, winnerIndex, onLanded, onSpinStart }: 
         }}
       />
 
+      {/* Spinning-only decorative emoji burst — never used as recipe imagery */}
+      {spinning && (
+        <div
+          className="absolute inset-3 rounded-full pointer-events-none z-[5] overflow-hidden"
+          aria-hidden
+          data-testid="classics-wheel-spin-emojis"
+        >
+          {CLASSICS_WHEEL_SPIN_EMOJIS.map((emoji, i) => {
+            const angle = (i / CLASSICS_WHEEL_SPIN_EMOJIS.length) * 360;
+            return (
+              <motion.span
+                key={emoji}
+                className="absolute left-1/2 top-1/2 text-xl sm:text-2xl opacity-70"
+                initial={{ x: "-50%", y: "-50%", rotate: angle, scale: 0.6 }}
+                animate={{
+                  x: `calc(-50% + ${Math.cos((angle * Math.PI) / 180) * 42}%)`,
+                  y: `calc(-50% + ${Math.sin((angle * Math.PI) / 180) * 42}%)`,
+                  rotate: angle + 360,
+                  opacity: [0.35, 0.85, 0.35],
+                }}
+                transition={{ duration: 2.4, repeat: Infinity, ease: "linear", delay: i * 0.08 }}
+              >
+                {emoji}
+              </motion.span>
+            );
+          })}
+        </div>
+      )}
+
       {/* Spinning wheel — transform isolated; outer box size never changes */}
       <div className="absolute inset-3 rounded-full overflow-visible">
         <motion.div
@@ -139,7 +174,7 @@ export function ClassicsWheel({ disabled, winnerIndex, onLanded, onSpinStart }: 
             }}
           />
         ))}
-        {/* Labels */}
+        {/* Labels — food emoji + meal name at all times (decorative only; never recipe imagery) */}
         {WHEEL_CLASSICS.map((classic, i) => {
           const angleDeg = i * SEGMENT_ANGLE + SEGMENT_ANGLE / 2 - 90;
           const angleRad = (angleDeg * Math.PI) / 180;
@@ -160,12 +195,12 @@ export function ClassicsWheel({ disabled, winnerIndex, onLanded, onSpinStart }: 
             >
               <span
                 className={cn(
-                  "mb-1 flex h-7 w-7 items-center justify-center rounded-full bg-black/35 ring-1 ring-white/25 text-[10px] font-bold uppercase tracking-wide text-white/95",
-                  isActive && "ring-primary/60 bg-primary/25",
+                  "mb-0.5 text-xl sm:text-2xl leading-none drop-shadow-md",
+                  isActive && "scale-110 brightness-110",
                 )}
                 aria-hidden
               >
-                {classic.shortLabel.slice(0, 2)}
+                {classic.emoji}
               </span>
               <span
                 className={`text-[9px] sm:text-[10px] font-semibold uppercase tracking-wide leading-tight drop-shadow-md ${
@@ -224,6 +259,11 @@ export function WheelReveal({
   const landSeed = `${classic.slug}:${Date.now()}`;
   const intro = pickWheelIntro(landSeed);
   const landLine = pickWheelLandLine(landSeed, classic.tags.includes("rookie_friendly"));
+  const imageValidation = useMemo(() => validateWheelClassicImage(classic), [classic]);
+
+  useEffect(() => {
+    assertWheelClassicImage(classic, "wheel-reveal");
+  }, [classic]);
 
   const handleShare = async () => {
     await shareMealNative({
@@ -256,7 +296,10 @@ export function WheelReveal({
           />
         </div>
 
-        <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl border border-primary/40 bg-card shadow-2xl shadow-primary/20 ring-1 ring-primary/30">
+        <div
+          className="relative overflow-hidden rounded-2xl sm:rounded-3xl border border-primary/40 bg-card shadow-2xl shadow-primary/20 ring-1 ring-primary/30"
+          data-imagery-valid={imageValidation.ok ? "true" : "false"}
+        >
           <MealHeroImage
             src={classic.heroImage}
             alt={classic.imageAlt}

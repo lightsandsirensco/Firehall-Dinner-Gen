@@ -1,50 +1,65 @@
 import type { FaqItem } from "@shared/seo/schema";
 
-
-
-/** FAQ copy — home, /faq, schema. Plain language; no keyword stuffing. */
-
+/** Firefighter-focused FAQ — home, /faq, and FAQPage schema. */
 export const HOME_FAQ_ITEMS: FaqItem[] = [
-
   {
-
-    question: "What Makes A Good Firefighter Meal?",
-
+    question: "What are the most popular meals cooked in fire stations?",
     answer:
-
-      "It feeds the crew, holds after a call, and does not need a prep marathon. Skillet dinners, sheet pans, slow cookers, and big-batch chili are hall staples for a reason.",
-
+      "Chicken parm, smash burgers, pulled pork, big-batch chili, taco bars, and sheet-pan fajitas show up in halls across North America because they feed crews, hold after calls, and do not require fine-dining skills. Pizza night and breakfast spreads after night shift are close behind.",
   },
-
   {
-
-    question: "What Should I Cook On A Busy Shift?",
-
+    question: "What firefighter meals feed a crew of 8–12 without breaking the budget?",
     answer:
-
-      "Look for recipes under 45 minutes with clear steps and crew scaling. Pasta bakes, taco bars, bowls, and pizza night all work when time is tight.",
-
+      "Chili, taco bars, pasta bakes, rice bowls, and sheet-pan proteins stretch grocery dollars. Plan one primary protein, one starch, and a simple side. Most halls run roughly $10–15 per person depending on protein — less when you batch smart and use line-and-serve formats.",
   },
-
   {
-
-    question: "How Is This Different From A Regular Recipe Site?",
-
+    question: "What are the best healthy firefighter meals for long shifts?",
     answer:
-
-      "Portions, timing, and steps are written for station kitchens — not single-plate blog cooking. Start with the firefighter recipe catalog; use Find a Meal or the Classics Wheel when you want a faster pick.",
-
+      "High-protein sheet pans, salmon bowls, turkey chili, and chicken fajita trays balance recovery and satisfaction without tasting like punishment food. Browse our Performance Meals and healthy options category — real flavor, crew portions, honest nutrition notes.",
   },
-
   {
-
-    question: "Can I Plan Meals For The Whole Hall?",
-
+    question: "What meals can be cooked quickly when calls interrupt dinner?",
     answer:
-
-      "Yes. Set crew size from 2 to 12, pick protein and time, and use Find a Meal or browse all recipes. Shopping lists and scaling are built in.",
-
+      "Sheet-pan fajitas, one-pot chicken and rice, skillet philly plates, and slow-cooker barbacoa forgive pauses better than finicky last-minute plating. Line-and-serve bowls and burrito bars let late-arriving crew eat without redoing the whole spread.",
   },
-
+  {
+    question: "What are the most common firehall classics across North America?",
+    answer:
+      "Chicken parm, smash burgers, steak tacos, pulled pork, beef dip, chili with garlic bread, and BBQ brisket or ribs appear in halls from coast to coast. Our Classics Wheel spins ten hall-tested picks when the crew cannot decide.",
+  },
+  {
+    question: "How do firefighters handle different dietary needs on the crew?",
+    answer:
+      "Build-your-own formats work best — taco bars, potato bars, rice bowls, and sheet-pan lines let each firefighter adjust toppings and portions. Cook one base protein and multiple sides rather than separate entrees for every restriction.",
+  },
+  {
+    question: "What are the best firefighter breakfast recipes after a busy night shift?",
+    answer:
+      "Burrito bars, egg bakes, French toast casseroles, and big skillets let tired crews serve themselves. Batch formats beat made-to-order when everyone is winding down after a long run.",
+  },
+  {
+    question: "What meals work best for probationary firefighters cooking for the crew?",
+    answer:
+      "Start with forgiving formats: meatloaf, chicken parm, sheet-pan fajitas, and egg bakes. Clear step titles and crew scaling on Firehall Meals recipes help rookies contribute without guessing portions or timing.",
+  },
+  {
+    question: "How much should a firefighter crew budget for a station dinner?",
+    answer:
+      "Many halls pool $80–150 for a crew of eight to twelve depending on protein and market — roughly $10–15 per plate. Pulled pork, chicken, and batch starches stretch farther than premium cuts on tight weeks.",
+  },
+  {
+    question: "What are the easiest firefighter meals for rookie cooks?",
+    answer:
+      "Sheet-pan dinners, slow-cooker setups, pasta bakes, and taco bars have clear steps and forgiving timing. Avoid hollandaise, precise emulsions, and made-to-order stations until a rookie has a few hall dinners under their belt.",
+  },
+  {
+    question: "What are the top firehall meals every firefighter should know?",
+    answer:
+      "Chicken parm, smash burgers, pulled pork, steak tacos, beef dip, big chili, BBQ brisket, meatloaf, sheet-pan fajitas, and breakfast burrito bars belong in every hall rotation. Browse our full recipe catalog and Classics Wheel for the hall-tested list.",
+  },
+  {
+    question: "How is Firehall Meals different from a regular recipe site?",
+    answer:
+      "Portions, timing, and steps are written for station kitchens — not single-plate blog cooking. Built by firefighters. Tested in the firehall. Browse the recipe catalog first; use Find a Meal or the Classics Wheel when you want a faster pick.",
+  },
 ];
-

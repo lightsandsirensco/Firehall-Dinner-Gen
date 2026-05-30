@@ -10,6 +10,10 @@ export function breakfastIndexPath(): string {
   return "/breakfast";
 }
 
+export function breakfastPageJsonPath(slug: string): string {
+  return `/catalog/breakfast/pages/${(slug || "").trim().toLowerCase()}.json`;
+}
+
 export function performanceFuelPath(): string {
   return "/performance-fuel";
 }

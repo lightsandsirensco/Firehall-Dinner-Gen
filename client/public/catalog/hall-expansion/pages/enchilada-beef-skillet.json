@@ -1,0 +1,187 @@
+{
+  "slug": "enchilada-beef-skillet",
+  "title": "Beef Enchilada Skillet",
+  "displayTitle": "Beef Enchilada Skillet",
+  "seoTitle": "Beef Enchilada Skillet | Firefighter Meal",
+  "shortDescription": "Ground beef, tortillas, and enchilada sauce in one pan for ten",
+  "subtitle": "Ground beef, tortillas, and enchilada sauce in one pan for ten",
+  "category": "hall_expansion",
+  "cuisine": "mexican",
+  "description": "Ground beef browns with spices and onions, then simmers with torn tortillas and enchilada sauce until bubbly. Top with cheese and bake until melted for a fast Mexican comfort feed.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 35,
+  "prepTime": 20,
+  "difficulty": "easy",
+  "calories": 510,
+  "protein": 34,
+  "carbs": 36,
+  "fats": 28,
+  "tags": [
+    "protein:beef",
+    "format:skillet",
+    "category:game_day_recipes",
+    "beef",
+    "game_day",
+    "comfort",
+    "hall_expansion",
+    "hall_expansion_56",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Large oven-safe skillet",
+    "Mixing spoon",
+    "Sheet pan",
+    "Chef knife",
+    "Spatula"
+  ],
+  "ingredients": [
+    {
+      "name": "ground beef (85/15)",
+      "quantity": "3",
+      "unit": "lb",
+      "group": "Main"
+    },
+    {
+      "name": "flour tortillas",
+      "quantity": "12",
+      "unit": "whole",
+      "notes": "torn into strips",
+      "group": "Main"
+    },
+    {
+      "name": "red enchilada sauce",
+      "quantity": "4",
+      "unit": "cups",
+      "group": "Sauce"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "1",
+      "unit": "whole",
+      "notes": "diced",
+      "group": "Aromatics"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "4",
+      "unit": "cloves",
+      "notes": "minced",
+      "group": "Aromatics"
+    },
+    {
+      "name": "chili powder",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "ground cumin",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "shredded cheddar cheese",
+      "quantity": "3",
+      "unit": "cups",
+      "group": "Topping"
+    },
+    {
+      "name": "sour cream",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "for serving",
+      "group": "Topping"
+    },
+    {
+      "name": "fresh cilantro",
+      "quantity": "0.33",
+      "unit": "cup",
+      "notes": "chopped",
+      "group": "Finish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Brown the beef",
+      "instruction": "Cook ground beef with onion over medium-high heat 8–10 minutes, breaking into crumbles until browned. Drain excess fat. Stir in garlic, chili powder, and cumin 1 minute.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Layer the skillet",
+      "instruction": "Add half the torn tortillas, half the enchilada sauce, and half the beef. Repeat layers, ending with sauce on top.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Simmer on stove",
+      "instruction": "Cover and simmer on low 10 minutes until tortillas soften and absorb sauce.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Bake with cheese",
+      "instruction": "Top with cheddar and bake uncovered at 375°F until cheese melts and bubbles at edges, about 15 minutes. Target oven/smoker temperature: 375°F.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Garnish and serve",
+      "instruction": "Rest 5 minutes. Scoop portions with spatula and top with sour cream and cilantro at the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Add a can of black beans for stretch and fiber without changing the vibe.",
+    "Pickled jalapeños on the side beat cooking spice into the whole batch.",
+    "Two skillets bake faster than one deep hotel pan if your oven runs small."
+  ],
+  "tonightSpread": [
+    "Skillet scoops with sour cream, cilantro, and shredded lettuce on the side.",
+    "Mexican rice in a hotel pan for crew who want a bigger plate."
+  ],
+  "leftovers": [
+    "Reheat covered at 350°F with extra sauce splashed on top.",
+    "Stuff into burritos with scrambled eggs for breakfast shift."
+  ],
+  "whyCrewsLikeIt": "Enchilada flavor without rolling dozens of tortillas. One skillet bakes in the oven while you set up the rest of the meal, and it scoops fast when the tones drop.",
+  "mealPrepNotes": "Use stale tortillas—they absorb sauce better. Brown beef hard for flavor. Assemble in an oven-safe skillet or transfer to hotel pans for baking.",
+  "spiceLevel": "medium",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 510,
+    "protein": 34,
+    "carbs": 36,
+    "fats": 28,
+    "label": "~510 cal/serving · 34g protein · 4g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/enchilada-beef-skillet.jpg",
+  "heroImageAlt": "Beef Enchilada Skillet — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/enchilada-beef-skillet.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/enchilada-beef-skillet.jpg",
+  "railImage": "/images/rails/hall-expansion/enchilada-beef-skillet.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "beef enchilada skillet",
+    "game day recipes"
+  ],
+  "relatedSlugs": [
+    "loaded-potato-skins",
+    "game-day-pizza-sliders",
+    "pretzel-bite-platter",
+    "jalapeno-popper-dip"
+  ],
+  "generatedAt": "2026-05-30T03:14:19.188Z",
+  "contentVersion": 2
+}

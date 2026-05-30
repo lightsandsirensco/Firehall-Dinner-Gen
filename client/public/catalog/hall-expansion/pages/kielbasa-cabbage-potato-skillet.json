@@ -1,0 +1,186 @@
+{
+  "slug": "kielbasa-cabbage-potato-skillet",
+  "title": "Kielbasa Cabbage Potato Skillet",
+  "displayTitle": "Kielbasa Cabbage Potato Skillet",
+  "seoTitle": "Kielbasa Cabbage Potato Skillet | Firefighter Meal",
+  "shortDescription": "One-pan smoked sausage with cabbage and potatoes for ten",
+  "subtitle": "One-pan smoked sausage with cabbage and potatoes for ten",
+  "category": "hall_expansion",
+  "cuisine": "polish-american",
+  "description": "Kielbasa slices sear with onion, then simmer with cabbage and potatoes until tender. Mustard and caraway finish the pan for a simple, filling one-pot meal.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 35,
+  "prepTime": 20,
+  "difficulty": "easy",
+  "calories": 480,
+  "protein": 22,
+  "carbs": 38,
+  "fats": 28,
+  "tags": [
+    "protein:pork",
+    "format:skillet",
+    "category:crew_feeders",
+    "one_pot",
+    "comfort",
+    "hall_expansion",
+    "hall_expansion_56",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Large skillet with lid",
+    "Chef knife",
+    "Wooden spoon",
+    "Measuring cups",
+    "Hotel pan"
+  ],
+  "ingredients": [
+    {
+      "name": "smoked kielbasa",
+      "quantity": "3",
+      "unit": "lb",
+      "notes": "sliced into coins",
+      "group": "Main"
+    },
+    {
+      "name": "Yukon Gold potatoes",
+      "quantity": "3",
+      "unit": "lb",
+      "notes": "quartered",
+      "group": "Main"
+    },
+    {
+      "name": "green cabbage",
+      "quantity": "1",
+      "unit": "head",
+      "notes": "cut into wedges",
+      "group": "Vegetables"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "1",
+      "unit": "whole",
+      "notes": "sliced",
+      "group": "Vegetables"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "4",
+      "unit": "cloves",
+      "notes": "minced",
+      "group": "Aromatics"
+    },
+    {
+      "name": "chicken broth",
+      "quantity": "1.5",
+      "unit": "cups",
+      "group": "Liquid"
+    },
+    {
+      "name": "apple cider vinegar",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Dijon mustard",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "caraway seeds",
+      "quantity": "1",
+      "unit": "tsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "black pepper",
+      "quantity": "1",
+      "unit": "tsp",
+      "group": "Seasoning"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Brown the kielbasa",
+      "instruction": "Sear kielbasa slices in a large skillet over medium-high heat 4–5 minutes until edges caramelize. Set aside.",
+      "minutes": 6,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Start the potatoes",
+      "instruction": "Add onion and potatoes to the pan with a splash of broth. Cover and cook 12 minutes, stirring once, until potatoes begin to soften.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Add cabbage and steam",
+      "instruction": "Nestle cabbage wedges into the pan, add remaining broth, cover, and cook 15 minutes until cabbage wilts and potatoes pierce easily.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Combine and season",
+      "instruction": "Return kielbasa, stir in garlic, mustard, vinegar, caraway, and pepper. Cook uncovered 5 minutes until liquid mostly reduces.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Serve from the skillet",
+      "instruction": "Taste for salt. Serve straight from the skillet or transfer to a hotel pan for buffet line.",
+      "minutes": 3,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Andouille or smoked turkey sausage works if kielbasa is not in the freezer.",
+    "A splash of beer instead of half the broth adds depth without complexity.",
+    "This reheats well—add broth when warming so potatoes do not dry out."
+  ],
+  "tonightSpread": [
+    "Skillet served with rye bread and whole-grain mustard.",
+    "Quick vinegar slaw if you want a raw crunch side."
+  ],
+  "leftovers": [
+    "Chop and fry into a breakfast hash with eggs.",
+    "Wrap in tortillas with sauerkraut for quick kielbasa tacos."
+  ],
+  "whyCrewsLikeIt": "This is the meal you teach a probie first—hard to mess up, one pan, and everyone recognizes sausage and potatoes. Perfect when the crew is short on cooks.",
+  "mealPrepNotes": "Slice kielbasa and potatoes uniform for even cooking. Use a lid to steam cabbage—dry pan burns before veg softens. Caraway is optional but classic.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 480,
+    "protein": 22,
+    "carbs": 38,
+    "fats": 28,
+    "label": "~480 cal/serving · 22g protein · 6g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/kielbasa-cabbage-potato-skillet.jpg",
+  "heroImageAlt": "Kielbasa Cabbage Potato Skillet — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/kielbasa-cabbage-potato-skillet.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/kielbasa-cabbage-potato-skillet.jpg",
+  "railImage": "/images/rails/hall-expansion/kielbasa-cabbage-potato-skillet.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "kielbasa cabbage potato skillet",
+    "crew feeders"
+  ],
+  "relatedSlugs": [
+    "shawarma-bar-night",
+    "fajita-bar-night",
+    "hall-burger-bar",
+    "pasta-bar-night"
+  ],
+  "generatedAt": "2026-05-30T03:14:19.188Z",
+  "contentVersion": 2
+}

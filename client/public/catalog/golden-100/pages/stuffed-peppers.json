@@ -13,10 +13,10 @@
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 520,
-  "protein": 40,
-  "carbs": 38,
-  "fats": 22,
+  "calories": 667,
+  "protein": 57,
+  "carbs": 15,
+  "fats": 43,
   "tags": [
     "protein:beef",
     "format:plated_main",
@@ -31,74 +31,68 @@
   ],
   "ingredients": [
     {
-      "name": "Ground beef",
-      "quantity": "3",
-      "unit": "lb",
+      "name": "Bell peppers, halved and seeded",
+      "quantity": "12",
+      "unit": "count",
       "group": "Main"
     },
     {
-      "name": "Yellow onion",
-      "quantity": "2",
-      "unit": "large",
-      "group": "Aromatics"
+      "name": "Ground beef (85/15)",
+      "quantity": "3",
+      "unit": "lb",
+      "group": "Filling"
     },
     {
-      "name": "Garlic cloves",
-      "quantity": "5",
-      "unit": "cloves",
-      "group": "Aromatics"
+      "name": "Cooked rice",
+      "quantity": "3",
+      "unit": "cups",
+      "group": "Filling"
     },
     {
-      "name": "Crushed tomatoes or broth",
-      "quantity": "2",
-      "unit": "cans",
+      "name": "Crushed tomatoes",
+      "quantity": "1",
+      "unit": "can",
       "group": "Sauce"
     },
     {
-      "name": "Black pepper, freshly cracked",
-      "quantity": "1",
-      "unit": "tbsp",
-      "group": "Seasoning"
-    },
-    {
-      "name": "Olive oil",
-      "quantity": "0.3",
-      "unit": "cup",
-      "group": "Aromatics"
+      "name": "Shredded mozzarella",
+      "quantity": "12",
+      "unit": "oz",
+      "group": "Topping"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Prep components",
-      "instruction": "Dice vegetables; measure sauce ingredients. Quinoa Stuffed Peppers moves smoother when everything is on the counter before the burner goes on.",
-      "minutes": 15,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Sear and finish",
-      "instruction": "Sear protein over medium-high until browned, then finish in sauce or oven until safe temp (165°F poultry, 160°F ground beef). Watch for color and spring-back, not clock alone.",
-      "minutes": 25,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
-      "title": "Reduce and season",
-      "instruction": "Simmer sauce until it coats a spoon. Taste for salt and acid — add a splash of vinegar or lemon if flat.",
+      "title": "Prep pepper boats",
+      "instruction": "Halve bell peppers lengthwise; remove seeds. Blanch in boiling water 3 minutes; drain cut-side down on towels.",
       "minutes": 12,
       "heatLevel": "medium"
     },
     {
+      "stepNumber": 2,
+      "title": "Brown beef filling",
+      "instruction": "Brown ground beef with onion and garlic. Stir in cooked rice, crushed tomatoes, and Italian seasoning; simmer 10 minutes until thick.",
+      "minutes": 18,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Fill and top",
+      "instruction": "Mound beef-rice filling into pepper halves on sheet pans. Top with shredded mozzarella.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
       "stepNumber": 4,
-      "title": "Plate for the hall",
-      "instruction": "Serve on sheet trays for family-style or portioned plates. Hold backup at 200°F; cover lightly with foil so skins stay crisp where applicable.",
-      "minutes": 5,
-      "heatLevel": "low"
+      "title": "Bake until tender",
+      "instruction": "Bake at 375°F 25–30 minutes until peppers are tender and cheese bubbles. Stuffed Peppers slice cleanly if filling is tight — drain excess liquid before baking.",
+      "minutes": 30,
+      "heatLevel": "medium"
     }
   ],
   "proTips": [
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold protein after a run.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts."
   ],
   "tonightSpread": [
@@ -117,11 +111,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 520,
-    "protein": 40,
-    "carbs": 38,
-    "fats": 22,
-    "label": "per serving (hall portion)"
+    "calories": 667,
+    "protein": 57,
+    "carbs": 15,
+    "fats": 43,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/stuffed-peppers.jpg",
   "mobileImage": "/images/mobile/stuffed-peppers.jpg",
@@ -150,6 +158,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-29T01:43:09.380Z",
+  "generatedAt": "2026-05-30T03:28:01.893Z",
   "contentVersion": 2
 }

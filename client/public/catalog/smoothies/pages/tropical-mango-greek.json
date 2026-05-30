@@ -62,19 +62,34 @@
     }
   ],
   "nutrition": {
-    "calories": 260,
-    "protein": 18,
-    "carbs": 32,
-    "fats": 8,
-    "highlights": "~260 cal · ~18 g protein · vitamin C from citrus · natural sweetness mostly from mango"
+    "calories": 102,
+    "protein": 5,
+    "carbs": 17,
+    "fats": 2,
+    "highlights": "~260 cal · ~18 g protein · vitamin C from citrus · natural sweetness mostly from mango",
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": true
+    }
   },
   "substitutions": [
     "Pineapple replaces half the mango for a sharper tropical flavor.",
     "Coconut milk (¼ cup) adds richness if the smoothie tastes too sharp."
   ],
   "shiftNote": "Bright flavor helps on afternoon shifts when coffee alone is not cutting it. No cooking, minimal dishes.",
-  "heroImage": "/images/editorial/smoothies/tropical-mango-greek.webp",
-  "thumbImage": "/images/editorial/smoothies/tropical-mango-greek.webp",
+  "heroImage": "/images/smoothies/tropical-mango-greek.webp",
+  "thumbImage": "/images/smoothies/tropical-mango-greek.webp",
   "tags": [
     "fuel_smoothie",
     "taxonomy:fruit_smoothie",

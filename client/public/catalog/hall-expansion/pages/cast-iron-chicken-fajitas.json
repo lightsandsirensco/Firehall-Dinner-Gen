@@ -1,0 +1,188 @@
+{
+  "slug": "cast-iron-chicken-fajitas",
+  "title": "Cast Iron Chicken Fajitas",
+  "displayTitle": "Cast Iron Chicken Fajitas",
+  "seoTitle": "Cast Iron Chicken Fajitas | Firefighter Meal",
+  "shortDescription": "Sizzling peppers and chicken with warm tortillas for ten",
+  "subtitle": "Sizzling peppers and chicken with warm tortillas for ten",
+  "category": "hall_expansion",
+  "cuisine": "mexican",
+  "description": "Chicken strips marinate in lime and spices, sear hot in cast iron with peppers and onions, and serve sizzling with warm tortillas and classic fixings. Built for build-your-own line speed.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 20,
+  "prepTime": 30,
+  "difficulty": "easy",
+  "calories": 380,
+  "protein": 36,
+  "carbs": 32,
+  "fats": 12,
+  "tags": [
+    "protein:chicken",
+    "format:skillet",
+    "category:game_day_recipes",
+    "chicken",
+    "game_day",
+    "handheld",
+    "hall_expansion",
+    "hall_expansion_56",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Cast iron skillet",
+    "Instant-read thermometer",
+    "Sheet pans",
+    "Mixing bowls",
+    "Tongs"
+  ],
+  "ingredients": [
+    {
+      "name": "chicken breast",
+      "quantity": "4",
+      "unit": "lb",
+      "notes": "sliced into strips",
+      "group": "Main"
+    },
+    {
+      "name": "lime juice",
+      "quantity": "0.33",
+      "unit": "cup",
+      "group": "Marinade"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "0.25",
+      "unit": "cup",
+      "group": "Marinade"
+    },
+    {
+      "name": "chili powder",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Marinade"
+    },
+    {
+      "name": "ground cumin",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Marinade"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "4",
+      "unit": "cloves",
+      "notes": "minced",
+      "group": "Marinade"
+    },
+    {
+      "name": "red bell pepper",
+      "quantity": "3",
+      "unit": "whole",
+      "notes": "sliced",
+      "group": "Vegetables"
+    },
+    {
+      "name": "green bell pepper",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "sliced",
+      "group": "Vegetables"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "sliced",
+      "group": "Vegetables"
+    },
+    {
+      "name": "flour tortillas",
+      "quantity": "20",
+      "unit": "whole",
+      "notes": "8-inch",
+      "group": "Service"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Marinate the chicken",
+      "instruction": "Toss chicken strips with lime juice, 2 tablespoons olive oil, chili powder, cumin, and garlic. Marinate at least 30 minutes in the fridge.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Sear the chicken",
+      "instruction": "Heat cast iron over high heat until smoking lightly. Sear chicken in batches 3–4 minutes until charred edges appear and internal temp reaches 165°F. Set aside.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Char the vegetables",
+      "instruction": "Add remaining oil to the pan. Sear peppers and onions 4–5 minutes until blistered and tender-crisp with light char.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Combine and season",
+      "instruction": "Return chicken to pan, toss with vegetables, and season with salt to taste. Squeeze half a lime over the mix.",
+      "minutes": 2,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Serve sizzling",
+      "instruction": "Warm tortillas wrapped in foil at 300°F for 10 minutes. Portion chicken and peppers into hot cast iron skillets or hotel pans and serve with fixings. Target oven/smoker temperature: 300°F.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Vent the kitchen—high-heat searing sets off alarms if you are not ready.",
+    "A splash of chicken broth at the end keeps everything juicy on the hold line.",
+    "Offer sliced jalapeños for heat without forcing spice on the whole hall."
+  ],
+  "tonightSpread": [
+    "Sizzling fajita pans with tortillas, shredded cheese, salsa, and sour cream.",
+    "Spanish rice on the side for crew who want a plated option instead of wraps."
+  ],
+  "leftovers": [
+    "Chop into breakfast burritos with scrambled eggs and hot sauce.",
+    "Toss cold leftovers over romaine for a quick fajita salad lunch."
+  ],
+  "whyCrewsLikeIt": "Fajitas feel like an event—sizzling pans, fresh toppings, everyone building their own. Interactive meals keep morale up on long tour days.",
+  "mealPrepNotes": "Slice chicken uniform for even cooking. Marinate up to 8 hours. Warm tortillas in foil bundles so they stay soft at the line.",
+  "spiceLevel": "medium",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 380,
+    "protein": 36,
+    "carbs": 32,
+    "fats": 12,
+    "label": "~380 cal/serving · 36g protein · 4g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/cast-iron-chicken-fajitas.jpg",
+  "heroImageAlt": "Cast Iron Chicken Fajitas — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/cast-iron-chicken-fajitas.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/cast-iron-chicken-fajitas.jpg",
+  "railImage": "/images/rails/hall-expansion/cast-iron-chicken-fajitas.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "cast iron chicken fajitas",
+    "game day recipes"
+  ],
+  "relatedSlugs": [
+    "loaded-potato-skins",
+    "game-day-pizza-sliders",
+    "pretzel-bite-platter",
+    "jalapeno-popper-dip"
+  ],
+  "generatedAt": "2026-05-30T03:14:19.188Z",
+  "contentVersion": 2
+}

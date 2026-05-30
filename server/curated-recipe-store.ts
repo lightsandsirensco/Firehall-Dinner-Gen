@@ -31,6 +31,7 @@ import { scoreImageIntegrity } from "../shared/image-integrity.js";
 import { safeJsonParseNullable } from "./lib/safe-json.js";
 import { isExcludedFromDinnerFeeds } from "../shared/fuel-catalog/isolation.js";
 import { normalizeImagePath } from "../shared/media/normalize-image-path.js";
+import { normalizeImageStylePresetId } from "../shared/image-style-presets.js";
 import {
   resolveRecipeMetadata,
   metadataToDbColumns,
@@ -160,6 +161,7 @@ export function upsertCuratedRecipe(input: CuratedRecipeInsert): CuratedRecipe {
   const editorialNormalized = input.editorialImage
     ? {
         ...input.editorialImage,
+        stylePreset: normalizeImageStylePresetId(input.editorialImage.stylePreset),
         heroImage: normalizeImagePath(input.editorialImage.heroImage),
         thumbnailImage: normalizeImagePath(input.editorialImage.thumbnailImage),
         mobileHeroImage: normalizeImagePath(input.editorialImage.mobileHeroImage),
@@ -194,6 +196,10 @@ export function upsertCuratedRecipe(input: CuratedRecipeInsert): CuratedRecipe {
       nextEditorial = invalidateEditorialImageOnDrift(nextEditorial, drift.reasons);
     }
     if (nextEditorial) {
+      nextEditorial = {
+        ...nextEditorial,
+        stylePreset: normalizeImageStylePresetId(nextEditorial.stylePreset),
+      };
       const integrity = scoreImageIntegrity({
         slug: normalized.slug,
         title: normalized.title,

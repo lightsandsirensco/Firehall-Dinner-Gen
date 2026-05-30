@@ -1,0 +1,185 @@
+{
+  "slug": "smoked-mac-and-cheese",
+  "title": "Smoked Mac and Cheese",
+  "displayTitle": "Smoked Mac and Cheese",
+  "seoTitle": "Smoked Mac and Cheese | Firefighter Meal",
+  "shortDescription": "Creamy three-cheese mac finished with light smoke for ten",
+  "subtitle": "Creamy three-cheese mac finished with light smoke for ten",
+  "category": "hall_expansion",
+  "cuisine": "american",
+  "description": "Elbow pasta is tossed in a sharp cheddar sauce, topped with buttered crumbs, then smoked in a disposable pan until bubbly and lightly kissed with wood smoke. It holds warm in a low oven without breaking.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 60,
+  "prepTime": 25,
+  "difficulty": "easy",
+  "calories": 520,
+  "protein": 22,
+  "carbs": 48,
+  "fats": 28,
+  "tags": [
+    "protein:vegetarian",
+    "format:smoker",
+    "category:smoker_recipes",
+    "bbq",
+    "smoker",
+    "comfort",
+    "side",
+    "hall_expansion",
+    "hall_expansion_56",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Smoker",
+    "Large stock pot",
+    "Hotel pans",
+    "Aluminum foil",
+    "Whisk"
+  ],
+  "ingredients": [
+    {
+      "name": "elbow macaroni",
+      "quantity": "2",
+      "unit": "lb",
+      "group": "Main"
+    },
+    {
+      "name": "sharp cheddar cheese",
+      "quantity": "1.5",
+      "unit": "lb",
+      "notes": "shredded",
+      "group": "Cheese"
+    },
+    {
+      "name": "Gruyère cheese",
+      "quantity": "0.5",
+      "unit": "lb",
+      "notes": "shredded",
+      "group": "Cheese"
+    },
+    {
+      "name": "whole milk",
+      "quantity": "4",
+      "unit": "cups",
+      "group": "Sauce"
+    },
+    {
+      "name": "unsalted butter",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Sauce"
+    },
+    {
+      "name": "all-purpose flour",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Sauce"
+    },
+    {
+      "name": "Dijon mustard",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "smoked paprika",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "panko breadcrumbs",
+      "quantity": "1.5",
+      "unit": "cups",
+      "group": "Topping"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Par-cook the pasta",
+      "instruction": "Boil macaroni in well-salted water until just shy of al dente, about 6 minutes. Drain and toss with a teaspoon of oil so strands do not clump while you build the sauce.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Build the cheese sauce",
+      "instruction": "Melt butter in a large pot, whisk in flour, and cook 2 minutes. Gradually whisk in milk until smooth, then simmer until thickened enough to coat a spoon.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Fold in cheese and pasta",
+      "instruction": "Remove sauce from heat, stir in cheddar, Gruyère, Dijon, smoked paprika, and salt until melted. Fold in drained pasta until every piece is coated in glossy sauce.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Top and smoke",
+      "instruction": "Transfer to buttered hotel pans, top with buttered panko, cover with foil, and smoke at 250°F for 30 minutes until the center reaches 165°F and edges bubble. Target oven/smoker temperature: 250°F.",
+      "minutes": 30,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Uncover and finish",
+      "instruction": "Remove foil and smoke 20 more minutes until breadcrumb topping turns golden and you detect light smoke aroma without acrid bitterness. Rest 10 minutes before serving. Target oven/smoker temperature: 250°F.",
+      "minutes": 25,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Add a pinch of cayenne to the sauce—crews rarely notice heat but the depth reads as 'smoke-night special.'",
+    "Stir in a cup of diced smoked sausage if you want this to stand alone as a protein-forward main.",
+    "If the top browns too fast, finish covered in a 325°F oven while keeping the pan on a cool smoker zone."
+  ],
+  "tonightSpread": [
+    "Smoked mac in the center of the table with sliced jalapeños and hot sauce on the side.",
+    "Pair with any smoked protein—turkey, sausage, or burnt ends—for a full BBQ spread."
+  ],
+  "leftovers": [
+    "Press cold mac into squares, bread, and pan-fry for crispy mac-and-cheese bites.",
+    "Stir leftovers with beaten eggs and bake into a smoky mac frittata for breakfast shift."
+  ],
+  "whyCrewsLikeIt": "Mac and cheese is the universal crowd pleaser on BBQ nights. Smoking adds depth without overpowering the cheese, and the hotel-pan format scales cleanly for a full hall.",
+  "mealPrepNotes": "Cook pasta to just shy of al dente—it finishes in the smoker. Assemble pans up to 4 hours ahead and refrigerate; add 20 minutes to smoke time if going straight from cold.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 520,
+    "protein": 22,
+    "carbs": 48,
+    "fats": 28,
+    "label": "~520 cal/serving · 22g protein · 2g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/smoked-mac-and-cheese.jpg",
+  "heroImageAlt": "Smoked Mac and Cheese — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/smoked-mac-and-cheese.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/smoked-mac-and-cheese.jpg",
+  "railImage": "/images/rails/hall-expansion/smoked-mac-and-cheese.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "smoked mac and cheese",
+    "smoker recipes"
+  ],
+  "relatedSlugs": [
+    "smoked-turkey-breast",
+    "smoked-meatloaf",
+    "pork-belly-burnt-ends",
+    "smoked-sausage-platter"
+  ],
+  "generatedAt": "2026-05-30T03:14:19.187Z",
+  "contentVersion": 2
+}
