@@ -1,12 +1,12 @@
 # SEO Sitemap Audit Report
 
-Generated: 2026-05-30T17:33:32.138Z
+Generated: 2026-05-30T20:45:18.157Z
 
 ## Summary
 
 | Metric | Value |
 | --- | --- |
-| Total URLs audited | 361 |
+| Total URLs audited | 362 |
 | Invalid URLs removed | 0 |
 | Recipes found (unique URLs) | 270 |
 | Recipes missing from sitemap | 0 |
@@ -15,7 +15,7 @@ Generated: 2026-05-30T17:33:32.138Z
 | Canonical issues | 0 |
 | Structured data issues | 0 |
 | Image SEO issues | 0 |
-| Final sitemap URL count | 361 |
+| Final sitemap URL count | 362 |
 | Robots status | PASS |
 | Overall | PASS |
 

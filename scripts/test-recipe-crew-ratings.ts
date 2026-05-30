@@ -14,7 +14,8 @@ import {
   isTrendingActivity,
 } from "../shared/recipe-crew-ratings/badges.js";
 
-assert.equal(formatRatingsCountLabel(24), null);
+assert.equal(formatRatingsCountLabel(9), null);
+assert.equal(formatRatingsCountLabel(10), "10 Firefighter Ratings");
 assert.equal(formatRatingsCountLabel(25), "25 Firefighter Ratings");
 assert.equal(formatRatingsCountLabel(100), "100 Firefighter Ratings");
 
@@ -23,7 +24,10 @@ assert.equal(lines.approvalLabel, "92% Would Cook Again");
 assert.equal(lines.ratingsLabel, "37 Firefighter Ratings");
 
 const low = toPublicRatingLines({ approvalScore: 0.88, totalVotes: 12 });
-assert.equal(low.ratingsLabel, null);
+assert.equal(low.ratingsLabel, "12 Firefighter Ratings");
+
+const hiddenCount = toPublicRatingLines({ approvalScore: 0.88, totalVotes: 9 });
+assert.equal(hiddenCount.ratingsLabel, null);
 
 assert.equal(isTrendingActivity(10, 5, 2), true);
 assert.equal(isTrendingActivity(5, 2, 1), false);
@@ -45,5 +49,17 @@ const rookie = evaluateRecipeBadges(
   ctx,
 );
 assert.ok(rookie.includes("rookie_approved"));
+
+const hallApproved = evaluateRecipeBadges(
+  { slug: "h", category: "comfort_food", totalVotes: 19, approvalScore: 0.85, votesLast30Days: 4, votesLast7Days: 2, votesPrior23Days: 1 },
+  ctx,
+);
+assert.ok(!hallApproved.includes("hall_approved"));
+
+const hallApprovedEarned = evaluateRecipeBadges(
+  { slug: "h2", category: "comfort_food", totalVotes: 22, approvalScore: 0.82, votesLast30Days: 4, votesLast7Days: 2, votesPrior23Days: 1 },
+  ctx,
+);
+assert.ok(hallApprovedEarned.includes("hall_approved"));
 
 console.log("[test-recipe-crew-ratings] OK");

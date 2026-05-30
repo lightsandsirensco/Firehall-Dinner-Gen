@@ -158,6 +158,12 @@ export const redLeadLeadMagnetSchema = z.object({
 
 export type RedLeadLeadMagnetPayload = z.infer<typeof redLeadLeadMagnetSchema>;
 
+export const homepageSubscribeSchema = z.object({
+  email: emailAddressSchema,
+});
+
+export type HomepageSubscribePayload = z.infer<typeof homepageSubscribeSchema>;
+
 export interface IngredientItem {
   item: string;
   amount: string;

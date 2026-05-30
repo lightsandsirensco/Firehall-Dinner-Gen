@@ -1,3 +1,4 @@
+import { CREW_RATING_MIN_VOTES_TO_SHOW_COUNT } from "./constants.js";
 import type { RecipeCrewRatingStats } from "./types.js";
 
 export function computeApprovalScore(thumbsUp: number, totalVotes: number): number | null {
@@ -19,11 +20,10 @@ export function formatApprovalLabel(approvalScore: number | null, totalVotes: nu
 }
 
 /**
- * Hide raw counts below 25 votes to avoid weak social proof.
- * Show count band at 25+ only.
+ * Hide raw counts below the public threshold to avoid weak social proof.
  */
 export function formatRatingsCountLabel(totalVotes: number): string | null {
-  if (totalVotes < 25) return null;
+  if (totalVotes < CREW_RATING_MIN_VOTES_TO_SHOW_COUNT) return null;
   return `${totalVotes} Firefighter Rating${totalVotes === 1 ? "" : "s"}`;
 }
 

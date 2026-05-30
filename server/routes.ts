@@ -9,6 +9,7 @@ import {
   emailRecipeSchema,
   emailShoppingListSchema,
   redLeadLeadMagnetSchema,
+  homepageSubscribeSchema,
   type GenerateRequest,
   type GenerateResponse,
   type ClientRecipeResponse,
@@ -36,6 +37,7 @@ import { finalizePizzaRecipe } from "./pizza-finalize.js";
 import {
   subscribeToList,
   trackLeadMagnetDownloaded,
+  trackHomepageSubscriber,
   trackRecipeEvent,
   trackShoppingListEvent,
   validateKlaviyoConfig,
@@ -57,6 +59,7 @@ import {
   getRecipeCrewRatingCollectionsForCatalog,
   getRecipeCrewRatingAnalytics,
   getRatingSortMap,
+  getTopRatedRecipes,
 } from "./recipe-crew-ratings/store.js";
 import { buildApprovedCatalog } from "./approved-catalog.js";
 import { castCrewRatingVoteSchema } from "../shared/recipe-crew-ratings/schema.js";
@@ -1702,6 +1705,69 @@ export async function registerRoutes(
     }
   });
 
+  app.post("/api/homepage-subscribe", requireCsrf, async (req: Request, res: Response) => {
+    try {
+      const parsed = homepageSubscribeSchema.safeParse(req.body);
+      if (!parsed.success) {
+        return res.status(400).json({
+          message: "Invalid email request.",
+          errors: parsed.error.flatten().fieldErrors,
+        });
+      }
+
+      const { email } = parsed.data;
+
+      if (!enforceEmailRateLimit(req, res, email)) return;
+
+      const klaviyo = validateKlaviyoConfig();
+      if (!klaviyo.ok) {
+        log(`Email blocked: ${klaviyo.error}`, "klaviyo");
+        return res.status(503).json({ message: "Email service is not configured. Please contact the site owner." });
+      }
+
+      const results = await Promise.allSettled([
+        subscribeToList(email),
+        trackHomepageSubscriber(email, { source: "homepage" }),
+      ]);
+
+      const subscribeFailed = results[0].status === "rejected";
+      const eventFailed = results[1].status === "rejected";
+
+      if (subscribeFailed) {
+        const reason = (results[0] as PromiseRejectedResult).reason?.message || "Unknown error";
+        log(`[email] subscribe failed email=${maskEmail(email)} reason="${clip(reason, 80)}"`, "klaviyo");
+      }
+      if (eventFailed) {
+        const reason = (results[1] as PromiseRejectedResult).reason?.message || "Unknown error";
+        log(`[email] track failed email=${maskEmail(email)} reason="${clip(reason, 80)}"`, "klaviyo");
+      }
+
+      if (subscribeFailed && eventFailed) {
+        const reason = (results[0] as PromiseRejectedResult).reason?.message || "Unknown error";
+        if (reason.includes("KLAVIYO_API_KEY")) {
+          return res.status(503).json({ message: "Email service is not configured. Please contact the site owner." });
+        }
+        return res.status(502).json({ message: `Email service error: ${reason}` });
+      }
+
+      if (subscribeFailed) {
+        return res.status(207).json({ success: true, message: "You're on the crew." });
+      }
+
+      log(
+        `[email] homepage subscribe sent ${formatLogFields({
+          email: maskEmail(email),
+          source: "homepage",
+        })}`,
+        "email",
+      );
+      return res.json({ success: true, message: "You're on the crew." });
+    } catch (error: any) {
+      logError("email", "homepage subscribe failed", error);
+      return res.status(500).json({ message: `Failed to subscribe: ${error.message}` });
+    }
+  });
+
   app.post("/api/lead-magnet/red-lead", requireCsrf, async (req: Request, res: Response) => {
     try {
       const parsed = redLeadLeadMagnetSchema.safeParse(req.body);
@@ -2036,6 +2102,17 @@ export async function registerRoutes(
     } catch (error: unknown) {
       logError("crew-rating", "collections failed", error);
       return res.json(EMPTY_RECIPE_CREW_RATING_COLLECTIONS);
+    }
+  });
+
+  app.get("/api/recipe-ratings/top-rated", (_req: Request, res: Response) => {
+    try {
+      const limitRaw = typeof _req.query.limit === "string" ? Number.parseInt(_req.query.limit, 10) : 48;
+      const limit = Number.isFinite(limitRaw) ? Math.min(Math.max(limitRaw, 1), 100) : 48;
+      return res.json({ recipes: getTopRatedRecipes(limit) });
+    } catch (error: unknown) {
+      logError("crew-rating", "top-rated failed", error);
+      return res.json({ recipes: [] });
     }
   });
 

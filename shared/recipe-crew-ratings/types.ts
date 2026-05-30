@@ -14,6 +14,7 @@ export type CrewRatingComplaintCategory =
   | "other";
 
 export type RecipeCrewRatingBadgeId =
+  | "hall_approved"
   | "crew_favourite"
   | "hall_favourite"
   | "top_rated"
@@ -40,7 +41,7 @@ export interface RecipeCrewRatingPublicView {
   approvalScore: number | null;
   /** e.g. "92% Would Cook Again" */
   approvalLabel: string;
-  /** null when totalVotes < 25 */
+  /** null when totalVotes < public count threshold */
   ratingsLabel: string | null;
   badges: RecipeCrewRatingBadgeId[];
   userVote: CrewRatingVote | null;
@@ -105,6 +106,7 @@ export const CREW_RATING_COMPLAINT_LABELS: Record<CrewRatingComplaintCategory, s
 };
 
 export const RECIPE_CREW_RATING_BADGE_LABELS: Record<RecipeCrewRatingBadgeId, string> = {
+  hall_approved: "Hall Approved",
   crew_favourite: "Crew Favourite",
   hall_favourite: "Hall Favourite",
   top_rated: "Top Rated",
@@ -114,6 +116,7 @@ export const RECIPE_CREW_RATING_BADGE_LABELS: Record<RecipeCrewRatingBadgeId, st
 };
 
 export const RECIPE_CREW_RATING_BADGE_EMOJI: Record<RecipeCrewRatingBadgeId, string> = {
+  hall_approved: "✓",
   crew_favourite: "🔥",
   hall_favourite: "🥇",
   top_rated: "⭐",

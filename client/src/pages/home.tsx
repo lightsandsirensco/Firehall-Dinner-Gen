@@ -13,6 +13,7 @@ import { HomeFeaturedMeals } from "@/components/home/home-featured-meals";
 import { HomeWhyCrews } from "@/components/home/home-why-crews";
 import { HomeSeoEditorial } from "@/components/home/home-seo-editorial";
 import { HomeCtaBand } from "@/components/home/home-cta-band";
+import { HomeEmailCapture } from "@/components/home/home-email-capture";
 import { HomeFaqSection } from "@/components/home/home-faq-section";
 import { HomeFooter } from "@/components/home/home-footer";
 import { HomeLightsAuthenticity } from "@/components/brand/home-lights-authenticity";
@@ -61,6 +62,7 @@ export default function Home() {
         <HomeFeaturedMeals meals={featured} />
         <HomeWhyCrews />
         <HomeSeoEditorial />
+        <HomeEmailCapture />
         <HomeCtaBand />
         <HomeFaqSection />
       </main>

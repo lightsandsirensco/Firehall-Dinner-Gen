@@ -11,6 +11,7 @@ import {
   type BadgeEvaluationInput,
 } from "../../shared/recipe-crew-ratings/badges.js";
 import { computeApprovalScore, toPublicRatingLines } from "../../shared/recipe-crew-ratings/display.js";
+import { TOP_RATED_MIN_VOTES } from "../../shared/recipe-crew-ratings/constants.js";
 import type {
   CrewRatingComplaintCategory,
   CrewRatingVote,
@@ -207,7 +208,7 @@ export function getRecipeCrewRatingPublicView(
     approvalScore: stats.approvalScore,
     approvalLabel: lines.approvalLabel,
     ratingsLabel: lines.ratingsLabel,
-    badges: category ? resolveBadges(slug, category, stats) : [],
+    badges: resolveBadges(slug, category, stats),
     userVote: getUserVote(slug, options.fingerprint),
   };
 }
@@ -295,6 +296,49 @@ function collectionEntry(
   };
 }
 
+function buildTopRatedEntries(
+  rows: RatingRow[],
+  categoryBySlug: Map<string, string>,
+  limit: number,
+): RecipeCrewRatingCollectionsResponse["topRated"] {
+  return rows
+    .map((row) => rowToStats(row))
+    .filter((stats) => stats.totalVotes >= TOP_RATED_MIN_VOTES && stats.approvalScore != null)
+    .sort((a, b) => {
+      const scoreDiff = (b.approvalScore ?? 0) - (a.approvalScore ?? 0);
+      if (scoreDiff !== 0) return scoreDiff;
+      return b.totalVotes - a.totalVotes;
+    })
+    .slice(0, limit)
+    .map((stats) => {
+      const category = categoryBySlug.get(stats.recipeSlug) || "";
+      return {
+        ...collectionEntry(stats.recipeSlug, stats, category),
+        badges: resolveBadges(stats.recipeSlug, category, stats),
+      };
+    });
+}
+
+export function getTopRatedRecipes(limit = 48): RecipeCrewRatingCollectionsResponse["topRated"] {
+  const d = getDb();
+  const rows = d
+    .prepare(
+      `SELECT * FROM recipe_crew_ratings
+       WHERE total_votes >= ? AND approval_score IS NOT NULL
+       ORDER BY approval_score DESC, total_votes DESC
+       LIMIT ?`,
+    )
+    .all(TOP_RATED_MIN_VOTES, limit) as RatingRow[];
+
+  return rows.map((row) => {
+    const stats = rowToStats(row);
+    return {
+      ...collectionEntry(row.recipe_slug, stats, ""),
+      badges: resolveBadges(row.recipe_slug, "", stats),
+    };
+  });
+}
+
 export function getRecipeCrewRatingCollections(): RecipeCrewRatingCollectionsResponse {
   const d = getDb();
   const ctx = getBadgeLibraryContext();
@@ -303,7 +347,6 @@ export function getRecipeCrewRatingCollections(): RecipeCrewRatingCollectionsRes
     .all() as RatingRow[];
 
   const crewFavourites: RecipeCrewRatingCollectionsResponse["crewFavourites"] = [];
-  const topRated: RecipeCrewRatingCollectionsResponse["topRated"] = [];
   const trending: RecipeCrewRatingCollectionsResponse["trending"] = [];
   const rookieApproved: RecipeCrewRatingCollectionsResponse["rookieApproved"] = [];
   const firehallClassics: RecipeCrewRatingCollectionsResponse["firehallClassics"] = [];
@@ -325,15 +368,16 @@ export function getRecipeCrewRatingCollections(): RecipeCrewRatingCollectionsRes
     const entry = collectionEntry(slug, stats, "");
 
     if (badges.includes("crew_favourite")) crewFavourites.push({ ...entry, badges: ["crew_favourite"] });
-    if (badges.includes("top_rated")) topRated.push({ ...entry, badges: ["top_rated"] });
     if (badges.includes("trending")) trending.push({ ...entry, badges: ["trending"] });
   }
+
+  const topRated = buildTopRatedEntries(rows, new Map(), 12);
 
   return normalizeRecipeCrewRatingCollections({
     crewFavourites: crewFavourites
       .sort((a, b) => (b.approvalScore ?? 0) - (a.approvalScore ?? 0))
       .slice(0, 12),
-    topRated: topRated.sort((a, b) => (b.approvalScore ?? 0) - (a.approvalScore ?? 0)).slice(0, 12),
+    topRated,
     trending: trending.sort((a, b) => b.totalVotes - a.totalVotes).slice(0, 12),
     rookieApproved: rookieApproved.slice(0, 12),
     firehallClassics: firehallClassics.slice(0, 12),
@@ -349,7 +393,6 @@ export function getRecipeCrewRatingCollectionsForCatalog(
   const ctx = getBadgeLibraryContext();
 
   const crewFavourites: RecipeCrewRatingCollectionsResponse["crewFavourites"] = [];
-  const topRated: RecipeCrewRatingCollectionsResponse["topRated"] = [];
   const trending: RecipeCrewRatingCollectionsResponse["trending"] = [];
   const rookieApproved: RecipeCrewRatingCollectionsResponse["rookieApproved"] = [];
   const firehallClassics: RecipeCrewRatingCollectionsResponse["firehallClassics"] = [];
@@ -376,18 +419,19 @@ export function getRecipeCrewRatingCollectionsForCatalog(
     const entry = collectionEntry(slug, stats, category);
 
     if (badges.includes("crew_favourite")) crewFavourites.push({ ...entry, badges: ["crew_favourite"] });
-    if (badges.includes("top_rated")) topRated.push({ ...entry, badges: ["top_rated"] });
     if (badges.includes("trending")) trending.push({ ...entry, badges: ["trending"] });
     if (badges.includes("rookie_approved")) rookieApproved.push({ ...entry, badges: ["rookie_approved"] });
     if (badges.includes("firehall_classic")) firehallClassics.push({ ...entry, badges: ["firehall_classic"] });
   }
+
+  const topRated = buildTopRatedEntries(rows, categoryBySlug, 12);
 
   const byApproval = (a: typeof crewFavourites[0], b: typeof crewFavourites[0]) =>
     (b.approvalScore ?? 0) - (a.approvalScore ?? 0);
 
   return normalizeRecipeCrewRatingCollections({
     crewFavourites: crewFavourites.sort(byApproval).slice(0, 12),
-    topRated: topRated.sort(byApproval).slice(0, 12),
+    topRated,
     trending: trending.sort((a, b) => b.totalVotes - a.totalVotes).slice(0, 12),
     rookieApproved: rookieApproved.sort(byApproval).slice(0, 12),
     firehallClassics: firehallClassics.sort(byApproval).slice(0, 12),

@@ -46,8 +46,14 @@ for (const word of forbidden) {
   }
 }
 
-if (!html.includes("Red Lead is the tomato sauce")) {
+if (!html.includes("Red Lead is the sauce")) {
   failures.push("HTML missing core sauce definition");
+}
+if (!html.includes("Why Firefighters Still Make It")) {
+  failures.push("HTML missing tradition section heading");
+}
+if (!html.includes("Serve It Like The Hall Does")) {
+  failures.push("HTML missing serve section heading");
 }
 if ((html.match(/<section class="page/g) || []).length !== 5) {
   failures.push(`Expected 5 PDF pages, found ${(html.match(/<section class="page/g) || []).length}`);

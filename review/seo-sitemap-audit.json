@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-30T17:33:32.138Z",
+  "generatedAt": "2026-05-30T20:45:18.157Z",
   "origin": "https://www.firehallmeals.com",
   "liveFetch": false,
   "phase1": {
-    "totalUrlsAudited": 361,
+    "totalUrlsAudited": 362,
     "duplicateLocs": 0
   },
   "phase2": {
@@ -99,7 +99,7 @@
     ]
   },
   "phase9": {
-    "finalSitemapUrlCount": 361,
+    "finalSitemapUrlCount": 362,
     "invalidUrlsRemoved": 0
   },
   "issues": [],

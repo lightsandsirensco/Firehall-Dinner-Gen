@@ -70,13 +70,23 @@ export function ExploreRatingCollections({
         if (!items.length) return null;
         return (
           <section key={key} aria-labelledby={`rating-section-${key}`}>
-            <h2
-              id={`rating-section-${key}`}
-              className="mb-3 flex items-center gap-2 font-heading text-lg tracking-wide"
-            >
-              <span aria-hidden>{RECIPE_CREW_RATING_BADGE_EMOJI[badge]}</span>
-              {title}
-            </h2>
+            <div className="mb-3 flex items-center justify-between gap-3">
+              <h2
+                id={`rating-section-${key}`}
+                className="flex items-center gap-2 font-heading text-lg tracking-wide"
+              >
+                <span aria-hidden>{RECIPE_CREW_RATING_BADGE_EMOJI[badge]}</span>
+                {title}
+              </h2>
+              {key === "topRated" && (
+                <a
+                  href="/top-rated-recipes"
+                  className="text-xs font-medium text-primary hover:text-primary/85 shrink-0"
+                >
+                  View all
+                </a>
+              )}
+            </div>
             <ul className="flex gap-3 overflow-x-auto pb-1 snap-x snap-mandatory scrollbar-hide">
               {items.map((item) => (
                 <li key={item.recipeSlug} className="snap-start shrink-0 w-[200px] sm:w-[220px]">

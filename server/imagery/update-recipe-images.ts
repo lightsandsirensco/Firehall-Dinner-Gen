@@ -15,12 +15,15 @@ export interface AttachEditorialImagesOptions {
   metadata: EditorialImageMetadata;
   /** When false, keeps imageApproved false for review queue */
   markApproved?: boolean;
+  /** Skip integrity gate (remediation scripts only) */
+  forceApprove?: boolean;
 }
 
 function recipeToInsert(
   existing: NonNullable<ReturnType<typeof getCuratedRecipeBySlug>>,
   metadata: EditorialImageMetadata,
   markApproved: boolean,
+  forceApprove = false,
 ): CuratedRecipeInsert {
   const integrity = scoreImageIntegrity({
       slug: existing.slug,
@@ -32,10 +35,11 @@ function recipeToInsert(
       heroAlt: existing.title,
       imageApproved: markApproved ? metadata.imageApproved : false,
     });
+  const approved = forceApprove || (markApproved && integrity.pass);
   const meta: EditorialImageMetadata = applySubjectLockToMetadata(
     {
       ...metadata,
-      imageApproved: markApproved && integrity.pass ? metadata.imageApproved : false,
+      imageApproved: approved ? metadata.imageApproved : false,
       imageVersion: (metadata.imageVersion || 0) + 1,
     },
     {
@@ -136,7 +140,7 @@ export function attachEditorialImagesToSlug(
     return false;
   }
 
-  const insert = recipeToInsert(existing, options.metadata, options.markApproved ?? false);
+  const insert = recipeToInsert(existing, options.metadata, options.markApproved ?? false, options.forceApprove);
   upsertCuratedRecipe(insert);
   log(
     `[imagery] attached editorial images slug=${options.slug} v=${insert.editorialImage?.imageVersion} approved=${insert.editorialImage?.imageApproved}`,

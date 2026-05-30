@@ -3,8 +3,10 @@ import type { CatalogIngredientLine } from "../nutrition/types.js";
 import type { FaqItem } from "./schema.js";
 import {
   RED_LEAD_PDF_ASSETS,
+  RED_LEAD_PDF_COPY,
   RED_LEAD_SAUCE_COOK_MIN,
   RED_LEAD_SAUCE_DEFAULT_CREW,
+  RED_LEAD_SAUCE_FIREHALL_TIPS,
   RED_LEAD_SAUCE_INGREDIENTS,
   RED_LEAD_SAUCE_PREP_MIN,
   RED_LEAD_SAUCE_STEPS,
@@ -19,7 +21,7 @@ export const FIREFIGHTER_RED_LEAD_HERO_IMAGE = RED_LEAD_PDF_ASSETS.heroImage;
 
 export const FIREFIGHTER_RED_LEAD_LEAD_MAGNET = {
   id: "red-lead-recipe",
-  title: "The Official Firehall Red Lead Recipe",
+  title: RED_LEAD_PDF_COPY.header,
   pdfPath: FIREFIGHTER_RED_LEAD_PDF_PATH,
   previewPath: FIREFIGHTER_RED_LEAD_PDF_PREVIEW_PATH,
 } as const;
@@ -65,7 +67,7 @@ const INGREDIENTS: SeoRecipeIngredient[] = RED_LEAD_SAUCE_INGREDIENTS.map((ing) 
 const STEPS: SeoRecipeStep[] = RED_LEAD_SAUCE_STEPS.map((step) => ({
   stepNumber: step.number,
   title: step.title,
-  instruction: [step.body, step.visualCue ? `Visual cue: ${step.visualCue}` : "", step.mistake ? `Avoid: ${step.mistake}` : ""]
+  instruction: [step.body, step.visualCue ? `Look for: ${step.visualCue}` : "", step.mistake ? `Watch out: ${step.mistake}` : ""]
     .filter(Boolean)
     .join(" "),
   minutes: step.minutes ? parseInt(step.minutes, 10) || undefined : undefined,
@@ -88,55 +90,50 @@ export const FIREFIGHTER_RED_LEAD_FAQS: FaqItem[] = [
   {
     question: "What is firefighter Red Lead?",
     answer:
-      "Red Lead is hall language for the senior cook’s tomato sauce — a slow-simmered red cast-iron pan that lands on the kitchen table as part of a traditional Sunday spread. The name ties to the officer’s red helmet tradition or whoever is leading the line that morning.",
+      "Red Lead is hall slang for a slow-cooked tomato sauce — usually simmered in cast iron and served as part of a station breakfast. The name gets used differently from hall to hall. Some tie it to the officer’s red helmet; others just mean whoever is running the sauce pan that morning.",
   },
   {
-    question: "Is Red Lead served by itself?",
+    question: "Is Red Lead the whole breakfast?",
     answer:
-      "Almost never. Most halls set out bacon, breakfast sausage, eggs, toast, hash browns or potatoes, and orange juice alongside the sauce. Red Lead anchors the table — it does not replace the rest of the spread.",
+      "No. Red Lead is the sauce. The breakfast is bacon, sausage, eggs, toast, potatoes, juice, and coffee around it. You cook those separately and put the sauce pan in the middle of the table.",
   },
   {
-    question: "What is the difference between tomato Red Lead and steak Red Lead?",
+    question: "Can a rookie make it on first shift?",
     answer:
-      "Regional tradition varies. This page documents the classic tomato sauce many halls know from Sunday mornings. Some stations run a steak-and-pepper skillet they also call Red Lead — see our Red Lead Skillet breakfast recipe for that version.",
+      "Yes — if they read the recipe first and get the rest of breakfast started before the onion goes in. The sauce mostly needs a steady simmer and someone watching so it does not stick.",
   },
   {
-    question: "Can rookies cook Red Lead on first shift?",
+    question: "Can you make Red Lead ahead?",
     answer:
-      "Yes, if they read the sauce recipe first and start the side dishes before the onion hits the pan. The critical moves are a gentle simmer until the sauce thickens and holding it warm without scorching the bottom.",
+      "A lot of halls do. Simmer it the day before, cool it fast, and refrigerate. Reheat in cast iron over medium-low with a splash of tomato juice, stirring until it looks glossy again.",
   },
 ];
 
 export const FIREFIGHTER_RED_LEAD_BREAKFAST_LINKS: InternalRecipeLink[] = [
   {
-    href: "/breakfast/red-lead-skillet",
-    label: "Red Lead Skillet (steak & eggs)",
-    description: "Steak-and-pepper cast-iron version in the catalog",
+    href: "/breakfast/bacon-egg-hash-skillet",
+    label: "Bacon & Egg Hash Skillet",
+    description: "Good potato side for a big Sunday table",
   },
   {
     href: "/breakfast/hall-sausage-biscuits-gravy",
     label: "Hall Sausage & Biscuits",
-    description: "Classic station gravy spread",
-  },
-  {
-    href: "/breakfast/bacon-egg-hash-skillet",
-    label: "Bacon & Egg Hash Skillet",
-    description: "Crowd-friendly potato skillet",
+    description: "Another hall breakfast staple",
   },
   {
     href: "/breakfast/buttermilk-pancakes",
     label: "Buttermilk Pancakes",
-    description: "Stack-and-serve hall favorite",
+    description: "When the crew wants a stack",
   },
   {
     href: "/breakfast/high-protein-parfaits",
     label: "High-Protein Parfaits",
-    description: "Greek yogurt option for lighter plates",
+    description: "Lighter option for anyone skipping the heavy stuff",
   },
   {
     href: "/firefighter-breakfast-recipes",
     label: "Firefighter breakfast recipes",
-    description: "Browse all hall breakfast plates",
+    description: "Browse the full breakfast catalog",
   },
 ];
 
@@ -154,39 +151,48 @@ export const FIREFIGHTER_RED_LEAD_SERVING_SUGGESTIONS = RED_LEAD_TRADITIONAL_SID
   body: side.detail,
 }));
 
+export const FIREFIGHTER_RED_LEAD_FIREHALL_TIPS = RED_LEAD_SAUCE_FIREHALL_TIPS.map((tip) => ({
+  title: tip.title,
+  body: tip.body,
+}));
+
 export const FIREFIGHTER_RED_LEAD_RECIPE = {
+  slug: "firefighter-red-lead-recipe",
   path: FIREFIGHTER_RED_LEAD_RECIPE_PATH,
-  h1: "Firefighter Red Lead Recipe: The Classic Firehall Tomato Sauce",
-  seoTitle: "Firefighter Red Lead Recipe: The Classic Firehall Tomato Sauce",
+  h1: "Firefighter Red Lead Recipe",
+  seoTitle: "Firefighter Red Lead Recipe — Firehall Tomato Sauce",
   description:
-    "Learn what firefighter Red Lead is, why halls serve it on Sunday mornings, and how to simmer the classic tomato sauce in cast iron as part of a full firehall breakfast spread.",
+    "How to make firehall Red Lead — the slow-cooked tomato sauce served with a proper station breakfast. Sauce recipe only, with hall tips and serving tradition.",
   keywords: [
     "firefighter red lead recipe",
     "red lead firefighter breakfast",
     "firehall red lead",
     "fire station red lead recipe",
     "red lead tomato recipe",
-    "firehall tomato breakfast",
+    "firehall tomato sauce",
     "firefighter breakfast tradition",
   ],
   heroImage: FIREFIGHTER_RED_LEAD_HERO_IMAGE,
   heroImageAlt:
-    "Cast-iron firehall Red Lead tomato sauce simmering red in a skillet — classic Sunday breakfast pan",
-  intro:
-    "Red Lead is the tomato sauce — not a grab-and-go plate. In halls that still run a proper Sunday morning, the senior cook’s cast iron carries a slow red sauce to the center of the table while bacon crisps, sausage warms, coffee refills, and the crew actually sits down together.",
+    "Cast-iron Red Lead tomato sauce on a firehall kitchen table, ready to serve with a station breakfast",
+  intro: RED_LEAD_PDF_COPY.introduction.join(" "),
   tradition: [
     {
-      heading: "What Red Lead means in the firehall",
+      heading: "What Red Lead is",
       paragraphs: [
-        "Red Lead is hall slang for the senior cook’s tomato pan — not a brand name, and not something you will find in culinary school. Some stations tie “red” to the officer’s helmet tradition; others use it plain as the lead cook’s sauce. Either way, it is respect earned at the range and food meant for the table.",
-        "The tomato sauce documented here is what many crews picture when they say Red Lead: crushed tomatoes and onion simmered in cast iron until thick and glossy. Other halls run a steak skillet by the same name — both belong to local tradition, but this recipe is the sauce only.",
+        RED_LEAD_PDF_COPY.introduction[0]!,
+        "In most halls that still run a Sunday morning, somebody is on sauce duty. The pan goes in the middle of the table. Everyone else handles bacon, eggs, sausage, toast, and potatoes. Red Lead is not a single plate — it is the shared tomato pan the crew eats around.",
       ],
     },
     {
-      heading: "A full spread — not a single plate",
+      heading: "Why it matters",
+      paragraphs: [...RED_LEAD_PDF_COPY.whyItMatters.paragraphs],
+    },
+    {
+      heading: "What this recipe makes",
       paragraphs: [
-        "Red Lead is one component of a traditional firehall breakfast. The table still carries eggs, toast, hash browns or home fries, bacon, breakfast sausage, orange juice, and sometimes Greek yogurt with granola for crew who want something lighter.",
-        "The meal matters, but the people around the table matter more. Simmer the sauce well, but leave time for coffee and conversation — that is the tradition rookies learn after their first proper Sunday shift.",
+        RED_LEAD_PDF_COPY.recipeIntro,
+        "Crushed tomatoes, onion, butter, salt, and pepper — simmered until thick. Optional garlic, sugar, or hot sauce if that is how your hall does it. No fancy ingredients. Just the sauce.",
       ],
     },
   ],

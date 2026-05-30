@@ -90,12 +90,12 @@
         font-size: 0.72rem; color: var(--red); letter-spacing: 0.22em; margin-bottom: 0.55rem;
       }
       .subtitle {
-        font-size: 1rem; color: var(--muted); font-style: italic; max-width: 5.8in; margin-top: 0.55rem;
+        font-size: 1rem; color: var(--muted); max-width: 5.8in; margin-top: 0.55rem;
       }
       .intro { max-width: 6.2in; margin-top: 0.85rem; }
       .intro p:last-child { margin-bottom: 0; }
       .hero {
-        width: 100%; height: 3.35in; object-fit: cover; object-position: center;
+        width: 100%; height: 3.1in; object-fit: cover; object-position: center;
         border-radius: 8px; margin: 0.75rem 0 0.85rem; display: block;
         border: 1px solid var(--line);
       }
@@ -128,13 +128,17 @@
       .step-meta { font-size: 0.86rem; color: var(--muted); margin-bottom: 0.35rem; }
       .step-warn { font-size: 0.86rem; color: var(--red-dark); background: var(--red-soft); padding: 0.45rem 0.55rem; border-radius: 4px; }
       .spread-layout { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 0.75rem; align-items: start; }
-      .spread-photo { width: 100%; border-radius: 8px; border: 1px solid var(--line); object-fit: cover; height: 2.6in; }
+      .spread-photo { width: 100%; border-radius: 8px; border: 1px solid var(--line); object-fit: cover; height: 2.35in; }
       .side-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
       .side-item { background: var(--cream); border: 1px solid var(--line); border-radius: 6px; padding: 0.5rem 0.6rem; }
       .side-item p { margin: 0; font-size: 0.84rem; color: var(--muted); }
       .tips-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.55rem; }
       .tip-card { background: var(--cream); border: 1px solid var(--line); border-radius: 6px; padding: 0.6rem 0.65rem; }
       .tip-card p { margin: 0; font-size: 0.88rem; color: var(--muted); }
+      .quote {
+        margin-top: 0.85rem; padding: 0.85rem 1rem; border-left: 3px solid var(--red);
+        background: var(--cream); font-size: 1.05rem; line-height: 1.45; color: var(--charcoal);
+      }
       .footer-line {
         margin-top: auto; padding-top: 0.75rem; border-top: 1px solid var(--line);
         font-size: 0.68rem; color: var(--muted); text-align: center; letter-spacing: 0.06em;
@@ -143,46 +147,62 @@
     </style>
   </head>
   <body>
-    <!-- PAGE 1 -->
+    <!-- PAGE 1 — Header & Introduction -->
     <section class="page page-cover">
       <div class="brand-row">
         <div class="brand-lockup">
           <div class="brand-mark" aria-hidden="true">🔥</div>
           <div>
             <div class="brand">Firehall Meals</div>
-            <div class="brand-tag">Built by Firefighters · Tested in the Firehall</div>
+            <div class="brand-tag">Station kitchen card</div>
           </div>
         </div>
-        <div class="brand-tag">Official Hall Kitchen Card</div>
+        <div class="brand-tag">Sunday morning</div>
       </div>
-      <p class="kicker">Sunday Morning · Kitchen Table Tradition</p>
+      <p class="kicker">Firehall breakfast · Sauce only</p>
       <h1>The Official Firehall Red Lead Recipe</h1>
-      <p class="subtitle">A firehall breakfast staple passed down through generations.</p>
-      <img class="hero" src="../images/breakfast/firefighter-red-lead-recipe.jpg" alt="Red Lead tomato sauce simmering in a cast iron skillet" />
+      <p class="subtitle">Tomato sauce for a proper station breakfast.</p>
+      <img class="hero" src="../images/breakfast/firefighter-red-lead-recipe.jpg" alt="Red Lead tomato sauce simmering in cast iron" />
       <div class="intro">
-        <p><strong>Red Lead is the tomato sauce.</strong> In halls that still run a proper Sunday breakfast, the senior cook’s cast iron carries a slow-simmered red sauce to the center of the table — not steak, not cracked eggs in the pan, and not a grab-and-go plate.</p>
-        <p>Firefighters make it because the sauce anchors a full spread: bacon, sausage, eggs, toast, hash browns, and orange juice served alongside while the crew actually sits down together. This card is the sauce recipe only.</p>
+        <p>Ask ten firefighters how to make Red Lead and you will probably get ten different answers. Every hall seems to have its own version, but the idea is always the same: a slow-cooked tomato sauce served with a proper station breakfast.</p><p>Red Lead is the sauce — not the whole meal. You simmer it in cast iron, set the pan in the middle of the table, and let the crew help themselves while bacon, eggs, and the rest of the spread goes around.</p><p>This card is the sauce recipe only. Cook your eggs, bacon, sausage, toast, and potatoes separately.</p>
       </div>
       <div class="meta-row">
         <div class="meta"><div class="label">Prep</div><strong>10 min</strong></div>
         <div class="meta"><div class="label">Simmer</div><strong>35 min</strong></div>
-        <div class="meta"><div class="label">Best pan</div><strong>12-inch cast iron</strong></div>
+        <div class="meta"><div class="label">Pan</div><strong>12-inch cast iron</strong></div>
       </div>
-      <div class="footer-line">FirehallMeals.com · © Firehall Meals · For station kitchen use</div>
+      <div class="footer-line">FirehallMeals.com · For station kitchen use</div>
       <div class="page-num">1</div>
     </section>
 
-    <!-- PAGE 2 -->
+    <!-- PAGE 2 — Why Firefighters Still Make It -->
     <section class="page">
       <div class="brand-row">
         <div class="brand-lockup">
           <div class="brand-mark" aria-hidden="true">🔥</div>
           <div class="brand">Firehall Meals</div>
         </div>
-        <div class="brand-tag">Red Lead Sauce Only</div>
+        <div class="brand-tag">Why Firefighters Still Make It</div>
+      </div>
+      <h2>Why Firefighters Still Make It</h2>
+      <p>Most weeks in the hall move fast. Calls, training, paperwork, gear checks — there is not much time to sit still. Sunday breakfast is different. Somebody puts coffee on, the kitchen gets warm, and the crew actually sits down.</p><p>That is when rookies hear the old stories — bad calls, funny calls, the shift before theirs. Retired guys still talk about who ran the best sauce pan. Spouses and kids show up at halls that do family mornings. It is one of the few meals where everyone is at the table at once.</p><p>The food is simple. The point is the table.</p>
+      <div class="note">
+        <strong>This recipe makes only the Red Lead sauce.</strong> This recipe makes only the Red Lead sauce. Serve it with eggs, bacon, breakfast sausage, toast, home fries or hash browns, orange juice, and coffee. Nothing fancy — just the way most halls still do it.
+      </div>
+      <div class="page-num">2</div>
+    </section>
+
+    <!-- PAGE 3 — Ingredients -->
+    <section class="page">
+      <div class="brand-row">
+        <div class="brand-lockup">
+          <div class="brand-mark" aria-hidden="true">🔥</div>
+          <div class="brand">Firehall Meals</div>
+        </div>
+        <div class="brand-tag">Sauce only</div>
       </div>
       <h2>Ingredients</h2>
-      <p class="muted">Tomato Red Lead sauce — scale for your crew. Cook bacon, sausage, eggs, toast, and potatoes separately.</p>
+      <p class="muted">Tomato Red Lead sauce — scale for your crew. Cook eggs, bacon, sausage, toast, and potatoes separately.</p>
       <div class="scale-grid">
       <div class="scale-card">
         <h3>Serves 4</h3>
@@ -193,7 +213,7 @@
       <div class="scale-card">
         <h3>Serves 8</h3>
         <ul>
-          <li><strong>2 cans (28 oz each)</strong> crushed tomatoes</li><li><strong>1 cup</strong> tomato juice <span class="muted">(or use liquid from one can if thick)</span></li><li><strong>1 large</strong> yellow onion <span class="muted">(diced small)</span></li><li><strong>4 tbsp</strong> butter</li><li><strong>2 tsp</strong> kosher salt</li><li><strong>1 tsp</strong> black pepper <span class="muted">(freshly ground)</span></li>
+          <li><strong>2 cans (28 oz each)</strong> crushed tomatoes</li><li><strong>1 cup</strong> tomato juice <span class="muted">(or thin with liquid from a can if the tomatoes are thick)</span></li><li><strong>1 large</strong> yellow onion <span class="muted">(diced small)</span></li><li><strong>4 tbsp</strong> butter</li><li><strong>2 tsp</strong> kosher salt</li><li><strong>1 tsp</strong> black pepper <span class="muted">(freshly ground)</span></li>
         </ul>
       </div>
       <div class="scale-card">
@@ -202,177 +222,161 @@
           <li><strong>3 cans (28 oz each)</strong> crushed tomatoes</li><li><strong>1 1/2 cups</strong> tomato juice</li><li><strong>2 large</strong> yellow onion <span class="muted">(diced)</span></li><li><strong>6 tbsp</strong> butter</li><li><strong>1 tbsp</strong> kosher salt</li><li><strong>1 1/2 tsp</strong> black pepper</li>
         </ul>
       </div></div>
-      <div class="note">
-        <strong>Audit note:</strong> Traditional Red Lead is crushed tomatoes, onion, butter, salt, and pepper simmered in cast iron until thick. Optional garlic, sugar, or hot sauce match your hall — never steak or eggs in this pan.
-      </div>
-      <div class="page-num">2</div>
+      <div class="page-num">3</div>
     </section>
 
-    <!-- PAGE 3 -->
+    <!-- PAGE 4 — Step-by-Step Instructions -->
     <section class="page">
       <div class="brand-row">
         <div class="brand-lockup">
           <div class="brand-mark" aria-hidden="true">🔥</div>
           <div class="brand">Firehall Meals</div>
         </div>
-        <div class="brand-tag">Step-by-Step · Sauce Only</div>
+        <div class="brand-tag">Sauce only</div>
       </div>
-      <h2>How to Cook Red Lead Sauce</h2>
-      <p class="muted">Beginner-friendly hall workflow — read once before you touch the range.</p>
+      <h2>Step-by-Step Instructions</h2>
+      <p class="muted">Read it once before you start. Get the rest of breakfast moving before the onion hits the pan.</p>
       <ol class="steps">
       <li class="step">
         <div class="step-head">
           <span class="step-num">1</span>
-          <h3>Start the rest of breakfast before the sauce</h3>
+          <h3>Get the rest of breakfast started first</h3>
         </div>
-        <p>Red Lead is the tomato pan — not the whole meal. Put bacon in the oven, sausage links on a sheet pan, coffee on, and toast ready before you dice the onion. The sauce needs a calm simmer, not a rushed boil while the crew is still hunting for plates.</p>
+        <p>Red Lead needs a quiet simmer, not a pan left alone while you are scrambling to cook everything else. Put coffee on, get bacon in the oven, sausage on a sheet pan, and your toast ready before you dice the onion.</p>
         <p class="step-meta"><strong>Timing:</strong> 5 min setup</p>
         
-        <p class="step-warn"><strong>Common mistake:</strong> Starting the sauce first and letting it scorch while you scramble to cook everything else.</p>
+        <p class="step-warn"><strong>Watch out:</strong> Starting the sauce first and letting it stick while the rest of the breakfast falls behind.</p>
       </li>
       <li class="step">
         <div class="step-head">
           <span class="step-num">2</span>
-          <h3>Melt butter and sweat the onion</h3>
+          <h3>Melt the butter and cook the onion</h3>
         </div>
-        <p>Set a 12-inch cast iron over medium heat. Melt the butter until it foams and smells nutty — not brown. Add the diced onion (and bell pepper if your hall uses it). Stir every minute or so until the onion turns soft and translucent with light gold at the edges.</p>
+        <p>Set a 12-inch cast iron over medium heat. Melt the butter until it foams — not brown. Add the onion and stir every minute or so until it is soft, translucent, and just starting to colour at the edges. Some crews toss in diced green pepper here; that is up to your hall.</p>
         <p class="step-meta"><strong>Timing:</strong> 8–10 min</p>
-        <p class="step-meta"><strong>Visual cue:</strong> Onion pieces bend easily on the spoon; no raw white centers.</p>
-        <p class="step-warn"><strong>Common mistake:</strong> Cranking heat to “speed it up” — butter burns and the sauce tastes bitter.</p>
+        <p class="step-meta"><strong>Look for:</strong> Onion bends on the spoon with no raw white left in the middle.</p>
+        <p class="step-warn"><strong>Watch out:</strong> Turning the heat up to rush it. Burnt butter makes the whole pan taste off.</p>
       </li>
       <li class="step">
         <div class="step-head">
           <span class="step-num">3</span>
-          <h3>Add garlic, then tomatoes</h3>
+          <h3>Add garlic, then the tomatoes</h3>
         </div>
-        <p>If using garlic, stir it in for 45 seconds until fragrant — not brown. Pour in crushed tomatoes, tomato juice, tomato paste if your hall adds a spoon for body, salt, and pepper. Stir until the red is even and the pan looks like thick soup.</p>
+        <p>If you are using garlic, stir it in for about 45 seconds until you can smell it — do not let it brown. Pour in the crushed tomatoes, tomato juice, salt, and pepper. Stir until the colour is even and the pan looks like thick soup.</p>
         <p class="step-meta"><strong>Timing:</strong> 2 min</p>
-        <p class="step-meta"><strong>Visual cue:</strong> Uniform deep red; no dry tomato paste streaks.</p>
+        <p class="step-meta"><strong>Look for:</strong> Deep red all the way through; no pale tomato streaks.</p>
         
       </li>
       <li class="step">
         <div class="step-head">
           <span class="step-num">4</span>
-          <h3>Simmer until the sauce thickens</h3>
+          <h3>Simmer until it thickens</h3>
         </div>
-        <p>Drop heat to medium-low. Simmer with the pan uncovered, stirring every few minutes so the bottom does not stick. The sauce is ready when it coats a spoon and a drag through the middle leaves a brief trail that slowly fills in.</p>
+        <p>Drop the heat to medium-low. Leave the pan uncovered and stir every few minutes so the bottom does not scorch. It is ready when the sauce coats a spoon and a swipe through the middle leaves a trail that slowly closes back up. A longer simmer is better if you have the time.</p>
         <p class="step-meta"><strong>Timing:</strong> 25–35 min</p>
-        <p class="step-meta"><strong>Visual cue:</strong> Thick enough to mound slightly on toast; raw tomato smell is gone.</p>
-        <p class="step-warn"><strong>Common mistake:</strong> Covering too early — steam keeps it watery. Uncovered simmer builds body.</p>
+        <p class="step-meta"><strong>Look for:</strong> Thick enough to sit on toast without running off; the raw tomato smell is gone.</p>
+        <p class="step-warn"><strong>Watch out:</strong> Putting a lid on too early — the steam keeps it thin.</p>
       </li>
       <li class="step">
         <div class="step-head">
           <span class="step-num">5</span>
-          <h3>Taste, adjust, and hold</h3>
+          <h3>Taste it and adjust</h3>
         </div>
-        <p>Taste for salt and pepper. Add the pinch of sugar only if the tomatoes are sharp. For service, hold the pan on the lowest steady heat or transfer to a warm oven (170°F / 75°C) with foil on top. Sauce should stay above 140°F (60°C) for food safety.</p>
+        <p>Taste for salt and pepper. Add the pinch of sugar only if the tomatoes are sharp. A little hot sauce goes in now if your hall likes heat. Hold the pan on the lowest steady flame, or keep it in a warm oven (170°F / 75°C) with foil on top until the crew is seated.</p>
         <p class="step-meta"><strong>Timing:</strong> 2 min</p>
-        <p class="step-meta"><strong>Visual cue:</strong> Balanced savory tomato — not flat, not candy-sweet.</p>
+        <p class="step-meta"><strong>Look for:</strong> Savory and balanced — not flat, not sweet like candy.</p>
         
       </li>
       <li class="step">
         <div class="step-head">
           <span class="step-num">6</span>
-          <h3>Carry the pan to the table</h3>
+          <h3>Bring the pan to the table</h3>
         </div>
-        <p>Place the cast iron in the center of the spread. Bacon, sausage, eggs, toast, hash browns, and juice stay in their own platters. The crew serves themselves from the Red Lead pan with a spoon while everything else passes around it.</p>
-        <p class="step-meta"><strong>Timing:</strong> Serve immediately</p>
+        <p>Carry the cast iron out when the rest of the spread is ready — bacon, sausage, eggs, toast, potatoes, juice, and coffee on the go. Set the sauce in the middle. The crew serves themselves with a spoon. That is the meal.</p>
+        <p class="step-meta"><strong>Timing:</strong> Serve right away</p>
         
-        <p class="step-warn"><strong>Common mistake:</strong> Plating Red Lead to-go — it is hall table food, meant to be shared from the pan.</p>
+        <p class="step-warn"><strong>Watch out:</strong> Trying to plate this like a restaurant dish. It is hall food — shared from the pan.</p>
       </li></ol>
-      <div class="page-num">3</div>
+      <div class="page-num">4</div>
     </section>
 
-    <!-- PAGE 4 -->
+    <!-- PAGE 5 — Firehall Tips, Serve It Like The Hall Does, Closing -->
     <section class="page">
       <div class="brand-row">
         <div class="brand-lockup">
           <div class="brand-mark" aria-hidden="true">🔥</div>
           <div class="brand">Firehall Meals</div>
         </div>
-        <div class="brand-tag">Traditional Firehall Breakfast</div>
+        <div class="brand-tag">Hall service</div>
       </div>
-      <h2>Traditional Firehall Breakfast</h2>
-      <p>Red Lead is almost never eaten on its own. It is one proud pan in a large Sunday-style spread — the breakfast is as much about crew camaraderie as it is about the food.</p>
+      <h2>Firehall Tips</h2>
+      <div class="tips-grid">
+      <div class="tip-card">
+        <h3>Give it time</h3>
+        <p>The sauce is better after a long simmer. If you can start it early and let it sit on low, do it. Leftovers reheated the next day are often better than the first serving.</p>
+      </div>
+      <div class="tip-card">
+        <h3>Make it your hall's way</h3>
+        <p>Some crews add green pepper with the onion. Some add a dash of hot sauce at the end. Garlic is optional. Do not overthink it — taste and adjust.</p>
+      </div>
+      <div class="tip-card">
+        <h3>Scale for the crew</h3>
+        <p>Use the 4 / 8 / 12 portions on the ingredients page. If you need two pans, split the batch evenly. Do not pile a double recipe into one skillet — the middle stays cold while the edges burn.</p>
+      </div>
+      <div class="tip-card">
+        <h3>Hold it without ruining it</h3>
+        <p>Keep it above 140°F (60°C) on low heat or in a 170°F (75°C) oven. Stir before you carry it out. If a skin forms on top, stir it back in — do not scrape burnt pan bottom into the sauce.</p>
+      </div>
+      <div class="tip-card">
+        <h3>Rookie mistakes</h3>
+        <p>Boiling hard splits the tomatoes and makes them grainy. Under-salting until the table fixes it for you. And remember — this card is the tomato sauce. Eggs and bacon cook separately.</p>
+      </div></div>
+
+      <h2 style="margin-top:0.85rem">Serve It Like The Hall Does</h2>
+      <p>Put the cast iron in the centre of the table. Everything else stays on its own platters. Pass the sauce with a spoon and let people take what they want.</p>
       <div class="spread-layout">
         <div>
-          <img class="spread-photo" src="../images/breakfast/firefighter-red-lead-recipe.jpg" alt="Red Lead tomato sauce in cast iron at the center of the hall table" />
-          <p class="muted" style="font-size:0.78rem;margin-top:0.35rem">Red Lead sauce — center of the table.</p>
+          <img class="spread-photo" src="../images/breakfast/firefighter-red-lead-recipe.jpg" alt="Red Lead tomato sauce in cast iron at the centre of the hall table" />
         </div>
         <div>
-          <img class="spread-photo" src="../images/breakfast/chorizo-breakfast-hash.jpg" alt="Hall breakfast plate with eggs, potatoes, and tomato sauce" style="height:2.6in" />
-          <p class="muted" style="font-size:0.78rem;margin-top:0.35rem">Sides served separately around the sauce.</p>
+          <img class="spread-photo" src="../images/breakfast/chorizo-breakfast-hash.jpg" alt="Hall breakfast spread with eggs, potatoes, and sides" />
         </div>
       </div>
-      <div class="side-grid" style="margin-top:0.65rem">
+      <div class="side-grid" style="margin-top:0.55rem">
+      <div class="side-item">
+        <h3>Eggs</h3>
+        <p>Scrambled in a hotel pan or fried to order — cooked on their own, not in the sauce.</p>
+      </div>
       <div class="side-item">
         <h3>Bacon</h3>
-        <p>Sheet-pan at 400°F (205°C) until crisp; refill the platter.</p>
+        <p>Sheet pan at 400°F (205°C) until crisp. Refill the platter.</p>
       </div>
       <div class="side-item">
         <h3>Breakfast sausage</h3>
         <p>Links in the oven or bulk crumbled on the griddle.</p>
       </div>
       <div class="side-item">
-        <h3>Eggs</h3>
-        <p>Scrambled in a hotel pan or fried to order — separate from the sauce.</p>
-      </div>
-      <div class="side-item">
         <h3>Toast</h3>
-        <p>Thick bread, butter and jam on the table.</p>
+        <p>Thick bread, butter on the table.</p>
       </div>
       <div class="side-item">
-        <h3>Hash browns or potatoes</h3>
-        <p>On the griddle or oven — not mixed into the Red Lead pan.</p>
+        <h3>Home fries or hash browns</h3>
+        <p>Griddle or oven — keep them off the Red Lead pan.</p>
       </div>
       <div class="side-item">
         <h3>Orange juice</h3>
-        <p>Pitcher on the table; refill without being asked.</p>
-      </div></div>
-      <div class="note" style="margin-top:0.65rem">
-        <strong>Station workflow:</strong> One cook on the Red Lead sauce, others on bacon, sausage, eggs, toast, and coffee. Carry the cast iron last — when chairs are pulled up and the crew can stay at the table.
+        <p>Pitcher within reach. Top it up without being asked.</p>
       </div>
-      <div class="page-num">4</div>
-    </section>
+      <div class="side-item">
+        <h3>Coffee</h3>
+        <p>First pot on early. Keep it going.</p>
+      </div></div>
 
-    <!-- PAGE 5 -->
-    <section class="page">
-      <div class="brand-row">
-        <div class="brand-lockup">
-          <div class="brand-mark" aria-hidden="true">🔥</div>
-          <div class="brand">Firehall Meals</div>
-        </div>
-        <div class="brand-tag">Firehall Tips</div>
-      </div>
-      <h2>Firehall Tips</h2>
-      <div class="tips-grid">
-      <div class="tip-card">
-        <h3>Make it ahead</h3>
-        <p>Simmer the sauce the night before, cool quickly, and refrigerate. Reheat in cast iron over medium-low with a splash of tomato juice — stir until glossy again. Do not microwave the whole pan if you can avoid it.</p>
-      </div>
-      <div class="tip-card">
-        <h3>Scale for the crew</h3>
-        <p>Use the 4 / 8 / 12 scaling on page 2. For two pans, split onion and tomato evenly — never double depth in one skillet or the center stays cold while the edges scorch.</p>
-      </div>
-      <div class="tip-card">
-        <h3>Holding temperature</h3>
-        <p>Hold at 140°F (60°C) or above on the range’s lowest flame or in a 170°F (75°C) oven. Stir before service. If the sauce skin over, fold it back in — do not scrape burnt pan bottom into the sauce.</p>
-      </div>
-      <div class="tip-card">
-        <h3>Best cast iron</h3>
-        <p>A well-seasoned 12-inch skillet is the standard. Larger crews use two pans or a 15-inch lodge — same technique, more surface for evaporation.</p>
-      </div>
-      <div class="tip-card">
-        <h3>Rookie mistakes</h3>
-        <p>Boiling hard (splits the tomato and makes it grainy), under-salting until the table adds hot sauce, and confusing Red Lead with the steak skillet some halls also call by the same name — this card is tomato sauce only.</p>
-      </div></div>
-      <div class="note" style="margin-top:0.75rem">
-        <strong>Print this card</strong> and tape it inside the kitchen cupboard. When the tones are quiet on a Sunday morning, you will know exactly how to run the sauce — and why the table matters more than the timer.
-      </div>
-      <div style="margin-top:1.25rem;text-align:center">
+      <blockquote class="quote">Every hall has its own recipe. The important part is not who is right. It is getting the crew around the table.</blockquote>
+
+      <div style="margin-top:0.85rem;text-align:center">
         <div class="brand" style="font-size:1rem;color:var(--red-dark)">FirehallMeals.com</div>
-        <div class="brand-tag" style="margin-top:0.25rem">Built by Firefighters · Tested in the Firehall</div>
-        <p class="muted" style="margin-top:0.75rem;font-size:0.78rem">250+ crew-tested firehall recipes · Meal generator · Breakfast catalog</p>
+        <div class="brand-tag" style="margin-top:0.25rem">Built by firefighters · Tested in the hall</div>
       </div>
       <div class="page-num">5</div>
     </section>

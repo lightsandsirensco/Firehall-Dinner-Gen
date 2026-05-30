@@ -2,6 +2,8 @@
  * Manual Explore image slug locks — high-trust hall heroes for catalog mismatches.
  * Keys: explore curated_recipes.slug → hall/golden image slug (NOT keyword assignment).
  */
+import { TRUST_FIRST_EXPLORE_DONORS } from "./trust-first-explore-donors.js";
+
 export const EXPLORE_IMAGE_SLUG_OVERRIDES: Record<string, string> = {
   "the-secret-to-easy-skillet-filet-mignon-steak-tacos": "beef-stroganoff",
   "firehall-beef-plates": "beef-stroganoff",
@@ -32,9 +34,21 @@ export const EXPLORE_IMAGE_SLUG_OVERRIDES: Record<string, string> = {
   "crock-pot-asian-style-country-ribs-with-black-bean-garlic-sauce": "crock-barbacoa-chicken",
   "grilled-ham-and-cheese-french-toast-for-a-quick-weeknight-dinner": "french-toast-casserole",
   "moroccan-kofte-and-sausage-stew": "moroccan-meatballs",
-  "veggie-egg-casserole-tray": "pancake-short-stack",
+  "veggie-egg-casserole-tray": "ham-cheddar-egg-bake",
   "sheet-pan-dinner-hanger-steak-with-mushrooms-and-carrots": "beef-broccoli",
   "simple-skillet-lasagna": "skillet-chicken-alfredo",
+  "coconut-curry-chicken-pot": "boneless-chicken-thighs-sweet-potato-spinach",
+  "superbowl-chili": "big-chili",
+  "loaded-baked-potato-soup-with-crispy-fried-potato-skins": "beef-barley-soup",
+  "hearty-leek-and-yukon-gold-potato-soup": "beef-barley-soup",
+  "hearty-bone-broth-chicken-noodle-soup": "chicken-dumpling-soup",
+  "tangy-savory-mexican-soup": "turkey-chili",
+  "how-to-make-the-best-chili": "big-chili",
+  "white-bean-and-garlic-soup-with-spinach-and-crispy-prosciutto-and-rosemary-garli": "beef-barley-soup",
+  "asian-chicken-noodle-soup": "chicken-dumpling-soup",
+  "easy-vegetable-beef-soup": "beef-barley-soup",
+  "cast-iron-chicken-fajitas": "sheet-pan-chicken-fajitas-lite",
+  ...TRUST_FIRST_EXPLORE_DONORS,
 };
 
 /** Meal format corrections for Explore imports (metadata). */

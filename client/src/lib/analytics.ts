@@ -33,8 +33,8 @@ export async function setAnalyticsUserId(email: string) {
   } catch {}
 }
 
-export function trackRedLeadCaptureView() {
-  trackEvent("red_lead_capture_view");
+export function trackRedLeadPageView() {
+  trackEvent("red_lead_page_view");
 }
 
 export function trackRedLeadCaptureSubmit() {
@@ -43,4 +43,20 @@ export function trackRedLeadCaptureSubmit() {
 
 export function trackRedLeadPdfDownload() {
   trackEvent("red_lead_pdf_download");
+}
+
+export function trackHomepageCaptureView() {
+  trackEvent("homepage_capture_view");
+}
+
+export function trackHomepageCaptureSubmit() {
+  trackEvent("homepage_capture_submit");
+}
+
+export function trackRecipeUpvote(recipeSlug: string) {
+  trackEvent("recipe_upvote", { recipe_slug: recipeSlug });
+}
+
+export function trackRecipeDownvote(recipeSlug: string) {
+  trackEvent("recipe_downvote", { recipe_slug: recipeSlug });
 }

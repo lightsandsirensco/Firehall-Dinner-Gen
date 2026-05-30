@@ -11,6 +11,7 @@ import { buildShoppingListFromClientMeal } from "@/lib/shopping-list";
 import { EmailModal } from "@/components/email-modal";
 import { ShoppingListModal } from "@/components/shopping-list-modal";
 import type { ClientRecipeResponse } from "@shared/schema";
+import { RecipeCrewRatingPanel } from "@/components/recipe-crew-rating/recipe-crew-rating-panel";
 import { MealHeroImage } from "@/components/meal-hero-image";
 
 interface CuratedPackageResponse {
@@ -159,6 +160,8 @@ export default function CuratedPackagePage() {
             </div>
 
             <RecipeCard recipe={recipe} crewSize={crewSize} />
+
+            <RecipeCrewRatingPanel slug={slug} category="firehall_classics" />
 
             <div className="flex flex-wrap gap-3 justify-center pt-4 border-t border-border/30">
               <Button onClick={() => setShoppingOpen(true)} disabled={!shoppingList} data-testid="button-curated-shopping">

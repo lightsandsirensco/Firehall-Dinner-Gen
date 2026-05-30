@@ -1,0 +1,1631 @@
+{
+  "generatedAt": "2026-05-30T20:05:09.837Z",
+  "successMetric": "0 incorrect meal representations (not hero uniqueness)",
+  "totals": {
+    "userFacingRecipes": 508,
+    "p0IncorrectMeal": 0,
+    "p0ByCollection": {},
+    "p1WithinCategoryGroups": 55,
+    "p1WithinCategoryRecipes": 165,
+    "p1HighRiskGroups": 12,
+    "p2CrossCategoryGroups": 139,
+    "p2CrossCategoryAccurateGroups": 139,
+    "p2CrossCategorySuspectGroups": 0,
+    "estimatedTrustImpact": "elevated"
+  },
+  "p0IncorrectMeals": [],
+  "p1WithinCategoryDuplicates": [
+    {
+      "collection": "explore_curated",
+      "hash": "a87266b9a60ea28c36380688b9c0b7ab",
+      "count": 9,
+      "slugs": [
+        "philly-cheesesteak-sliders",
+        "bbq-meatball-skewers",
+        "build-your-own-pho-bar",
+        "mesquite-chuck-roast",
+        "mushroom-swiss-steak-pan",
+        "pepper-steak-onions",
+        "rigatoni-meat-sauce-batch",
+        "sheet-pan-meatball-marinara",
+        "hall-sloppy-joe-feed"
+      ],
+      "titles": [
+        "Philly Cheesesteak Sliders",
+        "BBQ Meatball Skewers",
+        "Build-Your-Own Pho Bar",
+        "Mesquite Smoked Chuck Roast",
+        "Mushroom Swiss Steak Pan",
+        "Pepper Steak with Onions",
+        "Rigatoni with Meat Sauce",
+        "Sheet Pan Meatball Marinara Feed",
+        "Hall Sloppy Joe Feed"
+      ],
+      "trustRisk": "high"
+    },
+    {
+      "collection": "explore_curated",
+      "hash": "a5201b6f0cc7af8eccd6ac9bcd113163",
+      "count": 8,
+      "slugs": [
+        "breakfast-crunchwraps",
+        "breakfast-nachos-supreme",
+        "breakfast-poutine",
+        "breakfast-sliders",
+        "fire-captain-omelette-bar",
+        "firehall-breakfast-pizza",
+        "sheet-pan-breakfast-sandwiches",
+        "meatball-hoagies"
+      ],
+      "titles": [
+        "Breakfast Crunchwraps",
+        "Breakfast Nachos Supreme",
+        "Breakfast Poutine",
+        "Breakfast Sliders",
+        "Fire Captain Omelette Bar",
+        "Firehall Breakfast Pizza",
+        "Sheet Pan Breakfast Sandwiches",
+        "Firehall Meatball Hoagies"
+      ],
+      "trustRisk": "high"
+    },
+    {
+      "collection": "explore_curated",
+      "hash": "2f4ae250e9954acbd94a9e8f81d04490",
+      "count": 6,
+      "slugs": [
+        "smoked-mac-and-cheese",
+        "pretzel-bite-platter",
+        "pasta-bar-night",
+        "apple-cinnamon-baked-oatmeal",
+        "big-pot-savory-oats",
+        "mac-and-cheese-bake"
+      ],
+      "titles": [
+        "Smoked Mac and Cheese",
+        "Pretzel Bite Platter with Beer Cheese",
+        "Pasta Bar Night",
+        "Apple Cinnamon Baked Oatmeal",
+        "Big-Pot Savory Oats",
+        "Baked Mac and Cheese"
+      ],
+      "trustRisk": "high"
+    },
+    {
+      "collection": "explore_curated",
+      "hash": "fb220aff7414ff503ee8720bc480eb30",
+      "count": 6,
+      "slugs": [
+        "smoked-queso-fundido",
+        "loaded-potato-skins",
+        "game-day-pizza-sliders",
+        "jalapeno-popper-dip",
+        "soft-pretzel-dogs",
+        "mostaccioli-sausage-bake"
+      ],
+      "titles": [
+        "Smoked Queso Fundido",
+        "Loaded Potato Skins",
+        "Game Day Pizza Sliders",
+        "Jalapeño Popper Dip",
+        "Soft Pretzel Hot Dogs",
+        "Baked Mostaccioli with Sausage"
+      ],
+      "trustRisk": "high"
+    },
+    {
+      "collection": "explore_curated",
+      "hash": "41a064ec2c601f7fed2247a66d7dc703",
+      "count": 5,
+      "slugs": [
+        "smoked-sausage-platter",
+        "molasses-bourbon-pork-ribs",
+        "applewood-pork-shoulder-steaks",
+        "carolina-mustard-pork",
+        "pulled-pork"
+      ],
+      "titles": [
+        "Smoked Sausage Platter",
+        "Molasses Bourbon Pork Ribs",
+        "Applewood Grilled Pork Shoulder Steaks",
+        "Carolina Mustard Pulled Pork",
+        "Pulled Pork Sandwiches"
+      ],
+      "trustRisk": "high"
+    },
+    {
+      "collection": "explore_curated",
+      "hash": "d5d67808ee8eafbefbc88990606ec29b",
+      "count": 5,
+      "slugs": [
+        "pork-belly-burnt-ends",
+        "smoked-tri-tip",
+        "bbq-brisket-burnt-ends",
+        "smoked-corned-beef",
+        "pepper-smoked-brisket-flat"
+      ],
+      "titles": [
+        "Pork Belly Burnt Ends",
+        "Smoked Tri-Tip Roast",
+        "BBQ Burnt Ends",
+        "Smoked Corned Beef Brisket",
+        "Pepper-Crusted Smoked Brisket Flat"
+      ],
+      "trustRisk": "high"
+    },
+    {
+      "collection": "explore_curated",
+      "hash": "c37e567cf9b7db1194a94e1798cc37ba",
+      "count": 5,
+      "slugs": [
+        "rice-bowl-bar-night",
+        "mediterranean-feast-night",
+        "warm-spinach-chicken-salad",
+        "mediterranean-chicken-farro-bowls",
+        "greek-chicken-bowls"
+      ],
+      "titles": [
+        "Rice Bowl Bar Night",
+        "Mediterranean Feast Night",
+        "Warm Spinach Chicken Salad",
+        "Mediterranean Chicken Farro Bowls",
+        "Greek Chicken Power Bowls"
+      ],
+      "trustRisk": "high"
+    },
+    {
+      "collection": "explore_curated",
+      "hash": "2161edf4d27935bc1b8096622b09d7e1",
+      "count": 4,
+      "slugs": [
+        "smoked-turkey-breast",
+        "hickory-turkey-legs",
+        "hall-breakfast-wraps",
+        "turkey-burgers"
+      ],
+      "titles": [
+        "Smoked Turkey Breast for the Crew",
+        "Hickory Smoked Turkey Legs",
+        "Hall Breakfast Wraps",
+        "Black Bean Turkey Burgers"
+      ],
+      "trustRisk": "high"
+    },
+    {
+      "collection": "explore_curated",
+      "hash": "45e160454d84d4dfaa1b0bb7aba7a220",
+      "count": 4,
+      "slugs": [
+        "bbq-breakfast-hash",
+        "sausage-egg-bake",
+        "bacon-egg-hash-skillet",
+        "steakhouse-hash-skillet"
+      ],
+      "titles": [
+        "BBQ Breakfast Hash",
+        "Sausage Egg Bake for the Crew",
+        "Bacon Egg Hash Skillet",
+        "Steakhouse Hash Skillet"
+      ],
+      "trustRisk": "high"
+    },
+    {
+      "collection": "explore_curated",
+      "hash": "e3c651f0fad3df99911f94c982632af4",
+      "count": 4,
+      "slugs": [
+        "ginger-soy-chicken-rice-bowls",
+        "honey-garlic-chicken-rice-bowls",
+        "denver-breakfast-casserole",
+        "ham-cheddar-egg-bake"
+      ],
+      "titles": [
+        "Ginger Soy Chicken Rice Bowls",
+        "Honey Garlic Chicken Rice Bowls",
+        "Denver Breakfast Casserole",
+        "Ham & Cheddar Egg Bake"
+      ],
+      "trustRisk": "high"
+    },
+    {
+      "collection": "explore_curated",
+      "hash": "4aa66c9a69144862ddf17dc14cd86dd0",
+      "count": 4,
+      "slugs": [
+        "pellet-smoked-chicken-quarters",
+        "spatchcock-lemon-roast-chicken",
+        "paprika-roasted-chicken-quarters",
+        "greek-lemon-chicken-potatoes"
+      ],
+      "titles": [
+        "Pellet Smoked Chicken Quarters",
+        "Spatchcock Lemon Roast Chicken",
+        "Paprika Roasted Chicken Quarters",
+        "Greek Lemon Chicken and Potatoes"
+      ],
+      "trustRisk": "high"
+    },
+    {
+      "collection": "explore_curated",
+      "hash": "70f2393071450c57f6c8ff8d7dd6199b",
+      "count": 4,
+      "slugs": [
+        "firehall-charcuterie-board",
+        "sandwich-board-night",
+        "breakfast-enchiladas",
+        "breakfast-quesadillas"
+      ],
+      "titles": [
+        "Firehall Charcuterie Board",
+        "Sandwich Board Night",
+        "Breakfast Enchiladas for the Crew",
+        "Breakfast Quesadillas"
+      ],
+      "trustRisk": "high"
+    },
+    {
+      "collection": "explore_curated",
+      "hash": "b0841d80d849cdfeb092028dd88699b6",
+      "count": 3,
+      "slugs": [
+        "cheesy-beef-nacho-bake",
+        "loaded-nacho-bar-night",
+        "enchilada-beef-skillet"
+      ],
+      "titles": [
+        "Cheesy Beef Nacho Bake",
+        "Loaded Nacho Bar Night",
+        "Beef Enchilada Skillet"
+      ],
+      "trustRisk": "medium"
+    },
+    {
+      "collection": "explore_curated",
+      "hash": "67ea7cf0b01653d3d8132fa4ab1412ff",
+      "count": 3,
+      "slugs": [
+        "cast-iron-breakfast-skillet",
+        "bbq-chicken-sliders",
+        "ham-pepper-skillet"
+      ],
+      "titles": [
+        "Cast Iron Breakfast Skillet",
+        "BBQ Chicken Sliders",
+        "Ham & Pepper Breakfast Skillet"
+      ],
+      "trustRisk": "medium"
+    },
+    {
+      "collection": "explore_curated",
+      "hash": "adbe49a2b0c1936ba4dc3b18cdfbcc28",
+      "count": 3,
+      "slugs": [
+        "smoked-meatloaf",
+        "dutch-oven-pot-roast",
+        "meatloaf-mashed"
+      ],
+      "titles": [
+        "Smoked Meatloaf with Glaze",
+        "Dutch Oven Pot Roast",
+        "Classic Meatloaf with Mashed Potatoes"
+      ],
+      "trustRisk": "medium"
+    },
+    {
+      "collection": "explore_curated",
+      "hash": "5b2fe9fd56e9feea30beb6920e0c8bca",
+      "count": 3,
+      "slugs": [
+        "cowboy-breakfast-skillet",
+        "red-lead-skillet",
+        "beef-stroganoff"
+      ],
+      "titles": [
+        "Cowboy Breakfast Skillet",
+        "Red Lead Skillet",
+        "Beef Stroganoff"
+      ],
+      "trustRisk": "medium"
+    },
+    {
+      "collection": "explore_curated",
+      "hash": "54b37a3e11daed991a415ed8b26f7be1",
+      "count": 3,
+      "slugs": [
+        "chorizo-breakfast-burritos",
+        "turkey-sausage-burritos",
+        "beef-barley-soup"
+      ],
+      "titles": [
+        "Chorizo Breakfast Burritos",
+        "Turkey Sausage Breakfast Burritos",
+        "Beef Barley Soup"
+      ],
+      "trustRisk": "medium"
+    },
+    {
+      "collection": "explore_curated",
+      "hash": "0516db35e9217d4a056edd415be2b277",
+      "count": 3,
+      "slugs": [
+        "southwest-egg-bake",
+        "chicken-tikka-masala",
+        "turkey-sausage-egg-bake"
+      ],
+      "titles": [
+        "Southwest Egg Bake",
+        "Chicken Tikka Masala",
+        "Turkey Sausage Egg Bake"
+      ],
+      "trustRisk": "medium"
+    },
+    {
+      "collection": "explore_curated",
+      "hash": "1617b1017c2dd116e80ebdd337f72161",
+      "count": 3,
+      "slugs": [
+        "chili-garlic-bread",
+        "chili-mac",
+        "big-chili"
+      ],
+      "titles": [
+        "Firehall Chili",
+        "Chili Mac Skillet",
+        "Hall-Sized Beef and Bean Chili"
+      ],
+      "trustRisk": "medium"
+    },
+    {
+      "collection": "breakfast",
+      "hash": "45e160454d84d4dfaa1b0bb7aba7a220",
+      "count": 3,
+      "slugs": [
+        "bacon-egg-hash-skillet",
+        "bbq-breakfast-hash",
+        "steakhouse-hash-skillet"
+      ],
+      "titles": [
+        "Bacon Egg Hash Skillet",
+        "BBQ Breakfast Hash",
+        "Steakhouse Hash Skillet"
+      ],
+      "trustRisk": "medium"
+    },
+    {
+      "collection": "breakfast",
+      "hash": "37edb1fb04743d5574098e6756b8e082",
+      "count": 3,
+      "slugs": [
+        "buttermilk-pancakes",
+        "maple-sausage-pinwheels",
+        "protein-pancake-tray"
+      ],
+      "titles": [
+        "Buttermilk Pancakes for the Crew",
+        "Maple Sausage Pinwheels",
+        "Protein Pancake Tray"
+      ],
+      "trustRisk": "medium"
+    },
+    {
+      "collection": "explore_curated",
+      "hash": "37edb1fb04743d5574098e6756b8e082",
+      "count": 3,
+      "slugs": [
+        "buttermilk-pancakes",
+        "maple-sausage-pinwheels",
+        "protein-pancake-tray"
+      ],
+      "titles": [
+        "Buttermilk Pancakes for the Crew",
+        "Maple Sausage Pinwheels",
+        "Protein Pancake Tray"
+      ],
+      "trustRisk": "medium"
+    },
+    {
+      "collection": "explore_curated",
+      "hash": "d5c3f566bea3b5a27f1b44c542ecdd6d",
+      "count": 3,
+      "slugs": [
+        "green-chile-chicken-stew",
+        "cheesy-chicken-broccoli-rice",
+        "one-pot-chicken-rice"
+      ],
+      "titles": [
+        "Green Chile Chicken Stew",
+        "Cheesy Chicken Broccoli Rice",
+        "One-Pot Chicken and Rice"
+      ],
+      "trustRisk": "medium"
+    },
+    {
+      "collection": "explore_curated",
+      "hash": "cfa7a57ce088e56c42296771b7c00fc7",
+      "count": 3,
+      "slugs": [
+        "honey-mustard-oven-chicken-thighs",
+        "lemon-garlic-chicken-tray",
+        "honey-lime-chicken-tray"
+      ],
+      "titles": [
+        "Honey Mustard Baked Chicken Thighs",
+        "Lemon Garlic Chicken Tray Bake",
+        "Honey Lime Chicken Tray"
+      ],
+      "trustRisk": "medium"
+    },
+    {
+      "collection": "explore_curated",
+      "hash": "5db7c83415e6465755cff21413d1b9d3",
+      "count": 3,
+      "slugs": [
+        "fajita-bar-night",
+        "sheet-pan-chicken-fajitas-lite",
+        "cast-iron-chicken-fajitas"
+      ],
+      "titles": [
+        "Fajita Bar Night",
+        "Sheet Pan Chicken Fajitas Lite",
+        "Cast Iron Chicken Fajitas"
+      ],
+      "trustRisk": "medium"
+    },
+    {
+      "collection": "explore_curated",
+      "hash": "9794b41c570aeb9dcb72d4b8f3e8ee8d",
+      "count": 3,
+      "slugs": [
+        "cajun-chicken-rice-skillet",
+        "cajun-chicken-rice-bowl",
+        "high-protein-parfaits"
+      ],
+      "titles": [
+        "Cajun Chicken and Rice Skillet",
+        "Cajun Chicken Rice Bowl",
+        "High-Protein Yogurt Parfaits"
+      ],
+      "trustRisk": "medium"
+    },
+    {
+      "collection": "breakfast",
+      "hash": "12cb71f0a3aaf23e040083a81a06bdbd",
+      "count": 3,
+      "slugs": [
+        "breakfast-sandwich-trays",
+        "sausage-egg-cheese-sandwiches",
+        "sheet-pan-breakfast-sandwiches"
+      ],
+      "titles": [
+        "Breakfast Sandwich Trays",
+        "Sausage Egg & Cheese Sandwiches",
+        "Sheet Pan Breakfast Sandwiches"
+      ],
+      "trustRisk": "medium"
+    },
+    {
+      "collection": "explore_curated",
+      "hash": "aab7f92f6324522bb8f19db7b0b36053",
+      "count": 2,
+      "slugs": [
+        "crispy-chicken-cutlets",
+        "chicken-parm"
+      ],
+      "titles": [
+        "Crispy Chicken Cutlets Marinara",
+        "Chicken Parm"
+      ],
+      "trustRisk": "medium"
+    },
+    {
+      "collection": "explore_curated",
+      "hash": "f315832bfdbde5b46e1eeede177b4a7f",
+      "count": 2,
+      "slugs": [
+        "beef-dip",
+        "steak-sandwiches"
+      ],
+      "titles": [
+        "Blackstone Steak Sandwiches",
+        "Steak Sandwiches"
+      ],
+      "trustRisk": "low"
+    },
+    {
+      "collection": "explore_curated",
+      "hash": "c7295f81092bde7be1e0db15ccee71d8",
+      "count": 2,
+      "slugs": [
+        "loaded-nacho-skillet",
+        "game-day-nachos"
+      ],
+      "titles": [
+        "Loaded Nacho Skillet",
+        "Loaded Game Day Nachos"
+      ],
+      "trustRisk": "medium"
+    },
+    {
+      "collection": "breakfast",
+      "hash": "67ea7cf0b01653d3d8132fa4ab1412ff",
+      "count": 2,
+      "slugs": [
+        "cast-iron-breakfast-skillet",
+        "ham-pepper-skillet"
+      ],
+      "titles": [
+        "Cast Iron Breakfast Skillet",
+        "Ham & Pepper Breakfast Skillet"
+      ],
+      "trustRisk": "medium"
+    },
+    {
+      "collection": "breakfast",
+      "hash": "2f4ae250e9954acbd94a9e8f81d04490",
+      "count": 2,
+      "slugs": [
+        "apple-cinnamon-baked-oatmeal",
+        "big-pot-savory-oats"
+      ],
+      "titles": [
+        "Apple Cinnamon Baked Oatmeal",
+        "Big-Pot Savory Oats"
+      ],
+      "trustRisk": "medium"
+    },
+    {
+      "collection": "breakfast",
+      "hash": "5b2fe9fd56e9feea30beb6920e0c8bca",
+      "count": 2,
+      "slugs": [
+        "cowboy-breakfast-skillet",
+        "red-lead-skillet"
+      ],
+      "titles": [
+        "Cowboy Breakfast Skillet",
+        "Red Lead Skillet"
+      ],
+      "trustRisk": "medium"
+    },
+    {
+      "collection": "explore_curated",
+      "hash": "1e60fee6f67e1a60a195164d25b7b113",
+      "count": 2,
+      "slugs": [
+        "kielbasa-cabbage-potato-skillet",
+        "sausage-peppers-onions"
+      ],
+      "titles": [
+        "Kielbasa Cabbage Potato Skillet",
+        "Sausage Peppers and Onions"
+      ],
+      "trustRisk": "medium"
+    },
+    {
+      "collection": "breakfast",
+      "hash": "54b37a3e11daed991a415ed8b26f7be1",
+      "count": 2,
+      "slugs": [
+        "chorizo-breakfast-burritos",
+        "turkey-sausage-burritos"
+      ],
+      "titles": [
+        "Chorizo Breakfast Burritos",
+        "Turkey Sausage Breakfast Burritos"
+      ],
+      "trustRisk": "medium"
+    },
+    {
+      "collection": "explore_curated",
+      "hash": "ac86499f487a7c18326372d5fb49237e",
+      "count": 2,
+      "slugs": [
+        "cottage-cheese-protein-pasta",
+        "baked-ziti"
+      ],
+      "titles": [
+        "Cottage Cheese Protein Pasta Bake",
+        "Baked Ziti"
+      ],
+      "trustRisk": "medium"
+    },
+    {
+      "collection": "explore_curated",
+      "hash": "09d723cce8275020882fa5056f8eb800",
+      "count": 2,
+      "slugs": [
+        "jambalaya",
+        "turkey-chili"
+      ],
+      "titles": [
+        "Cajun Jambalaya for the Hall",
+        "High-Protein Turkey Chili"
+      ],
+      "trustRisk": "medium"
+    },
+    {
+      "collection": "explore_curated",
+      "hash": "ff13b0cf6f93dfe195b312e3d4783862",
+      "count": 2,
+      "slugs": [
+        "shawarma-bar-night",
+        "chicken-souvlaki"
+      ],
+      "titles": [
+        "Shawarma Bar Night",
+        "Grilled Chicken Souvlaki"
+      ],
+      "trustRisk": "medium"
+    },
+    {
+      "collection": "breakfast",
+      "hash": "0516db35e9217d4a056edd415be2b277",
+      "count": 2,
+      "slugs": [
+        "southwest-egg-bake",
+        "turkey-sausage-egg-bake"
+      ],
+      "titles": [
+        "Southwest Egg Bake",
+        "Turkey Sausage Egg Bake"
+      ],
+      "trustRisk": "medium"
+    },
+    {
+      "collection": "breakfast",
+      "hash": "668d840bfee5792b48e2d8839c434bed",
+      "count": 2,
+      "slugs": [
+        "breakfast-crunchwraps",
+        "hall-breakfast-burritos"
+      ],
+      "titles": [
+        "Breakfast Crunchwraps",
+        "Hall Breakfast Burritos"
+      ],
+      "trustRisk": "medium"
+    },
+    {
+      "collection": "breakfast",
+      "hash": "bad24e39a44028a803f761529c8ba808",
+      "count": 2,
+      "slugs": [
+        "crew-french-toast-bake",
+        "overnight-french-toast-bake"
+      ],
+      "titles": [
+        "Crew French Toast Bake",
+        "Overnight French Toast Bake"
+      ],
+      "trustRisk": "low"
+    },
+    {
+      "collection": "explore_curated",
+      "hash": "bad24e39a44028a803f761529c8ba808",
+      "count": 2,
+      "slugs": [
+        "crew-french-toast-bake",
+        "overnight-french-toast-bake"
+      ],
+      "titles": [
+        "Crew French Toast Bake",
+        "Overnight French Toast Bake"
+      ],
+      "trustRisk": "low"
+    },
+    {
+      "collection": "explore_curated",
+      "hash": "dd590ef976a9cc32180d39ab2f8ee048",
+      "count": 2,
+      "slugs": [
+        "chicken-enchilada-skillet-light",
+        "quick-egg-tacos"
+      ],
+      "titles": [
+        "Light Chicken Enchilada Skillet",
+        "Quick Egg Tacos"
+      ],
+      "trustRisk": "medium"
+    },
+    {
+      "collection": "breakfast",
+      "hash": "808f25656f7380c72131958d8f63a545",
+      "count": 2,
+      "slugs": [
+        "hall-sausage-biscuits-gravy",
+        "monte-cristo-sandwiches"
+      ],
+      "titles": [
+        "Hall Sausage Biscuits & Gravy",
+        "Monte Cristo Sandwiches"
+      ],
+      "trustRisk": "medium"
+    },
+    {
+      "collection": "explore_curated",
+      "hash": "808f25656f7380c72131958d8f63a545",
+      "count": 2,
+      "slugs": [
+        "monte-cristo-sandwiches",
+        "hall-sausage-biscuits-gravy"
+      ],
+      "titles": [
+        "Monte Cristo Sandwiches",
+        "Hall Sausage Biscuits & Gravy"
+      ],
+      "trustRisk": "medium"
+    },
+    {
+      "collection": "explore_curated",
+      "hash": "f812554eee0619bab13477b648d029f1",
+      "count": 2,
+      "slugs": [
+        "chicken-wing-bar-night",
+        "buffalo-chicken-dip"
+      ],
+      "titles": [
+        "Chicken Wing Bar Night",
+        "Buffalo Chicken Dip"
+      ],
+      "trustRisk": "medium"
+    },
+    {
+      "collection": "breakfast",
+      "hash": "e3c651f0fad3df99911f94c982632af4",
+      "count": 2,
+      "slugs": [
+        "denver-breakfast-casserole",
+        "ham-cheddar-egg-bake"
+      ],
+      "titles": [
+        "Denver Breakfast Casserole",
+        "Ham & Cheddar Egg Bake"
+      ],
+      "trustRisk": "medium"
+    },
+    {
+      "collection": "explore_curated",
+      "hash": "42013e58a94232ccf317dde5b2558ea4",
+      "count": 2,
+      "slugs": [
+        "station-cobb-salad",
+        "hummus-chicken-platter"
+      ],
+      "titles": [
+        "Station Cobb Salad",
+        "Hummus Chicken Platter"
+      ],
+      "trustRisk": "medium"
+    },
+    {
+      "collection": "explore_curated",
+      "hash": "5cd1d4321ed7da43a6d066e1e95ffa4e",
+      "count": 2,
+      "slugs": [
+        "hall-chicken-noodle-soup",
+        "lemon-chicken-orzo-soup"
+      ],
+      "titles": [
+        "Hall Chicken Noodle Soup",
+        "Lemon Chicken Orzo Soup"
+      ],
+      "trustRisk": "medium"
+    },
+    {
+      "collection": "explore_curated",
+      "hash": "3556859ee1f4afb437d2bbc823d8ca78",
+      "count": 2,
+      "slugs": [
+        "creamy-chicken-penne-alfredo",
+        "caprese-chicken-bake"
+      ],
+      "titles": [
+        "Creamy Chicken Penne Alfredo",
+        "Caprese Chicken Bake"
+      ],
+      "trustRisk": "medium"
+    },
+    {
+      "collection": "explore_curated",
+      "hash": "b0fed32ec2fa07b19adbf148ddfc5ff8",
+      "count": 2,
+      "slugs": [
+        "chipotle-lime-chicken-tacos",
+        "veggie-egg-burritos"
+      ],
+      "titles": [
+        "Chipotle Lime Chicken Tacos",
+        "Veggie Egg Burritos"
+      ],
+      "trustRisk": "medium"
+    },
+    {
+      "collection": "explore_curated",
+      "hash": "b0d6a0efa00725474c19264c88a19071",
+      "count": 2,
+      "slugs": [
+        "baked-falafel-hall-bowls",
+        "bacon-hash-burritos"
+      ],
+      "titles": [
+        "Baked Falafel Hall Bowls",
+        "Bacon Hash Burritos"
+      ],
+      "trustRisk": "medium"
+    },
+    {
+      "collection": "explore_curated",
+      "hash": "12cb71f0a3aaf23e040083a81a06bdbd",
+      "count": 2,
+      "slugs": [
+        "breakfast-sandwich-trays",
+        "sausage-egg-cheese-sandwiches"
+      ],
+      "titles": [
+        "Breakfast Sandwich Trays",
+        "Sausage Egg & Cheese Sandwiches"
+      ],
+      "trustRisk": "medium"
+    },
+    {
+      "collection": "breakfast",
+      "hash": "8d65d578203df540b240d2e901466270",
+      "count": 2,
+      "slugs": [
+        "chorizo-breakfast-hash",
+        "sheet-pan-breakfast-hash"
+      ],
+      "titles": [
+        "Chorizo Breakfast Hash",
+        "Sheet Pan Breakfast Hash"
+      ],
+      "trustRisk": "medium"
+    },
+    {
+      "collection": "explore_curated",
+      "hash": "8d65d578203df540b240d2e901466270",
+      "count": 2,
+      "slugs": [
+        "chorizo-breakfast-hash",
+        "sheet-pan-breakfast-hash"
+      ],
+      "titles": [
+        "Chorizo Breakfast Hash",
+        "Sheet Pan Breakfast Hash"
+      ],
+      "trustRisk": "medium"
+    }
+  ],
+  "p2CrossCategoryDuplicates": {
+    "accurate": [
+      {
+        "hash": "41a064ec2c601f7fed2247a66d7dc703",
+        "count": 10,
+        "collections": [
+          "golden_100",
+          "hall_expansion",
+          "explore_curated"
+        ],
+        "slugs": [
+          "golden_100:pulled-pork",
+          "golden_100:carolina-mustard-pork",
+          "hall_expansion:smoked-sausage-platter",
+          "hall_expansion:molasses-bourbon-pork-ribs",
+          "hall_expansion:applewood-pork-shoulder-steaks",
+          "explore_curated:smoked-sausage-platter",
+          "explore_curated:molasses-bourbon-pork-ribs",
+          "explore_curated:applewood-pork-shoulder-steaks",
+          "explore_curated:carolina-mustard-pork",
+          "explore_curated:pulled-pork"
+        ],
+        "accurate": true
+      },
+      {
+        "hash": "a5201b6f0cc7af8eccd6ac9bcd113163",
+        "count": 10,
+        "collections": [
+          "golden_100",
+          "hall_expansion",
+          "explore_curated"
+        ],
+        "slugs": [
+          "golden_100:meatball-hoagies",
+          "hall_expansion:sheet-pan-meatball-marinara",
+          "explore_curated:breakfast-crunchwraps",
+          "explore_curated:breakfast-nachos-supreme",
+          "explore_curated:breakfast-poutine",
+          "explore_curated:breakfast-sliders",
+          "explore_curated:fire-captain-omelette-bar",
+          "explore_curated:firehall-breakfast-pizza",
+          "explore_curated:sheet-pan-breakfast-sandwiches",
+          "explore_curated:meatball-hoagies"
+        ],
+        "accurate": true
+      },
+      {
+        "hash": "d5d67808ee8eafbefbc88990606ec29b",
+        "count": 10,
+        "collections": [
+          "golden_100",
+          "hall_expansion",
+          "explore_curated"
+        ],
+        "slugs": [
+          "golden_100:bbq-brisket-burnt-ends",
+          "hall_expansion:pork-belly-burnt-ends",
+          "hall_expansion:smoked-tri-tip",
+          "hall_expansion:smoked-corned-beef",
+          "hall_expansion:pepper-smoked-brisket-flat",
+          "explore_curated:pork-belly-burnt-ends",
+          "explore_curated:smoked-tri-tip",
+          "explore_curated:bbq-brisket-burnt-ends",
+          "explore_curated:smoked-corned-beef",
+          "explore_curated:pepper-smoked-brisket-flat"
+        ],
+        "accurate": true
+      },
+      {
+        "hash": "c37e567cf9b7db1194a94e1798cc37ba",
+        "count": 10,
+        "collections": [
+          "golden_100",
+          "hall_expansion",
+          "explore_curated"
+        ],
+        "slugs": [
+          "golden_100:greek-chicken-bowls",
+          "hall_expansion:rice-bowl-bar-night",
+          "hall_expansion:mediterranean-feast-night",
+          "hall_expansion:warm-spinach-chicken-salad",
+          "hall_expansion:mediterranean-chicken-farro-bowls",
+          "explore_curated:rice-bowl-bar-night",
+          "explore_curated:mediterranean-feast-night",
+          "explore_curated:warm-spinach-chicken-salad",
+          "explore_curated:mediterranean-chicken-farro-bowls",
+          "explore_curated:greek-chicken-bowls"
+        ],
+        "accurate": true
+      },
+      {
+        "hash": "a87266b9a60ea28c36380688b9c0b7ab",
+        "count": 10,
+        "collections": [
+          "hall_expansion",
+          "explore_curated"
+        ],
+        "slugs": [
+          "hall_expansion:hall-sloppy-joe-feed",
+          "explore_curated:philly-cheesesteak-sliders",
+          "explore_curated:bbq-meatball-skewers",
+          "explore_curated:build-your-own-pho-bar",
+          "explore_curated:mesquite-chuck-roast",
+          "explore_curated:mushroom-swiss-steak-pan",
+          "explore_curated:pepper-steak-onions",
+          "explore_curated:rigatoni-meat-sauce-batch",
+          "explore_curated:sheet-pan-meatball-marinara",
+          "explore_curated:hall-sloppy-joe-feed"
+        ],
+        "accurate": true
+      },
+      {
+        "hash": "2f4ae250e9954acbd94a9e8f81d04490",
+        "count": 9,
+        "collections": [
+          "golden_100",
+          "breakfast",
+          "explore_curated"
+        ],
+        "slugs": [
+          "golden_100:mac-and-cheese-bake",
+          "breakfast:apple-cinnamon-baked-oatmeal",
+          "breakfast:big-pot-savory-oats",
+          "explore_curated:smoked-mac-and-cheese",
+          "explore_curated:pretzel-bite-platter",
+          "explore_curated:pasta-bar-night",
+          "explore_curated:apple-cinnamon-baked-oatmeal",
+          "explore_curated:big-pot-savory-oats",
+          "explore_curated:mac-and-cheese-bake"
+        ],
+        "accurate": true
+      },
+      {
+        "hash": "45e160454d84d4dfaa1b0bb7aba7a220",
+        "count": 9,
+        "collections": [
+          "golden_100",
+          "breakfast",
+          "explore_curated"
+        ],
+        "slugs": [
+          "golden_100:sausage-egg-bake",
+          "golden_100:bacon-egg-hash",
+          "breakfast:bacon-egg-hash-skillet",
+          "breakfast:bbq-breakfast-hash",
+          "breakfast:steakhouse-hash-skillet",
+          "explore_curated:bbq-breakfast-hash",
+          "explore_curated:sausage-egg-bake",
+          "explore_curated:bacon-egg-hash-skillet",
+          "explore_curated:steakhouse-hash-skillet"
+        ],
+        "accurate": true
+      },
+      {
+        "hash": "e3c651f0fad3df99911f94c982632af4",
+        "count": 9,
+        "collections": [
+          "performance_meals",
+          "hall_expansion",
+          "breakfast",
+          "explore_curated"
+        ],
+        "slugs": [
+          "performance_meals:honey-garlic-chicken-rice-bowls",
+          "performance_meals:veggie-egg-casserole-tray",
+          "hall_expansion:ginger-soy-chicken-rice-bowls",
+          "breakfast:denver-breakfast-casserole",
+          "breakfast:ham-cheddar-egg-bake",
+          "explore_curated:ginger-soy-chicken-rice-bowls",
+          "explore_curated:honey-garlic-chicken-rice-bowls",
+          "explore_curated:denver-breakfast-casserole",
+          "explore_curated:ham-cheddar-egg-bake"
+        ],
+        "accurate": true
+      },
+      {
+        "hash": "4aa66c9a69144862ddf17dc14cd86dd0",
+        "count": 8,
+        "collections": [
+          "performance_meals",
+          "hall_expansion",
+          "explore_curated"
+        ],
+        "slugs": [
+          "performance_meals:greek-lemon-chicken-potatoes",
+          "hall_expansion:pellet-smoked-chicken-quarters",
+          "hall_expansion:spatchcock-lemon-roast-chicken",
+          "hall_expansion:paprika-roasted-chicken-quarters",
+          "explore_curated:pellet-smoked-chicken-quarters",
+          "explore_curated:spatchcock-lemon-roast-chicken",
+          "explore_curated:paprika-roasted-chicken-quarters",
+          "explore_curated:greek-lemon-chicken-potatoes"
+        ],
+        "accurate": true
+      },
+      {
+        "hash": "adbe49a2b0c1936ba4dc3b18cdfbcc28",
+        "count": 7,
+        "collections": [
+          "golden_100",
+          "hall_expansion",
+          "explore_curated"
+        ],
+        "slugs": [
+          "golden_100:meatloaf-mashed",
+          "hall_expansion:smoked-meatloaf",
+          "hall_expansion:mesquite-chuck-roast",
+          "hall_expansion:dutch-oven-pot-roast",
+          "explore_curated:smoked-meatloaf",
+          "explore_curated:dutch-oven-pot-roast",
+          "explore_curated:meatloaf-mashed"
+        ],
+        "accurate": true
+      },
+      {
+        "hash": "5b2fe9fd56e9feea30beb6920e0c8bca",
+        "count": 7,
+        "collections": [
+          "golden_100",
+          "hall_expansion",
+          "breakfast",
+          "explore_curated"
+        ],
+        "slugs": [
+          "golden_100:beef-stroganoff",
+          "hall_expansion:mushroom-swiss-steak-pan",
+          "breakfast:cowboy-breakfast-skillet",
+          "breakfast:red-lead-skillet",
+          "explore_curated:cowboy-breakfast-skillet",
+          "explore_curated:red-lead-skillet",
+          "explore_curated:beef-stroganoff"
+        ],
+        "accurate": true
+      },
+      {
+        "hash": "37edb1fb04743d5574098e6756b8e082",
+        "count": 7,
+        "collections": [
+          "golden_100",
+          "breakfast",
+          "explore_curated"
+        ],
+        "slugs": [
+          "golden_100:pancake-short-stack",
+          "breakfast:buttermilk-pancakes",
+          "breakfast:maple-sausage-pinwheels",
+          "breakfast:protein-pancake-tray",
+          "explore_curated:buttermilk-pancakes",
+          "explore_curated:maple-sausage-pinwheels",
+          "explore_curated:protein-pancake-tray"
+        ],
+        "accurate": true
+      },
+      {
+        "hash": "67ea7cf0b01653d3d8132fa4ab1412ff",
+        "count": 6,
+        "collections": [
+          "golden_100",
+          "breakfast",
+          "explore_curated"
+        ],
+        "slugs": [
+          "golden_100:bbq-chicken-sliders",
+          "breakfast:cast-iron-breakfast-skillet",
+          "breakfast:ham-pepper-skillet",
+          "explore_curated:cast-iron-breakfast-skillet",
+          "explore_curated:bbq-chicken-sliders",
+          "explore_curated:ham-pepper-skillet"
+        ],
+        "accurate": true
+      },
+      {
+        "hash": "54b37a3e11daed991a415ed8b26f7be1",
+        "count": 6,
+        "collections": [
+          "golden_100",
+          "breakfast",
+          "explore_curated"
+        ],
+        "slugs": [
+          "golden_100:beef-barley-soup",
+          "breakfast:chorizo-breakfast-burritos",
+          "breakfast:turkey-sausage-burritos",
+          "explore_curated:chorizo-breakfast-burritos",
+          "explore_curated:turkey-sausage-burritos",
+          "explore_curated:beef-barley-soup"
+        ],
+        "accurate": true
+      },
+      {
+        "hash": "0516db35e9217d4a056edd415be2b277",
+        "count": 6,
+        "collections": [
+          "golden_100",
+          "breakfast",
+          "explore_curated"
+        ],
+        "slugs": [
+          "golden_100:chicken-tikka-masala",
+          "breakfast:southwest-egg-bake",
+          "breakfast:turkey-sausage-egg-bake",
+          "explore_curated:southwest-egg-bake",
+          "explore_curated:chicken-tikka-masala",
+          "explore_curated:turkey-sausage-egg-bake"
+        ],
+        "accurate": true
+      },
+      {
+        "hash": "d5c3f566bea3b5a27f1b44c542ecdd6d",
+        "count": 6,
+        "collections": [
+          "golden_100",
+          "hall_expansion",
+          "explore_curated"
+        ],
+        "slugs": [
+          "golden_100:one-pot-chicken-rice",
+          "hall_expansion:green-chile-chicken-stew",
+          "hall_expansion:cheesy-chicken-broccoli-rice",
+          "explore_curated:green-chile-chicken-stew",
+          "explore_curated:cheesy-chicken-broccoli-rice",
+          "explore_curated:one-pot-chicken-rice"
+        ],
+        "accurate": true
+      },
+      {
+        "hash": "cfa7a57ce088e56c42296771b7c00fc7",
+        "count": 6,
+        "collections": [
+          "performance_meals",
+          "hall_expansion",
+          "explore_curated"
+        ],
+        "slugs": [
+          "performance_meals:lemon-garlic-chicken-tray",
+          "performance_meals:honey-lime-chicken-tray",
+          "hall_expansion:honey-mustard-oven-chicken-thighs",
+          "explore_curated:honey-mustard-oven-chicken-thighs",
+          "explore_curated:lemon-garlic-chicken-tray",
+          "explore_curated:honey-lime-chicken-tray"
+        ],
+        "accurate": true
+      },
+      {
+        "hash": "5db7c83415e6465755cff21413d1b9d3",
+        "count": 6,
+        "collections": [
+          "performance_meals",
+          "hall_expansion",
+          "explore_curated"
+        ],
+        "slugs": [
+          "performance_meals:sheet-pan-chicken-fajitas-lite",
+          "hall_expansion:fajita-bar-night",
+          "hall_expansion:cast-iron-chicken-fajitas",
+          "explore_curated:fajita-bar-night",
+          "explore_curated:sheet-pan-chicken-fajitas-lite",
+          "explore_curated:cast-iron-chicken-fajitas"
+        ],
+        "accurate": true
+      },
+      {
+        "hash": "9794b41c570aeb9dcb72d4b8f3e8ee8d",
+        "count": 6,
+        "collections": [
+          "performance_meals",
+          "hall_expansion",
+          "breakfast",
+          "explore_curated"
+        ],
+        "slugs": [
+          "performance_meals:cajun-chicken-rice-bowl",
+          "hall_expansion:cajun-chicken-rice-skillet",
+          "breakfast:high-protein-parfaits",
+          "explore_curated:cajun-chicken-rice-skillet",
+          "explore_curated:cajun-chicken-rice-bowl",
+          "explore_curated:high-protein-parfaits"
+        ],
+        "accurate": true
+      },
+      {
+        "hash": "c7295f81092bde7be1e0db15ccee71d8",
+        "count": 5,
+        "collections": [
+          "golden_100",
+          "hall_expansion",
+          "explore_curated"
+        ],
+        "slugs": [
+          "golden_100:loaded-nacho-skillet",
+          "golden_100:game-day-nachos",
+          "hall_expansion:loaded-nacho-bar-night",
+          "explore_curated:loaded-nacho-skillet",
+          "explore_curated:game-day-nachos"
+        ],
+        "accurate": true
+      },
+      {
+        "hash": "ac86499f487a7c18326372d5fb49237e",
+        "count": 5,
+        "collections": [
+          "golden_100",
+          "performance_meals",
+          "hall_expansion",
+          "explore_curated"
+        ],
+        "slugs": [
+          "golden_100:baked-ziti",
+          "performance_meals:cottage-cheese-protein-pasta",
+          "hall_expansion:rigatoni-meat-sauce-batch",
+          "explore_curated:cottage-cheese-protein-pasta",
+          "explore_curated:baked-ziti"
+        ],
+        "accurate": true
+      },
+      {
+        "hash": "2161edf4d27935bc1b8096622b09d7e1",
+        "count": 5,
+        "collections": [
+          "golden_100",
+          "explore_curated"
+        ],
+        "slugs": [
+          "golden_100:turkey-burgers",
+          "explore_curated:smoked-turkey-breast",
+          "explore_curated:hickory-turkey-legs",
+          "explore_curated:hall-breakfast-wraps",
+          "explore_curated:turkey-burgers"
+        ],
+        "accurate": true
+      },
+      {
+        "hash": "1617b1017c2dd116e80ebdd337f72161",
+        "count": 5,
+        "collections": [
+          "golden_100",
+          "explore_curated"
+        ],
+        "slugs": [
+          "golden_100:chili-mac",
+          "golden_100:big-chili",
+          "explore_curated:chili-garlic-bread",
+          "explore_curated:chili-mac",
+          "explore_curated:big-chili"
+        ],
+        "accurate": true
+      },
+      {
+        "hash": "bad24e39a44028a803f761529c8ba808",
+        "count": 5,
+        "collections": [
+          "golden_100",
+          "breakfast",
+          "explore_curated"
+        ],
+        "slugs": [
+          "golden_100:french-toast-casserole",
+          "breakfast:crew-french-toast-bake",
+          "breakfast:overnight-french-toast-bake",
+          "explore_curated:crew-french-toast-bake",
+          "explore_curated:overnight-french-toast-bake"
+        ],
+        "accurate": true
+      },
+      {
+        "hash": "dd590ef976a9cc32180d39ab2f8ee048",
+        "count": 5,
+        "collections": [
+          "golden_100",
+          "performance_meals",
+          "breakfast",
+          "explore_curated"
+        ],
+        "slugs": [
+          "golden_100:chorizo-breakfast-tacos",
+          "performance_meals:chicken-enchilada-skillet-light",
+          "breakfast:quick-egg-tacos",
+          "explore_curated:chicken-enchilada-skillet-light",
+          "explore_curated:quick-egg-tacos"
+        ],
+        "accurate": true
+      },
+      {
+        "hash": "808f25656f7380c72131958d8f63a545",
+        "count": 5,
+        "collections": [
+          "golden_100",
+          "breakfast",
+          "explore_curated"
+        ],
+        "slugs": [
+          "golden_100:biscuits-gravy",
+          "breakfast:hall-sausage-biscuits-gravy",
+          "breakfast:monte-cristo-sandwiches",
+          "explore_curated:monte-cristo-sandwiches",
+          "explore_curated:hall-sausage-biscuits-gravy"
+        ],
+        "accurate": true
+      },
+      {
+        "hash": "12cb71f0a3aaf23e040083a81a06bdbd",
+        "count": 5,
+        "collections": [
+          "breakfast",
+          "explore_curated"
+        ],
+        "slugs": [
+          "breakfast:breakfast-sandwich-trays",
+          "breakfast:sausage-egg-cheese-sandwiches",
+          "breakfast:sheet-pan-breakfast-sandwiches",
+          "explore_curated:breakfast-sandwich-trays",
+          "explore_curated:sausage-egg-cheese-sandwiches"
+        ],
+        "accurate": true
+      },
+      {
+        "hash": "aab7f92f6324522bb8f19db7b0b36053",
+        "count": 4,
+        "collections": [
+          "golden_100",
+          "explore_curated"
+        ],
+        "slugs": [
+          "golden_100:chicken-parm",
+          "golden_100:crispy-chicken-cutlets",
+          "explore_curated:crispy-chicken-cutlets",
+          "explore_curated:chicken-parm"
+        ],
+        "accurate": true
+      },
+      {
+        "hash": "b0841d80d849cdfeb092028dd88699b6",
+        "count": 4,
+        "collections": [
+          "golden_100",
+          "explore_curated"
+        ],
+        "slugs": [
+          "golden_100:steak-tacos",
+          "explore_curated:cheesy-beef-nacho-bake",
+          "explore_curated:loaded-nacho-bar-night",
+          "explore_curated:enchilada-beef-skillet"
+        ],
+        "accurate": true
+      },
+      {
+        "hash": "f315832bfdbde5b46e1eeede177b4a7f",
+        "count": 4,
+        "collections": [
+          "golden_100",
+          "explore_curated"
+        ],
+        "slugs": [
+          "golden_100:beef-dip",
+          "golden_100:steak-sandwiches",
+          "explore_curated:beef-dip",
+          "explore_curated:steak-sandwiches"
+        ],
+        "accurate": true
+      },
+      {
+        "hash": "1e60fee6f67e1a60a195164d25b7b113",
+        "count": 4,
+        "collections": [
+          "golden_100",
+          "hall_expansion",
+          "explore_curated"
+        ],
+        "slugs": [
+          "golden_100:sausage-peppers-onions",
+          "hall_expansion:kielbasa-cabbage-potato-skillet",
+          "explore_curated:kielbasa-cabbage-potato-skillet",
+          "explore_curated:sausage-peppers-onions"
+        ],
+        "accurate": true
+      },
+      {
+        "hash": "09d723cce8275020882fa5056f8eb800",
+        "count": 4,
+        "collections": [
+          "golden_100",
+          "explore_curated"
+        ],
+        "slugs": [
+          "golden_100:turkey-chili",
+          "golden_100:jambalaya",
+          "explore_curated:jambalaya",
+          "explore_curated:turkey-chili"
+        ],
+        "accurate": true
+      },
+      {
+        "hash": "ff13b0cf6f93dfe195b312e3d4783862",
+        "count": 4,
+        "collections": [
+          "golden_100",
+          "hall_expansion",
+          "explore_curated"
+        ],
+        "slugs": [
+          "golden_100:chicken-souvlaki",
+          "hall_expansion:shawarma-bar-night",
+          "explore_curated:shawarma-bar-night",
+          "explore_curated:chicken-souvlaki"
+        ],
+        "accurate": true
+      },
+      {
+        "hash": "668d840bfee5792b48e2d8839c434bed",
+        "count": 4,
+        "collections": [
+          "golden_100",
+          "breakfast",
+          "explore_curated"
+        ],
+        "slugs": [
+          "golden_100:breakfast-burrito-bar",
+          "breakfast:breakfast-crunchwraps",
+          "breakfast:hall-breakfast-burritos",
+          "explore_curated:hall-breakfast-burritos"
+        ],
+        "accurate": true
+      },
+      {
+        "hash": "f812554eee0619bab13477b648d029f1",
+        "count": 4,
+        "collections": [
+          "golden_100",
+          "hall_expansion",
+          "explore_curated"
+        ],
+        "slugs": [
+          "golden_100:buffalo-chicken-dip",
+          "hall_expansion:chicken-wing-bar-night",
+          "explore_curated:chicken-wing-bar-night",
+          "explore_curated:buffalo-chicken-dip"
+        ],
+        "accurate": true
+      },
+      {
+        "hash": "42013e58a94232ccf317dde5b2558ea4",
+        "count": 4,
+        "collections": [
+          "performance_meals",
+          "hall_expansion",
+          "explore_curated"
+        ],
+        "slugs": [
+          "performance_meals:hummus-chicken-platter",
+          "hall_expansion:station-cobb-salad",
+          "explore_curated:station-cobb-salad",
+          "explore_curated:hummus-chicken-platter"
+        ],
+        "accurate": true
+      },
+      {
+        "hash": "5cd1d4321ed7da43a6d066e1e95ffa4e",
+        "count": 4,
+        "collections": [
+          "performance_meals",
+          "hall_expansion",
+          "explore_curated"
+        ],
+        "slugs": [
+          "performance_meals:lemon-chicken-orzo-soup",
+          "hall_expansion:hall-chicken-noodle-soup",
+          "explore_curated:hall-chicken-noodle-soup",
+          "explore_curated:lemon-chicken-orzo-soup"
+        ],
+        "accurate": true
+      },
+      {
+        "hash": "3556859ee1f4afb437d2bbc823d8ca78",
+        "count": 4,
+        "collections": [
+          "performance_meals",
+          "hall_expansion",
+          "explore_curated"
+        ],
+        "slugs": [
+          "performance_meals:caprese-chicken-bake",
+          "hall_expansion:creamy-chicken-penne-alfredo",
+          "explore_curated:creamy-chicken-penne-alfredo",
+          "explore_curated:caprese-chicken-bake"
+        ],
+        "accurate": true
+      },
+      {
+        "hash": "b0fed32ec2fa07b19adbf148ddfc5ff8",
+        "count": 4,
+        "collections": [
+          "performance_meals",
+          "breakfast",
+          "explore_curated"
+        ],
+        "slugs": [
+          "performance_meals:chipotle-lime-chicken-tacos",
+          "breakfast:veggie-egg-burritos",
+          "explore_curated:chipotle-lime-chicken-tacos",
+          "explore_curated:veggie-egg-burritos"
+        ],
+        "accurate": true
+      },
+      {
+        "hash": "b0d6a0efa00725474c19264c88a19071",
+        "count": 4,
+        "collections": [
+          "performance_meals",
+          "breakfast",
+          "explore_curated"
+        ],
+        "slugs": [
+          "performance_meals:baked-falafel-hall-bowls",
+          "breakfast:bacon-hash-burritos",
+          "explore_curated:baked-falafel-hall-bowls",
+          "explore_curated:bacon-hash-burritos"
+        ],
+        "accurate": true
+      }
+    ],
+    "suspect": [],
+    "accurateGroupCount": 139,
+    "suspectGroupCount": 0,
+    "accurateRecipeCount": 456,
+    "suspectRecipeCount": 0
+  },
+  "notes": [
+    "P0 includes path/format heuristics plus semantic donor mismatch (interim copy images).",
+    "P1 high-risk = same hero reused for clearly different meal titles within one category.",
+    "P2 accurate = same hero across categories where no P0 flagged (e.g. Golden 100 ↔ Explore same dish).",
+    "Do not regen solely for uniqueness when P0 is clear and image matches the meal."
+  ]
+}

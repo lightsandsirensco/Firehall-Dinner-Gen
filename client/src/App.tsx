@@ -40,6 +40,7 @@ const BreakfastRecipePage = lazy(() => import("@/pages/breakfast-recipe-page"));
 const PerformanceFuelRedirect = lazy(() => import("@/pages/performance-fuel-redirect"));
 const SeoLandingPage = lazy(() => import("@/pages/seo-landing-page"));
 const FirefighterRedLeadRecipePage = lazy(() => import("@/pages/firefighter-red-lead-recipe-page"));
+const TopRatedRecipesPage = lazy(() => import("@/pages/top-rated-recipes-page"));
 const NotFound = lazy(() => import("@/pages/not-found"));
 
 function AppRoutes() {
@@ -59,6 +60,7 @@ function AppRoutes() {
       <Route path="/classics-wheel" component={ClassicsWheelPage} />
       <Route path="/package/:slug" component={CuratedPackagePage} />
       <Route path="/recipes" component={RecipesIndexPage} />
+      <Route path="/top-rated-recipes" component={TopRatedRecipesPage} />
       <Route path="/recipes/:slug" component={CatalogRecipePage} />
       <Route path="/smoothies" component={SmoothiesIndexPage} />
       <Route path="/smoothies/:slug" component={SmoothieRecipePage} />

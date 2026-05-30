@@ -1,12 +1,13 @@
 import { useCallback, useRef, useState } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { ThumbsDown, ThumbsUp } from "lucide-react";
 import { cn } from "@/lib/utils";
 import {
   castRecipeCrewRatingVote,
   crewRatingQueryKey,
   fetchRecipeCrewRating,
+  topRatedRecipesQueryKey,
 } from "@/lib/recipe-crew-ratings-api";
+import { trackRecipeDownvote, trackRecipeUpvote } from "@/lib/analytics";
 import type { CrewRatingComplaintCategory } from "@shared/recipe-crew-ratings/types";
 import { RecipeCrewRatingBadges } from "./recipe-crew-rating-badges";
 import { NegativeFeedbackSheet } from "./negative-feedback-sheet";
@@ -34,6 +35,7 @@ export function RecipeCrewRatingPanel({ slug, category, className }: RecipeCrewR
     onSuccess: (view) => {
       queryClient.setQueryData(crewRatingQueryKey(slug), view);
       queryClient.invalidateQueries({ queryKey: ["recipe-crew-rating-collections"] });
+      queryClient.invalidateQueries({ queryKey: topRatedRecipesQueryKey });
     },
   });
 
@@ -43,13 +45,18 @@ export function RecipeCrewRatingPanel({ slug, category, className }: RecipeCrewR
       votingRef.current = true;
       try {
         await voteMutation.mutateAsync({ vote, complaint });
+        if (vote === "up") {
+          trackRecipeUpvote(slug);
+        } else {
+          trackRecipeDownvote(slug);
+        }
       } finally {
         window.setTimeout(() => {
           votingRef.current = false;
         }, 800);
       }
     },
-    [data?.userVote, voteMutation],
+    [data?.userVote, slug, voteMutation],
   );
 
   const handleUp = () => {
@@ -89,7 +96,6 @@ export function RecipeCrewRatingPanel({ slug, category, className }: RecipeCrewR
       </div>
 
       <div>
-        <p className="text-sm font-medium text-foreground mb-3">Would your crew cook this again?</p>
         <div className="flex flex-col sm:flex-row gap-2.5">
           <button
             type="button"
@@ -104,7 +110,7 @@ export function RecipeCrewRatingPanel({ slug, category, className }: RecipeCrewR
             )}
             data-testid="crew-rating-up"
           >
-            <ThumbsUp className="w-4 h-4" aria-hidden />
+            <span aria-hidden>👍</span>
             Would Cook Again
           </button>
           <button
@@ -120,7 +126,7 @@ export function RecipeCrewRatingPanel({ slug, category, className }: RecipeCrewR
             )}
             data-testid="crew-rating-down"
           >
-            <ThumbsDown className="w-4 h-4" aria-hidden />
+            <span aria-hidden>👎</span>
             Not For Our Crew
           </button>
         </div>

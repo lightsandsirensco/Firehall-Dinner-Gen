@@ -336,3 +336,52 @@ export async function trackLeadMagnetDownloaded(
     "klaviyo",
   );
 }
+
+export async function trackHomepageSubscriber(
+  email: string,
+  properties: {
+    source: string;
+  },
+): Promise<void> {
+  const result = await klaviyoFetch(
+    "POST",
+    `${KLAVIYO_BASE}/events/`,
+    {
+      data: {
+        type: "event",
+        attributes: {
+          properties: {
+            source: properties.source,
+          },
+          metric: {
+            data: {
+              type: "metric",
+              attributes: {
+                name: "Homepage Subscriber",
+              },
+            },
+          },
+          profile: {
+            data: {
+              type: "profile",
+              attributes: {
+                email,
+              },
+            },
+          },
+        },
+      },
+    },
+    `trackEvent(Homepage Subscriber, ${email})`,
+  );
+
+  if (!result.ok) {
+    const detail = result.data?.errors?.[0]?.detail || result.raw.substring(0, 200);
+    throw new Error(`Track homepage subscriber event failed (${result.status}): ${detail}`);
+  }
+
+  log(
+    `[klaviyo] event=HomepageSubscriber email=${maskEmail(email)} source="${clip(properties.source, 40)}"`,
+    "klaviyo",
+  );
+}

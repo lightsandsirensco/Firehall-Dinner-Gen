@@ -48,6 +48,8 @@ import {
   formatTemperaturesInText,
   formatClientIngredientQty,
 } from "@shared/measurements";
+import { RecipeCrewRatingPanel } from "@/components/recipe-crew-rating/recipe-crew-rating-panel";
+import { exploreRecipeRatingSlug } from "@shared/recipe-crew-ratings/slugs";
 
 const DEFAULT_CREW_SIZE = 6;
 
@@ -555,6 +557,8 @@ function RecipeDetailView({
             </CardContent>
           </Card>
         )}
+
+        <RecipeCrewRatingPanel slug={exploreRecipeRatingSlug(recipe.id)} className="border-border/50" />
 
         <div className="section-divider" />
 

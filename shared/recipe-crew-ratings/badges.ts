@@ -1,3 +1,4 @@
+import { HALL_APPROVED_MIN_APPROVAL, HALL_APPROVED_MIN_VOTES } from "./constants.js";
 import type { RecipeCrewRatingBadgeId } from "./types.js";
 
 export interface BadgeEvaluationInput {
@@ -27,6 +28,10 @@ export function evaluateRecipeBadges(
   const badges: RecipeCrewRatingBadgeId[] = [];
   const score = input.approvalScore;
   if (score == null || input.totalVotes <= 0) return badges;
+
+  if (input.totalVotes >= HALL_APPROVED_MIN_VOTES && score >= HALL_APPROVED_MIN_APPROVAL) {
+    badges.push("hall_approved");
+  }
 
   if (input.totalVotes >= 250 && score >= 0.92) {
     badges.push("hall_favourite");

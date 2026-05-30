@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
 import { Link } from "wouter";
 import { Sunrise } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
@@ -11,10 +11,12 @@ import { RecipeNutritionPanel } from "@/components/recipe-nutrition-panel";
 import { usePageSeo } from "@/lib/seo/use-page-seo";
 import { getSiteOrigin } from "@/lib/seo/site-origin";
 import { buildFirefighterRedLeadRecipeSeo } from "@shared/seo/metadata";
+import { RED_LEAD_RECIPE_RATING_SLUG } from "@shared/recipe-crew-ratings/slugs";
 import {
   FIREFIGHTER_RED_LEAD_BREAKFAST_LINKS,
   FIREFIGHTER_RED_LEAD_CLASSIC_LINKS,
   FIREFIGHTER_RED_LEAD_FAQS,
+  FIREFIGHTER_RED_LEAD_FIREHALL_TIPS,
   FIREFIGHTER_RED_LEAD_RECIPE,
   FIREFIGHTER_RED_LEAD_SERVING_SUGGESTIONS,
 } from "@shared/seo/firefighter-red-lead-recipe-data";
@@ -36,7 +38,13 @@ import {
   formatTemperaturesInText,
   type MeasurementSystem,
 } from "@shared/measurements";
-import { RedLeadPdfCapture } from "@/components/red-lead/red-lead-pdf-capture";
+import {
+  RedLeadCaptureProvider,
+  RedLeadMobileStickyCta,
+  RedLeadPdfCapture,
+} from "@/components/red-lead/red-lead-pdf-capture";
+import { trackRedLeadPageView } from "@/lib/analytics";
+import { RecipeCrewRatingPanel } from "@/components/recipe-crew-rating/recipe-crew-rating-panel";
 
 function formatIngredient(
   ing: (typeof FIREFIGHTER_RED_LEAD_RECIPE.ingredients)[number],
@@ -86,8 +94,13 @@ export default function FirefighterRedLeadRecipePage() {
 
   usePageSeo(seoConfig, jsonLd);
 
+  useEffect(() => {
+    trackRedLeadPageView();
+  }, []);
+
   return (
-    <div className={cn(app.page, "flex flex-col pb-safe-nav min-h-screen min-h-[100dvh]")}>
+    <RedLeadCaptureProvider>
+    <div className={cn(app.page, "flex flex-col pb-safe-sticky lg:pb-safe-nav min-h-screen min-h-[100dvh]")}>
       <SiteHeader activePage="breakfast" />
 
       <main className={cn(app.main, "py-8 sm:py-12 flex-1")} id="main-content">
@@ -101,7 +114,7 @@ export default function FirefighterRedLeadRecipePage() {
 
         <div className="mt-6 flex items-center gap-2 text-amber-400/90">
           <Sunrise className="w-4 h-4" aria-hidden />
-          <span className="text-[11px] uppercase tracking-widest">Firehall Breakfast Tradition</span>
+          <span className="text-[11px] uppercase tracking-widest">Station breakfast tradition</span>
         </div>
 
         <p className={cn(app.eyebrowMuted, "mt-4")}>{BRAND_TAGLINE}</p>
@@ -159,7 +172,17 @@ export default function FirefighterRedLeadRecipePage() {
           className="mt-6"
         />
 
-        <div className="mt-12 lg:grid lg:grid-cols-[1fr_320px] lg:gap-10">
+        <RecipeCrewRatingPanel
+          slug={RED_LEAD_RECIPE_RATING_SLUG}
+          category="breakfast_brunch"
+          className="mt-8"
+        />
+
+        <div className="mt-8 lg:grid lg:grid-cols-[1fr_320px] lg:gap-10 lg:items-start">
+          <div className="lg:hidden">
+            <RedLeadPdfCapture className="scroll-section" />
+          </div>
+
           <article className="min-w-0">
             {recipe.tradition.map((section) => (
               <section key={section.heading} className="mt-10 first:mt-0">
@@ -177,11 +200,11 @@ export default function FirefighterRedLeadRecipePage() {
                 id="red-lead-ingredients-heading"
                 className="font-heading text-xl sm:text-2xl text-foreground"
               >
-                Ingredients (tomato Red Lead sauce)
+                Ingredients — Red Lead sauce only
               </h2>
               <p className="mt-3 text-sm text-muted-foreground leading-relaxed max-w-3xl">
-                Scaled for a hall table of {recipe.crewSize}. Read through once before you start the rest
-                of the breakfast — timing matters when the crew is actually sitting down.
+                Scaled for a table of {recipe.crewSize}. Read it through once, then get bacon, eggs, sausage,
+                toast, and potatoes going before you start the sauce.
               </p>
               <ul className="mt-5 space-y-2 text-sm sm:text-base">
                 {recipe.ingredients.map((ing) => (
@@ -197,7 +220,7 @@ export default function FirefighterRedLeadRecipePage() {
 
             <section className="mt-12" aria-labelledby="red-lead-steps-heading">
               <h2 id="red-lead-steps-heading" className="font-heading text-xl sm:text-2xl text-foreground">
-                Step-by-step recipe (beginner-friendly)
+                How to make the sauce
               </h2>
               <ol className="mt-6 space-y-8">
                 {recipe.steps.map((step) => (
@@ -228,16 +251,33 @@ export default function FirefighterRedLeadRecipePage() {
               </ol>
             </section>
 
-            <RedLeadPdfCapture className="mt-12" />
+            <section className="mt-12" aria-labelledby="red-lead-tips-heading">
+              <h2 id="red-lead-tips-heading" className="font-heading text-xl sm:text-2xl text-foreground">
+                Firehall tips
+              </h2>
+              <dl className="mt-6 grid gap-4 sm:grid-cols-2">
+                {FIREFIGHTER_RED_LEAD_FIREHALL_TIPS.map((item) => (
+                  <div
+                    key={item.title}
+                    className="rounded-xl border border-border/25 bg-card/15 p-4"
+                  >
+                    <dt className="font-medium text-foreground">{item.title}</dt>
+                    <dd className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                      {formatTemperaturesInText(item.body)}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+            </section>
 
             <section className="mt-12" aria-labelledby="red-lead-serving-heading">
               <h2 id="red-lead-serving-heading" className="font-heading text-xl sm:text-2xl text-foreground">
-                Serve as part of a full firehall breakfast
+                Serve it like the hall does
               </h2>
               <p className="mt-4 text-sm sm:text-base text-muted-foreground leading-relaxed max-w-3xl">
-                Red Lead is the tomato-and-egg cast iron at the center of the table — not the whole meal.
-                Set out the sides below on their own platters and bowls so the crew serves themselves while
-                coffee stays hot and nobody eats standing up.
+                Red Lead is the sauce pan in the middle of the table — not the whole breakfast. Set out the
+                sides on their own platters so the crew can sit down, pass the food, and refill coffee without
+                eating standing up.
               </p>
               <dl className="mt-6 grid gap-4 sm:grid-cols-2">
                 {FIREFIGHTER_RED_LEAD_SERVING_SUGGESTIONS.map((item) => (
@@ -311,13 +351,18 @@ export default function FirefighterRedLeadRecipePage() {
             </section>
           </article>
 
-          <div className="mt-10 lg:mt-0">
-            <InternalLinkHub title="Explore Firehall Meals" />
-          </div>
+          <aside className="hidden lg:block">
+            <div className="sticky top-[calc(3.5rem+env(safe-area-inset-top,0px)+1rem)] space-y-6">
+              <RedLeadPdfCapture variant="compact" />
+              <InternalLinkHub title="Explore Firehall Meals" />
+            </div>
+          </aside>
         </div>
       </main>
 
+      <RedLeadMobileStickyCta />
       <SiteFooter />
     </div>
+    </RedLeadCaptureProvider>
   );
 }

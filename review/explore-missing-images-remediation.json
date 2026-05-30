@@ -1,0 +1,33 @@
+{
+  "dryRun": false,
+  "fixed": 4,
+  "demoted": 0,
+  "skipped": 366,
+  "total": 370,
+  "results": [
+    {
+      "slug": "smoked-corned-beef",
+      "action": "fixed",
+      "donor": "beef-dip",
+      "heroPath": "/images/golden-100/smoked-corned-beef.jpg"
+    },
+    {
+      "slug": "burrito-bowl-bar-night",
+      "action": "fixed",
+      "donor": "steak-tacos",
+      "heroPath": "/images/golden-100/burrito-bowl-bar-night.jpg"
+    },
+    {
+      "slug": "pepper-smoked-brisket-flat",
+      "action": "fixed",
+      "donor": "bbq-brisket-burnt-ends",
+      "heroPath": "/images/golden-100/pepper-smoked-brisket-flat.jpg"
+    },
+    {
+      "slug": "cast-iron-chicken-fajitas",
+      "action": "fixed",
+      "donor": "sheet-pan-chicken-fajitas-lite",
+      "heroPath": "/images/golden-100/cast-iron-chicken-fajitas.jpg"
+    }
+  ]
+}

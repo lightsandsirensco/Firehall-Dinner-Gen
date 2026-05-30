@@ -104,6 +104,18 @@ export function buildRecipesIndexSeo(recipeCount = APPROVED_CATALOG_TOTAL): Page
   };
 }
 
+export function buildTopRatedRecipesSeo(): PageSeoConfig {
+  return {
+    title: "Top Rated Firefighter Recipes | Firehall Meals",
+    description: clipDescription(
+      "Hall-tested meals ranked by crew approval — see which firefighter recipes crews would cook again.",
+    ),
+    canonicalPath: "/top-rated-recipes",
+    ogType: "website",
+    keywords: [...SEO_TARGET_KEYWORDS, "top rated firefighter recipes", "crew approved meals"],
+  };
+}
+
 export function buildFirehallCategorySeo(categoryId: FirehallCategoryId, recipeCount = 0): PageSeoConfig {
   const label = FIREHALL_CATEGORY_LABEL[categoryId] ?? "Category";
   const keywordLabel = label.toLowerCase();

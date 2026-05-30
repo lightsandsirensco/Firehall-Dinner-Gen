@@ -1,9 +1,255 @@
 {
-  "generatedAt": "2026-05-30T17:33:36.928Z",
+  "generatedAt": "2026-05-30T20:45:36.019Z",
   "totalRecipes": 56,
-  "uniqueHeroHashes": 56,
-  "issueCount": 0,
-  "affectedSlugs": [],
-  "issues": [],
+  "uniqueHeroHashes": 42,
+  "issueCount": 22,
+  "affectedSlugs": [
+    "applewood-pork-shoulder-steaks",
+    "cast-iron-chicken-fajitas",
+    "cheesy-chicken-broccoli-rice",
+    "dutch-oven-pot-roast",
+    "fajita-bar-night",
+    "green-chile-chicken-stew",
+    "mediterranean-chicken-farro-bowls",
+    "mediterranean-feast-night",
+    "mesquite-chuck-roast",
+    "molasses-bourbon-pork-ribs",
+    "paprika-roasted-chicken-quarters",
+    "pellet-smoked-chicken-quarters",
+    "pepper-smoked-brisket-flat",
+    "pork-belly-burnt-ends",
+    "rice-bowl-bar-night",
+    "smoked-corned-beef",
+    "smoked-meatloaf",
+    "smoked-sausage-platter",
+    "smoked-tri-tip",
+    "spatchcock-lemon-roast-chicken",
+    "warm-spinach-chicken-salad"
+  ],
+  "issues": [
+    {
+      "slug": "smoked-meatloaf",
+      "title": "Smoked Meatloaf with Glaze",
+      "issue": "duplicate_hero_image",
+      "heroImage": "/images/hall-expansion/smoked-meatloaf.jpg",
+      "duplicatePeers": [
+        "mesquite-chuck-roast",
+        "dutch-oven-pot-roast"
+      ]
+    },
+    {
+      "slug": "pork-belly-burnt-ends",
+      "title": "Pork Belly Burnt Ends",
+      "issue": "duplicate_hero_image",
+      "heroImage": "/images/hall-expansion/pork-belly-burnt-ends.jpg",
+      "duplicatePeers": [
+        "smoked-tri-tip",
+        "smoked-corned-beef",
+        "pepper-smoked-brisket-flat"
+      ]
+    },
+    {
+      "slug": "smoked-sausage-platter",
+      "title": "Smoked Sausage Platter",
+      "issue": "duplicate_hero_image",
+      "heroImage": "/images/hall-expansion/smoked-sausage-platter.jpg",
+      "duplicatePeers": [
+        "molasses-bourbon-pork-ribs",
+        "applewood-pork-shoulder-steaks"
+      ]
+    },
+    {
+      "slug": "smoked-tri-tip",
+      "title": "Smoked Tri-Tip Roast",
+      "issue": "duplicate_hero_image",
+      "heroImage": "/images/hall-expansion/smoked-tri-tip.jpg",
+      "duplicatePeers": [
+        "pork-belly-burnt-ends",
+        "smoked-corned-beef",
+        "pepper-smoked-brisket-flat"
+      ]
+    },
+    {
+      "slug": "smoked-corned-beef",
+      "title": "Smoked Corned Beef Brisket",
+      "issue": "duplicate_hero_image",
+      "heroImage": "/images/hall-expansion/smoked-corned-beef.jpg",
+      "duplicatePeers": [
+        "pork-belly-burnt-ends",
+        "smoked-tri-tip",
+        "pepper-smoked-brisket-flat"
+      ]
+    },
+    {
+      "slug": "pellet-smoked-chicken-quarters",
+      "title": "Pellet Smoked Chicken Quarters",
+      "issue": "duplicate_hero_image",
+      "heroImage": "/images/hall-expansion/pellet-smoked-chicken-quarters.jpg",
+      "duplicatePeers": [
+        "spatchcock-lemon-roast-chicken",
+        "paprika-roasted-chicken-quarters"
+      ]
+    },
+    {
+      "slug": "fajita-bar-night",
+      "title": "Fajita Bar Night",
+      "issue": "duplicate_hero_image",
+      "heroImage": "/images/hall-expansion/fajita-bar-night.jpg",
+      "duplicatePeers": [
+        "cast-iron-chicken-fajitas"
+      ]
+    },
+    {
+      "slug": "rice-bowl-bar-night",
+      "title": "Rice Bowl Bar Night",
+      "issue": "duplicate_hero_image",
+      "heroImage": "/images/hall-expansion/rice-bowl-bar-night.jpg",
+      "duplicatePeers": [
+        "mediterranean-feast-night",
+        "warm-spinach-chicken-salad",
+        "mediterranean-chicken-farro-bowls"
+      ]
+    },
+    {
+      "slug": "mediterranean-feast-night",
+      "title": "Mediterranean Feast Night",
+      "issue": "duplicate_hero_image",
+      "heroImage": "/images/hall-expansion/mediterranean-feast-night.jpg",
+      "duplicatePeers": [
+        "rice-bowl-bar-night",
+        "warm-spinach-chicken-salad",
+        "mediterranean-chicken-farro-bowls"
+      ]
+    },
+    {
+      "slug": "mesquite-chuck-roast",
+      "title": "Mesquite Smoked Chuck Roast",
+      "issue": "duplicate_hero_image",
+      "heroImage": "/images/hall-expansion/mesquite-chuck-roast.jpg",
+      "duplicatePeers": [
+        "smoked-meatloaf",
+        "dutch-oven-pot-roast"
+      ]
+    },
+    {
+      "slug": "molasses-bourbon-pork-ribs",
+      "title": "Molasses Bourbon Pork Ribs",
+      "issue": "duplicate_hero_image",
+      "heroImage": "/images/hall-expansion/molasses-bourbon-pork-ribs.jpg",
+      "duplicatePeers": [
+        "smoked-sausage-platter",
+        "applewood-pork-shoulder-steaks"
+      ]
+    },
+    {
+      "slug": "applewood-pork-shoulder-steaks",
+      "title": "Applewood Grilled Pork Shoulder Steaks",
+      "issue": "duplicate_hero_image",
+      "heroImage": "/images/hall-expansion/applewood-pork-shoulder-steaks.jpg",
+      "duplicatePeers": [
+        "smoked-sausage-platter",
+        "molasses-bourbon-pork-ribs"
+      ]
+    },
+    {
+      "slug": "pepper-smoked-brisket-flat",
+      "title": "Pepper-Crusted Smoked Brisket Flat",
+      "issue": "duplicate_hero_image",
+      "heroImage": "/images/hall-expansion/pepper-smoked-brisket-flat.jpg",
+      "duplicatePeers": [
+        "pork-belly-burnt-ends",
+        "smoked-tri-tip",
+        "smoked-corned-beef"
+      ]
+    },
+    {
+      "slug": "spatchcock-lemon-roast-chicken",
+      "title": "Spatchcock Lemon Roast Chicken",
+      "issue": "duplicate_hero_image",
+      "heroImage": "/images/hall-expansion/spatchcock-lemon-roast-chicken.jpg",
+      "duplicatePeers": [
+        "pellet-smoked-chicken-quarters",
+        "paprika-roasted-chicken-quarters"
+      ]
+    },
+    {
+      "slug": "paprika-roasted-chicken-quarters",
+      "title": "Paprika Roasted Chicken Quarters",
+      "issue": "duplicate_hero_image",
+      "heroImage": "/images/hall-expansion/paprika-roasted-chicken-quarters.jpg",
+      "duplicatePeers": [
+        "pellet-smoked-chicken-quarters",
+        "spatchcock-lemon-roast-chicken"
+      ]
+    },
+    {
+      "slug": "cast-iron-chicken-fajitas",
+      "title": "Cast Iron Chicken Fajitas",
+      "issue": "duplicate_hero_image",
+      "heroImage": "/images/hall-expansion/cast-iron-chicken-fajitas.jpg",
+      "duplicatePeers": [
+        "fajita-bar-night"
+      ]
+    },
+    {
+      "slug": "cast-iron-chicken-fajitas",
+      "title": "Cast Iron Chicken Fajitas",
+      "issue": "taco_image_on_non_taco_recipe",
+      "heroImage": "/images/hall-expansion/cast-iron-chicken-fajitas.jpg",
+      "duplicatePeers": [
+        "fajita-bar-night"
+      ]
+    },
+    {
+      "slug": "dutch-oven-pot-roast",
+      "title": "Dutch Oven Pot Roast",
+      "issue": "duplicate_hero_image",
+      "heroImage": "/images/hall-expansion/dutch-oven-pot-roast.jpg",
+      "duplicatePeers": [
+        "smoked-meatloaf",
+        "mesquite-chuck-roast"
+      ]
+    },
+    {
+      "slug": "warm-spinach-chicken-salad",
+      "title": "Warm Spinach Chicken Salad",
+      "issue": "duplicate_hero_image",
+      "heroImage": "/images/hall-expansion/warm-spinach-chicken-salad.jpg",
+      "duplicatePeers": [
+        "rice-bowl-bar-night",
+        "mediterranean-feast-night",
+        "mediterranean-chicken-farro-bowls"
+      ]
+    },
+    {
+      "slug": "green-chile-chicken-stew",
+      "title": "Green Chile Chicken Stew",
+      "issue": "duplicate_hero_image",
+      "heroImage": "/images/hall-expansion/green-chile-chicken-stew.jpg",
+      "duplicatePeers": [
+        "cheesy-chicken-broccoli-rice"
+      ]
+    },
+    {
+      "slug": "mediterranean-chicken-farro-bowls",
+      "title": "Mediterranean Chicken Farro Bowls",
+      "issue": "duplicate_hero_image",
+      "heroImage": "/images/hall-expansion/mediterranean-chicken-farro-bowls.jpg",
+      "duplicatePeers": [
+        "rice-bowl-bar-night",
+        "mediterranean-feast-night",
+        "warm-spinach-chicken-salad"
+      ]
+    },
+    {
+      "slug": "cheesy-chicken-broccoli-rice",
+      "title": "Cheesy Chicken Broccoli Rice",
+      "issue": "duplicate_hero_image",
+      "heroImage": "/images/hall-expansion/cheesy-chicken-broccoli-rice.jpg",
+      "duplicatePeers": [
+        "green-chile-chicken-stew"
+      ]
+    }
+  ],
   "replacements": []
 }

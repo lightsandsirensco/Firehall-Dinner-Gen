@@ -103,8 +103,11 @@ export function publicImageAbsolute(publicPath: string, publicRoot?: string): st
 }
 
 export function imageFileExists(publicPath: string, publicRoot?: string): boolean {
+  const trimmed = (publicPath || "").trim();
+  if (!trimmed) return false;
   try {
-    return fs.existsSync(publicImageAbsolute(publicPath, publicRoot));
+    const abs = publicImageAbsolute(trimmed, publicRoot);
+    return fs.existsSync(abs) && fs.statSync(abs).isFile();
   } catch {
     return false;
   }

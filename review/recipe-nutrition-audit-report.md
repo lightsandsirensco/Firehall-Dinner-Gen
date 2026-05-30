@@ -1,6 +1,6 @@
 # Recipe Nutrition Audit Report
 
-Generated: 2026-05-30T18:20:12.009Z
+Generated: 2026-05-30T20:45:11.617Z
 Mode: report only
 
 ## Summary

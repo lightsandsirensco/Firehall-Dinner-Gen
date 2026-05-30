@@ -159,6 +159,12 @@ export function summarizeJsonBody(
       ok: body.success === true,
     });
   }
+  if (path.includes("/homepage-subscribe")) {
+    return formatLogFields({
+      source: "homepage",
+      ok: body.success === true,
+    });
+  }
   if (typeof body.message === "string") {
     return formatLogFields({ message: clip(body.message, 120) });
   }
