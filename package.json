@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development tsx server/index.ts",
     "build": "tsx script/build.ts",
-    "start": "NODE_ENV=production node dist/index.cjs",
+    "start": "cross-env NODE_ENV=production node dist/index.cjs",
     "check": "tsc && tsx scripts/validate-curated-image-governance.ts && tsx scripts/test-performance-meals-manifest.ts && tsx scripts/validate-generate-request-defaults.ts && tsx scripts/test-generation-reliability.ts && tsx scripts/test-meal-realism-firewall.ts && tsx scripts/test-meal-instructions.ts && tsx scripts/test-burger-sourcing.ts && tsx scripts/test-recipe-quality-gate.ts && tsx scripts/test-canonical-recipe-schema.ts && tsx scripts/test-recipe-trust-pipeline.ts && tsx scripts/test-master-categories.ts && tsx scripts/test-recommendation-engine.ts && tsx scripts/test-golden-100-manifest.ts && tsx scripts/test-editorial-image-prompt.ts && tsx scripts/test-editorial-imagery-system.ts && tsx scripts/validate-food-imagery-style.ts && tsx scripts/test-food-imagery-prompt.ts && tsx scripts/test-recipe-crew-ratings.ts && tsx scripts/test-recipe-nutrition.ts && tsx scripts/audit-recipe-nutrition.ts && tsx scripts/audit-approved-recipe-data-routes.ts && tsx scripts/audit-recipe-template-language.ts && tsx scripts/stage5-validate-platform.ts",
     "db:push": "drizzle-kit push",
     "ingest:discover": "tsx scripts/ingest-discovery.ts",
@@ -159,6 +159,7 @@
     "input-otp": "^1.4.2",
     "lucide-react": "^0.453.0",
     "memorystore": "^1.6.7",
+    "nanoid": "^3.3.12",
     "next-themes": "^0.4.6",
     "openai": "^6.22.0",
     "p-limit": "^7.3.0",
