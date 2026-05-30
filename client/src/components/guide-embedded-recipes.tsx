@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "wouter";
 import type { EditorialEmbeddedRecipe } from "@shared/editorial/content-schema";
 import { smoothieRecipePath } from "@shared/fuel-catalog/paths";
+import { formatTemperaturesInText } from "@shared/measurements";
 import { cn } from "@/lib/utils";
 
 function formatIngredient(ing: EditorialEmbeddedRecipe["ingredients"][number]): string {
@@ -100,7 +101,7 @@ export function GuideEmbeddedRecipes({ recipes }: { recipes: EditorialEmbeddedRe
                     <h4 className="text-sm font-semibold text-foreground">Steps</h4>
                     <ol className="mt-2 space-y-2 text-sm text-muted-foreground leading-relaxed list-decimal pl-4">
                       {recipe.instructions.map((step, i) => (
-                        <li key={`${recipe.id}-step-${i}`}>{step}</li>
+                        <li key={`${recipe.id}-step-${i}`}>{formatTemperaturesInText(step)}</li>
                       ))}
                     </ol>
                   </div>

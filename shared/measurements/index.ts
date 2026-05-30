@@ -1,10 +1,16 @@
 export {
   convertIngredientLine,
-  convertTemperaturesInText,
-  fahrenheitToCelsius,
   formatClientIngredientQty,
   formatIngredientAmount,
-  formatStepTemperature,
   parseQuantityString,
   type MeasurementSystem,
 } from "./convert.js";
+
+export {
+  convertTemperaturesInText,
+  fahrenheitToCelsius,
+  formatDualTemperature,
+  formatDualTemperatureRange,
+  formatStepTemperature,
+  formatTemperaturesInText,
+} from "./temperature.js";

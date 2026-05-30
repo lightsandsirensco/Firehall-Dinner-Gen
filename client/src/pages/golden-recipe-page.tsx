@@ -57,13 +57,11 @@ import {
   scaleGoldenIngredients,
 } from "@shared/golden-100/recipe-quality/crew-scale";
 import {
-  convertTemperaturesInText,
   formatIngredientAmount,
+  formatTemperaturesInText,
 } from "@shared/measurements";
-import {
-  MeasurementUnitToggle,
-  useMeasurementSystem,
-} from "@/components/measurement-unit-toggle";
+import { useMeasurementSystem } from "@/components/measurement-unit-toggle";
+import { RecipeMeasurementBar } from "@/components/recipe-measurement-bar";
 
 
 
@@ -493,7 +491,28 @@ export default function GoldenRecipePageView() {
 
             </div>
 
-
+            <RecipeMeasurementBar className="mt-4">
+              <div className="space-y-2.5" role="group" aria-label="Crew size">
+                <p className="text-sm font-medium text-foreground">Crew size</p>
+                <div className="flex flex-wrap gap-2">
+                  {CREW_SIZE_OPTIONS.map((n) => (
+                    <button
+                      key={n}
+                      type="button"
+                      onClick={() => setCrewSize(n)}
+                      className={cn(
+                        app.pill,
+                        "min-h-11 sm:min-h-9 cursor-pointer transition-colors touch-manipulation",
+                        crewSize === n && "bg-primary/20 ring-1 ring-primary/40 text-foreground",
+                      )}
+                      aria-pressed={crewSize === n}
+                    >
+                      {n} firefighters
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </RecipeMeasurementBar>
 
             <p className={cn(app.lead, "max-w-2xl")}>{page.shortDescription || page.description}</p>
 
@@ -506,27 +525,7 @@ export default function GoldenRecipePageView() {
               </p>
             )}
 
-            <div className="flex flex-wrap items-center gap-2" role="group" aria-label="Crew size">
-              <span className="text-sm text-muted-foreground mr-1">Scale for</span>
-              {CREW_SIZE_OPTIONS.map((n) => (
-                <button
-                  key={n}
-                  type="button"
-                  onClick={() => setCrewSize(n)}
-                  className={cn(
-                    app.pill,
-                    "cursor-pointer transition-colors",
-                    crewSize === n && "bg-primary/20 ring-1 ring-primary/40 text-foreground",
-                  )}
-                  aria-pressed={crewSize === n}
-                >
-                  {n} firefighters
-                </button>
-              ))}
-            </div>
-
             <RecipeSection title="Ingredients" id="recipe-ingredients">
-              <MeasurementUnitToggle className="mb-4" />
               <div className="space-y-6">
                 {ingredientGroups.map(([group, items]) => (
                   <div key={group}>
@@ -586,7 +585,7 @@ export default function GoldenRecipePageView() {
 
                       <p className="mt-2 text-[15px] text-muted-foreground leading-relaxed">
 
-                        {convertTemperaturesInText(step.instruction, measurementSystem)}
+                        {formatTemperaturesInText(step.instruction)}
 
                       </p>
 
@@ -624,7 +623,7 @@ export default function GoldenRecipePageView() {
 
                   {page.tonightSpread.map((line, i) => (
 
-                    <li key={i}>{line}</li>
+                    <li key={i}>{formatTemperaturesInText(line)}</li>
 
                   ))}
 
@@ -644,7 +643,7 @@ export default function GoldenRecipePageView() {
 
                   {page.proTips.map((tip, i) => (
 
-                    <li key={i}>{convertTemperaturesInText(tip, measurementSystem)}</li>
+                    <li key={i}>{formatTemperaturesInText(tip)}</li>
 
                   ))}
 
@@ -660,7 +659,7 @@ export default function GoldenRecipePageView() {
               <RecipeSection title="Substitutions" id="recipe-substitutions">
                 <ul className="space-y-2 text-[15px] text-muted-foreground leading-relaxed">
                   {page.substitutions.map((line, i) => (
-                    <li key={i}>{line}</li>
+                    <li key={i}>{formatTemperaturesInText(line)}</li>
                   ))}
                 </ul>
               </RecipeSection>
@@ -668,7 +667,9 @@ export default function GoldenRecipePageView() {
 
             {page.mealPrepNotes && (
               <RecipeSection title="Meal prep" id="recipe-meal-prep">
-                <p className="text-[15px] text-muted-foreground leading-relaxed">{page.mealPrepNotes}</p>
+                <p className="text-[15px] text-muted-foreground leading-relaxed">
+                  {formatTemperaturesInText(page.mealPrepNotes)}
+                </p>
               </RecipeSection>
             )}
 
@@ -679,7 +680,7 @@ export default function GoldenRecipePageView() {
 
                   {page.leftovers.map((line, i) => (
 
-                    <li key={i}>{line}</li>
+                    <li key={i}>{formatTemperaturesInText(line)}</li>
 
                   ))}
 

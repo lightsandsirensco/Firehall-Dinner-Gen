@@ -123,11 +123,6 @@ function roundLiters(l: number): number {
   return Math.round(l * 10) / 10;
 }
 
-export function fahrenheitToCelsius(f: number): number {
-  const c = (f - 32) * (5 / 9);
-  return Math.round(c / 5) * 5;
-}
-
 function convertImperialQuantity(
   qty: number,
   unit: string,
@@ -258,30 +253,11 @@ export function convertIngredientLine(line: string, system: MeasurementSystem): 
   return `${converted.quantity} ${converted.unit}${rest}`;
 }
 
-const TEMP_RANGE_RE =
-  /(\d+(?:\.\d+)?)\s*[–\-]\s*(\d+(?:\.\d+)?)\s*(?:°\s*F|°F|degrees?\s+Fahrenheit|degrees?\s+F\b)/gi;
-
-const TEMP_SINGLE_RE =
-  /(\d+(?:\.\d+)?)\s*(?:°\s*F|°F|degrees?\s+Fahrenheit|degrees?\s+F\b)/gi;
-
-/** Convert °F references in instructional text; leaves non-temperature text unchanged. */
-export function convertTemperaturesInText(text: string, system: MeasurementSystem): string {
-  if (system === "us" || !text) return text;
-
-  let out = text.replace(TEMP_RANGE_RE, (_match, lo: string, hi: string) => {
-    const loC = fahrenheitToCelsius(parseFloat(lo));
-    const hiC = fahrenheitToCelsius(parseFloat(hi));
-    return `${loC}–${hiC}°C`;
-  });
-
-  out = out.replace(TEMP_SINGLE_RE, (_match, f: string) => {
-    return `${fahrenheitToCelsius(parseFloat(f))}°C`;
-  });
-
-  return out;
-}
-
-export function formatStepTemperature(tempF: number, system: MeasurementSystem): string {
-  if (system === "metric") return `${fahrenheitToCelsius(tempF)}°C`;
-  return `${tempF}°F`;
-}
+export {
+  convertTemperaturesInText,
+  fahrenheitToCelsius,
+  formatDualTemperature,
+  formatDualTemperatureRange,
+  formatStepTemperature,
+  formatTemperaturesInText,
+} from "./temperature.js";

@@ -12,13 +12,11 @@ import { getSiteOrigin } from "@/lib/seo/site-origin";
 import { buildBreadcrumbListSchema } from "@shared/seo/schema";
 import { smoothieRecipePath, smoothiesIndexPath } from "@shared/fuel-catalog/paths";
 import { cn } from "@/lib/utils";
+import { formatIngredientAmount, formatTemperaturesInText } from "@shared/measurements";
 import { RecipeCrewRatingPanel } from "@/components/recipe-crew-rating/recipe-crew-rating-panel";
 import { RecipeNutritionPanel } from "@/components/recipe-nutrition-panel";
-import {
-  MeasurementUnitToggle,
-  useMeasurementSystem,
-} from "@/components/measurement-unit-toggle";
-import { formatIngredientAmount } from "@shared/measurements";
+import { useMeasurementSystem } from "@/components/measurement-unit-toggle";
+import { RecipeMeasurementBar } from "@/components/recipe-measurement-bar";
 
 export default function SmoothieRecipePage() {
   const [, smoothieParams] = useRoute("/smoothies/:slug");
@@ -133,11 +131,12 @@ export default function SmoothieRecipePage() {
           {page.nutrition.highlights}
         </p>
 
+        <RecipeMeasurementBar className="mt-6" />
+
         <section className="mt-8" aria-labelledby="ingredients-heading">
           <h2 id="ingredients-heading" className="font-heading text-xl">
             Ingredients
           </h2>
-          <MeasurementUnitToggle className="mt-3" />
           <ul className="mt-3 space-y-2 text-[15px]">
             {page.ingredients.map((ing, i) => (
               <li key={i} className="flex gap-2">
@@ -161,7 +160,7 @@ export default function SmoothieRecipePage() {
           <ol className="mt-3 space-y-4 list-decimal list-inside text-[15px] leading-relaxed">
             {page.steps.map((s) => (
               <li key={s.stepNumber} className="pl-1">
-                {s.instruction}
+                {formatTemperaturesInText(s.instruction)}
               </li>
             ))}
           </ol>

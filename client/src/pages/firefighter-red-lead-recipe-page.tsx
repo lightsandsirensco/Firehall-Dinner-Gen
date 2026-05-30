@@ -28,14 +28,12 @@ import {
 import { app } from "@/lib/design-tokens";
 import { cn } from "@/lib/utils";
 import { BRAND_TAGLINE } from "@/lib/brand-copy";
+import { useMeasurementSystem } from "@/components/measurement-unit-toggle";
+import { RecipeMeasurementBar } from "@/components/recipe-measurement-bar";
 import {
-  MeasurementUnitToggle,
-  useMeasurementSystem,
-} from "@/components/measurement-unit-toggle";
-import {
-  convertTemperaturesInText,
   formatIngredientAmount,
   formatStepTemperature,
+  formatTemperaturesInText,
   type MeasurementSystem,
 } from "@shared/measurements";
 
@@ -145,6 +143,13 @@ export default function FirefighterRedLeadRecipePage() {
           </div>
         </div>
 
+        <RecipeMeasurementBar className="mt-6">
+          <p className="text-sm text-muted-foreground">
+            Crew size:{" "}
+            <span className="font-medium text-foreground">{recipe.crewSize} firefighters</span>
+          </p>
+        </RecipeMeasurementBar>
+
         <RecipeNutritionPanel
           calories={recipe.nutrition.calories}
           protein={recipe.nutrition.protein}
@@ -160,7 +165,7 @@ export default function FirefighterRedLeadRecipePage() {
                 <h2 className="font-heading text-xl sm:text-2xl text-foreground">{section.heading}</h2>
                 <div className="mt-4 space-y-4 text-sm sm:text-base text-muted-foreground leading-relaxed">
                   {section.paragraphs.map((p) => (
-                    <p key={p.slice(0, 48)}>{p}</p>
+                    <p key={p.slice(0, 48)}>{formatTemperaturesInText(p)}</p>
                   ))}
                 </div>
               </section>
@@ -177,7 +182,6 @@ export default function FirefighterRedLeadRecipePage() {
                 Scaled for a hall table of {recipe.crewSize}. Read through once before you start the rest
                 of the breakfast — timing matters when the crew is actually sitting down.
               </p>
-              <MeasurementUnitToggle className="mt-4" />
               <ul className="mt-5 space-y-2 text-sm sm:text-base">
                 {recipe.ingredients.map((ing) => (
                   <li key={ing.name} className="flex gap-2">
@@ -206,14 +210,14 @@ export default function FirefighterRedLeadRecipePage() {
                     <div className="min-w-0">
                       <h3 className="font-medium text-foreground">{step.title}</h3>
                       <p className="mt-2 text-sm sm:text-base text-muted-foreground leading-relaxed">
-                        {convertTemperaturesInText(step.instruction, measurementSystem)}
+                        {formatTemperaturesInText(step.instruction)}
                       </p>
                       {(step.minutes || step.tempF) && (
                         <p className="mt-2 text-xs text-muted-foreground">
                           {step.minutes ? `~${step.minutes} min` : null}
                           {step.minutes && step.tempF ? " · " : null}
                           {step.tempF
-                            ? `Target ${formatStepTemperature(step.tempF, measurementSystem)} on whites`
+                            ? `Target ${formatStepTemperature(step.tempF)} on whites`
                             : null}
                         </p>
                       )}
@@ -239,7 +243,9 @@ export default function FirefighterRedLeadRecipePage() {
                     className="rounded-xl border border-border/25 bg-card/15 p-4"
                   >
                     <dt className="font-medium text-foreground">{item.title}</dt>
-                    <dd className="mt-2 text-sm text-muted-foreground leading-relaxed">{item.body}</dd>
+                    <dd className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                      {formatTemperaturesInText(item.body)}
+                    </dd>
                   </div>
                 ))}
               </dl>

@@ -12,12 +12,10 @@ import { getSiteOrigin } from "@/lib/seo/site-origin";
 import { buildBreadcrumbListSchema } from "@shared/seo/schema";
 import { performanceFuelPath, performanceFuelRecipePath } from "@shared/fuel-catalog/paths";
 import { FoodImage } from "@/components/mobile/food-image";
+import { useMeasurementSystem } from "@/components/measurement-unit-toggle";
+import { RecipeMeasurementBar } from "@/components/recipe-measurement-bar";
 import {
-  MeasurementUnitToggle,
-  useMeasurementSystem,
-} from "@/components/measurement-unit-toggle";
-import {
-  convertTemperaturesInText,
+  formatTemperaturesInText,
   formatIngredientAmount,
 } from "@shared/measurements";
 
@@ -118,6 +116,13 @@ export default function PerformanceFuelRecipePage() {
           </span>
         </div>
 
+        <RecipeMeasurementBar className="mt-4">
+          <p className="text-sm text-muted-foreground">
+            Crew size:{" "}
+            <span className="font-medium text-foreground">{page.crewSize} firefighters</span>
+          </p>
+        </RecipeMeasurementBar>
+
         <div className="mt-6 aspect-[16/10] rounded-2xl overflow-hidden ring-1 ring-border/20">
           <FoodImage
             src={page.heroImage}
@@ -138,7 +143,6 @@ export default function PerformanceFuelRecipePage() {
           <h2 id="ingredients-heading" className="font-heading text-xl">
             Ingredients
           </h2>
-          <MeasurementUnitToggle className="mt-3" />
           <ul className="mt-3 space-y-2 text-[15px]">
             {page.ingredients.map((ing, i) => (
               <li key={i}>
@@ -157,7 +161,7 @@ export default function PerformanceFuelRecipePage() {
           <ol className="mt-3 space-y-4 list-decimal list-inside text-[15px] leading-relaxed">
             {page.steps.map((s) => (
               <li key={s.stepNumber}>
-                {convertTemperaturesInText(s.instruction, measurementSystem)}
+                {formatTemperaturesInText(s.instruction)}
               </li>
             ))}
           </ol>

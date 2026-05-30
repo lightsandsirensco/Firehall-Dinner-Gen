@@ -11,12 +11,10 @@ import { RecipeBrandStrip } from "@/components/brand/recipe-brand-strip";
 import { RecipeCrewRatingPanel } from "@/components/recipe-crew-rating/recipe-crew-rating-panel";
 import { RecipeNutritionPanel } from "@/components/recipe-nutrition-panel";
 import { SiteFooter } from "@/components/site-footer";
+import { useMeasurementSystem } from "@/components/measurement-unit-toggle";
+import { RecipeMeasurementBar } from "@/components/recipe-measurement-bar";
 import {
-  MeasurementUnitToggle,
-  useMeasurementSystem,
-} from "@/components/measurement-unit-toggle";
-import {
-  convertTemperaturesInText,
+  formatTemperaturesInText,
   formatIngredientAmount,
   formatStepTemperature,
 } from "@shared/measurements";
@@ -113,12 +111,18 @@ export default function BreakfastRecipePage() {
               </div>
             </section>
 
-            <div className="mt-10 grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-8">
+            <RecipeMeasurementBar className="mt-6">
+              <p className="text-sm text-muted-foreground">
+                Crew size:{" "}
+                <span className="font-medium text-foreground">{page.crewSize} firefighters</span>
+              </p>
+            </RecipeMeasurementBar>
+
+            <div className="mt-8 grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-8">
               <section aria-labelledby="ingredients">
                 <h2 id="ingredients" className="font-heading text-xl">
                   Ingredients
                 </h2>
-                <MeasurementUnitToggle className="mt-3" />
                 <ul className="mt-4 space-y-2.5">
                   {page.ingredients.map((ing, idx) => (
                     <li
@@ -156,14 +160,14 @@ export default function BreakfastRecipePage() {
                           </p>
                           {(s.minutes || s.tempF) && (
                             <p className="text-xs text-muted-foreground whitespace-nowrap">
-                              {s.tempF ? formatStepTemperature(s.tempF, measurementSystem) : ""}
+                              {s.tempF ? formatStepTemperature(s.tempF) : ""}
                               {s.tempF && s.minutes ? " · " : ""}
                               {s.minutes ? `${s.minutes} min` : ""}
                             </p>
                           )}
                         </div>
                         <p className="mt-2 text-sm leading-relaxed text-foreground/90">
-                          {convertTemperaturesInText(s.instruction, measurementSystem)}
+                          {formatTemperaturesInText(s.instruction)}
                         </p>
                       </li>
                     ))}

@@ -40,12 +40,12 @@ import { cn } from "@/lib/utils";
 import { app } from "@/lib/design-tokens";
 import { FoodImageSkeleton } from "@/components/mobile/loading-skeletons";
 import type { ClientRecipeResponse, ClientIngredient } from "@shared/schema";
+import { RecipeMeasurementBar } from "@/components/recipe-measurement-bar";
 import {
-  MeasurementUnitToggle,
   useMeasurementSystem,
 } from "@/components/measurement-unit-toggle";
 import {
-  convertTemperaturesInText,
+  formatTemperaturesInText,
   formatClientIngredientQty,
 } from "@shared/measurements";
 
@@ -457,6 +457,13 @@ function RecipeDetailView({
             )}
           </div>
 
+          <RecipeMeasurementBar className="mb-2">
+            <p className="text-sm text-muted-foreground">
+              Servings:{" "}
+              <span className="font-medium text-foreground">{crewSize}</span>
+            </p>
+          </RecipeMeasurementBar>
+
           <div className="flex gap-1.5 flex-wrap mb-4">
             {recipe.cuisines.slice(0, 3).map((c) => (
               <Badge key={c} variant="outline" className="text-[10px] uppercase tracking-wide">
@@ -557,7 +564,6 @@ function RecipeDetailView({
               <ChefHat className="w-3.5 h-3.5 text-primary/60" />
               Ingredients
             </h3>
-            <MeasurementUnitToggle className="mb-4" />
             <ul className="space-y-3" data-testid="section-detail-ingredients">
               {clientRecipe.ingredients.map((ing, i) => {
                 const qty = formatClientIngredientQty(ing.qty, ing.unit, measurementSystem);
@@ -594,7 +600,7 @@ function RecipeDetailView({
                         <p className="text-[15px] font-semibold text-foreground leading-snug">{step.heading}</p>
                       )}
                       <p className="text-[15px] sm:text-sm text-foreground/90 leading-[1.65]">
-                        {convertTemperaturesInText(step.step, measurementSystem)}
+                        {formatTemperaturesInText(step.step)}
                       </p>
                     </div>
                   </li>

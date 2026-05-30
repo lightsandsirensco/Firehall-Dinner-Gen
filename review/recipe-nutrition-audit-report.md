@@ -1,6 +1,6 @@
 # Recipe Nutrition Audit Report
 
-Generated: 2026-05-30T03:48:34.671Z
+Generated: 2026-05-30T17:08:59.243Z
 Mode: report only
 
 ## Summary
@@ -8,7 +8,7 @@ Mode: report only
 - Total recipes scanned: **258**
 - Missing nutrition (before fix): **0**
 - Corrected: **0**
-- Suspicious / divergent: **107**
+- Suspicious / divergent: **113**
 - Clean after run: **257**
 
 ## Missing / Corrected / Suspicious

@@ -13,6 +13,7 @@ import {
 } from "@/lib/email-capture";
 import { fetchWithCsrf } from "@/lib/csrf-fetch";
 import { LightsAndSirensCredit } from "@/components/brand/lights-and-sirens-credit";
+import { formatTemperaturesInText } from "@shared/measurements";
 import { LIGHTS_COPY } from "@/lib/lights-and-sirens";
 
 export type EmailModalVariant = "manual" | "earned";
@@ -64,8 +65,11 @@ export function EmailModal({
             const qty = i.qty ? (i.unit ? `${i.qty} ${i.unit}` : `${i.qty}`) : "";
             return qty ? `${i.name} — ${qty}` : i.name;
           }),
-          steps: recipe.steps.map((s) => (s.title ? `${s.title}: ${s.instructions}` : s.instructions)),
-          pro_tips: recipe.pro_tips || [],
+          steps: recipe.steps.map((s) => {
+            const text = s.title ? `${s.title}: ${s.instructions}` : s.instructions;
+            return formatTemperaturesInText(text);
+          }),
+          pro_tips: (recipe.pro_tips || []).map((tip) => formatTemperaturesInText(tip)),
           macros: recipe.macros_per_serving,
           timestamp: new Date().toISOString(),
           capture_source: isEarned ? captureTrigger || "earned" : "manual",

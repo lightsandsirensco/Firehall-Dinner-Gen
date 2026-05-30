@@ -16,8 +16,8 @@ import { escapeHtml } from "@/lib/escape-html";
 import { useState, useEffect, useMemo, type ReactNode } from "react";
 import { app } from "@/lib/design-tokens";
 import { cn } from "@/lib/utils";
+import { RecipeMeasurementBar } from "@/components/recipe-measurement-bar";
 import {
-  MeasurementUnitToggle,
   useMeasurementSystem,
 } from "@/components/measurement-unit-toggle";
 import {
@@ -101,7 +101,7 @@ export function buildPrintHtml(
   const safetyHtml = recipe.protein_safety && recipe.protein_safety.internal_temp_f > 0
     ? `<tr>
         <td style="font-weight:700;padding:6px 12px 6px 0">${e(recipe.protein_safety.protein)}</td>
-        <td style="padding:6px 12px">${measurementSystem === "metric" ? formatStepTemperature(recipe.protein_safety.internal_temp_f, "metric") : `${e(recipe.protein_safety.internal_temp_f)}&deg;F`}</td>
+        <td style="padding:6px 12px">${e(formatStepTemperature(recipe.protein_safety.internal_temp_f))}</td>
         <td style="padding:6px 12px">${recipe.protein_safety.rest_min > 0 ? e(recipe.protein_safety.rest_min) + " min" : "—"}</td>
         <td style="padding:6px 12px;font-size:13px">${e(recipe.protein_safety.notes)}</td>
       </tr>`
@@ -122,7 +122,7 @@ export function buildPrintHtml(
     .map((step) => {
       return `<li style="margin-bottom:12px;page-break-inside:avoid">
         ${step.title ? `<strong>${e(step.title)}</strong><br/>` : ""}
-        ${e(convertTemperaturesInText(step.instructions, measurementSystem))}
+        ${e(convertTemperaturesInText(step.instructions))}
       </li>`;
     })
     .join("");
@@ -211,19 +211,19 @@ export function buildPrintHtml(
   ${recipe.pro_tips && recipe.pro_tips.length > 0 ? `
   <h2>Pro Tips</h2>
   <ul style="padding-left:20px;font-size:14px">
-    ${recipe.pro_tips.map((tip) => `<li style="margin-bottom:4px">${e(tip)}</li>`).join("")}
+    ${recipe.pro_tips.map((tip) => `<li style="margin-bottom:4px">${e(convertTemperaturesInText(tip))}</li>`).join("")}
   </ul>` : ""}
 
   ${recipe.cleanup_tip ? `
   <div class="cleanup">
     <strong>Cleanup Tip</strong>
-    ${e(recipe.cleanup_tip)}
+    ${e(convertTemperaturesInText(recipe.cleanup_tip))}
   </div>` : ""}
 
   ${recipe.budget_tips && recipe.budget_tips.length > 0 ? `
   <h2>Budget Tips</h2>
   <ul style="padding-left:20px;font-size:14px">
-    ${recipe.budget_tips.map((tip) => `<li style="margin-bottom:4px">${e(tip)}</li>`).join("")}
+    ${recipe.budget_tips.map((tip) => `<li style="margin-bottom:4px">${e(convertTemperaturesInText(tip))}</li>`).join("")}
   </ul>` : ""}
 
   ${recipe.veg_option?.enabled ? `
@@ -429,6 +429,13 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
           )}
         </div>
 
+        <RecipeMeasurementBar>
+          <p className="text-sm text-muted-foreground">
+            Crew size:{" "}
+            <span className="font-medium text-foreground">{crewSize} firefighters</span>
+          </p>
+        </RecipeMeasurementBar>
+
         <div className="flex flex-wrap gap-2">
           {!hideSave && (
             <Button
@@ -524,10 +531,7 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
             <span className="text-foreground font-medium">{recipe.protein_safety.protein}</span>
             {" — "}
             <span className="text-foreground">
-              {measurementSystem === "metric"
-                ? formatStepTemperature(recipe.protein_safety.internal_temp_f, "metric")
-                : `${recipe.protein_safety.internal_temp_f}°F`}{" "}
-              internal
+              {formatStepTemperature(recipe.protein_safety.internal_temp_f)} internal
             </span>
             {recipe.protein_safety.rest_min > 0 && (
               <>, rest {recipe.protein_safety.rest_min} min</>
@@ -540,7 +544,6 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
       )}
 
       <MealSection title={mealPlate ? "Full ingredient list" : "Ingredients"}>
-        <MeasurementUnitToggle className="-mt-1 mb-2" />
         <ul className="divide-y divide-border/25" data-testid="section-ingredients">
           {recipe.ingredients.map((ing, i) => (
             <li
@@ -569,7 +572,7 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
                   <p className="font-medium text-foreground mb-1">{step.title}</p>
                 )}
                 <p className="text-[15px] text-muted-foreground leading-relaxed">
-                  {convertTemperaturesInText(step.instructions, measurementSystem)}
+                  {convertTemperaturesInText(step.instructions)}
                 </p>
               </div>
             </li>
@@ -585,7 +588,7 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
             </p>
           )}
           <p className={app.subtitle} data-testid="text-plating-instructions">
-            {recipe.plating.assembly_instructions}
+            {convertTemperaturesInText(recipe.plating.assembly_instructions)}
           </p>
         </MealSection>
       )}
@@ -607,7 +610,7 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
             <ul className="space-y-3" data-testid="list-pro-tips">
               {recipe.pro_tips.map((tip, i) => (
                 <li key={i} className={app.subtitle} data-testid={`pro-tip-${i}`}>
-                  {tip}
+                  {convertTemperaturesInText(tip)}
                 </li>
               ))}
             </ul>
@@ -618,7 +621,7 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
       {recipe.cleanup_tip?.trim() && (
         <MealSection title="Kitchen shutdown">
           <p className={app.subtitle} data-testid="text-cleanup-tip">
-            {recipe.cleanup_tip}
+            {convertTemperaturesInText(recipe.cleanup_tip)}
           </p>
         </MealSection>
       )}
@@ -628,7 +631,7 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
           <ul className="space-y-2">
             {recipe.budget_tips.map((tip, i) => (
               <li key={i} className={app.subtitle} data-testid={`budget-tip-${i}`}>
-                {tip}
+                {convertTemperaturesInText(tip)}
               </li>
             ))}
           </ul>
