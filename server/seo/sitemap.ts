@@ -12,7 +12,10 @@ import { SEO_CANONICAL_ORIGIN } from "../../shared/seo/constants.js";
 import { normalizePublicSiteOrigin } from "../../shared/seo/urls.js";
 import { allSeoLandingPagePaths } from "../../shared/seo/landing-pages-data.js";
 import { EDITORIAL_PUBLIC_DIR } from "../editorial/page-store.js";
+import { PIZZA_NIGHT_CATALOG_PUBLIC_DIR } from "../pizza-night/page-store.js";
 import { guidePath } from "../../shared/editorial/content-schema.js";
+import { approvedCatalogRecipePath } from "../../shared/approved-catalog.js";
+import { smoothieRecipePath } from "../../shared/fuel-catalog/paths.js";
 
 export function resolvePublicSiteOrigin(reqHost?: string, forwardedProto?: string): string {
   const fromEnv =
@@ -170,6 +173,21 @@ function readExpansionSlugs(): Array<{ slug: string; generatedAt?: string }> {
   }
 }
 
+function readPizzaNightSlugs(): Array<{ slug: string; generatedAt?: string }> {
+  const indexFile = path.join(PIZZA_NIGHT_CATALOG_PUBLIC_DIR, "index.json");
+  if (!fs.existsSync(indexFile)) return [];
+  try {
+    const index = JSON.parse(fs.readFileSync(indexFile, "utf8")) as {
+      generatedAt?: string;
+      recipes?: Array<{ slug: string }>;
+    };
+    const generatedAt = index.generatedAt;
+    return (index.recipes ?? []).map((r) => ({ slug: r.slug, generatedAt }));
+  } catch {
+    return [];
+  }
+}
+
 function readHallRecipeSlugs(): Array<{ slug: string; generatedAt?: string }> {
   const golden = readGoldenSlugs();
   const bySlug = new Map(golden.map((r) => [r.slug, r]));
@@ -179,7 +197,26 @@ function readHallRecipeSlugs(): Array<{ slug: string; generatedAt?: string }> {
   for (const row of readExpansionSlugs()) {
     if (!bySlug.has(row.slug)) bySlug.set(row.slug, row);
   }
+  for (const row of readPizzaNightSlugs()) {
+    if (!bySlug.has(row.slug)) bySlug.set(row.slug, row);
+  }
   return [...bySlug.values()];
+}
+
+type SitemapUrlEntry = {
+  path: string;
+  lastmod?: string;
+  changefreq: string;
+  priority: string;
+};
+
+function renderSitemapUrl(base: string, entry: SitemapUrlEntry): string {
+  return `  <url>
+    <loc>${xmlEscape(`${base}${entry.path}`)}</loc>
+    <lastmod>${toLastmod(entry.lastmod)}</lastmod>
+    <changefreq>${entry.changefreq}</changefreq>
+    <priority>${entry.priority}</priority>
+  </url>`;
 }
 
 export function buildSitemapXml(origin: string): string {
@@ -195,52 +232,62 @@ export function buildSitemapXml(origin: string): string {
     }
   })();
 
-  const urls: string[] = [];
+  const entries: SitemapUrlEntry[] = [];
+  const seenPaths = new Set<string>();
+
+  function addEntry(entry: SitemapUrlEntry): void {
+    const normalized = entry.path.replace(/\/+$/, "") || "/";
+    if (seenPaths.has(normalized)) return;
+    seenPaths.add(normalized);
+    entries.push({ ...entry, path: normalized });
+  }
 
   for (const row of STATIC_PATHS) {
-    urls.push(`  <url>
-    <loc>${xmlEscape(`${base}${row.path}`)}</loc>
-    <lastmod>${toLastmod(indexGeneratedAt)}</lastmod>
-    <changefreq>${row.changefreq}</changefreq>
-    <priority>${row.priority}</priority>
-  </url>`);
+    addEntry({
+      path: row.path,
+      lastmod: indexGeneratedAt,
+      changefreq: row.changefreq,
+      priority: row.priority,
+    });
   }
 
   for (const { slug, generatedAt } of recipes) {
-    urls.push(`  <url>
-    <loc>${xmlEscape(`${base}/recipes/${slug}`)}</loc>
-    <lastmod>${toLastmod(generatedAt)}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>`);
+    addEntry({
+      path: approvedCatalogRecipePath(slug),
+      lastmod: generatedAt,
+      changefreq: "monthly",
+      priority: "0.8",
+    });
   }
 
   for (const { slug, generatedAt } of readSmoothieSlugs()) {
-    urls.push(`  <url>
-    <loc>${xmlEscape(`${base}/smoothies/${slug}`)}</loc>
-    <lastmod>${toLastmod(generatedAt)}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>`);
+    addEntry({
+      path: smoothieRecipePath(slug),
+      lastmod: generatedAt,
+      changefreq: "monthly",
+      priority: "0.8",
+    });
   }
 
   for (const { slug, generatedAt } of readBreakfastSlugs()) {
-    urls.push(`  <url>
-    <loc>${xmlEscape(`${base}/breakfast/${slug}`)}</loc>
-    <lastmod>${toLastmod(generatedAt)}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>`);
+    addEntry({
+      path: approvedCatalogRecipePath(slug),
+      lastmod: generatedAt,
+      changefreq: "monthly",
+      priority: "0.8",
+    });
   }
 
   for (const { slug, publishedAt } of readGuideSlugs()) {
-    urls.push(`  <url>
-    <loc>${xmlEscape(`${base}${guidePath(slug)}`)}</loc>
-    <lastmod>${toLastmod(publishedAt)}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>`);
+    addEntry({
+      path: guidePath(slug),
+      lastmod: publishedAt,
+      changefreq: "monthly",
+      priority: "0.75",
+    });
   }
+
+  const urls = entries.map((entry) => renderSitemapUrl(base, entry));
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

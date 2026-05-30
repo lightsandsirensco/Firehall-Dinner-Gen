@@ -1,0 +1,107 @@
+{
+  "generatedAt": "2026-05-30T17:31:04.864Z",
+  "origin": "https://www.firehallmeals.com",
+  "liveFetch": false,
+  "phase1": {
+    "totalUrlsAudited": 361,
+    "duplicateLocs": 0
+  },
+  "phase2": {
+    "collections": {
+      "golden100": 100,
+      "performanceMeals": 50,
+      "hallExpansion": 56,
+      "pizzaNight": 20,
+      "breakfast": 42,
+      "smoothies": 10,
+      "approvedCatalog": 250,
+      "curatedCollections": 262
+    },
+    "totalRecipeUrls": 270,
+    "recipesInSitemap": 270,
+    "recipesMissingFromSitemap": 0,
+    "recipesMissingSlugs": []
+  },
+  "phase3": {
+    "articlesFound": 58,
+    "articlesInSitemap": 58,
+    "articlesMissingFromSitemap": 0
+  },
+  "phase4": {
+    "canonicalOrigin": "https://www.firehallmeals.com",
+    "canonicalIssues": 0
+  },
+  "phase5": {
+    "robotsOk": true,
+    "robotsPath": "/robots.txt",
+    "sitemapDeclaration": "https://www.firehallmeals.com/sitemap.xml"
+  },
+  "phase6": {
+    "structuredDataIssues": 0
+  },
+  "phase7": {
+    "imageSeoIssues": 0
+  },
+  "phase8": {
+    "keywordTargets": {
+      "firefighter meals": [
+        "/",
+        "/firefighter-meals",
+        "/healthy-firefighter-meals"
+      ],
+      "firefighter recipes": [
+        "/",
+        "/firefighter-bbq-recipes",
+        "/firefighter-recipes",
+        "/healthy-firefighter-meals"
+      ],
+      "firehall meals": [
+        "/",
+        "/fire-station-meals",
+        "/firefighter-bbq-recipes",
+        "/firefighter-breakfast-recipes",
+        "/firefighter-meals",
+        "/firefighter-recipes",
+        "/firehouse-recipes",
+        "/healthy-firefighter-meals"
+      ],
+      "firehouse meals": [],
+      "fire station meals": [
+        "/fire-station-meals",
+        "/firefighter-meals"
+      ],
+      "firefighter breakfast recipes": [
+        "/breakfast",
+        "/firefighter-breakfast-recipes",
+        "/guides/firefighter-breakfast-guide",
+        "/guides/firefighter-breakfast-ideas",
+        "/guides/firehall-breakfast-and-brunch"
+      ],
+      "firehall breakfast": [
+        "/breakfast",
+        "/firefighter-breakfast-recipes",
+        "/guides/firefighter-breakfast-guide",
+        "/guides/firefighter-breakfast-ideas",
+        "/guides/firehall-breakfast-and-brunch"
+      ],
+      "firefighter dinner ideas": [],
+      "meals for firefighters": [
+        "/firefighter-meals"
+      ],
+      "meals for first responders": [],
+      "shift worker meals": []
+    },
+    "missingKeywordPages": [
+      "firehouse meals",
+      "firefighter dinner ideas",
+      "meals for first responders",
+      "shift worker meals"
+    ]
+  },
+  "phase9": {
+    "finalSitemapUrlCount": 361,
+    "invalidUrlsRemoved": 0
+  },
+  "issues": [],
+  "pass": true
+}

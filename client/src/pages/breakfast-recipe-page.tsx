@@ -13,6 +13,12 @@ import { RecipeNutritionPanel } from "@/components/recipe-nutrition-panel";
 import { SiteFooter } from "@/components/site-footer";
 import { useMeasurementSystem } from "@/components/measurement-unit-toggle";
 import { RecipeMeasurementBar } from "@/components/recipe-measurement-bar";
+import { SeoBreadcrumbs } from "@/components/seo/breadcrumbs";
+import { usePageSeo } from "@/lib/seo/use-page-seo";
+import { getSiteOrigin } from "@/lib/seo/site-origin";
+import { buildBreakfastRecipeSchema, buildBreakfastRecipeSeo } from "@shared/seo/fuel-metadata";
+import { buildBreadcrumbListSchema } from "@shared/seo/schema";
+import { breakfastIndexPath, breakfastRecipePath } from "@shared/fuel-catalog/paths";
 import {
   formatTemperaturesInText,
   formatIngredientAmount,
@@ -24,6 +30,8 @@ export default function BreakfastRecipePage() {
   const slug = String(params?.slug || "").trim();
   const favCount = useMemo(() => getSavedCount(), []);
   const [measurementSystem] = useMeasurementSystem();
+  const origin = getSiteOrigin();
+  const recipePath = slug ? breakfastRecipePath(slug) : breakfastIndexPath();
 
   const { data: page, isLoading, error } = useQuery({
     queryKey: ["breakfast-page", slug],
@@ -31,6 +39,29 @@ export default function BreakfastRecipePage() {
     enabled: Boolean(slug),
     staleTime: 10 * 60 * 1000,
   });
+
+  const seoConfig = useMemo(() => (page ? buildBreakfastRecipeSeo(page) : null), [page]);
+  usePageSeo(
+    seoConfig ?? {
+      title: "Breakfast",
+      description: "Firefighter breakfast recipe",
+      canonicalPath: recipePath,
+    },
+    useMemo(
+      () =>
+        page
+          ? [
+              buildBreakfastRecipeSchema(origin, page),
+              buildBreadcrumbListSchema(origin, [
+                { name: "Home", path: "/" },
+                { name: "Breakfast", path: breakfastIndexPath() },
+                { name: page.title, path: recipePath },
+              ]),
+            ]
+          : [],
+      [origin, page, recipePath],
+    ),
+  );
 
   return (
     <div className="page-shell min-h-screen min-h-[100dvh] bg-background flex flex-col">
@@ -60,6 +91,14 @@ export default function BreakfastRecipePage() {
 
         {page && (
           <>
+            <SeoBreadcrumbs
+              items={[
+                { name: "Home", path: "/" },
+                { name: "Breakfast", path: breakfastIndexPath() },
+                { name: page.title, path: recipePath },
+              ]}
+              className="mb-4"
+            />
             <h1 className="mt-6 font-heading tracking-tight text-3xl sm:text-4xl leading-[1.08]">
               {page.title}
             </h1>

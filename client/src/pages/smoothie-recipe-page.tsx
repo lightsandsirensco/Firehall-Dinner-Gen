@@ -7,7 +7,7 @@ import { getSavedCount } from "@/lib/saved-meals";
 import { fetchSmoothieCatalogIndex, fetchSmoothieRecipePage } from "@/lib/fuel-recipe-api";
 import { SeoBreadcrumbs } from "@/components/seo/breadcrumbs";
 import { usePageSeo } from "@/lib/seo/use-page-seo";
-import { buildSmoothieRecipeSeo } from "@shared/seo/fuel-metadata";
+import { buildSmoothieRecipeSeo, buildFuelRecipeSchema } from "@shared/seo/fuel-metadata";
 import { getSiteOrigin } from "@/lib/seo/site-origin";
 import { buildBreadcrumbListSchema } from "@shared/seo/schema";
 import { smoothieRecipePath, smoothiesIndexPath } from "@shared/fuel-catalog/paths";
@@ -53,6 +53,7 @@ export default function SmoothieRecipePage() {
       () =>
         page
           ? [
+              buildFuelRecipeSchema(origin, page, recipePath),
               buildBreadcrumbListSchema(origin, [
                 { name: "Home", path: "/" },
                 { name: "Explore", path: "/explore" },

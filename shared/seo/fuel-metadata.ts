@@ -1,7 +1,15 @@
 import type { FuelCatalogIndex, FuelRecipePage } from "../fuel-catalog/schema.js";
-import { smoothiesIndexPath, smoothieRecipePath, breakfastIndexPath, performanceFuelPath } from "../fuel-catalog/paths.js";
+import type { BreakfastRecipePage } from "../breakfast-schema.js";
+import {
+  smoothiesIndexPath,
+  smoothieRecipePath,
+  breakfastIndexPath,
+  breakfastRecipePath,
+  performanceFuelPath,
+} from "../fuel-catalog/paths.js";
 import { SEO_SITE_NAME, SEO_TARGET_KEYWORDS } from "./constants.js";
 import type { PageSeoConfig } from "./metadata.js";
+import { buildStandaloneRecipeSchema } from "./schema.js";
 
 function clipDescription(text: string, max = 160): string {
   const t = text.replace(/\s+/g, " ").trim();
@@ -70,6 +78,111 @@ export function buildBreakfastIndexSeo(): PageSeoConfig {
       ...SEO_TARGET_KEYWORDS,
     ],
   };
+}
+
+const BOILERPLATE_BREAKFAST_DESC =
+  "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.";
+const BOILERPLATE_BREAKFAST_SUBTITLE = "A practical station breakfast that scales from 4 to 12.";
+
+function breakfastMetaDescription(page: BreakfastRecipePage): string {
+  const desc = page.description?.trim() ?? "";
+  const sub = page.subtitle?.trim() ?? "";
+  if (desc && desc !== BOILERPLATE_BREAKFAST_DESC) return desc;
+  if (sub && sub !== BOILERPLATE_BREAKFAST_SUBTITLE) {
+    return `${page.title}. ${sub}`;
+  }
+  const step = page.steps[0];
+  const stepHint = step
+    ? `${step.title}: ${step.instruction.slice(0, 120)}`
+    : page.tags.slice(0, 5).join(", ");
+  return `${page.title} — firefighter breakfast for ${page.crewSize}. ${stepHint}`;
+}
+
+export function buildBreakfastRecipeSeo(page: BreakfastRecipePage): PageSeoConfig {
+  const title = page.seoTitle?.trim() || page.title;
+  return {
+    title: titleWithBrand(title),
+    description: clipDescription(breakfastMetaDescription(page)),
+    canonicalPath: breakfastRecipePath(page.slug),
+    ogType: "article",
+    ogImage: page.heroImage,
+    keywords: [
+      "firefighter breakfast recipes",
+      "firehall breakfast",
+      "shift breakfast",
+      ...page.tags.slice(0, 6),
+      ...SEO_TARGET_KEYWORDS,
+    ],
+  };
+}
+
+export function buildFuelRecipeSchema(origin: string, page: FuelRecipePage, canonicalPath: string) {
+  return buildStandaloneRecipeSchema(origin, {
+    path: canonicalPath,
+    title: page.title,
+    subtitle: page.subtitle,
+    description: page.intro,
+    heroImage: page.heroImage,
+    prepTime: 5,
+    cookTime: 5,
+    crewSize: 1,
+    recipeCategory: page.taxonomyLabel,
+    recipeCuisine: "American",
+    tags: page.tags,
+    ingredients: page.ingredients.map((ing) => ({
+      name: ing.name,
+      quantity: ing.quantity,
+      unit: ing.unit,
+    })),
+    steps: page.steps.map((step) => ({
+      stepNumber: step.stepNumber,
+      title: `Step ${step.stepNumber}`,
+      instruction: step.instruction,
+    })),
+    nutrition: {
+      calories: page.nutrition.calories,
+      protein: page.nutrition.protein,
+      carbs: page.nutrition.carbs,
+      fat: page.nutrition.fats,
+    },
+    generatedAt: page.generatedAt,
+  });
+}
+
+export function buildBreakfastRecipeSchema(origin: string, page: BreakfastRecipePage) {
+  const canonicalPath = breakfastRecipePath(page.slug);
+  return buildStandaloneRecipeSchema(origin, {
+    path: canonicalPath,
+    title: page.title,
+    subtitle: page.subtitle,
+    description: page.description,
+    heroImage: page.heroImage,
+    prepTime: page.prepTime,
+    cookTime: page.cookTime,
+    crewSize: page.crewSize,
+    recipeCategory: "Breakfast",
+    recipeCuisine: "American",
+    tags: page.tags,
+    ingredients: page.ingredients.map((ing) => ({
+      name: ing.name,
+      quantity: ing.quantity,
+      unit: ing.unit,
+      optional: ing.optional,
+    })),
+    steps: page.steps.map((step) => ({
+      stepNumber: step.stepNumber,
+      title: step.title,
+      instruction: step.instruction,
+      minutes: step.minutes,
+    })),
+    nutrition: {
+      calories: page.nutrition.calories,
+      protein: page.nutrition.protein,
+      carbs: page.nutrition.carbs,
+      fat: page.nutrition.fat,
+    },
+    generatedAt: page.publishedAt,
+  });
 }
 
 export function buildPerformanceFuelSeo(mealCount = 50, smoothieCount = 10): PageSeoConfig {

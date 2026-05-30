@@ -154,7 +154,7 @@ export function buildAboutSeo(): PageSeoConfig {
 }
 
 export function buildRecipePageSeo(page: GoldenRecipePage, origin: string): PageSeoConfig {
-  const category = page.category.replace(/_/g, " ");
+  const category = (page.category ?? "crew_favorites").replace(/_/g, " ");
   const displayTitle = page.displayTitle || page.title;
   const description = clipDescription(
     [
