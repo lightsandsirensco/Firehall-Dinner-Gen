@@ -1,6 +1,6 @@
 # SEO Sitemap Audit Report
 
-Generated: 2026-05-30T17:31:04.864Z
+Generated: 2026-05-30T17:33:32.138Z
 
 ## Summary
 
