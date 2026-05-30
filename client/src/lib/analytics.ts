@@ -32,3 +32,15 @@ export async function setAnalyticsUserId(email: string) {
     window.gtag("set", { user_id: hashHex });
   } catch {}
 }
+
+export function trackRedLeadCaptureView() {
+  trackEvent("red_lead_capture_view");
+}
+
+export function trackRedLeadCaptureSubmit() {
+  trackEvent("red_lead_capture_submit");
+}
+
+export function trackRedLeadPdfDownload() {
+  trackEvent("red_lead_pdf_download");
+}

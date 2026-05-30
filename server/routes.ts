@@ -8,6 +8,7 @@ import {
   hallVoteCreateSchema,
   emailRecipeSchema,
   emailShoppingListSchema,
+  redLeadLeadMagnetSchema,
   type GenerateRequest,
   type GenerateResponse,
   type ClientRecipeResponse,
@@ -32,7 +33,13 @@ import { pickPizzaConcept, getFeaturedPizzaIds } from "./pizza-variety";
 import { PIZZA_CONCEPT_REGISTRY } from "../shared/pizza-concepts.js";
 import { buildPizzaTemplate } from "./pizza-templates.js";
 import { finalizePizzaRecipe } from "./pizza-finalize.js";
-import { subscribeToList, trackRecipeEvent, trackShoppingListEvent, validateKlaviyoConfig } from "./klaviyo";
+import {
+  subscribeToList,
+  trackLeadMagnetDownloaded,
+  trackRecipeEvent,
+  trackShoppingListEvent,
+  validateKlaviyoConfig,
+} from "./klaviyo";
 import { getFromPool, refillPool, getPoolSize } from "./recipe-pool";
 import {
   initHallVoteTables,
@@ -1692,6 +1699,82 @@ export async function registerRoutes(
     } catch (error: any) {
       logError("email", "shopping-list send failed", error);
       return res.status(500).json({ message: `Failed to send shopping list: ${error.message}` });
+    }
+  });
+
+  app.post("/api/lead-magnet/red-lead", requireCsrf, async (req: Request, res: Response) => {
+    try {
+      const parsed = redLeadLeadMagnetSchema.safeParse(req.body);
+      if (!parsed.success) {
+        return res.status(400).json({
+          message: "Invalid email request.",
+          errors: parsed.error.flatten().fieldErrors,
+        });
+      }
+
+      const { email } = parsed.data;
+
+      if (!enforceEmailRateLimit(req, res, email)) return;
+
+      const klaviyo = validateKlaviyoConfig();
+      if (!klaviyo.ok) {
+        log(`Email blocked: ${klaviyo.error}`, "klaviyo");
+        return res.status(503).json({ message: "Email service is not configured. Please contact the site owner." });
+      }
+
+      const pdfUrl = "/downloads/the-official-firehall-red-lead-recipe.pdf";
+
+      const results = await Promise.allSettled([
+        subscribeToList(email),
+        trackLeadMagnetDownloaded(email, {
+          source: "red-lead-page",
+          lead_magnet: "red-lead-recipe",
+        }),
+      ]);
+
+      const subscribeFailed = results[0].status === "rejected";
+      const eventFailed = results[1].status === "rejected";
+
+      if (subscribeFailed) {
+        const reason = (results[0] as PromiseRejectedResult).reason?.message || "Unknown error";
+        log(`[email] subscribe failed email=${maskEmail(email)} reason="${clip(reason, 80)}"`, "klaviyo");
+      }
+      if (eventFailed) {
+        const reason = (results[1] as PromiseRejectedResult).reason?.message || "Unknown error";
+        log(`[email] track failed email=${maskEmail(email)} reason="${clip(reason, 80)}"`, "klaviyo");
+      }
+
+      if (subscribeFailed && eventFailed) {
+        const reason = (results[0] as PromiseRejectedResult).reason?.message || "Unknown error";
+        if (reason.includes("KLAVIYO_API_KEY")) {
+          return res.status(503).json({ message: "Email service is not configured. Please contact the site owner." });
+        }
+        return res.status(502).json({ message: `Email service error: ${reason}` });
+      }
+
+      if (subscribeFailed) {
+        return res.status(207).json({
+          success: true,
+          message: "Recipe sent.",
+          pdf_url: pdfUrl,
+        });
+      }
+
+      log(
+        `[email] red-lead lead-magnet sent ${formatLogFields({
+          email: maskEmail(email),
+          magnet: "red-lead-recipe",
+        })}`,
+        "email",
+      );
+      return res.json({
+        success: true,
+        message: "Recipe sent.",
+        pdf_url: pdfUrl,
+      });
+    } catch (error: any) {
+      logError("email", "red-lead lead-magnet failed", error);
+      return res.status(500).json({ message: `Failed to unlock PDF: ${error.message}` });
     }
   });
 

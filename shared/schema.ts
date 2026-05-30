@@ -152,6 +152,12 @@ export const emailShoppingListSchema = z.object({
 
 export type EmailShoppingListPayload = z.infer<typeof emailShoppingListSchema>;
 
+export const redLeadLeadMagnetSchema = z.object({
+  email: emailAddressSchema,
+});
+
+export type RedLeadLeadMagnetPayload = z.infer<typeof redLeadLeadMagnetSchema>;
+
 export interface IngredientItem {
   item: string;
   amount: string;

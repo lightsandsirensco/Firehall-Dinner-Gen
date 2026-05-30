@@ -36,6 +36,7 @@ import {
   formatTemperaturesInText,
   type MeasurementSystem,
 } from "@shared/measurements";
+import { RedLeadPdfCapture } from "@/components/red-lead/red-lead-pdf-capture";
 
 function formatIngredient(
   ing: (typeof FIREFIGHTER_RED_LEAD_RECIPE.ingredients)[number],
@@ -176,7 +177,7 @@ export default function FirefighterRedLeadRecipePage() {
                 id="red-lead-ingredients-heading"
                 className="font-heading text-xl sm:text-2xl text-foreground"
               >
-                Ingredients (tomato Red Lead skillet)
+                Ingredients (tomato Red Lead sauce)
               </h2>
               <p className="mt-3 text-sm text-muted-foreground leading-relaxed max-w-3xl">
                 Scaled for a hall table of {recipe.crewSize}. Read through once before you start the rest
@@ -226,6 +227,8 @@ export default function FirefighterRedLeadRecipePage() {
                 ))}
               </ol>
             </section>
+
+            <RedLeadPdfCapture className="mt-12" />
 
             <section className="mt-12" aria-labelledby="red-lead-serving-heading">
               <h2 id="red-lead-serving-heading" className="font-heading text-xl sm:text-2xl text-foreground">

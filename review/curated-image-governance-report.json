@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-05-30T17:33:05.026Z",
+  "generatedAt": "2026-05-30T18:20:05.022Z",
   "threshold": 72,
   "totals": {
     "recipes": 568,
     "hallCatalog": 198,
     "exploreCurated": 370,
-    "failed": 30,
+    "failed": 40,
     "buildBlockers": 0,
-    "duplicateHeroPaths": 194
+    "duplicateHeroPaths": 193
   },
   "duplicateHeroPaths": [
     {
@@ -332,13 +332,6 @@
       "slugs": [
         "pepperoni-pizza-night",
         "pepperoni-pizza-night"
-      ]
-    },
-    {
-      "hero": "/images/golden-100/coconut-curry-chicken-pot.jpg",
-      "slugs": [
-        "coconut-curry-chicken-pot",
-        "coconut-curry-chicken-pot"
       ]
     },
     {
@@ -1725,6 +1718,32 @@
     },
     {
       "source": "explore_curated",
+      "slug": "coconut-curry-chicken-pot",
+      "title": "Coconut Curry Chicken Pot",
+      "protein": "chicken",
+      "mealFormat": "one_pot",
+      "cuisine": "other",
+      "heroImage": "/images/golden-100/coconut-curry-chicken-pot.jpg",
+      "thumbImage": "/images/thumbs/coconut-curry-chicken-pot.jpg",
+      "mobileImage": "/images/mobile/coconut-curry-chicken-pot.jpg",
+      "mismatchConfidence": 82,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        },
+        {
+          "code": "format_mismatch",
+          "severity": "critical",
+          "message": "image depicts soup but meal is plated_main (Coconut Curry Chicken Pot)"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
       "slug": "crew-french-toast-bake",
       "title": "Crew French Toast Bake",
       "protein": "mixed",
@@ -1756,6 +1775,48 @@
           "code": "format_mismatch",
           "severity": "critical",
           "message": "image depicts breakfast but meal is plated_main (Crew French Toast Bake)"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
+      "slug": "easy-vegetable-beef-soup",
+      "title": "Easy Vegetable Beef Soup",
+      "protein": "beef",
+      "mealFormat": "plated_main",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/easy-vegetable-beef-soup.jpg",
+      "thumbImage": "/images/thumbs/easy-vegetable-beef-soup.jpg",
+      "mobileImage": "/images/mobile/easy-vegetable-beef-soup.jpg",
+      "mismatchConfidence": 91,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "plating_mismatch",
+          "severity": "critical",
+          "message": "plated meal but hero suggests soup or stew"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
+      "slug": "asian-chicken-noodle-soup",
+      "title": "Ginger Sesame Chicken Noodle Soup",
+      "protein": "chicken",
+      "mealFormat": "plated_main",
+      "cuisine": "asian",
+      "heroImage": "/images/golden-100/asian-chicken-noodle-soup.jpg",
+      "thumbImage": "/images/thumbs/asian-chicken-noodle-soup.jpg",
+      "mobileImage": "/images/mobile/asian-chicken-noodle-soup.jpg",
+      "mismatchConfidence": 91,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "plating_mismatch",
+          "severity": "critical",
+          "message": "plated meal but hero suggests soup or stew"
         }
       ]
     },
@@ -1874,6 +1935,53 @@
     },
     {
       "source": "explore_curated",
+      "slug": "hearty-bone-broth-chicken-noodle-soup",
+      "title": "Hearty Bone Broth Chicken Noodle Soup",
+      "protein": "chicken",
+      "mealFormat": "plated_main",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/hearty-bone-broth-chicken-noodle-soup.jpg",
+      "thumbImage": "/images/thumbs/hearty-bone-broth-chicken-noodle-soup.jpg",
+      "mobileImage": "/images/mobile/hearty-bone-broth-chicken-noodle-soup.jpg",
+      "mismatchConfidence": 93,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "format_mismatch",
+          "severity": "critical",
+          "message": "plated meal title but hero path suggests curry/stew/one-pot — never mix categories"
+        },
+        {
+          "code": "plating_mismatch",
+          "severity": "critical",
+          "message": "plated meal but hero suggests soup or stew"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
+      "slug": "hearty-leek-and-yukon-gold-potato-soup",
+      "title": "Hearty Leek and Yukon Gold Potato Soup",
+      "protein": "chicken",
+      "mealFormat": "plated_main",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/hearty-leek-and-yukon-gold-potato-soup.jpg",
+      "thumbImage": "/images/thumbs/hearty-leek-and-yukon-gold-potato-soup.jpg",
+      "mobileImage": "/images/mobile/hearty-leek-and-yukon-gold-potato-soup.jpg",
+      "mismatchConfidence": 91,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "plating_mismatch",
+          "severity": "critical",
+          "message": "plated meal but hero suggests soup or stew"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
       "slug": "high-protein-parfaits",
       "title": "High-Protein Yogurt Parfaits",
       "protein": "mixed",
@@ -1905,6 +2013,53 @@
           "code": "format_mismatch",
           "severity": "critical",
           "message": "image depicts breakfast but meal is plated_main (High-Protein Yogurt Parfaits)"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
+      "slug": "how-to-make-the-best-chili",
+      "title": "How to Make the Best Chili",
+      "protein": "beef",
+      "mealFormat": "plated_main",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/how-to-make-the-best-chili.jpg",
+      "thumbImage": "/images/thumbs/how-to-make-the-best-chili.jpg",
+      "mobileImage": "/images/mobile/how-to-make-the-best-chili.jpg",
+      "mismatchConfidence": 93,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "format_mismatch",
+          "severity": "critical",
+          "message": "plated meal title but hero path suggests curry/stew/one-pot — never mix categories"
+        },
+        {
+          "code": "plating_mismatch",
+          "severity": "critical",
+          "message": "plated meal but hero suggests soup or stew"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
+      "slug": "loaded-baked-potato-soup-with-crispy-fried-potato-skins",
+      "title": "Loaded Baked Potato Soup with Crispy-Fried Potato Skins",
+      "protein": "chicken",
+      "mealFormat": "plated_main",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/loaded-baked-potato-soup-with-crispy-fried-potato-skins.jpg",
+      "thumbImage": "/images/thumbs/loaded-baked-potato-soup-with-crispy-fried-potato-skins.jpg",
+      "mobileImage": "/images/mobile/loaded-baked-potato-soup-with-crispy-fried-potato-skins.jpg",
+      "mismatchConfidence": 91,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "plating_mismatch",
+          "severity": "critical",
+          "message": "plated meal but hero suggests soup or stew"
         }
       ]
     },
@@ -2337,6 +2492,53 @@
     },
     {
       "source": "explore_curated",
+      "slug": "superbowl-chili",
+      "title": "Superbowl Chili",
+      "protein": "chicken",
+      "mealFormat": "plated_main",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/superbowl-chili.jpg",
+      "thumbImage": "/images/thumbs/superbowl-chili.jpg",
+      "mobileImage": "/images/mobile/superbowl-chili.jpg",
+      "mismatchConfidence": 93,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "format_mismatch",
+          "severity": "critical",
+          "message": "plated meal title but hero path suggests curry/stew/one-pot — never mix categories"
+        },
+        {
+          "code": "plating_mismatch",
+          "severity": "critical",
+          "message": "plated meal but hero suggests soup or stew"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
+      "slug": "tangy-savory-mexican-soup",
+      "title": "Tangy & Savory Mexican Soup",
+      "protein": "beef",
+      "mealFormat": "plated_main",
+      "cuisine": "mexican",
+      "heroImage": "/images/golden-100/tangy-savory-mexican-soup.jpg",
+      "thumbImage": "/images/thumbs/tangy-savory-mexican-soup.jpg",
+      "mobileImage": "/images/mobile/tangy-savory-mexican-soup.jpg",
+      "mismatchConfidence": 91,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "plating_mismatch",
+          "severity": "critical",
+          "message": "plated meal but hero suggests soup or stew"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
       "slug": "turkey-sausage-egg-bake",
       "title": "Turkey Sausage Egg Bake",
       "protein": "other",
@@ -2409,6 +2611,27 @@
           "code": "format_mismatch",
           "severity": "critical",
           "message": "image depicts breakfast but meal is breakfast (Veggie Egg Burritos)"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
+      "slug": "white-bean-and-garlic-soup-with-spinach-and-crispy-prosciutto-and-rosemary-garli",
+      "title": "White Bean and Garlic Soup with Spinach and Crispy Prosciutto and Rosemary-Garlic Toasts",
+      "protein": "chicken",
+      "mealFormat": "plated_main",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/white-bean-and-garlic-soup-with-spinach-and-crispy-prosciutto-and-rosemary-garli.jpg",
+      "thumbImage": "/images/thumbs/white-bean-and-garlic-soup-with-spinach-and-crispy-prosciutto-and-rosemary-garli.jpg",
+      "mobileImage": "/images/mobile/white-bean-and-garlic-soup-with-spinach-and-crispy-prosciutto-and-rosemary-garli.jpg",
+      "mismatchConfidence": 91,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "plating_mismatch",
+          "severity": "critical",
+          "message": "plated meal but hero suggests soup or stew"
         }
       ]
     }
@@ -2695,6 +2918,21 @@
       "heroImage": "/images/golden-100/beef-dip.jpg",
       "thumbImage": "/images/thumbs/beef-dip.jpg",
       "mobileImage": "/images/mobile/beef-dip.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "boneless-chicken-thighs-sweet-potato-spinach",
+      "title": "Boneless Chicken Thighs with Sweet Potato & Fresh Spinach",
+      "protein": "chicken",
+      "mealFormat": "plated_main",
+      "cuisine": "American",
+      "heroImage": "/images/golden-100/boneless-chicken-thighs-sweet-potato-spinach.jpg",
+      "thumbImage": "/images/thumbs/boneless-chicken-thighs-sweet-potato-spinach.jpg",
+      "mobileImage": "/images/mobile/boneless-chicken-thighs-sweet-potato-spinach.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -3127,21 +3365,6 @@
       "heroImage": "/images/golden-100/pepperoni-pizza-night.jpg",
       "thumbImage": "/images/thumbs/pepperoni-pizza-night.jpg",
       "mobileImage": "/images/mobile/pepperoni-pizza-night.jpg",
-      "mismatchConfidence": 0,
-      "pass": true,
-      "needsManualReview": false,
-      "mismatches": []
-    },
-    {
-      "source": "hall_catalog",
-      "slug": "coconut-curry-chicken-pot",
-      "title": "Coconut Curry Chicken Pot",
-      "protein": "chicken",
-      "mealFormat": "one_pot",
-      "cuisine": "Thai-inspired",
-      "heroImage": "/images/golden-100/coconut-curry-chicken-pot.jpg",
-      "thumbImage": "/images/thumbs/coconut-curry-chicken-pot.jpg",
-      "mobileImage": "/images/mobile/coconut-curry-chicken-pot.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -7764,14 +7987,19 @@
       "heroImage": "/images/golden-100/coconut-curry-chicken-pot.jpg",
       "thumbImage": "/images/thumbs/coconut-curry-chicken-pot.jpg",
       "mobileImage": "/images/mobile/coconut-curry-chicken-pot.jpg",
-      "mismatchConfidence": 45,
-      "pass": true,
+      "mismatchConfidence": 82,
+      "pass": false,
       "needsManualReview": true,
       "mismatches": [
         {
           "code": "unapproved_image",
           "severity": "warning",
           "message": "image not marked approved — treat as manual review"
+        },
+        {
+          "code": "format_mismatch",
+          "severity": "critical",
+          "message": "image depicts soup but meal is plated_main (Coconut Curry Chicken Pot)"
         }
       ]
     },
@@ -8322,10 +8550,16 @@
       "heroImage": "/images/golden-100/easy-vegetable-beef-soup.jpg",
       "thumbImage": "/images/thumbs/easy-vegetable-beef-soup.jpg",
       "mobileImage": "/images/mobile/easy-vegetable-beef-soup.jpg",
-      "mismatchConfidence": 0,
-      "pass": true,
-      "needsManualReview": false,
-      "mismatches": []
+      "mismatchConfidence": 91,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "plating_mismatch",
+          "severity": "critical",
+          "message": "plated meal but hero suggests soup or stew"
+        }
+      ]
     },
     {
       "source": "explore_curated",
@@ -8865,10 +9099,16 @@
       "heroImage": "/images/golden-100/asian-chicken-noodle-soup.jpg",
       "thumbImage": "/images/thumbs/asian-chicken-noodle-soup.jpg",
       "mobileImage": "/images/mobile/asian-chicken-noodle-soup.jpg",
-      "mismatchConfidence": 0,
-      "pass": true,
-      "needsManualReview": false,
-      "mismatches": []
+      "mismatchConfidence": 91,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "plating_mismatch",
+          "severity": "critical",
+          "message": "plated meal but hero suggests soup or stew"
+        }
+      ]
     },
     {
       "source": "explore_curated",
@@ -9632,10 +9872,21 @@
       "heroImage": "/images/golden-100/hearty-bone-broth-chicken-noodle-soup.jpg",
       "thumbImage": "/images/thumbs/hearty-bone-broth-chicken-noodle-soup.jpg",
       "mobileImage": "/images/mobile/hearty-bone-broth-chicken-noodle-soup.jpg",
-      "mismatchConfidence": 0,
-      "pass": true,
-      "needsManualReview": false,
-      "mismatches": []
+      "mismatchConfidence": 93,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "format_mismatch",
+          "severity": "critical",
+          "message": "plated meal title but hero path suggests curry/stew/one-pot — never mix categories"
+        },
+        {
+          "code": "plating_mismatch",
+          "severity": "critical",
+          "message": "plated meal but hero suggests soup or stew"
+        }
+      ]
     },
     {
       "source": "explore_curated",
@@ -9647,10 +9898,16 @@
       "heroImage": "/images/golden-100/hearty-leek-and-yukon-gold-potato-soup.jpg",
       "thumbImage": "/images/thumbs/hearty-leek-and-yukon-gold-potato-soup.jpg",
       "mobileImage": "/images/mobile/hearty-leek-and-yukon-gold-potato-soup.jpg",
-      "mismatchConfidence": 0,
-      "pass": true,
-      "needsManualReview": false,
-      "mismatches": []
+      "mismatchConfidence": 91,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "plating_mismatch",
+          "severity": "critical",
+          "message": "plated meal but hero suggests soup or stew"
+        }
+      ]
     },
     {
       "source": "explore_curated",
@@ -9982,10 +10239,21 @@
       "heroImage": "/images/golden-100/how-to-make-the-best-chili.jpg",
       "thumbImage": "/images/thumbs/how-to-make-the-best-chili.jpg",
       "mobileImage": "/images/mobile/how-to-make-the-best-chili.jpg",
-      "mismatchConfidence": 0,
-      "pass": true,
-      "needsManualReview": false,
-      "mismatches": []
+      "mismatchConfidence": 93,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "format_mismatch",
+          "severity": "critical",
+          "message": "plated meal title but hero path suggests curry/stew/one-pot — never mix categories"
+        },
+        {
+          "code": "plating_mismatch",
+          "severity": "critical",
+          "message": "plated meal but hero suggests soup or stew"
+        }
+      ]
     },
     {
       "source": "explore_curated",
@@ -10555,10 +10823,16 @@
       "heroImage": "/images/golden-100/loaded-baked-potato-soup-with-crispy-fried-potato-skins.jpg",
       "thumbImage": "/images/thumbs/loaded-baked-potato-soup-with-crispy-fried-potato-skins.jpg",
       "mobileImage": "/images/mobile/loaded-baked-potato-soup-with-crispy-fried-potato-skins.jpg",
-      "mismatchConfidence": 0,
-      "pass": true,
-      "needsManualReview": false,
-      "mismatches": []
+      "mismatchConfidence": 91,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "plating_mismatch",
+          "severity": "critical",
+          "message": "plated meal but hero suggests soup or stew"
+        }
+      ]
     },
     {
       "source": "explore_curated",
@@ -13386,10 +13660,21 @@
       "heroImage": "/images/golden-100/superbowl-chili.jpg",
       "thumbImage": "/images/thumbs/superbowl-chili.jpg",
       "mobileImage": "/images/mobile/superbowl-chili.jpg",
-      "mismatchConfidence": 0,
-      "pass": true,
-      "needsManualReview": false,
-      "mismatches": []
+      "mismatchConfidence": 93,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "format_mismatch",
+          "severity": "critical",
+          "message": "plated meal title but hero path suggests curry/stew/one-pot — never mix categories"
+        },
+        {
+          "code": "plating_mismatch",
+          "severity": "critical",
+          "message": "plated meal but hero suggests soup or stew"
+        }
+      ]
     },
     {
       "source": "explore_curated",
@@ -13437,10 +13722,16 @@
       "heroImage": "/images/golden-100/tangy-savory-mexican-soup.jpg",
       "thumbImage": "/images/thumbs/tangy-savory-mexican-soup.jpg",
       "mobileImage": "/images/mobile/tangy-savory-mexican-soup.jpg",
-      "mismatchConfidence": 0,
-      "pass": true,
-      "needsManualReview": false,
-      "mismatches": []
+      "mismatchConfidence": 91,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "plating_mismatch",
+          "severity": "critical",
+          "message": "plated meal but hero suggests soup or stew"
+        }
+      ]
     },
     {
       "source": "explore_curated",
@@ -14018,10 +14309,16 @@
       "heroImage": "/images/golden-100/white-bean-and-garlic-soup-with-spinach-and-crispy-prosciutto-and-rosemary-garli.jpg",
       "thumbImage": "/images/thumbs/white-bean-and-garlic-soup-with-spinach-and-crispy-prosciutto-and-rosemary-garli.jpg",
       "mobileImage": "/images/mobile/white-bean-and-garlic-soup-with-spinach-and-crispy-prosciutto-and-rosemary-garli.jpg",
-      "mismatchConfidence": 0,
-      "pass": true,
-      "needsManualReview": false,
-      "mismatches": []
+      "mismatchConfidence": 91,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "plating_mismatch",
+          "severity": "critical",
+          "message": "plated meal but hero suggests soup or stew"
+        }
+      ]
     },
     {
       "source": "explore_curated",

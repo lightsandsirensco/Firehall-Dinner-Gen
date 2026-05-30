@@ -8,7 +8,7 @@ const PATH_SIGNAL_RULES: Array<{ signal: MealVisualSignal; re: RegExp }> = [
   { signal: "bowl", re: /\b(bowl|rice-bowl|grain-bowl|bibimbap|poke)\b/i },
   { signal: "skillet", re: /\b(skillet|one-pan|one_pot|cast-iron)\b/i },
   { signal: "stir_fry", re: /\b(stir-fry|stir_fry|wok)\b/i },
-  { signal: "soup", re: /\b(soup|chili|chowder|stew|bisque)\b/i },
+  { signal: "soup", re: /\b(soup|chili|chowder|stew|bisque|curry|broth)\b/i },
   { signal: "sandwich", re: /\b(sandwich|sub|hoagie|panini)\b/i },
   { signal: "sandwich", re: /\b(lettuce-cup|lettuce-wrap|lettuce_cup|lettuce_wrap)\b/i },
   { signal: "salad", re: /\b(salad|caesar|greens)\b/i },

@@ -153,6 +153,12 @@ export function summarizeJsonBody(
       ok: body.success === true,
     });
   }
+  if (path.includes("/lead-magnet/red-lead")) {
+    return formatLogFields({
+      magnet: "red-lead-recipe",
+      ok: body.success === true,
+    });
+  }
   if (typeof body.message === "string") {
     return formatLogFields({ message: clip(body.message, 120) });
   }

@@ -285,3 +285,54 @@ export async function trackShoppingListEvent(
     "klaviyo",
   );
 }
+
+export async function trackLeadMagnetDownloaded(
+  email: string,
+  properties: {
+    source: string;
+    lead_magnet: string;
+  },
+): Promise<void> {
+  const result = await klaviyoFetch(
+    "POST",
+    `${KLAVIYO_BASE}/events/`,
+    {
+      data: {
+        type: "event",
+        attributes: {
+          properties: {
+            source: properties.source,
+            lead_magnet: properties.lead_magnet,
+          },
+          metric: {
+            data: {
+              type: "metric",
+              attributes: {
+                name: "Lead Magnet Downloaded",
+              },
+            },
+          },
+          profile: {
+            data: {
+              type: "profile",
+              attributes: {
+                email,
+              },
+            },
+          },
+        },
+      },
+    },
+    `trackEvent(Lead Magnet Downloaded, ${email})`,
+  );
+
+  if (!result.ok) {
+    const detail = result.data?.errors?.[0]?.detail || result.raw.substring(0, 200);
+    throw new Error(`Track lead magnet event failed (${result.status}): ${detail}`);
+  }
+
+  log(
+    `[klaviyo] event=LeadMagnetDownloaded email=${maskEmail(email)} source="${clip(properties.source, 40)}" magnet="${clip(properties.lead_magnet, 40)}"`,
+    "klaviyo",
+  );
+}

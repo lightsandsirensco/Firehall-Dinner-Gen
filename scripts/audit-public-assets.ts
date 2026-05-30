@@ -26,6 +26,7 @@ const SCAN_FILES = [path.join(ROOT, "client", "index.html")];
 const REQUIRED_ASSETS = [
   "/downloads/the-official-firehall-red-lead-recipe.html",
   "/downloads/the-official-firehall-red-lead-recipe.pdf",
+  "/downloads/the-official-firehall-red-lead-recipe-preview.jpg",
 ] as const;
 
 const PATH_RE =

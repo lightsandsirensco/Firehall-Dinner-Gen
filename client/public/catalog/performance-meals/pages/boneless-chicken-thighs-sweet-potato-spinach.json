@@ -1,0 +1,180 @@
+{
+  "slug": "boneless-chicken-thighs-sweet-potato-spinach",
+  "title": "Boneless Chicken Thighs with Sweet Potato & Fresh Spinach",
+  "displayTitle": "Boneless Chicken Thighs with Sweet Potato & Fresh Spinach",
+  "seoTitle": "Boneless Chicken Thighs with Sweet Potato & Fresh Spinach | Firefighter Meal",
+  "shortDescription": "Seared thighs with roasted sweet potato and garlicky spinach",
+  "subtitle": "Seared thighs with roasted sweet potato and garlicky spinach",
+  "category": "healthy_performance",
+  "cuisine": "American",
+  "description": "Boneless chicken thighs sear golden in a hot skillet while sweet potato wedges roast until caramelized. Fresh spinach hits garlic oil at the line for a complete performance plate.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 35,
+  "prepTime": 20,
+  "difficulty": "medium",
+  "calories": 485,
+  "protein": 42,
+  "carbs": 32,
+  "fats": 22,
+  "tags": [
+    "protein:chicken",
+    "format:plated_main",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "Two half-sheet pans",
+    "Large skillets",
+    "Instant-read thermometer"
+  ],
+  "ingredients": [
+    {
+      "name": "boneless chicken thighs",
+      "quantity": "4",
+      "unit": "lb",
+      "notes": "trimmed, patted dry"
+    },
+    {
+      "name": "sweet potatoes",
+      "quantity": "3",
+      "unit": "lb",
+      "notes": "peeled, cut into 1-inch wedges"
+    },
+    {
+      "name": "fresh spinach",
+      "quantity": "8",
+      "unit": "cups",
+      "notes": "packed"
+    },
+    {
+      "name": "extra-virgin olive oil",
+      "quantity": "0.25",
+      "unit": "cup"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "6",
+      "unit": "cloves",
+      "notes": "minced"
+    },
+    {
+      "name": "smoked paprika",
+      "quantity": "2",
+      "unit": "tsp"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "1.5",
+      "unit": "tbsp"
+    },
+    {
+      "name": "black pepper",
+      "quantity": "1",
+      "unit": "tsp"
+    },
+    {
+      "name": "lemon",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "cut into wedges"
+    },
+    {
+      "name": "red pepper flakes",
+      "quantity": "0.5",
+      "unit": "tsp",
+      "notes": "optional"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Season and prep thighs",
+      "instruction": "Trim excess fat from thighs and pat completely dry. Season both sides with salt, pepper, and half the paprika so the sear builds a spiced crust.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Roast sweet potato wedges",
+      "instruction": "Toss wedges with 2 tbsp olive oil, 1 tsp salt, and paprika. Spread on two half-sheets in a single layer. Roast at 425°F 28–32 minutes until edges caramelize and centers pierce easily.",
+      "minutes": 32,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Sear chicken thighs",
+      "instruction": "Heat remaining oil in skillets over medium-high. Season thighs with salt and pepper. Sear 5–6 minutes per side until deep golden with crisp edges and internal temp reaches 165°F. Rest 5 minutes, then slice.",
+      "minutes": 14,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Sauté spinach",
+      "instruction": "In the same pan over medium, cook garlic 30 seconds until fragrant. Add spinach in batches, tossing until just wilted and bright green. Finish with a pinch of salt and lemon juice.",
+      "minutes": 4,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Plate for service",
+      "instruction": "Portion two sliced thighs per plate with a mound of sweet potato wedges and sautéed spinach on the side. Protein should dominate the plate; vegetables and carbs stay distinct, not mixed into sauce.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Swap half the paprika for cumin if crews want a warmer spice profile.",
+    "Hold roasted wedges in a 200°F oven while batch-searing thighs on busy nights.",
+    "Offer hot sauce at the line—keeps the plate lean without extra fat."
+  ],
+  "tonightSpread": [
+    "Simple green salad with lemon.",
+    "Brown rice for crews wanting extra carbs."
+  ],
+  "leftovers": [
+    "Slice thighs over spinach for next-day power bowls.",
+    "Re-crisp sweet potato wedges in a hot oven 8 minutes."
+  ],
+  "whyCrewsLikeIt": "Clean protein-forward plate without stew vibes. Thighs stay juicy, sweet potato fuels the shift, spinach adds volume without feeling like diet food.",
+  "mealPrepNotes": "Cut sweet potato wedges uniform for even roasting. Pat thighs completely dry before searing. Station: Roast sweet potatoes first—they hold hot while thighs sear to order. Station: Sear thighs in batches; crowded pans steam instead of brown. Station: Wilt spinach off heat so it stays bright green at service.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 485,
+    "protein": 42,
+    "carbs": 32,
+    "fats": 22,
+    "label": "~485 cal/serving · 42g protein · 6g fiber (est.)"
+  },
+  "heroImage": "/images/golden-100/boneless-chicken-thighs-sweet-potato-spinach.jpg",
+  "mobileImage": "/images/mobile/boneless-chicken-thighs-sweet-potato-spinach.jpg",
+  "thumbImage": "/images/thumbs/boneless-chicken-thighs-sweet-potato-spinach.jpg",
+  "railImage": "/images/rails/boneless-chicken-thighs-sweet-potato-spinach.jpg",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "boneless chicken thighs with sweet potato & fresh spinach",
+    "boneless chicken thighs sweet potato spinach",
+    "chicken",
+    "American",
+    "plated main",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "lemon-garlic-chicken-tray",
+    "sheet-pan-chicken-fajitas-lite",
+    "honey-garlic-chicken-rice-bowls",
+    "white-bean-chicken-chili",
+    "crock-barbacoa-chicken",
+    "shawarma-chicken-rice-bowls"
+  ],
+  "generatedAt": "2026-05-30T18:19:44.152Z",
+  "contentVersion": 2
+}

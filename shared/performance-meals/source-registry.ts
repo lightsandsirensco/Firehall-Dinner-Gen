@@ -101,7 +101,7 @@ export const PERFORMANCE_SOURCE_CANDIDATES: PerformanceSourceRecord[] = [
 
   // ── Bon Appétit / NYT (technique + flavor) ──
   cand("ba-01", "Bon Appétit", "https://www.bonappetit.com/recipe/pesto-chicken/", "Pesto Chicken Tray", "sheet_pan", "balanced", "Tomato pesto roast", true, "pesto-tomato-chicken-tray", 87, "Oven line, colorful"),
-  cand("ba-02", "Bon Appétit", "https://www.bonappetit.com/recipe/coconut-curry/", "Coconut Curry Chicken", "one_pot", "balanced", "One pot curry", true, "coconut-curry-chicken-pot", 88, "One pot, holds well"),
+  cand("ba-02", "Bon Appétit", "https://www.bonappetit.com/recipe/coconut-curry/", "Coconut Curry Chicken", "plated_main", "high_protein", "Seared thighs + roasted sweet potato", true, "boneless-chicken-thighs-sweet-potato-spinach", 88, "Performance plate, holds well"),
   cand("nyt-01", "NYT Cooking", "https://cooking.nytimes.com/recipes/spanish-chicken-rice", "Spanish Chicken & Rice", "one_pot", "balanced", "Chorizo + rice", true, "spanish-chicken-chorizo-rice", 86, "One pot paella vibe"),
   cand("nyt-02", "NYT Cooking", "https://cooking.nytimes.com/recipes/yogurt-marinated-chicken", "Yogurt Marinated Chicken", "grill", "high_protein", "Grill batch", true, "yogurt-marinated-grill-chicken", 89, "Tender grill chicken"),
   cand("nyt-03", "NYT Cooking", "https://cooking.nytimes.com/recipes/lentil-mushroom-ragu", "Lentil Mushroom Bolognese", "pasta", "plant_forward", "Veg pasta night", true, "lentil-mushroom-bolognese", 84, "Plant pasta with depth"),

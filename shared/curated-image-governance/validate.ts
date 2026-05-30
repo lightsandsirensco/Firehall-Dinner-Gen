@@ -1,5 +1,7 @@
 import { heroPathConflictsTitle } from "../meal-image-title-match.js";
 import { titleClaimsTacos } from "../meal-format-contract.js";
+import { validateRedLeadImageRef } from "./red-lead-rules.js";
+import { validateServingStyleImageMatch } from "./serving-style-rules.js";
 import {
   inferPlatingTypeFromHeroPath,
   platingTypesConflict,
@@ -182,6 +184,19 @@ export function validateCuratedImageGovernance(
     mismatchConfidence = Math.max(mismatchConfidence, 88);
   }
 
+  const redLeadRule = validateRedLeadImageRef(profile.title, hero, input.heroAlt || "");
+  if (!redLeadRule.ok && redLeadRule.forbidden) {
+    mismatches.push(
+      mismatch("format_mismatch", "critical", redLeadRule.forbidden, 96, "hero"),
+    );
+    mismatchConfidence = Math.max(mismatchConfidence, 96);
+  } else if (!redLeadRule.ok && redLeadRule.missingRequired) {
+    mismatches.push(
+      mismatch("format_mismatch", "critical", redLeadRule.missingRequired, 94, "hero"),
+    );
+    mismatchConfidence = Math.max(mismatchConfidence, 94);
+  }
+
   const depictedPlating = hero ? inferPlatingTypeFromHeroPath(hero, input.heroAlt || profile.title) : null;
   if (
     depictedPlating &&
@@ -243,6 +258,16 @@ export function validateCuratedImageGovernance(
       ),
     );
     mismatchConfidence = Math.max(mismatchConfidence, 90);
+  }
+
+  for (const servingMismatch of validateServingStyleImageMatch({
+    profile,
+    heroImage: hero,
+    heroAlt: input.heroAlt,
+    tags,
+  })) {
+    mismatches.push({ ...servingMismatch, field: "hero" });
+    mismatchConfidence = Math.max(mismatchConfidence, servingMismatch.confidence);
   }
 
   const titleDominant = [...profile.visualSignals].find((s) => s !== "generic");

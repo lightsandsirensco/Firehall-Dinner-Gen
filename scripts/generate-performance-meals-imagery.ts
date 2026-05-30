@@ -28,6 +28,10 @@ import { initCuratedRecipeStore } from "../server/curated-recipe-store.js";
 import { flushSqliteToDisk } from "../server/sqlite.js";
 
 import { PERFORMANCE_ADAPTED_RECIPES } from "../shared/performance-meals/adapted/index.js";
+import {
+  PERFORMANCE_MEAL_IMAGERY_NEGATIVE_OVERRIDES,
+  PERFORMANCE_MEAL_IMAGERY_PROMPT_OVERRIDES,
+} from "../shared/performance-meals/imagery-prompt-overrides.js";
 
 import { buildEditorialImagePrompt, buildEditorialModelPrompt } from "../server/imagery/build-image-prompt.js";
 import { generateFoodImageBuffer } from "../server/food-imagery/generator.js";
@@ -62,6 +66,16 @@ function parseArgs(argv: string[]) {
     ? new Set(onlyArg.replace("--only=", "").split(",").map((s) => s.trim()).filter(Boolean))
     : null;
   return { dryRun, force, approve, skipQaFail, limit, onlySlugs };
+}
+
+function withPerformancePromptOverrides(slug: string, modelPrompt: string): string {
+  const extra = PERFORMANCE_MEAL_IMAGERY_PROMPT_OVERRIDES[slug];
+  const negatives = PERFORMANCE_MEAL_IMAGERY_NEGATIVE_OVERRIDES[slug];
+  if (!extra?.length && !negatives?.length) return modelPrompt;
+  const parts = [modelPrompt];
+  if (extra?.length) parts.push(extra.join(". "));
+  if (negatives?.length) parts.push(`Avoid: ${negatives.join(", ")}`);
+  return parts.join(" ");
 }
 
 function targetsFromPerformance(only: Set<string> | null): ImageryTarget[] {
@@ -143,16 +157,19 @@ async function main(): Promise<void> {
     }
 
     try {
-      const modelPrompt = buildEditorialModelPrompt({
-        mealName: t.title,
-        category: "performance_meals",
-        cuisine: t.cuisine,
-        protein: t.protein,
-        mealFormat: t.mealFormat,
-        stylePreset: promptResult.stylePreset,
-        hookLine: t.hookLine,
-        ingredientHints: t.ingredientHints,
-      });
+      const modelPrompt = withPerformancePromptOverrides(
+        t.slug,
+        buildEditorialModelPrompt({
+          mealName: t.title,
+          category: "performance_meals",
+          cuisine: t.cuisine,
+          protein: t.protein,
+          mealFormat: t.mealFormat,
+          stylePreset: promptResult.stylePreset,
+          hookLine: t.hookLine,
+          ingredientHints: t.ingredientHints,
+        }),
+      );
 
       const buf = await generateFoodImageBuffer(modelPrompt, DEFAULT_HERO_GENERATION_SIZE);
       const heuristic = validateImageBufferHeuristic(buf);

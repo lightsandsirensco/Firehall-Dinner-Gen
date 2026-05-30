@@ -1,7 +1,7 @@
 {
   "version": 1,
   "contentVersion": 2,
-  "generatedAt": "2026-05-30T03:14:17.760Z",
+  "generatedAt": "2026-05-30T18:19:44.200Z",
   "recipeCount": 50,
   "recipes": [
     {
@@ -1136,20 +1136,20 @@
       ]
     },
     {
-      "slug": "coconut-curry-chicken-pot",
-      "title": "Coconut Curry Chicken Pot",
-      "subtitle": "One-pot chicken with coconut milk, sweet potato, and spinach",
+      "slug": "boneless-chicken-thighs-sweet-potato-spinach",
+      "title": "Boneless Chicken Thighs with Sweet Potato & Fresh Spinach",
+      "subtitle": "Seared thighs with roasted sweet potato and garlicky spinach",
       "category": "healthy_performance",
-      "cuisine": "Thai-inspired",
+      "cuisine": "American",
       "protein": "chicken",
-      "mealFormat": "one_pot",
+      "mealFormat": "plated_main",
       "cookTime": 35,
       "difficulty": "medium",
-      "heroImage": "/images/golden-100/coconut-curry-chicken-pot.jpg",
-      "thumbImage": "/images/thumbs/coconut-curry-chicken-pot.jpg",
+      "heroImage": "/images/golden-100/boneless-chicken-thighs-sweet-potato-spinach.jpg",
+      "thumbImage": "/images/thumbs/boneless-chicken-thighs-sweet-potato-spinach.jpg",
       "tags": [
         "protein:chicken",
-        "format:one_pot",
+        "format:plated_main",
         "category:healthy_performance",
         "healthy",
         "performance_meals_50",
@@ -1160,10 +1160,11 @@
       "firefighterScore": 83,
       "popularityWeight": 7.5,
       "searchTerms": [
-        "coconut curry chicken pot",
+        "boneless chicken thighs with sweet potato & fresh spinach",
+        "boneless chicken thighs sweet potato spinach",
         "chicken",
-        "Thai-inspired",
-        "one pot",
+        "American",
+        "plated main",
         "performance meal",
         "firefighter healthy"
       ]
