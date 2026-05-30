@@ -6,6 +6,7 @@ import { serveStatic } from "./static";
 import { createServer } from "http";
 import { log, logError, summarizeJsonBody, shouldLogHttpRequest } from "./logger";
 import { configureTrustProxy } from "./client-ip.js";
+import { enforceCanonicalHostRedirect } from "./canonical-host-redirect.js";
 
 export {
   log,
@@ -24,6 +25,7 @@ const app = express();
 const httpServer = createServer(app);
 
 configureTrustProxy(app);
+enforceCanonicalHostRedirect(app);
 
 declare module "http" {
   interface IncomingMessage {

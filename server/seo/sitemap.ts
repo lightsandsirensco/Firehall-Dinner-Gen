@@ -9,6 +9,7 @@ import { PERFORMANCE_CATALOG_PUBLIC_DIR } from "../performance-meals/page-store.
 import { HALL_EXPANSION_CATALOG_PUBLIC_DIR } from "../hall-expansion/page-store.js";
 import { SMOOTHIE_CATALOG_PUBLIC_DIR } from "../fuel-catalog/page-store.js";
 import { SEO_CANONICAL_ORIGIN } from "../../shared/seo/constants.js";
+import { normalizePublicSiteOrigin } from "../../shared/seo/urls.js";
 import { allSeoLandingPagePaths } from "../../shared/seo/landing-pages-data.js";
 import { EDITORIAL_PUBLIC_DIR } from "../editorial/page-store.js";
 import { guidePath } from "../../shared/editorial/content-schema.js";
@@ -20,11 +21,12 @@ export function resolvePublicSiteOrigin(reqHost?: string, forwardedProto?: strin
     process.env.REPLIT_DEPLOYMENT_URL?.trim();
   if (fromEnv) {
     const base = fromEnv.replace(/\/+$/, "");
-    return /^https?:\/\//i.test(base) ? base : `https://${base}`;
+    const origin = /^https?:\/\//i.test(base) ? base : `https://${base}`;
+    return normalizePublicSiteOrigin(origin);
   }
   if (reqHost) {
     const proto = forwardedProto === "http" ? "http" : "https";
-    return `${proto}://${reqHost.replace(/\/+$/, "")}`;
+    return normalizePublicSiteOrigin(`${proto}://${reqHost.replace(/\/+$/, "")}`);
   }
   return SEO_CANONICAL_ORIGIN;
 }
