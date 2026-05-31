@@ -11,7 +11,10 @@ export type ImageAccuracyIssue = {
     | "duplicate_hero_hash"
     | "donor_override_active"
     | "missing_image_file"
-    | "explore_card_mismatch";
+    | "explore_card_mismatch"
+    | "image_title_mismatch"
+    | "generic_substitute_meal"
+    | "donor_image_forbidden";
   severity: "critical" | "warning" | "info";
   message: string;
   confidence: number;

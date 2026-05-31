@@ -1,7 +1,7 @@
 {
   "version": 1,
   "contentVersion": 2,
-  "generatedAt": "2026-05-30T18:19:44.200Z",
+  "generatedAt": "2026-05-31T15:28:14.337Z",
   "recipeCount": 50,
   "recipes": [
     {
@@ -440,8 +440,8 @@
     },
     {
       "slug": "crock-barbacoa-chicken",
-      "title": "Crock Barbacoa Chicken",
-      "subtitle": "Slow-cooked chipotle chicken that shreds for tacos and bowls",
+      "title": "Crock Barbacoa Chicken With Potato Wedges",
+      "subtitle": "Slow-cooked chipotle barbacoa with crispy roasted potato wedges",
       "category": "healthy_performance",
       "cuisine": "Mexican",
       "protein": "chicken",
@@ -460,9 +460,10 @@
         "high_protein",
         "healthy"
       ],
-      "firefighterScore": 83,
+      "firefighterScore": 87,
       "popularityWeight": 7.5,
       "searchTerms": [
+        "crock barbacoa chicken with potato wedges",
         "crock barbacoa chicken",
         "chicken",
         "Mexican",

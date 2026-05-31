@@ -220,6 +220,7 @@ import { pickStructure, trackStructure, STRUCTURE_DISPLAY, type StructureType } 
 import { log, logVerbose, logError, clip, formatLogFields, maskEmail } from "./logger";
 import { requireAdmin } from "./admin-auth.js";
 import { requireCsrf } from "./csrf.js";
+import { registerAnalyticsRoutes } from "./analytics/analytics-routes.js";
 import {
   sanitizeClientGenerationMeta,
   sanitizeGenerateRequest,
@@ -327,6 +328,8 @@ export async function registerRoutes(
     }
     next();
   });
+
+  registerAnalyticsRoutes(app);
 
   app.use((req: Request, res: Response, next: NextFunction) => {
     if (req.method === "GET") {

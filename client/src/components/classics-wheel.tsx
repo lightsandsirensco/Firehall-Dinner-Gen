@@ -17,6 +17,7 @@ import { pickWheelLandLine, pickWheelIntro, pickWheelSuspense } from "@/lib/whee
 import { MealTrustBadges } from "@/components/trust/meal-trust-badges";
 import { MealShareCard, shareMealNative } from "@/components/share/meal-share-card";
 import { Share2 } from "lucide-react";
+import { trackWheelRecipeOpen } from "@/lib/analytics";
 import { MealHeroImage } from "@/components/meal-hero-image";
 import { cn } from "@/lib/utils";
 
@@ -266,6 +267,7 @@ export function WheelReveal({
   }, [classic]);
 
   const handleShare = async () => {
+    trackWheelRecipeOpen({ slug: classic.slug, title: classic.title, action: "share" });
     await shareMealNative({
       title: classic.title,
       text: `${intro} ${classic.title} — ${landLine}`,

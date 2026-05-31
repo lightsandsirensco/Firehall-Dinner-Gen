@@ -86,57 +86,36 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Za'atar Roasted Chicken Thighs in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Mix za'atar oil",
-      "instruction": "Stir za'atar, olive oil, lemon juice, salt, and pepper until combined into a loose paste that coats the back of a spoon evenly. Plan about 3 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Stir za'atar, olive oil, lemon juice, salt, and pepper until combined into a loose paste that coats the back of a spoon evenly.",
       "minutes": 3,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Coat chicken and onion",
-      "instruction": "Pat thighs dry. Rub generously with za'atar oil. Nest among onion slices and garlic on two half-sheets, skin-side up. Plan about 8 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Pat thighs dry. Rub generously with za'atar oil. Nest among onion slices and garlic on two half-sheets, skin-side up.",
       "minutes": 8,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Roast until crisp",
-      "instruction": "Roast at 425°F 35–40 minutes until skin is deep golden, za'atar fragrant, and internal temp hits 165°F at the thickest point. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Roast at 425°F 35–40 minutes until skin is deep golden, za'atar fragrant, and internal temp hits 165°F at the thickest point.",
       "minutes": 38,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Rest with lemon wedges",
-      "instruction": "Rest 5 minutes. Tuck lemon wedges on tray for squeezing. Onion should be soft with charred edges; skin should crackle lightly. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Rest 5 minutes. Tuck lemon wedges on tray for squeezing. Onion should be soft with charred edges; skin should crackle lightly.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
+      "stepNumber": 5,
       "title": "Garnish and portion",
-      "instruction": "Scatter parsley over tray before portioning. Pan juices should smell lemony and herbal, not acrid or burnt. Plan about 3 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Scatter parsley over tray before portioning. Pan juices should smell lemony and herbal, not acrid or burnt.",
       "minutes": 3,
       "heatLevel": ""
     }
@@ -189,6 +168,6 @@
     "crock-barbacoa-chicken",
     "shawarma-chicken-rice-bowls"
   ],
-  "generatedAt": "2026-05-30T18:19:44.152Z",
+  "generatedAt": "2026-05-31T15:28:14.291Z",
   "contentVersion": 2
 }

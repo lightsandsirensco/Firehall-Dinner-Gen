@@ -104,57 +104,36 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for White Bean Chicken Chili in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Poach and shred chicken",
-      "instruction": "Simmer chicken breasts in 4 cups broth 15–18 minutes until internal temp hits 165°F. Rest 5 minutes, then shred into bite-size strands with two forks. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Simmer chicken breasts in 4 cups broth 15–18 minutes until internal temp hits 165°F. Rest 5 minutes, then shred into bite-size strands with two forks.",
       "minutes": 20,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Sweat onion and garlic",
-      "instruction": "In a large pot, sauté onion in 1 tbsp oil over medium heat 5–6 minutes until translucent. Add garlic and cumin; cook 1 minute until fragrant. Target 165°F at the thickest part before moving to the next batch. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "In a large pot, sauté onion in 1 tbsp oil over medium heat 5–6 minutes until translucent. Add garlic and cumin; cook 1 minute until fragrant.",
       "minutes": 6,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Simmer beans and chiles",
-      "instruction": "Add remaining broth, beans, green chiles, oregano, and shredded chicken. Bring to a gentle simmer and cook 15 minutes so flavors meld. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Add remaining broth, beans, green chiles, oregano, and shredded chicken. Bring to a gentle simmer and cook 15 minutes so flavors meld.",
       "minutes": 15,
       "heatLevel": "medium-low"
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Stir in cream cheese",
-      "instruction": "Reduce heat to low. Whisk in cream cheese cubes until fully melted and chili looks creamy with no white streaks remaining. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Reduce heat to low. Whisk in cream cheese cubes until fully melted and chili looks creamy with no white streaks remaining.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
+      "stepNumber": 5,
       "title": "Finish with lime and serve",
-      "instruction": "Stir in lime juice and cilantro. Chili should coat a ladle lightly; adjust salt before cup service at the line. Plan about 3 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Stir in lime juice and cilantro. Chili should coat a ladle lightly; adjust salt before cup service at the line.",
       "minutes": 3,
       "heatLevel": ""
     }
@@ -206,6 +185,6 @@
     "crock-barbacoa-chicken",
     "shawarma-chicken-rice-bowls"
   ],
-  "generatedAt": "2026-05-30T18:19:44.152Z",
+  "generatedAt": "2026-05-31T15:28:14.291Z",
   "contentVersion": 2
 }

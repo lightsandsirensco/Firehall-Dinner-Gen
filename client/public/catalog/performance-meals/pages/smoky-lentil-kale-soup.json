@@ -104,57 +104,36 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Smoky Lentil and Kale Soup in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch plant. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Sweat aromatics",
-      "instruction": "Heat olive oil in an 8-quart pot over medium. Cook onion, carrot, and celery 8–10 minutes until softened and onion edges turn translucent. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Heat olive oil in an 8-quart pot over medium. Cook onion, carrot, and celery 8–10 minutes until softened and onion edges turn translucent.",
       "minutes": 10,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Bloom spices",
-      "instruction": "Add garlic, smoked paprika, and cumin. Stir 1–2 minutes until spices smell toasty and paste-like, not raw or dusty. Target 165°F at the thickest part before moving to the next batch. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Add garlic, smoked paprika, and cumin. Stir 1–2 minutes until spices smell toasty and paste-like, not raw or dusty.",
       "minutes": 2,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Simmer lentils",
-      "instruction": "Add lentils, tomatoes, broth, and bay leaves. Bring to a boil, reduce to simmer, cook 30–35 minutes until lentils are tender but hold shape. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts.",
+      "instruction": "Add lentils, tomatoes, broth, and bay leaves. Bring to a boil, reduce to simmer, cook 30–35 minutes until lentils are tender but hold shape.",
       "minutes": 35,
       "heatLevel": "medium-low"
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Wilt kale",
-      "instruction": "Stir in kale and simmer 5 minutes until leaves soften and turn deep green. Soup should be thick enough to coat a spoon lightly. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Stir in kale and simmer 5 minutes until leaves soften and turn deep green. Soup should be thick enough to coat a spoon lightly.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
+      "stepNumber": 5,
       "title": "Season and serve",
-      "instruction": "Remove bay leaves. Adjust salt and pepper. Lentils should be tender with slight bite, not mushy or split open. Plan about 3 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Remove bay leaves. Adjust salt and pepper. Lentils should be tender with slight bite, not mushy or split open.",
       "minutes": 3,
       "heatLevel": ""
     }
@@ -205,6 +184,6 @@
     "lemon-chicken-orzo-soup",
     "lentil-mushroom-bolognese"
   ],
-  "generatedAt": "2026-05-30T18:19:44.152Z",
+  "generatedAt": "2026-05-31T15:28:14.291Z",
   "contentVersion": 2
 }

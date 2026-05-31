@@ -7,6 +7,7 @@ import {
   categoryPromptFragments,
 } from "../categories/imagery.js";
 import { inferPlatingType, buildPlatingPromptLine, platingNegativeHints } from "../plating-type.js";
+import { buildRequiredVisibleSidesPromptLine } from "../curated-image-governance/title-primary-side-rules.js";
 
 const FORMAT_PLATING_HINT: Record<string, string> = {
   burger: "stacked handheld on glossy bun, visible layers",
@@ -76,17 +77,26 @@ export function buildFoodImageryPromptSpec(ctx: FoodImageryContext): FoodImagery
     .filter(Boolean)
     .join("; ");
 
+  const titleSideLine = buildRequiredVisibleSidesPromptLine(enriched.title, enriched.mealFormat);
+
   return assembleEditorialPromptSpec({
     dishTitle: dish,
     cuisineLine: `${enriched.cuisine || "American comfort"} cuisine`,
     proteinLine: `${enriched.protein || "mixed"} protein forward`,
     ingredientLine: ingredients || undefined,
-    textureLine: texture,
+    textureLine: [texture, titleSideLine].filter(Boolean).join("; "),
     shotPreset,
     dishSpecificPlating: platingHint,
     categoryMood: enriched.categoryEnrichment.mood || catFragments.mood,
     categoryLighting: enriched.categoryEnrichment.lighting || catFragments.lighting,
-    extraNegative: [...(enriched.categoryEnrichment.negativeHints || []), ...platingNegativeHints(platingType)],
+    extraNegative: [
+      ...(enriched.categoryEnrichment.negativeHints || []),
+      ...platingNegativeHints(platingType),
+      "generic chicken bowl",
+      "generic rice bowl",
+      "unrelated donor meal substitute",
+      "missing named side dish from title",
+    ],
   });
 }
 

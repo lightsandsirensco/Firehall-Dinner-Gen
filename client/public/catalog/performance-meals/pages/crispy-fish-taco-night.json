@@ -102,57 +102,36 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Crispy Fish Taco Night in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
+      "title": "Prep slaw and crema",
+      "instruction": "Toss shredded cabbage with half the lime juice and a pinch of salt until lightly wilted but still crunchy. Stir yogurt with remaining lime for crema.",
+      "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch fish. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
+      "title": "Set up breading station",
+      "instruction": "Season flour with chili powder, garlic powder, and salt. Mix panko with 2 tbsp oil on a sheet pan for extra oven crispness.",
+      "minutes": 5,
+      "heatLevel": ""
     },
     {
       "stepNumber": 3,
-      "title": "Prep slaw and crema",
-      "instruction": "Toss shredded cabbage with half the lime juice and a pinch of salt until lightly wilted but still crunchy. Stir yogurt with remaining lime for crema. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "title": "Bread cod fillets",
+      "instruction": "Pat cod dry. Dredge in flour, dip in egg, press into panko until fully coated with no bare spots showing through.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 4,
-      "title": "Set up breading station",
-      "instruction": "Season flour with chili powder, garlic powder, and salt. Mix panko with 2 tbsp oil on a sheet pan for extra oven crispness. Bake until the center reaches a safe internal temp (145°F until flakes separate) and edges look set — use a thermometer at the thickest point. Plan about 5 minutes for this step at crew scale.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 5,
-      "title": "Bread cod fillets",
-      "instruction": "Pat cod dry. Dredge in flour, dip in egg, press into panko until fully coated with no bare spots showing through. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 10,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 6,
       "title": "Bake until flaky",
-      "instruction": "Bake at 425°F on a wire rack 14–18 minutes until crust is golden and fish flakes at 145°F with opaque flesh throughout. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Bake at 425°F on a wire rack 14–18 minutes until crust is golden and fish flakes at 145°F with opaque flesh throughout.",
       "minutes": 16,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F until flakes separate. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
+      "stepNumber": 5,
       "title": "Assemble tacos at the line",
-      "instruction": "Break fish into strips. Fill warm tortillas with slaw, fish, pico, and crema. Fish should feel firm but moist, not dry or stringy. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Break fish into strips. Fill warm tortillas with slaw, fish, pico, and crema. Fish should feel firm but moist, not dry or stringy.",
       "minutes": 5,
       "heatLevel": ""
     }
@@ -201,6 +180,6 @@
     "blackened-cod-taco-night",
     "chipotle-lime-chicken-tacos"
   ],
-  "generatedAt": "2026-05-30T18:19:44.152Z",
+  "generatedAt": "2026-05-31T15:28:14.291Z",
   "contentVersion": 2
 }

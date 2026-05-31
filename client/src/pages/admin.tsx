@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Link } from "wouter";
-import { Shield, DollarSign, Database, Activity, RefreshCw, Users, Globe, ChefHat, ThumbsUp } from "lucide-react";
+import { Shield, DollarSign, Database, Activity, RefreshCw, Users, Globe, ChefHat, ThumbsUp, BarChart3 } from "lucide-react";
 import { adminFetch } from "@/lib/admin-api";
 
 interface UsageData {
@@ -93,6 +93,12 @@ export default function AdminPage() {
                 Recipe Ingestion
               </Button>
             </Link>
+            <Link href="/admin/analytics">
+              <Button variant="outline" data-testid="button-analytics-admin">
+                <BarChart3 className="w-4 h-4 mr-2" />
+                Product Analytics
+              </Button>
+            </Link>
             <Link href="/admin/recipe-ratings">
               <Button variant="outline" data-testid="button-recipe-ratings-admin">
                 <ThumbsUp className="w-4 h-4 mr-2" />
@@ -128,6 +134,12 @@ export default function AdminPage() {
             <Button variant="outline" size="sm" data-testid="button-ingestion-admin-nav">
               <ChefHat className="w-4 h-4 mr-2" />
               Ingestion
+            </Button>
+          </Link>
+          <Link href="/admin/analytics">
+            <Button variant="outline" size="sm" data-testid="button-analytics-admin-nav">
+              <BarChart3 className="w-4 h-4 mr-2" />
+              Analytics
             </Button>
           </Link>
           <Link href="/admin/recipe-ratings">

@@ -14,6 +14,7 @@ import type {
   ImageGovernanceMismatch,
 } from "./types.js";
 import { IMAGE_GOVERNANCE_BUILD_FAIL_THRESHOLD } from "./types.js";
+import { auditTitlePrimarySideAlignment } from "./title-primary-side-rules.js";
 
 function mismatch(
   code: ImageGovernanceMismatch["code"],
@@ -270,6 +271,25 @@ export function validateCuratedImageGovernance(
     mismatchConfidence = Math.max(mismatchConfidence, servingMismatch.confidence);
   }
 
+  for (const sideIssue of auditTitlePrimarySideAlignment({
+    slug: profile.slug,
+    title: profile.title,
+    mealFormat: profile.mealFormat,
+    heroPath: hero,
+    heroAlt: input.heroAlt || profile.title,
+  })) {
+    const govCode =
+      sideIssue.message.includes("donor")
+        ? ("donor_image_forbidden" as const)
+        : sideIssue.message.includes("generic bowl")
+          ? ("generic_substitute_meal" as const)
+          : ("image_title_mismatch" as const);
+    mismatches.push(
+      mismatch(govCode, "critical", sideIssue.message, sideIssue.confidence, "hero"),
+    );
+    mismatchConfidence = Math.max(mismatchConfidence, sideIssue.confidence);
+  }
+
   const titleDominant = [...profile.visualSignals].find((s) => s !== "generic");
   if (
     !titleDominant &&
@@ -320,7 +340,10 @@ export function governanceFailsBuild(result: CuratedImageGovernanceResult): bool
         m.code === "plating_mismatch" ||
         m.code === "protein_mismatch" ||        m.code === "external_image_forbidden" ||
         (m.code === "format_mismatch" &&
-          /taco|burrito|nacho|burger|pasta|soup|shrimp|beef|chicken/i.test(m.message))),
+          /taco|burrito|nacho|burger|pasta|soup|shrimp|beef|chicken/i.test(m.message)) ||
+        m.code === "image_title_mismatch" ||
+        m.code === "donor_image_forbidden" ||
+        m.code === "generic_substitute_meal"),
   );
   return hard.length > 0;
 }

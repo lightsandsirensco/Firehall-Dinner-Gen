@@ -64,6 +64,7 @@ import {
 } from "@shared/measurements";
 import { useMeasurementSystem } from "@/components/measurement-unit-toggle";
 import { RecipeMeasurementBar } from "@/components/recipe-measurement-bar";
+import { trackRecipeView } from "@/lib/analytics";
 
 
 
@@ -382,6 +383,16 @@ export default function GoldenRecipePageView() {
   useEffect(() => {
     if (page) setCrewSize(page.baseServings ?? page.crewSize ?? 8);
   }, [page?.slug, page?.baseServings, page?.crewSize]);
+
+  useEffect(() => {
+    if (!page) return;
+    trackRecipeView({
+      slug: page.slug,
+      title: page.title,
+      collection: "golden_100",
+      source: "catalog",
+    });
+  }, [page?.slug, page?.title]);
 
   const baseServings = page?.baseServings ?? page?.crewSize ?? 8;
   const [measurementSystem] = useMeasurementSystem();

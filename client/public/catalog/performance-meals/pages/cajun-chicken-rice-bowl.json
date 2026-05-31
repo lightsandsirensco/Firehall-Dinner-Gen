@@ -102,57 +102,36 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Cajun Chicken Rice Bowl in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Mix Cajun spice blend",
-      "instruction": "Combine paprika, garlic powder, onion powder, thyme, cayenne, 1 tbsp salt, and 1 tsp pepper until evenly blended and deeply red in color. Plan about 3 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Combine paprika, garlic powder, onion powder, thyme, cayenne, 1 tbsp salt, and 1 tsp pepper until evenly blended and deeply red in color.",
       "minutes": 3,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Cook rice",
-      "instruction": "Simmer rice in salted water or broth until fluffy grains separate easily with a fork, not sticky, gummy, or wet at the bottom. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Plan about 20 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Simmer rice in salted water or broth until fluffy grains separate easily with a fork, not sticky, gummy, or wet at the bottom.",
       "minutes": 20,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Sauté trinity vegetables",
-      "instruction": "Cook onion, bell peppers, and celery in oil over medium 8 minutes until softened and edges lightly caramelized with sweet aroma. Target 165°F at the thickest part before moving to the next batch. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Cook onion, bell peppers, and celery in oil over medium 8 minutes until softened and edges lightly caramelized with sweet aroma.",
       "minutes": 8,
       "heatLevel": ""
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Blacken chicken",
-      "instruction": "Coat thighs generously with Cajun blend. Sear in hot oiled skillet 5–6 minutes per side until dark crust forms and internal temp hits 165°F. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Coat thighs generously with Cajun blend. Sear in hot oiled skillet 5–6 minutes per side until dark crust forms and internal temp hits 165°F.",
       "minutes": 14,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
+      "stepNumber": 5,
       "title": "Build bowls",
-      "instruction": "Slice chicken, portion over rice with sautéed trinity. Deglaze pan with broth for light sauce drizzle. Chicken should be juicy inside, charred outside. Target 165°F at the thickest part before moving to the next batch. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
+      "instruction": "Slice chicken, portion over rice with sautéed trinity. Deglaze pan with broth for light sauce drizzle. Chicken should be juicy inside, charred outside.",
       "minutes": 5,
       "heatLevel": ""
     }
@@ -204,6 +183,6 @@
     "korean-beef-rice-bowls",
     "crock-barbacoa-chicken"
   ],
-  "generatedAt": "2026-05-30T18:19:44.152Z",
+  "generatedAt": "2026-05-31T15:28:14.291Z",
   "contentVersion": 2
 }

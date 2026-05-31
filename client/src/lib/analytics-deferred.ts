@@ -1,8 +1,9 @@
-import { scheduleNonCriticalScripts } from "@/lib/performance";
+import { trackAnalyticsPageViewInternal } from "@/lib/analytics";
 import {
   logGaMeasurementIdLoaded,
   resolveGaMeasurementId,
 } from "@/lib/ga-config";
+import { scheduleNonCriticalScripts } from "@/lib/performance";
 
 let analyticsInitialized = false;
 let gaMeasurementId: string | undefined;
@@ -19,6 +20,7 @@ function flushPendingPageViews(): void {
       page_location: `${window.location.origin}${pagePath}`,
       page_title: document.title,
     });
+    trackAnalyticsPageViewInternal(pagePath, document.title);
   }
 }
 
@@ -31,6 +33,7 @@ export function trackAnalyticsPageView(pagePath: string): void {
       page_location: `${window.location.origin}${path}`,
       page_title: document.title,
     });
+    trackAnalyticsPageViewInternal(path, document.title);
     return;
   }
   pendingPageViews.push(path);

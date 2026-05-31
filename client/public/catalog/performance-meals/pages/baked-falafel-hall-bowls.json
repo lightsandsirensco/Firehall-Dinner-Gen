@@ -120,57 +120,43 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Baked Falafel Hall Bowls in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "title": "Soak and prep chickpeas",
+      "instruction": "Drain soaked chickpeas well and pat dry on towels — wet chickpeas make dense falafel. Pulse in food processor with herbs, onion, garlic, cumin, coriander, 1 tbsp salt, and baking powder until coarse meal holds a squeeze (not hummus smooth).",
       "minutes": 12,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch vegetarian. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
-      "title": "Soak and prep chickpeas",
-      "instruction": "Drain soaked chickpeas well and pat dry on towels — wet chickpeas make dense falafel. Pulse in food processor with herbs, onion, garlic, cumin, coriander, 1 tbsp salt, and baking powder until coarse meal holds a squeeze (not hummus smooth). Plan about 12 minutes for this step at crew scale. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 4,
       "title": "Form and chill patties",
-      "instruction": "Scoop 2-oz balls and flatten to ½-inch patties. Arrange on oiled sheet pans with space between. Refrigerate uncovered 15 minutes so edges set before baking. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Scoop 2-oz balls and flatten to ½-inch patties. Arrange on oiled sheet pans with space between. Refrigerate uncovered 15 minutes so edges set before baking.",
       "minutes": 18,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Cook rice",
-      "instruction": "Rinse rice until water runs clear. Cook 1:1.75 rice to water with a pinch of salt; fluff and hold covered at low heat. Plan about 22 minutes for this step at crew scale. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Rinse rice until water runs clear. Cook 1:1.75 rice to water with a pinch of salt; fluff and hold covered at low heat.",
       "minutes": 22,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Bake falafel until crisp",
-      "instruction": "Brush patties lightly with olive oil. Bake at 425°F 22–26 minutes, flipping once at 12 minutes, until deep golden and crisp at edges — centers should read 165°F if checked. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Brush patties lightly with olive oil. Bake at 425°F 22–26 minutes, flipping once at 12 minutes, until deep golden and crisp at edges — centers should read 165°F if checked.",
       "minutes": 26,
       "heatLevel": "medium-high"
     },
     {
-      "stepNumber": 7,
+      "stepNumber": 5,
       "title": "Whisk tahini sauce",
-      "instruction": "Whisk tahini with lemon juice, ¼ cup cold water, and pinch of salt until pourable — add water 1 tbsp at a time if thick. Taste for bright lemon balance. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Whisk tahini with lemon juice, ¼ cup cold water, and pinch of salt until pourable — add water 1 tbsp at a time if thick. Taste for bright lemon balance.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 8,
+      "stepNumber": 6,
       "title": "Build bowls at the line",
-      "instruction": "Toss cucumber and tomatoes with remaining olive oil and salt. Serve rice, hot falafel, salad, tahini, and optional hot sauce on a build-your-own line. Plan about 8 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Toss cucumber and tomatoes with remaining olive oil and salt. Serve rice, hot falafel, salad, tahini, and optional hot sauce on a build-your-own line.",
       "minutes": 8,
       "heatLevel": ""
     }
@@ -222,6 +208,6 @@
     "tabbouleh-chicken-bowls",
     "cajun-chicken-rice-bowl"
   ],
-  "generatedAt": "2026-05-30T18:19:44.152Z",
+  "generatedAt": "2026-05-31T15:28:14.291Z",
   "contentVersion": 2
 }

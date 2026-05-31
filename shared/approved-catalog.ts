@@ -79,9 +79,10 @@ export function approvedCatalogHeroPath(slug: string, kind: ApprovedCatalogKind)
   return slugLockedImagePaths(slug, kind).hero;
 }
 
-/** Card image for Explore — canonical slug-locked hero only. */
+/** Card image for Explore — slug-locked thumb (never full hero). */
 export function approvedCatalogCardImagePath(slug: string, kind: ApprovedCatalogKind): string {
-  return slugLockedImagePaths(slug, kind).hero;
+  const paths = slugLockedImagePaths(slug, kind);
+  return paths.thumb || paths.rail || paths.mobile;
 }
 
 export function resolveApprovedCatalogKind(slug: string, isSmoothie = false): ApprovedCatalogKind {

@@ -1,21 +1,21 @@
 {
   "slug": "crock-barbacoa-chicken",
-  "title": "Crock Barbacoa Chicken",
-  "displayTitle": "Crock Barbacoa Chicken",
-  "seoTitle": "Crock Barbacoa Chicken | Firefighter Meal",
-  "shortDescription": "Slow-cooked chipotle chicken that shreds for tacos and bowls",
-  "subtitle": "Slow-cooked chipotle chicken that shreds for tacos and bowls",
+  "title": "Crock Barbacoa Chicken With Potato Wedges",
+  "displayTitle": "Crock Barbacoa Chicken With Potato Wedges",
+  "seoTitle": "Crock Barbacoa Chicken With Potato Wedges | Firefighter Meal",
+  "shortDescription": "Slow-cooked chipotle barbacoa with crispy roasted potato wedges",
+  "subtitle": "Slow-cooked chipotle barbacoa with crispy roasted potato wedges",
   "category": "healthy_performance",
   "cuisine": "Mexican",
-  "description": "Chicken thighs braise low with chipotle, lime, cumin, and oregano until pull-apart tender. Shred for tacos, rice bowls, or lettuce wraps.",
+  "description": "Slow-cooked shredded barbacoa chicken piled beside crispy roasted potato wedges — chipotle, lime, and cumin braise until pull-apart tender while wedges roast golden in the oven.",
   "crewSize": 8,
   "baseServings": 8,
   "cookTime": 360,
-  "prepTime": 15,
+  "prepTime": 20,
   "difficulty": "easy",
-  "calories": 395,
+  "calories": 485,
   "protein": 42,
-  "carbs": 6,
+  "carbs": 38,
   "fats": 22,
   "tags": [
     "protein:chicken",
@@ -38,6 +38,18 @@
       "unit": "lb"
     },
     {
+      "name": "russet potatoes",
+      "quantity": "4",
+      "unit": "large",
+      "notes": "cut into wedges"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "3",
+      "unit": "tbsp",
+      "notes": "for wedges"
+    },
+    {
       "name": "chipotle peppers in adobo",
       "quantity": "3",
       "unit": "whole",
@@ -56,6 +68,18 @@
       "notes": "fresh"
     },
     {
+      "name": "limes",
+      "quantity": "4",
+      "unit": "whole",
+      "notes": "cut into wedges for service"
+    },
+    {
+      "name": "fresh cilantro",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "rough chopped"
+    },
+    {
       "name": "apple cider vinegar",
       "quantity": "2",
       "unit": "tbsp"
@@ -69,6 +93,12 @@
       "name": "dried oregano",
       "quantity": "1",
       "unit": "tbsp"
+    },
+    {
+      "name": "smoked paprika",
+      "quantity": "1",
+      "unit": "tsp",
+      "notes": "for wedges"
     },
     {
       "name": "garlic cloves",
@@ -102,107 +132,86 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Crock Barbacoa Chicken in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
+      "title": "Roast potato wedges",
+      "instruction": "Heat oven to 425°F. Toss potato wedges with olive oil, smoked paprika, salt, and pepper on two sheet pans in a single layer. Roast 28–35 minutes, turning once, until golden and crisp at the edges.",
+      "minutes": 35,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
+      "title": "Layer crock ingredients",
+      "instruction": "Place onion slices in bottom of 8-quart slow cooker. Arrange chicken thighs on top in an even layer without stacking too deep.",
+      "minutes": 5,
+      "heatLevel": ""
     },
     {
       "stepNumber": 3,
-      "title": "Layer crock ingredients",
-      "instruction": "Place onion slices in bottom of 8-quart slow cooker. Arrange chicken thighs on top in an even layer without stacking too deep. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "title": "Mix braising liquid",
+      "instruction": "Whisk chipotle, adobo sauce, lime juice, vinegar, cumin, oregano, garlic, salt, pepper, and broth until smooth.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 4,
-      "title": "Mix braising liquid",
-      "instruction": "Whisk chipotle, adobo sauce, lime juice, vinegar, cumin, oregano, garlic, salt, pepper, and broth until smooth. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 5,
       "title": "Slow cook until tender",
-      "instruction": "Pour liquid over chicken. Cover and cook on low 6–8 hours until meat pulls apart easily and internal temp reaches 165°F throughout. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 8,
+      "instruction": "Pour liquid over chicken. Cover and cook on low 6–8 hours until meat pulls apart easily and internal temp reaches 165°F throughout.",
       "heatLevel": "low"
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 5,
       "title": "Shred in pot",
-      "instruction": "Transfer thighs to a cutting board if easier, or shred in crock with two forks. Meat should separate into moist strands, not dry clumps. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Transfer thighs to a cutting board if easier, or shred in crock with two forks. Meat should separate into moist strands, not dry clumps.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 9,
-      "title": "Portion and open the line",
-      "instruction": "Portion Crock Barbacoa Chicken onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
+      "stepNumber": 6,
       "title": "Reduce juices if needed",
-      "instruction": "If liquid is thin, simmer shredded chicken on high 20–30 minutes uncovered until sauce clings to meat with a glossy coat. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
+      "instruction": "If liquid is thin, simmer shredded chicken on high 20–30 minutes uncovered until sauce clings to meat with a glossy coat.",
       "minutes": 25,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Platter for the line",
+      "instruction": "Pile shredded barbacoa on a large crew platter beside the roasted potato wedges. Garnish with lime wedges and cilantro. Keep rice and bowls off this spread — wedges are the carb.",
+      "minutes": 5,
       "heatLevel": ""
     }
   ],
   "proTips": [
     "Thighs beat breast here—long cook needs fat for tender shred.",
-    "Offer both corn tortillas and rice bowls to split crew preferences.",
-    "Freeze shredded portions in cooking liquid for fast taco nights."
+    "Roast wedges on parchment for easier cleanup after a long shift.",
+    "Freeze shredded portions in cooking liquid for fast taco nights — re-crisp fresh wedges when you serve."
   ],
   "tonightSpread": [
-    "Warm corn tortillas and pickled red onion.",
-    "Cilantro-lime rice in a hotel pan."
+    "Lime wedges and fresh cilantro on the platter.",
+    "Simple shredded lettuce if crews want greens."
   ],
   "leftovers": [
     "Barbacoa breakfast burritos with eggs and salsa.",
-    "Quesadillas with melted pepper jack."
+    "Re-crisp leftover wedges in a hot oven 8 minutes."
   ],
-  "whyCrewsLikeIt": "Set-and-forget protein that feeds multiple formats. Smoky heat without standing over a smoker all day.",
-  "mealPrepNotes": "Start crock on low by mid-morning. Shred with two forks directly in the pot to save dishes. Station: Do not lift lid during first 3 hours—each peek adds 15 minutes cook time. Station: Skim fat before shredding for cleaner flavor and easier cleanup. Station: Hold shredded chicken in juice at 165°F—dry holding ruins barbacoa texture.",
+  "whyCrewsLikeIt": "Set-and-forget protein with a hearty wedge side that holds hot on the line. Smoky heat without standing over a smoker all day.",
+  "mealPrepNotes": "Start crock on low by mid-morning. Roast potato wedges on sheet pans while chicken finishes. Shred with two forks directly in the pot to save dishes. Station: Do not lift lid during first 3 hours—each peek adds 15 minutes cook time. Station: Skim fat before shredding for cleaner flavor and easier cleanup. Station: Hold shredded chicken in juice at 165°F—dry holding ruins barbacoa texture. Station: Crisp wedges on a hot sheet pan 5 minutes before service if they softened during hold.",
   "spiceLevel": "medium",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 395,
+    "calories": 485,
     "protein": 42,
-    "carbs": 6,
+    "carbs": 38,
     "fats": 22,
-    "label": "~395 cal/serving · 42g protein · 1g fiber (est.)"
+    "label": "~485 cal/serving · 42g protein · 4g fiber (est.)"
   },
   "heroImage": "/images/golden-100/crock-barbacoa-chicken.jpg",
   "mobileImage": "/images/mobile/crock-barbacoa-chicken.jpg",
   "thumbImage": "/images/thumbs/crock-barbacoa-chicken.jpg",
   "railImage": "/images/rails/crock-barbacoa-chicken.jpg",
   "realismScore": 100,
-  "firefighterScore": 83,
+  "firefighterScore": 87,
   "popularityWeight": 7.5,
   "searchTerms": [
+    "crock barbacoa chicken with potato wedges",
     "crock barbacoa chicken",
     "chicken",
     "Mexican",
@@ -218,6 +227,6 @@
     "white-bean-chicken-chili",
     "shawarma-chicken-rice-bowls"
   ],
-  "generatedAt": "2026-05-30T18:19:44.152Z",
+  "generatedAt": "2026-05-31T15:28:14.291Z",
   "contentVersion": 2
 }

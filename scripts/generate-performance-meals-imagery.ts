@@ -31,6 +31,7 @@ import { PERFORMANCE_ADAPTED_RECIPES } from "../shared/performance-meals/adapted
 import {
   PERFORMANCE_MEAL_IMAGERY_NEGATIVE_OVERRIDES,
   PERFORMANCE_MEAL_IMAGERY_PROMPT_OVERRIDES,
+  TITLE_LOCKED_IMAGE_PROMPTS,
 } from "../shared/performance-meals/imagery-prompt-overrides.js";
 
 import { buildEditorialImagePrompt, buildEditorialModelPrompt } from "../server/imagery/build-image-prompt.js";
@@ -69,11 +70,13 @@ function parseArgs(argv: string[]) {
 }
 
 function withPerformancePromptOverrides(slug: string, modelPrompt: string): string {
+  const locked = TITLE_LOCKED_IMAGE_PROMPTS[slug];
   const extra = PERFORMANCE_MEAL_IMAGERY_PROMPT_OVERRIDES[slug];
   const negatives = PERFORMANCE_MEAL_IMAGERY_NEGATIVE_OVERRIDES[slug];
-  if (!extra?.length && !negatives?.length) return modelPrompt;
+  if (!locked && !extra?.length && !negatives?.length) return modelPrompt;
   const parts = [modelPrompt];
-  if (extra?.length) parts.push(extra.join(". "));
+  if (locked) parts.push(locked);
+  else if (extra?.length) parts.push(extra.join(". "));
   if (negatives?.length) parts.push(`Avoid: ${negatives.join(", ")}`);
   return parts.join(" ");
 }

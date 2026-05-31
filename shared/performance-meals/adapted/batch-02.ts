@@ -270,36 +270,42 @@ export const batch02: PerformanceAdaptedRecipe[] = [
   perfRecipe({
     manifest: manifestEntry({
       slug: "crock-barbacoa-chicken",
-      title: "Crock Barbacoa Chicken",
-      subtitle: "Slow-cooked chipotle chicken that shreds for tacos and bowls",
+      title: "Crock Barbacoa Chicken With Potato Wedges",
+      subtitle: "Slow-cooked chipotle barbacoa with crispy roasted potato wedges",
       protein: "chicken",
       cuisine: "Mexican",
       mealFormat: "slow_cooker",
-      hook: "Start before shift; shred at dinner for two service formats",
-      prep: 15,
+      hook: "Start before shift; shred at dinner with golden potato wedges on the side",
+      prep: 20,
       cook: 360,
       difficulty: "easy",
       sourceId: "se-09",
     }),
     description:
-      "Chicken thighs braise low with chipotle, lime, cumin, and oregano until pull-apart tender. Shred for tacos, rice bowls, or lettuce wraps.",
+      "Slow-cooked shredded barbacoa chicken piled beside crispy roasted potato wedges — chipotle, lime, and cumin braise until pull-apart tender while wedges roast golden in the oven.",
     whyCrewsLikeIt:
-      "Set-and-forget protein that feeds multiple formats. Smoky heat without standing over a smoker all day.",
+      "Set-and-forget protein with a hearty wedge side that holds hot on the line. Smoky heat without standing over a smoker all day.",
     mealPrepNotes:
-      "Start crock on low by mid-morning. Shred with two forks directly in the pot to save dishes.",
+      "Start crock on low by mid-morning. Roast potato wedges on sheet pans while chicken finishes. Shred with two forks directly in the pot to save dishes.",
     stationWorkflow: [
       "Do not lift lid during first 3 hours—each peek adds 15 minutes cook time.",
       "Skim fat before shredding for cleaner flavor and easier cleanup.",
       "Hold shredded chicken in juice at 165°F—dry holding ruins barbacoa texture.",
+      "Crisp wedges on a hot sheet pan 5 minutes before service if they softened during hold.",
     ],
     ingredients: [
       { name: "boneless chicken thighs", quantity: 5, unit: "lb" },
+      { name: "russet potatoes", quantity: 4, unit: "large", notes: "cut into wedges" },
+      { name: "olive oil", quantity: 3, unit: "tbsp", notes: "for wedges" },
       { name: "chipotle peppers in adobo", quantity: 3, unit: "whole", notes: "minced" },
       { name: "adobo sauce", quantity: 3, unit: "tbsp", notes: "from can" },
       { name: "lime juice", quantity: 0.33, unit: "cup", notes: "fresh" },
+      { name: "limes", quantity: 4, unit: "whole", notes: "cut into wedges for service" },
+      { name: "fresh cilantro", quantity: 1, unit: "cup", notes: "rough chopped" },
       { name: "apple cider vinegar", quantity: 2, unit: "tbsp" },
       { name: "ground cumin", quantity: 2, unit: "tbsp" },
       { name: "dried oregano", quantity: 1, unit: "tbsp" },
+      { name: "smoked paprika", quantity: 1, unit: "tsp", notes: "for wedges" },
       { name: "garlic cloves", quantity: 6, unit: "cloves", notes: "minced" },
       { name: "yellow onion", quantity: 1, unit: "large", notes: "sliced" },
       { name: "chicken broth", quantity: 1, unit: "cup", notes: "low sodium" },
@@ -307,6 +313,12 @@ export const batch02: PerformanceAdaptedRecipe[] = [
       { name: "black pepper", quantity: 1, unit: "tsp" },
     ],
     stepLines: [
+      {
+        title: "Roast potato wedges",
+        instruction:
+          "Heat oven to 425°F. Toss potato wedges with olive oil, smoked paprika, salt, and pepper on two sheet pans in a single layer. Roast 28–35 minutes, turning once, until golden and crisp at the edges.",
+        minutes: 35,
+      },
       {
         title: "Layer crock ingredients",
         instruction:
@@ -337,17 +349,23 @@ export const batch02: PerformanceAdaptedRecipe[] = [
           "If liquid is thin, simmer shredded chicken on high 20–30 minutes uncovered until sauce clings to meat with a glossy coat.",
         minutes: 25,
       },
+      {
+        title: "Platter for the line",
+        instruction:
+          "Pile shredded barbacoa on a large crew platter beside the roasted potato wedges. Garnish with lime wedges and cilantro. Keep rice and bowls off this spread — wedges are the carb.",
+        minutes: 5,
+      },
     ],
-    nutrition: { calories: 395, protein: 42, carbs: 6, fats: 22, fiber: 1 },
+    nutrition: { calories: 485, protein: 42, carbs: 38, fats: 22, fiber: 4 },
     proTips: [
       "Thighs beat breast here—long cook needs fat for tender shred.",
-      "Offer both corn tortillas and rice bowls to split crew preferences.",
-      "Freeze shredded portions in cooking liquid for fast taco nights.",
+      "Roast wedges on parchment for easier cleanup after a long shift.",
+      "Freeze shredded portions in cooking liquid for fast taco nights — re-crisp fresh wedges when you serve.",
     ],
-    tonightSpread: ["Warm corn tortillas and pickled red onion.", "Cilantro-lime rice in a hotel pan."],
+    tonightSpread: ["Lime wedges and fresh cilantro on the platter.", "Simple shredded lettuce if crews want greens."],
     leftovers: [
       "Barbacoa breakfast burritos with eggs and salsa.",
-      "Quesadillas with melted pepper jack.",
+      "Re-crisp leftover wedges in a hot oven 8 minutes.",
     ],
     equipment: ["8-quart slow cooker", "Two forks"],
     spiceLevel: "medium",

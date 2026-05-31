@@ -22,6 +22,7 @@ import { CLASSICS_WHEEL } from "@/lib/brand-copy";
 import { LIGHTS_COPY } from "@/lib/lights-and-sirens";
 import { LightsAndSirensCredit } from "@/components/brand/lights-and-sirens-credit";
 import { SiteFooter } from "@/components/site-footer";
+import { trackWheelSpin, trackWheelRecipeOpen } from "@/lib/analytics";
 
 type Phase = "ready" | "spinning" | "reveal";
 
@@ -52,6 +53,11 @@ export default function ClassicsWheelPage() {
   const handleLanded = useCallback((classic: WheelClassic) => {
     hapticSuccess();
     const idx = WHEEL_CLASSICS.findIndex((c) => c.slug === classic.slug);
+    trackWheelSpin({
+      slug: classic.slug,
+      title: classic.title,
+      segment_index: idx >= 0 ? idx : undefined,
+    });
     setWinner(classic);
     setWinnerIndex(idx >= 0 ? idx : null);
     setPinned(isClassicPinned(classic.slug));
@@ -59,6 +65,9 @@ export default function ClassicsWheelPage() {
   }, []);
 
   const handleSpinAgain = useCallback(() => {
+    if (winner) {
+      trackWheelRecipeOpen({ slug: winner.slug, title: winner.title, action: "spin_again" });
+    }
     setWinner(null);
     setWinnerIndex(null);
     setPhase("ready");
@@ -67,11 +76,13 @@ export default function ClassicsWheelPage() {
 
   const handleOpenPackage = useCallback(() => {
     if (!winner) return;
+    trackWheelRecipeOpen({ slug: winner.slug, title: winner.title, action: "cook" });
     navigate(buildPackageUrl(winner));
   }, [winner, navigate]);
 
   const handleExplore = useCallback(() => {
     if (!winner) return;
+    trackWheelRecipeOpen({ slug: winner.slug, title: winner.title, action: "explore" });
     navigate(buildExplorePackageUrl(winner));
   }, [winner, navigate]);
 

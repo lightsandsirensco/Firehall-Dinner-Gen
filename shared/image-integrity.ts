@@ -13,6 +13,10 @@ import {
   type PlatingType,
 } from "./plating-type.js";
 import {
+  auditTitlePrimarySideAlignment,
+  hasImageTitleMismatch,
+} from "./curated-image-governance/title-primary-side-rules.js";
+import {
   heroPathConflictsTitle,
   scoreImageTitleAlignment,
   inferVisualSignalsFromImagePath,
@@ -29,7 +33,9 @@ export type ImageIntegrityFlag =
   | "unapproved_image"
   | "missing_hero"
   | "low_realism"
-  | "semantic_drift";
+  | "semantic_drift"
+  | "image_title_mismatch"
+  | "needs_regeneration";
 
 export interface ImageIntegrityResult {
   score: number;
@@ -91,6 +97,22 @@ export function scoreImageIntegrity(input: {
     score = Math.round((score + titleAlign.score) / 2);
   }
 
+  const sideIssues = hero
+    ? auditTitlePrimarySideAlignment({
+        slug: input.slug,
+        title: input.title,
+        mealFormat: input.mealFormat,
+        heroPath: hero,
+        heroAlt: input.heroAlt || input.title,
+      })
+    : [];
+  if (hasImageTitleMismatch(sideIssues)) {
+    flags.push("image_title_mismatch");
+    flags.push("needs_regeneration");
+    conflicts.push("image_title_mismatch");
+    score = Math.min(score, 42);
+  }
+
   const gov = validateCuratedImageGovernance({
     profile: buildCuratedMealImageProfile({
       slug: input.slug,
@@ -122,7 +144,9 @@ export function scoreImageIntegrity(input: {
   score = Math.max(0, Math.min(100, Math.round(score)));
   const pass = score >= IMAGE_INTEGRITY_PASS_THRESHOLD && !flags.includes("plating_mismatch");
   const needsRegeneration =
-    !pass && score < IMAGE_INTEGRITY_REGEN_THRESHOLD && flags.length > 0;
+    !pass &&
+    (score < IMAGE_INTEGRITY_REGEN_THRESHOLD || flags.includes("image_title_mismatch")) &&
+    flags.length > 0;
   const needsManualReview = !pass || gov.needsManualReview;
 
   return {

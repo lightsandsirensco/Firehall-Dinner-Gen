@@ -33,7 +33,7 @@ import {
   hasUserGeneratedBefore,
 } from "@/lib/prefetch";
 import { GENERATION_INTENT_USER } from "@shared/generation-intent";
-import { trackEvent, trackMealGenerated, trackEmailModalOpened } from "@/lib/analytics";
+import { trackEvent, trackMealGenerationStarted, trackMealGenerated, trackMealGenerationFailed, trackEmailModalOpened } from "@/lib/analytics";
 import {
   getPersistedGenerationCount,
   recordSuccessfulGeneration,
@@ -282,6 +282,9 @@ export default function Generator() {
   // to avoid returning the same recipe twice in a row.
   const currentSignatureRef = useRef("");
 
+  const generationFiltersRef = useRef<FilterState | null>(null);
+  const generationCacheHitRef = useRef(false);
+
   // recipeRef: scroll target for the results panel.
   const recipeRef = useRef<HTMLDivElement>(null);
   const hallVoteBannerRef = useRef<HTMLDivElement>(null);
@@ -416,7 +419,17 @@ export default function Generator() {
     });
 
     markUserHasGenerated();
-    trackMealGenerated();
+    const genFilters = generationFiltersRef.current;
+    trackMealGenerated({
+      recipe_title: data.title,
+      protein: genFilters?.protein,
+      crew_size: genFilters?.crew_size,
+      time_available:
+        genFilters?.time_available != null ? Number(genFilters.time_available) : undefined,
+      meal_category: genFilters?.firehall_category,
+      meal_format: data.meal_style,
+      cache_hit: generationCacheHitRef.current,
+    });
     hapticSuccess();
     const totalGens = recordSuccessfulGeneration();
     setUserGenCount(totalGens);
@@ -491,7 +504,9 @@ export default function Generator() {
     setErrorSmoked(false);
     setErrorTitle(undefined);
     setLoading(true);
-    trackEvent("meal_generation_started");
+    trackMealGenerationStarted();
+    generationFiltersRef.current = currentFilters;
+    generationCacheHitRef.current = false;
 
     const payload = buildRequestPayload(currentFilters, templateId, preferDifferentStyle);
     const filterKey = buildFilterKey(payload);
@@ -501,6 +516,7 @@ export default function Generator() {
       const cached = consumePrefetched(payload, templateId);
       if (cached) {
         console.log(`[Generate] Prefetch hit: "${cached.title}" seq=${seq}`);
+        generationCacheHitRef.current = true;
         applyRecipe(cached, seq);
         schedulePrefetchAfterGeneration(payload);
         return;
@@ -591,6 +607,7 @@ export default function Generator() {
       );
       setError(errorMsg);
       setErrorTitle(title);
+      trackMealGenerationFailed(parsed.code || String(parsed.status ?? "unknown"));
       toast({
         title: parsed.code === "rate_limited" ? "Give the line a breath" : "Generation failed",
         description: errorMsg,

@@ -23,7 +23,10 @@ export type ImageGovernanceMismatchCode =
   | "unapproved_image"
   | "stock_photo_heuristic"
   | "over_zoom_heuristic"
-  | "manual_review_required";
+  | "manual_review_required"
+  | "image_title_mismatch"
+  | "donor_image_forbidden"
+  | "generic_substitute_meal";
 
 export interface ImageGovernanceMismatch {
   code: ImageGovernanceMismatchCode;

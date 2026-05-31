@@ -140,7 +140,7 @@ export function resolveExistingSlugImage(
   return {
     hero: paths.hero,
     thumb: paths.thumb,
-    cardImage: paths.hero,
+    cardImage: paths.thumb || paths.rail || paths.mobile,
     found: heroFound,
   };
 }

@@ -1,7 +1,7 @@
 {
   "slug": "italian-sausage-veg-sheet-pan",
-  "title": "Crispy Garlic Pork",
-  "displayTitle": "Crispy Garlic Pork",
+  "title": "Italian Sausage and Veg Sheet Pan",
+  "displayTitle": "Italian Sausage and Veg Sheet Pan",
   "seoTitle": "Italian Sausage and Veg Sheet Pan | Firefighter Meal",
   "shortDescription": "Sweet Italian sausage with roasted peppers, onion, and zucchini",
   "subtitle": "Sweet Italian sausage with roasted peppers, onion, and zucchini",
@@ -98,57 +98,36 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Crispy Garlic Pork in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
+      "title": "Heat oven and toss ingredients",
+      "instruction": "Heat oven to 425°F. Toss sausage, peppers, onion, zucchini, tomatoes, garlic, oil, Italian seasoning, salt, and pepper until evenly coated.",
+      "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch pork. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
-      "title": "Heat oven and toss ingredients",
-      "instruction": "Heat oven to 425°F. Toss sausage, peppers, onion, zucchini, tomatoes, garlic, oil, Italian seasoning, salt, and pepper until evenly coated. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 10,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 4,
       "title": "Spread on sheet pans",
-      "instruction": "Divide between two half-sheets in a single layer with sausage pieces spaced for airflow and veg in gaps between meat. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Divide between two half-sheets in a single layer with sausage pieces spaced for airflow and veg in gaps between meat.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Roast until sausage is done",
-      "instruction": "Roast 24–28 minutes, stirring once halfway, until sausage reads 165°F and pepper edges char lightly with softened centers. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Roast 24–28 minutes, stirring once halfway, until sausage reads 165°F and pepper edges char lightly with softened centers.",
       "minutes": 26,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Rest and check texture",
-      "instruction": "Rest 3 minutes. Sausage should snap when bitten with juicy interior; vegetables tender with slight char, not mushy. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Rest 3 minutes. Sausage should snap when bitten with juicy interior; vegetables tender with slight char, not mushy.",
       "minutes": 3,
       "heatLevel": ""
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F with a 3-minute rest. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
+      "stepNumber": 5,
       "title": "Serve on rolls or tray",
-      "instruction": "Pile onto hoagie rolls with provolone or serve straight from tray with crusty bread for soaking pan juices. Plan about 3 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Pile onto hoagie rolls with provolone or serve straight from tray with crusty bread for soaking pan juices.",
       "minutes": 3,
       "heatLevel": ""
     }
@@ -201,6 +180,6 @@
     "mediterranean-baked-fish-tray",
     "moroccan-chicken-chickpea-tray"
   ],
-  "generatedAt": "2026-05-30T18:19:44.152Z",
+  "generatedAt": "2026-05-31T15:28:14.291Z",
   "contentVersion": 2
 }

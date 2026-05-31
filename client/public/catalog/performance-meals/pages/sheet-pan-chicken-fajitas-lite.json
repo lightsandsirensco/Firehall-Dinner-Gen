@@ -1,7 +1,7 @@
 {
   "slug": "sheet-pan-chicken-fajitas-lite",
-  "title": "Crispy Garlic Chicken",
-  "displayTitle": "Crispy Garlic Chicken",
+  "title": "Sheet Pan Chicken Fajitas Lite",
+  "displayTitle": "Sheet Pan Chicken Fajitas Lite",
   "seoTitle": "Sheet Pan Chicken Fajitas Lite | Firefighter Meal",
   "shortDescription": "Charred peppers and onions with spiced chicken strips—no heavy oil",
   "subtitle": "Charred peppers and onions with spiced chicken strips—no heavy oil",
@@ -97,69 +97,41 @@
       "name": "kosher salt",
       "quantity": "1.5",
       "unit": "tbsp"
-    },
-    {
-      "name": "large flour tortillas",
-      "quantity": "8",
-      "unit": "count",
-      "notes": "warm before service",
-      "group": "Serve"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Crispy Garlic Chicken in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Heat oven and mix spice blend",
-      "instruction": "Heat oven to 425°F. Combine chili powder, cumin, paprika, garlic powder, and salt in a small bowl until evenly blended. Plan about 3 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Heat oven to 425°F. Combine chili powder, cumin, paprika, garlic powder, and salt in a small bowl until evenly blended.",
       "minutes": 3,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Season chicken and vegetables",
-      "instruction": "Toss chicken strips with half the spice blend, lime juice, and 2 tbsp oil. Toss peppers and onion with remaining spice and 1 tbsp oil until coated. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Toss chicken strips with half the spice blend, lime juice, and 2 tbsp oil. Toss peppers and onion with remaining spice and 1 tbsp oil until coated.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Spread on sheet pans",
-      "instruction": "Divide chicken and vegetables across two parchment-lined half-sheets in a single layer. Strips should not overlap or they will steam instead of roast. Bake until the center reaches a safe internal temp (165°F) and edges look set — use a thermometer at the thickest point. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
+      "instruction": "Divide chicken and vegetables across two parchment-lined half-sheets in a single layer. Strips should not overlap or they will steam instead of roast.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Roast until chicken is cooked",
-      "instruction": "Roast 18–22 minutes, stirring once halfway, until chicken reads 165°F and pepper edges blister and char lightly. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Roast 18–22 minutes, stirring once halfway, until chicken reads 165°F and pepper edges blister and char lightly.",
       "minutes": 22,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
+      "stepNumber": 5,
       "title": "Rest and serve with warm tortillas",
-      "instruction": "Rest 3 minutes off heat. Vegetables should still have bite; chicken should be juicy when sliced, not chalky in the center. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Rest 3 minutes off heat. Vegetables should still have bite; chicken should be juicy when sliced, not chalky in the center.",
       "minutes": 3,
       "heatLevel": ""
     }
@@ -211,6 +183,6 @@
     "crock-barbacoa-chicken",
     "shawarma-chicken-rice-bowls"
   ],
-  "generatedAt": "2026-05-30T18:19:44.151Z",
+  "generatedAt": "2026-05-31T15:28:14.291Z",
   "contentVersion": 2
 }

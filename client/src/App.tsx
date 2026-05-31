@@ -21,6 +21,7 @@ const ExplorePage = lazy(() => import("@/pages/explore"));
 const AdminPage = lazy(() => import("@/pages/admin"));
 const AdminIngestionPage = lazy(() => import("@/pages/admin-ingestion"));
 const AdminRecipeRatingsPage = lazy(() => import("@/pages/admin-recipe-ratings"));
+const AdminAnalyticsPage = lazy(() => import("@/pages/admin-analytics"));
 const VotePage = lazy(() => import("@/pages/vote"));
 const FavoritesPage = lazy(() => import("@/pages/favorites"));
 const ClassicsWheelPage = lazy(() => import("@/pages/classics-wheel"));
@@ -85,6 +86,7 @@ function AppRoutes() {
       <Route path="/admin/golden-100" component={AdminGolden100Page} />
       <Route path="/admin/ingestion" component={AdminIngestionPage} />
       <Route path="/admin/recipe-ratings" component={AdminRecipeRatingsPage} />
+      <Route path="/admin/analytics" component={AdminAnalyticsPage} />
       <Route path="/admin" component={AdminPage} />
       <Route path="/vote/:voteId" component={VotePage} />
       <Route path="/favorites" component={FavoritesPage} />

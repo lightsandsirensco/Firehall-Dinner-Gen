@@ -103,57 +103,36 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Turkey Shepherd's with Sweet Potato Top in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
+      "title": "Boil and mash sweet potatoes",
+      "instruction": "Boil sweet potato cubes 15–18 minutes until fork-tender. Drain well, mash with butter, milk, and 1 tsp salt until smooth and spreadable.",
+      "minutes": 20,
+      "heatLevel": "medium"
     },
     {
       "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch turkey. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "title": "Brown turkey and onion",
+      "instruction": "Cook ground turkey and onion over medium-high 10 minutes, breaking into crumbles until no pink remains and onion turns translucent at edges.",
       "minutes": 10,
       "heatLevel": "medium-high"
     },
     {
       "stepNumber": 3,
-      "title": "Boil and mash sweet potatoes",
-      "instruction": "Boil sweet potato cubes 15–18 minutes until fork-tender. Drain well, mash with butter, milk, and 1 tsp salt until smooth and spreadable. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 20,
-      "heatLevel": "medium"
-    },
-    {
-      "stepNumber": 4,
-      "title": "Brown turkey and onion",
-      "instruction": "Cook ground turkey and onion over medium-high 10 minutes, breaking into crumbles until no pink remains and onion turns translucent at edges. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 5,
       "title": "Build savory filling",
-      "instruction": "Add garlic, tomato paste, thyme; cook 2 minutes. Stir in mixed vegetables, broth, Worcestershire. Simmer 10 minutes until thick and gravy-coated. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Add garlic, tomato paste, thyme; cook 2 minutes. Stir in mixed vegetables, broth, Worcestershire. Simmer 10 minutes until thick and gravy-coated.",
       "minutes": 12,
       "heatLevel": ""
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Assemble and top",
-      "instruction": "Spread filling in greased hotel pan. Pipe or spread sweet potato mash evenly over top with textured peaks for browning. Plan about 8 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Spread filling in greased hotel pan. Pipe or spread sweet potato mash evenly over top with textured peaks for browning.",
       "minutes": 8,
       "heatLevel": ""
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
+      "stepNumber": 5,
       "title": "Bake until golden",
-      "instruction": "Bake at 400°F 25–30 minutes until mash peaks turn golden and filling bubbles at edges. Center should be hot throughout when pierced. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Bake at 400°F 25–30 minutes until mash peaks turn golden and filling bubbles at edges. Center should be hot throughout when pierced.",
       "minutes": 28,
       "heatLevel": "medium-high"
     }
@@ -206,6 +185,6 @@
     "turkey-sweet-potato-chili",
     "turkey-lettuce-wrap-night"
   ],
-  "generatedAt": "2026-05-30T18:19:44.152Z",
+  "generatedAt": "2026-05-31T15:28:14.291Z",
   "contentVersion": 2
 }

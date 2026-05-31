@@ -62,7 +62,7 @@ export const PERFORMANCE_SOURCE_CANDIDATES: PerformanceSourceRecord[] = [
   cand("se-06", "Serious Eats", "https://www.seriouseats.com/lentil-soup", "Lentil Soup", "soup", "plant_forward", "Big pot vegetarian option", true, "smoky-lentil-kale-soup", 83, "Plant forward backup"),
   cand("se-07", "Serious Eats", "https://www.seriouseats.com/grilled-chicken-thighs", "Grilled Chicken Thighs", "grill", "high_protein", "Bulk grill", false),
   cand("se-08", "Serious Eats", "https://www.seriouseats.com/pasta-primavera", "Pasta Primavera", "pasta", "plant_forward", "Veg heavy pasta", false),
-  cand("se-09", "Serious Eats", "https://www.seriouseats.com/barbacoa", "Barbacoa", "slow_cooker", "high_protein", "Crock overnight", true, "crock-barbacoa-chicken", 89, "Shred for tacos/bowls"),
+  cand("se-09", "Serious Eats", "https://www.seriouseats.com/barbacoa", "Barbacoa", "slow_cooker", "high_protein", "Crock overnight", true, "crock-barbacoa-chicken", 89, "Shred with potato wedges"),
   cand("se-10", "Serious Eats", "https://www.seriouseats.com/meatballs", "Baked Meatballs", "bake", "high_protein", "Sheet pan", false),
 
   // ── Ambitious Kitchen ──

@@ -88,57 +88,36 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Lemon Garlic Chicken Tray Bake in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
+      "title": "Heat oven and prep pans",
+      "instruction": "Heat oven to 425°F. Line two half-sheet pans with parchment. Pat chicken dry so skin crisps instead of steaming in the oven.",
+      "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
+      "title": "Build the lemon garlic marinade",
+      "instruction": "Whisk olive oil, lemon zest, lemon juice, minced garlic, oregano, salt, and pepper until emulsified and fragrant.",
+      "minutes": 5,
+      "heatLevel": ""
     },
     {
       "stepNumber": 3,
-      "title": "Heat oven and prep pans",
-      "instruction": "Heat oven to 425°F. Line two half-sheet pans with parchment. Pat chicken dry so skin crisps instead of steaming in the oven. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 4,
-      "title": "Build the lemon garlic marinade",
-      "instruction": "Whisk olive oil, lemon zest, lemon juice, minced garlic, oregano, salt, and pepper until emulsified and fragrant. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 5,
       "title": "Season chicken and vegetables",
-      "instruction": "Toss thighs with half the marinade until coated. Toss potatoes and broccoli with remaining marinade until glossy and evenly seasoned. Plan about 8 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Toss thighs with half the marinade until coated. Toss potatoes and broccoli with remaining marinade until glossy and evenly seasoned.",
       "minutes": 8,
       "heatLevel": ""
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Roast until chicken is done",
-      "instruction": "Arrange thighs skin-side up with potatoes around edges and broccoli in gaps. Roast 32–38 minutes until internal temp hits 165°F and skin is golden. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Arrange thighs skin-side up with potatoes around edges and broccoli in gaps. Roast 32–38 minutes until internal temp hits 165°F and skin is golden.",
       "minutes": 35,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
+      "stepNumber": 5,
       "title": "Rest and serve from the tray",
-      "instruction": "Rest pans 5 minutes. Spoon pan juices over portions at the line. Chicken should feel firm with clear juices, not pink at the bone. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Rest pans 5 minutes. Spoon pan juices over portions at the line. Chicken should feel firm with clear juices, not pink at the bone.",
       "minutes": 5,
       "heatLevel": ""
     }
@@ -194,6 +173,6 @@
     "crock-barbacoa-chicken",
     "shawarma-chicken-rice-bowls"
   ],
-  "generatedAt": "2026-05-30T18:19:44.151Z",
+  "generatedAt": "2026-05-31T15:28:14.290Z",
   "contentVersion": 2
 }

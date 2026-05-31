@@ -11,6 +11,7 @@ import { resolveEditorialFallbackHero } from "@shared/meal-hero-fallback";
 import { buildRecipeTrustLine } from "@/lib/recipe-trust-line";
 import { Flame, Droplets, Wheat, Beef, Sparkles, Trash2, Clock, Timer, ShieldCheck, Thermometer, Printer, Leaf, Mail, Package, ShoppingCart, DollarSign, Lightbulb, List, Heart, Check, ChevronDown, UtensilsCrossed, Globe, Zap, Bug } from "lucide-react";
 import { saveMeal, isMealSaved } from "@/lib/saved-meals";
+import { trackRecipeSave, trackRecipePrint } from "@/lib/analytics";
 import { hapticSuccess } from "@/lib/haptics";
 import { escapeHtml } from "@/lib/escape-html";
 import { useState, useEffect, useMemo, type ReactNode } from "react";
@@ -283,11 +284,19 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
       hapticSuccess();
       setSaved(true);
       setShowConfirm(true);
+      trackRecipeSave(
+        (recipe as ClientRecipeResponse & { _slug?: string })._slug ?? recipe.title.toLowerCase().replace(/\s+/g, "-"),
+        recipe.title,
+      );
       setTimeout(() => setShowConfirm(false), 2500);
     }
   };
 
   const handlePrint = () => {
+    trackRecipePrint(
+      (recipe as ClientRecipeResponse & { _slug?: string })._slug ?? recipe.title.toLowerCase().replace(/\s+/g, "-"),
+      recipe.title,
+    );
     const html = buildPrintHtml(recipe, crewSize);
     const printWindow = window.open("", "_blank");
     if (printWindow) {

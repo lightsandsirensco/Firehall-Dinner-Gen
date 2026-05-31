@@ -103,57 +103,36 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Spanish Chicken and Chorizo Rice in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
+      "title": "Bloom saffron",
+      "instruction": "Steep saffron in warm broth 10 minutes until liquid turns golden and smells distinctly floral and earthy.",
+      "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
-      "title": "Bloom saffron",
-      "instruction": "Steep saffron in warm broth 10 minutes until liquid turns golden and smells distinctly floral and earthy. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 10,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 4,
       "title": "Crisp chorizo and brown chicken",
-      "instruction": "Cook chorizo in Dutch oven until fat renders and edges crisp. Remove. Brown chicken thighs in chorizo fat 4 minutes per side until golden. Bake until the center reaches a safe internal temp (165°F) and edges look set — use a thermometer at the thickest point. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Cook chorizo in Dutch oven until fat renders and edges crisp. Remove. Brown chicken thighs in chorizo fat 4 minutes per side until golden.",
       "minutes": 15,
       "heatLevel": "medium-high"
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Build rice base",
-      "instruction": "Sauté onion and pepper 5 minutes. Add garlic, paprika, and rice. Toast 2 minutes until rice edges look translucent and smell nutty. Target 165°F at the thickest part before moving to the next batch. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Sauté onion and pepper 5 minutes. Add garlic, paprika, and rice. Toast 2 minutes until rice edges look translucent and smell nutty.",
       "minutes": 7,
       "heatLevel": ""
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Simmer covered",
-      "instruction": "Add saffron broth, nest chicken and chorizo on top. Simmer covered 25–30 minutes without stirring until rice absorbs liquid and is tender. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Add saffron broth, nest chicken and chorizo on top. Simmer covered 25–30 minutes without stirring until rice absorbs liquid and is tender.",
       "minutes": 30,
       "heatLevel": "medium-low"
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
+      "stepNumber": 5,
       "title": "Add peas and rest",
-      "instruction": "Stir in peas off heat, cover 5 minutes. Rice should be fluffy with slight socarrat crust at bottom if heat was even. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Stir in peas off heat, cover 5 minutes. Rice should be fluffy with slight socarrat crust at bottom if heat was even.",
       "minutes": 5,
       "heatLevel": ""
     }
@@ -206,6 +185,6 @@
     "crock-barbacoa-chicken",
     "shawarma-chicken-rice-bowls"
   ],
-  "generatedAt": "2026-05-30T18:19:44.152Z",
+  "generatedAt": "2026-05-31T15:28:14.291Z",
   "contentVersion": 2
 }

@@ -93,57 +93,36 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Boneless Chicken Thighs with Sweet Potato & Fresh Spinach in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Season and prep thighs",
-      "instruction": "Trim excess fat from thighs and pat completely dry. Season both sides with salt, pepper, and half the paprika so the sear builds a spiced crust. Cook until char marks are visible and the thickest piece reads 165°F on an instant-read thermometer. Plan about 8 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Trim excess fat from thighs and pat completely dry. Season both sides with salt, pepper, and half the paprika so the sear builds a spiced crust.",
       "minutes": 8,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Roast sweet potato wedges",
-      "instruction": "Toss wedges with 2 tbsp olive oil, 1 tsp salt, and paprika. Spread on two half-sheets in a single layer. Roast at 425°F 28–32 minutes until edges caramelize and centers pierce easily. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Toss wedges with 2 tbsp olive oil, 1 tsp salt, and paprika. Spread on two half-sheets in a single layer. Roast at 425°F 28–32 minutes until edges caramelize and centers pierce easily.",
       "minutes": 32,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Sear chicken thighs",
-      "instruction": "Heat remaining oil in skillets over medium-high. Season thighs with salt and pepper. Sear 5–6 minutes per side until deep golden with crisp edges and internal temp reaches 165°F. Rest 5 minutes, then slice. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts.",
+      "instruction": "Heat remaining oil in skillets over medium-high. Season thighs with salt and pepper. Sear 5–6 minutes per side until deep golden with crisp edges and internal temp reaches 165°F. Rest 5 minutes, then slice.",
       "minutes": 14,
       "heatLevel": "medium-high"
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Sauté spinach",
-      "instruction": "In the same pan over medium, cook garlic 30 seconds until fragrant. Add spinach in batches, tossing until just wilted and bright green. Finish with a pinch of salt and lemon juice. Target 165°F at the thickest part before moving to the next batch. Plan about 4 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "In the same pan over medium, cook garlic 30 seconds until fragrant. Add spinach in batches, tossing until just wilted and bright green. Finish with a pinch of salt and lemon juice.",
       "minutes": 4,
       "heatLevel": ""
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
+      "stepNumber": 5,
       "title": "Plate for service",
-      "instruction": "Portion two sliced thighs per plate with a mound of sweet potato wedges and sautéed spinach on the side. Protein should dominate the plate; vegetables and carbs stay distinct, not mixed into sauce. Target 165°F at the thickest part before moving to the next batch. Plan about 5 minutes for this step at crew scale.",
+      "instruction": "Portion two sliced thighs per plate with a mound of sweet potato wedges and sautéed spinach on the side. Protein should dominate the plate; vegetables and carbs stay distinct, not mixed into sauce.",
       "minutes": 5,
       "heatLevel": ""
     }
@@ -196,6 +175,6 @@
     "crock-barbacoa-chicken",
     "shawarma-chicken-rice-bowls"
   ],
-  "generatedAt": "2026-05-30T18:19:44.152Z",
+  "generatedAt": "2026-05-31T15:28:14.291Z",
   "contentVersion": 2
 }

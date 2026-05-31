@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { memo, useCallback, useEffect, useMemo, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Clock } from "lucide-react";
 import {
@@ -10,7 +10,6 @@ import {
 } from "@shared/approved-catalog";
 import { MissingRecipeImagePlaceholder } from "@/components/missing-recipe-image-placeholder";
 import { cn } from "@/lib/utils";
-import { FoodImage } from "@/components/mobile/food-image";
 import { FilterChip, FilterChipScroller } from "@/components/mobile/filter-chips";
 import { Button } from "@/components/ui/button";
 import { approvedCatalogQueryKey, fetchApprovedCatalog } from "@/lib/approved-catalog-api";
@@ -24,6 +23,11 @@ import {
   type ApprovedCatalogFilterState,
 } from "@/lib/approved-catalog-filters";
 import { RecipeGridSkeleton } from "@/components/mobile/loading-skeletons";
+import { trackExploreFilter, trackExploreRecipeClick } from "@/lib/analytics";
+import { exploreCardImageCandidates, EXPLORE_CATALOG_PAGE_SIZE } from "@/lib/explore-card-image";
+import type { RecipeRatingSortMap } from "@/lib/recipe-crew-ratings-api";
+
+export { EXPLORE_CATALOG_PAGE_SIZE };
 
 const PRIMARY_FILTERS: ApprovedCatalogPrimaryFilter[] = [
   "all",
@@ -49,26 +53,56 @@ const SORT_LABELS: Record<CatalogSortMode, string> = {
   trending: "Trending",
 };
 
-function CatalogImagePlaceholder({ title }: { title: string }) {
-  return <MissingRecipeImagePlaceholder title={title} />;
+function sortCatalogEntries(
+  rows: ApprovedCatalogEntry[],
+  sort: CatalogSortMode,
+  sortMap: RecipeRatingSortMap | undefined,
+): ApprovedCatalogEntry[] {
+  if (sort === "curated" || !sortMap) {
+    return [...rows].sort((a, b) => a.title.localeCompare(b.title));
+  }
+  const score = (slug: string) => sortMap[slug];
+  if (sort === "most_popular" || sort === "most_votes") {
+    return [...rows].sort(
+      (a, b) => (score(b.slug)?.totalVotes ?? 0) - (score(a.slug)?.totalVotes ?? 0),
+    );
+  }
+  if (sort === "highest_rated") {
+    return [...rows].sort(
+      (a, b) => (score(b.slug)?.approvalScore ?? 0) - (score(a.slug)?.approvalScore ?? 0),
+    );
+  }
+  if (sort === "trending") {
+    return [...rows].sort(
+      (a, b) => (score(b.slug)?.trendingScore ?? 0) - (score(a.slug)?.trendingScore ?? 0),
+    );
+  }
+  return rows;
 }
 
-function ApprovedCatalogCard({
+const ApprovedCatalogCard = memo(function ApprovedCatalogCard({
   entry,
   onClick,
 }: {
   entry: ApprovedCatalogEntry;
   onClick: () => void;
 }) {
-  const [imgFailed, setImgFailed] = useState(false);
-  const imageSrc = entry.heroImage;
-  const showImage = Boolean(imageSrc) && !imgFailed;
+  const candidates = useMemo(() => exploreCardImageCandidates(entry), [entry]);
+  const [candidateIndex, setCandidateIndex] = useState(0);
+  const [exhausted, setExhausted] = useState(false);
+  const imageSrc = candidates[candidateIndex] ?? "";
+  const showImage = Boolean(imageSrc) && !exhausted;
+
+  useEffect(() => {
+    setCandidateIndex(0);
+    setExhausted(false);
+  }, [entry.slug]);
 
   return (
     <article
       className={cn(
         "group flex h-full cursor-pointer flex-col overflow-hidden rounded-2xl bg-card/30 ring-1 ring-border/15",
-        "transition-all hover:ring-primary/25 hover:shadow-lg hover:shadow-black/10",
+        "hover:ring-primary/25",
       )}
       onClick={onClick}
       role="button"
@@ -83,27 +117,27 @@ function ApprovedCatalogCard({
     >
       <div className="relative aspect-[4/5] overflow-hidden bg-zinc-950">
         {showImage ? (
-          <FoodImage
+          <img
             src={imageSrc}
             alt={entry.title}
-            layout="card-fill"
-            fit="cover"
-            focal="center"
-            overlay="none"
-            cinematicGrade
-            rounded="none"
+            loading="lazy"
+            decoding="async"
+            className="absolute inset-0 h-full w-full object-cover object-center"
             onError={() => {
-              setImgFailed(true);
-              return true;
+              setCandidateIndex((prev) => {
+                if (prev + 1 < candidates.length) return prev + 1;
+                setExhausted(true);
+                return prev;
+              });
             }}
           />
         ) : (
-          <CatalogImagePlaceholder title={entry.title} />
+          <MissingRecipeImagePlaceholder title={entry.title} />
         )}
       </div>
 
       <div className="flex flex-1 flex-col gap-1.5 p-3">
-        <h3 className="line-clamp-2 text-sm font-medium leading-snug transition-colors group-hover:text-primary">
+        <h3 className="line-clamp-2 text-sm font-medium leading-snug group-hover:text-primary">
           {entry.title}
         </h3>
         <p className="mt-auto flex items-center gap-1.5 text-xs capitalize text-muted-foreground">
@@ -117,7 +151,7 @@ function ApprovedCatalogCard({
       </div>
     </article>
   );
-}
+});
 
 export interface ExploreCatalogBrowserProps {
   onRecipeClick: (slug: string) => void;
@@ -129,6 +163,16 @@ export function ExploreCatalogBrowser({ onRecipeClick, className }: ExploreCatal
     DEFAULT_APPROVED_CATALOG_FILTERS,
   );
   const [sort, setSort] = useState<CatalogSortMode>("curated");
+  const [searchInput, setSearchInput] = useState("");
+  const [searchQuery, setSearchQuery] = useState("");
+  const [visibleCount, setVisibleCount] = useState(EXPLORE_CATALOG_PAGE_SIZE);
+
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      setSearchQuery(searchInput.trim().toLowerCase());
+    }, 300);
+    return () => window.clearTimeout(timer);
+  }, [searchInput]);
 
   const { data, isLoading, error, refetch } = useQuery({
     queryKey: approvedCatalogQueryKey,
@@ -151,33 +195,54 @@ export function ExploreCatalogBrowser({ onRecipeClick, className }: ExploreCatal
 
   const filtered = useMemo(() => {
     let rows = filterApprovedCatalogEntries(data?.recipes ?? [], filters);
-    if (sort === "curated" || !sortMap) {
-      return rows.sort((a, b) => a.title.localeCompare(b.title));
+    if (searchQuery) {
+      rows = rows.filter((entry) => entry.searchText.includes(searchQuery));
     }
-    const score = (slug: string) => sortMap[slug];
-    if (sort === "most_popular" || sort === "most_votes") {
-      rows = [...rows].sort(
-        (a, b) => (score(b.slug)?.totalVotes ?? 0) - (score(a.slug)?.totalVotes ?? 0),
-      );
-    } else if (sort === "highest_rated") {
-      rows = [...rows].sort(
-        (a, b) => (score(b.slug)?.approvalScore ?? 0) - (score(a.slug)?.approvalScore ?? 0),
-      );
-    } else if (sort === "trending") {
-      rows = [...rows].sort(
-        (a, b) => (score(b.slug)?.trendingScore ?? 0) - (score(a.slug)?.trendingScore ?? 0),
-      );
-    }
-    return rows;
-  }, [data?.recipes, filters, sort, sortMap]);
+    return sortCatalogEntries(rows, sort, sortMap);
+  }, [data?.recipes, filters, sort, sortMap, searchQuery]);
 
-  const resetFilters = () => setFilters(DEFAULT_APPROVED_CATALOG_FILTERS);
+  useEffect(() => {
+    setVisibleCount(EXPLORE_CATALOG_PAGE_SIZE);
+  }, [filters, sort, searchQuery]);
+
+  const visibleRecipes = useMemo(
+    () => filtered.slice(0, visibleCount),
+    [filtered, visibleCount],
+  );
+
+  const hasMore = visibleCount < filtered.length;
+
+  const resetFilters = useCallback(() => {
+    setFilters(DEFAULT_APPROVED_CATALOG_FILTERS);
+    setSearchInput("");
+  }, []);
+
+  const handleRecipeClick = useCallback(
+    (entry: ApprovedCatalogEntry) => {
+      trackExploreRecipeClick({ slug: entry.slug, title: entry.title });
+      onRecipeClick(entry.slug);
+    },
+    [onRecipeClick],
+  );
 
   return (
     <section className={cn("space-y-6", className)} data-testid="explore-catalog-browser">
       <ExploreRatingCollections onRecipeClick={onRecipeClick} />
 
       <div className="space-y-4">
+        <label className="block space-y-1 text-xs font-medium text-muted-foreground max-w-md">
+          Search recipes
+          <input
+            type="search"
+            value={searchInput}
+            onChange={(e) => setSearchInput(e.target.value)}
+            placeholder="Search by name, protein, tag…"
+            className="min-h-11 w-full rounded-xl border border-border/30 bg-background px-3 text-sm text-foreground"
+            data-testid="explore-catalog-search"
+            autoComplete="off"
+          />
+        </label>
+
         <label className="block space-y-1 text-xs font-medium text-muted-foreground max-w-xs">
           Sort by
           <select
@@ -199,7 +264,14 @@ export function ExploreCatalogBrowser({ onRecipeClick, className }: ExploreCatal
             <FilterChip
               key={primary}
               active={filters.primary === primary}
-              onClick={() => setFilters((prev) => ({ ...prev, primary }))}
+              onClick={() => {
+                setFilters((prev) => ({ ...prev, primary }));
+                trackExploreFilter({
+                  filter_key: `primary:${primary}`,
+                  filter_label: APPROVED_CATALOG_PRIMARY_LABELS[primary],
+                  category: primary,
+                });
+              }}
               testId={`explore-primary-filter-${primary}`}
             >
               {APPROVED_CATALOG_PRIMARY_LABELS[primary]}
@@ -212,7 +284,17 @@ export function ExploreCatalogBrowser({ onRecipeClick, className }: ExploreCatal
             Category
             <select
               value={filters.category}
-              onChange={(e) => setFilters((prev) => ({ ...prev, category: e.target.value }))}
+              onChange={(e) => {
+                const category = e.target.value;
+                setFilters((prev) => ({ ...prev, category }));
+                if (category !== "all") {
+                  trackExploreFilter({
+                    filter_key: `category:${category}`,
+                    filter_label: category,
+                    category,
+                  });
+                }
+              }}
               className="min-h-11 w-full rounded-xl border border-border/30 bg-background px-3 text-sm text-foreground"
               data-testid="explore-catalog-filter-category"
             >
@@ -229,7 +311,16 @@ export function ExploreCatalogBrowser({ onRecipeClick, className }: ExploreCatal
             Protein
             <select
               value={filters.protein}
-              onChange={(e) => setFilters((prev) => ({ ...prev, protein: e.target.value }))}
+              onChange={(e) => {
+                const protein = e.target.value;
+                setFilters((prev) => ({ ...prev, protein }));
+                if (protein !== "all") {
+                  trackExploreFilter({
+                    filter_key: `protein:${protein}`,
+                    filter_label: protein,
+                  });
+                }
+              }}
               className="min-h-11 w-full rounded-xl border border-border/30 bg-background px-3 text-sm text-foreground"
               data-testid="explore-catalog-filter-protein"
             >
@@ -246,12 +337,16 @@ export function ExploreCatalogBrowser({ onRecipeClick, className }: ExploreCatal
             Cook time
             <select
               value={filters.cookTime}
-              onChange={(e) =>
-                setFilters((prev) => ({
-                  ...prev,
-                  cookTime: e.target.value as ApprovedCatalogFilterState["cookTime"],
-                }))
-              }
+              onChange={(e) => {
+                const cookTime = e.target.value as ApprovedCatalogFilterState["cookTime"];
+                setFilters((prev) => ({ ...prev, cookTime }));
+                if (cookTime !== "all") {
+                  trackExploreFilter({
+                    filter_key: `cook_time:${cookTime}`,
+                    filter_label: APPROVED_CATALOG_COOK_TIME_LABELS[cookTime],
+                  });
+                }
+              }}
               className="min-h-11 w-full rounded-xl border border-border/30 bg-background px-3 text-sm text-foreground"
               data-testid="explore-catalog-filter-cook-time"
             >
@@ -268,14 +363,26 @@ export function ExploreCatalogBrowser({ onRecipeClick, className }: ExploreCatal
         <FilterChipScroller>
           <FilterChip
             active={filters.highProtein}
-            onClick={() => setFilters((prev) => ({ ...prev, highProtein: !prev.highProtein }))}
+            onClick={() => {
+              setFilters((prev) => ({ ...prev, highProtein: !prev.highProtein }));
+              trackExploreFilter({
+                filter_key: "trait:high_protein",
+                filter_label: "High protein",
+              });
+            }}
             testId="explore-catalog-trait-high-protein"
           >
             High protein
           </FilterChip>
           <FilterChip
             active={filters.lowCleanup}
-            onClick={() => setFilters((prev) => ({ ...prev, lowCleanup: !prev.lowCleanup }))}
+            onClick={() => {
+              setFilters((prev) => ({ ...prev, lowCleanup: !prev.lowCleanup }));
+              trackExploreFilter({
+                filter_key: "trait:low_cleanup",
+                filter_label: "Low cleanup",
+              });
+            }}
             testId="explore-catalog-trait-low-cleanup"
           >
             Low cleanup
@@ -316,19 +423,37 @@ export function ExploreCatalogBrowser({ onRecipeClick, className }: ExploreCatal
       {!isLoading && !error && data && (
         <>
           {filtered.length > 0 ? (
-            <ul
-              className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 sm:gap-4"
-              data-testid="explore-catalog-grid"
-            >
-              {filtered.map((entry) => (
-                <li key={entry.slug}>
-                  <ApprovedCatalogCard
-                    entry={entry}
-                    onClick={() => onRecipeClick(entry.slug)}
-                  />
-                </li>
-              ))}
-            </ul>
+            <>
+              <p className="text-xs text-muted-foreground tabular-nums" data-testid="explore-catalog-count">
+                Showing {visibleRecipes.length} of {filtered.length} recipes
+              </p>
+              <ul
+                className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 sm:gap-4"
+                data-testid="explore-catalog-grid"
+              >
+                {visibleRecipes.map((entry) => (
+                  <li key={entry.slug} className="[content-visibility:auto]">
+                    <ApprovedCatalogCard
+                      entry={entry}
+                      onClick={() => handleRecipeClick(entry)}
+                    />
+                  </li>
+                ))}
+              </ul>
+              {hasMore && (
+                <div className="flex justify-center pt-4">
+                  <Button
+                    type="button"
+                    variant="outline"
+                    className="min-h-11 px-8"
+                    onClick={() => setVisibleCount((n) => n + EXPLORE_CATALOG_PAGE_SIZE)}
+                    data-testid="explore-catalog-load-more"
+                  >
+                    Load more ({Math.min(EXPLORE_CATALOG_PAGE_SIZE, filtered.length - visibleCount)} more)
+                  </Button>
+                </div>
+              )}
+            </>
           ) : (
             <div className="py-16 text-center" data-testid="explore-catalog-empty">
               <p className="font-medium text-foreground">No meals match these filters</p>

@@ -4,6 +4,7 @@ import { AppPageHeader } from "@/components/mobile/app-page-header";
 import { SiteFooter } from "@/components/site-footer";
 import { SeoBreadcrumbs } from "@/components/seo/breadcrumbs";
 import { ExploreCatalogBrowser } from "@/components/explore-catalog-browser";
+import { ExploreErrorBoundary } from "@/components/explore-error-boundary";
 import { getSavedCount } from "@/lib/saved-meals";
 import { approvedCatalogRecipePath } from "@shared/approved-catalog";
 import { usePageSeo } from "@/lib/seo/use-page-seo";
@@ -63,9 +64,11 @@ export function ExploreDiscoveryPage() {
       />
 
       <main className={cn(app.mainFeed, "pb-10 pt-2 sm:pb-14")}>
-        <ExploreCatalogBrowser
-          onRecipeClick={(slug) => navigate(approvedCatalogRecipePath(slug))}
-        />
+        <ExploreErrorBoundary>
+          <ExploreCatalogBrowser
+            onRecipeClick={(slug) => navigate(approvedCatalogRecipePath(slug))}
+          />
+        </ExploreErrorBoundary>
       </main>
 
       <SiteFooter variant="compact" pbSafe />

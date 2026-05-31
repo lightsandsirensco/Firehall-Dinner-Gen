@@ -39,6 +39,9 @@ import {
   auditTitlePathKeywords,
   type ImageAccuracyIssue,
 } from "../shared/curated-image-governance/image-accuracy-rules.js";
+import {
+  auditTitlePrimarySideAlignment,
+} from "../shared/curated-image-governance/title-primary-side-rules.js";
 import { validateRedLeadImageRef } from "../shared/curated-image-governance/red-lead-rules.js";
 import { imageFileExists } from "../shared/explore-image-paths.js";
 
@@ -172,6 +175,12 @@ function auditRecipe(input: {
     ...auditTitlePathKeywords(input.title, input.images.heroImage),
     ...auditFoodRealismHeuristics(input.title, input.images.heroImage, "", input.mealFormat),
     ...auditCategoryMealFormat(input.title, input.mealFormat, input.category, input.images.heroImage),
+    ...auditTitlePrimarySideAlignment({
+      slug: input.slug,
+      title: input.title,
+      mealFormat: input.mealFormat,
+      heroPath: input.images.heroImage,
+    }),
   ];
 
   if (!onDisk.hero) {
@@ -184,12 +193,22 @@ function auditRecipe(input: {
   }
 
   if (donorOverride) {
-    accuracyIssues.push({
-      code: "donor_override_active",
-      severity: "info",
-      message: `hero copied from donor slug "${donorOverride}" — verify visual match`,
-      confidence: 40,
+    const sideIssues = auditTitlePrimarySideAlignment({
+      slug: input.slug,
+      title: input.title,
+      mealFormat: input.mealFormat,
+      heroPath: input.images.heroImage,
     });
+    if (sideIssues.some((i) => i.code === "image_title_mismatch")) {
+      accuracyIssues.push(...sideIssues.filter((i) => i.code === "image_title_mismatch"));
+    } else {
+      accuracyIssues.push({
+        code: "donor_override_active",
+        severity: "warning",
+        message: `hero copied from donor slug "${donorOverride}" — verify title-side alignment`,
+        confidence: 55,
+      });
+    }
   }
 
   const critical =
