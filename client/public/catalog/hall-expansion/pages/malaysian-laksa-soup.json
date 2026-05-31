@@ -1,0 +1,243 @@
+{
+  "slug": "malaysian-laksa-soup",
+  "title": "Malaysian Laksa Soup",
+  "displayTitle": "Malaysian Laksa Soup",
+  "seoTitle": "Malaysian Laksa Soup | Firefighter Meal",
+  "shortDescription": "Coconut curry noodle soup with shrimp and chicken for ten",
+  "subtitle": "Coconut curry noodle soup with shrimp and chicken for ten",
+  "category": "hall_expansion",
+  "cuisine": "malaysian",
+  "description": "Aromatics and laksa paste bloom in coconut milk and broth, then simmer with chicken, shrimp, and rice noodles. Serve with lime, cilantro, bean sprouts, and sambal for a bright, spicy hall soup night.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 40,
+  "prepTime": 35,
+  "difficulty": "medium",
+  "calories": 490,
+  "protein": 36,
+  "carbs": 46,
+  "fats": 18,
+  "tags": [
+    "protein:shrimp",
+    "format:soup",
+    "category:crew_feeders",
+    "hall_expansion",
+    "crew_feeders",
+    "malaysian",
+    "shrimp",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Large pot",
+    "Ladle",
+    "Tongs",
+    "Bowls",
+    "Hotel pans"
+  ],
+  "ingredients": [
+    {
+      "name": "vegetable oil",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Base"
+    },
+    {
+      "name": "laksa paste",
+      "quantity": "0.5",
+      "unit": "cup",
+      "notes": "store-bought or homemade",
+      "group": "Base"
+    },
+    {
+      "name": "coconut milk",
+      "quantity": "3",
+      "unit": "cans",
+      "notes": "13.5 oz each",
+      "group": "Base"
+    },
+    {
+      "name": "chicken broth",
+      "quantity": "4",
+      "unit": "cups",
+      "group": "Base"
+    },
+    {
+      "name": "chicken breast",
+      "quantity": "2",
+      "unit": "lb",
+      "notes": "sliced thin",
+      "group": "Protein"
+    },
+    {
+      "name": "large shrimp",
+      "quantity": "2",
+      "unit": "lb",
+      "notes": "peeled and deveined",
+      "group": "Protein"
+    },
+    {
+      "name": "rice noodles",
+      "quantity": "1.5",
+      "unit": "lb",
+      "notes": "thick",
+      "group": "Noodles"
+    },
+    {
+      "name": "fish sauce",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "lime juice",
+      "quantity": "0.25",
+      "unit": "cup",
+      "group": "Finish"
+    },
+    {
+      "name": "bean sprouts",
+      "quantity": "3",
+      "unit": "cups",
+      "group": "Garnish"
+    },
+    {
+      "name": "fresh cilantro",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "chopped",
+      "group": "Garnish"
+    },
+    {
+      "name": "sambal oelek",
+      "quantity": "0.25",
+      "unit": "cup",
+      "notes": "for serving",
+      "group": "Garnish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Malaysian Laksa Soup in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch shrimp. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Bloom laksa paste in oil",
+      "instruction": "Heat 3 tbsp vegetable oil in a large pot over medium heat until it shimmers. Add 1/2 cup laksa paste and fry 2–3 minutes, stirring constantly, until deeply fragrant and the oil turns orange-red with a thin sheen on top.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Simmer coconut milk and broth",
+      "instruction": "Pour in 3 cans coconut milk and 4 cups chicken broth. Bring to a gentle simmer over medium heat—small bubbles at the edges, not a rolling boil. Simmer uncovered 15 minutes so the paste flavor melds into the broth.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Season with fish sauce",
+      "instruction": "Stir in 2 tbsp fish sauce and taste: broth should be savory, lightly sweet from coconut, and lightly spicy from the paste. Add another small splash of fish sauce if the pot tastes flat.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Poach chicken breast",
+      "instruction": "Slide in 2 lb thin-sliced chicken breast. Return to a gentle simmer and cook 8–10 minutes until chicken is opaque white throughout and reads 165°F in the thickest piece. Transfer chicken to a hotel pan, shred or slice, and cover loosely. Target oven/smoker temperature: 165°F.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Cook and cool rice noodles",
+      "instruction": "Soak or boil 1.5 lb thick rice noodles per package until tender but still springy. Drain, rinse under cold water to stop cooking, toss with a few drops of oil, and portion into bowls or a labeled hotel pan for the line.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Poach shrimp in laksa broth",
+      "instruction": "Raise the laksa broth to a steady simmer. Add 2 lb peeled large shrimp and cook 2–3 minutes until shells turn pink and flesh is opaque and curled—do not let shrimp boil hard or they turn rubbery.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
+      "title": "Brighten with lime and hold",
+      "instruction": "Remove the pot from heat. Stir in 1/4 cup lime juice and taste once more—the broth should finish bright and slightly tangy. For holding, keep broth in the pot or a hotel pan at 170°F max; do not boil while holding or coconut fat may split. Target oven/smoker temperature: 170°F.",
+      "minutes": 3,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
+      "title": "Ladle bowls on the line",
+      "instruction": "Place a portion of rice noodles in each bowl. Ladle hot laksa broth over noodles, then top with chicken, shrimp, bean sprouts, and chopped cilantro. Pass sambal oelek on the side so each crew member controls the heat.",
+      "minutes": 8,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Hard-boiled egg halves are traditional and add cheap protein.",
+    "Fried shallots from a jar upgrade texture instantly.",
+    "If broth splits on hold, whisk in a spoon of warm water—not more coconut milk."
+  ],
+  "tonightSpread": [
+    "Laksa bowls with lime wedges, cilantro, sprouts, and sambal.",
+    "Cucumber salad with chili and peanuts for crunch."
+  ],
+  "leftovers": [
+    "Reheat broth and chicken gently to 165°F—never boil or coconut fat splits. Poach fresh shrimp in the reheated broth for 2–3 minutes at service.",
+    "Extra laksa paste freezes in ice cube trays for quick future batches."
+  ],
+  "whyCrewsLikeIt": "Laksa wakes up tired palates. Coconut broth feels indulgent, shrimp and chicken double the protein, and the soup format means one ladle per bowl—fast service when everyone is starving post-call.",
+  "mealPrepNotes": "Bloom laksa paste in oil before any liquids—raw paste tastes harsh. Shrimp go in at the very end; they need only 2–3 minutes. Cook rice noodles ahead, rinse cold, and hold separately so they do not swell in the broth pot.",
+  "spiceLevel": "medium",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 490,
+    "protein": 36,
+    "carbs": 46,
+    "fats": 18,
+    "label": "~490 cal/serving · 36g protein · 2g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/malaysian-laksa-soup.jpg",
+  "heroImageAlt": "Malaysian Laksa Soup — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/malaysian-laksa-soup.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/malaysian-laksa-soup.jpg",
+  "railImage": "/images/rails/hall-expansion/malaysian-laksa-soup.jpg",
+  "realismScore": 100,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "malaysian laksa soup",
+    "crew feeders"
+  ],
+  "relatedSlugs": [
+    "shawarma-bar-night",
+    "fajita-bar-night",
+    "hall-burger-bar",
+    "pasta-bar-night"
+  ],
+  "generatedAt": "2026-05-31T01:50:00.916Z",
+  "contentVersion": 2
+}

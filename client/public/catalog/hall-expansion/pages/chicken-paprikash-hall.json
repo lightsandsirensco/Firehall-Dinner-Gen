@@ -1,0 +1,221 @@
+{
+  "slug": "chicken-paprikash-hall",
+  "title": "Chicken Paprikash for the Hall",
+  "displayTitle": "Chicken Paprikash for the Hall",
+  "seoTitle": "Chicken Paprikash for the Hall | Firefighter Meal",
+  "shortDescription": "Hungarian paprika stew with sour cream over egg noodles for ten",
+  "subtitle": "Hungarian paprika stew with sour cream over egg noodles for ten",
+  "category": "hall_expansion",
+  "cuisine": "hungarian",
+  "description": "Chicken thighs braise in a brick-red paprika sauce with onion and bell pepper until tender, then finish with sour cream off heat. Serve over buttered egg noodles with extra paprika at the line.",
+  "crewSize": 9,
+  "baseServings": 9,
+  "cookTime": 50,
+  "prepTime": 25,
+  "difficulty": "medium",
+  "calories": 490,
+  "protein": 36,
+  "carbs": 44,
+  "fats": 20,
+  "tags": [
+    "protein:chicken",
+    "format:stew",
+    "category:crew_feeders",
+    "hall_expansion",
+    "crew_feeders",
+    "hungarian",
+    "chicken",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Dutch oven",
+    "Large pot",
+    "Instant-read thermometer",
+    "Tongs",
+    "Ladle"
+  ],
+  "ingredients": [
+    {
+      "name": "bone-in chicken thighs",
+      "quantity": "5",
+      "unit": "lb",
+      "notes": "about 16 pieces",
+      "group": "Main"
+    },
+    {
+      "name": "sweet paprika",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "sliced",
+      "group": "Sauce"
+    },
+    {
+      "name": "red bell pepper",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "sliced",
+      "group": "Sauce"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "5",
+      "unit": "cloves",
+      "notes": "minced",
+      "group": "Sauce"
+    },
+    {
+      "name": "tomato paste",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "chicken broth",
+      "quantity": "3",
+      "unit": "cups",
+      "group": "Sauce"
+    },
+    {
+      "name": "sour cream",
+      "quantity": "1",
+      "unit": "cup",
+      "group": "Finish"
+    },
+    {
+      "name": "egg noodles",
+      "quantity": "2",
+      "unit": "lb",
+      "group": "Base"
+    },
+    {
+      "name": "butter",
+      "quantity": "4",
+      "unit": "tbsp",
+      "group": "Base"
+    },
+    {
+      "name": "fresh parsley",
+      "quantity": "0.25",
+      "unit": "cup",
+      "notes": "chopped",
+      "group": "Finish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Chicken Paprikash for the Hall in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Brown the chicken",
+      "instruction": "Season thighs with salt and pepper. Sear skin-side down in a Dutch oven until golden, flip briefly, then set aside. Bake until the center reaches a safe internal temp (165°F) and edges look set — use a thermometer at the thickest point. Plan about 12 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Build paprika base",
+      "instruction": "Sauté onion and bell pepper in the same pot 6 minutes. Stir in paprika and garlic, cook 1 minute until fragrant, then add tomato paste.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Braise until tender",
+      "instruction": "Add broth, nestle chicken skin-side up, cover, and simmer 35–40 minutes until chicken reaches 165°F and sauce thickens. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 38,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Finish with sour cream",
+      "instruction": "Remove pot from heat. Stir sour cream in gradually until sauce turns silky. Taste and adjust salt. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Boil noodles and serve",
+      "instruction": "Cook egg noodles, toss with butter, and portion into bowls. Top with chicken, sauce, and parsley. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Plan about 12 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
+      "minutes": 12,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "A pinch of caraway seed in the base adds classic Hungarian aroma.",
+    "Pull chicken bones at the line if your crew prefers fork-only eating.",
+    "Hot paprika on the side lets spice lovers upgrade without changing the batch."
+  ],
+  "tonightSpread": [
+    "Paprikash over noodles with cucumber salad in sour cream dressing.",
+    "Crusty bread for soaking up every bit of red sauce."
+  ],
+  "leftovers": [
+    "Shred chicken into sauce and reheat gently for next-day stew.",
+    "Reduce sauce further and use as a filling for savory hand pies."
+  ],
+  "whyCrewsLikeIt": "Paprikash brings Eastern European comfort to halls that already ran out of chili ideas. The sauce is rich but not cream-pasta heavy, and thighs stay juicy on the hold line.",
+  "mealPrepNotes": "Bloom paprika in fat briefly—never burn it or the whole pot turns bitter. Stir sour cream off heat to prevent curdling. Hold noodles and sauce separately if holding over 30 minutes.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 490,
+    "protein": 36,
+    "carbs": 44,
+    "fats": 20,
+    "label": "~490 cal/serving · 36g protein · 3g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/chicken-paprikash-hall.jpg",
+  "heroImageAlt": "Chicken Paprikash for the Hall — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/chicken-paprikash-hall.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/chicken-paprikash-hall.jpg",
+  "railImage": "/images/rails/hall-expansion/chicken-paprikash-hall.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "chicken paprikash for the hall",
+    "crew feeders"
+  ],
+  "relatedSlugs": [
+    "shawarma-bar-night",
+    "fajita-bar-night",
+    "hall-burger-bar",
+    "pasta-bar-night"
+  ],
+  "generatedAt": "2026-05-31T01:50:00.916Z",
+  "contentVersion": 2
+}

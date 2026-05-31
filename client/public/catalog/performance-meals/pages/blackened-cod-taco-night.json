@@ -101,36 +101,57 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Mix blackening spice",
-      "instruction": "Combine paprika, garlic powder, onion powder, thyme, cayenne, 1 tbsp salt, and 1 tsp pepper. Rub should smell smoky and evenly blended.",
-      "minutes": 3,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Blackened Cod Taco Night in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Prep slaw and crema",
-      "instruction": "Toss cabbage with half the lime juice and pinch of salt until lightly wilted but still crunchy. Blend avocado, yogurt, and remaining lime for crema.",
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch fish. Confirm burners ignite evenly and sheet pans are greased or lined.",
       "minutes": 10,
-      "heatLevel": ""
+      "heatLevel": "medium-high"
     },
     {
       "stepNumber": 3,
-      "title": "Coat and sear cod",
-      "instruction": "Pat cod dry, coat generously with blackening spice. Sear in hot oiled skillet 3–4 minutes per side until crust is dark and fish reads 145°F.",
-      "minutes": 10,
-      "heatLevel": "high"
-    },
-    {
-      "stepNumber": 4,
-      "title": "Rest and flake fish",
-      "instruction": "Rest fish 3 minutes, break into large chunks. Flesh should be opaque, moist, and flake cleanly without drying into strings.",
+      "title": "Mix blackening spice",
+      "instruction": "Combine paprika, garlic powder, onion powder, thyme, cayenne, 1 tbsp salt, and 1 tsp pepper. Rub should smell smoky and evenly blended. Plan about 3 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 3,
       "heatLevel": ""
     },
     {
+      "stepNumber": 4,
+      "title": "Prep slaw and crema",
+      "instruction": "Toss cabbage with half the lime juice and pinch of salt until lightly wilted but still crunchy. Blend avocado, yogurt, and remaining lime for crema. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
       "stepNumber": 5,
+      "title": "Coat and sear cod",
+      "instruction": "Pat cod dry, coat generously with blackening spice. Sear in hot oiled skillet 3–4 minutes per side until crust is dark and fish reads 145°F. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 10,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Rest and flake fish",
+      "instruction": "Rest fish 3 minutes, break into large chunks. Flesh should be opaque, moist, and flake cleanly without drying into strings. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 3,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F until flakes separate. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
       "title": "Assemble tacos",
-      "instruction": "Warm tortillas in foil. Fill with fish, slaw, and crema. Crust should stay spicy and crisp-tender, not soggy from over-filling.",
+      "instruction": "Warm tortillas in foil. Fill with fish, slaw, and crema. Crust should stay spicy and crisp-tender, not soggy from over-filling. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 5,
       "heatLevel": ""
     }

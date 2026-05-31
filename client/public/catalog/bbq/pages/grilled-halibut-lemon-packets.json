@@ -1,0 +1,216 @@
+{
+  "slug": "grilled-halibut-lemon-packets",
+  "title": "Caper-Butter Halibut Foil Packets",
+  "displayTitle": "Caper-Butter Halibut Foil Packets",
+  "seoTitle": "Caper-Butter Halibut Foil Packets | Firehall BBQ",
+  "shortDescription": "Halibut packet night—lemon caper butter steam on the grill, not baked",
+  "subtitle": "Foil-packet halibut, caper butter, and herb steam for ten",
+  "category": "bbq_grill_nights",
+  "cuisine": "mediterranean",
+  "description": "Halibut fillets seal in foil packets with lemon, capers, cherry tomatoes, and white wine butter, grill until 145°F, and open at the table for aromatic steam.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 18,
+  "prepTime": 20,
+  "difficulty": "medium",
+  "calories": 520,
+  "protein": 32,
+  "carbs": 48,
+  "fats": 22,
+  "tags": [
+    "protein:seafood",
+    "format:foil_fish",
+    "category:bbq_grill_nights",
+    "bbq",
+    "smoker",
+    "grill",
+    "firehall_bbq_25",
+    "bbq",
+    "grill",
+    "firehall_bbq_30"
+  ],
+  "equipment": [
+    "flat-top griddle",
+    "heavy foil",
+    "instant-read thermometer",
+    "sheet pans",
+    "tongs"
+  ],
+  "ingredients": [
+    {
+      "name": "Pacific halibut fillets",
+      "quantity": "5",
+      "unit": "lb",
+      "notes": "about 10 portions",
+      "group": "Main"
+    },
+    {
+      "name": "unsalted butter",
+      "quantity": "0.5",
+      "unit": "cup",
+      "notes": "cut into pats",
+      "group": "Packet"
+    },
+    {
+      "name": "nonpareil capers",
+      "quantity": "0.25",
+      "unit": "cup",
+      "notes": "drained",
+      "group": "Packet"
+    },
+    {
+      "name": "fennel bulb",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "thin-sliced",
+      "group": "Packet"
+    },
+    {
+      "name": "Picholine olives",
+      "quantity": "0.75",
+      "unit": "cup",
+      "notes": "pitted",
+      "group": "Packet"
+    },
+    {
+      "name": "dry vermouth",
+      "quantity": "0.25",
+      "unit": "cup",
+      "group": "Packet"
+    },
+    {
+      "name": "fresh tarragon",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Packet"
+    },
+    {
+      "name": "fresh dill fronds",
+      "quantity": "0.25",
+      "unit": "cup",
+      "group": "Finish"
+    },
+    {
+      "name": "Maldon salt",
+      "quantity": "1.5",
+      "unit": "tsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "white pepper",
+      "quantity": "1",
+      "unit": "tsp",
+      "group": "Seasoning"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Build foil packets",
+      "instruction": "Place each halibut portion on heavy foil. Top with butter pat, capers, tomatoes, lemon slice, thyme, wine, salt, and pepper. Seal tightly. Plan about 15 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat grill grates",
+      "instruction": "Preheat grill to medium, 400°F. Have sheet pan ready for packet transfer. Plan about 8 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 8,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Grill packets",
+      "instruction": "Grill sealed packets 12–14 minutes until puffed and halibut reads 145°F through foil. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 14,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Check doneness",
+      "instruction": "Open one test packet—flesh should flake and butter should be bubbling. Re-seal others if holding. Plan about 3 minutes for this step at crew scale. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 3,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Hold sealed",
+      "instruction": "Hold finished packets sealed at 140°F up to 15 minutes on sheet pans. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Open at service",
+      "instruction": "Open packets at the line for steam and aroma. Watch for hot steam burns. Plan about 3 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 3,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Finish with parsley",
+      "instruction": "Scatter parsley over opened packets. Spoon caper butter over fish. Plan about 3 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 3,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Platter for ten",
+      "instruction": "Serve one packet per firefighter with crusty bread for soaking butter. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Double-fold foil seams—leaky packets lose steam and dry out.",
+    "White wine in the packet creates steam; don't skip it.",
+    "Open packets away from faces—steam exits fast."
+  ],
+  "tonightSpread": [
+    "Grilled halibut lemon packets with caper butter.",
+    "Grilled asparagus or green salad on the side."
+  ],
+  "leftovers": [
+    "Flake halibut into fish stew with packet butter.",
+    "Chop into Mediterranean fish salad."
+  ],
+  "whyCrewsLikeIt": "Foil packets cook evenly and hold in the packet at 140°F for a short window—perfect when the crew might get toned out mid-service.",
+  "mealPrepNotes": "Build packets ahead. Grill medium 400°F, 12–14 minutes. Hold sealed packets at 140°F up to 15 minutes. Open at service for steam and aroma.",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 520,
+    "protein": 32,
+    "carbs": 48,
+    "fats": 22,
+    "label": "per serving (hall portion)",
+    "source": "estimated"
+  },
+  "heroImage": "/images/smoker-catalog/grilled-halibut-lemon-packets.jpg",
+  "heroImageAlt": "Caper-Butter Halibut Foil Packets — crew-sized BBQ spread with visible smoke and bark",
+  "mobileImage": "/images/mobile/smoker-catalog/grilled-halibut-lemon-packets.jpg",
+  "thumbImage": "/images/thumbs/smoker-catalog/grilled-halibut-lemon-packets.jpg",
+  "railImage": "/images/rails/smoker-catalog/grilled-halibut-lemon-packets.jpg",
+  "realismScore": 88,
+  "firefighterScore": 90,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "caper-butter halibut foil packets",
+    "grilled halibut lemon packets",
+    "seafood",
+    "Mediterranean",
+    "foil fish",
+    "bbq",
+    "firehall",
+    "foil packet halibut grill",
+    "caper butter halibut"
+  ],
+  "relatedSlugs": [
+    "carolina-vinegar-pulled-pork",
+    "honey-chipotle-chicken-thighs",
+    "smoked-chicken-quarters-white-sauce",
+    "brisket-style-beef-sandwiches-au-jus"
+  ],
+  "sourceName": "Firehall Meals BBQ Collection",
+  "generatedAt": "2026-05-31T02:29:42.536Z",
+  "contentVersion": 2
+}

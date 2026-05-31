@@ -57,27 +57,59 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Crisp the potatoes",
-      "instruction": "Heat cast iron over medium-high with oil. Add potatoes in one layer; let them sit 4 minutes before tossing for crust. Season with salt and pepper.",
-      "minutes": 14
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for BBQ Breakfast Hash in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Warm the BBQ",
-      "instruction": "Fold in onion and pulled pork with a splash of BBQ sauce. Heat through without drying the meat.",
-      "minutes": 5
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch Eggs. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
     },
     {
       "stepNumber": 3,
-      "title": "Eggs on top",
-      "instruction": "Make wells in the hash. Crack eggs in, cover until whites set. Finish with cheese if using.",
-      "minutes": 6
+      "title": "Crisp the potatoes",
+      "instruction": "Heat cast iron over medium-high with oil. Add potatoes in one layer; let them sit 4 minutes before tossing for crust. Season with salt and pepper. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 14,
+      "heatLevel": ""
     },
     {
       "stepNumber": 4,
+      "title": "Warm the BBQ",
+      "instruction": "Fold in onion and pulled pork with a splash of BBQ sauce. Heat through without drying the meat. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Eggs on top",
+      "instruction": "Make wells in the hash. Crack eggs in, cover until whites set. Finish with cheese if using. Plan about 6 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 6,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 8,
       "title": "Serve with extra sauce",
-      "instruction": "Serve straight from the skillet with extra BBQ sauce on the side for the crew.",
-      "minutes": 0
+      "instruction": "Serve straight from the skillet with extra BBQ sauce on the side for the crew. Target 165°F at the thickest part before moving to the next batch. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 0,
+      "heatLevel": ""
     }
   ],
   "nutrition": {
@@ -117,8 +149,27 @@
   "heroImage": "/images/breakfast/bbq-breakfast-hash.jpg",
   "thumbImage": "/images/thumbs/breakfast/bbq-breakfast-hash.jpg",
   "imageAlt": "Warm station-kitchen breakfast: BBQ Breakfast Hash",
-  "publishedAt": "2026-05-30T03:14:16.261Z",
-  "updatedAt": "2026-05-30T20:03:05.047Z",
+  "publishedAt": "2026-05-30T21:22:29.758Z",
+  "updatedAt": "2026-05-31T12:54:36.748Z",
   "readMinutes": 6,
-  "seoTitle": "BBQ Breakfast Hash | Firehall Breakfast"
+  "seoTitle": "BBQ Breakfast Hash | Firehall Breakfast",
+  "mobileImage": "/images/mobile/breakfast/bbq-breakfast-hash.jpg",
+  "railImage": "/images/rails/breakfast/bbq-breakfast-hash.jpg",
+  "proTips": [
+    "Assign one cook to the hot surface and one to assembly. Keep the line moving; don’t crowd the griddle.",
+    "Set a warm holding zone (oven 200°F or covered hotel pan) so staggered eaters still get a hot plate.",
+    "Run a quick call-proof check: anything crispy stays uncovered; anything soft stays covered."
+  ],
+  "tonightSpread": [
+    "Plate BBQ Breakfast Hash with sides in separate pans so the crew can mix portions.",
+    "Keep hot items on one side of the table and cold on the other — eggs stay hot, fruit stays cold.",
+    "Line up BBQ Breakfast Hash on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+  ],
+  "equipment": [
+    "Large sheet trays",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "mealPrepNotes": "Prep mise en place before the shift — BBQ Breakfast Hash runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
 }

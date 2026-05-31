@@ -15,7 +15,7 @@
   "difficulty": "hard",
   "calories": 1400,
   "protein": 120,
-  "carbs": 122,
+  "carbs": 136,
   "fats": 90,
   "tags": [
     "protein:pork",
@@ -34,8 +34,9 @@
   "ingredients": [
     {
       "name": "Boneless pork shoulder",
-      "quantity": "4",
+      "quantity": "5",
       "unit": "lb",
+      "notes": "about 10 oz raw per firefighter",
       "group": "Main"
     },
     {
@@ -82,7 +83,7 @@
     },
     {
       "name": "Elbow macaroni",
-      "quantity": "2",
+      "quantity": "2.5",
       "unit": "lb",
       "group": "Pasta"
     },
@@ -194,7 +195,7 @@
   "nutrition": {
     "calories": 1400,
     "protein": 120,
-    "carbs": 122,
+    "carbs": 136,
     "fats": 90,
     "label": "per serving (hall portion)",
     "source": "calculated",
@@ -240,6 +241,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-30T03:28:01.955Z",
+  "generatedAt": "2026-05-31T01:49:51.123Z",
   "contentVersion": 2
 }

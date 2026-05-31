@@ -12,12 +12,17 @@ import {
   breakfastCatalogHeroPath,
   breakfastCatalogThumbPath,
 } from "./breakfast-catalog/slug-registry.js";
+import {
+  bbqCatalogHeroPath,
+  bbqCatalogThumbPath,
+} from "./bbq-catalog/slug-registry.js";
 
 export type ExploreCatalogImageKind =
   | "firehall_catalog"
   | "performance_meal"
   | "hall_expansion"
   | "breakfast_catalog"
+  | "bbq_catalog"
   | "hall_classic"
   | "smoothie";
 
@@ -26,7 +31,7 @@ export interface SlugLockedImagePaths {
   thumb: string;
   mobile: string;
   rail: string;
-  /** Ordered candidates for card display — first existing file wins at runtime */
+  /** Canonical hero only — Explore never borrows thumb/mobile/rail fallbacks. */
   cardCandidates: string[];
 }
 
@@ -43,16 +48,14 @@ export function slugLockedImagePaths(slug: string, kind: ExploreCatalogImageKind
       thumb,
       mobile,
       rail,
-      cardCandidates: [thumb, hero, mobile, rail],
+      cardCandidates: [hero],
     };
   }
 
   if (kind === "hall_classic") {
     const classic = getClassicHallMeal(s);
     const hero = classic?.heroImagePath?.trim() || resolveCatalogHeroPath(s);
-    const cardCandidates = classic?.heroImagePath?.trim()
-      ? [thumb, classic.heroImagePath.trim(), hero, mobile, rail]
-      : [thumb, hero, mobile, rail];
+    const cardCandidates = [hero];
     return {
       hero,
       thumb,
@@ -70,7 +73,7 @@ export function slugLockedImagePaths(slug: string, kind: ExploreCatalogImageKind
       thumb: expansionThumb,
       mobile: `/images/mobile/hall-expansion/${s}.jpg`,
       rail: `/images/rails/hall-expansion/${s}.jpg`,
-      cardCandidates: [expansionThumb, hero, mobile, rail],
+      cardCandidates: [hero],
     };
   }
 
@@ -82,7 +85,19 @@ export function slugLockedImagePaths(slug: string, kind: ExploreCatalogImageKind
       thumb: breakfastThumb,
       mobile: `/images/mobile/breakfast/${s}.jpg`,
       rail: `/images/rails/breakfast/${s}.jpg`,
-      cardCandidates: [breakfastThumb, hero, mobile, rail],
+      cardCandidates: [hero],
+    };
+  }
+
+  if (kind === "bbq_catalog") {
+    const hero = bbqCatalogHeroPath(s);
+    const bbqThumb = bbqCatalogThumbPath(s);
+    return {
+      hero,
+      thumb: bbqThumb,
+      mobile: `/images/mobile/smoker-catalog/${s}.jpg`,
+      rail: `/images/rails/smoker-catalog/${s}.jpg`,
+      cardCandidates: [hero],
     };
   }
 
@@ -92,7 +107,7 @@ export function slugLockedImagePaths(slug: string, kind: ExploreCatalogImageKind
     thumb,
     mobile,
     rail,
-    cardCandidates: [thumb, hero, mobile, rail],
+    cardCandidates: [hero],
   };
 }
 
@@ -113,25 +128,19 @@ export function imageFileExists(publicPath: string, publicRoot?: string): boolea
   }
 }
 
-/** Pick the first slug-locked candidate that exists on disk. */
+/** Resolve slug-locked hero only — never substitute neighboring variants. */
 export function resolveExistingSlugImage(
   slug: string,
   kind: ExploreCatalogImageKind,
   publicRoot?: string,
 ): { hero: string; thumb: string; cardImage: string; found: boolean } {
   const paths = slugLockedImagePaths(slug, kind);
-  const cardImage =
-    paths.cardCandidates.find((candidate) => imageFileExists(candidate, publicRoot)) ??
-    paths.hero;
-
   const heroFound = imageFileExists(paths.hero, publicRoot);
-  const thumbFound = imageFileExists(paths.thumb, publicRoot);
-  const cardFound = imageFileExists(cardImage, publicRoot);
 
   return {
     hero: paths.hero,
     thumb: paths.thumb,
-    cardImage,
-    found: heroFound || thumbFound || cardFound,
+    cardImage: paths.hero,
+    found: heroFound,
   };
 }

@@ -1,0 +1,192 @@
+{
+  "slug": "breakfast-stromboli-roll",
+  "title": "Breakfast Stromboli Roll",
+  "subtitle": "Pizza dough rolled with scrambled eggs, ham, and cheese, baked golden.",
+  "description": "Adapted from classic Italian-American stromboli tradition for firehall oven service: pizza dough stretched thin, filled with scrambled eggs, ham, peppers, and mozzarella, rolled tight and baked until golden for eight thick slices.",
+  "filters": [
+    "feed_a_crew",
+    "high_protein",
+    "breakfast_sandwiches"
+  ],
+  "tags": [
+    "stromboli",
+    "ham",
+    "eggs",
+    "cheese",
+    "baked"
+  ],
+  "crewSize": 8,
+  "baseServings": 8,
+  "prepTime": 25,
+  "cookTime": 25,
+  "totalTime": 50,
+  "difficulty": "medium",
+  "ingredients": [
+    {
+      "name": "pizza dough",
+      "quantity": "2 lb",
+      "notes": "room temperature",
+      "group": "Dough"
+    },
+    {
+      "name": "large eggs",
+      "quantity": "12",
+      "notes": "soft-scrambled and cooled slightly",
+      "group": "Filling"
+    },
+    {
+      "name": "deli ham",
+      "quantity": "1 1/2 lb",
+      "notes": "thin slices",
+      "group": "Filling"
+    },
+    {
+      "name": "shredded mozzarella",
+      "quantity": "2 cups",
+      "notes": "low moisture",
+      "group": "Filling"
+    },
+    {
+      "name": "roasted red pepper",
+      "quantity": "1",
+      "notes": "sliced, or sautéed bell pepper",
+      "group": "Filling"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "2 tbsp",
+      "notes": "for brushing",
+      "group": "Finish"
+    },
+    {
+      "name": "grated Parmesan",
+      "quantity": "1/2 cup",
+      "notes": "plus flaky salt",
+      "group": "Finish"
+    },
+    {
+      "name": "marinara sauce",
+      "quantity": "1 cup",
+      "notes": "warmed for dipping",
+      "group": "Serve"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Breakfast Stromboli Roll in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch Eggs. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Heat the oven",
+      "instruction": "Heat oven to 425°F. Line a sheet pan with parchment. Stretch each dough ball into a 10x14-inch rectangle on a lightly floured surface, keeping edges slightly thicker. Allow 10–15 minutes for mise en place before heat goes on. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
+      "minutes": 0,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Prep the filling",
+      "instruction": "Soft-scramble eggs over low heat until just set but still glossy. Spread on a tray to cool 5 minutes—hot eggs will melt cheese prematurely and tear dough. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Fill and roll",
+      "instruction": "Layer ham, scrambled eggs, peppers, and mozzarella on the lower third of each dough rectangle, leaving a 1-inch border. Roll tightly from the bottom, pinch seams closed, and place seam-side down on the pan. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Bake until golden",
+      "instruction": "Brush rolls with olive oil and sprinkle Parmesan. Cut small vents on top. Bake 20–22 minutes until deep golden and internal egg filling reaches 165°F in the center. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 22,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Rest and slice",
+      "instruction": "Rest stromboli 8 minutes before slicing into thick portions with a serrated knife. Serve with warm marinara for dipping at the line. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 8,
+      "heatLevel": ""
+    }
+  ],
+  "nutrition": {
+    "calories": 607,
+    "protein": 30,
+    "carbs": 60,
+    "fat": 26,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "stationWorkflow": [
+    "Cool scrambled eggs slightly before filling—hot filling blows out seams during baking.",
+    "Vent the top of each roll so steam escapes and crust stays crisp.",
+    "Slice with a serrated knife in one motion to avoid squashing the roll."
+  ],
+  "cleanupNotes": [
+    "Use parchment on sheet pans so melted cheese releases without scraping.",
+    "Wipe flour from prep surfaces before it mixes with oil and forms paste."
+  ],
+  "leftovers": [
+    "Reheat slices on a sheet pan at 375°F for 8 minutes; microwave makes crust rubbery.",
+    "Dice leftovers into a breakfast strata with extra eggs and milk for tomorrow's bake."
+  ],
+  "heroImage": "/images/breakfast/breakfast-stromboli-roll.jpg",
+  "thumbImage": "/images/thumbs/breakfast/breakfast-stromboli-roll.jpg",
+  "imageAlt": "Golden breakfast stromboli sliced with ham, eggs, and melted cheese",
+  "publishedAt": "2026-05-30T21:22:29.757Z",
+  "updatedAt": "2026-05-31T12:54:36.760Z",
+  "readMinutes": 8,
+  "seoTitle": "Breakfast Stromboli Roll | Firehall Breakfast",
+  "mobileImage": "/images/mobile/breakfast/breakfast-stromboli-roll.jpg",
+  "railImage": "/images/rails/breakfast/breakfast-stromboli-roll.jpg",
+  "proTips": [
+    "Cool scrambled eggs slightly before filling—hot filling blows out seams during baking.",
+    "Vent the top of each roll so steam escapes and crust stays crisp.",
+    "Slice with a serrated knife in one motion to avoid squashing the roll."
+  ],
+  "tonightSpread": [
+    "Plate Breakfast Stromboli Roll with sides in separate pans so the crew can mix portions.",
+    "Keep hot items on one side of the table and cold on the other — eggs stay hot, fruit stays cold.",
+    "Line up Breakfast Stromboli Roll on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+  ],
+  "equipment": [
+    "Large sheet trays",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "mealPrepNotes": "Prep mise en place before the shift — Breakfast Stromboli Roll runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
+}

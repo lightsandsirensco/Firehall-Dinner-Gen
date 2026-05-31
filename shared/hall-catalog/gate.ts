@@ -21,14 +21,22 @@ import {
   getBreakfastCatalogTitle,
   isBreakfastCatalogSlug,
 } from "../breakfast-catalog/slug-registry.js";
+import {
+  BBQ_SLUG_SET,
+  bbqCatalogHeroPath,
+  getBbqCatalogTitle,
+  isBbqCatalogSlug,
+} from "../bbq-catalog/slug-registry.js";
+import { PHASE5_REMOVED_SLUGS } from "../catalog-consolidation/phase5-redirects.js";
 import type { RecipeSourceAttribution } from "../canonical-recipe.js";
 
 /** Internal editorial collection ids (admin / telemetry only). */
 export type CatalogCollectionId =
   | "golden_100"
   | "performance_50"
-  | "hall_expansion_56"
-  | "breakfast_catalog";
+  | "hall_expansion_74"
+  | "breakfast_catalog"
+  | "bbq_catalog";
 
 /** Customer-facing catalog badges — never use internal collection names. */
 export type CatalogPublicBadge =
@@ -89,6 +97,8 @@ const OWNED_IMAGE_PREFIXES = [
   "/images/performance-50/",
   "/images/hall-expansion/",
   "/images/breakfast/",
+  "/images/bbq/",
+  "/images/smoker-catalog/",
   "/images/mobile/",
   "/images/thumbs/",
   "/images/rails/",
@@ -114,14 +124,17 @@ export function isHallExpansionSlug(slug: string | null | undefined): boolean {
   return s.length > 0 && HALL_EXPANSION_SLUG_SET.has(s);
 }
 
-export { isBreakfastCatalogSlug };
+export { isBreakfastCatalogSlug, isBbqCatalogSlug };
 
 export function isApprovedCatalogSlug(slug: string | null | undefined): boolean {
+  const s = normalizeCatalogSlug(slug);
+  if (PHASE5_REMOVED_SLUGS.has(s)) return false;
   return (
     isGolden100Slug(slug) ||
     isPerformance50Slug(slug) ||
     isHallExpansionSlug(slug) ||
-    isBreakfastCatalogSlug(slug)
+    isBreakfastCatalogSlug(slug) ||
+    isBbqCatalogSlug(slug)
   );
 }
 
@@ -140,7 +153,8 @@ export function isHallClassicSlug(slug: string | null | undefined): boolean {
 export function resolveCatalogCollection(slug: string): CatalogCollectionId | null {
   const s = normalizeCatalogSlug(slug);
   if (BREAKFAST_SLUG_SET.has(s)) return "breakfast_catalog";
-  if (HALL_EXPANSION_SLUG_SET.has(s)) return "hall_expansion_56";
+  if (BBQ_SLUG_SET.has(s)) return "bbq_catalog";
+  if (HALL_EXPANSION_SLUG_SET.has(s)) return "hall_expansion_74";
   if (PERFORMANCE_SLUG_SET.has(s)) return "performance_50";
   if (GOLDEN_SLUG_SET.has(s)) return "golden_100";
   return null;
@@ -156,6 +170,8 @@ export function getCatalogTitle(slug: string): string | null {
   if (expansion?.title) return expansion.title;
   const breakfastTitle = getBreakfastCatalogTitle(s);
   if (breakfastTitle) return breakfastTitle;
+  const bbqTitle = getBbqCatalogTitle(s);
+  if (bbqTitle) return bbqTitle;
   return null;
 }
 
@@ -171,6 +187,9 @@ export function resolveCatalogHeroPath(slug: string): string {
   const s = normalizeCatalogSlug(slug);
   if (isBreakfastCatalogSlug(s)) {
     return breakfastCatalogHeroPath(s);
+  }
+  if (isBbqCatalogSlug(s)) {
+    return bbqCatalogHeroPath(s);
   }
   if (isHallExpansionSlug(s)) {
     return hallExpansionHeroPath(s);
@@ -265,9 +284,10 @@ function isApprovedSourceAttribution(source: CatalogGateInput["recipeSource"]): 
     kind === "catalog" ||
     kind === "golden_100" ||
     kind === "performance_meals_50" ||
-    kind === "hall_expansion_56" ||
+    kind === "hall_expansion_74" ||
     kind === "hall_expansion_30" ||
     kind === "breakfast_catalog" ||
+    kind === "bbq_catalog" ||
     kind === "hall_classic" ||
     kind === "publisher"
   );
@@ -335,11 +355,13 @@ export function evaluateCatalogRecipe(
   const matchedBy =
     collection === "performance_50"
       ? "performance_50_index"
-      : collection === "hall_expansion_56"
+      : collection === "hall_expansion_74"
         ? "hall_expansion_index"
         : collection === "breakfast_catalog"
           ? "breakfast_catalog_index"
-          : "golden_100_index";
+          : collection === "bbq_catalog"
+            ? "bbq_catalog_index"
+            : "golden_100_index";
 
   if (input.source && DISALLOWED_SOURCES.has(String(input.source).toLowerCase())) {
     reasons.push(`disallowed_source:${input.source}`);
@@ -471,7 +493,7 @@ export function searchHallCatalog(query: string, limit = 15): HallCatalogSearchH
       protein: r.protein,
       cuisine: r.cuisine,
       mealFormat: r.mealFormat,
-      collection: "hall_expansion_56" as const,
+      collection: "hall_expansion_74" as const,
     })),
   ];
 

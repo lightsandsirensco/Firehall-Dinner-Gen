@@ -1,7 +1,7 @@
 {
   "slug": "mediterranean-feast-night",
-  "title": "Mediterranean Feast Night",
-  "displayTitle": "Mediterranean Feast Night",
+  "title": "Crispy Honey Chili Chicken Thighs",
+  "displayTitle": "Crispy Honey Chili Chicken Thighs",
   "seoTitle": "Mediterranean Feast Night | Firefighter Meal",
   "shortDescription": "Mezze bar with chicken, hummus, and flatbread for ten",
   "subtitle": "Mezze bar with chicken, hummus, and flatbread for ten",
@@ -25,7 +25,7 @@
     "healthy",
     "chicken",
     "hall_expansion",
-    "hall_expansion_56",
+    "hall_expansion_74",
     "hall_meal",
     "firefighter_meal"
   ],
@@ -104,37 +104,86 @@
   "steps": [
     {
       "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Crispy Honey Chili Chicken Thighs in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Double-check seasoning after scaling — crew palates run salty after long shifts, so taste the first portion before opening the line.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
       "title": "Marinate and grill chicken",
       "instruction": "Marinate thighs in lemon, olive oil, oregano, garlic, and salt 2–24 hours. Grill over medium-high heat 6–7 minutes per side until internal temp reaches 175°F and char marks appear.",
       "minutes": 25,
       "heatLevel": ""
     },
     {
-      "stepNumber": 2,
+      "stepNumber": 4,
       "title": "Rest and slice chicken",
       "instruction": "Rest grilled chicken 10 minutes, then slice into strips. Hold in a hotel pan at 165°F with a light drizzle of olive oil to prevent drying.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
-      "stepNumber": 3,
+      "stepNumber": 5,
       "title": "Prep cold mezze components",
       "instruction": "Portion hummus, tzatziki, tabbouleh, feta, and olives into separate bowls. Garnish hummus with paprika and olive oil drizzle for visual appeal.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 6,
       "title": "Warm pita and set the bar",
       "instruction": "Wrap pita in foil and warm at 350°F for 8 minutes. Arrange all components along the line with serving spoons and label each dish clearly. Target oven/smoker temperature: 350°F.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Portion and open the line",
+      "instruction": "Portion Crispy Honey Chili Chicken Thighs onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Scale for larger halls",
+      "instruction": "When cooking for more than 10 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
       "title": "Guide plate builds",
       "instruction": "Suggest a sample plate: hummus, chicken, tabbouleh, feta, olives, pita. Encourage wraps or bowls and replenish warm pita from the oven as needed.",
       "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 12,
+      "title": "Final quality check before service",
+      "instruction": "Walk the line once before opening service for Crispy Honey Chili Chicken Thighs — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
+      "minutes": 4,
       "heatLevel": ""
     }
   ],
@@ -180,6 +229,6 @@
     "hall-burger-bar",
     "pasta-bar-night"
   ],
-  "generatedAt": "2026-05-30T03:14:19.188Z",
+  "generatedAt": "2026-05-31T01:50:00.916Z",
   "contentVersion": 2
 }

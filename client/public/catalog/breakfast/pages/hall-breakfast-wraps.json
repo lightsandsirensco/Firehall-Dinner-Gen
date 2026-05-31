@@ -74,33 +74,59 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Cook the components",
-      "instruction": "Brown turkey sausage and drain. Wilt spinach in the same pan, squeeze dry in a towel. Soft-scramble eggs over low heat—they should still look glossy when done.",
-      "minutes": 12
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Hall Breakfast Wraps in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Warm tortillas",
-      "instruction": "Heat tortillas in a dry skillet or wrapped in foil at 300°F until pliable. Stiff tortillas tear when rolled tight.",
-      "minutes": 3
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch Eggs. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
     },
     {
       "stepNumber": 3,
-      "title": "Build each wrap",
-      "instruction": "Spread a thin line of salsa verde on each tortilla. Layer eggs, sausage, spinach, feta, and optional avocado off-center. Roll tight, tucking sides as you go.",
-      "minutes": 10
+      "title": "Cook the components",
+      "instruction": "Brown turkey sausage and drain. Wilt spinach in the same pan, squeeze dry in a towel. Soft-scramble eggs over low heat—they should still look glossy when done. Plan about 12 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 12,
+      "heatLevel": ""
     },
     {
       "stepNumber": 4,
-      "title": "Cut and wrap",
-      "instruction": "Cut each wrap in half on the bias with a sharp knife. Wrap halves in foil for grab-and-go or arrange cut-side up on a tray for dine-in.",
-      "minutes": 5
+      "title": "Warm tortillas",
+      "instruction": "Heat tortillas in a dry skillet or wrapped in foil at 300°F until pliable. Stiff tortillas tear when rolled tight. Plan about 3 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 3,
+      "heatLevel": ""
     },
     {
       "stepNumber": 5,
+      "title": "Build each wrap",
+      "instruction": "Spread a thin line of salsa verde on each tortilla. Layer eggs, sausage, spinach, feta, and optional avocado off-center. Roll tight, tucking sides as you go. Plan about 10 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Cut and wrap",
+      "instruction": "Cut each wrap in half on the bias with a sharp knife. Wrap halves in foil for grab-and-go or arrange cut-side up on a tray for dine-in. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
       "title": "Hold and serve",
-      "instruction": "Hold wrapped portions in a 200°F oven up to 20 minutes. Serve with extra salsa and hot sauce at the line for self-serve heat.",
-      "minutes": 0
+      "instruction": "Hold wrapped portions in a 200°F oven up to 20 minutes. Serve with extra salsa and hot sauce at the line for self-serve heat. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 0,
+      "heatLevel": ""
     }
   ],
   "nutrition": {
@@ -140,8 +166,27 @@
   "heroImage": "/images/breakfast/hall-breakfast-wraps.jpg",
   "thumbImage": "/images/thumbs/breakfast/hall-breakfast-wraps.jpg",
   "imageAlt": "Hall breakfast wraps cut in half showing eggs, turkey sausage, and spinach",
-  "publishedAt": "2026-05-30T03:14:16.260Z",
-  "updatedAt": "2026-05-30T03:14:16.260Z",
+  "publishedAt": "2026-05-30T21:22:29.756Z",
+  "updatedAt": "2026-05-31T12:54:36.775Z",
   "readMinutes": 7,
-  "seoTitle": "Hall Breakfast Wraps | Firehall Breakfast"
+  "seoTitle": "Hall Breakfast Wraps | Firehall Breakfast",
+  "mobileImage": "/images/mobile/breakfast/hall-breakfast-wraps.jpg",
+  "railImage": "/images/rails/breakfast/hall-breakfast-wraps.jpg",
+  "proTips": [
+    "Squeeze spinach thoroughly—wet greens turn wraps soggy within minutes on the holding rack.",
+    "Roll on a flat cutting board with tortillas oriented like a burrito, not a fajita fold.",
+    "Cut with a serrated knife using a gentle saw motion so fillings don't get pushed out the ends."
+  ],
+  "tonightSpread": [
+    "Plate Hall Breakfast Wraps with sides in separate pans so the crew can mix portions.",
+    "Keep hot items on one side of the table and cold on the other — eggs stay hot, fruit stays cold.",
+    "Line up Hall Breakfast Wraps on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+  ],
+  "equipment": [
+    "Large sheet trays",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "mealPrepNotes": "Prep mise en place before the shift — Hall Breakfast Wraps runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
 }

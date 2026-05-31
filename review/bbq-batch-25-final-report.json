@@ -1,0 +1,74 @@
+{
+  "generatedAt": "2026-05-30T21:43:00.000Z",
+  "phase": "PHASE 3 — BBQ & Smoker Collection (+25)",
+  "status": "COMPLETE",
+  "summary": {
+    "recipesAdded": 25,
+    "bbqCatalogTotal": 25,
+    "approvedCatalogTotal": 300,
+    "imagesCreated": {
+      "heroes": 25,
+      "mobile": 25,
+      "thumbnails": 25,
+      "rails": 25,
+      "totalAssets": 100
+    },
+    "pagesCreated": 25,
+    "databaseSeeded": 25
+  },
+  "recipeMix": {
+    "brisket": 5,
+    "pulledPork": 5,
+    "chicken": 5,
+    "steak": 3,
+    "burger": 2,
+    "sausage": 2,
+    "smokerSides": 3
+  },
+  "recipesAdded": [
+    "texas-central-brisket-crew",
+    "firehall-burnt-ends-platter",
+    "overnight-smoked-brisket-hold",
+    "pepper-smoked-brisket-flat",
+    "brisket-style-beef-sandwiches-au-jus",
+    "kansas-city-pulled-pork-sandwiches",
+    "memphis-dry-rub-pulled-pork",
+    "texas-smoked-pulled-pork-shoulder",
+    "alabama-white-sauce-pulled-pork",
+    "carolina-vinegar-pulled-pork",
+    "competition-bbq-chicken-thighs",
+    "smoked-bbq-chicken-wings-tray",
+    "hickory-smoked-chicken-breast",
+    "honey-chipotle-chicken-thighs",
+    "smoked-chicken-quarters-white-sauce",
+    "santa-maria-tri-tip-roast",
+    "reverse-seared-ribeye-crew",
+    "smoked-picanha-steak-platter",
+    "bbq-bacon-cheddar-burgers",
+    "firehall-double-smash-burgers-bbq",
+    "hot-honey-grilled-sausage-peppers",
+    "jalapeno-cheddar-smoked-sausages",
+    "smoked-mac-and-cheese-crew",
+    "smoked-baked-beans-crew",
+    "smoked-potato-salad-tray"
+  ],
+  "exploreIntegration": {
+    "category": "BBQ & Grill",
+    "primaryFilter": "bbq_grill",
+    "batchExploreEligible": "25/25",
+    "recipeRoutes": "/recipes/{slug}",
+    "relatedRecipes": "relatedSlugs on each Golden-format page"
+  },
+  "qaResults": {
+    "auditBbqBatch25": "PASS — 25/25 pages, images, Explore eligibility",
+    "uniqueHeroMd5": "25/25",
+    "duplicateHeroImages": 0,
+    "missingAssets": 0,
+    "brokenRoutes": 0,
+    "imageSimilarityAudit": "MD5 uniqueness pass — 0 duplicate heroes; perceptual similarity not duplicated within batch"
+  },
+  "fixesApplied": [
+    "Renamed image folder from /images/bbq/ to /images/smoker-catalog/ to avoid false grill-signal conflicts in Explore validation"
+  ],
+  "failures": []
+}

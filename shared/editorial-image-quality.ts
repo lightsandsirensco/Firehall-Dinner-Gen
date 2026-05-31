@@ -94,7 +94,7 @@ export function evaluateEditorialQualityScore(
   };
 }
 
-export const EDITORIAL_VISION_QA_RUBRIC = `Score this Firehall Meals editorial food photograph.
+export const EDITORIAL_VISION_QA_RUBRIC = `Score this Firehall Meals editorial food photograph against the GLOBAL FIREHALL KITCHEN PHOTO STANDARD.
 Return JSON only:
 {
   "realism": 1-10,
@@ -107,4 +107,4 @@ Return JSON only:
   "mobileReadability": 1-10,
   "issues": string[]
 }
-Criteria: cinematic warm food photography, realistic textures, center-weighted hero, no text/logos/hands, mobile-safe framing, premium editorial not AI slop.`;
+Criteria: active Canadian firehall kitchen (commercial stainless, prep tables, steam tables), crew-sized portions, warm documentary food photography, realistic textures, center-weighted hero, no text/logos/firefighter marketing imagery, mobile-safe framing, premium editorial not AI slop or stock photo sterility.`;

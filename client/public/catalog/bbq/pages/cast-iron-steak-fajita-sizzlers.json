@@ -1,0 +1,216 @@
+{
+  "slug": "cast-iron-steak-fajita-sizzlers",
+  "title": "Cast Iron Skirt Steak Sizzlers",
+  "displayTitle": "Cast Iron Skirt Steak Sizzlers",
+  "seoTitle": "Cast Iron Skirt Steak Sizzlers | Firehall BBQ",
+  "shortDescription": "Steak fajita sizzlers—cast-iron scream, pepper char, not chicken fajita repeat",
+  "subtitle": "Guajillo skirt steak strips, blistered poblanos, and sizzling iron for ten",
+  "category": "bbq_grill_nights",
+  "cuisine": "tex-mex",
+  "description": "Flank steak strips marinate in lime-cumin, sear on the griddle with peppers and onions, and serve on screaming-hot cast-iron sizzlers with tortillas.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 20,
+  "prepTime": 35,
+  "difficulty": "medium",
+  "calories": 857,
+  "protein": 69,
+  "carbs": 38,
+  "fats": 47,
+  "tags": [
+    "protein:beef",
+    "format:sizzler_plate",
+    "category:bbq_grill_nights",
+    "bbq",
+    "smoker",
+    "grill",
+    "firehall_bbq_25",
+    "bbq",
+    "grill",
+    "firehall_bbq_30"
+  ],
+  "equipment": [
+    "griddle or flat-top",
+    "cast iron sizzle platters",
+    "instant-read thermometer",
+    "tongs",
+    "hotel pans"
+  ],
+  "ingredients": [
+    {
+      "name": "skirt steak",
+      "quantity": "5.5",
+      "unit": "lb",
+      "notes": "cut into strips",
+      "group": "Main"
+    },
+    {
+      "name": "dried guajillo chiles",
+      "quantity": "4",
+      "unit": "whole",
+      "notes": "rehydrated and blended",
+      "group": "Marinade"
+    },
+    {
+      "name": "ancho chili powder",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Marinade"
+    },
+    {
+      "name": "poblano peppers",
+      "quantity": "6",
+      "unit": "whole",
+      "notes": "striped",
+      "group": "Sizzler veg"
+    },
+    {
+      "name": "red onions",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "wedges",
+      "group": "Sizzler veg"
+    },
+    {
+      "name": "orange juice",
+      "quantity": "0.25",
+      "unit": "cup",
+      "group": "Marinade"
+    },
+    {
+      "name": "Mexican oregano",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Marinade"
+    },
+    {
+      "name": "corn tortillas",
+      "quantity": "24",
+      "unit": "pieces",
+      "group": "Service"
+    },
+    {
+      "name": "queso fresco",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "crumbled",
+      "group": "Garnish"
+    },
+    {
+      "name": "pickled red onions",
+      "quantity": "1",
+      "unit": "cup",
+      "group": "Garnish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Marinate steak strips",
+      "instruction": "Toss flank strips with lime juice, cumin, chili powder, garlic, and salt. Marinate 2–4 hours refrigerated. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Prep peppers and onions",
+      "instruction": "Cut peppers and onions into uniform strips. Keep veg dry for griddle char. Cook until char marks are visible and the thickest piece reads 145°F for medium beef, 160°F for ground on an instant-read thermometer. Plan about 12 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Preheat the flat-top griddle",
+      "instruction": "Preheat griddle to 450°F. Film with oil. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 10,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Sear steak batches",
+      "instruction": "Sear steak strips in single layers 2–3 minutes per side until charred and 130°F. Rest and hold at 170°F. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 12,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Char veg",
+      "instruction": "Griddle peppers and onions at 425°F until charred and tender, 8–10 minutes. Hold with steak at 170°F. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 10,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Heat sizzle platters",
+      "instruction": "Preheat cast-iron sizzlers on griddle or in oven to 400°F for service. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 10,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 7,
+      "title": "Sizzle at service",
+      "instruction": "Add oil to hot irons, pile steak and veg, serve immediately while sizzling. Warn crew—handles stay hot. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 5,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 8,
+      "title": "Tonight's line",
+      "instruction": "Serve with warm tortillas, cilantro, and lime. About 8 oz steak per firefighter. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Single-layer searing only—crowded strips steam instead of char.",
+    "130°F pull for flank; carryover hits perfect medium-rare.",
+    "Hot sizzle platters need hot pads on the line every time."
+  ],
+  "tonightSpread": [
+    "Cast iron steak fajita sizzlers with tortillas.",
+    "Guacamole and sour cream on the side."
+  ],
+  "leftovers": [
+    "Steak fajita quesadillas on griddle.",
+    "Chop into fajita breakfast burritos."
+  ],
+  "whyCrewsLikeIt": "Steak fajitas on cast iron deliver theater and aroma. Strips sear fast, hold at 170°F in pans, and sizzle again at service with a hot iron.",
+  "mealPrepNotes": "Marinate steak 2–4 hours. Sear on griddle at 450°F in batches. Hold meat and veg at 170°F. Reheat cast irons to 400°F at service for sizzle.",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 857,
+    "protein": 69,
+    "carbs": 38,
+    "fats": 47,
+    "label": "per serving (hall portion)",
+    "source": "estimated"
+  },
+  "heroImage": "/images/smoker-catalog/cast-iron-steak-fajita-sizzlers.jpg",
+  "heroImageAlt": "Cast Iron Skirt Steak Sizzlers — crew-sized BBQ spread with visible smoke and bark",
+  "mobileImage": "/images/mobile/smoker-catalog/cast-iron-steak-fajita-sizzlers.jpg",
+  "thumbImage": "/images/thumbs/smoker-catalog/cast-iron-steak-fajita-sizzlers.jpg",
+  "railImage": "/images/rails/smoker-catalog/cast-iron-steak-fajita-sizzlers.jpg",
+  "realismScore": 88,
+  "firefighterScore": 90,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "cast iron skirt steak sizzlers",
+    "cast iron steak fajita sizzlers",
+    "beef",
+    "Tex-Mex",
+    "sizzler plate",
+    "bbq",
+    "firehall",
+    "flank steak fajita griddle",
+    "sizzling fajita platter"
+  ],
+  "relatedSlugs": [
+    "carolina-vinegar-pulled-pork",
+    "honey-chipotle-chicken-thighs",
+    "smoked-chicken-quarters-white-sauce",
+    "brisket-style-beef-sandwiches-au-jus"
+  ],
+  "sourceName": "Firehall Meals BBQ Collection",
+  "generatedAt": "2026-05-31T02:29:42.537Z",
+  "contentVersion": 2
+}

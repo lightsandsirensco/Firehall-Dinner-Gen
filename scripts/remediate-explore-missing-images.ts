@@ -29,6 +29,7 @@ import {
 } from "../shared/editorial-image-metadata.js";
 import type { ImageStylePresetId } from "../shared/image-style-presets.js";
 import { imageFileExists } from "../shared/explore-image-paths.js";
+import { assertImageReuseAllowed } from "../shared/scripts/assert-image-reuse-allowed.js";
 import { breakfastCatalogHeroPath } from "../shared/breakfast-catalog/slug-registry.js";
 import { attachEditorialImagesToSlug } from "../server/imagery/update-recipe-images.js";
 import { GOLDEN_100_RECIPES } from "../shared/golden-100/manifest.js";
@@ -123,6 +124,7 @@ function resolveDonor(row: Row, hallByTitle: Map<string, string[]>): string | nu
 }
 
 async function main(): Promise<void> {
+  assertImageReuseAllowed("remediate:explore-missing-images");
   const dryRun = process.argv.includes("--dry-run");
   await initCuratedRecipeStore();
   const db = await getSharedLocalDb();

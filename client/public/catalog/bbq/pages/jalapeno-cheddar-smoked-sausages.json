@@ -1,0 +1,199 @@
+{
+  "slug": "jalapeno-cheddar-smoked-sausages",
+  "title": "Jalapeño Cheddar Smoked Sausages",
+  "displayTitle": "Jalapeño Cheddar Smoked Sausages",
+  "seoTitle": "Jalapeño Cheddar Smoked Sausages | Firehall BBQ",
+  "shortDescription": "Smoked links with cheese and heat—fast line, big flavor",
+  "subtitle": "Smoked links, pepper jack melt, and grilled peppers for ten",
+  "category": "bbq_grill_nights",
+  "cuisine": "american",
+  "description": "Adapted from classic smoked sausage platter tradition (Traeger, Weber): jalapeño-cheddar links smoke at 275°F until 165°F internal, then grill with peppers and onions for a handheld tray.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 45,
+  "prepTime": 15,
+  "difficulty": "easy",
+  "calories": 348,
+  "protein": 13,
+  "carbs": 8,
+  "fats": 29,
+  "tags": [
+    "protein:pork",
+    "format:grill",
+    "category:bbq_grill_nights",
+    "bbq",
+    "smoker",
+    "grill",
+    "firehall_bbq_25",
+    "bbq",
+    "handheld",
+    "quick"
+  ],
+  "equipment": [
+    "smoker",
+    "grill",
+    "instant-read thermometer",
+    "tongs",
+    "sheet pan"
+  ],
+  "ingredients": [
+    {
+      "name": "jalapeño cheddar sausage links",
+      "quantity": "12",
+      "unit": "links"
+    },
+    {
+      "name": "bell peppers",
+      "quantity": "4",
+      "unit": "whole",
+      "notes": "sliced"
+    },
+    {
+      "name": "yellow onions",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "sliced"
+    },
+    {
+      "name": "neutral oil",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "1",
+      "unit": "tsp"
+    },
+    {
+      "name": "black pepper",
+      "quantity": "1",
+      "unit": "tsp"
+    },
+    {
+      "name": "sub rolls",
+      "quantity": "10",
+      "unit": "whole"
+    },
+    {
+      "name": "mustard",
+      "quantity": "0.5",
+      "unit": "cup"
+    },
+    {
+      "name": "pickled jalapeños",
+      "quantity": "0.5",
+      "unit": "cup"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Jalapeño Cheddar Smoked Sausages in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Prep the links",
+      "instruction": "Score sausage casings lightly. Toss peppers and onions with oil, salt, and pepper. Plan about 8 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Smoke at 275°F",
+      "instruction": "Smoke sausages at 275°F until internal temp reaches 155°F, about 30–35 minutes. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 32,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Grill finish",
+      "instruction": "Grill sausages and peppers over medium-high 8–10 minutes until links hit 165°F and peppers char lightly. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Rest and hold",
+      "instruction": "Rest links 3 minutes. Transfer to a covered pan with peppers and onions. Hold at 170°F until service. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Toast rolls",
+      "instruction": "Split rolls and toast cut-side down on the grill 1 minute until marked. Cook until char marks are visible and the thickest piece reads 145°F with a 3-minute rest on an instant-read thermometer. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 3,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Tonight's board",
+      "instruction": "Sausages and peppers in a pan, rolls, mustard, pickled jalapeños. Build-your-own sandwich line. Plan about 3 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 3,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Leftovers",
+      "instruction": "Slice into a breakfast scramble with eggs. Reheat covered at 325°F until 165°F. Plan about 8 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 8,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "165°F internal on sausage—don't guess by color alone.",
+    "Score casings so they don't burst on the grill finish.",
+    "Pickled jalapeños add acid that balances rich cheese links."
+  ],
+  "tonightSpread": [
+    "Smoked links with peppers and onions in a hotel pan.",
+    "Toasted rolls, mustard, and pickled jalapeños."
+  ],
+  "leftovers": [
+    "Sausage and pepper hoagies with extra mustard.",
+    "Chop into a smoky pasta skillet with cream."
+  ],
+  "whyCrewsLikeIt": "Sausage night is zero drama. Links hold covered at 170°F, and the line moves fast with buns or tortillas.",
+  "mealPrepNotes": "Score links lightly before smoking. Smoke ahead, then grill-mark before service. Hold in a covered pan at 170°F with peppers.",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 348,
+    "protein": 13,
+    "carbs": 8,
+    "fats": 29,
+    "label": "per serving (hall portion)",
+    "source": "estimated"
+  },
+  "heroImage": "/images/smoker-catalog/jalapeno-cheddar-smoked-sausages.jpg",
+  "heroImageAlt": "Jalapeño Cheddar Smoked Sausages — crew-sized BBQ spread with visible smoke and bark",
+  "mobileImage": "/images/mobile/smoker-catalog/jalapeno-cheddar-smoked-sausages.jpg",
+  "thumbImage": "/images/thumbs/smoker-catalog/jalapeno-cheddar-smoked-sausages.jpg",
+  "railImage": "/images/rails/smoker-catalog/jalapeno-cheddar-smoked-sausages.jpg",
+  "realismScore": 88,
+  "firefighterScore": 90,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "jalapeño cheddar smoked sausages",
+    "jalapeno cheddar smoked sausages",
+    "pork",
+    "American",
+    "grill",
+    "bbq",
+    "firehall",
+    "jalapeno cheddar sausage",
+    "smoked sausage",
+    "grilled peppers",
+    "275 smoke"
+  ],
+  "relatedSlugs": [
+    "hot-honey-grilled-sausage-peppers",
+    "firehall-double-smash-burgers-bbq",
+    "smoked-baked-beans-crew"
+  ],
+  "sourceName": "Firehall Meals BBQ Collection",
+  "generatedAt": "2026-05-31T02:29:42.532Z",
+  "contentVersion": 2
+}

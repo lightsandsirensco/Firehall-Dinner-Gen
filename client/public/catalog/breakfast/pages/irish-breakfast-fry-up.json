@@ -1,0 +1,191 @@
+{
+  "slug": "irish-breakfast-fry-up",
+  "title": "Irish Breakfast Fry-Up",
+  "subtitle": "Bacon, sausage, black pudding, eggs, and soda bread on one plate.",
+  "description": "Adapted from classic full Irish breakfast tradition for firehall griddle service: back bacon, pork sausages, black pudding, grilled tomato, sautéed mushrooms, fried eggs, and soda bread fried in butter for eight hearty plates.",
+  "filters": [
+    "feed_a_crew",
+    "high_protein",
+    "skillets"
+  ],
+  "tags": [
+    "irish-breakfast",
+    "fry-up",
+    "bacon",
+    "sausage",
+    "eggs"
+  ],
+  "crewSize": 8,
+  "baseServings": 8,
+  "prepTime": 20,
+  "cookTime": 35,
+  "totalTime": 55,
+  "difficulty": "medium",
+  "ingredients": [
+    {
+      "name": "Irish back bacon",
+      "quantity": "2 lb",
+      "notes": "or thick-cut Canadian bacon",
+      "group": "Meats"
+    },
+    {
+      "name": "pork breakfast sausages",
+      "quantity": "2 lb",
+      "notes": "8 large links",
+      "group": "Meats"
+    },
+    {
+      "name": "black pudding",
+      "quantity": "1 lb",
+      "notes": "sliced 1/2-inch thick",
+      "group": "Meats"
+    },
+    {
+      "name": "white mushrooms",
+      "quantity": "1 lb",
+      "notes": "halved",
+      "group": "Veg"
+    },
+    {
+      "name": "Roma tomatoes",
+      "quantity": "4",
+      "notes": "halved",
+      "group": "Veg"
+    },
+    {
+      "name": "large eggs",
+      "quantity": "8",
+      "group": "Protein"
+    },
+    {
+      "name": "Irish soda bread",
+      "quantity": "8 slices",
+      "notes": "thick-cut",
+      "group": "Bread"
+    },
+    {
+      "name": "unsalted butter",
+      "quantity": "4 tbsp",
+      "notes": "plus oil for frying",
+      "group": "Fat"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Irish Breakfast Fry-Up in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch Sausage. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Cook sausages and pudding",
+      "instruction": "Brown sausages in a large skillet over medium heat, turning until internal temperature reaches 160°F, about 12 minutes. Add black pudding slices last 4 minutes— they fall apart if overcooked. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Fry bacon and tomatoes",
+      "instruction": "In a second pan, fry back bacon until edges curl and fat renders. Add tomato halves cut-side down and cook until charred. Hold meats warm on a tray covered loosely with foil. Target 165°F at the thickest part before moving to the next batch. Plan about 10 minutes for this step at crew scale. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Sauté mushrooms",
+      "instruction": "Sauté mushrooms in butter over high heat without crowding until deeply browned and moisture evaporates. Season with salt and pepper; hold warm. Target 165°F at the thickest part before moving to the next batch. Plan about 8 minutes for this step at crew scale. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Toast soda bread",
+      "instruction": "Fry soda bread slices in butter until golden on both sides, about 2 minutes per side. Keep crisp on a rack in a 200°F oven. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 6,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Fry eggs and plate",
+      "instruction": "Fry eggs in clean butter over medium until whites are set (165°F) and yolks are runny. Build each plate with sausage, pudding, bacon, tomato, mushrooms, bread, and an egg. Serve immediately. Plan about 8 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 8,
+      "heatLevel": ""
+    }
+  ],
+  "nutrition": {
+    "calories": 1100,
+    "protein": 67,
+    "carbs": 21,
+    "fat": 90,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "stationWorkflow": [
+    "Run two skillets in parallel—one for meats, one for veg and eggs—to hit eight plates together.",
+    "Add black pudding last; it crumbles if it sits on high heat too long.",
+    "Plate assembly is fastest if all components are lined on a warm tray before eggs fry."
+  ],
+  "cleanupNotes": [
+    "Deglaze sausage pans with hot water while warm—pork fat sets hard once cooled.",
+    "Wipe black pudding residue immediately; blood sausage stains boards if left to dry."
+  ],
+  "leftovers": [
+    "Reheat meats on a sheet pan at 350°F for 8 minutes; fry fresh eggs to order.",
+    "Chop leftovers into a bubble-and-squeak-style potato hash for the next breakfast."
+  ],
+  "heroImage": "/images/breakfast/irish-breakfast-fry-up.jpg",
+  "thumbImage": "/images/thumbs/breakfast/irish-breakfast-fry-up.jpg",
+  "imageAlt": "Full Irish breakfast fry-up with bacon, sausage, black pudding, and fried eggs",
+  "publishedAt": "2026-05-30T21:22:29.757Z",
+  "updatedAt": "2026-05-31T12:54:36.779Z",
+  "readMinutes": 9,
+  "seoTitle": "Irish Breakfast Fry-Up | Firehall Breakfast",
+  "mobileImage": "/images/mobile/breakfast/irish-breakfast-fry-up.jpg",
+  "railImage": "/images/rails/breakfast/irish-breakfast-fry-up.jpg",
+  "proTips": [
+    "Run two skillets in parallel—one for meats, one for veg and eggs—to hit eight plates together.",
+    "Add black pudding last; it crumbles if it sits on high heat too long.",
+    "Plate assembly is fastest if all components are lined on a warm tray before eggs fry."
+  ],
+  "tonightSpread": [
+    "Plate Irish Breakfast Fry-Up with sides in separate pans so the crew can mix portions.",
+    "Keep hot items on one side of the table and cold on the other — eggs stay hot, fruit stays cold.",
+    "Line up Irish Breakfast Fry-Up on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+  ],
+  "equipment": [
+    "Large sheet trays",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "mealPrepNotes": "Prep mise en place before the shift — Irish Breakfast Fry-Up runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
+}

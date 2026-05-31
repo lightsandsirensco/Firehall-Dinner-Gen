@@ -2,6 +2,7 @@
  * Breakfast catalog slug registry — used by hall gate + Explore routing (client-safe).
  */
 import { NEW_BREAKFAST_PAGES } from "../breakfast-expansion/new-breakfast-pages.js";
+import { BATCH_25_BREAKFAST_PAGES } from "../breakfast-expansion/batch-25-breakfast-pages.js";
 
 /** Original 22 breakfast seeds (pre-expansion). */
 export const BASE_BREAKFAST_CATALOG_SLUGS = [
@@ -57,6 +58,7 @@ const BASE_BREAKFAST_TITLES: Record<(typeof BASE_BREAKFAST_CATALOG_SLUGS)[number
 export const BREAKFAST_CATALOG_SLUGS = [
   ...BASE_BREAKFAST_CATALOG_SLUGS,
   ...NEW_BREAKFAST_PAGES.map((p) => p.slug),
+  ...BATCH_25_BREAKFAST_PAGES.map((p) => p.slug),
 ] as const;
 
 export const BREAKFAST_SLUG_SET = new Set<string>(BREAKFAST_CATALOG_SLUGS);
@@ -76,6 +78,8 @@ export function breakfastCatalogThumbPath(slug: string): string {
 
 export function getBreakfastCatalogTitle(slug: string): string | null {
   const s = (slug || "").trim().toLowerCase();
+  const fromBatch = BATCH_25_BREAKFAST_PAGES.find((p) => p.slug === s);
+  if (fromBatch?.title) return fromBatch.title;
   const fromNew = NEW_BREAKFAST_PAGES.find((p) => p.slug === s);
   if (fromNew?.title) return fromNew.title;
   return BASE_BREAKFAST_TITLES[s as (typeof BASE_BREAKFAST_CATALOG_SLUGS)[number]] ?? null;

@@ -1,0 +1,235 @@
+{
+  "slug": "moroccan-chicken-kebab-platter",
+  "title": "Moroccan Chicken Kebab Platter",
+  "displayTitle": "Moroccan Chicken Kebab Platter",
+  "seoTitle": "Moroccan Chicken Kebab Platter | Firefighter Meal",
+  "shortDescription": "Chermoula-marinated chicken skewers with couscous for ten",
+  "subtitle": "Chermoula-marinated chicken skewers with couscous for ten",
+  "category": "hall_expansion",
+  "cuisine": "moroccan",
+  "description": "Chicken thighs marinate in chermoula—cilantro, cumin, lemon, and garlic—then grill on skewers with onions and peppers. Serve over fluffy couscous with olives, preserved lemon, and harissa.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 20,
+  "prepTime": 30,
+  "difficulty": "medium",
+  "calories": 450,
+  "protein": 36,
+  "carbs": 38,
+  "fats": 18,
+  "tags": [
+    "protein:chicken",
+    "format:skewer",
+    "category:crew_feeders",
+    "hall_expansion",
+    "crew_feeders",
+    "moroccan",
+    "chicken",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Grill",
+    "Blender",
+    "Skewers",
+    "Instant-read thermometer",
+    "Large platters"
+  ],
+  "ingredients": [
+    {
+      "name": "boneless chicken thighs",
+      "quantity": "4",
+      "unit": "lb",
+      "notes": "cut into chunks",
+      "group": "Main"
+    },
+    {
+      "name": "fresh cilantro",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "packed",
+      "group": "Chermoula"
+    },
+    {
+      "name": "fresh parsley",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Chermoula"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "6",
+      "unit": "cloves",
+      "group": "Chermoula"
+    },
+    {
+      "name": "ground cumin",
+      "quantity": "2",
+      "unit": "tsp",
+      "group": "Chermoula"
+    },
+    {
+      "name": "smoked paprika",
+      "quantity": "1",
+      "unit": "tsp",
+      "group": "Chermoula"
+    },
+    {
+      "name": "lemon juice",
+      "quantity": "0.25",
+      "unit": "cup",
+      "group": "Chermoula"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "0.33",
+      "unit": "cup",
+      "group": "Chermoula"
+    },
+    {
+      "name": "couscous",
+      "quantity": "3",
+      "unit": "cups",
+      "notes": "dry",
+      "group": "Base"
+    },
+    {
+      "name": "green olives",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "pitted",
+      "group": "Garnish"
+    },
+    {
+      "name": "preserved lemon",
+      "quantity": "2",
+      "unit": "tbsp",
+      "notes": "minced",
+      "group": "Garnish"
+    },
+    {
+      "name": "harissa",
+      "quantity": "0.25",
+      "unit": "cup",
+      "notes": "for serving",
+      "group": "Garnish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Moroccan Chicken Kebab Platter in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Blend chermoula",
+      "instruction": "Blend cilantro, parsley, garlic, cumin, paprika, lemon juice, and olive oil until smooth. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Marinate chicken",
+      "instruction": "Coat chicken chunks in chermoula. Marinate at least 2 hours or overnight. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Prepare couscous",
+      "instruction": "Pour boiling broth or water over couscous, cover, rest 5 minutes, then fluff with a fork. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Skewer and grill",
+      "instruction": "Thread chicken onto skewers with onion and pepper pieces. Grill over medium-high heat until charred and 165°F internal, about 12–15 minutes. Target oven/smoker temperature: 400°F.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Portion and open the line",
+      "instruction": "Portion Moroccan Chicken Kebab Platter onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Platter and serve",
+      "instruction": "Spread couscous on platters, top with kebabs, scatter olives and preserved lemon, and serve harissa on the side. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Ras el hanout in the marinade adds authentic depth if you have it.",
+    "Grill lemon halves for squeezing over finished kebabs.",
+    "Almonds toasted and chopped add crunch at the line."
+  ],
+  "tonightSpread": [
+    "Moroccan chicken kebabs over couscous with olives and harissa.",
+    "Simple carrot salad with orange and cumin."
+  ],
+  "leftovers": [
+    "Chop kebabs into couscous salad for cold lunch.",
+    "Stuff into pita with yogurt for next-day wraps."
+  ],
+  "whyCrewsLikeIt": "Moroccan kebabs bring sun-bright flavor to northern halls. Thigh meat stays juicy on skewers, couscous cooks in minutes, and the platter looks like someone actually planned dinner—not raided the freezer.",
+  "mealPrepNotes": "Cut chicken uniform for even grilling. Chermoula can be made ahead. Fluff couscous with a fork, not a spoon, so grains stay separate.",
+  "spiceLevel": "medium",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 450,
+    "protein": 36,
+    "carbs": 38,
+    "fats": 18,
+    "label": "~450 cal/serving · 36g protein · 3g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/moroccan-chicken-kebab-platter.jpg",
+  "heroImageAlt": "Moroccan Chicken Kebab Platter — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/moroccan-chicken-kebab-platter.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/moroccan-chicken-kebab-platter.jpg",
+  "railImage": "/images/rails/hall-expansion/moroccan-chicken-kebab-platter.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "moroccan chicken kebab platter",
+    "crew feeders"
+  ],
+  "relatedSlugs": [
+    "shawarma-bar-night",
+    "fajita-bar-night",
+    "hall-burger-bar",
+    "pasta-bar-night"
+  ],
+  "generatedAt": "2026-05-31T01:50:00.916Z",
+  "contentVersion": 2
+}

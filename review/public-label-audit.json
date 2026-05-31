@@ -1,0 +1,1862 @@
+{
+  "generatedAt": "2026-05-31T12:18:56.404Z",
+  "totals": {
+    "recipes": 233,
+    "pass": 233
+  },
+  "rows": [
+    {
+      "slug": "chili-lime-grilled-tilapia",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "andouille-po-boy-rolls-crew",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "apple-cinnamon-baked-oatmeal",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [
+        "Crew Favorite"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "applewood-pork-shoulder-steaks",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "asian-chicken-lettuce-cups",
+      "catalogBadge": "Performance Meal",
+      "traitBadges": [
+        "High Protein"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "bagel-lox-breakfast-board",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [
+        "Crew Favorite",
+        "Quick Shift Meal"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "baked-falafel-hall-bowls",
+      "catalogBadge": "Performance Meal",
+      "traitBadges": [
+        "High Protein"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "mostaccioli-sausage-bake",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "baked-turkey-meatball-marinara",
+      "catalogBadge": "Performance Meal",
+      "traitBadges": [
+        "High Protein"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "bbq-breakfast-hash",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [
+        "Crew Favorite"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "bbq-meatball-skewers",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "enchilada-beef-skillet",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "belgian-waffle-platter",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [
+        "Crew Favorite",
+        "Quick Shift Meal"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "big-pot-savory-oats",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [
+        "Crew Favorite"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "spiedie-chicken-platter-crew",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "biscuit-french-toast-sliders",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [
+        "Crew Favorite",
+        "Quick Shift Meal"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "cajun-grilled-catfish-crew",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "blackened-cod-taco-night",
+      "catalogBadge": "Performance Meal",
+      "traitBadges": [
+        "High Protein"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "loaded-ranch-potato-salad-crew",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "blueberry-almond",
+      "catalogBadge": "Quick Shift Meal",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "boneless-chicken-thighs-sweet-potato-spinach",
+      "catalogBadge": "Performance Meal",
+      "traitBadges": [
+        "High Protein"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "breakfast-crunchwraps",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [
+        "Quick Shift Meal"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "breakfast-enchiladas",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [
+        "Crew Favorite"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "breakfast-fried-rice-crew",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [
+        "Crew Favorite",
+        "Quick Shift Meal"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "breakfast-nachos-supreme",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [
+        "Crew Favorite",
+        "Quick Shift Meal"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "breakfast-poutine",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [
+        "Crew Favorite"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "breakfast-quesadillas",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [
+        "Quick Shift Meal"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "breakfast-sandwich-trays",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [
+        "Crew Favorite"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "breakfast-sliders",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [
+        "Crew Favorite",
+        "Quick Shift Meal"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "breakfast-stromboli-roll",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [
+        "Crew Favorite"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "brisket-style-beef-sandwiches-au-jus",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "build-your-own-pho-bar",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "bun-bo-hue-noodle-soup",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "burrito-bowl-bar-night",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "buttermilk-pancakes",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [
+        "Crew Favorite"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "cajun-chicken-rice-skillet",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "cajun-chicken-rice-bowl",
+      "catalogBadge": "Performance Meal",
+      "traitBadges": [
+        "High Protein"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "grilled-halibut-lemon-packets",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "caprese-chicken-bake",
+      "catalogBadge": "Performance Meal",
+      "traitBadges": [
+        "High Protein"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "cast-iron-breakfast-skillet",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [
+        "Crew Favorite"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "cast-iron-chicken-fajitas",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "cast-iron-steak-fajita-sizzlers",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "garlic-butter-scallop-skewers",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "cheesy-beef-nacho-bake",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "cheesy-chicken-broccoli-rice",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "chicken-and-waffles-crew",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [
+        "Crew Favorite"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "chicken-cacciatore-crew",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "chicken-paprikash-hall",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "chicken-wing-bar-night",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "chilaquiles-verde-bake",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [
+        "Crew Favorite"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "chipotle-lime-chicken-tacos",
+      "catalogBadge": "Performance Meal",
+      "traitBadges": [
+        "High Protein"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "chocolate-banana-recovery",
+      "catalogBadge": "High Protein",
+      "traitBadges": [
+        "High Protein"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "chorizo-breakfast-hash",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [
+        "Quick Shift Meal"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "citrus-ginger",
+      "catalogBadge": "High Protein",
+      "traitBadges": [
+        "High Protein"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "classic-poutine-feed-crew",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "club-sandwich-breakfast-bake",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [
+        "Crew Favorite"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "competition-bbq-chicken-thighs",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "flat-top-philly-cheesesteaks-crew",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "coq-au-vin-batch",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "corned-beef-hash-breakfast",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [
+        "Crew Favorite"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "cottage-cheese-protein-pasta",
+      "catalogBadge": "Performance Meal",
+      "traitBadges": [
+        "High Protein"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "cottage-pie-for-the-crew",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "country-fried-steak-eggs",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [
+        "Crew Favorite"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "creamy-chicken-penne-alfredo",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "crew-french-toast-bake",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [
+        "Crew Favorite"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "crispy-fish-taco-night",
+      "catalogBadge": "Performance Meal",
+      "traitBadges": [
+        "High Protein"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "crock-barbacoa-chicken",
+      "catalogBadge": "Performance Meal",
+      "traitBadges": [
+        "High Protein"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "denver-breakfast-casserole",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [
+        "Crew Favorite"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "dutch-oven-pot-roast",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "eggs-benedict-hall-style",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [
+        "Crew Favorite"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "firehall-street-elote-cups",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "fajita-bar-night",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "farmers-breakfast-casserole",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [
+        "Crew Favorite"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "fire-captain-omelette-bar",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [
+        "Crew Favorite",
+        "Quick Shift Meal"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "firehall-breakfast-pizza",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [
+        "Crew Favorite"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "firehall-burnt-ends-platter",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "firehall-charcuterie-board",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "firehall-donair-platter",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "game-day-pizza-sliders",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "griddle-smash-sausage-peppers",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "ginger-soy-chicken-rice-bowls",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "greek-lemon-chicken-potatoes",
+      "catalogBadge": "Performance Meal",
+      "traitBadges": [
+        "High Protein"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "green-chile-chicken-stew",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "green-pineapple",
+      "catalogBadge": "Quick Shift Meal",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "grilled-reuben-sandwiches-crew",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "grilled-shrimp-quinoa-bowls",
+      "catalogBadge": "Performance Meal",
+      "traitBadges": [
+        "High Protein"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "hall-breakfast-burritos",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [
+        "Crew Favorite"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "hall-breakfast-wraps",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [
+        "Quick Shift Meal"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "hall-burger-bar",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "hall-chicken-noodle-soup",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "hall-sausage-biscuits-gravy",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [
+        "Crew Favorite"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "hall-sloppy-joe-feed",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "caprese-steak-skewers-crew",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "herb-baked-salmon-tray",
+      "catalogBadge": "Performance Meal",
+      "traitBadges": [
+        "High Protein"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "hickory-smoked-chicken-breast",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "hickory-turkey-legs",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "high-protein-parfaits",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [
+        "Quick Shift Meal"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "honey-chipotle-chicken-thighs",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "honey-garlic-chicken-rice-bowls",
+      "catalogBadge": "Performance Meal",
+      "traitBadges": [
+        "High Protein"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "honey-lime-chicken-tray",
+      "catalogBadge": "Performance Meal",
+      "traitBadges": [
+        "High Protein"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "honey-mustard-oven-chicken-thighs",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "hot-honey-grilled-sausage-peppers",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "huevos-rancheros-crew",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [
+        "Crew Favorite"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "hummus-chicken-platter",
+      "catalogBadge": "Performance Meal",
+      "traitBadges": [
+        "High Protein"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "hungarian-goulash-crew",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "pork-satay-skewers-crew",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "irish-breakfast-fry-up",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [
+        "Crew Favorite"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "italian-sausage-veg-sheet-pan",
+      "catalogBadge": "Performance Meal",
+      "traitBadges": [
+        "High Protein"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "jalapeno-cheddar-smoked-sausages",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "jalapeno-popper-dip",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "johnnycakes-with-syrup",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [
+        "Crew Favorite",
+        "Quick Shift Meal"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "tandoori-lamb-chop-platter",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "kielbasa-cabbage-potato-skillet",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "korean-beef-rice-bowls",
+      "catalogBadge": "Performance Meal",
+      "traitBadges": [
+        "High Protein"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "korean-bulgogi-grill-night",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "lamb-kofta-skewer-platter",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "lebanese-chicken-shish-platter",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "lemon-chicken-orzo-soup",
+      "catalogBadge": "Performance Meal",
+      "traitBadges": [
+        "High Protein"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "lemon-garlic-chicken-tray",
+      "catalogBadge": "Performance Meal",
+      "traitBadges": [
+        "High Protein"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "lemon-garlic-shrimp-pasta",
+      "catalogBadge": "Performance Meal",
+      "traitBadges": [
+        "High Protein"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "lemon-salmon-orzo-skillet",
+      "catalogBadge": "Performance Meal",
+      "traitBadges": [
+        "High Protein"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "lentil-mushroom-bolognese",
+      "catalogBadge": "Performance Meal",
+      "traitBadges": [
+        "High Protein"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "chicken-enchilada-skillet-light",
+      "catalogBadge": "Performance Meal",
+      "traitBadges": [
+        "High Protein"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "portuguese-linguica-grill-platter",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "loaded-nacho-bar-night",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "loaded-potato-skins",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "lumberjack-breakfast-platter",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [
+        "Crew Favorite"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "malaysian-laksa-soup",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "maple-mustard-salmon-tray",
+      "catalogBadge": "Performance Meal",
+      "traitBadges": [
+        "High Protein"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "maple-sausage-pinwheels",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [
+        "Crew Favorite",
+        "Quick Shift Meal"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "maple-soy-salmon-bowls",
+      "catalogBadge": "Performance Meal",
+      "traitBadges": [
+        "High Protein"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "maple-cured-salmon-plank",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "mediterranean-baked-fish-tray",
+      "catalogBadge": "Performance Meal",
+      "traitBadges": [
+        "High Protein"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "mediterranean-chicken-farro-bowls",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "mediterranean-feast-night",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "mesquite-chuck-roast",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "migas-for-the-crew",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [
+        "Crew Favorite",
+        "Quick Shift Meal"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "miso-ramen-bar",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "mixed-berry-protein",
+      "catalogBadge": "High Protein",
+      "traitBadges": [
+        "High Protein"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "mocha-protein",
+      "catalogBadge": "Quick Shift Meal",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "molasses-bourbon-pork-ribs",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "monte-cristo-sandwiches",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [
+        "Crew Favorite"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "montreal-smoked-meat-platter",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "moroccan-chicken-chickpea-tray",
+      "catalogBadge": "Performance Meal",
+      "traitBadges": [
+        "High Protein"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "moroccan-chicken-kebab-platter",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "firehall-antipasto-pasta-salad",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "mushroom-swiss-steak-pan",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "lamb-merguez-skewers-crew",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "overnight-french-toast-bake",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [
+        "Crew Favorite"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "overnight-sausage-strata",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [
+        "Crew Favorite",
+        "Quick Shift Meal"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "honey-sriracha-shrimp-skewers",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "paprika-roasted-chicken-quarters",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "pasta-bar-night",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "peanut-butter-banana-recovery",
+      "catalogBadge": "High Protein",
+      "traitBadges": [
+        "High Protein"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "maple-bourbon-grilled-trout",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "pellet-smoked-chicken-quarters",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "pepper-steak-onions",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "peri-peri-chicken-platter",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "pesto-tomato-chicken-tray",
+      "catalogBadge": "Performance Meal",
+      "traitBadges": [
+        "High Protein"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "philly-cheesesteak-sliders",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "grilled-peach-burrata-salad",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "pork-belly-burnt-ends",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "pressed-cuban-sandwiches-crew",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "pretzel-bite-platter",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "protein-french-toast",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [
+        "Crew Favorite"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "protein-pancake-tray",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [
+        "Crew Favorite"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "pulled-pork",
+      "catalogBadge": "Hall Classic",
+      "traitBadges": [
+        "Crew Favorite"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "quick-egg-tacos",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [
+        "Quick Shift Meal"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "reverse-seared-ribeye-crew",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "rice-bowl-bar-night",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "rigatoni-meat-sauce-batch",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "salsa-verde-crock-chicken",
+      "catalogBadge": "Performance Meal",
+      "traitBadges": [
+        "High Protein"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "sandwich-board-night",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "santa-maria-tri-tip-roast",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "sausage-egg-cheese-sandwiches",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "mongolian-beef-flat-top-crew",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "scrapple-and-eggs-skillet",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [
+        "Crew Favorite"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "gochujang-beef-skewers-crew",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "shawarma-bar-night",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "shawarma-chicken-rice-bowls",
+      "catalogBadge": "Performance Meal",
+      "traitBadges": [
+        "High Protein"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "sheet-pan-breakfast-hash",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [
+        "Crew Favorite"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "sheet-pan-breakfast-sandwiches",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [
+        "Crew Favorite",
+        "Quick Shift Meal"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "sheet-pan-chicken-fajitas-lite",
+      "catalogBadge": "Performance Meal",
+      "traitBadges": [
+        "High Protein"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "sheet-pan-full-english",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [
+        "Crew Favorite",
+        "Quick Shift Meal"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "sheet-pan-meatball-marinara",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "shrimp-and-grits-breakfast",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [
+        "Crew Favorite"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "charred-broccolini-lemon-tray",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "smoked-baked-beans-crew",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "smoked-bbq-chicken-wings-tray",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "smoked-chicken-quarters-white-sauce",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "smoked-corned-beef",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "smoked-mac-and-cheese-crew",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "smoked-meatloaf",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "smoked-picanha-steak-platter",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "smoked-potato-salad-tray",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "smoked-queso-fundido",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "smoked-salmon-benedit",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [
+        "Crew Favorite"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "smoked-sausage-platter",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "smoked-tri-tip",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "smoked-turkey-breast",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "smoky-lentil-kale-soup",
+      "catalogBadge": "Performance Meal",
+      "traitBadges": [
+        "High Protein"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "soft-pretzel-dogs",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "southwest-egg-bake",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [
+        "Crew Favorite"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "spanish-chicken-chorizo-rice",
+      "catalogBadge": "Performance Meal",
+      "traitBadges": [
+        "High Protein"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "spatchcock-lemon-roast-chicken",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "station-cobb-salad",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "strawberry-oat-breakfast",
+      "catalogBadge": "Quick Shift Meal",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "strawberry-spinach",
+      "catalogBadge": "Quick Shift Meal",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "grilled-chicken-pesto-panini-crew",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "tabbouleh-chicken-bowls",
+      "catalogBadge": "Performance Meal",
+      "traitBadges": [
+        "High Protein"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "tater-tot-breakfast-casserole",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [
+        "Crew Favorite",
+        "Quick Shift Meal"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "firehall-hibachi-mixed-grill-crew",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "texas-central-brisket-crew",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "texas-beef-ribs",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "yakiniku-grill-platter-crew",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "tonkotsu-ramen-crew",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "tourtiere-for-the-crew",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "tropical-mango-greek",
+      "catalogBadge": "Quick Shift Meal",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "turkey-lettuce-wrap-night",
+      "catalogBadge": "Performance Meal",
+      "traitBadges": [
+        "High Protein"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "turkey-sausage-burritos",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "turkey-shepherds-sweet-potato",
+      "catalogBadge": "Performance Meal",
+      "traitBadges": [
+        "High Protein"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "turkey-sweet-potato-chili",
+      "catalogBadge": "Performance Meal",
+      "traitBadges": [
+        "High Protein"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "turkey-taco-skillet",
+      "catalogBadge": "Performance Meal",
+      "traitBadges": [
+        "High Protein"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "turkey-zoodle-bolognese",
+      "catalogBadge": "Performance Meal",
+      "traitBadges": [
+        "High Protein"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "veggie-egg-burritos",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [
+        "Crew Favorite"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "warm-spinach-chicken-salad",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "white-bean-kale-soup",
+      "catalogBadge": "Performance Meal",
+      "traitBadges": [
+        "High Protein"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "white-bean-chicken-chili",
+      "catalogBadge": "Performance Meal",
+      "traitBadges": [
+        "High Protein"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "wonton-noodle-soup-crew",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "yogurt-marinated-grill-chicken",
+      "catalogBadge": "Performance Meal",
+      "traitBadges": [
+        "High Protein"
+      ],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "pollo-asado-citrus-platter",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "mixed-lamb-chop-grill-board",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
+      "slug": "zaatar-roasted-chicken-thighs",
+      "catalogBadge": "Performance Meal",
+      "traitBadges": [
+        "High Protein"
+      ],
+      "pass": true,
+      "forbidden": []
+    }
+  ]
+}

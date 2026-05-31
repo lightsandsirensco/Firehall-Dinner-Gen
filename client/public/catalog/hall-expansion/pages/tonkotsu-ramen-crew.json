@@ -1,0 +1,237 @@
+{
+  "slug": "tonkotsu-ramen-crew",
+  "title": "Tonkotsu Ramen for the Crew",
+  "displayTitle": "Tonkotsu Ramen for the Crew",
+  "seoTitle": "Tonkotsu Ramen for the Crew | Firefighter Meal",
+  "shortDescription": "Rich pork-and-chicken broth with noodles and toppings for ten",
+  "subtitle": "Rich pork-and-chicken broth with noodles and toppings for ten",
+  "category": "hall_expansion",
+  "cuisine": "japanese",
+  "description": "Pork bones and chicken backs simmer for hours into a creamy white broth, then serve over springy ramen noodles with chashu pork, soft eggs, nori, and scallions. Set up a topping bar so crews build their own bowls.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 240,
+  "prepTime": 45,
+  "difficulty": "hard",
+  "calories": 580,
+  "protein": 32,
+  "carbs": 52,
+  "fats": 28,
+  "tags": [
+    "protein:pork",
+    "format:bowl",
+    "category:crew_feeders",
+    "hall_expansion",
+    "crew_feeders",
+    "japanese",
+    "pork",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Large stockpot",
+    "Second pot for chashu",
+    "Noodle baskets",
+    "Ladle",
+    "Sheet pans"
+  ],
+  "ingredients": [
+    {
+      "name": "pork neck bones",
+      "quantity": "4",
+      "unit": "lb",
+      "group": "Broth"
+    },
+    {
+      "name": "chicken backs",
+      "quantity": "2",
+      "unit": "lb",
+      "group": "Broth"
+    },
+    {
+      "name": "ginger",
+      "quantity": "3",
+      "unit": "inches",
+      "notes": "smashed",
+      "group": "Broth"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "8",
+      "unit": "cloves",
+      "notes": "smashed",
+      "group": "Broth"
+    },
+    {
+      "name": "soy sauce",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Tare"
+    },
+    {
+      "name": "mirin",
+      "quantity": "0.25",
+      "unit": "cup",
+      "group": "Tare"
+    },
+    {
+      "name": "pork belly",
+      "quantity": "2",
+      "unit": "lb",
+      "notes": "for chashu",
+      "group": "Topping"
+    },
+    {
+      "name": "ramen noodles",
+      "quantity": "2",
+      "unit": "lb",
+      "notes": "fresh or dried",
+      "group": "Noodles"
+    },
+    {
+      "name": "soft-boiled eggs",
+      "quantity": "10",
+      "unit": "eggs",
+      "notes": "peeled and halved",
+      "group": "Topping"
+    },
+    {
+      "name": "nori sheets",
+      "quantity": "10",
+      "unit": "sheets",
+      "notes": "cut in half",
+      "group": "Topping"
+    },
+    {
+      "name": "green onions",
+      "quantity": "1",
+      "unit": "bunch",
+      "notes": "sliced",
+      "group": "Topping"
+    },
+    {
+      "name": "corn kernels",
+      "quantity": "2",
+      "unit": "cups",
+      "notes": "steamed",
+      "group": "Topping"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Tonkotsu Ramen for the Crew in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch pork. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Blanch and start broth",
+      "instruction": "Blanch pork and chicken bones 5 minutes, rinse, then cover with fresh water in a large stockpot. Add ginger and garlic. Simmer vigorously 4 hours, skimming often.",
+      "minutes": 240,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Braise chashu pork",
+      "instruction": "Roll pork belly, tie, and braise in soy, mirin, and water 2 hours until tender. Cool and slice thin. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 120,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Season the broth",
+      "instruction": "Strain broth if you want smoother body. Whisk soy and mirin tare into broth to balance—salty, rich, and milky white. Plan about 15 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Prep the bar",
+      "instruction": "Arrange chashu, eggs, nori, scallions, and corn in labeled pans. Heat broth to a rolling simmer in a large pot or tilt skillet. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Plan about 20 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 20,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F with a 3-minute rest. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Portion and open the line",
+      "instruction": "Portion Tonkotsu Ramen for the Crew onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Build bowls",
+      "instruction": "Cook noodles per package, drain, and divide into bowls. Ladle hot broth over noodles, top with chashu and garnishes, and serve immediately.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "A tablespoon of chicken fat whisked in at service adds extra gloss.",
+    "Do not add noodles to the hold pot—they swell and ruin texture.",
+    "Sesame seeds and bamboo shoots upgrade the bar without much extra work."
+  ],
+  "tonightSpread": [
+    "Tonkotsu ramen bowls with full topping bar and chili oil.",
+    "Quick cucumber pickles for crunch between rich sips."
+  ],
+  "leftovers": [
+    "Broth freezes well for a second ramen night later in the month.",
+    "Chashu slices reheat gently in broth for rice topping—not a bowl format, just smart reuse."
+  ],
+  "whyCrewsLikeIt": "Ramen night feels like a reward shift. The broth does the heavy lifting overnight, and bowl service moves fast when noodles and toppings are lined up like a firehouse assembly station.",
+  "mealPrepNotes": "Start broth the day before. Blanch bones first for cleaner flavor. Soft-boil eggs 6.5 minutes, ice bath, peel ahead. Cook noodles to order or in small batches so they do not turn mushy.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "heavy",
+  "nutrition": {
+    "calories": 580,
+    "protein": 32,
+    "carbs": 52,
+    "fats": 28,
+    "label": "~580 cal/serving · 32g protein · 2g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/tonkotsu-ramen-crew.jpg",
+  "heroImageAlt": "Tonkotsu Ramen for the Crew — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/tonkotsu-ramen-crew.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/tonkotsu-ramen-crew.jpg",
+  "railImage": "/images/rails/hall-expansion/tonkotsu-ramen-crew.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "tonkotsu ramen for the crew",
+    "crew feeders"
+  ],
+  "relatedSlugs": [
+    "shawarma-bar-night",
+    "fajita-bar-night",
+    "hall-burger-bar",
+    "pasta-bar-night"
+  ],
+  "generatedAt": "2026-05-31T01:50:00.916Z",
+  "contentVersion": 2
+}

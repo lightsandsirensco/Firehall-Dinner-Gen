@@ -10,13 +10,13 @@
   "description": "Feeds the crew from one tray. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
   "baseServings": 8,
-  "cookTime": 206,
-  "prepTime": 41,
+  "cookTime": 70,
+  "prepTime": 25,
   "difficulty": "medium",
-  "calories": 852,
-  "protein": 38,
-  "carbs": 56,
-  "fats": 52,
+  "calories": 1400,
+  "protein": 105,
+  "carbs": 38,
+  "fats": 90,
   "tags": [
     "protein:pork",
     "format:pizza",
@@ -33,90 +33,113 @@
   ],
   "ingredients": [
     {
-      "name": "Bread flour",
+      "name": "Pizza dough balls (15 oz)",
       "quantity": "4",
-      "unit": "cups",
-      "group": "Dough"
+      "unit": "count",
+      "group": "Crust"
     },
     {
-      "name": "Active dry yeast",
-      "quantity": "2",
-      "unit": "tsp",
-      "group": "Dough"
-    },
-    {
-      "name": "Warm water",
-      "quantity": "1.5",
-      "unit": "cups",
-      "notes": "110°F",
-      "group": "Dough"
-    },
-    {
-      "name": "Olive oil",
+      "name": "Pizza sauce",
       "quantity": "3",
-      "unit": "tbsp",
-      "group": "Dough"
-    },
-    {
-      "name": "Kosher salt",
-      "quantity": "2",
-      "unit": "tsp",
-      "group": "Dough"
-    },
-    {
-      "name": "Crushed tomatoes",
-      "quantity": "2",
-      "unit": "cans",
-      "notes": "28 oz",
+      "unit": "cups",
       "group": "Sauce"
     },
     {
-      "name": "Fresh mozzarella, torn",
-      "quantity": "24",
+      "name": "Low-moisture mozzarella, shredded",
+      "quantity": "32",
       "unit": "oz",
       "group": "Cheese"
     },
     {
-      "name": "Pepperoni or toppings",
+      "name": "Pepperoni slices",
       "quantity": "12",
       "unit": "oz",
-      "group": "Toppings"
+      "group": "Meats"
+    },
+    {
+      "name": "Italian sausage, cooked crumbles",
+      "quantity": "2",
+      "unit": "lb",
+      "group": "Meats"
+    },
+    {
+      "name": "Canadian bacon, diced",
+      "quantity": "12",
+      "unit": "oz",
+      "group": "Meats"
+    },
+    {
+      "name": "Bacon, cooked and crumbled",
+      "quantity": "12",
+      "unit": "oz",
+      "group": "Meats"
+    },
+    {
+      "name": "Ground beef, browned",
+      "quantity": "1.5",
+      "unit": "lb",
+      "group": "Meats"
+    },
+    {
+      "name": "Dried oregano",
+      "quantity": "2",
+      "unit": "tsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Grated parmesan",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Finish"
+    },
+    {
+      "name": "Olive oil",
+      "quantity": "4",
+      "unit": "tbsp",
+      "group": "Pan"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Proof the dough",
-      "instruction": "Stir yeast into warm water with a pinch of sugar; bloom 5 minutes until foamy. Mix flour, salt, oil, and yeast water until a shaggy dough forms. Knead 8–10 minutes until smooth. Rise covered 1–1½ hours until doubled — Meat Lover's Sheet Pan Pizza needs relaxed gluten for an open crumb.",
-      "minutes": 90,
-      "heatLevel": ""
+      "title": "Brown sausage and beef",
+      "instruction": "Cook Italian sausage and ground beef in a skillet over medium-high, breaking into fine crumbles until fully browned. Drain grease — greasy sheet pizza pools in the tray. Combine with cooked bacon and Canadian bacon in a bowl.",
+      "minutes": 18,
+      "heatLevel": "medium-high"
     },
     {
       "stepNumber": 2,
-      "title": "Heat oven and stone",
-      "instruction": "Place a pizza stone or inverted sheet pan in the oven. Preheat to 500°F for at least 45 minutes — surface temp matters more than air temp. Prep sauce and cheese while the oven saturates.",
-      "minutes": 45,
-      "heatLevel": "high"
-    },
-    {
-      "stepNumber": 3,
-      "title": "Stretch and top",
-      "instruction": "Divide dough; stretch by hand (don't roll with a pin unless Detroit-style). Sauce lightly — wet centers sag. Add cheese and toppings. Work on parchment or floured peel; jiggle to confirm it slides.",
-      "minutes": 15,
+      "title": "Oil and stretch sheet pans",
+      "instruction": "Oil two half-sheet pans (18x13). Press and stretch dough to the corners; dock all over with a fork so air escapes. A tight fit feeds the crew from two trays instead of juggling four round pies.",
+      "minutes": 12,
       "heatLevel": ""
     },
     {
+      "stepNumber": 3,
+      "title": "Par-bake crusts",
+      "instruction": "Par-bake at 425°F 8 minutes until set and pale golden — this carries the weight of five meats without a raw center.",
+      "minutes": 8,
+      "heatLevel": "medium"
+    },
+    {
       "stepNumber": 4,
-      "title": "Bake until blistered",
-      "instruction": "Slide onto the hot stone. Bake 10–14 minutes until cheese bubbles with brown spots and the underside sounds hollow when tapped. Rotate once if your oven has hot spots.",
+      "title": "Sauce, cheese, and load meats",
+      "instruction": "Spread pizza sauce edge to edge. Layer mozzarella, then pepperoni, sausage-beef mix, and more mozzarella. Meat Lover's means crowded but not swimming — if toppings slide, you went too heavy in one spot.",
       "minutes": 12,
-      "heatLevel": "high"
+      "heatLevel": ""
     },
     {
       "stepNumber": 5,
-      "title": "Rest and cut",
-      "instruction": "Rest 2 minutes before cutting so cheese sets. Cut on sheet trays for the hall line. Hold backup pies at 200°F uncovered up to 15 minutes — covering traps steam and softens crust.",
-      "minutes": 3,
+      "title": "Bake until edges are crisp",
+      "instruction": "Bake at 425°F 18–22 minutes until cheese is deeply browned at the edges and the center reads 190°F on a thermometer through the cheese. Rotate pans halfway. Bottom should sound hollow when tapped on the pan edge.",
+      "minutes": 20,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Rest and cut squares",
+      "instruction": "Rest 5 minutes so cheese sets — runny cheese burns rookies on the line. Cut into squares with a bench scraper; sprinkle parmesan. One tray feeds four; two trays feed eight with seconds.",
+      "minutes": 5,
       "heatLevel": "low"
     }
   ],
@@ -139,17 +162,17 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 852,
-    "protein": 38,
-    "carbs": 56,
-    "fats": 52,
+    "calories": 1400,
+    "protein": 105,
+    "carbs": 38,
+    "fats": 90,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
       "under30gFat": false,
-      "highCarb": true,
+      "highCarb": false,
       "lowCarb": false,
       "mealPrepFriendly": false
     },
@@ -186,6 +209,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-30T03:28:01.942Z",
+  "generatedAt": "2026-05-30T23:27:14.574Z",
   "contentVersion": 2
 }

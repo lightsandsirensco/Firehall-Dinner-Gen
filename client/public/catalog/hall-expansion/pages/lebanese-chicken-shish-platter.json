@@ -1,0 +1,230 @@
+{
+  "slug": "lebanese-chicken-shish-platter",
+  "title": "Lebanese Chicken Shish Platter",
+  "displayTitle": "Lebanese Chicken Shish Platter",
+  "seoTitle": "Lebanese Chicken Shish Platter | Firefighter Meal",
+  "shortDescription": "Garlic-lemon chicken skewers with toum and tabbouleh for ten",
+  "subtitle": "Garlic-lemon chicken skewers with toum and tabbouleh for ten",
+  "category": "hall_expansion",
+  "cuisine": "lebanese",
+  "description": "Chicken breast chunks marinate in lemon, garlic, yogurt, and olive oil, then grill on skewers until charred at the edges. Serve with toum garlic sauce, tabbouleh, pickles, and warm pita.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 15,
+  "prepTime": 35,
+  "difficulty": "medium",
+  "calories": 420,
+  "protein": 40,
+  "carbs": 32,
+  "fats": 16,
+  "tags": [
+    "protein:chicken",
+    "format:skewer",
+    "category:crew_feeders",
+    "hall_expansion",
+    "crew_feeders",
+    "lebanese",
+    "chicken",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Grill",
+    "Food processor",
+    "Skewers",
+    "Instant-read thermometer",
+    "Large platters"
+  ],
+  "ingredients": [
+    {
+      "name": "chicken breast",
+      "quantity": "4",
+      "unit": "lb",
+      "notes": "cut into 1.5-inch cubes",
+      "group": "Main"
+    },
+    {
+      "name": "lemon juice",
+      "quantity": "0.33",
+      "unit": "cup",
+      "group": "Marinade"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "0.25",
+      "unit": "cup",
+      "group": "Marinade"
+    },
+    {
+      "name": "Greek yogurt",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Marinade"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "8",
+      "unit": "cloves",
+      "notes": "minced",
+      "group": "Marinade"
+    },
+    {
+      "name": "paprika",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Marinade"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "6",
+      "unit": "cloves",
+      "notes": "for toum",
+      "group": "Sauce"
+    },
+    {
+      "name": "neutral oil",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "for toum",
+      "group": "Sauce"
+    },
+    {
+      "name": "lemon juice",
+      "quantity": "3",
+      "unit": "tbsp",
+      "notes": "for toum",
+      "group": "Sauce"
+    },
+    {
+      "name": "bulgur wheat",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "fine",
+      "group": "Tabbouleh"
+    },
+    {
+      "name": "fresh parsley",
+      "quantity": "2",
+      "unit": "cups",
+      "notes": "finely chopped",
+      "group": "Tabbouleh"
+    },
+    {
+      "name": "pita bread",
+      "quantity": "12",
+      "unit": "rounds",
+      "notes": "warmed",
+      "group": "Service"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Lebanese Chicken Shish Platter in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Marinate chicken",
+      "instruction": "Mix lemon juice, olive oil, yogurt, minced garlic, paprika, salt, and pepper. Coat chicken and marinate at least 2 hours. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Make toum",
+      "instruction": "Blend garlic with lemon juice, then slowly stream in oil until thick and fluffy like mayonnaise. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Prep tabbouleh",
+      "instruction": "Soak bulgur in hot water 20 minutes, drain, and toss with parsley, diced tomato, cucumber, mint, lemon, and olive oil. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 25,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Grill skewers",
+      "instruction": "Thread chicken onto skewers. Grill over medium-high heat 10–12 minutes until charred and 165°F internal. Target oven/smoker temperature: 400°F.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Platter and serve",
+      "instruction": "Arrange skewers on platters with tabbouleh, toum, pickles, and warm pita. Slide chicken off skewers at the line if preferred. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
+      "minutes": 8,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Sumac on finished chicken adds classic Lebanese tang.",
+    "Pickled turnips from a jar are worth buying for authenticity.",
+    "If toum breaks, blend in another egg white to re-emulsify."
+  ],
+  "tonightSpread": [
+    "Shish taouk with toum, tabbouleh, pickles, and warm pita.",
+    "Hummus on the side for double-dip energy."
+  ],
+  "leftovers": [
+    "Chicken in pita with toum and pickles for lunch.",
+    "Tabbouleh holds 2 days—good side for next shift."
+  ],
+  "whyCrewsLikeIt": "Shish taouk is Mediterranean comfort without the pasta or rice-bowl rut. Garlic-lemon chicken on skewers feels like a backyard cookout with better seasoning, and toum separates the rookies from crews who respect raw garlic.",
+  "mealPrepNotes": "Yogurt marinade tenderizes breast meat—do not skip. Make toum in a food processor ahead. Tabbouleh improves if parsley is chopped fine and salad rests 30 minutes.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 420,
+    "protein": 40,
+    "carbs": 32,
+    "fats": 16,
+    "label": "~420 cal/serving · 40g protein · 3g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/lebanese-chicken-shish-platter.jpg",
+  "heroImageAlt": "Lebanese Chicken Shish Platter — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/lebanese-chicken-shish-platter.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/lebanese-chicken-shish-platter.jpg",
+  "railImage": "/images/rails/hall-expansion/lebanese-chicken-shish-platter.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "lebanese chicken shish platter",
+    "crew feeders"
+  ],
+  "relatedSlugs": [
+    "shawarma-bar-night",
+    "fajita-bar-night",
+    "hall-burger-bar",
+    "pasta-bar-night"
+  ],
+  "generatedAt": "2026-05-31T01:50:00.916Z",
+  "contentVersion": 2
+}

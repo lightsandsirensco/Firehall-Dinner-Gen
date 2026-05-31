@@ -1,0 +1,191 @@
+{
+  "slug": "corned-beef-hash-breakfast",
+  "title": "Corned Beef Hash Breakfast",
+  "subtitle": "Crisp diced potatoes and corned beef with eggs cracked on top.",
+  "description": "Adapted from classic American diner hash tradition for a hungry firehall crew: Yukon gold potatoes diced and pan-fried until deeply golden, folded with shredded corned beef and onions, then finished with eggs cooked sunny-side up in the same skillet.",
+  "filters": [
+    "skillets",
+    "high_protein",
+    "feed_a_crew"
+  ],
+  "tags": [
+    "corned-beef",
+    "hash",
+    "potatoes",
+    "eggs",
+    "diner"
+  ],
+  "crewSize": 8,
+  "baseServings": 8,
+  "prepTime": 15,
+  "cookTime": 35,
+  "totalTime": 50,
+  "difficulty": "medium",
+  "ingredients": [
+    {
+      "name": "Yukon gold potatoes",
+      "quantity": "4 lb",
+      "notes": "peeled and diced 1/2-inch",
+      "group": "Hash"
+    },
+    {
+      "name": "cooked corned beef",
+      "quantity": "2 lb",
+      "notes": "shredded or diced small",
+      "group": "Hash"
+    },
+    {
+      "name": "yellow onions",
+      "quantity": "2",
+      "notes": "diced",
+      "group": "Hash"
+    },
+    {
+      "name": "green bell pepper",
+      "quantity": "1",
+      "notes": "diced, optional",
+      "group": "Hash"
+    },
+    {
+      "name": "black pepper",
+      "quantity": "2 tsp",
+      "notes": "plus salt to taste—corned beef is salty",
+      "group": "Seasoning"
+    },
+    {
+      "name": "vegetable oil",
+      "quantity": "1/4 cup",
+      "notes": "plus butter for finishing",
+      "group": "Fat"
+    },
+    {
+      "name": "large eggs",
+      "quantity": "8",
+      "group": "Protein"
+    },
+    {
+      "name": "fresh parsley",
+      "quantity": "1/2 cup",
+      "notes": "chopped, plus hot sauce at the line",
+      "group": "Finish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Corned Beef Hash Breakfast in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch Eggs. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Par-cook potatoes",
+      "instruction": "Microwave diced potatoes with a splash of water in a covered bowl until just tender, about 8 minutes. Drain thoroughly and spread on a towel to dry—wet potatoes will steam instead of crisp. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Crisp the hash base",
+      "instruction": "Heat oil in two large skillets over medium-high until shimmering. Add potatoes in a single layer without crowding; let sit 4 minutes for crust before stirring. Cook until deeply golden on most sides. Target 165°F at the thickest part before moving to the next batch. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Add corned beef and onion",
+      "instruction": "Fold in onion, pepper, and corned beef. Press the mixture into the pan and cook undisturbed 3 minutes to build a crust. Season with pepper; taste before adding salt because corned beef carries plenty. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Make wells for eggs",
+      "instruction": "Divide hash between warm serving skillets or one large cast iron. Make eight shallow wells and crack an egg into each. Season eggs with pepper. Target 165°F at the thickest part before moving to the next batch. Plan about 3 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 3,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Cover and finish eggs",
+      "instruction": "Cover skillets over medium-low heat until egg whites are fully set (165°F) and yolks are runny or jammy to preference. Scatter parsley and serve straight from the pan with hot sauce. Plan about 6 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
+      "minutes": 6,
+      "heatLevel": ""
+    }
+  ],
+  "nutrition": {
+    "calories": 424,
+    "protein": 15,
+    "carbs": 65,
+    "fat": 13,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": false
+    }
+  },
+  "stationWorkflow": [
+    "Dry potatoes aggressively—this is the difference between diner hash and cafeteria mush.",
+    "Use two skillets in parallel if one pan cannot fit eight eggs without crowding.",
+    "Serve family-style from cast iron so the crew gets the crisp bottom layer first."
+  ],
+  "cleanupNotes": [
+    "Deglaze hash pans with hot water while warm; corned beef fat sets hard if left to cool.",
+    "Scrape potato starch from cutting boards immediately before it dries and glues itself on."
+  ],
+  "leftovers": [
+    "Reheat hash covered at 325°F for 12 minutes; fry fresh eggs to order on top rather than reheating set yolks.",
+    "Press cold leftovers into patties and griddle until crisp for handheld hash cakes at the next breakfast."
+  ],
+  "heroImage": "/images/breakfast/corned-beef-hash-breakfast.jpg",
+  "thumbImage": "/images/thumbs/breakfast/corned-beef-hash-breakfast.jpg",
+  "imageAlt": "Corned beef hash with crispy potatoes and sunny-side eggs in a cast-iron skillet",
+  "publishedAt": "2026-05-30T21:22:29.757Z",
+  "updatedAt": "2026-05-31T12:54:36.767Z",
+  "readMinutes": 8,
+  "seoTitle": "Corned Beef Hash Breakfast | Firehall Breakfast",
+  "mobileImage": "/images/mobile/breakfast/corned-beef-hash-breakfast.jpg",
+  "railImage": "/images/rails/breakfast/corned-beef-hash-breakfast.jpg",
+  "proTips": [
+    "Dry potatoes aggressively—this is the difference between diner hash and cafeteria mush.",
+    "Use two skillets in parallel if one pan cannot fit eight eggs without crowding.",
+    "Serve family-style from cast iron so the crew gets the crisp bottom layer first."
+  ],
+  "tonightSpread": [
+    "Plate Corned Beef Hash Breakfast with sides in separate pans so the crew can mix portions.",
+    "Keep hot items on one side of the table and cold on the other — eggs stay hot, fruit stays cold.",
+    "Line up Corned Beef Hash Breakfast on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+  ],
+  "equipment": [
+    "Large sheet trays",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "mealPrepNotes": "Prep mise en place before the shift — Corned Beef Hash Breakfast runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
+}

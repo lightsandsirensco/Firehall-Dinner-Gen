@@ -14,9 +14,9 @@
   "prepTime": 45,
   "difficulty": "hard",
   "calories": 1400,
-  "protein": 120,
+  "protein": 94,
   "carbs": 144,
-  "fats": 90,
+  "fats": 70,
   "tags": [
     "protein:pork",
     "format:sandwich",
@@ -35,8 +35,9 @@
   "ingredients": [
     {
       "name": "Boneless pork shoulder (butt)",
-      "quantity": "4",
+      "quantity": "5",
       "unit": "lb",
+      "notes": "about 10 oz raw per firefighter",
       "group": "Main"
     },
     {
@@ -107,7 +108,7 @@
     },
     {
       "name": "Coleslaw mix",
-      "quantity": "2",
+      "quantity": "2.5",
       "unit": "lb",
       "group": "Slaw"
     },
@@ -134,43 +135,71 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Apply dry rub",
-      "instruction": "Trim excess hard fat from pork shoulder, leaving about ¼ inch. Mix brown sugar, paprika, garlic powder, onion powder, cumin, chili powder, salt, and pepper. Coat pork all over and press rub into the surface. Rest at room temp 30 minutes while the oven or slow cooker comes up.",
-      "minutes": 30,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Pulled Pork Sandwiches in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch pork. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Apply dry rub",
+      "instruction": "Trim excess hard fat from pork shoulder, leaving about ¼ inch. Mix brown sugar, paprika, garlic powder, onion powder, cumin, chili powder, salt, and pepper. Coat pork all over and press rub into the surface. Rest at room temp 30 minutes while the oven or slow cooker comes up. Bake until the center reaches a safe internal temp (145°F with a 3-minute rest) and edges look set — use a thermometer at the thickest point. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts.",
+      "minutes": 30,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
       "title": "Low-and-slow cook",
-      "instruction": "Roast at 275°F in a covered roaster or run a slow cooker on low 8–10 hours until pork probes tender at 203°F and shreds with a fork. Add a splash of water if the pan looks dry halfway through — you want steam, not a dry roast.",
+      "instruction": "Roast at 275°F in a covered roaster or run a slow cooker on low 8–10 hours until pork probes tender at 203°F and shreds with a fork. Add a splash of water if the pan looks dry halfway through — you want steam, not a dry roast. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 480,
       "heatLevel": "low"
     },
     {
-      "stepNumber": 3,
+      "stepNumber": 5,
       "title": "Rest and shred",
-      "instruction": "Rest pork covered 30 minutes — juices redistribute. Shred with two forks, discarding large fat chunks. Toss with apple cider vinegar first, then fold in BBQ sauce to taste. Keep some sauce on the side for the line.",
+      "instruction": "Rest pork covered 30 minutes — juices redistribute. Shred with two forks, discarding large fat chunks. Toss with apple cider vinegar first, then fold in BBQ sauce to taste. Keep some sauce on the side for the line. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
       "minutes": 30,
       "heatLevel": "low"
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 6,
       "title": "Quick slaw",
-      "instruction": "Toss coleslaw mix with mayonnaise, a splash of vinegar, salt, and pepper. Keep cold until service — hot pork plus cold slaw is the move.",
+      "instruction": "Toss coleslaw mix with mayonnaise, a splash of vinegar, salt, and pepper. Keep cold until service — hot pork plus cold slaw is the move. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 7,
       "title": "Warm buns and set the line",
-      "instruction": "Split buns and warm in a 300°F oven 5 minutes wrapped in foil. Set pork in a deep hotel pan, buns stacked beside, slaw and pickles in separate bowls.",
+      "instruction": "Split buns and warm in a 300°F oven 5 minutes wrapped in foil. Set pork in a deep hotel pan, buns stacked beside, slaw and pickles in separate bowls. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 10,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 8,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F with a 3-minute rest. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 10,
       "title": "Build pulled pork sandwiches",
-      "instruction": "Crew piles pork on buns and tops with slaw and pickles. This is BBQ pulled pork — soft buns and tangy slaw, not Italian subs.",
+      "instruction": "Crew piles pork on buns and tops with slaw and pickles. This is BBQ pulled pork — soft buns and tangy slaw, not Italian subs. Plan about 10 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
       "minutes": 10,
       "heatLevel": "low"
     }
@@ -197,9 +226,9 @@
   "cleanupDifficulty": "medium",
   "nutrition": {
     "calories": 1400,
-    "protein": 120,
+    "protein": 94,
     "carbs": 144,
-    "fats": 90,
+    "fats": 70,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
@@ -244,6 +273,7 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "classicSlug": "pulled-pork",
-  "generatedAt": "2026-05-30T03:28:01.768Z",
-  "contentVersion": 2
+  "generatedAt": "2026-05-31T01:49:51.108Z",
+  "contentVersion": 2,
+  "mealPrepNotes": "Prep mise en place before the shift — Pulled Pork Sandwiches runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
 }

@@ -73,35 +73,59 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Heat the oven",
-      "instruction": "Heat oven to 375°F. Grease a deep 9x13 pan or two smaller hotel pans. Warm tortillas in a dry skillet or wrapped in foil so they roll without tearing.",
-      "minutes": 0,
-      "tempF": 375
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Breakfast Enchiladas for the Crew in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Cook the filling",
-      "instruction": "Brown chorizo in a large skillet, drain fat, then add soft-scrambled eggs and half the Jack cheese. Mix gently—the eggs should stay fluffy, not mashed.",
-      "minutes": 15
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch Eggs. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
     },
     {
       "stepNumber": 3,
-      "title": "Roll the enchiladas",
-      "instruction": "Spread a thin layer of sauce in the pan. Fill each tortilla with a generous scoop of filling, roll tight, and place seam-side down in a snug single layer.",
-      "minutes": 12
+      "title": "Heat the oven",
+      "instruction": "Heat oven to 375°F. Grease a deep 9x13 pan or two smaller hotel pans. Warm tortillas in a dry skillet or wrapped in foil so they roll without tearing. Allow 10–15 minutes for mise en place before heat goes on. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 0,
+      "heatLevel": ""
     },
     {
       "stepNumber": 4,
-      "title": "Sauce and cheese",
-      "instruction": "Pour remaining sauce evenly over the rolls. Top with remaining Jack and cotija. Cover with foil for the first half of baking to keep tortillas soft.",
-      "minutes": 5
+      "title": "Cook the filling",
+      "instruction": "Brown chorizo in a large skillet, drain fat, then add soft-scrambled eggs and half the Jack cheese. Mix gently—the eggs should stay fluffy, not mashed. Target 165°F at the thickest part before moving to the next batch. Plan about 15 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 15,
+      "heatLevel": ""
     },
     {
       "stepNumber": 5,
+      "title": "Roll the enchiladas",
+      "instruction": "Spread a thin layer of sauce in the pan. Fill each tortilla with a generous scoop of filling, roll tight, and place seam-side down in a snug single layer. Plan about 12 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Sauce and cheese",
+      "instruction": "Pour remaining sauce evenly over the rolls. Top with remaining Jack and cotija. Cover with foil for the first half of baking to keep tortillas soft. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
       "title": "Bake and rest",
-      "instruction": "Bake covered 20 minutes, uncover, and bake 10 more until sauce bubbles at the edges. Rest 10 minutes before cutting into portions so slices hold on the plate.",
+      "instruction": "Bake covered 20 minutes, uncover, and bake 10 more until sauce bubbles at the edges. Rest 10 minutes before cutting into portions so slices hold on the plate. Bake until the center reaches a safe internal temp (165°F) and edges look set — use a thermometer at the thickest point. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 25,
-      "tempF": 375
+      "heatLevel": ""
     }
   ],
   "nutrition": {
@@ -141,8 +165,27 @@
   "heroImage": "/images/breakfast/breakfast-enchiladas.jpg",
   "thumbImage": "/images/thumbs/breakfast/breakfast-enchiladas.jpg",
   "imageAlt": "Baked breakfast enchiladas with green sauce, melted cheese, and cilantro garnish",
-  "publishedAt": "2026-05-30T03:14:16.260Z",
-  "updatedAt": "2026-05-30T03:14:16.260Z",
+  "publishedAt": "2026-05-30T21:22:29.756Z",
+  "updatedAt": "2026-05-31T12:54:36.754Z",
   "readMinutes": 9,
-  "seoTitle": "Breakfast Enchiladas for the Crew | Firehall Breakfast"
+  "seoTitle": "Breakfast Enchiladas for the Crew | Firehall Breakfast",
+  "mobileImage": "/images/mobile/breakfast/breakfast-enchiladas.jpg",
+  "railImage": "/images/rails/breakfast/breakfast-enchiladas.jpg",
+  "proTips": [
+    "Set up a rolling station with warm tortillas, filling bowl, and sauced pan ready before scrambling eggs.",
+    "One cook rolls while another manages sauce and oven timing—don't let rolled enchiladas sit dry on the counter.",
+    "Garnish with cilantro and lime at the line; hold extra sauce warm for second passes."
+  ],
+  "tonightSpread": [
+    "Plate Breakfast Enchiladas for the Crew with sides in separate pans so the crew can mix portions.",
+    "Keep hot items on one side of the table and cold on the other — eggs stay hot, fruit stays cold.",
+    "Line up Breakfast Enchiladas for the Crew on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+  ],
+  "equipment": [
+    "Large sheet trays",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "mealPrepNotes": "Prep mise en place before the shift — Breakfast Enchiladas for the Crew runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
 }

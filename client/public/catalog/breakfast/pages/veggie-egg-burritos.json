@@ -75,33 +75,59 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Crisp the potatoes",
-      "instruction": "Heat a large skillet or griddle over medium-high. Add hash browns in an even layer; press with a spatula. Let them sit until browned, flip in sections, and season with salt and pepper. Move to a warm tray.",
-      "minutes": 12
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Veggie Egg Burritos in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Brown the meat + veg",
-      "instruction": "In the same pan, brown sausage/chorizo. Add onion and peppers; cook until softened. Drain excess fat if needed so burritos don’t get greasy.",
-      "minutes": 10
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch Eggs. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
     },
     {
       "stepNumber": 3,
-      "title": "Soft-scramble the eggs",
-      "instruction": "Lower heat to medium. Add a touch of butter, then the eggs. Stir gently until just set (slightly glossy). Fold in cheese off heat so it melts without overcooking.",
-      "minutes": 6
+      "title": "Crisp the potatoes",
+      "instruction": "Heat a large skillet or griddle over medium-high. Add hash browns in an even layer; press with a spatula. Let them sit until browned, flip in sections, and season with salt and pepper. Move to a warm tray. Cook until char marks are visible and the thickest piece reads 165°F on an instant-read thermometer. Plan about 12 minutes for this step at crew scale.",
+      "minutes": 12,
+      "heatLevel": ""
     },
     {
       "stepNumber": 4,
-      "title": "Build and wrap for the line",
-      "instruction": "Warm tortillas briefly. Add potatoes, meat/veg, eggs, and a spoon of salsa. Roll tight: fold sides, then roll forward. Hold wrapped burritos seam-side down on a warm sheet pan.",
-      "minutes": 10
+      "title": "Brown the meat + veg",
+      "instruction": "In the same pan, brown sausage/chorizo. Add onion and peppers; cook until softened. Drain excess fat if needed so burritos don’t get greasy. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 10,
+      "heatLevel": ""
     },
     {
       "stepNumber": 5,
+      "title": "Soft-scramble the eggs",
+      "instruction": "Lower heat to medium. Add a touch of butter, then the eggs. Stir gently until just set (slightly glossy). Fold in cheese off heat so it melts without overcooking. Plan about 6 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 6,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Build and wrap for the line",
+      "instruction": "Warm tortillas briefly. Add potatoes, meat/veg, eggs, and a spoon of salsa. Roll tight: fold sides, then roll forward. Hold wrapped burritos seam-side down on a warm sheet pan. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
       "title": "Serve + hold",
-      "instruction": "Keep burritos warm in a 200°F oven (uncovered for crispy tortillas; covered for softer). If you’re feeding in waves, build half, serve, then build the rest.",
-      "minutes": 0
+      "instruction": "Keep burritos warm in a 200°F oven (uncovered for crispy tortillas; covered for softer). If you’re feeding in waves, build half, serve, then build the rest. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 0,
+      "heatLevel": ""
     }
   ],
   "nutrition": {
@@ -141,8 +167,27 @@
   "heroImage": "/images/breakfast/veggie-egg-burritos.jpg",
   "thumbImage": "/images/thumbs/breakfast/veggie-egg-burritos.jpg",
   "imageAlt": "Warm station-kitchen breakfast: Veggie Egg Burritos",
-  "publishedAt": "2026-05-30T03:14:16.261Z",
-  "updatedAt": "2026-05-30T18:58:18.069Z",
+  "publishedAt": "2026-05-30T21:22:29.758Z",
+  "updatedAt": "2026-05-31T12:54:36.799Z",
   "readMinutes": 7,
-  "seoTitle": "Veggie Egg Burritos | Firehall Breakfast"
+  "seoTitle": "Veggie Egg Burritos | Firehall Breakfast",
+  "mobileImage": "/images/mobile/breakfast/veggie-egg-burritos.jpg",
+  "railImage": "/images/rails/breakfast/veggie-egg-burritos.jpg",
+  "proTips": [
+    "Assign one cook to the hot surface and one to assembly. Keep the line moving; don’t crowd the griddle.",
+    "Set a warm holding zone (oven 200°F or covered hotel pan) so staggered eaters still get a hot plate.",
+    "Run a quick call-proof check: anything crispy stays uncovered; anything soft stays covered."
+  ],
+  "tonightSpread": [
+    "Plate Veggie Egg Burritos with sides in separate pans so the crew can mix portions.",
+    "Keep hot items on one side of the table and cold on the other — eggs stay hot, fruit stays cold.",
+    "Line up Veggie Egg Burritos on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+  ],
+  "equipment": [
+    "Large sheet trays",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "mealPrepNotes": "Prep mise en place before the shift — Veggie Egg Burritos runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
 }

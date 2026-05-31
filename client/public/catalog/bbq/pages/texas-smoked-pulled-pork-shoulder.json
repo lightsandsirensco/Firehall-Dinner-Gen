@@ -1,0 +1,191 @@
+{
+  "slug": "texas-smoked-pulled-pork-shoulder",
+  "title": "Texas Smoked Pulled Pork Shoulder",
+  "displayTitle": "Texas Smoked Pulled Pork Shoulder",
+  "seoTitle": "Texas Smoked Pulled Pork Shoulder | Firehall BBQ",
+  "shortDescription": "Texas pit-style shoulder that pulls clean and holds all shift",
+  "subtitle": "Salt-and-pepper shoulder, no sweet sauce, and pickles for ten",
+  "category": "bbq_grill_nights",
+  "cuisine": "american",
+  "description": "Adapted from classic Texas smoked pork shoulder tradition (Hey Grill Hey, BBQ Pit Boys): bone-in shoulder gets a simple salt-and-pepper rub, smokes over oak until 203°F, and pulls with defatted drippings—no sweet sauce.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 480,
+  "prepTime": 25,
+  "difficulty": "medium",
+  "calories": 1232,
+  "protein": 120,
+  "carbs": 25,
+  "fats": 65,
+  "tags": [
+    "protein:pork",
+    "format:bbq",
+    "category:bbq_grill_nights",
+    "bbq",
+    "smoker",
+    "grill",
+    "firehall_bbq_25",
+    "bbq",
+    "pork",
+    "big_crew"
+  ],
+  "equipment": [
+    "smoker",
+    "foil",
+    "instant-read thermometer",
+    "large pan",
+    "heat-proof gloves"
+  ],
+  "ingredients": [
+    {
+      "name": "bone-in pork shoulder",
+      "quantity": "10",
+      "unit": "lb"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "4",
+      "unit": "tbsp"
+    },
+    {
+      "name": "coarse black pepper",
+      "quantity": "3",
+      "unit": "tbsp"
+    },
+    {
+      "name": "garlic powder",
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "yellow mustard",
+      "quantity": "3",
+      "unit": "tbsp",
+      "notes": "binder"
+    },
+    {
+      "name": "white bread",
+      "quantity": "15",
+      "unit": "slices"
+    },
+    {
+      "name": "dill pickle chips",
+      "quantity": "2",
+      "unit": "cups"
+    },
+    {
+      "name": "raw white onion",
+      "quantity": "1",
+      "unit": "whole",
+      "notes": "thin-sliced"
+    },
+    {
+      "name": "hot sauce",
+      "quantity": "0.5",
+      "unit": "cup",
+      "notes": "optional, on the side"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Season Texas-style",
+      "instruction": "Coat shoulder with mustard. Pack salt, pepper, and garlic powder on all sides. Rest 20 minutes while smoker heats to 275°F with oak.",
+      "minutes": 20,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Smoke the shoulder",
+      "instruction": "Smoke fat-side up at 275°F until bark is dark and internal temp reaches 165°F, about 4–5 hours.",
+      "minutes": 270,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Wrap and finish",
+      "instruction": "Wrap in foil with a splash of apple cider vinegar. Continue at 275°F until probe-tender and 203°F, about 2–3 hours.",
+      "minutes": 150,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Rest and pull",
+      "instruction": "Rest wrapped 40 minutes. Skim fat from juices. Pull pork, mixing in defatted drippings to moisten.",
+      "minutes": 45,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "170°F warm hold",
+      "instruction": "Transfer to hotel pan, cover with foil, hold at 170°F. Stir before service if top dries.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Tonight's board",
+      "instruction": "Pulled pork tray with pickles, onion, white bread, and hot sauce on the side. Texas-style—no sweet glaze.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Leftovers",
+      "instruction": "Reheat covered at 325°F with splash of broth until 165°F. Use in breakfast tacos with eggs.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "275°F speeds the cook vs 225°F—still tender if you hit 203°F.",
+    "Skim fat from drippings or pulled pork turns greasy on the hold line.",
+    "Hot sauce on the side keeps purists and heat-seekers both happy."
+  ],
+  "tonightSpread": [
+    "Pulled pork in a hotel pan.",
+    "Pickles, onion, white bread, and hot sauce."
+  ],
+  "leftovers": [
+    "Texas pork breakfast tacos with scrambled eggs.",
+    "Mix into smoked baked beans for second-day depth."
+  ],
+  "whyCrewsLikeIt": "Texas pork is about smoke and meat, not sugar. It holds at 170°F for hours and pairs with pickles and white bread like brisket.",
+  "mealPrepNotes": "Start early. Wrap when bark color is right. Hold pulled pork covered at 170°F with a splash of defatted drippings. Pickles and onions stay cold on ice.",
+  "cleanupDifficulty": "heavy",
+  "nutrition": {
+    "calories": 1232,
+    "protein": 120,
+    "carbs": 25,
+    "fats": 65,
+    "label": "per serving (hall portion)",
+    "source": "estimated"
+  },
+  "heroImage": "/images/smoker-catalog/texas-smoked-pulled-pork-shoulder.jpg",
+  "heroImageAlt": "Texas Smoked Pulled Pork Shoulder — crew-sized BBQ spread with visible smoke and bark",
+  "mobileImage": "/images/mobile/smoker-catalog/texas-smoked-pulled-pork-shoulder.jpg",
+  "thumbImage": "/images/thumbs/smoker-catalog/texas-smoked-pulled-pork-shoulder.jpg",
+  "railImage": "/images/rails/smoker-catalog/texas-smoked-pulled-pork-shoulder.jpg",
+  "realismScore": 88,
+  "firefighterScore": 90,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "texas smoked pulled pork shoulder",
+    "pork",
+    "American",
+    "bbq",
+    "firehall",
+    "texas pulled pork",
+    "smoked pork shoulder",
+    "salt pepper pork",
+    "oak smoke"
+  ],
+  "relatedSlugs": [
+    "kansas-city-pulled-pork-sandwiches",
+    "alabama-white-sauce-pulled-pork",
+    "carolina-vinegar-pulled-pork"
+  ],
+  "sourceName": "Firehall Meals BBQ Collection",
+  "generatedAt": "2026-05-31T02:29:42.530Z",
+  "contentVersion": 2
+}

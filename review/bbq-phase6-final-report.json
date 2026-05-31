@@ -1,0 +1,66 @@
+{
+  "generatedAt": "2026-05-31T02:53:00.000Z",
+  "phase": 6,
+  "title": "BBQ & Grill Expansion — 30 unique crew recipes",
+  "catalogTotal": 55,
+  "phase6Count": 30,
+  "categories": {
+    "skewers_kabobs": 6,
+    "grilled_platters": 6,
+    "bbq_seafood": 4,
+    "grilled_sandwiches": 4,
+    "flat_top_griddle": 5,
+    "firehall_bbq_sides": 5
+  },
+  "noveltyGate": {
+    "minimum": 8,
+    "minScore": 8.0,
+    "maxScore": 9.3,
+    "pass": true
+  },
+  "images": {
+    "generated": 30,
+    "uniqueHeroes": 55,
+    "duplicateMd5": 0,
+    "standard": "firehall-kitchen-photo-standard v1.0"
+  },
+  "audits": {
+    "audit:phase6-bbq-grill": "PASS",
+    "audit:bbq-batch-25": "PASS",
+    "catalog:verify": "PASS",
+    "npm run check": "PASS",
+    "audit:catalog-duplicates": "report only"
+  },
+  "slugs": [
+    "lamb-merguez-skewers-crew",
+    "pork-satay-skewers-crew",
+    "gochujang-beef-skewers-crew",
+    "garlic-butter-scallop-skewers",
+    "caprese-steak-skewers-crew",
+    "honey-sriracha-shrimp-skewers",
+    "yakiniku-grill-platter-crew",
+    "tandoori-lamb-chop-platter",
+    "portuguese-linguica-grill-platter",
+    "spiedie-chicken-platter-crew",
+    "pollo-asado-citrus-platter",
+    "mixed-lamb-chop-grill-board",
+    "maple-bourbon-grilled-trout",
+    "cajun-grilled-catfish-crew",
+    "grilled-halibut-lemon-packets",
+    "chili-lime-grilled-tilapia",
+    "grilled-chicken-pesto-panini-crew",
+    "pressed-cuban-sandwiches-crew",
+    "grilled-reuben-sandwiches-crew",
+    "andouille-po-boy-rolls-crew",
+    "cast-iron-steak-fajita-sizzlers",
+    "firehall-hibachi-mixed-grill-crew",
+    "flat-top-philly-cheesesteaks-crew",
+    "griddle-smash-sausage-peppers",
+    "mongolian-beef-flat-top-crew",
+    "firehall-street-elote-cups",
+    "loaded-ranch-potato-salad-crew",
+    "firehall-antipasto-pasta-salad",
+    "grilled-peach-burrata-salad",
+    "charred-broccolini-lemon-tray"
+  ]
+}

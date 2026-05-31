@@ -95,36 +95,57 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Heat oven and prep vegetables",
-      "instruction": "Heat oven to 400°F. Toss Brussels sprouts and carrots with 2 tbsp oil, salt, and pepper. Arrange cut-side down on two half-sheets.",
-      "minutes": 10,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Maple Mustard Salmon Tray in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Mix maple mustard glaze",
-      "instruction": "Whisk maple syrup, both mustards, vinegar, garlic, and remaining oil until smooth and emulsified with no mustard clumps.",
-      "minutes": 3,
-      "heatLevel": ""
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch salmon. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
     },
     {
       "stepNumber": 3,
-      "title": "Season salmon",
-      "instruction": "Pat salmon dry, place skin-down among vegetables. Brush half the glaze over flesh side until evenly coated and glossy.",
-      "minutes": 5,
+      "title": "Heat oven and prep vegetables",
+      "instruction": "Heat oven to 400°F. Toss Brussels sprouts and carrots with 2 tbsp oil, salt, and pepper. Arrange cut-side down on two half-sheets. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 4,
+      "title": "Mix maple mustard glaze",
+      "instruction": "Whisk maple syrup, both mustards, vinegar, garlic, and remaining oil until smooth and emulsified with no mustard clumps. Plan about 3 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 3,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Season salmon",
+      "instruction": "Pat salmon dry, place skin-down among vegetables. Brush half the glaze over flesh side until evenly coated and glossy. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
       "title": "Bake until done",
-      "instruction": "Roast 14–18 minutes, brushing glaze again halfway, until salmon reads 125–130°F and sprouts are caramelized at cut edges.",
+      "instruction": "Roast 14–18 minutes, brushing glaze again halfway, until salmon reads 125–130°F and sprouts are caramelized at cut edges. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 16,
       "heatLevel": "medium-high"
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
       "title": "Rest and serve",
-      "instruction": "Rest 3 minutes. Salmon should flake with gentle pressure and stay moist pink at center, not chalky throughout.",
+      "instruction": "Rest 3 minutes. Salmon should flake with gentle pressure and stay moist pink at center, not chalky throughout. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 3,
       "heatLevel": ""
     }

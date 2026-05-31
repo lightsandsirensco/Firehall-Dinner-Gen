@@ -20,6 +20,8 @@ import { buildRecipeHeroAlt } from "@shared/seo/recipe-image-seo";
 import { RecipeInternalLinks } from "@/components/seo/recipe-internal-links";
 
 import { golden100HeroPath } from "@/lib/golden-100-hero";
+import { displayRecipeHeroSrc } from "@/lib/verified-recipe-hero";
+import { MissingRecipeImagePlaceholder } from "@/components/missing-recipe-image-placeholder";
 
 import { cn } from "@/lib/utils";
 
@@ -123,43 +125,33 @@ function RelatedCard({ slug, title, thumb }: { slug: string; title: string; thum
 
 
 
-function RecipeHero({ page }: { page: GoldenRecipePage }) {
-
-  const src = page.heroImage || golden100HeroPath(page.slug);
-
-
+function RecipeHero({ page }: { page: GoldenRecipePage & { heroVerified?: boolean } }) {
+  const src = displayRecipeHeroSrc(
+    page.slug,
+    page.heroImage || golden100HeroPath(page.slug),
+    page.heroVerified,
+  );
 
   return (
-
     <header className="relative -mx-page sm:mx-0 sm:rounded-3xl overflow-hidden bg-zinc-950">
-
       <div className="relative w-full aspect-[16/13] sm:aspect-[16/10] max-h-[min(56vh,520px)] sm:max-h-[min(70vh,560px)]">
-
-        <FoodImage
-
-          src={src}
-
-          alt={buildRecipeHeroAlt(page.title)}
-
-          layout="detail"
-
-          fit="cover"
-
-          focal="food"
-
-          overlay="detail"
-
-          priority
-
-          cinematicGrade
-
-          rounded="none"
-
-          className="absolute inset-0"
-
-          debugId={{ context: "golden-hero", slug: page.slug, title: page.title }}
-
-        />
+        {src ? (
+          <FoodImage
+            src={src}
+            alt={buildRecipeHeroAlt(page.title)}
+            layout="detail"
+            fit="cover"
+            focal="food"
+            overlay="detail"
+            priority
+            cinematicGrade
+            rounded="none"
+            className="absolute inset-0"
+            debugId={{ context: "golden-hero", slug: page.slug, title: page.title }}
+          />
+        ) : (
+          <MissingRecipeImagePlaceholder title={page.title} variant="detail" className="absolute inset-0" />
+        )}
 
         <div
 

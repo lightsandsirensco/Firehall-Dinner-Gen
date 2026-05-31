@@ -25,7 +25,7 @@
     "beef",
     "comfort",
     "hall_expansion",
-    "hall_expansion_56",
+    "hall_expansion_74",
     "hall_meal",
     "firefighter_meal"
   ],
@@ -105,36 +105,64 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Brown the meats",
-      "instruction": "Cook beef and pork with onion over medium-high heat 12–15 minutes, breaking into crumbles until well browned. Drain excess fat.",
-      "minutes": 15,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Rigatoni with Meat Sauce in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch beef. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Brown the meats",
+      "instruction": "Cook beef and pork with onion over medium-high heat 12–15 minutes, breaking into crumbles until well browned. Drain excess fat. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
       "title": "Build the sauce",
-      "instruction": "Add garlic and tomato paste, cook 2 minutes. Pour in wine and simmer until mostly reduced, about 4 minutes.",
+      "instruction": "Add garlic and tomato paste, cook 2 minutes. Pour in wine and simmer until mostly reduced, about 4 minutes. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 6,
       "heatLevel": ""
     },
     {
-      "stepNumber": 3,
+      "stepNumber": 5,
       "title": "Simmer low",
       "instruction": "Add crushed tomatoes and oregano. Simmer uncovered 40–45 minutes, stirring occasionally, until sauce thickens and oil pools at edges.",
       "minutes": 42,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 6,
       "title": "Cook rigatoni",
-      "instruction": "Boil rigatoni in salted water until al dente, about 11 minutes. Drain and toss with a cup of sauce.",
+      "instruction": "Boil rigatoni in salted water until al dente, about 11 minutes. Drain and toss with a cup of sauce. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 12,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F for medium beef, 160°F for ground. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
       "title": "Serve family-style",
-      "instruction": "Portion pasta into bowls or hotel pan, top with remaining sauce and Parmesan. Serve with extra cheese at the line.",
+      "instruction": "Portion pasta into bowls or hotel pan, top with remaining sauce and Parmesan. Serve with extra cheese at the line. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 5,
       "heatLevel": ""
     }
@@ -181,6 +209,6 @@
     "hall-burger-bar",
     "pasta-bar-night"
   ],
-  "generatedAt": "2026-05-30T03:14:19.188Z",
+  "generatedAt": "2026-05-31T01:50:00.916Z",
   "contentVersion": 2
 }

@@ -25,7 +25,7 @@
     "chicken",
     "handheld",
     "hall_expansion",
-    "hall_expansion_56",
+    "hall_expansion_74",
     "hall_meal",
     "firefighter_meal"
   ],
@@ -102,37 +102,86 @@
   "steps": [
     {
       "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Shawarma Bar Night in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Double-check seasoning after scaling — crew palates run salty after long shifts, so taste the first portion before opening the line.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
       "title": "Marinate the chicken",
       "instruction": "Whisk olive oil, lemon juice, cumin, paprika, turmeric, garlic, and 2 tbsp salt. Coat thighs and marinate at least 2 hours or overnight for deepest flavor penetration.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
-      "stepNumber": 2,
+      "stepNumber": 4,
       "title": "Roast the chicken",
       "instruction": "Arrange thighs on oiled sheet pans skin-side up. Roast at 425°F for 25–30 minutes until charred at edges and internal temp reaches 175°F in the thickest piece. Target oven/smoker temperature: 425°F.",
       "minutes": 30,
       "heatLevel": ""
     },
     {
-      "stepNumber": 3,
+      "stepNumber": 5,
       "title": "Rest and slice thin",
       "instruction": "Rest chicken 10 minutes, then slice as thin as possible against the grain. Pile into a hotel pan and tent with foil for holding at the bar.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 6,
       "title": "Set the shawarma bar",
       "instruction": "Warm flatbread wrapped in towels. Arrange sliced chicken, tahini, pickles, diced tomatoes, sliced onions, and fresh parsley in separate labeled pans along the line.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Portion and open the line",
+      "instruction": "Portion Shawarma Bar Night onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Scale for larger halls",
+      "instruction": "When cooking for more than 10 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
       "title": "Service and replenish",
       "instruction": "Call the meal and demonstrate one wrap build. Replenish chicken and bread from backup pans kept warm in a low oven throughout the meal.",
       "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 12,
+      "title": "Final quality check before service",
+      "instruction": "Walk the line once before opening service for Shawarma Bar Night — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
+      "minutes": 4,
       "heatLevel": ""
     }
   ],
@@ -178,6 +227,6 @@
     "pasta-bar-night",
     "rice-bowl-bar-night"
   ],
-  "generatedAt": "2026-05-30T03:14:19.188Z",
+  "generatedAt": "2026-05-31T01:50:00.916Z",
   "contentVersion": 2
 }

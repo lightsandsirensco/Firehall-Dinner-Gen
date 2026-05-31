@@ -1,0 +1,190 @@
+{
+  "slug": "belgian-waffle-platter",
+  "title": "Belgian Waffle Platter",
+  "subtitle": "Crisp yeasted waffles with whipped butter, syrup, and fresh berries.",
+  "description": "Adapted from classic Belgian Liège-style brunch tradition for firehall batch service: yeasted waffle batter baked crisp on a Belgian iron, served on a platter with whipped butter, warm maple syrup, and seasonal berries for eight.",
+  "filters": [
+    "feed_a_crew",
+    "quick_breakfasts",
+    "breakfast_sandwiches"
+  ],
+  "tags": [
+    "waffles",
+    "belgian",
+    "brunch",
+    "berries",
+    "maple"
+  ],
+  "crewSize": 8,
+  "baseServings": 8,
+  "prepTime": 20,
+  "cookTime": 30,
+  "totalTime": 50,
+  "difficulty": "medium",
+  "ingredients": [
+    {
+      "name": "all-purpose flour",
+      "quantity": "4 cups",
+      "group": "Batter"
+    },
+    {
+      "name": "granulated sugar",
+      "quantity": "2 tbsp",
+      "group": "Batter"
+    },
+    {
+      "name": "instant yeast",
+      "quantity": "2 tsp",
+      "notes": "or 1 packet active dry",
+      "group": "Batter"
+    },
+    {
+      "name": "whole milk",
+      "quantity": "3 cups",
+      "notes": "warm",
+      "group": "Batter"
+    },
+    {
+      "name": "large eggs",
+      "quantity": "4",
+      "notes": "separated, yolks in batter, whites whipped",
+      "group": "Batter"
+    },
+    {
+      "name": "unsalted butter",
+      "quantity": "1/2 cup",
+      "notes": "melted and cooled",
+      "group": "Batter"
+    },
+    {
+      "name": "maple syrup",
+      "quantity": "2 cups",
+      "notes": "warmed",
+      "group": "Serve"
+    },
+    {
+      "name": "mixed berries",
+      "quantity": "3 cups",
+      "notes": "plus whipped butter",
+      "group": "Serve"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Belgian Waffle Platter in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch Eggs. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Mix the batter",
+      "instruction": "Whisk flour, sugar, yeast, and salt. Stir in warm milk, egg yolks, and melted butter until smooth. Let rest 15 minutes so yeast activates and batter thickens slightly. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Fold in whipped whites",
+      "instruction": "Beat egg whites to stiff peaks. Fold one-third into the batter to lighten, then fold in the rest gently so volume stays airy—do not deflate with heavy stirring. Plan about 5 minutes for this step at crew scale. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Preheat irons",
+      "instruction": "Heat Belgian waffle irons to medium-high (most units reach roughly 375°F surface temp). Lightly oil plates if your iron requires it. Keep a rack and sheet pan ready in a 200°F oven. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Bake the waffles",
+      "instruction": "Pour batter to cover the grid without overflowing. Close iron and bake 4–5 minutes per waffle until deep golden and crisp at the edges. Transfer to the rack in the warm oven—never stack. Bake until the center reaches a safe internal temp (165°F) and edges look set — use a thermometer at the thickest point.",
+      "minutes": 20,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Platter and serve",
+      "instruction": "Arrange waffles on a large warm platter with bowls of whipped butter, warmed maple syrup, and berries. Serve immediately and bake remaining batches while the crew eats. Bake until the center reaches a safe internal temp (165°F) and edges look set — use a thermometer at the thickest point. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "nutrition": {
+    "calories": 723,
+    "protein": 13,
+    "carbs": 133,
+    "fat": 18,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": false,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "stationWorkflow": [
+    "Run two irons in parallel if available so eight waffles finish within 15 minutes.",
+    "Hold waffles on a rack in a 200°F oven—stacking steams away the crisp crust.",
+    "Warm syrup in a small pot on low with a ladle at the line for fast self-serve."
+  ],
+  "cleanupNotes": [
+    "Wipe waffle iron plates while warm with a damp cloth—never submerge electric units.",
+    "Rinse mixing bowls before batter dries and hardens on the whisk."
+  ],
+  "leftovers": [
+    "Toast leftover waffles at 350°F for 6 minutes directly on the rack to re-crisp.",
+    "Use stale waffles as bread in a Monte Cristo-style sandwich bake with ham and cheese."
+  ],
+  "heroImage": "/images/breakfast/belgian-waffle-platter.jpg",
+  "thumbImage": "/images/thumbs/breakfast/belgian-waffle-platter.jpg",
+  "imageAlt": "Belgian waffle platter with maple syrup, whipped butter, and fresh berries",
+  "publishedAt": "2026-05-30T21:22:29.757Z",
+  "updatedAt": "2026-05-31T12:54:36.749Z",
+  "readMinutes": 7,
+  "seoTitle": "Belgian Waffle Platter | Firehall Breakfast",
+  "mobileImage": "/images/mobile/breakfast/belgian-waffle-platter.jpg",
+  "railImage": "/images/rails/breakfast/belgian-waffle-platter.jpg",
+  "proTips": [
+    "Run two irons in parallel if available so eight waffles finish within 15 minutes.",
+    "Hold waffles on a rack in a 200°F oven—stacking steams away the crisp crust.",
+    "Warm syrup in a small pot on low with a ladle at the line for fast self-serve."
+  ],
+  "tonightSpread": [
+    "Plate Belgian Waffle Platter with sides in separate pans so the crew can mix portions.",
+    "Keep hot items on one side of the table and cold on the other — eggs stay hot, fruit stays cold.",
+    "Line up Belgian Waffle Platter on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+  ],
+  "equipment": [
+    "Large sheet trays",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "mealPrepNotes": "Prep mise en place before the shift — Belgian Waffle Platter runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
+}

@@ -31,50 +31,38 @@ export const BREAKFAST_CANONICAL_UNIQUE_SLUGS = new Set([
   "chorizo-breakfast-burritos",
   "bacon-hash-burritos",
   "veggie-egg-burritos",
+  /** Batch-25 trusted classics — unique generated heroes only. */
+  "huevos-rancheros-crew",
+  "eggs-benedict-hall-style",
+  "corned-beef-hash-breakfast",
+  "chicken-and-waffles-crew",
+  "chilaquiles-verde-bake",
+  "shrimp-and-grits-breakfast",
+  "country-fried-steak-eggs",
+  "green-chile-breakfast-burritos",
+  "migas-for-the-crew",
+  "breakfast-fried-rice-crew",
+  "belgian-waffle-platter",
+  "farmers-breakfast-casserole",
+  "tater-tot-breakfast-casserole",
+  "smoked-salmon-benedit",
+  "bagel-lox-breakfast-board",
+  "irish-breakfast-fry-up",
+  "sheet-pan-full-english",
+  "german-potato-breakfast-skillet",
+  "breakfast-stromboli-roll",
+  "scrapple-and-eggs-skillet",
+  "club-sandwich-breakfast-bake",
+  "johnnycakes-with-syrup",
+  "overnight-sausage-strata",
+  "biscuit-french-toast-sliders",
+  "lumberjack-breakfast-platter",
 ]);
 
-/** Slugs that need donor copy — target slug → accurate donor slug. */
+/** Temporary slug → donor slug. Empty — use slug-locked heroes only. */
 export const BREAKFAST_IMAGE_DONOR_PLAN: Record<string, string> = {
-  // Hash family — shared accurate cast-iron hash (duplicates OK)
-  "bbq-breakfast-hash": "bacon-egg-hash-skillet",
-  "steakhouse-hash-skillet": "bacon-egg-hash-skillet",
-  "sheet-pan-breakfast-hash": "chorizo-breakfast-hash",
-  "ham-pepper-skillet": "cast-iron-breakfast-skillet",
-  "bacon-egg-hash": "bacon-egg-hash-skillet",
-
-  // Oats — golden oatmeal casserole hero
-  "apple-cinnamon-baked-oatmeal": "broccoli-oatmeal-breakfast-casserole",
-  "big-pot-savory-oats": "broccoli-oatmeal-breakfast-casserole",
-
-  // French toast / baked breakfast
-  "crew-french-toast-bake": "overnight-french-toast-bake",
-  "french-toast-casserole": "overnight-french-toast-bake",
-
-  // Burrito / wrap family
-  "breakfast-burrito-bar": "breakfast-crunchwraps",
-  "hall-breakfast-burritos": "breakfast-crunchwraps",
-  "turkey-sausage-burritos": "chorizo-breakfast-burritos",
-
-  // Egg bakes / casseroles
-  "denver-breakfast-casserole": "ham-cheddar-egg-bake",
-  "turkey-sausage-egg-bake": "southwest-egg-bake",
-
-  // Handheld / sandwich / taco
-  "breakfast-sandwich-trays": "sheet-pan-breakfast-sandwiches",
-  "sausage-egg-cheese-sandwiches": "sheet-pan-breakfast-sandwiches",
-  "chorizo-breakfast-tacos": "quick-egg-tacos",
-
-  // Pancakes
-  "buttermilk-pancakes": "maple-sausage-pinwheels",
-  "protein-pancake-tray": "maple-sausage-pinwheels",
-  "pancake-short-stack": "maple-sausage-pinwheels",
-
-  // Biscuits & gravy — bread-based breakfast until AI regen (better than pizza)
-  "hall-sausage-biscuits-gravy": "monte-cristo-sandwiches",
-  "biscuits-gravy": "monte-cristo-sandwiches",
-
-  // Skillet (non-hash)
-  "red-lead-skillet": "cowboy-breakfast-skillet",
+  // Re-add only when slug hero is missing on disk. Example:
+  // "some-slug": "accurate-donor-slug",
 };
 
 export const GOLDEN_100_BREAKFAST_SLUGS = new Set([

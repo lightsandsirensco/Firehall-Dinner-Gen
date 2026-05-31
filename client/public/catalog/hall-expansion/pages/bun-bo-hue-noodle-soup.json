@@ -1,0 +1,235 @@
+{
+  "slug": "bun-bo-hue-noodle-soup",
+  "title": "Bun Bo Hue Noodle Soup",
+  "displayTitle": "Bun Bo Hue Noodle Soup",
+  "seoTitle": "Bun Bo Hue Noodle Soup | Firefighter Meal",
+  "shortDescription": "Spicy lemongrass beef and pork noodle soup for ten",
+  "subtitle": "Spicy lemongrass beef and pork noodle soup for ten",
+  "category": "hall_expansion",
+  "cuisine": "vietnamese",
+  "description": "Beef shank and pork hock simmer with lemongrass, chili, and shrimp paste into a fiery aromatic broth. Serve over round rice noodles with thin beef, blood cake if available, herbs, and lime.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 180,
+  "prepTime": 40,
+  "difficulty": "hard",
+  "calories": 520,
+  "protein": 40,
+  "carbs": 50,
+  "fats": 16,
+  "tags": [
+    "protein:beef",
+    "format:bowl",
+    "category:crew_feeders",
+    "hall_expansion",
+    "crew_feeders",
+    "vietnamese",
+    "beef",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Large stockpot",
+    "Strainer",
+    "Sharp knife",
+    "Bowls",
+    "Ladle"
+  ],
+  "ingredients": [
+    {
+      "name": "beef shank",
+      "quantity": "3",
+      "unit": "lb",
+      "group": "Broth"
+    },
+    {
+      "name": "pork hock",
+      "quantity": "2",
+      "unit": "lb",
+      "group": "Broth"
+    },
+    {
+      "name": "lemongrass stalks",
+      "quantity": "6",
+      "unit": "stalks",
+      "notes": "smashed",
+      "group": "Broth"
+    },
+    {
+      "name": "shrimp paste",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Broth"
+    },
+    {
+      "name": "chili oil",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Broth"
+    },
+    {
+      "name": "beef eye round",
+      "quantity": "1.5",
+      "unit": "lb",
+      "notes": "sliced paper-thin",
+      "group": "Protein"
+    },
+    {
+      "name": "round rice noodles",
+      "quantity": "2",
+      "unit": "lb",
+      "group": "Noodles"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "halved and charred",
+      "group": "Broth"
+    },
+    {
+      "name": "fish sauce",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Thai basil",
+      "quantity": "2",
+      "unit": "cups",
+      "notes": "leaves",
+      "group": "Herbs"
+    },
+    {
+      "name": "mint",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "leaves",
+      "group": "Herbs"
+    },
+    {
+      "name": "lime",
+      "quantity": "4",
+      "unit": "whole",
+      "notes": "cut into wedges",
+      "group": "Finish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Bun Bo Hue Noodle Soup in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch beef. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Start the broth",
+      "instruction": "Cover beef shank and pork hock with water. Add lemongrass, charred onion, and shrimp paste. Simmer 2.5–3 hours, skimming often. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 165,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Season boldly",
+      "instruction": "Remove solids, strain broth if desired. Season with fish sauce and chili oil until broth is spicy, salty, and aromatic. Plan about 15 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Shred braised meat",
+      "instruction": "Pull tender meat from shank and hock, slice or shred, and hold warm. Plan about 15 minutes for this step at crew scale. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Prep noodles and herbs",
+      "instruction": "Cook rice noodles, rinse, and divide into bowls. Plate basil, mint, and limes at the line. Plan about 15 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F for medium beef, 160°F for ground. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Portion and open the line",
+      "instruction": "Portion Bun Bo Hue Noodle Soup onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Build bowls",
+      "instruction": "Top noodles with shredded braised meats and raw beef slices. Ladle boiling broth over to cook raw beef. Serve with herbs and lime.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Freeze beef eye round 30 minutes for easier thin slicing.",
+    "Annatto oil adds classic red color if you have it.",
+    "Warn the hall—this is spicier than most station soups."
+  ],
+  "tonightSpread": [
+    "Bun bo hue with herb plate, lime, and extra chili oil.",
+    "Vietnamese pickles for acid between spicy spoonfuls."
+  ],
+  "leftovers": [
+    "Broth improves next day—skim fat cap before reheating.",
+    "Shredded meats become banh mi filling with pickles and mayo."
+  ],
+  "whyCrewsLikeIt": "Bun bo hue brings real heat and depth—crews who think pho is too mild will respect this bowl. It is soup with attitude, perfect for cold nights when the hall needs something that punches back.",
+  "mealPrepNotes": "Broth takes time but mostly unattended. Skim diligently. Shrimp paste smells strong but transforms the broth—do not skip. Herbs should be washed and piled high before service.",
+  "spiceLevel": "hot",
+  "cleanupDifficulty": "heavy",
+  "nutrition": {
+    "calories": 520,
+    "protein": 40,
+    "carbs": 50,
+    "fats": 16,
+    "label": "~520 cal/serving · 40g protein · 2g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/bun-bo-hue-noodle-soup.jpg",
+  "heroImageAlt": "Bun Bo Hue Noodle Soup — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/bun-bo-hue-noodle-soup.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/bun-bo-hue-noodle-soup.jpg",
+  "railImage": "/images/rails/hall-expansion/bun-bo-hue-noodle-soup.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "bun bo hue noodle soup",
+    "crew feeders"
+  ],
+  "relatedSlugs": [
+    "shawarma-bar-night",
+    "fajita-bar-night",
+    "hall-burger-bar",
+    "pasta-bar-night"
+  ],
+  "generatedAt": "2026-05-31T01:50:00.916Z",
+  "contentVersion": 2
+}

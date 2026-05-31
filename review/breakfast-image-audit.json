@@ -1,862 +1,16 @@
 {
-  "generatedAt": "2026-05-30T20:45:33.047Z",
+  "generatedAt": "2026-05-31T12:17:57.189Z",
   "totals": {
-    "recipesAudited": 49,
-    "passed": 26,
-    "failed": 23,
-    "formatPassed": 49,
-    "duplicateGroups": 14,
-    "canonicalUnique": 26,
+    "recipesAudited": 74,
+    "passed": 74,
+    "failed": 0,
+    "formatPassed": 74,
+    "duplicateGroups": 0,
+    "canonicalUnique": 51,
     "missingHero": 0
   },
-  "duplicateGroups": [
-    {
-      "slugs": [
-        "apple-cinnamon-baked-oatmeal",
-        "big-pot-savory-oats"
-      ],
-      "hash": "2f4ae250e9954acbd94a9e8f81d04490"
-    },
-    {
-      "slugs": [
-        "bacon-egg-hash-skillet",
-        "bbq-breakfast-hash",
-        "steakhouse-hash-skillet",
-        "bacon-egg-hash"
-      ],
-      "hash": "45e160454d84d4dfaa1b0bb7aba7a220"
-    },
-    {
-      "slugs": [
-        "breakfast-crunchwraps",
-        "hall-breakfast-burritos",
-        "breakfast-burrito-bar"
-      ],
-      "hash": "668d840bfee5792b48e2d8839c434bed"
-    },
-    {
-      "slugs": [
-        "breakfast-sandwich-trays",
-        "sausage-egg-cheese-sandwiches",
-        "sheet-pan-breakfast-sandwiches"
-      ],
-      "hash": "12cb71f0a3aaf23e040083a81a06bdbd"
-    },
-    {
-      "slugs": [
-        "buttermilk-pancakes",
-        "maple-sausage-pinwheels",
-        "protein-pancake-tray",
-        "pancake-short-stack"
-      ],
-      "hash": "37edb1fb04743d5574098e6756b8e082"
-    },
-    {
-      "slugs": [
-        "cast-iron-breakfast-skillet",
-        "ham-pepper-skillet"
-      ],
-      "hash": "67ea7cf0b01653d3d8132fa4ab1412ff"
-    },
-    {
-      "slugs": [
-        "chorizo-breakfast-burritos",
-        "turkey-sausage-burritos"
-      ],
-      "hash": "54b37a3e11daed991a415ed8b26f7be1"
-    },
-    {
-      "slugs": [
-        "chorizo-breakfast-hash",
-        "sheet-pan-breakfast-hash"
-      ],
-      "hash": "8d65d578203df540b240d2e901466270"
-    },
-    {
-      "slugs": [
-        "cowboy-breakfast-skillet",
-        "red-lead-skillet"
-      ],
-      "hash": "5b2fe9fd56e9feea30beb6920e0c8bca"
-    },
-    {
-      "slugs": [
-        "crew-french-toast-bake",
-        "overnight-french-toast-bake",
-        "french-toast-casserole"
-      ],
-      "hash": "bad24e39a44028a803f761529c8ba808"
-    },
-    {
-      "slugs": [
-        "denver-breakfast-casserole",
-        "ham-cheddar-egg-bake"
-      ],
-      "hash": "e3c651f0fad3df99911f94c982632af4"
-    },
-    {
-      "slugs": [
-        "hall-sausage-biscuits-gravy",
-        "monte-cristo-sandwiches",
-        "biscuits-gravy"
-      ],
-      "hash": "808f25656f7380c72131958d8f63a545"
-    },
-    {
-      "slugs": [
-        "quick-egg-tacos",
-        "chorizo-breakfast-tacos"
-      ],
-      "hash": "dd590ef976a9cc32180d39ab2f8ee048"
-    },
-    {
-      "slugs": [
-        "southwest-egg-bake",
-        "turkey-sausage-egg-bake"
-      ],
-      "hash": "0516db35e9217d4a056edd415be2b277"
-    }
-  ],
-  "failedRecipes": [
-    {
-      "slug": "apple-cinnamon-baked-oatmeal",
-      "title": "Apple Cinnamon Baked Oatmeal",
-      "source": "breakfast_catalog",
-      "route": "/breakfast/apple-cinnamon-baked-oatmeal",
-      "formatKinds": [
-        "oats"
-      ],
-      "heroImage": "/images/breakfast/apple-cinnamon-baked-oatmeal.jpg",
-      "thumbImage": "/images/thumbs/breakfast/apple-cinnamon-baked-oatmeal.jpg",
-      "mobileImage": "/images/mobile/breakfast/apple-cinnamon-baked-oatmeal.jpg",
-      "railImage": "/images/rails/breakfast/apple-cinnamon-baked-oatmeal.jpg",
-      "duplicatePeers": [
-        "big-pot-savory-oats"
-      ],
-      "recommendedDonor": "broccoli-oatmeal-breakfast-casserole",
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with big-pot-savory-oats",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): big-pot-savory-oats",
-          "confidence": 85
-        }
-      ]
-    },
-    {
-      "slug": "bbq-breakfast-hash",
-      "title": "BBQ Breakfast Hash",
-      "source": "breakfast_catalog",
-      "route": "/breakfast/bbq-breakfast-hash",
-      "formatKinds": [
-        "hash"
-      ],
-      "heroImage": "/images/breakfast/bbq-breakfast-hash.jpg",
-      "thumbImage": "/images/thumbs/breakfast/bbq-breakfast-hash.jpg",
-      "mobileImage": "/images/mobile/breakfast/bbq-breakfast-hash.jpg",
-      "railImage": "/images/rails/breakfast/bbq-breakfast-hash.jpg",
-      "duplicatePeers": [
-        "bacon-egg-hash-skillet",
-        "steakhouse-hash-skillet",
-        "bacon-egg-hash"
-      ],
-      "recommendedDonor": "bacon-egg-hash-skillet",
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with bacon-egg-hash-skillet, steakhouse-hash-skillet, bacon-egg-hash",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): bacon-egg-hash-skillet, steakhouse-hash-skillet, bacon-egg-hash",
-          "confidence": 85
-        }
-      ]
-    },
-    {
-      "slug": "big-pot-savory-oats",
-      "title": "Big-Pot Savory Oats",
-      "source": "breakfast_catalog",
-      "route": "/breakfast/big-pot-savory-oats",
-      "formatKinds": [
-        "oats"
-      ],
-      "heroImage": "/images/breakfast/big-pot-savory-oats.jpg",
-      "thumbImage": "/images/thumbs/breakfast/big-pot-savory-oats.jpg",
-      "mobileImage": "/images/mobile/breakfast/big-pot-savory-oats.jpg",
-      "railImage": "/images/rails/breakfast/big-pot-savory-oats.jpg",
-      "duplicatePeers": [
-        "apple-cinnamon-baked-oatmeal"
-      ],
-      "recommendedDonor": "broccoli-oatmeal-breakfast-casserole",
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with apple-cinnamon-baked-oatmeal",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): apple-cinnamon-baked-oatmeal",
-          "confidence": 85
-        }
-      ]
-    },
-    {
-      "slug": "breakfast-sandwich-trays",
-      "title": "Breakfast Sandwich Trays",
-      "source": "breakfast_catalog",
-      "route": "/breakfast/breakfast-sandwich-trays",
-      "formatKinds": [
-        "sandwich"
-      ],
-      "heroImage": "/images/breakfast/breakfast-sandwich-trays.jpg",
-      "thumbImage": "/images/thumbs/breakfast/breakfast-sandwich-trays.jpg",
-      "mobileImage": "/images/mobile/breakfast/breakfast-sandwich-trays.jpg",
-      "railImage": "/images/rails/breakfast/breakfast-sandwich-trays.jpg",
-      "duplicatePeers": [
-        "sausage-egg-cheese-sandwiches",
-        "sheet-pan-breakfast-sandwiches"
-      ],
-      "recommendedDonor": "sheet-pan-breakfast-sandwiches",
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with sausage-egg-cheese-sandwiches, sheet-pan-breakfast-sandwiches",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): sausage-egg-cheese-sandwiches, sheet-pan-breakfast-sandwiches",
-          "confidence": 85
-        }
-      ]
-    },
-    {
-      "slug": "buttermilk-pancakes",
-      "title": "Buttermilk Pancakes for the Crew",
-      "source": "breakfast_catalog",
-      "route": "/breakfast/buttermilk-pancakes",
-      "formatKinds": [
-        "other"
-      ],
-      "heroImage": "/images/breakfast/buttermilk-pancakes.jpg",
-      "thumbImage": "/images/thumbs/breakfast/buttermilk-pancakes.jpg",
-      "mobileImage": "/images/mobile/breakfast/buttermilk-pancakes.jpg",
-      "railImage": "/images/rails/breakfast/buttermilk-pancakes.jpg",
-      "duplicatePeers": [
-        "maple-sausage-pinwheels",
-        "protein-pancake-tray",
-        "pancake-short-stack"
-      ],
-      "recommendedDonor": "maple-sausage-pinwheels",
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with maple-sausage-pinwheels, protein-pancake-tray, pancake-short-stack",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): maple-sausage-pinwheels, protein-pancake-tray, pancake-short-stack",
-          "confidence": 85
-        }
-      ]
-    },
-    {
-      "slug": "crew-french-toast-bake",
-      "title": "Crew French Toast Bake",
-      "source": "breakfast_catalog",
-      "route": "/breakfast/crew-french-toast-bake",
-      "formatKinds": [
-        "casserole",
-        "french_toast"
-      ],
-      "heroImage": "/images/breakfast/crew-french-toast-bake.jpg",
-      "thumbImage": "/images/thumbs/breakfast/crew-french-toast-bake.jpg",
-      "mobileImage": "/images/mobile/breakfast/crew-french-toast-bake.jpg",
-      "railImage": "/images/rails/breakfast/crew-french-toast-bake.jpg",
-      "duplicatePeers": [
-        "overnight-french-toast-bake",
-        "french-toast-casserole"
-      ],
-      "recommendedDonor": "overnight-french-toast-bake",
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with overnight-french-toast-bake, french-toast-casserole",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): overnight-french-toast-bake, french-toast-casserole",
-          "confidence": 85
-        }
-      ]
-    },
-    {
-      "slug": "denver-breakfast-casserole",
-      "title": "Denver Breakfast Casserole",
-      "source": "breakfast_catalog",
-      "route": "/breakfast/denver-breakfast-casserole",
-      "formatKinds": [
-        "casserole"
-      ],
-      "heroImage": "/images/breakfast/denver-breakfast-casserole.jpg",
-      "thumbImage": "/images/thumbs/breakfast/denver-breakfast-casserole.jpg",
-      "mobileImage": "/images/mobile/breakfast/denver-breakfast-casserole.jpg",
-      "railImage": "/images/rails/breakfast/denver-breakfast-casserole.jpg",
-      "duplicatePeers": [
-        "ham-cheddar-egg-bake"
-      ],
-      "recommendedDonor": "ham-cheddar-egg-bake",
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with ham-cheddar-egg-bake",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): ham-cheddar-egg-bake",
-          "confidence": 85
-        }
-      ]
-    },
-    {
-      "slug": "hall-breakfast-burritos",
-      "title": "Hall Breakfast Burritos",
-      "source": "breakfast_catalog",
-      "route": "/breakfast/hall-breakfast-burritos",
-      "formatKinds": [
-        "other"
-      ],
-      "heroImage": "/images/breakfast/hall-breakfast-burritos.jpg",
-      "thumbImage": "/images/thumbs/breakfast/hall-breakfast-burritos.jpg",
-      "mobileImage": "/images/mobile/breakfast/hall-breakfast-burritos.jpg",
-      "railImage": "/images/rails/breakfast/hall-breakfast-burritos.jpg",
-      "duplicatePeers": [
-        "breakfast-crunchwraps",
-        "breakfast-burrito-bar"
-      ],
-      "recommendedDonor": "breakfast-crunchwraps",
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with breakfast-crunchwraps, breakfast-burrito-bar",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): breakfast-crunchwraps, breakfast-burrito-bar",
-          "confidence": 85
-        }
-      ]
-    },
-    {
-      "slug": "hall-sausage-biscuits-gravy",
-      "title": "Hall Sausage Biscuits & Gravy",
-      "source": "breakfast_catalog",
-      "route": "/breakfast/hall-sausage-biscuits-gravy",
-      "formatKinds": [
-        "other"
-      ],
-      "heroImage": "/images/breakfast/hall-sausage-biscuits-gravy.jpg",
-      "thumbImage": "/images/thumbs/breakfast/hall-sausage-biscuits-gravy.jpg",
-      "mobileImage": "/images/mobile/breakfast/hall-sausage-biscuits-gravy.jpg",
-      "railImage": "/images/rails/breakfast/hall-sausage-biscuits-gravy.jpg",
-      "duplicatePeers": [
-        "monte-cristo-sandwiches",
-        "biscuits-gravy"
-      ],
-      "recommendedDonor": "monte-cristo-sandwiches",
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with monte-cristo-sandwiches, biscuits-gravy",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): monte-cristo-sandwiches, biscuits-gravy",
-          "confidence": 85
-        }
-      ]
-    },
-    {
-      "slug": "ham-pepper-skillet",
-      "title": "Ham & Pepper Breakfast Skillet",
-      "source": "breakfast_catalog",
-      "route": "/breakfast/ham-pepper-skillet",
-      "formatKinds": [
-        "skillet"
-      ],
-      "heroImage": "/images/breakfast/ham-pepper-skillet.jpg",
-      "thumbImage": "/images/thumbs/breakfast/ham-pepper-skillet.jpg",
-      "mobileImage": "/images/mobile/breakfast/ham-pepper-skillet.jpg",
-      "railImage": "/images/rails/breakfast/ham-pepper-skillet.jpg",
-      "duplicatePeers": [
-        "cast-iron-breakfast-skillet"
-      ],
-      "recommendedDonor": "cast-iron-breakfast-skillet",
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with cast-iron-breakfast-skillet",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): cast-iron-breakfast-skillet",
-          "confidence": 85
-        }
-      ]
-    },
-    {
-      "slug": "protein-pancake-tray",
-      "title": "Protein Pancake Tray",
-      "source": "breakfast_catalog",
-      "route": "/breakfast/protein-pancake-tray",
-      "formatKinds": [
-        "pancake"
-      ],
-      "heroImage": "/images/breakfast/protein-pancake-tray.jpg",
-      "thumbImage": "/images/thumbs/breakfast/protein-pancake-tray.jpg",
-      "mobileImage": "/images/mobile/breakfast/protein-pancake-tray.jpg",
-      "railImage": "/images/rails/breakfast/protein-pancake-tray.jpg",
-      "duplicatePeers": [
-        "buttermilk-pancakes",
-        "maple-sausage-pinwheels",
-        "pancake-short-stack"
-      ],
-      "recommendedDonor": "maple-sausage-pinwheels",
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with buttermilk-pancakes, maple-sausage-pinwheels, pancake-short-stack",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): buttermilk-pancakes, maple-sausage-pinwheels, pancake-short-stack",
-          "confidence": 85
-        }
-      ]
-    },
-    {
-      "slug": "red-lead-skillet",
-      "title": "Red Lead Skillet",
-      "source": "breakfast_catalog",
-      "route": "/breakfast/red-lead-skillet",
-      "formatKinds": [
-        "skillet",
-        "red_lead"
-      ],
-      "heroImage": "/images/breakfast/red-lead-skillet.jpg",
-      "thumbImage": "/images/thumbs/breakfast/red-lead-skillet.jpg",
-      "mobileImage": "/images/mobile/breakfast/red-lead-skillet.jpg",
-      "railImage": "/images/rails/breakfast/red-lead-skillet.jpg",
-      "duplicatePeers": [
-        "cowboy-breakfast-skillet"
-      ],
-      "recommendedDonor": "cowboy-breakfast-skillet",
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with cowboy-breakfast-skillet",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): cowboy-breakfast-skillet",
-          "confidence": 85
-        }
-      ]
-    },
-    {
-      "slug": "sausage-egg-cheese-sandwiches",
-      "title": "Sausage Egg & Cheese Sandwiches",
-      "source": "breakfast_catalog",
-      "route": "/breakfast/sausage-egg-cheese-sandwiches",
-      "formatKinds": [
-        "other"
-      ],
-      "heroImage": "/images/breakfast/sausage-egg-cheese-sandwiches.jpg",
-      "thumbImage": "/images/thumbs/breakfast/sausage-egg-cheese-sandwiches.jpg",
-      "mobileImage": "/images/mobile/breakfast/sausage-egg-cheese-sandwiches.jpg",
-      "railImage": "/images/rails/breakfast/sausage-egg-cheese-sandwiches.jpg",
-      "duplicatePeers": [
-        "breakfast-sandwich-trays",
-        "sheet-pan-breakfast-sandwiches"
-      ],
-      "recommendedDonor": "sheet-pan-breakfast-sandwiches",
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with breakfast-sandwich-trays, sheet-pan-breakfast-sandwiches",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): breakfast-sandwich-trays, sheet-pan-breakfast-sandwiches",
-          "confidence": 85
-        }
-      ]
-    },
-    {
-      "slug": "sheet-pan-breakfast-hash",
-      "title": "Sheet Pan Breakfast Hash",
-      "source": "breakfast_catalog",
-      "route": "/breakfast/sheet-pan-breakfast-hash",
-      "formatKinds": [
-        "hash"
-      ],
-      "heroImage": "/images/breakfast/sheet-pan-breakfast-hash.jpg",
-      "thumbImage": "/images/thumbs/breakfast/sheet-pan-breakfast-hash.jpg",
-      "mobileImage": "/images/mobile/breakfast/sheet-pan-breakfast-hash.jpg",
-      "railImage": "/images/rails/breakfast/sheet-pan-breakfast-hash.jpg",
-      "duplicatePeers": [
-        "chorizo-breakfast-hash"
-      ],
-      "recommendedDonor": "chorizo-breakfast-hash",
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with chorizo-breakfast-hash",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): chorizo-breakfast-hash",
-          "confidence": 85
-        }
-      ]
-    },
-    {
-      "slug": "steakhouse-hash-skillet",
-      "title": "Steakhouse Hash Skillet",
-      "source": "breakfast_catalog",
-      "route": "/breakfast/steakhouse-hash-skillet",
-      "formatKinds": [
-        "hash",
-        "skillet"
-      ],
-      "heroImage": "/images/breakfast/steakhouse-hash-skillet.jpg",
-      "thumbImage": "/images/thumbs/breakfast/steakhouse-hash-skillet.jpg",
-      "mobileImage": "/images/mobile/breakfast/steakhouse-hash-skillet.jpg",
-      "railImage": "/images/rails/breakfast/steakhouse-hash-skillet.jpg",
-      "duplicatePeers": [
-        "bacon-egg-hash-skillet",
-        "bbq-breakfast-hash",
-        "bacon-egg-hash"
-      ],
-      "recommendedDonor": "bacon-egg-hash-skillet",
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with bacon-egg-hash-skillet, bbq-breakfast-hash, bacon-egg-hash",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): bacon-egg-hash-skillet, bbq-breakfast-hash, bacon-egg-hash",
-          "confidence": 85
-        }
-      ]
-    },
-    {
-      "slug": "turkey-sausage-burritos",
-      "title": "Turkey Sausage Breakfast Burritos",
-      "source": "breakfast_catalog",
-      "route": "/breakfast/turkey-sausage-burritos",
-      "formatKinds": [
-        "other"
-      ],
-      "heroImage": "/images/breakfast/turkey-sausage-burritos.jpg",
-      "thumbImage": "/images/thumbs/breakfast/turkey-sausage-burritos.jpg",
-      "mobileImage": "/images/mobile/breakfast/turkey-sausage-burritos.jpg",
-      "railImage": "/images/rails/breakfast/turkey-sausage-burritos.jpg",
-      "duplicatePeers": [
-        "chorizo-breakfast-burritos"
-      ],
-      "recommendedDonor": "chorizo-breakfast-burritos",
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with chorizo-breakfast-burritos",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): chorizo-breakfast-burritos",
-          "confidence": 85
-        }
-      ]
-    },
-    {
-      "slug": "turkey-sausage-egg-bake",
-      "title": "Turkey Sausage Egg Bake",
-      "source": "breakfast_catalog",
-      "route": "/breakfast/turkey-sausage-egg-bake",
-      "formatKinds": [
-        "casserole"
-      ],
-      "heroImage": "/images/breakfast/turkey-sausage-egg-bake.jpg",
-      "thumbImage": "/images/thumbs/breakfast/turkey-sausage-egg-bake.jpg",
-      "mobileImage": "/images/mobile/breakfast/turkey-sausage-egg-bake.jpg",
-      "railImage": "/images/rails/breakfast/turkey-sausage-egg-bake.jpg",
-      "duplicatePeers": [
-        "southwest-egg-bake"
-      ],
-      "recommendedDonor": "southwest-egg-bake",
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with southwest-egg-bake",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): southwest-egg-bake",
-          "confidence": 85
-        }
-      ]
-    },
-    {
-      "slug": "breakfast-burrito-bar",
-      "title": "Breakfast Burrito Bar",
-      "source": "golden_100",
-      "route": "/recipes/breakfast-burrito-bar",
-      "formatKinds": [
-        "burrito"
-      ],
-      "heroImage": "/images/golden-100/breakfast-burrito-bar.jpg",
-      "thumbImage": "/images/thumbs/breakfast-burrito-bar.jpg",
-      "mobileImage": "/images/mobile/breakfast-burrito-bar.jpg",
-      "railImage": "/images/rails/breakfast-burrito-bar.jpg",
-      "duplicatePeers": [
-        "breakfast-crunchwraps",
-        "hall-breakfast-burritos"
-      ],
-      "recommendedDonor": "breakfast-crunchwraps",
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with breakfast-crunchwraps, hall-breakfast-burritos",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): breakfast-crunchwraps, hall-breakfast-burritos",
-          "confidence": 85
-        }
-      ]
-    },
-    {
-      "slug": "pancake-short-stack",
-      "title": "Pancake Short Stack for the Crew",
-      "source": "golden_100",
-      "route": "/recipes/pancake-short-stack",
-      "formatKinds": [
-        "pancake"
-      ],
-      "heroImage": "/images/golden-100/pancake-short-stack.jpg",
-      "thumbImage": "/images/thumbs/pancake-short-stack.jpg",
-      "mobileImage": "/images/mobile/pancake-short-stack.jpg",
-      "railImage": "/images/rails/pancake-short-stack.jpg",
-      "duplicatePeers": [
-        "buttermilk-pancakes",
-        "maple-sausage-pinwheels",
-        "protein-pancake-tray"
-      ],
-      "recommendedDonor": "maple-sausage-pinwheels",
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with buttermilk-pancakes, maple-sausage-pinwheels, protein-pancake-tray",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): buttermilk-pancakes, maple-sausage-pinwheels, protein-pancake-tray",
-          "confidence": 85
-        }
-      ]
-    },
-    {
-      "slug": "bacon-egg-hash",
-      "title": "Bacon Egg Hash Brown Skillet",
-      "source": "golden_100",
-      "route": "/recipes/bacon-egg-hash",
-      "formatKinds": [
-        "hash",
-        "skillet"
-      ],
-      "heroImage": "/images/golden-100/bacon-egg-hash.jpg",
-      "thumbImage": "/images/thumbs/bacon-egg-hash.jpg",
-      "mobileImage": "/images/mobile/bacon-egg-hash.jpg",
-      "railImage": "/images/rails/bacon-egg-hash.jpg",
-      "duplicatePeers": [
-        "bacon-egg-hash-skillet",
-        "bbq-breakfast-hash",
-        "steakhouse-hash-skillet"
-      ],
-      "recommendedDonor": "bacon-egg-hash-skillet",
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with bacon-egg-hash-skillet, bbq-breakfast-hash, steakhouse-hash-skillet",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): bacon-egg-hash-skillet, bbq-breakfast-hash, steakhouse-hash-skillet",
-          "confidence": 85
-        }
-      ]
-    },
-    {
-      "slug": "french-toast-casserole",
-      "title": "French Toast Casserole",
-      "source": "golden_100",
-      "route": "/recipes/french-toast-casserole",
-      "formatKinds": [
-        "casserole",
-        "french_toast"
-      ],
-      "heroImage": "/images/golden-100/french-toast-casserole.jpg",
-      "thumbImage": "/images/thumbs/french-toast-casserole.jpg",
-      "mobileImage": "/images/mobile/french-toast-casserole.jpg",
-      "railImage": "/images/rails/french-toast-casserole.jpg",
-      "duplicatePeers": [
-        "crew-french-toast-bake",
-        "overnight-french-toast-bake"
-      ],
-      "recommendedDonor": "overnight-french-toast-bake",
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with crew-french-toast-bake, overnight-french-toast-bake",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): crew-french-toast-bake, overnight-french-toast-bake",
-          "confidence": 85
-        }
-      ]
-    },
-    {
-      "slug": "chorizo-breakfast-tacos",
-      "title": "Chorizo Breakfast Tacos",
-      "source": "golden_100",
-      "route": "/recipes/chorizo-breakfast-tacos",
-      "formatKinds": [
-        "other"
-      ],
-      "heroImage": "/images/golden-100/chorizo-breakfast-tacos.jpg",
-      "thumbImage": "/images/thumbs/chorizo-breakfast-tacos.jpg",
-      "mobileImage": "/images/mobile/chorizo-breakfast-tacos.jpg",
-      "railImage": "/images/rails/chorizo-breakfast-tacos.jpg",
-      "duplicatePeers": [
-        "quick-egg-tacos"
-      ],
-      "recommendedDonor": "quick-egg-tacos",
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with quick-egg-tacos",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): quick-egg-tacos",
-          "confidence": 85
-        }
-      ]
-    },
-    {
-      "slug": "biscuits-gravy",
-      "title": "Biscuits and Gravy",
-      "source": "golden_100",
-      "route": "/recipes/biscuits-gravy",
-      "formatKinds": [
-        "other"
-      ],
-      "heroImage": "/images/golden-100/biscuits-gravy.jpg",
-      "thumbImage": "/images/thumbs/biscuits-gravy.jpg",
-      "mobileImage": "/images/mobile/biscuits-gravy.jpg",
-      "railImage": "/images/rails/biscuits-gravy.jpg",
-      "duplicatePeers": [
-        "hall-sausage-biscuits-gravy",
-        "monte-cristo-sandwiches"
-      ],
-      "recommendedDonor": "monte-cristo-sandwiches",
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with hall-sausage-biscuits-gravy, monte-cristo-sandwiches",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): hall-sausage-biscuits-gravy, monte-cristo-sandwiches",
-          "confidence": 85
-        }
-      ]
-    }
-  ],
+  "duplicateGroups": [],
+  "failedRecipes": [],
   "recipes": [
     {
       "slug": "apple-cinnamon-baked-oatmeal",
@@ -877,15 +31,12 @@
       "formatKinds": [
         "oats"
       ],
-      "heroMd5": "2f4ae250e9954acbd94a9e8f81d04490",
+      "heroMd5": "f76b791e5e26625db44c353837b08fdb",
       "duplicateGroup": [
-        "apple-cinnamon-baked-oatmeal",
-        "big-pot-savory-oats"
+        "apple-cinnamon-baked-oatmeal"
       ],
-      "duplicatePeers": [
-        "big-pot-savory-oats"
-      ],
-      "recommendedDonor": "broccoli-oatmeal-breakfast-casserole",
+      "duplicatePeers": [],
+      "recommendedDonor": null,
       "onDisk": {
         "hero": true,
         "thumb": true,
@@ -893,21 +44,8 @@
         "rail": true
       },
       "variantMismatch": false,
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with big-pot-savory-oats",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): big-pot-savory-oats",
-          "confidence": 85
-        }
-      ],
-      "pass": false
+      "issues": [],
+      "pass": true
     },
     {
       "slug": "bacon-egg-hash-skillet",
@@ -928,18 +66,11 @@
         "hash",
         "skillet"
       ],
-      "heroMd5": "45e160454d84d4dfaa1b0bb7aba7a220",
+      "heroMd5": "381d883a3494c1a6e8551677e300f12e",
       "duplicateGroup": [
-        "bacon-egg-hash-skillet",
-        "bbq-breakfast-hash",
-        "steakhouse-hash-skillet",
-        "bacon-egg-hash"
+        "bacon-egg-hash-skillet"
       ],
-      "duplicatePeers": [
-        "bbq-breakfast-hash",
-        "steakhouse-hash-skillet",
-        "bacon-egg-hash"
-      ],
+      "duplicatePeers": [],
       "recommendedDonor": null,
       "onDisk": {
         "hero": true,
@@ -948,20 +79,7 @@
         "rail": true
       },
       "variantMismatch": false,
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with bbq-breakfast-hash, steakhouse-hash-skillet, bacon-egg-hash",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): bbq-breakfast-hash, steakhouse-hash-skillet, bacon-egg-hash",
-          "confidence": 85
-        }
-      ],
+      "issues": [],
       "pass": true
     },
     {
@@ -999,6 +117,41 @@
       "pass": true
     },
     {
+      "slug": "bagel-lox-breakfast-board",
+      "title": "Bagel and Lox Breakfast Board",
+      "route": "/breakfast/bagel-lox-breakfast-board",
+      "source": "breakfast_catalog",
+      "tags": [
+        "bagel",
+        "lox",
+        "smoked-salmon",
+        "deli",
+        "board"
+      ],
+      "heroImage": "/images/breakfast/bagel-lox-breakfast-board.jpg",
+      "thumbImage": "/images/thumbs/breakfast/bagel-lox-breakfast-board.jpg",
+      "mobileImage": "/images/mobile/breakfast/bagel-lox-breakfast-board.jpg",
+      "railImage": "/images/rails/breakfast/bagel-lox-breakfast-board.jpg",
+      "formatKinds": [
+        "other"
+      ],
+      "heroMd5": "d8c2bf5680f8617986f87dee48711ba0",
+      "duplicateGroup": [
+        "bagel-lox-breakfast-board"
+      ],
+      "duplicatePeers": [],
+      "recommendedDonor": null,
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "variantMismatch": false,
+      "issues": [],
+      "pass": true
+    },
+    {
       "slug": "bbq-breakfast-hash",
       "title": "BBQ Breakfast Hash",
       "route": "/breakfast/bbq-breakfast-hash",
@@ -1016,19 +169,12 @@
       "formatKinds": [
         "hash"
       ],
-      "heroMd5": "45e160454d84d4dfaa1b0bb7aba7a220",
+      "heroMd5": "6b0d40b62ea57f87bf91d61abdde9c62",
       "duplicateGroup": [
-        "bacon-egg-hash-skillet",
-        "bbq-breakfast-hash",
-        "steakhouse-hash-skillet",
-        "bacon-egg-hash"
+        "bbq-breakfast-hash"
       ],
-      "duplicatePeers": [
-        "bacon-egg-hash-skillet",
-        "steakhouse-hash-skillet",
-        "bacon-egg-hash"
-      ],
-      "recommendedDonor": "bacon-egg-hash-skillet",
+      "duplicatePeers": [],
+      "recommendedDonor": null,
       "onDisk": {
         "hero": true,
         "thumb": true,
@@ -1036,21 +182,43 @@
         "rail": true
       },
       "variantMismatch": false,
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with bacon-egg-hash-skillet, steakhouse-hash-skillet, bacon-egg-hash",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): bacon-egg-hash-skillet, steakhouse-hash-skillet, bacon-egg-hash",
-          "confidence": 85
-        }
+      "issues": [],
+      "pass": true
+    },
+    {
+      "slug": "belgian-waffle-platter",
+      "title": "Belgian Waffle Platter",
+      "route": "/breakfast/belgian-waffle-platter",
+      "source": "breakfast_catalog",
+      "tags": [
+        "waffles",
+        "belgian",
+        "brunch",
+        "berries",
+        "maple"
       ],
-      "pass": false
+      "heroImage": "/images/breakfast/belgian-waffle-platter.jpg",
+      "thumbImage": "/images/thumbs/breakfast/belgian-waffle-platter.jpg",
+      "mobileImage": "/images/mobile/breakfast/belgian-waffle-platter.jpg",
+      "railImage": "/images/rails/breakfast/belgian-waffle-platter.jpg",
+      "formatKinds": [
+        "waffle"
+      ],
+      "heroMd5": "e249e69460a93a627f579c3058044f11",
+      "duplicateGroup": [
+        "belgian-waffle-platter"
+      ],
+      "duplicatePeers": [],
+      "recommendedDonor": null,
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "variantMismatch": false,
+      "issues": [],
+      "pass": true
     },
     {
       "slug": "big-pot-savory-oats",
@@ -1069,15 +237,12 @@
       "formatKinds": [
         "oats"
       ],
-      "heroMd5": "2f4ae250e9954acbd94a9e8f81d04490",
+      "heroMd5": "bd579f048910cdb23b78dbc50a60b476",
       "duplicateGroup": [
-        "apple-cinnamon-baked-oatmeal",
         "big-pot-savory-oats"
       ],
-      "duplicatePeers": [
-        "apple-cinnamon-baked-oatmeal"
-      ],
-      "recommendedDonor": "broccoli-oatmeal-breakfast-casserole",
+      "duplicatePeers": [],
+      "recommendedDonor": null,
       "onDisk": {
         "hero": true,
         "thumb": true,
@@ -1085,21 +250,44 @@
         "rail": true
       },
       "variantMismatch": false,
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with apple-cinnamon-baked-oatmeal",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): apple-cinnamon-baked-oatmeal",
-          "confidence": 85
-        }
+      "issues": [],
+      "pass": true
+    },
+    {
+      "slug": "biscuit-french-toast-sliders",
+      "title": "Biscuit French Toast Sliders",
+      "route": "/breakfast/biscuit-french-toast-sliders",
+      "source": "breakfast_catalog",
+      "tags": [
+        "french-toast",
+        "biscuits",
+        "sliders",
+        "griddle",
+        "maple"
       ],
-      "pass": false
+      "heroImage": "/images/breakfast/biscuit-french-toast-sliders.jpg",
+      "thumbImage": "/images/thumbs/breakfast/biscuit-french-toast-sliders.jpg",
+      "mobileImage": "/images/mobile/breakfast/biscuit-french-toast-sliders.jpg",
+      "railImage": "/images/rails/breakfast/biscuit-french-toast-sliders.jpg",
+      "formatKinds": [
+        "sandwich",
+        "french_toast"
+      ],
+      "heroMd5": "2286a62f5a98037d2069b4cc9235ba7f",
+      "duplicateGroup": [
+        "biscuit-french-toast-sliders"
+      ],
+      "duplicatePeers": [],
+      "recommendedDonor": null,
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "variantMismatch": false,
+      "issues": [],
+      "pass": true
     },
     {
       "slug": "breakfast-crunchwraps",
@@ -1120,16 +308,11 @@
       "formatKinds": [
         "other"
       ],
-      "heroMd5": "668d840bfee5792b48e2d8839c434bed",
+      "heroMd5": "bb21cd55cf708f2cb73ef74b32b6ce18",
       "duplicateGroup": [
-        "breakfast-crunchwraps",
-        "hall-breakfast-burritos",
-        "breakfast-burrito-bar"
+        "breakfast-crunchwraps"
       ],
-      "duplicatePeers": [
-        "hall-breakfast-burritos",
-        "breakfast-burrito-bar"
-      ],
+      "duplicatePeers": [],
       "recommendedDonor": null,
       "onDisk": {
         "hero": true,
@@ -1138,20 +321,7 @@
         "rail": true
       },
       "variantMismatch": false,
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with hall-breakfast-burritos, breakfast-burrito-bar",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): hall-breakfast-burritos, breakfast-burrito-bar",
-          "confidence": 85
-        }
-      ],
+      "issues": [],
       "pass": true
     },
     {
@@ -1176,6 +346,41 @@
       "heroMd5": "ebc61dcab60d8a740d1e2f20ecbc9dcf",
       "duplicateGroup": [
         "breakfast-enchiladas"
+      ],
+      "duplicatePeers": [],
+      "recommendedDonor": null,
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "variantMismatch": false,
+      "issues": [],
+      "pass": true
+    },
+    {
+      "slug": "breakfast-fried-rice-crew",
+      "title": "Breakfast Fried Rice for the Crew",
+      "route": "/breakfast/breakfast-fried-rice-crew",
+      "source": "breakfast_catalog",
+      "tags": [
+        "fried-rice",
+        "bacon",
+        "eggs",
+        "wok",
+        "asian"
+      ],
+      "heroImage": "/images/breakfast/breakfast-fried-rice-crew.jpg",
+      "thumbImage": "/images/thumbs/breakfast/breakfast-fried-rice-crew.jpg",
+      "mobileImage": "/images/mobile/breakfast/breakfast-fried-rice-crew.jpg",
+      "railImage": "/images/rails/breakfast/breakfast-fried-rice-crew.jpg",
+      "formatKinds": [
+        "other"
+      ],
+      "heroMd5": "ea85689227669c4ee0b8959e01d89766",
+      "duplicateGroup": [
+        "breakfast-fried-rice-crew"
       ],
       "duplicatePeers": [],
       "recommendedDonor": null,
@@ -1312,17 +517,12 @@
       "formatKinds": [
         "sandwich"
       ],
-      "heroMd5": "12cb71f0a3aaf23e040083a81a06bdbd",
+      "heroMd5": "95ecaf9795dc612f0cba43badeeeac7b",
       "duplicateGroup": [
-        "breakfast-sandwich-trays",
-        "sausage-egg-cheese-sandwiches",
-        "sheet-pan-breakfast-sandwiches"
+        "breakfast-sandwich-trays"
       ],
-      "duplicatePeers": [
-        "sausage-egg-cheese-sandwiches",
-        "sheet-pan-breakfast-sandwiches"
-      ],
-      "recommendedDonor": "sheet-pan-breakfast-sandwiches",
+      "duplicatePeers": [],
+      "recommendedDonor": null,
       "onDisk": {
         "hero": true,
         "thumb": true,
@@ -1330,21 +530,8 @@
         "rail": true
       },
       "variantMismatch": false,
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with sausage-egg-cheese-sandwiches, sheet-pan-breakfast-sandwiches",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): sausage-egg-cheese-sandwiches, sheet-pan-breakfast-sandwiches",
-          "confidence": 85
-        }
-      ],
-      "pass": false
+      "issues": [],
+      "pass": true
     },
     {
       "slug": "breakfast-sliders",
@@ -1382,6 +569,41 @@
       "pass": true
     },
     {
+      "slug": "breakfast-stromboli-roll",
+      "title": "Breakfast Stromboli Roll",
+      "route": "/breakfast/breakfast-stromboli-roll",
+      "source": "breakfast_catalog",
+      "tags": [
+        "stromboli",
+        "ham",
+        "eggs",
+        "cheese",
+        "baked"
+      ],
+      "heroImage": "/images/breakfast/breakfast-stromboli-roll.jpg",
+      "thumbImage": "/images/thumbs/breakfast/breakfast-stromboli-roll.jpg",
+      "mobileImage": "/images/mobile/breakfast/breakfast-stromboli-roll.jpg",
+      "railImage": "/images/rails/breakfast/breakfast-stromboli-roll.jpg",
+      "formatKinds": [
+        "other"
+      ],
+      "heroMd5": "17012cc264f6668c13c9760439c2c436",
+      "duplicateGroup": [
+        "breakfast-stromboli-roll"
+      ],
+      "duplicatePeers": [],
+      "recommendedDonor": null,
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "variantMismatch": false,
+      "issues": [],
+      "pass": true
+    },
+    {
       "slug": "buttermilk-pancakes",
       "title": "Buttermilk Pancakes for the Crew",
       "route": "/breakfast/buttermilk-pancakes",
@@ -1398,19 +620,12 @@
       "formatKinds": [
         "other"
       ],
-      "heroMd5": "37edb1fb04743d5574098e6756b8e082",
+      "heroMd5": "e0c99ff4e6c86accfd2bda676f0ed996",
       "duplicateGroup": [
-        "buttermilk-pancakes",
-        "maple-sausage-pinwheels",
-        "protein-pancake-tray",
-        "pancake-short-stack"
+        "buttermilk-pancakes"
       ],
-      "duplicatePeers": [
-        "maple-sausage-pinwheels",
-        "protein-pancake-tray",
-        "pancake-short-stack"
-      ],
-      "recommendedDonor": "maple-sausage-pinwheels",
+      "duplicatePeers": [],
+      "recommendedDonor": null,
       "onDisk": {
         "hero": true,
         "thumb": true,
@@ -1418,21 +633,8 @@
         "rail": true
       },
       "variantMismatch": false,
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with maple-sausage-pinwheels, protein-pancake-tray, pancake-short-stack",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): maple-sausage-pinwheels, protein-pancake-tray, pancake-short-stack",
-          "confidence": 85
-        }
-      ],
-      "pass": false
+      "issues": [],
+      "pass": true
     },
     {
       "slug": "cast-iron-breakfast-skillet",
@@ -1452,14 +654,11 @@
       "formatKinds": [
         "skillet"
       ],
-      "heroMd5": "67ea7cf0b01653d3d8132fa4ab1412ff",
+      "heroMd5": "58e55077964828be718f480c7abdfa09",
       "duplicateGroup": [
-        "cast-iron-breakfast-skillet",
-        "ham-pepper-skillet"
+        "cast-iron-breakfast-skillet"
       ],
-      "duplicatePeers": [
-        "ham-pepper-skillet"
-      ],
+      "duplicatePeers": [],
       "recommendedDonor": null,
       "onDisk": {
         "hero": true,
@@ -1468,20 +667,77 @@
         "rail": true
       },
       "variantMismatch": false,
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with ham-pepper-skillet",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): ham-pepper-skillet",
-          "confidence": 85
-        }
+      "issues": [],
+      "pass": true
+    },
+    {
+      "slug": "chicken-and-waffles-crew",
+      "title": "Chicken and Waffles for the Crew",
+      "route": "/breakfast/chicken-and-waffles-crew",
+      "source": "breakfast_catalog",
+      "tags": [
+        "chicken-and-waffles",
+        "fried-chicken",
+        "waffles",
+        "southern",
+        "brunch"
       ],
+      "heroImage": "/images/breakfast/chicken-and-waffles-crew.jpg",
+      "thumbImage": "/images/thumbs/breakfast/chicken-and-waffles-crew.jpg",
+      "mobileImage": "/images/mobile/breakfast/chicken-and-waffles-crew.jpg",
+      "railImage": "/images/rails/breakfast/chicken-and-waffles-crew.jpg",
+      "formatKinds": [
+        "other"
+      ],
+      "heroMd5": "f41d9b1e272ea2020b02ea13094ed41b",
+      "duplicateGroup": [
+        "chicken-and-waffles-crew"
+      ],
+      "duplicatePeers": [],
+      "recommendedDonor": null,
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "variantMismatch": false,
+      "issues": [],
+      "pass": true
+    },
+    {
+      "slug": "chilaquiles-verde-bake",
+      "title": "Chilaquiles Verde Bake",
+      "route": "/breakfast/chilaquiles-verde-bake",
+      "source": "breakfast_catalog",
+      "tags": [
+        "chilaquiles",
+        "verde",
+        "tomatillo",
+        "eggs",
+        "bake"
+      ],
+      "heroImage": "/images/breakfast/chilaquiles-verde-bake.jpg",
+      "thumbImage": "/images/thumbs/breakfast/chilaquiles-verde-bake.jpg",
+      "mobileImage": "/images/mobile/breakfast/chilaquiles-verde-bake.jpg",
+      "railImage": "/images/rails/breakfast/chilaquiles-verde-bake.jpg",
+      "formatKinds": [
+        "casserole"
+      ],
+      "heroMd5": "17e61b90b1e5761d3e0dc841f13bd1b8",
+      "duplicateGroup": [
+        "chilaquiles-verde-bake"
+      ],
+      "duplicatePeers": [],
+      "recommendedDonor": null,
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "variantMismatch": false,
+      "issues": [],
       "pass": true
     },
     {
@@ -1502,14 +758,11 @@
       "formatKinds": [
         "other"
       ],
-      "heroMd5": "54b37a3e11daed991a415ed8b26f7be1",
+      "heroMd5": "b7dc7d32ca0ad2d8f8517c674a00136b",
       "duplicateGroup": [
-        "chorizo-breakfast-burritos",
-        "turkey-sausage-burritos"
+        "chorizo-breakfast-burritos"
       ],
-      "duplicatePeers": [
-        "turkey-sausage-burritos"
-      ],
+      "duplicatePeers": [],
       "recommendedDonor": null,
       "onDisk": {
         "hero": true,
@@ -1518,20 +771,7 @@
         "rail": true
       },
       "variantMismatch": false,
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with turkey-sausage-burritos",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): turkey-sausage-burritos",
-          "confidence": 85
-        }
-      ],
+      "issues": [],
       "pass": true
     },
     {
@@ -1553,14 +793,11 @@
       "formatKinds": [
         "hash"
       ],
-      "heroMd5": "8d65d578203df540b240d2e901466270",
+      "heroMd5": "63132f21ac6b300a24a9645b74e6c6ef",
       "duplicateGroup": [
-        "chorizo-breakfast-hash",
-        "sheet-pan-breakfast-hash"
+        "chorizo-breakfast-hash"
       ],
-      "duplicatePeers": [
-        "sheet-pan-breakfast-hash"
-      ],
+      "duplicatePeers": [],
       "recommendedDonor": null,
       "onDisk": {
         "hero": true,
@@ -1569,20 +806,113 @@
         "rail": true
       },
       "variantMismatch": false,
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with sheet-pan-breakfast-hash",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): sheet-pan-breakfast-hash",
-          "confidence": 85
-        }
+      "issues": [],
+      "pass": true
+    },
+    {
+      "slug": "club-sandwich-breakfast-bake",
+      "title": "Club Sandwich Breakfast Bake",
+      "route": "/breakfast/club-sandwich-breakfast-bake",
+      "source": "breakfast_catalog",
+      "tags": [
+        "club-sandwich",
+        "strata",
+        "turkey",
+        "bacon",
+        "bake"
       ],
+      "heroImage": "/images/breakfast/club-sandwich-breakfast-bake.jpg",
+      "thumbImage": "/images/thumbs/breakfast/club-sandwich-breakfast-bake.jpg",
+      "mobileImage": "/images/mobile/breakfast/club-sandwich-breakfast-bake.jpg",
+      "railImage": "/images/rails/breakfast/club-sandwich-breakfast-bake.jpg",
+      "formatKinds": [
+        "sandwich",
+        "casserole"
+      ],
+      "heroMd5": "d7a01627c7b2fa32b7bbf5278462cbb3",
+      "duplicateGroup": [
+        "club-sandwich-breakfast-bake"
+      ],
+      "duplicatePeers": [],
+      "recommendedDonor": null,
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "variantMismatch": false,
+      "issues": [],
+      "pass": true
+    },
+    {
+      "slug": "corned-beef-hash-breakfast",
+      "title": "Corned Beef Hash Breakfast",
+      "route": "/breakfast/corned-beef-hash-breakfast",
+      "source": "breakfast_catalog",
+      "tags": [
+        "corned-beef",
+        "hash",
+        "potatoes",
+        "eggs",
+        "diner"
+      ],
+      "heroImage": "/images/breakfast/corned-beef-hash-breakfast.jpg",
+      "thumbImage": "/images/thumbs/breakfast/corned-beef-hash-breakfast.jpg",
+      "mobileImage": "/images/mobile/breakfast/corned-beef-hash-breakfast.jpg",
+      "railImage": "/images/rails/breakfast/corned-beef-hash-breakfast.jpg",
+      "formatKinds": [
+        "hash"
+      ],
+      "heroMd5": "47522844841b549f397b7b5f22fa2d4a",
+      "duplicateGroup": [
+        "corned-beef-hash-breakfast"
+      ],
+      "duplicatePeers": [],
+      "recommendedDonor": null,
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "variantMismatch": false,
+      "issues": [],
+      "pass": true
+    },
+    {
+      "slug": "country-fried-steak-eggs",
+      "title": "Country Fried Steak and Eggs Breakfast",
+      "route": "/breakfast/country-fried-steak-eggs",
+      "source": "breakfast_catalog",
+      "tags": [
+        "country-fried-steak",
+        "gravy",
+        "eggs",
+        "diner",
+        "steak"
+      ],
+      "heroImage": "/images/breakfast/country-fried-steak-eggs.jpg",
+      "thumbImage": "/images/thumbs/breakfast/country-fried-steak-eggs.jpg",
+      "mobileImage": "/images/mobile/breakfast/country-fried-steak-eggs.jpg",
+      "railImage": "/images/rails/breakfast/country-fried-steak-eggs.jpg",
+      "formatKinds": [
+        "other"
+      ],
+      "heroMd5": "db6add0e00c0d8d8f00ae4892e082b5e",
+      "duplicateGroup": [
+        "country-fried-steak-eggs"
+      ],
+      "duplicatePeers": [],
+      "recommendedDonor": null,
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "variantMismatch": false,
+      "issues": [],
       "pass": true
     },
     {
@@ -1604,14 +934,11 @@
       "formatKinds": [
         "skillet"
       ],
-      "heroMd5": "5b2fe9fd56e9feea30beb6920e0c8bca",
+      "heroMd5": "aed2f2b9873fe2a93c2b9442bbcc4852",
       "duplicateGroup": [
-        "cowboy-breakfast-skillet",
-        "red-lead-skillet"
+        "cowboy-breakfast-skillet"
       ],
-      "duplicatePeers": [
-        "red-lead-skillet"
-      ],
+      "duplicatePeers": [],
       "recommendedDonor": null,
       "onDisk": {
         "hero": true,
@@ -1620,20 +947,7 @@
         "rail": true
       },
       "variantMismatch": false,
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with red-lead-skillet",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): red-lead-skillet",
-          "confidence": 85
-        }
-      ],
+      "issues": [],
       "pass": true
     },
     {
@@ -1655,17 +969,12 @@
         "casserole",
         "french_toast"
       ],
-      "heroMd5": "bad24e39a44028a803f761529c8ba808",
+      "heroMd5": "ea687e25f03096dcce1c87a5836fd40d",
       "duplicateGroup": [
-        "crew-french-toast-bake",
-        "overnight-french-toast-bake",
-        "french-toast-casserole"
+        "crew-french-toast-bake"
       ],
-      "duplicatePeers": [
-        "overnight-french-toast-bake",
-        "french-toast-casserole"
-      ],
-      "recommendedDonor": "overnight-french-toast-bake",
+      "duplicatePeers": [],
+      "recommendedDonor": null,
       "onDisk": {
         "hero": true,
         "thumb": true,
@@ -1673,21 +982,8 @@
         "rail": true
       },
       "variantMismatch": false,
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with overnight-french-toast-bake, french-toast-casserole",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): overnight-french-toast-bake, french-toast-casserole",
-          "confidence": 85
-        }
-      ],
-      "pass": false
+      "issues": [],
+      "pass": true
     },
     {
       "slug": "denver-breakfast-casserole",
@@ -1708,15 +1004,12 @@
       "formatKinds": [
         "casserole"
       ],
-      "heroMd5": "e3c651f0fad3df99911f94c982632af4",
+      "heroMd5": "8937e05c7f8a734675534353fed598ee",
       "duplicateGroup": [
-        "denver-breakfast-casserole",
-        "ham-cheddar-egg-bake"
+        "denver-breakfast-casserole"
       ],
-      "duplicatePeers": [
-        "ham-cheddar-egg-bake"
-      ],
-      "recommendedDonor": "ham-cheddar-egg-bake",
+      "duplicatePeers": [],
+      "recommendedDonor": null,
       "onDisk": {
         "hero": true,
         "thumb": true,
@@ -1724,21 +1017,78 @@
         "rail": true
       },
       "variantMismatch": false,
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with ham-cheddar-egg-bake",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): ham-cheddar-egg-bake",
-          "confidence": 85
-        }
+      "issues": [],
+      "pass": true
+    },
+    {
+      "slug": "eggs-benedict-hall-style",
+      "title": "Eggs Benedict Hall Style",
+      "route": "/breakfast/eggs-benedict-hall-style",
+      "source": "breakfast_catalog",
+      "tags": [
+        "eggs-benedict",
+        "hollandaise",
+        "poached-eggs",
+        "canadian-bacon",
+        "brunch"
       ],
-      "pass": false
+      "heroImage": "/images/breakfast/eggs-benedict-hall-style.jpg",
+      "thumbImage": "/images/thumbs/breakfast/eggs-benedict-hall-style.jpg",
+      "mobileImage": "/images/mobile/breakfast/eggs-benedict-hall-style.jpg",
+      "railImage": "/images/rails/breakfast/eggs-benedict-hall-style.jpg",
+      "formatKinds": [
+        "other"
+      ],
+      "heroMd5": "cb26ed7dcb24f815b7483c5ef08e0b47",
+      "duplicateGroup": [
+        "eggs-benedict-hall-style"
+      ],
+      "duplicatePeers": [],
+      "recommendedDonor": null,
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "variantMismatch": false,
+      "issues": [],
+      "pass": true
+    },
+    {
+      "slug": "farmers-breakfast-casserole",
+      "title": "Farmer's Breakfast Casserole",
+      "route": "/breakfast/farmers-breakfast-casserole",
+      "source": "breakfast_catalog",
+      "tags": [
+        "casserole",
+        "sausage",
+        "hash-browns",
+        "bake",
+        "eggs"
+      ],
+      "heroImage": "/images/breakfast/farmers-breakfast-casserole.jpg",
+      "thumbImage": "/images/thumbs/breakfast/farmers-breakfast-casserole.jpg",
+      "mobileImage": "/images/mobile/breakfast/farmers-breakfast-casserole.jpg",
+      "railImage": "/images/rails/breakfast/farmers-breakfast-casserole.jpg",
+      "formatKinds": [
+        "casserole"
+      ],
+      "heroMd5": "77889d978f4c10ee25480ac393dce732",
+      "duplicateGroup": [
+        "farmers-breakfast-casserole"
+      ],
+      "duplicatePeers": [],
+      "recommendedDonor": null,
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "variantMismatch": false,
+      "issues": [],
+      "pass": true
     },
     {
       "slug": "fire-captain-omelette-bar",
@@ -1811,6 +1161,76 @@
       "pass": true
     },
     {
+      "slug": "german-potato-breakfast-skillet",
+      "title": "German Potato Breakfast Skillet",
+      "route": "/breakfast/german-potato-breakfast-skillet",
+      "source": "breakfast_catalog",
+      "tags": [
+        "german",
+        "potatoes",
+        "bratwurst",
+        "sauerkraut",
+        "skillet"
+      ],
+      "heroImage": "/images/breakfast/german-potato-breakfast-skillet.jpg",
+      "thumbImage": "/images/thumbs/breakfast/german-potato-breakfast-skillet.jpg",
+      "mobileImage": "/images/mobile/breakfast/german-potato-breakfast-skillet.jpg",
+      "railImage": "/images/rails/breakfast/german-potato-breakfast-skillet.jpg",
+      "formatKinds": [
+        "skillet"
+      ],
+      "heroMd5": "6bee8830d8e1e9e6445d578e5ebc669a",
+      "duplicateGroup": [
+        "german-potato-breakfast-skillet"
+      ],
+      "duplicatePeers": [],
+      "recommendedDonor": null,
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "variantMismatch": false,
+      "issues": [],
+      "pass": true
+    },
+    {
+      "slug": "green-chile-breakfast-burritos",
+      "title": "Green Chile Breakfast Burritos",
+      "route": "/breakfast/green-chile-breakfast-burritos",
+      "source": "breakfast_catalog",
+      "tags": [
+        "breakfast-burrito",
+        "green-chile",
+        "hatch",
+        "bacon",
+        "handheld"
+      ],
+      "heroImage": "/images/breakfast/green-chile-breakfast-burritos.jpg",
+      "thumbImage": "/images/thumbs/breakfast/green-chile-breakfast-burritos.jpg",
+      "mobileImage": "/images/mobile/breakfast/green-chile-breakfast-burritos.jpg",
+      "railImage": "/images/rails/breakfast/green-chile-breakfast-burritos.jpg",
+      "formatKinds": [
+        "other"
+      ],
+      "heroMd5": "986daad95dd54da93f1b0a3b21e8085a",
+      "duplicateGroup": [
+        "green-chile-breakfast-burritos"
+      ],
+      "duplicatePeers": [],
+      "recommendedDonor": null,
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "variantMismatch": false,
+      "issues": [],
+      "pass": true
+    },
+    {
       "slug": "hall-breakfast-burritos",
       "title": "Hall Breakfast Burritos",
       "route": "/breakfast/hall-breakfast-burritos",
@@ -1828,17 +1248,12 @@
       "formatKinds": [
         "other"
       ],
-      "heroMd5": "668d840bfee5792b48e2d8839c434bed",
+      "heroMd5": "157f4240aa1e8ac5028689ab9c684c2f",
       "duplicateGroup": [
-        "breakfast-crunchwraps",
-        "hall-breakfast-burritos",
-        "breakfast-burrito-bar"
+        "hall-breakfast-burritos"
       ],
-      "duplicatePeers": [
-        "breakfast-crunchwraps",
-        "breakfast-burrito-bar"
-      ],
-      "recommendedDonor": "breakfast-crunchwraps",
+      "duplicatePeers": [],
+      "recommendedDonor": null,
       "onDisk": {
         "hero": true,
         "thumb": true,
@@ -1846,21 +1261,8 @@
         "rail": true
       },
       "variantMismatch": false,
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with breakfast-crunchwraps, breakfast-burrito-bar",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): breakfast-crunchwraps, breakfast-burrito-bar",
-          "confidence": 85
-        }
-      ],
-      "pass": false
+      "issues": [],
+      "pass": true
     },
     {
       "slug": "hall-breakfast-wraps",
@@ -1916,17 +1318,12 @@
       "formatKinds": [
         "other"
       ],
-      "heroMd5": "808f25656f7380c72131958d8f63a545",
+      "heroMd5": "1ff8794bf3c1938e49f89db51b0fc7c6",
       "duplicateGroup": [
-        "hall-sausage-biscuits-gravy",
-        "monte-cristo-sandwiches",
-        "biscuits-gravy"
+        "hall-sausage-biscuits-gravy"
       ],
-      "duplicatePeers": [
-        "monte-cristo-sandwiches",
-        "biscuits-gravy"
-      ],
-      "recommendedDonor": "monte-cristo-sandwiches",
+      "duplicatePeers": [],
+      "recommendedDonor": null,
       "onDisk": {
         "hero": true,
         "thumb": true,
@@ -1934,21 +1331,8 @@
         "rail": true
       },
       "variantMismatch": false,
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with monte-cristo-sandwiches, biscuits-gravy",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): monte-cristo-sandwiches, biscuits-gravy",
-          "confidence": 85
-        }
-      ],
-      "pass": false
+      "issues": [],
+      "pass": true
     },
     {
       "slug": "ham-cheddar-egg-bake",
@@ -1970,12 +1354,9 @@
       ],
       "heroMd5": "e3c651f0fad3df99911f94c982632af4",
       "duplicateGroup": [
-        "denver-breakfast-casserole",
         "ham-cheddar-egg-bake"
       ],
-      "duplicatePeers": [
-        "denver-breakfast-casserole"
-      ],
+      "duplicatePeers": [],
       "recommendedDonor": null,
       "onDisk": {
         "hero": true,
@@ -1984,20 +1365,7 @@
         "rail": true
       },
       "variantMismatch": false,
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with denver-breakfast-casserole",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): denver-breakfast-casserole",
-          "confidence": 85
-        }
-      ],
+      "issues": [],
       "pass": true
     },
     {
@@ -2020,13 +1388,10 @@
       ],
       "heroMd5": "67ea7cf0b01653d3d8132fa4ab1412ff",
       "duplicateGroup": [
-        "cast-iron-breakfast-skillet",
         "ham-pepper-skillet"
       ],
-      "duplicatePeers": [
-        "cast-iron-breakfast-skillet"
-      ],
-      "recommendedDonor": "cast-iron-breakfast-skillet",
+      "duplicatePeers": [],
+      "recommendedDonor": null,
       "onDisk": {
         "hero": true,
         "thumb": true,
@@ -2034,21 +1399,8 @@
         "rail": true
       },
       "variantMismatch": false,
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with cast-iron-breakfast-skillet",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): cast-iron-breakfast-skillet",
-          "confidence": 85
-        }
-      ],
-      "pass": false
+      "issues": [],
+      "pass": true
     },
     {
       "slug": "high-protein-parfaits",
@@ -2085,6 +1437,146 @@
       "pass": true
     },
     {
+      "slug": "huevos-rancheros-crew",
+      "title": "Huevos Rancheros for the Crew",
+      "route": "/breakfast/huevos-rancheros-crew",
+      "source": "breakfast_catalog",
+      "tags": [
+        "huevos-rancheros",
+        "eggs",
+        "tortillas",
+        "ranchero",
+        "beans"
+      ],
+      "heroImage": "/images/breakfast/huevos-rancheros-crew.jpg",
+      "thumbImage": "/images/thumbs/breakfast/huevos-rancheros-crew.jpg",
+      "mobileImage": "/images/mobile/breakfast/huevos-rancheros-crew.jpg",
+      "railImage": "/images/rails/breakfast/huevos-rancheros-crew.jpg",
+      "formatKinds": [
+        "other"
+      ],
+      "heroMd5": "28b6174fb9ffbd1c0109cccb546a68e7",
+      "duplicateGroup": [
+        "huevos-rancheros-crew"
+      ],
+      "duplicatePeers": [],
+      "recommendedDonor": null,
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "variantMismatch": false,
+      "issues": [],
+      "pass": true
+    },
+    {
+      "slug": "irish-breakfast-fry-up",
+      "title": "Irish Breakfast Fry-Up",
+      "route": "/breakfast/irish-breakfast-fry-up",
+      "source": "breakfast_catalog",
+      "tags": [
+        "irish-breakfast",
+        "fry-up",
+        "bacon",
+        "sausage",
+        "eggs"
+      ],
+      "heroImage": "/images/breakfast/irish-breakfast-fry-up.jpg",
+      "thumbImage": "/images/thumbs/breakfast/irish-breakfast-fry-up.jpg",
+      "mobileImage": "/images/mobile/breakfast/irish-breakfast-fry-up.jpg",
+      "railImage": "/images/rails/breakfast/irish-breakfast-fry-up.jpg",
+      "formatKinds": [
+        "other"
+      ],
+      "heroMd5": "8ef54b60d3340641d7ccf9f9f2356c14",
+      "duplicateGroup": [
+        "irish-breakfast-fry-up"
+      ],
+      "duplicatePeers": [],
+      "recommendedDonor": null,
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "variantMismatch": false,
+      "issues": [],
+      "pass": true
+    },
+    {
+      "slug": "johnnycakes-with-syrup",
+      "title": "Johnnycakes with Maple Syrup",
+      "route": "/breakfast/johnnycakes-with-syrup",
+      "source": "breakfast_catalog",
+      "tags": [
+        "johnnycakes",
+        "cornmeal",
+        "new-england",
+        "griddle",
+        "maple"
+      ],
+      "heroImage": "/images/breakfast/johnnycakes-with-syrup.jpg",
+      "thumbImage": "/images/thumbs/breakfast/johnnycakes-with-syrup.jpg",
+      "mobileImage": "/images/mobile/breakfast/johnnycakes-with-syrup.jpg",
+      "railImage": "/images/rails/breakfast/johnnycakes-with-syrup.jpg",
+      "formatKinds": [
+        "other"
+      ],
+      "heroMd5": "3b7a372a3775d91443e1a25dc88001f4",
+      "duplicateGroup": [
+        "johnnycakes-with-syrup"
+      ],
+      "duplicatePeers": [],
+      "recommendedDonor": null,
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "variantMismatch": false,
+      "issues": [],
+      "pass": true
+    },
+    {
+      "slug": "lumberjack-breakfast-platter",
+      "title": "Lumberjack Breakfast Platter",
+      "route": "/breakfast/lumberjack-breakfast-platter",
+      "source": "breakfast_catalog",
+      "tags": [
+        "lumberjack",
+        "pancakes",
+        "bacon",
+        "sausage",
+        "hash-browns"
+      ],
+      "heroImage": "/images/breakfast/lumberjack-breakfast-platter.jpg",
+      "thumbImage": "/images/thumbs/breakfast/lumberjack-breakfast-platter.jpg",
+      "mobileImage": "/images/mobile/breakfast/lumberjack-breakfast-platter.jpg",
+      "railImage": "/images/rails/breakfast/lumberjack-breakfast-platter.jpg",
+      "formatKinds": [
+        "other"
+      ],
+      "heroMd5": "0af4b1dc560f8704eeaee5fe276b7ef9",
+      "duplicateGroup": [
+        "lumberjack-breakfast-platter"
+      ],
+      "duplicatePeers": [],
+      "recommendedDonor": null,
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "variantMismatch": false,
+      "issues": [],
+      "pass": true
+    },
+    {
       "slug": "maple-sausage-pinwheels",
       "title": "Maple Sausage Pinwheels",
       "route": "/breakfast/maple-sausage-pinwheels",
@@ -2103,18 +1595,11 @@
       "formatKinds": [
         "other"
       ],
-      "heroMd5": "37edb1fb04743d5574098e6756b8e082",
+      "heroMd5": "4a86d5df1613260b379b6660c794d384",
       "duplicateGroup": [
-        "buttermilk-pancakes",
-        "maple-sausage-pinwheels",
-        "protein-pancake-tray",
-        "pancake-short-stack"
+        "maple-sausage-pinwheels"
       ],
-      "duplicatePeers": [
-        "buttermilk-pancakes",
-        "protein-pancake-tray",
-        "pancake-short-stack"
-      ],
+      "duplicatePeers": [],
       "recommendedDonor": null,
       "onDisk": {
         "hero": true,
@@ -2123,20 +1608,42 @@
         "rail": true
       },
       "variantMismatch": false,
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with buttermilk-pancakes, protein-pancake-tray, pancake-short-stack",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): buttermilk-pancakes, protein-pancake-tray, pancake-short-stack",
-          "confidence": 85
-        }
+      "issues": [],
+      "pass": true
+    },
+    {
+      "slug": "migas-for-the-crew",
+      "title": "Migas for the Crew",
+      "route": "/breakfast/migas-for-the-crew",
+      "source": "breakfast_catalog",
+      "tags": [
+        "migas",
+        "eggs",
+        "tortillas",
+        "tex-mex",
+        "skillet"
       ],
+      "heroImage": "/images/breakfast/migas-for-the-crew.jpg",
+      "thumbImage": "/images/thumbs/breakfast/migas-for-the-crew.jpg",
+      "mobileImage": "/images/mobile/breakfast/migas-for-the-crew.jpg",
+      "railImage": "/images/rails/breakfast/migas-for-the-crew.jpg",
+      "formatKinds": [
+        "other"
+      ],
+      "heroMd5": "c1bd9f5504958d7b6f86e6adb9918c6a",
+      "duplicateGroup": [
+        "migas-for-the-crew"
+      ],
+      "duplicatePeers": [],
+      "recommendedDonor": null,
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "variantMismatch": false,
+      "issues": [],
       "pass": true
     },
     {
@@ -2158,16 +1665,11 @@
       "formatKinds": [
         "other"
       ],
-      "heroMd5": "808f25656f7380c72131958d8f63a545",
+      "heroMd5": "699a10901e1eae494053e64585dd9a6b",
       "duplicateGroup": [
-        "hall-sausage-biscuits-gravy",
-        "monte-cristo-sandwiches",
-        "biscuits-gravy"
+        "monte-cristo-sandwiches"
       ],
-      "duplicatePeers": [
-        "hall-sausage-biscuits-gravy",
-        "biscuits-gravy"
-      ],
+      "duplicatePeers": [],
       "recommendedDonor": null,
       "onDisk": {
         "hero": true,
@@ -2176,20 +1678,7 @@
         "rail": true
       },
       "variantMismatch": false,
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with hall-sausage-biscuits-gravy, biscuits-gravy",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): hall-sausage-biscuits-gravy, biscuits-gravy",
-          "confidence": 85
-        }
-      ],
+      "issues": [],
       "pass": true
     },
     {
@@ -2214,14 +1703,9 @@
       ],
       "heroMd5": "bad24e39a44028a803f761529c8ba808",
       "duplicateGroup": [
-        "crew-french-toast-bake",
-        "overnight-french-toast-bake",
-        "french-toast-casserole"
+        "overnight-french-toast-bake"
       ],
-      "duplicatePeers": [
-        "crew-french-toast-bake",
-        "french-toast-casserole"
-      ],
+      "duplicatePeers": [],
       "recommendedDonor": null,
       "onDisk": {
         "hero": true,
@@ -2230,20 +1714,42 @@
         "rail": true
       },
       "variantMismatch": false,
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with crew-french-toast-bake, french-toast-casserole",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): crew-french-toast-bake, french-toast-casserole",
-          "confidence": 85
-        }
+      "issues": [],
+      "pass": true
+    },
+    {
+      "slug": "overnight-sausage-strata",
+      "title": "Overnight Sausage Strata",
+      "route": "/breakfast/overnight-sausage-strata",
+      "source": "breakfast_catalog",
+      "tags": [
+        "strata",
+        "overnight",
+        "sausage",
+        "make-ahead",
+        "bake"
       ],
+      "heroImage": "/images/breakfast/overnight-sausage-strata.jpg",
+      "thumbImage": "/images/thumbs/breakfast/overnight-sausage-strata.jpg",
+      "mobileImage": "/images/mobile/breakfast/overnight-sausage-strata.jpg",
+      "railImage": "/images/rails/breakfast/overnight-sausage-strata.jpg",
+      "formatKinds": [
+        "other"
+      ],
+      "heroMd5": "fc476471e76ea091ca0c202a59e9aa50",
+      "duplicateGroup": [
+        "overnight-sausage-strata"
+      ],
+      "duplicatePeers": [],
+      "recommendedDonor": null,
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "variantMismatch": false,
+      "issues": [],
       "pass": true
     },
     {
@@ -2298,19 +1804,12 @@
       "formatKinds": [
         "pancake"
       ],
-      "heroMd5": "37edb1fb04743d5574098e6756b8e082",
+      "heroMd5": "f828751ad69e69787fd3029243398828",
       "duplicateGroup": [
-        "buttermilk-pancakes",
-        "maple-sausage-pinwheels",
-        "protein-pancake-tray",
-        "pancake-short-stack"
+        "protein-pancake-tray"
       ],
-      "duplicatePeers": [
-        "buttermilk-pancakes",
-        "maple-sausage-pinwheels",
-        "pancake-short-stack"
-      ],
-      "recommendedDonor": "maple-sausage-pinwheels",
+      "duplicatePeers": [],
+      "recommendedDonor": null,
       "onDisk": {
         "hero": true,
         "thumb": true,
@@ -2318,21 +1817,8 @@
         "rail": true
       },
       "variantMismatch": false,
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with buttermilk-pancakes, maple-sausage-pinwheels, pancake-short-stack",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): buttermilk-pancakes, maple-sausage-pinwheels, pancake-short-stack",
-          "confidence": 85
-        }
-      ],
-      "pass": false
+      "issues": [],
+      "pass": true
     },
     {
       "slug": "quick-egg-tacos",
@@ -2354,12 +1840,9 @@
       ],
       "heroMd5": "dd590ef976a9cc32180d39ab2f8ee048",
       "duplicateGroup": [
-        "quick-egg-tacos",
-        "chorizo-breakfast-tacos"
+        "quick-egg-tacos"
       ],
-      "duplicatePeers": [
-        "chorizo-breakfast-tacos"
-      ],
+      "duplicatePeers": [],
       "recommendedDonor": null,
       "onDisk": {
         "hero": true,
@@ -2368,20 +1851,7 @@
         "rail": true
       },
       "variantMismatch": false,
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with chorizo-breakfast-tacos",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): chorizo-breakfast-tacos",
-          "confidence": 85
-        }
-      ],
+      "issues": [],
       "pass": true
     },
     {
@@ -2406,13 +1876,10 @@
       ],
       "heroMd5": "5b2fe9fd56e9feea30beb6920e0c8bca",
       "duplicateGroup": [
-        "cowboy-breakfast-skillet",
         "red-lead-skillet"
       ],
-      "duplicatePeers": [
-        "cowboy-breakfast-skillet"
-      ],
-      "recommendedDonor": "cowboy-breakfast-skillet",
+      "duplicatePeers": [],
+      "recommendedDonor": null,
       "onDisk": {
         "hero": true,
         "thumb": true,
@@ -2420,21 +1887,8 @@
         "rail": true
       },
       "variantMismatch": false,
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with cowboy-breakfast-skillet",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): cowboy-breakfast-skillet",
-          "confidence": 85
-        }
-      ],
-      "pass": false
+      "issues": [],
+      "pass": true
     },
     {
       "slug": "sausage-egg-cheese-sandwiches",
@@ -2454,17 +1908,12 @@
       "formatKinds": [
         "other"
       ],
-      "heroMd5": "12cb71f0a3aaf23e040083a81a06bdbd",
+      "heroMd5": "45fec8a1d038557b554640ae44816d05",
       "duplicateGroup": [
-        "breakfast-sandwich-trays",
-        "sausage-egg-cheese-sandwiches",
-        "sheet-pan-breakfast-sandwiches"
+        "sausage-egg-cheese-sandwiches"
       ],
-      "duplicatePeers": [
-        "breakfast-sandwich-trays",
-        "sheet-pan-breakfast-sandwiches"
-      ],
-      "recommendedDonor": "sheet-pan-breakfast-sandwiches",
+      "duplicatePeers": [],
+      "recommendedDonor": null,
       "onDisk": {
         "hero": true,
         "thumb": true,
@@ -2472,21 +1921,43 @@
         "rail": true
       },
       "variantMismatch": false,
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with breakfast-sandwich-trays, sheet-pan-breakfast-sandwiches",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): breakfast-sandwich-trays, sheet-pan-breakfast-sandwiches",
-          "confidence": 85
-        }
+      "issues": [],
+      "pass": true
+    },
+    {
+      "slug": "scrapple-and-eggs-skillet",
+      "title": "Scrapple and Eggs Skillet",
+      "route": "/breakfast/scrapple-and-eggs-skillet",
+      "source": "breakfast_catalog",
+      "tags": [
+        "scrapple",
+        "pennsylvania",
+        "eggs",
+        "cast-iron",
+        "pork"
       ],
-      "pass": false
+      "heroImage": "/images/breakfast/scrapple-and-eggs-skillet.jpg",
+      "thumbImage": "/images/thumbs/breakfast/scrapple-and-eggs-skillet.jpg",
+      "mobileImage": "/images/mobile/breakfast/scrapple-and-eggs-skillet.jpg",
+      "railImage": "/images/rails/breakfast/scrapple-and-eggs-skillet.jpg",
+      "formatKinds": [
+        "skillet"
+      ],
+      "heroMd5": "fba9508d3484acdd99cf17e509836d22",
+      "duplicateGroup": [
+        "scrapple-and-eggs-skillet"
+      ],
+      "duplicatePeers": [],
+      "recommendedDonor": null,
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "variantMismatch": false,
+      "issues": [],
+      "pass": true
     },
     {
       "slug": "sheet-pan-breakfast-hash",
@@ -2508,13 +1979,10 @@
       ],
       "heroMd5": "8d65d578203df540b240d2e901466270",
       "duplicateGroup": [
-        "chorizo-breakfast-hash",
         "sheet-pan-breakfast-hash"
       ],
-      "duplicatePeers": [
-        "chorizo-breakfast-hash"
-      ],
-      "recommendedDonor": "chorizo-breakfast-hash",
+      "duplicatePeers": [],
+      "recommendedDonor": null,
       "onDisk": {
         "hero": true,
         "thumb": true,
@@ -2522,21 +1990,8 @@
         "rail": true
       },
       "variantMismatch": false,
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with chorizo-breakfast-hash",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): chorizo-breakfast-hash",
-          "confidence": 85
-        }
-      ],
-      "pass": false
+      "issues": [],
+      "pass": true
     },
     {
       "slug": "sheet-pan-breakfast-sandwiches",
@@ -2557,16 +2012,11 @@
       "formatKinds": [
         "other"
       ],
-      "heroMd5": "12cb71f0a3aaf23e040083a81a06bdbd",
+      "heroMd5": "9b348e533d125db7bcbe677dd3a18a8d",
       "duplicateGroup": [
-        "breakfast-sandwich-trays",
-        "sausage-egg-cheese-sandwiches",
         "sheet-pan-breakfast-sandwiches"
       ],
-      "duplicatePeers": [
-        "breakfast-sandwich-trays",
-        "sausage-egg-cheese-sandwiches"
-      ],
+      "duplicatePeers": [],
       "recommendedDonor": null,
       "onDisk": {
         "hero": true,
@@ -2575,20 +2025,112 @@
         "rail": true
       },
       "variantMismatch": false,
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with breakfast-sandwich-trays, sausage-egg-cheese-sandwiches",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): breakfast-sandwich-trays, sausage-egg-cheese-sandwiches",
-          "confidence": 85
-        }
+      "issues": [],
+      "pass": true
+    },
+    {
+      "slug": "sheet-pan-full-english",
+      "title": "Sheet Pan Full English",
+      "route": "/breakfast/sheet-pan-full-english",
+      "source": "breakfast_catalog",
+      "tags": [
+        "full-english",
+        "sheet-pan",
+        "bacon",
+        "sausage",
+        "beans"
       ],
+      "heroImage": "/images/breakfast/sheet-pan-full-english.jpg",
+      "thumbImage": "/images/thumbs/breakfast/sheet-pan-full-english.jpg",
+      "mobileImage": "/images/mobile/breakfast/sheet-pan-full-english.jpg",
+      "railImage": "/images/rails/breakfast/sheet-pan-full-english.jpg",
+      "formatKinds": [
+        "other"
+      ],
+      "heroMd5": "0ed6a2531ab1dba8e705bf0f76a78f0a",
+      "duplicateGroup": [
+        "sheet-pan-full-english"
+      ],
+      "duplicatePeers": [],
+      "recommendedDonor": null,
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "variantMismatch": false,
+      "issues": [],
+      "pass": true
+    },
+    {
+      "slug": "shrimp-and-grits-breakfast",
+      "title": "Shrimp and Grits Breakfast",
+      "route": "/breakfast/shrimp-and-grits-breakfast",
+      "source": "breakfast_catalog",
+      "tags": [
+        "shrimp-and-grits",
+        "grits",
+        "seafood",
+        "cajun",
+        "southern"
+      ],
+      "heroImage": "/images/breakfast/shrimp-and-grits-breakfast.jpg",
+      "thumbImage": "/images/thumbs/breakfast/shrimp-and-grits-breakfast.jpg",
+      "mobileImage": "/images/mobile/breakfast/shrimp-and-grits-breakfast.jpg",
+      "railImage": "/images/rails/breakfast/shrimp-and-grits-breakfast.jpg",
+      "formatKinds": [
+        "other"
+      ],
+      "heroMd5": "779278be68815c79689c73f50261734f",
+      "duplicateGroup": [
+        "shrimp-and-grits-breakfast"
+      ],
+      "duplicatePeers": [],
+      "recommendedDonor": null,
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "variantMismatch": false,
+      "issues": [],
+      "pass": true
+    },
+    {
+      "slug": "smoked-salmon-benedit",
+      "title": "Smoked Salmon Benedict",
+      "route": "/breakfast/smoked-salmon-benedit",
+      "source": "breakfast_catalog",
+      "tags": [
+        "smoked-salmon",
+        "eggs-benedict",
+        "hollandaise",
+        "rye",
+        "brunch"
+      ],
+      "heroImage": "/images/breakfast/smoked-salmon-benedit.jpg",
+      "thumbImage": "/images/thumbs/breakfast/smoked-salmon-benedit.jpg",
+      "mobileImage": "/images/mobile/breakfast/smoked-salmon-benedit.jpg",
+      "railImage": "/images/rails/breakfast/smoked-salmon-benedit.jpg",
+      "formatKinds": [
+        "other"
+      ],
+      "heroMd5": "9d733f223f155e36f248a0b45f7b0640",
+      "duplicateGroup": [
+        "smoked-salmon-benedit"
+      ],
+      "duplicatePeers": [],
+      "recommendedDonor": null,
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "variantMismatch": false,
+      "issues": [],
       "pass": true
     },
     {
@@ -2609,14 +2151,11 @@
       "formatKinds": [
         "casserole"
       ],
-      "heroMd5": "0516db35e9217d4a056edd415be2b277",
+      "heroMd5": "c36ca722c51b1480a7fce51610267fb7",
       "duplicateGroup": [
-        "southwest-egg-bake",
-        "turkey-sausage-egg-bake"
+        "southwest-egg-bake"
       ],
-      "duplicatePeers": [
-        "turkey-sausage-egg-bake"
-      ],
+      "duplicatePeers": [],
       "recommendedDonor": null,
       "onDisk": {
         "hero": true,
@@ -2625,20 +2164,7 @@
         "rail": true
       },
       "variantMismatch": false,
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with turkey-sausage-egg-bake",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): turkey-sausage-egg-bake",
-          "confidence": 85
-        }
-      ],
+      "issues": [],
       "pass": true
     },
     {
@@ -2662,17 +2188,10 @@
       ],
       "heroMd5": "45e160454d84d4dfaa1b0bb7aba7a220",
       "duplicateGroup": [
-        "bacon-egg-hash-skillet",
-        "bbq-breakfast-hash",
-        "steakhouse-hash-skillet",
-        "bacon-egg-hash"
+        "steakhouse-hash-skillet"
       ],
-      "duplicatePeers": [
-        "bacon-egg-hash-skillet",
-        "bbq-breakfast-hash",
-        "bacon-egg-hash"
-      ],
-      "recommendedDonor": "bacon-egg-hash-skillet",
+      "duplicatePeers": [],
+      "recommendedDonor": null,
       "onDisk": {
         "hero": true,
         "thumb": true,
@@ -2680,21 +2199,43 @@
         "rail": true
       },
       "variantMismatch": false,
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with bacon-egg-hash-skillet, bbq-breakfast-hash, bacon-egg-hash",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): bacon-egg-hash-skillet, bbq-breakfast-hash, bacon-egg-hash",
-          "confidence": 85
-        }
+      "issues": [],
+      "pass": true
+    },
+    {
+      "slug": "tater-tot-breakfast-casserole",
+      "title": "Tater Tot Breakfast Casserole",
+      "route": "/breakfast/tater-tot-breakfast-casserole",
+      "source": "breakfast_catalog",
+      "tags": [
+        "tater-tots",
+        "casserole",
+        "bacon",
+        "bake",
+        "midwest"
       ],
-      "pass": false
+      "heroImage": "/images/breakfast/tater-tot-breakfast-casserole.jpg",
+      "thumbImage": "/images/thumbs/breakfast/tater-tot-breakfast-casserole.jpg",
+      "mobileImage": "/images/mobile/breakfast/tater-tot-breakfast-casserole.jpg",
+      "railImage": "/images/rails/breakfast/tater-tot-breakfast-casserole.jpg",
+      "formatKinds": [
+        "casserole"
+      ],
+      "heroMd5": "d5ce308bdca946db9e239874f51171eb",
+      "duplicateGroup": [
+        "tater-tot-breakfast-casserole"
+      ],
+      "duplicatePeers": [],
+      "recommendedDonor": null,
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "variantMismatch": false,
+      "issues": [],
+      "pass": true
     },
     {
       "slug": "turkey-sausage-burritos",
@@ -2716,13 +2257,10 @@
       ],
       "heroMd5": "54b37a3e11daed991a415ed8b26f7be1",
       "duplicateGroup": [
-        "chorizo-breakfast-burritos",
         "turkey-sausage-burritos"
       ],
-      "duplicatePeers": [
-        "chorizo-breakfast-burritos"
-      ],
-      "recommendedDonor": "chorizo-breakfast-burritos",
+      "duplicatePeers": [],
+      "recommendedDonor": null,
       "onDisk": {
         "hero": true,
         "thumb": true,
@@ -2730,21 +2268,8 @@
         "rail": true
       },
       "variantMismatch": false,
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with chorizo-breakfast-burritos",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): chorizo-breakfast-burritos",
-          "confidence": 85
-        }
-      ],
-      "pass": false
+      "issues": [],
+      "pass": true
     },
     {
       "slug": "turkey-sausage-egg-bake",
@@ -2764,15 +2289,12 @@
       "formatKinds": [
         "casserole"
       ],
-      "heroMd5": "0516db35e9217d4a056edd415be2b277",
+      "heroMd5": "7099aa20b4fd3b2fc9ef6848f2c7ed75",
       "duplicateGroup": [
-        "southwest-egg-bake",
         "turkey-sausage-egg-bake"
       ],
-      "duplicatePeers": [
-        "southwest-egg-bake"
-      ],
-      "recommendedDonor": "southwest-egg-bake",
+      "duplicatePeers": [],
+      "recommendedDonor": null,
       "onDisk": {
         "hero": true,
         "thumb": true,
@@ -2780,21 +2302,8 @@
         "rail": true
       },
       "variantMismatch": false,
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with southwest-egg-bake",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): southwest-egg-bake",
-          "confidence": 85
-        }
-      ],
-      "pass": false
+      "issues": [],
+      "pass": true
     },
     {
       "slug": "veggie-egg-burritos",
@@ -2846,17 +2355,12 @@
       "formatKinds": [
         "burrito"
       ],
-      "heroMd5": "668d840bfee5792b48e2d8839c434bed",
+      "heroMd5": "8a4e6994111035d3658b425e72d0c2cd",
       "duplicateGroup": [
-        "breakfast-crunchwraps",
-        "hall-breakfast-burritos",
         "breakfast-burrito-bar"
       ],
-      "duplicatePeers": [
-        "breakfast-crunchwraps",
-        "hall-breakfast-burritos"
-      ],
-      "recommendedDonor": "breakfast-crunchwraps",
+      "duplicatePeers": [],
+      "recommendedDonor": null,
       "onDisk": {
         "hero": true,
         "thumb": true,
@@ -2864,21 +2368,8 @@
         "rail": true
       },
       "variantMismatch": false,
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with breakfast-crunchwraps, hall-breakfast-burritos",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): breakfast-crunchwraps, hall-breakfast-burritos",
-          "confidence": 85
-        }
-      ],
-      "pass": false
+      "issues": [],
+      "pass": true
     },
     {
       "slug": "pancake-short-stack",
@@ -2896,19 +2387,12 @@
       "formatKinds": [
         "pancake"
       ],
-      "heroMd5": "37edb1fb04743d5574098e6756b8e082",
+      "heroMd5": "1e3e17fd94607f240a31f4ab49ad79fa",
       "duplicateGroup": [
-        "buttermilk-pancakes",
-        "maple-sausage-pinwheels",
-        "protein-pancake-tray",
         "pancake-short-stack"
       ],
-      "duplicatePeers": [
-        "buttermilk-pancakes",
-        "maple-sausage-pinwheels",
-        "protein-pancake-tray"
-      ],
-      "recommendedDonor": "maple-sausage-pinwheels",
+      "duplicatePeers": [],
+      "recommendedDonor": null,
       "onDisk": {
         "hero": true,
         "thumb": true,
@@ -2916,21 +2400,8 @@
         "rail": true
       },
       "variantMismatch": false,
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with buttermilk-pancakes, maple-sausage-pinwheels, protein-pancake-tray",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): buttermilk-pancakes, maple-sausage-pinwheels, protein-pancake-tray",
-          "confidence": 85
-        }
-      ],
-      "pass": false
+      "issues": [],
+      "pass": true
     },
     {
       "slug": "bacon-egg-hash",
@@ -2949,19 +2420,12 @@
         "hash",
         "skillet"
       ],
-      "heroMd5": "45e160454d84d4dfaa1b0bb7aba7a220",
+      "heroMd5": "c45d51039867ffe182fd1dfd8878defb",
       "duplicateGroup": [
-        "bacon-egg-hash-skillet",
-        "bbq-breakfast-hash",
-        "steakhouse-hash-skillet",
         "bacon-egg-hash"
       ],
-      "duplicatePeers": [
-        "bacon-egg-hash-skillet",
-        "bbq-breakfast-hash",
-        "steakhouse-hash-skillet"
-      ],
-      "recommendedDonor": "bacon-egg-hash-skillet",
+      "duplicatePeers": [],
+      "recommendedDonor": null,
       "onDisk": {
         "hero": true,
         "thumb": true,
@@ -2969,21 +2433,8 @@
         "rail": true
       },
       "variantMismatch": false,
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with bacon-egg-hash-skillet, bbq-breakfast-hash, steakhouse-hash-skillet",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): bacon-egg-hash-skillet, bbq-breakfast-hash, steakhouse-hash-skillet",
-          "confidence": 85
-        }
-      ],
-      "pass": false
+      "issues": [],
+      "pass": true
     },
     {
       "slug": "french-toast-casserole",
@@ -3002,17 +2453,12 @@
         "casserole",
         "french_toast"
       ],
-      "heroMd5": "bad24e39a44028a803f761529c8ba808",
+      "heroMd5": "c1565b624be2191a3a509d33f2b1aa48",
       "duplicateGroup": [
-        "crew-french-toast-bake",
-        "overnight-french-toast-bake",
         "french-toast-casserole"
       ],
-      "duplicatePeers": [
-        "crew-french-toast-bake",
-        "overnight-french-toast-bake"
-      ],
-      "recommendedDonor": "overnight-french-toast-bake",
+      "duplicatePeers": [],
+      "recommendedDonor": null,
       "onDisk": {
         "hero": true,
         "thumb": true,
@@ -3020,21 +2466,8 @@
         "rail": true
       },
       "variantMismatch": false,
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with crew-french-toast-bake, overnight-french-toast-bake",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): crew-french-toast-bake, overnight-french-toast-bake",
-          "confidence": 85
-        }
-      ],
-      "pass": false
+      "issues": [],
+      "pass": true
     },
     {
       "slug": "chorizo-breakfast-tacos",
@@ -3052,15 +2485,12 @@
       "formatKinds": [
         "other"
       ],
-      "heroMd5": "dd590ef976a9cc32180d39ab2f8ee048",
+      "heroMd5": "f7b94eb0f2ab6a583ff450c589d7f5e3",
       "duplicateGroup": [
-        "quick-egg-tacos",
         "chorizo-breakfast-tacos"
       ],
-      "duplicatePeers": [
-        "quick-egg-tacos"
-      ],
-      "recommendedDonor": "quick-egg-tacos",
+      "duplicatePeers": [],
+      "recommendedDonor": null,
       "onDisk": {
         "hero": true,
         "thumb": true,
@@ -3068,21 +2498,8 @@
         "rail": true
       },
       "variantMismatch": false,
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with quick-egg-tacos",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): quick-egg-tacos",
-          "confidence": 85
-        }
-      ],
-      "pass": false
+      "issues": [],
+      "pass": true
     },
     {
       "slug": "biscuits-gravy",
@@ -3100,17 +2517,12 @@
       "formatKinds": [
         "other"
       ],
-      "heroMd5": "808f25656f7380c72131958d8f63a545",
+      "heroMd5": "acbfef3c5f318771931c51ed80c0f671",
       "duplicateGroup": [
-        "hall-sausage-biscuits-gravy",
-        "monte-cristo-sandwiches",
         "biscuits-gravy"
       ],
-      "duplicatePeers": [
-        "hall-sausage-biscuits-gravy",
-        "monte-cristo-sandwiches"
-      ],
-      "recommendedDonor": "monte-cristo-sandwiches",
+      "duplicatePeers": [],
+      "recommendedDonor": null,
       "onDisk": {
         "hero": true,
         "thumb": true,
@@ -3118,21 +2530,8 @@
         "rail": true
       },
       "variantMismatch": false,
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero MD5 shared with hall-sausage-biscuits-gravy, monte-cristo-sandwiches",
-          "confidence": 92
-        },
-        {
-          "code": "donor_override_active",
-          "severity": "warning",
-          "message": "hero reuses same file as other breakfast recipe(s): hall-sausage-biscuits-gravy, monte-cristo-sandwiches",
-          "confidence": 85
-        }
-      ],
-      "pass": false
+      "issues": [],
+      "pass": true
     },
     {
       "slug": "firefighter-red-lead-recipe",

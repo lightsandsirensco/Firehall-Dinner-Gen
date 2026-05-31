@@ -46,19 +46,33 @@
   "steps": [
     {
       "stepNumber": 1,
-      "instruction": "Break frozen banana slices apart and add to the blender with peanut butter, milk, yogurt, and salt."
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Peanut Butter Banana Recovery Shake in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on."
     },
     {
       "stepNumber": 2,
-      "instruction": "Blend on high 60–90 seconds, stopping once to scrape down the sides if the blade stalls."
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch Protein blend. Confirm burners ignite evenly and sheet pans are greased or lined."
     },
     {
       "stepNumber": 3,
-      "instruction": "The shake should be thick enough to coat a spoon and slowly fall off — add ¼ cup milk if your blender struggles."
+      "title": "Break frozen banana slices",
+      "instruction": "Break frozen banana slices apart and add to the blender with peanut butter, milk, yogurt, and salt. Serve cold within 10 minutes — hold blended cups on ice at 38°F if the line runs long. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early."
     },
     {
       "stepNumber": 4,
-      "instruction": "Pour into cups right away; this one thickens as it sits."
+      "title": "Blend on high 60–90",
+      "instruction": "Blend on high 60–90 seconds, stopping once to scrape down the sides if the blade stalls. Serve cold within 10 minutes — hold blended cups on ice at 38°F if the line runs long. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early."
+    },
+    {
+      "stepNumber": 5,
+      "title": "The shake should be",
+      "instruction": "The shake should be thick enough to coat a spoon and slowly fall off — add ¼ cup milk if your blender struggles. Serve cold within 10 minutes — hold blended cups on ice at 38°F if the line runs long. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early."
+    },
+    {
+      "stepNumber": 6,
+      "title": "Pour into cups right",
+      "instruction": "Pour into cups right away; this one thickens as it sits. Serve cold within 10 minutes — hold blended cups on ice at 38°F if the line runs long. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early."
     }
   ],
   "nutrition": {
@@ -88,8 +102,8 @@
     "Add a scoop of chocolate protein powder after hard training days."
   ],
   "shiftNote": "Higher in calories by design — good after workouts, yard work, or a physically heavy call when someone needs fuel fast.",
-  "heroImage": "/images/smoothies/peanut-butter-banana-recovery.webp",
-  "thumbImage": "/images/smoothies/peanut-butter-banana-recovery.webp",
+  "heroImage": "/images/smoothies/peanut-butter-banana-recovery.jpg",
+  "thumbImage": "/images/thumbs/peanut-butter-banana-recovery.jpg",
   "tags": [
     "fuel_smoothie",
     "taxonomy:recovery_smoothie",
@@ -112,6 +126,27 @@
     "citrus-ginger"
   ],
   "catalogSet": "fuel_smoothie",
-  "generatedAt": "2026-05-28T00:37:54.583Z",
-  "contentVersion": 1
+  "generatedAt": "2026-05-31T13:06:17.210Z",
+  "contentVersion": 2,
+  "mobileImage": "/images/mobile/peanut-butter-banana-recovery.jpg",
+  "railImage": "/images/rails/peanut-butter-banana-recovery.jpg",
+  "proTips": [
+    "Higher in calories by design — good after workouts, yard work, or a physically heavy call when someone needs fuel fast.",
+    "Rinse the blender jar between batches so flavors do not muddy the next crew's cups.",
+    "If tones drop during service, cover hot food and hold at 140°F — note hold time on the pan for food safety."
+  ],
+  "tonightSpread": [
+    "Pour Peanut Butter Banana Recovery Shake into insulated cups or quart jars on ice for grab-and-go service.",
+    "Set granola, nut butter, and extra fruit in side bowls so crew can customize without slowing the line.",
+    "Keep a backup blender batch chilled at 38°F if service runs past 20 minutes."
+  ],
+  "leftovers": [
+    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
+    "Label trays with date and reheat to 165°F minimum before second shift."
+  ],
+  "equipment": [
+    "high-speed blender",
+    "measuring cups",
+    "ice bath pan"
+  ]
 }

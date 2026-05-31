@@ -1,0 +1,189 @@
+{
+  "slug": "biscuit-french-toast-sliders",
+  "title": "Biscuit French Toast Sliders",
+  "subtitle": "Buttermilk biscuits dipped in custard, griddled, and glazed with syrup butter.",
+  "description": "Adapted from classic French toast tradition using Southern buttermilk biscuits for firehall slider service: split biscuits dipped in cinnamon custard, griddled until golden, brushed with maple butter, and served warm for eight.",
+  "filters": [
+    "feed_a_crew",
+    "breakfast_sandwiches",
+    "quick_breakfasts"
+  ],
+  "tags": [
+    "french-toast",
+    "biscuits",
+    "sliders",
+    "griddle",
+    "maple"
+  ],
+  "crewSize": 8,
+  "baseServings": 8,
+  "prepTime": 15,
+  "cookTime": 20,
+  "totalTime": 35,
+  "difficulty": "easy",
+  "ingredients": [
+    {
+      "name": "large buttermilk biscuits",
+      "quantity": "8",
+      "notes": "bakery or homemade, split",
+      "group": "Biscuits"
+    },
+    {
+      "name": "large eggs",
+      "quantity": "6",
+      "group": "Custard"
+    },
+    {
+      "name": "whole milk",
+      "quantity": "1 1/2 cups",
+      "group": "Custard"
+    },
+    {
+      "name": "vanilla extract",
+      "quantity": "2 tsp",
+      "group": "Custard"
+    },
+    {
+      "name": "ground cinnamon",
+      "quantity": "1 tsp",
+      "notes": "plus pinch nutmeg",
+      "group": "Custard"
+    },
+    {
+      "name": "unsalted butter",
+      "quantity": "3 tbsp",
+      "notes": "for griddle",
+      "group": "Cook"
+    },
+    {
+      "name": "maple syrup",
+      "quantity": "1/4 cup",
+      "notes": "mixed with 2 tbsp melted butter",
+      "group": "Glaze"
+    },
+    {
+      "name": "powdered sugar",
+      "quantity": "1 cup",
+      "notes": "optional dust, plus berries",
+      "group": "Serve"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Biscuit French Toast Sliders in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch Eggs. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Mix the custard",
+      "instruction": "Whisk eggs, milk, vanilla, cinnamon, nutmeg, and a pinch of salt until smooth. Pour into a shallow dish wide enough to dip biscuit halves. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Split and dip biscuits",
+      "instruction": "Split biscuits horizontally. Dip cut sides in custard 3 seconds per side—do not soak or they fall apart. Let excess drip off before hitting the griddle. Cook until char marks are visible and the thickest piece reads 165°F on an instant-read thermometer. Plan about 8 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Griddle until golden",
+      "instruction": "Heat a griddle over medium and melt butter until foaming. Cook dipped biscuit halves cut-side down 3–4 minutes until deep golden, flip, and cook 2–3 minutes more until centers reach 165°F. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Glaze and assemble",
+      "instruction": "Brush warm maple butter on the griddle side of each half. Sandwich halves back together so glaze faces out. Hold briefly on the griddle to set the glaze. Cook until char marks are visible and the thickest piece reads 165°F on an instant-read thermometer. Plan about 5 minutes for this step at crew scale. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Serve warm",
+      "instruction": "Serve two sliders per plate with optional powdered sugar and berries. Serve immediately while biscuit edges stay crisp and centers are custard-soft. Plan about 3 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 3,
+      "heatLevel": ""
+    }
+  ],
+  "nutrition": {
+    "calories": 944,
+    "protein": 6,
+    "carbs": 35,
+    "fat": 89,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "stationWorkflow": [
+    "Dip and griddle in small batches—soaked biscuits tear if stacked on a holding tray.",
+    "Keep maple butter warm in a squeeze bottle for fast glazing at the griddle.",
+    "Split biscuits evenly so sliders sandwich back together without overhang."
+  ],
+  "cleanupNotes": [
+    "Wipe griddle between batches before custard caramelizes and burns.",
+    "Rinse custard dish immediately—dried egg is stubborn on shallow pans."
+  ],
+  "leftovers": [
+    "Reheat sliders on a dry griddle over medium 2 minutes per side to restore crisp edges.",
+    "Cube leftovers into a bread pudding bake with extra custard and raisins."
+  ],
+  "heroImage": "/images/breakfast/biscuit-french-toast-sliders.jpg",
+  "thumbImage": "/images/thumbs/breakfast/biscuit-french-toast-sliders.jpg",
+  "imageAlt": "Biscuit French toast sliders glazed with maple butter on a griddle",
+  "publishedAt": "2026-05-30T21:22:29.757Z",
+  "updatedAt": "2026-05-31T12:54:36.751Z",
+  "readMinutes": 6,
+  "seoTitle": "Biscuit French Toast Sliders | Firehall Breakfast",
+  "mobileImage": "/images/mobile/breakfast/biscuit-french-toast-sliders.jpg",
+  "railImage": "/images/rails/breakfast/biscuit-french-toast-sliders.jpg",
+  "proTips": [
+    "Dip and griddle in small batches—soaked biscuits tear if stacked on a holding tray.",
+    "Keep maple butter warm in a squeeze bottle for fast glazing at the griddle.",
+    "Split biscuits evenly so sliders sandwich back together without overhang."
+  ],
+  "tonightSpread": [
+    "Plate Biscuit French Toast Sliders with sides in separate pans so the crew can mix portions.",
+    "Keep hot items on one side of the table and cold on the other — eggs stay hot, fruit stays cold.",
+    "Line up Biscuit French Toast Sliders on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+  ],
+  "equipment": [
+    "Large sheet trays",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "mealPrepNotes": "Prep mise en place before the shift — Biscuit French Toast Sliders runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
+}

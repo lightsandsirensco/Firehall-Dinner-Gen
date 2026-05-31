@@ -104,36 +104,57 @@
   "steps": [
     {
       "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Lemon Chicken Orzo Soup in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
       "title": "Poach chicken",
-      "instruction": "Simmer chicken breasts in 6 cups broth with bay leaves 15–18 minutes until 165°F. Rest, shred into bite-size strands with two forks.",
+      "instruction": "Simmer chicken breasts in 6 cups broth with bay leaves 15–18 minutes until 165°F. Rest, shred into bite-size strands with two forks. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 20,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 2,
+      "stepNumber": 4,
       "title": "Cook orzo separately",
-      "instruction": "Boil orzo in salted water 8–9 minutes until al dente. Drain, toss with 1 tsp oil to prevent clumping.",
+      "instruction": "Boil orzo in salted water 8–9 minutes until al dente. Drain, toss with 1 tsp oil to prevent clumping. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
-      "stepNumber": 3,
+      "stepNumber": 5,
       "title": "Build soup base",
-      "instruction": "Sauté onion, carrot, celery, and garlic in pot 6 minutes until softened. Add remaining broth and shredded chicken, simmer 10 minutes.",
+      "instruction": "Sauté onion, carrot, celery, and garlic in pot 6 minutes until softened. Add remaining broth and shredded chicken, simmer 10 minutes. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 16,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 6,
       "title": "Finish with lemon",
-      "instruction": "Remove from heat. Stir lemon juice, zest, and dill. Broth should taste bright and balanced, not harsh or overly tart.",
+      "instruction": "Remove from heat. Stir lemon juice, zest, and dill. Broth should taste bright and balanced, not harsh or overly tart. Plan about 3 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 3,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
       "title": "Serve with orzo",
-      "instruction": "Add cooked orzo to bowls, ladle soup over top. Orzo should stay separate, not swollen and mushy in the pot.",
+      "instruction": "Add cooked orzo to bowls, ladle soup over top. Orzo should stay separate, not swollen and mushy in the pot. Plan about 3 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 3,
       "heatLevel": ""
     }

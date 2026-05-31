@@ -1,20 +1,20 @@
 # Recipe Nutrition Audit Report
 
-Generated: 2026-05-30T20:45:11.617Z
+Generated: 2026-05-31T13:08:09.148Z
 Mode: report only
 
 ## Summary
 
-- Total recipes scanned: **258**
+- Total recipes scanned: **287**
 - Missing nutrition (before fix): **0**
 - Corrected: **0**
-- Suspicious / divergent: **113**
-- Clean after run: **257**
+- Suspicious / divergent: **122**
+- Clean after run: **286**
 
 ## Missing / Corrected / Suspicious
 
-### thai-basil-chicken (golden) — suspicious
-- Before: 80 cal · 1g P · 1g C · 0g F
-- After: 80 cal · 1g P · 1g C · 0g F
-- Macro calories (8) diverge from label (80)
-- Macro calories (8) diverge from label (80)
+### lumberjack-breakfast-platter (breakfast) — suspicious
+- Before: 1100 cal · 72g P · 140g C · 90g F
+- After: 1100 cal · 72g P · 140g C · 90g F
+- Macro calories (1658) diverge from label (1100)
+- Macro calories (1658) diverge from label (1100)

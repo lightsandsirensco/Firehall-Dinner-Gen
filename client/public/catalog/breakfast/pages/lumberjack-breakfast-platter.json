@@ -1,0 +1,192 @@
+{
+  "slug": "lumberjack-breakfast-platter",
+  "title": "Lumberjack Breakfast Platter",
+  "subtitle": "Pancakes, eggs, bacon, sausage, and hash browns for a hungry crew.",
+  "description": "Adapted from classic North American logging-camp breakfast tradition for firehall platter service: stacks of pancakes, crispy bacon, browned sausage links, shredded hash browns, and eggs cooked to order for eight hungry firefighters.",
+  "filters": [
+    "feed_a_crew",
+    "high_protein",
+    "skillets"
+  ],
+  "tags": [
+    "lumberjack",
+    "pancakes",
+    "bacon",
+    "sausage",
+    "hash-browns"
+  ],
+  "crewSize": 8,
+  "baseServings": 8,
+  "prepTime": 20,
+  "cookTime": 40,
+  "totalTime": 60,
+  "difficulty": "medium",
+  "ingredients": [
+    {
+      "name": "pancake mix",
+      "quantity": "4 cups",
+      "notes": "prepared per package for 24 silver-dollar cakes",
+      "group": "Pancakes"
+    },
+    {
+      "name": "whole milk",
+      "quantity": "3 cups",
+      "notes": "for batter",
+      "group": "Pancakes"
+    },
+    {
+      "name": "thick-cut bacon",
+      "quantity": "2 lb",
+      "notes": "16 slices",
+      "group": "Meats"
+    },
+    {
+      "name": "pork sausage links",
+      "quantity": "2 lb",
+      "notes": "16 links",
+      "group": "Meats"
+    },
+    {
+      "name": "frozen hash browns",
+      "quantity": "2 lb",
+      "notes": "shredded, crisped on griddle",
+      "group": "Hash"
+    },
+    {
+      "name": "large eggs",
+      "quantity": "8",
+      "notes": "fried or scrambled to order",
+      "group": "Protein"
+    },
+    {
+      "name": "maple syrup",
+      "quantity": "2 cups",
+      "notes": "warmed",
+      "group": "Serve"
+    },
+    {
+      "name": "unsalted butter",
+      "quantity": "1/2 cup",
+      "notes": "for pancakes and griddle",
+      "group": "Serve"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Lumberjack Breakfast Platter in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch Sausage. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Cook bacon and sausage",
+      "instruction": "Lay bacon on sheet pans and roast at 400°F until crisp, about 15 minutes. Sear sausage links in a skillet over medium until browned and internal temperature reaches 160°F, about 12 minutes. Hold warm tented with foil. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts.",
+      "minutes": 18,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Crisp hash browns",
+      "instruction": "Spread hash browns on a lightly oiled griddle in a thin layer. Cook undisturbed 4 minutes for crust, then flip sections and cook until golden. Season with salt and pepper; hold warm. Cook until char marks are visible and the thickest piece reads 165°F on an instant-read thermometer. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Mix and griddle pancakes",
+      "instruction": "Prepare pancake batter per package using milk and melted butter. Griddle silver-dollar pancakes over medium until bubbles form and edges set, flip, and cook until centers reach 190°F and bottoms are golden. Plan about 15 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Cook eggs to order",
+      "instruction": "Fry or scramble eggs in butter over medium heat until whites are fully set (165°F) for fried, or until scrambled curds are moist but not wet. Season each batch with salt and pepper. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Platter and serve",
+      "instruction": "Arrange pancakes, bacon, sausage, hash browns, and eggs on warm platters with syrup and butter at the line. Serve family-style so the crew builds their own lumberjack plate. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "nutrition": {
+    "calories": 1100,
+    "protein": 72,
+    "carbs": 140,
+    "fat": 90,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "stationWorkflow": [
+    "Run oven bacon and griddle hash in parallel while one cook manages pancake batter.",
+    "Hold meats tented with foil on a warm tray—never cover bacon tightly or it steams soft.",
+    "Cook eggs last to order so yolks stay runny for crew who want dippers for hash."
+  ],
+  "cleanupNotes": [
+    "Drain bacon fat from sheet pans into a heat-safe container once cooled.",
+    "Scrape griddle while still warm with a bench scraper before pancake batter dries on."
+  ],
+  "leftovers": [
+    "Reheat pancakes on a griddle 2 minutes per side; microwave makes them rubbery.",
+    "Chop leftover meats and potatoes into a next-day breakfast burrito filling with eggs."
+  ],
+  "heroImage": "/images/breakfast/lumberjack-breakfast-platter.jpg",
+  "thumbImage": "/images/thumbs/breakfast/lumberjack-breakfast-platter.jpg",
+  "imageAlt": "Lumberjack breakfast platter with pancakes, bacon, sausage, hash browns, and eggs",
+  "publishedAt": "2026-05-30T21:22:29.757Z",
+  "updatedAt": "2026-05-31T12:54:36.781Z",
+  "readMinutes": 9,
+  "seoTitle": "Lumberjack Breakfast Platter | Firehall Breakfast",
+  "mobileImage": "/images/mobile/breakfast/lumberjack-breakfast-platter.jpg",
+  "railImage": "/images/rails/breakfast/lumberjack-breakfast-platter.jpg",
+  "proTips": [
+    "Run oven bacon and griddle hash in parallel while one cook manages pancake batter.",
+    "Hold meats tented with foil on a warm tray—never cover bacon tightly or it steams soft.",
+    "Cook eggs last to order so yolks stay runny for crew who want dippers for hash."
+  ],
+  "tonightSpread": [
+    "Plate Lumberjack Breakfast Platter with sides in separate pans so the crew can mix portions.",
+    "Keep hot items on one side of the table and cold on the other — eggs stay hot, fruit stays cold.",
+    "Line up Lumberjack Breakfast Platter on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+  ],
+  "equipment": [
+    "Large sheet trays",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "mealPrepNotes": "Prep mise en place before the shift — Lumberjack Breakfast Platter runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
+}

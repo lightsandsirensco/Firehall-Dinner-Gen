@@ -48,6 +48,7 @@ expertMode = true
 
 [userenv.shared]
 DAILY_LLM_BUDGET_USD = "5.00"
+VITE_GA_MEASUREMENT_ID = "G-LYT598M5KT"
 
 [postMerge]
 path = "scripts/post-merge.sh"

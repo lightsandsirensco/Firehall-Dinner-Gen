@@ -1,0 +1,224 @@
+{
+  "slug": "chicken-cacciatore-crew",
+  "title": "Chicken Cacciatore for the Crew",
+  "displayTitle": "Chicken Cacciatore for the Crew",
+  "seoTitle": "Chicken Cacciatore for the Crew | Firefighter Meal",
+  "shortDescription": "Italian hunter-style chicken braised with tomatoes and peppers for ten",
+  "subtitle": "Italian hunter-style chicken braised with tomatoes and peppers for ten",
+  "category": "hall_expansion",
+  "cuisine": "italian",
+  "description": "Chicken pieces brown in olive oil, then braise with tomatoes, bell peppers, mushrooms, and herbs until the sauce is thick and meat pulls from the bone. Serve in shallow bowls with polenta or crusty bread.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 55,
+  "prepTime": 30,
+  "difficulty": "medium",
+  "calories": 460,
+  "protein": 38,
+  "carbs": 36,
+  "fats": 18,
+  "tags": [
+    "protein:chicken",
+    "format:braise",
+    "category:crew_feeders",
+    "hall_expansion",
+    "crew_feeders",
+    "italian",
+    "chicken",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Dutch oven",
+    "Large pot",
+    "Instant-read thermometer",
+    "Wooden spoon",
+    "Whisk"
+  ],
+  "ingredients": [
+    {
+      "name": "chicken leg quarters",
+      "quantity": "6",
+      "unit": "lb",
+      "notes": "cut into pieces",
+      "group": "Main"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "0.25",
+      "unit": "cup",
+      "group": "Braise"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "sliced",
+      "group": "Braise"
+    },
+    {
+      "name": "red bell pepper",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "sliced",
+      "group": "Braise"
+    },
+    {
+      "name": "cremini mushrooms",
+      "quantity": "1",
+      "unit": "lb",
+      "notes": "quartered",
+      "group": "Braise"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "6",
+      "unit": "cloves",
+      "notes": "minced",
+      "group": "Braise"
+    },
+    {
+      "name": "crushed tomatoes",
+      "quantity": "2",
+      "unit": "cans",
+      "notes": "28 oz each",
+      "group": "Braise"
+    },
+    {
+      "name": "dry white wine",
+      "quantity": "1",
+      "unit": "cup",
+      "group": "Braise"
+    },
+    {
+      "name": "dried oregano",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Herbs"
+    },
+    {
+      "name": "fresh basil",
+      "quantity": "0.5",
+      "unit": "cup",
+      "notes": "torn",
+      "group": "Finish"
+    },
+    {
+      "name": "polenta",
+      "quantity": "2",
+      "unit": "cups",
+      "notes": "dry",
+      "group": "Base"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Chicken Cacciatore for the Crew in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Brown the chicken",
+      "instruction": "Season chicken pieces. Sear in olive oil over medium-high heat until golden on all sides, about 12 minutes total. Set aside. Cook until char marks are visible and the thickest piece reads 165°F on an instant-read thermometer. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Sweat vegetables",
+      "instruction": "In the same pot, cook onion, bell pepper, and mushrooms 8 minutes until softened. Add garlic and oregano, stir 1 minute. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Deglaze and braise",
+      "instruction": "Pour in wine, scraping up browned bits. Add crushed tomatoes and nestle chicken into sauce. Cover and simmer 40 minutes until chicken reaches 165°F.",
+      "minutes": 40,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Cook polenta",
+      "instruction": "Whisk polenta into simmering salted water or broth, stirring 15–20 minutes until thick and creamy. Hold warm with a lid. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts.",
+      "minutes": 20,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Serve family-style",
+      "instruction": "Taste sauce and adjust seasoning. Spoon polenta into bowls, top with chicken and sauce, and scatter fresh basil. Plan about 8 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 8,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Capers and olives stirred in at the end add salty punch—optional but authentic.",
+    "If sauce is thin, simmer uncovered last 10 minutes to concentrate.",
+    "Red pepper flakes on the side keep heat optional for mixed crews."
+  ],
+  "tonightSpread": [
+    "Cacciatore over creamy polenta with crusty Italian bread.",
+    "Simple arugula salad with lemon vinaigrette to cut the rich sauce."
+  ],
+  "leftovers": [
+    "Shred chicken into sauce for subs on Italian rolls.",
+    "Use sauce as a base for baked eggs the next breakfast shift."
+  ],
+  "whyCrewsLikeIt": "Cacciatore delivers big Italian flavor without boiling a vat of spaghetti. It is a one-pot braise that holds warm, smells incredible when crews walk in, and feels like someone actually cooked—not opened a jar.",
+  "mealPrepNotes": "Use bone-in pieces for better braise flavor. Sauce improves overnight. Polenta can be made ahead and reheated with broth whisked in.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 460,
+    "protein": 38,
+    "carbs": 36,
+    "fats": 18,
+    "label": "~460 cal/serving · 38g protein · 4g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/chicken-cacciatore-crew.jpg",
+  "heroImageAlt": "Chicken Cacciatore for the Crew — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/chicken-cacciatore-crew.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/chicken-cacciatore-crew.jpg",
+  "railImage": "/images/rails/hall-expansion/chicken-cacciatore-crew.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "chicken cacciatore for the crew",
+    "crew feeders"
+  ],
+  "relatedSlugs": [
+    "shawarma-bar-night",
+    "fajita-bar-night",
+    "hall-burger-bar",
+    "pasta-bar-night"
+  ],
+  "generatedAt": "2026-05-31T01:50:00.916Z",
+  "contentVersion": 2
+}

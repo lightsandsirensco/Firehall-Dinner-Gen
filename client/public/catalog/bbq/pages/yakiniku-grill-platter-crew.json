@@ -1,0 +1,216 @@
+{
+  "slug": "yakiniku-grill-platter-crew",
+  "title": "Tokyo Tare Ribeye Yakiniku Board",
+  "displayTitle": "Tokyo Tare Ribeye Yakiniku Board",
+  "seoTitle": "Tokyo Tare Ribeye Yakiniku Board | Firehall BBQ",
+  "shortDescription": "Yakiniku platter night—thin-sliced ribeye, tare char, hall portions for ten",
+  "subtitle": "Japanese BBQ sliced ribeye, tare glaze, and grilled shishito for ten",
+  "category": "bbq_grill_nights",
+  "cuisine": "japanese",
+  "description": "Ribeye slices marinate in sweet soy tare, grill quickly over high heat to 130°F, and pile on platters with grilled shishito peppers and steamed rice.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 20,
+  "prepTime": 40,
+  "difficulty": "medium",
+  "calories": 681,
+  "protein": 65,
+  "carbs": 1,
+  "fats": 45,
+  "tags": [
+    "protein:beef",
+    "format:smokehouse_board",
+    "category:bbq_grill_nights",
+    "bbq",
+    "smoker",
+    "grill",
+    "firehall_bbq_25",
+    "bbq",
+    "grill",
+    "firehall_bbq_30"
+  ],
+  "equipment": [
+    "flat-top griddle",
+    "instant-read thermometer",
+    "sharp knife",
+    "cutting board",
+    "hotel pans",
+    "tongs"
+  ],
+  "ingredients": [
+    {
+      "name": "ribeye steak",
+      "quantity": "5.5",
+      "unit": "lb",
+      "notes": "partially frozen for thin slicing",
+      "group": "Main"
+    },
+    {
+      "name": "shoyu",
+      "quantity": "0.33",
+      "unit": "cup",
+      "group": "Tare"
+    },
+    {
+      "name": "sake",
+      "quantity": "0.33",
+      "unit": "cup",
+      "group": "Tare"
+    },
+    {
+      "name": "hon-mirin",
+      "quantity": "0.25",
+      "unit": "cup",
+      "group": "Tare"
+    },
+    {
+      "name": "grated apple",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Tare"
+    },
+    {
+      "name": "fresh ginger",
+      "quantity": "2",
+      "unit": "tbsp",
+      "notes": "grated",
+      "group": "Tare"
+    },
+    {
+      "name": "shishito peppers",
+      "quantity": "2",
+      "unit": "lb",
+      "group": "Grill"
+    },
+    {
+      "name": "shiso leaves",
+      "quantity": "20",
+      "unit": "whole",
+      "group": "Finish"
+    },
+    {
+      "name": "yuzu kosho",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Finish"
+    },
+    {
+      "name": "steamed short-grain rice",
+      "quantity": "10",
+      "unit": "cups",
+      "notes": "cooked",
+      "group": "Service"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Slice ribeye thin",
+      "instruction": "Partially freeze ribeye 30 minutes. Slice paper-thin against the grain. Keep slices separated on sheet pans. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 20,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Build tare marinade",
+      "instruction": "Simmer soy, mirin, sake, brown sugar, ginger, and garlic until glossy. Cool completely before adding beef. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Plan about 12 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Marinate beef slices",
+      "instruction": "Toss sliced ribeye with half the tare for 30 minutes refrigerated. Reserve remaining tare for service. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Heat grill screaming hot",
+      "instruction": "Preheat grill to high, 500°F. Clean and oil grates—yakiniku needs maximum heat. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 10,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Grill beef in batches",
+      "instruction": "Grill beef slices 60–90 seconds per side until charred edges and 125–130°F. Work in small batches to avoid steaming. Plan about 12 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 12,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Grill shishito",
+      "instruction": "Grill shishito peppers over 450°F heat until blistered, 4–5 minutes total. Toss with pinch of salt. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 5,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 7,
+      "title": "Hold sliced beef",
+      "instruction": "Rest beef 3 minutes. Pile into hotel pans, cover with foil, hold at 170°F. Spoon reserved tare at service. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Platter for ten",
+      "instruction": "Family-style platters with beef, shishito, rice, and sesame. About 8 oz beef per firefighter. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Partially frozen ribeye slices cleaner—warm steak shreds on the board.",
+    "Small batches only; piled slices steam instead of charring.",
+    "Reserved tare at the line wakes glaze that dulls during hold."
+  ],
+  "tonightSpread": [
+    "Yakiniku ribeye platter with shishito and steamed rice.",
+    "Quick miso soup cups if available."
+  ],
+  "leftovers": [
+    "Beef slices become yakiniku donburi bowls.",
+    "Roll into onigiri with leftover rice."
+  ],
+  "whyCrewsLikeIt": "Yakiniku is interactive and fast—thin beef cooks in seconds and holds sliced at 170°F with tare spooned at service. Different lane from teriyaki skewers or bulgogi.",
+  "mealPrepNotes": "Slice beef paper-thin. Marinate 30 minutes max. Grill batches at 500°F, 60–90 seconds per side. Hold sliced beef covered at 170°F up to 25 minutes. Tare at service.",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 681,
+    "protein": 65,
+    "carbs": 1,
+    "fats": 45,
+    "label": "per serving (hall portion)",
+    "source": "estimated"
+  },
+  "heroImage": "/images/smoker-catalog/yakiniku-grill-platter-crew.jpg",
+  "heroImageAlt": "Tokyo Tare Ribeye Yakiniku Board — crew-sized BBQ spread with visible smoke and bark",
+  "mobileImage": "/images/mobile/smoker-catalog/yakiniku-grill-platter-crew.jpg",
+  "thumbImage": "/images/thumbs/smoker-catalog/yakiniku-grill-platter-crew.jpg",
+  "railImage": "/images/rails/smoker-catalog/yakiniku-grill-platter-crew.jpg",
+  "realismScore": 88,
+  "firefighterScore": 90,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "tokyo tare ribeye yakiniku board",
+    "yakiniku grill platter crew",
+    "beef",
+    "Japanese",
+    "smokehouse board",
+    "bbq",
+    "firehall",
+    "yakiniku grill platter",
+    "japanese bbq ribeye",
+    "tare glazed beef"
+  ],
+  "relatedSlugs": [
+    "carolina-vinegar-pulled-pork",
+    "honey-chipotle-chicken-thighs",
+    "smoked-chicken-quarters-white-sauce",
+    "brisket-style-beef-sandwiches-au-jus"
+  ],
+  "sourceName": "Firehall Meals BBQ Collection",
+  "generatedAt": "2026-05-31T02:29:42.534Z",
+  "contentVersion": 2
+}

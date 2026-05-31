@@ -24,7 +24,7 @@
     "chicken",
     "one_pot",
     "hall_expansion",
-    "hall_expansion_56",
+    "hall_expansion_74",
     "hall_meal",
     "firefighter_meal"
   ],
@@ -106,37 +106,86 @@
   "steps": [
     {
       "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Cajun Chicken and Rice Skillet in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
       "title": "Season and sear chicken",
       "instruction": "Toss chicken thighs with half the Cajun seasoning. Sear skin-side down in a large skillet over medium-high heat 5 minutes per side until golden. Set aside.",
       "minutes": 12,
       "heatLevel": ""
     },
     {
-      "stepNumber": 2,
+      "stepNumber": 4,
       "title": "Cook the trinity",
-      "instruction": "In the same pan, sauté onion, bell pepper, celery, and garlic 6–8 minutes until softened and lightly caramelized at the edges.",
+      "instruction": "In the same pan, sauté onion, bell pepper, celery, and garlic 6–8 minutes until softened and lightly caramelized at the edges. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 8,
       "heatLevel": ""
     },
     {
-      "stepNumber": 3,
+      "stepNumber": 5,
       "title": "Toast rice and build",
       "instruction": "Stir in rice and remaining Cajun seasoning, toast 2 minutes, then add tomato paste and broth. Nestle seared chicken skin-side up into the rice.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 6,
       "title": "Simmer covered",
       "instruction": "Cover and simmer on low 25–30 minutes until rice absorbs liquid and chicken reaches 165°F internal. Avoid stirring so rice stays fluffy.",
       "minutes": 28,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Portion and open the line",
+      "instruction": "Portion Cajun Chicken and Rice Skillet onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Scale for larger halls",
+      "instruction": "When cooking for more than 10 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
       "title": "Rest and serve",
       "instruction": "Rest covered 5 minutes off heat. Fluff rice gently around chicken, scatter green onions, and serve straight from the skillet or transfer to a hotel pan.",
       "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 12,
+      "title": "Final quality check before service",
+      "instruction": "Walk the line once before opening service for Cajun Chicken and Rice Skillet — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
+      "minutes": 4,
       "heatLevel": ""
     }
   ],
@@ -182,6 +231,6 @@
     "hall-burger-bar",
     "pasta-bar-night"
   ],
-  "generatedAt": "2026-05-30T03:14:19.188Z",
+  "generatedAt": "2026-05-31T01:50:00.916Z",
   "contentVersion": 2
 }

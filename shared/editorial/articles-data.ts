@@ -160,7 +160,7 @@ const CORE_EDITORIAL_ARTICLES: EditorialArticle[] = [
       { slug: "five-ingredient-pasta", title: "Garlic Butter Pasta", blurb: "Pantry pasta when the shift needs food now." },
       { slug: "one-pot-chicken-rice", title: "One-Pot Chicken and Rice", blurb: "Minimal dishes, predictable timing." },
       { slug: "chicken-quesadillas", title: "Chicken Quesadillas", blurb: "Handheld line — great when people eat staggered." },
-      { slug: "pad-thai", title: "Hall Rush Pad Thai", blurb: "High flavor, wok-or-skillet fast finish." },
+      { slug: "pad-thai", title: "Firehall Pad Thai", blurb: "High flavor, wok-or-skillet fast finish." },
     ],
     faqs: [
       {

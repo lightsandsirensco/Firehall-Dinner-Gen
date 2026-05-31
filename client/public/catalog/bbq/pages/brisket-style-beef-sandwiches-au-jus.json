@@ -1,0 +1,238 @@
+{
+  "slug": "brisket-style-beef-sandwiches-au-jus",
+  "title": "Brisket-Style Beef Sandwiches",
+  "displayTitle": "Brisket-Style Beef Sandwiches",
+  "seoTitle": "Brisket-Style Beef Sandwiches | Firehall BBQ",
+  "shortDescription": "Brisket vibes without an overnight cook",
+  "subtitle": "Smoky sliced roast, au jus dip, and pickled onions for ten",
+  "category": "bbq_grill_nights",
+  "cuisine": "american",
+  "description": "Chuck roast gets a BBQ-forward rub and smoke, then finishes wrapped until slice-tender. Serve on toasted rolls with a peppery au jus and quick pickled onions.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 210,
+  "prepTime": 25,
+  "difficulty": "medium",
+  "calories": 970,
+  "protein": 97,
+  "carbs": 10,
+  "fats": 63,
+  "tags": [
+    "protein:beef",
+    "format:sandwich",
+    "category:bbq_grill_nights",
+    "bbq",
+    "smoker",
+    "grill",
+    "firehall_bbq_25",
+    "bbq",
+    "beef",
+    "comfort"
+  ],
+  "equipment": [
+    "smoker",
+    "foil",
+    "instant-read thermometer",
+    "sharp knife",
+    "saucepan",
+    "sheet pans"
+  ],
+  "ingredients": [
+    {
+      "name": "beef chuck roast",
+      "quantity": "8",
+      "unit": "lb"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "2.5",
+      "unit": "tbsp"
+    },
+    {
+      "name": "black pepper",
+      "quantity": "2.5",
+      "unit": "tbsp"
+    },
+    {
+      "name": "smoked paprika",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "granulated garlic",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "brown sugar",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "yellow mustard",
+      "quantity": "0.25",
+      "unit": "cup",
+      "notes": "binder"
+    },
+    {
+      "name": "beef broth",
+      "quantity": "6",
+      "unit": "cups"
+    },
+    {
+      "name": "Worcestershire sauce",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "apple cider vinegar",
+      "quantity": "0.5",
+      "unit": "cup"
+    },
+    {
+      "name": "red onion",
+      "quantity": "1",
+      "unit": "whole",
+      "notes": "thin-sliced"
+    },
+    {
+      "name": "sugar",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "cracked black pepper",
+      "quantity": "1",
+      "unit": "tsp"
+    },
+    {
+      "name": "hoagie rolls",
+      "quantity": "10",
+      "unit": "whole"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Brisket-Style Beef Sandwiches in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch beef. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Quick pickle the onions",
+      "instruction": "Heat vinegar with sugar and pepper until dissolved. Pour over sliced onion. Let sit 30 minutes. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 30,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Rub the roast",
+      "instruction": "Coat roast with mustard. Mix salt, pepper, paprika, garlic, and sugar; rub all sides. Heat smoker to 275°F. Plan about 15 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 15,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Smoke to color",
+      "instruction": "Smoke 2–2.5 hours until bark is dark and internal hits ~165°F. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 150,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Wrap and finish",
+      "instruction": "Wrap tightly in foil. Finish at 275°F until probe-tender and 200–205°F, about 60–90 minutes. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 75,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 7,
+      "title": "Au jus",
+      "instruction": "Simmer broth with Worcestershire and a pinch of pepper. Taste and salt lightly; keep hot. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Slice and serve",
+      "instruction": "Rest wrapped 20 minutes. Slice against the grain. Toast rolls. Tonight’s board: sandwiches + au jus cups + pickled onions. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 25,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F for medium beef, 160°F for ground. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Leftovers",
+      "instruction": "Chop into tacos or hash. Reheat slices in hot au jus so they stay juicy. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Chuck slices best after a short rest—don’t rush the knife.",
+    "Use the au jus as the reheat method.",
+    "If slices shred, it’s overcooked—serve as ‘chopped beef sandwiches’."
+  ],
+  "tonightSpread": [
+    "Sliced beef on a tray, au jus in a pot, pickled onions, toasted rolls."
+  ],
+  "leftovers": [
+    "Chopped beef nachos.",
+    "Beef and egg breakfast burritos."
+  ],
+  "whyCrewsLikeIt": "It scratches the brisket itch with a timeline that fits a shift. Slices clean, dips well, and holds hot without turning dry.",
+  "mealPrepNotes": "Smoke early. Once wrapped, it can finish in the oven. Hold the roast wrapped in a warm box, slice right before service.",
+  "substitutions": [
+    "No smoker? Roast covered at 300°F with 1 tsp smoked paprika extra; finish same temps."
+  ],
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 970,
+    "protein": 97,
+    "carbs": 10,
+    "fats": 63,
+    "label": "per serving (hall portion)",
+    "source": "estimated"
+  },
+  "heroImage": "/images/smoker-catalog/brisket-style-beef-sandwiches-au-jus.jpg",
+  "heroImageAlt": "Brisket-Style Beef Sandwiches — crew-sized BBQ spread with visible smoke and bark",
+  "mobileImage": "/images/mobile/smoker-catalog/brisket-style-beef-sandwiches-au-jus.jpg",
+  "thumbImage": "/images/thumbs/smoker-catalog/brisket-style-beef-sandwiches-au-jus.jpg",
+  "railImage": "/images/rails/smoker-catalog/brisket-style-beef-sandwiches-au-jus.jpg",
+  "realismScore": 88,
+  "firefighterScore": 90,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "brisket-style beef sandwiches",
+    "brisket style beef sandwiches au jus",
+    "beef",
+    "American",
+    "sandwich",
+    "bbq",
+    "firehall"
+  ],
+  "relatedSlugs": [
+    "carolina-vinegar-pulled-pork",
+    "honey-chipotle-chicken-thighs",
+    "smoked-chicken-quarters-white-sauce",
+    "hot-honey-grilled-sausage-peppers"
+  ],
+  "sourceName": "Firehall Meals BBQ Collection",
+  "generatedAt": "2026-05-31T02:29:42.527Z",
+  "contentVersion": 2
+}

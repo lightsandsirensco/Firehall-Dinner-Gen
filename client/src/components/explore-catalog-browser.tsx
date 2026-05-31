@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { Clock, Flame } from "lucide-react";
+import { Clock } from "lucide-react";
 import {
   APPROVED_CATALOG_COOK_TIME_LABELS,
   APPROVED_CATALOG_PRIMARY_LABELS,
@@ -8,6 +8,7 @@ import {
   type ApprovedCatalogCookTimeBucket,
   type ApprovedCatalogPrimaryFilter,
 } from "@shared/approved-catalog";
+import { MissingRecipeImagePlaceholder } from "@/components/missing-recipe-image-placeholder";
 import { cn } from "@/lib/utils";
 import { FoodImage } from "@/components/mobile/food-image";
 import { FilterChip, FilterChipScroller } from "@/components/mobile/filter-chips";
@@ -49,12 +50,7 @@ const SORT_LABELS: Record<CatalogSortMode, string> = {
 };
 
 function CatalogImagePlaceholder({ title }: { title: string }) {
-  return (
-    <div className="relative flex h-full w-full flex-col items-center justify-center gap-2 overflow-hidden bg-gradient-to-br from-zinc-900 via-zinc-950 to-black">
-      <Flame className="h-9 w-9 text-primary/30" aria-hidden />
-      <p className="line-clamp-2 px-3 text-center text-[11px] font-medium text-white/50">{title}</p>
-    </div>
-  );
+  return <MissingRecipeImagePlaceholder title={title} />;
 }
 
 function ApprovedCatalogCard({
@@ -65,7 +61,7 @@ function ApprovedCatalogCard({
   onClick: () => void;
 }) {
   const [imgFailed, setImgFailed] = useState(false);
-  const imageSrc = entry.thumbImage || entry.heroImage;
+  const imageSrc = entry.heroImage;
   const showImage = Boolean(imageSrc) && !imgFailed;
 
   return (

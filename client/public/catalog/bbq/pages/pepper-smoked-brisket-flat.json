@@ -1,0 +1,194 @@
+{
+  "slug": "pepper-smoked-brisket-flat",
+  "title": "Pepper-Crusted Smoked Brisket Flat",
+  "displayTitle": "Pepper-Crusted Smoked Brisket Flat",
+  "seoTitle": "Pepper-Crusted Smoked Brisket Flat | Firehall BBQ",
+  "shortDescription": "Texas-style pepper bark on a flat that slices clean and holds on the line",
+  "subtitle": "Lean flat with bold pepper bark sliced thin for ten",
+  "category": "bbq_grill_nights",
+  "cuisine": "american",
+  "description": "Adapted from classic Texas pepper brisket flat tradition (BBQ Pit Boys, Weber): a trimmed flat gets equal parts salt and coarse pepper, smokes until 203°F, and slices thin for sandwiches or plates.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 420,
+  "prepTime": 30,
+  "difficulty": "hard",
+  "calories": 1083,
+  "protein": 101,
+  "carbs": 32,
+  "fats": 64,
+  "tags": [
+    "protein:beef",
+    "format:bbq",
+    "category:bbq_grill_nights",
+    "bbq",
+    "smoker",
+    "grill",
+    "firehall_bbq_25",
+    "bbq",
+    "beef",
+    "sandwich"
+  ],
+  "equipment": [
+    "smoker",
+    "butcher paper",
+    "instant-read thermometer",
+    "slicing knife",
+    "cooler",
+    "hotel pan"
+  ],
+  "ingredients": [
+    {
+      "name": "whole brisket flat",
+      "quantity": "8",
+      "unit": "lb",
+      "notes": "trimmed"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "0.33",
+      "unit": "cup"
+    },
+    {
+      "name": "coarse black pepper",
+      "quantity": "0.33",
+      "unit": "cup"
+    },
+    {
+      "name": "garlic powder",
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "yellow mustard",
+      "quantity": "2",
+      "unit": "tbsp",
+      "notes": "binder"
+    },
+    {
+      "name": "beef broth",
+      "quantity": "2",
+      "unit": "cups",
+      "notes": "for holding"
+    },
+    {
+      "name": "pickle chips",
+      "quantity": "2",
+      "unit": "cups"
+    },
+    {
+      "name": "white bread",
+      "quantity": "20",
+      "unit": "slices"
+    },
+    {
+      "name": "raw white onion",
+      "quantity": "1",
+      "unit": "whole",
+      "notes": "thin-sliced"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Trim and season",
+      "instruction": "Trim fat cap to 1/4 inch. Coat flat with mustard, then pack evenly with salt, pepper, and garlic powder. Rest 30 minutes while smoker preheats to 225°F.",
+      "minutes": 40,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Smoke the flat",
+      "instruction": "Place flat fat-side up at 225°F with oak or post oak. Smoke until internal temp reaches 165°F and bark is set, about 4–5 hours.",
+      "minutes": 240,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Wrap through the stall",
+      "instruction": "Wrap in butcher paper when bark color looks right and internal temp stalls near 165°F. Continue until probe-tender at 203°F, about 2–3 hours.",
+      "minutes": 150,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Rest the brisket",
+      "instruction": "Rest wrapped flat at least 45 minutes in a cooler so juices redistribute. Unwrap and slice against the grain into 1/4-inch slices.",
+      "minutes": 45,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Hold with broth",
+      "instruction": "Toss sliced beef lightly with warm broth. Transfer to hotel pan, cover with foil, hold at 170°F until service.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Serve Texas-style",
+      "instruction": "Serve on buttered white bread with pickles and raw onion, or on platters for plate service.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Leftovers",
+      "instruction": "Chop trimmings into chopped-beef sandwiches with extra broth. Reheat slices covered at 325°F until 165°F.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Flat dries faster than point—pull at 203°F, not higher.",
+    "Slice only what you need for first service; keep remainder whole until second pass.",
+    "If time is tight, finish wrapped flat in a 275°F oven while monitoring probe tenderness."
+  ],
+  "tonightSpread": [
+    "Thin-sliced brisket on butcher paper with white bread, pickles, and onion.",
+    "Simple pinto beans for a classic smoke-night plate."
+  ],
+  "leftovers": [
+    "Chop into chili for the next cold-night pot.",
+    "Reheat in broth on toasted rolls with horseradish mayo."
+  ],
+  "whyCrewsLikeIt": "Flat is leaner than point but still delivers smoke-night credibility. Thin slices stretch across the hall and reheat without turning greasy.",
+  "mealPrepNotes": "Trim early. Flat can stall for hours—wrap when bark color is right. Hold sliced beef at 170°F with broth; never above 175°F.",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 1083,
+    "protein": 101,
+    "carbs": 32,
+    "fats": 64,
+    "label": "per serving (hall portion)",
+    "source": "estimated"
+  },
+  "heroImage": "/images/smoker-catalog/pepper-smoked-brisket-flat.jpg",
+  "heroImageAlt": "Pepper-Crusted Smoked Brisket Flat — crew-sized BBQ spread with visible smoke and bark",
+  "mobileImage": "/images/mobile/smoker-catalog/pepper-smoked-brisket-flat.jpg",
+  "thumbImage": "/images/thumbs/smoker-catalog/pepper-smoked-brisket-flat.jpg",
+  "railImage": "/images/rails/smoker-catalog/pepper-smoked-brisket-flat.jpg",
+  "realismScore": 88,
+  "firefighterScore": 90,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "pepper-crusted smoked brisket flat",
+    "pepper smoked brisket flat",
+    "beef",
+    "American",
+    "bbq",
+    "firehall",
+    "brisket flat",
+    "pepper crust",
+    "texas brisket",
+    "thin sliced"
+  ],
+  "relatedSlugs": [
+    "texas-central-brisket-crew",
+    "firehall-burnt-ends-platter",
+    "brisket-style-beef-sandwiches-au-jus"
+  ],
+  "sourceName": "Firehall Meals BBQ Collection",
+  "generatedAt": "2026-05-31T02:29:42.529Z",
+  "contentVersion": 2
+}

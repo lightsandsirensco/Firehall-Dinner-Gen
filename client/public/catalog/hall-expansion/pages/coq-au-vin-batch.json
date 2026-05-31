@@ -1,0 +1,231 @@
+{
+  "slug": "coq-au-vin-batch",
+  "title": "Coq au Vin Batch",
+  "displayTitle": "Coq au Vin Batch",
+  "seoTitle": "Coq au Vin Batch | Firefighter Meal",
+  "shortDescription": "Red wine-braised chicken with mushrooms and lardons for ten",
+  "subtitle": "Red wine-braised chicken with mushrooms and lardons for ten",
+  "category": "hall_expansion",
+  "cuisine": "french",
+  "description": "Chicken legs and thighs braise in red wine with bacon, mushrooms, pearl onions, and thyme until the sauce is glossy and meat falls from the bone. Serve with boiled potatoes and parsley.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 75,
+  "prepTime": 35,
+  "difficulty": "medium",
+  "calories": 510,
+  "protein": 40,
+  "carbs": 32,
+  "fats": 22,
+  "tags": [
+    "protein:chicken",
+    "format:braise",
+    "category:crew_feeders",
+    "hall_expansion",
+    "crew_feeders",
+    "french",
+    "chicken",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Dutch oven",
+    "Large pot",
+    "Instant-read thermometer",
+    "Tongs",
+    "Slotted spoon"
+  ],
+  "ingredients": [
+    {
+      "name": "chicken legs and thighs",
+      "quantity": "6",
+      "unit": "lb",
+      "notes": "bone-in",
+      "group": "Main"
+    },
+    {
+      "name": "thick-cut bacon",
+      "quantity": "1",
+      "unit": "lb",
+      "notes": "cut into lardons",
+      "group": "Braise"
+    },
+    {
+      "name": "cremini mushrooms",
+      "quantity": "1.5",
+      "unit": "lb",
+      "notes": "quartered",
+      "group": "Braise"
+    },
+    {
+      "name": "pearl onions",
+      "quantity": "1",
+      "unit": "lb",
+      "notes": "peeled",
+      "group": "Braise"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "4",
+      "unit": "cloves",
+      "notes": "smashed",
+      "group": "Braise"
+    },
+    {
+      "name": "red wine",
+      "quantity": "3",
+      "unit": "cups",
+      "notes": "dry",
+      "group": "Braise"
+    },
+    {
+      "name": "chicken broth",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Braise"
+    },
+    {
+      "name": "tomato paste",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Braise"
+    },
+    {
+      "name": "fresh thyme",
+      "quantity": "4",
+      "unit": "sprigs",
+      "group": "Herbs"
+    },
+    {
+      "name": "Yukon Gold potatoes",
+      "quantity": "4",
+      "unit": "lb",
+      "notes": "halved",
+      "group": "Side"
+    },
+    {
+      "name": "fresh parsley",
+      "quantity": "0.33",
+      "unit": "cup",
+      "notes": "chopped",
+      "group": "Finish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Coq au Vin Batch in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Render bacon and brown chicken",
+      "instruction": "Cook bacon until crisp, set aside. Sear seasoned chicken in bacon fat until golden on all sides, then set aside. Cook until char marks are visible and the thickest piece reads 165°F on an instant-read thermometer. Plan about 18 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 18,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Build the braise base",
+      "instruction": "Sauté mushrooms and pearl onions in the same pot 8 minutes. Add garlic and tomato paste, cook 2 minutes. Target 165°F at the thickest part before moving to the next batch. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Add wine and simmer",
+      "instruction": "Pour in wine, scrape fond, and reduce 5 minutes. Add broth, thyme, chicken, and bacon. Cover and braise at 325°F or simmer stovetop 60–70 minutes until tender. Target oven/smoker temperature: 325°F.",
+      "minutes": 65,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Boil potatoes",
+      "instruction": "Simmer halved potatoes in salted water until fork-tender, 18–20 minutes. Drain and toss with butter, salt, and parsley. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 20,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Portion and open the line",
+      "instruction": "Portion Coq au Vin Batch onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Finish and plate",
+      "instruction": "Skim excess fat from sauce. Portion chicken and sauce over potatoes, scatter bacon and parsley. Plan about 10 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Beef bouillon cube adds depth if wine flavor feels too sharp.",
+    "A beurre manié of butter and flour thickens sauce at the end if needed.",
+    "Label wine bottles in the kitchen—braising wine disappears fast in a hall."
+  ],
+  "tonightSpread": [
+    "Coq au vin with buttered potatoes and crusty baguette.",
+    "Simple green salad with Dijon vinaigrette."
+  ],
+  "leftovers": [
+    "Pull meat for wine-braised chicken sandwiches on baguette.",
+    "Reduce sauce and serve over pappardelle—different format, same braise."
+  ],
+  "whyCrewsLikeIt": "Coq au vin sounds fancy but it is just smart one-pot cooking—wine, bacon, and time do the work while you prep the rest of the meal. Crews respect a hall that can pull off real French comfort.",
+  "mealPrepNotes": "Use drinkable wine, not cooking wine. Bacon can be rendered ahead. Braise improves next day if you have leftover capacity.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 510,
+    "protein": 40,
+    "carbs": 32,
+    "fats": 22,
+    "label": "~510 cal/serving · 40g protein · 3g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/coq-au-vin-batch.jpg",
+  "heroImageAlt": "Coq au Vin Batch — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/coq-au-vin-batch.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/coq-au-vin-batch.jpg",
+  "railImage": "/images/rails/hall-expansion/coq-au-vin-batch.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "coq au vin batch",
+    "crew feeders"
+  ],
+  "relatedSlugs": [
+    "shawarma-bar-night",
+    "fajita-bar-night",
+    "hall-burger-bar",
+    "pasta-bar-night"
+  ],
+  "generatedAt": "2026-05-31T01:50:00.916Z",
+  "contentVersion": 2
+}

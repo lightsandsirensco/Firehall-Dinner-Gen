@@ -74,35 +74,59 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Heat the oven",
-      "instruction": "Heat oven to 350°F. Line a rimmed sheet pan with parchment. Cook sausage patties until done and fold eggs into thin rectangles roughly the size of each roll.",
-      "minutes": 0,
-      "tempF": 350
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Breakfast Sliders in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Slice the roll block",
-      "instruction": "Without separating individual rolls, slice the connected block horizontally into tops and bottoms. Keep the shape intact so assembly stays fast.",
-      "minutes": 5
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch Sausage. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
     },
     {
       "stepNumber": 3,
-      "title": "Layer the sliders",
-      "instruction": "Place bottom halves on the pan. Add sausage, egg, and cheese to each roll. Cap with tops and press gently so stacks stay level.",
-      "minutes": 10
+      "title": "Heat the oven",
+      "instruction": "Heat oven to 350°F. Line a rimmed sheet pan with parchment. Cook sausage patties until done and fold eggs into thin rectangles roughly the size of each roll. Allow 10–15 minutes for mise en place before heat goes on. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
+      "minutes": 0,
+      "heatLevel": ""
     },
     {
       "stepNumber": 4,
-      "title": "Glaze and bake",
-      "instruction": "Whisk melted butter, maple syrup, and Dijon. Brush generously over roll tops. Bake until cheese melts and tops turn golden and sticky.",
-      "minutes": 18,
-      "tempF": 350
+      "title": "Slice the roll block",
+      "instruction": "Without separating individual rolls, slice the connected block horizontally into tops and bottoms. Keep the shape intact so assembly stays fast. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 5,
+      "heatLevel": ""
     },
     {
       "stepNumber": 5,
+      "title": "Layer the sliders",
+      "instruction": "Place bottom halves on the pan. Add sausage, egg, and cheese to each roll. Cap with tops and press gently so stacks stay level. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Glaze and bake",
+      "instruction": "Whisk melted butter, maple syrup, and Dijon. Brush generously over roll tops. Bake until cheese melts and tops turn golden and sticky. Bake until the center reaches a safe internal temp (165°F) and edges look set — use a thermometer at the thickest point. Plan about 18 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 18,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
       "title": "Rest and pull apart",
-      "instruction": "Rest 5 minutes, then cut along roll seams with a sharp knife or bench scraper. Serve warm from the pan or transfer to a hotel pan for the line.",
-      "minutes": 5
+      "instruction": "Rest 5 minutes, then cut along roll seams with a sharp knife or bench scraper. Serve warm from the pan or transfer to a hotel pan for the line. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 5,
+      "heatLevel": ""
     }
   ],
   "nutrition": {
@@ -142,8 +166,27 @@
   "heroImage": "/images/breakfast/breakfast-sliders.jpg",
   "thumbImage": "/images/thumbs/breakfast/breakfast-sliders.jpg",
   "imageAlt": "Sheet pan of maple-glazed breakfast sliders with sausage, egg, and cheese",
-  "publishedAt": "2026-05-30T03:14:16.260Z",
-  "updatedAt": "2026-05-30T03:14:16.260Z",
+  "publishedAt": "2026-05-30T21:22:29.756Z",
+  "updatedAt": "2026-05-31T12:54:36.759Z",
   "readMinutes": 7,
-  "seoTitle": "Breakfast Sliders | Firehall Breakfast"
+  "seoTitle": "Breakfast Sliders | Firehall Breakfast",
+  "mobileImage": "/images/mobile/breakfast/breakfast-sliders.jpg",
+  "railImage": "/images/rails/breakfast/breakfast-sliders.jpg",
+  "proTips": [
+    "Cook all sausage and egg sheets before touching the rolls—cold protein slows the bake and steams the bread.",
+    "Brush glaze right before the oven; a second light brush at the 10-minute mark adds shine without sogginess.",
+    "Cut and serve from the sheet pan at the line so the crew pulls their own portion without a bottleneck."
+  ],
+  "tonightSpread": [
+    "Plate Breakfast Sliders with sides in separate pans so the crew can mix portions.",
+    "Keep hot items on one side of the table and cold on the other — eggs stay hot, fruit stays cold.",
+    "Line up Breakfast Sliders on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+  ],
+  "equipment": [
+    "Large sheet trays",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "mealPrepNotes": "Prep mise en place before the shift — Breakfast Sliders runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
 }

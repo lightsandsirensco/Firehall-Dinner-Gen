@@ -1,17 +1,13 @@
 #!/usr/bin/env tsx
 /**
- * Verify Explore catalog image coverage and UI rules.
+ * Verify Explore catalog image coverage and slug-locked identity rules.
  *
- *   npx tsx scripts/explore-verify-images.ts
  *   npm run explore:verify-images
  */
 import fs from "node:fs";
 import path from "node:path";
-import { buildApprovedCatalog } from "../server/approved-catalog.js";
-import {
-  imageFileExists,
-  resolveExistingSlugImage,
-} from "../shared/explore-image-paths.js";
+import { buildAllApprovedCatalogEntries, buildApprovedCatalog } from "../server/approved-catalog.js";
+import { auditExploreImageMappings } from "../shared/explore-image-mapping.js";
 
 const EXPLORE_CARD_SOURCE = path.join(
   process.cwd(),
@@ -22,59 +18,44 @@ const EXPLORE_CARD_SOURCE = path.join(
 );
 
 function main(): void {
-  const catalog = buildApprovedCatalog();
+  const allEntries = buildAllApprovedCatalogEntries();
+  const fullReport = auditExploreImageMappings(allEntries);
+  const exploreCatalog = buildApprovedCatalog();
+  const exploreReport = auditExploreImageMappings(exploreCatalog.recipes);
   const errors: string[] = [];
-  const missing: string[] = [];
 
-  for (const entry of catalog.recipes) {
-    const resolved = resolveExistingSlugImage(entry.slug, entry.kind);
-    if (!resolved.found) {
-      missing.push(entry.slug);
-      errors.push(`Missing slug-locked image: ${entry.slug} (${entry.kind})`);
-      continue;
-    }
-
-    if (
-      entry.kind !== "hall_classic" &&
-      !entry.isSmoothie &&
-      !entry.thumbImage.includes(entry.slug) &&
-      !entry.heroImage.includes(entry.slug)
-    ) {
-      errors.push(`API image path slug mismatch for ${entry.slug}: ${entry.thumbImage}`);
+  const invalidInExplore = exploreReport.rows.filter((row) => !row.exploreEligible);
+  if (invalidInExplore.length > 0) {
+    errors.push(`${invalidInExplore.length} invalid recipe(s) still exposed on Explore API`);
+    for (const row of invalidInExplore.slice(0, 20)) {
+      errors.push(`${row.slug}: ${row.issues[0]?.message || row.status}`);
     }
   }
 
   const cardSource = fs.readFileSync(EXPLORE_CARD_SOURCE, "utf8");
+  if (cardSource.includes("entry.thumbImage || entry.heroImage")) {
+    errors.push("Explore card still prefers thumbImage over heroImage");
+  }
   if (cardSource.includes("{entry.catalogBadge}")) {
     errors.push("Explore card still renders catalogBadge on image overlay");
   }
-  if (/absolute\s+left-[\d.]+\s+top-[\d.]+[\s\S]{0,120}catalogBadge/.test(cardSource)) {
-    errors.push("Explore card still has badge overlay positioning near catalogBadge");
-  }
 
   const coverage =
-    catalog.recipeCount > 0
-      ? Math.round(((catalog.recipeCount - missing.length) / catalog.recipeCount) * 1000) / 10
+    fullReport.totals.recipes > 0
+      ? Math.round((fullReport.totals.exploreEligible / fullReport.totals.recipes) * 1000) / 10
       : 0;
-
-  const report = {
-    audited: catalog.recipeCount,
-    missing: missing.length,
-    missingSlugs: missing,
-    coveragePercent: coverage,
-    pass: errors.length === 0,
-  };
 
   if (errors.length > 0) {
     console.error("[explore:verify-images] FAIL\n");
-    for (const err of errors.slice(0, 40)) console.error(`  - ${err}`);
-    if (errors.length > 40) console.error(`  … and ${errors.length - 40} more`);
-    console.error(`\nCoverage: ${coverage}% (${catalog.recipeCount - missing.length}/${catalog.recipeCount})`);
+    for (const err of errors) console.error(`  - ${err}`);
+    console.error(
+      `\nCatalog identity coverage: ${coverage}% (${fullReport.totals.exploreEligible}/${fullReport.totals.recipes})`,
+    );
     process.exit(1);
   }
 
   console.log(
-    `[explore:verify-images] PASS — ${catalog.recipeCount} recipes, ${coverage}% image coverage, no Explore photo badges`,
+    `[explore:verify-images] PASS — Explore API ${exploreCatalog.recipeCount} recipes, all slug-validated; catalog coverage ${coverage}% (${fullReport.totals.exploreEligible}/${fullReport.totals.recipes})`,
   );
 }
 

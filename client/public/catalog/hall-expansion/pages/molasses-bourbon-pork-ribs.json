@@ -25,7 +25,7 @@
     "smoker",
     "pork",
     "hall_expansion",
-    "hall_expansion_56",
+    "hall_expansion_74",
     "hall_meal",
     "firefighter_meal"
   ],
@@ -103,36 +103,78 @@
   "steps": [
     {
       "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Molasses Bourbon Pork Ribs in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch pork. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
       "title": "Prep and rub the racks",
       "instruction": "Remove silver skin from the bone side of each rack. Coat both sides with brown sugar, salt, smoked paprika, garlic powder, and black pepper. Let sit 20 minutes while smoker preheats.",
       "minutes": 25,
       "heatLevel": ""
     },
     {
-      "stepNumber": 2,
+      "stepNumber": 4,
       "title": "Smoke the ribs",
       "instruction": "Heat smoker to 275°F with fruit or hickory wood. Place ribs bone-side down and smoke 2 hours, spritzing with apple juice every 45 minutes. Target oven/smoker temperature: 275°F.",
       "minutes": 120,
       "heatLevel": ""
     },
     {
-      "stepNumber": 3,
+      "stepNumber": 5,
       "title": "Wrap for tenderness",
       "instruction": "Lay each rack on foil, add 2 tablespoons apple juice, wrap tight, and return to smoker until meat pulls back from bones and internal temp hits 195°F, about 1.5–2 hours. Target oven/smoker temperature: 275°F.",
       "minutes": 105,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 6,
       "title": "Glaze and finish",
       "instruction": "Unwrap ribs, brush with molasses-bourbon glaze mixed with BBQ sauce, and smoke uncovered 20–30 minutes until sticky and lightly charred at the edges. Target oven/smoker temperature: 275°F.",
       "minutes": 25,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F with a 3-minute rest. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Portion and open the line",
+      "instruction": "Portion Molasses Bourbon Pork Ribs onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Scale for larger halls",
+      "instruction": "When cooking for more than 10 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
       "title": "Rest and portion",
-      "instruction": "Rest racks 10 minutes, slice into three-bone sections, and pile on platters. Serve with extra glaze and wet wipes at the line.",
+      "instruction": "Rest racks 10 minutes, slice into three-bone sections, and pile on platters. Serve with extra glaze and wet wipes at the line. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 15,
       "heatLevel": ""
     }
@@ -176,9 +218,9 @@
   "relatedSlugs": [
     "smoked-turkey-breast",
     "smoked-meatloaf",
-    "smoked-mac-and-cheese",
-    "pork-belly-burnt-ends"
+    "pork-belly-burnt-ends",
+    "smoked-sausage-platter"
   ],
-  "generatedAt": "2026-05-30T03:14:19.188Z",
+  "generatedAt": "2026-05-31T01:50:00.916Z",
   "contentVersion": 2
 }

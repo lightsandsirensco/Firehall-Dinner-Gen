@@ -135,10 +135,10 @@ export const TITLE_PATH_ACCURACY_RULES: TitlePathRule[] = [
 ];
 
 const FOOD_REALISM_RED_FLAGS =
-  /\b(ai.?slop|fantasy|surreal|fine.?dining|molecular|gourmet.?plating|macro.?only|extreme.?close|floating.?ingredient|waxy|stock.?photo|shutterstock|generic.?food)\b/i;
+  /\b(ai.?slop|fantasy|surreal|fine.?dining|molecular|gourmet.?plating|macro.?only|extreme.?close|floating.?ingredient|waxy|stock.?photo|shutterstock|generic.?food|restaurant.?marketing|influencer|studio.?seamless|white.?background)\b/i;
 
 const HEARTY_POSITIVE =
-  /\b(firehall|crew|cast.?iron|skillet|sheet.?pan|platter|hall|station|hearty|family.?style)\b/i;
+  /\b(firehall|station.?kitchen|hall.?kitchen|crew|cast.?iron|skillet|sheet.?pan|hotel.?pan|platter|steam.?table|prep.?table|serving.?tray|commercial.?kitchen|stainless)\b/i;
 
 export function auditTitlePathKeywords(
   title: string,

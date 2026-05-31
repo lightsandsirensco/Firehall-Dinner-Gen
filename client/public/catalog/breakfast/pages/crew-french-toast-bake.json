@@ -53,29 +53,66 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Heat the oven",
-      "instruction": "Heat oven to 375°F. Grease a deep 9x13 pan.",
-      "minutes": 0,
-      "tempF": 375
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Crew French Toast Bake in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Build the pan",
-      "instruction": "Spread bread cubes evenly. Whisk eggs, milk, sugar, cinnamon, vanilla, and melted butter; pour over bread. Press gently so all cubes soak.",
-      "minutes": 10
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch Eggs. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
     },
     {
       "stepNumber": 3,
-      "title": "Bake until set",
-      "instruction": "Bake until the center is set and the top is golden. If the center jiggles like loose custard, bake 5 more minutes.",
-      "minutes": 35,
-      "tempF": 375
+      "title": "Heat the oven",
+      "instruction": "Heat oven to 375°F. Grease a deep 9x13 pan. Allow 10–15 minutes for mise en place before heat goes on. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 0,
+      "heatLevel": ""
     },
     {
       "stepNumber": 4,
+      "title": "Build the pan",
+      "instruction": "Spread bread cubes evenly. Whisk eggs, milk, sugar, cinnamon, vanilla, and melted butter; pour over bread. Press gently so all cubes soak. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Bake until set",
+      "instruction": "Bake until the center is set and the top is golden. If the center jiggles like loose custard, bake 5 more minutes. Bake until the center reaches a safe internal temp (165°F) and edges look set — use a thermometer at the thickest point. Plan about 35 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 35,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 8,
+      "title": "Portion and open the line",
+      "instruction": "Portion Crew French Toast Bake onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
       "title": "Rest and slice",
-      "instruction": "Rest 10 minutes for clean squares. Serve with maple syrup.",
-      "minutes": 10
+      "instruction": "Rest 10 minutes for clean squares. Serve with maple syrup. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 10,
+      "heatLevel": ""
     }
   ],
   "nutrition": {
@@ -115,8 +152,27 @@
   "heroImage": "/images/breakfast/crew-french-toast-bake.jpg",
   "thumbImage": "/images/thumbs/breakfast/crew-french-toast-bake.jpg",
   "imageAlt": "Warm station-kitchen breakfast: Crew French Toast Bake",
-  "publishedAt": "2026-05-30T03:14:16.261Z",
-  "updatedAt": "2026-05-30T20:03:08.209Z",
+  "publishedAt": "2026-05-30T21:22:29.758Z",
+  "updatedAt": "2026-05-31T12:54:36.769Z",
   "readMinutes": 6,
-  "seoTitle": "Crew French Toast Bake | Firehall Breakfast"
+  "seoTitle": "Crew French Toast Bake | Firehall Breakfast",
+  "mobileImage": "/images/mobile/breakfast/crew-french-toast-bake.jpg",
+  "railImage": "/images/rails/breakfast/crew-french-toast-bake.jpg",
+  "proTips": [
+    "Assign one cook to the hot surface and one to assembly. Keep the line moving; don’t crowd the griddle.",
+    "Set a warm holding zone (oven 200°F or covered hotel pan) so staggered eaters still get a hot plate.",
+    "Run a quick call-proof check: anything crispy stays uncovered; anything soft stays covered."
+  ],
+  "tonightSpread": [
+    "Plate Crew French Toast Bake with sides in separate pans so the crew can mix portions.",
+    "Keep hot items on one side of the table and cold on the other — eggs stay hot, fruit stays cold.",
+    "Line up Crew French Toast Bake on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+  ],
+  "equipment": [
+    "Large sheet trays",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "mealPrepNotes": "Prep mise en place before the shift — Crew French Toast Bake runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
 }

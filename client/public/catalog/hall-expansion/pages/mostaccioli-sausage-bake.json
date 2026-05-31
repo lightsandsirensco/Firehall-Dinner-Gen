@@ -24,7 +24,7 @@
     "pasta",
     "comfort",
     "hall_expansion",
-    "hall_expansion_56",
+    "hall_expansion_74",
     "hall_meal",
     "firefighter_meal"
   ],
@@ -103,36 +103,57 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Par-cook the pasta",
-      "instruction": "Boil ziti in salted water until just shy of al dente, about 8 minutes. Drain and toss with a teaspoon of oil.",
-      "minutes": 10,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Baked Mostaccioli with Sausage in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Brown the sausage",
-      "instruction": "Cook sausage with garlic over medium-high heat 10 minutes, breaking into crumbles until browned. Stir in marinara and simmer 5 minutes.",
-      "minutes": 15,
-      "heatLevel": ""
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch pork. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
     },
     {
       "stepNumber": 3,
-      "title": "Mix the cheese layer",
-      "instruction": "Combine ricotta, half the mozzarella, Parmesan, egg, basil, and red pepper flakes until smooth.",
-      "minutes": 5,
+      "title": "Par-cook the pasta",
+      "instruction": "Boil ziti in salted water until just shy of al dente, about 8 minutes. Drain and toss with a teaspoon of oil. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 4,
-      "title": "Assemble and bake",
-      "instruction": "Toss ziti with sausage sauce, dollop ricotta mix throughout, top with remaining mozzarella. Cover and bake at 375°F 25 minutes, uncover and bake 15 more until golden. Target oven/smoker temperature: 375°F.",
-      "minutes": 40,
+      "title": "Brown the sausage",
+      "instruction": "Cook sausage with garlic over medium-high heat 10 minutes, breaking into crumbles until browned. Stir in marinara and simmer 5 minutes. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 15,
       "heatLevel": ""
     },
     {
       "stepNumber": 5,
+      "title": "Mix the cheese layer",
+      "instruction": "Combine ricotta, half the mozzarella, Parmesan, egg, basil, and red pepper flakes until smooth. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Assemble and bake",
+      "instruction": "Toss ziti with sausage sauce, dollop ricotta mix throughout, top with remaining mozzarella. Cover and bake at 375°F 25 minutes, uncover and bake 15 more until golden. Target oven/smoker temperature: 375°F. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 40,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F with a 3-minute rest. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
       "title": "Rest and portion",
-      "instruction": "Rest 10 minutes so cheese sets. Cut into ten portions and serve with extra marinara at the line.",
+      "instruction": "Rest 10 minutes so cheese sets. Cut into ten portions and serve with extra marinara at the line. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 10,
       "heatLevel": ""
     }
@@ -179,6 +200,6 @@
     "hall-burger-bar",
     "pasta-bar-night"
   ],
-  "generatedAt": "2026-05-30T03:14:19.188Z",
+  "generatedAt": "2026-05-31T01:50:00.916Z",
   "contentVersion": 2
 }

@@ -1,7 +1,7 @@
 {
   "slug": "mediterranean-chicken-farro-bowls",
-  "title": "Mediterranean Chicken Farro Bowls",
-  "displayTitle": "Mediterranean Chicken Farro Bowls",
+  "title": "Smoky Chicken Bowls",
+  "displayTitle": "Smoky Chicken Bowls",
   "seoTitle": "Mediterranean Chicken Farro Bowls | Firefighter Meal",
   "shortDescription": "Herb chicken with farro, cucumber, and hummus for ten",
   "subtitle": "Herb chicken with farro, cucumber, and hummus for ten",
@@ -25,7 +25,7 @@
     "healthy",
     "chicken",
     "hall_expansion",
-    "hall_expansion_56",
+    "hall_expansion_74",
     "hall_meal",
     "firefighter_meal"
   ],
@@ -107,36 +107,64 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Cook the farro",
-      "instruction": "Simmer farro in salted water 25–30 minutes until chewy-tender. Drain and toss with 2 tablespoons olive oil.",
-      "minutes": 30,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Smoky Chicken Bowls in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Cook the farro",
+      "instruction": "Simmer farro in salted water 25–30 minutes until chewy-tender. Drain and toss with 2 tablespoons olive oil. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 30,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
       "title": "Roast the chicken",
       "instruction": "Coat chicken with lemon juice, oregano, salt, pepper, and 2 tablespoons olive oil. Roast at 425°F 22–25 minutes until internal temp reaches 165°F. Slice. Target oven/smoker temperature: 425°F.",
       "minutes": 25,
       "heatLevel": ""
     },
     {
-      "stepNumber": 3,
+      "stepNumber": 5,
       "title": "Prep the vegetables",
-      "instruction": "Combine cucumber, tomatoes, and olives. Dress lightly with remaining olive oil and lemon juice.",
+      "instruction": "Combine cucumber, tomatoes, and olives. Dress lightly with remaining olive oil and lemon juice. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 6,
       "title": "Build the bowl line",
-      "instruction": "Set out farro, sliced chicken, vegetable mix, hummus, and feta in labeled containers.",
+      "instruction": "Set out farro, sliced chicken, vegetable mix, hummus, and feta in labeled containers. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
       "title": "Assemble and serve",
-      "instruction": "Portion farro into bowls, top with chicken, vegetables, dollop of hummus, and crumbled feta.",
+      "instruction": "Portion farro into bowls, top with chicken, vegetables, dollop of hummus, and crumbled feta. Plan about 8 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 8,
       "heatLevel": ""
     }
@@ -183,6 +211,6 @@
     "hall-burger-bar",
     "pasta-bar-night"
   ],
-  "generatedAt": "2026-05-30T03:14:19.188Z",
+  "generatedAt": "2026-05-31T01:50:00.916Z",
   "contentVersion": 2
 }

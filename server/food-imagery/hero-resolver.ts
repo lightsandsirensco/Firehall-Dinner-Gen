@@ -1,3 +1,4 @@
+import { isImageReuseAndFallbacksDisabled } from "../../shared/image-reuse-policy.js";
 import { getClassicHallMeal } from "../../shared/classic-hall-meals.js";
 import { isFirehallOwnedHeroUrl } from "../../shared/food-imagery/paths.js";
 import {
@@ -52,13 +53,13 @@ export async function resolveFoodImageryHero(
   }
 
   const meta = getClassicHallMeal(recipeKey);
-  if (meta?.heroImagePath?.trim()) {
+  if (!isImageReuseAndFallbacksDisabled() && meta?.heroImagePath?.trim()) {
     const ok = accept(meta.heroImagePath.trim(), "pinned");
     if (ok) return ok;
   }
 
   const fb = fallback?.trim() || "";
-  if (fb && isFirehallOwnedHeroUrl(fb)) {
+  if (!isImageReuseAndFallbacksDisabled() && fb && isFirehallOwnedHeroUrl(fb)) {
     const ok = accept(fb, "pinned");
     if (ok) return ok;
   }

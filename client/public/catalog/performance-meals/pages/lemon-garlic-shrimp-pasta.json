@@ -92,36 +92,57 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Boil pasta in salted water",
-      "instruction": "Bring a large pot of water to a rolling boil with 2 tbsp salt. Cook linguine 9–11 minutes until al dente with a slight firm bite at the center.",
-      "minutes": 11,
-      "heatLevel": "high"
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Lemon Garlic Shrimp Pasta in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Sear shrimp quickly",
-      "instruction": "Heat olive oil in two large skillets over medium-high. Sear shrimp 1–2 minutes per side until pink and curled, not rubbery. Work in batches.",
-      "minutes": 6,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch shrimp. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
       "heatLevel": "medium-high"
     },
     {
       "stepNumber": 3,
+      "title": "Boil pasta in salted water",
+      "instruction": "Bring a large pot of water to a rolling boil with 2 tbsp salt. Cook linguine 9–11 minutes until al dente with a slight firm bite at the center. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 11,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Sear shrimp quickly",
+      "instruction": "Heat olive oil in two large skillets over medium-high. Sear shrimp 1–2 minutes per side until pink and curled, not rubbery. Work in batches. Cook until char marks are visible and the thickest piece reads 165°F on an instant-read thermometer. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 6,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 5,
       "title": "Build lemon garlic sauce",
-      "instruction": "Reduce heat to medium. Add butter and garlic to skillets; cook 45 seconds until fragrant. Add lemon zest, juice, capers, and pepper flakes.",
+      "instruction": "Reduce heat to medium. Add butter and garlic to skillets; cook 45 seconds until fragrant. Add lemon zest, juice, capers, and pepper flakes. Target 165°F at the thickest part before moving to the next batch. Plan about 2 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 2,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 6,
       "title": "Toss pasta with shrimp",
-      "instruction": "Add drained pasta with 1 cup pasta water. Toss 2–3 minutes until sauce emulsifies and coats noodles with a silky gloss, not a pool of oil.",
+      "instruction": "Add drained pasta with 1 cup pasta water. Toss 2–3 minutes until sauce emulsifies and coats noodles with a silky gloss, not a pool of oil. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 3,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
       "title": "Finish with parsley and serve",
-      "instruction": "Fold in parsley off heat. Shrimp should be opaque throughout; pasta should slide on the plate without clumping.",
+      "instruction": "Fold in parsley off heat. Shrimp should be opaque throughout; pasta should slide on the plate without clumping. Plan about 2 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 2,
       "heatLevel": ""
     }

@@ -128,6 +128,31 @@ const SLUG_TONIGHT_SPREAD: Record<string, string[]> = {
     "Fluff rice with a fork at the table — chicken thighs stay skin-side up for crisp skin.",
     "Lemon wedges and parsley on the side; no hot sauce bar needed for this one.",
   ],
+  "pad-thai": [
+    "Tonight's Spread: Firehall Pad Thai on sheet trays with lime wedges, crushed peanuts, sliced green onions, and chili flakes in separate bowls so each firefighter seasons their own plate.",
+    "Suggested sides: Asian cucumber salad with rice vinegar and sesame, store-bought spring rolls warmed in the oven, and edamame sprinkled with flaky salt.",
+    "Keep noodles in a warm hotel pan at 180°F and proteins separate until the line opens — pad thai sogs if it sits sauced too long.",
+    "Put a cutting board at the end of the line with extra limes and peanuts for people who want crunch after a long call.",
+  ],
+};
+
+const SLUG_PRO_TIPS: Record<string, string[]> = {
+  "pad-thai": [
+    "Call Interruption Plan: If tones drop while noodles soak, leave them in the water — they will not turn to mush in twenty minutes. If tones drop after chicken or eggs are cooked, transfer proteins to a hotel pan at 165°F under foil and kill the wok burner. When you return, drain noodles, reheat the wok on high, and finish the toss in one pass — sauced noodles wait poorly, but held chicken is fine for fifteen minutes.",
+    "Soak noodles in water that is hot from the tap but not boiling — boiling water makes pad thai noodles fall apart before they hit the wok.",
+    "Taste the sauce before it goes in the pan: it should hit sweet first, then salty, then a sharp tamarind tang — adjust fish sauce or sugar one teaspoon at a time.",
+    "Push cooked chicken and eggs to the side of the wok before noodles go in — crowding drops wok temperature and you get steamed noodles instead of char.",
+    "Add bean sprouts off heat so they stay crisp — wilted sprouts are the fastest way to make this taste like cafeteria stir fry.",
+  ],
+};
+
+const SLUG_LEFTOVERS: Record<string, string[]> = {
+  "pad-thai": [
+    "Store noodles and sauce together in shallow containers within two hours — deep woks stay in the danger zone too long to cool safely.",
+    "Reheat in a hot wok or large skillet over medium-high with a splash of water to loosen the noodles; toss until steaming at 165°F throughout.",
+    "Pack peanuts, lime, and green onion separately — add fresh at reheat so crunch and brightness survive the microwave.",
+    "Leftover pad thai tightens in the fridge; a tablespoon of water per tray when reheating brings the sauce back to a glossy coat.",
+  ],
 };
 
 export function buildTonightSpread(def: GoldenRecipeDefinition): string[] {
@@ -149,6 +174,9 @@ export function buildTonightSpread(def: GoldenRecipeDefinition): string[] {
 }
 
 export function buildProTips(def: GoldenRecipeDefinition, crewSize: number): string[] {
+  const slugTips = SLUG_PRO_TIPS[def.slug];
+  if (slugTips) return [...new Set(slugTips)].slice(0, 8);
+
   const tips: string[] = [];
   const rec = def.recommendation;
 
@@ -185,6 +213,9 @@ export function buildProTips(def: GoldenRecipeDefinition, crewSize: number): str
 }
 
 export function buildLeftoversStrategy(def: GoldenRecipeDefinition): string[] {
+  const slugLeftovers = SLUG_LEFTOVERS[def.slug];
+  if (slugLeftovers) return [...new Set(slugLeftovers)].slice(0, 5);
+
   const tips = [
     "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
     "Label trays with date and reheat to 165°F minimum before second shift.",
@@ -243,6 +274,12 @@ export function buildEquipmentList(def: GoldenRecipeDefinition): string[] {
   }
   if (def.slug === "one-pot-chicken-rice") {
     extra.push("Large Dutch oven with tight lid");
+  }
+  if (def.slug === "thai-basil-chicken") {
+    extra.push("Large wok or flat-top", "Rice cooker");
+  }
+  if (def.slug === "pad-thai") {
+    extra.push("Large wok or flat-top", "Spider strainer or tongs", "Large mixing bowl for soaking noodles");
   }
 
   return [...new Set([...extra, ...base])].slice(0, 12);

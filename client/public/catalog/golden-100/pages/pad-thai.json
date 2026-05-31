@@ -1,22 +1,22 @@
 {
   "slug": "pad-thai",
-  "title": "Hall Rush Pad Thai",
-  "displayTitle": "Hall Rush Pad Thai",
-  "seoTitle": "Hall Rush Pad Thai | Firefighter Meal",
-  "shortDescription": "Sweet-salty noodles, fast wok",
-  "subtitle": "Sweet-salty noodles, fast wok",
+  "title": "Firehall Pad Thai",
+  "displayTitle": "Firehall Pad Thai",
+  "seoTitle": "Firehall Pad Thai | Firefighter Meal",
+  "shortDescription": "Sweet-tangy wok noodles, lime, and crushed peanuts",
+  "subtitle": "Sweet-tangy wok noodles, lime, and crushed peanuts",
   "category": "quick_shift_meals",
   "cuisine": "thai",
-  "description": "Sweet-salty noodles, fast wok. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
+  "description": "Sweet-tangy wok noodles, lime, and crushed peanuts",
   "crewSize": 8,
   "baseServings": 8,
-  "cookTime": 35,
-  "prepTime": 15,
+  "cookTime": 63,
+  "prepTime": 35,
   "difficulty": "easy",
-  "calories": 286,
-  "protein": 31,
-  "carbs": 2,
-  "fats": 16,
+  "calories": 620,
+  "protein": 80,
+  "carbs": 27,
+  "fats": 20,
   "tags": [
     "protein:chicken",
     "format:skillet",
@@ -26,118 +26,226 @@
   ],
   "equipment": [
     "Large cast iron skillet or Dutch oven",
+    "Large wok or flat-top",
+    "Spider strainer or tongs",
+    "Large mixing bowl for soaking noodles",
     "Large sheet trays",
     "Instant-read thermometer",
     "Aluminum foil"
   ],
   "ingredients": [
     {
-      "name": "Rice noodles, soaked",
+      "name": "Flat rice noodles (pad thai width)",
       "quantity": "2",
       "unit": "lb",
-      "group": "Base"
+      "group": "Noodles"
     },
     {
-      "name": "Large shrimp, peeled",
-      "quantity": "2",
+      "name": "Hot tap water",
+      "quantity": "8",
+      "unit": "cups",
+      "notes": "for soaking — not boiling",
+      "group": "Noodles"
+    },
+    {
+      "name": "Boneless chicken thighs",
+      "quantity": "4",
       "unit": "lb",
       "group": "Main"
     },
     {
-      "name": "Eggs",
-      "quantity": "4",
+      "name": "Large eggs",
+      "quantity": "8",
       "unit": "count",
       "group": "Main"
     },
     {
       "name": "Bean sprouts",
-      "quantity": "3",
+      "quantity": "4",
       "unit": "cups",
-      "group": "Veg"
+      "group": "Vegetables"
     },
     {
-      "name": "Pad Thai sauce (tamarind, fish sauce, sugar)",
-      "quantity": "1",
-      "unit": "cup",
+      "name": "Green onions",
+      "quantity": "8",
+      "unit": "stalks",
+      "notes": "white and green parts separated",
+      "group": "Vegetables"
+    },
+    {
+      "name": "Garlic cloves",
+      "quantity": "6",
+      "unit": "cloves",
+      "notes": "minced",
+      "group": "Aromatics"
+    },
+    {
+      "name": "Tamarind paste",
+      "quantity": "6",
+      "unit": "tbsp",
       "group": "Sauce"
     },
     {
-      "name": "Roasted peanuts, crushed",
-      "quantity": "0.5",
+      "name": "Fish sauce",
+      "quantity": "6",
+      "unit": "tbsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "Packed brown sugar",
+      "quantity": "4",
+      "unit": "tbsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "Rice vinegar",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "Warm water",
+      "quantity": "0.3",
       "unit": "cup",
+      "notes": "to loosen tamarind",
+      "group": "Sauce"
+    },
+    {
+      "name": "Roasted peanuts",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "roughly crushed",
       "group": "Garnish"
+    },
+    {
+      "name": "Limes",
+      "quantity": "8",
+      "unit": "count",
+      "notes": "cut into wedges",
+      "group": "Garnish"
+    },
+    {
+      "name": "Crushed red chili flakes",
+      "quantity": "1",
+      "unit": "tsp",
+      "notes": "optional, for the line",
+      "group": "Garnish"
+    },
+    {
+      "name": "Vegetable oil",
+      "quantity": "4",
+      "unit": "tbsp",
+      "group": "Cooking"
+    },
+    {
+      "name": "Kosher salt",
+      "quantity": "1",
+      "unit": "tsp",
+      "group": "Seasoning"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Soak rice noodles",
-      "instruction": "Soak rice noodles in hot water 20 minutes until pliable; drain.",
-      "minutes": 20,
+      "title": "Set up the prep station",
+      "instruction": "Clear a long counter into five labeled zones so a rookie can work without guessing. Noodle zone: dry noodles still in the bag plus a large bowl for soaking. Vegetable zone: bean sprouts rinsed and drained, green onions sliced with whites and greens in separate small bowls, garlic minced. Chicken zone: thighs patted dry and sliced into bite-sized strips about the width of your thumb. Garnish zone: peanuts crushed in a zip bag with a rolling pin, limes quartered into wedges, chili flakes in a pinch bowl. Sauce zone: empty mixing bowl with a whisk, tamarind paste, fish sauce, brown sugar, rice vinegar, and warm water measured and within arm's reach. Read the sauce and noodle steps before you turn on the wok — pad thai moves fast once the pan is hot.",
+      "minutes": 15,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Sear shrimp and scramble eggs",
-      "instruction": "Sear shrimp in hot oil until pink; push aside. Scramble eggs in the same wok; break into pieces.",
-      "minutes": 8,
-      "heatLevel": "high"
+      "title": "Whisk the pad thai sauce",
+      "instruction": "In a medium bowl, stir tamarind paste with warm water until the paste dissolves and no dark clumps remain on the whisk. Add fish sauce, brown sugar, and rice vinegar. Whisk vigorously for thirty seconds until the sugar dissolves and the sauce looks glossy, not grainy. Dip a clean spoon, cool it on the counter, and taste: you want sweet first on the tongue, then salty, then a sharp tamarind tang at the back — not fishy, not flat. If it tastes harsh, add brown sugar one teaspoon at a time; if it tastes only sweet, add fish sauce one teaspoon at a time. Set the bowl right beside the wok — you will pour it all at once during the toss.",
+      "minutes": 5,
+      "heatLevel": ""
     },
     {
       "stepNumber": 3,
-      "title": "Toss noodles and sauce",
-      "instruction": "Add noodles and pad Thai sauce; toss over high heat 2–3 minutes until noodles absorb sauce and char slightly.",
-      "minutes": 5,
-      "heatLevel": "high"
+      "title": "Soak the rice noodles",
+      "instruction": "Place dry noodles in the large bowl and cover with hot tap water — the kind that is uncomfortable to hold your hand in, but not rolling boil from a kettle. Push noodles under the water with tongs so every strand is submerged. Soak eighteen to twenty minutes, checking at fifteen: pull one strand and bend it. Ready noodles flex like a cooked spaghetti noodle without snapping dry in the center. Drain immediately in a colander when ready; rinse briefly with cold water only if they feel sticky, then toss with one teaspoon oil so they do not clump while you cook chicken. Common mistakes: boiling water turns noodles mushy before the wok step; soaking too short leaves a hard core that never cooks in the pan.",
+      "minutes": 20,
+      "heatLevel": ""
     },
     {
       "stepNumber": 4,
-      "title": "Finish with crunch",
-      "instruction": "Fold in bean sprouts and peanuts off heat. Serve with lime wedges. Pad Thai should be tangy, salty, and a little sweet — not oily.",
+      "title": "Cook the chicken in batches",
+      "instruction": "Heat the wok or flat-top over medium-high for three minutes until a flick of water evaporates on contact. Add two tablespoons vegetable oil and swirl to coat. Lay chicken strips in a single layer — do not stir for ninety seconds so the edges brown against the metal. Stir, spread again, and cook until the largest piece reads 165°F on an instant-read thermometer, about four to six minutes per batch. Transfer each batch to a clean sheet tray. Repeat with the remaining chicken and another tablespoon oil if the pan looks dry. Browning matters: pale steamed chicken will not carry the wok flavor. Keep the tray near the stove — you will return the chicken to the pan in step six.",
+      "minutes": 12,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Scramble the eggs in the wok",
+      "instruction": "With the wok still on medium-high, add one tablespoon oil if the surface looks dry. Beat eggs lightly with a pinch of salt. Pour into the center of the pan and let the bottom set for twenty seconds without stirring. Push cooked egg toward the rim, tilt the pan so raw egg flows to bare metal, and repeat until you have soft curds — not dry rubber. Break curds into bite-sized pieces with your spatula. Slide eggs to the side of the wok with the chicken tray nearby. Eggs finish in the pan again during the noodle toss, so stop while they still look a little soft.",
+      "minutes": 4,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Build the pad thai in the wok",
+      "instruction": "Increase heat to high. Add drained noodles to the open side of the wok — you should hear a light sizzle. Toss with tongs or two spatulas for sixty seconds so noodles pick up wok color. Pour the whisked sauce evenly over the noodles and keep tossing continuously; the noodles will soften and the sauce will reduce into a glossy coat. Now add cooked chicken, scrambled eggs, and the white parts of the green onions. Keep everything moving two to three minutes until the sauce clings to each strand and the pan looks almost dry — not pooling liquid. If noodles stick, add one tablespoon water to steam them loose, then toss again. Do not add bean sprouts yet; they go in during finishing so they stay crisp.",
+      "minutes": 6,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 7,
+      "title": "Finish with sprouts and seasoning",
+      "instruction": "Pull the wok off the hottest part of the burner or reduce to medium. Fold in bean sprouts and the green parts of the green onions; toss thirty seconds until sprouts just begin to wilt at the edges but still snap when you bite. Taste a noodle strand from the center of the pan: it should be tender with a slight chew, coated in sauce, not oily puddles at the bottom. Adjust with fish sauce for salt, brown sugar for balance, or a squeeze of lime for brightness — one small change at a time. The pan is done when noodles look glossy, chicken is evenly distributed, and no thin sauce pool sits in the bottom of the wok.",
+      "minutes": 3,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 8,
+      "title": "Serve on the line with garnishes",
+      "instruction": "Transfer pad thai to sheet trays or hotel pans for family-style service — do not cover tightly or steam will soften the noodles. Line garnish bowls at the end of the counter: lime wedges, crushed peanuts, extra sliced green onion, and chili flakes for firefighters who want heat. Each plate gets noodles first, then a pinch of peanuts and a lime wedge on the rim so they can squeeze at the table. Suggested sides on separate trays: Asian cucumber salad with rice vinegar and sesame, warmed spring rolls, and edamame with flaky salt. Tell the crew to squeeze lime and add peanuts right before eating — acid and crunch fade if mixed too early.",
       "minutes": 5,
       "heatLevel": ""
     }
   ],
   "proTips": [
-    "Prep all mise en place before the bell — this meal wins on organization, not speed hacks.",
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
-    "Taste for salt at the end — hall palates run salty after long shifts.",
-    "Pull chicken at 160°F and let carryover hit 165°F — dry breast ruins crew morale."
+    "Call Interruption Plan: If tones drop while noodles soak, leave them in the water — they will not turn to mush in twenty minutes. If tones drop after chicken or eggs are cooked, transfer proteins to a hotel pan at 165°F under foil and kill the wok burner. When you return, drain noodles, reheat the wok on high, and finish the toss in one pass — sauced noodles wait poorly, but held chicken is fine for fifteen minutes.",
+    "Soak noodles in water that is hot from the tap but not boiling — boiling water makes pad thai noodles fall apart before they hit the wok.",
+    "Taste the sauce before it goes in the pan: it should hit sweet first, then salty, then a sharp tamarind tang — adjust fish sauce or sugar one teaspoon at a time.",
+    "Push cooked chicken and eggs to the side of the wok before noodles go in — crowding drops wok temperature and you get steamed noodles instead of char.",
+    "Add bean sprouts off heat so they stay crisp — wilted sprouts are the fastest way to make this taste like cafeteria stir fry."
   ],
   "tonightSpread": [
-    "Plate Hall Rush Pad Thai with sides in separate pans so the crew can mix portions.",
-    "Line up Hall Rush Pad Thai on the main counter with serving spoons — firefighters grab fast between calls.",
-    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+    "Tonight's Spread: Firehall Pad Thai on sheet trays with lime wedges, crushed peanuts, sliced green onions, and chili flakes in separate bowls so each firefighter seasons their own plate.",
+    "Suggested sides: Asian cucumber salad with rice vinegar and sesame, store-bought spring rolls warmed in the oven, and edamame sprinkled with flaky salt.",
+    "Keep noodles in a warm hotel pan at 180°F and proteins separate until the line opens — pad thai sogs if it sits sauced too long.",
+    "Put a cutting board at the end of the line with extra limes and peanuts for people who want crunch after a long call."
   ],
   "leftovers": [
-    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
-    "Label trays with date and reheat to 165°F minimum before second shift."
+    "Store noodles and sauce together in shallow containers within two hours — deep woks stay in the danger zone too long to cool safely.",
+    "Reheat in a hot wok or large skillet over medium-high with a splash of water to loosen the noodles; toss until steaming at 165°F throughout.",
+    "Pack peanuts, lime, and green onion separately — add fresh at reheat so crunch and brightness survive the microwave.",
+    "Leftover pad thai tightens in the fridge; a tablespoon of water per tray when reheating brings the sauce back to a glossy coat."
   ],
-  "whyCrewsLikeIt": "Sweet-salty noodles, fast wok. A hall pick for tight shifts — one line, real portions, no drama at the stove.",
-  "mealPrepNotes": "Minimal prep — chop aromatics before shift change so you can cook as soon as the board quiets.",
+  "whyCrewsLikeIt": "Sweet-tangy wok noodles, lime, and crushed peanuts. A hall pick for tight shifts — one line, real portions, no drama at the stove.",
+  "mealPrepNotes": "Before the wok goes on, line up drained noodles, whisked sauce, cooked chicken, scrambled eggs, and garnish bowls in order of use — pad thai moves fast once the pan is hot, and rookies should read each step card once before touching the burner.",
   "substitutions": [
     "Chicken thighs ↔ breasts (thighs forgive overcooking on the flat-top)."
   ],
   "spiceLevel": "medium",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 286,
-    "protein": 31,
-    "carbs": 2,
-    "fats": 16,
+    "calories": 620,
+    "protein": 80,
+    "carbs": 27,
+    "fats": 20,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
-      "highProtein": false,
+      "highProtein": true,
       "under700Calories": true,
       "under30gFat": true,
       "highCarb": false,
-      "lowCarb": true,
+      "lowCarb": false,
       "mealPrepFriendly": false
     },
     "badgeCandidates": {
-      "highProtein": false,
-      "lighterOption": true,
+      "highProtein": true,
+      "lighterOption": false,
       "performanceMeal": true
     }
   },
@@ -149,13 +257,13 @@
   "firefighterScore": 100,
   "popularityWeight": 3.2,
   "searchTerms": [
-    "hall rush pad thai",
+    "firehall pad thai",
     "pad thai",
     "thai",
     "chicken",
     "skillet",
     "quick",
-    "chicken pad thai dinner",
+    "firehall pad thai chicken wok noodles",
     "golden_100"
   ],
   "relatedSlugs": [
@@ -168,6 +276,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-30T03:28:01.931Z",
+  "generatedAt": "2026-05-30T23:27:14.566Z",
   "contentVersion": 2
 }

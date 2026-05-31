@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-05-30T23:25:00.000Z",
+  "phase": "phase5-consolidation-and-distinct-expansion",
+  "partA_consolidation": {
+    "redirectMappings": 31,
+    "pagesRemoved": 31,
+    "exactDuplicatesBefore": 30,
+    "exactDuplicatesAfter": 0,
+    "nearDuplicatesBefore": 35,
+    "nearDuplicatesAfter": 26,
+    "uniqueRecipesBefore": 112,
+    "uniqueRecipesAfter": 141,
+    "targetUniqueMet": true,
+    "redirectModule": "shared/catalog-slug-redirects.ts",
+    "consolidationConfig": "shared/catalog-consolidation/phase5-redirects.ts"
+  },
+  "partB_expansion": {
+    "recipesAdded": 20,
+    "collection": "hall_expansion",
+    "hallExpansionCount": 74,
+    "categories": {
+      "canadianFirehallClassics": 5,
+      "globalComfortFoods": 5,
+      "brothAndNoodleMeals": 5,
+      "crewPlattersAndSkewers": 5
+    },
+    "sourceFile": "shared/hall-expansion/adapted/batch-phase5-distinct.ts",
+    "imagesGenerated": 20,
+    "exploreIntegration": "hall_expansion gate + slug-locked heroes under /images/hall-expansion/"
+  },
+  "catalogTotals": {
+    "curatedRecipeTotal": 289,
+    "approvedCatalogTotal": 299,
+    "totalPageJsonAudited": 309
+  },
+  "commands": {
+    "consolidate": "npm run apply:phase5-consolidation",
+    "importImages": "npm run import:phase5-distinct-heroes",
+    "audit": "npm run audit:phase5-distinct",
+    "duplicateAudit": "npm run audit:catalog-duplicates"
+  }
+}

@@ -1,10 +1,14 @@
 import { useMemo } from "react";
-import { Link, useRoute } from "wouter";
+import { Link, Redirect, useRoute } from "wouter";
+import { resolveCatalogSlug } from "@shared/catalog-slug-redirects";
+import { approvedCatalogRecipePath } from "@shared/approved-catalog";
 import { useQuery } from "@tanstack/react-query";
 import { Sunrise } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
 import { getSavedCount } from "@/lib/saved-meals";
 import { fetchBreakfastRecipePage } from "@/lib/breakfast-api";
+import { displayRecipeHeroSrc } from "@/lib/verified-recipe-hero";
+import { MissingRecipeImagePlaceholder } from "@/components/missing-recipe-image-placeholder";
 import { FoodImage } from "@/components/mobile/food-image";
 import { cn } from "@/lib/utils";
 import { RecipeBrandStrip } from "@/components/brand/recipe-brand-strip";
@@ -27,7 +31,11 @@ import {
 
 export default function BreakfastRecipePage() {
   const [, params] = useRoute("/breakfast/:slug");
-  const slug = String(params?.slug || "").trim();
+  const slug = String(params?.slug || "").trim().toLowerCase();
+  const resolvedSlug = slug ? resolveCatalogSlug(slug) : "";
+  if (slug && resolvedSlug !== slug) {
+    return <Redirect to={approvedCatalogRecipePath(resolvedSlug)} />;
+  }
   const favCount = useMemo(() => getSavedCount(), []);
   const [measurementSystem] = useMeasurementSystem();
   const origin = getSiteOrigin();
@@ -105,18 +113,29 @@ export default function BreakfastRecipePage() {
             <p className="mt-3 text-muted-foreground leading-relaxed max-w-2xl">{page.subtitle}</p>
 
             <div className="mt-7 relative -mx-page sm:mx-0 rounded-none sm:rounded-2xl overflow-hidden border border-border/20">
-              <FoodImage
-                src={page.heroImage}
-                alt={page.imageAlt || page.title}
-                layout="card-fill"
-                fit="cover"
-                focal="banner"
-                overlay="cinematic"
-                priority
-                cinematicGrade
-                rounded="none"
-                className="aspect-[16/12] sm:aspect-[2.2/1] max-h-[min(52vh,520px)]"
-              />
+              {(() => {
+                const heroSrc = displayRecipeHeroSrc(page.slug, page.heroImage, page.heroVerified);
+                return heroSrc ? (
+                  <FoodImage
+                    src={heroSrc}
+                    alt={page.imageAlt || page.title}
+                    layout="card-fill"
+                    fit="cover"
+                    focal="banner"
+                    overlay="cinematic"
+                    priority
+                    cinematicGrade
+                    rounded="none"
+                    className="aspect-[16/12] sm:aspect-[2.2/1] max-h-[min(52vh,520px)]"
+                  />
+                ) : (
+                  <MissingRecipeImagePlaceholder
+                    title={page.title}
+                    variant="detail"
+                    className="aspect-[16/12] sm:aspect-[2.2/1] max-h-[min(52vh,520px)]"
+                  />
+                );
+              })()}
             </div>
 
             <RecipeBrandStrip className="mt-5" />

@@ -32,6 +32,9 @@ import {
 import { isExploreFeedBlocked } from "../shared/explore-feed-blocklist.js";
 import { isFirehallOwnedHeroUrl, normalizeOwnedMediaPath } from "../shared/food-imagery/paths.js";
 import { resolveFoodImageryHero } from "./food-imagery/hero-resolver.js";
+import { isImageReuseAndFallbacksDisabled } from "../shared/image-reuse-policy.js";
+import { isVerifiedRecipeHero } from "./sanitize-verified-recipe-hero.js";
+import { resolveApprovedCatalogKind } from "../shared/approved-catalog.js";
 import { applyImageryGovernanceToCard } from "../shared/explore-imagery-status.js";
 import {
   adjacentPoolsForTag,
@@ -517,8 +520,23 @@ export async function buildHallFavoritesSection(
 
     const meta = getClassicHallMeal(pkg.slug);
     const fallbackHero = meta ? resolveClassicHeroImage(meta) : pkg.heroImage;
-    const resolved = await resolveFoodImageryHero(pkg.slug, fallbackHero);
+    const resolved = await resolveFoodImageryHero(
+      pkg.slug,
+      isImageReuseAndFallbacksDisabled() ? "" : fallbackHero,
+    );
     const heroImage = normalizeOwnedMediaPath(resolved.url);
+    if (
+      !heroImage ||
+      !isVerifiedRecipeHero({
+        slug: pkg.slug,
+        title: meta?.title || pkg.title,
+        kind: resolveApprovedCatalogKind(pkg.slug),
+        mealFormat: meta?.mealFormat,
+        heroImage,
+      })
+    ) {
+      continue;
+    }
 
     const card: ExploreRecipeCard = {
       id: recipeId,

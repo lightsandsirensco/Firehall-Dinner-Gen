@@ -8,14 +8,16 @@ export const FOOD_IMAGERY_QUALITY_THRESHOLDS = {
   titleMatchRequired: true,
 } as const;
 
-export const VISION_QA_RUBRIC = `Score this image against Firehall Meals brand standards:
-- Must look like a REAL photograph (DSLR/menu editorial), NOT generative AI, NOT CGI, NOT illustration
-- Dark firehall kitchen styling with warm directional light (not flat, not neon, not cold blue)
-- Shallow natural depth of field, center-weighted hero dish
+export const VISION_QA_RUBRIC = `Score this image against Firehall Meals GLOBAL FIREHALL KITCHEN PHOTO STANDARD:
+- Must look like a REAL photograph (DSLR/documentary food photography), NOT generative AI, NOT CGI, NOT illustration
+- Active Canadian firehall kitchen environment — commercial stainless, prep tables, steam tables, sheet pans, industrial lighting
+- NOT firefighter marketing — no fire trucks, bunker gear, helmets, recruitment imagery, or posed firefighter portraits
+- Food is primary subject — crew-sized family-style portions on serving trays, hotel pans, or prep surfaces
+- Shallow natural depth of field, center-weighted hero dish, warm directional light (not flat, not neon, not cold blue)
 - Photorealistic textures (no plastic cheese, no waxy meat, no AI gloss, no airbrushed smoothness)
-- Premium comfort food mood (not fast-food commercial, not fantasy food art)
-- No floating ingredients, no garnish explosion, no text/logos/hands
-- Reject if: obvious AI artifacts, hyper-saturated HDR, synthetic bokeh, uncanny symmetry
+- Documentary realism — served to a hungry fire crew, NOT restaurant fine dining or magazine cover staging
+- No floating ingredients, no garnish explosion, no text/logos; blurred background kitchen staff optional
+- Reject if: obvious AI artifacts, hyper-saturated HDR, synthetic bokeh, stock photo sterility, wrong dish, duplicate/generic feel
 Return JSON only:
 {
   "pass": boolean,

@@ -1,0 +1,209 @@
+{
+  "slug": "charred-broccolini-lemon-tray",
+  "title": "Sicilian Anchovy Broccolini Tray",
+  "displayTitle": "Sicilian Anchovy Broccolini Tray",
+  "seoTitle": "Sicilian Anchovy Broccolini Tray | Firehall BBQ",
+  "shortDescription": "Charred broccolini tray—lemon garlic finish, green side that actually tastes grilled",
+  "subtitle": "Grilled broccolini, lemon-garlic oil, and parmesan tray for ten",
+  "category": "bbq_grill_nights",
+  "cuisine": "italian-american",
+  "description": "Broccolini bundles toss in olive oil, grill until charred and tender, and finish with lemon-garlic oil, parmesan, and chili flakes on a big tray for ten.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 15,
+  "prepTime": 15,
+  "difficulty": "medium",
+  "calories": 128,
+  "protein": 4,
+  "carbs": 13,
+  "fats": 8,
+  "tags": [
+    "protein:vegetarian",
+    "format:brassica_tray",
+    "category:bbq_grill_nights",
+    "bbq",
+    "smoker",
+    "grill",
+    "firehall_bbq_25",
+    "bbq",
+    "grill",
+    "firehall_bbq_30"
+  ],
+  "equipment": [
+    "flat-top griddle",
+    "grill basket",
+    "tongs",
+    "hotel pan",
+    "microplane"
+  ],
+  "ingredients": [
+    {
+      "name": "broccolini",
+      "quantity": "4",
+      "unit": "lb",
+      "notes": "trimmed",
+      "group": "Main"
+    },
+    {
+      "name": "anchovy fillets",
+      "quantity": "4",
+      "unit": "whole",
+      "notes": "minced",
+      "group": "Sicilian finish"
+    },
+    {
+      "name": "golden raisins",
+      "quantity": "0.33",
+      "unit": "cup",
+      "group": "Sicilian finish"
+    },
+    {
+      "name": "pine nuts",
+      "quantity": "0.33",
+      "unit": "cup",
+      "notes": "toasted",
+      "group": "Sicilian finish"
+    },
+    {
+      "name": "lemon juice",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Sicilian finish"
+    },
+    {
+      "name": "extra-virgin olive oil",
+      "quantity": "0.33",
+      "unit": "cup",
+      "group": "Grill"
+    },
+    {
+      "name": "Pecorino Romano",
+      "quantity": "0.75",
+      "unit": "cup",
+      "notes": "shaved",
+      "group": "Finish"
+    },
+    {
+      "name": "red pepper flakes",
+      "quantity": "1",
+      "unit": "tsp",
+      "group": "Finish"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "2",
+      "unit": "tsp",
+      "group": "Seasoning"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Prep broccolini",
+      "instruction": "Trim tough ends. Toss broccolini with olive oil, salt, and pepper. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Build lemon-garlic oil",
+      "instruction": "Warm olive oil with garlic 2 minutes off heat. Add lemon zest and juice. Reserve for service. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Preheat grill grates",
+      "instruction": "Preheat grill to medium-high, 425°F. Plan about 8 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 8,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Grill in batches",
+      "instruction": "Grill broccolini in basket, turning, until charred and tender, 6–8 minutes per batch. Cook until char marks are visible and the thickest piece reads 165°F for any egg-based components on an instant-read thermometer. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 12,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Hold wrapped",
+      "instruction": "Transfer to hotel pan, cover with foil, hold at 170°F up to 25 minutes. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Lemon oil finish",
+      "instruction": "Drizzle lemon-garlic oil over broccolini at service—not before long hold. Plan about 3 minutes for this step at crew scale. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 3,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Parmesan and chili",
+      "instruction": "Grate parmesan and scatter chili flakes over tray at the line. Plan about 3 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 3,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Tray for ten",
+      "instruction": "Spread charred broccolini in a hotel pan for buffet-style service alongside mains. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Grill basket keeps thin broccolini stems from falling through grates.",
+    "Charred tips and tender stems are the goal—don't overcook to mush.",
+    "Lemon oil at the line keeps broccolini glossy; added early gets soggy."
+  ],
+  "tonightSpread": [
+    "Charred broccolini lemon tray with parmesan.",
+    "Complements steak, chicken, or seafood mains."
+  ],
+  "leftovers": [
+    "Chop into frittata or omelet filling.",
+    "Toss into pasta with extra lemon and parmesan."
+  ],
+  "whyCrewsLikeIt": "Broccolini grills faster than broccoli crowns and looks sharp on the line. Holds at 170°F wrapped in foil and pairs with any protein.",
+  "mealPrepNotes": "Grill broccolini medium-high 425°F in batches, 6–8 minutes. Hold wrapped at 170°F up to 25 minutes. Lemon oil and parmesan at service.",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 128,
+    "protein": 4,
+    "carbs": 13,
+    "fats": 8,
+    "label": "per serving (hall portion)",
+    "source": "estimated"
+  },
+  "heroImage": "/images/smoker-catalog/charred-broccolini-lemon-tray.jpg",
+  "heroImageAlt": "Sicilian Anchovy Broccolini Tray — crew-sized BBQ spread with visible smoke and bark",
+  "mobileImage": "/images/mobile/smoker-catalog/charred-broccolini-lemon-tray.jpg",
+  "thumbImage": "/images/thumbs/smoker-catalog/charred-broccolini-lemon-tray.jpg",
+  "railImage": "/images/rails/smoker-catalog/charred-broccolini-lemon-tray.jpg",
+  "realismScore": 88,
+  "firefighterScore": 90,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "sicilian anchovy broccolini tray",
+    "charred broccolini lemon tray",
+    "vegetarian",
+    "Italian-American",
+    "brassica tray",
+    "bbq",
+    "firehall",
+    "grilled broccolini parmesan",
+    "firehall broccolini side"
+  ],
+  "relatedSlugs": [
+    "carolina-vinegar-pulled-pork",
+    "honey-chipotle-chicken-thighs",
+    "smoked-chicken-quarters-white-sauce",
+    "brisket-style-beef-sandwiches-au-jus"
+  ],
+  "sourceName": "Firehall Meals BBQ Collection",
+  "generatedAt": "2026-05-31T02:29:42.538Z",
+  "contentVersion": 2
+}

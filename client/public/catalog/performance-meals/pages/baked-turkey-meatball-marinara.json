@@ -110,36 +110,57 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Mix and shape meatballs",
-      "instruction": "Combine turkey, breadcrumbs, parmesan, eggs, parsley, half the garlic, Italian seasoning, and 1 tsp salt. Roll 48 golf-ball-size meatballs without overworking the mix.",
-      "minutes": 15,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Baked Turkey Meatball Marinara in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Bake meatballs until set",
-      "instruction": "Arrange on two parchment-lined half-sheets. Bake at 400°F for 18–22 minutes until internal temp reaches 165°F and exteriors look lightly browned.",
-      "minutes": 20,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch turkey. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
       "heatLevel": "medium-high"
     },
     {
       "stepNumber": 3,
+      "title": "Mix and shape meatballs",
+      "instruction": "Combine turkey, breadcrumbs, parmesan, eggs, parsley, half the garlic, Italian seasoning, and 1 tsp salt. Roll 48 golf-ball-size meatballs without overworking the mix. Plan about 15 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Bake meatballs until set",
+      "instruction": "Arrange on two parchment-lined half-sheets. Bake at 400°F for 18–22 minutes until internal temp reaches 165°F and exteriors look lightly browned. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 20,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 5,
       "title": "Start marinara base",
-      "instruction": "Sauté onion in olive oil over medium heat 6 minutes until soft. Add remaining garlic and tomato paste; cook 2 minutes until paste deepens to brick red.",
+      "instruction": "Sauté onion in olive oil over medium heat 6 minutes until soft. Add remaining garlic and tomato paste; cook 2 minutes until paste deepens to brick red. Target 165°F at the thickest part before moving to the next batch. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 8,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 6,
       "title": "Simmer sauce and add meatballs",
-      "instruction": "Pour in crushed tomatoes with 1 cup water. Simmer 15 minutes, stirring occasionally, until sauce thickens enough to coat a spoon. Add baked meatballs.",
+      "instruction": "Pour in crushed tomatoes with 1 cup water. Simmer 15 minutes, stirring occasionally, until sauce thickens enough to coat a spoon. Add baked meatballs. Bake until the center reaches a safe internal temp (165°F) and edges look set — use a thermometer at the thickest point. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 15,
       "heatLevel": "medium-low"
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
       "title": "Rest and portion at the line",
-      "instruction": "Simmer gently 10 more minutes so meatballs absorb sauce. Meatballs should feel springy, not dense, when cut open.",
+      "instruction": "Simmer gently 10 more minutes so meatballs absorb sauce. Meatballs should feel springy, not dense, when cut open. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Plan about 10 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
       "minutes": 10,
       "heatLevel": ""
     }

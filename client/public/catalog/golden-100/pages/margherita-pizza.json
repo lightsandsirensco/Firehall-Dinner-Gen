@@ -10,12 +10,12 @@
   "description": "Basil, mozzarella, blistered crust. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
   "baseServings": 8,
-  "cookTime": 206,
-  "prepTime": 41,
+  "cookTime": 90,
+  "prepTime": 30,
   "difficulty": "medium",
-  "calories": 852,
-  "protein": 38,
-  "carbs": 56,
+  "calories": 945,
+  "protein": 39,
+  "carbs": 80,
   "fats": 52,
   "tags": [
     "protein:vegetarian",
@@ -34,19 +34,19 @@
   "ingredients": [
     {
       "name": "Bread flour",
-      "quantity": "4",
+      "quantity": "6",
       "unit": "cups",
       "group": "Dough"
     },
     {
       "name": "Active dry yeast",
-      "quantity": "2",
+      "quantity": "2.5",
       "unit": "tsp",
       "group": "Dough"
     },
     {
       "name": "Warm water",
-      "quantity": "1.5",
+      "quantity": "2",
       "unit": "cups",
       "notes": "110°F",
       "group": "Dough"
@@ -64,59 +64,84 @@
       "group": "Dough"
     },
     {
-      "name": "Crushed tomatoes",
+      "name": "San Marzano crushed tomatoes",
       "quantity": "2",
       "unit": "cans",
       "notes": "28 oz",
       "group": "Sauce"
     },
     {
-      "name": "Fresh mozzarella, torn",
-      "quantity": "24",
+      "name": "Garlic cloves, smashed",
+      "quantity": "3",
+      "unit": "cloves",
+      "group": "Sauce"
+    },
+    {
+      "name": "Fresh mozzarella, sliced",
+      "quantity": "32",
       "unit": "oz",
       "group": "Cheese"
     },
     {
-      "name": "Pepperoni or toppings",
-      "quantity": "12",
-      "unit": "oz",
-      "group": "Toppings"
+      "name": "Fresh basil leaves",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Finish"
+    },
+    {
+      "name": "Extra-virgin olive oil",
+      "quantity": "0.3",
+      "unit": "cup",
+      "group": "Finish"
+    },
+    {
+      "name": "Flaky sea salt",
+      "quantity": "1",
+      "unit": "tsp",
+      "group": "Finish"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Proof the dough",
-      "instruction": "Stir yeast into warm water with a pinch of sugar; bloom 5 minutes until foamy. Mix flour, salt, oil, and yeast water until a shaggy dough forms. Knead 8–10 minutes until smooth. Rise covered 1–1½ hours until doubled — Fresh Margherita Pizza needs relaxed gluten for an open crumb.",
+      "title": "Proof dough for blistered crust",
+      "instruction": "Bloom yeast in warm water 5 minutes. Mix flour, salt, oil, and yeast water; knead 8–10 minutes until smooth. Rise 1–1½ hours until doubled. Margherita needs relaxed gluten for leopard spotting on the rim.",
       "minutes": 90,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Heat oven and stone",
-      "instruction": "Place a pizza stone or inverted sheet pan in the oven. Preheat to 500°F for at least 45 minutes — surface temp matters more than air temp. Prep sauce and cheese while the oven saturates.",
+      "title": "Make quick tomato sauce",
+      "instruction": "Simmer crushed tomatoes with smashed garlic 12 minutes until slightly thickened. Season lightly with salt — fresh mozzarella brings salt too. Cool briefly; hot sauce melts dough.",
+      "minutes": 12,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Heat stone to maximum practical temp",
+      "instruction": "Preheat stone or steel at 500°F at least 45 minutes. Drain mozzarella on paper towels and slice evenly — wet cheese makes a soggy center.",
       "minutes": 45,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 3,
-      "title": "Stretch and top",
-      "instruction": "Divide dough; stretch by hand (don't roll with a pin unless Detroit-style). Sauce lightly — wet centers sag. Add cheese and toppings. Work on parchment or floured peel; jiggle to confirm it slides.",
+      "stepNumber": 4,
+      "title": "Stretch, light sauce, mozzarella only",
+      "instruction": "Stretch dough to 12–14 inch rounds. Sauce sparingly — red should peek through cheese. Arrange mozzarella slices in one layer with slight overlap. No toppings yet; basil goes on after the bake.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
-      "title": "Bake until blistered",
-      "instruction": "Slide onto the hot stone. Bake 10–14 minutes until cheese bubbles with brown spots and the underside sounds hollow when tapped. Rotate once if your oven has hot spots.",
-      "minutes": 12,
+      "stepNumber": 5,
+      "title": "Bake for leopard spots",
+      "instruction": "Bake 9–12 minutes until crust is spotted brown and cheese has melted with a few golden blisters. Rotate once. Underbaked Margherita tastes like cheese on raw bread — look for color on the underside.",
+      "minutes": 11,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 5,
-      "title": "Rest and cut",
-      "instruction": "Rest 2 minutes before cutting so cheese sets. Cut on sheet trays for the hall line. Hold backup pies at 200°F uncovered up to 15 minutes — covering traps steam and softens crust.",
-      "minutes": 3,
+      "stepNumber": 6,
+      "title": "Basil, olive oil, rest, and cut",
+      "instruction": "Immediately scatter whole basil leaves and drizzle olive oil. Finish with flaky salt. Rest 2 minutes, cut into 8 slices. Fresh Margherita Pizza — tomato, mozzarella, basil. Serve fast; basil wilts on a hot hold.",
+      "minutes": 5,
       "heatLevel": "low"
     }
   ],
@@ -139,9 +164,9 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 852,
-    "protein": 38,
-    "carbs": 56,
+    "calories": 945,
+    "protein": 39,
+    "carbs": 80,
     "fats": 52,
     "label": "per serving (hall portion)",
     "source": "calculated",
@@ -186,6 +211,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-30T03:28:01.946Z",
+  "generatedAt": "2026-05-30T23:27:14.575Z",
   "contentVersion": 2
 }

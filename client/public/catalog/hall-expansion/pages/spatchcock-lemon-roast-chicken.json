@@ -24,7 +24,7 @@
     "chicken",
     "comfort",
     "hall_expansion",
-    "hall_expansion_56",
+    "hall_expansion_74",
     "hall_meal",
     "firefighter_meal"
   ],
@@ -106,36 +106,71 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Spatchcock the birds",
-      "instruction": "Remove backbones with shears, flatten chickens breast-side up, and tuck wing tips under. Pat completely dry inside and out.",
-      "minutes": 15,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Spatchcock Lemon Roast Chicken in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Spatchcock the birds",
+      "instruction": "Remove backbones with shears, flatten chickens breast-side up, and tuck wing tips under. Pat completely dry inside and out. Plan about 15 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
       "title": "Season under the skin",
       "instruction": "Mix butter with lemon zest, juice, garlic, and thyme. Loosen breast skin and spread half the butter mix under skin on each bird. Season outside with salt, pepper, and olive oil.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
-      "stepNumber": 3,
+      "stepNumber": 5,
       "title": "Roast on vegetables",
       "instruction": "Scatter onion and carrots on two sheet pans. Place spatchcocked birds on top and roast at 425°F until thickest breast hits 165°F and skin is golden, about 50–60 minutes. Target oven/smoker temperature: 425°F.",
       "minutes": 55,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 6,
       "title": "Rest before carving",
-      "instruction": "Tent birds with foil and rest 15 minutes so juices settle. Save pan juices and roasted vegetables for service.",
+      "instruction": "Tent birds with foil and rest 15 minutes so juices settle. Save pan juices and roasted vegetables for service. Bake until the center reaches a safe internal temp (165°F) and edges look set — use a thermometer at the thickest point. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Portion and open the line",
+      "instruction": "Portion Spatchcock Lemon Roast Chicken onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
       "title": "Carve for the line",
-      "instruction": "Carve each bird into ten portions: legs, thighs, and breast pieces. Arrange on hotel pans with pan juices spooned over.",
+      "instruction": "Carve each bird into ten portions: legs, thighs, and breast pieces. Arrange on hotel pans with pan juices spooned over. Plan about 10 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 10,
       "heatLevel": ""
     }
@@ -182,6 +217,6 @@
     "hall-burger-bar",
     "pasta-bar-night"
   ],
-  "generatedAt": "2026-05-30T03:14:19.188Z",
+  "generatedAt": "2026-05-31T01:50:00.916Z",
   "contentVersion": 2
 }

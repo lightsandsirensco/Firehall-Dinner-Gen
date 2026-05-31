@@ -277,3 +277,139 @@ export async function writeBreakfastCatalogImageVariants(
   void imageVersion;
   return { hero, thumb, mobile, rail };
 }
+
+function mirrorBbqImageFile(
+  subdir: "smoker-catalog" | "thumbs/smoker-catalog" | "mobile/smoker-catalog" | "rails/smoker-catalog",
+  slug: string,
+  buffer: Buffer,
+  format: "jpeg" | "webp" = "jpeg",
+): string {
+  const ext = format === "webp" ? "webp" : "jpg";
+  const filename = `${slug}.${ext}`;
+  const dir = path.join(process.cwd(), "client", "public", "images", subdir);
+  fs.mkdirSync(dir, { recursive: true });
+  fs.writeFileSync(path.join(dir, filename), buffer);
+  return `/images/${subdir}/${filename}`;
+}
+
+export interface BbqCatalogImageVariantResult {
+  hero: string;
+  thumb: string;
+  mobile: string;
+  rail: string;
+}
+
+/** BBQ catalog — hero/thumb/mobile/rail under bbq subfolders. */
+export async function writeBbqCatalogImageVariants(
+  slug: string,
+  heroBuffer: Buffer,
+  imageVersion: number,
+): Promise<BbqCatalogImageVariantResult> {
+  const stylePreset: ImageStylePresetId = "hall_bbq_dark";
+  const cropRule = getMobileCropRule(stylePreset);
+  const specs = cropRule.variants;
+
+  const hero = mirrorBbqImageFile("smoker-catalog", slug, heroBuffer);
+
+  const mobileBuf =
+    (await resizeVariant(
+      heroBuffer,
+      specs.mobile.width,
+      specs.mobile.height,
+      specs.mobile.cropPosition,
+      "jpeg",
+    )) ?? heroBuffer;
+  const thumbBuf =
+    (await resizeVariant(
+      heroBuffer,
+      specs.thumb.width,
+      specs.thumb.height,
+      specs.thumb.cropPosition,
+      "jpeg",
+    )) ?? heroBuffer;
+  const railBuf =
+    (await resizeVariant(
+      heroBuffer,
+      specs.rail.width,
+      specs.rail.height,
+      specs.rail.cropPosition,
+      "jpeg",
+    )) ?? heroBuffer;
+
+  const mobile = mirrorBbqImageFile("mobile/smoker-catalog", slug, mobileBuf);
+  const thumb = mirrorBbqImageFile("thumbs/smoker-catalog", slug, thumbBuf);
+  const rail = mirrorBbqImageFile("rails/smoker-catalog", slug, railBuf);
+
+  void imageVersion;
+  return { hero, thumb, mobile, rail };
+}
+
+function mirrorHallExpansionImageFile(
+  subdir:
+    | "hall-expansion"
+    | "thumbs/hall-expansion"
+    | "mobile/hall-expansion"
+    | "rails/hall-expansion",
+  slug: string,
+  buffer: Buffer,
+  format: "jpeg" | "webp" = "jpeg",
+): string {
+  const ext = format === "webp" ? "webp" : "jpg";
+  const filename = `${slug}.${ext}`;
+  const dir = path.join(process.cwd(), "client", "public", "images", subdir);
+  fs.mkdirSync(dir, { recursive: true });
+  fs.writeFileSync(path.join(dir, filename), buffer);
+  return `/images/${subdir}/${filename}`;
+}
+
+export interface HallExpansionCatalogImageVariantResult {
+  hero: string;
+  thumb: string;
+  mobile: string;
+  rail: string;
+}
+
+/** Hall expansion catalog — hero/thumb/mobile/rail under hall-expansion subfolders. */
+export async function writeHallExpansionCatalogImageVariants(
+  slug: string,
+  heroBuffer: Buffer,
+  imageVersion: number,
+): Promise<HallExpansionCatalogImageVariantResult> {
+  const stylePreset: ImageStylePresetId = "comfort_firehall";
+  const cropRule = getMobileCropRule(stylePreset);
+  const specs = cropRule.variants;
+
+  const hero = mirrorHallExpansionImageFile("hall-expansion", slug, heroBuffer);
+
+  const mobileBuf =
+    (await resizeVariant(
+      heroBuffer,
+      specs.mobile.width,
+      specs.mobile.height,
+      specs.mobile.cropPosition,
+      "jpeg",
+    )) ?? heroBuffer;
+  const thumbBuf =
+    (await resizeVariant(
+      heroBuffer,
+      specs.thumb.width,
+      specs.thumb.height,
+      specs.thumb.cropPosition,
+      "jpeg",
+    )) ?? heroBuffer;
+  const railBuf =
+    (await resizeVariant(
+      heroBuffer,
+      specs.rail.width,
+      specs.rail.height,
+      specs.rail.cropPosition,
+      "jpeg",
+    )) ?? heroBuffer;
+
+  const mobile = mirrorHallExpansionImageFile("mobile/hall-expansion", slug, mobileBuf);
+  const thumb = mirrorHallExpansionImageFile("thumbs/hall-expansion", slug, thumbBuf);
+  const rail = mirrorHallExpansionImageFile("rails/hall-expansion", slug, railBuf);
+
+  void imageVersion;
+  return { hero, thumb, mobile, rail };
+}

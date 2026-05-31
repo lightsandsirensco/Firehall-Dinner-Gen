@@ -53,27 +53,59 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Toast the buns",
-      "instruction": "Butter split buns and toast on a griddle or sheet pan under the broiler until golden. Hold warm on a tray.",
-      "minutes": 6
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Breakfast Sandwich Trays in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Cook sausage + eggs",
-      "instruction": "Cook sausage until browned and 165°F internal. Scramble or fry eggs in batches—keep finished eggs covered on a warm tray.",
-      "minutes": 12
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch Eggs. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
     },
     {
       "stepNumber": 3,
-      "title": "Assemble sandwiches",
-      "instruction": "Build sausage, egg, and cheese on toasted buns. Wrap in foil for the line if serving in waves.",
-      "minutes": 8
+      "title": "Toast the buns",
+      "instruction": "Butter split buns and toast on a griddle or sheet pan under the broiler until golden. Hold warm on a tray. Cook until char marks are visible and the thickest piece reads 165°F on an instant-read thermometer. Plan about 6 minutes for this step at crew scale. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts.",
+      "minutes": 6,
+      "heatLevel": ""
     },
     {
       "stepNumber": 4,
+      "title": "Cook sausage + eggs",
+      "instruction": "Cook sausage until browned and 165°F internal. Scramble or fry eggs in batches—keep finished eggs covered on a warm tray. Plan about 12 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Assemble sandwiches",
+      "instruction": "Build sausage, egg, and cheese on toasted buns. Wrap in foil for the line if serving in waves. Plan about 8 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 8,
       "title": "Hold and serve",
-      "instruction": "Hold wrapped sandwiches in a 200°F oven up to 20 minutes. Serve with hot sauce on the side.",
-      "minutes": 0
+      "instruction": "Hold wrapped sandwiches in a 200°F oven up to 20 minutes. Serve with hot sauce on the side. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 0,
+      "heatLevel": ""
     }
   ],
   "nutrition": {
@@ -113,8 +145,27 @@
   "heroImage": "/images/breakfast/breakfast-sandwich-trays.jpg",
   "thumbImage": "/images/thumbs/breakfast/breakfast-sandwich-trays.jpg",
   "imageAlt": "Warm station-kitchen breakfast: Breakfast Sandwich Trays",
-  "publishedAt": "2026-05-30T03:14:16.261Z",
-  "updatedAt": "2026-05-30T20:03:11.346Z",
+  "publishedAt": "2026-05-30T21:22:29.758Z",
+  "updatedAt": "2026-05-31T12:54:36.758Z",
   "readMinutes": 5,
-  "seoTitle": "Breakfast Sandwich Trays | Firehall Breakfast"
+  "seoTitle": "Breakfast Sandwich Trays | Firehall Breakfast",
+  "mobileImage": "/images/mobile/breakfast/breakfast-sandwich-trays.jpg",
+  "railImage": "/images/rails/breakfast/breakfast-sandwich-trays.jpg",
+  "proTips": [
+    "Assign one cook to the hot surface and one to assembly. Keep the line moving; don’t crowd the griddle.",
+    "Set a warm holding zone (oven 200°F or covered hotel pan) so staggered eaters still get a hot plate.",
+    "Run a quick call-proof check: anything crispy stays uncovered; anything soft stays covered."
+  ],
+  "tonightSpread": [
+    "Plate Breakfast Sandwich Trays with sides in separate pans so the crew can mix portions.",
+    "Keep hot items on one side of the table and cold on the other — eggs stay hot, fruit stays cold.",
+    "Line up Breakfast Sandwich Trays on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+  ],
+  "equipment": [
+    "Large sheet trays",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "mealPrepNotes": "Prep mise en place before the shift — Breakfast Sandwich Trays runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
 }

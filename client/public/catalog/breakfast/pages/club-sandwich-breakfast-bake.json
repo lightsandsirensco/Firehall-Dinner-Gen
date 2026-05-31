@@ -1,0 +1,190 @@
+{
+  "slug": "club-sandwich-breakfast-bake",
+  "title": "Club Sandwich Breakfast Bake",
+  "subtitle": "Layered bread, turkey, bacon, tomato, and eggs baked like a strata.",
+  "description": "Adapted from classic American club sandwich tradition for firehall breakfast bake: layers of toasted bread, turkey, bacon, tomato, and cheddar soaked in an egg-milk custard and baked until puffed and golden for ten portions.",
+  "filters": [
+    "feed_a_crew",
+    "high_protein",
+    "breakfast_sandwiches"
+  ],
+  "tags": [
+    "club-sandwich",
+    "strata",
+    "turkey",
+    "bacon",
+    "bake"
+  ],
+  "crewSize": 10,
+  "baseServings": 10,
+  "prepTime": 25,
+  "cookTime": 45,
+  "totalTime": 70,
+  "difficulty": "medium",
+  "ingredients": [
+    {
+      "name": "sandwich bread",
+      "quantity": "16 slices",
+      "notes": "toasted until crisp",
+      "group": "Bread"
+    },
+    {
+      "name": "deli turkey",
+      "quantity": "1 1/2 lb",
+      "notes": "sliced thick",
+      "group": "Protein"
+    },
+    {
+      "name": "bacon",
+      "quantity": "1 lb",
+      "notes": "cooked crisp and crumbled",
+      "group": "Protein"
+    },
+    {
+      "name": "Roma tomatoes",
+      "quantity": "3",
+      "notes": "sliced, seeds drained",
+      "group": "Veg"
+    },
+    {
+      "name": "large eggs",
+      "quantity": "12",
+      "group": "Egg mix"
+    },
+    {
+      "name": "whole milk",
+      "quantity": "2 1/2 cups",
+      "group": "Egg mix"
+    },
+    {
+      "name": "shredded Swiss",
+      "quantity": "3 cups",
+      "notes": "divided",
+      "group": "Cheese"
+    },
+    {
+      "name": "mayonnaise",
+      "quantity": "1/2 cup",
+      "notes": "light spread on bread, plus lettuce after bake",
+      "group": "Finish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Club Sandwich Breakfast Bake in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch Bacon. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Heat the oven",
+      "instruction": "Heat oven to 375°F. Grease a deep 9x13 pan. Toast bread until crisp and lightly spread one side of each slice with a thin layer of mayonnaise—this keeps layers distinct after baking. Allow 10–15 minutes for mise en place before heat goes on. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 0,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Cook bacon and prep layers",
+      "instruction": "Cook bacon until crisp, drain, and crumble. Layer half the bread in the pan, top with half the turkey, bacon, tomato, and Swiss. Repeat layers, finishing with bread on top. Plan about 15 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Pour the custard",
+      "instruction": "Whisk eggs, milk, salt, and pepper until smooth. Pour slowly over the layered bread, pressing gently so custard reaches the bottom. Rest 10 minutes so bread absorbs liquid. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Bake until set",
+      "instruction": "Cover with foil and bake 25 minutes. Uncover, top with remaining Swiss, and bake 15 more until center reaches 165°F and top is golden brown. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 40,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Rest and garnish",
+      "instruction": "Rest 10 minutes before cutting into squares. Top each portion with shredded lettuce and an extra pinch of bacon if desired. Serve with pickle spears at the line. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "nutrition": {
+    "calories": 543,
+    "protein": 30,
+    "carbs": 25,
+    "fat": 35,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "stationWorkflow": [
+    "Toast bread fully crisp—soft bread turns mushy in the custard.",
+    "Drain tomato seeds so excess moisture does not pool in the bake.",
+    "Cover for the first half of baking so top cheese does not over-brown before center sets."
+  ],
+  "cleanupNotes": [
+    "Soak the 9x13 with hot water while warm before egg custard dries on.",
+    "Wipe mayo smears from prep boards before they mix with bacon grease."
+  ],
+  "leftovers": [
+    "Reheat portions covered at 325°F for 12 minutes; add fresh lettuce after reheating.",
+    "Cut leftovers into cubes and pan-fry in butter for crispy breakfast croutons in soup."
+  ],
+  "heroImage": "/images/breakfast/club-sandwich-breakfast-bake.jpg",
+  "thumbImage": "/images/thumbs/breakfast/club-sandwich-breakfast-bake.jpg",
+  "imageAlt": "Club sandwich breakfast bake with turkey, bacon, tomato, and melted Swiss",
+  "publishedAt": "2026-05-30T21:22:29.757Z",
+  "updatedAt": "2026-05-31T12:54:36.766Z",
+  "readMinutes": 8,
+  "seoTitle": "Club Sandwich Breakfast Bake | Firehall Breakfast",
+  "mobileImage": "/images/mobile/breakfast/club-sandwich-breakfast-bake.jpg",
+  "railImage": "/images/rails/breakfast/club-sandwich-breakfast-bake.jpg",
+  "proTips": [
+    "Toast bread fully crisp—soft bread turns mushy in the custard.",
+    "Drain tomato seeds so excess moisture does not pool in the bake.",
+    "Cover for the first half of baking so top cheese does not over-brown before center sets."
+  ],
+  "tonightSpread": [
+    "Plate Club Sandwich Breakfast Bake with sides in separate pans so the crew can mix portions.",
+    "Keep hot items on one side of the table and cold on the other — eggs stay hot, fruit stays cold.",
+    "Line up Club Sandwich Breakfast Bake on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+  ],
+  "equipment": [
+    "Large sheet trays",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "mealPrepNotes": "Prep mise en place before the shift — Club Sandwich Breakfast Bake runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
+}

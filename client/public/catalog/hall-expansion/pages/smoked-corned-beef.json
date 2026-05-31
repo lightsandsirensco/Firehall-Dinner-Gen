@@ -13,9 +13,9 @@
   "cookTime": 300,
   "prepTime": 15,
   "difficulty": "hard",
-  "calories": 520,
-  "protein": 38,
-  "carbs": 32,
+  "calories": 530,
+  "protein": 36,
+  "carbs": 34,
   "fats": 28,
   "tags": [
     "protein:beef",
@@ -25,7 +25,7 @@
     "smoker",
     "beef",
     "hall_expansion",
-    "hall_expansion_56",
+    "hall_expansion_74",
     "hall_meal",
     "firefighter_meal"
   ],
@@ -39,8 +39,9 @@
   "ingredients": [
     {
       "name": "corned beef brisket flat",
-      "quantity": "5",
+      "quantity": "7.5",
       "unit": "lb",
+      "notes": "about 12 oz raw per firefighter",
       "group": "Main"
     },
     {
@@ -77,7 +78,7 @@
     },
     {
       "name": "baby potatoes",
-      "quantity": "3",
+      "quantity": "4",
       "unit": "lb",
       "group": "Side"
     },
@@ -103,37 +104,93 @@
   "steps": [
     {
       "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Smoked Corned Beef Brisket in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch beef. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
       "title": "Rinse and prep the brisket",
       "instruction": "Rinse corned beef under cold water to remove surface brine, pat completely dry, and let sit at room temperature 30 minutes while the smoker heats to 250°F.",
       "minutes": 35,
       "heatLevel": ""
     },
     {
-      "stepNumber": 2,
+      "stepNumber": 4,
       "title": "Smoke uncovered to color",
       "instruction": "Place brisket fat-side up on the smoker grate and cook until bark develops and internal temp reaches 165°F, about 3–4 hours without wrapping. Target oven/smoker temperature: 250°F.",
       "minutes": 180,
       "heatLevel": ""
     },
     {
-      "stepNumber": 3,
+      "stepNumber": 5,
       "title": "Wrap and braise in smoke",
       "instruction": "Wrap tightly in foil with beer, return to smoker, and continue until probe-tender and internal temp hits 200°F, about 1.5–2 hours more. Target oven/smoker temperature: 250°F.",
       "minutes": 105,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 6,
       "title": "Glaze and set",
       "instruction": "Mix brown sugar, mustard, and vinegar. Unwrap, brush glaze over the top, and smoke 20 minutes at 275°F until sticky and lightly caramelized. Target oven/smoker temperature: 275°F.",
       "minutes": 20,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F for medium beef, 160°F for ground. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Portion and open the line",
+      "instruction": "Portion Smoked Corned Beef Brisket onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Scale for larger halls",
+      "instruction": "When cooking for more than 10 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
       "title": "Rest, slice, and serve",
       "instruction": "Rest wrapped 20 minutes, then slice against the grain quarter-inch thick. Serve with smoked cabbage-potato packets and rye for Reuben-style plates.",
       "minutes": 25,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 12,
+      "title": "Final quality check before service",
+      "instruction": "Walk the line once before opening service for Smoked Corned Beef Brisket — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
+      "minutes": 4,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 13,
+      "title": "Final quality check before service",
+      "instruction": "Walk the line once before opening service for Smoked Corned Beef Brisket — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
+      "minutes": 4,
       "heatLevel": ""
     }
   ],
@@ -155,11 +212,11 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 520,
-    "protein": 38,
-    "carbs": 32,
+    "calories": 530,
+    "protein": 36,
+    "carbs": 34,
     "fats": 28,
-    "label": "~520 cal/serving · 38g protein · 4g fiber (est.)"
+    "label": "~530 cal/serving · 36g protein · 4g fiber (est.)"
   },
   "heroImage": "/images/hall-expansion/smoked-corned-beef.jpg",
   "heroImageAlt": "Smoked Corned Beef Brisket — crew-sized firehall meal",
@@ -176,9 +233,9 @@
   "relatedSlugs": [
     "smoked-turkey-breast",
     "smoked-meatloaf",
-    "smoked-mac-and-cheese",
-    "pork-belly-burnt-ends"
+    "pork-belly-burnt-ends",
+    "smoked-sausage-platter"
   ],
-  "generatedAt": "2026-05-30T03:14:19.188Z",
+  "generatedAt": "2026-05-31T01:50:00.915Z",
   "contentVersion": 2
 }

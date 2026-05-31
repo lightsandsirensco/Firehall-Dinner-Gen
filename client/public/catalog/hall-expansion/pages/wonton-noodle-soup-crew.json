@@ -1,0 +1,228 @@
+{
+  "slug": "wonton-noodle-soup-crew",
+  "title": "Wonton Noodle Soup for the Crew",
+  "displayTitle": "Wonton Noodle Soup for the Crew",
+  "seoTitle": "Wonton Noodle Soup for the Crew | Firefighter Meal",
+  "shortDescription": "Pork wontons in clear broth with egg noodles for ten",
+  "subtitle": "Pork wontons in clear broth with egg noodles for ten",
+  "category": "hall_expansion",
+  "cuisine": "chinese",
+  "description": "Pork and shrimp wontons fold by the dozen, poach in rich chicken broth, and serve over springy egg noodles with bok choy and scallions. Clean, comforting, and perfect when crews want soup that feels homemade.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 40,
+  "prepTime": 50,
+  "difficulty": "medium",
+  "calories": 440,
+  "protein": 28,
+  "carbs": 48,
+  "fats": 14,
+  "tags": [
+    "protein:pork",
+    "format:bowl",
+    "category:crew_feeders",
+    "hall_expansion",
+    "crew_feeders",
+    "chinese",
+    "pork",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Large pot",
+    "Mixing bowl",
+    "Sheet pans",
+    "Spider strainer",
+    "Ladle"
+  ],
+  "ingredients": [
+    {
+      "name": "ground pork",
+      "quantity": "1.5",
+      "unit": "lb",
+      "group": "Wonton"
+    },
+    {
+      "name": "shrimp",
+      "quantity": "0.5",
+      "unit": "lb",
+      "notes": "finely chopped",
+      "group": "Wonton"
+    },
+    {
+      "name": "wonton wrappers",
+      "quantity": "60",
+      "unit": "wrappers",
+      "group": "Wonton"
+    },
+    {
+      "name": "green onions",
+      "quantity": "4",
+      "unit": "whole",
+      "notes": "minced",
+      "group": "Wonton"
+    },
+    {
+      "name": "sesame oil",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Wonton"
+    },
+    {
+      "name": "soy sauce",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Wonton"
+    },
+    {
+      "name": "chicken broth",
+      "quantity": "8",
+      "unit": "cups",
+      "group": "Broth"
+    },
+    {
+      "name": "ginger",
+      "quantity": "2",
+      "unit": "inches",
+      "notes": "sliced",
+      "group": "Broth"
+    },
+    {
+      "name": "egg noodles",
+      "quantity": "2",
+      "unit": "lb",
+      "notes": "fresh if possible",
+      "group": "Noodles"
+    },
+    {
+      "name": "baby bok choy",
+      "quantity": "2",
+      "unit": "lb",
+      "notes": "halved",
+      "group": "Vegetable"
+    },
+    {
+      "name": "white pepper",
+      "quantity": "1",
+      "unit": "tsp",
+      "group": "Seasoning"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Wonton Noodle Soup for the Crew in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch pork. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Make wonton filling",
+      "instruction": "Mix pork, shrimp, green onions, sesame oil, soy sauce, and white pepper until sticky. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Fold wontons",
+      "instruction": "Place a teaspoon of filling in each wrapper, wet edges, fold into triangles or purses, and press air out. Cover with damp towels. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 35,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Simmer broth",
+      "instruction": "Simmer chicken broth with ginger 20 minutes. Season with soy and white pepper to balance. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 20,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Poach wontons and bok choy",
+      "instruction": "Boil wontons in salted water 4–5 minutes until they float and filling hits 165°F. Blanch bok choy 2 minutes in the same water. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F with a 3-minute rest. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Portion and open the line",
+      "instruction": "Portion Wonton Noodle Soup for the Crew onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Assemble bowls",
+      "instruction": "Cook egg noodles, drain, and divide into bowls. Add bok choy, wontons, and ladle hot broth over. Finish with scallions. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "A little cornstarch in filling helps bind if mixture feels loose.",
+    "Chili crisp and black vinegar at the table turn good soup into great soup.",
+    "Extra wontons freeze—future shift will thank you."
+  ],
+  "tonightSpread": [
+    "Wonton noodle soup with chili crisp and black vinegar.",
+    "Cucumber salad with sesame dressing."
+  ],
+  "leftovers": [
+    "Frozen wontons go straight into boiling broth from frozen.",
+    "Broth becomes egg drop soup base with whisked eggs."
+  ],
+  "whyCrewsLikeIt": "Wonton soup is familiar without being boring. Folding wontons is a good team task for off-duty crew, and the clear broth lightens up a menu heavy on grills and braises.",
+  "mealPrepNotes": "Wontons freeze well on sheet pans—bag and hold for future nights. Broth can simmer while wontons are folded. Cook noodles fresh per batch.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 440,
+    "protein": 28,
+    "carbs": 48,
+    "fats": 14,
+    "label": "~440 cal/serving · 28g protein · 2g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/wonton-noodle-soup-crew.jpg",
+  "heroImageAlt": "Wonton Noodle Soup for the Crew — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/wonton-noodle-soup-crew.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/wonton-noodle-soup-crew.jpg",
+  "railImage": "/images/rails/hall-expansion/wonton-noodle-soup-crew.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "wonton noodle soup for the crew",
+    "crew feeders"
+  ],
+  "relatedSlugs": [
+    "shawarma-bar-night",
+    "fajita-bar-night",
+    "hall-burger-bar",
+    "pasta-bar-night"
+  ],
+  "generatedAt": "2026-05-31T01:50:00.916Z",
+  "contentVersion": 2
+}

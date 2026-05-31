@@ -46,19 +46,33 @@
   "steps": [
     {
       "stepNumber": 1,
-      "instruction": "Blend spinach with milk first until smooth — no visible leaves."
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Strawberry Spinach Smoothie in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on."
     },
     {
       "stepNumber": 2,
-      "instruction": "Add strawberries, banana, and yogurt. Blend until thick and pink, not brown."
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch Blend. Confirm burners ignite evenly and sheet pans are greased or lined."
     },
     {
       "stepNumber": 3,
-      "instruction": "Stir in chia at the end if using, or blend 10 seconds on low."
+      "title": "Blend spinach with milk",
+      "instruction": "Blend spinach with milk first until smooth — no visible leaves. Serve cold within 10 minutes — hold blended cups on ice at 38°F if the line runs long. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early."
     },
     {
       "stepNumber": 4,
-      "instruction": "Drink within a few hours; chia will thicken if it sits overnight."
+      "title": "Add strawberries, banana, and",
+      "instruction": "Add strawberries, banana, and yogurt. Blend until thick and pink, not brown. Serve cold within 10 minutes — hold blended cups on ice at 38°F if the line runs long. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early."
+    },
+    {
+      "stepNumber": 5,
+      "title": "Stir in chia at",
+      "instruction": "Stir in chia at the end if using, or blend 10 seconds on low. Serve cold within 10 minutes — hold blended cups on ice at 38°F if the line runs long. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early."
+    },
+    {
+      "stepNumber": 6,
+      "title": "Drink within a few",
+      "instruction": "Drink within a few hours; chia will thicken if it sits overnight. Serve cold within 10 minutes — hold blended cups on ice at 38°F if the line runs long. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early."
     }
   ],
   "nutrition": {
@@ -88,8 +102,8 @@
     "Flax meal (1 tbsp) instead of chia."
   ],
   "shiftNote": "Easy sell to crews skeptical of green food — looks and tastes like a berry shake.",
-  "heroImage": "/images/smoothies/strawberry-spinach.webp",
-  "thumbImage": "/images/smoothies/strawberry-spinach.webp",
+  "heroImage": "/images/smoothies/strawberry-spinach.jpg",
+  "thumbImage": "/images/thumbs/strawberry-spinach.jpg",
   "tags": [
     "fuel_smoothie",
     "taxonomy:green_smoothie",
@@ -111,6 +125,27 @@
     "green-pineapple"
   ],
   "catalogSet": "fuel_smoothie",
-  "generatedAt": "2026-05-28T00:37:54.583Z",
-  "contentVersion": 1
+  "generatedAt": "2026-05-31T13:06:17.237Z",
+  "contentVersion": 2,
+  "mobileImage": "/images/mobile/strawberry-spinach.jpg",
+  "railImage": "/images/rails/strawberry-spinach.jpg",
+  "proTips": [
+    "Easy sell to crews skeptical of green food — looks and tastes like a berry shake.",
+    "Rinse the blender jar between batches so flavors do not muddy the next crew's cups.",
+    "If tones drop during service, cover hot food and hold at 140°F — note hold time on the pan for food safety."
+  ],
+  "tonightSpread": [
+    "Pour Strawberry Spinach Smoothie into insulated cups or quart jars on ice for grab-and-go service.",
+    "Set granola, nut butter, and extra fruit in side bowls so crew can customize without slowing the line.",
+    "Keep a backup blender batch chilled at 38°F if service runs past 20 minutes."
+  ],
+  "leftovers": [
+    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
+    "Label trays with date and reheat to 165°F minimum before second shift."
+  ],
+  "equipment": [
+    "high-speed blender",
+    "measuring cups",
+    "ice bath pan"
+  ]
 }

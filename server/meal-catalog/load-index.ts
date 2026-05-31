@@ -24,6 +24,11 @@ import { HALL_EXPANSION_CATALOG_PUBLIC_DIR } from "../hall-expansion/page-store.
 import { readHallExpansionRecipePage } from "../hall-expansion/page-store.js";
 import { buildHallExpansionRecipePage } from "../hall-expansion/page-builder.js";
 import { getHallExpansionRecipeBySlug } from "../../shared/hall-expansion/adapted/index.js";
+import { isBbqCatalogSlug } from "../../shared/bbq-catalog/slug-registry.js";
+import { BBQ_CATALOG_RECIPES } from "../../shared/bbq-expansion/batch-25-bbq-recipes.js";
+import { readBbqRecipePageFromDisk } from "../bbq-catalog/page-store.js";
+import { buildBbqCatalogRecipePage } from "../bbq-catalog/page-builder.js";
+import { BBQ_CATALOG_SLUGS } from "../../shared/bbq-catalog/slug-registry.js";
 
 function readCatalogIndexFile(dir: string): GoldenCatalogIndex | null {
   const indexFile = path.join(dir, "index.json");
@@ -86,6 +91,12 @@ export function resolveHallRecipePage(slug: string): GoldenRecipePage | null {
   const expansion = getHallExpansionRecipeBySlug(normalized);
   if (expansion) {
     return readHallExpansionRecipePage(normalized) ?? buildHallExpansionRecipePage(expansion);
+  }
+  if (isBbqCatalogSlug(normalized)) {
+    const onDisk = readBbqRecipePageFromDisk(normalized);
+    if (onDisk) return onDisk;
+    const def = BBQ_CATALOG_RECIPES.find((r) => r.manifest.slug === normalized);
+    if (def) return buildBbqCatalogRecipePage(def, [...BBQ_CATALOG_SLUGS]);
   }
   return null;
 }

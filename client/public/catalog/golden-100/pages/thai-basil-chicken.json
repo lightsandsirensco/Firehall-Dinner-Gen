@@ -13,10 +13,10 @@
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 80,
-  "protein": 1,
-  "carbs": 1,
-  "fats": 0,
+  "calories": 811,
+  "protein": 79,
+  "carbs": 84,
+  "fats": 15,
   "tags": [
     "protein:chicken",
     "format:skillet",
@@ -27,16 +27,48 @@
   ],
   "equipment": [
     "Large cast iron skillet or Dutch oven",
+    "Large wok or flat-top",
+    "Rice cooker",
     "Large sheet trays",
     "Instant-read thermometer",
     "Aluminum foil"
   ],
   "ingredients": [
     {
-      "name": "Ground chicken or thigh, minced",
-      "quantity": "3",
+      "name": "Jasmine rice, uncooked",
+      "quantity": "4",
+      "unit": "cups",
+      "group": "Base"
+    },
+    {
+      "name": "Water",
+      "quantity": "5",
+      "unit": "cups",
+      "group": "Base"
+    },
+    {
+      "name": "Boneless chicken thighs",
+      "quantity": "4",
       "unit": "lb",
       "group": "Main"
+    },
+    {
+      "name": "Red bell peppers",
+      "quantity": "4",
+      "unit": "count",
+      "group": "Veg"
+    },
+    {
+      "name": "Large yellow onions",
+      "quantity": "2",
+      "unit": "count",
+      "group": "Veg"
+    },
+    {
+      "name": "Garlic cloves",
+      "quantity": "8",
+      "unit": "cloves",
+      "group": "Aromatics"
     },
     {
       "name": "Thai basil leaves",
@@ -45,57 +77,97 @@
       "group": "Herbs"
     },
     {
-      "name": "Garlic cloves, minced",
-      "quantity": "6",
-      "unit": "cloves",
-      "group": "Aromatics"
-    },
-    {
-      "name": "Fish sauce",
-      "quantity": "3",
-      "unit": "tbsp",
+      "name": "Oyster sauce",
+      "quantity": "0.5",
+      "unit": "cup",
       "group": "Sauce"
     },
     {
-      "name": "Oyster sauce",
+      "name": "Soy sauce",
+      "quantity": "0.3",
+      "unit": "cup",
+      "group": "Sauce"
+    },
+    {
+      "name": "Fish sauce",
       "quantity": "2",
       "unit": "tbsp",
       "group": "Sauce"
     },
     {
-      "name": "Bird's eye chilies, sliced",
-      "quantity": "4",
-      "unit": "count",
-      "group": "Heat"
+      "name": "Brown sugar",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "Sesame oil",
+      "quantity": "1",
+      "unit": "tsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "Vegetable oil",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Cooking"
+    },
+    {
+      "name": "Crushed red chili flakes",
+      "quantity": "1",
+      "unit": "tsp",
+      "notes": "optional, for the line",
+      "group": "Service"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Prep stir-fry mise",
-      "instruction": "Mince garlic and chilies. Pick basil leaves; leave stems behind — they taste bitter.",
-      "minutes": 10,
+      "title": "Start the rice",
+      "instruction": "Rinse jasmine rice under cold water until the water runs mostly clear. Add rice and water to a rice cooker. Start immediately so the rice is ready when the stir fry finishes.",
+      "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Sear ground chicken",
-      "instruction": "Heat wok until smoking. Sear minced chicken in batches, breaking into crumbles until no pink remains.",
+      "title": "Prep the station",
+      "instruction": "Slice red bell peppers into thin strips. Slice onions. Mince garlic. Remove stems from Thai basil leaves. Cut chicken thighs into bite-sized pieces.",
       "minutes": 10,
-      "heatLevel": "high"
+      "heatLevel": ""
     },
     {
       "stepNumber": 3,
-      "title": "Glaze and basil",
-      "instruction": "Add garlic, chilies, fish sauce, and oyster sauce; toss 1 minute. Pull off heat; fold in Thai basil until wilted.",
+      "title": "Mix the sauce",
+      "instruction": "In a bowl combine oyster sauce, soy sauce, fish sauce, brown sugar, and sesame oil. Whisk until fully combined.",
+      "minutes": 3,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Cook the chicken",
+      "instruction": "Heat a large wok or flat-top over medium-high heat. Add 2 tablespoons oil. Cook chicken in batches to avoid overcrowding. Allow the chicken to brown before stirring. Cook until internal temperature reaches 165°F. Transfer to a clean tray.",
+      "minutes": 12,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Cook vegetables",
+      "instruction": "Add another tablespoon of oil. Cook onions for 3 minutes. Add peppers and cook another 4–5 minutes until slightly softened but still firm. Add garlic during the final minute.",
+      "minutes": 8,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Combine everything",
+      "instruction": "Return chicken to the wok. Pour in sauce mixture. Toss continuously for 2–3 minutes. Add basil leaves and stir until wilted. Taste and adjust seasoning.",
       "minutes": 4,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 4,
-      "title": "Serve over jasmine rice",
-      "instruction": "Serve Thai Basil Chicken over steamed jasmine rice with fried eggs on top if the crew wants extra protein.",
-      "minutes": 5,
+      "stepNumber": 7,
+      "title": "Build the plates",
+      "instruction": "Serve rice first. Top with stir fry. Reserve extra basil and chili flakes on the side for firefighters who like additional heat.",
+      "minutes": 3,
       "heatLevel": ""
     }
   ],
@@ -120,23 +192,23 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 80,
-    "protein": 1,
-    "carbs": 1,
-    "fats": 0,
+    "calories": 811,
+    "protein": 79,
+    "carbs": 84,
+    "fats": 15,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
-      "highProtein": false,
-      "under700Calories": true,
+      "highProtein": true,
+      "under700Calories": false,
       "under30gFat": true,
-      "highCarb": false,
-      "lowCarb": true,
+      "highCarb": true,
+      "lowCarb": false,
       "mealPrepFriendly": false
     },
     "badgeCandidates": {
-      "highProtein": false,
-      "lighterOption": true,
+      "highProtein": true,
+      "lighterOption": false,
       "performanceMeal": false
     }
   },
@@ -167,6 +239,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-30T03:28:01.982Z",
+  "generatedAt": "2026-05-30T23:27:14.596Z",
   "contentVersion": 2
 }

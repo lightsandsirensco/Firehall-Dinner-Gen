@@ -1,0 +1,218 @@
+{
+  "slug": "firehall-hibachi-mixed-grill-crew",
+  "title": "Teppan Shrimp and Pork Belly Mixed Grill",
+  "displayTitle": "Teppan Shrimp and Pork Belly Mixed Grill",
+  "seoTitle": "Teppan Shrimp and Pork Belly Mixed Grill | Firehall BBQ",
+  "shortDescription": "Hibachi mixed grill—shrimp and pork belly, not the chicken-steak repeat",
+  "subtitle": "Shrimp, pork belly, and griddled vegetables with ginger sauce for ten",
+  "category": "bbq_grill_nights",
+  "cuisine": "japanese-american",
+  "description": "Jumbo shrimp and pork belly cubes griddle with zucchini, mushrooms, and onions, finished with ginger-garlic sauce and sesame. Served with fried rice.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 25,
+  "prepTime": 40,
+  "difficulty": "medium",
+  "calories": 342,
+  "protein": 33,
+  "carbs": 6,
+  "fats": 19,
+  "tags": [
+    "protein:mixed",
+    "format:teppan_mixed",
+    "category:bbq_grill_nights",
+    "bbq",
+    "smoker",
+    "grill",
+    "firehall_bbq_25",
+    "bbq",
+    "grill",
+    "firehall_bbq_30"
+  ],
+  "equipment": [
+    "griddle or flat-top",
+    "metal spatulas",
+    "instant-read thermometer",
+    "hotel pans",
+    "squeeze bottles"
+  ],
+  "ingredients": [
+    {
+      "name": "jumbo shrimp",
+      "quantity": "3",
+      "unit": "lb",
+      "notes": "peeled and deveined",
+      "group": "Main"
+    },
+    {
+      "name": "pork belly",
+      "quantity": "3",
+      "unit": "lb",
+      "notes": "cubed",
+      "group": "Main"
+    },
+    {
+      "name": "zucchini",
+      "quantity": "3",
+      "unit": "whole",
+      "notes": "half-moons",
+      "group": "Hibachi veg"
+    },
+    {
+      "name": "cremini mushrooms",
+      "quantity": "1",
+      "unit": "lb",
+      "notes": "quartered",
+      "group": "Hibachi veg"
+    },
+    {
+      "name": "yellow onions",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "wedges",
+      "group": "Hibachi veg"
+    },
+    {
+      "name": "soy sauce",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Ginger sauce"
+    },
+    {
+      "name": "fresh ginger",
+      "quantity": "3",
+      "unit": "tbsp",
+      "notes": "grated",
+      "group": "Ginger sauce"
+    },
+    {
+      "name": "mirin",
+      "quantity": "0.25",
+      "unit": "cup",
+      "group": "Ginger sauce"
+    },
+    {
+      "name": "toasted sesame oil",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Ginger sauce"
+    },
+    {
+      "name": "cooked fried rice",
+      "quantity": "10",
+      "unit": "cups",
+      "group": "Service"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Build ginger sauce",
+      "instruction": "Simmer soy, mirin, ginger, and garlic until glossy. Finish with sesame oil. Keep warm at 140°F. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Prep proteins",
+      "instruction": "Pat shrimp and pork belly dry. Season pork belly with salt and pepper; shrimp with pinch of salt. Plan about 15 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Preheat the flat-top griddle",
+      "instruction": "Preheat griddle to 400°F. Oil surface lightly. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 10,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Render pork belly",
+      "instruction": "Griddle pork belly cubes 10–12 minutes until crisp and 165°F internal. Drain excess fat. Hold at 170°F. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 12,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Griddle shrimp",
+      "instruction": "Griddle shrimp at 450°F 2 minutes per side until pink and 140°F. Hold at 170°F separately. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 8,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Char vegetables",
+      "instruction": "Griddle zucchini, mushrooms, and onions at 425°F until charred and tender, 8–10 minutes. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 10,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 7,
+      "title": "Combine at service",
+      "instruction": "Toss shrimp, pork belly, and veg with ginger sauce at the line. Do not sauced during long hold. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Platter for ten",
+      "instruction": "Serve mixed grill over fried rice with extra sauce and sesame. About 6 oz protein per firefighter. Cook until char marks are visible and the thickest piece reads 165°F on an instant-read thermometer. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Render pork belly first—shrimp overcooks while belly catches up.",
+    "Sauce at the line keeps shrimp from turning rubbery in hold.",
+    "Drain belly fat between batches or griddle smokes out the hall."
+  ],
+  "tonightSpread": [
+    "Firehall hibachi mixed grill with fried rice.",
+    "Miso soup cups if available."
+  ],
+  "leftovers": [
+    "Mixed grill into hibachi fried rice bowls.",
+    "Pork belly cubes into ramen next shift."
+  ],
+  "whyCrewsLikeIt": "Mixed hibachi without the tired chicken-plus-steak combo. Shrimp and pork belly cook at different times but both love the flat-top and hold at 170°F.",
+  "mealPrepNotes": "Prep proteins separately. Griddle pork belly first at 400°F to render, then shrimp at 450°F, veg last. Hold components covered at 170°F. Sauce at service.",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 342,
+    "protein": 33,
+    "carbs": 6,
+    "fats": 19,
+    "label": "per serving (hall portion)",
+    "source": "estimated"
+  },
+  "heroImage": "/images/smoker-catalog/firehall-hibachi-mixed-grill-crew.jpg",
+  "heroImageAlt": "Teppan Shrimp and Pork Belly Mixed Grill — crew-sized BBQ spread with visible smoke and bark",
+  "mobileImage": "/images/mobile/smoker-catalog/firehall-hibachi-mixed-grill-crew.jpg",
+  "thumbImage": "/images/thumbs/smoker-catalog/firehall-hibachi-mixed-grill-crew.jpg",
+  "railImage": "/images/rails/smoker-catalog/firehall-hibachi-mixed-grill-crew.jpg",
+  "realismScore": 88,
+  "firefighterScore": 90,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "teppan shrimp and pork belly mixed grill",
+    "firehall hibachi mixed grill crew",
+    "mixed",
+    "Japanese-American",
+    "teppan mixed",
+    "bbq",
+    "firehall",
+    "firehall hibachi mixed grill",
+    "shrimp pork belly griddle",
+    "ginger sauce hibachi"
+  ],
+  "relatedSlugs": [
+    "carolina-vinegar-pulled-pork",
+    "honey-chipotle-chicken-thighs",
+    "smoked-chicken-quarters-white-sauce",
+    "brisket-style-beef-sandwiches-au-jus"
+  ],
+  "sourceName": "Firehall Meals BBQ Collection",
+  "generatedAt": "2026-05-31T02:29:42.537Z",
+  "contentVersion": 2
+}

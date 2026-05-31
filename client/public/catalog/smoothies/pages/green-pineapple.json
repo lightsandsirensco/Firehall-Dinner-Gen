@@ -47,19 +47,33 @@
   "steps": [
     {
       "stepNumber": 1,
-      "instruction": "Blend spinach with coconut water first until no leaf flecks remain — this step prevents green stringiness."
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Green Pineapple Smoothie in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on."
     },
     {
       "stepNumber": 2,
-      "instruction": "Add pineapple, banana, and lime. Blend on high until smooth and bright green."
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch Blend. Confirm burners ignite evenly and sheet pans are greased or lined."
     },
     {
       "stepNumber": 3,
-      "instruction": "The color should look tropical, not muddy. Add ice only if you want it colder and thicker."
+      "title": "Blend spinach with coconut",
+      "instruction": "Blend spinach with coconut water first until no leaf flecks remain — this step prevents green stringiness. Serve cold within 10 minutes — hold blended cups on ice at 38°F if the line runs long. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early."
     },
     {
       "stepNumber": 4,
-      "instruction": "Serve cold within a few hours; oxidation will dull the color but it is still fine to drink."
+      "title": "Add pineapple, banana, and",
+      "instruction": "Add pineapple, banana, and lime. Blend on high until smooth and bright green. Serve cold within 10 minutes — hold blended cups on ice at 38°F if the line runs long. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early."
+    },
+    {
+      "stepNumber": 5,
+      "title": "The color should look",
+      "instruction": "The color should look tropical, not muddy. Add ice only if you want it colder and thicker. Serve cold within 10 minutes — hold blended cups on ice at 38°F if the line runs long. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early."
+    },
+    {
+      "stepNumber": 6,
+      "title": "Serve cold within a",
+      "instruction": "Serve cold within a few hours; oxidation will dull the color but it is still fine to drink. Serve cold within 10 minutes — hold blended cups on ice at 38°F if the line runs long. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early."
     }
   ],
   "nutrition": {
@@ -89,8 +103,8 @@
     "Regular water replaces coconut water in a pinch."
   ],
   "shiftNote": "Light enough for early morning or post-call when heavy food sounds wrong. Good “reset” option.",
-  "heroImage": "/images/smoothies/green-pineapple.webp",
-  "thumbImage": "/images/smoothies/green-pineapple.webp",
+  "heroImage": "/images/smoothies/green-pineapple.jpg",
+  "thumbImage": "/images/thumbs/green-pineapple.jpg",
   "tags": [
     "fuel_smoothie",
     "taxonomy:green_smoothie",
@@ -112,6 +126,27 @@
     "strawberry-spinach"
   ],
   "catalogSet": "fuel_smoothie",
-  "generatedAt": "2026-05-28T00:37:54.583Z",
-  "contentVersion": 1
+  "generatedAt": "2026-05-31T13:06:17.174Z",
+  "contentVersion": 2,
+  "mobileImage": "/images/mobile/green-pineapple.jpg",
+  "railImage": "/images/rails/green-pineapple.jpg",
+  "proTips": [
+    "Light enough for early morning or post-call when heavy food sounds wrong. Good “reset” option.",
+    "Rinse the blender jar between batches so flavors do not muddy the next crew's cups.",
+    "If tones drop during service, cover hot food and hold at 140°F — note hold time on the pan for food safety."
+  ],
+  "tonightSpread": [
+    "Pour Green Pineapple Smoothie into insulated cups or quart jars on ice for grab-and-go service.",
+    "Set granola, nut butter, and extra fruit in side bowls so crew can customize without slowing the line.",
+    "Keep a backup blender batch chilled at 38°F if service runs past 20 minutes."
+  ],
+  "leftovers": [
+    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
+    "Label trays with date and reheat to 165°F minimum before second shift."
+  ],
+  "equipment": [
+    "high-speed blender",
+    "measuring cups",
+    "ice bath pan"
+  ]
 }

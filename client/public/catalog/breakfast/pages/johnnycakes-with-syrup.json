@@ -1,0 +1,192 @@
+{
+  "slug": "johnnycakes-with-syrup",
+  "title": "Johnnycakes with Maple Syrup",
+  "subtitle": "Rhode Island cornmeal griddle cakes with butter and warm syrup.",
+  "description": "Adapted from classic New England johnnycake tradition for firehall griddle service: stone-ground cornmeal batter cooked on a hot griddle until lacy-edged and golden, served with whipped butter and warm maple syrup for eight.",
+  "filters": [
+    "feed_a_crew",
+    "quick_breakfasts",
+    "breakfast_sandwiches"
+  ],
+  "tags": [
+    "johnnycakes",
+    "cornmeal",
+    "new-england",
+    "griddle",
+    "maple"
+  ],
+  "crewSize": 8,
+  "baseServings": 8,
+  "prepTime": 15,
+  "cookTime": 25,
+  "totalTime": 40,
+  "difficulty": "easy",
+  "ingredients": [
+    {
+      "name": "fine stone-ground cornmeal",
+      "quantity": "2 cups",
+      "notes": "white or yellow",
+      "group": "Batter"
+    },
+    {
+      "name": "boiling water",
+      "quantity": "2 cups",
+      "notes": "to scald cornmeal",
+      "group": "Batter"
+    },
+    {
+      "name": "whole milk",
+      "quantity": "1 cup",
+      "notes": "room temperature",
+      "group": "Batter"
+    },
+    {
+      "name": "large eggs",
+      "quantity": "2",
+      "notes": "beaten",
+      "group": "Batter"
+    },
+    {
+      "name": "unsalted butter",
+      "quantity": "3 tbsp",
+      "notes": "melted, plus more for griddle",
+      "group": "Batter"
+    },
+    {
+      "name": "granulated sugar",
+      "quantity": "2 tbsp",
+      "notes": "plus 1 tsp salt",
+      "group": "Batter"
+    },
+    {
+      "name": "maple syrup",
+      "quantity": "2 cups",
+      "notes": "warmed",
+      "group": "Serve"
+    },
+    {
+      "name": "whipped butter",
+      "quantity": "1/2 cup",
+      "notes": "plus optional bacon on the side",
+      "group": "Serve"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Johnnycakes with Maple Syrup in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch Eggs. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Scald the cornmeal",
+      "instruction": "Pour boiling water over cornmeal in a large bowl, whisking until smooth. Cover and rest 10 minutes so cornmeal fully hydrates and the batter thickens to porridge consistency. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Finish the batter",
+      "instruction": "Whisk in milk, eggs, melted butter, sugar, and salt until uniform. Batter should pour like thick cream—thin with a tablespoon of milk if it stands in a mound. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Heat the griddle",
+      "instruction": "Heat a griddle or cast iron over medium until a drop of water dances and evaporates in 2 seconds (roughly 375°F surface). Brush lightly with butter. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Griddle the cakes",
+      "instruction": "Pour 1/4 cup batter per cake, spreading slightly if needed. Cook 3–4 minutes until edges look dry and bottoms are deep golden, then flip and cook 2–3 minutes more. Hold warm on a rack. Cook until char marks are visible and the thickest piece reads 165°F on an instant-read thermometer. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Serve with syrup",
+      "instruction": "Stack three cakes per plate with whipped butter and warm maple syrup on the side. Serve immediately while edges stay lacy and centers are tender. Plan about 3 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 3,
+      "heatLevel": ""
+    }
+  ],
+  "nutrition": {
+    "calories": 481,
+    "protein": 4,
+    "carbs": 82,
+    "fat": 18,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": false
+    }
+  },
+  "stationWorkflow": [
+    "Scald cornmeal properly—under-hydrated batter tastes gritty and cracks on the griddle.",
+    "Cook in batches of six so the griddle stays at temp between pours.",
+    "Hold finished cakes on a rack in a 200°F oven, never stacked, to preserve crisp edges."
+  ],
+  "cleanupNotes": [
+    "Wipe the griddle while still warm with a damp cloth before cornmeal hardens.",
+    "Soak mixing bowls immediately—cornmeal batter dries into cement quickly."
+  ],
+  "leftovers": [
+    "Reheat cakes on a dry griddle over medium until edges re-crisp, about 2 minutes per side.",
+    "Crumble stale johnnycakes into cornbread stuffing for a dinner side later in the week."
+  ],
+  "heroImage": "/images/breakfast/johnnycakes-with-syrup.jpg",
+  "thumbImage": "/images/thumbs/breakfast/johnnycakes-with-syrup.jpg",
+  "imageAlt": "Golden johnnycakes with whipped butter and warm maple syrup",
+  "publishedAt": "2026-05-30T21:22:29.757Z",
+  "updatedAt": "2026-05-31T12:54:36.780Z",
+  "readMinutes": 6,
+  "seoTitle": "Johnnycakes with Maple Syrup | Firehall Breakfast",
+  "mobileImage": "/images/mobile/breakfast/johnnycakes-with-syrup.jpg",
+  "railImage": "/images/rails/breakfast/johnnycakes-with-syrup.jpg",
+  "proTips": [
+    "Scald cornmeal properly—under-hydrated batter tastes gritty and cracks on the griddle.",
+    "Cook in batches of six so the griddle stays at temp between pours.",
+    "Hold finished cakes on a rack in a 200°F oven, never stacked, to preserve crisp edges."
+  ],
+  "tonightSpread": [
+    "Plate Johnnycakes with Maple Syrup with sides in separate pans so the crew can mix portions.",
+    "Keep hot items on one side of the table and cold on the other — eggs stay hot, fruit stays cold.",
+    "Line up Johnnycakes with Maple Syrup on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+  ],
+  "equipment": [
+    "Large sheet trays",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "mealPrepNotes": "Prep mise en place before the shift — Johnnycakes with Maple Syrup runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
+}

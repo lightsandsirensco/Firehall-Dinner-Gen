@@ -1,0 +1,221 @@
+{
+  "slug": "lamb-kofta-skewer-platter",
+  "title": "Lamb Kofta Skewer Platter",
+  "displayTitle": "Lamb Kofta Skewer Platter",
+  "seoTitle": "Lamb Kofta Skewer Platter | Firefighter Meal",
+  "shortDescription": "Spiced lamb skewers with yogurt sauce and flatbread for ten",
+  "subtitle": "Spiced lamb skewers with yogurt sauce and flatbread for ten",
+  "category": "hall_expansion",
+  "cuisine": "middle_eastern",
+  "description": "Ground lamb mixes with onion, parsley, and warm spices, then grills on skewers until charred outside and juicy inside. Serve with tzatziki-style yogurt sauce, grilled flatbread, tomatoes, and pickled onions.",
+  "crewSize": 9,
+  "baseServings": 9,
+  "cookTime": 15,
+  "prepTime": 30,
+  "difficulty": "medium",
+  "calories": 520,
+  "protein": 34,
+  "carbs": 28,
+  "fats": 32,
+  "tags": [
+    "protein:lamb",
+    "format:skewer",
+    "category:crew_feeders",
+    "hall_expansion",
+    "crew_feeders",
+    "middle_eastern",
+    "lamb",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Grill",
+    "Metal or soaked wood skewers",
+    "Mixing bowl",
+    "Instant-read thermometer",
+    "Platters"
+  ],
+  "ingredients": [
+    {
+      "name": "ground lamb",
+      "quantity": "4",
+      "unit": "lb",
+      "group": "Kofta"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "1",
+      "unit": "whole",
+      "notes": "grated and drained",
+      "group": "Kofta"
+    },
+    {
+      "name": "fresh parsley",
+      "quantity": "0.5",
+      "unit": "cup",
+      "notes": "finely chopped",
+      "group": "Kofta"
+    },
+    {
+      "name": "ground cumin",
+      "quantity": "2",
+      "unit": "tsp",
+      "group": "Spice"
+    },
+    {
+      "name": "ground coriander",
+      "quantity": "2",
+      "unit": "tsp",
+      "group": "Spice"
+    },
+    {
+      "name": "smoked paprika",
+      "quantity": "1",
+      "unit": "tsp",
+      "group": "Spice"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "4",
+      "unit": "cloves",
+      "notes": "minced",
+      "group": "Kofta"
+    },
+    {
+      "name": "Greek yogurt",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Sauce"
+    },
+    {
+      "name": "lemon juice",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "flatbread",
+      "quantity": "12",
+      "unit": "pieces",
+      "notes": "pita or naan",
+      "group": "Service"
+    },
+    {
+      "name": "cherry tomatoes",
+      "quantity": "2",
+      "unit": "cups",
+      "notes": "halved",
+      "group": "Service"
+    },
+    {
+      "name": "red onion",
+      "quantity": "1",
+      "unit": "whole",
+      "notes": "quick-pickled",
+      "group": "Service"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Lamb Kofta Skewer Platter in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch lamb. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Mix kofta",
+      "instruction": "Combine lamb, drained onion, parsley, garlic, cumin, coriander, paprika, salt, and pepper. Mix gently and chill 30 minutes. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Form skewers",
+      "instruction": "Shape meat into logs around skewers about 6 inches long. Press firmly so meat adheres. Plan about 15 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Make yogurt sauce",
+      "instruction": "Whisk yogurt, lemon juice, minced garlic, salt, and chopped cucumber if available. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Grill kofta",
+      "instruction": "Grill skewers over medium-high heat 10–12 minutes, turning often, until charred and 165°F internal. Target oven/smoker temperature: 400°F.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Platter and serve",
+      "instruction": "Slide kofta off skewers onto platters or serve on skewers with warm flatbread, tomatoes, pickled onion, and yogurt sauce. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "A little soaked breadcrumbs in the mix helps bind if lamb is very lean.",
+    "Sumac sprinkled at service adds classic tang.",
+    "Offer harissa for crews who want more heat."
+  ],
+  "tonightSpread": [
+    "Lamb kofta with flatbread, yogurt sauce, tomatoes, and pickled onions.",
+    "Simple herb salad with lemon dressing."
+  ],
+  "leftovers": [
+    "Crumble kofta into hummus bowls with cucumbers.",
+    "Reheat in pita with tzatziki for quick lunch."
+  ],
+  "whyCrewsLikeIt": "Kofta skewers are hand-held, flavorful, and feel like a cookout with purpose. Lamb brings variety to halls stuck on chicken-and-beef rotation, and skewers portion cleanly for ten hungry firefighters.",
+  "mealPrepNotes": "Chill formed kofta 30 minutes before grilling so they hold shape. Soak wooden skewers if using. Yogurt sauce improves after an hour in the fridge.",
+  "spiceLevel": "medium",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 520,
+    "protein": 34,
+    "carbs": 28,
+    "fats": 32,
+    "label": "~520 cal/serving · 34g protein · 2g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/lamb-kofta-skewer-platter.jpg",
+  "heroImageAlt": "Lamb Kofta Skewer Platter — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/lamb-kofta-skewer-platter.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/lamb-kofta-skewer-platter.jpg",
+  "railImage": "/images/rails/hall-expansion/lamb-kofta-skewer-platter.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "lamb kofta skewer platter",
+    "crew feeders"
+  ],
+  "relatedSlugs": [
+    "shawarma-bar-night",
+    "fajita-bar-night",
+    "hall-burger-bar",
+    "pasta-bar-night"
+  ],
+  "generatedAt": "2026-05-31T01:50:00.916Z",
+  "contentVersion": 2
+}

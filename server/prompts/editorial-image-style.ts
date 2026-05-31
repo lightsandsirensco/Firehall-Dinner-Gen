@@ -9,26 +9,30 @@ import {
   FOOD_IMAGERY_STYLE_VERSION,
   getMasterStylePromptLines,
 } from "../../shared/food-imagery/master-style.js";
+import {
+  getFirehallKitchenNegativePromptLines,
+  FIREHALL_KITCHEN_PHOTO_STANDARD_VERSION,
+} from "../../shared/food-imagery/firehall-kitchen-photo-standard.js";
 
 export const EDITORIAL_IMAGE_STYLE_VERSION = `editorial-prompts-${FOOD_IMAGERY_STYLE_VERSION}`;
 
 /** One master visual identity — real kitchen, photoreal menu photography. */
 export const MASTER_EDITORIAL_VISUAL_STYLE = {
   aesthetic:
-    "photorealistic restaurant food photography in a real firehall kitchen — not illustration, not 3D, not AI fantasy food",
+    "photorealistic professional food photography in an active Canadian firehall kitchen — not illustration, not 3D, not AI fantasy food, not restaurant marketing",
   lighting:
     "single warm practical key from camera-left 45°, soft fill, believable contrast, steam only when dish is hot",
   grade:
     "natural color grade — true food tones, restrained saturation, soft shadow roll-off, no cold blue cast",
-  plating: "realistic plating on dark surfaces, believable portion scale, slight natural asymmetry",
+  plating: "crew-sized family-style portions on prep surfaces, serving trays, or hotel pans — believable scale, slight natural asymmetry",
   textures:
-    "weathered wood and brushed steel in soft background bokeh, cast iron accents when natural",
+    "commercial stainless prep tables, steam tables, sheet pans, brushed steel and pantry shelving in soft background bokeh",
   lens:
     "50mm full-frame perspective, center-weighted hero, 12% safe margin for mobile crop, no fisheye",
   realism:
-    "looks like a professional food photographer shot it on location — natural moisture, real char, no plastic shine, no AI gloss",
+    "looks like a professional food photographer shot it in a busy station kitchen — natural moisture, real char, documentary realism, no plastic shine, no AI gloss",
   restrictions:
-    "no Pinterest flat lay blog aesthetic, no bright white seamless studio, no influencer brunch staging, no oversaturated social filter",
+    "no Pinterest flat lay blog aesthetic, no bright white seamless studio, no influencer brunch staging, no firefighter recruitment imagery, no oversaturated social filter",
 } as const;
 
 export const BANNED_AESTHETICS = [
@@ -65,8 +69,13 @@ export const BANNED_PROPS = [
   "random vintage cutlery clutter",
   "brand packaging visible",
   "fast food chain cups",
-  "generic buffet steam tables",
   "plastic garnish flowers",
+  "fire trucks or pumpers",
+  "bunker gear or turnout gear",
+  "SCBA packs or helmets",
+  "firefighter recruitment posters",
+  "department logos or station patches",
+  "Halligan bars axes hoses",
 ] as const;
 
 /** Normalized capture parameters — keep Golden 100 catalog visually cohesive. */
@@ -76,7 +85,7 @@ export const NORMALIZED_CAPTURE = {
   saturation: "moderate — rich but natural, true ingredient colors",
   contrast: "realistic mid contrast, readable shadows, not crushed blacks or HDR halos",
   backgroundStyle:
-    "dark matte firehall surface — weathered wood or slate, brushed steel blurred behind, shallow depth of field",
+    "active Canadian firehall kitchen — commercial stainless, prep tables, steam tables, sheet pans, industrial lighting, shallow depth of field",
 } as const;
 
 export function getMasterEditorialStyleBlock(): string {
@@ -98,7 +107,7 @@ export function getMasterEditorialStyleBlock(): string {
     `Background: ${n.backgroundStyle}`,
     s.restrictions,
     ...getMasterStylePromptLines(),
-    `Editorial style system ${EDITORIAL_IMAGE_STYLE_VERSION}`,
+    `Editorial style system ${EDITORIAL_IMAGE_STYLE_VERSION} (kitchen standard ${FIREHALL_KITCHEN_PHOTO_STANDARD_VERSION})`,
   ].join(". ");
 }
 
@@ -107,6 +116,7 @@ export function getEditorialNegativePromptBlock(extra: string[] = []): string {
     ...BANNED_AESTHETICS,
     ...BANNED_COMPOSITIONS,
     ...BANNED_PROPS,
+    ...getFirehallKitchenNegativePromptLines(),
     FIREHALL_MASTER_EDITORIAL_STYLE.restrictions,
     ...extra,
   ]

@@ -1,17 +1,17 @@
 # Expansion Production Audit
 
-Generated: **2026-05-30T01:22:41.285Z**
+Generated: **2026-05-30T21:22:59.474Z**
 
 ## Summary
 
 | Metric | Value |
 |--------|------:|
-| Recipes audited | 50 |
-| Heroes on disk | 50 |
-| Thumbs on disk | 50 |
-| Errors | 0 |
-| Warnings | 96 |
-| **Production readiness** | **100%** |
+| Recipes audited | 76 |
+| Heroes on disk | 76 |
+| Thumbs on disk | 76 |
+| Errors | 8 |
+| Warnings | 102 |
+| **Production readiness** | **95%** |
 
 ## Inventory
 
@@ -47,6 +47,32 @@ Generated: **2026-05-30T01:22:41.285Z**
 | Burrito Bowl Bar Night | `burrito-bowl-bar-night` | crew_feeders | ✓ | ✓ |
 | Loaded Nacho Bar Night | `loaded-nacho-bar-night` | crew_feeders | ✓ | ✓ |
 | Build-Your-Own Pho Bar | `build-your-own-pho-bar` | crew_feeders | ✓ | ✓ |
+| Mesquite Smoked Chuck Roast | `mesquite-chuck-roast` | smoker_recipes | ✓ | ✓ |
+| Molasses Bourbon Pork Ribs | `molasses-bourbon-pork-ribs` | smoker_recipes | ✓ | ✓ |
+| Applewood Grilled Pork Shoulder Steaks | `applewood-pork-shoulder-steaks` | smoker_recipes | ✓ | ✓ |
+| Pepper-Crusted Smoked Brisket Flat | `pepper-smoked-brisket-flat` | smoker_recipes | ✓ | ✓ |
+| Honey Mustard Baked Chicken Thighs | `honey-mustard-oven-chicken-thighs` | crew_feeders | ✓ | ✓ |
+| Spatchcock Lemon Roast Chicken | `spatchcock-lemon-roast-chicken` | crew_feeders | ✓ | ✓ |
+| Cajun Chicken and Rice Skillet | `cajun-chicken-rice-skillet` | crew_feeders | ✓ | ✓ |
+| Paprika Roasted Chicken Quarters | `paprika-roasted-chicken-quarters` | crew_feeders | ✓ | ✓ |
+| Cast Iron Chicken Fajitas | `cast-iron-chicken-fajitas` | game_day_recipes | ✓ | ✓ |
+| Mushroom Swiss Steak Pan | `mushroom-swiss-steak-pan` | crew_feeders | ✓ | ✓ |
+| Pepper Steak with Onions | `pepper-steak-onions` | crew_feeders | ✓ | ✓ |
+| Dutch Oven Pot Roast | `dutch-oven-pot-roast` | crew_feeders | ✓ | ✓ |
+| Beef Enchilada Skillet | `enchilada-beef-skillet` | game_day_recipes | ✓ | ✓ |
+| Baked Mostaccioli with Sausage | `mostaccioli-sausage-bake` | crew_feeders | ✓ | ✓ |
+| Creamy Chicken Penne Alfredo | `creamy-chicken-penne-alfredo` | crew_feeders | ✓ | ✓ |
+| Rigatoni with Meat Sauce | `rigatoni-meat-sauce-batch` | crew_feeders | ✓ | ✓ |
+| Station Cobb Salad | `station-cobb-salad` | game_day_recipes | ✓ | ✓ |
+| Warm Spinach Chicken Salad | `warm-spinach-chicken-salad` | game_day_recipes | ✓ | ✓ |
+| Hall Chicken Noodle Soup | `hall-chicken-noodle-soup` | crew_feeders | ✓ | ✓ |
+| Green Chile Chicken Stew | `green-chile-chicken-stew` | crew_feeders | ✓ | ✓ |
+| Ginger Soy Chicken Rice Bowls | `ginger-soy-chicken-rice-bowls` | crew_feeders | ✓ | ✓ |
+| Mediterranean Chicken Farro Bowls | `mediterranean-chicken-farro-bowls` | crew_feeders | ✓ | ✓ |
+| Kielbasa Cabbage Potato Skillet | `kielbasa-cabbage-potato-skillet` | crew_feeders | ✓ | ✓ |
+| Cheesy Chicken Broccoli Rice | `cheesy-chicken-broccoli-rice` | crew_feeders | ✓ | ✓ |
+| Sheet Pan Meatball Marinara Feed | `sheet-pan-meatball-marinara` | crew_feeders | ✓ | ✓ |
+| Hall Sloppy Joe Feed | `hall-sloppy-joe-feed` | crew_feeders | ✓ | ✓ |
 | Red Lead Skillet | `red-lead-skillet` | firehall_breakfasts | ✓ | ✓ |
 | Firehall Breakfast Pizza | `firehall-breakfast-pizza` | firehall_breakfasts | ✓ | ✓ |
 | Breakfast Enchiladas for the Crew | `breakfast-enchiladas` | firehall_breakfasts | ✓ | ✓ |
@@ -70,7 +96,14 @@ Generated: **2026-05-30T01:22:41.285Z**
 
 ## Errors
 
-None
+- **mushroom-swiss-steak-pan** [content/no_temperature]: no oven/grill/internal temperature cues in steps
+- **mushroom-swiss-steak-pan** [content/no_temperature]: no oven/grill/internal temperature cues in steps
+- **pepper-steak-onions** [content/no_temperature]: no oven/grill/internal temperature cues in steps
+- **pepper-steak-onions** [content/no_temperature]: no oven/grill/internal temperature cues in steps
+- **rigatoni-meat-sauce-batch** [content/no_temperature]: no oven/grill/internal temperature cues in steps
+- **rigatoni-meat-sauce-batch** [content/no_temperature]: no oven/grill/internal temperature cues in steps
+- **kielbasa-cabbage-potato-skillet** [content/no_temperature]: no oven/grill/internal temperature cues in steps
+- **kielbasa-cabbage-potato-skillet** [content/no_temperature]: no oven/grill/internal temperature cues in steps
 
 ## Warnings (top 30)
 
@@ -81,6 +114,12 @@ None
 - **mediterranean-feast-night** [content/weak_title]: robotic_title
 - **burrito-bowl-bar-night** [content/weak_title]: title_taco_no_tortilla
 - **loaded-nacho-bar-night** [content/weak_title]: title_taco_no_tortilla
+- **cast-iron-chicken-fajitas** [content/weak_title]: title_taco_no_tortilla
+- **cast-iron-chicken-fajitas** [content/vague_wording]: step 4 uses vague phrasing
+- **enchilada-beef-skillet** [content/weak_title]: robotic_title; title_taco_no_tortilla
+- **mediterranean-chicken-farro-bowls** [content/weak_title]: robotic_title
+- **kielbasa-cabbage-potato-skillet** [content/weak_title]: robotic_title
+- **sheet-pan-meatball-marinara** [content/weak_title]: robotic_title
 - **red-lead-skillet** [content/orphan_ingredient]: Ingredient may be unused in steps: sirloin or flank steak
 - **red-lead-skillet** [content/orphan_ingredient]: Ingredient may be unused in steps: large eggs
 - **red-lead-skillet** [content/orphan_ingredient]: Ingredient may be unused in steps: Yukon gold potatoes
@@ -98,11 +137,5 @@ None
 - **breakfast-crunchwraps** [content/orphan_ingredient]: Ingredient may be unused in steps: large eggs
 - **breakfast-crunchwraps** [content/orphan_ingredient]: Ingredient may be unused in steps: breakfast sausage
 - **breakfast-crunchwraps** [content/orphan_ingredient]: Ingredient may be unused in steps: frozen hash browns
-- **breakfast-crunchwraps** [content/orphan_ingredient]: Ingredient may be unused in steps: shredded cheddar
-- **breakfast-crunchwraps** [content/orphan_ingredient]: Ingredient may be unused in steps: 12-inch flour tortillas
-- **breakfast-crunchwraps** [content/orphan_ingredient]: Ingredient may be unused in steps: 6-inch tostada shells
-- **breakfast-crunchwraps** [content/orphan_ingredient]: Ingredient may be unused in steps: sour cream
-- **denver-breakfast-casserole** [content/orphan_ingredient]: Ingredient may be unused in steps: large eggs
-- **denver-breakfast-casserole** [content/orphan_ingredient]: Ingredient may be unused in steps: whole milk
 
-_…and 66 more warnings_
+_…and 72 more warnings_

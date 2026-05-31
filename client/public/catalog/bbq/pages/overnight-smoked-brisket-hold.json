@@ -1,0 +1,195 @@
+{
+  "slug": "overnight-smoked-brisket-hold",
+  "title": "Overnight Smoked Brisket Hold",
+  "displayTitle": "Overnight Smoked Brisket Hold",
+  "seoTitle": "Overnight Smoked Brisket Hold | Firehall BBQ",
+  "shortDescription": "Start at midnight, slice at dinner—built for hall scheduling",
+  "subtitle": "Low-and-slow packer that finishes before shift and holds hot for ten",
+  "category": "bbq_grill_nights",
+  "cuisine": "american",
+  "description": "Adapted from classic overnight brisket hold methods (Traeger, Hey Grill Hey): a trimmed packer rides 225°F through the night, wraps in the stall, finishes probe-tender, and rests in a cooler until the crew rolls in.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 480,
+  "prepTime": 40,
+  "difficulty": "hard",
+  "calories": 1375,
+  "protein": 120,
+  "carbs": 1,
+  "fats": 90,
+  "tags": [
+    "protein:beef",
+    "format:bbq",
+    "category:bbq_grill_nights",
+    "bbq",
+    "smoker",
+    "grill",
+    "firehall_bbq_25",
+    "bbq",
+    "beef",
+    "big_crew"
+  ],
+  "equipment": [
+    "smoker",
+    "probe thermometer",
+    "butcher paper",
+    "foil",
+    "cooler",
+    "instant-read thermometer",
+    "slicing knife"
+  ],
+  "ingredients": [
+    {
+      "name": "whole packer brisket",
+      "quantity": "12",
+      "unit": "lb",
+      "notes": "trimmed"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "0.25",
+      "unit": "cup"
+    },
+    {
+      "name": "coarse black pepper",
+      "quantity": "0.25",
+      "unit": "cup"
+    },
+    {
+      "name": "onion powder",
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "beef broth",
+      "quantity": "3",
+      "unit": "cups",
+      "notes": "for holding"
+    },
+    {
+      "name": "yellow mustard",
+      "quantity": "2",
+      "unit": "tbsp",
+      "notes": "binder"
+    },
+    {
+      "name": "pickle chips",
+      "quantity": "2",
+      "unit": "cups"
+    },
+    {
+      "name": "Texas toast",
+      "quantity": "10",
+      "unit": "slices"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Prep and season",
+      "instruction": "Trim fat cap to 1/4 inch. Coat with mustard, then salt, pepper, and onion powder. Rest 30 minutes while smoker preheats to 225°F.",
+      "minutes": 30,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Overnight smoke",
+      "instruction": "Place brisket fat-side up at 225°F. Smoke undisturbed until internal temp reaches 160–165°F and bark is set, about 7–8 hours.",
+      "minutes": 420,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Wrap for the finish",
+      "instruction": "Wrap in butcher paper with a splash of broth. Continue at 225°F until flat probes 203°F and feels like soft butter, about 3–4 hours.",
+      "minutes": 180,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Cooler rest",
+      "instruction": "Rest wrapped brisket in an insulated cooler at least 90 minutes—this is where the magic happens for slice-ready meat.",
+      "minutes": 90,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Slice for service",
+      "instruction": "Unwrap, slice flat against the grain 1/4 inch thick. Toss lightly with warm broth. Reserve point for burnt ends or chop for sandwiches.",
+      "minutes": 25,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "170°F warm hold",
+      "instruction": "Transfer sliced brisket to a hotel pan, add 1/2 cup broth, cover tightly with foil, and hold at 170°F until the line opens.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Tonight's board",
+      "instruction": "Brisket tray with broth for moistening, pickles, and toast. Call it: overnight brisket—slice and stack.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Leftovers",
+      "instruction": "Vacuum or wrap tight; reheat slices in hot broth at 325°F covered until 165°F internal.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Use a leave-in probe alarm so you don't have to wake up to check temps.",
+    "Cooler rest is not optional—it's how you hit a 6 AM finish with noon service.",
+    "If brisket finishes early, keep it whole wrapped in the cooler; slice on demand."
+  ],
+  "tonightSpread": [
+    "Sliced brisket in a hotel pan with broth.",
+    "Pickles, onion, and Texas toast for sandwiches."
+  ],
+  "leftovers": [
+    "Brisket breakfast burritos with eggs and salsa.",
+    "Chop into chili for the next cold shift."
+  ],
+  "whyCrewsLikeIt": "The cook happens while the hall sleeps. By dinner you have rested, slice-ready brisket without babysitting the pit between calls.",
+  "mealPrepNotes": "Plan 12–14 hours total. Hold whole wrapped brisket in a cooler up to 6 hours. For extended hold, slice and pan with broth at 170°F—never above 175°F or lean meat dries.",
+  "cleanupDifficulty": "heavy",
+  "nutrition": {
+    "calories": 1375,
+    "protein": 120,
+    "carbs": 1,
+    "fats": 90,
+    "label": "per serving (hall portion)",
+    "source": "estimated"
+  },
+  "heroImage": "/images/smoker-catalog/overnight-smoked-brisket-hold.jpg",
+  "heroImageAlt": "Overnight Smoked Brisket Hold — crew-sized BBQ spread with visible smoke and bark",
+  "mobileImage": "/images/mobile/smoker-catalog/overnight-smoked-brisket-hold.jpg",
+  "thumbImage": "/images/thumbs/smoker-catalog/overnight-smoked-brisket-hold.jpg",
+  "railImage": "/images/rails/smoker-catalog/overnight-smoked-brisket-hold.jpg",
+  "realismScore": 88,
+  "firefighterScore": 90,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "overnight smoked brisket hold",
+    "beef",
+    "American",
+    "bbq",
+    "firehall",
+    "overnight brisket",
+    "brisket hold",
+    "225 smoke",
+    "cooler rest"
+  ],
+  "relatedSlugs": [
+    "texas-central-brisket-crew",
+    "firehall-burnt-ends-platter",
+    "brisket-style-beef-sandwiches-au-jus"
+  ],
+  "sourceName": "Firehall Meals BBQ Collection",
+  "generatedAt": "2026-05-31T02:29:42.529Z",
+  "contentVersion": 2
+}

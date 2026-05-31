@@ -14,7 +14,7 @@ import { smoothiePageJsonPath } from "../shared/fuel-catalog/paths.js";
 import { goldenPageJsonPath } from "../shared/golden-100/recipe-page-paths.js";
 import { performancePageJsonPath } from "../shared/performance-meals/recipe-page-paths.js";
 import { hallExpansionCatalogPagePath } from "../shared/hall-expansion/recipe-page-paths.js";
-import { isBreakfastCatalogSlug } from "../shared/hall-catalog/gate.js";
+import { isBreakfastCatalogSlug, isBbqCatalogSlug } from "../shared/hall-catalog/gate.js";
 import { getSmoothieCatalogItem } from "../shared/fuel-catalog/smoothies/catalog-data.js";
 
 const PUBLIC_ROOT = path.join(process.cwd(), "client", "public");
@@ -31,9 +31,16 @@ function resolveMealDataCandidates(slug: string): string[] {
   ];
 }
 
+function bbqPageJsonPath(slug: string): string {
+  return `/catalog/bbq/pages/${slug}.json`;
+}
+
 function resolveDataUrl(slug: string, kind: string): string | null {
   if (kind === "breakfast_catalog" || isBreakfastCatalogSlug(slug)) {
     return breakfastPageJsonPath(slug);
+  }
+  if (kind === "bbq_catalog" || isBbqCatalogSlug(slug)) {
+    return bbqPageJsonPath(slug);
   }
   if (kind === "smoothie" || getSmoothieCatalogItem(slug)) {
     return smoothiePageJsonPath(slug);
@@ -75,6 +82,7 @@ function assertRoutePath(slug: string, kind: string, errors: string[]): void {
   }
   if (
     kind !== "breakfast_catalog" &&
+    kind !== "bbq_catalog" &&
     kind !== "smoothie" &&
     !route.startsWith("/recipes/")
   ) {
@@ -98,6 +106,7 @@ function main(): void {
   const errors: string[] = [];
   const slugs = new Set<string>();
   let breakfastCount = 0;
+  let bbqCount = 0;
   let smoothieCount = 0;
   let mealCount = 0;
 
@@ -108,6 +117,7 @@ function main(): void {
     slugs.add(entry.slug);
 
     if (entry.kind === "breakfast_catalog") breakfastCount += 1;
+    else if (entry.kind === "bbq_catalog") bbqCount += 1;
     else if (entry.isSmoothie) smoothieCount += 1;
     else mealCount += 1;
 
@@ -129,7 +139,7 @@ function main(): void {
   }
 
   console.log(
-    `[audit-approved-recipe-data-routes] PASS — ${catalog.recipeCount} recipes (${mealCount} meals, ${breakfastCount} breakfast, ${smoothieCount} smoothies)`,
+    `[audit-approved-recipe-data-routes] PASS — ${catalog.recipeCount} recipes (${mealCount} meals, ${breakfastCount} breakfast, ${bbqCount} bbq, ${smoothieCount} smoothies)`,
   );
 }
 

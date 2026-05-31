@@ -3,17 +3,22 @@
  * Bump FOOD_IMAGERY_STYLE_VERSION to invalidate cached prompts/assets.
  */
 
-export const FOOD_IMAGERY_STYLE_VERSION = "4.0";
+import {
+  getFirehallKitchenPhotoStandardLines,
+  FIREHALL_KITCHEN_PHOTO_STANDARD_VERSION,
+} from "./firehall-kitchen-photo-standard.js";
+
+export const FOOD_IMAGERY_STYLE_VERSION = "5.0";
 
 /** Shared photographic baseline — identical look on every hero (angles vary by shot preset only). */
 export const FIREHALL_PHOTO_BASELINE =
-  "Authentic restaurant menu photograph shot on a full-frame DSLR in a real kitchen — natural color, believable imperfections, not CGI or generative AI";
+  "Photorealistic professional food photograph shot on a full-frame DSLR in an active Canadian firehall kitchen — natural color, believable imperfections, not CGI or generative AI";
 
 /** Fixed master block — identical on every generation (consistency > creativity). */
 export const FIREHALL_MASTER_EDITORIAL_STYLE = {
   brand: "Firehall Meals editorial food photography",
   reference:
-    "Premium real-world menu photography — Serious Eats / Bon Appétit test-kitchen discipline, same dark-brand plate styling on every image",
+    "Firehall kitchen realism — crew-sized family-style portions in a busy Canadian station kitchen, documentary food photography not restaurant marketing",
   camera:
     "50mm prime lens, f/2.8, full-frame sensor, natural depth of field, subtle film grain, no fisheye, no HDR processing",
   lighting:
@@ -21,7 +26,7 @@ export const FIREHALL_MASTER_EDITORIAL_STYLE = {
   shadows:
     "one consistent shadow direction under the plate, contact shadows where food meets surface, no floating elements",
   background:
-    "dark matte firehall kitchen surface — weathered wood or slate, brushed steel softly out of focus, shallow depth of field",
+    "active Canadian firehall kitchen — commercial stainless prep tables, steam tables, sheet pans, industrial lighting, brushed steel and pantry shelving softly out of focus",
   colorGrade:
     "natural true-to-food color — restrained saturation, no neon, no cold blue cast, no oversharpened HDR glow, no AI color pop",
   realism:
@@ -30,11 +35,11 @@ export const FIREHALL_MASTER_EDITORIAL_STYLE = {
     "shallow depth of field like a real camera — hero dish tack sharp, background bokeh organic not synthetic",
   framing:
     "center-weighted hero subject with 12% safe margin for mobile vertical crop, no extreme wide-angle distortion",
-  mood: "confident firehall comfort food — appetizing and real, not fast-food commercial, not fantasy food art",
+  mood: "served to a hungry fire crew after calls — hearty, generous, appetizing and real, not fast-food commercial, not fantasy food art",
   props:
-    "minimal props — cast iron edge or linen napkin only when natural, no cluttered tabletop, no garnish explosions",
+    "serving trays, hotel pans, cutting boards, sheet pans, carving boards — crew-sized presentation, no garnish explosions",
   restrictions:
-    "no text, no logos, no watermarks, no people, no hands, no faces, no utensils dominating frame",
+    "no text, no logos, no watermarks, no fire trucks or firefighting gear, no recruitment imagery, no hands or faces in focus, no utensils dominating frame; blurred background kitchen staff in navy station shirts or aprons optional",
 } as const;
 
 /** Ordered lines injected into every positive prompt in this exact sequence. */
@@ -43,6 +48,7 @@ export function getMasterStylePromptLines(): string[] {
   return [
     s.brand,
     FIREHALL_PHOTO_BASELINE,
+    ...getFirehallKitchenPhotoStandardLines(),
     s.reference,
     `Camera: ${s.camera}`,
     `Lighting: ${s.lighting}`,
@@ -55,7 +61,7 @@ export function getMasterStylePromptLines(): string[] {
     `Mood: ${s.mood}`,
     `Props: ${s.props}`,
     s.restrictions,
-    `Style system ${FOOD_IMAGERY_STYLE_VERSION}`,
+    `Style system ${FOOD_IMAGERY_STYLE_VERSION} (kitchen standard ${FIREHALL_KITCHEN_PHOTO_STANDARD_VERSION})`,
   ];
 }
 

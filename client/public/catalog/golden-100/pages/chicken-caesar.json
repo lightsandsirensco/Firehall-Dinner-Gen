@@ -15,7 +15,7 @@
   "difficulty": "medium",
   "calories": 1400,
   "protein": 120,
-  "carbs": 104,
+  "carbs": 102,
   "fats": 90,
   "tags": [
     "protein:chicken",
@@ -38,7 +38,7 @@
     },
     {
       "name": "Romaine hearts",
-      "quantity": "9",
+      "quantity": "8",
       "unit": "heads"
     },
     {
@@ -151,7 +151,7 @@
   "nutrition": {
     "calories": 1400,
     "protein": 120,
-    "carbs": 104,
+    "carbs": 102,
     "fats": 90,
     "label": "per serving (hall portion)",
     "source": "calculated",
@@ -196,6 +196,6 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "classicSlug": "chicken-caesar",
-  "generatedAt": "2026-05-30T03:28:01.792Z",
+  "generatedAt": "2026-05-30T23:27:14.489Z",
   "contentVersion": 2
 }

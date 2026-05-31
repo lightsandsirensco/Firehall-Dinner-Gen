@@ -1,0 +1,235 @@
+{
+  "slug": "firehall-donair-platter",
+  "title": "Firehall Donair Platter",
+  "displayTitle": "Firehall Donair Platter",
+  "seoTitle": "Firehall Donair Platter | Firefighter Meal",
+  "shortDescription": "Spiced beef cones roasted and shaved with sweet sauce for ten",
+  "subtitle": "Spiced beef cones roasted and shaved with sweet sauce for ten",
+  "category": "hall_expansion",
+  "cuisine": "canadian",
+  "description": "Seasoned ground beef is pressed around vertical skewers, roasted until crisp-edged, then shaved thin for donair platters. Serve with warm pita, diced tomatoes, onions, and sweet garlicky donair sauce.",
+  "crewSize": 9,
+  "baseServings": 9,
+  "cookTime": 65,
+  "prepTime": 35,
+  "difficulty": "medium",
+  "calories": 540,
+  "protein": 38,
+  "carbs": 36,
+  "fats": 28,
+  "tags": [
+    "protein:beef",
+    "format:platter",
+    "category:crew_feeders",
+    "hall_expansion",
+    "crew_feeders",
+    "canadian",
+    "beef",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Loaf pans",
+    "Metal skewers",
+    "Roasting pans",
+    "Sharp knife",
+    "Mixing bowls"
+  ],
+  "ingredients": [
+    {
+      "name": "ground beef",
+      "quantity": "5",
+      "unit": "lb",
+      "notes": "80/20",
+      "group": "Main"
+    },
+    {
+      "name": "ground lamb",
+      "quantity": "1",
+      "unit": "lb",
+      "notes": "optional for authenticity",
+      "group": "Main"
+    },
+    {
+      "name": "garlic powder",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "onion powder",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "ground oregano",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "paprika",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "sweetened condensed milk",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Sauce"
+    },
+    {
+      "name": "white vinegar",
+      "quantity": "0.33",
+      "unit": "cup",
+      "group": "Sauce"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "3",
+      "unit": "cloves",
+      "notes": "minced",
+      "group": "Sauce"
+    },
+    {
+      "name": "pita bread",
+      "quantity": "12",
+      "unit": "rounds",
+      "notes": "warmed",
+      "group": "Service"
+    },
+    {
+      "name": "tomatoes",
+      "quantity": "3",
+      "unit": "whole",
+      "notes": "diced",
+      "group": "Service"
+    },
+    {
+      "name": "white onion",
+      "quantity": "1",
+      "unit": "whole",
+      "notes": "finely diced",
+      "group": "Service"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Firehall Donair Platter in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch beef. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Season the meat",
+      "instruction": "Mix beef, lamb if using, garlic powder, onion powder, oregano, paprika, salt, and pepper until sticky and uniform. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Form the cones",
+      "instruction": "Press seasoned meat around metal skewers or dowels set in loaf pans, packing tight into cone shapes about 6 inches tall. Plan about 20 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 20,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Roast until browned",
+      "instruction": "Roast at 350°F, rotating pans, until exterior is deeply browned and internal temp hits 165°F, about 50–60 minutes. Target oven/smoker temperature: 350°F.",
+      "minutes": 55,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Make donair sauce",
+      "instruction": "Whisk condensed milk, vinegar, and garlic until smooth and tangy. Thin with a tablespoon of water if too thick. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F for medium beef, 160°F for ground. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Portion and open the line",
+      "instruction": "Portion Firehall Donair Platter onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Shave and serve",
+      "instruction": "Rest cones 10 minutes, shave meat thin with a sharp knife, and pile on platters with warmed pita, tomatoes, onions, and sauce at the line.",
+      "minutes": 15,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "A little baking soda in the mix helps bind—just a quarter teaspoon for the batch.",
+    "Offer lettuce for crew who want crunch without turning it into a generic wrap bar.",
+    "Save rendered fat from the pan to crisp pita edges on the griddle."
+  ],
+  "tonightSpread": [
+    "Shaved donair meat with pita, tomatoes, onions, and sweet sauce.",
+    "Garlic fingers or fries on the side for the full Halifax-style spread."
+  ],
+  "leftovers": [
+    "Reheat shaved meat in a skillet with sauce for quick donair bowls over rice—not the same as a burrito bowl, just honest leftovers.",
+    "Stuff into sub rolls for donair cheesesteaks on the next shift."
+  ],
+  "whyCrewsLikeIt": "Donair is a Canadian hall legend—messy, satisfying, and impossible to eat quietly. Shaved meat platters let crews build wraps fast or plate it open-face when tones drop mid-meal.",
+  "mealPrepNotes": "Form meat cones the night before on skewers set in loaf pans for stability. Donair sauce keeps 5 days refrigerated. Hold shaved meat at 165°F with a light broth mist.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 540,
+    "protein": 38,
+    "carbs": 36,
+    "fats": 28,
+    "label": "~540 cal/serving · 38g protein · 2g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/firehall-donair-platter.jpg",
+  "heroImageAlt": "Firehall Donair Platter — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/firehall-donair-platter.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/firehall-donair-platter.jpg",
+  "railImage": "/images/rails/hall-expansion/firehall-donair-platter.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "firehall donair platter",
+    "crew feeders"
+  ],
+  "relatedSlugs": [
+    "shawarma-bar-night",
+    "fajita-bar-night",
+    "hall-burger-bar",
+    "pasta-bar-night"
+  ],
+  "generatedAt": "2026-05-31T01:50:00.916Z",
+  "contentVersion": 2
+}

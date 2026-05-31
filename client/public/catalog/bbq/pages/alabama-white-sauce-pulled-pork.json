@@ -1,0 +1,219 @@
+{
+  "slug": "alabama-white-sauce-pulled-pork",
+  "title": "Alabama White Sauce Pulled Pork",
+  "displayTitle": "Alabama White Sauce Pulled Pork",
+  "seoTitle": "Alabama White Sauce Pulled Pork | Firehall BBQ",
+  "shortDescription": "Northern Alabama white sauce on pulled pork—bright, tangy, holds well",
+  "subtitle": "Smoked shoulder finished with tangy mayo-vinegar sauce for ten",
+  "category": "bbq_grill_nights",
+  "cuisine": "american",
+  "description": "Adapted from classic Alabama white BBQ sauce tradition (Amazing Ribs, Hey Grill Hey): pork shoulder smokes with a simple rub, gets pulled, and tossed with tangy mayo-vinegar white sauce for sandwiches.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 480,
+  "prepTime": 25,
+  "difficulty": "medium",
+  "calories": 1400,
+  "protein": 120,
+  "carbs": 36,
+  "fats": 90,
+  "tags": [
+    "protein:pork",
+    "format:sandwich",
+    "category:bbq_grill_nights",
+    "bbq",
+    "smoker",
+    "grill",
+    "firehall_bbq_25",
+    "bbq",
+    "handheld",
+    "big_crew"
+  ],
+  "equipment": [
+    "smoker",
+    "foil",
+    "instant-read thermometer",
+    "large pan",
+    "mixing bowl",
+    "whisk"
+  ],
+  "ingredients": [
+    {
+      "name": "bone-in pork shoulder",
+      "quantity": "10",
+      "unit": "lb"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "4",
+      "unit": "tbsp"
+    },
+    {
+      "name": "black pepper",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "smoked paprika",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "garlic powder",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "yellow mustard",
+      "quantity": "0.25",
+      "unit": "cup",
+      "notes": "binder"
+    },
+    {
+      "name": "mayonnaise",
+      "quantity": "1.5",
+      "unit": "cups"
+    },
+    {
+      "name": "apple cider vinegar",
+      "quantity": "0.75",
+      "unit": "cup"
+    },
+    {
+      "name": "lemon juice",
+      "quantity": "3",
+      "unit": "tbsp"
+    },
+    {
+      "name": "prepared horseradish",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "cayenne",
+      "quantity": "1",
+      "unit": "tsp"
+    },
+    {
+      "name": "buns",
+      "quantity": "12",
+      "unit": "whole"
+    },
+    {
+      "name": "dill pickles",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "chopped"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Season the shoulder",
+      "instruction": "Coat with mustard binder. Rub with salt, pepper, paprika, and garlic powder. Rest 20 minutes while smoker heats to 250°F.",
+      "minutes": 20,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Smoke to 165°F",
+      "instruction": "Smoke shoulder fat-side up at 250°F until bark is set and internal temp hits 165°F, about 5–6 hours.",
+      "minutes": 330,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Make white sauce",
+      "instruction": "Whisk mayo, vinegar, lemon juice, horseradish, cayenne, and pinch of salt. Chill until service.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Wrap to 203°F",
+      "instruction": "Wrap in foil. Continue at 250°F until probe-tender and 203°F internal, about 2–3 hours.",
+      "minutes": 150,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Rest, pull, and sauce",
+      "instruction": "Rest wrapped 40 minutes. Pull pork into a pan. Toss with white sauce to coat—start with 1 cup and add to taste.",
+      "minutes": 45,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Hold at 170°F",
+      "instruction": "Cover sauced pork with foil and hold at 170°F. Keep extra white sauce cold on ice for finishing.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Tonight's board",
+      "instruction": "White-sauce pulled pork, buns, chopped pickles, extra sauce. Alabama-style sandwiches.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Leftovers",
+      "instruction": "Reheat covered at 325°F. Refresh with cold white sauce after reheating so it stays tangy.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Toss with sauce after pulling—never mop raw shoulder with serving sauce.",
+    "Horseradish is the secret bite; don't skip it.",
+    "Chopped pickles on the sandwich add crunch that white sauce loves."
+  ],
+  "tonightSpread": [
+    "Sauced pulled pork in a hotel pan.",
+    "Buns, pickles, and extra white sauce on ice."
+  ],
+  "leftovers": [
+    "White-sauce pork wraps with lettuce.",
+    "Mix into potato salad for a tangy second-day lunch."
+  ],
+  "whyCrewsLikeIt": "White sauce cuts through rich pork and stays creamy on the hold line. Different from red BBQ without being weird—crews love the tang.",
+  "mealPrepNotes": "Make white sauce early and chill. Pull pork and toss with sauce just before service, or hold sauced pork covered at 170°F up to 90 minutes.",
+  "cleanupDifficulty": "heavy",
+  "nutrition": {
+    "calories": 1400,
+    "protein": 120,
+    "carbs": 36,
+    "fats": 90,
+    "label": "per serving (hall portion)",
+    "source": "estimated"
+  },
+  "heroImage": "/images/smoker-catalog/alabama-white-sauce-pulled-pork.jpg",
+  "heroImageAlt": "Alabama White Sauce Pulled Pork — crew-sized BBQ spread with visible smoke and bark",
+  "mobileImage": "/images/mobile/smoker-catalog/alabama-white-sauce-pulled-pork.jpg",
+  "thumbImage": "/images/thumbs/smoker-catalog/alabama-white-sauce-pulled-pork.jpg",
+  "railImage": "/images/rails/smoker-catalog/alabama-white-sauce-pulled-pork.jpg",
+  "realismScore": 88,
+  "firefighterScore": 90,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "alabama white sauce pulled pork",
+    "pork",
+    "American",
+    "sandwich",
+    "bbq",
+    "firehall",
+    "alabama white sauce",
+    "white bbq pork",
+    "mayo vinegar sauce",
+    "northern alabama"
+  ],
+  "relatedSlugs": [
+    "smoked-chicken-quarters-white-sauce",
+    "carolina-vinegar-pulled-pork",
+    "smoked-potato-salad-tray"
+  ],
+  "sourceName": "Firehall Meals BBQ Collection",
+  "generatedAt": "2026-05-31T02:29:42.530Z",
+  "contentVersion": 2
+}

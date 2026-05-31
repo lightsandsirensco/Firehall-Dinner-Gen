@@ -143,7 +143,7 @@ function slugPack(
   if (slug === "smoked-brisket") {
     return {
       ingredients: [
-        m("Whole packer brisket, trimmed", mult(12, scale), "lb", "Main", "12–14 lb before trim"),
+        m("Whole packer brisket, trimmed", mult(6, scale), "lb", "Main", "about 12 oz raw per firefighter after trim"),
         m("Kosher salt", mult(0.5, scale), "cup", "Rub"),
         m("Coarse black pepper", mult(0.25, scale), "cup", "Rub"),
         m("Garlic powder", mult(2, scale), "tbsp", "Rub"),
@@ -193,7 +193,7 @@ function slugPack(
     return {
       ingredients: beef
         ? [
-            m("Beef short ribs, plate style", mult(8, scale), "lb", "Main"),
+            m("Beef short ribs, plate style", mult(6, scale), "lb", "Main", "about 12 oz bone-in per firefighter"),
             m("Kosher salt", mult(3, scale), "tbsp", "Rub"),
             m("Coarse black pepper", mult(3, scale), "tbsp", "Rub"),
             m("Garlic powder", mult(1, scale), "tbsp", "Rub"),

@@ -26,8 +26,7 @@ import { PIZZA_NIGHT_RECIPES } from "../shared/pizza-night/manifest.js";
 import { pizzaNightPageImageSet } from "../shared/pizza-night/recipe-page-paths.js";
 import { SMOOTHIE_CATALOG_ITEMS } from "../shared/fuel-catalog/smoothies/catalog-data.js";
 import { PERFORMANCE_MEAL_IMAGE_DONOR_OVERRIDES } from "../shared/performance-meals/image-donor-overrides.js";
-import { HALL_EXPANSION_IMAGE_DONOR_OVERRIDES } from "../shared/hall-expansion/image-donor-overrides.js";
-import { CATALOG_IMAGE_DONOR_OVERRIDES } from "../shared/catalog-image-donor-overrides.js";
+import { resolveActiveImageDonorSlug } from "../shared/image-donor-resolver.js";
 import { RED_LEAD_PDF_ASSETS } from "../shared/seo/firefighter-red-lead-sauce-data.js";
 import { FIREFIGHTER_RED_LEAD_RECIPE_PATH } from "../shared/seo/firefighter-red-lead-recipe-data.js";
 import {
@@ -123,12 +122,11 @@ function breakfastImageSet(slug: string): ImageSet {
   };
 }
 
-function donorFor(collection: CollectionId, slug: string): string | undefined {
-  const catalog = CATALOG_IMAGE_DONOR_OVERRIDES[slug];
-  if (catalog) return catalog.donorSlug;
-  if (collection === "performance_meals") return PERFORMANCE_MEAL_IMAGE_DONOR_OVERRIDES[slug];
-  if (collection === "hall_expansion") return HALL_EXPANSION_IMAGE_DONOR_OVERRIDES[slug];
-  return undefined;
+function donorFor(collection: CollectionId, slug: string, heroImage: string, heroMd5?: string): string | undefined {
+  if (collection === "performance_meals" && PERFORMANCE_MEAL_IMAGE_DONOR_OVERRIDES[slug]) {
+    return PERFORMANCE_MEAL_IMAGE_DONOR_OVERRIDES[slug];
+  }
+  return resolveActiveImageDonorSlug(slug, heroImage, { heroMd5 }) ?? undefined;
 }
 
 function auditRecipe(input: {
@@ -141,14 +139,17 @@ function auditRecipe(input: {
   category: string;
   images: ImageSet;
 }): AuditRow {
-  const donorOverride = input.collection !== "red_lead" ? donorFor(input.collection as CollectionId, input.slug) : undefined;
-
   const onDisk = {
     hero: imageFileExists(input.images.heroImage),
     thumb: imageFileExists(input.images.thumbImage),
     mobile: imageFileExists(input.images.mobileImage),
     rail: imageFileExists(input.images.railImage),
   };
+  const heroMd5Early = onDisk.hero ? md5Public(input.images.heroImage) ?? undefined : undefined;
+  const donorOverride =
+    input.collection !== "red_lead"
+      ? donorFor(input.collection as CollectionId, input.slug, input.images.heroImage, heroMd5Early)
+      : undefined;
 
   const profile = buildCuratedMealImageProfile({
     slug: input.slug,

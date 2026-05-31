@@ -1,40 +1,6 @@
 /**
- * Manual hall-expansion hero donors — golden-100 slug whose hero image is copied.
- * Only slugs in the hall-expansion catalog (56 recipes). Accuracy over uniqueness.
+ * Manual hall-expansion hero donors — TEMPORARY ONLY.
+ * Empty after global firehall photo replacement (2026-05).
+ * Re-add entries only with `temporary: true` intent and remove after regen.
  */
-export const HALL_EXPANSION_IMAGE_DONOR_OVERRIDES: Record<string, string> = {
-  "applewood-pork-shoulder-steaks": "carolina-mustard-pork",
-  "fajita-bar-night": "cast-iron-chicken-fajitas",
-  "loaded-nacho-bar-night": "game-day-nachos",
-  "cast-iron-chicken-fajitas": "sheet-pan-chicken-fajitas-lite",
-  "enchilada-beef-skillet": "enchilada-casserole",
-  "kielbasa-cabbage-potato-skillet": "sausage-peppers-onions",
-  "hall-chicken-noodle-soup": "lemon-chicken-orzo-soup",
-  "green-chile-chicken-stew": "one-pot-chicken-rice",
-  "smoked-meatloaf": "meatloaf-mashed",
-  "hall-burger-bar": "smash-burgers",
-  "burrito-bowl-bar-night": "bbq-chicken-bowls",
-  "pepper-smoked-brisket-flat": "bbq-brisket-burnt-ends",
-  "smoked-corned-beef": "bbq-brisket-burnt-ends",
-  "smoked-sausage-platter": "carolina-mustard-pork",
-  "pellet-smoked-chicken-quarters": "greek-lemon-chicken-potatoes",
-  "mesquite-chuck-roast": "dutch-oven-pot-roast",
-  "smoked-tri-tip": "bbq-brisket-burnt-ends",
-  "pork-belly-burnt-ends": "bbq-brisket-burnt-ends",
-  "molasses-bourbon-pork-ribs": "carolina-mustard-pork",
-  "chicken-wing-bar-night": "buffalo-chicken-dip",
-  "shawarma-bar-night": "chicken-souvlaki",
-  "rice-bowl-bar-night": "greek-chicken-bowls",
-  "mediterranean-feast-night": "greek-chicken-bowls",
-  "honey-mustard-oven-chicken-thighs": "honey-lime-chicken-tray",
-  "spatchcock-lemon-roast-chicken": "greek-lemon-chicken-potatoes",
-  "cajun-chicken-rice-skillet": "cajun-chicken-rice-bowl",
-  "paprika-roasted-chicken-quarters": "greek-lemon-chicken-potatoes",
-  "creamy-chicken-penne-alfredo": "caprese-chicken-bake",
-  "station-cobb-salad": "hummus-chicken-platter",
-  "warm-spinach-chicken-salad": "greek-chicken-bowls",
-  "ginger-soy-chicken-rice-bowls": "honey-garlic-chicken-rice-bowls",
-  "mediterranean-chicken-farro-bowls": "greek-chicken-bowls",
-  "cheesy-chicken-broccoli-rice": "one-pot-chicken-rice",
-  "dutch-oven-pot-roast": "meatloaf-mashed",
-};
+export const HALL_EXPANSION_IMAGE_DONOR_OVERRIDES: Record<string, string> = {};

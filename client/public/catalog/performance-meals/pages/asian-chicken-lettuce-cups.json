@@ -1,7 +1,7 @@
 {
   "slug": "asian-chicken-lettuce-cups",
-  "title": "Asian Chicken Lettuce Cups",
-  "displayTitle": "Asian Chicken Lettuce Cups",
+  "title": "Crispy Garlic Chicken",
+  "displayTitle": "Crispy Garlic Chicken",
   "seoTitle": "Asian Chicken Lettuce Cups | Firefighter Meal",
   "shortDescription": "Ginger-garlic ground chicken in crisp butter lettuce with hoisin drizzle",
   "subtitle": "Ginger-garlic ground chicken in crisp butter lettuce with hoisin drizzle",
@@ -102,36 +102,57 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Prep lettuce cups",
-      "instruction": "Wash butter lettuce leaves and dry thoroughly on towels. Keep chilled on a sheet pan until service so cups stay crisp and cup-shaped.",
-      "minutes": 10,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Crispy Garlic Chicken in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Brown ground chicken",
-      "instruction": "Cook chicken in batches over medium-high 8–10 minutes, breaking into small crumbles until fully cooked with lightly golden edges.",
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
       "minutes": 10,
       "heatLevel": "medium-high"
     },
     {
       "stepNumber": 3,
-      "title": "Add aromatics and chestnuts",
-      "instruction": "Add ginger, garlic, water chestnuts, and half the scallions. Cook 3–4 minutes until fragrant and chestnuts heated through with slight crunch.",
-      "minutes": 4,
+      "title": "Prep lettuce cups",
+      "instruction": "Wash butter lettuce leaves and dry thoroughly on towels. Keep chilled on a sheet pan until service so cups stay crisp and cup-shaped. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 4,
+      "title": "Brown ground chicken",
+      "instruction": "Cook chicken in batches over medium-high 8–10 minutes, breaking into small crumbles until fully cooked with lightly golden edges. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Add aromatics and chestnuts",
+      "instruction": "Add ginger, garlic, water chestnuts, and half the scallions. Cook 3–4 minutes until fragrant and chestnuts heated through with slight crunch. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 4,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
       "title": "Finish sauce",
-      "instruction": "Stir in soy sauce, 2 tbsp hoisin, sesame oil, and vinegar. Simmer 2 minutes until liquid mostly absorbs and mixture looks glossy, not wet.",
+      "instruction": "Stir in soy sauce, 2 tbsp hoisin, sesame oil, and vinegar. Simmer 2 minutes until liquid mostly absorbs and mixture looks glossy, not wet. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 2,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
       "title": "Assemble cups at the line",
-      "instruction": "Spoon ¼ cup chicken into each lettuce cup. Drizzle hoisin, sprinkle peanuts and scallions, serve with lime. Leaves should crack lightly when bitten.",
+      "instruction": "Spoon ¼ cup chicken into each lettuce cup. Drizzle hoisin, sprinkle peanuts and scallions, serve with lime. Leaves should crack lightly when bitten. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 5,
       "heatLevel": ""
     }

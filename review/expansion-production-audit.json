@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-05-30T01:22:41.285Z",
+  "generatedAt": "2026-05-30T21:22:59.474Z",
   "totals": {
-    "recipesAudited": 50,
-    "hallExpansion": 30,
+    "recipesAudited": 76,
+    "hallExpansion": 56,
     "breakfastNew": 20,
-    "errors": 0,
-    "warnings": 96,
-    "heroesOnDisk": 50,
-    "thumbsOnDisk": 50,
-    "productionReadinessScore": 100
+    "errors": 8,
+    "warnings": 102,
+    "heroesOnDisk": 76,
+    "thumbsOnDisk": 76,
+    "productionReadinessScore": 95
   },
   "inventory": [
     {
@@ -18,7 +18,7 @@
       "catalog": "hall-expansion",
       "imagePath": "/images/hall-expansion/smoked-turkey-breast.jpg",
       "published": true,
-      "heroBytes": 1701958,
+      "heroBytes": 1606089,
       "thumbOk": true,
       "mobileOk": true
     },
@@ -29,7 +29,7 @@
       "catalog": "hall-expansion",
       "imagePath": "/images/hall-expansion/smoked-meatloaf.jpg",
       "published": true,
-      "heroBytes": 1664992,
+      "heroBytes": 1465139,
       "thumbOk": true,
       "mobileOk": true
     },
@@ -51,7 +51,7 @@
       "catalog": "hall-expansion",
       "imagePath": "/images/hall-expansion/pork-belly-burnt-ends.jpg",
       "published": true,
-      "heroBytes": 1492038,
+      "heroBytes": 1587507,
       "thumbOk": true,
       "mobileOk": true
     },
@@ -62,7 +62,7 @@
       "catalog": "hall-expansion",
       "imagePath": "/images/hall-expansion/smoked-sausage-platter.jpg",
       "published": true,
-      "heroBytes": 1597136,
+      "heroBytes": 1532032,
       "thumbOk": true,
       "mobileOk": true
     },
@@ -95,7 +95,7 @@
       "catalog": "hall-expansion",
       "imagePath": "/images/hall-expansion/smoked-tri-tip.jpg",
       "published": true,
-      "heroBytes": 1838517,
+      "heroBytes": 1587507,
       "thumbOk": true,
       "mobileOk": true
     },
@@ -106,7 +106,7 @@
       "catalog": "hall-expansion",
       "imagePath": "/images/hall-expansion/smoked-corned-beef.jpg",
       "published": true,
-      "heroBytes": 1634451,
+      "heroBytes": 1587507,
       "thumbOk": true,
       "mobileOk": true
     },
@@ -117,7 +117,7 @@
       "catalog": "hall-expansion",
       "imagePath": "/images/hall-expansion/pellet-smoked-chicken-quarters.jpg",
       "published": true,
-      "heroBytes": 1650598,
+      "heroBytes": 1690728,
       "thumbOk": true,
       "mobileOk": true
     },
@@ -183,7 +183,7 @@
       "catalog": "hall-expansion",
       "imagePath": "/images/hall-expansion/chicken-wing-bar-night.jpg",
       "published": true,
-      "heroBytes": 1564590,
+      "heroBytes": 1507308,
       "thumbOk": true,
       "mobileOk": true
     },
@@ -238,7 +238,7 @@
       "catalog": "hall-expansion",
       "imagePath": "/images/hall-expansion/shawarma-bar-night.jpg",
       "published": true,
-      "heroBytes": 1644682,
+      "heroBytes": 1497016,
       "thumbOk": true,
       "mobileOk": true
     },
@@ -249,7 +249,7 @@
       "catalog": "hall-expansion",
       "imagePath": "/images/hall-expansion/fajita-bar-night.jpg",
       "published": true,
-      "heroBytes": 1626488,
+      "heroBytes": 1659288,
       "thumbOk": true,
       "mobileOk": true
     },
@@ -260,7 +260,7 @@
       "catalog": "hall-expansion",
       "imagePath": "/images/hall-expansion/hall-burger-bar.jpg",
       "published": true,
-      "heroBytes": 1766407,
+      "heroBytes": 1480808,
       "thumbOk": true,
       "mobileOk": true
     },
@@ -271,7 +271,7 @@
       "catalog": "hall-expansion",
       "imagePath": "/images/hall-expansion/pasta-bar-night.jpg",
       "published": true,
-      "heroBytes": 1615827,
+      "heroBytes": 1532519,
       "thumbOk": true,
       "mobileOk": true
     },
@@ -282,7 +282,7 @@
       "catalog": "hall-expansion",
       "imagePath": "/images/hall-expansion/rice-bowl-bar-night.jpg",
       "published": true,
-      "heroBytes": 1494833,
+      "heroBytes": 1639734,
       "thumbOk": true,
       "mobileOk": true
     },
@@ -304,7 +304,7 @@
       "catalog": "hall-expansion",
       "imagePath": "/images/hall-expansion/mediterranean-feast-night.jpg",
       "published": true,
-      "heroBytes": 1610902,
+      "heroBytes": 1639734,
       "thumbOk": true,
       "mobileOk": true
     },
@@ -315,7 +315,7 @@
       "catalog": "hall-expansion",
       "imagePath": "/images/hall-expansion/burrito-bowl-bar-night.jpg",
       "published": true,
-      "heroBytes": 1633561,
+      "heroBytes": 1463692,
       "thumbOk": true,
       "mobileOk": true
     },
@@ -326,7 +326,7 @@
       "catalog": "hall-expansion",
       "imagePath": "/images/hall-expansion/loaded-nacho-bar-night.jpg",
       "published": true,
-      "heroBytes": 1653197,
+      "heroBytes": 1551526,
       "thumbOk": true,
       "mobileOk": true
     },
@@ -342,13 +342,299 @@
       "mobileOk": true
     },
     {
+      "name": "Mesquite Smoked Chuck Roast",
+      "slug": "mesquite-chuck-roast",
+      "category": "smoker_recipes",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/mesquite-chuck-roast.jpg",
+      "published": true,
+      "heroBytes": 1465139,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Molasses Bourbon Pork Ribs",
+      "slug": "molasses-bourbon-pork-ribs",
+      "category": "smoker_recipes",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/molasses-bourbon-pork-ribs.jpg",
+      "published": true,
+      "heroBytes": 1532032,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Applewood Grilled Pork Shoulder Steaks",
+      "slug": "applewood-pork-shoulder-steaks",
+      "category": "smoker_recipes",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/applewood-pork-shoulder-steaks.jpg",
+      "published": true,
+      "heroBytes": 1532032,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Pepper-Crusted Smoked Brisket Flat",
+      "slug": "pepper-smoked-brisket-flat",
+      "category": "smoker_recipes",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/pepper-smoked-brisket-flat.jpg",
+      "published": true,
+      "heroBytes": 1587507,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Honey Mustard Baked Chicken Thighs",
+      "slug": "honey-mustard-oven-chicken-thighs",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/honey-mustard-oven-chicken-thighs.jpg",
+      "published": true,
+      "heroBytes": 1610094,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Spatchcock Lemon Roast Chicken",
+      "slug": "spatchcock-lemon-roast-chicken",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/spatchcock-lemon-roast-chicken.jpg",
+      "published": true,
+      "heroBytes": 1690728,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Cajun Chicken and Rice Skillet",
+      "slug": "cajun-chicken-rice-skillet",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/cajun-chicken-rice-skillet.jpg",
+      "published": true,
+      "heroBytes": 1755674,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Paprika Roasted Chicken Quarters",
+      "slug": "paprika-roasted-chicken-quarters",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/paprika-roasted-chicken-quarters.jpg",
+      "published": true,
+      "heroBytes": 1690728,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Cast Iron Chicken Fajitas",
+      "slug": "cast-iron-chicken-fajitas",
+      "category": "game_day_recipes",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/cast-iron-chicken-fajitas.jpg",
+      "published": true,
+      "heroBytes": 1659288,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Mushroom Swiss Steak Pan",
+      "slug": "mushroom-swiss-steak-pan",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/mushroom-swiss-steak-pan.jpg",
+      "published": true,
+      "heroBytes": 1511949,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Pepper Steak with Onions",
+      "slug": "pepper-steak-onions",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/pepper-steak-onions.jpg",
+      "published": true,
+      "heroBytes": 1441371,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Dutch Oven Pot Roast",
+      "slug": "dutch-oven-pot-roast",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/dutch-oven-pot-roast.jpg",
+      "published": true,
+      "heroBytes": 1465139,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Beef Enchilada Skillet",
+      "slug": "enchilada-beef-skillet",
+      "category": "game_day_recipes",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/enchilada-beef-skillet.jpg",
+      "published": true,
+      "heroBytes": 1566982,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Baked Mostaccioli with Sausage",
+      "slug": "mostaccioli-sausage-bake",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/mostaccioli-sausage-bake.jpg",
+      "published": true,
+      "heroBytes": 1533846,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Creamy Chicken Penne Alfredo",
+      "slug": "creamy-chicken-penne-alfredo",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/creamy-chicken-penne-alfredo.jpg",
+      "published": true,
+      "heroBytes": 1550496,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Rigatoni with Meat Sauce",
+      "slug": "rigatoni-meat-sauce-batch",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/rigatoni-meat-sauce-batch.jpg",
+      "published": true,
+      "heroBytes": 1636958,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Station Cobb Salad",
+      "slug": "station-cobb-salad",
+      "category": "game_day_recipes",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/station-cobb-salad.jpg",
+      "published": true,
+      "heroBytes": 1693017,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Warm Spinach Chicken Salad",
+      "slug": "warm-spinach-chicken-salad",
+      "category": "game_day_recipes",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/warm-spinach-chicken-salad.jpg",
+      "published": true,
+      "heroBytes": 1639734,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Hall Chicken Noodle Soup",
+      "slug": "hall-chicken-noodle-soup",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/hall-chicken-noodle-soup.jpg",
+      "published": true,
+      "heroBytes": 1620144,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Green Chile Chicken Stew",
+      "slug": "green-chile-chicken-stew",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/green-chile-chicken-stew.jpg",
+      "published": true,
+      "heroBytes": 1514049,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Ginger Soy Chicken Rice Bowls",
+      "slug": "ginger-soy-chicken-rice-bowls",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/ginger-soy-chicken-rice-bowls.jpg",
+      "published": true,
+      "heroBytes": 1655310,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Mediterranean Chicken Farro Bowls",
+      "slug": "mediterranean-chicken-farro-bowls",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/mediterranean-chicken-farro-bowls.jpg",
+      "published": true,
+      "heroBytes": 1639734,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Kielbasa Cabbage Potato Skillet",
+      "slug": "kielbasa-cabbage-potato-skillet",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/kielbasa-cabbage-potato-skillet.jpg",
+      "published": true,
+      "heroBytes": 1468029,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Cheesy Chicken Broccoli Rice",
+      "slug": "cheesy-chicken-broccoli-rice",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/cheesy-chicken-broccoli-rice.jpg",
+      "published": true,
+      "heroBytes": 1514049,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Sheet Pan Meatball Marinara Feed",
+      "slug": "sheet-pan-meatball-marinara",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/sheet-pan-meatball-marinara.jpg",
+      "published": true,
+      "heroBytes": 1545610,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Hall Sloppy Joe Feed",
+      "slug": "hall-sloppy-joe-feed",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/hall-sloppy-joe-feed.jpg",
+      "published": true,
+      "heroBytes": 1577649,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
       "name": "Red Lead Skillet",
       "slug": "red-lead-skillet",
       "category": "firehall_breakfasts",
       "catalog": "breakfast",
       "imagePath": "/images/breakfast/red-lead-skillet.jpg",
       "published": true,
-      "heroBytes": 1708780,
+      "heroBytes": 1511949,
       "thumbOk": true,
       "mobileOk": false
     },
@@ -392,7 +678,7 @@
       "catalog": "breakfast",
       "imagePath": "/images/breakfast/denver-breakfast-casserole.jpg",
       "published": true,
-      "heroBytes": 1682767,
+      "heroBytes": 1655310,
       "thumbOk": true,
       "mobileOk": false
     },
@@ -458,7 +744,7 @@
       "catalog": "breakfast",
       "imagePath": "/images/breakfast/apple-cinnamon-baked-oatmeal.jpg",
       "published": true,
-      "heroBytes": 1680198,
+      "heroBytes": 1582228,
       "thumbOk": true,
       "mobileOk": false
     },
@@ -469,7 +755,7 @@
       "catalog": "breakfast",
       "imagePath": "/images/breakfast/cowboy-breakfast-skillet.jpg",
       "published": true,
-      "heroBytes": 1772002,
+      "heroBytes": 1511949,
       "thumbOk": true,
       "mobileOk": false
     },
@@ -513,7 +799,7 @@
       "catalog": "breakfast",
       "imagePath": "/images/breakfast/hall-sausage-biscuits-gravy.jpg",
       "published": true,
-      "heroBytes": 1612753,
+      "heroBytes": 1747296,
       "thumbOk": true,
       "mobileOk": false
     },
@@ -611,6 +897,104 @@
       "severity": "warn",
       "code": "weak_title",
       "message": "title_taco_no_tortilla"
+    },
+    {
+      "slug": "cast-iron-chicken-fajitas",
+      "phase": "content",
+      "severity": "warn",
+      "code": "weak_title",
+      "message": "title_taco_no_tortilla"
+    },
+    {
+      "slug": "cast-iron-chicken-fajitas",
+      "phase": "content",
+      "severity": "warn",
+      "code": "vague_wording",
+      "message": "step 4 uses vague phrasing"
+    },
+    {
+      "slug": "mushroom-swiss-steak-pan",
+      "phase": "content",
+      "severity": "error",
+      "code": "no_temperature",
+      "message": "no oven/grill/internal temperature cues in steps"
+    },
+    {
+      "slug": "mushroom-swiss-steak-pan",
+      "phase": "content",
+      "severity": "error",
+      "code": "no_temperature",
+      "message": "no oven/grill/internal temperature cues in steps"
+    },
+    {
+      "slug": "pepper-steak-onions",
+      "phase": "content",
+      "severity": "error",
+      "code": "no_temperature",
+      "message": "no oven/grill/internal temperature cues in steps"
+    },
+    {
+      "slug": "pepper-steak-onions",
+      "phase": "content",
+      "severity": "error",
+      "code": "no_temperature",
+      "message": "no oven/grill/internal temperature cues in steps"
+    },
+    {
+      "slug": "enchilada-beef-skillet",
+      "phase": "content",
+      "severity": "warn",
+      "code": "weak_title",
+      "message": "robotic_title; title_taco_no_tortilla"
+    },
+    {
+      "slug": "rigatoni-meat-sauce-batch",
+      "phase": "content",
+      "severity": "error",
+      "code": "no_temperature",
+      "message": "no oven/grill/internal temperature cues in steps"
+    },
+    {
+      "slug": "rigatoni-meat-sauce-batch",
+      "phase": "content",
+      "severity": "error",
+      "code": "no_temperature",
+      "message": "no oven/grill/internal temperature cues in steps"
+    },
+    {
+      "slug": "mediterranean-chicken-farro-bowls",
+      "phase": "content",
+      "severity": "warn",
+      "code": "weak_title",
+      "message": "robotic_title"
+    },
+    {
+      "slug": "kielbasa-cabbage-potato-skillet",
+      "phase": "content",
+      "severity": "error",
+      "code": "no_temperature",
+      "message": "no oven/grill/internal temperature cues in steps"
+    },
+    {
+      "slug": "kielbasa-cabbage-potato-skillet",
+      "phase": "content",
+      "severity": "error",
+      "code": "no_temperature",
+      "message": "no oven/grill/internal temperature cues in steps"
+    },
+    {
+      "slug": "kielbasa-cabbage-potato-skillet",
+      "phase": "content",
+      "severity": "warn",
+      "code": "weak_title",
+      "message": "robotic_title"
+    },
+    {
+      "slug": "sheet-pan-meatball-marinara",
+      "phase": "content",
+      "severity": "warn",
+      "code": "weak_title",
+      "message": "robotic_title"
     },
     {
       "slug": "red-lead-skillet",
@@ -1238,8 +1622,8 @@
   ],
   "errorsByPhase": {
     "content": {
-      "errors": 0,
-      "warnings": 96
+      "errors": 8,
+      "warnings": 102
     }
   }
 }

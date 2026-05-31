@@ -57,27 +57,59 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Warm tortillas",
-      "instruction": "Warm tortillas in a dry skillet or wrapped in foil in a 200°F oven so they stay pliable and don't crack when folded.",
-      "minutes": 3
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Quick Egg Tacos in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Scramble the eggs",
-      "instruction": "Scramble eggs over medium-low heat until just set and still glossy. Fold in cheese off heat.",
-      "minutes": 6
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch Eggs. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
     },
     {
       "stepNumber": 3,
-      "title": "Build tacos for the line",
-      "instruction": "Fill each tortilla with eggs, salsa, and optional avocado. Keep built tacos seam-side down on a warm tray.",
-      "minutes": 5
+      "title": "Warm tortillas",
+      "instruction": "Warm tortillas in a dry skillet or wrapped in foil in a 200°F oven so they stay pliable and don't crack when folded. Plan about 3 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 3,
+      "heatLevel": ""
     },
     {
       "stepNumber": 4,
+      "title": "Scramble the eggs",
+      "instruction": "Scramble eggs over medium-low heat until just set and still glossy. Fold in cheese off heat. Plan about 6 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 6,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Build tacos for the line",
+      "instruction": "Fill each tortilla with eggs, salsa, and optional avocado. Keep built tacos seam-side down on a warm tray. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 8,
       "title": "Serve immediately",
-      "instruction": "Tacos don't hold well—serve in two waves if needed. Pass hot sauce and crema on the side.",
-      "minutes": 0
+      "instruction": "Tacos don't hold well—serve in two waves if needed. Pass hot sauce and crema on the side. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 0,
+      "heatLevel": ""
     }
   ],
   "nutrition": {
@@ -117,8 +149,27 @@
   "heroImage": "/images/breakfast/quick-egg-tacos.jpg",
   "thumbImage": "/images/thumbs/breakfast/quick-egg-tacos.jpg",
   "imageAlt": "Warm station-kitchen breakfast: Quick Egg Tacos",
-  "publishedAt": "2026-05-30T03:14:16.261Z",
-  "updatedAt": "2026-05-30T18:58:21.236Z",
+  "publishedAt": "2026-05-30T21:22:29.758Z",
+  "updatedAt": "2026-05-31T12:54:36.788Z",
   "readMinutes": 6,
-  "seoTitle": "Quick Egg Tacos | Firehall Breakfast"
+  "seoTitle": "Quick Egg Tacos | Firehall Breakfast",
+  "mobileImage": "/images/mobile/breakfast/quick-egg-tacos.jpg",
+  "railImage": "/images/rails/breakfast/quick-egg-tacos.jpg",
+  "proTips": [
+    "Assign one cook to the hot surface and one to assembly. Keep the line moving; don’t crowd the griddle.",
+    "Set a warm holding zone (oven 200°F or covered hotel pan) so staggered eaters still get a hot plate.",
+    "Run a quick call-proof check: anything crispy stays uncovered; anything soft stays covered."
+  ],
+  "tonightSpread": [
+    "Plate Quick Egg Tacos with sides in separate pans so the crew can mix portions.",
+    "Keep hot items on one side of the table and cold on the other — eggs stay hot, fruit stays cold.",
+    "Line up Quick Egg Tacos on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+  ],
+  "equipment": [
+    "Large sheet trays",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "mealPrepNotes": "Prep mise en place before the shift — Quick Egg Tacos runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
 }

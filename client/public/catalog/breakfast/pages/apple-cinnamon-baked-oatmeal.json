@@ -73,35 +73,66 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Heat the oven",
-      "instruction": "Heat oven to 375°F. Grease a 9x13 baking dish. Toss diced apples with half the cinnamon and spread in the bottom of the dish.",
-      "minutes": 0,
-      "tempF": 375
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Apple Cinnamon Baked Oatmeal in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Mix the oat base",
-      "instruction": "Whisk oats, milk, eggs, brown sugar, remaining cinnamon, nutmeg, and a pinch of salt until combined. The mixture should look like thick pourable batter.",
-      "minutes": 8
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch Eggs. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
     },
     {
       "stepNumber": 3,
-      "title": "Pour and top",
-      "instruction": "Pour oat mixture over apples and scatter walnuts on top. Tap the dish to settle the batter evenly for uniform slices.",
-      "minutes": 3
+      "title": "Heat the oven",
+      "instruction": "Heat oven to 375°F. Grease a 9x13 baking dish. Toss diced apples with half the cinnamon and spread in the bottom of the dish. Allow 10–15 minutes for mise en place before heat goes on. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 0,
+      "heatLevel": ""
     },
     {
       "stepNumber": 4,
-      "title": "Bake until set",
-      "instruction": "Bake until the center is set, edges are golden, and a knife inserted in the middle comes out clean. The top should spring back lightly when pressed.",
-      "minutes": 38,
-      "tempF": 375
+      "title": "Mix the oat base",
+      "instruction": "Whisk oats, milk, eggs, brown sugar, remaining cinnamon, nutmeg, and a pinch of salt until combined. The mixture should look like thick pourable batter. Plan about 8 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 8,
+      "heatLevel": ""
     },
     {
       "stepNumber": 5,
+      "title": "Pour and top",
+      "instruction": "Pour oat mixture over apples and scatter walnuts on top. Tap the dish to settle the batter evenly for uniform slices. Plan about 3 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 3,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Bake until set",
+      "instruction": "Bake until the center is set, edges are golden, and a knife inserted in the middle comes out clean. The top should spring back lightly when pressed. Bake until the center reaches a safe internal temp (165°F) and edges look set — use a thermometer at the thickest point. Plan about 38 minutes for this step at crew scale.",
+      "minutes": 38,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
       "title": "Rest and portion",
-      "instruction": "Rest 10 minutes before cutting into squares. Serve warm with maple syrup and optional butter pats. Hold uncovered at 200°F for up to 30 minutes.",
-      "minutes": 10
+      "instruction": "Rest 10 minutes before cutting into squares. Serve warm with maple syrup and optional butter pats. Hold uncovered at 200°F for up to 30 minutes. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 10,
+      "heatLevel": ""
     }
   ],
   "nutrition": {
@@ -141,8 +172,27 @@
   "heroImage": "/images/breakfast/apple-cinnamon-baked-oatmeal.jpg",
   "thumbImage": "/images/thumbs/breakfast/apple-cinnamon-baked-oatmeal.jpg",
   "imageAlt": "Baked apple cinnamon oatmeal squares with walnuts and maple drizzle",
-  "publishedAt": "2026-05-30T03:14:16.260Z",
-  "updatedAt": "2026-05-30T20:03:07.319Z",
+  "publishedAt": "2026-05-30T21:22:29.756Z",
+  "updatedAt": "2026-05-31T12:54:36.744Z",
   "readMinutes": 7,
-  "seoTitle": "Apple Cinnamon Baked Oatmeal | Firehall Breakfast"
+  "seoTitle": "Apple Cinnamon Baked Oatmeal | Firehall Breakfast",
+  "mobileImage": "/images/mobile/breakfast/apple-cinnamon-baked-oatmeal.jpg",
+  "railImage": "/images/rails/breakfast/apple-cinnamon-baked-oatmeal.jpg",
+  "proTips": [
+    "Dice apples and mix batter while the oven preheats—this bake is forgiving on timing.",
+    "Cut squares in the pan with a sharp knife wiped between cuts for clean portions.",
+    "Set maple and walnuts at the line so customization doesn't bottleneck the hot squares."
+  ],
+  "tonightSpread": [
+    "Plate Apple Cinnamon Baked Oatmeal with sides in separate pans so the crew can mix portions.",
+    "Keep hot items on one side of the table and cold on the other — eggs stay hot, fruit stays cold.",
+    "Line up Apple Cinnamon Baked Oatmeal on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+  ],
+  "equipment": [
+    "Large sheet trays",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "mealPrepNotes": "Prep mise en place before the shift — Apple Cinnamon Baked Oatmeal runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
 }

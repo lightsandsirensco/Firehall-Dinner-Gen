@@ -31,6 +31,7 @@ import {
   resolveDonorHeroPath,
 } from "../shared/catalog-image-donor-overrides.js";
 import { HALL_EXPANSION_IMAGE_DONOR_OVERRIDES } from "../shared/hall-expansion/image-donor-overrides.js";
+import { assertImageReuseAllowed } from "../shared/scripts/assert-image-reuse-allowed.js";
 import {
   hallExpansionHeroPath,
   hallExpansionMobilePath,
@@ -176,6 +177,7 @@ async function applyHallExpansionDonor(slug: string, donorSlug: string): Promise
 }
 
 async function main(): Promise<void> {
+  assertImageReuseAllowed("remediate:trust-p0");
   const only = parseOnly(process.argv);
   const skipBreakfast = process.argv.includes("--skip-breakfast");
   const skipExplore = process.argv.includes("--skip-explore");

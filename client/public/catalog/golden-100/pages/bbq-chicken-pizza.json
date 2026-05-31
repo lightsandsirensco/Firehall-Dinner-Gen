@@ -10,13 +10,13 @@
   "description": "Sweet BBQ, red onion, cilantro. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
   "baseServings": 8,
-  "cookTime": 206,
-  "prepTime": 41,
+  "cookTime": 90,
+  "prepTime": 35,
   "difficulty": "medium",
-  "calories": 852,
-  "protein": 38,
-  "carbs": 56,
-  "fats": 52,
+  "calories": 889,
+  "protein": 76,
+  "carbs": 60,
+  "fats": 36,
   "tags": [
     "protein:chicken",
     "format:pizza",
@@ -34,90 +34,127 @@
   ],
   "ingredients": [
     {
-      "name": "Bread flour",
+      "name": "Pizza dough balls (15 oz)",
       "quantity": "4",
-      "unit": "cups",
-      "group": "Dough"
+      "unit": "count",
+      "group": "Crust"
     },
     {
-      "name": "Active dry yeast",
+      "name": "Cooked chicken breast, shredded",
+      "quantity": "3",
+      "unit": "lb",
+      "notes": "or rotisserie",
+      "group": "Main"
+    },
+    {
+      "name": "BBQ sauce",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Sauce"
+    },
+    {
+      "name": "Smoked paprika",
       "quantity": "2",
       "unit": "tsp",
-      "group": "Dough"
+      "group": "Seasoning"
     },
     {
-      "name": "Warm water",
-      "quantity": "1.5",
-      "unit": "cups",
-      "notes": "110°F",
-      "group": "Dough"
+      "name": "Garlic powder",
+      "quantity": "1",
+      "unit": "tsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Kosher salt",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Black pepper",
+      "quantity": "1",
+      "unit": "tsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Low-moisture mozzarella, shredded",
+      "quantity": "20",
+      "unit": "oz",
+      "group": "Cheese"
+    },
+    {
+      "name": "Smoked gouda, shredded",
+      "quantity": "8",
+      "unit": "oz",
+      "group": "Cheese"
+    },
+    {
+      "name": "Red onion, thin sliced",
+      "quantity": "2",
+      "unit": "large",
+      "group": "Topping"
+    },
+    {
+      "name": "Fresh cilantro, chopped",
+      "quantity": "1",
+      "unit": "cup",
+      "group": "Finish"
     },
     {
       "name": "Olive oil",
       "quantity": "3",
       "unit": "tbsp",
-      "group": "Dough"
+      "group": "Crust"
     },
     {
-      "name": "Kosher salt",
-      "quantity": "2",
-      "unit": "tsp",
-      "group": "Dough"
-    },
-    {
-      "name": "Crushed tomatoes",
-      "quantity": "2",
-      "unit": "cans",
-      "notes": "28 oz",
-      "group": "Sauce"
-    },
-    {
-      "name": "Fresh mozzarella, torn",
-      "quantity": "24",
-      "unit": "oz",
-      "group": "Cheese"
-    },
-    {
-      "name": "Pepperoni or toppings",
-      "quantity": "12",
-      "unit": "oz",
-      "group": "Toppings"
+      "name": "Cornmeal",
+      "quantity": "0.5",
+      "unit": "cup",
+      "notes": "for sliding",
+      "group": "Peel"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Proof the dough",
-      "instruction": "Stir yeast into warm water with a pinch of sugar; bloom 5 minutes until foamy. Mix flour, salt, oil, and yeast water until a shaggy dough forms. Knead 8–10 minutes until smooth. Rise covered 1–1½ hours until doubled — BBQ Chicken Pizza needs relaxed gluten for an open crumb.",
-      "minutes": 90,
+      "title": "Season and toss the chicken",
+      "instruction": "Toss shredded chicken with half the BBQ sauce, paprika, garlic powder, salt, and pepper. Taste — sauce should be bold because cheese mellows it. Keep remaining sauce for the line.",
+      "minutes": 12,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Heat oven and stone",
-      "instruction": "Place a pizza stone or inverted sheet pan in the oven. Preheat to 500°F for at least 45 minutes — surface temp matters more than air temp. Prep sauce and cheese while the oven saturates.",
-      "minutes": 45,
+      "title": "Heat oven and stone or steel",
+      "instruction": "Place a pizza stone or inverted sheet pan in the oven. Preheat to 500°F at least 40 minutes. Shred cheese and slice red onion while the oven saturates — surface temp matters more than air temp.",
+      "minutes": 40,
       "heatLevel": "high"
     },
     {
       "stepNumber": 3,
-      "title": "Stretch and top",
-      "instruction": "Divide dough; stretch by hand (don't roll with a pin unless Detroit-style). Sauce lightly — wet centers sag. Add cheese and toppings. Work on parchment or floured peel; jiggle to confirm it slides.",
+      "title": "Stretch dough and oil rims",
+      "instruction": "On a floured surface, stretch each dough ball to a 12–14 inch round. Leave a ½ inch rim. Brush rims lightly with olive oil so edges brown. Work on parchment dusted with cornmeal so pies slide on the peel.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
       "stepNumber": 4,
-      "title": "Bake until blistered",
-      "instruction": "Slide onto the hot stone. Bake 10–14 minutes until cheese bubbles with brown spots and the underside sounds hollow when tapped. Rotate once if your oven has hot spots.",
+      "title": "Sauce, cheese, chicken, onion",
+      "instruction": "Spread a thin ring of BBQ sauce on each crust — less than tomato night; sweet sauce pools in the center. Layer mozzarella and gouda, then chicken and red onion. Do not overload wet chicken or the center sags.",
       "minutes": 12,
-      "heatLevel": "high"
+      "heatLevel": ""
     },
     {
       "stepNumber": 5,
-      "title": "Rest and cut",
-      "instruction": "Rest 2 minutes before cutting so cheese sets. Cut on sheet trays for the hall line. Hold backup pies at 200°F uncovered up to 15 minutes — covering traps steam and softens crust.",
-      "minutes": 3,
+      "title": "Bake until edges char",
+      "instruction": "Bake each pie 10–13 minutes until cheese bubbles with brown spots and the bottom sounds hollow when tapped. Rotate once for hot spots. Hold finished pies on racks, not stacked — steam kills crust.",
+      "minutes": 13,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Rest, cilantro, and cut",
+      "instruction": "Rest 2 minutes so cheese sets. Drizzle remaining BBQ sauce in thin ribbons and scatter cilantro. Cut into 8 slices per pie and fan on sheet trays for eight hungry firefighters. Backup pie holds at 200°F uncovered up to 15 minutes.",
+      "minutes": 5,
       "heatLevel": "low"
     }
   ],
@@ -143,10 +180,10 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 852,
-    "protein": 38,
-    "carbs": 56,
-    "fats": 52,
+    "calories": 889,
+    "protein": 76,
+    "carbs": 60,
+    "fats": 36,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
@@ -189,6 +226,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-30T03:28:01.938Z",
+  "generatedAt": "2026-05-30T23:27:14.570Z",
   "contentVersion": 2
 }

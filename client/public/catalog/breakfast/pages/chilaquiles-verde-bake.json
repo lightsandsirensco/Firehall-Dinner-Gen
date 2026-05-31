@@ -1,0 +1,198 @@
+{
+  "slug": "chilaquiles-verde-bake",
+  "title": "Chilaquiles Verde Bake",
+  "subtitle": "Tortilla chips baked in green salsa with eggs, crema, and cotija.",
+  "description": "Adapted from classic Mexican chilaquiles verde tradition for a hotel-pan breakfast bake: sturdy tortilla chips tossed in simmered tomatillo salsa, baked until edges crisp, then topped with baked eggs and crema for ten portions.",
+  "filters": [
+    "feed_a_crew",
+    "high_protein",
+    "skillets"
+  ],
+  "tags": [
+    "chilaquiles",
+    "verde",
+    "tomatillo",
+    "eggs",
+    "bake"
+  ],
+  "crewSize": 10,
+  "baseServings": 10,
+  "prepTime": 20,
+  "cookTime": 30,
+  "totalTime": 50,
+  "difficulty": "medium",
+  "ingredients": [
+    {
+      "name": "tomatillos",
+      "quantity": "2 lb",
+      "notes": "husked and rinsed",
+      "group": "Salsa"
+    },
+    {
+      "name": "white onion",
+      "quantity": "1",
+      "notes": "quartered",
+      "group": "Salsa"
+    },
+    {
+      "name": "jalapeños",
+      "quantity": "4",
+      "notes": "stemmed, seeds optional",
+      "group": "Salsa"
+    },
+    {
+      "name": "chicken broth",
+      "quantity": "1 cup",
+      "notes": "low-sodium",
+      "group": "Salsa"
+    },
+    {
+      "name": "thick tortilla chips",
+      "quantity": "16 cups",
+      "notes": "restaurant-style, not thin",
+      "group": "Build"
+    },
+    {
+      "name": "large eggs",
+      "quantity": "10",
+      "group": "Protein"
+    },
+    {
+      "name": "Mexican crema",
+      "quantity": "1 cup",
+      "notes": "or thinned sour cream",
+      "group": "Finish"
+    },
+    {
+      "name": "cotija cheese",
+      "quantity": "1 cup",
+      "notes": "crumbled, plus cilantro and radish slices",
+      "group": "Finish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Chilaquiles Verde Bake in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch Eggs. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Roast and blend salsa",
+      "instruction": "Roast tomatillos, onion, and jalapeños on a sheet pan at 425°F until charred in spots, about 12 minutes. Blend with broth until smooth, then simmer in a pot 10 minutes until slightly thickened. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Heat the oven",
+      "instruction": "Heat oven to 375°F. Grease a deep hotel pan or two 9x13 dishes. Warm salsa off heat—you want it hot but not boiling when it hits the chips. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 0,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Toss chips with salsa",
+      "instruction": "Toss chips with just enough warm salsa to coat—about two-thirds of the batch. Reserve remaining salsa for serving. Chips should look sauced but not swimming or they will turn to mush. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Bake and add eggs",
+      "instruction": "Spread chips in the pan and bake 8 minutes. Make ten wells, crack an egg into each, and bake 10–12 more minutes until whites are set (165°F) and yolks are jammy. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Finish and portion",
+      "instruction": "Drizzle crema in zigzags, scatter cotija and cilantro, and serve with reserved warm salsa and lime wedges. Portion with a wide spatula to keep layers intact. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "nutrition": {
+    "calories": 680,
+    "protein": 22,
+    "carbs": 102,
+    "fat": 20,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "stationWorkflow": [
+    "Use thick chips only—thin restaurant chips dissolve before eggs finish baking.",
+    "Hold extra salsa warm for crew members who want a saucier plate at the line.",
+    "Cut radishes and cilantro while the first bake runs so garnish is ready at the oven door."
+  ],
+  "cleanupNotes": [
+    "Soak the hotel pan immediately with hot water—baked salsa and cheese glue sets fast.",
+    "Rinse the blender with warm water before tomatillo skins dry inside the jar."
+  ],
+  "leftovers": [
+    "Chilaquiles soften overnight; re-crisp on a sheet pan at 375°F for 8 minutes before reheating.",
+    "Fold leftovers into breakfast burritos with scrambled eggs and extra hot salsa."
+  ],
+  "heroImage": "/images/breakfast/chilaquiles-verde-bake.jpg",
+  "thumbImage": "/images/thumbs/breakfast/chilaquiles-verde-bake.jpg",
+  "imageAlt": "Baked chilaquiles verde with eggs, crema, and cotija in a hotel pan",
+  "publishedAt": "2026-05-30T21:22:29.757Z",
+  "updatedAt": "2026-05-31T12:54:36.765Z",
+  "readMinutes": 8,
+  "seoTitle": "Chilaquiles Verde Bake | Firehall Breakfast",
+  "mobileImage": "/images/mobile/breakfast/chilaquiles-verde-bake.jpg",
+  "railImage": "/images/rails/breakfast/chilaquiles-verde-bake.jpg",
+  "proTips": [
+    "Use thick chips only—thin restaurant chips dissolve before eggs finish baking.",
+    "Hold extra salsa warm for crew members who want a saucier plate at the line.",
+    "Cut radishes and cilantro while the first bake runs so garnish is ready at the oven door."
+  ],
+  "tonightSpread": [
+    "Plate Chilaquiles Verde Bake with sides in separate pans so the crew can mix portions.",
+    "Keep hot items on one side of the table and cold on the other — eggs stay hot, fruit stays cold.",
+    "Line up Chilaquiles Verde Bake on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+  ],
+  "equipment": [
+    "Large sheet trays",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "mealPrepNotes": "Prep mise en place before the shift — Chilaquiles Verde Bake runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
+}

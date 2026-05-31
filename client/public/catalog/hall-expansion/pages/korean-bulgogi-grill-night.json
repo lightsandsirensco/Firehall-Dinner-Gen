@@ -1,0 +1,222 @@
+{
+  "slug": "korean-bulgogi-grill-night",
+  "title": "Seared Garlic Steak",
+  "displayTitle": "Seared Garlic Steak",
+  "seoTitle": "Korean Bulgogi Grill Night | Firefighter Meal",
+  "shortDescription": "Marinated beef grilled with scallions and lettuce wraps for ten",
+  "subtitle": "Marinated beef grilled with scallions and lettuce wraps for ten",
+  "category": "hall_expansion",
+  "cuisine": "korean",
+  "description": "Thin-sliced ribeye marinates in soy, pear, garlic, and sesame, then grills hot over charcoal or gas until caramelized at the edges. Serve with lettuce cups, scallions, kimchi, and ssamjang for wrap-your-own platters.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 20,
+  "prepTime": 35,
+  "difficulty": "medium",
+  "calories": 460,
+  "protein": 36,
+  "carbs": 18,
+  "fats": 28,
+  "tags": [
+    "protein:beef",
+    "format:grill",
+    "category:crew_feeders",
+    "hall_expansion",
+    "crew_feeders",
+    "korean",
+    "beef",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Grill or cast iron griddle",
+    "Tongs",
+    "Mixing bowls",
+    "Serving platters",
+    "Small bowls"
+  ],
+  "ingredients": [
+    {
+      "name": "ribeye steak",
+      "quantity": "4",
+      "unit": "lb",
+      "notes": "partially frozen, sliced thin",
+      "group": "Main"
+    },
+    {
+      "name": "soy sauce",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Marinade"
+    },
+    {
+      "name": "Asian pear or apple",
+      "quantity": "1",
+      "unit": "whole",
+      "notes": "grated",
+      "group": "Marinade"
+    },
+    {
+      "name": "brown sugar",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Marinade"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "6",
+      "unit": "cloves",
+      "notes": "minced",
+      "group": "Marinade"
+    },
+    {
+      "name": "ginger",
+      "quantity": "1",
+      "unit": "tbsp",
+      "notes": "grated",
+      "group": "Marinade"
+    },
+    {
+      "name": "sesame oil",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Marinade"
+    },
+    {
+      "name": "green onions",
+      "quantity": "2",
+      "unit": "bunches",
+      "notes": "cut into long lengths",
+      "group": "Grill"
+    },
+    {
+      "name": "butter lettuce",
+      "quantity": "2",
+      "unit": "heads",
+      "notes": "leaves separated",
+      "group": "Service"
+    },
+    {
+      "name": "kimchi",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Service"
+    },
+    {
+      "name": "ssamjang",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Service"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Seared Garlic Steak in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch beef. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Slice and marinate beef",
+      "instruction": "Slice ribeye paper-thin. Mix soy, grated pear, sugar, garlic, ginger, and sesame oil. Toss beef and marinate at least 1 hour. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 20,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Prep wrap station",
+      "instruction": "Separate lettuce leaves, grill scallion lengths lightly, and portion kimchi and ssamjang into bowls. Cook until char marks are visible and the thickest piece reads 145°F for medium beef, 160°F for ground on an instant-read thermometer. Plan about 15 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Heat the grill",
+      "instruction": "Preheat grill to high, about 450°F. Vent the kitchen—this will smoke. Target oven/smoker temperature: 450°F. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Grill bulgogi in batches",
+      "instruction": "Grill beef in single layers 1–2 minutes per side until caramelized. Repeat until all beef is cooked. Target oven/smoker temperature: 450°F.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F for medium beef, 160°F for ground. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Serve platters",
+      "instruction": "Pile hot beef on platters with grilled scallions. Let crews build lettuce wraps with kimchi and ssamjang. Cook until char marks are visible and the thickest piece reads 145°F for medium beef, 160°F for ground on an instant-read thermometer. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "A cast iron griddle on the grill gives better char than grates alone.",
+    "Offer steamed rice on the side for crew who skip lettuce wraps.",
+    "Toasted sesame seeds over finished beef add crunch and look pro."
+  ],
+  "tonightSpread": [
+    "Bulgogi platters with lettuce cups, kimchi, and ssamjang.",
+    "Quick cucumber salad with rice vinegar."
+  ],
+  "leftovers": [
+    "Beef becomes bulgogi quesadillas—different format, still works.",
+    "Chop into fried rice with kimchi for lunch shift."
+  ],
+  "whyCrewsLikeIt": "Grill-night bulgogi feels interactive and special without the rice-bowl repetition. Crews build lettuce wraps, eat with their hands, and the sweet-salty beef disappears faster than you can restock the platter.",
+  "mealPrepNotes": "Freeze beef 30 minutes for easier slicing. Marinate up to 8 hours. Grill in batches over highest heat—crowding steams instead of chars.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 460,
+    "protein": 36,
+    "carbs": 18,
+    "fats": 28,
+    "label": "~460 cal/serving · 36g protein · 2g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/korean-bulgogi-grill-night.jpg",
+  "heroImageAlt": "Korean Bulgogi Grill Night — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/korean-bulgogi-grill-night.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/korean-bulgogi-grill-night.jpg",
+  "railImage": "/images/rails/hall-expansion/korean-bulgogi-grill-night.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "korean bulgogi grill night",
+    "crew feeders"
+  ],
+  "relatedSlugs": [
+    "shawarma-bar-night",
+    "fajita-bar-night",
+    "hall-burger-bar",
+    "pasta-bar-night"
+  ],
+  "generatedAt": "2026-05-31T01:50:00.916Z",
+  "contentVersion": 2
+}

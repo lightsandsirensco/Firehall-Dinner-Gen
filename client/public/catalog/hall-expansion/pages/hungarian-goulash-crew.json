@@ -1,0 +1,230 @@
+{
+  "slug": "hungarian-goulash-crew",
+  "title": "Hungarian Goulash for the Crew",
+  "displayTitle": "Hungarian Goulash for the Crew",
+  "seoTitle": "Hungarian Goulash for the Crew | Firefighter Meal",
+  "shortDescription": "Paprika beef stew with caraway and potatoes for ten",
+  "subtitle": "Paprika beef stew with caraway and potatoes for ten",
+  "category": "hall_expansion",
+  "cuisine": "hungarian",
+  "description": "Beef chuck simmers with onions, potatoes, and a heavy hand of sweet paprika until the broth turns rust-red and meat breaks down tender. Serve in deep bowls with sour cream and rye bread.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 120,
+  "prepTime": 30,
+  "difficulty": "easy",
+  "calories": 480,
+  "protein": 38,
+  "carbs": 34,
+  "fats": 20,
+  "tags": [
+    "protein:beef",
+    "format:stew",
+    "category:crew_feeders",
+    "hall_expansion",
+    "crew_feeders",
+    "hungarian",
+    "beef",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Dutch oven",
+    "Wooden spoon",
+    "Ladle",
+    "Cutting board",
+    "Hotel pan"
+  ],
+  "ingredients": [
+    {
+      "name": "beef chuck roast",
+      "quantity": "4",
+      "unit": "lb",
+      "notes": "cut into 1.5-inch cubes",
+      "group": "Main"
+    },
+    {
+      "name": "yellow onions",
+      "quantity": "3",
+      "unit": "whole",
+      "notes": "diced",
+      "group": "Stew"
+    },
+    {
+      "name": "sweet paprika",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Stew"
+    },
+    {
+      "name": "caraway seeds",
+      "quantity": "1",
+      "unit": "tsp",
+      "group": "Stew"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "5",
+      "unit": "cloves",
+      "notes": "minced",
+      "group": "Stew"
+    },
+    {
+      "name": "tomato paste",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Stew"
+    },
+    {
+      "name": "beef broth",
+      "quantity": "6",
+      "unit": "cups",
+      "group": "Stew"
+    },
+    {
+      "name": "russet potatoes",
+      "quantity": "2",
+      "unit": "lb",
+      "notes": "cubed",
+      "group": "Stew"
+    },
+    {
+      "name": "red bell pepper",
+      "quantity": "1",
+      "unit": "whole",
+      "notes": "diced",
+      "group": "Stew"
+    },
+    {
+      "name": "sour cream",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "for serving",
+      "group": "Finish"
+    },
+    {
+      "name": "rye bread",
+      "quantity": "1",
+      "unit": "loaf",
+      "notes": "sliced",
+      "group": "Service"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Hungarian Goulash for the Crew in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch beef. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Brown the beef",
+      "instruction": "Season chuck cubes and brown in batches in a Dutch oven over high heat until deeply colored. Set aside. Bake until the center reaches a safe internal temp (145°F for medium beef, 160°F for ground) and edges look set — use a thermometer at the thickest point. Plan about 15 minutes for this step at crew scale.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Cook onions and spices",
+      "instruction": "Reduce heat, add onions, and cook 8 minutes. Stir in paprika, caraway, garlic, and tomato paste, cooking 2 minutes until fragrant.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Simmer the stew",
+      "instruction": "Return beef, add broth and bell pepper. Cover and simmer 1.5 hours until beef starts to tenderize. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 90,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Add potatoes",
+      "instruction": "Stir in potatoes and simmer uncovered 30–40 minutes until beef and potatoes are fork-tender and broth thickens slightly. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 35,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F for medium beef, 160°F for ground. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Portion and open the line",
+      "instruction": "Portion Hungarian Goulash for the Crew onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Serve in bowls",
+      "instruction": "Taste and adjust salt. Ladle into bowls with sour cream dolloped on top and rye bread on the side. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "A bay leaf in the simmer adds subtle depth—remove before service.",
+    "Csipetke noodles are traditional if you want an extra Hungarian touch.",
+    "Hot paprika on the side lets crews customize heat without changing the pot."
+  ],
+  "tonightSpread": [
+    "Goulash bowls with sour cream, rye bread, and pickled vegetables.",
+    "Simple cabbage salad with vinegar dressing."
+  ],
+  "leftovers": [
+    "Thicken with a little flour and wrap in pastry for goulash hand pies.",
+    "Serve over spaetzle if you have egg noodles gone."
+  ],
+  "whyCrewsLikeIt": "Goulash is cold-weather hall fuel. It is hearty without being greasy, spices are warm not blow-your-head-off, and one pot feeds everyone including the probie who always takes seconds.",
+  "mealPrepNotes": "Cut beef uniform for even cooking. Stew tastes better the next day. Hold at 165°F in hotel pans with a thin broth layer so meat does not dry.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 480,
+    "protein": 38,
+    "carbs": 34,
+    "fats": 20,
+    "label": "~480 cal/serving · 38g protein · 4g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/hungarian-goulash-crew.jpg",
+  "heroImageAlt": "Hungarian Goulash for the Crew — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/hungarian-goulash-crew.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/hungarian-goulash-crew.jpg",
+  "railImage": "/images/rails/hall-expansion/hungarian-goulash-crew.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "hungarian goulash for the crew",
+    "crew feeders"
+  ],
+  "relatedSlugs": [
+    "shawarma-bar-night",
+    "fajita-bar-night",
+    "hall-burger-bar",
+    "pasta-bar-night"
+  ],
+  "generatedAt": "2026-05-31T01:50:00.916Z",
+  "contentVersion": 2
+}

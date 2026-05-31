@@ -1,0 +1,139 @@
+{
+  "generatedAt": "2026-05-31T12:17:57.234Z",
+  "auditRuns": [
+    {
+      "id": "firehall_photo_standard",
+      "script": "audit:firehall-photo-standard",
+      "reportPath": "firehall-photo-standard-audit.json",
+      "ok": true
+    },
+    {
+      "id": "image_accuracy",
+      "script": "audit:image-accuracy",
+      "reportPath": "image-accuracy-audit.json",
+      "ok": true
+    },
+    {
+      "id": "explore_image_mapping",
+      "script": "audit:explore-image-mapping",
+      "reportPath": "explore-image-mapping-audit.json",
+      "ok": true
+    },
+    {
+      "id": "image_governance",
+      "script": "audit:image-governance",
+      "reportPath": "curated-image-governance-report.json",
+      "ok": true
+    },
+    {
+      "id": "breakfast_images",
+      "script": "audit:breakfast-images",
+      "reportPath": "breakfast-image-audit.json",
+      "ok": true
+    }
+  ],
+  "consolidated": {
+    "firehallPhotoStandard": {
+      "recipesAudited": 376,
+      "failed": 0,
+      "queuedForReplacement": 0,
+      "duplicateHeroGroups": 0,
+      "donorOverrides": 0,
+      "byCollection": {
+        "golden_100": {
+          "total": 100,
+          "failed": 0,
+          "queued": 0
+        },
+        "performance_meals": {
+          "total": 50,
+          "failed": 0,
+          "queued": 0
+        },
+        "hall_expansion": {
+          "total": 74,
+          "failed": 0,
+          "queued": 0
+        },
+        "breakfast": {
+          "total": 67,
+          "failed": 0,
+          "queued": 0
+        },
+        "bbq": {
+          "total": 55,
+          "failed": 0,
+          "queued": 0
+        },
+        "pizza_night": {
+          "total": 20,
+          "failed": 0,
+          "queued": 0
+        },
+        "smoothies": {
+          "total": 10,
+          "failed": 0,
+          "queued": 0
+        }
+      }
+    },
+    "imageAccuracy": {
+      "recipesAudited": 761,
+      "failed": 203,
+      "byCollection": {
+        "golden_100": 100,
+        "performance_meals": 50,
+        "hall_expansion": 74,
+        "breakfast": 67,
+        "pizza_night": 20,
+        "smoothies": 10,
+        "explore_curated": 439,
+        "red_lead": 1
+      },
+      "duplicateHeroGroups": 23,
+      "donorOverrides": 0
+    },
+    "exploreMapping": {
+      "recipes": 233,
+      "correct": 233,
+      "missing": 0,
+      "mismatchedPath": 0,
+      "mismatchedIdentity": 0,
+      "duplicateConflict": 0,
+      "exploreEligible": 233,
+      "exploreExcluded": 0,
+      "duplicateImageGroups": 0
+    },
+    "imageGovernance": {
+      "recipes": 566,
+      "hallCatalog": 127,
+      "exploreCurated": 439,
+      "failed": 58,
+      "buildBlockers": 0,
+      "duplicateHeroPaths": 137
+    },
+    "breakfastImages": {
+      "recipesAudited": 74,
+      "passed": 74,
+      "failed": 0,
+      "formatPassed": 74,
+      "duplicateGroups": 0,
+      "canonicalUnique": 51,
+      "missingHero": 0
+    }
+  },
+  "replacementBacklog": {
+    "totalQueued": 0,
+    "p0": 0,
+    "p1": 0
+  },
+  "exploreImpact": {
+    "eligible": 233,
+    "excluded": 0,
+    "duplicateConflicts": 0
+  },
+  "targets": {
+    "uniqueImagery": "PASS",
+    "exploreEligiblePct": 100
+  }
+}

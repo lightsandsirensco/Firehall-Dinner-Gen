@@ -1,6 +1,7 @@
 import type { ExpansionRecipeDef } from "../types.js";
 import { def, ing, step } from "../recipe-build.js";
 import { BATCH_250_RECIPES } from "./batch-250.js";
+import { PHASE5_DISTINCT_RECIPES } from "./batch-phase5-distinct.js";
 
 const SMOKER_RECIPES: ExpansionRecipeDef[] = [
   def({
@@ -125,69 +126,6 @@ const SMOKER_RECIPES: ExpansionRecipeDef[] = [
     ],
     equipment: ["Smoker", "Perforated smoking rack", "Instant-read thermometer", "Mixing bowls", "Sheet pans"],
     nutrition: { calories: 420, protein: 32, carbs: 22, fats: 24, fiber: 1 },
-    spiceLevel: "mild",
-    cleanupDifficulty: "easy",
-  }),
-
-  def({
-    slug: "smoked-mac-and-cheese",
-    title: "Smoked Mac and Cheese",
-    subtitle: "Creamy three-cheese mac finished with light smoke for ten",
-    category: "smoker_recipes",
-    protein: "vegetarian",
-    cuisine: "american",
-    mealFormat: "smoker",
-    explorePools: ["bbq", "smoker", "comfort", "side", "hall_expansion"],
-    hookLine: "The ultimate smoke-night side that eats like a main when portions run big",
-    description:
-      "Elbow pasta is tossed in a sharp cheddar sauce, topped with buttered crumbs, then smoked in a disposable pan until bubbly and lightly kissed with wood smoke. It holds warm in a low oven without breaking.",
-    whyCrewsLikeIt:
-      "Mac and cheese is the universal crowd pleaser on BBQ nights. Smoking adds depth without overpowering the cheese, and the hotel-pan format scales cleanly for a full hall.",
-    mealPrepNotes:
-      "Cook pasta to just shy of al dente—it finishes in the smoker. Assemble pans up to 4 hours ahead and refrigerate; add 20 minutes to smoke time if going straight from cold.",
-    stationWorkflow: [
-      "Use disposable half-size hotel pans so you can slide them directly on the smoker grate.",
-      "Cover with foil for the first half of the smoke, then uncover to set the breadcrumb top.",
-      "Hold finished pans at 170°F with a loose foil tent so the top stays crisp, not steamed.",
-    ],
-    prepMinutes: 25,
-    cookMinutes: 60,
-    difficulty: "easy",
-    crewSizeDefault: 10,
-    ingredients: [
-      ing("elbow macaroni", "2", { unit: "lb", group: "Main" }),
-      ing("sharp cheddar cheese", "1.5", { unit: "lb", notes: "shredded", group: "Cheese" }),
-      ing("Gruyère cheese", "0.5", { unit: "lb", notes: "shredded", group: "Cheese" }),
-      ing("whole milk", "4", { unit: "cups", group: "Sauce" }),
-      ing("unsalted butter", "0.5", { unit: "cup", group: "Sauce" }),
-      ing("all-purpose flour", "0.5", { unit: "cup", group: "Sauce" }),
-      ing("Dijon mustard", "2", { unit: "tbsp", group: "Sauce" }),
-      ing("smoked paprika", "1", { unit: "tbsp", group: "Seasoning" }),
-      ing("panko breadcrumbs", "1.5", { unit: "cups", group: "Topping" }),
-      ing("kosher salt", "2", { unit: "tbsp", group: "Seasoning" }),
-    ],
-    steps: [
-      step(1, "Par-cook the pasta", "Boil macaroni in well-salted water until just shy of al dente, about 6 minutes. Drain and toss with a teaspoon of oil so strands do not clump while you build the sauce.", { minutes: 10 }),
-      step(2, "Build the cheese sauce", "Melt butter in a large pot, whisk in flour, and cook 2 minutes. Gradually whisk in milk until smooth, then simmer until thickened enough to coat a spoon.", { minutes: 12 }),
-      step(3, "Fold in cheese and pasta", "Remove sauce from heat, stir in cheddar, Gruyère, Dijon, smoked paprika, and salt until melted. Fold in drained pasta until every piece is coated in glossy sauce.", { minutes: 8 }),
-      step(4, "Top and smoke", "Transfer to buttered hotel pans, top with buttered panko, cover with foil, and smoke at 250°F for 30 minutes until the center reaches 165°F and edges bubble.", { minutes: 30, tempF: 250 }),
-      step(5, "Uncover and finish", "Remove foil and smoke 20 more minutes until breadcrumb topping turns golden and you detect light smoke aroma without acrid bitterness. Rest 10 minutes before serving.", { minutes: 25, tempF: 250 }),
-    ],
-    proTips: [
-      "Add a pinch of cayenne to the sauce—crews rarely notice heat but the depth reads as 'smoke-night special.'",
-      "Stir in a cup of diced smoked sausage if you want this to stand alone as a protein-forward main.",
-      "If the top browns too fast, finish covered in a 325°F oven while keeping the pan on a cool smoker zone.",
-    ],
-    tonightSpread: [
-      "Smoked mac in the center of the table with sliced jalapeños and hot sauce on the side.",
-      "Pair with any smoked protein—turkey, sausage, or burnt ends—for a full BBQ spread.",
-    ],
-    leftovers: [
-      "Press cold mac into squares, bread, and pan-fry for crispy mac-and-cheese bites.",
-      "Stir leftovers with beaten eggs and bake into a smoky mac frittata for breakfast shift.",
-    ],
-    equipment: ["Smoker", "Large stock pot", "Hotel pans", "Aluminum foil", "Whisk"],
-    nutrition: { calories: 520, protein: 22, carbs: 48, fats: 28, fiber: 2 },
     spiceLevel: "mild",
     cleanupDifficulty: "easy",
   }),
@@ -533,13 +471,13 @@ const SMOKER_RECIPES: ExpansionRecipeDef[] = [
     difficulty: "hard",
     crewSizeDefault: 10,
     ingredients: [
-      ing("corned beef brisket flat", "8", { unit: "lb", group: "Main" }),
+      ing("corned beef brisket flat", "7.5", { unit: "lb", notes: "about 12 oz raw per firefighter", group: "Main" }),
       ing("brown sugar", "0.25", { unit: "cup", group: "Glaze" }),
       ing("whole-grain mustard", "0.25", { unit: "cup", group: "Glaze" }),
       ing("apple cider vinegar", "2", { unit: "tbsp", group: "Glaze" }),
       ing("guinness or dark beer", "12", { unit: "oz", notes: "for wrap", group: "Cook" }),
       ing("green cabbage", "2", { unit: "heads", notes: "quartered", group: "Side" }),
-      ing("baby potatoes", "3", { unit: "lb", group: "Side" }),
+      ing("baby potatoes", "4", { unit: "lb", group: "Side" }),
       ing("caraway seeds", "1", { unit: "tbsp", group: "Side" }),
       ing("rye bread", "20", { unit: "slices", group: "Serve" }),
       ing("swiss cheese", "10", { unit: "slices", group: "Serve" }),
@@ -565,7 +503,7 @@ const SMOKER_RECIPES: ExpansionRecipeDef[] = [
       "Layer into grilled cheese with sauerkraut and swiss for quick Reuben melts.",
     ],
     equipment: ["Smoker", "Heavy-duty foil", "Instant-read thermometer", "Slicing knife", "Hotel pans"],
-    nutrition: { calories: 520, protein: 38, carbs: 32, fats: 28, fiber: 4 },
+    nutrition: { calories: 530, protein: 36, carbs: 34, fats: 28, fiber: 4 },
     spiceLevel: "mild",
     cleanupDifficulty: "medium",
   }),
@@ -976,7 +914,7 @@ const GAME_DAY_RECIPES: ExpansionRecipeDef[] = [
     difficulty: "easy",
     crewSizeDefault: 10,
     ingredients: [
-      ing("chicken wings", "8", { unit: "lb", notes: "split into flats and drums", group: "Main" }),
+      ing("chicken wings", "7.5", { unit: "lb", notes: "split into flats and drums; about 12 oz raw per firefighter", group: "Main" }),
       ing("baking powder", "2", { unit: "tbsp", notes: "aluminum-free", group: "Main" }),
       ing("kosher salt", "2", { unit: "tbsp", group: "Seasoning" }),
       ing("black pepper", "1", { unit: "tbsp", group: "Seasoning" }),
@@ -986,6 +924,7 @@ const GAME_DAY_RECIPES: ExpansionRecipeDef[] = [
       ing("honey", "0.25", { unit: "cup", group: "Honey garlic" }),
       ing("garlic cloves", "6", { unit: "cloves", notes: "minced", group: "Honey garlic" }),
       ing("celery sticks", "2", { unit: "bunches", group: "Serve" }),
+      ing("baby carrots", "2", { unit: "lb", notes: "cut into sticks", group: "Serve" }),
     ],
     steps: [
       step(1, "Dry and season wings", "Pat wings completely dry. Toss with baking powder, salt, and pepper until evenly coated. Arrange skin-side up on wire racks with space between each piece.", { minutes: 15 }),
@@ -1008,7 +947,7 @@ const GAME_DAY_RECIPES: ExpansionRecipeDef[] = [
       "Pull meat for buffalo chicken mac and cheese tomorrow.",
     ],
     equipment: ["Wire cooling racks", "Sheet pans", "Large mixing bowls", "Instant-read thermometer", "Serving platters"],
-    nutrition: { calories: 520, protein: 38, carbs: 12, fats: 36, fiber: 1 },
+    nutrition: { calories: 490, protein: 36, carbs: 14, fats: 34, fiber: 2 },
     spiceLevel: "medium",
     cleanupDifficulty: "medium",
   }),
@@ -1904,4 +1843,5 @@ export const HALL_EXPANSION_ADAPTED_RECIPES: ExpansionRecipeDef[] = [
   ...GAME_DAY_RECIPES,
   ...CREW_FEEDER_RECIPES,
   ...BATCH_250_RECIPES,
+  ...PHASE5_DISTINCT_RECIPES,
 ];

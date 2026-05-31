@@ -1,0 +1,192 @@
+{
+  "slug": "shrimp-and-grits-breakfast",
+  "title": "Shrimp and Grits Breakfast",
+  "subtitle": "Creamy stone-ground grits topped with Cajun-spiced shrimp and andouille.",
+  "description": "Adapted from classic Lowcountry Carolina breakfast tradition for firehall service: slow-stirred stone-ground grits with sharp cheddar, topped with sautéed shrimp, andouille, and a pan sauce bright with lemon and scallions.",
+  "filters": [
+    "feed_a_crew",
+    "high_protein",
+    "skillets"
+  ],
+  "tags": [
+    "shrimp-and-grits",
+    "grits",
+    "seafood",
+    "cajun",
+    "southern"
+  ],
+  "crewSize": 8,
+  "baseServings": 8,
+  "prepTime": 15,
+  "cookTime": 35,
+  "totalTime": 50,
+  "difficulty": "medium",
+  "ingredients": [
+    {
+      "name": "stone-ground grits",
+      "quantity": "2 cups",
+      "notes": "not instant",
+      "group": "Grits"
+    },
+    {
+      "name": "whole milk",
+      "quantity": "8 cups",
+      "notes": "plus 2 cups water",
+      "group": "Grits"
+    },
+    {
+      "name": "sharp cheddar",
+      "quantity": "2 cups",
+      "notes": "shredded",
+      "group": "Grits"
+    },
+    {
+      "name": "unsalted butter",
+      "quantity": "4 tbsp",
+      "notes": "for finishing grits",
+      "group": "Grits"
+    },
+    {
+      "name": "large shrimp",
+      "quantity": "2 lb",
+      "notes": "peeled and deveined",
+      "group": "Shrimp"
+    },
+    {
+      "name": "andouille sausage",
+      "quantity": "8 oz",
+      "notes": "sliced into coins",
+      "group": "Shrimp"
+    },
+    {
+      "name": "Cajun seasoning",
+      "quantity": "2 tbsp",
+      "notes": "plus salt and pepper",
+      "group": "Seasoning"
+    },
+    {
+      "name": "scallions",
+      "quantity": "1/2 cup",
+      "notes": "sliced, plus lemon wedges",
+      "group": "Finish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Shrimp and Grits Breakfast in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch Eggs. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Cook the grits",
+      "instruction": "Bring milk and water to a gentle boil in a heavy pot. Whisk in grits, reduce to low, and cook 20–25 minutes stirring often until thick and creamy. Fold in cheddar, butter, salt, and pepper; hold covered on low. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts.",
+      "minutes": 25,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Brown the andouille",
+      "instruction": "Sauté andouille coins in a large skillet over medium-high until edges crisp and fat renders, about 5 minutes. Transfer to a warm plate, leaving fat in the pan. Target 165°F at the thickest part before moving to the next batch. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 6,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Sear the shrimp",
+      "instruction": "Pat shrimp dry, toss with Cajun seasoning, and sear in the andouille fat over high heat in a single layer. Cook 2 minutes per side until pink and internal temperature reaches 145°F. Do not overcrowd. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Build the pan sauce",
+      "instruction": "Return andouille to the pan with shrimp. Add a splash of water or stock, scrape browned bits, and finish with lemon juice and half the scallions. Taste and adjust salt. Plan about 4 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 4,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Plate and serve",
+      "instruction": "Spoon creamy grits into warm bowls, top with shrimp-andouille mixture, and garnish with remaining scallions and lemon wedges. Serve immediately while grits stay loose. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "nutrition": {
+    "calories": 636,
+    "protein": 43,
+    "carbs": 14,
+    "fat": 44,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "stationWorkflow": [
+    "Start grits first—they need constant stirring and cannot wait for shrimp to finish.",
+    "Pat shrimp completely dry before seasoning or they steam instead of sear.",
+    "Hold grits in a bain-marie on low with a splash of milk stirred in every 10 minutes."
+  ],
+  "cleanupNotes": [
+    "Fill the grits pot with hot water immediately—starch sets like concrete once cooled.",
+    "Rinse shrimp shells and prep surfaces with sanitizer before handling other ingredients."
+  ],
+  "leftovers": [
+    "Grits tighten when chilled; reheat with milk whisked in over low heat until creamy again.",
+    "Chop leftover shrimp into a breakfast taco filling with hot sauce and scrambled eggs."
+  ],
+  "heroImage": "/images/breakfast/shrimp-and-grits-breakfast.jpg",
+  "thumbImage": "/images/thumbs/breakfast/shrimp-and-grits-breakfast.jpg",
+  "imageAlt": "Creamy grits topped with Cajun shrimp and andouille for the crew",
+  "publishedAt": "2026-05-30T21:22:29.757Z",
+  "updatedAt": "2026-05-31T12:54:36.794Z",
+  "readMinutes": 8,
+  "seoTitle": "Shrimp and Grits Breakfast | Firehall Breakfast",
+  "mobileImage": "/images/mobile/breakfast/shrimp-and-grits-breakfast.jpg",
+  "railImage": "/images/rails/breakfast/shrimp-and-grits-breakfast.jpg",
+  "proTips": [
+    "Start grits first—they need constant stirring and cannot wait for shrimp to finish.",
+    "Pat shrimp completely dry before seasoning or they steam instead of sear.",
+    "Hold grits in a bain-marie on low with a splash of milk stirred in every 10 minutes."
+  ],
+  "tonightSpread": [
+    "Plate Shrimp and Grits Breakfast with sides in separate pans so the crew can mix portions.",
+    "Keep hot items on one side of the table and cold on the other — eggs stay hot, fruit stays cold.",
+    "Line up Shrimp and Grits Breakfast on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+  ],
+  "equipment": [
+    "Large sheet trays",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "mealPrepNotes": "Prep mise en place before the shift — Shrimp and Grits Breakfast runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
+}

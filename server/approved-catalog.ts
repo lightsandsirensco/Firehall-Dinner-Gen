@@ -10,6 +10,7 @@ import {
   formatApprovedCatalogCategory,
   resolveApprovedCatalogKind,
 } from "../shared/approved-catalog.js";
+import { filterExploreEligibleCatalogEntries } from "../shared/explore-image-mapping.js";
 import { resolveExistingSlugImage } from "../shared/explore-image-paths.js";
 import { SMOOTHIE_CATALOG_ITEMS } from "../shared/fuel-catalog/smoothies/catalog-data.js";
 import {
@@ -21,6 +22,7 @@ import {
 } from "../shared/hall-catalog/gate.js";
 import { loadMergedHallCatalogIndex } from "./meal-catalog/load-index.js";
 import { readBreakfastCatalogIndexFromDisk } from "./breakfast-catalog/catalog.js";
+import { readBbqCatalogIndexFromDisk } from "./bbq-catalog/catalog.js";
 import type { BreakfastIndexEntry } from "../shared/breakfast-schema.js";
 
 const SMOOTHIE_COOK_MINUTES = 5;
@@ -95,7 +97,7 @@ function mealEntryToApproved(entry: GoldenCatalogIndexEntry): ApprovedCatalogEnt
     cookTime: entry.cookTime,
     cookTimeBucket: approvedCatalogCookTimeBucket(entry.cookTime),
     heroImage: images.hero,
-    thumbImage: images.cardImage,
+    thumbImage: images.thumb,
     tags: entry.tags,
     searchText: buildSearchText([
       entry.title,
@@ -137,7 +139,7 @@ function smoothieEntryToApproved(item: (typeof SMOOTHIE_CATALOG_ITEMS)[number]):
     cookTime: SMOOTHIE_COOK_MINUTES,
     cookTimeBucket: "under_30",
     heroImage: images.hero,
-    thumbImage: images.cardImage,
+    thumbImage: images.thumb,
     tags: [item.subtitle, item.taxonomyCategory],
     searchText: buildSearchText([
       item.title,
@@ -190,7 +192,7 @@ function breakfastEntryToApproved(entry: BreakfastIndexEntry): ApprovedCatalogEn
     cookTime: entry.totalTime,
     cookTimeBucket: approvedCatalogCookTimeBucket(entry.totalTime),
     heroImage: images.hero,
-    thumbImage: images.cardImage,
+    thumbImage: images.thumb,
     tags: entry.tags,
     searchText: buildSearchText([
       entry.title,
@@ -209,7 +211,55 @@ function breakfastEntryToApproved(entry: BreakfastIndexEntry): ApprovedCatalogEn
   };
 }
 
-export function buildApprovedCatalog(): ApprovedCatalogResponse {
+function bbqEntryToApproved(entry: GoldenCatalogIndexEntry): ApprovedCatalogEntry {
+  const slug = entry.slug.trim().toLowerCase();
+  const kind = resolveApprovedCatalogKind(slug);
+  const catalogBadge = resolvePrimaryCatalogBadge(slug);
+  const traitBadges = resolveCatalogTraitBadges(slug, {
+    firehallCategory: "bbq_grill_nights",
+    explorePool: "bbq",
+  }).filter((badge) => badge !== catalogBadge);
+  const images = resolveExistingSlugImage(slug, kind);
+  const tagHay = entry.tags.join(" ").toLowerCase();
+
+  return {
+    slug,
+    title: entry.title,
+    kind,
+    category: "bbq_grill_nights",
+    categoryLabel: "BBQ & Grill",
+    cuisine: entry.cuisine,
+    protein: entry.protein,
+    mealFormat: entry.mealFormat,
+    cookTime: entry.cookTime,
+    cookTimeBucket: approvedCatalogCookTimeBucket(entry.cookTime),
+    heroImage: images.hero,
+    thumbImage: images.thumb,
+    tags: entry.tags,
+    searchText: buildSearchText([
+      entry.title,
+      entry.slug,
+      "bbq",
+      "grill",
+      "smoker",
+      entry.category,
+      entry.cuisine,
+      entry.protein,
+      entry.mealFormat,
+      ...entry.tags,
+      ...entry.searchTerms,
+    ]),
+    catalogBadge,
+    traitBadges,
+    isSmoothie: false,
+    isHealthy: tagHay.includes("healthy"),
+    isBbqGrill: true,
+    isHighProtein: tagHay.includes("high_protein") || tagHay.includes("beef") || tagHay.includes("protein"),
+    isLowCleanup: entry.cookTime <= 60 && !tagHay.includes("heavy"),
+  };
+}
+
+export function buildAllApprovedCatalogEntries(): ApprovedCatalogEntry[] {
   const index = loadMergedHallCatalogIndex();
   const mealSlugs = new Set<string>();
 
@@ -228,13 +278,24 @@ export function buildApprovedCatalog(): ApprovedCatalogResponse {
       return breakfastEntryToApproved(entry);
     });
 
+  const bbqIndex = readBbqCatalogIndexFromDisk();
+  const bbqRecipes = (bbqIndex?.recipes ?? [])
+    .filter((entry) => isApprovedCatalogSlug(entry.slug) && !mealSlugs.has(entry.slug))
+    .map((entry) => {
+      mealSlugs.add(entry.slug.trim().toLowerCase());
+      return bbqEntryToApproved(entry);
+    });
+
   const smoothies = SMOOTHIE_CATALOG_ITEMS.filter((item) => !mealSlugs.has(item.slug)).map(
     smoothieEntryToApproved,
   );
 
-  const recipes = [...meals, ...breakfasts, ...smoothies].sort((a, b) =>
-    a.title.localeCompare(b.title),
-  );
+  return [...meals, ...breakfasts, ...bbqRecipes, ...smoothies].sort((a, b) => a.title.localeCompare(b.title));
+}
+
+export function buildApprovedCatalog(): ApprovedCatalogResponse {
+  const allRecipes = buildAllApprovedCatalogEntries();
+  const { recipes } = filterExploreEligibleCatalogEntries(allRecipes);
 
   return {
     version: 1,

@@ -192,69 +192,6 @@ export const BATCH_250_RECIPES: ExpansionRecipeDef[] = [
   }),
 
   def({
-    slug: "pepper-smoked-brisket-flat",
-    title: "Pepper-Crusted Smoked Brisket Flat",
-    subtitle: "Lean brisket flat with bold pepper bark sliced thin for ten",
-    category: "smoker_recipes",
-    protein: "beef",
-    cuisine: "american",
-    mealFormat: "smoker",
-    explorePools: ["bbq", "smoker", "beef", "hall_expansion"],
-    hookLine: "Texas-style pepper bark on a flat that slices clean and holds on the line",
-    description:
-      "A whole brisket flat gets a simple salt-and-coarse-pepper rub, smokes low until tender, rests, and slices thin for sandwiches or plates. No sweet glaze—just beef, smoke, and pepper.",
-    whyCrewsLikeIt:
-      "Brisket flat is leaner than the point but still delivers real smoke-night credibility. Thin slices stretch farther across the hall and reheat without turning greasy.",
-    mealPrepNotes:
-      "Trim excess fat cap to quarter-inch before seasoning. Start early—flat can stall for hours. Hold sliced beef at 165°F with broth, never above or it dries out.",
-    stationWorkflow: [
-      "Keep rub simple: equal parts kosher salt and coarse pepper by volume for authentic bark.",
-      "Slice only what you need for first service; keep remainder whole until second pass.",
-      "Use a slicer or very sharp knife—dull blades shred lean flat instead of cutting clean.",
-    ],
-    prepMinutes: 30,
-    cookMinutes: 420,
-    difficulty: "hard",
-    crewSizeDefault: 10,
-    ingredients: [
-      ing("whole brisket flat", "8", { unit: "lb", notes: "trimmed", group: "Main" }),
-      ing("kosher salt", "0.33", { unit: "cup", group: "Rub" }),
-      ing("coarse black pepper", "0.33", { unit: "cup", group: "Rub" }),
-      ing("garlic powder", "1", { unit: "tbsp", group: "Rub" }),
-      ing("yellow mustard", "2", { unit: "tbsp", notes: "as binder", group: "Rub" }),
-      ing("beef broth", "2", { unit: "cups", notes: "for holding", group: "Service" }),
-      ing("pickle chips", "2", { unit: "cups", group: "Service" }),
-      ing("white bread", "20", { unit: "slices", group: "Service" }),
-      ing("raw white onion", "1", { unit: "whole", notes: "thinly sliced", group: "Service" }),
-      ing("unsalted butter", "4", { unit: "tbsp", notes: "for bread", group: "Service" }),
-    ],
-    steps: [
-      step(1, "Trim and season", "Trim fat cap to quarter-inch. Coat flat with mustard, then pack evenly with salt, pepper, and garlic powder. Rest on a rack 30 minutes while smoker preheats.", { minutes: 40 }),
-      step(2, "Smoke the flat", "Heat smoker to 225°F with oak or post oak. Place flat fat-side up and smoke until internal temp reaches 165°F and bark is set, about 4–5 hours.", { minutes: 180, tempF: 225 }),
-      step(3, "Wrap through the stall", "Wrap flat in butcher paper when bark color looks right and internal temp stalls near 165°F. Continue smoking until probe-tender at 203°F, about 2–3 more hours.", { minutes: 150, tempF: 225 }),
-      step(4, "Rest the brisket", "Rest wrapped flat at least 45 minutes in a cooler so juices redistribute. Unwrap and slice against the grain into thin quarter-inch slices.", { minutes: 45 }),
-      step(5, "Serve Texas-style", "Toss sliced beef lightly with warm broth. Serve on buttered white bread with pickles and raw onion, or on platters for plate service.", { minutes: 15 }),
-    ],
-    proTips: [
-      "Flat dries faster than the point—pull at 203°F, not higher, even if you want more render.",
-      "Save trimmings and end pieces for chopped beef sandwiches with extra broth.",
-      "If time is tight, finish wrapped flat in a 275°F oven while monitoring probe tenderness.",
-    ],
-    tonightSpread: [
-      "Thin-sliced brisket on butcher paper with white bread, pickles, and onion.",
-      "Simple pinto beans and saltine crackers for a classic smoke-night plate.",
-    ],
-    leftovers: [
-      "Chop leftovers into chili for the next cold-night pot.",
-      "Reheat sliced beef in broth and pile on toasted rolls with horseradish mayo.",
-    ],
-    equipment: ["Offset or pellet smoker", "Butcher paper", "Instant-read thermometer", "Slicer knife", "Cooler"],
-    nutrition: { calories: 380, protein: 46, carbs: 16, fats: 16, fiber: 1 },
-    spiceLevel: "mild",
-    cleanupDifficulty: "medium",
-  }),
-
-  def({
     slug: "honey-mustard-oven-chicken-thighs",
     title: "Honey Mustard Baked Chicken Thighs",
     subtitle: "Crispy-skinned thighs with tangy honey-mustard glaze for ten",

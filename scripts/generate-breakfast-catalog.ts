@@ -8,6 +8,7 @@ import type { BreakfastCatalogIndex, BreakfastRecipePage, BreakfastFilterId } fr
 import type { BreakfastRecipePageDraft } from "../shared/breakfast-expansion/new-breakfast-pages.js";
 import { breakfastRecipePageSchema } from "../shared/breakfast-schema.js";
 import { NEW_BREAKFAST_PAGES } from "../shared/breakfast-expansion/new-breakfast-pages.js";
+import { BATCH_25_BREAKFAST_PAGES } from "../shared/breakfast-expansion/batch-25-breakfast-pages.js";
 import { calculateNutritionFromIngredients } from "../shared/nutrition/calculate.js";
 import fs from "node:fs";
 import path from "node:path";
@@ -413,10 +414,14 @@ const SEEDS: Seed[] = [
 
 async function main(): Promise<void> {
   const basePages: BreakfastRecipePage[] = SEEDS.map((seed) => build(seed));
-  const newSlugs = new Set(NEW_BREAKFAST_PAGES.map((p) => p.slug));
+  const newSlugs = new Set([
+    ...NEW_BREAKFAST_PAGES.map((p) => p.slug),
+    ...BATCH_25_BREAKFAST_PAGES.map((p) => p.slug),
+  ]);
   const merged = [
     ...basePages.filter((p) => !newSlugs.has(p.slug)),
     ...NEW_BREAKFAST_PAGES.map((p) => withBreakfastNutrition(p)),
+    ...BATCH_25_BREAKFAST_PAGES.map((p) => withBreakfastNutrition(p)),
   ];
 
   for (const p of merged) writeBreakfastRecipePage(p);
@@ -454,7 +459,9 @@ async function main(): Promise<void> {
     }
   }
 
-  console.log(`[breakfast] wrote ${merged.length} pages + index (${NEW_BREAKFAST_PAGES.length} new)`);
+  console.log(
+    `[breakfast] wrote ${merged.length} pages + index (${NEW_BREAKFAST_PAGES.length} expansion + ${BATCH_25_BREAKFAST_PAGES.length} batch-25)`,
+  );
 }
 
 main().catch((e) => {

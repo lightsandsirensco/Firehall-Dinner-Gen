@@ -1,20 +1,16 @@
 /**
  * Catalog-wide image donor overrides — slug → donor slug for remediate scripts.
- * Donor paths resolve per collection (Golden editorial, breakfast, hall-expansion).
+ * TEMPORARY ONLY — remove once slug owns a unique hero on disk.
  */
 export type CatalogImageDonorOverride = {
   donorSlug: string;
   donorCollection: "golden_100" | "breakfast" | "performance_meals" | "hall_expansion";
+  /** When true, audit keeps flagging until removed manually. */
+  temporary?: boolean;
 };
 
-export const CATALOG_IMAGE_DONOR_OVERRIDES: Record<string, CatalogImageDonorOverride> = {
-  /** Golden 100 hash was showing dessert square — use breakfast skillet hash hero. */
-  "bacon-egg-hash": { donorSlug: "bacon-egg-hash-skillet", donorCollection: "breakfast" },
-  /** Performance egg casserole — use accurate breakfast egg bake hero. */
-  "veggie-egg-casserole-tray": { donorSlug: "ham-cheddar-egg-bake", donorCollection: "breakfast" },
-  /** Golden loaded nacho skillet — share accurate nacho bar hero until regen. */
-  "loaded-nacho-skillet": { donorSlug: "game-day-nachos", donorCollection: "golden_100" },
-};
+/** No active catalog donor overrides — all slugs use their own heroes after photo replacement project. */
+export const CATALOG_IMAGE_DONOR_OVERRIDES: Record<string, CatalogImageDonorOverride> = {};
 
 /** Resolve donor hero public path for copying. */
 export function resolveDonorHeroPath(

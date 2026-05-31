@@ -32,7 +32,8 @@ const model = buildEditorialModelPrompt({
   mealFormat: "soup_chili",
 });
 assert.ok(model.includes("Avoid:"));
-assert.ok(!/oversaturated neon|AI slop/i.test(model) || model.includes("Avoid"));
+assert.ok(model.includes("GLOBAL FIREHALL KITCHEN PHOTO STANDARD"));
+assert.ok(model.includes("active Canadian firehall kitchen"));
 
 assert.equal(golden100HeroPath("smash-burgers"), "/images/golden-100/smash-burgers.jpg");
 assert.equal(mobileHeroPath("smash-burgers"), "/images/mobile/smash-burgers.jpg");

@@ -3,6 +3,7 @@
  * Prevents taco photos on quinoa-skillet titles, etc.
  */
 
+import { isImageReuseAndFallbacksDisabled } from "./image-reuse-policy.js";
 import { normalizeFormatKey, titleClaimsTacos } from "./meal-format-contract.js";
 import {
   inferPlatingType,
@@ -162,7 +163,9 @@ export function scoreImageTitleAlignment(
   const dominant = [...titleSignals].find((s) => s !== "generic") || "generic";
 
   if (options.heroSource === "editorial_fallback" || options.heroSource === "pinned") {
-    return { pass: true, score: 92, conflicts: [], dominantTitle: dominant };
+    if (!isImageReuseAndFallbacksDisabled()) {
+      return { pass: true, score: 92, conflicts: [], dominantTitle: dominant };
+    }
   }
 
   const depicted = new Set(options.depictedSignals || []);
@@ -274,15 +277,17 @@ export function heroPathConflictsTitle(
   const titleProtein =
     /\b(shrimp|prawn)\b/i.test(title)
       ? "seafood"
-      : /\b(salmon|cod|fish|tuna)\b/i.test(title)
+      : /\b(salmon|cod|fish|tuna|trout|catfish|tilapia|halibut|mahi)\b/i.test(title)
         ? "fish"
         : /\bbeef|steak|brisket\b/i.test(title)
           ? "beef"
-          : /\bchicken\b/i.test(title)
-            ? "chicken"
-            : /\bpork|sausage\b/i.test(title)
-              ? "pork"
-              : null;
+          : /\b(lamb|merguez|kofta)\b/i.test(title)
+            ? "lamb"
+            : /\bchicken\b/i.test(title)
+              ? "chicken"
+              : /\bpork|sausage|linguica|andouille\b/i.test(title)
+                ? "pork"
+                : null;
 
   if (titleProtein === "beef" && /\b(shrimp|salmon|fish|taco)\b/.test(path) && !/\bbeef|steak|brisket\b/.test(path)) {
     return true;
@@ -294,7 +299,25 @@ export function heroPathConflictsTitle(
   ) {
     return true;
   }
-  if (titleProtein === "fish" && /\b(beef|steak|taco|burger)\b/.test(path) && !/\b(fish|salmon|cod|shrimp)\b/.test(path)) {
+  if (
+    titleProtein === "fish" &&
+    /\b(beef|steak|taco|burger)\b/.test(path) &&
+    !/\b(fish|salmon|cod|shrimp|trout|catfish|tilapia|halibut|mahi)\b/.test(path)
+  ) {
+    return true;
+  }
+  if (
+    titleProtein === "lamb" &&
+    /\b(chicken|turkey|pork|sausage)\b/.test(path) &&
+    !/\b(lamb|merguez|kofta)\b/.test(path)
+  ) {
+    return true;
+  }
+  if (
+    titleProtein === "pork" &&
+    /\b(chicken|turkey|beef|steak|shrimp|salmon)\b/.test(path) &&
+    !/\b(pork|sausage|linguica|andouille|satay|po-boy)\b/.test(path)
+  ) {
     return true;
   }
 

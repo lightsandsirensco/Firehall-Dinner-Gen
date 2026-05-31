@@ -43,8 +43,8 @@ if (!prompt.includes(FOOD_IMAGERY_STYLE_VERSION)) {
 if (!prompt.includes("warm key light")) {
   throw new Error("Prompt missing master lighting block");
 }
-if (!prompt.includes("full-frame DSLR")) {
-  throw new Error("Prompt missing photoreal camera baseline");
+if (!prompt.includes("active Canadian firehall kitchen")) {
+  throw new Error("Prompt missing global firehall kitchen photo standard");
 }
 if (!prompt.includes("Camera angle (locked preset burger)")) {
   throw new Error("Prompt missing locked shot preset");

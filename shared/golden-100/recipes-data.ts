@@ -95,7 +95,7 @@ const QUICK = [
   goldenEntry({ slug: "pork-carnitas-tacos", title: "Quick Pork Carnitas Tacos", cat: "quick_shift_meals", protein: "pork", cuisine: "mexican", format: "tacos", pools: ["quick", "handheld"], hook: "Crispy edges, fast tortilla night", search: "quick pork carnitas tacos", rec: { quickShiftMeal: true } }),
   goldenEntry({ slug: "chicken-quesadillas", title: "Shredded Chicken Quesadillas", cat: "quick_shift_meals", protein: "chicken", cuisine: "mexican", format: "handheld", pools: ["quick", "handheld"], hook: "Melty, crispy, line-friendly", search: "chicken quesadillas dinner", rec: { quickShiftMeal: true } }),
   goldenEntry({ slug: "chili-mac", title: "Chili Mac Skillet", cat: "quick_shift_meals", protein: "beef", cuisine: "american", format: "skillet", pools: ["quick", "comfort"], hook: "Two cravings, one pan", search: "chili mac skillet dinner", rec: { quickShiftMeal: true } }),
-  goldenEntry({ slug: "pad-thai", title: "Hall Rush Pad Thai", cat: "quick_shift_meals", protein: "chicken", cuisine: "thai", format: "skillet", pools: ["quick"], hook: "Sweet-salty noodles, fast wok", search: "chicken pad thai dinner", rec: { quickShiftMeal: true } }),
+  goldenEntry({ slug: "pad-thai", title: "Firehall Pad Thai", cat: "quick_shift_meals", protein: "chicken", cuisine: "thai", format: "skillet", pools: ["quick"], hook: "Sweet-tangy wok noodles, lime, and crushed peanuts", search: "firehall pad thai chicken wok noodles", rec: { quickShiftMeal: true } }),
 ];
 
 const PIZZA = [

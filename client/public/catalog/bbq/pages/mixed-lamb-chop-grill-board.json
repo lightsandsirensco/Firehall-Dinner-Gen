@@ -1,0 +1,215 @@
+{
+  "slug": "mixed-lamb-chop-grill-board",
+  "title": "Za'atar Loin and Shoulder Lamb Board",
+  "displayTitle": "Za'atar Loin and Shoulder Lamb Board",
+  "seoTitle": "Za'atar Loin and Shoulder Lamb Board | Firehall BBQ",
+  "shortDescription": "Mixed lamb chop board—two cuts, one platter, hall steakhouse energy",
+  "subtitle": "Herb-rubbed loin and shoulder chops, rosemary board, and char for ten",
+  "category": "bbq_grill_nights",
+  "cuisine": "mediterranean",
+  "description": "Lamb loin and shoulder chops get rosemary-garlic rub, grill to 135°F, and arrange on a board with charred lemon, olives, and whipped feta.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 25,
+  "prepTime": 35,
+  "difficulty": "medium",
+  "calories": 520,
+  "protein": 32,
+  "carbs": 48,
+  "fats": 22,
+  "tags": [
+    "protein:lamb",
+    "format:smokehouse_board",
+    "category:bbq_grill_nights",
+    "bbq",
+    "smoker",
+    "grill",
+    "firehall_bbq_25",
+    "bbq",
+    "grill",
+    "firehall_bbq_30"
+  ],
+  "equipment": [
+    "flat-top griddle",
+    "instant-read thermometer",
+    "cutting board",
+    "hotel pans",
+    "sharp knife"
+  ],
+  "ingredients": [
+    {
+      "name": "lamb loin chops",
+      "quantity": "10",
+      "unit": "pieces",
+      "notes": "about 3 lb",
+      "group": "Main"
+    },
+    {
+      "name": "lamb shoulder chops",
+      "quantity": "10",
+      "unit": "pieces",
+      "notes": "about 3 lb",
+      "group": "Main"
+    },
+    {
+      "name": "za'atar",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Rub"
+    },
+    {
+      "name": "sumac",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Rub"
+    },
+    {
+      "name": "pomegranate molasses",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Rub"
+    },
+    {
+      "name": "labneh",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Board"
+    },
+    {
+      "name": "pickled turnips",
+      "quantity": "1.5",
+      "unit": "cups",
+      "group": "Board"
+    },
+    {
+      "name": "fresh mint",
+      "quantity": "0.33",
+      "unit": "cup",
+      "notes": "chopped",
+      "group": "Board"
+    },
+    {
+      "name": "grilled pita wedges",
+      "quantity": "12",
+      "unit": "pieces",
+      "group": "Service"
+    },
+    {
+      "name": "Aleppo pepper",
+      "quantity": "1",
+      "unit": "tsp",
+      "group": "Finish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Rub lamb chops",
+      "instruction": "Combine rosemary, garlic, olive oil, lemon zest, and salt. Rub all chops and rest 1 hour at room temp. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Whip feta spread",
+      "instruction": "Blend feta with olive oil and lemon juice until smooth. Hold refrigerated until board assembly. Plan about 8 minutes for this step at crew scale. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Heat grill zones",
+      "instruction": "Preheat grill with hot zone at 475°F and medium zone at 425°F. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 10,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Grill loin chops",
+      "instruction": "Grill loin chops over hot zone 3–4 minutes per side until 130°F internal. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 10,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Grill shoulder chops",
+      "instruction": "Grill shoulder chops over medium zone 5–6 minutes per side until 135°F internal. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 14,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Char lemons",
+      "instruction": "Grill lemon halves cut-side down 2 minutes at 450°F. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 3,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 7,
+      "title": "Rest and hold",
+      "instruction": "Rest all chops 5 minutes. Hold covered at 170°F in hotel pans until board assembly. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Board for ten",
+      "instruction": "Arrange mixed chops on board with whipped feta, olives, and charred lemon. Two chops per firefighter. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Cook loin and shoulder separately—they need different heat and time.",
+    "135°F pull with rest delivers pink loin and juicy shoulder.",
+    "Whipped feta at room temp spreads easier on the board."
+  ],
+  "tonightSpread": [
+    "Mixed lamb chop board with whipped feta and olives.",
+    "Orzo salad with lemon and herbs."
+  ],
+  "leftovers": [
+    "Slice leftover chops for lamb pita wraps.",
+    "Chop into Mediterranean grain bowls."
+  ],
+  "whyCrewsLikeIt": "Mixed chop boards feel special without slow cooking. Loin and shoulder eat differently on one board, hold sliced at 170°F, and beat another generic kebab platter.",
+  "mealPrepNotes": "Rub chops 1 hour ahead. Grill loin hot 475°F, 3–4 minutes per side; shoulder medium 425°F, 5–6 minutes per side. Hold covered at 170°F up to 30 minutes.",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 520,
+    "protein": 32,
+    "carbs": 48,
+    "fats": 22,
+    "label": "per serving (hall portion)",
+    "source": "estimated"
+  },
+  "heroImage": "/images/smoker-catalog/mixed-lamb-chop-grill-board.jpg",
+  "heroImageAlt": "Za'atar Loin and Shoulder Lamb Board — crew-sized BBQ spread with visible smoke and bark",
+  "mobileImage": "/images/mobile/smoker-catalog/mixed-lamb-chop-grill-board.jpg",
+  "thumbImage": "/images/thumbs/smoker-catalog/mixed-lamb-chop-grill-board.jpg",
+  "railImage": "/images/rails/smoker-catalog/mixed-lamb-chop-grill-board.jpg",
+  "realismScore": 88,
+  "firefighterScore": 90,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "za'atar loin and shoulder lamb board",
+    "mixed lamb chop grill board",
+    "lamb",
+    "Mediterranean",
+    "smokehouse board",
+    "bbq",
+    "firehall",
+    "mixed lamb chop board",
+    "mediterranean lamb grill",
+    "herb lamb loin shoulder"
+  ],
+  "relatedSlugs": [
+    "carolina-vinegar-pulled-pork",
+    "honey-chipotle-chicken-thighs",
+    "smoked-chicken-quarters-white-sauce",
+    "brisket-style-beef-sandwiches-au-jus"
+  ],
+  "sourceName": "Firehall Meals BBQ Collection",
+  "generatedAt": "2026-05-31T02:29:42.535Z",
+  "contentVersion": 2
+}

@@ -72,6 +72,7 @@ export function inferPlatingTypeFromHeroPath(heroPath: string, altText = ""): Pl
   if (/\bburrito\b/.test(blob) && !/\bbowls?\b/.test(blob)) return "taco";
   if (/\b(burger|smash|cheeseburger|slider)\b/.test(blob)) return "burger";
   if (/\b(pizza|pepperoni-pie|flatbread)\b/.test(blob)) return "pizza";
+  if (/\b(pasta-salad|potato-salad|antipasto)\b/.test(blob)) return "salad";
   if (/\b(pasta|spaghetti|penne|lasagna|ziti|macaroni)\b/.test(blob)) return "pasta";
   if (/\b(soup|chili|chowder|stew|bisque)\b/.test(blob)) return "soup";
   if (/\b(skillet|one-pan|one_pan|cast-iron)\b/.test(blob)) return "skillet";

@@ -7,7 +7,7 @@ export const IMAGE_STYLE_PRESET_VERSION = "2.0" as const;
 
 /** Every preset shares this photographic baseline — category only changes mood/lighting nuance. */
 const PRESET_PHOTO_CORE =
-  "Photorealistic DSLR menu photograph, natural color, same dark firehall plate styling, locked camera angle from shot preset";
+  "Photorealistic DSLR food photograph in an active Canadian firehall kitchen, crew-sized family-style portions, locked camera angle from shot preset";
 
 export const IMAGE_STYLE_PRESET_IDS = [
   "hall_bbq_dark",
@@ -48,9 +48,9 @@ export const IMAGE_STYLE_PRESETS: Record<ImageStylePresetId, ImageStylePreset> =
       "low-key warm key from grill side, subtle smoke haze, real char highlights on protein, no fantasy ember glow",
     cameraAngle: "45° three-quarter hero angle, eye-level, slight off-center for depth",
     mood: "confident BBQ hall night — indulgent, smoky, crew-scale appetite",
-    atmosphere: "dark station kitchen after grill service, embers and cast iron implied",
+    atmosphere: "dark firehall station kitchen after grill service — commercial stainless, smoke haze, prep tables visible",
     composition:
-      "protein forward on dark wood or slate, generous portion, char marks visible, 12% safe margin for mobile crop",
+      "protein forward on carving board or serving tray in hall kitchen, generous crew portion, char marks visible, 12% safe margin for mobile crop",
     colorGrading:
       "deep amber highlights, chocolate shadows, controlled orange in char, no neon, not oversaturated",
     cropPreference: "center",
@@ -66,9 +66,9 @@ export const IMAGE_STYLE_PRESETS: Record<ImageStylePresetId, ImageStylePreset> =
       "warm tungsten key from camera-left, soft fill, gentle steam when hot, golden highlights on cheese and sauce",
     cameraAngle: "slightly elevated 40° angle, intimate plate-forward framing",
     mood: "post-shift comfort — familiar, generous, emotionally warm",
-    atmosphere: "cozy hall kitchen warmth, evening service, inviting not fussy",
+    atmosphere: "cozy Canadian firehall kitchen warmth — prep tables, steam tables, evening meal service",
     composition:
-      "single generous plate or bowl, melted cheese and sauce gloss where appropriate, center-weighted for 4:5 mobile",
+      "crew-sized serving tray, hotel pan, or large platter — melted cheese and sauce gloss where appropriate, center-weighted for 4:5 mobile",
     colorGrading: "cinematic warm amber, rich midtones, soft roll-off in shadows",
     cropPreference: "center",
     textureEmphasis: "natural melted cheese, controlled sauce sheen, gentle steam, hearty portion density",
@@ -83,7 +83,7 @@ export const IMAGE_STYLE_PRESETS: Record<ImageStylePresetId, ImageStylePreset> =
       "bright natural-window key with soft diffusion, clean shadows, fresh herb speculars",
     cameraAngle: "45° angle, bowl or plate with clear protein zone, slight overhead hint",
     mood: "recovery and performance — satisfied, energized, still craveable",
-    atmosphere: "fresh modern kitchen light, disciplined but not sad",
+    atmosphere: "fresh station kitchen light on prep counter — disciplined but not sad, commercial stainless visible",
     composition:
       "bowl or plate with distinct protein and veg zones, colorful but natural, mobile-safe center crop",
     colorGrading: "balanced warmth with lifted greens, no oversaturated neon health glow",
@@ -100,8 +100,8 @@ export const IMAGE_STYLE_PRESETS: Record<ImageStylePresetId, ImageStylePreset> =
       "soft morning window light from side, golden yolk highlights, gentle steam from hot elements",
     cameraAngle: "slightly above 35° — classic breakfast editorial, approachable",
     mood: "early shift or breakfast-for-dinner — bright, welcoming, hearty",
-    atmosphere: "morning station light, coffee-adjacent warmth without showing cups as hero",
-    composition: "stacked pancakes, hash, eggs, or burrito cross-section — generous, not dainty",
+    atmosphere: "morning firehall station kitchen — griddle and prep table energy, coffee-adjacent warmth without showing cups as hero",
+    composition: "stacked pancakes, hash, eggs, or burrito cross-section on serving tray or sheet pan — generous crew breakfast, not dainty",
     colorGrading: "soft golden highlights, creamy whites, warm shadows, no harsh contrast",
     cropPreference: "top",
     textureEmphasis: "crispy bacon edges, runny yolk where appropriate, fluffy pancake texture",
@@ -116,7 +116,7 @@ export const IMAGE_STYLE_PRESETS: Record<ImageStylePresetId, ImageStylePreset> =
       "warm oven-side key from behind-left, natural cheese highlight speculars, rustic board or peel edge",
     cameraAngle: "low 30° angle emphasizing crust edge — same preset family as catalog pizza shots",
     mood: "Friday hall pizza — fun, communal, craveable not greasy",
-    atmosphere: "neighborhood pizzeria meets fire station — warm, lively, authentic",
+    atmosphere: "firehall pizza night on prep counter — warm, lively, authentic station kitchen not pizzeria marketing",
     composition:
       "whole pie or controlled slice pull, leopard crust visible, center crop safe for cheese focus",
     colorGrading: "warm red-gold cheese tones, toasted crust browns, controlled oil sheen",
@@ -133,8 +133,8 @@ export const IMAGE_STYLE_PRESETS: Record<ImageStylePresetId, ImageStylePreset> =
       "low warm key, deep shadows, steam rising from bowl, candle-adjacent warmth without showing flame",
     cameraAngle: "eye-level bowl-forward or deep plate, intimate and heavy",
     mood: "post-call gravity — restorative, heavy, trustworthy",
-    atmosphere: "quiet hall kitchen late night, earned meal, emotional warmth",
-    composition: "deep bowl or loaded plate, toppings centered, steam visible, dark surround",
+    atmosphere: "quiet firehall kitchen late night — stock pots and steam tables, earned meal, emotional warmth",
+    composition: "deep bowl or loaded hotel pan on prep surface, toppings centered, steam visible, dark station surround",
     colorGrading: "rich chocolate shadows, amber steam highlights, subdued palette",
     cropPreference: "center",
     textureEmphasis: "thick stew viscosity, steam, loaded toppings, hearty depth",

@@ -1,0 +1,230 @@
+{
+  "slug": "peri-peri-chicken-platter",
+  "title": "Peri Peri Chicken Platter",
+  "displayTitle": "Peri Peri Chicken Platter",
+  "seoTitle": "Peri Peri Chicken Platter | Firefighter Meal",
+  "shortDescription": "Portuguese-African chili chicken with charred lemon for ten",
+  "subtitle": "Portuguese-African chili chicken with charred lemon for ten",
+  "category": "hall_expansion",
+  "cuisine": "portuguese",
+  "description": "Chicken quarters marinate in peri peri chili sauce with lemon and garlic, then grill until charred and juicy. Serve on platters with grilled peppers, charred lemons, and extra sauce for dipping.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 40,
+  "prepTime": 25,
+  "difficulty": "medium",
+  "calories": 430,
+  "protein": 38,
+  "carbs": 12,
+  "fats": 26,
+  "tags": [
+    "protein:chicken",
+    "format:platter",
+    "category:crew_feeders",
+    "hall_expansion",
+    "crew_feeders",
+    "portuguese",
+    "chicken",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Grill",
+    "Blender",
+    "Instant-read thermometer",
+    "Sheet pans",
+    "Tongs"
+  ],
+  "ingredients": [
+    {
+      "name": "chicken leg quarters",
+      "quantity": "6",
+      "unit": "lb",
+      "notes": "about 12 pieces",
+      "group": "Main"
+    },
+    {
+      "name": "red chilies",
+      "quantity": "6",
+      "unit": "whole",
+      "notes": "seeded",
+      "group": "Sauce"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "8",
+      "unit": "cloves",
+      "group": "Sauce"
+    },
+    {
+      "name": "lemon juice",
+      "quantity": "0.33",
+      "unit": "cup",
+      "group": "Sauce"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Sauce"
+    },
+    {
+      "name": "smoked paprika",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "oregano",
+      "quantity": "1",
+      "unit": "tbsp",
+      "notes": "dried",
+      "group": "Sauce"
+    },
+    {
+      "name": "red bell peppers",
+      "quantity": "4",
+      "unit": "whole",
+      "notes": "quartered",
+      "group": "Grill"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "quartered",
+      "group": "Grill"
+    },
+    {
+      "name": "lemon",
+      "quantity": "4",
+      "unit": "whole",
+      "notes": "halved",
+      "group": "Finish"
+    },
+    {
+      "name": "fresh cilantro",
+      "quantity": "0.25",
+      "unit": "cup",
+      "notes": "chopped",
+      "group": "Finish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Peri Peri Chicken Platter in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Blend peri peri sauce",
+      "instruction": "Blend chilies, garlic, lemon juice, olive oil, paprika, oregano, and salt until smooth. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Marinate chicken",
+      "instruction": "Coat quarters in half the sauce. Marinate at least 2 hours or overnight refrigerated. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Preheat grill",
+      "instruction": "Heat grill to medium-high, about 400°F. Oil grates thoroughly. Target oven/smoker temperature: 400°F. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Grill chicken and vegetables",
+      "instruction": "Grill chicken skin-side down 8 minutes, flip, and cook until 165°F internal, about 20 minutes total. Grill peppers, onions, and lemon halves alongside. Target oven/smoker temperature: 400°F.",
+      "minutes": 28,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Portion and open the line",
+      "instruction": "Portion Peri Peri Chicken Platter onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Platter and serve",
+      "instruction": "Rest chicken 5 minutes, then pile on platters with grilled vegetables. Drizzle reserved sauce and scatter cilantro. Cook until char marks are visible and the thickest piece reads 165°F on an instant-read thermometer. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Bird's eye chilies kick heat up—jalapeños keep it hall-friendly.",
+    "Peri peri mayo for dipping is an easy upgrade.",
+    "Portuguese rolls soak up sauce better than standard buns."
+  ],
+  "tonightSpread": [
+    "Peri peri chicken with grilled peppers, onions, and charred lemon.",
+    "Simple rice or roasted potatoes for crew who want a plate, not just chicken."
+  ],
+  "leftovers": [
+    "Pull meat for peri peri wraps with slaw—not a burrito bowl, a straight wrap.",
+    "Chop into grain salad with cucumber and feta."
+  ],
+  "whyCrewsLikeIt": "Peri peri chicken brings real heat and tang—crews who live on hot sauce will line up twice. Quarters are cheap, grill fast, and look impressive piled on sheet pans.",
+  "mealPrepNotes": "Marinate up to 24 hours. Reserve half the sauce for serving—never baste with used marinade from raw chicken. Spatchcock quarters if you need faster grill time.",
+  "spiceLevel": "hot",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 430,
+    "protein": 38,
+    "carbs": 12,
+    "fats": 26,
+    "label": "~430 cal/serving · 38g protein · 2g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/peri-peri-chicken-platter.jpg",
+  "heroImageAlt": "Peri Peri Chicken Platter — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/peri-peri-chicken-platter.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/peri-peri-chicken-platter.jpg",
+  "railImage": "/images/rails/hall-expansion/peri-peri-chicken-platter.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "peri peri chicken platter",
+    "crew feeders"
+  ],
+  "relatedSlugs": [
+    "shawarma-bar-night",
+    "fajita-bar-night",
+    "hall-burger-bar",
+    "pasta-bar-night"
+  ],
+  "generatedAt": "2026-05-31T01:50:00.916Z",
+  "contentVersion": 2
+}

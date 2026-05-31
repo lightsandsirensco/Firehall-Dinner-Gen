@@ -26,7 +26,7 @@
     "beef",
     "comfort",
     "hall_expansion",
-    "hall_expansion_56",
+    "hall_expansion_74",
     "hall_meal",
     "firefighter_meal"
   ],
@@ -103,37 +103,93 @@
   "steps": [
     {
       "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Smoked Meatloaf with Glaze in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch beef. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
       "title": "Mix the meatloaf base",
       "instruction": "Combine ground beef, breadcrumbs, eggs, onion, Worcestershire, salt, and pepper until just mixed—overworking makes dense, tough loaves instead of tender slices.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
-      "stepNumber": 2,
+      "stepNumber": 4,
       "title": "Shape individual loaves",
       "instruction": "Divide into ten equal portions and shape into mini loaves about 5 inches long. Place on a perforated rack or foil-lined pan with space between each loaf.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
-      "stepNumber": 3,
+      "stepNumber": 5,
       "title": "Smoke until nearly set",
       "instruction": "Heat smoker to 275°F. Smoke loaves until internal temperature reaches 140°F and the exterior takes on light smoke color, about 45–60 minutes. Target oven/smoker temperature: 275°F.",
       "minutes": 55,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 6,
       "title": "Glaze and finish",
       "instruction": "Whisk ketchup, brown sugar, and vinegar. Brush loaves and continue smoking until internal temp hits 160°F and glaze turns tacky and lightly charred at the edges. Target oven/smoker temperature: 275°F.",
       "minutes": 25,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F for medium beef, 160°F for ground. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Portion and open the line",
+      "instruction": "Portion Smoked Meatloaf with Glaze onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Scale for larger halls",
+      "instruction": "When cooking for more than 10 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
       "title": "Rest and serve",
       "instruction": "Rest loaves 10 minutes before slicing into half-inch portions. Serve with mashed potatoes or mac and cheese, keeping extra glaze warm for second passes at the line.",
       "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 12,
+      "title": "Final quality check before service",
+      "instruction": "Walk the line once before opening service for Smoked Meatloaf with Glaze — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
+      "minutes": 4,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 13,
+      "title": "Final quality check before service",
+      "instruction": "Walk the line once before opening service for Smoked Meatloaf with Glaze — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
+      "minutes": 4,
       "heatLevel": ""
     }
   ],
@@ -175,10 +231,10 @@
   ],
   "relatedSlugs": [
     "smoked-turkey-breast",
-    "smoked-mac-and-cheese",
     "pork-belly-burnt-ends",
-    "smoked-sausage-platter"
+    "smoked-sausage-platter",
+    "smoked-queso-fundido"
   ],
-  "generatedAt": "2026-05-30T03:14:19.187Z",
+  "generatedAt": "2026-05-31T01:50:00.915Z",
   "contentVersion": 2
 }

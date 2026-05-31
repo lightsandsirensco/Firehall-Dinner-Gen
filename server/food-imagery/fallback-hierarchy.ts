@@ -1,3 +1,4 @@
+import { isImageReuseAndFallbacksDisabled } from "../../shared/image-reuse-policy.js";
 import { getClassicHallMeal } from "../../shared/classic-hall-meals.js";
 import { isFirehallOwnedHeroUrl } from "../../shared/food-imagery/paths.js";
 import { resolveEditorialFallbackHero } from "../../shared/meal-hero-fallback.js";
@@ -61,7 +62,7 @@ export async function resolveHeroHierarchy(opts: {
   for (const key of opts.recipeKeys) {
     const slug = key.replace(/^curated:/, "").replace(/^meal:(id|sig):/, "");
     const classic = getClassicHallMeal(slug);
-    if (classic?.heroImagePath?.trim()) {
+    if (!isImageReuseAndFallbacksDisabled() && classic?.heroImagePath?.trim()) {
       return {
         hero_image: classic.heroImagePath.trim(),
         hero_image_alt: alt,
@@ -87,18 +88,20 @@ export async function resolveHeroHierarchy(opts: {
     };
   }
 
-  const fb = resolveEditorialFallbackHero(opts.title || "", {
-    mealFormat: opts.mealFormat,
-    protein: opts.protein,
-  });
-  if (fb && !heroPathConflictsTitle(fb, opts.title || "", opts.mealFormat)) {
-    return {
-      hero_image: fb,
-      hero_image_alt: alt,
-      hero_image_status: "ready",
-      hero_image_source: "editorial_fallback",
-      source: "editorial_fallback",
-    };
+  if (!isImageReuseAndFallbacksDisabled()) {
+    const fb = resolveEditorialFallbackHero(opts.title || "", {
+      mealFormat: opts.mealFormat,
+      protein: opts.protein,
+    });
+    if (fb && !heroPathConflictsTitle(fb, opts.title || "", opts.mealFormat)) {
+      return {
+        hero_image: fb,
+        hero_image_alt: alt,
+        hero_image_status: "ready",
+        hero_image_source: "editorial_fallback",
+        source: "editorial_fallback",
+      };
+    }
   }
 
   if (!opts.imageryEnabled) {

@@ -1,0 +1,235 @@
+{
+  "slug": "honey-chipotle-chicken-thighs",
+  "title": "Honey Chipotle Grilled Chicken Thighs",
+  "displayTitle": "Honey Chipotle Grilled Chicken Thighs",
+  "seoTitle": "Honey Chipotle Grilled Chicken Thighs | Firehall BBQ",
+  "shortDescription": "Fast thighs that hold warm and still eat like BBQ",
+  "subtitle": "Sticky glaze, charred edges, and a tray of lime slaw for ten",
+  "category": "bbq_grill_nights",
+  "cuisine": "american",
+  "description": "Boneless thighs get a dry rub, then a honey-chipotle glaze that caramelizes over hot grates. Served with lime slaw and toasted buns so the crew can go plate or sandwich.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 25,
+  "prepTime": 20,
+  "difficulty": "easy",
+  "calories": 682,
+  "protein": 77,
+  "carbs": 56,
+  "fats": 15,
+  "tags": [
+    "protein:chicken",
+    "format:grill",
+    "category:bbq_grill_nights",
+    "bbq",
+    "smoker",
+    "grill",
+    "firehall_bbq_25",
+    "bbq",
+    "chicken",
+    "quick"
+  ],
+  "equipment": [
+    "grill",
+    "instant-read thermometer",
+    "tongs",
+    "sheet pans",
+    "mixing bowls",
+    "basting brush"
+  ],
+  "ingredients": [
+    {
+      "name": "boneless skinless chicken thighs",
+      "quantity": "5",
+      "unit": "lb"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "2.5",
+      "unit": "tbsp"
+    },
+    {
+      "name": "brown sugar",
+      "quantity": "3",
+      "unit": "tbsp"
+    },
+    {
+      "name": "smoked paprika",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "chili powder",
+      "quantity": "1.5",
+      "unit": "tbsp"
+    },
+    {
+      "name": "garlic powder",
+      "quantity": "2",
+      "unit": "tsp"
+    },
+    {
+      "name": "ground cumin",
+      "quantity": "2",
+      "unit": "tsp"
+    },
+    {
+      "name": "neutral oil",
+      "quantity": "3",
+      "unit": "tbsp"
+    },
+    {
+      "name": "honey",
+      "quantity": "0.5",
+      "unit": "cup"
+    },
+    {
+      "name": "chipotle in adobo",
+      "quantity": "2",
+      "unit": "tbsp",
+      "notes": "minced, plus 1 tbsp sauce"
+    },
+    {
+      "name": "apple cider vinegar",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "lime",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "zest + juice"
+    },
+    {
+      "name": "shredded cabbage mix",
+      "quantity": "10",
+      "unit": "cups"
+    },
+    {
+      "name": "green onions",
+      "quantity": "6",
+      "unit": "whole",
+      "notes": "sliced"
+    },
+    {
+      "name": "cilantro",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "chopped (optional)"
+    },
+    {
+      "name": "buns",
+      "quantity": "10",
+      "unit": "whole",
+      "notes": "optional for sandwiches"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Honey Chipotle Grilled Chicken Thighs in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Season the thighs",
+      "instruction": "Pat thighs dry. Toss with oil, salt, brown sugar, paprika, chili powder, garlic powder, and cumin until evenly coated. Let sit 15 minutes while you heat the grill. Cook until char marks are visible and the thickest piece reads 165°F on an instant-read thermometer. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Build the honey-chipotle glaze",
+      "instruction": "Whisk honey, minced chipotle + adobo sauce, vinegar, and half the lime juice. Pour half into a small bowl for basting; keep the rest clean for finishing. Plan about 5 minutes for this step at crew scale. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Grill hot and fast",
+      "instruction": "Heat grill to medium-high (about 450°F). Grill thighs 4–6 minutes per side until well-marked and the thickest piece hits 170°F. Move flare-ups away from the fire instead of extinguishing them. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 15,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Glaze and set",
+      "instruction": "During the last 2 minutes, brush with the basting glaze and let it set sticky. Pull to a tray, brush lightly with the reserved clean glaze, and rest 5 minutes before slicing or serving whole. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
+      "minutes": 7,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Make the lime slaw",
+      "instruction": "Toss cabbage with remaining lime juice, lime zest, green onions, and cilantro. Season with a pinch of salt. If you want creamy slaw, add 1/3 cup mayo and 1 tbsp vinegar. Plan about 6 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 6,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Tonight’s board",
+      "instruction": "Serve thighs family-style with slaw and buns. Put extra glaze on the table. Call it: ‘Honey chipotle chicken, slaw, and buns—grab and go.’ Plan about 2 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 2,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Leftovers",
+      "instruction": "Cool chicken fast. Reheat covered in a 325°F oven until hot, then hit with a fresh brush of glaze. Slaw keeps 24 hours; drain before serving. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 4,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Thighs are done at 170°F—don’t stop at 165°F if you want tender, not rubbery.",
+    "Keep one bowl of glaze clean for finishing so it never touches raw chicken.",
+    "If the glaze starts to burn, shift to indirect heat for the final minute."
+  ],
+  "tonightSpread": [
+    "Chicken thighs on a tray with extra glaze, slaw in a bowl, buns toasted on the top rack.",
+    "Knife + tongs at the line so people can go whole thigh or sliced sandwich."
+  ],
+  "leftovers": [
+    "Chop and fold into quesadillas with pepper jack.",
+    "Dice and toss into a rice bowl with extra slaw and hot sauce."
+  ],
+  "whyCrewsLikeIt": "Thighs forgive timing. The glaze is loud without being messy, and you can hold the chicken in a warm pan between calls without drying it out.",
+  "mealPrepNotes": "Rub can be applied early shift. Grill in two batches if needed. Hold finished thighs covered at 170°F up to 45 minutes; re-glaze right before service.",
+  "substitutions": [
+    "Swap honey for maple syrup (same amount).",
+    "No chipotle? Use 2 tsp smoked paprika + 1 tsp cayenne + 1 tbsp ketchup for body."
+  ],
+  "spiceLevel": "medium",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 682,
+    "protein": 77,
+    "carbs": 56,
+    "fats": 15,
+    "label": "per serving (hall portion)",
+    "source": "estimated"
+  },
+  "heroImage": "/images/smoker-catalog/honey-chipotle-chicken-thighs.jpg",
+  "heroImageAlt": "Honey Chipotle Grilled Chicken Thighs — crew-sized BBQ spread with visible smoke and bark",
+  "mobileImage": "/images/mobile/smoker-catalog/honey-chipotle-chicken-thighs.jpg",
+  "thumbImage": "/images/thumbs/smoker-catalog/honey-chipotle-chicken-thighs.jpg",
+  "railImage": "/images/rails/smoker-catalog/honey-chipotle-chicken-thighs.jpg",
+  "realismScore": 88,
+  "firefighterScore": 90,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "honey chipotle grilled chicken thighs",
+    "honey chipotle chicken thighs",
+    "chicken",
+    "American",
+    "grill",
+    "bbq",
+    "firehall"
+  ],
+  "relatedSlugs": [],
+  "sourceName": "Firehall Meals BBQ Collection",
+  "generatedAt": "2026-05-31T02:29:42.526Z",
+  "contentVersion": 2
+}

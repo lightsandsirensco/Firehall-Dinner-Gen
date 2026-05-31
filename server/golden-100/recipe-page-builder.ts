@@ -404,13 +404,17 @@ function buildEditorialMeta(
 } {
   const quick = def.recommendation.quickShiftMeal;
   const feedsHard = def.recommendation.feedsHardScore >= 8;
+  const mealPrepNotes =
+    def.slug === "pad-thai"
+      ? "Before the wok goes on, line up drained noodles, whisked sauce, cooked chicken, scrambled eggs, and garnish bowls in order of use — pad thai moves fast once the pan is hot, and rookies should read each step card once before touching the burner."
+      : def.recommendation.mealPrepFriendly
+        ? `Cook ${mainProteinLabel(def)} and sauce ahead; assemble day-of in under 20 minutes. Label and date everything in the fridge.`
+        : quick
+          ? "Minimal prep — chop aromatics before shift change so you can cook as soon as the board quiets."
+          : undefined;
   return {
     whyCrewsLikeIt: buildWhyCrewsLikeIt(def, curated, quick, feedsHard),
-    mealPrepNotes: def.recommendation.mealPrepFriendly
-      ? `Cook ${mainProteinLabel(def)} and sauce ahead; assemble day-of in under 20 minutes. Label and date everything in the fridge.`
-      : quick
-        ? "Minimal prep — chop aromatics before shift change so you can cook as soon as the board quiets."
-        : undefined,
+    mealPrepNotes,
     substitutions: buildSubstitutions(def),
     spiceLevel: inferSpiceLevel(def),
     cleanupDifficulty: def.recommendation.cleanupScore >= 8 ? "easy" : def.recommendation.cleanupScore <= 4 ? "heavy" : "medium",

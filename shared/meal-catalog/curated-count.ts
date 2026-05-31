@@ -1,13 +1,13 @@
 /**
  * Curated recipe totals — hall dinners + breakfast (client-safe constants).
  */
-export const HALL_DINNER_CATALOG_COUNT = 198 as const;
-export const BREAKFAST_CATALOG_COUNT = 42 as const;
-/** Total Firehall-tested curated recipes (dinners + breakfast). */
-export const CURATED_RECIPE_TOTAL = HALL_DINNER_CATALOG_COUNT + BREAKFAST_CATALOG_COUNT;
+export const HALL_DINNER_CATALOG_COUNT = 216 as const;
+export const BREAKFAST_CATALOG_COUNT = 56 as const;
+export const BBQ_CATALOG_COUNT = 55 as const;
+/** Total Firehall-tested curated recipes (dinners + breakfast + BBQ). */
+export const CURATED_RECIPE_TOTAL = HALL_DINNER_CATALOG_COUNT + BREAKFAST_CATALOG_COUNT + BBQ_CATALOG_COUNT;
 /** Approved Explore catalog (meals + smoothies). */
 export const APPROVED_CATALOG_TOTAL = CURATED_RECIPE_TOTAL + 10;
-
 /** Marketing floor for homepage copy when live count is verified. */
 export const CURATED_RECIPE_MARKETING_FLOOR = 250 as const;
 

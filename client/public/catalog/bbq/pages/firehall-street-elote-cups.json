@@ -1,0 +1,214 @@
+{
+  "slug": "firehall-street-elote-cups",
+  "title": "Epazote Esquites Street Cups",
+  "displayTitle": "Epazote Esquites Street Cups",
+  "seoTitle": "Epazote Esquites Street Cups | Firehall BBQ",
+  "shortDescription": "Street elote in cups—charred corn, crema at the line, no soggy hold",
+  "subtitle": "Off-cob charred corn cups, epazote crema, queso fresco, and Tajín for ten",
+  "category": "bbq_grill_nights",
+  "cuisine": "mexican",
+  "description": "Corn grills until charred, kernels cut into cups, and topped with epazote crema, queso fresco, Tajín, and crushed totopos at service.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 20,
+  "prepTime": 20,
+  "difficulty": "medium",
+  "calories": 189,
+  "protein": 4,
+  "carbs": 26,
+  "fats": 10,
+  "tags": [
+    "protein:vegetarian",
+    "format:street_cup",
+    "category:bbq_grill_nights",
+    "bbq",
+    "smoker",
+    "grill",
+    "firehall_bbq_25",
+    "bbq",
+    "grill",
+    "firehall_bbq_30"
+  ],
+  "equipment": [
+    "flat-top griddle",
+    "tongs",
+    "sharp knife",
+    "disposable cups",
+    "hotel pan"
+  ],
+  "ingredients": [
+    {
+      "name": "corn on the cob",
+      "quantity": "12",
+      "unit": "ears",
+      "group": "Main"
+    },
+    {
+      "name": "Mexican crema",
+      "quantity": "1",
+      "unit": "cup",
+      "group": "Epazote crema"
+    },
+    {
+      "name": "fresh epazote",
+      "quantity": "0.25",
+      "unit": "cup",
+      "notes": "chopped",
+      "group": "Epazote crema"
+    },
+    {
+      "name": "queso fresco",
+      "quantity": "1.5",
+      "unit": "cups",
+      "notes": "crumbled",
+      "group": "Topping"
+    },
+    {
+      "name": "Tajín seasoning",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Topping"
+    },
+    {
+      "name": "crushed totopos",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Topping"
+    },
+    {
+      "name": "chipotle mayo",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Topping"
+    },
+    {
+      "name": "fresh cilantro",
+      "quantity": "0.33",
+      "unit": "cup",
+      "notes": "chopped",
+      "group": "Topping"
+    },
+    {
+      "name": "lime wedges",
+      "quantity": "10",
+      "unit": "whole",
+      "group": "Service"
+    },
+    {
+      "name": "avocado oil",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Grill"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Build lime crema",
+      "instruction": "Whisk mayo, crema, and lime juice until smooth. Chill until service. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Prep corn",
+      "instruction": "Peel husks back and tie for handles, or shuck completely. Brush with melted butter and salt. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Preheat grill grates",
+      "instruction": "Preheat grill to medium-high, 425°F. Plan about 8 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 8,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Char corn",
+      "instruction": "Grill corn turning often until charred in spots and tender, 12–15 minutes. Cook until char marks are visible and the thickest piece reads 165°F for any egg-based components on an instant-read thermometer. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 15,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Cut kernels",
+      "instruction": "Stand cobs upright and cut kernels off into a hotel pan. Hold warm at 170°F covered. Plan about 10 minutes for this step at crew scale. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Portion cups",
+      "instruction": "Fill disposable cups with warm charred corn—about 1 cup per cup. Plan about 8 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Top at service",
+      "instruction": "Drizzle lime crema, sprinkle cotija, chili powder, and cilantro at the line—not before hold. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Call guidance",
+      "instruction": "Corn holds well wrapped—finish with crema when crew sits, not before a long hold. Plan about 3 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 3,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Char in spots—not every kernel needs blackening.",
+    "Crema at the line prevents soggy cups during hold.",
+    "Feta works if cotija isn't in the walk-in."
+  ],
+  "tonightSpread": [
+    "Firehall street elote cups with lime crema and cotija.",
+    "Pairs with any hall BBQ or grill main."
+  ],
+  "leftovers": [
+    "Cut kernels into corn salad with extra crema.",
+    "Elote dip with chips next shift."
+  ],
+  "whyCrewsLikeIt": "Esquites in cups portion clean for ten and beat another cotija crema corn tray. Corn holds warm; toppings go on at the line so cups don't sog during hold.",
+  "mealPrepNotes": "Grill corn at 425°F, 12–15 minutes. Cut kernels into cups. Hold corn at 170°F wrapped up to 30 minutes. Top with epazote crema and queso at service only.",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 189,
+    "protein": 4,
+    "carbs": 26,
+    "fats": 10,
+    "label": "per serving (hall portion)",
+    "source": "estimated"
+  },
+  "heroImage": "/images/smoker-catalog/firehall-street-elote-cups.jpg",
+  "heroImageAlt": "Epazote Esquites Street Cups — crew-sized BBQ spread with visible smoke and bark",
+  "mobileImage": "/images/mobile/smoker-catalog/firehall-street-elote-cups.jpg",
+  "thumbImage": "/images/thumbs/smoker-catalog/firehall-street-elote-cups.jpg",
+  "railImage": "/images/rails/smoker-catalog/firehall-street-elote-cups.jpg",
+  "realismScore": 88,
+  "firefighterScore": 90,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "epazote esquites street cups",
+    "firehall street elote cups",
+    "vegetarian",
+    "Mexican",
+    "street cup",
+    "bbq",
+    "firehall",
+    "grilled corn cups",
+    "elote crema cotija"
+  ],
+  "relatedSlugs": [
+    "carolina-vinegar-pulled-pork",
+    "honey-chipotle-chicken-thighs",
+    "smoked-chicken-quarters-white-sauce",
+    "brisket-style-beef-sandwiches-au-jus"
+  ],
+  "sourceName": "Firehall Meals BBQ Collection",
+  "generatedAt": "2026-05-31T02:29:42.537Z",
+  "contentVersion": 2
+}

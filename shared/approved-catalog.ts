@@ -8,6 +8,7 @@ import {
   isHallExpansionSlug,
   isPerformance50Slug,
   isBreakfastCatalogSlug,
+  isBbqCatalogSlug,
 } from "./hall-catalog/gate.js";
 import {
   slugLockedImagePaths,
@@ -78,15 +79,15 @@ export function approvedCatalogHeroPath(slug: string, kind: ApprovedCatalogKind)
   return slugLockedImagePaths(slug, kind).hero;
 }
 
-/** Card-optimized image — prefer thumb, then hero (same slug only). */
+/** Card image for Explore — canonical slug-locked hero only. */
 export function approvedCatalogCardImagePath(slug: string, kind: ApprovedCatalogKind): string {
-  const paths = slugLockedImagePaths(slug, kind);
-  return paths.cardCandidates[0] ?? paths.hero;
+  return slugLockedImagePaths(slug, kind).hero;
 }
 
 export function resolveApprovedCatalogKind(slug: string, isSmoothie = false): ApprovedCatalogKind {
   if (isSmoothie) return "smoothie";
   if (isBreakfastCatalogSlug(slug)) return "breakfast_catalog";
+  if (isBbqCatalogSlug(slug)) return "bbq_catalog";
   if (isHallClassicSlug(slug)) return "hall_classic";
   if (isHallExpansionSlug(slug)) return "hall_expansion";
   if (isPerformance50Slug(slug)) return "performance_meal";

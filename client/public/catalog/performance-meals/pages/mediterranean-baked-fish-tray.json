@@ -1,7 +1,7 @@
 {
   "slug": "mediterranean-baked-fish-tray",
-  "title": "Mediterranean Baked Fish Tray",
-  "displayTitle": "Mediterranean Baked Fish Tray",
+  "title": "Crispy Garlic Fish",
+  "displayTitle": "Crispy Garlic Fish",
   "seoTitle": "Mediterranean Baked Fish Tray | Firefighter Meal",
   "shortDescription": "White fish with cherry tomatoes, olives, and capers on one sheet",
   "subtitle": "White fish with cherry tomatoes, olives, and capers on one sheet",
@@ -99,36 +99,57 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Heat oven and toss vegetables",
-      "instruction": "Heat oven to 400°F. Toss tomatoes, olives, capers, onion, garlic, oregano, half the olive oil, and salt on two half-sheets until evenly coated.",
-      "minutes": 8,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Crispy Garlic Fish in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch fish. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Heat oven and toss vegetables",
+      "instruction": "Heat oven to 400°F. Toss tomatoes, olives, capers, onion, garlic, oregano, half the olive oil, and salt on two half-sheets until evenly coated. Plan about 8 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
       "title": "Season fish",
-      "instruction": "Pat fish dry. Nest fillets among vegetables. Drizzle remaining oil and lemon juice over fish so surfaces look lightly glossed.",
+      "instruction": "Pat fish dry. Nest fillets among vegetables. Drizzle remaining oil and lemon juice over fish so surfaces look lightly glossed. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 3,
+      "stepNumber": 5,
       "title": "Roast until flaky",
-      "instruction": "Roast 16–20 minutes until fish reads 145°F and flakes with gentle pressure. Tomatoes should burst and release juice into the pan.",
+      "instruction": "Roast 16–20 minutes until fish reads 145°F and flakes with gentle pressure. Tomatoes should burst and release juice into the pan. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 18,
       "heatLevel": "medium-high"
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 6,
       "title": "Finish with lemon and herbs",
-      "instruction": "Top with lemon slices and parsley. Fish flesh should look opaque and moist, not chalky or separating into dry strands.",
+      "instruction": "Top with lemon slices and parsley. Fish flesh should look opaque and moist, not chalky or separating into dry strands. Plan about 2 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 2,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F until flakes separate. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
       "title": "Portion with pan juices",
-      "instruction": "Serve each fillet with a spoonful of tomato-olive mixture and pan juices spooned over the top for brightness.",
+      "instruction": "Serve each fillet with a spoonful of tomato-olive mixture and pan juices spooned over the top for brightness. Plan about 3 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 3,
       "heatLevel": ""
     }

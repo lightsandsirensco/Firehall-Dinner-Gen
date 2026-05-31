@@ -1,0 +1,235 @@
+{
+  "slug": "tourtiere-for-the-crew",
+  "title": "Tourtière for the Crew",
+  "displayTitle": "Tourtière for the Crew",
+  "seoTitle": "Tourtière for the Crew | Firefighter Meal",
+  "shortDescription": "Savory pork-and-beef pie with warm spice baked for ten",
+  "subtitle": "Savory pork-and-beef pie with warm spice baked for ten",
+  "category": "hall_expansion",
+  "cuisine": "canadian",
+  "description": "Ground pork and beef simmer with onion, potato, and warm spices until rich and fragrant, then bake inside flaky double-crust pies. Cut into hearty wedges and serve with ketchup and cranberry sauce at the line.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 55,
+  "prepTime": 40,
+  "difficulty": "medium",
+  "calories": 580,
+  "protein": 28,
+  "carbs": 42,
+  "fats": 34,
+  "tags": [
+    "protein:pork",
+    "format:bake",
+    "category:crew_feeders",
+    "hall_expansion",
+    "crew_feeders",
+    "canadian",
+    "pork",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Large skillet",
+    "Deep pie dishes",
+    "Sheet pan",
+    "Pastry brush",
+    "Instant-read thermometer"
+  ],
+  "ingredients": [
+    {
+      "name": "ground pork",
+      "quantity": "2",
+      "unit": "lb",
+      "group": "Filling"
+    },
+    {
+      "name": "ground beef",
+      "quantity": "1",
+      "unit": "lb",
+      "group": "Filling"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "finely diced",
+      "group": "Filling"
+    },
+    {
+      "name": "russet potato",
+      "quantity": "1",
+      "unit": "large",
+      "notes": "finely diced",
+      "group": "Filling"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "4",
+      "unit": "cloves",
+      "notes": "minced",
+      "group": "Filling"
+    },
+    {
+      "name": "ground cinnamon",
+      "quantity": "1",
+      "unit": "tsp",
+      "group": "Spice"
+    },
+    {
+      "name": "ground cloves",
+      "quantity": "0.5",
+      "unit": "tsp",
+      "group": "Spice"
+    },
+    {
+      "name": "dried sage",
+      "quantity": "1",
+      "unit": "tsp",
+      "group": "Spice"
+    },
+    {
+      "name": "pie crust",
+      "quantity": "4",
+      "unit": "sheets",
+      "notes": "store-bought or homemade",
+      "group": "Crust"
+    },
+    {
+      "name": "beef broth",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Filling"
+    },
+    {
+      "name": "egg",
+      "quantity": "1",
+      "unit": "whole",
+      "notes": "for egg wash",
+      "group": "Finish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Tourtière for the Crew in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch pork. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Brown the meat",
+      "instruction": "Cook pork and beef in a large skillet over medium-high heat, breaking up clumps until browned. Drain excess fat, leaving about 2 tablespoons in the pan.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Build the filling",
+      "instruction": "Add onion, potato, and garlic. Cook 8 minutes until softened. Stir in cinnamon, cloves, sage, salt, pepper, and broth. Simmer until moisture mostly evaporates and filling looks thick.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Cool the filling",
+      "instruction": "Spread filling on a sheet pan and cool 30 minutes. Hot filling will destroy your pie crust on contact. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 30,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Assemble and bake",
+      "instruction": "Line two deep pie dishes with crust, fill evenly, top with second crust, crimp edges, cut vents, and brush with egg wash. Bake at 375°F until golden and bubbling, 45–50 minutes. Target oven/smoker temperature: 375°F.",
+      "minutes": 48,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F with a 3-minute rest. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Portion and open the line",
+      "instruction": "Portion Tourtière for the Crew onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Scale for larger halls",
+      "instruction": "When cooking for more than 10 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
+      "title": "Rest and portion",
+      "instruction": "Rest pies 15 minutes before cutting into wedges. Serve with ketchup and cranberry sauce at the line. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 15,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "A splash of Worcestershire in the filling adds depth without changing the classic profile.",
+    "If bottom crust worries you, blind-bake 8 minutes before filling.",
+    "Make one pie spicy with cayenne for the crew that always asks for heat."
+  ],
+  "tonightSpread": [
+    "Tourtière wedges with ketchup, cranberry sauce, and a simple pea salad.",
+    "Pickled beets on the side for a bright counter to rich meat filling."
+  ],
+  "leftovers": [
+    "Reheat wedges in the oven so crust re-crispes—microwave makes it sad.",
+    "Crumble cold filling into scrambled eggs for a Quebec-style breakfast shift."
+  ],
+  "whyCrewsLikeIt": "Tourtière is pure Canadian comfort—familiar to northern halls, new to southern crews, and universally satisfying on cold shift nights. Two big pies feed ten with leftovers for the next watch.",
+  "mealPrepNotes": "Filling can be made a day ahead and chilled. Use deep-dish pie plates or one large half-sheet tray pie for easier portioning. Vent crust well so steam escapes and bottom crust stays crisp.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 580,
+    "protein": 28,
+    "carbs": 42,
+    "fats": 34,
+    "label": "~580 cal/serving · 28g protein · 2g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/tourtiere-for-the-crew.jpg",
+  "heroImageAlt": "Tourtière for the Crew — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/tourtiere-for-the-crew.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/tourtiere-for-the-crew.jpg",
+  "railImage": "/images/rails/hall-expansion/tourtiere-for-the-crew.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "tourtière for the crew",
+    "crew feeders"
+  ],
+  "relatedSlugs": [
+    "shawarma-bar-night",
+    "fajita-bar-night",
+    "hall-burger-bar",
+    "pasta-bar-night"
+  ],
+  "generatedAt": "2026-05-31T01:50:00.916Z",
+  "contentVersion": 2
+}

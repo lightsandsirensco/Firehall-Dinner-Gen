@@ -1,0 +1,563 @@
+{
+  "startedAt": "2026-05-30T23:43:39.214Z",
+  "updatedAt": "2026-05-31T00:59:20.945Z",
+  "completed": [
+    {
+      "collection": "golden_100",
+      "slug": "chicken-parm",
+      "completedAt": "2026-05-30T23:50:09.439Z"
+    },
+    {
+      "collection": "golden_100",
+      "slug": "smash-burgers",
+      "completedAt": "2026-05-30T23:50:09.439Z"
+    },
+    {
+      "collection": "golden_100",
+      "slug": "pulled-pork",
+      "completedAt": "2026-05-30T23:50:09.439Z"
+    },
+    {
+      "collection": "golden_100",
+      "slug": "beef-dip",
+      "completedAt": "2026-05-30T23:50:09.439Z"
+    },
+    {
+      "collection": "golden_100",
+      "slug": "bbq-chicken-bowls",
+      "completedAt": "2026-05-30T23:50:09.439Z"
+    },
+    {
+      "collection": "golden_100",
+      "slug": "steak-sandwiches",
+      "completedAt": "2026-05-30T23:50:09.439Z"
+    },
+    {
+      "collection": "golden_100",
+      "slug": "crispy-chicken-cutlets",
+      "completedAt": "2026-05-30T23:50:09.439Z"
+    },
+    {
+      "collection": "golden_100",
+      "slug": "loaded-nacho-skillet",
+      "completedAt": "2026-05-30T23:50:09.439Z"
+    },
+    {
+      "collection": "golden_100",
+      "slug": "meatball-hoagies",
+      "completedAt": "2026-05-30T23:50:09.439Z"
+    },
+    {
+      "collection": "golden_100",
+      "slug": "bbq-chicken-sliders",
+      "completedAt": "2026-05-30T23:50:09.439Z"
+    },
+    {
+      "collection": "golden_100",
+      "slug": "smoked-wings-white-sauce",
+      "completedAt": "2026-05-30T23:57:28.270Z"
+    },
+    {
+      "collection": "golden_100",
+      "slug": "carolina-mustard-pork",
+      "completedAt": "2026-05-30T23:57:28.270Z"
+    },
+    {
+      "collection": "golden_100",
+      "slug": "bbq-brisket-burnt-ends",
+      "completedAt": "2026-05-30T23:57:28.270Z"
+    },
+    {
+      "collection": "golden_100",
+      "slug": "mac-and-cheese-bake",
+      "completedAt": "2026-05-30T23:57:28.270Z"
+    },
+    {
+      "collection": "golden_100",
+      "slug": "meatloaf-mashed",
+      "completedAt": "2026-05-30T23:57:28.270Z"
+    },
+    {
+      "collection": "golden_100",
+      "slug": "beef-stroganoff",
+      "completedAt": "2026-05-30T23:57:28.270Z"
+    },
+    {
+      "collection": "golden_100",
+      "slug": "sausage-peppers-onions",
+      "completedAt": "2026-05-30T23:57:28.270Z"
+    },
+    {
+      "collection": "golden_100",
+      "slug": "beef-barley-soup",
+      "completedAt": "2026-05-30T23:57:28.270Z"
+    },
+    {
+      "collection": "golden_100",
+      "slug": "baked-ziti",
+      "completedAt": "2026-05-30T23:57:28.271Z"
+    },
+    {
+      "collection": "golden_100",
+      "slug": "greek-chicken-bowls",
+      "completedAt": "2026-05-30T23:57:28.271Z"
+    },
+    {
+      "collection": "golden_100",
+      "slug": "turkey-chili",
+      "completedAt": "2026-05-31T00:04:13.377Z"
+    },
+    {
+      "collection": "golden_100",
+      "slug": "chicken-souvlaki",
+      "completedAt": "2026-05-31T00:04:13.378Z"
+    },
+    {
+      "collection": "golden_100",
+      "slug": "beef-broccoli",
+      "completedAt": "2026-05-31T00:04:13.378Z"
+    },
+    {
+      "collection": "golden_100",
+      "slug": "chicken-tikka-masala",
+      "completedAt": "2026-05-31T00:04:13.378Z"
+    },
+    {
+      "collection": "golden_100",
+      "slug": "chili-mac",
+      "completedAt": "2026-05-31T00:04:13.378Z"
+    },
+    {
+      "collection": "golden_100",
+      "slug": "pulled-pork-mac",
+      "completedAt": "2026-05-31T00:04:13.378Z"
+    },
+    {
+      "collection": "golden_100",
+      "slug": "big-chili",
+      "completedAt": "2026-05-31T00:04:13.378Z"
+    },
+    {
+      "collection": "golden_100",
+      "slug": "enchilada-casserole",
+      "completedAt": "2026-05-31T00:04:13.378Z"
+    },
+    {
+      "collection": "golden_100",
+      "slug": "sausage-egg-bake",
+      "completedAt": "2026-05-31T00:04:13.378Z"
+    },
+    {
+      "collection": "golden_100",
+      "slug": "jambalaya",
+      "completedAt": "2026-05-31T00:04:13.378Z"
+    },
+    {
+      "collection": "golden_100",
+      "slug": "breakfast-burrito-bar",
+      "completedAt": "2026-05-31T00:10:56.788Z"
+    },
+    {
+      "collection": "golden_100",
+      "slug": "pancake-short-stack",
+      "completedAt": "2026-05-31T00:10:56.789Z"
+    },
+    {
+      "collection": "golden_100",
+      "slug": "bacon-egg-hash",
+      "completedAt": "2026-05-31T00:10:56.789Z"
+    },
+    {
+      "collection": "golden_100",
+      "slug": "french-toast-casserole",
+      "completedAt": "2026-05-31T00:10:56.789Z"
+    },
+    {
+      "collection": "golden_100",
+      "slug": "chorizo-breakfast-tacos",
+      "completedAt": "2026-05-31T00:10:56.789Z"
+    },
+    {
+      "collection": "golden_100",
+      "slug": "biscuits-gravy",
+      "completedAt": "2026-05-31T00:10:56.789Z"
+    },
+    {
+      "collection": "golden_100",
+      "slug": "game-day-nachos",
+      "completedAt": "2026-05-31T00:10:56.789Z"
+    },
+    {
+      "collection": "golden_100",
+      "slug": "buffalo-chicken-dip",
+      "completedAt": "2026-05-31T00:10:56.789Z"
+    },
+    {
+      "collection": "golden_100",
+      "slug": "one-pot-chicken-rice",
+      "completedAt": "2026-05-31T00:10:56.789Z"
+    },
+    {
+      "collection": "golden_100",
+      "slug": "five-ingredient-pasta",
+      "completedAt": "2026-05-31T00:10:56.789Z"
+    },
+    {
+      "collection": "performance_meals",
+      "slug": "lemon-garlic-chicken-tray",
+      "completedAt": "2026-05-31T00:17:38.857Z"
+    },
+    {
+      "collection": "performance_meals",
+      "slug": "sheet-pan-chicken-fajitas-lite",
+      "completedAt": "2026-05-31T00:17:38.857Z"
+    },
+    {
+      "collection": "performance_meals",
+      "slug": "cottage-cheese-protein-pasta",
+      "completedAt": "2026-05-31T00:17:38.857Z"
+    },
+    {
+      "collection": "performance_meals",
+      "slug": "honey-garlic-chicken-rice-bowls",
+      "completedAt": "2026-05-31T00:17:38.857Z"
+    },
+    {
+      "collection": "performance_meals",
+      "slug": "honey-lime-chicken-tray",
+      "completedAt": "2026-05-31T00:17:38.857Z"
+    },
+    {
+      "collection": "performance_meals",
+      "slug": "greek-lemon-chicken-potatoes",
+      "completedAt": "2026-05-31T00:17:38.857Z"
+    },
+    {
+      "collection": "performance_meals",
+      "slug": "hummus-chicken-platter",
+      "completedAt": "2026-05-31T00:17:38.857Z"
+    },
+    {
+      "collection": "performance_meals",
+      "slug": "lemon-chicken-orzo-soup",
+      "completedAt": "2026-05-31T00:17:38.857Z"
+    },
+    {
+      "collection": "performance_meals",
+      "slug": "caprese-chicken-bake",
+      "completedAt": "2026-05-31T00:17:38.857Z"
+    },
+    {
+      "collection": "performance_meals",
+      "slug": "pesto-tomato-chicken-tray",
+      "completedAt": "2026-05-31T00:17:38.857Z"
+    },
+    {
+      "collection": "performance_meals",
+      "slug": "chicken-enchilada-skillet-light",
+      "completedAt": "2026-05-31T00:24:24.848Z"
+    },
+    {
+      "collection": "performance_meals",
+      "slug": "cajun-chicken-rice-bowl",
+      "completedAt": "2026-05-31T00:24:24.848Z"
+    },
+    {
+      "collection": "performance_meals",
+      "slug": "chipotle-lime-chicken-tacos",
+      "completedAt": "2026-05-31T00:24:24.848Z"
+    },
+    {
+      "collection": "performance_meals",
+      "slug": "veggie-egg-casserole-tray",
+      "completedAt": "2026-05-31T00:24:24.848Z"
+    },
+    {
+      "collection": "performance_meals",
+      "slug": "baked-falafel-hall-bowls",
+      "completedAt": "2026-05-31T00:24:24.848Z"
+    },
+    {
+      "collection": "hall_expansion",
+      "slug": "smoked-meatloaf",
+      "completedAt": "2026-05-31T00:24:24.848Z"
+    },
+    {
+      "collection": "hall_expansion",
+      "slug": "pork-belly-burnt-ends",
+      "completedAt": "2026-05-31T00:24:24.848Z"
+    },
+    {
+      "collection": "hall_expansion",
+      "slug": "smoked-sausage-platter",
+      "completedAt": "2026-05-31T00:24:24.848Z"
+    },
+    {
+      "collection": "hall_expansion",
+      "slug": "smoked-tri-tip",
+      "completedAt": "2026-05-31T00:24:24.848Z"
+    },
+    {
+      "collection": "hall_expansion",
+      "slug": "smoked-corned-beef",
+      "completedAt": "2026-05-31T00:24:24.848Z"
+    },
+    {
+      "collection": "hall_expansion",
+      "slug": "pellet-smoked-chicken-quarters",
+      "completedAt": "2026-05-31T00:31:17.332Z"
+    },
+    {
+      "collection": "hall_expansion",
+      "slug": "fajita-bar-night",
+      "completedAt": "2026-05-31T00:31:17.333Z"
+    },
+    {
+      "collection": "hall_expansion",
+      "slug": "rice-bowl-bar-night",
+      "completedAt": "2026-05-31T00:31:17.333Z"
+    },
+    {
+      "collection": "hall_expansion",
+      "slug": "mediterranean-feast-night",
+      "completedAt": "2026-05-31T00:31:17.333Z"
+    },
+    {
+      "collection": "hall_expansion",
+      "slug": "mesquite-chuck-roast",
+      "completedAt": "2026-05-31T00:31:17.333Z"
+    },
+    {
+      "collection": "hall_expansion",
+      "slug": "molasses-bourbon-pork-ribs",
+      "completedAt": "2026-05-31T00:31:17.333Z"
+    },
+    {
+      "collection": "hall_expansion",
+      "slug": "applewood-pork-shoulder-steaks",
+      "completedAt": "2026-05-31T00:31:17.333Z"
+    },
+    {
+      "collection": "hall_expansion",
+      "slug": "spatchcock-lemon-roast-chicken",
+      "completedAt": "2026-05-31T00:31:17.333Z"
+    },
+    {
+      "collection": "hall_expansion",
+      "slug": "cajun-chicken-rice-skillet",
+      "completedAt": "2026-05-31T00:31:17.333Z"
+    },
+    {
+      "collection": "hall_expansion",
+      "slug": "paprika-roasted-chicken-quarters",
+      "completedAt": "2026-05-31T00:31:17.333Z"
+    },
+    {
+      "collection": "hall_expansion",
+      "slug": "mushroom-swiss-steak-pan",
+      "completedAt": "2026-05-31T00:37:50.926Z"
+    },
+    {
+      "collection": "hall_expansion",
+      "slug": "warm-spinach-chicken-salad",
+      "completedAt": "2026-05-31T00:37:50.926Z"
+    },
+    {
+      "collection": "hall_expansion",
+      "slug": "green-chile-chicken-stew",
+      "completedAt": "2026-05-31T00:37:50.926Z"
+    },
+    {
+      "collection": "hall_expansion",
+      "slug": "ginger-soy-chicken-rice-bowls",
+      "completedAt": "2026-05-31T00:37:50.926Z"
+    },
+    {
+      "collection": "hall_expansion",
+      "slug": "mediterranean-chicken-farro-bowls",
+      "completedAt": "2026-05-31T00:37:50.926Z"
+    },
+    {
+      "collection": "hall_expansion",
+      "slug": "cheesy-chicken-broccoli-rice",
+      "completedAt": "2026-05-31T00:37:50.926Z"
+    },
+    {
+      "collection": "breakfast",
+      "slug": "apple-cinnamon-baked-oatmeal",
+      "completedAt": "2026-05-31T00:37:50.926Z"
+    },
+    {
+      "collection": "breakfast",
+      "slug": "bacon-egg-hash-skillet",
+      "completedAt": "2026-05-31T00:37:50.926Z"
+    },
+    {
+      "collection": "breakfast",
+      "slug": "bbq-breakfast-hash",
+      "completedAt": "2026-05-31T00:37:50.926Z"
+    },
+    {
+      "collection": "breakfast",
+      "slug": "big-pot-savory-oats",
+      "completedAt": "2026-05-31T00:37:50.926Z"
+    },
+    {
+      "collection": "breakfast",
+      "slug": "breakfast-crunchwraps",
+      "completedAt": "2026-05-31T00:44:35.721Z"
+    },
+    {
+      "collection": "breakfast",
+      "slug": "breakfast-sandwich-trays",
+      "completedAt": "2026-05-31T00:44:35.722Z"
+    },
+    {
+      "collection": "breakfast",
+      "slug": "buttermilk-pancakes",
+      "completedAt": "2026-05-31T00:44:35.722Z"
+    },
+    {
+      "collection": "breakfast",
+      "slug": "cast-iron-breakfast-skillet",
+      "completedAt": "2026-05-31T00:44:35.722Z"
+    },
+    {
+      "collection": "breakfast",
+      "slug": "chorizo-breakfast-burritos",
+      "completedAt": "2026-05-31T00:44:35.722Z"
+    },
+    {
+      "collection": "breakfast",
+      "slug": "chorizo-breakfast-hash",
+      "completedAt": "2026-05-31T00:44:35.722Z"
+    },
+    {
+      "collection": "breakfast",
+      "slug": "cowboy-breakfast-skillet",
+      "completedAt": "2026-05-31T00:44:35.722Z"
+    },
+    {
+      "collection": "breakfast",
+      "slug": "crew-french-toast-bake",
+      "completedAt": "2026-05-31T00:44:35.722Z"
+    },
+    {
+      "collection": "breakfast",
+      "slug": "denver-breakfast-casserole",
+      "completedAt": "2026-05-31T00:44:35.722Z"
+    },
+    {
+      "collection": "breakfast",
+      "slug": "hall-breakfast-burritos",
+      "completedAt": "2026-05-31T00:44:35.722Z"
+    },
+    {
+      "collection": "breakfast",
+      "slug": "hall-sausage-biscuits-gravy",
+      "completedAt": "2026-05-31T00:50:00.761Z"
+    },
+    {
+      "collection": "breakfast",
+      "slug": "maple-sausage-pinwheels",
+      "completedAt": "2026-05-31T00:50:00.761Z"
+    },
+    {
+      "collection": "breakfast",
+      "slug": "monte-cristo-sandwiches",
+      "completedAt": "2026-05-31T00:50:00.761Z"
+    },
+    {
+      "collection": "breakfast",
+      "slug": "protein-pancake-tray",
+      "completedAt": "2026-05-31T00:50:00.761Z"
+    },
+    {
+      "collection": "breakfast",
+      "slug": "sausage-egg-cheese-sandwiches",
+      "completedAt": "2026-05-31T00:50:00.761Z"
+    },
+    {
+      "collection": "breakfast",
+      "slug": "sheet-pan-breakfast-sandwiches",
+      "completedAt": "2026-05-31T00:50:00.761Z"
+    },
+    {
+      "collection": "breakfast",
+      "slug": "southwest-egg-bake",
+      "completedAt": "2026-05-31T00:50:00.761Z"
+    },
+    {
+      "collection": "breakfast",
+      "slug": "turkey-sausage-egg-bake",
+      "completedAt": "2026-05-31T00:50:00.761Z"
+    },
+    {
+      "collection": "hall_expansion",
+      "slug": "chicken-wing-bar-night",
+      "completedAt": "2026-05-31T00:57:06.122Z"
+    },
+    {
+      "collection": "hall_expansion",
+      "slug": "shawarma-bar-night",
+      "completedAt": "2026-05-31T00:57:06.123Z"
+    },
+    {
+      "collection": "hall_expansion",
+      "slug": "hall-burger-bar",
+      "completedAt": "2026-05-31T00:57:06.123Z"
+    },
+    {
+      "collection": "hall_expansion",
+      "slug": "burrito-bowl-bar-night",
+      "completedAt": "2026-05-31T00:57:06.123Z"
+    },
+    {
+      "collection": "hall_expansion",
+      "slug": "loaded-nacho-bar-night",
+      "completedAt": "2026-05-31T00:57:06.123Z"
+    },
+    {
+      "collection": "hall_expansion",
+      "slug": "honey-mustard-oven-chicken-thighs",
+      "completedAt": "2026-05-31T00:57:06.123Z"
+    },
+    {
+      "collection": "hall_expansion",
+      "slug": "cast-iron-chicken-fajitas",
+      "completedAt": "2026-05-31T00:57:06.123Z"
+    },
+    {
+      "collection": "hall_expansion",
+      "slug": "dutch-oven-pot-roast",
+      "completedAt": "2026-05-31T00:57:06.123Z"
+    },
+    {
+      "collection": "hall_expansion",
+      "slug": "enchilada-beef-skillet",
+      "completedAt": "2026-05-31T00:57:06.123Z"
+    },
+    {
+      "collection": "hall_expansion",
+      "slug": "creamy-chicken-penne-alfredo",
+      "completedAt": "2026-05-31T00:57:06.123Z"
+    },
+    {
+      "collection": "hall_expansion",
+      "slug": "station-cobb-salad",
+      "completedAt": "2026-05-31T00:59:20.944Z"
+    },
+    {
+      "collection": "hall_expansion",
+      "slug": "hall-chicken-noodle-soup",
+      "completedAt": "2026-05-31T00:59:20.945Z"
+    },
+    {
+      "collection": "hall_expansion",
+      "slug": "kielbasa-cabbage-potato-skillet",
+      "completedAt": "2026-05-31T00:59:20.945Z"
+    }
+  ],
+  "failed": [],
+  "batchesRun": 12
+}

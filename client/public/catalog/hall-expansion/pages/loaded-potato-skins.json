@@ -25,7 +25,7 @@
     "comfort",
     "handheld",
     "hall_expansion",
-    "hall_expansion_56",
+    "hall_expansion_74",
     "hall_meal",
     "firefighter_meal"
   ],
@@ -105,37 +105,86 @@
   "steps": [
     {
       "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Loaded Potato Skins in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch pork. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
       "title": "Bake the potatoes",
       "instruction": "Scrub potatoes, pierce with a fork, and bake at 400°F on a sheet pan until fork-tender, about 50–60 minutes. Cool until safe to handle before scooping. Target oven/smoker temperature: 400°F.",
       "minutes": 55,
       "heatLevel": ""
     },
     {
-      "stepNumber": 2,
+      "stepNumber": 4,
       "title": "Scoop and crisp the skins",
       "instruction": "Halve potatoes lengthwise and scoop flesh leaving quarter-inch shells. Brush inside and out with melted butter, season with salt and paprika, and bake at 425°F until edges crisp, about 15 minutes. Target oven/smoker temperature: 425°F.",
       "minutes": 20,
       "heatLevel": ""
     },
     {
-      "stepNumber": 3,
+      "stepNumber": 5,
       "title": "Cook and crumble bacon",
       "instruction": "Bake bacon on a rack at 400°F until fully crisp, about 18 minutes. Drain on paper towels and crumble into bite-size pieces once cool enough to handle. Target oven/smoker temperature: 400°F.",
       "minutes": 20,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 6,
       "title": "Load and broil",
       "instruction": "Fill each skin with cheddar and bacon. Broil on high 2–3 minutes until cheese bubbles and edges brown. Watch closely—broilers turn skins from perfect to burnt in seconds. Target oven/smoker temperature: 500°F.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F with a 3-minute rest. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Portion and open the line",
+      "instruction": "Portion Loaded Potato Skins onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Scale for larger halls",
+      "instruction": "When cooking for more than 10 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
       "title": "Top and serve loaded skins",
       "instruction": "Top with green onion and serve sour cream and hot sauce on the side. Verify shells are steaming hot in the center before putting the tray on the table.",
       "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 12,
+      "title": "Final quality check before service",
+      "instruction": "Walk the line once before opening service for Loaded Potato Skins — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
+      "minutes": 4,
       "heatLevel": ""
     }
   ],
@@ -181,6 +230,6 @@
     "jalapeno-popper-dip",
     "philly-cheesesteak-sliders"
   ],
-  "generatedAt": "2026-05-30T03:14:19.188Z",
+  "generatedAt": "2026-05-31T01:50:00.915Z",
   "contentVersion": 2
 }

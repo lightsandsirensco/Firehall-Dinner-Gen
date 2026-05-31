@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-30T03:14:16.261Z",
-  "recipeCount": 42,
+  "generatedAt": "2026-05-30T21:22:29.758Z",
+  "recipeCount": 67,
   "recipes": [
     {
       "slug": "apple-cinnamon-baked-oatmeal",
@@ -22,7 +22,7 @@
       "totalTime": 55,
       "heroImage": "/images/breakfast/apple-cinnamon-baked-oatmeal.jpg",
       "thumbImage": "/images/thumbs/breakfast/apple-cinnamon-baked-oatmeal.jpg",
-      "publishedAt": "2026-05-30T03:14:16.260Z"
+      "publishedAt": "2026-05-30T21:22:29.756Z"
     },
     {
       "slug": "bacon-egg-hash-skillet",
@@ -41,7 +41,7 @@
       "totalTime": 34,
       "heroImage": "/images/breakfast/bacon-egg-hash-skillet.jpg",
       "thumbImage": "/images/thumbs/breakfast/bacon-egg-hash-skillet.jpg",
-      "publishedAt": "2026-05-30T03:14:16.261Z"
+      "publishedAt": "2026-05-30T21:22:29.758Z"
     },
     {
       "slug": "bacon-hash-burritos",
@@ -60,7 +60,29 @@
       "totalTime": 37,
       "heroImage": "/images/breakfast/bacon-hash-burritos.jpg",
       "thumbImage": "/images/thumbs/breakfast/bacon-hash-burritos.jpg",
-      "publishedAt": "2026-05-30T03:14:16.261Z"
+      "publishedAt": "2026-05-30T21:22:29.758Z"
+    },
+    {
+      "slug": "bagel-lox-breakfast-board",
+      "title": "Bagel and Lox Breakfast Board",
+      "subtitle": "Toasted bagels with lox, cream cheese, capers, and fixings for ten.",
+      "description": "Adapted from classic New York deli appetizing tradition for firehall self-serve breakfast: assorted bagels toasted crisp with platters of lox, cream cheese, capers, red onion, tomato, and cucumber for ten firefighters.",
+      "filters": [
+        "feed_a_crew",
+        "quick_breakfasts",
+        "breakfast_sandwiches"
+      ],
+      "tags": [
+        "bagel",
+        "lox",
+        "smoked-salmon",
+        "deli",
+        "board"
+      ],
+      "totalTime": 35,
+      "heroImage": "/images/breakfast/bagel-lox-breakfast-board.jpg",
+      "thumbImage": "/images/thumbs/breakfast/bagel-lox-breakfast-board.jpg",
+      "publishedAt": "2026-05-30T21:22:29.757Z"
     },
     {
       "slug": "bbq-breakfast-hash",
@@ -80,7 +102,29 @@
       "totalTime": 43,
       "heroImage": "/images/breakfast/bbq-breakfast-hash.jpg",
       "thumbImage": "/images/thumbs/breakfast/bbq-breakfast-hash.jpg",
-      "publishedAt": "2026-05-30T03:14:16.261Z"
+      "publishedAt": "2026-05-30T21:22:29.758Z"
+    },
+    {
+      "slug": "belgian-waffle-platter",
+      "title": "Belgian Waffle Platter",
+      "subtitle": "Crisp yeasted waffles with whipped butter, syrup, and fresh berries.",
+      "description": "Adapted from classic Belgian Liège-style brunch tradition for firehall batch service: yeasted waffle batter baked crisp on a Belgian iron, served on a platter with whipped butter, warm maple syrup, and seasonal berries for eight.",
+      "filters": [
+        "feed_a_crew",
+        "quick_breakfasts",
+        "breakfast_sandwiches"
+      ],
+      "tags": [
+        "waffles",
+        "belgian",
+        "brunch",
+        "berries",
+        "maple"
+      ],
+      "totalTime": 50,
+      "heroImage": "/images/breakfast/belgian-waffle-platter.jpg",
+      "thumbImage": "/images/thumbs/breakfast/belgian-waffle-platter.jpg",
+      "publishedAt": "2026-05-30T21:22:29.757Z"
     },
     {
       "slug": "big-pot-savory-oats",
@@ -99,7 +143,29 @@
       "totalTime": 28,
       "heroImage": "/images/breakfast/big-pot-savory-oats.jpg",
       "thumbImage": "/images/thumbs/breakfast/big-pot-savory-oats.jpg",
-      "publishedAt": "2026-05-30T03:14:16.261Z"
+      "publishedAt": "2026-05-30T21:22:29.758Z"
+    },
+    {
+      "slug": "biscuit-french-toast-sliders",
+      "title": "Biscuit French Toast Sliders",
+      "subtitle": "Buttermilk biscuits dipped in custard, griddled, and glazed with syrup butter.",
+      "description": "Adapted from classic French toast tradition using Southern buttermilk biscuits for firehall slider service: split biscuits dipped in cinnamon custard, griddled until golden, brushed with maple butter, and served warm for eight.",
+      "filters": [
+        "feed_a_crew",
+        "breakfast_sandwiches",
+        "quick_breakfasts"
+      ],
+      "tags": [
+        "french-toast",
+        "biscuits",
+        "sliders",
+        "griddle",
+        "maple"
+      ],
+      "totalTime": 35,
+      "heroImage": "/images/breakfast/biscuit-french-toast-sliders.jpg",
+      "thumbImage": "/images/thumbs/breakfast/biscuit-french-toast-sliders.jpg",
+      "publishedAt": "2026-05-30T21:22:29.757Z"
     },
     {
       "slug": "breakfast-crunchwraps",
@@ -121,7 +187,7 @@
       "totalTime": 45,
       "heroImage": "/images/breakfast/breakfast-crunchwraps.jpg",
       "thumbImage": "/images/thumbs/breakfast/breakfast-crunchwraps.jpg",
-      "publishedAt": "2026-05-30T03:14:16.260Z"
+      "publishedAt": "2026-05-30T21:22:29.756Z"
     },
     {
       "slug": "breakfast-enchiladas",
@@ -142,7 +208,29 @@
       "totalTime": 60,
       "heroImage": "/images/breakfast/breakfast-enchiladas.jpg",
       "thumbImage": "/images/thumbs/breakfast/breakfast-enchiladas.jpg",
-      "publishedAt": "2026-05-30T03:14:16.260Z"
+      "publishedAt": "2026-05-30T21:22:29.756Z"
+    },
+    {
+      "slug": "breakfast-fried-rice-crew",
+      "title": "Breakfast Fried Rice for the Crew",
+      "subtitle": "Day-old rice wok-fried with bacon, eggs, peas, and scallions.",
+      "description": "Adapted from classic Chinese-American breakfast fried rice tradition for firehall wok service: chilled long-grain rice stir-fried over high heat with bacon, scrambled eggs, peas, carrots, and soy-sesame seasoning.",
+      "filters": [
+        "feed_a_crew",
+        "quick_breakfasts",
+        "high_protein"
+      ],
+      "tags": [
+        "fried-rice",
+        "bacon",
+        "eggs",
+        "wok",
+        "asian"
+      ],
+      "totalTime": 35,
+      "heroImage": "/images/breakfast/breakfast-fried-rice-crew.jpg",
+      "thumbImage": "/images/thumbs/breakfast/breakfast-fried-rice-crew.jpg",
+      "publishedAt": "2026-05-30T21:22:29.757Z"
     },
     {
       "slug": "breakfast-nachos-supreme",
@@ -164,7 +252,7 @@
       "totalTime": 30,
       "heroImage": "/images/breakfast/breakfast-nachos-supreme.jpg",
       "thumbImage": "/images/thumbs/breakfast/breakfast-nachos-supreme.jpg",
-      "publishedAt": "2026-05-30T03:14:16.260Z"
+      "publishedAt": "2026-05-30T21:22:29.756Z"
     },
     {
       "slug": "breakfast-poutine",
@@ -186,7 +274,7 @@
       "totalTime": 45,
       "heroImage": "/images/breakfast/breakfast-poutine.jpg",
       "thumbImage": "/images/thumbs/breakfast/breakfast-poutine.jpg",
-      "publishedAt": "2026-05-30T03:14:16.260Z"
+      "publishedAt": "2026-05-30T21:22:29.756Z"
     },
     {
       "slug": "breakfast-quesadillas",
@@ -208,7 +296,7 @@
       "totalTime": 35,
       "heroImage": "/images/breakfast/breakfast-quesadillas.jpg",
       "thumbImage": "/images/thumbs/breakfast/breakfast-quesadillas.jpg",
-      "publishedAt": "2026-05-30T03:14:16.260Z"
+      "publishedAt": "2026-05-30T21:22:29.756Z"
     },
     {
       "slug": "breakfast-sandwich-trays",
@@ -228,7 +316,7 @@
       "totalTime": 33,
       "heroImage": "/images/breakfast/breakfast-sandwich-trays.jpg",
       "thumbImage": "/images/thumbs/breakfast/breakfast-sandwich-trays.jpg",
-      "publishedAt": "2026-05-30T03:14:16.261Z"
+      "publishedAt": "2026-05-30T21:22:29.758Z"
     },
     {
       "slug": "breakfast-sliders",
@@ -250,7 +338,29 @@
       "totalTime": 40,
       "heroImage": "/images/breakfast/breakfast-sliders.jpg",
       "thumbImage": "/images/thumbs/breakfast/breakfast-sliders.jpg",
-      "publishedAt": "2026-05-30T03:14:16.260Z"
+      "publishedAt": "2026-05-30T21:22:29.756Z"
+    },
+    {
+      "slug": "breakfast-stromboli-roll",
+      "title": "Breakfast Stromboli Roll",
+      "subtitle": "Pizza dough rolled with scrambled eggs, ham, and cheese, baked golden.",
+      "description": "Adapted from classic Italian-American stromboli tradition for firehall oven service: pizza dough stretched thin, filled with scrambled eggs, ham, peppers, and mozzarella, rolled tight and baked until golden for eight thick slices.",
+      "filters": [
+        "feed_a_crew",
+        "high_protein",
+        "breakfast_sandwiches"
+      ],
+      "tags": [
+        "stromboli",
+        "ham",
+        "eggs",
+        "cheese",
+        "baked"
+      ],
+      "totalTime": 50,
+      "heroImage": "/images/breakfast/breakfast-stromboli-roll.jpg",
+      "thumbImage": "/images/thumbs/breakfast/breakfast-stromboli-roll.jpg",
+      "publishedAt": "2026-05-30T21:22:29.757Z"
     },
     {
       "slug": "buttermilk-pancakes",
@@ -268,7 +378,7 @@
       "totalTime": 30,
       "heroImage": "/images/breakfast/buttermilk-pancakes.jpg",
       "thumbImage": "/images/thumbs/breakfast/buttermilk-pancakes.jpg",
-      "publishedAt": "2026-05-30T03:14:16.261Z"
+      "publishedAt": "2026-05-30T21:22:29.758Z"
     },
     {
       "slug": "cast-iron-breakfast-skillet",
@@ -288,7 +398,51 @@
       "totalTime": 37,
       "heroImage": "/images/breakfast/cast-iron-breakfast-skillet.jpg",
       "thumbImage": "/images/thumbs/breakfast/cast-iron-breakfast-skillet.jpg",
-      "publishedAt": "2026-05-30T03:14:16.261Z"
+      "publishedAt": "2026-05-30T21:22:29.758Z"
+    },
+    {
+      "slug": "chicken-and-waffles-crew",
+      "title": "Chicken and Waffles for the Crew",
+      "subtitle": "Crispy buttermilk fried chicken on Belgian waffles with maple butter.",
+      "description": "Adapted from classic Southern soul-food tradition for firehall brunch: buttermilk-brined chicken thighs fried until shatter-crisp, served on warm Belgian waffles with whipped maple butter and a drizzle of hot honey at the line.",
+      "filters": [
+        "feed_a_crew",
+        "high_protein",
+        "bbq_breakfast"
+      ],
+      "tags": [
+        "chicken-and-waffles",
+        "fried-chicken",
+        "waffles",
+        "southern",
+        "brunch"
+      ],
+      "totalTime": 70,
+      "heroImage": "/images/breakfast/chicken-and-waffles-crew.jpg",
+      "thumbImage": "/images/thumbs/breakfast/chicken-and-waffles-crew.jpg",
+      "publishedAt": "2026-05-30T21:22:29.757Z"
+    },
+    {
+      "slug": "chilaquiles-verde-bake",
+      "title": "Chilaquiles Verde Bake",
+      "subtitle": "Tortilla chips baked in green salsa with eggs, crema, and cotija.",
+      "description": "Adapted from classic Mexican chilaquiles verde tradition for a hotel-pan breakfast bake: sturdy tortilla chips tossed in simmered tomatillo salsa, baked until edges crisp, then topped with baked eggs and crema for ten portions.",
+      "filters": [
+        "feed_a_crew",
+        "high_protein",
+        "skillets"
+      ],
+      "tags": [
+        "chilaquiles",
+        "verde",
+        "tomatillo",
+        "eggs",
+        "bake"
+      ],
+      "totalTime": 50,
+      "heroImage": "/images/breakfast/chilaquiles-verde-bake.jpg",
+      "thumbImage": "/images/thumbs/breakfast/chilaquiles-verde-bake.jpg",
+      "publishedAt": "2026-05-30T21:22:29.757Z"
     },
     {
       "slug": "chorizo-breakfast-burritos",
@@ -308,7 +462,7 @@
       "totalTime": 33,
       "heroImage": "/images/breakfast/chorizo-breakfast-burritos.jpg",
       "thumbImage": "/images/thumbs/breakfast/chorizo-breakfast-burritos.jpg",
-      "publishedAt": "2026-05-30T03:14:16.261Z"
+      "publishedAt": "2026-05-30T21:22:29.758Z"
     },
     {
       "slug": "chorizo-breakfast-hash",
@@ -330,7 +484,73 @@
       "totalTime": 37,
       "heroImage": "/images/breakfast/chorizo-breakfast-hash.jpg",
       "thumbImage": "/images/thumbs/breakfast/chorizo-breakfast-hash.jpg",
-      "publishedAt": "2026-05-30T03:14:16.260Z"
+      "publishedAt": "2026-05-30T21:22:29.756Z"
+    },
+    {
+      "slug": "club-sandwich-breakfast-bake",
+      "title": "Club Sandwich Breakfast Bake",
+      "subtitle": "Layered bread, turkey, bacon, tomato, and eggs baked like a strata.",
+      "description": "Adapted from classic American club sandwich tradition for firehall breakfast bake: layers of toasted bread, turkey, bacon, tomato, and cheddar soaked in an egg-milk custard and baked until puffed and golden for ten portions.",
+      "filters": [
+        "feed_a_crew",
+        "high_protein",
+        "breakfast_sandwiches"
+      ],
+      "tags": [
+        "club-sandwich",
+        "strata",
+        "turkey",
+        "bacon",
+        "bake"
+      ],
+      "totalTime": 70,
+      "heroImage": "/images/breakfast/club-sandwich-breakfast-bake.jpg",
+      "thumbImage": "/images/thumbs/breakfast/club-sandwich-breakfast-bake.jpg",
+      "publishedAt": "2026-05-30T21:22:29.757Z"
+    },
+    {
+      "slug": "corned-beef-hash-breakfast",
+      "title": "Corned Beef Hash Breakfast",
+      "subtitle": "Crisp diced potatoes and corned beef with eggs cracked on top.",
+      "description": "Adapted from classic American diner hash tradition for a hungry firehall crew: Yukon gold potatoes diced and pan-fried until deeply golden, folded with shredded corned beef and onions, then finished with eggs cooked sunny-side up in the same skillet.",
+      "filters": [
+        "skillets",
+        "high_protein",
+        "feed_a_crew"
+      ],
+      "tags": [
+        "corned-beef",
+        "hash",
+        "potatoes",
+        "eggs",
+        "diner"
+      ],
+      "totalTime": 50,
+      "heroImage": "/images/breakfast/corned-beef-hash-breakfast.jpg",
+      "thumbImage": "/images/thumbs/breakfast/corned-beef-hash-breakfast.jpg",
+      "publishedAt": "2026-05-30T21:22:29.757Z"
+    },
+    {
+      "slug": "country-fried-steak-eggs",
+      "title": "Country Fried Steak and Eggs Breakfast",
+      "subtitle": "Pounded cube steak, pepper gravy, and eggs over mashed potatoes.",
+      "description": "Adapted from classic Texas diner chicken-fried steak tradition for a firehall plate breakfast: cube steak pounded thin, breaded and fried crisp, smothered in black pepper gravy and served with eggs and buttery mashed potatoes.",
+      "filters": [
+        "feed_a_crew",
+        "high_protein",
+        "skillets"
+      ],
+      "tags": [
+        "country-fried-steak",
+        "gravy",
+        "eggs",
+        "diner",
+        "steak"
+      ],
+      "totalTime": 55,
+      "heroImage": "/images/breakfast/country-fried-steak-eggs.jpg",
+      "thumbImage": "/images/thumbs/breakfast/country-fried-steak-eggs.jpg",
+      "publishedAt": "2026-05-30T21:22:29.757Z"
     },
     {
       "slug": "cowboy-breakfast-skillet",
@@ -352,7 +572,7 @@
       "totalTime": 43,
       "heroImage": "/images/breakfast/cowboy-breakfast-skillet.jpg",
       "thumbImage": "/images/thumbs/breakfast/cowboy-breakfast-skillet.jpg",
-      "publishedAt": "2026-05-30T03:14:16.260Z"
+      "publishedAt": "2026-05-30T21:22:29.756Z"
     },
     {
       "slug": "crew-french-toast-bake",
@@ -371,7 +591,7 @@
       "totalTime": 60,
       "heroImage": "/images/breakfast/crew-french-toast-bake.jpg",
       "thumbImage": "/images/thumbs/breakfast/crew-french-toast-bake.jpg",
-      "publishedAt": "2026-05-30T03:14:16.261Z"
+      "publishedAt": "2026-05-30T21:22:29.758Z"
     },
     {
       "slug": "denver-breakfast-casserole",
@@ -392,7 +612,51 @@
       "totalTime": 70,
       "heroImage": "/images/breakfast/denver-breakfast-casserole.jpg",
       "thumbImage": "/images/thumbs/breakfast/denver-breakfast-casserole.jpg",
-      "publishedAt": "2026-05-30T03:14:16.260Z"
+      "publishedAt": "2026-05-30T21:22:29.756Z"
+    },
+    {
+      "slug": "eggs-benedict-hall-style",
+      "title": "Eggs Benedict Hall Style",
+      "subtitle": "Poached eggs, Canadian bacon, and hollandaise on toasted English muffins.",
+      "description": "Adapted from classic New York brunch tradition for a firehall breakfast line: split English muffins toasted crisp, topped with warmed Canadian bacon, poached eggs, and a stable blender hollandaise. Portions cleanly for eight with a two-pan poaching setup.",
+      "filters": [
+        "feed_a_crew",
+        "high_protein",
+        "breakfast_sandwiches"
+      ],
+      "tags": [
+        "eggs-benedict",
+        "hollandaise",
+        "poached-eggs",
+        "canadian-bacon",
+        "brunch"
+      ],
+      "totalTime": 50,
+      "heroImage": "/images/breakfast/eggs-benedict-hall-style.jpg",
+      "thumbImage": "/images/thumbs/breakfast/eggs-benedict-hall-style.jpg",
+      "publishedAt": "2026-05-30T21:22:29.757Z"
+    },
+    {
+      "slug": "farmers-breakfast-casserole",
+      "title": "Farmer's Breakfast Casserole",
+      "subtitle": "Hash browns, sausage, eggs, and cheese baked in one deep dish.",
+      "description": "Adapted from classic Midwest farm-kitchen breakfast bake tradition for firehall oven service: shredded hash browns layered with browned breakfast sausage, eggs, milk, and cheddar baked until puffed and golden for ten portions.",
+      "filters": [
+        "feed_a_crew",
+        "high_protein",
+        "skillets"
+      ],
+      "tags": [
+        "casserole",
+        "sausage",
+        "hash-browns",
+        "bake",
+        "eggs"
+      ],
+      "totalTime": 65,
+      "heroImage": "/images/breakfast/farmers-breakfast-casserole.jpg",
+      "thumbImage": "/images/thumbs/breakfast/farmers-breakfast-casserole.jpg",
+      "publishedAt": "2026-05-30T21:22:29.757Z"
     },
     {
       "slug": "fire-captain-omelette-bar",
@@ -414,7 +678,7 @@
       "totalTime": 45,
       "heroImage": "/images/breakfast/fire-captain-omelette-bar.jpg",
       "thumbImage": "/images/thumbs/breakfast/fire-captain-omelette-bar.jpg",
-      "publishedAt": "2026-05-30T03:14:16.260Z"
+      "publishedAt": "2026-05-30T21:22:29.756Z"
     },
     {
       "slug": "firehall-breakfast-pizza",
@@ -436,7 +700,51 @@
       "totalTime": 48,
       "heroImage": "/images/breakfast/firehall-breakfast-pizza.jpg",
       "thumbImage": "/images/thumbs/breakfast/firehall-breakfast-pizza.jpg",
-      "publishedAt": "2026-05-30T03:14:16.260Z"
+      "publishedAt": "2026-05-30T21:22:29.756Z"
+    },
+    {
+      "slug": "german-potato-breakfast-skillet",
+      "title": "German Potato Breakfast Skillet",
+      "subtitle": "Pan-fried potatoes with bratwurst, sauerkraut, and fried eggs.",
+      "description": "Adapted from classic German farmer's breakfast tradition for firehall cast-iron service: Yukon gold potatoes fried with onion until crisp, served with seared bratwurst, warmed sauerkraut, and eggs fried in the same pan.",
+      "filters": [
+        "skillets",
+        "feed_a_crew",
+        "high_protein"
+      ],
+      "tags": [
+        "german",
+        "potatoes",
+        "bratwurst",
+        "sauerkraut",
+        "skillet"
+      ],
+      "totalTime": 50,
+      "heroImage": "/images/breakfast/german-potato-breakfast-skillet.jpg",
+      "thumbImage": "/images/thumbs/breakfast/german-potato-breakfast-skillet.jpg",
+      "publishedAt": "2026-05-30T21:22:29.757Z"
+    },
+    {
+      "slug": "green-chile-breakfast-burritos",
+      "title": "Green Chile Breakfast Burritos",
+      "subtitle": "Flour tortillas stuffed with eggs, potatoes, bacon, and Hatch chile sauce.",
+      "description": "Adapted from classic New Mexico breakfast burrito tradition for firehall handheld service: scrambled eggs, crispy potatoes, bacon, and melted cheese rolled in warm flour tortillas and smothered with roasted green chile sauce.",
+      "filters": [
+        "feed_a_crew",
+        "high_protein",
+        "breakfast_sandwiches"
+      ],
+      "tags": [
+        "breakfast-burrito",
+        "green-chile",
+        "hatch",
+        "bacon",
+        "handheld"
+      ],
+      "totalTime": 50,
+      "heroImage": "/images/breakfast/green-chile-breakfast-burritos.jpg",
+      "thumbImage": "/images/thumbs/breakfast/green-chile-breakfast-burritos.jpg",
+      "publishedAt": "2026-05-30T21:22:29.757Z"
     },
     {
       "slug": "hall-breakfast-burritos",
@@ -456,7 +764,7 @@
       "totalTime": 35,
       "heroImage": "/images/breakfast/hall-breakfast-burritos.jpg",
       "thumbImage": "/images/thumbs/breakfast/hall-breakfast-burritos.jpg",
-      "publishedAt": "2026-05-30T03:14:16.261Z"
+      "publishedAt": "2026-05-30T21:22:29.758Z"
     },
     {
       "slug": "hall-breakfast-wraps",
@@ -478,7 +786,7 @@
       "totalTime": 33,
       "heroImage": "/images/breakfast/hall-breakfast-wraps.jpg",
       "thumbImage": "/images/thumbs/breakfast/hall-breakfast-wraps.jpg",
-      "publishedAt": "2026-05-30T03:14:16.260Z"
+      "publishedAt": "2026-05-30T21:22:29.756Z"
     },
     {
       "slug": "hall-sausage-biscuits-gravy",
@@ -500,7 +808,7 @@
       "totalTime": 35,
       "heroImage": "/images/breakfast/hall-sausage-biscuits-gravy.jpg",
       "thumbImage": "/images/thumbs/breakfast/hall-sausage-biscuits-gravy.jpg",
-      "publishedAt": "2026-05-30T03:14:16.260Z"
+      "publishedAt": "2026-05-30T21:22:29.756Z"
     },
     {
       "slug": "ham-cheddar-egg-bake",
@@ -520,7 +828,7 @@
       "totalTime": 56,
       "heroImage": "/images/breakfast/ham-cheddar-egg-bake.jpg",
       "thumbImage": "/images/thumbs/breakfast/ham-cheddar-egg-bake.jpg",
-      "publishedAt": "2026-05-30T03:14:16.261Z"
+      "publishedAt": "2026-05-30T21:22:29.758Z"
     },
     {
       "slug": "ham-pepper-skillet",
@@ -540,7 +848,7 @@
       "totalTime": 28,
       "heroImage": "/images/breakfast/ham-pepper-skillet.jpg",
       "thumbImage": "/images/thumbs/breakfast/ham-pepper-skillet.jpg",
-      "publishedAt": "2026-05-30T03:14:16.261Z"
+      "publishedAt": "2026-05-30T21:22:29.758Z"
     },
     {
       "slug": "high-protein-parfaits",
@@ -561,7 +869,95 @@
       "totalTime": 17,
       "heroImage": "/images/breakfast/high-protein-parfaits.jpg",
       "thumbImage": "/images/thumbs/breakfast/high-protein-parfaits.jpg",
-      "publishedAt": "2026-05-30T03:14:16.261Z"
+      "publishedAt": "2026-05-30T21:22:29.758Z"
+    },
+    {
+      "slug": "huevos-rancheros-crew",
+      "title": "Huevos Rancheros for the Crew",
+      "subtitle": "Crisp tortillas, ranchero sauce, and sunny eggs for a full hall.",
+      "description": "Adapted from classic Mexican ranch-style breakfast tradition for firehall service: corn tortillas fried crisp, topped with warm ranchero sauce, black beans, and eggs cooked to order. Built to feed eight hungry firefighters with a make-ahead sauce and a hot griddle line.",
+      "filters": [
+        "feed_a_crew",
+        "high_protein",
+        "skillets"
+      ],
+      "tags": [
+        "huevos-rancheros",
+        "eggs",
+        "tortillas",
+        "ranchero",
+        "beans"
+      ],
+      "totalTime": 50,
+      "heroImage": "/images/breakfast/huevos-rancheros-crew.jpg",
+      "thumbImage": "/images/thumbs/breakfast/huevos-rancheros-crew.jpg",
+      "publishedAt": "2026-05-30T21:22:29.757Z"
+    },
+    {
+      "slug": "irish-breakfast-fry-up",
+      "title": "Irish Breakfast Fry-Up",
+      "subtitle": "Bacon, sausage, black pudding, eggs, and soda bread on one plate.",
+      "description": "Adapted from classic full Irish breakfast tradition for firehall griddle service: back bacon, pork sausages, black pudding, grilled tomato, sautéed mushrooms, fried eggs, and soda bread fried in butter for eight hearty plates.",
+      "filters": [
+        "feed_a_crew",
+        "high_protein",
+        "skillets"
+      ],
+      "tags": [
+        "irish-breakfast",
+        "fry-up",
+        "bacon",
+        "sausage",
+        "eggs"
+      ],
+      "totalTime": 55,
+      "heroImage": "/images/breakfast/irish-breakfast-fry-up.jpg",
+      "thumbImage": "/images/thumbs/breakfast/irish-breakfast-fry-up.jpg",
+      "publishedAt": "2026-05-30T21:22:29.757Z"
+    },
+    {
+      "slug": "johnnycakes-with-syrup",
+      "title": "Johnnycakes with Maple Syrup",
+      "subtitle": "Rhode Island cornmeal griddle cakes with butter and warm syrup.",
+      "description": "Adapted from classic New England johnnycake tradition for firehall griddle service: stone-ground cornmeal batter cooked on a hot griddle until lacy-edged and golden, served with whipped butter and warm maple syrup for eight.",
+      "filters": [
+        "feed_a_crew",
+        "quick_breakfasts",
+        "breakfast_sandwiches"
+      ],
+      "tags": [
+        "johnnycakes",
+        "cornmeal",
+        "new-england",
+        "griddle",
+        "maple"
+      ],
+      "totalTime": 40,
+      "heroImage": "/images/breakfast/johnnycakes-with-syrup.jpg",
+      "thumbImage": "/images/thumbs/breakfast/johnnycakes-with-syrup.jpg",
+      "publishedAt": "2026-05-30T21:22:29.757Z"
+    },
+    {
+      "slug": "lumberjack-breakfast-platter",
+      "title": "Lumberjack Breakfast Platter",
+      "subtitle": "Pancakes, eggs, bacon, sausage, and hash browns for a hungry crew.",
+      "description": "Adapted from classic North American logging-camp breakfast tradition for firehall platter service: stacks of pancakes, crispy bacon, browned sausage links, shredded hash browns, and eggs cooked to order for eight hungry firefighters.",
+      "filters": [
+        "feed_a_crew",
+        "high_protein",
+        "skillets"
+      ],
+      "tags": [
+        "lumberjack",
+        "pancakes",
+        "bacon",
+        "sausage",
+        "hash-browns"
+      ],
+      "totalTime": 60,
+      "heroImage": "/images/breakfast/lumberjack-breakfast-platter.jpg",
+      "thumbImage": "/images/thumbs/breakfast/lumberjack-breakfast-platter.jpg",
+      "publishedAt": "2026-05-30T21:22:29.757Z"
     },
     {
       "slug": "maple-sausage-pinwheels",
@@ -583,7 +979,29 @@
       "totalTime": 37,
       "heroImage": "/images/breakfast/maple-sausage-pinwheels.jpg",
       "thumbImage": "/images/thumbs/breakfast/maple-sausage-pinwheels.jpg",
-      "publishedAt": "2026-05-30T03:14:16.260Z"
+      "publishedAt": "2026-05-30T21:22:29.756Z"
+    },
+    {
+      "slug": "migas-for-the-crew",
+      "title": "Migas for the Crew",
+      "subtitle": "Scrambled eggs with crispy tortilla strips, peppers, and queso fresco.",
+      "description": "Adapted from classic Tex-Mex migas tradition for firehall skillet service: corn tortillas cut into strips and fried crisp, folded into soft-scrambled eggs with sautéed peppers, onion, and tomato, finished with queso fresco and salsa.",
+      "filters": [
+        "skillets",
+        "feed_a_crew",
+        "quick_breakfasts"
+      ],
+      "tags": [
+        "migas",
+        "eggs",
+        "tortillas",
+        "tex-mex",
+        "skillet"
+      ],
+      "totalTime": 35,
+      "heroImage": "/images/breakfast/migas-for-the-crew.jpg",
+      "thumbImage": "/images/thumbs/breakfast/migas-for-the-crew.jpg",
+      "publishedAt": "2026-05-30T21:22:29.757Z"
     },
     {
       "slug": "monte-cristo-sandwiches",
@@ -604,7 +1022,7 @@
       "totalTime": 45,
       "heroImage": "/images/breakfast/monte-cristo-sandwiches.jpg",
       "thumbImage": "/images/thumbs/breakfast/monte-cristo-sandwiches.jpg",
-      "publishedAt": "2026-05-30T03:14:16.260Z"
+      "publishedAt": "2026-05-30T21:22:29.756Z"
     },
     {
       "slug": "overnight-french-toast-bake",
@@ -625,7 +1043,29 @@
       "totalTime": 65,
       "heroImage": "/images/breakfast/overnight-french-toast-bake.jpg",
       "thumbImage": "/images/thumbs/breakfast/overnight-french-toast-bake.jpg",
-      "publishedAt": "2026-05-30T03:14:16.260Z"
+      "publishedAt": "2026-05-30T21:22:29.756Z"
+    },
+    {
+      "slug": "overnight-sausage-strata",
+      "title": "Overnight Sausage Strata",
+      "subtitle": "Make-ahead bread, sausage, and egg bake rested overnight and baked hot.",
+      "description": "Adapted from classic French strata tradition for firehall make-ahead breakfast: cubed bread layered with browned sausage and cheddar, soaked overnight in an egg-milk custard, then baked golden for ten crew portions.",
+      "filters": [
+        "feed_a_crew",
+        "high_protein",
+        "quick_breakfasts"
+      ],
+      "tags": [
+        "strata",
+        "overnight",
+        "sausage",
+        "make-ahead",
+        "bake"
+      ],
+      "totalTime": 75,
+      "heroImage": "/images/breakfast/overnight-sausage-strata.jpg",
+      "thumbImage": "/images/thumbs/breakfast/overnight-sausage-strata.jpg",
+      "publishedAt": "2026-05-30T21:22:29.757Z"
     },
     {
       "slug": "protein-french-toast",
@@ -647,7 +1087,7 @@
       "totalTime": 35,
       "heroImage": "/images/breakfast/protein-french-toast.jpg",
       "thumbImage": "/images/thumbs/breakfast/protein-french-toast.jpg",
-      "publishedAt": "2026-05-30T03:14:16.260Z"
+      "publishedAt": "2026-05-30T21:22:29.756Z"
     },
     {
       "slug": "protein-pancake-tray",
@@ -666,7 +1106,7 @@
       "totalTime": 37,
       "heroImage": "/images/breakfast/protein-pancake-tray.jpg",
       "thumbImage": "/images/thumbs/breakfast/protein-pancake-tray.jpg",
-      "publishedAt": "2026-05-30T03:14:16.261Z"
+      "publishedAt": "2026-05-30T21:22:29.758Z"
     },
     {
       "slug": "quick-egg-tacos",
@@ -685,7 +1125,7 @@
       "totalTime": 22,
       "heroImage": "/images/breakfast/quick-egg-tacos.jpg",
       "thumbImage": "/images/thumbs/breakfast/quick-egg-tacos.jpg",
-      "publishedAt": "2026-05-30T03:14:16.261Z"
+      "publishedAt": "2026-05-30T21:22:29.758Z"
     },
     {
       "slug": "red-lead-skillet",
@@ -707,7 +1147,7 @@
       "totalTime": 40,
       "heroImage": "/images/breakfast/red-lead-skillet.jpg",
       "thumbImage": "/images/thumbs/breakfast/red-lead-skillet.jpg",
-      "publishedAt": "2026-05-30T03:14:16.260Z"
+      "publishedAt": "2026-05-30T21:22:29.756Z"
     },
     {
       "slug": "sausage-egg-cheese-sandwiches",
@@ -726,7 +1166,29 @@
       "totalTime": 27,
       "heroImage": "/images/breakfast/sausage-egg-cheese-sandwiches.jpg",
       "thumbImage": "/images/thumbs/breakfast/sausage-egg-cheese-sandwiches.jpg",
-      "publishedAt": "2026-05-30T03:14:16.261Z"
+      "publishedAt": "2026-05-30T21:22:29.758Z"
+    },
+    {
+      "slug": "scrapple-and-eggs-skillet",
+      "title": "Scrapple and Eggs Skillet",
+      "subtitle": "Crisp Pennsylvania scrapple slices with fried eggs and toast points.",
+      "description": "Adapted from classic Pennsylvania Dutch scrapple tradition for firehall skillet breakfast: cornmeal-and-pork scrapple sliced and fried until shatter-crisp outside and creamy inside, served with fried eggs and buttered toast points.",
+      "filters": [
+        "skillets",
+        "feed_a_crew",
+        "high_protein"
+      ],
+      "tags": [
+        "scrapple",
+        "pennsylvania",
+        "eggs",
+        "cast-iron",
+        "pork"
+      ],
+      "totalTime": 35,
+      "heroImage": "/images/breakfast/scrapple-and-eggs-skillet.jpg",
+      "thumbImage": "/images/thumbs/breakfast/scrapple-and-eggs-skillet.jpg",
+      "publishedAt": "2026-05-30T21:22:29.757Z"
     },
     {
       "slug": "sheet-pan-breakfast-hash",
@@ -745,7 +1207,7 @@
       "totalTime": 45,
       "heroImage": "/images/breakfast/sheet-pan-breakfast-hash.jpg",
       "thumbImage": "/images/thumbs/breakfast/sheet-pan-breakfast-hash.jpg",
-      "publishedAt": "2026-05-30T03:14:16.261Z"
+      "publishedAt": "2026-05-30T21:22:29.758Z"
     },
     {
       "slug": "sheet-pan-breakfast-sandwiches",
@@ -767,7 +1229,73 @@
       "totalTime": 37,
       "heroImage": "/images/breakfast/sheet-pan-breakfast-sandwiches.jpg",
       "thumbImage": "/images/thumbs/breakfast/sheet-pan-breakfast-sandwiches.jpg",
-      "publishedAt": "2026-05-30T03:14:16.260Z"
+      "publishedAt": "2026-05-30T21:22:29.756Z"
+    },
+    {
+      "slug": "sheet-pan-full-english",
+      "title": "Sheet Pan Full English",
+      "subtitle": "English breakfast components roasted and finished on one pan.",
+      "description": "Adapted from classic full English breakfast tradition for firehall batch service: bacon, sausages, baked beans, roasted tomato, and mushrooms on sheet pans, finished with fried eggs for ten crew portions.",
+      "filters": [
+        "feed_a_crew",
+        "high_protein",
+        "quick_breakfasts"
+      ],
+      "tags": [
+        "full-english",
+        "sheet-pan",
+        "bacon",
+        "sausage",
+        "beans"
+      ],
+      "totalTime": 50,
+      "heroImage": "/images/breakfast/sheet-pan-full-english.jpg",
+      "thumbImage": "/images/thumbs/breakfast/sheet-pan-full-english.jpg",
+      "publishedAt": "2026-05-30T21:22:29.757Z"
+    },
+    {
+      "slug": "shrimp-and-grits-breakfast",
+      "title": "Shrimp and Grits Breakfast",
+      "subtitle": "Creamy stone-ground grits topped with Cajun-spiced shrimp and andouille.",
+      "description": "Adapted from classic Lowcountry Carolina breakfast tradition for firehall service: slow-stirred stone-ground grits with sharp cheddar, topped with sautéed shrimp, andouille, and a pan sauce bright with lemon and scallions.",
+      "filters": [
+        "feed_a_crew",
+        "high_protein",
+        "skillets"
+      ],
+      "tags": [
+        "shrimp-and-grits",
+        "grits",
+        "seafood",
+        "cajun",
+        "southern"
+      ],
+      "totalTime": 50,
+      "heroImage": "/images/breakfast/shrimp-and-grits-breakfast.jpg",
+      "thumbImage": "/images/thumbs/breakfast/shrimp-and-grits-breakfast.jpg",
+      "publishedAt": "2026-05-30T21:22:29.757Z"
+    },
+    {
+      "slug": "smoked-salmon-benedit",
+      "title": "Smoked Salmon Benedict",
+      "subtitle": "Poached eggs and hollandaise over smoked salmon and rye toast.",
+      "description": "Adapted from classic Scandinavian-Jewish deli brunch tradition for firehall service: toasted rye bread topped with smoked salmon, capers, poached eggs, and a lighter lemon-dill hollandaise for eight elegant portions.",
+      "filters": [
+        "feed_a_crew",
+        "high_protein",
+        "breakfast_sandwiches"
+      ],
+      "tags": [
+        "smoked-salmon",
+        "eggs-benedict",
+        "hollandaise",
+        "rye",
+        "brunch"
+      ],
+      "totalTime": 45,
+      "heroImage": "/images/breakfast/smoked-salmon-benedit.jpg",
+      "thumbImage": "/images/thumbs/breakfast/smoked-salmon-benedit.jpg",
+      "publishedAt": "2026-05-30T21:22:29.757Z"
     },
     {
       "slug": "southwest-egg-bake",
@@ -787,7 +1315,7 @@
       "totalTime": 58,
       "heroImage": "/images/breakfast/southwest-egg-bake.jpg",
       "thumbImage": "/images/thumbs/breakfast/southwest-egg-bake.jpg",
-      "publishedAt": "2026-05-30T03:14:16.261Z"
+      "publishedAt": "2026-05-30T21:22:29.758Z"
     },
     {
       "slug": "steakhouse-hash-skillet",
@@ -807,7 +1335,29 @@
       "totalTime": 40,
       "heroImage": "/images/breakfast/steakhouse-hash-skillet.jpg",
       "thumbImage": "/images/thumbs/breakfast/steakhouse-hash-skillet.jpg",
-      "publishedAt": "2026-05-30T03:14:16.261Z"
+      "publishedAt": "2026-05-30T21:22:29.758Z"
+    },
+    {
+      "slug": "tater-tot-breakfast-casserole",
+      "title": "Tater Tot Breakfast Casserole",
+      "subtitle": "Crispy tater tots baked with eggs, bacon, and melty cheese.",
+      "description": "Adapted from classic Midwest tater tot hotdish tradition for firehall breakfast: frozen tater tots layered with crispy bacon, scrambled eggs, and cheddar baked until the top is shatter-crisp and the center hits 165°F.",
+      "filters": [
+        "feed_a_crew",
+        "high_protein",
+        "quick_breakfasts"
+      ],
+      "tags": [
+        "tater-tots",
+        "casserole",
+        "bacon",
+        "bake",
+        "midwest"
+      ],
+      "totalTime": 55,
+      "heroImage": "/images/breakfast/tater-tot-breakfast-casserole.jpg",
+      "thumbImage": "/images/thumbs/breakfast/tater-tot-breakfast-casserole.jpg",
+      "publishedAt": "2026-05-30T21:22:29.757Z"
     },
     {
       "slug": "turkey-sausage-burritos",
@@ -827,7 +1377,7 @@
       "totalTime": 33,
       "heroImage": "/images/breakfast/turkey-sausage-burritos.jpg",
       "thumbImage": "/images/thumbs/breakfast/turkey-sausage-burritos.jpg",
-      "publishedAt": "2026-05-30T03:14:16.261Z"
+      "publishedAt": "2026-05-30T21:22:29.758Z"
     },
     {
       "slug": "turkey-sausage-egg-bake",
@@ -848,7 +1398,7 @@
       "totalTime": 60,
       "heroImage": "/images/breakfast/turkey-sausage-egg-bake.jpg",
       "thumbImage": "/images/thumbs/breakfast/turkey-sausage-egg-bake.jpg",
-      "publishedAt": "2026-05-30T03:14:16.261Z"
+      "publishedAt": "2026-05-30T21:22:29.758Z"
     },
     {
       "slug": "veggie-egg-burritos",
@@ -868,7 +1418,7 @@
       "totalTime": 34,
       "heroImage": "/images/breakfast/veggie-egg-burritos.jpg",
       "thumbImage": "/images/thumbs/breakfast/veggie-egg-burritos.jpg",
-      "publishedAt": "2026-05-30T03:14:16.261Z"
+      "publishedAt": "2026-05-30T21:22:29.758Z"
     }
   ]
 }

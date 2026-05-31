@@ -62,6 +62,7 @@ import {
   getTopRatedRecipes,
 } from "./recipe-crew-ratings/store.js";
 import { buildApprovedCatalog } from "./approved-catalog.js";
+import { sanitizeRecipeHeroSurface } from "./sanitize-verified-recipe-hero.js";
 import { castCrewRatingVoteSchema } from "../shared/recipe-crew-ratings/schema.js";
 import { EMPTY_RECIPE_CREW_RATING_COLLECTIONS } from "../shared/recipe-crew-ratings/types.js";
 import { registerHallFeedbackRoutes } from "./hall-feedback-routes.js";
@@ -122,6 +123,7 @@ import {
 import { buildHallExpansionRecipePage } from "./hall-expansion/page-builder.js";
 import { getHallExpansionRecipeBySlug } from "../shared/hall-expansion/adapted/index.js";
 import { loadMergedHallCatalogIndex, resolveHallRecipePage } from "./meal-catalog/load-index.js";
+import { readBreakfastRecipePageFromDisk } from "./breakfast-catalog/page-store.js";
 import { hallCatalogExploreCards } from "./meal-catalog/search-golden.js";
 import {
   SMOOTHIE_CATALOG_PUBLIC_DIR,
@@ -2433,14 +2435,14 @@ export async function registerRoutes(
     const pizzaPage = readPizzaNightRecipePage(slug);
     if (pizzaPage) {
       res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
-      return res.json(pizzaPage);
+      return res.json(sanitizeRecipeHeroSurface(pizzaPage));
     }
     const page = resolveHallRecipePage(slug);
     if (!page) {
       return res.status(404).json({ message: "Recipe not in hall catalog" });
     }
     res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
-    return res.json(page);
+    return res.json(sanitizeRecipeHeroSurface(page));
   });
 
   app.get("/api/catalog/pizza-night", async (_req: Request, res: Response) => {
@@ -2459,7 +2461,7 @@ export async function registerRoutes(
       return res.status(404).json({ message: "Recipe not in Pizza Night catalog" });
     }
     res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
-    return res.json(page);
+    return res.json(sanitizeRecipeHeroSurface(page));
   });
 
   app.get("/api/catalog/performance-meals", async (_req: Request, res: Response) => {
@@ -2480,7 +2482,7 @@ export async function registerRoutes(
     res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
     const onDisk = readPerformanceRecipePage(slug);
     const page = onDisk ?? buildPerformanceRecipePage(adapted);
-    return res.json(page);
+    return res.json(sanitizeRecipeHeroSurface(page));
   });
 
   app.get("/api/catalog/hall-expansion", async (_req: Request, res: Response) => {
@@ -2501,7 +2503,7 @@ export async function registerRoutes(
     res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
     const onDisk = readHallExpansionRecipePage(slug);
     const page = onDisk ?? buildHallExpansionRecipePage(adapted);
-    return res.json(page);
+    return res.json(sanitizeRecipeHeroSurface(page));
   });
 
   app.get("/api/catalog/smoothies", async (_req: Request, res: Response) => {
@@ -2522,7 +2524,17 @@ export async function registerRoutes(
     res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
     const onDisk = readSmoothieRecipePage(slug);
     const page = onDisk ?? buildSmoothieRecipePage(item);
-    return res.json(page);
+    return res.json(sanitizeRecipeHeroSurface(page));
+  });
+
+  app.get("/api/catalog/breakfast/:slug", async (req: Request, res: Response) => {
+    const slug = decodeURIComponent(String(req.params.slug)).trim().toLowerCase();
+    const page = readBreakfastRecipePageFromDisk(slug);
+    if (!page) {
+      return res.status(404).json({ message: "Recipe not in breakfast catalog" });
+    }
+    res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
+    return res.json(sanitizeRecipeHeroSurface(page));
   });
 
   app.get("/api/admin/golden-100/manifest", async (_req: Request, res: Response) => {

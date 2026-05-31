@@ -26,6 +26,10 @@ import {
   getEditorialNegativePromptBlock,
   EDITORIAL_IMAGE_STYLE_VERSION,
 } from "../prompts/editorial-image-style.js";
+import {
+  buildCategoryPhotoPromptBlock,
+  FIREHALL_KITCHEN_PHOTO_STANDARD_VERSION,
+} from "../../shared/food-imagery/firehall-kitchen-photo-standard.js";
 
 export interface BuildEditorialImagePromptInput {
   mealName: string;
@@ -49,12 +53,12 @@ export interface EditorialImagePromptResult {
 }
 
 const EDITORIAL_QUALITY_RULES = [
-  "Photorealistic food photograph only — believable geometry, natural portion scale, shot on real camera",
-  "Premium editorial menu quality — Serious Eats / Bon Appétit test-kitchen realism",
-  "Must look like a real photograph — no AI slop, no waxy textures, no synthetic gloss, no HDR neon food",
-  "Same brand look on every image — locked shot preset angle, shared lighting and grade",
-  "Mobile-first hero crop — subject centered with safe margins for 4:5 vertical cards",
-  "No text, logos, watermarks, people, hands, faces, or delivery packaging",
+  "Photorealistic food photograph only — believable geometry, crew-sized portions, shot on real camera in active firehall kitchen",
+  "Global firehall kitchen photo standard — commercial stainless, prep tables, steam tables, sheet pans, industrial lighting",
+  "Must look like a real photograph — no AI slop, no waxy textures, no synthetic gloss, no HDR neon food, no stock photo sterility",
+  "Food is primary subject — THE FOOD and THE FIREHALL KITCHEN, not firefighter marketing imagery",
+  "Mobile-first hero crop — subject centered with safe margins for 4:5 vertical cards, not extreme macro close-up",
+  "No text, logos, watermarks, fire trucks, bunker gear, or recruitment imagery; blurred background kitchen staff optional",
 ] as const;
 
 function stablePromptSeed(input: BuildEditorialImagePromptInput, presetId: ImageStylePresetId): string {
@@ -111,10 +115,11 @@ export function buildEditorialImagePrompt(
     `Mood: ${preset.mood}`,
     `Color grade: ${preset.colorGrading}`,
     `Crop discipline: ${preset.cropPreference}-weighted for mobile vertical hero`,
+    buildCategoryPhotoPromptBlock(input.category, input.mealFormat, dish),
     ...getVisualLockPromptLines(presetId),
     ...getMobileCropPromptLines(presetId),
     ...EDITORIAL_QUALITY_RULES,
-    `Preset ${presetId} v${IMAGE_STYLE_PRESET_VERSION}`,
+    `Preset ${presetId} v${IMAGE_STYLE_PRESET_VERSION} (kitchen standard ${FIREHALL_KITCHEN_PHOTO_STANDARD_VERSION})`,
   ].join(". ");
 
   const positiveParts = [
@@ -139,6 +144,9 @@ export function buildEditorialImagePrompt(
     "random props",
     "fast food commercial glare",
     "stock photo sterility",
+    "restaurant fine dining glamour",
+    "firefighter recruitment photo",
+    "white studio background",
   ];
 
   const positive = positiveParts.join(". ");

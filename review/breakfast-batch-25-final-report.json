@@ -1,0 +1,77 @@
+{
+  "generatedAt": "2026-05-30T21:23:00.000Z",
+  "phase": "PHASE 2 — Breakfast Collection (+25)",
+  "status": "COMPLETE",
+  "summary": {
+    "recipesAdded": 25,
+    "breakfastCatalogTotal": 67,
+    "previousBreakfastCount": 42,
+    "imagesCreated": {
+      "heroes": 25,
+      "mobile": 25,
+      "thumbnails": 25,
+      "rails": 25,
+      "totalAssets": 100
+    },
+    "pagesCreated": 25,
+    "catalogPagesTotal": 67,
+    "databaseSeeded": 67
+  },
+  "recipesAdded": [
+    "huevos-rancheros-crew",
+    "eggs-benedict-hall-style",
+    "corned-beef-hash-breakfast",
+    "chicken-and-waffles-crew",
+    "chilaquiles-verde-bake",
+    "shrimp-and-grits-breakfast",
+    "country-fried-steak-eggs",
+    "green-chile-breakfast-burritos",
+    "migas-for-the-crew",
+    "breakfast-fried-rice-crew",
+    "belgian-waffle-platter",
+    "farmers-breakfast-casserole",
+    "tater-tot-breakfast-casserole",
+    "smoked-salmon-benedit",
+    "bagel-lox-breakfast-board",
+    "irish-breakfast-fry-up",
+    "sheet-pan-full-english",
+    "german-potato-breakfast-skillet",
+    "breakfast-stromboli-roll",
+    "scrapple-and-eggs-skillet",
+    "club-sandwich-breakfast-bake",
+    "johnnycakes-with-syrup",
+    "overnight-sausage-strata",
+    "biscuit-french-toast-sliders",
+    "lumberjack-breakfast-platter"
+  ],
+  "exploreIntegration": {
+    "category": "Breakfast & Brunch",
+    "newRowsCreated": false,
+    "batchExploreEligible": "25/25",
+    "catalogExploreEligibleAfter": "150/275 (54.5% coverage)",
+    "breakfastExploreEligibleInApprovedRoutes": 34
+  },
+  "qaResults": {
+    "auditBreakfastBatch25": "PASS — 25/25 pages, images, Explore eligibility",
+    "uniqueHeroMd5": "25/25 unique",
+    "duplicateHeroImagesInBatch": 0,
+    "missingAssetsInBatch": 0,
+    "brokenSlugsInBatch": 0,
+    "exploreVerifyImages": "PASS — 150 Explore recipes slug-validated",
+    "npmCheck": "PASS",
+    "auditPublicAssets": "PASS — zero broken public assets",
+    "auditRecipeTemplateLanguage": "PASS (after fixing breakfast-fried-rice-crew step title)",
+    "auditApprovedRecipeDataRoutes": "PASS — 150 recipes (34 breakfast)"
+  },
+  "fixesApplied": [
+    "overnight-sausage-strata: removed step minutes=480 (schema max 180)",
+    "country-fried-steak-eggs: title includes Breakfast for Explore category validation",
+    "breakfast-fried-rice-crew: renamed step from Finish and serve to Toss with sesame oil and portion"
+  ],
+  "notes": [
+    "Breakfast schema has no relatedRecipes or equipmentList fields; content uses stationWorkflow, cleanupNotes, and detailed steps instead.",
+    "Imagery generated via curated editorial prompts + writeBreakfastCatalogImageVariants (hero/mobile/thumb/rail).",
+    "All 25 slugs registered in BREAKFAST_CANONICAL_UNIQUE_SLUGS for strict no-reuse Explore policy."
+  ],
+  "failures": []
+}

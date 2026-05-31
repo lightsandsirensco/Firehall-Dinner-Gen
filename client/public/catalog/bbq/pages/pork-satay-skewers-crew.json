@@ -1,0 +1,218 @@
+{
+  "slug": "pork-satay-skewers-crew",
+  "title": "Indonesian Tamarind Pork Satay Batches",
+  "displayTitle": "Indonesian Tamarind Pork Satay Batches",
+  "seoTitle": "Indonesian Tamarind Pork Satay Batches | Firehall BBQ",
+  "shortDescription": "Satay skewer night—peanut glaze, coconut char, hall portions for ten",
+  "subtitle": "Coconut-peanut glazed pork, cucumber pickle, and char for ten",
+  "category": "bbq_grill_nights",
+  "cuisine": "indonesian",
+  "description": "Pork shoulder strips marinate in lemongrass and coconut milk, grill on skewers until caramelized, and finish with warm peanut sauce and quick cucumber pickle.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 16,
+  "prepTime": 40,
+  "difficulty": "medium",
+  "calories": 520,
+  "protein": 32,
+  "carbs": 48,
+  "fats": 22,
+  "tags": [
+    "protein:pork",
+    "format:crew_kebab",
+    "category:bbq_grill_nights",
+    "bbq",
+    "smoker",
+    "grill",
+    "firehall_bbq_25",
+    "bbq",
+    "grill",
+    "firehall_bbq_30"
+  ],
+  "equipment": [
+    "flat-top griddle",
+    "skewers",
+    "instant-read thermometer",
+    "saucepan",
+    "hotel pans",
+    "basting brush"
+  ],
+  "ingredients": [
+    {
+      "name": "pork shoulder",
+      "quantity": "5.5",
+      "unit": "lb",
+      "notes": "cut into strips",
+      "group": "Main"
+    },
+    {
+      "name": "tamarind paste",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Marinade"
+    },
+    {
+      "name": "galangal",
+      "quantity": "2",
+      "unit": "tbsp",
+      "notes": "grated",
+      "group": "Marinade"
+    },
+    {
+      "name": "coriander seeds",
+      "quantity": "1",
+      "unit": "tbsp",
+      "notes": "toasted and ground",
+      "group": "Marinade"
+    },
+    {
+      "name": "turmeric",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Marinade"
+    },
+    {
+      "name": "coconut cream",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Marinade"
+    },
+    {
+      "name": "creamy peanut butter",
+      "quantity": "0.75",
+      "unit": "cup",
+      "group": "Peanut sauce"
+    },
+    {
+      "name": "kecap manis",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Peanut sauce"
+    },
+    {
+      "name": "Thai basil",
+      "quantity": "0.5",
+      "unit": "cup",
+      "notes": "chopped",
+      "group": "Finish"
+    },
+    {
+      "name": "cucumber relish",
+      "quantity": "2",
+      "unit": "cups",
+      "notes": "quick-pickled with rice vinegar",
+      "group": "Pickle"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Marinate pork strips",
+      "instruction": "Toss pork with coconut milk, lemongrass, turmeric, fish sauce, and brown sugar. Marinate at least 2 hours refrigerated. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 20,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Quick pickle cucumbers",
+      "instruction": "Slice cucumbers thin. Toss with rice vinegar, pinch of sugar, and salt. Chill until service. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Build peanut sauce",
+      "instruction": "Warm peanut butter with coconut milk, fish sauce, and sriracha until pourable. Hold at 140°F. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Preheat grill grates",
+      "instruction": "Preheat grill to medium-high, 425°F. Oil grates well. Plan about 8 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 8,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Skewer and grill pork",
+      "instruction": "Thread pork strips on skewers. Grill 3–4 minutes per side, basting with peanut sauce, until charred and 145°F internal. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 12,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Glaze finish",
+      "instruction": "Brush final coat of peanut sauce and grill 1 minute per side until sticky. Watch sugar—it burns above 450°F. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 3,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 7,
+      "title": "Hold at 170°F",
+      "instruction": "Rest skewers 3 minutes. Transfer to hotel pans, cover with foil, hold at 170°F. If tone drops, leave covered. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Serve with pickle",
+      "instruction": "Platter skewers with warm peanut sauce and cucumber pickle. About 8 oz pork per firefighter. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Cut pork strips uniform—thin ends burn while thick centers stay raw.",
+    "Pat excess marinade off before grilling to reduce flare-ups.",
+    "Peanut sauce thinned with warm coconut milk stays dippable on the line."
+  ],
+  "tonightSpread": [
+    "Pork satay skewers with peanut sauce and cucumber pickle.",
+    "Steamed jasmine rice for a full plate."
+  ],
+  "leftovers": [
+    "Pull pork off skewers for satay rice bowls.",
+    "Chop into lettuce cups with extra peanut sauce."
+  ],
+  "whyCrewsLikeIt": "Pork satay is a crowd pleaser that isn't pulled pork or sausage. Skewers glaze fast on a hot grill and hold covered at 170°F between tones.",
+  "mealPrepNotes": "Marinate pork 2–8 hours. Grill medium-high 425°F. Hold glazed skewers covered at 170°F up to 35 minutes. Peanut sauce stays warm at 140°F on the line.",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 520,
+    "protein": 32,
+    "carbs": 48,
+    "fats": 22,
+    "label": "per serving (hall portion)",
+    "source": "estimated"
+  },
+  "heroImage": "/images/smoker-catalog/pork-satay-skewers-crew.jpg",
+  "heroImageAlt": "Indonesian Tamarind Pork Satay Batches — crew-sized BBQ spread with visible smoke and bark",
+  "mobileImage": "/images/mobile/smoker-catalog/pork-satay-skewers-crew.jpg",
+  "thumbImage": "/images/thumbs/smoker-catalog/pork-satay-skewers-crew.jpg",
+  "railImage": "/images/rails/smoker-catalog/pork-satay-skewers-crew.jpg",
+  "realismScore": 88,
+  "firefighterScore": 90,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "indonesian tamarind pork satay batches",
+    "pork satay skewers crew",
+    "pork",
+    "Indonesian",
+    "crew kebab",
+    "bbq",
+    "firehall",
+    "pork satay skewers",
+    "indonesian peanut pork",
+    "coconut satay grill"
+  ],
+  "relatedSlugs": [
+    "carolina-vinegar-pulled-pork",
+    "honey-chipotle-chicken-thighs",
+    "smoked-chicken-quarters-white-sauce",
+    "brisket-style-beef-sandwiches-au-jus"
+  ],
+  "sourceName": "Firehall Meals BBQ Collection",
+  "generatedAt": "2026-05-31T02:29:42.533Z",
+  "contentVersion": 2
+}

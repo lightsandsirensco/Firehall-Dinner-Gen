@@ -95,36 +95,57 @@
   "steps": [
     {
       "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Cottage Cheese Protein Pasta Bake in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch mixed. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
       "title": "Par-cook penne",
-      "instruction": "Boil penne in salted water 7–8 minutes until flexible but still firm in the center. Drain well so excess water does not thin the bake.",
+      "instruction": "Boil penne in salted water 7–8 minutes until flexible but still firm in the center. Drain well so excess water does not thin the bake. Bake until the center reaches a safe internal temp (165°F) and edges look set — use a thermometer at the thickest point. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 8,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 2,
-      "title": "Blend cottage cheese sauce",
-      "instruction": "Blend cottage cheese, eggs, garlic, basil, oregano, salt, and pepper until completely smooth with no curd texture remaining.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 3,
-      "title": "Layer pasta and sauces",
-      "instruction": "Toss penne with cottage cheese mixture and half the marinara in a large bowl until evenly coated and glossy.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
       "stepNumber": 4,
-      "title": "Assemble and top with cheese",
-      "instruction": "Spread half the pasta in a greased hotel pan. Drizzle remaining marinara, then top with remaining pasta and mozzarella-parmesan blend.",
+      "title": "Blend cottage cheese sauce",
+      "instruction": "Blend cottage cheese, eggs, garlic, basil, oregano, salt, and pepper until completely smooth with no curd texture remaining. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 5,
+      "title": "Layer pasta and sauces",
+      "instruction": "Toss penne with cottage cheese mixture and half the marinara in a large bowl until evenly coated and glossy. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Assemble and top with cheese",
+      "instruction": "Spread half the pasta in a greased hotel pan. Drizzle remaining marinara, then top with remaining pasta and mozzarella-parmesan blend. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
       "title": "Bake until bubbling",
-      "instruction": "Bake at 375°F for 30–35 minutes until edges bubble and cheese turns golden brown with a few crisp spots on top.",
+      "instruction": "Bake at 375°F for 30–35 minutes until edges bubble and cheese turns golden brown with a few crisp spots on top. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 35,
       "heatLevel": "medium"
     }

@@ -1,0 +1,215 @@
+{
+  "slug": "reverse-seared-ribeye-crew",
+  "title": "Reverse-Seared Ribeye for the Crew",
+  "displayTitle": "Reverse-Seared Ribeye for the Crew",
+  "seoTitle": "Reverse-Seared Ribeye for the Crew | Firehall BBQ",
+  "shortDescription": "Steakhouse crust with smoker depth—ten ribeyes, one plan",
+  "subtitle": "Smoked then seared boneless ribeyes, compound butter, for ten",
+  "category": "bbq_grill_nights",
+  "cuisine": "american",
+  "description": "Adapted from classic reverse-sear technique (Meat Church, Hey Grill Hey): boneless ribeyes smoke low at 225°F to 115°F, rest, then sear hard to 130°F medium-rare with garlic-herb compound butter.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 75,
+  "prepTime": 25,
+  "difficulty": "medium",
+  "calories": 373,
+  "protein": 23,
+  "carbs": 9,
+  "fats": 28,
+  "tags": [
+    "protein:beef",
+    "format:grill",
+    "category:bbq_grill_nights",
+    "bbq",
+    "smoker",
+    "grill",
+    "firehall_bbq_25",
+    "bbq",
+    "beef",
+    "high_protein"
+  ],
+  "equipment": [
+    "smoker",
+    "cast iron or grill",
+    "instant-read thermometer",
+    "sheet pans",
+    "tongs"
+  ],
+  "ingredients": [
+    {
+      "name": "boneless ribeye steaks",
+      "quantity": "10",
+      "unit": "pieces",
+      "notes": "about 12 oz each, 1.25 inch thick"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "3",
+      "unit": "tbsp"
+    },
+    {
+      "name": "coarse black pepper",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "smoked paprika",
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "garlic powder",
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "neutral oil",
+      "quantity": "3",
+      "unit": "tbsp"
+    },
+    {
+      "name": "unsalted butter",
+      "quantity": "8",
+      "unit": "tbsp",
+      "notes": "softened"
+    },
+    {
+      "name": "fresh rosemary",
+      "quantity": "2",
+      "unit": "tbsp",
+      "notes": "minced"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "3",
+      "unit": "whole",
+      "notes": "minced"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Reverse-Seared Ribeye for the Crew in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch beef. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Season the ribeyes",
+      "instruction": "Pat steaks dry. Coat with oil, then salt, pepper, paprika, and garlic powder on all sides. Rest 20 minutes at room temp. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 20,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Smoke low at 225°F",
+      "instruction": "Smoke steaks at 225°F until internal temp reaches 115°F for medium-rare, about 35–45 minutes. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 40,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Compound butter",
+      "instruction": "Mix softened butter, rosemary, and minced garlic. Roll into a log or keep soft for finishing. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Sear hard",
+      "instruction": "Sear in screaming-hot cast iron or over grill at 500°F+ 90 seconds per side until crust forms and internal hits 130°F medium-rare. Plan about 8 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 8,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 7,
+      "title": "Butter baste",
+      "instruction": "Add compound butter to pan off direct flame; tilt and baste steaks 30 seconds. Rest 5 minutes tented with foil. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 6,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Hold at 170°F",
+      "instruction": "If holding, tent with foil and place in 170°F oven up to 20 minutes. Do not exceed 145°F internal on the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
+      "title": "Tonight's board",
+      "instruction": "Steaks on a board with extra compound butter melting on top. Call temps: 130°F medium-rare pull. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 5,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 10,
+      "title": "Leftovers",
+      "instruction": "Slice cold for steak sandwiches with horseradish mayo. Reheat gently in au jus—don't re-sear. Cook until char marks are visible and the thickest piece reads 145°F for medium beef, 160°F for ground on an instant-read thermometer. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
+      "minutes": 5,
+      "heatLevel": "high"
+    }
+  ],
+  "proTips": [
+    "115°F off the smoker + hard sear lands medium-rare—adjust to 120°F for medium.",
+    "Dry surface = better crust; pat again before searing.",
+    "Don't skip the rest or juices run when you cut on the line."
+  ],
+  "tonightSpread": [
+    "Ribeyes on a board with compound butter.",
+    "Grilled asparagus and garlic bread."
+  ],
+  "leftovers": [
+    "Steak and egg breakfast sandwiches.",
+    "Slice over a wedge salad with blue cheese."
+  ],
+  "whyCrewsLikeIt": "Reverse sear gives even edge-to-edge pink and a real crust. Steaks hold tented at 170°F up to 20 minutes without overcooking if pulled right.",
+  "mealPrepNotes": "Season early. Smoke in batches if smoker space is tight. Sear to order if possible; otherwise hold tented at 170°F max 20 minutes.",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 373,
+    "protein": 23,
+    "carbs": 9,
+    "fats": 28,
+    "label": "per serving (hall portion)",
+    "source": "estimated"
+  },
+  "heroImage": "/images/smoker-catalog/reverse-seared-ribeye-crew.jpg",
+  "heroImageAlt": "Reverse-Seared Ribeye for the Crew — crew-sized BBQ spread with visible smoke and bark",
+  "mobileImage": "/images/mobile/smoker-catalog/reverse-seared-ribeye-crew.jpg",
+  "thumbImage": "/images/thumbs/smoker-catalog/reverse-seared-ribeye-crew.jpg",
+  "railImage": "/images/rails/smoker-catalog/reverse-seared-ribeye-crew.jpg",
+  "realismScore": 88,
+  "firefighterScore": 90,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "reverse-seared ribeye for the crew",
+    "reverse seared ribeye crew",
+    "beef",
+    "American",
+    "grill",
+    "bbq",
+    "firehall",
+    "reverse sear ribeye",
+    "smoked steak",
+    "compound butter",
+    "130 medium rare"
+  ],
+  "relatedSlugs": [
+    "santa-maria-tri-tip-roast",
+    "smoked-picanha-steak-platter",
+    "brisket-style-beef-sandwiches-au-jus"
+  ],
+  "sourceName": "Firehall Meals BBQ Collection",
+  "generatedAt": "2026-05-31T02:29:42.531Z",
+  "contentVersion": 2
+}

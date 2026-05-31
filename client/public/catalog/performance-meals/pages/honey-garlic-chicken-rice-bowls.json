@@ -103,36 +103,57 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Cook rice and steam broccoli",
-      "instruction": "Cook jasmine rice per package directions. Steam broccoli 4–5 minutes until bright green and tender-crisp, not olive drab or mushy.",
-      "minutes": 20,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Honey Garlic Chicken Rice Bowls in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Sear chicken thighs",
-      "instruction": "Heat 1 tbsp oil in two skillets over medium-high. Sear thighs 4–5 minutes per side until golden and internal temp reaches 165°F.",
-      "minutes": 12,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
       "heatLevel": "medium-high"
     },
     {
       "stepNumber": 3,
-      "title": "Prepare honey garlic glaze",
-      "instruction": "Whisk soy sauce, honey, vinegar, garlic, ginger, sesame oil, and cornstarch until smooth with no starch lumps at the bottom.",
-      "minutes": 3,
+      "title": "Cook rice and steam broccoli",
+      "instruction": "Cook jasmine rice per package directions. Steam broccoli 4–5 minutes until bright green and tender-crisp, not olive drab or mushy. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 20,
       "heatLevel": ""
     },
     {
       "stepNumber": 4,
+      "title": "Sear chicken thighs",
+      "instruction": "Heat 1 tbsp oil in two skillets over medium-high. Sear thighs 4–5 minutes per side until golden and internal temp reaches 165°F. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 12,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Prepare honey garlic glaze",
+      "instruction": "Whisk soy sauce, honey, vinegar, garlic, ginger, sesame oil, and cornstarch until smooth with no starch lumps at the bottom. Plan about 3 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 3,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
       "title": "Glaze chicken in pan",
-      "instruction": "Pour glaze over seared thighs. Simmer 3–4 minutes, turning often, until sauce thickens to a glossy coat that clings to the meat.",
+      "instruction": "Pour glaze over seared thighs. Simmer 3–4 minutes, turning often, until sauce thickens to a glossy coat that clings to the meat. Cook until char marks are visible and the thickest piece reads 165°F on an instant-read thermometer. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 4,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
       "title": "Build bowls at the line",
-      "instruction": "Slice chicken and portion over rice with broccoli. Drizzle extra glaze, top with green onion and sesame seeds.",
+      "instruction": "Slice chicken and portion over rice with broccoli. Drizzle extra glaze, top with green onion and sesame seeds. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 5,
       "heatLevel": ""
     }

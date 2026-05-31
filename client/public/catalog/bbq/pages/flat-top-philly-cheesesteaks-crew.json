@@ -1,0 +1,209 @@
+{
+  "slug": "flat-top-philly-cheesesteaks-crew",
+  "title": "Cooper Sharp Chopped Ribeye Hoagies",
+  "displayTitle": "Cooper Sharp Chopped Ribeye Hoagies",
+  "seoTitle": "Cooper Sharp Chopped Ribeye Hoagies | Firehall BBQ",
+  "shortDescription": "Philly on the flat-top—chopped ribeye, whiz optional, ten hoagies fast",
+  "subtitle": "Chopped ribeye, griddled onions, and melted provolone for ten",
+  "category": "bbq_grill_nights",
+  "cuisine": "american",
+  "description": "Ribeye slices freeze partially and chop fine, griddle with onions until charred, melt provolone, and pile on toasted hoagie rolls for ten cheesesteaks.",
+  "crewSize": 10,
+  "baseServings": 10,
+  "cookTime": 25,
+  "prepTime": 30,
+  "difficulty": "medium",
+  "calories": 701,
+  "protein": 66,
+  "carbs": 5,
+  "fats": 45,
+  "tags": [
+    "protein:beef",
+    "format:cheesesteak_press",
+    "category:bbq_grill_nights",
+    "bbq",
+    "smoker",
+    "grill",
+    "firehall_bbq_25",
+    "bbq",
+    "grill",
+    "firehall_bbq_30"
+  ],
+  "equipment": [
+    "griddle or flat-top",
+    "sharp spatula",
+    "bench scraper",
+    "instant-read thermometer",
+    "hotel pans"
+  ],
+  "ingredients": [
+    {
+      "name": "ribeye steak",
+      "quantity": "5.5",
+      "unit": "lb",
+      "notes": "partially frozen for chopping",
+      "group": "Main"
+    },
+    {
+      "name": "Cooper Sharp cheese",
+      "quantity": "20",
+      "unit": "slices",
+      "group": "Philly"
+    },
+    {
+      "name": "Amoroso hoagie rolls",
+      "quantity": "10",
+      "unit": "whole",
+      "group": "Philly"
+    },
+    {
+      "name": "Spanish onions",
+      "quantity": "4",
+      "unit": "whole",
+      "notes": "thin-sliced",
+      "group": "Philly"
+    },
+    {
+      "name": "beef tallow",
+      "quantity": "0.25",
+      "unit": "cup",
+      "group": "Griddle"
+    },
+    {
+      "name": "Kitchen Bouquet",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "dried basil",
+      "quantity": "1",
+      "unit": "tsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "ground white pepper",
+      "quantity": "1",
+      "unit": "tsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "long hot peppers",
+      "quantity": "6",
+      "unit": "whole",
+      "notes": "optional",
+      "group": "Service"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Prep ribeye for chopping",
+      "instruction": "Partially freeze ribeye 45 minutes. Slice thin, then chop fine with bench scraper. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 20,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Slice onions",
+      "instruction": "Slice onions paper-thin for quick caramelization on the griddle. Cook until char marks are visible and the thickest piece reads 145°F for medium beef, 160°F for ground on an instant-read thermometer. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Heat flat-top",
+      "instruction": "Preheat griddle to 425°F. Film with oil. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 10,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Griddle onions",
+      "instruction": "Griddle onions 8–10 minutes until soft and golden. Push to cooler zone. Cook until char marks are visible and the thickest piece reads 145°F for medium beef, 160°F for ground on an instant-read thermometer. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 10,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Chop and sear beef",
+      "instruction": "Griddle chopped ribeye in batches, chopping with spatulas on the flat-top until charred and 145°F. Plan about 12 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 12,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Melt cheese",
+      "instruction": "Combine beef with onions, lay provolone over top, cover with dome or foil until melted. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 5,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 7,
+      "title": "Toast rolls",
+      "instruction": "Split hoagies and toast cut-side down on griddle at 375°F until crisp. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 5,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 8,
+      "title": "Line for ten",
+      "instruction": "Pile cheesesteak mix into rolls. About 8 oz beef per sandwich. Hot peppers on request. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Partially frozen ribeye chops cleaner—warm steak shreds on the flat-top.",
+    "Chop meat on the griddle with two spatulas for authentic texture.",
+    "Provolone under a dome melts evenly without drying beef."
+  ],
+  "tonightSpread": [
+    "Flat-top Philly cheesesteaks with hot cherry peppers.",
+    "French fries or onion rings on the side."
+  ],
+  "leftovers": [
+    "Chopped beef into breakfast hoagie with eggs.",
+    "Cheesesteak egg rolls if feeling ambitious."
+  ],
+  "whyCrewsLikeIt": "Cheesesteaks are flat-top food—fast, loud, and filling. Chopped beef holds at 170°F; rolls toast while meat finishes between calls.",
+  "mealPrepNotes": "Partially freeze ribeye for clean chopping. Griddle at 425°F in batches. Hold chopped beef and onions at 170°F up to 30 minutes. Build steaks to order.",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 701,
+    "protein": 66,
+    "carbs": 5,
+    "fats": 45,
+    "label": "per serving (hall portion)",
+    "source": "estimated"
+  },
+  "heroImage": "/images/smoker-catalog/flat-top-philly-cheesesteaks-crew.jpg",
+  "heroImageAlt": "Cooper Sharp Chopped Ribeye Hoagies — crew-sized BBQ spread with visible smoke and bark",
+  "mobileImage": "/images/mobile/smoker-catalog/flat-top-philly-cheesesteaks-crew.jpg",
+  "thumbImage": "/images/thumbs/smoker-catalog/flat-top-philly-cheesesteaks-crew.jpg",
+  "railImage": "/images/rails/smoker-catalog/flat-top-philly-cheesesteaks-crew.jpg",
+  "realismScore": 88,
+  "firefighterScore": 90,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "cooper sharp chopped ribeye hoagies",
+    "flat top philly cheesesteaks crew",
+    "beef",
+    "American",
+    "cheesesteak press",
+    "bbq",
+    "firehall",
+    "flat top philly cheesesteaks",
+    "griddled ribeye hoagie",
+    "philly cheesesteak crew"
+  ],
+  "relatedSlugs": [
+    "carolina-vinegar-pulled-pork",
+    "honey-chipotle-chicken-thighs",
+    "smoked-chicken-quarters-white-sauce",
+    "brisket-style-beef-sandwiches-au-jus"
+  ],
+  "sourceName": "Firehall Meals BBQ Collection",
+  "generatedAt": "2026-05-31T02:29:42.537Z",
+  "contentVersion": 2
+}

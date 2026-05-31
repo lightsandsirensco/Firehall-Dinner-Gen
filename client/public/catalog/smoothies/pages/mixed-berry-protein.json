@@ -47,19 +47,33 @@
   "steps": [
     {
       "stepNumber": 1,
-      "instruction": "Add yogurt, milk, and berries to the blender. Pulse a few times to break up frozen fruit before blending on high."
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Mixed Berry Protein Smoothie in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on."
     },
     {
       "stepNumber": 2,
-      "instruction": "Blend 45–60 seconds until completely smooth — no berry seeds stuck to the sides. Texture should pour like thick cream, not run like juice."
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch Protein blend. Confirm burners ignite evenly and sheet pans are greased or lined."
     },
     {
       "stepNumber": 3,
-      "instruction": "Taste once. Add honey only if the berries were tart; frozen commercial blends are often sweet enough on their own."
+      "title": "Add yogurt, milk, and",
+      "instruction": "Add yogurt, milk, and berries to the blender. Pulse a few times to break up frozen fruit before blending on high. Serve cold within 10 minutes — hold blended cups on ice at 38°F if the line runs long. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early."
     },
     {
       "stepNumber": 4,
-      "instruction": "Serve immediately in tall cups, or hold in the fridge up to 4 hours — stir before drinking because separation is normal."
+      "title": "Blend 45–60 seconds until",
+      "instruction": "Blend 45–60 seconds until completely smooth — no berry seeds stuck to the sides. Texture should pour like thick cream, not run like juice."
+    },
+    {
+      "stepNumber": 5,
+      "title": "Taste once. Add honey",
+      "instruction": "Taste once. Add honey only if the berries were tart; frozen commercial blends are often sweet enough on their own. Serve cold within 10 minutes — hold blended cups on ice at 38°F if the line runs long. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early."
+    },
+    {
+      "stepNumber": 6,
+      "title": "Serve immediately in tall",
+      "instruction": "Serve immediately in tall cups, or hold in the fridge up to 4 hours — stir before drinking because separation is normal. Serve cold within 10 minutes — hold blended cups on ice at 38°F if the line runs long. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early."
     }
   ],
   "nutrition": {
@@ -89,8 +103,8 @@
     "Use whey or plant protein powder (1 scoop) if you need a bigger protein bump."
   ],
   "shiftNote": "Works when the crew wants something cold and filling between meals without firing up the stove. Cleanup is one blender jar.",
-  "heroImage": "/images/smoothies/mixed-berry-protein.webp",
-  "thumbImage": "/images/smoothies/mixed-berry-protein.webp",
+  "heroImage": "/images/smoothies/mixed-berry-protein.jpg",
+  "thumbImage": "/images/thumbs/mixed-berry-protein.jpg",
   "tags": [
     "fuel_smoothie",
     "taxonomy:protein_smoothie",
@@ -110,6 +124,27 @@
   ],
   "relatedSlugs": [],
   "catalogSet": "fuel_smoothie",
-  "generatedAt": "2026-05-28T00:37:54.583Z",
-  "contentVersion": 1
+  "generatedAt": "2026-05-31T13:06:17.200Z",
+  "contentVersion": 2,
+  "mobileImage": "/images/mobile/mixed-berry-protein.jpg",
+  "railImage": "/images/rails/mixed-berry-protein.jpg",
+  "proTips": [
+    "Works when the crew wants something cold and filling between meals without firing up the stove. Cleanup is one blender jar.",
+    "Rinse the blender jar between batches so flavors do not muddy the next crew's cups.",
+    "If tones drop during service, cover hot food and hold at 140°F — note hold time on the pan for food safety."
+  ],
+  "tonightSpread": [
+    "Pour Mixed Berry Protein Smoothie into insulated cups or quart jars on ice for grab-and-go service.",
+    "Set granola, nut butter, and extra fruit in side bowls so crew can customize without slowing the line.",
+    "Keep a backup blender batch chilled at 38°F if service runs past 20 minutes."
+  ],
+  "leftovers": [
+    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
+    "Label trays with date and reheat to 165°F minimum before second shift."
+  ],
+  "equipment": [
+    "high-speed blender",
+    "measuring cups",
+    "ice bath pan"
+  ]
 }

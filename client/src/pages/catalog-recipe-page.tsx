@@ -1,7 +1,7 @@
 import { getSmoothieCatalogItem } from "@shared/fuel-catalog/smoothies/catalog-data";
 import { isBreakfastCatalogSlug } from "@shared/hall-catalog/gate";
 import { approvedCatalogRecipePath } from "@shared/approved-catalog";
-import { resolvePerformanceMealSlug } from "@shared/performance-meals/legacy-slug-redirects";
+import { resolveCatalogSlug } from "@shared/catalog-slug-redirects";
 import GoldenRecipePage from "@/pages/golden-recipe-page";
 import SmoothieRecipePage from "@/pages/smoothie-recipe-page";
 import { Redirect, useRoute } from "wouter";
@@ -10,14 +10,14 @@ import { Redirect, useRoute } from "wouter";
 export default function CatalogRecipePage() {
   const [, params] = useRoute("/recipes/:slug");
   const slug = params?.slug?.trim().toLowerCase() ?? "";
-  const resolvedSlug = resolvePerformanceMealSlug(slug);
+  const resolvedSlug = resolveCatalogSlug(slug);
 
   if (slug && resolvedSlug !== slug) {
-    return <Redirect to={`/recipes/${resolvedSlug}`} />;
+    return <Redirect to={approvedCatalogRecipePath(resolvedSlug)} />;
   }
 
-  if (slug && isBreakfastCatalogSlug(slug)) {
-    return <Redirect to={approvedCatalogRecipePath(slug)} />;
+  if (slug && isBreakfastCatalogSlug(resolvedSlug)) {
+    return <Redirect to={approvedCatalogRecipePath(resolvedSlug)} />;
   }
 
   if (slug && getSmoothieCatalogItem(slug)) {

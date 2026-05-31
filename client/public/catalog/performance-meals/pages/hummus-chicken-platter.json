@@ -103,36 +103,64 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Make hummus base",
-      "instruction": "Blend chickpeas, tahini, half the lemon juice, 4 garlic cloves, cumin, and 2 tbsp olive oil until silky smooth, adding ice water as needed.",
-      "minutes": 8,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Hummus Chicken Platter in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Season and cook chicken",
-      "instruction": "Rub chicken with paprika, minced garlic, salt, and 2 tbsp oil. Roast at 425°F 18–22 minutes until 165°F with lightly charred edges.",
-      "minutes": 20,
-      "heatLevel": "high"
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
     },
     {
       "stepNumber": 3,
-      "title": "Rest and slice chicken",
-      "instruction": "Rest chicken 5 minutes, then slice ¼-inch against the grain. Slices should be moist with no pink center and clean cut edges.",
+      "title": "Make hummus base",
+      "instruction": "Blend chickpeas, tahini, half the lemon juice, 4 garlic cloves, cumin, and 2 tbsp olive oil until silky smooth, adding ice water as needed. Plan about 8 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 8,
       "heatLevel": ""
     },
     {
       "stepNumber": 4,
-      "title": "Assemble platter",
-      "instruction": "Spread hummus in a large pan, drizzle olive oil and paprika. Arrange chicken over hummus with cucumber, tomatoes, and olives around edges.",
+      "title": "Season and cook chicken",
+      "instruction": "Rub chicken with paprika, minced garlic, salt, and 2 tbsp oil. Roast at 425°F 18–22 minutes until 165°F with lightly charred edges. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 20,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Rest and slice chicken",
+      "instruction": "Rest chicken 5 minutes, then slice ¼-inch against the grain. Slices should be moist with no pink center and clean cut edges. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 8,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 6,
+      "title": "Assemble platter",
+      "instruction": "Spread hummus in a large pan, drizzle olive oil and paprika. Arrange chicken over hummus with cucumber, tomatoes, and olives around edges. Plan about 8 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
       "title": "Warm pita and serve",
-      "instruction": "Warm pita 5 minutes wrapped in foil at 300°F until soft and pliable. Serve for scooping hummus and chicken together.",
+      "instruction": "Warm pita 5 minutes wrapped in foil at 300°F until soft and pliable. Serve for scooping hummus and chicken together. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 5,
       "heatLevel": ""
     }

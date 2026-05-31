@@ -1,8 +1,8 @@
 {
   "version": 1,
   "contentVersion": 2,
-  "generatedAt": "2026-05-30T03:14:19.253Z",
-  "recipeCount": 56,
+  "generatedAt": "2026-05-31T01:50:00.978Z",
+  "recipeCount": 74,
   "recipes": [
     {
       "slug": "smoked-turkey-breast",
@@ -24,7 +24,7 @@
         "smoker",
         "turkey",
         "hall_expansion",
-        "hall_expansion_56",
+        "hall_expansion_74",
         "hall_meal",
         "firefighter_meal"
       ],
@@ -56,7 +56,7 @@
         "beef",
         "comfort",
         "hall_expansion",
-        "hall_expansion_56",
+        "hall_expansion_74",
         "hall_meal",
         "firefighter_meal"
       ],
@@ -64,38 +64,6 @@
       "popularityWeight": 7.8,
       "searchTerms": [
         "smoked meatloaf with glaze",
-        "smoker recipes"
-      ]
-    },
-    {
-      "slug": "smoked-mac-and-cheese",
-      "title": "Smoked Mac and Cheese",
-      "subtitle": "Creamy three-cheese mac finished with light smoke for ten",
-      "category": "hall_expansion",
-      "cuisine": "american",
-      "protein": "vegetarian",
-      "mealFormat": "smoker",
-      "cookTime": 60,
-      "difficulty": "easy",
-      "heroImage": "/images/hall-expansion/smoked-mac-and-cheese.jpg",
-      "thumbImage": "/images/thumbs/hall-expansion/smoked-mac-and-cheese.jpg",
-      "tags": [
-        "protein:vegetarian",
-        "format:smoker",
-        "category:smoker_recipes",
-        "bbq",
-        "smoker",
-        "comfort",
-        "side",
-        "hall_expansion",
-        "hall_expansion_56",
-        "hall_meal",
-        "firefighter_meal"
-      ],
-      "firefighterScore": 86,
-      "popularityWeight": 7.8,
-      "searchTerms": [
-        "smoked mac and cheese",
         "smoker recipes"
       ]
     },
@@ -119,7 +87,7 @@
         "smoker",
         "pork",
         "hall_expansion",
-        "hall_expansion_56",
+        "hall_expansion_74",
         "hall_meal",
         "firefighter_meal"
       ],
@@ -151,7 +119,7 @@
         "pork",
         "handheld",
         "hall_expansion",
-        "hall_expansion_56",
+        "hall_expansion_74",
         "hall_meal",
         "firefighter_meal"
       ],
@@ -182,7 +150,7 @@
         "smoker",
         "game_day",
         "hall_expansion",
-        "hall_expansion_56",
+        "hall_expansion_74",
         "hall_meal",
         "firefighter_meal"
       ],
@@ -214,7 +182,7 @@
         "turkey",
         "handheld",
         "hall_expansion",
-        "hall_expansion_56",
+        "hall_expansion_74",
         "hall_meal",
         "firefighter_meal"
       ],
@@ -245,7 +213,7 @@
         "smoker",
         "beef",
         "hall_expansion",
-        "hall_expansion_56",
+        "hall_expansion_74",
         "hall_meal",
         "firefighter_meal"
       ],
@@ -276,7 +244,7 @@
         "smoker",
         "beef",
         "hall_expansion",
-        "hall_expansion_56",
+        "hall_expansion_74",
         "hall_meal",
         "firefighter_meal"
       ],
@@ -307,7 +275,7 @@
         "smoker",
         "chicken",
         "hall_expansion",
-        "hall_expansion_56",
+        "hall_expansion_74",
         "hall_meal",
         "firefighter_meal"
       ],
@@ -338,7 +306,7 @@
         "comfort",
         "handheld",
         "hall_expansion",
-        "hall_expansion_56",
+        "hall_expansion_74",
         "hall_meal",
         "firefighter_meal"
       ],
@@ -369,7 +337,7 @@
         "handheld",
         "comfort",
         "hall_expansion",
-        "hall_expansion_56",
+        "hall_expansion_74",
         "hall_meal",
         "firefighter_meal"
       ],
@@ -400,7 +368,7 @@
         "handheld",
         "comfort",
         "hall_expansion",
-        "hall_expansion_56",
+        "hall_expansion_74",
         "hall_meal",
         "firefighter_meal"
       ],
@@ -431,7 +399,7 @@
         "comfort",
         "handheld",
         "hall_expansion",
-        "hall_expansion_56",
+        "hall_expansion_74",
         "hall_meal",
         "firefighter_meal"
       ],
@@ -462,7 +430,7 @@
         "handheld",
         "beef",
         "hall_expansion",
-        "hall_expansion_56",
+        "hall_expansion_74",
         "hall_meal",
         "firefighter_meal"
       ],
@@ -493,7 +461,7 @@
         "chicken",
         "handheld",
         "hall_expansion",
-        "hall_expansion_56",
+        "hall_expansion_74",
         "hall_meal",
         "firefighter_meal"
       ],
@@ -525,7 +493,7 @@
         "handheld",
         "bbq",
         "hall_expansion",
-        "hall_expansion_56",
+        "hall_expansion_74",
         "hall_meal",
         "firefighter_meal"
       ],
@@ -556,7 +524,7 @@
         "handheld",
         "comfort",
         "hall_expansion",
-        "hall_expansion_56",
+        "hall_expansion_74",
         "hall_meal",
         "firefighter_meal"
       ],
@@ -587,7 +555,7 @@
         "handheld",
         "comfort",
         "hall_expansion",
-        "hall_expansion_56",
+        "hall_expansion_74",
         "hall_meal",
         "firefighter_meal"
       ],
@@ -619,7 +587,7 @@
         "comfort",
         "handheld",
         "hall_expansion",
-        "hall_expansion_56",
+        "hall_expansion_74",
         "hall_meal",
         "firefighter_meal"
       ],
@@ -650,7 +618,7 @@
         "chicken",
         "handheld",
         "hall_expansion",
-        "hall_expansion_56",
+        "hall_expansion_74",
         "hall_meal",
         "firefighter_meal"
       ],
@@ -681,7 +649,7 @@
         "chicken",
         "handheld",
         "hall_expansion",
-        "hall_expansion_56",
+        "hall_expansion_74",
         "hall_meal",
         "firefighter_meal"
       ],
@@ -712,7 +680,7 @@
         "beef",
         "handheld",
         "hall_expansion",
-        "hall_expansion_56",
+        "hall_expansion_74",
         "hall_meal",
         "firefighter_meal"
       ],
@@ -743,7 +711,7 @@
         "pasta",
         "comfort",
         "hall_expansion",
-        "hall_expansion_56",
+        "hall_expansion_74",
         "hall_meal",
         "firefighter_meal"
       ],
@@ -775,7 +743,7 @@
         "chicken",
         "healthy",
         "hall_expansion",
-        "hall_expansion_56",
+        "hall_expansion_74",
         "hall_meal",
         "firefighter_meal"
       ],
@@ -806,7 +774,7 @@
         "handheld",
         "comfort",
         "hall_expansion",
-        "hall_expansion_56",
+        "hall_expansion_74",
         "hall_meal",
         "firefighter_meal"
       ],
@@ -837,7 +805,7 @@
         "healthy",
         "chicken",
         "hall_expansion",
-        "hall_expansion_56",
+        "hall_expansion_74",
         "hall_meal",
         "firefighter_meal"
       ],
@@ -869,7 +837,7 @@
         "pork",
         "handheld",
         "hall_expansion",
-        "hall_expansion_56",
+        "hall_expansion_74",
         "hall_meal",
         "firefighter_meal"
       ],
@@ -901,7 +869,7 @@
         "game_day",
         "handheld",
         "hall_expansion",
-        "hall_expansion_56",
+        "hall_expansion_74",
         "hall_meal",
         "firefighter_meal"
       ],
@@ -933,7 +901,7 @@
         "beef",
         "healthy",
         "hall_expansion",
-        "hall_expansion_56",
+        "hall_expansion_74",
         "hall_meal",
         "firefighter_meal"
       ],
@@ -964,7 +932,7 @@
         "smoker",
         "beef",
         "hall_expansion",
-        "hall_expansion_56",
+        "hall_expansion_74",
         "hall_meal",
         "firefighter_meal"
       ],
@@ -995,7 +963,7 @@
         "smoker",
         "pork",
         "hall_expansion",
-        "hall_expansion_56",
+        "hall_expansion_74",
         "hall_meal",
         "firefighter_meal"
       ],
@@ -1026,7 +994,7 @@
         "grill",
         "pork",
         "hall_expansion",
-        "hall_expansion_56",
+        "hall_expansion_74",
         "hall_meal",
         "firefighter_meal"
       ],
@@ -1034,37 +1002,6 @@
       "popularityWeight": 7.8,
       "searchTerms": [
         "applewood grilled pork shoulder steaks",
-        "smoker recipes"
-      ]
-    },
-    {
-      "slug": "pepper-smoked-brisket-flat",
-      "title": "Pepper-Crusted Smoked Brisket Flat",
-      "subtitle": "Lean brisket flat with bold pepper bark sliced thin for ten",
-      "category": "hall_expansion",
-      "cuisine": "american",
-      "protein": "beef",
-      "mealFormat": "smoker",
-      "cookTime": 420,
-      "difficulty": "hard",
-      "heroImage": "/images/hall-expansion/pepper-smoked-brisket-flat.jpg",
-      "thumbImage": "/images/thumbs/hall-expansion/pepper-smoked-brisket-flat.jpg",
-      "tags": [
-        "protein:beef",
-        "format:smoker",
-        "category:smoker_recipes",
-        "bbq",
-        "smoker",
-        "beef",
-        "hall_expansion",
-        "hall_expansion_56",
-        "hall_meal",
-        "firefighter_meal"
-      ],
-      "firefighterScore": 86,
-      "popularityWeight": 7.8,
-      "searchTerms": [
-        "pepper-crusted smoked brisket flat",
         "smoker recipes"
       ]
     },
@@ -1087,7 +1024,7 @@
         "chicken",
         "comfort",
         "hall_expansion",
-        "hall_expansion_56",
+        "hall_expansion_74",
         "hall_meal",
         "firefighter_meal"
       ],
@@ -1117,7 +1054,7 @@
         "chicken",
         "comfort",
         "hall_expansion",
-        "hall_expansion_56",
+        "hall_expansion_74",
         "hall_meal",
         "firefighter_meal"
       ],
@@ -1147,7 +1084,7 @@
         "chicken",
         "one_pot",
         "hall_expansion",
-        "hall_expansion_56",
+        "hall_expansion_74",
         "hall_meal",
         "firefighter_meal"
       ],
@@ -1177,7 +1114,7 @@
         "chicken",
         "budget",
         "hall_expansion",
-        "hall_expansion_56",
+        "hall_expansion_74",
         "hall_meal",
         "firefighter_meal"
       ],
@@ -1208,7 +1145,7 @@
         "game_day",
         "handheld",
         "hall_expansion",
-        "hall_expansion_56",
+        "hall_expansion_74",
         "hall_meal",
         "firefighter_meal"
       ],
@@ -1239,7 +1176,7 @@
         "comfort",
         "pasta",
         "hall_expansion",
-        "hall_expansion_56",
+        "hall_expansion_74",
         "hall_meal",
         "firefighter_meal"
       ],
@@ -1269,7 +1206,7 @@
         "beef",
         "comfort",
         "hall_expansion",
-        "hall_expansion_56",
+        "hall_expansion_74",
         "hall_meal",
         "firefighter_meal"
       ],
@@ -1300,7 +1237,7 @@
         "comfort",
         "hearty",
         "hall_expansion",
-        "hall_expansion_56",
+        "hall_expansion_74",
         "hall_meal",
         "firefighter_meal"
       ],
@@ -1331,7 +1268,7 @@
         "game_day",
         "comfort",
         "hall_expansion",
-        "hall_expansion_56",
+        "hall_expansion_74",
         "hall_meal",
         "firefighter_meal"
       ],
@@ -1361,7 +1298,7 @@
         "pasta",
         "comfort",
         "hall_expansion",
-        "hall_expansion_56",
+        "hall_expansion_74",
         "hall_meal",
         "firefighter_meal"
       ],
@@ -1392,7 +1329,7 @@
         "chicken",
         "comfort",
         "hall_expansion",
-        "hall_expansion_56",
+        "hall_expansion_74",
         "hall_meal",
         "firefighter_meal"
       ],
@@ -1423,7 +1360,7 @@
         "beef",
         "comfort",
         "hall_expansion",
-        "hall_expansion_56",
+        "hall_expansion_74",
         "hall_meal",
         "firefighter_meal"
       ],
@@ -1454,7 +1391,7 @@
         "game_day",
         "chicken",
         "hall_expansion",
-        "hall_expansion_56",
+        "hall_expansion_74",
         "hall_meal",
         "firefighter_meal"
       ],
@@ -1485,7 +1422,7 @@
         "healthy",
         "chicken",
         "hall_expansion",
-        "hall_expansion_56",
+        "hall_expansion_74",
         "hall_meal",
         "firefighter_meal"
       ],
@@ -1516,7 +1453,7 @@
         "comfort",
         "chicken",
         "hall_expansion",
-        "hall_expansion_56",
+        "hall_expansion_74",
         "hall_meal",
         "firefighter_meal"
       ],
@@ -1547,7 +1484,7 @@
         "chicken",
         "hearty",
         "hall_expansion",
-        "hall_expansion_56",
+        "hall_expansion_74",
         "hall_meal",
         "firefighter_meal"
       ],
@@ -1578,7 +1515,7 @@
         "healthy",
         "chicken",
         "hall_expansion",
-        "hall_expansion_56",
+        "hall_expansion_74",
         "hall_meal",
         "firefighter_meal"
       ],
@@ -1609,7 +1546,7 @@
         "healthy",
         "chicken",
         "hall_expansion",
-        "hall_expansion_56",
+        "hall_expansion_74",
         "hall_meal",
         "firefighter_meal"
       ],
@@ -1639,7 +1576,7 @@
         "one_pot",
         "comfort",
         "hall_expansion",
-        "hall_expansion_56",
+        "hall_expansion_74",
         "hall_meal",
         "firefighter_meal"
       ],
@@ -1670,7 +1607,7 @@
         "comfort",
         "chicken",
         "hall_expansion",
-        "hall_expansion_56",
+        "hall_expansion_74",
         "hall_meal",
         "firefighter_meal"
       ],
@@ -1701,7 +1638,7 @@
         "hearty",
         "crew_feed",
         "hall_expansion",
-        "hall_expansion_56",
+        "hall_expansion_74",
         "hall_meal",
         "firefighter_meal"
       ],
@@ -1733,7 +1670,7 @@
         "crew_feed",
         "handheld",
         "hall_expansion",
-        "hall_expansion_56",
+        "hall_expansion_74",
         "hall_meal",
         "firefighter_meal"
       ],
@@ -1741,6 +1678,626 @@
       "popularityWeight": 7.8,
       "searchTerms": [
         "hall sloppy joe feed",
+        "crew feeders"
+      ]
+    },
+    {
+      "slug": "montreal-smoked-meat-platter",
+      "title": "Montreal Smoked Meat Platter",
+      "subtitle": "Steamed brisket-style beef piled high with mustard and rye for ten",
+      "category": "hall_expansion",
+      "cuisine": "canadian",
+      "protein": "beef",
+      "mealFormat": "platter",
+      "cookTime": 300,
+      "difficulty": "medium",
+      "heroImage": "/images/hall-expansion/montreal-smoked-meat-platter.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/montreal-smoked-meat-platter.jpg",
+      "tags": [
+        "protein:beef",
+        "format:platter",
+        "category:crew_feeders",
+        "hall_expansion",
+        "crew_feeders",
+        "canadian",
+        "beef",
+        "hall_expansion_74",
+        "hall_meal",
+        "firefighter_meal"
+      ],
+      "firefighterScore": 86,
+      "popularityWeight": 7.8,
+      "searchTerms": [
+        "montreal smoked meat platter",
+        "crew feeders"
+      ]
+    },
+    {
+      "slug": "tourtiere-for-the-crew",
+      "title": "Tourtière for the Crew",
+      "subtitle": "Savory pork-and-beef pie with warm spice baked for ten",
+      "category": "hall_expansion",
+      "cuisine": "canadian",
+      "protein": "pork",
+      "mealFormat": "bake",
+      "cookTime": 55,
+      "difficulty": "medium",
+      "heroImage": "/images/hall-expansion/tourtiere-for-the-crew.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/tourtiere-for-the-crew.jpg",
+      "tags": [
+        "protein:pork",
+        "format:bake",
+        "category:crew_feeders",
+        "hall_expansion",
+        "crew_feeders",
+        "canadian",
+        "pork",
+        "hall_expansion_74",
+        "hall_meal",
+        "firefighter_meal"
+      ],
+      "firefighterScore": 86,
+      "popularityWeight": 7.8,
+      "searchTerms": [
+        "tourtière for the crew",
+        "crew feeders"
+      ]
+    },
+    {
+      "slug": "firehall-donair-platter",
+      "title": "Firehall Donair Platter",
+      "subtitle": "Spiced beef cones roasted and shaved with sweet sauce for ten",
+      "category": "hall_expansion",
+      "cuisine": "canadian",
+      "protein": "beef",
+      "mealFormat": "platter",
+      "cookTime": 65,
+      "difficulty": "medium",
+      "heroImage": "/images/hall-expansion/firehall-donair-platter.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/firehall-donair-platter.jpg",
+      "tags": [
+        "protein:beef",
+        "format:platter",
+        "category:crew_feeders",
+        "hall_expansion",
+        "crew_feeders",
+        "canadian",
+        "beef",
+        "hall_expansion_74",
+        "hall_meal",
+        "firefighter_meal"
+      ],
+      "firefighterScore": 86,
+      "popularityWeight": 7.8,
+      "searchTerms": [
+        "firehall donair platter",
+        "crew feeders"
+      ]
+    },
+    {
+      "slug": "maple-cured-salmon-plank",
+      "title": "Maple-Cured Salmon Plank",
+      "subtitle": "Cedar-planked salmon with maple glaze for ten on the grill",
+      "category": "hall_expansion",
+      "cuisine": "canadian",
+      "protein": "salmon",
+      "mealFormat": "grill",
+      "cookTime": 25,
+      "difficulty": "medium",
+      "heroImage": "/images/hall-expansion/maple-cured-salmon-plank.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/maple-cured-salmon-plank.jpg",
+      "tags": [
+        "protein:salmon",
+        "format:grill",
+        "category:crew_feeders",
+        "hall_expansion",
+        "crew_feeders",
+        "canadian",
+        "salmon",
+        "hall_expansion_74",
+        "hall_meal",
+        "firefighter_meal"
+      ],
+      "firefighterScore": 86,
+      "popularityWeight": 7.8,
+      "searchTerms": [
+        "maple-cured salmon plank",
+        "crew feeders"
+      ]
+    },
+    {
+      "slug": "classic-poutine-feed-crew",
+      "title": "Classic Poutine Feed for the Crew",
+      "subtitle": "Double-fried fries with beef gravy and cheese curds for ten",
+      "category": "hall_expansion",
+      "cuisine": "canadian",
+      "protein": "beef",
+      "mealFormat": "platter",
+      "cookTime": 40,
+      "difficulty": "medium",
+      "heroImage": "/images/hall-expansion/classic-poutine-feed-crew.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/classic-poutine-feed-crew.jpg",
+      "tags": [
+        "protein:beef",
+        "format:platter",
+        "category:crew_feeders",
+        "hall_expansion",
+        "crew_feeders",
+        "canadian",
+        "beef",
+        "hall_expansion_74",
+        "hall_meal",
+        "firefighter_meal"
+      ],
+      "firefighterScore": 86,
+      "popularityWeight": 7.8,
+      "searchTerms": [
+        "classic poutine feed for the crew",
+        "crew feeders"
+      ]
+    },
+    {
+      "slug": "cottage-pie-for-the-crew",
+      "title": "Cottage Pie for the Crew",
+      "subtitle": "Ground beef and vegetables under golden mashed potato for ten",
+      "category": "hall_expansion",
+      "cuisine": "british",
+      "protein": "beef",
+      "mealFormat": "bake",
+      "cookTime": 45,
+      "difficulty": "easy",
+      "heroImage": "/images/hall-expansion/cottage-pie-for-the-crew.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/cottage-pie-for-the-crew.jpg",
+      "tags": [
+        "protein:beef",
+        "format:bake",
+        "category:crew_feeders",
+        "hall_expansion",
+        "crew_feeders",
+        "british",
+        "beef",
+        "hall_expansion_74",
+        "hall_meal",
+        "firefighter_meal"
+      ],
+      "firefighterScore": 86,
+      "popularityWeight": 7.8,
+      "searchTerms": [
+        "cottage pie for the crew",
+        "crew feeders"
+      ]
+    },
+    {
+      "slug": "chicken-paprikash-hall",
+      "title": "Chicken Paprikash for the Hall",
+      "subtitle": "Hungarian paprika stew with sour cream over egg noodles for ten",
+      "category": "hall_expansion",
+      "cuisine": "hungarian",
+      "protein": "chicken",
+      "mealFormat": "stew",
+      "cookTime": 50,
+      "difficulty": "medium",
+      "heroImage": "/images/hall-expansion/chicken-paprikash-hall.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/chicken-paprikash-hall.jpg",
+      "tags": [
+        "protein:chicken",
+        "format:stew",
+        "category:crew_feeders",
+        "hall_expansion",
+        "crew_feeders",
+        "hungarian",
+        "chicken",
+        "hall_expansion_74",
+        "hall_meal",
+        "firefighter_meal"
+      ],
+      "firefighterScore": 86,
+      "popularityWeight": 7.8,
+      "searchTerms": [
+        "chicken paprikash for the hall",
+        "crew feeders"
+      ]
+    },
+    {
+      "slug": "chicken-cacciatore-crew",
+      "title": "Chicken Cacciatore for the Crew",
+      "subtitle": "Italian hunter-style chicken braised with tomatoes and peppers for ten",
+      "category": "hall_expansion",
+      "cuisine": "italian",
+      "protein": "chicken",
+      "mealFormat": "braise",
+      "cookTime": 55,
+      "difficulty": "medium",
+      "heroImage": "/images/hall-expansion/chicken-cacciatore-crew.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/chicken-cacciatore-crew.jpg",
+      "tags": [
+        "protein:chicken",
+        "format:braise",
+        "category:crew_feeders",
+        "hall_expansion",
+        "crew_feeders",
+        "italian",
+        "chicken",
+        "hall_expansion_74",
+        "hall_meal",
+        "firefighter_meal"
+      ],
+      "firefighterScore": 86,
+      "popularityWeight": 7.8,
+      "searchTerms": [
+        "chicken cacciatore for the crew",
+        "crew feeders"
+      ]
+    },
+    {
+      "slug": "coq-au-vin-batch",
+      "title": "Coq au Vin Batch",
+      "subtitle": "Red wine-braised chicken with mushrooms and lardons for ten",
+      "category": "hall_expansion",
+      "cuisine": "french",
+      "protein": "chicken",
+      "mealFormat": "braise",
+      "cookTime": 75,
+      "difficulty": "medium",
+      "heroImage": "/images/hall-expansion/coq-au-vin-batch.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/coq-au-vin-batch.jpg",
+      "tags": [
+        "protein:chicken",
+        "format:braise",
+        "category:crew_feeders",
+        "hall_expansion",
+        "crew_feeders",
+        "french",
+        "chicken",
+        "hall_expansion_74",
+        "hall_meal",
+        "firefighter_meal"
+      ],
+      "firefighterScore": 86,
+      "popularityWeight": 7.8,
+      "searchTerms": [
+        "coq au vin batch",
+        "crew feeders"
+      ]
+    },
+    {
+      "slug": "hungarian-goulash-crew",
+      "title": "Hungarian Goulash for the Crew",
+      "subtitle": "Paprika beef stew with caraway and potatoes for ten",
+      "category": "hall_expansion",
+      "cuisine": "hungarian",
+      "protein": "beef",
+      "mealFormat": "stew",
+      "cookTime": 120,
+      "difficulty": "easy",
+      "heroImage": "/images/hall-expansion/hungarian-goulash-crew.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/hungarian-goulash-crew.jpg",
+      "tags": [
+        "protein:beef",
+        "format:stew",
+        "category:crew_feeders",
+        "hall_expansion",
+        "crew_feeders",
+        "hungarian",
+        "beef",
+        "hall_expansion_74",
+        "hall_meal",
+        "firefighter_meal"
+      ],
+      "firefighterScore": 86,
+      "popularityWeight": 7.8,
+      "searchTerms": [
+        "hungarian goulash for the crew",
+        "crew feeders"
+      ]
+    },
+    {
+      "slug": "tonkotsu-ramen-crew",
+      "title": "Tonkotsu Ramen for the Crew",
+      "subtitle": "Rich pork-and-chicken broth with noodles and toppings for ten",
+      "category": "hall_expansion",
+      "cuisine": "japanese",
+      "protein": "pork",
+      "mealFormat": "bowl",
+      "cookTime": 240,
+      "difficulty": "hard",
+      "heroImage": "/images/hall-expansion/tonkotsu-ramen-crew.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/tonkotsu-ramen-crew.jpg",
+      "tags": [
+        "protein:pork",
+        "format:bowl",
+        "category:crew_feeders",
+        "hall_expansion",
+        "crew_feeders",
+        "japanese",
+        "pork",
+        "hall_expansion_74",
+        "hall_meal",
+        "firefighter_meal"
+      ],
+      "firefighterScore": 86,
+      "popularityWeight": 7.8,
+      "searchTerms": [
+        "tonkotsu ramen for the crew",
+        "crew feeders"
+      ]
+    },
+    {
+      "slug": "miso-ramen-bar",
+      "title": "Miso Ramen Bar",
+      "subtitle": "Chicken broth miso ramen with tofu and vegetables for ten",
+      "category": "hall_expansion",
+      "cuisine": "japanese",
+      "protein": "chicken",
+      "mealFormat": "bowl",
+      "cookTime": 90,
+      "difficulty": "medium",
+      "heroImage": "/images/hall-expansion/miso-ramen-bar.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/miso-ramen-bar.jpg",
+      "tags": [
+        "protein:chicken",
+        "format:bowl",
+        "category:crew_feeders",
+        "hall_expansion",
+        "crew_feeders",
+        "japanese",
+        "chicken",
+        "hall_expansion_74",
+        "hall_meal",
+        "firefighter_meal"
+      ],
+      "firefighterScore": 86,
+      "popularityWeight": 7.8,
+      "searchTerms": [
+        "miso ramen bar",
+        "crew feeders"
+      ]
+    },
+    {
+      "slug": "malaysian-laksa-soup",
+      "title": "Malaysian Laksa Soup",
+      "subtitle": "Coconut curry noodle soup with shrimp and chicken for ten",
+      "category": "hall_expansion",
+      "cuisine": "malaysian",
+      "protein": "shrimp",
+      "mealFormat": "soup",
+      "cookTime": 40,
+      "difficulty": "medium",
+      "heroImage": "/images/hall-expansion/malaysian-laksa-soup.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/malaysian-laksa-soup.jpg",
+      "tags": [
+        "protein:shrimp",
+        "format:soup",
+        "category:crew_feeders",
+        "hall_expansion",
+        "crew_feeders",
+        "malaysian",
+        "shrimp",
+        "hall_expansion_74",
+        "hall_meal",
+        "firefighter_meal"
+      ],
+      "firefighterScore": 86,
+      "popularityWeight": 7.8,
+      "searchTerms": [
+        "malaysian laksa soup",
+        "crew feeders"
+      ]
+    },
+    {
+      "slug": "bun-bo-hue-noodle-soup",
+      "title": "Bun Bo Hue Noodle Soup",
+      "subtitle": "Spicy lemongrass beef and pork noodle soup for ten",
+      "category": "hall_expansion",
+      "cuisine": "vietnamese",
+      "protein": "beef",
+      "mealFormat": "bowl",
+      "cookTime": 180,
+      "difficulty": "hard",
+      "heroImage": "/images/hall-expansion/bun-bo-hue-noodle-soup.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/bun-bo-hue-noodle-soup.jpg",
+      "tags": [
+        "protein:beef",
+        "format:bowl",
+        "category:crew_feeders",
+        "hall_expansion",
+        "crew_feeders",
+        "vietnamese",
+        "beef",
+        "hall_expansion_74",
+        "hall_meal",
+        "firefighter_meal"
+      ],
+      "firefighterScore": 86,
+      "popularityWeight": 7.8,
+      "searchTerms": [
+        "bun bo hue noodle soup",
+        "crew feeders"
+      ]
+    },
+    {
+      "slug": "wonton-noodle-soup-crew",
+      "title": "Wonton Noodle Soup for the Crew",
+      "subtitle": "Pork wontons in clear broth with egg noodles for ten",
+      "category": "hall_expansion",
+      "cuisine": "chinese",
+      "protein": "pork",
+      "mealFormat": "bowl",
+      "cookTime": 40,
+      "difficulty": "medium",
+      "heroImage": "/images/hall-expansion/wonton-noodle-soup-crew.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/wonton-noodle-soup-crew.jpg",
+      "tags": [
+        "protein:pork",
+        "format:bowl",
+        "category:crew_feeders",
+        "hall_expansion",
+        "crew_feeders",
+        "chinese",
+        "pork",
+        "hall_expansion_74",
+        "hall_meal",
+        "firefighter_meal"
+      ],
+      "firefighterScore": 86,
+      "popularityWeight": 7.8,
+      "searchTerms": [
+        "wonton noodle soup for the crew",
+        "crew feeders"
+      ]
+    },
+    {
+      "slug": "peri-peri-chicken-platter",
+      "title": "Peri Peri Chicken Platter",
+      "subtitle": "Portuguese-African chili chicken with charred lemon for ten",
+      "category": "hall_expansion",
+      "cuisine": "portuguese",
+      "protein": "chicken",
+      "mealFormat": "platter",
+      "cookTime": 40,
+      "difficulty": "medium",
+      "heroImage": "/images/hall-expansion/peri-peri-chicken-platter.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/peri-peri-chicken-platter.jpg",
+      "tags": [
+        "protein:chicken",
+        "format:platter",
+        "category:crew_feeders",
+        "hall_expansion",
+        "crew_feeders",
+        "portuguese",
+        "chicken",
+        "hall_expansion_74",
+        "hall_meal",
+        "firefighter_meal"
+      ],
+      "firefighterScore": 86,
+      "popularityWeight": 7.8,
+      "searchTerms": [
+        "peri peri chicken platter",
+        "crew feeders"
+      ]
+    },
+    {
+      "slug": "korean-bulgogi-grill-night",
+      "title": "Korean Bulgogi Grill Night",
+      "subtitle": "Marinated beef grilled with scallions and lettuce wraps for ten",
+      "category": "hall_expansion",
+      "cuisine": "korean",
+      "protein": "beef",
+      "mealFormat": "grill",
+      "cookTime": 20,
+      "difficulty": "medium",
+      "heroImage": "/images/hall-expansion/korean-bulgogi-grill-night.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/korean-bulgogi-grill-night.jpg",
+      "tags": [
+        "protein:beef",
+        "format:grill",
+        "category:crew_feeders",
+        "hall_expansion",
+        "crew_feeders",
+        "korean",
+        "beef",
+        "hall_expansion_74",
+        "hall_meal",
+        "firefighter_meal"
+      ],
+      "firefighterScore": 86,
+      "popularityWeight": 7.8,
+      "searchTerms": [
+        "korean bulgogi grill night",
+        "crew feeders"
+      ]
+    },
+    {
+      "slug": "lamb-kofta-skewer-platter",
+      "title": "Lamb Kofta Skewer Platter",
+      "subtitle": "Spiced lamb skewers with yogurt sauce and flatbread for ten",
+      "category": "hall_expansion",
+      "cuisine": "middle_eastern",
+      "protein": "lamb",
+      "mealFormat": "skewer",
+      "cookTime": 15,
+      "difficulty": "medium",
+      "heroImage": "/images/hall-expansion/lamb-kofta-skewer-platter.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/lamb-kofta-skewer-platter.jpg",
+      "tags": [
+        "protein:lamb",
+        "format:skewer",
+        "category:crew_feeders",
+        "hall_expansion",
+        "crew_feeders",
+        "middle_eastern",
+        "lamb",
+        "hall_expansion_74",
+        "hall_meal",
+        "firefighter_meal"
+      ],
+      "firefighterScore": 86,
+      "popularityWeight": 7.8,
+      "searchTerms": [
+        "lamb kofta skewer platter",
+        "crew feeders"
+      ]
+    },
+    {
+      "slug": "moroccan-chicken-kebab-platter",
+      "title": "Moroccan Chicken Kebab Platter",
+      "subtitle": "Chermoula-marinated chicken skewers with couscous for ten",
+      "category": "hall_expansion",
+      "cuisine": "moroccan",
+      "protein": "chicken",
+      "mealFormat": "skewer",
+      "cookTime": 20,
+      "difficulty": "medium",
+      "heroImage": "/images/hall-expansion/moroccan-chicken-kebab-platter.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/moroccan-chicken-kebab-platter.jpg",
+      "tags": [
+        "protein:chicken",
+        "format:skewer",
+        "category:crew_feeders",
+        "hall_expansion",
+        "crew_feeders",
+        "moroccan",
+        "chicken",
+        "hall_expansion_74",
+        "hall_meal",
+        "firefighter_meal"
+      ],
+      "firefighterScore": 86,
+      "popularityWeight": 7.8,
+      "searchTerms": [
+        "moroccan chicken kebab platter",
+        "crew feeders"
+      ]
+    },
+    {
+      "slug": "lebanese-chicken-shish-platter",
+      "title": "Lebanese Chicken Shish Platter",
+      "subtitle": "Garlic-lemon chicken skewers with toum and tabbouleh for ten",
+      "category": "hall_expansion",
+      "cuisine": "lebanese",
+      "protein": "chicken",
+      "mealFormat": "skewer",
+      "cookTime": 15,
+      "difficulty": "medium",
+      "heroImage": "/images/hall-expansion/lebanese-chicken-shish-platter.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/lebanese-chicken-shish-platter.jpg",
+      "tags": [
+        "protein:chicken",
+        "format:skewer",
+        "category:crew_feeders",
+        "hall_expansion",
+        "crew_feeders",
+        "lebanese",
+        "chicken",
+        "hall_expansion_74",
+        "hall_meal",
+        "firefighter_meal"
+      ],
+      "firefighterScore": 86,
+      "popularityWeight": 7.8,
+      "searchTerms": [
+        "lebanese chicken shish platter",
         "crew feeders"
       ]
     }

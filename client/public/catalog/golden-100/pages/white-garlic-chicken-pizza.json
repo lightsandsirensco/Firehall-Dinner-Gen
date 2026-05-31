@@ -10,13 +10,13 @@
   "description": "Creamy white pie, roasted garlic. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
   "baseServings": 8,
-  "cookTime": 206,
-  "prepTime": 41,
+  "cookTime": 95,
+  "prepTime": 40,
   "difficulty": "medium",
-  "calories": 852,
-  "protein": 38,
-  "carbs": 56,
-  "fats": 52,
+  "calories": 1069,
+  "protein": 88,
+  "carbs": 42,
+  "fats": 59,
   "tags": [
     "protein:chicken",
     "format:pizza",
@@ -33,42 +33,46 @@
   ],
   "ingredients": [
     {
-      "name": "Bread flour",
+      "name": "Pizza dough balls (15 oz)",
       "quantity": "4",
+      "unit": "count",
+      "group": "Crust"
+    },
+    {
+      "name": "Cooked chicken breast, sliced",
+      "quantity": "3",
+      "unit": "lb",
+      "group": "Main"
+    },
+    {
+      "name": "Whole milk",
+      "quantity": "3",
       "unit": "cups",
-      "group": "Dough"
+      "group": "White sauce"
     },
     {
-      "name": "Active dry yeast",
-      "quantity": "2",
-      "unit": "tsp",
-      "group": "Dough"
+      "name": "Unsalted butter",
+      "quantity": "6",
+      "unit": "tbsp",
+      "group": "White sauce"
     },
     {
-      "name": "Warm water",
+      "name": "All-purpose flour",
+      "quantity": "6",
+      "unit": "tbsp",
+      "group": "White sauce"
+    },
+    {
+      "name": "Garlic cloves, minced",
+      "quantity": "8",
+      "unit": "cloves",
+      "group": "White sauce"
+    },
+    {
+      "name": "Grated parmesan",
       "quantity": "1.5",
       "unit": "cups",
-      "notes": "110°F",
-      "group": "Dough"
-    },
-    {
-      "name": "Olive oil",
-      "quantity": "3",
-      "unit": "tbsp",
-      "group": "Dough"
-    },
-    {
-      "name": "Kosher salt",
-      "quantity": "2",
-      "unit": "tsp",
-      "group": "Dough"
-    },
-    {
-      "name": "Crushed tomatoes",
-      "quantity": "2",
-      "unit": "cans",
-      "notes": "28 oz",
-      "group": "Sauce"
+      "group": "Cheese"
     },
     {
       "name": "Fresh mozzarella, torn",
@@ -77,46 +81,83 @@
       "group": "Cheese"
     },
     {
-      "name": "Pepperoni or toppings",
+      "name": "Ricotta, dollops",
       "quantity": "12",
       "unit": "oz",
-      "group": "Toppings"
+      "group": "Cheese"
+    },
+    {
+      "name": "Fresh spinach, chopped",
+      "quantity": "8",
+      "unit": "oz",
+      "group": "Topping"
+    },
+    {
+      "name": "Kosher salt",
+      "quantity": "1.5",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Black pepper",
+      "quantity": "1",
+      "unit": "tsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Dried Italian seasoning",
+      "quantity": "2",
+      "unit": "tsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Olive oil",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Crust"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Proof the dough",
-      "instruction": "Stir yeast into warm water with a pinch of sugar; bloom 5 minutes until foamy. Mix flour, salt, oil, and yeast water until a shaggy dough forms. Knead 8–10 minutes until smooth. Rise covered 1–1½ hours until doubled — White Garlic Chicken Pizza needs relaxed gluten for an open crumb.",
-      "minutes": 90,
-      "heatLevel": ""
+      "title": "Roast garlic and wilt spinach",
+      "instruction": "Toss spinach with a drizzle of olive oil and a pinch of salt; wilt in a hot skillet 2 minutes until collapsed. Squeeze out excess water — wet spinach steams the crust. Set aside.",
+      "minutes": 8,
+      "heatLevel": "medium-high"
     },
     {
       "stepNumber": 2,
-      "title": "Heat oven and stone",
-      "instruction": "Place a pizza stone or inverted sheet pan in the oven. Preheat to 500°F for at least 45 minutes — surface temp matters more than air temp. Prep sauce and cheese while the oven saturates.",
-      "minutes": 45,
-      "heatLevel": "high"
+      "title": "Make garlic béchamel",
+      "instruction": "Melt butter in a saucepan over medium heat. Cook minced garlic 1 minute until fragrant but not brown. Whisk in flour 1 minute, then milk in steady streams until smooth. Simmer until thick enough to coat a spoon. Off heat, stir in half the parmesan, salt, pepper, and Italian seasoning. Cool 5 minutes — hot white sauce melts raw dough.",
+      "minutes": 15,
+      "heatLevel": "medium"
     },
     {
       "stepNumber": 3,
-      "title": "Stretch and top",
-      "instruction": "Divide dough; stretch by hand (don't roll with a pin unless Detroit-style). Sauce lightly — wet centers sag. Add cheese and toppings. Work on parchment or floured peel; jiggle to confirm it slides.",
+      "title": "Preheat stone to 500°F",
+      "instruction": "Heat pizza stone or steel at 500°F at least 40 minutes. Tear mozzarella and measure ricotta while the oven saturates.",
+      "minutes": 40,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Stretch and white-sauce the pies",
+      "instruction": "Stretch dough to 12–14 inch rounds with a ½ inch rim. Spread a thin layer of garlic white sauce — you should still see dough in spots. Top with mozzarella, sliced chicken, wilted spinach, ricotta dollops, and remaining parmesan.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
-      "title": "Bake until blistered",
-      "instruction": "Slide onto the hot stone. Bake 10–14 minutes until cheese bubbles with brown spots and the underside sounds hollow when tapped. Rotate once if your oven has hot spots.",
-      "minutes": 12,
+      "stepNumber": 5,
+      "title": "Bake until golden and set",
+      "instruction": "Bake 11–14 minutes until cheese browns in spots and the underside is crisp. White pies need color on top and bottom — pale centers mean underbaked dough. Rotate once if the back of the oven runs hot.",
+      "minutes": 13,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 5,
-      "title": "Rest and cut",
-      "instruction": "Rest 2 minutes before cutting so cheese sets. Cut on sheet trays for the hall line. Hold backup pies at 200°F uncovered up to 15 minutes — covering traps steam and softens crust.",
-      "minutes": 3,
+      "stepNumber": 6,
+      "title": "Rest and serve white garlic chicken",
+      "instruction": "Rest 2 minutes, then cut into 8 slices per pie. White Garlic Chicken Pizza — creamy sauce, roasted garlic flavor, chicken and spinach. Not red-sauce night; keep backup pies on racks at 200°F.",
+      "minutes": 5,
       "heatLevel": "low"
     }
   ],
@@ -142,17 +183,17 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 852,
-    "protein": 38,
-    "carbs": 56,
-    "fats": 52,
+    "calories": 1069,
+    "protein": 88,
+    "carbs": 42,
+    "fats": 59,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
       "under30gFat": false,
-      "highCarb": true,
+      "highCarb": false,
       "lowCarb": false,
       "mealPrepFriendly": false
     },
@@ -188,6 +229,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-30T03:28:01.940Z",
+  "generatedAt": "2026-05-30T23:27:14.572Z",
   "contentVersion": 2
 }

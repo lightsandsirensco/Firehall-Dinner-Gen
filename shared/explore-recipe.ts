@@ -6,6 +6,7 @@
 export type SpoonacularImageSize = "636x393" | "556x370" | "312x231";
 
 import type { ExploreBadge } from "./explore-card-presentation.js";
+import { isImageReuseAndFallbacksDisabled } from "./image-reuse-policy.js";
 import { getClassicHallMeal, resolveClassicHeroImage } from "./classic-hall-meals.js";
 import { isExploreFeedBlocked } from "./explore-feed-blocklist.js";
 import { isFirehallOwnedHeroUrl, normalizeOwnedMediaPath } from "./food-imagery/paths.js";
@@ -168,7 +169,7 @@ export function normalizeExploreRecipeCard(
 
   let imageAlt = (raw.imageAlt || title).trim() || title;
   const publisherMedia = Boolean(raw.publisherMedia);
-  if (raw._curatedSlug && !publisherMedia && !image) {
+  if (!isImageReuseAndFallbacksDisabled() && raw._curatedSlug && !publisherMedia && !image) {
     const meta = getClassicHallMeal(String(raw._curatedSlug));
     if (meta) {
       const candidate = resolveClassicHeroImage(meta);
@@ -246,7 +247,7 @@ export function filterDisplayableExploreCards(cards: ExploreRecipeCard[]): Explo
       !c._firehallFallback &&
       c.id > 0 &&
       !isHardHeldExploreCard(c) &&
-      (Boolean(c.image?.trim()) || isSoftHeldExploreCard(c)) &&
+      (Boolean(c.image?.trim()) || (!isImageReuseAndFallbacksDisabled() && isSoftHeldExploreCard(c))) &&
       !isExploreFeedBlocked(c.title),
   );
 }

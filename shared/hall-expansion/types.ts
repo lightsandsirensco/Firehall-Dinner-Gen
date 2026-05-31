@@ -4,8 +4,8 @@ import type {
   GoldenRecipePageStep,
 } from "../golden-100/recipe-page-schema.js";
 
-export const HALL_EXPANSION_COUNT = 56;
-export const HALL_EXPANSION_SET_TAG = "hall_expansion_56";
+export const HALL_EXPANSION_COUNT = 74;
+export const HALL_EXPANSION_SET_TAG = "hall_expansion_74";
 export const HALL_EXPANSION_PAGE_CATEGORY = "hall_expansion";
 
 export type ExpansionCategory =

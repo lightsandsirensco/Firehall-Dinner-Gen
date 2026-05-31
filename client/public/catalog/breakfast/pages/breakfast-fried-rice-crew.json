@@ -1,0 +1,192 @@
+{
+  "slug": "breakfast-fried-rice-crew",
+  "title": "Breakfast Fried Rice for the Crew",
+  "subtitle": "Day-old rice wok-fried with bacon, eggs, peas, and scallions.",
+  "description": "Adapted from classic Chinese-American breakfast fried rice tradition for firehall wok service: chilled long-grain rice stir-fried over high heat with bacon, scrambled eggs, peas, carrots, and soy-sesame seasoning.",
+  "filters": [
+    "feed_a_crew",
+    "quick_breakfasts",
+    "high_protein"
+  ],
+  "tags": [
+    "fried-rice",
+    "bacon",
+    "eggs",
+    "wok",
+    "asian"
+  ],
+  "crewSize": 8,
+  "baseServings": 8,
+  "prepTime": 15,
+  "cookTime": 20,
+  "totalTime": 35,
+  "difficulty": "medium",
+  "ingredients": [
+    {
+      "name": "cooked long-grain rice",
+      "quantity": "6 cups",
+      "notes": "day-old, chilled and broken up",
+      "group": "Rice"
+    },
+    {
+      "name": "bacon",
+      "quantity": "1 lb",
+      "notes": "diced, cooked until crisp",
+      "group": "Protein"
+    },
+    {
+      "name": "large eggs",
+      "quantity": "8",
+      "notes": "beaten",
+      "group": "Protein"
+    },
+    {
+      "name": "frozen peas",
+      "quantity": "1 cup",
+      "notes": "thawed",
+      "group": "Veg"
+    },
+    {
+      "name": "diced carrots",
+      "quantity": "1 cup",
+      "notes": "small dice",
+      "group": "Veg"
+    },
+    {
+      "name": "scallions",
+      "quantity": "6",
+      "notes": "sliced, whites and greens separated",
+      "group": "Veg"
+    },
+    {
+      "name": "soy sauce",
+      "quantity": "3 tbsp",
+      "notes": "low-sodium",
+      "group": "Seasoning"
+    },
+    {
+      "name": "toasted sesame oil",
+      "quantity": "1 tbsp",
+      "notes": "plus neutral oil for wok",
+      "group": "Seasoning"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Breakfast Fried Rice for the Crew in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch Bacon. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Prep all components",
+      "instruction": "Break chilled rice into loose grains with wet hands. Cook diced bacon until crisp, drain, and reserve 2 tablespoons fat. Beat eggs with a pinch of salt. Keep peas, carrots, and scallions in separate bowls. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Scramble eggs in the wok",
+      "instruction": "Heat wok or large skillet over high until smoking lightly. Add a tablespoon of oil, pour in eggs, and scramble quickly into soft curds. Remove to a plate immediately while still tender. Target 165°F at the thickest part before moving to the next batch. Plan about 4 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 4,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Stir-fry vegetables",
+      "instruction": "Add bacon fat to the wok. Stir-fry carrots and scallion whites 2 minutes, then add peas and rice. Press rice against the hot surface in sections to toast grains without mashing. Target 165°F at the thickest part before moving to the next batch. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Season and combine",
+      "instruction": "Drizzle soy sauce around the rim of the wok so it sizzles and caramelizes. Toss rice until evenly golden. Fold in bacon, scrambled eggs, and scallion greens off heat. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Toss with sesame oil and portion",
+      "instruction": "Drizzle sesame oil over the top and toss once. Taste for salt and transfer to a warm hotel pan for the line with chili crisp or hot sauce alongside. Plan about 3 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
+      "minutes": 3,
+      "heatLevel": ""
+    }
+  ],
+  "nutrition": {
+    "calories": 901,
+    "protein": 38,
+    "carbs": 113,
+    "fat": 31,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "stationWorkflow": [
+    "Use day-old rice only—fresh rice steams and clumps in the wok.",
+    "Cook in two wok batches if needed so rice toasts instead of steaming.",
+    "Scramble eggs separately so they stay fluffy rather than disappearing into the rice."
+  ],
+  "cleanupNotes": [
+    "Wok wash with hot water and a bamboo brush while still warm—do not soak cast iron woks.",
+    "Wipe soy sauce spills from the stove immediately; caramelized soy is tough to remove."
+  ],
+  "leftovers": [
+    "Reheat fried rice in a hot wok with a splash of water and soy—not the microwave.",
+    "Wrap leftovers in omelette-style sheets for a quick egg roll breakfast variation."
+  ],
+  "heroImage": "/images/breakfast/breakfast-fried-rice-crew.jpg",
+  "thumbImage": "/images/thumbs/breakfast/breakfast-fried-rice-crew.jpg",
+  "imageAlt": "Breakfast fried rice with bacon, eggs, peas, and scallions in a wok",
+  "publishedAt": "2026-05-30T21:22:29.757Z",
+  "updatedAt": "2026-05-31T12:54:36.755Z",
+  "readMinutes": 7,
+  "seoTitle": "Breakfast Fried Rice for the Crew | Firehall Breakfast",
+  "mobileImage": "/images/mobile/breakfast/breakfast-fried-rice-crew.jpg",
+  "railImage": "/images/rails/breakfast/breakfast-fried-rice-crew.jpg",
+  "proTips": [
+    "Use day-old rice only—fresh rice steams and clumps in the wok.",
+    "Cook in two wok batches if needed so rice toasts instead of steaming.",
+    "Scramble eggs separately so they stay fluffy rather than disappearing into the rice."
+  ],
+  "tonightSpread": [
+    "Plate Breakfast Fried Rice for the Crew with sides in separate pans so the crew can mix portions.",
+    "Keep hot items on one side of the table and cold on the other — eggs stay hot, fruit stays cold.",
+    "Line up Breakfast Fried Rice for the Crew on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+  ],
+  "equipment": [
+    "Large sheet trays",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "mealPrepNotes": "Prep mise en place before the shift — Breakfast Fried Rice for the Crew runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
+}

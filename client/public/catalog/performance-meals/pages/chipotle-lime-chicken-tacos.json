@@ -102,36 +102,57 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Marinate chicken",
-      "instruction": "Blend chipotle, adobo, lime juice, garlic, cumin, oil, and salt. Coat thighs, marinate at least 2 hours so flavors penetrate deep into meat.",
-      "minutes": 120,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Chipotle Lime Chicken Tacos in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Marinate chicken",
+      "instruction": "Blend chipotle, adobo, lime juice, garlic, cumin, oil, and salt. Coat thighs, marinate at least 2 hours so flavors penetrate deep into meat. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 120,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
       "title": "Prep slaw and crema",
-      "instruction": "Toss cabbage with 2 tbsp lime juice and pinch of salt until lightly wilted but crunchy. Mix yogurt with remaining lime for crema.",
+      "instruction": "Toss cabbage with 2 tbsp lime juice and pinch of salt until lightly wilted but crunchy. Mix yogurt with remaining lime for crema. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
-      "stepNumber": 3,
+      "stepNumber": 5,
       "title": "Grill chicken",
-      "instruction": "Grill or sear thighs over medium-high 6–7 minutes per side until charred edges form and internal temp reaches 165°F throughout.",
+      "instruction": "Grill or sear thighs over medium-high 6–7 minutes per side until charred edges form and internal temp reaches 165°F throughout. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 16,
       "heatLevel": "medium-high"
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 6,
       "title": "Rest and slice",
-      "instruction": "Rest chicken 5 minutes, slice against grain into strips. Meat should be moist with visible smoke char, not dry or stringy.",
+      "instruction": "Rest chicken 5 minutes, slice against grain into strips. Meat should be moist with visible smoke char, not dry or stringy. Target 165°F at the thickest part before moving to the next batch. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
       "title": "Assemble tacos",
-      "instruction": "Fill warm tortillas with chicken, slaw, crema, and cilantro. Each taco should hold together when picked up without filling falling out.",
+      "instruction": "Fill warm tortillas with chicken, slaw, crema, and cilantro. Each taco should hold together when picked up without filling falling out. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 5,
       "heatLevel": ""
     }
