@@ -98,7 +98,7 @@ export function ClassicsWheel({ disabled, winnerIndex, onLanded, onSpinStart }: 
         className="absolute left-1/2 -translate-x-1/2 -top-1 z-30 flex flex-col items-center"
         aria-hidden
       >
-        <div className="w-0 h-0 border-l-[14px] border-r-[14px] border-b-[22px] border-l-transparent border-r-transparent border-b-primary drop-shadow-[0_0_12px_rgba(198,40,40,0.8)]" />
+        <div className="w-0 h-0 border-l-[14px] border-r-[14px] border-t-[22px] border-l-transparent border-r-transparent border-t-primary drop-shadow-[0_0_12px_rgba(198,40,40,0.8)]" />
       </div>
 
       {/* Metallic outer ring */}

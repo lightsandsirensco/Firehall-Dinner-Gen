@@ -15,6 +15,8 @@ import {
   isOwnedCatalogHeroPath,
   isSpoonacularOrExternalHeroUrl,
 } from "../shared/classic-wheel-imagery.js";
+import { extractSlugFromImagePath } from "../shared/explore-image-mapping.js";
+import crypto from "node:crypto";
 
 const ROOT = process.cwd();
 const PUBLIC = path.join(ROOT, "client", "public");
@@ -34,12 +36,22 @@ type Row = {
   imageryStatus: string;
   heroOnDisk: boolean;
   thumbOnDisk: boolean;
+  mobileOnDisk: boolean;
+  heroMd5: string | null;
   issues: string[];
 };
 
-function auditMeal(): { rows: Row[]; errors: string[] } {
+function md5Public(publicPath: string): string | null {
+  if (!publicPath.startsWith("/")) return null;
+  const abs = path.join(PUBLIC, publicPath.replace(/^\//, ""));
+  if (!fs.existsSync(abs)) return null;
+  return crypto.createHash("md5").update(fs.readFileSync(abs)).digest("hex");
+}
+
+function auditMeal(): { rows: Row[]; errors: string[]; duplicateHeroGroups: string[][] } {
   const rows: Row[] = [];
   const errors: string[] = [];
+  const heroMd5BySlug = new Map<string, string | null>();
 
   for (const meal of CLASSIC_HALL_MEALS) {
     const imagery = resolveClassicWheelImagery(meal);
@@ -54,15 +66,30 @@ function auditMeal(): { rows: Row[]; errors: string[] } {
     if (imagery.heroImage && !isOwnedCatalogHeroPath(imagery.heroImage)) {
       issues.push("hero_not_owned_path");
     }
+    if (imagery.heroImage) {
+      const pathSlug = extractSlugFromImagePath(imagery.heroImage);
+      if (pathSlug && pathSlug !== meal.slug) {
+        issues.push(`hero_slug_mismatch:${pathSlug}`);
+      }
+      if (imagery.heroImage.includes("/explore/") && !imagery.heroImage.includes(meal.slug)) {
+        issues.push("legacy_explore_hero_path");
+      }
+    }
     if (imagery.imageApproved && !fileExists(imagery.heroImage)) {
       issues.push("hero_missing_on_disk");
     }
     if (!fileExists(imagery.thumbImage)) {
       issues.push("thumb_missing_on_disk");
     }
+    if (!fileExists(imagery.mobileImage)) {
+      issues.push("mobile_missing_on_disk");
+    }
 
     const heroOnDisk = imagery.heroImage ? fileExists(imagery.heroImage) : false;
     const thumbOnDisk = fileExists(imagery.thumbImage);
+    const mobileOnDisk = fileExists(imagery.mobileImage);
+    const heroMd5 = heroOnDisk ? md5Public(imagery.heroImage) : null;
+    heroMd5BySlug.set(meal.slug, heroMd5);
 
     if (issues.length) {
       errors.push(`${meal.slug}: ${issues.join(", ")}`);
@@ -78,17 +105,31 @@ function auditMeal(): { rows: Row[]; errors: string[] } {
       imageryStatus: imagery.imageryStatus,
       heroOnDisk,
       thumbOnDisk,
+      mobileOnDisk,
+      heroMd5,
       issues,
     });
   }
 
-  return { rows, errors };
+  const byMd5 = new Map<string, string[]>();
+  for (const [slug, hash] of heroMd5BySlug) {
+    if (!hash) continue;
+    const list = byMd5.get(hash) || [];
+    list.push(slug);
+    byMd5.set(hash, list);
+  }
+  const duplicateHeroGroups = [...byMd5.values()].filter((g) => g.length > 1);
+  for (const group of duplicateHeroGroups) {
+    errors.push(`duplicate_hero: ${group.join(" ↔ ")}`);
+  }
+
+  return { rows, errors, duplicateHeroGroups };
 }
 
 function main(): void {
   console.log("=== Classics Wheel Imagery Audit ===\n");
 
-  const { rows, errors } = auditMeal();
+  const { rows, errors, duplicateHeroGroups } = auditMeal();
   const approved = rows.filter((r) => r.imageApproved && r.heroOnDisk);
   const placeholder = rows.filter((r) => !r.imageApproved || !r.heroOnDisk);
 
@@ -118,6 +159,7 @@ function main(): void {
     total: rows.length,
     approvedCount: approved.length,
     placeholderCount: placeholder.length,
+    duplicateHeroGroups,
     pass: errors.length === 0,
     rows,
     errors,

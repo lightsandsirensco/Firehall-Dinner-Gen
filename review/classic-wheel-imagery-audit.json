@@ -1,8 +1,9 @@
 {
-  "generatedAt": "2026-05-30T03:34:28.062Z",
+  "generatedAt": "2026-05-31T13:31:48.726Z",
   "total": 10,
   "approvedCount": 10,
   "placeholderCount": 0,
+  "duplicateHeroGroups": [],
   "pass": true,
   "rows": [
     {
@@ -15,18 +16,22 @@
       "imageryStatus": "approved",
       "heroOnDisk": true,
       "thumbOnDisk": true,
+      "mobileOnDisk": true,
+      "heroMd5": "26a595db61dd1f70d8ecce94f4becbf8",
       "issues": []
     },
     {
       "slug": "steak-tacos",
       "title": "Street-Style Chimichurri Steak Tacos",
-      "heroImage": "/images/explore/chimichurri-steak-tacos-hero.jpg",
+      "heroImage": "/images/golden-100/steak-tacos.jpg",
       "thumbImage": "/images/thumbs/steak-tacos.jpg",
       "mobileImage": "/images/mobile/steak-tacos.jpg",
       "imageApproved": true,
       "imageryStatus": "approved",
       "heroOnDisk": true,
       "thumbOnDisk": true,
+      "mobileOnDisk": true,
+      "heroMd5": "b0841d80d849cdfeb092028dd88699b6",
       "issues": []
     },
     {
@@ -39,30 +44,36 @@
       "imageryStatus": "approved",
       "heroOnDisk": true,
       "thumbOnDisk": true,
+      "mobileOnDisk": true,
+      "heroMd5": "eb66ab8dff2c6196887794159bb8a517",
       "issues": []
     },
     {
       "slug": "smash-burgers",
       "title": "Double Smash Burgers with Caramelized Onions & Dirty Sauce",
-      "heroImage": "/images/explore/double-smash-burgers-hero.jpg",
+      "heroImage": "/images/golden-100/smash-burgers.jpg",
       "thumbImage": "/images/thumbs/smash-burgers.jpg",
       "mobileImage": "/images/mobile/smash-burgers.jpg",
       "imageApproved": true,
       "imageryStatus": "approved",
       "heroOnDisk": true,
       "thumbOnDisk": true,
+      "mobileOnDisk": true,
+      "heroMd5": "2b5d6fb65169ceaebd673f0de3fb007d",
       "issues": []
     },
     {
       "slug": "chili-garlic-bread",
       "title": "Firehouse Smoked Beef Chili with Cheesy Garlic Bread",
-      "heroImage": "/images/explore/firehouse-smoked-beef-chili-hero.jpg",
+      "heroImage": "/images/golden-100/chili-garlic-bread.jpg",
       "thumbImage": "/images/thumbs/chili-garlic-bread.jpg",
       "mobileImage": "/images/mobile/chili-garlic-bread.jpg",
       "imageApproved": true,
       "imageryStatus": "approved",
       "heroOnDisk": true,
       "thumbOnDisk": true,
+      "mobileOnDisk": true,
+      "heroMd5": "6683b7871ba8ef3634eaad3d42eb5162",
       "issues": []
     },
     {
@@ -75,18 +86,22 @@
       "imageryStatus": "approved",
       "heroOnDisk": true,
       "thumbOnDisk": true,
+      "mobileOnDisk": true,
+      "heroMd5": "b5d0a80059adfde308e12aeff9bbabb3",
       "issues": []
     },
     {
       "slug": "jerk-chicken",
-      "title": "Jerk Chicken",
-      "heroImage": "/images/explore/jerk-chicken-hero.jpg",
+      "title": "Jerk Chicken & Peas and Rice",
+      "heroImage": "/images/golden-100/jerk-chicken.jpg",
       "thumbImage": "/images/thumbs/jerk-chicken.jpg",
       "mobileImage": "/images/mobile/jerk-chicken.jpg",
       "imageApproved": true,
       "imageryStatus": "approved",
       "heroOnDisk": true,
       "thumbOnDisk": true,
+      "mobileOnDisk": true,
+      "heroMd5": "18175adafa1e0aaffcff15c0f9a0b849",
       "issues": []
     },
     {
@@ -99,18 +114,22 @@
       "imageryStatus": "approved",
       "heroOnDisk": true,
       "thumbOnDisk": true,
+      "mobileOnDisk": true,
+      "heroMd5": "f0a8112110815b1a8d0982ce9ec7a583",
       "issues": []
     },
     {
       "slug": "bbq-chicken-bowls",
       "title": "BBQ Chicken Bowls",
-      "heroImage": "/images/explore/bbq-chicken-bowls-hero.jpg",
+      "heroImage": "/images/golden-100/bbq-chicken-bowls.jpg",
       "thumbImage": "/images/thumbs/bbq-chicken-bowls.jpg",
       "mobileImage": "/images/mobile/bbq-chicken-bowls.jpg",
       "imageApproved": true,
       "imageryStatus": "approved",
       "heroOnDisk": true,
       "thumbOnDisk": true,
+      "mobileOnDisk": true,
+      "heroMd5": "3a774a0c511c770bebcce3abf49636e2",
       "issues": []
     },
     {
@@ -123,6 +142,8 @@
       "imageryStatus": "approved",
       "heroOnDisk": true,
       "thumbOnDisk": true,
+      "mobileOnDisk": true,
+      "heroMd5": "185cdcafe58d9c80351560287fc20635",
       "issues": []
     }
   ],

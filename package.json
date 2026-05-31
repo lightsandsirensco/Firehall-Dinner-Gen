@@ -97,6 +97,8 @@
     "expand:recipes:publisher": "tsx scripts/expand-recipes.ts --promote --prefer-publisher",
     "expand:backfill-archetypes": "tsx scripts/backfill-recipe-archetypes.ts",
     "audit:classics-wheel": "tsx scripts/audit-classic-wheel-images.ts",
+    "audit:classics-wheel-full": "tsx scripts/audit-classics-wheel-full.ts",
+    "fix:classics-wheel": "tsx scripts/audit-classics-wheel-full.ts --fix --fix-images",
     "audit:classics-wheel-emoji": "tsx scripts/audit-classics-wheel-emoji-guard.ts",
     "audit:recipe-crew-ratings": "tsx scripts/audit-recipe-crew-rating-badges.ts",
     "audit:recipe-nutrition": "tsx scripts/audit-recipe-nutrition.ts",

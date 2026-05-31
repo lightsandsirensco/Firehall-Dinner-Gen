@@ -122,6 +122,41 @@ const PACKS: Record<string, (scale: number, def: GoldenRecipeDefinition) => Pack
     ],
   }),
 
+  "jerk-chicken": (scale) => ({
+    ingredients: [
+      m("Bone-in, skin-on chicken thighs", mult(5, scale), "lb", "Main"),
+      m("Scotch bonnet peppers", mult(2, scale), "count", "Jerk marinade"),
+      m("Green onions", mult(8, scale), "count", "Jerk marinade"),
+      m("Fresh thyme leaves", mult(3, scale), "tbsp", "Jerk marinade"),
+      m("Garlic cloves", mult(10, scale), "count", "Jerk marinade"),
+      m("Fresh ginger, grated", mult(3, scale), "tbsp", "Jerk marinade"),
+      m("Ground allspice", mult(2, scale), "tbsp", "Jerk marinade"),
+      m("Brown sugar", mult(3, scale), "tbsp", "Jerk marinade"),
+      m("Soy sauce", mult(3, scale), "tbsp", "Jerk marinade"),
+      m("Fresh lime juice", mult(4, scale), "tbsp", "Jerk marinade"),
+      m("Long-grain white rice, rinsed", mult(3, scale), "cups", "Rice and peas"),
+      m("Kidney beans, drained", mult(2, scale), "cans", "Rice and peas", "15 oz each"),
+      m("Full-fat coconut milk", mult(2, scale), "cans", "Rice and peas", "13.5 oz each"),
+      m("Low-sodium chicken stock", mult(2, scale), "cups", "Rice and peas"),
+      m("Fresh pineapple, peeled", mult(1, scale), "count", "Sides"),
+      m("Coleslaw mix", mult(2, scale), "lb", "Sides"),
+    ],
+    steps: [
+      step(1, "Trim and prep the chicken", "Pat chicken thighs dry. Trim excess fat, score skin lightly, and lay in hotel pans or zip bags for marinating.", 15),
+      step(2, "Blend the jerk marinade", "Blend Scotch bonnets, green onions, thyme, garlic, ginger, allspice, brown sugar, soy, lime juice, and oil until mostly smooth.", 10),
+      step(3, "Marinate the chicken", "Massage marinade under the skin. Marinate at least 45 minutes in the fridge — 4–12 hours is best.", 45),
+      step(4, "Set up grill or oven", "Grill: 375°F two-zone fire. Oven: 425°F with foil-lined sheet pans and wire racks.", 15, "medium-high"),
+      step(5, "Start coconut rice and peas", "Simmer rice, kidney beans, coconut milk, stock, scallions, and thyme 18–20 minutes until tender. Fluff and hold at 200°F.", 25, "medium"),
+      step(6, "Grill or roast the chicken", "Char skin over direct heat, finish indirect or in oven until thickest thigh reads 165°F.", 35, "medium-high"),
+      step(7, "Rest the chicken", "Tent loosely with foil and rest 10 minutes before slicing.", 10, "low"),
+      step(8, "Grill pineapple and dress slaw", "Grill pineapple rings 2–3 minutes per side. Toss slaw with lime, salt, and oil; keep cold.", 12, "medium-high"),
+      step(9, "Coordinate timing for service", "Slice rested thighs. Rice in first pan, chicken second, cold sides at the far end.", 10, "low"),
+      step(10, "Hold for call interruptions", "If tones drop, close grill lid or hold chicken at 140°F; keep rice covered at low heat.", 5, "low"),
+      step(11, "Serve the hall line", "Open line with rice and peas, jerk chicken, pineapple, slaw, hot sauce, and lime wedges.", 8, "low"),
+      step(12, "Pack down leftovers safely", "Cool in shallow pans within two hours. Reheat chicken to 165°F next shift.", 10),
+    ],
+  }),
+
   "greek-chicken-bowls": (scale) => ({
     ingredients: [
       m("Basmati rice, uncooked", mult(3, scale), "cups", "Base"),

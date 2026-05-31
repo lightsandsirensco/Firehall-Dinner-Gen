@@ -10,7 +10,7 @@
   "description": "Sandwich line for the whole hall. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
   "baseServings": 8,
-  "cookTime": 570,
+  "cookTime": 525,
   "prepTime": 45,
   "difficulty": "hard",
   "calories": 1400,
@@ -135,92 +135,98 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Pulled Pork Sandwiches in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
+      "title": "Apply dry rub",
+      "instruction": "Trim excess hard fat from pork shoulder, leaving about ¼ inch. Mix brown sugar, paprika, garlic powder, onion powder, cumin, chili powder, salt, and pepper. Coat pork all over and press rub into the surface. Rest at room temp 30 minutes while the oven or slow cooker comes up.",
+      "minutes": 30,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch pork. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
-      "title": "Apply dry rub",
-      "instruction": "Trim excess hard fat from pork shoulder, leaving about ¼ inch. Mix brown sugar, paprika, garlic powder, onion powder, cumin, chili powder, salt, and pepper. Coat pork all over and press rub into the surface. Rest at room temp 30 minutes while the oven or slow cooker comes up. Bake until the center reaches a safe internal temp (145°F with a 3-minute rest) and edges look set — use a thermometer at the thickest point. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts.",
-      "minutes": 30,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 4,
       "title": "Low-and-slow cook",
-      "instruction": "Roast at 275°F in a covered roaster or run a slow cooker on low 8–10 hours until pork probes tender at 203°F and shreds with a fork. Add a splash of water if the pan looks dry halfway through — you want steam, not a dry roast. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Roast at 275°F in a covered roaster or run a slow cooker on low 8–10 hours until pork probes tender at 203°F and shreds with a fork. Add a splash of water if the pan looks dry halfway through — you want steam, not a dry roast.",
       "minutes": 480,
       "heatLevel": "low"
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Rest and shred",
-      "instruction": "Rest pork covered 30 minutes — juices redistribute. Shred with two forks, discarding large fat chunks. Toss with apple cider vinegar first, then fold in BBQ sauce to taste. Keep some sauce on the side for the line. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
+      "instruction": "Rest pork covered 30 minutes — juices redistribute. Shred with two forks, discarding large fat chunks. Toss with apple cider vinegar first, then fold in BBQ sauce to taste. Keep some sauce on the side for the line.",
       "minutes": 30,
       "heatLevel": "low"
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Quick slaw",
-      "instruction": "Toss coleslaw mix with mayonnaise, a splash of vinegar, salt, and pepper. Keep cold until service — hot pork plus cold slaw is the move. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Toss coleslaw mix with mayonnaise, a splash of vinegar, salt, and pepper. Keep cold until service — hot pork plus cold slaw is the move.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
-      "stepNumber": 7,
-      "title": "Warm buns and set the line",
-      "instruction": "Split buns and warm in a 300°F oven 5 minutes wrapped in foil. Set pork in a deep hotel pan, buns stacked beside, slaw and pickles in separate bowls. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "stepNumber": 5,
+      "title": "Warm buns for the line",
+      "instruction": "Split brioche or kaiser rolls and warm wrapped in foil at 300°F for 5 minutes until soft and steamy. Stack cut-side up on sheet trays — cold buns kill BBQ sandwich morale.",
       "minutes": 10,
       "heatLevel": "medium"
     },
     {
+      "stepNumber": 6,
+      "title": "Stage the sandwich counter",
+      "instruction": "Set shredded pork in a deep hotel pan with a ladle of cooking juices on top. Line buns, slaw, pickles, and extra BBQ sauce in separate bowls with tongs. Hot pork center, cold crunch at the far end.",
+      "minutes": 8,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 7,
+      "title": "Build pulled pork sandwiches",
+      "instruction": "Crew piles pork on buns and tops with slaw and pickles. This is BBQ pulled pork — soft buns and tangy slaw, not Italian subs. Keep extra sauce on the line for crews who want more smoke.",
+      "minutes": 10,
+      "heatLevel": "low"
+    },
+    {
       "stepNumber": 8,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F with a 3-minute rest. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "title": "Verify pork hold temps",
+      "instruction": "Spot-check the pork pan — service temp should stay at or above 140°F. If below, return to a 200°F oven covered until steaming. Shredded pork that reads under 140°F gets reheated to 165°F before the line reopens.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 9,
       "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover shredded pork — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
+      "minutes": 5,
       "heatLevel": "low"
     },
     {
       "stepNumber": 10,
-      "title": "Build pulled pork sandwiches",
-      "instruction": "Crew piles pork on buns and tops with slaw and pickles. This is BBQ pulled pork — soft buns and tangy slaw, not Italian subs. Plan about 10 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool shredded pork and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
       "minutes": 10,
-      "heatLevel": "low"
+      "heatLevel": ""
     }
   ],
   "proTips": [
-    "Start pork early — shoulder needs time more than attention.",
-    "Keep slaw cold until the last minute.",
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
-    "Taste for salt at the end — hall palates run salty after long shifts."
+    "Pull pork at 203°F when it shreds with a fork — rushing the roast gives tough sandwiches.",
+    "Toss with vinegar before BBQ sauce so the pull tastes bright, not one-note sweet.",
+    "Keep slaw cold on ice — hot pork plus cold slaw is the hall move.",
+    "Keep a backup tray at 200°F for firefighters returning from a run — never serve picked-over pans to late crew.",
+    "Taste for salt at the end — hall palates run salty after long shifts.",
+    "Log hold times on the pan with a grease pencil when tones drop mid-service.",
+    "Spot-check proteins with an instant-read thermometer before reopening the line after a call."
   ],
   "tonightSpread": [
-    "Pile shredded pork in a deep hotel pan with warm buns stacked beside — BBQ sandwich line, not sub shop night.",
-    "Set coleslaw, pickles, and extra BBQ sauce in separate bowls so buns do not go soggy.",
-    "Keep pork covered at 180°F; add vinegar splash before refills so the pull stays moist."
+    "Main: BBQ pulled pork",
+    "Sides: soft buns, tangy coleslaw",
+    "Condiments: pickle chips, extra BBQ sauce, yellow mustard",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
   ],
   "leftovers": [
-    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
-    "Label trays with date and reheat to 165°F minimum before second shift.",
-    "Store components separate — assemble fresh; buns go soggy overnight."
+    "Cool shredded pork in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Reheat pork with a splash of apple cider vinegar and broth so it stays saucy, not dry."
   ],
   "whyCrewsLikeIt": "Slow-smoked pull, soft buns, fast line. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
+  "mealPrepNotes": "Prep mise en place before the shift — Pulled Pork Sandwiches runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone.",
   "substitutions": [],
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
@@ -273,7 +279,6 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "classicSlug": "pulled-pork",
-  "generatedAt": "2026-05-31T01:49:51.108Z",
-  "contentVersion": 2,
-  "mealPrepNotes": "Prep mise en place before the shift — Pulled Pork Sandwiches runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
+  "generatedAt": "2026-05-31T13:31:23.359Z",
+  "contentVersion": 4
 }

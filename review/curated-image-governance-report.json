@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-31T13:08:01.078Z",
+  "generatedAt": "2026-05-31T13:32:01.091Z",
   "threshold": 72,
   "totals": {
     "recipes": 566,
@@ -5054,23 +5054,13 @@
       "protein": "chicken",
       "mealFormat": "bowl",
       "cuisine": "american",
-      "heroImage": "/images/explore/bbq-chicken-bowls-hero.jpg",
-      "thumbImage": "",
-      "mobileImage": "",
+      "heroImage": "/images/golden-100/bbq-chicken-bowls.jpg",
+      "thumbImage": "/images/thumbs/bbq-chicken-bowls.jpg",
+      "mobileImage": "/images/mobile/bbq-chicken-bowls.jpg",
       "mismatchConfidence": 45,
       "pass": true,
       "needsManualReview": true,
       "mismatches": [
-        {
-          "code": "missing_locked_thumb",
-          "severity": "warning",
-          "message": "missing thumbnail image"
-        },
-        {
-          "code": "missing_locked_mobile",
-          "severity": "warning",
-          "message": "missing mobile crop image"
-        },
         {
           "code": "unapproved_image",
           "severity": "warning",
@@ -10548,23 +10538,13 @@
       "protein": "chicken",
       "mealFormat": "grill",
       "cuisine": "other",
-      "heroImage": "/images/explore/jerk-chicken-hero.jpg",
-      "thumbImage": "",
-      "mobileImage": "",
+      "heroImage": "/images/golden-100/jerk-chicken.jpg",
+      "thumbImage": "/images/thumbs/jerk-chicken.jpg",
+      "mobileImage": "/images/mobile/jerk-chicken.jpg",
       "mismatchConfidence": 45,
       "pass": true,
       "needsManualReview": true,
       "mismatches": [
-        {
-          "code": "missing_locked_thumb",
-          "severity": "warning",
-          "message": "missing thumbnail image"
-        },
-        {
-          "code": "missing_locked_mobile",
-          "severity": "warning",
-          "message": "missing mobile crop image"
-        },
         {
           "code": "unapproved_image",
           "severity": "warning",

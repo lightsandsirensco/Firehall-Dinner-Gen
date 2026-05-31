@@ -1,6 +1,6 @@
 # Curated image governance audit
 
-Generated: **2026-05-31T13:08:01.078Z**
+Generated: **2026-05-31T13:32:01.091Z**
 
 - Recipes audited: **566**
 - Failed governance: **58**
