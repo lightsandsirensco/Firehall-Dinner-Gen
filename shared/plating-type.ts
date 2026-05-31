@@ -135,6 +135,9 @@ export function buildPlatingPromptLine(
     case "casserole":
       return `${dish} in rectangular baking dish with scooped serving, melted top — NOT taco, NOT wrap`;
     case "salad":
+      if (/\bchicken\b/i.test(dish) && /\bcaesar\b/i.test(dish)) {
+        return `${dish} in wide salad bowl with chopped romaine, Caesar dressing, parmesan, and croutons — grilled chicken sliced and diced in bite-sized pieces mixed through the greens, NOT a whole breast resting on top`;
+      }
       return `${dish} in wide salad bowl, protein forward on greens — NOT burger bun, NOT taco shell`;
     case "sandwich":
       return `${dish} cross-section or stacked sandwich, fillings visible — NOT rice bowl`;

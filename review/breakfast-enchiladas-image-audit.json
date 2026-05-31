@@ -1,0 +1,68 @@
+{
+  "generatedAt": "2026-05-31T18:15:40.289Z",
+  "recipeAudit": {
+    "slug": "breakfast-enchiladas",
+    "title": "Breakfast Enchiladas for the Crew",
+    "requiredVisible": [
+      "rolled flour tortilla enchiladas",
+      "scrambled eggs in filling",
+      "crumbled chorizo in filling",
+      "green chile enchilada sauce",
+      "melted baked cheese (Monterey Jack or cheddar)",
+      "multiple enchiladas in casserole/hotel pan",
+      "crew-sized family-style portion"
+    ],
+    "forbiddenInImage": [
+      "fried egg on top",
+      "sunny-side-up egg on top",
+      "bacon strips on top",
+      "single tiny brunch plate",
+      "restaurant influencer styling"
+    ],
+    "recipeIngredients": [
+      "large eggs",
+      "Mexican chorizo",
+      "shredded Monterey Jack",
+      "8-inch flour tortillas",
+      "green enchilada sauce",
+      "sour cream",
+      "cotija or feta",
+      "cilantro"
+    ],
+    "notInRecipe": [
+      "bacon",
+      "fried egg on top",
+      "sunny-side-up egg",
+      "onions and peppers as hero focus"
+    ],
+    "currentIssues": [
+      "fried eggs on top",
+      "decorative bacon strips",
+      "single-serving restaurant plate",
+      "missing casserole crew presentation"
+    ]
+  },
+  "replaced": true,
+  "vision": {
+    "pass": true,
+    "reasons": [],
+    "confidence": 95,
+    "requiredVisible": {
+      "rolledTortillas": true,
+      "greenSauce": true,
+      "bakedCheese": true,
+      "eggsInFilling": true,
+      "chorizoInFilling": true,
+      "casseroleOrPlatter": true,
+      "crewPortions": true
+    },
+    "forbiddenPresent": {
+      "friedEggsOnTop": false,
+      "baconOnTop": false,
+      "singleTinyPlate": false,
+      "restaurantStyling": false
+    },
+    "extraIngredientsNotInRecipe": []
+  },
+  "passed": true
+}

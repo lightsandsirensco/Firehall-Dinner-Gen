@@ -50,9 +50,9 @@ const SIDE_CUE_RULES: SideCueRule[] = [
   },
   {
     sideRe: /caesar\s+salad|\bcaesar\b/i,
-    requiredRe: /\b(caesar|romaine|lettuce|salad|parmesan|dressing)\b/i,
-    forbiddenRe: /\b(bowl|sandwich|burger|pasta)\b/i,
-    message: "Caesar salad title — hero must show lettuce, dressing, and parmesan cues",
+    requiredRe: /\b(caesar|romaine|lettuce|salad|parmesan|dressing|chicken)\b/i,
+    forbiddenRe: /\b(sandwich|burger|pasta)\b/i,
+    message: "Caesar salad title — hero must show lettuce, dressing, parmesan, and chicken cues",
   },
   {
     sideRe: /rice\s*(?:&|and)\s*peas|\bpeas and rice\b/i,
@@ -190,6 +190,11 @@ export function buildRequiredVisibleSidesPromptLine(title: string, mealFormat?: 
 
   if (req.protein) parts.push(`${req.protein} protein clearly visible`);
   if (req.cookingStyle) parts.push(`${req.cookingStyle} cooking style evident`);
+  if (/\bchicken\b/i.test(title) && /\bcaesar\s+salad\b/i.test(title)) {
+    parts.push(
+      "grilled chicken cut into sliced or diced pieces mixed through the salad (not a whole breast on top)",
+    );
+  }
   for (const side of req.primarySides) parts.push(`${side} clearly visible on plate`);
 
   if (parts.length === 0) return "";
@@ -294,6 +299,26 @@ export function auditTitlePrimarySideAlignment(input: {
       issues.push(
         p0Issue("Chicken Caesar Salad — hero must show salad greens, dressing, and parmesan cues", 95),
       );
+    }
+    if (/\bchicken\b/i.test(input.title)) {
+      if (!/\bchicken\b/i.test(blob)) {
+        issues.push(
+          p0Issue("Chicken Caesar Salad — hero must show chicken, not greens-only salad", 96),
+        );
+      }
+      if (!/\b(sliced|diced|cut|strips|chunks|pieces|bite.?sized)\b/i.test(blob)) {
+        issues.push(
+          p0Issue(
+            "Chicken Caesar Salad — hero must show cut-up grilled chicken pieces mixed through the salad, not a whole breast on top",
+            95,
+          ),
+        );
+      }
+      if (/\b(whole breast|intact fillet|single breast)\b/i.test(blob)) {
+        issues.push(
+          p0Issue("Chicken Caesar Salad — whole breast presentation forbidden; use sliced or diced chicken pieces", 97),
+        );
+      }
     }
   }
 

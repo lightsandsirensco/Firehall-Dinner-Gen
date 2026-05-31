@@ -1,3 +1,10 @@
+import {
+  CROCK_BARBACOA_CHICKEN_IMAGE_PROMPT,
+  TITLE_LOCKED_IMAGE_PROMPTS,
+} from "../food-imagery/title-locked-prompts.js";
+
+export { CROCK_BARBACOA_CHICKEN_IMAGE_PROMPT, TITLE_LOCKED_IMAGE_PROMPTS };
+
 /** Explicit editorial prompt lines for Performance Meals that need tighter visual lock. */
 export const PERFORMANCE_MEAL_IMAGERY_PROMPT_OVERRIDES: Record<string, string[]> = {
   "crock-barbacoa-chicken": [
@@ -15,36 +22,6 @@ export const PERFORMANCE_MEAL_IMAGERY_PROMPT_OVERRIDES: Record<string, string[]>
     "Plated crew meal on a light neutral plate — high-protein performance aesthetic, protein-forward composition",
     "NO curry, NO stew, NO one-pot bowl, NO coconut broth, NO mixed soup appearance",
   ],
-};
-
-/** Full canonical prompt for P0 title-locked regen (matches PERFORMANCE_MEAL_IMAGERY_PROMPT_OVERRIDES). */
-export const CROCK_BARBACOA_CHICKEN_IMAGE_PROMPT = `Crock Barbacoa Chicken With Potato Wedges
-
-Slow-cooked shredded barbacoa chicken piled beside crispy roasted potato wedges.
-
-Large crew-sized serving platter in a realistic Canadian firehall kitchen.
-
-Visible:
-- shredded chipotle barbacoa chicken
-- golden roasted potato wedges
-- lime wedges
-- fresh cilantro
-- smoky seasoning
-
-NO rice.
-NO corn.
-NO chicken bowl presentation.
-
-Professional firehall food photography.
-Warm lighting.
-Visible steam.
-Prepared for 8–10 firefighters.
-Commercial kitchen background.
-50mm lens.
-Shallow depth of field.`;
-
-export const TITLE_LOCKED_IMAGE_PROMPTS: Record<string, string> = {
-  "crock-barbacoa-chicken": CROCK_BARBACOA_CHICKEN_IMAGE_PROMPT,
 };
 
 export const PERFORMANCE_MEAL_IMAGERY_NEGATIVE_OVERRIDES: Record<string, string[]> = {

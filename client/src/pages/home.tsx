@@ -52,7 +52,7 @@ export default function Home() {
     <div className="home-page page-shell min-h-screen min-h-[100dvh] bg-background overflow-x-hidden">
       <SiteHeader activePage="home" />
 
-      <HomeHero recipeCount={recipeCount} />
+      <HomeHero />
       <HomeSeoIntro recipeCount={recipeCount} />
 
       <main>

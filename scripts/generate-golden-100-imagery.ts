@@ -59,6 +59,16 @@ import { flushSqliteToDisk } from "../server/sqlite.js";
 
 import { getCuratedPackageDef } from "../shared/curated-hall-packages.js";
 
+import { TITLE_LOCKED_IMAGE_PROMPTS } from "../shared/food-imagery/title-locked-prompts.js";
+
+
+
+function withTitleLockedPrompt(slug: string, modelPrompt: string): string {
+  const locked = TITLE_LOCKED_IMAGE_PROMPTS[slug];
+  if (!locked) return modelPrompt;
+  return `${modelPrompt} ${locked}`;
+}
+
 
 
 interface ImageryTarget {
@@ -293,25 +303,19 @@ async function main(): Promise<void> {
 
     try {
 
-      const modelPrompt = buildEditorialModelPrompt({
-
-        mealName: t.title,
-
-        category: t.category,
-
-        cuisine: t.cuisine,
-
-        protein: t.protein,
-
-        mealFormat: t.mealFormat,
-
-        stylePreset: promptResult.stylePreset,
-
-        hookLine: t.hookLine,
-
-        ingredientHints: t.ingredientHints,
-
-      });
+      const modelPrompt = withTitleLockedPrompt(
+        t.slug,
+        buildEditorialModelPrompt({
+          mealName: t.title,
+          category: t.category,
+          cuisine: t.cuisine,
+          protein: t.protein,
+          mealFormat: t.mealFormat,
+          stylePreset: promptResult.stylePreset,
+          hookLine: t.hookLine,
+          ingredientHints: t.ingredientHints,
+        }),
+      );
 
 
 

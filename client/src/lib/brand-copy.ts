@@ -21,6 +21,8 @@ export const CTA = {
   pickDinner: "Pick dinner",
   exploreMeals: "Browse Recipes",
   viewRecipes: "All recipes",
+  generateTonight: "Generate Tonight's Meal",
+  spinMealWheel: "Spin The Meal Wheel",
   fullFaq: "All questions",
   spinAgain: "Spin again",
   tryAnother: "Try another",
@@ -45,6 +47,10 @@ export const GENERATOR = {
 } as const;
 
 export const HOME = {
+  /** Visible homepage hero headline (SEO title stays in metadata). */
+  heroHeadline: 'End The "What\'s For Dinner?" Debate.',
+  heroSubheadline: "Firehall-tested meals picked in under 30 seconds.",
+  heroTrustLine: "Built by firefighters. Hall-tested recipes your crew will actually eat.",
   h1: "Firefighter Meals & Firehall Recipes",
   heroEyebrow: "Firefighter meals · Firehall recipes · Crew-tested",
   eyebrow: "Station kitchen · Crew dinners",

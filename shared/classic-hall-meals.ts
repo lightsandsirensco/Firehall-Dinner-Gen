@@ -247,8 +247,9 @@ export const CLASSIC_HALL_MEALS: ClassicHallMealMeta[] = [
     emoji: "🥗",
     spoonacularRecipeId: 636682,
     spoonacularTitle: "Chicken Caesar Salad",
-    imageAlt: "Hearty grilled chicken caesar salad with romaine and parmesan",
-    imageKeywords: ["caesar", "chicken", "salad", "grilled", "romaine"],
+    imageAlt:
+      "Hearty chicken Caesar salad with sliced grilled chicken pieces, romaine, parmesan, and croutons",
+    imageKeywords: ["caesar", "chicken", "salad", "grilled", "romaine", "sliced", "diced"],
     cuisine: "American",
     mealFormat: "salad",
     protein: "Chicken",

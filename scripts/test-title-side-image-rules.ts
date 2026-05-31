@@ -42,6 +42,25 @@ const caesarFail = auditTitlePrimarySideAlignment({
 });
 assert.ok(hasImageTitleMismatch(caesarFail), "bowl fails caesar salad");
 
+const caesarWholeBreastFail = auditTitlePrimarySideAlignment({
+  slug: "chicken-caesar",
+  title: "Chicken Caesar Salad",
+  heroPath: "/images/golden-100/chicken-caesar.jpg",
+  heroAlt: "whole grilled chicken breast on caesar salad",
+});
+assert.ok(hasImageTitleMismatch(caesarWholeBreastFail), "whole breast alt fails caesar chicken pieces rule");
+
+const caesarPass = auditTitlePrimarySideAlignment({
+  slug: "chicken-caesar",
+  title: "Chicken Caesar Salad",
+  heroPath: "/images/golden-100/chicken-caesar.jpg",
+  heroAlt: "chicken caesar salad with sliced grilled chicken pieces, romaine, parmesan",
+});
+assert.equal(hasImageTitleMismatch(caesarPass), false, "sliced chicken pieces pass caesar audit");
+
+const caesarPrompt = buildRequiredVisibleSidesPromptLine("Chicken Caesar Salad");
+assert.match(caesarPrompt, /diced pieces/i);
+
 const jerkFail = auditTitlePrimarySideAlignment({
   slug: "jerk-chicken",
   title: "Jerk Chicken and Rice & Peas",
