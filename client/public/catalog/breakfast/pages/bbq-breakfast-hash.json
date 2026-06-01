@@ -1,8 +1,8 @@
 {
   "slug": "bbq-breakfast-hash",
   "title": "BBQ Breakfast Hash",
-  "subtitle": "A practical station breakfast that scales from 4 to 12.",
-  "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+  "subtitle": "Leftover BBQ pulled into a cast-iron hash with eggs on top.",
+  "description": "Pulled pork or brisket folded into crispy potato hash with eggs cracked on top. Leftover BBQ becomes a breakfast the crew votes for — extra sauce on the side.",
   "filters": [
     "bbq_breakfast",
     "feed_a_crew"
@@ -72,14 +72,14 @@
     {
       "stepNumber": 3,
       "title": "Crisp the potatoes",
-      "instruction": "Heat cast iron over medium-high with oil. Add potatoes in one layer; let them sit 4 minutes before tossing for crust. Season with salt and pepper. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Heat cast iron over medium-high with oil. Add potatoes in one layer; let them sit 4 minutes before tossing for crust. Season with salt and pepper.",
       "minutes": 14,
       "heatLevel": ""
     },
     {
       "stepNumber": 4,
       "title": "Warm the BBQ",
-      "instruction": "Fold in onion and pulled pork with a splash of BBQ sauce. Heat through without drying the meat. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Fold in onion and pulled pork with a splash of BBQ sauce. Heat through without drying the meat. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
       "minutes": 5,
       "heatLevel": ""
     },
@@ -149,12 +149,11 @@
   "heroImage": "/images/breakfast/bbq-breakfast-hash.jpg",
   "thumbImage": "/images/thumbs/breakfast/bbq-breakfast-hash.jpg",
   "imageAlt": "Warm station-kitchen breakfast: BBQ Breakfast Hash",
-  "publishedAt": "2026-05-30T21:22:29.758Z",
-  "updatedAt": "2026-05-31T12:54:36.748Z",
+  "publishedAt": "2026-05-31T18:33:00.830Z",
+  "updatedAt": "2026-05-31T23:50:24.854Z",
   "readMinutes": 6,
   "seoTitle": "BBQ Breakfast Hash | Firehall Breakfast",
-  "mobileImage": "/images/mobile/breakfast/bbq-breakfast-hash.jpg",
-  "railImage": "/images/rails/breakfast/bbq-breakfast-hash.jpg",
+  "collectionTier": "firehall_classic",
   "proTips": [
     "Assign one cook to the hot surface and one to assembly. Keep the line moving; don’t crowd the griddle.",
     "Set a warm holding zone (oven 200°F or covered hotel pan) so staggered eaters still get a hot plate.",

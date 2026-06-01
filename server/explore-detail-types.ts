@@ -10,4 +10,6 @@ export interface ExploreRecipeDetailPayload extends ExploreRecipeDetail {
   _fromCurated?: boolean;
   _curatedRecipeId?: string;
   _publisherName?: string;
+  /** Approved catalog slug — client redirects legacy explore URLs here. */
+  _catalogSlug?: string;
 }

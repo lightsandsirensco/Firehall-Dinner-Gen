@@ -8,15 +8,15 @@
   "category": "bbq_grill_nights",
   "cuisine": "italian-american",
   "description": "Sirloin cubes marinate in balsamic and basil, grill with cherry tomatoes on skewers to 145°F, and finish with fresh mozzarella pearls and balsamic reduction.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 14,
   "prepTime": 30,
   "difficulty": "medium",
-  "calories": 1047,
-  "protein": 82,
-  "carbs": 1,
-  "fats": 78,
+  "calories": 1042,
+  "protein": 80,
+  "carbs": 4,
+  "fats": 77,
   "tags": [
     "protein:beef",
     "format:crew_kebab",
@@ -39,63 +39,63 @@
   "ingredients": [
     {
       "name": "sirloin steak",
-      "quantity": "5.5",
+      "quantity": "4.4",
       "unit": "lb",
       "notes": "cut into 1.5-inch cubes",
       "group": "Main"
     },
     {
       "name": "aged balsamic vinegar",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "cup",
       "group": "Marinade"
     },
     {
       "name": "sun-dried tomato oil",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "cup",
       "group": "Marinade"
     },
     {
       "name": "fresh basil leaves",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "cup",
       "group": "Marinade"
     },
     {
       "name": "heirloom cherry tomatoes",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "lb",
       "group": "Skewers"
     },
     {
       "name": "buffalo mozzarella balls",
-      "quantity": "1.5",
+      "quantity": "1 1/4",
       "unit": "lb",
       "notes": "cold at service",
       "group": "Finish"
     },
     {
       "name": "Saba balsamic syrup",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "cup",
       "group": "Finish"
     },
     {
       "name": "Maldon salt",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tsp",
       "group": "Seasoning"
     },
     {
       "name": "Tellicherry pepper",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tsp",
       "group": "Seasoning"
     },
     {
       "name": "basil oil",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "cup",
       "group": "Finish"
     }
@@ -104,7 +104,7 @@
     {
       "stepNumber": 1,
       "title": "Marinate sirloin",
-      "instruction": "Toss beef cubes with balsamic, olive oil, basil, garlic, salt, and pepper. Marinate at least 1 hour refrigerated. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Toss beef cubes with balsamic, olive oil, basil, garlic, salt, and pepper. Marinate at least 1 hour refrigerated. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
       "minutes": 15,
       "heatLevel": ""
     },
@@ -125,7 +125,7 @@
     {
       "stepNumber": 4,
       "title": "Thread caprese skewers",
-      "instruction": "Alternate beef cubes and cherry tomatoes on skewers. Leave small gaps for heat flow. Plan about 12 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Alternate beef cubes and cherry tomatoes on skewers. Leave small gaps for heat flow. Plan about 12 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
       "minutes": 12,
       "heatLevel": ""
     },
@@ -139,7 +139,7 @@
     {
       "stepNumber": 6,
       "title": "Rest and hold",
-      "instruction": "Rest skewers 5 minutes. Slide beef and tomatoes into hotel pans, cover with foil, hold at 170°F. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Rest skewers 5 minutes. Slide beef and tomatoes into hotel pans, cover with foil, hold at 170°F. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
       "minutes": 5,
       "heatLevel": ""
     },
@@ -175,12 +175,25 @@
   "mealPrepNotes": "Marinate beef 1–4 hours. Grill medium-high 450°F. Hold beef and tomatoes covered at 170°F up to 25 minutes. Mozzarella and balsamic at service only.",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1047,
-    "protein": 82,
-    "carbs": 1,
-    "fats": 78,
+    "calories": 1042,
+    "protein": 80,
+    "carbs": 4,
+    "fats": 77,
     "label": "per serving (hall portion)",
-    "source": "estimated"
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/smoker-catalog/caprese-steak-skewers-crew.jpg",
   "heroImageAlt": "Heirloom Tomato Bocconcini Sirloin Stacks — crew-sized BBQ spread with visible smoke and bark",
@@ -209,6 +222,6 @@
     "brisket-style-beef-sandwiches-au-jus"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T02:29:42.534Z",
+  "generatedAt": "2026-05-31T23:32:23.204Z",
   "contentVersion": 2
 }

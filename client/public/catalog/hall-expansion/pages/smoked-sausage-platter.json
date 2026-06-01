@@ -8,15 +8,15 @@
   "category": "hall_expansion",
   "cuisine": "american",
   "description": "A mix of smoked sausages—kielbasa, andouille, and sweet Italian—slow-smoke alongside peppers and onions until snappy and juicy. Serve on a platter with mustards, buns, and sauerkraut for build-your-own plates.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 75,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 480,
-  "protein": 22,
-  "carbs": 28,
-  "fats": 32,
+  "calories": 538,
+  "protein": 20,
+  "carbs": 6,
+  "fats": 48,
   "tags": [
     "protein:pork",
     "format:smoker",
@@ -40,64 +40,64 @@
   "ingredients": [
     {
       "name": "kielbasa links",
-      "quantity": "10",
+      "quantity": "8",
       "unit": "links",
       "group": "Sausage"
     },
     {
       "name": "andouille sausage",
-      "quantity": "10",
+      "quantity": "8",
       "unit": "links",
       "group": "Sausage"
     },
     {
       "name": "sweet Italian sausage",
-      "quantity": "10",
+      "quantity": "8",
       "unit": "links",
       "group": "Sausage"
     },
     {
       "name": "bell peppers",
-      "quantity": "4",
+      "quantity": "3",
       "unit": "whole",
       "notes": "mixed colors, sliced",
       "group": "Veg"
     },
     {
       "name": "yellow onions",
-      "quantity": "3",
+      "quantity": "2",
       "unit": "whole",
       "notes": "sliced",
       "group": "Veg"
     },
     {
       "name": "olive oil",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp",
       "group": "Veg"
     },
     {
       "name": "smoked paprika",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tbsp",
       "group": "Seasoning"
     },
     {
       "name": "kosher salt",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tbsp",
       "group": "Seasoning"
     },
     {
       "name": "sauerkraut",
-      "quantity": "3",
+      "quantity": "2.4",
       "unit": "cups",
       "notes": "drained",
       "group": "Toppings"
     },
     {
       "name": "sub rolls",
-      "quantity": "10",
+      "quantity": "8",
       "unit": "whole",
       "group": "Serve"
     }
@@ -213,11 +213,25 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 480,
-    "protein": 22,
-    "carbs": 28,
-    "fats": 32,
-    "label": "~480 cal/serving · 22g protein · 3g fiber (est.)"
+    "calories": 538,
+    "protein": 20,
+    "carbs": 6,
+    "fats": 48,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/hall-expansion/smoked-sausage-platter.jpg",
   "heroImageAlt": "Smoked Sausage Platter — crew-sized firehall meal",

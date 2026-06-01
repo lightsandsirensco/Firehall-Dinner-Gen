@@ -1,22 +1,22 @@
 {
-  "slug": "grilled-halibut-lemon-packets",
-  "title": "Caper-Butter Halibut Foil Packets",
-  "displayTitle": "Caper-Butter Halibut Foil Packets",
-  "seoTitle": "Caper-Butter Halibut Foil Packets | Firehall BBQ",
-  "shortDescription": "Halibut packet night—lemon caper butter steam on the grill, not baked",
-  "subtitle": "Foil-packet halibut, caper butter, and herb steam for ten",
+  "slug": "grilled-cod-lemon-packets",
+  "title": "Caper-Butter Cod Foil Packets",
+  "displayTitle": "Caper-Butter Cod Foil Packets",
+  "seoTitle": "Caper-Butter Cod Foil Packets | Firehall BBQ",
+  "shortDescription": "Cod packet night—lemon caper butter steam on the grill, not baked",
+  "subtitle": "Foil-packet cod, caper butter, and herb steam for ten",
   "category": "bbq_grill_nights",
   "cuisine": "mediterranean",
-  "description": "Halibut fillets seal in foil packets with lemon, capers, cherry tomatoes, and white wine butter, grill until 145°F, and open at the table for aromatic steam.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "description": "Cod fillets seal in foil packets with lemon, capers, cherry tomatoes, and white wine butter, grill until 145°F, and open at the table for aromatic steam.",
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 18,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 520,
-  "protein": 32,
-  "carbs": 48,
-  "fats": 22,
+  "calories": 575,
+  "protein": 52,
+  "carbs": 0,
+  "fats": 38,
   "tags": [
     "protein:seafood",
     "format:foil_fish",
@@ -38,22 +38,22 @@
   ],
   "ingredients": [
     {
-      "name": "Pacific halibut fillets",
-      "quantity": "5",
+      "name": "Atlantic cod fillets",
+      "quantity": "4",
       "unit": "lb",
       "notes": "about 10 portions",
       "group": "Main"
     },
     {
       "name": "unsalted butter",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "cup",
       "notes": "cut into pats",
       "group": "Packet"
     },
     {
       "name": "nonpareil capers",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "cup",
       "notes": "drained",
       "group": "Packet"
@@ -67,38 +67,38 @@
     },
     {
       "name": "Picholine olives",
-      "quantity": "0.75",
+      "quantity": "5/8",
       "unit": "cup",
       "notes": "pitted",
       "group": "Packet"
     },
     {
       "name": "dry vermouth",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "cup",
       "group": "Packet"
     },
     {
       "name": "fresh tarragon",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "group": "Packet"
     },
     {
       "name": "fresh dill fronds",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "cup",
       "group": "Finish"
     },
     {
       "name": "Maldon salt",
-      "quantity": "1.5",
+      "quantity": "1 1/4",
       "unit": "tsp",
       "group": "Seasoning"
     },
     {
       "name": "white pepper",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tsp",
       "group": "Seasoning"
     }
@@ -107,7 +107,7 @@
     {
       "stepNumber": 1,
       "title": "Build foil packets",
-      "instruction": "Place each halibut portion on heavy foil. Top with butter pat, capers, tomatoes, lemon slice, thyme, wine, salt, and pepper. Seal tightly. Plan about 15 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Place each cod portion on heavy foil. Top with butter pat, capers, tomatoes, lemon slice, thyme, wine, salt, and pepper. Seal tightly. Use Atlantic cod fillets, fennel bulb, Picholine olives, dry vermouth as listed — measure each before heat goes on. Use fresh tarragon, fresh dill fronds as listed — measure each before heat goes on.",
       "minutes": 15,
       "heatLevel": ""
     },
@@ -121,7 +121,7 @@
     {
       "stepNumber": 3,
       "title": "Grill packets",
-      "instruction": "Grill sealed packets 12–14 minutes until puffed and halibut reads 145°F through foil. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Grill sealed packets 12–14 minutes until puffed and cod reads 145°F through foil. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 14,
       "heatLevel": "medium"
     },
@@ -149,7 +149,7 @@
     {
       "stepNumber": 7,
       "title": "Finish with parsley",
-      "instruction": "Scatter parsley over opened packets. Spoon caper butter over fish. Plan about 3 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Scatter parsley over opened packets. Spoon caper butter over fish. Plan about 3 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F at the thickest point before moving to the next batch.",
       "minutes": 3,
       "heatLevel": ""
     },
@@ -167,42 +167,55 @@
     "Open packets away from faces—steam exits fast."
   ],
   "tonightSpread": [
-    "Grilled halibut lemon packets with caper butter.",
+    "Grilled cod lemon packets with caper butter.",
     "Grilled asparagus or green salad on the side."
   ],
   "leftovers": [
-    "Flake halibut into fish stew with packet butter.",
+    "Flake cod into fish stew with packet butter.",
     "Chop into Mediterranean fish salad."
   ],
   "whyCrewsLikeIt": "Foil packets cook evenly and hold in the packet at 140°F for a short window—perfect when the crew might get toned out mid-service.",
   "mealPrepNotes": "Build packets ahead. Grill medium 400°F, 12–14 minutes. Hold sealed packets at 140°F up to 15 minutes. Open at service for steam and aroma.",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 520,
-    "protein": 32,
-    "carbs": 48,
-    "fats": 22,
+    "calories": 575,
+    "protein": 52,
+    "carbs": 0,
+    "fats": 38,
     "label": "per serving (hall portion)",
-    "source": "estimated"
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
-  "heroImage": "/images/smoker-catalog/grilled-halibut-lemon-packets.jpg",
-  "heroImageAlt": "Caper-Butter Halibut Foil Packets — crew-sized BBQ spread with visible smoke and bark",
-  "mobileImage": "/images/mobile/smoker-catalog/grilled-halibut-lemon-packets.jpg",
-  "thumbImage": "/images/thumbs/smoker-catalog/grilled-halibut-lemon-packets.jpg",
-  "railImage": "/images/rails/smoker-catalog/grilled-halibut-lemon-packets.jpg",
+  "heroImage": "/images/smoker-catalog/grilled-cod-lemon-packets.jpg",
+  "heroImageAlt": "Caper-Butter Cod Foil Packets — crew-sized BBQ spread with visible smoke and bark",
+  "mobileImage": "/images/mobile/smoker-catalog/grilled-cod-lemon-packets.jpg",
+  "thumbImage": "/images/thumbs/smoker-catalog/grilled-cod-lemon-packets.jpg",
+  "railImage": "/images/rails/smoker-catalog/grilled-cod-lemon-packets.jpg",
   "realismScore": 88,
   "firefighterScore": 90,
   "popularityWeight": 7.5,
   "searchTerms": [
-    "caper-butter halibut foil packets",
-    "grilled halibut lemon packets",
+    "caper-butter cod foil packets",
+    "grilled cod lemon packets",
     "seafood",
     "Mediterranean",
     "foil fish",
     "bbq",
     "firehall",
-    "foil packet halibut grill",
-    "caper butter halibut"
+    "foil packet cod grill",
+    "caper butter cod"
   ],
   "relatedSlugs": [
     "carolina-vinegar-pulled-pork",
@@ -211,6 +224,6 @@
     "brisket-style-beef-sandwiches-au-jus"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T02:29:42.536Z",
+  "generatedAt": "2026-05-31T23:32:23.207Z",
   "contentVersion": 2
 }

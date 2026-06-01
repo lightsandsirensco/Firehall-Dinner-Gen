@@ -1,22 +1,22 @@
 {
-  "slug": "cajun-grilled-catfish-crew",
-  "title": "Black Iron Remoulade Catfish Plates",
-  "displayTitle": "Black Iron Remoulade Catfish Plates",
-  "seoTitle": "Black Iron Remoulade Catfish Plates | Firehall BBQ",
-  "shortDescription": "Catfish on the grill—Cajun blackened char, not fried, hall portions for ten",
-  "subtitle": "Blackened catfish fillets, remoulade, and char for ten",
+  "slug": "cajun-grilled-cod-crew",
+  "title": "Black Iron Remoulade Cod Plates",
+  "displayTitle": "Black Iron Remoulade Cod Plates",
+  "seoTitle": "Black Iron Remoulade Cod Plates | Firehall BBQ",
+  "shortDescription": "Cod on the grill—Cajun blackened char, not fried, hall portions for ten",
+  "subtitle": "Blackened cod fillets, remoulade, and char for ten",
   "category": "bbq_grill_nights",
   "cuisine": "cajun",
-  "description": "Catfish fillets coat in Cajun blackening spice, grill in cast-iron griddle inserts until charred and 145°F, and serve with cool remoulade and lemon.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "description": "Cod fillets coat in Cajun blackening spice, grill in cast-iron griddle inserts until charred and 145°F, and serve with cool remoulade and lemon.",
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 14,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 255,
-  "protein": 1,
+  "calories": 709,
+  "protein": 51,
   "carbs": 7,
-  "fats": 26,
+  "fats": 52,
   "tags": [
     "protein:seafood",
     "format:bayou_fillet",
@@ -38,63 +38,63 @@
   ],
   "ingredients": [
     {
-      "name": "catfish fillets",
-      "quantity": "5",
+      "name": "cod fillets",
+      "quantity": "4",
       "unit": "lb",
       "notes": "about 10 fillets",
       "group": "Main"
     },
     {
       "name": "Cajun blackening spice",
-      "quantity": "0.33",
+      "quantity": "1/4",
       "unit": "cup",
       "group": "Blackening"
     },
     {
       "name": "smoked paprika",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tbsp",
       "group": "Blackening"
     },
     {
       "name": "garlic powder",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tbsp",
       "group": "Blackening"
     },
     {
       "name": "mayonnaise",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "cup",
       "group": "Remoulade"
     },
     {
       "name": "Creole mustard",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp",
       "group": "Remoulade"
     },
     {
       "name": "sweet pickle relish",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp",
       "group": "Remoulade"
     },
     {
       "name": "cayenne pepper",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "tsp",
       "group": "Remoulade"
     },
     {
       "name": "clarified butter",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "cup",
       "group": "Grill"
     },
     {
       "name": "lemon wedges",
-      "quantity": "10",
+      "quantity": "8",
       "unit": "whole",
       "group": "Service"
     }
@@ -103,14 +103,14 @@
     {
       "stepNumber": 1,
       "title": "Build remoulade",
-      "instruction": "Whisk mayo, Creole mustard, relish, and cayenne. Chill until service. Plan about 8 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Whisk mayo, Creole mustard, relish, and cayenne. Chill until service. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Use mayonnaise as listed — measure each before heat goes on.",
       "minutes": 8,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Season catfish",
-      "instruction": "Pat fillets completely dry. Press Cajun spice, paprika, and garlic powder onto both sides. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "title": "Season cod",
+      "instruction": "Pat fillets completely dry. Press Cajun spice, paprika, and garlic powder onto both sides. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F at the thickest point before moving to the next batch.",
       "minutes": 10,
       "heatLevel": ""
     },
@@ -152,7 +152,7 @@
     {
       "stepNumber": 8,
       "title": "Platter for ten",
-      "instruction": "Serve one fillet per firefighter with remoulade and lemon. Call it fast—catfish waits poorly. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Serve one fillet per firefighter with remoulade and lemon. Call it fast—cod waits poorly. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F at the thickest point before moving to the next batch.",
       "minutes": 5,
       "heatLevel": ""
     }
@@ -163,43 +163,56 @@
     "Cast-iron insert on grill mimics blackening without indoor smoke."
   ],
   "tonightSpread": [
-    "Cajun grilled catfish with remoulade and lemon.",
+    "Cajun grilled cod with remoulade and lemon.",
     "Dirty rice or hushpuppy-style cornbread on the side."
   ],
   "leftovers": [
-    "Flake catfish into po-boy sandwiches.",
+    "Flake cod into po-boy sandwiches.",
     "Chop into Cajun fish tacos with slaw."
   ],
-  "whyCrewsLikeIt": "Grilled blackened catfish is a Louisiana lane distinct from tilapia or salmon. Fillets cook in minutes on a griddle insert and hold at 140°F briefly.",
+  "whyCrewsLikeIt": "Grilled blackened cod is a Louisiana lane that uses freezer-case fish every hall already stocks. Fillets cook in minutes on a griddle insert and hold at 140°F briefly.",
   "mealPrepNotes": "Pat fillets dry. Grill on cast-iron insert at 425°F, 4 minutes per side. Hold covered at 140°F up to 10 minutes. Remoulade cold on the side.",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 255,
-    "protein": 1,
+    "calories": 709,
+    "protein": 51,
     "carbs": 7,
-    "fats": 26,
+    "fats": 52,
     "label": "per serving (hall portion)",
-    "source": "estimated"
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
-  "heroImage": "/images/smoker-catalog/cajun-grilled-catfish-crew.jpg",
-  "heroImageAlt": "Black Iron Remoulade Catfish Plates — crew-sized BBQ spread with visible smoke and bark",
-  "mobileImage": "/images/mobile/smoker-catalog/cajun-grilled-catfish-crew.jpg",
-  "thumbImage": "/images/thumbs/smoker-catalog/cajun-grilled-catfish-crew.jpg",
-  "railImage": "/images/rails/smoker-catalog/cajun-grilled-catfish-crew.jpg",
+  "heroImage": "/images/smoker-catalog/cajun-grilled-cod-crew.jpg",
+  "heroImageAlt": "Black Iron Remoulade Cod Plates — crew-sized BBQ spread with visible smoke and bark",
+  "mobileImage": "/images/mobile/smoker-catalog/cajun-grilled-cod-crew.jpg",
+  "thumbImage": "/images/thumbs/smoker-catalog/cajun-grilled-cod-crew.jpg",
+  "railImage": "/images/rails/smoker-catalog/cajun-grilled-cod-crew.jpg",
   "realismScore": 88,
   "firefighterScore": 90,
   "popularityWeight": 7.5,
   "searchTerms": [
-    "black iron remoulade catfish plates",
-    "cajun grilled catfish crew",
+    "black iron remoulade cod plates",
+    "cajun grilled cod crew",
     "seafood",
     "Cajun",
     "bayou fillet",
     "bbq",
     "firehall",
-    "cajun grilled catfish",
-    "blackened catfish grill",
-    "remoulade catfish crew"
+    "cajun grilled cod",
+    "blackened cod grill",
+    "remoulade cod crew"
   ],
   "relatedSlugs": [
     "carolina-vinegar-pulled-pork",
@@ -208,6 +221,6 @@
     "brisket-style-beef-sandwiches-au-jus"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T02:29:42.536Z",
+  "generatedAt": "2026-05-31T23:32:23.207Z",
   "contentVersion": 2
 }

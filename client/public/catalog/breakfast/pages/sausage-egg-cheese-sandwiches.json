@@ -1,8 +1,8 @@
 {
   "slug": "sausage-egg-cheese-sandwiches",
   "title": "Sausage Egg & Cheese Sandwiches",
-  "subtitle": "Station sandwiches with real structure—no soggy bottoms.",
-  "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+  "subtitle": "Classic sausage, egg, and cheese on toasted buns.",
+  "description": "Sausage patty, folded egg, and melted cheese on a toasted bun — the breakfast sandwich every firefighter knows. Batch on a griddle and wrap in foil for the line.",
   "filters": [
     "breakfast_sandwiches"
   ],
@@ -81,7 +81,7 @@
     {
       "stepNumber": 5,
       "title": "Assemble sandwiches",
-      "instruction": "Build sausage, egg, and cheese on toasted buns. Wrap in foil for the line if serving in waves. Plan about 8 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Build sausage, egg, and cheese on toasted buns. Wrap in foil for the line if serving in waves. Plan about 8 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
       "minutes": 8,
       "heatLevel": ""
     },
@@ -108,10 +108,10 @@
     }
   ],
   "nutrition": {
-    "calories": 325,
-    "protein": 17,
-    "carbs": 23,
-    "fat": 19,
+    "calories": 436,
+    "protein": 20,
+    "carbs": 41,
+    "fat": 21,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
@@ -119,12 +119,12 @@
       "under700Calories": true,
       "under30gFat": true,
       "highCarb": false,
-      "lowCarb": true,
-      "mealPrepFriendly": false
+      "lowCarb": false,
+      "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": false,
-      "lighterOption": true,
+      "lighterOption": false,
       "performanceMeal": false
     }
   },
@@ -144,12 +144,11 @@
   "heroImage": "/images/breakfast/sausage-egg-cheese-sandwiches.jpg",
   "thumbImage": "/images/thumbs/breakfast/sausage-egg-cheese-sandwiches.jpg",
   "imageAlt": "Warm station-kitchen breakfast: Sausage Egg & Cheese Sandwiches",
-  "publishedAt": "2026-05-30T21:22:29.758Z",
-  "updatedAt": "2026-05-31T12:54:36.789Z",
+  "publishedAt": "2026-05-31T18:33:00.830Z",
+  "updatedAt": "2026-05-31T23:50:25.199Z",
   "readMinutes": 5,
   "seoTitle": "Sausage Egg & Cheese Sandwiches | Firehall Breakfast",
-  "mobileImage": "/images/mobile/breakfast/sausage-egg-cheese-sandwiches.jpg",
-  "railImage": "/images/rails/breakfast/sausage-egg-cheese-sandwiches.jpg",
+  "collectionTier": "firehall_classic",
   "proTips": [
     "Assign one cook to the hot surface and one to assembly. Keep the line moving; don’t crowd the griddle.",
     "Set a warm holding zone (oven 200°F or covered hotel pan) so staggered eaters still get a hot plate.",
@@ -166,5 +165,6 @@
     "Instant-read thermometer",
     "Aluminum foil"
   ],
-  "mealPrepNotes": "Prep mise en place before the shift — Sausage Egg & Cheese Sandwiches runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
+  "mealPrepNotes": "Prep mise en place before the shift — Sausage Egg & Cheese Sandwiches runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone.",
+  "heroImageAlt": "Sausage Egg & Cheese Sandwiches — wide family-style firehall platter showing cheese sandwiches on a crew prep table"
 }

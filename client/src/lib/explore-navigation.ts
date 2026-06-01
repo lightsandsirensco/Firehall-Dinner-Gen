@@ -32,6 +32,15 @@ export function buildExploreRecipeDetailPath(card: ExploreRecipeCard): string | 
   return qs ? `/explore/recipe/${id}?${qs}` : `/explore/recipe/${id}`;
 }
 
+/** Redirect legacy `/explore/recipe/:id?slug=` links to canonical catalog routes. */
+export function resolveExploreLegacyRedirect(slug: string | null | undefined): string | null {
+  const path = slug?.trim();
+  if (path && isApprovedCatalogSlug(path)) {
+    return catalogRecipePath(path);
+  }
+  return null;
+}
+
 /** Route Explore card clicks — approved catalog slugs use `/recipes/:slug`. */
 export function resolveExploreCardNavigation(card: ExploreRecipeCard): {
   kind: "catalog-recipe" | "explore-detail";

@@ -8,15 +8,15 @@
   "category": "hall_expansion",
   "cuisine": "american",
   "description": "Homemade or bakery pretzel bites are warmed until soft, served alongside a sharp beer cheese sauce and honey mustard. The platter is built for grazing while eyes stay on the screen.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 20,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 460,
-  "protein": 16,
-  "carbs": 52,
-  "fats": 20,
+  "calories": 307,
+  "protein": 13,
+  "carbs": 3,
+  "fats": 27,
   "tags": [
     "protein:vegetarian",
     "format:bar_line",
@@ -39,64 +39,64 @@
   "ingredients": [
     {
       "name": "soft pretzel bites",
-      "quantity": "4",
+      "quantity": "3.2",
       "unit": "lb",
       "notes": "frozen or fresh",
       "group": "Main"
     },
     {
       "name": "sharp cheddar cheese",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "lb",
       "notes": "shredded",
       "group": "Beer cheese"
     },
     {
       "name": "cream cheese",
-      "quantity": "8",
+      "quantity": "6.4",
       "unit": "oz",
       "group": "Beer cheese"
     },
     {
       "name": "lager beer",
-      "quantity": "12",
+      "quantity": "9.6",
       "unit": "oz",
       "group": "Beer cheese"
     },
     {
       "name": "Dijon mustard",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "group": "Beer cheese"
     },
     {
       "name": "Worcestershire sauce",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tbsp",
       "group": "Beer cheese"
     },
     {
       "name": "garlic powder",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tsp",
       "group": "Beer cheese"
     },
     {
       "name": "honey mustard",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "cup",
       "group": "Dip"
     },
     {
       "name": "coarse salt",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "notes": "for sprinkling",
       "group": "Main"
     },
     {
       "name": "unsalted butter",
-      "quantity": "4",
+      "quantity": "3.4",
       "unit": "tbsp",
       "notes": "melted",
       "group": "Main"
@@ -185,11 +185,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 460,
-    "protein": 16,
-    "carbs": 52,
-    "fats": 20,
-    "label": "~460 cal/serving · 16g protein · 2g fiber (est.)"
+    "calories": 307,
+    "protein": 13,
+    "carbs": 3,
+    "fats": 27,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/hall-expansion/pretzel-bite-platter.jpg",
   "heroImageAlt": "Pretzel Bite Platter with Beer Cheese — crew-sized firehall meal",

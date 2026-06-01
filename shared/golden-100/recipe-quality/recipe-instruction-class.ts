@@ -74,6 +74,8 @@ const SLUG_CLASS: Partial<Record<string, RecipeInstructionClass>> = {
   "herb-roasted-thighs": "roast",
   "chicken-caesar": "salad",
   "jambalaya": "one_pot",
+  "beef-barley-soup": "soup",
+  "chicken-dumpling-soup": "soup",
 };
 
 export function inferRecipeInstructionClass(def: GoldenRecipeDefinition): RecipeInstructionClass {
@@ -88,7 +90,10 @@ export function inferRecipeInstructionClass(def: GoldenRecipeDefinition): Recipe
   if (/\bburnt-ends\b/.test(slug)) return "burnt_ends";
   if (/\brib\b/.test(slug) || /\bribs\b/.test(title)) return "bbq_ribs";
   if (def.mealFormat === "pizza" || /\bpizza\b/.test(title)) return "pizza";
-  if (def.mealFormat === "soup_chili" || /\bchili\b/.test(title) || /\bsoup\b/.test(title)) return "chili";
+  if (/\bchili\b/.test(title) && !/\b(soup|stew|barley|dumpling)\b/.test(title)) return "chili";
+  if (def.mealFormat === "soup_chili" && /\bchili\b/.test(title) && !/\bbarley\b/.test(title)) return "chili";
+  if (/\b(soup|stew|barley|dumpling)\b/.test(title) || /\bbarley\b/.test(slug)) return "soup";
+  if (def.mealFormat === "soup_chili" && /\bsoup\b/.test(title)) return "soup";
   if (def.mealFormat === "burger" || /\bburger\b/.test(title)) return "burger";
   if (def.mealFormat === "tacos" || /\btaco\b/.test(title)) return "tacos";
   if (def.mealFormat === "breakfast" || def.explorePools.includes("breakfast")) return "breakfast";

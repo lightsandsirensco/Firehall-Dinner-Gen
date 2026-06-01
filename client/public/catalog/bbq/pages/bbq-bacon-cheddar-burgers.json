@@ -8,14 +8,14 @@
   "category": "bbq_grill_nights",
   "cuisine": "american",
   "description": "Smash-style burgers on a hot griddle with bacon, cheddar, and a quick house BBQ sauce. Onion rings optional but they anchor the board.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 20,
   "prepTime": 25,
   "difficulty": "easy",
   "calories": 1400,
-  "protein": 111,
-  "carbs": 56,
+  "protein": 108,
+  "carbs": 58,
   "fats": 90,
   "tags": [
     "protein:beef",
@@ -38,32 +38,32 @@
   "ingredients": [
     {
       "name": "ground beef (80/20)",
-      "quantity": "4.5",
+      "quantity": "3.6",
       "unit": "lb"
     },
     {
       "name": "kosher salt",
-      "quantity": "1.5",
+      "quantity": "1 1/4",
       "unit": "tbsp"
     },
     {
       "name": "black pepper",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tsp"
     },
     {
       "name": "American or cheddar cheese slices",
-      "quantity": "12",
+      "quantity": "10",
       "unit": "slices"
     },
     {
       "name": "bacon",
-      "quantity": "1.5",
+      "quantity": "1 1/4",
       "unit": "lb"
     },
     {
       "name": "buns",
-      "quantity": "12",
+      "quantity": "10",
       "unit": "whole"
     },
     {
@@ -74,37 +74,37 @@
     },
     {
       "name": "pickle chips",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "cup"
     },
     {
       "name": "ketchup",
-      "quantity": "0.75",
+      "quantity": "5/8",
       "unit": "cup"
     },
     {
       "name": "BBQ sauce",
-      "quantity": "0.75",
+      "quantity": "5/8",
       "unit": "cup"
     },
     {
       "name": "Worcestershire sauce",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp"
     },
     {
       "name": "apple cider vinegar",
-      "quantity": "1.5",
+      "quantity": "1 1/4",
       "unit": "tbsp"
     },
     {
       "name": "smoked paprika",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tsp"
     },
     {
       "name": "onion rings (frozen)",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "lb",
       "notes": "optional"
     }
@@ -173,11 +173,24 @@
   "cleanupDifficulty": "heavy",
   "nutrition": {
     "calories": 1400,
-    "protein": 111,
-    "carbs": 56,
+    "protein": 108,
+    "carbs": 58,
     "fats": 90,
     "label": "per serving (hall portion)",
-    "source": "estimated"
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/smoker-catalog/bbq-bacon-cheddar-burgers.jpg",
   "heroImageAlt": "BBQ Bacon Cheddar Burgers — crew-sized BBQ spread with visible smoke and bark",
@@ -202,6 +215,6 @@
     "brisket-style-beef-sandwiches-au-jus"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T02:29:42.528Z",
+  "generatedAt": "2026-05-31T23:32:23.198Z",
   "contentVersion": 2
 }

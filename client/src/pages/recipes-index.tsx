@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect, useRef } from "react";
 import { Link } from "wouter";
 import { useQuery } from "@tanstack/react-query";
 import { SiteHeader } from "@/components/site-header";
@@ -15,6 +15,7 @@ import { buildRecipesIndexSeo } from "@shared/seo/metadata";
 import { buildRecipeCardAlt } from "@shared/seo/recipe-image-seo";
 import { getSiteOrigin } from "@/lib/seo/site-origin";
 import { buildBreadcrumbListSchema, buildWebSiteSchema } from "@shared/seo/schema";
+import { trackSearch } from "@/lib/analytics";
 import { SeoBreadcrumbs } from "@/components/seo/breadcrumbs";
 import { InternalLinkHub } from "@/components/seo/internal-link-hub";
 import { SiteFooter } from "@/components/site-footer";
@@ -22,6 +23,7 @@ import { LightsAndSirensCredit } from "@/components/brand/lights-and-sirens-cred
 import { isBreakfastMeal } from "@shared/hall-catalog/isolation";
 import { MealTrustBadges } from "@/components/trust/meal-trust-badges";
 import { RecipeGridSkeleton } from "@/components/mobile/loading-skeletons";
+import { Button } from "@/components/ui/button";
 
 function formatCategory(id: string): string {
   return id.replace(/_/g, " ");
@@ -30,8 +32,17 @@ function formatCategory(id: string): string {
 export default function RecipesIndexPage() {
   const favCount = useMemo(() => getSavedCount(), []);
   const [query, setQuery] = useState("");
+  const [debouncedQuery, setDebouncedQuery] = useState("");
+  const lastTrackedSearch = useRef("");
 
-  const { data: catalog, isLoading } = useQuery({
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      setDebouncedQuery(query.trim().toLowerCase());
+    }, 300);
+    return () => window.clearTimeout(timer);
+  }, [query]);
+
+  const { data: catalog, isLoading, isError, error, refetch } = useQuery({
     queryKey: ["golden-catalog-index"],
     queryFn: fetchGoldenCatalogIndex,
     staleTime: Infinity,
@@ -64,7 +75,7 @@ export default function RecipesIndexPage() {
     const list = [...(catalog?.recipes ?? [])]
       .filter((r) => !isBreakfastMeal({ category: r.category, mealFormat: r.mealFormat, tags: r.tags }))
       .sort((a, b) => a.title.localeCompare(b.title));
-    const q = query.trim().toLowerCase();
+    const q = debouncedQuery;
     if (!q) return list;
     return list.filter(
       (r) =>
@@ -73,7 +84,17 @@ export default function RecipesIndexPage() {
         r.cuisine?.toLowerCase().includes(q) ||
         r.category?.toLowerCase().includes(q),
     );
-  }, [catalog?.recipes, query]);
+  }, [catalog?.recipes, debouncedQuery]);
+
+  useEffect(() => {
+    if (!debouncedQuery) {
+      lastTrackedSearch.current = "";
+      return;
+    }
+    if (lastTrackedSearch.current === debouncedQuery) return;
+    lastTrackedSearch.current = debouncedQuery;
+    trackSearch(debouncedQuery, recipes.length, "recipes_index");
+  }, [debouncedQuery, recipes.length]);
 
   return (
     <div className="page-shell min-h-screen min-h-[100dvh] bg-background flex flex-col">
@@ -127,7 +148,18 @@ export default function RecipesIndexPage() {
           </div>
         )}
 
-        {!isLoading && recipes.length > 0 && (
+        {isError && !isLoading && (
+          <div className="mt-8 py-16 text-center" data-testid="recipes-index-error" role="alert">
+            <p className="text-sm text-destructive">
+              {(error as Error)?.message || "Could not load the recipe catalog."}
+            </p>
+            <Button variant="outline" className="mt-4 min-h-11" onClick={() => refetch()}>
+              Try again
+            </Button>
+          </div>
+        )}
+
+        {!isLoading && !isError && recipes.length > 0 && (
           <section aria-labelledby="recipe-grid-heading" className="mt-8">
             <h2 id="recipe-grid-heading" className="sr-only">
               All recipes
@@ -180,7 +212,7 @@ export default function RecipesIndexPage() {
           </section>
         )}
 
-        {!isLoading && recipes.length === 0 && (
+        {!isLoading && !isError && recipes.length === 0 && (
           <p className="mt-8 text-sm text-muted-foreground">No recipes match &ldquo;{query}&rdquo;.</p>
         )}
 

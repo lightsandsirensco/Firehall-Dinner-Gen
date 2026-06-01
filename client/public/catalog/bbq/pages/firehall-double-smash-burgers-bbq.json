@@ -8,14 +8,14 @@
   "category": "bbq_grill_nights",
   "cuisine": "american",
   "description": "Adapted from classic smash burger and BBQ hall traditions (BBQ Pit Boys, Hey Grill Hey): double 3-oz patties get smashed on a hot griddle, stacked with cheddar, BBQ sauce, and crispy onions for ten hungry firefighters.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 25,
   "prepTime": 25,
   "difficulty": "easy",
   "calories": 1400,
-  "protein": 105,
-  "carbs": 38,
+  "protein": 107,
+  "carbs": 39,
   "fats": 90,
   "tags": [
     "protein:beef",
@@ -39,27 +39,27 @@
   "ingredients": [
     {
       "name": "ground beef (80/20)",
-      "quantity": "5",
+      "quantity": "4",
       "unit": "lb"
     },
     {
       "name": "kosher salt",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp"
     },
     {
       "name": "black pepper",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tbsp"
     },
     {
       "name": "American or cheddar cheese slices",
-      "quantity": "20",
+      "quantity": "17",
       "unit": "slices"
     },
     {
       "name": "brioche buns",
-      "quantity": "10",
+      "quantity": "8",
       "unit": "whole"
     },
     {
@@ -70,27 +70,27 @@
     },
     {
       "name": "ketchup",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "cup"
     },
     {
       "name": "BBQ sauce",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "cup"
     },
     {
       "name": "Worcestershire sauce",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tbsp"
     },
     {
       "name": "pickle chips",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "cup"
     },
     {
       "name": "neutral oil",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp"
     }
   ],
@@ -146,7 +146,7 @@
     },
     {
       "stepNumber": 8,
-      "title": "Tonight's board",
+      "title": "",
       "instruction": "Burgers wrapped in foil, crispy onions, BBQ sauce, pickles. Call it: double smash BBQ—grab and go.",
       "minutes": 3,
       "heatLevel": ""
@@ -170,11 +170,24 @@
   "cleanupDifficulty": "medium",
   "nutrition": {
     "calories": 1400,
-    "protein": 105,
-    "carbs": 38,
+    "protein": 107,
+    "carbs": 39,
     "fats": 90,
     "label": "per serving (hall portion)",
-    "source": "estimated"
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/smoker-catalog/firehall-double-smash-burgers-bbq.jpg",
   "heroImageAlt": "Firehall Double Smash Burgers BBQ — crew-sized BBQ spread with visible smoke and bark",
@@ -202,6 +215,6 @@
     "jalapeno-cheddar-smoked-sausages"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T02:29:42.532Z",
+  "generatedAt": "2026-05-31T23:32:23.202Z",
   "contentVersion": 2
 }

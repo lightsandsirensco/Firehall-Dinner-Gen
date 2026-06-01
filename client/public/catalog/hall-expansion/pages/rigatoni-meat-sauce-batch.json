@@ -8,14 +8,14 @@
   "category": "hall_expansion",
   "cuisine": "italian",
   "description": "Ground beef and pork simmer with onion, garlic, and crushed tomatoes until thick and rich. Toss with rigatoni and finish with Parmesan for a proper Italian-American hall feed.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 60,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 540,
-  "protein": 36,
-  "carbs": 56,
+  "calories": 620,
+  "protein": 39,
+  "carbs": 71,
   "fats": 20,
   "tags": [
     "protein:beef",
@@ -39,19 +39,19 @@
   "ingredients": [
     {
       "name": "rigatoni pasta",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "lb",
       "group": "Main"
     },
     {
       "name": "ground beef (80/20)",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "lb",
       "group": "Sauce"
     },
     {
       "name": "ground pork",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "lb",
       "group": "Sauce"
     },
@@ -64,39 +64,39 @@
     },
     {
       "name": "tomato paste",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp",
       "group": "Sauce"
     },
     {
       "name": "yellow onion",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "whole",
       "notes": "finely diced",
       "group": "Aromatics"
     },
     {
       "name": "garlic cloves",
-      "quantity": "6",
+      "quantity": "5",
       "unit": "cloves",
       "notes": "minced",
       "group": "Aromatics"
     },
     {
       "name": "dry red wine",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "cup",
       "group": "Sauce"
     },
     {
       "name": "dried oregano",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tsp",
       "group": "Seasoning"
     },
     {
       "name": "grated Parmesan",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "cup",
       "notes": "for serving",
       "group": "Finish"
@@ -120,7 +120,7 @@
     {
       "stepNumber": 3,
       "title": "Brown the meats",
-      "instruction": "Cook beef and pork with onion over medium-high heat 12–15 minutes, breaking into crumbles until well browned. Drain excess fat. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Cook beef and pork with onion over medium-high heat 12–15 minutes, breaking into crumbles until well browned. Drain excess fat. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
       "minutes": 15,
       "heatLevel": ""
     },
@@ -185,14 +185,28 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 540,
-    "protein": 36,
-    "carbs": 56,
+    "calories": 620,
+    "protein": 39,
+    "carbs": 71,
     "fats": 20,
-    "label": "~540 cal/serving · 36g protein · 5g fiber (est.)"
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": true
+    }
   },
   "heroImage": "/images/hall-expansion/rigatoni-meat-sauce-batch.jpg",
-  "heroImageAlt": "Rigatoni with Meat Sauce — crew-sized firehall meal",
+  "heroImageAlt": "Rigatoni with Meat Sauce — wide family-style firehall platter showing meat sauce on a crew prep table",
   "mobileImage": "/images/mobile/hall-expansion/rigatoni-meat-sauce-batch.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/rigatoni-meat-sauce-batch.jpg",
   "railImage": "/images/rails/hall-expansion/rigatoni-meat-sauce-batch.jpg",

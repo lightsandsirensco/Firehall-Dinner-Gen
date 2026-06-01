@@ -2,7 +2,7 @@
   "slug": "breakfast-fried-rice-crew",
   "title": "Breakfast Fried Rice for the Crew",
   "subtitle": "Day-old rice wok-fried with bacon, eggs, peas, and scallions.",
-  "description": "Adapted from classic Chinese-American breakfast fried rice tradition for firehall wok service: chilled long-grain rice stir-fried over high heat with bacon, scrambled eggs, peas, carrots, and soy-sesame seasoning.",
+  "description": "Day-old rice, bacon, eggs, and soy in a wok or flat-top — fast, salty, and works for using up leftovers after a big dinner cook.",
   "filters": [
     "feed_a_crew",
     "quick_breakfasts",
@@ -89,28 +89,28 @@
     {
       "stepNumber": 3,
       "title": "Prep all components",
-      "instruction": "Break chilled rice into loose grains with wet hands. Cook diced bacon until crisp, drain, and reserve 2 tablespoons fat. Beat eggs with a pinch of salt. Keep peas, carrots, and scallions in separate bowls. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Break chilled rice into loose grains with wet hands. Cook diced bacon until crisp, drain, and reserve 2 tablespoons fat. Beat eggs with a pinch of salt. Keep peas, carrots, and scallions in separate bowls.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 4,
       "title": "Scramble eggs in the wok",
-      "instruction": "Heat wok or large skillet over high until smoking lightly. Add a tablespoon of oil, pour in eggs, and scramble quickly into soft curds. Remove to a plate immediately while still tender. Target 165°F at the thickest part before moving to the next batch. Plan about 4 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Heat wok or large skillet over high until smoking lightly. Add a tablespoon of oil, pour in eggs, and scramble quickly into soft curds. Remove to a plate immediately while still tender.",
       "minutes": 4,
       "heatLevel": ""
     },
     {
       "stepNumber": 5,
       "title": "Stir-fry vegetables",
-      "instruction": "Add bacon fat to the wok. Stir-fry carrots and scallion whites 2 minutes, then add peas and rice. Press rice against the hot surface in sections to toast grains without mashing. Target 165°F at the thickest part before moving to the next batch. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Add bacon fat to the wok. Stir-fry carrots and scallion whites 2 minutes, then add peas and rice. Press rice against the hot surface in sections to toast grains without mashing. Target 165°F at the thickest point before moving to the next batch.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 6,
       "title": "Season and combine",
-      "instruction": "Drizzle soy sauce around the rim of the wok so it sizzles and caramelizes. Toss rice until evenly golden. Fold in bacon, scrambled eggs, and scallion greens off heat. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Drizzle soy sauce around the rim of the wok so it sizzles and caramelizes. Toss rice until evenly golden. Fold in bacon, scrambled eggs, and scallion greens off heat.",
       "minutes": 5,
       "heatLevel": ""
     },
@@ -123,8 +123,15 @@
     },
     {
       "stepNumber": 8,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
       "title": "Toss with sesame oil and portion",
-      "instruction": "Drizzle sesame oil over the top and toss once. Taste for salt and transfer to a warm hotel pan for the line with chili crisp or hot sauce alongside. Plan about 3 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
+      "instruction": "Drizzle sesame oil over the top and toss once. Taste for salt and transfer to a warm hotel pan for the line with chili crisp or hot sauce alongside.",
       "minutes": 3,
       "heatLevel": ""
     }
@@ -166,12 +173,11 @@
   "heroImage": "/images/breakfast/breakfast-fried-rice-crew.jpg",
   "thumbImage": "/images/thumbs/breakfast/breakfast-fried-rice-crew.jpg",
   "imageAlt": "Breakfast fried rice with bacon, eggs, peas, and scallions in a wok",
-  "publishedAt": "2026-05-30T21:22:29.757Z",
-  "updatedAt": "2026-05-31T12:54:36.755Z",
+  "publishedAt": "2026-05-31T18:33:00.830Z",
+  "updatedAt": "2026-05-31T23:50:24.883Z",
   "readMinutes": 7,
   "seoTitle": "Breakfast Fried Rice for the Crew | Firehall Breakfast",
-  "mobileImage": "/images/mobile/breakfast/breakfast-fried-rice-crew.jpg",
-  "railImage": "/images/rails/breakfast/breakfast-fried-rice-crew.jpg",
+  "collectionTier": "firehall_classic",
   "proTips": [
     "Use day-old rice only—fresh rice steams and clumps in the wok.",
     "Cook in two wok batches if needed so rice toasts instead of steaming.",

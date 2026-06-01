@@ -8,15 +8,15 @@
   "category": "hall_expansion",
   "cuisine": "american",
   "description": "Thin-sliced ribeye is chopped with peppers and onions on a griddle, piled onto slider buns with provolone, and baked until melted. A quick au jus on the side keeps everything juicy.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 25,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 440,
-  "protein": 28,
-  "carbs": 32,
-  "fats": 24,
+  "calories": 735,
+  "protein": 46,
+  "carbs": 56,
+  "fats": 35,
   "tags": [
     "protein:beef",
     "format:sheet_pan",
@@ -39,20 +39,20 @@
   "ingredients": [
     {
       "name": "ribeye steak",
-      "quantity": "3",
+      "quantity": "2.4",
       "unit": "lb",
       "notes": "thin-sliced",
       "group": "Main"
     },
     {
       "name": "slider buns",
-      "quantity": "20",
+      "quantity": "16",
       "unit": "whole",
       "group": "Main"
     },
     {
       "name": "provolone cheese",
-      "quantity": "12",
+      "quantity": "10",
       "unit": "slices",
       "group": "Main"
     },
@@ -72,31 +72,31 @@
     },
     {
       "name": "olive oil",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp",
       "group": "Cook"
     },
     {
       "name": "kosher salt",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tsp",
       "group": "Seasoning"
     },
     {
       "name": "black pepper",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tsp",
       "group": "Seasoning"
     },
     {
       "name": "beef broth",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "cups",
       "group": "Au jus"
     },
     {
       "name": "Worcestershire sauce",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tbsp",
       "group": "Au jus"
     }
@@ -126,7 +126,7 @@
     {
       "stepNumber": 4,
       "title": "Chop and cook steak",
-      "instruction": "Add sliced ribeye in a single layer, season with salt and pepper, and sear 2 minutes. Chop with spatulas and cook until no pink remains and edges crisp, about 5–6 minutes total.",
+      "instruction": "Add sliced ribeye in a single layer, season with salt and pepper, and sear 2 minutes. Chop with spatulas and cook until no pink remains and edges crisp, about 5–6 minutes total. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
       "minutes": 8,
       "heatLevel": ""
     },
@@ -140,7 +140,7 @@
     {
       "stepNumber": 6,
       "title": "Assemble and bake",
-      "instruction": "Split slider buns in connected sheets on a foil-lined pan. Pile steak mixture on bottoms, cap with tops, and bake at 350°F for 10 minutes until buns toast lightly. Target oven/smoker temperature: 350°F.",
+      "instruction": "Split slider buns in connected sheets on a foil-lined pan. Pile steak mixture on bottoms, cap with tops, and bake at 350°F for 10 minutes until buns toast lightly. Target oven/smoker temperature: 350°F. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
       "minutes": 12,
       "heatLevel": ""
     },
@@ -175,7 +175,7 @@
     {
       "stepNumber": 11,
       "title": "Make au jus and serve",
-      "instruction": "Simmer beef broth with Worcestershire 5 minutes. Slice sliders along seams, serve with small cups of au jus for dunking while cheese is still melted.",
+      "instruction": "Simmer beef broth with Worcestershire 5 minutes. Slice sliders along seams, serve with small cups of au jus for dunking while cheese is still melted. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
       "minutes": 8,
       "heatLevel": ""
     },
@@ -205,11 +205,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 440,
-    "protein": 28,
-    "carbs": 32,
-    "fats": 24,
-    "label": "~440 cal/serving · 28g protein · 2g fiber (est.)"
+    "calories": 735,
+    "protein": 46,
+    "carbs": 56,
+    "fats": 35,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/hall-expansion/philly-cheesesteak-sliders.jpg",
   "heroImageAlt": "Philly Cheesesteak Sliders — crew-sized firehall meal",

@@ -8,15 +8,15 @@
   "category": "hall_expansion",
   "cuisine": "american",
   "description": "Whole chickens are spatchcocked, seasoned under the skin with lemon-garlic butter, and roasted on sheet pans until golden. Carve into quarters and eighths for fast hall service.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 60,
   "prepTime": 35,
   "difficulty": "medium",
-  "calories": 420,
-  "protein": 40,
-  "carbs": 8,
-  "fats": 26,
+  "calories": 123,
+  "protein": 1,
+  "carbs": 7,
+  "fats": 11,
   "tags": [
     "protein:chicken",
     "format:roast",
@@ -45,7 +45,7 @@
     },
     {
       "name": "unsalted butter",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "cup",
       "notes": "softened",
       "group": "Butter"
@@ -59,32 +59,32 @@
     },
     {
       "name": "garlic cloves",
-      "quantity": "8",
+      "quantity": "7",
       "unit": "cloves",
       "notes": "minced",
       "group": "Butter"
     },
     {
       "name": "fresh thyme",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "group": "Butter"
     },
     {
       "name": "kosher salt",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "group": "Seasoning"
     },
     {
       "name": "black pepper",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tbsp",
       "group": "Seasoning"
     },
     {
       "name": "olive oil",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "group": "Seasoning"
     },
@@ -97,7 +97,7 @@
     },
     {
       "name": "carrots",
-      "quantity": "4",
+      "quantity": "3",
       "unit": "whole",
       "notes": "chunked",
       "group": "Roast"
@@ -121,7 +121,7 @@
     {
       "stepNumber": 3,
       "title": "Spatchcock the birds",
-      "instruction": "Remove backbones with shears, flatten chickens breast-side up, and tuck wing tips under. Pat completely dry inside and out. Plan about 15 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Remove backbones with shears, flatten chickens breast-side up, and tuck wing tips under. Pat completely dry inside and out. Plan about 15 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
       "minutes": 15,
       "heatLevel": ""
     },
@@ -170,7 +170,7 @@
     {
       "stepNumber": 10,
       "title": "Carve for the line",
-      "instruction": "Carve each bird into ten portions: legs, thighs, and breast pieces. Arrange on hotel pans with pan juices spooned over. Plan about 10 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Carve each bird into ten portions: legs, thighs, and breast pieces. Arrange on hotel pans with pan juices spooned over. Plan about 10 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
       "minutes": 10,
       "heatLevel": ""
     }
@@ -193,11 +193,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 420,
-    "protein": 40,
-    "carbs": 8,
-    "fats": 26,
-    "label": "~420 cal/serving · 40g protein · 2g fiber (est.)"
+    "calories": 123,
+    "protein": 1,
+    "carbs": 7,
+    "fats": 11,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/hall-expansion/spatchcock-lemon-roast-chicken.jpg",
   "heroImageAlt": "Spatchcock Lemon Roast Chicken — crew-sized firehall meal",

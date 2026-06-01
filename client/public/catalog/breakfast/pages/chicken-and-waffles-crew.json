@@ -2,7 +2,7 @@
   "slug": "chicken-and-waffles-crew",
   "title": "Chicken and Waffles for the Crew",
   "subtitle": "Crispy buttermilk fried chicken on Belgian waffles with maple butter.",
-  "description": "Adapted from classic Southern soul-food tradition for firehall brunch: buttermilk-brined chicken thighs fried until shatter-crisp, served on warm Belgian waffles with whipped maple butter and a drizzle of hot honey at the line.",
+  "description": "Crispy chicken tenders with Belgian waffles on a platter — sweet, salty, and big enough for a crew that earned a splurge breakfast.",
   "filters": [
     "feed_a_crew",
     "high_protein",
@@ -75,7 +75,7 @@
     {
       "stepNumber": 1,
       "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Chicken and Waffles for the Crew in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "instruction": "Line up every ingredient for Chicken and Waffles for the Crew in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use peanut or vegetable oil as listed — measure each before heat goes on.",
       "minutes": 12,
       "heatLevel": ""
     },
@@ -89,28 +89,28 @@
     {
       "stepNumber": 3,
       "title": "Brine the chicken",
-      "instruction": "Soak chicken thighs in buttermilk with a tablespoon of salt for at least 30 minutes (or overnight). Remove from fridge 20 minutes before frying so pieces cook evenly. Target 165°F at the thickest part before moving to the next batch. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Soak chicken thighs in buttermilk with a tablespoon of salt for at least 30 minutes (or overnight). Remove from fridge 20 minutes before frying so pieces cook evenly.",
       "minutes": 20,
       "heatLevel": ""
     },
     {
       "stepNumber": 4,
       "title": "Mix waffle batter",
-      "instruction": "Prepare Belgian waffle batter per package directions using milk and melted butter. Rest batter 10 minutes while oil heats so starch hydrates and waffles stay crisp outside. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Prepare Belgian waffle batter per package directions using milk and melted butter. Rest batter 10 minutes while oil heats so starch hydrates and waffles stay crisp outside.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 5,
       "title": "Fry the chicken",
-      "instruction": "Heat oil in a heavy Dutch oven to 350°F on a thermometer. Dredge chicken in seasoned flour, shake off excess, and fry in batches 12–14 minutes until golden and internal temperature reaches 165°F. Drain on a wire rack. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Heat oil in a heavy Dutch oven to 350°F on a thermometer. Dredge chicken in seasoned flour, shake off excess, and fry in batches 12–14 minutes until golden and internal temperature reaches 165°F. Drain on a wire rack.",
       "minutes": 20,
       "heatLevel": ""
     },
     {
       "stepNumber": 6,
       "title": "Bake waffles",
-      "instruction": "Cook waffles on a Belgian iron until deep golden, then hold crisp on a rack in a 200°F oven. Do not stack or steam will soften the crust. Plan about 15 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Cook waffles on a Belgian iron until deep golden, then hold crisp on a rack in a 200°F oven. Do not stack or steam will soften the crust.",
       "minutes": 15,
       "heatLevel": ""
     },
@@ -137,17 +137,31 @@
     },
     {
       "stepNumber": 10,
-      "title": "Plate and serve",
-      "instruction": "Place one waffle per plate, top with two fried chicken thighs, a knob of maple butter, and a drizzle of hot honey. Serve immediately while chicken skin audibly crunches. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "title": "Scale for larger halls",
+      "instruction": "When cooking for more than 8 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
       "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
+      "title": "portion and serve",
+      "instruction": "Place one waffle per plate, top with two fried chicken thighs, a knob of maple butter, and a drizzle of hot honey. Serve immediately while chicken skin audibly crunches.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 12,
+      "title": "Final quality check before service",
+      "instruction": "Walk the line once before opening service for Chicken and Waffles for the Crew — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
+      "minutes": 4,
       "heatLevel": ""
     }
   ],
   "nutrition": {
-    "calories": 1100,
-    "protein": 81,
+    "calories": 1046,
+    "protein": 80,
     "carbs": 77,
-    "fat": 90,
+    "fat": 44,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
@@ -156,7 +170,7 @@
       "under30gFat": false,
       "highCarb": true,
       "lowCarb": false,
-      "mealPrepFriendly": false
+      "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": true,
@@ -180,12 +194,11 @@
   "heroImage": "/images/breakfast/chicken-and-waffles-crew.jpg",
   "thumbImage": "/images/thumbs/breakfast/chicken-and-waffles-crew.jpg",
   "imageAlt": "Crispy fried chicken on Belgian waffles with maple butter for the crew",
-  "publishedAt": "2026-05-30T21:22:29.757Z",
-  "updatedAt": "2026-05-31T12:54:36.764Z",
+  "publishedAt": "2026-05-31T18:33:00.830Z",
+  "updatedAt": "2026-05-31T23:49:25.383Z",
   "readMinutes": 10,
   "seoTitle": "Chicken and Waffles for the Crew | Firehall Breakfast",
-  "mobileImage": "/images/mobile/breakfast/chicken-and-waffles-crew.jpg",
-  "railImage": "/images/rails/breakfast/chicken-and-waffles-crew.jpg",
+  "collectionTier": "firehall_classic",
   "proTips": [
     "Fry chicken in batches while waffles bake—coordinate so both hit the line within 5 minutes.",
     "Hold fried chicken on a wire rack in a 200°F oven, never on paper towels which trap steam.",

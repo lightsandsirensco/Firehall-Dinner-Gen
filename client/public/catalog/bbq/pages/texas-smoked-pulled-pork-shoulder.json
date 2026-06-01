@@ -8,15 +8,15 @@
   "category": "bbq_grill_nights",
   "cuisine": "american",
   "description": "Adapted from classic Texas smoked pork shoulder tradition (Hey Grill Hey, BBQ Pit Boys): bone-in shoulder gets a simple salt-and-pepper rub, smokes over oak until 203°F, and pulls with defatted drippings—no sweet sauce.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 480,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 1232,
-  "protein": 120,
+  "calories": 683,
+  "protein": 66,
   "carbs": 25,
-  "fats": 65,
+  "fats": 33,
   "tags": [
     "protein:pork",
     "format:bbq",
@@ -39,49 +39,49 @@
   "ingredients": [
     {
       "name": "bone-in pork shoulder",
-      "quantity": "10",
+      "quantity": "4",
       "unit": "lb"
     },
     {
       "name": "kosher salt",
-      "quantity": "4",
+      "quantity": "3.4",
       "unit": "tbsp"
     },
     {
       "name": "coarse black pepper",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp"
     },
     {
       "name": "garlic powder",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tbsp"
     },
     {
       "name": "yellow mustard",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp",
       "notes": "binder"
     },
     {
       "name": "white bread",
-      "quantity": "15",
+      "quantity": "12",
       "unit": "slices"
     },
     {
       "name": "dill pickle chips",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "cups"
     },
     {
       "name": "raw white onion",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "whole",
       "notes": "thin-sliced"
     },
     {
       "name": "hot sauce",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "cup",
       "notes": "optional, on the side"
     }
@@ -124,7 +124,7 @@
     },
     {
       "stepNumber": 6,
-      "title": "Tonight's board",
+      "title": "",
       "instruction": "Pulled pork tray with pickles, onion, white bread, and hot sauce on the side. Texas-style—no sweet glaze.",
       "minutes": 5,
       "heatLevel": ""
@@ -154,12 +154,25 @@
   "mealPrepNotes": "Start early. Wrap when bark color is right. Hold pulled pork covered at 170°F with a splash of defatted drippings. Pickles and onions stay cold on ice.",
   "cleanupDifficulty": "heavy",
   "nutrition": {
-    "calories": 1232,
-    "protein": 120,
+    "calories": 683,
+    "protein": 66,
     "carbs": 25,
-    "fats": 65,
+    "fats": 33,
     "label": "per serving (hall portion)",
-    "source": "estimated"
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/smoker-catalog/texas-smoked-pulled-pork-shoulder.jpg",
   "heroImageAlt": "Texas Smoked Pulled Pork Shoulder — crew-sized BBQ spread with visible smoke and bark",
@@ -186,6 +199,6 @@
     "carolina-vinegar-pulled-pork"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T02:29:42.530Z",
+  "generatedAt": "2026-05-31T23:32:23.200Z",
   "contentVersion": 2
 }

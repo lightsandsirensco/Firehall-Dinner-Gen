@@ -8,15 +8,15 @@
   "category": "hall_expansion",
   "cuisine": "american",
   "description": "Chicken leg quarters are dry-brined, rubbed with a sweet-spice BBQ blend, and smoked on a pellet grill until skin crisps and dark meat hits 175°F. Finish with a light glaze and serve with corn and beans.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 75,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 450,
-  "protein": 38,
-  "carbs": 28,
-  "fats": 22,
+  "calories": 254,
+  "protein": 36,
+  "carbs": 16,
+  "fats": 4,
   "tags": [
     "protein:chicken",
     "format:smoker",
@@ -39,50 +39,50 @@
   "ingredients": [
     {
       "name": "chicken leg quarters",
-      "quantity": "10",
+      "quantity": "8",
       "unit": "pieces",
       "notes": "about 5 lb",
       "group": "Main"
     },
     {
       "name": "kosher salt",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "group": "Brine"
     },
     {
       "name": "brown sugar",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp",
       "group": "Rub"
     },
     {
       "name": "smoked paprika",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "group": "Rub"
     },
     {
       "name": "garlic powder",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "group": "Rub"
     },
     {
       "name": "onion powder",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tbsp",
       "group": "Rub"
     },
     {
       "name": "chili powder",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tbsp",
       "group": "Rub"
     },
     {
       "name": "BBQ sauce",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "cup",
       "group": "Glaze"
     },
@@ -95,7 +95,7 @@
     },
     {
       "name": "cornbread",
-      "quantity": "10",
+      "quantity": "8",
       "unit": "pieces",
       "group": "Side"
     }
@@ -132,14 +132,14 @@
     {
       "stepNumber": 5,
       "title": "Smoke until nearly done",
-      "instruction": "Heat pellet smoker to 275°F. Smoke quarters skin-side up until thickest part of thigh hits 170°F and skin begins to tighten, about 55–65 minutes. Target oven/smoker temperature: 275°F.",
+      "instruction": "Heat pellet smoker to 275°F. Smoke quarters skin-side up until thickest part of thigh hits 170°F and skin begins to tighten, about 55–65 minutes. Target oven/smoker temperature: 275°F. Target 165°F at the thickest point before moving to the next batch.",
       "minutes": 60,
       "heatLevel": ""
     },
     {
       "stepNumber": 6,
       "title": "Glaze and crisp",
-      "instruction": "Brush with BBQ sauce and raise smoker temp to 375°F for 10 minutes until glaze sets and skin crisps. Verify 175°F internal in the thigh before pulling. Target oven/smoker temperature: 375°F.",
+      "instruction": "Brush with BBQ sauce and raise smoker temp to 375°F for 10 minutes until glaze sets and skin crisps. Verify 175°F internal in the thigh before pulling. Target oven/smoker temperature: 375°F. Target 165°F at the thickest point before moving to the next batch.",
       "minutes": 10,
       "heatLevel": ""
     },
@@ -211,11 +211,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 450,
-    "protein": 38,
-    "carbs": 28,
-    "fats": 22,
-    "label": "~450 cal/serving · 38g protein · 3g fiber (est.)"
+    "calories": 254,
+    "protein": 36,
+    "carbs": 16,
+    "fats": 4,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": true,
+      "performanceMeal": true
+    }
   },
   "heroImage": "/images/hall-expansion/pellet-smoked-chicken-quarters.jpg",
   "heroImageAlt": "Pellet Smoked Chicken Quarters — crew-sized firehall meal",

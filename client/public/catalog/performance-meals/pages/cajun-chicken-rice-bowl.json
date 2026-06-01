@@ -13,10 +13,10 @@
   "cookTime": 25,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 495,
-  "protein": 38,
-  "carbs": 52,
-  "fats": 14,
+  "calories": 669,
+  "protein": 77,
+  "carbs": 64,
+  "fats": 9,
   "tags": [
     "protein:chicken",
     "format:bowl",
@@ -102,34 +102,55 @@
   "steps": [
     {
       "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Cajun Chicken Rice Bowl in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
       "title": "Mix Cajun spice blend",
       "instruction": "Combine paprika, garlic powder, onion powder, thyme, cayenne, 1 tbsp salt, and 1 tsp pepper until evenly blended and deeply red in color.",
       "minutes": 3,
       "heatLevel": ""
     },
     {
-      "stepNumber": 2,
+      "stepNumber": 4,
       "title": "Cook rice",
-      "instruction": "Simmer rice in salted water or broth until fluffy grains separate easily with a fork, not sticky, gummy, or wet at the bottom.",
+      "instruction": "Simmer rice in salted water or broth until fluffy grains separate easily with a fork, not sticky, gummy, or wet at the bottom. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Plan about 20 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 20,
       "heatLevel": ""
     },
     {
-      "stepNumber": 3,
+      "stepNumber": 5,
       "title": "Sauté trinity vegetables",
-      "instruction": "Cook onion, bell peppers, and celery in oil over medium 8 minutes until softened and edges lightly caramelized with sweet aroma.",
+      "instruction": "Cook onion, bell peppers, and celery in oil over medium 8 minutes until softened and edges lightly caramelized with sweet aroma. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 8,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 6,
       "title": "Blacken chicken",
       "instruction": "Coat thighs generously with Cajun blend. Sear in hot oiled skillet 5–6 minutes per side until dark crust forms and internal temp hits 165°F.",
       "minutes": 14,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
       "title": "Build bowls",
       "instruction": "Slice chicken, portion over rice with sautéed trinity. Deglaze pan with broth for light sauce drizzle. Chicken should be juicy inside, charred outside.",
       "minutes": 5,
@@ -154,11 +175,25 @@
   "spiceLevel": "hot",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 495,
-    "protein": 38,
-    "carbs": 52,
-    "fats": 14,
-    "label": "~495 cal/serving · 38g protein · 3g fiber (est.)"
+    "calories": 669,
+    "protein": 77,
+    "carbs": 64,
+    "fats": 9,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/cajun-chicken-rice-bowl.jpg",
   "mobileImage": "/images/mobile/cajun-chicken-rice-bowl.jpg",
@@ -183,6 +218,6 @@
     "korean-beef-rice-bowls",
     "crock-barbacoa-chicken"
   ],
-  "generatedAt": "2026-05-31T15:28:14.291Z",
+  "generatedAt": "2026-05-31T23:32:24.495Z",
   "contentVersion": 2
 }

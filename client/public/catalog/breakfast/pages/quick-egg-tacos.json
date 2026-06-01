@@ -1,8 +1,8 @@
 {
   "slug": "quick-egg-tacos",
   "title": "Quick Egg Tacos",
-  "subtitle": "A practical station breakfast that scales from 4 to 12.",
-  "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+  "subtitle": "Fast egg tacos when the crew needs food in fifteen minutes.",
+  "description": "Scrambled eggs, cheese, and salsa in warm tortillas — fifteen-minute breakfast when the tones drop and the crew still needs to eat.",
   "filters": [
     "quick_breakfasts"
   ],
@@ -12,8 +12,8 @@
     "handheld",
     "salsa"
   ],
-  "crewSize": 6,
-  "baseServings": 6,
+  "crewSize": 8,
+  "baseServings": 8,
   "prepTime": 10,
   "cookTime": 12,
   "totalTime": 22,
@@ -21,21 +21,21 @@
   "ingredients": [
     {
       "name": "large eggs",
-      "quantity": "10",
+      "quantity": "13",
       "notes": "whisked with salt"
     },
     {
       "name": "6-inch corn or flour tortillas",
-      "quantity": "12"
+      "quantity": "16"
     },
     {
       "name": "shredded cheese",
-      "quantity": "1 cup",
+      "quantity": "1.3",
       "notes": "cheddar or pepper jack"
     },
     {
       "name": "salsa or pico de gallo",
-      "quantity": "1 cup"
+      "quantity": "1.3"
     },
     {
       "name": "avocado",
@@ -45,12 +45,12 @@
     },
     {
       "name": "sour cream or crema",
-      "quantity": "1/2 cup",
+      "quantity": "5/8",
       "optional": true
     },
     {
       "name": "hot sauce",
-      "quantity": "1",
+      "quantity": "1.3",
       "optional": true
     }
   ],
@@ -79,7 +79,7 @@
     {
       "stepNumber": 4,
       "title": "Scramble the eggs",
-      "instruction": "Scramble eggs over medium-low heat until just set and still glossy. Fold in cheese off heat. Plan about 6 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Scramble eggs over medium-low heat until just set and still glossy. Fold in cheese off heat. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 6,
       "heatLevel": ""
     },
@@ -113,19 +113,19 @@
     }
   ],
   "nutrition": {
-    "calories": 490,
-    "protein": 23,
-    "carbs": 50,
-    "fat": 22,
+    "calories": 468,
+    "protein": 22,
+    "carbs": 49,
+    "fat": 21,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
       "under30gFat": true,
-      "highCarb": true,
+      "highCarb": false,
       "lowCarb": false,
-      "mealPrepFriendly": false
+      "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": false,
@@ -149,12 +149,11 @@
   "heroImage": "/images/breakfast/quick-egg-tacos.jpg",
   "thumbImage": "/images/thumbs/breakfast/quick-egg-tacos.jpg",
   "imageAlt": "Warm station-kitchen breakfast: Quick Egg Tacos",
-  "publishedAt": "2026-05-30T21:22:29.758Z",
-  "updatedAt": "2026-05-31T12:54:36.788Z",
+  "publishedAt": "2026-05-31T18:33:00.830Z",
+  "updatedAt": "2026-05-31T23:49:25.669Z",
   "readMinutes": 6,
   "seoTitle": "Quick Egg Tacos | Firehall Breakfast",
-  "mobileImage": "/images/mobile/breakfast/quick-egg-tacos.jpg",
-  "railImage": "/images/rails/breakfast/quick-egg-tacos.jpg",
+  "collectionTier": "firehall_classic",
   "proTips": [
     "Assign one cook to the hot surface and one to assembly. Keep the line moving; don’t crowd the griddle.",
     "Set a warm holding zone (oven 200°F or covered hotel pan) so staggered eaters still get a hot plate.",

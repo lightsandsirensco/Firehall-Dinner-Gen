@@ -14,6 +14,10 @@ import {
 } from "@shared/meal-semantics";
 import { inferActualProtein } from "./spoonacular-converter";
 import { isRoboticTitle, suggestHumanMealTitle } from "../shared/generation-reliability.js";
+import {
+  mainHasBuiltinStarch,
+  normalizeSidePairingTitle,
+} from "../shared/curated-image-governance/title-side-pairing-governance.js";
 import { log } from "./index";
 
 export type PlateRole = "main" | "starch" | "veg" | "optional";
@@ -177,12 +181,18 @@ export function buildDisplayTitle(
   if (format === "burger" || format === "sandwich") {
     return `${mainLabel}${veg ? ` with ${shortLabel(veg.name)}` : ""}`;
   }
-  if (starch && veg) {
-    return `${mainLabel} with ${shortLabel(starch.name)} & ${shortLabel(veg.name)}`;
+
+  let starchLabel = starch ? shortLabel(starch.name) : null;
+  let vegLabel = veg ? shortLabel(veg.name) : null;
+
+  if (mainHasBuiltinStarch(mainLabel)) {
+    starchLabel = null;
   }
-  if (starch) return `${mainLabel} with ${shortLabel(starch.name)}`;
-  if (veg) return `${mainLabel} with ${shortLabel(veg.name)}`;
-  return mainLabel;
+  if (format === "pizza" || format === "pasta") {
+    starchLabel = null;
+  }
+
+  return normalizeSidePairingTitle(mainLabel, starchLabel, vegLabel);
 }
 
 export function buildMealPlate(
@@ -243,7 +253,7 @@ export function buildMealPlate(
 
   return {
     display_title,
-    main: [{ name: mainLabel, amount: mains[0]?.amount || "", role: "main" }],
+    main: [{ name: mains[0]?.name || mainLabel, amount: mains[0]?.amount || "", role: "main" }],
     sides: [...starches, ...vegs].filter((s) => isValidPlateSide(s.name) || s.role === "starch").slice(0, 5),
     optional: optional.slice(0, 4),
     cuisine_label,

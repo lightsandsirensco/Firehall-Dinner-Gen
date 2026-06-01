@@ -1,8 +1,6 @@
 # Recipe Detail Audit
 
-Batch: **classics**
-- Pass: **1/1**
-- Fail: **0**
+- Pass: **228/228** (100%)
 
 ## Failures
 

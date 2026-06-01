@@ -1,3 +1,3 @@
 # Recipe Route Audit
 
-- Pass: **233/233**
+- Pass: **225/228**

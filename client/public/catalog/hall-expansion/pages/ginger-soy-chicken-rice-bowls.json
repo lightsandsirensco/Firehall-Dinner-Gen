@@ -8,15 +8,15 @@
   "category": "hall_expansion",
   "cuisine": "asian-american",
   "description": "Chicken thighs marinate in ginger-soy, grill until charred, and serve over steamed rice with broccoli and sesame drizzle. Clean flavors, filling portions, fast assembly.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 25,
   "prepTime": 25,
   "difficulty": "easy",
-  "calories": 420,
-  "protein": 36,
-  "carbs": 48,
-  "fats": 10,
+  "calories": 577,
+  "protein": 63,
+  "carbs": 58,
+  "fats": 9,
   "tags": [
     "protein:chicken",
     "format:bowl",
@@ -39,64 +39,64 @@
   "ingredients": [
     {
       "name": "boneless chicken thighs",
-      "quantity": "4",
+      "quantity": "3.2",
       "unit": "lb",
       "group": "Main"
     },
     {
       "name": "jasmine rice",
-      "quantity": "3",
+      "quantity": "2.4",
       "unit": "cups",
       "notes": "uncooked",
       "group": "Base"
     },
     {
       "name": "broccoli florets",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "lb",
       "group": "Vegetables"
     },
     {
       "name": "low-sodium soy sauce",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "cup",
       "group": "Marinade"
     },
     {
       "name": "fresh ginger",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp",
       "notes": "grated",
       "group": "Marinade"
     },
     {
       "name": "garlic cloves",
-      "quantity": "4",
+      "quantity": "3",
       "unit": "cloves",
       "notes": "minced",
       "group": "Marinade"
     },
     {
       "name": "honey",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp",
       "group": "Marinade"
     },
     {
       "name": "rice vinegar",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "group": "Sauce"
     },
     {
       "name": "sesame oil",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "group": "Finish"
     },
     {
       "name": "sesame seeds",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp",
       "group": "Finish"
     }
@@ -119,7 +119,7 @@
     {
       "stepNumber": 3,
       "title": "Marinate the chicken",
-      "instruction": "Whisk soy sauce, ginger, garlic, and honey. Coat chicken thighs and marinate at least 30 minutes in the fridge. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Whisk soy sauce, ginger, garlic, and honey. Coat chicken thighs and marinate at least 30 minutes in the fridge. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
       "minutes": 10,
       "heatLevel": ""
     },
@@ -205,11 +205,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 420,
-    "protein": 36,
-    "carbs": 48,
-    "fats": 10,
-    "label": "~420 cal/serving · 36g protein · 4g fiber (est.)"
+    "calories": 577,
+    "protein": 63,
+    "carbs": 58,
+    "fats": 9,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": true
+    }
   },
   "heroImage": "/images/hall-expansion/ginger-soy-chicken-rice-bowls.jpg",
   "heroImageAlt": "Ginger Soy Chicken Rice Bowls — crew-sized firehall meal",

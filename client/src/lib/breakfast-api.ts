@@ -1,5 +1,5 @@
 import type { BreakfastCatalogIndex, BreakfastRecipePage } from "@shared/breakfast-schema";
-import { breakfastPageJsonPath } from "@shared/fuel-catalog/paths";
+import { breakfastPageJsonPath, breakfastCatalogPerformanceIndexPath } from "@shared/fuel-catalog/paths";
 import { fetchJsonResource, fetchJsonResourceOrThrow } from "@/lib/fetch-json";
 
 const API_PAGE = (slug: string) => `/api/catalog/breakfast/${encodeURIComponent(slug)}`;
@@ -8,6 +8,13 @@ export async function fetchBreakfastCatalogIndex(): Promise<BreakfastCatalogInde
   return fetchJsonResourceOrThrow<BreakfastCatalogIndex>(
     "/catalog/breakfast/index.json",
     "Failed breakfast index",
+  );
+}
+
+export async function fetchBreakfastPerformanceCatalogIndex(): Promise<BreakfastCatalogIndex> {
+  return fetchJsonResourceOrThrow<BreakfastCatalogIndex>(
+    breakfastCatalogPerformanceIndexPath(),
+    "Failed breakfast performance index",
   );
 }
 

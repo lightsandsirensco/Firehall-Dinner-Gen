@@ -132,7 +132,7 @@
       "under30gFat": true,
       "highCarb": false,
       "lowCarb": true,
-      "mealPrepFriendly": false
+      "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": true,
@@ -169,6 +169,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-30T23:27:14.556Z",
+  "generatedAt": "2026-06-01T01:40:02.105Z",
   "contentVersion": 2
 }

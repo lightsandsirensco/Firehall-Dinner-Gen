@@ -8,15 +8,15 @@
   "category": "hall_expansion",
   "cuisine": "mexican",
   "description": "Chorizo is browned, combined with a blend of melting cheeses and roasted peppers, then finished in a cast-iron skillet on the smoker until bubbling and lightly smoke-kissed. Tortilla chips and warm flour tortillas complete the spread.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 45,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 540,
-  "protein": 26,
-  "carbs": 22,
-  "fats": 40,
+  "calories": 1025,
+  "protein": 35,
+  "carbs": 82,
+  "fats": 62,
   "tags": [
     "protein:pork",
     "format:smoker",
@@ -39,28 +39,28 @@
   "ingredients": [
     {
       "name": "Mexican chorizo",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "lb",
       "notes": "casings removed",
       "group": "Main"
     },
     {
       "name": "Oaxaca cheese",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "lb",
       "notes": "shredded",
       "group": "Cheese"
     },
     {
       "name": "Monterey Jack cheese",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "lb",
       "notes": "shredded",
       "group": "Cheese"
     },
     {
       "name": "cream cheese",
-      "quantity": "8",
+      "quantity": "6.4",
       "unit": "oz",
       "group": "Cheese"
     },
@@ -73,33 +73,33 @@
     },
     {
       "name": "white onion",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "whole",
       "notes": "diced",
       "group": "Veg"
     },
     {
       "name": "garlic cloves",
-      "quantity": "4",
+      "quantity": "3",
       "unit": "cloves",
       "notes": "minced",
       "group": "Veg"
     },
     {
       "name": "heavy cream",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "cup",
       "group": "Sauce"
     },
     {
       "name": "tortilla chips",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "lb",
       "group": "Serve"
     },
     {
       "name": "flour tortillas",
-      "quantity": "12",
+      "quantity": "10",
       "unit": "whole",
       "notes": "warmed",
       "group": "Serve"
@@ -209,11 +209,25 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 540,
-    "protein": 26,
-    "carbs": 22,
-    "fats": 40,
-    "label": "~540 cal/serving · 26g protein · 2g fiber (est.)"
+    "calories": 1025,
+    "protein": 35,
+    "carbs": 82,
+    "fats": 62,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/hall-expansion/smoked-queso-fundido.jpg",
   "heroImageAlt": "Smoked Queso Fundido — crew-sized firehall meal",

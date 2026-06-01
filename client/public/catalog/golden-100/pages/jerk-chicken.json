@@ -7,16 +7,16 @@
   "subtitle": "Charred jerk thighs, coconut rice and peas, island sides for eight",
   "category": "firehall_classics",
   "cuisine": "caribbean",
-  "description": "A full Caribbean hall dinner — jerk-marinated chicken, coconut rice and peas, grilled pineapple, and sharp cabbage slaw. Sized for eight, with grill-or-oven paths and a call-interruption plan rookies can follow without opening another tab.",
+  "description": "Island heat that still feeds eight. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
   "baseServings": 8,
-  "cookTime": 75,
+  "cookTime": 110,
   "prepTime": 35,
   "difficulty": "medium",
-  "calories": 620,
-  "protein": 48,
-  "carbs": 58,
-  "fats": 22,
+  "calories": 1036,
+  "protein": 108,
+  "carbs": 120,
+  "fats": 13,
   "tags": [
     "protein:chicken",
     "format:grill",
@@ -26,12 +26,11 @@
     "golden_100"
   ],
   "equipment": [
-    "Grill with lid (or two sheet pans + oven)",
-    "Large Dutch oven or 8-quart pot",
-    "Blender or food processor",
+    "Grill or flat-top",
+    "Tongs",
+    "Heat-resistant gloves",
+    "Large sheet trays",
     "Instant-read thermometer",
-    "Large hotel pans or sheet trays",
-    "Tongs and heat-resistant gloves",
     "Aluminum foil"
   ],
   "ingredients": [
@@ -39,18 +38,16 @@
       "name": "Bone-in, skin-on chicken thighs",
       "quantity": "5",
       "unit": "lb",
-      "notes": "about 16–20 pieces; pat dry before marinating",
       "group": "Main"
     },
     {
-      "name": "Scotch bonnet or habanero peppers",
+      "name": "Scotch bonnet peppers",
       "quantity": "2",
       "unit": "count",
-      "notes": "stemmed; seeds optional for less heat",
       "group": "Jerk marinade"
     },
     {
-      "name": "Green onions, trimmed",
+      "name": "Green onions",
       "quantity": "8",
       "unit": "count",
       "group": "Jerk marinade"
@@ -68,10 +65,9 @@
       "group": "Jerk marinade"
     },
     {
-      "name": "Fresh ginger, peeled",
+      "name": "Fresh ginger, grated",
       "quantity": "3",
       "unit": "tbsp",
-      "notes": "grated",
       "group": "Jerk marinade"
     },
     {
@@ -99,31 +95,13 @@
       "group": "Jerk marinade"
     },
     {
-      "name": "Vegetable oil",
-      "quantity": "3",
-      "unit": "tbsp",
-      "group": "Jerk marinade"
-    },
-    {
-      "name": "Kosher salt",
-      "quantity": "2",
-      "unit": "tbsp",
-      "group": "Seasoning"
-    },
-    {
-      "name": "Black pepper",
-      "quantity": "1",
-      "unit": "tbsp",
-      "group": "Seasoning"
-    },
-    {
       "name": "Long-grain white rice, rinsed",
       "quantity": "3",
       "unit": "cups",
       "group": "Rice and peas"
     },
     {
-      "name": "Kidney beans, drained and rinsed",
+      "name": "Kidney beans, drained",
       "quantity": "2",
       "unit": "cans",
       "notes": "15 oz each",
@@ -133,211 +111,161 @@
       "name": "Full-fat coconut milk",
       "quantity": "2",
       "unit": "cans",
-      "notes": "13.5 oz each; shake cans before opening",
+      "notes": "13.5 oz each",
       "group": "Rice and peas"
     },
     {
-      "name": "Low-sodium chicken stock or water",
+      "name": "Low-sodium chicken stock",
       "quantity": "2",
       "unit": "cups",
-      "group": "Rice and peas"
-    },
-    {
-      "name": "Scallions, sliced",
-      "quantity": "4",
-      "unit": "count",
-      "group": "Rice and peas"
-    },
-    {
-      "name": "Fresh thyme sprigs",
-      "quantity": "4",
-      "unit": "count",
-      "group": "Rice and peas"
-    },
-    {
-      "name": "Whole Scotch bonnet pepper",
-      "quantity": "1",
-      "unit": "count",
-      "notes": "for rice pot only — do not pierce if you want milder rice",
       "group": "Rice and peas"
     },
     {
       "name": "Fresh pineapple, peeled",
       "quantity": "1",
       "unit": "count",
-      "notes": "cut into ½-inch rings",
       "group": "Sides"
     },
     {
-      "name": "Coleslaw mix or shredded green cabbage",
+      "name": "Coleslaw mix",
       "quantity": "2",
       "unit": "lb",
       "group": "Sides"
-    },
-    {
-      "name": "Lime juice (for slaw and service)",
-      "quantity": "6",
-      "unit": "tbsp",
-      "group": "Sides"
-    },
-    {
-      "name": "Neutral oil (for slaw and grill)",
-      "quantity": "3",
-      "unit": "tbsp",
-      "group": "Sides"
-    },
-    {
-      "name": "Hot sauce",
-      "quantity": "1",
-      "unit": "bottle",
-      "notes": "for the line",
-      "group": "Condiments"
-    },
-    {
-      "name": "Lime wedges",
-      "quantity": "12",
-      "unit": "count",
-      "group": "Condiments"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
       "title": "Trim and prep the chicken",
-      "instruction": "Pat chicken thighs dry with paper towels — wet skin will steam instead of char. Trim excess flap and hanging fat, but leave the skin on for color and juice. Score the skin lightly in two places per thigh so marinade penetrates. Lay thighs in two large zip bags or a hotel pan for marinating.",
+      "instruction": "Pat chicken thighs dry. Trim excess fat, score skin lightly, and lay in hotel pans or zip bags for marinating.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
       "title": "Blend the jerk marinade",
-      "instruction": "In a blender, combine Scotch bonnets, green onions, thyme, garlic, ginger, allspice, brown sugar, soy sauce, lime juice, vegetable oil, 1 tbsp kosher salt, and black pepper. Blend until mostly smooth — a little texture is fine. Taste a tiny dab on a spoon: it should be salty, sweet, and sharply aromatic before it ever touches raw chicken.",
+      "instruction": "Blend Scotch bonnets, green onions, thyme, garlic, ginger, allspice, brown sugar, soy, lime juice, and oil until mostly smooth.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 3,
       "title": "Marinate the chicken",
-      "instruction": "Massage marinade into every thigh, working it under the skin where you can. For same-day service, marinate at least 45 minutes in the fridge — flip once halfway. For best flavor, marinate 4–12 hours. Never leave raw chicken above 40°F; if the hall gets a call, back into the walk-in immediately.",
+      "instruction": "Massage marinade under the skin. Marinate at least 45 minutes in the fridge — 4–12 hours is best.",
       "minutes": 45,
       "heatLevel": ""
     },
     {
       "stepNumber": 4,
       "title": "Set up grill or oven",
-      "instruction": "Grill path: preheat to 375°F with a two-zone fire — direct heat on one side, indirect on the other. Close the lid 10 minutes so grates are hot. Oven path: heat to 425°F and line two sheet pans with foil and wire racks. Oil the grates or racks so jerk sugars do not glue the chicken down.",
+      "instruction": "Grill: 375°F two-zone fire. Oven: 425°F with foil-lined sheet pans and wire racks.",
       "minutes": 15,
       "heatLevel": "medium-high"
     },
     {
       "stepNumber": 5,
       "title": "Start coconut rice and peas",
-      "instruction": "In a large pot, combine rinsed rice, kidney beans, coconut milk, chicken stock, sliced scallions, thyme sprigs, and the whole Scotch bonnet. Bring to a boil, stir once, then reduce to a low simmer and cover tightly. Cook 18–20 minutes until liquid is absorbed and rice grains are tender — you want distinct grains, not mush. Remove thyme and pepper; fluff with a fork and hold covered at 200°F.",
+      "instruction": "Simmer rice, kidney beans, coconut milk, stock, scallions, and thyme 18–20 minutes until tender. Fluff and hold at 200°F.",
       "minutes": 25,
       "heatLevel": "medium"
     },
     {
       "stepNumber": 6,
       "title": "Grill or roast the chicken",
-      "instruction": "Grill: place thighs skin-side down on direct heat 4–5 minutes until skin blisters and char lines appear, then flip and move to indirect heat with the lid down. Oven: roast skin-side up on racks 25–30 minutes. Either way, finish when the thickest part of the largest thigh reads 165°F on an instant-read thermometer — juices run clear, not pink. If skin is pale, move pieces back to direct heat or under the broiler 2–3 minutes to crisp.",
+      "instruction": "Char skin over direct heat, finish indirect or in oven until thickest thigh reads 165°F.",
       "minutes": 35,
       "heatLevel": "medium-high"
     },
     {
       "stepNumber": 7,
       "title": "Rest the chicken",
-      "instruction": "Transfer cooked thighs to a foil-lined sheet tray, tent loosely with foil, and rest 10 minutes. Carryover will push temp a few degrees past 165°F while juices redistribute. Do not slice yet — cut too early and the line gets dry chicken and a messy pan.",
+      "instruction": "Tent loosely with foil and rest 10 minutes before slicing.",
       "minutes": 10,
       "heatLevel": "low"
     },
     {
       "stepNumber": 8,
       "title": "Grill pineapple and dress slaw",
-      "instruction": "While chicken rests, grill pineapple rings over direct heat 2–3 minutes per side until caramelized grill marks show. Toss coleslaw mix with lime juice, a pinch of salt, and neutral oil — sharp and crunchy, not wet. Keep slaw cold on ice until the line opens.",
+      "instruction": "Grill pineapple rings 2–3 minutes per side. Toss slaw with lime, salt, and oil; keep cold.",
       "minutes": 12,
       "heatLevel": "medium-high"
     },
     {
       "stepNumber": 9,
       "title": "Coordinate timing for service",
-      "instruction": "Open the line when rice, chicken, and at least one hot side are ready — never hold rice more than 45 minutes dry in a hot box or it crusts on the bottom. Slice rested thighs into two pieces each for faster service. Put rice and peas in the first hotel pan, chicken in the second, pineapple and slaw in separate pans so textures stay distinct.",
+      "instruction": "Slice rested thighs. Rice in first pan, chicken second, cold sides at the far end.",
       "minutes": 10,
       "heatLevel": "low"
     },
     {
       "stepNumber": 10,
       "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-cook: close the grill lid or turn off the oven — chicken on indirect heat can hold safely up to 15 minutes. Turn rice to the lowest simmer or off and keep covered — do not stir or you release steam and dry the bottom. If tones drop after service, cover chicken and rice and hold at 140°F in a warm cabinet or 200°F oven; log hold time on the pan. On return, spot-check chicken at 165°F before reopening the line.",
+      "instruction": "If tones drop, close grill lid or hold chicken at 140°F; keep rice covered at low heat.",
       "minutes": 5,
       "heatLevel": "low"
     },
     {
       "stepNumber": 11,
       "title": "Serve the hall line",
-      "instruction": "Set hot components closest to the crew: rice and peas first, then sliced jerk chicken with pan juices spooned over. Pineapple and cabbage slaw go at the far end; hot sauce and lime wedges in squeeze bowls between them. Tell the crew to hit the chicken with lime at the plate — acid wakes up the spice after a long shift.",
+      "instruction": "Open line with rice and peas, jerk chicken, pineapple, slaw, hot sauce, and lime wedges.",
       "minutes": 8,
       "heatLevel": "low"
     },
     {
       "stepNumber": 12,
       "title": "Pack down leftovers safely",
-      "instruction": "Cool chicken and rice in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Refrigerate chicken and rice separately; slaw gets its own container. Reheat chicken to 165°F next shift; rice can be refreshed with a splash of water and covered heat. Sliced jerk chicken makes excellent next-day wraps with slaw and extra hot sauce.",
+      "instruction": "Cool in shallow pans within two hours. Reheat chicken to 165°F next shift.",
       "minutes": 10,
       "heatLevel": ""
     }
   ],
   "proTips": [
-    "Thighs beat breasts on the grill — more fat means more forgiveness if a rookie lingers on a call.",
-    "Shake coconut milk cans hard before opening; the cream separates and uneven pours make gluey rice.",
-    "Keep the whole pepper in the rice pot unpierced for milder crew heat; pierce it only if your hall runs hot.",
-    "Brush grates with oil right before chicken goes on — jerk sugar burns fast on dry metal.",
-    "Pull chicken at 163°F if you are holding under foil; carryover finishes the last degrees during rest.",
-    "If the grill flares from dripping marinade, move thighs to indirect heat — black smoke means bitter skin."
+    "Thighs forgive the grill better than breasts — critical on call-heavy nights.",
+    "Shake coconut milk cans before opening so rice cooks evenly.",
+    "Keep slaw cold; hot rice and cold crunch on one plate is the whole point.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
+    "Taste for salt at the end — hall palates run salty after long shifts.",
+    "Rest grilled proteins 5–8 minutes under foil before slicing — juices stay in the meat.",
+    "Pull chicken at 160°F and let carryover hit 165°F — dry breast ruins crew morale."
   ],
   "tonightSpread": [
-    "Main: Jerk Chicken — charred bone-in thighs, sliced for the line with pan juices spooned over.",
-    "Sides: Coconut Rice and Peas, Grilled Pineapple rings, Sharp Cabbage Slaw (cold).",
-    "Condiments: Hot sauce, lime wedges, and extra jerk paste for crew who want more heat.",
-    "Set rice in the first pan, chicken in the second, cold slaw and pineapple at the far end so textures stay distinct.",
-    "Keep a backup tray of chicken at 200°F for firefighters returning from a run — never serve picked-over pans to late crew."
+    "Plate Jerk Chicken & Peas and Rice with sides in separate pans so the crew can mix portions.",
+    "Line up Jerk Chicken & Peas and Rice on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
   ],
   "leftovers": [
-    "Cool chicken and rice in shallow pans within two hours; label with date and reheat chicken to 165°F minimum before second shift.",
-    "Store slaw separately — it wilts if stacked on hot rice overnight.",
-    "Reheat rice covered with a splash of water or stock over medium-low, stirring once, until steaming throughout.",
-    "Slice cold jerk chicken thin for next-day wraps with slaw, hot sauce, and a squeeze of lime — faster reheat, less dry-out than whole thighs."
+    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
+    "Label trays with date and reheat to 165°F minimum before second shift.",
+    "Slice cold protein thin for next-day wraps or salads — faster reheat, less dry-out."
   ],
-  "whyCrewsLikeIt": "Island heat without a one-protein plate — jerk chicken, coconut rice and peas, and cooling slaw on one counter. A flagship hall classic that feels like a real Caribbean spread, not solo grilled chicken.",
+  "whyCrewsLikeIt": "Island heat that still feeds eight. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
   "substitutions": [
-    "Kidney beans ↔ canned pigeon peas for a more traditional rice-and-peas profile.",
-    "Bone-in thighs ↔ bone-in drumsticks (same cook time; verify 165°F at the joint).",
-    "Grill ↔ 425°F oven on wire racks if weather or station policy keeps you inside."
+    "Chicken thighs ↔ breasts (thighs forgive overcooking on the flat-top)."
   ],
   "spiceLevel": "hot",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 620,
-    "protein": 48,
-    "carbs": 58,
-    "fats": 22,
+    "calories": 1036,
+    "protein": 108,
+    "carbs": 120,
+    "fats": 13,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": true,
+      "under700Calories": false,
       "under30gFat": true,
       "highCarb": true,
       "lowCarb": false,
-      "mealPrepFriendly": true
+      "mealPrepFriendly": false
     },
     "badgeCandidates": {
       "highProtein": true,
       "lighterOption": false,
-      "performanceMeal": true
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/golden-100/jerk-chicken.jpg",
-  "heroImageAlt": "Charred jerk chicken thighs served with coconut rice and peas, grilled pineapple, and cabbage slaw on a firehall prep line",
   "mobileImage": "/images/mobile/jerk-chicken.jpg",
   "thumbImage": "/images/thumbs/jerk-chicken.jpg",
   "railImage": "/images/rails/jerk-chicken.jpg",
@@ -345,9 +273,8 @@
   "firefighterScore": 100,
   "popularityWeight": 3.6,
   "searchTerms": [
+    "jerk chicken & peas and rice",
     "jerk chicken",
-    "jerk chicken and peas and rice",
-    "rice and peas",
     "caribbean",
     "chicken",
     "grill",
@@ -365,6 +292,6 @@
   "sourceName": "Firehall Classics",
   "sourceUrl": "",
   "classicSlug": "jerk-chicken",
-  "generatedAt": "2026-05-31T13:31:23.375Z",
-  "contentVersion": 4
+  "generatedAt": "2026-06-01T01:40:02.012Z",
+  "contentVersion": 2
 }

@@ -2,7 +2,7 @@
   "slug": "monte-cristo-sandwiches",
   "title": "Monte Cristo Sandwiches",
   "subtitle": "Ham and turkey dipped in egg batter, griddled, and dusted with powdered sugar.",
-  "description": "Sweet-savory club sandwiches dipped in custard and griddled until golden, then finished with powdered sugar and jam. A special-occasion breakfast that feels like diner food but scales to ten with an assembly-line griddle setup.",
+  "description": "Ham and cheese sandwiches dipped in egg batter, griddled golden, dusted with powdered sugar. Serve with jam — sweet-savory hall brunch energy.",
   "filters": [
     "breakfast_sandwiches",
     "feed_a_crew"
@@ -14,8 +14,8 @@
     "griddle",
     "diner"
   ],
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "prepTime": 20,
   "cookTime": 25,
   "totalTime": 45,
@@ -23,46 +23,46 @@
   "ingredients": [
     {
       "name": "thick white bread slices",
-      "quantity": "20",
+      "quantity": "16",
       "notes": "crusts trimmed optional",
       "group": "Sandwich"
     },
     {
       "name": "sliced deli ham",
-      "quantity": "1 lb",
+      "quantity": "3/4",
       "group": "Sandwich"
     },
     {
       "name": "sliced deli turkey",
-      "quantity": "1 lb",
+      "quantity": "3/4",
       "group": "Sandwich"
     },
     {
       "name": "Swiss cheese",
-      "quantity": "10 slices",
+      "quantity": "8",
       "group": "Sandwich"
     },
     {
       "name": "Dijon mustard",
-      "quantity": "3 tbsp",
+      "quantity": "2.4",
       "notes": "spread thin on half the slices",
       "group": "Sandwich"
     },
     {
       "name": "large eggs",
-      "quantity": "6",
+      "quantity": "5",
       "notes": "whisked with 1 cup milk and pinch of salt",
       "group": "Batter"
     },
     {
       "name": "butter",
-      "quantity": "4 tbsp",
+      "quantity": "3.2",
       "notes": "for griddling in batches",
       "group": "Cook"
     },
     {
       "name": "powdered sugar",
-      "quantity": "1/4 cup",
+      "quantity": "1/4",
       "notes": "plus raspberry jam for dipping",
       "group": "Finish"
     }
@@ -71,7 +71,7 @@
     {
       "stepNumber": 1,
       "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Monte Cristo Sandwiches in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "instruction": "Line up every ingredient for Monte Cristo Sandwiches in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use sliced deli ham as listed — measure each before heat goes on.",
       "minutes": 12,
       "heatLevel": ""
     },
@@ -92,14 +92,14 @@
     {
       "stepNumber": 4,
       "title": "Set the dip station",
-      "instruction": "Whisk eggs and milk in a shallow pan wide enough to fit a sandwich. Heat a large griddle over medium and melt butter until foaming. Cook until char marks are visible and the thickest piece reads 165°F on an instant-read thermometer. Plan about 3 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Whisk eggs and milk in a shallow pan wide enough to fit a sandwich. Heat a large griddle over medium and melt butter until foaming.",
       "minutes": 3,
       "heatLevel": ""
     },
     {
       "stepNumber": 5,
       "title": "Dip and griddle",
-      "instruction": "Dip each sandwich briefly in egg batter—don't soak or bread falls apart. Griddle 3–4 minutes per side until deep golden and cheese melts. Cook until char marks are visible and the thickest piece reads 165°F on an instant-read thermometer. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Dip each sandwich briefly in egg batter—don't soak or bread falls apart. Griddle 3–4 minutes per side until deep golden and cheese melts.",
       "minutes": 18,
       "heatLevel": ""
     },
@@ -120,25 +120,25 @@
     {
       "stepNumber": 8,
       "title": "Dust and serve",
-      "instruction": "Dust lightly with powdered sugar through a fine sieve—go easy so it doesn't clump. Serve with warm raspberry jam for dipping at the line. Plan about 3 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Dust lightly with powdered sugar through a fine sieve—go easy so it doesn't clump. Serve with warm raspberry jam for dipping at the line.",
       "minutes": 3,
       "heatLevel": ""
     }
   ],
   "nutrition": {
-    "calories": 652,
-    "protein": 39,
-    "carbs": 37,
-    "fat": 39,
+    "calories": 937,
+    "protein": 38,
+    "carbs": 36,
+    "fat": 72,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": true,
+      "under700Calories": false,
       "under30gFat": false,
       "highCarb": false,
       "lowCarb": false,
-      "mealPrepFriendly": false
+      "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": true,
@@ -162,12 +162,11 @@
   "heroImage": "/images/breakfast/monte-cristo-sandwiches.jpg",
   "thumbImage": "/images/thumbs/breakfast/monte-cristo-sandwiches.jpg",
   "imageAlt": "Golden Monte Cristo sandwiches dusted with powdered sugar and served with jam",
-  "publishedAt": "2026-05-30T21:22:29.756Z",
-  "updatedAt": "2026-05-31T12:54:36.783Z",
+  "publishedAt": "2026-05-31T18:33:00.829Z",
+  "updatedAt": "2026-05-31T23:49:25.609Z",
   "readMinutes": 8,
   "seoTitle": "Monte Cristo Sandwiches | Firehall Breakfast",
-  "mobileImage": "/images/mobile/breakfast/monte-cristo-sandwiches.jpg",
-  "railImage": "/images/rails/breakfast/monte-cristo-sandwiches.jpg",
+  "collectionTier": "firehall_classic",
   "proTips": [
     "Build all sandwiches before dipping so the griddle never waits for assembly mid-batch.",
     "Keep batter shallow and replace when it gets thick with bread crumbs for clean dips.",

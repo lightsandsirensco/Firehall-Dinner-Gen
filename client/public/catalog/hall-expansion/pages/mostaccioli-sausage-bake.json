@@ -8,15 +8,15 @@
   "category": "hall_expansion",
   "cuisine": "italian",
   "description": "Hot Italian sausage browns with garlic and marinara, tosses with par-cooked ziti and ricotta, then bakes under a mozzarella cap until golden and bubbling.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 45,
   "prepTime": 30,
   "difficulty": "easy",
-  "calories": 580,
-  "protein": 32,
-  "carbs": 52,
-  "fats": 28,
+  "calories": 1011,
+  "protein": 44,
+  "carbs": 84,
+  "fats": 55,
   "tags": [
     "protein:pork",
     "format:pasta",
@@ -38,64 +38,64 @@
   "ingredients": [
     {
       "name": "mostaccioli pasta",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "lb",
       "group": "Main"
     },
     {
       "name": "hot Italian sausage",
-      "quantity": "3",
+      "quantity": "2.4",
       "unit": "lb",
       "notes": "casings removed",
       "group": "Main"
     },
     {
       "name": "marinara sauce",
-      "quantity": "6",
+      "quantity": "4.8",
       "unit": "cups",
       "group": "Sauce"
     },
     {
       "name": "whole-milk ricotta",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "cups",
       "group": "Cheese"
     },
     {
       "name": "shredded mozzarella",
-      "quantity": "3",
+      "quantity": "2.4",
       "unit": "cups",
       "group": "Cheese"
     },
     {
       "name": "grated Parmesan",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "cup",
       "group": "Cheese"
     },
     {
       "name": "egg",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "whole",
       "group": "Cheese"
     },
     {
       "name": "garlic cloves",
-      "quantity": "5",
+      "quantity": "4",
       "unit": "cloves",
       "notes": "minced",
       "group": "Aromatics"
     },
     {
       "name": "fresh basil",
-      "quantity": "0.33",
+      "quantity": "1/4",
       "unit": "cup",
       "notes": "chopped",
       "group": "Finish"
     },
     {
       "name": "red pepper flakes",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tsp",
       "group": "Seasoning"
     }
@@ -125,7 +125,7 @@
     {
       "stepNumber": 4,
       "title": "Brown the sausage",
-      "instruction": "Cook sausage with garlic over medium-high heat 10 minutes, breaking into crumbles until browned. Stir in marinara and simmer 5 minutes. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Cook sausage with garlic over medium-high heat 10 minutes, breaking into crumbles until browned. Stir in marinara and simmer 5 minutes. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F with a 3-minute rest at the thickest point before moving to the next batch.",
       "minutes": 15,
       "heatLevel": ""
     },
@@ -139,7 +139,7 @@
     {
       "stepNumber": 6,
       "title": "Assemble and bake",
-      "instruction": "Toss ziti with sausage sauce, dollop ricotta mix throughout, top with remaining mozzarella. Cover and bake at 375°F 25 minutes, uncover and bake 15 more until golden. Target oven/smoker temperature: 375°F. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Toss ziti with sausage sauce, dollop ricotta mix throughout, top with remaining mozzarella. Cover and bake at 375°F 25 minutes, uncover and bake 15 more until golden. Target oven/smoker temperature: 375°F. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F with a 3-minute rest at the thickest point before moving to the next batch.",
       "minutes": 40,
       "heatLevel": ""
     },
@@ -176,14 +176,28 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 580,
-    "protein": 32,
-    "carbs": 52,
-    "fats": 28,
-    "label": "~580 cal/serving · 32g protein · 4g fiber (est.)"
+    "calories": 1011,
+    "protein": 44,
+    "carbs": 84,
+    "fats": 55,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/hall-expansion/mostaccioli-sausage-bake.jpg",
-  "heroImageAlt": "Baked Mostaccioli with Sausage — crew-sized firehall meal",
+  "heroImageAlt": "Baked Mostaccioli with Sausage — wide family-style firehall platter showing sausage on a crew prep table",
   "mobileImage": "/images/mobile/hall-expansion/mostaccioli-sausage-bake.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/mostaccioli-sausage-bake.jpg",
   "railImage": "/images/rails/hall-expansion/mostaccioli-sausage-bake.jpg",

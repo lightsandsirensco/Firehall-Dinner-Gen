@@ -13,10 +13,10 @@
   "cookTime": 75,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 973,
+  "calories": 957,
   "protein": 70,
-  "carbs": 21,
-  "fats": 70,
+  "carbs": 17,
+  "fats": 69,
   "tags": [
     "protein:beef",
     "format:pasta",
@@ -183,10 +183,10 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 973,
+    "calories": 957,
     "protein": 70,
-    "carbs": 21,
-    "fats": 70,
+    "carbs": 17,
+    "fats": 69,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
@@ -229,6 +229,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-30T23:27:14.536Z",
+  "generatedAt": "2026-06-01T01:40:02.079Z",
   "contentVersion": 2
 }

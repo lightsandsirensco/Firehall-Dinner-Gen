@@ -8,15 +8,15 @@
   "category": "hall_expansion",
   "cuisine": "american",
   "description": "Chicken breast cubes cook with rice and broccoli in one pot, then finish with sharp cheddar until creamy and cohesive. Simple seasoning, big portions, minimal dishes.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 35,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 460,
-  "protein": 38,
-  "carbs": 48,
-  "fats": 14,
+  "calories": 606,
+  "protein": 56,
+  "carbs": 54,
+  "fats": 17,
   "tags": [
     "protein:chicken",
     "format:one_pot",
@@ -39,64 +39,64 @@
   "ingredients": [
     {
       "name": "boneless chicken breast",
-      "quantity": "3",
+      "quantity": "2.4",
       "unit": "lb",
       "notes": "cubed",
       "group": "Main"
     },
     {
       "name": "long-grain white rice",
-      "quantity": "3",
+      "quantity": "2.4",
       "unit": "cups",
       "group": "Main"
     },
     {
       "name": "broccoli florets",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "lb",
       "group": "Vegetables"
     },
     {
       "name": "chicken broth",
-      "quantity": "5.5",
+      "quantity": "4.4",
       "unit": "cups",
       "group": "Liquid"
     },
     {
       "name": "sharp cheddar cheese",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "cups",
       "notes": "shredded",
       "group": "Cheese"
     },
     {
       "name": "yellow onion",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "whole",
       "notes": "diced",
       "group": "Aromatics"
     },
     {
       "name": "garlic powder",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tsp",
       "group": "Seasoning"
     },
     {
       "name": "onion powder",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tsp",
       "group": "Seasoning"
     },
     {
       "name": "unsalted butter",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp",
       "group": "Finish"
     },
     {
       "name": "kosher salt",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tsp",
       "group": "Seasoning"
     }
@@ -119,7 +119,7 @@
     {
       "stepNumber": 3,
       "title": "Sear the chicken",
-      "instruction": "Season cubed chicken with salt, garlic powder, and onion powder. Sear in butter 4–5 minutes until lightly golden—not fully cooked through.",
+      "instruction": "Season cubed chicken with salt, garlic powder, and onion powder. Sear in butter 4–5 minutes until lightly golden—not fully cooked through. Target 165°F at the thickest point before moving to the next batch.",
       "minutes": 6,
       "heatLevel": ""
     },
@@ -198,11 +198,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 460,
-    "protein": 38,
-    "carbs": 48,
-    "fats": 14,
-    "label": "~460 cal/serving · 38g protein · 4g fiber (est.)"
+    "calories": 606,
+    "protein": 56,
+    "carbs": 54,
+    "fats": 17,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": true
+    }
   },
   "heroImage": "/images/hall-expansion/cheesy-chicken-broccoli-rice.jpg",
   "heroImageAlt": "Cheesy Chicken Broccoli Rice — crew-sized firehall meal",

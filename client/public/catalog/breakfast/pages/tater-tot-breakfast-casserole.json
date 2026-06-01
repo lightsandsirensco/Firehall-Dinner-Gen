@@ -2,7 +2,7 @@
   "slug": "tater-tot-breakfast-casserole",
   "title": "Tater Tot Breakfast Casserole",
   "subtitle": "Crispy tater tots baked with eggs, bacon, and melty cheese.",
-  "description": "Adapted from classic Midwest tater tot hotdish tradition for firehall breakfast: frozen tater tots layered with crispy bacon, scrambled eggs, and cheddar baked until the top is shatter-crisp and the center hits 165°F.",
+  "description": "Tater tots, sausage, and cheese under baked eggs — tater tot hot dish meets breakfast casserole. Crowd-pleaser every time.",
   "filters": [
     "feed_a_crew",
     "high_protein",
@@ -15,8 +15,8 @@
     "bake",
     "midwest"
   ],
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "prepTime": 15,
   "cookTime": 40,
   "totalTime": 55,
@@ -24,48 +24,48 @@
   "ingredients": [
     {
       "name": "frozen tater tots",
-      "quantity": "3 lb",
+      "quantity": "2.4",
       "notes": "straight from freezer",
       "group": "Base"
     },
     {
       "name": "bacon",
-      "quantity": "1 1/2 lb",
+      "quantity": "3/8",
       "notes": "cooked crisp and crumbled",
       "group": "Protein"
     },
     {
       "name": "large eggs",
-      "quantity": "12",
+      "quantity": "10",
       "notes": "lightly beaten",
       "group": "Egg mix"
     },
     {
       "name": "whole milk",
-      "quantity": "1 1/2 cups",
+      "quantity": "3/8",
       "group": "Egg mix"
     },
     {
       "name": "shredded cheddar",
-      "quantity": "3 cups",
+      "quantity": "2.4",
       "notes": "divided",
       "group": "Cheese"
     },
     {
       "name": "garlic powder",
-      "quantity": "1 tsp",
+      "quantity": "3/4",
       "notes": "plus salt and pepper",
       "group": "Seasoning"
     },
     {
       "name": "sliced green onions",
-      "quantity": "1/2 cup",
+      "quantity": "1/2",
       "notes": "plus ranch or hot sauce",
       "group": "Finish"
     },
     {
       "name": "diced bell pepper",
-      "quantity": "1 cup",
+      "quantity": "3/4",
       "notes": "sautéed soft, optional layer",
       "group": "Optional"
     }
@@ -88,28 +88,28 @@
     {
       "stepNumber": 3,
       "title": "Heat the oven",
-      "instruction": "Heat oven to 400°F. Grease a deep 9x13 pan. Cook bacon until crisp, drain, and crumble. Keep bacon fat if sautéing optional peppers. Allow 10–15 minutes for mise en place before heat goes on. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Heat oven to 400°F. Grease a deep 9x13 pan. Cook bacon until crisp, drain, and crumble. Keep bacon fat if sautéing optional peppers. Target 165°F at the thickest point before moving to the next batch.",
       "minutes": 0,
       "heatLevel": ""
     },
     {
       "stepNumber": 4,
       "title": "Layer tots and bacon",
-      "instruction": "Spread half the tater tots in an even layer on the pan bottom. Scatter bacon and half the cheddar over the tots. Add optional sautéed peppers if using. Target 165°F at the thickest part before moving to the next batch. Plan about 8 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Spread half the tater tots in an even layer on the pan bottom. Scatter bacon and half the cheddar over the tots. Add optional sautéed peppers if using. Target 165°F at the thickest point before moving to the next batch.",
       "minutes": 8,
       "heatLevel": ""
     },
     {
       "stepNumber": 5,
       "title": "Add egg mixture",
-      "instruction": "Whisk eggs, milk, garlic powder, salt, and pepper until smooth. Pour evenly over the layered tots and bacon so liquid reaches the bottom. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Whisk eggs, milk, garlic powder, salt, and pepper until smooth. Pour evenly over the layered tots and bacon so liquid reaches the bottom.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 6,
       "title": "Top and bake",
-      "instruction": "Arrange remaining tots on top in a single layer and sprinkle with remaining cheddar. Bake 35–40 minutes until tots are deep golden and center reaches 165°F on a thermometer. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Arrange remaining tots on top in a single layer and sprinkle with remaining cheddar. Bake 35–40 minutes until tots are deep golden and center reaches 165°F on a thermometer.",
       "minutes": 35,
       "heatLevel": ""
     },
@@ -122,17 +122,45 @@
     },
     {
       "stepNumber": 8,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Portion and open the line",
+      "instruction": "Portion Tater Tot Breakfast Casserole onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Scale for larger halls",
+      "instruction": "When cooking for more than 8 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
       "title": "Rest and serve",
       "instruction": "Rest 8 minutes so the egg custard sets for clean scoops. Garnish with green onions and serve with ranch or hot sauce at the line. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 8,
       "heatLevel": ""
+    },
+    {
+      "stepNumber": 12,
+      "title": "Final quality check before service",
+      "instruction": "Walk the line once before opening service for Tater Tot Breakfast Casserole — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
+      "minutes": 4,
+      "heatLevel": ""
     }
   ],
   "nutrition": {
-    "calories": 279,
-    "protein": 20,
-    "carbs": 3,
-    "fat": 21,
+    "calories": 256,
+    "protein": 18,
+    "carbs": 5,
+    "fat": 18,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
@@ -141,11 +169,11 @@
       "under30gFat": true,
       "highCarb": false,
       "lowCarb": true,
-      "mealPrepFriendly": false
+      "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": false,
-      "lighterOption": false,
+      "lighterOption": true,
       "performanceMeal": false
     }
   },
@@ -165,12 +193,11 @@
   "heroImage": "/images/breakfast/tater-tot-breakfast-casserole.jpg",
   "thumbImage": "/images/thumbs/breakfast/tater-tot-breakfast-casserole.jpg",
   "imageAlt": "Tater tot breakfast casserole with bacon, eggs, and melted cheddar",
-  "publishedAt": "2026-05-30T21:22:29.757Z",
-  "updatedAt": "2026-05-31T12:54:36.797Z",
+  "publishedAt": "2026-05-31T18:33:00.830Z",
+  "updatedAt": "2026-05-31T23:50:25.269Z",
   "readMinutes": 7,
   "seoTitle": "Tater Tot Breakfast Casserole | Firehall Breakfast",
-  "mobileImage": "/images/mobile/breakfast/tater-tot-breakfast-casserole.jpg",
-  "railImage": "/images/rails/breakfast/tater-tot-breakfast-casserole.jpg",
+  "collectionTier": "firehall_classic",
   "proTips": [
     "Keep tots frozen until they hit the pan—thawed tots turn mushy in the egg layer.",
     "Use a deep pan so the egg mixture does not overflow during baking.",

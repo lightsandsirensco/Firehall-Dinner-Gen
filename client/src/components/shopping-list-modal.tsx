@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -10,6 +10,7 @@ import type { ShoppingListResult } from "@/lib/shopping-list";
 import { shoppingListToText } from "@/lib/shopping-list";
 import { escapeHtml } from "@/lib/escape-html";
 import { fetchWithCsrf } from "@/lib/csrf-fetch";
+import { trackShoppingListAction, trackShoppingListOpen } from "@/lib/analytics";
 
 interface ShoppingListModalProps {
   open: boolean;
@@ -117,11 +118,17 @@ export function ShoppingListModal({ open, onOpenChange, shoppingList, recipeTitl
   const [emailStatus, setEmailStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [emailError, setEmailError] = useState("");
 
+  useEffect(() => {
+    if (!open) return;
+    trackShoppingListOpen({ recipeTitle, generatorType });
+  }, [open, recipeTitle, generatorType]);
+
   const handleCopy = async () => {
     const text = shoppingListToText(shoppingList, recipeTitle);
     try {
       await navigator.clipboard.writeText(text);
       setCopied(true);
+      trackShoppingListAction({ recipeTitle, generatorType, action: "copy", status: "success" });
       setTimeout(() => setCopied(false), 2000);
     } catch {
       const textarea = document.createElement("textarea");
@@ -131,11 +138,13 @@ export function ShoppingListModal({ open, onOpenChange, shoppingList, recipeTitl
       document.execCommand("copy");
       document.body.removeChild(textarea);
       setCopied(true);
+      trackShoppingListAction({ recipeTitle, generatorType, action: "copy", status: "success" });
       setTimeout(() => setCopied(false), 2000);
     }
   };
 
   const handlePrint = () => {
+    trackShoppingListAction({ recipeTitle, generatorType, action: "print" });
     const html = buildPrintHtml(shoppingList, recipeTitle);
     const printWindow = window.open("", "_blank");
     if (printWindow) {
@@ -181,14 +190,17 @@ export function ShoppingListModal({ open, onOpenChange, shoppingList, recipeTitl
         console.error("[shopping-list-modal] Email failed:", res.status, msg);
         setEmailStatus("error");
         setEmailError(msg);
+        trackShoppingListAction({ recipeTitle, generatorType, action: "email", status: "error" });
         return;
       }
 
       setEmailStatus("success");
+      trackShoppingListAction({ recipeTitle, generatorType, action: "email", status: "success" });
     } catch (err: any) {
       console.error("[shopping-list-modal] Network error:", err);
       setEmailStatus("error");
       setEmailError("Network error. Check your connection and try again.");
+      trackShoppingListAction({ recipeTitle, generatorType, action: "email", status: "error" });
     }
   };
 

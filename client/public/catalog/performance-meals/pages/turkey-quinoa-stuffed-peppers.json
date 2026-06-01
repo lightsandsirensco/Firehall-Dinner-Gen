@@ -13,10 +13,10 @@
   "cookTime": 45,
   "prepTime": 30,
   "difficulty": "medium",
-  "calories": 385,
-  "protein": 32,
-  "carbs": 28,
-  "fats": 16,
+  "calories": 519,
+  "protein": 38,
+  "carbs": 38,
+  "fats": 23,
   "tags": [
     "protein:turkey",
     "format:bake",
@@ -155,11 +155,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 385,
-    "protein": 32,
-    "carbs": 28,
-    "fats": 16,
-    "label": "~385 cal/serving · 32g protein · 6g fiber (est.)"
+    "calories": 519,
+    "protein": 38,
+    "carbs": 38,
+    "fats": 23,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": true
+    }
   },
   "heroImage": "/images/golden-100/turkey-quinoa-stuffed-peppers.jpg",
   "mobileImage": "/images/mobile/turkey-quinoa-stuffed-peppers.jpg",
@@ -184,6 +198,6 @@
     "turkey-sweet-potato-chili",
     "turkey-lettuce-wrap-night"
   ],
-  "generatedAt": "2026-05-31T15:28:14.291Z",
+  "generatedAt": "2026-05-31T23:32:24.495Z",
   "contentVersion": 2
 }

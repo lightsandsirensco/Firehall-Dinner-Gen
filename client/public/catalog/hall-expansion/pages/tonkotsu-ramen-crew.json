@@ -8,15 +8,15 @@
   "category": "hall_expansion",
   "cuisine": "japanese",
   "description": "Pork bones and chicken backs simmer for hours into a creamy white broth, then serve over springy ramen noodles with chashu pork, soft eggs, nori, and scallions. Set up a topping bar so crews build their own bowls.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 240,
   "prepTime": 45,
   "difficulty": "hard",
-  "calories": 580,
-  "protein": 32,
-  "carbs": 52,
-  "fats": 28,
+  "calories": 129,
+  "protein": 9,
+  "carbs": 12,
+  "fats": 6,
   "tags": [
     "protein:pork",
     "format:bowl",
@@ -39,80 +39,80 @@
   "ingredients": [
     {
       "name": "pork neck bones",
-      "quantity": "4",
+      "quantity": "3.2",
       "unit": "lb",
       "group": "Broth"
     },
     {
       "name": "chicken backs",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "lb",
       "group": "Broth"
     },
     {
       "name": "ginger",
-      "quantity": "3",
+      "quantity": "2.4",
       "unit": "inches",
       "notes": "smashed",
       "group": "Broth"
     },
     {
       "name": "garlic cloves",
-      "quantity": "8",
+      "quantity": "7",
       "unit": "cloves",
       "notes": "smashed",
       "group": "Broth"
     },
     {
       "name": "soy sauce",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "cup",
       "group": "Tare"
     },
     {
       "name": "mirin",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "cup",
       "group": "Tare"
     },
     {
       "name": "pork belly",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "lb",
       "notes": "for chashu",
       "group": "Topping"
     },
     {
       "name": "ramen noodles",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "lb",
       "notes": "fresh or dried",
       "group": "Noodles"
     },
     {
       "name": "soft-boiled eggs",
-      "quantity": "10",
+      "quantity": "8",
       "unit": "eggs",
       "notes": "peeled and halved",
       "group": "Topping"
     },
     {
       "name": "nori sheets",
-      "quantity": "10",
+      "quantity": "8",
       "unit": "sheets",
       "notes": "cut in half",
       "group": "Topping"
     },
     {
       "name": "green onions",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "bunch",
       "notes": "sliced",
       "group": "Topping"
     },
     {
       "name": "corn kernels",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "cups",
       "notes": "steamed",
       "group": "Topping"
@@ -122,7 +122,7 @@
     {
       "stepNumber": 1,
       "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Tonkotsu Ramen for the Crew in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "instruction": "Line up every ingredient for Tonkotsu Ramen for the Crew in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use soy sauce, green onions as listed — measure each before heat goes on.",
       "minutes": 12,
       "heatLevel": ""
     },
@@ -136,14 +136,14 @@
     {
       "stepNumber": 3,
       "title": "Blanch and start broth",
-      "instruction": "Blanch pork and chicken bones 5 minutes, rinse, then cover with fresh water in a large stockpot. Add ginger and garlic. Simmer vigorously 4 hours, skimming often.",
+      "instruction": "Blanch pork and chicken bones 5 minutes, rinse, then cover with fresh water in a large stockpot. Add ginger and garlic. Simmer vigorously 4 hours, skimming often. Target 145°F with a 3-minute rest at the thickest point before moving to the next batch.",
       "minutes": 240,
       "heatLevel": ""
     },
     {
       "stepNumber": 4,
       "title": "Braise chashu pork",
-      "instruction": "Roll pork belly, tie, and braise in soy, mirin, and water 2 hours until tender. Cool and slice thin. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Roll pork belly, tie, and braise in soy, mirin, and water 2 hours until tender. Cool and slice thin. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F with a 3-minute rest at the thickest point before moving to the next batch.",
       "minutes": 120,
       "heatLevel": ""
     },
@@ -208,11 +208,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "heavy",
   "nutrition": {
-    "calories": 580,
-    "protein": 32,
-    "carbs": 52,
-    "fats": 28,
-    "label": "~580 cal/serving · 32g protein · 2g fiber (est.)"
+    "calories": 129,
+    "protein": 9,
+    "carbs": 12,
+    "fats": 6,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/hall-expansion/tonkotsu-ramen-crew.jpg",
   "heroImageAlt": "Tonkotsu Ramen for the Crew — crew-sized firehall meal",

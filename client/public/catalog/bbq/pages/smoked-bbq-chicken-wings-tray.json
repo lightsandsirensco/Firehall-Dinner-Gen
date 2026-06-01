@@ -8,14 +8,14 @@
   "category": "bbq_grill_nights",
   "cuisine": "american",
   "description": "Adapted from classic smoked wing tradition (Hey Grill Hey, Weber): split wings get a dry rub, smoke at 250°F, then finish hot and toss in house BBQ sauce for a tray that feeds ten fast.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 75,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 133,
+  "calories": 118,
   "protein": 1,
-  "carbs": 22,
+  "carbs": 18,
   "fats": 5,
   "tags": [
     "protein:chicken",
@@ -40,64 +40,64 @@
   "ingredients": [
     {
       "name": "chicken wings",
-      "quantity": "8",
+      "quantity": "4",
       "unit": "lb",
       "notes": "split into flats and drums"
     },
     {
       "name": "kosher salt",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp"
     },
     {
       "name": "brown sugar",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp"
     },
     {
       "name": "smoked paprika",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp"
     },
     {
       "name": "garlic powder",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp"
     },
     {
       "name": "black pepper",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tbsp"
     },
     {
       "name": "baking powder",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tbsp",
       "notes": "helps crisp skin"
     },
     {
       "name": "BBQ sauce",
-      "quantity": "1.5",
+      "quantity": "1 1/4",
       "unit": "cups"
     },
     {
       "name": "hot sauce",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp"
     },
     {
       "name": "butter",
-      "quantity": "4",
+      "quantity": "3.4",
       "unit": "tbsp"
     },
     {
       "name": "celery sticks",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "cups"
     },
     {
       "name": "ranch dressing",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "cup",
       "notes": "optional dip"
     }
@@ -120,7 +120,7 @@
     {
       "stepNumber": 3,
       "title": "Season the wings",
-      "instruction": "Pat wings dry. Toss with salt, brown sugar, paprika, garlic powder, pepper, and baking powder until evenly coated. Rest 10 minutes. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Pat wings dry. Toss with salt, brown sugar, paprika, garlic powder, pepper, and baking powder until evenly coated. Rest 10 minutes.",
       "minutes": 10,
       "heatLevel": ""
     },
@@ -148,7 +148,7 @@
     {
       "stepNumber": 7,
       "title": "Toss and tray",
-      "instruction": "Toss hot wings in sauce to coat. Spread on sheet pans for service. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Toss hot wings in sauce to coat. Spread on sheet pans for service. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 5,
       "heatLevel": ""
     },
@@ -161,8 +161,8 @@
     },
     {
       "stepNumber": 9,
-      "title": "Tonight's board",
-      "instruction": "Wings on a tray with celery and ranch. Napkins mandatory. Plan about 3 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "title": "Cooking step",
+      "instruction": "Wings on a tray with celery and ranch. Napkins mandatory. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 3,
       "heatLevel": ""
     },
@@ -191,12 +191,25 @@
   "mealPrepNotes": "Season wings early. Smoke in two batches on wire racks. Finish and sauce right before service, or hold sauced wings covered at 170°F up to 30 minutes.",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 133,
+    "calories": 118,
     "protein": 1,
-    "carbs": 22,
+    "carbs": 18,
     "fats": 5,
     "label": "per serving (hall portion)",
-    "source": "estimated"
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/smoker-catalog/smoked-bbq-chicken-wings-tray.jpg",
   "heroImageAlt": "Smoked BBQ Chicken Wings Tray — crew-sized BBQ spread with visible smoke and bark",
@@ -224,6 +237,6 @@
     "smoked-chicken-quarters-white-sauce"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T02:29:42.531Z",
+  "generatedAt": "2026-05-31T23:32:23.201Z",
   "contentVersion": 2
 }

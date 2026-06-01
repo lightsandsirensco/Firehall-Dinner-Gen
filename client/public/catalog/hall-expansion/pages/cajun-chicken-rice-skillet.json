@@ -8,15 +8,15 @@
   "category": "hall_expansion",
   "cuisine": "cajun",
   "description": "Chicken thighs are seared with Cajun seasoning, then simmered with trinity vegetables, rice, and broth until fluffy and fragrant. Finish with scallions and hot sauce at the line.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 40,
   "prepTime": 25,
   "difficulty": "easy",
-  "calories": 480,
-  "protein": 34,
-  "carbs": 52,
-  "fats": 16,
+  "calories": 546,
+  "protein": 63,
+  "carbs": 51,
+  "fats": 8,
   "tags": [
     "protein:chicken",
     "format:skillet",
@@ -38,26 +38,26 @@
   "ingredients": [
     {
       "name": "bone-in chicken thighs",
-      "quantity": "4",
+      "quantity": "3.2",
       "unit": "lb",
       "notes": "about 12 pieces",
       "group": "Main"
     },
     {
       "name": "long-grain white rice",
-      "quantity": "3",
+      "quantity": "2.4",
       "unit": "cups",
       "group": "Main"
     },
     {
       "name": "Cajun seasoning",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp",
       "group": "Seasoning"
     },
     {
       "name": "yellow onion",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "whole",
       "notes": "diced",
       "group": "Trinity"
@@ -71,33 +71,33 @@
     },
     {
       "name": "celery stalks",
-      "quantity": "3",
+      "quantity": "2",
       "unit": "stalks",
       "notes": "diced",
       "group": "Trinity"
     },
     {
       "name": "garlic cloves",
-      "quantity": "5",
+      "quantity": "4",
       "unit": "cloves",
       "notes": "minced",
       "group": "Trinity"
     },
     {
       "name": "chicken broth",
-      "quantity": "5",
+      "quantity": "4",
       "unit": "cups",
       "group": "Liquid"
     },
     {
       "name": "tomato paste",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "group": "Liquid"
     },
     {
       "name": "green onions",
-      "quantity": "6",
+      "quantity": "5",
       "unit": "whole",
       "notes": "sliced",
       "group": "Finish"
@@ -121,7 +121,7 @@
     {
       "stepNumber": 3,
       "title": "Season and sear chicken",
-      "instruction": "Toss chicken thighs with half the Cajun seasoning. Sear skin-side down in a large skillet over medium-high heat 5 minutes per side until golden. Set aside.",
+      "instruction": "Toss chicken thighs with half the Cajun seasoning. Sear skin-side down in a large skillet over medium-high heat 5 minutes per side until golden. Set aside. Target 165°F at the thickest point before moving to the next batch.",
       "minutes": 12,
       "heatLevel": ""
     },
@@ -207,14 +207,28 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 480,
-    "protein": 34,
-    "carbs": 52,
-    "fats": 16,
-    "label": "~480 cal/serving · 34g protein · 3g fiber (est.)"
+    "calories": 546,
+    "protein": 63,
+    "carbs": 51,
+    "fats": 8,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": true,
+      "performanceMeal": true
+    }
   },
   "heroImage": "/images/hall-expansion/cajun-chicken-rice-skillet.jpg",
-  "heroImageAlt": "Cajun Chicken and Rice Skillet — crew-sized firehall meal",
+  "heroImageAlt": "Cajun Chicken and Rice Skillet — wide family-style firehall platter showing chicken, rice skillet on a crew prep table",
   "mobileImage": "/images/mobile/hall-expansion/cajun-chicken-rice-skillet.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/cajun-chicken-rice-skillet.jpg",
   "railImage": "/images/rails/hall-expansion/cajun-chicken-rice-skillet.jpg",

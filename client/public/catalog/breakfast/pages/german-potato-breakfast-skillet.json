@@ -1,0 +1,147 @@
+{
+  "slug": "german-potato-breakfast-skillet",
+  "title": "German Potato Breakfast Skillet",
+  "subtitle": "Pan-fried potatoes with bratwurst, sauerkraut, and fried eggs.",
+  "description": "German-style fried potatoes with bacon and eggs in one pan. Simple, crispy, and exactly what you'd expect on a European-influenced hall menu.",
+  "filters": [
+    "skillets",
+    "feed_a_crew",
+    "high_protein"
+  ],
+  "tags": [
+    "german",
+    "potatoes",
+    "bratwurst",
+    "sauerkraut",
+    "skillet"
+  ],
+  "crewSize": 8,
+  "baseServings": 8,
+  "prepTime": 15,
+  "cookTime": 35,
+  "totalTime": 50,
+  "difficulty": "medium",
+  "ingredients": [
+    {
+      "name": "Yukon gold potatoes",
+      "quantity": "4 lb",
+      "notes": "diced 1/2-inch",
+      "group": "Potatoes"
+    },
+    {
+      "name": "yellow onions",
+      "quantity": "2",
+      "notes": "sliced thin",
+      "group": "Potatoes"
+    },
+    {
+      "name": "bratwurst",
+      "quantity": "2 lb",
+      "notes": "8 links, pierced",
+      "group": "Sausage"
+    },
+    {
+      "name": "sauerkraut",
+      "quantity": "3 cups",
+      "notes": "drained, warmed with caraway",
+      "group": "Sauerkraut"
+    },
+    {
+      "name": "large eggs",
+      "quantity": "8",
+      "group": "Protein"
+    },
+    {
+      "name": "vegetable oil",
+      "quantity": "1/4 cup",
+      "notes": "plus butter",
+      "group": "Fat"
+    },
+    {
+      "name": "caraway seeds",
+      "quantity": "1 tsp",
+      "notes": "plus salt and pepper",
+      "group": "Seasoning"
+    },
+    {
+      "name": "fresh parsley",
+      "quantity": "1/4 cup",
+      "notes": "chopped, plus mustard at the line",
+      "group": "Finish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Par-cook potatoes",
+      "instruction": "Microwave diced potatoes with a splash of water until just tender, about 8 minutes. Drain and pat completely dry—wet potatoes will not crisp in the skillet.",
+      "minutes": 10
+    },
+    {
+      "stepNumber": 2,
+      "title": "Brown bratwurst",
+      "instruction": "Sear bratwurst in a lightly oiled skillet over medium until browned on all sides and internal temperature reaches 160°F, about 10 minutes. Hold warm sliced on a tray.",
+      "minutes": 12
+    },
+    {
+      "stepNumber": 3,
+      "title": "Crisp potatoes and onion",
+      "instruction": "Add oil to a large cast iron over medium-high. Fry potatoes in a single layer 4 minutes before stirring. Add onion and cook until potatoes are golden and onion is soft with crisp edges.",
+      "minutes": 15
+    },
+    {
+      "stepNumber": 4,
+      "title": "Warm sauerkraut",
+      "instruction": "Heat sauerkraut with caraway in a small pot over low, stirring occasionally. Taste and adjust salt—sauerkraut should be warm but not boiling.",
+      "minutes": 5
+    },
+    {
+      "stepNumber": 5,
+      "title": "Fry eggs and serve",
+      "instruction": "Make wells in the potato mixture and crack in eggs. Cover over medium-low until whites are set (165°F) and yolks are runny. Top with sliced bratwurst, sauerkraut, and parsley. Serve from the skillet.",
+      "minutes": 8
+    }
+  ],
+  "nutrition": {
+    "calories": 307,
+    "protein": 11,
+    "carbs": 39,
+    "fat": 12,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": false
+    }
+  },
+  "stationWorkflow": [
+    "Dry potatoes aggressively after par-cooking—this is the key to a crisp German-style pan.",
+    "Pierce bratwurst before searing so they do not burst and spray grease.",
+    "Warm sauerkraut on the back burner while eggs finish so all components hit the line hot."
+  ],
+  "cleanupNotes": [
+    "Deglaze cast iron with hot water while warm; avoid soap on seasoned pans if your hall uses them.",
+    "Rinse sauerkraut pot promptly—acid and salt corrode aluminum if left overnight."
+  ],
+  "leftovers": [
+    "Reheat potato base covered at 325°F; fry fresh eggs and slice fresh bratwurst to order.",
+    "Press cold potatoes into patties and griddle until crisp for handheld breakfast sandwiches."
+  ],
+  "heroImage": "/images/breakfast/german-potato-breakfast-skillet.jpg",
+  "thumbImage": "/images/thumbs/breakfast/german-potato-breakfast-skillet.jpg",
+  "imageAlt": "German potato breakfast skillet with bratwurst, sauerkraut, and fried eggs",
+  "publishedAt": "2026-05-31T18:33:00.830Z",
+  "updatedAt": "2026-05-31T18:34:15.374Z",
+  "readMinutes": 8,
+  "seoTitle": "German Potato Breakfast Skillet | Firehall Breakfast",
+  "collectionTier": "firehall_classic"
+}

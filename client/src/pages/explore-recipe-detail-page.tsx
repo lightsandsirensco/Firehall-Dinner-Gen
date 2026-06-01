@@ -14,7 +14,7 @@ import {
   Utensils,
 } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
-import { useLocation, useRoute } from "wouter";
+import { useLocation, useRoute, Link, Redirect } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
@@ -34,6 +34,7 @@ import {
   ExploreRecipeCardRegistry,
   mergeDetailWithCardPreview,
 } from "@/lib/explore-recipe";
+import { resolveExploreLegacyRedirect } from "@/lib/explore-navigation";
 import { ExploreRecipeImage } from "@/components/explore-recipe-image";
 import { HERO_CONTENT_FADE } from "@/lib/hero-image";
 import { cn } from "@/lib/utils";
@@ -241,6 +242,26 @@ export function ExploreRecipeDetailPage({ registryRef }: ExploreRecipeDetailPage
 
   const detailLoading = detailPending && !matchedDetail;
 
+  const catalogRedirect = useMemo(() => {
+    const fromQuery = resolveExploreLegacyRedirect(lookupHints.slug);
+    if (fromQuery) return fromQuery;
+
+    const previewSlug = detailPreview?._curatedSlug;
+    const fromPreview = resolveExploreLegacyRedirect(previewSlug);
+    if (fromPreview) return fromPreview;
+
+    const fromDetail = resolveExploreLegacyRedirect(
+      (matchedDetail as { _catalogSlug?: string } | undefined)?._catalogSlug,
+    );
+    if (fromDetail) return fromDetail;
+
+    return null;
+  }, [lookupHints.slug, detailPreview?._curatedSlug, matchedDetail]);
+
+  if (catalogRedirect) {
+    return <Redirect to={catalogRedirect} replace />;
+  }
+
   if (selectedRecipeId && matchedDetail) {
     const displayDetail = mergeDetailWithCardPreview(
       { ...matchedDetail, imageAlt: matchedDetail.imageAlt || matchedDetail.title },
@@ -337,6 +358,43 @@ export function ExploreRecipeDetailPage({ registryRef }: ExploreRecipeDetailPage
           </div>
         </main>
         <ExploreDetailFooter />
+      </div>
+    );
+  }
+
+  if (selectedRecipeId) {
+    if (import.meta.env.DEV) {
+      console.warn("[explore-detail] recipe unavailable", { recipeId: selectedRecipeId, error: detailError });
+    }
+    return (
+      <div className="min-h-screen min-h-[100dvh] bg-background">
+        <SiteHeader activePage="explore" favCount={favCount} />
+        <main className="max-w-[900px] mx-auto px-4 sm:px-6 py-8">
+          <Button
+            variant="ghost"
+            size="sm"
+            className="gap-1.5 mb-6 min-h-10"
+            onClick={closeRecipeDetail}
+            data-testid="button-back-explore-fallback"
+          >
+            <ChevronLeft className="w-4 h-4" />
+            Back to Explore
+          </Button>
+          <div className="rounded-2xl border border-border/40 bg-card/30 p-8 text-center" role="alert">
+            <p className="text-foreground font-medium">Recipe not available</p>
+            <p className="text-sm text-muted-foreground mt-2 mb-5">
+              This recipe could not be loaded. Browse the catalog or pick another meal.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-2 justify-center">
+              <Button variant="default" onClick={closeRecipeDetail} data-testid="button-back-explore-primary">
+                Back to Explore
+              </Button>
+              <Button variant="outline" asChild data-testid="button-browse-recipes-fallback">
+                <Link href="/recipes">Browse Recipes</Link>
+              </Button>
+            </div>
+          </div>
+        </main>
       </div>
     );
   }

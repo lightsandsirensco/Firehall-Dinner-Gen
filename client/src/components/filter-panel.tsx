@@ -59,6 +59,7 @@ import { forwardRef, memo, useState, type ComponentPropsWithoutRef } from "react
 import { cn } from "@/lib/utils";
 import { FilterChipScroller } from "@/components/mobile/filter-chips";
 import { CTA } from "@/lib/brand-copy";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 
 export type { TonightVibe };
 
@@ -385,6 +386,17 @@ const MoreOptionsTrigger = forwardRef<
 ));
 MoreOptionsTrigger.displayName = "MoreOptionsTrigger";
 
+function getGenerateDisabledReason(filters: FilterState, isLoading: boolean): string | null {
+  if (isLoading) return null;
+  if (filters.appliances.length === 0) {
+    return "Select at least one cooking appliance to generate a meal.";
+  }
+  if (filters.use_what_we_have && filters.ingredients_on_hand_text.trim().length === 0) {
+    return "List what's in the fridge or turn off “Use what we have”.";
+  }
+  return null;
+}
+
 function GenerateButtons({
   filters,
   hasRecipe,
@@ -416,26 +428,42 @@ function GenerateButtons({
     isLoading ||
     filters.appliances.length === 0 ||
     (filters.use_what_we_have && filters.ingredients_on_hand_text.trim().length === 0);
+  const disabledReason = getGenerateDisabledReason(filters, isLoading);
   const outcomeLine = formatDinnerOutcomeLine(filters, true);
+
+  const generateButton = (
+    <Button
+      size="lg"
+      className="btn-tonight btn-generate w-full active:scale-[0.98] transition-transform touch-manipulation"
+      onClick={onGenerate}
+      disabled={disabled}
+      data-testid="button-generate"
+    >
+      {isLoading ? (
+        <RefreshCw className="w-5 h-5 mr-2 animate-spin" />
+      ) : (
+        <Flame className="w-5 h-5 mr-2" />
+      )}
+      {isLoading ? INITIAL_MEAL_LOADING : ONE_TAP_MEAL_LABEL}
+    </Button>
+  );
 
   return (
     <div className={cn("flex flex-col gap-2.5", className)}>
       {!hasRecipe ? (
         <>
-          <Button
-            size="lg"
-            className="btn-tonight btn-generate w-full active:scale-[0.98] transition-transform touch-manipulation"
-            onClick={onGenerate}
-            disabled={disabled}
-            data-testid="button-generate"
-          >
-            {isLoading ? (
-              <RefreshCw className="w-5 h-5 mr-2 animate-spin" />
-            ) : (
-              <Flame className="w-5 h-5 mr-2" />
-            )}
-            {isLoading ? INITIAL_MEAL_LOADING : ONE_TAP_MEAL_LABEL}
-          </Button>
+          {disabled && disabledReason ? (
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <span className="inline-flex w-full cursor-not-allowed">{generateButton}</span>
+              </TooltipTrigger>
+              <TooltipContent side="top" className="max-w-xs text-center">
+                {disabledReason}
+              </TooltipContent>
+            </Tooltip>
+          ) : (
+            generateButton
+          )}
           {!compact && (
             <p className="text-center text-xs text-muted-foreground leading-snug">{outcomeLine}</p>
           )}

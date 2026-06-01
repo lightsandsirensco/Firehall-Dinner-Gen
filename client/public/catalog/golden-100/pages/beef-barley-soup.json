@@ -13,10 +13,10 @@
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 719,
-  "protein": 64,
-  "carbs": 41,
-  "fats": 35,
+  "calories": 587,
+  "protein": 52,
+  "carbs": 28,
+  "fats": 31,
   "tags": [
     "protein:beef",
     "format:soup_chili",
@@ -33,96 +33,69 @@
   ],
   "ingredients": [
     {
-      "name": "Ground beef (80/20)",
-      "quantity": "3.5",
+      "name": "Beef chuck or stew meat, cubed",
+      "quantity": "3",
       "unit": "lb",
       "group": "Main"
     },
     {
       "name": "Yellow onion",
-      "quantity": "3",
+      "quantity": "2",
       "unit": "large",
       "group": "Aromatics"
     },
     {
-      "name": "Bell peppers, diced",
-      "quantity": "3",
-      "unit": "count",
-      "group": "Aromatics"
-    },
-    {
-      "name": "Garlic cloves, minced",
-      "quantity": "8",
-      "unit": "cloves",
-      "group": "Aromatics"
-    },
-    {
-      "name": "Kidney beans, drained",
-      "quantity": "3",
-      "unit": "cans",
-      "notes": "15 oz",
-      "group": "Main"
-    },
-    {
-      "name": "Crushed tomatoes",
-      "quantity": "2",
-      "unit": "cans",
-      "notes": "28 oz",
-      "group": "Main"
-    },
-    {
-      "name": "Chili powder",
-      "quantity": "3",
-      "unit": "tbsp",
-      "group": "Seasoning"
-    },
-    {
-      "name": "Smoked paprika",
-      "quantity": "2",
-      "unit": "tbsp",
-      "group": "Seasoning"
-    },
-    {
-      "name": "Beef or chicken broth",
+      "name": "Carrots, diced",
       "quantity": "4",
       "unit": "cups",
-      "group": "Sauce"
+      "group": "Veg"
+    },
+    {
+      "name": "Celery, diced",
+      "quantity": "3",
+      "unit": "cups",
+      "group": "Veg"
+    },
+    {
+      "name": "Beef broth",
+      "quantity": "8",
+      "unit": "cups",
+      "group": "Broth"
+    },
+    {
+      "name": "Pearl barley",
+      "quantity": "1",
+      "unit": "cup",
+      "group": "Main"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Dice and open cans",
-      "instruction": "Dice onions and peppers ¼ inch. Drain beans. Open tomatoes. Set out your largest stock pot — chili splatters, so have a lid nearby.",
+      "title": "Sear aromatics",
+      "instruction": "Brown meat in batches; remove. Sweat onion, carrot, celery in the same pot 8 minutes until edges soften.",
       "minutes": 15,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Brown the meat hard",
-      "instruction": "Brown beef in batches over medium-high until deeply colored (160°F+). Don't crowd the pot or you'll steam gray meat.",
-      "minutes": 12,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
-      "title": "Bloom the spices",
-      "instruction": "Add vegetables; cook 6–8 minutes. Stir in garlic, chili powder, and paprika 45 seconds until fragrant. Add tomatoes, broth, and beans.",
-      "minutes": 10,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 4,
-      "title": "Simmer until thick",
-      "instruction": "Simmer uncovered 35–45 minutes at a gentle bubble until a spoon dragged through leaves a clear trail. Taste for salt — chili should be bold, not flat.",
-      "minutes": 40,
+      "stepNumber": 2,
+      "title": "Simmer the pot",
+      "instruction": "Add broth, beef back, and pearl barley. Simmer gently 45–60 minutes until beef shreds easily and barley is tender.",
+      "minutes": 55,
       "heatLevel": "medium-low"
     },
     {
-      "stepNumber": 5,
-      "title": "Hold for the hall",
-      "instruction": "Keep on low or in a cambro for late eaters. Topping bar: cheese, onion, jalapeños, sour cream. First bowl is best; stir before each refill.",
+      "stepNumber": 3,
+      "title": "Season and adjust",
+      "instruction": "Taste the broth and add salt and pepper until the beef and barley read clearly — the pot should taste rich, not flat.",
       "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Skim and serve",
+      "instruction": "Skim fat if needed. Beef Barley Soup tastes better after 20 minutes off heat — hold at 180°F for late shifts.",
+      "minutes": 10,
       "heatLevel": "low"
     }
   ],
@@ -148,15 +121,15 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 719,
-    "protein": 64,
-    "carbs": 41,
-    "fats": 35,
+    "calories": 587,
+    "protein": 52,
+    "carbs": 28,
+    "fats": 31,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": false,
+      "under700Calories": true,
       "under30gFat": false,
       "highCarb": false,
       "lowCarb": false,
@@ -172,7 +145,7 @@
   "mobileImage": "/images/mobile/beef-barley-soup.jpg",
   "thumbImage": "/images/thumbs/beef-barley-soup.jpg",
   "railImage": "/images/rails/beef-barley-soup.jpg",
-  "realismScore": 100,
+  "realismScore": 93,
   "firefighterScore": 100,
   "popularityWeight": 3.6,
   "searchTerms": [
@@ -195,6 +168,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-30T23:27:14.534Z",
+  "generatedAt": "2026-06-01T01:40:02.077Z",
   "contentVersion": 2
 }

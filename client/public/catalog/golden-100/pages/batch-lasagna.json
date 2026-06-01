@@ -13,9 +13,9 @@
   "cookTime": 100,
   "prepTime": 35,
   "difficulty": "hard",
-  "calories": 1364,
+  "calories": 1348,
   "protein": 64,
-  "carbs": 33,
+  "carbs": 29,
   "fats": 90,
   "tags": [
     "protein:beef",
@@ -186,9 +186,9 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1364,
+    "calories": 1348,
     "protein": 64,
-    "carbs": 33,
+    "carbs": 29,
     "fats": 90,
     "label": "per serving (hall portion)",
     "source": "calculated",
@@ -233,6 +233,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-30T23:27:14.580Z",
+  "generatedAt": "2026-06-01T01:40:02.133Z",
   "contentVersion": 2
 }

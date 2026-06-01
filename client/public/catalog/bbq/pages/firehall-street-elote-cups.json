@@ -8,12 +8,12 @@
   "category": "bbq_grill_nights",
   "cuisine": "mexican",
   "description": "Corn grills until charred, kernels cut into cups, and topped with epazote crema, queso fresco, Tajín, and crushed totopos at service.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 20,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 189,
+  "calories": 185,
   "protein": 4,
   "carbs": 26,
   "fats": 10,
@@ -39,64 +39,64 @@
   "ingredients": [
     {
       "name": "corn on the cob",
-      "quantity": "12",
+      "quantity": "9.6",
       "unit": "ears",
       "group": "Main"
     },
     {
       "name": "Mexican crema",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "cup",
       "group": "Epazote crema"
     },
     {
       "name": "fresh epazote",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "cup",
       "notes": "chopped",
       "group": "Epazote crema"
     },
     {
       "name": "queso fresco",
-      "quantity": "1.5",
+      "quantity": "1 1/4",
       "unit": "cups",
       "notes": "crumbled",
       "group": "Topping"
     },
     {
       "name": "Tajín seasoning",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp",
       "group": "Topping"
     },
     {
       "name": "crushed totopos",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "cups",
       "group": "Topping"
     },
     {
       "name": "chipotle mayo",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "cup",
       "group": "Topping"
     },
     {
       "name": "fresh cilantro",
-      "quantity": "0.33",
+      "quantity": "1/4",
       "unit": "cup",
       "notes": "chopped",
       "group": "Topping"
     },
     {
       "name": "lime wedges",
-      "quantity": "10",
+      "quantity": "8",
       "unit": "whole",
       "group": "Service"
     },
     {
       "name": "avocado oil",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp",
       "group": "Grill"
     }
@@ -105,7 +105,7 @@
     {
       "stepNumber": 1,
       "title": "Build lime crema",
-      "instruction": "Whisk mayo, crema, and lime juice until smooth. Chill until service. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Whisk mayo, crema, and lime juice until smooth. Chill until service. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Use fresh epazote, queso fresco, Tajín seasoning, crushed totopos as listed — measure each before heat goes on. Use avocado oil as listed — measure each before heat goes on.",
       "minutes": 5,
       "heatLevel": ""
     },
@@ -176,12 +176,25 @@
   "mealPrepNotes": "Grill corn at 425°F, 12–15 minutes. Cut kernels into cups. Hold corn at 170°F wrapped up to 30 minutes. Top with epazote crema and queso at service only.",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 189,
+    "calories": 185,
     "protein": 4,
     "carbs": 26,
     "fats": 10,
     "label": "per serving (hall portion)",
-    "source": "estimated"
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/smoker-catalog/firehall-street-elote-cups.jpg",
   "heroImageAlt": "Epazote Esquites Street Cups — crew-sized BBQ spread with visible smoke and bark",
@@ -209,6 +222,6 @@
     "brisket-style-beef-sandwiches-au-jus"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T02:29:42.537Z",
+  "generatedAt": "2026-05-31T23:32:23.209Z",
   "contentVersion": 2
 }

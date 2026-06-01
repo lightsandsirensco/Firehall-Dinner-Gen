@@ -2,7 +2,7 @@
   "slug": "migas-for-the-crew",
   "title": "Migas for the Crew",
   "subtitle": "Scrambled eggs with crispy tortilla strips, peppers, and queso fresco.",
-  "description": "Adapted from classic Tex-Mex migas tradition for firehall skillet service: corn tortillas cut into strips and fried crisp, folded into soft-scrambled eggs with sautéed peppers, onion, and tomato, finished with queso fresco and salsa.",
+  "description": "Crispy tortilla strips scrambled with eggs, peppers, and cheese — Texas migas scaled for the whole hall with salsa on the side.",
   "filters": [
     "skillets",
     "feed_a_crew",
@@ -88,28 +88,28 @@
     {
       "stepNumber": 3,
       "title": "Fry tortilla strips",
-      "instruction": "Heat oil in a large skillet over medium-high until shimmering. Fry tortilla strips in batches until golden and crisp, about 2 minutes per batch. Drain on paper towels and season lightly with salt. Target 165°F at the thickest part before moving to the next batch. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Heat oil in a large skillet over medium-high until shimmering. Fry tortilla strips in batches until golden and crisp, about 2 minutes per batch. Drain on paper towels and season lightly with salt.",
       "minutes": 8,
       "heatLevel": ""
     },
     {
       "stepNumber": 4,
       "title": "Sauté peppers and onion",
-      "instruction": "Remove all but 2 tablespoons oil from the pan. Sauté poblano and onion over medium-high until softened and lightly charred at the edges, about 5 minutes. Add tomato and cumin; cook 1 minute. Target 165°F at the thickest part before moving to the next batch. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Remove all but 2 tablespoons oil from the pan. Sauté poblano and onion over medium-high until softened and lightly charred at the edges, about 5 minutes. Add tomato and cumin; cook 1 minute.",
       "minutes": 6,
       "heatLevel": ""
     },
     {
       "stepNumber": 5,
       "title": "Scramble eggs into the mix",
-      "instruction": "Beat eggs with salt and pepper. Pour into the skillet over medium-low heat, folding gently with a spatula. When eggs are halfway set, fold in half the tortilla strips so some stay crisp and some soften. Target 165°F at the thickest part before moving to the next batch. Plan about 8 minutes for this step at crew scale.",
+      "instruction": "Beat eggs with salt and pepper. Pour into the skillet over medium-low heat, folding gently with a spatula. When eggs are halfway set, fold in half the tortilla strips so some stay crisp and some soften.",
       "minutes": 8,
       "heatLevel": ""
     },
     {
       "stepNumber": 6,
       "title": "Finish and garnish",
-      "instruction": "Remove from heat while eggs still look glossy. Fold in remaining tortilla strips for crunch. Scatter queso fresco and cilantro over the top. Plan about 3 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Remove from heat while eggs still look glossy. Fold in remaining tortilla strips for crunch. Scatter queso fresco and cilantro over the top.",
       "minutes": 3,
       "heatLevel": ""
     },
@@ -122,17 +122,24 @@
     },
     {
       "stepNumber": 8,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
       "title": "Serve family-style",
-      "instruction": "Serve straight from the skillet with warm salsa and extra tortilla strips on the side. Do not hold more than 5 minutes or crisp strips will steam soft. Target 165°F at the thickest part before moving to the next batch. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Serve straight from the skillet with warm salsa and extra tortilla strips on the side. Do not hold more than 5 minutes or crisp strips will steam soft.",
       "minutes": 2,
       "heatLevel": ""
     }
   ],
   "nutrition": {
-    "calories": 330,
-    "protein": 15,
-    "carbs": 23,
-    "fat": 20,
+    "calories": 442,
+    "protein": 19,
+    "carbs": 38,
+    "fat": 25,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
@@ -140,12 +147,12 @@
       "under700Calories": true,
       "under30gFat": true,
       "highCarb": false,
-      "lowCarb": true,
-      "mealPrepFriendly": false
+      "lowCarb": false,
+      "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": false,
-      "lighterOption": true,
+      "lighterOption": false,
       "performanceMeal": false
     }
   },
@@ -165,12 +172,11 @@
   "heroImage": "/images/breakfast/migas-for-the-crew.jpg",
   "thumbImage": "/images/thumbs/breakfast/migas-for-the-crew.jpg",
   "imageAlt": "Migas skillet with scrambled eggs, crispy tortilla strips, and queso fresco",
-  "publishedAt": "2026-05-30T21:22:29.757Z",
-  "updatedAt": "2026-05-31T12:54:36.783Z",
+  "publishedAt": "2026-05-31T18:33:00.830Z",
+  "updatedAt": "2026-05-31T23:49:25.600Z",
   "readMinutes": 7,
   "seoTitle": "Migas for the Crew | Firehall Breakfast",
-  "mobileImage": "/images/mobile/breakfast/migas-for-the-crew.jpg",
-  "railImage": "/images/rails/breakfast/migas-for-the-crew.jpg",
+  "collectionTier": "firehall_classic",
   "proTips": [
     "Fry tortilla strips first and hold uncovered—covering traps steam and kills crunch.",
     "Use two skillets if feeding ten so eggs finish in one batch without overcooking.",

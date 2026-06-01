@@ -2,7 +2,7 @@
   "slug": "country-fried-steak-eggs",
   "title": "Country Fried Steak and Eggs Breakfast",
   "subtitle": "Pounded cube steak, pepper gravy, and eggs over mashed potatoes.",
-  "description": "Adapted from classic Texas diner chicken-fried steak tradition for a firehall plate breakfast: cube steak pounded thin, breaded and fried crisp, smothered in black pepper gravy and served with eggs and buttery mashed potatoes.",
+  "description": "Crispy country-fried steak with gravy, eggs, and hash browns on a platter. A heavy breakfast for days off or when the crew needs real comfort food.",
   "filters": [
     "feed_a_crew",
     "high_protein",
@@ -89,28 +89,28 @@
     {
       "stepNumber": 3,
       "title": "Prep and bread steaks",
-      "instruction": "Season cube steaks with salt and pepper. Dredge in seasoned flour, dip in buttermilk, then coat again in flour pressing firmly so breading adheres. Rest breaded steaks on a rack 10 minutes so coating sets. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts.",
+      "instruction": "Season cube steaks with salt and pepper. Dredge in seasoned flour, dip in buttermilk, then coat again in flour pressing firmly so breading adheres. Rest breaded steaks on a rack 10 minutes so coating sets.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
       "stepNumber": 4,
       "title": "Fry the steaks",
-      "instruction": "Heat 1/2 inch oil in a large skillet to 350°F. Fry steaks in batches 3–4 minutes per side until deeply golden and internal temperature reaches 145°F for medium. Hold on a rack in a 200°F oven. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Heat 1/2 inch oil in a large skillet to 350°F. Fry steaks in batches 3–4 minutes per side until deeply golden and internal temperature reaches 145°F for medium. Hold on a rack in a 200°F oven.",
       "minutes": 12,
       "heatLevel": ""
     },
     {
       "stepNumber": 5,
       "title": "Make pepper gravy",
-      "instruction": "Pour off all but 1/4 cup drippings. Whisk in flour over medium heat 2 minutes until blonde. Slowly whisk in warm milk, simmer until thick enough to coat a spoon, and finish with cracked black pepper. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Pour off all but 1/4 cup drippings. Whisk in flour over medium heat 2 minutes until blonde. Slowly whisk in warm milk, simmer until thick enough to coat a spoon, and finish with cracked black pepper.",
       "minutes": 8,
       "heatLevel": ""
     },
     {
       "stepNumber": 6,
       "title": "Mash potatoes and fry eggs",
-      "instruction": "Boil potatoes until fork-tender, drain, and mash with butter, salt, and warm milk until smooth. Fry eggs in a clean skillet over medium heat until whites are set (165°F) and yolks are runny. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Boil potatoes until fork-tender, drain, and mash with butter, salt, and warm milk until smooth. Fry eggs in a clean skillet over medium heat until whites are set (165°F) and yolks are runny.",
       "minutes": 10,
       "heatLevel": ""
     },
@@ -123,17 +123,45 @@
     },
     {
       "stepNumber": 8,
-      "title": "Plate and serve",
-      "instruction": "Mound mashed potatoes on each plate, top with a fried steak, ladle pepper gravy generously over the top, and crown with a sunny-side egg. Serve immediately while breading stays crisp. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Portion and open the line",
+      "instruction": "Portion Country Fried Steak and Eggs Breakfast onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Scale for larger halls",
+      "instruction": "When cooking for more than 8 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
       "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
+      "title": "portion and serve",
+      "instruction": "Mound mashed potatoes on each plate, top with a fried steak, ladle pepper gravy generously over the top, and crown with a sunny-side egg. Serve immediately while breading stays crisp.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 12,
+      "title": "Final quality check before service",
+      "instruction": "Walk the line once before opening service for Country Fried Steak and Eggs Breakfast — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
+      "minutes": 4,
       "heatLevel": ""
     }
   ],
   "nutrition": {
-    "calories": 1100,
-    "protein": 64,
+    "calories": 940,
+    "protein": 63,
     "carbs": 78,
-    "fat": 86,
+    "fat": 40,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
@@ -142,7 +170,7 @@
       "under30gFat": false,
       "highCarb": true,
       "lowCarb": false,
-      "mealPrepFriendly": false
+      "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": true,
@@ -166,12 +194,11 @@
   "heroImage": "/images/breakfast/country-fried-steak-eggs.jpg",
   "thumbImage": "/images/thumbs/breakfast/country-fried-steak-eggs.jpg",
   "imageAlt": "Country fried steak with pepper gravy, mashed potatoes, and a fried egg",
-  "publishedAt": "2026-05-30T21:22:29.757Z",
-  "updatedAt": "2026-05-31T12:54:36.768Z",
+  "publishedAt": "2026-05-31T18:33:00.830Z",
+  "updatedAt": "2026-05-31T23:49:25.424Z",
   "readMinutes": 9,
   "seoTitle": "Country Fried Steak and Eggs | Firehall Breakfast",
-  "mobileImage": "/images/mobile/breakfast/country-fried-steak-eggs.jpg",
-  "railImage": "/images/rails/breakfast/country-fried-steak-eggs.jpg",
+  "collectionTier": "firehall_classic",
   "proTips": [
     "Bread all steaks before frying starts so the line does not stall between batches.",
     "Keep mashed potatoes in a covered hotel pan on low with a splash of cream stirred in.",
@@ -188,5 +215,6 @@
     "Instant-read thermometer",
     "Aluminum foil"
   ],
-  "mealPrepNotes": "Prep mise en place before the shift — Country Fried Steak and Eggs Breakfast runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
+  "mealPrepNotes": "Prep mise en place before the shift — Country Fried Steak and Eggs Breakfast runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone.",
+  "heroImageAlt": "Country Fried Steak and Eggs Breakfast — wide family-style firehall platter showing beef, eggs breakfast on a crew prep table"
 }

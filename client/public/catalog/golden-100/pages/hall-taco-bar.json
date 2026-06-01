@@ -13,10 +13,10 @@
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 689,
-  "protein": 50,
-  "carbs": 49,
-  "fats": 33,
+  "calories": 914,
+  "protein": 56,
+  "carbs": 79,
+  "fats": 42,
   "tags": [
     "protein:beef",
     "format:tacos",
@@ -118,17 +118,17 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 689,
-    "protein": 50,
-    "carbs": 49,
-    "fats": 33,
+    "calories": 914,
+    "protein": 56,
+    "carbs": 79,
+    "fats": 42,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": true,
+      "under700Calories": false,
       "under30gFat": false,
-      "highCarb": false,
+      "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": false
     },
@@ -166,6 +166,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-30T23:27:14.498Z",
+  "generatedAt": "2026-06-01T01:40:02.032Z",
   "contentVersion": 2
 }

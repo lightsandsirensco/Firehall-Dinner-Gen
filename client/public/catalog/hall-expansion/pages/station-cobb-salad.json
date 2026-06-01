@@ -8,15 +8,15 @@
   "category": "hall_expansion",
   "cuisine": "american",
   "description": "Grilled chicken, crisp bacon, hard-boiled eggs, avocado, and blue cheese top chopped romaine in rows for a classic Cobb spread. Crews build bowls at the line with ranch or vinaigrette.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 25,
   "prepTime": 40,
   "difficulty": "easy",
-  "calories": 420,
-  "protein": 38,
-  "carbs": 12,
-  "fats": 26,
+  "calories": 577,
+  "protein": 57,
+  "carbs": 4,
+  "fats": 36,
   "tags": [
     "protein:chicken",
     "format:salad",
@@ -39,65 +39,65 @@
   "ingredients": [
     {
       "name": "romaine lettuce hearts",
-      "quantity": "5",
+      "quantity": "4",
       "unit": "heads",
       "notes": "chopped",
       "group": "Base"
     },
     {
       "name": "chicken breast",
-      "quantity": "2.5",
+      "quantity": "2",
       "unit": "lb",
       "group": "Protein"
     },
     {
       "name": "thick-cut bacon",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "lb",
       "group": "Protein"
     },
     {
       "name": "hard-boiled eggs",
-      "quantity": "8",
+      "quantity": "6",
       "unit": "whole",
       "notes": "quartered",
       "group": "Protein"
     },
     {
       "name": "ripe avocados",
-      "quantity": "3",
+      "quantity": "2",
       "unit": "whole",
       "notes": "sliced",
       "group": "Vegetables"
     },
     {
       "name": "cherry tomatoes",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "cups",
       "notes": "halved",
       "group": "Vegetables"
     },
     {
       "name": "crumbled blue cheese",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "cup",
       "group": "Cheese"
     },
     {
       "name": "red wine vinegar",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "cup",
       "group": "Dressing"
     },
     {
       "name": "olive oil",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "cup",
       "group": "Dressing"
     },
     {
       "name": "Dijon mustard",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tbsp",
       "group": "Dressing"
     }
@@ -127,7 +127,7 @@
     {
       "stepNumber": 4,
       "title": "Crisp the bacon",
-      "instruction": "Bake bacon on sheet pans at 400°F until crisp, about 15 minutes. Drain on paper towels and crumble. Target oven/smoker temperature: 400°F.",
+      "instruction": "Bake bacon on sheet pans at 400°F until crisp, about 15 minutes. Drain on paper towels and crumble. Target oven/smoker temperature: 400°F. Target 165°F at the thickest point before moving to the next batch.",
       "minutes": 15,
       "heatLevel": ""
     },
@@ -192,11 +192,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 420,
-    "protein": 38,
-    "carbs": 12,
-    "fats": 26,
-    "label": "~420 cal/serving · 38g protein · 6g fiber (est.)"
+    "calories": 577,
+    "protein": 57,
+    "carbs": 4,
+    "fats": 36,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/hall-expansion/station-cobb-salad.jpg",
   "heroImageAlt": "Station Cobb Salad — crew-sized firehall meal",

@@ -50,7 +50,12 @@ export const HOME = {
   /** Visible homepage hero headline (SEO title stays in metadata). */
   heroHeadline: 'End The "What\'s For Dinner?" Debate.',
   heroSubheadline: "Firehall-tested meals picked in under 30 seconds.",
+  /** Plain-language value prop — visible under hero subhead. */
+  heroActionLine: "300+ curated recipes — pick crew size and get a dinner plan.",
   heroTrustLine: "Built by firefighters. Hall-tested recipes your crew will actually eat.",
+  /** Fixed marketing count for homepage trust strip and stats. */
+  curatedRecipesLabel: "300+ curated recipes",
+  curatedRecipesCount: "300+",
   h1: "Firefighter Meals & Firehall Recipes",
   heroEyebrow: "Firefighter meals · Firehall recipes · Crew-tested",
   eyebrow: "Station kitchen · Crew dinners",

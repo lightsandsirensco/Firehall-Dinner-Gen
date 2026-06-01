@@ -55,10 +55,28 @@ type TrustAuditRow = {
 function parseArgs(argv: string[]) {
   const vision = argv.includes("--vision");
   const collArg = argv.find((a) => a.startsWith("--collection="));
+  const slugsArg = argv.find((a) => a.startsWith("--slugs="));
+  const slugsFileArg = argv.find((a) => a.startsWith("--slugs-file="));
   const collections = collArg
     ? new Set(collArg.replace("--collection=", "").split(",").map((s) => s.trim()) as TrustAuditCollection[])
     : null;
-  return { vision, collections };
+  let slugFilter: Set<string> | null = null;
+  if (slugsArg) {
+    slugFilter = new Set(slugsArg.replace("--slugs=", "").split(",").map((s) => s.trim()).filter(Boolean));
+  } else if (slugsFileArg) {
+    const rel = slugsFileArg.replace("--slugs-file=", "").trim();
+    const abs = path.isAbsolute(rel) ? rel : path.join(process.cwd(), rel);
+    if (fs.existsSync(abs)) {
+      slugFilter = new Set(
+        fs
+          .readFileSync(abs, "utf8")
+          .split(/\r?\n/)
+          .map((s) => s.trim())
+          .filter(Boolean),
+      );
+    }
+  }
+  return { vision, collections, slugFilter };
 }
 
 async function auditTarget(target: TrustAuditTarget, useVision: boolean): Promise<TrustAuditRow> {
@@ -119,27 +137,22 @@ async function auditTarget(target: TrustAuditTarget, useVision: boolean): Promis
       visionPass = vision.pass;
       visionSkipped = vision.skipped === true;
       if (!vision.pass && !vision.skipped) {
-        for (const reason of vision.reasons) {
+        const reasons =
+          vision.reasons.filter((r) => r && r !== "vision_skipped").length > 0
+            ? vision.reasons.filter((r) => r && r !== "vision_skipped")
+            : [
+                vision.proteinOnly ? "protein-only hero — missing sides/carbs/vegetables" : null,
+                !vision.titleIngredientsVisible ? "title ingredients not clearly visible" : null,
+                !vision.primarySidesVisible ? "named sides not clearly visible" : null,
+                !vision.completeMeal ? "incomplete meal — family-style spread not visible" : null,
+                vision.couldBelongToAnotherRecipe ? "image could belong to another recipe" : null,
+              ].filter(Boolean) as string[];
+        if (reasons.length === 0) reasons.push("vision QA failed — image does not match title");
+        for (const reason of reasons) {
           issues.push({
             code: "image_title_mismatch",
             severity: "critical",
-            message: `Vision: ${reason}`,
-            confidence: vision.confidence,
-          });
-        }
-        if (vision.proteinOnly) {
-          issues.push({
-            code: "image_title_mismatch",
-            severity: "critical",
-            message: "Vision: protein-only hero — missing sides/carbs/vegetables",
-            confidence: vision.confidence,
-          });
-        }
-        if (vision.couldBelongToAnotherRecipe) {
-          issues.push({
-            code: "generic_substitute_meal",
-            severity: "critical",
-            message: "Vision: image could belong to another recipe",
+            message: reason.startsWith("Vision:") ? reason : `Vision: ${reason}`,
             confidence: vision.confidence,
           });
         }
@@ -167,8 +180,9 @@ async function auditTarget(target: TrustAuditTarget, useVision: boolean): Promis
 }
 
 async function main(): Promise<void> {
-  const { vision, collections } = parseArgs(process.argv);
-  const targets = loadTrustAuditTargets(collections ?? undefined);
+  const { vision, collections, slugFilter } = parseArgs(process.argv);
+  let targets = loadTrustAuditTargets(collections ?? undefined);
+  if (slugFilter) targets = targets.filter((t) => slugFilter!.has(t.slug));
 
   console.log(`[audit:meal-image-trust] targets=${targets.length} vision=${vision}`);
 

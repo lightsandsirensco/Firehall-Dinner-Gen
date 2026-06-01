@@ -67,125 +67,54 @@
       "quantity": "2",
       "unit": "lb",
       "group": "Toppings"
-    },
-    {
-      "name": "Apple cider vinegar",
-      "quantity": "2",
-      "unit": "tbsp",
-      "group": "Slaw"
-    },
-    {
-      "name": "Kosher salt",
-      "quantity": "1",
-      "unit": "tbsp",
-      "group": "Seasoning"
-    },
-    {
-      "name": "Black pepper",
-      "quantity": "1",
-      "unit": "tsp",
-      "group": "Seasoning"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Rinse and cook the rice",
-      "instruction": "Rinse long-grain rice until water runs clear. Simmer with a 1:1.5 rice-to-water ratio and a pinch of salt 18 minutes until tender. Fluff with a fork and hold covered at 200°F — dry rice won't accept sauce on the line.",
+      "title": "Cook the rice",
+      "instruction": "Rinse rice until water runs clear. Simmer with 1:1.5 rice-to-water ratio and salt 18 minutes; fluff and hold covered at 200°F.",
       "minutes": 20,
       "heatLevel": "medium"
     },
     {
       "stepNumber": 2,
-      "title": "Season the chicken thighs",
-      "instruction": "Pat boneless chicken thighs dry; coat all over with BBQ rub. Let sit 10 minutes while the grill heats — dry skin chars instead of steaming.",
-      "minutes": 10,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 3,
-      "title": "Grill chicken to 165°F",
-      "instruction": "Grill over medium-high 5–7 minutes per side until char marks show and thickest part reads 165°F on an instant-read thermometer. Rest 5 minutes tented with foil — carryover finishes the last degrees.",
+      "title": "Grill the chicken thighs",
+      "instruction": "Season chicken thighs with BBQ rub. Grill over medium-high 5–7 minutes per side until char marks show and thickest part reads 165°F. Rest 5 minutes; slice into strips.",
       "minutes": 18,
       "heatLevel": "medium-high"
     },
     {
-      "stepNumber": 4,
-      "title": "Slice rested chicken",
-      "instruction": "Slice chicken into strips against any grain you see. Hold in a hotel pan with a light glaze of warmed BBQ sauce spooned over — not drowned, or the line goes soggy.",
-      "minutes": 5,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 5,
-      "title": "Dress the slaw",
-      "instruction": "Toss coleslaw mix with a splash of vinegar, salt, and pepper — keep cold on ice. Cold crunch against hot chicken is the bowl's texture contrast.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 6,
-      "title": "Warm the corn",
-      "instruction": "Heat corn kernels in a dry skillet or on the grill 4–5 minutes until lightly charred and steaming. Season with salt; hold beside the rice.",
-      "minutes": 6,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 7,
+      "stepNumber": 3,
       "title": "Warm the BBQ sauce",
-      "instruction": "Warm BBQ sauce in a small pot over low heat — do not boil or sugars scorch. Keep a ladle on the line for crews who want extra smoke on their bowl.",
+      "instruction": "Warm BBQ sauce in a small pot over low heat — do not boil or sugars scorch. Keep a ladle on the line.",
       "minutes": 5,
       "heatLevel": "low"
     },
     {
-      "stepNumber": 8,
-      "title": "Stage the bowl line",
-      "instruction": "Set rice in the first hotel pan, sliced chicken in the second, corn and slaw in separate pans. Hot components closest to the crew; cold slaw at the far end so it stays crisp.",
-      "minutes": 8,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 9,
+      "stepNumber": 4,
       "title": "Build the bowls",
-      "instruction": "Base of rice, sliced BBQ chicken, charred corn, and a pile of slaw on top. Drizzle extra sauce on the side. BBQ Chicken Bowls move fastest when everyone can see all components before they grab a bowl.",
+      "instruction": "Base of rice, sliced BBQ chicken, corn, and a pile of coleslaw on top for crunch. Drizzle extra sauce on the side. BBQ Chicken Bowls move fastest when hot and cold components are in separate pans.",
       "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-cook: turn off direct heat and cover sliced chicken — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
-      "minutes": 5,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 11,
-      "title": "Pack down leftovers safely",
-      "instruction": "Cool sliced chicken and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
-      "minutes": 10,
       "heatLevel": ""
     }
   ],
   "proTips": [
     "Glaze sauce at the end so it doesn't burn on the grill.",
-    "Keep slaw on ice under the counter — warm slaw collapses in minutes.",
-    "Pull chicken at 163°F if holding under foil; verify 165°F before the line opens.",
-    "Keep a backup tray at 200°F for firefighters returning from a run — never serve picked-over pans to late crew.",
+    "Keep slaw on ice under the counter.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts.",
-    "Log hold times on the pan with a grease pencil when tones drop mid-service.",
-    "Spot-check proteins with an instant-read thermometer before reopening the line after a call."
+    "Pull chicken at 160°F and let carryover hit 165°F — dry breast ruins crew morale."
   ],
   "tonightSpread": [
-    "Main: BBQ glazed chicken strips",
-    "Sides: steamed rice, charred corn, crunchy coleslaw",
-    "Condiments: extra BBQ sauce",
-    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
-    "Keep a backup tray at 200°F for firefighters returning from a run."
+    "Set rice or grain in the first pan, main in the second, crunchy toppings last so textures stay distinct.",
+    "Put hot components closest to the crew, cold crunch at the far end of the line.",
+    "Line up BBQ Chicken Bowls on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
   ],
   "leftovers": [
-    "Cool sliced chicken in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
-    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
-    "Reheat rice covered with a splash of water so grains loosen instead of clumping."
+    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
+    "Label trays with date and reheat to 165°F minimum before second shift."
   ],
   "whyCrewsLikeIt": "Built bowls, big flavor, one line. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
   "substitutions": [
@@ -215,7 +144,6 @@
     }
   },
   "heroImage": "/images/golden-100/bbq-chicken-bowls.jpg",
-  "heroImageAlt": "BBQ glazed chicken thigh strips over steamed rice with corn and coleslaw in crew-sized bowls on a firehall prep line",
   "mobileImage": "/images/mobile/bbq-chicken-bowls.jpg",
   "thumbImage": "/images/thumbs/bbq-chicken-bowls.jpg",
   "railImage": "/images/rails/bbq-chicken-bowls.jpg",
@@ -241,6 +169,6 @@
   "sourceName": "Firehall Classics",
   "sourceUrl": "",
   "classicSlug": "bbq-chicken-bowls",
-  "generatedAt": "2026-05-31T13:31:23.383Z",
-  "contentVersion": 4
+  "generatedAt": "2026-06-01T01:40:02.014Z",
+  "contentVersion": 2
 }

@@ -13,10 +13,10 @@
   "cookTime": 15,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 485,
-  "protein": 38,
-  "carbs": 52,
-  "fats": 14,
+  "calories": 860,
+  "protein": 55,
+  "carbs": 66,
+  "fats": 42,
   "tags": [
     "protein:beef",
     "format:stir_fry",
@@ -156,11 +156,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 485,
-    "protein": 38,
-    "carbs": 52,
-    "fats": 14,
-    "label": "~485 cal/serving · 38g protein · 6g fiber (est.)"
+    "calories": 860,
+    "protein": 55,
+    "carbs": 66,
+    "fats": 42,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/lean-beef-broccoli-rice.jpg",
   "mobileImage": "/images/mobile/lean-beef-broccoli-rice.jpg",
@@ -181,6 +195,7 @@
   "relatedSlugs": [
     "korean-beef-rice-bowls"
   ],
-  "generatedAt": "2026-05-31T15:28:14.291Z",
-  "contentVersion": 2
+  "generatedAt": "2026-05-31T23:32:24.495Z",
+  "contentVersion": 2,
+  "heroImageAlt": "Lean Beef and Broccoli Rice — wide family-style firehall platter showing beef, broccoli rice on a crew prep table"
 }

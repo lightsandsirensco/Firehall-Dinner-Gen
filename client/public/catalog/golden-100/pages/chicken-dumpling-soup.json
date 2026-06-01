@@ -13,10 +13,10 @@
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 719,
+  "calories": 578,
   "protein": 64,
   "carbs": 41,
-  "fats": 35,
+  "fats": 16,
   "tags": [
     "protein:chicken",
     "format:soup_chili",
@@ -33,95 +33,98 @@
   ],
   "ingredients": [
     {
-      "name": "Ground beef (80/20)",
-      "quantity": "3.5",
+      "name": "Bone-in chicken thighs",
+      "quantity": "3",
       "unit": "lb",
       "group": "Main"
     },
     {
       "name": "Yellow onion",
-      "quantity": "3",
+      "quantity": "2",
       "unit": "large",
       "group": "Aromatics"
     },
     {
-      "name": "Bell peppers, diced",
+      "name": "Carrots, diced",
       "quantity": "3",
-      "unit": "count",
-      "group": "Aromatics"
-    },
-    {
-      "name": "Garlic cloves, minced",
-      "quantity": "8",
-      "unit": "cloves",
-      "group": "Aromatics"
-    },
-    {
-      "name": "Kidney beans, drained",
-      "quantity": "3",
-      "unit": "cans",
-      "notes": "15 oz",
-      "group": "Main"
-    },
-    {
-      "name": "Crushed tomatoes",
-      "quantity": "2",
-      "unit": "cans",
-      "notes": "28 oz",
-      "group": "Main"
-    },
-    {
-      "name": "Chili powder",
-      "quantity": "3",
-      "unit": "tbsp",
-      "group": "Seasoning"
-    },
-    {
-      "name": "Smoked paprika",
-      "quantity": "2",
-      "unit": "tbsp",
-      "group": "Seasoning"
-    },
-    {
-      "name": "Beef or chicken broth",
-      "quantity": "4",
       "unit": "cups",
-      "group": "Sauce"
+      "group": "Veg"
+    },
+    {
+      "name": "Celery, diced",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Veg"
+    },
+    {
+      "name": "Chicken broth",
+      "quantity": "8",
+      "unit": "cups",
+      "group": "Broth"
+    },
+    {
+      "name": "All-purpose flour",
+      "quantity": "2.5",
+      "unit": "cups",
+      "group": "Dumplings"
+    },
+    {
+      "name": "Baking powder",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Dumplings"
+    },
+    {
+      "name": "Whole milk",
+      "quantity": "1",
+      "unit": "cup",
+      "group": "Dumplings"
+    },
+    {
+      "name": "Large eggs",
+      "quantity": "2",
+      "unit": "",
+      "group": "Dumplings"
+    },
+    {
+      "name": "Unsalted butter",
+      "quantity": "4",
+      "unit": "tbsp",
+      "group": "Dumplings"
+    },
+    {
+      "name": "Fresh parsley, chopped",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Finish"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Dice and open cans",
-      "instruction": "Dice onions and peppers ¼ inch. Drain beans. Open tomatoes. Set out your largest stock pot — chili splatters, so have a lid nearby.",
+      "title": "Sear aromatics",
+      "instruction": "Brown meat in batches; remove. Sweat onion, carrot, celery in the same pot 8 minutes until edges soften.",
       "minutes": 15,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Brown the meat hard",
-      "instruction": "Brown beef in batches over medium-high until deeply colored (160°F+). Don't crowd the pot or you'll steam gray meat.",
-      "minutes": 12,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
-      "title": "Bloom the spices",
-      "instruction": "Add vegetables; cook 6–8 minutes. Stir in garlic, chili powder, and paprika 45 seconds until fragrant. Add tomatoes, broth, and beans.",
-      "minutes": 10,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 4,
-      "title": "Simmer until thick",
-      "instruction": "Simmer uncovered 35–45 minutes at a gentle bubble until a spoon dragged through leaves a clear trail. Taste for salt — chili should be bold, not flat.",
+      "stepNumber": 2,
+      "title": "Simmer the broth",
+      "instruction": "Return chicken to the pot with broth and vegetables. Simmer 35 minutes until chicken is tender; shred meat and return to the pot.",
       "minutes": 40,
       "heatLevel": "medium-low"
     },
     {
-      "stepNumber": 5,
-      "title": "Hold for the hall",
-      "instruction": "Keep on low or in a cambro for late eaters. Topping bar: cheese, onion, jalapeños, sour cream. First bowl is best; stir before each refill.",
+      "stepNumber": 3,
+      "title": "Drop the dumplings",
+      "instruction": "Whisk flour, baking powder, and salt. Cut in butter, then stir in milk and eggs until a thick batter forms. Drop spoonfuls onto simmering broth, cover, and cook 15 minutes without lifting the lid.",
+      "minutes": 18,
+      "heatLevel": "medium-low"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Ladle and garnish",
+      "instruction": "Dumplings should be puffed and cooked through — a skewer should come out clean. Stir in parsley and serve hot from the pot.",
       "minutes": 5,
       "heatLevel": "low"
     }
@@ -150,16 +153,16 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 719,
+    "calories": 578,
     "protein": 64,
     "carbs": 41,
-    "fats": 35,
+    "fats": 16,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": false,
-      "under30gFat": false,
+      "under700Calories": true,
+      "under30gFat": true,
       "highCarb": false,
       "lowCarb": false,
       "mealPrepFriendly": false
@@ -167,14 +170,14 @@
     "badgeCandidates": {
       "highProtein": true,
       "lighterOption": false,
-      "performanceMeal": false
+      "performanceMeal": true
     }
   },
   "heroImage": "/images/golden-100/chicken-dumpling-soup.jpg",
   "mobileImage": "/images/mobile/chicken-dumpling-soup.jpg",
   "thumbImage": "/images/thumbs/chicken-dumpling-soup.jpg",
   "railImage": "/images/rails/chicken-dumpling-soup.jpg",
-  "realismScore": 100,
+  "realismScore": 93,
   "firefighterScore": 100,
   "popularityWeight": 3.6,
   "searchTerms": [
@@ -198,6 +201,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-30T23:27:14.537Z",
+  "generatedAt": "2026-06-01T01:40:02.081Z",
   "contentVersion": 2
 }

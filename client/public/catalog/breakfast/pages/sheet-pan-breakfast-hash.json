@@ -1,8 +1,8 @@
 {
   "slug": "sheet-pan-breakfast-hash",
   "title": "Crispy Honey Chili Eggs",
-  "subtitle": "A practical station breakfast that scales from 4 to 12.",
-  "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+  "subtitle": "Sheet-pan hash with eggs cracked over the top.",
+  "description": "Potatoes, sausage, and peppers roasted on a sheet pan with eggs cracked over the top in the oven. One pan, easy cleanup, feeds ten.",
   "filters": [
     "feed_a_crew"
   ],
@@ -12,8 +12,8 @@
     "easy-cleanup",
     "eggs"
   ],
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "prepTime": 15,
   "cookTime": 30,
   "totalTime": 45,
@@ -21,35 +21,35 @@
   "ingredients": [
     {
       "name": "Yukon gold potatoes",
-      "quantity": "3.5 lb",
+      "quantity": "3",
       "notes": "diced 1/2-inch"
     },
     {
       "name": "large eggs",
-      "quantity": "14"
+      "quantity": "11"
     },
     {
       "name": "breakfast sausage",
-      "quantity": "2 lb",
+      "quantity": "2",
       "notes": "browned and crumbled"
     },
     {
       "name": "yellow onion",
-      "quantity": "1",
+      "quantity": "3/4",
       "notes": "diced"
     },
     {
       "name": "bell peppers",
-      "quantity": "1–2",
+      "quantity": "3/4",
       "notes": "diced"
     },
     {
       "name": "olive oil or bacon fat",
-      "quantity": "2 tbsp"
+      "quantity": "1.6"
     },
     {
       "name": "shredded cheddar",
-      "quantity": "1–2 cups",
+      "quantity": "3/4",
       "notes": "optional finish"
     }
   ],
@@ -57,7 +57,7 @@
     {
       "stepNumber": 1,
       "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Crispy Honey Chili Eggs in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "instruction": "Line up every ingredient for Crispy Honey Chili Eggs in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use olive oil or bacon fat, shredded cheddar as listed — measure each before heat goes on.",
       "minutes": 12,
       "heatLevel": ""
     },
@@ -78,7 +78,7 @@
     {
       "stepNumber": 4,
       "title": "Roast the hash base",
-      "instruction": "Toss potatoes with oil, salt, and pepper. Spread in one layer and roast 15 minutes. Add sausage, onion, and peppers; roast until potatoes are browned and sausage is hot. Bake until the center reaches a safe internal temp (165°F) and edges look set — use a thermometer at the thickest point. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Toss potatoes with oil, salt, and pepper. Spread in one layer and roast 15 minutes. Add sausage, onion, and peppers; roast until potatoes are browned and sausage is hot. Target 165°F at the thickest point before moving to the next batch.",
       "minutes": 18,
       "heatLevel": ""
     },
@@ -112,9 +112,9 @@
     }
   ],
   "nutrition": {
-    "calories": 562,
-    "protein": 25,
-    "carbs": 31,
+    "calories": 446,
+    "protein": 16,
+    "carbs": 14,
     "fat": 37,
     "label": "per serving (hall portion)",
     "source": "calculated",
@@ -123,8 +123,8 @@
       "under700Calories": true,
       "under30gFat": false,
       "highCarb": false,
-      "lowCarb": false,
-      "mealPrepFriendly": false
+      "lowCarb": true,
+      "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": false,
@@ -148,12 +148,11 @@
   "heroImage": "/images/breakfast/sheet-pan-breakfast-hash.jpg",
   "thumbImage": "/images/thumbs/breakfast/sheet-pan-breakfast-hash.jpg",
   "imageAlt": "Warm station-kitchen breakfast: Sheet Pan Breakfast Hash",
-  "publishedAt": "2026-05-30T21:22:29.758Z",
-  "updatedAt": "2026-05-31T12:54:36.791Z",
+  "publishedAt": "2026-05-31T18:33:00.830Z",
+  "updatedAt": "2026-05-31T23:50:25.212Z",
   "readMinutes": 6,
   "seoTitle": "Sheet Pan Breakfast Hash | Firehall Breakfast",
-  "mobileImage": "/images/mobile/breakfast/sheet-pan-breakfast-hash.jpg",
-  "railImage": "/images/rails/breakfast/sheet-pan-breakfast-hash.jpg",
+  "collectionTier": "firehall_classic",
   "proTips": [
     "Assign one cook to the hot surface and one to assembly. Keep the line moving; don’t crowd the griddle.",
     "Set a warm holding zone (oven 200°F or covered hotel pan) so staggered eaters still get a hot plate.",

@@ -8,15 +8,15 @@
   "category": "hall_expansion",
   "cuisine": "american",
   "description": "Store-bought or house-cured corned beef brisket is rinsed, smoked until tender, and finished with a sweet mustard glaze. Slice thick for sandwiches or plate with cabbage and potatoes for a one-tray meal.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 300,
   "prepTime": 15,
   "difficulty": "hard",
-  "calories": 530,
-  "protein": 36,
-  "carbs": 34,
-  "fats": 28,
+  "calories": 1400,
+  "protein": 118,
+  "carbs": 70,
+  "fats": 87,
   "tags": [
     "protein:beef",
     "format:smoker",
@@ -39,32 +39,32 @@
   "ingredients": [
     {
       "name": "corned beef brisket flat",
-      "quantity": "7.5",
+      "quantity": "6",
       "unit": "lb",
       "notes": "about 12 oz raw per firefighter",
       "group": "Main"
     },
     {
       "name": "brown sugar",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "cup",
       "group": "Glaze"
     },
     {
       "name": "whole-grain mustard",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "cup",
       "group": "Glaze"
     },
     {
       "name": "apple cider vinegar",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "group": "Glaze"
     },
     {
       "name": "guinness or dark beer",
-      "quantity": "12",
+      "quantity": "9.6",
       "unit": "oz",
       "notes": "for wrap",
       "group": "Cook"
@@ -78,25 +78,25 @@
     },
     {
       "name": "baby potatoes",
-      "quantity": "4",
+      "quantity": "3.2",
       "unit": "lb",
       "group": "Side"
     },
     {
       "name": "caraway seeds",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tbsp",
       "group": "Side"
     },
     {
       "name": "rye bread",
-      "quantity": "20",
+      "quantity": "17",
       "unit": "slices",
       "group": "Serve"
     },
     {
       "name": "swiss cheese",
-      "quantity": "10",
+      "quantity": "8",
       "unit": "slices",
       "group": "Serve"
     }
@@ -105,7 +105,7 @@
     {
       "stepNumber": 1,
       "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Smoked Corned Beef Brisket in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "instruction": "Line up every ingredient for Smoked Corned Beef Brisket in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use caraway seeds, rye bread, swiss cheese as listed — measure each before heat goes on.",
       "minutes": 12,
       "heatLevel": ""
     },
@@ -212,11 +212,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 530,
-    "protein": 36,
-    "carbs": 34,
-    "fats": 28,
-    "label": "~530 cal/serving · 36g protein · 4g fiber (est.)"
+    "calories": 1400,
+    "protein": 118,
+    "carbs": 70,
+    "fats": 87,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/hall-expansion/smoked-corned-beef.jpg",
   "heroImageAlt": "Smoked Corned Beef Brisket — crew-sized firehall meal",

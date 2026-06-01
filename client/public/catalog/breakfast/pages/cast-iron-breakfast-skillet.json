@@ -1,8 +1,8 @@
 {
   "slug": "cast-iron-breakfast-skillet",
   "title": "Crispy Garlic Sausage",
-  "subtitle": "Cast-iron breakfast built for crispy edges and fast cleanup.",
-  "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+  "subtitle": "Potatoes, sausage, and eggs with crispy cast-iron edges.",
+  "description": "Potatoes par-cooked then crisped in cast iron with sausage, onions, and eggs cracked on top under a lid. The skillet breakfast every hall knows.",
   "filters": [
     "skillets",
     "feed_a_crew"
@@ -73,14 +73,14 @@
     {
       "stepNumber": 3,
       "title": "Par-cook potatoes",
-      "instruction": "Microwave diced potatoes with a splash of water in a covered bowl until just tender (they should still hold shape). This cuts skillet time and saves the crew. Target 165°F at the thickest part before moving to the next batch. Plan about 8 minutes for this step at crew scale. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts.",
+      "instruction": "Microwave diced potatoes with a splash of water in a covered bowl until just tender (they should still hold shape). This cuts skillet time and saves the crew.",
       "minutes": 8,
       "heatLevel": ""
     },
     {
       "stepNumber": 4,
       "title": "Build the crispy base",
-      "instruction": "Heat cast iron over medium-high with oil. Add potatoes in a single layer; don’t stir for 3–4 minutes so you get crust. Toss, then add onion and meat. Cook until browned. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Heat cast iron over medium-high with oil. Add potatoes in a single layer; don’t stir for 3–4 minutes so you get crust. Toss, then add onion and meat. Cook until browned.",
       "minutes": 12,
       "heatLevel": ""
     },
@@ -108,7 +108,7 @@
     {
       "stepNumber": 8,
       "title": "Eggs on top",
-      "instruction": "Crack eggs into wells. Cover the skillet (lid or sheet pan) until whites set and yolks are where you want them. Finish with cheese; cover 60 seconds to melt. Target 165°F at the thickest part before moving to the next batch. Plan about 6 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
+      "instruction": "Crack eggs into wells. Cover the skillet (lid or sheet pan) until whites set and yolks are where you want them. Finish with cheese; cover 60 seconds to melt.",
       "minutes": 6,
       "heatLevel": ""
     }
@@ -150,12 +150,11 @@
   "heroImage": "/images/breakfast/cast-iron-breakfast-skillet.jpg",
   "thumbImage": "/images/thumbs/breakfast/cast-iron-breakfast-skillet.jpg",
   "imageAlt": "Warm station-kitchen breakfast: Cast Iron Breakfast Skillet",
-  "publishedAt": "2026-05-30T21:22:29.758Z",
-  "updatedAt": "2026-05-31T12:54:36.763Z",
+  "publishedAt": "2026-05-31T18:33:00.830Z",
+  "updatedAt": "2026-05-31T23:49:25.370Z",
   "readMinutes": 6,
   "seoTitle": "Cast Iron Breakfast Skillet | Firehall Breakfast",
-  "mobileImage": "/images/mobile/breakfast/cast-iron-breakfast-skillet.jpg",
-  "railImage": "/images/rails/breakfast/cast-iron-breakfast-skillet.jpg",
+  "collectionTier": "firehall_classic",
   "proTips": [
     "Assign one cook to the hot surface and one to assembly. Keep the line moving; don’t crowd the griddle.",
     "Set a warm holding zone (oven 200°F or covered hotel pan) so staggered eaters still get a hot plate.",

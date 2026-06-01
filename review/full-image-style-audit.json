@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-31T12:18:55.125Z",
+  "generatedAt": "2026-06-01T01:33:26.002Z",
   "totals": {
-    "recipes": 233,
-    "pass": 233,
-    "fail": 0
+    "recipes": 228,
+    "pass": 225,
+    "fail": 3
   },
   "rows": [
     {
@@ -36,23 +36,6 @@
       },
       "slugMatch": true,
       "photoCategory": "bbq",
-      "issues": [],
-      "pass": true,
-      "recommendation": "ok"
-    },
-    {
-      "slug": "apple-cinnamon-baked-oatmeal",
-      "title": "Apple Cinnamon Baked Oatmeal",
-      "kind": "breakfast_catalog",
-      "heroImage": "/images/breakfast/apple-cinnamon-baked-oatmeal.jpg",
-      "onDisk": {
-        "hero": true,
-        "thumb": true,
-        "mobile": true,
-        "rail": true
-      },
-      "slugMatch": true,
-      "photoCategory": "breakfast",
       "issues": [],
       "pass": true,
       "recommendation": "ok"
@@ -228,23 +211,6 @@
       "recommendation": "ok"
     },
     {
-      "slug": "big-pot-savory-oats",
-      "title": "Big-Pot Savory Oats",
-      "kind": "breakfast_catalog",
-      "heroImage": "/images/breakfast/big-pot-savory-oats.jpg",
-      "onDisk": {
-        "hero": true,
-        "thumb": true,
-        "mobile": true,
-        "rail": true
-      },
-      "slugMatch": true,
-      "photoCategory": "breakfast",
-      "issues": [],
-      "pass": true,
-      "recommendation": "ok"
-    },
-    {
       "slug": "spiedie-chicken-platter-crew",
       "title": "Binghamton White-Wine Spiedie Tray",
       "kind": "bbq_catalog",
@@ -279,21 +245,34 @@
       "recommendation": "ok"
     },
     {
-      "slug": "cajun-grilled-catfish-crew",
-      "title": "Black Iron Remoulade Catfish Plates",
+      "slug": "cajun-grilled-cod-crew",
+      "title": "Black Iron Remoulade Cod Plates",
       "kind": "bbq_catalog",
-      "heroImage": "/images/smoker-catalog/cajun-grilled-catfish-crew.jpg",
+      "heroImage": "/images/smoker-catalog/cajun-grilled-cod-crew.jpg",
       "onDisk": {
-        "hero": true,
-        "thumb": true,
-        "mobile": true,
-        "rail": true
+        "hero": false,
+        "thumb": false,
+        "mobile": false,
+        "rail": false
       },
       "slugMatch": true,
       "photoCategory": "bbq",
-      "issues": [],
-      "pass": true,
-      "recommendation": "ok"
+      "issues": [
+        {
+          "code": "missing_image_file",
+          "severity": "critical",
+          "message": "hero image file missing — must generate unique firehall kitchen photo",
+          "confidence": 99
+        },
+        {
+          "code": "needs_regeneration",
+          "severity": "critical",
+          "message": "queued for replacement under global firehall kitchen photo standard",
+          "confidence": 90
+        }
+      ],
+      "pass": false,
+      "recommendation": "regenerate"
     },
     {
       "slug": "blackened-cod-taco-night",
@@ -636,21 +615,34 @@
       "recommendation": "ok"
     },
     {
-      "slug": "grilled-halibut-lemon-packets",
-      "title": "Caper-Butter Halibut Foil Packets",
+      "slug": "grilled-cod-lemon-packets",
+      "title": "Caper-Butter Cod Foil Packets",
       "kind": "bbq_catalog",
-      "heroImage": "/images/smoker-catalog/grilled-halibut-lemon-packets.jpg",
+      "heroImage": "/images/smoker-catalog/grilled-cod-lemon-packets.jpg",
       "onDisk": {
-        "hero": true,
-        "thumb": true,
-        "mobile": true,
-        "rail": true
+        "hero": false,
+        "thumb": false,
+        "mobile": false,
+        "rail": false
       },
       "slugMatch": true,
       "photoCategory": "bbq",
-      "issues": [],
-      "pass": true,
-      "recommendation": "ok"
+      "issues": [
+        {
+          "code": "missing_image_file",
+          "severity": "critical",
+          "message": "hero image file missing — must generate unique firehall kitchen photo",
+          "confidence": 99
+        },
+        {
+          "code": "needs_regeneration",
+          "severity": "critical",
+          "message": "queued for replacement under global firehall kitchen photo standard",
+          "confidence": 90
+        }
+      ],
+      "pass": false,
+      "recommendation": "regenerate"
     },
     {
       "slug": "caprese-chicken-bake",
@@ -708,23 +700,6 @@
       "title": "Cast Iron Skirt Steak Sizzlers",
       "kind": "bbq_catalog",
       "heroImage": "/images/smoker-catalog/cast-iron-steak-fajita-sizzlers.jpg",
-      "onDisk": {
-        "hero": true,
-        "thumb": true,
-        "mobile": true,
-        "rail": true
-      },
-      "slugMatch": true,
-      "photoCategory": "bbq",
-      "issues": [],
-      "pass": true,
-      "recommendation": "ok"
-    },
-    {
-      "slug": "garlic-butter-scallop-skewers",
-      "title": "Champagne Tarragon Scallop Skewers",
-      "kind": "bbq_catalog",
-      "heroImage": "/images/smoker-catalog/garlic-butter-scallop-skewers.jpg",
       "onDisk": {
         "hero": true,
         "thumb": true,
@@ -1130,7 +1105,7 @@
     },
     {
       "slug": "crock-barbacoa-chicken",
-      "title": "Crock Barbacoa Chicken",
+      "title": "Crock Barbacoa Chicken With Potato Wedges",
       "kind": "performance_meal",
       "heroImage": "/images/golden-100/crock-barbacoa-chicken.jpg",
       "onDisk": {
@@ -1348,6 +1323,36 @@
       "issues": [],
       "pass": true,
       "recommendation": "ok"
+    },
+    {
+      "slug": "garlic-butter-shrimp-skewers",
+      "title": "Garlic Tarragon Shrimp Skewers",
+      "kind": "bbq_catalog",
+      "heroImage": "/images/smoker-catalog/garlic-butter-shrimp-skewers.jpg",
+      "onDisk": {
+        "hero": false,
+        "thumb": false,
+        "mobile": false,
+        "rail": false
+      },
+      "slugMatch": true,
+      "photoCategory": "bbq",
+      "issues": [
+        {
+          "code": "missing_image_file",
+          "severity": "critical",
+          "message": "hero image file missing — must generate unique firehall kitchen photo",
+          "confidence": 99
+        },
+        {
+          "code": "needs_regeneration",
+          "severity": "critical",
+          "message": "queued for replacement under global firehall kitchen photo standard",
+          "confidence": 90
+        }
+      ],
+      "pass": false,
+      "recommendation": "regenerate"
     },
     {
       "slug": "griddle-smash-sausage-peppers",
@@ -1634,23 +1639,6 @@
       },
       "slugMatch": true,
       "photoCategory": "bbq",
-      "issues": [],
-      "pass": true,
-      "recommendation": "ok"
-    },
-    {
-      "slug": "high-protein-parfaits",
-      "title": "High-Protein Yogurt Parfaits",
-      "kind": "breakfast_catalog",
-      "heroImage": "/images/breakfast/high-protein-parfaits.jpg",
-      "onDisk": {
-        "hero": true,
-        "thumb": true,
-        "mobile": true,
-        "rail": true
-      },
-      "slugMatch": true,
-      "photoCategory": "breakfast",
       "issues": [],
       "pass": true,
       "recommendation": "ok"
@@ -2252,7 +2240,7 @@
     },
     {
       "slug": "mediterranean-baked-fish-tray",
-      "title": "Mediterranean Baked Fish Tray",
+      "title": "Mediterranean Baked Cod Tray",
       "kind": "performance_meal",
       "heroImage": "/images/golden-100/mediterranean-baked-fish-tray.jpg",
       "onDisk": {
@@ -2790,40 +2778,6 @@
       },
       "slugMatch": true,
       "photoCategory": "default",
-      "issues": [],
-      "pass": true,
-      "recommendation": "ok"
-    },
-    {
-      "slug": "protein-french-toast",
-      "title": "Protein French Toast",
-      "kind": "breakfast_catalog",
-      "heroImage": "/images/breakfast/protein-french-toast.jpg",
-      "onDisk": {
-        "hero": true,
-        "thumb": true,
-        "mobile": true,
-        "rail": true
-      },
-      "slugMatch": true,
-      "photoCategory": "breakfast",
-      "issues": [],
-      "pass": true,
-      "recommendation": "ok"
-    },
-    {
-      "slug": "protein-pancake-tray",
-      "title": "Protein Pancake Tray",
-      "kind": "breakfast_catalog",
-      "heroImage": "/images/breakfast/protein-pancake-tray.jpg",
-      "onDisk": {
-        "hero": true,
-        "thumb": true,
-        "mobile": true,
-        "rail": true
-      },
-      "slugMatch": true,
-      "photoCategory": "breakfast",
       "issues": [],
       "pass": true,
       "recommendation": "ok"

@@ -8,15 +8,15 @@
   "category": "hall_expansion",
   "cuisine": "chinese",
   "description": "Pork and shrimp wontons fold by the dozen, poach in rich chicken broth, and serve over springy egg noodles with bok choy and scallions. Clean, comforting, and perfect when crews want soup that feels homemade.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 40,
   "prepTime": 50,
   "difficulty": "medium",
-  "calories": 440,
-  "protein": 28,
-  "carbs": 48,
-  "fats": 14,
+  "calories": 437,
+  "protein": 19,
+  "carbs": 73,
+  "fats": 7,
   "tags": [
     "protein:pork",
     "format:bowl",
@@ -39,72 +39,72 @@
   "ingredients": [
     {
       "name": "ground pork",
-      "quantity": "1.5",
+      "quantity": "1 1/4",
       "unit": "lb",
       "group": "Wonton"
     },
     {
       "name": "shrimp",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "lb",
       "notes": "finely chopped",
       "group": "Wonton"
     },
     {
       "name": "wonton wrappers",
-      "quantity": "60",
+      "quantity": "48",
       "unit": "wrappers",
       "group": "Wonton"
     },
     {
       "name": "green onions",
-      "quantity": "4",
+      "quantity": "3",
       "unit": "whole",
       "notes": "minced",
       "group": "Wonton"
     },
     {
       "name": "sesame oil",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tbsp",
       "group": "Wonton"
     },
     {
       "name": "soy sauce",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "group": "Wonton"
     },
     {
       "name": "chicken broth",
-      "quantity": "8",
+      "quantity": "6.4",
       "unit": "cups",
       "group": "Broth"
     },
     {
       "name": "ginger",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "inches",
       "notes": "sliced",
       "group": "Broth"
     },
     {
       "name": "egg noodles",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "lb",
       "notes": "fresh if possible",
       "group": "Noodles"
     },
     {
       "name": "baby bok choy",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "lb",
       "notes": "halved",
       "group": "Vegetable"
     },
     {
       "name": "white pepper",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tsp",
       "group": "Seasoning"
     }
@@ -127,7 +127,7 @@
     {
       "stepNumber": 3,
       "title": "Make wonton filling",
-      "instruction": "Mix pork, shrimp, green onions, sesame oil, soy sauce, and white pepper until sticky. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Mix pork, shrimp, green onions, sesame oil, soy sauce, and white pepper until sticky. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F with a 3-minute rest at the thickest point before moving to the next batch.",
       "minutes": 15,
       "heatLevel": ""
     },
@@ -141,7 +141,7 @@
     {
       "stepNumber": 5,
       "title": "Simmer broth",
-      "instruction": "Simmer chicken broth with ginger 20 minutes. Season with soy and white pepper to balance. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Simmer chicken broth with ginger 20 minutes. Season with soy and white pepper to balance. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F with a 3-minute rest at the thickest point before moving to the next batch.",
       "minutes": 20,
       "heatLevel": ""
     },
@@ -199,11 +199,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 440,
-    "protein": 28,
-    "carbs": 48,
-    "fats": 14,
-    "label": "~440 cal/serving · 28g protein · 2g fiber (est.)"
+    "calories": 437,
+    "protein": 19,
+    "carbs": 73,
+    "fats": 7,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/hall-expansion/wonton-noodle-soup-crew.jpg",
   "heroImageAlt": "Wonton Noodle Soup for the Crew — crew-sized firehall meal",

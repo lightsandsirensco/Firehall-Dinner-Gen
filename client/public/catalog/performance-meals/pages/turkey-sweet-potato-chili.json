@@ -13,10 +13,10 @@
   "cookTime": 300,
   "prepTime": 25,
   "difficulty": "easy",
-  "calories": 355,
-  "protein": 32,
-  "carbs": 42,
-  "fats": 8,
+  "calories": 367,
+  "protein": 35,
+  "carbs": 25,
+  "fats": 12,
   "tags": [
     "protein:turkey",
     "format:slow_cooker",
@@ -103,35 +103,71 @@
   "steps": [
     {
       "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Turkey Sweet Potato Chili in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch turkey. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
       "title": "Brown turkey and aromatics",
       "instruction": "Brown turkey with onion and bell pepper in a skillet 10–12 minutes until turkey is crumbly and vegetables soften with lightly golden edges.",
       "minutes": 12,
       "heatLevel": "medium-high"
     },
     {
-      "stepNumber": 2,
+      "stepNumber": 4,
       "title": "Bloom spices",
-      "instruction": "Add garlic, chili powder, cumin, and paprika. Cook 2 minutes until spices smell toasted and coat the turkey evenly.",
+      "instruction": "Add garlic, chili powder, cumin, and paprika. Cook 2 minutes until spices smell toasted and coat the turkey evenly. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
       "minutes": 2,
       "heatLevel": ""
     },
     {
-      "stepNumber": 3,
+      "stepNumber": 5,
       "title": "Transfer to crock",
-      "instruction": "Scrape mixture into slow cooker. Add sweet potato, beans, tomatoes, broth, and salt. Stir until combined and potatoes submerged.",
+      "instruction": "Scrape mixture into slow cooker. Add sweet potato, beans, tomatoes, broth, and salt. Stir until combined and potatoes submerged. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 6,
       "title": "Slow cook until tender",
-      "instruction": "Cook on low 5–6 hours until sweet potato pierces easily with a fork but still holds cube shape, not falling apart.",
+      "instruction": "Cook on low 5–6 hours until sweet potato pierces easily with a fork but still holds cube shape, not falling apart. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 8,
       "heatLevel": "low"
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Portion and open the line",
+      "instruction": "Portion Turkey Sweet Potato Chili onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
       "title": "Adjust and serve",
-      "instruction": "Taste and adjust salt. Chili should be thick enough to mound on a spoon without running off immediately.",
+      "instruction": "Taste and adjust salt. Chili should be thick enough to mound on a spoon without running off immediately. Plan about 3 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 3,
       "heatLevel": ""
     }
@@ -154,11 +190,25 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 355,
-    "protein": 32,
-    "carbs": 42,
-    "fats": 8,
-    "label": "~355 cal/serving · 32g protein · 11g fiber (est.)"
+    "calories": 367,
+    "protein": 35,
+    "carbs": 25,
+    "fats": 12,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": true,
+      "performanceMeal": true
+    }
   },
   "heroImage": "/images/golden-100/turkey-sweet-potato-chili.jpg",
   "mobileImage": "/images/mobile/turkey-sweet-potato-chili.jpg",
@@ -183,6 +233,7 @@
     "turkey-taco-skillet",
     "turkey-lettuce-wrap-night"
   ],
-  "generatedAt": "2026-05-31T15:28:14.291Z",
-  "contentVersion": 2
+  "generatedAt": "2026-05-31T23:32:24.495Z",
+  "contentVersion": 2,
+  "heroImageAlt": "Turkey Sweet Potato Chili — wide family-style firehall platter showing turkey, sweet potato on a crew prep table"
 }

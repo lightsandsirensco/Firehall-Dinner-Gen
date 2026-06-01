@@ -125,10 +125,58 @@ export function trackExploreRecipeClick(input: { slug: string; title: string }):
   });
 }
 
-export function trackSearch(term: string, resultCount?: number): void {
+export function trackSearch(term: string, resultCount?: number, source?: string): void {
   trackProductEvent("search", {
     search_term: term.slice(0, 120),
     ...(resultCount != null ? { result_count: resultCount } : {}),
+    ...(source ? { source } : {}),
+  });
+}
+
+export function trackHallVoteCreate(input: { voteId: string; optionCount: number }): void {
+  trackProductEvent("hall_vote_create", {
+    vote_id: input.voteId,
+    option_count: input.optionCount,
+  });
+}
+
+export function trackHallVoteShare(input: { voteId: string; action: "copy" | "qr" }): void {
+  trackProductEvent("hall_vote_share", {
+    vote_id: input.voteId,
+    action: input.action,
+  });
+}
+
+export function trackHallVoteCast(input: {
+  voteId: string;
+  optionId: number;
+  optionName: string;
+}): void {
+  trackProductEvent("hall_vote_cast", {
+    vote_id: input.voteId,
+    option_id: input.optionId,
+    option_name: input.optionName.slice(0, 120),
+  });
+}
+
+export function trackShoppingListOpen(input: { recipeTitle: string; generatorType: string }): void {
+  trackProductEvent("shopping_list_open", {
+    recipe_title: input.recipeTitle.slice(0, 120),
+    generator_type: input.generatorType,
+  });
+}
+
+export function trackShoppingListAction(input: {
+  recipeTitle: string;
+  generatorType: string;
+  action: "copy" | "print" | "email";
+  status?: "success" | "error";
+}): void {
+  trackProductEvent("shopping_list_action", {
+    recipe_title: input.recipeTitle.slice(0, 120),
+    generator_type: input.generatorType,
+    action: input.action,
+    ...(input.status ? { status: input.status } : {}),
   });
 }
 

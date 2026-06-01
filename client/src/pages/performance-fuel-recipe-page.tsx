@@ -1,8 +1,13 @@
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { Link, useRoute } from "wouter";
 import { useQuery } from "@tanstack/react-query";
-import { Clock, Loader2, Users } from "lucide-react";
+import { Clock, Loader2, Users, List } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
+import { Button } from "@/components/ui/button";
+import { CrewSizePicker } from "@/components/crew-size-picker";
+import { ShoppingListModal } from "@/components/shopping-list-modal";
+import { useCrewScaling } from "@/hooks/use-crew-scaling";
+import { buildShoppingListFromCatalogIngredients } from "@/lib/shopping-list";
 import { getSavedCount } from "@/lib/saved-meals";
 import { fetchPerformanceRecipePage } from "@/lib/fuel-recipe-api";
 import { SeoBreadcrumbs } from "@/components/seo/breadcrumbs";
@@ -25,6 +30,7 @@ export default function PerformanceFuelRecipePage() {
   const favCount = useMemo(() => getSavedCount(), []);
   const origin = getSiteOrigin();
   const [measurementSystem] = useMeasurementSystem();
+  const [shoppingOpen, setShoppingOpen] = useState(false);
 
   const { data: page, isLoading, isError } = useQuery({
     queryKey: ["performance-fuel-page", slug],
@@ -62,6 +68,15 @@ export default function PerformanceFuelRecipePage() {
           : [],
       [origin, page],
     ),
+  );
+
+  const { crewSize, setCrewSize, scaledIngredients, displayCookTime } = useCrewScaling(page);
+  const shoppingList = useMemo(
+    () =>
+      scaledIngredients.length
+        ? buildShoppingListFromCatalogIngredients(scaledIngredients, { recipeTitle: page?.title })
+        : null,
+    [scaledIngredients, page?.title],
   );
 
   if (!slug || isError) {
@@ -108,19 +123,31 @@ export default function PerformanceFuelRecipePage() {
         <div className="mt-4 flex flex-wrap gap-4 text-sm text-muted-foreground">
           <span className="inline-flex items-center gap-1.5">
             <Clock className="w-4 h-4" aria-hidden />
-            {page.cookTime} min
+            {displayCookTime || page.cookTime} min
           </span>
           <span className="inline-flex items-center gap-1.5">
             <Users className="w-4 h-4" aria-hidden />
-            Crew {page.crewSize}
+            Crew {crewSize}
           </span>
         </div>
 
+        <CrewSizePicker
+          crewSize={crewSize}
+          onChange={setCrewSize}
+          prominent
+          className="mt-4"
+        />
+
         <RecipeMeasurementBar className="mt-4">
-          <p className="text-sm text-muted-foreground">
-            Crew size:{" "}
-            <span className="font-medium text-foreground">{page.crewSize} firefighters</span>
-          </p>
+          <Button
+            variant="outline"
+            className="min-h-11 gap-2"
+            onClick={() => setShoppingOpen(true)}
+            disabled={!shoppingList}
+          >
+            <List className="w-4 h-4" aria-hidden />
+            Shopping list ({crewSize} crew)
+          </Button>
         </RecipeMeasurementBar>
 
         <div className="mt-6 aspect-[16/10] rounded-2xl overflow-hidden ring-1 ring-border/20">
@@ -144,7 +171,7 @@ export default function PerformanceFuelRecipePage() {
             Ingredients
           </h2>
           <ul className="mt-3 space-y-2 text-[15px]">
-            {page.ingredients.map((ing, i) => (
+            {scaledIngredients.map((ing, i) => (
               <li key={i}>
                 {formatIngredientAmount(ing.quantity, ing.unit, measurementSystem)}{" "}
                 {ing.name}
@@ -174,6 +201,15 @@ export default function PerformanceFuelRecipePage() {
           </Link>
         </p>
       </main>
+      {shoppingList && (
+        <ShoppingListModal
+          open={shoppingOpen}
+          onOpenChange={setShoppingOpen}
+          shoppingList={shoppingList}
+          recipeTitle={page.title}
+          generatorType="meal"
+        />
+      )}
     </div>
   );
 }

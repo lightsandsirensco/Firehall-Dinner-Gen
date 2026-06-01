@@ -1,85 +1,197 @@
 {
-  "generatedAt": "2026-05-31T18:08:10.472Z",
+  "generatedAt": "2026-06-01T01:08:19.153Z",
   "results": [
     {
-      "slug": "herb-baked-salmon-tray",
-      "title": "Herb-Crusted Baked Salmon Tray",
-      "reasonFailed": "Vision: The image shows only salmon and asparagus, missing the required complete meal context. | Vision: The optional sides (farro or brown rice pilaf) and cucumber-dill yogurt sauce are absent.",
+      "slug": "smash-burgers",
+      "title": "Double Smash Burgers with Caramelized Onions & Dirty Sauce",
+      "reasonFailed": "Vision: Image does not clearly show dirty sauce, which is a title-required ingredient. | Vision: Image shows fries and pickles but lacks explicit visibility of dirty sauce.",
       "replacementGenerated": true,
       "qaPass": true,
       "qaNotes": "composite=7.5"
     },
     {
-      "slug": "lean-turkey-bean-chili",
-      "title": "Lean Turkey and Bean Chili",
-      "reasonFailed": "Vision: Image does not show cornbread squares, which are an optional side. | Vision: Image does not present a complete meal context as required by the title. | Vision: The image could belong to another recipe as it lacks the broader meal context. | Vision: image could belong to another recipe",
+      "slug": "ny-strip-herb-butter",
+      "title": "Grilled NY Strip with Herb Butter",
+      "reasonFailed": "trust audit failure",
       "replacementGenerated": true,
-      "qaPass": true,
+      "qaPass": false,
+      "qaNotes": "Image does not show herb butter as a visible component.; Image shows a complete meal but lacks the required title ingredient."
+    },
+    {
+      "slug": "grilled-corn-cotija",
+      "title": "Grilled Street Corn with Cotija",
+      "reasonFailed": "trust audit failure",
+      "replacementGenerated": true,
+      "qaPass": false,
       "qaNotes": "composite=7.5"
     },
     {
-      "slug": "baked-turkey-meatball-marinara",
-      "title": "Baked Turkey Meatball Marinara",
-      "reasonFailed": "Vision: Image shows protein only (turkey meatballs) without any visible sides or carbs. | Vision: No optional sides (spaghetti or green beans) are present. | Vision: protein-only hero — missing sides/carbs/vegetables",
+      "slug": "mac-and-cheese-bake",
+      "title": "Baked Mac and Cheese",
+      "reasonFailed": "trust audit failure",
       "replacementGenerated": true,
-      "qaPass": true,
+      "qaPass": false,
+      "qaNotes": "Image does not show a complete meal as required by the title.; While cheese and macaroni are visible, the meal lacks additional components that would make it a complete meal."
+    },
+    {
+      "slug": "sausage-peppers-onions",
+      "title": "Sausage Peppers and Onions",
+      "reasonFailed": "trust audit failure",
+      "replacementGenerated": true,
+      "qaPass": false,
+      "qaNotes": "The image does not show the required complete meal context as it lacks the hoagie rolls and marinara sauce visibly integrated with the sausage, peppers, and onions."
+    },
+    {
+      "slug": "chicken-dumpling-soup",
+      "title": "Chicken and Dumplings",
+      "reasonFailed": "trust audit failure",
+      "replacementGenerated": true,
+      "qaPass": false,
+      "qaNotes": "Image shows dumplings but does not match the protein listed in the recipe (ground beef) as it appears to contain chicken.; The visible ingredients do not align with the title ingredients, indicating a potential mismatch."
+    },
+    {
+      "slug": "pulled-pork-mac",
+      "title": "Pulled Pork Mac and Cheese",
+      "reasonFailed": "trust audit failure",
+      "replacementGenerated": true,
+      "qaPass": false,
       "qaNotes": "composite=7.5"
     },
     {
-      "slug": "cottage-cheese-protein-pasta",
-      "title": "Cottage Cheese Protein Pasta Bake",
-      "reasonFailed": "Vision: Image does not clearly show cottage cheese or any visible protein matching the title. | Vision: The visible ingredients do not match the title ingredients. | Vision: The dish appears to be a different type of pasta dish, potentially with different components. | Vision: image could belong to another recipe",
+      "slug": "big-chili",
+      "title": "Hall-Sized Beef and Bean Chili",
+      "reasonFailed": "trust audit failure",
       "replacementGenerated": true,
-      "qaPass": true,
+      "qaPass": false,
+      "qaNotes": "Image does not show any named sides or components that would complete the meal.; The image primarily focuses on the chili without additional sides or context."
+    },
+    {
+      "slug": "biscuits-gravy",
+      "title": "Biscuits and Gravy",
+      "reasonFailed": "trust audit failure",
+      "replacementGenerated": true,
+      "qaPass": false,
       "qaNotes": "composite=7.5"
     },
     {
       "slug": "smoky-lentil-kale-soup",
       "title": "Smoky Lentil and Kale Soup",
-      "reasonFailed": "Vision: Image does not show the complete meal context as required. | Vision: Crusty whole-grain bread and optional toppings are absent. | Vision: The image primarily focuses on the soup without visible sides.",
+      "reasonFailed": "trust audit failure",
+      "replacementGenerated": true,
+      "qaPass": true,
+      "qaNotes": "composite=7.5"
+    },
+    {
+      "slug": "smoked-meatloaf",
+      "title": "Smoked Meatloaf with Glaze",
+      "reasonFailed": "trust audit failure",
+      "replacementGenerated": true,
+      "qaPass": true,
+      "qaNotes": "composite=7.5"
+    },
+    {
+      "slug": "cajun-chicken-rice-skillet",
+      "title": "Cajun Chicken and Rice Skillet",
+      "reasonFailed": "trust audit failure",
       "replacementGenerated": true,
       "qaPass": false,
-      "qaNotes": "The image shows a soup but does not clearly display the required kale soup as the title ingredient.; The image includes crusty whole-grain bread, which is optional, but the meal is not presented as a complete meal.; The soup appears to be missing some visible ingredients like green lentils and fire-roasted diced tomatoes."
+      "qaNotes": "Image shows protein only when recipe title includes sides or multiple components.; Missing visible ingredients like rice and vegetables."
     },
     {
-      "slug": "crock-barbacoa-chicken",
-      "title": "Crock Barbacoa Chicken With Potato Wedges",
-      "reasonFailed": "Vision: Potato wedges are missing from the image. | Vision: Image shows corn and tomato salad instead of the required sides. | Vision: The meal does not align with the title's specified components. | Vision: image could belong to another recipe",
-      "replacementGenerated": true,
-      "qaPass": true,
-      "qaNotes": "composite=7.5"
-    },
-    {
-      "slug": "honey-lime-chicken-tray",
-      "title": "Honey Lime Chicken Tray",
-      "reasonFailed": "Vision: Image shows chicken but does not match the title ingredient of bone-in chicken thighs. | Vision: Visible sides do not include required ingredients like cilantro-lime rice or black beans. | Vision: The meal context does not align with the specified recipe components. | Vision: image could belong to another recipe",
+      "slug": "pepper-steak-onions",
+      "title": "Pepper Steak with Onions",
+      "reasonFailed": "trust audit failure",
       "replacementGenerated": true,
       "qaPass": false,
-      "qaNotes": "Missing visible sides (cilantro-lime rice and black beans with cumin); Image does not present a complete meal context"
+      "qaNotes": "Image shows protein (steak) and vegetables (peppers, onions) but does not clearly show rice as a component.; While broccoli is visible, it is not a named side in the title."
     },
     {
-      "slug": "turkey-sweet-potato-chili",
-      "title": "Turkey Sweet Potato Chili",
-      "reasonFailed": "Vision: Image does not show any sides or additional components like cornbread, Greek yogurt, or hot sauce. | Vision: The meal is presented in a tight bowl format without wider family-style framing.",
+      "slug": "mostaccioli-sausage-bake",
+      "title": "Baked Mostaccioli with Sausage",
+      "reasonFailed": "trust audit failure",
       "replacementGenerated": true,
-      "qaPass": true,
+      "qaPass": false,
       "qaNotes": "composite=7.5"
     },
     {
-      "slug": "mediterranean-baked-fish-tray",
-      "title": "Mediterranean Baked Fish Tray",
-      "reasonFailed": "Vision: Missing visible sides or components as required by the title. | Vision: Image does not show a complete meal context.",
+      "slug": "rigatoni-meat-sauce-batch",
+      "title": "Rigatoni with Meat Sauce",
+      "reasonFailed": "trust audit failure",
       "replacementGenerated": true,
-      "qaPass": true,
-      "qaNotes": "composite=7.5"
+      "qaPass": false,
+      "qaNotes": "Image shows rigatoni with meat sauce, but does not clearly show roasted zucchini as an optional side.; While the main dish is present, the absence of the optional side affects the completeness of the meal."
     },
     {
-      "slug": "greek-lemon-chicken-potatoes",
-      "title": "Greek Lemon Chicken and Potatoes",
-      "reasonFailed": "Vision: Image does not show a complete meal as it lacks the optional sides (horiatiki salad and warm pita bread). | Vision: While the potatoes are visible, the absence of the salad and pita bread means it does not fulfill the requirement for a complete meal.",
+      "slug": "warm-spinach-chicken-salad",
+      "title": "Warm Spinach Chicken Salad",
+      "reasonFailed": "trust audit failure",
       "replacementGenerated": true,
-      "qaPass": true,
-      "qaNotes": "composite=7.5"
+      "qaPass": false,
+      "qaNotes": "Image shows roasted sweet potato wedges, but the visible ingredients do not match the title's required components.; The image could reasonably belong to a different recipe due to the presence of ingredients not listed in the title."
+    },
+    {
+      "slug": "country-fried-steak-eggs",
+      "title": "Country Fried Steak and Eggs Breakfast",
+      "reasonFailed": "trust audit failure",
+      "replacementGenerated": true,
+      "qaPass": false,
+      "qaNotes": "Image shows bacon and macaroni and cheese, which are not listed in the recipe ingredients.; The meal does not clearly represent the title 'Country Fried Steak and Eggs Breakfast' as it lacks Yukon gold potatoes."
+    },
+    {
+      "slug": "hall-sausage-biscuits-gravy",
+      "title": "Hall Sausage Biscuits & Gravy",
+      "reasonFailed": "trust audit failure",
+      "replacementGenerated": true,
+      "qaPass": false,
+      "qaNotes": "Image shows bacon and potatoes, which are not listed in the recipe title or ingredients.; Gravy is present, but the meal does not align with the title's focus on sausage biscuits and gravy."
+    },
+    {
+      "slug": "ham-cheddar-egg-bake",
+      "title": "Ham & Cheddar Egg Bake",
+      "reasonFailed": "trust audit failure",
+      "replacementGenerated": true,
+      "qaPass": false,
+      "qaNotes": "Image does not show all required components (e.g., turkey sausage or lean pork sausage, onion, baby spinach, loaf day-old bread).; The meal does not appear complete as it lacks visible sides or components that align with the title."
+    },
+    {
+      "slug": "ham-pepper-skillet",
+      "title": "Ham & Pepper Breakfast Skillet",
+      "reasonFailed": "trust audit failure",
+      "replacementGenerated": true,
+      "qaPass": false,
+      "qaNotes": "Image shows bacon instead of breakfast sausage or diced ham.; No visible Yukon gold potatoes or onion.; Lacks a complete meal context with multiple components."
+    },
+    {
+      "slug": "johnnycakes-with-syrup",
+      "title": "Johnnycakes with Maple Syrup",
+      "reasonFailed": "trust audit failure",
+      "replacementGenerated": true,
+      "qaPass": false,
+      "qaNotes": "Image shows bacon and eggs, which are not part of the title or ingredient list.; Maple syrup is present, but the meal does not align with the title's focus on Johnnycakes."
+    },
+    {
+      "slug": "sausage-egg-cheese-sandwiches",
+      "title": "Sausage Egg & Cheese Sandwiches",
+      "reasonFailed": "trust audit failure",
+      "replacementGenerated": true,
+      "qaPass": false,
+      "qaNotes": "Missing visible sides or components as required by the title.; Image shows only sandwiches without additional components."
+    },
+    {
+      "slug": "scrapple-and-eggs-skillet",
+      "title": "Scrapple and Eggs Skillet",
+      "reasonFailed": "trust audit failure",
+      "replacementGenerated": true,
+      "qaPass": false,
+      "qaNotes": "Image shows potatoes and bacon, which are not listed in the ingredients.; Scrapple is not clearly visible in the image."
+    },
+    {
+      "slug": "strawberry-spinach",
+      "title": "Strawberry Spinach Smoothie",
+      "reasonFailed": "trust audit failure",
+      "replacementGenerated": true,
+      "qaPass": false,
+      "qaNotes": "Image does not show a complete meal as required by the title.; No visible primary sides or components other than the smoothie."
     }
   ]
 }

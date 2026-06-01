@@ -8,15 +8,15 @@
   "category": "hall_expansion",
   "cuisine": "japanese",
   "description": "Chicken broth simmers with aromatics, then finishes with red and white miso for a savory bowl base. Serve with ramen noodles, shredded chicken, seared tofu, bean sprouts, corn, and soft eggs.",
-  "crewSize": 9,
-  "baseServings": 9,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 90,
   "prepTime": 35,
   "difficulty": "medium",
-  "calories": 460,
-  "protein": 34,
-  "carbs": 48,
-  "fats": 14,
+  "calories": 390,
+  "protein": 58,
+  "carbs": 9,
+  "fats": 12,
   "tags": [
     "protein:chicken",
     "format:bowl",
@@ -39,32 +39,32 @@
   "ingredients": [
     {
       "name": "chicken thighs",
-      "quantity": "3",
+      "quantity": "2.7",
       "unit": "lb",
       "notes": "boneless",
       "group": "Protein"
     },
     {
       "name": "chicken broth",
-      "quantity": "8",
+      "quantity": "7.1",
       "unit": "cups",
       "group": "Broth"
     },
     {
       "name": "white miso paste",
-      "quantity": "0.33",
+      "quantity": "1/4",
       "unit": "cup",
       "group": "Broth"
     },
     {
       "name": "red miso paste",
-      "quantity": "2",
+      "quantity": "1.8",
       "unit": "tbsp",
       "group": "Broth"
     },
     {
       "name": "ginger",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "inches",
       "notes": "sliced",
       "group": "Broth"
@@ -78,32 +78,32 @@
     },
     {
       "name": "firm tofu",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "blocks",
       "notes": "cubed and seared",
       "group": "Topping"
     },
     {
       "name": "ramen noodles",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "lb",
       "group": "Noodles"
     },
     {
       "name": "bean sprouts",
-      "quantity": "3",
+      "quantity": "2.7",
       "unit": "cups",
       "group": "Topping"
     },
     {
       "name": "corn kernels",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "cups",
       "group": "Topping"
     },
     {
       "name": "soft-boiled eggs",
-      "quantity": "8",
+      "quantity": "7",
       "unit": "eggs",
       "notes": "halved",
       "group": "Topping"
@@ -120,7 +120,7 @@
     {
       "stepNumber": 1,
       "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Miso Ramen Bar in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "instruction": "Line up every ingredient for Miso Ramen Bar in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use green onions as listed — measure each before heat goes on.",
       "minutes": 12,
       "heatLevel": ""
     },
@@ -134,7 +134,7 @@
     {
       "stepNumber": 3,
       "title": "Simmer chicken broth",
-      "instruction": "Poach chicken thighs in broth with ginger and garlic 25 minutes until cooked through. Remove chicken, shred, and reserve. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
+      "instruction": "Poach chicken thighs in broth with ginger and garlic 25 minutes until cooked through. Remove chicken, shred, and reserve. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Target 165°F at the thickest point before moving to the next batch.",
       "minutes": 25,
       "heatLevel": ""
     },
@@ -155,7 +155,7 @@
     {
       "stepNumber": 6,
       "title": "Set the bar",
-      "instruction": "Line up sprouts, corn, eggs, scallions, tofu, and chicken in hotel pans. Keep broth hot in a large pot. Plan about 15 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Line up sprouts, corn, eggs, scallions, tofu, and chicken in hotel pans. Keep broth hot in a large pot. Plan about 15 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
       "minutes": 15,
       "heatLevel": ""
     },
@@ -206,11 +206,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 460,
-    "protein": 34,
-    "carbs": 48,
-    "fats": 14,
-    "label": "~460 cal/serving · 34g protein · 3g fiber (est.)"
+    "calories": 390,
+    "protein": 58,
+    "carbs": 9,
+    "fats": 12,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": true,
+      "performanceMeal": true
+    }
   },
   "heroImage": "/images/hall-expansion/miso-ramen-bar.jpg",
   "heroImageAlt": "Miso Ramen Bar — crew-sized firehall meal",

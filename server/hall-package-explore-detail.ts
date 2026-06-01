@@ -7,6 +7,7 @@ import {
   CURATED_HALL_PACKAGES,
 } from "../shared/curated-hall-packages.js";
 import { getClassicHallMeal, resolveClassicHeroImage } from "../shared/classic-hall-meals.js";
+import { isApprovedCatalogSlug } from "../shared/hall-catalog/gate.js";
 import type {
   ExploreDetailLookupHints,
   ExploreRecipeDetailPayload,
@@ -77,5 +78,6 @@ export function buildExploreDetailFromHallPackage(
     _fromCurated: true,
     _curatedRecipeId: `curated:${slug}`,
     _publisherName: "Firehall Classics",
+    _catalogSlug: isApprovedCatalogSlug(slug) ? slug : undefined,
   };
 }

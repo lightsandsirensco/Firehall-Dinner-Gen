@@ -1,8 +1,8 @@
 {
   "slug": "turkey-sausage-burritos",
   "title": "Turkey Sausage Breakfast Burritos",
-  "subtitle": "Big-batch burritos that hold on the line and reheat clean.",
-  "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+  "subtitle": "Leaner burritos that still feel like a real hall breakfast.",
+  "description": "Turkey sausage, potatoes, and eggs in warm tortillas — leaner burritos that still taste like a real hall breakfast, not diet food.",
   "filters": [
     "healthy_breakfasts",
     "high_protein"
@@ -90,28 +90,28 @@
     {
       "stepNumber": 3,
       "title": "Crisp the potatoes",
-      "instruction": "Heat a large skillet or griddle over medium-high. Add hash browns in an even layer; press with a spatula. Let them sit until browned, flip in sections, and season with salt and pepper. Move to a warm tray. Cook until char marks are visible and the thickest piece reads 165°F on an instant-read thermometer. Plan about 12 minutes for this step at crew scale.",
+      "instruction": "Heat a large skillet or griddle over medium-high. Add hash browns in an even layer; press with a spatula. Let them sit until browned, flip in sections, and season with salt and pepper. Move to a warm tray.",
       "minutes": 12,
       "heatLevel": ""
     },
     {
       "stepNumber": 4,
       "title": "Brown the meat + veg",
-      "instruction": "In the same pan, brown sausage/chorizo. Add onion and peppers; cook until softened. Drain excess fat if needed so burritos don’t get greasy. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "In the same pan, brown sausage/chorizo. Add onion and peppers; cook until softened. Drain excess fat if needed so burritos don’t get greasy.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 5,
       "title": "Soft-scramble the eggs",
-      "instruction": "Lower heat to medium. Add a touch of butter, then the eggs. Stir gently until just set (slightly glossy). Fold in cheese off heat so it melts without overcooking. Plan about 6 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Lower heat to medium. Add a touch of butter, then the eggs. Stir gently until just set (slightly glossy). Fold in cheese off heat so it melts without overcooking.",
       "minutes": 6,
       "heatLevel": ""
     },
     {
       "stepNumber": 6,
       "title": "Build and wrap for the line",
-      "instruction": "Warm tortillas briefly. Add potatoes, meat/veg, eggs, and a spoon of salsa. Roll tight: fold sides, then roll forward. Hold wrapped burritos seam-side down on a warm sheet pan. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Warm tortillas briefly. Add potatoes, meat/veg, eggs, and a spoon of salsa. Roll tight: fold sides, then roll forward. Hold wrapped burritos seam-side down on a warm sheet pan.",
       "minutes": 10,
       "heatLevel": ""
     },
@@ -124,8 +124,15 @@
     },
     {
       "stepNumber": 8,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
       "title": "Serve + hold",
-      "instruction": "Keep burritos warm in a 200°F oven (uncovered for crispy tortillas; covered for softer). If you’re feeding in waves, build half, serve, then build the rest. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Keep burritos warm in a 200°F oven (uncovered for crispy tortillas; covered for softer). If you’re feeding in waves, build half, serve, then build the rest.",
       "minutes": 0,
       "heatLevel": ""
     }
@@ -167,12 +174,11 @@
   "heroImage": "/images/breakfast/turkey-sausage-burritos.jpg",
   "thumbImage": "/images/thumbs/breakfast/turkey-sausage-burritos.jpg",
   "imageAlt": "Warm station-kitchen breakfast: Turkey Sausage Breakfast Burritos",
-  "publishedAt": "2026-05-30T21:22:29.758Z",
-  "updatedAt": "2026-05-31T12:54:36.798Z",
+  "publishedAt": "2026-05-31T18:33:00.830Z",
+  "updatedAt": "2026-05-31T23:49:25.793Z",
   "readMinutes": 7,
   "seoTitle": "Turkey Sausage Breakfast Burritos | Firehall Breakfast",
-  "mobileImage": "/images/mobile/breakfast/turkey-sausage-burritos.jpg",
-  "railImage": "/images/rails/breakfast/turkey-sausage-burritos.jpg",
+  "collectionTier": "healthier_hall",
   "proTips": [
     "Assign one cook to the hot surface and one to assembly. Keep the line moving; don’t crowd the griddle.",
     "Set a warm holding zone (oven 200°F or covered hotel pan) so staggered eaters still get a hot plate.",

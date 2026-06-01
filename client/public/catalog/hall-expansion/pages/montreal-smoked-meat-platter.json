@@ -8,15 +8,15 @@
   "category": "hall_expansion",
   "cuisine": "canadian",
   "description": "Beef brisket gets a Montreal-style coriander-and-pepper cure, slow-roasts until fork-tender, then steams and slices paper-thin for a classic smoked meat platter. Serve stacked on rye with yellow mustard, dill pickles, and coleslaw.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 300,
   "prepTime": 45,
   "difficulty": "medium",
-  "calories": 520,
-  "protein": 42,
-  "carbs": 38,
-  "fats": 22,
+  "calories": 878,
+  "protein": 78,
+  "carbs": 35,
+  "fats": 49,
   "tags": [
     "protein:beef",
     "format:platter",
@@ -39,71 +39,71 @@
   "ingredients": [
     {
       "name": "beef brisket flat",
-      "quantity": "6",
+      "quantity": "4.8",
       "unit": "lb",
       "notes": "trimmed",
       "group": "Main"
     },
     {
       "name": "kosher salt",
-      "quantity": "0.33",
+      "quantity": "1/4",
       "unit": "cup",
       "group": "Cure"
     },
     {
       "name": "coriander seeds",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp",
       "notes": "toasted and cracked",
       "group": "Cure"
     },
     {
       "name": "black peppercorns",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "notes": "cracked",
       "group": "Cure"
     },
     {
       "name": "garlic powder",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tbsp",
       "group": "Cure"
     },
     {
       "name": "brown sugar",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "group": "Cure"
     },
     {
       "name": "beef broth",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "cups",
       "notes": "for steaming",
       "group": "Service"
     },
     {
       "name": "rye bread",
-      "quantity": "20",
+      "quantity": "17",
       "unit": "slices",
       "group": "Service"
     },
     {
       "name": "yellow mustard",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "cup",
       "group": "Service"
     },
     {
       "name": "dill pickle spears",
-      "quantity": "20",
+      "quantity": "16",
       "unit": "spears",
       "group": "Service"
     },
     {
       "name": "coleslaw",
-      "quantity": "4",
+      "quantity": "3.2",
       "unit": "cups",
       "notes": "prepared or quick-made",
       "group": "Service"
@@ -113,7 +113,7 @@
     {
       "stepNumber": 1,
       "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Montreal Smoked Meat Platter in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "instruction": "Line up every ingredient for Montreal Smoked Meat Platter in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use black peppercorns, rye bread as listed — measure each before heat goes on.",
       "minutes": 12,
       "heatLevel": ""
     },
@@ -213,11 +213,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 520,
-    "protein": 42,
-    "carbs": 38,
-    "fats": 22,
-    "label": "~520 cal/serving · 42g protein · 3g fiber (est.)"
+    "calories": 878,
+    "protein": 78,
+    "carbs": 35,
+    "fats": 49,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/hall-expansion/montreal-smoked-meat-platter.jpg",
   "heroImageAlt": "Montreal Smoked Meat Platter — crew-sized firehall meal",

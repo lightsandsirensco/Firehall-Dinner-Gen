@@ -21,7 +21,7 @@ const ROOT = process.cwd();
 const FIX = process.argv.includes("--fix");
 const REPORT_PATH = path.join(ROOT, "review", "recipe-nutrition-audit-report.md");
 
-type CatalogKind = "golden" | "performance" | "hall-expansion" | "breakfast" | "smoothie";
+type CatalogKind = "golden" | "performance" | "hall-expansion" | "breakfast" | "smoothie" | "bbq";
 
 const CATALOG_DIRS: Array<{ kind: CatalogKind; dir: string; mealType: "dinner" | "breakfast" | "smoothie" }> = [
   { kind: "golden", dir: "client/public/catalog/golden-100/pages", mealType: "dinner" },
@@ -29,6 +29,7 @@ const CATALOG_DIRS: Array<{ kind: CatalogKind; dir: string; mealType: "dinner" |
   { kind: "hall-expansion", dir: "client/public/catalog/hall-expansion/pages", mealType: "dinner" },
   { kind: "breakfast", dir: "client/public/catalog/breakfast/pages", mealType: "breakfast" },
   { kind: "smoothie", dir: "client/public/catalog/smoothies/pages", mealType: "smoothie" },
+  { kind: "bbq", dir: "client/public/catalog/bbq/pages", mealType: "dinner" },
 ];
 
 interface AuditRow {

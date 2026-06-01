@@ -2,7 +2,7 @@
   "slug": "irish-breakfast-fry-up",
   "title": "Irish Breakfast Fry-Up",
   "subtitle": "Bacon, sausage, black pudding, eggs, and soda bread on one plate.",
-  "description": "Adapted from classic full Irish breakfast tradition for firehall griddle service: back bacon, pork sausages, black pudding, grilled tomato, sautéed mushrooms, fried eggs, and soda bread fried in butter for eight hearty plates.",
+  "description": "Bacon, sausage, eggs, beans, tomatoes, and toast on a full English-Irish spread. Weekend breakfast when the hall has time to cook everything at once.",
   "filters": [
     "feed_a_crew",
     "high_protein",
@@ -88,21 +88,21 @@
     {
       "stepNumber": 3,
       "title": "Cook sausages and pudding",
-      "instruction": "Brown sausages in a large skillet over medium heat, turning until internal temperature reaches 160°F, about 12 minutes. Add black pudding slices last 4 minutes— they fall apart if overcooked. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Brown sausages in a large skillet over medium heat, turning until internal temperature reaches 160°F, about 12 minutes. Add black pudding slices last 4 minutes— they fall apart if overcooked.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
       "stepNumber": 4,
       "title": "Fry bacon and tomatoes",
-      "instruction": "In a second pan, fry back bacon until edges curl and fat renders. Add tomato halves cut-side down and cook until charred. Hold meats warm on a tray covered loosely with foil. Target 165°F at the thickest part before moving to the next batch. Plan about 10 minutes for this step at crew scale. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts.",
+      "instruction": "In a second pan, fry back bacon until edges curl and fat renders. Add tomato halves cut-side down and cook until charred. Hold meats warm on a tray covered loosely with foil. Target 165°F at the thickest point before moving to the next batch.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 5,
       "title": "Sauté mushrooms",
-      "instruction": "Sauté mushrooms in butter over high heat without crowding until deeply browned and moisture evaporates. Season with salt and pepper; hold warm. Target 165°F at the thickest part before moving to the next batch. Plan about 8 minutes for this step at crew scale. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts.",
+      "instruction": "Sauté mushrooms in butter over high heat without crowding until deeply browned and moisture evaporates. Season with salt and pepper; hold warm.",
       "minutes": 8,
       "heatLevel": ""
     },
@@ -122,17 +122,45 @@
     },
     {
       "stepNumber": 8,
-      "title": "Fry eggs and plate",
-      "instruction": "Fry eggs in clean butter over medium until whites are set (165°F) and yolks are runny. Build each plate with sausage, pudding, bacon, tomato, mushrooms, bread, and an egg. Serve immediately. Plan about 8 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Portion and open the line",
+      "instruction": "Portion Irish Breakfast Fry-Up onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
       "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Scale for larger halls",
+      "instruction": "When cooking for more than 8 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
+      "title": "Fry eggs and plate",
+      "instruction": "Fry eggs in clean butter over medium until whites are set (165°F) and yolks are runny. Build each plate with sausage, pudding, bacon, tomato, mushrooms, bread, and an egg. Serve immediately.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 12,
+      "title": "Final quality check before service",
+      "instruction": "Walk the line once before opening service for Irish Breakfast Fry-Up — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
+      "minutes": 4,
       "heatLevel": ""
     }
   ],
   "nutrition": {
-    "calories": 1100,
-    "protein": 67,
-    "carbs": 21,
-    "fat": 90,
+    "calories": 828,
+    "protein": 53,
+    "carbs": 19,
+    "fat": 59,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
@@ -141,7 +169,7 @@
       "under30gFat": false,
       "highCarb": false,
       "lowCarb": true,
-      "mealPrepFriendly": false
+      "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": true,
@@ -165,12 +193,11 @@
   "heroImage": "/images/breakfast/irish-breakfast-fry-up.jpg",
   "thumbImage": "/images/thumbs/breakfast/irish-breakfast-fry-up.jpg",
   "imageAlt": "Full Irish breakfast fry-up with bacon, sausage, black pudding, and fried eggs",
-  "publishedAt": "2026-05-30T21:22:29.757Z",
-  "updatedAt": "2026-05-31T12:54:36.779Z",
+  "publishedAt": "2026-05-31T18:33:00.830Z",
+  "updatedAt": "2026-05-31T23:50:25.052Z",
   "readMinutes": 9,
   "seoTitle": "Irish Breakfast Fry-Up | Firehall Breakfast",
-  "mobileImage": "/images/mobile/breakfast/irish-breakfast-fry-up.jpg",
-  "railImage": "/images/rails/breakfast/irish-breakfast-fry-up.jpg",
+  "collectionTier": "firehall_classic",
   "proTips": [
     "Run two skillets in parallel—one for meats, one for veg and eggs—to hit eight plates together.",
     "Add black pudding last; it crumbles if it sits on high heat too long.",

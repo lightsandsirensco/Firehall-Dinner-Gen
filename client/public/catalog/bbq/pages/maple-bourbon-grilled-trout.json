@@ -8,15 +8,15 @@
   "category": "bbq_grill_nights",
   "cuisine": "american",
   "description": "Whole butterflied rainbow trout brush with maple-bourbon glaze, grill in baskets until skin crisps and flesh reads 145°F, and finish with dill and lemon.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 16,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 80,
-  "protein": 0,
-  "carbs": 5,
-  "fats": 5,
+  "calories": 423,
+  "protein": 38,
+  "carbs": 6,
+  "fats": 26,
   "tags": [
     "protein:seafood",
     "format:river_fish",
@@ -39,38 +39,38 @@
   "ingredients": [
     {
       "name": "whole rainbow trout",
-      "quantity": "10",
+      "quantity": "8",
       "unit": "pieces",
       "notes": "butterflied, about 5 lb total",
       "group": "Main"
     },
     {
       "name": "bourbon",
-      "quantity": "0.33",
+      "quantity": "1/4",
       "unit": "cup",
       "group": "Glaze"
     },
     {
       "name": "maple syrup",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp",
       "group": "Glaze"
     },
     {
       "name": "whole-grain mustard",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "group": "Glaze"
     },
     {
       "name": "fresh thyme",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "group": "Glaze"
     },
     {
       "name": "pecans",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "cup",
       "notes": "toasted and chopped",
       "group": "Finish"
@@ -84,20 +84,20 @@
     },
     {
       "name": "fresh sage",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tbsp",
       "notes": "chopped",
       "group": "Finish"
     },
     {
       "name": "brown butter",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "cup",
       "group": "Finish"
     },
     {
       "name": "Maldon salt",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tsp",
       "group": "Seasoning"
     }
@@ -106,7 +106,7 @@
     {
       "stepNumber": 1,
       "title": "Build maple-bourbon glaze",
-      "instruction": "Simmer maple syrup, bourbon, mustard, soy, and garlic until slightly thickened. Cool before brushing. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Simmer maple syrup, bourbon, mustard, soy, and garlic until slightly thickened. Cool before brushing. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Use fresh thyme, pecans, shallots, fresh sage as listed — measure each before heat goes on.",
       "minutes": 10,
       "heatLevel": ""
     },
@@ -120,7 +120,7 @@
     {
       "stepNumber": 3,
       "title": "Preheat grill grates",
-      "instruction": "Preheat grill to medium, 375°F. Oil fish basket well. Plan about 8 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Preheat grill to medium, 375°F. Oil fish basket well. Plan about 8 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F at the thickest point before moving to the next batch.",
       "minutes": 8,
       "heatLevel": "medium"
     },
@@ -177,12 +177,25 @@
   "mealPrepNotes": "Pat trout dry. Grill medium 375°F in fish baskets 6–8 minutes per side. Hold covered at 140°F up to 12 minutes max. Glaze in last 2 minutes only.",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 80,
-    "protein": 0,
-    "carbs": 5,
-    "fats": 5,
+    "calories": 423,
+    "protein": 38,
+    "carbs": 6,
+    "fats": 26,
     "label": "per serving (hall portion)",
-    "source": "estimated"
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/smoker-catalog/maple-bourbon-grilled-trout.jpg",
   "heroImageAlt": "Pecan Bourbon Whole Trout Board — crew-sized BBQ spread with visible smoke and bark",
@@ -210,6 +223,6 @@
     "brisket-style-beef-sandwiches-au-jus"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T02:29:42.536Z",
+  "generatedAt": "2026-05-31T23:32:23.206Z",
   "contentVersion": 2
 }

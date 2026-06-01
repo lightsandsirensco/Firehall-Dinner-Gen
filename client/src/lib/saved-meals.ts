@@ -38,8 +38,12 @@ export function isMealSaved(recipe: ClientRecipeResponse): boolean {
   return getSavedMeals().some((m) => m.id === id);
 }
 
+export function isCatalogMealSaved(slug: string): boolean {
+  return getSavedMeals().some((m) => m.id === `catalog:${slug}`);
+}
+
 export function saveMeal(recipe: ClientRecipeResponse): { saved: boolean; duplicate: boolean } {
-  const id = generateId(recipe);
+  const id = recipe._slug ? `catalog:${recipe._slug}` : generateId(recipe);
   const existing = getSavedMeals();
 
   if (existing.some((m) => m.id === id)) {
@@ -64,4 +68,21 @@ export function removeMeal(id: string): void {
   const updated = existing.filter((m) => m.id !== id);
   localStorage.setItem(STORAGE_KEY, JSON.stringify(updated));
   window.dispatchEvent(new Event("favorites-changed"));
+}
+
+export function exportSavedMealsJson(): string {
+  return JSON.stringify(getSavedMeals(), null, 2);
+}
+
+export function downloadSavedMealsExport(): void {
+  const meals = getSavedMeals();
+  if (meals.length === 0) return;
+
+  const blob = new Blob([exportSavedMealsJson()], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+  const anchor = document.createElement("a");
+  anchor.href = url;
+  anchor.download = `firehall-saved-meals-${new Date().toISOString().slice(0, 10)}.json`;
+  anchor.click();
+  URL.revokeObjectURL(url);
 }

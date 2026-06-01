@@ -9,6 +9,7 @@ import {
   hasImageTitleMismatch,
   buildRequiredVisibleSidesPromptLine,
 } from "../shared/curated-image-governance/title-primary-side-rules.js";
+import { normalizeSidePairingTitle } from "../shared/curated-image-governance/title-side-pairing-governance.js";
 
 const barbacoaReq = extractTitleVisualRequirements("Crock Barbacoa Chicken With Potato Wedges");
 assert.ok(barbacoaReq.primarySides.some((s) => /potato|wedge/i.test(s)), "potato wedges extracted");
@@ -78,5 +79,25 @@ assert.ok(hasImageTitleMismatch(macFail), "sandwich without mac fails");
 const prompt = buildRequiredVisibleSidesPromptLine("Pulled Pork Mac and Cheese");
 assert.match(prompt, /mac and cheese/i);
 assert.match(prompt, /clearly visible/i);
+
+const shepherdNormalized = normalizeSidePairingTitle("Shepherd's Pie", "Quinoa", "Greek Salad");
+assert.equal(shepherdNormalized, "Shepherd's Pie with Greek Salad");
+
+const shepherdFail = auditTitlePrimarySideAlignment({
+  slug: "shepherds-pie",
+  title: "Shepherd's Pie with Greek Salad",
+  heroPath: "/images/golden-100/shepherds-pie.jpg",
+  heroAlt: "single bowl of mashed potatoes",
+});
+assert.ok(hasImageTitleMismatch(shepherdFail), "shepherd pie without salad cues fails");
+
+const shepherdPass = auditTitlePrimarySideAlignment({
+  slug: "shepherds-pie",
+  title: "Shepherd's Pie with Greek Salad",
+  heroPath: "/images/golden-100/shepherds-pie.jpg",
+  heroAlt:
+    "Shepherd's Pie with Greek Salad — large casserole with browned mashed potato topping and a bowl of Greek salad on a firehall table",
+});
+assert.equal(hasImageTitleMismatch(shepherdPass), false, "shepherd pie with salad alt passes");
 
 console.log("[test-title-side-image-rules] OK");

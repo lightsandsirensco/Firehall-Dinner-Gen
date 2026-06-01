@@ -8,15 +8,15 @@
   "category": "hall_expansion",
   "cuisine": "american",
   "description": "A long sandwich board offers sliced turkey, ham, roast beef, three cheeses, and spreads with sub rolls and condiments. Crew assembles foot-long style sandwiches or half subs depending on appetite.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 10,
   "prepTime": 35,
   "difficulty": "easy",
-  "calories": 480,
-  "protein": 28,
-  "carbs": 42,
-  "fats": 22,
+  "calories": 649,
+  "protein": 49,
+  "carbs": 3,
+  "fats": 48,
   "tags": [
     "protein:mixed",
     "format:bar_line",
@@ -39,64 +39,64 @@
   "ingredients": [
     {
       "name": "sliced turkey breast",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "lb",
       "group": "Meat"
     },
     {
       "name": "sliced ham",
-      "quantity": "1.5",
+      "quantity": "1 1/4",
       "unit": "lb",
       "group": "Meat"
     },
     {
       "name": "sliced roast beef",
-      "quantity": "1.5",
+      "quantity": "1 1/4",
       "unit": "lb",
       "group": "Meat"
     },
     {
       "name": "provolone cheese",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "lb",
       "notes": "sliced",
       "group": "Cheese"
     },
     {
       "name": "cheddar cheese",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "lb",
       "notes": "sliced",
       "group": "Cheese"
     },
     {
       "name": "Swiss cheese",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "lb",
       "notes": "sliced",
       "group": "Cheese"
     },
     {
       "name": "sub rolls",
-      "quantity": "12",
+      "quantity": "10",
       "unit": "whole",
       "group": "Bread"
     },
     {
       "name": "mayonnaise",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "cup",
       "group": "Spreads"
     },
     {
       "name": "mustard assortment",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "cup",
       "group": "Spreads"
     },
     {
       "name": "lettuce and tomato",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "tray each",
       "notes": "prepped",
       "group": "Produce"
@@ -106,7 +106,7 @@
     {
       "stepNumber": 1,
       "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Sandwich Board Night in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "instruction": "Line up every ingredient for Sandwich Board Night in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use mayonnaise as listed — measure each before heat goes on.",
       "minutes": 12,
       "heatLevel": ""
     },
@@ -120,7 +120,7 @@
     {
       "stepNumber": 3,
       "title": "Slice and arrange proteins",
-      "instruction": "Fan sliced turkey, ham, and roast beef in separate rows on the board or in hotel pans. Fold rather than stack flat so slices lift easily without tearing.",
+      "instruction": "Fan sliced turkey, ham, and roast beef in separate rows on the board or in hotel pans. Fold rather than stack flat so slices lift easily without tearing. Target 165°F at the thickest point before moving to the next batch.",
       "minutes": 15,
       "heatLevel": ""
     },
@@ -192,11 +192,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 480,
-    "protein": 28,
-    "carbs": 42,
-    "fats": 22,
-    "label": "~480 cal/serving · 28g protein · 3g fiber (est.)"
+    "calories": 649,
+    "protein": 49,
+    "carbs": 3,
+    "fats": 48,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/hall-expansion/sandwich-board-night.jpg",
   "heroImageAlt": "Sandwich Board Night — crew-sized firehall meal",

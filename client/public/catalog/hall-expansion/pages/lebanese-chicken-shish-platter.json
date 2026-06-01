@@ -13,10 +13,10 @@
   "cookTime": 15,
   "prepTime": 35,
   "difficulty": "medium",
-  "calories": 420,
-  "protein": 40,
-  "carbs": 32,
-  "fats": 16,
+  "calories": 884,
+  "protein": 78,
+  "carbs": 39,
+  "fats": 45,
   "tags": [
     "protein:chicken",
     "format:skewer",
@@ -136,7 +136,7 @@
     {
       "stepNumber": 3,
       "title": "Marinate chicken",
-      "instruction": "Mix lemon juice, olive oil, yogurt, minced garlic, paprika, salt, and pepper. Coat chicken and marinate at least 2 hours. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Mix lemon juice, olive oil, yogurt, minced garlic, paprika, salt, and pepper. Coat chicken and marinate at least 2 hours. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
       "minutes": 15,
       "heatLevel": ""
     },
@@ -201,11 +201,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 420,
-    "protein": 40,
-    "carbs": 32,
-    "fats": 16,
-    "label": "~420 cal/serving · 40g protein · 3g fiber (est.)"
+    "calories": 884,
+    "protein": 78,
+    "carbs": 39,
+    "fats": 45,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/hall-expansion/lebanese-chicken-shish-platter.jpg",
   "heroImageAlt": "Lebanese Chicken Shish Platter — crew-sized firehall meal",

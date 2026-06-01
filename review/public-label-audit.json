@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-05-31T12:18:56.404Z",
+  "generatedAt": "2026-06-01T01:33:27.648Z",
   "totals": {
-    "recipes": 233,
-    "pass": 233
+    "recipes": 228,
+    "pass": 228
   },
   "rows": [
     {
@@ -16,15 +16,6 @@
       "slug": "andouille-po-boy-rolls-crew",
       "catalogBadge": "Firehall Meals Catalog",
       "traitBadges": [],
-      "pass": true,
-      "forbidden": []
-    },
-    {
-      "slug": "apple-cinnamon-baked-oatmeal",
-      "catalogBadge": "Firehall Meals Catalog",
-      "traitBadges": [
-        "Crew Favorite"
-      ],
       "pass": true,
       "forbidden": []
     },
@@ -113,15 +104,6 @@
       "forbidden": []
     },
     {
-      "slug": "big-pot-savory-oats",
-      "catalogBadge": "Firehall Meals Catalog",
-      "traitBadges": [
-        "Crew Favorite"
-      ],
-      "pass": true,
-      "forbidden": []
-    },
-    {
       "slug": "spiedie-chicken-platter-crew",
       "catalogBadge": "Firehall Meals Catalog",
       "traitBadges": [],
@@ -139,7 +121,7 @@
       "forbidden": []
     },
     {
-      "slug": "cajun-grilled-catfish-crew",
+      "slug": "cajun-grilled-cod-crew",
       "catalogBadge": "Firehall Meals Catalog",
       "traitBadges": [],
       "pass": true,
@@ -315,7 +297,7 @@
       "forbidden": []
     },
     {
-      "slug": "grilled-halibut-lemon-packets",
+      "slug": "grilled-cod-lemon-packets",
       "catalogBadge": "Firehall Meals Catalog",
       "traitBadges": [],
       "pass": true,
@@ -348,13 +330,6 @@
     },
     {
       "slug": "cast-iron-steak-fajita-sizzlers",
-      "catalogBadge": "Firehall Meals Catalog",
-      "traitBadges": [],
-      "pass": true,
-      "forbidden": []
-    },
-    {
-      "slug": "garlic-butter-scallop-skewers",
       "catalogBadge": "Firehall Meals Catalog",
       "traitBadges": [],
       "pass": true,
@@ -650,6 +625,13 @@
       "forbidden": []
     },
     {
+      "slug": "garlic-butter-shrimp-skewers",
+      "catalogBadge": "Firehall Meals Catalog",
+      "traitBadges": [],
+      "pass": true,
+      "forbidden": []
+    },
+    {
       "slug": "griddle-smash-sausage-peppers",
       "catalogBadge": "Firehall Meals Catalog",
       "traitBadges": [],
@@ -777,15 +759,6 @@
       "slug": "hickory-turkey-legs",
       "catalogBadge": "Firehall Meals Catalog",
       "traitBadges": [],
-      "pass": true,
-      "forbidden": []
-    },
-    {
-      "slug": "high-protein-parfaits",
-      "catalogBadge": "Firehall Meals Catalog",
-      "traitBadges": [
-        "Quick Shift Meal"
-      ],
       "pass": true,
       "forbidden": []
     },
@@ -1313,24 +1286,6 @@
       "slug": "pretzel-bite-platter",
       "catalogBadge": "Firehall Meals Catalog",
       "traitBadges": [],
-      "pass": true,
-      "forbidden": []
-    },
-    {
-      "slug": "protein-french-toast",
-      "catalogBadge": "Firehall Meals Catalog",
-      "traitBadges": [
-        "Crew Favorite"
-      ],
-      "pass": true,
-      "forbidden": []
-    },
-    {
-      "slug": "protein-pancake-tray",
-      "catalogBadge": "Firehall Meals Catalog",
-      "traitBadges": [
-        "Crew Favorite"
-      ],
       "pass": true,
       "forbidden": []
     },

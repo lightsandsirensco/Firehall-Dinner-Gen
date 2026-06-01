@@ -23,6 +23,10 @@ export function validateNutritionPerServing(
       issues.push({ code: "missing", field, message: `Missing ${field}` });
     } else if (v < 0) {
       issues.push({ code: "negative", field, message: `Negative ${field}: ${v}` });
+    } else if (v === 0 && field === "calories") {
+      issues.push({ code: "missing", field, message: "Zero calories (invalid placeholder)" });
+    } else if (v === 0 && field === "protein" && context?.mealType !== "smoothie") {
+      issues.push({ code: "missing", field, message: "Zero protein (invalid placeholder)" });
     }
   }
 

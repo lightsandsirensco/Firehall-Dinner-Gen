@@ -5,8 +5,11 @@ import {
   smoothieRecipePath,
   breakfastIndexPath,
   breakfastRecipePath,
+  breakfastPerformanceIndexPath,
+  breakfastPerformanceRecipePath,
   performanceFuelPath,
 } from "../fuel-catalog/paths.js";
+import { isPerformanceBreakfastSlug } from "../breakfast-catalog/governance-types.js";
 import { SEO_SITE_NAME, SEO_TARGET_KEYWORDS } from "./constants.js";
 import type { PageSeoConfig } from "./metadata.js";
 import { buildStandaloneRecipeSchema } from "./schema.js";
@@ -66,7 +69,7 @@ export function buildBreakfastIndexSeo(): PageSeoConfig {
   return {
     title: titleWithBrand("Firefighter Breakfast & Shift Fuel"),
     description: clipDescription(
-      "High-protein breakfasts, quick shift meals, and hall morning lines — separate from dinner recipes, built for crews on tour.",
+      "Firehall classics, crew skillets, burritos, and casseroles — station breakfasts built for interruptions, not fitness blogs.",
     ),
     canonicalPath: breakfastIndexPath(),
     ogType: "website",
@@ -74,7 +77,25 @@ export function buildBreakfastIndexSeo(): PageSeoConfig {
       "firefighter breakfast ideas",
       "firehall breakfast",
       "shift breakfast",
-      "high protein breakfast",
+      "crew breakfast",
+      ...SEO_TARGET_KEYWORDS,
+    ],
+  };
+}
+
+export function buildBreakfastPerformanceIndexSeo(count = 5): PageSeoConfig {
+  return {
+    title: titleWithBrand("Performance Breakfasts for Firefighters"),
+    description: clipDescription(
+      `${count} macro-forward crew breakfasts — protein oats, parfaits, and training-day pancakes kept separate from firehall classics.`,
+    ),
+    canonicalPath: breakfastPerformanceIndexPath(),
+    ogType: "website",
+    keywords: [
+      "performance breakfast",
+      "high protein breakfast firefighters",
+      "training day breakfast",
+      "firehall performance meals",
       ...SEO_TARGET_KEYWORDS,
     ],
   };
@@ -100,10 +121,14 @@ function breakfastMetaDescription(page: BreakfastRecipePage): string {
 
 export function buildBreakfastRecipeSeo(page: BreakfastRecipePage): PageSeoConfig {
   const title = page.seoTitle?.trim() || page.title;
+  const isPerformance = isPerformanceBreakfastSlug(page.slug);
+  const canonicalPath = isPerformance
+    ? breakfastPerformanceRecipePath(page.slug)
+    : breakfastRecipePath(page.slug);
   return {
     title: titleWithBrand(title),
     description: clipDescription(breakfastMetaDescription(page)),
-    canonicalPath: breakfastRecipePath(page.slug),
+    canonicalPath,
     ogType: "article",
     ogImage: page.heroImage,
     keywords: [
@@ -150,7 +175,9 @@ export function buildFuelRecipeSchema(origin: string, page: FuelRecipePage, cano
 }
 
 export function buildBreakfastRecipeSchema(origin: string, page: BreakfastRecipePage) {
-  const canonicalPath = breakfastRecipePath(page.slug);
+  const canonicalPath = isPerformanceBreakfastSlug(page.slug)
+    ? breakfastPerformanceRecipePath(page.slug)
+    : breakfastRecipePath(page.slug);
   return buildStandaloneRecipeSchema(origin, {
     path: canonicalPath,
     title: page.title,

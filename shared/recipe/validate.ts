@@ -3,7 +3,11 @@
  */
 
 import type { GenerateResponse } from "../schema.js";
-import { titleMatchesIngredients, normalizeFormatKey } from "../meal-format-contract.js";
+import {
+  titleMatchesIngredients,
+  normalizeFormatKey,
+  ingredientNameMatchesRecipeTitle,
+} from "../meal-format-contract.js";
 import { isMinimumViableRecipe, isRoboticTitle } from "../generation-reliability.js";
 import { heroPathConflictsTitle, scoreImageTitleAlignment } from "../meal-image-title-match.js";
 import { parseFirehallRecipe } from "./validators.js";
@@ -65,11 +69,21 @@ export function validateIngredients(
   }
 
   const names = new Set<string>();
+  const recipeTitle = recipe.title || "";
   for (const ing of ingredients) {
     const name = (ing.item || "").trim().toLowerCase();
     if (!name) {
       push(issues, "ingredient_blank", "Blank ingredient name", "error", "ingredients");
       continue;
+    }
+    if (recipeTitle && ingredientNameMatchesRecipeTitle(ing.item || "", recipeTitle)) {
+      push(
+        issues,
+        "title_as_ingredient",
+        `Recipe title used as ingredient: ${ing.item}`,
+        "error",
+        "ingredients",
+      );
     }
     if (names.has(name)) {
       push(issues, "ingredient_duplicate", `Duplicate ingredient: ${ing.item}`, "warn", "ingredients");

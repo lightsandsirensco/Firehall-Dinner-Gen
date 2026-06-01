@@ -13,10 +13,10 @@
   "cookTime": 20,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 455,
-  "protein": 40,
-  "carbs": 4,
-  "fats": 30,
+  "calories": 490,
+  "protein": 76,
+  "carbs": 5,
+  "fats": 17,
   "tags": [
     "protein:chicken",
     "format:grill",
@@ -96,35 +96,57 @@
   "steps": [
     {
       "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Yogurt Marinated Grill Chicken in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
       "title": "Mix marinade",
       "instruction": "Combine yogurt, lemon juice, garlic, cumin, paprika, coriander, salt, pepper, and 2 tbsp oil until smooth and evenly spiced throughout.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 2,
+      "stepNumber": 4,
       "title": "Marinate chicken",
       "instruction": "Coat thighs thoroughly in marinade. Refrigerate at least 4 hours or overnight so yogurt enzymes tenderize meat and flavors penetrate.",
+      "minutes": 8,
       "heatLevel": ""
     },
     {
-      "stepNumber": 3,
+      "stepNumber": 5,
       "title": "Preheat grill",
-      "instruction": "Heat grill to medium-high 400–450°F. Scrape and oil grates so chicken releases cleanly without tearing skin.",
+      "instruction": "Heat grill to medium-high 400–450°F. Scrape and oil grates so chicken releases cleanly without tearing skin. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
       "minutes": 10,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 4,
-      "title": "Grill until done",
-      "instruction": "Grill skin-side down 6–7 minutes until charred. Flip, cook 8–10 more minutes until internal temp hits 165°F and juices run clear.",
+      "stepNumber": 6,
+      "title": "Grill until fully cooked",
+      "instruction": "Grill skin-side down 6–7 minutes until charred. Flip, cook 8–10 more minutes until internal temp hits 165°F and juices run clear. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 18,
       "heatLevel": "medium-high"
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
       "title": "Rest and garnish",
-      "instruction": "Rest 5 minutes in foil. Scatter parsley. Meat should pull cleanly from bone with moist, white interior near bone.",
+      "instruction": "Rest 5 minutes in foil. Scatter parsley. Meat should pull cleanly from bone with moist, white interior near bone. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 5,
       "heatLevel": ""
     }
@@ -142,16 +164,30 @@
     "Slice into wraps with yogurt sauce.",
     "Chop over a grain bowl with pickled onions."
   ],
-  "whyCrewsLikeIt": "Yogurt tenderizes lean meat for foolproof grilling. Smoky char without drying out—ideal for summer hall nights.",
+  "whyCrewsLikeIt": "Yogurt tenderizes lean meat for foolproof grilling. Smoky char without drying out—works for summer hall nights.",
   "mealPrepNotes": "Marinate 4–24 hours. Bring to room temp 20 minutes before grilling. Station: Oil grill grates well—yogurt marinade sticks if grates are dry. Station: Grill skin-side down first for crisp char, finish flesh-side down. Station: Hold finished chicken in foil at 170°F max to prevent drying.",
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 455,
-    "protein": 40,
-    "carbs": 4,
-    "fats": 30,
-    "label": "~455 cal/serving · 40g protein · 0g fiber (est.)"
+    "calories": 490,
+    "protein": 76,
+    "carbs": 5,
+    "fats": 17,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": true,
+      "performanceMeal": true
+    }
   },
   "heroImage": "/images/golden-100/yogurt-marinated-grill-chicken.jpg",
   "mobileImage": "/images/mobile/yogurt-marinated-grill-chicken.jpg",
@@ -176,6 +212,6 @@
     "crock-barbacoa-chicken",
     "shawarma-chicken-rice-bowls"
   ],
-  "generatedAt": "2026-05-31T15:28:14.291Z",
+  "generatedAt": "2026-05-31T23:32:24.495Z",
   "contentVersion": 2
 }

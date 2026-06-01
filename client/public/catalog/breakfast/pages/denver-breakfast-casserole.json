@@ -2,7 +2,7 @@
   "slug": "denver-breakfast-casserole",
   "title": "Denver Breakfast Casserole",
   "subtitle": "Ham, bell peppers, and onion baked into a make-ahead egg strata.",
-  "description": "Classic Denver omelette flavors in a 9x13 bake: diced ham, peppers, and onion folded through cubed bread and an egg-milk custard. Assembles the night before for an easy oven push on busy mornings.",
+  "description": "Ham, bell peppers, onion, and cheddar baked with eggs — the Denver omelette in casserole form for ten hungry firefighters.",
   "filters": [
     "feed_a_crew",
     "high_protein"
@@ -14,8 +14,8 @@
     "make-ahead",
     "strata"
   ],
-  "crewSize": 12,
-  "baseServings": 12,
+  "crewSize": 8,
+  "baseServings": 8,
   "prepTime": 25,
   "cookTime": 45,
   "totalTime": 70,
@@ -23,48 +23,48 @@
   "ingredients": [
     {
       "name": "large eggs",
-      "quantity": "18",
+      "quantity": "12",
       "group": "Base"
     },
     {
       "name": "whole milk",
-      "quantity": "3 cups",
+      "quantity": "2",
       "notes": "or half-and-half for richer custard",
       "group": "Base"
     },
     {
       "name": "day-old bread",
-      "quantity": "1 loaf",
+      "quantity": "5/8",
       "notes": "cubed and lightly toasted",
       "group": "Base"
     },
     {
       "name": "diced ham",
-      "quantity": "2 lb",
+      "quantity": "1.3",
       "notes": "deli or leftover spiral ham",
       "group": "Fillings"
     },
     {
       "name": "bell peppers",
-      "quantity": "2",
+      "quantity": "1",
       "notes": "diced, any color",
       "group": "Fillings"
     },
     {
       "name": "large onion",
-      "quantity": "1",
+      "quantity": "3/4",
       "notes": "diced and lightly sautéed",
       "group": "Fillings"
     },
     {
       "name": "shredded cheddar",
-      "quantity": "3 cups",
+      "quantity": "2",
       "notes": "divided",
       "group": "Fillings"
     },
     {
       "name": "dry mustard",
-      "quantity": "1 1/2 tsp",
+      "quantity": "3/8",
       "notes": "plus salt, pepper, and paprika",
       "group": "Seasoning"
     }
@@ -73,7 +73,7 @@
     {
       "stepNumber": 1,
       "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Denver Breakfast Casserole in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "instruction": "Line up every ingredient for Denver Breakfast Casserole in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Double-check seasoning after scaling — crew palates run salty after long shifts, so taste the first portion before opening the line. Use diced ham, shredded cheddar as listed — measure each before heat goes on.",
       "minutes": 12,
       "heatLevel": ""
     },
@@ -87,28 +87,28 @@
     {
       "stepNumber": 3,
       "title": "Toast the bread cubes",
-      "instruction": "Heat oven to 350°F. Spread bread cubes on a sheet pan and toast 6–8 minutes until dry at the edges. Cool slightly so they don't turn the custard soggy. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Heat oven to 350°F. Spread bread cubes on a sheet pan and toast 6–8 minutes until dry at the edges. Cool slightly so they don't turn the custard soggy.",
       "minutes": 8,
       "heatLevel": ""
     },
     {
       "stepNumber": 4,
       "title": "Build the pan",
-      "instruction": "Butter a deep 9x13 dish. Layer half the bread, ham, peppers, onion, and half the cheese. Repeat layers, finishing with cheese on top. Plan about 12 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Butter a deep 9x13 dish. Layer half the bread, ham, peppers, onion, and half the cheese. Repeat layers, finishing with cheese on top.",
       "minutes": 12,
       "heatLevel": ""
     },
     {
       "stepNumber": 5,
       "title": "Whisk the custard",
-      "instruction": "Whisk eggs with milk, dry mustard, salt, pepper, and a pinch of paprika until smooth. Pour evenly over the bread—press gently so cubes soak without compacting. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Whisk eggs with milk, dry mustard, salt, pepper, and a pinch of paprika until smooth. Pour evenly over the bread—press gently so cubes soak without compacting.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 6,
       "title": "Rest or refrigerate",
-      "instruction": "Rest 30 minutes at room temperature, or cover and refrigerate overnight for a true make-ahead. Bring closer to room temp before baking if chilled. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Rest 30 minutes at room temperature, or cover and refrigerate overnight for a true make-ahead. Bring closer to room temp before baking if chilled.",
       "minutes": 30,
       "heatLevel": ""
     },
@@ -121,31 +121,59 @@
     },
     {
       "stepNumber": 8,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Portion and open the line",
+      "instruction": "Portion Denver Breakfast Casserole onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Scale for larger halls",
+      "instruction": "When cooking for more than 8 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
       "title": "Bake until set",
-      "instruction": "Bake at 375°F until puffed, golden at the edges, and a knife inserted in the center comes out clean. Rest 10 minutes before cutting into squares for the line. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Bake at 375°F until puffed, golden at the edges, and a knife inserted in the center comes out clean. Rest 10 minutes before cutting into squares for the line.",
       "minutes": 40,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 12,
+      "title": "Final quality check before service",
+      "instruction": "Walk the line once before opening service for Denver Breakfast Casserole — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
+      "minutes": 4,
       "heatLevel": ""
     }
   ],
   "nutrition": {
-    "calories": 483,
-    "protein": 39,
-    "carbs": 26,
-    "fat": 25,
+    "calories": 266,
+    "protein": 21,
+    "carbs": 6,
+    "fat": 18,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
-      "highProtein": true,
+      "highProtein": false,
       "under700Calories": true,
       "under30gFat": true,
       "highCarb": false,
-      "lowCarb": false,
+      "lowCarb": true,
       "mealPrepFriendly": true
     },
     "badgeCandidates": {
-      "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": true
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": false
     }
   },
   "stationWorkflow": [
@@ -164,12 +192,11 @@
   "heroImage": "/images/breakfast/denver-breakfast-casserole.jpg",
   "thumbImage": "/images/thumbs/breakfast/denver-breakfast-casserole.jpg",
   "imageAlt": "Golden Denver breakfast casserole squares with ham and bell peppers",
-  "publishedAt": "2026-05-30T21:22:29.756Z",
-  "updatedAt": "2026-05-31T12:54:36.770Z",
+  "publishedAt": "2026-05-31T18:33:00.829Z",
+  "updatedAt": "2026-05-31T23:49:25.437Z",
   "readMinutes": 8,
   "seoTitle": "Denver Breakfast Casserole | Firehall Breakfast",
-  "mobileImage": "/images/mobile/breakfast/denver-breakfast-casserole.jpg",
-  "railImage": "/images/rails/breakfast/denver-breakfast-casserole.jpg",
+  "collectionTier": "firehall_classic",
   "proTips": [
     "Prep and refrigerate the casserole the night before a busy shift; pull it 30 minutes before baking.",
     "Assign one cook to oven checks while another sets up a warm holding pan with foil for staggered eaters.",

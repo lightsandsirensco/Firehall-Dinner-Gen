@@ -14,6 +14,18 @@ export function breakfastRecipePath(slug: string): string {
   return `/breakfast/${(slug || "").trim().toLowerCase()}`;
 }
 
+export function breakfastPerformanceIndexPath(): string {
+  return "/breakfast/performance";
+}
+
+export function breakfastPerformanceRecipePath(slug: string): string {
+  return `/breakfast/performance/${(slug || "").trim().toLowerCase()}`;
+}
+
+export function breakfastCatalogPerformanceIndexPath(): string {
+  return "/catalog/breakfast/performance/index.json";
+}
+
 export function breakfastPageJsonPath(slug: string): string {
   return `/catalog/breakfast/pages/${(slug || "").trim().toLowerCase()}.json`;
 }

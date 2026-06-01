@@ -2,7 +2,7 @@
   "slug": "huevos-rancheros-crew",
   "title": "Huevos Rancheros for the Crew",
   "subtitle": "Crisp tortillas, ranchero sauce, and sunny eggs for a full hall.",
-  "description": "Adapted from classic Mexican ranch-style breakfast tradition for firehall service: corn tortillas fried crisp, topped with warm ranchero sauce, black beans, and eggs cooked to order. Built to feed eight hungry firefighters with a make-ahead sauce and a hot griddle line.",
+  "description": "Corn tortillas, fried eggs, ranchero sauce, and beans on a platter — Mexican breakfast classic scaled for ten with cilantro and lime on the side.",
   "filters": [
     "feed_a_crew",
     "high_protein",
@@ -88,28 +88,28 @@
     {
       "stepNumber": 3,
       "title": "Simmer ranchero sauce",
-      "instruction": "Sauté onion in oil over medium heat until soft, about 6 minutes. Add garlic and chipotle, cook 1 minute, then add tomatoes and adobo sauce. Simmer uncovered, stirring occasionally, until thickened enough to coat a spoon. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Sauté onion in oil over medium heat until soft, about 6 minutes. Add garlic and chipotle, cook 1 minute, then add tomatoes and adobo sauce. Simmer uncovered, stirring occasionally, until thickened enough to coat a spoon.",
       "minutes": 20,
       "heatLevel": ""
     },
     {
       "stepNumber": 4,
       "title": "Warm beans and prep line",
-      "instruction": "Heat black beans with a pinch of cumin and salt in a covered pot over low heat. Set up a griddle station with warm tortillas, sauce, beans, cheese, and cilantro so eggs can go straight to plates. Cook until char marks are visible and the thickest piece reads 165°F on an instant-read thermometer. Plan about 8 minutes for this step at crew scale.",
+      "instruction": "Heat black beans with a pinch of cumin and salt in a covered pot over low heat. Set up a griddle station with warm tortillas, sauce, beans, cheese, and cilantro so eggs can go straight to plates.",
       "minutes": 8,
       "heatLevel": ""
     },
     {
       "stepNumber": 5,
       "title": "Crisp the tortillas",
-      "instruction": "Heat a lightly oiled griddle or cast iron over medium-high until shimmering. Fry tortillas 30–45 seconds per side until crisp at the edges but still pliable in the center. Hold stacked and covered with a towel. Cook until char marks are visible and the thickest piece reads 165°F on an instant-read thermometer. Plan about 10 minutes for this step at crew scale. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts.",
+      "instruction": "Heat a lightly oiled griddle or cast iron over medium-high until shimmering. Fry tortillas 30–45 seconds per side until crisp at the edges but still pliable in the center. Hold stacked and covered with a towel.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 6,
       "title": "Fry eggs to order",
-      "instruction": "Fry eggs in a thin film of oil over medium heat until whites are fully set (165°F) and yolks are runny or jammy. Season each egg with salt and pepper as it comes off the griddle. Plan about 12 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Fry eggs in a thin film of oil over medium heat until whites are fully set (165°F) and yolks are runny or jammy. Season each egg with salt and pepper as it comes off the griddle.",
       "minutes": 12,
       "heatLevel": ""
     },
@@ -122,17 +122,45 @@
     },
     {
       "stepNumber": 8,
-      "title": "Plate and serve",
-      "instruction": "Layer two tortillas per plate with beans and a generous ladle of ranchero sauce. Top each stack with two fried eggs, crumbled queso fresco, cilantro, and a lime wedge. Serve immediately while tortillas stay crisp. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Portion and open the line",
+      "instruction": "Portion Huevos Rancheros for the Crew onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Scale for larger halls",
+      "instruction": "When cooking for more than 8 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
       "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
+      "title": "portion and serve",
+      "instruction": "Layer two tortillas per plate with beans and a generous ladle of ranchero sauce. Top each stack with two fried eggs, crumbled queso fresco, cilantro, and a lime wedge. Serve immediately while tortillas stay crisp.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 12,
+      "title": "Final quality check before service",
+      "instruction": "Walk the line once before opening service for Huevos Rancheros for the Crew — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
+      "minutes": 4,
       "heatLevel": ""
     }
   ],
   "nutrition": {
-    "calories": 467,
-    "protein": 26,
-    "carbs": 67,
-    "fat": 12,
+    "calories": 506,
+    "protein": 24,
+    "carbs": 66,
+    "fat": 17,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
@@ -141,7 +169,7 @@
       "under30gFat": true,
       "highCarb": true,
       "lowCarb": false,
-      "mealPrepFriendly": false
+      "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": false,
@@ -165,12 +193,11 @@
   "heroImage": "/images/breakfast/huevos-rancheros-crew.jpg",
   "thumbImage": "/images/thumbs/breakfast/huevos-rancheros-crew.jpg",
   "imageAlt": "Huevos rancheros with fried eggs, ranchero sauce, and crisp corn tortillas for the crew",
-  "publishedAt": "2026-05-30T21:22:29.757Z",
-  "updatedAt": "2026-05-31T12:54:36.778Z",
+  "publishedAt": "2026-05-31T18:33:00.830Z",
+  "updatedAt": "2026-05-31T23:49:25.520Z",
   "readMinutes": 8,
   "seoTitle": "Huevos Rancheros for the Crew | Firehall Breakfast",
-  "mobileImage": "/images/mobile/breakfast/huevos-rancheros-crew.jpg",
-  "railImage": "/images/rails/breakfast/huevos-rancheros-crew.jpg",
+  "collectionTier": "firehall_classic",
   "proTips": [
     "Simmer ranchero sauce first—it holds warm on the back burner while the griddle handles tortillas and eggs.",
     "Assign one cook to tortilla frying and another to eggs so nothing sits under a heat lamp getting rubbery.",

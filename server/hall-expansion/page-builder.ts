@@ -11,6 +11,8 @@ import {
   HALL_EXPANSION_SET_TAG,
   type ExpansionRecipeDef,
 } from "../../shared/hall-expansion/types.js";
+import { CANONICAL_BASE_SERVINGS } from "../../shared/recipe/crew-scaling-config.js";
+import { scaleGoldenIngredients } from "../../shared/golden-100/recipe-quality/crew-scale.js";
 
 function buildSeoTitle(title: string): string {
   const t = `${title} | Firefighter Meal`;
@@ -38,6 +40,11 @@ export function buildHallExpansionRecipePage(
   recipe: ExpansionRecipeDef,
   crewSize = recipe.crewSizeDefault,
 ): GoldenRecipePage {
+  const storedBase = crewSize;
+  const ingredients =
+    storedBase === CANONICAL_BASE_SERVINGS
+      ? recipe.ingredients
+      : scaleGoldenIngredients(recipe.ingredients, storedBase, CANONICAL_BASE_SERVINGS);
   const images = hallExpansionPageImageSet(recipe.slug);
   const scores = computeScores(recipe);
   const n = recipe.nutrition;
@@ -69,8 +76,8 @@ export function buildHallExpansionRecipePage(
     category: HALL_EXPANSION_PAGE_CATEGORY,
     cuisine: recipe.cuisine,
     description: recipe.description,
-    crewSize,
-    baseServings: crewSize,
+    crewSize: CANONICAL_BASE_SERVINGS,
+    baseServings: CANONICAL_BASE_SERVINGS,
     prepTime: recipe.prepMinutes,
     cookTime: recipe.cookMinutes,
     difficulty: recipe.difficulty,
@@ -80,7 +87,7 @@ export function buildHallExpansionRecipePage(
     fats: n.fats,
     tags,
     equipment: recipe.equipment,
-    ingredients: recipe.ingredients,
+    ingredients,
     steps: recipe.steps,
     proTips: recipe.proTips.slice(0, 8),
     tonightSpread: recipe.tonightSpread,

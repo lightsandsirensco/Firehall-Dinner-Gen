@@ -1,8 +1,8 @@
 {
   "slug": "buttermilk-pancakes",
   "title": "Buttermilk Pancakes for the Crew",
-  "subtitle": "A practical station breakfast that scales from 4 to 12.",
-  "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+  "subtitle": "Fluffy griddle pancakes stacked for a hungry crew.",
+  "description": "Fluffy buttermilk pancakes from a big batch of batter — griddle in waves, stack on sheet pans in a warm oven, and pass the syrup.",
   "filters": [
     "feed_a_crew"
   ],
@@ -71,7 +71,7 @@
     {
       "stepNumber": 3,
       "title": "Mix the batter",
-      "instruction": "Whisk mix, milk, eggs, and melted butter until smooth. Rest 5 minutes so bubbles settle—don't over-mix. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Whisk mix, milk, eggs, and melted butter until smooth. Rest 5 minutes so bubbles settle—don't over-mix. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts.",
       "minutes": 5,
       "heatLevel": ""
     },
@@ -85,7 +85,7 @@
     {
       "stepNumber": 5,
       "title": "Cook in batches",
-      "instruction": "Pour 1/3-cup scoops. Flip when bubbles set at the edges and bottoms are golden. Hold finished pancakes on a sheet pan in a 200°F oven. Plan about 13 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Pour 1/3-cup scoops. Flip when bubbles set at the edges and bottoms are golden. Hold finished pancakes on a sheet pan in a 200°F oven.",
       "minutes": 13,
       "heatLevel": ""
     },
@@ -148,12 +148,11 @@
   "heroImage": "/images/breakfast/buttermilk-pancakes.jpg",
   "thumbImage": "/images/thumbs/breakfast/buttermilk-pancakes.jpg",
   "imageAlt": "Warm station-kitchen breakfast: Buttermilk Pancakes for the Crew",
-  "publishedAt": "2026-05-30T21:22:29.758Z",
-  "updatedAt": "2026-05-31T12:54:36.761Z",
+  "publishedAt": "2026-05-31T18:33:00.830Z",
+  "updatedAt": "2026-05-31T23:49:25.357Z",
   "readMinutes": 6,
   "seoTitle": "Buttermilk Pancakes for the Crew | Firehall Breakfast",
-  "mobileImage": "/images/mobile/breakfast/buttermilk-pancakes.jpg",
-  "railImage": "/images/rails/breakfast/buttermilk-pancakes.jpg",
+  "collectionTier": "firehall_classic",
   "proTips": [
     "Assign one cook to the hot surface and one to assembly. Keep the line moving; don’t crowd the griddle.",
     "Set a warm holding zone (oven 200°F or covered hotel pan) so staggered eaters still get a hot plate.",

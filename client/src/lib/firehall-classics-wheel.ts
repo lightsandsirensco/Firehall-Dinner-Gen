@@ -162,6 +162,10 @@ export function buildPackageUrl(classic: WheelClassic | { slug: string }): strin
   return `/package/${encodeURIComponent(classic.slug)}`;
 }
 
+export function buildRecipeUrl(classic: WheelClassic | { slug: string }): string {
+  return `/recipes/${encodeURIComponent(classic.slug)}`;
+}
+
 export function buildExplorePackageUrl(classic: WheelClassic): string {
   return `/explore?classic=${encodeURIComponent(classic.slug)}`;
 }

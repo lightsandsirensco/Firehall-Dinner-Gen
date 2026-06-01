@@ -8,8 +8,8 @@
   "category": "bbq_grill_nights",
   "cuisine": "italian-american",
   "description": "Rotini tosses with grilled zucchini and peppers, Genoa salami, pepperoncini, provolone, and zesty Italian dressing. A big antipasto-inspired tray for ten.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 20,
   "prepTime": 30,
   "difficulty": "medium",
@@ -39,7 +39,7 @@
   "ingredients": [
     {
       "name": "farfalle pasta",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "lb",
       "group": "Main"
     },
@@ -52,55 +52,55 @@
     },
     {
       "name": "marinated artichoke hearts",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "cups",
       "notes": "quartered",
       "group": "Antipasto"
     },
     {
       "name": "mortadella",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "lb",
       "notes": "cubed",
       "group": "Antipasto"
     },
     {
       "name": "pepperoncini",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "cup",
       "notes": "drained and sliced",
       "group": "Antipasto"
     },
     {
       "name": "Castelvetrano olives",
-      "quantity": "1.5",
+      "quantity": "1 1/4",
       "unit": "cups",
       "notes": "pitted",
       "group": "Antipasto"
     },
     {
       "name": "sun-dried tomatoes",
-      "quantity": "0.75",
+      "quantity": "5/8",
       "unit": "cup",
       "notes": "oil-packed, sliced",
       "group": "Antipasto"
     },
     {
       "name": "Pecorino Romano",
-      "quantity": "0.75",
+      "quantity": "5/8",
       "unit": "lb",
       "notes": "shaved",
       "group": "Antipasto"
     },
     {
       "name": "red wine vinaigrette",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "cup",
       "group": "Dressing"
     },
     {
       "name": "fresh oregano",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "notes": "chopped",
       "group": "Dressing"
@@ -110,7 +110,7 @@
     {
       "stepNumber": 1,
       "title": "Boil pasta",
-      "instruction": "Cook rotini in salted water to al dente. Drain, rinse cold, and toss with a little oil. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Plan about 12 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Cook rotini in salted water to al dente. Drain, rinse cold, and toss with a little oil. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Plan about 12 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Use eggplant, marinated artichoke hearts, mortadella, sun-dried tomatoes as listed — measure each before heat goes on. Use Pecorino Romano, red wine vinaigrette, fresh oregano as listed — measure each before heat goes on.",
       "minutes": 12,
       "heatLevel": ""
     },
@@ -131,7 +131,7 @@
     {
       "stepNumber": 4,
       "title": "Build dressing",
-      "instruction": "Whisk olive oil, vinegar, Italian seasoning, garlic powder, salt, and pepper. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Whisk olive oil, vinegar, Italian seasoning, garlic powder, salt, and pepper. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 5,
       "heatLevel": ""
     },
@@ -145,7 +145,7 @@
     {
       "stepNumber": 6,
       "title": "Chill before service",
-      "instruction": "Chill at least 30 minutes so flavors meld. Hold refrigerated up to 48 hours. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Chill at least 30 minutes so flavors meld. Hold refrigerated up to 48 hours. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts.",
       "minutes": 30,
       "heatLevel": ""
     },
@@ -159,7 +159,7 @@
     {
       "stepNumber": 8,
       "title": "Call guidance",
-      "instruction": "Antipasto pasta salad is call-proof—make ahead and pull from cooler anytime. Plan about 3 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Antipasto pasta salad is call-proof—make ahead and pull from cooler anytime. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 3,
       "heatLevel": ""
     }
@@ -214,6 +214,6 @@
     "brisket-style-beef-sandwiches-au-jus"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T02:29:42.538Z",
+  "generatedAt": "2026-05-31T23:32:23.209Z",
   "contentVersion": 2
 }

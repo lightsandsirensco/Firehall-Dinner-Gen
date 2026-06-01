@@ -8,15 +8,15 @@
   "category": "hall_expansion",
   "cuisine": "mediterranean",
   "description": "Grilled lemon-herb chicken, hummus, tzatziki, tabbouleh, feta, olives, and warm pita fill a mezze-style bar. Crew builds plates or wraps with Mediterranean flavors and plenty of fresh herbs.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 25,
   "prepTime": 40,
   "difficulty": "medium",
-  "calories": 460,
-  "protein": 34,
-  "carbs": 36,
-  "fats": 20,
+  "calories": 843,
+  "protein": 77,
+  "carbs": 64,
+  "fats": 31,
   "tags": [
     "protein:chicken",
     "format:bar_line",
@@ -39,63 +39,63 @@
   "ingredients": [
     {
       "name": "chicken thighs",
-      "quantity": "4",
+      "quantity": "3.2",
       "unit": "lb",
       "notes": "boneless",
       "group": "Main"
     },
     {
       "name": "lemon juice",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "cup",
       "group": "Marinade"
     },
     {
       "name": "olive oil",
-      "quantity": "0.33",
+      "quantity": "1/4",
       "unit": "cup",
       "group": "Marinade"
     },
     {
       "name": "dried oregano",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "group": "Marinade"
     },
     {
       "name": "hummus",
-      "quantity": "3",
+      "quantity": "2.4",
       "unit": "cups",
       "group": "Bar"
     },
     {
       "name": "tzatziki",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "cups",
       "group": "Bar"
     },
     {
       "name": "tabbouleh salad",
-      "quantity": "4",
+      "quantity": "3.2",
       "unit": "cups",
       "group": "Bar"
     },
     {
       "name": "feta cheese",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "lb",
       "notes": "crumbled",
       "group": "Bar"
     },
     {
       "name": "Kalamata olives",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "cups",
       "group": "Bar"
     },
     {
       "name": "pita bread",
-      "quantity": "12",
+      "quantity": "9.6",
       "unit": "pieces",
       "notes": "warm",
       "group": "Bar"
@@ -205,11 +205,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 460,
-    "protein": 34,
-    "carbs": 36,
-    "fats": 20,
-    "label": "~460 cal/serving · 34g protein · 6g fiber (est.)"
+    "calories": 843,
+    "protein": 77,
+    "carbs": 64,
+    "fats": 31,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/hall-expansion/mediterranean-feast-night.jpg",
   "heroImageAlt": "Mediterranean Feast Night — crew-sized firehall meal",

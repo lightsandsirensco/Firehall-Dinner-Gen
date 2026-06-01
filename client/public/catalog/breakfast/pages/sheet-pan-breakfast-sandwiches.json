@@ -2,7 +2,7 @@
   "slug": "sheet-pan-breakfast-sandwiches",
   "title": "Crispy Honey Chili Sausage",
   "subtitle": "A dozen eggs and cheese baked between two layers of slider rolls.",
-  "description": "One sheet-pan hack produces twelve breakfast sandwiches at once: eggs baked in a parchment frame, layered with cheese and sausage on slider rolls, then topped and baked again. Cut along seams and serve—no griddle bottleneck on busy mornings.",
+  "description": "Eggs baked on a sheet pan, cut into squares, and layered on toasted buns with sausage and cheese. Ten sandwiches without flipping eggs one at a time.",
   "filters": [
     "breakfast_sandwiches",
     "feed_a_crew",
@@ -15,8 +15,8 @@
     "sausage",
     "batch-cook"
   ],
-  "crewSize": 12,
-  "baseServings": 12,
+  "crewSize": 8,
+  "baseServings": 8,
   "prepTime": 15,
   "cookTime": 22,
   "totalTime": 37,
@@ -24,48 +24,48 @@
   "ingredients": [
     {
       "name": "24-count slider roll package",
-      "quantity": "1",
+      "quantity": "3/4",
       "notes": "connected, not separated",
       "group": "Build"
     },
     {
       "name": "large eggs",
-      "quantity": "14",
+      "quantity": "9",
       "notes": "whisked with 2 tbsp milk",
       "group": "Egg layer"
     },
     {
       "name": "kosher salt",
-      "quantity": "1/2 tsp",
+      "quantity": "3/8",
       "notes": "and black pepper",
       "group": "Egg layer"
     },
     {
       "name": "pre-cooked sausage patties",
-      "quantity": "12",
+      "quantity": "8",
       "notes": "thin, fit slider size",
       "group": "Protein"
     },
     {
       "name": "American or cheddar cheese",
-      "quantity": "12 slices",
+      "quantity": "8",
       "group": "Protein"
     },
     {
       "name": "butter",
-      "quantity": "3 tbsp",
+      "quantity": "2",
       "notes": "melted for brushing tops",
       "group": "Finish"
     },
     {
       "name": "everything bagel seasoning",
-      "quantity": "1 tsp",
+      "quantity": "5/8",
       "notes": "optional",
       "group": "Finish"
     },
     {
       "name": "hot sauce or ketchup",
-      "quantity": "1/2 cup",
+      "quantity": "3/8",
       "notes": "at the line",
       "group": "Serve"
     }
@@ -95,14 +95,14 @@
     {
       "stepNumber": 4,
       "title": "Bake the egg sheet",
-      "instruction": "Whisk eggs with milk, salt, and pepper. Pour into a parchment-lined quarter sheet pan to roughly slider dimensions. Bake until just set—don't overbake or eggs turn rubbery. Bake until the center reaches a safe internal temp (165°F) and edges look set — use a thermometer at the thickest point. Plan about 12 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
+      "instruction": "Whisk eggs with milk, salt, and pepper. Pour into a parchment-lined quarter sheet pan to roughly slider dimensions. Bake until just set—don't overbake or eggs turn rubbery.",
       "minutes": 12,
       "heatLevel": ""
     },
     {
       "stepNumber": 5,
       "title": "Trim and assemble",
-      "instruction": "Trim egg sheet to fit the roll block. Place bottom halves on a lined sheet pan, add sausage, egg sheet, cheese, and top halves. Press gently to align seams. Plan about 8 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
+      "instruction": "Trim egg sheet to fit the roll block. Place bottom halves on a lined sheet pan, add sausage, egg sheet, cheese, and top halves. Press gently to align seams.",
       "minutes": 8,
       "heatLevel": ""
     },
@@ -129,10 +129,10 @@
     }
   ],
   "nutrition": {
-    "calories": 736,
-    "protein": 40,
-    "carbs": 4,
-    "fat": 62,
+    "calories": 985,
+    "protein": 45,
+    "carbs": 8,
+    "fat": 86,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
@@ -141,7 +141,7 @@
       "under30gFat": false,
       "highCarb": false,
       "lowCarb": true,
-      "mealPrepFriendly": false
+      "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": true,
@@ -165,12 +165,11 @@
   "heroImage": "/images/breakfast/sheet-pan-breakfast-sandwiches.jpg",
   "thumbImage": "/images/thumbs/breakfast/sheet-pan-breakfast-sandwiches.jpg",
   "imageAlt": "Sheet pan of pull-apart breakfast slider sandwiches with egg and sausage",
-  "publishedAt": "2026-05-30T21:22:29.756Z",
-  "updatedAt": "2026-05-31T12:54:36.792Z",
+  "publishedAt": "2026-05-31T18:33:00.829Z",
+  "updatedAt": "2026-05-31T23:49:25.707Z",
   "readMinutes": 7,
   "seoTitle": "Sheet Pan Breakfast Sandwiches | Firehall Breakfast",
-  "mobileImage": "/images/mobile/breakfast/sheet-pan-breakfast-sandwiches.jpg",
-  "railImage": "/images/rails/breakfast/sheet-pan-breakfast-sandwiches.jpg",
+  "collectionTier": "firehall_classic",
   "proTips": [
     "Measure the roll block before baking the egg sheet—trim once, not twice, for clean sandwich edges.",
     "Use parchment to lift the egg sheet out of the quarter pan for easier trimming and placement.",

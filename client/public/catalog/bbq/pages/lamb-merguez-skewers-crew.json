@@ -8,15 +8,15 @@
   "category": "bbq_grill_nights",
   "cuisine": "north african",
   "description": "Ground lamb mixes with urfa pepper, fennel, and ras el hanout, forms around flat skewers, and grills until charred and 165°F. Serve with preserved-lemon yogurt and grilled naan.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 18,
   "prepTime": 35,
   "difficulty": "medium",
-  "calories": 144,
-  "protein": 8,
+  "calories": 751,
+  "protein": 70,
   "carbs": 20,
-  "fats": 4,
+  "fats": 44,
   "tags": [
     "protein:lamb",
     "format:crew_kebab",
@@ -40,69 +40,69 @@
   "ingredients": [
     {
       "name": "ground lamb",
-      "quantity": "5.5",
+      "quantity": "4.4",
       "unit": "lb",
       "group": "Main"
     },
     {
       "name": "Urfa biber",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "group": "Merguez spice"
     },
     {
       "name": "ground fennel seed",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tbsp",
       "group": "Merguez spice"
     },
     {
       "name": "ras el hanout",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tsp",
       "group": "Merguez spice"
     },
     {
       "name": "ground cinnamon",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "tsp",
       "group": "Merguez spice"
     },
     {
       "name": "shallots",
-      "quantity": "3",
+      "quantity": "2",
       "unit": "whole",
       "notes": "grated and drained",
       "group": "Merguez spice"
     },
     {
       "name": "kosher salt",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "group": "Merguez spice"
     },
     {
       "name": "Greek yogurt",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "cups",
       "group": "Sauce"
     },
     {
       "name": "preserved lemon",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "notes": "minced rind",
       "group": "Sauce"
     },
     {
       "name": "naan bread",
-      "quantity": "12",
+      "quantity": "9.6",
       "unit": "pieces",
       "group": "Service"
     },
     {
       "name": "pomegranate seeds",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "cup",
       "group": "Garnish"
     }
@@ -111,14 +111,14 @@
     {
       "stepNumber": 1,
       "title": "Mix merguez lamb",
-      "instruction": "Combine lamb, urfa biber, fennel, ras el hanout, cinnamon, drained shallot, and salt until uniform. Mix until tacky, about 3 minutes. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Combine lamb, urfa biber, fennel, ras el hanout, cinnamon, drained shallot, and salt until uniform. Mix until tacky, about 3 minutes.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
       "title": "Form skewer logs",
-      "instruction": "Press lamb around wide flat skewers in 8-inch logs about 1 inch thick. Chill 30 minutes on a sheet pan. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Press lamb around wide flat skewers in 8-inch logs about 1 inch thick. Chill 30 minutes on a sheet pan. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
       "minutes": 15,
       "heatLevel": ""
     },
@@ -132,7 +132,7 @@
     {
       "stepNumber": 4,
       "title": "Preheat grill grates",
-      "instruction": "Preheat grill to medium-high, 425°F. Oil grates—lamb fat will flare; keep a cooler zone ready. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Preheat grill to medium-high, 425°F. Oil grates—lamb fat will flare; keep a cooler zone ready. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
       "minutes": 10,
       "heatLevel": "medium-high"
     },
@@ -182,12 +182,25 @@
   "mealPrepNotes": "Chill formed skewers 30 minutes. Grill medium-high 425°F. Hold finished skewers covered at 170°F up to 30 minutes—do not exceed 175°F or lamb toughens. Calls: pull at 165°F, rest 5 minutes before sliding off.",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 144,
-    "protein": 8,
+    "calories": 751,
+    "protein": 70,
     "carbs": 20,
-    "fats": 4,
+    "fats": 44,
     "label": "per serving (hall portion)",
-    "source": "estimated"
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/smoker-catalog/lamb-merguez-skewers-crew.jpg",
   "heroImageAlt": "North African Urfa Lamb Merguez Logs — crew-sized BBQ spread with visible smoke and bark",
@@ -216,6 +229,6 @@
     "brisket-style-beef-sandwiches-au-jus"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T02:29:42.533Z",
+  "generatedAt": "2026-05-31T23:32:23.203Z",
   "contentVersion": 2
 }

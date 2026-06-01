@@ -8,15 +8,15 @@
   "category": "bbq_grill_nights",
   "cuisine": "american",
   "description": "Adapted from classic Memphis dry-rub tradition (Amazing Ribs, Meat Church): shoulder gets a bold paprika-coffee rub, smokes without saucing the meat, and serves with tangy slaw on buns—sauce on the side only.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 480,
   "prepTime": 30,
   "difficulty": "medium",
-  "calories": 1400,
-  "protein": 120,
-  "carbs": 51,
-  "fats": 76,
+  "calories": 890,
+  "protein": 68,
+  "carbs": 52,
+  "fats": 44,
   "tags": [
     "protein:pork",
     "format:sandwich",
@@ -40,79 +40,79 @@
   "ingredients": [
     {
       "name": "bone-in pork shoulder",
-      "quantity": "10",
+      "quantity": "4",
       "unit": "lb"
     },
     {
       "name": "kosher salt",
-      "quantity": "4",
+      "quantity": "3.4",
       "unit": "tbsp"
     },
     {
       "name": "brown sugar",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp"
     },
     {
       "name": "smoked paprika",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp"
     },
     {
       "name": "garlic powder",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp"
     },
     {
       "name": "onion powder",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp"
     },
     {
       "name": "ground cumin",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tbsp"
     },
     {
       "name": "instant coffee",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "notes": "fine ground"
     },
     {
       "name": "black pepper",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp"
     },
     {
       "name": "yellow mustard",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "cup",
       "notes": "binder"
     },
     {
       "name": "buns",
-      "quantity": "12",
+      "quantity": "10",
       "unit": "whole"
     },
     {
       "name": "coleslaw mix",
-      "quantity": "12",
+      "quantity": "9.6",
       "unit": "cups"
     },
     {
       "name": "mayonnaise",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "cup"
     },
     {
       "name": "apple cider vinegar",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "cup"
     },
     {
       "name": "BBQ sauce",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "cup",
       "notes": "optional, on the side"
     }
@@ -162,7 +162,7 @@
     },
     {
       "stepNumber": 7,
-      "title": "Tonight's board",
+      "title": "",
       "instruction": "Dry-rub pork, slaw, buns, optional sauce. Call it Memphis-style—slaw on the sandwich, sauce if you want it.",
       "minutes": 5,
       "heatLevel": ""
@@ -192,12 +192,25 @@
   "mealPrepNotes": "Apply rub the night before if possible. Hold pulled pork covered at 170°F up to 2 hours. Keep sauce separate so bark stays crisp.",
   "cleanupDifficulty": "heavy",
   "nutrition": {
-    "calories": 1400,
-    "protein": 120,
-    "carbs": 51,
-    "fats": 76,
+    "calories": 890,
+    "protein": 68,
+    "carbs": 52,
+    "fats": 44,
     "label": "per serving (hall portion)",
-    "source": "estimated"
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/smoker-catalog/memphis-dry-rub-pulled-pork.jpg",
   "heroImageAlt": "Memphis Dry-Rub Pulled Pork — crew-sized BBQ spread with visible smoke and bark",
@@ -226,6 +239,6 @@
     "carolina-vinegar-pulled-pork"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T02:29:42.530Z",
+  "generatedAt": "2026-05-31T23:32:23.200Z",
   "contentVersion": 2
 }

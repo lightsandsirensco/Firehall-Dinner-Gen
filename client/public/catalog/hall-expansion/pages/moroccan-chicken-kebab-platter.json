@@ -8,15 +8,15 @@
   "category": "hall_expansion",
   "cuisine": "moroccan",
   "description": "Chicken thighs marinate in chermoula—cilantro, cumin, lemon, and garlic—then grill on skewers with onions and peppers. Serve over fluffy couscous with olives, preserved lemon, and harissa.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 20,
   "prepTime": 30,
   "difficulty": "medium",
-  "calories": 450,
-  "protein": 36,
-  "carbs": 38,
-  "fats": 18,
+  "calories": 404,
+  "protein": 58,
+  "carbs": 2,
+  "fats": 16,
   "tags": [
     "protein:chicken",
     "format:skewer",
@@ -39,78 +39,78 @@
   "ingredients": [
     {
       "name": "boneless chicken thighs",
-      "quantity": "4",
+      "quantity": "3.2",
       "unit": "lb",
       "notes": "cut into chunks",
       "group": "Main"
     },
     {
       "name": "fresh cilantro",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "cup",
       "notes": "packed",
       "group": "Chermoula"
     },
     {
       "name": "fresh parsley",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "cup",
       "group": "Chermoula"
     },
     {
       "name": "garlic cloves",
-      "quantity": "6",
+      "quantity": "5",
       "unit": "cloves",
       "group": "Chermoula"
     },
     {
       "name": "ground cumin",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tsp",
       "group": "Chermoula"
     },
     {
       "name": "smoked paprika",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tsp",
       "group": "Chermoula"
     },
     {
       "name": "lemon juice",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "cup",
       "group": "Chermoula"
     },
     {
       "name": "olive oil",
-      "quantity": "0.33",
+      "quantity": "1/4",
       "unit": "cup",
       "group": "Chermoula"
     },
     {
       "name": "couscous",
-      "quantity": "3",
+      "quantity": "2.4",
       "unit": "cups",
       "notes": "dry",
       "group": "Base"
     },
     {
       "name": "green olives",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "cup",
       "notes": "pitted",
       "group": "Garnish"
     },
     {
       "name": "preserved lemon",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "notes": "minced",
       "group": "Garnish"
     },
     {
       "name": "harissa",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "cup",
       "notes": "for serving",
       "group": "Garnish"
@@ -141,7 +141,7 @@
     {
       "stepNumber": 4,
       "title": "Marinate chicken",
-      "instruction": "Coat chicken chunks in chermoula. Marinate at least 2 hours or overnight. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Coat chicken chunks in chermoula. Marinate at least 2 hours or overnight. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
       "minutes": 10,
       "heatLevel": ""
     },
@@ -206,11 +206,25 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 450,
-    "protein": 36,
-    "carbs": 38,
-    "fats": 18,
-    "label": "~450 cal/serving · 36g protein · 3g fiber (est.)"
+    "calories": 404,
+    "protein": 58,
+    "carbs": 2,
+    "fats": 16,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": true,
+      "performanceMeal": true
+    }
   },
   "heroImage": "/images/hall-expansion/moroccan-chicken-kebab-platter.jpg",
   "heroImageAlt": "Moroccan Chicken Kebab Platter — crew-sized firehall meal",

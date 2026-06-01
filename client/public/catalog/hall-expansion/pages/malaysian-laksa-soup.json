@@ -8,15 +8,15 @@
   "category": "hall_expansion",
   "cuisine": "malaysian",
   "description": "Aromatics and laksa paste bloom in coconut milk and broth, then simmer with chicken, shrimp, and rice noodles. Serve with lime, cilantro, bean sprouts, and sambal for a bright, spicy hall soup night.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 40,
   "prepTime": 35,
   "difficulty": "medium",
-  "calories": 490,
-  "protein": 36,
-  "carbs": 46,
-  "fats": 18,
+  "calories": 407,
+  "protein": 50,
+  "carbs": 3,
+  "fats": 20,
   "tags": [
     "protein:shrimp",
     "format:soup",
@@ -39,79 +39,79 @@
   "ingredients": [
     {
       "name": "vegetable oil",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp",
       "group": "Base"
     },
     {
       "name": "laksa paste",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "cup",
       "notes": "store-bought or homemade",
       "group": "Base"
     },
     {
       "name": "coconut milk",
-      "quantity": "3",
+      "quantity": "2",
       "unit": "cans",
       "notes": "13.5 oz each",
       "group": "Base"
     },
     {
       "name": "chicken broth",
-      "quantity": "4",
+      "quantity": "3.2",
       "unit": "cups",
       "group": "Base"
     },
     {
       "name": "chicken breast",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "lb",
       "notes": "sliced thin",
       "group": "Protein"
     },
     {
       "name": "large shrimp",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "lb",
       "notes": "peeled and deveined",
       "group": "Protein"
     },
     {
       "name": "rice noodles",
-      "quantity": "1.5",
+      "quantity": "1 1/4",
       "unit": "lb",
       "notes": "thick",
       "group": "Noodles"
     },
     {
       "name": "fish sauce",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "group": "Seasoning"
     },
     {
       "name": "lime juice",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "cup",
       "group": "Finish"
     },
     {
       "name": "bean sprouts",
-      "quantity": "3",
+      "quantity": "2.4",
       "unit": "cups",
       "group": "Garnish"
     },
     {
       "name": "fresh cilantro",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "cup",
       "notes": "chopped",
       "group": "Garnish"
     },
     {
       "name": "sambal oelek",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "cup",
       "notes": "for serving",
       "group": "Garnish"
@@ -142,7 +142,7 @@
     {
       "stepNumber": 4,
       "title": "Simmer coconut milk and broth",
-      "instruction": "Pour in 3 cans coconut milk and 4 cups chicken broth. Bring to a gentle simmer over medium heat—small bubbles at the edges, not a rolling boil. Simmer uncovered 15 minutes so the paste flavor melds into the broth.",
+      "instruction": "Pour in 3 cans coconut milk and 4 cups chicken broth. Bring to a gentle simmer over medium heat—small bubbles at the edges, not a rolling boil. Simmer uncovered 15 minutes so the paste flavor melds into the broth. Target 145°F until opaque at the thickest point before moving to the next batch.",
       "minutes": 15,
       "heatLevel": ""
     },
@@ -170,7 +170,7 @@
     {
       "stepNumber": 8,
       "title": "Poach shrimp in laksa broth",
-      "instruction": "Raise the laksa broth to a steady simmer. Add 2 lb peeled large shrimp and cook 2–3 minutes until shells turn pink and flesh is opaque and curled—do not let shrimp boil hard or they turn rubbery.",
+      "instruction": "Raise the laksa broth to a steady simmer. Add 2 lb peeled large shrimp and cook 2–3 minutes until shells turn pink and flesh is opaque and curled—do not let shrimp boil hard or they turn rubbery. Target 145°F until opaque at the thickest point before moving to the next batch.",
       "minutes": 5,
       "heatLevel": ""
     },
@@ -214,11 +214,25 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 490,
-    "protein": 36,
-    "carbs": 46,
-    "fats": 18,
-    "label": "~490 cal/serving · 36g protein · 2g fiber (est.)"
+    "calories": 407,
+    "protein": 50,
+    "carbs": 3,
+    "fats": 20,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": true,
+      "performanceMeal": true
+    }
   },
   "heroImage": "/images/hall-expansion/malaysian-laksa-soup.jpg",
   "heroImageAlt": "Malaysian Laksa Soup — crew-sized firehall meal",

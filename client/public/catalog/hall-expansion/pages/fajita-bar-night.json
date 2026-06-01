@@ -8,15 +8,15 @@
   "category": "hall_expansion",
   "cuisine": "mexican",
   "description": "Chicken strips and peppers are seared with fajita seasoning on a hot griddle, then served on cast-iron platters with tortillas, guacamole, sour cream, cheese, and salsa. Crew builds their own fajitas or burrito bowls.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 20,
   "prepTime": 30,
   "difficulty": "easy",
-  "calories": 450,
-  "protein": 38,
-  "carbs": 32,
-  "fats": 18,
+  "calories": 832,
+  "protein": 72,
+  "carbs": 53,
+  "fats": 36,
   "tags": [
     "protein:chicken",
     "format:bar_line",
@@ -39,65 +39,65 @@
   "ingredients": [
     {
       "name": "chicken breast",
-      "quantity": "4",
+      "quantity": "3.2",
       "unit": "lb",
       "notes": "thin-sliced",
       "group": "Main"
     },
     {
       "name": "bell peppers",
-      "quantity": "4",
+      "quantity": "3",
       "unit": "whole",
       "notes": "mixed colors, sliced",
       "group": "Veg"
     },
     {
       "name": "yellow onions",
-      "quantity": "3",
+      "quantity": "2",
       "unit": "whole",
       "notes": "sliced",
       "group": "Veg"
     },
     {
       "name": "fajita seasoning",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp",
       "group": "Seasoning"
     },
     {
       "name": "lime juice",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp",
       "group": "Marinade"
     },
     {
       "name": "olive oil",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp",
       "group": "Cook"
     },
     {
       "name": "flour tortillas",
-      "quantity": "20",
+      "quantity": "16",
       "unit": "whole",
       "notes": "warm",
       "group": "Bar"
     },
     {
       "name": "shredded cheddar",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "cups",
       "group": "Bar"
     },
     {
       "name": "sour cream",
-      "quantity": "1.5",
+      "quantity": "1 1/4",
       "unit": "cups",
       "group": "Bar"
     },
     {
       "name": "guacamole",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "cups",
       "group": "Bar"
     }
@@ -106,7 +106,7 @@
     {
       "stepNumber": 1,
       "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Fajita Bar Night in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Double-check seasoning after scaling — crew palates run salty after long shifts, so taste the first portion before opening the line.",
+      "instruction": "Line up every ingredient for Fajita Bar Night in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Double-check seasoning after scaling — crew palates run salty after long shifts, so taste the first portion before opening the line. Use shredded cheddar as listed — measure each before heat goes on.",
       "minutes": 12,
       "heatLevel": ""
     },
@@ -206,11 +206,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 450,
-    "protein": 38,
-    "carbs": 32,
-    "fats": 18,
-    "label": "~450 cal/serving · 38g protein · 4g fiber (est.)"
+    "calories": 832,
+    "protein": 72,
+    "carbs": 53,
+    "fats": 36,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/hall-expansion/fajita-bar-night.jpg",
   "heroImageAlt": "Fajita Bar Night — crew-sized firehall meal",

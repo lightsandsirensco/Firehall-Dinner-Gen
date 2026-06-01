@@ -8,15 +8,15 @@
   "category": "hall_expansion",
   "cuisine": "canadian",
   "description": "Ground pork and beef simmer with onion, potato, and warm spices until rich and fragrant, then bake inside flaky double-crust pies. Cut into hearty wedges and serve with ketchup and cranberry sauce at the line.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 55,
   "prepTime": 40,
   "difficulty": "medium",
-  "calories": 580,
-  "protein": 28,
-  "carbs": 42,
-  "fats": 34,
+  "calories": 153,
+  "protein": 13,
+  "carbs": 9,
+  "fats": 8,
   "tags": [
     "protein:pork",
     "format:bake",
@@ -39,13 +39,13 @@
   "ingredients": [
     {
       "name": "ground pork",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "lb",
       "group": "Filling"
     },
     {
       "name": "ground beef",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "lb",
       "group": "Filling"
     },
@@ -58,52 +58,52 @@
     },
     {
       "name": "russet potato",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "large",
       "notes": "finely diced",
       "group": "Filling"
     },
     {
       "name": "garlic cloves",
-      "quantity": "4",
+      "quantity": "3",
       "unit": "cloves",
       "notes": "minced",
       "group": "Filling"
     },
     {
       "name": "ground cinnamon",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tsp",
       "group": "Spice"
     },
     {
       "name": "ground cloves",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "tsp",
       "group": "Spice"
     },
     {
       "name": "dried sage",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tsp",
       "group": "Spice"
     },
     {
       "name": "pie crust",
-      "quantity": "4",
+      "quantity": "3.2",
       "unit": "sheets",
       "notes": "store-bought or homemade",
       "group": "Crust"
     },
     {
       "name": "beef broth",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "cup",
       "group": "Filling"
     },
     {
       "name": "egg",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "whole",
       "notes": "for egg wash",
       "group": "Finish"
@@ -127,7 +127,7 @@
     {
       "stepNumber": 3,
       "title": "Brown the meat",
-      "instruction": "Cook pork and beef in a large skillet over medium-high heat, breaking up clumps until browned. Drain excess fat, leaving about 2 tablespoons in the pan.",
+      "instruction": "Cook pork and beef in a large skillet over medium-high heat, breaking up clumps until browned. Drain excess fat, leaving about 2 tablespoons in the pan. Target 145°F with a 3-minute rest at the thickest point before moving to the next batch.",
       "minutes": 12,
       "heatLevel": ""
     },
@@ -206,11 +206,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 580,
-    "protein": 28,
-    "carbs": 42,
-    "fats": 34,
-    "label": "~580 cal/serving · 28g protein · 2g fiber (est.)"
+    "calories": 153,
+    "protein": 13,
+    "carbs": 9,
+    "fats": 8,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/hall-expansion/tourtiere-for-the-crew.jpg",
   "heroImageAlt": "Tourtière for the Crew — crew-sized firehall meal",

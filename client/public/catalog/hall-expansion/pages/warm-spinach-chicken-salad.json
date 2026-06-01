@@ -13,10 +13,10 @@
   "cookTime": 35,
   "prepTime": 25,
   "difficulty": "easy",
-  "calories": 380,
-  "protein": 34,
-  "carbs": 8,
-  "fats": 24,
+  "calories": 487,
+  "protein": 67,
+  "carbs": 7,
+  "fats": 21,
   "tags": [
     "protein:chicken",
     "format:salad",
@@ -105,7 +105,7 @@
     {
       "stepNumber": 1,
       "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Warm Spinach Chicken Salad in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "instruction": "Line up every ingredient for Warm Spinach Chicken Salad in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use hard-boiled eggs as listed — measure each before heat goes on.",
       "minutes": 12,
       "heatLevel": ""
     },
@@ -133,7 +133,7 @@
     {
       "stepNumber": 5,
       "title": "Build warm vinaigrette",
-      "instruction": "Whisk vinegar, mustard, and shallot into warm bacon fat off heat. Crumble half the bacon into the dressing. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Whisk vinegar, mustard, and shallot into warm bacon fat off heat. Crumble half the bacon into the dressing. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
       "minutes": 5,
       "heatLevel": ""
     },
@@ -160,7 +160,7 @@
     },
     {
       "stepNumber": 9,
-      "title": "Plate and serve",
+      "title": "portion and serve",
       "instruction": "Top wilted spinach with sliced chicken, mushrooms, egg quarters, and remaining bacon crumbles. Serve immediately. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 5,
       "heatLevel": ""
@@ -184,14 +184,28 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 380,
-    "protein": 34,
-    "carbs": 8,
-    "fats": 24,
-    "label": "~380 cal/serving · 34g protein · 4g fiber (est.)"
+    "calories": 487,
+    "protein": 67,
+    "carbs": 7,
+    "fats": 21,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": true
+    }
   },
   "heroImage": "/images/hall-expansion/warm-spinach-chicken-salad.jpg",
-  "heroImageAlt": "Warm Spinach Chicken Salad — crew-sized firehall meal",
+  "heroImageAlt": "Warm Spinach Chicken Salad — wide family-style firehall platter showing chicken, spinach on a crew prep table",
   "mobileImage": "/images/mobile/hall-expansion/warm-spinach-chicken-salad.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/warm-spinach-chicken-salad.jpg",
   "railImage": "/images/rails/hall-expansion/warm-spinach-chicken-salad.jpg",

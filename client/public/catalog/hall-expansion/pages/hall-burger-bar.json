@@ -8,15 +8,15 @@
   "category": "hall_expansion",
   "cuisine": "american",
   "description": "Beef balls are smashed on a hot griddle into thin crispy patties, then served with toasted buns and a full toppings bar—lettuce, tomato, onion, pickles, bacon, and multiple cheeses. Crew assembles at the line.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 20,
   "prepTime": 25,
   "difficulty": "easy",
-  "calories": 620,
-  "protein": 34,
-  "carbs": 36,
-  "fats": 38,
+  "calories": 861,
+  "protein": 63,
+  "carbs": 39,
+  "fats": 51,
   "tags": [
     "protein:beef",
     "format:bar_line",
@@ -39,39 +39,39 @@
   "ingredients": [
     {
       "name": "ground beef (80/20)",
-      "quantity": "3",
+      "quantity": "2.4",
       "unit": "lb",
       "group": "Main"
     },
     {
       "name": "burger buns",
-      "quantity": "12",
+      "quantity": "10",
       "unit": "whole",
       "notes": "extra for doubles",
       "group": "Bar"
     },
     {
       "name": "American cheese",
-      "quantity": "12",
+      "quantity": "10",
       "unit": "slices",
       "group": "Bar"
     },
     {
       "name": "bacon",
-      "quantity": "1.5",
+      "quantity": "1 1/4",
       "unit": "lb",
       "group": "Bar"
     },
     {
       "name": "iceberg lettuce",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "head",
       "notes": "shredded",
       "group": "Bar"
     },
     {
       "name": "beefsteak tomatoes",
-      "quantity": "4",
+      "quantity": "3",
       "unit": "whole",
       "notes": "sliced",
       "group": "Bar"
@@ -85,19 +85,19 @@
     },
     {
       "name": "dill pickle chips",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "cups",
       "group": "Bar"
     },
     {
       "name": "ketchup and mustard",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "cup each",
       "group": "Bar"
     },
     {
       "name": "kosher salt",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "group": "Seasoning"
     }
@@ -106,7 +106,7 @@
     {
       "stepNumber": 1,
       "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Hall Burger Bar in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "instruction": "Line up every ingredient for Hall Burger Bar in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use iceberg lettuce, beefsteak tomatoes, red onion, dill pickle chips as listed — measure each before heat goes on. Use ketchup and mustard as listed — measure each before heat goes on.",
       "minutes": 12,
       "heatLevel": ""
     },
@@ -120,7 +120,7 @@
     {
       "stepNumber": 3,
       "title": "Prep toppings and bacon",
-      "instruction": "Cook bacon on a wire rack at 400°F until crisp, about 18 minutes. Slice and arrange all burger bar toppings in labeled hotel pans while bacon cooks. Target oven/smoker temperature: 400°F.",
+      "instruction": "Cook bacon on a wire rack at 400°F until crisp, about 18 minutes. Slice and arrange all burger bar toppings in labeled hotel pans while bacon cooks. Target oven/smoker temperature: 400°F. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
       "minutes": 20,
       "heatLevel": ""
     },
@@ -185,11 +185,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 620,
-    "protein": 34,
-    "carbs": 36,
-    "fats": 38,
-    "label": "~620 cal/serving · 34g protein · 2g fiber (est.)"
+    "calories": 861,
+    "protein": 63,
+    "carbs": 39,
+    "fats": 51,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/hall-expansion/hall-burger-bar.jpg",
   "heroImageAlt": "Hall Burger Bar — crew-sized firehall meal",

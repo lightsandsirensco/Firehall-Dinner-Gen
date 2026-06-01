@@ -13,10 +13,10 @@
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 329,
-  "protein": 17,
-  "carbs": 60,
-  "fats": 3,
+  "calories": 248,
+  "protein": 10,
+  "carbs": 33,
+  "fats": 9,
   "tags": [
     "protein:vegetarian",
     "format:bowl",
@@ -126,17 +126,17 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 329,
-    "protein": 17,
-    "carbs": 60,
-    "fats": 3,
+    "calories": 248,
+    "protein": 10,
+    "carbs": 33,
+    "fats": 9,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
       "under30gFat": true,
-      "highCarb": true,
+      "highCarb": false,
       "lowCarb": false,
       "mealPrepFriendly": false
     },
@@ -173,6 +173,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-30T23:27:14.549Z",
+  "generatedAt": "2026-06-01T01:40:02.098Z",
   "contentVersion": 2
 }

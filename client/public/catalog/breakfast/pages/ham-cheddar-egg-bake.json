@@ -1,0 +1,136 @@
+{
+  "slug": "ham-cheddar-egg-bake",
+  "title": "Ham & Cheddar Egg Bake",
+  "subtitle": "Ham, cheddar, and eggs baked for easy portioning.",
+  "description": "Diced ham and cheddar baked into a custardy egg base — slice into squares and hold warm for crews eating in shifts.",
+  "filters": [
+    "feed_a_crew",
+    "high_protein"
+  ],
+  "tags": [
+    "egg-bake",
+    "ham",
+    "cheddar",
+    "9x13"
+  ],
+  "crewSize": 8,
+  "baseServings": 8,
+  "prepTime": 18,
+  "cookTime": 38,
+  "totalTime": 56,
+  "difficulty": "easy",
+  "ingredients": [
+    {
+      "name": "large eggs",
+      "quantity": "11"
+    },
+    {
+      "name": "whole milk",
+      "quantity": "2.4",
+      "notes": "or half-and-half for richer"
+    },
+    {
+      "name": "turkey sausage or lean pork sausage",
+      "quantity": "2",
+      "notes": "browned"
+    },
+    {
+      "name": "onion",
+      "quantity": "3/4",
+      "notes": "diced"
+    },
+    {
+      "name": "baby spinach",
+      "quantity": "6.4",
+      "notes": "or chopped kale, sautéed and squeezed dry"
+    },
+    {
+      "name": "shredded cheese",
+      "quantity": "2.4",
+      "notes": "cheddar + mozzarella works well"
+    },
+    {
+      "name": "loaf day-old bread",
+      "quantity": "3/4",
+      "notes": "cubed (optional), turns it into a strata",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Heat the oven",
+      "instruction": "Heat oven to 375°F. Grease a deep 9x13 pan. If using bread cubes, toast them 6–8 minutes so the bake doesn’t go soggy.",
+      "minutes": 0,
+      "tempF": 375
+    },
+    {
+      "stepNumber": 2,
+      "title": "Build the pan",
+      "instruction": "Spread sausage, onion, and spinach in the pan. Add half the cheese. (If using bread cubes, fold them through now.)",
+      "minutes": 10
+    },
+    {
+      "stepNumber": 3,
+      "title": "Egg mix",
+      "instruction": "Whisk eggs with milk, salt, pepper, and a pinch of paprika. Pour evenly. Top with remaining cheese.",
+      "minutes": 5
+    },
+    {
+      "stepNumber": 4,
+      "title": "Bake to set",
+      "instruction": "Bake until the center is set and the edges are browned. If it jiggles like loose custard, give it 5 more minutes.",
+      "minutes": 35,
+      "tempF": 375
+    },
+    {
+      "stepNumber": 5,
+      "title": "Rest for clean slices",
+      "instruction": "Rest 10 minutes so slices hold for the line. Cut into squares; hold warm covered.",
+      "minutes": 10
+    }
+  ],
+  "nutrition": {
+    "calories": 304,
+    "protein": 25,
+    "carbs": 6,
+    "fat": 20,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": false
+    }
+  },
+  "stationWorkflow": [
+    "Assign one cook to the hot surface and one to assembly. Keep the line moving; don’t crowd the griddle.",
+    "Set a warm holding zone (oven 200°F or covered hotel pan) so staggered eaters still get a hot plate.",
+    "Run a quick call-proof check: anything crispy stays uncovered; anything soft stays covered."
+  ],
+  "cleanupNotes": [
+    "While plates are served, scrape the griddle/pan and wipe with a damp towel (use tongs + folded towel).",
+    "Soak the mixing bowl and sheet pan immediately—breakfast starch sets fast when it cools."
+  ],
+  "leftovers": [
+    "Cool fast: spread on a sheet pan 10 minutes, then portion into containers so it doesn’t sweat.",
+    "Reheat rule: eggs reheat best covered at 50% power or low oven heat; don’t nuke on high."
+  ],
+  "heroImage": "/images/breakfast/ham-cheddar-egg-bake.jpg",
+  "thumbImage": "/images/thumbs/breakfast/ham-cheddar-egg-bake.jpg",
+  "imageAlt": "Warm station-kitchen breakfast: Ham & Cheddar Egg Bake",
+  "publishedAt": "2026-05-31T18:33:00.830Z",
+  "updatedAt": "2026-05-31T18:34:15.374Z",
+  "readMinutes": 6,
+  "seoTitle": "Ham & Cheddar Egg Bake | Firehall Breakfast",
+  "collectionTier": "firehall_classic",
+  "heroImageAlt": "Ham & Cheddar Egg Bake — wide family-style firehall platter showing cheddar egg bake on a crew prep table"
+}

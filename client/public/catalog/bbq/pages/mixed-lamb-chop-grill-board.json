@@ -8,8 +8,8 @@
   "category": "bbq_grill_nights",
   "cuisine": "mediterranean",
   "description": "Lamb loin and shoulder chops get rosemary-garlic rub, grill to 135°F, and arrange on a board with charred lemon, olives, and whipped feta.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 25,
   "prepTime": 35,
   "difficulty": "medium",
@@ -39,64 +39,64 @@
   "ingredients": [
     {
       "name": "lamb loin chops",
-      "quantity": "10",
+      "quantity": "8",
       "unit": "pieces",
       "notes": "about 3 lb",
       "group": "Main"
     },
     {
       "name": "lamb shoulder chops",
-      "quantity": "10",
+      "quantity": "8",
       "unit": "pieces",
       "notes": "about 3 lb",
       "group": "Main"
     },
     {
       "name": "za'atar",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp",
       "group": "Rub"
     },
     {
       "name": "sumac",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "group": "Rub"
     },
     {
       "name": "pomegranate molasses",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp",
       "group": "Rub"
     },
     {
       "name": "labneh",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "cups",
       "group": "Board"
     },
     {
       "name": "pickled turnips",
-      "quantity": "1.5",
+      "quantity": "1 1/4",
       "unit": "cups",
       "group": "Board"
     },
     {
       "name": "fresh mint",
-      "quantity": "0.33",
+      "quantity": "1/4",
       "unit": "cup",
       "notes": "chopped",
       "group": "Board"
     },
     {
       "name": "grilled pita wedges",
-      "quantity": "12",
+      "quantity": "9.6",
       "unit": "pieces",
       "group": "Service"
     },
     {
       "name": "Aleppo pepper",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tsp",
       "group": "Finish"
     }
@@ -105,7 +105,7 @@
     {
       "stepNumber": 1,
       "title": "Rub lamb chops",
-      "instruction": "Combine rosemary, garlic, olive oil, lemon zest, and salt. Rub all chops and rest 1 hour at room temp. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Combine rosemary, garlic, olive oil, lemon zest, and salt. Rub all chops and rest 1 hour at room temp. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Use za'atar, sumac, pomegranate molasses, labneh as listed — measure each before heat goes on. Use pickled turnips, fresh mint, grilled pita wedges, Aleppo pepper as listed — measure each before heat goes on. Target 165°F at the thickest point before moving to the next batch.",
       "minutes": 15,
       "heatLevel": ""
     },
@@ -154,7 +154,7 @@
     {
       "stepNumber": 8,
       "title": "Board for ten",
-      "instruction": "Arrange mixed chops on board with whipped feta, olives, and charred lemon. Two chops per firefighter. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Arrange mixed chops on board with whipped feta, olives, and charred lemon. Two chops per firefighter. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
       "minutes": 5,
       "heatLevel": ""
     }
@@ -210,6 +210,6 @@
     "brisket-style-beef-sandwiches-au-jus"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T02:29:42.535Z",
+  "generatedAt": "2026-05-31T23:32:23.206Z",
   "contentVersion": 2
 }

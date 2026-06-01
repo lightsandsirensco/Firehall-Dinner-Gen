@@ -8,15 +8,15 @@
   "category": "hall_expansion",
   "cuisine": "asian-fusion",
   "description": "Steamed rice anchors a build bar with teriyaki chicken, roasted vegetables, edamame, pickled ginger, and sauces. Crew assembles bowls to taste—extra protein, light on sauce, or loaded with crunch.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 35,
   "prepTime": 30,
   "difficulty": "easy",
-  "calories": 490,
-  "protein": 32,
-  "carbs": 58,
-  "fats": 14,
+  "calories": 700,
+  "protein": 64,
+  "carbs": 56,
+  "fats": 23,
   "tags": [
     "protein:chicken",
     "format:bar_line",
@@ -40,65 +40,65 @@
   "ingredients": [
     {
       "name": "jasmine rice",
-      "quantity": "3",
+      "quantity": "2.4",
       "unit": "cups",
       "notes": "dry",
       "group": "Base"
     },
     {
       "name": "chicken thighs",
-      "quantity": "4",
+      "quantity": "3.2",
       "unit": "lb",
       "notes": "boneless",
       "group": "Protein"
     },
     {
       "name": "teriyaki sauce",
-      "quantity": "1.5",
+      "quantity": "1 1/4",
       "unit": "cups",
       "group": "Protein"
     },
     {
       "name": "broccoli florets",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "lb",
       "group": "Veg"
     },
     {
       "name": "carrots",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "lb",
       "notes": "julienned",
       "group": "Veg"
     },
     {
       "name": "edamame",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "cups",
       "notes": "shelled, thawed",
       "group": "Toppings"
     },
     {
       "name": "pickled ginger",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "cup",
       "group": "Toppings"
     },
     {
       "name": "sesame seeds",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "cup",
       "group": "Toppings"
     },
     {
       "name": "sriracha mayo",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "cup",
       "group": "Sauce"
     },
     {
       "name": "soy sauce",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "cup",
       "group": "Sauce"
     }
@@ -207,11 +207,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 490,
-    "protein": 32,
-    "carbs": 58,
-    "fats": 14,
-    "label": "~490 cal/serving · 32g protein · 5g fiber (est.)"
+    "calories": 700,
+    "protein": 64,
+    "carbs": 56,
+    "fats": 23,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/hall-expansion/rice-bowl-bar-night.jpg",
   "heroImageAlt": "Rice Bowl Bar Night — crew-sized firehall meal",

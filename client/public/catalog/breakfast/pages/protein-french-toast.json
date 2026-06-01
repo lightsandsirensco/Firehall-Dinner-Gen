@@ -1,8 +1,8 @@
 {
   "slug": "protein-french-toast",
-  "title": "Crispy Maple Eggs",
+  "title": "Protein French Toast",
   "subtitle": "Cottage cheese and egg batter for a high-protein griddle classic.",
-  "description": "Blended cottage cheese in the custard adds protein without chalky protein powder. Thick-cut bread soaks briefly, griddles to a crisp shell, and serves with berries and maple for a crew that wants comfort food with staying power.",
+  "description": "French toast built with extra protein — egg-heavy batter and Greek yogurt in the mix. Training-day breakfast that still tastes like weekend French toast.",
   "filters": [
     "high_protein",
     "healthy_breakfasts",
@@ -73,59 +73,33 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Crispy Maple Eggs in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
+      "title": "Blend the batter",
+      "instruction": "Blend cottage cheese, eggs, milk, vanilla, cinnamon, and maple until completely smooth—no curds. Pour into a shallow hotel pan for fast dipping.",
+      "minutes": 5
     },
     {
       "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch Eggs. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
+      "title": "Heat the griddle",
+      "instruction": "Heat a large griddle or cast iron over medium. Add butter until foaming but not brown. Work in batches so slices aren't crowded.",
+      "minutes": 3
     },
     {
       "stepNumber": 3,
-      "title": "Blend the batter",
-      "instruction": "Blend cottage cheese, eggs, milk, vanilla, cinnamon, and maple until completely smooth—no curds. Pour into a shallow hotel pan for fast dipping. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 5,
-      "heatLevel": ""
+      "title": "Soak and griddle",
+      "instruction": "Dip bread 3–4 seconds per side—don't oversaturate or centers stay raw. Griddle 3 minutes per side until deep golden and custard sets; adjust heat if browning too fast.",
+      "minutes": 15
     },
     {
       "stepNumber": 4,
-      "title": "Heat the griddle",
-      "instruction": "Heat a large griddle or cast iron over medium. Add butter until foaming but not brown. Work in batches so slices aren't crowded. Cook until char marks are visible and the thickest piece reads 165°F on an instant-read thermometer. Plan about 3 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 3,
-      "heatLevel": ""
+      "title": "Hold warm",
+      "instruction": "Transfer finished slices to a wire rack on a sheet pan in a 200°F oven. Uncovered keeps the crust; cover only if holding longer than 20 minutes.",
+      "minutes": 0
     },
     {
       "stepNumber": 5,
-      "title": "Soak and griddle",
-      "instruction": "Dip bread 3–4 seconds per side—don't oversaturate or centers stay raw. Griddle 3 minutes per side until deep golden and custard sets; adjust heat if browning too fast. Cook until char marks are visible and the thickest piece reads 165°F on an instant-read thermometer. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 15,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 6,
-      "title": "Hold warm",
-      "instruction": "Transfer finished slices to a wire rack on a sheet pan in a 200°F oven. Uncovered keeps the crust; cover only if holding longer than 20 minutes. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 0,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "Plate and serve",
-      "instruction": "Stack two slices per plate, top with berries and a drizzle of maple. Offer Greek yogurt for extra protein without slowing the line. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 5,
-      "heatLevel": ""
+      "title": "portion and serve",
+      "instruction": "Stack two slices per plate, top with berries and a drizzle of maple. Offer Greek yogurt for extra protein without slowing the line.",
+      "minutes": 5
     }
   ],
   "nutrition": {
@@ -165,27 +139,9 @@
   "heroImage": "/images/breakfast/protein-french-toast.jpg",
   "thumbImage": "/images/thumbs/breakfast/protein-french-toast.jpg",
   "imageAlt": "Golden protein French toast stacks with fresh berries and maple drizzle",
-  "publishedAt": "2026-05-30T21:22:29.756Z",
-  "updatedAt": "2026-05-31T12:54:36.786Z",
+  "publishedAt": "2026-05-31T18:33:00.829Z",
+  "updatedAt": "2026-05-31T18:34:15.374Z",
   "readMinutes": 7,
   "seoTitle": "Protein French Toast | Firehall Breakfast",
-  "mobileImage": "/images/mobile/breakfast/protein-french-toast.jpg",
-  "railImage": "/images/rails/breakfast/protein-french-toast.jpg",
-  "proTips": [
-    "Blend batter first and keep the dip pan shallow so slices don't over-soak during rush assembly.",
-    "One cook griddles while another plates berries and maple—sync batches to two slices per firefighter.",
-    "Use a wire rack for holding; stacking hot French toast steams the crust soft before service."
-  ],
-  "tonightSpread": [
-    "Plate Crispy Maple Eggs with sides in separate pans so the crew can mix portions.",
-    "Keep hot items on one side of the table and cold on the other — eggs stay hot, fruit stays cold.",
-    "Line up Crispy Maple Eggs on the main counter with serving spoons — firefighters grab fast between calls.",
-    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
-  ],
-  "equipment": [
-    "Large sheet trays",
-    "Instant-read thermometer",
-    "Aluminum foil"
-  ],
-  "mealPrepNotes": "Prep mise en place before the shift — Crispy Maple Eggs runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
+  "collectionTier": "performance"
 }

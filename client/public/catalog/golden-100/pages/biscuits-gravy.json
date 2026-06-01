@@ -13,10 +13,10 @@
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 1359,
-  "protein": 19,
+  "calories": 545,
+  "protein": 18,
   "carbs": 14,
-  "fats": 90,
+  "fats": 46,
   "tags": [
     "protein:pork",
     "format:breakfast",
@@ -117,15 +117,15 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1359,
-    "protein": 19,
+    "calories": 545,
+    "protein": 18,
     "carbs": 14,
-    "fats": 90,
+    "fats": 46,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
       "highProtein": false,
-      "under700Calories": false,
+      "under700Calories": true,
       "under30gFat": false,
       "highCarb": false,
       "lowCarb": true,
@@ -164,6 +164,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-30T23:27:14.595Z",
+  "generatedAt": "2026-06-01T01:40:02.152Z",
   "contentVersion": 2
 }

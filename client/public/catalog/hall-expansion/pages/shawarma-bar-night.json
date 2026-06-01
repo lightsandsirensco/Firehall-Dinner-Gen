@@ -8,15 +8,15 @@
   "category": "hall_expansion",
   "cuisine": "middle-eastern",
   "description": "Marinated chicken thighs roast on sheet pans with shawarma spices, then slice thin for a build bar with flatbread, tahini, pickles, tomatoes, and onions. Each crew member assembles their own wrap at the line.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 35,
   "prepTime": 35,
   "difficulty": "medium",
-  "calories": 480,
-  "protein": 36,
-  "carbs": 38,
-  "fats": 20,
+  "calories": 444,
+  "protein": 71,
+  "carbs": 2,
+  "fats": 15,
   "tags": [
     "protein:chicken",
     "format:bar_line",
@@ -39,62 +39,62 @@
   "ingredients": [
     {
       "name": "boneless chicken thighs",
-      "quantity": "5",
+      "quantity": "4",
       "unit": "lb",
       "group": "Main"
     },
     {
       "name": "olive oil",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "cup",
       "group": "Marinade"
     },
     {
       "name": "lemon juice",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "cup",
       "group": "Marinade"
     },
     {
       "name": "ground cumin",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "group": "Spice"
     },
     {
       "name": "smoked paprika",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "group": "Spice"
     },
     {
       "name": "ground turmeric",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tsp",
       "group": "Spice"
     },
     {
       "name": "garlic cloves",
-      "quantity": "6",
+      "quantity": "5",
       "unit": "cloves",
       "notes": "minced",
       "group": "Marinade"
     },
     {
       "name": "pita or flatbread",
-      "quantity": "15",
+      "quantity": "12",
       "unit": "pieces",
       "group": "Bar"
     },
     {
       "name": "tahini sauce",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "cups",
       "group": "Bar"
     },
     {
       "name": "pickled turnips",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "cups",
       "group": "Bar"
     }
@@ -103,7 +103,7 @@
     {
       "stepNumber": 1,
       "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Shawarma Bar Night in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Double-check seasoning after scaling — crew palates run salty after long shifts, so taste the first portion before opening the line.",
+      "instruction": "Line up every ingredient for Shawarma Bar Night in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Double-check seasoning after scaling — crew palates run salty after long shifts, so taste the first portion before opening the line. Use pickled turnips as listed — measure each before heat goes on.",
       "minutes": 12,
       "heatLevel": ""
     },
@@ -203,11 +203,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 480,
-    "protein": 36,
-    "carbs": 38,
-    "fats": 20,
-    "label": "~480 cal/serving · 36g protein · 4g fiber (est.)"
+    "calories": 444,
+    "protein": 71,
+    "carbs": 2,
+    "fats": 15,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": true,
+      "performanceMeal": true
+    }
   },
   "heroImage": "/images/hall-expansion/shawarma-bar-night.jpg",
   "heroImageAlt": "Shawarma Bar Night — crew-sized firehall meal",

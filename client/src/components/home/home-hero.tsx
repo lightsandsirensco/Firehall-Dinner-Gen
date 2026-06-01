@@ -14,7 +14,7 @@ export function HomeHero() {
     <section
       className={cn(
         "relative w-full overflow-hidden bg-black",
-        "min-h-[min(68dvh,560px)] sm:min-h-[min(72vh,620px)] lg:min-h-[min(70vh,680px)]",
+        "min-h-[min(56dvh,480px)] sm:min-h-[min(68dvh,560px)] lg:min-h-[min(70vh,680px)]",
         "flex flex-col justify-end",
       )}
       data-testid="home-hero"
@@ -71,6 +71,17 @@ export function HomeHero() {
           {HOME.heroSubheadline}
         </p>
 
+        <p
+          className={cn(
+            "mt-2 text-sm text-foreground/75 leading-snug",
+            "max-w-[32ch] sm:max-w-md",
+            "drop-shadow-[0_1px_10px_rgba(0,0,0,0.65)]",
+          )}
+          data-testid="home-hero-action-line"
+        >
+          {HOME.heroActionLine}
+        </p>
+
         <div className="mt-6 sm:mt-8 flex flex-col gap-3 w-full max-w-md">
           <Button
             asChild
@@ -98,7 +109,7 @@ export function HomeHero() {
               "hover:bg-foreground/[0.06] transition-[transform,background] duration-200",
             )}
           >
-            <Link href="/classics-wheel" data-testid="home-cta-wheel">
+            <Link href="/wheel" data-testid="home-cta-wheel">
               {CTA.spinMealWheel}
             </Link>
           </Button>

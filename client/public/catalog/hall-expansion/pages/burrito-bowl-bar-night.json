@@ -8,15 +8,15 @@
   "category": "hall_expansion",
   "cuisine": "mexican",
   "description": "Slow-roasted carnitas, cilantro-lime rice, black beans, corn salsa, and classic burrito toppings fill a build bar. Crew assembles bowls or burritos with as much or as little heat as they want.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 180,
   "prepTime": 35,
   "difficulty": "medium",
-  "calories": 540,
-  "protein": 32,
-  "carbs": 52,
-  "fats": 22,
+  "calories": 883,
+  "protein": 74,
+  "carbs": 47,
+  "fats": 44,
   "tags": [
     "protein:pork",
     "format:bar_line",
@@ -40,64 +40,64 @@
   "ingredients": [
     {
       "name": "pork shoulder",
-      "quantity": "5",
+      "quantity": "4",
       "unit": "lb",
       "notes": "cubed",
       "group": "Main"
     },
     {
       "name": "orange juice",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "cup",
       "group": "Carnitas"
     },
     {
       "name": "lime juice",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "cup",
       "group": "Carnitas"
     },
     {
       "name": "cumin",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "group": "Spice"
     },
     {
       "name": "cilantro-lime rice",
-      "quantity": "8",
+      "quantity": "6.4",
       "unit": "cups",
       "notes": "cooked",
       "group": "Base"
     },
     {
       "name": "black beans",
-      "quantity": "3",
+      "quantity": "2.4",
       "unit": "cups",
       "notes": "seasoned",
       "group": "Bar"
     },
     {
       "name": "corn salsa",
-      "quantity": "3",
+      "quantity": "2.4",
       "unit": "cups",
       "group": "Bar"
     },
     {
       "name": "shredded lettuce",
-      "quantity": "4",
+      "quantity": "3.2",
       "unit": "cups",
       "group": "Bar"
     },
     {
       "name": "shredded cheese",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "cups",
       "group": "Bar"
     },
     {
       "name": "flour tortillas",
-      "quantity": "12",
+      "quantity": "10",
       "unit": "whole",
       "notes": "optional wraps",
       "group": "Bar"
@@ -198,7 +198,7 @@
   ],
   "proTips": [
     "A spoon of carnitas fat crisped in the pan before broiling adds authentic flavor.",
-    "Pickled red onions as a topping cut richness and elevate the whole bar.",
+    "Pickled red onions as a topping cut richness and the whole bar.",
     "Offer half-rice/half-lettuce base for anyone avoiding heavy carb loads."
   ],
   "tonightSpread": [
@@ -214,11 +214,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 540,
-    "protein": 32,
-    "carbs": 52,
-    "fats": 22,
-    "label": "~540 cal/serving · 32g protein · 8g fiber (est.)"
+    "calories": 883,
+    "protein": 74,
+    "carbs": 47,
+    "fats": 44,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/hall-expansion/burrito-bowl-bar-night.jpg",
   "heroImageAlt": "Burrito Bowl Bar Night — crew-sized firehall meal",

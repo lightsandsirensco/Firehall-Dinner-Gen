@@ -1,8 +1,8 @@
 {
   "slug": "protein-pancake-tray",
-  "title": "Crispy Honey Chili Eggs",
-  "subtitle": "A practical station breakfast that scales from 4 to 12.",
-  "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+  "title": "Protein Pancake Tray",
+  "subtitle": "Protein-forward pancakes for training-day mornings.",
+  "description": "Pancakes boosted with Greek yogurt or protein powder, griddled in batches and held warm. For crews who want muscle fuel without skipping breakfast.",
   "filters": [
     "feed_a_crew",
     "high_protein"
@@ -12,8 +12,8 @@
     "tray-bake",
     "make-ahead"
   ],
-  "crewSize": 12,
-  "baseServings": 12,
+  "crewSize": 8,
+  "baseServings": 8,
   "prepTime": 15,
   "cookTime": 22,
   "totalTime": 37,
@@ -21,35 +21,35 @@
   "ingredients": [
     {
       "name": "complete pancake mix",
-      "quantity": "8 cups",
+      "quantity": "5.3",
       "notes": "or from-scratch dry mix"
     },
     {
       "name": "whole milk",
-      "quantity": "6 cups"
-    },
-    {
-      "name": "large eggs",
       "quantity": "4"
     },
     {
+      "name": "large eggs",
+      "quantity": "3"
+    },
+    {
       "name": "melted butter",
-      "quantity": "1/4 cup",
+      "quantity": "1/8",
       "notes": "plus more for the griddle"
     },
     {
       "name": "sugar",
-      "quantity": "2 tbsp",
+      "quantity": "1.3",
       "optional": true
     },
     {
       "name": "vanilla extract",
-      "quantity": "1 tsp",
+      "quantity": "5/8",
       "optional": true
     },
     {
       "name": "Greek yogurt or protein powder",
-      "quantity": "1 cup",
+      "quantity": "5/8",
       "notes": "for protein tray version",
       "optional": true
     }
@@ -57,73 +57,41 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Crispy Honey Chili Eggs in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
+      "title": "Mix the batter",
+      "instruction": "Whisk mix, milk, eggs, and melted butter until smooth. Rest 5 minutes so bubbles settle—don't over-mix.",
+      "minutes": 5
     },
     {
       "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch Eggs. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
+      "title": "Heat the griddle",
+      "instruction": "Heat griddle or large skillet to medium. Lightly butter between batches.",
+      "minutes": 3
     },
     {
       "stepNumber": 3,
-      "title": "Mix the batter",
-      "instruction": "Whisk mix, milk, eggs, and melted butter until smooth. Rest 5 minutes so bubbles settle—don't over-mix. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 5,
-      "heatLevel": ""
+      "title": "Cook in batches",
+      "instruction": "Pour 1/3-cup scoops. Flip when bubbles set at the edges and bottoms are golden. Hold finished pancakes on a sheet pan in a 200°F oven.",
+      "minutes": 17
     },
     {
       "stepNumber": 4,
-      "title": "Heat the griddle",
-      "instruction": "Heat griddle or large skillet to medium. Lightly butter between batches. Cook until char marks are visible and the thickest piece reads 165°F on an instant-read thermometer. Plan about 3 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 3,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 5,
-      "title": "Cook in batches",
-      "instruction": "Pour 1/3-cup scoops. Flip when bubbles set at the edges and bottoms are golden. Hold finished pancakes on a sheet pan in a 200°F oven. Plan about 17 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 17,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 6,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 7,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 8,
       "title": "Serve the stack",
-      "instruction": "Serve with syrup and butter. For the protein tray, add yogurt on the side. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 0,
-      "heatLevel": ""
+      "instruction": "Serve with syrup and butter. For the protein tray, add yogurt on the side.",
+      "minutes": 0
     }
   ],
   "nutrition": {
-    "calories": 412,
-    "protein": 13,
-    "carbs": 62,
-    "fat": 13,
+    "calories": 300,
+    "protein": 9,
+    "carbs": 49,
+    "fat": 7,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
       "under30gFat": true,
-      "highCarb": true,
+      "highCarb": false,
       "lowCarb": false,
       "mealPrepFriendly": true
     },
@@ -149,27 +117,9 @@
   "heroImage": "/images/breakfast/protein-pancake-tray.jpg",
   "thumbImage": "/images/thumbs/breakfast/protein-pancake-tray.jpg",
   "imageAlt": "Warm station-kitchen breakfast: Protein Pancake Tray",
-  "publishedAt": "2026-05-30T21:22:29.758Z",
-  "updatedAt": "2026-05-31T12:54:36.787Z",
+  "publishedAt": "2026-05-31T18:33:00.830Z",
+  "updatedAt": "2026-05-31T18:34:15.374Z",
   "readMinutes": 6,
   "seoTitle": "Protein Pancake Tray | Firehall Breakfast",
-  "mobileImage": "/images/mobile/breakfast/protein-pancake-tray.jpg",
-  "railImage": "/images/rails/breakfast/protein-pancake-tray.jpg",
-  "proTips": [
-    "Assign one cook to the hot surface and one to assembly. Keep the line moving; don’t crowd the griddle.",
-    "Set a warm holding zone (oven 200°F or covered hotel pan) so staggered eaters still get a hot plate.",
-    "Run a quick call-proof check: anything crispy stays uncovered; anything soft stays covered."
-  ],
-  "tonightSpread": [
-    "Plate Crispy Honey Chili Eggs with sides in separate pans so the crew can mix portions.",
-    "Keep hot items on one side of the table and cold on the other — eggs stay hot, fruit stays cold.",
-    "Line up Crispy Honey Chili Eggs on the main counter with serving spoons — firefighters grab fast between calls.",
-    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
-  ],
-  "equipment": [
-    "Large sheet trays",
-    "Instant-read thermometer",
-    "Aluminum foil"
-  ],
-  "mealPrepNotes": "Prep mise en place before the shift — Crispy Honey Chili Eggs runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
+  "collectionTier": "performance"
 }

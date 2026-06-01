@@ -98,11 +98,12 @@ export function loadTrustAuditTargets(collections?: Set<TrustAuditCollection>): 
       targets.push({
         collection: "golden_100",
         slug,
-        title: def.title,
+        title: String(page?.title || page?.displayTitle || def.title),
         protein: def.protein,
         mealFormat: def.mealFormat,
         cuisine: def.cuisine,
         heroImage: goldenPageImageSet(slug).heroImage,
+        heroAlt: page?.heroImageAlt ? String(page.heroImageAlt) : undefined,
         ingredients: ingredientsFromPage(page),
         tonightSpread: spreadFromPage(page),
       });
@@ -115,11 +116,12 @@ export function loadTrustAuditTargets(collections?: Set<TrustAuditCollection>): 
       targets.push({
         collection: "performance_meals",
         slug: r.manifest.slug,
-        title: r.manifest.title,
+        title: String(page?.title || page?.displayTitle || r.manifest.title),
         protein: r.manifest.protein,
         mealFormat: r.manifest.mealFormat,
         cuisine: r.manifest.cuisine,
         heroImage: performancePageImageSet(r.manifest.slug).heroImage,
+        heroAlt: page?.heroImageAlt ? String(page.heroImageAlt) : undefined,
         ingredients: r.ingredients.length ? r.ingredients : ingredientsFromPage(page),
         tonightSpread: r.tonightSpread ?? spreadFromPage(page),
       });
@@ -137,6 +139,7 @@ export function loadTrustAuditTargets(collections?: Set<TrustAuditCollection>): 
         mealFormat: r.mealFormat,
         cuisine: r.category || "american",
         heroImage: hallExpansionPageImageSet(r.slug).heroImage,
+        heroAlt: page?.heroImageAlt ? String(page.heroImageAlt) : undefined,
         ingredients: r.ingredients?.length ? r.ingredients : ingredientsFromPage(page),
         tonightSpread: spreadFromPage(page),
       });
@@ -154,6 +157,7 @@ export function loadTrustAuditTargets(collections?: Set<TrustAuditCollection>): 
         mealFormat: entry.mealFormat || "breakfast",
         cuisine: "american",
         heroImage: `/images/breakfast/${entry.slug}.jpg`,
+        heroAlt: page?.heroImageAlt ? String(page.heroImageAlt) : undefined,
         ingredients: ingredientsFromPage(page),
         tonightSpread: spreadFromPage(page),
       });
@@ -171,6 +175,7 @@ export function loadTrustAuditTargets(collections?: Set<TrustAuditCollection>): 
         mealFormat: def.mealFormat,
         cuisine: "italian",
         heroImage: pizzaNightPageImageSet(def.slug).heroImage,
+        heroAlt: page?.heroImageAlt ? String(page.heroImageAlt) : undefined,
         ingredients: ingredientsFromPage(page),
         tonightSpread: spreadFromPage(page),
       });
@@ -179,6 +184,7 @@ export function loadTrustAuditTargets(collections?: Set<TrustAuditCollection>): 
 
   if (include("smoothies")) {
     for (const item of SMOOTHIE_CATALOG_ITEMS) {
+      const page = readJsonPage(`/catalog/smoothies/pages/${item.slug}.json`);
       targets.push({
         collection: "smoothies",
         slug: item.slug,
@@ -187,7 +193,8 @@ export function loadTrustAuditTargets(collections?: Set<TrustAuditCollection>): 
         mealFormat: "smoothie",
         cuisine: "american",
         heroImage: `/images/smoothies/${item.slug}.webp`,
-        ingredients: [],
+        heroAlt: page?.heroImageAlt ? String(page.heroImageAlt) : undefined,
+        ingredients: ingredientsFromPage(page),
         tonightSpread: [],
       });
     }

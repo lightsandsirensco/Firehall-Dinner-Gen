@@ -1,0 +1,126 @@
+{
+  "generatedAt": "2026-05-31T23:46:23.024Z",
+  "crewOptions": [
+    2,
+    4,
+    6,
+    8,
+    10
+  ],
+  "canonicalBase": 8,
+  "recipesAudited": 376,
+  "successfullyScaled": 376,
+  "failures": 0,
+  "edgeCaseRecipes": 3,
+  "quantityFormattingNotes": 3,
+  "failed": [],
+  "edgeCases": [
+    {
+      "slug": "memphis-dry-rub-ribs",
+      "title": "Memphis Dry Rub Ribs",
+      "cases": [
+        "onion_at_2: Onion powder 1 → 3/8 (expected ~1/4 or 1/2)"
+      ]
+    },
+    {
+      "slug": "blackened-cod-taco-night",
+      "title": "Blackened Cod Taco Night",
+      "cases": [
+        "onion_at_2: onion powder 1 → 3/8 (expected ~1/4 or 1/2)"
+      ]
+    },
+    {
+      "slug": "cajun-chicken-rice-bowl",
+      "title": "Cajun Chicken Rice Bowl",
+      "cases": [
+        "onion_at_2: onion powder 1 → 3/8 (expected ~1/4 or 1/2)"
+      ]
+    }
+  ],
+  "sampleScaling": [
+    {
+      "crew": 2,
+      "name": "Ground beef and Italian sausage",
+      "baseQty": "4 lb",
+      "scaledQty": "1 lb",
+      "unit": "lb"
+    },
+    {
+      "crew": 2,
+      "name": "Ground beef",
+      "baseQty": "4 lb",
+      "scaledQty": "1 lb",
+      "unit": "lb"
+    },
+    {
+      "crew": 2,
+      "name": "Boneless chicken breasts or thighs",
+      "baseQty": "4 lb",
+      "scaledQty": "1 lb",
+      "unit": "lb"
+    },
+    {
+      "crew": 2,
+      "name": "Chicken breast",
+      "baseQty": "4 lb",
+      "scaledQty": "1 lb",
+      "unit": "lb"
+    },
+    {
+      "crew": 2,
+      "name": "Boneless chicken breasts, pounded ½ inch",
+      "baseQty": "4 lb",
+      "scaledQty": "1 lb",
+      "unit": "lb"
+    },
+    {
+      "crew": 2,
+      "name": "Ground beef",
+      "baseQty": "4 lb",
+      "scaledQty": "1 lb",
+      "unit": "lb"
+    },
+    {
+      "crew": 2,
+      "name": "Flank steak",
+      "baseQty": "4 lb",
+      "scaledQty": "1 lb",
+      "unit": "lb"
+    },
+    {
+      "crew": 2,
+      "name": "Restaurant-style tortilla chips",
+      "baseQty": "4 lb",
+      "scaledQty": "1 lb",
+      "unit": "lb"
+    },
+    {
+      "crew": 2,
+      "name": "Pork chops or tenderloin",
+      "baseQty": "4 lb",
+      "scaledQty": "1 lb",
+      "unit": "lb"
+    },
+    {
+      "crew": 2,
+      "name": "Bone-in chicken thighs",
+      "baseQty": "4 lb",
+      "scaledQty": "1 lb",
+      "unit": "lb"
+    },
+    {
+      "crew": 2,
+      "name": "Pork chops or tenderloin",
+      "baseQty": "4 lb",
+      "scaledQty": "1 lb",
+      "unit": "lb"
+    },
+    {
+      "crew": 2,
+      "name": "Warm pulled beef or chili",
+      "baseQty": "4 lb",
+      "scaledQty": "1 lb",
+      "unit": "lb"
+    }
+  ]
+}

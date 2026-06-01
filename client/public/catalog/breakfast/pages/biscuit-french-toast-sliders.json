@@ -2,7 +2,7 @@
   "slug": "biscuit-french-toast-sliders",
   "title": "Biscuit French Toast Sliders",
   "subtitle": "Buttermilk biscuits dipped in custard, griddled, and glazed with syrup butter.",
-  "description": "Adapted from classic French toast tradition using Southern buttermilk biscuits for firehall slider service: split biscuits dipped in cinnamon custard, griddled until golden, brushed with maple butter, and served warm for eight.",
+  "description": "Buttermilk biscuits dipped in custard, baked golden, and sandwiched with sausage and maple glaze. Handheld, sweet-savory, and built for a tray on the table.",
   "filters": [
     "feed_a_crew",
     "breakfast_sandwiches",
@@ -86,28 +86,28 @@
     {
       "stepNumber": 3,
       "title": "Mix the custard",
-      "instruction": "Whisk eggs, milk, vanilla, cinnamon, nutmeg, and a pinch of salt until smooth. Pour into a shallow dish wide enough to dip biscuit halves. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Whisk eggs, milk, vanilla, cinnamon, nutmeg, and a pinch of salt until smooth. Pour into a shallow dish wide enough to dip biscuit halves.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 4,
       "title": "Split and dip biscuits",
-      "instruction": "Split biscuits horizontally. Dip cut sides in custard 3 seconds per side—do not soak or they fall apart. Let excess drip off before hitting the griddle. Cook until char marks are visible and the thickest piece reads 165°F on an instant-read thermometer. Plan about 8 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Split biscuits horizontally. Dip cut sides in custard 3 seconds per side—do not soak or they fall apart. Let excess drip off before hitting the griddle.",
       "minutes": 8,
       "heatLevel": ""
     },
     {
       "stepNumber": 5,
       "title": "Griddle until golden",
-      "instruction": "Heat a griddle over medium and melt butter until foaming. Cook dipped biscuit halves cut-side down 3–4 minutes until deep golden, flip, and cook 2–3 minutes more until centers reach 165°F. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Heat a griddle over medium and melt butter until foaming. Cook dipped biscuit halves cut-side down 3–4 minutes until deep golden, flip, and cook 2–3 minutes more until centers reach 165°F.",
       "minutes": 12,
       "heatLevel": ""
     },
     {
       "stepNumber": 6,
       "title": "Glaze and assemble",
-      "instruction": "Brush warm maple butter on the griddle side of each half. Sandwich halves back together so glaze faces out. Hold briefly on the griddle to set the glaze. Cook until char marks are visible and the thickest piece reads 165°F on an instant-read thermometer. Plan about 5 minutes for this step at crew scale. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts.",
+      "instruction": "Brush warm maple butter on the griddle side of each half. Sandwich halves back together so glaze faces out. Hold briefly on the griddle to set the glaze.",
       "minutes": 5,
       "heatLevel": ""
     },
@@ -120,30 +120,44 @@
     },
     {
       "stepNumber": 8,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Portion and open the line",
+      "instruction": "Portion Biscuit French Toast Sliders onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
       "title": "Serve warm",
-      "instruction": "Serve two sliders per plate with optional powdered sugar and berries. Serve immediately while biscuit edges stay crisp and centers are custard-soft. Plan about 3 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Serve two sliders per plate with optional powdered sugar and berries. Serve immediately while biscuit edges stay crisp and centers are custard-soft.",
       "minutes": 3,
       "heatLevel": ""
     }
   ],
   "nutrition": {
-    "calories": 944,
-    "protein": 6,
+    "calories": 227,
+    "protein": 5,
     "carbs": 35,
-    "fat": 89,
+    "fat": 8,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
       "highProtein": false,
-      "under700Calories": false,
-      "under30gFat": false,
+      "under700Calories": true,
+      "under30gFat": true,
       "highCarb": false,
       "lowCarb": false,
-      "mealPrepFriendly": false
+      "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": false,
-      "lighterOption": false,
+      "lighterOption": true,
       "performanceMeal": false
     }
   },
@@ -163,12 +177,11 @@
   "heroImage": "/images/breakfast/biscuit-french-toast-sliders.jpg",
   "thumbImage": "/images/thumbs/breakfast/biscuit-french-toast-sliders.jpg",
   "imageAlt": "Biscuit French toast sliders glazed with maple butter on a griddle",
-  "publishedAt": "2026-05-30T21:22:29.757Z",
-  "updatedAt": "2026-05-31T12:54:36.751Z",
+  "publishedAt": "2026-05-31T18:33:00.830Z",
+  "updatedAt": "2026-05-31T23:49:25.310Z",
   "readMinutes": 6,
   "seoTitle": "Biscuit French Toast Sliders | Firehall Breakfast",
-  "mobileImage": "/images/mobile/breakfast/biscuit-french-toast-sliders.jpg",
-  "railImage": "/images/rails/breakfast/biscuit-french-toast-sliders.jpg",
+  "collectionTier": "firehall_classic",
   "proTips": [
     "Dip and griddle in small batches—soaked biscuits tear if stacked on a holding tray.",
     "Keep maple butter warm in a squeeze bottle for fast glazing at the griddle.",

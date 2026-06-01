@@ -150,6 +150,75 @@ export function titleMatchesIngredients(
   return { ok: true };
 }
 
+/** Title promises a specific dish — ingredients must match (soup/barley/dumpling/chili identity). */
+export function titleMatchesDishIdentity(
+  title: string,
+  ingredients: { item?: string; name?: string; notes?: string }[],
+): { ok: boolean; reason?: string } {
+  const ings = ingredientsText(ingredients.map((i) => ({ item: i.item ?? i.name ?? "", notes: i.notes })));
+  const t = (title || "").toLowerCase();
+
+  if (/\bbarley\b/.test(t) && !/\bbarley\b/.test(ings)) {
+    return { ok: false, reason: "title_barley_missing_barley" };
+  }
+
+  if (/\b(dumpling|dumplings)\b/.test(t)) {
+    const hasDumplingCue =
+      /\b(dumpling|dumplings|drop dumpling|biscuit dough)\b/i.test(ings) ||
+      (/\bflour\b/i.test(ings) && /\bbaking powder\b/i.test(ings));
+    if (!hasDumplingCue) {
+      return { ok: false, reason: "title_dumpling_missing_dumplings" };
+    }
+  }
+
+  if (/\b(soup|stew)\b/.test(t) && !/\b(dumpling|dumplings|barley)\b/.test(t)) {
+    if (/\b(chili powder|kidney beans|black beans|pinto beans)\b/i.test(ings) && !/\bbarley\b/i.test(ings)) {
+      return { ok: false, reason: "title_soup_has_chili_ingredients" };
+    }
+  }
+
+  if (titleClaimsChiliDish(t) && !/\b(chili powder|ancho|chipotle|kidney beans|black beans|pinto beans|crushed tomatoes|diced tomatoes|cannellini|white beans|great northern|green chile|green chili)\b/i.test(ings)) {
+    return { ok: false, reason: "title_chili_missing_chili_components" };
+  }
+
+  return { ok: true };
+}
+
+function normalizeTitleKey(value: string): string {
+  return (value || "")
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+/** Recipe title must never appear as an ingredient line (e.g. "Beef Barley Soup — 1 tbsp"). */
+export function ingredientNameMatchesRecipeTitle(
+  ingredientName: string,
+  recipeTitle: string,
+): boolean {
+  const ing = normalizeTitleKey(ingredientName);
+  const title = normalizeTitleKey(recipeTitle);
+  if (!ing || !title) return false;
+  if (ing === title) return true;
+  // Ingredient field contains the full recipe title (generator pollution).
+  if (ing.includes(title) && title.length / ing.length >= 0.75) return true;
+  return false;
+}
+
+/** True when title names a chili/stew dish — not a flavor like "honey chili" or "chili oil". */
+function titleClaimsChiliDish(title: string): boolean {
+  const t = title.toLowerCase();
+  if (/\b(soup|stew|barley|dumpling)\b/.test(t)) return false;
+  if (/\b(honey chili|chili crisp|chili oil|chili flake|sweet chili|gochujang|sriracha|chili paste)\b/.test(t)) {
+    return false;
+  }
+  if (/\b(chili|chilli)\s+(bowl|batch|feed|night|bar|mac)\b/.test(t)) return true;
+  if (/\b(beef|turkey|chicken|white bean|vegetarian|hall|big|lean)\s+\w*\s*(chili|chilli)\b/.test(t)) return true;
+  if (/\b(chili|chilli)\s*$/.test(t.trim())) return true;
+  return false;
+}
+
 export function starchPoolForFormat(
   formatKey: string,
   identity: string,

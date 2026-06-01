@@ -8,15 +8,15 @@
   "category": "hall_expansion",
   "cuisine": "canadian",
   "description": "Seasoned ground beef is pressed around vertical skewers, roasted until crisp-edged, then shaved thin for donair platters. Serve with warm pita, diced tomatoes, onions, and sweet garlicky donair sauce.",
-  "crewSize": 9,
-  "baseServings": 9,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 65,
   "prepTime": 35,
   "difficulty": "medium",
-  "calories": 540,
-  "protein": 38,
-  "carbs": 36,
-  "fats": 28,
+  "calories": 878,
+  "protein": 82,
+  "carbs": 24,
+  "fats": 52,
   "tags": [
     "protein:beef",
     "format:platter",
@@ -39,51 +39,51 @@
   "ingredients": [
     {
       "name": "ground beef",
-      "quantity": "5",
+      "quantity": "4.4",
       "unit": "lb",
       "notes": "80/20",
       "group": "Main"
     },
     {
       "name": "ground lamb",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "lb",
       "notes": "optional for authenticity",
       "group": "Main"
     },
     {
       "name": "garlic powder",
-      "quantity": "2",
+      "quantity": "1.8",
       "unit": "tbsp",
       "group": "Seasoning"
     },
     {
       "name": "onion powder",
-      "quantity": "2",
+      "quantity": "1.8",
       "unit": "tbsp",
       "group": "Seasoning"
     },
     {
       "name": "ground oregano",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tbsp",
       "group": "Seasoning"
     },
     {
       "name": "paprika",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tbsp",
       "group": "Seasoning"
     },
     {
       "name": "sweetened condensed milk",
-      "quantity": "0.5",
+      "quantity": "1/2",
       "unit": "cup",
       "group": "Sauce"
     },
     {
       "name": "white vinegar",
-      "quantity": "0.33",
+      "quantity": "1/4",
       "unit": "cup",
       "group": "Sauce"
     },
@@ -96,7 +96,7 @@
     },
     {
       "name": "pita bread",
-      "quantity": "12",
+      "quantity": "10.7",
       "unit": "rounds",
       "notes": "warmed",
       "group": "Service"
@@ -134,7 +134,7 @@
     {
       "stepNumber": 3,
       "title": "Season the meat",
-      "instruction": "Mix beef, lamb if using, garlic powder, onion powder, oregano, paprika, salt, and pepper until sticky and uniform. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Mix beef, lamb if using, garlic powder, onion powder, oregano, paprika, salt, and pepper until sticky and uniform. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
       "minutes": 10,
       "heatLevel": ""
     },
@@ -206,11 +206,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 540,
-    "protein": 38,
-    "carbs": 36,
-    "fats": 28,
-    "label": "~540 cal/serving · 38g protein · 2g fiber (est.)"
+    "calories": 878,
+    "protein": 82,
+    "carbs": 24,
+    "fats": 52,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/hall-expansion/firehall-donair-platter.jpg",
   "heroImageAlt": "Firehall Donair Platter — crew-sized firehall meal",

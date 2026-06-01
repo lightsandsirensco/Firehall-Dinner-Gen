@@ -19,6 +19,11 @@ export const ANALYTICS_EVENT_TYPES = [
   "search",
   "explore_filter",
   "explore_recipe_click",
+  "hall_vote_create",
+  "hall_vote_share",
+  "hall_vote_cast",
+  "shopping_list_open",
+  "shopping_list_action",
 ] as const;
 
 export type AnalyticsEventType = (typeof ANALYTICS_EVENT_TYPES)[number];

@@ -8,15 +8,15 @@
   "category": "hall_expansion",
   "cuisine": "mexican-american",
   "description": "Tortilla chips are layered with seasoned ground beef, black beans, jalapeños, and two cheeses, then baked until everything melts into a scoopable nacho casserole. Top with sour cream, salsa, and cilantro at the line.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 25,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 560,
-  "protein": 32,
-  "carbs": 42,
-  "fats": 30,
+  "calories": 759,
+  "protein": 46,
+  "carbs": 36,
+  "fats": 49,
   "tags": [
     "protein:beef",
     "format:sheet_pan",
@@ -40,19 +40,19 @@
   "ingredients": [
     {
       "name": "ground beef (85/15)",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "lb",
       "group": "Main"
     },
     {
       "name": "taco seasoning",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp",
       "group": "Main"
     },
     {
       "name": "tortilla chips",
-      "quantity": "1.5",
+      "quantity": "1 1/4",
       "unit": "lb",
       "notes": "sturdy style",
       "group": "Main"
@@ -66,40 +66,40 @@
     },
     {
       "name": "cheddar cheese",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "lb",
       "notes": "shredded",
       "group": "Cheese"
     },
     {
       "name": "Monterey Jack cheese",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "lb",
       "notes": "shredded",
       "group": "Cheese"
     },
     {
       "name": "jalapeño peppers",
-      "quantity": "4",
+      "quantity": "3",
       "unit": "whole",
       "notes": "sliced",
       "group": "Main"
     },
     {
       "name": "salsa",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "cups",
       "group": "Topping"
     },
     {
       "name": "sour cream",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "cup",
       "group": "Topping"
     },
     {
       "name": "fresh cilantro",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "cup",
       "notes": "chopped",
       "group": "Topping"
@@ -137,7 +137,7 @@
     {
       "stepNumber": 5,
       "title": "Layer and repeat",
-      "instruction": "Repeat layers with remaining chips, beef, beans, jalapeños, and cheese. Press gently so layers contact each other and melt into one cohesive bake.",
+      "instruction": "Repeat layers with remaining chips, beef, beans, jalapeños, and cheese. Press gently so layers contact each other and melt into one cohesive bake. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
       "minutes": 5,
       "heatLevel": ""
     },
@@ -188,11 +188,25 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 560,
-    "protein": 32,
-    "carbs": 42,
-    "fats": 30,
-    "label": "~560 cal/serving · 32g protein · 6g fiber (est.)"
+    "calories": 759,
+    "protein": 46,
+    "carbs": 36,
+    "fats": 49,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/hall-expansion/cheesy-beef-nacho-bake.jpg",
   "heroImageAlt": "Cheesy Beef Nacho Bake — crew-sized firehall meal",

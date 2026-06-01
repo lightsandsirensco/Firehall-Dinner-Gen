@@ -8,15 +8,15 @@
   "category": "hall_expansion",
   "cuisine": "american",
   "description": "Chicken thighs simmer with mirepoix and herbs until tender, then shred into a rich broth with egg noodles and carrots. Simple, restorative, and built for the biggest stock pot in the hall.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 60,
   "prepTime": 25,
   "difficulty": "easy",
-  "calories": 340,
-  "protein": 28,
-  "carbs": 36,
-  "fats": 10,
+  "calories": 506,
+  "protein": 65,
+  "carbs": 38,
+  "fats": 8,
   "tags": [
     "protein:chicken",
     "format:soup",
@@ -39,53 +39,53 @@
   "ingredients": [
     {
       "name": "bone-in chicken thighs",
-      "quantity": "4",
+      "quantity": "3.2",
       "unit": "lb",
       "group": "Main"
     },
     {
       "name": "wide egg noodles",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "lb",
       "group": "Main"
     },
     {
       "name": "yellow onion",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "whole",
       "notes": "diced",
       "group": "Aromatics"
     },
     {
       "name": "carrots",
-      "quantity": "4",
+      "quantity": "3",
       "unit": "whole",
       "notes": "sliced",
       "group": "Vegetables"
     },
     {
       "name": "celery stalks",
-      "quantity": "4",
+      "quantity": "3",
       "unit": "stalks",
       "notes": "sliced",
       "group": "Vegetables"
     },
     {
       "name": "garlic cloves",
-      "quantity": "4",
+      "quantity": "3",
       "unit": "cloves",
       "notes": "minced",
       "group": "Aromatics"
     },
     {
       "name": "chicken broth",
-      "quantity": "8",
+      "quantity": "6.4",
       "unit": "cups",
       "group": "Broth"
     },
     {
       "name": "fresh thyme",
-      "quantity": "4",
+      "quantity": "3",
       "unit": "sprigs",
       "group": "Herbs"
     },
@@ -97,7 +97,7 @@
     },
     {
       "name": "fresh parsley",
-      "quantity": "0.33",
+      "quantity": "1/4",
       "unit": "cup",
       "notes": "chopped",
       "group": "Finish"
@@ -128,7 +128,7 @@
     {
       "stepNumber": 4,
       "title": "Shred and strain",
-      "instruction": "Remove chicken, shred meat, discard skin and bones. Strain broth if cloudy, return to pot, and skim excess fat. Plan about 15 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Remove chicken, shred meat, discard skin and bones. Strain broth if cloudy, return to pot, and skim excess fat. Plan about 15 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
       "minutes": 15,
       "heatLevel": ""
     },
@@ -193,11 +193,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 340,
-    "protein": 28,
-    "carbs": 36,
-    "fats": 10,
-    "label": "~340 cal/serving · 28g protein · 3g fiber (est.)"
+    "calories": 506,
+    "protein": 65,
+    "carbs": 38,
+    "fats": 8,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": true,
+      "performanceMeal": true
+    }
   },
   "heroImage": "/images/hall-expansion/hall-chicken-noodle-soup.jpg",
   "heroImageAlt": "Hall Chicken Noodle Soup — crew-sized firehall meal",

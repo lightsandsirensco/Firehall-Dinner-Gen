@@ -8,15 +8,15 @@
   "category": "hall_expansion",
   "cuisine": "american",
   "description": "Beef chuck roasts get a simple salt-and-pepper crust, then smoke until probe-tender and sliceable. Rest, slice against the grain, and serve with quick pickles and soft rolls for a true smoke-night spread.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 360,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 410,
-  "protein": 42,
-  "carbs": 18,
-  "fats": 20,
+  "calories": 912,
+  "protein": 77,
+  "carbs": 49,
+  "fats": 47,
   "tags": [
     "protein:beef",
     "format:smoker",
@@ -39,64 +39,64 @@
   "ingredients": [
     {
       "name": "boneless beef chuck roast",
-      "quantity": "6",
+      "quantity": "4.8",
       "unit": "lb",
       "notes": "two 3 lb roasts",
       "group": "Main"
     },
     {
       "name": "kosher salt",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp",
       "group": "Rub"
     },
     {
       "name": "coarse black pepper",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "group": "Rub"
     },
     {
       "name": "garlic powder",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "group": "Rub"
     },
     {
       "name": "onion powder",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tbsp",
       "group": "Rub"
     },
     {
       "name": "smoked paprika",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tbsp",
       "group": "Rub"
     },
     {
       "name": "yellow mustard",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "cup",
       "notes": "as binder",
       "group": "Rub"
     },
     {
       "name": "beef broth",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "cups",
       "notes": "for holding",
       "group": "Service"
     },
     {
       "name": "apple cider vinegar",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "cup",
       "group": "Service"
     },
     {
       "name": "soft potato rolls",
-      "quantity": "16",
+      "quantity": "13",
       "unit": "rolls",
       "group": "Service"
     }
@@ -205,11 +205,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 410,
-    "protein": 42,
-    "carbs": 18,
-    "fats": 20,
-    "label": "~410 cal/serving · 42g protein · 1g fiber (est.)"
+    "calories": 912,
+    "protein": 77,
+    "carbs": 49,
+    "fats": 47,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/hall-expansion/mesquite-chuck-roast.jpg",
   "heroImageAlt": "Mesquite Smoked Chuck Roast — crew-sized firehall meal",

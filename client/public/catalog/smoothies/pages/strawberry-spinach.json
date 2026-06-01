@@ -76,9 +76,9 @@
     }
   ],
   "nutrition": {
-    "calories": 118,
+    "calories": 86,
     "protein": 5,
-    "carbs": 18,
+    "carbs": 10,
     "fats": 3,
     "highlights": "~250 cal · ~16 g protein · fiber from fruit and optional chia · greens without salad fatigue",
     "label": "per serving (hall portion)",
@@ -147,5 +147,8 @@
     "high-speed blender",
     "measuring cups",
     "ice bath pan"
-  ]
+  ],
+  "baseServings": 8,
+  "crewSize": 8,
+  "heroImageAlt": "Strawberry Spinach Smoothie — wide family-style firehall platter showing spinach on a crew prep table"
 }

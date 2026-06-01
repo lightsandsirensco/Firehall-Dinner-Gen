@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-05-31T12:18:56.378Z",
+  "generatedAt": "2026-06-01T01:33:27.620Z",
   "totals": {
-    "recipes": 233,
-    "pass": 233
+    "recipes": 228,
+    "pass": 228
   },
   "rows": [
     {
@@ -80,42 +80,6 @@
         "isBbqGrill": true,
         "isHighProtein": true,
         "isLowCleanup": true
-      },
-      "issues": []
-    },
-    {
-      "slug": "apple-cinnamon-baked-oatmeal",
-      "pass": true,
-      "flags": {
-        "slug": "apple-cinnamon-baked-oatmeal",
-        "title": "Apple Cinnamon Baked Oatmeal",
-        "kind": "breakfast_catalog",
-        "category": "breakfast_brunch",
-        "categoryLabel": "Breakfast & Brunch",
-        "cuisine": "American",
-        "protein": "Eggs",
-        "mealFormat": "breakfast",
-        "cookTime": 55,
-        "cookTimeBucket": "30_to_60",
-        "heroImage": "/images/breakfast/apple-cinnamon-baked-oatmeal.jpg",
-        "thumbImage": "/images/thumbs/breakfast/apple-cinnamon-baked-oatmeal.jpg",
-        "tags": [
-          "oatmeal",
-          "apple",
-          "cinnamon",
-          "bake",
-          "make-ahead"
-        ],
-        "searchText": "apple cinnamon baked oatmeal apple-cinnamon-baked-oatmeal breakfast healthy_breakfasts feed_a_crew oatmeal apple cinnamon bake make-ahead",
-        "catalogBadge": "Firehall Meals Catalog",
-        "traitBadges": [
-          "Crew Favorite"
-        ],
-        "isSmoothie": false,
-        "isHealthy": true,
-        "isBbqGrill": false,
-        "isHighProtein": false,
-        "isLowCleanup": false
       },
       "issues": []
     },
@@ -502,40 +466,6 @@
       "issues": []
     },
     {
-      "slug": "big-pot-savory-oats",
-      "pass": true,
-      "flags": {
-        "slug": "big-pot-savory-oats",
-        "title": "Big-Pot Savory Oats",
-        "kind": "breakfast_catalog",
-        "category": "breakfast_brunch",
-        "categoryLabel": "Breakfast & Brunch",
-        "cuisine": "American",
-        "protein": "Eggs",
-        "mealFormat": "breakfast",
-        "cookTime": 28,
-        "cookTimeBucket": "under_30",
-        "heroImage": "/images/breakfast/big-pot-savory-oats.jpg",
-        "thumbImage": "/images/thumbs/breakfast/big-pot-savory-oats.jpg",
-        "tags": [
-          "oats",
-          "one-pot",
-          "topping-bar"
-        ],
-        "searchText": "big-pot savory oats big-pot-savory-oats breakfast healthy_breakfasts feed_a_crew oats one-pot topping-bar",
-        "catalogBadge": "Firehall Meals Catalog",
-        "traitBadges": [
-          "Crew Favorite"
-        ],
-        "isSmoothie": false,
-        "isHealthy": true,
-        "isBbqGrill": false,
-        "isHighProtein": false,
-        "isLowCleanup": true
-      },
-      "issues": []
-    },
-    {
       "slug": "spiedie-chicken-platter-crew",
       "pass": true,
       "flags": {
@@ -612,11 +542,11 @@
       "issues": []
     },
     {
-      "slug": "cajun-grilled-catfish-crew",
+      "slug": "cajun-grilled-cod-crew",
       "pass": true,
       "flags": {
-        "slug": "cajun-grilled-catfish-crew",
-        "title": "Black Iron Remoulade Catfish Plates",
+        "slug": "cajun-grilled-cod-crew",
+        "title": "Black Iron Remoulade Cod Plates",
         "kind": "bbq_catalog",
         "category": "bbq_grill_nights",
         "categoryLabel": "BBQ & Grill",
@@ -625,8 +555,8 @@
         "mealFormat": "bayou_fillet",
         "cookTime": 14,
         "cookTimeBucket": "under_30",
-        "heroImage": "/images/smoker-catalog/cajun-grilled-catfish-crew.jpg",
-        "thumbImage": "/images/thumbs/smoker-catalog/cajun-grilled-catfish-crew.jpg",
+        "heroImage": "/images/smoker-catalog/cajun-grilled-cod-crew.jpg",
+        "thumbImage": "/images/thumbs/smoker-catalog/cajun-grilled-cod-crew.jpg",
         "tags": [
           "protein:seafood",
           "format:bayou_fillet",
@@ -639,7 +569,7 @@
           "grill",
           "firehall_bbq_30"
         ],
-        "searchText": "black iron remoulade catfish plates cajun-grilled-catfish-crew bbq grill smoker bbq_grill_nights cajun seafood bayou_fillet protein:seafood format:bayou_fillet category:bbq_grill_nights bbq smoker grill firehall_bbq_25 bbq grill firehall_bbq_30 black iron remoulade catfish plates cajun grilled catfish crew seafood cajun bayou fillet bbq firehall cajun grilled catfish blackened catfish grill remoulade catfish crew",
+        "searchText": "black iron remoulade cod plates cajun-grilled-cod-crew bbq grill smoker bbq_grill_nights cajun seafood bayou_fillet protein:seafood format:bayou_fillet category:bbq_grill_nights bbq smoker grill firehall_bbq_25 bbq grill firehall_bbq_30 black iron remoulade cod plates cajun grilled cod crew seafood cajun bayou fillet bbq firehall cajun grilled cod blackened cod grill remoulade cod crew",
         "catalogBadge": "Firehall Meals Catalog",
         "traitBadges": [],
         "isSmoothie": false,
@@ -1394,11 +1324,11 @@
       "issues": []
     },
     {
-      "slug": "grilled-halibut-lemon-packets",
+      "slug": "grilled-cod-lemon-packets",
       "pass": true,
       "flags": {
-        "slug": "grilled-halibut-lemon-packets",
-        "title": "Caper-Butter Halibut Foil Packets",
+        "slug": "grilled-cod-lemon-packets",
+        "title": "Caper-Butter Cod Foil Packets",
         "kind": "bbq_catalog",
         "category": "bbq_grill_nights",
         "categoryLabel": "BBQ & Grill",
@@ -1407,8 +1337,8 @@
         "mealFormat": "foil_fish",
         "cookTime": 18,
         "cookTimeBucket": "under_30",
-        "heroImage": "/images/smoker-catalog/grilled-halibut-lemon-packets.jpg",
-        "thumbImage": "/images/thumbs/smoker-catalog/grilled-halibut-lemon-packets.jpg",
+        "heroImage": "/images/smoker-catalog/grilled-cod-lemon-packets.jpg",
+        "thumbImage": "/images/thumbs/smoker-catalog/grilled-cod-lemon-packets.jpg",
         "tags": [
           "protein:seafood",
           "format:foil_fish",
@@ -1421,7 +1351,7 @@
           "grill",
           "firehall_bbq_30"
         ],
-        "searchText": "caper-butter halibut foil packets grilled-halibut-lemon-packets bbq grill smoker bbq_grill_nights mediterranean seafood foil_fish protein:seafood format:foil_fish category:bbq_grill_nights bbq smoker grill firehall_bbq_25 bbq grill firehall_bbq_30 caper-butter halibut foil packets grilled halibut lemon packets seafood mediterranean foil fish bbq firehall foil packet halibut grill caper butter halibut",
+        "searchText": "caper-butter cod foil packets grilled-cod-lemon-packets bbq grill smoker bbq_grill_nights mediterranean seafood foil_fish protein:seafood format:foil_fish category:bbq_grill_nights bbq smoker grill firehall_bbq_25 bbq grill firehall_bbq_30 caper-butter cod foil packets grilled cod lemon packets seafood mediterranean foil fish bbq firehall foil packet cod grill caper butter cod",
         "catalogBadge": "Firehall Meals Catalog",
         "traitBadges": [],
         "isSmoothie": false,
@@ -1574,45 +1504,6 @@
           "firehall_bbq_30"
         ],
         "searchText": "cast iron skirt steak sizzlers cast-iron-steak-fajita-sizzlers bbq grill smoker bbq_grill_nights tex-mex beef sizzler_plate protein:beef format:sizzler_plate category:bbq_grill_nights bbq smoker grill firehall_bbq_25 bbq grill firehall_bbq_30 cast iron skirt steak sizzlers cast iron steak fajita sizzlers beef tex-mex sizzler plate bbq firehall flank steak fajita griddle sizzling fajita platter",
-        "catalogBadge": "Firehall Meals Catalog",
-        "traitBadges": [],
-        "isSmoothie": false,
-        "isHealthy": false,
-        "isBbqGrill": true,
-        "isHighProtein": true,
-        "isLowCleanup": true
-      },
-      "issues": []
-    },
-    {
-      "slug": "garlic-butter-scallop-skewers",
-      "pass": true,
-      "flags": {
-        "slug": "garlic-butter-scallop-skewers",
-        "title": "Champagne Tarragon Scallop Skewers",
-        "kind": "bbq_catalog",
-        "category": "bbq_grill_nights",
-        "categoryLabel": "BBQ & Grill",
-        "cuisine": "american",
-        "protein": "seafood",
-        "mealFormat": "crew_kebab",
-        "cookTime": 12,
-        "cookTimeBucket": "under_30",
-        "heroImage": "/images/smoker-catalog/garlic-butter-scallop-skewers.jpg",
-        "thumbImage": "/images/thumbs/smoker-catalog/garlic-butter-scallop-skewers.jpg",
-        "tags": [
-          "protein:seafood",
-          "format:crew_kebab",
-          "category:bbq_grill_nights",
-          "bbq",
-          "smoker",
-          "grill",
-          "firehall_bbq_25",
-          "bbq",
-          "grill",
-          "firehall_bbq_30"
-        ],
-        "searchText": "champagne tarragon scallop skewers garlic-butter-scallop-skewers bbq grill smoker bbq_grill_nights american seafood crew_kebab protein:seafood format:crew_kebab category:bbq_grill_nights bbq smoker grill firehall_bbq_25 bbq grill firehall_bbq_30 champagne tarragon scallop skewers garlic butter scallop skewers seafood american crew kebab bbq firehall grilled sea scallops lemon scallop kebab",
         "catalogBadge": "Firehall Meals Catalog",
         "traitBadges": [],
         "isSmoothie": false,
@@ -2492,7 +2383,7 @@
       "pass": true,
       "flags": {
         "slug": "crock-barbacoa-chicken",
-        "title": "Crock Barbacoa Chicken",
+        "title": "Crock Barbacoa Chicken With Potato Wedges",
         "kind": "performance_meal",
         "category": "healthy_performance",
         "categoryLabel": "healthy performance",
@@ -2513,7 +2404,7 @@
           "high_protein",
           "healthy"
         ],
-        "searchText": "crock barbacoa chicken crock-barbacoa-chicken healthy_performance mexican chicken slow_cooker protein:chicken format:slow_cooker category:healthy_performance healthy performance_meals_50 hall_meal high_protein healthy crock barbacoa chicken chicken mexican slow cooker performance meal firefighter healthy",
+        "searchText": "crock barbacoa chicken with potato wedges crock-barbacoa-chicken healthy_performance mexican chicken slow_cooker protein:chicken format:slow_cooker category:healthy_performance healthy performance_meals_50 hall_meal high_protein healthy crock barbacoa chicken with potato wedges crock barbacoa chicken chicken mexican slow cooker performance meal firefighter healthy",
         "catalogBadge": "Performance Meal",
         "traitBadges": [
           "High Protein"
@@ -2977,6 +2868,45 @@
         "isBbqGrill": false,
         "isHighProtein": false,
         "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
+      "slug": "garlic-butter-shrimp-skewers",
+      "pass": true,
+      "flags": {
+        "slug": "garlic-butter-shrimp-skewers",
+        "title": "Garlic Tarragon Shrimp Skewers",
+        "kind": "bbq_catalog",
+        "category": "bbq_grill_nights",
+        "categoryLabel": "BBQ & Grill",
+        "cuisine": "american",
+        "protein": "seafood",
+        "mealFormat": "crew_kebab",
+        "cookTime": 12,
+        "cookTimeBucket": "under_30",
+        "heroImage": "/images/smoker-catalog/garlic-butter-shrimp-skewers.jpg",
+        "thumbImage": "/images/thumbs/smoker-catalog/garlic-butter-shrimp-skewers.jpg",
+        "tags": [
+          "protein:seafood",
+          "format:crew_kebab",
+          "category:bbq_grill_nights",
+          "bbq",
+          "smoker",
+          "grill",
+          "firehall_bbq_25",
+          "bbq",
+          "grill",
+          "firehall_bbq_30"
+        ],
+        "searchText": "garlic tarragon shrimp skewers garlic-butter-shrimp-skewers bbq grill smoker bbq_grill_nights american seafood crew_kebab protein:seafood format:crew_kebab category:bbq_grill_nights bbq smoker grill firehall_bbq_25 bbq grill firehall_bbq_30 garlic tarragon shrimp skewers garlic butter shrimp skewers seafood american crew kebab bbq firehall grilled jumbo shrimp lemon shrimp kebab",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": true,
+        "isHighProtein": true,
+        "isLowCleanup": true
       },
       "issues": []
     },
@@ -3624,41 +3554,6 @@
         "isBbqGrill": true,
         "isHighProtein": false,
         "isLowCleanup": false
-      },
-      "issues": []
-    },
-    {
-      "slug": "high-protein-parfaits",
-      "pass": true,
-      "flags": {
-        "slug": "high-protein-parfaits",
-        "title": "High-Protein Yogurt Parfaits",
-        "kind": "breakfast_catalog",
-        "category": "breakfast_brunch",
-        "categoryLabel": "Breakfast & Brunch",
-        "cuisine": "American",
-        "protein": "Eggs",
-        "mealFormat": "breakfast",
-        "cookTime": 17,
-        "cookTimeBucket": "under_30",
-        "heroImage": "/images/breakfast/high-protein-parfaits.jpg",
-        "thumbImage": "/images/thumbs/breakfast/high-protein-parfaits.jpg",
-        "tags": [
-          "yogurt",
-          "parfaits",
-          "no-cook",
-          "granola"
-        ],
-        "searchText": "high-protein yogurt parfaits high-protein-parfaits breakfast quick_breakfasts healthy_breakfasts high_protein yogurt parfaits no-cook granola",
-        "catalogBadge": "Firehall Meals Catalog",
-        "traitBadges": [
-          "Quick Shift Meal"
-        ],
-        "isSmoothie": false,
-        "isHealthy": true,
-        "isBbqGrill": false,
-        "isHighProtein": true,
-        "isLowCleanup": true
       },
       "issues": []
     },
@@ -5018,7 +4913,7 @@
       "pass": true,
       "flags": {
         "slug": "mediterranean-baked-fish-tray",
-        "title": "Mediterranean Baked Fish Tray",
+        "title": "Mediterranean Baked Cod Tray",
         "kind": "performance_meal",
         "category": "healthy_performance",
         "categoryLabel": "healthy performance",
@@ -5039,7 +4934,7 @@
           "high_protein",
           "healthy"
         ],
-        "searchText": "mediterranean baked fish tray mediterranean-baked-fish-tray healthy_performance mediterranean fish sheet_pan protein:fish format:sheet_pan category:healthy_performance healthy performance_meals_50 hall_meal high_protein healthy mediterranean baked fish tray fish mediterranean sheet pan performance meal firefighter healthy",
+        "searchText": "mediterranean baked cod tray mediterranean-baked-fish-tray healthy_performance mediterranean fish sheet_pan protein:fish format:sheet_pan category:healthy_performance healthy performance_meals_50 hall_meal high_protein healthy mediterranean baked cod tray mediterranean baked fish tray fish mediterranean sheet pan performance meal firefighter healthy",
         "catalogBadge": "Performance Meal",
         "traitBadges": [
           "High Protein"
@@ -6226,76 +6121,6 @@
         "isBbqGrill": false,
         "isHighProtein": false,
         "isLowCleanup": false
-      },
-      "issues": []
-    },
-    {
-      "slug": "protein-french-toast",
-      "pass": true,
-      "flags": {
-        "slug": "protein-french-toast",
-        "title": "Protein French Toast",
-        "kind": "breakfast_catalog",
-        "category": "breakfast_brunch",
-        "categoryLabel": "Breakfast & Brunch",
-        "cuisine": "American",
-        "protein": "Eggs",
-        "mealFormat": "breakfast",
-        "cookTime": 35,
-        "cookTimeBucket": "30_to_60",
-        "heroImage": "/images/breakfast/protein-french-toast.jpg",
-        "thumbImage": "/images/thumbs/breakfast/protein-french-toast.jpg",
-        "tags": [
-          "french-toast",
-          "cottage-cheese",
-          "griddle",
-          "berries",
-          "maple"
-        ],
-        "searchText": "protein french toast protein-french-toast breakfast high_protein healthy_breakfasts feed_a_crew french-toast cottage-cheese griddle berries maple",
-        "catalogBadge": "Firehall Meals Catalog",
-        "traitBadges": [
-          "Crew Favorite"
-        ],
-        "isSmoothie": false,
-        "isHealthy": true,
-        "isBbqGrill": false,
-        "isHighProtein": true,
-        "isLowCleanup": true
-      },
-      "issues": []
-    },
-    {
-      "slug": "protein-pancake-tray",
-      "pass": true,
-      "flags": {
-        "slug": "protein-pancake-tray",
-        "title": "Protein Pancake Tray",
-        "kind": "breakfast_catalog",
-        "category": "breakfast_brunch",
-        "categoryLabel": "Breakfast & Brunch",
-        "cuisine": "American",
-        "protein": "Eggs",
-        "mealFormat": "breakfast",
-        "cookTime": 37,
-        "cookTimeBucket": "30_to_60",
-        "heroImage": "/images/breakfast/protein-pancake-tray.jpg",
-        "thumbImage": "/images/thumbs/breakfast/protein-pancake-tray.jpg",
-        "tags": [
-          "pancakes",
-          "tray-bake",
-          "make-ahead"
-        ],
-        "searchText": "protein pancake tray protein-pancake-tray breakfast feed_a_crew high_protein pancakes tray-bake make-ahead",
-        "catalogBadge": "Firehall Meals Catalog",
-        "traitBadges": [
-          "Crew Favorite"
-        ],
-        "isSmoothie": false,
-        "isHealthy": false,
-        "isBbqGrill": false,
-        "isHighProtein": true,
-        "isLowCleanup": true
       },
       "issues": []
     },

@@ -202,6 +202,7 @@ async function detailFromCurated(
     _fromCurated: true,
     _curatedRecipeId: curated.recipeId,
     _publisherName: curated.source.name,
+    _catalogSlug: isApprovedCatalogSlug(curated.slug) ? curated.slug : undefined,
   };
 }
 

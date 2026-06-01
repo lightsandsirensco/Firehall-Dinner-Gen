@@ -1,5 +1,5 @@
 import { lazy, Suspense, useEffect } from "react";
-import { Switch, Route, useLocation } from "wouter";
+import { Switch, Route, useLocation, Redirect } from "wouter";
 import { prefetchLikelyRoutes } from "@/lib/route-prefetch";
 import { trackAnalyticsPageView } from "@/lib/analytics-deferred";
 import { queryClient } from "./lib/queryClient";
@@ -38,6 +38,7 @@ const FamiliesIndexPage = lazy(() => import("@/pages/families-index"));
 const SmoothiesIndexPage = lazy(() => import("@/pages/smoothies-index"));
 const SmoothieRecipePage = lazy(() => import("@/pages/smoothie-recipe-page"));
 const BreakfastIndexPage = lazy(() => import("@/pages/breakfast-index"));
+const BreakfastPerformanceIndexPage = lazy(() => import("@/pages/breakfast-performance-index"));
 const BreakfastRecipePage = lazy(() => import("@/pages/breakfast-recipe-page"));
 const PerformanceFuelRedirect = lazy(() => import("@/pages/performance-fuel-redirect"));
 const SeoLandingPage = lazy(() => import("@/pages/seo-landing-page"));
@@ -59,15 +60,17 @@ function AppRoutes() {
       <Route path="/explore" component={ExplorePage} />
       <Route path="/categories/:categoryId" component={FirehallCategoryPage} />
       <Route path="/wheel" component={ClassicsWheelPage} />
-      <Route path="/classics-wheel" component={ClassicsWheelPage} />
+      <Route path="/classics-wheel">{() => <Redirect to="/wheel" />}</Route>
       <Route path="/package/:slug" component={CuratedPackagePage} />
       <Route path="/recipes" component={RecipesIndexPage} />
       <Route path="/top-rated-recipes" component={TopRatedRecipesPage} />
       <Route path="/recipes/:slug" component={CatalogRecipePage} />
       <Route path="/smoothies" component={SmoothiesIndexPage} />
       <Route path="/smoothies/:slug" component={SmoothieRecipePage} />
-      <Route path="/breakfast" component={BreakfastIndexPage} />
+      <Route path="/breakfast/performance/:slug" component={BreakfastRecipePage} />
+      <Route path="/breakfast/performance" component={BreakfastPerformanceIndexPage} />
       <Route path="/breakfast/:slug" component={BreakfastRecipePage} />
+      <Route path="/breakfast" component={BreakfastIndexPage} />
       <Route path="/performance-fuel/:slug?" component={PerformanceFuelRedirect} />
       <Route path="/firefighter-meals">{() => <SeoLandingPage slug="firefighter-meals" />}</Route>
       <Route path="/firefighter-recipes">{() => <SeoLandingPage slug="firefighter-recipes" />}</Route>

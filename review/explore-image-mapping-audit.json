@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-05-31T13:31:59.525Z",
+  "generatedAt": "2026-06-01T01:33:11.981Z",
   "totals": {
-    "recipes": 233,
-    "correct": 233,
-    "missing": 0,
+    "recipes": 228,
+    "correct": 225,
+    "missing": 3,
     "mismatchedPath": 0,
     "mismatchedIdentity": 0,
     "duplicateConflict": 0,
-    "exploreEligible": 233,
-    "exploreExcluded": 0,
+    "exploreEligible": 225,
+    "exploreExcluded": 3,
     "duplicateImageGroups": 0
   },
   "rows": [
@@ -36,19 +36,6 @@
       "issues": [],
       "duplicatePeers": [],
       "heroMd5": "2a3ab7c1d8b89c675b7c56415e05dacf",
-      "exploreEligible": true
-    },
-    {
-      "slug": "apple-cinnamon-baked-oatmeal",
-      "title": "Apple Cinnamon Baked Oatmeal",
-      "category": "breakfast_brunch",
-      "kind": "breakfast_catalog",
-      "heroImage": "/images/breakfast/apple-cinnamon-baked-oatmeal.jpg",
-      "canonicalHero": "/images/breakfast/apple-cinnamon-baked-oatmeal.jpg",
-      "status": "correct",
-      "issues": [],
-      "duplicatePeers": [],
-      "heroMd5": "f76b791e5e26625db44c353837b08fdb",
       "exploreEligible": true
     },
     {
@@ -126,7 +113,7 @@
       "status": "correct",
       "issues": [],
       "duplicatePeers": [],
-      "heroMd5": "b1b18e254f5d6393a39cbb9e69749f9b",
+      "heroMd5": "fd9b98140012a5d59cd7e07fb5d1ce1a",
       "exploreEligible": true
     },
     {
@@ -182,19 +169,6 @@
       "exploreEligible": true
     },
     {
-      "slug": "big-pot-savory-oats",
-      "title": "Big-Pot Savory Oats",
-      "category": "breakfast_brunch",
-      "kind": "breakfast_catalog",
-      "heroImage": "/images/breakfast/big-pot-savory-oats.jpg",
-      "canonicalHero": "/images/breakfast/big-pot-savory-oats.jpg",
-      "status": "correct",
-      "issues": [],
-      "duplicatePeers": [],
-      "heroMd5": "bd579f048910cdb23b78dbc50a60b476",
-      "exploreEligible": true
-    },
-    {
       "slug": "spiedie-chicken-platter-crew",
       "title": "Binghamton White-Wine Spiedie Tray",
       "category": "bbq_grill_nights",
@@ -221,17 +195,24 @@
       "exploreEligible": true
     },
     {
-      "slug": "cajun-grilled-catfish-crew",
-      "title": "Black Iron Remoulade Catfish Plates",
+      "slug": "cajun-grilled-cod-crew",
+      "title": "Black Iron Remoulade Cod Plates",
       "category": "bbq_grill_nights",
       "kind": "bbq_catalog",
-      "heroImage": "/images/smoker-catalog/cajun-grilled-catfish-crew.jpg",
-      "canonicalHero": "/images/smoker-catalog/cajun-grilled-catfish-crew.jpg",
-      "status": "correct",
-      "issues": [],
+      "heroImage": "/images/smoker-catalog/cajun-grilled-cod-crew.jpg",
+      "canonicalHero": "/images/smoker-catalog/cajun-grilled-cod-crew.jpg",
+      "status": "missing",
+      "issues": [
+        {
+          "code": "missing_image_file",
+          "severity": "critical",
+          "message": "canonical hero image missing on disk",
+          "confidence": 98
+        }
+      ],
       "duplicatePeers": [],
-      "heroMd5": "9283b483448b25849502af1956e46156",
-      "exploreEligible": true
+      "heroMd5": null,
+      "exploreEligible": false
     },
     {
       "slug": "blackened-cod-taco-night",
@@ -282,7 +263,7 @@
       "status": "correct",
       "issues": [],
       "duplicatePeers": [],
-      "heroMd5": "fb2365b6062f6b8b52092efd7e11b824",
+      "heroMd5": "df69b8233001023a1facca14ea4b19e5",
       "exploreEligible": true
     },
     {
@@ -308,7 +289,7 @@
       "status": "correct",
       "issues": [],
       "duplicatePeers": [],
-      "heroMd5": "ebc61dcab60d8a740d1e2f20ecbc9dcf",
+      "heroMd5": "75e9a6d5bf65150ecae228525bd7e83a",
       "exploreEligible": true
     },
     {
@@ -494,17 +475,24 @@
       "exploreEligible": true
     },
     {
-      "slug": "grilled-halibut-lemon-packets",
-      "title": "Caper-Butter Halibut Foil Packets",
+      "slug": "grilled-cod-lemon-packets",
+      "title": "Caper-Butter Cod Foil Packets",
       "category": "bbq_grill_nights",
       "kind": "bbq_catalog",
-      "heroImage": "/images/smoker-catalog/grilled-halibut-lemon-packets.jpg",
-      "canonicalHero": "/images/smoker-catalog/grilled-halibut-lemon-packets.jpg",
-      "status": "correct",
-      "issues": [],
+      "heroImage": "/images/smoker-catalog/grilled-cod-lemon-packets.jpg",
+      "canonicalHero": "/images/smoker-catalog/grilled-cod-lemon-packets.jpg",
+      "status": "missing",
+      "issues": [
+        {
+          "code": "missing_image_file",
+          "severity": "critical",
+          "message": "canonical hero image missing on disk",
+          "confidence": 98
+        }
+      ],
       "duplicatePeers": [],
-      "heroMd5": "c4866826819aaf0e071cd266b32d9e66",
-      "exploreEligible": true
+      "heroMd5": null,
+      "exploreEligible": false
     },
     {
       "slug": "caprese-chicken-bake",
@@ -556,19 +544,6 @@
       "issues": [],
       "duplicatePeers": [],
       "heroMd5": "1224315c822d6cd8b66b5c322cd5c96d",
-      "exploreEligible": true
-    },
-    {
-      "slug": "garlic-butter-scallop-skewers",
-      "title": "Champagne Tarragon Scallop Skewers",
-      "category": "bbq_grill_nights",
-      "kind": "bbq_catalog",
-      "heroImage": "/images/smoker-catalog/garlic-butter-scallop-skewers.jpg",
-      "canonicalHero": "/images/smoker-catalog/garlic-butter-scallop-skewers.jpg",
-      "status": "correct",
-      "issues": [],
-      "duplicatePeers": [],
-      "heroMd5": "f1a7fc95dad47747a45b6d17866a058f",
       "exploreEligible": true
     },
     {
@@ -802,7 +777,7 @@
       "status": "correct",
       "issues": [],
       "duplicatePeers": [],
-      "heroMd5": "e7e7b51adec28faeca7ada4d340527c3",
+      "heroMd5": "222b2ab327a67300d8f845a62a62f78f",
       "exploreEligible": true
     },
     {
@@ -872,7 +847,7 @@
     },
     {
       "slug": "crock-barbacoa-chicken",
-      "title": "Crock Barbacoa Chicken",
+      "title": "Crock Barbacoa Chicken With Potato Wedges",
       "category": "healthy_performance",
       "kind": "performance_meal",
       "heroImage": "/images/golden-100/crock-barbacoa-chicken.jpg",
@@ -880,7 +855,7 @@
       "status": "correct",
       "issues": [],
       "duplicatePeers": [],
-      "heroMd5": "9e0f95ee60fd12ccdd96298d5168d981",
+      "heroMd5": "b8129b22a676f260b50c6696b368d1ef",
       "exploreEligible": true
     },
     {
@@ -1040,6 +1015,26 @@
       "exploreEligible": true
     },
     {
+      "slug": "garlic-butter-shrimp-skewers",
+      "title": "Garlic Tarragon Shrimp Skewers",
+      "category": "bbq_grill_nights",
+      "kind": "bbq_catalog",
+      "heroImage": "/images/smoker-catalog/garlic-butter-shrimp-skewers.jpg",
+      "canonicalHero": "/images/smoker-catalog/garlic-butter-shrimp-skewers.jpg",
+      "status": "missing",
+      "issues": [
+        {
+          "code": "missing_image_file",
+          "severity": "critical",
+          "message": "canonical hero image missing on disk",
+          "confidence": 98
+        }
+      ],
+      "duplicatePeers": [],
+      "heroMd5": null,
+      "exploreEligible": false
+    },
+    {
       "slug": "griddle-smash-sausage-peppers",
       "title": "Giardiniera Smash Sausage Hoagies",
       "category": "bbq_grill_nights",
@@ -1075,7 +1070,7 @@
       "status": "correct",
       "issues": [],
       "duplicatePeers": [],
-      "heroMd5": "ae85c0d8a2c8ce7e79dc131423476a8b",
+      "heroMd5": "fbaa7233dc2e66aec5373d20d8750c9b",
       "exploreEligible": true
     },
     {
@@ -1231,7 +1226,7 @@
       "status": "correct",
       "issues": [],
       "duplicatePeers": [],
-      "heroMd5": "d5a0f439467f5c19a2cc67f1f191d2f0",
+      "heroMd5": "40e18ba02f0770e89f482b5018bc1222",
       "exploreEligible": true
     },
     {
@@ -1258,19 +1253,6 @@
       "issues": [],
       "duplicatePeers": [],
       "heroMd5": "0a850d3b9ba1cc85b16e1f2994518d53",
-      "exploreEligible": true
-    },
-    {
-      "slug": "high-protein-parfaits",
-      "title": "High-Protein Yogurt Parfaits",
-      "category": "breakfast_brunch",
-      "kind": "breakfast_catalog",
-      "heroImage": "/images/breakfast/high-protein-parfaits.jpg",
-      "canonicalHero": "/images/breakfast/high-protein-parfaits.jpg",
-      "status": "correct",
-      "issues": [],
-      "duplicatePeers": [],
-      "heroMd5": "9794b41c570aeb9dcb72d4b8f3e8ee8d",
       "exploreEligible": true
     },
     {
@@ -1309,7 +1291,7 @@
       "status": "correct",
       "issues": [],
       "duplicatePeers": [],
-      "heroMd5": "d35e7657cc7299e1fc6179c5f7f485ab",
+      "heroMd5": "26be1485459988e5be3d03c46b18bced",
       "exploreEligible": true
     },
     {
@@ -1730,7 +1712,7 @@
     },
     {
       "slug": "mediterranean-baked-fish-tray",
-      "title": "Mediterranean Baked Fish Tray",
+      "title": "Mediterranean Baked Cod Tray",
       "category": "healthy_performance",
       "kind": "performance_meal",
       "heroImage": "/images/golden-100/mediterranean-baked-fish-tray.jpg",
@@ -1738,7 +1720,7 @@
       "status": "correct",
       "issues": [],
       "duplicatePeers": [],
-      "heroMd5": "54840b9ea9479620d5d278d3184d3974",
+      "heroMd5": "d82a21cd69d1eac4e2010a99a7770d8d",
       "exploreEligible": true
     },
     {
@@ -2142,32 +2124,6 @@
       "issues": [],
       "duplicatePeers": [],
       "heroMd5": "56d789fbb42696421c71e453f9420c5c",
-      "exploreEligible": true
-    },
-    {
-      "slug": "protein-french-toast",
-      "title": "Protein French Toast",
-      "category": "breakfast_brunch",
-      "kind": "breakfast_catalog",
-      "heroImage": "/images/breakfast/protein-french-toast.jpg",
-      "canonicalHero": "/images/breakfast/protein-french-toast.jpg",
-      "status": "correct",
-      "issues": [],
-      "duplicatePeers": [],
-      "heroMd5": "2d661f5f6ff7f5c9c1826d05c0ee70ea",
-      "exploreEligible": true
-    },
-    {
-      "slug": "protein-pancake-tray",
-      "title": "Protein Pancake Tray",
-      "category": "breakfast_brunch",
-      "kind": "breakfast_catalog",
-      "heroImage": "/images/breakfast/protein-pancake-tray.jpg",
-      "canonicalHero": "/images/breakfast/protein-pancake-tray.jpg",
-      "status": "correct",
-      "issues": [],
-      "duplicatePeers": [],
-      "heroMd5": "f828751ad69e69787fd3029243398828",
       "exploreEligible": true
     },
     {
@@ -2622,7 +2578,7 @@
       "status": "correct",
       "issues": [],
       "duplicatePeers": [],
-      "heroMd5": "6ad085c30840f4d7d9c114d7db68dbf9",
+      "heroMd5": "fb8b05fbdc2d8edb4ac516dec8bc6c6d",
       "exploreEligible": true
     },
     {
@@ -2661,7 +2617,7 @@
       "status": "correct",
       "issues": [],
       "duplicatePeers": [],
-      "heroMd5": "4a0b22b1187ec929644a6d1336f301da",
+      "heroMd5": "33bc6164ce9ed8159c8a4ba12c3d4f8f",
       "exploreEligible": true
     },
     {
@@ -2882,7 +2838,7 @@
       "status": "correct",
       "issues": [],
       "duplicatePeers": [],
-      "heroMd5": "615d606a6e3d0bef5a01ea4b5dbfa684",
+      "heroMd5": "021c846a36aa2906823c98e0b4077428",
       "exploreEligible": true
     },
     {
@@ -2895,7 +2851,7 @@
       "status": "correct",
       "issues": [],
       "duplicatePeers": [],
-      "heroMd5": "43615a537742406c82adc3762e3f0c1b",
+      "heroMd5": "cf85c92bf1fe5e3e7a0cb30a7b30915e",
       "exploreEligible": true
     },
     {
@@ -2960,7 +2916,7 @@
       "status": "correct",
       "issues": [],
       "duplicatePeers": [],
-      "heroMd5": "40b8358b0c6b4a06ea7965a3ed3e2540",
+      "heroMd5": "f400583777064d85a06dd97042ee9cda",
       "exploreEligible": true
     },
     {

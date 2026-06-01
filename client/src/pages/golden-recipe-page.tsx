@@ -4,7 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 
 import { Link, useRoute } from "wouter";
 
-import { Clock, Users, ChefHat, Loader2 } from "lucide-react";
+import { Clock, Users, ChefHat, Loader2, List, Heart, BookmarkPlus } from "lucide-react";
 
 import { SiteHeader } from "@/components/site-header";
 import { RecipeBrandStrip } from "@/components/brand/recipe-brand-strip";
@@ -12,7 +12,8 @@ import { SiteFooter } from "@/components/site-footer";
 
 import { Button } from "@/components/ui/button";
 
-import { getSavedCount } from "@/lib/saved-meals";
+import { getSavedCount, saveMeal, isCatalogMealSaved } from "@/lib/saved-meals";
+import { catalogPageToClientRecipe } from "@/lib/catalog-recipe-save";
 
 import { fetchGoldenCatalogIndex, fetchGoldenRecipePage } from "@/lib/golden-recipe-api";
 import { buildRecipeLinkClusters } from "@shared/golden-100/internal-link-clusters";
@@ -53,18 +54,17 @@ import type { GoldenRecipePage } from "@shared/golden-100/recipe-page-schema";
 import { MealTrustBadges } from "@/components/trust/meal-trust-badges";
 import { RecipeCrewRatingPanel } from "@/components/recipe-crew-rating/recipe-crew-rating-panel";
 import { RecipeNutritionPanel } from "@/components/recipe-nutrition-panel";
-import {
-  adjustCookTimeForCrew,
-  CREW_SIZE_OPTIONS,
-  scaleGoldenIngredients,
-} from "@shared/golden-100/recipe-quality/crew-scale";
+import { CrewSizePicker } from "@/components/crew-size-picker";
+import { ShoppingListModal } from "@/components/shopping-list-modal";
+import { useCrewScaling } from "@/hooks/use-crew-scaling";
+import { buildShoppingListFromCatalogIngredients } from "@/lib/shopping-list";
 import {
   formatIngredientAmount,
   formatTemperaturesInText,
 } from "@shared/measurements";
 import { useMeasurementSystem } from "@/components/measurement-unit-toggle";
 import { RecipeMeasurementBar } from "@/components/recipe-measurement-bar";
-import { trackRecipeView } from "@/lib/analytics";
+import { trackRecipeView, trackRecipeSave } from "@/lib/analytics";
 
 
 
@@ -252,16 +252,167 @@ function RecipeSection({
 
 
 
+function RecipeCookStepNav({ steps }: { steps: GoldenRecipePage["steps"] }) {
+
+  const [activeStep, setActiveStep] = useState(1);
+
+  const [visible, setVisible] = useState(false);
+
+
+
+  useEffect(() => {
+
+    const section = document.getElementById("recipe-steps");
+
+    if (!section || steps.length < 2) return;
+
+
+
+    const sectionObserver = new IntersectionObserver(
+
+      ([entry]) => setVisible(entry.isIntersecting),
+
+      { rootMargin: "-35% 0px -35% 0px" },
+
+    );
+
+    sectionObserver.observe(section);
+
+
+
+    const stepElements = steps
+
+      .map((step) => document.getElementById(`recipe-step-${step.stepNumber}`))
+
+      .filter((el): el is HTMLElement => Boolean(el));
+
+
+
+    const stepObserver = new IntersectionObserver(
+
+      (entries) => {
+
+        const inView = entries
+
+          .filter((entry) => entry.isIntersecting)
+
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+        if (!inView[0]) return;
+
+        const stepNumber = Number.parseInt(inView[0].target.id.replace("recipe-step-", ""), 10);
+
+        if (stepNumber > 0) setActiveStep(stepNumber);
+
+      },
+
+      { rootMargin: "-45% 0px -45% 0px", threshold: [0, 0.25, 0.5, 1] },
+
+    );
+
+
+
+    for (const element of stepElements) {
+
+      stepObserver.observe(element);
+
+    }
+
+
+
+    return () => {
+
+      sectionObserver.disconnect();
+
+      stepObserver.disconnect();
+
+    };
+
+  }, [steps]);
+
+
+
+  if (!visible || steps.length < 2) return null;
+
+
+
+  return (
+
+    <nav
+
+      aria-label="Cook steps"
+
+      className="sticky top-[calc(3.5rem+env(safe-area-inset-top,0px))] z-30 -mx-page px-page py-2 mb-2 bg-background/95 backdrop-blur-md border-b border-border/40"
+
+      data-testid="recipe-cook-step-nav"
+
+    >
+
+      <ol className="flex gap-2 overflow-x-auto scroll-momentum pb-0.5">
+
+        {steps.map((step) => (
+
+          <li key={step.stepNumber}>
+
+            <button
+
+              type="button"
+
+              onClick={() =>
+
+                document.getElementById(`recipe-step-${step.stepNumber}`)?.scrollIntoView({
+
+                  behavior: "smooth",
+
+                  block: "start",
+
+                })
+
+              }
+
+              className={cn(
+
+                "shrink-0 min-w-9 h-9 rounded-full text-sm font-semibold tabular-nums touch-manipulation transition-colors",
+
+                activeStep === step.stepNumber
+
+                  ? "bg-primary text-primary-foreground"
+
+                  : "bg-muted/60 text-muted-foreground hover:bg-muted",
+
+              )}
+
+              aria-current={activeStep === step.stepNumber ? "step" : undefined}
+
+            >
+
+              {step.stepNumber}
+
+            </button>
+
+          </li>
+
+        ))}
+
+      </ol>
+
+    </nav>
+
+  );
+
+}
+
+
+
 export default function GoldenRecipePageView() {
 
   const [, params] = useRoute("/recipes/:slug");
 
   const slug = params?.slug ?? "";
 
-  const [favCount] = useState(() => getSavedCount());
-  const [crewSize, setCrewSize] = useState<number>(8);
-
-
+  const [favCount, setFavCount] = useState(() => getSavedCount());
+  const [shoppingOpen, setShoppingOpen] = useState(false);
+  const [saved, setSaved] = useState(false);
 
   const { data: page, isLoading, error } = useQuery({
 
@@ -274,6 +425,16 @@ export default function GoldenRecipePageView() {
     staleTime: Infinity,
 
   });
+
+  useEffect(() => {
+    const sync = () => {
+      setFavCount(getSavedCount());
+      if (slug) setSaved(isCatalogMealSaved(slug));
+    };
+    sync();
+    window.addEventListener("favorites-changed", sync);
+    return () => window.removeEventListener("favorites-changed", sync);
+  }, [slug]);
 
 
 
@@ -381,10 +542,6 @@ export default function GoldenRecipePageView() {
 
 
   useEffect(() => {
-    if (page) setCrewSize(page.baseServings ?? page.crewSize ?? 8);
-  }, [page?.slug, page?.baseServings, page?.crewSize]);
-
-  useEffect(() => {
     if (!page) return;
     trackRecipeView({
       slug: page.slug,
@@ -394,18 +551,16 @@ export default function GoldenRecipePageView() {
     });
   }, [page?.slug, page?.title]);
 
-  const baseServings = page?.baseServings ?? page?.crewSize ?? 8;
+  const { crewSize, setCrewSize, scaledIngredients, displayCookTime } = useCrewScaling(page);
   const [measurementSystem] = useMeasurementSystem();
 
-  const scaledIngredients = useMemo(() => {
-    if (!page) return [];
-    return scaleGoldenIngredients(page.ingredients, baseServings, crewSize);
-  }, [page, baseServings, crewSize]);
-
-  const displayCookTime = useMemo(() => {
-    if (!page) return 0;
-    return adjustCookTimeForCrew(page.cookTime, baseServings, crewSize);
-  }, [page, baseServings, crewSize]);
+  const shoppingList = useMemo(
+    () =>
+      scaledIngredients.length
+        ? buildShoppingListFromCatalogIngredients(scaledIngredients, { recipeTitle: page?.title })
+        : null,
+    [scaledIngredients, page?.title],
+  );
 
   const ingredientGroups = useMemo(() => {
     const groups = new Map<string, typeof scaledIngredients>();
@@ -425,6 +580,19 @@ export default function GoldenRecipePageView() {
       { icon: ChefHat, label: page.difficulty },
     ];
   }, [page, crewSize, displayCookTime]);
+
+  const handleSave = () => {
+    if (!page || saved) return;
+    const recipe = catalogPageToClientRecipe(page, page.slug);
+    const result = saveMeal(recipe);
+    if (result.saved) {
+      setSaved(true);
+      setFavCount(getSavedCount());
+      trackRecipeSave(page.slug, page.title);
+    } else if (result.duplicate) {
+      setSaved(true);
+    }
+  };
 
 
 
@@ -476,6 +644,13 @@ export default function GoldenRecipePageView() {
 
             <RecipeBrandStrip className="mt-4" />
 
+            <CrewSizePicker
+              crewSize={crewSize}
+              onChange={setCrewSize}
+              prominent
+              className="mt-4"
+            />
+
             <div className="flex flex-wrap gap-2 pt-2">
 
               {metaRow.map(({ icon: Icon, label, datetime }) => (
@@ -495,26 +670,26 @@ export default function GoldenRecipePageView() {
             </div>
 
             <RecipeMeasurementBar className="mt-4">
-              <div className="space-y-2.5" role="group" aria-label="Crew size">
-                <p className="text-sm font-medium text-foreground">Crew size</p>
-                <div className="flex flex-wrap gap-2">
-                  {CREW_SIZE_OPTIONS.map((n) => (
-                    <button
-                      key={n}
-                      type="button"
-                      onClick={() => setCrewSize(n)}
-                      className={cn(
-                        app.pill,
-                        "min-h-11 sm:min-h-9 cursor-pointer transition-colors touch-manipulation",
-                        crewSize === n && "bg-primary/20 ring-1 ring-primary/40 text-foreground",
-                      )}
-                      aria-pressed={crewSize === n}
-                    >
-                      {n} firefighters
-                    </button>
-                  ))}
-                </div>
-              </div>
+              <Button
+                variant="outline"
+                className={`min-h-11 gap-2 ${saved ? "bg-primary/15 border-primary/30 text-primary" : ""}`}
+                onClick={handleSave}
+                disabled={saved}
+                data-testid="button-recipe-save"
+              >
+                {saved ? <Heart className="w-4 h-4 fill-current" /> : <BookmarkPlus className="w-4 h-4" />}
+                {saved ? "Saved" : "Save recipe"}
+              </Button>
+              <Button
+                variant="outline"
+                className="min-h-11 gap-2"
+                onClick={() => setShoppingOpen(true)}
+                disabled={!shoppingList}
+                data-testid="button-recipe-shopping"
+              >
+                <List className="w-4 h-4" aria-hidden />
+                Shopping list ({crewSize} crew)
+              </Button>
             </RecipeMeasurementBar>
 
             <p className={cn(app.lead, "max-w-2xl")}>{page.shortDescription || page.description}</p>
@@ -564,6 +739,8 @@ export default function GoldenRecipePageView() {
 
             <RecipeSection title="How to cook it" id="recipe-steps">
 
+              <RecipeCookStepNav steps={page.steps} />
+
               <ol className="space-y-8">
 
                 {page.steps.map((step) => (
@@ -572,7 +749,9 @@ export default function GoldenRecipePageView() {
 
                     key={step.stepNumber}
 
-                    className="flex gap-4 sm:gap-5"
+                    id={`recipe-step-${step.stepNumber}`}
+
+                    className="flex gap-4 sm:gap-5 scroll-mt-[calc(3.5rem+env(safe-area-inset-top,0px)+3.5rem)]"
 
                   >
 
@@ -765,6 +944,15 @@ export default function GoldenRecipePageView() {
 
         )}
 
+        {page && shoppingList && (
+          <ShoppingListModal
+            open={shoppingOpen}
+            onOpenChange={setShoppingOpen}
+            shoppingList={shoppingList}
+            recipeTitle={page.title}
+            generatorType="meal"
+          />
+        )}
       </main>
 
       <SiteFooter variant="compact" pbSafe />

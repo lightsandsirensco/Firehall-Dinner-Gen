@@ -1,8 +1,8 @@
 {
   "slug": "smash-burgers",
-  "title": "Double Smash Burgers with Caramelized Onions & Dirty Sauce",
-  "displayTitle": "Double Smash Burgers with Caramelized Onions & Dirty Sauce",
-  "seoTitle": "Double Smash Burgers with Caramelized Onions & Dirty Sauce | Firefighter Meal",
+  "title": "Double Smash Burgers",
+  "displayTitle": "Double Smash Burgers",
+  "seoTitle": "Double Smash Burgers | Firefighter Meal",
   "shortDescription": "Crispy edges, melty cheese, crew-approved",
   "subtitle": "Crispy edges, melty cheese, crew-approved",
   "category": "firehall_classics",
@@ -15,7 +15,7 @@
   "difficulty": "medium",
   "calories": 1400,
   "protein": 120,
-  "carbs": 47,
+  "carbs": 43,
   "fats": 90,
   "tags": [
     "protein:beef",
@@ -185,49 +185,24 @@
       "instruction": "Bottom bun → dirty sauce → shredded lettuce (barrier against juice) → pickles → double stack (cheese melted between patties) → spoon of caramelized onions → optional bacon → more dirty sauce on top bun → crown. Press lightly so stack sets. Serve within 2 minutes — smash burgers lose their crisp edge fast. Crew eats open-faced at the line if stacks are tall.",
       "minutes": 3,
       "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-cook: turn off direct heat and cover smash burger patties — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
-      "minutes": 5,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 11,
-      "title": "Hold finished stacks for the line",
-      "instruction": "Keep completed double stacks on a wire rack in a 200°F oven up to 8 minutes — never stack hot burgers or bottoms steam soggy. Wipe the griddle between batches so burnt fat does not taint the next round. Fries hold in a warm pan with the door cracked.",
-      "minutes": 5,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 12,
-      "title": "Pack down leftovers safely",
-      "instruction": "Cool cooked patties and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
-      "minutes": 10,
-      "heatLevel": ""
     }
   ],
   "proTips": [
     "Smash once per side — re-smashing after crust forms tears the lace.",
     "American cheese melts faster than cheddar; use it for that diner drape.",
-    "Dirty sauce on both bun faces — lettuce goes between sauce and patty as a juice barrier.",
-    "Keep a backup tray at 200°F for firefighters returning from a run — never serve picked-over pans to late crew.",
-    "Taste for salt at the end — hall palates run salty after long shifts.",
-    "Log hold times on the pan with a grease pencil when tones drop mid-service.",
-    "Spot-check proteins with an instant-read thermometer before reopening the line after a call."
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
+    "Taste for salt at the end — hall palates run salty after long shifts."
   ],
   "tonightSpread": [
-    "Main: Double smash burgers with caramelized onions",
-    "Sides: diner fries, dill pickle chips",
-    "Condiments: dirty sauce, shredded iceberg, optional bacon",
-    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
-    "Keep a backup tray at 200°F for firefighters returning from a run."
+    "Toast buns in batches and hold in a warm pan — soggy buns kill the line.",
+    "Keep cheese slices under a dome so they melt fast when patties come off the griddle.",
+    "Line up Double Smash Burgers on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
   ],
   "leftovers": [
-    "Cool cooked patties in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
-    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
-    "Store buns separately — stacked overnight turns crisp edges soft."
+    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
+    "Label trays with date and reheat to 165°F minimum before second shift.",
+    "Store components separate — assemble fresh; buns go soggy overnight."
   ],
   "whyCrewsLikeIt": "Crispy edges, melty cheese, crew-approved. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
   "substitutions": [],
@@ -236,7 +211,7 @@
   "nutrition": {
     "calories": 1400,
     "protein": 120,
-    "carbs": 47,
+    "carbs": 43,
     "fats": 90,
     "label": "per serving (hall portion)",
     "source": "calculated",
@@ -282,6 +257,6 @@
   "sourceName": "Serious Eats",
   "sourceUrl": "",
   "classicSlug": "smash-burgers",
-  "generatedAt": "2026-05-31T13:31:23.363Z",
-  "contentVersion": 4
+  "generatedAt": "2026-06-01T01:40:01.994Z",
+  "contentVersion": 2
 }

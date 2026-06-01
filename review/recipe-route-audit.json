@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-05-31T12:18:56.402Z",
+  "generatedAt": "2026-06-01T01:33:27.646Z",
   "totals": {
-    "recipes": 233,
-    "pass": 233
+    "recipes": 228,
+    "pass": 225
   },
   "rows": [
     {
@@ -14,12 +14,6 @@
     {
       "slug": "andouille-po-boy-rolls-crew",
       "route": "/recipes/andouille-po-boy-rolls-crew",
-      "pass": true,
-      "issues": []
-    },
-    {
-      "slug": "apple-cinnamon-baked-oatmeal",
-      "route": "/breakfast/apple-cinnamon-baked-oatmeal",
       "pass": true,
       "issues": []
     },
@@ -84,12 +78,6 @@
       "issues": []
     },
     {
-      "slug": "big-pot-savory-oats",
-      "route": "/breakfast/big-pot-savory-oats",
-      "pass": true,
-      "issues": []
-    },
-    {
       "slug": "spiedie-chicken-platter-crew",
       "route": "/recipes/spiedie-chicken-platter-crew",
       "pass": true,
@@ -102,10 +90,12 @@
       "issues": []
     },
     {
-      "slug": "cajun-grilled-catfish-crew",
-      "route": "/recipes/cajun-grilled-catfish-crew",
-      "pass": true,
-      "issues": []
+      "slug": "cajun-grilled-cod-crew",
+      "route": "/recipes/cajun-grilled-cod-crew",
+      "pass": false,
+      "issues": [
+        "hero missing on disk"
+      ]
     },
     {
       "slug": "blackened-cod-taco-night",
@@ -228,10 +218,12 @@
       "issues": []
     },
     {
-      "slug": "grilled-halibut-lemon-packets",
-      "route": "/recipes/grilled-halibut-lemon-packets",
-      "pass": true,
-      "issues": []
+      "slug": "grilled-cod-lemon-packets",
+      "route": "/recipes/grilled-cod-lemon-packets",
+      "pass": false,
+      "issues": [
+        "hero missing on disk"
+      ]
     },
     {
       "slug": "caprese-chicken-bake",
@@ -254,12 +246,6 @@
     {
       "slug": "cast-iron-steak-fajita-sizzlers",
       "route": "/recipes/cast-iron-steak-fajita-sizzlers",
-      "pass": true,
-      "issues": []
-    },
-    {
-      "slug": "garlic-butter-scallop-skewers",
-      "route": "/recipes/garlic-butter-scallop-skewers",
       "pass": true,
       "issues": []
     },
@@ -480,6 +466,14 @@
       "issues": []
     },
     {
+      "slug": "garlic-butter-shrimp-skewers",
+      "route": "/recipes/garlic-butter-shrimp-skewers",
+      "pass": false,
+      "issues": [
+        "hero missing on disk"
+      ]
+    },
+    {
       "slug": "griddle-smash-sausage-peppers",
       "route": "/recipes/griddle-smash-sausage-peppers",
       "pass": true,
@@ -578,12 +572,6 @@
     {
       "slug": "hickory-turkey-legs",
       "route": "/recipes/hickory-turkey-legs",
-      "pass": true,
-      "issues": []
-    },
-    {
-      "slug": "high-protein-parfaits",
-      "route": "/breakfast/high-protein-parfaits",
       "pass": true,
       "issues": []
     },
@@ -986,18 +974,6 @@
     {
       "slug": "pretzel-bite-platter",
       "route": "/recipes/pretzel-bite-platter",
-      "pass": true,
-      "issues": []
-    },
-    {
-      "slug": "protein-french-toast",
-      "route": "/breakfast/protein-french-toast",
-      "pass": true,
-      "issues": []
-    },
-    {
-      "slug": "protein-pancake-tray",
-      "route": "/breakfast/protein-pancake-tray",
       "pass": true,
       "issues": []
     },

@@ -2,7 +2,7 @@
   "slug": "hall-sausage-biscuits-gravy",
   "title": "Hall Sausage Biscuits & Gravy",
   "subtitle": "Flaky biscuits split and smothered in peppery sausage gravy for twelve.",
-  "description": "Classic hall comfort: bulk breakfast sausage gravy thick enough to coat a spoon, ladled over split baking-powder biscuits. Uses shortcut biscuits from the oven so the cook focuses on gravy that stays smooth and seasoned while feeding a full shift.",
+  "description": "Flaky biscuits split open and smothered in peppery sausage gravy. A firehall classic that needs no introduction — make extra gravy.",
   "filters": [
     "feed_a_crew",
     "breakfast_sandwiches",
@@ -15,8 +15,8 @@
     "classic",
     "comfort"
   ],
-  "crewSize": 12,
-  "baseServings": 12,
+  "crewSize": 8,
+  "baseServings": 8,
   "prepTime": 10,
   "cookTime": 25,
   "totalTime": 35,
@@ -24,49 +24,49 @@
   "ingredients": [
     {
       "name": "large refrigerated biscuits",
-      "quantity": "12",
+      "quantity": "8",
       "notes": "or scratch-baked equivalents",
       "group": "Biscuits"
     },
     {
       "name": "butter",
-      "quantity": "2 tbsp",
+      "quantity": "1.3",
       "notes": "melted for brushing tops",
       "group": "Biscuits"
     },
     {
       "name": "breakfast sausage",
-      "quantity": "2 lb",
+      "quantity": "1",
       "notes": "bulk or casings removed",
       "group": "Gravy"
     },
     {
       "name": "all-purpose flour",
-      "quantity": "1/2 cup",
+      "quantity": "3/8",
       "notes": "whisked into rendered fat",
       "group": "Gravy"
     },
     {
       "name": "whole milk",
-      "quantity": "5 cups",
+      "quantity": "3.3",
       "notes": "warmed slightly for smoother whisking",
       "group": "Gravy"
     },
     {
       "name": "black pepper",
-      "quantity": "2 tsp",
+      "quantity": "1",
       "notes": "freshly ground, plus salt to taste",
       "group": "Seasoning"
     },
     {
       "name": "poultry seasoning",
-      "quantity": "1/2 tsp",
+      "quantity": "3/8",
       "notes": "optional depth",
       "group": "Seasoning"
     },
     {
       "name": "chopped parsley",
-      "quantity": "1/4 cup",
+      "quantity": "1/8",
       "notes": "and hot sauce at the line",
       "group": "Serve"
     }
@@ -89,28 +89,28 @@
     {
       "stepNumber": 3,
       "title": "Bake the biscuits",
-      "instruction": "Heat oven to 375°F. Arrange biscuits on a sheet pan and brush tops with melted butter. Bake until golden and cooked through—split one to check the center isn't doughy. Plan about 15 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Heat oven to 375°F. Arrange biscuits on a sheet pan and brush tops with melted butter. Bake until golden and cooked through—split one to check the center isn't doughy.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
       "stepNumber": 4,
       "title": "Brown the sausage",
-      "instruction": "In a large Dutch oven or deep skillet, brown sausage over medium-high, breaking it into fine crumbles. Don't drain all the fat—you need it for the roux. Bake until the center reaches a safe internal temp (165°F) and edges look set — use a thermometer at the thickest point. Plan about 8 minutes for this step at crew scale.",
+      "instruction": "In a large Dutch oven or deep skillet, brown sausage over medium-high, breaking it into fine crumbles. Don't drain all the fat—you need it for the roux.",
       "minutes": 8,
       "heatLevel": ""
     },
     {
       "stepNumber": 5,
       "title": "Build the roux",
-      "instruction": "Sprinkle flour over the sausage and fat, stirring constantly for 1–2 minutes until the raw flour smell cooks off and the mixture looks sandy. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Sprinkle flour over the sausage and fat, stirring constantly for 1–2 minutes until the raw flour smell cooks off and the mixture looks sandy.",
       "minutes": 3,
       "heatLevel": ""
     },
     {
       "stepNumber": 6,
       "title": "Whisk in milk",
-      "instruction": "Add warm milk gradually, whisking to prevent lumps. Simmer until gravy thickens enough to coat a spoon. Season aggressively with black pepper and salt. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Add warm milk gradually, whisking to prevent lumps. Simmer until gravy thickens enough to coat a spoon. Season aggressively with black pepper and salt.",
       "minutes": 10,
       "heatLevel": ""
     },
@@ -123,17 +123,31 @@
     },
     {
       "stepNumber": 8,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Portion and open the line",
+      "instruction": "Portion Hall Sausage Biscuits & Gravy onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
       "title": "Split and ladle",
-      "instruction": "Split warm biscuits and place two halves per bowl or plate. Ladle hot gravy over the top until generously covered. Garnish with parsley and serve immediately. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Split warm biscuits and place two halves per bowl or plate. Ladle hot gravy over the top until generously covered. Garnish with parsley and serve immediately.",
       "minutes": 5,
       "heatLevel": ""
     }
   ],
   "nutrition": {
-    "calories": 326,
-    "protein": 13,
-    "carbs": 10,
-    "fat": 26,
+    "calories": 208,
+    "protein": 4,
+    "carbs": 8,
+    "fat": 18,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
@@ -142,11 +156,11 @@
       "under30gFat": true,
       "highCarb": false,
       "lowCarb": true,
-      "mealPrepFriendly": false
+      "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": false,
-      "lighterOption": false,
+      "lighterOption": true,
       "performanceMeal": false
     }
   },
@@ -166,12 +180,11 @@
   "heroImage": "/images/breakfast/hall-sausage-biscuits-gravy.jpg",
   "thumbImage": "/images/thumbs/breakfast/hall-sausage-biscuits-gravy.jpg",
   "imageAlt": "Split biscuits smothered in peppery sausage gravy on a firehall breakfast plate",
-  "publishedAt": "2026-05-30T21:22:29.756Z",
-  "updatedAt": "2026-05-31T12:54:36.777Z",
+  "publishedAt": "2026-05-31T18:33:00.829Z",
+  "updatedAt": "2026-05-31T23:49:25.492Z",
   "readMinutes": 7,
   "seoTitle": "Hall Sausage Biscuits & Gravy | Firehall Breakfast",
-  "mobileImage": "/images/mobile/breakfast/hall-sausage-biscuits-gravy.jpg",
-  "railImage": "/images/rails/breakfast/hall-sausage-biscuits-gravy.jpg",
+  "collectionTier": "firehall_classic",
   "proTips": [
     "Warm milk in a microwave or small pot before whisking—cold milk shocks the roux and causes lumps.",
     "Hold biscuits uncovered at 200°F while gravy finishes; covered biscuits steam soft tops.",
@@ -188,5 +201,6 @@
     "Instant-read thermometer",
     "Aluminum foil"
   ],
-  "mealPrepNotes": "Prep mise en place before the shift — Hall Sausage Biscuits & Gravy runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
+  "mealPrepNotes": "Prep mise en place before the shift — Hall Sausage Biscuits & Gravy runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone.",
+  "heroImageAlt": "Hall Sausage Biscuits & Gravy — wide family-style firehall platter showing gravy on a crew prep table"
 }

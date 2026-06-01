@@ -13,9 +13,9 @@
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 811,
+  "calories": 796,
   "protein": 79,
-  "carbs": 84,
+  "carbs": 81,
   "fats": 15,
   "tags": [
     "protein:chicken",
@@ -192,9 +192,9 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 811,
+    "calories": 796,
     "protein": 79,
-    "carbs": 84,
+    "carbs": 81,
     "fats": 15,
     "label": "per serving (hall portion)",
     "source": "calculated",
@@ -239,6 +239,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-30T23:27:14.596Z",
+  "generatedAt": "2026-06-01T01:40:02.153Z",
   "contentVersion": 2
 }

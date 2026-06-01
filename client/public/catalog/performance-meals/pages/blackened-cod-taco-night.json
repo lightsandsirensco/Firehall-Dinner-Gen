@@ -13,10 +13,10 @@
   "cookTime": 12,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 365,
-  "protein": 30,
-  "carbs": 32,
-  "fats": 14,
+  "calories": 1006,
+  "protein": 59,
+  "carbs": 79,
+  "fats": 50,
   "tags": [
     "protein:fish",
     "format:tacos",
@@ -101,36 +101,57 @@
   "steps": [
     {
       "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Blackened Cod Taco Night in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use cod fillets as listed — measure each before heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch fish. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
       "title": "Mix blackening spice",
       "instruction": "Combine paprika, garlic powder, onion powder, thyme, cayenne, 1 tbsp salt, and 1 tsp pepper. Rub should smell smoky and evenly blended.",
       "minutes": 3,
       "heatLevel": ""
     },
     {
-      "stepNumber": 2,
+      "stepNumber": 4,
       "title": "Prep slaw and crema",
       "instruction": "Toss cabbage with half the lime juice and pinch of salt until lightly wilted but still crunchy. Blend avocado, yogurt, and remaining lime for crema.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
-      "stepNumber": 3,
+      "stepNumber": 5,
       "title": "Coat and sear cod",
       "instruction": "Pat cod dry, coat generously with blackening spice. Sear in hot oiled skillet 3–4 minutes per side until crust is dark and fish reads 145°F.",
       "minutes": 10,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 6,
       "title": "Rest and flake fish",
-      "instruction": "Rest fish 3 minutes, break into large chunks. Flesh should be opaque, moist, and flake cleanly without drying into strings.",
+      "instruction": "Rest fish 3 minutes, break into large chunks. Flesh should be opaque, moist, and flake cleanly without drying into strings. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F at the thickest point before moving to the next batch.",
       "minutes": 3,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F until flakes separate. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
       "title": "Assemble tacos",
-      "instruction": "Warm tortillas in foil. Fill with fish, slaw, and crema. Crust should stay spicy and crisp-tender, not soggy from over-filling.",
+      "instruction": "Warm tortillas in foil. Fill with fish, slaw, and crema. Crust should stay spicy and crisp-tender, not soggy from over-filling. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
       "minutes": 5,
       "heatLevel": ""
     }
@@ -153,11 +174,25 @@
   "spiceLevel": "hot",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 365,
-    "protein": 30,
-    "carbs": 32,
-    "fats": 14,
-    "label": "~365 cal/serving · 30g protein · 6g fiber (est.)"
+    "calories": 1006,
+    "protein": 59,
+    "carbs": 79,
+    "fats": 50,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/blackened-cod-taco-night.jpg",
   "mobileImage": "/images/mobile/blackened-cod-taco-night.jpg",
@@ -179,6 +214,6 @@
     "mediterranean-baked-fish-tray",
     "chipotle-lime-chicken-tacos"
   ],
-  "generatedAt": "2026-05-31T15:28:14.291Z",
+  "generatedAt": "2026-05-31T23:32:24.495Z",
   "contentVersion": 2
 }

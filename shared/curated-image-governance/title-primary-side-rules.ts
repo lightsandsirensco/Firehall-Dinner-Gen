@@ -94,9 +94,15 @@ const SIDE_CUE_RULES: SideCueRule[] = [
     message: "fried rice side — hero must show fried rice",
   },
   {
-    sideRe: /\bgarlic bread\b/i,
-    requiredRe: /\b(garlic.?bread|bread|toast)\b/i,
-    message: "garlic bread side — hero must show bread",
+    sideRe: /\bgreek salad\b|\bgarden salad\b|\bside salad\b/i,
+    requiredRe: /\b(salad|lettuce|romaine|cucumber|tomato|feta|olive|red onion|greens)\b/i,
+    forbiddenRe: /\b(single bowl close.?up|macro|one serving)\b/i,
+    message: "salad side in title — hero must show a visible salad bowl or platter beside the main",
+  },
+  {
+    sideRe: /\bmashed potato\b/i,
+    requiredRe: /\b(mash|mashed|potato|shepherd|pie|casserole|golden|browned)\b/i,
+    message: "mashed potato element — hero must show potato topping or mash",
   },
   {
     sideRe: /\bnaan\b/i,
@@ -290,6 +296,24 @@ export function auditTitlePrimarySideAlignment(input: {
     if (/\b(sandwich|bun|sliders?)\b/i.test(blob) && !/\bmac\b/i.test(blob)) {
       issues.push(
         p0Issue("mac and cheese title but hero suggests sandwich without mac and cheese", 94),
+      );
+    }
+  }
+
+  if (/\bshepherd'?s?\s*pie\b/i.test(input.title) && /\b(greek|garden|side)\s*salad\b/i.test(input.title)) {
+    if (!/\b(shepherd|pie|casserole|mashed|potato|golden|browned)\b/i.test(blob)) {
+      issues.push(
+        p0Issue("Shepherd's Pie with salad — hero must show the baked pie with visible mashed potato topping", 96),
+      );
+    }
+    if (!/\b(salad|lettuce|cucumber|tomato|feta|olive|greens)\b/i.test(blob)) {
+      issues.push(
+        p0Issue("Shepherd's Pie with salad — hero must show a salad bowl beside the casserole", 95),
+      );
+    }
+    if (/\b(quinoa|rice bowl|single bowl)\b/i.test(blob)) {
+      issues.push(
+        p0Issue("Shepherd's Pie — forbidden quinoa/rice bowl presentation; show casserole + salad", 97),
       );
     }
   }

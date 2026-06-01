@@ -13,10 +13,10 @@
   "cookTime": 20,
   "prepTime": 18,
   "difficulty": "easy",
-  "calories": 410,
-  "protein": 36,
-  "carbs": 22,
-  "fats": 22,
+  "calories": 573,
+  "protein": 52,
+  "carbs": 14,
+  "fats": 33,
   "tags": [
     "protein:salmon",
     "format:sheet_pan",
@@ -95,36 +95,57 @@
   "steps": [
     {
       "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Maple Mustard Salmon Tray in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch salmon. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
       "title": "Heat oven and prep vegetables",
       "instruction": "Heat oven to 400°F. Toss Brussels sprouts and carrots with 2 tbsp oil, salt, and pepper. Arrange cut-side down on two half-sheets.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
-      "stepNumber": 2,
+      "stepNumber": 4,
       "title": "Mix maple mustard glaze",
-      "instruction": "Whisk maple syrup, both mustards, vinegar, garlic, and remaining oil until smooth and emulsified with no mustard clumps.",
+      "instruction": "Whisk maple syrup, both mustards, vinegar, garlic, and remaining oil until smooth and emulsified with no mustard clumps. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 3,
       "heatLevel": ""
     },
     {
-      "stepNumber": 3,
+      "stepNumber": 5,
       "title": "Season salmon",
-      "instruction": "Pat salmon dry, place skin-down among vegetables. Brush half the glaze over flesh side until evenly coated and glossy.",
+      "instruction": "Pat salmon dry, place skin-down among vegetables. Brush half the glaze over flesh side until evenly coated and glossy. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F at the thickest point before moving to the next batch.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
-      "title": "Bake until done",
-      "instruction": "Roast 14–18 minutes, brushing glaze again halfway, until salmon reads 125–130°F and sprouts are caramelized at cut edges.",
+      "stepNumber": 6,
+      "title": "Bake until fully cooked",
+      "instruction": "Roast 14–18 minutes, brushing glaze again halfway, until salmon reads 125–130°F and sprouts are caramelized at cut edges. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F at the thickest point before moving to the next batch.",
       "minutes": 16,
       "heatLevel": "medium-high"
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
       "title": "Rest and serve",
-      "instruction": "Rest 3 minutes. Salmon should flake with gentle pressure and stay moist pink at center, not chalky throughout.",
+      "instruction": "Rest 3 minutes. Salmon should flake with gentle pressure and stay moist pink at center, not chalky throughout. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F at the thickest point before moving to the next batch.",
       "minutes": 3,
       "heatLevel": ""
     }
@@ -147,11 +168,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 410,
-    "protein": 36,
-    "carbs": 22,
-    "fats": 22,
-    "label": "~410 cal/serving · 36g protein · 6g fiber (est.)"
+    "calories": 573,
+    "protein": 52,
+    "carbs": 14,
+    "fats": 33,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/maple-mustard-salmon-tray.jpg",
   "mobileImage": "/images/mobile/maple-mustard-salmon-tray.jpg",
@@ -176,6 +211,6 @@
     "maple-soy-salmon-bowls",
     "mediterranean-baked-fish-tray"
   ],
-  "generatedAt": "2026-05-31T15:28:14.291Z",
+  "generatedAt": "2026-05-31T23:32:24.495Z",
   "contentVersion": 2
 }

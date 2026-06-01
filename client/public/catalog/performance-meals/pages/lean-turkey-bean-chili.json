@@ -13,10 +13,10 @@
   "cookTime": 240,
   "prepTime": 25,
   "difficulty": "easy",
-  "calories": 365,
-  "protein": 35,
-  "carbs": 38,
-  "fats": 9,
+  "calories": 356,
+  "protein": 41,
+  "carbs": 12,
+  "fats": 15,
   "tags": [
     "protein:turkey",
     "format:slow_cooker",
@@ -155,11 +155,25 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 365,
-    "protein": 35,
-    "carbs": 38,
-    "fats": 9,
-    "label": "~365 cal/serving · 35g protein · 12g fiber (est.)"
+    "calories": 356,
+    "protein": 41,
+    "carbs": 12,
+    "fats": 15,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": true,
+      "performanceMeal": true
+    }
   },
   "heroImage": "/images/golden-100/lean-turkey-bean-chili.jpg",
   "mobileImage": "/images/mobile/lean-turkey-bean-chili.jpg",
@@ -185,6 +199,7 @@
     "turkey-sweet-potato-chili",
     "turkey-lettuce-wrap-night"
   ],
-  "generatedAt": "2026-05-31T15:28:14.291Z",
-  "contentVersion": 2
+  "generatedAt": "2026-05-31T23:32:24.494Z",
+  "contentVersion": 2,
+  "heroImageAlt": "Lean Turkey and Bean Chili — wide family-style firehall platter showing turkey, bean chili on a crew prep table"
 }

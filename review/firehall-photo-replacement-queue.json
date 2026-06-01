@@ -1,6 +1,79 @@
 {
-  "generatedAt": "2026-05-31T13:31:52.883Z",
+  "generatedAt": "2026-06-01T01:33:04.851Z",
   "standardVersion": "1.0",
-  "count": 0,
-  "queue": []
+  "count": 3,
+  "queue": [
+    {
+      "collection": "bbq",
+      "slug": "garlic-butter-shrimp-skewers",
+      "title": "Garlic Tarragon Shrimp Skewers",
+      "route": "/bbq/garlic-butter-shrimp-skewers",
+      "protein": "seafood",
+      "mealFormat": "crew_kebab",
+      "category": "bbq_grill_nights",
+      "photoCategory": "bbq",
+      "heroImage": "/images/smoker-catalog/garlic-butter-shrimp-skewers.jpg",
+      "reasons": [
+        {
+          "code": "missing_image_file",
+          "severity": "critical",
+          "message": "hero image file missing — must generate unique firehall kitchen photo"
+        },
+        {
+          "code": "needs_regeneration",
+          "severity": "critical",
+          "message": "queued for replacement under global firehall kitchen photo standard"
+        }
+      ],
+      "priority": "p0"
+    },
+    {
+      "collection": "bbq",
+      "slug": "cajun-grilled-cod-crew",
+      "title": "Black Iron Remoulade Cod Plates",
+      "route": "/bbq/cajun-grilled-cod-crew",
+      "protein": "seafood",
+      "mealFormat": "bayou_fillet",
+      "category": "bbq_grill_nights",
+      "photoCategory": "bbq",
+      "heroImage": "/images/smoker-catalog/cajun-grilled-cod-crew.jpg",
+      "reasons": [
+        {
+          "code": "missing_image_file",
+          "severity": "critical",
+          "message": "hero image file missing — must generate unique firehall kitchen photo"
+        },
+        {
+          "code": "needs_regeneration",
+          "severity": "critical",
+          "message": "queued for replacement under global firehall kitchen photo standard"
+        }
+      ],
+      "priority": "p0"
+    },
+    {
+      "collection": "bbq",
+      "slug": "grilled-cod-lemon-packets",
+      "title": "Caper-Butter Cod Foil Packets",
+      "route": "/bbq/grilled-cod-lemon-packets",
+      "protein": "seafood",
+      "mealFormat": "foil_fish",
+      "category": "bbq_grill_nights",
+      "photoCategory": "bbq",
+      "heroImage": "/images/smoker-catalog/grilled-cod-lemon-packets.jpg",
+      "reasons": [
+        {
+          "code": "missing_image_file",
+          "severity": "critical",
+          "message": "hero image file missing — must generate unique firehall kitchen photo"
+        },
+        {
+          "code": "needs_regeneration",
+          "severity": "critical",
+          "message": "queued for replacement under global firehall kitchen photo standard"
+        }
+      ],
+      "priority": "p0"
+    }
+  ]
 }

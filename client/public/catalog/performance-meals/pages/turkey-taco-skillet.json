@@ -1,7 +1,7 @@
 {
   "slug": "turkey-taco-skillet",
-  "title": "Turkey Taco Skillet",
-  "displayTitle": "Turkey Taco Skillet",
+  "title": "Garlic Turkey Skillet",
+  "displayTitle": "Garlic Turkey Skillet",
   "seoTitle": "Turkey Taco Skillet | Firefighter Meal",
   "shortDescription": "One-pan seasoned turkey with peppers, corn, and melted cheese",
   "subtitle": "One-pan seasoned turkey with peppers, corn, and melted cheese",
@@ -13,10 +13,10 @@
   "cookTime": 20,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 385,
-  "protein": 36,
-  "carbs": 28,
-  "fats": 14,
+  "calories": 608,
+  "protein": 50,
+  "carbs": 38,
+  "fats": 27,
   "tags": [
     "protein:turkey",
     "format:skillet",
@@ -97,41 +97,69 @@
       "name": "kosher salt",
       "quantity": "1",
       "unit": "tsp"
+    },
+    {
+      "name": "large flour tortillas",
+      "quantity": "8",
+      "unit": "count",
+      "notes": "warm before service",
+      "group": "Serve"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Garlic Turkey Skillet in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch turkey. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
       "title": "Brown turkey",
       "instruction": "Cook ground turkey in a large skillet over medium-high 8–10 minutes, breaking into fine crumbles until no pink remains and edges look lightly browned.",
       "minutes": 10,
       "heatLevel": "medium-high"
     },
     {
-      "stepNumber": 2,
+      "stepNumber": 4,
       "title": "Add vegetables",
-      "instruction": "Stir in onion and bell pepper. Cook 5–6 minutes until softened and onion turns translucent with slightly softened pepper pieces.",
+      "instruction": "Stir in onion and bell pepper. Cook 5–6 minutes until softened and onion turns translucent with slightly softened pepper pieces. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 6,
       "heatLevel": ""
     },
     {
-      "stepNumber": 3,
+      "stepNumber": 5,
       "title": "Season and simmer",
       "instruction": "Add garlic, chili powder, cumin, paprika, corn, beans, tomatoes, and salt. Simmer 8 minutes until liquid reduces and mixture looks thick, not soupy.",
       "minutes": 8,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 6,
       "title": "Melt cheese",
-      "instruction": "Remove from heat, sprinkle cheddar evenly, cover 2 minutes until cheese melts into a glossy layer on top.",
+      "instruction": "Remove from heat, sprinkle cheddar evenly, cover 2 minutes until cheese melts into a glossy layer on top. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 2,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
       "title": "Serve immediately",
-      "instruction": "Scoop into tortillas or bowls. Turkey should stay moist with visible corn and pepper pieces throughout each portion.",
+      "instruction": "Scoop into tortillas or bowls. Turkey should stay moist with visible corn and pepper pieces throughout each portion. Plan about 2 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
       "minutes": 2,
       "heatLevel": ""
     }
@@ -154,11 +182,25 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 385,
-    "protein": 36,
-    "carbs": 28,
-    "fats": 14,
-    "label": "~385 cal/serving · 36g protein · 7g fiber (est.)"
+    "calories": 608,
+    "protein": 50,
+    "carbs": 38,
+    "fats": 27,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/turkey-taco-skillet.jpg",
   "mobileImage": "/images/mobile/turkey-taco-skillet.jpg",
@@ -183,6 +225,6 @@
     "turkey-lettuce-wrap-night",
     "chicken-enchilada-skillet-light"
   ],
-  "generatedAt": "2026-05-31T15:28:14.291Z",
+  "generatedAt": "2026-05-31T23:32:24.495Z",
   "contentVersion": 2
 }

@@ -1,9 +1,9 @@
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { Link, Redirect, useRoute } from "wouter";
 import { resolveCatalogSlug } from "@shared/catalog-slug-redirects";
 import { approvedCatalogRecipePath } from "@shared/approved-catalog";
 import { useQuery } from "@tanstack/react-query";
-import { Sunrise } from "lucide-react";
+import { Sunrise, List } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
 import { getSavedCount } from "@/lib/saved-meals";
 import { fetchBreakfastRecipePage } from "@/lib/breakfast-api";
@@ -17,12 +17,23 @@ import { RecipeNutritionPanel } from "@/components/recipe-nutrition-panel";
 import { SiteFooter } from "@/components/site-footer";
 import { useMeasurementSystem } from "@/components/measurement-unit-toggle";
 import { RecipeMeasurementBar } from "@/components/recipe-measurement-bar";
+import { CrewSizePicker } from "@/components/crew-size-picker";
+import { ShoppingListModal } from "@/components/shopping-list-modal";
+import { Button } from "@/components/ui/button";
+import { useCrewScaling } from "@/hooks/use-crew-scaling";
+import { buildShoppingListFromCatalogIngredients } from "@/lib/shopping-list";
 import { SeoBreadcrumbs } from "@/components/seo/breadcrumbs";
 import { usePageSeo } from "@/lib/seo/use-page-seo";
 import { getSiteOrigin } from "@/lib/seo/site-origin";
 import { buildBreakfastRecipeSchema, buildBreakfastRecipeSeo } from "@shared/seo/fuel-metadata";
 import { buildBreadcrumbListSchema } from "@shared/seo/schema";
-import { breakfastIndexPath, breakfastRecipePath } from "@shared/fuel-catalog/paths";
+import {
+  breakfastIndexPath,
+  breakfastPerformanceIndexPath,
+  breakfastPerformanceRecipePath,
+  breakfastRecipePath,
+} from "@shared/fuel-catalog/paths";
+import { isPerformanceBreakfastSlug } from "@shared/breakfast-catalog/governance-types";
 import {
   formatTemperaturesInText,
   formatIngredientAmount,
@@ -30,16 +41,40 @@ import {
 } from "@shared/measurements";
 
 export default function BreakfastRecipePage() {
-  const [, params] = useRoute("/breakfast/:slug");
-  const slug = String(params?.slug || "").trim().toLowerCase();
+  const [, perfParams] = useRoute("/breakfast/performance/:slug");
+  const [, mainParams] = useRoute("/breakfast/:slug");
+  const isPerformanceRoute = Boolean(perfParams?.slug);
+  const slug = String((isPerformanceRoute ? perfParams?.slug : mainParams?.slug) || "")
+    .trim()
+    .toLowerCase();
+
+  if (slug === "performance") {
+    return <Redirect to={breakfastPerformanceIndexPath()} />;
+  }
+
   const resolvedSlug = slug ? resolveCatalogSlug(slug) : "";
   if (slug && resolvedSlug !== slug) {
     return <Redirect to={approvedCatalogRecipePath(resolvedSlug)} />;
   }
+
+  if (slug && !isPerformanceRoute && isPerformanceBreakfastSlug(slug)) {
+    return <Redirect to={breakfastPerformanceRecipePath(slug)} />;
+  }
+  if (slug && isPerformanceRoute && !isPerformanceBreakfastSlug(slug)) {
+    return <Redirect to={breakfastRecipePath(slug)} />;
+  }
+
   const favCount = useMemo(() => getSavedCount(), []);
   const [measurementSystem] = useMeasurementSystem();
+  const [shoppingOpen, setShoppingOpen] = useState(false);
   const origin = getSiteOrigin();
-  const recipePath = slug ? breakfastRecipePath(slug) : breakfastIndexPath();
+  const recipePath = slug
+    ? isPerformanceRoute
+      ? breakfastPerformanceRecipePath(slug)
+      : breakfastRecipePath(slug)
+    : breakfastIndexPath();
+  const indexPath = isPerformanceRoute ? breakfastPerformanceIndexPath() : breakfastIndexPath();
+  const indexLabel = isPerformanceRoute ? "Performance Breakfasts" : "Breakfast";
 
   const { data: page, isLoading, error } = useQuery({
     queryKey: ["breakfast-page", slug],
@@ -63,12 +98,24 @@ export default function BreakfastRecipePage() {
               buildBreadcrumbListSchema(origin, [
                 { name: "Home", path: "/" },
                 { name: "Breakfast", path: breakfastIndexPath() },
+                ...(isPerformanceRoute
+                  ? [{ name: "Performance Breakfasts", path: breakfastPerformanceIndexPath() }]
+                  : []),
                 { name: page.title, path: recipePath },
               ]),
             ]
           : [],
-      [origin, page, recipePath],
+      [origin, page, recipePath, isPerformanceRoute],
     ),
+  );
+
+  const { crewSize, setCrewSize, scaledIngredients, displayCookTime } = useCrewScaling(page);
+  const shoppingList = useMemo(
+    () =>
+      scaledIngredients.length
+        ? buildShoppingListFromCatalogIngredients(scaledIngredients, { recipeTitle: page?.title })
+        : null,
+    [scaledIngredients, page?.title],
   );
 
   return (
@@ -76,12 +123,14 @@ export default function BreakfastRecipePage() {
       <SiteHeader activePage="breakfast" favCount={favCount} />
       <main className="max-w-[980px] mx-auto px-page pt-8 pb-8 sm:pt-10 flex-1" id="main-content">
         <div className="flex items-center justify-between gap-3">
-          <Link href="/breakfast" className="text-sm font-medium text-primary hover:underline">
-            ← Breakfast
+          <Link href={indexPath} className="text-sm font-medium text-primary hover:underline">
+            ← {indexLabel}
           </Link>
           <div className="flex items-center gap-2 text-amber-400/90">
             <Sunrise className="w-4 h-4" aria-hidden />
-            <span className="text-[11px] uppercase tracking-widest">Station Breakfast</span>
+            <span className="text-[11px] uppercase tracking-widest">
+              {isPerformanceRoute ? "Performance Breakfast" : "Station Breakfast"}
+            </span>
           </div>
         </div>
 
@@ -103,6 +152,9 @@ export default function BreakfastRecipePage() {
               items={[
                 { name: "Home", path: "/" },
                 { name: "Breakfast", path: breakfastIndexPath() },
+                ...(isPerformanceRoute
+                  ? [{ name: "Performance Breakfasts", path: breakfastPerformanceIndexPath() }]
+                  : []),
                 { name: page.title, path: recipePath },
               ]}
               className="mb-4"
@@ -140,6 +192,13 @@ export default function BreakfastRecipePage() {
 
             <RecipeBrandStrip className="mt-5" />
 
+            <CrewSizePicker
+              crewSize={crewSize}
+              onChange={setCrewSize}
+              prominent
+              className="mt-5"
+            />
+
             <RecipeCrewRatingPanel slug={page.slug} category="breakfast_brunch" className="mt-6" />
 
             <RecipeNutritionPanel
@@ -157,11 +216,11 @@ export default function BreakfastRecipePage() {
             <section className="mt-9 grid grid-cols-1 sm:grid-cols-3 gap-3">
               <div className="rounded-2xl border border-border/20 bg-card/25 p-4">
                 <p className="text-[11px] uppercase tracking-widest text-muted-foreground">Time</p>
-                <p className="mt-1 text-sm font-medium">{page.totalTime} min</p>
+                <p className="mt-1 text-sm font-medium">{displayCookTime || page.totalTime} min</p>
               </div>
               <div className="rounded-2xl border border-border/20 bg-card/25 p-4">
                 <p className="text-[11px] uppercase tracking-widest text-muted-foreground">Crew size</p>
-                <p className="mt-1 text-sm font-medium">{page.crewSize} firefighters</p>
+                <p className="mt-1 text-sm font-medium">{crewSize} firefighters</p>
               </div>
               <div className="rounded-2xl border border-border/20 bg-card/25 p-4">
                 <p className="text-[11px] uppercase tracking-widest text-muted-foreground">Difficulty</p>
@@ -170,10 +229,15 @@ export default function BreakfastRecipePage() {
             </section>
 
             <RecipeMeasurementBar className="mt-6">
-              <p className="text-sm text-muted-foreground">
-                Crew size:{" "}
-                <span className="font-medium text-foreground">{page.crewSize} firefighters</span>
-              </p>
+              <Button
+                variant="outline"
+                className="min-h-11 gap-2"
+                onClick={() => setShoppingOpen(true)}
+                disabled={!shoppingList}
+              >
+                <List className="w-4 h-4" aria-hidden />
+                Shopping list ({crewSize} crew)
+              </Button>
             </RecipeMeasurementBar>
 
             <div className="mt-8 grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-8">
@@ -182,7 +246,7 @@ export default function BreakfastRecipePage() {
                   Ingredients
                 </h2>
                 <ul className="mt-4 space-y-2.5">
-                  {page.ingredients.map((ing, idx) => (
+                  {scaledIngredients.map((ing, idx) => (
                     <li
                       key={`${ing.name}-${idx}`}
                       className={cn(
@@ -260,6 +324,15 @@ export default function BreakfastRecipePage() {
               </section>
             </div>
           </>
+        )}
+        {page && shoppingList && (
+          <ShoppingListModal
+            open={shoppingOpen}
+            onOpenChange={setShoppingOpen}
+            shoppingList={shoppingList}
+            recipeTitle={page.title}
+            generatorType="meal"
+          />
         )}
       </main>
       <SiteFooter variant="compact" pbSafe />

@@ -13,10 +13,10 @@
   "cookTime": 35,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 485,
-  "protein": 42,
-  "carbs": 32,
-  "fats": 22,
+  "calories": 582,
+  "protein": 75,
+  "carbs": 33,
+  "fats": 15,
   "tags": [
     "protein:chicken",
     "format:plated_main",
@@ -93,37 +93,86 @@
   "steps": [
     {
       "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Boneless Chicken Thighs with Sweet Potato & Fresh Spinach in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
       "title": "Season and prep thighs",
       "instruction": "Trim excess fat from thighs and pat completely dry. Season both sides with salt, pepper, and half the paprika so the sear builds a spiced crust.",
       "minutes": 8,
       "heatLevel": ""
     },
     {
-      "stepNumber": 2,
+      "stepNumber": 4,
       "title": "Roast sweet potato wedges",
       "instruction": "Toss wedges with 2 tbsp olive oil, 1 tsp salt, and paprika. Spread on two half-sheets in a single layer. Roast at 425°F 28–32 minutes until edges caramelize and centers pierce easily.",
       "minutes": 32,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 3,
+      "stepNumber": 5,
       "title": "Sear chicken thighs",
       "instruction": "Heat remaining oil in skillets over medium-high. Season thighs with salt and pepper. Sear 5–6 minutes per side until deep golden with crisp edges and internal temp reaches 165°F. Rest 5 minutes, then slice.",
       "minutes": 14,
       "heatLevel": "medium-high"
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 6,
       "title": "Sauté spinach",
       "instruction": "In the same pan over medium, cook garlic 30 seconds until fragrant. Add spinach in batches, tossing until just wilted and bright green. Finish with a pinch of salt and lemon juice.",
       "minutes": 4,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Portion and open the line",
+      "instruction": "Portion Boneless Chicken Thighs with Sweet Potato & Fresh Spinach onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Scale for larger halls",
+      "instruction": "When cooking for more than 8 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
       "title": "Plate for service",
       "instruction": "Portion two sliced thighs per plate with a mound of sweet potato wedges and sautéed spinach on the side. Protein should dominate the plate; vegetables and carbs stay distinct, not mixed into sauce.",
       "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 12,
+      "title": "Final quality check before service",
+      "instruction": "Walk the line once before opening service for Boneless Chicken Thighs with Sweet Potato & Fresh Spinach — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
+      "minutes": 4,
       "heatLevel": ""
     }
   ],
@@ -145,11 +194,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 485,
-    "protein": 42,
-    "carbs": 32,
-    "fats": 22,
-    "label": "~485 cal/serving · 42g protein · 6g fiber (est.)"
+    "calories": 582,
+    "protein": 75,
+    "carbs": 33,
+    "fats": 15,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": true
+    }
   },
   "heroImage": "/images/golden-100/boneless-chicken-thighs-sweet-potato-spinach.jpg",
   "mobileImage": "/images/mobile/boneless-chicken-thighs-sweet-potato-spinach.jpg",
@@ -175,6 +238,7 @@
     "crock-barbacoa-chicken",
     "shawarma-chicken-rice-bowls"
   ],
-  "generatedAt": "2026-05-31T15:28:14.291Z",
-  "contentVersion": 2
+  "generatedAt": "2026-05-31T23:32:24.495Z",
+  "contentVersion": 2,
+  "heroImageAlt": "Boneless Chicken Thighs with Sweet Potato & Fresh Spinach — wide family-style firehall platter showing chicken, sweet potato & fresh spinach, fresh spinach, swe"
 }

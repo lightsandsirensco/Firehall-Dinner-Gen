@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-05-31T13:32:02.886Z",
+  "generatedAt": "2026-05-31T18:33:10.912Z",
   "totals": {
-    "recipesAudited": 74,
-    "passed": 74,
+    "recipesAudited": 69,
+    "passed": 69,
     "failed": 0,
-    "formatPassed": 74,
+    "formatPassed": 69,
     "duplicateGroups": 0,
     "canonicalUnique": 51,
     "missingHero": 0
@@ -12,41 +12,6 @@
   "duplicateGroups": [],
   "failedRecipes": [],
   "recipes": [
-    {
-      "slug": "apple-cinnamon-baked-oatmeal",
-      "title": "Apple Cinnamon Baked Oatmeal",
-      "route": "/breakfast/apple-cinnamon-baked-oatmeal",
-      "source": "breakfast_catalog",
-      "tags": [
-        "oatmeal",
-        "apple",
-        "cinnamon",
-        "bake",
-        "make-ahead"
-      ],
-      "heroImage": "/images/breakfast/apple-cinnamon-baked-oatmeal.jpg",
-      "thumbImage": "/images/thumbs/breakfast/apple-cinnamon-baked-oatmeal.jpg",
-      "mobileImage": "/images/mobile/breakfast/apple-cinnamon-baked-oatmeal.jpg",
-      "railImage": "/images/rails/breakfast/apple-cinnamon-baked-oatmeal.jpg",
-      "formatKinds": [
-        "oats"
-      ],
-      "heroMd5": "f76b791e5e26625db44c353837b08fdb",
-      "duplicateGroup": [
-        "apple-cinnamon-baked-oatmeal"
-      ],
-      "duplicatePeers": [],
-      "recommendedDonor": null,
-      "onDisk": {
-        "hero": true,
-        "thumb": true,
-        "mobile": true,
-        "rail": true
-      },
-      "variantMismatch": false,
-      "issues": [],
-      "pass": true
-    },
     {
       "slug": "bacon-egg-hash-skillet",
       "title": "Bacon Egg Hash Skillet",
@@ -221,39 +186,6 @@
       "pass": true
     },
     {
-      "slug": "big-pot-savory-oats",
-      "title": "Big-Pot Savory Oats",
-      "route": "/breakfast/big-pot-savory-oats",
-      "source": "breakfast_catalog",
-      "tags": [
-        "oats",
-        "one-pot",
-        "topping-bar"
-      ],
-      "heroImage": "/images/breakfast/big-pot-savory-oats.jpg",
-      "thumbImage": "/images/thumbs/breakfast/big-pot-savory-oats.jpg",
-      "mobileImage": "/images/mobile/breakfast/big-pot-savory-oats.jpg",
-      "railImage": "/images/rails/breakfast/big-pot-savory-oats.jpg",
-      "formatKinds": [
-        "oats"
-      ],
-      "heroMd5": "bd579f048910cdb23b78dbc50a60b476",
-      "duplicateGroup": [
-        "big-pot-savory-oats"
-      ],
-      "duplicatePeers": [],
-      "recommendedDonor": null,
-      "onDisk": {
-        "hero": true,
-        "thumb": true,
-        "mobile": true,
-        "rail": true
-      },
-      "variantMismatch": false,
-      "issues": [],
-      "pass": true
-    },
-    {
       "slug": "biscuit-french-toast-sliders",
       "title": "Biscuit French Toast Sliders",
       "route": "/breakfast/biscuit-french-toast-sliders",
@@ -343,7 +275,7 @@
       "formatKinds": [
         "other"
       ],
-      "heroMd5": "ebc61dcab60d8a740d1e2f20ecbc9dcf",
+      "heroMd5": "75e9a6d5bf65150ecae228525bd7e83a",
       "duplicateGroup": [
         "breakfast-enchiladas"
       ],
@@ -1403,40 +1335,6 @@
       "pass": true
     },
     {
-      "slug": "high-protein-parfaits",
-      "title": "High-Protein Yogurt Parfaits",
-      "route": "/breakfast/high-protein-parfaits",
-      "source": "breakfast_catalog",
-      "tags": [
-        "yogurt",
-        "parfaits",
-        "no-cook",
-        "granola"
-      ],
-      "heroImage": "/images/breakfast/high-protein-parfaits.jpg",
-      "thumbImage": "/images/thumbs/breakfast/high-protein-parfaits.jpg",
-      "mobileImage": "/images/mobile/breakfast/high-protein-parfaits.jpg",
-      "railImage": "/images/rails/breakfast/high-protein-parfaits.jpg",
-      "formatKinds": [
-        "other"
-      ],
-      "heroMd5": "9794b41c570aeb9dcb72d4b8f3e8ee8d",
-      "duplicateGroup": [
-        "high-protein-parfaits"
-      ],
-      "duplicatePeers": [],
-      "recommendedDonor": null,
-      "onDisk": {
-        "hero": true,
-        "thumb": true,
-        "mobile": true,
-        "rail": true
-      },
-      "variantMismatch": false,
-      "issues": [],
-      "pass": true
-    },
-    {
       "slug": "huevos-rancheros-crew",
       "title": "Huevos Rancheros for the Crew",
       "route": "/breakfast/huevos-rancheros-crew",
@@ -1739,74 +1637,6 @@
       "heroMd5": "fc476471e76ea091ca0c202a59e9aa50",
       "duplicateGroup": [
         "overnight-sausage-strata"
-      ],
-      "duplicatePeers": [],
-      "recommendedDonor": null,
-      "onDisk": {
-        "hero": true,
-        "thumb": true,
-        "mobile": true,
-        "rail": true
-      },
-      "variantMismatch": false,
-      "issues": [],
-      "pass": true
-    },
-    {
-      "slug": "protein-french-toast",
-      "title": "Protein French Toast",
-      "route": "/breakfast/protein-french-toast",
-      "source": "breakfast_catalog",
-      "tags": [
-        "french-toast",
-        "cottage-cheese",
-        "griddle",
-        "berries",
-        "maple"
-      ],
-      "heroImage": "/images/breakfast/protein-french-toast.jpg",
-      "thumbImage": "/images/thumbs/breakfast/protein-french-toast.jpg",
-      "mobileImage": "/images/mobile/breakfast/protein-french-toast.jpg",
-      "railImage": "/images/rails/breakfast/protein-french-toast.jpg",
-      "formatKinds": [
-        "french_toast"
-      ],
-      "heroMd5": "2d661f5f6ff7f5c9c1826d05c0ee70ea",
-      "duplicateGroup": [
-        "protein-french-toast"
-      ],
-      "duplicatePeers": [],
-      "recommendedDonor": null,
-      "onDisk": {
-        "hero": true,
-        "thumb": true,
-        "mobile": true,
-        "rail": true
-      },
-      "variantMismatch": false,
-      "issues": [],
-      "pass": true
-    },
-    {
-      "slug": "protein-pancake-tray",
-      "title": "Protein Pancake Tray",
-      "route": "/breakfast/protein-pancake-tray",
-      "source": "breakfast_catalog",
-      "tags": [
-        "pancakes",
-        "tray-bake",
-        "make-ahead"
-      ],
-      "heroImage": "/images/breakfast/protein-pancake-tray.jpg",
-      "thumbImage": "/images/thumbs/breakfast/protein-pancake-tray.jpg",
-      "mobileImage": "/images/mobile/breakfast/protein-pancake-tray.jpg",
-      "railImage": "/images/rails/breakfast/protein-pancake-tray.jpg",
-      "formatKinds": [
-        "pancake"
-      ],
-      "heroMd5": "f828751ad69e69787fd3029243398828",
-      "duplicateGroup": [
-        "protein-pancake-tray"
       ],
       "duplicatePeers": [],
       "recommendedDonor": null,

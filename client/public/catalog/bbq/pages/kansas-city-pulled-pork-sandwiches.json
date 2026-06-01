@@ -8,15 +8,15 @@
   "category": "bbq_grill_nights",
   "cuisine": "american",
   "description": "Adapted from classic Kansas City pulled pork tradition (Amazing Ribs, Meat Church): pork shoulder smokes with a balanced sweet rub, gets pulled into juices, and served with thick tomato-molasses BBQ sauce on soft buns.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 480,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 1331,
-  "protein": 120,
-  "carbs": 41,
-  "fats": 68,
+  "calories": 788,
+  "protein": 69,
+  "carbs": 42,
+  "fats": 36,
   "tags": [
     "protein:pork",
     "format:sandwich",
@@ -40,68 +40,68 @@
   "ingredients": [
     {
       "name": "bone-in pork shoulder",
-      "quantity": "10",
+      "quantity": "4",
       "unit": "lb"
     },
     {
       "name": "kosher salt",
-      "quantity": "4",
+      "quantity": "3.4",
       "unit": "tbsp"
     },
     {
       "name": "brown sugar",
-      "quantity": "4",
+      "quantity": "3.4",
       "unit": "tbsp"
     },
     {
       "name": "smoked paprika",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp"
     },
     {
       "name": "garlic powder",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp"
     },
     {
       "name": "onion powder",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp"
     },
     {
       "name": "yellow mustard",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "cup",
       "notes": "binder"
     },
     {
       "name": "ketchup",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "cup"
     },
     {
       "name": "molasses",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "cup"
     },
     {
       "name": "apple cider vinegar",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "cup"
     },
     {
       "name": "Worcestershire sauce",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp"
     },
     {
       "name": "buns",
-      "quantity": "12",
+      "quantity": "10",
       "unit": "whole"
     },
     {
       "name": "coleslaw mix",
-      "quantity": "10",
+      "quantity": "8",
       "unit": "cups"
     }
   ],
@@ -150,7 +150,7 @@
     },
     {
       "stepNumber": 7,
-      "title": "Tonight's board",
+      "title": "",
       "instruction": "Pulled pork pan with ladle, buns, slaw, and extra sauce. Build-your-own sandwich line.",
       "minutes": 5,
       "heatLevel": ""
@@ -180,12 +180,25 @@
   "mealPrepNotes": "Start early shift. Once pulled, hold covered at 170°F with a ladle of sauce and drippings for up to 2 hours. Wrap earlier if the smoker schedule slips.",
   "cleanupDifficulty": "heavy",
   "nutrition": {
-    "calories": 1331,
-    "protein": 120,
-    "carbs": 41,
-    "fats": 68,
+    "calories": 788,
+    "protein": 69,
+    "carbs": 42,
+    "fats": 36,
     "label": "per serving (hall portion)",
-    "source": "estimated"
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/smoker-catalog/kansas-city-pulled-pork-sandwiches.jpg",
   "heroImageAlt": "Kansas City Pulled Pork Sandwiches — crew-sized BBQ spread with visible smoke and bark",
@@ -213,6 +226,6 @@
     "smoked-baked-beans-crew"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T02:29:42.530Z",
+  "generatedAt": "2026-05-31T23:32:23.200Z",
   "contentVersion": 2
 }

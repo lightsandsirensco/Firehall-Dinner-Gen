@@ -2,7 +2,7 @@
   "slug": "eggs-benedict-hall-style",
   "title": "Eggs Benedict Hall Style",
   "subtitle": "Poached eggs, Canadian bacon, and hollandaise on toasted English muffins.",
-  "description": "Adapted from classic New York brunch tradition for a firehall breakfast line: split English muffins toasted crisp, topped with warmed Canadian bacon, poached eggs, and a stable blender hollandaise. Portions cleanly for eight with a two-pan poaching setup.",
+  "description": "Poached eggs, Canadian bacon, and hollandaise on English muffins — hall-style benedict with a workflow that doesn't stall the whole kitchen.",
   "filters": [
     "feed_a_crew",
     "high_protein",
@@ -88,28 +88,28 @@
     {
       "stepNumber": 3,
       "title": "Make hollandaise",
-      "instruction": "Blend yolks, lemon juice, mustard, and a pinch of salt 30 seconds. With blender running on medium, slowly stream in hot melted butter until thick and glossy. Hold in a thermos or over a warm water bath—not direct heat. Plan about 10 minutes for this step at crew scale. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts.",
+      "instruction": "Blend yolks, lemon juice, mustard, and a pinch of salt 30 seconds. With blender running on medium, slowly stream in hot melted butter until thick and glossy. Hold in a thermos or over a warm water bath—not direct heat.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 4,
       "title": "Toast muffins and warm bacon",
-      "instruction": "Split and toast English muffins at 350°F until edges are crisp, about 6 minutes. Warm Canadian bacon in a dry skillet over medium until lightly browned at the edges; hold covered on a warm tray. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts.",
+      "instruction": "Split and toast English muffins at 350°F until edges are crisp, about 6 minutes. Warm Canadian bacon in a dry skillet over medium until lightly browned at the edges; hold covered on a warm tray.",
       "minutes": 8,
       "heatLevel": ""
     },
     {
       "stepNumber": 5,
       "title": "Set poaching water",
-      "instruction": "Bring two wide pots of water to a gentle simmer with a tablespoon of vinegar each—the surface should barely ripple, not roll. Crack each egg into a small cup before sliding into the water. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Plan about 5 minutes for this step at crew scale.",
+      "instruction": "Bring two wide pots of water to a gentle simmer with a tablespoon of vinegar each—the surface should barely ripple, not roll. Crack each egg into a small cup before sliding into the water.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 6,
       "title": "Poach the eggs",
-      "instruction": "Slide eggs into simmering water one at a time. Poach 3–4 minutes until whites are fully set (165°F) and yolks remain runny. Lift with a slotted spoon, drain on paper towels, and trim ragged edges for clean plates. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Slide eggs into simmering water one at a time. Poach 3–4 minutes until whites are fully set (165°F) and yolks remain runny. Lift with a slotted spoon, drain on paper towels, and trim ragged edges for clean plates.",
       "minutes": 10,
       "heatLevel": ""
     },
@@ -136,17 +136,31 @@
     },
     {
       "stepNumber": 10,
-      "title": "Assemble and sauce",
-      "instruction": "Place two muffin halves per plate, top each with bacon and a poached egg. Spoon hollandaise generously over each egg, finish with chives and lemon zest, and serve within 2 minutes while yolks are still liquid. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "title": "Scale for larger halls",
+      "instruction": "When cooking for more than 8 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
       "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
+      "title": "Assemble and sauce",
+      "instruction": "Place two muffin halves per plate, top each with bacon and a poached egg. Spoon hollandaise generously over each egg, finish with chives and lemon zest, and serve within 2 minutes while yolks are still liquid.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 12,
+      "title": "Final quality check before service",
+      "instruction": "Walk the line once before opening service for Eggs Benedict Hall Style — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
+      "minutes": 4,
       "heatLevel": ""
     }
   ],
   "nutrition": {
-    "calories": 921,
-    "protein": 58,
-    "carbs": 19,
-    "fat": 69,
+    "calories": 842,
+    "protein": 56,
+    "carbs": 4,
+    "fat": 68,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
@@ -155,7 +169,7 @@
       "under30gFat": false,
       "highCarb": false,
       "lowCarb": true,
-      "mealPrepFriendly": false
+      "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": true,
@@ -179,12 +193,11 @@
   "heroImage": "/images/breakfast/eggs-benedict-hall-style.jpg",
   "thumbImage": "/images/thumbs/breakfast/eggs-benedict-hall-style.jpg",
   "imageAlt": "Eggs Benedict with poached eggs, Canadian bacon, and hollandaise on English muffins",
-  "publishedAt": "2026-05-30T21:22:29.757Z",
-  "updatedAt": "2026-05-31T12:54:36.771Z",
+  "publishedAt": "2026-05-31T18:33:00.830Z",
+  "updatedAt": "2026-05-31T23:49:25.442Z",
   "readMinutes": 9,
   "seoTitle": "Eggs Benedict Hall Style | Firehall Breakfast",
-  "mobileImage": "/images/mobile/breakfast/eggs-benedict-hall-style.jpg",
-  "railImage": "/images/rails/breakfast/eggs-benedict-hall-style.jpg",
+  "collectionTier": "firehall_classic",
   "proTips": [
     "Make hollandaise first and hold warm—never reheat over direct flame or it will break.",
     "Run two poaching pots in parallel so eight eggs finish within the same 4-minute window.",

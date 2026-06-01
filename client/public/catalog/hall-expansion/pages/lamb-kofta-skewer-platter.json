@@ -8,15 +8,15 @@
   "category": "hall_expansion",
   "cuisine": "middle_eastern",
   "description": "Ground lamb mixes with onion, parsley, and warm spices, then grills on skewers until charred outside and juicy inside. Serve with tzatziki-style yogurt sauce, grilled flatbread, tomatoes, and pickled onions.",
-  "crewSize": 9,
-  "baseServings": 9,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 15,
   "prepTime": 30,
   "difficulty": "medium",
-  "calories": 520,
-  "protein": 34,
-  "carbs": 28,
-  "fats": 32,
+  "calories": 551,
+  "protein": 55,
+  "carbs": 7,
+  "fats": 34,
   "tags": [
     "protein:lamb",
     "format:skewer",
@@ -39,7 +39,7 @@
   "ingredients": [
     {
       "name": "ground lamb",
-      "quantity": "4",
+      "quantity": "3.6",
       "unit": "lb",
       "group": "Kofta"
     },
@@ -52,26 +52,26 @@
     },
     {
       "name": "fresh parsley",
-      "quantity": "0.5",
+      "quantity": "1/2",
       "unit": "cup",
       "notes": "finely chopped",
       "group": "Kofta"
     },
     {
       "name": "ground cumin",
-      "quantity": "2",
+      "quantity": "1.8",
       "unit": "tsp",
       "group": "Spice"
     },
     {
       "name": "ground coriander",
-      "quantity": "2",
+      "quantity": "1.8",
       "unit": "tsp",
       "group": "Spice"
     },
     {
       "name": "smoked paprika",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tsp",
       "group": "Spice"
     },
@@ -84,26 +84,26 @@
     },
     {
       "name": "Greek yogurt",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "cups",
       "group": "Sauce"
     },
     {
       "name": "lemon juice",
-      "quantity": "3",
+      "quantity": "2.8",
       "unit": "tbsp",
       "group": "Sauce"
     },
     {
       "name": "flatbread",
-      "quantity": "12",
+      "quantity": "10.7",
       "unit": "pieces",
       "notes": "pita or naan",
       "group": "Service"
     },
     {
       "name": "cherry tomatoes",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "cups",
       "notes": "halved",
       "group": "Service"
@@ -134,7 +134,7 @@
     {
       "stepNumber": 3,
       "title": "Mix kofta",
-      "instruction": "Combine lamb, drained onion, parsley, garlic, cumin, coriander, paprika, salt, and pepper. Mix gently and chill 30 minutes. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Combine lamb, drained onion, parsley, garlic, cumin, coriander, paprika, salt, and pepper. Mix gently and chill 30 minutes. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
       "minutes": 15,
       "heatLevel": ""
     },
@@ -192,11 +192,25 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 520,
-    "protein": 34,
-    "carbs": 28,
-    "fats": 32,
-    "label": "~520 cal/serving · 34g protein · 2g fiber (est.)"
+    "calories": 551,
+    "protein": 55,
+    "carbs": 7,
+    "fats": 34,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/hall-expansion/lamb-kofta-skewer-platter.jpg",
   "heroImageAlt": "Lamb Kofta Skewer Platter — crew-sized firehall meal",

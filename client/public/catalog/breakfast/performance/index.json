@@ -1,0 +1,115 @@
+{
+  "version": 1,
+  "generatedAt": "2026-05-31T18:34:15.374Z",
+  "recipeCount": 5,
+  "collection": "performance",
+  "recipes": [
+    {
+      "slug": "apple-cinnamon-baked-oatmeal",
+      "title": "Apple Cinnamon Baked Oatmeal",
+      "subtitle": "Warm spiced oat squares with tender apple chunks for easy portioning.",
+      "description": "Warm oat squares with apple and cinnamon — portioned from a 9x13 so ten firefighters get the same bowl without standing over a pot. Holds in a low oven between eaters.",
+      "filters": [
+        "healthy_breakfasts",
+        "feed_a_crew"
+      ],
+      "tags": [
+        "oatmeal",
+        "apple",
+        "cinnamon",
+        "bake",
+        "make-ahead"
+      ],
+      "totalTime": 55,
+      "heroImage": "/images/breakfast/apple-cinnamon-baked-oatmeal.jpg",
+      "thumbImage": "/images/thumbs/breakfast/apple-cinnamon-baked-oatmeal.jpg",
+      "publishedAt": "2026-05-31T18:33:00.829Z",
+      "collectionTier": "performance"
+    },
+    {
+      "slug": "big-pot-savory-oats",
+      "title": "Big-Pot Savory Oats",
+      "subtitle": "One pot of savory oats with cheese, eggs, and a topping bar.",
+      "description": "One big pot of savory oats with a topping bar — cheese, green onion, hot sauce, and soft eggs. Performance-minded shift fuel for crews tracking macros.",
+      "filters": [
+        "healthy_breakfasts",
+        "feed_a_crew"
+      ],
+      "tags": [
+        "oats",
+        "one-pot",
+        "topping-bar"
+      ],
+      "totalTime": 28,
+      "heroImage": "/images/breakfast/big-pot-savory-oats.jpg",
+      "thumbImage": "/images/thumbs/breakfast/big-pot-savory-oats.jpg",
+      "publishedAt": "2026-05-31T18:33:00.830Z",
+      "collectionTier": "performance"
+    },
+    {
+      "slug": "high-protein-parfaits",
+      "title": "High-Protein Yogurt Parfaits",
+      "subtitle": "Greek yogurt parfaits with granola and berries — no stove required.",
+      "description": "Greek yogurt, granola, and berries layered in bowls — no stove required. Performance breakfast for crews tracking protein between training and shift.",
+      "filters": [
+        "quick_breakfasts",
+        "healthy_breakfasts",
+        "high_protein"
+      ],
+      "tags": [
+        "yogurt",
+        "parfaits",
+        "no-cook",
+        "granola"
+      ],
+      "totalTime": 17,
+      "heroImage": "/images/breakfast/high-protein-parfaits.jpg",
+      "thumbImage": "/images/thumbs/breakfast/high-protein-parfaits.jpg",
+      "publishedAt": "2026-05-31T18:33:00.830Z",
+      "collectionTier": "performance"
+    },
+    {
+      "slug": "protein-french-toast",
+      "title": "Protein French Toast",
+      "subtitle": "Cottage cheese and egg batter for a high-protein griddle classic.",
+      "description": "French toast built with extra protein — egg-heavy batter and Greek yogurt in the mix. Training-day breakfast that still tastes like weekend French toast.",
+      "filters": [
+        "high_protein",
+        "healthy_breakfasts",
+        "feed_a_crew"
+      ],
+      "tags": [
+        "french-toast",
+        "cottage-cheese",
+        "griddle",
+        "berries",
+        "maple"
+      ],
+      "totalTime": 35,
+      "heroImage": "/images/breakfast/protein-french-toast.jpg",
+      "thumbImage": "/images/thumbs/breakfast/protein-french-toast.jpg",
+      "publishedAt": "2026-05-31T18:33:00.829Z",
+      "collectionTier": "performance"
+    },
+    {
+      "slug": "protein-pancake-tray",
+      "title": "Protein Pancake Tray",
+      "subtitle": "Protein-forward pancakes for training-day mornings.",
+      "description": "Pancakes boosted with Greek yogurt or protein powder, griddled in batches and held warm. For crews who want muscle fuel without skipping breakfast.",
+      "filters": [
+        "feed_a_crew",
+        "high_protein"
+      ],
+      "tags": [
+        "pancakes",
+        "tray-bake",
+        "make-ahead"
+      ],
+      "totalTime": 37,
+      "heroImage": "/images/breakfast/protein-pancake-tray.jpg",
+      "thumbImage": "/images/thumbs/breakfast/protein-pancake-tray.jpg",
+      "publishedAt": "2026-05-31T18:33:00.830Z",
+      "collectionTier": "performance"
+    }
+  ]
+}

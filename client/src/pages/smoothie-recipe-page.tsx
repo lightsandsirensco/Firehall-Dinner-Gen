@@ -1,7 +1,12 @@
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { Link, useRoute } from "wouter";
 import { useQuery } from "@tanstack/react-query";
-import { Loader2 } from "lucide-react";
+import { Loader2, List } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { CrewSizePicker } from "@/components/crew-size-picker";
+import { ShoppingListModal } from "@/components/shopping-list-modal";
+import { useCrewScaling } from "@/hooks/use-crew-scaling";
+import { buildShoppingListFromCatalogIngredients } from "@/lib/shopping-list";
 import { SiteHeader } from "@/components/site-header";
 import { getSavedCount } from "@/lib/saved-meals";
 import { fetchSmoothieCatalogIndex, fetchSmoothieRecipePage } from "@/lib/fuel-recipe-api";
@@ -26,6 +31,7 @@ export default function SmoothieRecipePage() {
   const favCount = useMemo(() => getSavedCount(), []);
   const origin = getSiteOrigin();
   const [measurementSystem] = useMeasurementSystem();
+  const [shoppingOpen, setShoppingOpen] = useState(false);
 
   const { data: page, isLoading, isError } = useQuery({
     queryKey: ["smoothie-page", slug],
@@ -63,6 +69,23 @@ export default function SmoothieRecipePage() {
           : [],
       [origin, page, recipePath],
     ),
+  );
+
+  const scalingPage = page
+    ? {
+        slug: page.slug,
+        ingredients: page.ingredients,
+        baseServings: (page as { baseServings?: number }).baseServings,
+        crewSize: (page as { crewSize?: number }).crewSize,
+      }
+    : undefined;
+  const { crewSize, setCrewSize, scaledIngredients } = useCrewScaling(scalingPage);
+  const shoppingList = useMemo(
+    () =>
+      scaledIngredients.length
+        ? buildShoppingListFromCatalogIngredients(scaledIngredients, { recipeTitle: page?.title })
+        : null,
+    [scaledIngredients, page?.title],
   );
 
   if (!slug || isError) {
@@ -132,14 +155,31 @@ export default function SmoothieRecipePage() {
           {page.nutrition.highlights}
         </p>
 
-        <RecipeMeasurementBar className="mt-6" />
+        <CrewSizePicker
+          crewSize={crewSize}
+          onChange={setCrewSize}
+          prominent
+          className="mt-6"
+        />
+
+        <RecipeMeasurementBar className="mt-4">
+          <Button
+            variant="outline"
+            className="min-h-11 gap-2"
+            onClick={() => setShoppingOpen(true)}
+            disabled={!shoppingList}
+          >
+            <List className="w-4 h-4" aria-hidden />
+            Shopping list ({crewSize} crew)
+          </Button>
+        </RecipeMeasurementBar>
 
         <section className="mt-8" aria-labelledby="ingredients-heading">
           <h2 id="ingredients-heading" className="font-heading text-xl">
             Ingredients
           </h2>
           <ul className="mt-3 space-y-2 text-[15px]">
-            {page.ingredients.map((ing, i) => (
+            {scaledIngredients.map((ing, i) => (
               <li key={i} className="flex gap-2">
                 <span className="text-primary shrink-0">·</span>
                 <span>
@@ -218,6 +258,15 @@ export default function SmoothieRecipePage() {
           — smoothies are fuel, not crew dinner.
         </p>
       </main>
+      {shoppingList && page && (
+        <ShoppingListModal
+          open={shoppingOpen}
+          onOpenChange={setShoppingOpen}
+          shoppingList={shoppingList}
+          recipeTitle={page.title}
+          generatorType="meal"
+        />
+      )}
     </div>
   );
 }

@@ -8,15 +8,15 @@
   "category": "hall_expansion",
   "cuisine": "italian",
   "description": "A large batch of penne stays hot in a hotel pan while three sauces—marinara, Alfredo, and pesto—sit ready for crew to mix and match. Grated cheese, chili flakes, and garlic bread complete the bar.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 30,
   "prepTime": 25,
   "difficulty": "easy",
-  "calories": 520,
-  "protein": 16,
-  "carbs": 68,
-  "fats": 20,
+  "calories": 727,
+  "protein": 23,
+  "carbs": 81,
+  "fats": 35,
   "tags": [
     "protein:vegetarian",
     "format:bar_line",
@@ -39,44 +39,44 @@
   "ingredients": [
     {
       "name": "penne pasta",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "lb",
       "group": "Main"
     },
     {
       "name": "marinara sauce",
-      "quantity": "4",
+      "quantity": "3.2",
       "unit": "cups",
       "group": "Sauces"
     },
     {
       "name": "heavy cream",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "cups",
       "group": "Alfredo"
     },
     {
       "name": "Parmesan cheese",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "cup",
       "notes": "grated",
       "group": "Alfredo"
     },
     {
       "name": "unsalted butter",
-      "quantity": "4",
+      "quantity": "3.4",
       "unit": "tbsp",
       "group": "Alfredo"
     },
     {
       "name": "basil pesto",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "cups",
       "group": "Sauces"
     },
     {
       "name": "garlic cloves",
-      "quantity": "4",
+      "quantity": "3",
       "unit": "cloves",
       "notes": "minced",
       "group": "Alfredo"
@@ -89,14 +89,14 @@
     },
     {
       "name": "mozzarella cheese",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "cups",
       "notes": "shredded",
       "group": "Bar"
     },
     {
       "name": "red pepper flakes",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "group": "Bar"
     }
@@ -205,11 +205,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 520,
-    "protein": 16,
-    "carbs": 68,
-    "fats": 20,
-    "label": "~520 cal/serving · 16g protein · 4g fiber (est.)"
+    "calories": 727,
+    "protein": 23,
+    "carbs": 81,
+    "fats": 35,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/hall-expansion/pasta-bar-night.jpg",
   "heroImageAlt": "Pasta Bar Night — crew-sized firehall meal",

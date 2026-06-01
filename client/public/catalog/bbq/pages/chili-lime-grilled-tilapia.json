@@ -8,15 +8,15 @@
   "category": "bbq_grill_nights",
   "cuisine": "mexican",
   "description": "Tilapia fillets marinate in chili-lime-cilantro paste, grill on oiled grates until 145°F, and serve with charred corn-black bean salsa.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 12,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 634,
-  "protein": 56,
-  "carbs": 23,
-  "fats": 35,
+  "calories": 580,
+  "protein": 53,
+  "carbs": 15,
+  "fats": 34,
   "tags": [
     "protein:seafood",
     "format:tropical_fillet",
@@ -39,68 +39,68 @@
   "ingredients": [
     {
       "name": "tilapia fillets",
-      "quantity": "5",
+      "quantity": "4",
       "unit": "lb",
       "notes": "about 10 fillets",
       "group": "Main"
     },
     {
       "name": "lime juice",
-      "quantity": "0.33",
+      "quantity": "1/4",
       "unit": "cup",
       "group": "Chili lime"
     },
     {
       "name": "ancho chili powder",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tbsp",
       "group": "Chili lime"
     },
     {
       "name": "chipotle in adobo",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "notes": "minced",
       "group": "Chili lime"
     },
     {
       "name": "fresh cilantro",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "cup",
       "notes": "chopped",
       "group": "Chili lime"
     },
     {
       "name": "garlic cloves",
-      "quantity": "4",
+      "quantity": "3",
       "unit": "cloves",
       "notes": "minced",
       "group": "Chili lime"
     },
     {
       "name": "corn kernels",
-      "quantity": "3",
+      "quantity": "2.4",
       "unit": "cups",
       "notes": "grilled",
       "group": "Salsa"
     },
     {
       "name": "black beans",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "cups",
       "notes": "drained and rinsed",
       "group": "Salsa"
     },
     {
       "name": "red onion",
-      "quantity": "0.5",
+      "quantity": "1/2",
       "unit": "whole",
       "notes": "diced",
       "group": "Salsa"
     },
     {
       "name": "avocado",
-      "quantity": "3",
+      "quantity": "2",
       "unit": "whole",
       "notes": "diced",
       "group": "Salsa"
@@ -177,16 +177,29 @@
     "Flake tilapia into fish tacos with extra salsa.",
     "Chop into tortilla soup with lime."
   ],
-  "whyCrewsLikeIt": "Tilapia is budget-friendly and cooks in minutes. Chili-lime flavor is distinct from catfish remoulade or trout glaze—holds at 140°F briefly on platters.",
+  "whyCrewsLikeIt": "Tilapia is budget-friendly and cooks in minutes. Chili-lime flavor is distinct from blackened cod or trout glaze—holds at 140°F briefly on platters.",
   "mealPrepNotes": "Marinate fillets 20 minutes max. Grill medium-high 400°F, 3–4 minutes per side. Hold covered at 140°F up to 10 minutes. Salsa at room temp.",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 634,
-    "protein": 56,
-    "carbs": 23,
-    "fats": 35,
+    "calories": 580,
+    "protein": 53,
+    "carbs": 15,
+    "fats": 34,
     "label": "per serving (hall portion)",
-    "source": "estimated"
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/smoker-catalog/chili-lime-grilled-tilapia.jpg",
   "heroImageAlt": "Ancho-Tilapia with Charred Corn Salsa — crew-sized BBQ spread with visible smoke and bark",
@@ -214,6 +227,6 @@
     "brisket-style-beef-sandwiches-au-jus"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T02:29:42.536Z",
+  "generatedAt": "2026-05-31T23:32:23.207Z",
   "contentVersion": 2
 }

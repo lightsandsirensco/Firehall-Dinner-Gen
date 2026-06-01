@@ -13,10 +13,10 @@
   "cookTime": 28,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 420,
-  "protein": 38,
-  "carbs": 32,
-  "fats": 16,
+  "calories": 520,
+  "protein": 47,
+  "carbs": 19,
+  "fats": 27,
   "tags": [
     "protein:turkey",
     "format:bake",
@@ -110,37 +110,86 @@
   "steps": [
     {
       "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Baked Turkey Meatball Marinara in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch turkey. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
       "title": "Mix and shape meatballs",
       "instruction": "Combine turkey, breadcrumbs, parmesan, eggs, parsley, half the garlic, Italian seasoning, and 1 tsp salt. Roll 48 golf-ball-size meatballs without overworking the mix.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
-      "stepNumber": 2,
+      "stepNumber": 4,
       "title": "Bake meatballs until set",
       "instruction": "Arrange on two parchment-lined half-sheets. Bake at 400°F for 18–22 minutes until internal temp reaches 165°F and exteriors look lightly browned.",
       "minutes": 20,
       "heatLevel": "medium-high"
     },
     {
-      "stepNumber": 3,
+      "stepNumber": 5,
       "title": "Start marinara base",
       "instruction": "Sauté onion in olive oil over medium heat 6 minutes until soft. Add remaining garlic and tomato paste; cook 2 minutes until paste deepens to brick red.",
       "minutes": 8,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 6,
       "title": "Simmer sauce and add meatballs",
       "instruction": "Pour in crushed tomatoes with 1 cup water. Simmer 15 minutes, stirring occasionally, until sauce thickens enough to coat a spoon. Add baked meatballs.",
       "minutes": 15,
       "heatLevel": "medium-low"
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Portion and open the line",
+      "instruction": "Portion Baked Turkey Meatball Marinara onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Scale for larger halls",
+      "instruction": "When cooking for more than 8 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
       "title": "Rest and portion at the line",
-      "instruction": "Simmer gently 10 more minutes so meatballs absorb sauce. Meatballs should feel springy, not dense, when cut open.",
+      "instruction": "Simmer gently 10 more minutes so meatballs absorb sauce. Meatballs should feel springy, not dense, when cut open. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Plan about 10 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
       "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 12,
+      "title": "Final quality check before service",
+      "instruction": "Walk the line once before opening service for Baked Turkey Meatball Marinara — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
+      "minutes": 4,
       "heatLevel": ""
     }
   ],
@@ -162,11 +211,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 420,
-    "protein": 38,
-    "carbs": 32,
-    "fats": 16,
-    "label": "~420 cal/serving · 38g protein · 5g fiber (est.)"
+    "calories": 520,
+    "protein": 47,
+    "carbs": 19,
+    "fats": 27,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/baked-turkey-meatball-marinara.jpg",
   "mobileImage": "/images/mobile/baked-turkey-meatball-marinara.jpg",
@@ -191,6 +254,6 @@
     "turkey-lettuce-wrap-night",
     "caprese-chicken-bake"
   ],
-  "generatedAt": "2026-05-31T15:28:14.291Z",
+  "generatedAt": "2026-05-31T23:32:24.494Z",
   "contentVersion": 2
 }

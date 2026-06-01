@@ -8,15 +8,15 @@
   "category": "hall_expansion",
   "cuisine": "italian",
   "description": "Chicken pieces brown in olive oil, then braise with tomatoes, bell peppers, mushrooms, and herbs until the sauce is thick and meat pulls from the bone. Serve in shallow bowls with polenta or crusty bread.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 55,
   "prepTime": 30,
   "difficulty": "medium",
-  "calories": 460,
-  "protein": 38,
-  "carbs": 36,
-  "fats": 18,
+  "calories": 548,
+  "protein": 87,
+  "carbs": 8,
+  "fats": 17,
   "tags": [
     "protein:chicken",
     "format:braise",
@@ -39,14 +39,14 @@
   "ingredients": [
     {
       "name": "chicken leg quarters",
-      "quantity": "6",
+      "quantity": "4.8",
       "unit": "lb",
       "notes": "cut into pieces",
       "group": "Main"
     },
     {
       "name": "olive oil",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "cup",
       "group": "Braise"
     },
@@ -66,14 +66,14 @@
     },
     {
       "name": "cremini mushrooms",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "lb",
       "notes": "quartered",
       "group": "Braise"
     },
     {
       "name": "garlic cloves",
-      "quantity": "6",
+      "quantity": "5",
       "unit": "cloves",
       "notes": "minced",
       "group": "Braise"
@@ -87,26 +87,26 @@
     },
     {
       "name": "dry white wine",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "cup",
       "group": "Braise"
     },
     {
       "name": "dried oregano",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tbsp",
       "group": "Herbs"
     },
     {
       "name": "fresh basil",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "cup",
       "notes": "torn",
       "group": "Finish"
     },
     {
       "name": "polenta",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "cups",
       "notes": "dry",
       "group": "Base"
@@ -172,7 +172,7 @@
     {
       "stepNumber": 9,
       "title": "Serve family-style",
-      "instruction": "Taste sauce and adjust seasoning. Spoon polenta into bowls, top with chicken and sauce, and scatter fresh basil. Plan about 8 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Taste sauce and adjust seasoning. Spoon polenta into bowls, top with chicken and sauce, and scatter fresh basil. Plan about 8 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
       "minutes": 8,
       "heatLevel": ""
     }
@@ -195,11 +195,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 460,
-    "protein": 38,
-    "carbs": 36,
-    "fats": 18,
-    "label": "~460 cal/serving · 38g protein · 4g fiber (est.)"
+    "calories": 548,
+    "protein": 87,
+    "carbs": 8,
+    "fats": 17,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": true,
+      "performanceMeal": true
+    }
   },
   "heroImage": "/images/hall-expansion/chicken-cacciatore-crew.jpg",
   "heroImageAlt": "Chicken Cacciatore for the Crew — crew-sized firehall meal",

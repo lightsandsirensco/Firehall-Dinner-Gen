@@ -8,6 +8,8 @@ import { PERFORMANCE_ADAPTED_RECIPES } from "../../shared/performance-meals/adap
 import { performancePageImageSet } from "../../shared/performance-meals/recipe-page-paths.js";
 import { PERFORMANCE_PAGE_CATEGORY, PERFORMANCE_SET_TAG } from "../../shared/performance-meals/types.js";
 import type { PerformanceAdaptedRecipe } from "../../shared/performance-meals/types.js";
+import { CANONICAL_BASE_SERVINGS } from "../../shared/recipe/crew-scaling-config.js";
+import { scaleGoldenIngredients } from "../../shared/golden-100/recipe-quality/crew-scale.js";
 
 function buildSeoTitle(title: string): string {
   const t = `${title} | Firefighter Meal`;
@@ -43,6 +45,11 @@ export function buildPerformanceRecipePage(
   crewSize = recipe.manifest.crewSizeDefault,
 ): GoldenRecipePage {
   const { manifest } = recipe;
+  const storedBase = crewSize;
+  const ingredients =
+    storedBase === CANONICAL_BASE_SERVINGS
+      ? recipe.ingredients
+      : scaleGoldenIngredients(recipe.ingredients, storedBase, CANONICAL_BASE_SERVINGS);
   const images = performancePageImageSet(manifest.slug);
   const scores = computeScores(recipe);
   const n = recipe.nutrition;
@@ -78,8 +85,8 @@ export function buildPerformanceRecipePage(
     category: PERFORMANCE_PAGE_CATEGORY,
     cuisine: manifest.cuisine,
     description: buildDescription(recipe),
-    crewSize,
-    baseServings: crewSize,
+    crewSize: CANONICAL_BASE_SERVINGS,
+    baseServings: CANONICAL_BASE_SERVINGS,
     prepTime: manifest.prepMinutes,
     cookTime: manifest.cookMinutes,
     difficulty: manifest.difficulty,
@@ -89,7 +96,7 @@ export function buildPerformanceRecipePage(
     fats: n.fats,
     tags,
     equipment: recipe.equipment,
-    ingredients: recipe.ingredients,
+    ingredients,
     steps: recipe.steps,
     proTips: recipe.proTips.slice(0, 8),
     tonightSpread: recipe.tonightSpread,

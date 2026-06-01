@@ -8,15 +8,15 @@
   "category": "bbq_grill_nights",
   "cuisine": "american",
   "description": "Adapted from classic Alabama white BBQ sauce tradition (Amazing Ribs, Hey Grill Hey): pork shoulder smokes with a simple rub, gets pulled, and tossed with tangy mayo-vinegar white sauce for sandwiches.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 480,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 1400,
-  "protein": 120,
-  "carbs": 36,
-  "fats": 90,
+  "calories": 944,
+  "protein": 68,
+  "carbs": 37,
+  "fats": 56,
   "tags": [
     "protein:pork",
     "format:sandwich",
@@ -40,68 +40,68 @@
   "ingredients": [
     {
       "name": "bone-in pork shoulder",
-      "quantity": "10",
+      "quantity": "4",
       "unit": "lb"
     },
     {
       "name": "kosher salt",
-      "quantity": "4",
+      "quantity": "3.4",
       "unit": "tbsp"
     },
     {
       "name": "black pepper",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp"
     },
     {
       "name": "smoked paprika",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp"
     },
     {
       "name": "garlic powder",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp"
     },
     {
       "name": "yellow mustard",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "cup",
       "notes": "binder"
     },
     {
       "name": "mayonnaise",
-      "quantity": "1.5",
+      "quantity": "1 1/4",
       "unit": "cups"
     },
     {
       "name": "apple cider vinegar",
-      "quantity": "0.75",
+      "quantity": "5/8",
       "unit": "cup"
     },
     {
       "name": "lemon juice",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp"
     },
     {
       "name": "prepared horseradish",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp"
     },
     {
       "name": "cayenne",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tsp"
     },
     {
       "name": "buns",
-      "quantity": "12",
+      "quantity": "10",
       "unit": "whole"
     },
     {
       "name": "dill pickles",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "cup",
       "notes": "chopped"
     }
@@ -151,7 +151,7 @@
     },
     {
       "stepNumber": 7,
-      "title": "Tonight's board",
+      "title": "",
       "instruction": "White-sauce pulled pork, buns, chopped pickles, extra sauce. Alabama-style sandwiches.",
       "minutes": 5,
       "heatLevel": ""
@@ -181,12 +181,25 @@
   "mealPrepNotes": "Make white sauce early and chill. Pull pork and toss with sauce just before service, or hold sauced pork covered at 170°F up to 90 minutes.",
   "cleanupDifficulty": "heavy",
   "nutrition": {
-    "calories": 1400,
-    "protein": 120,
-    "carbs": 36,
-    "fats": 90,
+    "calories": 944,
+    "protein": 68,
+    "carbs": 37,
+    "fats": 56,
     "label": "per serving (hall portion)",
-    "source": "estimated"
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/smoker-catalog/alabama-white-sauce-pulled-pork.jpg",
   "heroImageAlt": "Alabama White Sauce Pulled Pork — crew-sized BBQ spread with visible smoke and bark",
@@ -214,6 +227,6 @@
     "smoked-potato-salad-tray"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T02:29:42.530Z",
+  "generatedAt": "2026-05-31T23:32:23.201Z",
   "contentVersion": 2
 }

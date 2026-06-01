@@ -53,7 +53,7 @@
     {
       "stepNumber": 1,
       "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Mocha Protein Smoothie in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on."
+      "instruction": "Line up every ingredient for Mocha Protein Smoothie in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use honey or maple syrup as listed — measure each before heat goes on."
     },
     {
       "stepNumber": 2,
@@ -129,7 +129,7 @@
   ],
   "relatedSlugs": [],
   "catalogSet": "fuel_smoothie",
-  "generatedAt": "2026-05-31T13:06:17.201Z",
+  "generatedAt": "2026-05-31T23:49:25.606Z",
   "contentVersion": 2,
   "mobileImage": "/images/mobile/mocha-protein.jpg",
   "railImage": "/images/rails/mocha-protein.jpg",
@@ -151,5 +151,7 @@
     "high-speed blender",
     "measuring cups",
     "ice bath pan"
-  ]
+  ],
+  "baseServings": 8,
+  "crewSize": 8
 }

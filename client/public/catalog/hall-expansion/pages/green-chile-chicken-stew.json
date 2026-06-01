@@ -8,15 +8,15 @@
   "category": "hall_expansion",
   "cuisine": "southwestern",
   "description": "Chicken thighs braise with tomatillos, green chiles, and white beans until tender and tangy. Cumin and cilantro finish the pot for a bright, warming stew that is not standard chili.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 50,
   "prepTime": 30,
   "difficulty": "medium",
-  "calories": 360,
-  "protein": 32,
-  "carbs": 34,
-  "fats": 12,
+  "calories": 414,
+  "protein": 64,
+  "carbs": 19,
+  "fats": 8,
   "tags": [
     "protein:chicken",
     "format:soup",
@@ -39,13 +39,13 @@
   "ingredients": [
     {
       "name": "bone-in chicken thighs",
-      "quantity": "4",
+      "quantity": "3.2",
       "unit": "lb",
       "group": "Main"
     },
     {
       "name": "tomatillos",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "lb",
       "notes": "husked and halved",
       "group": "Base"
@@ -66,40 +66,40 @@
     },
     {
       "name": "yellow onion",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "whole",
       "notes": "diced",
       "group": "Aromatics"
     },
     {
       "name": "garlic cloves",
-      "quantity": "5",
+      "quantity": "4",
       "unit": "cloves",
       "notes": "minced",
       "group": "Aromatics"
     },
     {
       "name": "ground cumin",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tsp",
       "group": "Seasoning"
     },
     {
       "name": "chicken broth",
-      "quantity": "6",
+      "quantity": "4.8",
       "unit": "cups",
       "group": "Liquid"
     },
     {
       "name": "fresh cilantro",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "cup",
       "notes": "chopped",
       "group": "Finish"
     },
     {
       "name": "lime",
-      "quantity": "3",
+      "quantity": "2",
       "unit": "whole",
       "notes": "wedged",
       "group": "Finish"
@@ -144,7 +144,7 @@
     {
       "stepNumber": 6,
       "title": "Shred and finish",
-      "instruction": "Remove chicken, shred meat, discard bones. Return meat to pot with beans and simmer 10 minutes. Stir in half the cilantro. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Remove chicken, shred meat, discard bones. Return meat to pot with beans and simmer 10 minutes. Stir in half the cilantro. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
       "minutes": 12,
       "heatLevel": ""
     },
@@ -195,11 +195,25 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 360,
-    "protein": 32,
-    "carbs": 34,
-    "fats": 12,
-    "label": "~360 cal/serving · 32g protein · 8g fiber (est.)"
+    "calories": 414,
+    "protein": 64,
+    "carbs": 19,
+    "fats": 8,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": true,
+      "performanceMeal": true
+    }
   },
   "heroImage": "/images/hall-expansion/green-chile-chicken-stew.jpg",
   "heroImageAlt": "Green Chile Chicken Stew — crew-sized firehall meal",

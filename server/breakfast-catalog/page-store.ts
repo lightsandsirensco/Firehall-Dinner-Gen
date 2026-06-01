@@ -4,9 +4,11 @@ import type { BreakfastCatalogIndex, BreakfastRecipePage } from "../../shared/br
 
 const ROOT = path.join(process.cwd(), "client", "public", "catalog", "breakfast");
 const PAGES = path.join(ROOT, "pages");
+const PERFORMANCE_ROOT = path.join(ROOT, "performance");
 
 function ensureDirs(): void {
   fs.mkdirSync(PAGES, { recursive: true });
+  fs.mkdirSync(PERFORMANCE_ROOT, { recursive: true });
 }
 
 export function writeBreakfastRecipePage(page: BreakfastRecipePage): string {
@@ -23,6 +25,13 @@ export function writeBreakfastCatalogIndex(index: BreakfastCatalogIndex): string
   return outPath;
 }
 
+export function writeBreakfastPerformanceIndex(index: BreakfastCatalogIndex): string {
+  ensureDirs();
+  const outPath = path.join(PERFORMANCE_ROOT, "index.json");
+  fs.writeFileSync(outPath, JSON.stringify(index, null, 2), "utf8");
+  return outPath;
+}
+
 export function readBreakfastRecipePageFromDisk(slug: string): BreakfastRecipePage | null {
   try {
     const p = path.join(PAGES, `${slug}.json`);
@@ -33,3 +42,20 @@ export function readBreakfastRecipePageFromDisk(slug: string): BreakfastRecipePa
   }
 }
 
+export function readBreakfastCatalogIndexFromDisk(): BreakfastCatalogIndex | null {
+  try {
+    const raw = fs.readFileSync(path.join(ROOT, "index.json"), "utf8");
+    return JSON.parse(raw) as BreakfastCatalogIndex;
+  } catch {
+    return null;
+  }
+}
+
+export function readBreakfastPerformanceIndexFromDisk(): BreakfastCatalogIndex | null {
+  try {
+    const raw = fs.readFileSync(path.join(PERFORMANCE_ROOT, "index.json"), "utf8");
+    return JSON.parse(raw) as BreakfastCatalogIndex;
+  } catch {
+    return null;
+  }
+}

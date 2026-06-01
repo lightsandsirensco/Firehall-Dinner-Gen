@@ -8,15 +8,15 @@
   "category": "hall_expansion",
   "cuisine": "american",
   "description": "Cream cheese, sour cream, cheddar, bacon, and diced jalapeños bake until bubbly and lightly browned. Serve hot with crostini, tortilla chips, and celery for scooping through the whole game.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 30,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 510,
-  "protein": 16,
-  "carbs": 24,
-  "fats": 40,
+  "calories": 772,
+  "protein": 30,
+  "carbs": 30,
+  "fats": 59,
   "tags": [
     "protein:pork",
     "format:bar_line",
@@ -39,59 +39,59 @@
   "ingredients": [
     {
       "name": "cream cheese",
-      "quantity": "16",
+      "quantity": "12.8",
       "unit": "oz",
       "notes": "softened",
       "group": "Main"
     },
     {
       "name": "sour cream",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "cup",
       "group": "Main"
     },
     {
       "name": "mayonnaise",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "cup",
       "group": "Main"
     },
     {
       "name": "sharp cheddar cheese",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "cups",
       "notes": "shredded",
       "group": "Main"
     },
     {
       "name": "cooked bacon",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "lb",
       "notes": "crumbled",
       "group": "Main"
     },
     {
       "name": "jalapeño peppers",
-      "quantity": "6",
+      "quantity": "5",
       "unit": "whole",
       "notes": "deseeded, diced",
       "group": "Main"
     },
     {
       "name": "garlic powder",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tsp",
       "group": "Seasoning"
     },
     {
       "name": "onion powder",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tsp",
       "group": "Seasoning"
     },
     {
       "name": "tortilla chips",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "lb",
       "group": "Serve"
     },
@@ -207,11 +207,25 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 510,
-    "protein": 16,
-    "carbs": 24,
-    "fats": 40,
-    "label": "~510 cal/serving · 16g protein · 2g fiber (est.)"
+    "calories": 772,
+    "protein": 30,
+    "carbs": 30,
+    "fats": 59,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/hall-expansion/jalapeno-popper-dip.jpg",
   "heroImageAlt": "Jalapeño Popper Dip — crew-sized firehall meal",

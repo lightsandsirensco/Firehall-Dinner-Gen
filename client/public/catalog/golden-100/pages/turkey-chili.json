@@ -13,10 +13,10 @@
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 607,
-  "protein": 59,
-  "carbs": 51,
-  "fats": 18,
+  "calories": 543,
+  "protein": 56,
+  "carbs": 37,
+  "fats": 17,
   "tags": [
     "protein:turkey",
     "format:soup_chili",
@@ -187,23 +187,23 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 607,
-    "protein": 59,
-    "carbs": 51,
-    "fats": 18,
+    "calories": 543,
+    "protein": 56,
+    "carbs": 37,
+    "fats": 17,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
       "highProtein": true,
       "under700Calories": true,
       "under30gFat": true,
-      "highCarb": true,
+      "highCarb": false,
       "lowCarb": false,
       "mealPrepFriendly": false
     },
     "badgeCandidates": {
       "highProtein": true,
-      "lighterOption": false,
+      "lighterOption": true,
       "performanceMeal": true
     }
   },
@@ -235,6 +235,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-30T23:27:14.542Z",
+  "generatedAt": "2026-06-01T01:40:02.087Z",
   "contentVersion": 2
 }

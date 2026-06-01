@@ -2,7 +2,7 @@
   "slug": "smoked-salmon-benedit",
   "title": "Smoked Salmon Benedict",
   "subtitle": "Poached eggs and hollandaise over smoked salmon and rye toast.",
-  "description": "Adapted from classic Scandinavian-Jewish deli brunch tradition for firehall service: toasted rye bread topped with smoked salmon, capers, poached eggs, and a lighter lemon-dill hollandaise for eight elegant portions.",
+  "description": "Poached eggs and smoked salmon with hollandaise on English muffins — lighter benedict for crews who want fish instead of Canadian bacon.",
   "filters": [
     "feed_a_crew",
     "high_protein",
@@ -74,7 +74,7 @@
     {
       "stepNumber": 1,
       "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Smoked Salmon Benedict in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "instruction": "Line up every ingredient for Smoked Salmon Benedict in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use rye bread as listed — measure each before heat goes on.",
       "minutes": 12,
       "heatLevel": ""
     },
@@ -88,28 +88,28 @@
     {
       "stepNumber": 3,
       "title": "Make dill hollandaise",
-      "instruction": "Blend yolks, lemon juice, and a pinch of salt 30 seconds. With blender running, slowly stream hot melted butter until thick. Stir in dill and hold warm in a thermos—not direct heat. Plan about 10 minutes for this step at crew scale. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts.",
+      "instruction": "Blend yolks, lemon juice, and a pinch of salt 30 seconds. With blender running, slowly stream hot melted butter until thick. Stir in dill and hold warm in a thermos—not direct heat.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 4,
       "title": "Toast rye and prep salmon",
-      "instruction": "Toast rye slices until crisp at the edges. Arrange smoked salmon on a cold platter with capers and shaved red onion ready for fast assembly. Target 165°F at the thickest part before moving to the next batch. Plan about 8 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Toast rye slices until crisp at the edges. Arrange smoked salmon on a cold platter with capers and shaved red onion ready for fast assembly.",
       "minutes": 8,
       "heatLevel": ""
     },
     {
       "stepNumber": 5,
       "title": "Poach the eggs",
-      "instruction": "Simmer two wide pots of water with a splash of vinegar. Slide eggs in gently and poach 3–4 minutes until whites are set (165°F) and yolks remain runny. Drain on towels. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Simmer two wide pots of water with a splash of vinegar. Slide eggs in gently and poach 3–4 minutes until whites are set (165°F) and yolks remain runny. Drain on towels.",
       "minutes": 12,
       "heatLevel": ""
     },
     {
       "stepNumber": 6,
       "title": "Assemble the base",
-      "instruction": "Place toasted rye on warm plates. Layer salmon generously, scatter capers and a few onion slices over each portion. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Place toasted rye on warm plates. Layer salmon generously, scatter capers and a few onion slices over each portion. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
       "minutes": 5,
       "heatLevel": ""
     },
@@ -137,16 +137,16 @@
     {
       "stepNumber": 10,
       "title": "Top and sauce",
-      "instruction": "Crown each with a poached egg, spoon dill hollandaise over the top, and finish with extra dill and lemon wedges. Serve within 2 minutes while yolks stay runny. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Crown each with a poached egg, spoon dill hollandaise over the top, and finish with extra dill and lemon wedges. Serve within 2 minutes while yolks stay runny.",
       "minutes": 3,
       "heatLevel": ""
     }
   ],
   "nutrition": {
-    "calories": 539,
-    "protein": 17,
+    "calories": 562,
+    "protein": 19,
     "carbs": 17,
-    "fat": 45,
+    "fat": 47,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
@@ -155,7 +155,7 @@
       "under30gFat": false,
       "highCarb": false,
       "lowCarb": true,
-      "mealPrepFriendly": false
+      "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": false,
@@ -179,12 +179,11 @@
   "heroImage": "/images/breakfast/smoked-salmon-benedit.jpg",
   "thumbImage": "/images/thumbs/breakfast/smoked-salmon-benedit.jpg",
   "imageAlt": "Smoked salmon Benedict with poached eggs and dill hollandaise on rye toast",
-  "publishedAt": "2026-05-30T21:22:29.757Z",
-  "updatedAt": "2026-05-31T12:54:36.795Z",
+  "publishedAt": "2026-05-31T18:33:00.830Z",
+  "updatedAt": "2026-05-31T23:50:25.239Z",
   "readMinutes": 9,
   "seoTitle": "Smoked Salmon Benedict | Firehall Breakfast",
-  "mobileImage": "/images/mobile/breakfast/smoked-salmon-benedit.jpg",
-  "railImage": "/images/rails/breakfast/smoked-salmon-benedit.jpg",
+  "collectionTier": "healthier_hall",
   "proTips": [
     "Keep salmon cold until assembly—warm plates only, not warm fish.",
     "Poach eggs in two pots simultaneously to finish eight within the same window.",

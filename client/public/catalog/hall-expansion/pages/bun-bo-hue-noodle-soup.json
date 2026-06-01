@@ -13,10 +13,10 @@
   "cookTime": 180,
   "prepTime": 40,
   "difficulty": "hard",
-  "calories": 520,
-  "protein": 40,
-  "carbs": 50,
-  "fats": 16,
+  "calories": 80,
+  "protein": 2,
+  "carbs": 7,
+  "fats": 6,
   "tags": [
     "protein:beef",
     "format:bowl",
@@ -134,14 +134,14 @@
     {
       "stepNumber": 3,
       "title": "Start the broth",
-      "instruction": "Cover beef shank and pork hock with water. Add lemongrass, charred onion, and shrimp paste. Simmer 2.5–3 hours, skimming often. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Cover beef shank and pork hock with water. Add lemongrass, charred onion, and shrimp paste. Simmer 2.5–3 hours, skimming often. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
       "minutes": 165,
       "heatLevel": ""
     },
     {
       "stepNumber": 4,
       "title": "Season boldly",
-      "instruction": "Remove solids, strain broth if desired. Season with fish sauce and chili oil until broth is spicy, salty, and aromatic. Plan about 15 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Remove solids, strain broth if desired. Season with fish sauce and chili oil until broth is spicy, salty, and aromatic. Plan about 15 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
       "minutes": 15,
       "heatLevel": ""
     },
@@ -201,16 +201,30 @@
     "Broth improves next day—skim fat cap before reheating.",
     "Shredded meats become banh mi filling with pickles and mayo."
   ],
-  "whyCrewsLikeIt": "Bun bo hue brings real heat and depth—crews who think pho is too mild will respect this bowl. It is soup with attitude, perfect for cold nights when the hall needs something that punches back.",
+  "whyCrewsLikeIt": "Bun bo hue brings real heat and depth—crews who think pho is too mild will respect this bowl. It is soup with attitude, works for cold nights when the hall needs something that punches back.",
   "mealPrepNotes": "Broth takes time but mostly unattended. Skim diligently. Shrimp paste smells strong but transforms the broth—do not skip. Herbs should be washed and piled high before service.",
   "spiceLevel": "hot",
   "cleanupDifficulty": "heavy",
   "nutrition": {
-    "calories": 520,
-    "protein": 40,
-    "carbs": 50,
-    "fats": 16,
-    "label": "~520 cal/serving · 40g protein · 2g fiber (est.)"
+    "calories": 80,
+    "protein": 2,
+    "carbs": 7,
+    "fats": 6,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/hall-expansion/bun-bo-hue-noodle-soup.jpg",
   "heroImageAlt": "Bun Bo Hue Noodle Soup — crew-sized firehall meal",

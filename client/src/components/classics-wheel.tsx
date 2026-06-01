@@ -271,7 +271,7 @@ export function WheelReveal({
     await shareMealNative({
       title: classic.title,
       text: `${intro} ${classic.title} — ${landLine}`,
-      url: typeof window !== "undefined" ? `${window.location.origin}/classics-wheel` : undefined,
+      url: typeof window !== "undefined" ? `${window.location.origin}/wheel` : undefined,
     });
   };
 
@@ -357,7 +357,7 @@ export function WheelReveal({
                 data-testid="button-wheel-cook"
               >
                 <Flame className="w-4 h-4" />
-                Cook this one
+                View recipe
               </button>
               <button
                 type="button"

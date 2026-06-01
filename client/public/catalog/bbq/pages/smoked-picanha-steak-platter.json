@@ -8,15 +8,15 @@
   "category": "bbq_grill_nights",
   "cuisine": "american",
   "description": "Adapted from classic Brazilian picanha tradition (Traeger, Hey Grill Hey): picanha roasts get coarse salt, smoke at 275°F to 125°F, sear fat-side down, and slice with chimichurri for a crew platter.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 60,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 148,
+  "calories": 138,
   "protein": 2,
-  "carbs": 11,
-  "fats": 11,
+  "carbs": 10,
+  "fats": 10,
   "tags": [
     "protein:beef",
     "format:grill",
@@ -39,49 +39,49 @@
   "ingredients": [
     {
       "name": "picanha roast",
-      "quantity": "6",
+      "quantity": "4.8",
       "unit": "lb",
       "notes": "fat cap on, about 2 roasts"
     },
     {
       "name": "coarse kosher salt",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp"
     },
     {
       "name": "black pepper",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tbsp"
     },
     {
       "name": "fresh parsley",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "cup",
       "notes": "for chimichurri"
     },
     {
       "name": "fresh oregano",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp"
     },
     {
       "name": "garlic cloves",
-      "quantity": "4",
+      "quantity": "3",
       "unit": "whole"
     },
     {
       "name": "red wine vinegar",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "cup"
     },
     {
       "name": "olive oil",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "cup"
     },
     {
       "name": "red pepper flakes",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tsp"
     }
   ],
@@ -130,7 +130,7 @@
     },
     {
       "stepNumber": 7,
-      "title": "Tonight's board",
+      "title": "Cooking step",
       "instruction": "Picanha platter with chimichurri, grilled limes, and farro or rice if you want starch. Cook until char marks are visible and the thickest piece reads 145°F for medium beef, 160°F for ground on an instant-read thermometer. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 5,
       "heatLevel": ""
@@ -160,12 +160,25 @@
   "mealPrepNotes": "Score fat cap lightly before salt. Smoke whole, sear, rest 10 minutes, slice. Hold sliced beef covered at 170°F with chimichurri on the side.",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 148,
+    "calories": 138,
     "protein": 2,
-    "carbs": 11,
-    "fats": 11,
+    "carbs": 10,
+    "fats": 10,
     "label": "per serving (hall portion)",
-    "source": "estimated"
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/smoker-catalog/smoked-picanha-steak-platter.jpg",
   "heroImageAlt": "Smoked Picanha Steak Platter — crew-sized BBQ spread with visible smoke and bark",
@@ -193,6 +206,6 @@
     "hot-honey-grilled-sausage-peppers"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T02:29:42.531Z",
+  "generatedAt": "2026-05-31T23:32:23.202Z",
   "contentVersion": 2
 }

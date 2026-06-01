@@ -3,56 +3,69 @@ import type { GoldenCatalogIndexEntry } from "@shared/golden-100/recipe-page-sch
 import { cn } from "@/lib/utils";
 import { HeroImage } from "@/components/hero-image";
 import { CTA, HOME } from "@/lib/brand-copy";
-import { FIREHALL_CATEGORY_LABEL, type FirehallCategoryId } from "@shared/firehall-categories";
+import { HOME_FEATURED_SLUGS } from "./home-constants";
 
 interface HomeFeaturedMealsProps {
   meals: GoldenCatalogIndexEntry[];
 }
 
-function match(entry: GoldenCatalogIndexEntry, cat: FirehallCategoryId): boolean {
-  const c = (entry.category || "").toLowerCase();
-  const t = `${entry.title} ${entry.subtitle} ${entry.mealFormat} ${entry.tags.join(" ")}`.toLowerCase();
-  switch (cat) {
-    case "crew_favorites":
-      return c === "firehall_classics";
-    case "quick_meals":
-      return c === "quick_shift_meals" || entry.cookTime <= 40;
-    case "bbq_smoker":
-      return c === "bbq_grill_nights" || /bbq|smok|brisket|ribs|grill/.test(t);
-    case "healthy_options":
-      return c === "healthy_performance";
-    default:
-      return false;
-  }
+interface FeaturedRail {
+  id: string;
+  title: string;
+  subtitle: string;
+  meals: GoldenCatalogIndexEntry[];
+  viewHref?: string;
 }
 
-function topMeals(all: GoldenCatalogIndexEntry[], cat: FirehallCategoryId, limit = 8): GoldenCatalogIndexEntry[] {
-  return [...all]
-    .filter((m) => match(m, cat))
-    .sort((a, b) => (b.firefighterScore + b.popularityWeight) - (a.firefighterScore + a.popularityWeight))
+function pickBySlugs(
+  all: GoldenCatalogIndexEntry[],
+  slugs: readonly string[],
+  limit: number,
+): GoldenCatalogIndexEntry[] {
+  const bySlug = new Map(all.map((m) => [m.slug, m]));
+  return slugs
+    .map((slug) => bySlug.get(slug))
+    .filter((m): m is GoldenCatalogIndexEntry => Boolean(m))
     .slice(0, limit);
 }
 
-const HOME_CATS: FirehallCategoryId[] = [
-  "crew_favorites",
-  "quick_meals",
-  "bbq_smoker",
-  "healthy_options",
-];
+function pickRecentlyAdded(all: GoldenCatalogIndexEntry[], limit: number): GoldenCatalogIndexEntry[] {
+  return [...all].reverse().slice(0, limit);
+}
 
-/** SEO-facing section headings (maps to category rails). */
-const HOME_CAT_SEO_HEADINGS: Partial<Record<FirehallCategoryId, string>> = {
-  crew_favorites: "Popular firefighter recipes",
-  quick_meals: "Quick firehouse meal ideas",
-  bbq_smoker: "BBQ firehall favorites",
-  healthy_options: "Healthy firefighter meals",
-};
+function buildRails(all: GoldenCatalogIndexEntry[]): FeaturedRail[] {
+  const hallFavorites = pickBySlugs(all, HOME_FEATURED_SLUGS, 8);
+  const recentlyAdded = pickRecentlyAdded(all, 6).filter(
+    (meal) => !HOME_FEATURED_SLUGS.includes(meal.slug as (typeof HOME_FEATURED_SLUGS)[number]),
+  );
+
+  const rails: FeaturedRail[] = [];
+  if (hallFavorites.length >= 3) {
+    rails.push({
+      id: "hall_favorites",
+      title: "Hall favorites",
+      subtitle: "Popular firefighter recipes crews cook on shift.",
+      meals: hallFavorites,
+      viewHref: "/recipes",
+    });
+  }
+  if (recentlyAdded.length >= 3) {
+    rails.push({
+      id: "recently_added",
+      title: "Recently added",
+      subtitle: "Fresh hall-tested meals in the catalog.",
+      meals: recentlyAdded,
+      viewHref: "/explore",
+    });
+  }
+  return rails;
+}
 
 export function HomeFeaturedMeals({ meals }: HomeFeaturedMealsProps) {
   if (meals.length === 0) return null;
 
-  const sections = HOME_CATS.map((cat) => ({ cat, meals: topMeals(meals, cat, 8) })).filter((s) => s.meals.length >= 3);
-  if (sections.length === 0) return null;
+  const rails = buildRails(meals);
+  if (rails.length === 0) return null;
 
   return (
     <section
@@ -78,23 +91,21 @@ export function HomeFeaturedMeals({ meals }: HomeFeaturedMealsProps) {
       </div>
 
       <div className="space-y-10 sm:space-y-14">
-        {sections.map((section, sectionIndex) => (
-          <div key={section.cat} aria-label={FIREHALL_CATEGORY_LABEL[section.cat]}>
+        {rails.map((rail, sectionIndex) => (
+          <div key={rail.id} aria-label={rail.title}>
             <div className="max-w-[1400px] mx-auto px-page mb-4 flex items-end justify-between gap-4">
               <div>
-                <h3 className="font-heading text-xl sm:text-2xl tracking-tight">
-                  {HOME_CAT_SEO_HEADINGS[section.cat] ?? FIREHALL_CATEGORY_LABEL[section.cat]}
-                </h3>
-                <p className="mt-1 text-sm text-muted-foreground">
-                  Built around station nights — not cuisines.
-                </p>
+                <h3 className="font-heading text-xl sm:text-2xl tracking-tight">{rail.title}</h3>
+                <p className="mt-1 text-sm text-muted-foreground">{rail.subtitle}</p>
               </div>
-              <Link
-                href={`/categories/${section.cat}`}
-                className="text-sm font-medium text-primary hover:text-primary/90 transition-colors shrink-0"
-              >
-                View →
-              </Link>
+              {rail.viewHref && (
+                <Link
+                  href={rail.viewHref}
+                  className="text-sm font-medium text-primary hover:text-primary/90 transition-colors shrink-0"
+                >
+                  View →
+                </Link>
+              )}
             </div>
 
             <div
@@ -104,7 +115,7 @@ export function HomeFeaturedMeals({ meals }: HomeFeaturedMealsProps) {
                 "[scrollbar-width:none] [&::-webkit-scrollbar]:hidden",
               )}
             >
-              {section.meals.map((meal, index) => (
+              {rail.meals.map((meal, index) => (
                 <article
                   key={meal.slug}
                   className="snap-start shrink-0 w-[min(78vw,300px)] sm:w-[340px] lg:w-[380px]"
@@ -112,7 +123,7 @@ export function HomeFeaturedMeals({ meals }: HomeFeaturedMealsProps) {
                   <Link
                     href={`/recipes/${meal.slug}`}
                     className="group block h-full"
-                    data-testid={`featured-${section.cat}-${meal.slug}`}
+                    data-testid={`featured-${rail.id}-${meal.slug}`}
                   >
                     <div
                       className={cn(

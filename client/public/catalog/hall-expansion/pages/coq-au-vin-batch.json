@@ -13,10 +13,10 @@
   "cookTime": 75,
   "prepTime": 35,
   "difficulty": "medium",
-  "calories": 510,
-  "protein": 40,
-  "carbs": 32,
-  "fats": 22,
+  "calories": 515,
+  "protein": 29,
+  "carbs": 44,
+  "fats": 25,
   "tags": [
     "protein:chicken",
     "format:braise",
@@ -144,7 +144,7 @@
     {
       "stepNumber": 5,
       "title": "Add wine and simmer",
-      "instruction": "Pour in wine, scrape fond, and reduce 5 minutes. Add broth, thyme, chicken, and bacon. Cover and braise at 325°F or simmer stovetop 60–70 minutes until tender. Target oven/smoker temperature: 325°F.",
+      "instruction": "Pour in wine, scrape fond, and reduce 5 minutes. Add broth, thyme, chicken, and bacon. Cover and braise at 325°F or simmer stovetop 60–70 minutes until tender. Target oven/smoker temperature: 325°F. Target 165°F at the thickest point before moving to the next batch.",
       "minutes": 65,
       "heatLevel": ""
     },
@@ -179,7 +179,7 @@
     {
       "stepNumber": 10,
       "title": "Finish and plate",
-      "instruction": "Skim excess fat from sauce. Portion chicken and sauce over potatoes, scatter bacon and parsley. Plan about 10 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Skim excess fat from sauce. Portion chicken and sauce over potatoes, scatter bacon and parsley. Plan about 10 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
       "minutes": 10,
       "heatLevel": ""
     }
@@ -202,11 +202,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 510,
-    "protein": 40,
-    "carbs": 32,
-    "fats": 22,
-    "label": "~510 cal/serving · 40g protein · 3g fiber (est.)"
+    "calories": 515,
+    "protein": 29,
+    "carbs": 44,
+    "fats": 25,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/hall-expansion/coq-au-vin-batch.jpg",
   "heroImageAlt": "Coq au Vin Batch — crew-sized firehall meal",

@@ -1,8 +1,8 @@
 {
   "slug": "breakfast-sandwich-trays",
   "title": "Breakfast Sandwich Trays",
-  "subtitle": "A practical station breakfast that scales from 4 to 12.",
-  "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+  "subtitle": "English muffins, sausage, eggs, and cheese for ten.",
+  "description": "English muffins toasted, sausage cooked, eggs scrambled — assemble a full tray of breakfast sandwiches so ten people eat at once without waiting on one griddle.",
   "filters": [
     "feed_a_crew",
     "breakfast_sandwiches"
@@ -13,8 +13,8 @@
     "eggs",
     "cheddar"
   ],
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "prepTime": 15,
   "cookTime": 18,
   "totalTime": 33,
@@ -22,31 +22,31 @@
   "ingredients": [
     {
       "name": "large eggs",
-      "quantity": "14",
+      "quantity": "11",
       "notes": "for scrambling or fried"
     },
     {
       "name": "English muffins or brioche buns",
-      "quantity": "16"
+      "quantity": "13"
     },
     {
       "name": "breakfast sausage patties or links",
-      "quantity": "2 lb",
+      "quantity": "2",
       "notes": "cooked through"
     },
     {
       "name": "sliced cheese",
-      "quantity": "2 cups",
+      "quantity": "1.6",
       "notes": "American or cheddar"
     },
     {
       "name": "butter",
-      "quantity": "4 tbsp",
+      "quantity": "3.2",
       "notes": "for toasting buns"
     },
     {
       "name": "hot sauce",
-      "quantity": "1",
+      "quantity": "3/4",
       "optional": true
     }
   ],
@@ -82,7 +82,7 @@
     {
       "stepNumber": 5,
       "title": "Assemble sandwiches",
-      "instruction": "Build sausage, egg, and cheese on toasted buns. Wrap in foil for the line if serving in waves. Plan about 8 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Build sausage, egg, and cheese on toasted buns. Wrap in foil for the line if serving in waves. Plan about 8 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
       "minutes": 8,
       "heatLevel": ""
     },
@@ -109,19 +109,19 @@
     }
   ],
   "nutrition": {
-    "calories": 541,
-    "protein": 24,
-    "carbs": 26,
-    "fat": 38,
+    "calories": 711,
+    "protein": 20,
+    "carbs": 45,
+    "fat": 50,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
       "highProtein": false,
-      "under700Calories": true,
+      "under700Calories": false,
       "under30gFat": false,
       "highCarb": false,
       "lowCarb": false,
-      "mealPrepFriendly": false
+      "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": false,
@@ -145,12 +145,11 @@
   "heroImage": "/images/breakfast/breakfast-sandwich-trays.jpg",
   "thumbImage": "/images/thumbs/breakfast/breakfast-sandwich-trays.jpg",
   "imageAlt": "Warm station-kitchen breakfast: Breakfast Sandwich Trays",
-  "publishedAt": "2026-05-30T21:22:29.758Z",
-  "updatedAt": "2026-05-31T12:54:36.758Z",
+  "publishedAt": "2026-05-31T18:33:00.830Z",
+  "updatedAt": "2026-05-31T23:50:24.892Z",
   "readMinutes": 5,
   "seoTitle": "Breakfast Sandwich Trays | Firehall Breakfast",
-  "mobileImage": "/images/mobile/breakfast/breakfast-sandwich-trays.jpg",
-  "railImage": "/images/rails/breakfast/breakfast-sandwich-trays.jpg",
+  "collectionTier": "firehall_classic",
   "proTips": [
     "Assign one cook to the hot surface and one to assembly. Keep the line moving; don’t crowd the griddle.",
     "Set a warm holding zone (oven 200°F or covered hotel pan) so staggered eaters still get a hot plate.",

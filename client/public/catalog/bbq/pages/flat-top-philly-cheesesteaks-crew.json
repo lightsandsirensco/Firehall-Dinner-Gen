@@ -8,8 +8,8 @@
   "category": "bbq_grill_nights",
   "cuisine": "american",
   "description": "Ribeye slices freeze partially and chop fine, griddle with onions until charred, melt provolone, and pile on toasted hoagie rolls for ten cheesesteaks.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 25,
   "prepTime": 30,
   "difficulty": "medium",
@@ -39,57 +39,57 @@
   "ingredients": [
     {
       "name": "ribeye steak",
-      "quantity": "5.5",
+      "quantity": "4.4",
       "unit": "lb",
       "notes": "partially frozen for chopping",
       "group": "Main"
     },
     {
       "name": "Cooper Sharp cheese",
-      "quantity": "20",
+      "quantity": "17",
       "unit": "slices",
       "group": "Philly"
     },
     {
       "name": "Amoroso hoagie rolls",
-      "quantity": "10",
+      "quantity": "8",
       "unit": "whole",
       "group": "Philly"
     },
     {
       "name": "Spanish onions",
-      "quantity": "4",
+      "quantity": "3",
       "unit": "whole",
       "notes": "thin-sliced",
       "group": "Philly"
     },
     {
       "name": "beef tallow",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "cup",
       "group": "Griddle"
     },
     {
       "name": "Kitchen Bouquet",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tbsp",
       "group": "Seasoning"
     },
     {
       "name": "dried basil",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tsp",
       "group": "Seasoning"
     },
     {
       "name": "ground white pepper",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tsp",
       "group": "Seasoning"
     },
     {
       "name": "long hot peppers",
-      "quantity": "6",
+      "quantity": "5",
       "unit": "whole",
       "notes": "optional",
       "group": "Service"
@@ -134,7 +134,7 @@
     {
       "stepNumber": 6,
       "title": "Melt cheese",
-      "instruction": "Combine beef with onions, lay provolone over top, cover with dome or foil until melted. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Combine beef with onions, lay provolone over top, cover with dome or foil until melted. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
       "minutes": 5,
       "heatLevel": "medium"
     },
@@ -148,7 +148,7 @@
     {
       "stepNumber": 8,
       "title": "Line for ten",
-      "instruction": "Pile cheesesteak mix into rolls. About 8 oz beef per sandwich. Hot peppers on request. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Pile cheesesteak mix into rolls. About 8 oz beef per sandwich. Hot peppers on request. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
       "minutes": 5,
       "heatLevel": ""
     }
@@ -204,6 +204,6 @@
     "brisket-style-beef-sandwiches-au-jus"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T02:29:42.537Z",
+  "generatedAt": "2026-05-31T23:32:23.208Z",
   "contentVersion": 2
 }

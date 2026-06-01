@@ -8,15 +8,15 @@
   "category": "hall_expansion",
   "cuisine": "american",
   "description": "Large turkey legs are brined, rubbed with a sweet-spice blend, and smoked over hickory until the meat pulls cleanly from the bone. Serve with corn on the cob and slaw for a fair-food spread at the hall.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 210,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 410,
-  "protein": 52,
-  "carbs": 18,
-  "fats": 16,
+  "calories": 175,
+  "protein": 3,
+  "carbs": 27,
+  "fats": 8,
   "tags": [
     "protein:turkey",
     "format:smoker",
@@ -40,63 +40,63 @@
   "ingredients": [
     {
       "name": "whole turkey legs",
-      "quantity": "10",
+      "quantity": "8",
       "unit": "legs",
       "notes": "about 1 lb each",
       "group": "Main"
     },
     {
       "name": "kosher salt",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "cup",
       "group": "Brine"
     },
     {
       "name": "brown sugar",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "cup",
       "group": "Brine"
     },
     {
       "name": "smoked paprika",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp",
       "group": "Rub"
     },
     {
       "name": "garlic powder",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "group": "Rub"
     },
     {
       "name": "onion powder",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "group": "Rub"
     },
     {
       "name": "cayenne pepper",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tsp",
       "group": "Rub"
     },
     {
       "name": "apple juice",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "cups",
       "notes": "for spritz",
       "group": "Spritz"
     },
     {
       "name": "olive oil",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "cup",
       "group": "Rub"
     },
     {
       "name": "corn on the cob",
-      "quantity": "10",
+      "quantity": "8",
       "unit": "ears",
       "group": "Side"
     }
@@ -105,7 +105,7 @@
     {
       "stepNumber": 1,
       "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Hickory Smoked Turkey Legs in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "instruction": "Line up every ingredient for Hickory Smoked Turkey Legs in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use apple juice as listed — measure each before heat goes on.",
       "minutes": 12,
       "heatLevel": ""
     },
@@ -207,16 +207,30 @@
     "Pull meat from bones and toss into a smoky turkey pot pie.",
     "Shred and mix with BBQ sauce for pulled turkey sandwiches on soft buns."
   ],
-  "whyCrewsLikeIt": "Turkey legs are fun, photogenic, and eat with one hand—perfect for game nights or casual smoke feeds. The hickory profile feels classic BBQ without needing a full pit crew.",
+  "whyCrewsLikeIt": "Turkey legs are fun, photogenic, and eat with one hand—works for game nights or casual smoke feeds. The hickory profile feels classic BBQ without needing a full pit crew.",
   "mealPrepNotes": "Brine legs overnight for maximum juiciness. Pat dry and apply rub 2 hours before smoking. Legs can hold wrapped in foil in a warm box for 45 minutes after reaching temp.",
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 410,
-    "protein": 52,
-    "carbs": 18,
-    "fats": 16,
-    "label": "~410 cal/serving · 52g protein · 2g fiber (est.)"
+    "calories": 175,
+    "protein": 3,
+    "carbs": 27,
+    "fats": 8,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/hall-expansion/hickory-turkey-legs.jpg",
   "heroImageAlt": "Hickory Smoked Turkey Legs — crew-sized firehall meal",

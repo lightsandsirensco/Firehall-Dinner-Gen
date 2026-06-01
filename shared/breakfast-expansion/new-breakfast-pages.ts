@@ -157,7 +157,7 @@ export const NEW_BREAKFAST_PAGES: BreakfastRecipePageDraft[] = [
     ],
     heroImage: hero("breakfast-enchiladas"),
     thumbImage: thumb("breakfast-enchiladas"),
-    imageAlt: "Crew-sized breakfast enchiladas baked in a 9x13 casserole — green chile sauce, melted cheese, scrambled egg and chorizo filling visible in rolled flour tortillas",
+    imageAlt: "Crew-sized breakfast enchiladas in a 9x13 casserole — green chile sauce, melted cheese, and egg-chorizo filling in rolled tortillas",
     publishedAt: now,
     updatedAt: now,
     readMinutes: 9,

@@ -1,10 +1,10 @@
 # Breakfast Image Audit
 
-- Recipes audited: **74**
-- Passed: **74**
+- Recipes audited: **69**
+- Passed: **69**
 - Failed: **0**
 - Duplicate hero groups: **0**
-- Format/title passed (ignoring dupes): **74**
+- Format/title passed (ignoring dupes): **69**
 - Missing heroes: **0**
 
 ## Duplicate image groups

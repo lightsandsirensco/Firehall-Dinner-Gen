@@ -8,14 +8,14 @@
   "category": "bbq_grill_nights",
   "cuisine": "indian",
   "description": "Lamb loin chops marinate in tandoori yogurt spice, grill over high heat to 135°F, and serve on platters with mint-cilantro chutney and charred lemon.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 22,
   "prepTime": 45,
   "difficulty": "medium",
   "calories": 80,
   "protein": 5,
-  "carbs": 7,
+  "carbs": 6,
   "fats": 3,
   "tags": [
     "protein:lamb",
@@ -39,64 +39,64 @@
   "ingredients": [
     {
       "name": "lamb loin chops",
-      "quantity": "20",
+      "quantity": "16",
       "unit": "pieces",
       "notes": "about 5.5 lb total",
       "group": "Main"
     },
     {
       "name": "Kashmiri chili powder",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "group": "Tandoori"
     },
     {
       "name": "fenugreek leaves",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "notes": "dried",
       "group": "Tandoori"
     },
     {
       "name": "mustard oil",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp",
       "group": "Tandoori"
     },
     {
       "name": "Greek yogurt",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "cups",
       "group": "Tandoori"
     },
     {
       "name": "gram flour",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "group": "Tandoori"
     },
     {
       "name": "fresh ginger",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "notes": "grated",
       "group": "Tandoori"
     },
     {
       "name": "pomegranate molasses",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "group": "Finish"
     },
     {
       "name": "mint-coriander chutney",
-      "quantity": "1.5",
+      "quantity": "1 1/4",
       "unit": "cups",
       "group": "Chutney"
     },
     {
       "name": "pickled red onion",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "cup",
       "group": "Garnish"
     }
@@ -105,28 +105,28 @@
     {
       "stepNumber": 1,
       "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Kashmiri Mustard-Oil Lamb Chop Feast in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "instruction": "Line up every ingredient for Kashmiri Mustard-Oil Lamb Chop Feast in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use fenugreek leaves, gram flour, pomegranate molasses as listed — measure each before heat goes on.",
       "minutes": 12,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
       "title": "Marinate lamb chops",
-      "instruction": "Coat chops in yogurt, tandoori masala, garam masala, garlic, ginger, and lemon juice. Marinate at least 4 hours refrigerated. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Coat chops in yogurt, tandoori masala, garam masala, garlic, ginger, and lemon juice. Marinate at least 4 hours refrigerated. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
       "minutes": 20,
       "heatLevel": ""
     },
     {
       "stepNumber": 3,
       "title": "Blend mint chutney",
-      "instruction": "Pulse mint, cilantro, green chilies, lemon juice, and pinch of salt until chunky. Chill until service. Plan about 8 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Pulse mint, cilantro, green chilies, lemon juice, and pinch of salt until chunky. Chill until service. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 8,
       "heatLevel": ""
     },
     {
       "stepNumber": 4,
       "title": "Heat grill hot",
-      "instruction": "Preheat grill to high, 475°F. Oil grates for yogurt-marinated lamb. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Preheat grill to high, 475°F. Oil grates for yogurt-marinated lamb. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
       "minutes": 10,
       "heatLevel": "high"
     },
@@ -185,10 +185,23 @@
   "nutrition": {
     "calories": 80,
     "protein": 5,
-    "carbs": 7,
+    "carbs": 6,
     "fats": 3,
     "label": "per serving (hall portion)",
-    "source": "estimated"
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/smoker-catalog/tandoori-lamb-chop-platter.jpg",
   "heroImageAlt": "Kashmiri Mustard-Oil Lamb Chop Feast — crew-sized BBQ spread with visible smoke and bark",
@@ -217,6 +230,6 @@
     "brisket-style-beef-sandwiches-au-jus"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T02:29:42.534Z",
+  "generatedAt": "2026-05-31T23:32:23.205Z",
   "contentVersion": 2
 }

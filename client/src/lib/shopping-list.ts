@@ -1,9 +1,11 @@
 import type { GenerateResponse, PizzaResponse, IngredientItem, ClientRecipeResponse, ClientIngredient } from "@shared/schema";
+import type { GoldenRecipePageIngredient } from "@shared/golden-100/recipe-page-schema";
 import {
   inferShoppingCategory,
   isSeasoningOrGarnish,
   isRequiredForMeal,
 } from "@shared/meal-semantics";
+import { ingredientNameMatchesRecipeTitle } from "@shared/meal-format-contract";
 
 export interface ShoppingItem {
   name: string;
@@ -225,6 +227,52 @@ function clientIngredientToShoppingItem(ing: ClientIngredient): ShoppingItem {
   return { name: ing.name, amount, notes };
 }
 
+function catalogIngredientToShoppingItem(ing: GoldenRecipePageIngredient): ShoppingItem {
+  const amount = [ing.quantity, ing.unit].filter(Boolean).join(" ");
+  return {
+    name: ing.name,
+    amount,
+    notes: ing.notes || (ing.optional ? "optional" : ""),
+  };
+}
+
+function filterTitleIngredients(items: ShoppingItem[], recipeTitle?: string): ShoppingItem[] {
+  if (!recipeTitle?.trim()) return items;
+  return items.filter((item) => !ingredientNameMatchesRecipeTitle(item.name, recipeTitle));
+}
+
+/** Shopping list from scaled catalog recipe ingredients (Golden, breakfast, performance, etc.). */
+export function buildShoppingListFromCatalogIngredients(
+  ingredients: GoldenRecipePageIngredient[],
+  options?: { recipeTitle?: string },
+): ShoppingListResult {
+  const allItems = filterTitleIngredients(
+    ingredients
+      .filter((ing) => !ing.optional)
+      .map(catalogIngredientToShoppingItem),
+    options?.recipeTitle,
+  );
+
+  const merged = mergeItems(allItems);
+  const sectionMap = new Map<string, ShoppingItem[]>();
+
+  for (const item of merged) {
+    const category = categorize(item.name, item.notes);
+    if (!sectionMap.has(category)) sectionMap.set(category, []);
+    sectionMap.get(category)!.push(item);
+  }
+
+  const sections: ShoppingSection[] = SECTION_ORDER.filter((title) => sectionMap.has(title)).map(
+    (title) => ({ title, items: sectionMap.get(title)! }),
+  );
+
+  if (sections.length === 0 && options?.recipeTitle) {
+    sections.push({ title: "Ingredients", items: merged });
+  }
+
+  return { sections };
+}
+
 function plateLineMatchesIngredient(plateName: string, ingName: string): boolean {
   const p = plateName.toLowerCase().trim();
   const n = ingName.toLowerCase().trim();
@@ -299,7 +347,10 @@ export function buildShoppingListFromClientMeal(
   recipe: ClientRecipeResponse,
   options?: { useWhatWeHave?: boolean; budgetLevel?: string }
 ): ShoppingListResult {
-  const allItems: ShoppingItem[] = recipe.ingredients.map(clientIngredientToShoppingItem);
+  const allItems = filterTitleIngredients(
+    recipe.ingredients.map(clientIngredientToShoppingItem),
+    recipe.title,
+  );
 
   const existingNames = new Set(allItems.map((i) => normalizeItemName(i.name)));
   if (recipe.extra_items_needed) {
@@ -360,7 +411,10 @@ export function buildShoppingListFromMeal(
   recipe: GenerateResponse,
   options?: { useWhatWeHave?: boolean; budgetLevel?: string }
 ): ShoppingListResult {
-  const allItems: ShoppingItem[] = recipe.ingredients.map(ingredientToShoppingItem);
+  const allItems = filterTitleIngredients(
+    recipe.ingredients.map(ingredientToShoppingItem),
+    recipe.title,
+  );
 
   if (recipe.extra_items_needed) {
     for (const extra of recipe.extra_items_needed) {

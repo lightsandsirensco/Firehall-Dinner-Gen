@@ -13,10 +13,10 @@
   "cookTime": 22,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 195,
-  "protein": 18,
-  "carbs": 4,
-  "fats": 11,
+  "calories": 561,
+  "protein": 35,
+  "carbs": 6,
+  "fats": 44,
   "tags": [
     "protein:turkey",
     "format:breakfast",
@@ -145,11 +145,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 195,
-    "protein": 18,
-    "carbs": 4,
-    "fats": 11,
-    "label": "~195 cal/serving · 18g protein · 1g fiber (est.)"
+    "calories": 561,
+    "protein": 35,
+    "carbs": 6,
+    "fats": 44,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/turkey-sausage-egg-muffins.jpg",
   "mobileImage": "/images/mobile/turkey-sausage-egg-muffins.jpg",
@@ -174,6 +188,6 @@
     "turkey-lettuce-wrap-night",
     "turkey-zoodle-bolognese"
   ],
-  "generatedAt": "2026-05-31T15:28:14.291Z",
+  "generatedAt": "2026-05-31T23:32:24.494Z",
   "contentVersion": 2
 }

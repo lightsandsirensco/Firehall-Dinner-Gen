@@ -8,15 +8,15 @@
   "category": "hall_expansion",
   "cuisine": "mediterranean",
   "description": "Lemon-oregano chicken roasts and slices over chewy farro with cucumber, tomato, olives, and hummus. A bright, filling bowl that breaks up heavy comfort-food rotations.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 40,
   "prepTime": 30,
   "difficulty": "easy",
-  "calories": 450,
-  "protein": 40,
-  "carbs": 44,
-  "fats": 14,
+  "calories": 421,
+  "protein": 54,
+  "carbs": 4,
+  "fats": 20,
   "tags": [
     "protein:chicken",
     "format:bowl",
@@ -39,13 +39,13 @@
   "ingredients": [
     {
       "name": "chicken breast",
-      "quantity": "3.5",
+      "quantity": "2.8",
       "unit": "lb",
       "group": "Main"
     },
     {
       "name": "farro",
-      "quantity": "3",
+      "quantity": "2.4",
       "unit": "cups",
       "notes": "dry",
       "group": "Base"
@@ -59,21 +59,21 @@
     },
     {
       "name": "cherry tomatoes",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "cups",
       "notes": "halved",
       "group": "Vegetables"
     },
     {
       "name": "kalamata olives",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "cup",
       "notes": "pitted, halved",
       "group": "Vegetables"
     },
     {
       "name": "hummus",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "cups",
       "group": "Topping"
     },
@@ -86,19 +86,19 @@
     },
     {
       "name": "dried oregano",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "group": "Marinade"
     },
     {
       "name": "olive oil",
-      "quantity": "0.33",
+      "quantity": "1/4",
       "unit": "cup",
       "group": "Dressing"
     },
     {
       "name": "feta cheese",
-      "quantity": "1.5",
+      "quantity": "1 1/4",
       "unit": "cups",
       "notes": "crumbled",
       "group": "Finish"
@@ -164,7 +164,7 @@
     {
       "stepNumber": 9,
       "title": "Assemble and serve",
-      "instruction": "Portion farro into bowls, top with chicken, vegetables, dollop of hummus, and crumbled feta. Plan about 8 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Portion farro into bowls, top with chicken, vegetables, dollop of hummus, and crumbled feta. Plan about 8 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
       "minutes": 8,
       "heatLevel": ""
     }
@@ -187,11 +187,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 450,
-    "protein": 40,
-    "carbs": 44,
-    "fats": 14,
-    "label": "~450 cal/serving · 40g protein · 8g fiber (est.)"
+    "calories": 421,
+    "protein": 54,
+    "carbs": 4,
+    "fats": 20,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": true,
+      "performanceMeal": true
+    }
   },
   "heroImage": "/images/hall-expansion/mediterranean-chicken-farro-bowls.jpg",
   "heroImageAlt": "Mediterranean Chicken Farro Bowls — crew-sized firehall meal",

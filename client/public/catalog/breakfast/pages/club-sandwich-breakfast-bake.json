@@ -2,7 +2,7 @@
   "slug": "club-sandwich-breakfast-bake",
   "title": "Club Sandwich Breakfast Bake",
   "subtitle": "Layered bread, turkey, bacon, tomato, and eggs baked like a strata.",
-  "description": "Adapted from classic American club sandwich tradition for firehall breakfast bake: layers of toasted bread, turkey, bacon, tomato, and cheddar soaked in an egg-milk custard and baked until puffed and golden for ten portions.",
+  "description": "Layers of bread, turkey, bacon, tomato, and egg custard baked like a strata. Slice into squares — club sandwich energy without stacking ten sandwiches by hand.",
   "filters": [
     "feed_a_crew",
     "high_protein",
@@ -15,8 +15,8 @@
     "bacon",
     "bake"
   ],
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "prepTime": 25,
   "cookTime": 45,
   "totalTime": 70,
@@ -24,47 +24,47 @@
   "ingredients": [
     {
       "name": "sandwich bread",
-      "quantity": "16 slices",
+      "quantity": "12.8",
       "notes": "toasted until crisp",
       "group": "Bread"
     },
     {
       "name": "deli turkey",
-      "quantity": "1 1/2 lb",
+      "quantity": "3/8",
       "notes": "sliced thick",
       "group": "Protein"
     },
     {
       "name": "bacon",
-      "quantity": "1 lb",
+      "quantity": "3/4",
       "notes": "cooked crisp and crumbled",
       "group": "Protein"
     },
     {
       "name": "Roma tomatoes",
-      "quantity": "3",
+      "quantity": "2",
       "notes": "sliced, seeds drained",
       "group": "Veg"
     },
     {
       "name": "large eggs",
-      "quantity": "12",
+      "quantity": "10",
       "group": "Egg mix"
     },
     {
       "name": "whole milk",
-      "quantity": "2 1/2 cups",
+      "quantity": "3/4",
       "group": "Egg mix"
     },
     {
       "name": "shredded Swiss",
-      "quantity": "3 cups",
+      "quantity": "2.4",
       "notes": "divided",
       "group": "Cheese"
     },
     {
       "name": "mayonnaise",
-      "quantity": "1/2 cup",
+      "quantity": "3/8",
       "notes": "light spread on bread, plus lettuce after bake",
       "group": "Finish"
     }
@@ -73,7 +73,7 @@
     {
       "stepNumber": 1,
       "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Club Sandwich Breakfast Bake in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "instruction": "Line up every ingredient for Club Sandwich Breakfast Bake in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Double-check seasoning after scaling — crew palates run salty after long shifts, so taste the first portion before opening the line.",
       "minutes": 12,
       "heatLevel": ""
     },
@@ -87,28 +87,28 @@
     {
       "stepNumber": 3,
       "title": "Heat the oven",
-      "instruction": "Heat oven to 375°F. Grease a deep 9x13 pan. Toast bread until crisp and lightly spread one side of each slice with a thin layer of mayonnaise—this keeps layers distinct after baking. Allow 10–15 minutes for mise en place before heat goes on. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Heat oven to 375°F. Grease a deep 9x13 pan. Toast bread until crisp and lightly spread one side of each slice with a thin layer of mayonnaise—this keeps layers distinct after baking.",
       "minutes": 0,
       "heatLevel": ""
     },
     {
       "stepNumber": 4,
       "title": "Cook bacon and prep layers",
-      "instruction": "Cook bacon until crisp, drain, and crumble. Layer half the bread in the pan, top with half the turkey, bacon, tomato, and Swiss. Repeat layers, finishing with bread on top. Plan about 15 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Cook bacon until crisp, drain, and crumble. Layer half the bread in the pan, top with half the turkey, bacon, tomato, and Swiss. Repeat layers, finishing with bread on top.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
       "stepNumber": 5,
       "title": "Pour the custard",
-      "instruction": "Whisk eggs, milk, salt, and pepper until smooth. Pour slowly over the layered bread, pressing gently so custard reaches the bottom. Rest 10 minutes so bread absorbs liquid. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Whisk eggs, milk, salt, and pepper until smooth. Pour slowly over the layered bread, pressing gently so custard reaches the bottom. Rest 10 minutes so bread absorbs liquid.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 6,
       "title": "Bake until set",
-      "instruction": "Cover with foil and bake 25 minutes. Uncover, top with remaining Swiss, and bake 15 more until center reaches 165°F and top is golden brown. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Cover with foil and bake 25 minutes. Uncover, top with remaining Swiss, and bake 15 more until center reaches 165°F and top is golden brown.",
       "minutes": 40,
       "heatLevel": ""
     },
@@ -121,30 +121,58 @@
     },
     {
       "stepNumber": 8,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Portion and open the line",
+      "instruction": "Portion Club Sandwich Breakfast Bake onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Scale for larger halls",
+      "instruction": "When cooking for more than 8 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
       "title": "Rest and garnish",
-      "instruction": "Rest 10 minutes before cutting into squares. Top each portion with shredded lettuce and an extra pinch of bacon if desired. Serve with pickle spears at the line. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Rest 10 minutes before cutting into squares. Top each portion with shredded lettuce and an extra pinch of bacon if desired. Serve with pickle spears at the line.",
       "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 12,
+      "title": "Final quality check before service",
+      "instruction": "Walk the line once before opening service for Club Sandwich Breakfast Bake — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
+      "minutes": 4,
       "heatLevel": ""
     }
   ],
   "nutrition": {
-    "calories": 543,
-    "protein": 30,
+    "calories": 305,
+    "protein": 16,
     "carbs": 25,
-    "fat": 35,
+    "fat": 16,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
-      "under30gFat": false,
+      "under30gFat": true,
       "highCarb": false,
       "lowCarb": true,
-      "mealPrepFriendly": false
+      "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": false,
-      "lighterOption": false,
+      "lighterOption": true,
       "performanceMeal": false
     }
   },
@@ -164,12 +192,11 @@
   "heroImage": "/images/breakfast/club-sandwich-breakfast-bake.jpg",
   "thumbImage": "/images/thumbs/breakfast/club-sandwich-breakfast-bake.jpg",
   "imageAlt": "Club sandwich breakfast bake with turkey, bacon, tomato, and melted Swiss",
-  "publishedAt": "2026-05-30T21:22:29.757Z",
-  "updatedAt": "2026-05-31T12:54:36.766Z",
+  "publishedAt": "2026-05-31T18:33:00.830Z",
+  "updatedAt": "2026-05-31T23:49:25.406Z",
   "readMinutes": 8,
   "seoTitle": "Club Sandwich Breakfast Bake | Firehall Breakfast",
-  "mobileImage": "/images/mobile/breakfast/club-sandwich-breakfast-bake.jpg",
-  "railImage": "/images/rails/breakfast/club-sandwich-breakfast-bake.jpg",
+  "collectionTier": "firehall_classic",
   "proTips": [
     "Toast bread fully crisp—soft bread turns mushy in the custard.",
     "Drain tomato seeds so excess moisture does not pool in the bake.",

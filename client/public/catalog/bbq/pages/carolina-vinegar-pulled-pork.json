@@ -8,15 +8,15 @@
   "category": "bbq_grill_nights",
   "cuisine": "american",
   "description": "Pork shoulder rides low and slow, gets mopped with a Carolina vinegar sauce, then pulled into a pan of drippings. Build-your-own sandwiches with slaw and pickles.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 540,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 1327,
-  "protein": 120,
+  "calories": 780,
+  "protein": 68,
   "carbs": 43,
-  "fats": 67,
+  "fats": 36,
   "tags": [
     "protein:pork",
     "format:bbq",
@@ -40,85 +40,85 @@
   "ingredients": [
     {
       "name": "bone-in pork shoulder",
-      "quantity": "10",
+      "quantity": "4",
       "unit": "lb"
     },
     {
       "name": "kosher salt",
-      "quantity": "4",
+      "quantity": "3.4",
       "unit": "tbsp"
     },
     {
       "name": "black pepper",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp"
     },
     {
       "name": "paprika",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp"
     },
     {
       "name": "brown sugar",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp"
     },
     {
       "name": "garlic powder",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tsp"
     },
     {
       "name": "yellow mustard",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "cup",
       "notes": "binder"
     },
     {
       "name": "apple cider vinegar",
-      "quantity": "1.5",
+      "quantity": "1 1/4",
       "unit": "cups"
     },
     {
       "name": "water",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "cup"
     },
     {
       "name": "hot sauce",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp"
     },
     {
       "name": "red pepper flakes",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tsp"
     },
     {
       "name": "brown sugar",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "notes": "for sauce"
     },
     {
       "name": "kosher salt",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tsp",
       "notes": "for sauce"
     },
     {
       "name": "buns",
-      "quantity": "12",
+      "quantity": "10",
       "unit": "whole"
     },
     {
       "name": "coleslaw mix",
-      "quantity": "12",
+      "quantity": "9.6",
       "unit": "cups"
     },
     {
       "name": "dill pickles",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "jar"
     }
   ],
@@ -186,7 +186,7 @@
     "Pulled pork quesadillas with cheddar and jalapeños.",
     "BBQ pork fried rice with scallions and scrambled eggs."
   ],
-  "whyCrewsLikeIt": "It feeds a crowd, holds forever, and tastes even better after it rests. Perfect for a crew meal where calls might interrupt the cook.",
+  "whyCrewsLikeIt": "It feeds a crowd, holds forever, and tastes even better after it rests. works for a crew meal where calls might interrupt the cook.",
   "mealPrepNotes": "Start early. Once pulled, hold covered at 170°F for 2 hours with a splash of vinegar sauce. If the smoker schedule slips, wrap earlier and finish in the oven.",
   "substitutions": [
     "No smoker? Use a 275°F oven and add 1 tsp liquid smoke to the vinegar sauce. Finish the same temps.",
@@ -194,12 +194,25 @@
   ],
   "cleanupDifficulty": "heavy",
   "nutrition": {
-    "calories": 1327,
-    "protein": 120,
+    "calories": 780,
+    "protein": 68,
     "carbs": 43,
-    "fats": 67,
+    "fats": 36,
     "label": "per serving (hall portion)",
-    "source": "estimated"
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/smoker-catalog/carolina-vinegar-pulled-pork.jpg",
   "heroImageAlt": "Carolina Vinegar Pulled Pork — crew-sized BBQ spread with visible smoke and bark",
@@ -223,6 +236,6 @@
     "hot-honey-grilled-sausage-peppers"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T02:29:42.523Z",
+  "generatedAt": "2026-05-31T23:32:23.193Z",
   "contentVersion": 2
 }

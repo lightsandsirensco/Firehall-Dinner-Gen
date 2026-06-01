@@ -13,10 +13,10 @@
   "cookTime": 35,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 245,
-  "protein": 16,
-  "carbs": 8,
-  "fats": 17,
+  "calories": 386,
+  "protein": 27,
+  "carbs": 12,
+  "fats": 26,
   "tags": [
     "protein:egg",
     "format:breakfast",
@@ -155,11 +155,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 245,
-    "protein": 16,
-    "carbs": 8,
-    "fats": 17,
-    "label": "~245 cal/serving · 16g protein · 2g fiber (est.)"
+    "calories": 386,
+    "protein": 27,
+    "carbs": 12,
+    "fats": 26,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/veggie-egg-casserole-tray.jpg",
   "mobileImage": "/images/mobile/veggie-egg-casserole-tray.jpg",
@@ -179,6 +193,6 @@
   "relatedSlugs": [
     "turkey-sausage-egg-muffins"
   ],
-  "generatedAt": "2026-05-31T15:28:14.291Z",
+  "generatedAt": "2026-05-31T23:32:24.495Z",
   "contentVersion": 2
 }

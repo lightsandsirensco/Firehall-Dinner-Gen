@@ -2,7 +2,7 @@
   "slug": "chorizo-breakfast-hash",
   "title": "Chorizo Breakfast Hash",
   "subtitle": "Spicy crumbled chorizo with crispy potatoes and jammy eggs.",
-  "description": "Bold Mexican chorizo drives this one-pan hash: potatoes crisped in rendered chorizo fat, onions and peppers charred at the edges, and eggs finished on top. Faster than a full skillet bake but with enough heat to wake up a crew coming off a night call.",
+  "description": "Chorizo, potatoes, and eggs in cast iron with a hit of cumin and paprika. Crispy edges, runny yolks optional, serve straight from the pan.",
   "filters": [
     "skillets",
     "high_protein",
@@ -88,28 +88,28 @@
     {
       "stepNumber": 3,
       "title": "Par-cook potatoes",
-      "instruction": "Microwave diced potatoes with a splash of water until just tender, then drain and pat completely dry. Wet potatoes steam instead of crisp in the chorizo fat. Plan about 8 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Microwave diced potatoes with a splash of water until just tender, then drain and pat completely dry. Wet potatoes steam instead of crisp in the chorizo fat.",
       "minutes": 8,
       "heatLevel": ""
     },
     {
       "stepNumber": 4,
       "title": "Render chorizo",
-      "instruction": "Cook chorizo in a large skillet over medium-high, breaking it up until browned and fat renders. Push chorizo to one side and add potatoes to the hot fat in a single layer. Target 165°F at the thickest part before moving to the next batch. Plan about 8 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Cook chorizo in a large skillet over medium-high, breaking it up until browned and fat renders. Push chorizo to one side and add potatoes to the hot fat in a single layer.",
       "minutes": 8,
       "heatLevel": ""
     },
     {
       "stepNumber": 5,
       "title": "Crisp and combine",
-      "instruction": "Let potatoes sit undisturbed 3 minutes for crust, then toss with chorizo, onion, and peppers. Cook until edges are deeply golden and vegetables soften. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Let potatoes sit undisturbed 3 minutes for crust, then toss with chorizo, onion, and peppers. Cook until edges are deeply golden and vegetables soften.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 6,
       "title": "Eggs on top",
-      "instruction": "Make wells in the hash and crack eggs into each. Cover over medium-low heat until egg whites are fully set (165°F) and yolks are jammy. Season with paprika and salt only if the chorizo is not already salty enough. Plan about 7 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Make wells in the hash and crack eggs into each. Cover over medium-low heat until egg whites are fully set (165°F) and yolks are jammy. Season with paprika and salt only if the chorizo is not already salty enough.",
       "minutes": 7,
       "heatLevel": ""
     },
@@ -122,8 +122,15 @@
     },
     {
       "stepNumber": 8,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
       "title": "Top and serve",
-      "instruction": "Scatter cotija and cilantro over the top. Serve with lime wedges and hot sauce at the line straight from the skillet or scooped onto warm plates. Target 165°F at the thickest part before moving to the next batch. Plan about 2 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Scatter cotija and cilantro over the top. Serve with lime wedges and hot sauce at the line straight from the skillet or scooped onto warm plates.",
       "minutes": 2,
       "heatLevel": ""
     }
@@ -165,12 +172,11 @@
   "heroImage": "/images/breakfast/chorizo-breakfast-hash.jpg",
   "thumbImage": "/images/thumbs/breakfast/chorizo-breakfast-hash.jpg",
   "imageAlt": "Chorizo breakfast hash with crispy potatoes, peppers, and jammy eggs",
-  "publishedAt": "2026-05-30T21:22:29.756Z",
-  "updatedAt": "2026-05-31T12:54:36.765Z",
+  "publishedAt": "2026-05-31T18:33:00.829Z",
+  "updatedAt": "2026-05-31T23:49:25.399Z",
   "readMinutes": 7,
   "seoTitle": "Chorizo Breakfast Hash | Firehall Breakfast",
-  "mobileImage": "/images/mobile/breakfast/chorizo-breakfast-hash.jpg",
-  "railImage": "/images/rails/breakfast/chorizo-breakfast-hash.jpg",
+  "collectionTier": "firehall_classic",
   "proTips": [
     "Use the widest skillet you have—crowded potatoes steam and never develop the hash crust.",
     "Hold rendered chorizo fat in the pan; if lean, add a tablespoon of oil before potatoes hit.",

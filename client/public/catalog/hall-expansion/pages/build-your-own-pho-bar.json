@@ -8,15 +8,15 @@
   "category": "hall_expansion",
   "cuisine": "vietnamese",
   "description": "A rich beef broth stays hot in a large pot while rice noodles, thin-sliced beef, herbs, bean sprouts, and sauces fill a build bar. Each bowl is assembled fresh so noodles stay separate from broth until serving.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 120,
   "prepTime": 40,
   "difficulty": "hard",
-  "calories": 420,
-  "protein": 28,
-  "carbs": 48,
-  "fats": 12,
+  "calories": 286,
+  "protein": 25,
+  "carbs": 8,
+  "fats": 17,
   "tags": [
     "protein:beef",
     "format:bar_line",
@@ -40,64 +40,64 @@
   "ingredients": [
     {
       "name": "beef broth",
-      "quantity": "1.5",
+      "quantity": "1 1/4",
       "unit": "gallons",
       "group": "Broth"
     },
     {
       "name": "star anise",
-      "quantity": "4",
+      "quantity": "3",
       "unit": "whole",
       "group": "Broth"
     },
     {
       "name": "cinnamon stick",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "whole",
       "group": "Broth"
     },
     {
       "name": "fresh ginger",
-      "quantity": "3",
+      "quantity": "2.4",
       "unit": "inches",
       "notes": "charred, sliced",
       "group": "Broth"
     },
     {
       "name": "rice noodles",
-      "quantity": "1.5",
+      "quantity": "1 1/4",
       "unit": "lb",
       "group": "Noodles"
     },
     {
       "name": "sirloin steak",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "lb",
       "notes": "thin-sliced frozen",
       "group": "Protein"
     },
     {
       "name": "bean sprouts",
-      "quantity": "4",
+      "quantity": "3.2",
       "unit": "cups",
       "group": "Bar"
     },
     {
       "name": "Thai basil",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "cups",
       "group": "Bar"
     },
     {
       "name": "green onions",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "bunch",
       "notes": "sliced",
       "group": "Bar"
     },
     {
       "name": "hoisin and sriracha",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "cup each",
       "group": "Sauce"
     }
@@ -213,11 +213,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 420,
-    "protein": 28,
-    "carbs": 48,
-    "fats": 12,
-    "label": "~420 cal/serving · 28g protein · 3g fiber (est.)"
+    "calories": 286,
+    "protein": 25,
+    "carbs": 8,
+    "fats": 17,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/hall-expansion/build-your-own-pho-bar.jpg",
   "heroImageAlt": "Build-Your-Own Pho Bar — crew-sized firehall meal",

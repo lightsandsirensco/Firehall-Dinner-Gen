@@ -80,9 +80,9 @@
     }
   ],
   "nutrition": {
-    "calories": 154,
-    "protein": 7,
-    "carbs": 23,
+    "calories": 122,
+    "protein": 6,
+    "carbs": 15,
     "fats": 4,
     "highlights": "~310 cal · ~20 g protein · soluble fiber from oats · steady energy vs. a sugar-only fruit blend",
     "label": "per serving (hall portion)",
@@ -149,5 +149,7 @@
     "high-speed blender",
     "measuring cups",
     "ice bath pan"
-  ]
+  ],
+  "baseServings": 8,
+  "crewSize": 8
 }

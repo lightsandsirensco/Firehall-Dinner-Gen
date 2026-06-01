@@ -8,15 +8,15 @@
   "category": "hall_expansion",
   "cuisine": "american",
   "description": "Baked potatoes are halved, scooped, and crisped until the skins shatter. Each shell is loaded with bacon, cheddar, and green onion, then broiled until bubbly. Sour cream and hot sauce finish at the line.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 45,
   "prepTime": 30,
   "difficulty": "easy",
-  "calories": 480,
-  "protein": 18,
-  "carbs": 38,
-  "fats": 28,
+  "calories": 1175,
+  "protein": 56,
+  "carbs": 53,
+  "fats": 81,
   "tags": [
     "protein:pork",
     "format:sheet_pan",
@@ -39,65 +39,65 @@
   "ingredients": [
     {
       "name": "russet potatoes",
-      "quantity": "10",
+      "quantity": "8",
       "unit": "large",
       "notes": "about 6 lb",
       "group": "Main"
     },
     {
       "name": "bacon",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "lb",
       "group": "Topping"
     },
     {
       "name": "sharp cheddar cheese",
-      "quantity": "1.5",
+      "quantity": "1 1/4",
       "unit": "lb",
       "notes": "shredded",
       "group": "Topping"
     },
     {
       "name": "green onions",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "bunch",
       "notes": "sliced",
       "group": "Topping"
     },
     {
       "name": "sour cream",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "cups",
       "group": "Serve"
     },
     {
       "name": "unsalted butter",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "cup",
       "notes": "melted",
       "group": "Main"
     },
     {
       "name": "kosher salt",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "group": "Seasoning"
     },
     {
       "name": "black pepper",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tbsp",
       "group": "Seasoning"
     },
     {
       "name": "hot sauce",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "cup",
       "group": "Serve"
     },
     {
       "name": "smoked paprika",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tbsp",
       "group": "Seasoning"
     }
@@ -134,14 +134,14 @@
     {
       "stepNumber": 5,
       "title": "Cook and crumble bacon",
-      "instruction": "Bake bacon on a rack at 400°F until fully crisp, about 18 minutes. Drain on paper towels and crumble into bite-size pieces once cool enough to handle. Target oven/smoker temperature: 400°F.",
+      "instruction": "Bake bacon on a rack at 400°F until fully crisp, about 18 minutes. Drain on paper towels and crumble into bite-size pieces once cool enough to handle. Target oven/smoker temperature: 400°F. Target 145°F with a 3-minute rest at the thickest point before moving to the next batch.",
       "minutes": 20,
       "heatLevel": ""
     },
     {
       "stepNumber": 6,
       "title": "Load and broil",
-      "instruction": "Fill each skin with cheddar and bacon. Broil on high 2–3 minutes until cheese bubbles and edges brown. Watch closely—broilers turn skins from perfect to burnt in seconds. Target oven/smoker temperature: 500°F.",
+      "instruction": "Fill each skin with cheddar and bacon. Broil on high 2–3 minutes until cheese bubbles and edges brown. Watch closely—broilers turn skins from perfect to burnt in seconds. Target oven/smoker temperature: 500°F. Target 145°F with a 3-minute rest at the thickest point before moving to the next batch.",
       "minutes": 5,
       "heatLevel": ""
     },
@@ -206,11 +206,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 480,
-    "protein": 18,
-    "carbs": 38,
-    "fats": 28,
-    "label": "~480 cal/serving · 18g protein · 4g fiber (est.)"
+    "calories": 1175,
+    "protein": 56,
+    "carbs": 53,
+    "fats": 81,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/hall-expansion/loaded-potato-skins.jpg",
   "heroImageAlt": "Loaded Potato Skins — crew-sized firehall meal",

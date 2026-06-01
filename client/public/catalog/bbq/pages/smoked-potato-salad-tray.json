@@ -8,15 +8,15 @@
   "category": "bbq_grill_nights",
   "cuisine": "american",
   "description": "Adapted from classic BBQ potato salad tradition (Weber, Hey Grill Hey): Yukon golds smoke at 250°F until tender, get diced, and fold into a tangy mustard-mayo dressing for a tray that feeds ten.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 90,
   "prepTime": 25,
   "difficulty": "easy",
-  "calories": 467,
+  "calories": 456,
   "protein": 9,
   "carbs": 50,
-  "fats": 26,
+  "fats": 25,
   "tags": [
     "protein:vegetarian",
     "format:side",
@@ -39,67 +39,67 @@
   "ingredients": [
     {
       "name": "Yukon gold potatoes",
-      "quantity": "6",
+      "quantity": "4.8",
       "unit": "lb",
       "notes": "halved"
     },
     {
       "name": "neutral oil",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp"
     },
     {
       "name": "kosher salt",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp"
     },
     {
       "name": "black pepper",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tbsp"
     },
     {
       "name": "mayonnaise",
-      "quantity": "1.25",
+      "quantity": "1",
       "unit": "cups"
     },
     {
       "name": "yellow mustard",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "cup"
     },
     {
       "name": "apple cider vinegar",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp"
     },
     {
       "name": "celery",
-      "quantity": "4",
+      "quantity": "3",
       "unit": "stalks",
       "notes": "diced"
     },
     {
       "name": "red onion",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "whole",
       "notes": "diced fine"
     },
     {
       "name": "dill pickles",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "cup",
       "notes": "chopped"
     },
     {
       "name": "fresh dill",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "cup",
       "notes": "chopped"
     },
     {
       "name": "hard-boiled eggs",
-      "quantity": "4",
+      "quantity": "3",
       "unit": "whole",
       "notes": "chopped (optional)"
     }
@@ -108,62 +108,62 @@
     {
       "stepNumber": 1,
       "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Smoked Potato Salad Tray in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Target 165°F for any egg-based components at the thickest part before moving to the next batch. Plan about 12 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
+      "instruction": "Line up every ingredient for Smoked Potato Salad Tray in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use neutral oil, mayonnaise as listed — measure each before heat goes on.",
       "minutes": 12,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
       "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch vegetarian. Confirm burners ignite evenly and sheet pans are greased or lined. Bake until the center reaches a safe internal temp (165°F for any egg-based components) and edges look set — use a thermometer at the thickest point. Plan about 10 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch vegetarian. Confirm burners ignite evenly and sheet pans are greased or lined.",
       "minutes": 10,
       "heatLevel": "medium-high"
     },
     {
       "stepNumber": 3,
       "title": "Prep potatoes",
-      "instruction": "Halve potatoes, toss with oil, salt, and pepper. Arrange cut-side down on sheet pans. Plan about 12 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Cook until char marks are visible and the thickest piece reads 165°F for any egg-based components on an instant-read thermometer.",
+      "instruction": "Halve potatoes, toss with oil, salt, and pepper. Arrange cut-side down on sheet pans. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 12,
       "heatLevel": ""
     },
     {
       "stepNumber": 4,
       "title": "Smoke at 250°F",
-      "instruction": "Smoke potatoes at 250°F until fork-tender and internal temp reaches 205°F, about 60–75 minutes. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Smoke potatoes at 250°F until fork-tender and internal temp reaches 205°F, about 60–75 minutes. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 70,
       "heatLevel": "low"
     },
     {
       "stepNumber": 5,
       "title": "Cool and dice",
-      "instruction": "Cool potatoes 20 minutes until warm, not hot. Dice into 1/2-inch cubes. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Cook until char marks are visible and the thickest piece reads 165°F for any egg-based components on an instant-read thermometer.",
+      "instruction": "Cool potatoes 20 minutes until warm, not hot. Dice into 1/2-inch cubes. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 25,
       "heatLevel": ""
     },
     {
       "stepNumber": 6,
       "title": "Build dressing",
-      "instruction": "Whisk mayo, mustard, vinegar, and pinch of salt until smooth. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Cook until char marks are visible and the thickest piece reads 165°F for any egg-based components on an instant-read thermometer.",
+      "instruction": "Whisk mayo, mustard, vinegar, and pinch of salt until smooth. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 7,
       "title": "Fold salad",
-      "instruction": "Fold potatoes with dressing, celery, onion, pickles, dill, and eggs if using. taste and adjust salt, acid, and pepper until balanced. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Label hotel pans before they hit the line so the crew knows what's hot, what's holding, and what's backup for second wave. Cook until char marks are visible and the thickest piece reads 165°F for any egg-based components on an instant-read thermometer. Label hotel pans before they hit the line so the crew knows what's hot, what's holding, and what's backup for second wave. Label hotel pans before they hit the line so the crew knows what's hot, what's holding, and what's backup for second wave.",
+      "instruction": "Fold potatoes with dressing, celery, onion, pickles, dill, and eggs if using. taste and adjust salt, acid, and pepper until balanced.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 8,
       "title": "Chill for service",
-      "instruction": "Refrigerate at least 30 minutes so flavors meld. Keep on ice at the line. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Refrigerate at least 30 minutes so flavors meld. Keep on ice at the line. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
       "minutes": 30,
       "heatLevel": ""
     },
     {
       "stepNumber": 9,
-      "title": "Tonight's board",
+      "title": "Cooking step",
       "instruction": "Potato salad in a cold pan on ice alongside smoked meats. Refresh with dill before serving. Target 165°F for any egg-based components at the thickest part before moving to the next batch. Plan about 3 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 3,
       "heatLevel": ""
@@ -171,7 +171,7 @@
     {
       "stepNumber": 10,
       "title": "Leftovers",
-      "instruction": "Keeps refrigerated 24 hours. Thin with vinegar if dressing tightens overnight. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Keeps refrigerated 24 hours. Thin with vinegar if dressing tightens overnight. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 3,
       "heatLevel": ""
     }
@@ -193,12 +193,25 @@
   "mealPrepNotes": "Smoke potatoes ahead—they need to cool before dressing. Keep finished salad cold on ice until service. Do not hold warm.",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 467,
+    "calories": 456,
     "protein": 9,
     "carbs": 50,
-    "fats": 26,
+    "fats": 25,
     "label": "per serving (hall portion)",
-    "source": "estimated"
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/smoker-catalog/smoked-potato-salad-tray.jpg",
   "heroImageAlt": "Smoked Potato Salad Tray — crew-sized BBQ spread with visible smoke and bark",
@@ -226,6 +239,6 @@
     "hickory-smoked-chicken-breast"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T02:29:42.533Z",
+  "generatedAt": "2026-05-31T23:32:23.203Z",
   "contentVersion": 2
 }

@@ -8,15 +8,15 @@
   "category": "hall_expansion",
   "cuisine": "american",
   "description": "Wings are baked on racks until skin crisps, then tossed in separate bowls of buffalo, honey-garlic, and BBQ sauce. Celery, carrots, and ranch complete a classic wing bar that scales to any appetite.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 50,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 490,
-  "protein": 36,
-  "carbs": 14,
-  "fats": 34,
+  "calories": 216,
+  "protein": 3,
+  "carbs": 33,
+  "fats": 9,
   "tags": [
     "protein:chicken",
     "format:bar_line",
@@ -39,57 +39,57 @@
   "ingredients": [
     {
       "name": "chicken wings",
-      "quantity": "7.5",
+      "quantity": "6",
       "unit": "lb",
       "notes": "split into flats and drums; about 12 oz raw per firefighter",
       "group": "Main"
     },
     {
       "name": "baking powder",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "notes": "aluminum-free",
       "group": "Main"
     },
     {
       "name": "kosher salt",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "group": "Seasoning"
     },
     {
       "name": "black pepper",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tbsp",
       "group": "Seasoning"
     },
     {
       "name": "hot sauce",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "cup",
       "group": "Buffalo sauce"
     },
     {
       "name": "unsalted butter",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "cup",
       "group": "Buffalo sauce"
     },
     {
       "name": "BBQ sauce",
-      "quantity": "1.5",
+      "quantity": "1 1/4",
       "unit": "cups",
       "group": "BBQ sauce"
     },
     {
       "name": "honey",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "cup",
       "group": "Honey garlic"
     },
     {
       "name": "garlic cloves",
-      "quantity": "6",
+      "quantity": "5",
       "unit": "cloves",
       "notes": "minced",
       "group": "Honey garlic"
@@ -102,7 +102,7 @@
     },
     {
       "name": "baby carrots",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "lb",
       "notes": "cut into sticks",
       "group": "Serve"
@@ -212,11 +212,25 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 490,
-    "protein": 36,
-    "carbs": 14,
-    "fats": 34,
-    "label": "~490 cal/serving · 36g protein · 2g fiber (est.)"
+    "calories": 216,
+    "protein": 3,
+    "carbs": 33,
+    "fats": 9,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/hall-expansion/chicken-wing-bar-night.jpg",
   "heroImageAlt": "Chicken Wing Bar Night — crew-sized firehall meal",

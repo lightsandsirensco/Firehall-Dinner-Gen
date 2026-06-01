@@ -13,10 +13,10 @@
   "cookTime": 25,
   "prepTime": 30,
   "difficulty": "medium",
-  "calories": 420,
-  "protein": 40,
-  "carbs": 18,
-  "fats": 22,
+  "calories": 716,
+  "protein": 68,
+  "carbs": 25,
+  "fats": 36,
   "tags": [
     "protein:salmon",
     "format:grill",
@@ -127,7 +127,7 @@
     {
       "stepNumber": 3,
       "title": "Brine the salmon",
-      "instruction": "Dissolve salt in cold water with maple syrup. Submerge salmon 30–60 minutes, then pat completely dry. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Dissolve salt in cold water with maple syrup. Submerge salmon 30–60 minutes, then pat completely dry. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F at the thickest point before moving to the next batch.",
       "minutes": 15,
       "heatLevel": ""
     },
@@ -148,7 +148,7 @@
     {
       "stepNumber": 6,
       "title": "Grill on planks",
-      "instruction": "Heat grill to medium-high, about 400°F. Place salmon on planks, close lid, and grill 12–15 minutes until centers reach 125°F for medium or 140°F for well-done. Target oven/smoker temperature: 400°F.",
+      "instruction": "Heat grill to medium-high, about 400°F. Place salmon on planks, close lid, and grill 12–15 minutes until centers reach 125°F for medium or 140°F for well-done. Target oven/smoker temperature: 400°F. Target 145°F at the thickest point before moving to the next batch.",
       "minutes": 15,
       "heatLevel": ""
     },
@@ -206,11 +206,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 420,
-    "protein": 40,
-    "carbs": 18,
-    "fats": 22,
-    "label": "~420 cal/serving · 40g protein · 2g fiber (est.)"
+    "calories": 716,
+    "protein": 68,
+    "carbs": 25,
+    "fats": 36,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/hall-expansion/maple-cured-salmon-plank.jpg",
   "heroImageAlt": "Maple-Cured Salmon Plank — crew-sized firehall meal",

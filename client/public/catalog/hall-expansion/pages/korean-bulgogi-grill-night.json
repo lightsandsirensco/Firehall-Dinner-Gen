@@ -8,15 +8,15 @@
   "category": "hall_expansion",
   "cuisine": "korean",
   "description": "Thin-sliced ribeye marinates in soy, pear, garlic, and sesame, then grills hot over charcoal or gas until caramelized at the edges. Serve with lettuce cups, scallions, kimchi, and ssamjang for wrap-your-own platters.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 20,
   "prepTime": 35,
   "difficulty": "medium",
-  "calories": 460,
-  "protein": 36,
-  "carbs": 18,
-  "fats": 28,
+  "calories": 546,
+  "protein": 49,
+  "carbs": 8,
+  "fats": 35,
   "tags": [
     "protein:beef",
     "format:grill",
@@ -39,47 +39,47 @@
   "ingredients": [
     {
       "name": "ribeye steak",
-      "quantity": "4",
+      "quantity": "3.2",
       "unit": "lb",
       "notes": "partially frozen, sliced thin",
       "group": "Main"
     },
     {
       "name": "soy sauce",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "cup",
       "group": "Marinade"
     },
     {
       "name": "Asian pear or apple",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "whole",
       "notes": "grated",
       "group": "Marinade"
     },
     {
       "name": "brown sugar",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp",
       "group": "Marinade"
     },
     {
       "name": "garlic cloves",
-      "quantity": "6",
+      "quantity": "5",
       "unit": "cloves",
       "notes": "minced",
       "group": "Marinade"
     },
     {
       "name": "ginger",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tbsp",
       "notes": "grated",
       "group": "Marinade"
     },
     {
       "name": "sesame oil",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "group": "Marinade"
     },
@@ -99,13 +99,13 @@
     },
     {
       "name": "kimchi",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "cups",
       "group": "Service"
     },
     {
       "name": "ssamjang",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "cup",
       "group": "Service"
     }
@@ -114,7 +114,7 @@
     {
       "stepNumber": 1,
       "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Seared Garlic Steak in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "instruction": "Line up every ingredient for Seared Garlic Steak in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use soy sauce, green onions as listed — measure each before heat goes on.",
       "minutes": 12,
       "heatLevel": ""
     },
@@ -128,7 +128,7 @@
     {
       "stepNumber": 3,
       "title": "Slice and marinate beef",
-      "instruction": "Slice ribeye paper-thin. Mix soy, grated pear, sugar, garlic, ginger, and sesame oil. Toss beef and marinate at least 1 hour. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Slice ribeye paper-thin. Mix soy, grated pear, sugar, garlic, ginger, and sesame oil. Toss beef and marinate at least 1 hour. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
       "minutes": 20,
       "heatLevel": ""
     },
@@ -149,7 +149,7 @@
     {
       "stepNumber": 6,
       "title": "Grill bulgogi in batches",
-      "instruction": "Grill beef in single layers 1–2 minutes per side until caramelized. Repeat until all beef is cooked. Target oven/smoker temperature: 450°F.",
+      "instruction": "Grill beef in single layers 1–2 minutes per side until caramelized. Repeat until all beef is cooked. Target oven/smoker temperature: 450°F. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
       "minutes": 12,
       "heatLevel": ""
     },
@@ -193,11 +193,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 460,
-    "protein": 36,
-    "carbs": 18,
-    "fats": 28,
-    "label": "~460 cal/serving · 36g protein · 2g fiber (est.)"
+    "calories": 546,
+    "protein": 49,
+    "carbs": 8,
+    "fats": 35,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/hall-expansion/korean-bulgogi-grill-night.jpg",
   "heroImageAlt": "Korean Bulgogi Grill Night — crew-sized firehall meal",

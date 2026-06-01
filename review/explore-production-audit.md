@@ -1,6 +1,6 @@
 # Explore Production Audit
 
-- Recipes: **233**
-- Explore eligible: **233**
-- Excluded: **0**
+- Recipes: **228**
+- Explore eligible: **225**
+- Excluded: **3**
 - Duplicate conflicts: **0**

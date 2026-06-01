@@ -8,15 +8,15 @@
   "category": "hall_expansion",
   "cuisine": "italian",
   "description": "Beef meatballs mix fast, bake on sheet pans until browned, then simmer in marinara until saucy. Serve over spaghetti or in sub rolls for a big crew feed that scales easy.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 40,
   "prepTime": 30,
   "difficulty": "easy",
-  "calories": 580,
-  "protein": 42,
-  "carbs": 52,
-  "fats": 24,
+  "calories": 1092,
+  "protein": 75,
+  "carbs": 98,
+  "fats": 46,
   "tags": [
     "protein:beef",
     "format:sheet_pan",
@@ -39,64 +39,64 @@
   "ingredients": [
     {
       "name": "ground beef (80/20)",
-      "quantity": "4",
+      "quantity": "3.2",
       "unit": "lb",
       "group": "Main"
     },
     {
       "name": "breadcrumbs",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "cups",
       "group": "Main"
     },
     {
       "name": "eggs",
-      "quantity": "3",
+      "quantity": "2",
       "unit": "whole",
       "group": "Main"
     },
     {
       "name": "grated Parmesan",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "cup",
       "group": "Main"
     },
     {
       "name": "garlic cloves",
-      "quantity": "6",
+      "quantity": "5",
       "unit": "cloves",
       "notes": "minced",
       "group": "Main"
     },
     {
       "name": "marinara sauce",
-      "quantity": "8",
+      "quantity": "6.4",
       "unit": "cups",
       "group": "Sauce"
     },
     {
       "name": "spaghetti",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "lb",
       "group": "Base"
     },
     {
       "name": "fresh basil",
-      "quantity": "0.33",
+      "quantity": "1/4",
       "unit": "cup",
       "notes": "chopped",
       "group": "Finish"
     },
     {
       "name": "sub rolls",
-      "quantity": "10",
+      "quantity": "8",
       "unit": "rolls",
       "notes": "optional for sandwiches",
       "group": "Service"
     },
     {
       "name": "shredded mozzarella",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "cups",
       "notes": "optional for subs",
       "group": "Service"
@@ -199,11 +199,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 580,
-    "protein": 42,
-    "carbs": 52,
-    "fats": 24,
-    "label": "~580 cal/serving · 42g protein · 4g fiber (est.)"
+    "calories": 1092,
+    "protein": 75,
+    "carbs": 98,
+    "fats": 46,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/hall-expansion/sheet-pan-meatball-marinara.jpg",
   "heroImageAlt": "Sheet Pan Meatball Marinara Feed — crew-sized firehall meal",

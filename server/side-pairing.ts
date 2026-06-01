@@ -14,6 +14,10 @@ import {
   type MealIdentity,
 } from "@shared/meal-semantics";
 import { correctStarchKeyForTitle, isCaesarMainDish } from "@shared/firehall-instruction-voice";
+import {
+  mainHasBuiltinStarch,
+  recommendedSideForBuiltinStarchMain,
+} from "@shared/curated-image-governance/title-side-pairing-governance";
 import { getRecentCarbs, trackCarb } from "./carb-rules";
 import {
   getSessionSideBundles,
@@ -470,6 +474,22 @@ function pickTitleCurated(title: string): Partial<ComposedSidePick> | null {
   if (/\b(mac and cheese|mac & cheese)\b/i.test(t)) {
     return { starchKey: "mac and cheese", vegLabel: "Garlic parmesan broccoli", pairingSource: "title:mac" };
   }
+  if (/\b(shepherd'?s?\s*pie|cottage\s*pie)\b/i.test(t)) {
+    return {
+      starchKey: null,
+      vegLabel: recommendedSideForBuiltinStarchMain(t) || "Greek salad",
+      extraLabel: null,
+      pairingSource: "title:shepherds_pie",
+    };
+  }
+  if (mainHasBuiltinStarch(t)) {
+    return {
+      starchKey: null,
+      vegLabel: recommendedSideForBuiltinStarchMain(t) || "Garden salad",
+      extraLabel: null,
+      pairingSource: "title:builtin_starch_main",
+    };
+  }
   return null;
 }
 
@@ -523,6 +543,27 @@ export function pickComposedSides(ctx: SidePairingContext): ComposedSidePick {
       vegLabel: null,
       extraLabel: null,
       pairingSource: "identity:caesar_salad",
+    };
+  }
+
+  if (mainHasBuiltinStarch(ctx.title)) {
+    const vegLabel =
+      recommendedSideForBuiltinStarchMain(ctx.title) ||
+      pickFromPool(
+        ["Greek salad", "Garden salad", "Side salad with ranch", "Creamy coleslaw"],
+        vegRecent,
+        ctx.healthiness,
+        ctx.allergens,
+        false,
+        `${ctx.title}:builtin_veg`,
+      ) ||
+      "Greek salad";
+    log(`[side-pair] "${ctx.title}" → builtin-starch main, veg=${vegLabel} (no extra starch)`, "compose");
+    return {
+      starchKey: null,
+      vegLabel,
+      extraLabel: null,
+      pairingSource: "identity:builtin_starch",
     };
   }
 

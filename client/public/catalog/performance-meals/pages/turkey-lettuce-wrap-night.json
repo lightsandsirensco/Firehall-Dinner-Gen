@@ -13,10 +13,10 @@
   "cookTime": 15,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 275,
-  "protein": 34,
-  "carbs": 10,
-  "fats": 11,
+  "calories": 345,
+  "protein": 40,
+  "carbs": 5,
+  "fats": 17,
   "tags": [
     "protein:turkey",
     "format:handheld",
@@ -102,36 +102,57 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Prep lettuce cups",
-      "instruction": "Wash romaine leaves and dry completely on towels. Store chilled on sheet pans so cups stay rigid and snap lightly when folded.",
-      "minutes": 10,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Turkey Lettuce Wrap Night in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use green onions as listed — measure each before heat goes on.",
+      "minutes": 12,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch turkey. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Prep lettuce cups",
+      "instruction": "Wash romaine leaves and dry completely on towels. Store chilled on sheet pans so cups stay rigid and snap lightly when folded. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
       "title": "Brown turkey",
       "instruction": "Cook ground turkey in batches over medium-high 8–10 minutes, crumbling until fully cooked with lightly golden edges and no pink remaining.",
       "minutes": 10,
       "heatLevel": "medium-high"
     },
     {
-      "stepNumber": 3,
+      "stepNumber": 5,
       "title": "Add aromatics",
       "instruction": "Stir in ginger, garlic, and water chestnuts. Cook 3–4 minutes until fragrant and chestnuts heated through with slight crunch remaining.",
       "minutes": 4,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 6,
       "title": "Finish sauce",
-      "instruction": "Add soy sauce, 2 tbsp hoisin, sesame oil, and vinegar. Simmer 2 minutes until liquid mostly absorbs and turkey looks glossy, not soupy.",
+      "instruction": "Add soy sauce, 2 tbsp hoisin, sesame oil, and vinegar. Simmer 2 minutes until liquid mostly absorbs and turkey looks glossy, not soupy. Target 165°F at the thickest point before moving to the next batch.",
       "minutes": 2,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
       "title": "Assemble at the line",
-      "instruction": "Fill each leaf with ¼ cup turkey, drizzle hoisin, sprinkle peanuts and scallions. Serve with lime wedges for squeezing.",
+      "instruction": "Fill each leaf with ¼ cup turkey, drizzle hoisin, sprinkle peanuts and scallions. Serve with lime wedges for squeezing. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
       "minutes": 5,
       "heatLevel": ""
     }
@@ -154,11 +175,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 275,
-    "protein": 34,
-    "carbs": 10,
-    "fats": 11,
-    "label": "~275 cal/serving · 34g protein · 2g fiber (est.)"
+    "calories": 345,
+    "protein": 40,
+    "carbs": 5,
+    "fats": 17,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": true,
+      "performanceMeal": true
+    }
   },
   "heroImage": "/images/golden-100/turkey-lettuce-wrap-night.jpg",
   "mobileImage": "/images/mobile/turkey-lettuce-wrap-night.jpg",
@@ -183,6 +218,6 @@
     "turkey-sweet-potato-chili",
     "asian-chicken-lettuce-cups"
   ],
-  "generatedAt": "2026-05-31T15:28:14.291Z",
+  "generatedAt": "2026-05-31T23:32:24.495Z",
   "contentVersion": 2
 }

@@ -8,8 +8,8 @@
   "category": "hall_expansion",
   "cuisine": "american",
   "description": "A hall-scale charcuterie board layers cured meats, cheeses, crackers, pickles, and spreads in a rainbow pattern that feeds grazers all night. No cooking required beyond warming optional brie.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 10,
   "prepTime": 40,
   "difficulty": "easy",
@@ -39,64 +39,64 @@
   "ingredients": [
     {
       "name": "sliced salami",
-      "quantity": "1.5",
+      "quantity": "1 1/4",
       "unit": "lb",
       "group": "Meat"
     },
     {
       "name": "sliced prosciutto",
-      "quantity": "0.75",
+      "quantity": "5/8",
       "unit": "lb",
       "group": "Meat"
     },
     {
       "name": "sliced turkey breast",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "lb",
       "group": "Meat"
     },
     {
       "name": "cheddar cheese",
-      "quantity": "0.75",
+      "quantity": "5/8",
       "unit": "lb",
       "notes": "cubed",
       "group": "Cheese"
     },
     {
       "name": "gouda cheese",
-      "quantity": "0.75",
+      "quantity": "5/8",
       "unit": "lb",
       "notes": "sliced",
       "group": "Cheese"
     },
     {
       "name": "brie wheel",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "whole",
       "notes": "8 oz, optional baked",
       "group": "Cheese"
     },
     {
       "name": "crackers assortment",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "lb",
       "group": "Carbs"
     },
     {
       "name": "grapes",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "lb",
       "group": "Produce"
     },
     {
       "name": "cornichons",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "cups",
       "group": "Accents"
     },
     {
       "name": "fig jam",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "cup",
       "group": "Spreads"
     }
@@ -105,7 +105,7 @@
     {
       "stepNumber": 1,
       "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Firehall Charcuterie Board in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Double-check seasoning after scaling — crew palates run salty after long shifts, so taste the first portion before opening the line.",
+      "instruction": "Line up every ingredient for Firehall Charcuterie Board in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Double-check seasoning after scaling — crew palates run salty after long shifts, so taste the first portion before opening the line. Use sliced turkey breast as listed — measure each before heat goes on.",
       "minutes": 12,
       "heatLevel": ""
     },
@@ -200,7 +200,7 @@
     "Roll meats and cheese into next-day lunch wraps with leftover crackers crushed as crunch.",
     "Simmer leftover salami edges into a quick pasta sauce with tomatoes."
   ],
-  "whyCrewsLikeIt": "Charcuterie scales to any headcount and survives interruptions—no food gets cold and unappealing while the crew handles a call. It feels upscale without requiring culinary school skills.",
+  "whyCrewsLikeIt": "Charcuterie scales to any headcount and survives interruptions—no food gets cold and unappealing while the crew handles a call. It feels upscale without requiring school skills.",
   "mealPrepNotes": "Pre-slice hard cheeses and fan salami the night before on parchment. Keep wet items like pickles and olives in separate ramekins until the board goes out. Warm brie 8 minutes at 350°F if serving baked.",
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",

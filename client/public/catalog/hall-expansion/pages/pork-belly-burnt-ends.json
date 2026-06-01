@@ -8,15 +8,15 @@
   "category": "hall_expansion",
   "cuisine": "american",
   "description": "Skinless pork belly is cubed, rubbed, smoked until tender, then sauced and finished until the edges caramelize into proper burnt-end nuggets. Serve with pickles and cheap white bread to cut the richness.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 240,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 580,
-  "protein": 18,
-  "carbs": 24,
-  "fats": 48,
+  "calories": 155,
+  "protein": 1,
+  "carbs": 28,
+  "fats": 5,
   "tags": [
     "protein:pork",
     "format:smoker",
@@ -39,63 +39,63 @@
   "ingredients": [
     {
       "name": "skinless pork belly",
-      "quantity": "6",
+      "quantity": "4.8",
       "unit": "lb",
       "notes": "cut into 1.5-inch cubes",
       "group": "Main"
     },
     {
       "name": "kosher salt",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp",
       "group": "Rub"
     },
     {
       "name": "brown sugar",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp",
       "group": "Rub"
     },
     {
       "name": "smoked paprika",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "group": "Rub"
     },
     {
       "name": "garlic powder",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "group": "Rub"
     },
     {
       "name": "black pepper",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tbsp",
       "notes": "coarse",
       "group": "Rub"
     },
     {
       "name": "BBQ sauce",
-      "quantity": "1.5",
+      "quantity": "1 1/4",
       "unit": "cups",
       "group": "Glaze"
     },
     {
       "name": "honey",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "cup",
       "group": "Glaze"
     },
     {
       "name": "apple cider vinegar",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "group": "Glaze"
     },
     {
       "name": "unsalted butter",
-      "quantity": "4",
+      "quantity": "3.4",
       "unit": "tbsp",
       "group": "Glaze"
     }
@@ -204,11 +204,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 580,
-    "protein": 18,
-    "carbs": 24,
-    "fats": 48,
-    "label": "~580 cal/serving · 18g protein · 0g fiber (est.)"
+    "calories": 155,
+    "protein": 1,
+    "carbs": 28,
+    "fats": 5,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/hall-expansion/pork-belly-burnt-ends.jpg",
   "heroImageAlt": "Pork Belly Burnt Ends — crew-sized firehall meal",

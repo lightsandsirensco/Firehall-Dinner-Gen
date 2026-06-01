@@ -8,15 +8,15 @@
   "category": "hall_expansion",
   "cuisine": "italian-american",
   "description": "Hawaiian rolls are split, layered with pepperoni, mozzarella, and pizza sauce, then baked until the tops turn golden and cheese pulls in long strings. Brush with garlic butter and serve with extra marinara for dunking.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 25,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 420,
-  "protein": 18,
-  "carbs": 42,
-  "fats": 20,
+  "calories": 418,
+  "protein": 19,
+  "carbs": 9,
+  "fats": 35,
   "tags": [
     "protein:pork",
     "format:sheet_pan",
@@ -46,59 +46,59 @@
     },
     {
       "name": "pepperoni slices",
-      "quantity": "8",
+      "quantity": "6.4",
       "unit": "oz",
       "group": "Filling"
     },
     {
       "name": "mozzarella cheese",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "lb",
       "notes": "shredded",
       "group": "Filling"
     },
     {
       "name": "pizza sauce",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "cups",
       "group": "Filling"
     },
     {
       "name": "unsalted butter",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "cup",
       "notes": "melted",
       "group": "Topping"
     },
     {
       "name": "garlic cloves",
-      "quantity": "4",
+      "quantity": "3",
       "unit": "cloves",
       "notes": "minced",
       "group": "Topping"
     },
     {
       "name": "dried oregano",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tbsp",
       "group": "Topping"
     },
     {
       "name": "Parmesan cheese",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "cup",
       "notes": "grated",
       "group": "Topping"
     },
     {
       "name": "red pepper flakes",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tsp",
       "group": "Topping"
     },
     {
       "name": "marinara sauce",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "cups",
       "notes": "warm, for dipping",
       "group": "Serve"
@@ -194,11 +194,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 420,
-    "protein": 18,
-    "carbs": 42,
-    "fats": 20,
-    "label": "~420 cal/serving · 18g protein · 2g fiber (est.)"
+    "calories": 418,
+    "protein": 19,
+    "carbs": 9,
+    "fats": 35,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/hall-expansion/game-day-pizza-sliders.jpg",
   "heroImageAlt": "Game Day Pizza Sliders — crew-sized firehall meal",

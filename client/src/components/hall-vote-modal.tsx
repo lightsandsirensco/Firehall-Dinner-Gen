@@ -8,6 +8,7 @@ import type { ClientRecipeResponse } from "@shared/schema";
 import { buildMinimalClientRecipe } from "@shared/minimal-client-recipe";
 import { Vote, Copy, Check, ExternalLink, QrCode, Loader2, Users, Shuffle } from "lucide-react";
 import { motion } from "framer-motion";
+import { trackHallVoteCreate, trackHallVoteShare } from "@/lib/analytics";
 
 const TRY_ANOTHER_LABEL = "Try another direction";
 const TRY_ANOTHER_DESC =
@@ -86,6 +87,7 @@ export function HallVoteModal({
       setVoteId(data.vote_id);
       setShareUrl(data.share_url);
       setStep("share");
+      trackHallVoteCreate({ voteId: data.vote_id, optionCount: voteOptions.length });
 
       try {
         const QRCode = await import("qrcode");
@@ -111,6 +113,7 @@ export function HallVoteModal({
     try {
       await navigator.clipboard.writeText(shareUrl);
       setCopied(true);
+      if (voteId) trackHallVoteShare({ voteId, action: "copy" });
       setTimeout(() => setCopied(false), 2000);
     } catch {
       const input = document.querySelector<HTMLInputElement>('[data-testid="input-share-url"]');

@@ -2,7 +2,7 @@
   "slug": "breakfast-enchiladas",
   "title": "Breakfast Enchiladas for the Crew",
   "subtitle": "Rolled tortillas stuffed with eggs and chorizo under green chili sauce.",
-  "description": "A hotel-pan bake of flour tortillas rolled tight with scrambled eggs, chorizo, and cheese, then smothered in verde sauce and baked until bubbling. Cuts into clean portions for a crew that wants something bolder than a standard egg bake.",
+  "description": "Corn tortillas rolled with scrambled eggs and sausage, smothered in enchilada sauce and cheese, baked until bubbling. Cut squares from a casserole dish — pure hall comfort.",
   "filters": [
     "feed_a_crew",
     "high_protein"
@@ -14,8 +14,8 @@
     "bake",
     "9x13"
   ],
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "prepTime": 25,
   "cookTime": 35,
   "totalTime": 60,
@@ -23,49 +23,49 @@
   "ingredients": [
     {
       "name": "large eggs",
-      "quantity": "16",
+      "quantity": "13",
       "notes": "soft-scrambled with salt and pepper",
       "group": "Filling"
     },
     {
       "name": "Mexican chorizo",
-      "quantity": "1 1/2 lb",
+      "quantity": "3/8",
       "notes": "cooked and crumbled, fat drained",
       "group": "Filling"
     },
     {
       "name": "shredded Monterey Jack",
-      "quantity": "2 cups",
+      "quantity": "1.6",
       "notes": "divided for filling and top",
       "group": "Filling"
     },
     {
       "name": "8-inch flour tortillas",
-      "quantity": "14",
+      "quantity": "11",
       "notes": "warmed briefly to stay pliable",
       "group": "Build"
     },
     {
       "name": "green enchilada sauce",
-      "quantity": "3 cups",
+      "quantity": "2.4",
       "notes": "jarred or homemade",
       "group": "Sauce"
     },
     {
       "name": "sour cream",
-      "quantity": "1/2 cup",
+      "quantity": "3/8",
       "notes": "whisked into half the sauce for creaminess",
       "group": "Sauce"
     },
     {
       "name": "cotija or feta",
-      "quantity": "1 cup",
+      "quantity": "3/4",
       "notes": "crumbled",
       "group": "Finish"
     },
     {
       "name": "cilantro",
-      "quantity": "1/2 cup",
+      "quantity": "3/8",
       "notes": "chopped, plus lime wedges",
       "group": "Finish"
     }
@@ -74,7 +74,7 @@
     {
       "stepNumber": 1,
       "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Breakfast Enchiladas for the Crew in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "instruction": "Line up every ingredient for Breakfast Enchiladas for the Crew in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Double-check seasoning after scaling — crew palates run salty after long shifts, so taste the first portion before opening the line. Use sour cream, cilantro as listed — measure each before heat goes on.",
       "minutes": 12,
       "heatLevel": ""
     },
@@ -88,28 +88,28 @@
     {
       "stepNumber": 3,
       "title": "Heat the oven",
-      "instruction": "Heat oven to 375°F. Grease a deep 9x13 pan or two smaller hotel pans. Warm tortillas in a dry skillet or wrapped in foil so they roll without tearing. Allow 10–15 minutes for mise en place before heat goes on. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Heat oven to 375°F. Grease a deep 9x13 pan or two smaller hotel pans. Warm tortillas in a dry skillet or wrapped in foil so they roll without tearing.",
       "minutes": 0,
       "heatLevel": ""
     },
     {
       "stepNumber": 4,
       "title": "Cook the filling",
-      "instruction": "Brown chorizo in a large skillet, drain fat, then add soft-scrambled eggs and half the Jack cheese. Mix gently—the eggs should stay fluffy, not mashed. Target 165°F at the thickest part before moving to the next batch. Plan about 15 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Brown chorizo in a large skillet, drain fat, then add soft-scrambled eggs and half the Jack cheese. Mix gently—the eggs should stay fluffy, not mashed.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
       "stepNumber": 5,
       "title": "Roll the enchiladas",
-      "instruction": "Spread a thin layer of sauce in the pan. Fill each tortilla with a generous scoop of filling, roll tight, and place seam-side down in a snug single layer. Plan about 12 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Spread a thin layer of sauce in the pan. Fill each tortilla with a generous scoop of filling, roll tight, and place seam-side down in a snug single layer.",
       "minutes": 12,
       "heatLevel": ""
     },
     {
       "stepNumber": 6,
       "title": "Sauce and cheese",
-      "instruction": "Pour remaining sauce evenly over the rolls. Top with remaining Jack and cotija. Cover with foil for the first half of baking to keep tortillas soft. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Pour remaining sauce evenly over the rolls. Top with remaining Jack and cotija. Cover with foil for the first half of baking to keep tortillas soft.",
       "minutes": 5,
       "heatLevel": ""
     },
@@ -122,17 +122,45 @@
     },
     {
       "stepNumber": 8,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Portion and open the line",
+      "instruction": "Portion Breakfast Enchiladas for the Crew onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Scale for larger halls",
+      "instruction": "When cooking for more than 8 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
       "title": "Bake and rest",
-      "instruction": "Bake covered 20 minutes, uncover, and bake 10 more until sauce bubbles at the edges. Rest 10 minutes before cutting into portions so slices hold on the plate. Bake until the center reaches a safe internal temp (165°F) and edges look set — use a thermometer at the thickest point. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Bake covered 20 minutes, uncover, and bake 10 more until sauce bubbles at the edges. Rest 10 minutes before cutting into portions so slices hold on the plate.",
       "minutes": 25,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 12,
+      "title": "Final quality check before service",
+      "instruction": "Walk the line once before opening service for Breakfast Enchiladas for the Crew — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
+      "minutes": 4,
       "heatLevel": ""
     }
   ],
   "nutrition": {
-    "calories": 465,
+    "calories": 445,
     "protein": 23,
     "carbs": 34,
-    "fat": 27,
+    "fat": 25,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
@@ -141,7 +169,7 @@
       "under30gFat": true,
       "highCarb": false,
       "lowCarb": false,
-      "mealPrepFriendly": false
+      "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": false,
@@ -164,13 +192,12 @@
   ],
   "heroImage": "/images/breakfast/breakfast-enchiladas.jpg",
   "thumbImage": "/images/thumbs/breakfast/breakfast-enchiladas.jpg",
-  "imageAlt": "Crew-sized breakfast enchiladas baked in a 9x13 casserole — green chile sauce, melted cheese, scrambled egg and chorizo filling visible in rolled flour tortillas",
-  "publishedAt": "2026-05-30T21:22:29.756Z",
-  "updatedAt": "2026-05-31T18:15:40.287Z",
+  "imageAlt": "Crew-sized breakfast enchiladas in a 9x13 casserole — green chile sauce, melted cheese, and egg-chorizo filling in rolled tortillas",
+  "publishedAt": "2026-05-31T18:33:00.829Z",
+  "updatedAt": "2026-05-31T23:49:25.328Z",
   "readMinutes": 9,
   "seoTitle": "Breakfast Enchiladas for the Crew | Firehall Breakfast",
-  "mobileImage": "/images/mobile/breakfast/breakfast-enchiladas.jpg",
-  "railImage": "/images/rails/breakfast/breakfast-enchiladas.jpg",
+  "collectionTier": "firehall_classic",
   "proTips": [
     "Set up a rolling station with warm tortillas, filling bowl, and sauced pan ready before scrambling eggs.",
     "One cook rolls while another manages sauce and oven timing—don't let rolled enchiladas sit dry on the counter.",

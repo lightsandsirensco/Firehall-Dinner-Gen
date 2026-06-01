@@ -8,15 +8,15 @@
   "category": "bbq_grill_nights",
   "cuisine": "american",
   "description": "Boneless thighs get a dry rub, then a honey-chipotle glaze that caramelizes over hot grates. Served with lime slaw and toasted buns so the crew can go plate or sandwich.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 25,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 682,
-  "protein": 77,
-  "carbs": 56,
-  "fats": 15,
+  "calories": 644,
+  "protein": 76,
+  "carbs": 47,
+  "fats": 16,
   "tags": [
     "protein:chicken",
     "format:grill",
@@ -40,58 +40,58 @@
   "ingredients": [
     {
       "name": "boneless skinless chicken thighs",
-      "quantity": "5",
+      "quantity": "4",
       "unit": "lb"
     },
     {
       "name": "kosher salt",
-      "quantity": "2.5",
+      "quantity": "2.1",
       "unit": "tbsp"
     },
     {
       "name": "brown sugar",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp"
     },
     {
       "name": "smoked paprika",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp"
     },
     {
       "name": "chili powder",
-      "quantity": "1.5",
+      "quantity": "1 1/4",
       "unit": "tbsp"
     },
     {
       "name": "garlic powder",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tsp"
     },
     {
       "name": "ground cumin",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tsp"
     },
     {
       "name": "neutral oil",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp"
     },
     {
       "name": "honey",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "cup"
     },
     {
       "name": "chipotle in adobo",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "notes": "minced, plus 1 tbsp sauce"
     },
     {
       "name": "apple cider vinegar",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp"
     },
     {
@@ -102,24 +102,24 @@
     },
     {
       "name": "shredded cabbage mix",
-      "quantity": "10",
+      "quantity": "8",
       "unit": "cups"
     },
     {
       "name": "green onions",
-      "quantity": "6",
+      "quantity": "5",
       "unit": "whole",
       "notes": "sliced"
     },
     {
       "name": "cilantro",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "cup",
       "notes": "chopped (optional)"
     },
     {
       "name": "buns",
-      "quantity": "10",
+      "quantity": "8",
       "unit": "whole",
       "notes": "optional for sandwiches"
     }
@@ -128,56 +128,70 @@
     {
       "stepNumber": 1,
       "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Honey Chipotle Grilled Chicken Thighs in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "instruction": "Line up every ingredient for Honey Chipotle Grilled Chicken Thighs in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use neutral oil as listed — measure each before heat goes on.",
       "minutes": 12,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Season the thighs",
-      "instruction": "Pat thighs dry. Toss with oil, salt, brown sugar, paprika, chili powder, garlic powder, and cumin until evenly coated. Let sit 15 minutes while you heat the grill. Cook until char marks are visible and the thickest piece reads 165°F on an instant-read thermometer. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 15,
-      "heatLevel": ""
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
     },
     {
       "stepNumber": 3,
-      "title": "Build the honey-chipotle glaze",
-      "instruction": "Whisk honey, minced chipotle + adobo sauce, vinegar, and half the lime juice. Pour half into a small bowl for basting; keep the rest clean for finishing. Plan about 5 minutes for this step at crew scale. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts.",
-      "minutes": 5,
+      "title": "Season the thighs",
+      "instruction": "Pat thighs dry. Toss with oil, salt, brown sugar, paprika, chili powder, garlic powder, and cumin until evenly coated. Let sit 15 minutes while you heat the grill.",
+      "minutes": 15,
       "heatLevel": ""
     },
     {
       "stepNumber": 4,
+      "title": "Build the honey-chipotle glaze",
+      "instruction": "Whisk honey, minced chipotle + adobo sauce, vinegar, and half the lime juice. Pour half into a small bowl for basting; keep the rest clean for finishing.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
       "title": "Grill hot and fast",
-      "instruction": "Heat grill to medium-high (about 450°F). Grill thighs 4–6 minutes per side until well-marked and the thickest piece hits 170°F. Move flare-ups away from the fire instead of extinguishing them. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Heat grill to medium-high (about 450°F). Grill thighs 4–6 minutes per side until well-marked and the thickest piece hits 170°F. Move flare-ups away from the fire instead of extinguishing them.",
       "minutes": 15,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 6,
       "title": "Glaze and set",
-      "instruction": "During the last 2 minutes, brush with the basting glaze and let it set sticky. Pull to a tray, brush lightly with the reserved clean glaze, and rest 5 minutes before slicing or serving whole. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
+      "instruction": "During the last 2 minutes, brush with the basting glaze and let it set sticky. Pull to a tray, brush lightly with the reserved clean glaze, and rest 5 minutes before slicing or serving whole.",
       "minutes": 7,
       "heatLevel": ""
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 7,
       "title": "Make the lime slaw",
-      "instruction": "Toss cabbage with remaining lime juice, lime zest, green onions, and cilantro. Season with a pinch of salt. If you want creamy slaw, add 1/3 cup mayo and 1 tbsp vinegar. Plan about 6 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Toss cabbage with remaining lime juice, lime zest, green onions, and cilantro. Season with a pinch of salt. If you want creamy slaw, add 1/3 cup mayo and 1 tbsp vinegar.",
       "minutes": 6,
       "heatLevel": ""
     },
     {
-      "stepNumber": 7,
+      "stepNumber": 8,
       "title": "Tonight’s board",
-      "instruction": "Serve thighs family-style with slaw and buns. Put extra glaze on the table. Call it: ‘Honey chipotle chicken, slaw, and buns—grab and go.’ Plan about 2 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Serve thighs family-style with slaw and buns. Put extra glaze on the table. Call it: ‘Honey chipotle chicken, slaw, and buns—grab and go.’",
       "minutes": 2,
       "heatLevel": ""
     },
     {
-      "stepNumber": 8,
+      "stepNumber": 9,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
       "title": "Leftovers",
-      "instruction": "Cool chicken fast. Reheat covered in a 325°F oven until hot, then hit with a fresh brush of glaze. Slaw keeps 24 hours; drain before serving. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Cool chicken fast. Reheat covered in a 325°F oven until hot, then hit with a fresh brush of glaze. Slaw keeps 24 hours; drain before serving.",
       "minutes": 4,
       "heatLevel": ""
     }
@@ -204,12 +218,25 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 682,
-    "protein": 77,
-    "carbs": 56,
-    "fats": 15,
+    "calories": 644,
+    "protein": 76,
+    "carbs": 47,
+    "fats": 16,
     "label": "per serving (hall portion)",
-    "source": "estimated"
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": true
+    }
   },
   "heroImage": "/images/smoker-catalog/honey-chipotle-chicken-thighs.jpg",
   "heroImageAlt": "Honey Chipotle Grilled Chicken Thighs — crew-sized BBQ spread with visible smoke and bark",
@@ -230,6 +257,6 @@
   ],
   "relatedSlugs": [],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T02:29:42.526Z",
+  "generatedAt": "2026-05-31T23:32:23.196Z",
   "contentVersion": 2
 }

@@ -8,15 +8,15 @@
   "category": "hall_expansion",
   "cuisine": "american",
   "description": "Hot dogs are wrapped in soft pretzel dough, boiled briefly in baking soda water, and baked until deep brown. Serve with a mustard bar, sauerkraut, and quick cheddar sauce for a full stadium spread.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 20,
   "prepTime": 35,
   "difficulty": "medium",
-  "calories": 490,
-  "protein": 16,
-  "carbs": 52,
-  "fats": 24,
+  "calories": 118,
+  "protein": 7,
+  "carbs": 2,
+  "fats": 9,
   "tags": [
     "protein:pork",
     "format:handheld",
@@ -39,65 +39,65 @@
   "ingredients": [
     {
       "name": "beef hot dogs",
-      "quantity": "10",
+      "quantity": "8",
       "unit": "whole",
       "group": "Main"
     },
     {
       "name": "pretzel dough",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "lb",
       "notes": "store-bought or homemade",
       "group": "Main"
     },
     {
       "name": "baking soda",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "cup",
       "notes": "for boil bath",
       "group": "Boil"
     },
     {
       "name": "egg",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "whole",
       "notes": "beaten, for wash",
       "group": "Finish"
     },
     {
       "name": "coarse salt",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp",
       "group": "Finish"
     },
     {
       "name": "yellow mustard",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "cup",
       "group": "Mustard bar"
     },
     {
       "name": "whole-grain mustard",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "cup",
       "group": "Mustard bar"
     },
     {
       "name": "spicy brown mustard",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "cup",
       "group": "Mustard bar"
     },
     {
       "name": "sauerkraut",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "cups",
       "notes": "warmed",
       "group": "Toppings"
     },
     {
       "name": "cheddar cheese sauce",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "cups",
       "notes": "warm",
       "group": "Toppings"
@@ -193,11 +193,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 490,
-    "protein": 16,
-    "carbs": 52,
-    "fats": 24,
-    "label": "~490 cal/serving · 16g protein · 2g fiber (est.)"
+    "calories": 118,
+    "protein": 7,
+    "carbs": 2,
+    "fats": 9,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/hall-expansion/soft-pretzel-dogs.jpg",
   "heroImageAlt": "Soft Pretzel Hot Dogs — crew-sized firehall meal",

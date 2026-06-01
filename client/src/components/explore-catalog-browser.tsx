@@ -1,4 +1,4 @@
-import { memo, useCallback, useEffect, useMemo, useState } from "react";
+import { memo, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Clock } from "lucide-react";
 import {
@@ -23,7 +23,7 @@ import {
   type ApprovedCatalogFilterState,
 } from "@/lib/approved-catalog-filters";
 import { RecipeGridSkeleton } from "@/components/mobile/loading-skeletons";
-import { trackExploreFilter, trackExploreRecipeClick } from "@/lib/analytics";
+import { trackExploreFilter, trackExploreRecipeClick, trackSearch } from "@/lib/analytics";
 import { exploreCardImageCandidates, EXPLORE_CATALOG_PAGE_SIZE } from "@/lib/explore-card-image";
 import type { RecipeRatingSortMap } from "@/lib/recipe-crew-ratings-api";
 
@@ -204,6 +204,17 @@ export function ExploreCatalogBrowser({ onRecipeClick, className }: ExploreCatal
   useEffect(() => {
     setVisibleCount(EXPLORE_CATALOG_PAGE_SIZE);
   }, [filters, sort, searchQuery]);
+
+  const lastTrackedSearch = useRef("");
+  useEffect(() => {
+    if (!searchQuery) {
+      lastTrackedSearch.current = "";
+      return;
+    }
+    if (lastTrackedSearch.current === searchQuery) return;
+    lastTrackedSearch.current = searchQuery;
+    trackSearch(searchQuery, filtered.length, "explore");
+  }, [searchQuery, filtered.length]);
 
   const visibleRecipes = useMemo(
     () => filtered.slice(0, visibleCount),

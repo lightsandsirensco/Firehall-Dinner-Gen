@@ -8,15 +8,15 @@
   "category": "hall_expansion",
   "cuisine": "american",
   "description": "Ground beef loaves are formed into individual portions, smoked until set, then glazed until sticky and caramelized. Each loaf slices cleanly and holds well on the line without crumbling.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 90,
   "prepTime": 25,
   "difficulty": "easy",
-  "calories": 420,
-  "protein": 32,
-  "carbs": 22,
-  "fats": 24,
+  "calories": 684,
+  "protein": 64,
+  "carbs": 19,
+  "fats": 41,
   "tags": [
     "protein:beef",
     "format:smoker",
@@ -40,62 +40,62 @@
   "ingredients": [
     {
       "name": "ground beef (80/20)",
-      "quantity": "5",
+      "quantity": "4",
       "unit": "lb",
       "group": "Main"
     },
     {
       "name": "breadcrumbs",
-      "quantity": "1.5",
+      "quantity": "1 1/4",
       "unit": "cups",
       "group": "Main"
     },
     {
       "name": "eggs",
-      "quantity": "3",
+      "quantity": "2",
       "unit": "whole",
       "group": "Main"
     },
     {
       "name": "yellow onion",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "whole",
       "notes": "finely diced",
       "group": "Main"
     },
     {
       "name": "Worcestershire sauce",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp",
       "group": "Main"
     },
     {
       "name": "kosher salt",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "group": "Seasoning"
     },
     {
       "name": "black pepper",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tbsp",
       "group": "Seasoning"
     },
     {
       "name": "ketchup",
-      "quantity": "0.75",
+      "quantity": "5/8",
       "unit": "cup",
       "group": "Glaze"
     },
     {
       "name": "brown sugar",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "cup",
       "group": "Glaze"
     },
     {
       "name": "apple cider vinegar",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "group": "Glaze"
     }
@@ -211,14 +211,28 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 420,
-    "protein": 32,
-    "carbs": 22,
-    "fats": 24,
-    "label": "~420 cal/serving · 32g protein · 1g fiber (est.)"
+    "calories": 684,
+    "protein": 64,
+    "carbs": 19,
+    "fats": 41,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/hall-expansion/smoked-meatloaf.jpg",
-  "heroImageAlt": "Smoked Meatloaf with Glaze — crew-sized firehall meal",
+  "heroImageAlt": "Smoked Meatloaf with Glaze — wide family-style firehall platter showing glaze on a crew prep table",
   "mobileImage": "/images/mobile/hall-expansion/smoked-meatloaf.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/smoked-meatloaf.jpg",
   "railImage": "/images/rails/hall-expansion/smoked-meatloaf.jpg",

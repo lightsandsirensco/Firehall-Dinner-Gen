@@ -243,7 +243,7 @@ export function auditMealImageCompleteness(input: {
     }
   }
 
-  if (!metadataOnly && req.requiresCompleteMeal && req.requiredVisible.length >= 2) {
+  if (req.requiresCompleteMeal && req.requiredVisible.length >= 2) {
     const visibleCount = req.requiredVisible.filter((v) => cueReForPhrase(v).test(blob)).length;
     if (visibleCount < Math.min(2, req.requiredVisible.length)) {
       issues.push(
@@ -258,9 +258,9 @@ export function auditMealImageCompleteness(input: {
 
   const proteinOnlyPath =
     /\b(grill.?chicken|grilled.?chicken|chicken.?only|chicken.?breast|chicken.?thigh)\b/i.test(blob) &&
-    !/\b(sweet.?potato|spinach|cornbread|rice|pasta|potato|wedge|salad|broccoli|bean|bread|pita)\b/i.test(blob);
+    !/\b(sweet.?potato|spinach|cornbread|rice|pasta|potato|wedge|salad|broccoli|bean|bread|pita|greek)\b/i.test(blob);
 
-  if (!metadataOnly && req.requiresCompleteMeal && proteinOnlyPath) {
+  if (req.requiresCompleteMeal && proteinOnlyPath) {
     issues.push(
       issue(
         "image_title_mismatch",
@@ -268,6 +268,75 @@ export function auditMealImageCompleteness(input: {
         95,
       ),
     );
+  }
+
+  // Chicken Caesar — must show sliced pieces, not whole breast
+  if (/\bcaesar\b/i.test(input.title) && /\bchicken\b/i.test(input.title)) {
+    if (/\b(whole breast|whole chicken breast|bone-in breast|roasting chicken)\b/i.test(blob)) {
+      issues.push(
+        issue(
+          "image_title_mismatch",
+          "Caesar chicken hero must show sliced or chopped chicken — not a whole breast",
+          96,
+        ),
+      );
+    }
+    if (
+      !/\b(sliced|pieces|strips|bite.?size|chopped|cutlet|romaine|lettuce|salad)\b/i.test(blob) &&
+      /\b(breast only|chicken only)\b/i.test(blob)
+    ) {
+      issues.push(
+        issue(
+          "image_title_mismatch",
+          "Caesar salad hero missing lettuce/salad cues alongside chicken",
+          92,
+        ),
+      );
+    }
+  }
+
+  // Multi-component titles need heroImageAlt or slug cues for every named side
+  if (/\bwith\b/i.test(input.title) && sidesToCheck.length > 0 && !input.heroAlt?.trim()) {
+    const missingAltSides = sidesToCheck.filter((side) => !cueReForPhrase(side).test(blob));
+    if (missingAltSides.length > 0) {
+      issues.push(
+        issue(
+          "image_title_mismatch",
+          `Title names sides but heroImageAlt missing — add alt text for: ${missingAltSides.join(", ")}`,
+          88,
+        ),
+      );
+    }
+  }
+
+  // Firehall framing — complete meals need wide family-style cues in metadata
+  const firehallFraming =
+    /\b(wide|platter|family|crew|hotel pan|sheet pan|prep table|firehall|station kitchen|serving tray|family-style|bowl of|beside)\b/i;
+  const tightCrop =
+    /\b(macro only|extreme close|tight crop|single portion|amuse bouche|fine dining|garnish only|studio seamless|white background|restaurant marketing)\b/i;
+
+  if (req.requiresCompleteMeal && tightCrop.test(blob)) {
+    issues.push(
+      issue(
+        "food_realism_red_flag",
+        "Hero metadata suggests tight restaurant-style crop — use wider firehall family-style framing",
+        90,
+      ),
+    );
+  }
+
+  if (req.requiresCompleteMeal && !firehallFraming.test(blob) && sidesToCheck.length > 0) {
+    const isSmoothie =
+      input.mealFormat === "smoothie" || /\bsmoothie\b/i.test(input.title);
+    if (!isSmoothie) {
+      issues.push(
+        issue(
+          "food_realism_red_flag",
+          "Complete meal title needs wide family-style hero metadata (platter, crew, beside, bowl of)",
+          75,
+        ),
+      );
+    }
   }
 
   return issues;
@@ -308,6 +377,7 @@ export function hasMealCompletenessFailure(issues: ImageAccuracyIssue[]): boolea
       i.severity === "critical" &&
       (i.code === "image_title_mismatch" ||
         i.code === "generic_substitute_meal" ||
-        i.code === "title_path_keyword_conflict"),
+        i.code === "title_path_keyword_conflict" ||
+        i.code === "food_realism_red_flag"),
   );
 }

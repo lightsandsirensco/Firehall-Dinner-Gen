@@ -59,6 +59,7 @@ function parseArgs(argv: string[]) {
     skipQaFail: argv.includes("--skip-qa-fail"),
     limit: parseInt(argv.find((a) => a.startsWith("--limit="))?.replace("--limit=", "") || "50", 10),
     only: argv.find((a) => a.startsWith("--only="))?.replace("--only=", "").trim() || null,
+    slugsFile: argv.find((a) => a.startsWith("--slugs-file="))?.replace("--slugs-file=", "").trim() || null,
   };
 }
 
@@ -90,8 +91,20 @@ function buildRegenPrompt(t: TrustAuditTarget, stylePreset: string): string {
   return parts.join("\n\n");
 }
 
-function loadFailedSlugs(only: string | null): string[] {
+function loadFailedSlugs(only: string | null, slugsFile: string | null): string[] {
   if (only) return [only];
+  if (slugsFile) {
+    const abs = path.isAbsolute(slugsFile) ? slugsFile : path.join(process.cwd(), slugsFile);
+    if (!fs.existsSync(abs)) {
+      console.error(`Slugs file not found: ${abs}`);
+      process.exit(1);
+    }
+    return fs
+      .readFileSync(abs, "utf8")
+      .split(/\r?\n/)
+      .map((s) => s.trim())
+      .filter(Boolean);
+  }
   if (!fs.existsSync(AUDIT_PATH)) {
     console.error("Run: npm run audit:meal-image-trust first");
     process.exit(1);
@@ -134,13 +147,13 @@ function updateAuditRow(slug: string, result: RegenResult): void {
 }
 
 async function main(): Promise<void> {
-  const { dryRun, apply, force, skipQaFail, limit, only } = parseArgs(process.argv);
+  const { dryRun, apply, force, skipQaFail, limit, only, slugsFile } = parseArgs(process.argv);
   if (!dryRun && !apply) {
     console.error("Use --dry-run or --apply");
     process.exit(1);
   }
 
-  const slugs = loadFailedSlugs(only).slice(0, limit);
+  const slugs = loadFailedSlugs(only, slugsFile).slice(0, limit);
   const targetMap = new Map(loadTrustAuditTargets().map((t) => [t.slug, t]));
 
   await runDbMigrations();

@@ -1,8 +1,8 @@
 {
   "slug": "southwest-egg-bake",
   "title": "Southwest Egg Bake",
-  "subtitle": "A crew-sized bake that feeds staggered eaters without turning rubbery.",
-  "description": "Breakfast at the station has to survive interruptions. This recipe is written for real timing, clear heat cues, and a workflow that keeps food hot while the board gets loud.",
+  "subtitle": "Peppers, salsa, and pepper jack in a crew-sized egg bake.",
+  "description": "Pepper jack, salsa, and bell peppers baked into a Southwest egg casserole — slice, serve, and pass the hot sauce.",
   "filters": [
     "feed_a_crew",
     "high_protein"
@@ -13,8 +13,8 @@
     "salsa",
     "pepper-jack"
   ],
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "prepTime": 20,
   "cookTime": 38,
   "totalTime": 58,
@@ -22,36 +22,36 @@
   "ingredients": [
     {
       "name": "large eggs",
-      "quantity": "14"
+      "quantity": "11"
     },
     {
       "name": "whole milk",
-      "quantity": "3 cups",
+      "quantity": "2.4",
       "notes": "or half-and-half for richer"
     },
     {
       "name": "turkey sausage or lean pork sausage",
-      "quantity": "2 lb",
+      "quantity": "2",
       "notes": "browned"
     },
     {
       "name": "onion",
-      "quantity": "1",
+      "quantity": "3/4",
       "notes": "diced"
     },
     {
       "name": "baby spinach",
-      "quantity": "8–10 oz",
+      "quantity": "6.4",
       "notes": "or chopped kale, sautéed and squeezed dry"
     },
     {
       "name": "shredded cheese",
-      "quantity": "3 cups",
+      "quantity": "2.4",
       "notes": "cheddar + mozzarella works well"
     },
     {
       "name": "loaf day-old bread",
-      "quantity": "1",
+      "quantity": "3/4",
       "notes": "cubed (optional), turns it into a strata",
       "optional": true
     }
@@ -81,14 +81,14 @@
     {
       "stepNumber": 4,
       "title": "Build the pan",
-      "instruction": "Spread sausage, onion, and spinach in the pan. Add half the cheese. (If using bread cubes, fold them through now.) Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Spread sausage, onion, and spinach in the pan. Add half the cheese. (If using bread cubes, fold them through now.) Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 5,
       "title": "Egg mix",
-      "instruction": "Whisk eggs with milk, salt, pepper, and a pinch of paprika. Pour evenly. Top with remaining cheese. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Whisk eggs with milk, salt, pepper, and a pinch of paprika. Pour evenly. Top with remaining cheese. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 5,
       "heatLevel": ""
     },
@@ -108,13 +108,6 @@
     },
     {
       "stepNumber": 8,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 9,
       "title": "Rest for clean slices",
       "instruction": "Rest 10 minutes so slices hold for the line. Cut into squares; hold warm covered. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 10,
@@ -122,23 +115,23 @@
     }
   ],
   "nutrition": {
-    "calories": 456,
-    "protein": 42,
-    "carbs": 8,
-    "fat": 28,
+    "calories": 304,
+    "protein": 25,
+    "carbs": 6,
+    "fat": 20,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
-      "highProtein": true,
+      "highProtein": false,
       "under700Calories": true,
       "under30gFat": true,
       "highCarb": false,
       "lowCarb": true,
-      "mealPrepFriendly": false
+      "mealPrepFriendly": true
     },
     "badgeCandidates": {
-      "highProtein": true,
-      "lighterOption": false,
+      "highProtein": false,
+      "lighterOption": true,
       "performanceMeal": false
     }
   },
@@ -158,12 +151,11 @@
   "heroImage": "/images/breakfast/southwest-egg-bake.jpg",
   "thumbImage": "/images/thumbs/breakfast/southwest-egg-bake.jpg",
   "imageAlt": "Warm station-kitchen breakfast: Southwest Egg Bake",
-  "publishedAt": "2026-05-30T21:22:29.758Z",
-  "updatedAt": "2026-05-31T12:54:36.796Z",
+  "publishedAt": "2026-05-31T18:33:00.830Z",
+  "updatedAt": "2026-05-31T23:50:25.248Z",
   "readMinutes": 6,
   "seoTitle": "Southwest Egg Bake | Firehall Breakfast",
-  "mobileImage": "/images/mobile/breakfast/southwest-egg-bake.jpg",
-  "railImage": "/images/rails/breakfast/southwest-egg-bake.jpg",
+  "collectionTier": "firehall_classic",
   "proTips": [
     "Assign one cook to the hot surface and one to assembly. Keep the line moving; don’t crowd the griddle.",
     "Set a warm holding zone (oven 200°F or covered hotel pan) so staggered eaters still get a hot plate.",

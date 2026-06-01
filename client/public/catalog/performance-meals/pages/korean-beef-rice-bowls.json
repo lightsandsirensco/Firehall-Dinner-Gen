@@ -1,7 +1,7 @@
 {
   "slug": "korean-beef-rice-bowls",
-  "title": "Korean Beef Rice Bowls",
-  "displayTitle": "Korean Beef Rice Bowls",
+  "title": "Korean Garlic Beef Bowls",
+  "displayTitle": "Korean Garlic Beef Bowls",
   "seoTitle": "Korean Beef Rice Bowls | Firefighter Meal",
   "shortDescription": "Bulgogi-style ground beef over rice with quick cucumber pickle",
   "subtitle": "Bulgogi-style ground beef over rice with quick cucumber pickle",
@@ -13,10 +13,10 @@
   "cookTime": 15,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 545,
-  "protein": 36,
-  "carbs": 52,
-  "fats": 22,
+  "calories": 761,
+  "protein": 51,
+  "carbs": 64,
+  "fats": 35,
   "tags": [
     "protein:beef",
     "format:bowl",
@@ -103,36 +103,57 @@
   "steps": [
     {
       "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Korean Garlic Beef Bowls in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use green onions as listed — measure each before heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch beef. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
       "title": "Quick pickle cucumbers",
       "instruction": "Toss cucumber slices with rice vinegar and a pinch of salt. Refrigerate while cooking so they stay crisp-tender with a bright tang.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 2,
+      "stepNumber": 4,
       "title": "Cook rice",
-      "instruction": "Rinse jasmine rice and cook per package directions until fluffy grains separate easily with a fork, not sticky or gummy.",
+      "instruction": "Rinse jasmine rice and cook per package directions until fluffy grains separate easily with a fork, not sticky or gummy. Plan about 20 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 20,
       "heatLevel": ""
     },
     {
-      "stepNumber": 3,
+      "stepNumber": 5,
       "title": "Mix bulgogi-style sauce",
-      "instruction": "Whisk soy sauce, brown sugar, sesame oil, ginger, garlic, and grated pear until sugar dissolves and mixture smells sweet-savory.",
+      "instruction": "Whisk soy sauce, brown sugar, sesame oil, ginger, garlic, and grated pear until sugar dissolves and mixture smells sweet-savory. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 6,
       "title": "Brown beef in batches",
       "instruction": "Cook ground beef over medium-high in a large skillet 8–10 minutes per batch until deeply browned and crumbly with crisp edges, not gray and steaming.",
       "minutes": 10,
       "heatLevel": "medium-high"
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F for medium beef, 160°F for ground. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
       "title": "Glaze and build bowls",
-      "instruction": "Return all beef to pan, pour sauce, simmer 3–4 minutes until glaze coats meat and pan looks shiny, not soupy. Serve over rice with pickles and scallions.",
+      "instruction": "Return all beef to pan, pour sauce, simmer 3–4 minutes until glaze coats meat and pan looks shiny, not soupy. Serve over rice with pickles and scallions. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
       "minutes": 5,
       "heatLevel": ""
     }
@@ -155,11 +176,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 545,
-    "protein": 36,
-    "carbs": 52,
-    "fats": 22,
-    "label": "~545 cal/serving · 36g protein · 2g fiber (est.)"
+    "calories": 761,
+    "protein": 51,
+    "carbs": 64,
+    "fats": 35,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/korean-beef-rice-bowls.jpg",
   "mobileImage": "/images/mobile/korean-beef-rice-bowls.jpg",
@@ -184,6 +219,6 @@
     "lean-beef-broccoli-rice",
     "cajun-chicken-rice-bowl"
   ],
-  "generatedAt": "2026-05-31T15:28:14.291Z",
+  "generatedAt": "2026-05-31T23:32:24.495Z",
   "contentVersion": 2
 }

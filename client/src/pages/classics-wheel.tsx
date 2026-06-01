@@ -10,8 +10,8 @@ import { getSavedCount } from "@/lib/saved-meals";
 import {
   WHEEL_CLASSICS,
   type WheelClassic,
-  buildPackageUrl,
   buildExplorePackageUrl,
+  buildRecipeUrl,
   getDefaultWheelClassic,
   isClassicPinned,
   toggleClassicPin,
@@ -74,10 +74,10 @@ export default function ClassicsWheelPage() {
     setWheelSession((n) => n + 1);
   }, []);
 
-  const handleOpenPackage = useCallback(() => {
+  const handleOpenRecipe = useCallback(() => {
     if (!winner) return;
     trackWheelRecipeOpen({ slug: winner.slug, title: winner.title, action: "cook" });
-    navigate(buildPackageUrl(winner));
+    navigate(buildRecipeUrl(winner));
   }, [winner, navigate]);
 
   const handleExplore = useCallback(() => {
@@ -181,7 +181,7 @@ export default function ClassicsWheelPage() {
                 <WheelReveal
                   classic={winner}
                   pinned={pinned}
-                  onCook={handleOpenPackage}
+                  onCook={handleOpenRecipe}
                   onSpinAgain={handleSpinAgain}
                   onTogglePin={handleTogglePin}
                   onExplore={handleExplore}

@@ -3,13 +3,15 @@
  * Generate Firehall Breakfast static catalog pages + index.
  * Replaces placeholder station-breakfast-* entries with editorial recipes.
  */
-import { writeBreakfastCatalogIndex, writeBreakfastRecipePage } from "../server/breakfast-catalog/page-store.js";
+import { writeBreakfastCatalogIndex, writeBreakfastRecipePage, writeBreakfastPerformanceIndex } from "../server/breakfast-catalog/page-store.js";
 import type { BreakfastCatalogIndex, BreakfastRecipePage, BreakfastFilterId } from "../shared/breakfast-schema.js";
 import type { BreakfastRecipePageDraft } from "../shared/breakfast-expansion/new-breakfast-pages.js";
 import { breakfastRecipePageSchema } from "../shared/breakfast-schema.js";
 import { NEW_BREAKFAST_PAGES } from "../shared/breakfast-expansion/new-breakfast-pages.js";
 import { BATCH_25_BREAKFAST_PAGES } from "../shared/breakfast-expansion/batch-25-breakfast-pages.js";
 import { calculateNutritionFromIngredients } from "../shared/nutrition/calculate.js";
+import { getBreakfastGovernanceMap } from "../shared/breakfast-catalog/governance.js";
+import { isPerformanceBreakfastSlug } from "../shared/breakfast-catalog/governance-types.js";
 import fs from "node:fs";
 import path from "node:path";
 
@@ -424,34 +426,58 @@ async function main(): Promise<void> {
     ...BATCH_25_BREAKFAST_PAGES.map((p) => withBreakfastNutrition(p)),
   ];
 
-  for (const p of merged) writeBreakfastRecipePage(p);
+  const gov = getBreakfastGovernanceMap();
+  const governed = merged.map((p) => {
+    const g = gov[p.slug];
+    if (!g) return p;
+    return {
+      ...p,
+      description: g.description,
+      subtitle: g.subtitle ?? p.subtitle,
+      collectionTier: g.tier,
+    };
+  });
+
+  for (const p of governed) writeBreakfastRecipePage(p);
+
+  const primaryPages = governed.filter((p) => !isPerformanceBreakfastSlug(p.slug));
+  const performancePages = governed.filter((p) => isPerformanceBreakfastSlug(p.slug));
+
+  const indexEntry = (p: BreakfastRecipePage) => ({
+    slug: p.slug,
+    title: p.title,
+    subtitle: p.subtitle,
+    description: p.description,
+    filters: p.filters,
+    tags: p.tags,
+    totalTime: p.totalTime,
+    heroImage: p.heroImage,
+    thumbImage: p.thumbImage,
+    publishedAt: p.publishedAt,
+    collectionTier: p.collectionTier,
+  });
 
   const index: BreakfastCatalogIndex = {
     version: 1,
     generatedAt: iso,
-    recipeCount: merged.length,
-    recipes: merged
-      .map((p) => ({
-        slug: p.slug,
-        title: p.title,
-        subtitle: p.subtitle,
-        description: p.description,
-        filters: p.filters,
-        tags: p.tags,
-        totalTime: p.totalTime,
-        heroImage: p.heroImage,
-        thumbImage: p.thumbImage,
-        publishedAt: p.publishedAt,
-      }))
-      .sort((a, b) => a.title.localeCompare(b.title)),
+    recipeCount: primaryPages.length,
+    collection: "primary",
+    recipes: primaryPages.map(indexEntry).sort((a, b) => a.title.localeCompare(b.title)),
   };
 
   writeBreakfastCatalogIndex(index);
+  writeBreakfastPerformanceIndex({
+    version: 1,
+    generatedAt: iso,
+    recipeCount: performancePages.length,
+    collection: "performance",
+    recipes: performancePages.map(indexEntry).sort((a, b) => a.title.localeCompare(b.title)),
+  });
 
   // Remove legacy placeholder pages no longer in the catalog.
   const pagesDir = path.join(process.cwd(), "client/public/catalog/breakfast/pages");
   if (fs.existsSync(pagesDir)) {
-    const keep = new Set(merged.map((p) => `${p.slug}.json`));
+    const keep = new Set(governed.map((p) => `${p.slug}.json`));
     for (const file of fs.readdirSync(pagesDir)) {
       if (file.endsWith(".json") && !keep.has(file)) {
         fs.unlinkSync(path.join(pagesDir, file));
@@ -460,7 +486,7 @@ async function main(): Promise<void> {
   }
 
   console.log(
-    `[breakfast] wrote ${merged.length} pages + index (${NEW_BREAKFAST_PAGES.length} expansion + ${BATCH_25_BREAKFAST_PAGES.length} batch-25)`,
+    `[breakfast] wrote ${governed.length} pages — primary ${primaryPages.length}, performance ${performancePages.length} (${NEW_BREAKFAST_PAGES.length} expansion + ${BATCH_25_BREAKFAST_PAGES.length} batch-25)`,
   );
 }
 

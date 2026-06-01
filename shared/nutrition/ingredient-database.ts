@@ -15,13 +15,13 @@ export interface IngredientNutritionProfile {
 
 /** Sorted longest-keyword-first at lookup time. */
 export const INGREDIENT_NUTRITION_PROFILES: IngredientNutritionProfile[] = [
-  { keywords: ["ground beef", "beef chuck", "stew beef", "beef sirloin", "beef brisket", "beef short rib", "brisket point", "packer brisket", "brisket", "chuck", "burnt ends"], calories: 250, protein: 26, carbs: 0, fat: 17, unitGrams: { lb: 454, oz: 28, count: 113 } },
+  { keywords: ["ground beef", "beef chuck", "stew beef", "beef sirloin", "beef brisket", "beef short rib", "beef short ribs", "beef ribs", "plate style ribs", "brisket point", "packer brisket", "brisket", "chuck", "burnt ends"], calories: 250, protein: 26, carbs: 0, fat: 17, unitGrams: { lb: 454, oz: 28, count: 113 } },
   { keywords: ["ground turkey", "turkey breast", "turkey thigh", "turkey sausage"], calories: 170, protein: 22, carbs: 0, fat: 8, unitGrams: { lb: 454, oz: 28 } },
-  { keywords: ["chicken breast", "chicken thigh", "chicken drumstick", "rotisserie chicken", "shredded chicken", "whole chicken", "bone-in thighs", "bone-in chicken"], calories: 165, protein: 31, carbs: 0, fat: 3.6, unitGrams: { lb: 454, oz: 28 } },
+  { keywords: ["chicken breast", "chicken breasts", "boneless skinless chicken breasts", "chicken thigh", "chicken thighs", "bone-in chicken thighs", "chicken drumstick", "chicken quarters", "chicken leg quarters", "split chicken", "rotisserie chicken", "shredded chicken", "whole chicken", "bone-in thighs", "bone-in chicken"], calories: 165, protein: 31, carbs: 0, fat: 3.6, unitGrams: { lb: 454, oz: 28, pieces: 113 } },
   { keywords: ["breakfast sausage", "italian sausage", "pork sausage", "chorizo", "sausage"], calories: 301, protein: 12, carbs: 2, fat: 27, unitGrams: { lb: 454, oz: 28 } },
   { keywords: ["bacon"], calories: 541, protein: 37, carbs: 1.4, fat: 42, unitGrams: { lb: 454, oz: 28, slice: 8 } },
-  { keywords: ["pork shoulder", "pork butt", "pulled pork", "pork chop", "pork tenderloin", "pork loin"], calories: 242, protein: 27, carbs: 0, fat: 14, unitGrams: { lb: 454, oz: 28, slice: 8 } },
-  { keywords: ["salmon fillet", "salmon", "cod", "tilapia", "shrimp", "white fish"], calories: 206, protein: 22, carbs: 0, fat: 12, unitGrams: { lb: 454, oz: 28 } },
+  { keywords: ["pork shoulder", "pork butt", "pulled pork", "pork chop", "pork chops", "pork tenderloin", "pork loin"], calories: 242, protein: 27, carbs: 0, fat: 14, unitGrams: { lb: 454, oz: 28, slice: 8 } },
+  { keywords: ["salmon fillet", "salmon", "cod", "tilapia", "trout", "rainbow trout", "whole rainbow trout", "whole trout", "shrimp", "white fish"], calories: 206, protein: 22, carbs: 0, fat: 12, unitGrams: { lb: 454, oz: 28, pieces: 170, count: 170 } },
   { keywords: ["egg", "eggs", "large eggs"], calories: 143, protein: 13, carbs: 0.7, fat: 10, unitGrams: { count: 50, large: 50, medium: 44, egg: 50, eggs: 50 } },
   { keywords: ["flour tortilla", "flour tortillas", "tortilla", "tortillas", "wrap"], calories: 312, protein: 8, carbs: 52, fat: 8, unitGrams: { count: 45, tortilla: 45 } },
   { keywords: ["corn tortilla"], calories: 218, protein: 5, carbs: 45, fat: 2.8, unitGrams: { count: 30 } },
@@ -52,7 +52,7 @@ export const INGREDIENT_NUTRITION_PROFILES: IngredientNutritionProfile[] = [
   { keywords: ["banana", "bananas"], calories: 89, protein: 1.1, carbs: 23, fat: 0.3, unitGrams: { count: 120, medium: 118, large: 136 } },
   { keywords: ["berry", "berries", "mixed berries", "strawberry", "blueberry", "raspberry", "frozen berries"], calories: 57, protein: 0.7, carbs: 14, fat: 0.3, unitGrams: { cup: 150, lb: 454 } },
   { keywords: ["spinach", "kale", "mixed greens", "romaine", "lettuce", "arugula"], calories: 23, protein: 2.9, carbs: 3.6, fat: 0.4, unitGrams: { cup: 30, oz: 28, lb: 454, bunch: 200 } },
-  { keywords: ["broccoli", "cauliflower", "green bean", "asparagus", "zucchini", "carrot", "carrots"], calories: 35, protein: 2.4, carbs: 7, fat: 0.4, unitGrams: { cup: 90, lb: 454, count: 60 } },
+  { keywords: ["broccoli", "broccolini", "cauliflower", "green bean", "asparagus", "zucchini", "carrot", "carrots"], calories: 35, protein: 2.4, carbs: 7, fat: 0.4, unitGrams: { cup: 90, lb: 454, count: 60, bunch: 200 } },
   { keywords: ["corn", "corn kernel", "frozen corn"], calories: 86, protein: 3.3, carbs: 19, fat: 1.2, unitGrams: { cup: 165, can: 250 } },
   { keywords: ["avocado"], calories: 160, protein: 2, carbs: 9, fat: 15, unitGrams: { count: 150, medium: 150 } },
   { keywords: ["peanut butter", "almond butter"], calories: 588, protein: 25, carbs: 20, fat: 50, unitGrams: { tbsp: 16, cup: 258 } },
@@ -83,12 +83,27 @@ export const INGREDIENT_NUTRITION_PROFILES: IngredientNutritionProfile[] = [
   { keywords: ["mayonnaise", "mayo", "aioli"], calories: 680, protein: 1, carbs: 0.6, fat: 75, unitGrams: { cup: 220, tbsp: 14 } },
   { keywords: ["mustard", "ketchup"], calories: 60, protein: 3, carbs: 5, fat: 3, unitGrams: { tbsp: 15, cup: 240 } },
   { keywords: ["mac and cheese", "elbow macaroni"], calories: 350, protein: 12, carbs: 48, fat: 12, unitGrams: { cup: 200, lb: 454 } },
-  { keywords: ["steak", "ny strip", "ribeye", "sirloin", "flank steak", "skirt steak"], calories: 271, protein: 26, carbs: 0, fat: 18, unitGrams: { lb: 454, oz: 28 } },
+  { keywords: ["steak", "ny strip", "ribeye", "sirloin", "flank steak", "skirt steak", "tri-tip", "tri tip", "tri tip roast"], calories: 271, protein: 26, carbs: 0, fat: 18, unitGrams: { lb: 454, oz: 28 } },
+  { keywords: ["trout", "rainbow trout", "grilled trout"], calories: 190, protein: 22, carbs: 0, fat: 10, unitGrams: { lb: 454, oz: 28 } },
+  { keywords: ["tilapia", "ancho-tilapia"], calories: 128, protein: 26, carbs: 0, fat: 3, unitGrams: { lb: 454, oz: 28 } },
+  { keywords: ["zucchini", "zucchini noodles", "zoodles"], calories: 17, protein: 1.2, carbs: 3.1, fat: 0.3, unitGrams: { cup: 120, lb: 454 } },
+  { keywords: ["tabbouleh", "bulgur wheat", "bulgur"], calories: 342, protein: 12, carbs: 76, fat: 1.3, unitGrams: { cup: 140, lb: 454 } },
   { keywords: ["tofu", "tempeh"], calories: 144, protein: 17, carbs: 3, fat: 9, unitGrams: { lb: 454, block: 350, oz: 28 } },
   { keywords: ["cottage cheese"], calories: 98, protein: 11, carbs: 3.4, fat: 4.3, unitGrams: { cup: 225 } },
   { keywords: ["almond milk", "oat milk"], calories: 30, protein: 1, carbs: 3, fat: 2.5, unitGrams: { cup: 240 } },
+  { keywords: ["pearl barley", "barley"], calories: 354, protein: 12.5, carbs: 73.5, fat: 2.3, unitGrams: { cup: 200, lb: 454 } },
+  { keywords: ["beef stew meat", "stew meat", "beef chuck", "chuck roast"], calories: 250, protein: 26, carbs: 0, fat: 17, unitGrams: { lb: 454, oz: 28 } },
+  { keywords: ["ground lamb"], calories: 243, protein: 25, carbs: 0, fat: 16, unitGrams: { lb: 454, oz: 28 } },
+  { keywords: ["spare ribs", "baby back ribs", "pork ribs", "st louis ribs", "rib racks", "pork spare ribs"], calories: 290, protein: 24, carbs: 0, fat: 21, unitGrams: { rack: 900, lb: 454, oz: 28 } },
+  { keywords: ["baking powder"], calories: 53, protein: 0, carbs: 28, fat: 0, unitGrams: { tbsp: 14, tsp: 4 } },
+  { keywords: ["feta cheese", "feta", "kalamata olives", "olives"], calories: 264, protein: 14, carbs: 4, fat: 21, unitGrams: { cup: 150, oz: 28 } },
+  { keywords: ["cherry tomatoes", "grape tomatoes"], calories: 18, protein: 0.9, carbs: 3.9, fat: 0.2, unitGrams: { pint: 280, cup: 150 } },
   { keywords: ["ice", "water", "beer can"], calories: 0, protein: 0, carbs: 0, fat: 0, unitGrams: { cup: 240 } },
 ];
+
+function escapeRegex(value: string): string {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
 
 export function findIngredientProfile(name: string): IngredientNutritionProfile | null {
   const normalized = name.toLowerCase().replace(/[^a-z0-9\s]/g, " ").replace(/\s+/g, " ").trim();
@@ -98,7 +113,8 @@ export function findIngredientProfile(name: string): IngredientNutritionProfile 
   let bestLen = 0;
   for (const profile of INGREDIENT_NUTRITION_PROFILES) {
     for (const kw of profile.keywords) {
-      if (normalized.includes(kw) && kw.length > bestLen) {
+      const re = new RegExp(`\\b${escapeRegex(kw)}\\b`, "i");
+      if (re.test(normalized) && kw.length > bestLen) {
         best = profile;
         bestLen = kw.length;
       }

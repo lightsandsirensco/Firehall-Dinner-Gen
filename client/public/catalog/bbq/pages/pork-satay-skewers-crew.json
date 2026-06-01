@@ -8,8 +8,8 @@
   "category": "bbq_grill_nights",
   "cuisine": "indonesian",
   "description": "Pork shoulder strips marinate in lemongrass and coconut milk, grill on skewers until caramelized, and finish with warm peanut sauce and quick cucumber pickle.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 16,
   "prepTime": 40,
   "difficulty": "medium",
@@ -40,65 +40,65 @@
   "ingredients": [
     {
       "name": "pork shoulder",
-      "quantity": "5.5",
+      "quantity": "4.4",
       "unit": "lb",
       "notes": "cut into strips",
       "group": "Main"
     },
     {
       "name": "tamarind paste",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp",
       "group": "Marinade"
     },
     {
       "name": "galangal",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "notes": "grated",
       "group": "Marinade"
     },
     {
       "name": "coriander seeds",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tbsp",
       "notes": "toasted and ground",
       "group": "Marinade"
     },
     {
       "name": "turmeric",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tbsp",
       "group": "Marinade"
     },
     {
       "name": "coconut cream",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "cup",
       "group": "Marinade"
     },
     {
       "name": "creamy peanut butter",
-      "quantity": "0.75",
+      "quantity": "5/8",
       "unit": "cup",
       "group": "Peanut sauce"
     },
     {
       "name": "kecap manis",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp",
       "group": "Peanut sauce"
     },
     {
       "name": "Thai basil",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "cup",
       "notes": "chopped",
       "group": "Finish"
     },
     {
       "name": "cucumber relish",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "cups",
       "notes": "quick-pickled with rice vinegar",
       "group": "Pickle"
@@ -108,21 +108,21 @@
     {
       "stepNumber": 1,
       "title": "Marinate pork strips",
-      "instruction": "Toss pork with coconut milk, lemongrass, turmeric, fish sauce, and brown sugar. Marinate at least 2 hours refrigerated. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Toss pork with coconut milk, lemongrass, turmeric, fish sauce, and brown sugar. Marinate at least 2 hours refrigerated. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Use tamarind paste, galangal, coriander seeds, kecap manis as listed — measure each before heat goes on. Use Thai basil as listed — measure each before heat goes on. Target 145°F with a 3-minute rest at the thickest point before moving to the next batch.",
       "minutes": 20,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
       "title": "Quick pickle cucumbers",
-      "instruction": "Slice cucumbers thin. Toss with rice vinegar, pinch of sugar, and salt. Chill until service. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Slice cucumbers thin. Toss with rice vinegar, pinch of sugar, and salt. Chill until service. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 3,
       "title": "Build peanut sauce",
-      "instruction": "Warm peanut butter with coconut milk, fish sauce, and sriracha until pourable. Hold at 140°F. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Warm peanut butter with coconut milk, fish sauce, and sriracha until pourable. Hold at 140°F. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F with a 3-minute rest at the thickest point before moving to the next batch.",
       "minutes": 10,
       "heatLevel": ""
     },
@@ -157,7 +157,7 @@
     {
       "stepNumber": 8,
       "title": "Serve with pickle",
-      "instruction": "Platter skewers with warm peanut sauce and cucumber pickle. About 8 oz pork per firefighter. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Platter skewers with warm peanut sauce and cucumber pickle. About 8 oz pork per firefighter. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
       "minutes": 5,
       "heatLevel": ""
     }
@@ -213,6 +213,6 @@
     "brisket-style-beef-sandwiches-au-jus"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T02:29:42.533Z",
+  "generatedAt": "2026-05-31T23:32:23.203Z",
   "contentVersion": 2
 }

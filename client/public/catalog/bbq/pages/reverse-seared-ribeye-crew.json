@@ -8,15 +8,15 @@
   "category": "bbq_grill_nights",
   "cuisine": "american",
   "description": "Adapted from classic reverse-sear technique (Meat Church, Hey Grill Hey): boneless ribeyes smoke low at 225°F to 115°F, rest, then sear hard to 130°F medium-rare with garlic-herb compound butter.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 75,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 373,
-  "protein": 23,
-  "carbs": 9,
-  "fats": 28,
+  "calories": 376,
+  "protein": 22,
+  "carbs": 7,
+  "fats": 29,
   "tags": [
     "protein:beef",
     "format:grill",
@@ -39,50 +39,50 @@
   "ingredients": [
     {
       "name": "boneless ribeye steaks",
-      "quantity": "10",
+      "quantity": "8",
       "unit": "pieces",
       "notes": "about 12 oz each, 1.25 inch thick"
     },
     {
       "name": "kosher salt",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp"
     },
     {
       "name": "coarse black pepper",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp"
     },
     {
       "name": "smoked paprika",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tbsp"
     },
     {
       "name": "garlic powder",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tbsp"
     },
     {
       "name": "neutral oil",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp"
     },
     {
       "name": "unsalted butter",
-      "quantity": "8",
+      "quantity": "6.8",
       "unit": "tbsp",
       "notes": "softened"
     },
     {
       "name": "fresh rosemary",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "notes": "minced"
     },
     {
       "name": "garlic cloves",
-      "quantity": "3",
+      "quantity": "2",
       "unit": "whole",
       "notes": "minced"
     }
@@ -91,7 +91,7 @@
     {
       "stepNumber": 1,
       "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Reverse-Seared Ribeye for the Crew in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "instruction": "Line up every ingredient for Reverse-Seared Ribeye for the Crew in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use neutral oil as listed — measure each before heat goes on.",
       "minutes": 12,
       "heatLevel": ""
     },
@@ -119,14 +119,14 @@
     {
       "stepNumber": 5,
       "title": "Compound butter",
-      "instruction": "Mix softened butter, rosemary, and minced garlic. Roll into a log or keep soft for finishing. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Mix softened butter, rosemary, and minced garlic. Roll into a log or keep soft for finishing. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 6,
       "title": "Sear hard",
-      "instruction": "Sear in screaming-hot cast iron or over grill at 500°F+ 90 seconds per side until crust forms and internal hits 130°F medium-rare. Plan about 8 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Sear in screaming-hot cast iron or over grill at 500°F+ 90 seconds per side until crust forms and internal hits 130°F medium-rare.",
       "minutes": 8,
       "heatLevel": "high"
     },
@@ -146,7 +146,7 @@
     },
     {
       "stepNumber": 9,
-      "title": "Tonight's board",
+      "title": "Cooking step",
       "instruction": "Steaks on a board with extra compound butter melting on top. Call temps: 130°F medium-rare pull. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 5,
       "heatLevel": "medium"
@@ -176,12 +176,25 @@
   "mealPrepNotes": "Season early. Smoke in batches if smoker space is tight. Sear to order if possible; otherwise hold tented at 170°F max 20 minutes.",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 373,
-    "protein": 23,
-    "carbs": 9,
-    "fats": 28,
+    "calories": 376,
+    "protein": 22,
+    "carbs": 7,
+    "fats": 29,
     "label": "per serving (hall portion)",
-    "source": "estimated"
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/smoker-catalog/reverse-seared-ribeye-crew.jpg",
   "heroImageAlt": "Reverse-Seared Ribeye for the Crew — crew-sized BBQ spread with visible smoke and bark",
@@ -210,6 +223,6 @@
     "brisket-style-beef-sandwiches-au-jus"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T02:29:42.531Z",
+  "generatedAt": "2026-05-31T23:32:23.202Z",
   "contentVersion": 2
 }

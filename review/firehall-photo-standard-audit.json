@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-31T13:31:52.883Z",
+  "generatedAt": "2026-06-01T01:33:04.851Z",
   "standardVersion": "1.0",
   "targets": {
     "uniqueImagery": "100%",
@@ -10,9 +10,9 @@
     "firefighterMarketingImagery": "0%"
   },
   "totals": {
-    "recipesAudited": 376,
-    "failed": 0,
-    "queuedForReplacement": 0,
+    "recipesAudited": 371,
+    "failed": 3,
+    "queuedForReplacement": 3,
     "duplicateHeroGroups": 0,
     "donorOverrides": 0,
     "byCollection": {
@@ -32,14 +32,14 @@
         "queued": 0
       },
       "breakfast": {
-        "total": 67,
+        "total": 62,
         "failed": 0,
         "queued": 0
       },
       "bbq": {
         "total": 55,
-        "failed": 0,
-        "queued": 0
+        "failed": 3,
+        "queued": 3
       },
       "pizza_night": {
         "total": 20,
@@ -54,7 +54,80 @@
     }
   },
   "duplicateHeroGroups": [],
-  "replacementQueue": [],
+  "replacementQueue": [
+    {
+      "collection": "bbq",
+      "slug": "garlic-butter-shrimp-skewers",
+      "title": "Garlic Tarragon Shrimp Skewers",
+      "route": "/bbq/garlic-butter-shrimp-skewers",
+      "protein": "seafood",
+      "mealFormat": "crew_kebab",
+      "category": "bbq_grill_nights",
+      "photoCategory": "bbq",
+      "heroImage": "/images/smoker-catalog/garlic-butter-shrimp-skewers.jpg",
+      "reasons": [
+        {
+          "code": "missing_image_file",
+          "severity": "critical",
+          "message": "hero image file missing — must generate unique firehall kitchen photo"
+        },
+        {
+          "code": "needs_regeneration",
+          "severity": "critical",
+          "message": "queued for replacement under global firehall kitchen photo standard"
+        }
+      ],
+      "priority": "p0"
+    },
+    {
+      "collection": "bbq",
+      "slug": "cajun-grilled-cod-crew",
+      "title": "Black Iron Remoulade Cod Plates",
+      "route": "/bbq/cajun-grilled-cod-crew",
+      "protein": "seafood",
+      "mealFormat": "bayou_fillet",
+      "category": "bbq_grill_nights",
+      "photoCategory": "bbq",
+      "heroImage": "/images/smoker-catalog/cajun-grilled-cod-crew.jpg",
+      "reasons": [
+        {
+          "code": "missing_image_file",
+          "severity": "critical",
+          "message": "hero image file missing — must generate unique firehall kitchen photo"
+        },
+        {
+          "code": "needs_regeneration",
+          "severity": "critical",
+          "message": "queued for replacement under global firehall kitchen photo standard"
+        }
+      ],
+      "priority": "p0"
+    },
+    {
+      "collection": "bbq",
+      "slug": "grilled-cod-lemon-packets",
+      "title": "Caper-Butter Cod Foil Packets",
+      "route": "/bbq/grilled-cod-lemon-packets",
+      "protein": "seafood",
+      "mealFormat": "foil_fish",
+      "category": "bbq_grill_nights",
+      "photoCategory": "bbq",
+      "heroImage": "/images/smoker-catalog/grilled-cod-lemon-packets.jpg",
+      "reasons": [
+        {
+          "code": "missing_image_file",
+          "severity": "critical",
+          "message": "hero image file missing — must generate unique firehall kitchen photo"
+        },
+        {
+          "code": "needs_regeneration",
+          "severity": "critical",
+          "message": "queued for replacement under global firehall kitchen photo standard"
+        }
+      ],
+      "priority": "p0"
+    }
+  ],
   "rows": [
     {
       "collection": "golden_100",
@@ -128,7 +201,7 @@
         "mobile": true,
         "rail": true
       },
-      "heroMd5": "2b5d6fb65169ceaebd673f0de3fb007d",
+      "heroMd5": "ea4d847c8c69504d9936cab762624153",
       "issues": [
         {
           "code": "missing_firehall_atmosphere_metadata",
@@ -156,7 +229,7 @@
         "mobile": true,
         "rail": true
       },
-      "heroMd5": "6683b7871ba8ef3634eaad3d42eb5162",
+      "heroMd5": "a7e085f6740ffc0841e11d7ce5beb335",
       "issues": [],
       "needsReplacement": false,
       "pass": true
@@ -317,7 +390,7 @@
         "mobile": true,
         "rail": true
       },
-      "heroMd5": "b5d0a80059adfde308e12aeff9bbabb3",
+      "heroMd5": "98469346cbf06a6b03225f5d4391a7ac",
       "issues": [
         {
           "code": "missing_firehall_atmosphere_metadata",
@@ -562,7 +635,7 @@
         "mobile": true,
         "rail": true
       },
-      "heroMd5": "59344aec9966bcf878aeb7b8b946cf1e",
+      "heroMd5": "ded06587935b87a2a243b58ca1738640",
       "issues": [
         {
           "code": "missing_firehall_atmosphere_metadata",
@@ -646,7 +719,7 @@
         "mobile": true,
         "rail": true
       },
-      "heroMd5": "4152411d4ff3894c79552c3983394372",
+      "heroMd5": "679c8c970df483ad121b4da754f64cbc",
       "issues": [
         {
           "code": "missing_firehall_atmosphere_metadata",
@@ -758,7 +831,7 @@
         "mobile": true,
         "rail": true
       },
-      "heroMd5": "3e3d480f0c3d7c9abc3a231570059476",
+      "heroMd5": "c62243a43a2a7a5d45b5031063f504cd",
       "issues": [
         {
           "code": "missing_firehall_atmosphere_metadata",
@@ -814,7 +887,7 @@
         "mobile": true,
         "rail": true
       },
-      "heroMd5": "29f6e9add824611b9eaf5b85ba951bf7",
+      "heroMd5": "fcb3104269b572b22aee8d33b8048dbd",
       "issues": [
         {
           "code": "missing_firehall_atmosphere_metadata",
@@ -898,7 +971,7 @@
         "mobile": true,
         "rail": true
       },
-      "heroMd5": "e11f4f74b47e8c3f7b568b1ac9ae1bbb",
+      "heroMd5": "5a876f113d40b8a2473b1e0712771ae2",
       "issues": [
         {
           "code": "missing_firehall_atmosphere_metadata",
@@ -913,7 +986,7 @@
     {
       "collection": "golden_100",
       "slug": "shepherds-pie",
-      "title": "Shepherd's Pie",
+      "title": "Shepherd's Pie with Greek Salad",
       "route": "/recipes/shepherds-pie",
       "protein": "beef",
       "mealFormat": "plated_main",
@@ -926,7 +999,7 @@
         "mobile": true,
         "rail": true
       },
-      "heroMd5": "cadb9892df418c3ffaa1b9a99b218381",
+      "heroMd5": "ee1c681368aee501ae14e5039d4f8348",
       "issues": [
         {
           "code": "missing_firehall_atmosphere_metadata",
@@ -1122,7 +1195,7 @@
         "mobile": true,
         "rail": true
       },
-      "heroMd5": "5b4bca5ac9bf2fee63ee70e62bdd96d5",
+      "heroMd5": "f29bd944f0ae01de6db8b574931ad43e",
       "issues": [
         {
           "code": "missing_firehall_atmosphere_metadata",
@@ -1206,7 +1279,7 @@
         "mobile": true,
         "rail": true
       },
-      "heroMd5": "5ed28fead1ae99f20fcf6a8f7e7a44f5",
+      "heroMd5": "e0b9b8be54afb355190e39a03b31b091",
       "issues": [
         {
           "code": "missing_firehall_atmosphere_metadata",
@@ -1479,7 +1552,7 @@
         "mobile": true,
         "rail": true
       },
-      "heroMd5": "94af52fc7dec9c1ef6ee07868e697cbc",
+      "heroMd5": "267ec67287cfd61b861b41c644a28538",
       "issues": [
         {
           "code": "missing_firehall_atmosphere_metadata",
@@ -1640,7 +1713,7 @@
         "mobile": true,
         "rail": true
       },
-      "heroMd5": "1863ca3b1874b91654a0f7b679d6bd4b",
+      "heroMd5": "71961c9578fa76a632d4bc59b7e7af7b",
       "issues": [
         {
           "code": "missing_firehall_atmosphere_metadata",
@@ -2074,7 +2147,7 @@
         "mobile": true,
         "rail": true
       },
-      "heroMd5": "3cf9971fc82dc75b5dd62c183951c214",
+      "heroMd5": "d0533bd870ab5abe7aba8fb3fa49e48a",
       "issues": [
         {
           "code": "missing_firehall_atmosphere_metadata",
@@ -2130,7 +2203,7 @@
         "mobile": true,
         "rail": true
       },
-      "heroMd5": "df63f2042aa5693245da0ef9f65bf067",
+      "heroMd5": "6f485c25c41cc95e5e28c9c8b52021cf",
       "issues": [
         {
           "code": "missing_firehall_atmosphere_metadata",
@@ -2396,7 +2469,7 @@
         "mobile": true,
         "rail": true
       },
-      "heroMd5": "acbfef3c5f318771931c51ed80c0f671",
+      "heroMd5": "7423b7ca98f203a9811926a25411f96c",
       "issues": [
         {
           "code": "missing_firehall_atmosphere_metadata",
@@ -2753,7 +2826,7 @@
         "mobile": true,
         "rail": true
       },
-      "heroMd5": "545b364e37ecdd96a2fe6b1c21c4e39e",
+      "heroMd5": "4529adcb6647dd6f38051ea56eb5ca03",
       "issues": [
         {
           "code": "missing_firehall_atmosphere_metadata",
@@ -2837,7 +2910,7 @@
         "mobile": true,
         "rail": true
       },
-      "heroMd5": "d5a0f439467f5c19a2cc67f1f191d2f0",
+      "heroMd5": "40e18ba02f0770e89f482b5018bc1222",
       "issues": [
         {
           "code": "missing_firehall_atmosphere_metadata",
@@ -2865,7 +2938,7 @@
         "mobile": true,
         "rail": true
       },
-      "heroMd5": "d01ab7a655c05b978a1990339a7b4f8b",
+      "heroMd5": "5f1a80415a23cf76acab589450e6c412",
       "issues": [
         {
           "code": "missing_firehall_atmosphere_metadata",
@@ -2970,7 +3043,7 @@
         "mobile": true,
         "rail": true
       },
-      "heroMd5": "b1b18e254f5d6393a39cbb9e69749f9b",
+      "heroMd5": "fd9b98140012a5d59cd7e07fb5d1ce1a",
       "issues": [
         {
           "code": "missing_firehall_atmosphere_metadata",
@@ -2998,7 +3071,7 @@
         "mobile": true,
         "rail": true
       },
-      "heroMd5": "e7e7b51adec28faeca7ada4d340527c3",
+      "heroMd5": "222b2ab327a67300d8f845a62a62f78f",
       "issues": [
         {
           "code": "missing_firehall_atmosphere_metadata",
@@ -3138,7 +3211,7 @@
         "mobile": true,
         "rail": true
       },
-      "heroMd5": "6ad085c30840f4d7d9c114d7db68dbf9",
+      "heroMd5": "fb8b05fbdc2d8edb4ac516dec8bc6c6d",
       "issues": [
         {
           "code": "missing_firehall_atmosphere_metadata",
@@ -3153,7 +3226,7 @@
     {
       "collection": "performance_meals",
       "slug": "crock-barbacoa-chicken",
-      "title": "Crock Barbacoa Chicken",
+      "title": "Crock Barbacoa Chicken With Potato Wedges",
       "route": "/recipes/crock-barbacoa-chicken",
       "protein": "chicken",
       "mealFormat": "slow_cooker",
@@ -3166,7 +3239,7 @@
         "mobile": true,
         "rail": true
       },
-      "heroMd5": "9e0f95ee60fd12ccdd96298d5168d981",
+      "heroMd5": "b8129b22a676f260b50c6696b368d1ef",
       "issues": [
         {
           "code": "missing_firehall_atmosphere_metadata",
@@ -3222,7 +3295,7 @@
         "mobile": true,
         "rail": true
       },
-      "heroMd5": "d35e7657cc7299e1fc6179c5f7f485ab",
+      "heroMd5": "26be1485459988e5be3d03c46b18bced",
       "issues": [
         {
           "code": "missing_firehall_atmosphere_metadata",
@@ -3306,7 +3379,7 @@
         "mobile": true,
         "rail": true
       },
-      "heroMd5": "43615a537742406c82adc3762e3f0c1b",
+      "heroMd5": "cf85c92bf1fe5e3e7a0cb30a7b30915e",
       "issues": [
         {
           "code": "missing_firehall_atmosphere_metadata",
@@ -3349,7 +3422,7 @@
     {
       "collection": "performance_meals",
       "slug": "mediterranean-baked-fish-tray",
-      "title": "Mediterranean Baked Fish Tray",
+      "title": "Mediterranean Baked Cod Tray",
       "route": "/recipes/mediterranean-baked-fish-tray",
       "protein": "fish",
       "mealFormat": "sheet_pan",
@@ -3362,7 +3435,7 @@
         "mobile": true,
         "rail": true
       },
-      "heroMd5": "54840b9ea9479620d5d278d3184d3974",
+      "heroMd5": "d82a21cd69d1eac4e2010a99a7770d8d",
       "issues": [
         {
           "code": "missing_firehall_atmosphere_metadata",
@@ -3390,7 +3463,7 @@
         "mobile": true,
         "rail": true
       },
-      "heroMd5": "ae85c0d8a2c8ce7e79dc131423476a8b",
+      "heroMd5": "fbaa7233dc2e66aec5373d20d8750c9b",
       "issues": [
         {
           "code": "missing_firehall_atmosphere_metadata",
@@ -3558,7 +3631,7 @@
         "mobile": true,
         "rail": true
       },
-      "heroMd5": "40b8358b0c6b4a06ea7965a3ed3e2540",
+      "heroMd5": "f400583777064d85a06dd97042ee9cda",
       "issues": [
         {
           "code": "missing_firehall_atmosphere_metadata",
@@ -3614,7 +3687,7 @@
         "mobile": true,
         "rail": true
       },
-      "heroMd5": "b2fd6efe382b8a11c80c2a5780f075d1",
+      "heroMd5": "67f08f48dbb8efac2a72db265eccc7d3",
       "issues": [
         {
           "code": "missing_firehall_atmosphere_metadata",
@@ -3754,7 +3827,7 @@
         "mobile": true,
         "rail": true
       },
-      "heroMd5": "fb2365b6062f6b8b52092efd7e11b824",
+      "heroMd5": "df69b8233001023a1facca14ea4b19e5",
       "issues": [
         {
           "code": "missing_firehall_atmosphere_metadata",
@@ -3782,7 +3855,7 @@
         "mobile": true,
         "rail": true
       },
-      "heroMd5": "4a0b22b1187ec929644a6d1336f301da",
+      "heroMd5": "33bc6164ce9ed8159c8a4ba12c3d4f8f",
       "issues": [
         {
           "code": "missing_firehall_atmosphere_metadata",
@@ -4139,7 +4212,7 @@
         "mobile": true,
         "rail": true
       },
-      "heroMd5": "615d606a6e3d0bef5a01ea4b5dbfa684",
+      "heroMd5": "021c846a36aa2906823c98e0b4077428",
       "issues": [
         {
           "code": "missing_firehall_atmosphere_metadata",
@@ -6176,35 +6249,6 @@
     },
     {
       "collection": "breakfast",
-      "slug": "apple-cinnamon-baked-oatmeal",
-      "title": "Apple Cinnamon Baked Oatmeal",
-      "route": "/breakfast/apple-cinnamon-baked-oatmeal",
-      "protein": "any",
-      "mealFormat": "breakfast",
-      "category": "breakfast",
-      "photoCategory": "breakfast",
-      "heroImage": "/images/breakfast/apple-cinnamon-baked-oatmeal.jpg",
-      "imageAlt": "Baked apple cinnamon oatmeal squares with walnuts and maple drizzle",
-      "onDisk": {
-        "hero": true,
-        "thumb": true,
-        "mobile": true,
-        "rail": true
-      },
-      "heroMd5": "f76b791e5e26625db44c353837b08fdb",
-      "issues": [
-        {
-          "code": "missing_firehall_atmosphere_metadata",
-          "severity": "info",
-          "message": "hero metadata lacks firehall kitchen atmosphere cues — verify environment on regeneration",
-          "confidence": 35
-        }
-      ],
-      "needsReplacement": false,
-      "pass": true
-    },
-    {
-      "collection": "breakfast",
       "slug": "bacon-egg-hash-skillet",
       "title": "Bacon Egg Hash Skillet",
       "route": "/breakfast/bacon-egg-hash-skillet",
@@ -6213,6 +6257,7 @@
       "category": "breakfast",
       "photoCategory": "breakfast",
       "heroImage": "/images/breakfast/bacon-egg-hash-skillet.jpg",
+      "imageAlt": "Warm station-kitchen breakfast: Bacon Egg Hash Skillet",
       "onDisk": {
         "hero": true,
         "thumb": true,
@@ -6220,14 +6265,7 @@
         "rail": true
       },
       "heroMd5": "381d883a3494c1a6e8551677e300f12e",
-      "issues": [
-        {
-          "code": "missing_firehall_atmosphere_metadata",
-          "severity": "info",
-          "message": "hero metadata lacks firehall kitchen atmosphere cues — verify environment on regeneration",
-          "confidence": 35
-        }
-      ],
+      "issues": [],
       "needsReplacement": false,
       "pass": true
     },
@@ -6241,6 +6279,7 @@
       "category": "breakfast",
       "photoCategory": "breakfast",
       "heroImage": "/images/breakfast/bacon-hash-burritos.jpg",
+      "imageAlt": "Warm station-kitchen breakfast: Bacon Hash Burritos",
       "onDisk": {
         "hero": true,
         "thumb": true,
@@ -6248,14 +6287,7 @@
         "rail": true
       },
       "heroMd5": "b0d6a0efa00725474c19264c88a19071",
-      "issues": [
-        {
-          "code": "missing_firehall_atmosphere_metadata",
-          "severity": "info",
-          "message": "hero metadata lacks firehall kitchen atmosphere cues — verify environment on regeneration",
-          "confidence": 35
-        }
-      ],
+      "issues": [],
       "needsReplacement": false,
       "pass": true
     },
@@ -6341,28 +6373,6 @@
     },
     {
       "collection": "breakfast",
-      "slug": "big-pot-savory-oats",
-      "title": "Big-Pot Savory Oats",
-      "route": "/breakfast/big-pot-savory-oats",
-      "protein": "any",
-      "mealFormat": "breakfast",
-      "category": "breakfast",
-      "photoCategory": "breakfast",
-      "heroImage": "/images/breakfast/big-pot-savory-oats.jpg",
-      "imageAlt": "Warm station-kitchen breakfast: Big-Pot Savory Oats",
-      "onDisk": {
-        "hero": true,
-        "thumb": true,
-        "mobile": true,
-        "rail": true
-      },
-      "heroMd5": "bd579f048910cdb23b78dbc50a60b476",
-      "issues": [],
-      "needsReplacement": false,
-      "pass": true
-    },
-    {
-      "collection": "breakfast",
       "slug": "biscuit-french-toast-sliders",
       "title": "Biscuit French Toast Sliders",
       "route": "/breakfast/biscuit-french-toast-sliders",
@@ -6429,14 +6439,14 @@
       "category": "breakfast",
       "photoCategory": "breakfast",
       "heroImage": "/images/breakfast/breakfast-enchiladas.jpg",
-      "imageAlt": "Baked breakfast enchiladas with green sauce, melted cheese, and cilantro garnish",
+      "imageAlt": "Crew-sized breakfast enchiladas in a 9x13 casserole — green chile sauce, melted cheese, and egg-chorizo filling in rolled tortillas",
       "onDisk": {
         "hero": true,
         "thumb": true,
         "mobile": true,
         "rail": true
       },
-      "heroMd5": "ebc61dcab60d8a740d1e2f20ecbc9dcf",
+      "heroMd5": "75e9a6d5bf65150ecae228525bd7e83a",
       "issues": [],
       "needsReplacement": false,
       "pass": true
@@ -6721,6 +6731,7 @@
       "category": "breakfast",
       "photoCategory": "breakfast",
       "heroImage": "/images/breakfast/chorizo-breakfast-burritos.jpg",
+      "imageAlt": "Warm station-kitchen breakfast: Chorizo Breakfast Burritos",
       "onDisk": {
         "hero": true,
         "thumb": true,
@@ -6728,14 +6739,7 @@
         "rail": true
       },
       "heroMd5": "b7dc7d32ca0ad2d8f8517c674a00136b",
-      "issues": [
-        {
-          "code": "missing_firehall_atmosphere_metadata",
-          "severity": "info",
-          "message": "hero metadata lacks firehall kitchen atmosphere cues — verify environment on regeneration",
-          "confidence": 35
-        }
-      ],
+      "issues": [],
       "needsReplacement": false,
       "pass": true
     },
@@ -6865,6 +6869,7 @@
       "category": "breakfast",
       "photoCategory": "breakfast",
       "heroImage": "/images/breakfast/cowboy-breakfast-skillet.jpg",
+      "imageAlt": "Cowboy breakfast skillet with chorizo, ranch beans, potatoes, and baked eggs",
       "onDisk": {
         "hero": true,
         "thumb": true,
@@ -7053,6 +7058,7 @@
       "category": "breakfast",
       "photoCategory": "breakfast",
       "heroImage": "/images/breakfast/german-potato-breakfast-skillet.jpg",
+      "imageAlt": "German potato breakfast skillet with bratwurst, sauerkraut, and fried eggs",
       "onDisk": {
         "hero": true,
         "thumb": true,
@@ -7081,6 +7087,7 @@
       "category": "breakfast",
       "photoCategory": "breakfast",
       "heroImage": "/images/breakfast/green-chile-breakfast-burritos.jpg",
+      "imageAlt": "Green chile breakfast burritos with eggs, bacon, and potatoes for the crew",
       "onDisk": {
         "hero": true,
         "thumb": true,
@@ -7088,14 +7095,7 @@
         "rail": true
       },
       "heroMd5": "986daad95dd54da93f1b0a3b21e8085a",
-      "issues": [
-        {
-          "code": "missing_firehall_atmosphere_metadata",
-          "severity": "info",
-          "message": "hero metadata lacks firehall kitchen atmosphere cues — verify environment on regeneration",
-          "confidence": 35
-        }
-      ],
+      "issues": [],
       "needsReplacement": false,
       "pass": true
     },
@@ -7182,6 +7182,7 @@
       "category": "breakfast",
       "photoCategory": "breakfast",
       "heroImage": "/images/breakfast/ham-cheddar-egg-bake.jpg",
+      "imageAlt": "Warm station-kitchen breakfast: Ham & Cheddar Egg Bake",
       "onDisk": {
         "hero": true,
         "thumb": true,
@@ -7189,14 +7190,7 @@
         "rail": true
       },
       "heroMd5": "e3c651f0fad3df99911f94c982632af4",
-      "issues": [
-        {
-          "code": "missing_firehall_atmosphere_metadata",
-          "severity": "info",
-          "message": "hero metadata lacks firehall kitchen atmosphere cues — verify environment on regeneration",
-          "confidence": 35
-        }
-      ],
+      "issues": [],
       "needsReplacement": false,
       "pass": true
     },
@@ -7210,6 +7204,7 @@
       "category": "breakfast",
       "photoCategory": "breakfast",
       "heroImage": "/images/breakfast/ham-pepper-skillet.jpg",
+      "imageAlt": "Warm station-kitchen breakfast: Ham & Pepper Breakfast Skillet",
       "onDisk": {
         "hero": true,
         "thumb": true,
@@ -7217,35 +7212,6 @@
         "rail": true
       },
       "heroMd5": "67ea7cf0b01653d3d8132fa4ab1412ff",
-      "issues": [
-        {
-          "code": "missing_firehall_atmosphere_metadata",
-          "severity": "info",
-          "message": "hero metadata lacks firehall kitchen atmosphere cues — verify environment on regeneration",
-          "confidence": 35
-        }
-      ],
-      "needsReplacement": false,
-      "pass": true
-    },
-    {
-      "collection": "breakfast",
-      "slug": "high-protein-parfaits",
-      "title": "High-Protein Yogurt Parfaits",
-      "route": "/breakfast/high-protein-parfaits",
-      "protein": "any",
-      "mealFormat": "breakfast",
-      "category": "breakfast",
-      "photoCategory": "breakfast",
-      "heroImage": "/images/breakfast/high-protein-parfaits.jpg",
-      "imageAlt": "Warm station-kitchen breakfast: High-Protein Yogurt Parfaits",
-      "onDisk": {
-        "hero": true,
-        "thumb": true,
-        "mobile": true,
-        "rail": true
-      },
-      "heroMd5": "9794b41c570aeb9dcb72d4b8f3e8ee8d",
       "issues": [],
       "needsReplacement": false,
       "pass": true
@@ -7492,57 +7458,6 @@
     },
     {
       "collection": "breakfast",
-      "slug": "protein-french-toast",
-      "title": "Protein French Toast",
-      "route": "/breakfast/protein-french-toast",
-      "protein": "any",
-      "mealFormat": "breakfast",
-      "category": "breakfast",
-      "photoCategory": "breakfast",
-      "heroImage": "/images/breakfast/protein-french-toast.jpg",
-      "imageAlt": "Golden protein French toast stacks with fresh berries and maple drizzle",
-      "onDisk": {
-        "hero": true,
-        "thumb": true,
-        "mobile": true,
-        "rail": true
-      },
-      "heroMd5": "2d661f5f6ff7f5c9c1826d05c0ee70ea",
-      "issues": [
-        {
-          "code": "missing_firehall_atmosphere_metadata",
-          "severity": "info",
-          "message": "hero metadata lacks firehall kitchen atmosphere cues — verify environment on regeneration",
-          "confidence": 35
-        }
-      ],
-      "needsReplacement": false,
-      "pass": true
-    },
-    {
-      "collection": "breakfast",
-      "slug": "protein-pancake-tray",
-      "title": "Protein Pancake Tray",
-      "route": "/breakfast/protein-pancake-tray",
-      "protein": "any",
-      "mealFormat": "breakfast",
-      "category": "breakfast",
-      "photoCategory": "breakfast",
-      "heroImage": "/images/breakfast/protein-pancake-tray.jpg",
-      "imageAlt": "Warm station-kitchen breakfast: Protein Pancake Tray",
-      "onDisk": {
-        "hero": true,
-        "thumb": true,
-        "mobile": true,
-        "rail": true
-      },
-      "heroMd5": "f828751ad69e69787fd3029243398828",
-      "issues": [],
-      "needsReplacement": false,
-      "pass": true
-    },
-    {
-      "collection": "breakfast",
       "slug": "quick-egg-tacos",
       "title": "Quick Egg Tacos",
       "route": "/breakfast/quick-egg-tacos",
@@ -7573,6 +7488,7 @@
       "category": "breakfast",
       "photoCategory": "breakfast",
       "heroImage": "/images/breakfast/red-lead-skillet.jpg",
+      "imageAlt": "Cast-iron skillet with seared steak, peppers, and sunny-side eggs for the crew",
       "onDisk": {
         "hero": true,
         "thumb": true,
@@ -7580,14 +7496,7 @@
         "rail": true
       },
       "heroMd5": "5b2fe9fd56e9feea30beb6920e0c8bca",
-      "issues": [
-        {
-          "code": "missing_firehall_atmosphere_metadata",
-          "severity": "info",
-          "message": "hero metadata lacks firehall kitchen atmosphere cues — verify environment on regeneration",
-          "confidence": 35
-        }
-      ],
+      "issues": [],
       "needsReplacement": false,
       "pass": true
     },
@@ -7791,6 +7700,7 @@
       "category": "breakfast",
       "photoCategory": "breakfast",
       "heroImage": "/images/breakfast/steakhouse-hash-skillet.jpg",
+      "imageAlt": "Warm station-kitchen breakfast: Steakhouse Hash Skillet",
       "onDisk": {
         "hero": true,
         "thumb": true,
@@ -7798,14 +7708,7 @@
         "rail": true
       },
       "heroMd5": "45e160454d84d4dfaa1b0bb7aba7a220",
-      "issues": [
-        {
-          "code": "missing_firehall_atmosphere_metadata",
-          "severity": "info",
-          "message": "hero metadata lacks firehall kitchen atmosphere cues — verify environment on regeneration",
-          "confidence": 35
-        }
-      ],
+      "issues": [],
       "needsReplacement": false,
       "pass": true
     },
@@ -7870,6 +7773,7 @@
       "category": "breakfast",
       "photoCategory": "breakfast",
       "heroImage": "/images/breakfast/turkey-sausage-egg-bake.jpg",
+      "imageAlt": "Warm station-kitchen breakfast: Turkey Sausage Egg Bake",
       "onDisk": {
         "hero": true,
         "thumb": true,
@@ -7877,14 +7781,7 @@
         "rail": true
       },
       "heroMd5": "7099aa20b4fd3b2fc9ef6848f2c7ed75",
-      "issues": [
-        {
-          "code": "missing_firehall_atmosphere_metadata",
-          "severity": "info",
-          "message": "hero metadata lacks firehall kitchen atmosphere cues — verify environment on regeneration",
-          "confidence": 35
-        }
-      ],
+      "issues": [],
       "needsReplacement": false,
       "pass": true
     },
@@ -8633,31 +8530,42 @@
     },
     {
       "collection": "bbq",
-      "slug": "garlic-butter-scallop-skewers",
-      "title": "Champagne Tarragon Scallop Skewers",
-      "route": "/bbq/garlic-butter-scallop-skewers",
+      "slug": "garlic-butter-shrimp-skewers",
+      "title": "Garlic Tarragon Shrimp Skewers",
+      "route": "/bbq/garlic-butter-shrimp-skewers",
       "protein": "seafood",
       "mealFormat": "crew_kebab",
       "category": "bbq_grill_nights",
       "photoCategory": "bbq",
-      "heroImage": "/images/smoker-catalog/garlic-butter-scallop-skewers.jpg",
+      "heroImage": "/images/smoker-catalog/garlic-butter-shrimp-skewers.jpg",
       "onDisk": {
-        "hero": true,
-        "thumb": true,
-        "mobile": true,
-        "rail": true
+        "hero": false,
+        "thumb": false,
+        "mobile": false,
+        "rail": false
       },
-      "heroMd5": "f1a7fc95dad47747a45b6d17866a058f",
       "issues": [
+        {
+          "code": "missing_image_file",
+          "severity": "critical",
+          "message": "hero image file missing — must generate unique firehall kitchen photo",
+          "confidence": 99
+        },
         {
           "code": "missing_firehall_atmosphere_metadata",
           "severity": "info",
           "message": "hero metadata lacks firehall kitchen atmosphere cues — verify environment on regeneration",
           "confidence": 35
+        },
+        {
+          "code": "needs_regeneration",
+          "severity": "critical",
+          "message": "queued for replacement under global firehall kitchen photo standard",
+          "confidence": 90
         }
       ],
-      "needsReplacement": false,
-      "pass": true
+      "needsReplacement": true,
+      "pass": false
     },
     {
       "collection": "bbq",
@@ -8892,52 +8800,75 @@
     },
     {
       "collection": "bbq",
-      "slug": "cajun-grilled-catfish-crew",
-      "title": "Black Iron Remoulade Catfish Plates",
-      "route": "/bbq/cajun-grilled-catfish-crew",
+      "slug": "cajun-grilled-cod-crew",
+      "title": "Black Iron Remoulade Cod Plates",
+      "route": "/bbq/cajun-grilled-cod-crew",
       "protein": "seafood",
       "mealFormat": "bayou_fillet",
       "category": "bbq_grill_nights",
       "photoCategory": "bbq",
-      "heroImage": "/images/smoker-catalog/cajun-grilled-catfish-crew.jpg",
+      "heroImage": "/images/smoker-catalog/cajun-grilled-cod-crew.jpg",
       "onDisk": {
-        "hero": true,
-        "thumb": true,
-        "mobile": true,
-        "rail": true
+        "hero": false,
+        "thumb": false,
+        "mobile": false,
+        "rail": false
       },
-      "heroMd5": "9283b483448b25849502af1956e46156",
-      "issues": [],
-      "needsReplacement": false,
-      "pass": true
+      "issues": [
+        {
+          "code": "missing_image_file",
+          "severity": "critical",
+          "message": "hero image file missing — must generate unique firehall kitchen photo",
+          "confidence": 99
+        },
+        {
+          "code": "needs_regeneration",
+          "severity": "critical",
+          "message": "queued for replacement under global firehall kitchen photo standard",
+          "confidence": 90
+        }
+      ],
+      "needsReplacement": true,
+      "pass": false
     },
     {
       "collection": "bbq",
-      "slug": "grilled-halibut-lemon-packets",
-      "title": "Caper-Butter Halibut Foil Packets",
-      "route": "/bbq/grilled-halibut-lemon-packets",
+      "slug": "grilled-cod-lemon-packets",
+      "title": "Caper-Butter Cod Foil Packets",
+      "route": "/bbq/grilled-cod-lemon-packets",
       "protein": "seafood",
       "mealFormat": "foil_fish",
       "category": "bbq_grill_nights",
       "photoCategory": "bbq",
-      "heroImage": "/images/smoker-catalog/grilled-halibut-lemon-packets.jpg",
+      "heroImage": "/images/smoker-catalog/grilled-cod-lemon-packets.jpg",
       "onDisk": {
-        "hero": true,
-        "thumb": true,
-        "mobile": true,
-        "rail": true
+        "hero": false,
+        "thumb": false,
+        "mobile": false,
+        "rail": false
       },
-      "heroMd5": "c4866826819aaf0e071cd266b32d9e66",
       "issues": [
+        {
+          "code": "missing_image_file",
+          "severity": "critical",
+          "message": "hero image file missing — must generate unique firehall kitchen photo",
+          "confidence": 99
+        },
         {
           "code": "missing_firehall_atmosphere_metadata",
           "severity": "info",
           "message": "hero metadata lacks firehall kitchen atmosphere cues — verify environment on regeneration",
           "confidence": 35
+        },
+        {
+          "code": "needs_regeneration",
+          "severity": "critical",
+          "message": "queued for replacement under global firehall kitchen photo standard",
+          "confidence": 90
         }
       ],
-      "needsReplacement": false,
-      "pass": true
+      "needsReplacement": true,
+      "pass": false
     },
     {
       "collection": "bbq",

@@ -13,10 +13,10 @@
   "cookTime": 18,
   "prepTime": 15,
   "difficulty": "medium",
-  "calories": 445,
-  "protein": 36,
-  "carbs": 52,
-  "fats": 12,
+  "calories": 493,
+  "protein": 38,
+  "carbs": 3,
+  "fats": 35,
   "tags": [
     "protein:shrimp",
     "format:pasta",
@@ -92,36 +92,64 @@
   "steps": [
     {
       "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Lemon Garlic Shrimp Pasta in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch shrimp. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
       "title": "Boil pasta in salted water",
       "instruction": "Bring a large pot of water to a rolling boil with 2 tbsp salt. Cook linguine 9–11 minutes until al dente with a slight firm bite at the center.",
       "minutes": 11,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 2,
+      "stepNumber": 4,
       "title": "Sear shrimp quickly",
-      "instruction": "Heat olive oil in two large skillets over medium-high. Sear shrimp 1–2 minutes per side until pink and curled, not rubbery. Work in batches.",
+      "instruction": "Heat olive oil in two large skillets over medium-high. Sear shrimp 1–2 minutes per side until pink and curled, not rubbery. Work in batches. Target 145°F until opaque at the thickest point before moving to the next batch.",
       "minutes": 6,
       "heatLevel": "medium-high"
     },
     {
-      "stepNumber": 3,
+      "stepNumber": 5,
       "title": "Build lemon garlic sauce",
       "instruction": "Reduce heat to medium. Add butter and garlic to skillets; cook 45 seconds until fragrant. Add lemon zest, juice, capers, and pepper flakes.",
       "minutes": 2,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 6,
       "title": "Toss pasta with shrimp",
       "instruction": "Add drained pasta with 1 cup pasta water. Toss 2–3 minutes until sauce emulsifies and coats noodles with a silky gloss, not a pool of oil.",
       "minutes": 3,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
       "title": "Finish with parsley and serve",
-      "instruction": "Fold in parsley off heat. Shrimp should be opaque throughout; pasta should slide on the plate without clumping.",
+      "instruction": "Fold in parsley off heat. Shrimp should be opaque throughout; pasta should slide on the plate without clumping. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F until opaque at the thickest point before moving to the next batch.",
       "minutes": 2,
       "heatLevel": ""
     }
@@ -144,11 +172,25 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 445,
-    "protein": 36,
-    "carbs": 52,
-    "fats": 12,
-    "label": "~445 cal/serving · 36g protein · 6g fiber (est.)"
+    "calories": 493,
+    "protein": 38,
+    "carbs": 3,
+    "fats": 35,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/lemon-garlic-shrimp-pasta.jpg",
   "mobileImage": "/images/mobile/lemon-garlic-shrimp-pasta.jpg",
@@ -172,6 +214,6 @@
     "turkey-zoodle-bolognese",
     "grilled-shrimp-quinoa-bowls"
   ],
-  "generatedAt": "2026-05-31T15:28:14.291Z",
+  "generatedAt": "2026-05-31T23:32:24.494Z",
   "contentVersion": 2
 }

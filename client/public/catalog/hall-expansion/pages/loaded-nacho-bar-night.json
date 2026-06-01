@@ -8,15 +8,15 @@
   "category": "hall_expansion",
   "cuisine": "mexican-american",
   "description": "Seasoned ground beef, queso, beans, and a full topping bar let each crew member build nachos on oven-warmed chips. Individual sheet pans or plates prevent the classic soggy-center problem.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 20,
   "prepTime": 25,
   "difficulty": "easy",
-  "calories": 580,
-  "protein": 28,
-  "carbs": 44,
-  "fats": 34,
+  "calories": 723,
+  "protein": 39,
+  "carbs": 53,
+  "fats": 40,
   "tags": [
     "protein:beef",
     "format:bar_line",
@@ -40,32 +40,32 @@
   "ingredients": [
     {
       "name": "ground beef (85/15)",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "lb",
       "group": "Protein"
     },
     {
       "name": "taco seasoning",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp",
       "group": "Protein"
     },
     {
       "name": "tortilla chips",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "lb",
       "notes": "sturdy restaurant style",
       "group": "Base"
     },
     {
       "name": "queso dip",
-      "quantity": "3",
+      "quantity": "2.4",
       "unit": "cups",
       "group": "Cheese"
     },
     {
       "name": "shredded cheddar",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "cups",
       "group": "Cheese"
     },
@@ -78,25 +78,25 @@
     },
     {
       "name": "jalapeño slices",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "cup",
       "group": "Bar"
     },
     {
       "name": "pico de gallo",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "cups",
       "group": "Bar"
     },
     {
       "name": "sour cream",
-      "quantity": "1.5",
+      "quantity": "1 1/4",
       "unit": "cups",
       "group": "Bar"
     },
     {
       "name": "guacamole",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "cups",
       "group": "Bar"
     }
@@ -119,7 +119,7 @@
     {
       "stepNumber": 3,
       "title": "Brown the beef",
-      "instruction": "Cook ground beef over medium-high heat, breaking into fine crumbles until no pink remains. Drain fat, add taco seasoning and 0.25 cup water, and simmer until coated and thick.",
+      "instruction": "Cook ground beef over medium-high heat, breaking into fine crumbles until no pink remains. Drain fat, add taco seasoning and 0.25 cup water, and simmer until coated and thick. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
       "minutes": 12,
       "heatLevel": ""
     },
@@ -184,11 +184,25 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 580,
-    "protein": 28,
-    "carbs": 44,
-    "fats": 34,
-    "label": "~580 cal/serving · 28g protein · 6g fiber (est.)"
+    "calories": 723,
+    "protein": 39,
+    "carbs": 53,
+    "fats": 40,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/hall-expansion/loaded-nacho-bar-night.jpg",
   "heroImageAlt": "Loaded Nacho Bar Night — crew-sized firehall meal",

@@ -2,7 +2,7 @@
   "slug": "maple-sausage-pinwheels",
   "title": "Maple Sausage Pinwheels",
   "subtitle": "Crescent dough spirals with sausage and maple glaze baked golden.",
-  "description": "Refrigerated crescent dough rolled with seasoned sausage and a touch of maple, sliced into pinwheels and baked until puffed and sticky-sweet. A handheld crowd-pleaser that scales to ten with two sheet pans and minimal active cooking time.",
+  "description": "Puff pastry spirals with maple sausage and cheese, baked and sliced into rounds. Sweet-savory handhelds that disappear fast from the tray.",
   "filters": [
     "feed_a_crew",
     "quick_breakfasts",
@@ -15,8 +15,8 @@
     "crescent",
     "handheld"
   ],
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "prepTime": 15,
   "cookTime": 22,
   "totalTime": 37,
@@ -24,19 +24,19 @@
   "ingredients": [
     {
       "name": "breakfast sausage",
-      "quantity": "1 1/2 lb",
+      "quantity": "1/2",
       "notes": "browned and crumbled fine",
       "group": "Filling"
     },
     {
       "name": "shredded cheddar",
-      "quantity": "1 1/2 cups",
+      "quantity": "3/8",
       "notes": "mixed into warm sausage",
       "group": "Filling"
     },
     {
       "name": "maple syrup",
-      "quantity": "3 tbsp",
+      "quantity": "2.4",
       "notes": "stirred into sausage off heat",
       "group": "Filling"
     },
@@ -48,25 +48,25 @@
     },
     {
       "name": "butter",
-      "quantity": "1/4 cup",
+      "quantity": "1/4",
       "notes": "melted",
       "group": "Glaze"
     },
     {
       "name": "maple syrup",
-      "quantity": "2 tbsp",
+      "quantity": "1.6",
       "notes": "for brushing before bake",
       "group": "Glaze"
     },
     {
       "name": "black pepper",
-      "quantity": "1/2 tsp",
+      "quantity": "1/2",
       "notes": "in sausage mix",
       "group": "Seasoning"
     },
     {
       "name": "everything bagel seasoning",
-      "quantity": "1 tbsp",
+      "quantity": "3/4",
       "notes": "optional on top",
       "group": "Finish"
     }
@@ -75,7 +75,7 @@
     {
       "stepNumber": 1,
       "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Maple Sausage Pinwheels in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "instruction": "Line up every ingredient for Maple Sausage Pinwheels in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use everything bagel seasoning as listed — measure each before heat goes on.",
       "minutes": 12,
       "heatLevel": ""
     },
@@ -89,21 +89,21 @@
     {
       "stepNumber": 3,
       "title": "Make the filling",
-      "instruction": "Brown sausage, drain well, and mix with cheddar, maple syrup, and black pepper while warm so cheese starts to melt and bind the filling. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Brown sausage, drain well, and mix with cheddar, maple syrup, and black pepper while warm so cheese starts to melt and bind the filling.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 4,
       "title": "Roll the dough",
-      "instruction": "Press crescent dough into two rectangles, sealing seams. Spread sausage filling evenly, roll tight into logs, and pinch seams closed. Plan about 8 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Press crescent dough into two rectangles, sealing seams. Spread sausage filling evenly, roll tight into logs, and pinch seams closed.",
       "minutes": 8,
       "heatLevel": ""
     },
     {
       "stepNumber": 5,
       "title": "Slice pinwheels",
-      "instruction": "Cut each log into 8–10 pinwheels with a sharp serrated knife. Place cut-side up on parchment-lined sheet pans with space between each spiral. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Cut each log into 8–10 pinwheels with a sharp serrated knife. Place cut-side up on parchment-lined sheet pans with space between each spiral.",
       "minutes": 5,
       "heatLevel": ""
     },
@@ -123,17 +123,24 @@
     },
     {
       "stepNumber": 8,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
       "title": "Cool slightly and serve",
-      "instruction": "Rest 5 minutes so filling sets—hot maple cheese burns tongues. Serve from sheet pans or stack in a warm hotel pan for grab-and-go. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Rest 5 minutes so filling sets—hot maple cheese burns tongues. Serve from sheet pans or stack in a warm hotel pan for grab-and-go.",
       "minutes": 5,
       "heatLevel": ""
     }
   ],
   "nutrition": {
-    "calories": 131,
+    "calories": 236,
     "protein": 3,
-    "carbs": 9,
-    "fat": 9,
+    "carbs": 46,
+    "fat": 6,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
@@ -141,8 +148,8 @@
       "under700Calories": true,
       "under30gFat": true,
       "highCarb": false,
-      "lowCarb": true,
-      "mealPrepFriendly": false
+      "lowCarb": false,
+      "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": false,
@@ -166,12 +173,11 @@
   "heroImage": "/images/breakfast/maple-sausage-pinwheels.jpg",
   "thumbImage": "/images/thumbs/breakfast/maple-sausage-pinwheels.jpg",
   "imageAlt": "Golden maple sausage pinwheels on a sheet pan fresh from the oven",
-  "publishedAt": "2026-05-30T21:22:29.756Z",
-  "updatedAt": "2026-05-31T12:54:36.782Z",
+  "publishedAt": "2026-05-31T18:33:00.829Z",
+  "updatedAt": "2026-05-31T23:49:25.586Z",
   "readMinutes": 7,
   "seoTitle": "Maple Sausage Pinwheels | Firehall Breakfast",
-  "mobileImage": "/images/mobile/breakfast/maple-sausage-pinwheels.jpg",
-  "railImage": "/images/rails/breakfast/maple-sausage-pinwheels.jpg",
+  "collectionTier": "firehall_classic",
   "proTips": [
     "Chill rolled logs 10 minutes before slicing if dough gets soft—clean spirals need a firm log.",
     "Bake both sheet pans on middle and upper racks, swapping halfway for even browning.",

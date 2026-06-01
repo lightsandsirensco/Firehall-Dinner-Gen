@@ -8,15 +8,15 @@
   "category": "hall_expansion",
   "cuisine": "american",
   "description": "St. Louis-cut ribs get a brown-sugar rub, smoke wrapped until tender, then finish unwrapped with a molasses-bourbon glaze until sticky and lightly charred. Cut into three-bone sections for fast service.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 300,
   "prepTime": 30,
   "difficulty": "medium",
-  "calories": 580,
-  "protein": 38,
-  "carbs": 28,
-  "fats": 36,
+  "calories": 185,
+  "protein": 8,
+  "carbs": 23,
+  "fats": 7,
   "tags": [
     "protein:pork",
     "format:smoker",
@@ -39,62 +39,62 @@
   "ingredients": [
     {
       "name": "St. Louis pork ribs",
-      "quantity": "4",
+      "quantity": "3.2",
       "unit": "racks",
       "notes": "about 8 lb total",
       "group": "Main"
     },
     {
       "name": "brown sugar",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "cup",
       "group": "Rub"
     },
     {
       "name": "kosher salt",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp",
       "group": "Rub"
     },
     {
       "name": "smoked paprika",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "group": "Rub"
     },
     {
       "name": "garlic powder",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "group": "Rub"
     },
     {
       "name": "black pepper",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tbsp",
       "group": "Rub"
     },
     {
       "name": "molasses",
-      "quantity": "0.33",
+      "quantity": "1/4",
       "unit": "cup",
       "group": "Glaze"
     },
     {
       "name": "bourbon",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "cup",
       "group": "Glaze"
     },
     {
       "name": "BBQ sauce",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "cup",
       "group": "Glaze"
     },
     {
       "name": "apple juice",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "cup",
       "notes": "for spritz and wrap",
       "group": "Glaze"
@@ -197,11 +197,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 580,
-    "protein": 38,
-    "carbs": 28,
-    "fats": 36,
-    "label": "~580 cal/serving · 38g protein · 1g fiber (est.)"
+    "calories": 185,
+    "protein": 8,
+    "carbs": 23,
+    "fats": 7,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/hall-expansion/molasses-bourbon-pork-ribs.jpg",
   "heroImageAlt": "Molasses Bourbon Pork Ribs — crew-sized firehall meal",

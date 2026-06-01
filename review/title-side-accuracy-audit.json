@@ -1,0 +1,349 @@
+{
+  "generatedAt": "2026-05-31T23:40:28.201Z",
+  "normalizedExample": {
+    "before": "Shepherd's Pie with Quinoa & Greek Salad",
+    "after": "Shepherd's Pie with Greek Salad"
+  },
+  "totals": {
+    "titlesWithWith": 20,
+    "sidePairingTitles": 3,
+    "failed": 0,
+    "criticalPairingIssues": 0
+  },
+  "failed": [],
+  "sidePairingTitles": [
+    {
+      "slug": "boneless-chicken-thighs-sweet-potato-spinach",
+      "collection": "performance_meals",
+      "title": "Boneless Chicken Thighs with Sweet Potato & Fresh Spinach",
+      "heroImage": "/images/golden-100/boneless-chicken-thighs-sweet-potato-spinach.jpg",
+      "sidePairingTitle": true,
+      "pairingIssues": [],
+      "imageIssues": [],
+      "fail": false
+    },
+    {
+      "slug": "crock-barbacoa-chicken",
+      "collection": "performance_meals",
+      "title": "Crock Barbacoa Chicken With Potato Wedges",
+      "heroImage": "/images/golden-100/crock-barbacoa-chicken.jpg",
+      "heroAlt": "Crock Barbacoa Chicken With Potato Wedges — shredded chipotle chicken beside golden roasted potato wedges on a wide firehall platter",
+      "sidePairingTitle": true,
+      "pairingIssues": [],
+      "imageIssues": [],
+      "fail": false
+    },
+    {
+      "slug": "shepherds-pie",
+      "collection": "golden_100",
+      "title": "Shepherd's Pie with Greek Salad",
+      "heroImage": "/images/golden-100/shepherds-pie.jpg",
+      "heroAlt": "Shepherd's Pie with Greek Salad — large casserole with browned mashed potato topping and a bowl of Greek salad on a firehall table",
+      "sidePairingTitle": true,
+      "pairingIssues": [],
+      "imageIssues": [],
+      "fail": false
+    }
+  ],
+  "allWithTitles": [
+    {
+      "slug": "chili-lime-grilled-tilapia",
+      "collection": "bbq",
+      "title": "Ancho-Tilapia with Charred Corn Salsa",
+      "heroImage": "/images/smoker-catalog/chili-lime-grilled-tilapia.jpg",
+      "heroAlt": "Ancho-Tilapia with Charred Corn Salsa — crew-sized BBQ spread with visible smoke and bark",
+      "sidePairingTitle": false,
+      "pairingIssues": [
+        {
+          "code": "integral_with_ok",
+          "severity": "info",
+          "message": "Title uses integral 'with' component — not a separate side pairing."
+        }
+      ],
+      "imageIssues": [],
+      "fail": false
+    },
+    {
+      "slug": "mostaccioli-sausage-bake",
+      "collection": "hall_expansion",
+      "title": "Baked Mostaccioli with Sausage",
+      "heroImage": "/images/hall-expansion/mostaccioli-sausage-bake.jpg",
+      "heroAlt": "Baked Mostaccioli with Sausage — crew-sized firehall meal",
+      "sidePairingTitle": false,
+      "pairingIssues": [
+        {
+          "code": "integral_with_ok",
+          "severity": "info",
+          "message": "Title uses integral 'with' component — not a separate side pairing."
+        }
+      ],
+      "imageIssues": [],
+      "fail": false
+    },
+    {
+      "slug": "boneless-chicken-thighs-sweet-potato-spinach",
+      "collection": "performance_meals",
+      "title": "Boneless Chicken Thighs with Sweet Potato & Fresh Spinach",
+      "heroImage": "/images/golden-100/boneless-chicken-thighs-sweet-potato-spinach.jpg",
+      "sidePairingTitle": true,
+      "pairingIssues": [],
+      "imageIssues": [],
+      "fail": false
+    },
+    {
+      "slug": "meatloaf-mashed",
+      "collection": "golden_100",
+      "title": "Classic Meatloaf with Mashed Potatoes",
+      "heroImage": "/images/golden-100/meatloaf-mashed.jpg",
+      "sidePairingTitle": false,
+      "pairingIssues": [
+        {
+          "code": "integral_with_ok",
+          "severity": "info",
+          "message": "Title uses integral 'with' component — not a separate side pairing."
+        }
+      ],
+      "imageIssues": [],
+      "fail": false
+    },
+    {
+      "slug": "crock-barbacoa-chicken",
+      "collection": "performance_meals",
+      "title": "Crock Barbacoa Chicken With Potato Wedges",
+      "heroImage": "/images/golden-100/crock-barbacoa-chicken.jpg",
+      "heroAlt": "Crock Barbacoa Chicken With Potato Wedges — shredded chipotle chicken beside golden roasted potato wedges on a wide firehall platter",
+      "sidePairingTitle": true,
+      "pairingIssues": [],
+      "imageIssues": [],
+      "fail": false
+    },
+    {
+      "slug": "smash-burgers",
+      "collection": "golden_100",
+      "title": "Double Smash Burgers with Caramelized Onions & Dirty Sauce",
+      "heroImage": "/images/golden-100/smash-burgers.jpg",
+      "sidePairingTitle": false,
+      "pairingIssues": [
+        {
+          "code": "integral_with_ok",
+          "severity": "info",
+          "message": "Title uses integral 'with' component — not a separate side pairing."
+        }
+      ],
+      "imageIssues": [],
+      "fail": false
+    },
+    {
+      "slug": "chili-garlic-bread",
+      "collection": "golden_100",
+      "title": "Firehouse Smoked Beef Chili with Cheesy Garlic Bread",
+      "heroImage": "/images/golden-100/chili-garlic-bread.jpg",
+      "sidePairingTitle": false,
+      "pairingIssues": [
+        {
+          "code": "integral_with_ok",
+          "severity": "info",
+          "message": "Title uses integral 'with' component — not a separate side pairing."
+        }
+      ],
+      "imageIssues": [],
+      "fail": false
+    },
+    {
+      "slug": "flank-chimichurri",
+      "collection": "golden_100",
+      "title": "Grilled Flank Steak with Chimichurri",
+      "heroImage": "/images/golden-100/flank-chimichurri.jpg",
+      "sidePairingTitle": false,
+      "pairingIssues": [
+        {
+          "code": "integral_with_ok",
+          "severity": "info",
+          "message": "Title uses integral 'with' component — not a separate side pairing."
+        }
+      ],
+      "imageIssues": [],
+      "fail": false
+    },
+    {
+      "slug": "ny-strip-herb-butter",
+      "collection": "golden_100",
+      "title": "Grilled NY Strip with Herb Butter",
+      "heroImage": "/images/golden-100/ny-strip-herb-butter.jpg",
+      "sidePairingTitle": false,
+      "pairingIssues": [
+        {
+          "code": "integral_with_ok",
+          "severity": "info",
+          "message": "Title uses integral 'with' component — not a separate side pairing."
+        }
+      ],
+      "imageIssues": [],
+      "fail": false
+    },
+    {
+      "slug": "grilled-corn-cotija",
+      "collection": "golden_100",
+      "title": "Grilled Street Corn with Cotija",
+      "heroImage": "/images/golden-100/grilled-corn-cotija.jpg",
+      "sidePairingTitle": false,
+      "pairingIssues": [
+        {
+          "code": "integral_with_ok",
+          "severity": "info",
+          "message": "Title uses integral 'with' component — not a separate side pairing."
+        }
+      ],
+      "imageIssues": [],
+      "fail": false
+    },
+    {
+      "slug": "johnnycakes-with-syrup",
+      "collection": "breakfast",
+      "title": "Johnnycakes with Maple Syrup",
+      "heroImage": "/images/breakfast/johnnycakes-with-syrup.jpg",
+      "sidePairingTitle": false,
+      "pairingIssues": [
+        {
+          "code": "integral_with_ok",
+          "severity": "info",
+          "message": "Title uses integral 'with' component — not a separate side pairing."
+        }
+      ],
+      "imageIssues": [],
+      "fail": false
+    },
+    {
+      "slug": "pepper-steak-onions",
+      "collection": "hall_expansion",
+      "title": "Pepper Steak with Onions",
+      "heroImage": "/images/hall-expansion/pepper-steak-onions.jpg",
+      "heroAlt": "Pepper Steak with Onions — crew-sized firehall meal",
+      "sidePairingTitle": false,
+      "pairingIssues": [],
+      "imageIssues": [],
+      "fail": false
+    },
+    {
+      "slug": "pretzel-bite-platter",
+      "collection": "hall_expansion",
+      "title": "Pretzel Bite Platter with Beer Cheese",
+      "heroImage": "/images/hall-expansion/pretzel-bite-platter.jpg",
+      "heroAlt": "Pretzel Bite Platter with Beer Cheese — crew-sized firehall meal",
+      "sidePairingTitle": false,
+      "pairingIssues": [
+        {
+          "code": "integral_with_ok",
+          "severity": "info",
+          "message": "Title uses integral 'with' component — not a separate side pairing."
+        }
+      ],
+      "imageIssues": [],
+      "fail": false
+    },
+    {
+      "slug": "rigatoni-meat-sauce-batch",
+      "collection": "hall_expansion",
+      "title": "Rigatoni with Meat Sauce",
+      "heroImage": "/images/hall-expansion/rigatoni-meat-sauce-batch.jpg",
+      "heroAlt": "Rigatoni with Meat Sauce — crew-sized firehall meal",
+      "sidePairingTitle": false,
+      "pairingIssues": [
+        {
+          "code": "integral_with_ok",
+          "severity": "info",
+          "message": "Title uses integral 'with' component — not a separate side pairing."
+        }
+      ],
+      "imageIssues": [],
+      "fail": false
+    },
+    {
+      "slug": "shepherds-pie",
+      "collection": "golden_100",
+      "title": "Shepherd's Pie with Greek Salad",
+      "heroImage": "/images/golden-100/shepherds-pie.jpg",
+      "heroAlt": "Shepherd's Pie with Greek Salad — large casserole with browned mashed potato topping and a bowl of Greek salad on a firehall table",
+      "sidePairingTitle": true,
+      "pairingIssues": [],
+      "imageIssues": [],
+      "fail": false
+    },
+    {
+      "slug": "smoked-chicken-quarters-white-sauce",
+      "collection": "bbq",
+      "title": "Smoked Chicken Quarters with White Sauce",
+      "heroImage": "/images/smoker-catalog/smoked-chicken-quarters-white-sauce.jpg",
+      "heroAlt": "Smoked Chicken Quarters with White Sauce — crew-sized BBQ spread with visible smoke and bark",
+      "sidePairingTitle": false,
+      "pairingIssues": [
+        {
+          "code": "integral_with_ok",
+          "severity": "info",
+          "message": "Title uses integral 'with' component — not a separate side pairing."
+        }
+      ],
+      "imageIssues": [],
+      "fail": false
+    },
+    {
+      "slug": "smoked-meatloaf",
+      "collection": "hall_expansion",
+      "title": "Smoked Meatloaf with Glaze",
+      "heroImage": "/images/hall-expansion/smoked-meatloaf.jpg",
+      "heroAlt": "Smoked Meatloaf with Glaze — crew-sized firehall meal",
+      "sidePairingTitle": false,
+      "pairingIssues": [
+        {
+          "code": "integral_with_ok",
+          "severity": "info",
+          "message": "Title uses integral 'with' component — not a separate side pairing."
+        }
+      ],
+      "imageIssues": [],
+      "fail": false
+    },
+    {
+      "slug": "smoked-wings-white-sauce",
+      "collection": "golden_100",
+      "title": "Smoked Wings with White BBQ Sauce",
+      "heroImage": "/images/golden-100/smoked-wings-white-sauce.jpg",
+      "sidePairingTitle": false,
+      "pairingIssues": [],
+      "imageIssues": [],
+      "fail": false
+    },
+    {
+      "slug": "turkey-meatball-zoodles",
+      "collection": "golden_100",
+      "title": "Turkey Meatballs with Zucchini Noodles",
+      "heroImage": "/images/golden-100/turkey-meatball-zoodles.jpg",
+      "sidePairingTitle": false,
+      "pairingIssues": [
+        {
+          "code": "integral_with_ok",
+          "severity": "info",
+          "message": "Title uses integral 'with' component — not a separate side pairing."
+        }
+      ],
+      "imageIssues": [],
+      "fail": false
+    },
+    {
+      "slug": "turkey-shepherds-sweet-potato",
+      "collection": "performance_meals",
+      "title": "Turkey Shepherd's with Sweet Potato Top",
+      "heroImage": "/images/golden-100/turkey-shepherds-sweet-potato.jpg",
+      "sidePairingTitle": false,
+      "pairingIssues": [
+        {
+          "code": "integral_with_ok",
+          "severity": "info",
+          "message": "Title uses integral 'with' component — not a separate side pairing."
+        }
+      ],
+      "imageIssues": [],
+      "fail": false
+    }
+  ]
+}

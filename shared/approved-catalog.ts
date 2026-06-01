@@ -10,6 +10,7 @@ import {
   isBreakfastCatalogSlug,
   isBbqCatalogSlug,
 } from "./hall-catalog/gate.js";
+import { isPerformanceBreakfastSlug } from "./breakfast-catalog/governance-types.js";
 import {
   slugLockedImagePaths,
   type ExploreCatalogImageKind,
@@ -100,6 +101,9 @@ export function approvedCatalogRecipePath(slug: string): string {
   const s = (slug || "").trim().toLowerCase();
   if (!s) return "/recipes";
   if (isBreakfastCatalogSlug(s)) {
+    if (isPerformanceBreakfastSlug(s)) {
+      return `/breakfast/performance/${encodeURIComponent(s)}`;
+    }
     return `/breakfast/${encodeURIComponent(s)}`;
   }
   return `/recipes/${encodeURIComponent(s)}`;

@@ -48,7 +48,7 @@
     {
       "stepNumber": 1,
       "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Mixed Berry Protein Smoothie in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on."
+      "instruction": "Line up every ingredient for Mixed Berry Protein Smoothie in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use vanilla extract, ice cubes as listed — measure each before heat goes on."
     },
     {
       "stepNumber": 2,
@@ -124,7 +124,7 @@
   ],
   "relatedSlugs": [],
   "catalogSet": "fuel_smoothie",
-  "generatedAt": "2026-05-31T13:06:17.200Z",
+  "generatedAt": "2026-05-31T23:49:25.605Z",
   "contentVersion": 2,
   "mobileImage": "/images/mobile/mixed-berry-protein.jpg",
   "railImage": "/images/rails/mixed-berry-protein.jpg",
@@ -146,5 +146,7 @@
     "high-speed blender",
     "measuring cups",
     "ice bath pan"
-  ]
+  ],
+  "baseServings": 8,
+  "crewSize": 8
 }

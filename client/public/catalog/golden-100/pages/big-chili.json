@@ -13,10 +13,10 @@
   "cookTime": 90,
   "prepTime": 30,
   "difficulty": "hard",
-  "calories": 766,
-  "protein": 66,
-  "carbs": 51,
-  "fats": 36,
+  "calories": 702,
+  "protein": 64,
+  "carbs": 37,
+  "fats": 35,
   "tags": [
     "protein:beef",
     "format:soup_chili",
@@ -188,17 +188,17 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 766,
-    "protein": 66,
-    "carbs": 51,
-    "fats": 36,
+    "calories": 702,
+    "protein": 64,
+    "carbs": 37,
+    "fats": 35,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
       "under30gFat": false,
-      "highCarb": true,
+      "highCarb": false,
       "lowCarb": false,
       "mealPrepFriendly": false
     },
@@ -235,6 +235,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-30T23:27:14.583Z",
+  "generatedAt": "2026-06-01T01:40:02.138Z",
   "contentVersion": 2
 }

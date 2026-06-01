@@ -63,6 +63,11 @@ export const PHASE5_CONSOLIDATIONS: Phase5Consolidation[] = [
   { from: "sunday-chili-batch", to: "big-chili", note: "near: hall chili" },
   { from: "chili-garlic-bread", to: "big-chili", note: "near: hall chili side" },
   { from: "lean-turkey-bean-chili", to: "turkey-sweet-potato-chili", note: "near: turkey chili" },
+
+  // Protein realism — exotic seafood → grocery staples
+  { from: "cajun-grilled-catfish-crew", to: "cajun-grilled-cod-crew", note: "protein realism: catfish → cod" },
+  { from: "grilled-halibut-lemon-packets", to: "grilled-cod-lemon-packets", note: "protein realism: halibut → cod" },
+  { from: "garlic-butter-scallop-skewers", to: "garlic-butter-shrimp-skewers", note: "protein realism: scallops → shrimp" },
 ];
 
 export const PHASE5_REDIRECT_MAP: Record<string, string> = Object.fromEntries(

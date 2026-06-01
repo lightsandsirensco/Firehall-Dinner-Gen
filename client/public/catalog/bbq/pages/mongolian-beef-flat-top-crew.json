@@ -8,8 +8,8 @@
   "category": "bbq_grill_nights",
   "cuisine": "chinese-american",
   "description": "Flank steak strips coat in cornstarch, sear crisp on the griddle, and toss with sweet-savory Mongolian sauce and scallions. Served over steamed rice.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 18,
   "prepTime": 35,
   "difficulty": "medium",
@@ -39,44 +39,44 @@
   "ingredients": [
     {
       "name": "flank steak",
-      "quantity": "5.5",
+      "quantity": "4.4",
       "unit": "lb",
       "notes": "thin-sliced against grain",
       "group": "Main"
     },
     {
       "name": "cornstarch",
-      "quantity": "0.33",
+      "quantity": "1/4",
       "unit": "cup",
       "group": "Crisp coat"
     },
     {
       "name": "coconut aminos",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "cup",
       "group": "Mongolian sauce"
     },
     {
       "name": "dark brown sugar",
-      "quantity": "0.33",
+      "quantity": "1/4",
       "unit": "cup",
       "group": "Mongolian sauce"
     },
     {
       "name": "Chinese black vinegar",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp",
       "group": "Mongolian sauce"
     },
     {
       "name": "dried Thai chilies",
-      "quantity": "6",
+      "quantity": "5",
       "unit": "whole",
       "group": "Mongolian sauce"
     },
     {
       "name": "shaoxing wine",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "group": "Mongolian sauce"
     },
@@ -89,13 +89,13 @@
     },
     {
       "name": "peanut oil",
-      "quantity": "0.33",
+      "quantity": "1/4",
       "unit": "cup",
       "group": "Griddle"
     },
     {
       "name": "jasmine rice",
-      "quantity": "10",
+      "quantity": "8",
       "unit": "cups",
       "notes": "cooked",
       "group": "Service"
@@ -105,7 +105,7 @@
     {
       "stepNumber": 1,
       "title": "Slice and coat flank",
-      "instruction": "Slice flank thin against the grain. Toss with cornstarch until lightly coated. Shake off excess. Plan about 20 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Slice flank thin against the grain. Toss with cornstarch until lightly coated. Shake off excess. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Use coconut aminos, Chinese black vinegar, dried Thai chilies, shaoxing wine as listed — measure each before heat goes on. Use peanut oil as listed — measure each before heat goes on.",
       "minutes": 20,
       "heatLevel": ""
     },
@@ -126,7 +126,7 @@
     {
       "stepNumber": 4,
       "title": "Sear beef batches",
-      "instruction": "Sear flank strips in single layers 2 minutes per side until crisp and 130°F. Work in batches. Hold at 170°F. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Sear flank strips in single layers 2 minutes per side until crisp and 130°F. Work in batches. Hold at 170°F. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
       "minutes": 12,
       "heatLevel": "high"
     },
@@ -140,21 +140,21 @@
     {
       "stepNumber": 6,
       "title": "Sauce toss at service",
-      "instruction": "Toss crisp beef with warm Mongolian sauce and scallions at the line—not during long hold. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Toss crisp beef with warm Mongolian sauce and scallions at the line—not during long hold. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 7,
       "title": "Hold sauced beef",
-      "instruction": "If needed, hold sauced beef covered at 170°F up to 15 minutes max. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "If needed, hold sauced beef covered at 170°F up to 15 minutes max. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 8,
       "title": "Platter for ten",
-      "instruction": "Serve Mongolian beef over steamed rice. About 8 oz beef per firefighter. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Serve Mongolian beef over steamed rice. About 8 oz beef per firefighter. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
       "minutes": 5,
       "heatLevel": ""
     }
@@ -210,6 +210,6 @@
     "brisket-style-beef-sandwiches-au-jus"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T02:29:42.537Z",
+  "generatedAt": "2026-05-31T23:32:23.208Z",
   "contentVersion": 2
 }

@@ -1,8 +1,8 @@
 {
   "slug": "chili-garlic-bread",
-  "title": "Firehouse Smoked Beef Chili with Cheesy Garlic Bread",
-  "displayTitle": "Firehouse Smoked Beef Chili with Cheesy Garlic Bread",
-  "seoTitle": "Firehouse Smoked Beef Chili with Cheesy Garlic Bread | Firefighter Meal",
+  "title": "Firehall Chili",
+  "displayTitle": "Firehall Chili",
+  "seoTitle": "Firehall Chili | Firefighter Meal",
   "shortDescription": "Post-call comfort in a deep bowl",
   "subtitle": "Post-call comfort in a deep bowl",
   "category": "firehall_classics",
@@ -15,7 +15,7 @@
   "difficulty": "medium",
   "calories": 1400,
   "protein": 120,
-  "carbs": 110,
+  "carbs": 72,
   "fats": 90,
   "tags": [
     "protein:beef",
@@ -206,15 +206,8 @@
     },
     {
       "stepNumber": 10,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-cook: turn off direct heat and cover beef chili — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
-      "minutes": 5,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 11,
-      "title": "Pack down leftovers safely",
-      "instruction": "Cool beef chili and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "title": "Leftovers & storage (cool, 10 min)",
+      "instruction": "Chili keeps 4 days refrigerated in shallow containers — reheat on the stove with a splash of broth. Freeze portions up to 3 months; thaw overnight. Garlic bread is best fresh; day-old bread can be rebaked 5 min at 400°F. Never store bread sealed with hot chili or it steams soggy.",
       "minutes": 10,
       "heatLevel": ""
     }
@@ -222,24 +215,20 @@
   "proTips": [
     "If chili tastes flat, add ½ tsp more smoked paprika and a pinch of salt — not more sugar.",
     "Hold garlic bread under loose foil on the counter; cut open only when the line forms.",
-    "Simmer until a drag through the pot leaves a clear trail — soup-thin chili won't coat fries or bread.",
-    "Keep a backup tray at 200°F for firefighters returning from a run — never serve picked-over pans to late crew.",
-    "Taste for salt at the end — hall palates run salty after long shifts.",
-    "Log hold times on the pan with a grease pencil when tones drop mid-service.",
-    "Spot-check proteins with an instant-read thermometer before reopening the line after a call."
+    "Scale beef + tomatoes 1.25× for 10+ crew; keep spice levels the same first, adjust heat on the bar.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
+    "Taste for salt at the end — hall palates run salty after long shifts."
   ],
   "tonightSpread": [
-    "Main: Firehouse smoked beef chili",
-    "Sides: cheesy garlic bread sticks, sour cream topping bar",
-    "Condiments: shredded cheddar, diced onion, fresh jalapeños, cilantro",
-    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
-    "Keep a backup tray at 200°F for firefighters returning from a run."
+    "Keep the pot on low simmer on the stove — ladle from the side so the bottom doesn't scorch.",
+    "Set shredded cheese, crackers, and hot sauce in a row beside the pot.",
+    "Line up Firehall Chili on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
   ],
   "leftovers": [
-    "Cool beef chili in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
-    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
-    "Reheat chili on the stove with a splash of broth — it thickens overnight.",
-    "Day-old garlic bread rebakes 5 minutes at 400°F; never store bread sealed with hot chili."
+    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
+    "Label trays with date and reheat to 165°F minimum before second shift.",
+    "Add a splash of stock or water when reheating — thick sauces tighten in the fridge."
   ],
   "whyCrewsLikeIt": "Post-call comfort in a deep bowl. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
   "substitutions": [
@@ -250,7 +239,7 @@
   "nutrition": {
     "calories": 1400,
     "protein": 120,
-    "carbs": 110,
+    "carbs": 72,
     "fats": 90,
     "label": "per serving (hall portion)",
     "source": "calculated",
@@ -296,6 +285,6 @@
   "sourceName": "Firehall Classics",
   "sourceUrl": "",
   "classicSlug": "chili-garlic-bread",
-  "generatedAt": "2026-05-31T13:31:23.368Z",
-  "contentVersion": 4
+  "generatedAt": "2026-06-01T01:40:01.999Z",
+  "contentVersion": 2
 }

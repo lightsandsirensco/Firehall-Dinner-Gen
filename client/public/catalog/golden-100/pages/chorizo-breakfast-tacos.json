@@ -13,10 +13,10 @@
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 1400,
-  "protein": 64,
+  "calories": 1261,
+  "protein": 63,
   "carbs": 120,
-  "fats": 90,
+  "fats": 60,
   "tags": [
     "protein:pork",
     "format:tacos",
@@ -112,10 +112,10 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1400,
-    "protein": 64,
+    "calories": 1261,
+    "protein": 63,
     "carbs": 120,
-    "fats": 90,
+    "fats": 60,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
@@ -158,6 +158,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-30T23:27:14.594Z",
+  "generatedAt": "2026-06-01T01:40:02.150Z",
   "contentVersion": 2
 }

@@ -2,7 +2,7 @@
   "slug": "farmers-breakfast-casserole",
   "title": "Farmer's Breakfast Casserole",
   "subtitle": "Hash browns, sausage, eggs, and cheese baked in one deep dish.",
-  "description": "Adapted from classic Midwest farm-kitchen breakfast bake tradition for firehall oven service: shredded hash browns layered with browned breakfast sausage, eggs, milk, and cheddar baked until puffed and golden for ten portions.",
+  "description": "Sausage, hash browns, and cheese under a blanket of eggs in a deep pan. The farmhouse breakfast casserole every crew recognizes.",
   "filters": [
     "feed_a_crew",
     "high_protein",
@@ -15,8 +15,8 @@
     "bake",
     "eggs"
   ],
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "prepTime": 20,
   "cookTime": 45,
   "totalTime": 65,
@@ -24,48 +24,48 @@
   "ingredients": [
     {
       "name": "frozen hash browns",
-      "quantity": "2 lb",
+      "quantity": "1.6",
       "notes": "thawed and squeezed dry",
       "group": "Base"
     },
     {
       "name": "breakfast sausage",
-      "quantity": "2 lb",
+      "quantity": "2",
       "notes": "browned and crumbled",
       "group": "Base"
     },
     {
       "name": "large eggs",
-      "quantity": "12",
+      "quantity": "10",
       "group": "Egg mix"
     },
     {
       "name": "whole milk",
-      "quantity": "2 cups",
+      "quantity": "1.6",
       "notes": "or half-and-half",
       "group": "Egg mix"
     },
     {
       "name": "dry mustard",
-      "quantity": "1 tsp",
+      "quantity": "3/4",
       "notes": "helps emulsify",
       "group": "Egg mix"
     },
     {
       "name": "shredded sharp cheddar",
-      "quantity": "3 cups",
+      "quantity": "2.4",
       "notes": "divided",
       "group": "Cheese"
     },
     {
       "name": "black pepper",
-      "quantity": "1 tsp",
+      "quantity": "3/4",
       "notes": "plus salt to taste",
       "group": "Seasoning"
     },
     {
       "name": "sliced green onions",
-      "quantity": "1/2 cup",
+      "quantity": "1/2",
       "notes": "plus hot sauce at the line",
       "group": "Finish"
     }
@@ -74,7 +74,7 @@
     {
       "stepNumber": 1,
       "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Farmer's Breakfast Casserole in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "instruction": "Line up every ingredient for Farmer's Breakfast Casserole in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Double-check seasoning after scaling — crew palates run salty after long shifts, so taste the first portion before opening the line.",
       "minutes": 12,
       "heatLevel": ""
     },
@@ -88,28 +88,28 @@
     {
       "stepNumber": 3,
       "title": "Heat the oven",
-      "instruction": "Heat oven to 375°F. Grease a deep 9x13 pan or hotel half-pan. Thaw hash browns completely and squeeze out excess water in a clean towel—wet potatoes make a soggy casserole. Allow 10–15 minutes for mise en place before heat goes on. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Heat oven to 375°F. Grease a deep 9x13 pan or hotel half-pan. Thaw hash browns completely and squeeze out excess water in a clean towel—wet potatoes make a soggy casserole.",
       "minutes": 0,
       "heatLevel": ""
     },
     {
       "stepNumber": 4,
       "title": "Brown the sausage",
-      "instruction": "Cook breakfast sausage in a skillet over medium-high, breaking into small crumbles until no pink remains and internal temperature reaches 160°F. Drain on paper towels. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Cook breakfast sausage in a skillet over medium-high, breaking into small crumbles until no pink remains and internal temperature reaches 160°F. Drain on paper towels.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 5,
       "title": "Layer the base",
-      "instruction": "Spread hash browns evenly in the pan. Top with sausage and half the cheddar. Whisk eggs, milk, mustard, salt, and pepper until uniform and pour evenly over the layers. Plan about 8 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Spread hash browns evenly in the pan. Top with sausage and half the cheddar. Whisk eggs, milk, mustard, salt, and pepper until uniform and pour evenly over the layers.",
       "minutes": 8,
       "heatLevel": ""
     },
     {
       "stepNumber": 6,
       "title": "Bake until set",
-      "instruction": "Cover with foil and bake 25 minutes. Uncover, top with remaining cheddar, and bake 15 more until center reaches 165°F on a thermometer and top is golden. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Cover with foil and bake 25 minutes. Uncover, top with remaining cheddar, and bake 15 more until center reaches 165°F on a thermometer and top is golden.",
       "minutes": 40,
       "heatLevel": ""
     },
@@ -129,26 +129,47 @@
     },
     {
       "stepNumber": 9,
+      "title": "Portion and open the line",
+      "instruction": "Portion Farmer's Breakfast Casserole onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Scale for larger halls",
+      "instruction": "When cooking for more than 8 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
       "title": "Rest and portion",
-      "instruction": "Rest casserole 10 minutes before cutting so slices hold clean squares. Garnish with green onions and serve with hot sauce at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Rest casserole 10 minutes before cutting so slices hold clean squares. Garnish with green onions and serve with hot sauce at the line.",
       "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 12,
+      "title": "Final quality check before service",
+      "instruction": "Walk the line once before opening service for Farmer's Breakfast Casserole — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
+      "minutes": 4,
       "heatLevel": ""
     }
   ],
   "nutrition": {
-    "calories": 599,
-    "protein": 31,
-    "carbs": 21,
-    "fat": 43,
+    "calories": 330,
+    "protein": 20,
+    "carbs": 9,
+    "fat": 24,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
-      "under30gFat": false,
+      "under30gFat": true,
       "highCarb": false,
       "lowCarb": true,
-      "mealPrepFriendly": false
+      "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": false,
@@ -172,12 +193,11 @@
   "heroImage": "/images/breakfast/farmers-breakfast-casserole.jpg",
   "thumbImage": "/images/thumbs/breakfast/farmers-breakfast-casserole.jpg",
   "imageAlt": "Farmer's breakfast casserole with hash browns, sausage, eggs, and cheddar",
-  "publishedAt": "2026-05-30T21:22:29.757Z",
-  "updatedAt": "2026-05-31T12:54:36.772Z",
+  "publishedAt": "2026-05-31T18:33:00.830Z",
+  "updatedAt": "2026-05-31T23:49:25.449Z",
   "readMinutes": 8,
   "seoTitle": "Farmer's Breakfast Casserole | Firehall Breakfast",
-  "mobileImage": "/images/mobile/breakfast/farmers-breakfast-casserole.jpg",
-  "railImage": "/images/rails/breakfast/farmers-breakfast-casserole.jpg",
+  "collectionTier": "firehall_classic",
   "proTips": [
     "Squeeze hash browns dry—this is the single biggest factor in a crisp versus soggy base.",
     "Cover for the first half of baking so top cheese does not over-brown before center sets.",

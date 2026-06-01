@@ -8,15 +8,15 @@
   "category": "hall_expansion",
   "cuisine": "mexican",
   "description": "Chicken strips marinate in lime and spices, sear hot in cast iron with peppers and onions, and serve sizzling with warm tortillas and classic fixings. Built for build-your-own line speed.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 20,
   "prepTime": 30,
   "difficulty": "easy",
-  "calories": 380,
-  "protein": 36,
-  "carbs": 32,
-  "fats": 12,
+  "calories": 683,
+  "protein": 65,
+  "carbs": 56,
+  "fats": 21,
   "tags": [
     "protein:chicken",
     "format:skillet",
@@ -39,45 +39,45 @@
   "ingredients": [
     {
       "name": "chicken breast",
-      "quantity": "4",
+      "quantity": "3.2",
       "unit": "lb",
       "notes": "sliced into strips",
       "group": "Main"
     },
     {
       "name": "lime juice",
-      "quantity": "0.33",
+      "quantity": "1/4",
       "unit": "cup",
       "group": "Marinade"
     },
     {
       "name": "olive oil",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "cup",
       "group": "Marinade"
     },
     {
       "name": "chili powder",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "group": "Marinade"
     },
     {
       "name": "ground cumin",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tbsp",
       "group": "Marinade"
     },
     {
       "name": "garlic cloves",
-      "quantity": "4",
+      "quantity": "3",
       "unit": "cloves",
       "notes": "minced",
       "group": "Marinade"
     },
     {
       "name": "red bell pepper",
-      "quantity": "3",
+      "quantity": "2",
       "unit": "whole",
       "notes": "sliced",
       "group": "Vegetables"
@@ -98,7 +98,7 @@
     },
     {
       "name": "flour tortillas",
-      "quantity": "20",
+      "quantity": "16",
       "unit": "whole",
       "notes": "8-inch",
       "group": "Service"
@@ -143,7 +143,7 @@
     {
       "stepNumber": 6,
       "title": "Combine and season",
-      "instruction": "Return chicken to pan, toss with vegetables, and season with salt to balance. Squeeze half a lime over the mix. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Return chicken to pan, toss with vegetables, and season with salt to balance. Squeeze half a lime over the mix. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
       "minutes": 2,
       "heatLevel": ""
     },
@@ -178,7 +178,7 @@
     {
       "stepNumber": 11,
       "title": "Serve sizzling",
-      "instruction": "Warm tortillas wrapped in foil at 300°F for 10 minutes. Portion chicken and peppers into hot cast iron skillets or hotel pans and serve with fixings. Target oven/smoker temperature: 300°F.",
+      "instruction": "Warm tortillas wrapped in foil at 300°F for 10 minutes. Portion chicken and peppers into hot cast iron skillets or hotel pans and serve with fixings. Target oven/smoker temperature: 300°F. Target 165°F at the thickest point before moving to the next batch.",
       "minutes": 10,
       "heatLevel": ""
     }
@@ -201,11 +201,25 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 380,
-    "protein": 36,
-    "carbs": 32,
-    "fats": 12,
-    "label": "~380 cal/serving · 36g protein · 4g fiber (est.)"
+    "calories": 683,
+    "protein": 65,
+    "carbs": 56,
+    "fats": 21,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/hall-expansion/cast-iron-chicken-fajitas.jpg",
   "heroImageAlt": "Cast Iron Chicken Fajitas — crew-sized firehall meal",

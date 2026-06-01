@@ -8,12 +8,12 @@
   "category": "bbq_grill_nights",
   "cuisine": "american",
   "description": "Adapted from classic smoked chicken breast technique (Weber, Traeger): boneless breasts get a quick brine, smoke over hickory at 275°F to 165°F, and finish with herb butter for a crew-friendly protein tray.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 60,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 530,
+  "calories": 533,
   "protein": 85,
   "carbs": 5,
   "fats": 17,
@@ -39,58 +39,58 @@
   "ingredients": [
     {
       "name": "boneless skinless chicken breasts",
-      "quantity": "6",
+      "quantity": "4.8",
       "unit": "lb",
       "notes": "about 10 pieces, even thickness"
     },
     {
       "name": "kosher salt",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "cup",
       "notes": "for brine"
     },
     {
       "name": "brown sugar",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp",
       "notes": "for brine"
     },
     {
       "name": "water",
-      "quantity": "8",
+      "quantity": "6.4",
       "unit": "cups",
       "notes": "for brine"
     },
     {
       "name": "smoked paprika",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp"
     },
     {
       "name": "garlic powder",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tbsp"
     },
     {
       "name": "black pepper",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tbsp"
     },
     {
       "name": "unsalted butter",
-      "quantity": "6",
+      "quantity": "5.1",
       "unit": "tbsp",
       "notes": "softened"
     },
     {
       "name": "fresh parsley",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "cup",
       "notes": "chopped"
     },
     {
       "name": "lemon juice",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp"
     }
   ],
@@ -139,7 +139,7 @@
     },
     {
       "stepNumber": 7,
-      "title": "Tonight's board",
+      "title": "Cooking step",
       "instruction": "Sliced breast on a tray with extra herb butter melting on top. Pair with smoked potato salad. Target 165°F at the thickest part before moving to the next batch. Plan about 3 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 3,
       "heatLevel": ""
@@ -169,12 +169,25 @@
   "mealPrepNotes": "Brine can happen early shift. Smoke to 165°F exactly—don't overshoot. Hold sliced breast covered at 170°F with a splash of butter up to 45 minutes.",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 530,
+    "calories": 533,
     "protein": 85,
     "carbs": 5,
     "fats": 17,
     "label": "per serving (hall portion)",
-    "source": "estimated"
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": true,
+      "performanceMeal": true
+    }
   },
   "heroImage": "/images/smoker-catalog/hickory-smoked-chicken-breast.jpg",
   "heroImageAlt": "Hickory Smoked Chicken Breast — crew-sized BBQ spread with visible smoke and bark",
@@ -202,6 +215,6 @@
     "smoked-potato-salad-tray"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T02:29:42.531Z",
+  "generatedAt": "2026-05-31T23:32:23.201Z",
   "contentVersion": 2
 }

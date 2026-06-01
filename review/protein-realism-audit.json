@@ -1,0 +1,100 @@
+{
+  "generatedAt": "2026-05-31T23:40:26.812Z",
+  "approvedStaples": [
+    "chicken",
+    "beef",
+    "pork",
+    "turkey",
+    "salmon",
+    "cod",
+    "shrimp",
+    "tilapia",
+    "fish",
+    "seafood"
+  ],
+  "replacements": [
+    {
+      "removedSlug": "cajun-grilled-catfish-crew",
+      "removedTitle": "Black Iron Remoulade Catfish Plates",
+      "removedProtein": "catfish",
+      "replacementSlug": "cajun-grilled-cod-crew",
+      "replacementTitle": "Black Iron Remoulade Cod Plates",
+      "replacementProtein": "cod",
+      "collection": "bbq"
+    },
+    {
+      "removedSlug": "grilled-halibut-lemon-packets",
+      "removedTitle": "Caper-Butter Halibut Foil Packets",
+      "removedProtein": "halibut",
+      "replacementSlug": "grilled-cod-lemon-packets",
+      "replacementTitle": "Caper-Butter Cod Foil Packets",
+      "replacementProtein": "cod",
+      "collection": "bbq"
+    },
+    {
+      "removedSlug": "garlic-butter-scallop-skewers",
+      "removedTitle": "Champagne Tarragon Scallop Skewers",
+      "removedProtein": "scallops",
+      "replacementSlug": "garlic-butter-shrimp-skewers",
+      "replacementTitle": "Garlic Tarragon Shrimp Skewers",
+      "replacementProtein": "shrimp",
+      "collection": "bbq"
+    },
+    {
+      "removedSlug": "mediterranean-baked-fish-tray",
+      "removedTitle": "Mediterranean Baked Fish Tray",
+      "removedProtein": "halibut (ingredient option)",
+      "replacementSlug": "mediterranean-baked-fish-tray",
+      "replacementTitle": "Mediterranean Baked Cod Tray",
+      "replacementProtein": "cod",
+      "collection": "performance_meals"
+    }
+  ],
+  "golden100": {
+    "total": 100,
+    "targets": {
+      "firehall_classics": 15,
+      "bbq_grill_nights": 15,
+      "comfort_food": 12,
+      "healthy_performance": 12,
+      "quick_shift_meals": 10,
+      "pizza_night": 8,
+      "big_crew_feeders": 8,
+      "breakfast_brunch": 6,
+      "global_flavors": 6,
+      "game_day_watch_party": 4,
+      "meal_prep_leftovers": 2,
+      "rookie_friendly": 2
+    },
+    "byCategory": {
+      "firehall_classics": 15,
+      "bbq_grill_nights": 15,
+      "comfort_food": 12,
+      "healthy_performance": 12,
+      "quick_shift_meals": 10,
+      "pizza_night": 8,
+      "big_crew_feeders": 8,
+      "breakfast_brunch": 6,
+      "global_flavors": 6,
+      "game_day_watch_party": 4,
+      "meal_prep_leftovers": 2,
+      "rookie_friendly": 2
+    }
+  },
+  "collectionCounts": {
+    "golden_100": 5,
+    "performance_meals": 50,
+    "hall_expansion": 74,
+    "breakfast": 62,
+    "bbq": 55,
+    "pizza_night": 20,
+    "smoothies": 10
+  },
+  "totals": {
+    "auditedCollections": 8,
+    "failures": 0,
+    "removed": 3,
+    "replacedInPlace": 1
+  },
+  "failures": []
+}

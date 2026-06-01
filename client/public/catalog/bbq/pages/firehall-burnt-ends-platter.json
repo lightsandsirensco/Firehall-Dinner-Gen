@@ -8,15 +8,15 @@
   "category": "bbq_grill_nights",
   "cuisine": "american",
   "description": "Adapted from classic Kansas City burnt-end tradition (Amazing Ribs, BBQ Pit Boys): brisket point smokes until tender, gets cubed, glazed, and finished until the edges turn sticky and charred.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 420,
   "prepTime": 30,
   "difficulty": "hard",
-  "calories": 951,
-  "protein": 76,
-  "carbs": 52,
-  "fats": 51,
+  "calories": 946,
+  "protein": 75,
+  "carbs": 50,
+  "fats": 52,
   "tags": [
     "protein:beef",
     "format:bbq",
@@ -40,63 +40,63 @@
   "ingredients": [
     {
       "name": "brisket point",
-      "quantity": "6",
+      "quantity": "4.8",
       "unit": "lb",
       "notes": "or untrimmed point from a packer"
     },
     {
       "name": "kosher salt",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp"
     },
     {
       "name": "coarse black pepper",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp"
     },
     {
       "name": "brown sugar",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp"
     },
     {
       "name": "smoked paprika",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp"
     },
     {
       "name": "garlic powder",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp"
     },
     {
       "name": "BBQ sauce",
-      "quantity": "1.5",
+      "quantity": "1 1/4",
       "unit": "cups"
     },
     {
       "name": "honey",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "cup"
     },
     {
       "name": "apple cider vinegar",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp"
     },
     {
       "name": "unsalted butter",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp"
     },
     {
       "name": "dill pickle chips",
-      "quantity": "1.5",
+      "quantity": "1 1/4",
       "unit": "cups"
     },
     {
       "name": "white bread",
-      "quantity": "15",
+      "quantity": "12",
       "unit": "slices"
     }
   ],
@@ -118,7 +118,7 @@
     {
       "stepNumber": 3,
       "title": "Season the point",
-      "instruction": "Pat point dry. Mix salt, pepper, brown sugar, paprika, and garlic powder; rub all sides. Rest 15 minutes while smoker heats to 275°F. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Pat point dry. Mix salt, pepper, brown sugar, paprika, and garlic powder; rub all sides. Rest 15 minutes while smoker heats to 275°F.",
       "minutes": 15,
       "heatLevel": "low"
     },
@@ -153,7 +153,7 @@
     {
       "stepNumber": 8,
       "title": "Caramelize the edges",
-      "instruction": "Spread glazed cubes on sheet pans. Return to smoker or 375°F oven 15–20 minutes, stirring once, until edges char and glaze sets sticky. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Spread glazed cubes on sheet pans. Return to smoker or 375°F oven 15–20 minutes, stirring once, until edges char and glaze sets sticky.",
       "minutes": 20,
       "heatLevel": "medium"
     },
@@ -189,12 +189,25 @@
   "mealPrepNotes": "Smoke point early. Cube and glaze right before service or hold glazed cubes covered at 170°F up to 45 minutes. Re-crisp under broiler 2 minutes if they soften.",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 951,
-    "protein": 76,
-    "carbs": 52,
-    "fats": 51,
+    "calories": 946,
+    "protein": 75,
+    "carbs": 50,
+    "fats": 52,
     "label": "per serving (hall portion)",
-    "source": "estimated"
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/smoker-catalog/firehall-burnt-ends-platter.jpg",
   "heroImageAlt": "Firehall Burnt Ends Platter — crew-sized BBQ spread with visible smoke and bark",
@@ -221,6 +234,6 @@
     "smoked-baked-beans-crew"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T02:29:42.529Z",
+  "generatedAt": "2026-05-31T23:32:23.199Z",
   "contentVersion": 2
 }

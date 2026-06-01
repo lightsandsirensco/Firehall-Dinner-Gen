@@ -8,15 +8,15 @@
   "category": "hall_expansion",
   "cuisine": "hungarian",
   "description": "Beef chuck simmers with onions, potatoes, and a heavy hand of sweet paprika until the broth turns rust-red and meat breaks down tender. Serve in deep bowls with sour cream and rye bread.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 120,
   "prepTime": 30,
   "difficulty": "easy",
-  "calories": 480,
-  "protein": 38,
-  "carbs": 34,
-  "fats": 20,
+  "calories": 745,
+  "protein": 56,
+  "carbs": 41,
+  "fats": 41,
   "tags": [
     "protein:beef",
     "format:stew",
@@ -39,73 +39,73 @@
   "ingredients": [
     {
       "name": "beef chuck roast",
-      "quantity": "4",
+      "quantity": "3.2",
       "unit": "lb",
       "notes": "cut into 1.5-inch cubes",
       "group": "Main"
     },
     {
       "name": "yellow onions",
-      "quantity": "3",
+      "quantity": "2",
       "unit": "whole",
       "notes": "diced",
       "group": "Stew"
     },
     {
       "name": "sweet paprika",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp",
       "group": "Stew"
     },
     {
       "name": "caraway seeds",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tsp",
       "group": "Stew"
     },
     {
       "name": "garlic cloves",
-      "quantity": "5",
+      "quantity": "4",
       "unit": "cloves",
       "notes": "minced",
       "group": "Stew"
     },
     {
       "name": "tomato paste",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "group": "Stew"
     },
     {
       "name": "beef broth",
-      "quantity": "6",
+      "quantity": "4.8",
       "unit": "cups",
       "group": "Stew"
     },
     {
       "name": "russet potatoes",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "lb",
       "notes": "cubed",
       "group": "Stew"
     },
     {
       "name": "red bell pepper",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "whole",
       "notes": "diced",
       "group": "Stew"
     },
     {
       "name": "sour cream",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "cup",
       "notes": "for serving",
       "group": "Finish"
     },
     {
       "name": "rye bread",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "loaf",
       "notes": "sliced",
       "group": "Service"
@@ -143,14 +143,14 @@
     {
       "stepNumber": 5,
       "title": "Simmer the stew",
-      "instruction": "Return beef, add broth and bell pepper. Cover and simmer 1.5 hours until beef starts to tenderize. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Return beef, add broth and bell pepper. Cover and simmer 1.5 hours until beef starts to tenderize. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
       "minutes": 90,
       "heatLevel": ""
     },
     {
       "stepNumber": 6,
       "title": "Add potatoes",
-      "instruction": "Stir in potatoes and simmer uncovered 30–40 minutes until beef and potatoes are fork-tender and broth thickens slightly. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Stir in potatoes and simmer uncovered 30–40 minutes until beef and potatoes are fork-tender and broth thickens slightly. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
       "minutes": 35,
       "heatLevel": ""
     },
@@ -201,11 +201,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 480,
-    "protein": 38,
-    "carbs": 34,
-    "fats": 20,
-    "label": "~480 cal/serving · 38g protein · 4g fiber (est.)"
+    "calories": 745,
+    "protein": 56,
+    "carbs": 41,
+    "fats": 41,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/hall-expansion/hungarian-goulash-crew.jpg",
   "heroImageAlt": "Hungarian Goulash for the Crew — crew-sized firehall meal",

@@ -5,19 +5,19 @@ export const batch03: PerformanceAdaptedRecipe[] = [
   perfRecipe({
     manifest: manifestEntry({
       slug: "mediterranean-baked-fish-tray",
-      title: "Mediterranean Baked Fish Tray",
-      subtitle: "White fish with cherry tomatoes, olives, and capers on one sheet",
+      title: "Mediterranean Baked Cod Tray",
+      subtitle: "Cod with cherry tomatoes, olives, and capers on one sheet",
       protein: "fish",
       cuisine: "Mediterranean",
       mealFormat: "sheet_pan",
-      hook: "One-tray fish dinner with briny Mediterranean punch",
+      hook: "One-tray cod dinner with briny Mediterranean punch",
       prep: 18,
       cook: 20,
       difficulty: "easy",
       sourceId: "tmd-01",
     }),
     description:
-      "Cod or halibut bakes with cherry tomatoes, Kalamata olives, capers, garlic, and olive oil until flaky. Designed for hall-scale portioning.",
+      "Cod fillets bake with cherry tomatoes, Kalamata olives, capers, garlic, and olive oil until flaky. Designed for hall-scale portioning.",
     whyCrewsLikeIt:
       "Light but satisfying after heavy training days. Minimal dishes and big flavor from pantry staples.",
     mealPrepNotes:
@@ -28,7 +28,7 @@ export const batch03: PerformanceAdaptedRecipe[] = [
       "Spoon pan juices over portions at the line for extra flavor.",
     ],
     ingredients: [
-      { name: "cod or halibut fillets", quantity: 4, unit: "lb", notes: "6 oz portions" },
+      { name: "cod fillets", quantity: 4, unit: "lb", notes: "6 oz portions" },
       { name: "cherry tomatoes", quantity: 2, unit: "lb", notes: "halved" },
       { name: "Kalamata olives", quantity: 1, unit: "cup", notes: "pitted, halved" },
       { name: "capers", quantity: 0.25, unit: "cup", notes: "drained" },

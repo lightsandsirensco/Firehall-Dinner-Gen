@@ -8,15 +8,15 @@
   "category": "hall_expansion",
   "cuisine": "american",
   "description": "Seasoned beef meatballs are baked, glazed with sticky BBQ sauce, and threaded onto skewers with pickled onions and cherry tomatoes. A quick vinegar slaw on the side keeps the bite balanced.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 25,
   "prepTime": 25,
   "difficulty": "easy",
-  "calories": 380,
-  "protein": 28,
-  "carbs": 22,
-  "fats": 20,
+  "calories": 488,
+  "protein": 40,
+  "carbs": 28,
+  "fats": 25,
   "tags": [
     "protein:beef",
     "format:handheld",
@@ -40,13 +40,13 @@
   "ingredients": [
     {
       "name": "ground beef (85/15)",
-      "quantity": "3",
+      "quantity": "2.4",
       "unit": "lb",
       "group": "Main"
     },
     {
       "name": "breadcrumbs",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "cup",
       "group": "Main"
     },
@@ -58,43 +58,43 @@
     },
     {
       "name": "garlic powder",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tsp",
       "group": "Seasoning"
     },
     {
       "name": "onion powder",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tsp",
       "group": "Seasoning"
     },
     {
       "name": "kosher salt",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tsp",
       "group": "Seasoning"
     },
     {
       "name": "BBQ sauce",
-      "quantity": "1.5",
+      "quantity": "1 1/4",
       "unit": "cups",
       "group": "Glaze"
     },
     {
       "name": "cherry tomatoes",
-      "quantity": "20",
+      "quantity": "16",
       "unit": "whole",
       "group": "Skewer"
     },
     {
       "name": "pickled red onions",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "cup",
       "group": "Skewer"
     },
     {
       "name": "shredded cabbage mix",
-      "quantity": "8",
+      "quantity": "6.4",
       "unit": "cups",
       "group": "Slaw"
     }
@@ -117,7 +117,7 @@
     {
       "stepNumber": 3,
       "title": "Mix and roll meatballs",
-      "instruction": "Combine beef, breadcrumbs, eggs, garlic powder, onion powder, and salt until just mixed. Roll into 40 equal meatballs about 1.5 inches across for two per skewer. Plan about 15 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Combine beef, breadcrumbs, eggs, garlic powder, onion powder, and salt until just mixed. Roll into 40 equal meatballs about 1.5 inches across for two per skewer. Plan about 15 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
       "minutes": 15,
       "heatLevel": ""
     },
@@ -175,11 +175,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 380,
-    "protein": 28,
-    "carbs": 22,
-    "fats": 20,
-    "label": "~380 cal/serving · 28g protein · 2g fiber (est.)"
+    "calories": 488,
+    "protein": 40,
+    "carbs": 28,
+    "fats": 25,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": true
+    }
   },
   "heroImage": "/images/hall-expansion/bbq-meatball-skewers.jpg",
   "heroImageAlt": "BBQ Meatball Skewers — crew-sized firehall meal",

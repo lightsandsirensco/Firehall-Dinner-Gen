@@ -8,15 +8,15 @@
   "category": "bbq_grill_nights",
   "cuisine": "american",
   "description": "Adapted from classic competition chicken thigh tradition (Traeger, Meat Church): bone-in thighs get trimmed and squared, rubbed, smoked at 275°F, glazed, and finished until skin bites and meat hits 175°F.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 90,
   "prepTime": 30,
   "difficulty": "medium",
-  "calories": 269,
-  "protein": 30,
-  "carbs": 20,
-  "fats": 7,
+  "calories": 332,
+  "protein": 42,
+  "carbs": 19,
+  "fats": 9,
   "tags": [
     "protein:chicken",
     "format:grill",
@@ -40,58 +40,58 @@
   "ingredients": [
     {
       "name": "bone-in chicken thighs",
-      "quantity": "12",
+      "quantity": "9.6",
       "unit": "pieces",
       "notes": "about 6 lb, skin-on"
     },
     {
       "name": "kosher salt",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp"
     },
     {
       "name": "brown sugar",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp"
     },
     {
       "name": "smoked paprika",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp"
     },
     {
       "name": "garlic powder",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp"
     },
     {
       "name": "onion powder",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tbsp"
     },
     {
       "name": "cayenne",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tsp"
     },
     {
       "name": "honey",
-      "quantity": "0.33",
+      "quantity": "1/4",
       "unit": "cup"
     },
     {
       "name": "BBQ sauce",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "cup"
     },
     {
       "name": "apple cider vinegar",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp"
     },
     {
       "name": "butter",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp"
     }
   ],
@@ -154,7 +154,7 @@
     },
     {
       "stepNumber": 9,
-      "title": "Tonight's board",
+      "title": "Cooking step",
       "instruction": "Arrange thighs on a tray, glaze side up. Extra glaze on the side for dipping. Plan about 3 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 3,
       "heatLevel": ""
@@ -184,12 +184,25 @@
   "mealPrepNotes": "Trim thighs early. Smoke in two batches if needed. Hold finished thighs covered at 170°F up to 45 minutes; glaze right before service.",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 269,
-    "protein": 30,
-    "carbs": 20,
-    "fats": 7,
+    "calories": 332,
+    "protein": 42,
+    "carbs": 19,
+    "fats": 9,
     "label": "per serving (hall portion)",
-    "source": "estimated"
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": true,
+      "performanceMeal": true
+    }
   },
   "heroImage": "/images/smoker-catalog/competition-bbq-chicken-thighs.jpg",
   "heroImageAlt": "Competition BBQ Chicken Thighs — crew-sized BBQ spread with visible smoke and bark",
@@ -217,6 +230,6 @@
     "hickory-smoked-chicken-breast"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T02:29:42.531Z",
+  "generatedAt": "2026-05-31T23:32:23.201Z",
   "contentVersion": 2
 }

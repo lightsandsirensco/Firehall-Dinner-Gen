@@ -1,0 +1,148 @@
+{
+  "slug": "green-chile-breakfast-burritos",
+  "title": "Green Chile Breakfast Burritos",
+  "subtitle": "Flour tortillas stuffed with eggs, potatoes, bacon, and Hatch chile sauce.",
+  "description": "Green chile, potatoes, eggs, and cheese in flour tortillas — Southwest hall breakfast with real heat.",
+  "filters": [
+    "feed_a_crew",
+    "high_protein",
+    "breakfast_sandwiches"
+  ],
+  "tags": [
+    "breakfast-burrito",
+    "green-chile",
+    "hatch",
+    "bacon",
+    "handheld"
+  ],
+  "crewSize": 8,
+  "baseServings": 8,
+  "prepTime": 25,
+  "cookTime": 25,
+  "totalTime": 50,
+  "difficulty": "medium",
+  "ingredients": [
+    {
+      "name": "large eggs",
+      "quantity": "14",
+      "notes": "soft-scrambled",
+      "group": "Filling"
+    },
+    {
+      "name": "bacon",
+      "quantity": "1.6",
+      "notes": "cooked crisp and crumbled",
+      "group": "Filling"
+    },
+    {
+      "name": "diced breakfast potatoes",
+      "quantity": "3",
+      "notes": "crisped on the griddle",
+      "group": "Filling"
+    },
+    {
+      "name": "shredded cheddar",
+      "quantity": "2.4",
+      "notes": "sharp or medium",
+      "group": "Filling"
+    },
+    {
+      "name": "roasted green chile sauce",
+      "quantity": "2.4",
+      "notes": "Hatch-style, mild or hot",
+      "group": "Sauce"
+    },
+    {
+      "name": "large flour tortillas",
+      "quantity": "8",
+      "notes": "12-inch, warmed",
+      "group": "Build"
+    },
+    {
+      "name": "sour cream",
+      "quantity": "3/4",
+      "notes": "for the line",
+      "group": "Finish"
+    },
+    {
+      "name": "cilantro",
+      "quantity": "3/8",
+      "notes": "chopped, plus lime wedges",
+      "group": "Finish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Crisp potatoes and bacon",
+      "instruction": "Cook bacon in sheet pans at 400°F until crisp, drain, and crumble. Render bacon fat on the griddle and crisp diced potatoes in a single layer until golden on all sides; season with salt and pepper.",
+      "minutes": 15
+    },
+    {
+      "stepNumber": 2,
+      "title": "Scramble eggs",
+      "instruction": "Soft-scramble eggs in batches over low heat with butter—they should look glossy and barely set. Fold in half the cheese off heat so it melts gently without squeezing out moisture.",
+      "minutes": 8
+    },
+    {
+      "stepNumber": 3,
+      "title": "Warm tortillas and sauce",
+      "instruction": "Warm green chile sauce in a pot over low heat. Steam or griddle tortillas until pliable so they roll without tearing at the seams.",
+      "minutes": 5
+    },
+    {
+      "stepNumber": 4,
+      "title": "Roll the burritos",
+      "instruction": "Divide eggs, potatoes, bacon, and cheese across tortillas. Fold sides in, roll tight, and place seam-side down on a sheet pan. Optional: griddle seam-side down 2 minutes to seal.",
+      "minutes": 10
+    },
+    {
+      "stepNumber": 5,
+      "title": "Serve smothered or wrapped",
+      "instruction": "Serve burritos whole in foil for handheld line service, or split two per plate and ladle warm green chile sauce over the top with sour cream and cilantro. Add lime at the line.",
+      "minutes": 5
+    }
+  ],
+  "nutrition": {
+    "calories": 576,
+    "protein": 32,
+    "carbs": 36,
+    "fat": 34,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "stationWorkflow": [
+    "Set up a rolling station with all fillings in hotel pans before scrambling the last batch of eggs.",
+    "Warm tortillas in batches of five so they do not dry out on a hot holding surface.",
+    "Keep green chile sauce on low with a ladle ready—smothered burritos need sauce at serving temp."
+  ],
+  "cleanupNotes": [
+    "Wipe bacon grease from sheet pans while still warm with paper towels before washing.",
+    "Soak griddle scrapers immediately after potato service—starch burns on fast."
+  ],
+  "leftovers": [
+    "Wrap burritos individually in foil and reheat at 325°F for 15 minutes; open foil last 5 minutes to crisp.",
+    "Chop leftover burritos into a chilaquiles bake with extra green chile sauce and cheese."
+  ],
+  "heroImage": "/images/breakfast/green-chile-breakfast-burritos.jpg",
+  "thumbImage": "/images/thumbs/breakfast/green-chile-breakfast-burritos.jpg",
+  "imageAlt": "Green chile breakfast burritos with eggs, bacon, and potatoes for the crew",
+  "publishedAt": "2026-05-31T18:33:00.830Z",
+  "updatedAt": "2026-05-31T18:34:15.374Z",
+  "readMinutes": 8,
+  "seoTitle": "Green Chile Breakfast Burritos | Firehall Breakfast",
+  "collectionTier": "firehall_classic"
+}

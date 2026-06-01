@@ -8,8 +8,8 @@
   "category": "bbq_grill_nights",
   "cuisine": "italian-american",
   "description": "Ripe peach halves grill until caramelized, serve on arugula with burrata, prosciutto crisps, basil, and balsamic reduction for ten.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 12,
   "prepTime": 15,
   "difficulty": "medium",
@@ -39,66 +39,66 @@
   "ingredients": [
     {
       "name": "ripe peaches",
-      "quantity": "10",
+      "quantity": "8",
       "unit": "whole",
       "notes": "halved and pitted",
       "group": "Main"
     },
     {
       "name": "burrata cheese",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "lb",
       "notes": "about 10 balls",
       "group": "Salad"
     },
     {
       "name": "baby arugula",
-      "quantity": "8",
+      "quantity": "6.4",
       "unit": "cups",
       "group": "Salad"
     },
     {
       "name": "prosciutto di Parma",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "lb",
       "notes": "crisped",
       "group": "Salad"
     },
     {
       "name": "pistachios",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "cup",
       "notes": "chopped",
       "group": "Finish"
     },
     {
       "name": "Prosecco reduction",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "cup",
       "group": "Finish"
     },
     {
       "name": "peach nectar",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "tbsp",
       "group": "Grill"
     },
     {
       "name": "fresh mint",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "cup",
       "notes": "torn",
       "group": "Finish"
     },
     {
       "name": "Maldon salt",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "tsp",
       "group": "Seasoning"
     },
     {
       "name": "lavender honey",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "tbsp",
       "group": "Grill"
     }
@@ -107,7 +107,7 @@
     {
       "stepNumber": 1,
       "title": "Crisp prosciutto",
-      "instruction": "Bake prosciutto on sheet pan at 400°F until crisp, 8–10 minutes. Crumble. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Bake prosciutto on sheet pan at 400°F until crisp, 8–10 minutes. Crumble. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Use pistachios, Prosecco reduction, fresh mint as listed — measure each before heat goes on.",
       "minutes": 10,
       "heatLevel": "medium"
     },
@@ -142,7 +142,7 @@
     {
       "stepNumber": 6,
       "title": "Plate arugula base",
-      "instruction": "Toss arugula lightly with olive oil and pepper. Spread on platters. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Toss arugula lightly with olive oil and pepper. Spread on platters. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 5,
       "heatLevel": ""
     },
@@ -211,6 +211,6 @@
     "brisket-style-beef-sandwiches-au-jus"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T02:29:42.538Z",
+  "generatedAt": "2026-05-31T23:32:23.209Z",
   "contentVersion": 2
 }

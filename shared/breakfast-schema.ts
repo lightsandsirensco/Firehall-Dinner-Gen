@@ -21,6 +21,13 @@ export const breakfastFilterSchema = z.enum([
 ]);
 export type BreakfastFilterId = z.infer<typeof breakfastFilterSchema>;
 
+export const breakfastCollectionTierSchema = z.enum([
+  "firehall_classic",
+  "healthier_hall",
+  "performance",
+]);
+export type BreakfastCollectionTier = z.infer<typeof breakfastCollectionTierSchema>;
+
 export const breakfastIngredientSchema = z.object({
   name: z.string().trim().min(1).max(140),
   quantity: z.string().trim().max(80).optional(),
@@ -72,8 +79,8 @@ export const breakfastRecipePageSchema = z.object({
   filters: z.array(breakfastFilterSchema).min(1).max(6),
   tags: z.array(z.string().trim().min(2).max(48)).min(2).max(14),
 
-  crewSize: z.number().int().min(4).max(12),
-  baseServings: z.number().int().min(4).max(12).optional(),
+  crewSize: z.number().int().min(2).max(16),
+  baseServings: z.number().int().min(2).max(16).optional(),
   prepTime: z.number().int().min(0).max(180),
   cookTime: z.number().int().min(5).max(240),
   totalTime: z.number().int().min(5).max(300),
@@ -96,6 +103,7 @@ export const breakfastRecipePageSchema = z.object({
   updatedAt: z.string().trim().max(40),
   readMinutes: z.number().int().min(3).max(20),
   seoTitle: z.string().trim().max(80).optional(),
+  collectionTier: breakfastCollectionTierSchema.optional(),
 });
 
 export type BreakfastRecipePage = z.infer<typeof breakfastRecipePageSchema>;
@@ -111,6 +119,7 @@ export const breakfastIndexEntrySchema = z.object({
   heroImage: z.string(),
   thumbImage: z.string(),
   publishedAt: z.string(),
+  collectionTier: breakfastCollectionTierSchema.optional(),
 });
 export type BreakfastIndexEntry = z.infer<typeof breakfastIndexEntrySchema>;
 
@@ -118,6 +127,7 @@ export const breakfastCatalogIndexSchema = z.object({
   version: z.number().int(),
   generatedAt: z.string(),
   recipeCount: z.number().int(),
+  collection: z.enum(["primary", "performance"]).optional(),
   recipes: z.array(breakfastIndexEntrySchema),
 });
 export type BreakfastCatalogIndex = z.infer<typeof breakfastCatalogIndexSchema>;

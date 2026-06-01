@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Flame, Clock, Trophy, Check, Vote as VoteIcon, Lock, Timer, Users, ChevronRight } from "lucide-react";
 import { HeroHeader } from "@/components/hero-header";
 import type { HallVoteResponse, HallVoteOption } from "@shared/schema";
+import { trackHallVoteCast } from "@/lib/analytics";
 
 function VoteBar({ option, totalVotes, isWinner, isUserVote }: {
   option: HallVoteOption;
@@ -122,6 +123,14 @@ export default function VotePage() {
       const data: HallVoteResponse = await res.json();
       setVote(data);
       setHasVoted(true);
+      const chosen = data.options.find((o) => o.option_id === optionId);
+      if (voteId && chosen) {
+        trackHallVoteCast({
+          voteId,
+          optionId,
+          optionName: chosen.name,
+        });
+      }
     } catch {
       setError("Failed to submit vote");
     } finally {

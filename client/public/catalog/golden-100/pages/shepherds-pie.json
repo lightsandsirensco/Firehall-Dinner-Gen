@@ -1,22 +1,22 @@
 {
   "slug": "shepherds-pie",
-  "title": "Shepherd's Pie",
-  "displayTitle": "Shepherd's Pie",
-  "seoTitle": "Shepherd's Pie | Firefighter Meal",
-  "shortDescription": "Rich filling, golden potato cap",
-  "subtitle": "Rich filling, golden potato cap",
+  "title": "Shepherd's Pie with Greek Salad",
+  "displayTitle": "Shepherd's Pie with Greek Salad",
+  "seoTitle": "Shepherd's Pie with Greek Salad | Firefighter Meal",
+  "shortDescription": "Golden potato cap over rich filling, Greek salad on the side",
+  "subtitle": "Golden potato cap over rich filling, Greek salad on the side",
   "category": "comfort_food",
   "cuisine": "british",
-  "description": "Rich filling, golden potato cap. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
+  "description": "Golden potato cap over rich filling, Greek salad on the side",
   "crewSize": 8,
   "baseServings": 8,
   "cookTime": 113,
   "prepTime": 23,
   "difficulty": "medium",
-  "calories": 330,
-  "protein": 8,
-  "carbs": 55,
-  "fats": 9,
+  "calories": 1232,
+  "protein": 79,
+  "carbs": 61,
+  "fats": 75,
   "tags": [
     "protein:beef",
     "format:plated_main",
@@ -66,6 +66,42 @@
       "quantity": "1",
       "unit": "batch",
       "group": "Potato topping"
+    },
+    {
+      "name": "Romaine lettuce, chopped",
+      "quantity": "4",
+      "unit": "heads",
+      "group": "Greek salad"
+    },
+    {
+      "name": "Cucumber, sliced",
+      "quantity": "4",
+      "unit": "large",
+      "group": "Greek salad"
+    },
+    {
+      "name": "Cherry tomatoes, halved",
+      "quantity": "2",
+      "unit": "pints",
+      "group": "Greek salad"
+    },
+    {
+      "name": "Feta cheese, crumbled",
+      "quantity": "1",
+      "unit": "lb",
+      "group": "Greek salad"
+    },
+    {
+      "name": "Kalamata olives",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Greek salad"
+    },
+    {
+      "name": "Red wine vinegar and olive oil",
+      "quantity": "1",
+      "unit": "batch",
+      "group": "Greek salad"
     }
   ],
   "steps": [
@@ -103,36 +139,36 @@
     "Taste for salt at the end — hall palates run salty after long shifts."
   ],
   "tonightSpread": [
-    "Plate Shepherd's Pie with sides in separate pans so the crew can mix portions.",
-    "Line up Shepherd's Pie on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Plate Shepherd's Pie with Greek Salad with sides in separate pans so the crew can mix portions.",
+    "Line up Shepherd's Pie with Greek Salad on the main counter with serving spoons — firefighters grab fast between calls.",
     "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
   ],
   "leftovers": [
     "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
     "Label trays with date and reheat to 165°F minimum before second shift."
   ],
-  "whyCrewsLikeIt": "Rich filling, golden potato cap. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
+  "whyCrewsLikeIt": "Golden potato cap over rich filling, Greek salad on the side. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
   "substitutions": [],
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 330,
-    "protein": 8,
-    "carbs": 55,
-    "fats": 9,
+    "calories": 1232,
+    "protein": 79,
+    "carbs": 61,
+    "fats": 75,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
-      "highProtein": false,
-      "under700Calories": true,
-      "under30gFat": true,
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
       "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": false
     },
     "badgeCandidates": {
-      "highProtein": false,
-      "lighterOption": true,
+      "highProtein": true,
+      "lighterOption": false,
       "performanceMeal": false
     }
   },
@@ -144,14 +180,14 @@
   "firefighterScore": 100,
   "popularityWeight": 3.6,
   "searchTerms": [
-    "shepherd's pie",
+    "shepherd's pie with greek salad",
     "shepherds pie",
     "british",
     "beef",
     "plated main",
     "comfort",
     "hearty",
-    "shepherds pie ground beef",
+    "shepherds pie ground beef greek salad",
     "golden_100"
   ],
   "relatedSlugs": [
@@ -164,6 +200,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-05-30T23:27:14.524Z",
+  "generatedAt": "2026-06-01T01:40:02.066Z",
   "contentVersion": 2
 }

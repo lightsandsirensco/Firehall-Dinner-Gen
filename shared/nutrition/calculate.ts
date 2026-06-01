@@ -109,7 +109,11 @@ export function calculateNutritionFromIngredients(
       carbs: totalCarbs / servings,
       fat: totalFat / servings,
     };
-  } else if (options.existing?.calories) {
+  } else if (
+    options.existing?.calories &&
+    options.existing.calories > 0 &&
+    (options.existing.protein ?? 0) > 0
+  ) {
     perServing = {
       calories: options.existing.calories,
       protein: options.existing.protein ?? 0,
