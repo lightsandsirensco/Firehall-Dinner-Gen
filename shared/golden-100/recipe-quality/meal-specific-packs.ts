@@ -14,8 +14,15 @@ type Step = GoldenRecipePageStep;
 export type { MealSpecificPack };
 type Pack = MealSpecificPack;
 
-function m(name: string, quantity: number, unit: string, group?: string, notes?: string): Ing {
-  return { name, quantity: String(quantity), unit, group, notes };
+function m(
+  name: string,
+  quantity: number,
+  unit: string,
+  group?: string,
+  notes?: string,
+  optional?: boolean,
+): Ing {
+  return { name, quantity: String(quantity), unit, group, notes, optional };
 }
 
 function mult(n: number, scale: number): number {
@@ -640,6 +647,103 @@ const PACKS: Record<string, (scale: number, def: GoldenRecipeDefinition) => Pack
       step(2, "Sweat peppers and onions", "In the same pan, cook sliced peppers and onions 10–12 minutes until soft with golden edges.", 12, "medium"),
       step(3, "Combine and simmer", "Return sausage; add marinara if using. Simmer 5 minutes so flavors meld.", 6, "medium-low"),
       step(4, "Serve on rolls", "Pile sausage and peppers into split hoagie rolls. Sausage Peppers & Onions is a hall classic — keep extra napkins out.", 5, "low"),
+    ],
+  }),
+
+  "bbq-chicken-mac-and-cheese": (scale) => ({
+    prepMinutes: 20,
+    cookMinutes: 45,
+    ingredients: [
+      m(
+        "Boneless skinless chicken thighs",
+        mult(4, scale),
+        "lb",
+        "Protein",
+        "~6 oz cooked shredded per firefighter (4 lb raw)",
+      ),
+      m("Smoked paprika", mult(2, scale), "tbsp", "Chicken rub"),
+      m("Garlic powder", mult(2, scale), "tbsp", "Chicken rub"),
+      m("Onion powder", mult(2, scale), "tbsp", "Chicken rub"),
+      m("Kosher salt", mult(1.5, scale), "tbsp", "Chicken rub"),
+      m("Black pepper", mult(1, scale), "tbsp", "Chicken rub"),
+      m("BBQ sauce", mult(1.5, scale), "cups", "BBQ", "toss and drizzle"),
+      m("Dry elbow macaroni", mult(1.5, scale), "lb", "Mac", "~1.5 cups prepared mac per firefighter"),
+      m("Unsalted butter", mult(8, scale), "tbsp", "Cheese sauce", "1/2 cup"),
+      m("All-purpose flour", mult(8, scale), "tbsp", "Cheese sauce", "1/2 cup"),
+      m("Whole milk", mult(4, scale), "cups", "Cheese sauce"),
+      m("Sharp cheddar, shredded", mult(16, scale), "oz", "Cheese"),
+      m("Mozzarella, shredded", mult(8, scale), "oz", "Cheese"),
+      m("Crispy fried onions", mult(0.75, scale), "cup", "Topping", "garnish at the line", true),
+      m("Green onions, sliced", mult(2, scale), "bunches", "Garnish", "optional garnish", true),
+    ],
+    steps: [
+      step(
+        1,
+        "Season the chicken",
+        "Pat chicken thighs dry. Mix smoked paprika, garlic powder, onion powder, salt, and pepper; coat all sides. Let sit 10 minutes while the oven preheats to 375°F — seasoned chicken browns better than wet, pale thighs.",
+        10,
+      ),
+      step(
+        2,
+        "Cook chicken until shreddable",
+        "Arrange thighs on a rimmed sheet tray. Bake at 375°F 28–35 minutes until the thickest piece reads 165°F on an instant-read thermometer and juices run clear. Visual cue: edges start to caramelize and the meat springs back when pressed.",
+        35,
+        "medium",
+      ),
+      step(
+        3,
+        "Shred and sauce the chicken",
+        "Rest chicken 8 minutes, then shred with two forks — you want pulled strands, not cubes. Toss with about 1 cup of the BBQ sauce until glossy (reserve the rest for drizzling before bake). This is BBQ chicken mac, not pulled pork mac: no pork shoulder, no eight-hour smoke.",
+        12,
+        "low",
+      ),
+      step(
+        4,
+        "Par-cook the macaroni",
+        "Boil elbow macaroni in well-salted water 2 minutes shy of al dente (about 6–7 minutes for standard elbows). Drain thoroughly — wet pasta makes a soupy bake.",
+        10,
+        "medium-high",
+      ),
+      step(
+        5,
+        "Build the cheese sauce",
+        "Melt butter in a large pot over medium heat. Whisk in flour; cook 1 minute until it smells nutty. Whisk in milk in steady streams until smooth. Simmer 3–4 minutes until thick enough to coat a spoon. Off heat, stir in cheddar and mozzarella until melted. The sauce should look like thick nacho cheese, not runny milk.",
+        12,
+        "medium",
+      ),
+      step(
+        6,
+        "Fold mac and BBQ chicken together",
+        "Fold drained mac into cheese sauce, then fold in shredded BBQ chicken in wide streaks so orange cheese and sauced chicken both show — do not mash into one uniform color. Taste for salt; BBQ sauce varies in sodium.",
+        8,
+      ),
+      step(
+        7,
+        "Pan up for the crew",
+        "Butter two full-size hotel pans or one deep half-pan for eight firefighters. Spread mac mixture evenly. Drizzle remaining BBQ sauce in thin ribbons across the top so it caramelizes in the oven. Scatter extra cheddar and mozzarella on top for a cheese pull.",
+        10,
+      ),
+      step(
+        8,
+        "Bake until bubbling with cheese pull",
+        "Bake uncovered at 375°F 20–25 minutes until edges bubble, top is deep golden, and a spoon lift shows stretchy cheese. Visual cue: BBQ sauce edges look tacky and mahogany, not pale pink. If the top browns before the center is hot, tent foil and continue baking until the center probes 165°F.",
+        25,
+        "medium",
+      ),
+      step(
+        9,
+        "Hold through call interruptions",
+        "If tones drop mid-service, cover the tray with vented foil and hold at 200°F up to 45 minutes. Note hold time on the pan. Before serving, loosen tight mac with a splash of milk stirred into the corner — held mac sets like concrete.",
+        5,
+        "low",
+      ),
+      step(
+        10,
+        "Serve and garnish",
+        "Rest 5 minutes so scoops hold together. Portion about 1.5 cups mac and cheese plus a generous scoop of BBQ chicken per firefighter (~6 oz cooked chicken each). Top with crispy fried onions and green onions at the line, not baked in. Serve with a spatula from the hotel pan — hearty, not eating-contest piles.",
+        5,
+        "low",
+      ),
     ],
   }),
 };

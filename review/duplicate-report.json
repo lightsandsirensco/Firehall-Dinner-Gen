@@ -1,33 +1,45 @@
 {
-  "generatedAt": "2026-06-01T01:59:11.803Z",
+  "generatedAt": "2026-06-02T13:17:43.517Z",
   "catalogSummary": {
-    "totalRecipes": 368,
+    "totalRecipes": 369,
     "byCollection": {
       "bbq": 55,
       "breakfast": 67,
       "hall_expansion": 74,
       "performance_meals": 50,
-      "golden_100": 100,
+      "golden_100": 101,
       "smoothies": 10,
       "pizza_night": 12
     },
-    "exactDuplicateRecipes": 32,
-    "nearDuplicateRecipes": 34,
-    "sameMealDifferentNameRecipes": 139,
-    "uniqueRecipes": 163,
-    "duplicatePairCount": 278
+    "exactDuplicateRecipes": 40,
+    "nearDuplicateRecipes": 32,
+    "sameMealDifferentNameRecipes": 132,
+    "uniqueRecipes": 165,
+    "duplicatePairCount": 273
   },
   "topOverrepresentedMealTypes": [
     {
       "archetype": "smoked_meal",
       "label": "Smoker-forward meal",
-      "count": 89,
+      "count": 90,
       "examples": [
         "Alabama White Sauce Pulled Pork",
         "Andouille Po Boy Rolls for the Crew",
         "Applewood Grilled Pork Shoulder Steaks",
         "BBQ Bacon Cheddar Burgers",
         "BBQ Breakfast Hash"
+      ]
+    },
+    {
+      "archetype": "soup_chili",
+      "label": "Soup / chili / stew",
+      "count": 30,
+      "examples": [
+        "Beef Barley Soup",
+        "Hall-Sized Beef and Bean Chili",
+        "Bun Bo Hue Noodle Soup",
+        "Chicken and Dumplings",
+        "Chicken Paprikash for the Hall"
       ]
     },
     {
@@ -43,18 +55,6 @@
       ]
     },
     {
-      "archetype": "soup_chili",
-      "label": "Soup / chili / stew",
-      "count": 26,
-      "examples": [
-        "Beef Barley Soup",
-        "Hall-Sized Beef and Bean Chili",
-        "Bun Bo Hue Noodle Soup",
-        "Chicken and Dumplings",
-        "Chicken Paprikash for the Hall"
-      ]
-    },
-    {
       "archetype": "sandwich_handheld",
       "label": "Sandwich / sub / hoagie",
       "count": 22,
@@ -64,6 +64,30 @@
         "Blackstone Steak Sandwiches",
         "Breakfast Sandwich Trays",
         "Brisket-Style Beef Sandwiches"
+      ]
+    },
+    {
+      "archetype": "pasta_red_sauce",
+      "label": "Pasta with red sauce",
+      "count": 18,
+      "examples": [
+        "Baked Ziti",
+        "Giant Batch Lasagna",
+        "Beef Stroganoff",
+        "Chicken Parm",
+        "Cottage Cheese Protein Pasta Bake"
+      ]
+    },
+    {
+      "archetype": "chicken_bbq",
+      "label": "BBQ chicken",
+      "count": 18,
+      "examples": [
+        "BBQ Chicken Bowls",
+        "BBQ Chicken Mac and Cheese",
+        "BBQ Chicken Pizza",
+        "BBQ Chicken Sliders",
+        "Beer Can Chicken"
       ]
     },
     {
@@ -79,39 +103,15 @@
       ]
     },
     {
-      "archetype": "pasta_red_sauce",
-      "label": "Pasta with red sauce",
-      "count": 17,
-      "examples": [
-        "Baked Ziti",
-        "Giant Batch Lasagna",
-        "Beef Stroganoff",
-        "Chicken Parm",
-        "Cottage Cheese Protein Pasta Bake"
-      ]
-    },
-    {
-      "archetype": "chicken_bbq",
-      "label": "BBQ chicken",
-      "count": 17,
-      "examples": [
-        "BBQ Chicken Bowls",
-        "BBQ Chicken Pizza",
-        "BBQ Chicken Sliders",
-        "Beer Can Chicken",
-        "Grilled Chicken Souvlaki"
-      ]
-    },
-    {
       "archetype": "creamy_chicken_pasta",
       "label": "Creamy chicken pasta",
-      "count": 16,
+      "count": 17,
       "examples": [
+        "BBQ Chicken Mac and Cheese",
         "Beef Stroganoff",
         "Chicken Alfredo Bake",
         "Chicken Parm",
-        "Chili Mac Skillet",
-        "Cottage Cheese Protein Pasta Bake"
+        "Chili Mac Skillet"
       ]
     },
     {
@@ -134,7 +134,7 @@
         "BBQ Chicken Bowls",
         "Cajun Chicken Rice Bowl",
         "Ginger Soy Chicken Rice Bowls",
-        "Greek Chicken Bowls",
+        "Smoky Chicken Thighs Bowls",
         "Honey Garlic Chicken Rice Bowls"
       ]
     },
@@ -151,15 +151,15 @@
       ]
     },
     {
-      "archetype": "sheet_pan_generic",
-      "label": "Sheet pan (non-chicken)",
-      "count": 8,
+      "archetype": "burger_variation",
+      "label": "Burger / smash burger variation",
+      "count": 7,
       "examples": [
-        "Crispy Garlic Pork",
-        "Meat Lover's Sheet Pan Pizza",
-        "Crispy Honey Chili Eggs",
-        "Crispy Honey Chili Sausage",
-        "Crispy Honey Chili Sausage"
+        "BBQ Bacon Cheddar Burgers",
+        "Firehall Double Smash Burgers BBQ",
+        "Giardiniera Smash Sausage Hoagies",
+        "Hall Burger Bar",
+        "Hall Slider Bar"
       ]
     }
   ],
@@ -264,21 +264,21 @@
         "BBQ Chicken Bowls",
         "Cajun Chicken Rice Bowl",
         "Ginger Soy Chicken Rice Bowls",
-        "Greek Chicken Bowls",
+        "Smoky Chicken Thighs Bowls",
         "Honey Garlic Chicken Rice Bowls",
         "Performance Chicken Burrito Bowls"
       ]
     },
     {
       "pattern": "Another creamy chicken pasta variation",
-      "count": 16,
+      "count": 17,
       "examples": [
+        "BBQ Chicken Mac and Cheese",
         "Beef Stroganoff",
         "Chicken Alfredo Bake",
         "Chicken Parm",
         "Chili Mac Skillet",
-        "Cottage Cheese Protein Pasta Bake",
-        "Creamy Chicken Penne Alfredo"
+        "Cottage Cheese Protein Pasta Bake"
       ]
     },
     {
@@ -295,12 +295,13 @@
     },
     {
       "pattern": "Another sheet pan chicken variation",
-      "count": 4,
+      "count": 5,
       "examples": [
         "Lemon Garlic Chicken Tray Bake",
         "Crispy Garlic Chicken",
-        "Sheet Pan Chicken Fajitas",
-        "Sheet Pan Chicken Trays"
+        "Crispy Honey Chili Chicken Thighs",
+        "Crispy Honey Chili Chicken Thighs",
+        "Crispy Honey Chili Chicken Thighs"
       ]
     },
     {
@@ -1220,60 +1221,6 @@
         },
         {
           "slugA": "bbq-chicken-bowls",
-          "slugB": "greek-chicken-bowls",
-          "titleA": "BBQ Chicken Bowls",
-          "titleB": "Greek Chicken Bowls",
-          "overall": 72,
-          "titleScore": 71,
-          "proteinScore": 100,
-          "cuisineScore": 0,
-          "cookingMethodScore": 100,
-          "mealFormatScore": 100,
-          "ingredientScore": 25,
-          "sideDishScore": 10,
-          "sharedArchetypes": [
-            "chicken_rice_bowl"
-          ],
-          "category": "SAME_MEAL_DIFFERENT_NAME"
-        },
-        {
-          "slugA": "bbq-chicken-bowls",
-          "slugB": "street-corn-chicken",
-          "titleA": "BBQ Chicken Bowls",
-          "titleB": "Mexican Street Corn Chicken Bowls",
-          "overall": 69,
-          "titleScore": 41,
-          "proteinScore": 100,
-          "cuisineScore": 0,
-          "cookingMethodScore": 100,
-          "mealFormatScore": 100,
-          "ingredientScore": 34,
-          "sideDishScore": 25,
-          "sharedArchetypes": [
-            "chicken_rice_bowl"
-          ],
-          "category": "SAME_MEAL_DIFFERENT_NAME"
-        },
-        {
-          "slugA": "bbq-chicken-bowls",
-          "slugB": "performance-burrito-bowls",
-          "titleA": "BBQ Chicken Bowls",
-          "titleB": "Performance Chicken Burrito Bowls",
-          "overall": 68,
-          "titleScore": 40,
-          "proteinScore": 100,
-          "cuisineScore": 0,
-          "cookingMethodScore": 100,
-          "mealFormatScore": 100,
-          "ingredientScore": 27,
-          "sideDishScore": 27,
-          "sharedArchetypes": [
-            "chicken_rice_bowl"
-          ],
-          "category": "SAME_MEAL_DIFFERENT_NAME"
-        },
-        {
-          "slugA": "bbq-chicken-bowls",
           "slugB": "cajun-chicken-rice-bowl",
           "titleA": "BBQ Chicken Bowls",
           "titleB": "Cajun Chicken Rice Bowl",
@@ -1287,6 +1234,93 @@
           "sideDishScore": 17,
           "sharedArchetypes": [
             "chicken_rice_bowl"
+          ],
+          "category": "SAME_MEAL_DIFFERENT_NAME"
+        },
+        {
+          "slugA": "bbq-chicken-bowls",
+          "slugB": "performance-burrito-bowls",
+          "titleA": "BBQ Chicken Bowls",
+          "titleB": "Performance Chicken Burrito Bowls",
+          "overall": 67,
+          "titleScore": 40,
+          "proteinScore": 100,
+          "cuisineScore": 0,
+          "cookingMethodScore": 100,
+          "mealFormatScore": 100,
+          "ingredientScore": 24,
+          "sideDishScore": 25,
+          "sharedArchetypes": [
+            "chicken_rice_bowl"
+          ],
+          "category": "SAME_MEAL_DIFFERENT_NAME"
+        },
+        {
+          "slugA": "bbq-chicken-bowls",
+          "slugB": "teriyaki-donburi",
+          "titleA": "BBQ Chicken Bowls",
+          "titleB": "Teriyaki Chicken Donburi",
+          "overall": 66,
+          "titleScore": 36,
+          "proteinScore": 100,
+          "cuisineScore": 0,
+          "cookingMethodScore": 100,
+          "mealFormatScore": 100,
+          "ingredientScore": 32,
+          "sideDishScore": 11,
+          "sharedArchetypes": [
+            "chicken_rice_bowl"
+          ],
+          "category": "SAME_MEAL_DIFFERENT_NAME"
+        },
+        {
+          "slugA": "bbq-chicken-bowls",
+          "slugB": "mediterranean-chicken-farro-bowls",
+          "titleA": "BBQ Chicken Bowls",
+          "titleB": "Smoky Chicken Bowls",
+          "overall": 45,
+          "titleScore": 71,
+          "proteinScore": 100,
+          "cuisineScore": 0,
+          "cookingMethodScore": 0,
+          "mealFormatScore": 100,
+          "ingredientScore": 3,
+          "sideDishScore": 0,
+          "sharedArchetypes": [],
+          "category": "SAME_MEAL_DIFFERENT_NAME"
+        }
+      ]
+    },
+    {
+      "slug": "bbq-chicken-mac-and-cheese",
+      "title": "BBQ Chicken Mac and Cheese",
+      "collection": "golden_100",
+      "category": "SAME_MEAL_DIFFERENT_NAME",
+      "primaryMatchSlug": "bbq-chicken-pizza",
+      "primaryMatchTitle": "BBQ Chicken Pizza",
+      "similarity": 72,
+      "archetypes": [
+        "creamy_chicken_pasta",
+        "chicken_bbq",
+        "smoked_meal"
+      ],
+      "pairs": [
+        {
+          "slugA": "bbq-chicken-mac-and-cheese",
+          "slugB": "bbq-chicken-pizza",
+          "titleA": "BBQ Chicken Mac and Cheese",
+          "titleB": "BBQ Chicken Pizza",
+          "overall": 72,
+          "titleScore": 45,
+          "proteinScore": 100,
+          "cuisineScore": 100,
+          "cookingMethodScore": 100,
+          "mealFormatScore": 0,
+          "ingredientScore": 44,
+          "sideDishScore": 0,
+          "sharedArchetypes": [
+            "chicken_bbq",
+            "smoked_meal"
           ],
           "category": "SAME_MEAL_DIFFERENT_NAME"
         }
@@ -1319,6 +1353,25 @@
           "ingredientScore": 35,
           "sideDishScore": 0,
           "sharedArchetypes": [],
+          "category": "SAME_MEAL_DIFFERENT_NAME"
+        },
+        {
+          "slugA": "bbq-chicken-mac-and-cheese",
+          "slugB": "bbq-chicken-pizza",
+          "titleA": "BBQ Chicken Mac and Cheese",
+          "titleB": "BBQ Chicken Pizza",
+          "overall": 72,
+          "titleScore": 45,
+          "proteinScore": 100,
+          "cuisineScore": 100,
+          "cookingMethodScore": 100,
+          "mealFormatScore": 0,
+          "ingredientScore": 44,
+          "sideDishScore": 0,
+          "sharedArchetypes": [
+            "chicken_bbq",
+            "smoked_meal"
+          ],
           "category": "SAME_MEAL_DIFFERENT_NAME"
         },
         {
@@ -2774,7 +2827,7 @@
     },
     {
       "slug": "bulgogi-bowls",
-      "title": "Korean Bulgogi Rice Bowls",
+      "title": "Korean Ginger Sesame Steak Bowls",
       "collection": "golden_100",
       "category": "SAME_MEAL_DIFFERENT_NAME",
       "primaryMatchSlug": "korean-beef-rice-bowls",
@@ -2787,10 +2840,10 @@
         {
           "slugA": "bulgogi-bowls",
           "slugB": "korean-beef-rice-bowls",
-          "titleA": "Korean Bulgogi Rice Bowls",
+          "titleA": "Korean Ginger Sesame Steak Bowls",
           "titleB": "Korean Garlic Beef Bowls",
           "overall": 73,
-          "titleScore": 55,
+          "titleScore": 54,
           "proteinScore": 100,
           "cuisineScore": 100,
           "cookingMethodScore": 100,
@@ -2938,24 +2991,6 @@
         },
         {
           "slugA": "cajun-chicken-rice-bowl",
-          "slugB": "greek-chicken-bowls",
-          "titleA": "Cajun Chicken Rice Bowl",
-          "titleB": "Greek Chicken Bowls",
-          "overall": 67,
-          "titleScore": 50,
-          "proteinScore": 100,
-          "cuisineScore": 0,
-          "cookingMethodScore": 100,
-          "mealFormatScore": 100,
-          "ingredientScore": 12,
-          "sideDishScore": 20,
-          "sharedArchetypes": [
-            "chicken_rice_bowl"
-          ],
-          "category": "SAME_MEAL_DIFFERENT_NAME"
-        },
-        {
-          "slugA": "cajun-chicken-rice-bowl",
           "slugB": "shawarma-chicken-rice-bowls",
           "titleA": "Cajun Chicken Rice Bowl",
           "titleB": "Shawarma Chicken Rice Bowls",
@@ -2967,6 +3002,24 @@
           "mealFormatScore": 100,
           "ingredientScore": 28,
           "sideDishScore": 100,
+          "sharedArchetypes": [
+            "chicken_rice_bowl"
+          ],
+          "category": "SAME_MEAL_DIFFERENT_NAME"
+        },
+        {
+          "slugA": "cajun-chicken-rice-bowl",
+          "slugB": "performance-burrito-bowls",
+          "titleA": "Cajun Chicken Rice Bowl",
+          "titleB": "Performance Chicken Burrito Bowls",
+          "overall": 65,
+          "titleScore": 47,
+          "proteinScore": 100,
+          "cuisineScore": 0,
+          "cookingMethodScore": 100,
+          "mealFormatScore": 100,
+          "ingredientScore": 8,
+          "sideDishScore": 11,
           "sharedArchetypes": [
             "chicken_rice_bowl"
           ],
@@ -3403,31 +3456,14 @@
       "slug": "cheesy-chicken-broccoli-rice",
       "title": "Cheesy Chicken Broccoli Rice",
       "collection": "hall_expansion",
-      "category": "SAME_MEAL_DIFFERENT_NAME",
-      "primaryMatchSlug": "one-pot-chicken-rice",
-      "primaryMatchTitle": "One-Pot Chicken and Rice",
-      "similarity": 74,
+      "category": "UNIQUE",
+      "primaryMatchSlug": null,
+      "primaryMatchTitle": null,
+      "similarity": 0,
       "archetypes": [
         "other"
       ],
-      "pairs": [
-        {
-          "slugA": "cheesy-chicken-broccoli-rice",
-          "slugB": "one-pot-chicken-rice",
-          "titleA": "Cheesy Chicken Broccoli Rice",
-          "titleB": "One-Pot Chicken and Rice",
-          "overall": 74,
-          "titleScore": 48,
-          "proteinScore": 100,
-          "cuisineScore": 100,
-          "cookingMethodScore": 100,
-          "mealFormatScore": 100,
-          "ingredientScore": 46,
-          "sideDishScore": 25,
-          "sharedArchetypes": [],
-          "category": "SAME_MEAL_DIFFERENT_NAME"
-        }
-      ]
+      "pairs": []
     },
     {
       "slug": "chicken-alfredo-bake",
@@ -3463,9 +3499,9 @@
           "slugA": "chicken-alfredo-bake",
           "slugB": "skillet-chicken-alfredo",
           "titleA": "Chicken Alfredo Bake",
-          "titleB": "One-Skillet Chicken Alfredo",
-          "overall": 69,
-          "titleScore": 42,
+          "titleB": "Garlic Chicken Pasta",
+          "overall": 65,
+          "titleScore": 20,
           "proteinScore": 100,
           "cuisineScore": 100,
           "cookingMethodScore": 0,
@@ -3613,6 +3649,22 @@
           "sideDishScore": 17,
           "sharedArchetypes": [],
           "category": "SAME_MEAL_DIFFERENT_NAME"
+        },
+        {
+          "slugA": "chicken-enchilada-skillet-light",
+          "slugB": "thai-basil-chicken",
+          "titleA": "Garlic Chicken Skillet",
+          "titleB": "Garlic Chicken Thighs Skillet",
+          "overall": 64,
+          "titleScore": 77,
+          "proteinScore": 100,
+          "cuisineScore": 0,
+          "cookingMethodScore": 100,
+          "mealFormatScore": 100,
+          "ingredientScore": 21,
+          "sideDishScore": 0,
+          "sharedArchetypes": [],
+          "category": "SAME_MEAL_DIFFERENT_NAME"
         }
       ]
     },
@@ -3633,15 +3685,35 @@
       "slug": "chicken-parm",
       "title": "Chicken Parm",
       "collection": "golden_100",
-      "category": "UNIQUE",
-      "primaryMatchSlug": null,
-      "primaryMatchTitle": null,
-      "similarity": 0,
+      "category": "SAME_MEAL_DIFFERENT_NAME",
+      "primaryMatchSlug": "skillet-chicken-alfredo",
+      "primaryMatchTitle": "Garlic Chicken Pasta",
+      "similarity": 71,
       "archetypes": [
         "creamy_chicken_pasta",
         "pasta_red_sauce"
       ],
-      "pairs": []
+      "pairs": [
+        {
+          "slugA": "chicken-parm",
+          "slugB": "skillet-chicken-alfredo",
+          "titleA": "Chicken Parm",
+          "titleB": "Garlic Chicken Pasta",
+          "overall": 71,
+          "titleScore": 50,
+          "proteinScore": 100,
+          "cuisineScore": 100,
+          "cookingMethodScore": 0,
+          "mealFormatScore": 100,
+          "ingredientScore": 36,
+          "sideDishScore": 0,
+          "sharedArchetypes": [
+            "creamy_chicken_pasta",
+            "pasta_red_sauce"
+          ],
+          "category": "SAME_MEAL_DIFFERENT_NAME"
+        }
+      ]
     },
     {
       "slug": "chicken-pot-pie",
@@ -4512,8 +4584,8 @@
       "collection": "hall_expansion",
       "category": "NEAR_DUPLICATE",
       "primaryMatchSlug": "skillet-chicken-alfredo",
-      "primaryMatchTitle": "One-Skillet Chicken Alfredo",
-      "similarity": 86,
+      "primaryMatchTitle": "Garlic Chicken Pasta",
+      "similarity": 84,
       "archetypes": [
         "creamy_chicken_pasta"
       ],
@@ -4522,9 +4594,9 @@
           "slugA": "creamy-chicken-penne-alfredo",
           "slugB": "skillet-chicken-alfredo",
           "titleA": "Creamy Chicken Penne Alfredo",
-          "titleB": "One-Skillet Chicken Alfredo",
-          "overall": 86,
-          "titleScore": 44,
+          "titleB": "Garlic Chicken Pasta",
+          "overall": 84,
+          "titleScore": 36,
           "proteinScore": 100,
           "cuisineScore": 100,
           "cookingMethodScore": 100,
@@ -4763,14 +4835,47 @@
       "slug": "enchilada-beef-skillet",
       "title": "Garlic Beef Skillet",
       "collection": "hall_expansion",
-      "category": "UNIQUE",
-      "primaryMatchSlug": null,
-      "primaryMatchTitle": null,
-      "similarity": 0,
+      "category": "SAME_MEAL_DIFFERENT_NAME",
+      "primaryMatchSlug": "philly-cheesesteak-skillet",
+      "primaryMatchTitle": "Garlic Butter Steak Skillet",
+      "similarity": 61,
       "archetypes": [
         "taco_variation"
       ],
-      "pairs": []
+      "pairs": [
+        {
+          "slugA": "enchilada-beef-skillet",
+          "slugB": "philly-cheesesteak-skillet",
+          "titleA": "Garlic Beef Skillet",
+          "titleB": "Garlic Butter Steak Skillet",
+          "overall": 61,
+          "titleScore": 67,
+          "proteinScore": 100,
+          "cuisineScore": 0,
+          "cookingMethodScore": 100,
+          "mealFormatScore": 100,
+          "ingredientScore": 19,
+          "sideDishScore": 0,
+          "sharedArchetypes": [],
+          "category": "SAME_MEAL_DIFFERENT_NAME"
+        },
+        {
+          "slugA": "enchilada-beef-skillet",
+          "slugB": "fast-philly-skillet",
+          "titleA": "Garlic Beef Skillet",
+          "titleB": "Garlic Butter Steak Skillet",
+          "overall": 60,
+          "titleScore": 67,
+          "proteinScore": 100,
+          "cuisineScore": 0,
+          "cookingMethodScore": 100,
+          "mealFormatScore": 100,
+          "ingredientScore": 13,
+          "sideDishScore": 0,
+          "sharedArchetypes": [],
+          "category": "SAME_MEAL_DIFFERENT_NAME"
+        }
+      ]
     },
     {
       "slug": "enchilada-casserole",
@@ -4863,12 +4968,12 @@
     },
     {
       "slug": "fast-philly-skillet",
-      "title": "Fast Philly Cheesesteak Skillet",
+      "title": "Garlic Butter Steak Skillet",
       "collection": "golden_100",
-      "category": "SAME_MEAL_DIFFERENT_NAME",
+      "category": "EXACT_DUPLICATE",
       "primaryMatchSlug": "philly-cheesesteak-skillet",
-      "primaryMatchTitle": "Philly Cheesesteak Skillet",
-      "similarity": 78,
+      "primaryMatchTitle": "Garlic Butter Steak Skillet",
+      "similarity": 83,
       "archetypes": [
         "other"
       ],
@@ -4876,15 +4981,31 @@
         {
           "slugA": "fast-philly-skillet",
           "slugB": "philly-cheesesteak-skillet",
-          "titleA": "Fast Philly Cheesesteak Skillet",
-          "titleB": "Philly Cheesesteak Skillet",
-          "overall": 78,
-          "titleScore": 86,
+          "titleA": "Garlic Butter Steak Skillet",
+          "titleB": "Garlic Butter Steak Skillet",
+          "overall": 83,
+          "titleScore": 100,
           "proteinScore": 100,
           "cuisineScore": 100,
           "cookingMethodScore": 100,
           "mealFormatScore": 100,
-          "ingredientScore": 36,
+          "ingredientScore": 52,
+          "sideDishScore": 0,
+          "sharedArchetypes": [],
+          "category": "EXACT_DUPLICATE"
+        },
+        {
+          "slugA": "enchilada-beef-skillet",
+          "slugB": "fast-philly-skillet",
+          "titleA": "Garlic Beef Skillet",
+          "titleB": "Garlic Butter Steak Skillet",
+          "overall": 60,
+          "titleScore": 67,
+          "proteinScore": 100,
+          "cuisineScore": 0,
+          "cookingMethodScore": 100,
+          "mealFormatScore": 100,
+          "ingredientScore": 13,
           "sideDishScore": 0,
           "sharedArchetypes": [],
           "category": "SAME_MEAL_DIFFERENT_NAME"
@@ -5266,31 +5387,14 @@
       "slug": "game-day-nachos",
       "title": "Loaded Game Day Nachos",
       "collection": "golden_100",
-      "category": "SAME_MEAL_DIFFERENT_NAME",
-      "primaryMatchSlug": "loaded-nacho-skillet",
-      "primaryMatchTitle": "Loaded Nacho Skillet",
-      "similarity": 72,
+      "category": "UNIQUE",
+      "primaryMatchSlug": null,
+      "primaryMatchTitle": null,
+      "similarity": 0,
       "archetypes": [
         "other"
       ],
-      "pairs": [
-        {
-          "slugA": "game-day-nachos",
-          "slugB": "loaded-nacho-skillet",
-          "titleA": "Loaded Game Day Nachos",
-          "titleB": "Loaded Nacho Skillet",
-          "overall": 72,
-          "titleScore": 37,
-          "proteinScore": 100,
-          "cuisineScore": 100,
-          "cookingMethodScore": 100,
-          "mealFormatScore": 100,
-          "ingredientScore": 59,
-          "sideDishScore": 11,
-          "sharedArchetypes": [],
-          "category": "SAME_MEAL_DIFFERENT_NAME"
-        }
-      ]
+      "pairs": []
     },
     {
       "slug": "game-day-pizza-sliders",
@@ -5565,24 +5669,6 @@
             "chicken_rice_bowl"
           ],
           "category": "SAME_MEAL_DIFFERENT_NAME"
-        },
-        {
-          "slugA": "ginger-soy-chicken-rice-bowls",
-          "slugB": "greek-chicken-bowls",
-          "titleA": "Ginger Soy Chicken Rice Bowls",
-          "titleB": "Greek Chicken Bowls",
-          "overall": 53,
-          "titleScore": 56,
-          "proteinScore": 100,
-          "cuisineScore": 0,
-          "cookingMethodScore": 0,
-          "mealFormatScore": 100,
-          "ingredientScore": 17,
-          "sideDishScore": 14,
-          "sharedArchetypes": [
-            "chicken_rice_bowl"
-          ],
-          "category": "SAME_MEAL_DIFFERENT_NAME"
         }
       ]
     },
@@ -5602,41 +5688,23 @@
     },
     {
       "slug": "greek-chicken-bowls",
-      "title": "Greek Chicken Bowls",
+      "title": "Smoky Chicken Thighs Bowls",
       "collection": "golden_100",
-      "category": "SAME_MEAL_DIFFERENT_NAME",
-      "primaryMatchSlug": "bbq-chicken-bowls",
-      "primaryMatchTitle": "BBQ Chicken Bowls",
-      "similarity": 72,
+      "category": "EXACT_DUPLICATE",
+      "primaryMatchSlug": "street-corn-chicken",
+      "primaryMatchTitle": "Smoky Chicken Thighs Bowls",
+      "similarity": 79,
       "archetypes": [
         "chicken_rice_bowl"
       ],
       "pairs": [
         {
-          "slugA": "bbq-chicken-bowls",
-          "slugB": "greek-chicken-bowls",
-          "titleA": "BBQ Chicken Bowls",
-          "titleB": "Greek Chicken Bowls",
-          "overall": 72,
-          "titleScore": 71,
-          "proteinScore": 100,
-          "cuisineScore": 0,
-          "cookingMethodScore": 100,
-          "mealFormatScore": 100,
-          "ingredientScore": 25,
-          "sideDishScore": 10,
-          "sharedArchetypes": [
-            "chicken_rice_bowl"
-          ],
-          "category": "SAME_MEAL_DIFFERENT_NAME"
-        },
-        {
           "slugA": "greek-chicken-bowls",
           "slugB": "street-corn-chicken",
-          "titleA": "Greek Chicken Bowls",
-          "titleB": "Mexican Street Corn Chicken Bowls",
-          "overall": 69,
-          "titleScore": 52,
+          "titleA": "Smoky Chicken Thighs Bowls",
+          "titleB": "Smoky Chicken Thighs Bowls",
+          "overall": 79,
+          "titleScore": 100,
           "proteinScore": 100,
           "cuisineScore": 0,
           "cookingMethodScore": 100,
@@ -5646,60 +5714,22 @@
           "sharedArchetypes": [
             "chicken_rice_bowl"
           ],
-          "category": "SAME_MEAL_DIFFERENT_NAME"
-        },
-        {
-          "slugA": "cajun-chicken-rice-bowl",
-          "slugB": "greek-chicken-bowls",
-          "titleA": "Cajun Chicken Rice Bowl",
-          "titleB": "Greek Chicken Bowls",
-          "overall": 67,
-          "titleScore": 50,
-          "proteinScore": 100,
-          "cuisineScore": 0,
-          "cookingMethodScore": 100,
-          "mealFormatScore": 100,
-          "ingredientScore": 12,
-          "sideDishScore": 20,
-          "sharedArchetypes": [
-            "chicken_rice_bowl"
-          ],
-          "category": "SAME_MEAL_DIFFERENT_NAME"
+          "category": "EXACT_DUPLICATE"
         },
         {
           "slugA": "greek-chicken-bowls",
-          "slugB": "honey-garlic-chicken-rice-bowls",
-          "titleA": "Greek Chicken Bowls",
-          "titleB": "Honey Garlic Chicken Rice Bowls",
-          "overall": 67,
-          "titleScore": 52,
+          "slugB": "mediterranean-chicken-farro-bowls",
+          "titleA": "Smoky Chicken Thighs Bowls",
+          "titleB": "Smoky Chicken Bowls",
+          "overall": 65,
+          "titleScore": 75,
           "proteinScore": 100,
           "cuisineScore": 0,
           "cookingMethodScore": 100,
           "mealFormatScore": 100,
-          "ingredientScore": 12,
-          "sideDishScore": 17,
-          "sharedArchetypes": [
-            "chicken_rice_bowl"
-          ],
-          "category": "SAME_MEAL_DIFFERENT_NAME"
-        },
-        {
-          "slugA": "greek-chicken-bowls",
-          "slugB": "teriyaki-donburi",
-          "titleA": "Greek Chicken Bowls",
-          "titleB": "Teriyaki Chicken Donburi",
-          "overall": 67,
-          "titleScore": 45,
-          "proteinScore": 100,
-          "cuisineScore": 0,
-          "cookingMethodScore": 100,
-          "mealFormatScore": 100,
-          "ingredientScore": 25,
-          "sideDishScore": 13,
-          "sharedArchetypes": [
-            "chicken_rice_bowl"
-          ],
+          "ingredientScore": 31,
+          "sideDishScore": 0,
+          "sharedArchetypes": [],
           "category": "SAME_MEAL_DIFFERENT_NAME"
         }
       ]
@@ -6928,24 +6958,6 @@
         },
         {
           "slugA": "honey-garlic-chicken-rice-bowls",
-          "slugB": "street-corn-chicken",
-          "titleA": "Honey Garlic Chicken Rice Bowls",
-          "titleB": "Mexican Street Corn Chicken Bowls",
-          "overall": 68,
-          "titleScore": 34,
-          "proteinScore": 100,
-          "cuisineScore": 0,
-          "cookingMethodScore": 100,
-          "mealFormatScore": 100,
-          "ingredientScore": 18,
-          "sideDishScore": 50,
-          "sharedArchetypes": [
-            "chicken_rice_bowl"
-          ],
-          "category": "SAME_MEAL_DIFFERENT_NAME"
-        },
-        {
-          "slugA": "honey-garlic-chicken-rice-bowls",
           "slugB": "teriyaki-donburi",
           "titleA": "Honey Garlic Chicken Rice Bowls",
           "titleB": "Teriyaki Chicken Donburi",
@@ -6957,6 +6969,24 @@
           "mealFormatScore": 100,
           "ingredientScore": 35,
           "sideDishScore": 20,
+          "sharedArchetypes": [
+            "chicken_rice_bowl"
+          ],
+          "category": "SAME_MEAL_DIFFERENT_NAME"
+        },
+        {
+          "slugA": "honey-garlic-chicken-rice-bowls",
+          "slugB": "performance-burrito-bowls",
+          "titleA": "Honey Garlic Chicken Rice Bowls",
+          "titleB": "Performance Chicken Burrito Bowls",
+          "overall": 66,
+          "titleScore": 50,
+          "proteinScore": 100,
+          "cuisineScore": 0,
+          "cookingMethodScore": 100,
+          "mealFormatScore": 100,
+          "ingredientScore": 8,
+          "sideDishScore": 22,
           "sharedArchetypes": [
             "chicken_rice_bowl"
           ],
@@ -7056,22 +7086,6 @@
           "cookingMethodScore": 100,
           "mealFormatScore": 100,
           "ingredientScore": 49,
-          "sideDishScore": 0,
-          "sharedArchetypes": [],
-          "category": "SAME_MEAL_DIFFERENT_NAME"
-        },
-        {
-          "slugA": "honey-lime-chicken-tray",
-          "slugB": "sheet-pan-meal-prep",
-          "titleA": "Honey Lime Chicken Tray",
-          "titleB": "Sheet Pan Chicken Trays",
-          "overall": 71,
-          "titleScore": 55,
-          "proteinScore": 100,
-          "cuisineScore": 100,
-          "cookingMethodScore": 100,
-          "mealFormatScore": 100,
-          "ingredientScore": 36,
           "sideDishScore": 0,
           "sharedArchetypes": [],
           "category": "SAME_MEAL_DIFFERENT_NAME"
@@ -7515,7 +7529,7 @@
       "collection": "performance_meals",
       "category": "SAME_MEAL_DIFFERENT_NAME",
       "primaryMatchSlug": "bulgogi-bowls",
-      "primaryMatchTitle": "Korean Bulgogi Rice Bowls",
+      "primaryMatchTitle": "Korean Ginger Sesame Steak Bowls",
       "similarity": 73,
       "archetypes": [
         "other"
@@ -7524,10 +7538,10 @@
         {
           "slugA": "bulgogi-bowls",
           "slugB": "korean-beef-rice-bowls",
-          "titleA": "Korean Bulgogi Rice Bowls",
+          "titleA": "Korean Ginger Sesame Steak Bowls",
           "titleB": "Korean Garlic Beef Bowls",
           "overall": 73,
-          "titleScore": 55,
+          "titleScore": 54,
           "proteinScore": 100,
           "cuisineScore": 100,
           "cookingMethodScore": 100,
@@ -7709,31 +7723,13 @@
       "title": "Lemon Garlic Chicken Tray Bake",
       "collection": "performance_meals",
       "category": "SAME_MEAL_DIFFERENT_NAME",
-      "primaryMatchSlug": "sheet-pan-meal-prep",
-      "primaryMatchTitle": "Sheet Pan Chicken Trays",
-      "similarity": 75,
+      "primaryMatchSlug": "honey-lime-chicken-tray",
+      "primaryMatchTitle": "Honey Lime Chicken Tray",
+      "similarity": 73,
       "archetypes": [
         "sheet_pan_chicken"
       ],
       "pairs": [
-        {
-          "slugA": "lemon-garlic-chicken-tray",
-          "slugB": "sheet-pan-meal-prep",
-          "titleA": "Lemon Garlic Chicken Tray Bake",
-          "titleB": "Sheet Pan Chicken Trays",
-          "overall": 75,
-          "titleScore": 46,
-          "proteinScore": 100,
-          "cuisineScore": 100,
-          "cookingMethodScore": 100,
-          "mealFormatScore": 100,
-          "ingredientScore": 16,
-          "sideDishScore": 0,
-          "sharedArchetypes": [
-            "sheet_pan_chicken"
-          ],
-          "category": "SAME_MEAL_DIFFERENT_NAME"
-        },
         {
           "slugA": "honey-lime-chicken-tray",
           "slugB": "lemon-garlic-chicken-tray",
@@ -7872,81 +7868,27 @@
       "slug": "loaded-nacho-bar-night",
       "title": "Loaded Nacho Bar Night",
       "collection": "hall_expansion",
-      "category": "SAME_MEAL_DIFFERENT_NAME",
-      "primaryMatchSlug": "loaded-nacho-skillet",
-      "primaryMatchTitle": "Loaded Nacho Skillet",
-      "similarity": 72,
+      "category": "UNIQUE",
+      "primaryMatchSlug": null,
+      "primaryMatchTitle": null,
+      "similarity": 0,
       "archetypes": [
         "taco_variation"
       ],
-      "pairs": [
-        {
-          "slugA": "loaded-nacho-bar-night",
-          "slugB": "loaded-nacho-skillet",
-          "titleA": "Loaded Nacho Bar Night",
-          "titleB": "Loaded Nacho Skillet",
-          "overall": 72,
-          "titleScore": 63,
-          "proteinScore": 100,
-          "cuisineScore": 75,
-          "cookingMethodScore": 100,
-          "mealFormatScore": 0,
-          "ingredientScore": 53,
-          "sideDishScore": 60,
-          "sharedArchetypes": [
-            "taco_variation"
-          ],
-          "category": "SAME_MEAL_DIFFERENT_NAME"
-        }
-      ]
+      "pairs": []
     },
     {
       "slug": "loaded-nacho-skillet",
-      "title": "Loaded Nacho Skillet",
+      "title": "Smoky Beef Bowls",
       "collection": "golden_100",
-      "category": "SAME_MEAL_DIFFERENT_NAME",
-      "primaryMatchSlug": "game-day-nachos",
-      "primaryMatchTitle": "Loaded Game Day Nachos",
-      "similarity": 72,
+      "category": "UNIQUE",
+      "primaryMatchSlug": null,
+      "primaryMatchTitle": null,
+      "similarity": 0,
       "archetypes": [
         "taco_variation"
       ],
-      "pairs": [
-        {
-          "slugA": "game-day-nachos",
-          "slugB": "loaded-nacho-skillet",
-          "titleA": "Loaded Game Day Nachos",
-          "titleB": "Loaded Nacho Skillet",
-          "overall": 72,
-          "titleScore": 37,
-          "proteinScore": 100,
-          "cuisineScore": 100,
-          "cookingMethodScore": 100,
-          "mealFormatScore": 100,
-          "ingredientScore": 59,
-          "sideDishScore": 11,
-          "sharedArchetypes": [],
-          "category": "SAME_MEAL_DIFFERENT_NAME"
-        },
-        {
-          "slugA": "loaded-nacho-bar-night",
-          "slugB": "loaded-nacho-skillet",
-          "titleA": "Loaded Nacho Bar Night",
-          "titleB": "Loaded Nacho Skillet",
-          "overall": 72,
-          "titleScore": 63,
-          "proteinScore": 100,
-          "cuisineScore": 75,
-          "cookingMethodScore": 100,
-          "mealFormatScore": 0,
-          "ingredientScore": 53,
-          "sideDishScore": 60,
-          "sharedArchetypes": [
-            "taco_variation"
-          ],
-          "category": "SAME_MEAL_DIFFERENT_NAME"
-        }
-      ]
+      "pairs": []
     },
     {
       "slug": "loaded-potato-feed",
@@ -8140,35 +8082,16 @@
     },
     {
       "slug": "meat-lovers-sheet-pizza",
-      "title": "Meat Lover's Sheet Pan Pizza",
+      "title": "Crispy Honey Chili Beef",
       "collection": "golden_100",
-      "category": "SAME_MEAL_DIFFERENT_NAME",
-      "primaryMatchSlug": "sicilian-sheet-pizza",
-      "primaryMatchTitle": "Sicilian Sheet Pan Pizza",
-      "similarity": 72,
+      "category": "UNIQUE",
+      "primaryMatchSlug": null,
+      "primaryMatchTitle": null,
+      "similarity": 0,
       "archetypes": [
-        "sheet_pan_generic"
+        "soup_chili"
       ],
-      "pairs": [
-        {
-          "slugA": "meat-lovers-sheet-pizza",
-          "slugB": "sicilian-sheet-pizza",
-          "titleA": "Meat Lover's Sheet Pan Pizza",
-          "titleB": "Sicilian Sheet Pan Pizza",
-          "overall": 72,
-          "titleScore": 61,
-          "proteinScore": 100,
-          "cuisineScore": 0,
-          "cookingMethodScore": 100,
-          "mealFormatScore": 100,
-          "ingredientScore": 42,
-          "sideDishScore": 0,
-          "sharedArchetypes": [
-            "sheet_pan_generic"
-          ],
-          "category": "SAME_MEAL_DIFFERENT_NAME"
-        }
-      ]
+      "pairs": []
     },
     {
       "slug": "meatball-hoagies",
@@ -8215,8 +8138,8 @@
       "collection": "hall_expansion",
       "category": "SAME_MEAL_DIFFERENT_NAME",
       "primaryMatchSlug": "greek-chicken-bowls",
-      "primaryMatchTitle": "Greek Chicken Bowls",
-      "similarity": 49,
+      "primaryMatchTitle": "Smoky Chicken Thighs Bowls",
+      "similarity": 65,
       "archetypes": [
         "other"
       ],
@@ -8224,15 +8147,31 @@
         {
           "slugA": "greek-chicken-bowls",
           "slugB": "mediterranean-chicken-farro-bowls",
-          "titleA": "Greek Chicken Bowls",
+          "titleA": "Smoky Chicken Thighs Bowls",
           "titleB": "Smoky Chicken Bowls",
-          "overall": 49,
-          "titleScore": 71,
+          "overall": 65,
+          "titleScore": 75,
           "proteinScore": 100,
           "cuisineScore": 0,
-          "cookingMethodScore": 0,
+          "cookingMethodScore": 100,
           "mealFormatScore": 100,
           "ingredientScore": 31,
+          "sideDishScore": 0,
+          "sharedArchetypes": [],
+          "category": "SAME_MEAL_DIFFERENT_NAME"
+        },
+        {
+          "slugA": "mediterranean-chicken-farro-bowls",
+          "slugB": "street-corn-chicken",
+          "titleA": "Smoky Chicken Bowls",
+          "titleB": "Smoky Chicken Thighs Bowls",
+          "overall": 61,
+          "titleScore": 75,
+          "proteinScore": 100,
+          "cuisineScore": 0,
+          "cookingMethodScore": 100,
+          "mealFormatScore": 100,
+          "ingredientScore": 5,
           "sideDishScore": 0,
           "sharedArchetypes": [],
           "category": "SAME_MEAL_DIFFERENT_NAME"
@@ -8273,7 +8212,7 @@
     },
     {
       "slug": "mediterranean-chickpea",
-      "title": "Mediterranean Chickpea Bowls",
+      "title": "Smoky Chickpea Bowls",
       "collection": "golden_100",
       "category": "UNIQUE",
       "primaryMatchSlug": null,
@@ -8288,14 +8227,69 @@
       "slug": "mediterranean-feast-night",
       "title": "Crispy Honey Chili Chicken Thighs",
       "collection": "hall_expansion",
-      "category": "UNIQUE",
-      "primaryMatchSlug": null,
-      "primaryMatchTitle": null,
-      "similarity": 0,
+      "category": "EXACT_DUPLICATE",
+      "primaryMatchSlug": "sheet-pan-fajitas",
+      "primaryMatchTitle": "Crispy Honey Chili Chicken Thighs",
+      "similarity": 46,
       "archetypes": [
         "soup_chili"
       ],
-      "pairs": []
+      "pairs": [
+        {
+          "slugA": "mediterranean-feast-night",
+          "slugB": "sheet-pan-fajitas",
+          "titleA": "Crispy Honey Chili Chicken Thighs",
+          "titleB": "Crispy Honey Chili Chicken Thighs",
+          "overall": 46,
+          "titleScore": 100,
+          "proteinScore": 100,
+          "cuisineScore": 0,
+          "cookingMethodScore": 0,
+          "mealFormatScore": 0,
+          "ingredientScore": 19,
+          "sideDishScore": 0,
+          "sharedArchetypes": [
+            "soup_chili"
+          ],
+          "category": "EXACT_DUPLICATE"
+        },
+        {
+          "slugA": "mediterranean-feast-night",
+          "slugB": "sheet-pan-meal-prep",
+          "titleA": "Crispy Honey Chili Chicken Thighs",
+          "titleB": "Crispy Honey Chili Chicken Thighs",
+          "overall": 46,
+          "titleScore": 100,
+          "proteinScore": 100,
+          "cuisineScore": 0,
+          "cookingMethodScore": 0,
+          "mealFormatScore": 0,
+          "ingredientScore": 19,
+          "sideDishScore": 0,
+          "sharedArchetypes": [
+            "soup_chili"
+          ],
+          "category": "EXACT_DUPLICATE"
+        },
+        {
+          "slugA": "mediterranean-feast-night",
+          "slugB": "sheet-pan-sausage-peppers",
+          "titleA": "Crispy Honey Chili Chicken Thighs",
+          "titleB": "Crispy Honey Chili Chicken Thighs",
+          "overall": 23,
+          "titleScore": 100,
+          "proteinScore": 0,
+          "cuisineScore": 0,
+          "cookingMethodScore": 0,
+          "mealFormatScore": 0,
+          "ingredientScore": 19,
+          "sideDishScore": 0,
+          "sharedArchetypes": [
+            "soup_chili"
+          ],
+          "category": "EXACT_DUPLICATE"
+        }
+      ]
     },
     {
       "slug": "memphis-dry-rub-pulled-pork",
@@ -9056,33 +9050,16 @@
     },
     {
       "slug": "one-pot-chicken-rice",
-      "title": "One-Pot Chicken and Rice",
+      "title": "Crispy Garlic Chicken Thighs",
       "collection": "golden_100",
-      "category": "SAME_MEAL_DIFFERENT_NAME",
-      "primaryMatchSlug": "cheesy-chicken-broccoli-rice",
-      "primaryMatchTitle": "Cheesy Chicken Broccoli Rice",
-      "similarity": 74,
+      "category": "UNIQUE",
+      "primaryMatchSlug": null,
+      "primaryMatchTitle": null,
+      "similarity": 0,
       "archetypes": [
         "other"
       ],
-      "pairs": [
-        {
-          "slugA": "cheesy-chicken-broccoli-rice",
-          "slugB": "one-pot-chicken-rice",
-          "titleA": "Cheesy Chicken Broccoli Rice",
-          "titleB": "One-Pot Chicken and Rice",
-          "overall": 74,
-          "titleScore": 48,
-          "proteinScore": 100,
-          "cuisineScore": 100,
-          "cookingMethodScore": 100,
-          "mealFormatScore": 100,
-          "ingredientScore": 46,
-          "sideDishScore": 25,
-          "sharedArchetypes": [],
-          "category": "SAME_MEAL_DIFFERENT_NAME"
-        }
-      ]
+      "pairs": []
     },
     {
       "slug": "overnight-french-toast-bake",
@@ -9585,9 +9562,9 @@
       "title": "Performance Chicken Burrito Bowls",
       "collection": "golden_100",
       "category": "SAME_MEAL_DIFFERENT_NAME",
-      "primaryMatchSlug": "street-corn-chicken",
-      "primaryMatchTitle": "Mexican Street Corn Chicken Bowls",
-      "similarity": 77,
+      "primaryMatchSlug": "bbq-chicken-bowls",
+      "primaryMatchTitle": "BBQ Chicken Bowls",
+      "similarity": 67,
       "archetypes": [
         "burrito_bowl",
         "chicken_rice_bowl",
@@ -9595,36 +9572,18 @@
       ],
       "pairs": [
         {
-          "slugA": "performance-burrito-bowls",
-          "slugB": "street-corn-chicken",
-          "titleA": "Performance Chicken Burrito Bowls",
-          "titleB": "Mexican Street Corn Chicken Bowls",
-          "overall": 77,
-          "titleScore": 30,
-          "proteinScore": 100,
-          "cuisineScore": 100,
-          "cookingMethodScore": 100,
-          "mealFormatScore": 100,
-          "ingredientScore": 43,
-          "sideDishScore": 20,
-          "sharedArchetypes": [
-            "chicken_rice_bowl"
-          ],
-          "category": "SAME_MEAL_DIFFERENT_NAME"
-        },
-        {
           "slugA": "bbq-chicken-bowls",
           "slugB": "performance-burrito-bowls",
           "titleA": "BBQ Chicken Bowls",
           "titleB": "Performance Chicken Burrito Bowls",
-          "overall": 68,
+          "overall": 67,
           "titleScore": 40,
           "proteinScore": 100,
           "cuisineScore": 0,
           "cookingMethodScore": 100,
           "mealFormatScore": 100,
-          "ingredientScore": 27,
-          "sideDishScore": 27,
+          "ingredientScore": 24,
+          "sideDishScore": 25,
           "sharedArchetypes": [
             "chicken_rice_bowl"
           ],
@@ -9635,14 +9594,14 @@
           "slugB": "performance-burrito-bowls",
           "titleA": "Honey Garlic Chicken Rice Bowls",
           "titleB": "Performance Chicken Burrito Bowls",
-          "overall": 67,
+          "overall": 66,
           "titleScore": 50,
           "proteinScore": 100,
           "cuisineScore": 0,
           "cookingMethodScore": 100,
           "mealFormatScore": 100,
           "ingredientScore": 8,
-          "sideDishScore": 25,
+          "sideDishScore": 22,
           "sharedArchetypes": [
             "chicken_rice_bowl"
           ],
@@ -9660,25 +9619,25 @@
           "cookingMethodScore": 100,
           "mealFormatScore": 100,
           "ingredientScore": 8,
-          "sideDishScore": 13,
+          "sideDishScore": 11,
           "sharedArchetypes": [
             "chicken_rice_bowl"
           ],
           "category": "SAME_MEAL_DIFFERENT_NAME"
         },
         {
-          "slugA": "greek-chicken-bowls",
-          "slugB": "performance-burrito-bowls",
-          "titleA": "Greek Chicken Bowls",
-          "titleB": "Performance Chicken Burrito Bowls",
-          "overall": 65,
-          "titleScore": 43,
+          "slugA": "performance-burrito-bowls",
+          "slugB": "shawarma-chicken-rice-bowls",
+          "titleA": "Performance Chicken Burrito Bowls",
+          "titleB": "Shawarma Chicken Rice Bowls",
+          "overall": 51,
+          "titleScore": 57,
           "proteinScore": 100,
           "cuisineScore": 0,
-          "cookingMethodScore": 100,
+          "cookingMethodScore": 0,
           "mealFormatScore": 100,
-          "ingredientScore": 14,
-          "sideDishScore": 8,
+          "ingredientScore": 6,
+          "sideDishScore": 11,
           "sharedArchetypes": [
             "chicken_rice_bowl"
           ],
@@ -9804,22 +9763,6 @@
           "sideDishScore": 0,
           "sharedArchetypes": [],
           "category": "SAME_MEAL_DIFFERENT_NAME"
-        },
-        {
-          "slugA": "pesto-tomato-chicken-tray",
-          "slugB": "sheet-pan-meal-prep",
-          "titleA": "Pesto Tomato Chicken Tray",
-          "titleB": "Sheet Pan Chicken Trays",
-          "overall": 58,
-          "titleScore": 55,
-          "proteinScore": 100,
-          "cuisineScore": 0,
-          "cookingMethodScore": 100,
-          "mealFormatScore": 100,
-          "ingredientScore": 14,
-          "sideDishScore": 0,
-          "sharedArchetypes": [],
-          "category": "SAME_MEAL_DIFFERENT_NAME"
         }
       ]
     },
@@ -9838,12 +9781,12 @@
     },
     {
       "slug": "philly-cheesesteak-skillet",
-      "title": "Philly Cheesesteak Skillet",
+      "title": "Garlic Butter Steak Skillet",
       "collection": "golden_100",
-      "category": "SAME_MEAL_DIFFERENT_NAME",
+      "category": "EXACT_DUPLICATE",
       "primaryMatchSlug": "fast-philly-skillet",
-      "primaryMatchTitle": "Fast Philly Cheesesteak Skillet",
-      "similarity": 78,
+      "primaryMatchTitle": "Garlic Butter Steak Skillet",
+      "similarity": 83,
       "archetypes": [
         "other"
       ],
@@ -9851,15 +9794,31 @@
         {
           "slugA": "fast-philly-skillet",
           "slugB": "philly-cheesesteak-skillet",
-          "titleA": "Fast Philly Cheesesteak Skillet",
-          "titleB": "Philly Cheesesteak Skillet",
-          "overall": 78,
-          "titleScore": 86,
+          "titleA": "Garlic Butter Steak Skillet",
+          "titleB": "Garlic Butter Steak Skillet",
+          "overall": 83,
+          "titleScore": 100,
           "proteinScore": 100,
           "cuisineScore": 100,
           "cookingMethodScore": 100,
           "mealFormatScore": 100,
-          "ingredientScore": 36,
+          "ingredientScore": 52,
+          "sideDishScore": 0,
+          "sharedArchetypes": [],
+          "category": "EXACT_DUPLICATE"
+        },
+        {
+          "slugA": "enchilada-beef-skillet",
+          "slugB": "philly-cheesesteak-skillet",
+          "titleA": "Garlic Beef Skillet",
+          "titleB": "Garlic Butter Steak Skillet",
+          "overall": 61,
+          "titleScore": 67,
+          "proteinScore": 100,
+          "cuisineScore": 0,
+          "cookingMethodScore": 100,
+          "mealFormatScore": 100,
+          "ingredientScore": 19,
           "sideDishScore": 0,
           "sharedArchetypes": [],
           "category": "SAME_MEAL_DIFFERENT_NAME"
@@ -10820,14 +10779,14 @@
           "slugB": "shawarma-chicken-rice-bowls",
           "titleA": "Performance Chicken Burrito Bowls",
           "titleB": "Shawarma Chicken Rice Bowls",
-          "overall": 52,
+          "overall": 51,
           "titleScore": 57,
           "proteinScore": 100,
           "cuisineScore": 0,
           "cookingMethodScore": 0,
           "mealFormatScore": 100,
           "ingredientScore": 6,
-          "sideDishScore": 13,
+          "sideDishScore": 11,
           "sharedArchetypes": [
             "chicken_rice_bowl"
           ],
@@ -10909,13 +10868,49 @@
       "title": "Crispy Garlic Chicken",
       "collection": "performance_meals",
       "category": "EXACT_DUPLICATE",
-      "primaryMatchSlug": "asian-chicken-lettuce-cups",
-      "primaryMatchTitle": "Crispy Garlic Chicken",
-      "similarity": 38,
+      "primaryMatchSlug": "sheet-pan-fajitas",
+      "primaryMatchTitle": "Crispy Honey Chili Chicken Thighs",
+      "similarity": 88,
       "archetypes": [
         "sheet_pan_chicken"
       ],
       "pairs": [
+        {
+          "slugA": "sheet-pan-chicken-fajitas-lite",
+          "slugB": "sheet-pan-fajitas",
+          "titleA": "Crispy Garlic Chicken",
+          "titleB": "Crispy Honey Chili Chicken Thighs",
+          "overall": 88,
+          "titleScore": 48,
+          "proteinScore": 100,
+          "cuisineScore": 100,
+          "cookingMethodScore": 100,
+          "mealFormatScore": 100,
+          "ingredientScore": 38,
+          "sideDishScore": 100,
+          "sharedArchetypes": [
+            "sheet_pan_chicken"
+          ],
+          "category": "NEAR_DUPLICATE"
+        },
+        {
+          "slugA": "sheet-pan-chicken-fajitas-lite",
+          "slugB": "sheet-pan-meal-prep",
+          "titleA": "Crispy Garlic Chicken",
+          "titleB": "Crispy Honey Chili Chicken Thighs",
+          "overall": 67,
+          "titleScore": 48,
+          "proteinScore": 100,
+          "cuisineScore": 0,
+          "cookingMethodScore": 100,
+          "mealFormatScore": 100,
+          "ingredientScore": 30,
+          "sideDishScore": 0,
+          "sharedArchetypes": [
+            "sheet_pan_chicken"
+          ],
+          "category": "SAME_MEAL_DIFFERENT_NAME"
+        },
         {
           "slugA": "asian-chicken-lettuce-cups",
           "slugB": "sheet-pan-chicken-fajitas-lite",
@@ -10936,33 +10931,90 @@
     },
     {
       "slug": "sheet-pan-fajitas",
-      "title": "Sheet Pan Chicken Fajitas",
+      "title": "Crispy Honey Chili Chicken Thighs",
       "collection": "golden_100",
-      "category": "NEAR_DUPLICATE",
+      "category": "EXACT_DUPLICATE",
       "primaryMatchSlug": "sheet-pan-meal-prep",
-      "primaryMatchTitle": "Sheet Pan Chicken Trays",
-      "similarity": 83,
+      "primaryMatchTitle": "Crispy Honey Chili Chicken Thighs",
+      "similarity": 94,
       "archetypes": [
-        "sheet_pan_chicken"
+        "sheet_pan_chicken",
+        "soup_chili"
       ],
       "pairs": [
         {
           "slugA": "sheet-pan-fajitas",
           "slugB": "sheet-pan-meal-prep",
-          "titleA": "Sheet Pan Chicken Fajitas",
-          "titleB": "Sheet Pan Chicken Trays",
-          "overall": 83,
-          "titleScore": 73,
+          "titleA": "Crispy Honey Chili Chicken Thighs",
+          "titleB": "Crispy Honey Chili Chicken Thighs",
+          "overall": 94,
+          "titleScore": 100,
           "proteinScore": 100,
           "cuisineScore": 0,
           "cookingMethodScore": 100,
           "mealFormatScore": 100,
-          "ingredientScore": 100,
+          "ingredientScore": 86,
           "sideDishScore": 0,
+          "sharedArchetypes": [
+            "sheet_pan_chicken",
+            "soup_chili"
+          ],
+          "category": "EXACT_DUPLICATE"
+        },
+        {
+          "slugA": "sheet-pan-chicken-fajitas-lite",
+          "slugB": "sheet-pan-fajitas",
+          "titleA": "Crispy Garlic Chicken",
+          "titleB": "Crispy Honey Chili Chicken Thighs",
+          "overall": 88,
+          "titleScore": 48,
+          "proteinScore": 100,
+          "cuisineScore": 100,
+          "cookingMethodScore": 100,
+          "mealFormatScore": 100,
+          "ingredientScore": 38,
+          "sideDishScore": 100,
           "sharedArchetypes": [
             "sheet_pan_chicken"
           ],
           "category": "NEAR_DUPLICATE"
+        },
+        {
+          "slugA": "sheet-pan-fajitas",
+          "slugB": "sheet-pan-sausage-peppers",
+          "titleA": "Crispy Honey Chili Chicken Thighs",
+          "titleB": "Crispy Honey Chili Chicken Thighs",
+          "overall": 63,
+          "titleScore": 100,
+          "proteinScore": 0,
+          "cuisineScore": 0,
+          "cookingMethodScore": 100,
+          "mealFormatScore": 100,
+          "ingredientScore": 86,
+          "sideDishScore": 0,
+          "sharedArchetypes": [
+            "sheet_pan_chicken",
+            "soup_chili"
+          ],
+          "category": "EXACT_DUPLICATE"
+        },
+        {
+          "slugA": "mediterranean-feast-night",
+          "slugB": "sheet-pan-fajitas",
+          "titleA": "Crispy Honey Chili Chicken Thighs",
+          "titleB": "Crispy Honey Chili Chicken Thighs",
+          "overall": 46,
+          "titleScore": 100,
+          "proteinScore": 100,
+          "cuisineScore": 0,
+          "cookingMethodScore": 0,
+          "mealFormatScore": 0,
+          "ingredientScore": 19,
+          "sideDishScore": 0,
+          "sharedArchetypes": [
+            "soup_chili"
+          ],
+          "category": "EXACT_DUPLICATE"
         }
       ]
     },
@@ -11002,83 +11054,90 @@
     },
     {
       "slug": "sheet-pan-meal-prep",
-      "title": "Sheet Pan Chicken Trays",
+      "title": "Crispy Honey Chili Chicken Thighs",
       "collection": "golden_100",
-      "category": "NEAR_DUPLICATE",
+      "category": "EXACT_DUPLICATE",
       "primaryMatchSlug": "sheet-pan-fajitas",
-      "primaryMatchTitle": "Sheet Pan Chicken Fajitas",
-      "similarity": 83,
+      "primaryMatchTitle": "Crispy Honey Chili Chicken Thighs",
+      "similarity": 94,
       "archetypes": [
-        "sheet_pan_chicken"
+        "sheet_pan_chicken",
+        "soup_chili"
       ],
       "pairs": [
         {
           "slugA": "sheet-pan-fajitas",
           "slugB": "sheet-pan-meal-prep",
-          "titleA": "Sheet Pan Chicken Fajitas",
-          "titleB": "Sheet Pan Chicken Trays",
-          "overall": 83,
-          "titleScore": 73,
+          "titleA": "Crispy Honey Chili Chicken Thighs",
+          "titleB": "Crispy Honey Chili Chicken Thighs",
+          "overall": 94,
+          "titleScore": 100,
           "proteinScore": 100,
+          "cuisineScore": 0,
+          "cookingMethodScore": 100,
+          "mealFormatScore": 100,
+          "ingredientScore": 86,
+          "sideDishScore": 0,
+          "sharedArchetypes": [
+            "sheet_pan_chicken",
+            "soup_chili"
+          ],
+          "category": "EXACT_DUPLICATE"
+        },
+        {
+          "slugA": "sheet-pan-chicken-fajitas-lite",
+          "slugB": "sheet-pan-meal-prep",
+          "titleA": "Crispy Garlic Chicken",
+          "titleB": "Crispy Honey Chili Chicken Thighs",
+          "overall": 67,
+          "titleScore": 48,
+          "proteinScore": 100,
+          "cuisineScore": 0,
+          "cookingMethodScore": 100,
+          "mealFormatScore": 100,
+          "ingredientScore": 30,
+          "sideDishScore": 0,
+          "sharedArchetypes": [
+            "sheet_pan_chicken"
+          ],
+          "category": "SAME_MEAL_DIFFERENT_NAME"
+        },
+        {
+          "slugA": "sheet-pan-meal-prep",
+          "slugB": "sheet-pan-sausage-peppers",
+          "titleA": "Crispy Honey Chili Chicken Thighs",
+          "titleB": "Crispy Honey Chili Chicken Thighs",
+          "overall": 65,
+          "titleScore": 100,
+          "proteinScore": 0,
           "cuisineScore": 0,
           "cookingMethodScore": 100,
           "mealFormatScore": 100,
           "ingredientScore": 100,
           "sideDishScore": 0,
           "sharedArchetypes": [
-            "sheet_pan_chicken"
+            "sheet_pan_chicken",
+            "soup_chili"
           ],
-          "category": "NEAR_DUPLICATE"
+          "category": "EXACT_DUPLICATE"
         },
         {
-          "slugA": "lemon-garlic-chicken-tray",
+          "slugA": "mediterranean-feast-night",
           "slugB": "sheet-pan-meal-prep",
-          "titleA": "Lemon Garlic Chicken Tray Bake",
-          "titleB": "Sheet Pan Chicken Trays",
-          "overall": 75,
-          "titleScore": 46,
-          "proteinScore": 100,
-          "cuisineScore": 100,
-          "cookingMethodScore": 100,
-          "mealFormatScore": 100,
-          "ingredientScore": 16,
-          "sideDishScore": 0,
-          "sharedArchetypes": [
-            "sheet_pan_chicken"
-          ],
-          "category": "SAME_MEAL_DIFFERENT_NAME"
-        },
-        {
-          "slugA": "honey-lime-chicken-tray",
-          "slugB": "sheet-pan-meal-prep",
-          "titleA": "Honey Lime Chicken Tray",
-          "titleB": "Sheet Pan Chicken Trays",
-          "overall": 71,
-          "titleScore": 55,
-          "proteinScore": 100,
-          "cuisineScore": 100,
-          "cookingMethodScore": 100,
-          "mealFormatScore": 100,
-          "ingredientScore": 36,
-          "sideDishScore": 0,
-          "sharedArchetypes": [],
-          "category": "SAME_MEAL_DIFFERENT_NAME"
-        },
-        {
-          "slugA": "pesto-tomato-chicken-tray",
-          "slugB": "sheet-pan-meal-prep",
-          "titleA": "Pesto Tomato Chicken Tray",
-          "titleB": "Sheet Pan Chicken Trays",
-          "overall": 58,
-          "titleScore": 55,
+          "titleA": "Crispy Honey Chili Chicken Thighs",
+          "titleB": "Crispy Honey Chili Chicken Thighs",
+          "overall": 46,
+          "titleScore": 100,
           "proteinScore": 100,
           "cuisineScore": 0,
-          "cookingMethodScore": 100,
-          "mealFormatScore": 100,
-          "ingredientScore": 14,
+          "cookingMethodScore": 0,
+          "mealFormatScore": 0,
+          "ingredientScore": 19,
           "sideDishScore": 0,
-          "sharedArchetypes": [],
-          "category": "SAME_MEAL_DIFFERENT_NAME"
+          "sharedArchetypes": [
+            "soup_chili"
+          ],
+          "category": "EXACT_DUPLICATE"
         }
       ]
     },
@@ -11097,16 +11156,74 @@
     },
     {
       "slug": "sheet-pan-sausage-peppers",
-      "title": "Sheet Pan Sausage and Peppers",
+      "title": "Crispy Honey Chili Chicken Thighs",
       "collection": "golden_100",
-      "category": "UNIQUE",
-      "primaryMatchSlug": null,
-      "primaryMatchTitle": null,
-      "similarity": 0,
+      "category": "EXACT_DUPLICATE",
+      "primaryMatchSlug": "sheet-pan-meal-prep",
+      "primaryMatchTitle": "Crispy Honey Chili Chicken Thighs",
+      "similarity": 65,
       "archetypes": [
-        "sheet_pan_generic"
+        "sheet_pan_chicken",
+        "soup_chili"
       ],
-      "pairs": []
+      "pairs": [
+        {
+          "slugA": "sheet-pan-meal-prep",
+          "slugB": "sheet-pan-sausage-peppers",
+          "titleA": "Crispy Honey Chili Chicken Thighs",
+          "titleB": "Crispy Honey Chili Chicken Thighs",
+          "overall": 65,
+          "titleScore": 100,
+          "proteinScore": 0,
+          "cuisineScore": 0,
+          "cookingMethodScore": 100,
+          "mealFormatScore": 100,
+          "ingredientScore": 100,
+          "sideDishScore": 0,
+          "sharedArchetypes": [
+            "sheet_pan_chicken",
+            "soup_chili"
+          ],
+          "category": "EXACT_DUPLICATE"
+        },
+        {
+          "slugA": "sheet-pan-fajitas",
+          "slugB": "sheet-pan-sausage-peppers",
+          "titleA": "Crispy Honey Chili Chicken Thighs",
+          "titleB": "Crispy Honey Chili Chicken Thighs",
+          "overall": 63,
+          "titleScore": 100,
+          "proteinScore": 0,
+          "cuisineScore": 0,
+          "cookingMethodScore": 100,
+          "mealFormatScore": 100,
+          "ingredientScore": 86,
+          "sideDishScore": 0,
+          "sharedArchetypes": [
+            "sheet_pan_chicken",
+            "soup_chili"
+          ],
+          "category": "EXACT_DUPLICATE"
+        },
+        {
+          "slugA": "mediterranean-feast-night",
+          "slugB": "sheet-pan-sausage-peppers",
+          "titleA": "Crispy Honey Chili Chicken Thighs",
+          "titleB": "Crispy Honey Chili Chicken Thighs",
+          "overall": 23,
+          "titleScore": 100,
+          "proteinScore": 0,
+          "cuisineScore": 0,
+          "cookingMethodScore": 0,
+          "mealFormatScore": 0,
+          "ingredientScore": 19,
+          "sideDishScore": 0,
+          "sharedArchetypes": [
+            "soup_chili"
+          ],
+          "category": "EXACT_DUPLICATE"
+        }
+      ]
     },
     {
       "slug": "shepherds-pie",
@@ -11138,53 +11255,35 @@
       "slug": "sicilian-sheet-pizza",
       "title": "Sicilian Sheet Pan Pizza",
       "collection": "pizza_night",
-      "category": "SAME_MEAL_DIFFERENT_NAME",
-      "primaryMatchSlug": "meat-lovers-sheet-pizza",
-      "primaryMatchTitle": "Meat Lover's Sheet Pan Pizza",
-      "similarity": 72,
+      "category": "UNIQUE",
+      "primaryMatchSlug": null,
+      "primaryMatchTitle": null,
+      "similarity": 0,
       "archetypes": [
         "sheet_pan_generic"
       ],
-      "pairs": [
-        {
-          "slugA": "meat-lovers-sheet-pizza",
-          "slugB": "sicilian-sheet-pizza",
-          "titleA": "Meat Lover's Sheet Pan Pizza",
-          "titleB": "Sicilian Sheet Pan Pizza",
-          "overall": 72,
-          "titleScore": 61,
-          "proteinScore": 100,
-          "cuisineScore": 0,
-          "cookingMethodScore": 100,
-          "mealFormatScore": 100,
-          "ingredientScore": 42,
-          "sideDishScore": 0,
-          "sharedArchetypes": [
-            "sheet_pan_generic"
-          ],
-          "category": "SAME_MEAL_DIFFERENT_NAME"
-        }
-      ]
+      "pairs": []
     },
     {
       "slug": "skillet-chicken-alfredo",
-      "title": "One-Skillet Chicken Alfredo",
+      "title": "Garlic Chicken Pasta",
       "collection": "golden_100",
       "category": "NEAR_DUPLICATE",
       "primaryMatchSlug": "creamy-chicken-penne-alfredo",
       "primaryMatchTitle": "Creamy Chicken Penne Alfredo",
-      "similarity": 86,
+      "similarity": 84,
       "archetypes": [
-        "creamy_chicken_pasta"
+        "creamy_chicken_pasta",
+        "pasta_red_sauce"
       ],
       "pairs": [
         {
           "slugA": "creamy-chicken-penne-alfredo",
           "slugB": "skillet-chicken-alfredo",
           "titleA": "Creamy Chicken Penne Alfredo",
-          "titleB": "One-Skillet Chicken Alfredo",
-          "overall": 86,
-          "titleScore": 44,
+          "titleB": "Garlic Chicken Pasta",
+          "overall": 84,
+          "titleScore": 36,
           "proteinScore": 100,
           "cuisineScore": 100,
           "cookingMethodScore": 100,
@@ -11197,12 +11296,31 @@
           "category": "NEAR_DUPLICATE"
         },
         {
+          "slugA": "chicken-parm",
+          "slugB": "skillet-chicken-alfredo",
+          "titleA": "Chicken Parm",
+          "titleB": "Garlic Chicken Pasta",
+          "overall": 71,
+          "titleScore": 50,
+          "proteinScore": 100,
+          "cuisineScore": 100,
+          "cookingMethodScore": 0,
+          "mealFormatScore": 100,
+          "ingredientScore": 36,
+          "sideDishScore": 0,
+          "sharedArchetypes": [
+            "creamy_chicken_pasta",
+            "pasta_red_sauce"
+          ],
+          "category": "SAME_MEAL_DIFFERENT_NAME"
+        },
+        {
           "slugA": "chicken-alfredo-bake",
           "slugB": "skillet-chicken-alfredo",
           "titleA": "Chicken Alfredo Bake",
-          "titleB": "One-Skillet Chicken Alfredo",
-          "overall": 69,
-          "titleScore": 42,
+          "titleB": "Garlic Chicken Pasta",
+          "overall": 65,
+          "titleScore": 20,
           "proteinScore": 100,
           "cuisineScore": 100,
           "cookingMethodScore": 0,
@@ -12894,59 +13012,23 @@
     },
     {
       "slug": "street-corn-chicken",
-      "title": "Mexican Street Corn Chicken Bowls",
+      "title": "Smoky Chicken Thighs Bowls",
       "collection": "golden_100",
-      "category": "SAME_MEAL_DIFFERENT_NAME",
-      "primaryMatchSlug": "performance-burrito-bowls",
-      "primaryMatchTitle": "Performance Chicken Burrito Bowls",
-      "similarity": 77,
+      "category": "EXACT_DUPLICATE",
+      "primaryMatchSlug": "greek-chicken-bowls",
+      "primaryMatchTitle": "Smoky Chicken Thighs Bowls",
+      "similarity": 79,
       "archetypes": [
         "chicken_rice_bowl"
       ],
       "pairs": [
         {
-          "slugA": "performance-burrito-bowls",
-          "slugB": "street-corn-chicken",
-          "titleA": "Performance Chicken Burrito Bowls",
-          "titleB": "Mexican Street Corn Chicken Bowls",
-          "overall": 77,
-          "titleScore": 30,
-          "proteinScore": 100,
-          "cuisineScore": 100,
-          "cookingMethodScore": 100,
-          "mealFormatScore": 100,
-          "ingredientScore": 43,
-          "sideDishScore": 20,
-          "sharedArchetypes": [
-            "chicken_rice_bowl"
-          ],
-          "category": "SAME_MEAL_DIFFERENT_NAME"
-        },
-        {
-          "slugA": "bbq-chicken-bowls",
-          "slugB": "street-corn-chicken",
-          "titleA": "BBQ Chicken Bowls",
-          "titleB": "Mexican Street Corn Chicken Bowls",
-          "overall": 69,
-          "titleScore": 41,
-          "proteinScore": 100,
-          "cuisineScore": 0,
-          "cookingMethodScore": 100,
-          "mealFormatScore": 100,
-          "ingredientScore": 34,
-          "sideDishScore": 25,
-          "sharedArchetypes": [
-            "chicken_rice_bowl"
-          ],
-          "category": "SAME_MEAL_DIFFERENT_NAME"
-        },
-        {
           "slugA": "greek-chicken-bowls",
           "slugB": "street-corn-chicken",
-          "titleA": "Greek Chicken Bowls",
-          "titleB": "Mexican Street Corn Chicken Bowls",
-          "overall": 69,
-          "titleScore": 52,
+          "titleA": "Smoky Chicken Thighs Bowls",
+          "titleB": "Smoky Chicken Thighs Bowls",
+          "overall": 79,
+          "titleScore": 100,
           "proteinScore": 100,
           "cuisineScore": 0,
           "cookingMethodScore": 100,
@@ -12956,42 +13038,22 @@
           "sharedArchetypes": [
             "chicken_rice_bowl"
           ],
-          "category": "SAME_MEAL_DIFFERENT_NAME"
+          "category": "EXACT_DUPLICATE"
         },
         {
-          "slugA": "honey-garlic-chicken-rice-bowls",
+          "slugA": "mediterranean-chicken-farro-bowls",
           "slugB": "street-corn-chicken",
-          "titleA": "Honey Garlic Chicken Rice Bowls",
-          "titleB": "Mexican Street Corn Chicken Bowls",
-          "overall": 68,
-          "titleScore": 34,
+          "titleA": "Smoky Chicken Bowls",
+          "titleB": "Smoky Chicken Thighs Bowls",
+          "overall": 61,
+          "titleScore": 75,
           "proteinScore": 100,
           "cuisineScore": 0,
           "cookingMethodScore": 100,
           "mealFormatScore": 100,
-          "ingredientScore": 18,
-          "sideDishScore": 50,
-          "sharedArchetypes": [
-            "chicken_rice_bowl"
-          ],
-          "category": "SAME_MEAL_DIFFERENT_NAME"
-        },
-        {
-          "slugA": "cajun-chicken-rice-bowl",
-          "slugB": "street-corn-chicken",
-          "titleA": "Cajun Chicken Rice Bowl",
-          "titleB": "Mexican Street Corn Chicken Bowls",
-          "overall": 66,
-          "titleScore": 38,
-          "proteinScore": 100,
-          "cuisineScore": 0,
-          "cookingMethodScore": 100,
-          "mealFormatScore": 100,
-          "ingredientScore": 17,
-          "sideDishScore": 25,
-          "sharedArchetypes": [
-            "chicken_rice_bowl"
-          ],
+          "ingredientScore": 5,
+          "sideDishScore": 0,
+          "sharedArchetypes": [],
           "category": "SAME_MEAL_DIFFERENT_NAME"
         }
       ]
@@ -13123,22 +13185,6 @@
           "category": "SAME_MEAL_DIFFERENT_NAME"
         },
         {
-          "slugA": "greek-chicken-bowls",
-          "slugB": "tabbouleh-chicken-bowls",
-          "titleA": "Greek Chicken Bowls",
-          "titleB": "Tabbouleh Chicken Bowls",
-          "overall": 46,
-          "titleScore": 62,
-          "proteinScore": 100,
-          "cuisineScore": 0,
-          "cookingMethodScore": 0,
-          "mealFormatScore": 100,
-          "ingredientScore": 22,
-          "sideDishScore": 0,
-          "sharedArchetypes": [],
-          "category": "SAME_MEAL_DIFFERENT_NAME"
-        },
-        {
           "slugA": "bbq-chicken-bowls",
           "slugB": "tabbouleh-chicken-bowls",
           "titleA": "BBQ Chicken Bowls",
@@ -13253,24 +13299,6 @@
           "mealFormatScore": 100,
           "ingredientScore": 35,
           "sideDishScore": 20,
-          "sharedArchetypes": [
-            "chicken_rice_bowl"
-          ],
-          "category": "SAME_MEAL_DIFFERENT_NAME"
-        },
-        {
-          "slugA": "greek-chicken-bowls",
-          "slugB": "teriyaki-donburi",
-          "titleA": "Greek Chicken Bowls",
-          "titleB": "Teriyaki Chicken Donburi",
-          "overall": 67,
-          "titleScore": 45,
-          "proteinScore": 100,
-          "cuisineScore": 0,
-          "cookingMethodScore": 100,
-          "mealFormatScore": 100,
-          "ingredientScore": 25,
-          "sideDishScore": 13,
           "sharedArchetypes": [
             "chicken_rice_bowl"
           ],
@@ -13634,16 +13662,33 @@
     },
     {
       "slug": "thai-basil-chicken",
-      "title": "Thai Basil Chicken Stir Fry",
+      "title": "Garlic Chicken Thighs Skillet",
       "collection": "golden_100",
-      "category": "UNIQUE",
-      "primaryMatchSlug": null,
-      "primaryMatchTitle": null,
-      "similarity": 0,
+      "category": "SAME_MEAL_DIFFERENT_NAME",
+      "primaryMatchSlug": "chicken-enchilada-skillet-light",
+      "primaryMatchTitle": "Garlic Chicken Skillet",
+      "similarity": 64,
       "archetypes": [
         "other"
       ],
-      "pairs": []
+      "pairs": [
+        {
+          "slugA": "chicken-enchilada-skillet-light",
+          "slugB": "thai-basil-chicken",
+          "titleA": "Garlic Chicken Skillet",
+          "titleB": "Garlic Chicken Thighs Skillet",
+          "overall": 64,
+          "titleScore": 77,
+          "proteinScore": 100,
+          "cuisineScore": 0,
+          "cookingMethodScore": 100,
+          "mealFormatScore": 100,
+          "ingredientScore": 21,
+          "sideDishScore": 0,
+          "sharedArchetypes": [],
+          "category": "SAME_MEAL_DIFFERENT_NAME"
+        }
+      ]
     },
     {
       "slug": "tonkotsu-ramen-crew",
@@ -14566,6 +14611,25 @@
       "category": "NEAR_DUPLICATE"
     },
     {
+      "slugA": "sheet-pan-fajitas",
+      "slugB": "sheet-pan-meal-prep",
+      "titleA": "Crispy Honey Chili Chicken Thighs",
+      "titleB": "Crispy Honey Chili Chicken Thighs",
+      "overall": 94,
+      "titleScore": 100,
+      "proteinScore": 100,
+      "cuisineScore": 0,
+      "cookingMethodScore": 100,
+      "mealFormatScore": 100,
+      "ingredientScore": 86,
+      "sideDishScore": 0,
+      "sharedArchetypes": [
+        "sheet_pan_chicken",
+        "soup_chili"
+      ],
+      "category": "EXACT_DUPLICATE"
+    },
+    {
       "slugA": "ham-pepper-skillet",
       "slugB": "steakhouse-hash-skillet",
       "titleA": "Ham & Pepper Breakfast Skillet",
@@ -14829,6 +14893,24 @@
       "category": "NEAR_DUPLICATE"
     },
     {
+      "slugA": "sheet-pan-chicken-fajitas-lite",
+      "slugB": "sheet-pan-fajitas",
+      "titleA": "Crispy Garlic Chicken",
+      "titleB": "Crispy Honey Chili Chicken Thighs",
+      "overall": 88,
+      "titleScore": 48,
+      "proteinScore": 100,
+      "cuisineScore": 100,
+      "cookingMethodScore": 100,
+      "mealFormatScore": 100,
+      "ingredientScore": 38,
+      "sideDishScore": 100,
+      "sharedArchetypes": [
+        "sheet_pan_chicken"
+      ],
+      "category": "NEAR_DUPLICATE"
+    },
+    {
       "slugA": "carolina-vinegar-pulled-pork",
       "slugB": "memphis-dry-rub-pulled-pork",
       "titleA": "Carolina Vinegar Pulled Pork",
@@ -14974,24 +15056,6 @@
       "sharedArchetypes": [
         "chicken_bbq",
         "smoked_meal"
-      ],
-      "category": "NEAR_DUPLICATE"
-    },
-    {
-      "slugA": "creamy-chicken-penne-alfredo",
-      "slugB": "skillet-chicken-alfredo",
-      "titleA": "Creamy Chicken Penne Alfredo",
-      "titleB": "One-Skillet Chicken Alfredo",
-      "overall": 86,
-      "titleScore": 44,
-      "proteinScore": 100,
-      "cuisineScore": 100,
-      "cookingMethodScore": 100,
-      "mealFormatScore": 100,
-      "ingredientScore": 93,
-      "sideDishScore": 0,
-      "sharedArchetypes": [
-        "creamy_chicken_pasta"
       ],
       "category": "NEAR_DUPLICATE"
     },
@@ -15200,6 +15264,24 @@
       "category": "NEAR_DUPLICATE"
     },
     {
+      "slugA": "creamy-chicken-penne-alfredo",
+      "slugB": "skillet-chicken-alfredo",
+      "titleA": "Creamy Chicken Penne Alfredo",
+      "titleB": "Garlic Chicken Pasta",
+      "overall": 84,
+      "titleScore": 36,
+      "proteinScore": 100,
+      "cuisineScore": 100,
+      "cookingMethodScore": 100,
+      "mealFormatScore": 100,
+      "ingredientScore": 93,
+      "sideDishScore": 0,
+      "sharedArchetypes": [
+        "creamy_chicken_pasta"
+      ],
+      "category": "NEAR_DUPLICATE"
+    },
+    {
       "slugA": "bbq-breakfast-hash",
       "slugB": "chorizo-breakfast-hash",
       "titleA": "BBQ Breakfast Hash",
@@ -15218,6 +15300,22 @@
       "category": "NEAR_DUPLICATE"
     },
     {
+      "slugA": "fast-philly-skillet",
+      "slugB": "philly-cheesesteak-skillet",
+      "titleA": "Garlic Butter Steak Skillet",
+      "titleB": "Garlic Butter Steak Skillet",
+      "overall": 83,
+      "titleScore": 100,
+      "proteinScore": 100,
+      "cuisineScore": 100,
+      "cookingMethodScore": 100,
+      "mealFormatScore": 100,
+      "ingredientScore": 52,
+      "sideDishScore": 0,
+      "sharedArchetypes": [],
+      "category": "EXACT_DUPLICATE"
+    },
+    {
       "slugA": "loaded-baked-potato-bar",
       "slugB": "loaded-potato-feed",
       "titleA": "Loaded Baked Potato Bar",
@@ -15231,24 +15329,6 @@
       "ingredientScore": 83,
       "sideDishScore": 45,
       "sharedArchetypes": [],
-      "category": "NEAR_DUPLICATE"
-    },
-    {
-      "slugA": "sheet-pan-fajitas",
-      "slugB": "sheet-pan-meal-prep",
-      "titleA": "Sheet Pan Chicken Fajitas",
-      "titleB": "Sheet Pan Chicken Trays",
-      "overall": 83,
-      "titleScore": 73,
-      "proteinScore": 100,
-      "cuisineScore": 0,
-      "cookingMethodScore": 100,
-      "mealFormatScore": 100,
-      "ingredientScore": 100,
-      "sideDishScore": 0,
-      "sharedArchetypes": [
-        "sheet_pan_chicken"
-      ],
       "category": "NEAR_DUPLICATE"
     },
     {
@@ -15790,6 +15870,24 @@
       "category": "SAME_MEAL_DIFFERENT_NAME"
     },
     {
+      "slugA": "greek-chicken-bowls",
+      "slugB": "street-corn-chicken",
+      "titleA": "Smoky Chicken Thighs Bowls",
+      "titleB": "Smoky Chicken Thighs Bowls",
+      "overall": 79,
+      "titleScore": 100,
+      "proteinScore": 100,
+      "cuisineScore": 0,
+      "cookingMethodScore": 100,
+      "mealFormatScore": 100,
+      "ingredientScore": 29,
+      "sideDishScore": 13,
+      "sharedArchetypes": [
+        "chicken_rice_bowl"
+      ],
+      "category": "EXACT_DUPLICATE"
+    },
+    {
       "slugA": "ham-cheddar-egg-bake",
       "slugB": "southwest-egg-bake",
       "titleA": "Ham & Cheddar Egg Bake",
@@ -15853,22 +15951,6 @@
       "cookingMethodScore": 100,
       "mealFormatScore": 100,
       "ingredientScore": 53,
-      "sideDishScore": 0,
-      "sharedArchetypes": [],
-      "category": "SAME_MEAL_DIFFERENT_NAME"
-    },
-    {
-      "slugA": "fast-philly-skillet",
-      "slugB": "philly-cheesesteak-skillet",
-      "titleA": "Fast Philly Cheesesteak Skillet",
-      "titleB": "Philly Cheesesteak Skillet",
-      "overall": 78,
-      "titleScore": 86,
-      "proteinScore": 100,
-      "cuisineScore": 100,
-      "cookingMethodScore": 100,
-      "mealFormatScore": 100,
-      "ingredientScore": 36,
       "sideDishScore": 0,
       "sharedArchetypes": [],
       "category": "SAME_MEAL_DIFFERENT_NAME"
@@ -16119,24 +16201,6 @@
       "sideDishScore": 0,
       "sharedArchetypes": [
         "smoked_meal"
-      ],
-      "category": "SAME_MEAL_DIFFERENT_NAME"
-    },
-    {
-      "slugA": "performance-burrito-bowls",
-      "slugB": "street-corn-chicken",
-      "titleA": "Performance Chicken Burrito Bowls",
-      "titleB": "Mexican Street Corn Chicken Bowls",
-      "overall": 77,
-      "titleScore": 30,
-      "proteinScore": 100,
-      "cuisineScore": 100,
-      "cookingMethodScore": 100,
-      "mealFormatScore": 100,
-      "ingredientScore": 43,
-      "sideDishScore": 20,
-      "sharedArchetypes": [
-        "chicken_rice_bowl"
       ],
       "category": "SAME_MEAL_DIFFERENT_NAME"
     },
@@ -16460,24 +16524,6 @@
       "category": "SAME_MEAL_DIFFERENT_NAME"
     },
     {
-      "slugA": "lemon-garlic-chicken-tray",
-      "slugB": "sheet-pan-meal-prep",
-      "titleA": "Lemon Garlic Chicken Tray Bake",
-      "titleB": "Sheet Pan Chicken Trays",
-      "overall": 75,
-      "titleScore": 46,
-      "proteinScore": 100,
-      "cuisineScore": 100,
-      "cookingMethodScore": 100,
-      "mealFormatScore": 100,
-      "ingredientScore": 16,
-      "sideDishScore": 0,
-      "sharedArchetypes": [
-        "sheet_pan_chicken"
-      ],
-      "category": "SAME_MEAL_DIFFERENT_NAME"
-    },
-    {
       "slugA": "mixed-berry-protein",
       "slugB": "mocha-protein",
       "titleA": "Mixed Berry Protein Smoothie",
@@ -16633,22 +16679,6 @@
       "category": "SAME_MEAL_DIFFERENT_NAME"
     },
     {
-      "slugA": "cheesy-chicken-broccoli-rice",
-      "slugB": "one-pot-chicken-rice",
-      "titleA": "Cheesy Chicken Broccoli Rice",
-      "titleB": "One-Pot Chicken and Rice",
-      "overall": 74,
-      "titleScore": 48,
-      "proteinScore": 100,
-      "cuisineScore": 100,
-      "cookingMethodScore": 100,
-      "mealFormatScore": 100,
-      "ingredientScore": 46,
-      "sideDishScore": 25,
-      "sharedArchetypes": [],
-      "category": "SAME_MEAL_DIFFERENT_NAME"
-    },
-    {
       "slugA": "hall-breakfast-burritos",
       "slugB": "veggie-egg-burritos",
       "titleA": "Hall Breakfast Burritos",
@@ -16771,10 +16801,10 @@
     {
       "slugA": "bulgogi-bowls",
       "slugB": "korean-beef-rice-bowls",
-      "titleA": "Korean Bulgogi Rice Bowls",
+      "titleA": "Korean Ginger Sesame Steak Bowls",
       "titleB": "Korean Garlic Beef Bowls",
       "overall": 73,
-      "titleScore": 55,
+      "titleScore": 54,
       "proteinScore": 100,
       "cuisineScore": 100,
       "cookingMethodScore": 100,
@@ -16996,20 +17026,21 @@
       "category": "SAME_MEAL_DIFFERENT_NAME"
     },
     {
-      "slugA": "bbq-chicken-bowls",
-      "slugB": "greek-chicken-bowls",
-      "titleA": "BBQ Chicken Bowls",
-      "titleB": "Greek Chicken Bowls",
+      "slugA": "bbq-chicken-mac-and-cheese",
+      "slugB": "bbq-chicken-pizza",
+      "titleA": "BBQ Chicken Mac and Cheese",
+      "titleB": "BBQ Chicken Pizza",
       "overall": 72,
-      "titleScore": 71,
+      "titleScore": 45,
       "proteinScore": 100,
-      "cuisineScore": 0,
+      "cuisineScore": 100,
       "cookingMethodScore": 100,
-      "mealFormatScore": 100,
-      "ingredientScore": 25,
-      "sideDishScore": 10,
+      "mealFormatScore": 0,
+      "ingredientScore": 44,
+      "sideDishScore": 0,
       "sharedArchetypes": [
-        "chicken_rice_bowl"
+        "chicken_bbq",
+        "smoked_meal"
       ],
       "category": "SAME_MEAL_DIFFERENT_NAME"
     },
@@ -17123,6 +17154,22 @@
       "cookingMethodScore": 100,
       "mealFormatScore": 100,
       "ingredientScore": 100,
+      "sideDishScore": 0,
+      "sharedArchetypes": [],
+      "category": "SAME_MEAL_DIFFERENT_NAME"
+    },
+    {
+      "slugA": "chocolate-banana-recovery",
+      "slugB": "mocha-protein",
+      "titleA": "Chocolate Banana Recovery Smoothie",
+      "titleB": "Mocha Protein Smoothie",
+      "overall": 72,
+      "titleScore": 45,
+      "proteinScore": 100,
+      "cuisineScore": 100,
+      "cookingMethodScore": 100,
+      "mealFormatScore": 100,
+      "ingredientScore": 56,
       "sideDishScore": 0,
       "sharedArchetypes": [],
       "category": "SAME_MEAL_DIFFERENT_NAME"

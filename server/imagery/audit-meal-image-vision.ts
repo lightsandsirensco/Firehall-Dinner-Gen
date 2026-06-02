@@ -6,6 +6,7 @@ import { createOpenAIClient, hasOpenAIKey } from "../openai-client.js";
 import { log } from "../logger.js";
 import { getFoodImageryConfig } from "../food-imagery/config.js";
 import type { MealImageRequirements } from "../../shared/curated-image-governance/meal-image-completeness.js";
+import { getPlatingAccuracyVisionRubric } from "../../shared/plating-accuracy-standard.js";
 
 export type MealImageVisionResult = {
   pass: boolean;
@@ -40,7 +41,9 @@ FAIL (pass=false) if ANY of:
 - Image could reasonably belong to a different recipe (generic bowl, wrong sides, wrong format)
 - Tight restaurant macro crop with no complete meal context
 
-PASS when image clearly shows the correct protein, named sides/carbs/vegetables, and reads as a complete firehall crew meal with wider family-style framing.`;
+PASS when image clearly shows the correct protein, named sides/carbs/vegetables, and reads as a complete firehall crew meal with wider family-style framing.
+
+${getPlatingAccuracyVisionRubric()}`;
 
 export async function auditMealImageWithVision(input: {
   imageBuffer: Buffer;

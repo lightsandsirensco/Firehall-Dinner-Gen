@@ -13,10 +13,10 @@
   "cookTime": 25,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 644,
-  "protein": 76,
+  "calories": 672,
+  "protein": 50,
   "carbs": 47,
-  "fats": 16,
+  "fats": 30,
   "tags": [
     "protein:chicken",
     "format:grill",
@@ -218,16 +218,17 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 644,
-    "protein": 76,
+    "calories": 672,
+    "protein": 50,
     "carbs": 47,
-    "fats": 16,
-    "label": "per serving (hall portion)",
+    "fats": 30,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": true,
-      "under30gFat": true,
+      "under30gFat": false,
       "highCarb": false,
       "lowCarb": false,
       "mealPrepFriendly": true
@@ -235,7 +236,7 @@
     "badgeCandidates": {
       "highProtein": true,
       "lighterOption": false,
-      "performanceMeal": true
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/smoker-catalog/honey-chipotle-chicken-thighs.jpg",

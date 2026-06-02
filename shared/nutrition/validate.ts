@@ -33,6 +33,28 @@ export function validateNutritionPerServing(
   if (issues.some((i) => i.code === "missing" || i.code === "negative")) return issues;
 
   const { calories, protein, carbs, fat } = macros as RecipeNutritionPerServing;
+
+  if (calories > 0 && calories < 250 && context?.mealType !== "smoothie") {
+    issues.push({
+      code: "suspicious",
+      field: "calories",
+      message: `Calories under 250 for full meal (${calories})`,
+    });
+  }
+  if (fat > 100) {
+    issues.push({
+      code: "suspicious",
+      field: "fat",
+      message: `Fat over 100g per serving (${fat}g)`,
+    });
+  }
+  if (carbs > 200) {
+    issues.push({
+      code: "suspicious",
+      field: "carbs",
+      message: `Carbs over 200g per serving (${carbs}g)`,
+    });
+  }
   const macroCal = protein * 4 + carbs * 4 + fat * 9;
   const ratio = macroCal / Math.max(calories, 1);
 
@@ -55,6 +77,10 @@ export function validateNutritionPerServing(
   return issues;
 }
 
-export function hasCompleteNutrition(macros: Partial<RecipeNutritionPerServing> | null | undefined): boolean {
+export function hasCompleteNutrition(
+  macros: Partial<RecipeNutritionPerServing> | null | undefined,
+  meta?: { source?: string; estimateAvailable?: boolean },
+): boolean {
+  if (meta?.source === "unavailable" || meta?.estimateAvailable === false) return false;
   return validateNutritionPerServing(macros).every((i) => i.code !== "missing" && i.code !== "negative");
 }

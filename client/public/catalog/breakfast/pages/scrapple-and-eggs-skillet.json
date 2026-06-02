@@ -133,8 +133,9 @@
     "protein": 9,
     "carbs": 24,
     "fat": 28,
-    "label": "per serving (hall portion)",
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
@@ -187,5 +188,7 @@
     "Aluminum foil"
   ],
   "mealPrepNotes": "Prep mise en place before the shift — Crispy Maple Eggs runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone.",
-  "heroImageAlt": "Scrapple and Eggs Skillet — wide family-style firehall platter showing eggs skillet on a crew prep table"
+  "heroImageAlt": "Scrapple and Eggs Skillet — wide family-style firehall platter showing eggs skillet on a crew prep table",
+  "mobileImage": "/images/mobile/breakfast/scrapple-and-eggs-skillet.jpg",
+  "railImage": "/images/rails/breakfast/scrapple-and-eggs-skillet.jpg"
 }

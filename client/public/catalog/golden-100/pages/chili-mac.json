@@ -13,10 +13,10 @@
   "cookTime": 55,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 1315,
-  "protein": 80,
-  "carbs": 69,
-  "fats": 82,
+  "calories": 0,
+  "protein": 0,
+  "carbs": 0,
+  "fats": 0,
   "tags": [
     "protein:beef",
     "format:skillet",
@@ -152,41 +152,83 @@
   "steps": [
     {
       "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Chili Mac Skillet in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Double-check seasoning after scaling — crew palates run salty after long shifts, so taste the first portion before opening the line.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch beef. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
       "title": "Brown the beef",
       "instruction": "Heat oil in a large Dutch oven over medium-high. Brown ground beef with onion and bell pepper, breaking into fine crumbles. Drain excess grease — greasy chili mac separates on the line.",
       "minutes": 15,
       "heatLevel": "medium-high"
     },
     {
-      "stepNumber": 2,
+      "stepNumber": 4,
       "title": "Simmer the chili base",
-      "instruction": "Add garlic, chili powder, cumin, paprika, and oregano; cook 1 minute. Stir in tomato paste, diced tomatoes, beans, and beef broth. Simmer 20–25 minutes until thickened and flavors meld. Season with salt and pepper.",
+      "instruction": "Add garlic, chili powder, cumin, paprika, and oregano; cook 1 minute. Stir in tomato paste, diced tomatoes, beans, and beef broth. Simmer 20–25 minutes until thickened and flavors meld. Season with salt and pepper. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
       "minutes": 25,
       "heatLevel": "medium-low"
     },
     {
-      "stepNumber": 3,
+      "stepNumber": 5,
       "title": "Cook macaroni separately",
       "instruction": "Boil elbow macaroni in salted water until just al dente. Drain well — starch makes the pot gluey if you cook pasta in the chili too long.",
       "minutes": 10,
       "heatLevel": "medium-high"
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 6,
       "title": "Combine chili and mac",
       "instruction": "Stir cooked macaroni into the chili pot until evenly coated. The mix should look saucy, not dry — add a splash of broth if needed.",
       "minutes": 5,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 7,
       "title": "Melt cheese on top",
       "instruction": "Top with shredded cheddar. Cover 2 minutes to melt, or broil 2–3 minutes for browned cheese edges. Keep the pot on low for seconds.",
       "minutes": 5,
       "heatLevel": "medium-low"
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 8,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F for medium beef, 160°F for ground. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 10,
+      "title": "Portion and open the line",
+      "instruction": "Portion Chili Mac Skillet onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
+      "title": "Scale for larger halls",
+      "instruction": "When cooking for more than 8 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 12,
       "title": "Serve Chili Mac Skillet",
       "instruction": "Ladle into bowls or serve straight from the Dutch oven with sour cream and green onions on the side. This is chili AND mac — both should be obvious in every bite.",
       "minutes": 5,
@@ -212,12 +254,13 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 1315,
-    "protein": 80,
-    "carbs": 69,
-    "fats": 82,
-    "label": "per serving (hall portion)",
-    "source": "calculated",
+    "calories": 0,
+    "protein": 0,
+    "carbs": 0,
+    "fats": 0,
+    "label": "Estimated per serving",
+    "source": "unavailable",
+    "estimateAvailable": false,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,

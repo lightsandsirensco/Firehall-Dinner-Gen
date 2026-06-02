@@ -1,0 +1,292 @@
+{
+  "slug": "bbq-chicken-mac-and-cheese",
+  "title": "BBQ Chicken Mac and Cheese",
+  "displayTitle": "BBQ Chicken Mac and Cheese",
+  "seoTitle": "BBQ Chicken Mac and Cheese | Firefighter Meal",
+  "shortDescription": "Shredded BBQ chicken baked into creamy mac — hall comfort tray",
+  "subtitle": "Shredded BBQ chicken baked into creamy mac — hall comfort tray",
+  "category": "comfort_food",
+  "cuisine": "american",
+  "description": "Shredded BBQ chicken baked into creamy mac — hall comfort tray",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 65,
+  "prepTime": 20,
+  "difficulty": "easy",
+  "calories": 820,
+  "protein": 54,
+  "carbs": 62,
+  "fats": 30,
+  "tags": [
+    "protein:chicken",
+    "format:bake",
+    "category:comfort_food",
+    "comfort",
+    "bbq",
+    "chicken",
+    "golden_100"
+  ],
+  "equipment": [
+    "Large sheet trays",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "ingredients": [
+    {
+      "name": "Boneless skinless chicken thighs",
+      "quantity": "4",
+      "unit": "lb",
+      "notes": "~6 oz cooked shredded per firefighter (4 lb raw)",
+      "group": "Protein"
+    },
+    {
+      "name": "Smoked paprika",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Chicken rub"
+    },
+    {
+      "name": "Garlic powder",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Chicken rub"
+    },
+    {
+      "name": "Onion powder",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Chicken rub"
+    },
+    {
+      "name": "Kosher salt",
+      "quantity": "1.5",
+      "unit": "tbsp",
+      "group": "Chicken rub"
+    },
+    {
+      "name": "Black pepper",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Chicken rub"
+    },
+    {
+      "name": "BBQ sauce",
+      "quantity": "1.5",
+      "unit": "cups",
+      "notes": "toss and drizzle",
+      "group": "BBQ"
+    },
+    {
+      "name": "Dry elbow macaroni",
+      "quantity": "1.5",
+      "unit": "lb",
+      "notes": "~1.5 cups prepared mac per firefighter",
+      "group": "Mac"
+    },
+    {
+      "name": "Unsalted butter",
+      "quantity": "8",
+      "unit": "tbsp",
+      "notes": "1/2 cup",
+      "group": "Cheese sauce"
+    },
+    {
+      "name": "All-purpose flour",
+      "quantity": "8",
+      "unit": "tbsp",
+      "notes": "1/2 cup",
+      "group": "Cheese sauce"
+    },
+    {
+      "name": "Whole milk",
+      "quantity": "4",
+      "unit": "cups",
+      "group": "Cheese sauce"
+    },
+    {
+      "name": "Sharp cheddar, shredded",
+      "quantity": "16",
+      "unit": "oz",
+      "group": "Cheese"
+    },
+    {
+      "name": "Mozzarella, shredded",
+      "quantity": "8",
+      "unit": "oz",
+      "group": "Cheese"
+    },
+    {
+      "name": "Crispy fried onions",
+      "quantity": "0.8",
+      "unit": "cup",
+      "notes": "garnish at the line",
+      "group": "Topping",
+      "optional": true
+    },
+    {
+      "name": "Green onions, sliced",
+      "quantity": "2",
+      "unit": "bunches",
+      "notes": "optional garnish",
+      "group": "Garnish",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Season the chicken",
+      "instruction": "Pat chicken thighs dry. Mix smoked paprika, garlic powder, onion powder, salt, and pepper; coat all sides. Let sit 10 minutes while the oven preheats to 375°F — seasoned chicken browns better than wet, pale thighs.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Cook chicken until shreddable",
+      "instruction": "Arrange thighs on a rimmed sheet tray. Bake at 375°F 28–35 minutes until the thickest piece reads 165°F on an instant-read thermometer and juices run clear. Visual cue: edges start to caramelize and the meat springs back when pressed.",
+      "minutes": 35,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Shred and sauce the chicken",
+      "instruction": "Rest chicken 8 minutes, then shred with two forks — you want pulled strands, not cubes. Toss with about 1 cup of the BBQ sauce until glossy (reserve the rest for drizzling before bake). This is BBQ chicken mac, not pulled pork mac: no pork shoulder, no eight-hour smoke.",
+      "minutes": 12,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Par-cook the macaroni",
+      "instruction": "Boil elbow macaroni in well-salted water 2 minutes shy of al dente (about 6–7 minutes for standard elbows). Drain thoroughly — wet pasta makes a soupy bake.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Build the cheese sauce",
+      "instruction": "Melt butter in a large pot over medium heat. Whisk in flour; cook 1 minute until it smells nutty. Whisk in milk in steady streams until smooth. Simmer 3–4 minutes until thick enough to coat a spoon. Off heat, stir in cheddar and mozzarella until melted. The sauce should look like thick nacho cheese, not runny milk.",
+      "minutes": 12,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Fold mac and BBQ chicken together",
+      "instruction": "Fold drained mac into cheese sauce, then fold in shredded BBQ chicken in wide streaks so orange cheese and sauced chicken both show — do not mash into one uniform color. Taste for salt; BBQ sauce varies in sodium.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Pan up for the crew",
+      "instruction": "Butter two full-size hotel pans or one deep half-pan for eight firefighters. Spread mac mixture evenly. Drizzle remaining BBQ sauce in thin ribbons across the top so it caramelizes in the oven. Scatter extra cheddar and mozzarella on top for a cheese pull.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Bake until bubbling with cheese pull",
+      "instruction": "Bake uncovered at 375°F 20–25 minutes until edges bubble, top is deep golden, and a spoon lift shows stretchy cheese. Visual cue: BBQ sauce edges look tacky and mahogany, not pale pink. If the top browns before the center is hot, tent foil and continue baking until the center probes 165°F.",
+      "minutes": 25,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Hold through call interruptions",
+      "instruction": "If tones drop mid-service, cover the tray with vented foil and hold at 200°F up to 45 minutes. Note hold time on the pan. Before serving, loosen tight mac with a splash of milk stirred into the corner — held mac sets like concrete.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 10,
+      "title": "Serve and garnish",
+      "instruction": "Rest 5 minutes so scoops hold together. Portion about 1.5 cups mac and cheese plus a generous scoop of BBQ chicken per firefighter (~6 oz cooked chicken each). Top with crispy fried onions and green onions at the line, not baked in. Serve with a spatula from the hotel pan — hearty, not eating-contest piles.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 11,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover BBQ chicken mac — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
+      "minutes": 5,
+      "heatLevel": "low"
+    }
+  ],
+  "proTips": [
+    "Target about 6 oz cooked shredded chicken and 1.5 cups mac per firefighter — scale the tray for eight, not twelve.",
+    "Use thighs, not breast-only — thighs stay juicy after shredding and survive hold time on the line better than dry breast chunks.",
+    "Toss shredded chicken with BBQ sauce before folding into mac — you want visible sauced chicken strands, not white chicken lost in orange cheese.",
+    "Stop baking when the edges bubble and the center probes 165°F — overbaked mac separates into greasy pools.",
+    "If tones drop mid-bake, note the time on the pan with a grease pencil and finish when you return; covered trays hold 15 minutes without drying out."
+  ],
+  "tonightSpread": [
+    "Main: BBQ chicken mac and cheese from the hotel pan",
+    "Sides: extra warmed BBQ sauce, crispy fried onions, sliced green onions",
+    "Condiments: splash of milk at the line if the mac tightened on hold",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
+  ],
+  "leftovers": [
+    "Cool in shallow hotel pan lids within two hours — deep mac stays in the danger zone too long to cool safely.",
+    "Reheat covered at 325°F until the center hits 165°F, then uncover 5 minutes to re-crisp the top; stir once halfway so chicken heats evenly.",
+    "Add a splash of milk and a spoon of BBQ sauce when reheating — refrigerated mac tightens and the sauce looks dull without refresh.",
+    "Store crispy fried onions separately — add after reheat so the tray does not go soggy on shift two."
+  ],
+  "whyCrewsLikeIt": "Shredded BBQ chicken baked into creamy mac — hall comfort tray",
+  "substitutions": [
+    "Chicken thighs ↔ breasts (thighs forgive overcooking on the flat-top)."
+  ],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 820,
+    "protein": 54,
+    "carbs": 62,
+    "fats": 30,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "heroImage": "/images/golden-100/bbq-chicken-mac-and-cheese.jpg",
+  "heroImageAlt": "BBQ Chicken Mac and Cheese — creamy baked mac with shredded BBQ chicken, melted cheddar, and BBQ glaze in a firehall hotel pan",
+  "mobileImage": "/images/mobile/bbq-chicken-mac-and-cheese.jpg",
+  "thumbImage": "/images/thumbs/bbq-chicken-mac-and-cheese.jpg",
+  "railImage": "/images/rails/bbq-chicken-mac-and-cheese.jpg",
+  "realismScore": 100,
+  "firefighterScore": 100,
+  "popularityWeight": 3.8,
+  "searchTerms": [
+    "bbq chicken mac and cheese",
+    "american",
+    "chicken",
+    "bake",
+    "comfort",
+    "bbq",
+    "bbq chicken mac and cheese casserole bake shredded chicken",
+    "golden_100"
+  ],
+  "relatedSlugs": [
+    "chicken-pot-pie",
+    "chicken-dumpling-soup",
+    "buffalo-chicken-dip",
+    "mac-and-cheese-bake",
+    "chicken-caesar",
+    "creamy-tuscan-chicken"
+  ],
+  "sourceName": "Firehall Meals",
+  "sourceUrl": "",
+  "generatedAt": "2026-06-02T14:05:59.205Z",
+  "contentVersion": 4
+}

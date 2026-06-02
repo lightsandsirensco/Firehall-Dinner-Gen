@@ -18,7 +18,7 @@ import { getVisualLockPromptLines, getVisualLockNegatives } from "../../shared/v
 import { getMobileCropPromptLines } from "../../shared/mobile-crop-rules.js";
 import {
   inferPlatingType,
-  buildPlatingPromptLine,
+  buildFullPlatingPromptLine,
   platingNegativeHints,
 } from "../../shared/plating-type.js";
 import {
@@ -73,8 +73,7 @@ function stablePromptSeed(input: BuildEditorialImagePromptInput, presetId: Image
 }
 
 function dishPlatingLine(mealFormat?: string, title?: string): string {
-  const plating = inferPlatingType(title || "", mealFormat);
-  return buildPlatingPromptLine(plating, title || "Firehall crew meal", "American comfort");
+  return buildFullPlatingPromptLine(title || "Firehall crew meal", mealFormat, "American comfort");
 }
 
 /**
@@ -136,7 +135,7 @@ export function buildEditorialImagePrompt(
     getEditorialNegativePromptBlock([buildMasterNegativePrompt()]),
     ...getVisualLockNegatives(presetId),
     ...preset.avoid,
-    ...platingNegativeHints(platingType),
+    ...platingNegativeHints(platingType, dish, input.mealFormat),
     "oversaturated colors",
     "fake plastic food",
     "unrealistic geometry",

@@ -13,10 +13,10 @@
   "cookTime": 116,
   "prepTime": 23,
   "difficulty": "hard",
-  "calories": 204,
-  "protein": 1,
-  "carbs": 4,
-  "fats": 21,
+  "calories": 0,
+  "protein": 0,
+  "carbs": 0,
+  "fats": 0,
   "tags": [
     "protein:chicken",
     "format:grill",
@@ -119,34 +119,76 @@
   "steps": [
     {
       "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Smoked Wings with White BBQ Sauce in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use Mayonnaise as listed — measure each before heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
       "title": "Dry and season wings",
       "instruction": "Pat wings completely dry with paper towels — moisture blocks smoke and crisping. Toss with salt, pepper, smoked paprika, garlic powder, and brown sugar. Arrange skin-side up on wire racks set over sheet pans with space between each wing so smoke circulates.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
-      "stepNumber": 2,
+      "stepNumber": 4,
       "title": "Smoke low and slow",
       "instruction": "Run smoker at 250°F with hickory or oak. Smoke wings 45–60 minutes until the skin looks dry, lightly bronzed, and pulls tight — internal temp at the thickest joint should read 165°F. Avoid saucing now; sugars will burn before the skin crisps.",
       "minutes": 55,
       "heatLevel": "low"
     },
     {
-      "stepNumber": 3,
+      "stepNumber": 5,
       "title": "Crisp the skin",
       "instruction": "Finish over high heat on the grill (lid open) or under a broiler 3–5 minutes per side until the skin crackles and blisters lightly. Work in batches so wings are not stacked — steam softens skin. Hold crisped wings on a rack, not a closed container.",
       "minutes": 8,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 6,
       "title": "Mix white BBQ sauce",
       "instruction": "Whisk mayo, cider vinegar, horseradish, lemon juice, Worcestershire, cayenne, and celery seed until smooth. Taste — it should be tangy, creamy, and peppery. Chill 20 minutes if time allows so flavors settle; thin with a splash of vinegar if too thick.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 7,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Portion and open the line",
+      "instruction": "Portion Smoked Wings with White BBQ Sauce onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Scale for larger halls",
+      "instruction": "When cooking for more than 8 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
       "title": "Toss and serve hot",
       "instruction": "Toss wings with just enough sauce to coat — add more at the table. Serve immediately on sheet trays with extra sauce and lemon wedges. Hold backup wings uncovered at 200°F up to 20 minutes; do not cover sauced wings or they steam soggy.",
       "minutes": 5,
@@ -178,19 +220,20 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 204,
-    "protein": 1,
-    "carbs": 4,
-    "fats": 21,
-    "label": "per serving (hall portion)",
-    "source": "calculated",
+    "calories": 0,
+    "protein": 0,
+    "carbs": 0,
+    "fats": 0,
+    "label": "Estimated per serving",
+    "source": "unavailable",
+    "estimateAvailable": false,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
       "under30gFat": true,
       "highCarb": false,
       "lowCarb": true,
-      "mealPrepFriendly": false
+      "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": false,
@@ -228,5 +271,6 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "generatedAt": "2026-06-01T01:40:02.046Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "mealPrepNotes": "Prep mise en place before the shift — Smoked Wings with White BBQ Sauce runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
 }

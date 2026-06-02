@@ -879,6 +879,10 @@ export default function GoldenRecipePageView() {
               protein={page.nutrition.protein}
               carbs={page.nutrition.carbs}
               fat={page.nutrition.fats}
+              estimateAvailable={
+                page.nutrition.estimateAvailable !== false &&
+                page.nutrition.source !== "unavailable"
+              }
               className="max-w-2xl"
             />
 

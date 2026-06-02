@@ -66,10 +66,10 @@ export const CURATED_STARTER_ASSIGNMENTS: Record<
     secondary: ["comfort_food", "game_day_watch_party"],
     subcategories: ["line-specials"],
   },
-  "bbq-chicken-bowls": {
-    primary: "healthy_performance",
-    secondary: ["bbq_grill_nights", "quick_shift_meals"],
-    subcategories: ["protein-bowls"],
+  "bbq-chicken-mac-and-cheese": {
+    primary: "comfort_food",
+    secondary: ["bbq_grill_nights", "firehall_classics"],
+    subcategories: ["baked-pasta"],
   },
   "steak-sandwiches": {
     primary: "firehall_classics",

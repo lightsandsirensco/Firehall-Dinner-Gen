@@ -25,7 +25,9 @@ export interface NutritionBadgeCandidates {
 
 export interface RecipeNutritionRecord extends RecipeNutritionPerServing {
   servings: number;
-  source: "calculated" | "curated" | "estimated";
+  source: "calculated" | "curated" | "estimated" | "unavailable";
+  /** False when ingredient match is too weak — UI must not show fabricated macros. */
+  estimateAvailable?: boolean;
   matchedIngredientCount: number;
   totalIngredientCount: number;
   filterFlags: NutritionFilterFlags;

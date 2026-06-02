@@ -5,27 +5,50 @@
   "description": "Firefighter meals that keep energy steady: balanced bowls, reasonable portions of fat, and hall dinners that do not leave the crew useless on the couch.",
   "topic": "nutrition_performance",
   "pillar": "nutrition_performance",
-  "intro": "Some hall dinners taste great at 18:00 and end the shift at 20:30. Meals that wreck energy are usually heavy fat with no balance, or sugar without protein. Steady energy comes from familiar food in reasonable portions — not from eating like it is a holiday every night.",
+  "intro": "Some hall dinners taste great at 18:00 and end the shift at 20:30. Meals that wreck energy are usually heavy fat with no balance, or sugar without protein. Steady energy comes from familiar food in reasonable portions — not from eating like it is a holiday every night. Below: what halls actually cook for firefighter energy meals — formats, timing, and recipe picks that survive a busy board.",
   "sections": [
     {
       "id": "picks",
       "heading": "Hall picks that stay steady",
       "paragraphs": [
-        "Bowls, chili, grilled proteins with rice, and soups beat deep-fried-only spreads for a long tour."
+        "Bowls, chili, grilled proteins with rice, and soups beat deep-fried-only spreads for a long tour.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
       ]
     },
     {
       "id": "timing",
       "heading": "When you eat matters",
       "paragraphs": [
-        "A huge greasy plate at 22:00 after skipping lunch hits harder than the same meal at 18:00. Spread fuel across the tour when the board allows."
+        "A huge greasy plate at 22:00 after skipping lunch hits harder than the same meal at 18:00. Spread fuel across the tour when the board allows.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
+      ]
+    },
+    {
+      "id": "shift-fuel",
+      "heading": "How this plays across a long shift",
+      "paragraphs": [
+        "Shift nutrition is timing, not willpower. For firefighter energy meals, anchor protein at dinner, keep snacks that survive the apparatus bay, and drink water like it is part of the job — not a lecture at 03:00.",
+        "This is practical hall guidance, not medical advice. Follow your department's health program and personal providers for individual plans."
+      ],
+      "tips": [
+        "Label leftovers with date — rotation matters more than recipe genius.",
+        "Pair lighter mains with one optional indulgent side when morale needs it."
       ]
     }
   ],
   "practicalAdvice": [
     "Balance starch with protein — pasta with meat, rice with chicken.",
     "Serve veg or salad when you can — fiber slows the crash.",
-    "Save the heaviest grease for slow nights."
+    "Save the heaviest grease for slow nights.",
+    "Post who's cooking and what's holding warm on the whiteboard — post-call eaters should not hunt for answers."
   ],
   "mealRecommendations": [
     {
@@ -70,5 +93,6 @@
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
   "updatedAt": "2026-05-27T18:00:00.000Z",
-  "readMinutes": 7
+  "readMinutes": 7,
+  "heroImageAlt": "Meals That Won't Wreck Energy Levels — firefighter energy meals tips for fire station kitchens and crew-sized meals"
 }

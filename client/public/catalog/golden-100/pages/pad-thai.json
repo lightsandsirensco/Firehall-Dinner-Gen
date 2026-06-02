@@ -13,10 +13,10 @@
   "cookTime": 63,
   "prepTime": 35,
   "difficulty": "easy",
-  "calories": 542,
-  "protein": 78,
+  "calories": 569,
+  "protein": 52,
   "carbs": 8,
-  "fats": 20,
+  "fats": 35,
   "tags": [
     "protein:chicken",
     "format:skillet",
@@ -147,55 +147,69 @@
   "steps": [
     {
       "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Firehall Pad Thai in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
       "title": "Set up the prep station",
       "instruction": "Clear a long counter into five labeled zones so a rookie can work without guessing. Noodle zone: dry noodles still in the bag plus a large bowl for soaking. Vegetable zone: bean sprouts rinsed and drained, green onions sliced with whites and greens in separate small bowls, garlic minced. Chicken zone: thighs patted dry and sliced into bite-sized strips about the width of your thumb. Garnish zone: peanuts crushed in a zip bag with a rolling pin, limes quartered into wedges, chili flakes in a pinch bowl. Sauce zone: empty mixing bowl with a whisk, tamarind paste, fish sauce, brown sugar, rice vinegar, and warm water measured and within arm's reach. Read the sauce and noodle steps before you turn on the wok — pad thai moves fast once the pan is hot.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
-      "stepNumber": 2,
+      "stepNumber": 3,
       "title": "Whisk the pad thai sauce",
       "instruction": "In a medium bowl, stir tamarind paste with warm water until the paste dissolves and no dark clumps remain on the whisk. Add fish sauce, brown sugar, and rice vinegar. Whisk vigorously for thirty seconds until the sugar dissolves and the sauce looks glossy, not grainy. Dip a clean spoon, cool it on the counter, and taste: you want sweet first on the tongue, then salty, then a sharp tamarind tang at the back — not fishy, not flat. If it tastes harsh, add brown sugar one teaspoon at a time; if it tastes only sweet, add fish sauce one teaspoon at a time. Set the bowl right beside the wok — you will pour it all at once during the toss.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 3,
+      "stepNumber": 4,
       "title": "Soak the rice noodles",
-      "instruction": "Place dry noodles in the large bowl and cover with hot tap water — the kind that is uncomfortable to hold your hand in, but not rolling boil from a kettle. Push noodles under the water with tongs so every strand is submerged. Soak eighteen to twenty minutes, checking at fifteen: pull one strand and bend it. Ready noodles flex like a cooked spaghetti noodle without snapping dry in the center. Drain immediately in a colander when ready; rinse briefly with cold water only if they feel sticky, then toss with one teaspoon oil so they do not clump while you cook chicken. Common mistakes: boiling water turns noodles mushy before the wok step; soaking too short leaves a hard core that never cooks in the pan.",
+      "instruction": "Place dry noodles in the large bowl and cover with hot tap water — the kind that is uncomfortable to hold your hand in, but not rolling boil from a kettle. Push noodles under the water with tongs so every strand is submerged. Soak eighteen to twenty minutes, checking at fifteen: pull one strand and bend it. Ready noodles flex like a cooked spaghetti noodle without snapping dry in the center. Drain immediately in a colander when ready; rinse briefly with cold water only if they feel sticky, then toss with one teaspoon oil so they do not clump while you cook chicken. Common mistakes: boiling water turns noodles mushy before the wok step; soaking too short leaves a hard core that never cooks in the pan. Target 165°F at the thickest point before moving to the next batch.",
       "minutes": 20,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 5,
       "title": "Cook the chicken in batches",
       "instruction": "Heat the wok or flat-top over medium-high for three minutes until a flick of water evaporates on contact. Add two tablespoons vegetable oil and swirl to coat. Lay chicken strips in a single layer — do not stir for ninety seconds so the edges brown against the metal. Stir, spread again, and cook until the largest piece reads 165°F on an instant-read thermometer, about four to six minutes per batch. Transfer each batch to a clean sheet tray. Repeat with the remaining chicken and another tablespoon oil if the pan looks dry. Browning matters: pale steamed chicken will not carry the wok flavor. Keep the tray near the stove — you will return the chicken to the pan in step six.",
       "minutes": 12,
       "heatLevel": "medium-high"
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 6,
       "title": "Scramble the eggs in the wok",
       "instruction": "With the wok still on medium-high, add one tablespoon oil if the surface looks dry. Beat eggs lightly with a pinch of salt. Pour into the center of the pan and let the bottom set for twenty seconds without stirring. Push cooked egg toward the rim, tilt the pan so raw egg flows to bare metal, and repeat until you have soft curds — not dry rubber. Break curds into bite-sized pieces with your spatula. Slide eggs to the side of the wok with the chicken tray nearby. Eggs finish in the pan again during the noodle toss, so stop while they still look a little soft.",
       "minutes": 4,
       "heatLevel": "medium-high"
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 7,
       "title": "Build the pad thai in the wok",
       "instruction": "Increase heat to high. Add drained noodles to the open side of the wok — you should hear a light sizzle. Toss with tongs or two spatulas for sixty seconds so noodles pick up wok color. Pour the whisked sauce evenly over the noodles and keep tossing continuously; the noodles will soften and the sauce will reduce into a glossy coat. Now add cooked chicken, scrambled eggs, and the white parts of the green onions. Keep everything moving two to three minutes until the sauce clings to each strand and the pan looks almost dry — not pooling liquid. If noodles stick, add one tablespoon water to steam them loose, then toss again. Do not add bean sprouts yet; they go in during finishing so they stay crisp.",
       "minutes": 6,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 7,
+      "stepNumber": 8,
       "title": "Finish with sprouts and seasoning",
       "instruction": "Pull the wok off the hottest part of the burner or reduce to medium. Fold in bean sprouts and the green parts of the green onions; toss thirty seconds until sprouts just begin to wilt at the edges but still snap when you bite. Taste a noodle strand from the center of the pan: it should be tender with a slight chew, coated in sauce, not oily puddles at the bottom. Adjust with fish sauce for salt, brown sugar for balance, or a squeeze of lime for brightness — one small change at a time. The pan is done when noodles look glossy, chicken is evenly distributed, and no thin sauce pool sits in the bottom of the wok.",
       "minutes": 3,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 8,
+      "stepNumber": 9,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
       "title": "Serve on the line with garnishes",
       "instruction": "Transfer pad thai to sheet trays or hotel pans for family-style service — do not cover tightly or steam will soften the noodles. Line garnish bowls at the end of the counter: lime wedges, crushed peanuts, extra sliced green onion, and chili flakes for firefighters who want heat. Each plate gets noodles first, then a pinch of peanuts and a lime wedge on the rim so they can squeeze at the table. Suggested sides on separate trays: Asian cucumber salad with rice vinegar and sesame, warmed spring rolls, and edamame with flaky salt. Tell the crew to squeeze lime and add peanuts right before eating — acid and crunch fade if mixed too early.",
       "minutes": 5,
@@ -229,24 +243,25 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 542,
-    "protein": 78,
+    "calories": 569,
+    "protein": 52,
     "carbs": 8,
-    "fats": 20,
-    "label": "per serving (hall portion)",
+    "fats": 35,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": true,
-      "under30gFat": true,
+      "under30gFat": false,
       "highCarb": false,
       "lowCarb": true,
       "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": true,
-      "lighterOption": true,
-      "performanceMeal": true
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/golden-100/pad-thai.jpg",

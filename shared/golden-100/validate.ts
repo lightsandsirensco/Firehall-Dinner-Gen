@@ -167,11 +167,12 @@ export function validateGoldenManifest(): GoldenRecipeAuditIssue[] {
     }
   }
 
-  if (GOLDEN_100_RECIPES.length !== 100) {
+  const expectedCount = 101;
+  if (GOLDEN_100_RECIPES.length !== expectedCount) {
     issues.push({
       slug: "_manifest",
       code: "count_mismatch",
-      message: `expected 100 recipes, got ${GOLDEN_100_RECIPES.length}`,
+      message: `expected ${expectedCount} recipes, got ${GOLDEN_100_RECIPES.length}`,
       severity: "error",
     });
   }

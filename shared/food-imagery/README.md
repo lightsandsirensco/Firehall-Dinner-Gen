@@ -12,6 +12,7 @@
 | `aspect-ratio.ts` | 1024×1024 generation, 5/4 display crop |
 | `prompt-assembler.ts` | Fixed section order for all positive prompts |
 | `prompt-builder.ts` | Meal prompts → assembler + preset |
+| `../plating-accuracy-standard.ts` | Plating Accuracy Standard — breakfast/dinner/curry/sandwich rules + vision rubric |
 | `pizza-prompt-builder.ts` | Pizza prompts → same assembler + `pizza` preset |
 | `quality-score.ts` | Vision QA rubric + thresholds (realism ≥7, brand ≥7) |
 

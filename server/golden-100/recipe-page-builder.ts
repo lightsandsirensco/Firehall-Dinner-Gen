@@ -25,6 +25,7 @@ import {
   inferDifficulty,
 } from "./editorial-templates.js";
 import { calculateNutritionFromIngredients } from "../../shared/nutrition/calculate.js";
+import { getVerifiedPerServingNutrition } from "../../shared/nutrition/verified-per-serving.js";
 import { getCuratedRecipeBySlug } from "../curated-recipe-store.js";
 import {
   auditGoldenRecipeContent,
@@ -282,25 +283,31 @@ export function buildGoldenRecipePage(
 
   const images = goldenPageImageSet(def.slug);
   const fallbackNutrition = curated ? nutritionFromCurated(curated, def) : estimateNutrition(def);
-  const nutritionRecord = calculateNutritionFromIngredients(
-    ingredients.map((i) => ({
-      name: i.name,
-      quantity: i.quantity,
-      unit: i.unit,
-      optional: i.optional,
-    })),
-    {
-      servings: crewSize,
-      mealType: "dinner",
-      mealPrepFriendly: def.masterCategoryId === "meal_prep_leftovers",
-      existing: {
-        calories: fallbackNutrition.calories,
-        protein: fallbackNutrition.protein,
-        carbs: fallbackNutrition.carbs,
-        fat: fallbackNutrition.fats,
+  const nutritionRecord =
+    getVerifiedPerServingNutrition(
+      def.slug,
+      crewSize,
+      def.masterCategoryId === "meal_prep_leftovers",
+    ) ??
+    calculateNutritionFromIngredients(
+      ingredients.map((i) => ({
+        name: i.name,
+        quantity: i.quantity,
+        unit: i.unit,
+        optional: i.optional,
+      })),
+      {
+        servings: crewSize,
+        mealType: "dinner",
+        mealPrepFriendly: def.masterCategoryId === "meal_prep_leftovers",
+        existing: {
+          calories: fallbackNutrition.calories,
+          protein: fallbackNutrition.protein,
+          carbs: fallbackNutrition.carbs,
+          fat: fallbackNutrition.fats,
+        },
       },
-    },
-  );
+    );
   const nutrition = {
     calories: nutritionRecord.calories,
     protein: nutritionRecord.protein,

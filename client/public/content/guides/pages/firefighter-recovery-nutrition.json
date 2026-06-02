@@ -5,20 +5,42 @@
   "description": "Recovery nutrition for firefighters after tough calls: protein, fluids, and familiar meals that support sleep and next-day function — not guilt-driven diet talk.",
   "topic": "nutrition_performance",
   "pillar": "nutrition_performance",
-  "intro": "Recovery nutrition is not a powder tub in the gear room. After a hard job, your crew needs fluids, protein, and food that feels normal — hot, salty, familiar. The body recovers better when you eat real food and hydrate than when you skip dinner because the shift 'was not a workout.'",
+  "intro": "Recovery nutrition is not a powder tub in the gear room. After a hard job, your crew needs fluids, protein, and food that feels normal — hot, salty, familiar. The body recovers better when you eat real food and hydrate than when you skip dinner because the shift 'was not a workout.' Below: what halls actually cook for firefighter recovery nutrition — formats, timing, and recipe picks that survive a busy board.",
   "sections": [
     {
       "id": "fluids",
       "heading": "Fluids first",
       "paragraphs": [
-        "Heat, gear, and adrenaline pull fluid. Rehydrate with water and electrolytes before you treat beer as recovery."
+        "Heat, gear, and adrenaline pull fluid. Rehydrate with water and electrolytes before you treat beer as recovery.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
       ]
     },
     {
       "id": "food",
       "heading": "Food that matches the night",
       "paragraphs": [
-        "Post-call meals should be easy to eat, plentiful, and warm. Mac and cheese is not a failure — it is a signal that the room can breathe again."
+        "Post-call meals should be easy to eat, plentiful, and warm. Mac and cheese is not a failure — it is a signal that the room can breathe again.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
+      ]
+    },
+    {
+      "id": "shift-fuel",
+      "heading": "How this plays across a long shift",
+      "paragraphs": [
+        "Shift nutrition is timing, not willpower. For firefighter recovery nutrition, anchor protein at dinner, keep snacks that survive the apparatus bay, and drink water like it is part of the job — not a lecture at 03:00.",
+        "This is practical hall guidance, not medical advice. Follow your department's health program and personal providers for individual plans."
+      ],
+      "tips": [
+        "Label leftovers with date — rotation matters more than recipe genius.",
+        "Pair lighter mains with one optional indulgent side when morale needs it."
       ]
     }
   ],
@@ -71,5 +93,6 @@
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
   "updatedAt": "2026-05-27T18:00:00.000Z",
-  "readMinutes": 7
+  "readMinutes": 7,
+  "heroImageAlt": "Firefighter Recovery Nutrition — firefighter recovery nutrition tips for fire station kitchens and crew-sized meals"
 }

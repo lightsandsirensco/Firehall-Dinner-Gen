@@ -5,7 +5,7 @@
   "description": "Operational guide to fast fire station meals: what to cook when time is tight, how to cheat smart, and recipe picks under 45 minutes.",
   "topic": "shift_operations",
   "pillar": "recipes_meals",
-  "intro": "Some nights the board is quiet until it is not. You do not need a lecture about meal prep — you need a dinner that respects the clock. Quick firehall meals are not 'lazy'; they are operational. The trick is picking formats that taste like you meant it, not like you gave up.",
+  "intro": "Some nights the board is quiet until it is not. You do not need a lecture about meal prep — you need a dinner that respects the clock. Quick firehall meals are not 'lazy'; they are operational. The trick is picking formats that taste like you meant it, not like you gave up. Below: what halls actually cook for quick firefighter meals — formats, timing, and recipe picks that survive a busy board.",
   "sections": [
     {
       "id": "formats",
@@ -25,6 +25,18 @@
       "tips": [
         "Season at every layer — salt in the pan, acid at the end.",
         "One bold flavor (chipotle, garlic butter, lemon) beats five mild ones."
+      ]
+    },
+    {
+      "id": "ops-timing",
+      "heading": "When tones drop mid-prep",
+      "paragraphs": [
+        "Operational meals need a \"good enough\" checkpoint. For quick firefighter meals, choose recipes where lowering heat and covering still leaves edible food when you return — not a burned skillet.",
+        "Hotel pans and sheet trays beat delicate plating on busy boards. Finish crisp elements last so post-call eaters still get texture."
+      ],
+      "tips": [
+        "Count who is on duty at 17:00, not who was on the board at 08:00.",
+        "One backup frozen protein in the walk-in saves surprise mutual-aid eaters."
       ]
     }
   ],
@@ -89,5 +101,6 @@
   ],
   "publishedAt": "2026-05-27T12:00:00.000Z",
   "updatedAt": "2026-05-27T12:00:00.000Z",
-  "readMinutes": 7
+  "readMinutes": 7,
+  "heroImageAlt": "Quick Firefighter Meals Between Calls — quick firefighter meals tips for fire station kitchens and crew-sized meals"
 }

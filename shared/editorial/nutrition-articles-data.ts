@@ -305,18 +305,24 @@ export const NUTRITION_PERFORMANCE_ARTICLES = [
     topic: "nutrition_performance",
     pillar: "nutrition_performance",
     intro:
-      "High-protein hall food means a full plate of real food — not six ounces of dry chicken breast while everyone else eats pasta. Crews need volume and protein together. Chili, bowls, thighs on the grill, and turkey batches hit both without feeling like a gym meal.",
+      "High-protein hall food means a full plate of real food — not six ounces of dry chicken breast while everyone else eats pasta. Crews need volume and protein together. Turkey chili, Greek chicken bowls, big chili with bread, and a sausage egg bake on morning shift hit both without feeling like a gym meal.",
     practicalAdvice: [
       "Shoot for visible protein on every plate — not protein hidden in a shake.",
       "Turkey chili and Greek bowls scale well for mixed appetites.",
       "Sauce on the side keeps bowls flexible.",
+      "Second helpings: extra starch before you run out of chicken.",
     ],
     sections: [
       {
         id: "sources",
         heading: "Protein sources that scale",
         paragraphs: [
-          "Ground meats, chicken thighs, beans plus meat, eggs, and dairy in bakes. Thighs beat breast for flavor per dollar on crew night.",
+          "Ground meats, chicken thighs, beans plus meat, eggs, and dairy in bakes. Thighs beat breast for flavor per dollar on crew night — nobody wants eight portions of chalky breast because someone bought the wrong case.",
+          "Training days are when halls run turkey chili or a big batch and let people stack bowls. Powder shakes in the bay are fine for individuals; dinner still needs to look like dinner.",
+        ],
+        tips: [
+          "Beans plus meat in chili stretch cost without looking cheap.",
+          "Skewers and bowl lines portion protein without one person hoarding the tray.",
         ],
       },
       {
@@ -324,6 +330,15 @@ export const NUTRITION_PERFORMANCE_ARTICLES = [
         heading: "Portions crews will actually eat",
         paragraphs: [
           "Protein on the plate should be obvious, not hidden in sauce alone. Mixed plates — chili with bread, bowls with yogurt — beat dry chicken with no sides.",
+          "You will always have one eater who wants double starch and half protein. Build the line so the default plate is balanced and seconds are extra rice or buns, not scraping the protein pan dry before the late crew gets off the rig.",
+        ],
+      },
+      {
+        id: "not-a-lecture",
+        heading: "Keep it food, not a wellness slide deck",
+        paragraphs: [
+          "Crews tune out fast when dinner sounds like a supplement plan. Serve normal hall food that happens to carry protein — chili, souvlaki, bowls — and let people eat like adults.",
+          "This is practical kitchen guidance, not medical advice. Department health programs and your own provider handle individual plans.",
         ],
       },
     ],
@@ -334,7 +349,18 @@ export const NUTRITION_PERFORMANCE_ARTICLES = [
       meal("chicken-souvlaki", "Grilled Chicken Souvlaki", "Marinated skewers — pita ready."),
       meal("sausage-egg-bake", "Sausage Egg Bake", "Morning protein hit for the line."),
     ],
-    faqs: NUTRITION_FAQ,
+    faqs: [
+      {
+        question: "Is this medical advice?",
+        answer:
+          "No. This is how halls cook for hungry crews on shift. Follow your department and your own provider for personal health questions.",
+      },
+      {
+        question: "Where do these recipes come from?",
+        answer:
+          "Each link goes to a full recipe on Firehall Meals — crew-sized portions, station timing, and steps written for a shared kitchen.",
+      },
+    ],
     relatedArticleSlugs: ["healthy-firefighter-meals-fill-you-up", "performance-nutrition-firefighters"],
   }),
 

@@ -79,31 +79,80 @@
   "steps": [
     {
       "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Garlic Butter Shrimp in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch seafood. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
       "title": "Prep shrimp",
       "instruction": "Pat shrimp completely dry with paper towels — moisture is the enemy of browning. Season with salt and pepper. Mince garlic and chop parsley. Have butter measured; this moves fast.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
-      "stepNumber": 2,
+      "stepNumber": 4,
       "title": "Sear shrimp",
-      "instruction": "Heat a large skillet over medium-high until just smoking. Add 1 tbsp oil, then shrimp in a single layer (work in batches). Cook 60–90 seconds per side until pink with light browning. Remove immediately to a warm tray — do not overcook.",
+      "instruction": "Heat a large skillet over medium-high until just smoking. Add 1 tbsp oil, then shrimp in a single layer (work in batches). Cook 60–90 seconds per side until pink with light browning. Remove immediately to a warm tray — do not overcook. Target 145°F at the thickest point before moving to the next batch.",
       "minutes": 6,
       "heatLevel": "medium-high"
     },
     {
-      "stepNumber": 3,
+      "stepNumber": 5,
       "title": "Garlic butter sauce",
-      "instruction": "Lower heat to medium. Add butter and garlic; swirl until butter foams and garlic smells sweet (30–45 seconds). Deglaze with wine or broth, scraping brown bits. Simmer 1 minute until slightly thickened. Return shrimp and any juices; toss to coat.",
+      "instruction": "Lower heat to medium. Add butter and garlic; swirl until butter foams and garlic smells sweet (30–45 seconds). Deglaze with wine or broth, scraping brown bits. Simmer 1 minute until slightly thickened. Return shrimp and any juices; toss to coat. Target 145°F at the thickest point before moving to the next batch.",
       "minutes": 4,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 6,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F for fish, 145°F for shrimp until opaque. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 8,
+      "title": "Portion and open the line",
+      "instruction": "Portion Garlic Butter Shrimp onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
+      "title": "Scale for larger halls",
+      "instruction": "When cooking for more than 8 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
       "title": "Plate with lemon",
       "instruction": "Finish with lemon juice, parsley, and red pepper flakes if using. Garlic Butter Shrimp should smell like butter and garlic, not fishy. Serve over rice, pasta, or with crusty bread on a warm tray — keep backup covered at 200°F for late calls so shrimp do not overcook.",
       "minutes": 2,
       "heatLevel": "low"
+    },
+    {
+      "stepNumber": 11,
+      "title": "Final quality check before service",
+      "instruction": "Walk the line once before opening service for Garlic Butter Shrimp — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
+      "minutes": 4,
+      "heatLevel": ""
     }
   ],
   "proTips": [

@@ -5,20 +5,42 @@
   "description": "Fire station kitchen essentials: pans, thermometers, foil, storage, and tools that make crew cooking possible without borrowing from three trucks.",
   "topic": "station_cooking",
   "pillar": "operations_how_to",
-  "intro": "A hall kitchen without basics turns every meal into improvisation. Station kitchen essentials are not luxury — they are force multipliers: sheet pans, a large pot, a probe thermometer, and enough foil to survive a week of holds.",
+  "intro": "A hall kitchen without basics turns every meal into improvisation. Station kitchen essentials are not luxury — they are force multipliers: sheet pans, a large pot, a probe thermometer, and enough foil to survive a week of holds. Below: what halls actually cook for fire station kitchen equipment — formats, timing, and recipe picks that survive a busy board.",
   "sections": [
     {
       "id": "gear",
       "heading": "Gear worth funding",
       "paragraphs": [
-        "Dutch oven or large stock pot, cast iron or flat-top spatula, tongs, ladle, and a sharp chef knife someone actually maintains."
+        "Dutch oven or large stock pot, cast iron or flat-top spatula, tongs, ladle, and a sharp chef knife someone actually maintains.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
       ]
     },
     {
       "id": "storage",
       "heading": "Storage and hold",
       "paragraphs": [
-        "Half-sheet pans with lids, a roll of foil, and labeled containers turn leftovers into tomorrow's lunch instead of science experiments."
+        "Half-sheet pans with lids, a roll of foil, and labeled containers turn leftovers into tomorrow's lunch instead of science experiments.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
+      ]
+    },
+    {
+      "id": "line-setup",
+      "heading": "Line setup and second helpings",
+      "paragraphs": [
+        "Station cooking is line discipline. For fire station kitchen equipment, hot food hot, cold food cold, sauces on the side. Runners refill starch and drinks so the cook stays on heat.",
+        "Plan second helpings before you portion — extra rice, buns, or potatoes cost less than cooking a second main at 21:00."
+      ],
+      "tips": [
+        "Probe temps on poultry and pork — guessing is how halls serve pink chicken.",
+        "Empty grease traps before grill night; keep the right extinguisher class within reach."
       ]
     }
   ],
@@ -66,5 +88,6 @@
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
   "updatedAt": "2026-05-27T18:00:00.000Z",
-  "readMinutes": 7
+  "readMinutes": 7,
+  "heroImageAlt": "Station Kitchen Essentials — fire station kitchen equipment tips for fire station kitchens and crew-sized meals"
 }

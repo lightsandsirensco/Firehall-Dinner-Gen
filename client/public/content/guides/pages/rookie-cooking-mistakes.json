@@ -5,20 +5,42 @@
   "description": "Common rookie cooking mistakes in fire station kitchens: oversalting, crowding pans, ambitious menus, and cleanup failures that hurt trust.",
   "topic": "station_lifestyle",
   "pillar": "station_lifestyle",
-  "intro": "Rookies want to impress. The hall wants dinner on time and the kitchen usable after. Rookie cooking mistakes usually come from trying too hard — twelve-ingredient fusion on a busy night — or from basics: crowded pans, raw centers, and dishes left for 'later.'",
+  "intro": "Rookies want to impress. The hall wants dinner on time and the kitchen usable after. Rookie cooking mistakes usually come from trying too hard — twelve-ingredient fusion on a busy night — or from basics: crowded pans, raw centers, and dishes left for 'later.' Below: what halls actually cook for rookie firefighter cooking — formats, timing, and recipe picks that survive a busy board.",
   "sections": [
     {
       "id": "mistakes",
       "heading": "Mistakes halls remember",
       "paragraphs": [
-        "Undercooked chicken, oversalted pasta water, smoke from oil past smoke point, and 'I'll do dishes tomorrow.'"
+        "Undercooked chicken, oversalted pasta water, smoke from oil past smoke point, and 'I'll do dishes tomorrow.'",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
       ]
     },
     {
       "id": "recovery",
       "heading": "Recovering trust",
       "paragraphs": [
-        "A bad meal is fixable with honesty and cleanup. Own the miss, feed the crew something simple next time, and cook with a partner until basics are solid."
+        "A bad meal is fixable with honesty and cleanup. Own the miss, feed the crew something simple next time, and cook with a partner until basics are solid.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
+      ]
+    },
+    {
+      "id": "hall-tonight",
+      "heading": "What this looks like on the hall tonight",
+      "paragraphs": [
+        "Kitchen culture shows up in small moves: who shops, who cleans, whether rookies get coached or roasted. For rookie firefighter cooking, fairness beats perfection — rotate the jobs that nobody wants twice in a row.",
+        "Meals are morale. A crew that trusts the kitchen cooks more often and complains less about grocery splits. Keep the tone direct and the help real."
+      ],
+      "tips": [
+        "Praise the cook in the bay — fix critiques one-on-one after cleanup.",
+        "Write grocery splits on the receipt photo the same night you shop."
       ]
     }
   ],
@@ -66,5 +88,6 @@
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
   "updatedAt": "2026-05-27T18:00:00.000Z",
-  "readMinutes": 7
+  "readMinutes": 7,
+  "heroImageAlt": "Rookie Cooking Mistakes at the Hall — rookie firefighter cooking tips for fire station kitchens and crew-sized meals"
 }

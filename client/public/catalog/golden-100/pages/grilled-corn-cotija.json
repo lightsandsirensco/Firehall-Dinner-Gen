@@ -13,10 +13,10 @@
   "cookTime": 90,
   "prepTime": 30,
   "difficulty": "hard",
-  "calories": 208,
-  "protein": 4,
-  "carbs": 26,
-  "fats": 12,
+  "calories": 0,
+  "protein": 0,
+  "carbs": 0,
+  "fats": 0,
   "tags": [
     "protein:vegetarian",
     "format:grill",
@@ -67,31 +67,87 @@
   "steps": [
     {
       "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Grilled Street Corn with Cotija in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use Mayonnaise as listed — measure each before heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch vegetarian. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
       "title": "Char the corn",
       "instruction": "Grill corn over high heat 10–12 minutes, turning until kernels blister and smell sweet. Do not boil first — you want smoke and char.",
       "minutes": 12,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 2,
+      "stepNumber": 4,
       "title": "Coat elote-style",
       "instruction": "Brush warm corn with mayo, roll in cotija and chili powder, squeeze lime. Serve on sheet trays — street corn is best within 15 minutes but holds 30 minutes warm.",
       "minutes": 8,
       "heatLevel": ""
     },
     {
-      "stepNumber": 3,
+      "stepNumber": 5,
       "title": "Set up the station",
       "instruction": "Stand corn in shallow pans for easy grabbing. Keep cotija and lime wedges in bowls for touch-ups — corn dries out under heat lamps.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 6,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F for any egg-based components. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 8,
+      "title": "Portion and open the line",
+      "instruction": "Portion Grilled Street Corn with Cotija onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
+      "title": "Scale for larger halls",
+      "instruction": "When cooking for more than 8 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
       "title": "Hold and refill",
       "instruction": "Grill backup ears while the first batch goes out. Hold finished corn at 200°F up to 20 minutes; do not wrap in foil or mayo turns oily.",
       "minutes": 5,
       "heatLevel": "low"
+    },
+    {
+      "stepNumber": 11,
+      "title": "Final quality check before service",
+      "instruction": "Walk the line once before opening service for Grilled Street Corn with Cotija — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
+      "minutes": 4,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 12,
+      "title": "Final quality check before service",
+      "instruction": "Walk the line once before opening service for Grilled Street Corn with Cotija — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
+      "minutes": 4,
+      "heatLevel": ""
     }
   ],
   "proTips": [
@@ -116,19 +172,20 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 208,
-    "protein": 4,
-    "carbs": 26,
-    "fats": 12,
-    "label": "per serving (hall portion)",
-    "source": "calculated",
+    "calories": 0,
+    "protein": 0,
+    "carbs": 0,
+    "fats": 0,
+    "label": "Estimated per serving",
+    "source": "unavailable",
+    "estimateAvailable": false,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
       "under30gFat": true,
       "highCarb": false,
       "lowCarb": false,
-      "mealPrepFriendly": false
+      "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": false,
@@ -164,5 +221,6 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "generatedAt": "2026-06-01T01:40:02.058Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "mealPrepNotes": "Prep mise en place before the shift — Grilled Street Corn with Cotija runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
 }

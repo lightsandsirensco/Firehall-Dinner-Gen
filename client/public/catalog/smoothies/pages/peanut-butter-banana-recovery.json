@@ -76,13 +76,13 @@
     }
   ],
   "nutrition": {
-    "calories": 190,
-    "protein": 8,
-    "carbs": 20,
-    "fats": 10,
-    "highlights": "~340 cal · ~16 g protein (higher with yogurt) · potassium from banana · healthy fats from peanut butter",
-    "label": "per serving (hall portion)",
-    "source": "calculated",
+    "calories": 0,
+    "protein": 0,
+    "carbs": 0,
+    "fats": 0,
+    "highlights": "Nutrition estimate coming soon",
+    "label": "Estimated per serving",
+    "source": "unavailable",
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
@@ -95,7 +95,8 @@
       "highProtein": false,
       "lighterOption": true,
       "performanceMeal": true
-    }
+    },
+    "estimateAvailable": false
   },
   "substitutions": [
     "Sunflower seed butter works for nut-free halls.",

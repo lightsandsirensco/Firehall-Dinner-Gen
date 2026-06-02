@@ -13,10 +13,10 @@
   "cookTime": 100,
   "prepTime": 35,
   "difficulty": "hard",
-  "calories": 1348,
-  "protein": 64,
-  "carbs": 29,
-  "fats": 90,
+  "calories": 0,
+  "protein": 0,
+  "carbs": 0,
+  "fats": 0,
   "tags": [
     "protein:beef",
     "format:pasta",
@@ -121,43 +121,71 @@
   "steps": [
     {
       "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Giant Batch Lasagna in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use Yellow onion, diced as listed — measure each before heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch beef. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
       "title": "Brown meat sauce",
-      "instruction": "Brown beef and sausage with onion and garlic. Add crushed tomatoes and marinara; simmer 20 minutes until thick. Season with Italian seasoning, salt, and pepper.",
+      "instruction": "Brown beef and sausage with onion and garlic. Add crushed tomatoes and marinara; simmer 20 minutes until thick. Season with Italian seasoning, salt, and pepper. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
       "minutes": 25,
       "heatLevel": "medium-high"
     },
     {
-      "stepNumber": 2,
+      "stepNumber": 4,
       "title": "Mix ricotta filling",
-      "instruction": "Stir ricotta with eggs, half the parmesan, salt, and pepper until smooth.",
+      "instruction": "Stir ricotta with eggs, half the parmesan, salt, and pepper until smooth. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
-      "stepNumber": 3,
+      "stepNumber": 5,
       "title": "Cook lasagna sheets",
-      "instruction": "Boil lasagna noodles in salted water until pliable; drain and lay flat on oiled sheet pans so they do not stick.",
+      "instruction": "Boil lasagna noodles in salted water until pliable; drain and lay flat on oiled sheet pans so they do not stick. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Plan about 12 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 12,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 6,
       "title": "Layer in hotel pans",
       "instruction": "Spread meat sauce, noodles, ricotta dollops, mozzarella, and repeat. Finish with sauce and cheese on top — batch lasagna is layered, not tossed in a pot.",
       "minutes": 20,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 7,
       "title": "Bake covered then brown",
-      "instruction": "Bake covered at 375°F 45 minutes, then uncover and bake 15–20 minutes until bubbling and golden.",
+      "instruction": "Bake covered at 375°F 45 minutes, then uncover and bake 15–20 minutes until bubbling and golden. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 60,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 8,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F for medium beef, 160°F for ground. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 10,
       "title": "Rest and cut squares",
-      "instruction": "Rest 15 minutes before cutting so layers hold. Serve squares from the pan for crew portions.",
+      "instruction": "Rest 15 minutes before cutting so layers hold. Serve squares from the pan for crew portions. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 15,
       "heatLevel": "low"
     }
@@ -186,19 +214,20 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1348,
-    "protein": 64,
-    "carbs": 29,
-    "fats": 90,
-    "label": "per serving (hall portion)",
-    "source": "calculated",
+    "calories": 0,
+    "protein": 0,
+    "carbs": 0,
+    "fats": 0,
+    "label": "Estimated per serving",
+    "source": "unavailable",
+    "estimateAvailable": false,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
       "under30gFat": false,
       "highCarb": false,
       "lowCarb": false,
-      "mealPrepFriendly": false
+      "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": true,
@@ -234,5 +263,6 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "generatedAt": "2026-06-01T01:40:02.133Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "mealPrepNotes": "Prep mise en place before the shift — Giant Batch Lasagna runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
 }

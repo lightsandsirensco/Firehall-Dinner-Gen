@@ -161,8 +161,9 @@
     "protein": 53,
     "carbs": 19,
     "fat": 59,
-    "label": "per serving (hall portion)",
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
@@ -214,5 +215,7 @@
     "Instant-read thermometer",
     "Aluminum foil"
   ],
-  "mealPrepNotes": "Prep mise en place before the shift — Irish Breakfast Fry-Up runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
+  "mealPrepNotes": "Prep mise en place before the shift — Irish Breakfast Fry-Up runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone.",
+  "mobileImage": "/images/mobile/breakfast/irish-breakfast-fry-up.jpg",
+  "railImage": "/images/rails/breakfast/irish-breakfast-fry-up.jpg"
 }

@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-06-01T01:33:26.002Z",
+  "generatedAt": "2026-06-01T02:29:09.988Z",
   "totals": {
-    "recipes": 228,
-    "pass": 225,
+    "recipes": 315,
+    "pass": 312,
     "fail": 3
   },
   "rows": [
@@ -109,6 +109,23 @@
       "recommendation": "ok"
     },
     {
+      "slug": "mac-and-cheese-bake",
+      "title": "Baked Mac and Cheese",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/mac-and-cheese-bake.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "default",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
       "slug": "mostaccioli-sausage-bake",
       "title": "Baked Mostaccioli with Sausage",
       "kind": "hall_expansion",
@@ -143,6 +160,23 @@
       "recommendation": "ok"
     },
     {
+      "slug": "baked-ziti",
+      "title": "Baked Ziti",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/baked-ziti.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "default",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
       "slug": "bbq-breakfast-hash",
       "title": "BBQ Breakfast Hash",
       "kind": "breakfast_catalog",
@@ -155,6 +189,74 @@
       },
       "slugMatch": true,
       "photoCategory": "breakfast",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "bbq-brisket-burnt-ends",
+      "title": "BBQ Burnt Ends",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/bbq-brisket-burnt-ends.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "bbq",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "bbq-chicken-bowls",
+      "title": "BBQ Chicken Bowls",
+      "kind": "hall_classic",
+      "heroImage": "/images/golden-100/bbq-chicken-bowls.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "bbq",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "bbq-chicken-pizza",
+      "title": "BBQ Chicken Pizza",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/bbq-chicken-pizza.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "bbq",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "bbq-chicken-sliders",
+      "title": "BBQ Chicken Sliders",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/bbq-chicken-sliders.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "bbq",
       "issues": [],
       "pass": true,
       "recommendation": "ok"
@@ -177,6 +279,23 @@
       "recommendation": "ok"
     },
     {
+      "slug": "beef-barley-soup",
+      "title": "Beef Barley Soup",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/beef-barley-soup.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "soups_chili",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
       "slug": "enchilada-beef-skillet",
       "title": "Beef Enchilada Skillet",
       "kind": "hall_expansion",
@@ -189,6 +308,40 @@
       },
       "slugMatch": true,
       "photoCategory": "default",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "beef-stroganoff",
+      "title": "Beef Stroganoff",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/beef-stroganoff.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "default",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "beer-can-chicken",
+      "title": "Beer Can Chicken",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/beer-can-chicken.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "bbq",
       "issues": [],
       "pass": true,
       "recommendation": "ok"
@@ -245,6 +398,23 @@
       "recommendation": "ok"
     },
     {
+      "slug": "turkey-burgers",
+      "title": "Black Bean Turkey Burgers",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/turkey-burgers.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "default",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
       "slug": "cajun-grilled-cod-crew",
       "title": "Black Iron Remoulade Cod Plates",
       "kind": "bbq_catalog",
@@ -287,6 +457,23 @@
       },
       "slugMatch": true,
       "photoCategory": "global_meals",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "beef-dip",
+      "title": "Blackstone Steak Sandwiches",
+      "kind": "hall_classic",
+      "heroImage": "/images/golden-100/beef-dip.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "sandwiches",
       "issues": [],
       "pass": true,
       "recommendation": "ok"
@@ -462,6 +649,23 @@
       "recommendation": "ok"
     },
     {
+      "slug": "breakfast-sausage-pizza",
+      "title": "Breakfast Sausage Gravy Pizza",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/breakfast-sausage-pizza.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "breakfast",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
       "slug": "breakfast-sliders",
       "title": "Breakfast Sliders",
       "kind": "breakfast_catalog",
@@ -508,6 +712,23 @@
       },
       "slugMatch": true,
       "photoCategory": "bbq",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "buffalo-chicken-dip",
+      "title": "Buffalo Chicken Dip",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/buffalo-chicken-dip.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "default",
       "issues": [],
       "pass": true,
       "recommendation": "ok"
@@ -564,6 +785,23 @@
       "recommendation": "ok"
     },
     {
+      "slug": "butter-chicken",
+      "title": "Butter Chicken",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/butter-chicken.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "global_meals",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
       "slug": "buttermilk-pancakes",
       "title": "Buttermilk Pancakes for the Crew",
       "kind": "breakfast_catalog",
@@ -610,6 +848,23 @@
       },
       "slugMatch": true,
       "photoCategory": "default",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "jambalaya",
+      "title": "Cajun Jambalaya for the Hall",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/jambalaya.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "soups_chili",
       "issues": [],
       "pass": true,
       "recommendation": "ok"
@@ -713,6 +968,40 @@
       "recommendation": "ok"
     },
     {
+      "slug": "cedar-plank-salmon",
+      "title": "Cedar Plank Grilled Salmon",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/cedar-plank-salmon.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "bbq",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "grilled-pork-chops",
+      "title": "Charcoal Grilled Pork Chops",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/grilled-pork-chops.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "bbq",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
       "slug": "cheesy-beef-nacho-bake",
       "title": "Cheesy Beef Nacho Bake",
       "kind": "hall_expansion",
@@ -734,6 +1023,40 @@
       "title": "Cheesy Chicken Broccoli Rice",
       "kind": "hall_expansion",
       "heroImage": "/images/hall-expansion/cheesy-chicken-broccoli-rice.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "soups_chili",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "chicken-alfredo-bake",
+      "title": "Chicken Alfredo Bake",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/chicken-alfredo-bake.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "default",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "chicken-dumpling-soup",
+      "title": "Chicken and Dumplings",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/chicken-dumpling-soup.jpg",
       "onDisk": {
         "hero": true,
         "thumb": true,
@@ -781,6 +1104,23 @@
       "recommendation": "ok"
     },
     {
+      "slug": "enchilada-casserole",
+      "title": "Chicken Enchilada Casserole",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/enchilada-casserole.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "default",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
       "slug": "chicken-paprikash-hall",
       "title": "Chicken Paprikash for the Hall",
       "kind": "hall_expansion",
@@ -793,6 +1133,74 @@
       },
       "slugMatch": true,
       "photoCategory": "soups_chili",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "chicken-parm",
+      "title": "Chicken Parm",
+      "kind": "hall_classic",
+      "heroImage": "/images/golden-100/chicken-parm.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "default",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "parm-hero-subs",
+      "title": "Chicken Parm Hero Subs",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/parm-hero-subs.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "sandwiches",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "chicken-pot-pie",
+      "title": "Chicken Pot Pie",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/chicken-pot-pie.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "default",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "chicken-tikka-masala",
+      "title": "Chicken Tikka Masala",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/chicken-tikka-masala.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "default",
       "issues": [],
       "pass": true,
       "recommendation": "ok"
@@ -827,6 +1235,40 @@
       },
       "slugMatch": true,
       "photoCategory": "breakfast",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "chili-mac",
+      "title": "Chili Mac Skillet",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/chili-mac.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "soups_chili",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "steak-tacos",
+      "title": "Chimichurri Steak Tacos",
+      "kind": "hall_classic",
+      "heroImage": "/images/golden-100/steak-tacos.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "global_meals",
       "issues": [],
       "pass": true,
       "recommendation": "ok"
@@ -887,6 +1329,40 @@
       "title": "Citrus Ginger Smoothie",
       "kind": "smoothie",
       "heroImage": "/images/smoothies/citrus-ginger.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "default",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "meatloaf-mashed",
+      "title": "Classic Meatloaf with Mashed Potatoes",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/meatloaf-mashed.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "default",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "pepperoni-pizza-night",
+      "title": "Classic Pepperoni Pizza",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/pepperoni-pizza-night.jpg",
       "onDisk": {
         "hero": true,
         "thumb": true,
@@ -1070,6 +1546,23 @@
       "recommendation": "ok"
     },
     {
+      "slug": "creamy-tuscan-chicken",
+      "title": "Creamy Tuscan Chicken",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/creamy-tuscan-chicken.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "default",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
       "slug": "crew-french-toast-bake",
       "title": "Crew French Toast Bake",
       "kind": "breakfast_catalog",
@@ -1082,6 +1575,23 @@
       },
       "slugMatch": true,
       "photoCategory": "breakfast",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "crispy-chicken-cutlets",
+      "title": "Crispy Chicken Cutlets Marinara",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/crispy-chicken-cutlets.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "default",
       "issues": [],
       "pass": true,
       "recommendation": "ok"
@@ -1133,6 +1643,40 @@
       },
       "slugMatch": true,
       "photoCategory": "breakfast",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "detroit-style-pizza",
+      "title": "Detroit-Style Pepperoni Pizza",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/detroit-style-pizza.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "default",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "smash-burgers",
+      "title": "Double Smash Burgers",
+      "kind": "hall_classic",
+      "heroImage": "/images/golden-100/smash-burgers.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "default",
       "issues": [],
       "pass": true,
       "recommendation": "ok"
@@ -1223,6 +1767,23 @@
       "recommendation": "ok"
     },
     {
+      "slug": "fast-philly-skillet",
+      "title": "Fast Philly Cheesesteak Skillet",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/fast-philly-skillet.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "default",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
       "slug": "fire-captain-omelette-bar",
       "title": "Fire Captain Omelette Bar",
       "kind": "breakfast_catalog",
@@ -1308,6 +1869,57 @@
       "recommendation": "ok"
     },
     {
+      "slug": "meatball-hoagies",
+      "title": "Firehall Meatball Hoagies",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/meatball-hoagies.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "sandwiches",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "pad-thai",
+      "title": "Firehall Pad Thai",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/pad-thai.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "global_meals",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "margherita-pizza",
+      "title": "Fresh Margherita Pizza",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/margherita-pizza.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "default",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
       "slug": "game-day-pizza-sliders",
       "title": "Game Day Pizza Sliders",
       "kind": "hall_expansion",
@@ -1320,6 +1932,40 @@
       },
       "slugMatch": true,
       "photoCategory": "sandwiches",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "five-ingredient-pasta",
+      "title": "Garlic Butter Pasta",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/five-ingredient-pasta.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "default",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "garlic-butter-shrimp",
+      "title": "Garlic Butter Shrimp",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/garlic-butter-shrimp.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "default",
       "issues": [],
       "pass": true,
       "recommendation": "ok"
@@ -1355,6 +2001,23 @@
       "recommendation": "regenerate"
     },
     {
+      "slug": "batch-lasagna",
+      "title": "Giant Batch Lasagna",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/batch-lasagna.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "default",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
       "slug": "griddle-smash-sausage-peppers",
       "title": "Giardiniera Smash Sausage Hoagies",
       "kind": "bbq_catalog",
@@ -1372,10 +2035,44 @@
       "recommendation": "ok"
     },
     {
+      "slug": "ginger-salmon-bowls",
+      "title": "Ginger Salmon Rice Bowls",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/ginger-salmon-bowls.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "default",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
       "slug": "ginger-soy-chicken-rice-bowls",
       "title": "Ginger Soy Chicken Rice Bowls",
       "kind": "hall_expansion",
       "heroImage": "/images/hall-expansion/ginger-soy-chicken-rice-bowls.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "default",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "greek-chicken-bowls",
+      "title": "Greek Chicken Bowls",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/greek-chicken-bowls.jpg",
       "onDisk": {
         "hero": true,
         "thumb": true,
@@ -1440,6 +2137,57 @@
       "recommendation": "ok"
     },
     {
+      "slug": "chicken-souvlaki",
+      "title": "Grilled Chicken Souvlaki",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/chicken-souvlaki.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "bbq",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "flank-chimichurri",
+      "title": "Grilled Flank Steak with Chimichurri",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/flank-chimichurri.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "bbq",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "ny-strip-herb-butter",
+      "title": "Grilled NY Strip with Herb Butter",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/ny-strip-herb-butter.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "bbq",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
       "slug": "grilled-reuben-sandwiches-crew",
       "title": "Grilled Reuben Sandwiches for the Crew",
       "kind": "bbq_catalog",
@@ -1461,6 +2209,23 @@
       "title": "Grilled Shrimp Quinoa Bowls",
       "kind": "performance_meal",
       "heroImage": "/images/golden-100/grilled-shrimp-quinoa-bowls.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "bbq",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "grilled-corn-cotija",
+      "title": "Grilled Street Corn with Cotija",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/grilled-corn-cotija.jpg",
       "onDisk": {
         "hero": true,
         "thumb": true,
@@ -1525,6 +2290,23 @@
       "recommendation": "ok"
     },
     {
+      "slug": "chicken-caesar",
+      "title": "Hall Caesar Chicken",
+      "kind": "hall_classic",
+      "heroImage": "/images/golden-100/chicken-caesar.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "default",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
       "slug": "hall-chicken-noodle-soup",
       "title": "Hall Chicken Noodle Soup",
       "kind": "hall_expansion",
@@ -1559,6 +2341,23 @@
       "recommendation": "ok"
     },
     {
+      "slug": "slider-bar",
+      "title": "Hall Slider Bar",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/slider-bar.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "sandwiches",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
       "slug": "hall-sloppy-joe-feed",
       "title": "Hall Sloppy Joe Feed",
       "kind": "hall_expansion",
@@ -1576,6 +2375,40 @@
       "recommendation": "ok"
     },
     {
+      "slug": "hall-taco-bar",
+      "title": "Hall Taco Bar Night",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/hall-taco-bar.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "global_meals",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "big-chili",
+      "title": "Hall-Sized Beef and Bean Chili",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/big-chili.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "soups_chili",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
       "slug": "caprese-steak-skewers-crew",
       "title": "Heirloom Tomato Bocconcini Sirloin Stacks",
       "kind": "bbq_catalog",
@@ -1588,6 +2421,23 @@
       },
       "slugMatch": true,
       "photoCategory": "bbq",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "herb-roasted-thighs",
+      "title": "Herb Roasted Chicken Thighs",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/herb-roasted-thighs.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "default",
       "issues": [],
       "pass": true,
       "recommendation": "ok"
@@ -1644,6 +2494,23 @@
       "recommendation": "ok"
     },
     {
+      "slug": "turkey-chili",
+      "title": "High-Protein Turkey Chili",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/turkey-chili.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "soups_chili",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
       "slug": "honey-chipotle-chicken-thighs",
       "title": "Honey Chipotle Grilled Chicken Thighs",
       "kind": "bbq_catalog",
@@ -1673,6 +2540,23 @@
       },
       "slugMatch": true,
       "photoCategory": "default",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "honey-garlic-pork-tenderloin",
+      "title": "Honey Garlic Grilled Pork Tenderloin",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/honey-garlic-pork-tenderloin.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "bbq",
       "issues": [],
       "pass": true,
       "recommendation": "ok"
@@ -1724,6 +2608,23 @@
       },
       "slugMatch": true,
       "photoCategory": "bbq",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "honey-soppressata-pizza",
+      "title": "Hot Honey Soppressata Pizza",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/honey-soppressata-pizza.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "default",
       "issues": [],
       "pass": true,
       "recommendation": "ok"
@@ -1865,6 +2766,23 @@
       "recommendation": "ok"
     },
     {
+      "slug": "jerk-chicken",
+      "title": "Jerk Chicken & Peas and Rice",
+      "kind": "hall_classic",
+      "heroImage": "/images/golden-100/jerk-chicken.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "bbq",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
       "slug": "johnnycakes-with-syrup",
       "title": "Johnnycakes with Maple Syrup",
       "kind": "breakfast_catalog",
@@ -1945,6 +2863,23 @@
       },
       "slugMatch": true,
       "photoCategory": "bbq",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "bulgogi-bowls",
+      "title": "Korean Bulgogi Rice Bowls",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/bulgogi-bowls.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "global_meals",
       "issues": [],
       "pass": true,
       "recommendation": "ok"
@@ -2035,6 +2970,23 @@
       "recommendation": "ok"
     },
     {
+      "slug": "lemon-herb-salmon",
+      "title": "Lemon Herb Grilled Salmon",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/lemon-herb-salmon.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "bbq",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
       "slug": "lemon-salmon-orzo-skillet",
       "title": "Lemon Salmon Orzo Skillet",
       "kind": "performance_meal",
@@ -2103,10 +3055,78 @@
       "recommendation": "ok"
     },
     {
+      "slug": "loaded-baked-potato-bar",
+      "title": "Loaded Baked Potato Bar",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/loaded-baked-potato-bar.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "default",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "game-day-nachos",
+      "title": "Loaded Game Day Nachos",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/game-day-nachos.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "default",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
       "slug": "loaded-nacho-bar-night",
       "title": "Loaded Nacho Bar Night",
       "kind": "hall_expansion",
       "heroImage": "/images/hall-expansion/loaded-nacho-bar-night.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "default",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "loaded-nacho-skillet",
+      "title": "Loaded Nacho Skillet",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/loaded-nacho-skillet.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "default",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "loaded-potato-feed",
+      "title": "Loaded Potato Feed",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/loaded-potato-feed.jpg",
       "onDisk": {
         "hero": true,
         "thumb": true,
@@ -2239,6 +3259,23 @@
       "recommendation": "ok"
     },
     {
+      "slug": "meat-lovers-sheet-pizza",
+      "title": "Meat Lover's Sheet Pan Pizza",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/meat-lovers-sheet-pizza.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "default",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
       "slug": "mediterranean-baked-fish-tray",
       "title": "Mediterranean Baked Cod Tray",
       "kind": "performance_meal",
@@ -2273,6 +3310,23 @@
       "recommendation": "ok"
     },
     {
+      "slug": "mediterranean-chickpea",
+      "title": "Mediterranean Chickpea Bowls",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/mediterranean-chickpea.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "default",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
       "slug": "mediterranean-feast-night",
       "title": "Mediterranean Feast Night",
       "kind": "hall_expansion",
@@ -2290,6 +3344,23 @@
       "recommendation": "ok"
     },
     {
+      "slug": "memphis-dry-rub-ribs",
+      "title": "Memphis Dry Rub Ribs",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/memphis-dry-rub-ribs.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "bbq",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
       "slug": "mesquite-chuck-roast",
       "title": "Mesquite Smoked Chuck Roast",
       "kind": "hall_expansion",
@@ -2302,6 +3373,23 @@
       },
       "slugMatch": true,
       "photoCategory": "bbq",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "street-corn-chicken",
+      "title": "Mexican Street Corn Chicken Bowls",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/street-corn-chicken.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "global_meals",
       "issues": [],
       "pass": true,
       "recommendation": "ok"
@@ -2460,6 +3548,23 @@
       "recommendation": "ok"
     },
     {
+      "slug": "moroccan-meatballs",
+      "title": "Moroccan Spiced Lamb Meatballs",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/moroccan-meatballs.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "global_meals",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
       "slug": "firehall-antipasto-pasta-salad",
       "title": "Mortadella Farfalle Antipasto Tray",
       "kind": "bbq_catalog",
@@ -2506,6 +3611,40 @@
       },
       "slugMatch": true,
       "photoCategory": "bbq",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "one-pot-chicken-rice",
+      "title": "One-Pot Chicken and Rice",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/one-pot-chicken-rice.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "soups_chili",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "skillet-chicken-alfredo",
+      "title": "One-Skillet Chicken Alfredo",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/skillet-chicken-alfredo.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "default",
       "issues": [],
       "pass": true,
       "recommendation": "ok"
@@ -2664,6 +3803,23 @@
       "recommendation": "ok"
     },
     {
+      "slug": "performance-burrito-bowls",
+      "title": "Performance Chicken Burrito Bowls",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/performance-burrito-bowls.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "sandwiches",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
       "slug": "peri-peri-chicken-platter",
       "title": "Peri Peri Chicken Platter",
       "kind": "hall_expansion",
@@ -2685,6 +3841,40 @@
       "title": "Pesto Tomato Chicken Tray",
       "kind": "performance_meal",
       "heroImage": "/images/golden-100/pesto-tomato-chicken-tray.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "default",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "philly-egg-rolls",
+      "title": "Philly Cheesesteak Egg Rolls",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/philly-egg-rolls.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "default",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "philly-cheesesteak-skillet",
+      "title": "Philly Cheesesteak Skillet",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/philly-cheesesteak-skillet.jpg",
       "onDisk": {
         "hero": true,
         "thumb": true,
@@ -2800,6 +3990,23 @@
       "recommendation": "ok"
     },
     {
+      "slug": "beef-broccoli",
+      "title": "Quick Beef and Broccoli",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/beef-broccoli.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "default",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
       "slug": "quick-egg-tacos",
       "title": "Quick Egg Tacos",
       "kind": "breakfast_catalog",
@@ -2812,6 +4019,40 @@
       },
       "slugMatch": true,
       "photoCategory": "breakfast",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "pork-carnitas-tacos",
+      "title": "Quick Pork Carnitas Tacos",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/pork-carnitas-tacos.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "global_meals",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "stuffed-peppers",
+      "title": "Quinoa Stuffed Peppers",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/stuffed-peppers.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "default",
       "issues": [],
       "pass": true,
       "recommendation": "ok"
@@ -2936,6 +4177,40 @@
       "recommendation": "ok"
     },
     {
+      "slug": "sausage-egg-bake",
+      "title": "Sausage Egg Bake for the Crew",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/sausage-egg-bake.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "default",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "sausage-peppers-onions",
+      "title": "Sausage Peppers and Onions",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/sausage-peppers-onions.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "default",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
       "slug": "mongolian-beef-flat-top-crew",
       "title": "Scallion Crisp Mongolian Flank Tray",
       "kind": "bbq_catalog",
@@ -3055,10 +4330,44 @@
       "recommendation": "ok"
     },
     {
+      "slug": "sheet-pan-fajitas",
+      "title": "Sheet Pan Chicken Fajitas",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/sheet-pan-fajitas.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "default",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
       "slug": "sheet-pan-chicken-fajitas-lite",
       "title": "Sheet Pan Chicken Fajitas Lite",
       "kind": "performance_meal",
       "heroImage": "/images/golden-100/sheet-pan-chicken-fajitas-lite.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "default",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "sheet-pan-meal-prep",
+      "title": "Sheet Pan Chicken Trays",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/sheet-pan-meal-prep.jpg",
       "onDisk": {
         "hero": true,
         "thumb": true,
@@ -3093,6 +4402,57 @@
       "title": "Sheet Pan Meatball Marinara Feed",
       "kind": "hall_expansion",
       "heroImage": "/images/hall-expansion/sheet-pan-meatball-marinara.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "default",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "sheet-pan-sausage-peppers",
+      "title": "Sheet Pan Sausage and Peppers",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/sheet-pan-sausage-peppers.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "default",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "shepherds-pie",
+      "title": "Shepherd's Pie with Greek Salad",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/shepherds-pie.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "default",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "chicken-quesadillas",
+      "title": "Shredded Chicken Quesadillas",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/chicken-quesadillas.jpg",
       "onDisk": {
         "hero": true,
         "thumb": true,
@@ -3361,6 +4721,23 @@
       "recommendation": "ok"
     },
     {
+      "slug": "smoked-wings-white-sauce",
+      "title": "Smoked Wings with White BBQ Sauce",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/smoked-wings-white-sauce.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "bbq",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
       "slug": "smoky-lentil-kale-soup",
       "title": "Smoky Lentil and Kale Soup",
       "kind": "performance_meal",
@@ -3458,6 +4835,23 @@
       },
       "slugMatch": true,
       "photoCategory": "default",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "steak-sandwiches",
+      "title": "Steak Sandwiches",
+      "kind": "hall_classic",
+      "heroImage": "/images/golden-100/steak-sandwiches.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "sandwiches",
       "issues": [],
       "pass": true,
       "recommendation": "ok"
@@ -3565,6 +4959,40 @@
       "recommendation": "ok"
     },
     {
+      "slug": "teriyaki-donburi",
+      "title": "Teriyaki Chicken Donburi",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/teriyaki-donburi.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "global_meals",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "teriyaki-salmon-grill",
+      "title": "Teriyaki Grilled Salmon",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/teriyaki-salmon-grill.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "bbq",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
       "slug": "texas-central-brisket-crew",
       "title": "Texas Central Brisket for the Crew",
       "kind": "bbq_catalog",
@@ -3594,6 +5022,23 @@
       },
       "slugMatch": true,
       "photoCategory": "bbq",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "thai-basil-chicken",
+      "title": "Thai Basil Chicken Stir Fry",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/thai-basil-chicken.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "global_meals",
       "issues": [],
       "pass": true,
       "recommendation": "ok"
@@ -3679,6 +5124,23 @@
       },
       "slugMatch": true,
       "photoCategory": "sandwiches",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "turkey-meatball-zoodles",
+      "title": "Turkey Meatballs with Zucchini Noodles",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/turkey-meatball-zoodles.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "default",
       "issues": [],
       "pass": true,
       "recommendation": "ok"
@@ -3832,6 +5294,23 @@
       },
       "slugMatch": true,
       "photoCategory": "soups_chili",
+      "issues": [],
+      "pass": true,
+      "recommendation": "ok"
+    },
+    {
+      "slug": "white-garlic-chicken-pizza",
+      "title": "White Garlic Chicken Pizza",
+      "kind": "firehall_catalog",
+      "heroImage": "/images/golden-100/white-garlic-chicken-pizza.jpg",
+      "onDisk": {
+        "hero": true,
+        "thumb": true,
+        "mobile": true,
+        "rail": true
+      },
+      "slugMatch": true,
+      "photoCategory": "default",
       "issues": [],
       "pass": true,
       "recommendation": "ok"

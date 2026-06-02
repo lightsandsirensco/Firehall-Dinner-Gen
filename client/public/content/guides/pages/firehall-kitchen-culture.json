@@ -11,21 +11,44 @@
       "id": "roles",
       "heading": "Roles that prevent resentment",
       "paragraphs": [
-        "Cook, cleanup lead, grocery shopper — three jobs, can be three people. When everyone 'helps' with no owner, dishes sit until morning."
+        "Cook, cleanup lead, grocery shopper — three jobs, can be three people. When everyone 'helps' with no owner, dishes sit until morning.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
       ]
     },
     {
       "id": "tone",
       "heading": "Tone at the table",
       "paragraphs": [
-        "Meals are where crews decompress. Complaining about the food while someone cooked is a fast way to end volunteer cooks."
+        "Meals are where crews decompress. Complaining about the food while someone cooked is a fast way to end volunteer cooks.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
+      ]
+    },
+    {
+      "id": "hall-tonight",
+      "heading": "What this looks like on the hall tonight",
+      "paragraphs": [
+        "Kitchen culture shows up in small moves: who shops, who cleans, whether rookies get coached or roasted. For firehall kitchen culture, fairness beats perfection — rotate the jobs that nobody wants twice in a row.",
+        "Meals are morale. A crew that trusts the kitchen cooks more often and complains less about grocery splits. Keep the tone direct and the help real."
+      ],
+      "tips": [
+        "Praise the cook in the bay — fix critiques one-on-one after cleanup.",
+        "Write grocery splits on the receipt photo the same night you shop."
       ]
     }
   ],
   "practicalAdvice": [
     "Write unwritten rules on a whiteboard: cook rotation, cleanup owner, grocery day.",
     "Praise the cook publicly — criticism belongs one-on-one.",
-    "Rookies cook with a partner, not alone on their first big meal."
+    "Rookies cook with a partner, not alone on their first big meal.",
+    "Post who's cooking and what's holding warm on the whiteboard — post-call eaters should not hunt for answers."
   ],
   "mealRecommendations": [
     {
@@ -65,5 +88,6 @@
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
   "updatedAt": "2026-05-27T18:00:00.000Z",
-  "readMinutes": 7
+  "readMinutes": 7,
+  "heroImageAlt": "Firehall Kitchen Culture — firehall kitchen culture tips for fire station kitchens and crew-sized meals"
 }

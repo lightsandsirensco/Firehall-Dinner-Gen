@@ -1,7 +1,7 @@
 {
   "slug": "bulgogi-bowls",
-  "title": "Korean Bulgogi Rice Bowls",
-  "displayTitle": "Korean Bulgogi Rice Bowls",
+  "title": "Korean Ginger Sesame Steak Bowls",
+  "displayTitle": "Korean Ginger Sesame Steak Bowls",
   "seoTitle": "Korean Bulgogi Rice Bowls | Firefighter Meal",
   "shortDescription": "Sweet soy beef, pickled crunch",
   "subtitle": "Sweet soy beef, pickled crunch",
@@ -78,30 +78,86 @@
   "steps": [
     {
       "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Korean Ginger Sesame Steak Bowls in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch beef. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
       "title": "Marinate sliced beef",
       "instruction": "Toss thinly sliced ribeye with soy sauce, brown sugar, grated pear or apple, garlic, and sesame oil. Marinate 20 minutes while rice cooks.",
       "minutes": 25,
       "heatLevel": ""
     },
     {
-      "stepNumber": 2,
+      "stepNumber": 4,
       "title": "Cook short-grain rice",
-      "instruction": "Rinse rice; cook 1:1.25 with water 15 minutes. Rest covered 10 minutes.",
+      "instruction": "Rinse rice; cook 1:1.25 with water 15 minutes. Rest covered 10 minutes. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 25,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 3,
+      "stepNumber": 5,
       "title": "Sear bulgogi in batches",
-      "instruction": "Heat a cast iron skillet until smoking. Sear beef in single layers 2–3 minutes per side until caramelized edges appear — do not crowd or meat steams instead of chars.",
+      "instruction": "Heat a cast iron skillet until smoking. Sear beef in single layers 2–3 minutes per side until caramelized edges appear — do not crowd or meat steams instead of chars. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
       "minutes": 12,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 6,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F for medium beef, 160°F for ground. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 8,
+      "title": "Portion and open the line",
+      "instruction": "Portion Korean Ginger Sesame Steak Bowls onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
+      "title": "Scale for larger halls",
+      "instruction": "When cooking for more than 8 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
       "title": "Build bulgogi bowls",
-      "instruction": "Rice, seared beef, kimchi, and julienned cucumber. Korean Bulgogi Rice Bowls need that char on the beef — batch the skillet if the crew is hungry.",
+      "instruction": "Rice, seared beef, kimchi, and julienned cucumber. Korean Bulgogi Rice Bowls need that char on the beef — batch the skillet if the crew is hungry. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
       "minutes": 6,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
+      "title": "Final quality check before service",
+      "instruction": "Walk the line once before opening service for Korean Ginger Sesame Steak Bowls — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
+      "minutes": 4,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 12,
+      "title": "Final quality check before service",
+      "instruction": "Walk the line once before opening service for Korean Ginger Sesame Steak Bowls — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
+      "minutes": 4,
       "heatLevel": ""
     }
   ],
@@ -171,5 +227,6 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "generatedAt": "2026-06-01T01:40:02.154Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "mealPrepNotes": "Prep mise en place before the shift — Korean Ginger Sesame Steak Bowls runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
 }

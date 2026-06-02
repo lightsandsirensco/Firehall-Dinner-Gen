@@ -1,775 +1,690 @@
 {
-  "generatedAt": "2026-05-31T23:50:25.318Z",
+  "generatedAt": "2026-06-01T02:27:10.910Z",
   "dryRun": false,
-  "recipesModified": 123,
+  "recipesModified": 89,
   "spellingCorrections": 0,
-  "ingredientsFixed": 17,
-  "stepRewritesCompleted": 123,
+  "ingredientsFixed": 96,
+  "stepRewritesCompleted": 89,
   "changes": [
     {
-      "slug": "applewood-pork-shoulder-steaks",
+      "slug": "mac-and-cheese-bake",
       "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 8
-    },
-    {
-      "slug": "asian-chicken-lettuce-cups",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
+      "ingredientsFixed": [
+        "Sharp cheddar, shredded"
+      ],
       "stepsRewritten": 10
     },
     {
-      "slug": "mostaccioli-sausage-bake",
+      "slug": "baked-ziti",
       "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 8
-    },
-    {
-      "slug": "bbq-breakfast-hash",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 8
-    },
-    {
-      "slug": "bbq-meatball-skewers",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 8
-    },
-    {
-      "slug": "enchilada-beef-skillet",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 9
-    },
-    {
-      "slug": "spiedie-chicken-platter-crew",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 8
-    },
-    {
-      "slug": "cajun-grilled-cod-crew",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 8
-    },
-    {
-      "slug": "blackened-cod-taco-night",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 8
-    },
-    {
-      "slug": "loaded-ranch-potato-salad-crew",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 8
-    },
-    {
-      "slug": "breakfast-fried-rice-crew",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 9
-    },
-    {
-      "slug": "breakfast-nachos-supreme",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
+      "ingredientsFixed": [
+        "Yellow onion, diced",
+        "Fresh basil, chopped"
+      ],
       "stepsRewritten": 10
     },
     {
-      "slug": "breakfast-poutine",
+      "slug": "bbq-brisket-burnt-ends",
       "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 9
+      "ingredientsFixed": [
+        "Chuck or brisket point, cubed"
+      ],
+      "stepsRewritten": 11
     },
     {
-      "slug": "breakfast-sandwich-trays",
+      "slug": "bbq-chicken-bowls",
       "spellingCorrections": [],
       "ingredientsFixed": [],
-      "stepsRewritten": 8
+      "stepsRewritten": 11
     },
     {
-      "slug": "breakfast-sliders",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 9
-    },
-    {
-      "slug": "bun-bo-hue-noodle-soup",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 10
-    },
-    {
-      "slug": "cajun-chicken-rice-skillet",
+      "slug": "bbq-chicken-pizza",
       "spellingCorrections": [],
       "ingredientsFixed": [],
       "stepsRewritten": 12
     },
     {
-      "slug": "grilled-cod-lemon-packets",
+      "slug": "bbq-chicken-sliders",
       "spellingCorrections": [],
       "ingredientsFixed": [
-        "fresh tarragon",
-        "fresh dill fronds"
+        "Ground beef",
+        "Yellow onion",
+        "Garlic cloves"
+      ],
+      "stepsRewritten": 12
+    },
+    {
+      "slug": "beef-barley-soup",
+      "spellingCorrections": [],
+      "ingredientsFixed": [
+        "Carrots, diced",
+        "Celery, diced"
+      ],
+      "stepsRewritten": 9
+    },
+    {
+      "slug": "beef-stroganoff",
+      "spellingCorrections": [],
+      "ingredientsFixed": [
+        "Cremini mushrooms, sliced",
+        "Yellow onion, sliced",
+        "Fresh parsley, chopped"
+      ],
+      "stepsRewritten": 12
+    },
+    {
+      "slug": "beer-can-chicken",
+      "spellingCorrections": [],
+      "ingredientsFixed": [],
+      "stepsRewritten": 12
+    },
+    {
+      "slug": "turkey-burgers",
+      "spellingCorrections": [],
+      "ingredientsFixed": [
+        "Mayonnaise",
+        "Yellow mustard",
+        "Dill pickles"
+      ],
+      "stepsRewritten": 11
+    },
+    {
+      "slug": "beef-dip",
+      "spellingCorrections": [],
+      "ingredientsFixed": [],
+      "stepsRewritten": 12
+    },
+    {
+      "slug": "breakfast-sausage-pizza",
+      "spellingCorrections": [],
+      "ingredientsFixed": [
+        "Shredded cheddar-mozzarella blend"
+      ],
+      "stepsRewritten": 12
+    },
+    {
+      "slug": "buffalo-chicken-dip",
+      "spellingCorrections": [],
+      "ingredientsFixed": [],
+      "stepsRewritten": 8
+    },
+    {
+      "slug": "butter-chicken",
+      "spellingCorrections": [],
+      "ingredientsFixed": [],
+      "stepsRewritten": 9
+    },
+    {
+      "slug": "jambalaya",
+      "spellingCorrections": [],
+      "ingredientsFixed": [],
+      "stepsRewritten": 10
+    },
+    {
+      "slug": "cedar-plank-salmon",
+      "spellingCorrections": [],
+      "ingredientsFixed": [
+        "Soy sauce",
+        "Fresh ginger, grated"
+      ],
+      "stepsRewritten": 11
+    },
+    {
+      "slug": "grilled-pork-chops",
+      "spellingCorrections": [],
+      "ingredientsFixed": [
+        "Soy sauce",
+        "Garlic cloves, minced"
+      ],
+      "stepsRewritten": 11
+    },
+    {
+      "slug": "chicken-alfredo-bake",
+      "spellingCorrections": [],
+      "ingredientsFixed": [
+        "Mozzarella, shredded",
+        "Fresh parsley, chopped"
+      ],
+      "stepsRewritten": 10
+    },
+    {
+      "slug": "chicken-dumpling-soup",
+      "spellingCorrections": [],
+      "ingredientsFixed": [
+        "Carrots, diced",
+        "Celery, diced",
+        "Fresh parsley, chopped"
+      ],
+      "stepsRewritten": 9
+    },
+    {
+      "slug": "enchilada-casserole",
+      "spellingCorrections": [],
+      "ingredientsFixed": [
+        "Shredded cheddar",
+        "Black olives, sliced"
+      ],
+      "stepsRewritten": 10
+    },
+    {
+      "slug": "chicken-parm",
+      "spellingCorrections": [],
+      "ingredientsFixed": [
+        "Fresh mozzarella, sliced",
+        "Fresh basil, torn"
+      ],
+      "stepsRewritten": 12
+    },
+    {
+      "slug": "parm-hero-subs",
+      "spellingCorrections": [],
+      "ingredientsFixed": [
+        "Ground beef",
+        "Yellow onion",
+        "Garlic cloves"
+      ],
+      "stepsRewritten": 12
+    },
+    {
+      "slug": "chicken-pot-pie",
+      "spellingCorrections": [],
+      "ingredientsFixed": [],
+      "stepsRewritten": 9
+    },
+    {
+      "slug": "chicken-tikka-masala",
+      "spellingCorrections": [],
+      "ingredientsFixed": [],
+      "stepsRewritten": 10
+    },
+    {
+      "slug": "chili-mac",
+      "spellingCorrections": [],
+      "ingredientsFixed": [],
+      "stepsRewritten": 12
+    },
+    {
+      "slug": "steak-tacos",
+      "spellingCorrections": [],
+      "ingredientsFixed": [
+        "Limes",
+        "Neutral oil (high heat)"
       ],
       "stepsRewritten": 8
     },
     {
-      "slug": "caprese-chicken-bake",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 8
-    },
-    {
-      "slug": "cast-iron-chicken-fajitas",
+      "slug": "meatloaf-mashed",
       "spellingCorrections": [],
       "ingredientsFixed": [],
       "stepsRewritten": 11
     },
     {
-      "slug": "cast-iron-steak-fajita-sizzlers",
+      "slug": "pepperoni-pizza-night",
       "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 8
+      "ingredientsFixed": [
+        "Grated parmesan"
+      ],
+      "stepsRewritten": 12
     },
     {
-      "slug": "cheesy-beef-nacho-bake",
+      "slug": "creamy-tuscan-chicken",
       "spellingCorrections": [],
       "ingredientsFixed": [],
+      "stepsRewritten": 10
+    },
+    {
+      "slug": "crispy-chicken-cutlets",
+      "spellingCorrections": [],
+      "ingredientsFixed": [
+        "Eggs, beaten",
+        "Parmesan, grated"
+      ],
+      "stepsRewritten": 12
+    },
+    {
+      "slug": "detroit-style-pizza",
+      "spellingCorrections": [],
+      "ingredientsFixed": [],
+      "stepsRewritten": 12
+    },
+    {
+      "slug": "smash-burgers",
+      "spellingCorrections": [],
+      "ingredientsFixed": [
+        "Mayonnaise",
+        "Neutral high-heat oil"
+      ],
       "stepsRewritten": 9
     },
     {
-      "slug": "cheesy-chicken-broccoli-rice",
+      "slug": "fast-philly-skillet",
       "spellingCorrections": [],
       "ingredientsFixed": [],
       "stepsRewritten": 11
     },
     {
-      "slug": "chicken-cacciatore-crew",
+      "slug": "meatball-hoagies",
       "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 9
+      "ingredientsFixed": [
+        "Yellow onion",
+        "Garlic cloves"
+      ],
+      "stepsRewritten": 12
     },
     {
-      "slug": "chicken-paprikash-hall",
+      "slug": "pad-thai",
       "spellingCorrections": [],
       "ingredientsFixed": [],
-      "stepsRewritten": 9
+      "stepsRewritten": 10
     },
     {
-      "slug": "classic-poutine-feed-crew",
+      "slug": "margherita-pizza",
+      "spellingCorrections": [],
+      "ingredientsFixed": [],
+      "stepsRewritten": 12
+    },
+    {
+      "slug": "five-ingredient-pasta",
       "spellingCorrections": [],
       "ingredientsFixed": [],
       "stepsRewritten": 11
     },
     {
-      "slug": "flat-top-philly-cheesesteaks-crew",
+      "slug": "garlic-butter-shrimp",
       "spellingCorrections": [],
       "ingredientsFixed": [],
-      "stepsRewritten": 8
+      "stepsRewritten": 11
     },
     {
-      "slug": "coq-au-vin-batch",
+      "slug": "batch-lasagna",
       "spellingCorrections": [],
-      "ingredientsFixed": [],
+      "ingredientsFixed": [
+        "Yellow onion, diced"
+      ],
       "stepsRewritten": 10
     },
     {
-      "slug": "cottage-pie-for-the-crew",
+      "slug": "ginger-salmon-bowls",
       "spellingCorrections": [],
       "ingredientsFixed": [],
+      "stepsRewritten": 11
+    },
+    {
+      "slug": "greek-chicken-bowls",
+      "spellingCorrections": [],
+      "ingredientsFixed": [],
+      "stepsRewritten": 11
+    },
+    {
+      "slug": "chicken-souvlaki",
+      "spellingCorrections": [],
+      "ingredientsFixed": [],
+      "stepsRewritten": 12
+    },
+    {
+      "slug": "flank-chimichurri",
+      "spellingCorrections": [],
+      "ingredientsFixed": [],
+      "stepsRewritten": 11
+    },
+    {
+      "slug": "ny-strip-herb-butter",
+      "spellingCorrections": [],
+      "ingredientsFixed": [],
+      "stepsRewritten": 12
+    },
+    {
+      "slug": "grilled-corn-cotija",
+      "spellingCorrections": [],
+      "ingredientsFixed": [
+        "Mayonnaise"
+      ],
+      "stepsRewritten": 12
+    },
+    {
+      "slug": "chicken-caesar",
+      "spellingCorrections": [],
+      "ingredientsFixed": [
+        "Thick-cut bacon"
+      ],
+      "stepsRewritten": 11
+    },
+    {
+      "slug": "slider-bar",
+      "spellingCorrections": [],
+      "ingredientsFixed": [
+        "Roma tomatoes, sliced",
+        "Mayonnaise",
+        "BBQ sauce"
+      ],
+      "stepsRewritten": 12
+    },
+    {
+      "slug": "hall-taco-bar",
+      "spellingCorrections": [],
+      "ingredientsFixed": [],
+      "stepsRewritten": 11
+    },
+    {
+      "slug": "big-chili",
+      "spellingCorrections": [],
+      "ingredientsFixed": [
+        "Kidney beans, drained"
+      ],
       "stepsRewritten": 10
     },
     {
-      "slug": "creamy-chicken-penne-alfredo",
+      "slug": "herb-roasted-thighs",
       "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 9
+      "ingredientsFixed": [
+        "Fresh thyme",
+        "Fresh rosemary",
+        "Kosher salt"
+      ],
+      "stepsRewritten": 11
     },
     {
-      "slug": "crispy-fish-taco-night",
+      "slug": "turkey-chili",
       "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 8
-    },
-    {
-      "slug": "crock-barbacoa-chicken",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
+      "ingredientsFixed": [
+        "Kidney beans, drained"
+      ],
       "stepsRewritten": 10
     },
     {
-      "slug": "dutch-oven-pot-roast",
+      "slug": "honey-garlic-pork-tenderloin",
+      "spellingCorrections": [],
+      "ingredientsFixed": [
+        "Soy sauce"
+      ],
+      "stepsRewritten": 11
+    },
+    {
+      "slug": "honey-soppressata-pizza",
       "spellingCorrections": [],
       "ingredientsFixed": [],
       "stepsRewritten": 13
     },
     {
-      "slug": "firehall-street-elote-cups",
+      "slug": "jerk-chicken",
       "spellingCorrections": [],
       "ingredientsFixed": [
-        "avocado oil"
+        "Coleslaw mix"
       ],
-      "stepsRewritten": 8
+      "stepsRewritten": 12
     },
     {
-      "slug": "firehall-breakfast-pizza",
+      "slug": "bulgogi-bowls",
       "spellingCorrections": [],
       "ingredientsFixed": [],
       "stepsRewritten": 12
     },
     {
-      "slug": "firehall-donair-platter",
+      "slug": "lemon-herb-salmon",
       "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 10
+      "ingredientsFixed": [
+        "Soy sauce",
+        "Fresh ginger, grated"
+      ],
+      "stepsRewritten": 11
     },
     {
-      "slug": "garlic-butter-shrimp-skewers",
+      "slug": "loaded-baked-potato-bar",
       "spellingCorrections": [],
       "ingredientsFixed": [],
-      "stepsRewritten": 8
+      "stepsRewritten": 11
     },
     {
-      "slug": "griddle-smash-sausage-peppers",
+      "slug": "game-day-nachos",
+      "spellingCorrections": [],
+      "ingredientsFixed": [
+        "Pickled jalapeños, sliced"
+      ],
+      "stepsRewritten": 12
+    },
+    {
+      "slug": "loaded-nacho-skillet",
       "spellingCorrections": [],
       "ingredientsFixed": [],
-      "stepsRewritten": 8
+      "stepsRewritten": 11
     },
     {
-      "slug": "ginger-soy-chicken-rice-bowls",
+      "slug": "loaded-potato-feed",
       "spellingCorrections": [],
       "ingredientsFixed": [],
       "stepsRewritten": 12
     },
     {
-      "slug": "greek-lemon-chicken-potatoes",
+      "slug": "meat-lovers-sheet-pizza",
       "spellingCorrections": [],
       "ingredientsFixed": [],
       "stepsRewritten": 11
     },
     {
-      "slug": "green-chile-chicken-stew",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 10
-    },
-    {
-      "slug": "grilled-reuben-sandwiches-crew",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 8
-    },
-    {
-      "slug": "grilled-shrimp-quinoa-bowls",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 8
-    },
-    {
-      "slug": "hall-burger-bar",
+      "slug": "mediterranean-chickpea",
       "spellingCorrections": [],
       "ingredientsFixed": [
-        "ketchup and mustard"
+        "Quinoa, uncooked",
+        "Red onion, thinly sliced"
       ],
-      "stepsRewritten": 9
-    },
-    {
-      "slug": "hall-chicken-noodle-soup",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 10
-    },
-    {
-      "slug": "caprese-steak-skewers-crew",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 8
-    },
-    {
-      "slug": "herb-baked-salmon-tray",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 8
-    },
-    {
-      "slug": "honey-garlic-chicken-rice-bowls",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 8
-    },
-    {
-      "slug": "hot-honey-grilled-sausage-peppers",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 8
-    },
-    {
-      "slug": "hummus-chicken-platter",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 11
-    },
-    {
-      "slug": "hungarian-goulash-crew",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 10
-    },
-    {
-      "slug": "pork-satay-skewers-crew",
-      "spellingCorrections": [],
-      "ingredientsFixed": [
-        "Thai basil"
-      ],
-      "stepsRewritten": 8
-    },
-    {
-      "slug": "irish-breakfast-fry-up",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
       "stepsRewritten": 12
     },
     {
-      "slug": "italian-sausage-veg-sheet-pan",
+      "slug": "memphis-dry-rub-ribs",
       "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 8
-    },
-    {
-      "slug": "jalapeno-cheddar-smoked-sausages",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 8
-    },
-    {
-      "slug": "tandoori-lamb-chop-platter",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 9
-    },
-    {
-      "slug": "korean-beef-rice-bowls",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 8
-    },
-    {
-      "slug": "korean-bulgogi-grill-night",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 9
-    },
-    {
-      "slug": "lamb-kofta-skewer-platter",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 8
-    },
-    {
-      "slug": "lebanese-chicken-shish-platter",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 9
-    },
-    {
-      "slug": "lemon-chicken-orzo-soup",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 10
-    },
-    {
-      "slug": "lemon-garlic-chicken-tray",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 11
-    },
-    {
-      "slug": "lemon-garlic-shrimp-pasta",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 9
-    },
-    {
-      "slug": "lemon-salmon-orzo-skillet",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 8
-    },
-    {
-      "slug": "chicken-enchilada-skillet-light",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 8
-    },
-    {
-      "slug": "portuguese-linguica-grill-platter",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 8
-    },
-    {
-      "slug": "loaded-nacho-bar-night",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 9
-    },
-    {
-      "slug": "loaded-potato-skins",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
+      "ingredientsFixed": [
+        "Brown sugar",
+        "Paprika",
+        "Garlic powder",
+        "Onion powder"
+      ],
       "stepsRewritten": 12
     },
     {
-      "slug": "malaysian-laksa-soup",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 11
-    },
-    {
-      "slug": "maple-mustard-salmon-tray",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 8
-    },
-    {
-      "slug": "maple-soy-salmon-bowls",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 8
-    },
-    {
-      "slug": "maple-cured-salmon-plank",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 11
-    },
-    {
-      "slug": "mediterranean-baked-fish-tray",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 8
-    },
-    {
-      "slug": "mediterranean-chicken-farro-bowls",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 9
-    },
-    {
-      "slug": "miso-ramen-bar",
+      "slug": "street-corn-chicken",
       "spellingCorrections": [],
       "ingredientsFixed": [],
       "stepsRewritten": 10
     },
     {
-      "slug": "moroccan-chicken-chickpea-tray",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 8
-    },
-    {
-      "slug": "moroccan-chicken-kebab-platter",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 10
-    },
-    {
-      "slug": "firehall-antipasto-pasta-salad",
+      "slug": "moroccan-meatballs",
       "spellingCorrections": [],
       "ingredientsFixed": [
-        "Pecorino Romano",
-        "red wine vinaigrette",
-        "fresh oregano"
+        "Couscous, dry"
+      ],
+      "stepsRewritten": 10
+    },
+    {
+      "slug": "one-pot-chicken-rice",
+      "spellingCorrections": [],
+      "ingredientsFixed": [
+        "Yellow onion, diced",
+        "Fresh parsley, chopped"
+      ],
+      "stepsRewritten": 12
+    },
+    {
+      "slug": "skillet-chicken-alfredo",
+      "spellingCorrections": [],
+      "ingredientsFixed": [
+        "Fettuccine or penne",
+        "Fresh parsley, chopped"
       ],
       "stepsRewritten": 8
     },
     {
-      "slug": "mushroom-swiss-steak-pan",
+      "slug": "performance-burrito-bowls",
       "spellingCorrections": [],
       "ingredientsFixed": [],
-      "stepsRewritten": 10
+      "stepsRewritten": 11
     },
     {
-      "slug": "lamb-merguez-skewers-crew",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 8
-    },
-    {
-      "slug": "honey-sriracha-shrimp-skewers",
+      "slug": "philly-egg-rolls",
       "spellingCorrections": [],
       "ingredientsFixed": [
-        "grapeseed oil"
+        "Yellow onion",
+        "Garlic cloves"
       ],
-      "stepsRewritten": 8
-    },
-    {
-      "slug": "maple-bourbon-grilled-trout",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 8
-    },
-    {
-      "slug": "pellet-smoked-chicken-quarters",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 13
-    },
-    {
-      "slug": "pepper-steak-onions",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 9
-    },
-    {
-      "slug": "peri-peri-chicken-platter",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 10
-    },
-    {
-      "slug": "pesto-tomato-chicken-tray",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 9
-    },
-    {
-      "slug": "philly-cheesesteak-sliders",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
       "stepsRewritten": 12
     },
     {
-      "slug": "pressed-cuban-sandwiches-crew",
+      "slug": "philly-cheesesteak-skillet",
       "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 8
+      "ingredientsFixed": [
+        "Bell peppers, sliced",
+        "Yellow onion, sliced"
+      ],
+      "stepsRewritten": 9
     },
     {
       "slug": "pulled-pork",
       "spellingCorrections": [],
-      "ingredientsFixed": [],
+      "ingredientsFixed": [
+        "Yellow mustard"
+      ],
       "stepsRewritten": 10
     },
     {
-      "slug": "rigatoni-meat-sauce-batch",
+      "slug": "beef-broccoli",
       "spellingCorrections": [],
       "ingredientsFixed": [],
       "stepsRewritten": 9
     },
     {
-      "slug": "salsa-verde-crock-chicken",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 10
-    },
-    {
-      "slug": "sandwich-board-night",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 10
-    },
-    {
-      "slug": "santa-maria-tri-tip-roast",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 10
-    },
-    {
-      "slug": "sausage-egg-cheese-sandwiches",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 8
-    },
-    {
-      "slug": "mongolian-beef-flat-top-crew",
-      "spellingCorrections": [],
-      "ingredientsFixed": [
-        "peanut oil"
-      ],
-      "stepsRewritten": 8
-    },
-    {
-      "slug": "gochujang-beef-skewers-crew",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 8
-    },
-    {
-      "slug": "sheet-pan-breakfast-hash",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 8
-    },
-    {
-      "slug": "sheet-pan-chicken-fajitas-lite",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 8
-    },
-    {
-      "slug": "smoked-baked-beans-crew",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 10
-    },
-    {
-      "slug": "smoked-chicken-quarters-white-sauce",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 12
-    },
-    {
-      "slug": "smoked-salmon-benedit",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 10
-    },
-    {
-      "slug": "southwest-egg-bake",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 8
-    },
-    {
-      "slug": "spanish-chicken-chorizo-rice",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 12
-    },
-    {
-      "slug": "spatchcock-lemon-roast-chicken",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 10
-    },
-    {
-      "slug": "station-cobb-salad",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 10
-    },
-    {
-      "slug": "grilled-chicken-pesto-panini-crew",
-      "spellingCorrections": [],
-      "ingredientsFixed": [
-        "white balsamic vinegar",
-        "shallots"
-      ],
-      "stepsRewritten": 8
-    },
-    {
-      "slug": "tabbouleh-chicken-bowls",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 10
-    },
-    {
-      "slug": "tater-tot-breakfast-casserole",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 12
-    },
-    {
-      "slug": "firehall-hibachi-mixed-grill-crew",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 8
-    },
-    {
-      "slug": "yakiniku-grill-platter-crew",
-      "spellingCorrections": [],
-      "ingredientsFixed": [
-        "yuzu kosho"
-      ],
-      "stepsRewritten": 8
-    },
-    {
-      "slug": "tonkotsu-ramen-crew",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 10
-    },
-    {
-      "slug": "tourtiere-for-the-crew",
+      "slug": "pork-carnitas-tacos",
       "spellingCorrections": [],
       "ingredientsFixed": [],
       "stepsRewritten": 11
     },
     {
-      "slug": "turkey-lettuce-wrap-night",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 8
-    },
-    {
-      "slug": "turkey-sweet-potato-chili",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 10
-    },
-    {
-      "slug": "turkey-taco-skillet",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 8
-    },
-    {
-      "slug": "turkey-zoodle-bolognese",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 12
-    },
-    {
-      "slug": "warm-spinach-chicken-salad",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 9
-    },
-    {
-      "slug": "white-bean-chicken-chili",
+      "slug": "stuffed-peppers",
       "spellingCorrections": [],
       "ingredientsFixed": [],
       "stepsRewritten": 11
     },
     {
-      "slug": "wonton-noodle-soup-crew",
+      "slug": "sausage-egg-bake",
       "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 10
+      "ingredientsFixed": [
+        "Buttermilk",
+        "All-purpose flour"
+      ],
+      "stepsRewritten": 11
     },
     {
-      "slug": "yogurt-marinated-grill-chicken",
-      "spellingCorrections": [],
-      "ingredientsFixed": [],
-      "stepsRewritten": 8
-    },
-    {
-      "slug": "pollo-asado-citrus-platter",
+      "slug": "sausage-peppers-onions",
       "spellingCorrections": [],
       "ingredientsFixed": [],
       "stepsRewritten": 9
     },
     {
-      "slug": "mixed-lamb-chop-grill-board",
+      "slug": "sheet-pan-fajitas",
       "spellingCorrections": [],
       "ingredientsFixed": [
-        "pickled turnips",
-        "fresh mint",
-        "grilled pita wedges",
-        "Aleppo pepper"
+        "Bell peppers, sliced",
+        "Red onion, sliced"
+      ],
+      "stepsRewritten": 11
+    },
+    {
+      "slug": "sheet-pan-meal-prep",
+      "spellingCorrections": [],
+      "ingredientsFixed": [
+        "Bell peppers, sliced",
+        "Red onion, sliced"
+      ],
+      "stepsRewritten": 11
+    },
+    {
+      "slug": "sheet-pan-sausage-peppers",
+      "spellingCorrections": [],
+      "ingredientsFixed": [
+        "Bell peppers, sliced",
+        "Red onion, sliced"
+      ],
+      "stepsRewritten": 11
+    },
+    {
+      "slug": "shepherds-pie",
+      "spellingCorrections": [],
+      "ingredientsFixed": [
+        "Romaine lettuce, chopped",
+        "Cucumber, sliced",
+        "Cherry tomatoes, halved",
+        "Feta cheese, crumbled"
+      ],
+      "stepsRewritten": 11
+    },
+    {
+      "slug": "chicken-quesadillas",
+      "spellingCorrections": [],
+      "ingredientsFixed": [
+        "Ground beef",
+        "Yellow onion",
+        "Garlic cloves"
+      ],
+      "stepsRewritten": 12
+    },
+    {
+      "slug": "smoked-wings-white-sauce",
+      "spellingCorrections": [],
+      "ingredientsFixed": [
+        "Mayonnaise"
+      ],
+      "stepsRewritten": 11
+    },
+    {
+      "slug": "steak-sandwiches",
+      "spellingCorrections": [],
+      "ingredientsFixed": [
+        "Mayonnaise"
       ],
       "stepsRewritten": 8
     },
     {
-      "slug": "zaatar-roasted-chicken-thighs",
+      "slug": "teriyaki-donburi",
       "spellingCorrections": [],
       "ingredientsFixed": [],
+      "stepsRewritten": 11
+    },
+    {
+      "slug": "teriyaki-salmon-grill",
+      "spellingCorrections": [],
+      "ingredientsFixed": [
+        "Soy sauce",
+        "Fresh ginger, grated"
+      ],
+      "stepsRewritten": 11
+    },
+    {
+      "slug": "texas-beef-ribs",
+      "spellingCorrections": [],
+      "ingredientsFixed": [
+        "Garlic powder",
+        "Apple cider vinegar"
+      ],
+      "stepsRewritten": 11
+    },
+    {
+      "slug": "thai-basil-chicken",
+      "spellingCorrections": [],
+      "ingredientsFixed": [],
+      "stepsRewritten": 11
+    },
+    {
+      "slug": "turkey-meatball-zoodles",
+      "spellingCorrections": [],
+      "ingredientsFixed": [
+        "Fresh zucchini, spiralized",
+        "Fresh basil, torn"
+      ],
       "stepsRewritten": 8
+    },
+    {
+      "slug": "white-garlic-chicken-pizza",
+      "spellingCorrections": [],
+      "ingredientsFixed": [],
+      "stepsRewritten": 11
     }
   ]
 }

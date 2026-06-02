@@ -161,8 +161,9 @@
     "protein": 17,
     "carbs": 16,
     "fat": 44,
-    "label": "per serving (hall portion)",
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
@@ -214,5 +215,7 @@
     "Instant-read thermometer",
     "Aluminum foil"
   ],
-  "mealPrepNotes": "Prep mise en place before the shift — Crispy Honey Chili Sausage runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
+  "mealPrepNotes": "Prep mise en place before the shift — Crispy Honey Chili Sausage runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone.",
+  "mobileImage": "/images/mobile/breakfast/sheet-pan-full-english.jpg",
+  "railImage": "/images/rails/breakfast/sheet-pan-full-english.jpg"
 }

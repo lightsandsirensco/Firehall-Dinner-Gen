@@ -5,13 +5,18 @@
   "description": "Lighter firefighter meals for active crews: protein-forward bowls, grill options, and how to balance comfort with performance on shift.",
   "topic": "nutrition_performance",
   "pillar": "nutrition_performance",
-  "intro": "Healthy at the hall does not mean sad salads while everyone else eats real food. It means protein forward, reasonable portions of starch, and flavor that does not taste like punishment. Crews accept lighter meals when they are filling and seasoned — not when they are obviously 'diet food.'",
+  "intro": "Healthy at the hall does not mean sad salads while everyone else eats real food. It means protein forward, reasonable portions of starch, and flavor that does not taste like punishment. Crews accept lighter meals when they are filling and seasoned — not when they are obviously 'diet food.' Below: what halls actually cook for healthy firefighter meals — formats, timing, and recipe picks that survive a busy board.",
   "sections": [
     {
       "id": "balance",
       "heading": "Balance the week, not every single plate",
       "paragraphs": [
-        "One lighter dinner after a heavy weekend BBQ is smart. Seven days of grilled chicken breast is how halls order pizza at 22:00."
+        "One lighter dinner after a heavy weekend BBQ is smart. Seven days of grilled chicken breast is how halls order pizza at 22:00.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
       ]
     },
     {
@@ -20,6 +25,18 @@
       "paragraphs": [
         "Acid at the end (lemon, vinegar, pickled onion), char from the grill pan, and enough salt on the protein beat bland healthy every time.",
         "Use bold sauces on the side — crews will use more sauce on comfort nights anyway; this just formalizes the habit."
+      ]
+    },
+    {
+      "id": "shift-fuel",
+      "heading": "How this plays across a long shift",
+      "paragraphs": [
+        "Shift nutrition is timing, not willpower. For healthy firefighter meals, anchor protein at dinner, keep snacks that survive the apparatus bay, and drink water like it is part of the job — not a lecture at 03:00.",
+        "This is practical hall guidance, not medical advice. Follow your department's health program and personal providers for individual plans."
+      ],
+      "tips": [
+        "Label leftovers with date — rotation matters more than recipe genius.",
+        "Pair lighter mains with one optional indulgent side when morale needs it."
       ]
     }
   ],
@@ -64,6 +81,10 @@
     {
       "question": "How do I add lighter options without cooking two full meals?",
       "answer": "One base protein, two sauces, and a big salad or roasted veg on the side. Bowls make this easy — the hall builds their own plate."
+    },
+    {
+      "question": "Is this medical advice?",
+      "answer": "No. This is practical shift nutrition for station kitchens. Follow your department's health guidance and consult professionals for personal medical questions."
     }
   ],
   "relatedArticleSlugs": [
@@ -78,5 +99,6 @@
   ],
   "publishedAt": "2026-05-27T12:00:00.000Z",
   "updatedAt": "2026-05-27T12:00:00.000Z",
-  "readMinutes": 6
+  "readMinutes": 7,
+  "heroImageAlt": "Healthy Meals for Active Crews (Without the Lecture) — healthy firefighter meals tips for fire station kitchens and crew-sized meals"
 }

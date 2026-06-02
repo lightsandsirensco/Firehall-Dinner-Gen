@@ -13,10 +13,10 @@
   "cookTime": 35,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 582,
-  "protein": 75,
+  "calories": 610,
+  "protein": 49,
   "carbs": 33,
-  "fats": 15,
+  "fats": 30,
   "tags": [
     "protein:chicken",
     "format:plated_main",
@@ -194,16 +194,17 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 582,
-    "protein": 75,
+    "calories": 610,
+    "protein": 49,
     "carbs": 33,
-    "fats": 15,
-    "label": "per serving (hall portion)",
+    "fats": 30,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": true,
-      "under30gFat": true,
+      "under30gFat": false,
       "highCarb": false,
       "lowCarb": false,
       "mealPrepFriendly": true
@@ -211,7 +212,7 @@
     "badgeCandidates": {
       "highProtein": true,
       "lighterOption": false,
-      "performanceMeal": true
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/golden-100/boneless-chicken-thighs-sweet-potato-spinach.jpg",

@@ -5,20 +5,42 @@
   "description": "How firefighter crews split grocery costs for station dinners: apps, receipts, rotation, and simple rules that keep dinner from becoming politics.",
   "topic": "station_lifestyle",
   "pillar": "station_lifestyle",
-  "intro": "Someone always pays first. The question is whether they get paid back before payday. Crews that split groceries cleanly cook more often; crews that 'figure it out later' order pizza. A simple system beats a perfect one.",
+  "intro": "Someone always pays first. The question is whether they get paid back before payday. Crews that split groceries cleanly cook more often; crews that 'figure it out later' order pizza. A simple system beats a perfect one. Below: what halls actually cook for fire station groceries — formats, timing, and recipe picks that survive a busy board.",
   "sections": [
     {
       "id": "math",
       "heading": "Simple math",
       "paragraphs": [
-        "Total ÷ eaters = share. Round up a dollar for staples (oil, salt, foil) that stay at the hall."
+        "Total ÷ eaters = share. Round up a dollar for staples (oil, salt, foil) that stay at the hall.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
       ]
     },
     {
       "id": "tools",
       "heading": "Tools that prevent drama",
       "paragraphs": [
-        "A shared payment app, one hall card, or a weekly cash float — pick one and stick with it. Mixed personal tabs are where grocery splits die."
+        "A shared payment app, one hall card, or a weekly cash float — pick one and stick with it. Mixed personal tabs are where grocery splits die.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
+      ]
+    },
+    {
+      "id": "hall-tonight",
+      "heading": "What this looks like on the hall tonight",
+      "paragraphs": [
+        "Kitchen culture shows up in small moves: who shops, who cleans, whether rookies get coached or roasted. For fire station groceries, fairness beats perfection — rotate the jobs that nobody wants twice in a row.",
+        "Meals are morale. A crew that trusts the kitchen cooks more often and complains less about grocery splits. Keep the tone direct and the help real."
+      ],
+      "tips": [
+        "Praise the cook in the bay — fix critiques one-on-one after cleanup.",
+        "Write grocery splits on the receipt photo the same night you shop."
       ]
     }
   ],
@@ -66,5 +88,6 @@
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
   "updatedAt": "2026-05-27T18:00:00.000Z",
-  "readMinutes": 7
+  "readMinutes": 7,
+  "heroImageAlt": "How Crews Split Groceries — fire station groceries tips for fire station kitchens and crew-sized meals"
 }

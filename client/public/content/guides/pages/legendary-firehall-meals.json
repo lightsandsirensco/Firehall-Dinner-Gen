@@ -5,27 +5,50 @@
   "description": "Legendary firehall meals crews remember: chili, BBQ pulls, parm nights, and the recipes that become tradition — not one-off experiments.",
   "topic": "station_lifestyle",
   "pillar": "station_lifestyle",
-  "intro": "Every hall has a short list of meals that became lore — the chili after the big job, the rookie's first burnt burgers, the BBQ that fed two companies. Legendary firehall meals are rarely complicated. They are reliable, generous, and tied to a story.",
+  "intro": "Every hall has a short list of meals that became lore — the chili after the big job, the rookie's first burnt burgers, the BBQ that fed two companies. Legendary firehall meals are rarely complicated. They are reliable, generous, and tied to a story. Below: what halls actually cook for legendary firehall meals — formats, timing, and recipe picks that survive a busy board.",
   "sections": [
     {
       "id": "patterns",
       "heading": "What legends have in common",
       "paragraphs": [
-        "Big batches, strong flavor, enough for seconds, and someone who owned the cook without drama."
+        "Big batches, strong flavor, enough for seconds, and someone who owned the cook without drama.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
       ]
     },
     {
       "id": "stories",
       "heading": "Why stories stick",
       "paragraphs": [
-        "Legendary meals are tied to nights — the storm, the transfer, the rookie who nailed it. Write the recipe down so the food survives the story."
+        "Legendary meals are tied to nights — the storm, the transfer, the rookie who nailed it. Write the recipe down so the food survives the story.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
+      ]
+    },
+    {
+      "id": "hall-tonight",
+      "heading": "What this looks like on the hall tonight",
+      "paragraphs": [
+        "Kitchen culture shows up in small moves: who shops, who cleans, whether rookies get coached or roasted. For legendary firehall meals, fairness beats perfection — rotate the jobs that nobody wants twice in a row.",
+        "Meals are morale. A crew that trusts the kitchen cooks more often and complains less about grocery splits. Keep the tone direct and the help real."
+      ],
+      "tips": [
+        "Praise the cook in the bay — fix critiques one-on-one after cleanup.",
+        "Write grocery splits on the receipt photo the same night you shop."
       ]
     }
   ],
   "practicalAdvice": [
     "Repeat winners beat novelty — tradition is comfort.",
     "Document the recipe when a meal hits — 'Dave's chili' should be cookable after Dave transfers.",
-    "Feed enough for seconds — legendary nights rarely end with empty pans."
+    "Feed enough for seconds — legendary nights rarely end with empty pans.",
+    "Post who's cooking and what's holding warm on the whiteboard — post-call eaters should not hunt for answers."
   ],
   "mealRecommendations": [
     {
@@ -70,5 +93,6 @@
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
   "updatedAt": "2026-05-27T18:00:00.000Z",
-  "readMinutes": 7
+  "readMinutes": 7,
+  "heroImageAlt": "Legendary Firehall Meals — legendary firehall meals tips for fire station kitchens and crew-sized meals"
 }

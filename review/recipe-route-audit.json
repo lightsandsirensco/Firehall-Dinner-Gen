@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-06-01T01:33:27.646Z",
+  "generatedAt": "2026-06-01T02:29:12.154Z",
   "totals": {
-    "recipes": 228,
-    "pass": 225
+    "recipes": 315,
+    "pass": 312
   },
   "rows": [
     {
@@ -42,6 +42,12 @@
       "issues": []
     },
     {
+      "slug": "mac-and-cheese-bake",
+      "route": "/recipes/mac-and-cheese-bake",
+      "pass": true,
+      "issues": []
+    },
+    {
       "slug": "mostaccioli-sausage-bake",
       "route": "/recipes/mostaccioli-sausage-bake",
       "pass": true,
@@ -54,8 +60,38 @@
       "issues": []
     },
     {
+      "slug": "baked-ziti",
+      "route": "/recipes/baked-ziti",
+      "pass": true,
+      "issues": []
+    },
+    {
       "slug": "bbq-breakfast-hash",
       "route": "/breakfast/bbq-breakfast-hash",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "bbq-brisket-burnt-ends",
+      "route": "/recipes/bbq-brisket-burnt-ends",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "bbq-chicken-bowls",
+      "route": "/recipes/bbq-chicken-bowls",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "bbq-chicken-pizza",
+      "route": "/recipes/bbq-chicken-pizza",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "bbq-chicken-sliders",
+      "route": "/recipes/bbq-chicken-sliders",
       "pass": true,
       "issues": []
     },
@@ -66,8 +102,26 @@
       "issues": []
     },
     {
+      "slug": "beef-barley-soup",
+      "route": "/recipes/beef-barley-soup",
+      "pass": true,
+      "issues": []
+    },
+    {
       "slug": "enchilada-beef-skillet",
       "route": "/recipes/enchilada-beef-skillet",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "beef-stroganoff",
+      "route": "/recipes/beef-stroganoff",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "beer-can-chicken",
+      "route": "/recipes/beer-can-chicken",
       "pass": true,
       "issues": []
     },
@@ -90,6 +144,12 @@
       "issues": []
     },
     {
+      "slug": "turkey-burgers",
+      "route": "/recipes/turkey-burgers",
+      "pass": true,
+      "issues": []
+    },
+    {
       "slug": "cajun-grilled-cod-crew",
       "route": "/recipes/cajun-grilled-cod-crew",
       "pass": false,
@@ -100,6 +160,12 @@
     {
       "slug": "blackened-cod-taco-night",
       "route": "/recipes/blackened-cod-taco-night",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "beef-dip",
+      "route": "/recipes/beef-dip",
       "pass": true,
       "issues": []
     },
@@ -164,6 +230,12 @@
       "issues": []
     },
     {
+      "slug": "breakfast-sausage-pizza",
+      "route": "/recipes/breakfast-sausage-pizza",
+      "pass": true,
+      "issues": []
+    },
+    {
       "slug": "breakfast-sliders",
       "route": "/breakfast/breakfast-sliders",
       "pass": true,
@@ -178,6 +250,12 @@
     {
       "slug": "brisket-style-beef-sandwiches-au-jus",
       "route": "/recipes/brisket-style-beef-sandwiches-au-jus",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "buffalo-chicken-dip",
+      "route": "/recipes/buffalo-chicken-dip",
       "pass": true,
       "issues": []
     },
@@ -200,6 +278,12 @@
       "issues": []
     },
     {
+      "slug": "butter-chicken",
+      "route": "/recipes/butter-chicken",
+      "pass": true,
+      "issues": []
+    },
+    {
       "slug": "buttermilk-pancakes",
       "route": "/breakfast/buttermilk-pancakes",
       "pass": true,
@@ -214,6 +298,12 @@
     {
       "slug": "cajun-chicken-rice-bowl",
       "route": "/recipes/cajun-chicken-rice-bowl",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "jambalaya",
+      "route": "/recipes/jambalaya",
       "pass": true,
       "issues": []
     },
@@ -250,6 +340,18 @@
       "issues": []
     },
     {
+      "slug": "cedar-plank-salmon",
+      "route": "/recipes/cedar-plank-salmon",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "grilled-pork-chops",
+      "route": "/recipes/grilled-pork-chops",
+      "pass": true,
+      "issues": []
+    },
+    {
       "slug": "cheesy-beef-nacho-bake",
       "route": "/recipes/cheesy-beef-nacho-bake",
       "pass": true,
@@ -258,6 +360,18 @@
     {
       "slug": "cheesy-chicken-broccoli-rice",
       "route": "/recipes/cheesy-chicken-broccoli-rice",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "chicken-alfredo-bake",
+      "route": "/recipes/chicken-alfredo-bake",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "chicken-dumpling-soup",
+      "route": "/recipes/chicken-dumpling-soup",
       "pass": true,
       "issues": []
     },
@@ -274,8 +388,38 @@
       "issues": []
     },
     {
+      "slug": "enchilada-casserole",
+      "route": "/recipes/enchilada-casserole",
+      "pass": true,
+      "issues": []
+    },
+    {
       "slug": "chicken-paprikash-hall",
       "route": "/recipes/chicken-paprikash-hall",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "chicken-parm",
+      "route": "/recipes/chicken-parm",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "parm-hero-subs",
+      "route": "/recipes/parm-hero-subs",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "chicken-pot-pie",
+      "route": "/recipes/chicken-pot-pie",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "chicken-tikka-masala",
+      "route": "/recipes/chicken-tikka-masala",
       "pass": true,
       "issues": []
     },
@@ -288,6 +432,18 @@
     {
       "slug": "chilaquiles-verde-bake",
       "route": "/breakfast/chilaquiles-verde-bake",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "chili-mac",
+      "route": "/recipes/chili-mac",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "steak-tacos",
+      "route": "/recipes/steak-tacos",
       "pass": true,
       "issues": []
     },
@@ -312,6 +468,18 @@
     {
       "slug": "citrus-ginger",
       "route": "/recipes/citrus-ginger",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "meatloaf-mashed",
+      "route": "/recipes/meatloaf-mashed",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "pepperoni-pizza-night",
+      "route": "/recipes/pepperoni-pizza-night",
       "pass": true,
       "issues": []
     },
@@ -376,8 +544,20 @@
       "issues": []
     },
     {
+      "slug": "creamy-tuscan-chicken",
+      "route": "/recipes/creamy-tuscan-chicken",
+      "pass": true,
+      "issues": []
+    },
+    {
       "slug": "crew-french-toast-bake",
       "route": "/breakfast/crew-french-toast-bake",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "crispy-chicken-cutlets",
+      "route": "/recipes/crispy-chicken-cutlets",
       "pass": true,
       "issues": []
     },
@@ -396,6 +576,18 @@
     {
       "slug": "denver-breakfast-casserole",
       "route": "/breakfast/denver-breakfast-casserole",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "detroit-style-pizza",
+      "route": "/recipes/detroit-style-pizza",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "smash-burgers",
+      "route": "/recipes/smash-burgers",
       "pass": true,
       "issues": []
     },
@@ -430,6 +622,12 @@
       "issues": []
     },
     {
+      "slug": "fast-philly-skillet",
+      "route": "/recipes/fast-philly-skillet",
+      "pass": true,
+      "issues": []
+    },
+    {
       "slug": "fire-captain-omelette-bar",
       "route": "/breakfast/fire-captain-omelette-bar",
       "pass": true,
@@ -460,8 +658,38 @@
       "issues": []
     },
     {
+      "slug": "meatball-hoagies",
+      "route": "/recipes/meatball-hoagies",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "pad-thai",
+      "route": "/recipes/pad-thai",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "margherita-pizza",
+      "route": "/recipes/margherita-pizza",
+      "pass": true,
+      "issues": []
+    },
+    {
       "slug": "game-day-pizza-sliders",
       "route": "/recipes/game-day-pizza-sliders",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "five-ingredient-pasta",
+      "route": "/recipes/five-ingredient-pasta",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "garlic-butter-shrimp",
+      "route": "/recipes/garlic-butter-shrimp",
       "pass": true,
       "issues": []
     },
@@ -474,14 +702,32 @@
       ]
     },
     {
+      "slug": "batch-lasagna",
+      "route": "/recipes/batch-lasagna",
+      "pass": true,
+      "issues": []
+    },
+    {
       "slug": "griddle-smash-sausage-peppers",
       "route": "/recipes/griddle-smash-sausage-peppers",
       "pass": true,
       "issues": []
     },
     {
+      "slug": "ginger-salmon-bowls",
+      "route": "/recipes/ginger-salmon-bowls",
+      "pass": true,
+      "issues": []
+    },
+    {
       "slug": "ginger-soy-chicken-rice-bowls",
       "route": "/recipes/ginger-soy-chicken-rice-bowls",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "greek-chicken-bowls",
+      "route": "/recipes/greek-chicken-bowls",
       "pass": true,
       "issues": []
     },
@@ -504,6 +750,24 @@
       "issues": []
     },
     {
+      "slug": "chicken-souvlaki",
+      "route": "/recipes/chicken-souvlaki",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "flank-chimichurri",
+      "route": "/recipes/flank-chimichurri",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "ny-strip-herb-butter",
+      "route": "/recipes/ny-strip-herb-butter",
+      "pass": true,
+      "issues": []
+    },
+    {
       "slug": "grilled-reuben-sandwiches-crew",
       "route": "/recipes/grilled-reuben-sandwiches-crew",
       "pass": true,
@@ -512,6 +776,12 @@
     {
       "slug": "grilled-shrimp-quinoa-bowls",
       "route": "/recipes/grilled-shrimp-quinoa-bowls",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "grilled-corn-cotija",
+      "route": "/recipes/grilled-corn-cotija",
       "pass": true,
       "issues": []
     },
@@ -534,6 +804,12 @@
       "issues": []
     },
     {
+      "slug": "chicken-caesar",
+      "route": "/recipes/chicken-caesar",
+      "pass": true,
+      "issues": []
+    },
+    {
       "slug": "hall-chicken-noodle-soup",
       "route": "/recipes/hall-chicken-noodle-soup",
       "pass": true,
@@ -546,14 +822,38 @@
       "issues": []
     },
     {
+      "slug": "slider-bar",
+      "route": "/recipes/slider-bar",
+      "pass": true,
+      "issues": []
+    },
+    {
       "slug": "hall-sloppy-joe-feed",
       "route": "/recipes/hall-sloppy-joe-feed",
       "pass": true,
       "issues": []
     },
     {
+      "slug": "hall-taco-bar",
+      "route": "/recipes/hall-taco-bar",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "big-chili",
+      "route": "/recipes/big-chili",
+      "pass": true,
+      "issues": []
+    },
+    {
       "slug": "caprese-steak-skewers-crew",
       "route": "/recipes/caprese-steak-skewers-crew",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "herb-roasted-thighs",
+      "route": "/recipes/herb-roasted-thighs",
       "pass": true,
       "issues": []
     },
@@ -576,6 +876,12 @@
       "issues": []
     },
     {
+      "slug": "turkey-chili",
+      "route": "/recipes/turkey-chili",
+      "pass": true,
+      "issues": []
+    },
+    {
       "slug": "honey-chipotle-chicken-thighs",
       "route": "/recipes/honey-chipotle-chicken-thighs",
       "pass": true,
@@ -584,6 +890,12 @@
     {
       "slug": "honey-garlic-chicken-rice-bowls",
       "route": "/recipes/honey-garlic-chicken-rice-bowls",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "honey-garlic-pork-tenderloin",
+      "route": "/recipes/honey-garlic-pork-tenderloin",
       "pass": true,
       "issues": []
     },
@@ -602,6 +914,12 @@
     {
       "slug": "hot-honey-grilled-sausage-peppers",
       "route": "/recipes/hot-honey-grilled-sausage-peppers",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "honey-soppressata-pizza",
+      "route": "/recipes/honey-soppressata-pizza",
       "pass": true,
       "issues": []
     },
@@ -654,6 +972,12 @@
       "issues": []
     },
     {
+      "slug": "jerk-chicken",
+      "route": "/recipes/jerk-chicken",
+      "pass": true,
+      "issues": []
+    },
+    {
       "slug": "johnnycakes-with-syrup",
       "route": "/breakfast/johnnycakes-with-syrup",
       "pass": true,
@@ -680,6 +1004,12 @@
     {
       "slug": "korean-bulgogi-grill-night",
       "route": "/recipes/korean-bulgogi-grill-night",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "bulgogi-bowls",
+      "route": "/recipes/bulgogi-bowls",
       "pass": true,
       "issues": []
     },
@@ -714,6 +1044,12 @@
       "issues": []
     },
     {
+      "slug": "lemon-herb-salmon",
+      "route": "/recipes/lemon-herb-salmon",
+      "pass": true,
+      "issues": []
+    },
+    {
       "slug": "lemon-salmon-orzo-skillet",
       "route": "/recipes/lemon-salmon-orzo-skillet",
       "pass": true,
@@ -738,8 +1074,32 @@
       "issues": []
     },
     {
+      "slug": "loaded-baked-potato-bar",
+      "route": "/recipes/loaded-baked-potato-bar",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "game-day-nachos",
+      "route": "/recipes/game-day-nachos",
+      "pass": true,
+      "issues": []
+    },
+    {
       "slug": "loaded-nacho-bar-night",
       "route": "/recipes/loaded-nacho-bar-night",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "loaded-nacho-skillet",
+      "route": "/recipes/loaded-nacho-skillet",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "loaded-potato-feed",
+      "route": "/recipes/loaded-potato-feed",
       "pass": true,
       "issues": []
     },
@@ -786,6 +1146,12 @@
       "issues": []
     },
     {
+      "slug": "meat-lovers-sheet-pizza",
+      "route": "/recipes/meat-lovers-sheet-pizza",
+      "pass": true,
+      "issues": []
+    },
+    {
       "slug": "mediterranean-baked-fish-tray",
       "route": "/recipes/mediterranean-baked-fish-tray",
       "pass": true,
@@ -798,14 +1164,32 @@
       "issues": []
     },
     {
+      "slug": "mediterranean-chickpea",
+      "route": "/recipes/mediterranean-chickpea",
+      "pass": true,
+      "issues": []
+    },
+    {
       "slug": "mediterranean-feast-night",
       "route": "/recipes/mediterranean-feast-night",
       "pass": true,
       "issues": []
     },
     {
+      "slug": "memphis-dry-rub-ribs",
+      "route": "/recipes/memphis-dry-rub-ribs",
+      "pass": true,
+      "issues": []
+    },
+    {
       "slug": "mesquite-chuck-roast",
       "route": "/recipes/mesquite-chuck-roast",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "street-corn-chicken",
+      "route": "/recipes/street-corn-chicken",
       "pass": true,
       "issues": []
     },
@@ -864,6 +1248,12 @@
       "issues": []
     },
     {
+      "slug": "moroccan-meatballs",
+      "route": "/recipes/moroccan-meatballs",
+      "pass": true,
+      "issues": []
+    },
+    {
       "slug": "firehall-antipasto-pasta-salad",
       "route": "/recipes/firehall-antipasto-pasta-salad",
       "pass": true,
@@ -878,6 +1268,18 @@
     {
       "slug": "lamb-merguez-skewers-crew",
       "route": "/recipes/lamb-merguez-skewers-crew",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "one-pot-chicken-rice",
+      "route": "/recipes/one-pot-chicken-rice",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "skillet-chicken-alfredo",
+      "route": "/recipes/skillet-chicken-alfredo",
       "pass": true,
       "issues": []
     },
@@ -936,6 +1338,12 @@
       "issues": []
     },
     {
+      "slug": "performance-burrito-bowls",
+      "route": "/recipes/performance-burrito-bowls",
+      "pass": true,
+      "issues": []
+    },
+    {
       "slug": "peri-peri-chicken-platter",
       "route": "/recipes/peri-peri-chicken-platter",
       "pass": true,
@@ -944,6 +1352,18 @@
     {
       "slug": "pesto-tomato-chicken-tray",
       "route": "/recipes/pesto-tomato-chicken-tray",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "philly-egg-rolls",
+      "route": "/recipes/philly-egg-rolls",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "philly-cheesesteak-skillet",
+      "route": "/recipes/philly-cheesesteak-skillet",
       "pass": true,
       "issues": []
     },
@@ -984,8 +1404,26 @@
       "issues": []
     },
     {
+      "slug": "beef-broccoli",
+      "route": "/recipes/beef-broccoli",
+      "pass": true,
+      "issues": []
+    },
+    {
       "slug": "quick-egg-tacos",
       "route": "/breakfast/quick-egg-tacos",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "pork-carnitas-tacos",
+      "route": "/recipes/pork-carnitas-tacos",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "stuffed-peppers",
+      "route": "/recipes/stuffed-peppers",
       "pass": true,
       "issues": []
     },
@@ -1032,6 +1470,18 @@
       "issues": []
     },
     {
+      "slug": "sausage-egg-bake",
+      "route": "/recipes/sausage-egg-bake",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "sausage-peppers-onions",
+      "route": "/recipes/sausage-peppers-onions",
+      "pass": true,
+      "issues": []
+    },
+    {
       "slug": "mongolian-beef-flat-top-crew",
       "route": "/recipes/mongolian-beef-flat-top-crew",
       "pass": true,
@@ -1074,8 +1524,20 @@
       "issues": []
     },
     {
+      "slug": "sheet-pan-fajitas",
+      "route": "/recipes/sheet-pan-fajitas",
+      "pass": true,
+      "issues": []
+    },
+    {
       "slug": "sheet-pan-chicken-fajitas-lite",
       "route": "/recipes/sheet-pan-chicken-fajitas-lite",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "sheet-pan-meal-prep",
+      "route": "/recipes/sheet-pan-meal-prep",
       "pass": true,
       "issues": []
     },
@@ -1088,6 +1550,24 @@
     {
       "slug": "sheet-pan-meatball-marinara",
       "route": "/recipes/sheet-pan-meatball-marinara",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "sheet-pan-sausage-peppers",
+      "route": "/recipes/sheet-pan-sausage-peppers",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "shepherds-pie",
+      "route": "/recipes/shepherds-pie",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "chicken-quesadillas",
+      "route": "/recipes/chicken-quesadillas",
       "pass": true,
       "issues": []
     },
@@ -1182,6 +1662,12 @@
       "issues": []
     },
     {
+      "slug": "smoked-wings-white-sauce",
+      "route": "/recipes/smoked-wings-white-sauce",
+      "pass": true,
+      "issues": []
+    },
+    {
       "slug": "smoky-lentil-kale-soup",
       "route": "/recipes/smoky-lentil-kale-soup",
       "pass": true,
@@ -1214,6 +1700,12 @@
     {
       "slug": "station-cobb-salad",
       "route": "/recipes/station-cobb-salad",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "steak-sandwiches",
+      "route": "/recipes/steak-sandwiches",
       "pass": true,
       "issues": []
     },
@@ -1254,6 +1746,18 @@
       "issues": []
     },
     {
+      "slug": "teriyaki-donburi",
+      "route": "/recipes/teriyaki-donburi",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "teriyaki-salmon-grill",
+      "route": "/recipes/teriyaki-salmon-grill",
+      "pass": true,
+      "issues": []
+    },
+    {
       "slug": "texas-central-brisket-crew",
       "route": "/recipes/texas-central-brisket-crew",
       "pass": true,
@@ -1262,6 +1766,12 @@
     {
       "slug": "texas-beef-ribs",
       "route": "/recipes/texas-beef-ribs",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "thai-basil-chicken",
+      "route": "/recipes/thai-basil-chicken",
       "pass": true,
       "issues": []
     },
@@ -1292,6 +1802,12 @@
     {
       "slug": "turkey-lettuce-wrap-night",
       "route": "/recipes/turkey-lettuce-wrap-night",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "turkey-meatball-zoodles",
+      "route": "/recipes/turkey-meatball-zoodles",
       "pass": true,
       "issues": []
     },
@@ -1346,6 +1862,12 @@
     {
       "slug": "white-bean-chicken-chili",
       "route": "/recipes/white-bean-chicken-chili",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "slug": "white-garlic-chicken-pizza",
+      "route": "/recipes/white-garlic-chicken-pizza",
       "pass": true,
       "issues": []
     },

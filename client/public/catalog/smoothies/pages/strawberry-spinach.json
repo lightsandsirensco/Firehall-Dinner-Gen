@@ -76,13 +76,13 @@
     }
   ],
   "nutrition": {
-    "calories": 86,
-    "protein": 5,
-    "carbs": 10,
-    "fats": 3,
-    "highlights": "~250 cal · ~16 g protein · fiber from fruit and optional chia · greens without salad fatigue",
-    "label": "per serving (hall portion)",
-    "source": "calculated",
+    "calories": 0,
+    "protein": 0,
+    "carbs": 0,
+    "fats": 0,
+    "highlights": "Nutrition estimate coming soon",
+    "label": "Estimated per serving",
+    "source": "unavailable",
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
@@ -95,7 +95,8 @@
       "highProtein": false,
       "lighterOption": true,
       "performanceMeal": true
-    }
+    },
+    "estimateAvailable": false
   },
   "substitutions": [
     "Frozen mixed berries replace strawberries.",

@@ -174,8 +174,76 @@ Wide firehall serving platter:
 NO steak-only image without peppers and onions.
 NO generic stir-fry that hides the steak slices.`;
 
+export const STEAK_SANDWICHES_IMAGE_PROMPT = `Steak Sandwiches — Hall Line Classic
+
+Wide firehall spread on stainless prep counter — crew dinner for eight.
+
+Visible in the SAME frame:
+- closed steak sandwiches on toasted kaiser buns or hoagie rolls (NOT open-faced toast slices)
+- sliced steak with melted cheese and sautéed onions visible at cross-section or stacked line
+- garlic fries OR roasted vegetables OR Caesar salad in a separate bowl/tray beside the sandwiches
+
+NO steak on toast when titled sandwich.
+NO sandwich-only crop without a visible side.
+NO tiny single-portion restaurant plating.
+
+Professional firehall food photography. Warm lighting. Natural shadows. 50mm lens.`;
+
+export const JERK_CHICKEN_RICE_PEAS_IMAGE_PROMPT = `Jerk Chicken & Peas and Rice
+
+Wide firehall spread on stainless prep counter — crew dinner for eight, not tight protein macro.
+
+Visible in the SAME frame:
+- charred jerk chicken thighs with visible grill marks (whole thighs or large pieces)
+- coconut rice and peas in a wide hotel pan or serving dish — red kidney beans and rice clearly readable
+- grilled pineapple wedges and sharp cabbage slaw in separate side bowls
+
+NO chicken-only platter without rice and peas.
+NO plain white rice without peas/beans.
+NO bowl-only rice presentation hiding the chicken.
+
+Professional firehall food photography. Warm lighting. Visible steam. Natural shadows.
+50mm lens. Shallow depth of field.`;
+
+export const BEEF_DIP_SANDWICHES_IMAGE_PROMPT = `Beef Dip Sandwiches
+
+Wide firehall line spread — appetizing crew dinner, not a single lonely sandwich.
+
+Visible:
+- French dip / beef dip sandwiches on toasted hoagie rolls with thin-sliced roast beef and melted provolone
+- small cups or cambro of glossy au jus for dipping
+- crispy golden fries on a sheet tray beside the sandwiches
+- tangy coleslaw in a side bowl
+
+NO sandwich-only image without fries and jus.
+NO tiny portions or influencer styling.
+NO open-faced toast without a proper sub roll.
+
+Professional firehall food photography. Warm lighting. Visible steam.
+Crew-sized portions. Commercial kitchen background.`;
+
+export const BBQ_CHICKEN_MAC_AND_CHEESE_IMAGE_PROMPT = `BBQ Chicken Mac and Cheese
+
+Large hotel pan or sheet tray of baked mac and cheese on a firehall prep line.
+
+Visible:
+- creamy elbow mac and cheese with golden baked cheese crust
+- shredded BBQ chicken mixed through the mac with visible BBQ sauce glaze
+- cheese pull or stretchy melted cheddar and mozzarella from a serving spoon lift
+- steam rising from the hot tray
+
+NO pulled pork. NO plain mac without chicken. NO whole chicken breast on the side.
+NO rice bowl. NO tiny portions.
+
+Indulgent comfort food. Professional firehall food photography. Warm lighting. Shallow depth of field.
+Prepared for eight firefighters.`;
+
 export const TITLE_LOCKED_IMAGE_PROMPTS: Record<string, string> = {
   "crock-barbacoa-chicken": CROCK_BARBACOA_CHICKEN_IMAGE_PROMPT,
+  "steak-sandwiches": STEAK_SANDWICHES_IMAGE_PROMPT,
+  "jerk-chicken": JERK_CHICKEN_RICE_PEAS_IMAGE_PROMPT,
+  "beef-dip": BEEF_DIP_SANDWICHES_IMAGE_PROMPT,
+  "bbq-chicken-mac-and-cheese": BBQ_CHICKEN_MAC_AND_CHEESE_IMAGE_PROMPT,
   "chicken-caesar": CHICKEN_CAESAR_IMAGE_PROMPT,
   "boneless-chicken-thighs-sweet-potato-spinach": BONELESS_CHICKEN_THIGHS_SWEET_POTATO_SPINACH_IMAGE_PROMPT,
   "breakfast-enchiladas": BREAKFAST_ENCHILADAS_IMAGE_PROMPT,

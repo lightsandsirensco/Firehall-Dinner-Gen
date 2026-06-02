@@ -19,7 +19,24 @@
       "id": "hall-move",
       "heading": "The hall move on a chaotic shift",
       "paragraphs": [
-        "Cook to 'done enough,' hold hot, and finish crisp elements last (toast, fresh herbs, a quick sear) when the first wave sits down."
+        "Cook to 'done enough,' hold hot, and finish crisp elements last (toast, fresh herbs, a quick sear) when the first wave sits down.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
+      ]
+    },
+    {
+      "id": "shift-pick",
+      "heading": "Pick the format before the recipe",
+      "paragraphs": [
+        "For best firehall meals, decide line vs. plated vs. batch before you open a recipe tab. Lines win when eaters show up between 17:00 and 20:00; batches win when you know the whole crew lands at once.",
+        "Post protein, starch, and hold plan on the whiteboard. When tones drop, the next cook should read \"covered on low\" instead of guessing what you meant on the flat-top."
+      ],
+      "tips": [
+        "Assign one cook and one runner — everyone else stays out until called.",
+        "Sauces on the side keep reheat from turning gluey for post-call eaters."
       ]
     }
   ],
@@ -83,5 +100,6 @@
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
   "updatedAt": "2026-05-27T18:00:00.000Z",
-  "readMinutes": 7
+  "readMinutes": 7,
+  "heroImageAlt": "Best Firehall Meals for Busy Nights — best firehall meals tips for fire station kitchens and crew-sized meals"
 }

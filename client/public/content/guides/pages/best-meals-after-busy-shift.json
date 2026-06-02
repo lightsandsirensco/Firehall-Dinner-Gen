@@ -5,27 +5,50 @@
   "description": "Best meals after a busy shift: comfort trays, chili, pasta bakes, and proteins that hold while people decompress.",
   "topic": "meal_planning",
   "pillar": "recipes_meals",
-  "intro": "After a busy shift, dinner is not nutrition — it is reset. The best meals after a hard job are familiar, hot, and plentiful. This is not the night for experimental flavors or small portions.",
+  "intro": "After a busy shift, dinner is not nutrition — it is reset. The best meals after a hard job are familiar, hot, and plentiful. This is not the night for experimental flavors or small portions. Below: what halls actually cook for meals after busy shift — formats, timing, and recipe picks that survive a busy board.",
   "sections": [
     {
       "id": "food",
       "heading": "Food that matches the mood",
       "paragraphs": [
-        "Mac, parm, chili, pulled pork, potato bars. Soft + salty + optional heat wins over 'light and elegant.'"
+        "Mac, parm, chili, pulled pork, potato bars. Soft + salty + optional heat wins over 'light and elegant.'",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
       ]
     },
     {
       "id": "timing",
       "heading": "Timing dinner after a hard job",
       "paragraphs": [
-        "Start comfort food early if the board hints busy. Let people eat in shifts without commentary — the meal is for recovery, not performance reviews."
+        "Start comfort food early if the board hints busy. Let people eat in shifts without commentary — the meal is for recovery, not performance reviews.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
+      ]
+    },
+    {
+      "id": "shift-pick",
+      "heading": "Pick the format before the recipe",
+      "paragraphs": [
+        "For meals after busy shift, decide line vs. plated vs. batch before you open a recipe tab. Lines win when eaters show up between 17:00 and 20:00; batches win when you know the whole crew lands at once.",
+        "Post protein, starch, and hold plan on the whiteboard. When tones drop, the next cook should read \"covered on low\" instead of guessing what you meant on the flat-top."
+      ],
+      "tips": [
+        "Assign one cook and one runner — everyone else stays out until called.",
+        "Sauces on the side keep reheat from turning gluey for post-call eaters."
       ]
     }
   ],
   "practicalAdvice": [
     "Start comfort food early if the board hints busy — do not wait until 21:00.",
     "Let people eat in shifts without commentary about 'late eaters.'",
-    "Keep cleanup assigned — exhaustion plus dishes causes fights."
+    "Keep cleanup assigned — exhaustion plus dishes causes fights.",
+    "Post who's cooking and what's holding warm on the whiteboard — post-call eaters should not hunt for answers."
   ],
   "mealRecommendations": [
     {
@@ -75,5 +98,6 @@
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
   "updatedAt": "2026-05-27T18:00:00.000Z",
-  "readMinutes": 7
+  "readMinutes": 7,
+  "heroImageAlt": "Best Meals After a Busy Shift — meals after busy shift tips for fire station kitchens and crew-sized meals"
 }

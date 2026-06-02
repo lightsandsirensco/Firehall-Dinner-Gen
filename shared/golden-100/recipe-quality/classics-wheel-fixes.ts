@@ -486,6 +486,27 @@ function fixBeefDip(page: GoldenRecipePage, wheelTitle: string): GoldenRecipePag
   });
 }
 
+function fixBbqChickenMacAndCheese(page: GoldenRecipePage, wheelTitle: string): GoldenRecipePage {
+  const spread = buildStructuredTonightSpread(
+    "BBQ chicken mac and cheese from the hotel pan",
+    ["extra warmed BBQ sauce", "crispy fried onions", "sliced green onions"],
+    ["splash of milk at the line if the mac tightened on hold"],
+  );
+  const patch: Partial<GoldenRecipePage> = {
+    tonightSpread: page.tonightSpread.some((l) => l.startsWith("Main:")) ? page.tonightSpread : spread,
+    leftovers:
+      page.leftovers.length >= 3
+        ? page.leftovers
+        : standardLeftovers("BBQ chicken mac", [
+            "Reheat covered at 325°F until 165°F at center; loosen with milk and a spoon of BBQ sauce.",
+          ]),
+  };
+  if (!hasCallInterruption(page.steps)) {
+    patch.steps = renumber([...page.steps, CALL_INTERRUPTION_STEP(page.steps.length + 1, "BBQ chicken mac")]);
+  }
+  return merge(page, wheelTitle, patch);
+}
+
 function fixBbqChickenBowls(page: GoldenRecipePage, wheelTitle: string): GoldenRecipePage {
   const steps = renumber([
     step(
@@ -676,6 +697,7 @@ const FIXERS: Record<string, (page: GoldenRecipePage, wheelTitle: string) => Gol
   "jerk-chicken": fixJerkChicken,
   "beef-dip": fixBeefDip,
   "bbq-chicken-bowls": fixBbqChickenBowls,
+  "bbq-chicken-mac-and-cheese": fixBbqChickenMacAndCheese,
   "steak-sandwiches": fixSteakSandwiches,
 };
 
@@ -695,6 +717,16 @@ export const CLASSICS_WHEEL_IMAGE_FIX_SLUGS = [
   "steak-tacos",
   "smash-burgers",
   "chili-garlic-bread",
+  "jerk-chicken",
+  "beef-dip",
+  "bbq-chicken-mac-and-cheese",
+] as const;
+
+/** Wheel heroes prioritized for appetite / accuracy upgrade regeneration. */
+export const CLASSICS_WHEEL_HERO_REGEN_SLUGS = [
+  "jerk-chicken",
+  "beef-dip",
+  "smash-burgers",
 ] as const;
 
 export function classicHallGoldenHeroPath(slug: string): string {

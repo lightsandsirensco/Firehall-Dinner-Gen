@@ -62,6 +62,7 @@ import {
   getTopRatedRecipes,
 } from "./recipe-crew-ratings/store.js";
 import { buildApprovedCatalog } from "./approved-catalog.js";
+import { toApprovedCatalogGridResponse } from "../shared/approved-catalog.js";
 import { sanitizeRecipeHeroSurface } from "./sanitize-verified-recipe-hero.js";
 import { castCrewRatingVoteSchema } from "../shared/recipe-crew-ratings/schema.js";
 import { EMPTY_RECIPE_CREW_RATING_COLLECTIONS } from "../shared/recipe-crew-ratings/types.js";
@@ -2420,10 +2421,28 @@ export async function registerRoutes(
     return res.json(merged);
   });
 
-  app.get("/api/catalog/approved", async (_req: Request, res: Response) => {
+  app.get("/api/catalog/approved/count", async (_req: Request, res: Response) => {
     try {
       const catalog = buildApprovedCatalog();
       res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
+      return res.json({ version: 1 as const, recipeCount: catalog.recipeCount });
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : "Approved catalog count failed";
+      log(`[catalog] Approved count error: ${msg}`, "catalog");
+      return res.status(500).json({ message: "Approved catalog count failed." });
+    }
+  });
+
+  app.get("/api/catalog/approved", async (req: Request, res: Response) => {
+    try {
+      const catalog = buildApprovedCatalog();
+      const view = String(req.query.view || "").toLowerCase();
+      res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
+      if (view === "grid") {
+        const grid = toApprovedCatalogGridResponse(catalog);
+        log(`[catalog] Approved grid browse: ${grid.recipeCount} recipes`, "catalog");
+        return res.json(grid);
+      }
       log(`[catalog] Approved browse: ${catalog.recipeCount} recipes`, "catalog");
       return res.json(catalog);
     } catch (err: unknown) {

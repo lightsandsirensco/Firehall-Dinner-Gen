@@ -13,10 +13,10 @@
   "cookTime": 90,
   "prepTime": 30,
   "difficulty": "medium",
-  "calories": 945,
-  "protein": 39,
-  "carbs": 80,
-  "fats": 52,
+  "calories": 0,
+  "protein": 0,
+  "carbs": 0,
+  "fats": 0,
   "tags": [
     "protein:vegetarian",
     "format:pizza",
@@ -104,41 +104,83 @@
   "steps": [
     {
       "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Fresh Margherita Pizza in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch vegetarian. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
       "title": "Proof dough for blistered crust",
       "instruction": "Bloom yeast in warm water 5 minutes. Mix flour, salt, oil, and yeast water; knead 8–10 minutes until smooth. Rise 1–1½ hours until doubled. Margherita needs relaxed gluten for leopard spotting on the rim.",
       "minutes": 90,
       "heatLevel": ""
     },
     {
-      "stepNumber": 2,
+      "stepNumber": 4,
       "title": "Make quick tomato sauce",
       "instruction": "Simmer crushed tomatoes with smashed garlic 12 minutes until slightly thickened. Season lightly with salt — fresh mozzarella brings salt too. Cool briefly; hot sauce melts dough.",
       "minutes": 12,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 3,
+      "stepNumber": 5,
       "title": "Heat stone to maximum practical temp",
       "instruction": "Preheat stone or steel at 500°F at least 45 minutes. Drain mozzarella on paper towels and slice evenly — wet cheese makes a soggy center.",
       "minutes": 45,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 6,
       "title": "Stretch, light sauce, mozzarella only",
       "instruction": "Stretch dough to 12–14 inch rounds. Sauce sparingly — red should peek through cheese. Arrange mozzarella slices in one layer with slight overlap. No toppings yet; basil goes on after the bake.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 7,
       "title": "Bake for leopard spots",
       "instruction": "Bake 9–12 minutes until crust is spotted brown and cheese has melted with a few golden blisters. Rotate once. Underbaked Margherita tastes like cheese on raw bread — look for color on the underside.",
       "minutes": 11,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 8,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F for any egg-based components. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 10,
+      "title": "Portion and open the line",
+      "instruction": "Portion Fresh Margherita Pizza onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
+      "title": "Scale for larger halls",
+      "instruction": "When cooking for more than 8 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 12,
       "title": "Basil, olive oil, rest, and cut",
       "instruction": "Immediately scatter whole basil leaves and drizzle olive oil. Finish with flaky salt. Rest 2 minutes, cut into 8 slices. Fresh Margherita Pizza — tomato, mozzarella, basil. Serve fast; basil wilts on a hot hold.",
       "minutes": 5,
@@ -164,19 +206,20 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 945,
-    "protein": 39,
-    "carbs": 80,
-    "fats": 52,
-    "label": "per serving (hall portion)",
-    "source": "calculated",
+    "calories": 0,
+    "protein": 0,
+    "carbs": 0,
+    "fats": 0,
+    "label": "Estimated per serving",
+    "source": "unavailable",
+    "estimateAvailable": false,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
       "under30gFat": false,
       "highCarb": true,
       "lowCarb": false,
-      "mealPrepFriendly": false
+      "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": true,
@@ -212,5 +255,6 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "generatedAt": "2026-06-01T01:40:02.129Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "mealPrepNotes": "Prep mise en place before the shift — Fresh Margherita Pizza runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
 }

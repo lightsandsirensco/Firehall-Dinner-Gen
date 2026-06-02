@@ -158,12 +158,13 @@
     }
   ],
   "nutrition": {
-    "calories": 1046,
-    "protein": 80,
-    "carbs": 77,
-    "fat": 44,
-    "label": "per serving (hall portion)",
-    "source": "calculated",
+    "calories": 0,
+    "protein": 0,
+    "carbs": 0,
+    "fats": 0,
+    "label": "Estimated per serving",
+    "source": "unavailable",
+    "estimateAvailable": false,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
@@ -215,5 +216,7 @@
     "Instant-read thermometer",
     "Aluminum foil"
   ],
-  "mealPrepNotes": "Prep mise en place before the shift — Chicken and Waffles for the Crew runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
+  "mealPrepNotes": "Prep mise en place before the shift — Chicken and Waffles for the Crew runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone.",
+  "mobileImage": "/images/mobile/breakfast/chicken-and-waffles-crew.jpg",
+  "railImage": "/images/rails/breakfast/chicken-and-waffles-crew.jpg"
 }

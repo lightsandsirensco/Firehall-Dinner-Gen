@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-31T13:32:02.936Z",
+  "generatedAt": "2026-06-02T13:13:37.535Z",
   "auditRuns": [
     {
       "id": "firehall_photo_standard",
@@ -23,7 +23,8 @@
       "id": "image_governance",
       "script": "audit:image-governance",
       "reportPath": "curated-image-governance-report.json",
-      "ok": true
+      "ok": false,
+      "error": "Command failed: npm run audit:image-governance"
     },
     {
       "id": "breakfast_images",
@@ -34,16 +35,16 @@
   ],
   "consolidated": {
     "firehallPhotoStandard": {
-      "recipesAudited": 376,
-      "failed": 0,
-      "queuedForReplacement": 0,
-      "duplicateHeroGroups": 0,
+      "recipesAudited": 371,
+      "failed": 17,
+      "queuedForReplacement": 17,
+      "duplicateHeroGroups": 6,
       "donorOverrides": 0,
       "byCollection": {
         "golden_100": {
           "total": 100,
-          "failed": 0,
-          "queued": 0
+          "failed": 7,
+          "queued": 7
         },
         "performance_meals": {
           "total": 50,
@@ -52,23 +53,23 @@
         },
         "hall_expansion": {
           "total": 74,
-          "failed": 0,
-          "queued": 0
+          "failed": 1,
+          "queued": 1
         },
         "breakfast": {
-          "total": 67,
-          "failed": 0,
-          "queued": 0
+          "total": 62,
+          "failed": 4,
+          "queued": 4
         },
         "bbq": {
           "total": 55,
-          "failed": 0,
-          "queued": 0
+          "failed": 3,
+          "queued": 3
         },
         "pizza_night": {
           "total": 20,
-          "failed": 0,
-          "queued": 0
+          "failed": 2,
+          "queued": 2
         },
         "smoothies": {
           "total": 10,
@@ -78,62 +79,62 @@
       }
     },
     "imageAccuracy": {
-      "recipesAudited": 761,
-      "failed": 203,
+      "recipesAudited": 756,
+      "failed": 216,
       "byCollection": {
         "golden_100": 100,
         "performance_meals": 50,
         "hall_expansion": 74,
-        "breakfast": 67,
+        "breakfast": 62,
         "pizza_night": 20,
         "smoothies": 10,
         "explore_curated": 439,
         "red_lead": 1
       },
-      "duplicateHeroGroups": 23,
+      "duplicateHeroGroups": 26,
       "donorOverrides": 0
     },
     "exploreMapping": {
-      "recipes": 233,
-      "correct": 233,
-      "missing": 0,
+      "recipes": 315,
+      "correct": 310,
+      "missing": 3,
       "mismatchedPath": 0,
       "mismatchedIdentity": 0,
-      "duplicateConflict": 0,
-      "exploreEligible": 233,
-      "exploreExcluded": 0,
-      "duplicateImageGroups": 0
+      "duplicateConflict": 2,
+      "exploreEligible": 310,
+      "exploreExcluded": 5,
+      "duplicateImageGroups": 1
     },
     "imageGovernance": {
-      "recipes": 566,
-      "hallCatalog": 127,
+      "recipes": 655,
+      "hallCatalog": 216,
       "exploreCurated": 439,
-      "failed": 58,
+      "failed": 57,
       "buildBlockers": 0,
-      "duplicateHeroPaths": 137
+      "duplicateHeroPaths": 209
     },
     "breakfastImages": {
-      "recipesAudited": 74,
-      "passed": 74,
-      "failed": 0,
-      "formatPassed": 74,
-      "duplicateGroups": 0,
+      "recipesAudited": 69,
+      "passed": 67,
+      "failed": 2,
+      "formatPassed": 69,
+      "duplicateGroups": 2,
       "canonicalUnique": 51,
       "missingHero": 0
     }
   },
   "replacementBacklog": {
-    "totalQueued": 0,
-    "p0": 0,
+    "totalQueued": 17,
+    "p0": 17,
     "p1": 0
   },
   "exploreImpact": {
-    "eligible": 233,
-    "excluded": 0,
-    "duplicateConflicts": 0
+    "eligible": 310,
+    "excluded": 5,
+    "duplicateConflicts": 2
   },
   "targets": {
-    "uniqueImagery": "PASS",
-    "exploreEligiblePct": 100
+    "uniqueImagery": "FAIL",
+    "exploreEligiblePct": 98
   }
 }

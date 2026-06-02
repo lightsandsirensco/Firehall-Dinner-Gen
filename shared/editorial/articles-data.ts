@@ -16,9 +16,10 @@ const CORE_EDITORIAL_ARTICLES: EditorialArticle[] = [
   {
     slug: "feeding-a-firehall-crew",
     title: "How to Feed a Firehall Crew Without Losing the Shift",
+    seoTitle: "Firefighter Meals: Feed a Firehall Crew on Shift",
     subtitle: "Scaling, timing, and station-kitchen reality — not food-blog fantasy",
     description:
-      "Practical guide to feeding a firehall crew on a busy shift: portion math, hold times, line setup, and meal picks that survive interruptions.",
+      "Firefighter meals for a full crew on shift: portion math, hold times, line setup, and hall-tested recipes that survive tones dropping mid-dinner.",
     topic: "shift_operations",
     pillar: "operations_how_to",
     readMinutes: 8,
@@ -210,7 +211,20 @@ const CORE_EDITORIAL_ARTICLES: EditorialArticle[] = [
         id: "sides",
         heading: "Sides that do not fight the grill",
         paragraphs: [
-          "Coleslaw, corn, beans, and simple potatoes travel well on a BBQ line. Mac and cheese can hold warm; green salads wilt — serve them last.",
+          "Coleslaw, corn, beans, and simple potatoes travel well on a BBQ line. Mac and cheese can hold warm in a hotel pan; green salads wilt — plate them last or keep dressing separate.",
+          "Put sauces and buns on the end of the line so the protein stays hot and people build sandwiches without blocking the grill.",
+        ],
+        tips: [
+          "Corn can finish on the upper rack while thighs cook below.",
+          "Keep a foil tray for resting meat — carryover heat finishes cook without drying.",
+        ],
+      },
+      {
+        id: "safety",
+        heading: "Grease, lids, and post-call eaters",
+        paragraphs: [
+          "Empty grease traps before you light up, keep a lid within arm's reach, and know which extinguisher class covers grease. BBQ night injuries are almost always preventable.",
+          "Hold finished meat in a warm oven or on the flat-top corner so late-returning crews still get a hot plate — not cold leftovers from the first wave.",
         ],
       },
     ],
@@ -374,6 +388,11 @@ const CORE_EDITORIAL_ARTICLES: EditorialArticle[] = [
         heading: "Storage that respects the walk-in",
         paragraphs: [
           "Flat containers stack better and cool faster. Separate sauces when possible — they often outlast the base and refresh a dry reheat.",
+          "If the walk-in has six pans labeled 'chili' with no dates, someone will eat the wrong one and someone else will throw out good food. Tape, marker, date — same night you put it away.",
+        ],
+        tips: [
+          "Shallow hotel pans cool faster than deep buckets — food safety and fridge space.",
+          "Sauce in a squeeze bottle beats re-scooping from a pot that crusted overnight.",
         ],
       },
       {
@@ -381,6 +400,15 @@ const CORE_EDITORIAL_ARTICLES: EditorialArticle[] = [
         heading: "Reheat like you mean it",
         paragraphs: [
           "Add splash of water or broth to rice and pasta before the microwave. Finish under the broiler or on the flat-top when you need texture back. The oven at 350°F is the hall's unsung hero for batch reheat.",
+          "Pulled pork mac reheats better if pork and mac stay separate until service — combine on the line so the pasta does not turn to paste in the cambro.",
+        ],
+      },
+      {
+        id: "leftover-night",
+        heading: "Plan the second shift on purpose",
+        paragraphs: [
+          "Sunday big chili is not 'leftovers' if the crew knows Wednesday is chili dogs or nachos night. You cooked once; now you are just assembling.",
+          "The halls that waste food are the ones that treat prep as punishment. The ones that eat well rotate batches before the walk-in turns into a guessing game.",
         ],
       },
     ],
@@ -407,9 +435,10 @@ const CORE_EDITORIAL_ARTICLES: EditorialArticle[] = [
   {
     slug: "planning-tonights-station-dinner",
     title: "Planning Tonight's Station Dinner (Without the 6 PM Panic)",
+    seoTitle: "Firehall Dinner Ideas: Plan Tonight's Station Meal",
     subtitle: "A simple decision tree for firehall dinner ideas",
     description:
-      "How to pick tonight's fire station meal: time, crew size, appliances, and hall-tested recipe picks crews actually cook.",
+      "Firehall dinner ideas for tonight: pick by time, crew size, and appliances — with hall-tested recipes crews actually cook on shift.",
     topic: "meal_planning",
     pillar: "operations_how_to",
     readMinutes: 6,
@@ -422,7 +451,7 @@ const CORE_EDITORIAL_ARTICLES: EditorialArticle[] = [
       "station meal planning",
     ],
     intro:
-      "The hardest part of dinner is not cooking — it is deciding. On shift, decision fatigue hits early. Use a simple filter: how much time, how many mouths, what appliance is free, and whether the board feels loud or quiet. Then pick a format, not a Pinterest fantasy.",
+      "Firehall dinner ideas should be decided before 17:00 — not argued about at 18:45 while someone stares into the walk-in. The hardest part of dinner is not cooking; it is picking a format that matches time, crew size, and how loud the board feels. Use a simple filter: minutes available, mouths to feed, which appliance is free, then choose tacos, a batch, or a bake — not a Pinterest fantasy.",
     practicalAdvice: [
       "Quiet board + 60 minutes → bake, braise, or BBQ.",
       "Busy board + 40 minutes → skillet, sheet pan, tacos, pasta.",

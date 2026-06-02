@@ -77,13 +77,13 @@
     }
   ],
   "nutrition": {
-    "calories": 80,
-    "protein": 1,
-    "carbs": 14,
+    "calories": 0,
+    "protein": 0,
+    "carbs": 0,
     "fats": 0,
-    "highlights": "~180 cal · light on fat · hydration from coconut water · fiber from fruit and spinach",
-    "label": "per serving (hall portion)",
-    "source": "calculated",
+    "highlights": "Nutrition estimate coming soon",
+    "label": "Estimated per serving",
+    "source": "unavailable",
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
@@ -96,7 +96,8 @@
       "highProtein": false,
       "lighterOption": true,
       "performanceMeal": true
-    }
+    },
+    "estimateAvailable": false
   },
   "substitutions": [
     "Kale works but blanch flavor is stronger — use half spinach, half kale.",

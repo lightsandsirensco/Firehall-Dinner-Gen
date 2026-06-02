@@ -80,13 +80,13 @@
     }
   ],
   "nutrition": {
-    "calories": 122,
-    "protein": 6,
-    "carbs": 15,
-    "fats": 4,
-    "highlights": "~310 cal · ~20 g protein · soluble fiber from oats · steady energy vs. a sugar-only fruit blend",
-    "label": "per serving (hall portion)",
-    "source": "calculated",
+    "calories": 0,
+    "protein": 0,
+    "carbs": 0,
+    "fats": 0,
+    "highlights": "Nutrition estimate coming soon",
+    "label": "Estimated per serving",
+    "source": "unavailable",
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
@@ -99,7 +99,8 @@
       "highProtein": false,
       "lighterOption": true,
       "performanceMeal": true
-    }
+    },
+    "estimateAvailable": false
   },
   "substitutions": [
     "Use a frozen banana instead of some strawberries for extra thickness.",

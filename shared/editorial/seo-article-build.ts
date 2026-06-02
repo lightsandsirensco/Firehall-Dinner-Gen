@@ -2,6 +2,7 @@
  * Helpers for editorial guides — consistent structure, human voice defaults.
  */
 
+import { enrichGuideArticle } from "./guide-depth-enrichment.js";
 import type { EditorialPillar } from "./content-pillar.js";
 import type {
   EditorialArticle,
@@ -45,9 +46,16 @@ export function buildSeoGuide(input: {
   pillar?: EditorialPillar;
   readMinutes?: number;
   seoTitle?: string;
+  heroImageAlt?: string;
 }): EditorialArticle {
   const topic = input.topic ?? "meal_planning";
-  return {
+  const pk = input.keywords[0] ?? input.title;
+  const faqs =
+    topic === "nutrition_performance" && !input.faqs.some((f) => /medical/i.test(f.question))
+      ? [...input.faqs, STANDARD_FAQS.nutrition]
+      : input.faqs;
+
+  const base: EditorialArticle = {
     slug: input.slug,
     title: input.title,
     ...(input.seoTitle ? { seoTitle: input.seoTitle } : {}),
@@ -59,13 +67,35 @@ export function buildSeoGuide(input: {
     sections: input.sections,
     practicalAdvice: input.practicalAdvice,
     mealRecommendations: input.mealRecommendations,
-    faqs: input.faqs,
+    faqs,
     relatedArticleSlugs: input.relatedArticleSlugs,
     keywords: input.keywords,
     publishedAt: PUBLISHED,
     updatedAt: PUBLISHED,
     readMinutes: input.readMinutes ?? 7,
+    heroImageAlt:
+      input.heroImageAlt ??
+      `${input.title} — ${pk} tips for fire station kitchens and crew-sized meals`,
   };
+  return enrichGuideArticle(base);
+}
+
+/** Ensure SEO + metadata defaults on any guide before publish. */
+export function withGuidePublishingDefaults(article: EditorialArticle): EditorialArticle {
+  const pk = article.keywords[0] ?? article.slug.replace(/-/g, " ");
+  const faqs =
+    article.topic === "nutrition_performance" &&
+    !article.faqs.some((f) => /medical/i.test(f.question))
+      ? [...article.faqs, STANDARD_FAQS.nutrition]
+      : article.faqs;
+
+  return enrichGuideArticle({
+    ...article,
+    faqs,
+    heroImageAlt:
+      article.heroImageAlt?.trim() ||
+      `${article.title} — ${pk} tips for fire station kitchens and crew-sized meals`,
+  });
 }
 
 export const STANDARD_FAQS = {

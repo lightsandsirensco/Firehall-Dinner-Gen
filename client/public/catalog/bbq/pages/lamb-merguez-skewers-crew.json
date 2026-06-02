@@ -186,8 +186,9 @@
     "protein": 70,
     "carbs": 20,
     "fats": 44,
-    "label": "per serving (hall portion)",
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,

@@ -5,27 +5,50 @@
   "description": "Protein-forward hall food that still fills a crew: bowls, grills, and lean batches with real flavor — not sad plates that send everyone to pizza.",
   "topic": "meal_planning",
   "pillar": "recipes_meals",
-  "intro": "Healthy on shift does not mean small. Firefighters need volume and protein; 'healthy' fails when people leave hungry. The meals that work are bowls, grills, and lean batches with bold seasoning — crews self-select sauce and starch so it still feels like dinner.",
+  "intro": "Healthy on shift does not mean small. Firefighters need volume and protein; 'healthy' fails when people leave hungry. The meals that work are bowls, grills, and lean batches with bold seasoning — crews self-select sauce and starch so it still feels like dinner. Below: what halls actually cook for healthy firefighter meals — formats, timing, and recipe picks that survive a busy board.",
   "sections": [
     {
       "id": "bowls",
       "heading": "Bowl nights win",
       "paragraphs": [
-        "Grain, protein, veg, sauce — people build heavy or light. Greek chicken, salmon bowls, and turkey chili fit this model."
+        "Grain, protein, veg, sauce — people build heavy or light. Greek chicken, salmon bowls, and turkey chili fit this model.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
       ]
     },
     {
       "id": "grill",
       "heading": "Grill without going light on portions",
       "paragraphs": [
-        "Salmon planks, souvlaki, and lean chili still feel like dinner when sides are generous. Offer bread, rice, or potatoes so nobody leaves hungry."
+        "Salmon planks, souvlaki, and lean chili still feel like dinner when sides are generous. Offer bread, rice, or potatoes so nobody leaves hungry.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
+      ]
+    },
+    {
+      "id": "shift-pick",
+      "heading": "Pick the format before the recipe",
+      "paragraphs": [
+        "For healthy firefighter meals, decide line vs. plated vs. batch before you open a recipe tab. Lines win when eaters show up between 17:00 and 20:00; batches win when you know the whole crew lands at once.",
+        "Post protein, starch, and hold plan on the whiteboard. When tones drop, the next cook should read \"covered on low\" instead of guessing what you meant on the flat-top."
+      ],
+      "tips": [
+        "Assign one cook and one runner — everyone else stays out until called.",
+        "Sauces on the side keep reheat from turning gluey for post-call eaters."
       ]
     }
   ],
   "practicalAdvice": [
     "Lead with protein grams, not calorie lectures.",
     "Sauce on the side keeps bowls flexible.",
-    "Offer one indulgent side so the main feels like a choice, not punishment."
+    "Offer one indulgent side so the main feels like a choice, not punishment.",
+    "Post who's cooking and what's holding warm on the whiteboard — post-call eaters should not hunt for answers."
   ],
   "mealRecommendations": [
     {
@@ -79,5 +102,6 @@
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
   "updatedAt": "2026-05-27T18:00:00.000Z",
-  "readMinutes": 7
+  "readMinutes": 7,
+  "heroImageAlt": "Healthy Firefighter Meals That Fill You Up — healthy firefighter meals tips for fire station kitchens and crew-sized meals"
 }

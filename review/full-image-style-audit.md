@@ -1,7 +1,7 @@
 # Full Image Style Audit
 
-- Recipes: **228**
-- Pass: **225** (98.7%)
+- Recipes: **315**
+- Pass: **312** (99%)
 - Fail: **3**
 
 ## Failures

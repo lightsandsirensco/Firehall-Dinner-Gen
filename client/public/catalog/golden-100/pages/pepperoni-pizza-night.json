@@ -13,10 +13,10 @@
   "cookTime": 175,
   "prepTime": 30,
   "difficulty": "medium",
-  "calories": 1400,
-  "protein": 68,
-  "carbs": 76,
-  "fats": 90,
+  "calories": 0,
+  "protein": 0,
+  "carbs": 0,
+  "fats": 0,
   "tags": [
     "protein:pork",
     "format:pizza",
@@ -111,41 +111,83 @@
   "steps": [
     {
       "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Classic Pepperoni Pizza in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use Grated parmesan as listed — measure each before heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch pork. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
       "title": "Proof dough for multiple pies",
       "instruction": "Bloom yeast in warm water 5 minutes. Mix flour, salt, oil, and yeast water; knead 8–10 minutes until smooth. Rise 1–1½ hours until doubled. For eight hungry firefighters, plan three large pies or four medium — scale dough portions accordingly.",
       "minutes": 90,
       "heatLevel": ""
     },
     {
-      "stepNumber": 2,
+      "stepNumber": 4,
       "title": "Simmer pizza sauce",
       "instruction": "Simmer crushed tomatoes with garlic and oregano 15 minutes until slightly thickened. Cool briefly — hot sauce melts dough and makes a soggy center.",
       "minutes": 15,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 3,
+      "stepNumber": 5,
       "title": "Heat oven and stone or steel",
       "instruction": "Place pizza stone or steel in the oven; preheat to 500°F at least 45 minutes. Prep cheese and pepperoni while the oven saturates — surface temp matters more than air temp.",
       "minutes": 45,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 6,
       "title": "Stretch, sauce, cheese, pepperoni",
       "instruction": "Divide dough; stretch by hand to 12–14 inch rounds. Sauce lightly — wet centers sag. Layer mozzarella and pepperoni; leave a ½ inch rim. Work on parchment or a floured peel.",
       "minutes": 20,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 7,
       "title": "Bake until blistered",
       "instruction": "Bake each pie 10–14 minutes until cheese bubbles with brown spots and the underside sounds hollow. Rotate once for hot spots. Keep finished pies on racks, not stacked — steam kills crust.",
       "minutes": 12,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 8,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F with a 3-minute rest. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 10,
+      "title": "Portion and open the line",
+      "instruction": "Portion Classic Pepperoni Pizza onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
+      "title": "Scale for larger halls",
+      "instruction": "When cooking for more than 8 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 12,
       "title": "Rest, cut, and run the line",
       "instruction": "Rest 2 minutes, cut into 8 slices per pie, and fan on sheet trays. Classic Pepperoni Pizza night — dough, tomato sauce, mozzarella, pepperoni. Keep a backup pie warming at 200°F.",
       "minutes": 5,
@@ -169,19 +211,20 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1400,
-    "protein": 68,
-    "carbs": 76,
-    "fats": 90,
-    "label": "per serving (hall portion)",
-    "source": "calculated",
+    "calories": 0,
+    "protein": 0,
+    "carbs": 0,
+    "fats": 0,
+    "label": "Estimated per serving",
+    "source": "unavailable",
+    "estimateAvailable": false,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
       "under30gFat": false,
       "highCarb": true,
       "lowCarb": false,
-      "mealPrepFriendly": false
+      "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": true,
@@ -218,5 +261,6 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "generatedAt": "2026-06-01T01:40:02.121Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "mealPrepNotes": "Prep mise en place before the shift — Classic Pepperoni Pizza runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
 }

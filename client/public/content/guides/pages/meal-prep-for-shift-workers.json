@@ -5,20 +5,34 @@
   "description": "Shift-worker meal prep for fire halls: batch cooking, storage, reheat rules, and recipes that eat well the second day.",
   "topic": "meal_planning",
   "pillar": "operations_how_to",
-  "intro": "Meal prep at a station is not about identical containers for Instagram — it is about cooking once and winning twice. The hall wins when Tuesday's chili becomes Wednesday's baked potato topper, or when a sheet-pan protein becomes lunch bowls without a full re-cook.",
+  "intro": "Meal prep at a station is not about identical containers for Instagram — it is about cooking once and winning twice. The hall wins when Tuesday's chili becomes Wednesday's baked potato topper, or when a sheet-pan protein becomes lunch bowls without a full re-cook. Below: what halls actually cook for meal prep firefighters — formats, timing, and recipe picks that survive a busy board.",
   "sections": [
     {
       "id": "storage",
       "heading": "Storage that respects the walk-in",
       "paragraphs": [
-        "Flat containers stack better and cool faster. Separate sauces when possible — they often outlast the base and refresh a dry reheat."
+        "Flat containers stack better and cool faster. Separate sauces when possible — they often outlast the base and refresh a dry reheat.",
+        "If the walk-in has six pans labeled 'chili' with no dates, someone will eat the wrong one and someone else will throw out good food. Tape, marker, date — same night you put it away."
+      ],
+      "tips": [
+        "Shallow hotel pans cool faster than deep buckets — food safety and fridge space.",
+        "Sauce in a squeeze bottle beats re-scooping from a pot that crusted overnight."
       ]
     },
     {
       "id": "reheat",
       "heading": "Reheat like you mean it",
       "paragraphs": [
-        "Add splash of water or broth to rice and pasta before the microwave. Finish under the broiler or on the flat-top when you need texture back. The oven at 350°F is the hall's unsung hero for batch reheat."
+        "Add splash of water or broth to rice and pasta before the microwave. Finish under the broiler or on the flat-top when you need texture back. The oven at 350°F is the hall's unsung hero for batch reheat.",
+        "Pulled pork mac reheats better if pork and mac stay separate until service — combine on the line so the pasta does not turn to paste in the cambro."
+      ]
+    },
+    {
+      "id": "leftover-night",
+      "heading": "Plan the second shift on purpose",
+      "paragraphs": [
+        "Sunday big chili is not 'leftovers' if the crew knows Wednesday is chili dogs or nachos night. You cooked once; now you are just assembling.",
+        "The halls that waste food are the ones that treat prep as punishment. The ones that eat well rotate batches before the walk-in turns into a guessing game."
       ]
     }
   ],
@@ -72,5 +86,6 @@
   ],
   "publishedAt": "2026-05-27T12:00:00.000Z",
   "updatedAt": "2026-05-27T12:00:00.000Z",
-  "readMinutes": 7
+  "readMinutes": 7,
+  "heroImageAlt": "Meal Prep for Firefighters and Shift Workers — meal prep firefighters tips for fire station kitchens and crew-sized meals"
 }

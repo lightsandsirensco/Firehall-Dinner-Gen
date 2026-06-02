@@ -5,20 +5,42 @@
   "description": "Best meals for a 24-hour shift: hold-friendly dinners, lighter overnight options, and breakfast that does not wreck the kitchen for the next crew.",
   "topic": "meal_planning",
   "pillar": "recipes_meals",
-  "intro": "A full tour is three kitchens in one: evening dinner for the arriving crew, something manageable overnight if the board stays up, and breakfast before handoff. The best 24-hour shift meals are not one heroic dinner — they are a plan that spreads effort and uses hold-friendly food.",
+  "intro": "A full tour is three kitchens in one: evening dinner for the arriving crew, something manageable overnight if the board stays up, and breakfast before handoff. The best 24-hour shift meals are not one heroic dinner — they are a plan that spreads effort and uses hold-friendly food. Below: what halls actually cook for 24 hour shift meals — formats, timing, and recipe picks that survive a busy board.",
   "sections": [
     {
       "id": "dinner",
       "heading": "Dinner that survives the first half",
       "paragraphs": [
-        "Chili, pulled pork, baked pasta, and rice bowls reheat well when the second run goes out at 22:00."
+        "Chili, pulled pork, baked pasta, and rice bowls reheat well when the second run goes out at 22:00.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
       ]
     },
     {
       "id": "morning",
       "heading": "Breakfast without chaos",
       "paragraphs": [
-        "Egg bakes and burrito bars let people eat across a two-hour window. Pancakes hold warm in the oven between waves."
+        "Egg bakes and burrito bars let people eat across a two-hour window. Pancakes hold warm in the oven between waves.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
+      ]
+    },
+    {
+      "id": "shift-pick",
+      "heading": "Pick the format before the recipe",
+      "paragraphs": [
+        "For 24 hour shift meals, decide line vs. plated vs. batch before you open a recipe tab. Lines win when eaters show up between 17:00 and 20:00; batches win when you know the whole crew lands at once.",
+        "Post protein, starch, and hold plan on the whiteboard. When tones drop, the next cook should read \"covered on low\" instead of guessing what you meant on the flat-top."
+      ],
+      "tips": [
+        "Assign one cook and one runner — everyone else stays out until called.",
+        "Sauces on the side keep reheat from turning gluey for post-call eaters."
       ]
     }
   ],
@@ -77,5 +99,6 @@
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
   "updatedAt": "2026-05-27T18:00:00.000Z",
-  "readMinutes": 7
+  "readMinutes": 7,
+  "heroImageAlt": "Best Meals for a 24 Hour Shift — 24 hour shift meals tips for fire station kitchens and crew-sized meals"
 }

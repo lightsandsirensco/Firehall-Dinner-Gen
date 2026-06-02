@@ -79,13 +79,13 @@
     }
   ],
   "nutrition": {
-    "calories": 144,
-    "protein": 6,
-    "carbs": 19,
-    "fats": 6,
-    "highlights": "~320 cal · ~18 g protein · potassium · satisfies sweet cravings without bakery sugar levels",
-    "label": "per serving (hall portion)",
-    "source": "calculated",
+    "calories": 0,
+    "protein": 0,
+    "carbs": 0,
+    "fats": 0,
+    "highlights": "Nutrition estimate coming soon",
+    "label": "Estimated per serving",
+    "source": "unavailable",
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
@@ -98,7 +98,8 @@
       "highProtein": false,
       "lighterOption": true,
       "performanceMeal": true
-    }
+    },
+    "estimateAvailable": false
   },
   "substitutions": [
     "Chocolate protein powder (1 scoop) replaces cocoa + some yogurt.",

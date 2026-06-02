@@ -82,13 +82,13 @@
     }
   ],
   "nutrition": {
-    "calories": 99,
-    "protein": 8,
-    "carbs": 9,
-    "fats": 4,
-    "highlights": "~220 cal base · ~18 g protein with yogurt · caffeine for alertness · lower sugar than flavored lattes",
-    "label": "per serving (hall portion)",
-    "source": "calculated",
+    "calories": 0,
+    "protein": 0,
+    "carbs": 0,
+    "fats": 0,
+    "highlights": "Nutrition estimate coming soon",
+    "label": "Estimated per serving",
+    "source": "unavailable",
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
@@ -101,7 +101,8 @@
       "highProtein": false,
       "lighterOption": true,
       "performanceMeal": true
-    }
+    },
+    "estimateAvailable": false
   },
   "substitutions": [
     "Instant espresso (2 tsp + ½ cup water) works if cold brew is not stocked.",

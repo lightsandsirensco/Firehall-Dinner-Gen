@@ -1,0 +1,139 @@
+{
+  "generatedAt": "2026-06-02T15:58:19.497Z",
+  "origin": "https://www.firehallmeals.com",
+  "sitemapSynced": false,
+  "totals": {
+    "sitemapUrls": 309,
+    "recipeUrls": 217,
+    "recipeUrlsInSitemap": 217,
+    "guideUrls": 58,
+    "guideUrlsInSitemap": 62,
+    "approvedCatalogRecipes": 224
+  },
+  "requiredRoutes": {
+    "checked": [
+      "/",
+      "/explore",
+      "/wheel",
+      "/pizza",
+      "/guides",
+      "/recipes"
+    ],
+    "missing": [],
+    "pass": true
+  },
+  "robots": {
+    "ok": true,
+    "checks": {
+      "userAgentWildcard": true,
+      "allowRoot": true,
+      "sitemapDeclared": true,
+      "recipesNotBlocked": true,
+      "guidesNotBlocked": true,
+      "exploreNotBlocked": true
+    }
+  },
+  "recipeMetadata": {
+    "audited": 217,
+    "missingMetadata": [],
+    "duplicateTitles": 0,
+    "duplicateDescriptions": 0,
+    "missingCanonical": [],
+    "canonicalMismatch": []
+  },
+  "internalLinks": {
+    "notInApprovedCatalog": 36,
+    "hubOnlyRecipes": 36,
+    "hubOnlySample": [
+      {
+        "slug": "lean-turkey-bean-chili",
+        "hub": "performance-meals"
+      },
+      {
+        "slug": "turkey-sausage-egg-muffins",
+        "hub": "performance-meals"
+      },
+      {
+        "slug": "lean-beef-broccoli-rice",
+        "hub": "performance-meals"
+      },
+      {
+        "slug": "veggie-egg-casserole-tray",
+        "hub": "performance-meals"
+      },
+      {
+        "slug": "turkey-quinoa-stuffed-peppers",
+        "hub": "performance-meals"
+      },
+      {
+        "slug": "bbq-chicken-pizza",
+        "hub": "/pizza"
+      },
+      {
+        "slug": "breakfast-sausage-pizza",
+        "hub": "/pizza"
+      },
+      {
+        "slug": "buffalo-chicken-pizza",
+        "hub": "/pizza"
+      },
+      {
+        "slug": "pepperoni-pizza-night",
+        "hub": "/pizza"
+      },
+      {
+        "slug": "detroit-style-pizza",
+        "hub": "/pizza"
+      },
+      {
+        "slug": "firehall-supreme-pizza",
+        "hub": "/pizza"
+      },
+      {
+        "slug": "four-cheese-white-pizza",
+        "hub": "/pizza"
+      },
+      {
+        "slug": "margherita-pizza",
+        "hub": "/pizza"
+      },
+      {
+        "slug": "hawaiian-pizza",
+        "hub": "/pizza"
+      },
+      {
+        "slug": "honey-soppressata-pizza",
+        "hub": "/pizza"
+      },
+      {
+        "slug": "jalapeno-popper-pizza",
+        "hub": "/pizza"
+      },
+      {
+        "slug": "meat-lovers-sheet-pizza",
+        "hub": "/pizza"
+      },
+      {
+        "slug": "nashville-hot-chicken-pizza",
+        "hub": "/pizza"
+      },
+      {
+        "slug": "pesto-chicken-pizza",
+        "hub": "/pizza"
+      },
+      {
+        "slug": "philly-cheesesteak-pizza",
+        "hub": "/pizza"
+      }
+    ],
+    "notLinkedFromGuidesOnly": 207,
+    "weakOnPageOutboundLinks": 125,
+    "internallyUnreachable": []
+  },
+  "sitemapCoverage": {
+    "recipesMissingFromSitemap": [],
+    "guidesMissingFromSitemap": [],
+    "orphanSitemapUrls": []
+  },
+  "pass": true
+}

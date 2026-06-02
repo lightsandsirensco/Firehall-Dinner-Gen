@@ -31,7 +31,8 @@ export const fuelNutritionSchema = z.object({
   fats: z.number().int().min(0).max(200),
   fiber: z.number().int().min(0).max(100).optional(),
   highlights: z.string().trim().min(12).max(400),
-  source: z.enum(["calculated", "curated", "estimated"]).optional(),
+  source: z.enum(["calculated", "curated", "estimated", "unavailable"]).optional(),
+  estimateAvailable: z.boolean().optional(),
   filterFlags: z
     .object({
       highProtein: z.boolean(),

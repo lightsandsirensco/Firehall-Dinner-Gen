@@ -1,7 +1,7 @@
 {
   "slug": "philly-cheesesteak-skillet",
-  "title": "Philly Cheesesteak Skillet",
-  "displayTitle": "Philly Cheesesteak Skillet",
+  "title": "Garlic Butter Steak Skillet",
+  "displayTitle": "Garlic Butter Steak Skillet",
   "seoTitle": "Philly Cheesesteak Skillet | Firefighter Meal",
   "shortDescription": "Melted provolone, peppers, one pan",
   "subtitle": "Melted provolone, peppers, one pan",
@@ -61,34 +61,81 @@
       "quantity": "2",
       "unit": "large",
       "group": "Veg"
+    },
+    {
+      "name": "Unsalted butter",
+      "quantity": "6",
+      "unit": "tbsp",
+      "group": "Aromatics"
+    },
+    {
+      "name": "Garlic, minced",
+      "quantity": "6",
+      "unit": "cloves",
+      "group": "Aromatics"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Slice beef paper-thin",
-      "instruction": "Partially freeze ribeye 20 minutes; slice as thin as possible against the grain.",
-      "minutes": 25,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Garlic Butter Steak Skillet in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use Bell peppers, sliced, Yellow onion, sliced as listed — measure each before heat goes on.",
+      "minutes": 12,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch beef. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Slice beef paper-thin",
+      "instruction": "Partially freeze ribeye 20 minutes; slice as thin as possible against the grain. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
+      "minutes": 25,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
       "title": "Sear beef and peppers",
-      "instruction": "Hot cast iron: sear beef in batches with onions and peppers until edges char. Season with salt and pepper.",
+      "instruction": "Hot cast iron: sear beef in batches with onions and peppers until edges char. Season with salt and pepper. Cook until char marks are visible and the thickest piece reads 145°F for medium beef, 160°F for ground on an instant-read thermometer. Plan about 12 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 12,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 3,
+      "stepNumber": 5,
       "title": "Melt provolone",
-      "instruction": "Pile beef mixture; lay provolone over top. Cover 1 minute until cheese melts into the meat.",
+      "instruction": "Pile beef mixture; lay provolone over top. Cover 1 minute until cheese melts into the meat. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
       "minutes": 3,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 6,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F for medium beef, 160°F for ground. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 8,
+      "title": "Portion and open the line",
+      "instruction": "Portion Garlic Butter Steak Skillet onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
       "title": "Fill hoagies",
-      "instruction": "Scoop into toasted hoagie rolls. Philly Cheesesteak Skillet should drip a little — that's the point.",
+      "instruction": "Scoop into toasted hoagie rolls. Philly Cheesesteak Skillet should drip a little — that's the point. Target 145°F for medium beef, 160°F for ground at the thickest part before moving to the next batch. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
       "minutes": 5,
       "heatLevel": "low"
     }
@@ -158,5 +205,6 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "generatedAt": "2026-06-01T01:40:02.075Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "mealPrepNotes": "Prep mise en place before the shift — Garlic Butter Steak Skillet runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
 }

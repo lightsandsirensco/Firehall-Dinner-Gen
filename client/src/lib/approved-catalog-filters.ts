@@ -1,8 +1,12 @@
 import type {
   ApprovedCatalogCookTimeBucket,
   ApprovedCatalogEntry,
+  ApprovedCatalogGridEntry,
   ApprovedCatalogPrimaryFilter,
 } from "@shared/approved-catalog";
+
+/** Entries usable in Explore filters (full catalog or grid payload without hero). */
+export type ApprovedCatalogFilterable = ApprovedCatalogEntry | ApprovedCatalogGridEntry;
 
 export interface ApprovedCatalogFilterState {
   primary: ApprovedCatalogPrimaryFilter;
@@ -22,10 +26,10 @@ export const DEFAULT_APPROVED_CATALOG_FILTERS: ApprovedCatalogFilterState = {
   lowCleanup: false,
 };
 
-export function filterApprovedCatalogEntries(
-  entries: ApprovedCatalogEntry[],
+export function filterApprovedCatalogEntries<T extends ApprovedCatalogFilterable>(
+  entries: T[],
   state: ApprovedCatalogFilterState,
-): ApprovedCatalogEntry[] {
+): T[] {
   return entries.filter((entry) => {
     switch (state.primary) {
       case "healthy":
@@ -50,7 +54,7 @@ export function filterApprovedCatalogEntries(
   });
 }
 
-export function buildApprovedCatalogFacetOptions(entries: ApprovedCatalogEntry[]): {
+export function buildApprovedCatalogFacetOptions(entries: ApprovedCatalogFilterable[]): {
   categories: Array<{ id: string; label: string }>;
   proteins: Array<{ id: string; label: string }>;
 } {

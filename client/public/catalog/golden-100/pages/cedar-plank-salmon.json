@@ -69,30 +69,79 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Soak plank and prep fish",
-      "instruction": "Soak cedar plank 1 hour. Pat salmon dry. Mix glaze. Score skin lightly so it doesn't curl.",
-      "minutes": 60,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Cedar Plank Grilled Salmon in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use Soy sauce, Fresh ginger, grated as listed — measure each before heat goes on.",
+      "minutes": 12,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch seafood. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Soak plank and prep fish",
+      "instruction": "Soak cedar plank 1 hour. Pat salmon dry. Mix glaze. Score skin lightly so it doesn't curl. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F at the thickest point before moving to the next batch.",
+      "minutes": 60,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
       "title": "Grill on the plank",
-      "instruction": "Grill indirect at 375°F on the plank 12–18 minutes until salmon flakes at 125–130°F in the thickest part (medium). Skin may stick — that's fine; serve flesh side up.",
+      "instruction": "Grill indirect at 375°F on the plank 12–18 minutes until salmon flakes at 125–130°F in the thickest part (medium). Skin may stick — that's fine; serve flesh side up. Target 145°F at the thickest point before moving to the next batch.",
       "minutes": 16,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 3,
+      "stepNumber": 5,
       "title": "Glaze and serve",
       "instruction": "Brush glaze in the last 3 minutes. Rest 2 minutes. Serve from plank or transfer with a wide spatula. Hold backup fillets at 160°F max — salmon toughens fast.",
       "minutes": 5,
       "heatLevel": "low"
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 6,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F for fish, 145°F for shrimp until opaque. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 8,
+      "title": "Portion and open the line",
+      "instruction": "Portion Cedar Plank Grilled Salmon onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
+      "title": "Scale for larger halls",
+      "instruction": "When cooking for more than 8 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
       "title": "Portion for the hall",
       "instruction": "Break fillets into portions on trays. Keep skin on for transport — crew can peel if they want. Do not cover tightly or fish steams.",
       "minutes": 3,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
+      "title": "Final quality check before service",
+      "instruction": "Walk the line once before opening service for Cedar Plank Grilled Salmon — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
+      "minutes": 4,
       "heatLevel": ""
     }
   ],
@@ -168,5 +217,6 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "generatedAt": "2026-06-01T01:40:02.050Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "mealPrepNotes": "Prep mise en place before the shift — Cedar Plank Grilled Salmon runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
 }

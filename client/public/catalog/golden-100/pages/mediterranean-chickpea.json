@@ -1,7 +1,7 @@
 {
   "slug": "mediterranean-chickpea",
-  "title": "Mediterranean Chickpea Bowls",
-  "displayTitle": "Mediterranean Chickpea Bowls",
+  "title": "Smoky Chickpea Bowls",
+  "displayTitle": "Smoky Chickpea Bowls",
   "seoTitle": "Mediterranean Chickpea Bowls | Firefighter Meal",
   "shortDescription": "Plant-forward without feeling light",
   "subtitle": "Plant-forward without feeling light",
@@ -13,10 +13,10 @@
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 248,
-  "protein": 10,
-  "carbs": 33,
-  "fats": 9,
+  "calories": 0,
+  "protein": 0,
+  "carbs": 0,
+  "fats": 0,
   "tags": [
     "protein:vegetarian",
     "format:bowl",
@@ -78,30 +78,86 @@
   "steps": [
     {
       "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Smoky Chickpea Bowls in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use Quinoa, uncooked, Red onion, thinly sliced as listed — measure each before heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch vegetarian. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
       "title": "Cook quinoa",
       "instruction": "Rinse quinoa; simmer in salted water 15 minutes until tails pop. Spread on a sheet pan to cool slightly so it does not steam the toppings soggy.",
       "minutes": 18,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 2,
+      "stepNumber": 4,
       "title": "Crisp the chickpeas",
-      "instruction": "Toss drained chickpeas with olive oil, cumin, and salt. Roast at 425°F 20–25 minutes until golden and crisp on the outside.",
+      "instruction": "Toss drained chickpeas with olive oil, cumin, and salt. Roast at 425°F 20–25 minutes until golden and crisp on the outside. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 25,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 3,
+      "stepNumber": 5,
       "title": "Prep vegetables",
-      "instruction": "Halve tomatoes, dice cucumber, and soak red onion slices in cold water 10 minutes to tame bite; drain well.",
+      "instruction": "Halve tomatoes, dice cucumber, and soak red onion slices in cold water 10 minutes to tame bite; drain well. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
       "minutes": 12,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 6,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F for any egg-based components. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 8,
+      "title": "Portion and open the line",
+      "instruction": "Portion Smoky Chickpea Bowls onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
+      "title": "Scale for larger halls",
+      "instruction": "When cooking for more than 8 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
       "title": "Build chickpea bowls",
       "instruction": "Quinoa base, crisp chickpeas, vegetables, crumbled feta, and lemon-tahini drizzle. Mediterranean Chickpea Bowls stay plant-forward and filling without feeling like a sad salad.",
       "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
+      "title": "Final quality check before service",
+      "instruction": "Walk the line once before opening service for Smoky Chickpea Bowls — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
+      "minutes": 4,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 12,
+      "title": "Final quality check before service",
+      "instruction": "Walk the line once before opening service for Smoky Chickpea Bowls — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
+      "minutes": 4,
       "heatLevel": ""
     }
   ],
@@ -126,19 +182,20 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 248,
-    "protein": 10,
-    "carbs": 33,
-    "fats": 9,
-    "label": "per serving (hall portion)",
-    "source": "calculated",
+    "calories": 0,
+    "protein": 0,
+    "carbs": 0,
+    "fats": 0,
+    "label": "Estimated per serving",
+    "source": "unavailable",
+    "estimateAvailable": false,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
       "under30gFat": true,
       "highCarb": false,
       "lowCarb": false,
-      "mealPrepFriendly": false
+      "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": false,
@@ -174,5 +231,6 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "generatedAt": "2026-06-01T01:40:02.098Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "mealPrepNotes": "Prep mise en place before the shift — Smoky Chickpea Bowls runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
 }

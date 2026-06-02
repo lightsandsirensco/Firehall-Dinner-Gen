@@ -141,8 +141,9 @@
     "protein": 11,
     "carbs": 4,
     "fat": 30,
-    "label": "per serving (hall portion)",
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
@@ -194,5 +195,7 @@
     "Instant-read thermometer",
     "Aluminum foil"
   ],
-  "mealPrepNotes": "Prep mise en place before the shift — Breakfast Poutine runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
+  "mealPrepNotes": "Prep mise en place before the shift — Breakfast Poutine runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone.",
+  "mobileImage": "/images/mobile/breakfast/breakfast-poutine.jpg",
+  "railImage": "/images/rails/breakfast/breakfast-poutine.jpg"
 }

@@ -76,31 +76,80 @@
   "steps": [
     {
       "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Texas-Style Beef Ribs in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use Garlic powder, Apple cider vinegar as listed — measure each before heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch beef. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
       "title": "Season the beef ribs",
       "instruction": "Pull silver skin if present. Coat ribs with salt and pepper (heavy — Texas style). Let sit 30 minutes while smoker preheats to 275°F with oak.",
       "minutes": 30,
       "heatLevel": ""
     },
     {
-      "stepNumber": 2,
+      "stepNumber": 4,
       "title": "Smoke until tender",
       "instruction": "Smoke bone-side down 6–8 hours until meat pulls back from bone and internal temp reads 200–205°F. Wrap in butcher paper if bark gets too dark before tenderness. Meat should jiggle when you shake the rack.",
       "minutes": 180,
       "heatLevel": "low"
     },
     {
-      "stepNumber": 3,
+      "stepNumber": 5,
       "title": "Rest and portion",
       "instruction": "Rest 20 minutes tented with foil. Cut between bones. Hold on sheet trays at 180°F — beef ribs dry out fast, so keep a backup pan lightly spritzed with broth.",
       "minutes": 25,
       "heatLevel": "low"
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 6,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F for medium beef, 160°F for ground. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 8,
+      "title": "Portion and open the line",
+      "instruction": "Portion Texas-Style Beef Ribs onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
+      "title": "Scale for larger halls",
+      "instruction": "When cooking for more than 8 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
       "title": "Serve on the line",
-      "instruction": "Pile ribs on sheet trays with extra pepper on the side. Backup pan in a warm oven — do not cover tightly or bark softens.",
+      "instruction": "Pile ribs on sheet trays with extra pepper on the side. Backup pan in a warm oven — do not cover tightly or bark softens. Bake until the center reaches a safe internal temp (145°F for medium beef, 160°F for ground) and edges look set — use a thermometer at the thickest point. Plan about 5 minutes for this step at crew scale.",
       "minutes": 5,
       "heatLevel": "low"
+    },
+    {
+      "stepNumber": 11,
+      "title": "Final quality check before service",
+      "instruction": "Walk the line once before opening service for Texas-Style Beef Ribs — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
+      "minutes": 4,
+      "heatLevel": ""
     }
   ],
   "proTips": [
@@ -129,15 +178,16 @@
     "protein": 89,
     "carbs": 1,
     "fats": 58,
-    "label": "per serving (hall portion)",
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
       "under30gFat": false,
       "highCarb": false,
       "lowCarb": true,
-      "mealPrepFriendly": false
+      "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": true,
@@ -173,5 +223,6 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "generatedAt": "2026-06-01T01:40:02.048Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "mealPrepNotes": "Prep mise en place before the shift — Texas-Style Beef Ribs runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
 }

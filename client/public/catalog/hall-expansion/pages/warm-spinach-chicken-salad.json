@@ -13,10 +13,10 @@
   "cookTime": 35,
   "prepTime": 25,
   "difficulty": "easy",
-  "calories": 487,
-  "protein": 67,
+  "calories": 507,
+  "protein": 48,
   "carbs": 7,
-  "fats": 21,
+  "fats": 32,
   "tags": [
     "protein:chicken",
     "format:salad",
@@ -184,16 +184,17 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 487,
-    "protein": 67,
+    "calories": 507,
+    "protein": 48,
     "carbs": 7,
-    "fats": 21,
-    "label": "per serving (hall portion)",
+    "fats": 32,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": true,
-      "under30gFat": true,
+      "under30gFat": false,
       "highCarb": false,
       "lowCarb": true,
       "mealPrepFriendly": true
@@ -201,7 +202,7 @@
     "badgeCandidates": {
       "highProtein": true,
       "lighterOption": false,
-      "performanceMeal": true
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/warm-spinach-chicken-salad.jpg",

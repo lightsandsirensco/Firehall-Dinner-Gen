@@ -6,6 +6,8 @@ export interface RecipeNutritionPanelProps {
   carbs: number;
   fat: number;
   className?: string;
+  /** When false, show “coming soon” instead of zeros. */
+  estimateAvailable?: boolean;
 }
 
 function macroValue(v: number | null | undefined): number | null {
@@ -39,7 +41,9 @@ export function hasDisplayableNutrition(macros: {
   protein?: number | null;
   carbs?: number | null;
   fat?: number | null;
+  estimateAvailable?: boolean;
 }): boolean {
+  if (macros.estimateAvailable === false) return false;
   return getDisplayableMacroRows(macros).length > 0;
 }
 
@@ -50,10 +54,12 @@ export function RecipeNutritionPanel({
   carbs,
   fat,
   className,
+  estimateAvailable = true,
 }: RecipeNutritionPanelProps) {
   const rows = getDisplayableMacroRows({ calories, protein, carbs, fat });
+  const showEstimate = estimateAvailable !== false && rows.length > 0;
 
-  if (rows.length === 0) {
+  if (!showEstimate) {
     return (
       <section
         className={cn(
@@ -69,7 +75,7 @@ export function RecipeNutritionPanel({
         >
           Nutrition
         </h2>
-        <p className="mt-3 text-sm text-muted-foreground">Nutrition information unavailable.</p>
+        <p className="mt-3 text-sm text-muted-foreground">Nutrition estimate coming soon.</p>
       </section>
     );
   }
@@ -87,8 +93,9 @@ export function RecipeNutritionPanel({
         id="recipe-nutrition-heading"
         className="font-heading text-sm uppercase tracking-widest text-muted-foreground"
       >
-        Nutrition (Per Serving)
+        Nutrition
       </h2>
+      <p className="mt-1 text-xs text-muted-foreground">Estimated per serving</p>
       <dl className="mt-3 grid grid-cols-2 sm:grid-cols-4 gap-3 text-sm">
         {rows.map((row) => (
           <div key={row.id}>
@@ -102,11 +109,13 @@ export function RecipeNutritionPanel({
 }
 
 export function buildNutritionPrintHtml(macros: RecipeNutritionPanelProps): string {
+  if (macros.estimateAvailable === false || !hasDisplayableNutrition(macros)) return "";
   const rows = getDisplayableMacroRows(macros);
   if (rows.length === 0) return "";
   const lines = rows.map((r) => `${r.label}: ${r.value}`).join("<br/>\n    ");
   return `<section style="margin:20px 0;padding:12px 0;border-top:1px solid #ddd;border-bottom:1px solid #ddd">
-  <h2 style="font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">Nutrition (Per Serving)</h2>
+  <h2 style="font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px">Nutrition</h2>
+  <p style="font-size:12px;color:#666;margin:0 0 8px">Estimated per serving</p>
   <p style="font-size:14px;line-height:1.8;margin:0">
     ${lines}
   </p>

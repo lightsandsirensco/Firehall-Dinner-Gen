@@ -161,8 +161,9 @@
     "protein": 18,
     "carbs": 5,
     "fat": 18,
-    "label": "per serving (hall portion)",
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
@@ -214,5 +215,7 @@
     "Instant-read thermometer",
     "Aluminum foil"
   ],
-  "mealPrepNotes": "Prep mise en place before the shift — Tater Tot Breakfast Casserole runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
+  "mealPrepNotes": "Prep mise en place before the shift — Tater Tot Breakfast Casserole runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone.",
+  "mobileImage": "/images/mobile/breakfast/tater-tot-breakfast-casserole.jpg",
+  "railImage": "/images/rails/breakfast/tater-tot-breakfast-casserole.jpg"
 }

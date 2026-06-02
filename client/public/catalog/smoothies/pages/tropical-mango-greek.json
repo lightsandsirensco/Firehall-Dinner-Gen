@@ -76,13 +76,13 @@
     }
   ],
   "nutrition": {
-    "calories": 102,
-    "protein": 5,
-    "carbs": 17,
-    "fats": 2,
-    "highlights": "~260 cal · ~18 g protein · vitamin C from citrus · natural sweetness mostly from mango",
-    "label": "per serving (hall portion)",
-    "source": "calculated",
+    "calories": 0,
+    "protein": 0,
+    "carbs": 0,
+    "fats": 0,
+    "highlights": "Nutrition estimate coming soon",
+    "label": "Estimated per serving",
+    "source": "unavailable",
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
@@ -95,7 +95,8 @@
       "highProtein": false,
       "lighterOption": true,
       "performanceMeal": true
-    }
+    },
+    "estimateAvailable": false
   },
   "substitutions": [
     "Pineapple replaces half the mango for a sharper tropical flavor.",

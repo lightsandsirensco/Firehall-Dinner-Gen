@@ -5,13 +5,18 @@
   "description": "Hydration guide for firefighters: how much to drink on shift, when electrolytes matter, and how hall meals support fluid balance without gimmicks.",
   "topic": "nutrition_performance",
   "pillar": "nutrition_performance",
-  "intro": "Hydration on shift is boring until it is not. Headaches, cramps, and bad decisions show up when water intake drifts. Firefighters lose fluid in heat, gear, and dry station air — coffee does not count as a hydration strategy.",
+  "intro": "Hydration on shift is boring until it is not. Headaches, cramps, and bad decisions show up when water intake drifts. Firefighters lose fluid in heat, gear, and dry station air — coffee does not count as a hydration strategy. Below: what halls actually cook for firefighter hydration — formats, timing, and recipe picks that survive a busy board.",
   "sections": [
     {
       "id": "when",
       "heading": "When electrolytes matter",
       "paragraphs": [
-        "Long hot jobs, back-to-back calls, and tours where you sweat more than you notice. Lightheadedness with clear urine can still mean sodium need on heavy days."
+        "Long hot jobs, back-to-back calls, and tours where you sweat more than you notice. Lightheadedness with clear urine can still mean sodium need on heavy days.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
       ]
     },
     {
@@ -20,6 +25,18 @@
       "paragraphs": [
         "Keep a water cooler visible in the kitchen. Out of sight is out of mind.",
         "Broth-based soups at dinner add sodium and fluid — useful when appetites are low."
+      ]
+    },
+    {
+      "id": "shift-fuel",
+      "heading": "How this plays across a long shift",
+      "paragraphs": [
+        "Shift nutrition is timing, not willpower. For firefighter hydration, anchor protein at dinner, keep snacks that survive the apparatus bay, and drink water like it is part of the job — not a lecture at 03:00.",
+        "This is practical hall guidance, not medical advice. Follow your department's health program and personal providers for individual plans."
+      ],
+      "tips": [
+        "Label leftovers with date — rotation matters more than recipe genius.",
+        "Pair lighter mains with one optional indulgent side when morale needs it."
       ]
     }
   ],
@@ -72,5 +89,6 @@
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
   "updatedAt": "2026-05-27T18:00:00.000Z",
-  "readMinutes": 7
+  "readMinutes": 7,
+  "heroImageAlt": "Hydration for Firefighters — firefighter hydration tips for fire station kitchens and crew-sized meals"
 }

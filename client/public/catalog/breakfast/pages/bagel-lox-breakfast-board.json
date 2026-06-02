@@ -130,23 +130,24 @@
     }
   ],
   "nutrition": {
-    "calories": 172,
-    "protein": 9,
-    "carbs": 1,
-    "fat": 15,
-    "label": "per serving (hall portion)",
-    "source": "calculated",
+    "calories": 0,
+    "protein": 0,
+    "carbs": 0,
+    "fats": 0,
+    "label": "Estimated per serving",
+    "source": "unavailable",
+    "estimateAvailable": false,
     "filterFlags": {
       "highProtein": false,
-      "under700Calories": true,
-      "under30gFat": true,
+      "under700Calories": false,
+      "under30gFat": false,
       "highCarb": false,
-      "lowCarb": true,
+      "lowCarb": false,
       "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": false,
-      "lighterOption": true,
+      "lighterOption": false,
       "performanceMeal": false
     }
   },
@@ -188,5 +189,7 @@
     "Aluminum foil"
   ],
   "mealPrepNotes": "Prep mise en place before the shift — Bagel and Lox Breakfast Board runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone.",
-  "heroImageAlt": "Bagel and Lox Breakfast Board — wide family-style firehall platter showing lox breakfast board on a crew prep table"
+  "heroImageAlt": "Bagel and Lox Breakfast Board — wide family-style firehall platter showing lox breakfast board on a crew prep table",
+  "mobileImage": "/images/mobile/breakfast/bagel-lox-breakfast-board.jpg",
+  "railImage": "/images/rails/breakfast/bagel-lox-breakfast-board.jpg"
 }

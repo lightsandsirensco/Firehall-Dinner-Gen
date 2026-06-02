@@ -13,9 +13,9 @@
   "cookTime": 85,
   "prepTime": 35,
   "difficulty": "medium",
-  "calories": 875,
+  "calories": 845,
   "protein": 79,
-  "carbs": 36,
+  "carbs": 29,
   "fats": 44,
   "tags": [
     "protein:chicken",
@@ -161,12 +161,13 @@
   "spiceLevel": "hot",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 875,
+    "calories": 845,
     "protein": 79,
-    "carbs": 36,
+    "carbs": 29,
     "fats": 44,
-    "label": "per serving (hall portion)",
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,

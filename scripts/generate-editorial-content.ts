@@ -5,6 +5,7 @@
  *   npx tsx scripts/generate-editorial-content.ts
  */
 import { EDITORIAL_ARTICLES } from "../shared/editorial/articles-data.js";
+import { withGuidePublishingDefaults } from "../shared/editorial/seo-article-build.js";
 import { editorialArticleSchema } from "../shared/editorial/content-schema.js";
 import {
   writeEditorialArticle,
@@ -13,7 +14,8 @@ import {
 
 function main(): void {
   const entries = [];
-  for (const article of EDITORIAL_ARTICLES) {
+  for (const raw of EDITORIAL_ARTICLES) {
+    const article = withGuidePublishingDefaults(raw);
     editorialArticleSchema.parse(article);
     writeEditorialArticle(article);
     entries.push({

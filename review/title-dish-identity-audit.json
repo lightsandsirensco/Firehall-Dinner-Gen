@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-06-01T01:58:44.604Z",
+  "generatedAt": "2026-06-02T15:57:45.859Z",
   "totals": {
-    "audited": 315,
-    "passed": 315,
+    "audited": 227,
+    "passed": 227,
     "failed": 0
   },
   "failedRecipes": [],
@@ -44,12 +44,6 @@
       "pass": true
     },
     {
-      "slug": "mac-and-cheese-bake",
-      "title": "Baked Mac and Cheese",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
       "slug": "mostaccioli-sausage-bake",
       "title": "Baked Mostaccioli with Sausage",
       "kind": "hall_expansion",
@@ -62,39 +56,15 @@
       "pass": true
     },
     {
-      "slug": "baked-ziti",
-      "title": "Baked Ziti",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
       "slug": "bbq-breakfast-hash",
       "title": "BBQ Breakfast Hash",
       "kind": "breakfast_catalog",
       "pass": true
     },
     {
-      "slug": "bbq-brisket-burnt-ends",
-      "title": "BBQ Burnt Ends",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
-      "slug": "bbq-chicken-bowls",
-      "title": "BBQ Chicken Bowls",
+      "slug": "bbq-chicken-mac-and-cheese",
+      "title": "BBQ Chicken Mac and Cheese",
       "kind": "hall_classic",
-      "pass": true
-    },
-    {
-      "slug": "bbq-chicken-pizza",
-      "title": "BBQ Chicken Pizza",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
-      "slug": "bbq-chicken-sliders",
-      "title": "BBQ Chicken Sliders",
-      "kind": "firehall_catalog",
       "pass": true
     },
     {
@@ -104,27 +74,9 @@
       "pass": true
     },
     {
-      "slug": "beef-barley-soup",
-      "title": "Beef Barley Soup",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
       "slug": "enchilada-beef-skillet",
       "title": "Garlic Beef Skillet",
       "kind": "hall_expansion",
-      "pass": true
-    },
-    {
-      "slug": "beef-stroganoff",
-      "title": "Beef Stroganoff",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
-      "slug": "beer-can-chicken",
-      "title": "Beer Can Chicken",
-      "kind": "firehall_catalog",
       "pass": true
     },
     {
@@ -146,12 +98,6 @@
       "pass": true
     },
     {
-      "slug": "turkey-burgers",
-      "title": "Black Bean Turkey Burgers",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
       "slug": "cajun-grilled-cod-crew",
       "title": "Black Iron Remoulade Cod Plates",
       "kind": "bbq_catalog",
@@ -161,12 +107,6 @@
       "slug": "blackened-cod-taco-night",
       "title": "Blackened Cod Taco Night",
       "kind": "performance_meal",
-      "pass": true
-    },
-    {
-      "slug": "beef-dip",
-      "title": "Blackstone Steak Sandwiches",
-      "kind": "hall_classic",
       "pass": true
     },
     {
@@ -230,12 +170,6 @@
       "pass": true
     },
     {
-      "slug": "breakfast-sausage-pizza",
-      "title": "Breakfast Sausage Gravy Pizza",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
       "slug": "breakfast-sliders",
       "title": "Breakfast Sliders",
       "kind": "breakfast_catalog",
@@ -251,12 +185,6 @@
       "slug": "brisket-style-beef-sandwiches-au-jus",
       "title": "Brisket-Style Beef Sandwiches",
       "kind": "bbq_catalog",
-      "pass": true
-    },
-    {
-      "slug": "buffalo-chicken-dip",
-      "title": "Buffalo Chicken Dip",
-      "kind": "firehall_catalog",
       "pass": true
     },
     {
@@ -278,12 +206,6 @@
       "pass": true
     },
     {
-      "slug": "butter-chicken",
-      "title": "Butter Chicken",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
       "slug": "buttermilk-pancakes",
       "title": "Buttermilk Pancakes for the Crew",
       "kind": "breakfast_catalog",
@@ -299,12 +221,6 @@
       "slug": "cajun-chicken-rice-bowl",
       "title": "Cajun Chicken Rice Bowl",
       "kind": "performance_meal",
-      "pass": true
-    },
-    {
-      "slug": "jambalaya",
-      "title": "Cajun Jambalaya for the Hall",
-      "kind": "firehall_catalog",
       "pass": true
     },
     {
@@ -338,18 +254,6 @@
       "pass": true
     },
     {
-      "slug": "cedar-plank-salmon",
-      "title": "Cedar Plank Grilled Salmon",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
-      "slug": "grilled-pork-chops",
-      "title": "Charcoal Grilled Pork Chops",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
       "slug": "cheesy-beef-nacho-bake",
       "title": "Cheesy Beef Nacho Bake",
       "kind": "hall_expansion",
@@ -359,18 +263,6 @@
       "slug": "cheesy-chicken-broccoli-rice",
       "title": "Cheesy Chicken Broccoli Rice",
       "kind": "hall_expansion",
-      "pass": true
-    },
-    {
-      "slug": "chicken-alfredo-bake",
-      "title": "Chicken Alfredo Bake",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
-      "slug": "chicken-dumpling-soup",
-      "title": "Chicken and Dumplings",
-      "kind": "firehall_catalog",
       "pass": true
     },
     {
@@ -386,39 +278,9 @@
       "pass": true
     },
     {
-      "slug": "enchilada-casserole",
-      "title": "Chicken Enchilada Casserole",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
       "slug": "chicken-paprikash-hall",
       "title": "Chicken Paprikash for the Hall",
       "kind": "hall_expansion",
-      "pass": true
-    },
-    {
-      "slug": "chicken-parm",
-      "title": "Chicken Parm",
-      "kind": "hall_classic",
-      "pass": true
-    },
-    {
-      "slug": "parm-hero-subs",
-      "title": "Chicken Parm Hero Subs",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
-      "slug": "chicken-pot-pie",
-      "title": "Chicken Pot Pie",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
-      "slug": "chicken-tikka-masala",
-      "title": "Chicken Tikka Masala",
-      "kind": "firehall_catalog",
       "pass": true
     },
     {
@@ -431,18 +293,6 @@
       "slug": "chilaquiles-verde-bake",
       "title": "Chilaquiles Verde Bake",
       "kind": "breakfast_catalog",
-      "pass": true
-    },
-    {
-      "slug": "chili-mac",
-      "title": "Chili Mac Skillet",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
-      "slug": "steak-tacos",
-      "title": "Chimichurri Steak Tacos",
-      "kind": "hall_classic",
       "pass": true
     },
     {
@@ -467,18 +317,6 @@
       "slug": "citrus-ginger",
       "title": "Citrus Ginger Smoothie",
       "kind": "smoothie",
-      "pass": true
-    },
-    {
-      "slug": "meatloaf-mashed",
-      "title": "Classic Meatloaf with Mashed Potatoes",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
-      "slug": "pepperoni-pizza-night",
-      "title": "Classic Pepperoni Pizza",
-      "kind": "firehall_catalog",
       "pass": true
     },
     {
@@ -542,21 +380,9 @@
       "pass": true
     },
     {
-      "slug": "creamy-tuscan-chicken",
-      "title": "Creamy Tuscan Chicken",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
       "slug": "crew-french-toast-bake",
       "title": "Crew French Toast Bake",
       "kind": "breakfast_catalog",
-      "pass": true
-    },
-    {
-      "slug": "crispy-chicken-cutlets",
-      "title": "Crispy Chicken Cutlets Marinara",
-      "kind": "firehall_catalog",
       "pass": true
     },
     {
@@ -575,18 +401,6 @@
       "slug": "denver-breakfast-casserole",
       "title": "Denver Breakfast Casserole",
       "kind": "breakfast_catalog",
-      "pass": true
-    },
-    {
-      "slug": "detroit-style-pizza",
-      "title": "Detroit-Style Pepperoni Pizza",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
-      "slug": "smash-burgers",
-      "title": "Double Smash Burgers",
-      "kind": "hall_classic",
       "pass": true
     },
     {
@@ -620,12 +434,6 @@
       "pass": true
     },
     {
-      "slug": "fast-philly-skillet",
-      "title": "Fast Philly Cheesesteak Skillet",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
       "slug": "fire-captain-omelette-bar",
       "title": "Fire Captain Omelette Bar",
       "kind": "breakfast_catalog",
@@ -656,39 +464,9 @@
       "pass": true
     },
     {
-      "slug": "meatball-hoagies",
-      "title": "Firehall Meatball Hoagies",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
-      "slug": "pad-thai",
-      "title": "Firehall Pad Thai",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
-      "slug": "margherita-pizza",
-      "title": "Fresh Margherita Pizza",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
       "slug": "game-day-pizza-sliders",
       "title": "Game Day Pizza Sliders",
       "kind": "hall_expansion",
-      "pass": true
-    },
-    {
-      "slug": "five-ingredient-pasta",
-      "title": "Garlic Butter Pasta",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
-      "slug": "garlic-butter-shrimp",
-      "title": "Garlic Butter Shrimp",
-      "kind": "firehall_catalog",
       "pass": true
     },
     {
@@ -698,33 +476,15 @@
       "pass": true
     },
     {
-      "slug": "batch-lasagna",
-      "title": "Giant Batch Lasagna",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
       "slug": "griddle-smash-sausage-peppers",
       "title": "Giardiniera Smash Sausage Hoagies",
       "kind": "bbq_catalog",
       "pass": true
     },
     {
-      "slug": "ginger-salmon-bowls",
-      "title": "Ginger Salmon Rice Bowls",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
       "slug": "ginger-soy-chicken-rice-bowls",
       "title": "Ginger Soy Chicken Rice Bowls",
       "kind": "hall_expansion",
-      "pass": true
-    },
-    {
-      "slug": "greek-chicken-bowls",
-      "title": "Greek Chicken Bowls",
-      "kind": "firehall_catalog",
       "pass": true
     },
     {
@@ -746,24 +506,6 @@
       "pass": true
     },
     {
-      "slug": "chicken-souvlaki",
-      "title": "Grilled Chicken Souvlaki",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
-      "slug": "flank-chimichurri",
-      "title": "Grilled Flank Steak with Chimichurri",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
-      "slug": "ny-strip-herb-butter",
-      "title": "Grilled NY Strip with Herb Butter",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
       "slug": "grilled-reuben-sandwiches-crew",
       "title": "Grilled Reuben Sandwiches for the Crew",
       "kind": "bbq_catalog",
@@ -773,12 +515,6 @@
       "slug": "grilled-shrimp-quinoa-bowls",
       "title": "Grilled Shrimp Quinoa Bowls",
       "kind": "performance_meal",
-      "pass": true
-    },
-    {
-      "slug": "grilled-corn-cotija",
-      "title": "Grilled Street Corn with Cotija",
-      "kind": "firehall_catalog",
       "pass": true
     },
     {
@@ -800,12 +536,6 @@
       "pass": true
     },
     {
-      "slug": "chicken-caesar",
-      "title": "Hall Caesar Chicken",
-      "kind": "hall_classic",
-      "pass": true
-    },
-    {
       "slug": "hall-chicken-noodle-soup",
       "title": "Hall Chicken Noodle Soup",
       "kind": "hall_expansion",
@@ -818,39 +548,15 @@
       "pass": true
     },
     {
-      "slug": "slider-bar",
-      "title": "Hall Slider Bar",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
       "slug": "hall-sloppy-joe-feed",
       "title": "Hall Sloppy Joe Feed",
       "kind": "hall_expansion",
       "pass": true
     },
     {
-      "slug": "hall-taco-bar",
-      "title": "Hall Taco Bar Night",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
-      "slug": "big-chili",
-      "title": "Hall-Sized Beef and Bean Chili",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
       "slug": "caprese-steak-skewers-crew",
       "title": "Heirloom Tomato Bocconcini Sirloin Stacks",
       "kind": "bbq_catalog",
-      "pass": true
-    },
-    {
-      "slug": "herb-roasted-thighs",
-      "title": "Herb Roasted Chicken Thighs",
-      "kind": "firehall_catalog",
       "pass": true
     },
     {
@@ -872,12 +578,6 @@
       "pass": true
     },
     {
-      "slug": "turkey-chili",
-      "title": "High-Protein Turkey Chili",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
       "slug": "honey-chipotle-chicken-thighs",
       "title": "Honey Chipotle Grilled Chicken Thighs",
       "kind": "bbq_catalog",
@@ -887,12 +587,6 @@
       "slug": "honey-garlic-chicken-rice-bowls",
       "title": "Honey Garlic Chicken Rice Bowls",
       "kind": "performance_meal",
-      "pass": true
-    },
-    {
-      "slug": "honey-garlic-pork-tenderloin",
-      "title": "Honey Garlic Grilled Pork Tenderloin",
-      "kind": "firehall_catalog",
       "pass": true
     },
     {
@@ -911,12 +605,6 @@
       "slug": "hot-honey-grilled-sausage-peppers",
       "title": "Hot Honey Grilled Sausage & Peppers",
       "kind": "bbq_catalog",
-      "pass": true
-    },
-    {
-      "slug": "honey-soppressata-pizza",
-      "title": "Hot Honey Soppressata Pizza",
-      "kind": "firehall_catalog",
       "pass": true
     },
     {
@@ -968,12 +656,6 @@
       "pass": true
     },
     {
-      "slug": "jerk-chicken",
-      "title": "Jerk Chicken & Peas and Rice",
-      "kind": "hall_classic",
-      "pass": true
-    },
-    {
       "slug": "johnnycakes-with-syrup",
       "title": "Johnnycakes with Maple Syrup",
       "kind": "breakfast_catalog",
@@ -1001,12 +683,6 @@
       "slug": "korean-bulgogi-grill-night",
       "title": "Seared Garlic Steak",
       "kind": "hall_expansion",
-      "pass": true
-    },
-    {
-      "slug": "bulgogi-bowls",
-      "title": "Korean Bulgogi Rice Bowls",
-      "kind": "firehall_catalog",
       "pass": true
     },
     {
@@ -1040,12 +716,6 @@
       "pass": true
     },
     {
-      "slug": "lemon-herb-salmon",
-      "title": "Lemon Herb Grilled Salmon",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
       "slug": "lemon-salmon-orzo-skillet",
       "title": "Lemon Salmon Orzo Skillet",
       "kind": "performance_meal",
@@ -1070,33 +740,9 @@
       "pass": true
     },
     {
-      "slug": "loaded-baked-potato-bar",
-      "title": "Loaded Baked Potato Bar",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
-      "slug": "game-day-nachos",
-      "title": "Loaded Game Day Nachos",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
       "slug": "loaded-nacho-bar-night",
       "title": "Loaded Nacho Bar Night",
       "kind": "hall_expansion",
-      "pass": true
-    },
-    {
-      "slug": "loaded-nacho-skillet",
-      "title": "Loaded Nacho Skillet",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
-      "slug": "loaded-potato-feed",
-      "title": "Loaded Potato Feed",
-      "kind": "firehall_catalog",
       "pass": true
     },
     {
@@ -1142,12 +788,6 @@
       "pass": true
     },
     {
-      "slug": "meat-lovers-sheet-pizza",
-      "title": "Meat Lover's Sheet Pan Pizza",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
       "slug": "mediterranean-baked-fish-tray",
       "title": "Crispy Garlic Fish",
       "kind": "performance_meal",
@@ -1160,33 +800,15 @@
       "pass": true
     },
     {
-      "slug": "mediterranean-chickpea",
-      "title": "Mediterranean Chickpea Bowls",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
       "slug": "mediterranean-feast-night",
       "title": "Crispy Honey Chili Chicken Thighs",
       "kind": "hall_expansion",
       "pass": true
     },
     {
-      "slug": "memphis-dry-rub-ribs",
-      "title": "Memphis Dry Rub Ribs",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
       "slug": "mesquite-chuck-roast",
       "title": "Mesquite Smoked Chuck Roast",
       "kind": "hall_expansion",
-      "pass": true
-    },
-    {
-      "slug": "street-corn-chicken",
-      "title": "Mexican Street Corn Chicken Bowls",
-      "kind": "firehall_catalog",
       "pass": true
     },
     {
@@ -1244,12 +866,6 @@
       "pass": true
     },
     {
-      "slug": "moroccan-meatballs",
-      "title": "Moroccan Spiced Lamb Meatballs",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
       "slug": "firehall-antipasto-pasta-salad",
       "title": "Mortadella Farfalle Antipasto Tray",
       "kind": "bbq_catalog",
@@ -1265,18 +881,6 @@
       "slug": "lamb-merguez-skewers-crew",
       "title": "North African Urfa Lamb Merguez Logs",
       "kind": "bbq_catalog",
-      "pass": true
-    },
-    {
-      "slug": "one-pot-chicken-rice",
-      "title": "One-Pot Chicken and Rice",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
-      "slug": "skillet-chicken-alfredo",
-      "title": "One-Skillet Chicken Alfredo",
-      "kind": "firehall_catalog",
       "pass": true
     },
     {
@@ -1334,12 +938,6 @@
       "pass": true
     },
     {
-      "slug": "performance-burrito-bowls",
-      "title": "Performance Chicken Burrito Bowls",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
       "slug": "peri-peri-chicken-platter",
       "title": "Peri Peri Chicken Platter",
       "kind": "hall_expansion",
@@ -1349,18 +947,6 @@
       "slug": "pesto-tomato-chicken-tray",
       "title": "Pesto Tomato Chicken Tray",
       "kind": "performance_meal",
-      "pass": true
-    },
-    {
-      "slug": "philly-egg-rolls",
-      "title": "Philly Cheesesteak Egg Rolls",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
-      "slug": "philly-cheesesteak-skillet",
-      "title": "Philly Cheesesteak Skillet",
-      "kind": "firehall_catalog",
       "pass": true
     },
     {
@@ -1394,33 +980,9 @@
       "pass": true
     },
     {
-      "slug": "pulled-pork",
-      "title": "Pulled Pork Sandwiches",
-      "kind": "hall_classic",
-      "pass": true
-    },
-    {
-      "slug": "beef-broccoli",
-      "title": "Quick Beef and Broccoli",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
       "slug": "quick-egg-tacos",
       "title": "Quick Egg Tacos",
       "kind": "breakfast_catalog",
-      "pass": true
-    },
-    {
-      "slug": "pork-carnitas-tacos",
-      "title": "Quick Pork Carnitas Tacos",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
-      "slug": "stuffed-peppers",
-      "title": "Quinoa Stuffed Peppers",
-      "kind": "firehall_catalog",
       "pass": true
     },
     {
@@ -1466,18 +1028,6 @@
       "pass": true
     },
     {
-      "slug": "sausage-egg-bake",
-      "title": "Sausage Egg Bake for the Crew",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
-      "slug": "sausage-peppers-onions",
-      "title": "Sausage Peppers and Onions",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
       "slug": "mongolian-beef-flat-top-crew",
       "title": "Scallion Crisp Mongolian Flank Tray",
       "kind": "bbq_catalog",
@@ -1520,21 +1070,9 @@
       "pass": true
     },
     {
-      "slug": "sheet-pan-fajitas",
-      "title": "Sheet Pan Chicken Fajitas",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
       "slug": "sheet-pan-chicken-fajitas-lite",
       "title": "Crispy Garlic Chicken",
       "kind": "performance_meal",
-      "pass": true
-    },
-    {
-      "slug": "sheet-pan-meal-prep",
-      "title": "Sheet Pan Chicken Trays",
-      "kind": "firehall_catalog",
       "pass": true
     },
     {
@@ -1547,24 +1085,6 @@
       "slug": "sheet-pan-meatball-marinara",
       "title": "Crispy Garlic Beef",
       "kind": "hall_expansion",
-      "pass": true
-    },
-    {
-      "slug": "sheet-pan-sausage-peppers",
-      "title": "Sheet Pan Sausage and Peppers",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
-      "slug": "shepherds-pie",
-      "title": "Shepherd's Pie with Greek Salad",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
-      "slug": "chicken-quesadillas",
-      "title": "Shredded Chicken Quesadillas",
-      "kind": "firehall_catalog",
       "pass": true
     },
     {
@@ -1658,12 +1178,6 @@
       "pass": true
     },
     {
-      "slug": "smoked-wings-white-sauce",
-      "title": "Smoked Wings with White BBQ Sauce",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
       "slug": "smoky-lentil-kale-soup",
       "title": "Smoky Lentil and Kale Soup",
       "kind": "performance_meal",
@@ -1697,12 +1211,6 @@
       "slug": "station-cobb-salad",
       "title": "Station Cobb Salad",
       "kind": "hall_expansion",
-      "pass": true
-    },
-    {
-      "slug": "steak-sandwiches",
-      "title": "Steak Sandwiches",
-      "kind": "hall_classic",
       "pass": true
     },
     {
@@ -1742,33 +1250,9 @@
       "pass": true
     },
     {
-      "slug": "teriyaki-donburi",
-      "title": "Teriyaki Chicken Donburi",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
-      "slug": "teriyaki-salmon-grill",
-      "title": "Teriyaki Grilled Salmon",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
       "slug": "texas-central-brisket-crew",
       "title": "Texas Central Brisket for the Crew",
       "kind": "bbq_catalog",
-      "pass": true
-    },
-    {
-      "slug": "texas-beef-ribs",
-      "title": "Texas-Style Beef Ribs",
-      "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
-      "slug": "thai-basil-chicken",
-      "title": "Thai Basil Chicken Stir Fry",
-      "kind": "firehall_catalog",
       "pass": true
     },
     {
@@ -1799,12 +1283,6 @@
       "slug": "turkey-lettuce-wrap-night",
       "title": "Turkey Lettuce Wrap Night",
       "kind": "performance_meal",
-      "pass": true
-    },
-    {
-      "slug": "turkey-meatball-zoodles",
-      "title": "Turkey Meatballs with Zucchini Noodles",
-      "kind": "firehall_catalog",
       "pass": true
     },
     {
@@ -1859,12 +1337,6 @@
       "slug": "white-bean-chicken-chili",
       "title": "White Bean Chicken Chili",
       "kind": "performance_meal",
-      "pass": true
-    },
-    {
-      "slug": "white-garlic-chicken-pizza",
-      "title": "White Garlic Chicken Pizza",
-      "kind": "firehall_catalog",
       "pass": true
     },
     {

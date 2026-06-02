@@ -5,78 +5,89 @@
   "description": "Ten rookie-proof firehall meals: chili, pulled pork, tacos, lasagna, and more — hard to ruin, crew-sized, with common mistakes and success tips for new firefighters cooking on shift.",
   "topic": "station_cooking",
   "pillar": "recipes_meals",
-  "intro": "Every hall has a story about a rookie who burned the garlic or salted the chili twice. You will cook on shift — that is part of the job. These ten rookie-proof firehall meals are hard to ruin, feed a crew, and build confidence without requiring culinary school. Cook with a partner your first time, read the full recipe before you start, and remember: crews respect effort and cleanup more than perfect plating.",
+  "intro": "Every hall has a story about a rookie who burned the garlic or salted the chili twice. You will cook on shift — that is part of the job. These ten meals are hard to ruin, feed a crew, and build confidence without culinary school. Read the full recipe before you start, grab a partner your first time, and remember: the crew cares more about hot food and a clean kitchen than perfect plating.",
   "sections": [
     {
       "id": "pick-rookie",
       "heading": "What makes a meal rookie-proof",
       "paragraphs": [
-        "Forgiving timing, simple ingredients, one main pot or line, and a result that still tastes good if someone eats late. If the recipe dies when it sits ten minutes, save it until you have a quiet board."
+        "Forgiving timing, simple ingredients, one main pot or line, and food that still eats well if someone shows up twenty minutes late. If the recipe dies the moment it sits, wait until you have a quiet board.",
+        "Big chili is the usual first win — it simmers, forgives, and the toppings hide a lot. Hall taco bar night teaches line setup without a fragile finish. Save the brisket ego project for year two."
       ]
     },
     {
       "id": "partner",
       "heading": "Cook with a partner the first time",
       "paragraphs": [
-        "One cook, one runner, one person reading the next step — that is enough structure to survive your first hall dinner. Ask the senior who usually runs chili to shadow you once. Nobody expects perfection; they expect hot food and a clean kitchen after."
+        "One cook, one runner, one person reading the next step aloud. Ask whichever senior always runs chili to stand in the kitchen with you once — not to take over, just to catch you before you double the salt.",
+        "Nobody expects a Michelin plate. They expect you to own cleanup when it is done. I have seen rookies save a salty batch with beans and broth and earn more respect than the guy who ordered pizza and left the boxes."
+      ]
+    },
+    {
+      "id": "recover",
+      "heading": "When dinner goes sideways",
+      "paragraphs": [
+        "Own it early. Thin oversalted chili with more beans and stock. Order backup bread if the main is fine but light. Do not disappear after service — halls remember who stayed to scrub.",
+        "Probe poultry and pork. Guessing is how you serve pink chicken and get roasted in the bay for a month. Empty the grease trap before slider night; keep the right extinguisher where the grill cook can see it."
       ]
     }
   ],
   "practicalAdvice": [
     "Read the recipe end-to-end before you touch a knife — surprises mid-cook are how pans get burned.",
     "Taste and season in layers — salt at the start, acid at the finish.",
-    "Start cleanup while things hold — leaving the kitchen a mess wipes out a good meal."
+    "Start cleanup while things hold — leaving the kitchen a mess wipes out a good meal.",
+    "Post who is cooking on the whiteboard so late eaters know what is holding warm."
   ],
   "mealRecommendations": [
     {
       "slug": "big-chili",
       "title": "1. Hall-Sized Beef and Bean Chili",
-      "blurb": "Why rookie-friendly: simmers, does not need a precise finish. Mistake: oversalting before it reduces — season late. Tip: hold on low; toppings fix everything."
+      "blurb": "Simmers — season late so you do not oversalt before it reduces. Hold on low; toppings fix a lot."
     },
     {
       "slug": "pulled-pork",
       "title": "2. Pulled Pork Sandwiches",
-      "blurb": "Why rookie-friendly: pork forgives long holds. Mistake: pulling before it rests — shreds tough. Tip: sauce on the side; buns portion the crew."
+      "blurb": "Pork forgives long holds. Rest before you shred; sauce on the side."
     },
     {
       "slug": "hall-taco-bar",
       "title": "3. Hall Taco Bar Night",
-      "blurb": "Why rookie-friendly: assembly line, not one perfect plate. Mistake: one giant pile of meat with no toppings ready. Tip: lay out cold toppings before protein hits the line."
+      "blurb": "Lay out cold toppings before the meat hits — assembly, not plating stress."
     },
     {
       "slug": "batch-lasagna",
       "title": "4. Giant Batch Lasagna",
-      "blurb": "Why rookie-friendly: oven does the work. Mistake: cutting too early — sloppy slices. Tip: rest ten minutes; use a sharp knife and a spatula."
+      "blurb": "Oven does the work. Rest ten minutes before you cut or the slices slide."
     },
     {
       "slug": "chicken-parm",
       "title": "5. Chicken Parm",
-      "blurb": "Why rookie-friendly: sauce and cheese cover a lot. Mistake: crowding the pan when searing cutlets — steam instead of color. Tip: sear in batches, finish with cheese under the broiler."
+      "blurb": "Sear cutlets in batches — crowding steams instead of browning."
     },
     {
       "slug": "beef-dip",
       "title": "6. Beef Dip Sandwiches",
-      "blurb": "Why rookie-friendly: roast, slice, dip — straightforward arc. Mistake: skipping the rest before slice — juices run off. Tip: warm au jus separately; do not soak rolls until service."
+      "blurb": "Rest the roast before slice. Warm au jus separate from the rolls."
     },
     {
       "slug": "breakfast-burrito-bar",
       "title": "7. Breakfast Burrito Bar",
-      "blurb": "Why rookie-friendly: components, not timing-sensitive plating. Mistake: cold tortillas — they tear. Tip: warm tortillas in a dry pan or covered warmer first."
+      "blurb": "Warm tortillas first or they tear when the line rush hits."
     },
     {
       "slug": "beef-barley-soup",
       "title": "8. Beef Barley Soup (Soup Night)",
-      "blurb": "Why rookie-friendly: soup forgives, sandwiches on the side are store-bought if needed. Mistake: boiling instead of simmering — tough meat. Tip: low simmer, skim fat, taste before you salt."
+      "blurb": "Low simmer — boiling makes the meat tough. Taste before the final salt."
     },
     {
       "slug": "one-pot-chicken-rice",
       "title": "9. One-Pot Chicken and Rice",
-      "blurb": "Why rookie-friendly: one pot, clear steps. Mistake: lifting the lid every two minutes — steam escapes, rice turns mushy. Tip: set a timer and trust it."
+      "blurb": "Set a timer; lifting the lid every two minutes turns rice mushy."
     },
     {
       "slug": "slider-bar",
       "title": "10. Slider Bar Night",
-      "blurb": "Why rookie-friendly: small patties cook fast — mistakes are small too. Mistake: dry buns — toast them. Tip: two proteins max; keep toppings simple."
+      "blurb": "Toast the buns. Two proteins max so you are not running three flat-tops."
     }
   ],
   "faqs": [
@@ -91,14 +102,6 @@
     {
       "question": "Should rookies avoid the grill and smoker?",
       "answer": "Start on batches and lines. Move to grill night once you are comfortable with temps and probe checks. Pull pork and burgers are fine first grill projects with a partner; brisket can wait."
-    },
-    {
-      "question": "Where do these recipes come from?",
-      "answer": "Each link goes to a full recipe on Firehall Meals — crew-sized portions, station timing, and steps written for a shared kitchen. Not home-blog scaling."
-    },
-    {
-      "question": "What if crew size or time changes tonight?",
-      "answer": "Use Find a Meal with your headcount and minutes available. It pulls from the same hall-tested dinners these guides recommend."
     }
   ],
   "relatedArticleSlugs": [
@@ -116,5 +119,6 @@
   "publishedAt": "2026-05-27T18:00:00.000Z",
   "updatedAt": "2026-05-27T18:00:00.000Z",
   "readMinutes": 9,
-  "seoTitle": "10 Rookie-Proof Firehall Meals | Firehall Meals"
+  "seoTitle": "10 Rookie-Proof Firehall Meals | Firehall Meals",
+  "heroImageAlt": "10 Rookie-Proof Firehall Meals — rookie firefighter meals tips for fire station kitchens and crew-sized meals"
 }

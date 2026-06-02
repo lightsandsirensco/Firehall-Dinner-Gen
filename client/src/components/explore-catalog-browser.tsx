@@ -4,15 +4,21 @@ import { Clock } from "lucide-react";
 import {
   APPROVED_CATALOG_COOK_TIME_LABELS,
   APPROVED_CATALOG_PRIMARY_LABELS,
-  type ApprovedCatalogEntry,
+  approvedCatalogRecipePath,
   type ApprovedCatalogCookTimeBucket,
+  type ApprovedCatalogGridEntry,
   type ApprovedCatalogPrimaryFilter,
 } from "@shared/approved-catalog";
 import { MissingRecipeImagePlaceholder } from "@/components/missing-recipe-image-placeholder";
 import { cn } from "@/lib/utils";
 import { FilterChip, FilterChipScroller } from "@/components/mobile/filter-chips";
 import { Button } from "@/components/ui/button";
-import { approvedCatalogQueryKey, fetchApprovedCatalog } from "@/lib/approved-catalog-api";
+import {
+  approvedCatalogGridQueryKey,
+  fetchApprovedCatalogGrid,
+} from "@/lib/approved-catalog-api";
+import { ExploreCatalogCardBoundary } from "@/components/explore-catalog-card-boundary";
+import { useIsMobile } from "@/hooks/use-mobile";
 import { fetchRecipeRatingSortMap } from "@/lib/recipe-crew-ratings-api";
 import { ExploreRatingCollections } from "@/components/explore-rating-collections";
 import {
@@ -24,10 +30,11 @@ import {
 } from "@/lib/approved-catalog-filters";
 import { RecipeGridSkeleton } from "@/components/mobile/loading-skeletons";
 import { trackExploreFilter, trackExploreRecipeClick, trackSearch } from "@/lib/analytics";
-import { exploreCardImageCandidates, EXPLORE_CATALOG_PAGE_SIZE } from "@/lib/explore-card-image";
+import { exploreCardImageCandidates, exploreCatalogPageSize } from "@/lib/explore-card-image";
+import { EXPLORE_CATALOG_PAGE_SIZE_MOBILE } from "@/lib/explore-mobile-page-size";
 import type { RecipeRatingSortMap } from "@/lib/recipe-crew-ratings-api";
 
-export { EXPLORE_CATALOG_PAGE_SIZE };
+export { EXPLORE_CATALOG_PAGE_SIZE_MOBILE as EXPLORE_CATALOG_PAGE_SIZE };
 
 const PRIMARY_FILTERS: ApprovedCatalogPrimaryFilter[] = [
   "all",
@@ -54,10 +61,10 @@ const SORT_LABELS: Record<CatalogSortMode, string> = {
 };
 
 function sortCatalogEntries(
-  rows: ApprovedCatalogEntry[],
+  rows: ApprovedCatalogGridEntry[],
   sort: CatalogSortMode,
   sortMap: RecipeRatingSortMap | undefined,
-): ApprovedCatalogEntry[] {
+): ApprovedCatalogGridEntry[] {
   if (sort === "curated" || !sortMap) {
     return [...rows].sort((a, b) => a.title.localeCompare(b.title));
   }
@@ -80,11 +87,14 @@ function sortCatalogEntries(
   return rows;
 }
 
+const EXPLORE_CARD_IMG_WIDTH = 320;
+const EXPLORE_CARD_IMG_HEIGHT = 400;
+
 const ApprovedCatalogCard = memo(function ApprovedCatalogCard({
   entry,
   onClick,
 }: {
-  entry: ApprovedCatalogEntry;
+  entry: ApprovedCatalogGridEntry;
   onClick: () => void;
 }) {
   const candidates = useMemo(() => exploreCardImageCandidates(entry), [entry]);
@@ -102,7 +112,7 @@ const ApprovedCatalogCard = memo(function ApprovedCatalogCard({
     <article
       className={cn(
         "group flex h-full cursor-pointer flex-col overflow-hidden rounded-2xl bg-card/30 ring-1 ring-border/15",
-        "hover:ring-primary/25",
+        "md:hover:ring-primary/25",
       )}
       onClick={onClick}
       role="button"
@@ -114,14 +124,21 @@ const ApprovedCatalogCard = memo(function ApprovedCatalogCard({
         }
       }}
       data-testid={`explore-catalog-card-${entry.slug}`}
+      data-recipe-route={approvedCatalogRecipePath(entry.slug)}
     >
-      <div className="relative aspect-[4/5] overflow-hidden bg-zinc-950">
+      <div
+        className="relative aspect-[4/5] overflow-hidden bg-zinc-950"
+        style={{ contain: "layout paint" }}
+      >
         {showImage ? (
           <img
             src={imageSrc}
             alt={entry.title}
+            width={EXPLORE_CARD_IMG_WIDTH}
+            height={EXPLORE_CARD_IMG_HEIGHT}
             loading="lazy"
             decoding="async"
+            fetchPriority="low"
             className="absolute inset-0 h-full w-full object-cover object-center"
             onError={() => {
               setCandidateIndex((prev) => {
@@ -137,7 +154,7 @@ const ApprovedCatalogCard = memo(function ApprovedCatalogCard({
       </div>
 
       <div className="flex flex-1 flex-col gap-1.5 p-3">
-        <h3 className="line-clamp-2 text-sm font-medium leading-snug group-hover:text-primary">
+        <h3 className="line-clamp-2 text-sm font-medium leading-snug md:group-hover:text-primary">
           {entry.title}
         </h3>
         <p className="mt-auto flex items-center gap-1.5 text-xs capitalize text-muted-foreground">
@@ -159,24 +176,31 @@ export interface ExploreCatalogBrowserProps {
 }
 
 export function ExploreCatalogBrowser({ onRecipeClick, className }: ExploreCatalogBrowserProps) {
+  const isMobile = useIsMobile();
+  const pageSize = exploreCatalogPageSize(isMobile);
+
   const [filters, setFilters] = useState<ApprovedCatalogFilterState>(
     DEFAULT_APPROVED_CATALOG_FILTERS,
   );
   const [sort, setSort] = useState<CatalogSortMode>("curated");
   const [searchInput, setSearchInput] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
-  const [visibleCount, setVisibleCount] = useState(EXPLORE_CATALOG_PAGE_SIZE);
+  const [visibleCount, setVisibleCount] = useState(pageSize);
+
+  useEffect(() => {
+    setVisibleCount(pageSize);
+  }, [pageSize]);
 
   useEffect(() => {
     const timer = window.setTimeout(() => {
       setSearchQuery(searchInput.trim().toLowerCase());
-    }, 300);
+    }, 280);
     return () => window.clearTimeout(timer);
   }, [searchInput]);
 
   const { data, isLoading, error, refetch } = useQuery({
-    queryKey: approvedCatalogQueryKey,
-    queryFn: fetchApprovedCatalog,
+    queryKey: approvedCatalogGridQueryKey,
+    queryFn: fetchApprovedCatalogGrid,
     staleTime: 10 * 60 * 1000,
     gcTime: 30 * 60 * 1000,
     refetchOnWindowFocus: false,
@@ -202,8 +226,8 @@ export function ExploreCatalogBrowser({ onRecipeClick, className }: ExploreCatal
   }, [data?.recipes, filters, sort, sortMap, searchQuery]);
 
   useEffect(() => {
-    setVisibleCount(EXPLORE_CATALOG_PAGE_SIZE);
-  }, [filters, sort, searchQuery]);
+    setVisibleCount(pageSize);
+  }, [filters, sort, searchQuery, pageSize]);
 
   const lastTrackedSearch = useRef("");
   useEffect(() => {
@@ -229,7 +253,7 @@ export function ExploreCatalogBrowser({ onRecipeClick, className }: ExploreCatal
   }, []);
 
   const handleRecipeClick = useCallback(
-    (entry: ApprovedCatalogEntry) => {
+    (entry: ApprovedCatalogGridEntry) => {
       trackExploreRecipeClick({ slug: entry.slug, title: entry.title });
       onRecipeClick(entry.slug);
     },
@@ -444,10 +468,15 @@ export function ExploreCatalogBrowser({ onRecipeClick, className }: ExploreCatal
               >
                 {visibleRecipes.map((entry) => (
                   <li key={entry.slug} className="[content-visibility:auto]">
-                    <ApprovedCatalogCard
+                    <ExploreCatalogCardBoundary
                       entry={entry}
                       onClick={() => handleRecipeClick(entry)}
-                    />
+                    >
+                      <ApprovedCatalogCard
+                        entry={entry}
+                        onClick={() => handleRecipeClick(entry)}
+                      />
+                    </ExploreCatalogCardBoundary>
                   </li>
                 ))}
               </ul>
@@ -457,10 +486,10 @@ export function ExploreCatalogBrowser({ onRecipeClick, className }: ExploreCatal
                     type="button"
                     variant="outline"
                     className="min-h-11 px-8"
-                    onClick={() => setVisibleCount((n) => n + EXPLORE_CATALOG_PAGE_SIZE)}
+                    onClick={() => setVisibleCount((n) => n + pageSize)}
                     data-testid="explore-catalog-load-more"
                   >
-                    Load more ({Math.min(EXPLORE_CATALOG_PAGE_SIZE, filtered.length - visibleCount)} more)
+                    Load more ({Math.min(pageSize, filtered.length - visibleCount)} more)
                   </Button>
                 </div>
               )}

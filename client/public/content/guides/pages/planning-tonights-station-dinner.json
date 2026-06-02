@@ -2,10 +2,10 @@
   "slug": "planning-tonights-station-dinner",
   "title": "Planning Tonight's Station Dinner (Without the 6 PM Panic)",
   "subtitle": "A simple decision tree for firehall dinner ideas",
-  "description": "How to pick tonight's fire station meal: time, crew size, appliances, and hall-tested recipe picks crews actually cook.",
+  "description": "Firehall dinner ideas for tonight: pick by time, crew size, and appliances — with hall-tested recipes crews actually cook on shift.",
   "topic": "meal_planning",
   "pillar": "operations_how_to",
-  "intro": "The hardest part of dinner is not cooking — it is deciding. On shift, decision fatigue hits early. Use a simple filter: how much time, how many mouths, what appliance is free, and whether the board feels loud or quiet. Then pick a format, not a Pinterest fantasy.",
+  "intro": "Firehall dinner ideas should be decided before 17:00 — not argued about at 18:45 while someone stares into the walk-in. The hardest part of dinner is not cooking; it is picking a format that matches time, crew size, and how loud the board feels. Use a simple filter: minutes available, mouths to feed, which appliance is free, then choose tacos, a batch, or a bake — not a Pinterest fantasy.",
   "sections": [
     {
       "id": "decision-tree",
@@ -22,6 +22,18 @@
       "paragraphs": [
         "Put two options on the whiteboard, not ten. Run a quick vote, then commit. Indecision burns more time than cooking the wrong pasta.",
         "If the board is still loud, default to a line meal. Tacos and bowls end debates because people customize."
+      ]
+    },
+    {
+      "id": "shift-pick",
+      "heading": "Pick the format before the recipe",
+      "paragraphs": [
+        "For firehall dinner ideas, decide line vs. plated vs. batch before you open a recipe tab. Lines win when eaters show up between 17:00 and 20:00; batches win when you know the whole crew lands at once.",
+        "Post protein, starch, and hold plan on the whiteboard. When tones drop, the next cook should read \"covered on low\" instead of guessing what you meant on the flat-top."
+      ],
+      "tips": [
+        "Assign one cook and one runner — everyone else stays out until called.",
+        "Sauces on the side keep reheat from turning gluey for post-call eaters."
       ]
     }
   ],
@@ -76,5 +88,7 @@
   ],
   "publishedAt": "2026-05-27T12:00:00.000Z",
   "updatedAt": "2026-05-27T12:00:00.000Z",
-  "readMinutes": 6
+  "readMinutes": 7,
+  "seoTitle": "Firehall Dinner Ideas: Plan Tonight's Station Meal",
+  "heroImageAlt": "Planning Tonight's Station Dinner (Without the 6 PM Panic) — firehall dinner ideas tips for fire station kitchens and crew-sized meals"
 }

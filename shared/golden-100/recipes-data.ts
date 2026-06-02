@@ -7,7 +7,7 @@ import { goldenEntry } from "./entry.js";
 export const GOLDEN_100_TARGET_BY_CATEGORY = {
   firehall_classics: 15,
   bbq_grill_nights: 15,
-  comfort_food: 12,
+  comfort_food: 13,
   healthy_performance: 12,
   quick_shift_meals: 10,
   pizza_night: 8,
@@ -68,6 +68,24 @@ const COMFORT = [
   goldenEntry({ slug: "beef-barley-soup", title: "Beef Barley Soup", cat: "comfort_food", protein: "beef", cuisine: "american", format: "soup_chili", pools: ["hearty", "comfort"], hook: "Cold-night bowl that fills everyone", search: "beef barley soup hearty", inspiration: "Bon Appétit" }),
   goldenEntry({ slug: "baked-ziti", title: "Baked Ziti", cat: "comfort_food", protein: "beef", cuisine: "italian", format: "pasta", pools: ["comfort", "pasta"], hook: "Cheesy pasta bake for the table", search: "baked ziti meat sauce dinner", inspiration: "GialloZafferano" }),
   goldenEntry({ slug: "chicken-dumpling-soup", title: "Chicken and Dumplings", cat: "comfort_food", protein: "chicken", cuisine: "american", format: "soup_chili", pools: ["hearty", "comfort"], hook: "Post-shift hug in a pot", search: "chicken and dumplings soup", inspiration: "Serious Eats" }),
+  goldenEntry({
+    slug: "bbq-chicken-mac-and-cheese",
+    title: "BBQ Chicken Mac and Cheese",
+    cat: "comfort_food",
+    protein: "chicken",
+    cuisine: "american",
+    format: "bake",
+    pools: ["comfort", "bbq", "chicken"],
+    hook: "Shredded BBQ chicken baked into creamy mac — hall comfort tray",
+    search: "bbq chicken mac and cheese casserole bake shredded chicken",
+    inspiration: "Firehall Meals",
+    rec: { rookieFriendly: 9, comfortFoodScore: 10, feedsHardScore: 8 },
+    img: {
+      shotPreset: "pasta",
+      promptFocus:
+        "creamy baked mac and cheese in hotel pan with visible shredded BBQ chicken, melted cheddar and mozzarella, BBQ sauce glaze, cheese pull, steam",
+    },
+  }),
 ];
 
 const HEALTHY = [

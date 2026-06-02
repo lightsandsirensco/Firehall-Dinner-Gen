@@ -5,20 +5,42 @@
   "description": "Firefighter comfort meals for post-call nights: what works, what to avoid, and hall-tested recipes that hit the spot.",
   "topic": "crew_culture",
   "pillar": "station_lifestyle",
-  "intro": "After a long job, nobody wants a precious small plate. Comfort food at the hall means salt, starch, heat, and enough volume that people stop picking at leftovers an hour later. It is not about guilt — it is about recovery and crew mood.",
+  "intro": "After a long job, nobody wants a precious small plate. Comfort food at the hall means salt, starch, heat, and enough volume that people stop picking at leftovers an hour later. It is not about guilt — it is about recovery and crew mood. Below: what halls actually cook for firefighter comfort food — formats, timing, and recipe picks that survive a busy board.",
   "sections": [
     {
       "id": "what-works",
       "heading": "What lands after a hard shift",
       "paragraphs": [
-        "Braises, baked pastas, cheesy trays, and big bowls beat delicate proteins. The meal should still taste good at lukewarm — because that is how some people will eat it."
+        "Braises, baked pastas, cheesy trays, and big bowls beat delicate proteins. The meal should still taste good at lukewarm — because that is how some people will eat it.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
       ]
     },
     {
       "id": "what-to-skip",
       "heading": "What to skip when everyone is fried",
       "paragraphs": [
-        "Fussy timelines, strong bitter greens as the main, or anything that requires perfect crispness to enjoy. Save the experimental fusion for a slow Tuesday."
+        "Fussy timelines, strong bitter greens as the main, or anything that requires perfect crispness to enjoy. Save the experimental fusion for a slow Tuesday.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
+      ]
+    },
+    {
+      "id": "crew-table",
+      "heading": "Feed the room, not just the plate",
+      "paragraphs": [
+        "After a long call, people eat at different speeds. For firefighter comfort food, plan volume and hold time so the last person off the rig still gets a hot portion — not scraped pans.",
+        "Comfort is not an excuse to skip cleanup. Soak trays while people eat; the hall should not wake up to a crusted prep table."
+      ],
+      "tips": [
+        "Keep hot sauce, salt, and bread on the line — tired crews self-correct flavor fast.",
+        "Second helpings need extra starch before extra protein."
       ]
     }
   ],
@@ -77,5 +99,6 @@
   ],
   "publishedAt": "2026-05-27T12:00:00.000Z",
   "updatedAt": "2026-05-27T12:00:00.000Z",
-  "readMinutes": 6
+  "readMinutes": 7,
+  "heroImageAlt": "Comfort Food After a Long Call — firefighter comfort food tips for fire station kitchens and crew-sized meals"
 }

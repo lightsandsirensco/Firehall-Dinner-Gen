@@ -5,20 +5,42 @@
   "description": "Firehall grocery planning for station dinners: quantity lists, staple pantry, and shopping once for the week instead of three emergency runs.",
   "topic": "meal_planning",
   "pillar": "operations_how_to",
-  "intro": "Grocery planning for the hall is half the battle. A list tied to one meal beats a cart full of 'maybe.' Start with crew count, pick a format (batch, line, grill), then buy protein first and starch second — everything else supports those two.",
+  "intro": "Grocery planning for the hall is half the battle. A list tied to one meal beats a cart full of 'maybe.' Start with crew count, pick a format (batch, line, grill), then buy protein first and starch second — everything else supports those two. Below: what halls actually cook for firehall grocery list — formats, timing, and recipe picks that survive a busy board.",
   "sections": [
     {
       "id": "list",
       "heading": "Build the list from the meal",
       "paragraphs": [
-        "Chili: meat, beans, tomatoes, onions, spices. Taco bar: protein, tortillas, toppings. Sheet pan: protein, peppers, oil, seasoning."
+        "Chili: meat, beans, tomatoes, onions, spices. Taco bar: protein, tortillas, toppings. Sheet pan: protein, peppers, oil, seasoning.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
       ]
     },
     {
       "id": "pantry",
       "heading": "Pantry staples to keep stocked",
       "paragraphs": [
-        "Oil, salt, pepper, garlic, onions, rice, pasta, canned tomatoes, and foil. When these exist, dinner is a decision — not a store run."
+        "Oil, salt, pepper, garlic, onions, rice, pasta, canned tomatoes, and foil. When these exist, dinner is a decision — not a store run.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
+      ]
+    },
+    {
+      "id": "shift-pick",
+      "heading": "Pick the format before the recipe",
+      "paragraphs": [
+        "For firehall grocery list, decide line vs. plated vs. batch before you open a recipe tab. Lines win when eaters show up between 17:00 and 20:00; batches win when you know the whole crew lands at once.",
+        "Post protein, starch, and hold plan on the whiteboard. When tones drop, the next cook should read \"covered on low\" instead of guessing what you meant on the flat-top."
+      ],
+      "tips": [
+        "Assign one cook and one runner — everyone else stays out until called.",
+        "Sauces on the side keep reheat from turning gluey for post-call eaters."
       ]
     }
   ],
@@ -66,5 +88,6 @@
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
   "updatedAt": "2026-05-27T18:00:00.000Z",
-  "readMinutes": 7
+  "readMinutes": 7,
+  "heroImageAlt": "Firehall Grocery Planning — firehall grocery list tips for fire station kitchens and crew-sized meals"
 }

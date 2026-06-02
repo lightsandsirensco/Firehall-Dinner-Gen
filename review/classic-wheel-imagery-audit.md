@@ -1,6 +1,6 @@
 # Classics Wheel imagery audit
 
-Generated: 2026-05-31T13:31:48.726Z
+Generated: 2026-06-02T14:06:31.595Z
 
 - **Total wheel classics:** 10
 - **Approved + on disk:** 10
@@ -17,7 +17,7 @@ Generated: 2026-05-31T13:31:48.726Z
 - `chicken-caesar` — **Chicken Caesar Salad** — approved — `/images/golden-100/chicken-caesar.jpg`
 - `jerk-chicken` — **Jerk Chicken & Peas and Rice** — approved — `/images/golden-100/jerk-chicken.jpg`
 - `beef-dip` — **Beef Dip Sandwiches** — approved — `/images/golden-100/beef-dip.jpg`
-- `bbq-chicken-bowls` — **BBQ Chicken Bowls** — approved — `/images/golden-100/bbq-chicken-bowls.jpg`
+- `bbq-chicken-mac-and-cheese` — **BBQ Chicken Mac and Cheese** — approved — `/images/golden-100/bbq-chicken-mac-and-cheese.jpg`
 - `steak-sandwiches` — **Steak Sandwiches** — approved — `/images/golden-100/steak-sandwiches.jpg`
 
 ## Errors

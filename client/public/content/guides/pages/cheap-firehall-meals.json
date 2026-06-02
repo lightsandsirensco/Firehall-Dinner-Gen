@@ -5,27 +5,50 @@
   "description": "Pasta, chili, tacos, egg bakes, and chicken thighs that taste good on a tight budget — flavor from technique, not price tags.",
   "topic": "meal_planning",
   "pillar": "recipes_meals",
-  "intro": "Budget nights are normal — dues, fundraisers, and 'we already spent too much this month' happen. Cheap firehall meals lean on pasta, beans, chicken thighs, ground beef, and eggs. Flavor comes from browning, acid, and salt — not expensive cuts.",
+  "intro": "Budget nights are normal — dues, fundraisers, and 'we already spent too much this month' happen. Cheap firehall meals lean on pasta, beans, chicken thighs, ground beef, and eggs. Flavor comes from browning, acid, and salt — not expensive cuts. Below: what halls actually cook for cheap firehall meals — formats, timing, and recipe picks that survive a busy board.",
   "sections": [
     {
       "id": "flavor",
       "heading": "Cheap does not mean bland",
       "paragraphs": [
-        "Toast spices, brown meat, finish with lemon or vinegar. Crews notice technique more than truffle oil."
+        "Toast spices, brown meat, finish with lemon or vinegar. Crews notice technique more than truffle oil.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
       ]
     },
     {
       "id": "shop-smart",
       "heading": "Shop smart for the hall",
       "paragraphs": [
-        "Buy in bulk for staples, thighs over breasts when appropriate, and one 'splurge' topping so budget night still feels intentional."
+        "Buy in bulk for staples, thighs over breasts when appropriate, and one 'splurge' topping so budget night still feels intentional.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
+      ]
+    },
+    {
+      "id": "shift-pick",
+      "heading": "Pick the format before the recipe",
+      "paragraphs": [
+        "For cheap firehall meals, decide line vs. plated vs. batch before you open a recipe tab. Lines win when eaters show up between 17:00 and 20:00; batches win when you know the whole crew lands at once.",
+        "Post protein, starch, and hold plan on the whiteboard. When tones drop, the next cook should read \"covered on low\" instead of guessing what you meant on the flat-top."
+      ],
+      "tips": [
+        "Assign one cook and one runner — everyone else stays out until called.",
+        "Sauces on the side keep reheat from turning gluey for post-call eaters."
       ]
     }
   ],
   "practicalAdvice": [
     "Buy whole birds or thighs instead of breasts when appropriate.",
     "Beans and lentils stretch chili without complaint if seasoned boldly.",
-    "Frozen veg and bulk rice are hall allies."
+    "Frozen veg and bulk rice are hall allies.",
+    "Post who's cooking and what's holding warm on the whiteboard — post-call eaters should not hunt for answers."
   ],
   "mealRecommendations": [
     {
@@ -79,5 +102,6 @@
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
   "updatedAt": "2026-05-27T18:00:00.000Z",
-  "readMinutes": 7
+  "readMinutes": 7,
+  "heroImageAlt": "Cheap Firehall Meals That Still Taste Good — cheap firehall meals tips for fire station kitchens and crew-sized meals"
 }

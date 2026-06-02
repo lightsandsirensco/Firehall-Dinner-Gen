@@ -52,6 +52,25 @@ export interface ApprovedCatalogResponse {
   recipes: ApprovedCatalogEntry[];
 }
 
+/** Lightweight fields for Explore grid — no hero URLs in JSON payload. */
+export type ApprovedCatalogGridEntry = Omit<ApprovedCatalogEntry, "heroImage">;
+
+export interface ApprovedCatalogGridResponse {
+  version: 1;
+  recipeCount: number;
+  recipes: ApprovedCatalogGridEntry[];
+}
+
+export function toApprovedCatalogGridResponse(
+  catalog: ApprovedCatalogResponse,
+): ApprovedCatalogGridResponse {
+  return {
+    version: catalog.version,
+    recipeCount: catalog.recipeCount,
+    recipes: catalog.recipes.map(({ heroImage: _hero, ...rest }) => rest),
+  };
+}
+
 export const APPROVED_CATALOG_COOK_TIME_LABELS: Record<ApprovedCatalogCookTimeBucket, string> = {
   under_30: "Under 30 min",
   "30_to_60": "30–60 min",

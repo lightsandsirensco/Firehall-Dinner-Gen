@@ -3,20 +3,20 @@
   "title": "Steak Sandwiches",
   "displayTitle": "Steak Sandwiches",
   "seoTitle": "Steak Sandwiches | Firefighter Meal",
-  "shortDescription": "Thin-sliced steak, toasted roll, hall classic",
-  "subtitle": "Thin-sliced steak, toasted roll, hall classic",
+  "shortDescription": "Grilled steak on toasted rolls, hall classic",
+  "subtitle": "Grilled steak on toasted rolls, hall classic",
   "category": "firehall_classics",
   "cuisine": "american",
-  "description": "Grill marks, melted cheese, sandwich line. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
+  "description": "Grilled steak piled on toasted rolls with melted cheese — proper hall sandwiches for the crew line, not open-faced toast.",
   "crewSize": 8,
   "baseServings": 8,
   "cookTime": 60,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 1400,
-  "protein": 120,
-  "carbs": 85,
-  "fats": 90,
+  "calories": 0,
+  "protein": 0,
+  "carbs": 0,
+  "fats": 0,
   "tags": [
     "protein:beef",
     "format:sandwich",
@@ -118,89 +118,123 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Season & rest steak (no heat, 10 min)",
-      "instruction": "Pat steaks dry; salt and pepper generously. Let sit at room temp while ovens and grill heat.",
-      "minutes": 10,
+      "title": "Season and temper the steak",
+      "instruction": "Pat sirloin or flank steaks dry; salt and pepper generously. Let sit at room temperature 20 minutes while ovens and grill heat — cold centers overcook the exterior before the middle warms.",
+      "minutes": 20,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Roast vegetables (425°F, 22 min)",
-      "instruction": "Toss peppers and zucchini with oil, salt, and garlic. Spread on sheet pans; roast until charred edges and tender.",
+      "title": "Roast the vegetables",
+      "instruction": "Toss bell peppers and zucchini with olive oil, salt, and minced garlic. Spread on sheet pans; roast at 425°F 22 minutes until charred edges show and centers are tender. Hold warm in foil.",
       "minutes": 22,
       "heatLevel": "high"
     },
     {
       "stepNumber": 3,
-      "title": "Grill steak (high, 12 min)",
-      "instruction": "Grill sirloin or flank to medium-rare/medium (130–140°F). Rest 8 minutes, then slice thin against the grain.",
+      "title": "Grill steak to temp",
+      "instruction": "Grill over high heat (450°F surface) 3–5 minutes per side until 130–140°F for medium — flank needs a hard sear then brief finish; sirloin takes even heat. Rest 8 minutes tented with foil.",
       "minutes": 12,
       "heatLevel": "high"
     },
     {
       "stepNumber": 4,
-      "title": "Garlic fries & onion rings (425°F, 20 min)",
-      "instruction": "Bake fries until crisp; toss hot fries with butter and minced garlic. Bake onion rings on a second rack if serving.",
-      "minutes": 20,
-      "heatLevel": "high"
+      "title": "Slice against the grain",
+      "instruction": "Slice rested steak thin at a sharp angle against the grain — short muscle fibers, not long chewy lines. Hold loosely covered at 140°F in a hotel pan with a spoon of butter melted over top.",
+      "minutes": 10,
+      "heatLevel": "low"
     },
     {
       "stepNumber": 5,
-      "title": "Sauté onions & mushrooms (medium-high, 10 min)",
-      "instruction": "Cook sliced onions until golden; add mushrooms until browned. Hold warm for the toppings bar.",
-      "minutes": 10,
-      "heatLevel": "medium"
+      "title": "Bake garlic fries",
+      "instruction": "Spread frozen fries in a single layer. Bake at 425°F 20–22 minutes until crisp; toss hot fries with melted butter and minced garlic. Season with salt immediately; hold in a warm pan.",
+      "minutes": 22,
+      "heatLevel": "high"
     },
     {
       "stepNumber": 6,
-      "title": "Build Caesar & aioli (no heat, 10 min)",
-      "instruction": "Toss romaine with dressing, croutons, and parmesan. Mix horseradish into mayo for aioli; keep cold.",
+      "title": "Sauté onions and mushrooms",
+      "instruction": "Cook sliced onions over medium-high until golden, then add mushrooms until browned and moisture evaporates. Hold warm for the toppings bar with a pinch of salt.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 7,
+      "title": "Build Caesar and horseradish aioli",
+      "instruction": "Toss romaine with Caesar dressing, croutons, and parmesan — dress lightly so leaves stay crisp. Whisk horseradish into mayonnaise for aioli; keep both cold on ice until service.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
-      "stepNumber": 7,
-      "title": "Toast buns & run sandwich line (serve)",
-      "instruction": "Split and toast rolls. Layer steak, optional provolone melt, onions, mushrooms, and aioli. Fries, Caesar, and veg on the counter.",
+      "stepNumber": 8,
+      "title": "Toast buns and melt provolone",
+      "instruction": "Split sub rolls and toast cut-side down until golden. Pile sliced steak on toasted bottoms, lay provolone over top, and broil 1–2 minutes until cheese laces the edges. Finish with onions, mushrooms, and aioli.",
       "minutes": 12,
-      "heatLevel": "medium"
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Run the toppings bar",
+      "instruction": "Set steak sandwiches, garlic fries, Caesar salad, roasted vegetables, onions, mushrooms, aioli, and extra provolone in a row. Crew builds their own stack — hot steak center, cold Caesar at the far end.",
+      "minutes": 8,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 10,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover sliced steak — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 11,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool sliced steak and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
+      "heatLevel": ""
     }
   ],
   "proTips": [
     "Slice steak thin after the rest — crew eats better and portions stretch.",
     "Toast buns hard enough to hold juice without falling apart.",
     "Keep Caesar and aioli on ice until the line opens.",
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
-    "Taste for salt at the end — hall palates run salty after long shifts."
+    "Keep a backup tray at 200°F for firefighters returning from a run — never serve picked-over pans to late crew.",
+    "Taste for salt at the end — hall palates run salty after long shifts.",
+    "Log hold times on the pan with a grease pencil when tones drop mid-service.",
+    "Spot-check proteins with an instant-read thermometer before reopening the line after a call."
   ],
   "tonightSpread": [
-    "Plate Steak Sandwiches with sides in separate pans so the crew can mix portions.",
-    "Line up Steak Sandwiches on the main counter with serving spoons — firefighters grab fast between calls.",
-    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+    "Main: Steak sandwiches with melted provolone",
+    "Sides: garlic fries, Caesar salad, roasted peppers and zucchini",
+    "Condiments: sautéed onions, mushrooms, horseradish aioli, extra provolone",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
   ],
   "leftovers": [
-    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
-    "Label trays with date and reheat to 165°F minimum before second shift.",
-    "Store components separate — assemble fresh; buns go soggy overnight."
+    "Cool sliced steak in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Store buns separately — assemble fresh; toasted rolls go soggy overnight."
   ],
   "whyCrewsLikeIt": "Thin-sliced steak, toasted roll, hall classic. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
+  "mealPrepNotes": "Prep mise en place before the shift — Steak Sandwiches runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone.",
   "substitutions": [],
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1400,
-    "protein": 120,
-    "carbs": 85,
-    "fats": 90,
-    "label": "per serving (hall portion)",
-    "source": "calculated",
+    "calories": 0,
+    "protein": 0,
+    "carbs": 0,
+    "fats": 0,
+    "label": "Estimated per serving",
+    "source": "unavailable",
+    "estimateAvailable": false,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
       "under30gFat": false,
       "highCarb": true,
       "lowCarb": false,
-      "mealPrepFriendly": false
+      "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": true,
@@ -209,6 +243,7 @@
     }
   },
   "heroImage": "/images/golden-100/steak-sandwiches.jpg",
+  "heroImageAlt": "Steak Sandwiches — grilled steak on toasted kaiser buns with melted cheese and sautéed onions on a firehall kitchen tray",
   "mobileImage": "/images/mobile/steak-sandwiches.jpg",
   "thumbImage": "/images/thumbs/steak-sandwiches.jpg",
   "railImage": "/images/rails/steak-sandwiches.jpg",
@@ -234,6 +269,6 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "classicSlug": "steak-sandwiches",
-  "generatedAt": "2026-06-01T01:40:02.017Z",
-  "contentVersion": 2
+  "generatedAt": "2026-06-02T14:05:59.209Z",
+  "contentVersion": 4
 }

@@ -5,13 +5,18 @@
   "description": "The 20 most popular firefighter meals in station kitchens: big batches, line meals, and crew feeds that scale to 6–12 and survive interrupted dinners.",
   "topic": "meal_planning",
   "pillar": "recipes_meals",
-  "intro": "Popular firefighter meals share the same DNA: they feed six to twelve without a catering budget, survive tones mid-cook, and do not require everyone to eat at the same minute. This list is what we see on whiteboards and group chats — batch pots, sheet pans, lines, and handhelds that crews actually finish.",
+  "intro": "Popular firefighter meals share the same DNA: they feed six to twelve without a catering budget, survive tones mid-cook, and do not require everyone to eat at the same minute. This list is what we see on whiteboards and group chats — batch pots, sheet pans, lines, and handhelds that crews actually finish. Below: what halls actually cook for most popular firefighter meals — formats, timing, and recipe picks that survive a busy board.",
   "sections": [
     {
       "id": "why-popular",
       "heading": "Why firefighters love these meals",
       "paragraphs": [
-        "Volume, flavor, and forgiveness. A popular hall meal still eats well at lukewarm, portions fast, and leaves room for seconds without recooking. Nobody wants a beautiful plate that dies the minute the tones drop."
+        "Volume, flavor, and forgiveness. A popular hall meal still eats well at lukewarm, portions fast, and leaves room for seconds without recooking. Nobody wants a beautiful plate that dies the minute the tones drop.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
       ]
     },
     {
@@ -34,7 +39,8 @@
   "practicalAdvice": [
     "Round up on starches and lines before you cheap out on protein — hungry crews notice bread and rice first.",
     "Pick one hold-friendly format when the board feels loud — chili beats seared fish on busy nights.",
-    "Post allergens on the line once — saves ten conversations during the meal."
+    "Post allergens on the line once — saves ten conversations during the meal.",
+    "Post who's cooking and what's holding warm on the whiteboard — post-call eaters should not hunt for answers."
   ],
   "mealRecommendations": [
     {
@@ -171,5 +177,6 @@
   "publishedAt": "2026-05-27T18:00:00.000Z",
   "updatedAt": "2026-05-27T18:00:00.000Z",
   "readMinutes": 11,
-  "seoTitle": "20 Most Popular Firefighter Meals for Station Kitchens"
+  "seoTitle": "20 Most Popular Firefighter Meals for Station Kitchens",
+  "heroImageAlt": "20 Most Popular Firefighter Meals — most popular firefighter meals tips for fire station kitchens and crew-sized meals"
 }

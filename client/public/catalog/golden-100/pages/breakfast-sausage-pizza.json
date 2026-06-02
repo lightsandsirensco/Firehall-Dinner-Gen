@@ -13,10 +13,10 @@
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 1388,
-  "protein": 63,
-  "carbs": 45,
-  "fats": 90,
+  "calories": 0,
+  "protein": 0,
+  "carbs": 0,
+  "fats": 0,
   "tags": [
     "protein:pork",
     "format:pizza",
@@ -110,41 +110,83 @@
   "steps": [
     {
       "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Breakfast Sausage Gravy Pizza in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Double-check seasoning after scaling — crew palates run salty after long shifts, so taste the first portion before opening the line. Use Shredded cheddar-mozzarella blend as listed — measure each before heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch pork. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
       "title": "Brown breakfast sausage",
       "instruction": "Cook bulk sausage in a skillet over medium-high, breaking into small crumbles until fully cooked and browned. Drain grease — greasy gravy splits on the pizza.",
       "minutes": 15,
       "heatLevel": "medium-high"
     },
     {
-      "stepNumber": 2,
+      "stepNumber": 4,
       "title": "Make country gravy",
-      "instruction": "Melt butter in a pot; whisk in flour 1 minute. Whisk in milk and simmer until thick. Stir in half the cooked sausage. Season with salt, pepper, and sage. Gravy should coat a spoon — thin gravy soaks the crust.",
+      "instruction": "Melt butter in a pot; whisk in flour 1 minute. Whisk in milk and simmer until thick. Stir in half the cooked sausage. Season with salt, pepper, and sage. Gravy should coat a spoon — thin gravy soaks the crust. Target 145°F with a 3-minute rest at the thickest point before moving to the next batch.",
       "minutes": 12,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 3,
+      "stepNumber": 5,
       "title": "Par-bake crusts",
       "instruction": "Oil two sheet pans or large rectangular pans. Stretch dough to fit; dock with a fork. Par-bake at 400°F 8 minutes until set but pale — this prevents a soggy breakfast pizza.",
       "minutes": 10,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 6,
       "title": "Top with gravy, sausage, cheese, and eggs",
       "instruction": "Spread sausage gravy on par-baked crusts. Scatter remaining sausage and cheese. Crack eggs over the top — space them so each slice gets half an egg.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 7,
       "title": "Bake until eggs set",
       "instruction": "Bake at 400°F 12–15 minutes until cheese melts and egg whites are set with jammy yolks. Rotate pans once if your oven runs hot in back.",
       "minutes": 15,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 8,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F with a 3-minute rest. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 10,
+      "title": "Portion and open the line",
+      "instruction": "Portion Breakfast Sausage Gravy Pizza onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
+      "title": "Scale for larger halls",
+      "instruction": "When cooking for more than 8 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 12,
       "title": "Cut and serve breakfast pizza",
       "instruction": "Rest 3 minutes, then cut into squares for the hall line. Breakfast Sausage Gravy Pizza — sausage, gravy, eggs, cheese. Not pepperoni night.",
       "minutes": 5,
@@ -168,19 +210,20 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1388,
-    "protein": 63,
-    "carbs": 45,
-    "fats": 90,
-    "label": "per serving (hall portion)",
-    "source": "calculated",
+    "calories": 0,
+    "protein": 0,
+    "carbs": 0,
+    "fats": 0,
+    "label": "Estimated per serving",
+    "source": "unavailable",
+    "estimateAvailable": false,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
       "under30gFat": false,
       "highCarb": false,
       "lowCarb": false,
-      "mealPrepFriendly": false
+      "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": true,
@@ -216,5 +259,6 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "generatedAt": "2026-06-01T01:40:02.131Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "mealPrepNotes": "Prep mise en place before the shift — Breakfast Sausage Gravy Pizza runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
 }

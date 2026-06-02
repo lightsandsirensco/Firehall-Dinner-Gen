@@ -1,10 +1,12 @@
 # Classics Wheel full audit
 
-Generated: 2026-05-31T13:31:24.734Z
+Generated: 2026-06-02T14:05:59.242Z
 
 - **Wheel segments:** 10
 - **Pass:** 10/10
 - **Overall pass:** yes
+- **Fix mode:** enabled (10 pages rewritten)
+- **Fix-images mode:** enabled
 
 ## Not on the wheel
 
@@ -24,7 +26,7 @@ These hall classics exist in the **catalog only** — they are **not** one of th
 - `chicken-caesar` — **Chicken Caesar Salad** — pass — img=100 detail=100 realism=100
 - `jerk-chicken` — **Jerk Chicken & Peas and Rice** — pass — img=100 detail=100 realism=100
 - `beef-dip` — **Beef Dip Sandwiches** — pass — img=100 detail=100 realism=100
-- `bbq-chicken-bowls` — **BBQ Chicken Bowls** — pass — img=100 detail=100 realism=100
+- `bbq-chicken-mac-and-cheese` — **BBQ Chicken Mac and Cheese** — pass — img=100 detail=100 realism=100
 - `steak-sandwiches` — **Steak Sandwiches** — pass — img=100 detail=100 realism=100
 
 ## Recommendations

@@ -3,7 +3,11 @@ import {
   crewRatingCollectionsKey,
   fetchRecipeCrewRatingCollections,
 } from "@/lib/recipe-crew-ratings-api";
-import { approvedCatalogQueryKey, fetchApprovedCatalog } from "@/lib/approved-catalog-api";
+import {
+  approvedCatalogGridQueryKey,
+  fetchApprovedCatalogGrid,
+} from "@/lib/approved-catalog-api";
+import { useIsMobile } from "@/hooks/use-mobile";
 import {
   RECIPE_CREW_RATING_BADGE_EMOJI,
   RECIPE_CREW_RATING_COLLECTION_KEYS,
@@ -44,9 +48,11 @@ export function ExploreRatingCollections({
     [rawData],
   );
 
+  const isMobile = useIsMobile();
+
   const { data: catalog } = useQuery({
-    queryKey: approvedCatalogQueryKey,
-    queryFn: fetchApprovedCatalog,
+    queryKey: approvedCatalogGridQueryKey,
+    queryFn: fetchApprovedCatalogGrid,
     staleTime: 10 * 60 * 1000,
   });
 
@@ -66,7 +72,7 @@ export function ExploreRatingCollections({
   return (
     <div className={cn("space-y-8", className)} data-testid="explore-rating-collections">
       {SECTIONS.map(({ key, title, badge }) => {
-        const items = sectionItems(key);
+        const items = sectionItems(key).slice(0, isMobile ? 6 : 10);
         if (!items.length) return null;
         return (
           <section key={key} aria-labelledby={`rating-section-${key}`}>

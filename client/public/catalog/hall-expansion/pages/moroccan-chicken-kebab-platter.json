@@ -13,10 +13,10 @@
   "cookTime": 20,
   "prepTime": 30,
   "difficulty": "medium",
-  "calories": 404,
-  "protein": 58,
+  "calories": 426,
+  "protein": 38,
   "carbs": 2,
-  "fats": 16,
+  "fats": 28,
   "tags": [
     "protein:chicken",
     "format:skewer",
@@ -206,12 +206,13 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 404,
-    "protein": 58,
+    "calories": 426,
+    "protein": 38,
     "carbs": 2,
-    "fats": 16,
-    "label": "per serving (hall portion)",
+    "fats": 28,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": true,
@@ -222,8 +223,8 @@
     },
     "badgeCandidates": {
       "highProtein": true,
-      "lighterOption": true,
-      "performanceMeal": true
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/moroccan-chicken-kebab-platter.jpg",

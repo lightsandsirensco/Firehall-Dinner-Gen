@@ -6,7 +6,12 @@ import {
   resolvePrimaryCategoryFromContext,
   categoryPromptFragments,
 } from "../categories/imagery.js";
-import { inferPlatingType, buildPlatingPromptLine, platingNegativeHints } from "../plating-type.js";
+import {
+  inferPlatingType,
+  buildFullPlatingPromptLine,
+  platingNegativeHints,
+} from "../plating-type.js";
+import { buildPlatingAccuracyPromptLines } from "../plating-accuracy-standard.js";
 import { buildRequiredVisibleSidesPromptLine } from "../curated-image-governance/title-primary-side-rules.js";
 
 const FORMAT_PLATING_HINT: Record<string, string> = {
@@ -23,13 +28,14 @@ const FORMAT_PLATING_HINT: Record<string, string> = {
 };
 
 function inferPlatingHint(mealFormat?: string, title?: string): string | undefined {
-  const plating = inferPlatingType(title || "", mealFormat);
   if (title?.trim()) {
-    return buildPlatingPromptLine(plating, title, "American");
+    return buildFullPlatingPromptLine(title, mealFormat, "American");
   }
   const fmt = (mealFormat || "").toLowerCase().replace(/-/g, "_");
-  if (FORMAT_PLATING_HINT[fmt]) return FORMAT_PLATING_HINT[fmt];
-  return buildPlatingPromptLine(plating, title || "Firehall crew meal", "American");
+  if (FORMAT_PLATING_HINT[fmt]) {
+    return `${FORMAT_PLATING_HINT[fmt]}. ${buildPlatingAccuracyPromptLines(title || "Firehall crew meal", mealFormat).join(" ")}`;
+  }
+  return buildFullPlatingPromptLine(title || "Firehall crew meal", mealFormat, "American");
 }
 
 function topIngredients(ctx: FoodImageryContext, limit = 8): string[] {
@@ -91,7 +97,7 @@ export function buildFoodImageryPromptSpec(ctx: FoodImageryContext): FoodImagery
     categoryLighting: enriched.categoryEnrichment.lighting || catFragments.lighting,
     extraNegative: [
       ...(enriched.categoryEnrichment.negativeHints || []),
-      ...platingNegativeHints(platingType),
+      ...platingNegativeHints(platingType, enriched.title, enriched.mealFormat),
       "generic chicken bowl",
       "generic rice bowl",
       "unrelated donor meal substitute",

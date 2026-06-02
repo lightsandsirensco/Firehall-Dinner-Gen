@@ -16,6 +16,7 @@ import {
   catalogIngredientsFromUnknown,
   type CatalogIngredientLine,
 } from "../shared/nutrition/index.js";
+import { getRecipeBaseServings } from "../shared/recipe/crew-scaling-config.js";
 
 const ROOT = process.cwd();
 const FIX = process.argv.includes("--fix");
@@ -77,6 +78,8 @@ function existingMacros(page: Record<string, unknown>, kind: CatalogKind) {
       protein: Number(nutrition.protein ?? page.protein ?? 0),
       carbs: Number(nutrition.carbs ?? page.carbs ?? 0),
       fat: Number(nutrition.fats ?? nutrition.fat ?? page.fats ?? page.fat ?? 0),
+      source: nutrition.source as string | undefined,
+      estimateAvailable: nutrition.estimateAvailable as boolean | undefined,
     };
   }
   if (kind !== "breakfast") {
@@ -90,8 +93,13 @@ function existingMacros(page: Record<string, unknown>, kind: CatalogKind) {
   return null;
 }
 
-function servingsFromPage(page: Record<string, unknown>): number {
-  return Number(page.baseServings || page.crewSize || 8);
+function servingsFromPage(page: Record<string, unknown>, mealType: "dinner" | "breakfast" | "smoothie"): number {
+  return (
+    getRecipeBaseServings({
+      baseServings: Number(page.baseServings) || undefined,
+      crewSize: Number(page.crewSize) || undefined,
+    }) || defaultRecipeServings(page, mealType)
+  );
 }
 
 function applyNutrition(
@@ -100,13 +108,15 @@ function applyNutrition(
   record: ReturnType<typeof calculateNutritionFromIngredients>,
 ): Record<string, unknown> {
   const next = { ...page };
+  const available = record.estimateAvailable !== false && record.source !== "unavailable";
   const block = {
-    calories: record.calories,
-    protein: record.protein,
-    carbs: record.carbs,
-    ...(kind === "breakfast" ? { fat: record.fat } : { fats: record.fat }),
-    label: "per serving (hall portion)",
+    calories: available ? record.calories : 0,
+    protein: available ? record.protein : 0,
+    carbs: available ? record.carbs : 0,
+    ...(kind === "breakfast" ? { fat: available ? record.fat : 0 } : { fats: available ? record.fat : 0 }),
+    label: "Estimated per serving",
     source: record.source,
+    estimateAvailable: available,
     filterFlags: record.filterFlags,
     badgeCandidates: record.badgeCandidates,
   };
@@ -116,17 +126,18 @@ function applyNutrition(
     next.nutrition = {
       ...prev,
       ...block,
-      highlights:
-        prev.highlights ||
-        `~${record.calories} cal per serving · ~${record.protein} g protein · ~${record.carbs} g carbs · ~${record.fat} g fat`,
+      highlights: available
+        ? prev.highlights ||
+          `~${record.calories} cal per serving · ~${record.protein} g protein · ~${record.carbs} g carbs · ~${record.fat} g fat`
+        : "Nutrition estimate coming soon",
     };
   } else if (kind === "breakfast") {
     next.nutrition = block;
   } else {
-    next.calories = record.calories;
-    next.protein = record.protein;
-    next.carbs = record.carbs;
-    next.fats = record.fat;
+    next.calories = available ? record.calories : 0;
+    next.protein = available ? record.protein : 0;
+    next.carbs = available ? record.carbs : 0;
+    next.fats = available ? record.fat : 0;
     next.nutrition = block;
   }
 
@@ -152,7 +163,13 @@ async function main(): Promise<void> {
       const before = existingMacros(page, kind);
       const issues: string[] = [];
 
-      if (!before || !hasCompleteNutrition(before)) {
+      const nutritionMeta = page.nutrition as Record<string, unknown> | undefined;
+      const intentionallyHidden =
+        nutritionMeta?.source === "unavailable" || nutritionMeta?.estimateAvailable === false;
+
+      if (intentionallyHidden) {
+        issues.push("Per-serving estimate withheld (UI: coming soon)");
+      } else if (!before || !hasCompleteNutrition(before, { source: String(nutritionMeta?.source || "") })) {
         issues.push("Missing complete nutrition");
         missing += 1;
       } else {
@@ -163,7 +180,7 @@ async function main(): Promise<void> {
         servings: servingsFromPage(page, mealType),
         mealType,
         mealPrepFriendly: Boolean(page.mealPrepNotes || (page.tags as string[])?.includes("make-ahead")),
-        existing: before ?? undefined,
+        existing: undefined,
       });
 
       const after = {
@@ -185,7 +202,12 @@ async function main(): Promise<void> {
         before.carbs !== after.carbs ||
         before.fat !== after.fat;
 
-      if (!before || !hasCompleteNutrition(before)) {
+      if (intentionallyHidden) {
+        status = "ok";
+      } else if (!record.estimateAvailable) {
+        status = FIX ? "corrected" : "missing";
+        if (FIX) corrected += 1;
+      } else if (!before || !hasCompleteNutrition(before, { source: record.source })) {
         status = FIX ? "corrected" : "missing";
         if (FIX) corrected += 1;
       } else if (afterIssues.length > 0) {
@@ -207,15 +229,19 @@ async function main(): Promise<void> {
         if (status === "missing") status = "corrected";
       }
 
-      const finalIssues = validateNutritionPerServing(after, { slug, mealType }).filter(
-        (i) =>
-          i.code === "suspicious" ||
-          i.code === "impossible" ||
-          i.code === "missing" ||
-          i.code === "negative",
-      );
-      if (finalIssues.length === 0) {
+      if (intentionallyHidden || !record.estimateAvailable) {
         status = "ok";
+      } else {
+        const finalIssues = validateNutritionPerServing(after, { slug, mealType }).filter(
+          (i) =>
+            i.code === "suspicious" ||
+            i.code === "impossible" ||
+            i.code === "missing" ||
+            i.code === "negative",
+        );
+        if (finalIssues.length === 0 && status !== "missing") {
+          status = "ok";
+        }
       }
 
       rows.push({

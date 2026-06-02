@@ -297,11 +297,12 @@ export const SEO_TRAFFIC_ARTICLES = [
       "Skillet, pasta, shrimp, quesadillas, and flat-top dinners that respect a real hall clock — not magazine prep times.",
     keywords: ["fast firehall meals", "30 minute crew dinner", "quick firefighter meals"],
     intro:
-      "Thirty minutes on a hall clock is closer to twenty-two after someone asks a 'quick question' in the kitchen. Fast firehall meals under thirty minutes skip rests, brines, and multi-stage bakes. They hit high heat, short ingredient lists, and formats you have cooked before.",
+      "Thirty minutes on a hall clock is closer to twenty-two after someone asks a 'quick question' in the kitchen. Fast firehall meals skip rests, brines, and multi-stage bakes. They hit high heat, short ingredient lists, and formats you have cooked before — garlic butter shrimp on the flat-top, a philly skillet, carnitas tacos when the board already looks ugly at 18:15.",
     practicalAdvice: [
       "Pre-heat while you chop — never wait on the oven idle.",
       "Frozen veg is allowed on fast nights.",
       "One pan, one protein, one starch — done.",
+      "Sauces on the side so late eaters do not get gluey reheat.",
     ],
     sections: [
       {
@@ -309,13 +310,27 @@ export const SEO_TRAFFIC_ARTICLES = [
         heading: "What actually clears 30 minutes",
         paragraphs: [
           "Shrimp, thin chicken, ground beef, and pasta with jar-plus-fresh finishes. Skip whole birds and large roasts unless they started before you arrived.",
+          "Last busy night we ran garlic butter shrimp while two guys portioned rice and a third warmed tortillas for pork carnitas tacos — eaters grabbed plates between 17:40 and 19:10 and nobody waited on a single finish time.",
+        ],
+        tips: [
+          "Thaw protein before shift if you know the board is stacked.",
+          "Frozen peppers are fine — nobody on the rig cares if you chopped them at 16:00.",
         ],
       },
       {
-        id: "prep",
-        heading: "Prep that buys time back",
+        id: "kitchen-traffic",
+        heading: "Keep the kitchen from filling up",
         paragraphs: [
-          "Thaw protein before shift, pre-chop peppers, and keep tortillas warm. Ten minutes of prep often saves twenty on the back end.",
+          "One cook on heat, one runner for plates and drinks, everyone else out until called. The fastest meal dies when four people 'just stir' the same pan.",
+          "Write on the whiteboard: protein, hold temp, who is finishing. When tones drop at minute eighteen, the returning cook should not be guessing whether the skillet is off or just turned down.",
+        ],
+      },
+      {
+        id: "when-not-to-rush",
+        heading: "When to pick a different format",
+        paragraphs: [
+          "If you are feeding twelve after a working fire and morale is thin, a taco line or chili batch beats a fragile pasta that clumps while you are still on scene.",
+          "Fast nights are for food that forgives a ten-minute hold — quesadillas, bowls, shrimp — not a sauce that breaks if nobody stirs it.",
         ],
       },
     ],
@@ -327,7 +342,18 @@ export const SEO_TRAFFIC_ARTICLES = [
       meal("pork-carnitas-tacos", "Quick Pork Carnitas Tacos", "Taco night on a clock."),
       meal("teriyaki-donburi", "Teriyaki Donburi", "Bowl line — quick assembly."),
     ],
-    faqs: [STANDARD_FAQS.catalog, STANDARD_FAQS.generator],
+    faqs: [
+      {
+        question: "What if tones drop right before dinner hits the table?",
+        answer:
+          "Lower heat, cover, post the hold on the whiteboard. Shrimp and skillet meals survive; seared chicken cutlets do not — finish those when you are back or pivot to a line format.",
+      },
+      {
+        question: "Where do these recipe links go?",
+        answer:
+          "Each one opens a full Firehall Meals recipe page — ingredients, steps, crew scaling, and nutrition — so you can cook it without guessing.",
+      },
+    ],
     relatedArticleSlugs: REL.busy,
   }),
 
@@ -712,25 +738,40 @@ export const SEO_TRAFFIC_ARTICLES = [
       "Firefighter breakfast ideas for station mornings: burrito bars, egg bakes, pancakes, and tacos that feed staggered eaters.",
     keywords: ["firefighter breakfast ideas", "fire station breakfast", "firehall brunch", "shift breakfast"],
     intro:
-      "Breakfast at the hall is a logistics problem disguised as a meal. People eat across ninety minutes. Firefighter breakfast ideas that work are lines and bakes — not a short-order station with one cook behind one griddle.",
+      "Breakfast at the hall is a logistics problem disguised as a meal. Crew members eat across ninety minutes — some before rig checks, some after a run, some while the coffee pot is already on its second cycle. Firefighter breakfast ideas that actually work are build-your-own lines and sheet-pan bakes, not a short-order griddle with one cook drowning in custom orders.",
     practicalAdvice: [
-      "Cook sausage and bacon in the oven — splatter control.",
-      "Keep tortillas in a warmer, not the microwave stack.",
-      "Coffee is part of breakfast — plan who owns it.",
+      "Cook sausage and bacon on sheet pans in the oven — less splatter, more even crisp, and the flat-top stays free for eggs.",
+      "Keep tortillas in a warmer or covered cambro, not a stack in the microwave.",
+      "Assign coffee owner and dish crew before anyone cracks an egg — breakfast chaos is half food and half who forgot the pot.",
+      "Hold pancakes and egg bakes warm at 200°F with foil vented — dry heat beats a lid that steams everything soggy.",
     ],
     sections: [
       {
         id: "lines",
         heading: "Line formats beat plated breakfast",
         paragraphs: [
-          "Burrito bar, egg bake, pancake hold in oven, chorizo tacos. All scale and tolerate late eaters.",
+          "Burrito bars, sausage egg bakes, pancake trays in the oven, and chorizo taco lines all scale past eight people without plating eight individual orders. Each person builds when they show up, which is how mornings actually run on shift.",
+          "Put proteins, eggs, cheese, salsa, and hot sauce on the counter in hotel pans. Keep cold toppings on ice if you are running late into summer shifts. The line should take thirty seconds per person, not a conversation with the cook.",
+        ],
+        tips: [
+          "Pre-scramble eggs for burritos in a hotel pan — faster than cooking to order.",
+          "Slice fruit or open yogurt cups only if you have spare hands — do not let sides derail the hot food.",
+        ],
+      },
+      {
+        id: "timing",
+        heading: "Timing breakfast around tones",
+        paragraphs: [
+          "If tones drop during prep, leave the oven on low and finish eggs when you return. Bakes and bacon forgive a pause better than pancakes on a griddle.",
+          "On slow mornings, start bacon first — it perfumes the hall and buys you ten minutes of goodwill while eggs finish.",
         ],
       },
       {
         id: "coffee",
         heading: "Coffee and cleanup",
         paragraphs: [
-          "Assign coffee owner and dish crew before cooking starts. Breakfast chaos is half food and half who forgot the pot.",
+          "Assign one person to coffee and one to dishes before cooking starts. When everyone 'helps' the cook, eggs overcook and nobody owns the sink.",
+          "Run breakfast cleanup like dinner: soak sheet pans immediately, knock scraps into compost, and wipe the flat-top while it is still warm.",
         ],
       },
     ],
@@ -741,7 +782,18 @@ export const SEO_TRAFFIC_ARTICLES = [
       meal("chorizo-breakfast-tacos", "Chorizo Breakfast Tacos", "Bold morning tacos — fast line."),
       meal("bacon-egg-hash", "Bacon Egg Hash Skillet", "Skillet feed — hearty."),
     ],
-    faqs: [STANDARD_FAQS.catalog, STANDARD_FAQS.generator],
+    faqs: [
+      {
+        question: "What do you cook when half the crew already ate?",
+        answer:
+          "Hold the bake or burrito components warm and let late arrivals build a plate. A second wave of scrambled eggs in a hotel pan beats cooking a fresh full breakfast for two people.",
+      },
+      {
+        question: "What if crew size or time changes this morning?",
+        answer:
+          "Keep it simple: pick a line (burritos/tacos) or a bake. If you need a different headcount, open the recipe page and scale it for the crew you actually have in the building.",
+      },
+    ],
     relatedArticleSlugs: ["firehall-breakfast-and-brunch"],
   }),
 
@@ -793,25 +845,40 @@ export const SEO_TRAFFIC_ARTICLES = [
       "Best Dutch oven meals for firefighters: chili, braised beef, jambalaya, and cobblers when outdoor cooks or kitchen ovens fit the plan.",
     keywords: ["dutch oven firefighter meals", "dutch oven station cooking", "camp dutch oven crew"],
     intro:
-      "Dutch ovens are hall tools on training weekends and outdoor cooks — heavy, forgiving, and built for batch mindset. The best Dutch oven meals for firefighters are braises and bean pots that do not need precision plating.",
+      "Dutch ovens are hall tools on training weekends, outdoor cooks, and slow Sunday shifts — heavy, forgiving, and built for batch mindset. The best Dutch oven meals for firefighters are chili, stew, and braised pots that feed eight to twelve without precision plating. You are not trying to impress a food critic; you are trying to feed a crew that will still be hungry after the first bowl.",
     practicalAdvice: [
-      "Use liners or foil for sweet bakes if dessert is on the menu — saves scrub time.",
-      "Charcoal management is a skill — assign one fire boss.",
-      "Indoor: Dutch oven fits in the station oven for lasagna-style bakes.",
+      "Use foil liners for sweet cobblers if dessert is on the menu — scrub time matters on Sunday night.",
+      "Assign one charcoal boss outdoors — lid lifts are how coals lose heat and chicken stays underdone.",
+      "Indoors, treat the Dutch oven as a heavy casserole: same recipes, less romance, faster cleanup.",
+      "Brown meat in a skillet first if the pot is tight — color equals flavor when you cannot see inside.",
     ],
     sections: [
       {
         id: "indoor-outdoor",
         heading: "Indoor station vs outdoor pit",
         paragraphs: [
-          "Indoor: treat it as a heavy casserole dish. Outdoor: chili, stew, and cobbler shine when coals are steady.",
+          "Indoor: chili, baked ziti-style pasta, and shepherd's pie toppings work in the station oven with the same pot. Outdoor: bean pots, jambalaya, and cobbler shine when coals are steady and the wind is not fighting you.",
+          "Match the meal to the venue. Weeknight inside beats fighting weather for a marginal outdoor cook.",
         ],
       },
       {
         id: "coals",
         heading: "Coals and crew roles",
         paragraphs: [
-          "One fire boss manages heat, one cook stirs, everyone else stays clear. Dutch oven night fails when three people 'help' with the lid.",
+          "One fire boss manages heat, one cook stirs, everyone else stays out of the lid zone. Dutch oven night fails when three people 'check' the pot and drop ash into the food.",
+          "Rotate coals on a schedule — top and bottom heat is not set-and-forget unless you like burnt bottoms.",
+        ],
+        tips: [
+          "Keep a lid lifter and heavy gloves staged before you light charcoal.",
+          "Probe stew meats to 203°F for pull-apart texture — time estimates lie outdoors.",
+        ],
+      },
+      {
+        id: "meals",
+        heading: "Meals crews actually finish",
+        paragraphs: [
+          "Chili and jambalaya win because they are spoon food with obvious doneness. Cobblers win because they feel like an event without extra work.",
+          "Skip delicate fish in a Dutch oven on a busy shift — broth splatter and timing are not worth the risk.",
         ],
       },
     ],

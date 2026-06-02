@@ -51,7 +51,8 @@ export const breakfastNutritionSchema = z.object({
   carbs: z.number().int().min(0).max(500),
   fat: z.number().int().min(0).max(500),
   label: z.string().trim().max(80).optional(),
-  source: z.enum(["calculated", "curated", "estimated"]).optional(),
+  source: z.enum(["calculated", "curated", "estimated", "unavailable"]).optional(),
+  estimateAvailable: z.boolean().optional(),
   filterFlags: z
     .object({
       highProtein: z.boolean(),

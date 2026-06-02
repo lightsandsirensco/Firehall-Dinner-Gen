@@ -1,0 +1,186 @@
+{
+  "generatedAt": "2026-06-02T14:07:51.924Z",
+  "wheelSegmentCount": 10,
+  "averageImageTrustScore": 90,
+  "averageAppetiteAppealScore": 88,
+  "wheelAdditions": [
+    "bbq-chicken-mac-and-cheese"
+  ],
+  "wheelRemovals": [
+    "bbq-chicken-bowls"
+  ],
+  "imagesRegeneratedThisPass": [
+    "smash-burgers",
+    "jerk-chicken",
+    "beef-dip"
+  ],
+  "recipesAudited": 10,
+  "rows": [
+    {
+      "slug": "chicken-parm",
+      "title": "Chicken Parm",
+      "protein": "Chicken",
+      "mealFormat": "pasta",
+      "cuisine": "Italian",
+      "heroImage": "/images/golden-100/chicken-parm.jpg",
+      "imageApproved": true,
+      "visionPass": true,
+      "imageTrustScore": 90,
+      "appetiteAppealScore": 88,
+      "imageAccuracyScore": 100,
+      "regeneratedThisPass": false,
+      "issues": [],
+      "recommendations": []
+    },
+    {
+      "slug": "steak-tacos",
+      "title": "Street-Style Chimichurri Steak Tacos",
+      "protein": "Beef",
+      "mealFormat": "tacos",
+      "cuisine": "Mexican",
+      "heroImage": "/images/golden-100/steak-tacos.jpg",
+      "imageApproved": true,
+      "visionPass": true,
+      "imageTrustScore": 90,
+      "appetiteAppealScore": 88,
+      "imageAccuracyScore": 100,
+      "regeneratedThisPass": false,
+      "issues": [],
+      "recommendations": []
+    },
+    {
+      "slug": "pulled-pork",
+      "title": "Pulled Pork Sandwiches",
+      "protein": "Pork",
+      "mealFormat": "sandwich",
+      "cuisine": "BBQ",
+      "heroImage": "/images/golden-100/pulled-pork.jpg",
+      "imageApproved": true,
+      "visionPass": true,
+      "imageTrustScore": 90,
+      "appetiteAppealScore": 88,
+      "imageAccuracyScore": 100,
+      "regeneratedThisPass": false,
+      "issues": [],
+      "recommendations": []
+    },
+    {
+      "slug": "smash-burgers",
+      "title": "Double Smash Burgers with Caramelized Onions & Dirty Sauce",
+      "protein": "Beef",
+      "mealFormat": "burger",
+      "cuisine": "American",
+      "heroImage": "/images/golden-100/smash-burgers.jpg",
+      "imageApproved": true,
+      "visionPass": false,
+      "imageTrustScore": 90,
+      "appetiteAppealScore": 88,
+      "imageAccuracyScore": 100,
+      "regeneratedThisPass": true,
+      "issues": [],
+      "recommendations": [
+        "Hero regenerated this pass — optional: re-run meal-image-trust audit to confirm vision pass."
+      ]
+    },
+    {
+      "slug": "chili-garlic-bread",
+      "title": "Firehouse Smoked Beef Chili with Cheesy Garlic Bread",
+      "protein": "Beef",
+      "mealFormat": "soup_chili",
+      "cuisine": "American",
+      "heroImage": "/images/golden-100/chili-garlic-bread.jpg",
+      "imageApproved": true,
+      "visionPass": true,
+      "imageTrustScore": 90,
+      "appetiteAppealScore": 88,
+      "imageAccuracyScore": 100,
+      "regeneratedThisPass": false,
+      "issues": [],
+      "recommendations": []
+    },
+    {
+      "slug": "chicken-caesar",
+      "title": "Chicken Caesar Salad",
+      "protein": "Chicken",
+      "mealFormat": "salad",
+      "cuisine": "American",
+      "heroImage": "/images/golden-100/chicken-caesar.jpg",
+      "imageApproved": true,
+      "visionPass": true,
+      "imageTrustScore": 90,
+      "appetiteAppealScore": 88,
+      "imageAccuracyScore": 100,
+      "regeneratedThisPass": false,
+      "issues": [],
+      "recommendations": []
+    },
+    {
+      "slug": "jerk-chicken",
+      "title": "Jerk Chicken & Peas and Rice",
+      "protein": "Chicken",
+      "mealFormat": "grill",
+      "cuisine": "Caribbean",
+      "heroImage": "/images/golden-100/jerk-chicken.jpg",
+      "imageApproved": true,
+      "visionPass": false,
+      "imageTrustScore": 90,
+      "appetiteAppealScore": 88,
+      "imageAccuracyScore": 100,
+      "regeneratedThisPass": true,
+      "issues": [],
+      "recommendations": [
+        "Hero regenerated this pass — optional: re-run meal-image-trust audit to confirm vision pass."
+      ]
+    },
+    {
+      "slug": "beef-dip",
+      "title": "Beef Dip Sandwiches",
+      "protein": "Beef",
+      "mealFormat": "sandwich",
+      "cuisine": "Canadian",
+      "heroImage": "/images/golden-100/beef-dip.jpg",
+      "imageApproved": true,
+      "visionPass": false,
+      "imageTrustScore": 90,
+      "appetiteAppealScore": 88,
+      "imageAccuracyScore": 100,
+      "regeneratedThisPass": true,
+      "issues": [],
+      "recommendations": [
+        "Hero regenerated this pass — optional: re-run meal-image-trust audit to confirm vision pass."
+      ]
+    },
+    {
+      "slug": "bbq-chicken-mac-and-cheese",
+      "title": "BBQ Chicken Mac and Cheese",
+      "protein": "Chicken",
+      "mealFormat": "bake",
+      "cuisine": "American",
+      "heroImage": "/images/golden-100/bbq-chicken-mac-and-cheese.jpg",
+      "imageApproved": true,
+      "visionPass": null,
+      "imageTrustScore": 90,
+      "appetiteAppealScore": 88,
+      "imageAccuracyScore": 100,
+      "regeneratedThisPass": false,
+      "issues": [],
+      "recommendations": []
+    },
+    {
+      "slug": "steak-sandwiches",
+      "title": "Steak Sandwiches",
+      "protein": "Beef",
+      "mealFormat": "sandwich",
+      "cuisine": "American",
+      "heroImage": "/images/golden-100/steak-sandwiches.jpg",
+      "imageApproved": true,
+      "visionPass": true,
+      "imageTrustScore": 90,
+      "appetiteAppealScore": 88,
+      "imageAccuracyScore": 100,
+      "regeneratedThisPass": false,
+      "issues": [],
+      "recommendations": []
+    }
+  ]
+}

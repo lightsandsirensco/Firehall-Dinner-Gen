@@ -206,6 +206,10 @@ export default function BreakfastRecipePage() {
               protein={page.nutrition.protein}
               carbs={page.nutrition.carbs}
               fat={page.nutrition.fat}
+              estimateAvailable={
+                page.nutrition.estimateAvailable !== false &&
+                page.nutrition.source !== "unavailable"
+              }
               className="mt-6"
             />
 

@@ -5,7 +5,7 @@
   "description": "Best foods for long firefighter shifts: protein-forward plates, smart carbs, hydration, and hall meals that do not leave the crew crashing at hour ten.",
   "topic": "nutrition_performance",
   "pillar": "nutrition_performance",
-  "intro": "Long shifts punish empty calories and reward steady fuel. The best foods for a long tour combine protein, usable carbs, and salt you actually lose — without turning every meal into a grease bomb. You are not optimizing for a photoshoot. You are staying functional until relief.",
+  "intro": "Long shifts punish empty calories and reward steady fuel. The best foods for a long tour combine protein, usable carbs, and salt you actually lose — without turning every meal into a grease bomb. You are not optimizing for a photoshoot. You are staying functional until relief. Below: what halls actually cook for long shift meals — formats, timing, and recipe picks that survive a busy board.",
   "sections": [
     {
       "id": "steady",
@@ -21,6 +21,18 @@
       "paragraphs": [
         "Massive sugar hits without protein — donuts for dinner, then wondering why focus tanks.",
         "Relying on energy drinks instead of food. Caffeine masks hunger; it does not replace it."
+      ]
+    },
+    {
+      "id": "shift-fuel",
+      "heading": "How this plays across a long shift",
+      "paragraphs": [
+        "Shift nutrition is timing, not willpower. For long shift meals, anchor protein at dinner, keep snacks that survive the apparatus bay, and drink water like it is part of the job — not a lecture at 03:00.",
+        "This is practical hall guidance, not medical advice. Follow your department's health program and personal providers for individual plans."
+      ],
+      "tips": [
+        "Label leftovers with date — rotation matters more than recipe genius.",
+        "Pair lighter mains with one optional indulgent side when morale needs it."
       ]
     }
   ],
@@ -73,5 +85,6 @@
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
   "updatedAt": "2026-05-27T18:00:00.000Z",
-  "readMinutes": 7
+  "readMinutes": 7,
+  "heroImageAlt": "Best Foods for Long Shifts — long shift meals tips for fire station kitchens and crew-sized meals"
 }

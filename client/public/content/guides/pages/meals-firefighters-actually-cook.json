@@ -5,27 +5,50 @@
   "description": "Meals firefighters actually cook at the station: chili, tacos, pasta bakes, grill nights, and skillets — real patterns from hall kitchens, with recipes attached.",
   "topic": "crew_culture",
   "pillar": "station_lifestyle",
-  "intro": "Scroll long enough and you will see truffle risotto pitched for shift dinner. Most halls are not cooking that. What shows up again and again is big, familiar food: chili, burgers, tacos, pasta bakes, grilled chicken, sheet pans. The job favors volume, hold time, and a kitchen that can survive interruptions.",
+  "intro": "Scroll long enough and you will see truffle risotto pitched for shift dinner. Most halls are not cooking that. What shows up again and again is big, familiar food: chili, burgers, tacos, pasta bakes, grilled chicken, sheet pans. The job favors volume, hold time, and a kitchen that can survive interruptions. Below: what halls actually cook for meals firefighters actually cook — formats, timing, and recipe picks that survive a busy board.",
   "sections": [
     {
       "id": "patterns",
       "heading": "Patterns you see again and again",
       "paragraphs": [
-        "Handheld nights (burgers, tacos, subs), one-pot batches (chili, jambalaya), and oven bakes (lasagna, ziti, mac) dominate because they scale and reheat."
+        "Handheld nights (burgers, tacos, subs), one-pot batches (chili, jambalaya), and oven bakes (lasagna, ziti, mac) dominate because they scale and reheat.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
       ]
     },
     {
       "id": "why",
       "heading": "Why halls avoid 'chef food' on shift",
       "paragraphs": [
-        "Interruptions, mixed skill levels, and cleanup limits push crews toward forgiving recipes. That is not lack of ambition — it is operational reality."
+        "Interruptions, mixed skill levels, and cleanup limits push crews toward forgiving recipes. That is not lack of ambition — it is operational reality.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
+      ]
+    },
+    {
+      "id": "crew-table",
+      "heading": "Feed the room, not just the plate",
+      "paragraphs": [
+        "After a long call, people eat at different speeds. For meals firefighters actually cook, plan volume and hold time so the last person off the rig still gets a hot portion — not scraped pans.",
+        "Comfort is not an excuse to skip cleanup. Soak trays while people eat; the hall should not wake up to a crusted prep table."
+      ],
+      "tips": [
+        "Keep hot sauce, salt, and bread on the line — tired crews self-correct flavor fast.",
+        "Second helpings need extra starch before extra protein."
       ]
     }
   ],
   "practicalAdvice": [
     "If a recipe needs constant attention at the stove, it loses on busy nights.",
     "Crews vote with volume — protein + starch + optional heat wins.",
-    "The best cooks at the hall are organizers, not magicians."
+    "The best cooks at the hall are organizers, not magicians.",
+    "Post who's cooking and what's holding warm on the whiteboard — post-call eaters should not hunt for answers."
   ],
   "mealRecommendations": [
     {
@@ -81,5 +104,6 @@
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
   "updatedAt": "2026-05-27T18:00:00.000Z",
-  "readMinutes": 7
+  "readMinutes": 7,
+  "heroImageAlt": "Meals Firefighters Actually Cook — meals firefighters actually cook tips for fire station kitchens and crew-sized meals"
 }

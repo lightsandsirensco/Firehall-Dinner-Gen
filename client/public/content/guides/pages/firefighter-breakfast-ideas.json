@@ -5,27 +5,42 @@
   "description": "Firefighter breakfast ideas for station mornings: burrito bars, egg bakes, pancakes, and tacos that feed staggered eaters.",
   "topic": "meal_planning",
   "pillar": "recipes_meals",
-  "intro": "Breakfast at the hall is a logistics problem disguised as a meal. People eat across ninety minutes. Firefighter breakfast ideas that work are lines and bakes — not a short-order station with one cook behind one griddle.",
+  "intro": "Breakfast at the hall is a logistics problem disguised as a meal. Crew members eat across ninety minutes — some before rig checks, some after a run, some while the coffee pot is already on its second cycle. Firefighter breakfast ideas that actually work are build-your-own lines and sheet-pan bakes, not a short-order griddle with one cook drowning in custom orders.",
   "sections": [
     {
       "id": "lines",
       "heading": "Line formats beat plated breakfast",
       "paragraphs": [
-        "Burrito bar, egg bake, pancake hold in oven, chorizo tacos. All scale and tolerate late eaters."
+        "Burrito bars, sausage egg bakes, pancake trays in the oven, and chorizo taco lines all scale past eight people without plating eight individual orders. Each person builds when they show up, which is how mornings actually run on shift.",
+        "Put proteins, eggs, cheese, salsa, and hot sauce on the counter in hotel pans. Keep cold toppings on ice if you are running late into summer shifts. The line should take thirty seconds per person, not a conversation with the cook."
+      ],
+      "tips": [
+        "Pre-scramble eggs for burritos in a hotel pan — faster than cooking to order.",
+        "Slice fruit or open yogurt cups only if you have spare hands — do not let sides derail the hot food."
+      ]
+    },
+    {
+      "id": "timing",
+      "heading": "Timing breakfast around tones",
+      "paragraphs": [
+        "If tones drop during prep, leave the oven on low and finish eggs when you return. Bakes and bacon forgive a pause better than pancakes on a griddle.",
+        "On slow mornings, start bacon first — it perfumes the hall and buys you ten minutes of goodwill while eggs finish."
       ]
     },
     {
       "id": "coffee",
       "heading": "Coffee and cleanup",
       "paragraphs": [
-        "Assign coffee owner and dish crew before cooking starts. Breakfast chaos is half food and half who forgot the pot."
+        "Assign one person to coffee and one to dishes before cooking starts. When everyone 'helps' the cook, eggs overcook and nobody owns the sink.",
+        "Run breakfast cleanup like dinner: soak sheet pans immediately, knock scraps into compost, and wipe the flat-top while it is still warm."
       ]
     }
   ],
   "practicalAdvice": [
-    "Cook sausage and bacon in the oven — splatter control.",
-    "Keep tortillas in a warmer, not the microwave stack.",
-    "Coffee is part of breakfast — plan who owns it."
+    "Cook sausage and bacon on sheet pans in the oven — less splatter, more even crisp, and the flat-top stays free for eggs.",
+    "Keep tortillas in a warmer or covered cambro, not a stack in the microwave.",
+    "Assign coffee owner and dish crew before anyone cracks an egg — breakfast chaos is half food and half who forgot the pot.",
+    "Hold pancakes and egg bakes warm at 200°F with foil vented — dry heat beats a lid that steams everything soggy."
   ],
   "mealRecommendations": [
     {
@@ -56,12 +71,12 @@
   ],
   "faqs": [
     {
-      "question": "Where do these recipes come from?",
-      "answer": "Each link goes to a full recipe on Firehall Meals — crew-sized portions, station timing, and steps written for a shared kitchen. Not home-blog scaling."
+      "question": "What do you cook when half the crew already ate?",
+      "answer": "Hold the bake or burrito components warm and let late arrivals build a plate. A second wave of scrambled eggs in a hotel pan beats cooking a fresh full breakfast for two people."
     },
     {
-      "question": "What if crew size or time changes tonight?",
-      "answer": "Use Find a Meal with your headcount and minutes available. It pulls from the same hall-tested dinners these guides recommend."
+      "question": "What if crew size or time changes this morning?",
+      "answer": "Keep it simple: pick a line (burritos/tacos) or a bake. If you need a different headcount, open the recipe page and scale it for the crew you actually have in the building."
     }
   ],
   "relatedArticleSlugs": [
@@ -75,5 +90,6 @@
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
   "updatedAt": "2026-05-27T18:00:00.000Z",
-  "readMinutes": 7
+  "readMinutes": 7,
+  "heroImageAlt": "Firefighter Breakfast Ideas — firefighter breakfast ideas tips for fire station kitchens and crew-sized meals"
 }

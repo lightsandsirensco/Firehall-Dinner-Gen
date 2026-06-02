@@ -1,22 +1,22 @@
 {
   "slug": "beef-dip",
-  "title": "Blackstone Steak Sandwiches",
-  "displayTitle": "Blackstone Steak Sandwiches",
-  "seoTitle": "Blackstone Steak Sandwiches | Firefighter Meal",
+  "title": "Beef Dip Sandwiches",
+  "displayTitle": "Beef Dip Sandwiches",
+  "seoTitle": "Beef Dip Sandwiches | Firefighter Meal",
   "shortDescription": "Au jus dip energy without the fuss",
   "subtitle": "Au jus dip energy without the fuss",
   "category": "firehall_classics",
-  "cuisine": "american",
+  "cuisine": "canadian",
   "description": "Canadian hall legend. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
   "baseServings": 8,
-  "cookTime": 45,
-  "prepTime": 15,
+  "cookTime": 210,
+  "prepTime": 35,
   "difficulty": "medium",
-  "calories": 692,
-  "protein": 59,
+  "calories": 0,
+  "protein": 0,
   "carbs": 0,
-  "fats": 49,
+  "fats": 0,
   "tags": [
     "protein:beef",
     "format:sandwich",
@@ -32,10 +32,77 @@
   ],
   "ingredients": [
     {
-      "name": "NY strip or flank steak",
-      "quantity": "4",
+      "name": "Chuck roast or sirloin tip",
+      "quantity": "5",
       "unit": "lb",
       "group": "Main"
+    },
+    {
+      "name": "Low-sodium beef broth",
+      "quantity": "6",
+      "unit": "cups",
+      "group": "Au jus"
+    },
+    {
+      "name": "Yellow onion, halved",
+      "quantity": "2",
+      "unit": "large",
+      "group": "Au jus"
+    },
+    {
+      "name": "Garlic cloves, smashed",
+      "quantity": "6",
+      "unit": "cloves",
+      "group": "Au jus"
+    },
+    {
+      "name": "Worcestershire sauce",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Au jus"
+    },
+    {
+      "name": "Soy sauce",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Au jus"
+    },
+    {
+      "name": "Hoagie rolls",
+      "quantity": "24",
+      "unit": "count",
+      "group": "Buns"
+    },
+    {
+      "name": "Provolone slices",
+      "quantity": "24",
+      "unit": "count",
+      "notes": "optional",
+      "group": "Cheese"
+    },
+    {
+      "name": "Frozen steak fries",
+      "quantity": "5",
+      "unit": "lb",
+      "group": "Sides"
+    },
+    {
+      "name": "Coleslaw mix",
+      "quantity": "2",
+      "unit": "lb",
+      "group": "Sides"
+    },
+    {
+      "name": "Mayonnaise",
+      "quantity": "0.75",
+      "unit": "cup",
+      "group": "Sides"
+    },
+    {
+      "name": "Apple cider vinegar",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Sides"
     },
     {
       "name": "Kosher salt",
@@ -51,87 +118,132 @@
     },
     {
       "name": "Unsalted butter",
-      "quantity": "6",
+      "quantity": "4",
       "unit": "tbsp",
-      "group": "Herb butter"
-    },
-    {
-      "name": "Fresh parsley",
-      "quantity": "0.5",
-      "unit": "cup",
-      "group": "Herb butter"
-    },
-    {
-      "name": "Garlic cloves, minced",
-      "quantity": "3",
-      "unit": "cloves",
-      "group": "Herb butter"
+      "notes": "optional",
+      "group": "Buns"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Season and temper",
-      "instruction": "Pat steaks dry. Salt heavily 40 minutes ahead (or right before if rushed). Pepper just before cooking. Let meat sit out 20 minutes — cold centers overcook the exterior.",
-      "minutes": 45,
+      "title": "Season the roast beef",
+      "instruction": "Pat chuck roast or sirloin tip dry; rub all over with kosher salt and black pepper. Let sit at room temperature 30 minutes while the oven heats — cold centers extend cook time and dry the exterior.",
+      "minutes": 30,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Grill over high heat",
-      "instruction": "Grill over high heat (450–500°F surface) 3–5 minutes per side for strip to 130°F medium-rare. Flank: sear 4 minutes per side, then medium until 125°F; rest and slice thin against the grain.",
-      "minutes": 12,
-      "heatLevel": "high"
+      "title": "Sear and roast the beef",
+      "instruction": "Sear the roast in a hot Dutch oven with oil until deeply browned on all sides. Add beef broth, onion halves, and garlic; cover and roast at 325°F 2½–3 hours until fork-tender and 200°F internal. Rest covered 20 minutes — juices stay in the meat for thin slicing.",
+      "minutes": 180,
+      "heatLevel": "medium"
     },
     {
       "stepNumber": 3,
-      "title": "Baste with herb butter",
-      "instruction": "Melt butter with garlic and parsley. Rest steaks 8 minutes tented with foil, then slice and spoon butter over. Hold on warm trays at 180°F no more than 20 minutes.",
-      "minutes": 10,
-      "heatLevel": "low"
+      "title": "Build the au jus",
+      "instruction": "Strain pan juices into a fat separator; skim most of the fat. Simmer defatted juices with a splash of Worcestershire and soy 10 minutes until deeply savory. Taste for salt — au jus should taste like concentrated beef broth, not plain water. Hold hot in a deep cambro for dipping.",
+      "minutes": 15,
+      "heatLevel": "medium-low"
     },
     {
       "stepNumber": 4,
-      "title": "Serve on sheet trays",
-      "instruction": "Blackstone Steak Sandwiches goes out sliced on trays with extra herb butter melting on top — crew grabs with tongs, not forks and knives.",
+      "title": "Slice beef paper-thin",
+      "instruction": "Slice rested roast across the grain as thin as possible — a sharp slicer or steady knife hand matters. Pile sliced beef in a hotel pan with a ladle of au jus spooned over to keep moist. Cover loosely with foil at 140°F until service.",
+      "minutes": 15,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Toast hoagie rolls",
+      "instruction": "Split hoagie rolls and toast cut-side down on a griddle or under the broiler until golden. Butter lightly if the hall likes richness. Stack cut-side up on sheet trays — soft soggy rolls collapse in au jus.",
+      "minutes": 8,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Bake crispy fries",
+      "instruction": "Spread frozen fries in a single layer on sheet pans. Bake at 425°F 22–25 minutes until deeply golden with audible crunch. Season with salt immediately; hold in a warm oven with the door cracked.",
+      "minutes": 25,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 7,
+      "title": "Quick coleslaw",
+      "instruction": "Toss coleslaw mix with mayonnaise, apple cider vinegar, salt, and pepper until lightly coated — sharp and crunchy, not wet. Keep cold on ice until the line opens.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Melt provolone on beef (optional)",
+      "instruction": "Lay provolone slices over warm sliced beef under the broiler 1–2 minutes until melted and laced at the edges. Skip if the crew wants classic dip-only — both styles work on the hall line.",
+      "minutes": 3,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Run the beef dip line",
+      "instruction": "Load toasted hoagies with sliced beef and optional melted cheese. Ladle hot au jus into deep cups for dipping — the jus should come up halfway on the sandwich when dunked. Serve fries and coleslaw on separate trays.",
+      "minutes": 8,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 10,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover sliced roast beef — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
       "minutes": 5,
       "heatLevel": "low"
+    },
+    {
+      "stepNumber": 11,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool sliced roast beef and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
+      "heatLevel": ""
     }
   ],
   "proTips": [
-    "Warm rolls before building — cold bread kills the line.",
-    "Serve jus in mugs for easy dipping.",
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
-    "Taste for salt at the end — hall palates run salty after long shifts."
+    "Slice beef only after a full rest — rushing guarantees dry dip sandwiches.",
+    "Keep au jus hot in a deep cambro with a ladle — cold jus is the fastest way to lose hall cred.",
+    "Toast rolls hard enough to survive a full dunk without disintegrating.",
+    "Keep a backup tray at 200°F for firefighters returning from a run — never serve picked-over pans to late crew.",
+    "Taste for salt at the end — hall palates run salty after long shifts.",
+    "Log hold times on the pan with a grease pencil when tones drop mid-service.",
+    "Spot-check proteins with an instant-read thermometer before reopening the line after a call."
   ],
   "tonightSpread": [
-    "Plate Blackstone Steak Sandwiches with sides in separate pans so the crew can mix portions.",
-    "Line up Blackstone Steak Sandwiches on the main counter with serving spoons — firefighters grab fast between calls.",
-    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+    "Main: Beef dip sandwiches with hot au jus",
+    "Sides: crispy fries, tangy coleslaw",
+    "Condiments: provolone melt (optional), extra jus for dipping",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
   ],
   "leftovers": [
-    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
-    "Label trays with date and reheat to 165°F minimum before second shift.",
-    "Store components separate — assemble fresh; buns go soggy overnight."
+    "Cool sliced roast beef in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Reheat au jus separately and simmer sliced beef in jus 3 minutes until 165°F before second shift."
   ],
   "whyCrewsLikeIt": "Au jus dip energy without the fuss. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
+  "mealPrepNotes": "Prep mise en place before the shift — Blackstone Steak Sandwiches runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone.",
   "substitutions": [],
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 692,
-    "protein": 59,
+    "calories": 0,
+    "protein": 0,
     "carbs": 0,
-    "fats": 49,
-    "label": "per serving (hall portion)",
-    "source": "calculated",
+    "fats": 0,
+    "label": "Estimated per serving",
+    "source": "unavailable",
+    "estimateAvailable": false,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": true,
+      "under700Calories": false,
       "under30gFat": false,
       "highCarb": false,
       "lowCarb": true,
-      "mealPrepFriendly": false
+      "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": true,
@@ -166,6 +278,6 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "classicSlug": "beef-dip",
-  "generatedAt": "2026-06-01T01:40:02.009Z",
-  "contentVersion": 2
+  "generatedAt": "2026-06-02T14:05:59.201Z",
+  "contentVersion": 4
 }

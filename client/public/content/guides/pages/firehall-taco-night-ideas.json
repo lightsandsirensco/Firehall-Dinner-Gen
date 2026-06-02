@@ -5,27 +5,50 @@
   "description": "Ground beef bars, carnitas, chicken, and toppings that let ten people build without kitchen chaos.",
   "topic": "meal_planning",
   "pillar": "recipes_meals",
-  "intro": "Taco night works because it is a line, not a plating job. Firehall taco night ideas center on two proteins max, warm tortillas in a cooler, and toppings in bowls with spoons — not one cook assembling to order.",
+  "intro": "Taco night works because it is a line, not a plating job. Firehall taco night ideas center on two proteins max, warm tortillas in a cooler, and toppings in bowls with spoons — not one cook assembling to order. Below: what halls actually cook for firehall taco night — formats, timing, and recipe picks that survive a busy board.",
   "sections": [
     {
       "id": "proteins",
       "heading": "Pick your proteins",
       "paragraphs": [
-        "Ground beef seasoned simple, shredded chicken, or carnitas for busy nights. Veg option: seasoned beans in its own pan."
+        "Ground beef seasoned simple, shredded chicken, or carnitas for busy nights. Veg option: seasoned beans in its own pan.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
       ]
     },
     {
       "id": "tortillas",
       "heading": "Tortillas and toppings",
       "paragraphs": [
-        "Warm tortillas in a cooler, keep cold toppings cold, and put hot salsa where people expect heat. Two tortillas per person in the warmer."
+        "Warm tortillas in a cooler, keep cold toppings cold, and put hot salsa where people expect heat. Two tortillas per person in the warmer.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
+      ]
+    },
+    {
+      "id": "shift-pick",
+      "heading": "Pick the format before the recipe",
+      "paragraphs": [
+        "For firehall taco night, decide line vs. plated vs. batch before you open a recipe tab. Lines win when eaters show up between 17:00 and 20:00; batches win when you know the whole crew lands at once.",
+        "Post protein, starch, and hold plan on the whiteboard. When tones drop, the next cook should read \"covered on low\" instead of guessing what you meant on the flat-top."
+      ],
+      "tips": [
+        "Assign one cook and one runner — everyone else stays out until called.",
+        "Sauces on the side keep reheat from turning gluey for post-call eaters."
       ]
     }
   ],
   "practicalAdvice": [
     "Two tortillas per person in the warmer.",
     "Keep lettuce and tomato cold — separate from hot line.",
-    "Label mild vs hot salsa — prevents drama."
+    "Label mild vs hot salsa — prevents drama.",
+    "Post who's cooking and what's holding warm on the whiteboard — post-call eaters should not hunt for answers."
   ],
   "mealRecommendations": [
     {
@@ -75,5 +98,6 @@
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
   "updatedAt": "2026-05-27T18:00:00.000Z",
-  "readMinutes": 7
+  "readMinutes": 7,
+  "heroImageAlt": "Firehall Taco Night Ideas — firehall taco night tips for fire station kitchens and crew-sized meals"
 }

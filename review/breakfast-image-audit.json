@@ -1,16 +1,94 @@
 {
-  "generatedAt": "2026-05-31T18:33:10.912Z",
+  "generatedAt": "2026-06-02T13:13:37.490Z",
   "totals": {
     "recipesAudited": 69,
-    "passed": 69,
-    "failed": 0,
+    "passed": 67,
+    "failed": 2,
     "formatPassed": 69,
-    "duplicateGroups": 0,
+    "duplicateGroups": 2,
     "canonicalUnique": 51,
     "missingHero": 0
   },
-  "duplicateGroups": [],
-  "failedRecipes": [],
+  "duplicateGroups": [
+    {
+      "slugs": [
+        "bacon-hash-burritos",
+        "breakfast-burrito-bar"
+      ],
+      "hash": "b0d6a0efa00725474c19264c88a19071"
+    },
+    {
+      "slugs": [
+        "cast-iron-breakfast-skillet",
+        "ham-pepper-skillet"
+      ],
+      "hash": "67ea7cf0b01653d3d8132fa4ab1412ff"
+    }
+  ],
+  "failedRecipes": [
+    {
+      "slug": "ham-pepper-skillet",
+      "title": "Ham & Pepper Breakfast Skillet",
+      "source": "breakfast_catalog",
+      "route": "/breakfast/ham-pepper-skillet",
+      "formatKinds": [
+        "skillet"
+      ],
+      "heroImage": "/images/breakfast/ham-pepper-skillet.jpg",
+      "thumbImage": "/images/thumbs/breakfast/ham-pepper-skillet.jpg",
+      "mobileImage": "/images/mobile/breakfast/ham-pepper-skillet.jpg",
+      "railImage": "/images/rails/breakfast/ham-pepper-skillet.jpg",
+      "duplicatePeers": [
+        "cast-iron-breakfast-skillet"
+      ],
+      "recommendedDonor": null,
+      "issues": [
+        {
+          "code": "duplicate_hero_hash",
+          "severity": "critical",
+          "message": "hero MD5 shared with cast-iron-breakfast-skillet",
+          "confidence": 92
+        },
+        {
+          "code": "donor_override_active",
+          "severity": "warning",
+          "message": "hero reuses same file as other breakfast recipe(s): cast-iron-breakfast-skillet",
+          "confidence": 85
+        }
+      ]
+    },
+    {
+      "slug": "breakfast-burrito-bar",
+      "title": "Breakfast Burrito Bar",
+      "source": "golden_100",
+      "route": "/recipes/breakfast-burrito-bar",
+      "formatKinds": [
+        "burrito"
+      ],
+      "heroImage": "/images/golden-100/breakfast-burrito-bar.jpg",
+      "thumbImage": "/images/thumbs/breakfast-burrito-bar.jpg",
+      "mobileImage": "/images/mobile/breakfast-burrito-bar.jpg",
+      "railImage": "/images/rails/breakfast-burrito-bar.jpg",
+      "duplicatePeers": [
+        "bacon-hash-burritos"
+      ],
+      "recommendedDonor": null,
+      "issues": [
+        {
+          "code": "duplicate_hero_hash",
+          "severity": "critical",
+          "message": "hero MD5 shared with bacon-hash-burritos",
+          "confidence": 92
+        },
+        {
+          "code": "donor_override_active",
+          "severity": "warning",
+          "message": "hero reuses same file as other breakfast recipe(s): bacon-hash-burritos",
+          "confidence": 85
+        }
+      ]
+    }
+  ],
   "recipes": [
     {
       "slug": "bacon-egg-hash-skillet",
@@ -67,9 +145,12 @@
       ],
       "heroMd5": "b0d6a0efa00725474c19264c88a19071",
       "duplicateGroup": [
-        "bacon-hash-burritos"
+        "bacon-hash-burritos",
+        "breakfast-burrito-bar"
       ],
-      "duplicatePeers": [],
+      "duplicatePeers": [
+        "breakfast-burrito-bar"
+      ],
       "recommendedDonor": null,
       "onDisk": {
         "hero": true,
@@ -78,7 +159,20 @@
         "rail": true
       },
       "variantMismatch": false,
-      "issues": [],
+      "issues": [
+        {
+          "code": "duplicate_hero_hash",
+          "severity": "critical",
+          "message": "hero MD5 shared with breakfast-burrito-bar",
+          "confidence": 92
+        },
+        {
+          "code": "donor_override_active",
+          "severity": "warning",
+          "message": "hero reuses same file as other breakfast recipe(s): breakfast-burrito-bar",
+          "confidence": 85
+        }
+      ],
       "pass": true
     },
     {
@@ -449,7 +543,7 @@
       "formatKinds": [
         "sandwich"
       ],
-      "heroMd5": "95ecaf9795dc612f0cba43badeeeac7b",
+      "heroMd5": "d5d67808ee8eafbefbc88990606ec29b",
       "duplicateGroup": [
         "breakfast-sandwich-trays"
       ],
@@ -552,7 +646,7 @@
       "formatKinds": [
         "other"
       ],
-      "heroMd5": "e0c99ff4e6c86accfd2bda676f0ed996",
+      "heroMd5": "b2b94642354a7c7336b11cebc0923bca",
       "duplicateGroup": [
         "buttermilk-pancakes"
       ],
@@ -586,11 +680,14 @@
       "formatKinds": [
         "skillet"
       ],
-      "heroMd5": "58e55077964828be718f480c7abdfa09",
+      "heroMd5": "67ea7cf0b01653d3d8132fa4ab1412ff",
       "duplicateGroup": [
-        "cast-iron-breakfast-skillet"
+        "cast-iron-breakfast-skillet",
+        "ham-pepper-skillet"
       ],
-      "duplicatePeers": [],
+      "duplicatePeers": [
+        "ham-pepper-skillet"
+      ],
       "recommendedDonor": null,
       "onDisk": {
         "hero": true,
@@ -599,7 +696,20 @@
         "rail": true
       },
       "variantMismatch": false,
-      "issues": [],
+      "issues": [
+        {
+          "code": "duplicate_hero_hash",
+          "severity": "critical",
+          "message": "hero MD5 shared with ham-pepper-skillet",
+          "confidence": 92
+        },
+        {
+          "code": "donor_override_active",
+          "severity": "warning",
+          "message": "hero reuses same file as other breakfast recipe(s): ham-pepper-skillet",
+          "confidence": 85
+        }
+      ],
       "pass": true
     },
     {
@@ -1320,9 +1430,12 @@
       ],
       "heroMd5": "67ea7cf0b01653d3d8132fa4ab1412ff",
       "duplicateGroup": [
+        "cast-iron-breakfast-skillet",
         "ham-pepper-skillet"
       ],
-      "duplicatePeers": [],
+      "duplicatePeers": [
+        "cast-iron-breakfast-skillet"
+      ],
       "recommendedDonor": null,
       "onDisk": {
         "hero": true,
@@ -1331,8 +1444,21 @@
         "rail": true
       },
       "variantMismatch": false,
-      "issues": [],
-      "pass": true
+      "issues": [
+        {
+          "code": "duplicate_hero_hash",
+          "severity": "critical",
+          "message": "hero MD5 shared with cast-iron-breakfast-skillet",
+          "confidence": 92
+        },
+        {
+          "code": "donor_override_active",
+          "severity": "warning",
+          "message": "hero reuses same file as other breakfast recipe(s): cast-iron-breakfast-skillet",
+          "confidence": 85
+        }
+      ],
+      "pass": false
     },
     {
       "slug": "huevos-rancheros-crew",
@@ -2185,11 +2311,14 @@
       "formatKinds": [
         "burrito"
       ],
-      "heroMd5": "8a4e6994111035d3658b425e72d0c2cd",
+      "heroMd5": "b0d6a0efa00725474c19264c88a19071",
       "duplicateGroup": [
+        "bacon-hash-burritos",
         "breakfast-burrito-bar"
       ],
-      "duplicatePeers": [],
+      "duplicatePeers": [
+        "bacon-hash-burritos"
+      ],
       "recommendedDonor": null,
       "onDisk": {
         "hero": true,
@@ -2198,8 +2327,21 @@
         "rail": true
       },
       "variantMismatch": false,
-      "issues": [],
-      "pass": true
+      "issues": [
+        {
+          "code": "duplicate_hero_hash",
+          "severity": "critical",
+          "message": "hero MD5 shared with bacon-hash-burritos",
+          "confidence": 92
+        },
+        {
+          "code": "donor_override_active",
+          "severity": "warning",
+          "message": "hero reuses same file as other breakfast recipe(s): bacon-hash-burritos",
+          "confidence": 85
+        }
+      ],
+      "pass": false
     },
     {
       "slug": "pancake-short-stack",
@@ -2217,7 +2359,7 @@
       "formatKinds": [
         "pancake"
       ],
-      "heroMd5": "1e3e17fd94607f240a31f4ab49ad79fa",
+      "heroMd5": "b87b1a17f8d9751a1653d0520921f59f",
       "duplicateGroup": [
         "pancake-short-stack"
       ],
@@ -2283,7 +2425,7 @@
         "casserole",
         "french_toast"
       ],
-      "heroMd5": "c1565b624be2191a3a509d33f2b1aa48",
+      "heroMd5": "ef7f3e7962468e0e5c21a5558786ae52",
       "duplicateGroup": [
         "french-toast-casserole"
       ],
@@ -2315,7 +2457,7 @@
       "formatKinds": [
         "other"
       ],
-      "heroMd5": "f7b94eb0f2ab6a583ff450c589d7f5e3",
+      "heroMd5": "8343183d3ff79fdbb516b6c4b596b0ff",
       "duplicateGroup": [
         "chorizo-breakfast-tacos"
       ],
@@ -2347,7 +2489,7 @@
       "formatKinds": [
         "other"
       ],
-      "heroMd5": "acbfef3c5f318771931c51ed80c0f671",
+      "heroMd5": "7423b7ca98f203a9811926a25411f96c",
       "duplicateGroup": [
         "biscuits-gravy"
       ],

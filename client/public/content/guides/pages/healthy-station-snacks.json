@@ -5,27 +5,50 @@
   "description": "Healthy snacks for fire stations: fruit, yogurt, nuts, hummus, and protein options that beat vending machines between meals.",
   "topic": "nutrition_performance",
   "pillar": "nutrition_performance",
-  "intro": "Station snacks fail when they are 'healthy' but invisible. A fruit bowl on the counter beats asparagus wilting in the crisper. The goal is credible options between meals — not a lecture while someone eats chips because nothing else is ready.",
+  "intro": "Station snacks fail when they are 'healthy' but invisible. A fruit bowl on the counter beats asparagus wilting in the crisper. The goal is credible options between meals — not a lecture while someone eats chips because nothing else is ready. Below: what halls actually cook for fire station snacks — formats, timing, and recipe picks that survive a busy board.",
   "sections": [
     {
       "id": "fridge",
       "heading": "Fridge that works",
       "paragraphs": [
-        "Designate a snack shelf. Date labels. One person owns rotation. Chaos fridges become takeout fridges."
+        "Designate a snack shelf. Date labels. One person owns rotation. Chaos fridges become takeout fridges.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
       ]
     },
     {
       "id": "counter",
       "heading": "Counter snacks that disappear",
       "paragraphs": [
-        "Bananas, oranges, and a nut bin on the counter beat hidden 'healthy' food in the back of the fridge. Visibility drives use on busy tours."
+        "Bananas, oranges, and a nut bin on the counter beat hidden 'healthy' food in the back of the fridge. Visibility drives use on busy tours.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
+      ]
+    },
+    {
+      "id": "shift-fuel",
+      "heading": "How this plays across a long shift",
+      "paragraphs": [
+        "Shift nutrition is timing, not willpower. For fire station snacks, anchor protein at dinner, keep snacks that survive the apparatus bay, and drink water like it is part of the job — not a lecture at 03:00.",
+        "This is practical hall guidance, not medical advice. Follow your department's health program and personal providers for individual plans."
+      ],
+      "tips": [
+        "Label leftovers with date — rotation matters more than recipe genius.",
+        "Pair lighter mains with one optional indulgent side when morale needs it."
       ]
     }
   ],
   "practicalAdvice": [
     "Stock snacks at eye level — yogurt, fruit, string cheese, hummus.",
     "Keep nuts and trail mix in labeled bins — portion beats mindless bag eating.",
-    "Rotate weekly — old fruit erodes trust in the whole program."
+    "Rotate weekly — old fruit erodes trust in the whole program.",
+    "Post who's cooking and what's holding warm on the whiteboard — post-call eaters should not hunt for answers."
   ],
   "mealRecommendations": [
     {
@@ -65,5 +88,6 @@
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
   "updatedAt": "2026-05-27T18:00:00.000Z",
-  "readMinutes": 7
+  "readMinutes": 7,
+  "heroImageAlt": "Healthy Station Snacks — fire station snacks tips for fire station kitchens and crew-sized meals"
 }

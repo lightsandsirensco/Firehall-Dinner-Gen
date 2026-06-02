@@ -144,12 +144,13 @@
     }
   ],
   "nutrition": {
-    "calories": 208,
-    "protein": 4,
-    "carbs": 8,
-    "fat": 18,
-    "label": "per serving (hall portion)",
-    "source": "calculated",
+    "calories": 0,
+    "protein": 0,
+    "carbs": 0,
+    "fats": 0,
+    "label": "Estimated per serving",
+    "source": "unavailable",
+    "estimateAvailable": false,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
@@ -202,5 +203,7 @@
     "Aluminum foil"
   ],
   "mealPrepNotes": "Prep mise en place before the shift — Hall Sausage Biscuits & Gravy runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone.",
-  "heroImageAlt": "Hall Sausage Biscuits & Gravy — wide family-style firehall platter showing gravy on a crew prep table"
+  "heroImageAlt": "Hall Sausage Biscuits & Gravy — wide family-style firehall platter showing gravy on a crew prep table",
+  "mobileImage": "/images/mobile/breakfast/hall-sausage-biscuits-gravy.jpg",
+  "railImage": "/images/rails/breakfast/hall-sausage-biscuits-gravy.jpg"
 }

@@ -5,27 +5,50 @@
   "description": "How to eat during high-stress firefighter shifts when crews skip meals, and which hall foods are easy to eat when adrenaline is high.",
   "topic": "nutrition_performance",
   "pillar": "nutrition_performance",
-  "intro": "High-stress shifts kill appetite. Crews still need fuel — especially before a long job and after. Small, familiar foods win: broth, sandwiches, banana with peanut butter, chili in a cup. Forcing a huge plate mid-crisis rarely works.",
+  "intro": "High-stress shifts kill appetite. Crews still need fuel — especially before a long job and after. Small, familiar foods win: broth, sandwiches, banana with peanut butter, chili in a cup. Forcing a huge plate mid-crisis rarely works. Below: what halls actually cook for stress shift eating — formats, timing, and recipe picks that survive a busy board.",
   "sections": [
     {
       "id": "before",
       "heading": "Before the board stacks",
       "paragraphs": [
-        "If dinner is early, eat while you can. A bowl now beats nothing later."
+        "If dinner is early, eat while you can. A bowl now beats nothing later.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
       ]
     },
     {
       "id": "after",
       "heading": "After intensity",
       "paragraphs": [
-        "Salt, protein, and warmth signal safety. That is when chili and sandwiches land."
+        "Salt, protein, and warmth signal safety. That is when chili and sandwiches land.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
+      ]
+    },
+    {
+      "id": "shift-fuel",
+      "heading": "How this plays across a long shift",
+      "paragraphs": [
+        "Shift nutrition is timing, not willpower. For stress shift eating, anchor protein at dinner, keep snacks that survive the apparatus bay, and drink water like it is part of the job — not a lecture at 03:00.",
+        "This is practical hall guidance, not medical advice. Follow your department's health program and personal providers for individual plans."
+      ],
+      "tips": [
+        "Label leftovers with date — rotation matters more than recipe genius.",
+        "Pair lighter mains with one optional indulgent side when morale needs it."
       ]
     }
   ],
   "practicalAdvice": [
     "Keep grab-and-go options visible before tones stack.",
     "After the job, warm simple food — do not skip because 'nobody is hungry.'",
-    "Broth and soup are underrated — easy to sip."
+    "Broth and soup are underrated — easy to sip.",
+    "Post who's cooking and what's holding warm on the whiteboard — post-call eaters should not hunt for answers."
   ],
   "mealRecommendations": [
     {
@@ -65,5 +88,6 @@
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
   "updatedAt": "2026-05-27T18:00:00.000Z",
-  "readMinutes": 7
+  "readMinutes": 7,
+  "heroImageAlt": "Eating During High-Stress Shifts — stress shift eating tips for fire station kitchens and crew-sized meals"
 }

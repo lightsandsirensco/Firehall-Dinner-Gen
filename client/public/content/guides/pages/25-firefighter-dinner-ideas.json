@@ -5,27 +5,50 @@
   "description": "Twenty-five firefighter dinner ideas for station kitchens: handhelds, bakes, grills, and bowls crews actually cook on shift — each links to a full crew-sized recipe.",
   "topic": "meal_planning",
   "pillar": "recipes_meals",
-  "intro": "Most 'dinner idea' lists are written for two people at home. This one is built for a fire hall: crew-sized portions, realistic timing, and formats that survive interruptions. Below are twenty-five dinners firefighters actually cook — with notes on when to use each.",
+  "intro": "Most 'dinner idea' lists are written for two people at home. This one is built for a fire hall: crew-sized portions, realistic timing, and formats that survive interruptions. Below are twenty-five dinners firefighters actually cook — with notes on when to use each. Below: what halls actually cook for firefighter dinner ideas — formats, timing, and recipe picks that survive a busy board.",
   "sections": [
     {
       "id": "how-to-use",
       "heading": "How to use this list on shift",
       "paragraphs": [
-        "Match time first, protein second. Under forty minutes? Stay in the handheld and skillet section. Quiet board? Smoke, bake, or batch."
+        "Match time first, protein second. Under forty minutes? Stay in the handheld and skillet section. Quiet board? Smoke, bake, or batch.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
       ]
     },
     {
       "id": "rotate",
       "heading": "Rotate without burning out the cook",
       "paragraphs": [
-        "Assign a 'theme night' per week — taco, pasta, grill, bowl — and pull from that slice of the list so shopping stays predictable."
+        "Assign a 'theme night' per week — taco, pasta, grill, bowl — and pull from that slice of the list so shopping stays predictable.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
+      ]
+    },
+    {
+      "id": "shift-pick",
+      "heading": "Pick the format before the recipe",
+      "paragraphs": [
+        "For firefighter dinner ideas, decide line vs. plated vs. batch before you open a recipe tab. Lines win when eaters show up between 17:00 and 20:00; batches win when you know the whole crew lands at once.",
+        "Post protein, starch, and hold plan on the whiteboard. When tones drop, the next cook should read \"covered on low\" instead of guessing what you meant on the flat-top."
+      ],
+      "tips": [
+        "Assign one cook and one runner — everyone else stays out until called.",
+        "Sauces on the side keep reheat from turning gluey for post-call eaters."
       ]
     }
   ],
   "practicalAdvice": [
     "Bookmark five picks that match your usual shift length — rotate those before chasing novelty.",
     "Tag two 'tones-drop safe' meals per month (chili, pulled pork, baked pasta).",
-    "Run one line meal monthly so picky eaters self-serve."
+    "Run one line meal monthly so picky eaters self-serve.",
+    "Post who's cooking and what's holding warm on the whiteboard — post-call eaters should not hunt for answers."
   ],
   "mealRecommendations": [
     {
@@ -181,5 +204,6 @@
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
   "updatedAt": "2026-05-27T18:00:00.000Z",
-  "readMinutes": 12
+  "readMinutes": 12,
+  "heroImageAlt": "25 Firefighter Dinner Ideas — firefighter dinner ideas tips for fire station kitchens and crew-sized meals"
 }

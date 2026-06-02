@@ -123,12 +123,13 @@
     }
   ],
   "nutrition": {
-    "calories": 211,
-    "protein": 13,
-    "carbs": 17,
-    "fat": 11,
-    "label": "per serving (hall portion)",
-    "source": "calculated",
+    "calories": 0,
+    "protein": 0,
+    "carbs": 0,
+    "fats": 0,
+    "label": "Estimated per serving",
+    "source": "unavailable",
+    "estimateAvailable": false,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
@@ -180,5 +181,7 @@
     "Instant-read thermometer",
     "Aluminum foil"
   ],
-  "mealPrepNotes": "Prep mise en place before the shift — Crew French Toast Bake runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
+  "mealPrepNotes": "Prep mise en place before the shift — Crew French Toast Bake runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone.",
+  "mobileImage": "/images/mobile/breakfast/crew-french-toast-bake.jpg",
+  "railImage": "/images/rails/breakfast/crew-french-toast-bake.jpg"
 }

@@ -5,27 +5,42 @@
   "description": "Skillet, pasta, shrimp, quesadillas, and flat-top dinners that respect a real hall clock — not magazine prep times.",
   "topic": "meal_planning",
   "pillar": "recipes_meals",
-  "intro": "Thirty minutes on a hall clock is closer to twenty-two after someone asks a 'quick question' in the kitchen. Fast firehall meals under thirty minutes skip rests, brines, and multi-stage bakes. They hit high heat, short ingredient lists, and formats you have cooked before.",
+  "intro": "Thirty minutes on a hall clock is closer to twenty-two after someone asks a 'quick question' in the kitchen. Fast firehall meals skip rests, brines, and multi-stage bakes. They hit high heat, short ingredient lists, and formats you have cooked before — garlic butter shrimp on the flat-top, a philly skillet, carnitas tacos when the board already looks ugly at 18:15.",
   "sections": [
     {
       "id": "picks",
       "heading": "What actually clears 30 minutes",
       "paragraphs": [
-        "Shrimp, thin chicken, ground beef, and pasta with jar-plus-fresh finishes. Skip whole birds and large roasts unless they started before you arrived."
+        "Shrimp, thin chicken, ground beef, and pasta with jar-plus-fresh finishes. Skip whole birds and large roasts unless they started before you arrived.",
+        "Last busy night we ran garlic butter shrimp while two guys portioned rice and a third warmed tortillas for pork carnitas tacos — eaters grabbed plates between 17:40 and 19:10 and nobody waited on a single finish time."
+      ],
+      "tips": [
+        "Thaw protein before shift if you know the board is stacked.",
+        "Frozen peppers are fine — nobody on the rig cares if you chopped them at 16:00."
       ]
     },
     {
-      "id": "prep",
-      "heading": "Prep that buys time back",
+      "id": "kitchen-traffic",
+      "heading": "Keep the kitchen from filling up",
       "paragraphs": [
-        "Thaw protein before shift, pre-chop peppers, and keep tortillas warm. Ten minutes of prep often saves twenty on the back end."
+        "One cook on heat, one runner for plates and drinks, everyone else out until called. The fastest meal dies when four people 'just stir' the same pan.",
+        "Write on the whiteboard: protein, hold temp, who is finishing. When tones drop at minute eighteen, the returning cook should not be guessing whether the skillet is off or just turned down."
+      ]
+    },
+    {
+      "id": "when-not-to-rush",
+      "heading": "When to pick a different format",
+      "paragraphs": [
+        "If you are feeding twelve after a working fire and morale is thin, a taco line or chili batch beats a fragile pasta that clumps while you are still on scene.",
+        "Fast nights are for food that forgives a ten-minute hold — quesadillas, bowls, shrimp — not a sauce that breaks if nobody stirs it."
       ]
     }
   ],
   "practicalAdvice": [
     "Pre-heat while you chop — never wait on the oven idle.",
     "Frozen veg is allowed on fast nights.",
-    "One pan, one protein, one starch — done."
+    "One pan, one protein, one starch — done.",
+    "Sauces on the side so late eaters do not get gluey reheat."
   ],
   "mealRecommendations": [
     {
@@ -61,12 +76,12 @@
   ],
   "faqs": [
     {
-      "question": "Where do these recipes come from?",
-      "answer": "Each link goes to a full recipe on Firehall Meals — crew-sized portions, station timing, and steps written for a shared kitchen. Not home-blog scaling."
+      "question": "What if tones drop right before dinner hits the table?",
+      "answer": "Lower heat, cover, post the hold on the whiteboard. Shrimp and skillet meals survive; seared chicken cutlets do not — finish those when you are back or pivot to a line format."
     },
     {
-      "question": "What if crew size or time changes tonight?",
-      "answer": "Use Find a Meal with your headcount and minutes available. It pulls from the same hall-tested dinners these guides recommend."
+      "question": "Where do these recipe links go?",
+      "answer": "Each one opens a full Firehall Meals recipe page — ingredients, steps, crew scaling, and nutrition — so you can cook it without guessing."
     }
   ],
   "relatedArticleSlugs": [
@@ -80,5 +95,6 @@
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
   "updatedAt": "2026-05-27T18:00:00.000Z",
-  "readMinutes": 7
+  "readMinutes": 7,
+  "heroImageAlt": "Fast Firehall Meals Under 30 Minutes — fast firehall meals tips for fire station kitchens and crew-sized meals"
 }

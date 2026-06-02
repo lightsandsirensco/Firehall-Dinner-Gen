@@ -5,27 +5,50 @@
   "description": "Recovery meals for firefighters after difficult calls: comfort, protein, hydration, and hall food that supports the crew without performative 'wellness.'",
   "topic": "nutrition_performance",
   "pillar": "nutrition_performance",
-  "intro": "After a hard call, food is emotional infrastructure. Recovery meals should be hot, plentiful, and familiar — not a surprise health experiment. The kitchen can be where the crew lands without forcing conversation.",
+  "intro": "After a hard call, food is emotional infrastructure. Recovery meals should be hot, plentiful, and familiar — not a surprise health experiment. The kitchen can be where the crew lands without forcing conversation. Below: what halls actually cook for recovery meals firefighters — formats, timing, and recipe picks that survive a busy board. Below: what halls actually cook for recovery meals firefighters — formats, timing, and recipe picks that survive a busy board.",
   "sections": [
     {
       "id": "kitchen",
       "heading": "Let the kitchen do quiet work",
       "paragraphs": [
-        "Mac and cheese, chili, pot pie — foods people eat without thinking. Hold seconds on a warm tray."
+        "Mac and cheese, chili, pot pie — foods people eat without thinking. Hold seconds on a warm tray.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
       ]
     },
     {
       "id": "room",
       "heading": "Read the room",
       "paragraphs": [
-        "Some nights need quiet and food, not a speech. Let the kitchen stay open late without forcing a group moment — presence matters more than menu creativity."
+        "Some nights need quiet and food, not a speech. Let the kitchen stay open late without forcing a group moment — presence matters more than menu creativity.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
+      ]
+    },
+    {
+      "id": "shift-fuel",
+      "heading": "How this plays across a long shift",
+      "paragraphs": [
+        "Shift nutrition is timing, not willpower. For recovery meals firefighters, anchor protein at dinner, keep snacks that survive the apparatus bay, and drink water like it is part of the job — not a lecture at 03:00.",
+        "This is practical hall guidance, not medical advice. Follow your department's health program and personal providers for individual plans."
+      ],
+      "tips": [
+        "Label leftovers with date — rotation matters more than recipe genius.",
+        "Pair lighter mains with one optional indulgent side when morale needs it."
       ]
     }
   ],
   "practicalAdvice": [
     "Start water and simple food — not alcohol first.",
     "Let people eat in silence if they want.",
-    "Comfort food is appropriate — pair with protein when you can."
+    "Comfort food is appropriate — pair with protein when you can.",
+    "Post who's cooking and what's holding warm on the whiteboard — post-call eaters should not hunt for answers."
   ],
   "mealRecommendations": [
     {
@@ -70,5 +93,6 @@
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
   "updatedAt": "2026-05-27T18:00:00.000Z",
-  "readMinutes": 7
+  "readMinutes": 7,
+  "heroImageAlt": "Recovery Meals After Hard Calls — recovery meals firefighters tips for fire station kitchens and crew-sized meals"
 }

@@ -1,20 +1,16 @@
 # Recipe Nutrition Audit Report
 
-Generated: 2026-06-01T01:58:40.910Z
+Generated: 2026-06-02T15:57:42.360Z
 Mode: report only
 
 ## Summary
 
-- Total recipes scanned: **356**
+- Total recipes scanned: **357**
 - Missing nutrition (before fix): **0**
 - Corrected: **0**
-- Suspicious / divergent: **1**
-- Clean after run: **355**
+- Suspicious / divergent: **12**
+- Clean after run: **357**
 
 ## Missing / Corrected / Suspicious
 
-### lumberjack-breakfast-platter (breakfast) — suspicious
-- Before: 1100 cal · 72g P · 140g C · 90g F
-- After: 1100 cal · 72g P · 140g C · 90g F
-- Macro calories (1658) diverge from label (1100)
-- Macro calories (1658) diverge from label (1100)
+_All recipes have complete per-serving nutrition._

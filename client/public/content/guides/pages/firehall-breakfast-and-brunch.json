@@ -5,20 +5,42 @@
   "description": "Breakfast and brunch ideas for fire stations: timing, line setup, and recipes crews finish — not tray waste.",
   "topic": "station_cooking",
   "pillar": "recipes_meals",
-  "intro": "Breakfast at the hall is either the best meal of the shift or a pile of cold eggs and guilt. The difference is format: bakes and bars beat made-to-order unless you have a dedicated cook and a quiet board.",
+  "intro": "Breakfast at the hall is either the best meal of the shift or a pile of cold eggs and guilt. The difference is format: bakes and bars beat made-to-order unless you have a dedicated cook and a quiet board. Below: what halls actually cook for fire station breakfast — formats, timing, and recipe picks that survive a busy board.",
   "sections": [
     {
       "id": "formats",
       "heading": "Formats that survive a busy morning",
       "paragraphs": [
-        "Breakfast burrito bars, frittata bakes, and pancake short stacks (held warm) fit staggered eating. Avoid eggs benedict for eight unless someone volunteers their sanity."
+        "Breakfast burrito bars, frittata bakes, and pancake short stacks (held warm) fit staggered eating. Avoid eggs benedict for eight unless someone volunteers their sanity.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
       ]
     },
     {
       "id": "cleanup",
       "heading": "Cleanup and handoff to the day shift",
       "paragraphs": [
-        "Breakfast mess at 08:00 makes enemies. Line everything into one trash, soak pans immediately, and wipe the flat-top while it is still warm. The crew that follows should find coffee, not crust."
+        "Breakfast mess at 08:00 makes enemies. Line everything into one trash, soak pans immediately, and wipe the flat-top while it is still warm. The crew that follows should find coffee, not crust.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
+      ]
+    },
+    {
+      "id": "line-setup",
+      "heading": "Line setup and second helpings",
+      "paragraphs": [
+        "Station cooking is line discipline. For fire station breakfast, hot food hot, cold food cold, sauces on the side. Runners refill starch and drinks so the cook stays on heat.",
+        "Plan second helpings before you portion — extra rice, buns, or potatoes cost less than cooking a second main at 21:00."
+      ],
+      "tips": [
+        "Probe temps on poultry and pork — guessing is how halls serve pink chicken.",
+        "Empty grease traps before grill night; keep the right extinguisher class within reach."
       ]
     }
   ],
@@ -72,5 +94,6 @@
   ],
   "publishedAt": "2026-05-27T12:00:00.000Z",
   "updatedAt": "2026-05-27T12:00:00.000Z",
-  "readMinutes": 6
+  "readMinutes": 7,
+  "heroImageAlt": "Firehall Breakfast and Brunch That Actually Get Eaten — fire station breakfast tips for fire station kitchens and crew-sized meals"
 }

@@ -13,10 +13,10 @@
   "cookTime": 25,
   "prepTime": 30,
   "difficulty": "medium",
-  "calories": 701,
-  "protein": 66,
-  "carbs": 5,
-  "fats": 45,
+  "calories": 0,
+  "protein": 0,
+  "carbs": 0,
+  "fats": 0,
   "tags": [
     "protein:beef",
     "format:cheesesteak_press",
@@ -170,12 +170,26 @@
   "mealPrepNotes": "Partially freeze ribeye for clean chopping. Griddle at 425°F in batches. Hold chopped beef and onions at 170°F up to 30 minutes. Build steaks to order.",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 701,
-    "protein": 66,
-    "carbs": 5,
-    "fats": 45,
-    "label": "per serving (hall portion)",
-    "source": "estimated"
+    "calories": 0,
+    "protein": 0,
+    "carbs": 0,
+    "fats": 0,
+    "label": "Estimated per serving",
+    "source": "unavailable",
+    "estimateAvailable": false,
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/smoker-catalog/flat-top-philly-cheesesteaks-crew.jpg",
   "heroImageAlt": "Cooper Sharp Chopped Ribeye Hoagies — crew-sized BBQ spread with visible smoke and bark",

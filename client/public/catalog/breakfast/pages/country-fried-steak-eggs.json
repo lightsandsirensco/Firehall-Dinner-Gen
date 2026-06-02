@@ -158,12 +158,13 @@
     }
   ],
   "nutrition": {
-    "calories": 940,
-    "protein": 63,
-    "carbs": 78,
-    "fat": 40,
-    "label": "per serving (hall portion)",
-    "source": "calculated",
+    "calories": 0,
+    "protein": 0,
+    "carbs": 0,
+    "fats": 0,
+    "label": "Estimated per serving",
+    "source": "unavailable",
+    "estimateAvailable": false,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
@@ -216,5 +217,7 @@
     "Aluminum foil"
   ],
   "mealPrepNotes": "Prep mise en place before the shift — Country Fried Steak and Eggs Breakfast runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone.",
-  "heroImageAlt": "Country Fried Steak and Eggs Breakfast — wide family-style firehall platter showing beef, eggs breakfast on a crew prep table"
+  "heroImageAlt": "Country Fried Steak and Eggs Breakfast — wide family-style firehall platter showing beef, eggs breakfast on a crew prep table",
+  "mobileImage": "/images/mobile/breakfast/country-fried-steak-eggs.jpg",
+  "railImage": "/images/rails/breakfast/country-fried-steak-eggs.jpg"
 }

@@ -3,6 +3,11 @@
  */
 
 import { normalizeFormatKey } from "./meal-format-contract.js";
+import {
+  buildPlatingAccuracyNegativeHints,
+  buildPlatingAccuracyPromptLines,
+  isBreakfastTitle,
+} from "./plating-accuracy-standard.js";
 
 export type PlatingType =
   | "bowl"
@@ -33,13 +38,16 @@ const SKILLET_TITLE = /\b(skillet|one.?pan|cast iron)\b/i;
 const TRAY_TITLE = /\b(sheet pan|tray bake|sheet.?pan|egg casserole tray)\b/i;
 const CASSEROLE_TITLE = /\b(casserole|bake|baked ziti|hot dish)\b/i;
 const SALAD_TITLE = /\b(salad|caesar|greens bowl)\b/i;
-const SANDWICH_TITLE = /\b(sandwich|sub|hoagie|panini|hero\b|po.?boy)\b/i;
+const SANDWICH_TITLE = /\b(sandwich|sub|hoagie|panini|hero\b|po.?boy|french\s*dip|beef\s*dip|steak\s*sandwich)\b/i;
+const RICE_CURRY_TITLE =
+  /\b(jerk\s*chicken|butter\s*chicken|chicken\s*tikka|tikka\s*masala|thai\s*curry|green\s*curry|red\s*curry|massaman|korma|vindaloo|rice\s*(?:&|and)\s*peas|peas\s*(?:&|and)\s*rice)\b/i;
 
 /** Infer canonical plating from title — title wins over loose mealFormat. */
 export function inferPlatingType(title: string, mealFormat?: string): PlatingType {
   const t = (title || "").trim();
   const fmt = normalizeFormatKey(mealFormat);
 
+  if (RICE_CURRY_TITLE.test(t)) return "rice_plate";
   if (WRAP_TITLE.test(t) && !BOWL_TITLE.test(t)) return "wrap";
   if (BOWL_TITLE.test(t) || /\bburrito bowls?\b/i.test(t)) return "bowl";
   if (TACO_TITLE.test(t) && !/\bbowls?\b/i.test(t)) return "taco";
@@ -140,30 +148,60 @@ export function buildPlatingPromptLine(
       }
       return `${dish} in wide salad bowl, protein forward on greens — NOT burger bun, NOT taco shell`;
     case "sandwich":
-      return `${dish} cross-section or stacked sandwich, fillings visible — NOT rice bowl`;
+      return `${dish} — closed sandwich on bun or roll with named side (fries, wedges, slaw, or salad) on same frame, fillings visible — NOT rice bowl, NOT toast-only unless titled toast`;
     case "rice_plate":
-      return `${dish} on plate with distinct rice bed and protein, ${cuisine} styling — NOT lettuce wrap`;
+      return `${dish} — charred or sauced protein beside a visible bed of rice (and peas/beans when titled), sauce in its own zone, ${cuisine} firehall spread — rice must read clearly, NOT a sauce-only bowl`;
     default:
-      return `${dish} on single generous plate, sides soft at edges, firehall portion scale`;
+      if (isBreakfastTitle(dish)) {
+        return `${dish} — breakfast tray with separate zones for eggs, bacon or sausage, potatoes/hash browns, and toast or pancakes — each component in its own area, NOT stacked`;
+      }
+      return `${dish} on single generous plate — protein 40–50%, starch 25–35%, veg/side 15–25%, all sides visible at edges, firehall portion scale`;
   }
 }
 
-export function platingNegativeHints(platingType: PlatingType): string[] {
+export function platingNegativeHints(
+  platingType: PlatingType,
+  title = "",
+  mealFormat?: string,
+): string[] {
   const common = ["text", "logo", "watermark", "hands", "faces", "delivery box"];
-  switch (platingType) {
-    case "bowl":
-      return [...common, "lettuce wraps", "lettuce cups", "tacos", "handheld", "bun", "flatbread"];
-    case "wrap":
-      return [...common, "rice bowl", "deep bowl", "tacos in tortilla", "burger bun"];
-    case "taco":
-      return [...common, "rice bowl", "deep soup bowl", "burger", "lettuce only without tortilla"];
-    case "burger":
-      return [...common, "bowl", "wrap", "taco shell", "pasta"];
-    case "pasta":
-      return [...common, "rice bowl", "taco", "burger", "wrap"];
-    case "soup":
-      return [...common, "dry plate only", "burger", "taco", "wrap"];
-    default:
-      return common;
-  }
+  const accuracy = title.trim()
+    ? buildPlatingAccuracyNegativeHints(title, mealFormat, platingType)
+    : [];
+  const typeSpecific: string[] = (() => {
+    switch (platingType) {
+      case "bowl":
+        return ["lettuce wraps", "lettuce cups", "tacos", "handheld", "bun", "flatbread"];
+      case "wrap":
+        return ["rice bowl", "deep bowl", "tacos in tortilla", "burger bun"];
+      case "taco":
+        return ["rice bowl", "deep soup bowl", "burger", "lettuce only without tortilla"];
+      case "burger":
+        return ["bowl", "wrap", "taco shell", "pasta"];
+      case "pasta":
+        return ["rice bowl", "taco", "burger", "wrap"];
+      case "soup":
+        return ["dry plate only", "burger", "taco", "wrap"];
+      case "sandwich":
+        return ["cropped side dish", "sandwich without visible fries or slaw"];
+      case "rice_plate":
+        return ["sauce-only bowl", "hidden rice", "no visible rice bed"];
+      default:
+        return [];
+    }
+  })();
+
+  return [...common, ...typeSpecific, ...accuracy];
+}
+
+/** Full plating line for prompts — vessel + accuracy standard. */
+export function buildFullPlatingPromptLine(
+  title: string,
+  mealFormat?: string,
+  cuisine = "American",
+): string {
+  const platingType = inferPlatingType(title, mealFormat);
+  const vessel = buildPlatingPromptLine(platingType, title, cuisine);
+  const accuracy = buildPlatingAccuracyPromptLines(title, mealFormat, platingType).join(" ");
+  return `${vessel}. ${accuracy}`;
 }

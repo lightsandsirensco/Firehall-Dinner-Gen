@@ -342,25 +342,36 @@ export const CORNERSTONE_BLOG_ARTICLES = [
     pillar: "recipes_meals",
     readMinutes: 9,
     intro:
-      "Every hall has a story about a rookie who burned the garlic or salted the chili twice. You will cook on shift — that is part of the job. These ten rookie-proof firehall meals are hard to ruin, feed a crew, and build confidence without requiring culinary school. Cook with a partner your first time, read the full recipe before you start, and remember: crews respect effort and cleanup more than perfect plating.",
+      "Every hall has a story about a rookie who burned the garlic or salted the chili twice. You will cook on shift — that is part of the job. These ten meals are hard to ruin, feed a crew, and build confidence without culinary school. Read the full recipe before you start, grab a partner your first time, and remember: the crew cares more about hot food and a clean kitchen than perfect plating.",
     practicalAdvice: [
       "Read the recipe end-to-end before you touch a knife — surprises mid-cook are how pans get burned.",
       "Taste and season in layers — salt at the start, acid at the finish.",
       "Start cleanup while things hold — leaving the kitchen a mess wipes out a good meal.",
+      "Post who is cooking on the whiteboard so late eaters know what is holding warm.",
     ],
     sections: [
       {
         id: "pick-rookie",
         heading: "What makes a meal rookie-proof",
         paragraphs: [
-          "Forgiving timing, simple ingredients, one main pot or line, and a result that still tastes good if someone eats late. If the recipe dies when it sits ten minutes, save it until you have a quiet board.",
+          "Forgiving timing, simple ingredients, one main pot or line, and food that still eats well if someone shows up twenty minutes late. If the recipe dies the moment it sits, wait until you have a quiet board.",
+          "Big chili is the usual first win — it simmers, forgives, and the toppings hide a lot. Hall taco bar night teaches line setup without a fragile finish. Save the brisket ego project for year two.",
         ],
       },
       {
         id: "partner",
         heading: "Cook with a partner the first time",
         paragraphs: [
-          "One cook, one runner, one person reading the next step — that is enough structure to survive your first hall dinner. Ask the senior who usually runs chili to shadow you once. Nobody expects perfection; they expect hot food and a clean kitchen after.",
+          "One cook, one runner, one person reading the next step aloud. Ask whichever senior always runs chili to stand in the kitchen with you once — not to take over, just to catch you before you double the salt.",
+          "Nobody expects a Michelin plate. They expect you to own cleanup when it is done. I have seen rookies save a salty batch with beans and broth and earn more respect than the guy who ordered pizza and left the boxes.",
+        ],
+      },
+      {
+        id: "recover",
+        heading: "When dinner goes sideways",
+        paragraphs: [
+          "Own it early. Thin oversalted chili with more beans and stock. Order backup bread if the main is fine but light. Do not disappear after service — halls remember who stayed to scrub.",
+          "Probe poultry and pork. Guessing is how you serve pink chicken and get roasted in the bay for a month. Empty the grease trap before slider night; keep the right extinguisher where the grill cook can see it.",
         ],
       },
     ],
@@ -368,52 +379,52 @@ export const CORNERSTONE_BLOG_ARTICLES = [
       meal(
         "big-chili",
         "1. Hall-Sized Beef and Bean Chili",
-        "Why rookie-friendly: simmers, does not need a precise finish. Mistake: oversalting before it reduces — season late. Tip: hold on low; toppings fix everything.",
+        "Simmers — season late so you do not oversalt before it reduces. Hold on low; toppings fix a lot.",
       ),
       meal(
         "pulled-pork",
         "2. Pulled Pork Sandwiches",
-        "Why rookie-friendly: pork forgives long holds. Mistake: pulling before it rests — shreds tough. Tip: sauce on the side; buns portion the crew.",
+        "Pork forgives long holds. Rest before you shred; sauce on the side.",
       ),
       meal(
         "hall-taco-bar",
         "3. Hall Taco Bar Night",
-        "Why rookie-friendly: assembly line, not one perfect plate. Mistake: one giant pile of meat with no toppings ready. Tip: lay out cold toppings before protein hits the line.",
+        "Lay out cold toppings before the meat hits — assembly, not plating stress.",
       ),
       meal(
         "batch-lasagna",
         "4. Giant Batch Lasagna",
-        "Why rookie-friendly: oven does the work. Mistake: cutting too early — sloppy slices. Tip: rest ten minutes; use a sharp knife and a spatula.",
+        "Oven does the work. Rest ten minutes before you cut or the slices slide.",
       ),
       meal(
         "chicken-parm",
         "5. Chicken Parm",
-        "Why rookie-friendly: sauce and cheese cover a lot. Mistake: crowding the pan when searing cutlets — steam instead of color. Tip: sear in batches, finish with cheese under the broiler.",
+        "Sear cutlets in batches — crowding steams instead of browning.",
       ),
       meal(
         "beef-dip",
         "6. Beef Dip Sandwiches",
-        "Why rookie-friendly: roast, slice, dip — straightforward arc. Mistake: skipping the rest before slice — juices run off. Tip: warm au jus separately; do not soak rolls until service.",
+        "Rest the roast before slice. Warm au jus separate from the rolls.",
       ),
       meal(
         "breakfast-burrito-bar",
         "7. Breakfast Burrito Bar",
-        "Why rookie-friendly: components, not timing-sensitive plating. Mistake: cold tortillas — they tear. Tip: warm tortillas in a dry pan or covered warmer first.",
+        "Warm tortillas first or they tear when the line rush hits.",
       ),
       meal(
         "beef-barley-soup",
         "8. Beef Barley Soup (Soup Night)",
-        "Why rookie-friendly: soup forgives, sandwiches on the side are store-bought if needed. Mistake: boiling instead of simmering — tough meat. Tip: low simmer, skim fat, taste before you salt.",
+        "Low simmer — boiling makes the meat tough. Taste before the final salt.",
       ),
       meal(
         "one-pot-chicken-rice",
         "9. One-Pot Chicken and Rice",
-        "Why rookie-friendly: one pot, clear steps. Mistake: lifting the lid every two minutes — steam escapes, rice turns mushy. Tip: set a timer and trust it.",
+        "Set a timer; lifting the lid every two minutes turns rice mushy.",
       ),
       meal(
         "slider-bar",
         "10. Slider Bar Night",
-        "Why rookie-friendly: small patties cook fast — mistakes are small too. Mistake: dry buns — toast them. Tip: two proteins max; keep toppings simple.",
+        "Toast the buns. Two proteins max so you are not running three flat-tops.",
       ),
     ],
     faqs: [
@@ -432,8 +443,6 @@ export const CORNERSTONE_BLOG_ARTICLES = [
         answer:
           "Start on batches and lines. Move to grill night once you are comfortable with temps and probe checks. Pull pork and burgers are fine first grill projects with a partner; brisket can wait.",
       },
-      STANDARD_FAQS.catalog,
-      STANDARD_FAQS.generator,
     ],
     relatedArticleSlugs: [
       "rookie-cooking-mistakes",

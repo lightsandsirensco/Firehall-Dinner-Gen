@@ -5,27 +5,50 @@
   "description": "Firefighter BBQ recipes for station grills: brisket, pulled pork, chicken, ribs, and sides that keep the line moving.",
   "topic": "meal_planning",
   "pillar": "recipes_meals",
-  "intro": "BBQ night is morale and logistics. Firefighter BBQ recipes need clear roles: fire manager, meat puller, line builder. The food should hold if calls interrupt — which is why pulls, thighs, and sliders outperform finicky steaks for most halls.",
+  "intro": "BBQ night is morale and logistics. Firefighter BBQ recipes need clear roles: fire manager, meat puller, line builder. The food should hold if calls interrupt — which is why pulls, thighs, and sliders outperform finicky steaks for most halls. Below: what halls actually cook for firefighter BBQ recipes — formats, timing, and recipe picks that survive a busy board.",
   "sections": [
     {
       "id": "weeknight-vs-weekend",
       "heading": "Weeknight vs weekend smoke",
       "paragraphs": [
-        "Weeknights: thighs, burgers, sliders, pork chops. Weekends or training days: brisket, ribs, whole birds."
+        "Weeknights: thighs, burgers, sliders, pork chops. Weekends or training days: brisket, ribs, whole birds.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
       ]
     },
     {
       "id": "sides",
       "heading": "Sides that keep the grill person sane",
       "paragraphs": [
-        "Corn, slaw, and buns prepped indoors. The grill handles protein only — everything else is assembly on the line."
+        "Corn, slaw, and buns prepped indoors. The grill handles protein only — everything else is assembly on the line.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
+      ]
+    },
+    {
+      "id": "shift-pick",
+      "heading": "Pick the format before the recipe",
+      "paragraphs": [
+        "For firefighter BBQ recipes, decide line vs. plated vs. batch before you open a recipe tab. Lines win when eaters show up between 17:00 and 20:00; batches win when you know the whole crew lands at once.",
+        "Post protein, starch, and hold plan on the whiteboard. When tones drop, the next cook should read \"covered on low\" instead of guessing what you meant on the flat-top."
+      ],
+      "tips": [
+        "Assign one cook and one runner — everyone else stays out until called.",
+        "Sauces on the side keep reheat from turning gluey for post-call eaters."
       ]
     }
   ],
   "practicalAdvice": [
     "Probe temps — no guessing on chicken.",
     "Rest meat covered, not bare on a cold tray.",
-    "Prep sides indoors — grill person stays at grill."
+    "Prep sides indoors — grill person stays at grill.",
+    "Post who's cooking and what's holding warm on the whiteboard — post-call eaters should not hunt for answers."
   ],
   "mealRecommendations": [
     {
@@ -81,5 +104,6 @@
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
   "updatedAt": "2026-05-27T18:00:00.000Z",
-  "readMinutes": 7
+  "readMinutes": 7,
+  "heroImageAlt": "Firefighter BBQ Recipes — firefighter BBQ recipes tips for fire station kitchens and crew-sized meals"
 }

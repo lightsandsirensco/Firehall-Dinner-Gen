@@ -1,11 +1,11 @@
 # Marketing recipe count audit
 
-Generated: **2026-05-30T02:25:12.819Z**
+Generated: **2026-06-01T02:26:01.626Z**
 
 ## Catalog
 
-- Approved recipes: **250**
-- Marketing display: **250+**
+- Approved recipes: **312**
+- Marketing display: **312+**
 - Floor: **250+**
 
 ## Stale copy scan
@@ -14,4 +14,4 @@ Generated: **2026-05-30T02:25:12.819Z**
 
 ## Result
 
-**PASS**
+**FAIL** — 1 issue(s)

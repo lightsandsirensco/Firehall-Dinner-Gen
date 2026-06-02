@@ -15,6 +15,7 @@ export const GOLDEN_SLUG_TIMING_OVERRIDES: Record<string, { prep: number; cook: 
   "chicken-parm": { prep: 35, cook: 60 },
   "beef-stroganoff": { prep: 20, cook: 45 },
   "mac-and-cheese-bake": { prep: 20, cook: 45 },
+  "bbq-chicken-mac-and-cheese": { prep: 20, cook: 45 },
   "chili-mac": { prep: 15, cook: 40 },
   "one-pot-chicken-rice": { prep: 15, cook: 35 },
   "breakfast-sausage-pizza": { prep: 20, cook: 35 },

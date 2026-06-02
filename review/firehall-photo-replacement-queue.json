@@ -1,8 +1,334 @@
 {
-  "generatedAt": "2026-06-01T01:33:04.851Z",
+  "generatedAt": "2026-06-02T13:13:26.136Z",
   "standardVersion": "1.0",
-  "count": 3,
+  "count": 17,
   "queue": [
+    {
+      "collection": "golden_100",
+      "slug": "bbq-chicken-pizza",
+      "title": "BBQ Chicken Pizza",
+      "route": "/recipes/bbq-chicken-pizza",
+      "protein": "chicken",
+      "mealFormat": "pizza",
+      "category": "pizza_night",
+      "photoCategory": "bbq",
+      "heroImage": "/images/golden-100/bbq-chicken-pizza.jpg",
+      "duplicatePeers": [
+        "breakfast:buttermilk-pancakes"
+      ],
+      "reasons": [
+        {
+          "code": "duplicate_hero_hash",
+          "severity": "critical",
+          "message": "duplicate hero image shared with breakfast:buttermilk-pancakes — replace with unique photo"
+        },
+        {
+          "code": "needs_regeneration",
+          "severity": "critical",
+          "message": "queued for replacement under global firehall kitchen photo standard"
+        }
+      ],
+      "priority": "p0"
+    },
+    {
+      "collection": "golden_100",
+      "slug": "breakfast-sausage-pizza",
+      "title": "Breakfast Sausage Gravy Pizza",
+      "route": "/recipes/breakfast-sausage-pizza",
+      "protein": "pork",
+      "mealFormat": "pizza",
+      "category": "pizza_night",
+      "photoCategory": "breakfast",
+      "heroImage": "/images/golden-100/breakfast-sausage-pizza.jpg",
+      "duplicatePeers": [
+        "golden_100:french-toast-casserole"
+      ],
+      "reasons": [
+        {
+          "code": "duplicate_hero_hash",
+          "severity": "critical",
+          "message": "duplicate hero image shared with golden_100:french-toast-casserole — replace with unique photo"
+        },
+        {
+          "code": "needs_regeneration",
+          "severity": "critical",
+          "message": "queued for replacement under global firehall kitchen photo standard"
+        }
+      ],
+      "priority": "p0"
+    },
+    {
+      "collection": "golden_100",
+      "slug": "chicken-alfredo-bake",
+      "title": "Chicken Alfredo Bake",
+      "route": "/recipes/chicken-alfredo-bake",
+      "protein": "chicken",
+      "mealFormat": "pasta",
+      "category": "big_crew_feeders",
+      "photoCategory": "default",
+      "heroImage": "/images/golden-100/chicken-alfredo-bake.jpg",
+      "duplicatePeers": [
+        "golden_100:pancake-short-stack"
+      ],
+      "reasons": [
+        {
+          "code": "duplicate_hero_hash",
+          "severity": "critical",
+          "message": "duplicate hero image shared with golden_100:pancake-short-stack — replace with unique photo"
+        },
+        {
+          "code": "needs_regeneration",
+          "severity": "critical",
+          "message": "queued for replacement under global firehall kitchen photo standard"
+        }
+      ],
+      "priority": "p0"
+    },
+    {
+      "collection": "golden_100",
+      "slug": "breakfast-burrito-bar",
+      "title": "Breakfast Burrito Bar",
+      "route": "/recipes/breakfast-burrito-bar",
+      "protein": "pork",
+      "mealFormat": "handheld",
+      "category": "breakfast_brunch",
+      "photoCategory": "breakfast",
+      "heroImage": "/images/golden-100/breakfast-burrito-bar.jpg",
+      "duplicatePeers": [
+        "breakfast:bacon-hash-burritos"
+      ],
+      "reasons": [
+        {
+          "code": "duplicate_hero_hash",
+          "severity": "critical",
+          "message": "duplicate hero image shared with breakfast:bacon-hash-burritos — replace with unique photo"
+        },
+        {
+          "code": "needs_regeneration",
+          "severity": "critical",
+          "message": "queued for replacement under global firehall kitchen photo standard"
+        }
+      ],
+      "priority": "p0"
+    },
+    {
+      "collection": "golden_100",
+      "slug": "pancake-short-stack",
+      "title": "Pancake Short Stack for the Crew",
+      "route": "/recipes/pancake-short-stack",
+      "protein": "vegetarian",
+      "mealFormat": "breakfast",
+      "category": "breakfast_brunch",
+      "photoCategory": "breakfast",
+      "heroImage": "/images/golden-100/pancake-short-stack.jpg",
+      "duplicatePeers": [
+        "golden_100:chicken-alfredo-bake"
+      ],
+      "reasons": [
+        {
+          "code": "duplicate_hero_hash",
+          "severity": "critical",
+          "message": "duplicate hero image shared with golden_100:chicken-alfredo-bake — replace with unique photo"
+        },
+        {
+          "code": "needs_regeneration",
+          "severity": "critical",
+          "message": "queued for replacement under global firehall kitchen photo standard"
+        }
+      ],
+      "priority": "p0"
+    },
+    {
+      "collection": "golden_100",
+      "slug": "french-toast-casserole",
+      "title": "French Toast Casserole",
+      "route": "/recipes/french-toast-casserole",
+      "protein": "vegetarian",
+      "mealFormat": "bake",
+      "category": "breakfast_brunch",
+      "photoCategory": "breakfast",
+      "heroImage": "/images/golden-100/french-toast-casserole.jpg",
+      "duplicatePeers": [
+        "golden_100:breakfast-sausage-pizza",
+        "pizza_night:breakfast-sausage-pizza"
+      ],
+      "reasons": [
+        {
+          "code": "duplicate_hero_hash",
+          "severity": "critical",
+          "message": "duplicate hero image shared with golden_100:breakfast-sausage-pizza, pizza_night:breakfast-sausage-pizza — replace with unique photo"
+        },
+        {
+          "code": "needs_regeneration",
+          "severity": "critical",
+          "message": "queued for replacement under global firehall kitchen photo standard"
+        }
+      ],
+      "priority": "p0"
+    },
+    {
+      "collection": "golden_100",
+      "slug": "chorizo-breakfast-tacos",
+      "title": "Chorizo Breakfast Tacos",
+      "route": "/recipes/chorizo-breakfast-tacos",
+      "protein": "pork",
+      "mealFormat": "tacos",
+      "category": "breakfast_brunch",
+      "photoCategory": "breakfast",
+      "heroImage": "/images/golden-100/chorizo-breakfast-tacos.jpg",
+      "duplicatePeers": [
+        "hall_expansion:pepper-steak-onions"
+      ],
+      "reasons": [
+        {
+          "code": "duplicate_hero_hash",
+          "severity": "critical",
+          "message": "duplicate hero image shared with hall_expansion:pepper-steak-onions — replace with unique photo"
+        },
+        {
+          "code": "needs_regeneration",
+          "severity": "critical",
+          "message": "queued for replacement under global firehall kitchen photo standard"
+        }
+      ],
+      "priority": "p0"
+    },
+    {
+      "collection": "hall_expansion",
+      "slug": "pepper-steak-onions",
+      "title": "Pepper Steak with Onions",
+      "route": "/recipes/pepper-steak-onions",
+      "protein": "beef",
+      "mealFormat": "skillet",
+      "category": "crew_feeders",
+      "photoCategory": "default",
+      "heroImage": "/images/hall-expansion/pepper-steak-onions.jpg",
+      "duplicatePeers": [
+        "golden_100:chorizo-breakfast-tacos"
+      ],
+      "reasons": [
+        {
+          "code": "duplicate_hero_hash",
+          "severity": "critical",
+          "message": "duplicate hero image shared with golden_100:chorizo-breakfast-tacos — replace with unique photo"
+        },
+        {
+          "code": "needs_regeneration",
+          "severity": "critical",
+          "message": "queued for replacement under global firehall kitchen photo standard"
+        }
+      ],
+      "priority": "p0"
+    },
+    {
+      "collection": "breakfast",
+      "slug": "bacon-hash-burritos",
+      "title": "Bacon Hash Burritos",
+      "route": "/breakfast/bacon-hash-burritos",
+      "protein": "any",
+      "mealFormat": "breakfast",
+      "category": "breakfast",
+      "photoCategory": "breakfast",
+      "heroImage": "/images/breakfast/bacon-hash-burritos.jpg",
+      "duplicatePeers": [
+        "golden_100:breakfast-burrito-bar"
+      ],
+      "reasons": [
+        {
+          "code": "duplicate_hero_hash",
+          "severity": "critical",
+          "message": "duplicate hero image shared with golden_100:breakfast-burrito-bar — replace with unique photo"
+        },
+        {
+          "code": "needs_regeneration",
+          "severity": "critical",
+          "message": "queued for replacement under global firehall kitchen photo standard"
+        }
+      ],
+      "priority": "p0"
+    },
+    {
+      "collection": "breakfast",
+      "slug": "buttermilk-pancakes",
+      "title": "Buttermilk Pancakes for the Crew",
+      "route": "/breakfast/buttermilk-pancakes",
+      "protein": "any",
+      "mealFormat": "breakfast",
+      "category": "breakfast",
+      "photoCategory": "breakfast",
+      "heroImage": "/images/breakfast/buttermilk-pancakes.jpg",
+      "duplicatePeers": [
+        "golden_100:bbq-chicken-pizza",
+        "pizza_night:bbq-chicken-pizza"
+      ],
+      "reasons": [
+        {
+          "code": "duplicate_hero_hash",
+          "severity": "critical",
+          "message": "duplicate hero image shared with golden_100:bbq-chicken-pizza, pizza_night:bbq-chicken-pizza — replace with unique photo"
+        },
+        {
+          "code": "needs_regeneration",
+          "severity": "critical",
+          "message": "queued for replacement under global firehall kitchen photo standard"
+        }
+      ],
+      "priority": "p0"
+    },
+    {
+      "collection": "breakfast",
+      "slug": "cast-iron-breakfast-skillet",
+      "title": "Cast Iron Breakfast Skillet",
+      "route": "/breakfast/cast-iron-breakfast-skillet",
+      "protein": "any",
+      "mealFormat": "breakfast",
+      "category": "breakfast",
+      "photoCategory": "breakfast",
+      "heroImage": "/images/breakfast/cast-iron-breakfast-skillet.jpg",
+      "duplicatePeers": [
+        "breakfast:ham-pepper-skillet"
+      ],
+      "reasons": [
+        {
+          "code": "duplicate_hero_hash",
+          "severity": "critical",
+          "message": "duplicate hero image shared with breakfast:ham-pepper-skillet — replace with unique photo"
+        },
+        {
+          "code": "needs_regeneration",
+          "severity": "critical",
+          "message": "queued for replacement under global firehall kitchen photo standard"
+        }
+      ],
+      "priority": "p0"
+    },
+    {
+      "collection": "breakfast",
+      "slug": "ham-pepper-skillet",
+      "title": "Ham & Pepper Breakfast Skillet",
+      "route": "/breakfast/ham-pepper-skillet",
+      "protein": "any",
+      "mealFormat": "breakfast",
+      "category": "breakfast",
+      "photoCategory": "breakfast",
+      "heroImage": "/images/breakfast/ham-pepper-skillet.jpg",
+      "duplicatePeers": [
+        "breakfast:cast-iron-breakfast-skillet"
+      ],
+      "reasons": [
+        {
+          "code": "duplicate_hero_hash",
+          "severity": "critical",
+          "message": "duplicate hero image shared with breakfast:cast-iron-breakfast-skillet — replace with unique photo"
+        },
+        {
+          "code": "needs_regeneration",
+          "severity": "critical",
+          "message": "queued for replacement under global firehall kitchen photo standard"
+        }
+      ],
+      "priority": "p0"
+    },
     {
       "collection": "bbq",
       "slug": "garlic-butter-shrimp-skewers",
@@ -66,6 +392,60 @@
           "code": "missing_image_file",
           "severity": "critical",
           "message": "hero image file missing — must generate unique firehall kitchen photo"
+        },
+        {
+          "code": "needs_regeneration",
+          "severity": "critical",
+          "message": "queued for replacement under global firehall kitchen photo standard"
+        }
+      ],
+      "priority": "p0"
+    },
+    {
+      "collection": "pizza_night",
+      "slug": "bbq-chicken-pizza",
+      "title": "BBQ Chicken Pizza",
+      "route": "/recipes/bbq-chicken-pizza",
+      "protein": "chicken",
+      "mealFormat": "pizza",
+      "category": "pizza_night",
+      "photoCategory": "bbq",
+      "heroImage": "/images/golden-100/bbq-chicken-pizza.jpg",
+      "duplicatePeers": [
+        "breakfast:buttermilk-pancakes"
+      ],
+      "reasons": [
+        {
+          "code": "duplicate_hero_hash",
+          "severity": "critical",
+          "message": "duplicate hero image shared with breakfast:buttermilk-pancakes — replace with unique photo"
+        },
+        {
+          "code": "needs_regeneration",
+          "severity": "critical",
+          "message": "queued for replacement under global firehall kitchen photo standard"
+        }
+      ],
+      "priority": "p0"
+    },
+    {
+      "collection": "pizza_night",
+      "slug": "breakfast-sausage-pizza",
+      "title": "Breakfast Sausage Gravy Pizza",
+      "route": "/recipes/breakfast-sausage-pizza",
+      "protein": "pork",
+      "mealFormat": "pizza",
+      "category": "pizza_night",
+      "photoCategory": "breakfast",
+      "heroImage": "/images/golden-100/breakfast-sausage-pizza.jpg",
+      "duplicatePeers": [
+        "golden_100:french-toast-casserole"
+      ],
+      "reasons": [
+        {
+          "code": "duplicate_hero_hash",
+          "severity": "critical",
+          "message": "duplicate hero image shared with golden_100:french-toast-casserole — replace with unique photo"
         },
         {
           "code": "needs_regeneration",

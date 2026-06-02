@@ -100,4 +100,20 @@ const shepherdPass = auditTitlePrimarySideAlignment({
 });
 assert.equal(hasImageTitleMismatch(shepherdPass), false, "shepherd pie with salad alt passes");
 
+const steakToastFail = auditTitlePrimarySideAlignment({
+  slug: "steak-sandwiches",
+  title: "Steak Sandwiches",
+  heroPath: "/images/golden-100/steak-sandwiches.jpg",
+  heroAlt: "steak on toast slices with onions",
+});
+assert.ok(hasImageTitleMismatch(steakToastFail), "steak sandwich on toast fails plating rule");
+
+const butterRiceFail = auditTitlePrimarySideAlignment({
+  slug: "butter-chicken",
+  title: "Butter Chicken",
+  heroPath: "/images/golden-100/butter-chicken.jpg",
+  heroAlt: "butter chicken curry sauce only no rice",
+});
+assert.ok(hasImageTitleMismatch(butterRiceFail), "butter chicken without rice cues fails");
+
 console.log("[test-title-side-image-rules] OK");

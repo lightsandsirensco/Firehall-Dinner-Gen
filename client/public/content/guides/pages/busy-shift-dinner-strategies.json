@@ -5,27 +5,50 @@
   "description": "Busy shift dinner strategies for fire stations: default meals, hold plans, and communication so food still happens when calls stack.",
   "topic": "station_lifestyle",
   "pillar": "station_lifestyle",
-  "intro": "Busy shift dinner is a strategy problem. You need a default meal everyone knows, a cook assigned early, and formats that survive pause. Waiting until 18:30 to 'see how the board looks' is how halls end up with nothing.",
+  "intro": "Busy shift dinner is a strategy problem. You need a default meal everyone knows, a cook assigned early, and formats that survive pause. Waiting until 18:30 to 'see how the board looks' is how halls end up with nothing. Below: what halls actually cook for busy shift dinner — formats, timing, and recipe picks that survive a busy board.",
   "sections": [
     {
       "id": "defaults",
       "heading": "Default meals",
       "paragraphs": [
-        "Chili, quesadillas, sheet pan, pasta — rotate defaults monthly so shopping stays automatic."
+        "Chili, quesadillas, sheet pan, pasta — rotate defaults monthly so shopping stays automatic.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
       ]
     },
     {
       "id": "hold",
       "heading": "Hold and communicate",
       "paragraphs": [
-        "Tell the crew when food is ready and what format — line at 18:30, not 'food sometime.' Holds on low beat reheating twelve individual plates after a call."
+        "Tell the crew when food is ready and what format — line at 18:30, not 'food sometime.' Holds on low beat reheating twelve individual plates after a call.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
+      ]
+    },
+    {
+      "id": "hall-tonight",
+      "heading": "What this looks like on the hall tonight",
+      "paragraphs": [
+        "Kitchen culture shows up in small moves: who shops, who cleans, whether rookies get coached or roasted. For busy shift dinner, fairness beats perfection — rotate the jobs that nobody wants twice in a row.",
+        "Meals are morale. A crew that trusts the kitchen cooks more often and complains less about grocery splits. Keep the tone direct and the help real."
+      ],
+      "tips": [
+        "Praise the cook in the bay — fix critiques one-on-one after cleanup.",
+        "Write grocery splits on the receipt photo the same night you shop."
       ]
     }
   ],
   "practicalAdvice": [
     "Pick dinner by 16:00 — adjust format, not whether you eat.",
     "Keep a 30-minute fallback in the freezer.",
-    "Communicate on the whiteboard: 'Chili 18:30 — line.'"
+    "Communicate on the whiteboard: 'Chili 18:30 — line.'",
+    "Post who's cooking and what's holding warm on the whiteboard — post-call eaters should not hunt for answers."
   ],
   "mealRecommendations": [
     {
@@ -70,5 +93,6 @@
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
   "updatedAt": "2026-05-27T18:00:00.000Z",
-  "readMinutes": 7
+  "readMinutes": 7,
+  "heroImageAlt": "Busy Shift Dinner Strategies — busy shift dinner tips for fire station kitchens and crew-sized meals"
 }

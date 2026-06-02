@@ -5,27 +5,50 @@
   "description": "One-pot firehall meals: jambalaya, chicken and rice, chili, and skillets that keep the crew fed and the sink empty.",
   "topic": "meal_planning",
   "pillar": "recipes_meals",
-  "intro": "Cleanup drives what halls cook more than cookbooks admit. One-pot firehall meals trade a little browning glamour for dishes that fit in one sink. On busy nights, that trade is always worth it.",
+  "intro": "Cleanup drives what halls cook more than cookbooks admit. One-pot firehall meals trade a little browning glamour for dishes that fit in one sink. On busy nights, that trade is always worth it. Below: what halls actually cook for one pot firehall meals — formats, timing, and recipe picks that survive a busy board.",
   "sections": [
     {
       "id": "types",
       "heading": "Skillet vs Dutch oven vs deep pot",
       "paragraphs": [
-        "Skillets for fast. Dutch ovens and stock pots for simmer. Pick one vessel and commit — do not migrate mid-recipe."
+        "Skillets for fast. Dutch ovens and stock pots for simmer. Pick one vessel and commit — do not migrate mid-recipe.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
       ]
     },
     {
       "id": "cleanup",
       "heading": "Cleanup is the real win",
       "paragraphs": [
-        "One pot means one soak. Assign washer before you start cooking — otherwise the cook owns dishes and morale drops."
+        "One pot means one soak. Assign washer before you start cooking — otherwise the cook owns dishes and morale drops.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
+      ]
+    },
+    {
+      "id": "shift-pick",
+      "heading": "Pick the format before the recipe",
+      "paragraphs": [
+        "For one pot firehall meals, decide line vs. plated vs. batch before you open a recipe tab. Lines win when eaters show up between 17:00 and 20:00; batches win when you know the whole crew lands at once.",
+        "Post protein, starch, and hold plan on the whiteboard. When tones drop, the next cook should read \"covered on low\" instead of guessing what you meant on the flat-top."
+      ],
+      "tips": [
+        "Assign one cook and one runner — everyone else stays out until called.",
+        "Sauces on the side keep reheat from turning gluey for post-call eaters."
       ]
     }
   ],
   "practicalAdvice": [
     "Brown in the pot before liquid — always.",
     "Deglaze with stock or water — free flavor.",
-    "Serve from the pot or one cambro — not twelve individual pans."
+    "Serve from the pot or one cambro — not twelve individual pans.",
+    "Post who's cooking and what's holding warm on the whiteboard — post-call eaters should not hunt for answers."
   ],
   "mealRecommendations": [
     {
@@ -74,5 +97,6 @@
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
   "updatedAt": "2026-05-27T18:00:00.000Z",
-  "readMinutes": 7
+  "readMinutes": 7,
+  "heroImageAlt": "One-Pot Firehall Meals — one pot firehall meals tips for fire station kitchens and crew-sized meals"
 }

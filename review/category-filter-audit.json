@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-06-01T01:33:27.620Z",
+  "generatedAt": "2026-06-01T02:29:12.109Z",
   "totals": {
-    "recipes": 228,
-    "pass": 228
+    "recipes": 315,
+    "pass": 315
   },
   "rows": [
     {
@@ -238,6 +238,41 @@
       "issues": []
     },
     {
+      "slug": "mac-and-cheese-bake",
+      "pass": true,
+      "flags": {
+        "slug": "mac-and-cheese-bake",
+        "title": "Baked Mac and Cheese",
+        "kind": "firehall_catalog",
+        "category": "comfort_food",
+        "categoryLabel": "comfort food",
+        "cuisine": "american",
+        "protein": "vegetarian",
+        "mealFormat": "bake",
+        "cookTime": 65,
+        "cookTimeBucket": "over_60",
+        "heroImage": "/images/golden-100/mac-and-cheese-bake.jpg",
+        "thumbImage": "/images/thumbs/mac-and-cheese-bake.jpg",
+        "tags": [
+          "protein:vegetarian",
+          "format:bake",
+          "category:comfort_food",
+          "comfort",
+          "pasta",
+          "golden_100"
+        ],
+        "searchText": "baked mac and cheese mac-and-cheese-bake comfort_food american vegetarian bake protein:vegetarian format:bake category:comfort_food comfort pasta golden_100 baked mac and cheese mac and cheese bake american vegetarian bake comfort pasta baked mac and cheese dinner golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
       "slug": "mostaccioli-sausage-bake",
       "pass": true,
       "flags": {
@@ -315,6 +350,41 @@
       "issues": []
     },
     {
+      "slug": "baked-ziti",
+      "pass": true,
+      "flags": {
+        "slug": "baked-ziti",
+        "title": "Baked Ziti",
+        "kind": "firehall_catalog",
+        "category": "comfort_food",
+        "categoryLabel": "comfort food",
+        "cuisine": "italian",
+        "protein": "beef",
+        "mealFormat": "pasta",
+        "cookTime": 75,
+        "cookTimeBucket": "over_60",
+        "heroImage": "/images/golden-100/baked-ziti.jpg",
+        "thumbImage": "/images/thumbs/baked-ziti.jpg",
+        "tags": [
+          "protein:beef",
+          "format:pasta",
+          "category:comfort_food",
+          "comfort",
+          "pasta",
+          "golden_100"
+        ],
+        "searchText": "baked ziti baked-ziti comfort_food italian beef pasta protein:beef format:pasta category:comfort_food comfort pasta golden_100 baked ziti italian beef pasta comfort baked ziti meat sauce dinner golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
       "slug": "bbq-breakfast-hash",
       "pass": true,
       "flags": {
@@ -346,6 +416,148 @@
         "isBbqGrill": true,
         "isHighProtein": false,
         "isLowCleanup": true
+      },
+      "issues": []
+    },
+    {
+      "slug": "bbq-brisket-burnt-ends",
+      "pass": true,
+      "flags": {
+        "slug": "bbq-brisket-burnt-ends",
+        "title": "BBQ Burnt Ends",
+        "kind": "firehall_catalog",
+        "category": "bbq_grill_nights",
+        "categoryLabel": "bbq grill nights",
+        "cuisine": "american",
+        "protein": "beef",
+        "mealFormat": "grill",
+        "cookTime": 600,
+        "cookTimeBucket": "over_60",
+        "heroImage": "/images/golden-100/bbq-brisket-burnt-ends.jpg",
+        "thumbImage": "/images/thumbs/bbq-brisket-burnt-ends.jpg",
+        "tags": [
+          "protein:beef",
+          "format:grill",
+          "category:bbq_grill_nights",
+          "bbq",
+          "beef",
+          "golden_100"
+        ],
+        "searchText": "bbq burnt ends bbq-brisket-burnt-ends bbq_grill_nights american beef grill protein:beef format:grill category:bbq_grill_nights bbq beef golden_100 bbq burnt ends bbq brisket burnt ends american beef grill bbq bbq burnt ends brisket golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": true,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
+      "slug": "bbq-chicken-bowls",
+      "pass": true,
+      "flags": {
+        "slug": "bbq-chicken-bowls",
+        "title": "BBQ Chicken Bowls",
+        "kind": "hall_classic",
+        "category": "firehall_classics",
+        "categoryLabel": "firehall classics",
+        "cuisine": "american",
+        "protein": "chicken",
+        "mealFormat": "bowl",
+        "cookTime": 50,
+        "cookTimeBucket": "30_to_60",
+        "heroImage": "/images/golden-100/bbq-chicken-bowls.jpg",
+        "thumbImage": "/images/thumbs/bbq-chicken-bowls.jpg",
+        "tags": [
+          "protein:chicken",
+          "format:bowl",
+          "category:firehall_classics",
+          "trending",
+          "bowl",
+          "golden_100"
+        ],
+        "searchText": "bbq chicken bowls bbq-chicken-bowls firehall_classics american chicken bowl protein:chicken format:bowl category:firehall_classics trending bowl golden_100 bbq chicken bowls american chicken bowl trending golden_100",
+        "catalogBadge": "Hall Classic",
+        "traitBadges": [
+          "Crew Favorite"
+        ],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
+      "slug": "bbq-chicken-pizza",
+      "pass": true,
+      "flags": {
+        "slug": "bbq-chicken-pizza",
+        "title": "BBQ Chicken Pizza",
+        "kind": "firehall_catalog",
+        "category": "pizza_night",
+        "categoryLabel": "pizza night",
+        "cuisine": "american",
+        "protein": "chicken",
+        "mealFormat": "pizza",
+        "cookTime": 90,
+        "cookTimeBucket": "over_60",
+        "heroImage": "/images/golden-100/bbq-chicken-pizza.jpg",
+        "thumbImage": "/images/thumbs/bbq-chicken-pizza.jpg",
+        "tags": [
+          "protein:chicken",
+          "format:pizza",
+          "category:pizza_night",
+          "handheld",
+          "bbq",
+          "golden_100"
+        ],
+        "searchText": "bbq chicken pizza bbq-chicken-pizza pizza_night american chicken pizza protein:chicken format:pizza category:pizza_night handheld bbq golden_100 bbq chicken pizza american chicken pizza handheld bbq golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": true,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
+      "slug": "bbq-chicken-sliders",
+      "pass": true,
+      "flags": {
+        "slug": "bbq-chicken-sliders",
+        "title": "BBQ Chicken Sliders",
+        "kind": "firehall_catalog",
+        "category": "bbq_grill_nights",
+        "categoryLabel": "bbq grill nights",
+        "cuisine": "american",
+        "protein": "chicken",
+        "mealFormat": "sandwich",
+        "cookTime": 90,
+        "cookTimeBucket": "over_60",
+        "heroImage": "/images/golden-100/bbq-chicken-sliders.jpg",
+        "thumbImage": "/images/thumbs/bbq-chicken-sliders.jpg",
+        "tags": [
+          "protein:chicken",
+          "format:sandwich",
+          "category:bbq_grill_nights",
+          "bbq",
+          "handheld",
+          "golden_100"
+        ],
+        "searchText": "bbq chicken sliders bbq-chicken-sliders bbq_grill_nights american chicken sandwich protein:chicken format:sandwich category:bbq_grill_nights bbq handheld golden_100 bbq chicken sliders american chicken sandwich bbq handheld bbq pulled chicken sliders golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": true,
+        "isHighProtein": false,
+        "isLowCleanup": false
       },
       "issues": []
     },
@@ -390,6 +602,41 @@
       "issues": []
     },
     {
+      "slug": "beef-barley-soup",
+      "pass": true,
+      "flags": {
+        "slug": "beef-barley-soup",
+        "title": "Beef Barley Soup",
+        "kind": "firehall_catalog",
+        "category": "comfort_food",
+        "categoryLabel": "comfort food",
+        "cuisine": "american",
+        "protein": "beef",
+        "mealFormat": "soup_chili",
+        "cookTime": 55,
+        "cookTimeBucket": "30_to_60",
+        "heroImage": "/images/golden-100/beef-barley-soup.jpg",
+        "thumbImage": "/images/thumbs/beef-barley-soup.jpg",
+        "tags": [
+          "protein:beef",
+          "format:soup_chili",
+          "category:comfort_food",
+          "hearty",
+          "comfort",
+          "golden_100"
+        ],
+        "searchText": "beef barley soup beef-barley-soup comfort_food american beef soup_chili protein:beef format:soup_chili category:comfort_food hearty comfort golden_100 beef barley soup american beef soup chili hearty comfort beef barley soup hearty golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
       "slug": "enchilada-beef-skillet",
       "pass": true,
       "flags": {
@@ -423,6 +670,76 @@
         "isSmoothie": false,
         "isHealthy": false,
         "isBbqGrill": false,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
+      "slug": "beef-stroganoff",
+      "pass": true,
+      "flags": {
+        "slug": "beef-stroganoff",
+        "title": "Beef Stroganoff",
+        "kind": "firehall_catalog",
+        "category": "comfort_food",
+        "categoryLabel": "comfort food",
+        "cuisine": "russian",
+        "protein": "beef",
+        "mealFormat": "pasta",
+        "cookTime": 65,
+        "cookTimeBucket": "over_60",
+        "heroImage": "/images/golden-100/beef-stroganoff.jpg",
+        "thumbImage": "/images/thumbs/beef-stroganoff.jpg",
+        "tags": [
+          "protein:beef",
+          "format:pasta",
+          "category:comfort_food",
+          "comfort",
+          "pasta",
+          "golden_100"
+        ],
+        "searchText": "beef stroganoff beef-stroganoff comfort_food russian beef pasta protein:beef format:pasta category:comfort_food comfort pasta golden_100 beef stroganoff russian beef pasta comfort beef stroganoff egg noodles golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
+      "slug": "beer-can-chicken",
+      "pass": true,
+      "flags": {
+        "slug": "beer-can-chicken",
+        "title": "Beer Can Chicken",
+        "kind": "firehall_catalog",
+        "category": "bbq_grill_nights",
+        "categoryLabel": "bbq grill nights",
+        "cuisine": "american",
+        "protein": "chicken",
+        "mealFormat": "grill",
+        "cookTime": 131,
+        "cookTimeBucket": "over_60",
+        "heroImage": "/images/golden-100/beer-can-chicken.jpg",
+        "thumbImage": "/images/thumbs/beer-can-chicken.jpg",
+        "tags": [
+          "protein:chicken",
+          "format:grill",
+          "category:bbq_grill_nights",
+          "bbq",
+          "chicken",
+          "golden_100"
+        ],
+        "searchText": "beer can chicken beer-can-chicken bbq_grill_nights american chicken grill protein:chicken format:grill category:bbq_grill_nights bbq chicken golden_100 beer can chicken american chicken grill bbq beer can chicken grilled golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": true,
         "isHighProtein": false,
         "isLowCleanup": false
       },
@@ -542,6 +859,41 @@
       "issues": []
     },
     {
+      "slug": "turkey-burgers",
+      "pass": true,
+      "flags": {
+        "slug": "turkey-burgers",
+        "title": "Black Bean Turkey Burgers",
+        "kind": "firehall_catalog",
+        "category": "healthy_performance",
+        "categoryLabel": "healthy performance",
+        "cuisine": "american",
+        "protein": "turkey",
+        "mealFormat": "burger",
+        "cookTime": 55,
+        "cookTimeBucket": "30_to_60",
+        "heroImage": "/images/golden-100/turkey-burgers.jpg",
+        "thumbImage": "/images/thumbs/turkey-burgers.jpg",
+        "tags": [
+          "protein:turkey",
+          "format:burger",
+          "category:healthy_performance",
+          "healthy",
+          "handheld",
+          "golden_100"
+        ],
+        "searchText": "black bean turkey burgers turkey-burgers healthy_performance american turkey burger protein:turkey format:burger category:healthy_performance healthy handheld golden_100 black bean turkey burgers turkey burgers american turkey burger healthy handheld turkey black bean burgers golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": true,
+        "isBbqGrill": false,
+        "isHighProtein": true,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
       "slug": "cajun-grilled-cod-crew",
       "pass": true,
       "flags": {
@@ -615,6 +967,43 @@
         "isHealthy": true,
         "isBbqGrill": false,
         "isHighProtein": true,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
+      "slug": "beef-dip",
+      "pass": true,
+      "flags": {
+        "slug": "beef-dip",
+        "title": "Blackstone Steak Sandwiches",
+        "kind": "hall_classic",
+        "category": "firehall_classics",
+        "categoryLabel": "firehall classics",
+        "cuisine": "american",
+        "protein": "beef",
+        "mealFormat": "sandwich",
+        "cookTime": 45,
+        "cookTimeBucket": "30_to_60",
+        "heroImage": "/images/golden-100/beef-dip.jpg",
+        "thumbImage": "/images/thumbs/beef-dip.jpg",
+        "tags": [
+          "protein:beef",
+          "format:sandwich",
+          "category:firehall_classics",
+          "trending",
+          "beef",
+          "golden_100"
+        ],
+        "searchText": "blackstone steak sandwiches beef-dip firehall_classics american beef sandwich protein:beef format:sandwich category:firehall_classics trending beef golden_100 blackstone steak sandwiches beef dip american beef sandwich trending golden_100",
+        "catalogBadge": "Hall Classic",
+        "traitBadges": [
+          "Crew Favorite"
+        ],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
         "isLowCleanup": false
       },
       "issues": []
@@ -982,6 +1371,41 @@
       "issues": []
     },
     {
+      "slug": "breakfast-sausage-pizza",
+      "pass": true,
+      "flags": {
+        "slug": "breakfast-sausage-pizza",
+        "title": "Breakfast Sausage Gravy Pizza",
+        "kind": "firehall_catalog",
+        "category": "pizza_night",
+        "categoryLabel": "pizza night",
+        "cuisine": "american",
+        "protein": "pork",
+        "mealFormat": "pizza",
+        "cookTime": 55,
+        "cookTimeBucket": "30_to_60",
+        "heroImage": "/images/golden-100/breakfast-sausage-pizza.jpg",
+        "thumbImage": "/images/thumbs/breakfast-sausage-pizza.jpg",
+        "tags": [
+          "protein:pork",
+          "format:pizza",
+          "category:pizza_night",
+          "breakfast",
+          "handheld",
+          "golden_100"
+        ],
+        "searchText": "breakfast sausage gravy pizza breakfast-sausage-pizza pizza_night american pork pizza protein:pork format:pizza category:pizza_night breakfast handheld golden_100 breakfast sausage gravy pizza breakfast sausage pizza american pork pizza breakfast handheld golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
       "slug": "breakfast-sliders",
       "pass": true,
       "flags": {
@@ -1089,6 +1513,41 @@
         "isHealthy": false,
         "isBbqGrill": true,
         "isHighProtein": true,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
+      "slug": "buffalo-chicken-dip",
+      "pass": true,
+      "flags": {
+        "slug": "buffalo-chicken-dip",
+        "title": "Buffalo Chicken Dip",
+        "kind": "firehall_catalog",
+        "category": "game_day_watch_party",
+        "categoryLabel": "game day watch party",
+        "cuisine": "american",
+        "protein": "chicken",
+        "mealFormat": "bake",
+        "cookTime": 55,
+        "cookTimeBucket": "30_to_60",
+        "heroImage": "/images/golden-100/buffalo-chicken-dip.jpg",
+        "thumbImage": "/images/thumbs/buffalo-chicken-dip.jpg",
+        "tags": [
+          "protein:chicken",
+          "format:bake",
+          "category:game_day_watch_party",
+          "game_day",
+          "handheld",
+          "golden_100"
+        ],
+        "searchText": "buffalo chicken dip buffalo-chicken-dip game_day_watch_party american chicken bake protein:chicken format:bake category:game_day_watch_party game_day handheld golden_100 buffalo chicken dip american chicken bake game day handheld buffalo chicken dip baked game_day golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
         "isLowCleanup": false
       },
       "issues": []
@@ -1213,6 +1672,40 @@
       "issues": []
     },
     {
+      "slug": "butter-chicken",
+      "pass": true,
+      "flags": {
+        "slug": "butter-chicken",
+        "title": "Butter Chicken",
+        "kind": "firehall_catalog",
+        "category": "global_flavors",
+        "categoryLabel": "global flavors",
+        "cuisine": "indian",
+        "protein": "chicken",
+        "mealFormat": "plated_main",
+        "cookTime": 55,
+        "cookTimeBucket": "30_to_60",
+        "heroImage": "/images/golden-100/butter-chicken.jpg",
+        "thumbImage": "/images/thumbs/butter-chicken.jpg",
+        "tags": [
+          "protein:chicken",
+          "format:plated_main",
+          "category:global_flavors",
+          "comfort",
+          "golden_100"
+        ],
+        "searchText": "butter chicken butter-chicken global_flavors indian chicken plated_main protein:chicken format:plated_main category:global_flavors comfort golden_100 butter chicken indian chicken plated main comfort butter chicken dinner golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
       "slug": "buttermilk-pancakes",
       "pass": true,
       "flags": {
@@ -1319,6 +1812,40 @@
         "isHealthy": true,
         "isBbqGrill": false,
         "isHighProtein": true,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
+      "slug": "jambalaya",
+      "pass": true,
+      "flags": {
+        "slug": "jambalaya",
+        "title": "Cajun Jambalaya for the Hall",
+        "kind": "firehall_catalog",
+        "category": "big_crew_feeders",
+        "categoryLabel": "big crew feeders",
+        "cuisine": "cajun",
+        "protein": "mixed",
+        "mealFormat": "one_pot",
+        "cookTime": 90,
+        "cookTimeBucket": "over_60",
+        "heroImage": "/images/golden-100/jambalaya.jpg",
+        "thumbImage": "/images/thumbs/jambalaya.jpg",
+        "tags": [
+          "protein:mixed",
+          "format:one_pot",
+          "category:big_crew_feeders",
+          "hearty",
+          "golden_100"
+        ],
+        "searchText": "cajun jambalaya for the hall jambalaya big_crew_feeders cajun mixed one_pot protein:mixed format:one_pot category:big_crew_feeders hearty golden_100 cajun jambalaya for the hall jambalaya cajun mixed one pot hearty cajun jambalaya large batch golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
         "isLowCleanup": false
       },
       "issues": []
@@ -1515,6 +2042,75 @@
       "issues": []
     },
     {
+      "slug": "cedar-plank-salmon",
+      "pass": true,
+      "flags": {
+        "slug": "cedar-plank-salmon",
+        "title": "Cedar Plank Grilled Salmon",
+        "kind": "firehall_catalog",
+        "category": "bbq_grill_nights",
+        "categoryLabel": "bbq grill nights",
+        "cuisine": "american",
+        "protein": "seafood",
+        "mealFormat": "grill",
+        "cookTime": 90,
+        "cookTimeBucket": "over_60",
+        "heroImage": "/images/golden-100/cedar-plank-salmon.jpg",
+        "thumbImage": "/images/thumbs/cedar-plank-salmon.jpg",
+        "tags": [
+          "protein:seafood",
+          "format:grill",
+          "category:bbq_grill_nights",
+          "bbq",
+          "healthy",
+          "golden_100"
+        ],
+        "searchText": "cedar plank grilled salmon cedar-plank-salmon bbq_grill_nights american seafood grill protein:seafood format:grill category:bbq_grill_nights bbq healthy golden_100 cedar plank grilled salmon cedar plank salmon american seafood grill bbq healthy golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": true,
+        "isBbqGrill": true,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
+      "slug": "grilled-pork-chops",
+      "pass": true,
+      "flags": {
+        "slug": "grilled-pork-chops",
+        "title": "Charcoal Grilled Pork Chops",
+        "kind": "firehall_catalog",
+        "category": "bbq_grill_nights",
+        "categoryLabel": "bbq grill nights",
+        "cuisine": "american",
+        "protein": "pork",
+        "mealFormat": "grill",
+        "cookTime": 90,
+        "cookTimeBucket": "over_60",
+        "heroImage": "/images/golden-100/grilled-pork-chops.jpg",
+        "thumbImage": "/images/thumbs/grilled-pork-chops.jpg",
+        "tags": [
+          "protein:pork",
+          "format:grill",
+          "category:bbq_grill_nights",
+          "bbq",
+          "golden_100"
+        ],
+        "searchText": "charcoal grilled pork chops grilled-pork-chops bbq_grill_nights american pork grill protein:pork format:grill category:bbq_grill_nights bbq golden_100 charcoal grilled pork chops grilled pork chops american pork grill bbq grilled thick pork chops dinner golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": true,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
       "slug": "cheesy-beef-nacho-bake",
       "pass": true,
       "flags": {
@@ -1583,6 +2179,76 @@
           "firefighter_meal"
         ],
         "searchText": "cheesy chicken broccoli rice cheesy-chicken-broccoli-rice hall_expansion american chicken one_pot protein:chicken format:one_pot category:crew_feeders one_pot comfort chicken hall_expansion hall_expansion_74 hall_meal firefighter_meal cheesy chicken broccoli rice crew feeders",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
+      "slug": "chicken-alfredo-bake",
+      "pass": true,
+      "flags": {
+        "slug": "chicken-alfredo-bake",
+        "title": "Chicken Alfredo Bake",
+        "kind": "firehall_catalog",
+        "category": "big_crew_feeders",
+        "categoryLabel": "big crew feeders",
+        "cuisine": "italian",
+        "protein": "chicken",
+        "mealFormat": "pasta",
+        "cookTime": 70,
+        "cookTimeBucket": "over_60",
+        "heroImage": "/images/golden-100/chicken-alfredo-bake.jpg",
+        "thumbImage": "/images/thumbs/chicken-alfredo-bake.jpg",
+        "tags": [
+          "protein:chicken",
+          "format:pasta",
+          "category:big_crew_feeders",
+          "chicken",
+          "pasta",
+          "golden_100"
+        ],
+        "searchText": "chicken alfredo bake chicken-alfredo-bake big_crew_feeders italian chicken pasta protein:chicken format:pasta category:big_crew_feeders chicken pasta golden_100 chicken alfredo bake italian chicken pasta chicken alfredo pasta bake golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
+      "slug": "chicken-dumpling-soup",
+      "pass": true,
+      "flags": {
+        "slug": "chicken-dumpling-soup",
+        "title": "Chicken and Dumplings",
+        "kind": "firehall_catalog",
+        "category": "comfort_food",
+        "categoryLabel": "comfort food",
+        "cuisine": "american",
+        "protein": "chicken",
+        "mealFormat": "soup_chili",
+        "cookTime": 55,
+        "cookTimeBucket": "30_to_60",
+        "heroImage": "/images/golden-100/chicken-dumpling-soup.jpg",
+        "thumbImage": "/images/thumbs/chicken-dumpling-soup.jpg",
+        "tags": [
+          "protein:chicken",
+          "format:soup_chili",
+          "category:comfort_food",
+          "hearty",
+          "comfort",
+          "golden_100"
+        ],
+        "searchText": "chicken and dumplings chicken-dumpling-soup comfort_food american chicken soup_chili protein:chicken format:soup_chili category:comfort_food hearty comfort golden_100 chicken and dumplings chicken dumpling soup american chicken soup chili hearty comfort chicken and dumplings soup golden_100",
         "catalogBadge": "Firehall Meals Catalog",
         "traitBadges": [],
         "isSmoothie": false,
@@ -1669,6 +2335,41 @@
       "issues": []
     },
     {
+      "slug": "enchilada-casserole",
+      "pass": true,
+      "flags": {
+        "slug": "enchilada-casserole",
+        "title": "Chicken Enchilada Casserole",
+        "kind": "firehall_catalog",
+        "category": "big_crew_feeders",
+        "categoryLabel": "big crew feeders",
+        "cuisine": "mexican",
+        "protein": "chicken",
+        "mealFormat": "plated_main",
+        "cookTime": 90,
+        "cookTimeBucket": "over_60",
+        "heroImage": "/images/golden-100/enchilada-casserole.jpg",
+        "thumbImage": "/images/thumbs/enchilada-casserole.jpg",
+        "tags": [
+          "protein:chicken",
+          "format:plated_main",
+          "category:big_crew_feeders",
+          "chicken",
+          "handheld",
+          "golden_100"
+        ],
+        "searchText": "chicken enchilada casserole enchilada-casserole big_crew_feeders mexican chicken plated_main protein:chicken format:plated_main category:big_crew_feeders chicken handheld golden_100 chicken enchilada casserole enchilada casserole mexican chicken plated main handheld chicken enchilada casserole large golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
       "slug": "chicken-paprikash-hall",
       "pass": true,
       "flags": {
@@ -1697,6 +2398,147 @@
           "firefighter_meal"
         ],
         "searchText": "chicken paprikash for the hall chicken-paprikash-hall hall_expansion hungarian chicken stew protein:chicken format:stew category:crew_feeders hall_expansion crew_feeders hungarian chicken hall_expansion_74 hall_meal firefighter_meal chicken paprikash for the hall crew feeders",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
+      "slug": "chicken-parm",
+      "pass": true,
+      "flags": {
+        "slug": "chicken-parm",
+        "title": "Chicken Parm",
+        "kind": "hall_classic",
+        "category": "firehall_classics",
+        "categoryLabel": "firehall classics",
+        "cuisine": "italian",
+        "protein": "chicken",
+        "mealFormat": "pasta",
+        "cookTime": 95,
+        "cookTimeBucket": "over_60",
+        "heroImage": "/images/golden-100/chicken-parm.jpg",
+        "thumbImage": "/images/thumbs/chicken-parm.jpg",
+        "tags": [
+          "protein:chicken",
+          "format:pasta",
+          "category:firehall_classics",
+          "trending",
+          "comfort",
+          "golden_100"
+        ],
+        "searchText": "chicken parm chicken-parm firehall_classics italian chicken pasta protein:chicken format:pasta category:firehall_classics trending comfort golden_100 chicken parm italian chicken pasta trending comfort golden_100",
+        "catalogBadge": "Hall Classic",
+        "traitBadges": [
+          "Crew Favorite"
+        ],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
+      "slug": "parm-hero-subs",
+      "pass": true,
+      "flags": {
+        "slug": "parm-hero-subs",
+        "title": "Chicken Parm Hero Subs",
+        "kind": "firehall_catalog",
+        "category": "firehall_classics",
+        "categoryLabel": "firehall classics",
+        "cuisine": "italian",
+        "protein": "chicken",
+        "mealFormat": "sandwich",
+        "cookTime": 55,
+        "cookTimeBucket": "30_to_60",
+        "heroImage": "/images/golden-100/parm-hero-subs.jpg",
+        "thumbImage": "/images/thumbs/parm-hero-subs.jpg",
+        "tags": [
+          "protein:chicken",
+          "format:sandwich",
+          "category:firehall_classics",
+          "handheld",
+          "chicken",
+          "golden_100"
+        ],
+        "searchText": "chicken parm hero subs parm-hero-subs firehall_classics italian chicken sandwich protein:chicken format:sandwich category:firehall_classics handheld chicken golden_100 chicken parm hero subs parm hero subs italian chicken sandwich handheld chicken parmesan hero sandwich golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
+      "slug": "chicken-pot-pie",
+      "pass": true,
+      "flags": {
+        "slug": "chicken-pot-pie",
+        "title": "Chicken Pot Pie",
+        "kind": "firehall_catalog",
+        "category": "comfort_food",
+        "categoryLabel": "comfort food",
+        "cuisine": "american",
+        "protein": "chicken",
+        "mealFormat": "plated_main",
+        "cookTime": 55,
+        "cookTimeBucket": "30_to_60",
+        "heroImage": "/images/golden-100/chicken-pot-pie.jpg",
+        "thumbImage": "/images/thumbs/chicken-pot-pie.jpg",
+        "tags": [
+          "protein:chicken",
+          "format:plated_main",
+          "category:comfort_food",
+          "comfort",
+          "chicken",
+          "golden_100"
+        ],
+        "searchText": "chicken pot pie chicken-pot-pie comfort_food american chicken plated_main protein:chicken format:plated_main category:comfort_food comfort chicken golden_100 chicken pot pie american chicken plated main comfort chicken pot pie dinner golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
+      "slug": "chicken-tikka-masala",
+      "pass": true,
+      "flags": {
+        "slug": "chicken-tikka-masala",
+        "title": "Chicken Tikka Masala",
+        "kind": "firehall_catalog",
+        "category": "quick_shift_meals",
+        "categoryLabel": "quick shift meals",
+        "cuisine": "indian",
+        "protein": "chicken",
+        "mealFormat": "plated_main",
+        "cookTime": 35,
+        "cookTimeBucket": "30_to_60",
+        "heroImage": "/images/golden-100/chicken-tikka-masala.jpg",
+        "thumbImage": "/images/thumbs/chicken-tikka-masala.jpg",
+        "tags": [
+          "protein:chicken",
+          "format:plated_main",
+          "category:quick_shift_meals",
+          "quick",
+          "golden_100"
+        ],
+        "searchText": "chicken tikka masala chicken-tikka-masala quick_shift_meals indian chicken plated_main protein:chicken format:plated_main category:quick_shift_meals quick golden_100 chicken tikka masala indian chicken plated main quick chicken tikka masala dinner golden_100",
         "catalogBadge": "Firehall Meals Catalog",
         "traitBadges": [],
         "isSmoothie": false,
@@ -1778,6 +2620,78 @@
         "isHealthy": false,
         "isBbqGrill": false,
         "isHighProtein": true,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
+      "slug": "chili-mac",
+      "pass": true,
+      "flags": {
+        "slug": "chili-mac",
+        "title": "Chili Mac Skillet",
+        "kind": "firehall_catalog",
+        "category": "quick_shift_meals",
+        "categoryLabel": "quick shift meals",
+        "cuisine": "american",
+        "protein": "beef",
+        "mealFormat": "skillet",
+        "cookTime": 55,
+        "cookTimeBucket": "30_to_60",
+        "heroImage": "/images/golden-100/chili-mac.jpg",
+        "thumbImage": "/images/thumbs/chili-mac.jpg",
+        "tags": [
+          "protein:beef",
+          "format:skillet",
+          "category:quick_shift_meals",
+          "quick",
+          "comfort",
+          "golden_100"
+        ],
+        "searchText": "chili mac skillet chili-mac quick_shift_meals american beef skillet protein:beef format:skillet category:quick_shift_meals quick comfort golden_100 chili mac skillet chili mac american beef skillet quick comfort chili mac skillet dinner golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
+      "slug": "steak-tacos",
+      "pass": true,
+      "flags": {
+        "slug": "steak-tacos",
+        "title": "Chimichurri Steak Tacos",
+        "kind": "hall_classic",
+        "category": "firehall_classics",
+        "categoryLabel": "firehall classics",
+        "cuisine": "mexican",
+        "protein": "beef",
+        "mealFormat": "tacos",
+        "cookTime": 55,
+        "cookTimeBucket": "30_to_60",
+        "heroImage": "/images/golden-100/steak-tacos.jpg",
+        "thumbImage": "/images/thumbs/steak-tacos.jpg",
+        "tags": [
+          "protein:beef",
+          "format:tacos",
+          "category:firehall_classics",
+          "trending",
+          "handheld",
+          "golden_100"
+        ],
+        "searchText": "chimichurri steak tacos steak-tacos firehall_classics mexican beef tacos protein:beef format:tacos category:firehall_classics trending handheld golden_100 chimichurri steak tacos steak tacos mexican beef tacos trending handheld golden_100",
+        "catalogBadge": "Hall Classic",
+        "traitBadges": [
+          "Crew Favorite"
+        ],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
         "isLowCleanup": false
       },
       "issues": []
@@ -1920,6 +2834,75 @@
         "isBbqGrill": false,
         "isHighProtein": true,
         "isLowCleanup": true
+      },
+      "issues": []
+    },
+    {
+      "slug": "meatloaf-mashed",
+      "pass": true,
+      "flags": {
+        "slug": "meatloaf-mashed",
+        "title": "Classic Meatloaf with Mashed Potatoes",
+        "kind": "firehall_catalog",
+        "category": "comfort_food",
+        "categoryLabel": "comfort food",
+        "cuisine": "american",
+        "protein": "beef",
+        "mealFormat": "plated_main",
+        "cookTime": 135,
+        "cookTimeBucket": "over_60",
+        "heroImage": "/images/golden-100/meatloaf-mashed.jpg",
+        "thumbImage": "/images/thumbs/meatloaf-mashed.jpg",
+        "tags": [
+          "protein:beef",
+          "format:plated_main",
+          "category:comfort_food",
+          "comfort",
+          "golden_100"
+        ],
+        "searchText": "classic meatloaf with mashed potatoes meatloaf-mashed comfort_food american beef plated_main protein:beef format:plated_main category:comfort_food comfort golden_100 classic meatloaf with mashed potatoes meatloaf mashed american beef plated main comfort meatloaf mashed potatoes dinner golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
+      "slug": "pepperoni-pizza-night",
+      "pass": true,
+      "flags": {
+        "slug": "pepperoni-pizza-night",
+        "title": "Classic Pepperoni Pizza",
+        "kind": "firehall_catalog",
+        "category": "pizza_night",
+        "categoryLabel": "pizza night",
+        "cuisine": "italian",
+        "protein": "pork",
+        "mealFormat": "pizza",
+        "cookTime": 175,
+        "cookTimeBucket": "over_60",
+        "heroImage": "/images/golden-100/pepperoni-pizza-night.jpg",
+        "thumbImage": "/images/thumbs/pepperoni-pizza-night.jpg",
+        "tags": [
+          "protein:pork",
+          "format:pizza",
+          "category:pizza_night",
+          "handheld",
+          "trending",
+          "golden_100"
+        ],
+        "searchText": "classic pepperoni pizza pepperoni-pizza-night pizza_night italian pork pizza protein:pork format:pizza category:pizza_night handheld trending golden_100 classic pepperoni pizza pepperoni pizza night italian pork pizza handheld trending homemade pepperoni pizza golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
+        "isLowCleanup": false
       },
       "issues": []
     },
@@ -2305,6 +3288,41 @@
       "issues": []
     },
     {
+      "slug": "creamy-tuscan-chicken",
+      "pass": true,
+      "flags": {
+        "slug": "creamy-tuscan-chicken",
+        "title": "Creamy Tuscan Chicken",
+        "kind": "firehall_catalog",
+        "category": "comfort_food",
+        "categoryLabel": "comfort food",
+        "cuisine": "italian",
+        "protein": "chicken",
+        "mealFormat": "plated_main",
+        "cookTime": 55,
+        "cookTimeBucket": "30_to_60",
+        "heroImage": "/images/golden-100/creamy-tuscan-chicken.jpg",
+        "thumbImage": "/images/thumbs/creamy-tuscan-chicken.jpg",
+        "tags": [
+          "protein:chicken",
+          "format:plated_main",
+          "category:comfort_food",
+          "comfort",
+          "chicken",
+          "golden_100"
+        ],
+        "searchText": "creamy tuscan chicken creamy-tuscan-chicken comfort_food italian chicken plated_main protein:chicken format:plated_main category:comfort_food comfort chicken golden_100 creamy tuscan chicken italian chicken plated main comfort creamy tuscan chicken dinner golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
       "slug": "crew-french-toast-bake",
       "pass": true,
       "flags": {
@@ -2331,6 +3349,41 @@
         "traitBadges": [
           "Crew Favorite"
         ],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
+      "slug": "crispy-chicken-cutlets",
+      "pass": true,
+      "flags": {
+        "slug": "crispy-chicken-cutlets",
+        "title": "Crispy Chicken Cutlets Marinara",
+        "kind": "firehall_catalog",
+        "category": "firehall_classics",
+        "categoryLabel": "firehall classics",
+        "cuisine": "italian",
+        "protein": "chicken",
+        "mealFormat": "plated_main",
+        "cookTime": 55,
+        "cookTimeBucket": "30_to_60",
+        "heroImage": "/images/golden-100/crispy-chicken-cutlets.jpg",
+        "thumbImage": "/images/thumbs/crispy-chicken-cutlets.jpg",
+        "tags": [
+          "protein:chicken",
+          "format:plated_main",
+          "category:firehall_classics",
+          "trending",
+          "chicken",
+          "golden_100"
+        ],
+        "searchText": "crispy chicken cutlets marinara crispy-chicken-cutlets firehall_classics italian chicken plated_main protein:chicken format:plated_main category:firehall_classics trending chicken golden_100 crispy chicken cutlets marinara crispy chicken cutlets italian chicken plated main trending crispy chicken cutlets marinara dinner golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
         "isSmoothie": false,
         "isHealthy": false,
         "isBbqGrill": false,
@@ -2449,6 +3502,77 @@
         "isHealthy": false,
         "isBbqGrill": false,
         "isHighProtein": true,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
+      "slug": "detroit-style-pizza",
+      "pass": true,
+      "flags": {
+        "slug": "detroit-style-pizza",
+        "title": "Detroit-Style Pepperoni Pizza",
+        "kind": "firehall_catalog",
+        "category": "pizza_night",
+        "categoryLabel": "pizza night",
+        "cuisine": "american",
+        "protein": "pork",
+        "mealFormat": "pizza",
+        "cookTime": 155,
+        "cookTimeBucket": "over_60",
+        "heroImage": "/images/golden-100/detroit-style-pizza.jpg",
+        "thumbImage": "/images/thumbs/detroit-style-pizza.jpg",
+        "tags": [
+          "protein:pork",
+          "format:pizza",
+          "category:pizza_night",
+          "handheld",
+          "golden_100"
+        ],
+        "searchText": "detroit-style pepperoni pizza detroit-style-pizza pizza_night american pork pizza protein:pork format:pizza category:pizza_night handheld golden_100 detroit-style pepperoni pizza detroit style pizza american pork pizza handheld detroit style pepperoni pizza golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
+      "slug": "smash-burgers",
+      "pass": true,
+      "flags": {
+        "slug": "smash-burgers",
+        "title": "Double Smash Burgers",
+        "kind": "hall_classic",
+        "category": "firehall_classics",
+        "categoryLabel": "firehall classics",
+        "cuisine": "american",
+        "protein": "beef",
+        "mealFormat": "burger",
+        "cookTime": 50,
+        "cookTimeBucket": "30_to_60",
+        "heroImage": "/images/golden-100/smash-burgers.jpg",
+        "thumbImage": "/images/thumbs/smash-burgers.jpg",
+        "tags": [
+          "protein:beef",
+          "format:burger",
+          "category:firehall_classics",
+          "trending",
+          "handheld",
+          "golden_100"
+        ],
+        "searchText": "double smash burgers smash-burgers firehall_classics american beef burger protein:beef format:burger category:firehall_classics trending handheld golden_100 double smash burgers smash burgers american beef burger trending handheld golden_100",
+        "catalogBadge": "Hall Classic",
+        "traitBadges": [
+          "Crew Favorite"
+        ],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
         "isLowCleanup": false
       },
       "issues": []
@@ -2638,6 +3762,41 @@
         "isHealthy": false,
         "isBbqGrill": false,
         "isHighProtein": true,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
+      "slug": "fast-philly-skillet",
+      "pass": true,
+      "flags": {
+        "slug": "fast-philly-skillet",
+        "title": "Fast Philly Cheesesteak Skillet",
+        "kind": "firehall_catalog",
+        "category": "quick_shift_meals",
+        "categoryLabel": "quick shift meals",
+        "cuisine": "american",
+        "protein": "beef",
+        "mealFormat": "skillet",
+        "cookTime": 35,
+        "cookTimeBucket": "30_to_60",
+        "heroImage": "/images/golden-100/fast-philly-skillet.jpg",
+        "thumbImage": "/images/thumbs/fast-philly-skillet.jpg",
+        "tags": [
+          "protein:beef",
+          "format:skillet",
+          "category:quick_shift_meals",
+          "quick",
+          "beef",
+          "golden_100"
+        ],
+        "searchText": "fast philly cheesesteak skillet fast-philly-skillet quick_shift_meals american beef skillet protein:beef format:skillet category:quick_shift_meals quick beef golden_100 fast philly cheesesteak skillet fast philly skillet american beef skillet quick quick philly cheesesteak skillet golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
         "isLowCleanup": false
       },
       "issues": []
@@ -2833,6 +3992,109 @@
       "issues": []
     },
     {
+      "slug": "meatball-hoagies",
+      "pass": true,
+      "flags": {
+        "slug": "meatball-hoagies",
+        "title": "Firehall Meatball Hoagies",
+        "kind": "firehall_catalog",
+        "category": "firehall_classics",
+        "categoryLabel": "firehall classics",
+        "cuisine": "italian",
+        "protein": "beef",
+        "mealFormat": "sandwich",
+        "cookTime": 55,
+        "cookTimeBucket": "30_to_60",
+        "heroImage": "/images/golden-100/meatball-hoagies.jpg",
+        "thumbImage": "/images/thumbs/meatball-hoagies.jpg",
+        "tags": [
+          "protein:beef",
+          "format:sandwich",
+          "category:firehall_classics",
+          "trending",
+          "handheld",
+          "golden_100"
+        ],
+        "searchText": "firehall meatball hoagies meatball-hoagies firehall_classics italian beef sandwich protein:beef format:sandwich category:firehall_classics trending handheld golden_100 firehall meatball hoagies meatball hoagies italian beef sandwich trending handheld meatball sub hoagie dinner golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
+      "slug": "pad-thai",
+      "pass": true,
+      "flags": {
+        "slug": "pad-thai",
+        "title": "Firehall Pad Thai",
+        "kind": "firehall_catalog",
+        "category": "quick_shift_meals",
+        "categoryLabel": "quick shift meals",
+        "cuisine": "thai",
+        "protein": "chicken",
+        "mealFormat": "skillet",
+        "cookTime": 63,
+        "cookTimeBucket": "over_60",
+        "heroImage": "/images/golden-100/pad-thai.jpg",
+        "thumbImage": "/images/thumbs/pad-thai.jpg",
+        "tags": [
+          "protein:chicken",
+          "format:skillet",
+          "category:quick_shift_meals",
+          "quick",
+          "golden_100"
+        ],
+        "searchText": "firehall pad thai pad-thai quick_shift_meals thai chicken skillet protein:chicken format:skillet category:quick_shift_meals quick golden_100 firehall pad thai pad thai thai chicken skillet quick firehall pad thai chicken wok noodles golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
+      "slug": "margherita-pizza",
+      "pass": true,
+      "flags": {
+        "slug": "margherita-pizza",
+        "title": "Fresh Margherita Pizza",
+        "kind": "firehall_catalog",
+        "category": "pizza_night",
+        "categoryLabel": "pizza night",
+        "cuisine": "italian",
+        "protein": "vegetarian",
+        "mealFormat": "pizza",
+        "cookTime": 90,
+        "cookTimeBucket": "over_60",
+        "heroImage": "/images/golden-100/margherita-pizza.jpg",
+        "thumbImage": "/images/thumbs/margherita-pizza.jpg",
+        "tags": [
+          "protein:vegetarian",
+          "format:pizza",
+          "category:pizza_night",
+          "handheld",
+          "golden_100"
+        ],
+        "searchText": "fresh margherita pizza margherita-pizza pizza_night italian vegetarian pizza protein:vegetarian format:pizza category:pizza_night handheld golden_100 fresh margherita pizza margherita pizza italian vegetarian pizza handheld margherita pizza fresh mozzarella golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
       "slug": "game-day-pizza-sliders",
       "pass": true,
       "flags": {
@@ -2861,6 +4123,75 @@
           "firefighter_meal"
         ],
         "searchText": "game day pizza sliders game-day-pizza-sliders hall_expansion italian-american pork sheet_pan protein:pork format:sheet_pan category:game_day_recipes game_day handheld comfort hall_expansion hall_expansion_74 hall_meal firefighter_meal game day pizza sliders game day recipes",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
+      "slug": "five-ingredient-pasta",
+      "pass": true,
+      "flags": {
+        "slug": "five-ingredient-pasta",
+        "title": "Garlic Butter Pasta",
+        "kind": "firehall_catalog",
+        "category": "rookie_friendly",
+        "categoryLabel": "rookie friendly",
+        "cuisine": "italian",
+        "protein": "vegetarian",
+        "mealFormat": "pasta",
+        "cookTime": 35,
+        "cookTimeBucket": "30_to_60",
+        "heroImage": "/images/golden-100/five-ingredient-pasta.jpg",
+        "thumbImage": "/images/thumbs/five-ingredient-pasta.jpg",
+        "tags": [
+          "protein:vegetarian",
+          "format:pasta",
+          "category:rookie_friendly",
+          "one_pot",
+          "pasta",
+          "golden_100"
+        ],
+        "searchText": "garlic butter pasta five-ingredient-pasta rookie_friendly italian vegetarian pasta protein:vegetarian format:pasta category:rookie_friendly one_pot pasta golden_100 garlic butter pasta five ingredient pasta italian vegetarian pasta one pot garlic butter pasta simple one_pot golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
+        "isLowCleanup": true
+      },
+      "issues": []
+    },
+    {
+      "slug": "garlic-butter-shrimp",
+      "pass": true,
+      "flags": {
+        "slug": "garlic-butter-shrimp",
+        "title": "Garlic Butter Shrimp",
+        "kind": "firehall_catalog",
+        "category": "quick_shift_meals",
+        "categoryLabel": "quick shift meals",
+        "cuisine": "american",
+        "protein": "seafood",
+        "mealFormat": "skillet",
+        "cookTime": 35,
+        "cookTimeBucket": "30_to_60",
+        "heroImage": "/images/golden-100/garlic-butter-shrimp.jpg",
+        "thumbImage": "/images/thumbs/garlic-butter-shrimp.jpg",
+        "tags": [
+          "protein:seafood",
+          "format:skillet",
+          "category:quick_shift_meals",
+          "quick",
+          "golden_100"
+        ],
+        "searchText": "garlic butter shrimp garlic-butter-shrimp quick_shift_meals american seafood skillet protein:seafood format:skillet category:quick_shift_meals quick golden_100 garlic butter shrimp american seafood skillet quick garlic butter shrimp dinner quick golden_100",
         "catalogBadge": "Firehall Meals Catalog",
         "traitBadges": [],
         "isSmoothie": false,
@@ -2911,6 +4242,41 @@
       "issues": []
     },
     {
+      "slug": "batch-lasagna",
+      "pass": true,
+      "flags": {
+        "slug": "batch-lasagna",
+        "title": "Giant Batch Lasagna",
+        "kind": "firehall_catalog",
+        "category": "big_crew_feeders",
+        "categoryLabel": "big crew feeders",
+        "cuisine": "italian",
+        "protein": "beef",
+        "mealFormat": "pasta",
+        "cookTime": 100,
+        "cookTimeBucket": "over_60",
+        "heroImage": "/images/golden-100/batch-lasagna.jpg",
+        "thumbImage": "/images/thumbs/batch-lasagna.jpg",
+        "tags": [
+          "protein:beef",
+          "format:pasta",
+          "category:big_crew_feeders",
+          "beef",
+          "comfort",
+          "golden_100"
+        ],
+        "searchText": "giant batch lasagna batch-lasagna big_crew_feeders italian beef pasta protein:beef format:pasta category:big_crew_feeders beef comfort golden_100 giant batch lasagna batch lasagna italian beef pasta comfort large batch lasagna dinner golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
       "slug": "griddle-smash-sausage-peppers",
       "pass": true,
       "flags": {
@@ -2950,6 +4316,41 @@
       "issues": []
     },
     {
+      "slug": "ginger-salmon-bowls",
+      "pass": true,
+      "flags": {
+        "slug": "ginger-salmon-bowls",
+        "title": "Ginger Salmon Rice Bowls",
+        "kind": "firehall_catalog",
+        "category": "healthy_performance",
+        "categoryLabel": "healthy performance",
+        "cuisine": "asian",
+        "protein": "seafood",
+        "mealFormat": "bowl",
+        "cookTime": 55,
+        "cookTimeBucket": "30_to_60",
+        "heroImage": "/images/golden-100/ginger-salmon-bowls.jpg",
+        "thumbImage": "/images/thumbs/ginger-salmon-bowls.jpg",
+        "tags": [
+          "protein:seafood",
+          "format:bowl",
+          "category:healthy_performance",
+          "healthy",
+          "bowl",
+          "golden_100"
+        ],
+        "searchText": "ginger salmon rice bowls ginger-salmon-bowls healthy_performance asian seafood bowl protein:seafood format:bowl category:healthy_performance healthy bowl golden_100 ginger salmon rice bowls ginger salmon bowls asian seafood bowl healthy ginger salmon rice bowl golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": true,
+        "isBbqGrill": false,
+        "isHighProtein": true,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
       "slug": "ginger-soy-chicken-rice-bowls",
       "pass": true,
       "flags": {
@@ -2984,6 +4385,41 @@
         "isHealthy": true,
         "isBbqGrill": false,
         "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
+      "slug": "greek-chicken-bowls",
+      "pass": true,
+      "flags": {
+        "slug": "greek-chicken-bowls",
+        "title": "Greek Chicken Bowls",
+        "kind": "firehall_catalog",
+        "category": "healthy_performance",
+        "categoryLabel": "healthy performance",
+        "cuisine": "greek",
+        "protein": "chicken",
+        "mealFormat": "bowl",
+        "cookTime": 55,
+        "cookTimeBucket": "30_to_60",
+        "heroImage": "/images/golden-100/greek-chicken-bowls.jpg",
+        "thumbImage": "/images/thumbs/greek-chicken-bowls.jpg",
+        "tags": [
+          "protein:chicken",
+          "format:bowl",
+          "category:healthy_performance",
+          "healthy",
+          "bowl",
+          "golden_100"
+        ],
+        "searchText": "greek chicken bowls greek-chicken-bowls healthy_performance greek chicken bowl protein:chicken format:bowl category:healthy_performance healthy bowl golden_100 greek chicken bowls greek chicken bowl healthy greek chicken bowl golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": true,
+        "isBbqGrill": false,
+        "isHighProtein": true,
         "isLowCleanup": false
       },
       "issues": []
@@ -3098,6 +4534,111 @@
       "issues": []
     },
     {
+      "slug": "chicken-souvlaki",
+      "pass": true,
+      "flags": {
+        "slug": "chicken-souvlaki",
+        "title": "Grilled Chicken Souvlaki",
+        "kind": "firehall_catalog",
+        "category": "healthy_performance",
+        "categoryLabel": "healthy performance",
+        "cuisine": "greek",
+        "protein": "chicken",
+        "mealFormat": "grill",
+        "cookTime": 131,
+        "cookTimeBucket": "over_60",
+        "heroImage": "/images/golden-100/chicken-souvlaki.jpg",
+        "thumbImage": "/images/thumbs/chicken-souvlaki.jpg",
+        "tags": [
+          "protein:chicken",
+          "format:grill",
+          "category:healthy_performance",
+          "healthy",
+          "chicken",
+          "golden_100"
+        ],
+        "searchText": "grilled chicken souvlaki chicken-souvlaki healthy_performance greek chicken grill protein:chicken format:grill category:healthy_performance healthy chicken golden_100 grilled chicken souvlaki chicken souvlaki greek chicken grill healthy chicken souvlaki grilled golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": true,
+        "isBbqGrill": true,
+        "isHighProtein": true,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
+      "slug": "flank-chimichurri",
+      "pass": true,
+      "flags": {
+        "slug": "flank-chimichurri",
+        "title": "Grilled Flank Steak with Chimichurri",
+        "kind": "firehall_catalog",
+        "category": "bbq_grill_nights",
+        "categoryLabel": "bbq grill nights",
+        "cuisine": "argentinian",
+        "protein": "beef",
+        "mealFormat": "grill",
+        "cookTime": 90,
+        "cookTimeBucket": "over_60",
+        "heroImage": "/images/golden-100/flank-chimichurri.jpg",
+        "thumbImage": "/images/thumbs/flank-chimichurri.jpg",
+        "tags": [
+          "protein:beef",
+          "format:grill",
+          "category:bbq_grill_nights",
+          "bbq",
+          "beef",
+          "golden_100"
+        ],
+        "searchText": "grilled flank steak with chimichurri flank-chimichurri bbq_grill_nights argentinian beef grill protein:beef format:grill category:bbq_grill_nights bbq beef golden_100 grilled flank steak with chimichurri flank chimichurri argentinian beef grill bbq grilled flank steak chimichurri golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": true,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
+      "slug": "ny-strip-herb-butter",
+      "pass": true,
+      "flags": {
+        "slug": "ny-strip-herb-butter",
+        "title": "Grilled NY Strip with Herb Butter",
+        "kind": "firehall_catalog",
+        "category": "bbq_grill_nights",
+        "categoryLabel": "bbq grill nights",
+        "cuisine": "american",
+        "protein": "beef",
+        "mealFormat": "grill",
+        "cookTime": 90,
+        "cookTimeBucket": "over_60",
+        "heroImage": "/images/golden-100/ny-strip-herb-butter.jpg",
+        "thumbImage": "/images/thumbs/ny-strip-herb-butter.jpg",
+        "tags": [
+          "protein:beef",
+          "format:grill",
+          "category:bbq_grill_nights",
+          "bbq",
+          "beef",
+          "golden_100"
+        ],
+        "searchText": "grilled ny strip with herb butter ny-strip-herb-butter bbq_grill_nights american beef grill protein:beef format:grill category:bbq_grill_nights bbq beef golden_100 grilled ny strip with herb butter ny strip herb butter american beef grill bbq grilled new york strip herb butter golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": true,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
       "slug": "grilled-reuben-sandwiches-crew",
       "pass": true,
       "flags": {
@@ -3171,6 +4712,40 @@
         "isHealthy": true,
         "isBbqGrill": true,
         "isHighProtein": true,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
+      "slug": "grilled-corn-cotija",
+      "pass": true,
+      "flags": {
+        "slug": "grilled-corn-cotija",
+        "title": "Grilled Street Corn with Cotija",
+        "kind": "firehall_catalog",
+        "category": "bbq_grill_nights",
+        "categoryLabel": "bbq grill nights",
+        "cuisine": "mexican",
+        "protein": "vegetarian",
+        "mealFormat": "grill",
+        "cookTime": 90,
+        "cookTimeBucket": "over_60",
+        "heroImage": "/images/golden-100/grilled-corn-cotija.jpg",
+        "thumbImage": "/images/thumbs/grilled-corn-cotija.jpg",
+        "tags": [
+          "protein:vegetarian",
+          "format:grill",
+          "category:bbq_grill_nights",
+          "bbq",
+          "golden_100"
+        ],
+        "searchText": "grilled street corn with cotija grilled-corn-cotija bbq_grill_nights mexican vegetarian grill protein:vegetarian format:grill category:bbq_grill_nights bbq golden_100 grilled street corn with cotija grilled corn cotija mexican vegetarian grill bbq mexican street corn grilled cotija golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": true,
+        "isHighProtein": false,
         "isLowCleanup": false
       },
       "issues": []
@@ -3286,6 +4861,43 @@
       "issues": []
     },
     {
+      "slug": "chicken-caesar",
+      "pass": true,
+      "flags": {
+        "slug": "chicken-caesar",
+        "title": "Hall Caesar Chicken",
+        "kind": "hall_classic",
+        "category": "firehall_classics",
+        "categoryLabel": "firehall classics",
+        "cuisine": "american",
+        "protein": "chicken",
+        "mealFormat": "salad",
+        "cookTime": 60,
+        "cookTimeBucket": "30_to_60",
+        "heroImage": "/images/golden-100/chicken-caesar.jpg",
+        "thumbImage": "/images/thumbs/chicken-caesar.jpg",
+        "tags": [
+          "protein:chicken",
+          "format:salad",
+          "category:firehall_classics",
+          "healthy",
+          "chicken",
+          "golden_100"
+        ],
+        "searchText": "hall caesar chicken chicken-caesar firehall_classics american chicken salad protein:chicken format:salad category:firehall_classics healthy chicken golden_100 hall caesar chicken chicken caesar american chicken salad healthy golden_100",
+        "catalogBadge": "Hall Classic",
+        "traitBadges": [
+          "Crew Favorite"
+        ],
+        "isSmoothie": false,
+        "isHealthy": true,
+        "isBbqGrill": false,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
       "slug": "hall-chicken-noodle-soup",
       "pass": true,
       "flags": {
@@ -3361,6 +4973,41 @@
       "issues": []
     },
     {
+      "slug": "slider-bar",
+      "pass": true,
+      "flags": {
+        "slug": "slider-bar",
+        "title": "Hall Slider Bar",
+        "kind": "firehall_catalog",
+        "category": "game_day_watch_party",
+        "categoryLabel": "game day watch party",
+        "cuisine": "american",
+        "protein": "beef",
+        "mealFormat": "burger",
+        "cookTime": 55,
+        "cookTimeBucket": "30_to_60",
+        "heroImage": "/images/golden-100/slider-bar.jpg",
+        "thumbImage": "/images/thumbs/slider-bar.jpg",
+        "tags": [
+          "protein:beef",
+          "format:burger",
+          "category:game_day_watch_party",
+          "game_day",
+          "handheld",
+          "golden_100"
+        ],
+        "searchText": "hall slider bar slider-bar game_day_watch_party american beef burger protein:beef format:burger category:game_day_watch_party game_day handheld golden_100 hall slider bar slider bar american beef burger game day handheld beef slider bar dinner game_day golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
       "slug": "hall-sloppy-joe-feed",
       "pass": true,
       "flags": {
@@ -3390,6 +5037,76 @@
           "firefighter_meal"
         ],
         "searchText": "hall sloppy joe feed hall-sloppy-joe-feed hall_expansion american beef sandwich protein:beef format:sandwich category:crew_feeders beef hearty crew_feed handheld hall_expansion hall_expansion_74 hall_meal firefighter_meal hall sloppy joe feed crew feeders",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
+      "slug": "hall-taco-bar",
+      "pass": true,
+      "flags": {
+        "slug": "hall-taco-bar",
+        "title": "Hall Taco Bar Night",
+        "kind": "firehall_catalog",
+        "category": "firehall_classics",
+        "categoryLabel": "firehall classics",
+        "cuisine": "mexican",
+        "protein": "beef",
+        "mealFormat": "tacos",
+        "cookTime": 55,
+        "cookTimeBucket": "30_to_60",
+        "heroImage": "/images/golden-100/hall-taco-bar.jpg",
+        "thumbImage": "/images/thumbs/hall-taco-bar.jpg",
+        "tags": [
+          "protein:beef",
+          "format:tacos",
+          "category:firehall_classics",
+          "handheld",
+          "trending",
+          "golden_100"
+        ],
+        "searchText": "hall taco bar night hall-taco-bar firehall_classics mexican beef tacos protein:beef format:tacos category:firehall_classics handheld trending golden_100 hall taco bar night hall taco bar mexican beef tacos handheld trending ground beef taco bar dinner golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
+      "slug": "big-chili",
+      "pass": true,
+      "flags": {
+        "slug": "big-chili",
+        "title": "Hall-Sized Beef and Bean Chili",
+        "kind": "firehall_catalog",
+        "category": "big_crew_feeders",
+        "categoryLabel": "big crew feeders",
+        "cuisine": "american",
+        "protein": "beef",
+        "mealFormat": "soup_chili",
+        "cookTime": 90,
+        "cookTimeBucket": "over_60",
+        "heroImage": "/images/golden-100/big-chili.jpg",
+        "thumbImage": "/images/thumbs/big-chili.jpg",
+        "tags": [
+          "protein:beef",
+          "format:soup_chili",
+          "category:big_crew_feeders",
+          "hearty",
+          "beef",
+          "golden_100"
+        ],
+        "searchText": "hall-sized beef and bean chili big-chili big_crew_feeders american beef soup_chili protein:beef format:soup_chili category:big_crew_feeders hearty beef golden_100 hall-sized beef and bean chili big chili american beef soup chili hearty large batch beef chili golden_100",
         "catalogBadge": "Firehall Meals Catalog",
         "traitBadges": [],
         "isSmoothie": false,
@@ -3436,6 +5153,41 @@
         "isBbqGrill": true,
         "isHighProtein": true,
         "isLowCleanup": true
+      },
+      "issues": []
+    },
+    {
+      "slug": "herb-roasted-thighs",
+      "pass": true,
+      "flags": {
+        "slug": "herb-roasted-thighs",
+        "title": "Herb Roasted Chicken Thighs",
+        "kind": "firehall_catalog",
+        "category": "healthy_performance",
+        "categoryLabel": "healthy performance",
+        "cuisine": "american",
+        "protein": "chicken",
+        "mealFormat": "roast",
+        "cookTime": 55,
+        "cookTimeBucket": "30_to_60",
+        "heroImage": "/images/golden-100/herb-roasted-thighs.jpg",
+        "thumbImage": "/images/thumbs/herb-roasted-thighs.jpg",
+        "tags": [
+          "protein:chicken",
+          "format:roast",
+          "category:healthy_performance",
+          "healthy",
+          "chicken",
+          "golden_100"
+        ],
+        "searchText": "herb roasted chicken thighs herb-roasted-thighs healthy_performance american chicken roast protein:chicken format:roast category:healthy_performance healthy chicken golden_100 herb roasted chicken thighs herb roasted thighs american chicken roast healthy herb roasted chicken thighs dinner golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": true,
+        "isBbqGrill": false,
+        "isHighProtein": true,
+        "isLowCleanup": false
       },
       "issues": []
     },
@@ -3558,6 +5310,41 @@
       "issues": []
     },
     {
+      "slug": "turkey-chili",
+      "pass": true,
+      "flags": {
+        "slug": "turkey-chili",
+        "title": "High-Protein Turkey Chili",
+        "kind": "firehall_catalog",
+        "category": "healthy_performance",
+        "categoryLabel": "healthy performance",
+        "cuisine": "american",
+        "protein": "turkey",
+        "mealFormat": "soup_chili",
+        "cookTime": 55,
+        "cookTimeBucket": "30_to_60",
+        "heroImage": "/images/golden-100/turkey-chili.jpg",
+        "thumbImage": "/images/thumbs/turkey-chili.jpg",
+        "tags": [
+          "protein:turkey",
+          "format:soup_chili",
+          "category:healthy_performance",
+          "healthy",
+          "hearty",
+          "golden_100"
+        ],
+        "searchText": "high-protein turkey chili turkey-chili healthy_performance american turkey soup_chili protein:turkey format:soup_chili category:healthy_performance healthy hearty golden_100 high-protein turkey chili turkey chili american turkey soup chili healthy hearty turkey chili healthy dinner golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": true,
+        "isBbqGrill": false,
+        "isHighProtein": true,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
       "slug": "honey-chipotle-chicken-thighs",
       "pass": true,
       "flags": {
@@ -3631,6 +5418,40 @@
         "isHealthy": true,
         "isBbqGrill": false,
         "isHighProtein": true,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
+      "slug": "honey-garlic-pork-tenderloin",
+      "pass": true,
+      "flags": {
+        "slug": "honey-garlic-pork-tenderloin",
+        "title": "Honey Garlic Grilled Pork Tenderloin",
+        "kind": "firehall_catalog",
+        "category": "bbq_grill_nights",
+        "categoryLabel": "bbq grill nights",
+        "cuisine": "american",
+        "protein": "pork",
+        "mealFormat": "grill",
+        "cookTime": 90,
+        "cookTimeBucket": "over_60",
+        "heroImage": "/images/golden-100/honey-garlic-pork-tenderloin.jpg",
+        "thumbImage": "/images/thumbs/honey-garlic-pork-tenderloin.jpg",
+        "tags": [
+          "protein:pork",
+          "format:grill",
+          "category:bbq_grill_nights",
+          "bbq",
+          "golden_100"
+        ],
+        "searchText": "honey garlic grilled pork tenderloin honey-garlic-pork-tenderloin bbq_grill_nights american pork grill protein:pork format:grill category:bbq_grill_nights bbq golden_100 honey garlic grilled pork tenderloin honey garlic pork tenderloin american pork grill bbq golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": true,
+        "isHighProtein": false,
         "isLowCleanup": false
       },
       "issues": []
@@ -3748,6 +5569,40 @@
         "isBbqGrill": true,
         "isHighProtein": true,
         "isLowCleanup": true
+      },
+      "issues": []
+    },
+    {
+      "slug": "honey-soppressata-pizza",
+      "pass": true,
+      "flags": {
+        "slug": "honey-soppressata-pizza",
+        "title": "Hot Honey Soppressata Pizza",
+        "kind": "firehall_catalog",
+        "category": "pizza_night",
+        "categoryLabel": "pizza night",
+        "cuisine": "italian",
+        "protein": "pork",
+        "mealFormat": "pizza",
+        "cookTime": 85,
+        "cookTimeBucket": "over_60",
+        "heroImage": "/images/golden-100/honey-soppressata-pizza.jpg",
+        "thumbImage": "/images/thumbs/honey-soppressata-pizza.jpg",
+        "tags": [
+          "protein:pork",
+          "format:pizza",
+          "category:pizza_night",
+          "handheld",
+          "golden_100"
+        ],
+        "searchText": "hot honey soppressata pizza honey-soppressata-pizza pizza_night italian pork pizza protein:pork format:pizza category:pizza_night handheld golden_100 hot honey soppressata pizza honey soppressata pizza italian pork pizza handheld golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
+        "isLowCleanup": false
       },
       "issues": []
     },
@@ -4058,6 +5913,43 @@
       "issues": []
     },
     {
+      "slug": "jerk-chicken",
+      "pass": true,
+      "flags": {
+        "slug": "jerk-chicken",
+        "title": "Jerk Chicken & Peas and Rice",
+        "kind": "hall_classic",
+        "category": "firehall_classics",
+        "categoryLabel": "firehall classics",
+        "cuisine": "caribbean",
+        "protein": "chicken",
+        "mealFormat": "grill",
+        "cookTime": 110,
+        "cookTimeBucket": "over_60",
+        "heroImage": "/images/golden-100/jerk-chicken.jpg",
+        "thumbImage": "/images/thumbs/jerk-chicken.jpg",
+        "tags": [
+          "protein:chicken",
+          "format:grill",
+          "category:firehall_classics",
+          "trending",
+          "chicken",
+          "golden_100"
+        ],
+        "searchText": "jerk chicken & peas and rice jerk-chicken firehall_classics caribbean chicken grill protein:chicken format:grill category:firehall_classics trending chicken golden_100 jerk chicken & peas and rice jerk chicken caribbean chicken grill trending golden_100",
+        "catalogBadge": "Hall Classic",
+        "traitBadges": [
+          "Crew Favorite"
+        ],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": true,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
       "slug": "johnnycakes-with-syrup",
       "pass": true,
       "flags": {
@@ -4244,6 +6136,41 @@
         "isSmoothie": false,
         "isHealthy": false,
         "isBbqGrill": true,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
+      "slug": "bulgogi-bowls",
+      "pass": true,
+      "flags": {
+        "slug": "bulgogi-bowls",
+        "title": "Korean Bulgogi Rice Bowls",
+        "kind": "firehall_catalog",
+        "category": "global_flavors",
+        "categoryLabel": "global flavors",
+        "cuisine": "korean",
+        "protein": "beef",
+        "mealFormat": "bowl",
+        "cookTime": 55,
+        "cookTimeBucket": "30_to_60",
+        "heroImage": "/images/golden-100/bulgogi-bowls.jpg",
+        "thumbImage": "/images/thumbs/bulgogi-bowls.jpg",
+        "tags": [
+          "protein:beef",
+          "format:bowl",
+          "category:global_flavors",
+          "bowl",
+          "beef",
+          "golden_100"
+        ],
+        "searchText": "korean bulgogi rice bowls bulgogi-bowls global_flavors korean beef bowl protein:beef format:bowl category:global_flavors bowl beef golden_100 korean bulgogi rice bowls bulgogi bowls korean beef bowl korean bulgogi rice bowl golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
         "isHighProtein": false,
         "isLowCleanup": false
       },
@@ -4445,6 +6372,40 @@
       "issues": []
     },
     {
+      "slug": "lemon-herb-salmon",
+      "pass": true,
+      "flags": {
+        "slug": "lemon-herb-salmon",
+        "title": "Lemon Herb Grilled Salmon",
+        "kind": "firehall_catalog",
+        "category": "healthy_performance",
+        "categoryLabel": "healthy performance",
+        "cuisine": "mediterranean",
+        "protein": "seafood",
+        "mealFormat": "grill",
+        "cookTime": 55,
+        "cookTimeBucket": "30_to_60",
+        "heroImage": "/images/golden-100/lemon-herb-salmon.jpg",
+        "thumbImage": "/images/thumbs/lemon-herb-salmon.jpg",
+        "tags": [
+          "protein:seafood",
+          "format:grill",
+          "category:healthy_performance",
+          "healthy",
+          "golden_100"
+        ],
+        "searchText": "lemon herb grilled salmon lemon-herb-salmon healthy_performance mediterranean seafood grill protein:seafood format:grill category:healthy_performance healthy golden_100 lemon herb grilled salmon lemon herb salmon mediterranean seafood grill healthy golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": true,
+        "isBbqGrill": true,
+        "isHighProtein": true,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
       "slug": "lemon-salmon-orzo-skillet",
       "pass": true,
       "flags": {
@@ -4601,6 +6562,76 @@
       "issues": []
     },
     {
+      "slug": "loaded-baked-potato-bar",
+      "pass": true,
+      "flags": {
+        "slug": "loaded-baked-potato-bar",
+        "title": "Loaded Baked Potato Bar",
+        "kind": "firehall_catalog",
+        "category": "comfort_food",
+        "categoryLabel": "comfort food",
+        "cuisine": "american",
+        "protein": "beef",
+        "mealFormat": "bowl",
+        "cookTime": 125,
+        "cookTimeBucket": "over_60",
+        "heroImage": "/images/golden-100/loaded-baked-potato-bar.jpg",
+        "thumbImage": "/images/thumbs/loaded-baked-potato-bar.jpg",
+        "tags": [
+          "protein:beef",
+          "format:bowl",
+          "category:comfort_food",
+          "comfort",
+          "beef",
+          "golden_100"
+        ],
+        "searchText": "loaded baked potato bar loaded-baked-potato-bar comfort_food american beef bowl protein:beef format:bowl category:comfort_food comfort beef golden_100 loaded baked potato bar american beef bowl comfort loaded baked potato bar dinner golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
+      "slug": "game-day-nachos",
+      "pass": true,
+      "flags": {
+        "slug": "game-day-nachos",
+        "title": "Loaded Game Day Nachos",
+        "kind": "firehall_catalog",
+        "category": "game_day_watch_party",
+        "categoryLabel": "game day watch party",
+        "cuisine": "mexican",
+        "protein": "beef",
+        "mealFormat": "bowl",
+        "cookTime": 55,
+        "cookTimeBucket": "30_to_60",
+        "heroImage": "/images/golden-100/game-day-nachos.jpg",
+        "thumbImage": "/images/thumbs/game-day-nachos.jpg",
+        "tags": [
+          "protein:beef",
+          "format:bowl",
+          "category:game_day_watch_party",
+          "game_day",
+          "handheld",
+          "golden_100"
+        ],
+        "searchText": "loaded game day nachos game-day-nachos game_day_watch_party mexican beef bowl protein:beef format:bowl category:game_day_watch_party game_day handheld golden_100 loaded game day nachos game day nachos mexican beef bowl game day handheld loaded nachos ground beef game_day golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
       "slug": "loaded-nacho-bar-night",
       "pass": true,
       "flags": {
@@ -4630,6 +6661,76 @@
           "firefighter_meal"
         ],
         "searchText": "loaded nacho bar night loaded-nacho-bar-night hall_expansion mexican-american beef bar_line protein:beef format:bar_line category:crew_feeders bar_line beef game_day handheld hall_expansion hall_expansion_74 hall_meal firefighter_meal loaded nacho bar night crew feeders",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
+      "slug": "loaded-nacho-skillet",
+      "pass": true,
+      "flags": {
+        "slug": "loaded-nacho-skillet",
+        "title": "Loaded Nacho Skillet",
+        "kind": "firehall_catalog",
+        "category": "firehall_classics",
+        "categoryLabel": "firehall classics",
+        "cuisine": "mexican",
+        "protein": "beef",
+        "mealFormat": "bowl",
+        "cookTime": 55,
+        "cookTimeBucket": "30_to_60",
+        "heroImage": "/images/golden-100/loaded-nacho-skillet.jpg",
+        "thumbImage": "/images/thumbs/loaded-nacho-skillet.jpg",
+        "tags": [
+          "protein:beef",
+          "format:bowl",
+          "category:firehall_classics",
+          "handheld",
+          "game_day",
+          "golden_100"
+        ],
+        "searchText": "loaded nacho skillet loaded-nacho-skillet firehall_classics mexican beef bowl protein:beef format:bowl category:firehall_classics handheld game_day golden_100 loaded nacho skillet mexican beef bowl handheld game day loaded beef nacho skillet dinner game_day golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
+      "slug": "loaded-potato-feed",
+      "pass": true,
+      "flags": {
+        "slug": "loaded-potato-feed",
+        "title": "Loaded Potato Feed",
+        "kind": "firehall_catalog",
+        "category": "big_crew_feeders",
+        "categoryLabel": "big crew feeders",
+        "cuisine": "american",
+        "protein": "beef",
+        "mealFormat": "bowl",
+        "cookTime": 150,
+        "cookTimeBucket": "over_60",
+        "heroImage": "/images/golden-100/loaded-potato-feed.jpg",
+        "thumbImage": "/images/thumbs/loaded-potato-feed.jpg",
+        "tags": [
+          "protein:beef",
+          "format:bowl",
+          "category:big_crew_feeders",
+          "comfort",
+          "beef",
+          "golden_100"
+        ],
+        "searchText": "loaded potato feed loaded-potato-feed big_crew_feeders american beef bowl protein:beef format:bowl category:big_crew_feeders comfort beef golden_100 loaded potato feed american beef bowl comfort loaded baked potato bar feed golden_100",
         "catalogBadge": "Firehall Meals Catalog",
         "traitBadges": [],
         "isSmoothie": false,
@@ -4909,6 +7010,40 @@
       "issues": []
     },
     {
+      "slug": "meat-lovers-sheet-pizza",
+      "pass": true,
+      "flags": {
+        "slug": "meat-lovers-sheet-pizza",
+        "title": "Meat Lover's Sheet Pan Pizza",
+        "kind": "firehall_catalog",
+        "category": "pizza_night",
+        "categoryLabel": "pizza night",
+        "cuisine": "american",
+        "protein": "pork",
+        "mealFormat": "pizza",
+        "cookTime": 70,
+        "cookTimeBucket": "over_60",
+        "heroImage": "/images/golden-100/meat-lovers-sheet-pizza.jpg",
+        "thumbImage": "/images/thumbs/meat-lovers-sheet-pizza.jpg",
+        "tags": [
+          "protein:pork",
+          "format:pizza",
+          "category:pizza_night",
+          "handheld",
+          "golden_100"
+        ],
+        "searchText": "meat lover's sheet pan pizza meat-lovers-sheet-pizza pizza_night american pork pizza protein:pork format:pizza category:pizza_night handheld golden_100 meat lover's sheet pan pizza meat lovers sheet pizza american pork pizza handheld meat lovers sheet pan pizza golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
       "slug": "mediterranean-baked-fish-tray",
       "pass": true,
       "flags": {
@@ -4987,6 +7122,41 @@
       "issues": []
     },
     {
+      "slug": "mediterranean-chickpea",
+      "pass": true,
+      "flags": {
+        "slug": "mediterranean-chickpea",
+        "title": "Mediterranean Chickpea Bowls",
+        "kind": "firehall_catalog",
+        "category": "healthy_performance",
+        "categoryLabel": "healthy performance",
+        "cuisine": "mediterranean",
+        "protein": "vegetarian",
+        "mealFormat": "bowl",
+        "cookTime": 55,
+        "cookTimeBucket": "30_to_60",
+        "heroImage": "/images/golden-100/mediterranean-chickpea.jpg",
+        "thumbImage": "/images/thumbs/mediterranean-chickpea.jpg",
+        "tags": [
+          "protein:vegetarian",
+          "format:bowl",
+          "category:healthy_performance",
+          "healthy",
+          "bowl",
+          "golden_100"
+        ],
+        "searchText": "mediterranean chickpea bowls mediterranean-chickpea healthy_performance mediterranean vegetarian bowl protein:vegetarian format:bowl category:healthy_performance healthy bowl golden_100 mediterranean chickpea bowls mediterranean chickpea mediterranean vegetarian bowl healthy mediterranean chickpea bowl dinner golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": true,
+        "isBbqGrill": false,
+        "isHighProtein": true,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
       "slug": "mediterranean-feast-night",
       "pass": true,
       "flags": {
@@ -5026,6 +7196,40 @@
       "issues": []
     },
     {
+      "slug": "memphis-dry-rub-ribs",
+      "pass": true,
+      "flags": {
+        "slug": "memphis-dry-rub-ribs",
+        "title": "Memphis Dry Rub Ribs",
+        "kind": "firehall_catalog",
+        "category": "bbq_grill_nights",
+        "categoryLabel": "bbq grill nights",
+        "cuisine": "american",
+        "protein": "pork",
+        "mealFormat": "grill",
+        "cookTime": 330,
+        "cookTimeBucket": "over_60",
+        "heroImage": "/images/golden-100/memphis-dry-rub-ribs.jpg",
+        "thumbImage": "/images/thumbs/memphis-dry-rub-ribs.jpg",
+        "tags": [
+          "protein:pork",
+          "format:grill",
+          "category:bbq_grill_nights",
+          "bbq",
+          "golden_100"
+        ],
+        "searchText": "memphis dry rub ribs memphis-dry-rub-ribs bbq_grill_nights american pork grill protein:pork format:grill category:bbq_grill_nights bbq golden_100 memphis dry rub ribs american pork grill bbq memphis dry rub pork ribs golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": true,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
       "slug": "mesquite-chuck-roast",
       "pass": true,
       "flags": {
@@ -5059,6 +7263,41 @@
         "isSmoothie": false,
         "isHealthy": false,
         "isBbqGrill": true,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
+      "slug": "street-corn-chicken",
+      "pass": true,
+      "flags": {
+        "slug": "street-corn-chicken",
+        "title": "Mexican Street Corn Chicken Bowls",
+        "kind": "firehall_catalog",
+        "category": "global_flavors",
+        "categoryLabel": "global flavors",
+        "cuisine": "mexican",
+        "protein": "chicken",
+        "mealFormat": "bowl",
+        "cookTime": 55,
+        "cookTimeBucket": "30_to_60",
+        "heroImage": "/images/golden-100/street-corn-chicken.jpg",
+        "thumbImage": "/images/thumbs/street-corn-chicken.jpg",
+        "tags": [
+          "protein:chicken",
+          "format:bowl",
+          "category:global_flavors",
+          "bowl",
+          "handheld",
+          "golden_100"
+        ],
+        "searchText": "mexican street corn chicken bowls street-corn-chicken global_flavors mexican chicken bowl protein:chicken format:bowl category:global_flavors bowl handheld golden_100 mexican street corn chicken bowls street corn chicken mexican chicken bowl handheld mexican street corn chicken bowl golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
         "isHighProtein": false,
         "isLowCleanup": false
       },
@@ -5397,6 +7636,40 @@
       "issues": []
     },
     {
+      "slug": "moroccan-meatballs",
+      "pass": true,
+      "flags": {
+        "slug": "moroccan-meatballs",
+        "title": "Moroccan Spiced Lamb Meatballs",
+        "kind": "firehall_catalog",
+        "category": "global_flavors",
+        "categoryLabel": "global flavors",
+        "cuisine": "moroccan",
+        "protein": "lamb",
+        "mealFormat": "plated_main",
+        "cookTime": 55,
+        "cookTimeBucket": "30_to_60",
+        "heroImage": "/images/golden-100/moroccan-meatballs.jpg",
+        "thumbImage": "/images/thumbs/moroccan-meatballs.jpg",
+        "tags": [
+          "protein:lamb",
+          "format:plated_main",
+          "category:global_flavors",
+          "comfort",
+          "golden_100"
+        ],
+        "searchText": "moroccan spiced lamb meatballs moroccan-meatballs global_flavors moroccan lamb plated_main protein:lamb format:plated_main category:global_flavors comfort golden_100 moroccan spiced lamb meatballs moroccan meatballs moroccan lamb plated main comfort moroccan lamb meatballs dinner golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
       "slug": "firehall-antipasto-pasta-salad",
       "pass": true,
       "flags": {
@@ -5510,6 +7783,76 @@
         "isBbqGrill": true,
         "isHighProtein": true,
         "isLowCleanup": true
+      },
+      "issues": []
+    },
+    {
+      "slug": "one-pot-chicken-rice",
+      "pass": true,
+      "flags": {
+        "slug": "one-pot-chicken-rice",
+        "title": "One-Pot Chicken and Rice",
+        "kind": "firehall_catalog",
+        "category": "rookie_friendly",
+        "categoryLabel": "rookie friendly",
+        "cuisine": "american",
+        "protein": "chicken",
+        "mealFormat": "one_pot",
+        "cookTime": 50,
+        "cookTimeBucket": "30_to_60",
+        "heroImage": "/images/golden-100/one-pot-chicken-rice.jpg",
+        "thumbImage": "/images/thumbs/one-pot-chicken-rice.jpg",
+        "tags": [
+          "protein:chicken",
+          "format:one_pot",
+          "category:rookie_friendly",
+          "one_pot",
+          "quick",
+          "golden_100"
+        ],
+        "searchText": "one-pot chicken and rice one-pot-chicken-rice rookie_friendly american chicken one_pot protein:chicken format:one_pot category:rookie_friendly one_pot quick golden_100 one-pot chicken and rice one pot chicken rice american chicken one pot quick one pot chicken and rice dinner one_pot golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
+        "isLowCleanup": true
+      },
+      "issues": []
+    },
+    {
+      "slug": "skillet-chicken-alfredo",
+      "pass": true,
+      "flags": {
+        "slug": "skillet-chicken-alfredo",
+        "title": "One-Skillet Chicken Alfredo",
+        "kind": "firehall_catalog",
+        "category": "quick_shift_meals",
+        "categoryLabel": "quick shift meals",
+        "cuisine": "italian",
+        "protein": "chicken",
+        "mealFormat": "pasta",
+        "cookTime": 45,
+        "cookTimeBucket": "30_to_60",
+        "heroImage": "/images/golden-100/skillet-chicken-alfredo.jpg",
+        "thumbImage": "/images/thumbs/skillet-chicken-alfredo.jpg",
+        "tags": [
+          "protein:chicken",
+          "format:pasta",
+          "category:quick_shift_meals",
+          "quick",
+          "pasta",
+          "golden_100"
+        ],
+        "searchText": "one-skillet chicken alfredo skillet-chicken-alfredo quick_shift_meals italian chicken pasta protein:chicken format:pasta category:quick_shift_meals quick pasta golden_100 one-skillet chicken alfredo skillet chicken alfredo italian chicken pasta quick one skillet chicken alfredo golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
+        "isLowCleanup": false
       },
       "issues": []
     },
@@ -5852,6 +8195,41 @@
       "issues": []
     },
     {
+      "slug": "performance-burrito-bowls",
+      "pass": true,
+      "flags": {
+        "slug": "performance-burrito-bowls",
+        "title": "Performance Chicken Burrito Bowls",
+        "kind": "firehall_catalog",
+        "category": "healthy_performance",
+        "categoryLabel": "healthy performance",
+        "cuisine": "mexican",
+        "protein": "chicken",
+        "mealFormat": "bowl",
+        "cookTime": 55,
+        "cookTimeBucket": "30_to_60",
+        "heroImage": "/images/golden-100/performance-burrito-bowls.jpg",
+        "thumbImage": "/images/thumbs/performance-burrito-bowls.jpg",
+        "tags": [
+          "protein:chicken",
+          "format:bowl",
+          "category:healthy_performance",
+          "healthy",
+          "bowl",
+          "golden_100"
+        ],
+        "searchText": "performance chicken burrito bowls performance-burrito-bowls healthy_performance mexican chicken bowl protein:chicken format:bowl category:healthy_performance healthy bowl golden_100 performance chicken burrito bowls performance burrito bowls mexican chicken bowl healthy chicken burrito bowl healthy golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": true,
+        "isBbqGrill": false,
+        "isHighProtein": true,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
       "slug": "peri-peri-chicken-platter",
       "pass": true,
       "flags": {
@@ -5925,6 +8303,76 @@
         "isHealthy": true,
         "isBbqGrill": false,
         "isHighProtein": true,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
+      "slug": "philly-egg-rolls",
+      "pass": true,
+      "flags": {
+        "slug": "philly-egg-rolls",
+        "title": "Philly Cheesesteak Egg Rolls",
+        "kind": "firehall_catalog",
+        "category": "game_day_watch_party",
+        "categoryLabel": "game day watch party",
+        "cuisine": "american",
+        "protein": "beef",
+        "mealFormat": "handheld",
+        "cookTime": 55,
+        "cookTimeBucket": "30_to_60",
+        "heroImage": "/images/golden-100/philly-egg-rolls.jpg",
+        "thumbImage": "/images/thumbs/philly-egg-rolls.jpg",
+        "tags": [
+          "protein:beef",
+          "format:handheld",
+          "category:game_day_watch_party",
+          "game_day",
+          "handheld",
+          "golden_100"
+        ],
+        "searchText": "philly cheesesteak egg rolls philly-egg-rolls game_day_watch_party american beef handheld protein:beef format:handheld category:game_day_watch_party game_day handheld golden_100 philly cheesesteak egg rolls philly egg rolls american beef handheld game day game_day golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
+      "slug": "philly-cheesesteak-skillet",
+      "pass": true,
+      "flags": {
+        "slug": "philly-cheesesteak-skillet",
+        "title": "Philly Cheesesteak Skillet",
+        "kind": "firehall_catalog",
+        "category": "comfort_food",
+        "categoryLabel": "comfort food",
+        "cuisine": "american",
+        "protein": "beef",
+        "mealFormat": "skillet",
+        "cookTime": 55,
+        "cookTimeBucket": "30_to_60",
+        "heroImage": "/images/golden-100/philly-cheesesteak-skillet.jpg",
+        "thumbImage": "/images/thumbs/philly-cheesesteak-skillet.jpg",
+        "tags": [
+          "protein:beef",
+          "format:skillet",
+          "category:comfort_food",
+          "comfort",
+          "beef",
+          "golden_100"
+        ],
+        "searchText": "philly cheesesteak skillet philly-cheesesteak-skillet comfort_food american beef skillet protein:beef format:skillet category:comfort_food comfort beef golden_100 philly cheesesteak skillet american beef skillet comfort philly cheesesteak skillet dinner golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
         "isLowCleanup": false
       },
       "issues": []
@@ -6162,6 +8610,40 @@
       "issues": []
     },
     {
+      "slug": "beef-broccoli",
+      "pass": true,
+      "flags": {
+        "slug": "beef-broccoli",
+        "title": "Quick Beef and Broccoli",
+        "kind": "firehall_catalog",
+        "category": "quick_shift_meals",
+        "categoryLabel": "quick shift meals",
+        "cuisine": "chinese",
+        "protein": "beef",
+        "mealFormat": "skillet",
+        "cookTime": 35,
+        "cookTimeBucket": "30_to_60",
+        "heroImage": "/images/golden-100/beef-broccoli.jpg",
+        "thumbImage": "/images/thumbs/beef-broccoli.jpg",
+        "tags": [
+          "protein:beef",
+          "format:skillet",
+          "category:quick_shift_meals",
+          "quick",
+          "golden_100"
+        ],
+        "searchText": "quick beef and broccoli beef-broccoli quick_shift_meals chinese beef skillet protein:beef format:skillet category:quick_shift_meals quick golden_100 quick beef and broccoli beef broccoli chinese beef skillet quick beef broccoli stir fry dinner golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
       "slug": "quick-egg-tacos",
       "pass": true,
       "flags": {
@@ -6193,6 +8675,75 @@
         "isBbqGrill": false,
         "isHighProtein": false,
         "isLowCleanup": true
+      },
+      "issues": []
+    },
+    {
+      "slug": "pork-carnitas-tacos",
+      "pass": true,
+      "flags": {
+        "slug": "pork-carnitas-tacos",
+        "title": "Quick Pork Carnitas Tacos",
+        "kind": "firehall_catalog",
+        "category": "quick_shift_meals",
+        "categoryLabel": "quick shift meals",
+        "cuisine": "mexican",
+        "protein": "pork",
+        "mealFormat": "tacos",
+        "cookTime": 35,
+        "cookTimeBucket": "30_to_60",
+        "heroImage": "/images/golden-100/pork-carnitas-tacos.jpg",
+        "thumbImage": "/images/thumbs/pork-carnitas-tacos.jpg",
+        "tags": [
+          "protein:pork",
+          "format:tacos",
+          "category:quick_shift_meals",
+          "quick",
+          "handheld",
+          "golden_100"
+        ],
+        "searchText": "quick pork carnitas tacos pork-carnitas-tacos quick_shift_meals mexican pork tacos protein:pork format:tacos category:quick_shift_meals quick handheld golden_100 quick pork carnitas tacos pork carnitas tacos mexican pork tacos quick handheld golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
+      "slug": "stuffed-peppers",
+      "pass": true,
+      "flags": {
+        "slug": "stuffed-peppers",
+        "title": "Quinoa Stuffed Peppers",
+        "kind": "firehall_catalog",
+        "category": "healthy_performance",
+        "categoryLabel": "healthy performance",
+        "cuisine": "american",
+        "protein": "beef",
+        "mealFormat": "plated_main",
+        "cookTime": 55,
+        "cookTimeBucket": "30_to_60",
+        "heroImage": "/images/golden-100/stuffed-peppers.jpg",
+        "thumbImage": "/images/thumbs/stuffed-peppers.jpg",
+        "tags": [
+          "protein:beef",
+          "format:plated_main",
+          "category:healthy_performance",
+          "healthy",
+          "golden_100"
+        ],
+        "searchText": "quinoa stuffed peppers stuffed-peppers healthy_performance american beef plated_main protein:beef format:plated_main category:healthy_performance healthy golden_100 quinoa stuffed peppers stuffed peppers american beef plated main healthy quinoa stuffed bell peppers beef golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": true,
+        "isBbqGrill": false,
+        "isHighProtein": true,
+        "isLowCleanup": false
       },
       "issues": []
     },
@@ -6465,6 +9016,76 @@
       "issues": []
     },
     {
+      "slug": "sausage-egg-bake",
+      "pass": true,
+      "flags": {
+        "slug": "sausage-egg-bake",
+        "title": "Sausage Egg Bake for the Crew",
+        "kind": "firehall_catalog",
+        "category": "big_crew_feeders",
+        "categoryLabel": "big crew feeders",
+        "cuisine": "american",
+        "protein": "pork",
+        "mealFormat": "bake",
+        "cookTime": 90,
+        "cookTimeBucket": "over_60",
+        "heroImage": "/images/golden-100/sausage-egg-bake.jpg",
+        "thumbImage": "/images/thumbs/sausage-egg-bake.jpg",
+        "tags": [
+          "protein:pork",
+          "format:bake",
+          "category:big_crew_feeders",
+          "breakfast",
+          "beef",
+          "golden_100"
+        ],
+        "searchText": "sausage egg bake for the crew sausage-egg-bake big_crew_feeders american pork bake protein:pork format:bake category:big_crew_feeders breakfast beef golden_100 sausage egg bake for the crew sausage egg bake american pork bake breakfast beef large sausage egg breakfast bake golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
+      "slug": "sausage-peppers-onions",
+      "pass": true,
+      "flags": {
+        "slug": "sausage-peppers-onions",
+        "title": "Sausage Peppers and Onions",
+        "kind": "firehall_catalog",
+        "category": "comfort_food",
+        "categoryLabel": "comfort food",
+        "cuisine": "italian",
+        "protein": "pork",
+        "mealFormat": "skillet",
+        "cookTime": 55,
+        "cookTimeBucket": "30_to_60",
+        "heroImage": "/images/golden-100/sausage-peppers-onions.jpg",
+        "thumbImage": "/images/thumbs/sausage-peppers-onions.jpg",
+        "tags": [
+          "protein:pork",
+          "format:skillet",
+          "category:comfort_food",
+          "comfort",
+          "one_pot",
+          "golden_100"
+        ],
+        "searchText": "sausage peppers and onions sausage-peppers-onions comfort_food italian pork skillet protein:pork format:skillet category:comfort_food comfort one_pot golden_100 sausage peppers and onions sausage peppers onions italian pork skillet comfort one pot italian sausage peppers onions dinner one_pot golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
       "slug": "mongolian-beef-flat-top-crew",
       "pass": true,
       "flags": {
@@ -6729,6 +9350,41 @@
       "issues": []
     },
     {
+      "slug": "sheet-pan-fajitas",
+      "pass": true,
+      "flags": {
+        "slug": "sheet-pan-fajitas",
+        "title": "Sheet Pan Chicken Fajitas",
+        "kind": "firehall_catalog",
+        "category": "healthy_performance",
+        "categoryLabel": "healthy performance",
+        "cuisine": "mexican",
+        "protein": "chicken",
+        "mealFormat": "sheet_pan",
+        "cookTime": 55,
+        "cookTimeBucket": "30_to_60",
+        "heroImage": "/images/golden-100/sheet-pan-fajitas.jpg",
+        "thumbImage": "/images/thumbs/sheet-pan-fajitas.jpg",
+        "tags": [
+          "protein:chicken",
+          "format:sheet_pan",
+          "category:healthy_performance",
+          "healthy",
+          "quick",
+          "golden_100"
+        ],
+        "searchText": "sheet pan chicken fajitas sheet-pan-fajitas healthy_performance mexican chicken sheet_pan protein:chicken format:sheet_pan category:healthy_performance healthy quick golden_100 sheet pan chicken fajitas sheet pan fajitas mexican chicken sheet pan healthy quick golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": true,
+        "isBbqGrill": false,
+        "isHighProtein": true,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
       "slug": "sheet-pan-chicken-fajitas-lite",
       "pass": true,
       "flags": {
@@ -6764,6 +9420,41 @@
         "isBbqGrill": false,
         "isHighProtein": true,
         "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
+      "slug": "sheet-pan-meal-prep",
+      "pass": true,
+      "flags": {
+        "slug": "sheet-pan-meal-prep",
+        "title": "Sheet Pan Chicken Trays",
+        "kind": "firehall_catalog",
+        "category": "meal_prep_leftovers",
+        "categoryLabel": "meal prep leftovers",
+        "cuisine": "american",
+        "protein": "chicken",
+        "mealFormat": "sheet_pan",
+        "cookTime": 100,
+        "cookTimeBucket": "over_60",
+        "heroImage": "/images/golden-100/sheet-pan-meal-prep.jpg",
+        "thumbImage": "/images/thumbs/sheet-pan-meal-prep.jpg",
+        "tags": [
+          "protein:chicken",
+          "format:sheet_pan",
+          "category:meal_prep_leftovers",
+          "healthy",
+          "quick",
+          "golden_100"
+        ],
+        "searchText": "sheet pan chicken trays sheet-pan-meal-prep meal_prep_leftovers american chicken sheet_pan protein:chicken format:sheet_pan category:meal_prep_leftovers healthy quick golden_100 sheet pan chicken trays sheet pan meal prep american chicken sheet pan healthy quick golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": true,
+        "isBbqGrill": false,
+        "isHighProtein": false,
+        "isLowCleanup": true
       },
       "issues": []
     },
@@ -6833,6 +9524,111 @@
           "firefighter_meal"
         ],
         "searchText": "sheet pan meatball marinara feed sheet-pan-meatball-marinara hall_expansion italian beef sheet_pan protein:beef format:sheet_pan category:crew_feeders beef hearty crew_feed hall_expansion hall_expansion_74 hall_meal firefighter_meal sheet pan meatball marinara feed crew feeders",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
+      "slug": "sheet-pan-sausage-peppers",
+      "pass": true,
+      "flags": {
+        "slug": "sheet-pan-sausage-peppers",
+        "title": "Sheet Pan Sausage and Peppers",
+        "kind": "firehall_catalog",
+        "category": "quick_shift_meals",
+        "categoryLabel": "quick shift meals",
+        "cuisine": "italian",
+        "protein": "pork",
+        "mealFormat": "sheet_pan",
+        "cookTime": 35,
+        "cookTimeBucket": "30_to_60",
+        "heroImage": "/images/golden-100/sheet-pan-sausage-peppers.jpg",
+        "thumbImage": "/images/thumbs/sheet-pan-sausage-peppers.jpg",
+        "tags": [
+          "protein:pork",
+          "format:sheet_pan",
+          "category:quick_shift_meals",
+          "quick",
+          "one_pot",
+          "golden_100"
+        ],
+        "searchText": "sheet pan sausage and peppers sheet-pan-sausage-peppers quick_shift_meals italian pork sheet_pan protein:pork format:sheet_pan category:quick_shift_meals quick one_pot golden_100 sheet pan sausage and peppers sheet pan sausage peppers italian pork sheet pan quick one pot sheet pan sausage peppers dinner one_pot golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
+      "slug": "shepherds-pie",
+      "pass": true,
+      "flags": {
+        "slug": "shepherds-pie",
+        "title": "Shepherd's Pie with Greek Salad",
+        "kind": "firehall_catalog",
+        "category": "comfort_food",
+        "categoryLabel": "comfort food",
+        "cuisine": "british",
+        "protein": "beef",
+        "mealFormat": "plated_main",
+        "cookTime": 113,
+        "cookTimeBucket": "over_60",
+        "heroImage": "/images/golden-100/shepherds-pie.jpg",
+        "thumbImage": "/images/thumbs/shepherds-pie.jpg",
+        "tags": [
+          "protein:beef",
+          "format:plated_main",
+          "category:comfort_food",
+          "comfort",
+          "hearty",
+          "golden_100"
+        ],
+        "searchText": "shepherd's pie with greek salad shepherds-pie comfort_food british beef plated_main protein:beef format:plated_main category:comfort_food comfort hearty golden_100 shepherd's pie with greek salad shepherds pie british beef plated main comfort hearty shepherds pie ground beef greek salad golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
+      "slug": "chicken-quesadillas",
+      "pass": true,
+      "flags": {
+        "slug": "chicken-quesadillas",
+        "title": "Shredded Chicken Quesadillas",
+        "kind": "firehall_catalog",
+        "category": "quick_shift_meals",
+        "categoryLabel": "quick shift meals",
+        "cuisine": "mexican",
+        "protein": "chicken",
+        "mealFormat": "handheld",
+        "cookTime": 35,
+        "cookTimeBucket": "30_to_60",
+        "heroImage": "/images/golden-100/chicken-quesadillas.jpg",
+        "thumbImage": "/images/thumbs/chicken-quesadillas.jpg",
+        "tags": [
+          "protein:chicken",
+          "format:handheld",
+          "category:quick_shift_meals",
+          "quick",
+          "handheld",
+          "golden_100"
+        ],
+        "searchText": "shredded chicken quesadillas chicken-quesadillas quick_shift_meals mexican chicken handheld protein:chicken format:handheld category:quick_shift_meals quick handheld golden_100 shredded chicken quesadillas chicken quesadillas mexican chicken handheld quick chicken quesadillas dinner golden_100",
         "catalogBadge": "Firehall Meals Catalog",
         "traitBadges": [],
         "isSmoothie": false,
@@ -7425,6 +10221,41 @@
       "issues": []
     },
     {
+      "slug": "smoked-wings-white-sauce",
+      "pass": true,
+      "flags": {
+        "slug": "smoked-wings-white-sauce",
+        "title": "Smoked Wings with White BBQ Sauce",
+        "kind": "firehall_catalog",
+        "category": "bbq_grill_nights",
+        "categoryLabel": "bbq grill nights",
+        "cuisine": "american",
+        "protein": "chicken",
+        "mealFormat": "grill",
+        "cookTime": 116,
+        "cookTimeBucket": "over_60",
+        "heroImage": "/images/golden-100/smoked-wings-white-sauce.jpg",
+        "thumbImage": "/images/thumbs/smoked-wings-white-sauce.jpg",
+        "tags": [
+          "protein:chicken",
+          "format:grill",
+          "category:bbq_grill_nights",
+          "bbq",
+          "game_day",
+          "golden_100"
+        ],
+        "searchText": "smoked wings with white bbq sauce smoked-wings-white-sauce bbq_grill_nights american chicken grill protein:chicken format:grill category:bbq_grill_nights bbq game_day golden_100 smoked wings with white bbq sauce smoked wings white sauce american chicken grill bbq game day smoked chicken wings white bbq sauce game_day golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": true,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
       "slug": "smoky-lentil-kale-soup",
       "pass": true,
       "flags": {
@@ -7654,6 +10485,43 @@
       "issues": []
     },
     {
+      "slug": "steak-sandwiches",
+      "pass": true,
+      "flags": {
+        "slug": "steak-sandwiches",
+        "title": "Steak Sandwiches",
+        "kind": "hall_classic",
+        "category": "firehall_classics",
+        "categoryLabel": "firehall classics",
+        "cuisine": "american",
+        "protein": "beef",
+        "mealFormat": "sandwich",
+        "cookTime": 60,
+        "cookTimeBucket": "30_to_60",
+        "heroImage": "/images/golden-100/steak-sandwiches.jpg",
+        "thumbImage": "/images/thumbs/steak-sandwiches.jpg",
+        "tags": [
+          "protein:beef",
+          "format:sandwich",
+          "category:firehall_classics",
+          "beef",
+          "handheld",
+          "golden_100"
+        ],
+        "searchText": "steak sandwiches steak-sandwiches firehall_classics american beef sandwich protein:beef format:sandwich category:firehall_classics beef handheld golden_100 steak sandwiches american beef sandwich handheld golden_100",
+        "catalogBadge": "Hall Classic",
+        "traitBadges": [
+          "Crew Favorite"
+        ],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
       "slug": "strawberry-oat-breakfast",
       "pass": true,
       "flags": {
@@ -7870,6 +10738,76 @@
       "issues": []
     },
     {
+      "slug": "teriyaki-donburi",
+      "pass": true,
+      "flags": {
+        "slug": "teriyaki-donburi",
+        "title": "Teriyaki Chicken Donburi",
+        "kind": "firehall_catalog",
+        "category": "global_flavors",
+        "categoryLabel": "global flavors",
+        "cuisine": "japanese",
+        "protein": "chicken",
+        "mealFormat": "bowl",
+        "cookTime": 55,
+        "cookTimeBucket": "30_to_60",
+        "heroImage": "/images/golden-100/teriyaki-donburi.jpg",
+        "thumbImage": "/images/thumbs/teriyaki-donburi.jpg",
+        "tags": [
+          "protein:chicken",
+          "format:bowl",
+          "category:global_flavors",
+          "bowl",
+          "quick",
+          "golden_100"
+        ],
+        "searchText": "teriyaki chicken donburi teriyaki-donburi global_flavors japanese chicken bowl protein:chicken format:bowl category:global_flavors bowl quick golden_100 teriyaki chicken donburi teriyaki donburi japanese chicken bowl quick teriyaki chicken rice bowl golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
+      "slug": "teriyaki-salmon-grill",
+      "pass": true,
+      "flags": {
+        "slug": "teriyaki-salmon-grill",
+        "title": "Teriyaki Grilled Salmon",
+        "kind": "firehall_catalog",
+        "category": "bbq_grill_nights",
+        "categoryLabel": "bbq grill nights",
+        "cuisine": "japanese",
+        "protein": "seafood",
+        "mealFormat": "grill",
+        "cookTime": 90,
+        "cookTimeBucket": "over_60",
+        "heroImage": "/images/golden-100/teriyaki-salmon-grill.jpg",
+        "thumbImage": "/images/thumbs/teriyaki-salmon-grill.jpg",
+        "tags": [
+          "protein:seafood",
+          "format:grill",
+          "category:bbq_grill_nights",
+          "bbq",
+          "healthy",
+          "golden_100"
+        ],
+        "searchText": "teriyaki grilled salmon teriyaki-salmon-grill bbq_grill_nights japanese seafood grill protein:seafood format:grill category:bbq_grill_nights bbq healthy golden_100 teriyaki grilled salmon teriyaki salmon grill japanese seafood grill bbq healthy teriyaki grilled salmon dinner golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": true,
+        "isBbqGrill": true,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
       "slug": "texas-central-brisket-crew",
       "pass": true,
       "flags": {
@@ -7938,6 +10876,41 @@
         "isSmoothie": false,
         "isHealthy": false,
         "isBbqGrill": true,
+        "isHighProtein": false,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
+      "slug": "thai-basil-chicken",
+      "pass": true,
+      "flags": {
+        "slug": "thai-basil-chicken",
+        "title": "Thai Basil Chicken Stir Fry",
+        "kind": "firehall_catalog",
+        "category": "global_flavors",
+        "categoryLabel": "global flavors",
+        "cuisine": "thai",
+        "protein": "chicken",
+        "mealFormat": "skillet",
+        "cookTime": 55,
+        "cookTimeBucket": "30_to_60",
+        "heroImage": "/images/golden-100/thai-basil-chicken.jpg",
+        "thumbImage": "/images/thumbs/thai-basil-chicken.jpg",
+        "tags": [
+          "protein:chicken",
+          "format:skillet",
+          "category:global_flavors",
+          "quick",
+          "bowl",
+          "golden_100"
+        ],
+        "searchText": "thai basil chicken stir fry thai-basil-chicken global_flavors thai chicken skillet protein:chicken format:skillet category:global_flavors quick bowl golden_100 thai basil chicken stir fry thai basil chicken thai chicken skillet quick bowl golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
         "isHighProtein": false,
         "isLowCleanup": false
       },
@@ -8122,6 +11095,40 @@
         "traitBadges": [
           "High Protein"
         ],
+        "isSmoothie": false,
+        "isHealthy": true,
+        "isBbqGrill": false,
+        "isHighProtein": true,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
+      "slug": "turkey-meatball-zoodles",
+      "pass": true,
+      "flags": {
+        "slug": "turkey-meatball-zoodles",
+        "title": "Turkey Meatballs with Zucchini Noodles",
+        "kind": "firehall_catalog",
+        "category": "healthy_performance",
+        "categoryLabel": "healthy performance",
+        "cuisine": "italian",
+        "protein": "turkey",
+        "mealFormat": "pasta",
+        "cookTime": 55,
+        "cookTimeBucket": "30_to_60",
+        "heroImage": "/images/golden-100/turkey-meatball-zoodles.jpg",
+        "thumbImage": "/images/thumbs/turkey-meatball-zoodles.jpg",
+        "tags": [
+          "protein:turkey",
+          "format:pasta",
+          "category:healthy_performance",
+          "healthy",
+          "golden_100"
+        ],
+        "searchText": "turkey meatballs with zucchini noodles turkey-meatball-zoodles healthy_performance italian turkey pasta protein:turkey format:pasta category:healthy_performance healthy golden_100 turkey meatballs with zucchini noodles turkey meatball zoodles italian turkey pasta healthy turkey meatballs zucchini noodles golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
         "isSmoothie": false,
         "isHealthy": true,
         "isBbqGrill": false,
@@ -8467,6 +11474,40 @@
         "isHealthy": true,
         "isBbqGrill": false,
         "isHighProtein": true,
+        "isLowCleanup": false
+      },
+      "issues": []
+    },
+    {
+      "slug": "white-garlic-chicken-pizza",
+      "pass": true,
+      "flags": {
+        "slug": "white-garlic-chicken-pizza",
+        "title": "White Garlic Chicken Pizza",
+        "kind": "firehall_catalog",
+        "category": "pizza_night",
+        "categoryLabel": "pizza night",
+        "cuisine": "italian",
+        "protein": "chicken",
+        "mealFormat": "pizza",
+        "cookTime": 95,
+        "cookTimeBucket": "over_60",
+        "heroImage": "/images/golden-100/white-garlic-chicken-pizza.jpg",
+        "thumbImage": "/images/thumbs/white-garlic-chicken-pizza.jpg",
+        "tags": [
+          "protein:chicken",
+          "format:pizza",
+          "category:pizza_night",
+          "handheld",
+          "golden_100"
+        ],
+        "searchText": "white garlic chicken pizza white-garlic-chicken-pizza pizza_night italian chicken pizza protein:chicken format:pizza category:pizza_night handheld golden_100 white garlic chicken pizza italian chicken pizza handheld white sauce chicken pizza golden_100",
+        "catalogBadge": "Firehall Meals Catalog",
+        "traitBadges": [],
+        "isSmoothie": false,
+        "isHealthy": false,
+        "isBbqGrill": false,
+        "isHighProtein": false,
         "isLowCleanup": false
       },
       "issues": []

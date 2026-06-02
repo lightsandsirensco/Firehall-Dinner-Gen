@@ -120,6 +120,12 @@ const SLUG_TONIGHT_SPREAD: Record<string, string[]> = {
     "Scoop baked mac from hotel pans with a spatula so the breadcrumb lid stays intact.",
     "Keep backup pan warming at 200°F — mac tightens as it holds; splash milk when reheating.",
   ],
+  "bbq-chicken-mac-and-cheese": [
+    "Scoop from the corner of the hotel pan so every serving shows shredded BBQ chicken under the cheese pull — not plain mac.",
+    "Drizzle extra warmed BBQ sauce over the tray at the line for crews who want more smoke; keep sauce in a squeeze bottle, not mixed into the whole pan.",
+    "Keep a backup tray at 200°F with foil vented — mac sets fast; loosen with a splash of milk before the second pan hits the line.",
+    "Serve with green onions and crispy fried onions in side bowls so crunch stays crisp through the meal.",
+  ],
   "chili-mac": [
     "Serve straight from the Dutch oven or ladle into bowls — mac elbows should be visible in the chili.",
     "Sour cream and green onions stay cold on the side.",
@@ -137,6 +143,13 @@ const SLUG_TONIGHT_SPREAD: Record<string, string[]> = {
 };
 
 const SLUG_PRO_TIPS: Record<string, string[]> = {
+  "bbq-chicken-mac-and-cheese": [
+    "Target about 6 oz cooked shredded chicken and 1.5 cups mac per firefighter — scale the tray for eight, not twelve.",
+    "Use thighs, not breast-only — thighs stay juicy after shredding and survive hold time on the line better than dry breast chunks.",
+    "Toss shredded chicken with BBQ sauce before folding into mac — you want visible sauced chicken strands, not white chicken lost in orange cheese.",
+    "Stop baking when the edges bubble and the center probes 165°F — overbaked mac separates into greasy pools.",
+    "If tones drop mid-bake, note the time on the pan with a grease pencil and finish when you return; covered trays hold 15 minutes without drying out.",
+  ],
   "pad-thai": [
     "Call Interruption Plan: If tones drop while noodles soak, leave them in the water — they will not turn to mush in twenty minutes. If tones drop after chicken or eggs are cooked, transfer proteins to a hotel pan at 165°F under foil and kill the wok burner. When you return, drain noodles, reheat the wok on high, and finish the toss in one pass — sauced noodles wait poorly, but held chicken is fine for fifteen minutes.",
     "Soak noodles in water that is hot from the tap but not boiling — boiling water makes pad thai noodles fall apart before they hit the wok.",
@@ -147,6 +160,12 @@ const SLUG_PRO_TIPS: Record<string, string[]> = {
 };
 
 const SLUG_LEFTOVERS: Record<string, string[]> = {
+  "bbq-chicken-mac-and-cheese": [
+    "Cool in shallow hotel pan lids within two hours — deep mac stays in the danger zone too long to cool safely.",
+    "Reheat covered at 325°F until the center hits 165°F, then uncover 5 minutes to re-crisp the top; stir once halfway so chicken heats evenly.",
+    "Add a splash of milk and a spoon of BBQ sauce when reheating — refrigerated mac tightens and the sauce looks dull without refresh.",
+    "Store crispy fried onions separately — add after reheat so the tray does not go soggy on shift two.",
+  ],
   "pad-thai": [
     "Store noodles and sauce together in shallow containers within two hours — deep woks stay in the danger zone too long to cool safely.",
     "Reheat in a hot wok or large skillet over medium-high with a splash of water to loosen the noodles; toss until steaming at 165°F throughout.",

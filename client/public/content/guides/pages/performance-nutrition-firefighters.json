@@ -5,27 +5,50 @@
   "description": "Performance nutrition for firefighters: balanced plates on shift, timing around calls, and hall meals that support strength and endurance without fad diets.",
   "topic": "nutrition_performance",
   "pillar": "nutrition_performance",
-  "intro": "Performance nutrition on the job is not bodybuilding meal prep in Tupperware. It is eating enough protein, enough carbs for the work, and enough fluid to think clearly at hour fourteen. The hall wins when meals taste like food and still support the job.",
+  "intro": "Performance nutrition on the job is not bodybuilding meal prep in Tupperware. It is eating enough protein, enough carbs for the work, and enough fluid to think clearly at hour fourteen. The hall wins when meals taste like food and still support the job. Below: what halls actually cook for performance nutrition firefighters — formats, timing, and recipe picks that survive a busy board.",
   "sections": [
     {
       "id": "plate",
       "heading": "A performance plate at the hall",
       "paragraphs": [
-        "Half the plate protein and veg, starch for the shift length, sauce for flavor. Bowls make this automatic."
+        "Half the plate protein and veg, starch for the shift length, sauce for flavor. Bowls make this automatic.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
       ]
     },
     {
       "id": "timing",
       "heading": "Timing around the job",
       "paragraphs": [
-        "Eat before long jobs when you can. After, prioritize fluids and a real meal — not only supplements. Performance nutrition is tour-long, not one heroic plate."
+        "Eat before long jobs when you can. After, prioritize fluids and a real meal — not only supplements. Performance nutrition is tour-long, not one heroic plate.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
+      ]
+    },
+    {
+      "id": "shift-fuel",
+      "heading": "How this plays across a long shift",
+      "paragraphs": [
+        "Shift nutrition is timing, not willpower. For performance nutrition firefighters, anchor protein at dinner, keep snacks that survive the apparatus bay, and drink water like it is part of the job — not a lecture at 03:00.",
+        "This is practical hall guidance, not medical advice. Follow your department's health program and personal providers for individual plans."
+      ],
+      "tips": [
+        "Label leftovers with date — rotation matters more than recipe genius.",
+        "Pair lighter mains with one optional indulgent side when morale needs it."
       ]
     }
   ],
   "practicalAdvice": [
     "Carbs fuel calls — do not fear rice, potatoes, or pasta on active days.",
     "Protein repairs — distribute it across the tour, not only post-gym.",
-    "Sleep and food interact — heavy grease at midnight affects both."
+    "Sleep and food interact — heavy grease at midnight affects both.",
+    "Post who's cooking and what's holding warm on the whiteboard — post-call eaters should not hunt for answers."
   ],
   "mealRecommendations": [
     {
@@ -70,5 +93,6 @@
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
   "updatedAt": "2026-05-27T18:00:00.000Z",
-  "readMinutes": 7
+  "readMinutes": 7,
+  "heroImageAlt": "Performance Nutrition for Firefighters — performance nutrition firefighters tips for fire station kitchens and crew-sized meals"
 }

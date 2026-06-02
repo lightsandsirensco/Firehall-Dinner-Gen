@@ -6,6 +6,7 @@
  */
 
 import { lookupConfiguredImageDonorSlug } from "../image-donor-resolver.js";
+import { auditPlatingAccuracyMetadata } from "../plating-accuracy-standard.js";
 import type { ImageAccuracyIssue } from "./image-accuracy-rules.js";
 
 export const IMAGE_TITLE_MISMATCH_CODE = "image_title_mismatch" as const;
@@ -59,6 +60,18 @@ const SIDE_CUE_RULES: SideCueRule[] = [
     requiredRe: /\b(rice|peas|jerk|caribbean)\b/i,
     forbiddenRe: GENERIC_SUBSTITUTE_PATH_RE,
     message: "rice & peas title — hero must show rice and peas, not a generic rice bowl",
+  },
+  {
+    sideRe: /\bbutter\s*chicken\b/i,
+    requiredRe: /\b(rice|butter|chicken|curry|tikka|naan)\b/i,
+    forbiddenRe: /\b(sauce.?only|no rice)\b/i,
+    message: "butter chicken title — hero must show visible rice, not a sauce-only bowl",
+  },
+  {
+    sideRe: /\bsteak\s*sandwich/i,
+    requiredRe: /\b(steak|sandwich|bun|kaiser|hoagie|roll|ciabatta|sub)\b/i,
+    forbiddenRe: /\btoast\b/i,
+    message: "steak sandwich title — hero must show sandwich on bun/roll, not toast slices",
   },
   {
     sideRe: /mac\s*(?:&|and)\s*cheese|\bmacaroni\b/i,
@@ -207,6 +220,7 @@ export function buildRequiredVisibleSidesPromptLine(title: string, mealFormat?: 
 
   return (
     `Required visible elements (P0 — image fails if missing): ${parts.join("; ")}. ` +
+    "Plating accuracy: main protein and every major side clearly visible — never hide sides behind the main dish. " +
     "No generic bowl substitutes. No unrelated donor meals."
   );
 }
@@ -231,6 +245,16 @@ export function auditTitlePrimarySideAlignment(input: {
   const issues: ImageAccuracyIssue[] = [];
   const req = extractTitleVisualRequirements(input.title, input.mealFormat);
   const blob = `${input.heroPath} ${input.heroAlt || ""} ${input.promptText || ""}`.toLowerCase();
+
+  const plating = auditPlatingAccuracyMetadata({
+    title: input.title,
+    mealFormat: input.mealFormat,
+    heroPath: input.heroPath,
+    heroAlt: input.heroAlt,
+  });
+  for (const code of plating.issues) {
+    issues.push(p0Issue(`plating accuracy: ${code}`, 93));
+  }
 
   if (req.primarySides.length === 0 && !req.cookingStyle) {
     return issues;

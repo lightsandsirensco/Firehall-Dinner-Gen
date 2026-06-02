@@ -116,8 +116,9 @@
     "protein": 16,
     "carbs": 14,
     "fat": 37,
-    "label": "per serving (hall portion)",
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
@@ -169,5 +170,7 @@
     "Instant-read thermometer",
     "Aluminum foil"
   ],
-  "mealPrepNotes": "Prep mise en place before the shift — Crispy Honey Chili Eggs runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
+  "mealPrepNotes": "Prep mise en place before the shift — Crispy Honey Chili Eggs runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone.",
+  "mobileImage": "/images/mobile/breakfast/sheet-pan-breakfast-hash.jpg",
+  "railImage": "/images/rails/breakfast/sheet-pan-breakfast-hash.jpg"
 }

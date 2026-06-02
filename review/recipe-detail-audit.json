@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-01T01:33:27.618Z",
+  "generatedAt": "2026-06-01T02:29:12.107Z",
   "totals": {
-    "recipes": 228,
-    "pass": 228,
-    "fail": 0
+    "recipes": 315,
+    "pass": 313,
+    "fail": 2
   },
   "rows": [
     {
@@ -61,6 +61,15 @@
       "issues": []
     },
     {
+      "slug": "mac-and-cheese-bake",
+      "title": "Baked Mac and Cheese",
+      "pass": true,
+      "score": 100,
+      "stepCount": 10,
+      "wordCount": 430,
+      "issues": []
+    },
+    {
       "slug": "mostaccioli-sausage-bake",
       "title": "Baked Mostaccioli with Sausage",
       "pass": true,
@@ -79,12 +88,57 @@
       "issues": []
     },
     {
+      "slug": "baked-ziti",
+      "title": "Baked Ziti",
+      "pass": true,
+      "score": 100,
+      "stepCount": 10,
+      "wordCount": 452,
+      "issues": []
+    },
+    {
       "slug": "bbq-breakfast-hash",
       "title": "BBQ Breakfast Hash",
       "pass": true,
       "score": 100,
       "stepCount": 8,
       "wordCount": 372,
+      "issues": []
+    },
+    {
+      "slug": "bbq-brisket-burnt-ends",
+      "title": "BBQ Burnt Ends",
+      "pass": true,
+      "score": 100,
+      "stepCount": 11,
+      "wordCount": 440,
+      "issues": []
+    },
+    {
+      "slug": "bbq-chicken-bowls",
+      "title": "BBQ Chicken Bowls",
+      "pass": true,
+      "score": 100,
+      "stepCount": 11,
+      "wordCount": 430,
+      "issues": []
+    },
+    {
+      "slug": "bbq-chicken-pizza",
+      "title": "BBQ Chicken Pizza",
+      "pass": true,
+      "score": 100,
+      "stepCount": 12,
+      "wordCount": 429,
+      "issues": []
+    },
+    {
+      "slug": "bbq-chicken-sliders",
+      "title": "BBQ Chicken Sliders",
+      "pass": true,
+      "score": 100,
+      "stepCount": 12,
+      "wordCount": 448,
       "issues": []
     },
     {
@@ -97,12 +151,39 @@
       "issues": []
     },
     {
+      "slug": "beef-barley-soup",
+      "title": "Beef Barley Soup",
+      "pass": true,
+      "score": 100,
+      "stepCount": 9,
+      "wordCount": 479,
+      "issues": []
+    },
+    {
       "slug": "enchilada-beef-skillet",
       "title": "Garlic Beef Skillet",
       "pass": true,
       "score": 100,
       "stepCount": 9,
       "wordCount": 457,
+      "issues": []
+    },
+    {
+      "slug": "beef-stroganoff",
+      "title": "Beef Stroganoff",
+      "pass": true,
+      "score": 100,
+      "stepCount": 12,
+      "wordCount": 473,
+      "issues": []
+    },
+    {
+      "slug": "beer-can-chicken",
+      "title": "Beer Can Chicken",
+      "pass": true,
+      "score": 100,
+      "stepCount": 12,
+      "wordCount": 421,
       "issues": []
     },
     {
@@ -133,6 +214,15 @@
       "issues": []
     },
     {
+      "slug": "turkey-burgers",
+      "title": "Black Bean Turkey Burgers",
+      "pass": true,
+      "score": 100,
+      "stepCount": 11,
+      "wordCount": 450,
+      "issues": []
+    },
+    {
       "slug": "cajun-grilled-cod-crew",
       "title": "Black Iron Remoulade Cod Plates",
       "pass": true,
@@ -151,6 +241,15 @@
       "issues": [
         "title_taco_no_tortilla"
       ]
+    },
+    {
+      "slug": "beef-dip",
+      "title": "Blackstone Steak Sandwiches",
+      "pass": true,
+      "score": 100,
+      "stepCount": 12,
+      "wordCount": 409,
+      "issues": []
     },
     {
       "slug": "loaded-ranch-potato-salad-crew",
@@ -249,6 +348,15 @@
       "issues": []
     },
     {
+      "slug": "breakfast-sausage-pizza",
+      "title": "Breakfast Sausage Gravy Pizza",
+      "pass": true,
+      "score": 100,
+      "stepCount": 12,
+      "wordCount": 439,
+      "issues": []
+    },
+    {
       "slug": "breakfast-sliders",
       "title": "Breakfast Sliders",
       "pass": true,
@@ -273,6 +381,15 @@
       "score": 100,
       "stepCount": 10,
       "wordCount": 502,
+      "issues": []
+    },
+    {
+      "slug": "buffalo-chicken-dip",
+      "title": "Buffalo Chicken Dip",
+      "pass": true,
+      "score": 100,
+      "stepCount": 8,
+      "wordCount": 416,
       "issues": []
     },
     {
@@ -305,6 +422,15 @@
       ]
     },
     {
+      "slug": "butter-chicken",
+      "title": "Butter Chicken",
+      "pass": true,
+      "score": 100,
+      "stepCount": 9,
+      "wordCount": 421,
+      "issues": []
+    },
+    {
       "slug": "buttermilk-pancakes",
       "title": "Buttermilk Pancakes for the Crew",
       "pass": true,
@@ -329,6 +455,15 @@
       "score": 100,
       "stepCount": 8,
       "wordCount": 319,
+      "issues": []
+    },
+    {
+      "slug": "jambalaya",
+      "title": "Cajun Jambalaya for the Hall",
+      "pass": true,
+      "score": 100,
+      "stepCount": 10,
+      "wordCount": 410,
       "issues": []
     },
     {
@@ -379,6 +514,24 @@
       "issues": []
     },
     {
+      "slug": "cedar-plank-salmon",
+      "title": "Cedar Plank Grilled Salmon",
+      "pass": true,
+      "score": 100,
+      "stepCount": 11,
+      "wordCount": 446,
+      "issues": []
+    },
+    {
+      "slug": "grilled-pork-chops",
+      "title": "Charcoal Grilled Pork Chops",
+      "pass": true,
+      "score": 100,
+      "stepCount": 11,
+      "wordCount": 430,
+      "issues": []
+    },
+    {
       "slug": "cheesy-beef-nacho-bake",
       "title": "Cheesy Beef Nacho Bake",
       "pass": true,
@@ -396,6 +549,24 @@
       "score": 100,
       "stepCount": 11,
       "wordCount": 442,
+      "issues": []
+    },
+    {
+      "slug": "chicken-alfredo-bake",
+      "title": "Chicken Alfredo Bake",
+      "pass": true,
+      "score": 100,
+      "stepCount": 10,
+      "wordCount": 529,
+      "issues": []
+    },
+    {
+      "slug": "chicken-dumpling-soup",
+      "title": "Chicken and Dumplings",
+      "pass": true,
+      "score": 100,
+      "stepCount": 9,
+      "wordCount": 443,
       "issues": []
     },
     {
@@ -417,12 +588,59 @@
       "issues": []
     },
     {
+      "slug": "enchilada-casserole",
+      "title": "Chicken Enchilada Casserole",
+      "pass": true,
+      "score": 90,
+      "stepCount": 10,
+      "wordCount": 423,
+      "issues": [
+        "title_taco_no_tortilla"
+      ]
+    },
+    {
       "slug": "chicken-paprikash-hall",
       "title": "Chicken Paprikash for the Hall",
       "pass": true,
       "score": 100,
       "stepCount": 9,
       "wordCount": 419,
+      "issues": []
+    },
+    {
+      "slug": "chicken-parm",
+      "title": "Chicken Parm",
+      "pass": true,
+      "score": 100,
+      "stepCount": 12,
+      "wordCount": 446,
+      "issues": []
+    },
+    {
+      "slug": "parm-hero-subs",
+      "title": "Chicken Parm Hero Subs",
+      "pass": true,
+      "score": 100,
+      "stepCount": 12,
+      "wordCount": 453,
+      "issues": []
+    },
+    {
+      "slug": "chicken-pot-pie",
+      "title": "Chicken Pot Pie",
+      "pass": true,
+      "score": 100,
+      "stepCount": 9,
+      "wordCount": 412,
+      "issues": []
+    },
+    {
+      "slug": "chicken-tikka-masala",
+      "title": "Chicken Tikka Masala",
+      "pass": true,
+      "score": 100,
+      "stepCount": 10,
+      "wordCount": 436,
       "issues": []
     },
     {
@@ -442,6 +660,26 @@
       "stepCount": 12,
       "wordCount": 419,
       "issues": []
+    },
+    {
+      "slug": "chili-mac",
+      "title": "Chili Mac Skillet",
+      "pass": true,
+      "score": 100,
+      "stepCount": 12,
+      "wordCount": 428,
+      "issues": []
+    },
+    {
+      "slug": "steak-tacos",
+      "title": "Chimichurri Steak Tacos",
+      "pass": true,
+      "score": 90,
+      "stepCount": 8,
+      "wordCount": 534,
+      "issues": [
+        "title_taco_no_tortilla"
+      ]
     },
     {
       "slug": "chipotle-lime-chicken-tacos",
@@ -479,6 +717,24 @@
       "score": 100,
       "stepCount": 6,
       "wordCount": 317,
+      "issues": []
+    },
+    {
+      "slug": "meatloaf-mashed",
+      "title": "Classic Meatloaf with Mashed Potatoes",
+      "pass": true,
+      "score": 100,
+      "stepCount": 11,
+      "wordCount": 404,
+      "issues": []
+    },
+    {
+      "slug": "pepperoni-pizza-night",
+      "title": "Classic Pepperoni Pizza",
+      "pass": true,
+      "score": 100,
+      "stepCount": 12,
+      "wordCount": 415,
       "issues": []
     },
     {
@@ -574,12 +830,30 @@
       "issues": []
     },
     {
+      "slug": "creamy-tuscan-chicken",
+      "title": "Creamy Tuscan Chicken",
+      "pass": true,
+      "score": 100,
+      "stepCount": 10,
+      "wordCount": 423,
+      "issues": []
+    },
+    {
       "slug": "crew-french-toast-bake",
       "title": "Crew French Toast Bake",
       "pass": true,
       "score": 100,
       "stepCount": 10,
       "wordCount": 413,
+      "issues": []
+    },
+    {
+      "slug": "crispy-chicken-cutlets",
+      "title": "Crispy Chicken Cutlets Marinara",
+      "pass": true,
+      "score": 100,
+      "stepCount": 12,
+      "wordCount": 415,
       "issues": []
     },
     {
@@ -609,6 +883,24 @@
       "score": 100,
       "stepCount": 12,
       "wordCount": 415,
+      "issues": []
+    },
+    {
+      "slug": "detroit-style-pizza",
+      "title": "Detroit-Style Pepperoni Pizza",
+      "pass": true,
+      "score": 100,
+      "stepCount": 12,
+      "wordCount": 421,
+      "issues": []
+    },
+    {
+      "slug": "smash-burgers",
+      "title": "Double Smash Burgers",
+      "pass": true,
+      "score": 100,
+      "stepCount": 9,
+      "wordCount": 514,
       "issues": []
     },
     {
@@ -659,6 +951,17 @@
       "issues": []
     },
     {
+      "slug": "fast-philly-skillet",
+      "title": "Garlic Butter Steak Skillet",
+      "pass": false,
+      "score": 80,
+      "stepCount": 11,
+      "wordCount": 437,
+      "issues": [
+        "title promises garlic butter but ingredients lack butter or garlic"
+      ]
+    },
+    {
       "slug": "fire-captain-omelette-bar",
       "title": "Fire Captain Omelette Bar",
       "pass": true,
@@ -704,12 +1007,59 @@
       "issues": []
     },
     {
+      "slug": "meatball-hoagies",
+      "title": "Firehall Meatball Hoagies",
+      "pass": true,
+      "score": 100,
+      "stepCount": 12,
+      "wordCount": 463,
+      "issues": []
+    },
+    {
+      "slug": "pad-thai",
+      "title": "Firehall Pad Thai",
+      "pass": true,
+      "score": 100,
+      "stepCount": 10,
+      "wordCount": 1052,
+      "issues": []
+    },
+    {
+      "slug": "margherita-pizza",
+      "title": "Fresh Margherita Pizza",
+      "pass": true,
+      "score": 100,
+      "stepCount": 12,
+      "wordCount": 401,
+      "issues": []
+    },
+    {
       "slug": "game-day-pizza-sliders",
       "title": "Game Day Pizza Sliders",
       "pass": true,
       "score": 100,
       "stepCount": 10,
       "wordCount": 310,
+      "issues": []
+    },
+    {
+      "slug": "five-ingredient-pasta",
+      "title": "Garlic Butter Pasta",
+      "pass": true,
+      "score": 90,
+      "stepCount": 11,
+      "wordCount": 433,
+      "issues": [
+        "title_pasta_no_pasta"
+      ]
+    },
+    {
+      "slug": "garlic-butter-shrimp",
+      "title": "Garlic Butter Shrimp",
+      "pass": true,
+      "score": 100,
+      "stepCount": 11,
+      "wordCount": 440,
       "issues": []
     },
     {
@@ -722,6 +1072,15 @@
       "issues": []
     },
     {
+      "slug": "batch-lasagna",
+      "title": "Giant Batch Lasagna",
+      "pass": true,
+      "score": 100,
+      "stepCount": 10,
+      "wordCount": 447,
+      "issues": []
+    },
+    {
       "slug": "griddle-smash-sausage-peppers",
       "title": "Giardiniera Smash Sausage Hoagies",
       "pass": true,
@@ -731,12 +1090,30 @@
       "issues": []
     },
     {
+      "slug": "ginger-salmon-bowls",
+      "title": "Ginger Salmon Rice Bowls",
+      "pass": true,
+      "score": 100,
+      "stepCount": 11,
+      "wordCount": 402,
+      "issues": []
+    },
+    {
       "slug": "ginger-soy-chicken-rice-bowls",
       "title": "Ginger Soy Chicken Rice Bowls",
       "pass": true,
       "score": 100,
       "stepCount": 12,
       "wordCount": 452,
+      "issues": []
+    },
+    {
+      "slug": "greek-chicken-bowls",
+      "title": "Smoky Chicken Thighs Bowls",
+      "pass": true,
+      "score": 100,
+      "stepCount": 11,
+      "wordCount": 415,
       "issues": []
     },
     {
@@ -767,6 +1144,33 @@
       "issues": []
     },
     {
+      "slug": "chicken-souvlaki",
+      "title": "Grilled Chicken Souvlaki",
+      "pass": true,
+      "score": 100,
+      "stepCount": 12,
+      "wordCount": 421,
+      "issues": []
+    },
+    {
+      "slug": "flank-chimichurri",
+      "title": "Grilled Flank Steak with Chimichurri",
+      "pass": true,
+      "score": 100,
+      "stepCount": 11,
+      "wordCount": 429,
+      "issues": []
+    },
+    {
+      "slug": "ny-strip-herb-butter",
+      "title": "Grilled NY Strip with Herb Butter",
+      "pass": true,
+      "score": 100,
+      "stepCount": 12,
+      "wordCount": 424,
+      "issues": []
+    },
+    {
       "slug": "grilled-reuben-sandwiches-crew",
       "title": "Grilled Reuben Sandwiches for the Crew",
       "pass": true,
@@ -782,6 +1186,15 @@
       "score": 100,
       "stepCount": 8,
       "wordCount": 333,
+      "issues": []
+    },
+    {
+      "slug": "grilled-corn-cotija",
+      "title": "Grilled Street Corn with Cotija",
+      "pass": true,
+      "score": 100,
+      "stepCount": 12,
+      "wordCount": 416,
       "issues": []
     },
     {
@@ -816,6 +1229,15 @@
       ]
     },
     {
+      "slug": "chicken-caesar",
+      "title": "Hall Caesar Chicken",
+      "pass": true,
+      "score": 100,
+      "stepCount": 11,
+      "wordCount": 448,
+      "issues": []
+    },
+    {
       "slug": "hall-chicken-noodle-soup",
       "title": "Hall Chicken Noodle Soup",
       "pass": true,
@@ -834,6 +1256,15 @@
       "issues": []
     },
     {
+      "slug": "slider-bar",
+      "title": "Hall Slider Bar",
+      "pass": true,
+      "score": 100,
+      "stepCount": 12,
+      "wordCount": 424,
+      "issues": []
+    },
+    {
       "slug": "hall-sloppy-joe-feed",
       "title": "Hall Sloppy Joe Feed",
       "pass": true,
@@ -843,12 +1274,41 @@
       "issues": []
     },
     {
+      "slug": "hall-taco-bar",
+      "title": "Hall Taco Bar Night",
+      "pass": true,
+      "score": 90,
+      "stepCount": 11,
+      "wordCount": 418,
+      "issues": [
+        "title_taco_no_tortilla"
+      ]
+    },
+    {
+      "slug": "big-chili",
+      "title": "Hall-Sized Beef and Bean Chili",
+      "pass": true,
+      "score": 100,
+      "stepCount": 10,
+      "wordCount": 452,
+      "issues": []
+    },
+    {
       "slug": "caprese-steak-skewers-crew",
       "title": "Heirloom Tomato Bocconcini Sirloin Stacks",
       "pass": true,
       "score": 100,
       "stepCount": 8,
       "wordCount": 477,
+      "issues": []
+    },
+    {
+      "slug": "herb-roasted-thighs",
+      "title": "Herb Roasted Chicken Thighs",
+      "pass": true,
+      "score": 100,
+      "stepCount": 11,
+      "wordCount": 448,
       "issues": []
     },
     {
@@ -879,6 +1339,15 @@
       "issues": []
     },
     {
+      "slug": "turkey-chili",
+      "title": "High-Protein Turkey Chili",
+      "pass": true,
+      "score": 100,
+      "stepCount": 10,
+      "wordCount": 435,
+      "issues": []
+    },
+    {
       "slug": "honey-chipotle-chicken-thighs",
       "title": "Honey Chipotle Grilled Chicken Thighs",
       "pass": true,
@@ -894,6 +1363,15 @@
       "score": 100,
       "stepCount": 8,
       "wordCount": 375,
+      "issues": []
+    },
+    {
+      "slug": "honey-garlic-pork-tenderloin",
+      "title": "Honey Garlic Grilled Pork Tenderloin",
+      "pass": true,
+      "score": 100,
+      "stepCount": 11,
+      "wordCount": 430,
       "issues": []
     },
     {
@@ -921,6 +1399,15 @@
       "score": 100,
       "stepCount": 8,
       "wordCount": 448,
+      "issues": []
+    },
+    {
+      "slug": "honey-soppressata-pizza",
+      "title": "Hot Honey Soppressata Pizza",
+      "pass": true,
+      "score": 100,
+      "stepCount": 13,
+      "wordCount": 429,
       "issues": []
     },
     {
@@ -996,6 +1483,15 @@
       "issues": []
     },
     {
+      "slug": "jerk-chicken",
+      "title": "Jerk Chicken & Peas and Rice",
+      "pass": true,
+      "score": 100,
+      "stepCount": 12,
+      "wordCount": 678,
+      "issues": []
+    },
+    {
       "slug": "johnnycakes-with-syrup",
       "title": "Johnnycakes with Maple Syrup",
       "pass": true,
@@ -1038,6 +1534,15 @@
       "score": 100,
       "stepCount": 9,
       "wordCount": 483,
+      "issues": []
+    },
+    {
+      "slug": "bulgogi-bowls",
+      "title": "Korean Ginger Sesame Steak Bowls",
+      "pass": true,
+      "score": 100,
+      "stepCount": 12,
+      "wordCount": 473,
       "issues": []
     },
     {
@@ -1088,6 +1593,15 @@
       ]
     },
     {
+      "slug": "lemon-herb-salmon",
+      "title": "Lemon Herb Grilled Salmon",
+      "pass": true,
+      "score": 100,
+      "stepCount": 11,
+      "wordCount": 446,
+      "issues": []
+    },
+    {
       "slug": "lemon-salmon-orzo-skillet",
       "title": "Lemon Salmon Orzo Skillet",
       "pass": true,
@@ -1126,6 +1640,26 @@
       "issues": []
     },
     {
+      "slug": "loaded-baked-potato-bar",
+      "title": "Loaded Baked Potato Bar",
+      "pass": true,
+      "score": 100,
+      "stepCount": 11,
+      "wordCount": 402,
+      "issues": []
+    },
+    {
+      "slug": "game-day-nachos",
+      "title": "Loaded Game Day Nachos",
+      "pass": true,
+      "score": 90,
+      "stepCount": 12,
+      "wordCount": 465,
+      "issues": [
+        "title_taco_no_tortilla"
+      ]
+    },
+    {
       "slug": "loaded-nacho-bar-night",
       "title": "Loaded Nacho Bar Night",
       "pass": true,
@@ -1135,6 +1669,24 @@
       "issues": [
         "title_taco_no_tortilla"
       ]
+    },
+    {
+      "slug": "loaded-nacho-skillet",
+      "title": "Smoky Beef Bowls",
+      "pass": true,
+      "score": 100,
+      "stepCount": 11,
+      "wordCount": 433,
+      "issues": []
+    },
+    {
+      "slug": "loaded-potato-feed",
+      "title": "Loaded Potato Feed",
+      "pass": true,
+      "score": 100,
+      "stepCount": 12,
+      "wordCount": 424,
+      "issues": []
     },
     {
       "slug": "loaded-potato-skins",
@@ -1200,6 +1752,17 @@
       "issues": []
     },
     {
+      "slug": "meat-lovers-sheet-pizza",
+      "title": "Crispy Honey Chili Beef",
+      "pass": true,
+      "score": 90,
+      "stepCount": 11,
+      "wordCount": 407,
+      "issues": [
+        "chili title without beans or tomato base"
+      ]
+    },
+    {
       "slug": "mediterranean-baked-fish-tray",
       "title": "Crispy Garlic Fish",
       "pass": true,
@@ -1218,6 +1781,15 @@
       "issues": []
     },
     {
+      "slug": "mediterranean-chickpea",
+      "title": "Smoky Chickpea Bowls",
+      "pass": true,
+      "score": 100,
+      "stepCount": 12,
+      "wordCount": 448,
+      "issues": []
+    },
+    {
       "slug": "mediterranean-feast-night",
       "title": "Crispy Honey Chili Chicken Thighs",
       "pass": true,
@@ -1229,12 +1801,30 @@
       ]
     },
     {
+      "slug": "memphis-dry-rub-ribs",
+      "title": "Memphis Dry Rub Ribs",
+      "pass": true,
+      "score": 100,
+      "stepCount": 12,
+      "wordCount": 444,
+      "issues": []
+    },
+    {
       "slug": "mesquite-chuck-roast",
       "title": "Mesquite Smoked Chuck Roast",
       "pass": true,
       "score": 100,
       "stepCount": 12,
       "wordCount": 402,
+      "issues": []
+    },
+    {
+      "slug": "street-corn-chicken",
+      "title": "Smoky Chicken Thighs Bowls",
+      "pass": true,
+      "score": 100,
+      "stepCount": 10,
+      "wordCount": 409,
       "issues": []
     },
     {
@@ -1319,6 +1909,15 @@
       "issues": []
     },
     {
+      "slug": "moroccan-meatballs",
+      "title": "Moroccan Spiced Lamb Meatballs",
+      "pass": true,
+      "score": 100,
+      "stepCount": 10,
+      "wordCount": 412,
+      "issues": []
+    },
+    {
       "slug": "firehall-antipasto-pasta-salad",
       "title": "Mortadella Farfalle Antipasto Tray",
       "pass": true,
@@ -1344,6 +1943,26 @@
       "stepCount": 8,
       "wordCount": 435,
       "issues": []
+    },
+    {
+      "slug": "one-pot-chicken-rice",
+      "title": "Crispy Garlic Chicken Thighs",
+      "pass": true,
+      "score": 100,
+      "stepCount": 12,
+      "wordCount": 444,
+      "issues": []
+    },
+    {
+      "slug": "skillet-chicken-alfredo",
+      "title": "Garlic Chicken Pasta",
+      "pass": true,
+      "score": 90,
+      "stepCount": 8,
+      "wordCount": 422,
+      "issues": [
+        "title_pasta_no_pasta"
+      ]
     },
     {
       "slug": "overnight-french-toast-bake",
@@ -1429,6 +2048,17 @@
       "issues": []
     },
     {
+      "slug": "performance-burrito-bowls",
+      "title": "Performance Chicken Burrito Bowls",
+      "pass": true,
+      "score": 90,
+      "stepCount": 11,
+      "wordCount": 432,
+      "issues": [
+        "title_taco_no_tortilla"
+      ]
+    },
+    {
       "slug": "peri-peri-chicken-platter",
       "title": "Peri Peri Chicken Platter",
       "pass": true,
@@ -1445,6 +2075,26 @@
       "stepCount": 9,
       "wordCount": 436,
       "issues": []
+    },
+    {
+      "slug": "philly-egg-rolls",
+      "title": "Philly Cheesesteak Egg Rolls",
+      "pass": true,
+      "score": 100,
+      "stepCount": 12,
+      "wordCount": 468,
+      "issues": []
+    },
+    {
+      "slug": "philly-cheesesteak-skillet",
+      "title": "Garlic Butter Steak Skillet",
+      "pass": false,
+      "score": 80,
+      "stepCount": 9,
+      "wordCount": 477,
+      "issues": [
+        "title promises garlic butter but ingredients lack butter or garlic"
+      ]
     },
     {
       "slug": "philly-cheesesteak-sliders",
@@ -1497,8 +2147,19 @@
       "pass": true,
       "score": 100,
       "stepCount": 10,
-      "wordCount": 461,
+      "wordCount": 432,
       "issues": []
+    },
+    {
+      "slug": "beef-broccoli",
+      "title": "Quick Beef and Broccoli",
+      "pass": true,
+      "score": 90,
+      "stepCount": 9,
+      "wordCount": 457,
+      "issues": [
+        "generic_opener"
+      ]
     },
     {
       "slug": "quick-egg-tacos",
@@ -1510,6 +2171,26 @@
       "issues": [
         "generic_opener; title_taco_no_tortilla"
       ]
+    },
+    {
+      "slug": "pork-carnitas-tacos",
+      "title": "Quick Pork Carnitas Tacos",
+      "pass": true,
+      "score": 90,
+      "stepCount": 11,
+      "wordCount": 416,
+      "issues": [
+        "generic_opener; title_taco_no_tortilla"
+      ]
+    },
+    {
+      "slug": "stuffed-peppers",
+      "title": "Quinoa Stuffed Peppers",
+      "pass": true,
+      "score": 100,
+      "stepCount": 11,
+      "wordCount": 444,
+      "issues": []
     },
     {
       "slug": "reverse-seared-ribeye-crew",
@@ -1572,6 +2253,24 @@
       "score": 100,
       "stepCount": 8,
       "wordCount": 397,
+      "issues": []
+    },
+    {
+      "slug": "sausage-egg-bake",
+      "title": "Sausage Egg Bake for the Crew",
+      "pass": true,
+      "score": 100,
+      "stepCount": 11,
+      "wordCount": 473,
+      "issues": []
+    },
+    {
+      "slug": "sausage-peppers-onions",
+      "title": "Sausage Peppers and Onions",
+      "pass": true,
+      "score": 100,
+      "stepCount": 9,
+      "wordCount": 447,
       "issues": []
     },
     {
@@ -1642,6 +2341,17 @@
       ]
     },
     {
+      "slug": "sheet-pan-fajitas",
+      "title": "Crispy Honey Chili Chicken Thighs",
+      "pass": true,
+      "score": 90,
+      "stepCount": 11,
+      "wordCount": 446,
+      "issues": [
+        "chili title without beans or tomato base"
+      ]
+    },
+    {
       "slug": "sheet-pan-chicken-fajitas-lite",
       "title": "Crispy Garlic Chicken",
       "pass": true,
@@ -1649,6 +2359,17 @@
       "stepCount": 8,
       "wordCount": 340,
       "issues": []
+    },
+    {
+      "slug": "sheet-pan-meal-prep",
+      "title": "Crispy Honey Chili Chicken Thighs",
+      "pass": true,
+      "score": 90,
+      "stepCount": 11,
+      "wordCount": 446,
+      "issues": [
+        "chili title without beans or tomato base"
+      ]
     },
     {
       "slug": "sheet-pan-full-english",
@@ -1667,6 +2388,37 @@
       "stepCount": 11,
       "wordCount": 428,
       "issues": []
+    },
+    {
+      "slug": "sheet-pan-sausage-peppers",
+      "title": "Crispy Honey Chili Chicken Thighs",
+      "pass": true,
+      "score": 90,
+      "stepCount": 11,
+      "wordCount": 451,
+      "issues": [
+        "chili title without beans or tomato base"
+      ]
+    },
+    {
+      "slug": "shepherds-pie",
+      "title": "Shepherd's Pie with Greek Salad",
+      "pass": true,
+      "score": 100,
+      "stepCount": 11,
+      "wordCount": 447,
+      "issues": []
+    },
+    {
+      "slug": "chicken-quesadillas",
+      "title": "Shredded Chicken Quesadillas",
+      "pass": true,
+      "score": 90,
+      "stepCount": 12,
+      "wordCount": 448,
+      "issues": [
+        "title_taco_no_tortilla"
+      ]
     },
     {
       "slug": "shrimp-and-grits-breakfast",
@@ -1804,6 +2556,15 @@
       "issues": []
     },
     {
+      "slug": "smoked-wings-white-sauce",
+      "title": "Smoked Wings with White BBQ Sauce",
+      "pass": true,
+      "score": 100,
+      "stepCount": 11,
+      "wordCount": 442,
+      "issues": []
+    },
+    {
       "slug": "smoky-lentil-kale-soup",
       "title": "Smoky Lentil and Kale Soup",
       "pass": true,
@@ -1855,6 +2616,15 @@
       "score": 100,
       "stepCount": 10,
       "wordCount": 423,
+      "issues": []
+    },
+    {
+      "slug": "steak-sandwiches",
+      "title": "Steak Sandwiches",
+      "pass": true,
+      "score": 100,
+      "stepCount": 8,
+      "wordCount": 519,
       "issues": []
     },
     {
@@ -1912,6 +2682,24 @@
       "issues": []
     },
     {
+      "slug": "teriyaki-donburi",
+      "title": "Teriyaki Chicken Donburi",
+      "pass": true,
+      "score": 100,
+      "stepCount": 11,
+      "wordCount": 415,
+      "issues": []
+    },
+    {
+      "slug": "teriyaki-salmon-grill",
+      "title": "Teriyaki Grilled Salmon",
+      "pass": true,
+      "score": 100,
+      "stepCount": 11,
+      "wordCount": 443,
+      "issues": []
+    },
+    {
       "slug": "texas-central-brisket-crew",
       "title": "Texas Central Brisket for the Crew",
       "pass": true,
@@ -1927,6 +2715,15 @@
       "score": 100,
       "stepCount": 11,
       "wordCount": 424,
+      "issues": []
+    },
+    {
+      "slug": "thai-basil-chicken",
+      "title": "Garlic Chicken Thighs Skillet",
+      "pass": true,
+      "score": 100,
+      "stepCount": 11,
+      "wordCount": 429,
       "issues": []
     },
     {
@@ -1972,6 +2769,15 @@
       "score": 100,
       "stepCount": 8,
       "wordCount": 328,
+      "issues": []
+    },
+    {
+      "slug": "turkey-meatball-zoodles",
+      "title": "Turkey Meatballs with Zucchini Noodles",
+      "pass": true,
+      "score": 100,
+      "stepCount": 8,
+      "wordCount": 454,
       "issues": []
     },
     {
@@ -2057,6 +2863,15 @@
       "score": 100,
       "stepCount": 11,
       "wordCount": 428,
+      "issues": []
+    },
+    {
+      "slug": "white-garlic-chicken-pizza",
+      "title": "White Garlic Chicken Pizza",
+      "pass": true,
+      "score": 100,
+      "stepCount": 11,
+      "wordCount": 427,
       "issues": []
     },
     {

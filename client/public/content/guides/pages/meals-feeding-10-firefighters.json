@@ -5,27 +5,50 @@
   "description": "Portion math, shopping lists, and recipe picks when you are cooking for ten at the table.",
   "topic": "meal_planning",
   "pillar": "recipes_meals",
-  "intro": "Ten eaters is the point where home-cooking instincts break. You are officially running a small cafeteria. Meals for feeding ten firefighters need one main format, one reliable starch, and a line — not ten custom plates.",
+  "intro": "Ten eaters is the point where home-cooking instincts break. You are officially running a small cafeteria. Meals for feeding ten firefighters need one main format, one reliable starch, and a line — not ten custom plates. Below: what halls actually cook for feeding 10 firefighters — formats, timing, and recipe picks that survive a busy board.",
   "sections": [
     {
       "id": "shop",
       "heading": "Shopping for ten",
       "paragraphs": [
-        "Rough guide: 3–4 lb raw protein for mixed plates, 2 lb pasta dry for bakes, two dozen buns for handhelds. Adjust up if your hall runs hungry."
+        "Rough guide: 3–4 lb raw protein for mixed plates, 2 lb pasta dry for bakes, two dozen buns for handhelds. Adjust up if your hall runs hungry.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
       ]
     },
     {
       "id": "line",
       "heading": "Line setup for ten eaters",
       "paragraphs": [
-        "One person plates, everyone else stays out. Two trays of main, one starch, toppings in bowls — not a free-for-all at the stove."
+        "One person plates, everyone else stays out. Two trays of main, one starch, toppings in bowls — not a free-for-all at the stove.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
+      ]
+    },
+    {
+      "id": "shift-pick",
+      "heading": "Pick the format before the recipe",
+      "paragraphs": [
+        "For feeding 10 firefighters, decide line vs. plated vs. batch before you open a recipe tab. Lines win when eaters show up between 17:00 and 20:00; batches win when you know the whole crew lands at once.",
+        "Post protein, starch, and hold plan on the whiteboard. When tones drop, the next cook should read \"covered on low\" instead of guessing what you meant on the flat-top."
+      ],
+      "tips": [
+        "Assign one cook and one runner — everyone else stays out until called.",
+        "Sauces on the side keep reheat from turning gluey for post-call eaters."
       ]
     }
   ],
   "practicalAdvice": [
     "Shop for 12 portions — you will feed floaters.",
     "Two full trays of protein beat one overcrowded pan.",
-    "Write portions on a card at the line: 'two tacos / one cup chili.'"
+    "Write portions on a card at the line: 'two tacos / one cup chili.'",
+    "Post who's cooking and what's holding warm on the whiteboard — post-call eaters should not hunt for answers."
   ],
   "mealRecommendations": [
     {
@@ -76,5 +99,6 @@
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
   "updatedAt": "2026-05-27T18:00:00.000Z",
-  "readMinutes": 7
+  "readMinutes": 7,
+  "heroImageAlt": "Meals for Feeding 10 Firefighters — feeding 10 firefighters tips for fire station kitchens and crew-sized meals"
 }

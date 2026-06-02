@@ -27,7 +27,12 @@
       "id": "ranked",
       "heading": "The ranked list — and why each one earned a spot",
       "paragraphs": [
-        "Below are twenty hall meals we see again and again — ranked by how often crews actually cook them, not by what looks good on a food blog. Each link goes to a full crew-sized recipe with real timing and station notes."
+        "Below are twenty hall meals we see again and again — ranked by how often crews actually cook them, not by what looks good on a food blog. Each link goes to a full crew-sized recipe with real timing and station notes.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
       ]
     },
     {
@@ -42,7 +47,8 @@
   "practicalAdvice": [
     "Learn one bake, one line meal, and one batch pot — that covers most hall weeks.",
     "When a meal hits, write the recipe on the hall drive before the cook transfers.",
-    "Feed for seconds on classics — empty pans kill morale faster than bad seasoning."
+    "Feed for seconds on classics — empty pans kill morale faster than bad seasoning.",
+    "Post who's cooking and what's holding warm on the whiteboard — post-call eaters should not hunt for answers."
   ],
   "mealRecommendations": [
     {
@@ -179,5 +185,6 @@
   "publishedAt": "2026-05-27T18:00:00.000Z",
   "updatedAt": "2026-05-27T18:00:00.000Z",
   "readMinutes": 12,
-  "seoTitle": "Top 20 Firehall Classics Every Firefighter Should Know"
+  "seoTitle": "Top 20 Firehall Classics Every Firefighter Should Know",
+  "heroImageAlt": "Top 20 Firehall Classics Every Firefighter Should Know — firehall classics tips for fire station kitchens and crew-sized meals"
 }

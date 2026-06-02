@@ -116,8 +116,13 @@ const CATEGORY_RULES: Record<FirehallPhotoCategory, string[]> = {
     "breakfast sausage",
     "hash browns",
     "toast",
+    "pancakes",
+    "biscuits",
     "griddle cooking",
     "breakfast station atmosphere",
+    "each breakfast component in its own zone on the plate — never eggs on pancakes",
+    "never bury potatoes or bacon behind other food",
+    "firefighter can identify every breakfast item within one second",
   ],
   bbq: [
     "smoke",

@@ -13,10 +13,10 @@
   "cookTime": 85,
   "prepTime": 30,
   "difficulty": "medium",
-  "calories": 989,
-  "protein": 46,
-  "carbs": 45,
-  "fats": 69,
+  "calories": 0,
+  "protein": 0,
+  "carbs": 0,
+  "fats": 0,
   "tags": [
     "protein:pork",
     "format:pizza",
@@ -103,45 +103,94 @@
   "steps": [
     {
       "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Hot Honey Soppressata Pizza in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch pork. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
       "title": "Simmer quick pizza sauce",
       "instruction": "Simmer crushed tomatoes with garlic and oregano 12 minutes until slightly thick. Cool 5 minutes — hot sauce on raw dough makes a wet center.",
       "minutes": 12,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 2,
+      "stepNumber": 4,
       "title": "Preheat stone to 500°F",
       "instruction": "Heat stone or steel at 500°F at least 40 minutes. Tear mozzarella and slice soppressata thin — thick coins curl and shield the cheese from browning.",
       "minutes": 40,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 3,
+      "stepNumber": 5,
       "title": "Stretch rounds and sauce lightly",
       "instruction": "Stretch dough to 12–14 inches with a defined rim. Sauce in a thin layer; leave the rim clean for blistering. Brush rims with olive oil.",
       "minutes": 12,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 6,
       "title": "Cheese and soppressata",
       "instruction": "Layer fresh and shredded mozzarella, then soppressata in an even shingle pattern — gaps mean bare bites, piles mean greasy pools. A light dusting of parmesan is optional before the bake.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 7,
       "title": "Bake until salami edges curl",
       "instruction": "Bake 10–13 minutes until cheese bubbles and soppressata edges crisp and cup slightly. Rotate for even color. Hot Honey Soppressata needs char on the meat, not pale pink disks.",
       "minutes": 12,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 8,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F with a 3-minute rest. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 10,
+      "title": "Portion and open the line",
+      "instruction": "Portion Hot Honey Soppressata Pizza onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
+      "title": "Scale for larger halls",
+      "instruction": "When cooking for more than 8 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 12,
       "title": "Hot honey drizzle and cut",
       "instruction": "Rest 2 minutes. Drizzle hot honey in thin zigzags and hit with a pinch of red pepper flakes. Cut into 8 slices per pie. Sweet heat hits after the bake — honey burns if added too early.",
       "minutes": 5,
       "heatLevel": "low"
+    },
+    {
+      "stepNumber": 13,
+      "title": "Final quality check before service",
+      "instruction": "Walk the line once before opening service for Hot Honey Soppressata Pizza — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
+      "minutes": 4,
+      "heatLevel": ""
     }
   ],
   "proTips": [
@@ -163,19 +212,20 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 989,
-    "protein": 46,
-    "carbs": 45,
-    "fats": 69,
-    "label": "per serving (hall portion)",
-    "source": "calculated",
+    "calories": 0,
+    "protein": 0,
+    "carbs": 0,
+    "fats": 0,
+    "label": "Estimated per serving",
+    "source": "unavailable",
+    "estimateAvailable": false,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
       "under30gFat": false,
       "highCarb": false,
       "lowCarb": false,
-      "mealPrepFriendly": false
+      "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": true,
@@ -210,5 +260,6 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "generatedAt": "2026-06-01T01:40:02.130Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "mealPrepNotes": "Prep mise en place before the shift — Hot Honey Soppressata Pizza runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
 }

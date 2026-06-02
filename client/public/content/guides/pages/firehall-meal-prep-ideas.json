@@ -5,27 +5,50 @@
   "description": "Firehall meal prep ideas: batch chili, sheet-pan components, pulled pork, and rice bases that reheat clean on busy shifts.",
   "topic": "meal_planning",
   "pillar": "recipes_meals",
-  "intro": "Meal prep at a station means cooking components when the board is quiet so busy nights are assembly, not invention. Firehall meal prep ideas focus on proteins and sauces that reheat — not pre-plated meals that dry out.",
+  "intro": "Meal prep at a station means cooking components when the board is quiet so busy nights are assembly, not invention. Firehall meal prep ideas focus on proteins and sauces that reheat — not pre-plated meals that dry out. Below: what halls actually cook for firehall meal prep — formats, timing, and recipe picks that survive a busy board.",
   "sections": [
     {
       "id": "components",
       "heading": "Components that reheat clean",
       "paragraphs": [
-        "Chili, pulled pork, roasted chicken thighs, cooked rice, roasted veg. Combine into bowls, tacos, or bakes in under thirty minutes."
+        "Chili, pulled pork, roasted chicken thighs, cooked rice, roasted veg. Combine into bowls, tacos, or bakes in under thirty minutes.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
       ]
     },
     {
       "id": "labels",
       "heading": "Label and rotate",
       "paragraphs": [
-        "Date everything, freeze what you will not use in three days, and post a fridge map so the next shift does not duplicate prep."
+        "Date everything, freeze what you will not use in three days, and post a fridge map so the next shift does not duplicate prep.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
+      ]
+    },
+    {
+      "id": "shift-pick",
+      "heading": "Pick the format before the recipe",
+      "paragraphs": [
+        "For firehall meal prep, decide line vs. plated vs. batch before you open a recipe tab. Lines win when eaters show up between 17:00 and 20:00; batches win when you know the whole crew lands at once.",
+        "Post protein, starch, and hold plan on the whiteboard. When tones drop, the next cook should read \"covered on low\" instead of guessing what you meant on the flat-top."
+      ],
+      "tips": [
+        "Assign one cook and one runner — everyone else stays out until called.",
+        "Sauces on the side keep reheat from turning gluey for post-call eaters."
       ]
     }
   ],
   "practicalAdvice": [
     "Prep proteins and sauces — assemble day-of.",
     "Date and label everything — rotation prevents science experiments.",
-    "One prep cook, one list — avoid three people 'helping' differently."
+    "One prep cook, one list — avoid three people 'helping' differently.",
+    "Post who's cooking and what's holding warm on the whiteboard — post-call eaters should not hunt for answers."
   ],
   "mealRecommendations": [
     {
@@ -70,5 +93,6 @@
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
   "updatedAt": "2026-05-27T18:00:00.000Z",
-  "readMinutes": 7
+  "readMinutes": 7,
+  "heroImageAlt": "Firehall Meal Prep Ideas — firehall meal prep tips for fire station kitchens and crew-sized meals"
 }

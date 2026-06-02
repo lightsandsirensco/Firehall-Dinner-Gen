@@ -12,7 +12,10 @@ export interface EditorialCopyIssue {
 }
 
 const AI_PHRASES = [
+  /\bin today's (?:fast-paced )?world\b/i,
   /\bin today's fast-paced\b/i,
+  /\bit's important to\b/i,
+  /\bit is important to\b/i,
   /\bit's worth noting\b/i,
   /\bdelve into\b/i,
   /\btapestry of\b/i,

@@ -13,10 +13,10 @@
   "cookTime": 10,
   "prepTime": 40,
   "difficulty": "easy",
-  "calories": 420,
-  "protein": 22,
-  "carbs": 32,
-  "fats": 24,
+  "calories": 0,
+  "protein": 0,
+  "carbs": 0,
+  "fats": 0,
   "tags": [
     "protein:mixed",
     "format:bar_line",
@@ -205,11 +205,26 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 420,
-    "protein": 22,
-    "carbs": 32,
-    "fats": 24,
-    "label": "~420 cal/serving · 22g protein · 2g fiber (est.)"
+    "calories": 0,
+    "protein": 0,
+    "carbs": 0,
+    "fats": 0,
+    "label": "Estimated per serving",
+    "source": "unavailable",
+    "estimateAvailable": false,
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/hall-expansion/firehall-charcuterie-board.jpg",
   "heroImageAlt": "Firehall Charcuterie Board — crew-sized firehall meal",

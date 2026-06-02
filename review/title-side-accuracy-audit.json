@@ -1,22 +1,53 @@
 {
-  "generatedAt": "2026-05-31T23:40:28.201Z",
+  "generatedAt": "2026-06-01T02:30:35.208Z",
   "normalizedExample": {
     "before": "Shepherd's Pie with Quinoa & Greek Salad",
     "after": "Shepherd's Pie with Greek Salad"
   },
   "totals": {
-    "titlesWithWith": 20,
+    "titlesWithWith": 18,
     "sidePairingTitles": 3,
-    "failed": 0,
+    "failed": 1,
     "criticalPairingIssues": 0
   },
-  "failed": [],
+  "failed": [
+    {
+      "slug": "shepherds-pie",
+      "collection": "golden_100",
+      "title": "Shepherd's Pie with Greek Salad",
+      "heroImage": "/images/golden-100/shepherds-pie.jpg",
+      "sidePairingTitle": true,
+      "pairingIssues": [
+        {
+          "code": "missing_named_side_in_metadata",
+          "severity": "warning",
+          "message": "Title names salad but hero path/alt lacks salad cues — regenerate wider family-style hero."
+        }
+      ],
+      "imageIssues": [
+        {
+          "code": "image_title_mismatch",
+          "severity": "critical",
+          "message": "salad side in title — hero must show a visible salad bowl or platter beside the main (title side: \"greek salad\")",
+          "confidence": 94
+        },
+        {
+          "code": "image_title_mismatch",
+          "severity": "critical",
+          "message": "Shepherd's Pie with salad — hero must show a salad bowl beside the casserole",
+          "confidence": 95
+        }
+      ],
+      "fail": true
+    }
+  ],
   "sidePairingTitles": [
     {
       "slug": "boneless-chicken-thighs-sweet-potato-spinach",
       "collection": "performance_meals",
       "title": "Boneless Chicken Thighs with Sweet Potato & Fresh Spinach",
       "heroImage": "/images/golden-100/boneless-chicken-thighs-sweet-potato-spinach.jpg",
+      "heroAlt": "Boneless Chicken Thighs with Sweet Potato & Fresh Spinach — wide family-style firehall platter showing chicken, sweet potato & fresh spinach, fresh spinach, swe",
       "sidePairingTitle": true,
       "pairingIssues": [],
       "imageIssues": [],
@@ -38,11 +69,29 @@
       "collection": "golden_100",
       "title": "Shepherd's Pie with Greek Salad",
       "heroImage": "/images/golden-100/shepherds-pie.jpg",
-      "heroAlt": "Shepherd's Pie with Greek Salad — large casserole with browned mashed potato topping and a bowl of Greek salad on a firehall table",
       "sidePairingTitle": true,
-      "pairingIssues": [],
-      "imageIssues": [],
-      "fail": false
+      "pairingIssues": [
+        {
+          "code": "missing_named_side_in_metadata",
+          "severity": "warning",
+          "message": "Title names salad but hero path/alt lacks salad cues — regenerate wider family-style hero."
+        }
+      ],
+      "imageIssues": [
+        {
+          "code": "image_title_mismatch",
+          "severity": "critical",
+          "message": "salad side in title — hero must show a visible salad bowl or platter beside the main (title side: \"greek salad\")",
+          "confidence": 94
+        },
+        {
+          "code": "image_title_mismatch",
+          "severity": "critical",
+          "message": "Shepherd's Pie with salad — hero must show a salad bowl beside the casserole",
+          "confidence": 95
+        }
+      ],
+      "fail": true
     }
   ],
   "allWithTitles": [
@@ -68,7 +117,7 @@
       "collection": "hall_expansion",
       "title": "Baked Mostaccioli with Sausage",
       "heroImage": "/images/hall-expansion/mostaccioli-sausage-bake.jpg",
-      "heroAlt": "Baked Mostaccioli with Sausage — crew-sized firehall meal",
+      "heroAlt": "Baked Mostaccioli with Sausage — wide family-style firehall platter showing sausage on a crew prep table",
       "sidePairingTitle": false,
       "pairingIssues": [
         {
@@ -85,6 +134,7 @@
       "collection": "performance_meals",
       "title": "Boneless Chicken Thighs with Sweet Potato & Fresh Spinach",
       "heroImage": "/images/golden-100/boneless-chicken-thighs-sweet-potato-spinach.jpg",
+      "heroAlt": "Boneless Chicken Thighs with Sweet Potato & Fresh Spinach — wide family-style firehall platter showing chicken, sweet potato & fresh spinach, fresh spinach, swe",
       "sidePairingTitle": true,
       "pairingIssues": [],
       "imageIssues": [],
@@ -114,38 +164,6 @@
       "heroAlt": "Crock Barbacoa Chicken With Potato Wedges — shredded chipotle chicken beside golden roasted potato wedges on a wide firehall platter",
       "sidePairingTitle": true,
       "pairingIssues": [],
-      "imageIssues": [],
-      "fail": false
-    },
-    {
-      "slug": "smash-burgers",
-      "collection": "golden_100",
-      "title": "Double Smash Burgers with Caramelized Onions & Dirty Sauce",
-      "heroImage": "/images/golden-100/smash-burgers.jpg",
-      "sidePairingTitle": false,
-      "pairingIssues": [
-        {
-          "code": "integral_with_ok",
-          "severity": "info",
-          "message": "Title uses integral 'with' component — not a separate side pairing."
-        }
-      ],
-      "imageIssues": [],
-      "fail": false
-    },
-    {
-      "slug": "chili-garlic-bread",
-      "collection": "golden_100",
-      "title": "Firehouse Smoked Beef Chili with Cheesy Garlic Bread",
-      "heroImage": "/images/golden-100/chili-garlic-bread.jpg",
-      "sidePairingTitle": false,
-      "pairingIssues": [
-        {
-          "code": "integral_with_ok",
-          "severity": "info",
-          "message": "Title uses integral 'with' component — not a separate side pairing."
-        }
-      ],
       "imageIssues": [],
       "fail": false
     },
@@ -202,6 +220,7 @@
       "collection": "breakfast",
       "title": "Johnnycakes with Maple Syrup",
       "heroImage": "/images/breakfast/johnnycakes-with-syrup.jpg",
+      "heroAlt": "Johnnycakes with Maple Syrup — wide family-style firehall platter showing maple syrup on a crew prep table",
       "sidePairingTitle": false,
       "pairingIssues": [
         {
@@ -218,7 +237,7 @@
       "collection": "hall_expansion",
       "title": "Pepper Steak with Onions",
       "heroImage": "/images/hall-expansion/pepper-steak-onions.jpg",
-      "heroAlt": "Pepper Steak with Onions — crew-sized firehall meal",
+      "heroAlt": "Pepper Steak with Onions — wide family-style firehall platter showing beef, onions on a crew prep table",
       "sidePairingTitle": false,
       "pairingIssues": [],
       "imageIssues": [],
@@ -246,7 +265,7 @@
       "collection": "hall_expansion",
       "title": "Rigatoni with Meat Sauce",
       "heroImage": "/images/hall-expansion/rigatoni-meat-sauce-batch.jpg",
-      "heroAlt": "Rigatoni with Meat Sauce — crew-sized firehall meal",
+      "heroAlt": "Rigatoni with Meat Sauce — wide family-style firehall platter showing meat sauce on a crew prep table",
       "sidePairingTitle": false,
       "pairingIssues": [
         {
@@ -263,11 +282,29 @@
       "collection": "golden_100",
       "title": "Shepherd's Pie with Greek Salad",
       "heroImage": "/images/golden-100/shepherds-pie.jpg",
-      "heroAlt": "Shepherd's Pie with Greek Salad — large casserole with browned mashed potato topping and a bowl of Greek salad on a firehall table",
       "sidePairingTitle": true,
-      "pairingIssues": [],
-      "imageIssues": [],
-      "fail": false
+      "pairingIssues": [
+        {
+          "code": "missing_named_side_in_metadata",
+          "severity": "warning",
+          "message": "Title names salad but hero path/alt lacks salad cues — regenerate wider family-style hero."
+        }
+      ],
+      "imageIssues": [
+        {
+          "code": "image_title_mismatch",
+          "severity": "critical",
+          "message": "salad side in title — hero must show a visible salad bowl or platter beside the main (title side: \"greek salad\")",
+          "confidence": 94
+        },
+        {
+          "code": "image_title_mismatch",
+          "severity": "critical",
+          "message": "Shepherd's Pie with salad — hero must show a salad bowl beside the casserole",
+          "confidence": 95
+        }
+      ],
+      "fail": true
     },
     {
       "slug": "smoked-chicken-quarters-white-sauce",
@@ -291,7 +328,7 @@
       "collection": "hall_expansion",
       "title": "Smoked Meatloaf with Glaze",
       "heroImage": "/images/hall-expansion/smoked-meatloaf.jpg",
-      "heroAlt": "Smoked Meatloaf with Glaze — crew-sized firehall meal",
+      "heroAlt": "Smoked Meatloaf with Glaze — wide family-style firehall platter showing glaze on a crew prep table",
       "sidePairingTitle": false,
       "pairingIssues": [
         {
@@ -334,6 +371,7 @@
       "collection": "performance_meals",
       "title": "Turkey Shepherd's with Sweet Potato Top",
       "heroImage": "/images/golden-100/turkey-shepherds-sweet-potato.jpg",
+      "heroAlt": "Turkey Shepherd's with Sweet Potato Top — wide family-style firehall platter showing turkey, sweet potato top, sweet potato on a crew prep table",
       "sidePairingTitle": false,
       "pairingIssues": [
         {

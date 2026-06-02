@@ -5,27 +5,50 @@
   "description": "How to feed ten firefighters: grocery quantities, line vs plated service, and recipes that scale without doubling cook stress.",
   "topic": "station_lifestyle",
   "pillar": "operations_how_to",
-  "intro": "Ten eaters is the point where home-recipe math breaks. Feeding ten firefighters means rounding up protein, using lines and batches, and accepting that two sheet pans beat one crowded pan. The goal is full plates, not perfect presentation.",
+  "intro": "Ten eaters is the point where home-recipe math breaks. Feeding ten firefighters means rounding up protein, using lines and batches, and accepting that two sheet pans beat one crowded pan. The goal is full plates, not perfect presentation. Below: what halls actually cook for feed 10 firefighters — formats, timing, and recipe picks that survive a busy board.",
   "sections": [
     {
       "id": "formats",
       "heading": "Formats for ten",
       "paragraphs": [
-        "Chili, lasagna, taco bar, pulled pork, jambalaya — all proven at ten plus."
+        "Chili, lasagna, taco bar, pulled pork, jambalaya — all proven at ten plus.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
       ]
     },
     {
       "id": "quantities",
       "heading": "Quantity shortcuts",
       "paragraphs": [
-        "Double sheet pans, two pots of chili, or two pork shoulders beat one crowded vessel. Uneven heat at ten portions is how dinner fails quietly."
+        "Double sheet pans, two pots of chili, or two pork shoulders beat one crowded vessel. Uneven heat at ten portions is how dinner fails quietly.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
+      ]
+    },
+    {
+      "id": "hall-tonight",
+      "heading": "What this looks like on the hall tonight",
+      "paragraphs": [
+        "Kitchen culture shows up in small moves: who shops, who cleans, whether rookies get coached or roasted. For feed 10 firefighters, fairness beats perfection — rotate the jobs that nobody wants twice in a row.",
+        "Meals are morale. A crew that trusts the kitchen cooks more often and complains less about grocery splits. Keep the tone direct and the help real."
+      ],
+      "tips": [
+        "Praise the cook in the bay — fix critiques one-on-one after cleanup.",
+        "Write grocery splits on the receipt photo the same night you shop."
       ]
     }
   ],
   "practicalAdvice": [
     "Plan one pound raw protein per three to four eaters for mixed plates.",
     "Use two half-sheet pans or two pots — even heat matters.",
-    "Taco bars and potato bars scale cleaner than ten plated entrees."
+    "Taco bars and potato bars scale cleaner than ten plated entrees.",
+    "Post who's cooking and what's holding warm on the whiteboard — post-call eaters should not hunt for answers."
   ],
   "mealRecommendations": [
     {
@@ -70,5 +93,6 @@
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
   "updatedAt": "2026-05-27T18:00:00.000Z",
-  "readMinutes": 7
+  "readMinutes": 7,
+  "heroImageAlt": "Feeding Ten Firefighters — feed 10 firefighters tips for fire station kitchens and crew-sized meals"
 }

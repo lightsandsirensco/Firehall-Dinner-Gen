@@ -47,7 +47,7 @@ interface NutritionRow {
   carbs: number;
   fat: number;
   servings: number;
-  status: "ok" | "missing" | "zero" | "invalid" | "suspicious";
+  status: "ok" | "missing" | "zero" | "invalid" | "suspicious" | "hidden";
   issues: string[];
 }
 
@@ -87,6 +87,8 @@ function macrosFromPage(page: Record<string, unknown>, kind: CatalogKind) {
     protein: Number(nutrition?.protein ?? page.protein ?? 0),
     carbs: Number(nutrition?.carbs ?? page.carbs ?? 0),
     fat: Number(nutrition?.fats ?? nutrition?.fat ?? page.fats ?? page.fat ?? 0),
+    source: nutrition?.source as string | undefined,
+    estimateAvailable: nutrition?.estimateAvailable as boolean | undefined,
   };
 }
 
@@ -99,8 +101,15 @@ function nutritionStatus(
   mealType: "dinner" | "breakfast" | "smoothie",
   slug: string,
 ): Pick<NutritionRow, "status" | "issues"> {
+  if (
+    macros.source === "unavailable" ||
+    macros.estimateAvailable === false
+  ) {
+    return { status: "hidden", issues: ["Per-serving estimate withheld — UI shows coming soon"] };
+  }
+
   const issues = validateNutritionPerServing(macros, { slug, mealType }).map((i) => i.message);
-  if (!hasCompleteNutrition(macros)) {
+  if (!hasCompleteNutrition(macros, { source: macros.source, estimateAvailable: macros.estimateAvailable })) {
     if (macros.calories === 0 || macros.protein === 0) {
       return { status: "zero", issues };
     }
@@ -279,9 +288,11 @@ async function main(): Promise<void> {
   const packageIssues = auditCuratedPackages();
   const sideBundleIssues = auditSideBundles();
 
-  const badNutrition = catalog.nutritionRows.filter((r) => r.status !== "ok");
+  const badNutrition = catalog.nutritionRows.filter(
+    (r) => r.status !== "ok" && r.status !== "hidden",
+  );
   const fixesApplied = [
-    "RecipeNutritionPanel hides zero/null macros; shows 'Nutrition information unavailable'",
+    "RecipeNutritionPanel hides zero/null macros; shows 'Nutrition estimate coming soon'",
     "ingredientNameMatchesRecipeTitle guard in validate.ts + shopping-list.ts",
     "findIngredientProfile uses word-boundary matching (prevents title substring false matches)",
     "Expanded nutrition DB: pearl barley, beef stew meat, pork ribs, ground lamb, baking powder",
@@ -295,6 +306,7 @@ async function main(): Promise<void> {
     totals: {
       recipes_scanned: catalog.nutritionRows.length,
       nutrition_ok: catalog.nutritionRows.filter((r) => r.status === "ok").length,
+      nutrition_hidden: catalog.nutritionRows.filter((r) => r.status === "hidden").length,
       nutrition_issues: badNutrition.length,
       title_as_ingredient: catalog.titleIngredientIssues.length,
       bundle_issues:
@@ -307,7 +319,7 @@ async function main(): Promise<void> {
     crew_scaling_issues: catalog.crewScalingIssues,
     ui_validation: {
       zero_macros_hidden: true,
-      unavailable_message: "Nutrition information unavailable",
+      unavailable_message: "Nutrition estimate coming soon",
       catalog_pages_use_recipe_nutrition_panel: true,
       explore_hides_nutrition_when_calories_zero: true,
     },
@@ -364,7 +376,7 @@ async function main(): Promise<void> {
 
   md.push("", "## Phase 4–6 — UI & serving validation", "");
   md.push("- Zero macros are never rendered as numeric values on recipe pages.");
-  md.push("- Nutrition panel shows **Nutrition information unavailable** when data is missing.");
+  md.push("- Nutrition panel shows **Nutrition estimate coming soon** when data is missing or unreliable.");
   md.push("- Crew picker scales **ingredients** only; per-serving nutrition stays fixed (by design).");
   if (catalog.crewScalingIssues.length > 0) {
     md.push("", "### Crew scaling failures", "");
@@ -397,7 +409,9 @@ async function main(): Promise<void> {
 
   const fail =
     summary.totals.title_as_ingredient > 0 ||
-    catalog.nutritionRows.some((r) => r.status === "zero" || r.status === "missing" || r.status === "invalid");
+    catalog.nutritionRows.some(
+      (r) => r.status === "zero" || r.status === "missing" || r.status === "invalid",
+    );
   if (fail) process.exit(1);
 }
 

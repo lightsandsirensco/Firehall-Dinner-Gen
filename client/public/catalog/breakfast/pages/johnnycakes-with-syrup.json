@@ -141,8 +141,9 @@
     "protein": 3,
     "carbs": 74,
     "fat": 18,
-    "label": "per serving (hall portion)",
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
@@ -195,5 +196,7 @@
     "Aluminum foil"
   ],
   "mealPrepNotes": "Prep mise en place before the shift — Johnnycakes with Maple Syrup runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone.",
-  "heroImageAlt": "Johnnycakes with Maple Syrup — wide family-style firehall platter showing maple syrup on a crew prep table"
+  "heroImageAlt": "Johnnycakes with Maple Syrup — wide family-style firehall platter showing maple syrup on a crew prep table",
+  "mobileImage": "/images/mobile/breakfast/johnnycakes-with-syrup.jpg",
+  "railImage": "/images/rails/breakfast/johnnycakes-with-syrup.jpg"
 }

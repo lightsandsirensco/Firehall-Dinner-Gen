@@ -5,27 +5,50 @@
   "description": "Best station chili recipes for firefighters: classic beef chili, turkey lean batch, and hall-sized pots that hold across the shift.",
   "topic": "meal_planning",
   "pillar": "recipes_meals",
-  "intro": "Chili is the station's universal backup plan. It scales, holds on the stove, tops potatoes or hot dogs, and tastes better the next day. The best station chili recipes are not secret — they are consistent batches with enough seasoning to stand up to cheese and crackers.",
+  "intro": "Chili is the station's universal backup plan. It scales, holds on the stove, tops potatoes or hot dogs, and tastes better the next day. The best station chili recipes are not secret — they are consistent batches with enough seasoning to stand up to cheese and crackers. Below: what halls actually cook for station chili recipes — formats, timing, and recipe picks that survive a busy board.",
   "sections": [
     {
       "id": "variations",
       "heading": "Beef vs turkey vs double pot",
       "paragraphs": [
-        "Beef for classic nights, turkey when the crew wants leaner, double pot when appetite is unknown. Same line setup for all three."
+        "Beef for classic nights, turkey when the crew wants leaner, double pot when appetite is unknown. Same line setup for all three.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
       ]
     },
     {
       "id": "toppings",
       "heading": "Toppings bar that actually gets used",
       "paragraphs": [
-        "Cheese, onion, jalapeño, sour cream, and something crunchy. Label mild vs hot — it prevents the usual salsa argument."
+        "Cheese, onion, jalapeño, sour cream, and something crunchy. Label mild vs hot — it prevents the usual salsa argument.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
+      ]
+    },
+    {
+      "id": "shift-pick",
+      "heading": "Pick the format before the recipe",
+      "paragraphs": [
+        "For station chili recipes, decide line vs. plated vs. batch before you open a recipe tab. Lines win when eaters show up between 17:00 and 20:00; batches win when you know the whole crew lands at once.",
+        "Post protein, starch, and hold plan on the whiteboard. When tones drop, the next cook should read \"covered on low\" instead of guessing what you meant on the flat-top."
+      ],
+      "tips": [
+        "Assign one cook and one runner — everyone else stays out until called.",
+        "Sauces on the side keep reheat from turning gluey for post-call eaters."
       ]
     }
   ],
   "practicalAdvice": [
     "Brown meat before the pot — depth matters.",
     "Simmer longer than you think after adding beans.",
-    "Offer toppings bar: cheese, onion, jalapeño, Fritos — crew happiness multiplier."
+    "Offer toppings bar: cheese, onion, jalapeño, Fritos — crew happiness multiplier.",
+    "Post who's cooking and what's holding warm on the whiteboard — post-call eaters should not hunt for answers."
   ],
   "mealRecommendations": [
     {
@@ -75,5 +98,6 @@
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
   "updatedAt": "2026-05-27T18:00:00.000Z",
-  "readMinutes": 7
+  "readMinutes": 7,
+  "heroImageAlt": "Best Station Chili Recipes — station chili recipes tips for fire station kitchens and crew-sized meals"
 }

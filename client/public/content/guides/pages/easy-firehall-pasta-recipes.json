@@ -5,27 +5,50 @@
   "description": "Easy firehall pasta recipes: baked ziti, garlic butter pasta, stroganoff, chicken parm, and one-skillet alfredo for station dinners.",
   "topic": "meal_planning",
   "pillar": "recipes_meals",
-  "intro": "Pasta is hall currency — cheap, familiar, and scalable. Easy firehall pasta recipes focus on one pot or one tray, sauce that can be held hot, and protein mixed in so plates feel complete. Nuance is optional; volume is not.",
+  "intro": "Pasta is hall currency — cheap, familiar, and scalable. Easy firehall pasta recipes focus on one pot or one tray, sauce that can be held hot, and protein mixed in so plates feel complete. Nuance is optional; volume is not. Below: what halls actually cook for firehall pasta recipes — formats, timing, and recipe picks that survive a busy board.",
   "sections": [
     {
       "id": "bake-vs-skillet",
       "heading": "Bake vs skillet — pick one",
       "paragraphs": [
-        "Bakes (ziti, lasagna) feed the most people with the least active time. Skillet pastas (alfredo, garlic butter) finish faster when the board is loud."
+        "Bakes (ziti, lasagna) feed the most people with the least active time. Skillet pastas (alfredo, garlic butter) finish faster when the board is loud.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
       ]
     },
     {
       "id": "sauce",
       "heading": "Sauce that survives the line",
       "paragraphs": [
-        "Hold sauce slightly loose — pasta keeps absorbing. Refresh with pasta water or butter at service instead of cooking dry in the tray."
+        "Hold sauce slightly loose — pasta keeps absorbing. Refresh with pasta water or butter at service instead of cooking dry in the tray.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
+      ]
+    },
+    {
+      "id": "shift-pick",
+      "heading": "Pick the format before the recipe",
+      "paragraphs": [
+        "For firehall pasta recipes, decide line vs. plated vs. batch before you open a recipe tab. Lines win when eaters show up between 17:00 and 20:00; batches win when you know the whole crew lands at once.",
+        "Post protein, starch, and hold plan on the whiteboard. When tones drop, the next cook should read \"covered on low\" instead of guessing what you meant on the flat-top."
+      ],
+      "tips": [
+        "Assign one cook and one runner — everyone else stays out until called.",
+        "Sauces on the side keep reheat from turning gluey for post-call eaters."
       ]
     }
   ],
   "practicalAdvice": [
     "Salt the pasta water hard — it carries the dish.",
     "Finish with butter or good olive oil if sauce is thin.",
-    "Hold pasta slightly underdone if it will sit — it finishes in the tray."
+    "Hold pasta slightly underdone if it will sit — it finishes in the tray.",
+    "Post who's cooking and what's holding warm on the whiteboard — post-call eaters should not hunt for answers."
   ],
   "mealRecommendations": [
     {
@@ -79,5 +102,6 @@
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
   "updatedAt": "2026-05-27T18:00:00.000Z",
-  "readMinutes": 7
+  "readMinutes": 7,
+  "heroImageAlt": "Easy Firehall Pasta Recipes — firehall pasta recipes tips for fire station kitchens and crew-sized meals"
 }

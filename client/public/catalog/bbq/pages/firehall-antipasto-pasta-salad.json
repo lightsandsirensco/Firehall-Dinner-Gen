@@ -13,10 +13,10 @@
   "cookTime": 20,
   "prepTime": 30,
   "difficulty": "medium",
-  "calories": 355,
-  "protein": 13,
-  "carbs": 69,
-  "fats": 2,
+  "calories": 0,
+  "protein": 0,
+  "carbs": 0,
+  "fats": 0,
   "tags": [
     "protein:pork",
     "format:antipasto_tray",
@@ -181,12 +181,26 @@
   "mealPrepNotes": "Grill veg at 400°F while pasta boils. Chill salad at least 30 minutes before service. Holds refrigerated 48 hours—pull from cooler before plating.",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 355,
-    "protein": 13,
-    "carbs": 69,
-    "fats": 2,
-    "label": "per serving (hall portion)",
-    "source": "estimated"
+    "calories": 0,
+    "protein": 0,
+    "carbs": 0,
+    "fats": 0,
+    "label": "Estimated per serving",
+    "source": "unavailable",
+    "estimateAvailable": false,
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/smoker-catalog/firehall-antipasto-pasta-salad.jpg",
   "heroImageAlt": "Mortadella Farfalle Antipasto Tray — crew-sized BBQ spread with visible smoke and bark",

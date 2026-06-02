@@ -13,10 +13,10 @@
   "cookTime": 18,
   "prepTime": 35,
   "difficulty": "medium",
-  "calories": 1400,
-  "protein": 79,
-  "carbs": 161,
-  "fats": 53,
+  "calories": 0,
+  "protein": 0,
+  "carbs": 0,
+  "fats": 0,
   "tags": [
     "protein:beef",
     "format:wok_flat_top",
@@ -176,12 +176,26 @@
   "mealPrepNotes": "Slice flank thin against grain. Sear in batches at 450°F—do not crowd. Sauce toss at service. Hold beef covered at 170°F up to 25 minutes.",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1400,
-    "protein": 79,
-    "carbs": 161,
-    "fats": 53,
-    "label": "per serving (hall portion)",
-    "source": "estimated"
+    "calories": 0,
+    "protein": 0,
+    "carbs": 0,
+    "fats": 0,
+    "label": "Estimated per serving",
+    "source": "unavailable",
+    "estimateAvailable": false,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/smoker-catalog/mongolian-beef-flat-top-crew.jpg",
   "heroImageAlt": "Scallion Crisp Mongolian Flank Tray — crew-sized BBQ spread with visible smoke and bark",

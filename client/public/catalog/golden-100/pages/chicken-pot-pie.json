@@ -13,10 +13,10 @@
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 394,
-  "protein": 56,
+  "calories": 414,
+  "protein": 36,
   "carbs": 6,
-  "fats": 15,
+  "fats": 26,
   "tags": [
     "protein:chicken",
     "format:plated_main",
@@ -71,27 +71,62 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Cook the chicken",
-      "instruction": "Simmer diced chicken thighs in salted broth until 165°F; shred or dice. Reserve broth.",
-      "minutes": 20,
-      "heatLevel": "medium"
-    },
-    {
-      "stepNumber": 2,
-      "title": "Make the velouté",
-      "instruction": "Melt butter; whisk flour 2 minutes. Whisk in 3 cups broth until thick. Fold in chicken, peas, carrots, and onion.",
-      "minutes": 15,
-      "heatLevel": "medium"
-    },
-    {
-      "stepNumber": 3,
-      "title": "Top and bake",
-      "instruction": "Transfer filling to hotel pans; cover with pie crust or puff pastry. Vent slits. Brush with egg wash.",
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Chicken Pot Pie in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
       "minutes": 12,
       "heatLevel": ""
     },
     {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Cook the chicken",
+      "instruction": "Simmer diced chicken thighs in salted broth until 165°F; shred or dice. Reserve broth. Plan about 20 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 20,
+      "heatLevel": "medium"
+    },
+    {
       "stepNumber": 4,
+      "title": "Make the velouté",
+      "instruction": "Melt butter; whisk flour 2 minutes. Whisk in 3 cups broth until thick. Fold in chicken, peas, carrots, and onion. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 15,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Top and bake",
+      "instruction": "Transfer filling to hotel pans; cover with pie crust or puff pastry. Vent slits. Brush with egg wash. Bake until the center reaches a safe internal temp (165°F) and edges look set — use a thermometer at the thickest point. Plan about 12 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 8,
+      "title": "Portion and open the line",
+      "instruction": "Portion Chicken Pot Pie onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
       "title": "Bake until golden",
       "instruction": "Bake at 400°F 30–35 minutes until crust is deep golden and filling bubbles at vents. Rest 10 minutes — molten filling burns tongues.",
       "minutes": 35,
@@ -119,24 +154,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 394,
-    "protein": 56,
+    "calories": 414,
+    "protein": 36,
     "carbs": 6,
-    "fats": 15,
-    "label": "per serving (hall portion)",
+    "fats": 26,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": true,
       "under30gFat": true,
       "highCarb": false,
       "lowCarb": true,
-      "mealPrepFriendly": false
+      "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": true,
-      "lighterOption": true,
-      "performanceMeal": true
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/golden-100/chicken-pot-pie.jpg",
@@ -166,5 +202,6 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "generatedAt": "2026-06-01T01:40:02.069Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "mealPrepNotes": "Prep mise en place before the shift — Chicken Pot Pie runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
 }

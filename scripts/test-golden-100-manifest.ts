@@ -7,7 +7,7 @@ import { GOLDEN_100_RECIPES, GOLDEN_100_TARGET_BY_CATEGORY, goldenManifestSummar
 import { validateGoldenManifest } from "../shared/golden-100/validate.js";
 
 const summary = goldenManifestSummary();
-assert.equal(summary.total, 100, "manifest must have 100 recipes");
+assert.equal(summary.total, 101, "manifest must have 101 recipes");
 
 for (const [cat, target] of Object.entries(GOLDEN_100_TARGET_BY_CATEGORY)) {
   const count = GOLDEN_100_RECIPES.filter((r) => r.masterCategoryId === cat).length;
@@ -23,6 +23,6 @@ if (warns.length > 0) {
 }
 
 const slugs = new Set(GOLDEN_100_RECIPES.map((r) => r.slug));
-assert.equal(slugs.size, 100, "unique slugs");
+assert.equal(slugs.size, 101, "unique slugs");
 
 console.log("[test-golden-100-manifest] OK", summary);

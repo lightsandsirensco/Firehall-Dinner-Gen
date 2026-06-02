@@ -13,10 +13,10 @@
   "cookTime": 155,
   "prepTime": 110,
   "difficulty": "medium",
-  "calories": 1131,
-  "protein": 48,
-  "carbs": 63,
-  "fats": 75,
+  "calories": 0,
+  "protein": 0,
+  "carbs": 0,
+  "fats": 0,
   "tags": [
     "protein:pork",
     "format:pizza",
@@ -110,41 +110,83 @@
   "steps": [
     {
       "stepNumber": 1,
+      "title": "Gather ingredients and equipment",
+      "instruction": "Line up every ingredient for Detroit-Style Pepperoni Pizza in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat ovens and surfaces",
+      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch pork. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
       "title": "Mix and rise the dough",
       "instruction": "Stir yeast into warm water with sugar; rest 5 minutes until foamy. Mix flour, salt, oil, and yeast water until a sticky dough forms. Knead 8 minutes. Rise covered 1–1½ hours until doubled — Detroit crust needs an airy, relaxed dough.",
       "minutes": 90,
       "heatLevel": ""
     },
     {
-      "stepNumber": 2,
+      "stepNumber": 4,
       "title": "Press into oiled pans",
       "instruction": "Generously butter and oil two 9x13 steel or dark cake pans — not a round stone. Press dough into corners and up sides slightly. Do not stretch thin; Detroit is thick and airy.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
-      "stepNumber": 3,
+      "stepNumber": 5,
       "title": "Cheese to the edges",
       "instruction": "Scatter cheese edge-to-edge so it touches the pan walls — this creates the frico crispy cheese skirt. Top with pepperoni if using. Rest 15–20 minutes while the oven preheats to 550°F or your oven max on the bottom rack.",
       "minutes": 20,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 6,
       "title": "First bake",
       "instruction": "Bake on the bottom rack 12–14 minutes until cheese caramelizes at the edges and the bottom sounds hollow when tapped. Edges should look fried, not pale.",
       "minutes": 14,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 7,
       "title": "Sauce stripes on top",
       "instruction": "Whisk crushed tomatoes with oregano and garlic powder. Remove pizza from oven and spoon sauce in two or three lengthwise stripes ON TOP of the baked cheese — Detroit puts sauce after the bake. Return to oven 5–7 minutes.",
       "minutes": 7,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 8,
+      "title": "Verify safe internal temps",
+      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F with a 3-minute rest. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
+      "minutes": 3,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 10,
+      "title": "Portion and open the line",
+      "instruction": "Portion Detroit-Style Pepperoni Pizza onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
+      "title": "Scale for larger halls",
+      "instruction": "When cooking for more than 8 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 12,
       "title": "Rest and cut rectangles",
       "instruction": "Rest 5 minutes, then cut into rectangular slices with a bench scraper. Serve on sheet trays — crispy cheese edges face out so the crew sees the Detroit signature.",
       "minutes": 5,
@@ -168,19 +210,20 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1131,
-    "protein": 48,
-    "carbs": 63,
-    "fats": 75,
-    "label": "per serving (hall portion)",
-    "source": "calculated",
+    "calories": 0,
+    "protein": 0,
+    "carbs": 0,
+    "fats": 0,
+    "label": "Estimated per serving",
+    "source": "unavailable",
+    "estimateAvailable": false,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
       "under30gFat": false,
       "highCarb": true,
       "lowCarb": false,
-      "mealPrepFriendly": false
+      "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": true,
@@ -216,5 +259,6 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "generatedAt": "2026-06-01T01:40:02.122Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "mealPrepNotes": "Prep mise en place before the shift — Detroit-Style Pepperoni Pizza runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
 }

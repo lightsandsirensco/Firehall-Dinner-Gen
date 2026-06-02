@@ -78,13 +78,13 @@
     }
   ],
   "nutrition": {
-    "calories": 80,
-    "protein": 1,
-    "carbs": 13,
+    "calories": 0,
+    "protein": 0,
+    "carbs": 0,
     "fats": 0,
-    "highlights": "~160 cal · vitamin C · lighter than cream-based shakes · ginger for digestion comfort",
-    "label": "per serving (hall portion)",
-    "source": "calculated",
+    "highlights": "Nutrition estimate coming soon",
+    "label": "Estimated per serving",
+    "source": "unavailable",
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
@@ -97,7 +97,8 @@
       "highProtein": false,
       "lighterOption": true,
       "performanceMeal": true
-    }
+    },
+    "estimateAvailable": false
   },
   "substitutions": [
     "Bottled 100% orange juice (1.5 cups) replaces fresh oranges in a pinch.",

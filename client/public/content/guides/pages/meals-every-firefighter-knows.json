@@ -5,27 +5,50 @@
   "description": "Meals every firefighter knows from station kitchens: chili, burgers, tacos, pasta bakes, and BBQ — the shared vocabulary of hall food.",
   "topic": "station_lifestyle",
   "pillar": "station_lifestyle",
-  "intro": "You can walk into most halls and predict three dinners from the freezer and whiteboard. Chili, burgers, tacos, pasta bake, BBQ chicken — these are not clichés. They are the shared language of crews who cook under interruption.",
+  "intro": "You can walk into most halls and predict three dinners from the freezer and whiteboard. Chili, burgers, tacos, pasta bake, BBQ chicken — these are not clichés. They are the shared language of crews who cook under interruption. Below: what halls actually cook for meals firefighters know — formats, timing, and recipe picks that survive a busy board.",
   "sections": [
     {
       "id": "list",
       "heading": "The hall canon",
       "paragraphs": [
-        "Chili, smash burgers, taco bar, chicken parm, pulled pork, mac and cheese, sheet-pan fajitas. If you can cook these, you can feed most crews."
+        "Chili, smash burgers, taco bar, chicken parm, pulled pork, mac and cheese, sheet-pan fajitas. If you can cook these, you can feed most crews.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
       ]
     },
     {
       "id": "why",
       "heading": "Why the canon works",
       "paragraphs": [
-        "These meals scale, survive holds, and need no fine dining timing. They are what crews suggest when someone asks 'what should we make?'"
+        "These meals scale, survive holds, and need no fine dining timing. They are what crews suggest when someone asks 'what should we make?'",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
+      ]
+    },
+    {
+      "id": "hall-tonight",
+      "heading": "What this looks like on the hall tonight",
+      "paragraphs": [
+        "Kitchen culture shows up in small moves: who shops, who cleans, whether rookies get coached or roasted. For meals firefighters know, fairness beats perfection — rotate the jobs that nobody wants twice in a row.",
+        "Meals are morale. A crew that trusts the kitchen cooks more often and complains less about grocery splits. Keep the tone direct and the help real."
+      ],
+      "tips": [
+        "Praise the cook in the bay — fix critiques one-on-one after cleanup.",
+        "Write grocery splits on the receipt photo the same night you shop."
       ]
     }
   ],
   "practicalAdvice": [
     "Master one meal in each category — your hall will thank you.",
     "Teach rookies one batch meal and one line meal.",
-    "Keep the shopping list for your hall canon posted — repetition builds speed."
+    "Keep the shopping list for your hall canon posted — repetition builds speed.",
+    "Post who's cooking and what's holding warm on the whiteboard — post-call eaters should not hunt for answers."
   ],
   "mealRecommendations": [
     {
@@ -70,5 +93,6 @@
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
   "updatedAt": "2026-05-27T18:00:00.000Z",
-  "readMinutes": 7
+  "readMinutes": 7,
+  "heroImageAlt": "Meals Every Firefighter Knows — meals firefighters know tips for fire station kitchens and crew-sized meals"
 }

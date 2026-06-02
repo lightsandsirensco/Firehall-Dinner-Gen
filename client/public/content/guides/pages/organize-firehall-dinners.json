@@ -5,27 +5,50 @@
   "description": "How to organize firehall dinners: who decides, who cooks, when to shop, and how to run the line so dinner happens on busy shifts.",
   "topic": "shift_operations",
   "pillar": "operations_how_to",
-  "intro": "Organized hall dinners do not happen by accident. Someone owns the decision by mid-afternoon, someone owns the cook, and the whiteboard says what time food is ready. Without that, you get seventeen opinions and delivery apps.",
+  "intro": "Organized hall dinners do not happen by accident. Someone owns the decision by mid-afternoon, someone owns the cook, and the whiteboard says what time food is ready. Without that, you get seventeen opinions and delivery apps. Below: what halls actually cook for organize fire station dinner — formats, timing, and recipe picks that survive a busy board.",
   "sections": [
     {
       "id": "timeline",
       "heading": "Sample timeline",
       "paragraphs": [
-        "15:00 decide meal. 16:00 shop. 17:00 prep. 18:30 serve window opens. Cleanup assigned at start, not end."
+        "15:00 decide meal. 16:00 shop. 17:00 prep. 18:30 serve window opens. Cleanup assigned at start, not end.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
       ]
     },
     {
       "id": "roles",
       "heading": "Roles on the whiteboard",
       "paragraphs": [
-        "Cook, prep, cleanup lead, and shopper — even when one person does two jobs, names on the board prevent the 'everyone helped' trap."
+        "Cook, prep, cleanup lead, and shopper — even when one person does two jobs, names on the board prevent the 'everyone helped' trap.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
+      ]
+    },
+    {
+      "id": "ops-timing",
+      "heading": "When tones drop mid-prep",
+      "paragraphs": [
+        "Operational meals need a \"good enough\" checkpoint. For organize fire station dinner, choose recipes where lowering heat and covering still leaves edible food when you return — not a burned skillet.",
+        "Hotel pans and sheet trays beat delicate plating on busy boards. Finish crisp elements last so post-call eaters still get texture."
+      ],
+      "tips": [
+        "Count who is on duty at 17:00, not who was on the board at 08:00.",
+        "One backup frozen protein in the walk-in saves surprise mutual-aid eaters."
       ]
     }
   ],
   "practicalAdvice": [
     "Post menu and time on the whiteboard by 16:00.",
     "Assign cook and cleanup before shopping.",
-    "Run lines for crews over six — plated service rarely scales."
+    "Run lines for crews over six — plated service rarely scales.",
+    "Post who's cooking and what's holding warm on the whiteboard — post-call eaters should not hunt for answers."
   ],
   "mealRecommendations": [
     {
@@ -65,5 +88,6 @@
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
   "updatedAt": "2026-05-27T18:00:00.000Z",
-  "readMinutes": 7
+  "readMinutes": 7,
+  "heroImageAlt": "How to Organize Firehall Dinners — organize fire station dinner tips for fire station kitchens and crew-sized meals"
 }

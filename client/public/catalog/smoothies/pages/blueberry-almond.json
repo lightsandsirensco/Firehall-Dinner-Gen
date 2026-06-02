@@ -75,13 +75,13 @@
     }
   ],
   "nutrition": {
-    "calories": 124,
-    "protein": 7,
-    "carbs": 7,
-    "fats": 8,
-    "highlights": "~290 cal · ~17 g protein · vitamin E and fats from almond butter · anthocyanins from blueberries",
-    "label": "per serving (hall portion)",
-    "source": "calculated",
+    "calories": 0,
+    "protein": 0,
+    "carbs": 0,
+    "fats": 0,
+    "highlights": "Nutrition estimate coming soon",
+    "label": "Estimated per serving",
+    "source": "unavailable",
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
@@ -94,7 +94,8 @@
       "highProtein": false,
       "lighterOption": true,
       "performanceMeal": true
-    }
+    },
+    "estimateAvailable": false
   },
   "substitutions": [
     "Peanut butter swaps in if almond butter is not on hand.",

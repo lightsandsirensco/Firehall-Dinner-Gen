@@ -122,20 +122,47 @@ export function calculateNutritionFromIngredients(
     };
     source = "curated";
   } else {
-    perServing = { calories: 520, protein: 32, carbs: 48, fat: 22 };
-    source = "estimated";
+    perServing = { calories: 0, protein: 0, carbs: 0, fat: 0 };
+    source = "unavailable";
   }
 
-  perServing = clampPerServing(roundMacros(perServing), options.mealType);
+  let estimateAvailable = source !== "unavailable";
+
+  if (estimateAvailable) {
+    perServing = clampPerServing(roundMacros(perServing), options.mealType);
+    const weakMatch = matched < Math.max(3, Math.ceil(total * 0.5));
+    if (
+      source === "calculated" &&
+      weakMatch &&
+      options.mealType !== "smoothie" &&
+      perServing.calories < 250
+    ) {
+      estimateAvailable = false;
+      source = "unavailable";
+      perServing = { calories: 0, protein: 0, carbs: 0, fat: 0 };
+    }
+  }
 
   return {
     ...perServing,
     servings,
     source,
+    estimateAvailable,
     matchedIngredientCount: matched,
     totalIngredientCount: total,
-    filterFlags: deriveFilterFlags(perServing, options.mealPrepFriendly ?? false),
-    badgeCandidates: deriveBadgeCandidates(perServing, options.mealType),
+    filterFlags: estimateAvailable
+      ? deriveFilterFlags(perServing, options.mealPrepFriendly ?? false)
+      : {
+          highProtein: false,
+          under700Calories: false,
+          under30gFat: false,
+          highCarb: false,
+          lowCarb: false,
+          mealPrepFriendly: options.mealPrepFriendly ?? false,
+        },
+    badgeCandidates: estimateAvailable
+      ? deriveBadgeCandidates(perServing, options.mealType)
+      : { highProtein: false, lighterOption: false, performanceMeal: false },
   };
 }
 
@@ -145,7 +172,7 @@ export function toGoldenNutritionBlock(record: RecipeNutritionRecord) {
     protein: record.protein,
     carbs: record.carbs,
     fats: record.fat,
-    label: "per serving (hall portion)",
+    label: "Estimated per serving",
     filterFlags: record.filterFlags,
     badgeCandidates: record.badgeCandidates,
     source: record.source,

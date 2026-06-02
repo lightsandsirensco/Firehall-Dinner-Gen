@@ -5,27 +5,50 @@
   "description": "Firehouse comfort meals crews ask for again: cheesy bakes, chili, parm, mashed plates, and loaded bowls after long jobs.",
   "topic": "meal_planning",
   "pillar": "recipes_meals",
-  "intro": "Comfort food at the station is half the reset after a tough job. Crews want salt, starch, and enough volume that nobody hits the vending machine later. These meals are not gourmet — they are familiar, hot, and big.",
+  "intro": "Comfort food at the station is half the reset after a tough job. Crews want salt, starch, and enough volume that nobody hits the vending machine later. These meals are not gourmet — they are familiar, hot, and big. Below: what halls actually cook for firehouse comfort meals — formats, timing, and recipe picks that survive a busy board.",
   "sections": [
     {
       "id": "hits",
       "heading": "Hall hits that never get voted off",
       "paragraphs": [
-        "Mac and cheese, chicken parm, chili, meatloaf, pot pie, and loaded potatoes. These are not creative — they are effective."
+        "Mac and cheese, chicken parm, chili, meatloaf, pot pie, and loaded potatoes. These are not creative — they are effective.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
       ]
     },
     {
       "id": "serve",
       "heading": "How to serve comfort without a mess",
       "paragraphs": [
-        "Tray format, one ladle per pot, and buns or garlic bread on the side. Comfort food fails when the line backs up — keep movement simple."
+        "Tray format, one ladle per pot, and buns or garlic bread on the side. Comfort food fails when the line backs up — keep movement simple.",
+        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+      ],
+      "tips": [
+        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
+        "Label allergens on the line once — it stops the mid-meal Q&A loop."
+      ]
+    },
+    {
+      "id": "shift-pick",
+      "heading": "Pick the format before the recipe",
+      "paragraphs": [
+        "For firehouse comfort meals, decide line vs. plated vs. batch before you open a recipe tab. Lines win when eaters show up between 17:00 and 20:00; batches win when you know the whole crew lands at once.",
+        "Post protein, starch, and hold plan on the whiteboard. When tones drop, the next cook should read \"covered on low\" instead of guessing what you meant on the flat-top."
+      ],
+      "tips": [
+        "Assign one cook and one runner — everyone else stays out until called.",
+        "Sauces on the side keep reheat from turning gluey for post-call eaters."
       ]
     }
   ],
   "practicalAdvice": [
     "Serve something crunchy or toasted if the main is soft.",
     "Keep hot sauce on the table — instant customization.",
-    "Do not apologize for comfort night — balance the week instead."
+    "Do not apologize for comfort night — balance the week instead.",
+    "Post who's cooking and what's holding warm on the whiteboard — post-call eaters should not hunt for answers."
   ],
   "mealRecommendations": [
     {
@@ -80,5 +103,6 @@
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
   "updatedAt": "2026-05-27T18:00:00.000Z",
-  "readMinutes": 7
+  "readMinutes": 7,
+  "heroImageAlt": "Firehouse Comfort Meals — firehouse comfort meals tips for fire station kitchens and crew-sized meals"
 }
