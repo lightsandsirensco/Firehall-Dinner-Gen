@@ -92,9 +92,50 @@ export default function GuideArticlePage() {
         )}
 
         {error && (
-          <p className="text-destructive text-sm" role="alert">
-            {(error as Error).message || "Guide not found"}
-          </p>
+          <div
+            className="rounded-2xl border border-destructive/30 bg-destructive/5 p-6"
+            role="alert"
+          >
+            <p className="text-destructive text-sm font-medium">
+              {(error as Error).message || "Could not load this guide."}
+            </p>
+            <p className="mt-2 text-sm text-muted-foreground">
+              Check your connection or try again in a moment.
+            </p>
+            <Link href="/guides" className="mt-4 inline-block text-sm text-primary hover:underline">
+              ← All guides
+            </Link>
+          </div>
+        )}
+
+        {!isLoading && !error && slug && !article && (
+          <div
+            className="rounded-2xl border border-border/30 bg-muted/10 p-6 sm:p-8"
+            role="status"
+            data-testid="guide-not-found"
+          >
+            <h1 className="font-heading text-2xl tracking-tight">Guide not found</h1>
+            <p className="mt-3 text-muted-foreground leading-relaxed">
+              That article may have moved or the link is out of date. Try the classics list or browse all guides.
+            </p>
+            <div className="mt-5 flex flex-wrap gap-3">
+              <Link
+                href="/guides/10-classic-firehall-meals"
+                className="inline-flex items-center rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground hover:bg-primary/90"
+              >
+                10 classic firehall meals
+              </Link>
+              <Link
+                href="/guides"
+                className="inline-flex items-center rounded-lg border border-border px-4 py-2 text-sm font-semibold hover:bg-muted/50"
+              >
+                All guides
+              </Link>
+              <Link href="/" className="inline-flex items-center text-sm text-primary hover:underline">
+                Home
+              </Link>
+            </div>
+          </div>
         )}
 
         {article && (
@@ -151,13 +192,13 @@ export default function GuideArticlePage() {
                 Practical advice for the shift
               </h2>
               <ul className="mt-4 space-y-2.5 text-[15px] text-foreground/85 leading-relaxed list-disc pl-5">
-                {article.practicalAdvice.map((tip) => (
+                {(article.practicalAdvice ?? []).map((tip) => (
                   <li key={tip.slice(0, 40)}>{tip}</li>
                 ))}
               </ul>
             </aside>
 
-            {article.sections.map((section) => (
+            {(article.sections ?? []).map((section) => (
               <section
                 key={section.id}
                 className="mt-11 sm:mt-14"
@@ -196,7 +237,7 @@ export default function GuideArticlePage() {
                 Crew-sized portions and station-realistic timing — same recipes as the rest of the site.
               </p>
               <ul className="mt-6 space-y-4">
-                {article.mealRecommendations.map((meal) => {
+                {(article.mealRecommendations ?? []).map((meal) => {
                   const href = approvedCatalogRecipePath(meal.slug);
                   return (
                     <li
@@ -249,7 +290,7 @@ export default function GuideArticlePage() {
                 FAQ
               </h2>
               <dl className="mt-6 space-y-6">
-                {article.faqs.map((f) => (
+                {(article.faqs ?? []).map((f) => (
                   <div key={f.question} className="border-t border-border/20 pt-6 first:border-t-0 first:pt-0">
                     <dt className="font-semibold text-foreground">{f.question}</dt>
                     <dd className="mt-2 text-muted-foreground leading-relaxed">{f.answer}</dd>

@@ -6,6 +6,7 @@ import { fetchGoldenCatalogIndex } from "@/lib/golden-recipe-api";
 import { HomeHero } from "@/components/home/home-hero";
 import { HomeSeoIntro } from "@/components/home/home-seo-intro";
 import { HomeTrustStrip } from "@/components/home/home-trust-strip";
+import { HomeClassicFirehallMeals } from "@/components/home/home-classic-firehall-meals";
 import { HomeHowItWorks } from "@/components/home/home-how-it-works";
 import { HomeFeaturedMeals } from "@/components/home/home-featured-meals";
 import { HomeWhyCrews } from "@/components/home/home-why-crews";
@@ -42,6 +43,7 @@ export default function Home() {
           <HomeLightsAuthenticity />
         </div>
         <HomeTrustStrip />
+        <HomeClassicFirehallMeals />
         <HomeHowItWorks />
         <HomeFeaturedMeals meals={catalogMeals} />
         <div className="hidden md:block">

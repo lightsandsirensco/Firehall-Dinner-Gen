@@ -6,94 +6,117 @@ import { buildSeoGuide, meal, STANDARD_FAQS } from "./seo-article-build.js";
 
 export const CORNERSTONE_BLOG_ARTICLES = [
   buildSeoGuide({
-    slug: "top-firehall-classics",
-    seoTitle: "Top 20 Firehall Classics Every Firefighter Should Know",
-    title: "Top 20 Firehall Classics Every Firefighter Should Know",
-    subtitle: "The meals that show up in every hall — and why crews still make them",
+    slug: "10-classic-firehall-meals",
+    seoTitle: "10 Classic Firehall Meals Firefighters Actually Cook",
+    title: "10 Classic Firehall Meals Firefighters Actually Cook",
+    subtitle: "The same ten dinners on the Classics Wheel — built for real shift timing",
     description:
-      "The top 20 firehall classics every firefighter should know: chicken parm, chili, lasagna, BBQ, and the station meals that became tradition — not trends.",
+      "A practical list of classic firehall meals, from jerk chicken and rice and peas to chili, steak sandwiches, BBQ chicken mac and cheese, and more.",
     keywords: [
-      "firehall classics",
+      "classic firehall meals",
       "firefighter meals",
       "fire station food",
-      "hall traditions",
+      "classics wheel",
       "firefighter dinner ideas",
     ],
     topic: "station_lifestyle",
     pillar: "station_lifestyle",
-    readMinutes: 12,
+    readMinutes: 8,
     intro:
-      "Walk into most halls and you will hear the same short list before anyone opens the fridge: chili, parm, tacos, lasagna, something on the grill. These are not random picks — they are firehall classics because they survived tones, picky eaters, and the rookie who oversalted the pot in 2019. This is the canon we actually cook, ranked by how often it shows up and how hard it is to kill the tradition.",
+      "When the whiteboard says \"dinner?\" and nobody wants to think, halls reach for the same short list. These ten are the Classics Wheel lineup — jerk, BBQ mac, steak sandwiches, smash burgers, parm, pulled pork, chili with garlic bread, caesar, beef dip, and street tacos. Not food-blog experiments. Meals that hold on low, feed staggered eaters, and still taste right after a run.",
     practicalAdvice: [
-      "Learn one bake, one line meal, and one batch pot — that covers most hall weeks.",
-      "When a meal hits, write the recipe on the hall drive before the cook transfers.",
-      "Feed for seconds on classics — empty pans kill morale faster than bad seasoning.",
+      "Pick one line meal, one tray bake, and one pot — that covers most weeks without burning out the cook.",
+      "Post protein and hold time on the board before tones; the next cook should not guess what \"almost done\" meant.",
+      "Spin the Classics Wheel at /wheel when the crew cannot agree — same ten meals, zero debate spiral.",
     ],
     sections: [
       {
-        id: "tradition",
-        heading: "How a meal becomes a hall classic",
+        id: "why-ten",
+        heading: "Why these ten and not twenty",
         paragraphs: [
-          "A firehall classic is not the fanciest plate on the menu. It is the one that feeds eight without drama, tastes the same when someone eats at 18:05 or 19:40, and survives a run without turning to trash. Chili works because the pot waits. Taco bar works because people build their own plate when they stagger in. Parm works because cheese and sauce forgive a lot of rookie mistakes.",
-          "Tradition also needs a story — the storm night chili, the transfer-day BBQ, the captain who always ran lasagna on Sundays. The food sticks because the crew remembers who was at the table.",
+          "A longer list looks impressive on paper and useless at 17:15. We trimmed to the meals firefighters actually repeat: formats that scale to six or twelve, survive interrupted prep, and do not need a pastry chef on duty.",
+          "Every recipe below links to crew-sized steps on this site — portions, timing, and notes written for a shared kitchen, not a home stove.",
         ],
       },
       {
-        id: "culture",
-        heading: "Station culture at the table",
+        id: "wheel",
+        heading: "Same picks as the Classics Wheel",
         paragraphs: [
-          "Sunday chili, training-day burgers, parm before a long weekend — lots of halls run unwritten calendars. Nobody votes on paper; someone just starts chopping onions and the room knows what night it is.",
-          "The table is where the shift decompresses. Classics matter because they are predictable. After a loud board, nobody wants a surprise tasting menu. They want a hot plate they recognize.",
+          "The wheel at /wheel spins these exact slugs. If your hall already trusts the wheel, this article is the cheat sheet — open a recipe, shop once, cook once.",
+          "New cook on the line? Start with pulled pork or smash burgers. Training night with seniors watching? Chili and garlic bread forgives a late return from the apparatus floor.",
         ],
       },
       {
-        id: "ranked",
-        heading: "The ranked list — and why each one earned a spot",
+        id: "tonight",
+        heading: "How to run one tonight",
         paragraphs: [
-          "Below are twenty hall meals we see again and again — ranked by how often crews actually cook them, not by what looks good on a food blog. Each link goes to a full crew-sized recipe with real timing and station notes.",
-        ],
-      },
-      {
-        id: "missed",
-        heading: "What did we miss?",
-        paragraphs: [
-          "Every hall has a local legend — Dave's white chicken chili, the engine company's smoked mac, a potato soup that only appears after snow. Drop yours in the group chat or tag your hall when you share this list. If it feeds a crew and survives tones, it belongs in the conversation.",
-          "We update this canon as halls tell us what they actually run — not what sounded good in a meeting.",
+          "Read the full recipe before you shop — not just the title. Check headcount, gear, and whether you need a line or a single hotel pan.",
+          "Assign one cook and one runner. Everyone else stays out of the kitchen until called. Sauces and buns on the side keep reheat from turning mushy for post-call eaters.",
         ],
       },
     ],
     mealRecommendations: [
-      meal("chicken-parm", "1. Chicken Parm", "Italian night standard — crispy cutlets, red sauce, melted cheese, zero pretension."),
-      meal("big-chili", "2. Hall-Sized Beef and Bean Chili", "The default Sunday pot — holds on the stove, scales cheap, feeds late eaters."),
-      meal("pulled-pork", "3. Pulled Pork Sandwiches", "BBQ culture starter — low stress once the pork is done, buns do the portion work."),
-      meal("batch-lasagna", "4. Giant Batch Lasagna", "Oven does the labor — slice and feed when the crew trickles in after training."),
-      meal("hall-taco-bar", "5. Hall Taco Bar Night", "Ends dinner debates — line format handles mixed spice tolerance and staggered eating."),
-      meal("smash-burgers", "6. Double Smash Burgers", "Flat-top night — fast, loud, and everyone knows what they are getting."),
-      meal("beef-dip", "7. Beef Dip Sandwiches", "Canadian hall staple — rich au jus, pile of beef, rolls that disappear first."),
-      meal("jambalaya", "8. Jambalaya", "One-pot crew feed — sausage, rice, heat, and a single pot to wash."),
-      meal("shepherds-pie", "9. Shepherd's Pie", "Comfort mash cap over savory filling — reheats clean for the shift that follows."),
-      meal("steak-sandwiches", "10. Steak Sandwiches", "Flat-top classic — thin sliced steak, onions, melty cheese, handheld speed."),
-      meal("smoked-wings-white-sauce", "11. Smoked Wings with White Sauce", "Game-day wings without the fryer babysitting — smoke, sauce, done."),
-      meal("meatball-hoagies", "12. Meatball Hoagies", "Handheld feed — sauce on the side keeps rolls from dying on the pass."),
-      meal("mac-and-cheese-bake", "13. Baked Mac and Cheese", "Pure comfort — holds warm, stretches with a side salad or garlic bread."),
-      meal("chicken-pot-pie", "14. Chicken Pot Pie", "All-in-one bowl energy — soft, salty, familiar after a hard job."),
-      meal("baked-ziti", "15. Baked Ziti", "Pasta bake that forgives timing — feed from the pan, not from a plating chart."),
-      meal("loaded-baked-potato-bar", "16. Loaded Baked Potato Bar", "Self-serve line — toppings hide dietary quirks without cooking three mains."),
-      meal("smoked-brisket", "17. Kansas City Smoked Brisket", "When the hall has time and a pit — centerpiece meal crews talk about for months."),
-      meal("breakfast-burrito-bar", "18. Breakfast Burrito Bar", "Morning canon — also wins as breakfast-for-dinner when the shift runs long."),
-      meal("parm-hero-subs", "19. Parm Hero Subs", "Italian handheld night — same parm love, faster line than plated cutlets."),
-      meal("meatloaf-mashed", "20. Meatloaf and Mashed Potatoes", "Old-school hall plate — slices clean, gravy optional, nobody leaves hungry."),
+      meal(
+        "jerk-chicken",
+        "Jerk Chicken & Rice and Peas",
+        "Grill-night heat with coconut rice — charred thighs, island sides, feeds eight without a fussy pass.",
+      ),
+      meal(
+        "bbq-chicken-mac-and-cheese",
+        "BBQ Chicken Mac and Cheese",
+        "Smoky shredded chicken folded into baked mac — tray comfort when the hall wants calories and zero drama.",
+      ),
+      meal(
+        "steak-sandwiches",
+        "Steak Sandwiches",
+        "Sliced sirloin on toasted buns with fries and salad — flat-top speed, handheld portions, line-friendly.",
+      ),
+      meal(
+        "smash-burgers",
+        "Smash Burgers",
+        "Double patties, lacy edges, potato buns — loud flat-top night everyone recognizes.",
+      ),
+      meal(
+        "chicken-parm",
+        "Chicken Parmesan",
+        "Breaded cutlets, red sauce, melted cheese, pasta — Italian night that forgives rookie timing.",
+      ),
+      meal(
+        "pulled-pork",
+        "Pulled Pork Sandwiches",
+        "Low-stress once the pork is done — buns and slaw do the portion work on the line.",
+      ),
+      meal(
+        "chili-garlic-bread",
+        "Firehall Chili & Garlic Bread",
+        "Smoky beef chili with cheesy garlic pull-apart — the pot waits when tones drop mid-prep.",
+      ),
+      meal(
+        "chicken-caesar",
+        "Chicken Caesar Salad",
+        "Grilled chicken over big romaine bowls — lighter night that still feels like a real feed.",
+      ),
+      meal(
+        "beef-dip",
+        "Beef Dip Sandwiches",
+        "Au jus on the counter, pile of beef, soft rolls — Canadian hall legend, dip mandatory.",
+      ),
+      meal(
+        "steak-tacos",
+        "Street-Style Chimichurri Steak Tacos",
+        "Charred steak, bright chimichurri, pickled onions — taco line energy without a rice side distraction.",
+      ),
     ],
     faqs: [
       {
-        question: "Why are classics more important than trendy recipes at the hall?",
+        question: "Are these the same meals on the Classics Wheel?",
         answer:
-          "Trends do not survive tones. Classics feed mixed crews, tolerate hold time, and do not need a single cook standing at the pass. When the board is loud, predictable beats clever every time.",
+          "Yes. Same ten slugs, same recipes. Use the wheel when you want random; use this list when you want to pick deliberately.",
       },
       {
-        question: "How do I learn my hall's canon fast as a rookie?",
+        question: "What if we only have four on duty tonight?",
         answer:
-          "Cook with a senior on chili or taco bar night. Ask what meals repeat monthly, not what sounded good once. Write down the shopping list when it works — that list is your hall's real menu.",
+          "Each recipe scales — open the page, set your crew size, and follow the portions. Line meals like tacos and sandwiches stretch easiest when eaters trickle in.",
       },
       STANDARD_FAQS.catalog,
       STANDARD_FAQS.generator,
@@ -195,7 +218,7 @@ export const CORNERSTONE_BLOG_ARTICLES = [
       STANDARD_FAQS.catalog,
     ],
     relatedArticleSlugs: [
-      "top-firehall-classics",
+      "10-classic-firehall-meals",
       "feeding-a-firehall-crew",
       "25-firefighter-dinner-ideas",
     ],
@@ -447,7 +470,7 @@ export const CORNERSTONE_BLOG_ARTICLES = [
     relatedArticleSlugs: [
       "rookie-cooking-mistakes",
       "feeding-a-firehall-crew",
-      "top-firehall-classics",
+      "10-classic-firehall-meals",
     ],
   }),
 ];

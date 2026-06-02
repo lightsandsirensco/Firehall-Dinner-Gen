@@ -82,6 +82,12 @@ function AppRoutes() {
       <Route path="/firefighter-bbq-recipes">{() => <SeoLandingPage slug="firefighter-bbq-recipes" />}</Route>
       <Route path="/guides" component={GuidesIndexPage} />
       <Route path="/guides/topic/:clusterId" component={GuidesClusterPage} />
+      <Route path="/guides/top-firehall-classics">
+        {() => <Redirect to="/guides/10-classic-firehall-meals" />}
+      </Route>
+      <Route path="/blog/top-firehall-classics">
+        {() => <Redirect to="/guides/10-classic-firehall-meals" />}
+      </Route>
       <Route path="/guides/:slug" component={GuideArticlePage} />
       <Route path="/blog/:slug" component={GuideArticlePage} />
       <Route path="/families" component={FamiliesIndexPage} />
