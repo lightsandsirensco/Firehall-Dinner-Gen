@@ -8,15 +8,15 @@
   "category": "bbq_grill_nights",
   "cuisine": "american",
   "description": "Adapted from classic Kansas City burnt-end tradition (Amazing Ribs, BBQ Pit Boys): brisket point smokes until tender, gets cubed, glazed, and finished until the edges turn sticky and charred.",
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "cookTime": 420,
   "prepTime": 30,
   "difficulty": "hard",
-  "calories": 0,
-  "protein": 0,
-  "carbs": 0,
-  "fats": 0,
+  "calories": 951,
+  "protein": 76,
+  "carbs": 52,
+  "fats": 51,
   "tags": [
     "protein:beef",
     "format:bbq",
@@ -40,134 +40,120 @@
   "ingredients": [
     {
       "name": "brisket point",
-      "quantity": "4.8",
+      "quantity": "6",
       "unit": "lb",
       "notes": "or untrimmed point from a packer"
     },
     {
       "name": "kosher salt",
-      "quantity": "2.6",
+      "quantity": "3",
       "unit": "tbsp"
     },
     {
       "name": "coarse black pepper",
-      "quantity": "2.6",
+      "quantity": "3",
       "unit": "tbsp"
     },
     {
       "name": "brown sugar",
-      "quantity": "2.6",
+      "quantity": "3",
       "unit": "tbsp"
     },
     {
       "name": "smoked paprika",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tbsp"
     },
     {
       "name": "garlic powder",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tbsp"
     },
     {
       "name": "BBQ sauce",
-      "quantity": "1 1/4",
+      "quantity": "1.5",
       "unit": "cups"
     },
     {
       "name": "honey",
-      "quantity": "1/4",
+      "quantity": "0.25",
       "unit": "cup"
     },
     {
       "name": "apple cider vinegar",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tbsp"
     },
     {
       "name": "unsalted butter",
-      "quantity": "2.6",
+      "quantity": "3",
       "unit": "tbsp"
     },
     {
       "name": "dill pickle chips",
-      "quantity": "1 1/4",
+      "quantity": "1.5",
       "unit": "cups"
     },
     {
       "name": "white bread",
-      "quantity": "12",
+      "quantity": "15",
       "unit": "slices"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Firehall Burnt Ends Platter in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch beef. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Season the point",
       "instruction": "Pat point dry. Mix salt, pepper, brown sugar, paprika, and garlic powder; rub all sides. Rest 15 minutes while smoker heats to 275°F.",
       "minutes": 15,
       "heatLevel": "low"
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Smoke until tender",
-      "instruction": "Smoke point fat-side up at 275°F until bark is set and internal temp reaches 165°F, about 4 hours. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Smoke point fat-side up at 275°F until bark is set and internal temp reaches 165°F, about 4 hours.",
       "minutes": 240,
       "heatLevel": "low"
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Wrap and finish",
-      "instruction": "Wrap in foil with a splash of apple cider vinegar. Continue at 275°F until probe-tender and 203°F internal, about 2–3 hours. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Wrap in foil with a splash of apple cider vinegar. Continue at 275°F until probe-tender and 203°F internal, about 2–3 hours.",
       "minutes": 150,
       "heatLevel": "low"
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Rest and cube",
-      "instruction": "Rest wrapped 30 minutes. Cube point into 1-inch bites, discarding excess hard fat and gristle. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Rest wrapped 30 minutes. Cube point into 1-inch bites, discarding excess hard fat and gristle.",
       "minutes": 30,
       "heatLevel": ""
     },
     {
-      "stepNumber": 7,
+      "stepNumber": 5,
       "title": "Build the glaze",
-      "instruction": "Simmer BBQ sauce, honey, vinegar, and butter until glossy. Toss cubed burnt ends to coat evenly. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Plan about 8 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Simmer BBQ sauce, honey, vinegar, and butter until glossy. Toss cubed burnt ends to coat evenly.",
       "minutes": 8,
       "heatLevel": ""
     },
     {
-      "stepNumber": 8,
+      "stepNumber": 6,
       "title": "Caramelize the edges",
       "instruction": "Spread glazed cubes on sheet pans. Return to smoker or 375°F oven 15–20 minutes, stirring once, until edges char and glaze sets sticky.",
       "minutes": 20,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 9,
+      "stepNumber": 7,
       "title": "Hold and serve",
-      "instruction": "Hold covered at 170°F with foil vented slightly. Serve on a platter with pickles and white bread for burnt-end sandwiches. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Hold covered at 170°F with foil vented slightly. Serve on a platter with pickles and white bread for burnt-end sandwiches.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 10,
+      "stepNumber": 8,
       "title": "Leftovers",
-      "instruction": "Reheat covered at 325°F with extra sauce. Chop into mac and cheese or loaded fries. Plan about 10 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Reheat covered at 325°F with extra sauce. Chop into mac and cheese or loaded fries.",
       "minutes": 10,
       "heatLevel": ""
     }
@@ -189,26 +175,12 @@
   "mealPrepNotes": "Smoke point early. Cube and glaze right before service or hold glazed cubes covered at 170°F up to 45 minutes. Re-crisp under broiler 2 minutes if they soften.",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 0,
-    "protein": 0,
-    "carbs": 0,
-    "fats": 0,
-    "label": "Estimated per serving",
-    "source": "unavailable",
-    "estimateAvailable": false,
-    "filterFlags": {
-      "highProtein": true,
-      "under700Calories": false,
-      "under30gFat": false,
-      "highCarb": true,
-      "lowCarb": false,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": false
-    }
+    "calories": 951,
+    "protein": 76,
+    "carbs": 52,
+    "fats": 51,
+    "label": "per serving (hall portion)",
+    "source": "estimated"
   },
   "heroImage": "/images/smoker-catalog/firehall-burnt-ends-platter.jpg",
   "heroImageAlt": "Firehall Burnt Ends Platter — crew-sized BBQ spread with visible smoke and bark",
@@ -235,6 +207,6 @@
     "smoked-baked-beans-crew"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T23:32:23.199Z",
+  "generatedAt": "2026-06-04T20:47:49.413Z",
   "contentVersion": 2
 }

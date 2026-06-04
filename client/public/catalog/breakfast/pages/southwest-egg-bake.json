@@ -13,8 +13,8 @@
     "salsa",
     "pepper-jack"
   ],
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "prepTime": 20,
   "cookTime": 38,
   "totalTime": 58,
@@ -22,36 +22,36 @@
   "ingredients": [
     {
       "name": "large eggs",
-      "quantity": "11"
+      "quantity": "14"
     },
     {
       "name": "whole milk",
-      "quantity": "2.4",
+      "quantity": "3 cups",
       "notes": "or half-and-half for richer"
     },
     {
       "name": "turkey sausage or lean pork sausage",
-      "quantity": "2",
+      "quantity": "2 lb",
       "notes": "browned"
     },
     {
       "name": "onion",
-      "quantity": "3/4",
+      "quantity": "1",
       "notes": "diced"
     },
     {
       "name": "baby spinach",
-      "quantity": "6.4",
+      "quantity": "8–10 oz",
       "notes": "or chopped kale, sautéed and squeezed dry"
     },
     {
       "name": "shredded cheese",
-      "quantity": "2.4",
+      "quantity": "3 cups",
       "notes": "cheddar + mozzarella works well"
     },
     {
       "name": "loaf day-old bread",
-      "quantity": "3/4",
+      "quantity": "1",
       "notes": "cubed (optional), turns it into a strata",
       "optional": true
     }
@@ -59,79 +59,55 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Southwest Egg Bake in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
+      "title": "Heat the oven",
+      "instruction": "Heat oven to 375°F. Grease a deep 9x13 pan. If using bread cubes, toast them 6–8 minutes so the bake doesn’t go soggy.",
+      "minutes": 0,
+      "tempF": 375
     },
     {
       "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch Eggs. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
+      "title": "Build the pan",
+      "instruction": "Spread sausage, onion, and spinach in the pan. Add half the cheese. (If using bread cubes, fold them through now.)",
+      "minutes": 10
     },
     {
       "stepNumber": 3,
-      "title": "Heat the oven",
-      "instruction": "Heat oven to 375°F. Grease a deep 9x13 pan. If using bread cubes, toast them 6–8 minutes so the bake doesn’t go soggy. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 0,
-      "heatLevel": ""
+      "title": "Egg mix",
+      "instruction": "Whisk eggs with milk, salt, pepper, and a pinch of paprika. Pour evenly. Top with remaining cheese.",
+      "minutes": 5
     },
     {
       "stepNumber": 4,
-      "title": "Build the pan",
-      "instruction": "Spread sausage, onion, and spinach in the pan. Add half the cheese. (If using bread cubes, fold them through now.) Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
-      "minutes": 10,
-      "heatLevel": ""
+      "title": "Bake to set",
+      "instruction": "Bake until the center is set and the edges are browned. If it jiggles like loose custard, give it 5 more minutes.",
+      "minutes": 35,
+      "tempF": 375
     },
     {
       "stepNumber": 5,
-      "title": "Egg mix",
-      "instruction": "Whisk eggs with milk, salt, pepper, and a pinch of paprika. Pour evenly. Top with remaining cheese. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 6,
-      "title": "Bake to set",
-      "instruction": "Bake until the center is set and the edges are browned. If it jiggles like loose custard, give it 5 more minutes. Bake until the center reaches a safe internal temp (165°F) and edges look set — use a thermometer at the thickest point. Plan about 35 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 35,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
       "title": "Rest for clean slices",
-      "instruction": "Rest 10 minutes so slices hold for the line. Cut into squares; hold warm covered. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 10,
-      "heatLevel": ""
+      "instruction": "Rest 10 minutes so slices hold for the line. Cut into squares; hold warm covered.",
+      "minutes": 10
     }
   ],
   "nutrition": {
-    "calories": 304,
-    "protein": 25,
-    "carbs": 6,
-    "fat": 20,
+    "calories": 456,
+    "protein": 42,
+    "carbs": 8,
+    "fat": 28,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
-      "highProtein": false,
+      "highProtein": true,
       "under700Calories": true,
       "under30gFat": true,
       "highCarb": false,
       "lowCarb": true,
-      "mealPrepFriendly": true
+      "mealPrepFriendly": false
     },
     "badgeCandidates": {
-      "highProtein": false,
-      "lighterOption": true,
+      "highProtein": true,
+      "lighterOption": false,
       "performanceMeal": false
     }
   },
@@ -150,29 +126,10 @@
   ],
   "heroImage": "/images/breakfast/southwest-egg-bake.jpg",
   "thumbImage": "/images/thumbs/breakfast/southwest-egg-bake.jpg",
-  "imageAlt": "Warm station-kitchen breakfast: Southwest Egg Bake",
-  "publishedAt": "2026-05-31T18:33:00.830Z",
-  "updatedAt": "2026-05-31T23:50:25.248Z",
+  "imageAlt": "Wide firehall crew platter of Southwest Egg Bake beside eggs on a station prep table, family-style",
+  "publishedAt": "2026-06-04T20:48:24.993Z",
+  "updatedAt": "2026-06-04T20:48:24.993Z",
   "readMinutes": 6,
   "seoTitle": "Southwest Egg Bake | Firehall Breakfast",
-  "collectionTier": "firehall_classic",
-  "proTips": [
-    "Assign one cook to the hot surface and one to assembly. Keep the line moving; don’t crowd the griddle.",
-    "Set a warm holding zone (oven 200°F or covered hotel pan) so staggered eaters still get a hot plate.",
-    "Run a quick call-proof check: anything crispy stays uncovered; anything soft stays covered."
-  ],
-  "tonightSpread": [
-    "Plate Southwest Egg Bake with sides in separate pans so the crew can mix portions.",
-    "Keep hot items on one side of the table and cold on the other — eggs stay hot, fruit stays cold.",
-    "Line up Southwest Egg Bake on the main counter with serving spoons — firefighters grab fast between calls.",
-    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
-  ],
-  "equipment": [
-    "Large sheet trays",
-    "Instant-read thermometer",
-    "Aluminum foil"
-  ],
-  "mealPrepNotes": "Prep mise en place before the shift — Southwest Egg Bake runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone.",
-  "mobileImage": "/images/mobile/breakfast/southwest-egg-bake.jpg",
-  "railImage": "/images/rails/breakfast/southwest-egg-bake.jpg"
+  "collectionTier": "firehall_classic"
 }

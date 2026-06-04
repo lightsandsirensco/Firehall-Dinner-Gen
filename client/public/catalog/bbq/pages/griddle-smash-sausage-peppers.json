@@ -8,8 +8,8 @@
   "category": "bbq_grill_nights",
   "cuisine": "italian-american",
   "description": "Italian sausage links smash flat on the griddle until crisp, griddle with peppers and onions, and serve on toasted rolls with marinara dip.",
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "cookTime": 22,
   "prepTime": 25,
   "difficulty": "medium",
@@ -39,58 +39,58 @@
   "ingredients": [
     {
       "name": "sweet Italian sausage",
-      "quantity": "4.4",
+      "quantity": "5.5",
       "unit": "lb",
       "notes": "about 12 links",
       "group": "Main"
     },
     {
       "name": "Cubanelle peppers",
-      "quantity": "3",
+      "quantity": "4",
       "unit": "whole",
       "notes": "striped",
       "group": "Peppers"
     },
     {
       "name": "Vidalia onions",
-      "quantity": "2",
+      "quantity": "3",
       "unit": "whole",
       "notes": "striped",
       "group": "Peppers"
     },
     {
       "name": "hoagie rolls",
-      "quantity": "8",
+      "quantity": "10",
       "unit": "whole",
       "group": "Service"
     },
     {
       "name": "giardiniera relish",
-      "quantity": "1 1/4",
+      "quantity": "1.5",
       "unit": "cups",
       "group": "Service"
     },
     {
       "name": "beef tallow",
-      "quantity": "2.6",
+      "quantity": "3",
       "unit": "tbsp",
       "group": "Griddle"
     },
     {
       "name": "fennel pollen",
-      "quantity": "7/8",
+      "quantity": "1",
       "unit": "tsp",
       "group": "Seasoning"
     },
     {
       "name": "Calabrian chili paste",
-      "quantity": "7/8",
+      "quantity": "1",
       "unit": "tbsp",
       "group": "Seasoning"
     },
     {
       "name": "Provolone cheese",
-      "quantity": "8",
+      "quantity": "10",
       "unit": "slices",
       "notes": "optional melt",
       "group": "Finish"
@@ -100,56 +100,56 @@
     {
       "stepNumber": 1,
       "title": "Prep sausage for smash",
-      "instruction": "Remove sausage from casings or use loose bulk sausage formed into patties. Have smashing spatula ready. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Use giardiniera relish, beef tallow, fennel pollen, Calabrian chili paste as listed — measure each before heat goes on. Target 145°F with a 3-minute rest at the thickest point before moving to the next batch.",
+      "instruction": "Remove sausage from casings or use loose bulk sausage formed into patties. Have smashing spatula ready.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
       "title": "Slice peppers and onions",
-      "instruction": "Cut peppers and onions into uniform strips for even griddle char. Cook until char marks are visible and the thickest piece reads 145°F with a 3-minute rest on an instant-read thermometer. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Cut peppers and onions into uniform strips for even griddle char.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 3,
-      "title": "Preheat the flat-top griddle",
-      "instruction": "Preheat griddle to 425°F. Film with oil. Plan about 8 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "title": "Heat griddle",
+      "instruction": "Preheat griddle to 425°F. Film with oil.",
       "minutes": 8,
       "heatLevel": "high"
     },
     {
       "stepNumber": 4,
       "title": "Smash and griddle sausage",
-      "instruction": "Place sausage on griddle and smash flat immediately. Cook 4 minutes per side until charred and 165°F. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Place sausage on griddle and smash flat immediately. Cook 4 minutes per side until charred and 165°F.",
       "minutes": 12,
       "heatLevel": "high"
     },
     {
       "stepNumber": 5,
       "title": "Griddle peppers and onions",
-      "instruction": "Griddle pepper-onion mix at 425°F until charred and tender, 8–10 minutes. Season with oregano and pepper flakes. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Griddle pepper-onion mix at 425°F until charred and tender, 8–10 minutes. Season with oregano and pepper flakes.",
       "minutes": 10,
       "heatLevel": "high"
     },
     {
       "stepNumber": 6,
       "title": "Hold at 170°F",
-      "instruction": "Chop smashed sausage and hold with peppers and onions covered at 170°F. Plan about 5 minutes for this step at crew scale. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F with a 3-minute rest at the thickest point before moving to the next batch.",
+      "instruction": "Chop smashed sausage and hold with peppers and onions covered at 170°F.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 7,
       "title": "Toast rolls",
-      "instruction": "Toast sub rolls cut-side down at 375°F until crisp. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Toast sub rolls cut-side down at 375°F until crisp.",
       "minutes": 5,
       "heatLevel": "medium"
     },
     {
       "stepNumber": 8,
       "title": "Line for ten",
-      "instruction": "Pile sausage and pepper mix on rolls with optional provolone melt. Marinara on the side for dipping. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
+      "instruction": "Pile sausage and pepper mix on rolls with optional provolone melt. Marinara on the side for dipping.",
       "minutes": 5,
       "heatLevel": ""
     }
@@ -175,22 +175,8 @@
     "protein": 0,
     "carbs": 0,
     "fats": 0,
-    "label": "Estimated per serving",
-    "source": "unavailable",
-    "estimateAvailable": false,
-    "filterFlags": {
-      "highProtein": false,
-      "under700Calories": false,
-      "under30gFat": false,
-      "highCarb": false,
-      "lowCarb": false,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": false,
-      "lighterOption": false,
-      "performanceMeal": false
-    }
+    "label": "per serving (hall portion)",
+    "source": "estimated"
   },
   "heroImage": "/images/smoker-catalog/griddle-smash-sausage-peppers.jpg",
   "heroImageAlt": "Giardiniera Smash Sausage Hoagies — crew-sized BBQ spread with visible smoke and bark",
@@ -218,6 +204,6 @@
     "brisket-style-beef-sandwiches-au-jus"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T23:32:23.208Z",
+  "generatedAt": "2026-06-04T20:47:49.452Z",
   "contentVersion": 2
 }

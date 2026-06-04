@@ -9,6 +9,7 @@ import { PERFORMANCE_ADAPTED_RECIPES } from "../performance-meals/adapted/index.
 import { HALL_EXPANSION_ADAPTED_RECIPES } from "../hall-expansion/adapted/index.js";
 import { PIZZA_NIGHT_RECIPES } from "../pizza-night/manifest.js";
 import { SMOOTHIE_CATALOG_ITEMS } from "../fuel-catalog/smoothies/catalog-data.js";
+import { PHASE5_REMOVED_SLUGS } from "../catalog-consolidation/phase5-redirects.js";
 import { goldenPageImageSet } from "../golden-100/recipe-page-paths.js";
 import { performancePageImageSet } from "../performance-meals/recipe-page-paths.js";
 import { hallExpansionPageImageSet } from "../hall-expansion/recipe-page-paths.js";
@@ -157,7 +158,11 @@ export function loadTrustAuditTargets(collections?: Set<TrustAuditCollection>): 
         mealFormat: entry.mealFormat || "breakfast",
         cuisine: "american",
         heroImage: `/images/breakfast/${entry.slug}.jpg`,
-        heroAlt: page?.heroImageAlt ? String(page.heroImageAlt) : undefined,
+        heroAlt: page?.heroImageAlt
+          ? String(page.heroImageAlt)
+          : page?.imageAlt
+            ? String(page.imageAlt)
+            : undefined,
         ingredients: ingredientsFromPage(page),
         tonightSpread: spreadFromPage(page),
       });
@@ -200,7 +205,7 @@ export function loadTrustAuditTargets(collections?: Set<TrustAuditCollection>): 
     }
   }
 
-  return targets;
+  return targets.filter((t) => !PHASE5_REMOVED_SLUGS.has(t.slug));
 }
 
 export function readHeroBuffer(publicPath: string): Buffer | null {

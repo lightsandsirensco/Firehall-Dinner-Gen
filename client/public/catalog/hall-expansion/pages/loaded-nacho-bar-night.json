@@ -13,10 +13,10 @@
   "cookTime": 20,
   "prepTime": 25,
   "difficulty": "easy",
-  "calories": 723,
-  "protein": 39,
-  "carbs": 53,
-  "fats": 40,
+  "calories": 580,
+  "protein": 28,
+  "carbs": 44,
+  "fats": 34,
   "tags": [
     "protein:beef",
     "format:bar_line",
@@ -104,62 +104,34 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Loaded Nacho Bar Night in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "title": "Brown the beef",
+      "instruction": "Cook ground beef over medium-high heat, breaking into fine crumbles until no pink remains. Drain fat, add taco seasoning and 0.25 cup water, and simmer until coated and thick.",
       "minutes": 12,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch beef. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
-      "title": "Brown the beef",
-      "instruction": "Cook ground beef over medium-high heat, breaking into fine crumbles until no pink remains. Drain fat, add taco seasoning and 0.25 cup water, and simmer until coated and thick. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 4,
       "title": "Warm queso and beans",
       "instruction": "Heat queso in a slow cooker on warm, stirring occasionally. Season and warm black beans in a separate hotel pan. Verify both reach 165°F for safe holding.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Prep chip bases",
       "instruction": "Spread chips in single layers on sheet pans and warm at 250°F while the bar sets up. Chips should feel hot to touch but not brown. Target oven/smoker temperature: 250°F.",
       "minutes": 8,
       "heatLevel": ""
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Set the nacho bar",
       "instruction": "Line up warm chip pans, beef, queso, cheddar, beans, jalapeños, pico, sour cream, and guacamole with serving spoons and clear labels.",
       "minutes": 12,
       "heatLevel": ""
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F for medium beef, 160°F for ground. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 9,
+      "stepNumber": 5,
       "title": "Build and broil to order",
       "instruction": "Crew tops their chip base at the line. Run finished plates under the broiler 1–2 minutes to melt cheddar if desired, then add cold toppings after.",
       "minutes": 5,
@@ -184,25 +156,11 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 723,
-    "protein": 39,
-    "carbs": 53,
-    "fats": 40,
-    "label": "per serving (hall portion)",
-    "source": "calculated",
-    "filterFlags": {
-      "highProtein": true,
-      "under700Calories": false,
-      "under30gFat": false,
-      "highCarb": true,
-      "lowCarb": false,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": false
-    }
+    "calories": 580,
+    "protein": 28,
+    "carbs": 44,
+    "fats": 34,
+    "label": "~580 cal/serving · 28g protein · 6g fiber (est.)"
   },
   "heroImage": "/images/hall-expansion/loaded-nacho-bar-night.jpg",
   "heroImageAlt": "Loaded Nacho Bar Night — crew-sized firehall meal",
@@ -222,6 +180,7 @@
     "hall-burger-bar",
     "pasta-bar-night"
   ],
-  "generatedAt": "2026-05-31T01:50:00.916Z",
+  "sourceUrl": "",
+  "generatedAt": "2026-06-04T20:47:21.930Z",
   "contentVersion": 2
 }

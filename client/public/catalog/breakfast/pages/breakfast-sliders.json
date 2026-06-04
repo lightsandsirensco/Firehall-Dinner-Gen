@@ -15,8 +15,8 @@
     "maple",
     "handheld"
   ],
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "prepTime": 18,
   "cookTime": 22,
   "totalTime": 40,
@@ -30,43 +30,43 @@
     },
     {
       "name": "breakfast sausage patties",
-      "quantity": "10",
+      "quantity": "12",
       "notes": "pre-cooked or thin frozen",
       "group": "Protein"
     },
     {
       "name": "large eggs",
-      "quantity": "10",
+      "quantity": "12",
       "notes": "folded into thin sheets on the griddle",
       "group": "Protein"
     },
     {
       "name": "cheddar cheese",
-      "quantity": "9.6",
+      "quantity": "12 slices",
       "notes": "cut to fit rolls",
       "group": "Protein"
     },
     {
       "name": "butter",
-      "quantity": "3/8",
+      "quantity": "1/2 cup",
       "notes": "melted",
       "group": "Glaze"
     },
     {
       "name": "maple syrup",
-      "quantity": "2.4",
+      "quantity": "3 tbsp",
       "notes": "plus extra for drizzling",
       "group": "Glaze"
     },
     {
       "name": "Dijon mustard",
-      "quantity": "3/4",
+      "quantity": "1 tsp",
       "notes": "whisked into glaze",
       "group": "Glaze"
     },
     {
       "name": "everything bagel seasoning",
-      "quantity": "3/4",
+      "quantity": "1 tbsp",
       "notes": "optional crunch on top",
       "group": "Finish"
     }
@@ -74,83 +74,51 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Breakfast Sliders in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use everything bagel seasoning as listed — measure each before heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
+      "title": "Heat the oven",
+      "instruction": "Heat oven to 350°F. Line a rimmed sheet pan with parchment. Cook sausage patties until done and fold eggs into thin rectangles roughly the size of each roll.",
+      "minutes": 0,
+      "tempF": 350
     },
     {
       "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch Sausage. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
+      "title": "Slice the roll block",
+      "instruction": "Without separating individual rolls, slice the connected block horizontally into tops and bottoms. Keep the shape intact so assembly stays fast.",
+      "minutes": 5
     },
     {
       "stepNumber": 3,
-      "title": "Heat the oven",
-      "instruction": "Heat oven to 350°F. Line a rimmed sheet pan with parchment. Cook sausage patties until fully cooked and fold eggs into thin rectangles roughly the size of each roll. Target 165°F at the thickest point before moving to the next batch.",
-      "minutes": 0,
-      "heatLevel": ""
+      "title": "Layer the sliders",
+      "instruction": "Place bottom halves on the pan. Add sausage, egg, and cheese to each roll. Cap with tops and press gently so stacks stay level.",
+      "minutes": 10
     },
     {
       "stepNumber": 4,
-      "title": "Slice the roll block",
-      "instruction": "Without separating individual rolls, slice the connected block horizontally into tops and bottoms. Keep the shape intact so assembly stays fast.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 5,
-      "title": "Layer the sliders",
-      "instruction": "Place bottom halves on the pan. Add sausage, egg, and cheese to each roll. Cap with tops and press gently so stacks stay level. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
-      "minutes": 10,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 6,
       "title": "Glaze and bake",
       "instruction": "Whisk melted butter, maple syrup, and Dijon. Brush generously over roll tops. Bake until cheese melts and tops turn golden and sticky.",
       "minutes": 18,
-      "heatLevel": ""
+      "tempF": 350
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 9,
+      "stepNumber": 5,
       "title": "Rest and pull apart",
       "instruction": "Rest 5 minutes, then cut along roll seams with a sharp knife or bench scraper. Serve warm from the pan or transfer to a hotel pan for the line.",
-      "minutes": 5,
-      "heatLevel": ""
+      "minutes": 5
     }
   ],
   "nutrition": {
-    "calories": 0,
-    "protein": 0,
-    "carbs": 0,
-    "fats": 0,
-    "label": "Estimated per serving",
-    "source": "unavailable",
-    "estimateAvailable": false,
+    "calories": 937,
+    "protein": 46,
+    "carbs": 10,
+    "fat": 79,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
       "under30gFat": false,
       "highCarb": false,
-      "lowCarb": false,
-      "mealPrepFriendly": true
+      "lowCarb": true,
+      "mealPrepFriendly": false
     },
     "badgeCandidates": {
       "highProtein": true,
@@ -174,28 +142,9 @@
   "heroImage": "/images/breakfast/breakfast-sliders.jpg",
   "thumbImage": "/images/thumbs/breakfast/breakfast-sliders.jpg",
   "imageAlt": "Sheet pan of maple-glazed breakfast sliders with sausage, egg, and cheese",
-  "publishedAt": "2026-05-31T18:33:00.829Z",
-  "updatedAt": "2026-05-31T23:50:24.894Z",
+  "publishedAt": "2026-06-04T20:48:24.990Z",
+  "updatedAt": "2026-06-04T20:48:24.990Z",
   "readMinutes": 7,
   "seoTitle": "Breakfast Sliders | Firehall Breakfast",
-  "collectionTier": "firehall_classic",
-  "proTips": [
-    "Cook all sausage and egg sheets before touching the rolls—cold protein slows the bake and steams the bread.",
-    "Brush glaze right before the oven; a second light brush at the 10-minute mark adds shine without sogginess.",
-    "Cut and serve from the sheet pan at the line so the crew pulls their own portion without a bottleneck."
-  ],
-  "tonightSpread": [
-    "Plate Breakfast Sliders with sides in separate pans so the crew can mix portions.",
-    "Keep hot items on one side of the table and cold on the other — eggs stay hot, fruit stays cold.",
-    "Line up Breakfast Sliders on the main counter with serving spoons — firefighters grab fast between calls.",
-    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
-  ],
-  "equipment": [
-    "Large sheet trays",
-    "Instant-read thermometer",
-    "Aluminum foil"
-  ],
-  "mealPrepNotes": "Prep mise en place before the shift — Breakfast Sliders runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone.",
-  "mobileImage": "/images/mobile/breakfast/breakfast-sliders.jpg",
-  "railImage": "/images/rails/breakfast/breakfast-sliders.jpg"
+  "collectionTier": "firehall_classic"
 }

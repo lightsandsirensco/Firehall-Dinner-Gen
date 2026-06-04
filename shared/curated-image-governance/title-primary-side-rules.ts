@@ -270,7 +270,9 @@ export function auditTitlePrimarySideAlignment(input: {
     );
   }
 
-  if (GENERIC_SUBSTITUTE_PATH_RE.test(input.heroPath) && req.primarySides.length > 0) {
+  const heroUsesOwnSlug =
+    input.heroPath.includes(`/${input.slug}.`) || input.heroPath.includes(`/${input.slug}.webp`);
+  if (!heroUsesOwnSlug && GENERIC_SUBSTITUTE_PATH_RE.test(input.heroPath) && req.primarySides.length > 0) {
     issues.push(
       p0Issue(
         `generic bowl/substitute hero path for title with named sides (${req.primarySides.join(", ")})`,

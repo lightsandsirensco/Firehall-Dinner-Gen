@@ -72,87 +72,34 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Belgian Waffle Platter in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Double-check seasoning after scaling — crew palates run salty after long shifts, so taste the first portion before opening the line.",
-      "minutes": 12,
-      "heatLevel": ""
+      "title": "Mix the batter",
+      "instruction": "Whisk flour, sugar, yeast, and salt. Stir in warm milk, egg yolks, and melted butter until smooth. Let rest 15 minutes so yeast activates and batter thickens slightly.",
+      "minutes": 10
     },
     {
       "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch Eggs. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
+      "title": "Fold in whipped whites",
+      "instruction": "Beat egg whites to stiff peaks. Fold one-third into the batter to lighten, then fold in the rest gently so volume stays airy—do not deflate with heavy stirring.",
+      "minutes": 5
     },
     {
       "stepNumber": 3,
-      "title": "Mix the batter",
-      "instruction": "Whisk flour, sugar, yeast, and salt. Stir in warm milk, egg yolks, and melted butter until smooth. Let rest 15 minutes so yeast activates and batter thickens slightly.",
-      "minutes": 10,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 4,
-      "title": "Fold in whipped whites",
-      "instruction": "Beat egg whites to stiff peaks. Fold one-third into the batter to lighten, then fold in the rest gently so volume stays airy—do not deflate with heavy stirring.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 5,
       "title": "Preheat irons",
       "instruction": "Heat Belgian waffle irons to medium-high (most units reach roughly 375°F surface temp). Lightly oil plates if your iron requires it. Keep a rack and sheet pan ready in a 200°F oven.",
       "minutes": 5,
-      "heatLevel": ""
+      "tempF": 375
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Bake the waffles",
       "instruction": "Pour batter to cover the grid without overflowing. Close iron and bake 4–5 minutes per waffle until deep golden and crisp at the edges. Transfer to the rack in the warm oven—never stack.",
-      "minutes": 20,
-      "heatLevel": ""
+      "minutes": 20
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 9,
-      "title": "Portion and open the line",
-      "instruction": "Portion Belgian Waffle Platter onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
-      "title": "Scale for larger halls",
-      "instruction": "When cooking for more than 8 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 11,
+      "stepNumber": 5,
       "title": "Platter and serve",
       "instruction": "Arrange waffles on a large warm platter with bowls of whipped butter, warmed maple syrup, and berries. Serve immediately and bake remaining batches while the crew eats.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 12,
-      "title": "Final quality check before service",
-      "instruction": "Walk the line once before opening service for Belgian Waffle Platter — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
-      "minutes": 4,
-      "heatLevel": ""
+      "minutes": 5
     }
   ],
   "nutrition": {
@@ -160,16 +107,15 @@
     "protein": 13,
     "carbs": 133,
     "fat": 18,
-    "label": "Estimated per serving",
+    "label": "per serving (hall portion)",
     "source": "calculated",
-    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": false,
       "under30gFat": true,
       "highCarb": true,
       "lowCarb": false,
-      "mealPrepFriendly": true
+      "mealPrepFriendly": false
     },
     "badgeCandidates": {
       "highProtein": false,
@@ -193,28 +139,9 @@
   "heroImage": "/images/breakfast/belgian-waffle-platter.jpg",
   "thumbImage": "/images/thumbs/breakfast/belgian-waffle-platter.jpg",
   "imageAlt": "Belgian waffle platter with maple syrup, whipped butter, and fresh berries",
-  "publishedAt": "2026-05-31T18:33:00.830Z",
-  "updatedAt": "2026-05-31T23:49:25.305Z",
+  "publishedAt": "2026-06-04T20:48:24.991Z",
+  "updatedAt": "2026-06-04T20:48:24.991Z",
   "readMinutes": 7,
   "seoTitle": "Belgian Waffle Platter | Firehall Breakfast",
-  "collectionTier": "firehall_classic",
-  "proTips": [
-    "Run two irons in parallel if available so eight waffles finish within 15 minutes.",
-    "Hold waffles on a rack in a 200°F oven—stacking steams away the crisp crust.",
-    "Warm syrup in a small pot on low with a ladle at the line for fast self-serve."
-  ],
-  "tonightSpread": [
-    "Plate Belgian Waffle Platter with sides in separate pans so the crew can mix portions.",
-    "Keep hot items on one side of the table and cold on the other — eggs stay hot, fruit stays cold.",
-    "Line up Belgian Waffle Platter on the main counter with serving spoons — firefighters grab fast between calls.",
-    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
-  ],
-  "equipment": [
-    "Large sheet trays",
-    "Instant-read thermometer",
-    "Aluminum foil"
-  ],
-  "mealPrepNotes": "Prep mise en place before the shift — Belgian Waffle Platter runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone.",
-  "mobileImage": "/images/mobile/breakfast/belgian-waffle-platter.jpg",
-  "railImage": "/images/rails/breakfast/belgian-waffle-platter.jpg"
+  "collectionTier": "firehall_classic"
 }

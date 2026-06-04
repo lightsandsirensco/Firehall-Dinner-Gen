@@ -13,10 +13,10 @@
   "cookTime": 40,
   "prepTime": 35,
   "difficulty": "medium",
-  "calories": 407,
-  "protein": 50,
-  "carbs": 3,
-  "fats": 20,
+  "calories": 490,
+  "protein": 36,
+  "carbs": 46,
+  "fats": 18,
   "tags": [
     "protein:shrimp",
     "format:soup",
@@ -120,76 +120,55 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Malaysian Laksa Soup in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch shrimp. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Bloom laksa paste in oil",
       "instruction": "Heat 3 tbsp vegetable oil in a large pot over medium heat until it shimmers. Add 1/2 cup laksa paste and fry 2–3 minutes, stirring constantly, until deeply fragrant and the oil turns orange-red with a thin sheen on top.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Simmer coconut milk and broth",
-      "instruction": "Pour in 3 cans coconut milk and 4 cups chicken broth. Bring to a gentle simmer over medium heat—small bubbles at the edges, not a rolling boil. Simmer uncovered 15 minutes so the paste flavor melds into the broth. Target 145°F until opaque at the thickest point before moving to the next batch.",
+      "instruction": "Pour in 3 cans coconut milk and 4 cups chicken broth. Bring to a gentle simmer over medium heat—small bubbles at the edges, not a rolling boil. Simmer uncovered 15 minutes so the paste flavor melds into the broth.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Season with fish sauce",
       "instruction": "Stir in 2 tbsp fish sauce and taste: broth should be savory, lightly sweet from coconut, and lightly spicy from the paste. Add another small splash of fish sauce if the pot tastes flat.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Poach chicken breast",
       "instruction": "Slide in 2 lb thin-sliced chicken breast. Return to a gentle simmer and cook 8–10 minutes until chicken is opaque white throughout and reads 165°F in the thickest piece. Transfer chicken to a hotel pan, shred or slice, and cover loosely. Target oven/smoker temperature: 165°F.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
-      "stepNumber": 7,
+      "stepNumber": 5,
       "title": "Cook and cool rice noodles",
       "instruction": "Soak or boil 1.5 lb thick rice noodles per package until tender but still springy. Drain, rinse under cold water to stop cooking, toss with a few drops of oil, and portion into bowls or a labeled hotel pan for the line.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
-      "stepNumber": 8,
+      "stepNumber": 6,
       "title": "Poach shrimp in laksa broth",
-      "instruction": "Raise the laksa broth to a steady simmer. Add 2 lb peeled large shrimp and cook 2–3 minutes until shells turn pink and flesh is opaque and curled—do not let shrimp boil hard or they turn rubbery. Target 145°F until opaque at the thickest point before moving to the next batch.",
+      "instruction": "Raise the laksa broth to a steady simmer. Add 2 lb peeled large shrimp and cook 2–3 minutes until shells turn pink and flesh is opaque and curled—do not let shrimp boil hard or they turn rubbery.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 9,
+      "stepNumber": 7,
       "title": "Brighten with lime and hold",
       "instruction": "Remove the pot from heat. Stir in 1/4 cup lime juice and taste once more—the broth should finish bright and slightly tangy. For holding, keep broth in the pot or a hotel pan at 170°F max; do not boil while holding or coconut fat may split. Target oven/smoker temperature: 170°F.",
       "minutes": 3,
       "heatLevel": ""
     },
     {
-      "stepNumber": 10,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 11,
+      "stepNumber": 8,
       "title": "Ladle bowls on the line",
       "instruction": "Place a portion of rice noodles in each bowl. Ladle hot laksa broth over noodles, then top with chicken, shrimp, bean sprouts, and chopped cilantro. Pass sambal oelek on the side so each crew member controls the heat.",
       "minutes": 8,
@@ -214,26 +193,11 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 407,
-    "protein": 50,
-    "carbs": 3,
-    "fats": 20,
-    "label": "Estimated per serving",
-    "source": "calculated",
-    "estimateAvailable": true,
-    "filterFlags": {
-      "highProtein": true,
-      "under700Calories": true,
-      "under30gFat": true,
-      "highCarb": false,
-      "lowCarb": true,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": true,
-      "lighterOption": true,
-      "performanceMeal": true
-    }
+    "calories": 490,
+    "protein": 36,
+    "carbs": 46,
+    "fats": 18,
+    "label": "~490 cal/serving · 36g protein · 2g fiber (est.)"
   },
   "heroImage": "/images/hall-expansion/malaysian-laksa-soup.jpg",
   "heroImageAlt": "Malaysian Laksa Soup — crew-sized firehall meal",
@@ -253,6 +217,7 @@
     "hall-burger-bar",
     "pasta-bar-night"
   ],
-  "generatedAt": "2026-05-31T01:50:00.916Z",
+  "sourceUrl": "",
+  "generatedAt": "2026-06-04T20:47:21.931Z",
   "contentVersion": 2
 }

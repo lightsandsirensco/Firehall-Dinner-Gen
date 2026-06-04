@@ -8,15 +8,15 @@
   "category": "bbq_grill_nights",
   "cuisine": "cuban",
   "description": "Marinated roast pork shoulder grills and slices, layers with ham, Swiss, pickles, and mustard on Cuban bread, and presses on the griddle until shatter-crisp.",
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "cookTime": 30,
   "prepTime": 40,
   "difficulty": "medium",
-  "calories": 0,
-  "protein": 0,
-  "carbs": 0,
-  "fats": 0,
+  "calories": 1400,
+  "protein": 120,
+  "carbs": 13,
+  "fats": 90,
   "tags": [
     "protein:pork",
     "format:hoagie_press",
@@ -39,66 +39,66 @@
   "ingredients": [
     {
       "name": "pork shoulder",
-      "quantity": "4",
+      "quantity": "5",
       "unit": "lb",
       "notes": "for roasting",
       "group": "Main"
     },
     {
       "name": "Cuban bread loaves",
-      "quantity": "4",
+      "quantity": "5",
       "unit": "whole",
       "notes": "split into 10 sandwiches",
       "group": "Cuban"
     },
     {
       "name": "deli ham",
-      "quantity": "1.6",
+      "quantity": "2",
       "unit": "lb",
       "notes": "thin-sliced",
       "group": "Cuban"
     },
     {
       "name": "Swiss cheese",
-      "quantity": "17",
+      "quantity": "20",
       "unit": "slices",
       "group": "Cuban"
     },
     {
       "name": "dill pickle chips",
-      "quantity": "2.4",
+      "quantity": "3",
       "unit": "cups",
       "group": "Cuban"
     },
     {
       "name": "yellow mustard",
-      "quantity": "3/8",
+      "quantity": "0.5",
       "unit": "cup",
       "group": "Cuban"
     },
     {
       "name": "sour orange juice",
-      "quantity": "3/8",
+      "quantity": "0.5",
       "unit": "cup",
       "notes": "or lime-orange blend",
       "group": "Mojo"
     },
     {
       "name": "garlic cloves",
-      "quantity": "7",
+      "quantity": "8",
       "unit": "cloves",
       "notes": "minced",
       "group": "Mojo"
     },
     {
       "name": "dried oregano",
-      "quantity": "7/8",
+      "quantity": "1",
       "unit": "tbsp",
       "group": "Mojo"
     },
     {
       "name": "butter",
-      "quantity": "1/4",
+      "quantity": "0.33",
       "unit": "cup",
       "notes": "softened",
       "group": "Press"
@@ -108,56 +108,56 @@
     {
       "stepNumber": 1,
       "title": "Mojo-marinate pork",
-      "instruction": "Rub pork shoulder with sour orange, garlic, oregano, and salt. Marinate at least 4 hours. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Use deli ham as listed — measure each before heat goes on. Target 145°F with a 3-minute rest at the thickest point before moving to the next batch.",
+      "instruction": "Rub pork shoulder with sour orange, garlic, oregano, and salt. Marinate at least 4 hours.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
       "title": "Grill roast pork",
-      "instruction": "Grill pork over medium 400°F, turning, until 195°F internal for slicing, about 90 minutes total. Rest and slice thin. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F with a 3-minute rest at the thickest point before moving to the next batch.",
+      "instruction": "Grill pork over medium 400°F, turning, until 195°F internal for slicing, about 90 minutes total. Rest and slice thin.",
       "minutes": 90,
       "heatLevel": "medium"
     },
     {
       "stepNumber": 3,
       "title": "Hold sliced pork",
-      "instruction": "Hold sliced pork covered at 170°F in hotel pans until sandwich build. Plan about 5 minutes for this step at crew scale. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F with a 3-minute rest at the thickest point before moving to the next batch.",
+      "instruction": "Hold sliced pork covered at 170°F in hotel pans until sandwich build.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 4,
       "title": "Build cubans",
-      "instruction": "Spread mustard on bread. Layer ham, Swiss, pickles, and sliced pork. Butter outside of bread. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F with a 3-minute rest at the thickest point before moving to the next batch.",
+      "instruction": "Spread mustard on bread. Layer ham, Swiss, pickles, and sliced pork. Butter outside of bread.",
       "minutes": 12,
       "heatLevel": ""
     },
     {
       "stepNumber": 5,
-      "title": "Preheat the flat-top griddle",
-      "instruction": "Preheat griddle to 375°F for pressing. Plan about 8 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "title": "Heat griddle",
+      "instruction": "Preheat griddle to 375°F for pressing.",
       "minutes": 8,
       "heatLevel": "medium"
     },
     {
       "stepNumber": 6,
       "title": "Press sandwiches",
-      "instruction": "Press cubans with weight 4 minutes per side until bread is flat, crisp, and cheese melts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Press cubans with weight 4 minutes per side until bread is flat, crisp, and cheese melts.",
       "minutes": 16,
       "heatLevel": "medium"
     },
     {
       "stepNumber": 7,
       "title": "Hold wrapped",
-      "instruction": "Hold pressed cubans wrapped in foil at 170°F up to 25 minutes. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Hold pressed cubans wrapped in foil at 170°F up to 25 minutes.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 8,
       "title": "Line for ten",
-      "instruction": "One cuban per firefighter. Cut diagonal before serving. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "One cuban per firefighter. Cut diagonal before serving.",
       "minutes": 5,
       "heatLevel": ""
     }
@@ -179,26 +179,12 @@
   "mealPrepNotes": "Grill pork at 400°F to 195°F for slicing. Hold pork at 170°F up to 45 minutes. Press sandwiches at 375°F, 4 minutes per side with weight.",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 0,
-    "protein": 0,
-    "carbs": 0,
-    "fats": 0,
-    "label": "Estimated per serving",
-    "source": "unavailable",
-    "estimateAvailable": false,
-    "filterFlags": {
-      "highProtein": true,
-      "under700Calories": false,
-      "under30gFat": false,
-      "highCarb": false,
-      "lowCarb": true,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": false
-    }
+    "calories": 1400,
+    "protein": 120,
+    "carbs": 13,
+    "fats": 90,
+    "label": "per serving (hall portion)",
+    "source": "estimated"
   },
   "heroImage": "/images/smoker-catalog/pressed-cuban-sandwiches-crew.jpg",
   "heroImageAlt": "Pressed Cuban Sandwiches for the Crew — crew-sized BBQ spread with visible smoke and bark",
@@ -226,6 +212,6 @@
     "brisket-style-beef-sandwiches-au-jus"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T23:32:23.207Z",
+  "generatedAt": "2026-06-04T20:47:49.445Z",
   "contentVersion": 2
 }

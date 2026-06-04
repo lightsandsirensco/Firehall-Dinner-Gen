@@ -249,13 +249,63 @@ function fixSmashBurgers(page: GoldenRecipePage, wheelTitle: string): GoldenReci
 }
 
 function fixChiliGarlicBread(page: GoldenRecipePage, wheelTitle: string): GoldenRecipePage {
-  const base = page.steps.filter(
-    (s) => !/hold for call|pack down leftovers|leftovers & storage/i.test(s.title),
-  );
   const steps = renumber([
-    ...base,
-    CALL_INTERRUPTION_STEP(base.length + 1, "beef chili"),
-    LEFTOVERS_PACK_DOWN_STEP(base.length + 2, "beef chili"),
+    step(
+      1,
+      "Prep the pots and garlic bread station",
+      "Dice onions and peppers ¼ inch. Mince garlic. Drain beans. Open tomatoes. Set out your largest stock pot and a sheet pan for garlic bread — chili splatters, so keep a lid nearby.",
+      15,
+    ),
+    step(
+      2,
+      "Brown the meat in batches",
+      "Heat oil in the pot over medium-high until it shimmers. Add ground beef in two batches — don't crowd. Break into crumbles and cook until deeply browned with no pink (160°F+). Drain excess grease if the pot looks oily.",
+      12,
+      "medium-high",
+    ),
+    step(
+      3,
+      "Bloom spices and build the base",
+      "Add onions and peppers; cook 6–8 minutes until edges soften. Stir in garlic, chili powder, smoked paprika, and cumin 45 seconds until fragrant. Add tomato paste and brown sugar; cook 1 minute until the paste darkens.",
+      10,
+      "medium",
+    ),
+    step(
+      4,
+      "Simmer the chili until it coats a spoon",
+      "Pour in crushed tomatoes, diced tomatoes, broth, and beans. Simmer uncovered 35–40 minutes at a gentle bubble, stirring every 10 minutes. Ready when a drag through the pot leaves a clear trail. Season with salt and Worcestershire.",
+      40,
+      "medium-low",
+    ),
+    step(
+      5,
+      "Mix garlic butter for the bread",
+      "While chili simmers, beat softened butter with minced garlic, parsley, and a pinch of salt until fluffy. Halve baguettes lengthwise and spread edge to edge — bare edges burn before the center melts.",
+      8,
+    ),
+    step(
+      6,
+      "Bake cheesy garlic bread",
+      "Top buttered bread with shredded cheddar and mozzarella. Bake at 400°F 10–12 minutes until cheese bubbles and edges are deep gold. Hold under loose foil — sealed foil steams crisp crust soft.",
+      12,
+      "high",
+    ),
+    step(
+      7,
+      "Set the topping bar",
+      "Portion shredded cheddar, diced onion, jalapeños, sour cream, and cilantro into labeled bowls. Keep cold toppings on ice — hot chili plus warm toppings is the hall move.",
+      8,
+      "low",
+    ),
+    step(
+      8,
+      "Ladle and serve the line",
+      "Ladle chili into bowls or a hotel pan for family style. Slice garlic bread on a bias and set on a separate tray so steam does not sog the crust. Call the crew while it's hot — first bowl is always the best.",
+      5,
+      "low",
+    ),
+    CALL_INTERRUPTION_STEP(9, "beef chili"),
+    LEFTOVERS_PACK_DOWN_STEP(10, "beef chili"),
   ]);
 
   return merge(page, wheelTitle, {
@@ -692,6 +742,7 @@ const FIXERS: Record<string, (page: GoldenRecipePage, wheelTitle: string) => Gol
   "steak-tacos": fixSteakTacos,
   "pulled-pork": fixPulledPork,
   "smash-burgers": fixSmashBurgers,
+  "big-chili": fixChiliGarlicBread,
   "chili-garlic-bread": fixChiliGarlicBread,
   "chicken-caesar": fixChickenCaesar,
   "jerk-chicken": fixJerkChicken,
@@ -716,7 +767,7 @@ export function applyClassicsWheelFix(
 export const CLASSICS_WHEEL_IMAGE_FIX_SLUGS = [
   "steak-tacos",
   "smash-burgers",
-  "chili-garlic-bread",
+  "big-chili",
   "jerk-chicken",
   "beef-dip",
   "bbq-chicken-mac-and-cheese",

@@ -1,6 +1,6 @@
 {
   "slug": "sheet-pan-breakfast-hash",
-  "title": "Crispy Honey Chili Eggs",
+  "title": "Sheet Pan Breakfast Hash",
   "subtitle": "Sheet-pan hash with eggs cracked over the top.",
   "description": "Potatoes, sausage, and peppers roasted on a sheet pan with eggs cracked over the top in the oven. One pan, easy cleanup, feeds ten.",
   "filters": [
@@ -12,8 +12,8 @@
     "easy-cleanup",
     "eggs"
   ],
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "prepTime": 15,
   "cookTime": 30,
   "totalTime": 45,
@@ -21,111 +21,80 @@
   "ingredients": [
     {
       "name": "Yukon gold potatoes",
-      "quantity": "3",
+      "quantity": "3.5 lb",
       "notes": "diced 1/2-inch"
     },
     {
       "name": "large eggs",
-      "quantity": "11"
+      "quantity": "14"
     },
     {
       "name": "breakfast sausage",
-      "quantity": "2",
+      "quantity": "2 lb",
       "notes": "browned and crumbled"
     },
     {
       "name": "yellow onion",
-      "quantity": "3/4",
+      "quantity": "1",
       "notes": "diced"
     },
     {
       "name": "bell peppers",
-      "quantity": "3/4",
+      "quantity": "1–2",
       "notes": "diced"
     },
     {
       "name": "olive oil or bacon fat",
-      "quantity": "1.6"
+      "quantity": "2 tbsp"
     },
     {
       "name": "shredded cheddar",
-      "quantity": "3/4",
+      "quantity": "1–2 cups",
       "notes": "optional finish"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Crispy Honey Chili Eggs in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use olive oil or bacon fat, shredded cheddar as listed — measure each before heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
+      "title": "Heat the oven",
+      "instruction": "Heat oven to 425°F. Line a full sheet pan with parchment or foil for easy cleanup.",
+      "minutes": 0,
+      "tempF": 425
     },
     {
       "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch Eggs. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
+      "title": "Roast the hash base",
+      "instruction": "Toss potatoes with oil, salt, and pepper. Spread in one layer and roast 15 minutes. Add sausage, onion, and peppers; roast until potatoes are browned and sausage is hot.",
+      "minutes": 18
     },
     {
       "stepNumber": 3,
-      "title": "Heat the oven",
-      "instruction": "Heat oven to 425°F. Line a full sheet pan with parchment or foil for easy cleanup. Allow 10–15 minutes for mise en place before heat goes on. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 0,
-      "heatLevel": ""
+      "title": "Make wells for eggs",
+      "instruction": "Pull pan from oven. Make shallow wells across the hash. Crack eggs into wells and season lightly.",
+      "minutes": 3
     },
     {
       "stepNumber": 4,
-      "title": "Roast the hash base",
-      "instruction": "Toss potatoes with oil, salt, and pepper. Spread in one layer and roast 15 minutes. Add sausage, onion, and peppers; roast until potatoes are browned and sausage is hot. Target 165°F at the thickest point before moving to the next batch.",
-      "minutes": 18,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 5,
-      "title": "Make wells for eggs",
-      "instruction": "Pull pan from oven. Make shallow wells across the hash. Crack eggs into wells and season lightly. Bake until the center reaches a safe internal temp (165°F) and edges look set — use a thermometer at the thickest point. Plan about 3 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 3,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 6,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 7,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 8,
       "title": "Bake until eggs set",
-      "instruction": "Return to oven until whites are set and yolks are still slightly soft (or longer for firm yolks). Finish with cheese if using. Bake until the center reaches a safe internal temp (165°F) and edges look set — use a thermometer at the thickest point. Plan about 10 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
+      "instruction": "Return to oven until whites are set and yolks are still slightly soft (or longer for firm yolks). Finish with cheese if using.",
       "minutes": 10,
-      "heatLevel": ""
+      "tempF": 425
     }
   ],
   "nutrition": {
-    "calories": 446,
-    "protein": 16,
-    "carbs": 14,
+    "calories": 562,
+    "protein": 25,
+    "carbs": 31,
     "fat": 37,
-    "label": "Estimated per serving",
+    "label": "per serving (hall portion)",
     "source": "calculated",
-    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
       "under30gFat": false,
       "highCarb": false,
-      "lowCarb": true,
-      "mealPrepFriendly": true
+      "lowCarb": false,
+      "mealPrepFriendly": false
     },
     "badgeCandidates": {
       "highProtein": false,
@@ -148,29 +117,10 @@
   ],
   "heroImage": "/images/breakfast/sheet-pan-breakfast-hash.jpg",
   "thumbImage": "/images/thumbs/breakfast/sheet-pan-breakfast-hash.jpg",
-  "imageAlt": "Warm station-kitchen breakfast: Sheet Pan Breakfast Hash",
-  "publishedAt": "2026-05-31T18:33:00.830Z",
-  "updatedAt": "2026-05-31T23:50:25.212Z",
+  "imageAlt": "Wide firehall crew platter of Sheet Pan Breakfast Hash beside eggs on a station prep table, family-style",
+  "publishedAt": "2026-06-04T20:48:24.993Z",
+  "updatedAt": "2026-06-04T20:48:24.993Z",
   "readMinutes": 6,
   "seoTitle": "Sheet Pan Breakfast Hash | Firehall Breakfast",
-  "collectionTier": "firehall_classic",
-  "proTips": [
-    "Assign one cook to the hot surface and one to assembly. Keep the line moving; don’t crowd the griddle.",
-    "Set a warm holding zone (oven 200°F or covered hotel pan) so staggered eaters still get a hot plate.",
-    "Run a quick call-proof check: anything crispy stays uncovered; anything soft stays covered."
-  ],
-  "tonightSpread": [
-    "Plate Crispy Honey Chili Eggs with sides in separate pans so the crew can mix portions.",
-    "Keep hot items on one side of the table and cold on the other — eggs stay hot, fruit stays cold.",
-    "Line up Crispy Honey Chili Eggs on the main counter with serving spoons — firefighters grab fast between calls.",
-    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
-  ],
-  "equipment": [
-    "Large sheet trays",
-    "Instant-read thermometer",
-    "Aluminum foil"
-  ],
-  "mealPrepNotes": "Prep mise en place before the shift — Crispy Honey Chili Eggs runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone.",
-  "mobileImage": "/images/mobile/breakfast/sheet-pan-breakfast-hash.jpg",
-  "railImage": "/images/rails/breakfast/sheet-pan-breakfast-hash.jpg"
+  "collectionTier": "firehall_classic"
 }

@@ -250,6 +250,7 @@
     }
   },
   "heroImage": "/images/golden-100/pad-thai.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Pad Thai on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/pad-thai.jpg",
   "thumbImage": "/images/thumbs/pad-thai.jpg",
   "railImage": "/images/rails/pad-thai.jpg",
@@ -269,12 +270,12 @@
     "thai-basil-chicken",
     "chicken-quesadillas",
     "chicken-tikka-masala",
+    "sheet-pan-parmesan-dijon-chicken-thigh-dinner",
     "skillet-chicken-alfredo",
-    "beef-broccoli",
-    "chili-mac"
+    "beef-broccoli"
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.445Z",
+  "generatedAt": "2026-06-04T20:45:42.277Z",
   "contentVersion": 2
 }

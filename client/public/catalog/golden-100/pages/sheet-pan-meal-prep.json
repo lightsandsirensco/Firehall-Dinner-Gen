@@ -145,6 +145,7 @@
     }
   },
   "heroImage": "/images/golden-100/sheet-pan-meal-prep.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Chicken Meal Prep Trays on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/sheet-pan-meal-prep.jpg",
   "thumbImage": "/images/thumbs/sheet-pan-meal-prep.jpg",
   "railImage": "/images/rails/sheet-pan-meal-prep.jpg",
@@ -163,15 +164,15 @@
     "golden_100"
   ],
   "relatedSlugs": [
+    "sheet-pan-parmesan-dijon-chicken-thigh-dinner",
     "bbq-chicken-sliders",
     "beer-can-chicken",
     "smoked-wings-white-sauce",
     "one-pot-chicken-rice",
-    "bbq-chicken-pizza",
-    "buffalo-chicken-dip"
+    "bbq-chicken-pizza"
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.539Z",
+  "generatedAt": "2026-06-04T20:45:42.354Z",
   "contentVersion": 2
 }

@@ -1,22 +1,22 @@
 {
   "slug": "big-chili",
-  "title": "Beef and Bean Chili",
-  "displayTitle": "Beef and Bean Chili",
-  "seoTitle": "Beef and Bean Chili | Firefighter Meal",
+  "title": "Firehall Chili",
+  "displayTitle": "Firehall Chili",
+  "seoTitle": "Firehall Chili | Firefighter Meal",
   "shortDescription": "Double pot, triple appetite",
   "subtitle": "Double pot, triple appetite",
   "category": "big_crew_feeders",
   "cuisine": "american",
-  "description": "Double pot, triple appetite. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
+  "description": "Viral comfort-food hall night. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
   "baseServings": 8,
-  "cookTime": 90,
-  "prepTime": 30,
+  "cookTime": 75,
+  "prepTime": 25,
   "difficulty": "hard",
-  "calories": 702,
-  "protein": 64,
-  "carbs": 37,
-  "fats": 35,
+  "calories": 1400,
+  "protein": 120,
+  "carbs": 72,
+  "fats": 90,
   "tags": [
     "protein:beef",
     "format:soup_chili",
@@ -34,152 +34,205 @@
   "ingredients": [
     {
       "name": "Ground beef (80/20)",
-      "quantity": "3.5",
-      "unit": "lb",
-      "group": "Main"
+      "quantity": "5.3",
+      "unit": "lb"
     },
     {
-      "name": "Yellow onion",
-      "quantity": "3",
-      "unit": "large",
-      "group": "Aromatics"
+      "name": "Yellow onions",
+      "quantity": "4",
+      "unit": "large"
     },
     {
-      "name": "Bell peppers, diced",
-      "quantity": "3",
-      "unit": "count",
-      "group": "Aromatics"
+      "name": "Bell peppers (mixed)",
+      "quantity": "4"
     },
     {
-      "name": "Garlic cloves, minced",
-      "quantity": "8",
-      "unit": "cloves",
-      "group": "Aromatics"
+      "name": "Garlic cloves",
+      "quantity": "10.7"
     },
     {
-      "name": "Kidney beans, drained",
-      "quantity": "3",
-      "unit": "cans",
-      "notes": "15 oz cans",
-      "group": "Main"
+      "name": "Fire-roasted diced tomatoes",
+      "quantity": "4",
+      "unit": "cans (14 oz)"
     },
     {
-      "name": "Crushed tomatoes",
-      "quantity": "2",
-      "unit": "cans",
-      "notes": "28 oz",
-      "group": "Main"
-    },
-    {
-      "name": "Diced tomatoes",
-      "quantity": "2",
-      "unit": "cans",
-      "notes": "14 oz",
-      "group": "Main"
+      "name": "Crushed fire-roasted tomatoes",
+      "quantity": "2.7",
+      "unit": "cans (28 oz)"
     },
     {
       "name": "Tomato paste",
-      "quantity": "3",
-      "unit": "tbsp",
-      "group": "Sauce"
+      "quantity": "4",
+      "unit": "tbsp"
     },
     {
-      "name": "Beef or chicken broth",
+      "name": "Beef broth",
+      "quantity": "5.3",
+      "unit": "cups"
+    },
+    {
+      "name": "Kidney beans",
       "quantity": "4",
-      "unit": "cups",
-      "group": "Sauce"
+      "unit": "cans"
     },
     {
       "name": "Chili powder",
-      "quantity": "3",
-      "unit": "tbsp",
-      "group": "Seasoning"
+      "quantity": "4",
+      "unit": "tbsp"
     },
     {
       "name": "Smoked paprika",
-      "quantity": "2",
-      "unit": "tbsp",
-      "group": "Seasoning"
+      "quantity": "2.7",
+      "unit": "tbsp"
     },
     {
       "name": "Ground cumin",
-      "quantity": "2",
-      "unit": "tsp",
-      "group": "Seasoning"
+      "quantity": "2.7",
+      "unit": "tsp"
+    },
+    {
+      "name": "Dried oregano",
+      "quantity": "1.3",
+      "unit": "tsp"
+    },
+    {
+      "name": "Chipotle in adobo",
+      "quantity": "2.7",
+      "unit": "tbsp sauce"
     },
     {
       "name": "Brown sugar",
-      "quantity": "1",
-      "unit": "tbsp",
-      "group": "Seasoning"
+      "quantity": "1.3",
+      "unit": "tbsp"
     },
     {
       "name": "Worcestershire sauce",
-      "quantity": "2",
-      "unit": "tbsp",
-      "group": "Sauce"
+      "quantity": "2.7",
+      "unit": "tbsp"
     },
     {
-      "name": "Kosher salt",
-      "quantity": "2",
-      "unit": "tbsp",
-      "group": "Seasoning"
+      "name": "Italian bread or baguettes",
+      "quantity": "5.3",
+      "unit": "loaves"
+    },
+    {
+      "name": "Unsalted butter (softened)",
+      "quantity": "1.3",
+      "unit": "cup"
+    },
+    {
+      "name": "Shredded sharp cheddar",
+      "quantity": "16",
+      "unit": "oz"
+    },
+    {
+      "name": "Shredded mozzarella",
+      "quantity": "16",
+      "unit": "oz"
+    },
+    {
+      "name": "Fresh jalapeños",
+      "quantity": "5.3"
+    },
+    {
+      "name": "Sour cream",
+      "quantity": "2.7",
+      "unit": "cups"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Prep the pots",
-      "instruction": "Dice onions and peppers into even ¼-inch pieces. Mince garlic. Drain beans. Open tomatoes. Set out your largest stock pot (or two medium pots if feeding 10+). Line a sheet pan if you're making garlic bread on the side.",
+      "title": "Prep the pots and garlic bread station",
+      "instruction": "Dice onions and peppers ¼ inch. Mince garlic. Drain beans. Open tomatoes. Set out your largest stock pot and a sheet pan for garlic bread — chili splatters, so keep a lid nearby.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Brown the meat",
-      "instruction": "Heat 2 tbsp oil in the pot over medium-high until it shimmers. Add ground beef in two batches — don't crowd. Break into crumbles and cook until deeply browned with no pink (160°F+). You want fond on the bottom, not gray steam. Drain excess grease if the pot looks oily.",
+      "title": "Brown the meat in batches",
+      "instruction": "Heat oil in the pot over medium-high until it shimmers. Add ground beef in two batches — don't crowd. Break into crumbles and cook until deeply browned with no pink (160°F+). Drain excess grease if the pot looks oily.",
       "minutes": 12,
       "heatLevel": "medium-high"
     },
     {
       "stepNumber": 3,
-      "title": "Bloom spices",
-      "instruction": "Add onions and peppers; cook 6–8 minutes until edges soften and smell sweet. Stir in garlic, chili powder, smoked paprika, and cumin for 45 seconds until fragrant. Add tomato paste and brown sugar; cook 1 minute until the paste darkens slightly.",
+      "title": "Bloom spices and build the base",
+      "instruction": "Add onions and peppers; cook 6–8 minutes until edges soften. Stir in garlic, chili powder, smoked paprika, and cumin 45 seconds until fragrant. Add tomato paste and brown sugar; cook 1 minute until the paste darkens.",
       "minutes": 10,
       "heatLevel": "medium"
     },
     {
       "stepNumber": 4,
-      "title": "Simmer the chili",
-      "instruction": "Pour in crushed tomatoes, diced tomatoes, broth, and beans. Bring to a gentle bubble, then lower to a steady simmer — small bubbles, not a rolling boil. Cook uncovered 35–40 minutes, stirring every 10 minutes. Beef and Bean Chili is ready when it coats the back of a spoon and a drag through the pot leaves a clear trail. Season with salt and Worcestershire.",
+      "title": "Simmer the chili until it coats a spoon",
+      "instruction": "Pour in crushed tomatoes, diced tomatoes, broth, and beans. Simmer uncovered 35–40 minutes at a gentle bubble, stirring every 10 minutes. Ready when a drag through the pot leaves a clear trail. Season with salt and Worcestershire.",
       "minutes": 40,
       "heatLevel": "medium-low"
     },
     {
       "stepNumber": 5,
-      "title": "Hold and serve the hall",
-      "instruction": "Keep on low (or transfer to a cambro) for late eaters. Set a topping bar: shredded cheese, diced onion, jalapeños, sour cream. Call the crew while it's hot — chili holds well but the first bowl is always the best.",
+      "title": "Mix garlic butter for the bread",
+      "instruction": "While chili simmers, beat softened butter with minced garlic, parsley, and a pinch of salt until fluffy. Halve baguettes lengthwise and spread edge to edge — bare edges burn before the center melts.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Bake cheesy garlic bread",
+      "instruction": "Top buttered bread with shredded cheddar and mozzarella. Bake at 400°F 10–12 minutes until cheese bubbles and edges are deep gold. Hold under loose foil — sealed foil steams crisp crust soft.",
+      "minutes": 12,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 7,
+      "title": "Set the topping bar",
+      "instruction": "Portion shredded cheddar, diced onion, jalapeños, sour cream, and cilantro into labeled bowls. Keep cold toppings on ice — hot chili plus warm toppings is the hall move.",
+      "minutes": 8,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 8,
+      "title": "Ladle and serve the line",
+      "instruction": "Ladle chili into bowls or a hotel pan for family style. Slice garlic bread on a bias and set on a separate tray so steam does not sog the crust. Call the crew while it's hot — first bowl is always the best.",
       "minutes": 5,
       "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover beef chili — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 10,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool beef chili and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
+      "heatLevel": ""
     }
   ],
   "proTips": [
-    "Firefighters eat heavy after rough nights — double the protein if the hall had a busy shift.",
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
-    "Taste for salt at the end — hall palates run salty after long shifts."
+    "If chili tastes flat, add ½ tsp more smoked paprika and a pinch of salt — not more sugar.",
+    "Hold garlic bread under loose foil on the counter; cut open only when the line forms.",
+    "Simmer until a drag through the pot leaves a clear trail — soup-thin chili won't coat fries or bread.",
+    "Keep a backup tray at 200°F for firefighters returning from a run — never serve picked-over pans to late crew.",
+    "Taste for salt at the end — hall palates run salty after long shifts.",
+    "Log hold times on the pan with a grease pencil when tones drop mid-service.",
+    "Spot-check proteins with an instant-read thermometer before reopening the line after a call."
   ],
   "tonightSpread": [
-    "Keep the pot on low simmer on the stove — ladle from the side so the bottom doesn't scorch.",
-    "Set shredded cheese, crackers, and hot sauce in a row beside the pot.",
-    "Serve family-style from two full-size trays — never let the line run dry on a busy night.",
-    "Put starch and protein on separate trays so vegetarians can load up on sides.",
-    "Line up Beef and Bean Chili on the main counter with serving spoons — firefighters grab fast between calls.",
-    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+    "Main: Firehouse smoked beef chili",
+    "Sides: cheesy garlic bread sticks, sour cream topping bar",
+    "Condiments: shredded cheddar, diced onion, fresh jalapeños, cilantro",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
   ],
   "leftovers": [
-    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
-    "Label trays with date and reheat to 165°F minimum before second shift.",
-    "Add a splash of stock or water when reheating — thick sauces tighten in the fridge."
+    "Cool beef chili in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Reheat chili on the stove with a splash of broth — it thickens overnight.",
+    "Day-old garlic bread rebakes 5 minutes at 400°F; never store bread sealed with hot chili."
   ],
   "whyCrewsLikeIt": "Double pot, triple appetite. A hall pick for big-appetite nights — one line, real portions, no drama at the stove.",
   "substitutions": [
@@ -188,17 +241,17 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 702,
-    "protein": 64,
-    "carbs": 37,
-    "fats": 35,
+    "calories": 1400,
+    "protein": 120,
+    "carbs": 72,
+    "fats": 90,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
       "under30gFat": false,
-      "highCarb": false,
+      "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": false
     },
@@ -209,6 +262,7 @@
     }
   },
   "heroImage": "/images/golden-100/big-chili.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Beef and Bean Chili on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/big-chili.jpg",
   "thumbImage": "/images/thumbs/big-chili.jpg",
   "railImage": "/images/rails/big-chili.jpg",
@@ -226,15 +280,15 @@
     "golden_100"
   ],
   "relatedSlugs": [
-    "sunday-chili-batch",
     "loaded-potato-feed",
     "beef-barley-soup",
-    "chili-garlic-bread",
     "bbq-brisket-burnt-ends",
-    "ny-strip-herb-butter"
+    "ny-strip-herb-butter",
+    "texas-beef-ribs",
+    "batch-lasagna"
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.486Z",
-  "contentVersion": 2
+  "generatedAt": "2026-06-04T20:53:34.889Z",
+  "contentVersion": 4
 }

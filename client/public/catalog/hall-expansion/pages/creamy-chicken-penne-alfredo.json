@@ -13,10 +13,10 @@
   "cookTime": 30,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 0,
-  "protein": 0,
-  "carbs": 0,
-  "fats": 0,
+  "calories": 560,
+  "protein": 42,
+  "carbs": 50,
+  "fats": 24,
   "tags": [
     "protein:chicken",
     "format:pasta",
@@ -103,64 +103,36 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Creamy Chicken Penne Alfredo in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "title": "Cook the penne",
+      "instruction": "Boil penne in salted water until al dente, about 10 minutes. Reserve 2 cups pasta water before draining.",
       "minutes": 12,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
-      "title": "Cook the penne",
-      "instruction": "Boil penne in salted water until al dente, about 10 minutes. Reserve 2 cups pasta water before draining. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 4,
       "title": "Sear the chicken",
       "instruction": "Season chicken with salt and pepper. Sear in olive oil over medium-high heat 6–7 minutes per side until internal temp reaches 165°F. Rest 5 minutes and slice. Target oven/smoker temperature: 165°F.",
       "minutes": 20,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Build the sauce",
-      "instruction": "Melt butter in a large pot, sauté garlic 1 minute. Pour in warmed cream and simmer gently 3 minutes—do not boil hard. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Melt butter in a large pot, sauté garlic 1 minute. Pour in warmed cream and simmer gently 3 minutes—do not boil hard.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Finish the sauce",
-      "instruction": "Whisk in Parmesan until melted and smooth. Thin with pasta water if too thick. Season with pepper. Plan about 3 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Whisk in Parmesan until melted and smooth. Thin with pasta water if too thick. Season with pepper.",
       "minutes": 3,
       "heatLevel": ""
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 9,
+      "stepNumber": 5,
       "title": "Toss and serve",
-      "instruction": "Add penne and sliced chicken to sauce off heat. Toss until coated. Garnish with parsley and serve immediately or hold warm. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
+      "instruction": "Add penne and sliced chicken to sauce off heat. Toss until coated. Garnish with parsley and serve immediately or hold warm.",
       "minutes": 5,
       "heatLevel": ""
     }
@@ -183,26 +155,11 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 0,
-    "protein": 0,
-    "carbs": 0,
-    "fats": 0,
-    "label": "Estimated per serving",
-    "source": "unavailable",
-    "estimateAvailable": false,
-    "filterFlags": {
-      "highProtein": true,
-      "under700Calories": false,
-      "under30gFat": false,
-      "highCarb": true,
-      "lowCarb": false,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": false
-    }
+    "calories": 560,
+    "protein": 42,
+    "carbs": 50,
+    "fats": 24,
+    "label": "~560 cal/serving · 42g protein · 3g fiber (est.)"
   },
   "heroImage": "/images/hall-expansion/creamy-chicken-penne-alfredo.jpg",
   "heroImageAlt": "Creamy Chicken Penne Alfredo — crew-sized firehall meal",
@@ -222,6 +179,7 @@
     "hall-burger-bar",
     "pasta-bar-night"
   ],
-  "generatedAt": "2026-05-31T01:50:00.916Z",
+  "sourceUrl": "",
+  "generatedAt": "2026-06-04T20:47:21.930Z",
   "contentVersion": 2
 }

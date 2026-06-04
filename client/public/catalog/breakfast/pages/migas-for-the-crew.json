@@ -73,66 +73,33 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Migas for the Crew in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
+      "title": "Fry tortilla strips",
+      "instruction": "Heat oil in a large skillet over medium-high until shimmering. Fry tortilla strips in batches until golden and crisp, about 2 minutes per batch. Drain on paper towels and season lightly with salt.",
+      "minutes": 8
     },
     {
       "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch Eggs. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
+      "title": "Sauté peppers and onion",
+      "instruction": "Remove all but 2 tablespoons oil from the pan. Sauté poblano and onion over medium-high until softened and lightly charred at the edges, about 5 minutes. Add tomato and cumin; cook 1 minute.",
+      "minutes": 6
     },
     {
       "stepNumber": 3,
-      "title": "Fry tortilla strips",
-      "instruction": "Heat oil in a large skillet over medium-high until shimmering. Fry tortilla strips in batches until golden and crisp, about 2 minutes per batch. Drain on paper towels and season lightly with salt.",
-      "minutes": 8,
-      "heatLevel": ""
+      "title": "Scramble eggs into the mix",
+      "instruction": "Beat eggs with salt and pepper. Pour into the skillet over medium-low heat, folding gently with a spatula. When eggs are halfway set, fold in half the tortilla strips so some stay crisp and some soften.",
+      "minutes": 8
     },
     {
       "stepNumber": 4,
-      "title": "Sauté peppers and onion",
-      "instruction": "Remove all but 2 tablespoons oil from the pan. Sauté poblano and onion over medium-high until softened and lightly charred at the edges, about 5 minutes. Add tomato and cumin; cook 1 minute.",
-      "minutes": 6,
-      "heatLevel": ""
+      "title": "Finish and garnish",
+      "instruction": "Remove from heat while eggs still look glossy. Fold in remaining tortilla strips for crunch. Scatter queso fresco and cilantro over the top.",
+      "minutes": 3
     },
     {
       "stepNumber": 5,
-      "title": "Scramble eggs into the mix",
-      "instruction": "Beat eggs with salt and pepper. Pour into the skillet over medium-low heat, folding gently with a spatula. When eggs are halfway set, fold in half the tortilla strips so some stay crisp and some soften.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 6,
-      "title": "Finish and garnish",
-      "instruction": "Remove from heat while eggs still look glossy. Fold in remaining tortilla strips for crunch. Scatter queso fresco and cilantro over the top.",
-      "minutes": 3,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 9,
       "title": "Serve family-style",
       "instruction": "Serve straight from the skillet with warm salsa and extra tortilla strips on the side. Do not hold more than 5 minutes or crisp strips will steam soft.",
-      "minutes": 2,
-      "heatLevel": ""
+      "minutes": 2
     }
   ],
   "nutrition": {
@@ -140,16 +107,15 @@
     "protein": 19,
     "carbs": 38,
     "fat": 25,
-    "label": "Estimated per serving",
+    "label": "per serving (hall portion)",
     "source": "calculated",
-    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
       "under30gFat": true,
       "highCarb": false,
       "lowCarb": false,
-      "mealPrepFriendly": true
+      "mealPrepFriendly": false
     },
     "badgeCandidates": {
       "highProtein": false,
@@ -173,28 +139,9 @@
   "heroImage": "/images/breakfast/migas-for-the-crew.jpg",
   "thumbImage": "/images/thumbs/breakfast/migas-for-the-crew.jpg",
   "imageAlt": "Migas skillet with scrambled eggs, crispy tortilla strips, and queso fresco",
-  "publishedAt": "2026-05-31T18:33:00.830Z",
-  "updatedAt": "2026-05-31T23:49:25.600Z",
+  "publishedAt": "2026-06-04T20:48:24.991Z",
+  "updatedAt": "2026-06-04T20:48:24.991Z",
   "readMinutes": 7,
   "seoTitle": "Migas for the Crew | Firehall Breakfast",
-  "collectionTier": "firehall_classic",
-  "proTips": [
-    "Fry tortilla strips first and hold uncovered—covering traps steam and kills crunch.",
-    "Use two skillets if feeding ten so eggs finish in one batch without overcooking.",
-    "Prep all veg dice before the first tortilla hits oil so the scramble moves fast."
-  ],
-  "tonightSpread": [
-    "Plate Migas for the Crew with sides in separate pans so the crew can mix portions.",
-    "Keep hot items on one side of the table and cold on the other — eggs stay hot, fruit stays cold.",
-    "Line up Migas for the Crew on the main counter with serving spoons — firefighters grab fast between calls.",
-    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
-  ],
-  "equipment": [
-    "Large sheet trays",
-    "Instant-read thermometer",
-    "Aluminum foil"
-  ],
-  "mealPrepNotes": "Prep mise en place before the shift — Migas for the Crew runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone.",
-  "mobileImage": "/images/mobile/breakfast/migas-for-the-crew.jpg",
-  "railImage": "/images/rails/breakfast/migas-for-the-crew.jpg"
+  "collectionTier": "firehall_classic"
 }

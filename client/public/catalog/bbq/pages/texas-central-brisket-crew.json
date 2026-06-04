@@ -8,15 +8,15 @@
   "category": "bbq_grill_nights",
   "cuisine": "american",
   "description": "Adapted from classic Central Texas pit tradition (Amazing Ribs, Meat Church): a whole packer brisket gets a simple salt-and-pepper rub, smokes low over post oak until probe-tender, rests, and slices against the grain for the crew.",
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "cookTime": 480,
   "prepTime": 45,
   "difficulty": "hard",
-  "calories": 754,
-  "protein": 66,
-  "carbs": 34,
-  "fats": 41,
+  "calories": 1400,
+  "protein": 120,
+  "carbs": 32,
+  "fats": 90,
   "tags": [
     "protein:beef",
     "format:bbq",
@@ -41,136 +41,108 @@
   "ingredients": [
     {
       "name": "whole packer brisket",
-      "quantity": "4",
+      "quantity": "14",
       "unit": "lb",
       "notes": "trimmed"
     },
     {
       "name": "kosher salt",
-      "quantity": "1/4",
+      "quantity": "0.33",
       "unit": "cup"
     },
     {
       "name": "coarse black pepper",
-      "quantity": "1/4",
+      "quantity": "0.33",
       "unit": "cup"
     },
     {
       "name": "garlic powder",
-      "quantity": "7/8",
+      "quantity": "1",
       "unit": "tbsp"
     },
     {
       "name": "yellow mustard",
-      "quantity": "2.6",
+      "quantity": "3",
       "unit": "tbsp",
       "notes": "binder"
     },
     {
       "name": "beef broth",
-      "quantity": "1.6",
+      "quantity": "2",
       "unit": "cups",
       "notes": "for holding"
     },
     {
       "name": "dill pickle chips",
-      "quantity": "1.6",
+      "quantity": "2",
       "unit": "cups"
     },
     {
       "name": "white onion",
-      "quantity": "3/4",
+      "quantity": "1",
       "unit": "whole",
       "notes": "thin-sliced"
     },
     {
       "name": "white bread",
-      "quantity": "17",
+      "quantity": "20",
       "unit": "slices"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Texas Central Brisket for the Crew in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch beef. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Trim the packer",
       "instruction": "Trim fat cap to 1/4 inch. Square the ends and remove hard silver skin so the rub adheres evenly. Let brisket sit at room temp 45 minutes while smoker preheats.",
       "minutes": 45,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Season and rest",
       "instruction": "Coat brisket with mustard binder. Mix salt, pepper, and garlic powder; pack rub evenly on all sides. Rest on a rack 20 minutes while smoker stabilizes at 250°F with post oak.",
       "minutes": 20,
       "heatLevel": "low"
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Smoke to color",
       "instruction": "Place brisket fat-side up on smoker at 250°F. Smoke until bark is dark mahogany and internal temp hits 165°F in the flat, about 6–7 hours. Spritz with water only if surface looks dry.",
       "minutes": 360,
       "heatLevel": "low"
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Wrap through the stall",
       "instruction": "Wrap tightly in butcher paper when bark color looks right. Continue at 250°F until probe slides like butter and flat reads 203°F, about 3–4 hours.",
       "minutes": 180,
       "heatLevel": "low"
     },
     {
-      "stepNumber": 7,
+      "stepNumber": 5,
       "title": "Rest in the cooler",
       "instruction": "Rest wrapped brisket at least 60 minutes in an insulated cooler so juices redistribute. Do not unwrap early or slices will run dry.",
       "minutes": 60,
       "heatLevel": ""
     },
     {
-      "stepNumber": 8,
+      "stepNumber": 6,
       "title": "Slice and hold",
       "instruction": "Slice flat against the grain into 1/4-inch slices. Toss lightly with warm beef broth. Hold covered at 170°F in a hotel pan with foil until service.",
       "minutes": 20,
       "heatLevel": ""
     },
     {
-      "stepNumber": 9,
-      "title": "Cooking step",
+      "stepNumber": 7,
+      "title": "Tonight's board",
       "instruction": "Serve sliced brisket on butcher paper with pickles, raw onion, and white bread. Call temps: flat pulled at 203°F, held at 170°F max.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 10,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F for medium beef, 160°F for ground. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 11,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 12,
+      "stepNumber": 8,
       "title": "Leftovers",
-      "instruction": "Chop trim and ends into chopped-beef sandwiches with extra broth. Reheat slices covered at 325°F until 165°F internal. Plan about 10 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Chop trim and ends into chopped-beef sandwiches with extra broth. Reheat slices covered at 325°F until 165°F internal.",
       "minutes": 10,
       "heatLevel": ""
     }
@@ -192,26 +164,12 @@
   "mealPrepNotes": "Start 10–12 hours before service. Once wrapped, brisket can finish in a 275°F oven. Hold whole wrapped in a cooler up to 4 hours, or slice and hold covered at 170°F with a splash of beef broth for 90 minutes.",
   "cleanupDifficulty": "heavy",
   "nutrition": {
-    "calories": 754,
-    "protein": 66,
-    "carbs": 34,
-    "fats": 41,
-    "label": "Estimated per serving",
-    "source": "calculated",
-    "estimateAvailable": true,
-    "filterFlags": {
-      "highProtein": true,
-      "under700Calories": false,
-      "under30gFat": false,
-      "highCarb": false,
-      "lowCarb": false,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": false
-    }
+    "calories": 1400,
+    "protein": 120,
+    "carbs": 32,
+    "fats": 90,
+    "label": "per serving (hall portion)",
+    "source": "estimated"
   },
   "heroImage": "/images/smoker-catalog/texas-central-brisket-crew.jpg",
   "heroImageAlt": "Texas Central Brisket for the Crew — crew-sized BBQ spread with visible smoke and bark",
@@ -239,6 +197,6 @@
     "brisket-style-beef-sandwiches-au-jus"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T23:32:23.198Z",
+  "generatedAt": "2026-06-04T20:47:49.411Z",
   "contentVersion": 2
 }

@@ -8,14 +8,14 @@
   "category": "bbq_grill_nights",
   "cuisine": "american",
   "description": "Boneless thighs get a dry rub, then a honey-chipotle glaze that caramelizes over hot grates. Served with lime slaw and toasted buns so the crew can go plate or sandwich.",
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "cookTime": 25,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 672,
+  "calories": 673,
   "protein": 50,
-  "carbs": 47,
+  "carbs": 48,
   "fats": 30,
   "tags": [
     "protein:chicken",
@@ -40,58 +40,58 @@
   "ingredients": [
     {
       "name": "boneless skinless chicken thighs",
-      "quantity": "4",
+      "quantity": "5",
       "unit": "lb"
     },
     {
       "name": "kosher salt",
-      "quantity": "2.1",
+      "quantity": "2.5",
       "unit": "tbsp"
     },
     {
       "name": "brown sugar",
-      "quantity": "2.6",
+      "quantity": "3",
       "unit": "tbsp"
     },
     {
       "name": "smoked paprika",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tbsp"
     },
     {
       "name": "chili powder",
-      "quantity": "1 1/4",
+      "quantity": "1.5",
       "unit": "tbsp"
     },
     {
       "name": "garlic powder",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tsp"
     },
     {
       "name": "ground cumin",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tsp"
     },
     {
       "name": "neutral oil",
-      "quantity": "2.6",
+      "quantity": "3",
       "unit": "tbsp"
     },
     {
       "name": "honey",
-      "quantity": "3/8",
+      "quantity": "0.5",
       "unit": "cup"
     },
     {
       "name": "chipotle in adobo",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tbsp",
       "notes": "minced, plus 1 tbsp sauce"
     },
     {
       "name": "apple cider vinegar",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tbsp"
     },
     {
@@ -102,24 +102,24 @@
     },
     {
       "name": "shredded cabbage mix",
-      "quantity": "8",
+      "quantity": "10",
       "unit": "cups"
     },
     {
       "name": "green onions",
-      "quantity": "5",
+      "quantity": "6",
       "unit": "whole",
       "notes": "sliced"
     },
     {
       "name": "cilantro",
-      "quantity": "3/4",
+      "quantity": "1",
       "unit": "cup",
       "notes": "chopped (optional)"
     },
     {
       "name": "buns",
-      "quantity": "8",
+      "quantity": "10",
       "unit": "whole",
       "notes": "optional for sandwiches"
     }
@@ -127,69 +127,48 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Honey Chipotle Grilled Chicken Thighs in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use neutral oil as listed — measure each before heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Season the thighs",
       "instruction": "Pat thighs dry. Toss with oil, salt, brown sugar, paprika, chili powder, garlic powder, and cumin until evenly coated. Let sit 15 minutes while you heat the grill.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Build the honey-chipotle glaze",
       "instruction": "Whisk honey, minced chipotle + adobo sauce, vinegar, and half the lime juice. Pour half into a small bowl for basting; keep the rest clean for finishing.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Grill hot and fast",
       "instruction": "Heat grill to medium-high (about 450°F). Grill thighs 4–6 minutes per side until well-marked and the thickest piece hits 170°F. Move flare-ups away from the fire instead of extinguishing them.",
       "minutes": 15,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Glaze and set",
       "instruction": "During the last 2 minutes, brush with the basting glaze and let it set sticky. Pull to a tray, brush lightly with the reserved clean glaze, and rest 5 minutes before slicing or serving whole.",
       "minutes": 7,
       "heatLevel": ""
     },
     {
-      "stepNumber": 7,
+      "stepNumber": 5,
       "title": "Make the lime slaw",
       "instruction": "Toss cabbage with remaining lime juice, lime zest, green onions, and cilantro. Season with a pinch of salt. If you want creamy slaw, add 1/3 cup mayo and 1 tbsp vinegar.",
       "minutes": 6,
       "heatLevel": ""
     },
     {
-      "stepNumber": 8,
+      "stepNumber": 6,
       "title": "Tonight’s board",
       "instruction": "Serve thighs family-style with slaw and buns. Put extra glaze on the table. Call it: ‘Honey chipotle chicken, slaw, and buns—grab and go.’",
       "minutes": 2,
       "heatLevel": ""
     },
     {
-      "stepNumber": 9,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
+      "stepNumber": 7,
       "title": "Leftovers",
       "instruction": "Cool chicken fast. Reheat covered in a 325°F oven until hot, then hit with a fresh brush of glaze. Slaw keeps 24 hours; drain before serving.",
       "minutes": 4,
@@ -218,26 +197,12 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 672,
+    "calories": 673,
     "protein": 50,
-    "carbs": 47,
+    "carbs": 48,
     "fats": 30,
-    "label": "Estimated per serving",
-    "source": "calculated",
-    "estimateAvailable": true,
-    "filterFlags": {
-      "highProtein": true,
-      "under700Calories": true,
-      "under30gFat": false,
-      "highCarb": false,
-      "lowCarb": false,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": false
-    }
+    "label": "per serving (hall portion)",
+    "source": "estimated"
   },
   "heroImage": "/images/smoker-catalog/honey-chipotle-chicken-thighs.jpg",
   "heroImageAlt": "Honey Chipotle Grilled Chicken Thighs — crew-sized BBQ spread with visible smoke and bark",
@@ -258,6 +223,6 @@
   ],
   "relatedSlugs": [],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T23:32:23.196Z",
+  "generatedAt": "2026-06-04T20:47:49.401Z",
   "contentVersion": 2
 }

@@ -107,9 +107,8 @@
     "protein": 48,
     "carbs": 40,
     "fat": 38,
-    "label": "Estimated per serving",
+    "label": "per serving (hall portion)",
     "source": "calculated",
-    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
@@ -140,8 +139,8 @@
   "heroImage": "/images/breakfast/red-lead-skillet.jpg",
   "thumbImage": "/images/thumbs/breakfast/red-lead-skillet.jpg",
   "imageAlt": "Cast-iron skillet with seared steak, peppers, and sunny-side eggs for the crew",
-  "publishedAt": "2026-05-31T18:33:00.829Z",
-  "updatedAt": "2026-05-31T18:34:15.374Z",
+  "publishedAt": "2026-06-04T20:48:24.990Z",
+  "updatedAt": "2026-06-04T20:48:24.990Z",
   "readMinutes": 7,
   "seoTitle": "Red Lead Skillet | Firehall Breakfast",
   "collectionTier": "firehall_classic"

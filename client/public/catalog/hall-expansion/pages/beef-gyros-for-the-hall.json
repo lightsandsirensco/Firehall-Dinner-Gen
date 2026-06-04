@@ -164,7 +164,11 @@
     "fats": 26,
     "label": "~560 cal/serving · 38g protein · 2g fiber (est.)"
   },
-  "heroImageAlt": "Beef Gyros — firehall handheld meal — firefighter meal served for a firehall crew dinner",
+  "heroImage": "/images/hall-expansion/beef-gyros-for-the-hall.jpg",
+  "heroImageAlt": "Beef Gyros — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/beef-gyros-for-the-hall.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/beef-gyros-for-the-hall.jpg",
+  "railImage": "/images/rails/hall-expansion/beef-gyros-for-the-hall.jpg",
   "realismScore": 97,
   "firefighterScore": 86,
   "popularityWeight": 7.8,
@@ -179,10 +183,6 @@
     "pasta-bar-night"
   ],
   "sourceUrl": "https://www.seriouseats.com/gyros-recipe",
-  "generatedAt": "2026-06-04T20:18:31.794Z",
-  "contentVersion": 2,
-  "heroImage": "/images/hall-expansion/beef-gyros-for-the-hall.jpg",
-  "thumbImage": "/images/thumbs/hall-expansion/beef-gyros-for-the-hall.jpg",
-  "mobileImage": "/images/mobile/hall-expansion/beef-gyros-for-the-hall.jpg",
-  "railImage": "/images/rails/hall-expansion/beef-gyros-for-the-hall.jpg"
+  "generatedAt": "2026-06-04T20:47:21.931Z",
+  "contentVersion": 2
 }

@@ -136,6 +136,7 @@
     }
   },
   "heroImage": "/images/golden-100/meatloaf-mashed.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Meatloaf and Mashed Potatoes on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/meatloaf-mashed.jpg",
   "thumbImage": "/images/thumbs/meatloaf-mashed.jpg",
   "railImage": "/images/rails/meatloaf-mashed.jpg",
@@ -162,6 +163,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.348Z",
+  "generatedAt": "2026-06-04T20:45:42.187Z",
   "contentVersion": 2
 }

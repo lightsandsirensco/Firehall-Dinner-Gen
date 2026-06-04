@@ -176,6 +176,7 @@
     }
   },
   "heroImage": "/images/golden-100/skillet-chicken-alfredo.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Chicken Alfredo on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/skillet-chicken-alfredo.jpg",
   "thumbImage": "/images/thumbs/skillet-chicken-alfredo.jpg",
   "railImage": "/images/rails/skillet-chicken-alfredo.jpg",
@@ -193,15 +194,15 @@
     "golden_100"
   ],
   "relatedSlugs": [
+    "30-minute-pasta-e-fagioli-for-the-hall",
     "chicken-alfredo-bake",
     "chicken-parm",
+    "spaghetti-aglio-e-olio-for-the-hall",
     "chicken-quesadillas",
-    "chicken-tikka-masala",
-    "pad-thai",
-    "five-ingredient-pasta"
+    "chicken-tikka-masala"
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.420Z",
+  "generatedAt": "2026-06-04T20:45:42.259Z",
   "contentVersion": 2
 }

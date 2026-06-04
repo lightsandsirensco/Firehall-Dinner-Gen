@@ -140,6 +140,7 @@
     }
   },
   "heroImage": "/images/golden-100/jambalaya.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Jambalaya on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/jambalaya.jpg",
   "thumbImage": "/images/thumbs/jambalaya.jpg",
   "railImage": "/images/rails/jambalaya.jpg",
@@ -156,15 +157,15 @@
     "golden_100"
   ],
   "relatedSlugs": [
+    "red-beans-and-rice-for-the-hall",
     "big-chili",
     "batch-lasagna",
     "chicken-alfredo-bake",
     "enchilada-casserole",
-    "loaded-potato-feed",
-    "pulled-pork-mac"
+    "loaded-potato-feed"
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.493Z",
+  "generatedAt": "2026-06-04T20:45:42.318Z",
   "contentVersion": 2
 }

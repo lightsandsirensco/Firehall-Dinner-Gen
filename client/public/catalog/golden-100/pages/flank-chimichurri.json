@@ -156,6 +156,7 @@
     }
   },
   "heroImage": "/images/golden-100/flank-chimichurri.jpg",
+  "heroImageAlt": "Wide firehall crew platter: sliced flank steak with bright green chimichurri sauce beside roasted potatoes on a station prep table, family-style",
   "mobileImage": "/images/mobile/flank-chimichurri.jpg",
   "thumbImage": "/images/thumbs/flank-chimichurri.jpg",
   "railImage": "/images/rails/flank-chimichurri.jpg",
@@ -175,13 +176,13 @@
   "relatedSlugs": [
     "bbq-brisket-burnt-ends",
     "ny-strip-herb-butter",
-    "smoked-brisket",
     "texas-beef-ribs",
     "beer-can-chicken",
-    "cedar-plank-salmon"
+    "cedar-plank-salmon",
+    "grilled-corn-cotija"
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.329Z",
+  "generatedAt": "2026-06-04T20:45:42.171Z",
   "contentVersion": 2
 }

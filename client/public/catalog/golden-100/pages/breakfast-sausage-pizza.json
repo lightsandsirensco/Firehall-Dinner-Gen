@@ -189,6 +189,7 @@
     }
   },
   "heroImage": "/images/golden-100/breakfast-sausage-pizza.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Breakfast Sausage Gravy Pizza on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/breakfast-sausage-pizza.jpg",
   "thumbImage": "/images/thumbs/breakfast-sausage-pizza.jpg",
   "railImage": "/images/rails/breakfast-sausage-pizza.jpg",
@@ -211,10 +212,10 @@
     "honey-soppressata-pizza",
     "pepperoni-pizza-night",
     "bbq-chicken-pizza",
-    "bacon-egg-hash"
+    "sausage-egg-bake"
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.474Z",
+  "generatedAt": "2026-06-04T20:45:42.303Z",
   "contentVersion": 2
 }

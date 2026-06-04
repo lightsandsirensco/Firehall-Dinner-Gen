@@ -1,268 +1,521 @@
 {
-  "generatedAt": "2026-06-01T02:29:12.107Z",
+  "generatedAt": "2026-06-04T20:46:00.531Z",
   "totals": {
-    "recipes": 315,
-    "pass": 313,
-    "fail": 2
+    "recipes": 335,
+    "pass": 16,
+    "fail": 319
   },
   "rows": [
     {
+      "slug": "30-minute-pasta-e-fagioli-for-the-hall",
+      "title": "30-Minute Pasta e Fagioli for the Hall",
+      "kind": "firehall_catalog",
+      "pass": false,
+      "score": 90,
+      "stepCount": 5,
+      "wordCount": 196,
+      "issues": [
+        "title_pasta_no_pasta",
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (196 words, min 400)"
+      ]
+    },
+    {
       "slug": "chili-lime-grilled-tilapia",
       "title": "Ancho-Tilapia with Charred Corn Salsa",
-      "pass": true,
-      "score": 100,
+      "kind": "bbq_catalog",
+      "pass": false,
+      "score": 88,
       "stepCount": 8,
-      "wordCount": 384,
-      "issues": []
+      "wordCount": 103,
+      "issues": [
+        "step 6 is generic or too short",
+        "thin instructions (103 words, min 280)",
+        "vague step: Rest briefly"
+      ]
     },
     {
       "slug": "andouille-po-boy-rolls-crew",
       "title": "Andouille Po Boy Rolls for the Crew",
-      "pass": true,
-      "score": 100,
+      "kind": "bbq_catalog",
+      "pass": false,
+      "score": 88,
       "stepCount": 8,
-      "wordCount": 425,
-      "issues": []
+      "wordCount": 102,
+      "issues": [
+        "step 4 is generic or too short",
+        "thin instructions (102 words, min 400)",
+        "vague step: Hold sausage"
+      ]
     },
     {
       "slug": "applewood-pork-shoulder-steaks",
       "title": "Applewood Grilled Pork Shoulder Steaks",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 100,
-      "stepCount": 8,
-      "wordCount": 438,
-      "issues": []
-    },
-    {
-      "slug": "asian-chicken-lettuce-cups",
-      "title": "Crispy Garlic Chicken",
-      "pass": true,
-      "score": 100,
-      "stepCount": 10,
-      "wordCount": 336,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 140,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (140 words, min 400)"
+      ]
     },
     {
       "slug": "bagel-lox-breakfast-board",
       "title": "Bagel and Lox Breakfast Board",
-      "pass": true,
-      "score": 100,
-      "stepCount": 8,
-      "wordCount": 306,
-      "issues": []
+      "kind": "breakfast_catalog",
+      "pass": false,
+      "score": 68,
+      "stepCount": 5,
+      "wordCount": 131,
+      "issues": [
+        "step 4 uses template title: Set the line",
+        "step 4 is generic or too short",
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (131 words, min 280)",
+        "missing tonightSpread",
+        "missing equipment",
+        "vague step: Set the line"
+      ]
     },
     {
-      "slug": "baked-falafel-hall-bowls",
-      "title": "Baked Falafel Hall Bowls",
-      "pass": true,
+      "slug": "mediterranean-baked-fish-tray",
+      "title": "Baked Cod Tray",
+      "kind": "performance_meal",
+      "pass": false,
       "score": 100,
-      "stepCount": 11,
-      "wordCount": 425,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 102,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (102 words, min 280)"
+      ]
     },
     {
       "slug": "mac-and-cheese-bake",
       "title": "Baked Mac and Cheese",
-      "pass": true,
+      "kind": "firehall_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 10,
-      "wordCount": 430,
-      "issues": []
+      "stepCount": 6,
+      "wordCount": 169,
+      "issues": [
+        "only 6 steps (min 8 for this meal)",
+        "thin instructions (169 words, min 400)"
+      ]
     },
     {
       "slug": "mostaccioli-sausage-bake",
       "title": "Baked Mostaccioli with Sausage",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 100,
-      "stepCount": 8,
-      "wordCount": 437,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 106,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (106 words, min 400)"
+      ]
+    },
+    {
+      "slug": "loaded-baked-potato-bar",
+      "title": "Baked Potato Bar",
+      "kind": "firehall_catalog",
+      "pass": false,
+      "score": 100,
+      "stepCount": 4,
+      "wordCount": 144,
+      "issues": [
+        "only 4 steps (min 10 for this meal)",
+        "thin instructions (144 words, min 400)"
+      ]
+    },
+    {
+      "slug": "herb-baked-salmon-tray",
+      "title": "Baked Salmon Tray",
+      "kind": "performance_meal",
+      "pass": false,
+      "score": 100,
+      "stepCount": 5,
+      "wordCount": 106,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (106 words, min 280)"
+      ]
     },
     {
       "slug": "baked-turkey-meatball-marinara",
       "title": "Baked Turkey Meatball Marinara",
-      "pass": true,
+      "kind": "performance_meal",
+      "pass": false,
       "score": 100,
-      "stepCount": 12,
-      "wordCount": 413,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 113,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (113 words, min 400)"
+      ]
     },
     {
       "slug": "baked-ziti",
       "title": "Baked Ziti",
-      "pass": true,
+      "kind": "firehall_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 10,
-      "wordCount": 452,
-      "issues": []
+      "stepCount": 6,
+      "wordCount": 159,
+      "issues": [
+        "only 6 steps (min 10 for this meal)",
+        "thin instructions (159 words, min 400)"
+      ]
+    },
+    {
+      "slug": "crock-barbacoa-chicken",
+      "title": "Barbacoa Chicken",
+      "kind": "performance_meal",
+      "pass": false,
+      "score": 100,
+      "stepCount": 7,
+      "wordCount": 171,
+      "issues": [
+        "only 7 steps (min 10 for this meal)",
+        "thin instructions (171 words, min 400)"
+      ]
+    },
+    {
+      "slug": "batch-lasagna",
+      "title": "Batch Lasagna",
+      "kind": "firehall_catalog",
+      "pass": false,
+      "score": 100,
+      "stepCount": 6,
+      "wordCount": 116,
+      "issues": [
+        "only 6 steps (min 10 for this meal)",
+        "thin instructions (116 words, min 400)"
+      ]
     },
     {
       "slug": "bbq-breakfast-hash",
       "title": "BBQ Breakfast Hash",
-      "pass": true,
-      "score": 100,
-      "stepCount": 8,
-      "wordCount": 372,
-      "issues": []
+      "kind": "breakfast_catalog",
+      "pass": false,
+      "score": 85,
+      "stepCount": 4,
+      "wordCount": 76,
+      "issues": [
+        "no oven/grill/internal temperature cues in steps",
+        "only 4 steps (min 8 for this meal)",
+        "thin instructions (76 words, min 280)",
+        "missing tonightSpread",
+        "missing equipment"
+      ]
     },
     {
       "slug": "bbq-brisket-burnt-ends",
       "title": "BBQ Burnt Ends",
-      "pass": true,
+      "kind": "firehall_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 11,
-      "wordCount": 440,
-      "issues": []
+      "stepCount": 4,
+      "wordCount": 85,
+      "issues": [
+        "only 4 steps (min 10 for this meal)",
+        "thin instructions (85 words, min 400)"
+      ]
     },
     {
       "slug": "bbq-chicken-bowls",
       "title": "BBQ Chicken Bowls",
+      "kind": "firehall_catalog",
+      "pass": false,
+      "score": 100,
+      "stepCount": 4,
+      "wordCount": 108,
+      "issues": [
+        "only 4 steps (min 8 for this meal)",
+        "thin instructions (108 words, min 400)"
+      ]
+    },
+    {
+      "slug": "bbq-chicken-mac-and-cheese",
+      "title": "BBQ Chicken Mac and Cheese",
+      "kind": "hall_classic",
       "pass": true,
       "score": 100,
-      "stepCount": 11,
-      "wordCount": 430,
+      "stepCount": 10,
+      "wordCount": 440,
       "issues": []
     },
     {
       "slug": "bbq-chicken-pizza",
       "title": "BBQ Chicken Pizza",
-      "pass": true,
+      "kind": "firehall_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 12,
-      "wordCount": 429,
-      "issues": []
+      "stepCount": 6,
+      "wordCount": 219,
+      "issues": [
+        "only 6 steps (min 10 for this meal)",
+        "thin instructions (219 words, min 400)"
+      ]
     },
     {
       "slug": "bbq-chicken-sliders",
       "title": "BBQ Chicken Sliders",
-      "pass": true,
+      "kind": "firehall_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 12,
-      "wordCount": 448,
-      "issues": []
+      "stepCount": 4,
+      "wordCount": 81,
+      "issues": [
+        "only 4 steps (min 10 for this meal)",
+        "thin instructions (81 words, min 400)"
+      ]
     },
     {
       "slug": "bbq-meatball-skewers",
       "title": "BBQ Meatball Skewers",
+      "kind": "hall_expansion",
+      "pass": false,
+      "score": 100,
+      "stepCount": 5,
+      "wordCount": 130,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (130 words, min 400)"
+      ]
+    },
+    {
+      "slug": "big-chili",
+      "title": "Beef and Bean Chili",
+      "kind": "hall_classic",
       "pass": true,
       "score": 100,
-      "stepCount": 8,
-      "wordCount": 441,
+      "stepCount": 10,
+      "wordCount": 524,
       "issues": []
+    },
+    {
+      "slug": "beef-broccoli",
+      "title": "Beef and Broccoli",
+      "kind": "firehall_catalog",
+      "pass": false,
+      "score": 100,
+      "stepCount": 4,
+      "wordCount": 71,
+      "issues": [
+        "only 4 steps (min 8 for this meal)",
+        "thin instructions (71 words, min 400)"
+      ]
     },
     {
       "slug": "beef-barley-soup",
       "title": "Beef Barley Soup",
-      "pass": true,
-      "score": 100,
-      "stepCount": 9,
-      "wordCount": 479,
-      "issues": []
-    },
-    {
-      "slug": "enchilada-beef-skillet",
-      "title": "Garlic Beef Skillet",
-      "pass": true,
-      "score": 100,
-      "stepCount": 9,
-      "wordCount": 457,
-      "issues": []
-    },
-    {
-      "slug": "beef-stroganoff",
-      "title": "Beef Stroganoff",
-      "pass": true,
-      "score": 100,
-      "stepCount": 12,
-      "wordCount": 473,
-      "issues": []
-    },
-    {
-      "slug": "beer-can-chicken",
-      "title": "Beer Can Chicken",
-      "pass": true,
-      "score": 100,
-      "stepCount": 12,
-      "wordCount": 421,
-      "issues": []
-    },
-    {
-      "slug": "belgian-waffle-platter",
-      "title": "Belgian Waffle Platter",
-      "pass": true,
-      "score": 100,
-      "stepCount": 12,
-      "wordCount": 418,
-      "issues": []
-    },
-    {
-      "slug": "spiedie-chicken-platter-crew",
-      "title": "Binghamton White-Wine Spiedie Tray",
-      "pass": true,
-      "score": 100,
-      "stepCount": 8,
-      "wordCount": 487,
-      "issues": []
-    },
-    {
-      "slug": "biscuit-french-toast-sliders",
-      "title": "Biscuit French Toast Sliders",
-      "pass": true,
-      "score": 100,
-      "stepCount": 10,
-      "wordCount": 310,
-      "issues": []
-    },
-    {
-      "slug": "turkey-burgers",
-      "title": "Black Bean Turkey Burgers",
-      "pass": true,
-      "score": 100,
-      "stepCount": 11,
-      "wordCount": 450,
-      "issues": []
-    },
-    {
-      "slug": "cajun-grilled-cod-crew",
-      "title": "Black Iron Remoulade Cod Plates",
-      "pass": true,
-      "score": 100,
-      "stepCount": 8,
-      "wordCount": 405,
-      "issues": []
-    },
-    {
-      "slug": "blackened-cod-taco-night",
-      "title": "Blackened Cod Taco Night",
-      "pass": true,
-      "score": 90,
-      "stepCount": 8,
-      "wordCount": 332,
+      "kind": "firehall_catalog",
+      "pass": false,
+      "score": 85,
+      "stepCount": 3,
+      "wordCount": 61,
       "issues": [
-        "title_taco_no_tortilla"
+        "fewer than 4 instruction steps for crew cooking",
+        "only 3 steps (min 8 for this meal)",
+        "thin instructions (61 words, min 400)"
       ]
     },
     {
       "slug": "beef-dip",
-      "title": "Blackstone Steak Sandwiches",
-      "pass": true,
+      "title": "Beef Dip Sandwiches",
+      "kind": "hall_classic",
+      "pass": false,
+      "score": 82,
+      "stepCount": 4,
+      "wordCount": 115,
+      "issues": [
+        "title promises a sauce but ingredients or steps lack sauce detail",
+        "only 4 steps (min 8 for this meal)",
+        "thin instructions (115 words, min 400)"
+      ]
+    },
+    {
+      "slug": "enchilada-beef-skillet",
+      "title": "Beef Enchilada Skillet",
+      "kind": "hall_expansion",
+      "pass": false,
+      "score": 90,
+      "stepCount": 5,
+      "wordCount": 99,
+      "issues": [
+        "robotic_title; title_taco_no_tortilla",
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (99 words, min 400)"
+      ]
+    },
+    {
+      "slug": "beef-gyros-for-the-hall",
+      "title": "Beef Gyros",
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 100,
-      "stepCount": 12,
-      "wordCount": 409,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 134,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (134 words, min 280)"
+      ]
+    },
+    {
+      "slug": "korean-beef-rice-bowls",
+      "title": "Beef Rice Bowls",
+      "kind": "performance_meal",
+      "pass": false,
+      "score": 100,
+      "stepCount": 5,
+      "wordCount": 113,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (113 words, min 280)"
+      ]
+    },
+    {
+      "slug": "beef-stroganoff",
+      "title": "Beef Stroganoff",
+      "kind": "firehall_catalog",
+      "pass": false,
+      "score": 100,
+      "stepCount": 6,
+      "wordCount": 189,
+      "issues": [
+        "only 6 steps (min 8 for this meal)",
+        "thin instructions (189 words, min 400)"
+      ]
+    },
+    {
+      "slug": "beer-can-chicken",
+      "title": "Beer Can Chicken",
+      "kind": "firehall_catalog",
+      "pass": false,
+      "score": 100,
+      "stepCount": 4,
+      "wordCount": 108,
+      "issues": [
+        "only 4 steps (min 10 for this meal)",
+        "thin instructions (108 words, min 400)"
+      ]
+    },
+    {
+      "slug": "belgian-waffle-platter",
+      "title": "Belgian Waffle Platter",
+      "kind": "breakfast_catalog",
+      "pass": false,
+      "score": 100,
+      "stepCount": 5,
+      "wordCount": 148,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (148 words, min 400)",
+        "missing tonightSpread",
+        "missing equipment"
+      ]
+    },
+    {
+      "slug": "best-tuna-melt-for-the-hall",
+      "title": "Best Tuna Melt for the Hall (Diner Style)",
+      "kind": "hall_expansion",
+      "pass": false,
+      "score": 100,
+      "stepCount": 5,
+      "wordCount": 182,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (182 words, min 280)"
+      ]
+    },
+    {
+      "slug": "spiedie-chicken-platter-crew",
+      "title": "Binghamton White-Wine Spiedie Tray",
+      "kind": "bbq_catalog",
+      "pass": false,
+      "score": 88,
+      "stepCount": 8,
+      "wordCount": 107,
+      "issues": [
+        "step 3 is generic or too short",
+        "thin instructions (107 words, min 400)",
+        "vague step: Heat grill"
+      ]
+    },
+    {
+      "slug": "biscuit-french-toast-sliders",
+      "title": "Biscuit French Toast Sliders",
+      "kind": "breakfast_catalog",
+      "pass": false,
+      "score": 100,
+      "stepCount": 5,
+      "wordCount": 131,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (131 words, min 280)",
+        "missing tonightSpread",
+        "missing equipment"
+      ]
+    },
+    {
+      "slug": "turkey-burgers",
+      "title": "Black Bean Turkey Burgers",
+      "kind": "firehall_catalog",
+      "pass": false,
+      "score": 100,
+      "stepCount": 4,
+      "wordCount": 85,
+      "issues": [
+        "only 4 steps (min 8 for this meal)",
+        "thin instructions (85 words, min 400)"
+      ]
+    },
+    {
+      "slug": "cajun-grilled-cod-crew",
+      "title": "Black Iron Remoulade Cod Plates",
+      "kind": "bbq_catalog",
+      "pass": false,
+      "score": 100,
+      "stepCount": 8,
+      "wordCount": 106,
+      "issues": [
+        "thin instructions (106 words, min 280)"
+      ]
+    },
+    {
+      "slug": "blackened-cod-taco-night",
+      "title": "Blackened Cod Tacos",
+      "kind": "performance_meal",
+      "pass": false,
+      "score": 90,
+      "stepCount": 5,
+      "wordCount": 112,
+      "issues": [
+        "title_taco_no_tortilla",
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (112 words, min 280)"
+      ]
     },
     {
       "slug": "loaded-ranch-potato-salad-crew",
       "title": "Blue Cheese Fingerling Ranch Tray",
-      "pass": true,
+      "kind": "bbq_catalog",
+      "pass": false,
       "score": 100,
       "stepCount": 8,
-      "wordCount": 494,
-      "issues": []
+      "wordCount": 117,
+      "issues": [
+        "thin instructions (117 words, min 400)"
+      ]
     },
     {
       "slug": "blueberry-almond",
       "title": "Blueberry Almond Smoothie",
+      "kind": "smoothie",
       "pass": true,
       "score": 100,
       "stepCount": 6,
@@ -270,431 +523,799 @@
       "issues": []
     },
     {
-      "slug": "boneless-chicken-thighs-sweet-potato-spinach",
-      "title": "Boneless Chicken Thighs with Sweet Potato & Fresh Spinach",
-      "pass": true,
-      "score": 100,
-      "stepCount": 12,
-      "wordCount": 424,
-      "issues": []
-    },
-    {
       "slug": "breakfast-crunchwraps",
       "title": "Breakfast Crunchwraps",
-      "pass": true,
+      "kind": "breakfast_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 9,
-      "wordCount": 306,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 151,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (151 words, min 280)",
+        "missing tonightSpread",
+        "missing equipment"
+      ]
     },
     {
       "slug": "breakfast-enchiladas",
       "title": "Breakfast Enchiladas for the Crew",
-      "pass": true,
+      "kind": "breakfast_catalog",
+      "pass": false,
       "score": 90,
-      "stepCount": 12,
-      "wordCount": 426,
+      "stepCount": 5,
+      "wordCount": 137,
       "issues": [
-        "title_taco_no_tortilla"
+        "title_taco_no_tortilla",
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (137 words, min 400)",
+        "missing tonightSpread",
+        "missing equipment"
       ]
     },
     {
       "slug": "breakfast-fried-rice-crew",
       "title": "Breakfast Fried Rice for the Crew",
-      "pass": true,
-      "score": 100,
-      "stepCount": 9,
-      "wordCount": 315,
-      "issues": []
+      "kind": "breakfast_catalog",
+      "pass": false,
+      "score": 85,
+      "stepCount": 5,
+      "wordCount": 156,
+      "issues": [
+        "no oven/grill/internal temperature cues in steps",
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (156 words, min 280)",
+        "missing tonightSpread",
+        "missing equipment"
+      ]
     },
     {
       "slug": "breakfast-nachos-supreme",
       "title": "Breakfast Nachos Supreme",
-      "pass": true,
+      "kind": "breakfast_catalog",
+      "pass": false,
       "score": 90,
-      "stepCount": 10,
-      "wordCount": 307,
+      "stepCount": 5,
+      "wordCount": 118,
       "issues": [
-        "title_taco_no_tortilla"
+        "title_taco_no_tortilla",
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (118 words, min 280)",
+        "missing tonightSpread",
+        "missing equipment"
       ]
     },
     {
       "slug": "breakfast-poutine",
       "title": "Breakfast Poutine",
-      "pass": true,
+      "kind": "breakfast_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 9,
-      "wordCount": 326,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 126,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (126 words, min 280)",
+        "missing tonightSpread",
+        "missing equipment"
+      ]
     },
     {
       "slug": "breakfast-quesadillas",
       "title": "Breakfast Quesadillas",
-      "pass": true,
+      "kind": "breakfast_catalog",
+      "pass": false,
       "score": 90,
-      "stepCount": 10,
-      "wordCount": 323,
+      "stepCount": 5,
+      "wordCount": 133,
       "issues": [
-        "title_taco_no_tortilla"
+        "title_taco_no_tortilla",
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (133 words, min 280)",
+        "missing tonightSpread",
+        "missing equipment"
       ]
     },
     {
       "slug": "breakfast-sandwich-trays",
       "title": "Breakfast Sandwich Trays",
-      "pass": true,
+      "kind": "breakfast_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 8,
-      "wordCount": 395,
-      "issues": []
+      "stepCount": 4,
+      "wordCount": 77,
+      "issues": [
+        "only 4 steps (min 8 for this meal)",
+        "thin instructions (77 words, min 280)",
+        "missing tonightSpread",
+        "missing equipment"
+      ]
     },
     {
       "slug": "breakfast-sausage-pizza",
       "title": "Breakfast Sausage Gravy Pizza",
-      "pass": true,
+      "kind": "firehall_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 12,
-      "wordCount": 439,
-      "issues": []
+      "stepCount": 6,
+      "wordCount": 173,
+      "issues": [
+        "only 6 steps (min 8 for this meal)",
+        "thin instructions (173 words, min 400)"
+      ]
     },
     {
       "slug": "breakfast-sliders",
       "title": "Breakfast Sliders",
-      "pass": true,
+      "kind": "breakfast_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 9,
-      "wordCount": 340,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 124,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (124 words, min 280)",
+        "missing tonightSpread",
+        "missing equipment"
+      ]
     },
     {
       "slug": "breakfast-stromboli-roll",
       "title": "Breakfast Stromboli Roll",
-      "pass": true,
+      "kind": "breakfast_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 12,
-      "wordCount": 420,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 138,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (138 words, min 400)",
+        "missing tonightSpread",
+        "missing equipment"
+      ]
     },
     {
       "slug": "brisket-style-beef-sandwiches-au-jus",
       "title": "Brisket-Style Beef Sandwiches",
-      "pass": true,
+      "kind": "bbq_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 10,
-      "wordCount": 502,
-      "issues": []
+      "stepCount": 7,
+      "wordCount": 109,
+      "issues": [
+        "only 7 steps (min 10 for this meal)",
+        "thin instructions (109 words, min 400)"
+      ]
     },
     {
       "slug": "buffalo-chicken-dip",
       "title": "Buffalo Chicken Dip",
-      "pass": true,
+      "kind": "firehall_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 8,
-      "wordCount": 416,
-      "issues": []
+      "stepCount": 4,
+      "wordCount": 87,
+      "issues": [
+        "only 4 steps (min 8 for this meal)",
+        "thin instructions (87 words, min 400)"
+      ]
+    },
+    {
+      "slug": "buffalo-chicken-wraps",
+      "title": "Buffalo Chicken Wraps",
+      "kind": "hall_expansion",
+      "pass": false,
+      "score": 100,
+      "stepCount": 5,
+      "wordCount": 172,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (172 words, min 400)"
+      ]
     },
     {
       "slug": "build-your-own-pho-bar",
       "title": "Build-Your-Own Pho Bar",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 100,
-      "stepCount": 13,
-      "wordCount": 435,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 141,
+      "issues": [
+        "only 5 steps (min 10 for this meal)",
+        "thin instructions (141 words, min 400)"
+      ]
+    },
+    {
+      "slug": "bulgogi-bowls",
+      "title": "Bulgogi Bowls",
+      "kind": "firehall_catalog",
+      "pass": false,
+      "score": 100,
+      "stepCount": 4,
+      "wordCount": 91,
+      "issues": [
+        "only 4 steps (min 8 for this meal)",
+        "thin instructions (91 words, min 400)"
+      ]
     },
     {
       "slug": "bun-bo-hue-noodle-soup",
       "title": "Bun Bo Hue Noodle Soup",
-      "pass": true,
-      "score": 100,
-      "stepCount": 10,
-      "wordCount": 482,
-      "issues": []
+      "kind": "hall_expansion",
+      "pass": false,
+      "score": 85,
+      "stepCount": 5,
+      "wordCount": 92,
+      "issues": [
+        "no oven/grill/internal temperature cues in steps",
+        "only 5 steps (min 10 for this meal)",
+        "thin instructions (92 words, min 400)"
+      ]
     },
     {
       "slug": "burrito-bowl-bar-night",
       "title": "Burrito Bowl Bar Night",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 90,
-      "stepCount": 13,
-      "wordCount": 427,
+      "stepCount": 5,
+      "wordCount": 131,
       "issues": [
-        "title_taco_no_tortilla"
+        "title_taco_no_tortilla",
+        "only 5 steps (min 10 for this meal)",
+        "thin instructions (131 words, min 400)"
       ]
     },
     {
       "slug": "butter-chicken",
       "title": "Butter Chicken",
-      "pass": true,
+      "kind": "firehall_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 9,
-      "wordCount": 421,
-      "issues": []
+      "stepCount": 10,
+      "wordCount": 286,
+      "issues": [
+        "thin instructions (286 words, min 400)"
+      ]
     },
     {
       "slug": "buttermilk-pancakes",
       "title": "Buttermilk Pancakes for the Crew",
+      "kind": "breakfast_catalog",
+      "pass": false,
+      "score": 100,
+      "stepCount": 4,
+      "wordCount": 66,
+      "issues": [
+        "only 4 steps (min 8 for this meal)",
+        "thin instructions (66 words, min 280)",
+        "missing tonightSpread",
+        "missing equipment"
+      ]
+    },
+    {
+      "slug": "cajun-chicken-rice-bowl",
+      "title": "Cajun Chicken and Rice",
+      "kind": "performance_meal",
       "pass": true,
       "score": 100,
-      "stepCount": 8,
-      "wordCount": 352,
+      "stepCount": 11,
+      "wordCount": 387,
       "issues": []
     },
     {
       "slug": "cajun-chicken-rice-skillet",
       "title": "Cajun Chicken and Rice Skillet",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 100,
-      "stepCount": 12,
-      "wordCount": 434,
-      "issues": []
-    },
-    {
-      "slug": "cajun-chicken-rice-bowl",
-      "title": "Cajun Chicken Rice Bowl",
-      "pass": true,
-      "score": 100,
-      "stepCount": 8,
-      "wordCount": 319,
-      "issues": []
-    },
-    {
-      "slug": "jambalaya",
-      "title": "Cajun Jambalaya for the Hall",
-      "pass": true,
-      "score": 100,
-      "stepCount": 10,
-      "wordCount": 410,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 119,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (119 words, min 400)"
+      ]
     },
     {
       "slug": "grilled-cod-lemon-packets",
       "title": "Caper-Butter Cod Foil Packets",
-      "pass": true,
+      "kind": "bbq_catalog",
+      "pass": false,
       "score": 100,
       "stepCount": 8,
-      "wordCount": 442,
-      "issues": []
+      "wordCount": 110,
+      "issues": [
+        "thin instructions (110 words, min 280)"
+      ]
     },
     {
       "slug": "caprese-chicken-bake",
       "title": "Caprese Chicken Bake",
-      "pass": true,
+      "kind": "performance_meal",
+      "pass": false,
       "score": 100,
-      "stepCount": 8,
-      "wordCount": 311,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 104,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (104 words, min 280)"
+      ]
     },
     {
       "slug": "cast-iron-breakfast-skillet",
-      "title": "Crispy Garlic Sausage",
-      "pass": true,
-      "score": 100,
-      "stepCount": 8,
-      "wordCount": 284,
-      "issues": []
+      "title": "Cast Iron Breakfast Skillet",
+      "kind": "breakfast_catalog",
+      "pass": false,
+      "score": 75,
+      "stepCount": 4,
+      "wordCount": 105,
+      "issues": [
+        "robotic_title",
+        "no oven/grill/internal temperature cues in steps",
+        "only 4 steps (min 8 for this meal)",
+        "thin instructions (105 words, min 280)",
+        "missing tonightSpread",
+        "missing equipment"
+      ]
     },
     {
       "slug": "cast-iron-chicken-fajitas",
       "title": "Cast Iron Chicken Fajitas",
-      "pass": true,
-      "score": 90,
-      "stepCount": 11,
-      "wordCount": 443,
+      "kind": "hall_expansion",
+      "pass": false,
+      "score": 85,
+      "stepCount": 5,
+      "wordCount": 118,
       "issues": [
-        "title_taco_no_tortilla"
+        "title_taco_no_tortilla",
+        "step 4 uses vague phrasing",
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (118 words, min 400)"
       ]
     },
     {
       "slug": "cast-iron-steak-fajita-sizzlers",
       "title": "Cast Iron Skirt Steak Sizzlers",
-      "pass": true,
-      "score": 100,
+      "kind": "bbq_catalog",
+      "pass": false,
+      "score": 88,
       "stepCount": 8,
-      "wordCount": 588,
-      "issues": []
+      "wordCount": 114,
+      "issues": [
+        "step 3 is generic or too short",
+        "thin instructions (114 words, min 400)",
+        "vague step: Heat griddle hot"
+      ]
     },
     {
       "slug": "cedar-plank-salmon",
-      "title": "Cedar Plank Grilled Salmon",
-      "pass": true,
+      "title": "Cedar Plank Salmon",
+      "kind": "firehall_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 11,
-      "wordCount": 446,
-      "issues": []
-    },
-    {
-      "slug": "grilled-pork-chops",
-      "title": "Charcoal Grilled Pork Chops",
-      "pass": true,
-      "score": 100,
-      "stepCount": 11,
-      "wordCount": 430,
-      "issues": []
+      "stepCount": 4,
+      "wordCount": 100,
+      "issues": [
+        "only 4 steps (min 10 for this meal)",
+        "thin instructions (100 words, min 400)"
+      ]
     },
     {
       "slug": "cheesy-beef-nacho-bake",
       "title": "Cheesy Beef Nacho Bake",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 90,
-      "stepCount": 9,
-      "wordCount": 299,
+      "stepCount": 5,
+      "wordCount": 131,
       "issues": [
-        "title_taco_no_tortilla"
+        "title_taco_no_tortilla",
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (131 words, min 280)"
       ]
     },
     {
       "slug": "cheesy-chicken-broccoli-rice",
       "title": "Cheesy Chicken Broccoli Rice",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 100,
-      "stepCount": 11,
-      "wordCount": 442,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 95,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (95 words, min 400)"
+      ]
+    },
+    {
+      "slug": "skillet-chicken-alfredo",
+      "title": "Chicken Alfredo",
+      "kind": "firehall_catalog",
+      "pass": false,
+      "score": 100,
+      "stepCount": 5,
+      "wordCount": 77,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (77 words, min 400)"
+      ]
     },
     {
       "slug": "chicken-alfredo-bake",
       "title": "Chicken Alfredo Bake",
-      "pass": true,
+      "kind": "firehall_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 10,
-      "wordCount": 529,
-      "issues": []
+      "stepCount": 6,
+      "wordCount": 109,
+      "issues": [
+        "only 6 steps (min 10 for this meal)",
+        "thin instructions (109 words, min 400)"
+      ]
+    },
+    {
+      "slug": "spanish-chicken-chorizo-rice",
+      "title": "Chicken and Chorizo Rice",
+      "kind": "performance_meal",
+      "pass": false,
+      "score": 100,
+      "stepCount": 5,
+      "wordCount": 107,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (107 words, min 400)"
+      ]
     },
     {
       "slug": "chicken-dumpling-soup",
       "title": "Chicken and Dumplings",
-      "pass": true,
+      "kind": "firehall_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 9,
-      "wordCount": 443,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 220,
+      "issues": [
+        "only 5 steps (min 10 for this meal)",
+        "thin instructions (220 words, min 400)"
+      ]
+    },
+    {
+      "slug": "one-pot-chicken-rice",
+      "title": "Chicken and Rice",
+      "kind": "firehall_catalog",
+      "pass": false,
+      "score": 100,
+      "stepCount": 6,
+      "wordCount": 183,
+      "issues": [
+        "only 6 steps (min 8 for this meal)",
+        "thin instructions (183 words, min 400)"
+      ]
     },
     {
       "slug": "chicken-and-waffles-crew",
       "title": "Chicken and Waffles for the Crew",
-      "pass": true,
+      "kind": "breakfast_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 12,
-      "wordCount": 422,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 150,
+      "issues": [
+        "only 5 steps (min 10 for this meal)",
+        "thin instructions (150 words, min 400)",
+        "missing tonightSpread",
+        "missing equipment"
+      ]
+    },
+    {
+      "slug": "performance-burrito-bowls",
+      "title": "Chicken Burrito Bowls",
+      "kind": "firehall_catalog",
+      "pass": false,
+      "score": 90,
+      "stepCount": 4,
+      "wordCount": 81,
+      "issues": [
+        "title_taco_no_tortilla",
+        "only 4 steps (min 8 for this meal)",
+        "thin instructions (81 words, min 400)"
+      ]
     },
     {
       "slug": "chicken-cacciatore-crew",
       "title": "Chicken Cacciatore for the Crew",
+      "kind": "hall_expansion",
+      "pass": false,
+      "score": 100,
+      "stepCount": 5,
+      "wordCount": 104,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (104 words, min 400)"
+      ]
+    },
+    {
+      "slug": "chicken-caesar",
+      "title": "Chicken Caesar Salad",
+      "kind": "hall_classic",
       "pass": true,
       "score": 100,
-      "stepCount": 9,
-      "wordCount": 422,
+      "stepCount": 11,
+      "wordCount": 404,
       "issues": []
+    },
+    {
+      "slug": "chicken-caesar-wraps",
+      "title": "Chicken Caesar Wraps",
+      "kind": "hall_expansion",
+      "pass": false,
+      "score": 100,
+      "stepCount": 5,
+      "wordCount": 189,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (189 words, min 280)"
+      ]
     },
     {
       "slug": "enchilada-casserole",
       "title": "Chicken Enchilada Casserole",
-      "pass": true,
+      "kind": "firehall_catalog",
+      "pass": false,
       "score": 90,
-      "stepCount": 10,
-      "wordCount": 423,
+      "stepCount": 4,
+      "wordCount": 78,
       "issues": [
-        "title_taco_no_tortilla"
+        "title_taco_no_tortilla",
+        "only 4 steps (min 10 for this meal)",
+        "thin instructions (78 words, min 400)"
+      ]
+    },
+    {
+      "slug": "chicken-enchilada-skillet-light",
+      "title": "Chicken Enchilada Skillet",
+      "kind": "performance_meal",
+      "pass": false,
+      "score": 90,
+      "stepCount": 5,
+      "wordCount": 102,
+      "issues": [
+        "robotic_title; title_taco_no_tortilla",
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (102 words, min 280)"
+      ]
+    },
+    {
+      "slug": "sheet-pan-fajitas",
+      "title": "Chicken Fajitas",
+      "kind": "firehall_catalog",
+      "pass": false,
+      "score": 90,
+      "stepCount": 4,
+      "wordCount": 78,
+      "issues": [
+        "title_taco_no_tortilla",
+        "only 4 steps (min 8 for this meal)",
+        "thin instructions (78 words, min 400)"
+      ]
+    },
+    {
+      "slug": "sheet-pan-chicken-fajitas-lite",
+      "title": "Chicken Fajitas",
+      "kind": "performance_meal",
+      "pass": false,
+      "score": 90,
+      "stepCount": 5,
+      "wordCount": 108,
+      "issues": [
+        "title_taco_no_tortilla",
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (108 words, min 280)"
+      ]
+    },
+    {
+      "slug": "asian-chicken-lettuce-cups",
+      "title": "Chicken Lettuce Cups",
+      "kind": "performance_meal",
+      "pass": false,
+      "score": 100,
+      "stepCount": 5,
+      "wordCount": 110,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (110 words, min 280)"
+      ]
+    },
+    {
+      "slug": "sheet-pan-meal-prep",
+      "title": "Chicken Meal Prep Trays",
+      "kind": "firehall_catalog",
+      "pass": false,
+      "score": 100,
+      "stepCount": 4,
+      "wordCount": 80,
+      "issues": [
+        "only 4 steps (min 10 for this meal)",
+        "thin instructions (80 words, min 400)"
       ]
     },
     {
       "slug": "chicken-paprikash-hall",
       "title": "Chicken Paprikash for the Hall",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 100,
-      "stepCount": 9,
-      "wordCount": 419,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 96,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (96 words, min 400)"
+      ]
     },
     {
       "slug": "chicken-parm",
-      "title": "Chicken Parm",
-      "pass": true,
+      "title": "Chicken Parmesan",
+      "kind": "hall_classic",
+      "pass": false,
       "score": 100,
-      "stepCount": 12,
-      "wordCount": 446,
-      "issues": []
-    },
-    {
-      "slug": "parm-hero-subs",
-      "title": "Chicken Parm Hero Subs",
-      "pass": true,
-      "score": 100,
-      "stepCount": 12,
-      "wordCount": 453,
-      "issues": []
+      "stepCount": 6,
+      "wordCount": 222,
+      "issues": [
+        "only 6 steps (min 10 for this meal)",
+        "thin instructions (222 words, min 400)"
+      ]
     },
     {
       "slug": "chicken-pot-pie",
       "title": "Chicken Pot Pie",
-      "pass": true,
+      "kind": "firehall_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 9,
-      "wordCount": 412,
-      "issues": []
+      "stepCount": 4,
+      "wordCount": 75,
+      "issues": [
+        "only 4 steps (min 8 for this meal)",
+        "thin instructions (75 words, min 400)"
+      ]
+    },
+    {
+      "slug": "chicken-quesadillas",
+      "title": "Chicken Quesadillas",
+      "kind": "firehall_catalog",
+      "pass": false,
+      "score": 90,
+      "stepCount": 4,
+      "wordCount": 80,
+      "issues": [
+        "title_taco_no_tortilla",
+        "only 4 steps (min 8 for this meal)",
+        "thin instructions (80 words, min 400)"
+      ]
+    },
+    {
+      "slug": "chicken-shawarma-pitas",
+      "title": "Chicken Shawarma Pitas",
+      "kind": "hall_expansion",
+      "pass": false,
+      "score": 100,
+      "stepCount": 5,
+      "wordCount": 133,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (133 words, min 400)"
+      ]
+    },
+    {
+      "slug": "chicken-souvlaki",
+      "title": "Chicken Souvlaki",
+      "kind": "firehall_catalog",
+      "pass": false,
+      "score": 100,
+      "stepCount": 4,
+      "wordCount": 107,
+      "issues": [
+        "only 4 steps (min 10 for this meal)",
+        "thin instructions (107 words, min 400)"
+      ]
+    },
+    {
+      "slug": "boneless-chicken-thighs-sweet-potato-spinach",
+      "title": "Chicken Thighs with Sweet Potato and Spinach",
+      "kind": "performance_meal",
+      "pass": false,
+      "score": 100,
+      "stepCount": 5,
+      "wordCount": 157,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (157 words, min 400)"
+      ]
     },
     {
       "slug": "chicken-tikka-masala",
       "title": "Chicken Tikka Masala",
-      "pass": true,
+      "kind": "firehall_catalog",
+      "pass": false,
       "score": 100,
       "stepCount": 10,
-      "wordCount": 436,
-      "issues": []
+      "wordCount": 231,
+      "issues": [
+        "thin instructions (231 words, min 400)"
+      ]
+    },
+    {
+      "slug": "chicken-tortilla-soup-for-the-hall",
+      "title": "Chicken Tortilla Soup for the Hall",
+      "kind": "firehall_catalog",
+      "pass": false,
+      "score": 100,
+      "stepCount": 5,
+      "wordCount": 216,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (216 words, min 400)"
+      ]
     },
     {
       "slug": "chicken-wing-bar-night",
       "title": "Chicken Wing Bar Night",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 100,
-      "stepCount": 12,
-      "wordCount": 417,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 123,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (123 words, min 400)"
+      ]
     },
     {
       "slug": "chilaquiles-verde-bake",
       "title": "Chilaquiles Verde Bake",
-      "pass": true,
+      "kind": "breakfast_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 12,
-      "wordCount": 419,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 149,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (149 words, min 400)",
+        "missing tonightSpread",
+        "missing equipment"
+      ]
     },
     {
       "slug": "chili-mac",
       "title": "Chili Mac Skillet",
-      "pass": true,
+      "kind": "firehall_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 12,
-      "wordCount": 428,
-      "issues": []
-    },
-    {
-      "slug": "steak-tacos",
-      "title": "Chimichurri Steak Tacos",
-      "pass": true,
-      "score": 90,
-      "stepCount": 8,
-      "wordCount": 534,
+      "stepCount": 6,
+      "wordCount": 174,
       "issues": [
-        "title_taco_no_tortilla"
+        "only 6 steps (min 8 for this meal)",
+        "thin instructions (174 words, min 400)"
       ]
     },
     {
       "slug": "chipotle-lime-chicken-tacos",
       "title": "Chipotle Lime Chicken Tacos",
-      "pass": true,
+      "kind": "performance_meal",
+      "pass": false,
       "score": 90,
-      "stepCount": 8,
-      "wordCount": 343,
+      "stepCount": 5,
+      "wordCount": 108,
       "issues": [
-        "title_taco_no_tortilla"
+        "title_taco_no_tortilla",
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (108 words, min 280)"
       ]
     },
     {
       "slug": "chocolate-banana-recovery",
       "title": "Chocolate Banana Recovery Smoothie",
+      "kind": "smoothie",
       "pass": true,
       "score": 100,
       "stepCount": 6,
@@ -704,15 +1325,22 @@
     {
       "slug": "chorizo-breakfast-hash",
       "title": "Chorizo Breakfast Hash",
-      "pass": true,
+      "kind": "breakfast_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 9,
-      "wordCount": 292,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 148,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (148 words, min 280)",
+        "missing tonightSpread",
+        "missing equipment"
+      ]
     },
     {
       "slug": "citrus-ginger",
       "title": "Citrus Ginger Smoothie",
+      "kind": "smoothie",
       "pass": true,
       "score": 100,
       "stepCount": 6,
@@ -720,423 +1348,568 @@
       "issues": []
     },
     {
-      "slug": "meatloaf-mashed",
-      "title": "Classic Meatloaf with Mashed Potatoes",
-      "pass": true,
+      "slug": "classic-patty-melt-for-the-crew",
+      "title": "Classic Patty Melt for the Crew",
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 100,
-      "stepCount": 11,
-      "wordCount": 404,
-      "issues": []
-    },
-    {
-      "slug": "pepperoni-pizza-night",
-      "title": "Classic Pepperoni Pizza",
-      "pass": true,
-      "score": 100,
-      "stepCount": 12,
-      "wordCount": 415,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 217,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (217 words, min 400)"
+      ]
     },
     {
       "slug": "classic-poutine-feed-crew",
       "title": "Classic Poutine Feed for the Crew",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 100,
-      "stepCount": 11,
-      "wordCount": 426,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 107,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (107 words, min 400)"
+      ]
     },
     {
       "slug": "club-sandwich-breakfast-bake",
       "title": "Club Sandwich Breakfast Bake",
-      "pass": true,
+      "kind": "breakfast_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 12,
-      "wordCount": 416,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 143,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (143 words, min 400)",
+        "missing tonightSpread",
+        "missing equipment"
+      ]
     },
     {
       "slug": "competition-bbq-chicken-thighs",
       "title": "Competition BBQ Chicken Thighs",
-      "pass": true,
+      "kind": "bbq_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 10,
-      "wordCount": 529,
-      "issues": []
+      "stepCount": 8,
+      "wordCount": 134,
+      "issues": [
+        "only 8 steps (min 10 for this meal)",
+        "thin instructions (134 words, min 400)"
+      ]
     },
     {
       "slug": "flat-top-philly-cheesesteaks-crew",
       "title": "Cooper Sharp Chopped Ribeye Hoagies",
-      "pass": true,
-      "score": 100,
+      "kind": "bbq_catalog",
+      "pass": false,
+      "score": 88,
       "stepCount": 8,
-      "wordCount": 427,
-      "issues": []
+      "wordCount": 98,
+      "issues": [
+        "step 3 is generic or too short",
+        "thin instructions (98 words, min 400)",
+        "vague step: Heat flat-top"
+      ]
     },
     {
       "slug": "coq-au-vin-batch",
       "title": "Coq au Vin Batch",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 100,
-      "stepCount": 10,
-      "wordCount": 492,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 103,
+      "issues": [
+        "only 5 steps (min 10 for this meal)",
+        "thin instructions (103 words, min 400)"
+      ]
     },
     {
       "slug": "corned-beef-hash-breakfast",
       "title": "Corned Beef Hash Breakfast",
-      "pass": true,
+      "kind": "breakfast_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 12,
-      "wordCount": 408,
-      "issues": []
-    },
-    {
-      "slug": "cottage-cheese-protein-pasta",
-      "title": "Cottage Cheese Protein Pasta Bake",
-      "pass": true,
-      "score": 90,
-      "stepCount": 10,
-      "wordCount": 412,
+      "stepCount": 5,
+      "wordCount": 156,
       "issues": [
-        "title_pasta_no_pasta"
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (156 words, min 400)",
+        "missing tonightSpread",
+        "missing equipment"
       ]
     },
     {
       "slug": "cottage-pie-for-the-crew",
       "title": "Cottage Pie for the Crew",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 100,
-      "stepCount": 10,
-      "wordCount": 437,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 103,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (103 words, min 400)"
+      ]
     },
     {
       "slug": "country-fried-steak-eggs",
       "title": "Country Fried Steak and Eggs Breakfast",
-      "pass": true,
+      "kind": "breakfast_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 12,
-      "wordCount": 428,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 170,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (170 words, min 400)",
+        "missing tonightSpread",
+        "missing equipment"
+      ]
     },
     {
       "slug": "creamy-chicken-penne-alfredo",
       "title": "Creamy Chicken Penne Alfredo",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 100,
-      "stepCount": 9,
-      "wordCount": 430,
-      "issues": []
-    },
-    {
-      "slug": "creamy-tuscan-chicken",
-      "title": "Creamy Tuscan Chicken",
-      "pass": true,
-      "score": 100,
-      "stepCount": 10,
-      "wordCount": 423,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 109,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (109 words, min 400)"
+      ]
     },
     {
       "slug": "crew-french-toast-bake",
       "title": "Crew French Toast Bake",
-      "pass": true,
-      "score": 100,
-      "stepCount": 10,
-      "wordCount": 413,
-      "issues": []
+      "kind": "breakfast_catalog",
+      "pass": false,
+      "score": 88,
+      "stepCount": 4,
+      "wordCount": 63,
+      "issues": [
+        "step 1 is generic or too short",
+        "only 4 steps (min 8 for this meal)",
+        "thin instructions (63 words, min 400)",
+        "missing tonightSpread",
+        "missing equipment",
+        "vague step: Heat the oven"
+      ]
     },
     {
       "slug": "crispy-chicken-cutlets",
       "title": "Crispy Chicken Cutlets Marinara",
-      "pass": true,
+      "kind": "firehall_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 12,
-      "wordCount": 415,
-      "issues": []
-    },
-    {
-      "slug": "crispy-fish-taco-night",
-      "title": "Crispy Fish Taco Night",
-      "pass": true,
-      "score": 90,
-      "stepCount": 8,
-      "wordCount": 354,
+      "stepCount": 4,
+      "wordCount": 109,
       "issues": [
-        "title_taco_no_tortilla"
+        "only 4 steps (min 8 for this meal)",
+        "thin instructions (109 words, min 400)"
       ]
-    },
-    {
-      "slug": "crock-barbacoa-chicken",
-      "title": "Crock Barbacoa Chicken With Potato Wedges",
-      "pass": true,
-      "score": 100,
-      "stepCount": 10,
-      "wordCount": 438,
-      "issues": []
     },
     {
       "slug": "denver-breakfast-casserole",
       "title": "Denver Breakfast Casserole",
-      "pass": true,
+      "kind": "breakfast_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 12,
-      "wordCount": 415,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 131,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (131 words, min 400)",
+        "missing tonightSpread",
+        "missing equipment"
+      ]
     },
     {
       "slug": "detroit-style-pizza",
       "title": "Detroit-Style Pepperoni Pizza",
-      "pass": true,
+      "kind": "firehall_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 12,
-      "wordCount": 421,
-      "issues": []
+      "stepCount": 6,
+      "wordCount": 207,
+      "issues": [
+        "only 6 steps (min 10 for this meal)",
+        "thin instructions (207 words, min 400)"
+      ]
     },
     {
       "slug": "smash-burgers",
       "title": "Double Smash Burgers",
+      "kind": "hall_classic",
       "pass": true,
       "score": 100,
       "stepCount": 9,
-      "wordCount": 514,
+      "wordCount": 500,
       "issues": []
     },
     {
       "slug": "dutch-oven-pot-roast",
       "title": "Dutch Oven Pot Roast",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 100,
-      "stepCount": 13,
-      "wordCount": 433,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 118,
+      "issues": [
+        "only 5 steps (min 10 for this meal)",
+        "thin instructions (118 words, min 400)"
+      ]
     },
     {
       "slug": "eggs-benedict-hall-style",
       "title": "Eggs Benedict Hall Style",
-      "pass": true,
+      "kind": "breakfast_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 12,
-      "wordCount": 434,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 182,
+      "issues": [
+        "only 5 steps (min 10 for this meal)",
+        "thin instructions (182 words, min 400)",
+        "missing tonightSpread",
+        "missing equipment"
+      ]
     },
     {
       "slug": "firehall-street-elote-cups",
       "title": "Epazote Esquites Street Cups",
-      "pass": true,
-      "score": 100,
+      "kind": "bbq_catalog",
+      "pass": false,
+      "score": 88,
       "stepCount": 8,
-      "wordCount": 473,
-      "issues": []
+      "wordCount": 99,
+      "issues": [
+        "step 3 is generic or too short",
+        "thin instructions (99 words, min 280)",
+        "vague step: Heat grill"
+      ]
     },
     {
       "slug": "fajita-bar-night",
       "title": "Fajita Bar Night",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 90,
-      "stepCount": 12,
-      "wordCount": 415,
+      "stepCount": 5,
+      "wordCount": 133,
       "issues": [
-        "title_taco_no_tortilla"
+        "title_taco_no_tortilla",
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (133 words, min 400)"
+      ]
+    },
+    {
+      "slug": "baked-falafel-hall-bowls",
+      "title": "Falafel Bowls",
+      "kind": "performance_meal",
+      "pass": false,
+      "score": 100,
+      "stepCount": 6,
+      "wordCount": 172,
+      "issues": [
+        "only 6 steps (min 8 for this meal)",
+        "thin instructions (172 words, min 400)"
       ]
     },
     {
       "slug": "farmers-breakfast-casserole",
       "title": "Farmer's Breakfast Casserole",
-      "pass": true,
-      "score": 100,
-      "stepCount": 12,
-      "wordCount": 404,
-      "issues": []
-    },
-    {
-      "slug": "fast-philly-skillet",
-      "title": "Garlic Butter Steak Skillet",
+      "kind": "breakfast_catalog",
       "pass": false,
-      "score": 80,
-      "stepCount": 11,
-      "wordCount": 437,
+      "score": 100,
+      "stepCount": 5,
+      "wordCount": 134,
       "issues": [
-        "title promises garlic butter but ingredients lack butter or garlic"
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (134 words, min 400)",
+        "missing tonightSpread",
+        "missing equipment"
       ]
     },
     {
       "slug": "fire-captain-omelette-bar",
       "title": "Fire Captain Omelette Bar",
-      "pass": true,
+      "kind": "breakfast_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 9,
-      "wordCount": 337,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 126,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (126 words, min 280)",
+        "missing tonightSpread",
+        "missing equipment"
+      ]
     },
     {
       "slug": "firehall-breakfast-pizza",
       "title": "Firehall Breakfast Pizza",
-      "pass": true,
+      "kind": "breakfast_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 12,
-      "wordCount": 432,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 137,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (137 words, min 400)",
+        "missing tonightSpread",
+        "missing equipment"
+      ]
     },
     {
       "slug": "firehall-burnt-ends-platter",
       "title": "Firehall Burnt Ends Platter",
-      "pass": true,
+      "kind": "bbq_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 10,
-      "wordCount": 465,
-      "issues": []
+      "stepCount": 8,
+      "wordCount": 151,
+      "issues": [
+        "only 8 steps (min 10 for this meal)",
+        "thin instructions (151 words, min 400)"
+      ]
     },
     {
       "slug": "firehall-charcuterie-board",
       "title": "Firehall Charcuterie Board",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 100,
-      "stepCount": 12,
-      "wordCount": 433,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 129,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (129 words, min 400)"
+      ]
     },
     {
       "slug": "firehall-donair-platter",
       "title": "Firehall Donair Platter",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 100,
-      "stepCount": 10,
-      "wordCount": 423,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 105,
+      "issues": [
+        "only 5 steps (min 10 for this meal)",
+        "thin instructions (105 words, min 400)"
+      ]
     },
     {
-      "slug": "meatball-hoagies",
-      "title": "Firehall Meatball Hoagies",
-      "pass": true,
-      "score": 100,
-      "stepCount": 12,
-      "wordCount": 463,
-      "issues": []
+      "slug": "crispy-fish-taco-night",
+      "title": "Fish Tacos",
+      "kind": "performance_meal",
+      "pass": false,
+      "score": 90,
+      "stepCount": 5,
+      "wordCount": 115,
+      "issues": [
+        "title_taco_no_tortilla",
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (115 words, min 280)"
+      ]
     },
     {
-      "slug": "pad-thai",
-      "title": "Firehall Pad Thai",
-      "pass": true,
+      "slug": "flank-chimichurri",
+      "title": "Flank Steak with Chimichurri",
+      "kind": "firehall_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 10,
-      "wordCount": 1052,
-      "issues": []
+      "stepCount": 4,
+      "wordCount": 80,
+      "issues": [
+        "only 4 steps (min 10 for this meal)",
+        "thin instructions (80 words, min 400)"
+      ]
     },
     {
-      "slug": "margherita-pizza",
-      "title": "Fresh Margherita Pizza",
-      "pass": true,
+      "slug": "four-step-chicken-piccata",
+      "title": "Four-Step Chicken Piccata",
+      "kind": "firehall_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 12,
-      "wordCount": 401,
-      "issues": []
+      "stepCount": 4,
+      "wordCount": 209,
+      "issues": [
+        "only 4 steps (min 8 for this meal)",
+        "thin instructions (209 words, min 400)"
+      ]
+    },
+    {
+      "slug": "french-onion-soup-for-the-hall",
+      "title": "French Onion Soup for the Hall",
+      "kind": "firehall_catalog",
+      "pass": false,
+      "score": 100,
+      "stepCount": 5,
+      "wordCount": 212,
+      "issues": [
+        "only 5 steps (min 10 for this meal)",
+        "thin instructions (212 words, min 400)"
+      ]
+    },
+    {
+      "slug": "game-day-nachos",
+      "title": "Game Day Nachos",
+      "kind": "firehall_catalog",
+      "pass": false,
+      "score": 90,
+      "stepCount": 4,
+      "wordCount": 120,
+      "issues": [
+        "title_taco_no_tortilla",
+        "only 4 steps (min 8 for this meal)",
+        "thin instructions (120 words, min 400)"
+      ]
     },
     {
       "slug": "game-day-pizza-sliders",
       "title": "Game Day Pizza Sliders",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 100,
-      "stepCount": 10,
-      "wordCount": 310,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 127,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (127 words, min 280)"
+      ]
     },
     {
       "slug": "five-ingredient-pasta",
       "title": "Garlic Butter Pasta",
-      "pass": true,
+      "kind": "firehall_catalog",
+      "pass": false,
       "score": 90,
-      "stepCount": 11,
-      "wordCount": 433,
+      "stepCount": 4,
+      "wordCount": 180,
       "issues": [
-        "title_pasta_no_pasta"
+        "title_pasta_no_pasta",
+        "only 4 steps (min 8 for this meal)",
+        "thin instructions (180 words, min 400)"
       ]
     },
     {
       "slug": "garlic-butter-shrimp",
       "title": "Garlic Butter Shrimp",
-      "pass": true,
+      "kind": "firehall_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 11,
-      "wordCount": 440,
-      "issues": []
+      "stepCount": 4,
+      "wordCount": 160,
+      "issues": [
+        "only 4 steps (min 8 for this meal)",
+        "thin instructions (160 words, min 400)"
+      ]
     },
     {
       "slug": "garlic-butter-shrimp-skewers",
       "title": "Garlic Tarragon Shrimp Skewers",
-      "pass": true,
+      "kind": "bbq_catalog",
+      "pass": false,
       "score": 100,
       "stepCount": 8,
-      "wordCount": 438,
-      "issues": []
-    },
-    {
-      "slug": "batch-lasagna",
-      "title": "Giant Batch Lasagna",
-      "pass": true,
-      "score": 100,
-      "stepCount": 10,
-      "wordCount": 447,
-      "issues": []
+      "wordCount": 118,
+      "issues": [
+        "thin instructions (118 words, min 280)"
+      ]
     },
     {
       "slug": "griddle-smash-sausage-peppers",
       "title": "Giardiniera Smash Sausage Hoagies",
-      "pass": true,
-      "score": 100,
+      "kind": "bbq_catalog",
+      "pass": false,
+      "score": 76,
       "stepCount": 8,
-      "wordCount": 456,
-      "issues": []
+      "wordCount": 106,
+      "issues": [
+        "step 3 is generic or too short",
+        "step 7 is generic or too short",
+        "thin instructions (106 words, min 400)",
+        "vague step: Heat griddle"
+      ]
     },
     {
       "slug": "ginger-salmon-bowls",
       "title": "Ginger Salmon Rice Bowls",
-      "pass": true,
+      "kind": "firehall_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 11,
-      "wordCount": 402,
-      "issues": []
+      "stepCount": 4,
+      "wordCount": 97,
+      "issues": [
+        "only 4 steps (min 8 for this meal)",
+        "thin instructions (97 words, min 400)"
+      ]
     },
     {
       "slug": "ginger-soy-chicken-rice-bowls",
       "title": "Ginger Soy Chicken Rice Bowls",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 100,
-      "stepCount": 12,
-      "wordCount": 452,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 96,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (96 words, min 400)"
+      ]
     },
     {
       "slug": "greek-chicken-bowls",
-      "title": "Smoky Chicken Thighs Bowls",
-      "pass": true,
-      "score": 100,
-      "stepCount": 11,
-      "wordCount": 415,
-      "issues": []
+      "title": "Greek Chicken Bowls",
+      "kind": "firehall_catalog",
+      "pass": false,
+      "score": 90,
+      "stepCount": 4,
+      "wordCount": 89,
+      "issues": [
+        "robotic_title",
+        "only 4 steps (min 8 for this meal)",
+        "thin instructions (89 words, min 400)"
+      ]
     },
     {
-      "slug": "greek-lemon-chicken-potatoes",
-      "title": "Greek Lemon Chicken and Potatoes",
-      "pass": true,
-      "score": 100,
-      "stepCount": 11,
-      "wordCount": 457,
-      "issues": []
+      "slug": "greek-chicken-pitas",
+      "title": "Greek Chicken Pitas",
+      "kind": "hall_expansion",
+      "pass": false,
+      "score": 90,
+      "stepCount": 5,
+      "wordCount": 128,
+      "issues": [
+        "robotic_title",
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (128 words, min 280)"
+      ]
     },
     {
       "slug": "green-chile-chicken-stew",
       "title": "Green Chile Chicken Stew",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 100,
-      "stepCount": 10,
-      "wordCount": 434,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 104,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (104 words, min 400)"
+      ]
     },
     {
       "slug": "green-pineapple",
       "title": "Green Pineapple Smoothie",
+      "kind": "smoothie",
       "pass": true,
       "score": 100,
       "stepCount": 6,
@@ -1144,710 +1917,856 @@
       "issues": []
     },
     {
-      "slug": "chicken-souvlaki",
-      "title": "Grilled Chicken Souvlaki",
-      "pass": true,
+      "slug": "grilled-pork-chops",
+      "title": "Grilled Pork Chops",
+      "kind": "firehall_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 12,
-      "wordCount": 421,
-      "issues": []
-    },
-    {
-      "slug": "flank-chimichurri",
-      "title": "Grilled Flank Steak with Chimichurri",
-      "pass": true,
-      "score": 100,
-      "stepCount": 11,
-      "wordCount": 429,
-      "issues": []
-    },
-    {
-      "slug": "ny-strip-herb-butter",
-      "title": "Grilled NY Strip with Herb Butter",
-      "pass": true,
-      "score": 100,
-      "stepCount": 12,
-      "wordCount": 424,
-      "issues": []
+      "stepCount": 4,
+      "wordCount": 99,
+      "issues": [
+        "only 4 steps (min 10 for this meal)",
+        "thin instructions (99 words, min 400)"
+      ]
     },
     {
       "slug": "grilled-reuben-sandwiches-crew",
       "title": "Grilled Reuben Sandwiches for the Crew",
-      "pass": true,
+      "kind": "bbq_catalog",
+      "pass": false,
       "score": 100,
       "stepCount": 8,
-      "wordCount": 516,
-      "issues": []
+      "wordCount": 105,
+      "issues": [
+        "thin instructions (105 words, min 400)"
+      ]
     },
     {
-      "slug": "grilled-shrimp-quinoa-bowls",
-      "title": "Grilled Shrimp Quinoa Bowls",
-      "pass": true,
+      "slug": "hall-blt-sandwich-feed",
+      "title": "Hall BLT Sandwich Feed",
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 100,
-      "stepCount": 8,
-      "wordCount": 333,
-      "issues": []
-    },
-    {
-      "slug": "grilled-corn-cotija",
-      "title": "Grilled Street Corn with Cotija",
-      "pass": true,
-      "score": 100,
-      "stepCount": 12,
-      "wordCount": 416,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 210,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (210 words, min 280)"
+      ]
     },
     {
       "slug": "hall-breakfast-burritos",
       "title": "Hall Breakfast Burritos",
-      "pass": true,
+      "kind": "breakfast_catalog",
+      "pass": false,
       "score": 90,
-      "stepCount": 9,
-      "wordCount": 289,
+      "stepCount": 5,
+      "wordCount": 145,
       "issues": [
-        "title_taco_no_tortilla"
+        "title_taco_no_tortilla",
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (145 words, min 280)",
+        "missing tonightSpread",
+        "missing equipment"
       ]
     },
     {
       "slug": "hall-breakfast-wraps",
       "title": "Hall Breakfast Wraps",
-      "pass": true,
+      "kind": "breakfast_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 8,
-      "wordCount": 287,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 124,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (124 words, min 280)",
+        "missing tonightSpread",
+        "missing equipment"
+      ]
     },
     {
       "slug": "hall-burger-bar",
       "title": "Hall Burger Bar",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 90,
-      "stepCount": 9,
-      "wordCount": 333,
+      "stepCount": 5,
+      "wordCount": 134,
       "issues": [
-        "title_burger_no_bun"
+        "title_burger_no_bun",
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (134 words, min 280)"
       ]
-    },
-    {
-      "slug": "chicken-caesar",
-      "title": "Hall Caesar Chicken",
-      "pass": true,
-      "score": 100,
-      "stepCount": 11,
-      "wordCount": 448,
-      "issues": []
     },
     {
       "slug": "hall-chicken-noodle-soup",
       "title": "Hall Chicken Noodle Soup",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 100,
-      "stepCount": 10,
-      "wordCount": 413,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 101,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (101 words, min 400)"
+      ]
     },
     {
       "slug": "hall-sausage-biscuits-gravy",
       "title": "Hall Sausage Biscuits & Gravy",
-      "pass": true,
+      "kind": "breakfast_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 10,
-      "wordCount": 311,
-      "issues": []
-    },
-    {
-      "slug": "slider-bar",
-      "title": "Hall Slider Bar",
-      "pass": true,
-      "score": 100,
-      "stepCount": 12,
-      "wordCount": 424,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 130,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (130 words, min 280)",
+        "missing tonightSpread",
+        "missing equipment"
+      ]
     },
     {
       "slug": "hall-sloppy-joe-feed",
       "title": "Hall Sloppy Joe Feed",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 100,
-      "stepCount": 11,
-      "wordCount": 429,
-      "issues": []
-    },
-    {
-      "slug": "hall-taco-bar",
-      "title": "Hall Taco Bar Night",
-      "pass": true,
-      "score": 90,
-      "stepCount": 11,
-      "wordCount": 418,
+      "stepCount": 5,
+      "wordCount": 98,
       "issues": [
-        "title_taco_no_tortilla"
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (98 words, min 400)"
       ]
-    },
-    {
-      "slug": "big-chili",
-      "title": "Hall-Sized Beef and Bean Chili",
-      "pass": true,
-      "score": 100,
-      "stepCount": 10,
-      "wordCount": 452,
-      "issues": []
     },
     {
       "slug": "caprese-steak-skewers-crew",
       "title": "Heirloom Tomato Bocconcini Sirloin Stacks",
-      "pass": true,
-      "score": 100,
+      "kind": "bbq_catalog",
+      "pass": false,
+      "score": 88,
       "stepCount": 8,
-      "wordCount": 477,
-      "issues": []
+      "wordCount": 119,
+      "issues": [
+        "step 3 is generic or too short",
+        "thin instructions (119 words, min 280)",
+        "vague step: Heat grill"
+      ]
     },
     {
       "slug": "herb-roasted-thighs",
       "title": "Herb Roasted Chicken Thighs",
-      "pass": true,
+      "kind": "firehall_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 11,
-      "wordCount": 448,
-      "issues": []
-    },
-    {
-      "slug": "herb-baked-salmon-tray",
-      "title": "Herb-Crusted Baked Salmon Tray",
-      "pass": true,
-      "score": 100,
-      "stepCount": 8,
-      "wordCount": 396,
-      "issues": []
+      "stepCount": 4,
+      "wordCount": 70,
+      "issues": [
+        "only 4 steps (min 8 for this meal)",
+        "thin instructions (70 words, min 400)"
+      ]
     },
     {
       "slug": "hickory-smoked-chicken-breast",
       "title": "Hickory Smoked Chicken Breast",
-      "pass": true,
+      "kind": "bbq_catalog",
+      "pass": false,
       "score": 100,
       "stepCount": 8,
-      "wordCount": 450,
-      "issues": []
+      "wordCount": 124,
+      "issues": [
+        "thin instructions (124 words, min 400)"
+      ]
     },
     {
       "slug": "hickory-turkey-legs",
       "title": "Hickory Smoked Turkey Legs",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 100,
-      "stepCount": 13,
-      "wordCount": 443,
-      "issues": []
-    },
-    {
-      "slug": "turkey-chili",
-      "title": "High-Protein Turkey Chili",
-      "pass": true,
-      "score": 100,
-      "stepCount": 10,
-      "wordCount": 435,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 139,
+      "issues": [
+        "only 5 steps (min 10 for this meal)",
+        "thin instructions (139 words, min 400)"
+      ]
     },
     {
       "slug": "honey-chipotle-chicken-thighs",
       "title": "Honey Chipotle Grilled Chicken Thighs",
-      "pass": true,
+      "kind": "bbq_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 10,
-      "wordCount": 317,
-      "issues": []
+      "stepCount": 7,
+      "wordCount": 200,
+      "issues": [
+        "only 7 steps (min 8 for this meal)",
+        "thin instructions (200 words, min 280)"
+      ]
     },
     {
       "slug": "honey-garlic-chicken-rice-bowls",
-      "title": "Honey Garlic Chicken Rice Bowls",
-      "pass": true,
+      "title": "Honey Garlic Chicken Bowls",
+      "kind": "performance_meal",
+      "pass": false,
       "score": 100,
-      "stepCount": 8,
-      "wordCount": 375,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 102,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (102 words, min 280)"
+      ]
     },
     {
       "slug": "honey-garlic-pork-tenderloin",
-      "title": "Honey Garlic Grilled Pork Tenderloin",
-      "pass": true,
+      "title": "Honey Garlic Pork Tenderloin",
+      "kind": "firehall_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 11,
-      "wordCount": 430,
-      "issues": []
+      "stepCount": 4,
+      "wordCount": 99,
+      "issues": [
+        "only 4 steps (min 10 for this meal)",
+        "thin instructions (99 words, min 400)"
+      ]
     },
     {
       "slug": "honey-lime-chicken-tray",
       "title": "Honey Lime Chicken Tray",
-      "pass": true,
+      "kind": "performance_meal",
+      "pass": false,
       "score": 100,
-      "stepCount": 10,
-      "wordCount": 413,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 107,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (107 words, min 400)"
+      ]
     },
     {
       "slug": "honey-mustard-oven-chicken-thighs",
       "title": "Honey Mustard Baked Chicken Thighs",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 100,
-      "stepCount": 10,
-      "wordCount": 405,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 117,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (117 words, min 400)"
+      ]
     },
     {
       "slug": "hot-honey-grilled-sausage-peppers",
       "title": "Hot Honey Grilled Sausage & Peppers",
-      "pass": true,
+      "kind": "bbq_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 8,
-      "wordCount": 448,
-      "issues": []
+      "stepCount": 6,
+      "wordCount": 86,
+      "issues": [
+        "only 6 steps (min 8 for this meal)",
+        "thin instructions (86 words, min 280)"
+      ]
     },
     {
       "slug": "honey-soppressata-pizza",
       "title": "Hot Honey Soppressata Pizza",
-      "pass": true,
+      "kind": "firehall_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 13,
-      "wordCount": 429,
-      "issues": []
+      "stepCount": 6,
+      "wordCount": 173,
+      "issues": [
+        "only 6 steps (min 10 for this meal)",
+        "thin instructions (173 words, min 400)"
+      ]
     },
     {
       "slug": "huevos-rancheros-crew",
       "title": "Huevos Rancheros for the Crew",
-      "pass": true,
+      "kind": "breakfast_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 12,
-      "wordCount": 435,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 180,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (180 words, min 400)",
+        "missing tonightSpread",
+        "missing equipment"
+      ]
     },
     {
       "slug": "hummus-chicken-platter",
       "title": "Hummus Chicken Platter",
-      "pass": true,
+      "kind": "performance_meal",
+      "pass": false,
       "score": 100,
-      "stepCount": 11,
-      "wordCount": 435,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 110,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (110 words, min 400)"
+      ]
     },
     {
       "slug": "hungarian-goulash-crew",
       "title": "Hungarian Goulash for the Crew",
-      "pass": true,
-      "score": 100,
-      "stepCount": 10,
-      "wordCount": 494,
-      "issues": []
+      "kind": "hall_expansion",
+      "pass": false,
+      "score": 85,
+      "stepCount": 5,
+      "wordCount": 94,
+      "issues": [
+        "no oven/grill/internal temperature cues in steps",
+        "only 5 steps (min 10 for this meal)",
+        "thin instructions (94 words, min 400)"
+      ]
     },
     {
       "slug": "pork-satay-skewers-crew",
       "title": "Indonesian Tamarind Pork Satay Batches",
-      "pass": true,
-      "score": 100,
+      "kind": "bbq_catalog",
+      "pass": false,
+      "score": 88,
       "stepCount": 8,
-      "wordCount": 494,
-      "issues": []
+      "wordCount": 128,
+      "issues": [
+        "step 4 is generic or too short",
+        "thin instructions (128 words, min 400)",
+        "vague step: Heat grill"
+      ]
     },
     {
       "slug": "irish-breakfast-fry-up",
       "title": "Irish Breakfast Fry-Up",
-      "pass": true,
+      "kind": "breakfast_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 12,
-      "wordCount": 426,
-      "issues": []
-    },
-    {
-      "slug": "italian-sausage-veg-sheet-pan",
-      "title": "Crispy Garlic Pork",
-      "pass": true,
-      "score": 100,
-      "stepCount": 8,
-      "wordCount": 394,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 140,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (140 words, min 400)",
+        "missing tonightSpread",
+        "missing equipment"
+      ]
     },
     {
       "slug": "jalapeno-cheddar-smoked-sausages",
       "title": "Jalapeño Cheddar Smoked Sausages",
-      "pass": true,
+      "kind": "bbq_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 8,
-      "wordCount": 454,
-      "issues": []
+      "stepCount": 7,
+      "wordCount": 98,
+      "issues": [
+        "only 7 steps (min 8 for this meal)",
+        "thin instructions (98 words, min 400)"
+      ]
     },
     {
       "slug": "jalapeno-popper-dip",
       "title": "Jalapeño Popper Dip",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 100,
-      "stepCount": 12,
-      "wordCount": 402,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 128,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (128 words, min 400)"
+      ]
+    },
+    {
+      "slug": "jambalaya",
+      "title": "Jambalaya",
+      "kind": "firehall_catalog",
+      "pass": false,
+      "score": 90,
+      "stepCount": 4,
+      "wordCount": 83,
+      "issues": [
+        "robotic_title",
+        "only 4 steps (min 10 for this meal)",
+        "thin instructions (83 words, min 400)"
+      ]
     },
     {
       "slug": "jerk-chicken",
-      "title": "Jerk Chicken & Peas and Rice",
-      "pass": true,
+      "title": "Jerk Chicken & Rice and Peas",
+      "kind": "hall_classic",
+      "pass": false,
       "score": 100,
       "stepCount": 12,
-      "wordCount": 678,
-      "issues": []
+      "wordCount": 190,
+      "issues": [
+        "thin instructions (190 words, min 400)"
+      ]
     },
     {
       "slug": "johnnycakes-with-syrup",
       "title": "Johnnycakes with Maple Syrup",
-      "pass": true,
+      "kind": "breakfast_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 9,
-      "wordCount": 286,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 141,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (141 words, min 280)",
+        "missing tonightSpread",
+        "missing equipment"
+      ]
     },
     {
       "slug": "tandoori-lamb-chop-platter",
       "title": "Kashmiri Mustard-Oil Lamb Chop Feast",
-      "pass": true,
+      "kind": "bbq_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 9,
-      "wordCount": 463,
-      "issues": []
+      "stepCount": 8,
+      "wordCount": 122,
+      "issues": [
+        "thin instructions (122 words, min 400)"
+      ]
     },
     {
       "slug": "kielbasa-cabbage-potato-skillet",
-      "title": "Garlic Pork Skillet",
-      "pass": true,
-      "score": 100,
-      "stepCount": 10,
-      "wordCount": 409,
-      "issues": []
-    },
-    {
-      "slug": "korean-beef-rice-bowls",
-      "title": "Korean Garlic Beef Bowls",
-      "pass": true,
-      "score": 100,
-      "stepCount": 8,
-      "wordCount": 335,
-      "issues": []
+      "title": "Kielbasa Cabbage Potato Skillet",
+      "kind": "hall_expansion",
+      "pass": false,
+      "score": 75,
+      "stepCount": 5,
+      "wordCount": 97,
+      "issues": [
+        "robotic_title",
+        "no oven/grill/internal temperature cues in steps",
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (97 words, min 400)"
+      ]
     },
     {
       "slug": "korean-bulgogi-grill-night",
-      "title": "Seared Garlic Steak",
-      "pass": true,
-      "score": 100,
-      "stepCount": 9,
-      "wordCount": 483,
-      "issues": []
-    },
-    {
-      "slug": "bulgogi-bowls",
-      "title": "Korean Ginger Sesame Steak Bowls",
-      "pass": true,
-      "score": 100,
-      "stepCount": 12,
-      "wordCount": 473,
-      "issues": []
+      "title": "Korean Bulgogi Grill Night",
+      "kind": "hall_expansion",
+      "pass": false,
+      "score": 90,
+      "stepCount": 5,
+      "wordCount": 88,
+      "issues": [
+        "robotic_title",
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (88 words, min 400)"
+      ]
     },
     {
       "slug": "lamb-kofta-skewer-platter",
       "title": "Lamb Kofta Skewer Platter",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 100,
-      "stepCount": 8,
-      "wordCount": 359,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 82,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (82 words, min 280)"
+      ]
     },
     {
       "slug": "lebanese-chicken-shish-platter",
       "title": "Lebanese Chicken Shish Platter",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 100,
-      "stepCount": 9,
-      "wordCount": 439,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 95,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (95 words, min 400)"
+      ]
+    },
+    {
+      "slug": "greek-lemon-chicken-potatoes",
+      "title": "Lemon Chicken and Potatoes",
+      "kind": "performance_meal",
+      "pass": false,
+      "score": 100,
+      "stepCount": 5,
+      "wordCount": 107,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (107 words, min 400)"
+      ]
     },
     {
       "slug": "lemon-chicken-orzo-soup",
       "title": "Lemon Chicken Orzo Soup",
-      "pass": true,
+      "kind": "performance_meal",
+      "pass": false,
       "score": 100,
-      "stepCount": 10,
-      "wordCount": 426,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 102,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (102 words, min 400)"
+      ]
     },
     {
       "slug": "lemon-garlic-chicken-tray",
-      "title": "Lemon Garlic Chicken Tray Bake",
-      "pass": true,
+      "title": "Lemon Garlic Chicken Tray",
+      "kind": "performance_meal",
+      "pass": false,
       "score": 100,
-      "stepCount": 11,
-      "wordCount": 423,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 107,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (107 words, min 400)"
+      ]
     },
     {
       "slug": "lemon-garlic-shrimp-pasta",
       "title": "Lemon Garlic Shrimp Pasta",
-      "pass": true,
+      "kind": "performance_meal",
+      "pass": false,
       "score": 90,
-      "stepCount": 9,
-      "wordCount": 341,
+      "stepCount": 5,
+      "wordCount": 120,
       "issues": [
-        "title_pasta_no_pasta"
+        "title_pasta_no_pasta",
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (120 words, min 280)"
       ]
     },
     {
       "slug": "lemon-herb-salmon",
-      "title": "Lemon Herb Grilled Salmon",
-      "pass": true,
+      "title": "Lemon Herb Salmon",
+      "kind": "firehall_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 11,
-      "wordCount": 446,
-      "issues": []
+      "stepCount": 4,
+      "wordCount": 100,
+      "issues": [
+        "only 4 steps (min 8 for this meal)",
+        "thin instructions (100 words, min 400)"
+      ]
     },
     {
       "slug": "lemon-salmon-orzo-skillet",
-      "title": "Lemon Salmon Orzo Skillet",
-      "pass": true,
-      "score": 90,
-      "stepCount": 8,
-      "wordCount": 365,
+      "title": "Lemon Salmon Orzo",
+      "kind": "performance_meal",
+      "pass": false,
+      "score": 100,
+      "stepCount": 5,
+      "wordCount": 106,
       "issues": [
-        "title quality failed"
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (106 words, min 280)"
+      ]
+    },
+    {
+      "slug": "smoky-lentil-kale-soup",
+      "title": "Lentil and Kale Soup",
+      "kind": "performance_meal",
+      "pass": false,
+      "score": 100,
+      "stepCount": 5,
+      "wordCount": 109,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (109 words, min 400)"
       ]
     },
     {
       "slug": "lentil-mushroom-bolognese",
-      "title": "Lentil Mushroom Bolognese",
-      "pass": true,
+      "title": "Lentil Bolognese",
+      "kind": "performance_meal",
+      "pass": false,
       "score": 100,
-      "stepCount": 10,
-      "wordCount": 410,
-      "issues": []
-    },
-    {
-      "slug": "chicken-enchilada-skillet-light",
-      "title": "Garlic Chicken Skillet",
-      "pass": true,
-      "score": 100,
-      "stepCount": 8,
-      "wordCount": 363,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 103,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (103 words, min 400)"
+      ]
     },
     {
       "slug": "portuguese-linguica-grill-platter",
       "title": "Lisbon Piri-Piri Linguica Spread",
-      "pass": true,
+      "kind": "bbq_catalog",
+      "pass": false,
       "score": 100,
       "stepCount": 8,
-      "wordCount": 489,
-      "issues": []
-    },
-    {
-      "slug": "loaded-baked-potato-bar",
-      "title": "Loaded Baked Potato Bar",
-      "pass": true,
-      "score": 100,
-      "stepCount": 11,
-      "wordCount": 402,
-      "issues": []
-    },
-    {
-      "slug": "game-day-nachos",
-      "title": "Loaded Game Day Nachos",
-      "pass": true,
-      "score": 90,
-      "stepCount": 12,
-      "wordCount": 465,
+      "wordCount": 113,
       "issues": [
-        "title_taco_no_tortilla"
+        "thin instructions (113 words, min 280)"
       ]
     },
     {
       "slug": "loaded-nacho-bar-night",
       "title": "Loaded Nacho Bar Night",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 90,
-      "stepCount": 9,
-      "wordCount": 301,
+      "stepCount": 5,
+      "wordCount": 133,
       "issues": [
-        "title_taco_no_tortilla"
+        "title_taco_no_tortilla",
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (133 words, min 280)"
       ]
-    },
-    {
-      "slug": "loaded-nacho-skillet",
-      "title": "Smoky Beef Bowls",
-      "pass": true,
-      "score": 100,
-      "stepCount": 11,
-      "wordCount": 433,
-      "issues": []
-    },
-    {
-      "slug": "loaded-potato-feed",
-      "title": "Loaded Potato Feed",
-      "pass": true,
-      "score": 100,
-      "stepCount": 12,
-      "wordCount": 424,
-      "issues": []
     },
     {
       "slug": "loaded-potato-skins",
       "title": "Loaded Potato Skins",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 100,
-      "stepCount": 12,
-      "wordCount": 442,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 157,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (157 words, min 400)"
+      ]
     },
     {
       "slug": "lumberjack-breakfast-platter",
       "title": "Lumberjack Breakfast Platter",
-      "pass": true,
+      "kind": "breakfast_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 12,
-      "wordCount": 411,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 162,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (162 words, min 400)",
+        "missing tonightSpread",
+        "missing equipment"
+      ]
     },
     {
       "slug": "malaysian-laksa-soup",
       "title": "Malaysian Laksa Soup",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 100,
-      "stepCount": 11,
-      "wordCount": 456,
-      "issues": []
+      "stepCount": 8,
+      "wordCount": 325,
+      "issues": [
+        "thin instructions (325 words, min 400)"
+      ]
     },
     {
       "slug": "maple-mustard-salmon-tray",
       "title": "Maple Mustard Salmon Tray",
-      "pass": true,
+      "kind": "performance_meal",
+      "pass": false,
       "score": 100,
-      "stepCount": 8,
-      "wordCount": 388,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 95,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (95 words, min 280)"
+      ]
     },
     {
       "slug": "maple-sausage-pinwheels",
       "title": "Maple Sausage Pinwheels",
-      "pass": true,
+      "kind": "breakfast_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 9,
-      "wordCount": 303,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 111,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (111 words, min 280)",
+        "missing tonightSpread",
+        "missing equipment"
+      ]
     },
     {
       "slug": "maple-soy-salmon-bowls",
       "title": "Maple Soy Salmon Bowls",
-      "pass": true,
+      "kind": "performance_meal",
+      "pass": false,
       "score": 100,
-      "stepCount": 8,
-      "wordCount": 404,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 102,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (102 words, min 280)"
+      ]
     },
     {
       "slug": "maple-cured-salmon-plank",
       "title": "Maple-Cured Salmon Plank",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 100,
-      "stepCount": 11,
-      "wordCount": 443,
-      "issues": []
-    },
-    {
-      "slug": "meat-lovers-sheet-pizza",
-      "title": "Crispy Honey Chili Beef",
-      "pass": true,
-      "score": 90,
-      "stepCount": 11,
-      "wordCount": 407,
+      "stepCount": 5,
+      "wordCount": 107,
       "issues": [
-        "chili title without beans or tomato base"
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (107 words, min 400)"
       ]
     },
     {
-      "slug": "mediterranean-baked-fish-tray",
-      "title": "Crispy Garlic Fish",
-      "pass": true,
+      "slug": "margherita-pizza",
+      "title": "Margherita Pizza",
+      "kind": "firehall_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 8,
-      "wordCount": 370,
-      "issues": []
+      "stepCount": 6,
+      "wordCount": 187,
+      "issues": [
+        "only 6 steps (min 10 for this meal)",
+        "thin instructions (187 words, min 400)"
+      ]
+    },
+    {
+      "slug": "meat-lovers-sheet-pizza",
+      "title": "Meat Lover's Pizza",
+      "kind": "firehall_catalog",
+      "pass": false,
+      "score": 100,
+      "stepCount": 6,
+      "wordCount": 199,
+      "issues": [
+        "only 6 steps (min 10 for this meal)",
+        "thin instructions (199 words, min 400)"
+      ]
+    },
+    {
+      "slug": "meatball-hoagies",
+      "title": "Meatball Hoagies",
+      "kind": "firehall_catalog",
+      "pass": false,
+      "score": 100,
+      "stepCount": 4,
+      "wordCount": 80,
+      "issues": [
+        "only 4 steps (min 8 for this meal)",
+        "thin instructions (80 words, min 400)"
+      ]
+    },
+    {
+      "slug": "meatloaf-mashed",
+      "title": "Meatloaf and Mashed Potatoes",
+      "kind": "firehall_catalog",
+      "pass": false,
+      "score": 100,
+      "stepCount": 4,
+      "wordCount": 97,
+      "issues": [
+        "only 4 steps (min 10 for this meal)",
+        "thin instructions (97 words, min 400)"
+      ]
     },
     {
       "slug": "mediterranean-chicken-farro-bowls",
-      "title": "Smoky Chicken Bowls",
-      "pass": true,
-      "score": 100,
-      "stepCount": 9,
-      "wordCount": 431,
-      "issues": []
+      "title": "Mediterranean Chicken Farro Bowls",
+      "kind": "hall_expansion",
+      "pass": false,
+      "score": 90,
+      "stepCount": 5,
+      "wordCount": 86,
+      "issues": [
+        "robotic_title",
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (86 words, min 400)"
+      ]
     },
     {
       "slug": "mediterranean-chickpea",
-      "title": "Smoky Chickpea Bowls",
-      "pass": true,
-      "score": 100,
-      "stepCount": 12,
-      "wordCount": 448,
-      "issues": []
+      "title": "Mediterranean Chickpea Bowls",
+      "kind": "firehall_catalog",
+      "pass": false,
+      "score": 90,
+      "stepCount": 4,
+      "wordCount": 90,
+      "issues": [
+        "robotic_title",
+        "only 4 steps (min 8 for this meal)",
+        "thin instructions (90 words, min 400)"
+      ]
     },
     {
       "slug": "mediterranean-feast-night",
-      "title": "Crispy Honey Chili Chicken Thighs",
-      "pass": true,
+      "title": "Mediterranean Feast Night",
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 90,
-      "stepCount": 12,
-      "wordCount": 404,
+      "stepCount": 5,
+      "wordCount": 128,
       "issues": [
-        "chili title without beans or tomato base"
+        "robotic_title",
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (128 words, min 400)"
       ]
     },
     {
       "slug": "memphis-dry-rub-ribs",
       "title": "Memphis Dry Rub Ribs",
-      "pass": true,
+      "kind": "firehall_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 12,
-      "wordCount": 444,
-      "issues": []
+      "stepCount": 4,
+      "wordCount": 131,
+      "issues": [
+        "only 4 steps (min 10 for this meal)",
+        "thin instructions (131 words, min 400)"
+      ]
     },
     {
       "slug": "mesquite-chuck-roast",
       "title": "Mesquite Smoked Chuck Roast",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 100,
-      "stepCount": 12,
-      "wordCount": 402,
-      "issues": []
-    },
-    {
-      "slug": "street-corn-chicken",
-      "title": "Smoky Chicken Thighs Bowls",
-      "pass": true,
-      "score": 100,
-      "stepCount": 10,
-      "wordCount": 409,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 144,
+      "issues": [
+        "only 5 steps (min 10 for this meal)",
+        "thin instructions (144 words, min 400)"
+      ]
     },
     {
       "slug": "migas-for-the-crew",
       "title": "Migas for the Crew",
-      "pass": true,
-      "score": 100,
-      "stepCount": 9,
-      "wordCount": 298,
-      "issues": []
+      "kind": "breakfast_catalog",
+      "pass": false,
+      "score": 85,
+      "stepCount": 5,
+      "wordCount": 153,
+      "issues": [
+        "no oven/grill/internal temperature cues in steps",
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (153 words, min 280)",
+        "missing tonightSpread",
+        "missing equipment"
+      ]
     },
     {
       "slug": "miso-ramen-bar",
       "title": "Miso Ramen Bar",
-      "pass": true,
-      "score": 100,
-      "stepCount": 10,
-      "wordCount": 479,
-      "issues": []
+      "kind": "hall_expansion",
+      "pass": false,
+      "score": 85,
+      "stepCount": 5,
+      "wordCount": 91,
+      "issues": [
+        "no oven/grill/internal temperature cues in steps",
+        "only 5 steps (min 10 for this meal)",
+        "thin instructions (91 words, min 400)"
+      ]
     },
     {
       "slug": "mixed-berry-protein",
       "title": "Mixed Berry Protein Smoothie",
+      "kind": "smoothie",
       "pass": true,
       "score": 100,
       "stepCount": 6,
@@ -1857,6 +2776,7 @@
     {
       "slug": "mocha-protein",
       "title": "Mocha Protein Smoothie",
+      "kind": "smoothie",
       "pass": true,
       "score": 100,
       "stepCount": 6,
@@ -1866,154 +2786,260 @@
     {
       "slug": "molasses-bourbon-pork-ribs",
       "title": "Molasses Bourbon Pork Ribs",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 100,
-      "stepCount": 11,
-      "wordCount": 403,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 142,
+      "issues": [
+        "only 5 steps (min 10 for this meal)",
+        "thin instructions (142 words, min 400)"
+      ]
     },
     {
       "slug": "monte-cristo-sandwiches",
       "title": "Monte Cristo Sandwiches",
-      "pass": true,
+      "kind": "breakfast_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 8,
-      "wordCount": 317,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 115,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (115 words, min 280)",
+        "missing tonightSpread",
+        "missing equipment"
+      ]
     },
     {
       "slug": "montreal-smoked-meat-platter",
       "title": "Montreal Smoked Meat Platter",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 100,
-      "stepCount": 12,
-      "wordCount": 432,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 116,
+      "issues": [
+        "only 5 steps (min 10 for this meal)",
+        "thin instructions (116 words, min 400)"
+      ]
     },
     {
       "slug": "moroccan-chicken-chickpea-tray",
-      "title": "Moroccan Chicken Chickpea Tray",
-      "pass": true,
+      "title": "Moroccan Chicken and Chickpeas",
+      "kind": "performance_meal",
+      "pass": false,
       "score": 100,
-      "stepCount": 8,
-      "wordCount": 420,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 94,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (94 words, min 400)"
+      ]
     },
     {
       "slug": "moroccan-chicken-kebab-platter",
       "title": "Moroccan Chicken Kebab Platter",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 100,
-      "stepCount": 10,
-      "wordCount": 429,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 84,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (84 words, min 400)"
+      ]
     },
     {
       "slug": "moroccan-meatballs",
-      "title": "Moroccan Spiced Lamb Meatballs",
-      "pass": true,
+      "title": "Moroccan Lamb Meatballs",
+      "kind": "firehall_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 10,
-      "wordCount": 412,
-      "issues": []
+      "stepCount": 4,
+      "wordCount": 72,
+      "issues": [
+        "only 4 steps (min 8 for this meal)",
+        "thin instructions (72 words, min 400)"
+      ]
     },
     {
       "slug": "firehall-antipasto-pasta-salad",
       "title": "Mortadella Farfalle Antipasto Tray",
-      "pass": true,
+      "kind": "bbq_catalog",
+      "pass": false,
       "score": 100,
       "stepCount": 8,
-      "wordCount": 500,
-      "issues": []
+      "wordCount": 103,
+      "issues": [
+        "thin instructions (103 words, min 400)"
+      ]
     },
     {
       "slug": "mushroom-swiss-steak-pan",
       "title": "Mushroom Swiss Steak Pan",
-      "pass": true,
-      "score": 100,
-      "stepCount": 10,
-      "wordCount": 483,
-      "issues": []
+      "kind": "hall_expansion",
+      "pass": false,
+      "score": 85,
+      "stepCount": 5,
+      "wordCount": 123,
+      "issues": [
+        "no oven/grill/internal temperature cues in steps",
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (123 words, min 400)"
+      ]
+    },
+    {
+      "slug": "loaded-nacho-skillet",
+      "title": "Nacho Skillet",
+      "kind": "firehall_catalog",
+      "pass": false,
+      "score": 90,
+      "stepCount": 4,
+      "wordCount": 108,
+      "issues": [
+        "robotic_title; title_taco_no_tortilla",
+        "only 4 steps (min 8 for this meal)",
+        "thin instructions (108 words, min 400)"
+      ]
     },
     {
       "slug": "lamb-merguez-skewers-crew",
       "title": "North African Urfa Lamb Merguez Logs",
-      "pass": true,
+      "kind": "bbq_catalog",
+      "pass": false,
       "score": 100,
       "stepCount": 8,
-      "wordCount": 435,
-      "issues": []
-    },
-    {
-      "slug": "one-pot-chicken-rice",
-      "title": "Crispy Garlic Chicken Thighs",
-      "pass": true,
-      "score": 100,
-      "stepCount": 12,
-      "wordCount": 444,
-      "issues": []
-    },
-    {
-      "slug": "skillet-chicken-alfredo",
-      "title": "Garlic Chicken Pasta",
-      "pass": true,
-      "score": 90,
-      "stepCount": 8,
-      "wordCount": 422,
+      "wordCount": 142,
       "issues": [
-        "title_pasta_no_pasta"
+        "thin instructions (142 words, min 400)"
+      ]
+    },
+    {
+      "slug": "ny-strip-herb-butter",
+      "title": "NY Strip with Herb Butter",
+      "kind": "firehall_catalog",
+      "pass": false,
+      "score": 100,
+      "stepCount": 4,
+      "wordCount": 117,
+      "issues": [
+        "only 4 steps (min 10 for this meal)",
+        "thin instructions (117 words, min 400)"
       ]
     },
     {
       "slug": "overnight-french-toast-bake",
       "title": "Overnight French Toast Bake",
-      "pass": true,
+      "kind": "breakfast_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 12,
-      "wordCount": 418,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 121,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (121 words, min 400)",
+        "missing tonightSpread",
+        "missing equipment"
+      ]
     },
     {
       "slug": "overnight-sausage-strata",
       "title": "Overnight Sausage Strata",
-      "pass": true,
+      "kind": "breakfast_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 12,
-      "wordCount": 407,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 137,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (137 words, min 400)",
+        "missing tonightSpread",
+        "missing equipment"
+      ]
+    },
+    {
+      "slug": "pad-thai",
+      "title": "Pad Thai",
+      "kind": "firehall_catalog",
+      "pass": false,
+      "score": 100,
+      "stepCount": 8,
+      "wordCount": 971,
+      "issues": [
+        "only 8 steps (min 10 for this meal)"
+      ]
     },
     {
       "slug": "honey-sriracha-shrimp-skewers",
       "title": "Palm Sugar Lime Shrimp Skewers",
-      "pass": true,
+      "kind": "bbq_catalog",
+      "pass": false,
       "score": 100,
       "stepCount": 8,
-      "wordCount": 540,
-      "issues": []
+      "wordCount": 120,
+      "issues": [
+        "thin instructions (120 words, min 280)"
+      ]
     },
     {
       "slug": "paprika-roasted-chicken-quarters",
       "title": "Paprika Roasted Chicken Quarters",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 100,
-      "stepCount": 10,
-      "wordCount": 400,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 96,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (96 words, min 400)"
+      ]
+    },
+    {
+      "slug": "parm-hero-subs",
+      "title": "Parm Hero Subs",
+      "kind": "firehall_catalog",
+      "pass": false,
+      "score": 100,
+      "stepCount": 4,
+      "wordCount": 81,
+      "issues": [
+        "only 4 steps (min 8 for this meal)",
+        "thin instructions (81 words, min 400)"
+      ]
     },
     {
       "slug": "pasta-bar-night",
       "title": "Pasta Bar Night",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 90,
-      "stepCount": 12,
-      "wordCount": 413,
+      "stepCount": 5,
+      "wordCount": 139,
       "issues": [
-        "title_pasta_no_pasta"
+        "title_pasta_no_pasta",
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (139 words, min 400)"
+      ]
+    },
+    {
+      "slug": "pasta-e-ceci-for-the-hall",
+      "title": "Pasta e Ceci (Pasta with Chickpeas)",
+      "kind": "firehall_catalog",
+      "pass": false,
+      "score": 90,
+      "stepCount": 5,
+      "wordCount": 181,
+      "issues": [
+        "title_pasta_no_pasta",
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (181 words, min 400)"
       ]
     },
     {
       "slug": "peanut-butter-banana-recovery",
       "title": "Peanut Butter Banana Recovery Shake",
+      "kind": "smoothie",
       "pass": true,
       "score": 100,
       "stepCount": 6,
@@ -2023,613 +3049,955 @@
     {
       "slug": "maple-bourbon-grilled-trout",
       "title": "Pecan Bourbon Whole Trout Board",
-      "pass": true,
-      "score": 100,
+      "kind": "bbq_catalog",
+      "pass": false,
+      "score": 88,
       "stepCount": 8,
-      "wordCount": 460,
-      "issues": []
+      "wordCount": 110,
+      "issues": [
+        "step 3 is generic or too short",
+        "thin instructions (110 words, min 280)",
+        "vague step: Heat grill"
+      ]
     },
     {
       "slug": "pellet-smoked-chicken-quarters",
       "title": "Pellet Smoked Chicken Quarters",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 100,
-      "stepCount": 13,
-      "wordCount": 447,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 131,
+      "issues": [
+        "only 5 steps (min 10 for this meal)",
+        "thin instructions (131 words, min 400)"
+      ]
     },
     {
       "slug": "pepper-steak-onions",
       "title": "Pepper Steak with Onions",
-      "pass": true,
-      "score": 100,
-      "stepCount": 9,
-      "wordCount": 452,
-      "issues": []
+      "kind": "hall_expansion",
+      "pass": false,
+      "score": 85,
+      "stepCount": 5,
+      "wordCount": 108,
+      "issues": [
+        "no oven/grill/internal temperature cues in steps",
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (108 words, min 400)"
+      ]
     },
     {
-      "slug": "performance-burrito-bowls",
-      "title": "Performance Chicken Burrito Bowls",
-      "pass": true,
-      "score": 90,
-      "stepCount": 11,
-      "wordCount": 432,
+      "slug": "pepperoni-pizza-night",
+      "title": "Pepperoni Pizza",
+      "kind": "firehall_catalog",
+      "pass": false,
+      "score": 100,
+      "stepCount": 6,
+      "wordCount": 189,
       "issues": [
-        "title_taco_no_tortilla"
+        "only 6 steps (min 10 for this meal)",
+        "thin instructions (189 words, min 400)"
       ]
     },
     {
       "slug": "peri-peri-chicken-platter",
       "title": "Peri Peri Chicken Platter",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 100,
-      "stepCount": 10,
-      "wordCount": 431,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 84,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (84 words, min 400)"
+      ]
     },
     {
       "slug": "pesto-tomato-chicken-tray",
-      "title": "Pesto Tomato Chicken Tray",
-      "pass": true,
+      "title": "Pesto Chicken Tray",
+      "kind": "performance_meal",
+      "pass": false,
       "score": 100,
-      "stepCount": 9,
-      "wordCount": 436,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 95,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (95 words, min 400)"
+      ]
     },
     {
       "slug": "philly-egg-rolls",
       "title": "Philly Cheesesteak Egg Rolls",
-      "pass": true,
+      "kind": "firehall_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 12,
-      "wordCount": 468,
-      "issues": []
+      "stepCount": 4,
+      "wordCount": 82,
+      "issues": [
+        "only 4 steps (min 8 for this meal)",
+        "thin instructions (82 words, min 400)"
+      ]
     },
     {
       "slug": "philly-cheesesteak-skillet",
-      "title": "Garlic Butter Steak Skillet",
+      "title": "Philly Cheesesteak Skillet",
+      "kind": "firehall_catalog",
       "pass": false,
-      "score": 80,
-      "stepCount": 9,
-      "wordCount": 477,
+      "score": 90,
+      "stepCount": 4,
+      "wordCount": 64,
       "issues": [
-        "title promises garlic butter but ingredients lack butter or garlic"
+        "robotic_title",
+        "only 4 steps (min 8 for this meal)",
+        "thin instructions (64 words, min 400)"
       ]
     },
     {
       "slug": "philly-cheesesteak-sliders",
       "title": "Philly Cheesesteak Sliders",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 100,
-      "stepCount": 12,
-      "wordCount": 471,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 144,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (144 words, min 400)"
+      ]
     },
     {
       "slug": "grilled-peach-burrata-salad",
       "title": "Pistachio Peach and Burrata Salad",
-      "pass": true,
+      "kind": "bbq_catalog",
+      "pass": false,
       "score": 100,
       "stepCount": 8,
-      "wordCount": 437,
-      "issues": []
+      "wordCount": 104,
+      "issues": [
+        "thin instructions (104 words, min 280)"
+      ]
     },
     {
       "slug": "pork-belly-burnt-ends",
       "title": "Pork Belly Burnt Ends",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 100,
-      "stepCount": 12,
-      "wordCount": 403,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 147,
+      "issues": [
+        "only 5 steps (min 10 for this meal)",
+        "thin instructions (147 words, min 400)"
+      ]
+    },
+    {
+      "slug": "pork-carnitas-tacos",
+      "title": "Pork Carnitas Tacos",
+      "kind": "firehall_catalog",
+      "pass": false,
+      "score": 90,
+      "stepCount": 4,
+      "wordCount": 99,
+      "issues": [
+        "title_taco_no_tortilla",
+        "only 4 steps (min 8 for this meal)",
+        "thin instructions (99 words, min 400)"
+      ]
+    },
+    {
+      "slug": "loaded-potato-feed",
+      "title": "Potato Bar Feed",
+      "kind": "firehall_catalog",
+      "pass": false,
+      "score": 100,
+      "stepCount": 4,
+      "wordCount": 130,
+      "issues": [
+        "only 4 steps (min 10 for this meal)",
+        "thin instructions (130 words, min 400)"
+      ]
     },
     {
       "slug": "pressed-cuban-sandwiches-crew",
       "title": "Pressed Cuban Sandwiches for the Crew",
-      "pass": true,
-      "score": 100,
+      "kind": "bbq_catalog",
+      "pass": false,
+      "score": 88,
       "stepCount": 8,
-      "wordCount": 515,
-      "issues": []
+      "wordCount": 103,
+      "issues": [
+        "step 5 is generic or too short",
+        "thin instructions (103 words, min 400)",
+        "vague step: Heat griddle"
+      ]
     },
     {
       "slug": "pretzel-bite-platter",
       "title": "Pretzel Bite Platter with Beer Cheese",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 100,
-      "stepCount": 9,
-      "wordCount": 291,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 140,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (140 words, min 280)"
+      ]
+    },
+    {
+      "slug": "cottage-cheese-protein-pasta",
+      "title": "Protein Pasta Bake",
+      "kind": "performance_meal",
+      "pass": false,
+      "score": 90,
+      "stepCount": 5,
+      "wordCount": 103,
+      "issues": [
+        "robotic_title; title_pasta_no_pasta",
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (103 words, min 400)"
+      ]
     },
     {
       "slug": "pulled-pork",
       "title": "Pulled Pork Sandwiches",
-      "pass": true,
-      "score": 100,
-      "stepCount": 10,
-      "wordCount": 432,
-      "issues": []
-    },
-    {
-      "slug": "beef-broccoli",
-      "title": "Quick Beef and Broccoli",
-      "pass": true,
-      "score": 90,
-      "stepCount": 9,
-      "wordCount": 457,
+      "kind": "hall_classic",
+      "pass": false,
+      "score": 95,
+      "stepCount": 6,
+      "wordCount": 213,
       "issues": [
-        "generic_opener"
+        "step 3 uses vague phrasing",
+        "only 6 steps (min 10 for this meal)",
+        "thin instructions (213 words, min 400)"
       ]
     },
     {
       "slug": "quick-egg-tacos",
       "title": "Quick Egg Tacos",
-      "pass": true,
+      "kind": "breakfast_catalog",
+      "pass": false,
       "score": 90,
-      "stepCount": 8,
-      "wordCount": 381,
+      "stepCount": 4,
+      "wordCount": 74,
       "issues": [
-        "generic_opener; title_taco_no_tortilla"
+        "generic_opener; title_taco_no_tortilla; title_taco_format_mismatch",
+        "only 4 steps (min 8 for this meal)",
+        "thin instructions (74 words, min 200)",
+        "missing tonightSpread",
+        "missing equipment"
       ]
     },
     {
-      "slug": "pork-carnitas-tacos",
-      "title": "Quick Pork Carnitas Tacos",
-      "pass": true,
+      "slug": "fast-philly-skillet",
+      "title": "Quick Philly Skillet",
+      "kind": "firehall_catalog",
+      "pass": false,
       "score": 90,
-      "stepCount": 11,
-      "wordCount": 416,
+      "stepCount": 4,
+      "wordCount": 79,
       "issues": [
-        "generic_opener; title_taco_no_tortilla"
+        "robotic_title; generic_opener",
+        "only 4 steps (min 8 for this meal)",
+        "thin instructions (79 words, min 400)"
       ]
     },
     {
       "slug": "stuffed-peppers",
       "title": "Quinoa Stuffed Peppers",
-      "pass": true,
+      "kind": "firehall_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 11,
-      "wordCount": 444,
-      "issues": []
+      "stepCount": 4,
+      "wordCount": 77,
+      "issues": [
+        "only 4 steps (min 8 for this meal)",
+        "thin instructions (77 words, min 400)"
+      ]
+    },
+    {
+      "slug": "red-beans-and-rice-for-the-hall",
+      "title": "Red Beans and Rice for the Hall",
+      "kind": "firehall_catalog",
+      "pass": false,
+      "score": 100,
+      "stepCount": 5,
+      "wordCount": 211,
+      "issues": [
+        "only 5 steps (min 10 for this meal)",
+        "thin instructions (211 words, min 400)"
+      ]
     },
     {
       "slug": "reverse-seared-ribeye-crew",
       "title": "Reverse-Seared Ribeye for the Crew",
-      "pass": true,
+      "kind": "bbq_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 10,
-      "wordCount": 511,
-      "issues": []
+      "stepCount": 8,
+      "wordCount": 146,
+      "issues": [
+        "only 8 steps (min 10 for this meal)",
+        "thin instructions (146 words, min 400)"
+      ]
     },
     {
       "slug": "rice-bowl-bar-night",
       "title": "Rice Bowl Bar Night",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 100,
-      "stepCount": 12,
-      "wordCount": 408,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 135,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (135 words, min 400)"
+      ]
     },
     {
       "slug": "rigatoni-meat-sauce-batch",
       "title": "Rigatoni with Meat Sauce",
-      "pass": true,
-      "score": 100,
-      "stepCount": 9,
-      "wordCount": 431,
-      "issues": []
+      "kind": "hall_expansion",
+      "pass": false,
+      "score": 85,
+      "stepCount": 5,
+      "wordCount": 97,
+      "issues": [
+        "no oven/grill/internal temperature cues in steps",
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (97 words, min 400)"
+      ]
     },
     {
       "slug": "salsa-verde-crock-chicken",
       "title": "Salsa Verde Crock Chicken",
-      "pass": true,
+      "kind": "performance_meal",
+      "pass": false,
       "score": 100,
-      "stepCount": 10,
-      "wordCount": 467,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 101,
+      "issues": [
+        "only 5 steps (min 10 for this meal)",
+        "thin instructions (101 words, min 400)"
+      ]
     },
     {
       "slug": "sandwich-board-night",
       "title": "Sandwich Board Night",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 100,
-      "stepCount": 10,
-      "wordCount": 327,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 127,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (127 words, min 280)"
+      ]
     },
     {
       "slug": "santa-maria-tri-tip-roast",
       "title": "Santa Maria Tri-Tip Roast",
-      "pass": true,
+      "kind": "bbq_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 10,
-      "wordCount": 538,
-      "issues": []
+      "stepCount": 8,
+      "wordCount": 137,
+      "issues": [
+        "only 8 steps (min 10 for this meal)",
+        "thin instructions (137 words, min 400)"
+      ]
+    },
+    {
+      "slug": "sausage-peppers-on-buns",
+      "title": "Sausage & Peppers on Buns",
+      "kind": "hall_expansion",
+      "pass": false,
+      "score": 100,
+      "stepCount": 5,
+      "wordCount": 127,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (127 words, min 400)"
+      ]
+    },
+    {
+      "slug": "sheet-pan-sausage-peppers",
+      "title": "Sausage and Peppers",
+      "kind": "firehall_catalog",
+      "pass": false,
+      "score": 100,
+      "stepCount": 4,
+      "wordCount": 79,
+      "issues": [
+        "only 4 steps (min 8 for this meal)",
+        "thin instructions (79 words, min 400)"
+      ]
+    },
+    {
+      "slug": "italian-sausage-veg-sheet-pan",
+      "title": "Sausage and Peppers",
+      "kind": "performance_meal",
+      "pass": false,
+      "score": 100,
+      "stepCount": 5,
+      "wordCount": 94,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (94 words, min 280)"
+      ]
     },
     {
       "slug": "sausage-egg-cheese-sandwiches",
       "title": "Sausage Egg & Cheese Sandwiches",
-      "pass": true,
+      "kind": "breakfast_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 8,
-      "wordCount": 397,
-      "issues": []
+      "stepCount": 4,
+      "wordCount": 77,
+      "issues": [
+        "only 4 steps (min 8 for this meal)",
+        "thin instructions (77 words, min 280)",
+        "missing tonightSpread",
+        "missing equipment"
+      ]
     },
     {
       "slug": "sausage-egg-bake",
-      "title": "Sausage Egg Bake for the Crew",
-      "pass": true,
+      "title": "Sausage Egg Bake",
+      "kind": "firehall_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 11,
-      "wordCount": 473,
-      "issues": []
+      "stepCount": 4,
+      "wordCount": 90,
+      "issues": [
+        "only 4 steps (min 10 for this meal)",
+        "thin instructions (90 words, min 400)"
+      ]
     },
     {
       "slug": "sausage-peppers-onions",
       "title": "Sausage Peppers and Onions",
-      "pass": true,
+      "kind": "firehall_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 9,
-      "wordCount": 447,
-      "issues": []
+      "stepCount": 4,
+      "wordCount": 68,
+      "issues": [
+        "only 4 steps (min 8 for this meal)",
+        "thin instructions (68 words, min 400)"
+      ]
     },
     {
       "slug": "mongolian-beef-flat-top-crew",
       "title": "Scallion Crisp Mongolian Flank Tray",
-      "pass": true,
-      "score": 100,
+      "kind": "bbq_catalog",
+      "pass": false,
+      "score": 88,
       "stepCount": 8,
-      "wordCount": 568,
-      "issues": []
+      "wordCount": 108,
+      "issues": [
+        "step 3 is generic or too short",
+        "thin instructions (108 words, min 400)",
+        "vague step: Heat griddle hot"
+      ]
     },
     {
       "slug": "scrapple-and-eggs-skillet",
-      "title": "Crispy Maple Eggs",
-      "pass": true,
-      "score": 100,
-      "stepCount": 8,
-      "wordCount": 282,
-      "issues": []
+      "title": "Scrapple and Eggs Skillet",
+      "kind": "breakfast_catalog",
+      "pass": false,
+      "score": 90,
+      "stepCount": 5,
+      "wordCount": 138,
+      "issues": [
+        "robotic_title",
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (138 words, min 280)",
+        "missing tonightSpread",
+        "missing equipment"
+      ]
     },
     {
       "slug": "gochujang-beef-skewers-crew",
       "title": "Seoul Chili Pear Beef Cubes",
-      "pass": true,
+      "kind": "bbq_catalog",
+      "pass": false,
       "score": 100,
       "stepCount": 8,
-      "wordCount": 492,
-      "issues": []
+      "wordCount": 129,
+      "issues": [
+        "thin instructions (129 words, min 400)"
+      ]
     },
     {
       "slug": "shawarma-bar-night",
       "title": "Shawarma Bar Night",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 100,
-      "stepCount": 12,
-      "wordCount": 415,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 133,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (133 words, min 400)"
+      ]
     },
     {
       "slug": "shawarma-chicken-rice-bowls",
-      "title": "Shawarma Chicken Rice Bowls",
-      "pass": true,
+      "title": "Shawarma Chicken Bowls",
+      "kind": "performance_meal",
+      "pass": false,
       "score": 100,
-      "stepCount": 11,
-      "wordCount": 425,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 105,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (105 words, min 400)"
+      ]
     },
     {
       "slug": "sheet-pan-breakfast-hash",
-      "title": "Crispy Honey Chili Eggs",
-      "pass": true,
+      "title": "Sheet Pan Breakfast Hash",
+      "kind": "breakfast_catalog",
+      "pass": false,
       "score": 90,
-      "stepCount": 8,
-      "wordCount": 424,
+      "stepCount": 4,
+      "wordCount": 85,
       "issues": [
-        "chili title without beans or tomato base"
+        "robotic_title",
+        "only 4 steps (min 8 for this meal)",
+        "thin instructions (85 words, min 280)",
+        "missing tonightSpread",
+        "missing equipment"
       ]
     },
     {
       "slug": "sheet-pan-breakfast-sandwiches",
-      "title": "Crispy Honey Chili Sausage",
-      "pass": true,
+      "title": "Sheet Pan Breakfast Sandwiches",
+      "kind": "breakfast_catalog",
+      "pass": false,
       "score": 90,
-      "stepCount": 8,
-      "wordCount": 360,
+      "stepCount": 5,
+      "wordCount": 118,
       "issues": [
-        "chili title without beans or tomato base"
-      ]
-    },
-    {
-      "slug": "sheet-pan-fajitas",
-      "title": "Crispy Honey Chili Chicken Thighs",
-      "pass": true,
-      "score": 90,
-      "stepCount": 11,
-      "wordCount": 446,
-      "issues": [
-        "chili title without beans or tomato base"
-      ]
-    },
-    {
-      "slug": "sheet-pan-chicken-fajitas-lite",
-      "title": "Crispy Garlic Chicken",
-      "pass": true,
-      "score": 100,
-      "stepCount": 8,
-      "wordCount": 340,
-      "issues": []
-    },
-    {
-      "slug": "sheet-pan-meal-prep",
-      "title": "Crispy Honey Chili Chicken Thighs",
-      "pass": true,
-      "score": 90,
-      "stepCount": 11,
-      "wordCount": 446,
-      "issues": [
-        "chili title without beans or tomato base"
+        "robotic_title",
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (118 words, min 280)",
+        "missing tonightSpread",
+        "missing equipment"
       ]
     },
     {
       "slug": "sheet-pan-full-english",
-      "title": "Crispy Honey Chili Sausage",
-      "pass": true,
-      "score": 100,
-      "stepCount": 12,
-      "wordCount": 403,
-      "issues": []
+      "title": "Sheet Pan Full English",
+      "kind": "breakfast_catalog",
+      "pass": false,
+      "score": 90,
+      "stepCount": 5,
+      "wordCount": 130,
+      "issues": [
+        "robotic_title",
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (130 words, min 400)",
+        "missing tonightSpread",
+        "missing equipment"
+      ]
     },
     {
       "slug": "sheet-pan-meatball-marinara",
-      "title": "Crispy Garlic Beef",
-      "pass": true,
-      "score": 100,
-      "stepCount": 11,
-      "wordCount": 428,
-      "issues": []
+      "title": "Sheet Pan Meatball Marinara Feed",
+      "kind": "hall_expansion",
+      "pass": false,
+      "score": 90,
+      "stepCount": 5,
+      "wordCount": 104,
+      "issues": [
+        "robotic_title",
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (104 words, min 400)"
+      ]
     },
     {
-      "slug": "sheet-pan-sausage-peppers",
-      "title": "Crispy Honey Chili Chicken Thighs",
-      "pass": true,
+      "slug": "sheet-pan-parmesan-dijon-chicken-thigh-dinner",
+      "title": "Sheet Pan Parmesan-Dijon Chicken Thigh Dinner",
+      "kind": "firehall_catalog",
+      "pass": false,
       "score": 90,
-      "stepCount": 11,
-      "wordCount": 451,
+      "stepCount": 5,
+      "wordCount": 209,
       "issues": [
-        "chili title without beans or tomato base"
+        "robotic_title",
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (209 words, min 400)"
       ]
     },
     {
       "slug": "shepherds-pie",
-      "title": "Shepherd's Pie with Greek Salad",
-      "pass": true,
+      "title": "Shepherd's Pie",
+      "kind": "firehall_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 11,
-      "wordCount": 447,
-      "issues": []
-    },
-    {
-      "slug": "chicken-quesadillas",
-      "title": "Shredded Chicken Quesadillas",
-      "pass": true,
-      "score": 90,
-      "stepCount": 12,
-      "wordCount": 448,
+      "stepCount": 4,
+      "wordCount": 95,
       "issues": [
-        "title_taco_no_tortilla"
+        "only 4 steps (min 10 for this meal)",
+        "thin instructions (95 words, min 400)"
       ]
     },
     {
       "slug": "shrimp-and-grits-breakfast",
       "title": "Shrimp and Grits Breakfast",
-      "pass": true,
+      "kind": "breakfast_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 12,
-      "wordCount": 408,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 156,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (156 words, min 400)",
+        "missing tonightSpread",
+        "missing equipment"
+      ]
+    },
+    {
+      "slug": "grilled-shrimp-quinoa-bowls",
+      "title": "Shrimp and Quinoa Bowls",
+      "kind": "performance_meal",
+      "pass": false,
+      "score": 90,
+      "stepCount": 5,
+      "wordCount": 103,
+      "issues": [
+        "awkward_with_starch",
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (103 words, min 280)"
+      ]
     },
     {
       "slug": "charred-broccolini-lemon-tray",
       "title": "Sicilian Anchovy Broccolini Tray",
-      "pass": true,
-      "score": 100,
+      "kind": "bbq_catalog",
+      "pass": false,
+      "score": 88,
       "stepCount": 8,
-      "wordCount": 496,
-      "issues": []
+      "wordCount": 93,
+      "issues": [
+        "step 3 is generic or too short",
+        "thin instructions (93 words, min 280)",
+        "vague step: Heat grill"
+      ]
+    },
+    {
+      "slug": "slider-bar",
+      "title": "Slider Bar",
+      "kind": "firehall_catalog",
+      "pass": false,
+      "score": 100,
+      "stepCount": 6,
+      "wordCount": 192,
+      "issues": [
+        "only 6 steps (min 8 for this meal)",
+        "thin instructions (192 words, min 400)"
+      ]
     },
     {
       "slug": "smoked-baked-beans-crew",
       "title": "Smoked Baked Beans for the Crew",
-      "pass": true,
+      "kind": "bbq_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 10,
-      "wordCount": 513,
-      "issues": []
+      "stepCount": 7,
+      "wordCount": 108,
+      "issues": [
+        "only 7 steps (min 10 for this meal)",
+        "thin instructions (108 words, min 400)"
+      ]
     },
     {
       "slug": "smoked-bbq-chicken-wings-tray",
       "title": "Smoked BBQ Chicken Wings Tray",
-      "pass": true,
+      "kind": "bbq_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 10,
-      "wordCount": 487,
-      "issues": []
+      "stepCount": 8,
+      "wordCount": 121,
+      "issues": [
+        "only 8 steps (min 10 for this meal)",
+        "thin instructions (121 words, min 400)"
+      ]
     },
     {
       "slug": "smoked-chicken-quarters-white-sauce",
       "title": "Smoked Chicken Quarters with White Sauce",
-      "pass": true,
-      "score": 100,
-      "stepCount": 12,
-      "wordCount": 446,
-      "issues": []
+      "kind": "bbq_catalog",
+      "pass": false,
+      "score": 95,
+      "stepCount": 7,
+      "wordCount": 173,
+      "issues": [
+        "step 5 uses vague phrasing",
+        "only 7 steps (min 10 for this meal)",
+        "thin instructions (173 words, min 400)"
+      ]
     },
     {
       "slug": "smoked-corned-beef",
       "title": "Smoked Corned Beef Brisket",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 100,
-      "stepCount": 13,
-      "wordCount": 442,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 128,
+      "issues": [
+        "only 5 steps (min 10 for this meal)",
+        "thin instructions (128 words, min 400)"
+      ]
     },
     {
       "slug": "smoked-mac-and-cheese-crew",
       "title": "Smoked Mac and Cheese for the Crew",
-      "pass": true,
+      "kind": "bbq_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 10,
-      "wordCount": 506,
-      "issues": []
+      "stepCount": 7,
+      "wordCount": 132,
+      "issues": [
+        "only 7 steps (min 10 for this meal)",
+        "thin instructions (132 words, min 400)"
+      ]
     },
     {
       "slug": "smoked-meatloaf",
       "title": "Smoked Meatloaf with Glaze",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 100,
-      "stepCount": 13,
-      "wordCount": 429,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 131,
+      "issues": [
+        "only 5 steps (min 10 for this meal)",
+        "thin instructions (131 words, min 400)"
+      ]
     },
     {
       "slug": "smoked-picanha-steak-platter",
       "title": "Smoked Picanha Steak Platter",
-      "pass": true,
+      "kind": "bbq_catalog",
+      "pass": false,
       "score": 100,
       "stepCount": 8,
-      "wordCount": 454,
-      "issues": []
+      "wordCount": 130,
+      "issues": [
+        "thin instructions (130 words, min 400)"
+      ]
     },
     {
       "slug": "smoked-potato-salad-tray",
       "title": "Smoked Potato Salad Tray",
-      "pass": true,
-      "score": 100,
-      "stepCount": 10,
-      "wordCount": 508,
-      "issues": []
+      "kind": "bbq_catalog",
+      "pass": false,
+      "score": 78,
+      "stepCount": 8,
+      "wordCount": 106,
+      "issues": [
+        "step 5 is generic or too short",
+        "step 5 uses vague phrasing",
+        "step 5 uses vague phrasing",
+        "only 8 steps (min 10 for this meal)",
+        "thin instructions (106 words, min 400)",
+        "vague step: Fold salad"
+      ]
     },
     {
       "slug": "smoked-queso-fundido",
       "title": "Smoked Queso Fundido",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 100,
-      "stepCount": 12,
-      "wordCount": 416,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 142,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (142 words, min 400)"
+      ]
     },
     {
       "slug": "smoked-salmon-benedit",
       "title": "Smoked Salmon Benedict",
-      "pass": true,
+      "kind": "breakfast_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 10,
-      "wordCount": 371,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 135,
+      "issues": [
+        "only 5 steps (min 10 for this meal)",
+        "thin instructions (135 words, min 280)",
+        "missing tonightSpread",
+        "missing equipment"
+      ]
     },
     {
       "slug": "smoked-sausage-platter",
       "title": "Smoked Sausage Platter",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 100,
-      "stepCount": 13,
-      "wordCount": 430,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 138,
+      "issues": [
+        "only 5 steps (min 10 for this meal)",
+        "thin instructions (138 words, min 400)"
+      ]
     },
     {
       "slug": "smoked-tri-tip",
       "title": "Smoked Tri-Tip Roast",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 100,
-      "stepCount": 13,
-      "wordCount": 447,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 138,
+      "issues": [
+        "only 5 steps (min 10 for this meal)",
+        "thin instructions (138 words, min 400)"
+      ]
     },
     {
       "slug": "smoked-turkey-breast",
       "title": "Smoked Turkey Breast for the Crew",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 100,
-      "stepCount": 13,
-      "wordCount": 437,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 137,
+      "issues": [
+        "only 5 steps (min 10 for this meal)",
+        "thin instructions (137 words, min 400)"
+      ]
     },
     {
       "slug": "smoked-wings-white-sauce",
-      "title": "Smoked Wings with White BBQ Sauce",
-      "pass": true,
+      "title": "Smoked Wings with White Sauce",
+      "kind": "firehall_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 11,
-      "wordCount": 442,
-      "issues": []
-    },
-    {
-      "slug": "smoky-lentil-kale-soup",
-      "title": "Smoky Lentil and Kale Soup",
-      "pass": true,
-      "score": 100,
-      "stepCount": 10,
-      "wordCount": 425,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 215,
+      "issues": [
+        "only 5 steps (min 10 for this meal)",
+        "thin instructions (215 words, min 400)"
+      ]
     },
     {
       "slug": "soft-pretzel-dogs",
       "title": "Soft Pretzel Hot Dogs",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 100,
-      "stepCount": 10,
-      "wordCount": 417,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 133,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (133 words, min 400)"
+      ]
     },
     {
       "slug": "southwest-egg-bake",
       "title": "Southwest Egg Bake",
-      "pass": true,
+      "kind": "breakfast_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 8,
-      "wordCount": 415,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 97,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (97 words, min 400)",
+        "missing tonightSpread",
+        "missing equipment"
+      ]
     },
     {
-      "slug": "spanish-chicken-chorizo-rice",
-      "title": "Spanish Chicken and Chorizo Rice",
-      "pass": true,
+      "slug": "spaghetti-aglio-e-olio-for-the-hall",
+      "title": "Spaghetti Aglio e Olio for the Hall",
+      "kind": "firehall_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 12,
-      "wordCount": 456,
-      "issues": []
+      "stepCount": 4,
+      "wordCount": 163,
+      "issues": [
+        "only 4 steps (min 8 for this meal)",
+        "thin instructions (163 words, min 280)"
+      ]
     },
     {
       "slug": "spatchcock-lemon-roast-chicken",
       "title": "Spatchcock Lemon Roast Chicken",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 100,
-      "stepCount": 10,
-      "wordCount": 458,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 122,
+      "issues": [
+        "only 5 steps (min 10 for this meal)",
+        "thin instructions (122 words, min 400)"
+      ]
+    },
+    {
+      "slug": "spicy-tomato-bisque-grilled-brie-toast",
+      "title": "Spicy Tomato Bisque with Grilled Brie Toast",
+      "kind": "firehall_catalog",
+      "pass": false,
+      "score": 100,
+      "stepCount": 4,
+      "wordCount": 179,
+      "issues": [
+        "only 4 steps (min 8 for this meal)",
+        "thin instructions (179 words, min 400)"
+      ]
     },
     {
       "slug": "station-cobb-salad",
       "title": "Station Cobb Salad",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 100,
-      "stepCount": 10,
-      "wordCount": 423,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 100,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (100 words, min 400)"
+      ]
     },
     {
       "slug": "steak-sandwiches",
       "title": "Steak Sandwiches",
-      "pass": true,
+      "kind": "hall_classic",
+      "pass": false,
       "score": 100,
+      "stepCount": 7,
+      "wordCount": 123,
+      "issues": [
+        "only 7 steps (min 8 for this meal)",
+        "thin instructions (123 words, min 400)"
+      ]
+    },
+    {
+      "slug": "steak-tacos",
+      "title": "Steak Tacos",
+      "kind": "hall_classic",
+      "pass": true,
+      "score": 90,
       "stepCount": 8,
-      "wordCount": 519,
-      "issues": []
+      "wordCount": 502,
+      "issues": [
+        "title_taco_no_tortilla"
+      ]
     },
     {
       "slug": "strawberry-oat-breakfast",
       "title": "Strawberry Oatmeal Breakfast Smoothie",
+      "kind": "smoothie",
       "pass": true,
       "score": 100,
       "stepCount": 6,
@@ -2639,6 +4007,7 @@
     {
       "slug": "strawberry-spinach",
       "title": "Strawberry Spinach Smoothie",
+      "kind": "smoothie",
       "pass": true,
       "score": 100,
       "stepCount": 6,
@@ -2646,116 +4015,222 @@
       "issues": []
     },
     {
+      "slug": "street-corn-chicken",
+      "title": "Street Corn Chicken Bowls",
+      "kind": "firehall_catalog",
+      "pass": false,
+      "score": 100,
+      "stepCount": 4,
+      "wordCount": 78,
+      "issues": [
+        "only 4 steps (min 8 for this meal)",
+        "thin instructions (78 words, min 400)"
+      ]
+    },
+    {
+      "slug": "grilled-corn-cotija",
+      "title": "Street Corn with Cotija",
+      "kind": "firehall_catalog",
+      "pass": false,
+      "score": 100,
+      "stepCount": 4,
+      "wordCount": 105,
+      "issues": [
+        "only 4 steps (min 10 for this meal)",
+        "thin instructions (105 words, min 400)"
+      ]
+    },
+    {
       "slug": "grilled-chicken-pesto-panini-crew",
       "title": "Sun-Dried Tomato Pesto Panini Press",
-      "pass": true,
+      "kind": "bbq_catalog",
+      "pass": false,
       "score": 100,
       "stepCount": 8,
-      "wordCount": 522,
-      "issues": []
+      "wordCount": 104,
+      "issues": [
+        "thin instructions (104 words, min 400)"
+      ]
     },
     {
       "slug": "tabbouleh-chicken-bowls",
       "title": "Tabbouleh Chicken Bowls",
-      "pass": true,
+      "kind": "performance_meal",
+      "pass": false,
       "score": 100,
-      "stepCount": 10,
-      "wordCount": 423,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 102,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (102 words, min 400)"
+      ]
+    },
+    {
+      "slug": "hall-taco-bar",
+      "title": "Taco Bar",
+      "kind": "firehall_catalog",
+      "pass": false,
+      "score": 90,
+      "stepCount": 4,
+      "wordCount": 98,
+      "issues": [
+        "title_taco_no_tortilla",
+        "only 4 steps (min 8 for this meal)",
+        "thin instructions (98 words, min 400)"
+      ]
     },
     {
       "slug": "tater-tot-breakfast-casserole",
       "title": "Tater Tot Breakfast Casserole",
-      "pass": true,
+      "kind": "breakfast_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 12,
-      "wordCount": 449,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 128,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (128 words, min 400)",
+        "missing tonightSpread",
+        "missing equipment"
+      ]
     },
     {
       "slug": "firehall-hibachi-mixed-grill-crew",
       "title": "Teppan Shrimp and Pork Belly Mixed Grill",
-      "pass": true,
-      "score": 100,
+      "kind": "bbq_catalog",
+      "pass": false,
+      "score": 88,
       "stepCount": 8,
-      "wordCount": 453,
-      "issues": []
+      "wordCount": 122,
+      "issues": [
+        "step 3 is generic or too short",
+        "thin instructions (122 words, min 400)",
+        "vague step: Heat griddle"
+      ]
     },
     {
       "slug": "teriyaki-donburi",
       "title": "Teriyaki Chicken Donburi",
-      "pass": true,
+      "kind": "firehall_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 11,
-      "wordCount": 415,
-      "issues": []
+      "stepCount": 4,
+      "wordCount": 90,
+      "issues": [
+        "only 4 steps (min 8 for this meal)",
+        "thin instructions (90 words, min 400)"
+      ]
     },
     {
       "slug": "teriyaki-salmon-grill",
-      "title": "Teriyaki Grilled Salmon",
-      "pass": true,
+      "title": "Teriyaki Salmon",
+      "kind": "firehall_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 11,
-      "wordCount": 443,
-      "issues": []
+      "stepCount": 4,
+      "wordCount": 100,
+      "issues": [
+        "only 4 steps (min 10 for this meal)",
+        "thin instructions (100 words, min 400)"
+      ]
     },
     {
       "slug": "texas-central-brisket-crew",
       "title": "Texas Central Brisket for the Crew",
-      "pass": true,
+      "kind": "bbq_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 12,
-      "wordCount": 417,
-      "issues": []
+      "stepCount": 8,
+      "wordCount": 209,
+      "issues": [
+        "only 8 steps (min 10 for this meal)",
+        "thin instructions (209 words, min 400)"
+      ]
     },
     {
       "slug": "texas-beef-ribs",
       "title": "Texas-Style Beef Ribs",
-      "pass": true,
+      "kind": "firehall_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 11,
-      "wordCount": 424,
-      "issues": []
+      "stepCount": 4,
+      "wordCount": 116,
+      "issues": [
+        "only 4 steps (min 10 for this meal)",
+        "thin instructions (116 words, min 400)"
+      ]
     },
     {
       "slug": "thai-basil-chicken",
-      "title": "Garlic Chicken Thighs Skillet",
-      "pass": true,
-      "score": 100,
-      "stepCount": 11,
-      "wordCount": 429,
-      "issues": []
+      "title": "Thai Basil Chicken",
+      "kind": "firehall_catalog",
+      "pass": false,
+      "score": 90,
+      "stepCount": 7,
+      "wordCount": 188,
+      "issues": [
+        "robotic_title",
+        "only 7 steps (min 8 for this meal)",
+        "thin instructions (188 words, min 400)"
+      ]
     },
     {
       "slug": "yakiniku-grill-platter-crew",
       "title": "Tokyo Tare Ribeye Yakiniku Board",
-      "pass": true,
+      "kind": "bbq_catalog",
+      "pass": false,
       "score": 100,
       "stepCount": 8,
-      "wordCount": 520,
-      "issues": []
+      "wordCount": 128,
+      "issues": [
+        "thin instructions (128 words, min 400)"
+      ]
+    },
+    {
+      "slug": "tomato-soup-grilled-cheese-croutons",
+      "title": "Tomato Soup with Grilled Cheese Croutons",
+      "kind": "firehall_catalog",
+      "pass": false,
+      "score": 100,
+      "stepCount": 4,
+      "wordCount": 191,
+      "issues": [
+        "only 4 steps (min 8 for this meal)",
+        "thin instructions (191 words, min 400)"
+      ]
     },
     {
       "slug": "tonkotsu-ramen-crew",
       "title": "Tonkotsu Ramen for the Crew",
-      "pass": true,
-      "score": 100,
-      "stepCount": 10,
-      "wordCount": 455,
-      "issues": []
+      "kind": "hall_expansion",
+      "pass": false,
+      "score": 80,
+      "stepCount": 5,
+      "wordCount": 111,
+      "issues": [
+        "step 3 uses vague phrasing",
+        "no oven/grill/internal temperature cues in steps",
+        "only 5 steps (min 10 for this meal)",
+        "thin instructions (111 words, min 400)"
+      ]
     },
     {
       "slug": "tourtiere-for-the-crew",
       "title": "Tourtière for the Crew",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 100,
-      "stepCount": 11,
-      "wordCount": 427,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 125,
+      "issues": [
+        "only 5 steps (min 10 for this meal)",
+        "thin instructions (125 words, min 400)"
+      ]
     },
     {
       "slug": "tropical-mango-greek",
       "title": "Tropical Mango Greek Yogurt Smoothie",
+      "kind": "smoothie",
       "pass": true,
       "score": 100,
       "stepCount": 6,
@@ -2763,161 +4238,259 @@
       "issues": []
     },
     {
-      "slug": "turkey-lettuce-wrap-night",
-      "title": "Turkey Lettuce Wrap Night",
-      "pass": true,
+      "slug": "turkey-chili",
+      "title": "Turkey Chili",
+      "kind": "firehall_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 8,
-      "wordCount": 328,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 232,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (232 words, min 400)"
+      ]
+    },
+    {
+      "slug": "turkey-lettuce-wrap-night",
+      "title": "Turkey Lettuce Wraps",
+      "kind": "performance_meal",
+      "pass": false,
+      "score": 100,
+      "stepCount": 5,
+      "wordCount": 105,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (105 words, min 280)"
+      ]
     },
     {
       "slug": "turkey-meatball-zoodles",
       "title": "Turkey Meatballs with Zucchini Noodles",
-      "pass": true,
+      "kind": "firehall_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 8,
-      "wordCount": 454,
-      "issues": []
+      "stepCount": 6,
+      "wordCount": 83,
+      "issues": [
+        "only 6 steps (min 8 for this meal)",
+        "thin instructions (83 words, min 400)"
+      ]
     },
     {
       "slug": "turkey-sausage-burritos",
       "title": "Turkey Sausage Breakfast Burritos",
-      "pass": true,
+      "kind": "breakfast_catalog",
+      "pass": false,
       "score": 90,
-      "stepCount": 9,
-      "wordCount": 290,
+      "stepCount": 5,
+      "wordCount": 145,
       "issues": [
-        "title_taco_no_tortilla"
+        "title_taco_no_tortilla",
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (145 words, min 280)",
+        "missing tonightSpread",
+        "missing equipment"
       ]
     },
     {
       "slug": "turkey-shepherds-sweet-potato",
-      "title": "Turkey Shepherd's with Sweet Potato Top",
-      "pass": true,
+      "title": "Turkey Shepherd's Pie",
+      "kind": "performance_meal",
+      "pass": false,
       "score": 100,
-      "stepCount": 12,
-      "wordCount": 400,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 107,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (107 words, min 400)"
+      ]
     },
     {
       "slug": "turkey-sweet-potato-chili",
       "title": "Turkey Sweet Potato Chili",
-      "pass": true,
+      "kind": "performance_meal",
+      "pass": false,
       "score": 100,
-      "stepCount": 10,
-      "wordCount": 465,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 100,
+      "issues": [
+        "only 5 steps (min 10 for this meal)",
+        "thin instructions (100 words, min 400)"
+      ]
     },
     {
       "slug": "turkey-taco-skillet",
-      "title": "Garlic Turkey Skillet",
-      "pass": true,
-      "score": 100,
-      "stepCount": 8,
-      "wordCount": 323,
-      "issues": []
+      "title": "Turkey Taco Skillet",
+      "kind": "performance_meal",
+      "pass": false,
+      "score": 90,
+      "stepCount": 5,
+      "wordCount": 103,
+      "issues": [
+        "robotic_title; title_taco_no_tortilla; title_taco_format_mismatch",
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (103 words, min 280)"
+      ]
     },
     {
       "slug": "turkey-zoodle-bolognese",
       "title": "Turkey Zoodle Bolognese",
-      "pass": true,
+      "kind": "performance_meal",
+      "pass": false,
       "score": 100,
-      "stepCount": 12,
-      "wordCount": 414,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 111,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (111 words, min 400)"
+      ]
+    },
+    {
+      "slug": "creamy-tuscan-chicken",
+      "title": "Tuscan Chicken",
+      "kind": "firehall_catalog",
+      "pass": false,
+      "score": 100,
+      "stepCount": 4,
+      "wordCount": 76,
+      "issues": [
+        "only 4 steps (min 8 for this meal)",
+        "thin instructions (76 words, min 400)"
+      ]
     },
     {
       "slug": "veggie-egg-burritos",
       "title": "Veggie Egg Burritos",
-      "pass": true,
+      "kind": "breakfast_catalog",
+      "pass": false,
       "score": 90,
-      "stepCount": 9,
-      "wordCount": 289,
+      "stepCount": 5,
+      "wordCount": 145,
       "issues": [
-        "title_taco_no_tortilla"
+        "title_taco_no_tortilla",
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (145 words, min 280)",
+        "missing tonightSpread",
+        "missing equipment"
       ]
     },
     {
       "slug": "warm-spinach-chicken-salad",
       "title": "Warm Spinach Chicken Salad",
-      "pass": true,
+      "kind": "hall_expansion",
+      "pass": false,
       "score": 100,
-      "stepCount": 9,
-      "wordCount": 457,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 100,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (100 words, min 400)"
+      ]
     },
     {
       "slug": "white-bean-kale-soup",
       "title": "White Bean and Kale Soup",
-      "pass": true,
+      "kind": "performance_meal",
+      "pass": false,
       "score": 100,
-      "stepCount": 10,
-      "wordCount": 402,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 105,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (105 words, min 400)"
+      ]
     },
     {
       "slug": "white-bean-chicken-chili",
       "title": "White Bean Chicken Chili",
-      "pass": true,
+      "kind": "performance_meal",
+      "pass": false,
       "score": 100,
-      "stepCount": 11,
-      "wordCount": 428,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 114,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (114 words, min 400)"
+      ]
     },
     {
       "slug": "white-garlic-chicken-pizza",
       "title": "White Garlic Chicken Pizza",
-      "pass": true,
+      "kind": "firehall_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 11,
-      "wordCount": 427,
-      "issues": []
+      "stepCount": 6,
+      "wordCount": 223,
+      "issues": [
+        "only 6 steps (min 10 for this meal)",
+        "thin instructions (223 words, min 400)"
+      ]
     },
     {
       "slug": "wonton-noodle-soup-crew",
       "title": "Wonton Noodle Soup for the Crew",
-      "pass": true,
-      "score": 100,
-      "stepCount": 10,
-      "wordCount": 513,
-      "issues": []
+      "kind": "hall_expansion",
+      "pass": false,
+      "score": 95,
+      "stepCount": 5,
+      "wordCount": 95,
+      "issues": [
+        "step 3 uses vague phrasing",
+        "only 5 steps (min 10 for this meal)",
+        "thin instructions (95 words, min 400)"
+      ]
     },
     {
       "slug": "yogurt-marinated-grill-chicken",
-      "title": "Yogurt Marinated Grill Chicken",
-      "pass": true,
+      "title": "Yogurt Marinated Chicken",
+      "kind": "performance_meal",
+      "pass": false,
       "score": 100,
-      "stepCount": 8,
-      "wordCount": 317,
-      "issues": []
+      "stepCount": 5,
+      "wordCount": 96,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (96 words, min 280)"
+      ]
     },
     {
       "slug": "pollo-asado-citrus-platter",
       "title": "Yucatán Achiote Pollo Asado Spread",
-      "pass": true,
+      "kind": "bbq_catalog",
+      "pass": false,
       "score": 100,
-      "stepCount": 9,
-      "wordCount": 454,
-      "issues": []
+      "stepCount": 8,
+      "wordCount": 112,
+      "issues": [
+        "thin instructions (112 words, min 400)"
+      ]
+    },
+    {
+      "slug": "zaatar-roasted-chicken-thighs",
+      "title": "Za'atar Chicken Thighs",
+      "kind": "performance_meal",
+      "pass": false,
+      "score": 100,
+      "stepCount": 5,
+      "wordCount": 101,
+      "issues": [
+        "only 5 steps (min 8 for this meal)",
+        "thin instructions (101 words, min 400)"
+      ]
     },
     {
       "slug": "mixed-lamb-chop-grill-board",
       "title": "Za'atar Loin and Shoulder Lamb Board",
-      "pass": true,
-      "score": 100,
+      "kind": "bbq_catalog",
+      "pass": false,
+      "score": 88,
       "stepCount": 8,
-      "wordCount": 459,
-      "issues": []
-    },
-    {
-      "slug": "zaatar-roasted-chicken-thighs",
-      "title": "Za'atar Roasted Chicken Thighs",
-      "pass": true,
-      "score": 100,
-      "stepCount": 8,
-      "wordCount": 426,
-      "issues": []
+      "wordCount": 112,
+      "issues": [
+        "step 6 is generic or too short",
+        "thin instructions (112 words, min 400)",
+        "vague step: Char lemons"
+      ]
     }
   ]
 }

@@ -8,15 +8,15 @@
   "category": "bbq_grill_nights",
   "cuisine": "american",
   "description": "Fingerling potatoes parboil, char on the grill, and fold into blue cheese ranch with crispy pancetta, chives, and sliced radish. A loaded side tray for ten.",
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "cookTime": 35,
   "prepTime": 30,
   "difficulty": "medium",
-  "calories": 344,
+  "calories": 343,
   "protein": 8,
   "carbs": 63,
-  "fats": 7,
+  "fats": 6,
   "tags": [
     "protein:pork",
     "format:ranch_spud_tray",
@@ -39,26 +39,26 @@
   "ingredients": [
     {
       "name": "fingerling potatoes",
-      "quantity": "6.4",
+      "quantity": "8",
       "unit": "lb",
       "group": "Main"
     },
     {
       "name": "pancetta",
-      "quantity": "5/8",
+      "quantity": "0.75",
       "unit": "lb",
       "notes": "cooked and crumbled",
       "group": "Loaded"
     },
     {
       "name": "crumbled blue cheese",
-      "quantity": "1 1/4",
+      "quantity": "1.5",
       "unit": "cups",
       "group": "Loaded"
     },
     {
       "name": "fresh chives",
-      "quantity": "3/8",
+      "quantity": "0.5",
       "unit": "cup",
       "notes": "snipped",
       "group": "Loaded"
@@ -72,31 +72,31 @@
     },
     {
       "name": "buttermilk",
-      "quantity": "3/4",
+      "quantity": "1",
       "unit": "cup",
       "group": "Dressing"
     },
     {
       "name": "sour cream",
-      "quantity": "5/8",
+      "quantity": "0.75",
       "unit": "cup",
       "group": "Dressing"
     },
     {
       "name": "ranch seasoning blend",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tbsp",
       "group": "Dressing"
     },
     {
       "name": "white wine vinegar",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tbsp",
       "group": "Dressing"
     },
     {
       "name": "celery seed",
-      "quantity": "7/8",
+      "quantity": "1",
       "unit": "tsp",
       "group": "Dressing"
     }
@@ -105,56 +105,56 @@
     {
       "stepNumber": 1,
       "title": "Parboil fingerlings",
-      "instruction": "Boil fingerling potatoes in salted water until just tender, about 10 minutes. Drain and cool slightly. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Use crumbled blue cheese, fresh chives, watermelon radish, buttermilk as listed — measure each before heat goes on.",
+      "instruction": "Boil fingerling potatoes in salted water until just tender, about 10 minutes. Drain and cool slightly.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
       "title": "Crisp pancetta",
-      "instruction": "Cook pancetta until crisp on a sheet pan in oven at 400°F or on flat-top. Crumble. Plan about 15 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Cook pancetta until crisp on a sheet pan in oven at 400°F or on flat-top. Crumble.",
       "minutes": 15,
       "heatLevel": "medium"
     },
     {
       "stepNumber": 3,
       "title": "Char on grill",
-      "instruction": "Toss parboiled potatoes with oil and salt. Grill in basket at 400°F until charred, 10–12 minutes. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Toss parboiled potatoes with oil and salt. Grill in basket at 400°F until charred, 10–12 minutes.",
       "minutes": 12,
       "heatLevel": "medium"
     },
     {
       "stepNumber": 4,
       "title": "Build ranch dressing",
-      "instruction": "Whisk ranch, sour cream, vinegar, paprika, and salt until smooth. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Whisk ranch, sour cream, vinegar, paprika, and salt until smooth.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 5,
       "title": "Fold salad",
-      "instruction": "Fold warm or cooled potatoes with dressing, bacon, cheddar, pickles, and green onions. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F with a 3-minute rest at the thickest point before moving to the next batch.",
+      "instruction": "Fold warm or cooled potatoes with dressing, bacon, cheddar, pickles, and green onions.",
       "minutes": 8,
       "heatLevel": ""
     },
     {
       "stepNumber": 6,
       "title": "Hold for service",
-      "instruction": "Hold refrigerated up to 24 hours or at 140°F in a hotel pan up to 60 minutes. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Hold refrigerated up to 24 hours or at 140°F in a hotel pan up to 60 minutes.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 7,
       "title": "Tray for ten",
-      "instruction": "Spread in a hotel pan, top with extra bacon and green onion at the line. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F with a 3-minute rest at the thickest point before moving to the next batch.",
+      "instruction": "Spread in a hotel pan, top with extra bacon and green onion at the line.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 8,
       "title": "Call guidance",
-      "instruction": "Potato salad holds fine refrigerated—pull from cooler when main protein is 10 minutes out. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Potato salad holds fine refrigerated—pull from cooler when main protein is 10 minutes out.",
       "minutes": 3,
       "heatLevel": ""
     }
@@ -176,26 +176,12 @@
   "mealPrepNotes": "Parboil fingerlings ahead. Char on grill 400°F. Fold dressing cold—hold tray refrigerated up to 24 hours or at 140°F 60 minutes max.",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 344,
+    "calories": 343,
     "protein": 8,
     "carbs": 63,
-    "fats": 7,
-    "label": "Estimated per serving",
-    "source": "calculated",
-    "estimateAvailable": true,
-    "filterFlags": {
-      "highProtein": false,
-      "under700Calories": true,
-      "under30gFat": true,
-      "highCarb": true,
-      "lowCarb": false,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": false,
-      "lighterOption": true,
-      "performanceMeal": false
-    }
+    "fats": 6,
+    "label": "per serving (hall portion)",
+    "source": "estimated"
   },
   "heroImage": "/images/smoker-catalog/loaded-ranch-potato-salad-crew.jpg",
   "heroImageAlt": "Blue Cheese Fingerling Ranch Tray — crew-sized BBQ spread with visible smoke and bark",
@@ -224,6 +210,6 @@
     "brisket-style-beef-sandwiches-au-jus"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T23:32:23.209Z",
+  "generatedAt": "2026-06-04T20:47:49.455Z",
   "contentVersion": 2
 }

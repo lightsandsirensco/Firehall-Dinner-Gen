@@ -148,6 +148,7 @@
     }
   },
   "heroImage": "/images/golden-100/beer-can-chicken.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Beer Can Chicken on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/beer-can-chicken.jpg",
   "thumbImage": "/images/thumbs/beer-can-chicken.jpg",
   "railImage": "/images/rails/beer-can-chicken.jpg",
@@ -173,6 +174,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.306Z",
+  "generatedAt": "2026-06-04T20:45:42.151Z",
   "contentVersion": 2
 }

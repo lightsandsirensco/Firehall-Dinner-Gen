@@ -209,6 +209,7 @@
     }
   },
   "heroImage": "/images/golden-100/beef-stroganoff.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Beef Stroganoff on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/beef-stroganoff.jpg",
   "thumbImage": "/images/thumbs/beef-stroganoff.jpg",
   "railImage": "/images/rails/beef-stroganoff.jpg",
@@ -227,13 +228,13 @@
   "relatedSlugs": [
     "baked-ziti",
     "beef-barley-soup",
+    "french-onion-soup-for-the-hall",
     "loaded-baked-potato-bar",
     "meatloaf-mashed",
-    "philly-cheesesteak-skillet",
-    "shepherds-pie"
+    "philly-cheesesteak-skillet"
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.353Z",
+  "generatedAt": "2026-06-04T20:45:42.193Z",
   "contentVersion": 2
 }

@@ -229,9 +229,11 @@
     "Pull chicken at 160°F and let carryover hit 165°F — dry breast ruins crew morale."
   ],
   "tonightSpread": [
-    "Plate Jerk Chicken & Rice and Peas with sides in separate pans so the crew can mix portions.",
-    "Line up Jerk Chicken & Rice and Peas on the main counter with serving spoons — firefighters grab fast between calls.",
-    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+    "Main: Jerk chicken thighs",
+    "Sides: coconut rice and peas, grilled pineapple, sharp cabbage slaw",
+    "Condiments: hot sauce, lime wedges",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
   ],
   "leftovers": [
     "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
@@ -266,6 +268,7 @@
     }
   },
   "heroImage": "/images/golden-100/jerk-chicken.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Jerk Chicken & Rice and Peas on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/jerk-chicken.jpg",
   "thumbImage": "/images/thumbs/jerk-chicken.jpg",
   "railImage": "/images/rails/jerk-chicken.jpg",
@@ -292,6 +295,6 @@
   "sourceName": "Firehall Classics",
   "sourceUrl": "",
   "classicSlug": "jerk-chicken",
-  "generatedAt": "2026-06-04T19:44:40.267Z",
-  "contentVersion": 2
+  "generatedAt": "2026-06-04T20:53:34.897Z",
+  "contentVersion": 4
 }

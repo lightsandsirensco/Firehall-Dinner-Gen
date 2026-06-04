@@ -132,6 +132,7 @@
     }
   },
   "heroImage": "/images/golden-100/sausage-peppers-onions.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Sausage Peppers and Onions on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/sausage-peppers-onions.jpg",
   "thumbImage": "/images/thumbs/sausage-peppers-onions.jpg",
   "railImage": "/images/rails/sausage-peppers-onions.jpg",
@@ -155,11 +156,11 @@
     "pepperoni-pizza-night",
     "baked-ziti",
     "creamy-tuscan-chicken",
-    "sheet-pan-sausage-peppers",
-    "bacon-egg-hash"
+    "four-step-chicken-piccata",
+    "sheet-pan-sausage-peppers"
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.366Z",
+  "generatedAt": "2026-06-04T20:45:42.203Z",
   "contentVersion": 2
 }

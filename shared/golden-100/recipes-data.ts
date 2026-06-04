@@ -7,17 +7,17 @@ import { BATCH_A_SOURCE_URLS } from "./recipe-quality/batch-a-packs.js";
 import { BATCH_B_SOURCE_URLS } from "./recipe-quality/batch-b-packs.js";
 
 export const GOLDEN_100_TARGET_BY_CATEGORY = {
-  firehall_classics: 15,
-  bbq_grill_nights: 15,
+  firehall_classics: 14,
+  bbq_grill_nights: 13,
   comfort_food: 18,
   healthy_performance: 13,
   quick_shift_meals: 12,
   pizza_night: 8,
-  big_crew_feeders: 9,
-  breakfast_brunch: 6,
+  big_crew_feeders: 8,
+  breakfast_brunch: 4,
   global_flavors: 6,
   game_day_watch_party: 4,
-  meal_prep_leftovers: 2,
+  meal_prep_leftovers: 1,
   rookie_friendly: 3,
 } as const;
 
@@ -25,7 +25,7 @@ const CLASSICS = [
   goldenEntry({ slug: "chicken-parm", title: "Chicken Parm", cat: "firehall_classics", protein: "chicken", cuisine: "italian", format: "pasta", pools: ["trending", "comfort"], hook: "The hall's Italian night spread", classic: "chicken-parm", id: 638235, inspiration: "Firehall Classics" }),
   goldenEntry({ slug: "steak-tacos", title: "Chimichurri Steak Tacos", cat: "firehall_classics", protein: "beef", cuisine: "mexican", format: "tacos", pools: ["trending", "handheld"], hook: "Charred steak, bright chimichurri, tortilla night", classic: "steak-tacos", id: 716004, inspiration: "Firehall Classics" }),
   goldenEntry({ slug: "smash-burgers", title: "Double Smash Burgers", cat: "firehall_classics", protein: "beef", cuisine: "american", format: "burger", pools: ["trending", "handheld"], hook: "Crispy edges, melty cheese, crew-approved", classic: "smash-burgers", id: 715769, inspiration: "Serious Eats" }),
-  goldenEntry({ slug: "chili-garlic-bread", title: "Firehall Chili", cat: "firehall_classics", protein: "beef", cuisine: "american", format: "soup_chili", pools: ["trending", "hearty"], hook: "Post-call comfort in a deep bowl", classic: "chili-garlic-bread", inspiration: "Firehall Classics" }),
+
   goldenEntry({ slug: "pulled-pork", title: "Pulled Pork Sandwiches", cat: "firehall_classics", protein: "pork", cuisine: "american", format: "sandwich", pools: ["bbq", "handheld"], hook: "Slow-smoked pull, soft buns, fast line", classic: "pulled-pork", inspiration: "Hey Grill Hey" }),
   goldenEntry({ slug: "beef-dip", title: "Blackstone Steak Sandwiches", cat: "firehall_classics", protein: "beef", cuisine: "american", format: "sandwich", pools: ["trending", "beef"], hook: "Au jus dip energy without the fuss", classic: "beef-dip", inspiration: "Firehall Classics" }),
   goldenEntry({ slug: "jerk-chicken", title: "Jerk Chicken & Peas and Rice", cat: "firehall_classics", protein: "chicken", cuisine: "caribbean", format: "grill", pools: ["trending", "chicken"], hook: "Charred jerk thighs, coconut rice and peas, island sides for eight", classic: "jerk-chicken", inspiration: "Firehall Classics" }),
@@ -40,7 +40,7 @@ const CLASSICS = [
 ];
 
 const BBQ = [
-  goldenEntry({ slug: "smoked-brisket", title: "Kansas City Smoked Brisket", cat: "bbq_grill_nights", protein: "beef", cuisine: "american", format: "grill", pools: ["bbq", "beef"], hook: "Low-and-slow smoke for the whole crew", search: "smoked beef brisket bbq", inspiration: "AmazingRibs", img: { lightingStyle: "grill_char", promptFocus: "sliced brisket smoke ring, charred bark" } }),
+
   goldenEntry({ slug: "memphis-dry-rub-ribs", title: "Memphis Dry Rub Ribs", cat: "bbq_grill_nights", protein: "pork", cuisine: "american", format: "grill", pools: ["bbq"], hook: "Sticky bark, fall-off-bone ribs", search: "memphis dry rub pork ribs", inspiration: "AmazingRibs" }),
   goldenEntry({ slug: "beer-can-chicken", title: "Beer Can Chicken", cat: "bbq_grill_nights", protein: "chicken", cuisine: "american", format: "grill", pools: ["bbq", "chicken"], hook: "Juicy bird, crispy skin, grill marks", search: "beer can chicken grilled", inspiration: "Hey Grill Hey" }),
   goldenEntry({ slug: "ny-strip-herb-butter", title: "Grilled NY Strip with Herb Butter", cat: "bbq_grill_nights", protein: "beef", cuisine: "american", format: "grill", pools: ["bbq", "beef"], hook: "Steakhouse night at the station", search: "grilled new york strip herb butter", inspiration: "Serious Eats" }),
@@ -51,7 +51,7 @@ const BBQ = [
   goldenEntry({ slug: "cedar-plank-salmon", title: "Cedar Plank Grilled Salmon", cat: "bbq_grill_nights", protein: "seafood", cuisine: "american", format: "grill", pools: ["bbq", "healthy"], hook: "Smoke-kissed salmon without the mess", search: "cedar plank grilled salmon", inspiration: "Serious Eats" }),
   goldenEntry({ slug: "honey-garlic-pork-tenderloin", title: "Honey Garlic Grilled Pork Tenderloin", cat: "bbq_grill_nights", protein: "pork", cuisine: "american", format: "grill", pools: ["bbq"], hook: "Fast grill, glossy glaze, feeds eight", search: "honey garlic grilled pork tenderloin", inspiration: "Hey Grill Hey" }),
   goldenEntry({ slug: "flank-chimichurri", title: "Grilled Flank Steak with Chimichurri", cat: "bbq_grill_nights", protein: "beef", cuisine: "argentinian", format: "grill", pools: ["bbq", "beef"], hook: "Bright herbs, charred beef", search: "grilled flank steak chimichurri", inspiration: "Serious Eats" }),
-  goldenEntry({ slug: "carolina-mustard-pork", title: "Carolina Mustard Pulled Pork", cat: "bbq_grill_nights", protein: "pork", cuisine: "american", format: "sandwich", pools: ["bbq", "handheld"], hook: "Tangy mustard pull, soft buns", search: "carolina mustard pulled pork", inspiration: "AmazingRibs" }),
+
   goldenEntry({ slug: "grilled-corn-cotija", title: "Grilled Street Corn with Cotija", cat: "bbq_grill_nights", protein: "vegetarian", cuisine: "mexican", format: "grill", pools: ["bbq"], hook: "Charred corn, creamy cotija finish", search: "mexican street corn grilled cotija", inspiration: "Bon Appétit" }),
   goldenEntry({ slug: "teriyaki-salmon-grill", title: "Teriyaki Grilled Salmon", cat: "bbq_grill_nights", protein: "seafood", cuisine: "japanese", format: "grill", pools: ["bbq", "healthy"], hook: "Glazed salmon, grill-first cleanup", search: "teriyaki grilled salmon dinner", inspiration: "NYT Cooking" }),
   goldenEntry({ slug: "bbq-brisket-burnt-ends", title: "BBQ Burnt Ends", cat: "bbq_grill_nights", protein: "beef", cuisine: "american", format: "grill", pools: ["bbq", "beef"], hook: "Caramelized burnt ends, pure smoke", search: "bbq burnt ends brisket", inspiration: "AmazingRibs" }),
@@ -139,7 +139,6 @@ const PIZZA = [
 
 const BIG_CREW = [
   goldenEntry({ slug: "batch-lasagna", title: "Giant Batch Lasagna", cat: "big_crew_feeders", protein: "beef", cuisine: "italian", format: "pasta", pools: ["beef", "comfort"], hook: "Feeds 12+ without drama", search: "large batch lasagna dinner", rec: { feedsHardScore: 10 } }),
-  goldenEntry({ slug: "pulled-pork-mac", title: "Pulled Pork Mac and Cheese", cat: "big_crew_feeders", protein: "pork", cuisine: "american", format: "pasta", pools: ["bbq", "comfort"], hook: "BBQ meets mac — hall legend", search: "pulled pork mac and cheese bake", rec: { feedsHardScore: 9 } }),
   goldenEntry({ slug: "chicken-alfredo-bake", title: "Chicken Alfredo Bake", cat: "big_crew_feeders", protein: "chicken", cuisine: "italian", format: "pasta", pools: ["chicken", "pasta"], hook: "Creamy tray bake for seconds", search: "chicken alfredo pasta bake", rec: { feedsHardScore: 9 } }),
   goldenEntry({ slug: "big-chili", title: "Hall-Sized Beef and Bean Chili", cat: "big_crew_feeders", protein: "beef", cuisine: "american", format: "soup_chili", pools: ["hearty", "beef"], hook: "Double pot, triple appetite", search: "large batch beef chili", rec: { feedsHardScore: 10 } }),
   goldenEntry({ slug: "enchilada-casserole", title: "Chicken Enchilada Casserole", cat: "big_crew_feeders", protein: "chicken", cuisine: "mexican", format: "plated_main", pools: ["chicken", "handheld"], hook: "Stacked tortillas, melted cheese", search: "chicken enchilada casserole large", rec: { feedsHardScore: 9 } }),
@@ -152,10 +151,8 @@ const BIG_CREW = [
 const BREAKFAST = [
   goldenEntry({ slug: "breakfast-burrito-bar", title: "Breakfast Burrito Bar", cat: "breakfast_brunch", protein: "pork", cuisine: "mexican", format: "handheld", pools: ["breakfast", "handheld"], hook: "Build burritos before the rig rolls", search: "breakfast burrito bar chorizo", img: { lightingStyle: "morning_soft" } }),
   goldenEntry({ slug: "pancake-short-stack", title: "Pancake Short Stack for the Crew", cat: "breakfast_brunch", protein: "vegetarian", cuisine: "american", format: "breakfast", pools: ["breakfast"], hook: "Fluffy stacks, bacon on the side", search: "buttermilk pancakes bacon breakfast", img: { lightingStyle: "morning_soft" } }),
-  goldenEntry({ slug: "bacon-egg-hash", title: "Bacon Egg Hash Brown Skillet", cat: "breakfast_brunch", protein: "pork", cuisine: "american", format: "skillet", pools: ["breakfast"], hook: "Crispy potatoes, runny eggs", search: "bacon egg hash brown skillet", img: { lightingStyle: "morning_soft" } }),
   goldenEntry({ slug: "french-toast-casserole", title: "French Toast Casserole", cat: "breakfast_brunch", protein: "vegetarian", cuisine: "american", format: "bake", pools: ["breakfast"], hook: "Feed the hall before the bell", search: "french toast casserole bake", img: { lightingStyle: "morning_soft" } }),
   goldenEntry({ slug: "chorizo-breakfast-tacos", title: "Chorizo Breakfast Tacos", cat: "breakfast_brunch", protein: "pork", cuisine: "mexican", format: "tacos", pools: ["breakfast", "handheld"], hook: "Spicy chorizo, warm tortillas", search: "chorizo breakfast tacos", img: { lightingStyle: "morning_soft" } }),
-  goldenEntry({ slug: "biscuits-gravy", title: "Biscuits and Gravy", cat: "breakfast_brunch", protein: "pork", cuisine: "american", format: "breakfast", pools: ["breakfast", "comfort"], hook: "Southern comfort for a slow morning", search: "sausage biscuits and gravy", img: { lightingStyle: "morning_soft" } }),
 ];
 
 const GLOBAL = [
@@ -175,7 +172,6 @@ const GAME_DAY = [
 ];
 
 const MEAL_PREP = [
-  goldenEntry({ slug: "sunday-chili-batch", title: "Sunday Batch Chili", cat: "meal_prep_leftovers", protein: "beef", cuisine: "american", format: "soup_chili", pools: ["slow", "hearty"], hook: "Cook once, feed the week", search: "big batch beef chili meal prep", rec: { mealPrepFriendly: true } }),
   goldenEntry({ slug: "sheet-pan-meal-prep", title: "Sheet Pan Chicken Trays", cat: "meal_prep_leftovers", protein: "chicken", cuisine: "american", format: "sheet_pan", pools: ["healthy", "quick"], hook: "Portioned trays, reheat-ready", search: "sheet pan chicken trays", rec: { mealPrepFriendly: true } }),
 ];
 

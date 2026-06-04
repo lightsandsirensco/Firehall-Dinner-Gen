@@ -4,6 +4,8 @@
 
 import type { GoldenRecipePage } from "../../shared/golden-100/recipe-page-schema.js";
 import { GOLDEN_RECIPE_PAGE_CONTENT_VERSION } from "../../shared/golden-100/recipe-page-schema.js";
+import { buildFirehallHeroImageAlt } from "../../shared/curated-image-governance/firehall-hero-alt.js";
+import { PHASE5_REMOVED_SLUGS } from "../../shared/catalog-consolidation/phase5-redirects.js";
 import { PERFORMANCE_ADAPTED_RECIPES } from "../../shared/performance-meals/adapted/index.js";
 import { performancePageImageSet } from "../../shared/performance-meals/recipe-page-paths.js";
 import { PERFORMANCE_PAGE_CATEGORY, PERFORMANCE_SET_TAG } from "../../shared/performance-meals/types.js";
@@ -116,6 +118,7 @@ export function buildPerformanceRecipePage(
       label: n.label ?? `~${n.calories} cal/serving · ${n.protein}g protein · ${fiber}g fiber (est.)`,
     },
     heroImage: images.heroImage,
+    heroImageAlt: buildFirehallHeroImageAlt(manifest.title, recipe.tonightSpread),
     mobileImage: images.mobileImage,
     thumbImage: images.thumbImage,
     railImage: images.railImage,
@@ -130,5 +133,7 @@ export function buildPerformanceRecipePage(
 }
 
 export function buildAllPerformancePages(): GoldenRecipePage[] {
-  return PERFORMANCE_ADAPTED_RECIPES.map((r) => buildPerformanceRecipePage(r));
+  return PERFORMANCE_ADAPTED_RECIPES.filter((r) => !PHASE5_REMOVED_SLUGS.has(r.manifest.slug)).map((r) =>
+    buildPerformanceRecipePage(r),
+  );
 }

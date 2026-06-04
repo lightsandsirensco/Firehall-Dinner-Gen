@@ -190,6 +190,7 @@
     }
   },
   "heroImage": "/images/golden-100/chicken-alfredo-bake.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Chicken Alfredo Bake on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/chicken-alfredo-bake.jpg",
   "thumbImage": "/images/thumbs/chicken-alfredo-bake.jpg",
   "railImage": "/images/rails/chicken-alfredo-bake.jpg",
@@ -214,6 +215,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.483Z",
+  "generatedAt": "2026-06-04T20:45:42.308Z",
   "contentVersion": 2
 }

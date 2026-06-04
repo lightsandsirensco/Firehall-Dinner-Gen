@@ -200,6 +200,7 @@
     }
   },
   "heroImage": "/images/golden-100/one-pot-chicken-rice.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Chicken and Rice on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/one-pot-chicken-rice.jpg",
   "thumbImage": "/images/thumbs/one-pot-chicken-rice.jpg",
   "railImage": "/images/rails/one-pot-chicken-rice.jpg",
@@ -218,15 +219,15 @@
     "golden_100"
   ],
   "relatedSlugs": [
+    "sheet-pan-parmesan-dijon-chicken-thigh-dinner",
     "bbq-chicken-pizza",
     "buffalo-chicken-dip",
     "sheet-pan-meal-prep",
     "bbq-chicken-sliders",
-    "beer-can-chicken",
-    "smoked-wings-white-sauce"
+    "beer-can-chicken"
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.542Z",
+  "generatedAt": "2026-06-04T20:45:42.357Z",
   "contentVersion": 2
 }

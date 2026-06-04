@@ -1,6 +1,6 @@
 {
   "slug": "scrapple-and-eggs-skillet",
-  "title": "Crispy Maple Eggs",
+  "title": "Scrapple and Eggs Skillet",
   "subtitle": "Crisp Pennsylvania scrapple slices with fried eggs and toast points.",
   "description": "Mid-Atlantic scrapple crisped in cast iron with eggs on top. Regional hall classic for crews who grew up on it.",
   "filters": [
@@ -73,59 +73,33 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Crispy Maple Eggs in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
+      "title": "Slice scrapple cold",
+      "instruction": "Cut scrapple into 1/2-inch slices while still cold from the fridge—warm scrapple crumbles when sliced. Pat slices dry with paper towels to reduce splatter.",
+      "minutes": 5
     },
     {
       "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch Eggs. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
+      "title": "Fry scrapple crisp",
+      "instruction": "Heat oil in a large cast iron over medium. Fry scrapple slices without crowding 4 minutes per side until a deep brown crust forms and centers are creamy. Hold warm on a rack.",
+      "minutes": 12
     },
     {
       "stepNumber": 3,
-      "title": "Slice scrapple cold",
-      "instruction": "Cut scrapple into 1/2-inch slices while still cold from the fridge—warm scrapple crumbles when sliced. Pat slices dry with paper towels to reduce splatter.",
-      "minutes": 5,
-      "heatLevel": ""
+      "title": "Toast the bread",
+      "instruction": "Butter toast triangles and griddle until golden on both sides, about 2 minutes per side. Keep crisp on a warm tray.",
+      "minutes": 6
     },
     {
       "stepNumber": 4,
-      "title": "Fry scrapple crisp",
-      "instruction": "Heat oil in a large cast iron over medium. Fry scrapple slices without crowding 4 minutes per side until a deep brown crust forms and centers are creamy. Hold warm on a rack.",
-      "minutes": 12,
-      "heatLevel": ""
+      "title": "Fry the eggs",
+      "instruction": "Wipe excess scrapple oil from the pan if needed. Fry eggs in butter over medium until whites are fully set (165°F) and yolks are runny or jammy to preference.",
+      "minutes": 8
     },
     {
       "stepNumber": 5,
-      "title": "Toast the bread",
-      "instruction": "Butter toast triangles and griddle until golden on both sides, about 2 minutes per side. Keep crisp on a warm tray. Cook until char marks are visible and the thickest piece reads 165°F on an instant-read thermometer. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 6,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 6,
-      "title": "Fry the eggs",
-      "instruction": "Wipe excess scrapple oil from the pan if needed. Fry eggs in butter over medium until whites are fully set (165°F) and yolks are runny or jammy to preference.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "portion and serve",
+      "title": "Plate and serve",
       "instruction": "Serve two scrapple slices per plate with a fried egg on top and toast points on the side. Offer apple butter or maple syrup for crew who like the sweet-savory combo.",
-      "minutes": 3,
-      "heatLevel": ""
+      "minutes": 3
     }
   ],
   "nutrition": {
@@ -133,16 +107,15 @@
     "protein": 9,
     "carbs": 24,
     "fat": 28,
-    "label": "Estimated per serving",
+    "label": "per serving (hall portion)",
     "source": "calculated",
-    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
       "under30gFat": true,
       "highCarb": false,
       "lowCarb": true,
-      "mealPrepFriendly": true
+      "mealPrepFriendly": false
     },
     "badgeCandidates": {
       "highProtein": false,
@@ -165,30 +138,13 @@
   ],
   "heroImage": "/images/breakfast/scrapple-and-eggs-skillet.jpg",
   "thumbImage": "/images/thumbs/breakfast/scrapple-and-eggs-skillet.jpg",
-  "imageAlt": "Crisp scrapple slices with fried eggs and buttered toast points",
-  "publishedAt": "2026-05-31T18:33:00.830Z",
-  "updatedAt": "2026-05-31T23:49:25.694Z",
+  "imageAlt": "Wide firehall cast-iron skillet breakfast with crispy scrapple and fried eggs on a crew prep table, family-style platter",
+  "publishedAt": "2026-06-04T20:48:24.991Z",
+  "updatedAt": "2026-06-04T21:55:57.889Z",
   "readMinutes": 7,
   "seoTitle": "Scrapple and Eggs Skillet | Firehall Breakfast",
   "collectionTier": "firehall_classic",
-  "proTips": [
-    "Chill scrapple until slicing—warm loaves fall apart on the cutting board.",
-    "Fry in batches so slices crisp instead of steaming in overcrowded pans.",
-    "Hold scrapple on a rack, not paper towels, so the crust stays audible."
-  ],
-  "tonightSpread": [
-    "Plate Crispy Maple Eggs with sides in separate pans so the crew can mix portions.",
-    "Keep hot items on one side of the table and cold on the other — eggs stay hot, fruit stays cold.",
-    "Line up Crispy Maple Eggs on the main counter with serving spoons — firefighters grab fast between calls.",
-    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
-  ],
-  "equipment": [
-    "Large sheet trays",
-    "Instant-read thermometer",
-    "Aluminum foil"
-  ],
-  "mealPrepNotes": "Prep mise en place before the shift — Crispy Maple Eggs runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone.",
-  "heroImageAlt": "Scrapple and Eggs Skillet — wide family-style firehall platter showing eggs skillet on a crew prep table",
+  "heroImageAlt": "Wide firehall cast-iron skillet breakfast with crispy scrapple and fried eggs on a crew prep table, family-style platter",
   "mobileImage": "/images/mobile/breakfast/scrapple-and-eggs-skillet.jpg",
   "railImage": "/images/rails/breakfast/scrapple-and-eggs-skillet.jpg"
 }

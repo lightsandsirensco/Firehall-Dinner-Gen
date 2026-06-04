@@ -139,6 +139,7 @@
     }
   },
   "heroImage": "/images/golden-100/hall-taco-bar.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Taco Bar on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/hall-taco-bar.jpg",
   "thumbImage": "/images/thumbs/hall-taco-bar.jpg",
   "railImage": "/images/rails/hall-taco-bar.jpg",
@@ -162,10 +163,10 @@
     "meatball-hoagies",
     "smash-burgers",
     "beef-dip",
-    "chili-garlic-bread"
+    "game-day-nachos"
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.297Z",
+  "generatedAt": "2026-06-04T20:45:42.146Z",
   "contentVersion": 2
 }

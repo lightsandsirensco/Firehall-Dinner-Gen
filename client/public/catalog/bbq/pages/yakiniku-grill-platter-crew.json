@@ -8,8 +8,8 @@
   "category": "bbq_grill_nights",
   "cuisine": "japanese",
   "description": "Ribeye slices marinate in sweet soy tare, grill quickly over high heat to 130°F, and pile on platters with grilled shishito peppers and steamed rice.",
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "cookTime": 20,
   "prepTime": 40,
   "difficulty": "medium",
@@ -39,64 +39,64 @@
   ],
   "ingredients": [
     {
-      "name": "ribeye steak, sliced thin",
-      "quantity": "4.4",
+      "name": "ribeye steak",
+      "quantity": "5.5",
       "unit": "lb",
       "notes": "partially frozen for thin slicing",
       "group": "Main"
     },
     {
       "name": "shoyu",
-      "quantity": "1/4",
+      "quantity": "0.33",
       "unit": "cup",
       "group": "Tare"
     },
     {
       "name": "sake",
-      "quantity": "1/4",
+      "quantity": "0.33",
       "unit": "cup",
       "group": "Tare"
     },
     {
       "name": "hon-mirin",
-      "quantity": "1/4",
+      "quantity": "0.25",
       "unit": "cup",
       "group": "Tare"
     },
     {
       "name": "grated apple",
-      "quantity": "3/8",
+      "quantity": "0.5",
       "unit": "cup",
       "group": "Tare"
     },
     {
       "name": "fresh ginger",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tbsp",
       "notes": "grated",
       "group": "Tare"
     },
     {
       "name": "shishito peppers",
-      "quantity": "1.6",
+      "quantity": "2",
       "unit": "lb",
       "group": "Grill"
     },
     {
       "name": "shiso leaves",
-      "quantity": "16",
+      "quantity": "20",
       "unit": "whole",
       "group": "Finish"
     },
     {
       "name": "yuzu kosho",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tbsp",
       "group": "Finish"
     },
     {
       "name": "steamed short-grain rice",
-      "quantity": "8",
+      "quantity": "10",
       "unit": "cups",
       "notes": "cooked",
       "group": "Service"
@@ -106,56 +106,56 @@
     {
       "stepNumber": 1,
       "title": "Slice ribeye thin",
-      "instruction": "Partially freeze ribeye 30 minutes. Slice paper-thin against the grain. Keep slices separated on sheet pans. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Use shoyu, hon-mirin, grated apple, shiso leaves as listed — measure each before heat goes on. Use yuzu kosho as listed — measure each before heat goes on.",
+      "instruction": "Partially freeze ribeye 30 minutes. Slice paper-thin against the grain. Keep slices separated on sheet pans.",
       "minutes": 20,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
       "title": "Build tare marinade",
-      "instruction": "Simmer soy, mirin, sake, brown sugar, ginger, and garlic until glossy. Cool completely before adding beef. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Plan about 12 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
+      "instruction": "Simmer soy, mirin, sake, brown sugar, ginger, and garlic until glossy. Cool completely before adding beef.",
       "minutes": 12,
       "heatLevel": ""
     },
     {
       "stepNumber": 3,
       "title": "Marinate beef slices",
-      "instruction": "Toss sliced ribeye with half the tare for 30 minutes refrigerated. Reserve remaining tare for service. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
+      "instruction": "Toss sliced ribeye with half the tare for 30 minutes refrigerated. Reserve remaining tare for service.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 4,
       "title": "Heat grill screaming hot",
-      "instruction": "Preheat grill to high, 500°F. Clean and oil grates—yakiniku needs maximum heat. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Preheat grill to high, 500°F. Clean and oil grates—yakiniku needs maximum heat.",
       "minutes": 10,
       "heatLevel": "high"
     },
     {
       "stepNumber": 5,
       "title": "Grill beef in batches",
-      "instruction": "Grill beef slices 60–90 seconds per side until charred edges and 125–130°F. Work in small batches to avoid steaming. Plan about 12 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
+      "instruction": "Grill beef slices 60–90 seconds per side until charred edges and 125–130°F. Work in small batches to avoid steaming.",
       "minutes": 12,
       "heatLevel": "high"
     },
     {
       "stepNumber": 6,
       "title": "Grill shishito",
-      "instruction": "Grill shishito peppers over 450°F heat until blistered, 4–5 minutes total. Toss with pinch of salt. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Grill shishito peppers over 450°F heat until blistered, 4–5 minutes total. Toss with pinch of salt.",
       "minutes": 5,
       "heatLevel": "high"
     },
     {
       "stepNumber": 7,
       "title": "Hold sliced beef",
-      "instruction": "Rest beef 3 minutes. Pile into hotel pans, cover with foil, hold at 170°F. Spoon reserved tare at service. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
+      "instruction": "Rest beef 3 minutes. Pile into hotel pans, cover with foil, hold at 170°F. Spoon reserved tare at service.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 8,
       "title": "Platter for ten",
-      "instruction": "Family-style platters with beef, shishito, rice, and sesame. About 8 oz beef per firefighter. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
+      "instruction": "Family-style platters with beef, shishito, rice, and sesame. About 8 oz beef per firefighter.",
       "minutes": 5,
       "heatLevel": ""
     }
@@ -181,22 +181,8 @@
     "protein": 0,
     "carbs": 0,
     "fats": 0,
-    "label": "Estimated per serving",
-    "source": "unavailable",
-    "estimateAvailable": false,
-    "filterFlags": {
-      "highProtein": false,
-      "under700Calories": false,
-      "under30gFat": false,
-      "highCarb": false,
-      "lowCarb": false,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": false,
-      "lighterOption": false,
-      "performanceMeal": false
-    }
+    "label": "per serving (hall portion)",
+    "source": "estimated"
   },
   "heroImage": "/images/smoker-catalog/yakiniku-grill-platter-crew.jpg",
   "heroImageAlt": "Tokyo Tare Ribeye Yakiniku Board — crew-sized BBQ spread with visible smoke and bark",
@@ -225,6 +211,6 @@
     "brisket-style-beef-sandwiches-au-jus"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T23:32:23.205Z",
+  "generatedAt": "2026-06-04T20:47:49.433Z",
   "contentVersion": 2
 }

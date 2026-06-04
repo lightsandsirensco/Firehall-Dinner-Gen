@@ -74,87 +74,33 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Shrimp and Grits Breakfast in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
+      "title": "Cook the grits",
+      "instruction": "Bring milk and water to a gentle boil in a heavy pot. Whisk in grits, reduce to low, and cook 20–25 minutes stirring often until thick and creamy. Fold in cheddar, butter, salt, and pepper; hold covered on low.",
+      "minutes": 25
     },
     {
       "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch Eggs. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
+      "title": "Brown the andouille",
+      "instruction": "Sauté andouille coins in a large skillet over medium-high until edges crisp and fat renders, about 5 minutes. Transfer to a warm plate, leaving fat in the pan.",
+      "minutes": 6
     },
     {
       "stepNumber": 3,
-      "title": "Cook the grits",
-      "instruction": "Bring milk and water to a gentle boil in a heavy pot. Whisk in grits, reduce to low, and cook 20–25 minutes stirring often until thick and creamy. Fold in cheddar, butter, salt, and pepper; hold covered on low.",
-      "minutes": 25,
-      "heatLevel": ""
+      "title": "Sear the shrimp",
+      "instruction": "Pat shrimp dry, toss with Cajun seasoning, and sear in the andouille fat over high heat in a single layer. Cook 2 minutes per side until pink and internal temperature reaches 145°F. Do not overcrowd.",
+      "minutes": 8
     },
     {
       "stepNumber": 4,
-      "title": "Brown the andouille",
-      "instruction": "Sauté andouille coins in a large skillet over medium-high until edges crisp and fat renders, about 5 minutes. Transfer to a warm plate, leaving fat in the pan.",
-      "minutes": 6,
-      "heatLevel": ""
+      "title": "Build the pan sauce",
+      "instruction": "Return andouille to the pan with shrimp. Add a splash of water or stock, scrape browned bits, and finish with lemon juice and half the scallions. Taste and adjust salt.",
+      "minutes": 4
     },
     {
       "stepNumber": 5,
-      "title": "Sear the shrimp",
-      "instruction": "Pat shrimp dry, toss with Cajun seasoning, and sear in the andouille fat over high heat in a single layer. Cook 2 minutes per side until pink and internal temperature reaches 145°F. Do not overcrowd.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 6,
-      "title": "Build the pan sauce",
-      "instruction": "Return andouille to the pan with shrimp. Add a splash of water or stock, scrape browned bits, and finish with lemon juice and half the scallions. Taste and adjust salt.",
-      "minutes": 4,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 9,
-      "title": "Portion and open the line",
-      "instruction": "Portion Shrimp and Grits Breakfast onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
-      "title": "Scale for larger halls",
-      "instruction": "When cooking for more than 8 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 11,
-      "title": "portion and serve",
+      "title": "Plate and serve",
       "instruction": "Spoon creamy grits into warm bowls, top with shrimp-andouille mixture, and garnish with remaining scallions and lemon wedges. Serve immediately while grits stay loose.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 12,
-      "title": "Final quality check before service",
-      "instruction": "Walk the line once before opening service for Shrimp and Grits Breakfast — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
-      "minutes": 4,
-      "heatLevel": ""
+      "minutes": 5
     }
   ],
   "nutrition": {
@@ -193,30 +139,13 @@
   ],
   "heroImage": "/images/breakfast/shrimp-and-grits-breakfast.jpg",
   "thumbImage": "/images/thumbs/breakfast/shrimp-and-grits-breakfast.jpg",
-  "imageAlt": "Creamy grits topped with Cajun shrimp and andouille for the crew",
-  "publishedAt": "2026-05-31T18:33:00.830Z",
-  "updatedAt": "2026-05-31T23:49:25.715Z",
+  "imageAlt": "Wide firehall breakfast platter: creamy stone-ground grits with sautéed shrimp piled on top on a station prep table, family-style",
+  "publishedAt": "2026-06-04T20:48:24.991Z",
+  "updatedAt": "2026-06-04T21:56:38.619Z",
   "readMinutes": 8,
   "seoTitle": "Shrimp and Grits Breakfast | Firehall Breakfast",
   "collectionTier": "firehall_classic",
-  "proTips": [
-    "Start grits first—they need constant stirring and cannot wait for shrimp to finish.",
-    "Pat shrimp completely dry before seasoning or they steam instead of sear.",
-    "Hold grits in a bain-marie on low with a splash of milk stirred in every 10 minutes."
-  ],
-  "tonightSpread": [
-    "Plate Shrimp and Grits Breakfast with sides in separate pans so the crew can mix portions.",
-    "Keep hot items on one side of the table and cold on the other — eggs stay hot, fruit stays cold.",
-    "Line up Shrimp and Grits Breakfast on the main counter with serving spoons — firefighters grab fast between calls.",
-    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
-  ],
-  "equipment": [
-    "Large sheet trays",
-    "Instant-read thermometer",
-    "Aluminum foil"
-  ],
-  "mealPrepNotes": "Prep mise en place before the shift — Shrimp and Grits Breakfast runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone.",
-  "heroImageAlt": "Shrimp and Grits Breakfast — wide family-style firehall platter showing seafood, grits breakfast on a crew prep table",
+  "heroImageAlt": "Wide firehall breakfast platter: creamy stone-ground grits with sautéed shrimp piled on top on a station prep table, family-style",
   "mobileImage": "/images/mobile/breakfast/shrimp-and-grits-breakfast.jpg",
   "railImage": "/images/rails/breakfast/shrimp-and-grits-breakfast.jpg"
 }

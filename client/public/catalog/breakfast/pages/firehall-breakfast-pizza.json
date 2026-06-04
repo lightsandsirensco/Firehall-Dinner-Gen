@@ -15,8 +15,8 @@
     "eggs",
     "cheddar"
   ],
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 12,
+  "baseServings": 12,
   "prepTime": 20,
   "cookTime": 28,
   "totalTime": 48,
@@ -24,49 +24,49 @@
   "ingredients": [
     {
       "name": "store-bought pizza dough balls",
-      "quantity": "1.3",
+      "quantity": "2",
       "notes": "or 2 lb homemade dough",
       "group": "Base"
     },
     {
       "name": "olive oil",
-      "quantity": "1.3",
+      "quantity": "2 tbsp",
       "notes": "for stretching and pan",
       "group": "Base"
     },
     {
       "name": "country gravy",
-      "quantity": "5/8",
+      "quantity": "1 cup",
       "notes": "jarred or leftover, warmed",
       "group": "Sauce"
     },
     {
       "name": "shredded mozzarella",
-      "quantity": "3/8",
+      "quantity": "1/2 cup",
       "notes": "mixed into gravy for white sauce",
       "group": "Sauce"
     },
     {
       "name": "large eggs",
-      "quantity": "12",
+      "quantity": "18",
       "notes": "soft-scrambled off heat",
       "group": "Toppings"
     },
     {
       "name": "breakfast sausage",
-      "quantity": "1",
+      "quantity": "2 lb",
       "notes": "browned and crumbled, drained",
       "group": "Toppings"
     },
     {
       "name": "shredded cheddar",
-      "quantity": "2",
+      "quantity": "3 cups",
       "notes": "sharp or medium",
       "group": "Toppings"
     },
     {
       "name": "sliced green onions",
-      "quantity": "1/4",
+      "quantity": "1/2 cup",
       "notes": "and hot sauce at the line",
       "group": "Finish"
     }
@@ -74,94 +74,43 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Firehall Breakfast Pizza in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Double-check seasoning after scaling — crew palates run salty after long shifts, so taste the first portion before opening the line. Use sliced green onions as listed — measure each before heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch Sausage. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Heat the ovens",
       "instruction": "Heat oven to 425°F. Oil two half-sheet pans or large rimmed baking sheets. Stretch dough to fit each pan with a slight rim for toppings.",
       "minutes": 0,
-      "heatLevel": ""
+      "tempF": 425
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Par-bake the crusts",
       "instruction": "Dock dough with a fork, then par-bake 6–8 minutes until the surface sets but is not fully browned. This prevents a soggy middle once eggs and gravy go on.",
       "minutes": 8,
-      "heatLevel": ""
+      "tempF": 425
+    },
+    {
+      "stepNumber": 3,
+      "title": "Prep toppings",
+      "instruction": "Whisk gravy with mozzarella until smooth. Soft-scramble eggs over low heat—they should still look glossy. Brown sausage and drain on paper towels so the pizza doesn't weep grease.",
+      "minutes": 12
+    },
+    {
+      "stepNumber": 4,
+      "title": "Build and bake",
+      "instruction": "Spread white gravy on par-baked crusts, dot with scrambled eggs and sausage, then blanket with cheddar. Bake until cheese bubbles and crust edges are deep golden.",
+      "minutes": 14,
+      "tempF": 425
     },
     {
       "stepNumber": 5,
-      "title": "Prep toppings",
-      "instruction": "Whisk gravy with mozzarella until smooth. Soft-scramble eggs over low heat—they should still look glossy. Brown sausage and drain on paper towels so the pizza doesn't weep grease.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 6,
-      "title": "Build and bake",
-      "instruction": "Spread white gravy on par-baked crusts, dot with scrambled eggs and sausage, then blanket with cheddar. Bake until cheese bubbles and crust edges are deep golden. Target 165°F at the thickest point before moving to the next batch.",
-      "minutes": 14,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 9,
-      "title": "Portion and open the line",
-      "instruction": "Portion Firehall Breakfast Pizza onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
-      "title": "Scale for larger halls",
-      "instruction": "When cooking for more than 8 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 11,
       "title": "Rest and square-cut",
       "instruction": "Rest pizzas 5 minutes on the pan so cheese sets. Cut into squares with a sharp pizza wheel or bench scraper. Hold warm at 200°F uncovered for crisp edges.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 12,
-      "title": "Final quality check before service",
-      "instruction": "Walk the line once before opening service for Firehall Breakfast Pizza — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
-      "minutes": 4,
-      "heatLevel": ""
+      "minutes": 5
     }
   ],
   "nutrition": {
-    "calories": 451,
-    "protein": 20,
-    "carbs": 9,
-    "fat": 37,
+    "calories": 533,
+    "protein": 28,
+    "carbs": 11,
+    "fat": 42,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
@@ -170,7 +119,7 @@
       "under30gFat": false,
       "highCarb": false,
       "lowCarb": true,
-      "mealPrepFriendly": true
+      "mealPrepFriendly": false
     },
     "badgeCandidates": {
       "highProtein": false,
@@ -194,28 +143,9 @@
   "heroImage": "/images/breakfast/firehall-breakfast-pizza.jpg",
   "thumbImage": "/images/thumbs/breakfast/firehall-breakfast-pizza.jpg",
   "imageAlt": "Sheet-pan breakfast pizza topped with scrambled eggs, sausage, and melted cheddar",
-  "publishedAt": "2026-05-31T18:33:00.829Z",
-  "updatedAt": "2026-05-31T23:50:24.983Z",
+  "publishedAt": "2026-06-04T20:48:24.990Z",
+  "updatedAt": "2026-06-04T20:48:24.990Z",
   "readMinutes": 8,
   "seoTitle": "Firehall Breakfast Pizza | Firehall Breakfast",
-  "collectionTier": "firehall_classic",
-  "proTips": [
-    "One cook runs the oven rotation while another scrambles eggs and browns sausage in parallel.",
-    "Par-bake both crusts together, then build one pizza at a time so the second crust doesn't over-proof on the counter.",
-    "Cut on the sheet pan at the line and slide squares onto a warm hotel pan for self-serve portions."
-  ],
-  "tonightSpread": [
-    "Plate Firehall Breakfast Pizza with sides in separate pans so the crew can mix portions.",
-    "Keep hot items on one side of the table and cold on the other — eggs stay hot, fruit stays cold.",
-    "Line up Firehall Breakfast Pizza on the main counter with serving spoons — firefighters grab fast between calls.",
-    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
-  ],
-  "equipment": [
-    "Large sheet trays",
-    "Instant-read thermometer",
-    "Aluminum foil"
-  ],
-  "mealPrepNotes": "Prep mise en place before the shift — Firehall Breakfast Pizza runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone.",
-  "mobileImage": "/images/mobile/breakfast/firehall-breakfast-pizza.jpg",
-  "railImage": "/images/rails/breakfast/firehall-breakfast-pizza.jpg"
+  "collectionTier": "firehall_classic"
 }

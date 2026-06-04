@@ -1,6 +1,6 @@
 # Classics Wheel full audit
 
-Generated: 2026-06-02T14:05:59.242Z
+Generated: 2026-06-04T20:53:34.945Z
 
 - **Wheel segments:** 10
 - **Pass:** 10/10
@@ -18,14 +18,14 @@ These hall classics exist in the **catalog only** — they are **not** one of th
 
 ## Recipes
 
-- `chicken-parm` — **Chicken Parm** — pass — img=100 detail=100 realism=100
-- `steak-tacos` — **Street-Style Chimichurri Steak Tacos** — pass — img=100 detail=100 realism=95
+- `chicken-parm` — **Chicken Parmesan** — pass — img=100 detail=100 realism=100
+- `steak-tacos` — **Steak Tacos** — pass — img=100 detail=100 realism=95
 - `pulled-pork` — **Pulled Pork Sandwiches** — pass — img=100 detail=100 realism=98
-- `smash-burgers` — **Double Smash Burgers with Caramelized Onions & Dirty Sauce** — pass — img=100 detail=100 realism=100
-- `chili-garlic-bread` — **Firehouse Smoked Beef Chili with Cheesy Garlic Bread** — pass — img=100 detail=100 realism=100
+- `smash-burgers` — **Double Smash Burgers** — pass — img=100 detail=100 realism=100
+- `big-chili` — **Firehall Chili** — pass — img=100 detail=100 realism=100
 - `chicken-caesar` — **Chicken Caesar Salad** — pass — img=100 detail=100 realism=100
-- `jerk-chicken` — **Jerk Chicken & Peas and Rice** — pass — img=100 detail=100 realism=100
-- `beef-dip` — **Beef Dip Sandwiches** — pass — img=100 detail=100 realism=100
+- `jerk-chicken` — **Jerk Chicken & Rice and Peas** — pass — img=100 detail=100 realism=100
+- `beef-dip` — **Beef Dip Sandwiches** — pass — img=100 detail=100 realism=91
 - `bbq-chicken-mac-and-cheese` — **BBQ Chicken Mac and Cheese** — pass — img=100 detail=100 realism=100
 - `steak-sandwiches` — **Steak Sandwiches** — pass — img=100 detail=100 realism=100
 

@@ -233,6 +233,7 @@
     }
   },
   "heroImage": "/images/golden-100/chili-mac.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Chili Mac Skillet on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/chili-mac.jpg",
   "thumbImage": "/images/thumbs/chili-mac.jpg",
   "railImage": "/images/rails/chili-mac.jpg",
@@ -260,6 +261,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.440Z",
+  "generatedAt": "2026-06-04T20:45:42.273Z",
   "contentVersion": 2
 }

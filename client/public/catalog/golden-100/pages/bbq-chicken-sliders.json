@@ -147,6 +147,7 @@
     }
   },
   "heroImage": "/images/golden-100/bbq-chicken-sliders.jpg",
+  "heroImageAlt": "Wide firehall crew platter of BBQ Chicken Sliders on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/bbq-chicken-sliders.jpg",
   "thumbImage": "/images/thumbs/bbq-chicken-sliders.jpg",
   "railImage": "/images/rails/bbq-chicken-sliders.jpg",
@@ -166,13 +167,13 @@
   "relatedSlugs": [
     "beer-can-chicken",
     "smoked-wings-white-sauce",
-    "carolina-mustard-pork",
     "bbq-chicken-pizza",
     "sheet-pan-meal-prep",
-    "buffalo-chicken-dip"
+    "buffalo-chicken-dip",
+    "bbq-brisket-burnt-ends"
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.312Z",
+  "generatedAt": "2026-06-04T20:45:42.156Z",
   "contentVersion": 2
 }

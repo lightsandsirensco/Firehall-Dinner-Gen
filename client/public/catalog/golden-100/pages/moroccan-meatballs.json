@@ -130,6 +130,7 @@
     }
   },
   "heroImage": "/images/golden-100/moroccan-meatballs.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Moroccan Lamb Meatballs on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/moroccan-meatballs.jpg",
   "thumbImage": "/images/thumbs/moroccan-meatballs.jpg",
   "railImage": "/images/rails/moroccan-meatballs.jpg",
@@ -150,12 +151,12 @@
     "butter-chicken",
     "chicken-pot-pie",
     "creamy-tuscan-chicken",
+    "four-step-chicken-piccata",
     "meatloaf-mashed",
-    "shepherds-pie",
-    "bulgogi-bowls"
+    "shepherds-pie"
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.521Z",
+  "generatedAt": "2026-06-04T20:45:42.342Z",
   "contentVersion": 2
 }

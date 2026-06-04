@@ -140,6 +140,7 @@
     }
   },
   "heroImage": "/images/golden-100/creamy-tuscan-chicken.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Tuscan Chicken on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/creamy-tuscan-chicken.jpg",
   "thumbImage": "/images/thumbs/creamy-tuscan-chicken.jpg",
   "railImage": "/images/rails/creamy-tuscan-chicken.jpg",
@@ -157,15 +158,15 @@
     "golden_100"
   ],
   "relatedSlugs": [
+    "four-step-chicken-piccata",
     "crispy-chicken-cutlets",
     "chicken-pot-pie",
     "chicken-parm",
     "parm-hero-subs",
-    "bbq-chicken-mac-and-cheese",
-    "chicken-dumpling-soup"
+    "bbq-chicken-mac-and-cheese"
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.360Z",
+  "generatedAt": "2026-06-04T20:45:42.198Z",
   "contentVersion": 2
 }

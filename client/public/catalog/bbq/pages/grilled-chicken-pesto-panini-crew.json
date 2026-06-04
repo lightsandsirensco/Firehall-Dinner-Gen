@@ -8,15 +8,15 @@
   "category": "bbq_grill_nights",
   "cuisine": "italian-american",
   "description": "Marinated chicken breasts grill to 165°F, slice, and stack on ciabatta with basil pesto, roasted red peppers, and provolone. Press on the griddle until crisp.",
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "cookTime": 25,
   "prepTime": 35,
   "difficulty": "medium",
-  "calories": 0,
-  "protein": 0,
-  "carbs": 0,
-  "fats": 0,
+  "calories": 971,
+  "protein": 95,
+  "carbs": 1,
+  "fats": 63,
   "tags": [
     "protein:chicken",
     "format:hoagie_press",
@@ -39,47 +39,47 @@
   "ingredients": [
     {
       "name": "chicken breast",
-      "quantity": "4.4",
+      "quantity": "5.5",
       "unit": "lb",
       "notes": "about 10 breasts",
       "group": "Main"
     },
     {
       "name": "sun-dried tomato pesto",
-      "quantity": "1 1/4",
+      "quantity": "1.5",
       "unit": "cups",
       "group": "Panini"
     },
     {
       "name": "focaccia loaves",
-      "quantity": "4",
+      "quantity": "5",
       "unit": "whole",
       "notes": "split into 10 sandwiches",
       "group": "Panini"
     },
     {
       "name": "buffalo mozzarella",
-      "quantity": "1 1/4",
+      "quantity": "1.5",
       "unit": "lb",
       "notes": "sliced",
       "group": "Panini"
     },
     {
       "name": "oil-packed sun-dried tomatoes",
-      "quantity": "3/4",
+      "quantity": "1",
       "unit": "cup",
       "notes": "drained and sliced",
       "group": "Panini"
     },
     {
       "name": "grapeseed oil",
-      "quantity": "1/4",
+      "quantity": "0.25",
       "unit": "cup",
       "group": "Marinade"
     },
     {
       "name": "white balsamic vinegar",
-      "quantity": "2.6",
+      "quantity": "3",
       "unit": "tbsp",
       "group": "Marinade"
     },
@@ -92,13 +92,13 @@
     },
     {
       "name": "peppered arugula",
-      "quantity": "3.2",
+      "quantity": "4",
       "unit": "cups",
       "group": "Finish"
     },
     {
       "name": "clarified butter",
-      "quantity": "1/4",
+      "quantity": "0.25",
       "unit": "cup",
       "notes": "for pressing",
       "group": "Griddle"
@@ -108,56 +108,56 @@
     {
       "stepNumber": 1,
       "title": "Marinate chicken",
-      "instruction": "Pound breasts even. Marinate in olive oil, lemon juice, garlic, and salt at least 1 hour. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Use focaccia loaves, buffalo mozzarella, oil-packed sun-dried tomatoes, grapeseed oil as listed — measure each before heat goes on. Use white balsamic vinegar, shallots as listed — measure each before heat goes on. Target 165°F at the thickest point before moving to the next batch.",
+      "instruction": "Pound breasts even. Marinate in olive oil, lemon juice, garlic, and salt at least 1 hour.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
       "title": "Grill chicken",
-      "instruction": "Grill breasts at 425°F 6–7 minutes per side until 165°F internal. Rest 5 minutes and slice. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Grill breasts at 425°F 6–7 minutes per side until 165°F internal. Rest 5 minutes and slice.",
       "minutes": 18,
       "heatLevel": "high"
     },
     {
       "stepNumber": 3,
       "title": "Hold sliced chicken",
-      "instruction": "Hold sliced chicken covered at 170°F in hotel pans until sandwich build. Plan about 5 minutes for this step at crew scale. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
+      "instruction": "Hold sliced chicken covered at 170°F in hotel pans until sandwich build.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 4,
-      "title": "Preheat the flat-top griddle",
-      "instruction": "Preheat griddle or flat-top to 375°F. Butter outer sides of ciabatta splits. Plan about 8 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "title": "Heat griddle",
+      "instruction": "Preheat griddle or flat-top to 375°F. Butter outer sides of ciabatta splits.",
       "minutes": 8,
       "heatLevel": "medium"
     },
     {
       "stepNumber": 5,
       "title": "Build panini",
-      "instruction": "Layer pesto, chicken slices, roasted pepper, provolone, and arugula on ciabatta. Bake until the center reaches a safe internal temp (165°F) and edges look set — use a thermometer at the thickest point. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Layer pesto, chicken slices, roasted pepper, provolone, and arugula on ciabatta.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 6,
       "title": "Press on griddle",
-      "instruction": "Press sandwiches on griddle 3 minutes per side until bread is crisp and cheese melts. Cook until char marks are visible and the thickest piece reads 165°F on an instant-read thermometer. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Press sandwiches on griddle 3 minutes per side until bread is crisp and cheese melts.",
       "minutes": 12,
       "heatLevel": "medium"
     },
     {
       "stepNumber": 7,
       "title": "Hold wrapped",
-      "instruction": "Hold finished panini wrapped in foil at 170°F up to 20 minutes. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Hold finished panini wrapped in foil at 170°F up to 20 minutes.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 8,
       "title": "Line for ten",
-      "instruction": "One panini per firefighter. Cut diagonal for service if desired. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "One panini per firefighter. Cut diagonal for service if desired.",
       "minutes": 5,
       "heatLevel": ""
     }
@@ -179,26 +179,12 @@
   "mealPrepNotes": "Grill chicken at 425°F to 165°F, rest and slice. Hold sliced chicken at 170°F up to 30 minutes. Press panini to order or in batches at 375°F, 3 minutes each.",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 0,
-    "protein": 0,
-    "carbs": 0,
-    "fats": 0,
-    "label": "Estimated per serving",
-    "source": "unavailable",
-    "estimateAvailable": false,
-    "filterFlags": {
-      "highProtein": true,
-      "under700Calories": false,
-      "under30gFat": false,
-      "highCarb": false,
-      "lowCarb": true,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": false
-    }
+    "calories": 971,
+    "protein": 95,
+    "carbs": 1,
+    "fats": 63,
+    "label": "per serving (hall portion)",
+    "source": "estimated"
   },
   "heroImage": "/images/smoker-catalog/grilled-chicken-pesto-panini-crew.jpg",
   "heroImageAlt": "Sun-Dried Tomato Pesto Panini Press — crew-sized BBQ spread with visible smoke and bark",
@@ -227,6 +213,6 @@
     "brisket-style-beef-sandwiches-au-jus"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T23:32:23.207Z",
+  "generatedAt": "2026-06-04T20:47:49.444Z",
   "contentVersion": 2
 }

@@ -13,10 +13,10 @@
   "cookTime": 25,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 759,
-  "protein": 46,
-  "carbs": 36,
-  "fats": 49,
+  "calories": 560,
+  "protein": 32,
+  "carbs": 42,
+  "fats": 30,
   "tags": [
     "protein:beef",
     "format:sheet_pan",
@@ -108,62 +108,34 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Cheesy Beef Nacho Bake in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch beef. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Brown the beef",
       "instruction": "Cook ground beef in a large skillet over medium-high heat, breaking into crumbles until no pink remains. Drain excess fat, stir in taco seasoning and 0.25 cup water until coated.",
       "minutes": 12,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Prep the baking pan",
       "instruction": "Lightly grease a large sheet pan or 9x13 dish. Spread half the chips in an even layer, then half the beef, beans, jalapeños, and cheeses.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Layer and repeat",
-      "instruction": "Repeat layers with remaining chips, beef, beans, jalapeños, and cheese. Press gently so layers contact each other and melt into one cohesive bake. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
+      "instruction": "Repeat layers with remaining chips, beef, beans, jalapeños, and cheese. Press gently so layers contact each other and melt into one cohesive bake.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Bake until melted",
       "instruction": "Bake at 375°F for 18–22 minutes until cheese bubbles at edges and center reaches 165°F where beef is exposed. Rest 5 minutes before topping. Target oven/smoker temperature: 375°F.",
       "minutes": 22,
       "heatLevel": ""
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F for medium beef, 160°F for ground. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 9,
+      "stepNumber": 5,
       "title": "Garnish and serve",
       "instruction": "Dollop salsa and sour cream over the hot bake and scatter cilantro. Serve with extra chips on the side for scooping the cheesy bottom layer.",
       "minutes": 5,
@@ -188,25 +160,11 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 759,
-    "protein": 46,
-    "carbs": 36,
-    "fats": 49,
-    "label": "per serving (hall portion)",
-    "source": "calculated",
-    "filterFlags": {
-      "highProtein": true,
-      "under700Calories": false,
-      "under30gFat": false,
-      "highCarb": false,
-      "lowCarb": false,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": false
-    }
+    "calories": 560,
+    "protein": 32,
+    "carbs": 42,
+    "fats": 30,
+    "label": "~560 cal/serving · 32g protein · 6g fiber (est.)"
   },
   "heroImage": "/images/hall-expansion/cheesy-beef-nacho-bake.jpg",
   "heroImageAlt": "Cheesy Beef Nacho Bake — crew-sized firehall meal",
@@ -226,6 +184,7 @@
     "pretzel-bite-platter",
     "jalapeno-popper-dip"
   ],
-  "generatedAt": "2026-05-31T01:50:00.916Z",
+  "sourceUrl": "",
+  "generatedAt": "2026-06-04T20:47:21.930Z",
   "contentVersion": 2
 }

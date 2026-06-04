@@ -13,10 +13,10 @@
   "cookTime": 20,
   "prepTime": 25,
   "difficulty": "easy",
-  "calories": 861,
-  "protein": 63,
-  "carbs": 39,
-  "fats": 51,
+  "calories": 620,
+  "protein": 34,
+  "carbs": 36,
+  "fats": 38,
   "tags": [
     "protein:beef",
     "format:bar_line",
@@ -105,62 +105,34 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Hall Burger Bar in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use iceberg lettuce, beefsteak tomatoes, red onion, dill pickle chips as listed — measure each before heat goes on. Use ketchup and mustard as listed — measure each before heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch beef. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Prep toppings and bacon",
-      "instruction": "Cook bacon on a wire rack at 400°F until crisp, about 18 minutes. Slice and arrange all burger bar toppings in labeled hotel pans while bacon cooks. Target oven/smoker temperature: 400°F. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
+      "instruction": "Cook bacon on a wire rack at 400°F until crisp, about 18 minutes. Slice and arrange all burger bar toppings in labeled hotel pans while bacon cooks. Target oven/smoker temperature: 400°F.",
       "minutes": 20,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Form beef balls",
       "instruction": "Divide beef into loose 3-ounce balls without compacting—tight balls resist smashing and cook unevenly. Season the griddle surface lightly with salt.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Smash and sear patties",
       "instruction": "Heat griddle ripping hot. Place balls on surface, smash flat with a sturdy spatula within 10 seconds, and sear 2 minutes until deep brown crust forms on the bottom.",
       "minutes": 8,
       "heatLevel": ""
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Flip, cheese, and finish",
       "instruction": "Scrape and flip patties, add cheese, and cook 1 minute until cheese melts and internal temp reaches 160°F. Toast buns on the griddle during the last minute.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F for medium beef, 160°F for ground. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 9,
+      "stepNumber": 5,
       "title": "Open the burger bar",
       "instruction": "Transfer patties to a warm holding pan. Line up buns, patties, bacon, cheeses, and toppings. Call crew to build custom burgers while patties are still hot.",
       "minutes": 10,
@@ -185,25 +157,11 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 861,
-    "protein": 63,
-    "carbs": 39,
-    "fats": 51,
-    "label": "per serving (hall portion)",
-    "source": "calculated",
-    "filterFlags": {
-      "highProtein": true,
-      "under700Calories": false,
-      "under30gFat": false,
-      "highCarb": false,
-      "lowCarb": false,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": false
-    }
+    "calories": 620,
+    "protein": 34,
+    "carbs": 36,
+    "fats": 38,
+    "label": "~620 cal/serving · 34g protein · 2g fiber (est.)"
   },
   "heroImage": "/images/hall-expansion/hall-burger-bar.jpg",
   "heroImageAlt": "Hall Burger Bar — crew-sized firehall meal",
@@ -223,6 +181,7 @@
     "pasta-bar-night",
     "rice-bowl-bar-night"
   ],
-  "generatedAt": "2026-05-31T01:50:00.916Z",
+  "sourceUrl": "",
+  "generatedAt": "2026-06-04T20:47:21.930Z",
   "contentVersion": 2
 }

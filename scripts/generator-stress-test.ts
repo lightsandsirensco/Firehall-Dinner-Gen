@@ -36,7 +36,7 @@ const countArg = process.argv.find((a) => a.startsWith("--count="));
 const TOTAL = countArg ? Math.max(10, parseInt(countArg.split("=")[1] || "250", 10)) : 250;
 
 const PROTEINS = ["any", "chicken", "beef", "pork", "turkey", "seafood"] as const;
-const CREW_ROTATION = [2, 4, 6, 8, 10, 12];
+const CREW_ROTATION = [...CREW_SIZE_OPTIONS];
 const TIMES = ["15-25", "25-40", "45-60", "60-90"] as const;
 
 type ScenarioTag =
@@ -320,7 +320,7 @@ function duplicateStats(rows: GenRow[]) {
   };
 }
 
-const SCALING_CREW_SIZES = [2, 4, 6, 8, 10, 12] as const;
+const SCALING_CREW_SIZES = CREW_SIZE_OPTIONS;
 
 function resolvePageJsonPath(slug: string): string | null {
   const candidates = [

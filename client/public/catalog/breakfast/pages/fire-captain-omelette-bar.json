@@ -15,8 +15,8 @@
     "eggs",
     "station"
   ],
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "prepTime": 25,
   "cookTime": 20,
   "totalTime": 45,
@@ -24,49 +24,49 @@
   "ingredients": [
     {
       "name": "large eggs",
-      "quantity": "19",
+      "quantity": "24",
       "notes": "beaten in batches of 3 per omelette",
       "group": "Eggs"
     },
     {
       "name": "whole milk",
-      "quantity": "3/8",
+      "quantity": "1/2 cup",
       "notes": "whisked into beaten eggs",
       "group": "Eggs"
     },
     {
       "name": "shredded cheddar",
-      "quantity": "1.6",
+      "quantity": "2 cups",
       "notes": "and 2 cups shredded mozzarella",
       "group": "Fillings"
     },
     {
       "name": "diced ham",
-      "quantity": "1.6",
+      "quantity": "2 cups",
       "notes": "and 1 lb cooked crumbled bacon",
       "group": "Fillings"
     },
     {
       "name": "sautéed mushrooms",
-      "quantity": "1.6",
+      "quantity": "2 cups",
       "notes": "and 1 cup diced bell peppers",
       "group": "Fillings"
     },
     {
       "name": "diced tomatoes",
-      "quantity": "3/4",
+      "quantity": "1 cup",
       "notes": "drained, plus 1 cup spinach",
       "group": "Fillings"
     },
     {
       "name": "butter",
-      "quantity": "3.2",
+      "quantity": "4 tbsp",
       "notes": "for pans, plus oil as needed",
       "group": "Fat"
     },
     {
       "name": "salsa and hot sauce",
-      "quantity": "3/8",
+      "quantity": "1/2 cup",
       "notes": "at the line",
       "group": "Serve"
     }
@@ -74,82 +74,49 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Fire Captain Omelette Bar in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use shredded cheddar, diced ham, salsa and hot sauce as listed — measure each before heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
+      "title": "Prep the filling line",
+      "instruction": "Set all fillings in labeled hotel pans with spoons. Sauté mushrooms and peppers ahead; drain tomatoes well. Beat eggs with milk in a pitcher for fast pours.",
+      "minutes": 20
     },
     {
       "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch Eggs. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
+      "title": "Heat two pans",
+      "instruction": "Heat two nonstick skillets over medium. Add a knob of butter until foaming but not brown. Work one omelette per pan for steady throughput.",
+      "minutes": 3
     },
     {
       "stepNumber": 3,
-      "title": "Prep the filling line",
-      "instruction": "Set all fillings in labeled hotel pans with spoons. Sauté mushrooms and peppers ahead; drain tomatoes well. Beat eggs with milk in a pitcher for fast pours.",
-      "minutes": 20,
-      "heatLevel": ""
+      "title": "Cook and fill",
+      "instruction": "Pour 3-egg portion into each pan, swirl to coat, and let set briefly. Add chosen fillings to one half when the top looks mostly set but still glossy.",
+      "minutes": 12
     },
     {
       "stepNumber": 4,
-      "title": "Heat two pans",
-      "instruction": "Heat two nonstick skillets over medium. Add a knob of butter until foaming but not brown. Work one omelette per pan for steady throughput.",
-      "minutes": 3,
-      "heatLevel": ""
+      "title": "Fold and plate",
+      "instruction": "Fold omelettes in half with a spatula and slide onto warm plates. Wipe pans quickly between batches if residue builds.",
+      "minutes": 8
     },
     {
       "stepNumber": 5,
-      "title": "Cook and fill",
-      "instruction": "Pour 3-egg portion into each pan, swirl to coat, and let set briefly. Add chosen fillings to one half when the top looks mostly set but still glossy.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 6,
-      "title": "Fold and plate",
-      "instruction": "Fold omelettes in half with a spatula and slide onto warm plates. Wipe pans quickly between batches if residue builds. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 9,
       "title": "Keep the line moving",
       "instruction": "Call orders two at a time, not ten at once. Hold finished omelettes in a 200°F oven uncovered for no more than 5 minutes before quality drops.",
-      "minutes": 0,
-      "heatLevel": ""
+      "minutes": 0
     }
   ],
   "nutrition": {
-    "calories": 575,
-    "protein": 26,
+    "calories": 352,
+    "protein": 27,
     "carbs": 3,
-    "fat": 52,
+    "fat": 26,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
-      "under30gFat": false,
+      "under30gFat": true,
       "highCarb": false,
       "lowCarb": true,
-      "mealPrepFriendly": true
+      "mealPrepFriendly": false
     },
     "badgeCandidates": {
       "highProtein": false,
@@ -173,30 +140,9 @@
   "heroImage": "/images/breakfast/fire-captain-omelette-bar.jpg",
   "thumbImage": "/images/thumbs/breakfast/fire-captain-omelette-bar.jpg",
   "imageAlt": "Fire captain omelette bar with fillings and folded omelettes on warm plates",
-  "publishedAt": "2026-05-31T18:33:00.829Z",
-  "updatedAt": "2026-05-31T23:49:25.451Z",
+  "publishedAt": "2026-06-04T20:48:24.990Z",
+  "updatedAt": "2026-06-04T20:48:24.990Z",
   "readMinutes": 9,
   "seoTitle": "Fire Captain Omelette Bar | Firehall Breakfast",
-  "collectionTier": "healthier_hall",
-  "proTips": [
-    "Post a simple order card at the line: pick three fillings max so the cook doesn't get buried.",
-    "Run two pans staggered—pour pan B while folding pan A to maintain a steady rhythm.",
-    "Keep a damp towel and oil brush at the station for quick pan resets between omelettes."
-  ],
-  "tonightSpread": [
-    "Label every topping bowl — rookies grab faster when they can read the line.",
-    "Keep hot bases (potatoes, chips) in cambros at 200°F and cold toppings on ice if service runs long.",
-    "Put forks, napkins, and a trash can at the end of the bar — self-serve feeds get messy fast.",
-    "Keep hot items on one side of the table and cold on the other — eggs stay hot, fruit stays cold.",
-    "Line up Fire Captain Omelette Bar on the main counter with serving spoons — firefighters grab fast between calls.",
-    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
-  ],
-  "equipment": [
-    "Large sheet trays",
-    "Instant-read thermometer",
-    "Aluminum foil"
-  ],
-  "mealPrepNotes": "Prep mise en place before the shift — Fire Captain Omelette Bar runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone.",
-  "mobileImage": "/images/mobile/breakfast/fire-captain-omelette-bar.jpg",
-  "railImage": "/images/rails/breakfast/fire-captain-omelette-bar.jpg"
+  "collectionTier": "healthier_hall"
 }

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "contentVersion": 2,
-  "generatedAt": "2026-06-04T20:35:16.875Z",
-  "recipeCount": 111,
+  "generatedAt": "2026-06-04T20:48:23.799Z",
+  "recipeCount": 104,
   "recipes": [
     {
       "slug": "30-minute-pasta-e-fagioli-for-the-hall",
@@ -37,37 +37,6 @@
         "one pot",
         "pasta e fagioli quick fire station",
         "one_pot",
-        "golden_100"
-      ]
-    },
-    {
-      "slug": "bacon-egg-hash",
-      "title": "Bacon Egg Hash Brown Skillet",
-      "subtitle": "Crispy potatoes, runny eggs",
-      "category": "breakfast_brunch",
-      "cuisine": "american",
-      "protein": "pork",
-      "mealFormat": "skillet",
-      "cookTime": 55,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/bacon-egg-hash.jpg",
-      "thumbImage": "/images/thumbs/bacon-egg-hash.jpg",
-      "tags": [
-        "protein:pork",
-        "format:skillet",
-        "category:breakfast_brunch",
-        "breakfast",
-        "golden_100"
-      ],
-      "firefighterScore": 98,
-      "popularityWeight": 3.2,
-      "searchTerms": [
-        "bacon egg hash brown skillet",
-        "bacon egg hash",
-        "american",
-        "pork",
-        "skillet",
-        "breakfast",
         "golden_100"
       ]
     },
@@ -467,7 +436,7 @@
       "cuisine": "american",
       "protein": "beef",
       "mealFormat": "soup_chili",
-      "cookTime": 90,
+      "cookTime": 75,
       "difficulty": "hard",
       "heroImage": "/images/golden-100/big-chili.jpg",
       "thumbImage": "/images/thumbs/big-chili.jpg",
@@ -489,39 +458,6 @@
         "soup chili",
         "hearty",
         "large batch beef chili",
-        "golden_100"
-      ]
-    },
-    {
-      "slug": "biscuits-gravy",
-      "title": "Biscuits and Gravy",
-      "subtitle": "Southern comfort for a slow morning",
-      "category": "breakfast_brunch",
-      "cuisine": "american",
-      "protein": "pork",
-      "mealFormat": "breakfast",
-      "cookTime": 55,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/biscuits-gravy.jpg",
-      "thumbImage": "/images/thumbs/biscuits-gravy.jpg",
-      "tags": [
-        "protein:pork",
-        "format:breakfast",
-        "category:breakfast_brunch",
-        "breakfast",
-        "comfort",
-        "golden_100"
-      ],
-      "firefighterScore": 98,
-      "popularityWeight": 3.2,
-      "searchTerms": [
-        "biscuits and gravy",
-        "biscuits gravy",
-        "american",
-        "pork",
-        "breakfast",
-        "comfort",
-        "sausage biscuits and gravy",
         "golden_100"
       ]
     },
@@ -663,7 +599,7 @@
       "cuisine": "indian",
       "protein": "chicken",
       "mealFormat": "plated_main",
-      "cookTime": 55,
+      "cookTime": 85,
       "difficulty": "medium",
       "heroImage": "/images/golden-100/butter-chicken.jpg",
       "thumbImage": "/images/thumbs/butter-chicken.jpg",
@@ -683,39 +619,6 @@
         "plated main",
         "comfort",
         "butter chicken dinner",
-        "golden_100"
-      ]
-    },
-    {
-      "slug": "carolina-mustard-pork",
-      "title": "Carolina Mustard Pulled Pork",
-      "subtitle": "Tangy mustard pull, soft buns",
-      "category": "bbq_grill_nights",
-      "cuisine": "american",
-      "protein": "pork",
-      "mealFormat": "sandwich",
-      "cookTime": 520,
-      "difficulty": "hard",
-      "heroImage": "/images/golden-100/carolina-mustard-pork.jpg",
-      "thumbImage": "/images/thumbs/carolina-mustard-pork.jpg",
-      "tags": [
-        "protein:pork",
-        "format:sandwich",
-        "category:bbq_grill_nights",
-        "bbq",
-        "handheld",
-        "golden_100"
-      ],
-      "firefighterScore": 100,
-      "popularityWeight": 3.2,
-      "searchTerms": [
-        "carolina mustard pulled pork",
-        "carolina mustard pork",
-        "american",
-        "pork",
-        "sandwich",
-        "bbq",
-        "handheld",
         "golden_100"
       ]
     },
@@ -791,7 +694,7 @@
       "cuisine": "american",
       "protein": "chicken",
       "mealFormat": "salad",
-      "cookTime": 60,
+      "cookTime": 70,
       "difficulty": "medium",
       "heroImage": "/images/golden-100/chicken-caesar.jpg",
       "thumbImage": "/images/thumbs/chicken-caesar.jpg",
@@ -986,7 +889,7 @@
       "cuisine": "indian",
       "protein": "chicken",
       "mealFormat": "plated_main",
-      "cookTime": 35,
+      "cookTime": 95,
       "difficulty": "easy",
       "heroImage": "/images/golden-100/chicken-tikka-masala.jpg",
       "thumbImage": "/images/thumbs/chicken-tikka-masala.jpg",
@@ -1039,39 +942,6 @@
         "comfort",
         "hearty",
         "chicken tortilla soup fire station",
-        "golden_100"
-      ]
-    },
-    {
-      "slug": "chili-garlic-bread",
-      "title": "Firehall Chili",
-      "subtitle": "Post-call comfort in a deep bowl",
-      "category": "firehall_classics",
-      "cuisine": "american",
-      "protein": "beef",
-      "mealFormat": "soup_chili",
-      "cookTime": 75,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/chili-garlic-bread.jpg",
-      "thumbImage": "/images/thumbs/chili-garlic-bread.jpg",
-      "tags": [
-        "protein:beef",
-        "format:soup_chili",
-        "category:firehall_classics",
-        "trending",
-        "hearty",
-        "golden_100"
-      ],
-      "firefighterScore": 100,
-      "popularityWeight": 3.6,
-      "searchTerms": [
-        "firehall chili",
-        "chili garlic bread",
-        "american",
-        "beef",
-        "soup chili",
-        "trending",
-        "hearty",
         "golden_100"
       ]
     },
@@ -2606,40 +2476,6 @@
       ]
     },
     {
-      "slug": "pulled-pork-mac",
-      "title": "Pulled Pork Mac and Cheese",
-      "subtitle": "BBQ meets mac — hall legend",
-      "category": "big_crew_feeders",
-      "cuisine": "american",
-      "protein": "pork",
-      "mealFormat": "pasta",
-      "cookTime": 555,
-      "difficulty": "hard",
-      "heroImage": "/images/golden-100/pulled-pork-mac.jpg",
-      "thumbImage": "/images/thumbs/pulled-pork-mac.jpg",
-      "tags": [
-        "protein:pork",
-        "format:pasta",
-        "category:big_crew_feeders",
-        "bbq",
-        "comfort",
-        "golden_100"
-      ],
-      "firefighterScore": 100,
-      "popularityWeight": 3.5,
-      "searchTerms": [
-        "pulled pork mac and cheese",
-        "pulled pork mac",
-        "american",
-        "pork",
-        "pasta",
-        "bbq",
-        "comfort",
-        "pulled pork mac and cheese bake",
-        "golden_100"
-      ]
-    },
-    {
       "slug": "pulled-pork",
       "title": "Pulled Pork Sandwiches",
       "subtitle": "Slow-smoked pull, soft buns, fast line",
@@ -3046,39 +2882,6 @@
       ]
     },
     {
-      "slug": "smoked-brisket",
-      "title": "Kansas City Smoked Brisket",
-      "subtitle": "Low-and-slow smoke for the whole crew",
-      "category": "bbq_grill_nights",
-      "cuisine": "american",
-      "protein": "beef",
-      "mealFormat": "grill",
-      "cookTime": 585,
-      "difficulty": "hard",
-      "heroImage": "/images/golden-100/smoked-brisket.jpg",
-      "thumbImage": "/images/thumbs/smoked-brisket.jpg",
-      "tags": [
-        "protein:beef",
-        "format:grill",
-        "category:bbq_grill_nights",
-        "bbq",
-        "beef",
-        "golden_100"
-      ],
-      "firefighterScore": 100,
-      "popularityWeight": 3.2,
-      "searchTerms": [
-        "kansas city smoked brisket",
-        "smoked brisket",
-        "american",
-        "beef",
-        "grill",
-        "bbq",
-        "smoked beef brisket bbq",
-        "golden_100"
-      ]
-    },
-    {
       "slug": "smoked-wings-white-sauce",
       "title": "Smoked Wings with White Sauce",
       "subtitle": "Smoked wings, tangy Alabama sauce",
@@ -3307,40 +3110,6 @@
         "plated main",
         "healthy",
         "quinoa stuffed bell peppers beef",
-        "golden_100"
-      ]
-    },
-    {
-      "slug": "sunday-chili-batch",
-      "title": "Sunday Batch Chili",
-      "subtitle": "Cook once, feed the week",
-      "category": "meal_prep_leftovers",
-      "cuisine": "american",
-      "protein": "beef",
-      "mealFormat": "soup_chili",
-      "cookTime": 100,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/sunday-chili-batch.jpg",
-      "thumbImage": "/images/thumbs/sunday-chili-batch.jpg",
-      "tags": [
-        "protein:beef",
-        "format:soup_chili",
-        "category:meal_prep_leftovers",
-        "slow",
-        "hearty",
-        "golden_100"
-      ],
-      "firefighterScore": 100,
-      "popularityWeight": 3.2,
-      "searchTerms": [
-        "sunday batch chili",
-        "sunday chili batch",
-        "american",
-        "beef",
-        "soup chili",
-        "slow",
-        "hearty",
-        "big batch beef chili meal prep",
         "golden_100"
       ]
     },

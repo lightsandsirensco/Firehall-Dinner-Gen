@@ -8,15 +8,15 @@
   "category": "bbq_grill_nights",
   "cuisine": "american",
   "description": "Chuck roast gets a BBQ-forward rub and smoke, then finishes wrapped until slice-tender. Serve on toasted rolls with a peppery au jus and quick pickled onions.",
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "cookTime": 210,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 619,
-  "protein": 61,
-  "carbs": 8,
-  "fats": 40,
+  "calories": 970,
+  "protein": 97,
+  "carbs": 10,
+  "fats": 63,
   "tags": [
     "protein:beef",
     "format:sandwich",
@@ -40,145 +40,124 @@
   "ingredients": [
     {
       "name": "beef chuck roast",
-      "quantity": "4",
+      "quantity": "8",
       "unit": "lb"
     },
     {
       "name": "kosher salt",
-      "quantity": "2.1",
+      "quantity": "2.5",
       "unit": "tbsp"
     },
     {
       "name": "black pepper",
-      "quantity": "2.1",
+      "quantity": "2.5",
       "unit": "tbsp"
     },
     {
       "name": "smoked paprika",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tbsp"
     },
     {
       "name": "granulated garlic",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tbsp"
     },
     {
       "name": "brown sugar",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tbsp"
     },
     {
       "name": "yellow mustard",
-      "quantity": "1/4",
+      "quantity": "0.25",
       "unit": "cup",
       "notes": "binder"
     },
     {
       "name": "beef broth",
-      "quantity": "4.8",
+      "quantity": "6",
       "unit": "cups"
     },
     {
       "name": "Worcestershire sauce",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tbsp"
     },
     {
       "name": "apple cider vinegar",
-      "quantity": "3/8",
+      "quantity": "0.5",
       "unit": "cup"
     },
     {
       "name": "red onion",
-      "quantity": "3/4",
+      "quantity": "1",
       "unit": "whole",
       "notes": "thin-sliced"
     },
     {
       "name": "sugar",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tbsp"
     },
     {
       "name": "cracked black pepper",
-      "quantity": "7/8",
+      "quantity": "1",
       "unit": "tsp"
     },
     {
       "name": "hoagie rolls",
-      "quantity": "8",
+      "quantity": "10",
       "unit": "whole"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Brisket-Style Beef Sandwiches in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch beef. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Quick pickle the onions",
-      "instruction": "Heat vinegar with sugar and pepper until dissolved. Pour over sliced onion. Let sit 30 minutes. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Heat vinegar with sugar and pepper until dissolved. Pour over sliced onion. Let sit 30 minutes.",
       "minutes": 30,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Rub the roast",
-      "instruction": "Coat roast with mustard. Mix salt, pepper, paprika, garlic, and sugar; rub all sides. Heat smoker to 275°F. Plan about 15 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Coat roast with mustard. Mix salt, pepper, paprika, garlic, and sugar; rub all sides. Heat smoker to 275°F.",
       "minutes": 15,
       "heatLevel": "low"
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Smoke to color",
-      "instruction": "Smoke 2–2.5 hours until bark is dark and internal hits ~165°F. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Smoke 2–2.5 hours until bark is dark and internal hits ~165°F.",
       "minutes": 150,
       "heatLevel": ""
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Wrap and finish",
-      "instruction": "Wrap tightly in foil. Finish at 275°F until probe-tender and 200–205°F, about 60–90 minutes. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Wrap tightly in foil. Finish at 275°F until probe-tender and 200–205°F, about 60–90 minutes.",
       "minutes": 75,
       "heatLevel": "low"
     },
     {
-      "stepNumber": 7,
+      "stepNumber": 5,
       "title": "Au jus",
-      "instruction": "Simmer broth with Worcestershire and a pinch of pepper. Taste and salt lightly; keep hot. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Simmer broth with Worcestershire and a pinch of pepper. Taste and salt lightly; keep hot.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
-      "stepNumber": 8,
+      "stepNumber": 6,
       "title": "Slice and serve",
-      "instruction": "Rest wrapped 20 minutes. Slice against the grain. Toast rolls. Tonight’s board: sandwiches + au jus cups + pickled onions. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
+      "instruction": "Rest wrapped 20 minutes. Slice against the grain. Toast rolls. Tonight’s board: sandwiches + au jus cups + pickled onions.",
       "minutes": 25,
       "heatLevel": ""
     },
     {
-      "stepNumber": 9,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F for medium beef, 160°F for ground. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
+      "stepNumber": 7,
       "title": "Leftovers",
-      "instruction": "Chop into tacos or hash. Reheat slices in hot au jus so they stay juicy. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Chop into tacos or hash. Reheat slices in hot au jus so they stay juicy.",
       "minutes": 5,
       "heatLevel": ""
     }
@@ -202,26 +181,12 @@
   ],
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 619,
-    "protein": 61,
-    "carbs": 8,
-    "fats": 40,
-    "label": "Estimated per serving",
-    "source": "calculated",
-    "estimateAvailable": true,
-    "filterFlags": {
-      "highProtein": true,
-      "under700Calories": true,
-      "under30gFat": false,
-      "highCarb": false,
-      "lowCarb": true,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": false
-    }
+    "calories": 970,
+    "protein": 97,
+    "carbs": 10,
+    "fats": 63,
+    "label": "per serving (hall portion)",
+    "source": "estimated"
   },
   "heroImage": "/images/smoker-catalog/brisket-style-beef-sandwiches-au-jus.jpg",
   "heroImageAlt": "Brisket-Style Beef Sandwiches — crew-sized BBQ spread with visible smoke and bark",
@@ -247,6 +212,6 @@
     "hot-honey-grilled-sausage-peppers"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T23:32:23.197Z",
+  "generatedAt": "2026-06-04T20:47:49.408Z",
   "contentVersion": 2
 }

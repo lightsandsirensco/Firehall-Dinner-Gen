@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-06-02T15:57:32.634Z",
+  "generatedAt": "2026-06-04T21:57:00.548Z",
   "threshold": 72,
   "totals": {
-    "recipes": 563,
-    "hallCatalog": 123,
-    "exploreCurated": 440,
-    "failed": 60,
+    "recipes": 677,
+    "hallCatalog": 225,
+    "exploreCurated": 452,
+    "failed": 70,
     "buildBlockers": 0,
-    "duplicateHeroPaths": 126
+    "duplicateHeroPaths": 212
   },
   "duplicateHeroPaths": [
     {
@@ -18,17 +18,38 @@
       ]
     },
     {
-      "hero": "/images/golden-100/asian-chicken-lettuce-cups.jpg",
+      "hero": "/images/golden-100/mediterranean-baked-fish-tray.jpg",
       "slugs": [
-        "asian-chicken-lettuce-cups",
-        "asian-chicken-lettuce-cups"
+        "mediterranean-baked-fish-tray",
+        "mediterranean-baked-fish-tray"
       ]
     },
     {
-      "hero": "/images/golden-100/baked-falafel-hall-bowls.jpg",
+      "hero": "/images/golden-100/mac-and-cheese-bake.jpg",
       "slugs": [
-        "baked-falafel-hall-bowls",
-        "baked-falafel-hall-bowls"
+        "mac-and-cheese-bake",
+        "mac-and-cheese-bake"
+      ]
+    },
+    {
+      "hero": "/images/hall-expansion/mostaccioli-sausage-bake.jpg",
+      "slugs": [
+        "mostaccioli-sausage-bake",
+        "mostaccioli-sausage-bake"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/loaded-baked-potato-bar.jpg",
+      "slugs": [
+        "loaded-baked-potato-bar",
+        "loaded-baked-potato-bar"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/herb-baked-salmon-tray.jpg",
+      "slugs": [
+        "herb-baked-salmon-tray",
+        "herb-baked-salmon-tray"
       ]
     },
     {
@@ -39,10 +60,61 @@
       ]
     },
     {
+      "hero": "/images/golden-100/baked-ziti.jpg",
+      "slugs": [
+        "baked-ziti",
+        "baked-ziti",
+        "baked-ziti-or-rigatoni",
+        "cheesy-baked-pasta-with-sausage-and-ricotta"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/crock-barbacoa-chicken.jpg",
+      "slugs": [
+        "crock-barbacoa-chicken",
+        "crock-barbacoa-chicken"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/batch-lasagna.jpg",
+      "slugs": [
+        "batch-lasagna",
+        "batch-lasagna"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/bbq-brisket-burnt-ends.jpg",
+      "slugs": [
+        "bbq-brisket-burnt-ends",
+        "bbq-brisket-burnt-ends"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/bbq-chicken-bowls.jpg",
+      "slugs": [
+        "bbq-chicken-bowls",
+        "bbq-chicken-bowls"
+      ]
+    },
+    {
       "hero": "/images/golden-100/bbq-chicken-mac-and-cheese.jpg",
       "slugs": [
         "bbq-chicken-mac-and-cheese",
         "bbq-chicken-mac-and-cheese"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/bbq-chicken-pizza.jpg",
+      "slugs": [
+        "bbq-chicken-pizza",
+        "bbq-chicken-pizza"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/bbq-chicken-sliders.jpg",
+      "slugs": [
+        "bbq-chicken-sliders",
+        "bbq-chicken-sliders"
       ]
     },
     {
@@ -53,10 +125,75 @@
       ]
     },
     {
-      "hero": "/images/hall-expansion/enchilada-beef-skillet.jpg",
+      "hero": "/images/golden-100/big-chili.jpg",
       "slugs": [
-        "enchilada-beef-skillet",
-        "enchilada-beef-skillet"
+        "big-chili",
+        "big-chili"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/beef-broccoli.jpg",
+      "slugs": [
+        "beef-broccoli",
+        "beef-broccoli",
+        "sheet-pan-dinner-hanger-steak-with-mushrooms-and-carrots"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/beef-barley-soup.jpg",
+      "slugs": [
+        "beef-barley-soup",
+        "beef-barley-soup"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/beef-dip.jpg",
+      "slugs": [
+        "beef-dip",
+        "beef-dip"
+      ]
+    },
+    {
+      "hero": "/images/hall-expansion/beef-gyros-for-the-hall.jpg",
+      "slugs": [
+        "beef-gyros-for-the-hall",
+        "beef-gyros-for-the-hall"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/korean-beef-rice-bowls.jpg",
+      "slugs": [
+        "korean-beef-rice-bowls",
+        "korean-beef-rice-bowls"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/beef-stroganoff.jpg",
+      "slugs": [
+        "beef-stroganoff",
+        "beef-stroganoff",
+        "firehall-beef-plates"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/beer-can-chicken.jpg",
+      "slugs": [
+        "beer-can-chicken",
+        "beer-can-chicken"
+      ]
+    },
+    {
+      "hero": "/images/hall-expansion/best-tuna-melt-for-the-hall.jpg",
+      "slugs": [
+        "best-tuna-melt-for-the-hall",
+        "best-tuna-melt-for-the-hall"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/turkey-burgers.jpg",
+      "slugs": [
+        "turkey-burgers",
+        "turkey-burgers"
       ]
     },
     {
@@ -67,10 +204,38 @@
       ]
     },
     {
+      "hero": "/images/golden-100/breakfast-sausage-pizza.jpg",
+      "slugs": [
+        "breakfast-sausage-pizza",
+        "breakfast-sausage-pizza"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/buffalo-chicken-dip.jpg",
+      "slugs": [
+        "buffalo-chicken-dip",
+        "buffalo-chicken-dip"
+      ]
+    },
+    {
+      "hero": "/images/hall-expansion/buffalo-chicken-wraps.jpg",
+      "slugs": [
+        "buffalo-chicken-wraps",
+        "buffalo-chicken-wraps"
+      ]
+    },
+    {
       "hero": "/images/hall-expansion/build-your-own-pho-bar.jpg",
       "slugs": [
         "build-your-own-pho-bar",
         "build-your-own-pho-bar"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/bulgogi-bowls.jpg",
+      "slugs": [
+        "bulgogi-bowls",
+        "bulgogi-bowls"
       ]
     },
     {
@@ -88,10 +253,24 @@
       ]
     },
     {
+      "hero": "/images/golden-100/butter-chicken.jpg",
+      "slugs": [
+        "butter-chicken",
+        "butter-chicken"
+      ]
+    },
+    {
       "hero": "/images/golden-100/cajun-chicken-rice-bowl.jpg",
       "slugs": [
         "cajun-chicken-rice-bowl",
         "cajun-chicken-rice-bowl"
+      ]
+    },
+    {
+      "hero": "/images/hall-expansion/cajun-chicken-rice-skillet.jpg",
+      "slugs": [
+        "cajun-chicken-rice-skillet",
+        "cajun-chicken-rice-skillet"
       ]
     },
     {
@@ -109,6 +288,13 @@
       ]
     },
     {
+      "hero": "/images/golden-100/cedar-plank-salmon.jpg",
+      "slugs": [
+        "cedar-plank-salmon",
+        "cedar-plank-salmon"
+      ]
+    },
+    {
       "hero": "/images/hall-expansion/cheesy-beef-nacho-bake.jpg",
       "slugs": [
         "cheesy-beef-nacho-bake",
@@ -123,10 +309,97 @@
       ]
     },
     {
+      "hero": "/images/golden-100/skillet-chicken-alfredo.jpg",
+      "slugs": [
+        "skillet-chicken-alfredo",
+        "skillet-chicken-alfredo"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/chicken-alfredo-bake.jpg",
+      "slugs": [
+        "chicken-alfredo-bake",
+        "chicken-alfredo-bake"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/spanish-chicken-chorizo-rice.jpg",
+      "slugs": [
+        "spanish-chicken-chorizo-rice",
+        "spanish-chicken-chorizo-rice"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/chicken-dumpling-soup.jpg",
+      "slugs": [
+        "chicken-dumpling-soup",
+        "chicken-dumpling-soup"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/one-pot-chicken-rice.jpg",
+      "slugs": [
+        "one-pot-chicken-rice",
+        "one-pot-chicken-rice"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/performance-burrito-bowls.jpg",
+      "slugs": [
+        "performance-burrito-bowls",
+        "performance-burrito-bowls"
+      ]
+    },
+    {
       "hero": "/images/hall-expansion/chicken-cacciatore-crew.jpg",
       "slugs": [
         "chicken-cacciatore-crew",
         "chicken-cacciatore-crew"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/chicken-caesar.jpg",
+      "slugs": [
+        "chicken-caesar",
+        "chicken-caesar-salad",
+        "chicken-caesar"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/enchilada-casserole.jpg",
+      "slugs": [
+        "enchilada-casserole",
+        "cheesy-chicken-enchilada-quinoa-casserole",
+        "enchilada-casserole",
+        "chicken-enchilada-casserole"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/chicken-enchilada-skillet-light.jpg",
+      "slugs": [
+        "chicken-enchilada-skillet-light",
+        "chicken-enchilada-skillet-light"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/sheet-pan-fajitas.jpg",
+      "slugs": [
+        "sheet-pan-fajitas",
+        "sheet-pan-fajitas"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/asian-chicken-lettuce-cups.jpg",
+      "slugs": [
+        "asian-chicken-lettuce-cups",
+        "asian-chicken-lettuce-cups"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/sheet-pan-meal-prep.jpg",
+      "slugs": [
+        "sheet-pan-meal-prep",
+        "sheet-pan-meal-prep"
       ]
     },
     {
@@ -137,6 +410,52 @@
       ]
     },
     {
+      "hero": "/images/golden-100/chicken-parm.jpg",
+      "slugs": [
+        "chicken-parm",
+        "chicken-parm"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/chicken-pot-pie.jpg",
+      "slugs": [
+        "chicken-pot-pie",
+        "4-ingredient-chicken-pot-pie",
+        "chicken-pot-pie",
+        "crock-pot-chicken-pot-pie",
+        "turkey-pot-pie",
+        "turkey-pot-pie-with-cornbread-crust"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/chicken-quesadillas.jpg",
+      "slugs": [
+        "chicken-quesadillas",
+        "chicken-quesadillas"
+      ]
+    },
+    {
+      "hero": "/images/hall-expansion/chicken-shawarma-pitas.jpg",
+      "slugs": [
+        "chicken-shawarma-pitas",
+        "chicken-shawarma-pitas"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/chicken-souvlaki.jpg",
+      "slugs": [
+        "chicken-souvlaki",
+        "chicken-souvlaki"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/chicken-tikka-masala.jpg",
+      "slugs": [
+        "chicken-tikka-masala",
+        "chicken-tikka-masala"
+      ]
+    },
+    {
       "hero": "/images/hall-expansion/chicken-wing-bar-night.jpg",
       "slugs": [
         "chicken-wing-bar-night",
@@ -144,10 +463,24 @@
       ]
     },
     {
+      "hero": "/images/golden-100/chili-mac.jpg",
+      "slugs": [
+        "chili-mac",
+        "chili-mac"
+      ]
+    },
+    {
       "hero": "/images/golden-100/chipotle-lime-chicken-tacos.jpg",
       "slugs": [
         "chipotle-lime-chicken-tacos",
         "chipotle-lime-chicken-tacos"
+      ]
+    },
+    {
+      "hero": "/images/hall-expansion/classic-patty-melt-for-the-crew.jpg",
+      "slugs": [
+        "classic-patty-melt-for-the-crew",
+        "classic-patty-melt-for-the-crew"
       ]
     },
     {
@@ -165,13 +498,6 @@
       ]
     },
     {
-      "hero": "/images/golden-100/cottage-cheese-protein-pasta.jpg",
-      "slugs": [
-        "cottage-cheese-protein-pasta",
-        "cottage-cheese-protein-pasta"
-      ]
-    },
-    {
       "hero": "/images/hall-expansion/cottage-pie-for-the-crew.jpg",
       "slugs": [
         "cottage-pie-for-the-crew",
@@ -186,17 +512,24 @@
       ]
     },
     {
-      "hero": "/images/golden-100/crispy-fish-taco-night.jpg",
+      "hero": "/images/golden-100/crispy-chicken-cutlets.jpg",
       "slugs": [
-        "crispy-fish-taco-night",
-        "crispy-fish-taco-night"
+        "crispy-chicken-cutlets",
+        "crispy-chicken-cutlets"
       ]
     },
     {
-      "hero": "/images/golden-100/crock-barbacoa-chicken.jpg",
+      "hero": "/images/golden-100/detroit-style-pizza.jpg",
       "slugs": [
-        "crock-barbacoa-chicken",
-        "crock-barbacoa-chicken"
+        "detroit-style-pizza",
+        "detroit-style-pizza"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/smash-burgers.jpg",
+      "slugs": [
+        "smash-burgers",
+        "smash-burgers"
       ]
     },
     {
@@ -214,6 +547,13 @@
       ]
     },
     {
+      "hero": "/images/golden-100/baked-falafel-hall-bowls.jpg",
+      "slugs": [
+        "baked-falafel-hall-bowls",
+        "baked-falafel-hall-bowls"
+      ]
+    },
+    {
       "hero": "/images/hall-expansion/firehall-charcuterie-board.jpg",
       "slugs": [
         "firehall-charcuterie-board",
@@ -228,10 +568,55 @@
       ]
     },
     {
+      "hero": "/images/golden-100/crispy-fish-taco-night.jpg",
+      "slugs": [
+        "crispy-fish-taco-night",
+        "crispy-fish-taco-night"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/flank-chimichurri.jpg",
+      "slugs": [
+        "flank-chimichurri",
+        "flank-chimichurri"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/game-day-nachos.jpg",
+      "slugs": [
+        "game-day-nachos",
+        "game-day-nachos"
+      ]
+    },
+    {
       "hero": "/images/hall-expansion/game-day-pizza-sliders.jpg",
       "slugs": [
         "game-day-pizza-sliders",
         "game-day-pizza-sliders"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/five-ingredient-pasta.jpg",
+      "slugs": [
+        "five-ingredient-pasta",
+        "five-ingredient-pasta"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/garlic-butter-shrimp.jpg",
+      "slugs": [
+        "garlic-butter-shrimp",
+        "garlic-butter-shrimp",
+        "shrimp-and-asparagus-foil-packs-with-garlic-lemon-butter-sauce",
+        "super-easy-sheet-pan-shrimp-boil-that-you-ll-make-over-and-over-again"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/ginger-salmon-bowls.jpg",
+      "slugs": [
+        "ginger-salmon-bowls",
+        "ginger-salmon-bowls",
+        "sweet-n-smoky-salmon-with-ginger-mahogany-rice"
       ]
     },
     {
@@ -242,10 +627,17 @@
       ]
     },
     {
-      "hero": "/images/golden-100/greek-lemon-chicken-potatoes.jpg",
+      "hero": "/images/golden-100/greek-chicken-bowls.jpg",
       "slugs": [
-        "greek-lemon-chicken-potatoes",
-        "greek-lemon-chicken-potatoes"
+        "greek-chicken-bowls",
+        "greek-chicken-bowls"
+      ]
+    },
+    {
+      "hero": "/images/hall-expansion/greek-chicken-pitas.jpg",
+      "slugs": [
+        "greek-chicken-pitas",
+        "greek-chicken-pitas"
       ]
     },
     {
@@ -256,10 +648,17 @@
       ]
     },
     {
-      "hero": "/images/golden-100/grilled-shrimp-quinoa-bowls.jpg",
+      "hero": "/images/golden-100/grilled-pork-chops.jpg",
       "slugs": [
-        "grilled-shrimp-quinoa-bowls",
-        "grilled-shrimp-quinoa-bowls"
+        "grilled-pork-chops",
+        "grilled-pork-chops"
+      ]
+    },
+    {
+      "hero": "/images/hall-expansion/hall-blt-sandwich-feed.jpg",
+      "slugs": [
+        "hall-blt-sandwich-feed",
+        "hall-blt-sandwich-feed"
       ]
     },
     {
@@ -284,10 +683,10 @@
       ]
     },
     {
-      "hero": "/images/golden-100/herb-baked-salmon-tray.jpg",
+      "hero": "/images/golden-100/herb-roasted-thighs.jpg",
       "slugs": [
-        "herb-baked-salmon-tray",
-        "herb-baked-salmon-tray"
+        "herb-roasted-thighs",
+        "herb-roasted-thighs"
       ]
     },
     {
@@ -305,6 +704,13 @@
       ]
     },
     {
+      "hero": "/images/golden-100/honey-garlic-pork-tenderloin.jpg",
+      "slugs": [
+        "honey-garlic-pork-tenderloin",
+        "honey-garlic-pork-tenderloin"
+      ]
+    },
+    {
       "hero": "/images/golden-100/honey-lime-chicken-tray.jpg",
       "slugs": [
         "honey-lime-chicken-tray",
@@ -316,6 +722,13 @@
       "slugs": [
         "honey-mustard-oven-chicken-thighs",
         "honey-mustard-oven-chicken-thighs"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/honey-soppressata-pizza.jpg",
+      "slugs": [
+        "honey-soppressata-pizza",
+        "honey-soppressata-pizza"
       ]
     },
     {
@@ -333,13 +746,6 @@
       ]
     },
     {
-      "hero": "/images/golden-100/italian-sausage-veg-sheet-pan.jpg",
-      "slugs": [
-        "italian-sausage-veg-sheet-pan",
-        "italian-sausage-veg-sheet-pan"
-      ]
-    },
-    {
       "hero": "/images/hall-expansion/jalapeno-popper-dip.jpg",
       "slugs": [
         "jalapeno-popper-dip",
@@ -347,17 +753,24 @@
       ]
     },
     {
+      "hero": "/images/golden-100/jambalaya.jpg",
+      "slugs": [
+        "jambalaya",
+        "jambalaya"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/jerk-chicken.jpg",
+      "slugs": [
+        "jerk-chicken",
+        "jerk-chicken"
+      ]
+    },
+    {
       "hero": "/images/hall-expansion/kielbasa-cabbage-potato-skillet.jpg",
       "slugs": [
         "kielbasa-cabbage-potato-skillet",
         "kielbasa-cabbage-potato-skillet"
-      ]
-    },
-    {
-      "hero": "/images/golden-100/korean-beef-rice-bowls.jpg",
-      "slugs": [
-        "korean-beef-rice-bowls",
-        "korean-beef-rice-bowls"
       ]
     },
     {
@@ -375,24 +788,17 @@
       ]
     },
     {
-      "hero": "/images/golden-100/lean-beef-broccoli-rice.jpg",
-      "slugs": [
-        "lean-beef-broccoli-rice",
-        "lean-beef-broccoli-rice"
-      ]
-    },
-    {
-      "hero": "/images/golden-100/lean-turkey-bean-chili.jpg",
-      "slugs": [
-        "lean-turkey-bean-chili",
-        "lean-turkey-bean-chili"
-      ]
-    },
-    {
       "hero": "/images/hall-expansion/lebanese-chicken-shish-platter.jpg",
       "slugs": [
         "lebanese-chicken-shish-platter",
         "lebanese-chicken-shish-platter"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/greek-lemon-chicken-potatoes.jpg",
+      "slugs": [
+        "greek-lemon-chicken-potatoes",
+        "greek-lemon-chicken-potatoes"
       ]
     },
     {
@@ -417,6 +823,15 @@
       ]
     },
     {
+      "hero": "/images/golden-100/lemon-herb-salmon.jpg",
+      "slugs": [
+        "lemon-herb-salmon",
+        "asian-salmon-burgers-with-tangy-ginger-lime-sauce",
+        "lemon-herb-salmon",
+        "oven-baked-salmon-with-broccoli-sheet-pan"
+      ]
+    },
+    {
       "hero": "/images/golden-100/lemon-salmon-orzo-skillet.jpg",
       "slugs": [
         "lemon-salmon-orzo-skillet",
@@ -424,17 +839,17 @@
       ]
     },
     {
+      "hero": "/images/golden-100/smoky-lentil-kale-soup.jpg",
+      "slugs": [
+        "smoky-lentil-kale-soup",
+        "smoky-lentil-kale-soup"
+      ]
+    },
+    {
       "hero": "/images/golden-100/lentil-mushroom-bolognese.jpg",
       "slugs": [
         "lentil-mushroom-bolognese",
         "lentil-mushroom-bolognese"
-      ]
-    },
-    {
-      "hero": "/images/golden-100/chicken-enchilada-skillet-light.jpg",
-      "slugs": [
-        "chicken-enchilada-skillet-light",
-        "chicken-enchilada-skillet-light"
       ]
     },
     {
@@ -480,10 +895,31 @@
       ]
     },
     {
-      "hero": "/images/golden-100/mediterranean-baked-fish-tray.jpg",
+      "hero": "/images/golden-100/margherita-pizza.jpg",
       "slugs": [
-        "mediterranean-baked-fish-tray",
-        "mediterranean-baked-fish-tray"
+        "margherita-pizza",
+        "margherita-pizza"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/meat-lovers-sheet-pizza.jpg",
+      "slugs": [
+        "meat-lovers-sheet-pizza",
+        "meat-lovers-sheet-pizza"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/meatball-hoagies.jpg",
+      "slugs": [
+        "meatball-hoagies",
+        "meatball-hoagies"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/meatloaf-mashed.jpg",
+      "slugs": [
+        "meatloaf-mashed",
+        "meatloaf-mashed"
       ]
     },
     {
@@ -494,10 +930,24 @@
       ]
     },
     {
+      "hero": "/images/golden-100/mediterranean-chickpea.jpg",
+      "slugs": [
+        "mediterranean-chickpea",
+        "mediterranean-chickpea"
+      ]
+    },
+    {
       "hero": "/images/hall-expansion/mediterranean-feast-night.jpg",
       "slugs": [
         "mediterranean-feast-night",
         "mediterranean-feast-night"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/memphis-dry-rub-ribs.jpg",
+      "slugs": [
+        "memphis-dry-rub-ribs",
+        "memphis-dry-rub-ribs"
       ]
     },
     {
@@ -543,6 +993,13 @@
       ]
     },
     {
+      "hero": "/images/golden-100/moroccan-meatballs.jpg",
+      "slugs": [
+        "moroccan-meatballs",
+        "moroccan-meatballs"
+      ]
+    },
+    {
       "hero": "/images/hall-expansion/mushroom-swiss-steak-pan.jpg",
       "slugs": [
         "mushroom-swiss-steak-pan",
@@ -550,10 +1007,38 @@
       ]
     },
     {
+      "hero": "/images/golden-100/loaded-nacho-skillet.jpg",
+      "slugs": [
+        "loaded-nacho-skillet",
+        "loaded-nacho-skillet"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/ny-strip-herb-butter.jpg",
+      "slugs": [
+        "ny-strip-herb-butter",
+        "ny-strip-herb-butter"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/pad-thai.jpg",
+      "slugs": [
+        "pad-thai",
+        "pad-thai"
+      ]
+    },
+    {
       "hero": "/images/hall-expansion/paprika-roasted-chicken-quarters.jpg",
       "slugs": [
         "paprika-roasted-chicken-quarters",
         "paprika-roasted-chicken-quarters"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/parm-hero-subs.jpg",
+      "slugs": [
+        "parm-hero-subs",
+        "parm-hero-subs"
       ]
     },
     {
@@ -571,6 +1056,20 @@
       ]
     },
     {
+      "hero": "/images/hall-expansion/pepper-steak-onions.jpg",
+      "slugs": [
+        "pepper-steak-onions",
+        "pepper-steak-onions"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/pepperoni-pizza-night.jpg",
+      "slugs": [
+        "pepperoni-pizza-night",
+        "pepperoni-pizza-night"
+      ]
+    },
+    {
       "hero": "/images/hall-expansion/peri-peri-chicken-platter.jpg",
       "slugs": [
         "peri-peri-chicken-platter",
@@ -582,6 +1081,20 @@
       "slugs": [
         "pesto-tomato-chicken-tray",
         "pesto-tomato-chicken-tray"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/philly-egg-rolls.jpg",
+      "slugs": [
+        "philly-egg-rolls",
+        "philly-egg-rolls"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/philly-cheesesteak-skillet.jpg",
+      "slugs": [
+        "philly-cheesesteak-skillet",
+        "philly-cheesesteak-skillet"
       ]
     },
     {
@@ -599,6 +1112,20 @@
       ]
     },
     {
+      "hero": "/images/golden-100/pork-carnitas-tacos.jpg",
+      "slugs": [
+        "pork-carnitas-tacos",
+        "pork-carnitas-tacos"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/loaded-potato-feed.jpg",
+      "slugs": [
+        "loaded-potato-feed",
+        "loaded-potato-feed"
+      ]
+    },
+    {
       "hero": "/images/hall-expansion/pretzel-bite-platter.jpg",
       "slugs": [
         "pretzel-bite-platter",
@@ -606,10 +1133,45 @@
       ]
     },
     {
+      "hero": "/images/golden-100/cottage-cheese-protein-pasta.jpg",
+      "slugs": [
+        "cottage-cheese-protein-pasta",
+        "cottage-cheese-protein-pasta"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/pulled-pork.jpg",
+      "slugs": [
+        "pulled-pork",
+        "pulled-pork"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/fast-philly-skillet.jpg",
+      "slugs": [
+        "fast-philly-skillet",
+        "fast-philly-skillet"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/stuffed-peppers.jpg",
+      "slugs": [
+        "stuffed-peppers",
+        "stuffed-peppers"
+      ]
+    },
+    {
       "hero": "/images/hall-expansion/rice-bowl-bar-night.jpg",
       "slugs": [
         "rice-bowl-bar-night",
         "rice-bowl-bar-night"
+      ]
+    },
+    {
+      "hero": "/images/hall-expansion/rigatoni-meat-sauce-batch.jpg",
+      "slugs": [
+        "rigatoni-meat-sauce-batch",
+        "rigatoni-meat-sauce-batch"
       ]
     },
     {
@@ -627,6 +1189,34 @@
       ]
     },
     {
+      "hero": "/images/hall-expansion/sausage-peppers-on-buns.jpg",
+      "slugs": [
+        "sausage-peppers-on-buns",
+        "sausage-peppers-on-buns"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/sheet-pan-sausage-peppers.jpg",
+      "slugs": [
+        "sheet-pan-sausage-peppers",
+        "sheet-pan-sausage-peppers"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/sausage-egg-bake.jpg",
+      "slugs": [
+        "sausage-egg-bake",
+        "sausage-egg-bake"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/sausage-peppers-onions.jpg",
+      "slugs": [
+        "sausage-peppers-onions",
+        "sausage-peppers-onions"
+      ]
+    },
+    {
       "hero": "/images/hall-expansion/shawarma-bar-night.jpg",
       "slugs": [
         "shawarma-bar-night",
@@ -641,13 +1231,6 @@
       ]
     },
     {
-      "hero": "/images/golden-100/sheet-pan-chicken-fajitas-lite.jpg",
-      "slugs": [
-        "sheet-pan-chicken-fajitas-lite",
-        "sheet-pan-chicken-fajitas-lite"
-      ]
-    },
-    {
       "hero": "/images/hall-expansion/sheet-pan-meatball-marinara.jpg",
       "slugs": [
         "sheet-pan-meatball-marinara",
@@ -655,10 +1238,38 @@
       ]
     },
     {
+      "hero": "/images/golden-100/shepherds-pie.jpg",
+      "slugs": [
+        "shepherds-pie",
+        "shepherds-pie"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/grilled-shrimp-quinoa-bowls.jpg",
+      "slugs": [
+        "grilled-shrimp-quinoa-bowls",
+        "grilled-shrimp-quinoa-bowls"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/slider-bar.jpg",
+      "slugs": [
+        "slider-bar",
+        "slider-bar"
+      ]
+    },
+    {
       "hero": "/images/hall-expansion/smoked-corned-beef.jpg",
       "slugs": [
         "smoked-corned-beef",
         "smoked-corned-beef"
+      ]
+    },
+    {
+      "hero": "/images/hall-expansion/smoked-meatloaf.jpg",
+      "slugs": [
+        "smoked-meatloaf",
+        "smoked-meatloaf"
       ]
     },
     {
@@ -690,10 +1301,10 @@
       ]
     },
     {
-      "hero": "/images/golden-100/smoky-lentil-kale-soup.jpg",
+      "hero": "/images/golden-100/smoked-wings-white-sauce.jpg",
       "slugs": [
-        "smoky-lentil-kale-soup",
-        "smoky-lentil-kale-soup"
+        "smoked-wings-white-sauce",
+        "smoked-wings-white-sauce"
       ]
     },
     {
@@ -701,13 +1312,6 @@
       "slugs": [
         "soft-pretzel-dogs",
         "soft-pretzel-dogs"
-      ]
-    },
-    {
-      "hero": "/images/golden-100/spanish-chicken-chorizo-rice.jpg",
-      "slugs": [
-        "spanish-chicken-chorizo-rice",
-        "spanish-chicken-chorizo-rice"
       ]
     },
     {
@@ -725,10 +1329,66 @@
       ]
     },
     {
+      "hero": "/images/golden-100/steak-sandwiches.jpg",
+      "slugs": [
+        "steak-sandwiches",
+        "steak-sandwiches"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/street-corn-chicken.jpg",
+      "slugs": [
+        "street-corn-chicken",
+        "street-corn-chicken"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/grilled-corn-cotija.jpg",
+      "slugs": [
+        "grilled-corn-cotija",
+        "grilled-corn-cotija"
+      ]
+    },
+    {
       "hero": "/images/golden-100/tabbouleh-chicken-bowls.jpg",
       "slugs": [
         "tabbouleh-chicken-bowls",
         "tabbouleh-chicken-bowls"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/hall-taco-bar.jpg",
+      "slugs": [
+        "hall-taco-bar",
+        "hall-taco-bar"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/teriyaki-donburi.jpg",
+      "slugs": [
+        "teriyaki-donburi",
+        "teriyaki-donburi"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/teriyaki-salmon-grill.jpg",
+      "slugs": [
+        "teriyaki-salmon-grill",
+        "teriyaki-salmon-grill"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/texas-beef-ribs.jpg",
+      "slugs": [
+        "texas-beef-ribs",
+        "texas-beef-ribs"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/thai-basil-chicken.jpg",
+      "slugs": [
+        "thai-basil-chicken",
+        "thai-basil-chicken"
       ]
     },
     {
@@ -746,6 +1406,13 @@
       ]
     },
     {
+      "hero": "/images/golden-100/turkey-chili.jpg",
+      "slugs": [
+        "turkey-chili",
+        "turkey-chili"
+      ]
+    },
+    {
       "hero": "/images/golden-100/turkey-lettuce-wrap-night.jpg",
       "slugs": [
         "turkey-lettuce-wrap-night",
@@ -753,10 +1420,10 @@
       ]
     },
     {
-      "hero": "/images/golden-100/turkey-quinoa-stuffed-peppers.jpg",
+      "hero": "/images/golden-100/turkey-meatball-zoodles.jpg",
       "slugs": [
-        "turkey-quinoa-stuffed-peppers",
-        "turkey-quinoa-stuffed-peppers"
+        "turkey-meatball-zoodles",
+        "turkey-meatball-zoodles"
       ]
     },
     {
@@ -788,6 +1455,13 @@
       ]
     },
     {
+      "hero": "/images/golden-100/creamy-tuscan-chicken.jpg",
+      "slugs": [
+        "creamy-tuscan-chicken",
+        "creamy-tuscan-chicken"
+      ]
+    },
+    {
       "hero": "/images/golden-100/white-bean-kale-soup.jpg",
       "slugs": [
         "white-bean-kale-soup",
@@ -799,6 +1473,13 @@
       "slugs": [
         "white-bean-chicken-chili",
         "white-bean-chicken-chili"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/white-garlic-chicken-pizza.jpg",
+      "slugs": [
+        "white-garlic-chicken-pizza",
+        "white-garlic-chicken-pizza"
       ]
     },
     {
@@ -823,80 +1504,10 @@
       ]
     },
     {
-      "hero": "/images/golden-100/chicken-pot-pie.jpg",
-      "slugs": [
-        "4-ingredient-chicken-pot-pie",
-        "chicken-pot-pie",
-        "crock-pot-chicken-pot-pie",
-        "turkey-pot-pie",
-        "turkey-pot-pie-with-cornbread-crust"
-      ]
-    },
-    {
-      "hero": "/images/golden-100/lemon-herb-salmon.jpg",
-      "slugs": [
-        "asian-salmon-burgers-with-tangy-ginger-lime-sauce",
-        "lemon-herb-salmon",
-        "oven-baked-salmon-with-broccoli-sheet-pan"
-      ]
-    },
-    {
-      "hero": "/images/golden-100/baked-ziti.jpg",
-      "slugs": [
-        "baked-ziti",
-        "baked-ziti-or-rigatoni",
-        "cheesy-baked-pasta-with-sausage-and-ricotta"
-      ]
-    },
-    {
-      "hero": "/images/golden-100/beef-stroganoff.jpg",
-      "slugs": [
-        "beef-stroganoff",
-        "firehall-beef-plates"
-      ]
-    },
-    {
-      "hero": "/images/golden-100/enchilada-casserole.jpg",
-      "slugs": [
-        "cheesy-chicken-enchilada-quinoa-casserole",
-        "enchilada-casserole",
-        "chicken-enchilada-casserole"
-      ]
-    },
-    {
-      "hero": "/images/golden-100/chicken-caesar.jpg",
-      "slugs": [
-        "chicken-caesar-salad",
-        "chicken-caesar"
-      ]
-    },
-    {
       "hero": "/images/golden-100/french-toast-casserole.jpg",
       "slugs": [
         "french-toast-casserole",
         "grilled-ham-and-cheese-french-toast-for-a-quick-weeknight-dinner"
-      ]
-    },
-    {
-      "hero": "/images/golden-100/garlic-butter-shrimp.jpg",
-      "slugs": [
-        "garlic-butter-shrimp",
-        "shrimp-and-asparagus-foil-packs-with-garlic-lemon-butter-sauce",
-        "super-easy-sheet-pan-shrimp-boil-that-you-ll-make-over-and-over-again"
-      ]
-    },
-    {
-      "hero": "/images/golden-100/ginger-salmon-bowls.jpg",
-      "slugs": [
-        "ginger-salmon-bowls",
-        "sweet-n-smoky-salmon-with-ginger-mahogany-rice"
-      ]
-    },
-    {
-      "hero": "/images/golden-100/beef-broccoli.jpg",
-      "slugs": [
-        "beef-broccoli",
-        "sheet-pan-dinner-hanger-steak-with-mushrooms-and-carrots"
       ]
     }
   ],
@@ -945,6 +1556,27 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "butter-chicken",
+      "title": "Butter Chicken",
+      "protein": "chicken",
+      "mealFormat": "plated_main",
+      "cuisine": "indian",
+      "heroImage": "/images/golden-100/butter-chicken.jpg",
+      "thumbImage": "/images/thumbs/butter-chicken.jpg",
+      "mobileImage": "/images/mobile/butter-chicken.jpg",
+      "mismatchConfidence": 93,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "image_title_mismatch",
+          "severity": "critical",
+          "message": "plating accuracy: curry_fail: rice not clearly visible"
+        }
+      ]
+    },
+    {
+      "source": "hall_catalog",
       "slug": "cast-iron-chicken-fajitas",
       "title": "Cast Iron Chicken Fajitas",
       "protein": "chicken",
@@ -961,6 +1593,100 @@
           "code": "path_title_conflict",
           "severity": "critical",
           "message": "hero path conflicts with meal title/format (Cast Iron Chicken Fajitas)"
+        }
+      ]
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "skillet-chicken-alfredo",
+      "title": "Chicken Alfredo",
+      "protein": "chicken",
+      "mealFormat": "pasta",
+      "cuisine": "italian",
+      "heroImage": "/images/golden-100/skillet-chicken-alfredo.jpg",
+      "thumbImage": "/images/thumbs/skillet-chicken-alfredo.jpg",
+      "mobileImage": "/images/mobile/skillet-chicken-alfredo.jpg",
+      "mismatchConfidence": 88,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "path_title_conflict",
+          "severity": "critical",
+          "message": "hero path conflicts with meal title/format (Chicken Alfredo)"
+        },
+        {
+          "code": "format_mismatch",
+          "severity": "critical",
+          "message": "image depicts skillet but meal is pasta (Chicken Alfredo)"
+        }
+      ]
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "chicken-caesar",
+      "title": "Chicken Caesar Salad",
+      "protein": "chicken",
+      "mealFormat": "salad",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/chicken-caesar.jpg",
+      "thumbImage": "/images/thumbs/chicken-caesar.jpg",
+      "mobileImage": "/images/mobile/chicken-caesar.jpg",
+      "mismatchConfidence": 95,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "image_title_mismatch",
+          "severity": "critical",
+          "message": "Chicken Caesar Salad — hero must show cut-up grilled chicken pieces mixed through the salad, not a whole breast on top"
+        }
+      ]
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "chicken-tikka-masala",
+      "title": "Chicken Tikka Masala",
+      "protein": "chicken",
+      "mealFormat": "plated_main",
+      "cuisine": "indian",
+      "heroImage": "/images/golden-100/chicken-tikka-masala.jpg",
+      "thumbImage": "/images/thumbs/chicken-tikka-masala.jpg",
+      "mobileImage": "/images/mobile/chicken-tikka-masala.jpg",
+      "mismatchConfidence": 93,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "image_title_mismatch",
+          "severity": "critical",
+          "message": "plating accuracy: curry_fail: rice not clearly visible"
+        }
+      ]
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "lemon-salmon-orzo-skillet",
+      "title": "Lemon Salmon Orzo",
+      "protein": "salmon",
+      "mealFormat": "pasta",
+      "cuisine": "Mediterranean",
+      "heroImage": "/images/golden-100/lemon-salmon-orzo-skillet.jpg",
+      "thumbImage": "/images/thumbs/lemon-salmon-orzo-skillet.jpg",
+      "mobileImage": "/images/mobile/lemon-salmon-orzo-skillet.jpg",
+      "mismatchConfidence": 88,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "path_title_conflict",
+          "severity": "critical",
+          "message": "hero path conflicts with meal title/format (Lemon Salmon Orzo)"
+        },
+        {
+          "code": "format_mismatch",
+          "severity": "critical",
+          "message": "image depicts skillet but meal is pasta (Lemon Salmon Orzo)"
         }
       ]
     },
@@ -1131,6 +1857,37 @@
           "code": "protein_mismatch",
           "severity": "critical",
           "message": "image protein cues (pork) do not match mixed"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
+      "slug": "baked-oatmeal-mixed-berries",
+      "title": "Baked Oatmeal with Mixed Berries",
+      "protein": "mixed",
+      "mealFormat": "crew_feed",
+      "cuisine": "american",
+      "heroImage": "/images/breakfast/baked-oatmeal-mixed-berries.jpg",
+      "thumbImage": "/images/thumbs/breakfast/baked-oatmeal-mixed-berries.jpg",
+      "mobileImage": "/images/mobile/breakfast/baked-oatmeal-mixed-berries.jpg",
+      "mismatchConfidence": 88,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        },
+        {
+          "code": "path_title_conflict",
+          "severity": "critical",
+          "message": "hero path conflicts with meal title/format (Baked Oatmeal with Mixed Berries)"
+        },
+        {
+          "code": "format_mismatch",
+          "severity": "critical",
+          "message": "image depicts breakfast but meal is plated_main (Baked Oatmeal with Mixed Berries)"
         }
       ]
     },
@@ -1307,22 +2064,12 @@
       "mealFormat": "plated_main",
       "cuisine": "indian",
       "heroImage": "/images/golden-100/butter-chicken.jpg",
-      "thumbImage": "",
-      "mobileImage": "",
+      "thumbImage": "/images/thumbs/butter-chicken.jpg",
+      "mobileImage": "/images/mobile/butter-chicken.jpg",
       "mismatchConfidence": 93,
       "pass": false,
       "needsManualReview": true,
       "mismatches": [
-        {
-          "code": "missing_locked_thumb",
-          "severity": "warning",
-          "message": "missing thumbnail image"
-        },
-        {
-          "code": "missing_locked_mobile",
-          "severity": "warning",
-          "message": "missing mobile crop image"
-        },
         {
           "code": "unapproved_image",
           "severity": "warning",
@@ -1431,22 +2178,12 @@
       "mealFormat": "plated_main",
       "cuisine": "indian",
       "heroImage": "/images/golden-100/chicken-tikka-masala.jpg",
-      "thumbImage": "",
-      "mobileImage": "",
+      "thumbImage": "/images/thumbs/chicken-tikka-masala.jpg",
+      "mobileImage": "/images/mobile/chicken-tikka-masala.jpg",
       "mismatchConfidence": 93,
       "pass": false,
       "needsManualReview": true,
       "mismatches": [
-        {
-          "code": "missing_locked_thumb",
-          "severity": "warning",
-          "message": "missing thumbnail image"
-        },
-        {
-          "code": "missing_locked_mobile",
-          "severity": "warning",
-          "message": "missing mobile crop image"
-        },
         {
           "code": "unapproved_image",
           "severity": "warning",
@@ -1605,9 +2342,9 @@
       "protein": "other",
       "mealFormat": "crew_feed",
       "cuisine": "american",
-      "heroImage": "/images/golden-100/country-fried-steak-eggs.jpg",
-      "thumbImage": "/images/thumbs/country-fried-steak-eggs.jpg",
-      "mobileImage": "/images/mobile/country-fried-steak-eggs.jpg",
+      "heroImage": "/images/breakfast/country-fried-steak-eggs.jpg",
+      "thumbImage": "/images/thumbs/breakfast/country-fried-steak-eggs.jpg",
+      "mobileImage": "/images/mobile/breakfast/country-fried-steak-eggs.jpg",
       "mismatchConfidence": 90,
       "pass": false,
       "needsManualReview": true,
@@ -1745,8 +2482,8 @@
       "protein": "other",
       "mealFormat": "crew_feed",
       "cuisine": "american",
-      "heroImage": "/images/golden-100/hall-sausage-biscuits-gravy.jpg",
-      "thumbImage": "/images/thumbs/hall-sausage-biscuits-gravy.jpg",
+      "heroImage": "/images/breakfast/hall-sausage-biscuits-gravy.jpg",
+      "thumbImage": "/images/thumbs/breakfast/hall-sausage-biscuits-gravy.jpg",
       "mobileImage": "/images/mobile/hall-sausage-biscuits-gravy.jpg",
       "mismatchConfidence": 90,
       "pass": false,
@@ -1756,6 +2493,16 @@
           "code": "unapproved_image",
           "severity": "warning",
           "message": "image not marked approved — treat as manual review"
+        },
+        {
+          "code": "path_title_conflict",
+          "severity": "critical",
+          "message": "hero path conflicts with meal title/format (Hall Sausage Biscuits & Gravy)"
+        },
+        {
+          "code": "format_mismatch",
+          "severity": "critical",
+          "message": "image depicts breakfast but meal is plated_main (Hall Sausage Biscuits & Gravy)"
         },
         {
           "code": "protein_mismatch",
@@ -1771,8 +2518,8 @@
       "protein": "other",
       "mealFormat": "crew_feed",
       "cuisine": "american",
-      "heroImage": "/images/golden-100/ham-cheddar-egg-bake.jpg",
-      "thumbImage": "/images/thumbs/ham-cheddar-egg-bake.jpg",
+      "heroImage": "/images/breakfast/ham-cheddar-egg-bake.jpg",
+      "thumbImage": "/images/thumbs/breakfast/ham-cheddar-egg-bake.jpg",
       "mobileImage": "/images/mobile/ham-cheddar-egg-bake.jpg",
       "mismatchConfidence": 90,
       "pass": false,
@@ -1782,6 +2529,16 @@
           "code": "unapproved_image",
           "severity": "warning",
           "message": "image not marked approved — treat as manual review"
+        },
+        {
+          "code": "path_title_conflict",
+          "severity": "critical",
+          "message": "hero path conflicts with meal title/format (Ham & Cheddar Egg Bake)"
+        },
+        {
+          "code": "format_mismatch",
+          "severity": "critical",
+          "message": "image depicts breakfast but meal is breakfast (Ham & Cheddar Egg Bake)"
         },
         {
           "code": "protein_mismatch",
@@ -1797,8 +2554,8 @@
       "protein": "other",
       "mealFormat": "breakfast_plate",
       "cuisine": "american",
-      "heroImage": "/images/golden-100/ham-pepper-skillet.jpg",
-      "thumbImage": "/images/thumbs/ham-pepper-skillet.jpg",
+      "heroImage": "/images/breakfast/ham-pepper-skillet.jpg",
+      "thumbImage": "/images/thumbs/breakfast/ham-pepper-skillet.jpg",
       "mobileImage": "/images/mobile/ham-pepper-skillet.jpg",
       "mismatchConfidence": 90,
       "pass": false,
@@ -1989,6 +2746,37 @@
     },
     {
       "source": "explore_curated",
+      "slug": "johnnycakes-with-syrup",
+      "title": "Johnnycakes with Maple Syrup",
+      "protein": "mixed",
+      "mealFormat": "crew_feed",
+      "cuisine": "american",
+      "heroImage": "/images/breakfast/johnnycakes-with-syrup.jpg",
+      "thumbImage": "/images/thumbs/breakfast/johnnycakes-with-syrup.jpg",
+      "mobileImage": "/images/mobile/breakfast/johnnycakes-with-syrup.jpg",
+      "mismatchConfidence": 88,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        },
+        {
+          "code": "path_title_conflict",
+          "severity": "critical",
+          "message": "hero path conflicts with meal title/format (Johnnycakes with Maple Syrup)"
+        },
+        {
+          "code": "format_mismatch",
+          "severity": "critical",
+          "message": "image depicts breakfast but meal is plated_main (Johnnycakes with Maple Syrup)"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
       "slug": "loaded-baked-potato-soup-with-crispy-fried-potato-skins",
       "title": "Loaded Baked Potato Soup with Crispy-Fried Potato Skins",
       "protein": "chicken",
@@ -2046,6 +2834,42 @@
           "code": "protein_mismatch",
           "severity": "critical",
           "message": "image protein cues (pork) do not match other"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
+      "slug": "menemen-for-the-crew",
+      "title": "Menemen for the Crew",
+      "protein": "other",
+      "mealFormat": "crew_feed",
+      "cuisine": "american",
+      "heroImage": "/images/breakfast/menemen-for-the-crew.jpg",
+      "thumbImage": "/images/thumbs/breakfast/menemen-for-the-crew.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 88,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        },
+        {
+          "code": "path_title_conflict",
+          "severity": "critical",
+          "message": "hero path conflicts with meal title/format (Menemen for the Crew)"
+        },
+        {
+          "code": "format_mismatch",
+          "severity": "critical",
+          "message": "image depicts breakfast but meal is plated_main (Menemen for the Crew)"
         }
       ]
     },
@@ -2344,8 +3168,8 @@
       "protein": "other",
       "mealFormat": "breakfast_plate",
       "cuisine": "american",
-      "heroImage": "/images/golden-100/sausage-egg-cheese-sandwiches.jpg",
-      "thumbImage": "/images/thumbs/sausage-egg-cheese-sandwiches.jpg",
+      "heroImage": "/images/breakfast/sausage-egg-cheese-sandwiches.jpg",
+      "thumbImage": "/images/thumbs/breakfast/sausage-egg-cheese-sandwiches.jpg",
       "mobileImage": "/images/mobile/sausage-egg-cheese-sandwiches.jpg",
       "mismatchConfidence": 90,
       "pass": false,
@@ -2357,9 +3181,86 @@
           "message": "image not marked approved — treat as manual review"
         },
         {
+          "code": "path_title_conflict",
+          "severity": "critical",
+          "message": "hero path conflicts with meal title/format (Sausage Egg & Cheese Sandwiches)"
+        },
+        {
+          "code": "format_mismatch",
+          "severity": "critical",
+          "message": "image depicts breakfast but meal is sandwich (Sausage Egg & Cheese Sandwiches)"
+        },
+        {
           "code": "protein_mismatch",
           "severity": "critical",
           "message": "image protein cues (pork) do not match other"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
+      "slug": "scrapple-and-eggs-skillet",
+      "title": "Scrapple and Eggs Skillet",
+      "protein": "other",
+      "mealFormat": "crew_feed",
+      "cuisine": "american",
+      "heroImage": "/images/breakfast/scrapple-and-eggs-skillet.jpg",
+      "thumbImage": "/images/thumbs/breakfast/scrapple-and-eggs-skillet.jpg",
+      "mobileImage": "/images/mobile/breakfast/scrapple-and-eggs-skillet.jpg",
+      "mismatchConfidence": 88,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        },
+        {
+          "code": "path_title_conflict",
+          "severity": "critical",
+          "message": "hero path conflicts with meal title/format (Scrapple and Eggs Skillet)"
+        },
+        {
+          "code": "format_mismatch",
+          "severity": "critical",
+          "message": "image depicts breakfast but meal is breakfast (Scrapple and Eggs Skillet)"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
+      "slug": "shakshuka-for-the-hall",
+      "title": "Shakshuka for the Hall",
+      "protein": "other",
+      "mealFormat": "crew_feed",
+      "cuisine": "american",
+      "heroImage": "/images/breakfast/shakshuka-for-the-hall.jpg",
+      "thumbImage": "/images/thumbs/breakfast/shakshuka-for-the-hall.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 88,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        },
+        {
+          "code": "path_title_conflict",
+          "severity": "critical",
+          "message": "hero path conflicts with meal title/format (Shakshuka for the Hall)"
+        },
+        {
+          "code": "format_mismatch",
+          "severity": "critical",
+          "message": "image depicts breakfast but meal is plated_main (Shakshuka for the Hall)"
         }
       ]
     },
@@ -2408,16 +3309,11 @@
       "cuisine": "american",
       "heroImage": "/images/breakfast/shrimp-and-grits-breakfast.jpg",
       "thumbImage": "/images/thumbs/breakfast/shrimp-and-grits-breakfast.jpg",
-      "mobileImage": "",
+      "mobileImage": "/images/mobile/breakfast/shrimp-and-grits-breakfast.jpg",
       "mismatchConfidence": 90,
       "pass": false,
       "needsManualReview": true,
       "mismatches": [
-        {
-          "code": "missing_locked_mobile",
-          "severity": "warning",
-          "message": "missing mobile crop image"
-        },
         {
           "code": "unapproved_image",
           "severity": "warning",
@@ -2786,6 +3682,21 @@
   "rows": [
     {
       "source": "hall_catalog",
+      "slug": "30-minute-pasta-e-fagioli-for-the-hall",
+      "title": "30-Minute Pasta e Fagioli for the Hall",
+      "protein": "vegetarian",
+      "mealFormat": "pasta",
+      "cuisine": "italian",
+      "heroImage": "/images/golden-100/30-minute-pasta-e-fagioli-for-the-hall.jpg",
+      "thumbImage": "/images/thumbs/30-minute-pasta-e-fagioli-for-the-hall.jpg",
+      "mobileImage": "/images/mobile/30-minute-pasta-e-fagioli-for-the-hall.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "applewood-pork-shoulder-steaks",
       "title": "Applewood Grilled Pork Shoulder Steaks",
       "protein": "pork",
@@ -2801,14 +3712,14 @@
     },
     {
       "source": "hall_catalog",
-      "slug": "asian-chicken-lettuce-cups",
-      "title": "Asian Chicken Lettuce Cups",
-      "protein": "chicken",
-      "mealFormat": "handheld",
-      "cuisine": "Asian",
-      "heroImage": "/images/golden-100/asian-chicken-lettuce-cups.jpg",
-      "thumbImage": "/images/thumbs/asian-chicken-lettuce-cups.jpg",
-      "mobileImage": "/images/mobile/asian-chicken-lettuce-cups.jpg",
+      "slug": "mediterranean-baked-fish-tray",
+      "title": "Baked Cod Tray",
+      "protein": "fish",
+      "mealFormat": "sheet_pan",
+      "cuisine": "Mediterranean",
+      "heroImage": "/images/golden-100/mediterranean-baked-fish-tray.jpg",
+      "thumbImage": "/images/thumbs/mediterranean-baked-fish-tray.jpg",
+      "mobileImage": "/images/mobile/mediterranean-baked-fish-tray.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -2816,14 +3727,14 @@
     },
     {
       "source": "hall_catalog",
-      "slug": "baked-falafel-hall-bowls",
-      "title": "Baked Falafel Hall Bowls",
+      "slug": "mac-and-cheese-bake",
+      "title": "Baked Mac and Cheese",
       "protein": "vegetarian",
-      "mealFormat": "bowl",
-      "cuisine": "mediterranean",
-      "heroImage": "/images/golden-100/baked-falafel-hall-bowls.jpg",
-      "thumbImage": "/images/thumbs/baked-falafel-hall-bowls.jpg",
-      "mobileImage": "/images/mobile/baked-falafel-hall-bowls.jpg",
+      "mealFormat": "bake",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/mac-and-cheese-bake.jpg",
+      "thumbImage": "/images/thumbs/mac-and-cheese-bake.jpg",
+      "mobileImage": "/images/mobile/mac-and-cheese-bake.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -2846,6 +3757,36 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "loaded-baked-potato-bar",
+      "title": "Baked Potato Bar",
+      "protein": "beef",
+      "mealFormat": "bowl",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/loaded-baked-potato-bar.jpg",
+      "thumbImage": "/images/thumbs/loaded-baked-potato-bar.jpg",
+      "mobileImage": "/images/mobile/loaded-baked-potato-bar.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "herb-baked-salmon-tray",
+      "title": "Baked Salmon Tray",
+      "protein": "salmon",
+      "mealFormat": "sheet_pan",
+      "cuisine": "American",
+      "heroImage": "/images/golden-100/herb-baked-salmon-tray.jpg",
+      "thumbImage": "/images/thumbs/herb-baked-salmon-tray.jpg",
+      "mobileImage": "/images/mobile/herb-baked-salmon-tray.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "baked-turkey-meatball-marinara",
       "title": "Baked Turkey Meatball Marinara",
       "protein": "turkey",
@@ -2854,6 +3795,81 @@
       "heroImage": "/images/golden-100/baked-turkey-meatball-marinara.jpg",
       "thumbImage": "/images/thumbs/baked-turkey-meatball-marinara.jpg",
       "mobileImage": "/images/mobile/baked-turkey-meatball-marinara.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "baked-ziti",
+      "title": "Baked Ziti",
+      "protein": "beef",
+      "mealFormat": "pasta",
+      "cuisine": "italian",
+      "heroImage": "/images/golden-100/baked-ziti.jpg",
+      "thumbImage": "/images/thumbs/baked-ziti.jpg",
+      "mobileImage": "/images/mobile/baked-ziti.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "crock-barbacoa-chicken",
+      "title": "Barbacoa Chicken",
+      "protein": "chicken",
+      "mealFormat": "slow_cooker",
+      "cuisine": "Mexican",
+      "heroImage": "/images/golden-100/crock-barbacoa-chicken.jpg",
+      "thumbImage": "/images/thumbs/crock-barbacoa-chicken.jpg",
+      "mobileImage": "/images/mobile/crock-barbacoa-chicken.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "batch-lasagna",
+      "title": "Batch Lasagna",
+      "protein": "beef",
+      "mealFormat": "pasta",
+      "cuisine": "italian",
+      "heroImage": "/images/golden-100/batch-lasagna.jpg",
+      "thumbImage": "/images/thumbs/batch-lasagna.jpg",
+      "mobileImage": "/images/mobile/batch-lasagna.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "bbq-brisket-burnt-ends",
+      "title": "BBQ Burnt Ends",
+      "protein": "beef",
+      "mealFormat": "grill",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/bbq-brisket-burnt-ends.jpg",
+      "thumbImage": "/images/thumbs/bbq-brisket-burnt-ends.jpg",
+      "mobileImage": "/images/mobile/bbq-brisket-burnt-ends.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "bbq-chicken-bowls",
+      "title": "BBQ Chicken Bowls",
+      "protein": "chicken",
+      "mealFormat": "bowl",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/bbq-chicken-bowls.jpg",
+      "thumbImage": "/images/thumbs/bbq-chicken-bowls.jpg",
+      "mobileImage": "/images/mobile/bbq-chicken-bowls.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -2876,6 +3892,36 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "bbq-chicken-pizza",
+      "title": "BBQ Chicken Pizza",
+      "protein": "chicken",
+      "mealFormat": "pizza",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/bbq-chicken-pizza.jpg",
+      "thumbImage": "/images/thumbs/bbq-chicken-pizza.jpg",
+      "mobileImage": "/images/mobile/bbq-chicken-pizza.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "bbq-chicken-sliders",
+      "title": "BBQ Chicken Sliders",
+      "protein": "chicken",
+      "mealFormat": "sandwich",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/bbq-chicken-sliders.jpg",
+      "thumbImage": "/images/thumbs/bbq-chicken-sliders.jpg",
+      "mobileImage": "/images/mobile/bbq-chicken-sliders.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "bbq-meatball-skewers",
       "title": "BBQ Meatball Skewers",
       "protein": "beef",
@@ -2884,6 +3930,66 @@
       "heroImage": "/images/hall-expansion/bbq-meatball-skewers.jpg",
       "thumbImage": "/images/thumbs/hall-expansion/bbq-meatball-skewers.jpg",
       "mobileImage": "/images/mobile/hall-expansion/bbq-meatball-skewers.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "big-chili",
+      "title": "Beef and Bean Chili",
+      "protein": "beef",
+      "mealFormat": "soup_chili",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/big-chili.jpg",
+      "thumbImage": "/images/thumbs/big-chili.jpg",
+      "mobileImage": "/images/mobile/big-chili.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "beef-broccoli",
+      "title": "Beef and Broccoli",
+      "protein": "beef",
+      "mealFormat": "skillet",
+      "cuisine": "chinese",
+      "heroImage": "/images/golden-100/beef-broccoli.jpg",
+      "thumbImage": "/images/thumbs/beef-broccoli.jpg",
+      "mobileImage": "/images/mobile/beef-broccoli.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "beef-barley-soup",
+      "title": "Beef Barley Soup",
+      "protein": "beef",
+      "mealFormat": "soup_chili",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/beef-barley-soup.jpg",
+      "thumbImage": "/images/thumbs/beef-barley-soup.jpg",
+      "mobileImage": "/images/mobile/beef-barley-soup.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "beef-dip",
+      "title": "Beef Dip Sandwiches",
+      "protein": "beef",
+      "mealFormat": "sandwich",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/beef-dip.jpg",
+      "thumbImage": "/images/thumbs/beef-dip.jpg",
+      "mobileImage": "/images/mobile/beef-dip.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -2906,8 +4012,98 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "beef-gyros-for-the-hall",
+      "title": "Beef Gyros",
+      "protein": "beef",
+      "mealFormat": "handheld",
+      "cuisine": "greek",
+      "heroImage": "/images/hall-expansion/beef-gyros-for-the-hall.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/beef-gyros-for-the-hall.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/beef-gyros-for-the-hall.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "korean-beef-rice-bowls",
+      "title": "Beef Rice Bowls",
+      "protein": "beef",
+      "mealFormat": "bowl",
+      "cuisine": "Korean",
+      "heroImage": "/images/golden-100/korean-beef-rice-bowls.jpg",
+      "thumbImage": "/images/thumbs/korean-beef-rice-bowls.jpg",
+      "mobileImage": "/images/mobile/korean-beef-rice-bowls.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "beef-stroganoff",
+      "title": "Beef Stroganoff",
+      "protein": "beef",
+      "mealFormat": "pasta",
+      "cuisine": "russian",
+      "heroImage": "/images/golden-100/beef-stroganoff.jpg",
+      "thumbImage": "/images/thumbs/beef-stroganoff.jpg",
+      "mobileImage": "/images/mobile/beef-stroganoff.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "beer-can-chicken",
+      "title": "Beer Can Chicken",
+      "protein": "chicken",
+      "mealFormat": "grill",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/beer-can-chicken.jpg",
+      "thumbImage": "/images/thumbs/beer-can-chicken.jpg",
+      "mobileImage": "/images/mobile/beer-can-chicken.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "best-tuna-melt-for-the-hall",
+      "title": "Best Tuna Melt for the Hall (Diner Style)",
+      "protein": "seafood",
+      "mealFormat": "sandwich",
+      "cuisine": "american",
+      "heroImage": "/images/hall-expansion/best-tuna-melt-for-the-hall.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/best-tuna-melt-for-the-hall.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/best-tuna-melt-for-the-hall.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "turkey-burgers",
+      "title": "Black Bean Turkey Burgers",
+      "protein": "turkey",
+      "mealFormat": "burger",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/turkey-burgers.jpg",
+      "thumbImage": "/images/thumbs/turkey-burgers.jpg",
+      "mobileImage": "/images/mobile/turkey-burgers.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "blackened-cod-taco-night",
-      "title": "Blackened Cod Taco Night",
+      "title": "Blackened Cod Tacos",
       "protein": "fish",
       "mealFormat": "tacos",
       "cuisine": "Mexican",
@@ -2921,14 +4117,44 @@
     },
     {
       "source": "hall_catalog",
-      "slug": "boneless-chicken-thighs-sweet-potato-spinach",
-      "title": "Boneless Chicken Thighs with Sweet Potato & Fresh Spinach",
+      "slug": "breakfast-sausage-pizza",
+      "title": "Breakfast Sausage Gravy Pizza",
+      "protein": "pork",
+      "mealFormat": "pizza",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/breakfast-sausage-pizza.jpg",
+      "thumbImage": "/images/thumbs/breakfast-sausage-pizza.jpg",
+      "mobileImage": "/images/mobile/breakfast-sausage-pizza.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "buffalo-chicken-dip",
+      "title": "Buffalo Chicken Dip",
       "protein": "chicken",
-      "mealFormat": "plated_main",
-      "cuisine": "American",
-      "heroImage": "/images/golden-100/boneless-chicken-thighs-sweet-potato-spinach.jpg",
-      "thumbImage": "/images/thumbs/boneless-chicken-thighs-sweet-potato-spinach.jpg",
-      "mobileImage": "/images/mobile/boneless-chicken-thighs-sweet-potato-spinach.jpg",
+      "mealFormat": "bake",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/buffalo-chicken-dip.jpg",
+      "thumbImage": "/images/thumbs/buffalo-chicken-dip.jpg",
+      "mobileImage": "/images/mobile/buffalo-chicken-dip.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "buffalo-chicken-wraps",
+      "title": "Buffalo Chicken Wraps",
+      "protein": "chicken",
+      "mealFormat": "handheld",
+      "cuisine": "american",
+      "heroImage": "/images/hall-expansion/buffalo-chicken-wraps.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/buffalo-chicken-wraps.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/buffalo-chicken-wraps.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -2944,6 +4170,21 @@
       "heroImage": "/images/hall-expansion/build-your-own-pho-bar.jpg",
       "thumbImage": "/images/thumbs/hall-expansion/build-your-own-pho-bar.jpg",
       "mobileImage": "/images/mobile/hall-expansion/build-your-own-pho-bar.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "bulgogi-bowls",
+      "title": "Bulgogi Bowls",
+      "protein": "beef",
+      "mealFormat": "bowl",
+      "cuisine": "korean",
+      "heroImage": "/images/golden-100/bulgogi-bowls.jpg",
+      "thumbImage": "/images/thumbs/bulgogi-bowls.jpg",
+      "mobileImage": "/images/mobile/bulgogi-bowls.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -2993,6 +4234,42 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "butter-chicken",
+      "title": "Butter Chicken",
+      "protein": "chicken",
+      "mealFormat": "plated_main",
+      "cuisine": "indian",
+      "heroImage": "/images/golden-100/butter-chicken.jpg",
+      "thumbImage": "/images/thumbs/butter-chicken.jpg",
+      "mobileImage": "/images/mobile/butter-chicken.jpg",
+      "mismatchConfidence": 93,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "image_title_mismatch",
+          "severity": "critical",
+          "message": "plating accuracy: curry_fail: rice not clearly visible"
+        }
+      ]
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "cajun-chicken-rice-bowl",
+      "title": "Cajun Chicken and Rice",
+      "protein": "chicken",
+      "mealFormat": "bowl",
+      "cuisine": "Cajun",
+      "heroImage": "/images/golden-100/cajun-chicken-rice-bowl.jpg",
+      "thumbImage": "/images/thumbs/cajun-chicken-rice-bowl.jpg",
+      "mobileImage": "/images/mobile/cajun-chicken-rice-bowl.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "cajun-chicken-rice-skillet",
       "title": "Cajun Chicken and Rice Skillet",
       "protein": "chicken",
@@ -3001,21 +4278,6 @@
       "heroImage": "/images/hall-expansion/cajun-chicken-rice-skillet.jpg",
       "thumbImage": "/images/thumbs/hall-expansion/cajun-chicken-rice-skillet.jpg",
       "mobileImage": "/images/mobile/hall-expansion/cajun-chicken-rice-skillet.jpg",
-      "mismatchConfidence": 0,
-      "pass": true,
-      "needsManualReview": false,
-      "mismatches": []
-    },
-    {
-      "source": "hall_catalog",
-      "slug": "cajun-chicken-rice-bowl",
-      "title": "Cajun Chicken Rice Bowl",
-      "protein": "chicken",
-      "mealFormat": "bowl",
-      "cuisine": "Cajun",
-      "heroImage": "/images/golden-100/cajun-chicken-rice-bowl.jpg",
-      "thumbImage": "/images/thumbs/cajun-chicken-rice-bowl.jpg",
-      "mobileImage": "/images/mobile/cajun-chicken-rice-bowl.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -3059,6 +4321,21 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "cedar-plank-salmon",
+      "title": "Cedar Plank Salmon",
+      "protein": "seafood",
+      "mealFormat": "grill",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/cedar-plank-salmon.jpg",
+      "thumbImage": "/images/thumbs/cedar-plank-salmon.jpg",
+      "mobileImage": "/images/mobile/cedar-plank-salmon.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "cheesy-beef-nacho-bake",
       "title": "Cheesy Beef Nacho Bake",
       "protein": "beef",
@@ -3089,6 +4366,107 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "skillet-chicken-alfredo",
+      "title": "Chicken Alfredo",
+      "protein": "chicken",
+      "mealFormat": "pasta",
+      "cuisine": "italian",
+      "heroImage": "/images/golden-100/skillet-chicken-alfredo.jpg",
+      "thumbImage": "/images/thumbs/skillet-chicken-alfredo.jpg",
+      "mobileImage": "/images/mobile/skillet-chicken-alfredo.jpg",
+      "mismatchConfidence": 88,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "path_title_conflict",
+          "severity": "critical",
+          "message": "hero path conflicts with meal title/format (Chicken Alfredo)"
+        },
+        {
+          "code": "format_mismatch",
+          "severity": "critical",
+          "message": "image depicts skillet but meal is pasta (Chicken Alfredo)"
+        }
+      ]
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "chicken-alfredo-bake",
+      "title": "Chicken Alfredo Bake",
+      "protein": "chicken",
+      "mealFormat": "pasta",
+      "cuisine": "italian",
+      "heroImage": "/images/golden-100/chicken-alfredo-bake.jpg",
+      "thumbImage": "/images/thumbs/chicken-alfredo-bake.jpg",
+      "mobileImage": "/images/mobile/chicken-alfredo-bake.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "spanish-chicken-chorizo-rice",
+      "title": "Chicken and Chorizo Rice",
+      "protein": "chicken",
+      "mealFormat": "one_pot",
+      "cuisine": "Spanish",
+      "heroImage": "/images/golden-100/spanish-chicken-chorizo-rice.jpg",
+      "thumbImage": "/images/thumbs/spanish-chicken-chorizo-rice.jpg",
+      "mobileImage": "/images/mobile/spanish-chicken-chorizo-rice.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "chicken-dumpling-soup",
+      "title": "Chicken and Dumplings",
+      "protein": "chicken",
+      "mealFormat": "soup_chili",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/chicken-dumpling-soup.jpg",
+      "thumbImage": "/images/thumbs/chicken-dumpling-soup.jpg",
+      "mobileImage": "/images/mobile/chicken-dumpling-soup.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "one-pot-chicken-rice",
+      "title": "Chicken and Rice",
+      "protein": "chicken",
+      "mealFormat": "one_pot",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/one-pot-chicken-rice.jpg",
+      "thumbImage": "/images/thumbs/one-pot-chicken-rice.jpg",
+      "mobileImage": "/images/mobile/one-pot-chicken-rice.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "performance-burrito-bowls",
+      "title": "Chicken Burrito Bowls",
+      "protein": "chicken",
+      "mealFormat": "bowl",
+      "cuisine": "mexican",
+      "heroImage": "/images/golden-100/performance-burrito-bowls.jpg",
+      "thumbImage": "/images/thumbs/performance-burrito-bowls.jpg",
+      "mobileImage": "/images/mobile/performance-burrito-bowls.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "chicken-cacciatore-crew",
       "title": "Chicken Cacciatore for the Crew",
       "protein": "chicken",
@@ -3097,6 +4475,102 @@
       "heroImage": "/images/hall-expansion/chicken-cacciatore-crew.jpg",
       "thumbImage": "/images/thumbs/hall-expansion/chicken-cacciatore-crew.jpg",
       "mobileImage": "/images/mobile/hall-expansion/chicken-cacciatore-crew.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "chicken-caesar",
+      "title": "Chicken Caesar Salad",
+      "protein": "chicken",
+      "mealFormat": "salad",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/chicken-caesar.jpg",
+      "thumbImage": "/images/thumbs/chicken-caesar.jpg",
+      "mobileImage": "/images/mobile/chicken-caesar.jpg",
+      "mismatchConfidence": 95,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "image_title_mismatch",
+          "severity": "critical",
+          "message": "Chicken Caesar Salad — hero must show cut-up grilled chicken pieces mixed through the salad, not a whole breast on top"
+        }
+      ]
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "enchilada-casserole",
+      "title": "Chicken Enchilada Casserole",
+      "protein": "chicken",
+      "mealFormat": "plated_main",
+      "cuisine": "mexican",
+      "heroImage": "/images/golden-100/enchilada-casserole.jpg",
+      "thumbImage": "/images/thumbs/enchilada-casserole.jpg",
+      "mobileImage": "/images/mobile/enchilada-casserole.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "chicken-enchilada-skillet-light",
+      "title": "Chicken Enchilada Skillet",
+      "protein": "chicken",
+      "mealFormat": "skillet",
+      "cuisine": "Mexican",
+      "heroImage": "/images/golden-100/chicken-enchilada-skillet-light.jpg",
+      "thumbImage": "/images/thumbs/chicken-enchilada-skillet-light.jpg",
+      "mobileImage": "/images/mobile/chicken-enchilada-skillet-light.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "sheet-pan-fajitas",
+      "title": "Chicken Fajitas",
+      "protein": "chicken",
+      "mealFormat": "sheet_pan",
+      "cuisine": "mexican",
+      "heroImage": "/images/golden-100/sheet-pan-fajitas.jpg",
+      "thumbImage": "/images/thumbs/sheet-pan-fajitas.jpg",
+      "mobileImage": "/images/mobile/sheet-pan-fajitas.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "asian-chicken-lettuce-cups",
+      "title": "Chicken Lettuce Cups",
+      "protein": "chicken",
+      "mealFormat": "handheld",
+      "cuisine": "Asian",
+      "heroImage": "/images/golden-100/asian-chicken-lettuce-cups.jpg",
+      "thumbImage": "/images/thumbs/asian-chicken-lettuce-cups.jpg",
+      "mobileImage": "/images/mobile/asian-chicken-lettuce-cups.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "sheet-pan-meal-prep",
+      "title": "Chicken Meal Prep Trays",
+      "protein": "chicken",
+      "mealFormat": "sheet_pan",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/sheet-pan-meal-prep.jpg",
+      "thumbImage": "/images/thumbs/sheet-pan-meal-prep.jpg",
+      "mobileImage": "/images/mobile/sheet-pan-meal-prep.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -3125,6 +4599,132 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "chicken-parm",
+      "title": "Chicken Parmesan",
+      "protein": "chicken",
+      "mealFormat": "pasta",
+      "cuisine": "italian",
+      "heroImage": "/images/golden-100/chicken-parm.jpg",
+      "thumbImage": "/images/thumbs/chicken-parm.jpg",
+      "mobileImage": "/images/mobile/chicken-parm.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "chicken-pot-pie",
+      "title": "Chicken Pot Pie",
+      "protein": "chicken",
+      "mealFormat": "plated_main",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/chicken-pot-pie.jpg",
+      "thumbImage": "/images/thumbs/chicken-pot-pie.jpg",
+      "mobileImage": "/images/mobile/chicken-pot-pie.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "chicken-quesadillas",
+      "title": "Chicken Quesadillas",
+      "protein": "chicken",
+      "mealFormat": "handheld",
+      "cuisine": "mexican",
+      "heroImage": "/images/golden-100/chicken-quesadillas.jpg",
+      "thumbImage": "/images/thumbs/chicken-quesadillas.jpg",
+      "mobileImage": "/images/mobile/chicken-quesadillas.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "chicken-shawarma-pitas",
+      "title": "Chicken Shawarma Pitas",
+      "protein": "chicken",
+      "mealFormat": "handheld",
+      "cuisine": "middle eastern",
+      "heroImage": "/images/hall-expansion/chicken-shawarma-pitas.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/chicken-shawarma-pitas.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/chicken-shawarma-pitas.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "chicken-souvlaki",
+      "title": "Chicken Souvlaki",
+      "protein": "chicken",
+      "mealFormat": "grill",
+      "cuisine": "greek",
+      "heroImage": "/images/golden-100/chicken-souvlaki.jpg",
+      "thumbImage": "/images/thumbs/chicken-souvlaki.jpg",
+      "mobileImage": "/images/mobile/chicken-souvlaki.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "boneless-chicken-thighs-sweet-potato-spinach",
+      "title": "Chicken Thighs with Sweet Potato and Spinach",
+      "protein": "chicken",
+      "mealFormat": "plated_main",
+      "cuisine": "American",
+      "heroImage": "/images/golden-100/boneless-chicken-thighs-sweet-potato-spinach.jpg",
+      "thumbImage": "/images/thumbs/boneless-chicken-thighs-sweet-potato-spinach.jpg",
+      "mobileImage": "/images/mobile/boneless-chicken-thighs-sweet-potato-spinach.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "chicken-tikka-masala",
+      "title": "Chicken Tikka Masala",
+      "protein": "chicken",
+      "mealFormat": "plated_main",
+      "cuisine": "indian",
+      "heroImage": "/images/golden-100/chicken-tikka-masala.jpg",
+      "thumbImage": "/images/thumbs/chicken-tikka-masala.jpg",
+      "mobileImage": "/images/mobile/chicken-tikka-masala.jpg",
+      "mismatchConfidence": 93,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "image_title_mismatch",
+          "severity": "critical",
+          "message": "plating accuracy: curry_fail: rice not clearly visible"
+        }
+      ]
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "chicken-tortilla-soup-for-the-hall",
+      "title": "Chicken Tortilla Soup for the Hall",
+      "protein": "chicken",
+      "mealFormat": "soup_chili",
+      "cuisine": "mexican",
+      "heroImage": "/images/golden-100/chicken-tortilla-soup-for-the-hall.jpg",
+      "thumbImage": "/images/thumbs/chicken-tortilla-soup-for-the-hall.jpg",
+      "mobileImage": "/images/mobile/chicken-tortilla-soup-for-the-hall.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "chicken-wing-bar-night",
       "title": "Chicken Wing Bar Night",
       "protein": "chicken",
@@ -3140,6 +4740,21 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "chili-mac",
+      "title": "Chili Mac Skillet",
+      "protein": "beef",
+      "mealFormat": "skillet",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/chili-mac.jpg",
+      "thumbImage": "/images/thumbs/chili-mac.jpg",
+      "mobileImage": "/images/mobile/chili-mac.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "chipotle-lime-chicken-tacos",
       "title": "Chipotle Lime Chicken Tacos",
       "protein": "chicken",
@@ -3148,6 +4763,21 @@
       "heroImage": "/images/golden-100/chipotle-lime-chicken-tacos.jpg",
       "thumbImage": "/images/thumbs/chipotle-lime-chicken-tacos.jpg",
       "mobileImage": "/images/mobile/chipotle-lime-chicken-tacos.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "classic-patty-melt-for-the-crew",
+      "title": "Classic Patty Melt for the Crew",
+      "protein": "beef",
+      "mealFormat": "sandwich",
+      "cuisine": "american",
+      "heroImage": "/images/hall-expansion/classic-patty-melt-for-the-crew.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/classic-patty-melt-for-the-crew.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/classic-patty-melt-for-the-crew.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -3185,21 +4815,6 @@
     },
     {
       "source": "hall_catalog",
-      "slug": "cottage-cheese-protein-pasta",
-      "title": "Cottage Cheese Protein Pasta Bake",
-      "protein": "mixed",
-      "mealFormat": "pasta",
-      "cuisine": "Italian-American",
-      "heroImage": "/images/golden-100/cottage-cheese-protein-pasta.jpg",
-      "thumbImage": "/images/thumbs/cottage-cheese-protein-pasta.jpg",
-      "mobileImage": "/images/mobile/cottage-cheese-protein-pasta.jpg",
-      "mismatchConfidence": 0,
-      "pass": true,
-      "needsManualReview": false,
-      "mismatches": []
-    },
-    {
-      "source": "hall_catalog",
       "slug": "cottage-pie-for-the-crew",
       "title": "Cottage Pie for the Crew",
       "protein": "beef",
@@ -3230,14 +4845,14 @@
     },
     {
       "source": "hall_catalog",
-      "slug": "crispy-fish-taco-night",
-      "title": "Crispy Fish Taco Night",
-      "protein": "fish",
-      "mealFormat": "tacos",
-      "cuisine": "Mexican",
-      "heroImage": "/images/golden-100/crispy-fish-taco-night.jpg",
-      "thumbImage": "/images/thumbs/crispy-fish-taco-night.jpg",
-      "mobileImage": "/images/mobile/crispy-fish-taco-night.jpg",
+      "slug": "crispy-chicken-cutlets",
+      "title": "Crispy Chicken Cutlets Marinara",
+      "protein": "chicken",
+      "mealFormat": "plated_main",
+      "cuisine": "italian",
+      "heroImage": "/images/golden-100/crispy-chicken-cutlets.jpg",
+      "thumbImage": "/images/thumbs/crispy-chicken-cutlets.jpg",
+      "mobileImage": "/images/mobile/crispy-chicken-cutlets.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -3245,14 +4860,29 @@
     },
     {
       "source": "hall_catalog",
-      "slug": "crock-barbacoa-chicken",
-      "title": "Crock Barbacoa Chicken With Potato Wedges",
-      "protein": "chicken",
-      "mealFormat": "slow_cooker",
-      "cuisine": "Mexican",
-      "heroImage": "/images/golden-100/crock-barbacoa-chicken.jpg",
-      "thumbImage": "/images/thumbs/crock-barbacoa-chicken.jpg",
-      "mobileImage": "/images/mobile/crock-barbacoa-chicken.jpg",
+      "slug": "detroit-style-pizza",
+      "title": "Detroit-Style Pepperoni Pizza",
+      "protein": "pork",
+      "mealFormat": "pizza",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/detroit-style-pizza.jpg",
+      "thumbImage": "/images/thumbs/detroit-style-pizza.jpg",
+      "mobileImage": "/images/mobile/detroit-style-pizza.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "smash-burgers",
+      "title": "Double Smash Burgers",
+      "protein": "beef",
+      "mealFormat": "burger",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/smash-burgers.jpg",
+      "thumbImage": "/images/thumbs/smash-burgers.jpg",
+      "mobileImage": "/images/mobile/smash-burgers.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -3290,6 +4920,21 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "baked-falafel-hall-bowls",
+      "title": "Falafel Bowls",
+      "protein": "vegetarian",
+      "mealFormat": "bowl",
+      "cuisine": "mediterranean",
+      "heroImage": "/images/golden-100/baked-falafel-hall-bowls.jpg",
+      "thumbImage": "/images/thumbs/baked-falafel-hall-bowls.jpg",
+      "mobileImage": "/images/mobile/baked-falafel-hall-bowls.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "firehall-charcuterie-board",
       "title": "Firehall Charcuterie Board",
       "protein": "mixed",
@@ -3320,6 +4965,81 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "crispy-fish-taco-night",
+      "title": "Fish Tacos",
+      "protein": "fish",
+      "mealFormat": "tacos",
+      "cuisine": "Mexican",
+      "heroImage": "/images/golden-100/crispy-fish-taco-night.jpg",
+      "thumbImage": "/images/thumbs/crispy-fish-taco-night.jpg",
+      "mobileImage": "/images/mobile/crispy-fish-taco-night.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "flank-chimichurri",
+      "title": "Flank Steak with Chimichurri",
+      "protein": "beef",
+      "mealFormat": "grill",
+      "cuisine": "argentinian",
+      "heroImage": "/images/golden-100/flank-chimichurri.jpg",
+      "thumbImage": "/images/thumbs/flank-chimichurri.jpg",
+      "mobileImage": "/images/mobile/flank-chimichurri.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "four-step-chicken-piccata",
+      "title": "Four-Step Chicken Piccata",
+      "protein": "chicken",
+      "mealFormat": "plated_main",
+      "cuisine": "italian",
+      "heroImage": "/images/golden-100/four-step-chicken-piccata.jpg",
+      "thumbImage": "/images/thumbs/four-step-chicken-piccata.jpg",
+      "mobileImage": "/images/mobile/four-step-chicken-piccata.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "french-onion-soup-for-the-hall",
+      "title": "French Onion Soup for the Hall",
+      "protein": "beef",
+      "mealFormat": "soup_chili",
+      "cuisine": "french",
+      "heroImage": "/images/golden-100/french-onion-soup-for-the-hall.jpg",
+      "thumbImage": "/images/thumbs/french-onion-soup-for-the-hall.jpg",
+      "mobileImage": "/images/mobile/french-onion-soup-for-the-hall.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "game-day-nachos",
+      "title": "Game Day Nachos",
+      "protein": "beef",
+      "mealFormat": "bowl",
+      "cuisine": "mexican",
+      "heroImage": "/images/golden-100/game-day-nachos.jpg",
+      "thumbImage": "/images/thumbs/game-day-nachos.jpg",
+      "mobileImage": "/images/mobile/game-day-nachos.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "game-day-pizza-sliders",
       "title": "Game Day Pizza Sliders",
       "protein": "pork",
@@ -3328,6 +5048,51 @@
       "heroImage": "/images/hall-expansion/game-day-pizza-sliders.jpg",
       "thumbImage": "/images/thumbs/hall-expansion/game-day-pizza-sliders.jpg",
       "mobileImage": "/images/mobile/hall-expansion/game-day-pizza-sliders.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "five-ingredient-pasta",
+      "title": "Garlic Butter Pasta",
+      "protein": "vegetarian",
+      "mealFormat": "pasta",
+      "cuisine": "italian",
+      "heroImage": "/images/golden-100/five-ingredient-pasta.jpg",
+      "thumbImage": "/images/thumbs/five-ingredient-pasta.jpg",
+      "mobileImage": "/images/mobile/five-ingredient-pasta.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "garlic-butter-shrimp",
+      "title": "Garlic Butter Shrimp",
+      "protein": "seafood",
+      "mealFormat": "skillet",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/garlic-butter-shrimp.jpg",
+      "thumbImage": "/images/thumbs/garlic-butter-shrimp.jpg",
+      "mobileImage": "/images/mobile/garlic-butter-shrimp.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "ginger-salmon-bowls",
+      "title": "Ginger Salmon Rice Bowls",
+      "protein": "seafood",
+      "mealFormat": "bowl",
+      "cuisine": "asian",
+      "heroImage": "/images/golden-100/ginger-salmon-bowls.jpg",
+      "thumbImage": "/images/thumbs/ginger-salmon-bowls.jpg",
+      "mobileImage": "/images/mobile/ginger-salmon-bowls.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -3350,14 +5115,29 @@
     },
     {
       "source": "hall_catalog",
-      "slug": "greek-lemon-chicken-potatoes",
-      "title": "Greek Lemon Chicken and Potatoes",
+      "slug": "greek-chicken-bowls",
+      "title": "Greek Chicken Bowls",
       "protein": "chicken",
-      "mealFormat": "roast",
-      "cuisine": "Greek",
-      "heroImage": "/images/golden-100/greek-lemon-chicken-potatoes.jpg",
-      "thumbImage": "/images/thumbs/greek-lemon-chicken-potatoes.jpg",
-      "mobileImage": "/images/mobile/greek-lemon-chicken-potatoes.jpg",
+      "mealFormat": "bowl",
+      "cuisine": "greek",
+      "heroImage": "/images/golden-100/greek-chicken-bowls.jpg",
+      "thumbImage": "/images/thumbs/greek-chicken-bowls.jpg",
+      "mobileImage": "/images/mobile/greek-chicken-bowls.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "greek-chicken-pitas",
+      "title": "Greek Chicken Pitas",
+      "protein": "chicken",
+      "mealFormat": "handheld",
+      "cuisine": "greek",
+      "heroImage": "/images/hall-expansion/greek-chicken-pitas.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/greek-chicken-pitas.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/greek-chicken-pitas.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -3380,14 +5160,29 @@
     },
     {
       "source": "hall_catalog",
-      "slug": "grilled-shrimp-quinoa-bowls",
-      "title": "Grilled Shrimp Quinoa Bowls",
-      "protein": "shrimp",
+      "slug": "grilled-pork-chops",
+      "title": "Grilled Pork Chops",
+      "protein": "pork",
       "mealFormat": "grill",
-      "cuisine": "Mediterranean",
-      "heroImage": "/images/golden-100/grilled-shrimp-quinoa-bowls.jpg",
-      "thumbImage": "/images/thumbs/grilled-shrimp-quinoa-bowls.jpg",
-      "mobileImage": "/images/mobile/grilled-shrimp-quinoa-bowls.jpg",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/grilled-pork-chops.jpg",
+      "thumbImage": "/images/thumbs/grilled-pork-chops.jpg",
+      "mobileImage": "/images/mobile/grilled-pork-chops.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "hall-blt-sandwich-feed",
+      "title": "Hall BLT Sandwich Feed",
+      "protein": "pork",
+      "mealFormat": "sandwich",
+      "cuisine": "american",
+      "heroImage": "/images/hall-expansion/hall-blt-sandwich-feed.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/hall-blt-sandwich-feed.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/hall-blt-sandwich-feed.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -3440,14 +5235,14 @@
     },
     {
       "source": "hall_catalog",
-      "slug": "herb-baked-salmon-tray",
-      "title": "Herb-Crusted Baked Salmon Tray",
-      "protein": "salmon",
-      "mealFormat": "sheet_pan",
-      "cuisine": "American",
-      "heroImage": "/images/golden-100/herb-baked-salmon-tray.jpg",
-      "thumbImage": "/images/thumbs/herb-baked-salmon-tray.jpg",
-      "mobileImage": "/images/mobile/herb-baked-salmon-tray.jpg",
+      "slug": "herb-roasted-thighs",
+      "title": "Herb Roasted Chicken Thighs",
+      "protein": "chicken",
+      "mealFormat": "roast",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/herb-roasted-thighs.jpg",
+      "thumbImage": "/images/thumbs/herb-roasted-thighs.jpg",
+      "mobileImage": "/images/mobile/herb-roasted-thighs.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -3471,13 +5266,28 @@
     {
       "source": "hall_catalog",
       "slug": "honey-garlic-chicken-rice-bowls",
-      "title": "Honey Garlic Chicken Rice Bowls",
+      "title": "Honey Garlic Chicken Bowls",
       "protein": "chicken",
       "mealFormat": "bowl",
       "cuisine": "Asian-American",
       "heroImage": "/images/golden-100/honey-garlic-chicken-rice-bowls.jpg",
       "thumbImage": "/images/thumbs/honey-garlic-chicken-rice-bowls.jpg",
       "mobileImage": "/images/mobile/honey-garlic-chicken-rice-bowls.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "honey-garlic-pork-tenderloin",
+      "title": "Honey Garlic Pork Tenderloin",
+      "protein": "pork",
+      "mealFormat": "grill",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/honey-garlic-pork-tenderloin.jpg",
+      "thumbImage": "/images/thumbs/honey-garlic-pork-tenderloin.jpg",
+      "mobileImage": "/images/mobile/honey-garlic-pork-tenderloin.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -3508,6 +5318,21 @@
       "heroImage": "/images/hall-expansion/honey-mustard-oven-chicken-thighs.jpg",
       "thumbImage": "/images/thumbs/hall-expansion/honey-mustard-oven-chicken-thighs.jpg",
       "mobileImage": "/images/mobile/hall-expansion/honey-mustard-oven-chicken-thighs.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "honey-soppressata-pizza",
+      "title": "Hot Honey Soppressata Pizza",
+      "protein": "pork",
+      "mealFormat": "pizza",
+      "cuisine": "italian",
+      "heroImage": "/images/golden-100/honey-soppressata-pizza.jpg",
+      "thumbImage": "/images/thumbs/honey-soppressata-pizza.jpg",
+      "mobileImage": "/images/mobile/honey-soppressata-pizza.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -3551,21 +5376,6 @@
     },
     {
       "source": "hall_catalog",
-      "slug": "italian-sausage-veg-sheet-pan",
-      "title": "Italian Sausage and Veg Sheet Pan",
-      "protein": "pork",
-      "mealFormat": "sheet_pan",
-      "cuisine": "Italian",
-      "heroImage": "/images/golden-100/italian-sausage-veg-sheet-pan.jpg",
-      "thumbImage": "/images/thumbs/italian-sausage-veg-sheet-pan.jpg",
-      "mobileImage": "/images/mobile/italian-sausage-veg-sheet-pan.jpg",
-      "mismatchConfidence": 0,
-      "pass": true,
-      "needsManualReview": false,
-      "mismatches": []
-    },
-    {
-      "source": "hall_catalog",
       "slug": "jalapeno-popper-dip",
       "title": "Jalapeño Popper Dip",
       "protein": "pork",
@@ -3581,6 +5391,36 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "jambalaya",
+      "title": "Jambalaya",
+      "protein": "mixed",
+      "mealFormat": "one_pot",
+      "cuisine": "cajun",
+      "heroImage": "/images/golden-100/jambalaya.jpg",
+      "thumbImage": "/images/thumbs/jambalaya.jpg",
+      "mobileImage": "/images/mobile/jambalaya.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "jerk-chicken",
+      "title": "Jerk Chicken & Rice and Peas",
+      "protein": "chicken",
+      "mealFormat": "grill",
+      "cuisine": "caribbean",
+      "heroImage": "/images/golden-100/jerk-chicken.jpg",
+      "thumbImage": "/images/thumbs/jerk-chicken.jpg",
+      "mobileImage": "/images/mobile/jerk-chicken.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "kielbasa-cabbage-potato-skillet",
       "title": "Kielbasa Cabbage Potato Skillet",
       "protein": "pork",
@@ -3589,21 +5429,6 @@
       "heroImage": "/images/hall-expansion/kielbasa-cabbage-potato-skillet.jpg",
       "thumbImage": "/images/thumbs/hall-expansion/kielbasa-cabbage-potato-skillet.jpg",
       "mobileImage": "/images/mobile/hall-expansion/kielbasa-cabbage-potato-skillet.jpg",
-      "mismatchConfidence": 0,
-      "pass": true,
-      "needsManualReview": false,
-      "mismatches": []
-    },
-    {
-      "source": "hall_catalog",
-      "slug": "korean-beef-rice-bowls",
-      "title": "Korean Beef Rice Bowls",
-      "protein": "beef",
-      "mealFormat": "bowl",
-      "cuisine": "Korean",
-      "heroImage": "/images/golden-100/korean-beef-rice-bowls.jpg",
-      "thumbImage": "/images/thumbs/korean-beef-rice-bowls.jpg",
-      "mobileImage": "/images/mobile/korean-beef-rice-bowls.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -3641,36 +5466,6 @@
     },
     {
       "source": "hall_catalog",
-      "slug": "lean-beef-broccoli-rice",
-      "title": "Lean Beef and Broccoli Rice",
-      "protein": "beef",
-      "mealFormat": "stir_fry",
-      "cuisine": "Chinese-American",
-      "heroImage": "/images/golden-100/lean-beef-broccoli-rice.jpg",
-      "thumbImage": "/images/thumbs/lean-beef-broccoli-rice.jpg",
-      "mobileImage": "/images/mobile/lean-beef-broccoli-rice.jpg",
-      "mismatchConfidence": 0,
-      "pass": true,
-      "needsManualReview": false,
-      "mismatches": []
-    },
-    {
-      "source": "hall_catalog",
-      "slug": "lean-turkey-bean-chili",
-      "title": "Lean Turkey and Bean Chili",
-      "protein": "turkey",
-      "mealFormat": "slow_cooker",
-      "cuisine": "American",
-      "heroImage": "/images/golden-100/lean-turkey-bean-chili.jpg",
-      "thumbImage": "/images/thumbs/lean-turkey-bean-chili.jpg",
-      "mobileImage": "/images/mobile/lean-turkey-bean-chili.jpg",
-      "mismatchConfidence": 0,
-      "pass": true,
-      "needsManualReview": false,
-      "mismatches": []
-    },
-    {
-      "source": "hall_catalog",
       "slug": "lebanese-chicken-shish-platter",
       "title": "Lebanese Chicken Shish Platter",
       "protein": "chicken",
@@ -3679,6 +5474,21 @@
       "heroImage": "/images/hall-expansion/lebanese-chicken-shish-platter.jpg",
       "thumbImage": "/images/thumbs/hall-expansion/lebanese-chicken-shish-platter.jpg",
       "mobileImage": "/images/mobile/hall-expansion/lebanese-chicken-shish-platter.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "greek-lemon-chicken-potatoes",
+      "title": "Lemon Chicken and Potatoes",
+      "protein": "chicken",
+      "mealFormat": "roast",
+      "cuisine": "Greek",
+      "heroImage": "/images/golden-100/greek-lemon-chicken-potatoes.jpg",
+      "thumbImage": "/images/thumbs/greek-lemon-chicken-potatoes.jpg",
+      "mobileImage": "/images/mobile/greek-lemon-chicken-potatoes.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -3702,7 +5512,7 @@
     {
       "source": "hall_catalog",
       "slug": "lemon-garlic-chicken-tray",
-      "title": "Lemon Garlic Chicken Tray Bake",
+      "title": "Lemon Garlic Chicken Tray",
       "protein": "chicken",
       "mealFormat": "sheet_pan",
       "cuisine": "American",
@@ -3731,14 +5541,55 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "lemon-herb-salmon",
+      "title": "Lemon Herb Salmon",
+      "protein": "seafood",
+      "mealFormat": "grill",
+      "cuisine": "mediterranean",
+      "heroImage": "/images/golden-100/lemon-herb-salmon.jpg",
+      "thumbImage": "/images/thumbs/lemon-herb-salmon.jpg",
+      "mobileImage": "/images/mobile/lemon-herb-salmon.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "lemon-salmon-orzo-skillet",
-      "title": "Lemon Salmon Orzo Skillet",
+      "title": "Lemon Salmon Orzo",
       "protein": "salmon",
       "mealFormat": "pasta",
       "cuisine": "Mediterranean",
       "heroImage": "/images/golden-100/lemon-salmon-orzo-skillet.jpg",
       "thumbImage": "/images/thumbs/lemon-salmon-orzo-skillet.jpg",
       "mobileImage": "/images/mobile/lemon-salmon-orzo-skillet.jpg",
+      "mismatchConfidence": 88,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "path_title_conflict",
+          "severity": "critical",
+          "message": "hero path conflicts with meal title/format (Lemon Salmon Orzo)"
+        },
+        {
+          "code": "format_mismatch",
+          "severity": "critical",
+          "message": "image depicts skillet but meal is pasta (Lemon Salmon Orzo)"
+        }
+      ]
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "smoky-lentil-kale-soup",
+      "title": "Lentil and Kale Soup",
+      "protein": "plant",
+      "mealFormat": "soup",
+      "cuisine": "American",
+      "heroImage": "/images/golden-100/smoky-lentil-kale-soup.jpg",
+      "thumbImage": "/images/thumbs/smoky-lentil-kale-soup.jpg",
+      "mobileImage": "/images/mobile/smoky-lentil-kale-soup.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -3747,28 +5598,13 @@
     {
       "source": "hall_catalog",
       "slug": "lentil-mushroom-bolognese",
-      "title": "Lentil Mushroom Bolognese",
+      "title": "Lentil Bolognese",
       "protein": "plant",
       "mealFormat": "pasta",
       "cuisine": "Italian",
       "heroImage": "/images/golden-100/lentil-mushroom-bolognese.jpg",
       "thumbImage": "/images/thumbs/lentil-mushroom-bolognese.jpg",
       "mobileImage": "/images/mobile/lentil-mushroom-bolognese.jpg",
-      "mismatchConfidence": 0,
-      "pass": true,
-      "needsManualReview": false,
-      "mismatches": []
-    },
-    {
-      "source": "hall_catalog",
-      "slug": "chicken-enchilada-skillet-light",
-      "title": "Light Chicken Enchilada Skillet",
-      "protein": "chicken",
-      "mealFormat": "skillet",
-      "cuisine": "Mexican",
-      "heroImage": "/images/golden-100/chicken-enchilada-skillet-light.jpg",
-      "thumbImage": "/images/thumbs/chicken-enchilada-skillet-light.jpg",
-      "mobileImage": "/images/mobile/chicken-enchilada-skillet-light.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -3866,14 +5702,59 @@
     },
     {
       "source": "hall_catalog",
-      "slug": "mediterranean-baked-fish-tray",
-      "title": "Mediterranean Baked Cod Tray",
-      "protein": "fish",
-      "mealFormat": "sheet_pan",
-      "cuisine": "Mediterranean",
-      "heroImage": "/images/golden-100/mediterranean-baked-fish-tray.jpg",
-      "thumbImage": "/images/thumbs/mediterranean-baked-fish-tray.jpg",
-      "mobileImage": "/images/mobile/mediterranean-baked-fish-tray.jpg",
+      "slug": "margherita-pizza",
+      "title": "Margherita Pizza",
+      "protein": "vegetarian",
+      "mealFormat": "pizza",
+      "cuisine": "italian",
+      "heroImage": "/images/golden-100/margherita-pizza.jpg",
+      "thumbImage": "/images/thumbs/margherita-pizza.jpg",
+      "mobileImage": "/images/mobile/margherita-pizza.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "meat-lovers-sheet-pizza",
+      "title": "Meat Lover's Pizza",
+      "protein": "pork",
+      "mealFormat": "pizza",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/meat-lovers-sheet-pizza.jpg",
+      "thumbImage": "/images/thumbs/meat-lovers-sheet-pizza.jpg",
+      "mobileImage": "/images/mobile/meat-lovers-sheet-pizza.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "meatball-hoagies",
+      "title": "Meatball Hoagies",
+      "protein": "beef",
+      "mealFormat": "sandwich",
+      "cuisine": "italian",
+      "heroImage": "/images/golden-100/meatball-hoagies.jpg",
+      "thumbImage": "/images/thumbs/meatball-hoagies.jpg",
+      "mobileImage": "/images/mobile/meatball-hoagies.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "meatloaf-mashed",
+      "title": "Meatloaf and Mashed Potatoes",
+      "protein": "beef",
+      "mealFormat": "plated_main",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/meatloaf-mashed.jpg",
+      "thumbImage": "/images/thumbs/meatloaf-mashed.jpg",
+      "mobileImage": "/images/mobile/meatloaf-mashed.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -3896,6 +5777,21 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "mediterranean-chickpea",
+      "title": "Mediterranean Chickpea Bowls",
+      "protein": "vegetarian",
+      "mealFormat": "bowl",
+      "cuisine": "mediterranean",
+      "heroImage": "/images/golden-100/mediterranean-chickpea.jpg",
+      "thumbImage": "/images/thumbs/mediterranean-chickpea.jpg",
+      "mobileImage": "/images/mobile/mediterranean-chickpea.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "mediterranean-feast-night",
       "title": "Mediterranean Feast Night",
       "protein": "chicken",
@@ -3904,6 +5800,21 @@
       "heroImage": "/images/hall-expansion/mediterranean-feast-night.jpg",
       "thumbImage": "/images/thumbs/hall-expansion/mediterranean-feast-night.jpg",
       "mobileImage": "/images/mobile/hall-expansion/mediterranean-feast-night.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "memphis-dry-rub-ribs",
+      "title": "Memphis Dry Rub Ribs",
+      "protein": "pork",
+      "mealFormat": "grill",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/memphis-dry-rub-ribs.jpg",
+      "thumbImage": "/images/thumbs/memphis-dry-rub-ribs.jpg",
+      "mobileImage": "/images/mobile/memphis-dry-rub-ribs.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -3972,7 +5883,7 @@
     {
       "source": "hall_catalog",
       "slug": "moroccan-chicken-chickpea-tray",
-      "title": "Moroccan Chicken Chickpea Tray",
+      "title": "Moroccan Chicken and Chickpeas",
       "protein": "chicken",
       "mealFormat": "sheet_pan",
       "cuisine": "Moroccan",
@@ -4001,6 +5912,21 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "moroccan-meatballs",
+      "title": "Moroccan Lamb Meatballs",
+      "protein": "lamb",
+      "mealFormat": "plated_main",
+      "cuisine": "moroccan",
+      "heroImage": "/images/golden-100/moroccan-meatballs.jpg",
+      "thumbImage": "/images/thumbs/moroccan-meatballs.jpg",
+      "mobileImage": "/images/mobile/moroccan-meatballs.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "mushroom-swiss-steak-pan",
       "title": "Mushroom Swiss Steak Pan",
       "protein": "beef",
@@ -4009,6 +5935,51 @@
       "heroImage": "/images/hall-expansion/mushroom-swiss-steak-pan.jpg",
       "thumbImage": "/images/thumbs/hall-expansion/mushroom-swiss-steak-pan.jpg",
       "mobileImage": "/images/mobile/hall-expansion/mushroom-swiss-steak-pan.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "loaded-nacho-skillet",
+      "title": "Nacho Skillet",
+      "protein": "beef",
+      "mealFormat": "bowl",
+      "cuisine": "mexican",
+      "heroImage": "/images/golden-100/loaded-nacho-skillet.jpg",
+      "thumbImage": "/images/thumbs/loaded-nacho-skillet.jpg",
+      "mobileImage": "/images/mobile/loaded-nacho-skillet.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "ny-strip-herb-butter",
+      "title": "NY Strip with Herb Butter",
+      "protein": "beef",
+      "mealFormat": "grill",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/ny-strip-herb-butter.jpg",
+      "thumbImage": "/images/thumbs/ny-strip-herb-butter.jpg",
+      "mobileImage": "/images/mobile/ny-strip-herb-butter.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "pad-thai",
+      "title": "Pad Thai",
+      "protein": "chicken",
+      "mealFormat": "skillet",
+      "cuisine": "thai",
+      "heroImage": "/images/golden-100/pad-thai.jpg",
+      "thumbImage": "/images/thumbs/pad-thai.jpg",
+      "mobileImage": "/images/mobile/pad-thai.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -4031,6 +6002,21 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "parm-hero-subs",
+      "title": "Parm Hero Subs",
+      "protein": "chicken",
+      "mealFormat": "sandwich",
+      "cuisine": "italian",
+      "heroImage": "/images/golden-100/parm-hero-subs.jpg",
+      "thumbImage": "/images/thumbs/parm-hero-subs.jpg",
+      "mobileImage": "/images/mobile/parm-hero-subs.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "pasta-bar-night",
       "title": "Pasta Bar Night",
       "protein": "vegetarian",
@@ -4039,6 +6025,21 @@
       "heroImage": "/images/hall-expansion/pasta-bar-night.jpg",
       "thumbImage": "/images/thumbs/hall-expansion/pasta-bar-night.jpg",
       "mobileImage": "/images/mobile/hall-expansion/pasta-bar-night.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "pasta-e-ceci-for-the-hall",
+      "title": "Pasta e Ceci (Pasta with Chickpeas)",
+      "protein": "vegetarian",
+      "mealFormat": "pasta",
+      "cuisine": "italian",
+      "heroImage": "/images/golden-100/pasta-e-ceci-for-the-hall.jpg",
+      "thumbImage": "/images/thumbs/pasta-e-ceci-for-the-hall.jpg",
+      "mobileImage": "/images/mobile/pasta-e-ceci-for-the-hall.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -4076,6 +6077,21 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "pepperoni-pizza-night",
+      "title": "Pepperoni Pizza",
+      "protein": "pork",
+      "mealFormat": "pizza",
+      "cuisine": "italian",
+      "heroImage": "/images/golden-100/pepperoni-pizza-night.jpg",
+      "thumbImage": "/images/thumbs/pepperoni-pizza-night.jpg",
+      "mobileImage": "/images/mobile/pepperoni-pizza-night.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "peri-peri-chicken-platter",
       "title": "Peri Peri Chicken Platter",
       "protein": "chicken",
@@ -4092,13 +6108,43 @@
     {
       "source": "hall_catalog",
       "slug": "pesto-tomato-chicken-tray",
-      "title": "Pesto Tomato Chicken Tray",
+      "title": "Pesto Chicken Tray",
       "protein": "chicken",
       "mealFormat": "sheet_pan",
       "cuisine": "Italian",
       "heroImage": "/images/golden-100/pesto-tomato-chicken-tray.jpg",
       "thumbImage": "/images/thumbs/pesto-tomato-chicken-tray.jpg",
       "mobileImage": "/images/mobile/pesto-tomato-chicken-tray.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "philly-egg-rolls",
+      "title": "Philly Cheesesteak Egg Rolls",
+      "protein": "beef",
+      "mealFormat": "handheld",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/philly-egg-rolls.jpg",
+      "thumbImage": "/images/thumbs/philly-egg-rolls.jpg",
+      "mobileImage": "/images/mobile/philly-egg-rolls.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "philly-cheesesteak-skillet",
+      "title": "Philly Cheesesteak Skillet",
+      "protein": "beef",
+      "mealFormat": "skillet",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/philly-cheesesteak-skillet.jpg",
+      "thumbImage": "/images/thumbs/philly-cheesesteak-skillet.jpg",
+      "mobileImage": "/images/mobile/philly-cheesesteak-skillet.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -4136,6 +6182,36 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "pork-carnitas-tacos",
+      "title": "Pork Carnitas Tacos",
+      "protein": "pork",
+      "mealFormat": "tacos",
+      "cuisine": "mexican",
+      "heroImage": "/images/golden-100/pork-carnitas-tacos.jpg",
+      "thumbImage": "/images/thumbs/pork-carnitas-tacos.jpg",
+      "mobileImage": "/images/mobile/pork-carnitas-tacos.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "loaded-potato-feed",
+      "title": "Potato Bar Feed",
+      "protein": "beef",
+      "mealFormat": "bowl",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/loaded-potato-feed.jpg",
+      "thumbImage": "/images/thumbs/loaded-potato-feed.jpg",
+      "mobileImage": "/images/mobile/loaded-potato-feed.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "pretzel-bite-platter",
       "title": "Pretzel Bite Platter with Beer Cheese",
       "protein": "vegetarian",
@@ -4144,6 +6220,81 @@
       "heroImage": "/images/hall-expansion/pretzel-bite-platter.jpg",
       "thumbImage": "/images/thumbs/hall-expansion/pretzel-bite-platter.jpg",
       "mobileImage": "/images/mobile/hall-expansion/pretzel-bite-platter.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "cottage-cheese-protein-pasta",
+      "title": "Protein Pasta Bake",
+      "protein": "mixed",
+      "mealFormat": "pasta",
+      "cuisine": "Italian-American",
+      "heroImage": "/images/golden-100/cottage-cheese-protein-pasta.jpg",
+      "thumbImage": "/images/thumbs/cottage-cheese-protein-pasta.jpg",
+      "mobileImage": "/images/mobile/cottage-cheese-protein-pasta.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "pulled-pork",
+      "title": "Pulled Pork Sandwiches",
+      "protein": "pork",
+      "mealFormat": "sandwich",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/pulled-pork.jpg",
+      "thumbImage": "/images/thumbs/pulled-pork.jpg",
+      "mobileImage": "/images/mobile/pulled-pork.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "fast-philly-skillet",
+      "title": "Quick Philly Skillet",
+      "protein": "beef",
+      "mealFormat": "skillet",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/fast-philly-skillet.jpg",
+      "thumbImage": "/images/thumbs/fast-philly-skillet.jpg",
+      "mobileImage": "/images/mobile/fast-philly-skillet.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "stuffed-peppers",
+      "title": "Quinoa Stuffed Peppers",
+      "protein": "beef",
+      "mealFormat": "plated_main",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/stuffed-peppers.jpg",
+      "thumbImage": "/images/thumbs/stuffed-peppers.jpg",
+      "mobileImage": "/images/mobile/stuffed-peppers.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "red-beans-and-rice-for-the-hall",
+      "title": "Red Beans and Rice for the Hall",
+      "protein": "pork",
+      "mealFormat": "one_pot",
+      "cuisine": "cajun",
+      "heroImage": "/images/golden-100/red-beans-and-rice-for-the-hall.jpg",
+      "thumbImage": "/images/thumbs/red-beans-and-rice-for-the-hall.jpg",
+      "mobileImage": "/images/mobile/red-beans-and-rice-for-the-hall.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -4211,6 +6362,66 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "sausage-peppers-on-buns",
+      "title": "Sausage & Peppers on Buns",
+      "protein": "pork",
+      "mealFormat": "handheld",
+      "cuisine": "italian",
+      "heroImage": "/images/hall-expansion/sausage-peppers-on-buns.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/sausage-peppers-on-buns.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/sausage-peppers-on-buns.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "sheet-pan-sausage-peppers",
+      "title": "Sausage and Peppers",
+      "protein": "pork",
+      "mealFormat": "sheet_pan",
+      "cuisine": "italian",
+      "heroImage": "/images/golden-100/sheet-pan-sausage-peppers.jpg",
+      "thumbImage": "/images/thumbs/sheet-pan-sausage-peppers.jpg",
+      "mobileImage": "/images/mobile/sheet-pan-sausage-peppers.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "sausage-egg-bake",
+      "title": "Sausage Egg Bake",
+      "protein": "pork",
+      "mealFormat": "bake",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/sausage-egg-bake.jpg",
+      "thumbImage": "/images/thumbs/sausage-egg-bake.jpg",
+      "mobileImage": "/images/mobile/sausage-egg-bake.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "sausage-peppers-onions",
+      "title": "Sausage Peppers and Onions",
+      "protein": "pork",
+      "mealFormat": "skillet",
+      "cuisine": "italian",
+      "heroImage": "/images/golden-100/sausage-peppers-onions.jpg",
+      "thumbImage": "/images/thumbs/sausage-peppers-onions.jpg",
+      "mobileImage": "/images/mobile/sausage-peppers-onions.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "shawarma-bar-night",
       "title": "Shawarma Bar Night",
       "protein": "chicken",
@@ -4227,28 +6438,13 @@
     {
       "source": "hall_catalog",
       "slug": "shawarma-chicken-rice-bowls",
-      "title": "Shawarma Chicken Rice Bowls",
+      "title": "Shawarma Chicken Bowls",
       "protein": "chicken",
       "mealFormat": "bowl",
       "cuisine": "Middle Eastern",
       "heroImage": "/images/golden-100/shawarma-chicken-rice-bowls.jpg",
       "thumbImage": "/images/thumbs/shawarma-chicken-rice-bowls.jpg",
       "mobileImage": "/images/mobile/shawarma-chicken-rice-bowls.jpg",
-      "mismatchConfidence": 0,
-      "pass": true,
-      "needsManualReview": false,
-      "mismatches": []
-    },
-    {
-      "source": "hall_catalog",
-      "slug": "sheet-pan-chicken-fajitas-lite",
-      "title": "Sheet Pan Chicken Fajitas Lite",
-      "protein": "chicken",
-      "mealFormat": "sheet_pan",
-      "cuisine": "Mexican",
-      "heroImage": "/images/golden-100/sheet-pan-chicken-fajitas-lite.jpg",
-      "thumbImage": "/images/thumbs/sheet-pan-chicken-fajitas-lite.jpg",
-      "mobileImage": "/images/mobile/sheet-pan-chicken-fajitas-lite.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -4264,6 +6460,66 @@
       "heroImage": "/images/hall-expansion/sheet-pan-meatball-marinara.jpg",
       "thumbImage": "/images/thumbs/hall-expansion/sheet-pan-meatball-marinara.jpg",
       "mobileImage": "/images/mobile/hall-expansion/sheet-pan-meatball-marinara.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "sheet-pan-parmesan-dijon-chicken-thigh-dinner",
+      "title": "Sheet Pan Parmesan-Dijon Chicken Thigh Dinner",
+      "protein": "chicken",
+      "mealFormat": "sheet_pan",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/sheet-pan-parmesan-dijon-chicken-thigh-dinner.jpg",
+      "thumbImage": "/images/thumbs/sheet-pan-parmesan-dijon-chicken-thigh-dinner.jpg",
+      "mobileImage": "/images/mobile/sheet-pan-parmesan-dijon-chicken-thigh-dinner.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "shepherds-pie",
+      "title": "Shepherd's Pie",
+      "protein": "beef",
+      "mealFormat": "plated_main",
+      "cuisine": "british",
+      "heroImage": "/images/golden-100/shepherds-pie.jpg",
+      "thumbImage": "/images/thumbs/shepherds-pie.jpg",
+      "mobileImage": "/images/mobile/shepherds-pie.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "grilled-shrimp-quinoa-bowls",
+      "title": "Shrimp and Quinoa Bowls",
+      "protein": "shrimp",
+      "mealFormat": "grill",
+      "cuisine": "Mediterranean",
+      "heroImage": "/images/golden-100/grilled-shrimp-quinoa-bowls.jpg",
+      "thumbImage": "/images/thumbs/grilled-shrimp-quinoa-bowls.jpg",
+      "mobileImage": "/images/mobile/grilled-shrimp-quinoa-bowls.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "slider-bar",
+      "title": "Slider Bar",
+      "protein": "beef",
+      "mealFormat": "burger",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/slider-bar.jpg",
+      "thumbImage": "/images/thumbs/slider-bar.jpg",
+      "mobileImage": "/images/mobile/slider-bar.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -4367,14 +6623,14 @@
     },
     {
       "source": "hall_catalog",
-      "slug": "smoky-lentil-kale-soup",
-      "title": "Smoky Lentil and Kale Soup",
-      "protein": "plant",
-      "mealFormat": "soup",
-      "cuisine": "American",
-      "heroImage": "/images/golden-100/smoky-lentil-kale-soup.jpg",
-      "thumbImage": "/images/thumbs/smoky-lentil-kale-soup.jpg",
-      "mobileImage": "/images/mobile/smoky-lentil-kale-soup.jpg",
+      "slug": "smoked-wings-white-sauce",
+      "title": "Smoked Wings with White Sauce",
+      "protein": "chicken",
+      "mealFormat": "grill",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/smoked-wings-white-sauce.jpg",
+      "thumbImage": "/images/thumbs/smoked-wings-white-sauce.jpg",
+      "mobileImage": "/images/mobile/smoked-wings-white-sauce.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -4397,14 +6653,14 @@
     },
     {
       "source": "hall_catalog",
-      "slug": "spanish-chicken-chorizo-rice",
-      "title": "Spanish Chicken and Chorizo Rice",
-      "protein": "chicken",
-      "mealFormat": "one_pot",
-      "cuisine": "Spanish",
-      "heroImage": "/images/golden-100/spanish-chicken-chorizo-rice.jpg",
-      "thumbImage": "/images/thumbs/spanish-chicken-chorizo-rice.jpg",
-      "mobileImage": "/images/mobile/spanish-chicken-chorizo-rice.jpg",
+      "slug": "spaghetti-aglio-e-olio-for-the-hall",
+      "title": "Spaghetti Aglio e Olio for the Hall",
+      "protein": "vegetarian",
+      "mealFormat": "pasta",
+      "cuisine": "italian",
+      "heroImage": "/images/golden-100/spaghetti-aglio-e-olio-for-the-hall.jpg",
+      "thumbImage": "/images/thumbs/spaghetti-aglio-e-olio-for-the-hall.jpg",
+      "mobileImage": "/images/mobile/spaghetti-aglio-e-olio-for-the-hall.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -4427,6 +6683,21 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "spicy-tomato-bisque-grilled-brie-toast",
+      "title": "Spicy Tomato Bisque with Grilled Brie Toast",
+      "protein": "vegetarian",
+      "mealFormat": "soup_chili",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/spicy-tomato-bisque-grilled-brie-toast.jpg",
+      "thumbImage": "/images/thumbs/spicy-tomato-bisque-grilled-brie-toast.jpg",
+      "mobileImage": "/images/mobile/spicy-tomato-bisque-grilled-brie-toast.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "station-cobb-salad",
       "title": "Station Cobb Salad",
       "protein": "chicken",
@@ -4442,6 +6713,66 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "steak-sandwiches",
+      "title": "Steak Sandwiches",
+      "protein": "beef",
+      "mealFormat": "sandwich",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/steak-sandwiches.jpg",
+      "thumbImage": "/images/thumbs/steak-sandwiches.jpg",
+      "mobileImage": "/images/mobile/steak-sandwiches.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "steak-tacos",
+      "title": "Steak Tacos",
+      "protein": "beef",
+      "mealFormat": "tacos",
+      "cuisine": "mexican",
+      "heroImage": "/images/golden-100/steak-tacos.jpg",
+      "thumbImage": "/images/thumbs/steak-tacos.jpg",
+      "mobileImage": "/images/mobile/steak-tacos.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "street-corn-chicken",
+      "title": "Street Corn Chicken Bowls",
+      "protein": "chicken",
+      "mealFormat": "bowl",
+      "cuisine": "mexican",
+      "heroImage": "/images/golden-100/street-corn-chicken.jpg",
+      "thumbImage": "/images/thumbs/street-corn-chicken.jpg",
+      "mobileImage": "/images/mobile/street-corn-chicken.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "grilled-corn-cotija",
+      "title": "Street Corn with Cotija",
+      "protein": "vegetarian",
+      "mealFormat": "grill",
+      "cuisine": "mexican",
+      "heroImage": "/images/golden-100/grilled-corn-cotija.jpg",
+      "thumbImage": "/images/thumbs/grilled-corn-cotija.jpg",
+      "mobileImage": "/images/mobile/grilled-corn-cotija.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "tabbouleh-chicken-bowls",
       "title": "Tabbouleh Chicken Bowls",
       "protein": "chicken",
@@ -4450,6 +6781,96 @@
       "heroImage": "/images/golden-100/tabbouleh-chicken-bowls.jpg",
       "thumbImage": "/images/thumbs/tabbouleh-chicken-bowls.jpg",
       "mobileImage": "/images/mobile/tabbouleh-chicken-bowls.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "hall-taco-bar",
+      "title": "Taco Bar",
+      "protein": "beef",
+      "mealFormat": "tacos",
+      "cuisine": "mexican",
+      "heroImage": "/images/golden-100/hall-taco-bar.jpg",
+      "thumbImage": "/images/thumbs/hall-taco-bar.jpg",
+      "mobileImage": "/images/mobile/hall-taco-bar.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "teriyaki-donburi",
+      "title": "Teriyaki Chicken Donburi",
+      "protein": "chicken",
+      "mealFormat": "bowl",
+      "cuisine": "japanese",
+      "heroImage": "/images/golden-100/teriyaki-donburi.jpg",
+      "thumbImage": "/images/thumbs/teriyaki-donburi.jpg",
+      "mobileImage": "/images/mobile/teriyaki-donburi.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "teriyaki-salmon-grill",
+      "title": "Teriyaki Salmon",
+      "protein": "seafood",
+      "mealFormat": "grill",
+      "cuisine": "japanese",
+      "heroImage": "/images/golden-100/teriyaki-salmon-grill.jpg",
+      "thumbImage": "/images/thumbs/teriyaki-salmon-grill.jpg",
+      "mobileImage": "/images/mobile/teriyaki-salmon-grill.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "texas-beef-ribs",
+      "title": "Texas-Style Beef Ribs",
+      "protein": "beef",
+      "mealFormat": "grill",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/texas-beef-ribs.jpg",
+      "thumbImage": "/images/thumbs/texas-beef-ribs.jpg",
+      "mobileImage": "/images/mobile/texas-beef-ribs.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "thai-basil-chicken",
+      "title": "Thai Basil Chicken",
+      "protein": "chicken",
+      "mealFormat": "skillet",
+      "cuisine": "thai",
+      "heroImage": "/images/golden-100/thai-basil-chicken.jpg",
+      "thumbImage": "/images/thumbs/thai-basil-chicken.jpg",
+      "mobileImage": "/images/mobile/thai-basil-chicken.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "tomato-soup-grilled-cheese-croutons",
+      "title": "Tomato Soup with Grilled Cheese Croutons",
+      "protein": "vegetarian",
+      "mealFormat": "soup_chili",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/tomato-soup-grilled-cheese-croutons.jpg",
+      "thumbImage": "/images/thumbs/tomato-soup-grilled-cheese-croutons.jpg",
+      "mobileImage": "/images/mobile/tomato-soup-grilled-cheese-croutons.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -4487,8 +6908,23 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "turkey-chili",
+      "title": "Turkey Chili",
+      "protein": "turkey",
+      "mealFormat": "soup_chili",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/turkey-chili.jpg",
+      "thumbImage": "/images/thumbs/turkey-chili.jpg",
+      "mobileImage": "/images/mobile/turkey-chili.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "turkey-lettuce-wrap-night",
-      "title": "Turkey Lettuce Wrap Night",
+      "title": "Turkey Lettuce Wraps",
       "protein": "turkey",
       "mealFormat": "handheld",
       "cuisine": "Asian-American",
@@ -4502,14 +6938,14 @@
     },
     {
       "source": "hall_catalog",
-      "slug": "turkey-quinoa-stuffed-peppers",
-      "title": "Turkey Quinoa Stuffed Peppers",
+      "slug": "turkey-meatball-zoodles",
+      "title": "Turkey Meatballs with Zucchini Noodles",
       "protein": "turkey",
-      "mealFormat": "bake",
-      "cuisine": "American",
-      "heroImage": "/images/golden-100/turkey-quinoa-stuffed-peppers.jpg",
-      "thumbImage": "/images/thumbs/turkey-quinoa-stuffed-peppers.jpg",
-      "mobileImage": "/images/mobile/turkey-quinoa-stuffed-peppers.jpg",
+      "mealFormat": "pasta",
+      "cuisine": "italian",
+      "heroImage": "/images/golden-100/turkey-meatball-zoodles.jpg",
+      "thumbImage": "/images/thumbs/turkey-meatball-zoodles.jpg",
+      "mobileImage": "/images/mobile/turkey-meatball-zoodles.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -4518,7 +6954,7 @@
     {
       "source": "hall_catalog",
       "slug": "turkey-shepherds-sweet-potato",
-      "title": "Turkey Shepherd's with Sweet Potato Top",
+      "title": "Turkey Shepherd's Pie",
       "protein": "turkey",
       "mealFormat": "bake",
       "cuisine": "British-American",
@@ -4577,6 +7013,21 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "creamy-tuscan-chicken",
+      "title": "Tuscan Chicken",
+      "protein": "chicken",
+      "mealFormat": "plated_main",
+      "cuisine": "italian",
+      "heroImage": "/images/golden-100/creamy-tuscan-chicken.jpg",
+      "thumbImage": "/images/thumbs/creamy-tuscan-chicken.jpg",
+      "mobileImage": "/images/mobile/creamy-tuscan-chicken.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "warm-spinach-chicken-salad",
       "title": "Warm Spinach Chicken Salad",
       "protein": "chicken",
@@ -4622,6 +7073,21 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "white-garlic-chicken-pizza",
+      "title": "White Garlic Chicken Pizza",
+      "protein": "chicken",
+      "mealFormat": "pizza",
+      "cuisine": "italian",
+      "heroImage": "/images/golden-100/white-garlic-chicken-pizza.jpg",
+      "thumbImage": "/images/thumbs/white-garlic-chicken-pizza.jpg",
+      "mobileImage": "/images/mobile/white-garlic-chicken-pizza.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "wonton-noodle-soup-crew",
       "title": "Wonton Noodle Soup for the Crew",
       "protein": "pork",
@@ -4638,7 +7104,7 @@
     {
       "source": "hall_catalog",
       "slug": "yogurt-marinated-grill-chicken",
-      "title": "Yogurt Marinated Grill Chicken",
+      "title": "Yogurt Marinated Chicken",
       "protein": "chicken",
       "mealFormat": "grill",
       "cuisine": "Middle Eastern",
@@ -4653,7 +7119,7 @@
     {
       "source": "hall_catalog",
       "slug": "zaatar-roasted-chicken-thighs",
-      "title": "Za'atar Roasted Chicken Thighs",
+      "title": "Za'atar Chicken Thighs",
       "protein": "chicken",
       "mealFormat": "roast",
       "cuisine": "Middle Eastern",
@@ -5168,16 +7634,11 @@
       "cuisine": "american",
       "heroImage": "/images/breakfast/bagel-lox-breakfast-board.jpg",
       "thumbImage": "/images/thumbs/breakfast/bagel-lox-breakfast-board.jpg",
-      "mobileImage": "",
+      "mobileImage": "/images/mobile/breakfast/bagel-lox-breakfast-board.jpg",
       "mismatchConfidence": 45,
       "pass": true,
       "needsManualReview": true,
       "mismatches": [
-        {
-          "code": "missing_locked_mobile",
-          "severity": "warning",
-          "message": "missing mobile crop image"
-        },
         {
           "code": "unapproved_image",
           "severity": "warning",
@@ -5279,8 +7740,8 @@
       "protein": "pork",
       "mealFormat": "pasta",
       "cuisine": "italian",
-      "heroImage": "/images/golden-100/mostaccioli-sausage-bake.jpg",
-      "thumbImage": "/images/thumbs/mostaccioli-sausage-bake.jpg",
+      "heroImage": "/images/hall-expansion/mostaccioli-sausage-bake.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/mostaccioli-sausage-bake.jpg",
       "mobileImage": "/images/mobile/mostaccioli-sausage-bake.jpg",
       "mismatchConfidence": 45,
       "pass": true,
@@ -5290,6 +7751,37 @@
           "code": "unapproved_image",
           "severity": "warning",
           "message": "image not marked approved — treat as manual review"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
+      "slug": "baked-oatmeal-mixed-berries",
+      "title": "Baked Oatmeal with Mixed Berries",
+      "protein": "mixed",
+      "mealFormat": "crew_feed",
+      "cuisine": "american",
+      "heroImage": "/images/breakfast/baked-oatmeal-mixed-berries.jpg",
+      "thumbImage": "/images/thumbs/breakfast/baked-oatmeal-mixed-berries.jpg",
+      "mobileImage": "/images/mobile/breakfast/baked-oatmeal-mixed-berries.jpg",
+      "mismatchConfidence": 88,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        },
+        {
+          "code": "path_title_conflict",
+          "severity": "critical",
+          "message": "hero path conflicts with meal title/format (Baked Oatmeal with Mixed Berries)"
+        },
+        {
+          "code": "format_mismatch",
+          "severity": "critical",
+          "message": "image depicts breakfast but meal is plated_main (Baked Oatmeal with Mixed Berries)"
         }
       ]
     },
@@ -5422,8 +7914,29 @@
       "protein": "beef",
       "mealFormat": "skillet",
       "cuisine": "mexican",
-      "heroImage": "/images/hall-expansion/enchilada-beef-skillet.jpg",
-      "thumbImage": "/images/thumbs/hall-expansion/enchilada-beef-skillet.jpg",
+      "heroImage": "/images/golden-100/enchilada-beef-skillet.jpg",
+      "thumbImage": "/images/thumbs/enchilada-beef-skillet.jpg",
+      "mobileImage": "/images/mobile/enchilada-beef-skillet.jpg",
+      "mismatchConfidence": 45,
+      "pass": true,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
+      "slug": "beef-gyros-for-the-hall",
+      "title": "Beef Gyros",
+      "protein": "beef",
+      "mealFormat": "handheld",
+      "cuisine": "greek",
+      "heroImage": "/images/hall-expansion/beef-gyros-for-the-hall.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/beef-gyros-for-the-hall.jpg",
       "mobileImage": "",
       "mismatchConfidence": 45,
       "pass": true,
@@ -5573,6 +8086,32 @@
       "pass": true,
       "needsManualReview": false,
       "mismatches": []
+    },
+    {
+      "source": "explore_curated",
+      "slug": "best-tuna-melt-for-the-hall",
+      "title": "Best Tuna Melt for the Hall (Diner Style)",
+      "protein": "seafood",
+      "mealFormat": "sandwich",
+      "cuisine": "american",
+      "heroImage": "/images/hall-expansion/best-tuna-melt-for-the-hall.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/best-tuna-melt-for-the-hall.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 45,
+      "pass": true,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        }
+      ]
     },
     {
       "source": "explore_curated",
@@ -6160,6 +8699,32 @@
     },
     {
       "source": "explore_curated",
+      "slug": "buffalo-chicken-wraps",
+      "title": "Buffalo Chicken Wraps",
+      "protein": "chicken",
+      "mealFormat": "handheld",
+      "cuisine": "american",
+      "heroImage": "/images/hall-expansion/buffalo-chicken-wraps.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/buffalo-chicken-wraps.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 45,
+      "pass": true,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
       "slug": "build-your-own-pho-bar",
       "title": "Build-Your-Own Pho Bar",
       "protein": "beef",
@@ -6254,22 +8819,12 @@
       "mealFormat": "plated_main",
       "cuisine": "indian",
       "heroImage": "/images/golden-100/butter-chicken.jpg",
-      "thumbImage": "",
-      "mobileImage": "",
+      "thumbImage": "/images/thumbs/butter-chicken.jpg",
+      "mobileImage": "/images/mobile/butter-chicken.jpg",
       "mismatchConfidence": 93,
       "pass": false,
       "needsManualReview": true,
       "mismatches": [
-        {
-          "code": "missing_locked_thumb",
-          "severity": "warning",
-          "message": "missing thumbnail image"
-        },
-        {
-          "code": "missing_locked_mobile",
-          "severity": "warning",
-          "message": "missing mobile crop image"
-        },
         {
           "code": "unapproved_image",
           "severity": "warning",
@@ -6361,8 +8916,8 @@
       "protein": "chicken",
       "mealFormat": "skillet",
       "cuisine": "cajun",
-      "heroImage": "/images/golden-100/cajun-chicken-rice-skillet.jpg",
-      "thumbImage": "/images/thumbs/cajun-chicken-rice-skillet.jpg",
+      "heroImage": "/images/hall-expansion/cajun-chicken-rice-skillet.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/cajun-chicken-rice-skillet.jpg",
       "mobileImage": "/images/mobile/cajun-chicken-rice-skillet.jpg",
       "mismatchConfidence": 45,
       "pass": true,
@@ -6780,6 +9335,32 @@
     },
     {
       "source": "explore_curated",
+      "slug": "chicken-caesar-wraps",
+      "title": "Chicken Caesar Wraps",
+      "protein": "chicken",
+      "mealFormat": "handheld",
+      "cuisine": "american",
+      "heroImage": "/images/hall-expansion/chicken-caesar-wraps.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/chicken-caesar-wraps.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 45,
+      "pass": true,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
       "slug": "enchilada-casserole",
       "title": "Chicken Enchilada Casserole",
       "protein": "chicken",
@@ -6964,28 +9545,44 @@
     },
     {
       "source": "explore_curated",
+      "slug": "chicken-shawarma-pitas",
+      "title": "Chicken Shawarma Pitas",
+      "protein": "chicken",
+      "mealFormat": "handheld",
+      "cuisine": "other",
+      "heroImage": "/images/hall-expansion/chicken-shawarma-pitas.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/chicken-shawarma-pitas.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 45,
+      "pass": true,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
       "slug": "chicken-tikka-masala",
       "title": "Chicken Tikka Masala",
       "protein": "chicken",
       "mealFormat": "plated_main",
       "cuisine": "indian",
       "heroImage": "/images/golden-100/chicken-tikka-masala.jpg",
-      "thumbImage": "",
-      "mobileImage": "",
+      "thumbImage": "/images/thumbs/chicken-tikka-masala.jpg",
+      "mobileImage": "/images/mobile/chicken-tikka-masala.jpg",
       "mismatchConfidence": 93,
       "pass": false,
       "needsManualReview": true,
       "mismatches": [
-        {
-          "code": "missing_locked_thumb",
-          "severity": "warning",
-          "message": "missing thumbnail image"
-        },
-        {
-          "code": "missing_locked_mobile",
-          "severity": "warning",
-          "message": "missing mobile crop image"
-        },
         {
           "code": "unapproved_image",
           "severity": "warning",
@@ -7381,6 +9978,32 @@
     },
     {
       "source": "explore_curated",
+      "slug": "classic-patty-melt-for-the-crew",
+      "title": "Classic Patty Melt for the Crew",
+      "protein": "beef",
+      "mealFormat": "sandwich",
+      "cuisine": "american",
+      "heroImage": "/images/hall-expansion/classic-patty-melt-for-the-crew.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/classic-patty-melt-for-the-crew.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 45,
+      "pass": true,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
       "slug": "pepperoni-pizza-night",
       "title": "Classic Pepperoni Pizza",
       "protein": "pork",
@@ -7654,9 +10277,9 @@
       "protein": "other",
       "mealFormat": "crew_feed",
       "cuisine": "american",
-      "heroImage": "/images/golden-100/country-fried-steak-eggs.jpg",
-      "thumbImage": "/images/thumbs/country-fried-steak-eggs.jpg",
-      "mobileImage": "/images/mobile/country-fried-steak-eggs.jpg",
+      "heroImage": "/images/breakfast/country-fried-steak-eggs.jpg",
+      "thumbImage": "/images/thumbs/breakfast/country-fried-steak-eggs.jpg",
+      "mobileImage": "/images/mobile/breakfast/country-fried-steak-eggs.jpg",
       "mismatchConfidence": 90,
       "pass": false,
       "needsManualReview": true,
@@ -8922,6 +11545,32 @@
     },
     {
       "source": "explore_curated",
+      "slug": "greek-chicken-pitas",
+      "title": "Greek Chicken Pitas",
+      "protein": "chicken",
+      "mealFormat": "handheld",
+      "cuisine": "greek",
+      "heroImage": "/images/hall-expansion/greek-chicken-pitas.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/greek-chicken-pitas.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 45,
+      "pass": true,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
       "slug": "greek-chicken-bowls",
       "title": "Greek Chicken Power Bowls",
       "protein": "chicken",
@@ -9074,10 +11723,16 @@
       "heroImage": "/images/golden-100/flank-chimichurri.jpg",
       "thumbImage": "/images/thumbs/flank-chimichurri.jpg",
       "mobileImage": "/images/mobile/flank-chimichurri.jpg",
-      "mismatchConfidence": 0,
+      "mismatchConfidence": 45,
       "pass": true,
-      "needsManualReview": false,
-      "mismatches": []
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        }
+      ]
     },
     {
       "source": "explore_curated",
@@ -9219,6 +11874,32 @@
     },
     {
       "source": "explore_curated",
+      "slug": "hall-blt-sandwich-feed",
+      "title": "Hall BLT Sandwich Feed",
+      "protein": "pork",
+      "mealFormat": "sandwich",
+      "cuisine": "american",
+      "heroImage": "/images/hall-expansion/hall-blt-sandwich-feed.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/hall-blt-sandwich-feed.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 45,
+      "pass": true,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
       "slug": "hall-breakfast-burritos",
       "title": "Hall Breakfast Burritos",
       "protein": "mixed",
@@ -9305,10 +11986,16 @@
       "heroImage": "/images/golden-100/chicken-caesar.jpg",
       "thumbImage": "/images/thumbs/chicken-caesar.jpg",
       "mobileImage": "/images/mobile/chicken-caesar.jpg",
-      "mismatchConfidence": 0,
+      "mismatchConfidence": 45,
       "pass": true,
-      "needsManualReview": false,
-      "mismatches": []
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        }
+      ]
     },
     {
       "source": "explore_curated",
@@ -9374,8 +12061,8 @@
       "protein": "other",
       "mealFormat": "crew_feed",
       "cuisine": "american",
-      "heroImage": "/images/golden-100/hall-sausage-biscuits-gravy.jpg",
-      "thumbImage": "/images/thumbs/hall-sausage-biscuits-gravy.jpg",
+      "heroImage": "/images/breakfast/hall-sausage-biscuits-gravy.jpg",
+      "thumbImage": "/images/thumbs/breakfast/hall-sausage-biscuits-gravy.jpg",
       "mobileImage": "/images/mobile/hall-sausage-biscuits-gravy.jpg",
       "mismatchConfidence": 90,
       "pass": false,
@@ -9385,6 +12072,16 @@
           "code": "unapproved_image",
           "severity": "warning",
           "message": "image not marked approved — treat as manual review"
+        },
+        {
+          "code": "path_title_conflict",
+          "severity": "critical",
+          "message": "hero path conflicts with meal title/format (Hall Sausage Biscuits & Gravy)"
+        },
+        {
+          "code": "format_mismatch",
+          "severity": "critical",
+          "message": "image depicts breakfast but meal is plated_main (Hall Sausage Biscuits & Gravy)"
         },
         {
           "code": "protein_mismatch",
@@ -9509,8 +12206,8 @@
       "protein": "other",
       "mealFormat": "crew_feed",
       "cuisine": "american",
-      "heroImage": "/images/golden-100/ham-cheddar-egg-bake.jpg",
-      "thumbImage": "/images/thumbs/ham-cheddar-egg-bake.jpg",
+      "heroImage": "/images/breakfast/ham-cheddar-egg-bake.jpg",
+      "thumbImage": "/images/thumbs/breakfast/ham-cheddar-egg-bake.jpg",
       "mobileImage": "/images/mobile/ham-cheddar-egg-bake.jpg",
       "mismatchConfidence": 90,
       "pass": false,
@@ -9520,6 +12217,16 @@
           "code": "unapproved_image",
           "severity": "warning",
           "message": "image not marked approved — treat as manual review"
+        },
+        {
+          "code": "path_title_conflict",
+          "severity": "critical",
+          "message": "hero path conflicts with meal title/format (Ham & Cheddar Egg Bake)"
+        },
+        {
+          "code": "format_mismatch",
+          "severity": "critical",
+          "message": "image depicts breakfast but meal is breakfast (Ham & Cheddar Egg Bake)"
         },
         {
           "code": "protein_mismatch",
@@ -9535,8 +12242,8 @@
       "protein": "other",
       "mealFormat": "breakfast_plate",
       "cuisine": "american",
-      "heroImage": "/images/golden-100/ham-pepper-skillet.jpg",
-      "thumbImage": "/images/thumbs/ham-pepper-skillet.jpg",
+      "heroImage": "/images/breakfast/ham-pepper-skillet.jpg",
+      "thumbImage": "/images/thumbs/breakfast/ham-pepper-skillet.jpg",
       "mobileImage": "/images/mobile/ham-pepper-skillet.jpg",
       "mismatchConfidence": 90,
       "pass": false,
@@ -10284,17 +12991,27 @@
       "protein": "mixed",
       "mealFormat": "crew_feed",
       "cuisine": "american",
-      "heroImage": "/images/golden-100/johnnycakes-with-syrup.jpg",
-      "thumbImage": "/images/thumbs/johnnycakes-with-syrup.jpg",
-      "mobileImage": "/images/mobile/johnnycakes-with-syrup.jpg",
-      "mismatchConfidence": 45,
-      "pass": true,
+      "heroImage": "/images/breakfast/johnnycakes-with-syrup.jpg",
+      "thumbImage": "/images/thumbs/breakfast/johnnycakes-with-syrup.jpg",
+      "mobileImage": "/images/mobile/breakfast/johnnycakes-with-syrup.jpg",
+      "mismatchConfidence": 88,
+      "pass": false,
       "needsManualReview": true,
       "mismatches": [
         {
           "code": "unapproved_image",
           "severity": "warning",
           "message": "image not marked approved — treat as manual review"
+        },
+        {
+          "code": "path_title_conflict",
+          "severity": "critical",
+          "message": "hero path conflicts with meal title/format (Johnnycakes with Maple Syrup)"
+        },
+        {
+          "code": "format_mismatch",
+          "severity": "critical",
+          "message": "image depicts breakfast but meal is plated_main (Johnnycakes with Maple Syrup)"
         }
       ]
     },
@@ -10984,22 +13701,11 @@
       "cuisine": "american",
       "heroImage": "/images/breakfast/lumberjack-breakfast-platter.jpg",
       "thumbImage": "/images/thumbs/breakfast/lumberjack-breakfast-platter.jpg",
-      "mobileImage": "",
-      "mismatchConfidence": 45,
+      "mobileImage": "/images/mobile/breakfast/lumberjack-breakfast-platter.jpg",
+      "mismatchConfidence": 0,
       "pass": true,
-      "needsManualReview": true,
-      "mismatches": [
-        {
-          "code": "missing_locked_mobile",
-          "severity": "warning",
-          "message": "missing mobile crop image"
-        },
-        {
-          "code": "unapproved_image",
-          "severity": "warning",
-          "message": "image not marked approved — treat as manual review"
-        }
-      ]
+      "needsManualReview": false,
+      "mismatches": []
     },
     {
       "source": "explore_curated",
@@ -11364,6 +14070,42 @@
           "code": "unapproved_image",
           "severity": "warning",
           "message": "image not marked approved — treat as manual review"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
+      "slug": "menemen-for-the-crew",
+      "title": "Menemen for the Crew",
+      "protein": "other",
+      "mealFormat": "crew_feed",
+      "cuisine": "american",
+      "heroImage": "/images/breakfast/menemen-for-the-crew.jpg",
+      "thumbImage": "/images/thumbs/breakfast/menemen-for-the-crew.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 88,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        },
+        {
+          "code": "path_title_conflict",
+          "severity": "critical",
+          "message": "hero path conflicts with meal title/format (Menemen for the Crew)"
+        },
+        {
+          "code": "format_mismatch",
+          "severity": "critical",
+          "message": "image depicts breakfast but meal is plated_main (Menemen for the Crew)"
         }
       ]
     },
@@ -11988,9 +14730,9 @@
       "protein": "beef",
       "mealFormat": "skillet",
       "cuisine": "other",
-      "heroImage": "/images/golden-100/pepper-steak-onions.jpg",
-      "thumbImage": "/images/thumbs/pepper-steak-onions.jpg",
-      "mobileImage": "/images/mobile/pepper-steak-onions.jpg",
+      "heroImage": "/images/hall-expansion/pepper-steak-onions.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/pepper-steak-onions.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/pepper-steak-onions.jpg",
       "mismatchConfidence": 45,
       "pass": true,
       "needsManualReview": true,
@@ -12669,8 +15411,8 @@
       "protein": "beef",
       "mealFormat": "pasta",
       "cuisine": "italian",
-      "heroImage": "/images/golden-100/rigatoni-meat-sauce-batch.jpg",
-      "thumbImage": "/images/thumbs/rigatoni-meat-sauce-batch.jpg",
+      "heroImage": "/images/hall-expansion/rigatoni-meat-sauce-batch.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/rigatoni-meat-sauce-batch.jpg",
       "mobileImage": "/images/mobile/rigatoni-meat-sauce-batch.jpg",
       "mismatchConfidence": 45,
       "pass": true,
@@ -12803,13 +15545,39 @@
     },
     {
       "source": "explore_curated",
+      "slug": "sausage-peppers-on-buns",
+      "title": "Sausage & Peppers on Buns",
+      "protein": "pork",
+      "mealFormat": "handheld",
+      "cuisine": "italian",
+      "heroImage": "/images/hall-expansion/sausage-peppers-on-buns.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/sausage-peppers-on-buns.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 45,
+      "pass": true,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
       "slug": "sausage-egg-cheese-sandwiches",
       "title": "Sausage Egg & Cheese Sandwiches",
       "protein": "other",
       "mealFormat": "breakfast_plate",
       "cuisine": "american",
-      "heroImage": "/images/golden-100/sausage-egg-cheese-sandwiches.jpg",
-      "thumbImage": "/images/thumbs/sausage-egg-cheese-sandwiches.jpg",
+      "heroImage": "/images/breakfast/sausage-egg-cheese-sandwiches.jpg",
+      "thumbImage": "/images/thumbs/breakfast/sausage-egg-cheese-sandwiches.jpg",
       "mobileImage": "/images/mobile/sausage-egg-cheese-sandwiches.jpg",
       "mismatchConfidence": 90,
       "pass": false,
@@ -12819,6 +15587,16 @@
           "code": "unapproved_image",
           "severity": "warning",
           "message": "image not marked approved — treat as manual review"
+        },
+        {
+          "code": "path_title_conflict",
+          "severity": "critical",
+          "message": "hero path conflicts with meal title/format (Sausage Egg & Cheese Sandwiches)"
+        },
+        {
+          "code": "format_mismatch",
+          "severity": "critical",
+          "message": "image depicts breakfast but meal is sandwich (Sausage Egg & Cheese Sandwiches)"
         },
         {
           "code": "protein_mismatch",
@@ -12886,17 +15664,27 @@
       "protein": "other",
       "mealFormat": "crew_feed",
       "cuisine": "american",
-      "heroImage": "/images/golden-100/scrapple-and-eggs-skillet.jpg",
-      "thumbImage": "/images/thumbs/scrapple-and-eggs-skillet.jpg",
-      "mobileImage": "/images/mobile/scrapple-and-eggs-skillet.jpg",
-      "mismatchConfidence": 45,
-      "pass": true,
+      "heroImage": "/images/breakfast/scrapple-and-eggs-skillet.jpg",
+      "thumbImage": "/images/thumbs/breakfast/scrapple-and-eggs-skillet.jpg",
+      "mobileImage": "/images/mobile/breakfast/scrapple-and-eggs-skillet.jpg",
+      "mismatchConfidence": 88,
+      "pass": false,
       "needsManualReview": true,
       "mismatches": [
         {
           "code": "unapproved_image",
           "severity": "warning",
           "message": "image not marked approved — treat as manual review"
+        },
+        {
+          "code": "path_title_conflict",
+          "severity": "critical",
+          "message": "hero path conflicts with meal title/format (Scrapple and Eggs Skillet)"
+        },
+        {
+          "code": "format_mismatch",
+          "severity": "critical",
+          "message": "image depicts breakfast but meal is breakfast (Scrapple and Eggs Skillet)"
         }
       ]
     },
@@ -12929,6 +15717,42 @@
       "pass": true,
       "needsManualReview": false,
       "mismatches": []
+    },
+    {
+      "source": "explore_curated",
+      "slug": "shakshuka-for-the-hall",
+      "title": "Shakshuka for the Hall",
+      "protein": "other",
+      "mealFormat": "crew_feed",
+      "cuisine": "american",
+      "heroImage": "/images/breakfast/shakshuka-for-the-hall.jpg",
+      "thumbImage": "/images/thumbs/breakfast/shakshuka-for-the-hall.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 88,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        },
+        {
+          "code": "path_title_conflict",
+          "severity": "critical",
+          "message": "hero path conflicts with meal title/format (Shakshuka for the Hall)"
+        },
+        {
+          "code": "format_mismatch",
+          "severity": "critical",
+          "message": "image depicts breakfast but meal is plated_main (Shakshuka for the Hall)"
+        }
+      ]
     },
     {
       "source": "explore_curated",
@@ -13275,16 +16099,11 @@
       "cuisine": "american",
       "heroImage": "/images/breakfast/shrimp-and-grits-breakfast.jpg",
       "thumbImage": "/images/thumbs/breakfast/shrimp-and-grits-breakfast.jpg",
-      "mobileImage": "",
+      "mobileImage": "/images/mobile/breakfast/shrimp-and-grits-breakfast.jpg",
       "mismatchConfidence": 90,
       "pass": false,
       "needsManualReview": true,
       "mismatches": [
-        {
-          "code": "missing_locked_mobile",
-          "severity": "warning",
-          "message": "missing mobile crop image"
-        },
         {
           "code": "unapproved_image",
           "severity": "warning",
@@ -13560,8 +16379,8 @@
       "protein": "beef",
       "mealFormat": "smoker",
       "cuisine": "american",
-      "heroImage": "/images/golden-100/smoked-meatloaf.jpg",
-      "thumbImage": "/images/thumbs/smoked-meatloaf.jpg",
+      "heroImage": "/images/hall-expansion/smoked-meatloaf.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/smoked-meatloaf.jpg",
       "mobileImage": "/images/mobile/smoked-meatloaf.jpg",
       "mismatchConfidence": 0,
       "pass": true,

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "contentVersion": 2,
-  "generatedAt": "2026-06-04T19:44:43.451Z",
-  "recipeCount": 50,
+  "generatedAt": "2026-06-04T20:47:19.400Z",
+  "recipeCount": 45,
   "recipes": [
     {
       "slug": "lemon-garlic-chicken-tray",
@@ -66,74 +66,6 @@
         "herb baked salmon tray",
         "salmon",
         "American",
-        "sheet pan",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "lean-turkey-bean-chili",
-      "title": "Lean Turkey and Bean Chili",
-      "subtitle": "Double-batch crock chili with kidney beans and fire-roasted tomatoes",
-      "category": "healthy_performance",
-      "cuisine": "American",
-      "protein": "turkey",
-      "mealFormat": "slow_cooker",
-      "cookTime": 240,
-      "difficulty": "easy",
-      "heroImage": "/images/golden-100/lean-turkey-bean-chili.jpg",
-      "thumbImage": "/images/thumbs/lean-turkey-bean-chili.jpg",
-      "tags": [
-        "protein:turkey",
-        "format:slow_cooker",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "lean turkey and bean chili",
-        "lean turkey bean chili",
-        "turkey",
-        "American",
-        "slow cooker",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "sheet-pan-chicken-fajitas-lite",
-      "title": "Chicken Fajitas",
-      "subtitle": "Charred peppers and onions with spiced chicken strips—no heavy oil",
-      "category": "healthy_performance",
-      "cuisine": "Mexican",
-      "protein": "chicken",
-      "mealFormat": "sheet_pan",
-      "cookTime": 22,
-      "difficulty": "easy",
-      "heroImage": "/images/golden-100/sheet-pan-chicken-fajitas-lite.jpg",
-      "thumbImage": "/images/thumbs/sheet-pan-chicken-fajitas-lite.jpg",
-      "tags": [
-        "protein:chicken",
-        "format:sheet_pan",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "chicken fajitas",
-        "sheet pan chicken fajitas lite",
-        "chicken",
-        "Mexican",
         "sheet pan",
         "performance meal",
         "firefighter healthy"
@@ -979,40 +911,6 @@
       ]
     },
     {
-      "slug": "lean-beef-broccoli-rice",
-      "title": "Beef and Broccoli Rice",
-      "subtitle": "Flat-top stir-fry with flank steak, broccoli, and brown rice",
-      "category": "healthy_performance",
-      "cuisine": "Chinese-American",
-      "protein": "beef",
-      "mealFormat": "stir_fry",
-      "cookTime": 15,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/lean-beef-broccoli-rice.jpg",
-      "thumbImage": "/images/thumbs/lean-beef-broccoli-rice.jpg",
-      "tags": [
-        "protein:beef",
-        "format:stir_fry",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "beef and broccoli rice",
-        "lean beef broccoli rice",
-        "beef",
-        "Chinese-American",
-        "stir fry",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
       "slug": "turkey-lettuce-wrap-night",
       "title": "Turkey Lettuce Wraps",
       "subtitle": "Ginger-garlic ground turkey in crisp romaine with hoisin and peanuts",
@@ -1318,40 +1216,6 @@
       ]
     },
     {
-      "slug": "italian-sausage-veg-sheet-pan",
-      "title": "Sausage and Peppers",
-      "subtitle": "Sweet Italian sausage with roasted peppers, onion, and zucchini",
-      "category": "healthy_performance",
-      "cuisine": "Italian",
-      "protein": "pork",
-      "mealFormat": "sheet_pan",
-      "cookTime": 28,
-      "difficulty": "easy",
-      "heroImage": "/images/golden-100/italian-sausage-veg-sheet-pan.jpg",
-      "thumbImage": "/images/thumbs/italian-sausage-veg-sheet-pan.jpg",
-      "tags": [
-        "protein:pork",
-        "format:sheet_pan",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "sausage and peppers",
-        "italian sausage veg sheet pan",
-        "pork",
-        "Italian",
-        "sheet pan",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
       "slug": "turkey-zoodle-bolognese",
       "title": "Turkey Zoodle Bolognese",
       "subtitle": "Lean turkey ragu over spiralized zucchini with parmesan",
@@ -1581,40 +1445,6 @@
         "chicken",
         "Mexican",
         "slow cooker",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "turkey-quinoa-stuffed-peppers",
-      "title": "Turkey Stuffed Peppers",
-      "subtitle": "Colorful bell peppers filled with lean turkey, quinoa, and tomato",
-      "category": "healthy_performance",
-      "cuisine": "American",
-      "protein": "turkey",
-      "mealFormat": "bake",
-      "cookTime": 45,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/turkey-quinoa-stuffed-peppers.jpg",
-      "thumbImage": "/images/thumbs/turkey-quinoa-stuffed-peppers.jpg",
-      "tags": [
-        "protein:turkey",
-        "format:bake",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "turkey stuffed peppers",
-        "turkey quinoa stuffed peppers",
-        "turkey",
-        "American",
-        "bake",
         "performance meal",
         "firefighter healthy"
       ]

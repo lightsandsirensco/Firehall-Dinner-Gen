@@ -147,6 +147,7 @@
     }
   },
   "heroImage": "/images/golden-100/mediterranean-chickpea.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Mediterranean Chickpea Bowls on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/mediterranean-chickpea.jpg",
   "thumbImage": "/images/thumbs/mediterranean-chickpea.jpg",
   "railImage": "/images/rails/mediterranean-chickpea.jpg",
@@ -164,15 +165,15 @@
     "golden_100"
   ],
   "relatedSlugs": [
+    "pasta-e-ceci-for-the-hall",
     "ginger-salmon-bowls",
     "greek-chicken-bowls",
     "performance-burrito-bowls",
     "lemon-herb-salmon",
-    "french-toast-casserole",
-    "mac-and-cheese-bake"
+    "french-toast-casserole"
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.403Z",
+  "generatedAt": "2026-06-04T20:45:42.243Z",
   "contentVersion": 2
 }

@@ -13,10 +13,10 @@
   "cookTime": 25,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 418,
-  "protein": 19,
-  "carbs": 9,
-  "fats": 35,
+  "calories": 420,
+  "protein": 18,
+  "carbs": 42,
+  "fats": 20,
   "tags": [
     "protein:pork",
     "format:sheet_pan",
@@ -107,69 +107,34 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Game Day Pizza Sliders in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch pork. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Prep the roll base",
       "instruction": "Slice entire roll packages horizontally without separating individual rolls. Place bottom halves in two foil-lined 9x13 pans so they fit snugly side by side.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Layer the filling",
       "instruction": "Spread pizza sauce on bottom halves, then layer pepperoni and mozzarella evenly so every slider gets cheese and meat—not just the center pieces.",
       "minutes": 8,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Cover and bake covered",
       "instruction": "Replace top halves, cover tightly with foil, and bake at 350°F for 15 minutes until cheese melts and rolls soften into one connected block. Target oven/smoker temperature: 350°F.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Garlic butter finish",
       "instruction": "Mix melted butter with garlic, oregano, Parmesan, and red pepper flakes. Brush over tops and bake uncovered 8–10 minutes at 375°F until golden brown. Target oven/smoker temperature: 375°F.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F with a 3-minute rest. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 9,
-      "title": "Portion and open the line",
-      "instruction": "Portion Game Day Pizza Sliders onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
+      "stepNumber": 5,
       "title": "Slice and serve hot",
       "instruction": "Rest 3 minutes, then slice along individual roll seams with a serrated knife. Serve with warm marinara for dunking while cheese is still stretchy.",
       "minutes": 5,
@@ -194,25 +159,11 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 418,
-    "protein": 19,
-    "carbs": 9,
-    "fats": 35,
-    "label": "per serving (hall portion)",
-    "source": "calculated",
-    "filterFlags": {
-      "highProtein": false,
-      "under700Calories": true,
-      "under30gFat": false,
-      "highCarb": false,
-      "lowCarb": true,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": false,
-      "lighterOption": false,
-      "performanceMeal": false
-    }
+    "calories": 420,
+    "protein": 18,
+    "carbs": 42,
+    "fats": 20,
+    "label": "~420 cal/serving · 18g protein · 2g fiber (est.)"
   },
   "heroImage": "/images/hall-expansion/game-day-pizza-sliders.jpg",
   "heroImageAlt": "Game Day Pizza Sliders — crew-sized firehall meal",
@@ -232,6 +183,7 @@
     "jalapeno-popper-dip",
     "philly-cheesesteak-sliders"
   ],
-  "generatedAt": "2026-05-31T01:50:00.915Z",
+  "sourceUrl": "",
+  "generatedAt": "2026-06-04T20:47:21.929Z",
   "contentVersion": 2
 }

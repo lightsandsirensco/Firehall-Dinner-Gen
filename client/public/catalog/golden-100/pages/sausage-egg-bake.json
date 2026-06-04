@@ -134,6 +134,7 @@
     }
   },
   "heroImage": "/images/golden-100/sausage-egg-bake.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Sausage Egg Bake on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/sausage-egg-bake.jpg",
   "thumbImage": "/images/thumbs/sausage-egg-bake.jpg",
   "railImage": "/images/rails/sausage-egg-bake.jpg",
@@ -151,15 +152,15 @@
     "golden_100"
   ],
   "relatedSlugs": [
-    "pulled-pork-mac",
-    "carolina-mustard-pork",
     "grilled-pork-chops",
     "honey-garlic-pork-tenderloin",
     "memphis-dry-rub-ribs",
-    "bacon-egg-hash"
+    "breakfast-sausage-pizza",
+    "detroit-style-pizza",
+    "meat-lovers-sheet-pizza"
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.490Z",
+  "generatedAt": "2026-06-04T20:45:42.316Z",
   "contentVersion": 2
 }

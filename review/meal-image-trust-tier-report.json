@@ -1,0 +1,145 @@
+{
+  "generatedAt": "2026-06-04T19:42:42.609Z",
+  "totals": {
+    "scanned": 347,
+    "p0": 0,
+    "p1": 0,
+    "p2": 347,
+    "duplicateHeroGroups": 7,
+    "highRiskDuplicateGroups": 5
+  },
+  "p0": [],
+  "p1": [],
+  "duplicateGroups": [
+    {
+      "hash": "b2b94642354a7c7336b11cebc0923bca",
+      "count": 2,
+      "slugs": [
+        "bbq-chicken-pizza",
+        "buttermilk-pancakes"
+      ],
+      "titles": [
+        "BBQ Chicken Pizza",
+        "Buttermilk Pancakes for the Crew"
+      ],
+      "collections": [
+        "golden_100",
+        "breakfast"
+      ],
+      "p0Risk": true
+    },
+    {
+      "hash": "b0d6a0efa00725474c19264c88a19071",
+      "count": 2,
+      "slugs": [
+        "breakfast-burrito-bar",
+        "bacon-hash-burritos"
+      ],
+      "titles": [
+        "Breakfast Burrito Bar",
+        "Bacon Hash Burritos"
+      ],
+      "collections": [
+        "golden_100",
+        "breakfast"
+      ],
+      "p0Risk": false
+    },
+    {
+      "hash": "ef7f3e7962468e0e5c21a5558786ae52",
+      "count": 2,
+      "slugs": [
+        "breakfast-sausage-pizza",
+        "french-toast-casserole"
+      ],
+      "titles": [
+        "Breakfast Sausage Gravy Pizza",
+        "French Toast Casserole"
+      ],
+      "collections": [
+        "golden_100",
+        "golden_100"
+      ],
+      "p0Risk": true
+    },
+    {
+      "hash": "b87b1a17f8d9751a1653d0520921f59f",
+      "count": 2,
+      "slugs": [
+        "chicken-alfredo-bake",
+        "pancake-short-stack"
+      ],
+      "titles": [
+        "Chicken Alfredo Bake",
+        "Pancake Short Stack"
+      ],
+      "collections": [
+        "golden_100",
+        "golden_100"
+      ],
+      "p0Risk": true
+    },
+    {
+      "hash": "8343183d3ff79fdbb516b6c4b596b0ff",
+      "count": 2,
+      "slugs": [
+        "chorizo-breakfast-tacos",
+        "pepper-steak-onions"
+      ],
+      "titles": [
+        "Chorizo Breakfast Tacos",
+        "Pepper Steak with Onions"
+      ],
+      "collections": [
+        "golden_100",
+        "hall_expansion"
+      ],
+      "p0Risk": true
+    },
+    {
+      "hash": "04e31399d30dc46c11ef7f8fdf2ac010",
+      "count": 2,
+      "slugs": [
+        "garlic-butter-shrimp",
+        "garlic-butter-shrimp-skewers"
+      ],
+      "titles": [
+        "Garlic Butter Shrimp",
+        "Garlic Tarragon Shrimp Skewers"
+      ],
+      "collections": [
+        "golden_100",
+        "bbq"
+      ],
+      "p0Risk": false
+    },
+    {
+      "hash": "67ea7cf0b01653d3d8132fa4ab1412ff",
+      "count": 2,
+      "slugs": [
+        "cast-iron-breakfast-skillet",
+        "ham-pepper-skillet"
+      ],
+      "titles": [
+        "Crispy Garlic Sausage",
+        "Ham & Pepper Breakfast Skillet"
+      ],
+      "collections": [
+        "breakfast",
+        "breakfast"
+      ],
+      "p0Risk": true
+    }
+  ],
+  "chickenBowlDuplicateGroups": [],
+  "warmSpinach": {
+    "tier": "P2",
+    "slug": "warm-spinach-chicken-salad",
+    "title": "Warm Spinach Chicken Salad",
+    "collection": "hall_expansion",
+    "heroImage": "/images/hall-expansion/warm-spinach-chicken-salad.jpg",
+    "thumbImage": "/images/thumbs/hall-expansion/warm-spinach-chicken-salad.jpg",
+    "reasons": [],
+    "heroMd5": "8d143aa7d93e82bfad978b801ef04b40"
+  }
+}

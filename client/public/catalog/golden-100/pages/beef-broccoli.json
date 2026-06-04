@@ -139,6 +139,7 @@
     }
   },
   "heroImage": "/images/golden-100/beef-broccoli.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Beef and Broccoli on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/beef-broccoli.jpg",
   "thumbImage": "/images/thumbs/beef-broccoli.jpg",
   "railImage": "/images/rails/beef-broccoli.jpg",
@@ -165,6 +166,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.423Z",
+  "generatedAt": "2026-06-04T20:45:42.261Z",
   "contentVersion": 2
 }

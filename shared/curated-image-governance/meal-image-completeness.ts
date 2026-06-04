@@ -41,6 +41,7 @@ const SIDE_STOP = new Set([
 function normalizePhrase(raw: string): string {
   return raw
     .replace(/\([^)]*\)/g, " ")
+    .replace(/[^\w\s-]/g, " ")
     .replace(/\s+/g, " ")
     .trim()
     .toLowerCase();
@@ -67,6 +68,17 @@ function titleIngredientPhrases(title: string): string[] {
   if (/\bpotato wedges?\b/i.test(t)) phrases.push("potato wedges");
   if (/\bmac\b.*\bcheese\b/i.test(t)) phrases.push("mac and cheese");
   if (/\brice\b/i.test(t) && /\bpeas\b/i.test(t)) phrases.push("rice and peas");
+
+  const parenInner = t.match(/\(([^)]+)\)/)?.[1];
+  if (parenInner) {
+    const inner = normalizePhrase(parenInner);
+    if (inner) phrases.push(inner);
+    if (/\bchickpea/i.test(inner)) phrases.push("chickpeas");
+    if (/\bpasta|ceci/i.test(inner) || /\bceci\b/i.test(t)) phrases.push("pasta");
+  }
+  if (/\bceci\b/i.test(t)) phrases.push("chickpeas", "pasta");
+  if (/\bchimichurri\b/i.test(t)) phrases.push("chimichurri");
+  if (/\bquinoa\b/i.test(t)) phrases.push("quinoa");
 
   return [...new Set(phrases.filter(Boolean))];
 }
@@ -198,6 +210,14 @@ function cueReForPhrase(phrase: string): RegExp {
   if (/pita/.test(p)) return /\b(pita|flatbread|bread)\b/i;
   if (/hummus/.test(p)) return /\b(hummus|dip)\b/i;
   if (/salad/.test(p) && p.length < 40) return /\b(salad|greens|lettuce|cucumber|tomato)\b/i;
+  if (/chickpea/.test(p)) return /\b(chickpea|ceci|pasta|ditalini|small pasta)\b/i;
+  if (/^beef$/.test(p) || p === "beef") return /\b(beef|steak|flank|brisket|sirloin|pepper steak)\b/i;
+  if (/^seafood$/.test(p) || p === "seafood") return /\b(seafood|shrimp|salmon|fish|cod|grits)\b/i;
+  if (/onion/.test(p)) return /\b(onion|pepper|bell pepper)\b/i;
+  if (/grits/.test(p)) return /\b(grits|shrimp|corn)\b/i;
+  if (/egg/.test(p)) return /\b(egg|fried egg|scrambled)\b/i;
+  if (/chimichurri/.test(p)) return /\b(chimichurri|herb sauce|green sauce|parsley)\b/i;
+  if (/quinoa/.test(p)) return /\b(quinoa|grain)\b/i;
   const escaped = p.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   return new RegExp(`\\b(${escaped.replace(/\s+/g, "|")})\\b`, "i");
 }
@@ -224,8 +244,11 @@ export function auditMealImageCompleteness(input: {
 
   const sidesToCheck = req.titleIngredients;
 
+  const slugNorm = input.slug.replace(/-/g, " ");
   for (const side of [...new Set(sidesToCheck)]) {
-    if (!cueReForPhrase(side).test(blob)) {
+    const sideWords = side.split(/\s+/).filter((w) => w.length > 2);
+    const slugCoversSide = sideWords.length > 0 && sideWords.every((w) => slugNorm.includes(w));
+    if (!cueReForPhrase(side).test(blob) && !slugCoversSide) {
       issues.push(
         issue(
           "image_title_mismatch",
@@ -249,7 +272,12 @@ export function auditMealImageCompleteness(input: {
   }
 
   if (req.requiresCompleteMeal && req.requiredVisible.length >= 2) {
-    const visibleCount = req.requiredVisible.filter((v) => cueReForPhrase(v).test(blob)).length;
+    const visibleCount = req.requiredVisible.filter((v) => {
+      if (req.protein && v === req.protein) {
+        return cueReForPhrase(req.protein).test(blob) || cueReForPhrase(v).test(blob);
+      }
+      return cueReForPhrase(v).test(blob);
+    }).length;
     if (visibleCount < Math.min(2, req.requiredVisible.length)) {
       issues.push(
         issue(

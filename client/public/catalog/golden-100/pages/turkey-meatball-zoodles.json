@@ -186,6 +186,7 @@
     }
   },
   "heroImage": "/images/golden-100/turkey-meatball-zoodles.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Turkey Meatballs with Zucchini Noodles on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/turkey-meatball-zoodles.jpg",
   "thumbImage": "/images/thumbs/turkey-meatball-zoodles.jpg",
   "railImage": "/images/rails/turkey-meatball-zoodles.jpg",
@@ -203,15 +204,15 @@
     "golden_100"
   ],
   "relatedSlugs": [
+    "pasta-e-ceci-for-the-hall",
     "turkey-burgers",
     "turkey-chili",
     "baked-ziti",
     "chicken-parm",
-    "batch-lasagna",
-    "chicken-alfredo-bake"
+    "30-minute-pasta-e-fagioli-for-the-hall"
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.407Z",
+  "generatedAt": "2026-06-04T20:45:42.248Z",
   "contentVersion": 2
 }

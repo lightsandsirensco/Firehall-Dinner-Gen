@@ -13,10 +13,10 @@
   "cookTime": 180,
   "prepTime": 40,
   "difficulty": "hard",
-  "calories": 0,
-  "protein": 0,
-  "carbs": 0,
-  "fats": 0,
+  "calories": 520,
+  "protein": 40,
+  "carbs": 50,
+  "fats": 16,
   "tags": [
     "protein:beef",
     "format:bowl",
@@ -119,69 +119,34 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Bun Bo Hue Noodle Soup in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch beef. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Start the broth",
-      "instruction": "Cover beef shank and pork hock with water. Add lemongrass, charred onion, and shrimp paste. Simmer 2.5–3 hours, skimming often. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
+      "instruction": "Cover beef shank and pork hock with water. Add lemongrass, charred onion, and shrimp paste. Simmer 2.5–3 hours, skimming often.",
       "minutes": 165,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Season boldly",
-      "instruction": "Remove solids, strain broth if desired. Season with fish sauce and chili oil until broth is spicy, salty, and aromatic. Plan about 15 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
+      "instruction": "Remove solids, strain broth if desired. Season with fish sauce and chili oil until broth is spicy, salty, and aromatic.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Shred braised meat",
+      "instruction": "Pull tender meat from shank and hock, slice or shred, and hold warm.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Prep noodles and herbs",
+      "instruction": "Cook rice noodles, rinse, and divide into bowls. Plate basil, mint, and limes at the line.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
       "stepNumber": 5,
-      "title": "Shred braised meat",
-      "instruction": "Pull tender meat from shank and hock, slice or shred, and hold warm. Plan about 15 minutes for this step at crew scale. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 15,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 6,
-      "title": "Prep noodles and herbs",
-      "instruction": "Cook rice noodles, rinse, and divide into bowls. Plate basil, mint, and limes at the line. Plan about 15 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 15,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F for medium beef, 160°F for ground. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 9,
-      "title": "Portion and open the line",
-      "instruction": "Portion Bun Bo Hue Noodle Soup onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
       "title": "Build bowls",
       "instruction": "Top noodles with shredded braised meats and raw beef slices. Ladle boiling broth over to cook raw beef. Serve with herbs and lime.",
       "minutes": 10,
@@ -201,31 +166,16 @@
     "Broth improves next day—skim fat cap before reheating.",
     "Shredded meats become banh mi filling with pickles and mayo."
   ],
-  "whyCrewsLikeIt": "Bun bo hue brings real heat and depth—crews who think pho is too mild will respect this bowl. It is soup with attitude, works for cold nights when the hall needs something that punches back.",
+  "whyCrewsLikeIt": "Bun bo hue brings real heat and depth—crews who think pho is too mild will respect this bowl. It is soup with attitude, perfect for cold nights when the hall needs something that punches back.",
   "mealPrepNotes": "Broth takes time but mostly unattended. Skim diligently. Shrimp paste smells strong but transforms the broth—do not skip. Herbs should be washed and piled high before service.",
   "spiceLevel": "hot",
   "cleanupDifficulty": "heavy",
   "nutrition": {
-    "calories": 0,
-    "protein": 0,
-    "carbs": 0,
-    "fats": 0,
-    "label": "Estimated per serving",
-    "source": "unavailable",
-    "estimateAvailable": false,
-    "filterFlags": {
-      "highProtein": false,
-      "under700Calories": false,
-      "under30gFat": false,
-      "highCarb": false,
-      "lowCarb": false,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": false,
-      "lighterOption": false,
-      "performanceMeal": false
-    }
+    "calories": 520,
+    "protein": 40,
+    "carbs": 50,
+    "fats": 16,
+    "label": "~520 cal/serving · 40g protein · 2g fiber (est.)"
   },
   "heroImage": "/images/hall-expansion/bun-bo-hue-noodle-soup.jpg",
   "heroImageAlt": "Bun Bo Hue Noodle Soup — crew-sized firehall meal",
@@ -245,6 +195,7 @@
     "hall-burger-bar",
     "pasta-bar-night"
   ],
-  "generatedAt": "2026-05-31T01:50:00.916Z",
+  "sourceUrl": "",
+  "generatedAt": "2026-06-04T20:47:21.931Z",
   "contentVersion": 2
 }

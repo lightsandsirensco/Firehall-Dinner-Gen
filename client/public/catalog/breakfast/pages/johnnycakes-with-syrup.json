@@ -74,66 +74,33 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Johnnycakes with Maple Syrup in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
+      "title": "Scald the cornmeal",
+      "instruction": "Pour boiling water over cornmeal in a large bowl, whisking until smooth. Cover and rest 10 minutes so cornmeal fully hydrates and the batter thickens to porridge consistency.",
+      "minutes": 10
     },
     {
       "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch Eggs. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
+      "title": "Finish the batter",
+      "instruction": "Whisk in milk, eggs, melted butter, sugar, and salt until uniform. Batter should pour like thick cream—thin with a tablespoon of milk if it stands in a mound.",
+      "minutes": 5
     },
     {
       "stepNumber": 3,
-      "title": "Scald the cornmeal",
-      "instruction": "Pour boiling water over cornmeal in a large bowl, whisking until smooth. Cover and rest 10 minutes so cornmeal fully hydrates and the batter thickens to porridge consistency.",
-      "minutes": 10,
-      "heatLevel": ""
+      "title": "Heat the griddle",
+      "instruction": "Heat a griddle or cast iron over medium until a drop of water dances and evaporates in 2 seconds (roughly 375°F surface). Brush lightly with butter.",
+      "minutes": 5
     },
     {
       "stepNumber": 4,
-      "title": "Finish the batter",
-      "instruction": "Whisk in milk, eggs, melted butter, sugar, and salt until uniform. Batter should pour like thick cream—thin with a tablespoon of milk if it stands in a mound.",
-      "minutes": 5,
-      "heatLevel": ""
+      "title": "Griddle the cakes",
+      "instruction": "Pour 1/4 cup batter per cake, spreading slightly if needed. Cook 3–4 minutes until edges look dry and bottoms are deep golden, then flip and cook 2–3 minutes more. Hold warm on a rack.",
+      "minutes": 15
     },
     {
       "stepNumber": 5,
-      "title": "Heat the griddle",
-      "instruction": "Heat a griddle or cast iron over medium until a drop of water dances and evaporates in 2 seconds (roughly 375°F surface). Brush lightly with butter.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 6,
-      "title": "Griddle the cakes",
-      "instruction": "Pour 1/4 cup batter per cake, spreading slightly if needed. Cook 3–4 minutes until edges look dry and bottoms are deep golden, then flip and cook 2–3 minutes more. Hold warm on a rack.",
-      "minutes": 15,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 9,
       "title": "Serve with syrup",
       "instruction": "Stack three cakes per plate with whipped butter and warm maple syrup on the side. Serve immediately while edges stay lacy and centers are tender.",
-      "minutes": 3,
-      "heatLevel": ""
+      "minutes": 3
     }
   ],
   "nutrition": {
@@ -141,16 +108,15 @@
     "protein": 3,
     "carbs": 74,
     "fat": 18,
-    "label": "Estimated per serving",
+    "label": "per serving (hall portion)",
     "source": "calculated",
-    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
       "under30gFat": true,
       "highCarb": true,
       "lowCarb": false,
-      "mealPrepFriendly": true
+      "mealPrepFriendly": false
     },
     "badgeCandidates": {
       "highProtein": false,
@@ -173,30 +139,13 @@
   ],
   "heroImage": "/images/breakfast/johnnycakes-with-syrup.jpg",
   "thumbImage": "/images/thumbs/breakfast/johnnycakes-with-syrup.jpg",
-  "imageAlt": "Golden johnnycakes with whipped butter and warm maple syrup",
-  "publishedAt": "2026-05-31T18:33:00.830Z",
-  "updatedAt": "2026-05-31T23:49:25.538Z",
+  "imageAlt": "Wide firehall platter of golden johnnycakes with butter and maple syrup on a crew breakfast prep table, family-style",
+  "publishedAt": "2026-06-04T20:48:24.991Z",
+  "updatedAt": "2026-06-04T21:54:32.929Z",
   "readMinutes": 6,
   "seoTitle": "Johnnycakes with Maple Syrup | Firehall Breakfast",
   "collectionTier": "firehall_classic",
-  "proTips": [
-    "Scald cornmeal properly—under-hydrated batter tastes gritty and cracks on the griddle.",
-    "Cook in batches of six so the griddle stays at temp between pours.",
-    "Hold finished cakes on a rack in a 200°F oven, never stacked, to preserve crisp edges."
-  ],
-  "tonightSpread": [
-    "Plate Johnnycakes with Maple Syrup with sides in separate pans so the crew can mix portions.",
-    "Keep hot items on one side of the table and cold on the other — eggs stay hot, fruit stays cold.",
-    "Line up Johnnycakes with Maple Syrup on the main counter with serving spoons — firefighters grab fast between calls.",
-    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
-  ],
-  "equipment": [
-    "Large sheet trays",
-    "Instant-read thermometer",
-    "Aluminum foil"
-  ],
-  "mealPrepNotes": "Prep mise en place before the shift — Johnnycakes with Maple Syrup runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone.",
-  "heroImageAlt": "Johnnycakes with Maple Syrup — wide family-style firehall platter showing maple syrup on a crew prep table",
+  "heroImageAlt": "Wide firehall platter of golden johnnycakes with butter and maple syrup on a crew breakfast prep table, family-style",
   "mobileImage": "/images/mobile/breakfast/johnnycakes-with-syrup.jpg",
   "railImage": "/images/rails/breakfast/johnnycakes-with-syrup.jpg"
 }

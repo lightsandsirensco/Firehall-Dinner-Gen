@@ -1,0 +1,101 @@
+{
+  "generatedAt": "2026-06-04T20:37:00.424Z",
+  "rows": [
+    {
+      "slug": "chicken-caesar-wraps",
+      "imageTrust": "PASS",
+      "duplicateHero": "PASS",
+      "donorReuse": "PASS",
+      "placeholder": "PASS",
+      "exploreCard": "PASS",
+      "mobileCard": "PASS",
+      "homepageRail": "PASS",
+      "recentlyAdded": "PASS",
+      "overall": "PASS",
+      "notes": []
+    },
+    {
+      "slug": "buffalo-chicken-wraps",
+      "imageTrust": "PASS",
+      "duplicateHero": "PASS",
+      "donorReuse": "PASS",
+      "placeholder": "PASS",
+      "exploreCard": "PASS",
+      "mobileCard": "PASS",
+      "homepageRail": "PASS",
+      "recentlyAdded": "PASS",
+      "overall": "PASS",
+      "notes": []
+    },
+    {
+      "slug": "greek-chicken-pitas",
+      "imageTrust": "PASS",
+      "duplicateHero": "PASS",
+      "donorReuse": "PASS",
+      "placeholder": "PASS",
+      "exploreCard": "PASS",
+      "mobileCard": "PASS",
+      "homepageRail": "PASS",
+      "recentlyAdded": "PASS",
+      "overall": "PASS",
+      "notes": []
+    },
+    {
+      "slug": "beef-gyros-for-the-hall",
+      "imageTrust": "PASS",
+      "duplicateHero": "PASS",
+      "donorReuse": "PASS",
+      "placeholder": "PASS",
+      "exploreCard": "PASS",
+      "mobileCard": "PASS",
+      "homepageRail": "PASS",
+      "recentlyAdded": "PASS",
+      "overall": "PASS",
+      "notes": []
+    },
+    {
+      "slug": "chicken-shawarma-pitas",
+      "imageTrust": "PASS",
+      "duplicateHero": "PASS",
+      "donorReuse": "PASS",
+      "placeholder": "PASS",
+      "exploreCard": "PASS",
+      "mobileCard": "PASS",
+      "homepageRail": "PASS",
+      "recentlyAdded": "PASS",
+      "overall": "PASS",
+      "notes": []
+    },
+    {
+      "slug": "sausage-peppers-on-buns",
+      "imageTrust": "PASS",
+      "duplicateHero": "PASS",
+      "donorReuse": "PASS",
+      "placeholder": "PASS",
+      "exploreCard": "PASS",
+      "mobileCard": "PASS",
+      "homepageRail": "PASS",
+      "recentlyAdded": "PASS",
+      "overall": "PASS",
+      "notes": []
+    },
+    {
+      "slug": "chicken-dumpling-soup",
+      "imageTrust": "PASS",
+      "duplicateHero": "PASS",
+      "donorReuse": "PASS",
+      "placeholder": "PASS",
+      "exploreCard": "PASS",
+      "mobileCard": "PASS",
+      "homepageRail": "PASS",
+      "recentlyAdded": "PASS",
+      "overall": "PASS",
+      "notes": []
+    }
+  ],
+  "summary": {
+    "pass": 7,
+    "fix": 0,
+    "blocker": 0
+  }
+}

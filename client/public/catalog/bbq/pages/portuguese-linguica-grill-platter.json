@@ -8,15 +8,15 @@
   "category": "bbq_grill_nights",
   "cuisine": "portuguese",
   "description": "Portuguese linguica grills until split and charred, served on platters with piri-piri grilled onions, roasted peppers, and crusty rolls.",
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "cookTime": 20,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 0,
-  "protein": 0,
-  "carbs": 0,
-  "fats": 0,
+  "calories": 80,
+  "protein": 1,
+  "carbs": 4,
+  "fats": 6,
   "tags": [
     "protein:pork",
     "format:smokehouse_board",
@@ -38,67 +38,67 @@
   ],
   "ingredients": [
     {
-      "name": "Portuguese linguica sausage",
-      "quantity": "4.8",
+      "name": "Portuguese linguica",
+      "quantity": "6",
       "unit": "lb",
       "notes": "about 12 links",
       "group": "Main"
     },
     {
       "name": "red onions",
-      "quantity": "2",
+      "quantity": "3",
       "unit": "whole",
       "notes": "thick rings",
       "group": "Grill"
     },
     {
       "name": "piri-piri sauce",
-      "quantity": "3/8",
+      "quantity": "0.5",
       "unit": "cup",
       "group": "Grill"
     },
     {
       "name": "red bell peppers",
-      "quantity": "3",
+      "quantity": "4",
       "unit": "whole",
       "notes": "quartered",
       "group": "Grill"
     },
     {
       "name": "olive oil",
-      "quantity": "1/4",
+      "quantity": "0.25",
       "unit": "cup",
       "group": "Grill"
     },
     {
       "name": "garlic cloves",
-      "quantity": "3",
+      "quantity": "4",
       "unit": "cloves",
       "notes": "minced",
       "group": "Seasoning"
     },
     {
       "name": "smoked paprika",
-      "quantity": "7/8",
+      "quantity": "1",
       "unit": "tbsp",
       "group": "Seasoning"
     },
     {
       "name": "crusty rolls",
-      "quantity": "9.6",
+      "quantity": "12",
       "unit": "pieces",
       "group": "Service"
     },
     {
       "name": "fresh parsley",
-      "quantity": "1/4",
+      "quantity": "0.25",
       "unit": "cup",
       "notes": "chopped",
       "group": "Garnish"
     },
     {
       "name": "whole-grain mustard",
-      "quantity": "3/8",
+      "quantity": "0.5",
       "unit": "cup",
       "group": "Service"
     }
@@ -107,56 +107,56 @@
     {
       "stepNumber": 1,
       "title": "Prep linguica",
-      "instruction": "Score linguica links lightly lengthwise—helps render fat and char. Bring to room temp 20 minutes. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Score linguica links lightly lengthwise—helps render fat and char. Bring to room temp 20 minutes.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
       "title": "Season onions and peppers",
-      "instruction": "Toss onion rings and pepper quarters with olive oil, garlic, smoked paprika, and salt. Target 145°F with a 3-minute rest at the thickest part before moving to the next batch. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Toss onion rings and pepper quarters with olive oil, garlic, smoked paprika, and salt.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 3,
-      "title": "Preheat grill grates",
-      "instruction": "Preheat grill to medium, 400°F. Have cooler zone ready for sausage fat flare-ups. Plan about 8 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F with a 3-minute rest at the thickest point before moving to the next batch.",
+      "title": "Heat grill",
+      "instruction": "Preheat grill to medium, 400°F. Have cooler zone ready for sausage fat flare-ups.",
       "minutes": 8,
       "heatLevel": "medium"
     },
     {
       "stepNumber": 4,
       "title": "Grill linguica",
-      "instruction": "Grill sausage links 12–15 minutes, turning often, until split, charred, and 160°F internal. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Grill sausage links 12–15 minutes, turning often, until split, charred, and 160°F internal.",
       "minutes": 15,
       "heatLevel": "medium"
     },
     {
       "stepNumber": 5,
       "title": "Grill veg",
-      "instruction": "Grill onions and peppers alongside sausage until charred and tender, 10–12 minutes. Brush onions with piri-piri halfway. Cook until char marks are visible and the thickest piece reads 145°F with a 3-minute rest on an instant-read thermometer. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Grill onions and peppers alongside sausage until charred and tender, 10–12 minutes. Brush onions with piri-piri halfway.",
       "minutes": 12,
       "heatLevel": "medium"
     },
     {
       "stepNumber": 6,
       "title": "Rest and slice",
-      "instruction": "Rest sausage 5 minutes. Slice on bias into 1-inch pieces. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F with a 3-minute rest at the thickest point before moving to the next batch.",
+      "instruction": "Rest sausage 5 minutes. Slice on bias into 1-inch pieces.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 7,
       "title": "Hold at 170°F",
-      "instruction": "Pile sliced linguica and veg into hotel pans, cover with foil, hold at 170°F until service. Plan about 5 minutes for this step at crew scale. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Pile sliced linguica and veg into hotel pans, cover with foil, hold at 170°F until service.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 8,
       "title": "Platter for ten",
-      "instruction": "Family-style platters with sausage, peppers, onions, rolls, and mustard. About 10 oz sausage per firefighter. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F with a 3-minute rest at the thickest point before moving to the next batch.",
+      "instruction": "Family-style platters with sausage, peppers, onions, rolls, and mustard. About 10 oz sausage per firefighter.",
       "minutes": 5,
       "heatLevel": ""
     }
@@ -178,26 +178,12 @@
   "mealPrepNotes": "Score sausage lightly. Grill medium 400°F, 12–15 minutes turning often. Hold sliced sausage covered at 170°F up to 45 minutes. Onions grill alongside.",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 0,
-    "protein": 0,
-    "carbs": 0,
-    "fats": 0,
-    "label": "Estimated per serving",
-    "source": "unavailable",
-    "estimateAvailable": false,
-    "filterFlags": {
-      "highProtein": false,
-      "under700Calories": false,
-      "under30gFat": false,
-      "highCarb": false,
-      "lowCarb": true,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": false,
-      "lighterOption": false,
-      "performanceMeal": false
-    }
+    "calories": 80,
+    "protein": 1,
+    "carbs": 4,
+    "fats": 6,
+    "label": "per serving (hall portion)",
+    "source": "estimated"
   },
   "heroImage": "/images/smoker-catalog/portuguese-linguica-grill-platter.jpg",
   "heroImageAlt": "Lisbon Piri-Piri Linguica Spread — crew-sized BBQ spread with visible smoke and bark",
@@ -226,6 +212,6 @@
     "brisket-style-beef-sandwiches-au-jus"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T23:32:23.205Z",
+  "generatedAt": "2026-06-04T20:47:49.435Z",
   "contentVersion": 2
 }

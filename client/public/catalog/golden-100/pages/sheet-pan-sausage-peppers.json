@@ -141,6 +141,7 @@
     }
   },
   "heroImage": "/images/golden-100/sheet-pan-sausage-peppers.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Sausage and Peppers on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/sheet-pan-sausage-peppers.jpg",
   "thumbImage": "/images/thumbs/sheet-pan-sausage-peppers.jpg",
   "railImage": "/images/rails/sheet-pan-sausage-peppers.jpg",
@@ -161,14 +162,14 @@
   ],
   "relatedSlugs": [
     "pork-carnitas-tacos",
+    "30-minute-pasta-e-fagioli-for-the-hall",
     "honey-soppressata-pizza",
     "pepperoni-pizza-night",
     "sausage-peppers-onions",
-    "skillet-chicken-alfredo",
-    "five-ingredient-pasta"
+    "skillet-chicken-alfredo"
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.417Z",
+  "generatedAt": "2026-06-04T20:45:42.256Z",
   "contentVersion": 2
 }

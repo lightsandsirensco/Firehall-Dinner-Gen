@@ -8,15 +8,15 @@
   "category": "bbq_grill_nights",
   "cuisine": "indian",
   "description": "Lamb loin chops marinate in tandoori yogurt spice, grill over high heat to 135°F, and serve on platters with mint-cilantro chutney and charred lemon.",
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "cookTime": 22,
   "prepTime": 45,
   "difficulty": "medium",
-  "calories": 0,
-  "protein": 0,
-  "carbs": 0,
-  "fats": 0,
+  "calories": 80,
+  "protein": 5,
+  "carbs": 7,
+  "fats": 3,
   "tags": [
     "protein:lamb",
     "format:smokehouse_board",
@@ -39,64 +39,64 @@
   "ingredients": [
     {
       "name": "lamb loin chops",
-      "quantity": "16",
+      "quantity": "20",
       "unit": "pieces",
       "notes": "about 5.5 lb total",
       "group": "Main"
     },
     {
       "name": "Kashmiri chili powder",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tbsp",
       "group": "Tandoori"
     },
     {
       "name": "fenugreek leaves",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tbsp",
       "notes": "dried",
       "group": "Tandoori"
     },
     {
       "name": "mustard oil",
-      "quantity": "2.6",
+      "quantity": "3",
       "unit": "tbsp",
       "group": "Tandoori"
     },
     {
       "name": "Greek yogurt",
-      "quantity": "1.6",
+      "quantity": "2",
       "unit": "cups",
       "group": "Tandoori"
     },
     {
       "name": "gram flour",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tbsp",
       "group": "Tandoori"
     },
     {
       "name": "fresh ginger",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tbsp",
       "notes": "grated",
       "group": "Tandoori"
     },
     {
       "name": "pomegranate molasses",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tbsp",
       "group": "Finish"
     },
     {
       "name": "mint-coriander chutney",
-      "quantity": "1 1/4",
+      "quantity": "1.5",
       "unit": "cups",
       "group": "Chutney"
     },
     {
       "name": "pickled red onion",
-      "quantity": "3/4",
+      "quantity": "1",
       "unit": "cup",
       "group": "Garnish"
     }
@@ -104,64 +104,57 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Kashmiri Mustard-Oil Lamb Chop Feast in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use fenugreek leaves, gram flour, pomegranate molasses as listed — measure each before heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
       "title": "Marinate lamb chops",
-      "instruction": "Coat chops in yogurt, tandoori masala, garam masala, garlic, ginger, and lemon juice. Marinate at least 4 hours refrigerated. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
+      "instruction": "Coat chops in yogurt, tandoori masala, garam masala, garlic, ginger, and lemon juice. Marinate at least 4 hours refrigerated.",
       "minutes": 20,
       "heatLevel": ""
     },
     {
-      "stepNumber": 3,
+      "stepNumber": 2,
       "title": "Blend mint chutney",
-      "instruction": "Pulse mint, cilantro, green chilies, lemon juice, and pinch of salt until chunky. Chill until service. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Pulse mint, cilantro, green chilies, lemon juice, and pinch of salt until chunky. Chill until service.",
       "minutes": 8,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 3,
       "title": "Heat grill hot",
-      "instruction": "Preheat grill to high, 475°F. Oil grates for yogurt-marinated lamb. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
+      "instruction": "Preheat grill to high, 475°F. Oil grates for yogurt-marinated lamb.",
       "minutes": 10,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 4,
       "title": "Grill chops first side",
-      "instruction": "Grill chops 4 minutes on first side over direct heat until charred and yogurt sets. Cook until char marks are visible and the thickest piece reads 165°F on an instant-read thermometer. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Grill chops 4 minutes on first side over direct heat until charred and yogurt sets.",
       "minutes": 8,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 5,
       "title": "Flip and finish",
-      "instruction": "Flip and grill 3–4 minutes until 130–135°F internal for medium-rare. Move to cooler zone if flare-ups. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Flip and grill 3–4 minutes until 130–135°F internal for medium-rare. Move to cooler zone if flare-ups.",
       "minutes": 8,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 7,
+      "stepNumber": 6,
       "title": "Char lemons",
-      "instruction": "Grill halved lemons cut-side down 2 minutes at 450°F for squeezing at service. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Grill halved lemons cut-side down 2 minutes at 450°F for squeezing at service.",
       "minutes": 3,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 8,
+      "stepNumber": 7,
       "title": "Rest and hold",
-      "instruction": "Rest chops 5 minutes to 140°F carryover. Hold covered at 170°F in hotel pans. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Rest chops 5 minutes to 140°F carryover. Hold covered at 170°F in hotel pans.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 9,
+      "stepNumber": 8,
       "title": "Platter for ten",
-      "instruction": "Two chops per firefighter with mint chutney and charred lemon. Call temps: pull at 135°F, hold at 170°F max. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Two chops per firefighter with mint chutney and charred lemon. Call temps: pull at 135°F, hold at 170°F max.",
       "minutes": 5,
       "heatLevel": ""
     }
@@ -183,26 +176,12 @@
   "mealPrepNotes": "Marinate chops 4–12 hours. Grill high 475°F, 4 minutes per side for medium-rare. Hold covered at 170°F up to 30 minutes. Chutney cold on the side.",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 0,
-    "protein": 0,
-    "carbs": 0,
-    "fats": 0,
-    "label": "Estimated per serving",
-    "source": "unavailable",
-    "estimateAvailable": false,
-    "filterFlags": {
-      "highProtein": false,
-      "under700Calories": true,
-      "under30gFat": true,
-      "highCarb": false,
-      "lowCarb": true,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": false,
-      "lighterOption": true,
-      "performanceMeal": false
-    }
+    "calories": 80,
+    "protein": 5,
+    "carbs": 7,
+    "fats": 3,
+    "label": "per serving (hall portion)",
+    "source": "estimated"
   },
   "heroImage": "/images/smoker-catalog/tandoori-lamb-chop-platter.jpg",
   "heroImageAlt": "Kashmiri Mustard-Oil Lamb Chop Feast — crew-sized BBQ spread with visible smoke and bark",
@@ -231,6 +210,6 @@
     "brisket-style-beef-sandwiches-au-jus"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T23:32:23.205Z",
+  "generatedAt": "2026-06-04T20:47:49.434Z",
   "contentVersion": 2
 }

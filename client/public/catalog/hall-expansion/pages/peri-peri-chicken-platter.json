@@ -13,10 +13,10 @@
   "cookTime": 40,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 586,
-  "protein": 86,
-  "carbs": 11,
-  "fats": 20,
+  "calories": 430,
+  "protein": 38,
+  "carbs": 12,
+  "fats": 26,
   "tags": [
     "protein:chicken",
     "format:platter",
@@ -114,71 +114,36 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Peri Peri Chicken Platter in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
+      "title": "Blend peri peri sauce",
+      "instruction": "Blend chilies, garlic, lemon juice, olive oil, paprika, oregano, and salt until smooth.",
+      "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "title": "Marinate chicken",
+      "instruction": "Coat quarters in half the sauce. Marinate at least 2 hours or overnight refrigerated.",
       "minutes": 10,
-      "heatLevel": "medium-high"
+      "heatLevel": ""
     },
     {
       "stepNumber": 3,
-      "title": "Blend peri peri sauce",
-      "instruction": "Blend chilies, garlic, lemon juice, olive oil, paprika, oregano, and salt until smooth. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "title": "Preheat grill",
+      "instruction": "Heat grill to medium-high, about 400°F. Oil grates thoroughly. Target oven/smoker temperature: 400°F.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 4,
-      "title": "Marinate chicken",
-      "instruction": "Coat quarters in half the sauce. Marinate at least 2 hours or overnight refrigerated. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
-      "minutes": 10,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 5,
-      "title": "Preheat grill",
-      "instruction": "Heat grill to medium-high, about 400°F. Oil grates thoroughly. Target oven/smoker temperature: 400°F. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 10,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 6,
       "title": "Grill chicken and vegetables",
       "instruction": "Grill chicken skin-side down 8 minutes, flip, and cook until 165°F internal, about 20 minutes total. Grill peppers, onions, and lemon halves alongside. Target oven/smoker temperature: 400°F.",
       "minutes": 28,
       "heatLevel": ""
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 9,
-      "title": "Portion and open the line",
-      "instruction": "Portion Peri Peri Chicken Platter onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
+      "stepNumber": 5,
       "title": "Platter and serve",
-      "instruction": "Rest chicken 5 minutes, then pile on platters with grilled vegetables. Drizzle reserved sauce and scatter cilantro. Cook until char marks are visible and the thickest piece reads 165°F on an instant-read thermometer. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Rest chicken 5 minutes, then pile on platters with grilled vegetables. Drizzle reserved sauce and scatter cilantro.",
       "minutes": 10,
       "heatLevel": ""
     }
@@ -201,26 +166,11 @@
   "spiceLevel": "hot",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 586,
-    "protein": 86,
-    "carbs": 11,
-    "fats": 20,
-    "label": "Estimated per serving",
-    "source": "calculated",
-    "estimateAvailable": true,
-    "filterFlags": {
-      "highProtein": true,
-      "under700Calories": true,
-      "under30gFat": true,
-      "highCarb": false,
-      "lowCarb": true,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": true
-    }
+    "calories": 430,
+    "protein": 38,
+    "carbs": 12,
+    "fats": 26,
+    "label": "~430 cal/serving · 38g protein · 2g fiber (est.)"
   },
   "heroImage": "/images/hall-expansion/peri-peri-chicken-platter.jpg",
   "heroImageAlt": "Peri Peri Chicken Platter — crew-sized firehall meal",
@@ -240,6 +190,7 @@
     "hall-burger-bar",
     "pasta-bar-night"
   ],
-  "generatedAt": "2026-05-31T01:50:00.916Z",
+  "sourceUrl": "",
+  "generatedAt": "2026-06-04T20:47:21.931Z",
   "contentVersion": 2
 }

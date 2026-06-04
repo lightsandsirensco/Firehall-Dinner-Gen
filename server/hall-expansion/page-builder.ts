@@ -4,6 +4,7 @@
 
 import type { GoldenRecipePage } from "../../shared/golden-100/recipe-page-schema.js";
 import { GOLDEN_RECIPE_PAGE_CONTENT_VERSION } from "../../shared/golden-100/recipe-page-schema.js";
+import { PHASE5_REMOVED_SLUGS } from "../../shared/catalog-consolidation/phase5-redirects.js";
 import { HALL_EXPANSION_ADAPTED_RECIPES } from "../../shared/hall-expansion/adapted/index.js";
 import { hallExpansionPageImageSet } from "../../shared/hall-expansion/recipe-page-paths.js";
 import {
@@ -115,9 +116,12 @@ export function buildHallExpansionRecipePage(
     relatedSlugs,
     generatedAt: new Date().toISOString(),
     contentVersion: GOLDEN_RECIPE_PAGE_CONTENT_VERSION,
+    sourceUrl: recipe.sourceUrl ?? "",
   };
 }
 
 export function buildAllHallExpansionPages(): GoldenRecipePage[] {
-  return HALL_EXPANSION_ADAPTED_RECIPES.map((r) => buildHallExpansionRecipePage(r));
+  return HALL_EXPANSION_ADAPTED_RECIPES.filter((r) => !PHASE5_REMOVED_SLUGS.has(r.slug)).map((r) =>
+    buildHallExpansionRecipePage(r),
+  );
 }

@@ -131,6 +131,7 @@
     }
   },
   "heroImage": "/images/golden-100/pancake-short-stack.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Pancake Short Stack on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/pancake-short-stack.jpg",
   "thumbImage": "/images/thumbs/pancake-short-stack.jpg",
   "railImage": "/images/rails/pancake-short-stack.jpg",
@@ -147,14 +148,14 @@
   ],
   "relatedSlugs": [
     "french-toast-casserole",
-    "biscuits-gravy",
     "mac-and-cheese-bake",
-    "bacon-egg-hash",
+    "spicy-tomato-bisque-grilled-brie-toast",
+    "tomato-soup-grilled-cheese-croutons",
     "margherita-pizza",
     "breakfast-sausage-pizza"
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.500Z",
+  "generatedAt": "2026-06-04T20:45:42.326Z",
   "contentVersion": 2
 }

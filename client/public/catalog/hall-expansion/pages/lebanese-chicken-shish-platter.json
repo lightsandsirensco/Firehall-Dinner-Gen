@@ -13,10 +13,10 @@
   "cookTime": 15,
   "prepTime": 35,
   "difficulty": "medium",
-  "calories": 884,
-  "protein": 78,
-  "carbs": 39,
-  "fats": 45,
+  "calories": 420,
+  "protein": 40,
+  "carbs": 32,
+  "fats": 16,
   "tags": [
     "protein:chicken",
     "format:skewer",
@@ -121,64 +121,36 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Lebanese Chicken Shish Platter in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Marinate chicken",
-      "instruction": "Mix lemon juice, olive oil, yogurt, minced garlic, paprika, salt, and pepper. Coat chicken and marinate at least 2 hours. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
+      "instruction": "Mix lemon juice, olive oil, yogurt, minced garlic, paprika, salt, and pepper. Coat chicken and marinate at least 2 hours.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Make toum",
-      "instruction": "Blend garlic with lemon juice, then slowly stream in oil until thick and fluffy like mayonnaise. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Blend garlic with lemon juice, then slowly stream in oil until thick and fluffy like mayonnaise.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Prep tabbouleh",
-      "instruction": "Soak bulgur in hot water 20 minutes, drain, and toss with parsley, diced tomato, cucumber, mint, lemon, and olive oil. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Soak bulgur in hot water 20 minutes, drain, and toss with parsley, diced tomato, cucumber, mint, lemon, and olive oil.",
       "minutes": 25,
       "heatLevel": ""
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Grill skewers",
       "instruction": "Thread chicken onto skewers. Grill over medium-high heat 10–12 minutes until charred and 165°F internal. Target oven/smoker temperature: 400°F.",
       "minutes": 12,
       "heatLevel": ""
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 9,
+      "stepNumber": 5,
       "title": "Platter and serve",
-      "instruction": "Arrange skewers on platters with tabbouleh, toum, pickles, and warm pita. Slide chicken off skewers at the line if preferred. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
+      "instruction": "Arrange skewers on platters with tabbouleh, toum, pickles, and warm pita. Slide chicken off skewers at the line if preferred.",
       "minutes": 8,
       "heatLevel": ""
     }
@@ -201,26 +173,11 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 884,
-    "protein": 78,
-    "carbs": 39,
-    "fats": 45,
-    "label": "Estimated per serving",
-    "source": "calculated",
-    "estimateAvailable": true,
-    "filterFlags": {
-      "highProtein": true,
-      "under700Calories": false,
-      "under30gFat": false,
-      "highCarb": false,
-      "lowCarb": false,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": false
-    }
+    "calories": 420,
+    "protein": 40,
+    "carbs": 32,
+    "fats": 16,
+    "label": "~420 cal/serving · 40g protein · 3g fiber (est.)"
   },
   "heroImage": "/images/hall-expansion/lebanese-chicken-shish-platter.jpg",
   "heroImageAlt": "Lebanese Chicken Shish Platter — crew-sized firehall meal",
@@ -240,6 +197,7 @@
     "hall-burger-bar",
     "pasta-bar-night"
   ],
-  "generatedAt": "2026-05-31T01:50:00.916Z",
+  "sourceUrl": "",
+  "generatedAt": "2026-06-04T20:47:21.931Z",
   "contentVersion": 2
 }

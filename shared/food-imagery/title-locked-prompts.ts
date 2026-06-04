@@ -189,6 +189,52 @@ NO tiny single-portion restaurant plating.
 
 Professional firehall food photography. Warm lighting. Natural shadows. 50mm lens.`;
 
+export const BUTTER_CHICKEN_IMAGE_PROMPT = `Butter Chicken (Murgh Makhani)
+
+Wide firehall crew dinner on a stainless prep counter — family-style, not a tight macro.
+
+Visible in the SAME frame:
+- creamy orange butter chicken in a wide hotel pan or deep serving dish
+- fluffy basmati rice in a separate hotel pan or bowl — white rice clearly readable beside the curry
+- fresh cilantro garnish optional
+
+NO chicken-only bowl without rice.
+NO dry chicken breast on rice hiding the sauce.
+NO green curry or Thai-style presentation.
+
+Professional firehall food photography. Warm lighting. Visible steam. 50mm lens.`;
+
+export const CHICKEN_TIKKA_MASALA_IMAGE_PROMPT = `Chicken Tikka Masala
+
+Wide firehall crew dinner spread on a prep table.
+
+Visible in the SAME frame:
+- coral-orange tikka masala with charred chicken pieces in a wide serving pan
+- basmati rice in a separate hotel pan — distinct white rice mound beside the curry
+- cilantro garnish optional
+
+NO chicken-only curry without rice visible.
+NO butter chicken duplicate look without char marks.
+NO single-portion restaurant bowl.
+
+Professional firehall food photography. Warm lighting. Steam. 50mm lens.`;
+
+export const CAJUN_CHICKEN_RICE_BOWL_IMAGE_PROMPT = `Cajun Chicken Rice Bowl
+
+Wide firehall bowl line on a prep counter — crew portions, not a single macro bowl.
+
+Visible:
+- blackened Cajun chicken thighs sliced across the grain with dark char crust
+- long-grain white rice in the bowl base — rice clearly readable
+- sautéed trinity peppers (onion, bell pepper, celery) on top
+- light mahogany pan sauce drizzle
+
+NO generic grain bowl without visible rice.
+NO pale steamed chicken without blackening.
+NO sushi-style bowl.
+
+Professional firehall food photography. Warm lighting. 50mm lens.`;
+
 export const JERK_CHICKEN_RICE_PEAS_IMAGE_PROMPT = `Jerk Chicken & Peas and Rice
 
 Wide firehall spread on stainless prep counter — crew dinner for eight, not tight protein macro.
@@ -356,6 +402,143 @@ NO chili.
 
 Ladle resting on pot edge. Steam visible. Firehall kitchen. Wide angle showing stew thickness.`;
 
+export const FLANK_CHIMICHURRI_IMAGE_PROMPT = `Flank Steak with Chimichurri
+
+Wide firehall crew dinner on stainless prep counter.
+
+Visible in the SAME frame:
+- sliced or whole grilled flank steak with char marks
+- bright green chimichurri sauce pooled beside or over the steak — herb sauce mandatory
+- optional roasted potatoes or simple salad at edge
+
+NO steak-only close-up without chimichurri.
+NO generic grilled meat without green herb sauce.
+
+Professional firehall food photography. 50mm lens. Steam.`;
+
+export const PASTA_E_CECI_IMAGE_PROMPT = `Pasta e Ceci (Pasta with Chickpeas)
+
+Wide firehall hotel pan on prep table — creamy Roman-style pasta pot.
+
+Visible:
+- short pasta (ditalini or small tubes) coated in creamy chickpea sauce
+- whole chickpeas clearly readable throughout — not plain red-sauce pasta
+- rosemary and black pepper cues optional
+
+NO plain spaghetti marinara without chickpeas.
+NO soup bowl only.
+
+Crew-sized portion. Warm lighting.`;
+
+export const GRILLED_SHRIMP_QUINOA_BOWLS_IMAGE_PROMPT = `Grilled Shrimp Quinoa Bowls
+
+Wide firehall platter — actual bowl meal with two components visible.
+
+Visible in the SAME frame:
+- grilled shrimp (skewers or piled) with char marks
+- fluffy quinoa in a separate zone or adjacent bowl — quinoa must be readable
+- colorful vegetables (peppers, zucchini) optional
+
+NO shrimp-only protein macro.
+NO plain white rice hiding quinoa identity.
+
+Family-style crew line. 50mm lens.`;
+
+export const BAGEL_LOX_BOARD_IMAGE_PROMPT = `Bagel Lox Breakfast Board
+
+Wide firehall breakfast board on prep table — family-style for the crew.
+
+Visible:
+- plain and everything bagels split on a board
+- cream cheese, smoked salmon lox slices, capers, red onion, tomatoes in separate zones
+- NOT a single bagel sandwich only
+
+NO dinner plate. NO generic toast.
+
+Bright morning station kitchen. Wide angle platter.`;
+
+export const BAKED_OATMEAL_BERRIES_IMAGE_PROMPT = `Baked Oatmeal with Mixed Berries
+
+Wide firehall sheet pan or casserole of baked oatmeal on prep table.
+
+Visible:
+- golden baked oatmeal in a 9x13 or hotel pan with set edges
+- mixed berries (blueberries, raspberries) on top or beside
+- serving spoon or portioned scoops for crew
+
+NO raw oats in a bowl. NO smoothie.
+
+Family-style breakfast spread.`;
+
+export const COUNTRY_FRIED_STEAK_EGGS_IMAGE_PROMPT = `Country Fried Steak and Eggs
+
+Wide firehall breakfast platter — separate zones for each component.
+
+Visible in the SAME frame:
+- country fried steak cutlet with crispy coating and white pepper gravy
+- fried eggs in their own zone (not on top of steak)
+- hash browns or breakfast potatoes clearly visible as third zone
+
+NO merged pile hiding components.
+NO dinner steak without gravy.
+
+Crew breakfast line. Wide platter.`;
+
+export const JOHNNYCAKES_SYRUP_IMAGE_PROMPT = `Johnnycakes with Syrup
+
+Wide firehall platter of johnnycakes on prep table.
+
+Visible:
+- stack of golden cornmeal johnnycakes/pancakes
+- butter pats and maple syrup in a pitcher or ramekin beside the stack
+- optional bacon at edge in separate zone
+
+NO single cake macro. NO waffles when titled johnnycakes.
+
+Family-style breakfast.`;
+
+export const LUMBERJACK_BREAKFAST_PLATTER_IMAGE_PROMPT = `Lumberjack Breakfast Platter
+
+Wide firehall breakfast platter with CLEAR SEPARATE ZONES — critical plating.
+
+Visible in the SAME frame:
+- stack of pancakes in one zone
+- scrambled or fried eggs in a SEPARATE zone — NEVER on top of pancakes
+- crispy bacon strips and sausage links in their own zones
+- hash browns in their own zone — not buried
+
+FAIL if eggs sit on top of pancakes.
+FAIL if all food merged into one pile.
+
+Crew-sized oval platter. Station kitchen.`;
+
+export const SCRAPPLE_EGGS_SKILLET_IMAGE_PROMPT = `Scrapple and Eggs Skillet
+
+Wide firehall cast-iron skillet breakfast on prep table, family-style.
+
+Visible:
+- crispy browned scrapple slices
+- fried eggs beside scrapple in the same skillet — both readable
+- optional toast at edge on separate plate
+
+NO dinner scrapple sandwich only.
+
+Rustic firehall kitchen. Steam from skillet.`;
+
+export const SHRIMP_GRITS_BREAKFAST_IMAGE_PROMPT = `Shrimp and Grits Breakfast
+
+Wide firehall breakfast platter on prep table.
+
+Visible in the SAME frame:
+- creamy stone-ground grits in a bowl or hotel pan
+- sautéed shrimp piled on or beside grits — shrimp clearly visible
+- optional green onion garnish
+
+NO plain grits without shrimp.
+NO shrimp-only macro without grits.
+
+Southern breakfast crew portion. Wide angle.`;
+
 export const TITLE_LOCKED_IMAGE_PROMPTS: Record<string, string> = {
   "crock-barbacoa-chicken": CROCK_BARBACOA_CHICKEN_IMAGE_PROMPT,
   "steak-sandwiches": STEAK_SANDWICHES_IMAGE_PROMPT,
@@ -363,6 +546,9 @@ export const TITLE_LOCKED_IMAGE_PROMPTS: Record<string, string> = {
   "beef-dip": BEEF_DIP_SANDWICHES_IMAGE_PROMPT,
   "bbq-chicken-mac-and-cheese": BBQ_CHICKEN_MAC_AND_CHEESE_IMAGE_PROMPT,
   "chicken-caesar": CHICKEN_CAESAR_IMAGE_PROMPT,
+  "butter-chicken": BUTTER_CHICKEN_IMAGE_PROMPT,
+  "chicken-tikka-masala": CHICKEN_TIKKA_MASALA_IMAGE_PROMPT,
+  "cajun-chicken-rice-bowl": CAJUN_CHICKEN_RICE_BOWL_IMAGE_PROMPT,
   "boneless-chicken-thighs-sweet-potato-spinach": BONELESS_CHICKEN_THIGHS_SWEET_POTATO_SPINACH_IMAGE_PROMPT,
   "breakfast-enchiladas": BREAKFAST_ENCHILADAS_IMAGE_PROMPT,
   "shepherds-pie": SHEPHERDS_PIE_GREEK_SALAD_IMAGE_PROMPT,
@@ -378,4 +564,14 @@ export const TITLE_LOCKED_IMAGE_PROMPTS: Record<string, string> = {
   "chicken-shawarma-pitas": CHICKEN_SHAWARMA_PITAS_IMAGE_PROMPT,
   "sausage-peppers-on-buns": SAUSAGE_PEPPERS_ON_BUNS_IMAGE_PROMPT,
   "chicken-dumpling-soup": CHICKEN_DUMPLING_SOUP_IMAGE_PROMPT,
+  "flank-chimichurri": FLANK_CHIMICHURRI_IMAGE_PROMPT,
+  "pasta-e-ceci-for-the-hall": PASTA_E_CECI_IMAGE_PROMPT,
+  "grilled-shrimp-quinoa-bowls": GRILLED_SHRIMP_QUINOA_BOWLS_IMAGE_PROMPT,
+  "bagel-lox-breakfast-board": BAGEL_LOX_BOARD_IMAGE_PROMPT,
+  "baked-oatmeal-mixed-berries": BAKED_OATMEAL_BERRIES_IMAGE_PROMPT,
+  "country-fried-steak-eggs": COUNTRY_FRIED_STEAK_EGGS_IMAGE_PROMPT,
+  "johnnycakes-with-syrup": JOHNNYCAKES_SYRUP_IMAGE_PROMPT,
+  "lumberjack-breakfast-platter": LUMBERJACK_BREAKFAST_PLATTER_IMAGE_PROMPT,
+  "scrapple-and-eggs-skillet": SCRAPPLE_EGGS_SKILLET_IMAGE_PROMPT,
+  "shrimp-and-grits-breakfast": SHRIMP_GRITS_BREAKFAST_IMAGE_PROMPT,
 };

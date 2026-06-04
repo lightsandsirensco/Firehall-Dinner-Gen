@@ -39,6 +39,30 @@ import {
 } from "../shared/curated-image-governance/trust-audit-targets.js";
 import { auditMealImageWithVision } from "../server/imagery/audit-meal-image-vision.js";
 import { PERFORMANCE_MEAL_IMAGERY_NEGATIVE_OVERRIDES } from "../shared/performance-meals/imagery-prompt-overrides.js";
+import { buildFirehallHeroImageAlt } from "../shared/curated-image-governance/firehall-hero-alt.js";
+import {
+  writeBreakfastCatalogImageVariants,
+  writeEditorialImageVariants,
+  writeHallExpansionCatalogImageVariants,
+} from "../server/imagery/variants.js";
+import {
+  readBreakfastRecipePageFromDisk,
+  writeBreakfastCatalogIndex,
+  writeBreakfastRecipePage,
+} from "../server/breakfast-catalog/page-store.js";
+import { readBreakfastCatalogIndexFromDisk } from "../server/breakfast-catalog/catalog.js";
+import {
+  readHallExpansionRecipePage,
+  writeHallExpansionCatalogIndex,
+  writeHallExpansionRecipePage,
+} from "../server/hall-expansion/page-store.js";
+import {
+  readPerformanceRecipePage,
+  writePerformanceRecipePage,
+} from "../server/performance-meals/page-store.js";
+import { readGoldenRecipePage, writeGoldenRecipePage } from "../server/golden-100/page-store.js";
+import { buildGoldenRecipePage } from "../server/golden-100/recipe-page-builder.js";
+import { getGoldenRecipeBySlug } from "../shared/golden-100/manifest.js";
 
 const AUDIT_PATH = path.join(process.cwd(), "review", "meal-image-trust-audit.json");
 
@@ -61,6 +85,90 @@ function parseArgs(argv: string[]) {
     only: argv.find((a) => a.startsWith("--only="))?.replace("--only=", "").trim() || null,
     slugsFile: argv.find((a) => a.startsWith("--slugs-file="))?.replace("--slugs-file=", "").trim() || null,
   };
+}
+
+type ImagePaths = { hero: string; mobile: string; thumb: string; rail: string };
+
+function syncCatalogPageImages(t: TrustAuditTarget, paths: ImagePaths): void {
+  const heroAlt = buildFirehallHeroImageAlt(t.title, t.tonightSpread);
+
+  if (t.collection === "golden_100") {
+    const def = getGoldenRecipeBySlug(t.slug);
+    if (!def) return;
+    const page = readGoldenRecipePage(t.slug) ?? buildGoldenRecipePage(def);
+    page.heroImage = paths.hero;
+    page.mobileImage = paths.mobile;
+    page.thumbImage = paths.thumb;
+    page.railImage = paths.rail;
+    page.heroImageAlt = heroAlt;
+    writeGoldenRecipePage(page);
+    return;
+  }
+
+  if (t.collection === "performance_meals") {
+    const page = readPerformanceRecipePage(t.slug);
+    if (!page) return;
+    page.heroImage = paths.hero;
+    page.mobileImage = paths.mobile;
+    page.thumbImage = paths.thumb;
+    page.railImage = paths.rail;
+    page.heroImageAlt = heroAlt;
+    writePerformanceRecipePage(page);
+    return;
+  }
+
+  if (t.collection === "hall_expansion") {
+    const page = readHallExpansionRecipePage(t.slug);
+    if (!page) return;
+    page.heroImage = paths.hero;
+    page.mobileImage = paths.mobile;
+    page.thumbImage = paths.thumb;
+    page.railImage = paths.rail;
+    page.heroImageAlt = heroAlt;
+    writeHallExpansionRecipePage(page);
+    return;
+  }
+
+  if (t.collection === "breakfast") {
+    const page = readBreakfastRecipePageFromDisk(t.slug);
+    if (!page) return;
+    page.heroImage = paths.hero;
+    page.thumbImage = paths.thumb;
+    page.mobileImage = paths.mobile;
+    page.railImage = paths.rail;
+    page.imageAlt = heroAlt;
+    page.updatedAt = new Date().toISOString();
+    writeBreakfastRecipePage(page);
+    const index = readBreakfastCatalogIndexFromDisk();
+    if (index) {
+      for (const entry of index.recipes) {
+        if (entry.slug === t.slug) {
+          entry.heroImage = paths.hero;
+          entry.thumbImage = paths.thumb;
+        }
+      }
+      writeBreakfastCatalogIndex(index);
+    }
+  }
+}
+
+async function writeVariantsForTarget(
+  slug: string,
+  collection: TrustAuditTarget["collection"],
+  buf: Buffer,
+  version: number,
+  stylePreset: string,
+): Promise<ImagePaths> {
+  if (collection === "breakfast") {
+    const p = await writeBreakfastCatalogImageVariants(slug, buf, version);
+    return { hero: p.hero, mobile: p.mobile, thumb: p.thumb, rail: p.rail };
+  }
+  if (collection === "hall_expansion") {
+    const p = await writeHallExpansionCatalogImageVariants(slug, buf, version);
+    return { hero: p.hero, mobile: p.mobile, thumb: p.thumb, rail: p.rail };
+  }
+  const p = await writeEditorialImageVariants(slug, buf, stylePreset as never, version);
+  return { hero: p.hero, mobile: p.mobile, thumb: p.thumb, rail: p.rail };
 }
 
 function categoryForTarget(t: TrustAuditTarget): string {
@@ -254,12 +362,14 @@ async function main(): Promise<void> {
 
       const existing = getEditorialImageForSlug(slug);
       const nextVersion = (existing?.imageVersion || 0) + 1;
-      const paths = await writeEditorialImageVariants(
+      const paths = await writeVariantsForTarget(
         slug,
+        t.collection,
         buf,
-        promptResult.stylePreset,
         nextVersion,
+        promptResult.stylePreset,
       );
+      syncCatalogPageImages(t, paths);
 
       const meta = createEmptyEditorialImageMetadata(
         slug,

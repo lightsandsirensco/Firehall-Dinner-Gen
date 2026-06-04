@@ -107,9 +107,8 @@
     "protein": 11,
     "carbs": 39,
     "fat": 12,
-    "label": "Estimated per serving",
+    "label": "per serving (hall portion)",
     "source": "calculated",
-    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
@@ -140,8 +139,8 @@
   "heroImage": "/images/breakfast/german-potato-breakfast-skillet.jpg",
   "thumbImage": "/images/thumbs/breakfast/german-potato-breakfast-skillet.jpg",
   "imageAlt": "German potato breakfast skillet with bratwurst, sauerkraut, and fried eggs",
-  "publishedAt": "2026-05-31T18:33:00.830Z",
-  "updatedAt": "2026-05-31T18:34:15.374Z",
+  "publishedAt": "2026-06-04T20:48:24.991Z",
+  "updatedAt": "2026-06-04T20:48:24.991Z",
   "readMinutes": 8,
   "seoTitle": "German Potato Breakfast Skillet | Firehall Breakfast",
   "collectionTier": "firehall_classic"

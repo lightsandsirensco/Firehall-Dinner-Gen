@@ -1,0 +1,73 @@
+{
+  "generatedAt": "2026-06-04T20:36:37.616Z",
+  "rows": [
+    {
+      "slug": "classic-patty-melt-for-the-crew",
+      "duplicate": "PASS",
+      "near": [
+        "smash-burgers",
+        "philly-cheesesteak-sliders",
+        "hall-burger-bar"
+      ],
+      "overall": "PASS"
+    },
+    {
+      "slug": "best-tuna-melt-for-the-hall",
+      "duplicate": "PASS",
+      "near": [],
+      "overall": "PASS"
+    },
+    {
+      "slug": "hall-blt-sandwich-feed",
+      "duplicate": "PASS",
+      "near": [
+        "breakfast-sandwich-trays",
+        "sausage-egg-cheese-sandwiches",
+        "club-sandwich-breakfast-bake"
+      ],
+      "overall": "PASS"
+    },
+    {
+      "slug": "30-minute-pasta-e-fagioli-for-the-hall",
+      "duplicate": "PASS",
+      "near": [
+        "chili-mac",
+        "five-ingredient-pasta",
+        "baked-ziti"
+      ],
+      "overall": "PASS"
+    },
+    {
+      "slug": "red-beans-and-rice-for-the-hall",
+      "duplicate": "PASS",
+      "near": [
+        "jambalaya"
+      ],
+      "overall": "PASS"
+    },
+    {
+      "slug": "french-onion-soup-for-the-hall",
+      "duplicate": "PASS",
+      "near": [
+        "beef-barley-soup",
+        "tomato-soup-grilled-cheese-croutons"
+      ],
+      "overall": "PASS"
+    },
+    {
+      "slug": "chicken-tortilla-soup-for-the-hall",
+      "duplicate": "PASS",
+      "near": [],
+      "overall": "PASS"
+    },
+    {
+      "slug": "pasta-e-ceci-for-the-hall",
+      "duplicate": "PASS",
+      "near": [
+        "mediterranean-chickpea",
+        "five-ingredient-pasta"
+      ],
+      "overall": "PASS"
+    }
+  ]
+}

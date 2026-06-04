@@ -199,6 +199,7 @@
     }
   },
   "heroImage": "/images/golden-100/smoked-wings-white-sauce.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Smoked Wings with White Sauce on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/smoked-wings-white-sauce.jpg",
   "thumbImage": "/images/thumbs/smoked-wings-white-sauce.jpg",
   "railImage": "/images/rails/smoked-wings-white-sauce.jpg",
@@ -227,6 +228,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.318Z",
+  "generatedAt": "2026-06-04T20:45:42.161Z",
   "contentVersion": 2
 }

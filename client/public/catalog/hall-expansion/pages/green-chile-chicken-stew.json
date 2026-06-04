@@ -13,10 +13,10 @@
   "cookTime": 50,
   "prepTime": 30,
   "difficulty": "medium",
-  "calories": 414,
-  "protein": 64,
-  "carbs": 19,
-  "fats": 8,
+  "calories": 360,
+  "protein": 32,
+  "carbs": 34,
+  "fats": 12,
   "tags": [
     "protein:chicken",
     "format:soup",
@@ -108,71 +108,36 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Green Chile Chicken Stew in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Char the tomatillos",
       "instruction": "Broil tomatillos and onion at 500°F 5–7 minutes until blistered. Blend with green chiles and half the garlic until smooth. Target oven/smoker temperature: 500°F.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Sear the chicken",
-      "instruction": "Season chicken thighs and sear in oil 4 minutes per side until golden. Set aside. Cook until char marks are visible and the thickest piece reads 165°F on an instant-read thermometer. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Season chicken thighs and sear in oil 4 minutes per side until golden. Set aside.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Simmer the stew",
       "instruction": "Sauté remaining garlic and cumin 1 minute. Add tomatillo puree and broth. Return chicken and simmer 30 minutes until internal temp reaches 165°F. Target oven/smoker temperature: 165°F.",
       "minutes": 30,
       "heatLevel": ""
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Shred and finish",
-      "instruction": "Remove chicken, shred meat, discard bones. Return meat to pot with beans and simmer 10 minutes. Stir in half the cilantro. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
+      "instruction": "Remove chicken, shred meat, discard bones. Return meat to pot with beans and simmer 10 minutes. Stir in half the cilantro.",
       "minutes": 12,
       "heatLevel": ""
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 9,
-      "title": "Portion and open the line",
-      "instruction": "Portion Green Chile Chicken Stew onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
+      "stepNumber": 5,
       "title": "Serve with garnishes",
-      "instruction": "Ladle into bowls and top with remaining cilantro and lime wedges. Offer hot sauce at the line. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Ladle into bowls and top with remaining cilantro and lime wedges. Offer hot sauce at the line.",
       "minutes": 5,
       "heatLevel": ""
     }
@@ -195,25 +160,11 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 414,
-    "protein": 64,
-    "carbs": 19,
-    "fats": 8,
-    "label": "per serving (hall portion)",
-    "source": "calculated",
-    "filterFlags": {
-      "highProtein": true,
-      "under700Calories": true,
-      "under30gFat": true,
-      "highCarb": false,
-      "lowCarb": true,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": true,
-      "lighterOption": true,
-      "performanceMeal": true
-    }
+    "calories": 360,
+    "protein": 32,
+    "carbs": 34,
+    "fats": 12,
+    "label": "~360 cal/serving · 32g protein · 8g fiber (est.)"
   },
   "heroImage": "/images/hall-expansion/green-chile-chicken-stew.jpg",
   "heroImageAlt": "Green Chile Chicken Stew — crew-sized firehall meal",
@@ -233,6 +184,7 @@
     "hall-burger-bar",
     "pasta-bar-night"
   ],
-  "generatedAt": "2026-05-31T01:50:00.916Z",
+  "sourceUrl": "",
+  "generatedAt": "2026-06-04T20:47:21.930Z",
   "contentVersion": 2
 }

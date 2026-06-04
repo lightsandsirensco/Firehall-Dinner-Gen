@@ -1,9 +1,45 @@
 {
   "version": 1,
   "contentVersion": 2,
-  "generatedAt": "2026-05-30T23:28:05.192Z",
-  "recipeCount": 216,
+  "generatedAt": "2026-06-04T20:47:23.152Z",
+  "recipeCount": 225,
   "recipes": [
+    {
+      "slug": "30-minute-pasta-e-fagioli-for-the-hall",
+      "title": "30-Minute Pasta e Fagioli for the Hall",
+      "subtitle": "Bean-and-pasta soup that lands in half an hour",
+      "category": "quick_shift_meals",
+      "cuisine": "italian",
+      "protein": "vegetarian",
+      "mealFormat": "pasta",
+      "cookTime": 40,
+      "difficulty": "easy",
+      "heroImage": "/images/golden-100/30-minute-pasta-e-fagioli-for-the-hall.jpg",
+      "thumbImage": "/images/thumbs/30-minute-pasta-e-fagioli-for-the-hall.jpg",
+      "tags": [
+        "protein:vegetarian",
+        "format:pasta",
+        "category:quick_shift_meals",
+        "quick",
+        "pasta",
+        "one_pot",
+        "golden_100"
+      ],
+      "firefighterScore": 100,
+      "popularityWeight": 3.2,
+      "searchTerms": [
+        "30-minute pasta e fagioli for the hall",
+        "30 minute pasta e fagioli for the hall",
+        "italian",
+        "vegetarian",
+        "pasta",
+        "quick",
+        "one pot",
+        "pasta e fagioli quick fire station",
+        "one_pot",
+        "golden_100"
+      ]
+    },
     {
       "slug": "applewood-pork-shoulder-steaks",
       "title": "Applewood Grilled Pork Shoulder Steaks",
@@ -36,20 +72,20 @@
       ]
     },
     {
-      "slug": "asian-chicken-lettuce-cups",
-      "title": "Asian Chicken Lettuce Cups",
-      "subtitle": "Ginger-garlic ground chicken in crisp butter lettuce with hoisin drizzle",
+      "slug": "mediterranean-baked-fish-tray",
+      "title": "Baked Cod Tray",
+      "subtitle": "Cod with cherry tomatoes, olives, and capers on one sheet",
       "category": "healthy_performance",
-      "cuisine": "Asian",
-      "protein": "chicken",
-      "mealFormat": "handheld",
-      "cookTime": 15,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/asian-chicken-lettuce-cups.jpg",
-      "thumbImage": "/images/thumbs/asian-chicken-lettuce-cups.jpg",
+      "cuisine": "Mediterranean",
+      "protein": "fish",
+      "mealFormat": "sheet_pan",
+      "cookTime": 20,
+      "difficulty": "easy",
+      "heroImage": "/images/golden-100/mediterranean-baked-fish-tray.jpg",
+      "thumbImage": "/images/thumbs/mediterranean-baked-fish-tray.jpg",
       "tags": [
-        "protein:chicken",
-        "format:handheld",
+        "protein:fish",
+        "format:sheet_pan",
         "category:healthy_performance",
         "healthy",
         "performance_meals_50",
@@ -60,43 +96,11 @@
       "firefighterScore": 83,
       "popularityWeight": 7.5,
       "searchTerms": [
-        "asian chicken lettuce cups",
-        "chicken",
-        "Asian",
-        "handheld",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "baked-falafel-hall-bowls",
-      "title": "Baked Falafel Hall Bowls",
-      "subtitle": "Crisp oven falafel, tahini drizzle, and cucumber-tomato salad",
-      "category": "healthy_performance",
-      "cuisine": "mediterranean",
-      "protein": "vegetarian",
-      "mealFormat": "bowl",
-      "cookTime": 28,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/baked-falafel-hall-bowls.jpg",
-      "thumbImage": "/images/thumbs/baked-falafel-hall-bowls.jpg",
-      "tags": [
-        "protein:vegetarian",
-        "format:bowl",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "baked falafel hall bowls",
-        "vegetarian",
-        "mediterranean",
-        "bowl",
+        "baked cod tray",
+        "mediterranean baked fish tray",
+        "fish",
+        "Mediterranean",
+        "sheet pan",
         "performance meal",
         "firefighter healthy"
       ]
@@ -166,6 +170,73 @@
       ]
     },
     {
+      "slug": "loaded-baked-potato-bar",
+      "title": "Baked Potato Bar",
+      "subtitle": "Build-your-own spuds for the crew",
+      "category": "comfort_food",
+      "cuisine": "american",
+      "protein": "beef",
+      "mealFormat": "bowl",
+      "cookTime": 125,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/loaded-baked-potato-bar.jpg",
+      "thumbImage": "/images/thumbs/loaded-baked-potato-bar.jpg",
+      "tags": [
+        "protein:beef",
+        "format:bowl",
+        "category:comfort_food",
+        "comfort",
+        "beef",
+        "golden_100"
+      ],
+      "firefighterScore": 100,
+      "popularityWeight": 3.6,
+      "searchTerms": [
+        "baked potato bar",
+        "loaded baked potato bar",
+        "american",
+        "beef",
+        "bowl",
+        "comfort",
+        "loaded baked potato bar dinner",
+        "golden_100"
+      ]
+    },
+    {
+      "slug": "herb-baked-salmon-tray",
+      "title": "Baked Salmon Tray",
+      "subtitle": "Flaky fillets with dill, parsley, and roasted asparagus for the crew",
+      "category": "healthy_performance",
+      "cuisine": "American",
+      "protein": "salmon",
+      "mealFormat": "sheet_pan",
+      "cookTime": 18,
+      "difficulty": "easy",
+      "heroImage": "/images/golden-100/herb-baked-salmon-tray.jpg",
+      "thumbImage": "/images/thumbs/herb-baked-salmon-tray.jpg",
+      "tags": [
+        "protein:salmon",
+        "format:sheet_pan",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "baked salmon tray",
+        "herb baked salmon tray",
+        "salmon",
+        "American",
+        "sheet pan",
+        "performance meal",
+        "firefighter healthy"
+      ]
+    },
+    {
       "slug": "baked-turkey-meatball-marinara",
       "title": "Baked Turkey Meatball Marinara",
       "subtitle": "Oven-baked lean meatballs in slow-simmered tomato basil sauce",
@@ -231,6 +302,72 @@
       ]
     },
     {
+      "slug": "crock-barbacoa-chicken",
+      "title": "Barbacoa Chicken",
+      "subtitle": "Slow-cooked chipotle barbacoa with crispy roasted potato wedges",
+      "category": "healthy_performance",
+      "cuisine": "Mexican",
+      "protein": "chicken",
+      "mealFormat": "slow_cooker",
+      "cookTime": 360,
+      "difficulty": "easy",
+      "heroImage": "/images/golden-100/crock-barbacoa-chicken.jpg",
+      "thumbImage": "/images/thumbs/crock-barbacoa-chicken.jpg",
+      "tags": [
+        "protein:chicken",
+        "format:slow_cooker",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 87,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "barbacoa chicken",
+        "crock barbacoa chicken",
+        "chicken",
+        "Mexican",
+        "slow cooker",
+        "performance meal",
+        "firefighter healthy"
+      ]
+    },
+    {
+      "slug": "batch-lasagna",
+      "title": "Batch Lasagna",
+      "subtitle": "Feeds 12+ without drama",
+      "category": "big_crew_feeders",
+      "cuisine": "italian",
+      "protein": "beef",
+      "mealFormat": "pasta",
+      "cookTime": 100,
+      "difficulty": "hard",
+      "heroImage": "/images/golden-100/batch-lasagna.jpg",
+      "thumbImage": "/images/thumbs/batch-lasagna.jpg",
+      "tags": [
+        "protein:beef",
+        "format:pasta",
+        "category:big_crew_feeders",
+        "beef",
+        "comfort",
+        "golden_100"
+      ],
+      "firefighterScore": 100,
+      "popularityWeight": 3.6,
+      "searchTerms": [
+        "batch lasagna",
+        "italian",
+        "beef",
+        "pasta",
+        "comfort",
+        "large batch lasagna dinner",
+        "golden_100"
+      ]
+    },
+    {
       "slug": "bbq-brisket-burnt-ends",
       "title": "BBQ Burnt Ends",
       "subtitle": "Caramelized burnt ends, pure smoke",
@@ -291,6 +428,40 @@
         "chicken",
         "bowl",
         "trending",
+        "golden_100"
+      ]
+    },
+    {
+      "slug": "bbq-chicken-mac-and-cheese",
+      "title": "BBQ Chicken Mac and Cheese",
+      "subtitle": "Shredded BBQ chicken baked into creamy mac — hall comfort tray",
+      "category": "comfort_food",
+      "cuisine": "american",
+      "protein": "chicken",
+      "mealFormat": "bake",
+      "cookTime": 65,
+      "difficulty": "easy",
+      "heroImage": "/images/golden-100/bbq-chicken-mac-and-cheese.jpg",
+      "thumbImage": "/images/thumbs/bbq-chicken-mac-and-cheese.jpg",
+      "tags": [
+        "protein:chicken",
+        "format:bake",
+        "category:comfort_food",
+        "comfort",
+        "bbq",
+        "chicken",
+        "golden_100"
+      ],
+      "firefighterScore": 100,
+      "popularityWeight": 3.8,
+      "searchTerms": [
+        "bbq chicken mac and cheese",
+        "american",
+        "chicken",
+        "bake",
+        "comfort",
+        "bbq",
+        "bbq chicken mac and cheese casserole bake shredded chicken",
         "golden_100"
       ]
     },
@@ -392,6 +563,71 @@
       ]
     },
     {
+      "slug": "big-chili",
+      "title": "Beef and Bean Chili",
+      "subtitle": "Double pot, triple appetite",
+      "category": "big_crew_feeders",
+      "cuisine": "american",
+      "protein": "beef",
+      "mealFormat": "soup_chili",
+      "cookTime": 75,
+      "difficulty": "hard",
+      "heroImage": "/images/golden-100/big-chili.jpg",
+      "thumbImage": "/images/thumbs/big-chili.jpg",
+      "tags": [
+        "protein:beef",
+        "format:soup_chili",
+        "category:big_crew_feeders",
+        "hearty",
+        "beef",
+        "golden_100"
+      ],
+      "firefighterScore": 100,
+      "popularityWeight": 3.6,
+      "searchTerms": [
+        "beef and bean chili",
+        "big chili",
+        "american",
+        "beef",
+        "soup chili",
+        "hearty",
+        "large batch beef chili",
+        "golden_100"
+      ]
+    },
+    {
+      "slug": "beef-broccoli",
+      "title": "Beef and Broccoli",
+      "subtitle": "Takeout vibes, hall timing",
+      "category": "quick_shift_meals",
+      "cuisine": "chinese",
+      "protein": "beef",
+      "mealFormat": "skillet",
+      "cookTime": 35,
+      "difficulty": "easy",
+      "heroImage": "/images/golden-100/beef-broccoli.jpg",
+      "thumbImage": "/images/thumbs/beef-broccoli.jpg",
+      "tags": [
+        "protein:beef",
+        "format:skillet",
+        "category:quick_shift_meals",
+        "quick",
+        "golden_100"
+      ],
+      "firefighterScore": 100,
+      "popularityWeight": 3.2,
+      "searchTerms": [
+        "beef and broccoli",
+        "beef broccoli",
+        "chinese",
+        "beef",
+        "skillet",
+        "quick",
+        "beef broccoli stir fry dinner",
+        "golden_100"
+      ]
+    },
+    {
       "slug": "beef-barley-soup",
       "title": "Beef Barley Soup",
       "subtitle": "Cold-night bowl that fills everyone",
@@ -425,6 +661,38 @@
       ]
     },
     {
+      "slug": "beef-dip",
+      "title": "Beef Dip Sandwiches",
+      "subtitle": "Au jus dip energy without the fuss",
+      "category": "firehall_classics",
+      "cuisine": "american",
+      "protein": "beef",
+      "mealFormat": "sandwich",
+      "cookTime": 45,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/beef-dip.jpg",
+      "thumbImage": "/images/thumbs/beef-dip.jpg",
+      "tags": [
+        "protein:beef",
+        "format:sandwich",
+        "category:firehall_classics",
+        "trending",
+        "beef",
+        "golden_100"
+      ],
+      "firefighterScore": 100,
+      "popularityWeight": 3.6,
+      "searchTerms": [
+        "beef dip sandwiches",
+        "beef dip",
+        "american",
+        "beef",
+        "sandwich",
+        "trending",
+        "golden_100"
+      ]
+    },
+    {
       "slug": "enchilada-beef-skillet",
       "title": "Beef Enchilada Skillet",
       "subtitle": "Ground beef, tortillas, and enchilada sauce in one pan for ten",
@@ -453,6 +721,70 @@
       "searchTerms": [
         "beef enchilada skillet",
         "game day recipes"
+      ]
+    },
+    {
+      "slug": "beef-gyros-for-the-hall",
+      "title": "Beef Gyros",
+      "subtitle": "Thin-sliced seasoned beef with tzatziki and onion in warm pita",
+      "category": "hall_expansion",
+      "cuisine": "greek",
+      "protein": "beef",
+      "mealFormat": "handheld",
+      "cookTime": 25,
+      "difficulty": "medium",
+      "heroImage": "/images/hall-expansion/beef-gyros-for-the-hall.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/beef-gyros-for-the-hall.jpg",
+      "tags": [
+        "protein:beef",
+        "format:handheld",
+        "category:crew_feeders",
+        "handheld",
+        "beef",
+        "hall_expansion",
+        "hall_expansion_74",
+        "hall_meal",
+        "firefighter_meal"
+      ],
+      "firefighterScore": 86,
+      "popularityWeight": 7.8,
+      "searchTerms": [
+        "beef gyro firehall",
+        "gyro pita crew"
+      ]
+    },
+    {
+      "slug": "korean-beef-rice-bowls",
+      "title": "Beef Rice Bowls",
+      "subtitle": "Bulgogi-style ground beef over rice with quick cucumber pickle",
+      "category": "healthy_performance",
+      "cuisine": "Korean",
+      "protein": "beef",
+      "mealFormat": "bowl",
+      "cookTime": 15,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/korean-beef-rice-bowls.jpg",
+      "thumbImage": "/images/thumbs/korean-beef-rice-bowls.jpg",
+      "tags": [
+        "protein:beef",
+        "format:bowl",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "beef rice bowls",
+        "korean beef rice bowls",
+        "beef",
+        "Korean",
+        "bowl",
+        "performance meal",
+        "firefighter healthy"
       ]
     },
     {
@@ -520,6 +852,38 @@
       ]
     },
     {
+      "slug": "best-tuna-melt-for-the-hall",
+      "title": "Best Tuna Melt for the Hall (Diner Style)",
+      "subtitle": "Open-faced tuna melts on rye with cheddar — sheet-pan batch for the crew",
+      "category": "hall_expansion",
+      "cuisine": "american",
+      "protein": "seafood",
+      "mealFormat": "sandwich",
+      "cookTime": 15,
+      "difficulty": "easy",
+      "heroImage": "/images/hall-expansion/best-tuna-melt-for-the-hall.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/best-tuna-melt-for-the-hall.jpg",
+      "tags": [
+        "protein:seafood",
+        "format:sandwich",
+        "category:crew_feeders",
+        "handheld",
+        "comfort",
+        "seafood",
+        "hall_expansion",
+        "hall_expansion_74",
+        "hall_meal",
+        "firefighter_meal"
+      ],
+      "firefighterScore": 86,
+      "popularityWeight": 7.8,
+      "searchTerms": [
+        "tuna melt sheet pan",
+        "hall tuna melt",
+        "diner tuna melt rye"
+      ]
+    },
+    {
       "slug": "turkey-burgers",
       "title": "Black Bean Turkey Burgers",
       "subtitle": "Juicy lean burgers that still satisfy",
@@ -555,7 +919,7 @@
     },
     {
       "slug": "blackened-cod-taco-night",
-      "title": "Blackened Cod Taco Night",
+      "title": "Blackened Cod Tacos",
       "subtitle": "Spice-crusted cod with lime slaw and avocado crema in corn tortillas",
       "category": "healthy_performance",
       "cuisine": "Mexican",
@@ -578,76 +942,11 @@
       "firefighterScore": 83,
       "popularityWeight": 7.5,
       "searchTerms": [
+        "blackened cod tacos",
         "blackened cod taco night",
         "fish",
         "Mexican",
         "tacos",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "beef-dip",
-      "title": "Beef Dip Sandwiches",
-      "subtitle": "Au jus dip energy without the fuss",
-      "category": "firehall_classics",
-      "cuisine": "american",
-      "protein": "beef",
-      "mealFormat": "sandwich",
-      "cookTime": 45,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/beef-dip.jpg",
-      "thumbImage": "/images/thumbs/beef-dip.jpg",
-      "tags": [
-        "protein:beef",
-        "format:sandwich",
-        "category:firehall_classics",
-        "trending",
-        "beef",
-        "golden_100"
-      ],
-      "firefighterScore": 100,
-      "popularityWeight": 3.6,
-      "searchTerms": [
-        "blackstone steak sandwiches",
-        "beef dip",
-        "american",
-        "beef",
-        "sandwich",
-        "trending",
-        "golden_100"
-      ]
-    },
-    {
-      "slug": "boneless-chicken-thighs-sweet-potato-spinach",
-      "title": "Boneless Chicken Thighs with Sweet Potato & Fresh Spinach",
-      "subtitle": "Seared thighs with roasted sweet potato and garlicky spinach",
-      "category": "healthy_performance",
-      "cuisine": "American",
-      "protein": "chicken",
-      "mealFormat": "plated_main",
-      "cookTime": 35,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/boneless-chicken-thighs-sweet-potato-spinach.jpg",
-      "thumbImage": "/images/thumbs/boneless-chicken-thighs-sweet-potato-spinach.jpg",
-      "tags": [
-        "protein:chicken",
-        "format:plated_main",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "boneless chicken thighs with sweet potato & fresh spinach",
-        "boneless chicken thighs sweet potato spinach",
-        "chicken",
-        "American",
-        "plated main",
         "performance meal",
         "firefighter healthy"
       ]
@@ -720,6 +1019,37 @@
       ]
     },
     {
+      "slug": "buffalo-chicken-wraps",
+      "title": "Buffalo Chicken Wraps",
+      "subtitle": "Shredded buffalo chicken with lettuce and ranch in flour tortillas",
+      "category": "hall_expansion",
+      "cuisine": "american",
+      "protein": "chicken",
+      "mealFormat": "handheld",
+      "cookTime": 35,
+      "difficulty": "easy",
+      "heroImage": "/images/hall-expansion/buffalo-chicken-wraps.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/buffalo-chicken-wraps.jpg",
+      "tags": [
+        "protein:chicken",
+        "format:handheld",
+        "category:crew_feeders",
+        "handheld",
+        "chicken",
+        "game_day",
+        "hall_expansion",
+        "hall_expansion_74",
+        "hall_meal",
+        "firefighter_meal"
+      ],
+      "firefighterScore": 86,
+      "popularityWeight": 7.8,
+      "searchTerms": [
+        "buffalo chicken wrap",
+        "buffalo wrap fire station"
+      ]
+    },
+    {
       "slug": "build-your-own-pho-bar",
       "title": "Build-Your-Own Pho Bar",
       "subtitle": "Vietnamese pho bar with broth, noodles, and herbs for ten",
@@ -749,6 +1079,37 @@
       "searchTerms": [
         "build-your-own pho bar",
         "crew feeders"
+      ]
+    },
+    {
+      "slug": "bulgogi-bowls",
+      "title": "Bulgogi Bowls",
+      "subtitle": "Sweet soy beef, pickled crunch",
+      "category": "global_flavors",
+      "cuisine": "korean",
+      "protein": "beef",
+      "mealFormat": "bowl",
+      "cookTime": 55,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/bulgogi-bowls.jpg",
+      "thumbImage": "/images/thumbs/bulgogi-bowls.jpg",
+      "tags": [
+        "protein:beef",
+        "format:bowl",
+        "category:global_flavors",
+        "bowl",
+        "beef",
+        "golden_100"
+      ],
+      "firefighterScore": 98,
+      "popularityWeight": 3.2,
+      "searchTerms": [
+        "bulgogi bowls",
+        "korean",
+        "beef",
+        "bowl",
+        "korean bulgogi rice bowl",
+        "golden_100"
       ]
     },
     {
@@ -822,7 +1183,7 @@
       "cuisine": "indian",
       "protein": "chicken",
       "mealFormat": "plated_main",
-      "cookTime": 55,
+      "cookTime": 85,
       "difficulty": "medium",
       "heroImage": "/images/golden-100/butter-chicken.jpg",
       "thumbImage": "/images/thumbs/butter-chicken.jpg",
@@ -843,6 +1204,40 @@
         "comfort",
         "butter chicken dinner",
         "golden_100"
+      ]
+    },
+    {
+      "slug": "cajun-chicken-rice-bowl",
+      "title": "Cajun Chicken and Rice",
+      "subtitle": "Blackened chicken thighs over rice with bell pepper and creole spices",
+      "category": "healthy_performance",
+      "cuisine": "Cajun",
+      "protein": "chicken",
+      "mealFormat": "bowl",
+      "cookTime": 25,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/cajun-chicken-rice-bowl.jpg",
+      "thumbImage": "/images/thumbs/cajun-chicken-rice-bowl.jpg",
+      "tags": [
+        "protein:chicken",
+        "format:bowl",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "cajun chicken and rice",
+        "cajun chicken rice bowl",
+        "chicken",
+        "Cajun",
+        "bowl",
+        "performance meal",
+        "firefighter healthy"
       ]
     },
     {
@@ -873,71 +1268,6 @@
       "searchTerms": [
         "cajun chicken and rice skillet",
         "crew feeders"
-      ]
-    },
-    {
-      "slug": "cajun-chicken-rice-bowl",
-      "title": "Cajun Chicken Rice Bowl",
-      "subtitle": "Blackened chicken thighs over rice with bell pepper and creole spices",
-      "category": "healthy_performance",
-      "cuisine": "Cajun",
-      "protein": "chicken",
-      "mealFormat": "bowl",
-      "cookTime": 25,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/cajun-chicken-rice-bowl.jpg",
-      "thumbImage": "/images/thumbs/cajun-chicken-rice-bowl.jpg",
-      "tags": [
-        "protein:chicken",
-        "format:bowl",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "cajun chicken rice bowl",
-        "chicken",
-        "Cajun",
-        "bowl",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "jambalaya",
-      "title": "Cajun Jambalaya for the Hall",
-      "subtitle": "One pot, loud flavor, full table",
-      "category": "big_crew_feeders",
-      "cuisine": "cajun",
-      "protein": "mixed",
-      "mealFormat": "one_pot",
-      "cookTime": 90,
-      "difficulty": "hard",
-      "heroImage": "/images/golden-100/jambalaya.jpg",
-      "thumbImage": "/images/thumbs/jambalaya.jpg",
-      "tags": [
-        "protein:mixed",
-        "format:one_pot",
-        "category:big_crew_feeders",
-        "hearty",
-        "golden_100"
-      ],
-      "firefighterScore": 100,
-      "popularityWeight": 3.6,
-      "searchTerms": [
-        "cajun jambalaya for the hall",
-        "jambalaya",
-        "cajun",
-        "mixed",
-        "one pot",
-        "hearty",
-        "cajun jambalaya large batch",
-        "golden_100"
       ]
     },
     {
@@ -974,39 +1304,6 @@
       ]
     },
     {
-      "slug": "carolina-mustard-pork",
-      "title": "Carolina Mustard Pulled Pork",
-      "subtitle": "Tangy mustard pull, soft buns",
-      "category": "bbq_grill_nights",
-      "cuisine": "american",
-      "protein": "pork",
-      "mealFormat": "sandwich",
-      "cookTime": 520,
-      "difficulty": "hard",
-      "heroImage": "/images/golden-100/carolina-mustard-pork.jpg",
-      "thumbImage": "/images/thumbs/carolina-mustard-pork.jpg",
-      "tags": [
-        "protein:pork",
-        "format:sandwich",
-        "category:bbq_grill_nights",
-        "bbq",
-        "handheld",
-        "golden_100"
-      ],
-      "firefighterScore": 100,
-      "popularityWeight": 3.2,
-      "searchTerms": [
-        "carolina mustard pulled pork",
-        "carolina mustard pork",
-        "american",
-        "pork",
-        "sandwich",
-        "bbq",
-        "handheld",
-        "golden_100"
-      ]
-    },
-    {
       "slug": "cast-iron-chicken-fajitas",
       "title": "Cast Iron Chicken Fajitas",
       "subtitle": "Sizzling peppers and chicken with warm tortillas for ten",
@@ -1039,7 +1336,7 @@
     },
     {
       "slug": "cedar-plank-salmon",
-      "title": "Cedar Plank Grilled Salmon",
+      "title": "Cedar Plank Salmon",
       "subtitle": "Smoke-kissed salmon without the mess",
       "category": "bbq_grill_nights",
       "cuisine": "american",
@@ -1060,45 +1357,13 @@
       "firefighterScore": 100,
       "popularityWeight": 3.2,
       "searchTerms": [
-        "cedar plank grilled salmon",
         "cedar plank salmon",
         "american",
         "seafood",
         "grill",
         "bbq",
         "healthy",
-        "golden_100"
-      ]
-    },
-    {
-      "slug": "grilled-pork-chops",
-      "title": "Charcoal Grilled Pork Chops",
-      "subtitle": "Thick chops, caramelized edges",
-      "category": "bbq_grill_nights",
-      "cuisine": "american",
-      "protein": "pork",
-      "mealFormat": "grill",
-      "cookTime": 90,
-      "difficulty": "hard",
-      "heroImage": "/images/golden-100/grilled-pork-chops.jpg",
-      "thumbImage": "/images/thumbs/grilled-pork-chops.jpg",
-      "tags": [
-        "protein:pork",
-        "format:grill",
-        "category:bbq_grill_nights",
-        "bbq",
-        "golden_100"
-      ],
-      "firefighterScore": 100,
-      "popularityWeight": 3.2,
-      "searchTerms": [
-        "charcoal grilled pork chops",
-        "grilled pork chops",
-        "american",
-        "pork",
-        "grill",
-        "bbq",
-        "grilled thick pork chops dinner",
+        "cedar plank grilled salmon",
         "golden_100"
       ]
     },
@@ -1166,6 +1431,39 @@
       ]
     },
     {
+      "slug": "skillet-chicken-alfredo",
+      "title": "Chicken Alfredo",
+      "subtitle": "Creamy pasta without the marathon",
+      "category": "quick_shift_meals",
+      "cuisine": "italian",
+      "protein": "chicken",
+      "mealFormat": "pasta",
+      "cookTime": 45,
+      "difficulty": "easy",
+      "heroImage": "/images/golden-100/skillet-chicken-alfredo.jpg",
+      "thumbImage": "/images/thumbs/skillet-chicken-alfredo.jpg",
+      "tags": [
+        "protein:chicken",
+        "format:pasta",
+        "category:quick_shift_meals",
+        "quick",
+        "pasta",
+        "golden_100"
+      ],
+      "firefighterScore": 100,
+      "popularityWeight": 3.2,
+      "searchTerms": [
+        "chicken alfredo",
+        "skillet chicken alfredo",
+        "italian",
+        "chicken",
+        "pasta",
+        "quick",
+        "one skillet chicken alfredo",
+        "golden_100"
+      ]
+    },
+    {
       "slug": "chicken-alfredo-bake",
       "title": "Chicken Alfredo Bake",
       "subtitle": "Creamy tray bake for seconds",
@@ -1197,15 +1495,49 @@
       ]
     },
     {
+      "slug": "spanish-chicken-chorizo-rice",
+      "title": "Chicken and Chorizo Rice",
+      "subtitle": "One-pot saffron rice with chicken thighs, chorizo, and peas",
+      "category": "healthy_performance",
+      "cuisine": "Spanish",
+      "protein": "chicken",
+      "mealFormat": "one_pot",
+      "cookTime": 45,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/spanish-chicken-chorizo-rice.jpg",
+      "thumbImage": "/images/thumbs/spanish-chicken-chorizo-rice.jpg",
+      "tags": [
+        "protein:chicken",
+        "format:one_pot",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "chicken and chorizo rice",
+        "spanish chicken chorizo rice",
+        "chicken",
+        "Spanish",
+        "one pot",
+        "performance meal",
+        "firefighter healthy"
+      ]
+    },
+    {
       "slug": "chicken-dumpling-soup",
       "title": "Chicken and Dumplings",
-      "subtitle": "Post-shift hug in a pot",
+      "subtitle": "Thick chicken stew with fluffy dropped dumplings — not brothy soup",
       "category": "comfort_food",
       "cuisine": "american",
       "protein": "chicken",
       "mealFormat": "soup_chili",
-      "cookTime": 55,
-      "difficulty": "medium",
+      "cookTime": 80,
+      "difficulty": "easy",
       "heroImage": "/images/golden-100/chicken-dumpling-soup.jpg",
       "thumbImage": "/images/thumbs/chicken-dumpling-soup.jpg",
       "tags": [
@@ -1217,7 +1549,7 @@
         "golden_100"
       ],
       "firefighterScore": 100,
-      "popularityWeight": 3.6,
+      "popularityWeight": 3.7,
       "searchTerms": [
         "chicken and dumplings",
         "chicken dumpling soup",
@@ -1226,7 +1558,74 @@
         "soup chili",
         "hearty",
         "comfort",
-        "chicken and dumplings soup",
+        "chicken and dumplings stew dumplings",
+        "golden_100"
+      ]
+    },
+    {
+      "slug": "one-pot-chicken-rice",
+      "title": "Chicken and Rice",
+      "subtitle": "One pot, hard to mess up",
+      "category": "rookie_friendly",
+      "cuisine": "american",
+      "protein": "chicken",
+      "mealFormat": "one_pot",
+      "cookTime": 50,
+      "difficulty": "easy",
+      "heroImage": "/images/golden-100/one-pot-chicken-rice.jpg",
+      "thumbImage": "/images/thumbs/one-pot-chicken-rice.jpg",
+      "tags": [
+        "protein:chicken",
+        "format:one_pot",
+        "category:rookie_friendly",
+        "one_pot",
+        "quick",
+        "golden_100"
+      ],
+      "firefighterScore": 100,
+      "popularityWeight": 3.2,
+      "searchTerms": [
+        "chicken and rice",
+        "one pot chicken rice",
+        "american",
+        "chicken",
+        "one pot",
+        "quick",
+        "one pot chicken and rice dinner",
+        "one_pot",
+        "golden_100"
+      ]
+    },
+    {
+      "slug": "performance-burrito-bowls",
+      "title": "Chicken Burrito Bowls",
+      "subtitle": "Macros-friendly, still craveable",
+      "category": "healthy_performance",
+      "cuisine": "mexican",
+      "protein": "chicken",
+      "mealFormat": "bowl",
+      "cookTime": 55,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/performance-burrito-bowls.jpg",
+      "thumbImage": "/images/thumbs/performance-burrito-bowls.jpg",
+      "tags": [
+        "protein:chicken",
+        "format:bowl",
+        "category:healthy_performance",
+        "healthy",
+        "bowl",
+        "golden_100"
+      ],
+      "firefighterScore": 100,
+      "popularityWeight": 2.9,
+      "searchTerms": [
+        "chicken burrito bowls",
+        "performance burrito bowls",
+        "mexican",
+        "chicken",
+        "bowl",
+        "healthy",
+        "chicken burrito bowl healthy",
         "golden_100"
       ]
     },
@@ -1259,6 +1658,38 @@
       "searchTerms": [
         "chicken cacciatore for the crew",
         "crew feeders"
+      ]
+    },
+    {
+      "slug": "chicken-caesar",
+      "title": "Chicken Caesar Salad",
+      "subtitle": "Crispy chicken, real parmesan, crew salad night",
+      "category": "firehall_classics",
+      "cuisine": "american",
+      "protein": "chicken",
+      "mealFormat": "salad",
+      "cookTime": 70,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/chicken-caesar.jpg",
+      "thumbImage": "/images/thumbs/chicken-caesar.jpg",
+      "tags": [
+        "protein:chicken",
+        "format:salad",
+        "category:firehall_classics",
+        "healthy",
+        "chicken",
+        "golden_100"
+      ],
+      "firefighterScore": 100,
+      "popularityWeight": 3.6,
+      "searchTerms": [
+        "chicken caesar salad",
+        "chicken caesar",
+        "american",
+        "chicken",
+        "salad",
+        "healthy",
+        "golden_100"
       ]
     },
     {
@@ -1295,6 +1726,142 @@
       ]
     },
     {
+      "slug": "chicken-enchilada-skillet-light",
+      "title": "Chicken Enchilada Skillet",
+      "subtitle": "One-pan shredded chicken with tortillas, enchilada sauce, and cheese",
+      "category": "healthy_performance",
+      "cuisine": "Mexican",
+      "protein": "chicken",
+      "mealFormat": "skillet",
+      "cookTime": 25,
+      "difficulty": "easy",
+      "heroImage": "/images/golden-100/chicken-enchilada-skillet-light.jpg",
+      "thumbImage": "/images/thumbs/chicken-enchilada-skillet-light.jpg",
+      "tags": [
+        "protein:chicken",
+        "format:skillet",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "chicken enchilada skillet",
+        "chicken enchilada skillet light",
+        "chicken",
+        "Mexican",
+        "skillet",
+        "performance meal",
+        "firefighter healthy"
+      ]
+    },
+    {
+      "slug": "sheet-pan-fajitas",
+      "title": "Chicken Fajitas",
+      "subtitle": "One pan, peppers, lean strips",
+      "category": "healthy_performance",
+      "cuisine": "mexican",
+      "protein": "chicken",
+      "mealFormat": "sheet_pan",
+      "cookTime": 55,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/sheet-pan-fajitas.jpg",
+      "thumbImage": "/images/thumbs/sheet-pan-fajitas.jpg",
+      "tags": [
+        "protein:chicken",
+        "format:sheet_pan",
+        "category:healthy_performance",
+        "healthy",
+        "quick",
+        "golden_100"
+      ],
+      "firefighterScore": 100,
+      "popularityWeight": 2.9,
+      "searchTerms": [
+        "chicken fajitas",
+        "sheet pan fajitas",
+        "mexican",
+        "chicken",
+        "sheet pan",
+        "healthy",
+        "quick",
+        "sheet pan chicken fajitas",
+        "golden_100"
+      ]
+    },
+    {
+      "slug": "asian-chicken-lettuce-cups",
+      "title": "Chicken Lettuce Cups",
+      "subtitle": "Ginger-garlic ground chicken in crisp butter lettuce with hoisin drizzle",
+      "category": "healthy_performance",
+      "cuisine": "Asian",
+      "protein": "chicken",
+      "mealFormat": "handheld",
+      "cookTime": 15,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/asian-chicken-lettuce-cups.jpg",
+      "thumbImage": "/images/thumbs/asian-chicken-lettuce-cups.jpg",
+      "tags": [
+        "protein:chicken",
+        "format:handheld",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "chicken lettuce cups",
+        "asian chicken lettuce cups",
+        "chicken",
+        "Asian",
+        "handheld",
+        "performance meal",
+        "firefighter healthy"
+      ]
+    },
+    {
+      "slug": "sheet-pan-meal-prep",
+      "title": "Chicken Meal Prep Trays",
+      "subtitle": "Portioned trays, reheat-ready",
+      "category": "meal_prep_leftovers",
+      "cuisine": "american",
+      "protein": "chicken",
+      "mealFormat": "sheet_pan",
+      "cookTime": 100,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/sheet-pan-meal-prep.jpg",
+      "thumbImage": "/images/thumbs/sheet-pan-meal-prep.jpg",
+      "tags": [
+        "protein:chicken",
+        "format:sheet_pan",
+        "category:meal_prep_leftovers",
+        "healthy",
+        "quick",
+        "golden_100"
+      ],
+      "firefighterScore": 100,
+      "popularityWeight": 3.2,
+      "searchTerms": [
+        "chicken meal prep trays",
+        "sheet pan meal prep",
+        "american",
+        "chicken",
+        "sheet pan",
+        "healthy",
+        "quick",
+        "sheet pan chicken trays",
+        "golden_100"
+      ]
+    },
+    {
       "slug": "chicken-paprikash-hall",
       "title": "Chicken Paprikash for the Hall",
       "subtitle": "Hungarian paprika stew with sour cream over egg noodles for ten",
@@ -1327,7 +1894,7 @@
     },
     {
       "slug": "chicken-parm",
-      "title": "Chicken Parm",
+      "title": "Chicken Parmesan",
       "subtitle": "The hall's Italian night spread",
       "category": "firehall_classics",
       "cuisine": "italian",
@@ -1348,45 +1915,13 @@
       "firefighterScore": 100,
       "popularityWeight": 3.6,
       "searchTerms": [
+        "chicken parmesan",
         "chicken parm",
         "italian",
         "chicken",
         "pasta",
         "trending",
         "comfort",
-        "golden_100"
-      ]
-    },
-    {
-      "slug": "parm-hero-subs",
-      "title": "Chicken Parm Hero Subs",
-      "subtitle": "Parm flavors in a handheld line",
-      "category": "firehall_classics",
-      "cuisine": "italian",
-      "protein": "chicken",
-      "mealFormat": "sandwich",
-      "cookTime": 55,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/parm-hero-subs.jpg",
-      "thumbImage": "/images/thumbs/parm-hero-subs.jpg",
-      "tags": [
-        "protein:chicken",
-        "format:sandwich",
-        "category:firehall_classics",
-        "handheld",
-        "chicken",
-        "golden_100"
-      ],
-      "firefighterScore": 100,
-      "popularityWeight": 3.6,
-      "searchTerms": [
-        "chicken parm hero subs",
-        "parm hero subs",
-        "italian",
-        "chicken",
-        "sandwich",
-        "handheld",
-        "chicken parmesan hero sandwich",
         "golden_100"
       ]
     },
@@ -1423,6 +1958,135 @@
       ]
     },
     {
+      "slug": "chicken-quesadillas",
+      "title": "Chicken Quesadillas",
+      "subtitle": "Melty, crispy, line-friendly",
+      "category": "quick_shift_meals",
+      "cuisine": "mexican",
+      "protein": "chicken",
+      "mealFormat": "handheld",
+      "cookTime": 35,
+      "difficulty": "easy",
+      "heroImage": "/images/golden-100/chicken-quesadillas.jpg",
+      "thumbImage": "/images/thumbs/chicken-quesadillas.jpg",
+      "tags": [
+        "protein:chicken",
+        "format:handheld",
+        "category:quick_shift_meals",
+        "quick",
+        "handheld",
+        "golden_100"
+      ],
+      "firefighterScore": 100,
+      "popularityWeight": 3.2,
+      "searchTerms": [
+        "chicken quesadillas",
+        "mexican",
+        "chicken",
+        "handheld",
+        "quick",
+        "chicken quesadillas dinner",
+        "golden_100"
+      ]
+    },
+    {
+      "slug": "chicken-shawarma-pitas",
+      "title": "Chicken Shawarma Pitas",
+      "subtitle": "Warm-spiced chicken with pickles and garlic sauce in pita",
+      "category": "hall_expansion",
+      "cuisine": "middle eastern",
+      "protein": "chicken",
+      "mealFormat": "handheld",
+      "cookTime": 35,
+      "difficulty": "medium",
+      "heroImage": "/images/hall-expansion/chicken-shawarma-pitas.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/chicken-shawarma-pitas.jpg",
+      "tags": [
+        "protein:chicken",
+        "format:handheld",
+        "category:crew_feeders",
+        "handheld",
+        "chicken",
+        "global",
+        "hall_expansion",
+        "hall_expansion_74",
+        "hall_meal",
+        "firefighter_meal"
+      ],
+      "firefighterScore": 86,
+      "popularityWeight": 7.8,
+      "searchTerms": [
+        "chicken shawarma pita",
+        "shawarma wrap firehall"
+      ]
+    },
+    {
+      "slug": "chicken-souvlaki",
+      "title": "Chicken Souvlaki",
+      "subtitle": "Marinated skewers, pita-ready",
+      "category": "healthy_performance",
+      "cuisine": "greek",
+      "protein": "chicken",
+      "mealFormat": "grill",
+      "cookTime": 131,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/chicken-souvlaki.jpg",
+      "thumbImage": "/images/thumbs/chicken-souvlaki.jpg",
+      "tags": [
+        "protein:chicken",
+        "format:grill",
+        "category:healthy_performance",
+        "healthy",
+        "chicken",
+        "golden_100"
+      ],
+      "firefighterScore": 100,
+      "popularityWeight": 2.9,
+      "searchTerms": [
+        "chicken souvlaki",
+        "greek",
+        "chicken",
+        "grill",
+        "healthy",
+        "chicken souvlaki grilled",
+        "golden_100"
+      ]
+    },
+    {
+      "slug": "boneless-chicken-thighs-sweet-potato-spinach",
+      "title": "Chicken Thighs with Sweet Potato and Spinach",
+      "subtitle": "Seared thighs with roasted sweet potato and garlicky spinach",
+      "category": "healthy_performance",
+      "cuisine": "American",
+      "protein": "chicken",
+      "mealFormat": "plated_main",
+      "cookTime": 35,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/boneless-chicken-thighs-sweet-potato-spinach.jpg",
+      "thumbImage": "/images/thumbs/boneless-chicken-thighs-sweet-potato-spinach.jpg",
+      "tags": [
+        "protein:chicken",
+        "format:plated_main",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "chicken thighs with sweet potato and spinach",
+        "boneless chicken thighs sweet potato spinach",
+        "chicken",
+        "American",
+        "plated main",
+        "performance meal",
+        "firefighter healthy"
+      ]
+    },
+    {
       "slug": "chicken-tikka-masala",
       "title": "Chicken Tikka Masala",
       "subtitle": "Rich curry on a busy night",
@@ -1430,7 +2094,7 @@
       "cuisine": "indian",
       "protein": "chicken",
       "mealFormat": "plated_main",
-      "cookTime": 35,
+      "cookTime": 95,
       "difficulty": "easy",
       "heroImage": "/images/golden-100/chicken-tikka-masala.jpg",
       "thumbImage": "/images/thumbs/chicken-tikka-masala.jpg",
@@ -1450,6 +2114,39 @@
         "plated main",
         "quick",
         "chicken tikka masala dinner",
+        "golden_100"
+      ]
+    },
+    {
+      "slug": "chicken-tortilla-soup-for-the-hall",
+      "title": "Chicken Tortilla Soup for the Hall",
+      "subtitle": "Brothy lime-kissed soup with crisp tortilla strips at the line",
+      "category": "comfort_food",
+      "cuisine": "mexican",
+      "protein": "chicken",
+      "mealFormat": "soup_chili",
+      "cookTime": 60,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/chicken-tortilla-soup-for-the-hall.jpg",
+      "thumbImage": "/images/thumbs/chicken-tortilla-soup-for-the-hall.jpg",
+      "tags": [
+        "protein:chicken",
+        "format:soup_chili",
+        "category:comfort_food",
+        "comfort",
+        "hearty",
+        "golden_100"
+      ],
+      "firefighterScore": 100,
+      "popularityWeight": 3.6,
+      "searchTerms": [
+        "chicken tortilla soup for the hall",
+        "mexican",
+        "chicken",
+        "soup chili",
+        "comfort",
+        "hearty",
+        "chicken tortilla soup fire station",
         "golden_100"
       ]
     },
@@ -1519,39 +2216,6 @@
       ]
     },
     {
-      "slug": "steak-tacos",
-      "title": "Street-Style Chimichurri Steak Tacos",
-      "subtitle": "Charred steak, bright chimichurri, tortilla night",
-      "category": "firehall_classics",
-      "cuisine": "mexican",
-      "protein": "beef",
-      "mealFormat": "tacos",
-      "cookTime": 55,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/steak-tacos.jpg",
-      "thumbImage": "/images/thumbs/steak-tacos.jpg",
-      "tags": [
-        "protein:beef",
-        "format:tacos",
-        "category:firehall_classics",
-        "trending",
-        "handheld",
-        "golden_100"
-      ],
-      "firefighterScore": 100,
-      "popularityWeight": 3.6,
-      "searchTerms": [
-        "chimichurri steak tacos",
-        "steak tacos",
-        "mexican",
-        "beef",
-        "tacos",
-        "trending",
-        "handheld",
-        "golden_100"
-      ]
-    },
-    {
       "slug": "chipotle-lime-chicken-tacos",
       "title": "Chipotle Lime Chicken Tacos",
       "subtitle": "Adobo-marinated grilled chicken with slaw and lime crema",
@@ -1585,69 +2249,35 @@
       ]
     },
     {
-      "slug": "meatloaf-mashed",
-      "title": "Classic Meatloaf with Mashed Potatoes",
-      "subtitle": "Sunday-dinner energy on a weeknight",
-      "category": "comfort_food",
+      "slug": "classic-patty-melt-for-the-crew",
+      "title": "Classic Patty Melt for the Crew",
+      "subtitle": "Griddled beef patties with caramelized onions and Swiss on rye",
+      "category": "hall_expansion",
       "cuisine": "american",
       "protein": "beef",
-      "mealFormat": "plated_main",
-      "cookTime": 135,
+      "mealFormat": "sandwich",
+      "cookTime": 35,
       "difficulty": "medium",
-      "heroImage": "/images/golden-100/meatloaf-mashed.jpg",
-      "thumbImage": "/images/thumbs/meatloaf-mashed.jpg",
+      "heroImage": "/images/hall-expansion/classic-patty-melt-for-the-crew.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/classic-patty-melt-for-the-crew.jpg",
       "tags": [
         "protein:beef",
-        "format:plated_main",
-        "category:comfort_food",
+        "format:sandwich",
+        "category:crew_feeders",
+        "handheld",
         "comfort",
-        "golden_100"
-      ],
-      "firefighterScore": 100,
-      "popularityWeight": 3.6,
-      "searchTerms": [
-        "classic meatloaf with mashed potatoes",
-        "meatloaf mashed",
-        "american",
         "beef",
-        "plated main",
-        "comfort",
-        "meatloaf mashed potatoes dinner",
-        "golden_100"
-      ]
-    },
-    {
-      "slug": "pepperoni-pizza-night",
-      "title": "Classic Pepperoni Pizza",
-      "subtitle": "Friday hall pie — not delivery",
-      "category": "pizza_night",
-      "cuisine": "italian",
-      "protein": "pork",
-      "mealFormat": "pizza",
-      "cookTime": 175,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/pepperoni-pizza-night.jpg",
-      "thumbImage": "/images/thumbs/pepperoni-pizza-night.jpg",
-      "tags": [
-        "protein:pork",
-        "format:pizza",
-        "category:pizza_night",
-        "handheld",
-        "trending",
-        "golden_100"
+        "hall_expansion",
+        "hall_expansion_74",
+        "hall_meal",
+        "firefighter_meal"
       ],
-      "firefighterScore": 94,
-      "popularityWeight": 3.2,
+      "firefighterScore": 86,
+      "popularityWeight": 7.8,
       "searchTerms": [
-        "classic pepperoni pizza",
-        "pepperoni pizza night",
-        "italian",
-        "pork",
-        "pizza",
-        "handheld",
-        "trending",
-        "homemade pepperoni pizza",
-        "golden_100"
+        "patty melt firehall",
+        "diner patty melt crew",
+        "rye swiss patty melt"
       ]
     },
     {
@@ -1713,40 +2343,6 @@
       ]
     },
     {
-      "slug": "cottage-cheese-protein-pasta",
-      "title": "Cottage Cheese Protein Pasta Bake",
-      "subtitle": "High-protein baked penne with marinara and melted mozzarella",
-      "category": "healthy_performance",
-      "cuisine": "Italian-American",
-      "protein": "mixed",
-      "mealFormat": "pasta",
-      "cookTime": 35,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/cottage-cheese-protein-pasta.jpg",
-      "thumbImage": "/images/thumbs/cottage-cheese-protein-pasta.jpg",
-      "tags": [
-        "protein:mixed",
-        "format:pasta",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "cottage cheese protein pasta bake",
-        "cottage cheese protein pasta",
-        "mixed",
-        "Italian-American",
-        "pasta",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
       "slug": "cottage-pie-for-the-crew",
       "title": "Cottage Pie for the Crew",
       "subtitle": "Ground beef and vegetables under golden mashed potato for ten",
@@ -1809,38 +2405,6 @@
       ]
     },
     {
-      "slug": "creamy-tuscan-chicken",
-      "title": "Creamy Tuscan Chicken",
-      "subtitle": "Sun-dried tomato, spinach, rich cream",
-      "category": "comfort_food",
-      "cuisine": "italian",
-      "protein": "chicken",
-      "mealFormat": "plated_main",
-      "cookTime": 55,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/creamy-tuscan-chicken.jpg",
-      "thumbImage": "/images/thumbs/creamy-tuscan-chicken.jpg",
-      "tags": [
-        "protein:chicken",
-        "format:plated_main",
-        "category:comfort_food",
-        "comfort",
-        "chicken",
-        "golden_100"
-      ],
-      "firefighterScore": 100,
-      "popularityWeight": 3.6,
-      "searchTerms": [
-        "creamy tuscan chicken",
-        "italian",
-        "chicken",
-        "plated main",
-        "comfort",
-        "creamy tuscan chicken dinner",
-        "golden_100"
-      ]
-    },
-    {
       "slug": "crispy-chicken-cutlets",
       "title": "Crispy Chicken Cutlets Marinara",
       "subtitle": "Golden cutlets, bubbling sauce",
@@ -1871,72 +2435,6 @@
         "trending",
         "crispy chicken cutlets marinara dinner",
         "golden_100"
-      ]
-    },
-    {
-      "slug": "crispy-fish-taco-night",
-      "title": "Crispy Fish Taco Night",
-      "subtitle": "Oven-crisp cod with cabbage slaw and lime crema for eight",
-      "category": "healthy_performance",
-      "cuisine": "Mexican",
-      "protein": "fish",
-      "mealFormat": "tacos",
-      "cookTime": 18,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/crispy-fish-taco-night.jpg",
-      "thumbImage": "/images/thumbs/crispy-fish-taco-night.jpg",
-      "tags": [
-        "protein:fish",
-        "format:tacos",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "crispy fish taco night",
-        "fish",
-        "Mexican",
-        "tacos",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "crock-barbacoa-chicken",
-      "title": "Crock Barbacoa Chicken",
-      "subtitle": "Slow-cooked chipotle chicken that shreds for tacos and bowls",
-      "category": "healthy_performance",
-      "cuisine": "Mexican",
-      "protein": "chicken",
-      "mealFormat": "slow_cooker",
-      "cookTime": 360,
-      "difficulty": "easy",
-      "heroImage": "/images/golden-100/crock-barbacoa-chicken.jpg",
-      "thumbImage": "/images/thumbs/crock-barbacoa-chicken.jpg",
-      "tags": [
-        "protein:chicken",
-        "format:slow_cooker",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "crock barbacoa chicken",
-        "chicken",
-        "Mexican",
-        "slow cooker",
-        "performance meal",
-        "firefighter healthy"
       ]
     },
     {
@@ -1973,7 +2471,7 @@
     },
     {
       "slug": "smash-burgers",
-      "title": "Double Smash Burgers with Caramelized Onions & Dirty Sauce",
+      "title": "Double Smash Burgers",
       "subtitle": "Crispy edges, melty cheese, crew-approved",
       "category": "firehall_classics",
       "cuisine": "american",
@@ -2067,36 +2565,37 @@
       ]
     },
     {
-      "slug": "fast-philly-skillet",
-      "title": "Fast Philly Cheesesteak Skillet",
-      "subtitle": "Cheesy steak without the wait",
-      "category": "quick_shift_meals",
-      "cuisine": "american",
-      "protein": "beef",
-      "mealFormat": "skillet",
-      "cookTime": 35,
-      "difficulty": "easy",
-      "heroImage": "/images/golden-100/fast-philly-skillet.jpg",
-      "thumbImage": "/images/thumbs/fast-philly-skillet.jpg",
+      "slug": "baked-falafel-hall-bowls",
+      "title": "Falafel Bowls",
+      "subtitle": "Crisp oven falafel, tahini drizzle, and cucumber-tomato salad",
+      "category": "healthy_performance",
+      "cuisine": "mediterranean",
+      "protein": "vegetarian",
+      "mealFormat": "bowl",
+      "cookTime": 28,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/baked-falafel-hall-bowls.jpg",
+      "thumbImage": "/images/thumbs/baked-falafel-hall-bowls.jpg",
       "tags": [
-        "protein:beef",
-        "format:skillet",
-        "category:quick_shift_meals",
-        "quick",
-        "beef",
-        "golden_100"
+        "protein:vegetarian",
+        "format:bowl",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
       ],
-      "firefighterScore": 100,
-      "popularityWeight": 3.2,
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
       "searchTerms": [
-        "fast philly cheesesteak skillet",
-        "fast philly skillet",
-        "american",
-        "beef",
-        "skillet",
-        "quick",
-        "quick philly cheesesteak skillet",
-        "golden_100"
+        "falafel bowls",
+        "baked falafel hall bowls",
+        "vegetarian",
+        "mediterranean",
+        "bowl",
+        "performance meal",
+        "firefighter healthy"
       ]
     },
     {
@@ -2131,39 +2630,6 @@
       ]
     },
     {
-      "slug": "chili-garlic-bread",
-      "title": "Firehouse Smoked Beef Chili with Cheesy Garlic Bread",
-      "subtitle": "Post-call comfort in a deep bowl",
-      "category": "firehall_classics",
-      "cuisine": "american",
-      "protein": "beef",
-      "mealFormat": "soup_chili",
-      "cookTime": 75,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/chili-garlic-bread.jpg",
-      "thumbImage": "/images/thumbs/chili-garlic-bread.jpg",
-      "tags": [
-        "protein:beef",
-        "format:soup_chili",
-        "category:firehall_classics",
-        "trending",
-        "hearty",
-        "golden_100"
-      ],
-      "firefighterScore": 100,
-      "popularityWeight": 3.6,
-      "searchTerms": [
-        "firehall chili",
-        "chili garlic bread",
-        "american",
-        "beef",
-        "soup chili",
-        "trending",
-        "hearty",
-        "golden_100"
-      ]
-    },
-    {
       "slug": "firehall-donair-platter",
       "title": "Firehall Donair Platter",
       "subtitle": "Spiced beef cones roasted and shaved with sweet sauce for ten",
@@ -2195,100 +2661,169 @@
       ]
     },
     {
-      "slug": "meatball-hoagies",
-      "title": "Firehall Meatball Hoagies",
-      "subtitle": "Saucy meatballs, melted provolone",
-      "category": "firehall_classics",
-      "cuisine": "italian",
-      "protein": "beef",
-      "mealFormat": "sandwich",
-      "cookTime": 55,
+      "slug": "crispy-fish-taco-night",
+      "title": "Fish Tacos",
+      "subtitle": "Oven-crisp cod with cabbage slaw and lime crema for eight",
+      "category": "healthy_performance",
+      "cuisine": "Mexican",
+      "protein": "fish",
+      "mealFormat": "tacos",
+      "cookTime": 18,
       "difficulty": "medium",
-      "heroImage": "/images/golden-100/meatball-hoagies.jpg",
-      "thumbImage": "/images/thumbs/meatball-hoagies.jpg",
+      "heroImage": "/images/golden-100/crispy-fish-taco-night.jpg",
+      "thumbImage": "/images/thumbs/crispy-fish-taco-night.jpg",
+      "tags": [
+        "protein:fish",
+        "format:tacos",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "fish tacos",
+        "crispy fish taco night",
+        "fish",
+        "Mexican",
+        "tacos",
+        "performance meal",
+        "firefighter healthy"
+      ]
+    },
+    {
+      "slug": "flank-chimichurri",
+      "title": "Flank Steak with Chimichurri",
+      "subtitle": "Bright herbs, charred beef",
+      "category": "bbq_grill_nights",
+      "cuisine": "argentinian",
+      "protein": "beef",
+      "mealFormat": "grill",
+      "cookTime": 90,
+      "difficulty": "hard",
+      "heroImage": "/images/golden-100/flank-chimichurri.jpg",
+      "thumbImage": "/images/thumbs/flank-chimichurri.jpg",
       "tags": [
         "protein:beef",
-        "format:sandwich",
-        "category:firehall_classics",
-        "trending",
-        "handheld",
+        "format:grill",
+        "category:bbq_grill_nights",
+        "bbq",
+        "beef",
+        "golden_100"
+      ],
+      "firefighterScore": 100,
+      "popularityWeight": 3.2,
+      "searchTerms": [
+        "flank steak with chimichurri",
+        "flank chimichurri",
+        "argentinian",
+        "beef",
+        "grill",
+        "bbq",
+        "grilled flank steak chimichurri",
+        "golden_100"
+      ]
+    },
+    {
+      "slug": "four-step-chicken-piccata",
+      "title": "Four-Step Chicken Piccata",
+      "subtitle": "Lemon-caper pan sauce in four straightforward steps",
+      "category": "comfort_food",
+      "cuisine": "italian",
+      "protein": "chicken",
+      "mealFormat": "plated_main",
+      "cookTime": 50,
+      "difficulty": "easy",
+      "heroImage": "/images/golden-100/four-step-chicken-piccata.jpg",
+      "thumbImage": "/images/thumbs/four-step-chicken-piccata.jpg",
+      "tags": [
+        "protein:chicken",
+        "format:plated_main",
+        "category:comfort_food",
+        "comfort",
+        "chicken",
         "golden_100"
       ],
       "firefighterScore": 100,
       "popularityWeight": 3.6,
       "searchTerms": [
-        "firehall meatball hoagies",
-        "meatball hoagies",
+        "four-step chicken piccata",
+        "four step chicken piccata",
         "italian",
-        "beef",
-        "sandwich",
-        "trending",
-        "handheld",
-        "meatball sub hoagie dinner",
+        "chicken",
+        "plated main",
+        "comfort",
+        "chicken piccata lemon caper skillet dinner",
         "golden_100"
       ]
     },
     {
-      "slug": "pad-thai",
-      "title": "Firehall Pad Thai",
-      "subtitle": "Sweet-tangy wok noodles, lime, and crushed peanuts",
-      "category": "quick_shift_meals",
-      "cuisine": "thai",
-      "protein": "chicken",
-      "mealFormat": "skillet",
-      "cookTime": 63,
-      "difficulty": "easy",
-      "heroImage": "/images/golden-100/pad-thai.jpg",
-      "thumbImage": "/images/thumbs/pad-thai.jpg",
+      "slug": "french-onion-soup-for-the-hall",
+      "title": "French Onion Soup for the Hall",
+      "subtitle": "Dark onion broth with a broiled Gruyère cap",
+      "category": "comfort_food",
+      "cuisine": "french",
+      "protein": "beef",
+      "mealFormat": "soup_chili",
+      "cookTime": 100,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/french-onion-soup-for-the-hall.jpg",
+      "thumbImage": "/images/thumbs/french-onion-soup-for-the-hall.jpg",
       "tags": [
-        "protein:chicken",
-        "format:skillet",
-        "category:quick_shift_meals",
-        "quick",
+        "protein:beef",
+        "format:soup_chili",
+        "category:comfort_food",
+        "comfort",
+        "hearty",
+        "golden_100"
+      ],
+      "firefighterScore": 100,
+      "popularityWeight": 3.6,
+      "searchTerms": [
+        "french onion soup for the hall",
+        "french",
+        "beef",
+        "soup chili",
+        "comfort",
+        "hearty",
+        "french onion soup gruyere firehall",
+        "golden_100"
+      ]
+    },
+    {
+      "slug": "game-day-nachos",
+      "title": "Game Day Nachos",
+      "subtitle": "Chip mountain for the whole couch",
+      "category": "game_day_watch_party",
+      "cuisine": "mexican",
+      "protein": "beef",
+      "mealFormat": "bowl",
+      "cookTime": 55,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/game-day-nachos.jpg",
+      "thumbImage": "/images/thumbs/game-day-nachos.jpg",
+      "tags": [
+        "protein:beef",
+        "format:bowl",
+        "category:game_day_watch_party",
+        "game_day",
+        "handheld",
         "golden_100"
       ],
       "firefighterScore": 100,
       "popularityWeight": 3.2,
       "searchTerms": [
-        "firehall pad thai",
-        "pad thai",
-        "thai",
-        "chicken",
-        "skillet",
-        "quick",
-        "firehall pad thai chicken wok noodles",
-        "golden_100"
-      ]
-    },
-    {
-      "slug": "margherita-pizza",
-      "title": "Fresh Margherita Pizza",
-      "subtitle": "Basil, mozzarella, blistered crust",
-      "category": "pizza_night",
-      "cuisine": "italian",
-      "protein": "vegetarian",
-      "mealFormat": "pizza",
-      "cookTime": 90,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/margherita-pizza.jpg",
-      "thumbImage": "/images/thumbs/margherita-pizza.jpg",
-      "tags": [
-        "protein:vegetarian",
-        "format:pizza",
-        "category:pizza_night",
+        "game day nachos",
+        "mexican",
+        "beef",
+        "bowl",
+        "game day",
         "handheld",
-        "golden_100"
-      ],
-      "firefighterScore": 98,
-      "popularityWeight": 3.2,
-      "searchTerms": [
-        "fresh margherita pizza",
-        "margherita pizza",
-        "italian",
-        "vegetarian",
-        "pizza",
-        "handheld",
-        "margherita pizza fresh mozzarella",
+        "loaded nachos ground beef",
+        "game_day",
         "golden_100"
       ]
     },
@@ -2389,39 +2924,6 @@
       ]
     },
     {
-      "slug": "batch-lasagna",
-      "title": "Giant Batch Lasagna",
-      "subtitle": "Feeds 12+ without drama",
-      "category": "big_crew_feeders",
-      "cuisine": "italian",
-      "protein": "beef",
-      "mealFormat": "pasta",
-      "cookTime": 100,
-      "difficulty": "hard",
-      "heroImage": "/images/golden-100/batch-lasagna.jpg",
-      "thumbImage": "/images/thumbs/batch-lasagna.jpg",
-      "tags": [
-        "protein:beef",
-        "format:pasta",
-        "category:big_crew_feeders",
-        "beef",
-        "comfort",
-        "golden_100"
-      ],
-      "firefighterScore": 100,
-      "popularityWeight": 3.6,
-      "searchTerms": [
-        "giant batch lasagna",
-        "batch lasagna",
-        "italian",
-        "beef",
-        "pasta",
-        "comfort",
-        "large batch lasagna dinner",
-        "golden_100"
-      ]
-    },
-    {
       "slug": "ginger-salmon-bowls",
       "title": "Ginger Salmon Rice Bowls",
       "subtitle": "Bright ginger glaze, clean bowls",
@@ -2518,37 +3020,34 @@
       ]
     },
     {
-      "slug": "greek-lemon-chicken-potatoes",
-      "title": "Greek Lemon Chicken and Potatoes",
-      "subtitle": "Roast chicken thighs with oregano potatoes and pan jus",
-      "category": "healthy_performance",
-      "cuisine": "Greek",
+      "slug": "greek-chicken-pitas",
+      "title": "Greek Chicken Pitas",
+      "subtitle": "Lemon-oregano chicken with cucumber, tomato, and tzatziki in pita",
+      "category": "hall_expansion",
+      "cuisine": "greek",
       "protein": "chicken",
-      "mealFormat": "roast",
-      "cookTime": 45,
+      "mealFormat": "handheld",
+      "cookTime": 20,
       "difficulty": "medium",
-      "heroImage": "/images/golden-100/greek-lemon-chicken-potatoes.jpg",
-      "thumbImage": "/images/thumbs/greek-lemon-chicken-potatoes.jpg",
+      "heroImage": "/images/hall-expansion/greek-chicken-pitas.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/greek-chicken-pitas.jpg",
       "tags": [
         "protein:chicken",
-        "format:roast",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "greek lemon chicken and potatoes",
-        "greek lemon chicken potatoes",
+        "format:handheld",
+        "category:crew_feeders",
+        "handheld",
         "chicken",
-        "Greek",
-        "roast",
-        "performance meal",
-        "firefighter healthy"
+        "healthy",
+        "hall_expansion",
+        "hall_expansion_74",
+        "hall_meal",
+        "firefighter_meal"
+      ],
+      "firefighterScore": 86,
+      "popularityWeight": 7.8,
+      "searchTerms": [
+        "greek chicken pita",
+        "chicken souvlaki pita firehall"
       ]
     },
     {
@@ -2583,167 +3082,65 @@
       ]
     },
     {
-      "slug": "chicken-souvlaki",
-      "title": "Grilled Chicken Souvlaki",
-      "subtitle": "Marinated skewers, pita-ready",
-      "category": "healthy_performance",
-      "cuisine": "greek",
-      "protein": "chicken",
-      "mealFormat": "grill",
-      "cookTime": 131,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/chicken-souvlaki.jpg",
-      "thumbImage": "/images/thumbs/chicken-souvlaki.jpg",
-      "tags": [
-        "protein:chicken",
-        "format:grill",
-        "category:healthy_performance",
-        "healthy",
-        "chicken",
-        "golden_100"
-      ],
-      "firefighterScore": 100,
-      "popularityWeight": 2.9,
-      "searchTerms": [
-        "grilled chicken souvlaki",
-        "chicken souvlaki",
-        "greek",
-        "chicken",
-        "grill",
-        "healthy",
-        "chicken souvlaki grilled",
-        "golden_100"
-      ]
-    },
-    {
-      "slug": "flank-chimichurri",
-      "title": "Grilled Flank Steak with Chimichurri",
-      "subtitle": "Bright herbs, charred beef",
-      "category": "bbq_grill_nights",
-      "cuisine": "argentinian",
-      "protein": "beef",
-      "mealFormat": "grill",
-      "cookTime": 90,
-      "difficulty": "hard",
-      "heroImage": "/images/golden-100/flank-chimichurri.jpg",
-      "thumbImage": "/images/thumbs/flank-chimichurri.jpg",
-      "tags": [
-        "protein:beef",
-        "format:grill",
-        "category:bbq_grill_nights",
-        "bbq",
-        "beef",
-        "golden_100"
-      ],
-      "firefighterScore": 100,
-      "popularityWeight": 3.2,
-      "searchTerms": [
-        "grilled flank steak with chimichurri",
-        "flank chimichurri",
-        "argentinian",
-        "beef",
-        "grill",
-        "bbq",
-        "grilled flank steak chimichurri",
-        "golden_100"
-      ]
-    },
-    {
-      "slug": "ny-strip-herb-butter",
-      "title": "Grilled NY Strip with Herb Butter",
-      "subtitle": "Steakhouse night at the station",
+      "slug": "grilled-pork-chops",
+      "title": "Grilled Pork Chops",
+      "subtitle": "Thick chops, caramelized edges",
       "category": "bbq_grill_nights",
       "cuisine": "american",
-      "protein": "beef",
+      "protein": "pork",
       "mealFormat": "grill",
       "cookTime": 90,
       "difficulty": "hard",
-      "heroImage": "/images/golden-100/ny-strip-herb-butter.jpg",
-      "thumbImage": "/images/thumbs/ny-strip-herb-butter.jpg",
+      "heroImage": "/images/golden-100/grilled-pork-chops.jpg",
+      "thumbImage": "/images/thumbs/grilled-pork-chops.jpg",
       "tags": [
-        "protein:beef",
+        "protein:pork",
         "format:grill",
         "category:bbq_grill_nights",
         "bbq",
-        "beef",
         "golden_100"
       ],
       "firefighterScore": 100,
       "popularityWeight": 3.2,
       "searchTerms": [
-        "grilled ny strip with herb butter",
-        "ny strip herb butter",
+        "grilled pork chops",
         "american",
-        "beef",
+        "pork",
         "grill",
         "bbq",
-        "grilled new york strip herb butter",
+        "grilled thick pork chops dinner",
         "golden_100"
       ]
     },
     {
-      "slug": "grilled-shrimp-quinoa-bowls",
-      "title": "Grilled Shrimp Quinoa Bowls",
-      "subtitle": "Charred shrimp skewers over quinoa with roasted vegetables",
-      "category": "healthy_performance",
-      "cuisine": "Mediterranean",
-      "protein": "shrimp",
-      "mealFormat": "grill",
-      "cookTime": 20,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/grilled-shrimp-quinoa-bowls.jpg",
-      "thumbImage": "/images/thumbs/grilled-shrimp-quinoa-bowls.jpg",
+      "slug": "hall-blt-sandwich-feed",
+      "title": "Hall BLT Sandwich Feed",
+      "subtitle": "Thick-cut bacon, ripe tomato, and crisp lettuce on toasted sandwich bread",
+      "category": "hall_expansion",
+      "cuisine": "american",
+      "protein": "pork",
+      "mealFormat": "sandwich",
+      "cookTime": 25,
+      "difficulty": "easy",
+      "heroImage": "/images/hall-expansion/hall-blt-sandwich-feed.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/hall-blt-sandwich-feed.jpg",
       "tags": [
-        "protein:shrimp",
-        "format:grill",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
+        "protein:pork",
+        "format:sandwich",
+        "category:crew_feeders",
+        "handheld",
+        "comfort",
+        "hall_expansion",
+        "hall_expansion_74",
         "hall_meal",
-        "high_protein",
-        "healthy"
+        "firefighter_meal"
       ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
+      "firefighterScore": 86,
+      "popularityWeight": 7.8,
       "searchTerms": [
-        "grilled shrimp quinoa bowls",
-        "shrimp",
-        "Mediterranean",
-        "grill",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "grilled-corn-cotija",
-      "title": "Grilled Street Corn with Cotija",
-      "subtitle": "Charred corn, creamy cotija finish",
-      "category": "bbq_grill_nights",
-      "cuisine": "mexican",
-      "protein": "vegetarian",
-      "mealFormat": "grill",
-      "cookTime": 90,
-      "difficulty": "hard",
-      "heroImage": "/images/golden-100/grilled-corn-cotija.jpg",
-      "thumbImage": "/images/thumbs/grilled-corn-cotija.jpg",
-      "tags": [
-        "protein:vegetarian",
-        "format:grill",
-        "category:bbq_grill_nights",
-        "bbq",
-        "golden_100"
-      ],
-      "firefighterScore": 100,
-      "popularityWeight": 3.2,
-      "searchTerms": [
-        "grilled street corn with cotija",
-        "grilled corn cotija",
-        "mexican",
-        "vegetarian",
-        "grill",
-        "bbq",
-        "mexican street corn grilled cotija",
-        "golden_100"
+        "BLT sandwich crew",
+        "hall BLT feed",
+        "bacon lettuce tomato batch"
       ]
     },
     {
@@ -2778,38 +3175,6 @@
       ]
     },
     {
-      "slug": "chicken-caesar",
-      "title": "Chicken Caesar Salad",
-      "subtitle": "Crispy chicken, real parmesan, crew salad night",
-      "category": "firehall_classics",
-      "cuisine": "american",
-      "protein": "chicken",
-      "mealFormat": "salad",
-      "cookTime": 60,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/chicken-caesar.jpg",
-      "thumbImage": "/images/thumbs/chicken-caesar.jpg",
-      "tags": [
-        "protein:chicken",
-        "format:salad",
-        "category:firehall_classics",
-        "healthy",
-        "chicken",
-        "golden_100"
-      ],
-      "firefighterScore": 100,
-      "popularityWeight": 3.6,
-      "searchTerms": [
-        "hall caesar chicken",
-        "chicken caesar",
-        "american",
-        "chicken",
-        "salad",
-        "healthy",
-        "golden_100"
-      ]
-    },
-    {
       "slug": "hall-chicken-noodle-soup",
       "title": "Hall Chicken Noodle Soup",
       "subtitle": "Classic chicken noodle soup with egg noodles for ten",
@@ -2838,41 +3203,6 @@
       "searchTerms": [
         "hall chicken noodle soup",
         "crew feeders"
-      ]
-    },
-    {
-      "slug": "slider-bar",
-      "title": "Hall Slider Bar",
-      "subtitle": "Mini burgers, max variety",
-      "category": "game_day_watch_party",
-      "cuisine": "american",
-      "protein": "beef",
-      "mealFormat": "burger",
-      "cookTime": 55,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/slider-bar.jpg",
-      "thumbImage": "/images/thumbs/slider-bar.jpg",
-      "tags": [
-        "protein:beef",
-        "format:burger",
-        "category:game_day_watch_party",
-        "game_day",
-        "handheld",
-        "golden_100"
-      ],
-      "firefighterScore": 96,
-      "popularityWeight": 3.2,
-      "searchTerms": [
-        "hall slider bar",
-        "slider bar",
-        "american",
-        "beef",
-        "burger",
-        "game day",
-        "handheld",
-        "beef slider bar dinner",
-        "game_day",
-        "golden_100"
       ]
     },
     {
@@ -2905,73 +3235,6 @@
       "searchTerms": [
         "hall sloppy joe feed",
         "crew feeders"
-      ]
-    },
-    {
-      "slug": "hall-taco-bar",
-      "title": "Hall Taco Bar Night",
-      "subtitle": "Build-your-own tacos at the table",
-      "category": "firehall_classics",
-      "cuisine": "mexican",
-      "protein": "beef",
-      "mealFormat": "tacos",
-      "cookTime": 55,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/hall-taco-bar.jpg",
-      "thumbImage": "/images/thumbs/hall-taco-bar.jpg",
-      "tags": [
-        "protein:beef",
-        "format:tacos",
-        "category:firehall_classics",
-        "handheld",
-        "trending",
-        "golden_100"
-      ],
-      "firefighterScore": 100,
-      "popularityWeight": 3.6,
-      "searchTerms": [
-        "hall taco bar night",
-        "hall taco bar",
-        "mexican",
-        "beef",
-        "tacos",
-        "handheld",
-        "trending",
-        "ground beef taco bar dinner",
-        "golden_100"
-      ]
-    },
-    {
-      "slug": "big-chili",
-      "title": "Hall-Sized Beef and Bean Chili",
-      "subtitle": "Double pot, triple appetite",
-      "category": "big_crew_feeders",
-      "cuisine": "american",
-      "protein": "beef",
-      "mealFormat": "soup_chili",
-      "cookTime": 90,
-      "difficulty": "hard",
-      "heroImage": "/images/golden-100/big-chili.jpg",
-      "thumbImage": "/images/thumbs/big-chili.jpg",
-      "tags": [
-        "protein:beef",
-        "format:soup_chili",
-        "category:big_crew_feeders",
-        "hearty",
-        "beef",
-        "golden_100"
-      ],
-      "firefighterScore": 100,
-      "popularityWeight": 3.6,
-      "searchTerms": [
-        "hall-sized beef and bean chili",
-        "big chili",
-        "american",
-        "beef",
-        "soup chili",
-        "hearty",
-        "large batch beef chili",
-        "golden_100"
       ]
     },
     {
@@ -3008,40 +3271,6 @@
       ]
     },
     {
-      "slug": "herb-baked-salmon-tray",
-      "title": "Herb-Crusted Baked Salmon Tray",
-      "subtitle": "Flaky fillets with dill, parsley, and roasted asparagus for the crew",
-      "category": "healthy_performance",
-      "cuisine": "American",
-      "protein": "salmon",
-      "mealFormat": "sheet_pan",
-      "cookTime": 18,
-      "difficulty": "easy",
-      "heroImage": "/images/golden-100/herb-baked-salmon-tray.jpg",
-      "thumbImage": "/images/thumbs/herb-baked-salmon-tray.jpg",
-      "tags": [
-        "protein:salmon",
-        "format:sheet_pan",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "herb-crusted baked salmon tray",
-        "herb baked salmon tray",
-        "salmon",
-        "American",
-        "sheet pan",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
       "slug": "hickory-turkey-legs",
       "title": "Hickory Smoked Turkey Legs",
       "subtitle": "Fair-style turkey legs with hickory smoke and spice rub for ten",
@@ -3074,42 +3303,8 @@
       ]
     },
     {
-      "slug": "turkey-chili",
-      "title": "High-Protein Turkey Chili",
-      "subtitle": "Big pot, lean protein, hall fuel",
-      "category": "healthy_performance",
-      "cuisine": "american",
-      "protein": "turkey",
-      "mealFormat": "soup_chili",
-      "cookTime": 55,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/turkey-chili.jpg",
-      "thumbImage": "/images/thumbs/turkey-chili.jpg",
-      "tags": [
-        "protein:turkey",
-        "format:soup_chili",
-        "category:healthy_performance",
-        "healthy",
-        "hearty",
-        "golden_100"
-      ],
-      "firefighterScore": 100,
-      "popularityWeight": 2.9,
-      "searchTerms": [
-        "high-protein turkey chili",
-        "turkey chili",
-        "american",
-        "turkey",
-        "soup chili",
-        "healthy",
-        "hearty",
-        "turkey chili healthy dinner",
-        "golden_100"
-      ]
-    },
-    {
       "slug": "honey-garlic-chicken-rice-bowls",
-      "title": "Honey Garlic Chicken Rice Bowls",
+      "title": "Honey Garlic Chicken Bowls",
       "subtitle": "Skillet glazed chicken thighs over jasmine rice with steamed broccoli",
       "category": "healthy_performance",
       "cuisine": "Asian-American",
@@ -3132,6 +3327,7 @@
       "firefighterScore": 83,
       "popularityWeight": 7.5,
       "searchTerms": [
+        "honey garlic chicken bowls",
         "honey garlic chicken rice bowls",
         "chicken",
         "Asian-American",
@@ -3142,7 +3338,7 @@
     },
     {
       "slug": "honey-garlic-pork-tenderloin",
-      "title": "Honey Garlic Grilled Pork Tenderloin",
+      "title": "Honey Garlic Pork Tenderloin",
       "subtitle": "Fast grill, glossy glaze, feeds eight",
       "category": "bbq_grill_nights",
       "cuisine": "american",
@@ -3162,12 +3358,12 @@
       "firefighterScore": 100,
       "popularityWeight": 3.2,
       "searchTerms": [
-        "honey garlic grilled pork tenderloin",
         "honey garlic pork tenderloin",
         "american",
         "pork",
         "grill",
         "bbq",
+        "honey garlic grilled pork tenderloin",
         "golden_100"
       ]
     },
@@ -3330,40 +3526,6 @@
       ]
     },
     {
-      "slug": "italian-sausage-veg-sheet-pan",
-      "title": "Italian Sausage and Veg Sheet Pan",
-      "subtitle": "Sweet Italian sausage with roasted peppers, onion, and zucchini",
-      "category": "healthy_performance",
-      "cuisine": "Italian",
-      "protein": "pork",
-      "mealFormat": "sheet_pan",
-      "cookTime": 28,
-      "difficulty": "easy",
-      "heroImage": "/images/golden-100/italian-sausage-veg-sheet-pan.jpg",
-      "thumbImage": "/images/thumbs/italian-sausage-veg-sheet-pan.jpg",
-      "tags": [
-        "protein:pork",
-        "format:sheet_pan",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "italian sausage and veg sheet pan",
-        "italian sausage veg sheet pan",
-        "pork",
-        "Italian",
-        "sheet pan",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
       "slug": "jalapeno-popper-dip",
       "title": "Jalapeño Popper Dip",
       "subtitle": "Creamy bacon jalapeño dip with crostini for ten",
@@ -3395,14 +3557,45 @@
       ]
     },
     {
+      "slug": "jambalaya",
+      "title": "Jambalaya",
+      "subtitle": "One pot, loud flavor, full table",
+      "category": "big_crew_feeders",
+      "cuisine": "cajun",
+      "protein": "mixed",
+      "mealFormat": "one_pot",
+      "cookTime": 90,
+      "difficulty": "hard",
+      "heroImage": "/images/golden-100/jambalaya.jpg",
+      "thumbImage": "/images/thumbs/jambalaya.jpg",
+      "tags": [
+        "protein:mixed",
+        "format:one_pot",
+        "category:big_crew_feeders",
+        "hearty",
+        "golden_100"
+      ],
+      "firefighterScore": 100,
+      "popularityWeight": 3.6,
+      "searchTerms": [
+        "jambalaya",
+        "cajun",
+        "mixed",
+        "one pot",
+        "hearty",
+        "cajun jambalaya large batch",
+        "golden_100"
+      ]
+    },
+    {
       "slug": "jerk-chicken",
-      "title": "Jerk Chicken & Peas and Rice",
+      "title": "Jerk Chicken & Rice and Peas",
       "subtitle": "Charred jerk thighs, coconut rice and peas, island sides for eight",
       "category": "firehall_classics",
       "cuisine": "caribbean",
       "protein": "chicken",
       "mealFormat": "grill",
-      "cookTime": 60,
+      "cookTime": 110,
       "difficulty": "medium",
       "heroImage": "/images/golden-100/jerk-chicken.jpg",
       "thumbImage": "/images/thumbs/jerk-chicken.jpg",
@@ -3417,44 +3610,12 @@
       "firefighterScore": 100,
       "popularityWeight": 3.6,
       "searchTerms": [
+        "jerk chicken & rice and peas",
         "jerk chicken",
         "caribbean",
         "chicken",
         "grill",
         "trending",
-        "golden_100"
-      ]
-    },
-    {
-      "slug": "smoked-brisket",
-      "title": "Kansas City Smoked Brisket",
-      "subtitle": "Low-and-slow smoke for the whole crew",
-      "category": "bbq_grill_nights",
-      "cuisine": "american",
-      "protein": "beef",
-      "mealFormat": "grill",
-      "cookTime": 585,
-      "difficulty": "hard",
-      "heroImage": "/images/golden-100/smoked-brisket.jpg",
-      "thumbImage": "/images/thumbs/smoked-brisket.jpg",
-      "tags": [
-        "protein:beef",
-        "format:grill",
-        "category:bbq_grill_nights",
-        "bbq",
-        "beef",
-        "golden_100"
-      ],
-      "firefighterScore": 100,
-      "popularityWeight": 3.2,
-      "searchTerms": [
-        "kansas city smoked brisket",
-        "smoked brisket",
-        "american",
-        "beef",
-        "grill",
-        "bbq",
-        "smoked beef brisket bbq",
         "golden_100"
       ]
     },
@@ -3489,39 +3650,6 @@
       ]
     },
     {
-      "slug": "korean-beef-rice-bowls",
-      "title": "Korean Beef Rice Bowls",
-      "subtitle": "Bulgogi-style ground beef over rice with quick cucumber pickle",
-      "category": "healthy_performance",
-      "cuisine": "Korean",
-      "protein": "beef",
-      "mealFormat": "bowl",
-      "cookTime": 15,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/korean-beef-rice-bowls.jpg",
-      "thumbImage": "/images/thumbs/korean-beef-rice-bowls.jpg",
-      "tags": [
-        "protein:beef",
-        "format:bowl",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "korean beef rice bowls",
-        "beef",
-        "Korean",
-        "bowl",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
       "slug": "korean-bulgogi-grill-night",
       "title": "Korean Bulgogi Grill Night",
       "subtitle": "Marinated beef grilled with scallions and lettuce wraps for ten",
@@ -3550,38 +3678,6 @@
       "searchTerms": [
         "korean bulgogi grill night",
         "crew feeders"
-      ]
-    },
-    {
-      "slug": "bulgogi-bowls",
-      "title": "Korean Bulgogi Rice Bowls",
-      "subtitle": "Sweet soy beef, pickled crunch",
-      "category": "global_flavors",
-      "cuisine": "korean",
-      "protein": "beef",
-      "mealFormat": "bowl",
-      "cookTime": 55,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/bulgogi-bowls.jpg",
-      "thumbImage": "/images/thumbs/bulgogi-bowls.jpg",
-      "tags": [
-        "protein:beef",
-        "format:bowl",
-        "category:global_flavors",
-        "bowl",
-        "beef",
-        "golden_100"
-      ],
-      "firefighterScore": 98,
-      "popularityWeight": 3.2,
-      "searchTerms": [
-        "korean bulgogi rice bowls",
-        "bulgogi bowls",
-        "korean",
-        "beef",
-        "bowl",
-        "korean bulgogi rice bowl",
-        "golden_100"
       ]
     },
     {
@@ -3616,74 +3712,6 @@
       ]
     },
     {
-      "slug": "lean-beef-broccoli-rice",
-      "title": "Lean Beef and Broccoli Rice",
-      "subtitle": "Flat-top stir-fry with flank steak, broccoli, and brown rice",
-      "category": "healthy_performance",
-      "cuisine": "Chinese-American",
-      "protein": "beef",
-      "mealFormat": "stir_fry",
-      "cookTime": 15,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/lean-beef-broccoli-rice.jpg",
-      "thumbImage": "/images/thumbs/lean-beef-broccoli-rice.jpg",
-      "tags": [
-        "protein:beef",
-        "format:stir_fry",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "lean beef and broccoli rice",
-        "lean beef broccoli rice",
-        "beef",
-        "Chinese-American",
-        "stir fry",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "lean-turkey-bean-chili",
-      "title": "Lean Turkey and Bean Chili",
-      "subtitle": "Double-batch crock chili with kidney beans and fire-roasted tomatoes",
-      "category": "healthy_performance",
-      "cuisine": "American",
-      "protein": "turkey",
-      "mealFormat": "slow_cooker",
-      "cookTime": 240,
-      "difficulty": "easy",
-      "heroImage": "/images/golden-100/lean-turkey-bean-chili.jpg",
-      "thumbImage": "/images/thumbs/lean-turkey-bean-chili.jpg",
-      "tags": [
-        "protein:turkey",
-        "format:slow_cooker",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "lean turkey and bean chili",
-        "lean turkey bean chili",
-        "turkey",
-        "American",
-        "slow cooker",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
       "slug": "lebanese-chicken-shish-platter",
       "title": "Lebanese Chicken Shish Platter",
       "subtitle": "Garlic-lemon chicken skewers with toum and tabbouleh for ten",
@@ -3712,6 +3740,40 @@
       "searchTerms": [
         "lebanese chicken shish platter",
         "crew feeders"
+      ]
+    },
+    {
+      "slug": "greek-lemon-chicken-potatoes",
+      "title": "Lemon Chicken and Potatoes",
+      "subtitle": "Roast chicken thighs with oregano potatoes and pan jus",
+      "category": "healthy_performance",
+      "cuisine": "Greek",
+      "protein": "chicken",
+      "mealFormat": "roast",
+      "cookTime": 45,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/greek-lemon-chicken-potatoes.jpg",
+      "thumbImage": "/images/thumbs/greek-lemon-chicken-potatoes.jpg",
+      "tags": [
+        "protein:chicken",
+        "format:roast",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "lemon chicken and potatoes",
+        "greek lemon chicken potatoes",
+        "chicken",
+        "Greek",
+        "roast",
+        "performance meal",
+        "firefighter healthy"
       ]
     },
     {
@@ -3749,7 +3811,7 @@
     },
     {
       "slug": "lemon-garlic-chicken-tray",
-      "title": "Lemon Garlic Chicken Tray Bake",
+      "title": "Lemon Garlic Chicken Tray",
       "subtitle": "Bright citrus thighs with roasted broccoli and baby potatoes for eight",
       "category": "healthy_performance",
       "cuisine": "American",
@@ -3772,7 +3834,6 @@
       "firefighterScore": 83,
       "popularityWeight": 7.5,
       "searchTerms": [
-        "lemon garlic chicken tray bake",
         "lemon garlic chicken tray",
         "chicken",
         "American",
@@ -3816,7 +3877,7 @@
     },
     {
       "slug": "lemon-herb-salmon",
-      "title": "Lemon Herb Grilled Salmon",
+      "title": "Lemon Herb Salmon",
       "subtitle": "High protein, light cleanup",
       "category": "healthy_performance",
       "cuisine": "mediterranean",
@@ -3836,18 +3897,18 @@
       "firefighterScore": 100,
       "popularityWeight": 2.9,
       "searchTerms": [
-        "lemon herb grilled salmon",
         "lemon herb salmon",
         "mediterranean",
         "seafood",
         "grill",
         "healthy",
+        "lemon herb grilled salmon",
         "golden_100"
       ]
     },
     {
       "slug": "lemon-salmon-orzo-skillet",
-      "title": "Lemon Salmon Orzo Skillet",
+      "title": "Lemon Salmon Orzo",
       "subtitle": "One-pan salmon with orzo, spinach, and capers",
       "category": "healthy_performance",
       "cuisine": "Mediterranean",
@@ -3870,6 +3931,7 @@
       "firefighterScore": 83,
       "popularityWeight": 7.5,
       "searchTerms": [
+        "lemon salmon orzo",
         "lemon salmon orzo skillet",
         "salmon",
         "Mediterranean",
@@ -3879,8 +3941,42 @@
       ]
     },
     {
+      "slug": "smoky-lentil-kale-soup",
+      "title": "Lentil and Kale Soup",
+      "subtitle": "Hearty vegetarian pot with fire-roasted tomatoes and smoked paprika",
+      "category": "healthy_performance",
+      "cuisine": "American",
+      "protein": "plant",
+      "mealFormat": "soup",
+      "cookTime": 40,
+      "difficulty": "easy",
+      "heroImage": "/images/golden-100/smoky-lentil-kale-soup.jpg",
+      "thumbImage": "/images/thumbs/smoky-lentil-kale-soup.jpg",
+      "tags": [
+        "protein:plant",
+        "format:soup",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "lentil and kale soup",
+        "smoky lentil kale soup",
+        "plant",
+        "American",
+        "soup",
+        "performance meal",
+        "firefighter healthy"
+      ]
+    },
+    {
       "slug": "lentil-mushroom-bolognese",
-      "title": "Lentil Mushroom Bolognese",
+      "title": "Lentil Bolognese",
       "subtitle": "Plant-forward ragu with green lentils, cremini, and whole-wheat pasta",
       "category": "healthy_performance",
       "cuisine": "Italian",
@@ -3903,113 +3999,13 @@
       "firefighterScore": 83,
       "popularityWeight": 7.5,
       "searchTerms": [
+        "lentil bolognese",
         "lentil mushroom bolognese",
         "plant",
         "Italian",
         "pasta",
         "performance meal",
         "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "chicken-enchilada-skillet-light",
-      "title": "Light Chicken Enchilada Skillet",
-      "subtitle": "One-pan shredded chicken with tortillas, enchilada sauce, and cheese",
-      "category": "healthy_performance",
-      "cuisine": "Mexican",
-      "protein": "chicken",
-      "mealFormat": "skillet",
-      "cookTime": 25,
-      "difficulty": "easy",
-      "heroImage": "/images/golden-100/chicken-enchilada-skillet-light.jpg",
-      "thumbImage": "/images/thumbs/chicken-enchilada-skillet-light.jpg",
-      "tags": [
-        "protein:chicken",
-        "format:skillet",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "light chicken enchilada skillet",
-        "chicken enchilada skillet light",
-        "chicken",
-        "Mexican",
-        "skillet",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "loaded-baked-potato-bar",
-      "title": "Loaded Baked Potato Bar",
-      "subtitle": "Build-your-own spuds for the crew",
-      "category": "comfort_food",
-      "cuisine": "american",
-      "protein": "beef",
-      "mealFormat": "bowl",
-      "cookTime": 125,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/loaded-baked-potato-bar.jpg",
-      "thumbImage": "/images/thumbs/loaded-baked-potato-bar.jpg",
-      "tags": [
-        "protein:beef",
-        "format:bowl",
-        "category:comfort_food",
-        "comfort",
-        "beef",
-        "golden_100"
-      ],
-      "firefighterScore": 100,
-      "popularityWeight": 3.6,
-      "searchTerms": [
-        "loaded baked potato bar",
-        "american",
-        "beef",
-        "bowl",
-        "comfort",
-        "loaded baked potato bar dinner",
-        "golden_100"
-      ]
-    },
-    {
-      "slug": "game-day-nachos",
-      "title": "Loaded Game Day Nachos",
-      "subtitle": "Chip mountain for the whole couch",
-      "category": "game_day_watch_party",
-      "cuisine": "mexican",
-      "protein": "beef",
-      "mealFormat": "bowl",
-      "cookTime": 55,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/game-day-nachos.jpg",
-      "thumbImage": "/images/thumbs/game-day-nachos.jpg",
-      "tags": [
-        "protein:beef",
-        "format:bowl",
-        "category:game_day_watch_party",
-        "game_day",
-        "handheld",
-        "golden_100"
-      ],
-      "firefighterScore": 100,
-      "popularityWeight": 3.2,
-      "searchTerms": [
-        "loaded game day nachos",
-        "game day nachos",
-        "mexican",
-        "beef",
-        "bowl",
-        "game day",
-        "handheld",
-        "loaded nachos ground beef",
-        "game_day",
-        "golden_100"
       ]
     },
     {
@@ -4042,72 +4038,6 @@
       "searchTerms": [
         "loaded nacho bar night",
         "crew feeders"
-      ]
-    },
-    {
-      "slug": "loaded-nacho-skillet",
-      "title": "Loaded Nacho Skillet",
-      "subtitle": "Game-night skillet the whole hall shares",
-      "category": "firehall_classics",
-      "cuisine": "mexican",
-      "protein": "beef",
-      "mealFormat": "bowl",
-      "cookTime": 55,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/loaded-nacho-skillet.jpg",
-      "thumbImage": "/images/thumbs/loaded-nacho-skillet.jpg",
-      "tags": [
-        "protein:beef",
-        "format:bowl",
-        "category:firehall_classics",
-        "handheld",
-        "game_day",
-        "golden_100"
-      ],
-      "firefighterScore": 100,
-      "popularityWeight": 3.6,
-      "searchTerms": [
-        "loaded nacho skillet",
-        "mexican",
-        "beef",
-        "bowl",
-        "handheld",
-        "game day",
-        "loaded beef nacho skillet dinner",
-        "game_day",
-        "golden_100"
-      ]
-    },
-    {
-      "slug": "loaded-potato-feed",
-      "title": "Loaded Potato Feed",
-      "subtitle": "Self-serve spuds for twenty",
-      "category": "big_crew_feeders",
-      "cuisine": "american",
-      "protein": "beef",
-      "mealFormat": "bowl",
-      "cookTime": 150,
-      "difficulty": "hard",
-      "heroImage": "/images/golden-100/loaded-potato-feed.jpg",
-      "thumbImage": "/images/thumbs/loaded-potato-feed.jpg",
-      "tags": [
-        "protein:beef",
-        "format:bowl",
-        "category:big_crew_feeders",
-        "comfort",
-        "beef",
-        "golden_100"
-      ],
-      "firefighterScore": 100,
-      "popularityWeight": 3.6,
-      "searchTerms": [
-        "loaded potato feed",
-        "american",
-        "beef",
-        "bowl",
-        "comfort",
-        "loaded baked potato bar feed",
-        "golden_100"
       ]
     },
     {
@@ -4149,7 +4079,7 @@
       "cuisine": "malaysian",
       "protein": "shrimp",
       "mealFormat": "soup",
-      "cookTime": 35,
+      "cookTime": 40,
       "difficulty": "medium",
       "heroImage": "/images/hall-expansion/malaysian-laksa-soup.jpg",
       "thumbImage": "/images/thumbs/hall-expansion/malaysian-laksa-soup.jpg",
@@ -4270,8 +4200,39 @@
       ]
     },
     {
+      "slug": "margherita-pizza",
+      "title": "Margherita Pizza",
+      "subtitle": "Basil, mozzarella, blistered crust",
+      "category": "pizza_night",
+      "cuisine": "italian",
+      "protein": "vegetarian",
+      "mealFormat": "pizza",
+      "cookTime": 90,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/margherita-pizza.jpg",
+      "thumbImage": "/images/thumbs/margherita-pizza.jpg",
+      "tags": [
+        "protein:vegetarian",
+        "format:pizza",
+        "category:pizza_night",
+        "handheld",
+        "golden_100"
+      ],
+      "firefighterScore": 98,
+      "popularityWeight": 3.2,
+      "searchTerms": [
+        "margherita pizza",
+        "italian",
+        "vegetarian",
+        "pizza",
+        "handheld",
+        "margherita pizza fresh mozzarella",
+        "golden_100"
+      ]
+    },
+    {
       "slug": "meat-lovers-sheet-pizza",
-      "title": "Meat Lover's Sheet Pan Pizza",
+      "title": "Meat Lover's Pizza",
       "subtitle": "Feeds the crew from one tray",
       "category": "pizza_night",
       "cuisine": "american",
@@ -4291,7 +4252,7 @@
       "firefighterScore": 98,
       "popularityWeight": 3.2,
       "searchTerms": [
-        "meat lover's sheet pan pizza",
+        "meat lover's pizza",
         "meat lovers sheet pizza",
         "american",
         "pork",
@@ -4302,36 +4263,68 @@
       ]
     },
     {
-      "slug": "mediterranean-baked-fish-tray",
-      "title": "Mediterranean Baked Fish Tray",
-      "subtitle": "White fish with cherry tomatoes, olives, and capers on one sheet",
-      "category": "healthy_performance",
-      "cuisine": "Mediterranean",
-      "protein": "fish",
-      "mealFormat": "sheet_pan",
-      "cookTime": 20,
-      "difficulty": "easy",
-      "heroImage": "/images/golden-100/mediterranean-baked-fish-tray.jpg",
-      "thumbImage": "/images/thumbs/mediterranean-baked-fish-tray.jpg",
+      "slug": "meatball-hoagies",
+      "title": "Meatball Hoagies",
+      "subtitle": "Saucy meatballs, melted provolone",
+      "category": "firehall_classics",
+      "cuisine": "italian",
+      "protein": "beef",
+      "mealFormat": "sandwich",
+      "cookTime": 55,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/meatball-hoagies.jpg",
+      "thumbImage": "/images/thumbs/meatball-hoagies.jpg",
       "tags": [
-        "protein:fish",
-        "format:sheet_pan",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
+        "protein:beef",
+        "format:sandwich",
+        "category:firehall_classics",
+        "trending",
+        "handheld",
+        "golden_100"
       ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
+      "firefighterScore": 100,
+      "popularityWeight": 3.6,
       "searchTerms": [
-        "mediterranean baked fish tray",
-        "fish",
-        "Mediterranean",
-        "sheet pan",
-        "performance meal",
-        "firefighter healthy"
+        "meatball hoagies",
+        "italian",
+        "beef",
+        "sandwich",
+        "trending",
+        "handheld",
+        "meatball sub hoagie dinner",
+        "golden_100"
+      ]
+    },
+    {
+      "slug": "meatloaf-mashed",
+      "title": "Meatloaf and Mashed Potatoes",
+      "subtitle": "Sunday-dinner energy on a weeknight",
+      "category": "comfort_food",
+      "cuisine": "american",
+      "protein": "beef",
+      "mealFormat": "plated_main",
+      "cookTime": 135,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/meatloaf-mashed.jpg",
+      "thumbImage": "/images/thumbs/meatloaf-mashed.jpg",
+      "tags": [
+        "protein:beef",
+        "format:plated_main",
+        "category:comfort_food",
+        "comfort",
+        "golden_100"
+      ],
+      "firefighterScore": 100,
+      "popularityWeight": 3.6,
+      "searchTerms": [
+        "meatloaf and mashed potatoes",
+        "meatloaf mashed",
+        "american",
+        "beef",
+        "plated main",
+        "comfort",
+        "meatloaf mashed potatoes dinner",
+        "golden_100"
       ]
     },
     {
@@ -4492,39 +4485,6 @@
       ]
     },
     {
-      "slug": "street-corn-chicken",
-      "title": "Mexican Street Corn Chicken Bowls",
-      "subtitle": "Elote flavors in a bowl",
-      "category": "global_flavors",
-      "cuisine": "mexican",
-      "protein": "chicken",
-      "mealFormat": "bowl",
-      "cookTime": 55,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/street-corn-chicken.jpg",
-      "thumbImage": "/images/thumbs/street-corn-chicken.jpg",
-      "tags": [
-        "protein:chicken",
-        "format:bowl",
-        "category:global_flavors",
-        "bowl",
-        "handheld",
-        "golden_100"
-      ],
-      "firefighterScore": 100,
-      "popularityWeight": 3.2,
-      "searchTerms": [
-        "mexican street corn chicken bowls",
-        "street corn chicken",
-        "mexican",
-        "chicken",
-        "bowl",
-        "handheld",
-        "mexican street corn chicken bowl",
-        "golden_100"
-      ]
-    },
-    {
       "slug": "miso-ramen-bar",
       "title": "Miso Ramen Bar",
       "subtitle": "Chicken broth miso ramen with tofu and vegetables for ten",
@@ -4619,7 +4579,7 @@
     },
     {
       "slug": "moroccan-chicken-chickpea-tray",
-      "title": "Moroccan Chicken Chickpea Tray",
+      "title": "Moroccan Chicken and Chickpeas",
       "subtitle": "Warm-spiced thighs with chickpeas, apricots, and roasted carrots",
       "category": "healthy_performance",
       "cuisine": "Moroccan",
@@ -4642,6 +4602,7 @@
       "firefighterScore": 83,
       "popularityWeight": 7.5,
       "searchTerms": [
+        "moroccan chicken and chickpeas",
         "moroccan chicken chickpea tray",
         "chicken",
         "Moroccan",
@@ -4683,7 +4644,7 @@
     },
     {
       "slug": "moroccan-meatballs",
-      "title": "Moroccan Spiced Lamb Meatballs",
+      "title": "Moroccan Lamb Meatballs",
       "subtitle": "Warm spices, couscous base",
       "category": "global_flavors",
       "cuisine": "moroccan",
@@ -4703,7 +4664,7 @@
       "firefighterScore": 96,
       "popularityWeight": 3.2,
       "searchTerms": [
-        "moroccan spiced lamb meatballs",
+        "moroccan lamb meatballs",
         "moroccan meatballs",
         "moroccan",
         "lamb",
@@ -4745,69 +4706,101 @@
       ]
     },
     {
-      "slug": "one-pot-chicken-rice",
-      "title": "One-Pot Chicken and Rice",
-      "subtitle": "One pot, hard to mess up",
-      "category": "rookie_friendly",
-      "cuisine": "american",
-      "protein": "chicken",
-      "mealFormat": "one_pot",
-      "cookTime": 50,
-      "difficulty": "easy",
-      "heroImage": "/images/golden-100/one-pot-chicken-rice.jpg",
-      "thumbImage": "/images/thumbs/one-pot-chicken-rice.jpg",
+      "slug": "loaded-nacho-skillet",
+      "title": "Nacho Skillet",
+      "subtitle": "Game-night skillet the whole hall shares",
+      "category": "firehall_classics",
+      "cuisine": "mexican",
+      "protein": "beef",
+      "mealFormat": "bowl",
+      "cookTime": 55,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/loaded-nacho-skillet.jpg",
+      "thumbImage": "/images/thumbs/loaded-nacho-skillet.jpg",
       "tags": [
-        "protein:chicken",
-        "format:one_pot",
-        "category:rookie_friendly",
-        "one_pot",
-        "quick",
+        "protein:beef",
+        "format:bowl",
+        "category:firehall_classics",
+        "handheld",
+        "game_day",
         "golden_100"
       ],
       "firefighterScore": 100,
-      "popularityWeight": 3.2,
+      "popularityWeight": 3.6,
       "searchTerms": [
-        "one-pot chicken and rice",
-        "one pot chicken rice",
-        "american",
-        "chicken",
-        "one pot",
-        "quick",
-        "one pot chicken and rice dinner",
-        "one_pot",
+        "nacho skillet",
+        "loaded nacho skillet",
+        "mexican",
+        "beef",
+        "bowl",
+        "handheld",
+        "game day",
+        "loaded beef nacho skillet dinner",
+        "game_day",
         "golden_100"
       ]
     },
     {
-      "slug": "skillet-chicken-alfredo",
-      "title": "One-Skillet Chicken Alfredo",
-      "subtitle": "Creamy pasta without the marathon",
-      "category": "quick_shift_meals",
-      "cuisine": "italian",
-      "protein": "chicken",
-      "mealFormat": "pasta",
-      "cookTime": 45,
-      "difficulty": "easy",
-      "heroImage": "/images/golden-100/skillet-chicken-alfredo.jpg",
-      "thumbImage": "/images/thumbs/skillet-chicken-alfredo.jpg",
+      "slug": "ny-strip-herb-butter",
+      "title": "NY Strip with Herb Butter",
+      "subtitle": "Steakhouse night at the station",
+      "category": "bbq_grill_nights",
+      "cuisine": "american",
+      "protein": "beef",
+      "mealFormat": "grill",
+      "cookTime": 90,
+      "difficulty": "hard",
+      "heroImage": "/images/golden-100/ny-strip-herb-butter.jpg",
+      "thumbImage": "/images/thumbs/ny-strip-herb-butter.jpg",
       "tags": [
-        "protein:chicken",
-        "format:pasta",
-        "category:quick_shift_meals",
-        "quick",
-        "pasta",
+        "protein:beef",
+        "format:grill",
+        "category:bbq_grill_nights",
+        "bbq",
+        "beef",
         "golden_100"
       ],
       "firefighterScore": 100,
       "popularityWeight": 3.2,
       "searchTerms": [
-        "one-skillet chicken alfredo",
-        "skillet chicken alfredo",
-        "italian",
-        "chicken",
-        "pasta",
+        "ny strip with herb butter",
+        "ny strip herb butter",
+        "american",
+        "beef",
+        "grill",
+        "bbq",
+        "grilled new york strip herb butter",
+        "golden_100"
+      ]
+    },
+    {
+      "slug": "pad-thai",
+      "title": "Pad Thai",
+      "subtitle": "Sweet-tangy wok noodles, lime, and crushed peanuts",
+      "category": "quick_shift_meals",
+      "cuisine": "thai",
+      "protein": "chicken",
+      "mealFormat": "skillet",
+      "cookTime": 63,
+      "difficulty": "easy",
+      "heroImage": "/images/golden-100/pad-thai.jpg",
+      "thumbImage": "/images/thumbs/pad-thai.jpg",
+      "tags": [
+        "protein:chicken",
+        "format:skillet",
+        "category:quick_shift_meals",
         "quick",
-        "one skillet chicken alfredo",
+        "golden_100"
+      ],
+      "firefighterScore": 100,
+      "popularityWeight": 3.2,
+      "searchTerms": [
+        "pad thai",
+        "thai",
+        "chicken",
+        "skillet",
+        "quick",
+        "firehall pad thai chicken wok noodles",
         "golden_100"
       ]
     },
@@ -4842,6 +4835,38 @@
       ]
     },
     {
+      "slug": "parm-hero-subs",
+      "title": "Parm Hero Subs",
+      "subtitle": "Parm flavors in a handheld line",
+      "category": "firehall_classics",
+      "cuisine": "italian",
+      "protein": "chicken",
+      "mealFormat": "sandwich",
+      "cookTime": 55,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/parm-hero-subs.jpg",
+      "thumbImage": "/images/thumbs/parm-hero-subs.jpg",
+      "tags": [
+        "protein:chicken",
+        "format:sandwich",
+        "category:firehall_classics",
+        "handheld",
+        "chicken",
+        "golden_100"
+      ],
+      "firefighterScore": 100,
+      "popularityWeight": 3.6,
+      "searchTerms": [
+        "parm hero subs",
+        "italian",
+        "chicken",
+        "sandwich",
+        "handheld",
+        "chicken parmesan hero sandwich",
+        "golden_100"
+      ]
+    },
+    {
       "slug": "pasta-bar-night",
       "title": "Pasta Bar Night",
       "subtitle": "Choose-your-sauce pasta bar with garlic bread for ten",
@@ -4870,6 +4895,42 @@
       "searchTerms": [
         "pasta bar night",
         "crew feeders"
+      ]
+    },
+    {
+      "slug": "pasta-e-ceci-for-the-hall",
+      "title": "Pasta e Ceci (Pasta with Chickpeas)",
+      "subtitle": "Creamy chickpea-and-pasta pot with rosemary and lemon",
+      "category": "healthy_performance",
+      "cuisine": "italian",
+      "protein": "vegetarian",
+      "mealFormat": "pasta",
+      "cookTime": 50,
+      "difficulty": "easy",
+      "heroImage": "/images/golden-100/pasta-e-ceci-for-the-hall.jpg",
+      "thumbImage": "/images/thumbs/pasta-e-ceci-for-the-hall.jpg",
+      "tags": [
+        "protein:vegetarian",
+        "format:pasta",
+        "category:healthy_performance",
+        "healthy",
+        "pasta",
+        "one_pot",
+        "golden_100"
+      ],
+      "firefighterScore": 100,
+      "popularityWeight": 2.9,
+      "searchTerms": [
+        "pasta e ceci (pasta with chickpeas)",
+        "pasta e ceci for the hall",
+        "italian",
+        "vegetarian",
+        "pasta",
+        "healthy",
+        "one pot",
+        "pasta e ceci chickpea pasta dinner",
+        "one_pot",
+        "golden_100"
       ]
     },
     {
@@ -4934,35 +4995,36 @@
       ]
     },
     {
-      "slug": "performance-burrito-bowls",
-      "title": "Performance Chicken Burrito Bowls",
-      "subtitle": "Macros-friendly, still craveable",
-      "category": "healthy_performance",
-      "cuisine": "mexican",
-      "protein": "chicken",
-      "mealFormat": "bowl",
-      "cookTime": 55,
+      "slug": "pepperoni-pizza-night",
+      "title": "Pepperoni Pizza",
+      "subtitle": "Friday hall pie — not delivery",
+      "category": "pizza_night",
+      "cuisine": "italian",
+      "protein": "pork",
+      "mealFormat": "pizza",
+      "cookTime": 175,
       "difficulty": "medium",
-      "heroImage": "/images/golden-100/performance-burrito-bowls.jpg",
-      "thumbImage": "/images/thumbs/performance-burrito-bowls.jpg",
+      "heroImage": "/images/golden-100/pepperoni-pizza-night.jpg",
+      "thumbImage": "/images/thumbs/pepperoni-pizza-night.jpg",
       "tags": [
-        "protein:chicken",
-        "format:bowl",
-        "category:healthy_performance",
-        "healthy",
-        "bowl",
+        "protein:pork",
+        "format:pizza",
+        "category:pizza_night",
+        "handheld",
+        "trending",
         "golden_100"
       ],
-      "firefighterScore": 100,
-      "popularityWeight": 2.9,
+      "firefighterScore": 94,
+      "popularityWeight": 3.2,
       "searchTerms": [
-        "performance chicken burrito bowls",
-        "performance burrito bowls",
-        "mexican",
-        "chicken",
-        "bowl",
-        "healthy",
-        "chicken burrito bowl healthy",
+        "pepperoni pizza",
+        "pepperoni pizza night",
+        "italian",
+        "pork",
+        "pizza",
+        "handheld",
+        "trending",
+        "homemade pepperoni pizza",
         "golden_100"
       ]
     },
@@ -4999,7 +5061,7 @@
     },
     {
       "slug": "pesto-tomato-chicken-tray",
-      "title": "Pesto Tomato Chicken Tray",
+      "title": "Pesto Chicken Tray",
       "subtitle": "Basil pesto chicken with roasted cherry tomatoes and zucchini",
       "category": "healthy_performance",
       "cuisine": "Italian",
@@ -5022,6 +5084,7 @@
       "firefighterScore": 83,
       "popularityWeight": 7.5,
       "searchTerms": [
+        "pesto chicken tray",
         "pesto tomato chicken tray",
         "chicken",
         "Italian",
@@ -5158,6 +5221,72 @@
       ]
     },
     {
+      "slug": "pork-carnitas-tacos",
+      "title": "Pork Carnitas Tacos",
+      "subtitle": "Crispy edges, fast tortilla night",
+      "category": "quick_shift_meals",
+      "cuisine": "mexican",
+      "protein": "pork",
+      "mealFormat": "tacos",
+      "cookTime": 35,
+      "difficulty": "easy",
+      "heroImage": "/images/golden-100/pork-carnitas-tacos.jpg",
+      "thumbImage": "/images/thumbs/pork-carnitas-tacos.jpg",
+      "tags": [
+        "protein:pork",
+        "format:tacos",
+        "category:quick_shift_meals",
+        "quick",
+        "handheld",
+        "golden_100"
+      ],
+      "firefighterScore": 100,
+      "popularityWeight": 3.2,
+      "searchTerms": [
+        "pork carnitas tacos",
+        "mexican",
+        "pork",
+        "tacos",
+        "quick",
+        "handheld",
+        "quick pork carnitas tacos",
+        "golden_100"
+      ]
+    },
+    {
+      "slug": "loaded-potato-feed",
+      "title": "Potato Bar Feed",
+      "subtitle": "Self-serve spuds for twenty",
+      "category": "big_crew_feeders",
+      "cuisine": "american",
+      "protein": "beef",
+      "mealFormat": "bowl",
+      "cookTime": 150,
+      "difficulty": "hard",
+      "heroImage": "/images/golden-100/loaded-potato-feed.jpg",
+      "thumbImage": "/images/thumbs/loaded-potato-feed.jpg",
+      "tags": [
+        "protein:beef",
+        "format:bowl",
+        "category:big_crew_feeders",
+        "comfort",
+        "beef",
+        "golden_100"
+      ],
+      "firefighterScore": 100,
+      "popularityWeight": 3.6,
+      "searchTerms": [
+        "potato bar feed",
+        "loaded potato feed",
+        "american",
+        "beef",
+        "bowl",
+        "comfort",
+        "loaded baked potato bar feed",
+        "golden_100"
+      ]
+    },
+    {
       "slug": "pretzel-bite-platter",
       "title": "Pretzel Bite Platter with Beer Cheese",
       "subtitle": "Soft pretzel bites and warm beer cheese dip for ten",
@@ -5189,37 +5318,37 @@
       ]
     },
     {
-      "slug": "pulled-pork-mac",
-      "title": "Pulled Pork Mac and Cheese",
-      "subtitle": "BBQ meets mac — hall legend",
-      "category": "big_crew_feeders",
-      "cuisine": "american",
-      "protein": "pork",
+      "slug": "cottage-cheese-protein-pasta",
+      "title": "Protein Pasta Bake",
+      "subtitle": "High-protein baked penne with marinara and melted mozzarella",
+      "category": "healthy_performance",
+      "cuisine": "Italian-American",
+      "protein": "mixed",
       "mealFormat": "pasta",
-      "cookTime": 555,
-      "difficulty": "hard",
-      "heroImage": "/images/golden-100/pulled-pork-mac.jpg",
-      "thumbImage": "/images/thumbs/pulled-pork-mac.jpg",
+      "cookTime": 35,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/cottage-cheese-protein-pasta.jpg",
+      "thumbImage": "/images/thumbs/cottage-cheese-protein-pasta.jpg",
       "tags": [
-        "protein:pork",
+        "protein:mixed",
         "format:pasta",
-        "category:big_crew_feeders",
-        "bbq",
-        "comfort",
-        "golden_100"
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
       ],
-      "firefighterScore": 100,
-      "popularityWeight": 3.5,
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
       "searchTerms": [
-        "pulled pork mac and cheese",
-        "pulled pork mac",
-        "american",
-        "pork",
+        "protein pasta bake",
+        "cottage cheese protein pasta",
+        "mixed",
+        "Italian-American",
         "pasta",
-        "bbq",
-        "comfort",
-        "pulled pork mac and cheese bake",
-        "golden_100"
+        "performance meal",
+        "firefighter healthy"
       ]
     },
     {
@@ -5256,67 +5385,35 @@
       ]
     },
     {
-      "slug": "beef-broccoli",
-      "title": "Quick Beef and Broccoli",
-      "subtitle": "Takeout vibes, hall timing",
+      "slug": "fast-philly-skillet",
+      "title": "Quick Philly Skillet",
+      "subtitle": "Cheesy steak without the wait",
       "category": "quick_shift_meals",
-      "cuisine": "chinese",
+      "cuisine": "american",
       "protein": "beef",
       "mealFormat": "skillet",
       "cookTime": 35,
       "difficulty": "easy",
-      "heroImage": "/images/golden-100/beef-broccoli.jpg",
-      "thumbImage": "/images/thumbs/beef-broccoli.jpg",
+      "heroImage": "/images/golden-100/fast-philly-skillet.jpg",
+      "thumbImage": "/images/thumbs/fast-philly-skillet.jpg",
       "tags": [
         "protein:beef",
         "format:skillet",
         "category:quick_shift_meals",
         "quick",
+        "beef",
         "golden_100"
       ],
       "firefighterScore": 100,
       "popularityWeight": 3.2,
       "searchTerms": [
-        "quick beef and broccoli",
-        "beef broccoli",
-        "chinese",
+        "quick philly skillet",
+        "fast philly skillet",
+        "american",
         "beef",
         "skillet",
         "quick",
-        "beef broccoli stir fry dinner",
-        "golden_100"
-      ]
-    },
-    {
-      "slug": "pork-carnitas-tacos",
-      "title": "Quick Pork Carnitas Tacos",
-      "subtitle": "Crispy edges, fast tortilla night",
-      "category": "quick_shift_meals",
-      "cuisine": "mexican",
-      "protein": "pork",
-      "mealFormat": "tacos",
-      "cookTime": 35,
-      "difficulty": "easy",
-      "heroImage": "/images/golden-100/pork-carnitas-tacos.jpg",
-      "thumbImage": "/images/thumbs/pork-carnitas-tacos.jpg",
-      "tags": [
-        "protein:pork",
-        "format:tacos",
-        "category:quick_shift_meals",
-        "quick",
-        "handheld",
-        "golden_100"
-      ],
-      "firefighterScore": 100,
-      "popularityWeight": 3.2,
-      "searchTerms": [
-        "quick pork carnitas tacos",
-        "pork carnitas tacos",
-        "mexican",
-        "pork",
-        "tacos",
-        "quick",
-        "handheld",
+        "quick philly cheesesteak skillet",
         "golden_100"
       ]
     },
@@ -5349,6 +5446,39 @@
         "plated main",
         "healthy",
         "quinoa stuffed bell peppers beef",
+        "golden_100"
+      ]
+    },
+    {
+      "slug": "red-beans-and-rice-for-the-hall",
+      "title": "Red Beans and Rice for the Hall",
+      "subtitle": "Creamy red beans over fluffy rice — New Orleans hall feed",
+      "category": "big_crew_feeders",
+      "cuisine": "cajun",
+      "protein": "pork",
+      "mealFormat": "one_pot",
+      "cookTime": 170,
+      "difficulty": "hard",
+      "heroImage": "/images/golden-100/red-beans-and-rice-for-the-hall.jpg",
+      "thumbImage": "/images/thumbs/red-beans-and-rice-for-the-hall.jpg",
+      "tags": [
+        "protein:pork",
+        "format:one_pot",
+        "category:big_crew_feeders",
+        "hearty",
+        "comfort",
+        "golden_100"
+      ],
+      "firefighterScore": 100,
+      "popularityWeight": 3.6,
+      "searchTerms": [
+        "red beans and rice for the hall",
+        "cajun",
+        "pork",
+        "one pot",
+        "hearty",
+        "comfort",
+        "red beans and rice firehall crew",
         "golden_100"
       ]
     },
@@ -5480,8 +5610,73 @@
       ]
     },
     {
+      "slug": "sausage-peppers-on-buns",
+      "title": "Sausage & Peppers on Buns",
+      "subtitle": "Italian sausage and peppers on hoagie rolls for the crew",
+      "category": "hall_expansion",
+      "cuisine": "italian",
+      "protein": "pork",
+      "mealFormat": "handheld",
+      "cookTime": 35,
+      "difficulty": "easy",
+      "heroImage": "/images/hall-expansion/sausage-peppers-on-buns.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/sausage-peppers-on-buns.jpg",
+      "tags": [
+        "protein:pork",
+        "format:handheld",
+        "category:crew_feeders",
+        "handheld",
+        "comfort",
+        "hall_expansion",
+        "hall_expansion_74",
+        "hall_meal",
+        "firefighter_meal"
+      ],
+      "firefighterScore": 86,
+      "popularityWeight": 7.8,
+      "searchTerms": [
+        "sausage and peppers sandwich",
+        "italian sausage hoagie firehall"
+      ]
+    },
+    {
+      "slug": "sheet-pan-sausage-peppers",
+      "title": "Sausage and Peppers",
+      "subtitle": "One pan, minimal dishes",
+      "category": "quick_shift_meals",
+      "cuisine": "italian",
+      "protein": "pork",
+      "mealFormat": "sheet_pan",
+      "cookTime": 35,
+      "difficulty": "easy",
+      "heroImage": "/images/golden-100/sheet-pan-sausage-peppers.jpg",
+      "thumbImage": "/images/thumbs/sheet-pan-sausage-peppers.jpg",
+      "tags": [
+        "protein:pork",
+        "format:sheet_pan",
+        "category:quick_shift_meals",
+        "quick",
+        "one_pot",
+        "golden_100"
+      ],
+      "firefighterScore": 100,
+      "popularityWeight": 3.2,
+      "searchTerms": [
+        "sausage and peppers",
+        "sheet pan sausage peppers",
+        "italian",
+        "pork",
+        "sheet pan",
+        "quick",
+        "one pot",
+        "sheet pan sausage peppers dinner",
+        "one_pot",
+        "golden_100"
+      ]
+    },
+    {
       "slug": "sausage-egg-bake",
-      "title": "Sausage Egg Bake for the Crew",
+      "title": "Sausage Egg Bake",
       "subtitle": "Morning feed after night shift",
       "category": "big_crew_feeders",
       "cuisine": "american",
@@ -5502,7 +5697,6 @@
       "firefighterScore": 100,
       "popularityWeight": 3.6,
       "searchTerms": [
-        "sausage egg bake for the crew",
         "sausage egg bake",
         "american",
         "pork",
@@ -5581,7 +5775,7 @@
     },
     {
       "slug": "shawarma-chicken-rice-bowls",
-      "title": "Shawarma Chicken Rice Bowls",
+      "title": "Shawarma Chicken Bowls",
       "subtitle": "Sheet-pan spiced chicken with turmeric rice and cucumber yogurt",
       "category": "healthy_performance",
       "cuisine": "Middle Eastern",
@@ -5604,111 +5798,13 @@
       "firefighterScore": 83,
       "popularityWeight": 7.5,
       "searchTerms": [
+        "shawarma chicken bowls",
         "shawarma chicken rice bowls",
         "chicken",
         "Middle Eastern",
         "bowl",
         "performance meal",
         "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "sheet-pan-fajitas",
-      "title": "Sheet Pan Chicken Fajitas",
-      "subtitle": "One pan, peppers, lean strips",
-      "category": "healthy_performance",
-      "cuisine": "mexican",
-      "protein": "chicken",
-      "mealFormat": "sheet_pan",
-      "cookTime": 55,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/sheet-pan-fajitas.jpg",
-      "thumbImage": "/images/thumbs/sheet-pan-fajitas.jpg",
-      "tags": [
-        "protein:chicken",
-        "format:sheet_pan",
-        "category:healthy_performance",
-        "healthy",
-        "quick",
-        "golden_100"
-      ],
-      "firefighterScore": 100,
-      "popularityWeight": 2.9,
-      "searchTerms": [
-        "sheet pan chicken fajitas",
-        "sheet pan fajitas",
-        "mexican",
-        "chicken",
-        "sheet pan",
-        "healthy",
-        "quick",
-        "golden_100"
-      ]
-    },
-    {
-      "slug": "sheet-pan-chicken-fajitas-lite",
-      "title": "Sheet Pan Chicken Fajitas Lite",
-      "subtitle": "Charred peppers and onions with spiced chicken strips—no heavy oil",
-      "category": "healthy_performance",
-      "cuisine": "Mexican",
-      "protein": "chicken",
-      "mealFormat": "sheet_pan",
-      "cookTime": 22,
-      "difficulty": "easy",
-      "heroImage": "/images/golden-100/sheet-pan-chicken-fajitas-lite.jpg",
-      "thumbImage": "/images/thumbs/sheet-pan-chicken-fajitas-lite.jpg",
-      "tags": [
-        "protein:chicken",
-        "format:sheet_pan",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "sheet pan chicken fajitas lite",
-        "chicken",
-        "Mexican",
-        "sheet pan",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "sheet-pan-meal-prep",
-      "title": "Sheet Pan Chicken Trays",
-      "subtitle": "Portioned trays, reheat-ready",
-      "category": "meal_prep_leftovers",
-      "cuisine": "american",
-      "protein": "chicken",
-      "mealFormat": "sheet_pan",
-      "cookTime": 100,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/sheet-pan-meal-prep.jpg",
-      "thumbImage": "/images/thumbs/sheet-pan-meal-prep.jpg",
-      "tags": [
-        "protein:chicken",
-        "format:sheet_pan",
-        "category:meal_prep_leftovers",
-        "healthy",
-        "quick",
-        "golden_100"
-      ],
-      "firefighterScore": 100,
-      "popularityWeight": 3.2,
-      "searchTerms": [
-        "sheet pan chicken trays",
-        "sheet pan meal prep",
-        "american",
-        "chicken",
-        "sheet pan",
-        "healthy",
-        "quick",
-        "golden_100"
       ]
     },
     {
@@ -5743,44 +5839,44 @@
       ]
     },
     {
-      "slug": "sheet-pan-sausage-peppers",
-      "title": "Sheet Pan Sausage and Peppers",
-      "subtitle": "One pan, minimal dishes",
+      "slug": "sheet-pan-parmesan-dijon-chicken-thigh-dinner",
+      "title": "Sheet Pan Parmesan-Dijon Chicken Thigh Dinner",
+      "subtitle": "Crispy Parmesan crust, Dijon potatoes, and green beans on one pan",
       "category": "quick_shift_meals",
-      "cuisine": "italian",
-      "protein": "pork",
+      "cuisine": "american",
+      "protein": "chicken",
       "mealFormat": "sheet_pan",
-      "cookTime": 35,
+      "cookTime": 55,
       "difficulty": "easy",
-      "heroImage": "/images/golden-100/sheet-pan-sausage-peppers.jpg",
-      "thumbImage": "/images/thumbs/sheet-pan-sausage-peppers.jpg",
+      "heroImage": "/images/golden-100/sheet-pan-parmesan-dijon-chicken-thigh-dinner.jpg",
+      "thumbImage": "/images/thumbs/sheet-pan-parmesan-dijon-chicken-thigh-dinner.jpg",
       "tags": [
-        "protein:pork",
+        "protein:chicken",
         "format:sheet_pan",
         "category:quick_shift_meals",
         "quick",
-        "one_pot",
+        "chicken",
+        "healthy",
         "golden_100"
       ],
       "firefighterScore": 100,
       "popularityWeight": 3.2,
       "searchTerms": [
-        "sheet pan sausage and peppers",
-        "sheet pan sausage peppers",
-        "italian",
-        "pork",
+        "sheet pan parmesan-dijon chicken thigh dinner",
+        "sheet pan parmesan dijon chicken thigh dinner",
+        "american",
+        "chicken",
         "sheet pan",
         "quick",
-        "one pot",
-        "sheet pan sausage peppers dinner",
-        "one_pot",
+        "healthy",
+        "sheet pan parmesan dijon chicken thighs dinner",
         "golden_100"
       ]
     },
     {
       "slug": "shepherds-pie",
-      "title": "Shepherd's Pie with Greek Salad",
-      "subtitle": "Golden potato cap over rich filling, with Greek salad on the side",
+      "title": "Shepherd's Pie",
+      "subtitle": "Golden potato cap over rich filling, Greek salad on the side",
       "category": "comfort_food",
       "cuisine": "british",
       "protein": "beef",
@@ -5807,40 +5903,75 @@
         "plated main",
         "comfort",
         "hearty",
-        "shepherds pie ground beef",
+        "shepherds pie ground beef greek salad",
         "golden_100"
       ]
     },
     {
-      "slug": "chicken-quesadillas",
-      "title": "Shredded Chicken Quesadillas",
-      "subtitle": "Melty, crispy, line-friendly",
-      "category": "quick_shift_meals",
-      "cuisine": "mexican",
-      "protein": "chicken",
-      "mealFormat": "handheld",
-      "cookTime": 35,
-      "difficulty": "easy",
-      "heroImage": "/images/golden-100/chicken-quesadillas.jpg",
-      "thumbImage": "/images/thumbs/chicken-quesadillas.jpg",
+      "slug": "grilled-shrimp-quinoa-bowls",
+      "title": "Shrimp and Quinoa Bowls",
+      "subtitle": "Charred shrimp skewers over quinoa with roasted vegetables",
+      "category": "healthy_performance",
+      "cuisine": "Mediterranean",
+      "protein": "shrimp",
+      "mealFormat": "grill",
+      "cookTime": 20,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/grilled-shrimp-quinoa-bowls.jpg",
+      "thumbImage": "/images/thumbs/grilled-shrimp-quinoa-bowls.jpg",
       "tags": [
-        "protein:chicken",
-        "format:handheld",
-        "category:quick_shift_meals",
-        "quick",
+        "protein:shrimp",
+        "format:grill",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "shrimp and quinoa bowls",
+        "grilled shrimp quinoa bowls",
+        "shrimp",
+        "Mediterranean",
+        "grill",
+        "performance meal",
+        "firefighter healthy"
+      ]
+    },
+    {
+      "slug": "slider-bar",
+      "title": "Slider Bar",
+      "subtitle": "Mini burgers, max variety",
+      "category": "game_day_watch_party",
+      "cuisine": "american",
+      "protein": "beef",
+      "mealFormat": "burger",
+      "cookTime": 55,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/slider-bar.jpg",
+      "thumbImage": "/images/thumbs/slider-bar.jpg",
+      "tags": [
+        "protein:beef",
+        "format:burger",
+        "category:game_day_watch_party",
+        "game_day",
         "handheld",
         "golden_100"
       ],
-      "firefighterScore": 100,
+      "firefighterScore": 96,
       "popularityWeight": 3.2,
       "searchTerms": [
-        "shredded chicken quesadillas",
-        "chicken quesadillas",
-        "mexican",
-        "chicken",
+        "slider bar",
+        "american",
+        "beef",
+        "burger",
+        "game day",
         "handheld",
-        "quick",
-        "chicken quesadillas dinner",
+        "beef slider bar dinner",
+        "game_day",
         "golden_100"
       ]
     },
@@ -6034,7 +6165,7 @@
     },
     {
       "slug": "smoked-wings-white-sauce",
-      "title": "Smoked Wings with White BBQ Sauce",
+      "title": "Smoked Wings with White Sauce",
       "subtitle": "Smoked wings, tangy Alabama sauce",
       "category": "bbq_grill_nights",
       "cuisine": "american",
@@ -6055,7 +6186,7 @@
       "firefighterScore": 100,
       "popularityWeight": 3.2,
       "searchTerms": [
-        "smoked wings with white bbq sauce",
+        "smoked wings with white sauce",
         "smoked wings white sauce",
         "american",
         "chicken",
@@ -6065,40 +6196,6 @@
         "smoked chicken wings white bbq sauce",
         "game_day",
         "golden_100"
-      ]
-    },
-    {
-      "slug": "smoky-lentil-kale-soup",
-      "title": "Smoky Lentil and Kale Soup",
-      "subtitle": "Hearty vegetarian pot with fire-roasted tomatoes and smoked paprika",
-      "category": "healthy_performance",
-      "cuisine": "American",
-      "protein": "plant",
-      "mealFormat": "soup",
-      "cookTime": 40,
-      "difficulty": "easy",
-      "heroImage": "/images/golden-100/smoky-lentil-kale-soup.jpg",
-      "thumbImage": "/images/thumbs/smoky-lentil-kale-soup.jpg",
-      "tags": [
-        "protein:plant",
-        "format:soup",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "smoky lentil and kale soup",
-        "smoky lentil kale soup",
-        "plant",
-        "American",
-        "soup",
-        "performance meal",
-        "firefighter healthy"
       ]
     },
     {
@@ -6133,37 +6230,38 @@
       ]
     },
     {
-      "slug": "spanish-chicken-chorizo-rice",
-      "title": "Spanish Chicken and Chorizo Rice",
-      "subtitle": "One-pot saffron rice with chicken thighs, chorizo, and peas",
-      "category": "healthy_performance",
-      "cuisine": "Spanish",
-      "protein": "chicken",
-      "mealFormat": "one_pot",
-      "cookTime": 45,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/spanish-chicken-chorizo-rice.jpg",
-      "thumbImage": "/images/thumbs/spanish-chicken-chorizo-rice.jpg",
+      "slug": "spaghetti-aglio-e-olio-for-the-hall",
+      "title": "Spaghetti Aglio e Olio for the Hall",
+      "subtitle": "Garlic, oil, and pasta — emulsified the right way",
+      "category": "rookie_friendly",
+      "cuisine": "italian",
+      "protein": "vegetarian",
+      "mealFormat": "pasta",
+      "cookTime": 35,
+      "difficulty": "easy",
+      "heroImage": "/images/golden-100/spaghetti-aglio-e-olio-for-the-hall.jpg",
+      "thumbImage": "/images/thumbs/spaghetti-aglio-e-olio-for-the-hall.jpg",
       "tags": [
-        "protein:chicken",
-        "format:one_pot",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
+        "protein:vegetarian",
+        "format:pasta",
+        "category:rookie_friendly",
+        "one_pot",
+        "pasta",
+        "quick",
+        "golden_100"
       ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
+      "firefighterScore": 100,
+      "popularityWeight": 3.2,
       "searchTerms": [
-        "spanish chicken and chorizo rice",
-        "spanish chicken chorizo rice",
-        "chicken",
-        "Spanish",
+        "spaghetti aglio e olio for the hall",
+        "italian",
+        "vegetarian",
+        "pasta",
         "one pot",
-        "performance meal",
-        "firefighter healthy"
+        "quick",
+        "spaghetti aglio olio garlic oil pasta",
+        "one_pot",
+        "golden_100"
       ]
     },
     {
@@ -6194,6 +6292,40 @@
       "searchTerms": [
         "spatchcock lemon roast chicken",
         "crew feeders"
+      ]
+    },
+    {
+      "slug": "spicy-tomato-bisque-grilled-brie-toast",
+      "title": "Spicy Tomato Bisque with Grilled Brie Toast",
+      "subtitle": "Smoky-spiced bisque with melty brie toast on the side",
+      "category": "comfort_food",
+      "cuisine": "american",
+      "protein": "vegetarian",
+      "mealFormat": "soup_chili",
+      "cookTime": 50,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/spicy-tomato-bisque-grilled-brie-toast.jpg",
+      "thumbImage": "/images/thumbs/spicy-tomato-bisque-grilled-brie-toast.jpg",
+      "tags": [
+        "protein:vegetarian",
+        "format:soup_chili",
+        "category:comfort_food",
+        "comfort",
+        "hearty",
+        "golden_100"
+      ],
+      "firefighterScore": 100,
+      "popularityWeight": 3.6,
+      "searchTerms": [
+        "spicy tomato bisque with grilled brie toast",
+        "spicy tomato bisque grilled brie toast",
+        "american",
+        "vegetarian",
+        "soup chili",
+        "comfort",
+        "hearty",
+        "spicy tomato bisque brie toast soup",
+        "golden_100"
       ]
     },
     {
@@ -6259,36 +6391,99 @@
       ]
     },
     {
-      "slug": "sunday-chili-batch",
-      "title": "Sunday Batch Chili",
-      "subtitle": "Cook once, feed the week",
-      "category": "meal_prep_leftovers",
-      "cuisine": "american",
+      "slug": "steak-tacos",
+      "title": "Steak Tacos",
+      "subtitle": "Charred steak, bright chimichurri, tortilla night",
+      "category": "firehall_classics",
+      "cuisine": "mexican",
       "protein": "beef",
-      "mealFormat": "soup_chili",
-      "cookTime": 100,
+      "mealFormat": "tacos",
+      "cookTime": 55,
       "difficulty": "medium",
-      "heroImage": "/images/golden-100/sunday-chili-batch.jpg",
-      "thumbImage": "/images/thumbs/sunday-chili-batch.jpg",
+      "heroImage": "/images/golden-100/steak-tacos.jpg",
+      "thumbImage": "/images/thumbs/steak-tacos.jpg",
       "tags": [
         "protein:beef",
-        "format:soup_chili",
-        "category:meal_prep_leftovers",
-        "slow",
-        "hearty",
+        "format:tacos",
+        "category:firehall_classics",
+        "trending",
+        "handheld",
+        "golden_100"
+      ],
+      "firefighterScore": 100,
+      "popularityWeight": 3.6,
+      "searchTerms": [
+        "steak tacos",
+        "mexican",
+        "beef",
+        "tacos",
+        "trending",
+        "handheld",
+        "golden_100"
+      ]
+    },
+    {
+      "slug": "street-corn-chicken",
+      "title": "Street Corn Chicken Bowls",
+      "subtitle": "Elote flavors in a bowl",
+      "category": "global_flavors",
+      "cuisine": "mexican",
+      "protein": "chicken",
+      "mealFormat": "bowl",
+      "cookTime": 55,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/street-corn-chicken.jpg",
+      "thumbImage": "/images/thumbs/street-corn-chicken.jpg",
+      "tags": [
+        "protein:chicken",
+        "format:bowl",
+        "category:global_flavors",
+        "bowl",
+        "handheld",
         "golden_100"
       ],
       "firefighterScore": 100,
       "popularityWeight": 3.2,
       "searchTerms": [
-        "sunday batch chili",
-        "sunday chili batch",
-        "american",
-        "beef",
-        "soup chili",
-        "slow",
-        "hearty",
-        "big batch beef chili meal prep",
+        "street corn chicken bowls",
+        "street corn chicken",
+        "mexican",
+        "chicken",
+        "bowl",
+        "handheld",
+        "mexican street corn chicken bowl",
+        "golden_100"
+      ]
+    },
+    {
+      "slug": "grilled-corn-cotija",
+      "title": "Street Corn with Cotija",
+      "subtitle": "Charred corn, creamy cotija finish",
+      "category": "bbq_grill_nights",
+      "cuisine": "mexican",
+      "protein": "vegetarian",
+      "mealFormat": "grill",
+      "cookTime": 90,
+      "difficulty": "hard",
+      "heroImage": "/images/golden-100/grilled-corn-cotija.jpg",
+      "thumbImage": "/images/thumbs/grilled-corn-cotija.jpg",
+      "tags": [
+        "protein:vegetarian",
+        "format:grill",
+        "category:bbq_grill_nights",
+        "bbq",
+        "golden_100"
+      ],
+      "firefighterScore": 100,
+      "popularityWeight": 3.2,
+      "searchTerms": [
+        "street corn with cotija",
+        "grilled corn cotija",
+        "mexican",
+        "vegetarian",
+        "grill",
+        "bbq",
+        "mexican street corn grilled cotija",
         "golden_100"
       ]
     },
@@ -6326,6 +6521,40 @@
       ]
     },
     {
+      "slug": "hall-taco-bar",
+      "title": "Taco Bar",
+      "subtitle": "Build-your-own tacos at the table",
+      "category": "firehall_classics",
+      "cuisine": "mexican",
+      "protein": "beef",
+      "mealFormat": "tacos",
+      "cookTime": 55,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/hall-taco-bar.jpg",
+      "thumbImage": "/images/thumbs/hall-taco-bar.jpg",
+      "tags": [
+        "protein:beef",
+        "format:tacos",
+        "category:firehall_classics",
+        "handheld",
+        "trending",
+        "golden_100"
+      ],
+      "firefighterScore": 100,
+      "popularityWeight": 3.6,
+      "searchTerms": [
+        "taco bar",
+        "hall taco bar",
+        "mexican",
+        "beef",
+        "tacos",
+        "handheld",
+        "trending",
+        "ground beef taco bar dinner",
+        "golden_100"
+      ]
+    },
+    {
       "slug": "teriyaki-donburi",
       "title": "Teriyaki Chicken Donburi",
       "subtitle": "Glazed chicken over steamed rice",
@@ -6360,7 +6589,7 @@
     },
     {
       "slug": "teriyaki-salmon-grill",
-      "title": "Teriyaki Grilled Salmon",
+      "title": "Teriyaki Salmon",
       "subtitle": "Glazed salmon, grill-first cleanup",
       "category": "bbq_grill_nights",
       "cuisine": "japanese",
@@ -6381,7 +6610,7 @@
       "firefighterScore": 100,
       "popularityWeight": 3.2,
       "searchTerms": [
-        "teriyaki grilled salmon",
+        "teriyaki salmon",
         "teriyaki salmon grill",
         "japanese",
         "seafood",
@@ -6427,7 +6656,7 @@
     },
     {
       "slug": "thai-basil-chicken",
-      "title": "Thai Basil Chicken Stir Fry",
+      "title": "Thai Basil Chicken",
       "subtitle": "Wok heat, holy basil, jasmine rice",
       "category": "global_flavors",
       "cuisine": "thai",
@@ -6448,13 +6677,47 @@
       "firefighterScore": 99,
       "popularityWeight": 3.2,
       "searchTerms": [
-        "thai basil chicken stir fry",
         "thai basil chicken",
         "thai",
         "chicken",
         "skillet",
         "quick",
         "bowl",
+        "thai basil chicken stir fry",
+        "golden_100"
+      ]
+    },
+    {
+      "slug": "tomato-soup-grilled-cheese-croutons",
+      "title": "Tomato Soup with Grilled Cheese Croutons",
+      "subtitle": "Creamy tomato soup topped with real grilled-cheese cubes",
+      "category": "comfort_food",
+      "cuisine": "american",
+      "protein": "vegetarian",
+      "mealFormat": "soup_chili",
+      "cookTime": 40,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/tomato-soup-grilled-cheese-croutons.jpg",
+      "thumbImage": "/images/thumbs/tomato-soup-grilled-cheese-croutons.jpg",
+      "tags": [
+        "protein:vegetarian",
+        "format:soup_chili",
+        "category:comfort_food",
+        "comfort",
+        "hearty",
+        "golden_100"
+      ],
+      "firefighterScore": 100,
+      "popularityWeight": 3.6,
+      "searchTerms": [
+        "tomato soup with grilled cheese croutons",
+        "tomato soup grilled cheese croutons",
+        "american",
+        "vegetarian",
+        "soup chili",
+        "comfort",
+        "hearty",
+        "tomato soup grilled cheese croutons dinner",
         "golden_100"
       ]
     },
@@ -6521,8 +6784,41 @@
       ]
     },
     {
+      "slug": "turkey-chili",
+      "title": "Turkey Chili",
+      "subtitle": "Big pot, lean protein, hall fuel",
+      "category": "healthy_performance",
+      "cuisine": "american",
+      "protein": "turkey",
+      "mealFormat": "soup_chili",
+      "cookTime": 55,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/turkey-chili.jpg",
+      "thumbImage": "/images/thumbs/turkey-chili.jpg",
+      "tags": [
+        "protein:turkey",
+        "format:soup_chili",
+        "category:healthy_performance",
+        "healthy",
+        "hearty",
+        "golden_100"
+      ],
+      "firefighterScore": 100,
+      "popularityWeight": 2.9,
+      "searchTerms": [
+        "turkey chili",
+        "american",
+        "turkey",
+        "soup chili",
+        "healthy",
+        "hearty",
+        "turkey chili healthy dinner",
+        "golden_100"
+      ]
+    },
+    {
       "slug": "turkey-lettuce-wrap-night",
-      "title": "Turkey Lettuce Wrap Night",
+      "title": "Turkey Lettuce Wraps",
       "subtitle": "Ginger-garlic ground turkey in crisp romaine with hoisin and peanuts",
       "category": "healthy_performance",
       "cuisine": "Asian-American",
@@ -6545,6 +6841,7 @@
       "firefighterScore": 83,
       "popularityWeight": 7.5,
       "searchTerms": [
+        "turkey lettuce wraps",
         "turkey lettuce wrap night",
         "turkey",
         "Asian-American",
@@ -6586,41 +6883,8 @@
       ]
     },
     {
-      "slug": "turkey-quinoa-stuffed-peppers",
-      "title": "Turkey Quinoa Stuffed Peppers",
-      "subtitle": "Colorful bell peppers filled with lean turkey, quinoa, and tomato",
-      "category": "healthy_performance",
-      "cuisine": "American",
-      "protein": "turkey",
-      "mealFormat": "bake",
-      "cookTime": 45,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/turkey-quinoa-stuffed-peppers.jpg",
-      "thumbImage": "/images/thumbs/turkey-quinoa-stuffed-peppers.jpg",
-      "tags": [
-        "protein:turkey",
-        "format:bake",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "turkey quinoa stuffed peppers",
-        "turkey",
-        "American",
-        "bake",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
       "slug": "turkey-shepherds-sweet-potato",
-      "title": "Turkey Shepherd's with Sweet Potato Top",
+      "title": "Turkey Shepherd's Pie",
       "subtitle": "Lean turkey and vegetable filling under whipped sweet potato mash",
       "category": "healthy_performance",
       "cuisine": "British-American",
@@ -6643,7 +6907,7 @@
       "firefighterScore": 83,
       "popularityWeight": 7.5,
       "searchTerms": [
-        "turkey shepherd's with sweet potato top",
+        "turkey shepherd's pie",
         "turkey shepherds sweet potato",
         "turkey",
         "British-American",
@@ -6749,6 +7013,39 @@
         "pasta",
         "performance meal",
         "firefighter healthy"
+      ]
+    },
+    {
+      "slug": "creamy-tuscan-chicken",
+      "title": "Tuscan Chicken",
+      "subtitle": "Sun-dried tomato, spinach, rich cream",
+      "category": "comfort_food",
+      "cuisine": "italian",
+      "protein": "chicken",
+      "mealFormat": "plated_main",
+      "cookTime": 55,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/creamy-tuscan-chicken.jpg",
+      "thumbImage": "/images/thumbs/creamy-tuscan-chicken.jpg",
+      "tags": [
+        "protein:chicken",
+        "format:plated_main",
+        "category:comfort_food",
+        "comfort",
+        "chicken",
+        "golden_100"
+      ],
+      "firefighterScore": 100,
+      "popularityWeight": 3.6,
+      "searchTerms": [
+        "tuscan chicken",
+        "creamy tuscan chicken",
+        "italian",
+        "chicken",
+        "plated main",
+        "comfort",
+        "creamy tuscan chicken dinner",
+        "golden_100"
       ]
     },
     {
@@ -6913,7 +7210,7 @@
     },
     {
       "slug": "yogurt-marinated-grill-chicken",
-      "title": "Yogurt Marinated Grill Chicken",
+      "title": "Yogurt Marinated Chicken",
       "subtitle": "Tender spiced chicken thighs from an overnight yogurt marinade",
       "category": "healthy_performance",
       "cuisine": "Middle Eastern",
@@ -6936,6 +7233,7 @@
       "firefighterScore": 83,
       "popularityWeight": 7.5,
       "searchTerms": [
+        "yogurt marinated chicken",
         "yogurt marinated grill chicken",
         "chicken",
         "Middle Eastern",
@@ -6946,7 +7244,7 @@
     },
     {
       "slug": "zaatar-roasted-chicken-thighs",
-      "title": "Za'atar Roasted Chicken Thighs",
+      "title": "Za'atar Chicken Thighs",
       "subtitle": "Middle Eastern spice-crusted thighs with roasted onions and lemon",
       "category": "healthy_performance",
       "cuisine": "Middle Eastern",
@@ -6969,7 +7267,7 @@
       "firefighterScore": 83,
       "popularityWeight": 7.5,
       "searchTerms": [
-        "za'atar roasted chicken thighs",
+        "za'atar chicken thighs",
         "zaatar roasted chicken thighs",
         "chicken",
         "Middle Eastern",

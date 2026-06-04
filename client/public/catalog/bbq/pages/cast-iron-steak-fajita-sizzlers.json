@@ -8,15 +8,15 @@
   "category": "bbq_grill_nights",
   "cuisine": "tex-mex",
   "description": "Flank steak strips marinate in lime-cumin, sear on the griddle with peppers and onions, and serve on screaming-hot cast-iron sizzlers with tortillas.",
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "cookTime": 20,
   "prepTime": 35,
   "difficulty": "medium",
-  "calories": 0,
-  "protein": 0,
-  "carbs": 0,
-  "fats": 0,
+  "calories": 1019,
+  "protein": 74,
+  "carbs": 57,
+  "fats": 54,
   "tags": [
     "protein:beef",
     "format:sizzler_plate",
@@ -39,27 +39,27 @@
   "ingredients": [
     {
       "name": "skirt steak",
-      "quantity": "4.4",
+      "quantity": "5.5",
       "unit": "lb",
       "notes": "cut into strips",
       "group": "Main"
     },
     {
       "name": "dried guajillo chiles",
-      "quantity": "3",
+      "quantity": "4",
       "unit": "whole",
       "notes": "rehydrated and blended",
       "group": "Marinade"
     },
     {
       "name": "ancho chili powder",
-      "quantity": "7/8",
+      "quantity": "1",
       "unit": "tbsp",
       "group": "Marinade"
     },
     {
       "name": "poblano peppers",
-      "quantity": "5",
+      "quantity": "6",
       "unit": "whole",
       "notes": "striped",
       "group": "Sizzler veg"
@@ -73,32 +73,32 @@
     },
     {
       "name": "orange juice",
-      "quantity": "1/4",
+      "quantity": "0.25",
       "unit": "cup",
       "group": "Marinade"
     },
     {
       "name": "Mexican oregano",
-      "quantity": "7/8",
+      "quantity": "1",
       "unit": "tbsp",
       "group": "Marinade"
     },
     {
       "name": "corn tortillas",
-      "quantity": "19.2",
+      "quantity": "24",
       "unit": "pieces",
       "group": "Service"
     },
     {
       "name": "queso fresco",
-      "quantity": "3/4",
+      "quantity": "1",
       "unit": "cup",
       "notes": "crumbled",
       "group": "Garnish"
     },
     {
       "name": "pickled red onions",
-      "quantity": "3/4",
+      "quantity": "1",
       "unit": "cup",
       "group": "Garnish"
     }
@@ -107,56 +107,56 @@
     {
       "stepNumber": 1,
       "title": "Marinate steak strips",
-      "instruction": "Toss flank strips with lime juice, cumin, chili powder, garlic, and salt. Marinate 2–4 hours refrigerated. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Use Mexican oregano as listed — measure each before heat goes on. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
+      "instruction": "Toss flank strips with lime juice, cumin, chili powder, garlic, and salt. Marinate 2–4 hours refrigerated.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
       "title": "Prep peppers and onions",
-      "instruction": "Cut peppers and onions into uniform strips. Keep veg dry for griddle char. Cook until char marks are visible and the thickest piece reads 145°F for medium beef, 160°F for ground on an instant-read thermometer. Plan about 12 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Cut peppers and onions into uniform strips. Keep veg dry for griddle char.",
       "minutes": 12,
       "heatLevel": ""
     },
     {
       "stepNumber": 3,
-      "title": "Preheat the flat-top griddle",
-      "instruction": "Preheat griddle to 450°F. Film with oil. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "title": "Heat griddle hot",
+      "instruction": "Preheat griddle to 450°F. Film with oil.",
       "minutes": 10,
       "heatLevel": "high"
     },
     {
       "stepNumber": 4,
       "title": "Sear steak batches",
-      "instruction": "Sear steak strips in single layers 2–3 minutes per side until charred and 130°F. Rest and hold at 170°F. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
+      "instruction": "Sear steak strips in single layers 2–3 minutes per side until charred and 130°F. Rest and hold at 170°F.",
       "minutes": 12,
       "heatLevel": "high"
     },
     {
       "stepNumber": 5,
       "title": "Char veg",
-      "instruction": "Griddle peppers and onions at 425°F until charred and tender, 8–10 minutes. Hold with steak at 170°F. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
+      "instruction": "Griddle peppers and onions at 425°F until charred and tender, 8–10 minutes. Hold with steak at 170°F.",
       "minutes": 10,
       "heatLevel": "high"
     },
     {
       "stepNumber": 6,
       "title": "Heat sizzle platters",
-      "instruction": "Preheat cast-iron sizzlers on griddle or in oven to 400°F for service. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Preheat cast-iron sizzlers on griddle or in oven to 400°F for service.",
       "minutes": 10,
       "heatLevel": "high"
     },
     {
       "stepNumber": 7,
       "title": "Sizzle at service",
-      "instruction": "Add oil to hot irons, pile steak and veg, serve immediately while sizzling. Warn crew—handles stay hot. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
+      "instruction": "Add oil to hot irons, pile steak and veg, serve immediately while sizzling. Warn crew—handles stay hot.",
       "minutes": 5,
       "heatLevel": "high"
     },
     {
       "stepNumber": 8,
       "title": "Tonight's line",
-      "instruction": "Serve with warm tortillas, cilantro, and lime. About 8 oz steak per firefighter. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
+      "instruction": "Serve with warm tortillas, cilantro, and lime. About 8 oz steak per firefighter.",
       "minutes": 5,
       "heatLevel": ""
     }
@@ -178,26 +178,12 @@
   "mealPrepNotes": "Marinate steak 2–4 hours. Sear on griddle at 450°F in batches. Hold meat and veg at 170°F. Reheat cast irons to 400°F at service for sizzle.",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 0,
-    "protein": 0,
-    "carbs": 0,
-    "fats": 0,
-    "label": "Estimated per serving",
-    "source": "unavailable",
-    "estimateAvailable": false,
-    "filterFlags": {
-      "highProtein": true,
-      "under700Calories": false,
-      "under30gFat": false,
-      "highCarb": true,
-      "lowCarb": false,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": false
-    }
+    "calories": 1019,
+    "protein": 74,
+    "carbs": 57,
+    "fats": 54,
+    "label": "per serving (hall portion)",
+    "source": "estimated"
   },
   "heroImage": "/images/smoker-catalog/cast-iron-steak-fajita-sizzlers.jpg",
   "heroImageAlt": "Cast Iron Skirt Steak Sizzlers — crew-sized BBQ spread with visible smoke and bark",
@@ -225,6 +211,6 @@
     "brisket-style-beef-sandwiches-au-jus"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T23:32:23.208Z",
+  "generatedAt": "2026-06-04T20:47:49.448Z",
   "contentVersion": 2
 }

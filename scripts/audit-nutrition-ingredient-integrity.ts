@@ -18,7 +18,7 @@ import {
 } from "../shared/meal-format-contract.js";
 import { scaleGoldenIngredients } from "../shared/golden-100/recipe-quality/crew-scale.js";
 import type { GoldenRecipePageIngredient } from "../shared/golden-100/recipe-page-schema.js";
-import { getRecipeBaseServings } from "../shared/recipe/crew-scaling-config.js";
+import { CREW_SIZE_OPTIONS, getRecipeBaseServings } from "../shared/recipe/crew-scaling-config.js";
 import { CURATED_HALL_PACKAGES, buildCuratedClientRecipe } from "../shared/curated-hall-packages.js";
 import { MEAL_IDENTITY_SIDE_BUNDLES } from "../shared/meal-archetype-sides.js";
 
@@ -26,7 +26,7 @@ const ROOT = process.cwd();
 const JSON_OUT = path.join(ROOT, "review", "nutrition-ingredient-integrity-audit.json");
 const MD_OUT = path.join(ROOT, "review", "nutrition-ingredient-integrity-audit.md");
 
-const CREW_SIZES = [2, 4, 6, 8, 10] as const;
+const CREW_SIZES = CREW_SIZE_OPTIONS;
 
 type CatalogKind = "golden" | "performance" | "hall-expansion" | "breakfast" | "smoothie" | "bbq";
 

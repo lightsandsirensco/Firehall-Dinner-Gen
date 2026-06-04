@@ -189,6 +189,7 @@
     }
   },
   "heroImage": "/images/golden-100/detroit-style-pizza.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Detroit-Style Pepperoni Pizza on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/detroit-style-pizza.jpg",
   "thumbImage": "/images/thumbs/detroit-style-pizza.jpg",
   "railImage": "/images/rails/detroit-style-pizza.jpg",
@@ -211,10 +212,10 @@
     "honey-soppressata-pizza",
     "pepperoni-pizza-night",
     "bbq-chicken-pizza",
-    "bacon-egg-hash"
+    "pulled-pork"
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.453Z",
+  "generatedAt": "2026-06-04T20:45:42.287Z",
   "contentVersion": 2
 }

@@ -35,7 +35,8 @@ Explore editorial feed (curated DB first, then Spoonacular, catalog, seeds)
 | Page fetch + cache | `server/ingestion/extraction/fetch-recipe-page.ts`, `url-cache.ts` | Rate-limited fetch, 24h TTL |
 | Image validator | `server/ingestion/extraction/image-validator.ts` | HEAD + URL heuristics |
 | Normalization | `shared/ingestion/normalize-extracted.ts` | → IngestRecipeDraft |
-| Trusted publishers | `shared/ingestion/trusted-publishers.ts` | Allowlist + quality bonus |
+| Recipe sourcing policy | `shared/recipe-sourcing-policy.ts` | Tier 1–3 hierarchy + creation rules |
+| Trusted publishers | `shared/ingestion/trusted-publishers.ts` | Allowlist + quality bonus (from policy) |
 | Scoring / categories | `shared/ingestion/scoring.ts`, `categorize.ts` | Comfort, hall fit, pools, sides |
 | Curated DB | `server/curated-recipe-store.ts` | Normalized persistence |
 | Promotion | `server/ingestion/promote.ts` | Publisher + Spoonacular paths |

@@ -13,10 +13,10 @@
   "cookTime": 50,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 0,
-  "protein": 0,
-  "carbs": 0,
-  "fats": 0,
+  "calories": 490,
+  "protein": 36,
+  "carbs": 14,
+  "fats": 34,
   "tags": [
     "protein:chicken",
     "format:bar_line",
@@ -111,86 +111,37 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Chicken Wing Bar Night in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Double-check seasoning after scaling — crew palates run salty after long shifts, so taste the first portion before opening the line.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined. Double-check seasoning after scaling — crew palates run salty after long shifts, so taste the first portion before opening the line.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Dry and season wings",
       "instruction": "Pat wings completely dry. Toss with baking powder, salt, and pepper until evenly coated. Arrange skin-side up on wire racks with space between each piece.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Bake until crisp",
       "instruction": "Bake at 425°F for 25 minutes, flip, then bake 20–25 minutes more until skin is golden and thickest drum hits 175°F internal. Target oven/smoker temperature: 425°F.",
       "minutes": 50,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Build the three sauces",
       "instruction": "Simmer butter with hot sauce for buffalo. Warm BBQ sauce separately. Sauté minced garlic 1 minute, stir in honey and a splash of soy for honey-garlic.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Toss and line up the bar",
       "instruction": "Divide wings into three bowls and toss each batch in its sauce. Arrange on a long board with labeled sauce ramekins for second passes.",
       "minutes": 8,
       "heatLevel": ""
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 9,
-      "title": "Portion and open the line",
-      "instruction": "Portion Chicken Wing Bar Night onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
-      "title": "Scale for larger halls",
-      "instruction": "When cooking for more than 10 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 11,
+      "stepNumber": 5,
       "title": "Set the wing bar",
       "instruction": "Lay out celery, carrot sticks, and ranch dressing. Verify all wings hit 165°F minimum before service—even sauced wings must be safely cooked.",
       "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 12,
-      "title": "Final quality check before service",
-      "instruction": "Walk the line once before opening service for Chicken Wing Bar Night — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
-      "minutes": 4,
       "heatLevel": ""
     }
   ],
@@ -212,26 +163,11 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 0,
-    "protein": 0,
-    "carbs": 0,
-    "fats": 0,
-    "label": "Estimated per serving",
-    "source": "unavailable",
-    "estimateAvailable": false,
-    "filterFlags": {
-      "highProtein": false,
-      "under700Calories": true,
-      "under30gFat": true,
-      "highCarb": false,
-      "lowCarb": false,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": false,
-      "lighterOption": true,
-      "performanceMeal": false
-    }
+    "calories": 490,
+    "protein": 36,
+    "carbs": 14,
+    "fats": 34,
+    "label": "~490 cal/serving · 36g protein · 2g fiber (est.)"
   },
   "heroImage": "/images/hall-expansion/chicken-wing-bar-night.jpg",
   "heroImageAlt": "Chicken Wing Bar Night — crew-sized firehall meal",
@@ -251,6 +187,7 @@
     "pretzel-bite-platter",
     "jalapeno-popper-dip"
   ],
-  "generatedAt": "2026-05-31T01:50:00.916Z",
+  "sourceUrl": "",
+  "generatedAt": "2026-06-04T20:47:21.930Z",
   "contentVersion": 2
 }

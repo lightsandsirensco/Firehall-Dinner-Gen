@@ -8,8 +8,8 @@
   "category": "bbq_grill_nights",
   "cuisine": "american",
   "description": "Sausage links grill alongside peppers and onions, then get tossed with hot honey and vinegar so they taste like BBQ without needing a smoker.",
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "cookTime": 25,
   "prepTime": 15,
   "difficulty": "easy",
@@ -39,12 +39,12 @@
   "ingredients": [
     {
       "name": "Italian sausage links",
-      "quantity": "8",
+      "quantity": "10",
       "unit": "links"
     },
     {
       "name": "bell peppers",
-      "quantity": "5",
+      "quantity": "6",
       "unit": "whole",
       "notes": "sliced"
     },
@@ -56,94 +56,80 @@
     },
     {
       "name": "neutral oil",
-      "quantity": "2.6",
+      "quantity": "3",
       "unit": "tbsp"
     },
     {
       "name": "kosher salt",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tsp"
     },
     {
       "name": "black pepper",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tsp"
     },
     {
       "name": "honey",
-      "quantity": "3/8",
+      "quantity": "0.5",
       "unit": "cup"
     },
     {
       "name": "hot sauce",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tbsp"
     },
     {
       "name": "apple cider vinegar",
-      "quantity": "1 1/4",
+      "quantity": "1.5",
       "unit": "tbsp"
     },
     {
       "name": "sub rolls",
-      "quantity": "8",
+      "quantity": "10",
       "unit": "whole"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Hot Honey Grilled Sausage & Peppers in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use neutral oil as listed — measure each before heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch pork. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
-      "title": "Preheat grill grates",
-      "instruction": "Heat grill to medium-high. Oil grates. Toss peppers/onions with oil, salt, pepper. Cook until char marks are visible and the thickest piece reads 145°F with a 3-minute rest on an instant-read thermometer. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "title": "Heat grill",
+      "instruction": "Heat grill to medium-high. Oil grates. Toss peppers/onions with oil, salt, pepper.",
       "minutes": 5,
       "heatLevel": "medium-high"
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Grill sausage",
-      "instruction": "Grill links 12–15 minutes, turning, until browned and 160°F internal. Move to indirect if flare-ups. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Grill links 12–15 minutes, turning, until browned and 160°F internal. Move to indirect if flare-ups.",
       "minutes": 15,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Char the veg",
-      "instruction": "Grill peppers/onions in a basket or on a plancha until softened and charred, 8–10 minutes. Cook until char marks are visible and the thickest piece reads 145°F with a 3-minute rest on an instant-read thermometer. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Grill peppers/onions in a basket or on a plancha until softened and charred, 8–10 minutes.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Hot honey glaze",
-      "instruction": "Whisk honey, hot sauce, and vinegar. Toss sausage and veg in a tray with the glaze. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F with a 3-minute rest at the thickest point before moving to the next batch.",
+      "instruction": "Whisk honey, hot sauce, and vinegar. Toss sausage and veg in a tray with the glaze.",
       "minutes": 3,
       "heatLevel": ""
     },
     {
-      "stepNumber": 7,
+      "stepNumber": 5,
       "title": "Tonight’s board",
-      "instruction": "Toast rolls. Pile sausage + peppers. Put extra hot honey on the table. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F with a 3-minute rest at the thickest point before moving to the next batch.",
+      "instruction": "Toast rolls. Pile sausage + peppers. Put extra hot honey on the table.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 8,
+      "stepNumber": 6,
       "title": "Leftovers",
-      "instruction": "Slice and fold into pasta, or scramble with eggs. Reheat covered so links don’t split. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
+      "instruction": "Slice and fold into pasta, or scramble with eggs. Reheat covered so links don’t split.",
       "minutes": 4,
       "heatLevel": ""
     }
@@ -160,7 +146,7 @@
     "Sausage breakfast skillet.",
     "Sausage pepper subs on garlic bread."
   ],
-  "whyCrewsLikeIt": "It’s fast, it’s loud, and it stays good even if you have to hold it. works for a one-cook night.",
+  "whyCrewsLikeIt": "It’s fast, it’s loud, and it stays good even if you have to hold it. Perfect for a one-cook night.",
   "mealPrepNotes": "Grill everything, then hold in a covered pan. Toast buns last minute so they don’t steam.",
   "substitutions": [
     "Swap chicken sausage; cook to 165°F."
@@ -171,22 +157,8 @@
     "protein": 10,
     "carbs": 20,
     "fats": 26,
-    "label": "Estimated per serving",
-    "source": "calculated",
-    "estimateAvailable": true,
-    "filterFlags": {
-      "highProtein": false,
-      "under700Calories": true,
-      "under30gFat": true,
-      "highCarb": false,
-      "lowCarb": true,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": false,
-      "lighterOption": false,
-      "performanceMeal": false
-    }
+    "label": "per serving (hall portion)",
+    "source": "estimated"
   },
   "heroImage": "/images/smoker-catalog/hot-honey-grilled-sausage-peppers.jpg",
   "heroImageAlt": "Hot Honey Grilled Sausage & Peppers — crew-sized BBQ spread with visible smoke and bark",
@@ -212,6 +184,6 @@
     "brisket-style-beef-sandwiches-au-jus"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T23:32:23.197Z",
+  "generatedAt": "2026-06-04T20:47:49.410Z",
   "contentVersion": 2
 }

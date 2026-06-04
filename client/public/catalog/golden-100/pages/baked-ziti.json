@@ -204,6 +204,7 @@
     }
   },
   "heroImage": "/images/golden-100/baked-ziti.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Baked Ziti on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/baked-ziti.jpg",
   "thumbImage": "/images/thumbs/baked-ziti.jpg",
   "railImage": "/images/rails/baked-ziti.jpg",
@@ -224,11 +225,11 @@
     "batch-lasagna",
     "meatball-hoagies",
     "beef-barley-soup",
-    "loaded-baked-potato-bar",
-    "meatloaf-mashed"
+    "french-onion-soup-for-the-hall",
+    "loaded-baked-potato-bar"
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.372Z",
+  "generatedAt": "2026-06-04T20:45:42.208Z",
   "contentVersion": 2
 }

@@ -146,6 +146,7 @@
     }
   },
   "heroImage": "/images/golden-100/crispy-chicken-cutlets.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Crispy Chicken Cutlets Marinara on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/crispy-chicken-cutlets.jpg",
   "thumbImage": "/images/thumbs/crispy-chicken-cutlets.jpg",
   "railImage": "/images/rails/crispy-chicken-cutlets.jpg",
@@ -164,14 +165,14 @@
   ],
   "relatedSlugs": [
     "creamy-tuscan-chicken",
+    "four-step-chicken-piccata",
     "chicken-parm",
     "parm-hero-subs",
     "jerk-chicken",
-    "chicken-pot-pie",
-    "bbq-chicken-bowls"
+    "chicken-pot-pie"
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.284Z",
+  "generatedAt": "2026-06-04T20:45:42.135Z",
   "contentVersion": 2
 }

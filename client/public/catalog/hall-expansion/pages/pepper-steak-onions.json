@@ -13,10 +13,10 @@
   "cookTime": 25,
   "prepTime": 30,
   "difficulty": "medium",
-  "calories": 678,
-  "protein": 48,
-  "carbs": 53,
-  "fats": 29,
+  "calories": 490,
+  "protein": 40,
+  "carbs": 54,
+  "fats": 12,
   "tags": [
     "protein:beef",
     "format:skillet",
@@ -107,64 +107,36 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Pepper Steak with Onions in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
+      "title": "Marinate and prep rice",
+      "instruction": "Toss sliced steak with half the soy sauce and ginger. Start rice in a pot with 6 cups water—bring to boil, cover, simmer 18 minutes, then rest off heat.",
+      "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch beef. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
+      "title": "Sear the beef",
+      "instruction": "Heat oil in a wok over high heat. Stir-fry beef in batches 2–3 minutes until browned but still tender. Set aside.",
+      "minutes": 8,
+      "heatLevel": ""
     },
     {
       "stepNumber": 3,
-      "title": "Marinate and prep rice",
-      "instruction": "Toss sliced steak with half the soy sauce and ginger. Start rice in a pot with 6 cups water—bring to boil, cover, simmer 18 minutes, then rest off heat. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
+      "title": "Stir-fry vegetables",
+      "instruction": "Add peppers and onion to the wok. Stir-fry 4–5 minutes until charred at edges and slightly softened.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 4,
-      "title": "Sear the beef",
-      "instruction": "Heat oil in a wok over high heat. Stir-fry beef in batches 2–3 minutes until browned but still tender. Set aside. Cook until char marks are visible and the thickest piece reads 145°F for medium beef, 160°F for ground on an instant-read thermometer. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 8,
+      "title": "Build the gravy",
+      "instruction": "Stir remaining soy sauce, garlic, broth, and cornstarch slurry into the wok. Simmer 2 minutes until glossy and thickened.",
+      "minutes": 3,
       "heatLevel": ""
     },
     {
       "stepNumber": 5,
-      "title": "Stir-fry vegetables",
-      "instruction": "Add peppers and onion to the wok. Stir-fry 4–5 minutes until charred at edges and slightly softened. Target 145°F for medium beef, 160°F for ground at the thickest part before moving to the next batch. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 6,
-      "title": "Build the gravy",
-      "instruction": "Stir remaining soy sauce, garlic, broth, and cornstarch slurry into the wok. Simmer 2 minutes until glossy and thickened. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 3,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F for medium beef, 160°F for ground. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 9,
       "title": "Combine and serve",
-      "instruction": "Return beef and juices to gravy, toss 1 minute to coat. Fluff rice and serve pepper steak over rice at the line. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
+      "instruction": "Return beef and juices to gravy, toss 1 minute to coat. Fluff rice and serve pepper steak over rice at the line.",
       "minutes": 4,
       "heatLevel": ""
     }
@@ -187,28 +159,14 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 678,
-    "protein": 48,
-    "carbs": 53,
-    "fats": 29,
-    "label": "per serving (hall portion)",
-    "source": "calculated",
-    "filterFlags": {
-      "highProtein": true,
-      "under700Calories": true,
-      "under30gFat": true,
-      "highCarb": true,
-      "lowCarb": false,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": false
-    }
+    "calories": 490,
+    "protein": 40,
+    "carbs": 54,
+    "fats": 12,
+    "label": "~490 cal/serving · 40g protein · 3g fiber (est.)"
   },
   "heroImage": "/images/hall-expansion/pepper-steak-onions.jpg",
-  "heroImageAlt": "Pepper Steak with Onions — wide family-style firehall platter showing beef, onions on a crew prep table",
+  "heroImageAlt": "Wide firehall platter: pepper steak with sliced onions and bell peppers on a crew prep table, family-style",
   "mobileImage": "/images/mobile/hall-expansion/pepper-steak-onions.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/pepper-steak-onions.jpg",
   "railImage": "/images/rails/hall-expansion/pepper-steak-onions.jpg",
@@ -225,6 +183,7 @@
     "hall-burger-bar",
     "pasta-bar-night"
   ],
-  "generatedAt": "2026-05-31T01:50:00.916Z",
+  "sourceUrl": "",
+  "generatedAt": "2026-06-04T20:47:21.930Z",
   "contentVersion": 2
 }

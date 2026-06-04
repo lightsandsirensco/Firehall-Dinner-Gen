@@ -173,6 +173,7 @@
     }
   },
   "heroImage": "/images/golden-100/tomato-soup-grilled-cheese-croutons.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Tomato Soup with Grilled Cheese Croutons on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/tomato-soup-grilled-cheese-croutons.jpg",
   "thumbImage": "/images/thumbs/tomato-soup-grilled-cheese-croutons.jpg",
   "railImage": "/images/rails/tomato-soup-grilled-cheese-croutons.jpg",
@@ -195,11 +196,11 @@
     "mac-and-cheese-bake",
     "beef-barley-soup",
     "chicken-dumpling-soup",
-    "chili-garlic-bread",
-    "chicken-tortilla-soup-for-the-hall"
+    "chicken-tortilla-soup-for-the-hall",
+    "french-onion-soup-for-the-hall"
   ],
   "sourceName": "Serious Eats",
   "sourceUrl": "https://www.seriouseats.com/15-minute-creamy-tomato-soup-vegan-recipe",
-  "generatedAt": "2026-06-04T20:35:16.815Z",
+  "generatedAt": "2026-06-04T20:45:42.218Z",
   "contentVersion": 2
 }

@@ -8,8 +8,8 @@
   "category": "bbq_grill_nights",
   "cuisine": "korean",
   "description": "Sirloin cubes marinate in gochujang, soy, and pear puree, grill on skewers with scallions until charred and 145°F, and finish with sesame and crushed peanuts.",
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "cookTime": 14,
   "prepTime": 35,
   "difficulty": "medium",
@@ -40,65 +40,65 @@
   "ingredients": [
     {
       "name": "boneless short rib",
-      "quantity": "4.4",
+      "quantity": "5.5",
       "unit": "lb",
       "notes": "cut into 1.5-inch cubes",
       "group": "Main"
     },
     {
       "name": "gochujang",
-      "quantity": "1/4",
+      "quantity": "0.33",
       "unit": "cup",
       "group": "Marinade"
     },
     {
       "name": "doenjang",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tbsp",
       "group": "Marinade"
     },
     {
       "name": "rice wine",
-      "quantity": "1/4",
+      "quantity": "0.25",
       "unit": "cup",
       "group": "Marinade"
     },
     {
       "name": "Asian pear",
-      "quantity": "3/4",
+      "quantity": "1",
       "unit": "whole",
       "notes": "pureed",
       "group": "Marinade"
     },
     {
       "name": "toasted sesame oil",
-      "quantity": "7/8",
+      "quantity": "1",
       "unit": "tbsp",
       "group": "Marinade"
     },
     {
       "name": "daikon radish",
-      "quantity": "3/4",
+      "quantity": "1",
       "unit": "whole",
       "notes": "chunked",
       "group": "Skewers"
     },
     {
       "name": "shiitake mushrooms",
-      "quantity": "3/4",
+      "quantity": "1",
       "unit": "lb",
       "notes": "quartered",
       "group": "Skewers"
     },
     {
       "name": "toasted sesame seeds",
-      "quantity": "1/4",
+      "quantity": "0.25",
       "unit": "cup",
       "group": "Finish"
     },
     {
       "name": "crushed roasted soybeans",
-      "quantity": "1/4",
+      "quantity": "0.25",
       "unit": "cup",
       "group": "Finish"
     }
@@ -107,56 +107,56 @@
     {
       "stepNumber": 1,
       "title": "Build gochujang marinade",
-      "instruction": "Whisk gochujang, soy, pear puree, sesame oil, and garlic until smooth. Toss beef cubes and marinate at least 2 hours. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Use boneless short rib, doenjang, daikon radish, shiitake mushrooms as listed — measure each before heat goes on. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
+      "instruction": "Whisk gochujang, soy, pear puree, sesame oil, and garlic until smooth. Toss beef cubes and marinate at least 2 hours.",
       "minutes": 20,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
       "title": "Prep skewer station",
-      "instruction": "Soak wooden skewers if using. Line hotel pans with foil for holding. Have sesame and peanuts ready. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Soak wooden skewers if using. Line hotel pans with foil for holding. Have sesame and peanuts ready.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 3,
-      "title": "Preheat grill grates",
-      "instruction": "Preheat grill to medium-high, 450°F. Oil grates—gochujang sugar caramelizes fast. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "title": "Heat grill",
+      "instruction": "Preheat grill to medium-high, 450°F. Oil grates—gochujang sugar caramelizes fast.",
       "minutes": 10,
       "heatLevel": "high"
     },
     {
       "stepNumber": 4,
       "title": "Thread skewers",
-      "instruction": "Alternate beef cubes and green onion pieces on skewers. Pat excess marinade off to reduce flare-ups. Plan about 12 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
+      "instruction": "Alternate beef cubes and green onion pieces on skewers. Pat excess marinade off to reduce flare-ups.",
       "minutes": 12,
       "heatLevel": ""
     },
     {
       "stepNumber": 5,
       "title": "Grill in batches",
-      "instruction": "Grill skewers 3–4 minutes per side until charred and beef reads 140–145°F internal. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Grill skewers 3–4 minutes per side until charred and beef reads 140–145°F internal.",
       "minutes": 12,
       "heatLevel": "high"
     },
     {
       "stepNumber": 6,
       "title": "Rest and hold",
-      "instruction": "Rest skewers 5 minutes. Slide beef and onions into hotel pans, cover with foil, hold at 170°F until service. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
+      "instruction": "Rest skewers 5 minutes. Slide beef and onions into hotel pans, cover with foil, hold at 170°F until service.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 7,
       "title": "Sesame finish",
-      "instruction": "Scatter sesame seeds and crushed peanuts over platters at the line—not before long hold. Plan about 3 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Scatter sesame seeds and crushed peanuts over platters at the line—not before long hold.",
       "minutes": 3,
       "heatLevel": ""
     },
     {
       "stepNumber": 8,
       "title": "Tonight's line",
-      "instruction": "Serve two skewers per firefighter with steamed rice or lettuce wraps. Call temps: pull at 145°F, held at 170°F max. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Serve two skewers per firefighter with steamed rice or lettuce wraps. Call temps: pull at 145°F, held at 170°F max.",
       "minutes": 5,
       "heatLevel": ""
     }
@@ -182,22 +182,8 @@
     "protein": 0,
     "carbs": 0,
     "fats": 0,
-    "label": "Estimated per serving",
-    "source": "unavailable",
-    "estimateAvailable": false,
-    "filterFlags": {
-      "highProtein": false,
-      "under700Calories": false,
-      "under30gFat": false,
-      "highCarb": false,
-      "lowCarb": false,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": false,
-      "lighterOption": false,
-      "performanceMeal": false
-    }
+    "label": "per serving (hall portion)",
+    "source": "estimated"
   },
   "heroImage": "/images/smoker-catalog/gochujang-beef-skewers-crew.jpg",
   "heroImageAlt": "Seoul Chili Pear Beef Cubes — crew-sized BBQ spread with visible smoke and bark",
@@ -226,6 +212,6 @@
     "brisket-style-beef-sandwiches-au-jus"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T23:32:23.204Z",
+  "generatedAt": "2026-06-04T20:47:49.429Z",
   "contentVersion": 2
 }

@@ -13,10 +13,10 @@
   "cookTime": 30,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 772,
-  "protein": 30,
-  "carbs": 30,
-  "fats": 59,
+  "calories": 510,
+  "protein": 16,
+  "carbs": 24,
+  "fats": 40,
   "tags": [
     "protein:pork",
     "format:bar_line",
@@ -106,86 +106,37 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Jalapeño Popper Dip in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Double-check seasoning after scaling — crew palates run salty after long shifts, so taste the first portion before opening the line.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch pork. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Prep jalapeños and bacon",
       "instruction": "Deseed and finely dice jalapeños wearing gloves. Crumble cooked bacon into bite-size pieces and measure shredded cheddar so assembly moves fast.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Mix the creamy dip base",
       "instruction": "Beat cream cheese until smooth, then fold in sour cream, mayonnaise, garlic powder, and onion powder until fully combined and no cream cheese lumps remain.",
       "minutes": 8,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Fold in mix-ins",
       "instruction": "Stir in three-quarters of the cheddar, bacon, and jalapeños. Reserve the rest for topping so the surface browns with visible bacon and cheese pockets.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Bake until bubbly",
       "instruction": "Spread in a buttered 9x13 dish, top with reserved cheese and bacon, and bake at 375°F until edges bubble and center reaches 165°F, about 25–30 minutes. Target oven/smoker temperature: 375°F.",
       "minutes": 30,
       "heatLevel": ""
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F with a 3-minute rest. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 9,
-      "title": "Portion and open the line",
-      "instruction": "Portion Jalapeño Popper Dip onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
-      "title": "Scale for larger halls",
-      "instruction": "When cooking for more than 10 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 11,
+      "stepNumber": 5,
       "title": "Serve hot",
       "instruction": "Rest 5 minutes so the dip sets slightly. Serve with chips and toasted baguette slices. Keep backup dip warm in the oven if the first dish empties fast.",
       "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 12,
-      "title": "Final quality check before service",
-      "instruction": "Walk the line once before opening service for Jalapeño Popper Dip — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
-      "minutes": 4,
       "heatLevel": ""
     }
   ],
@@ -207,25 +158,11 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 772,
-    "protein": 30,
-    "carbs": 30,
-    "fats": 59,
-    "label": "per serving (hall portion)",
-    "source": "calculated",
-    "filterFlags": {
-      "highProtein": false,
-      "under700Calories": false,
-      "under30gFat": false,
-      "highCarb": false,
-      "lowCarb": false,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": false,
-      "lighterOption": false,
-      "performanceMeal": false
-    }
+    "calories": 510,
+    "protein": 16,
+    "carbs": 24,
+    "fats": 40,
+    "label": "~510 cal/serving · 16g protein · 2g fiber (est.)"
   },
   "heroImage": "/images/hall-expansion/jalapeno-popper-dip.jpg",
   "heroImageAlt": "Jalapeño Popper Dip — crew-sized firehall meal",
@@ -245,6 +182,7 @@
     "pretzel-bite-platter",
     "philly-cheesesteak-sliders"
   ],
-  "generatedAt": "2026-05-31T01:50:00.916Z",
+  "sourceUrl": "",
+  "generatedAt": "2026-06-04T20:47:21.930Z",
   "contentVersion": 2
 }

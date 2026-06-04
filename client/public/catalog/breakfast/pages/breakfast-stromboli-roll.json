@@ -74,87 +74,35 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Breakfast Stromboli Roll in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Double-check seasoning after scaling — crew palates run salty after long shifts, so taste the first portion before opening the line. Use deli ham as listed — measure each before heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch Eggs. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Heat the oven",
       "instruction": "Heat oven to 425°F. Line a sheet pan with parchment. Stretch each dough ball into a 10x14-inch rectangle on a lightly floured surface, keeping edges slightly thicker.",
       "minutes": 0,
-      "heatLevel": ""
+      "tempF": 425
+    },
+    {
+      "stepNumber": 2,
+      "title": "Prep the filling",
+      "instruction": "Soft-scramble eggs over low heat until just set but still glossy. Spread on a tray to cool 5 minutes—hot eggs will melt cheese prematurely and tear dough.",
+      "minutes": 12
+    },
+    {
+      "stepNumber": 3,
+      "title": "Fill and roll",
+      "instruction": "Layer ham, scrambled eggs, peppers, and mozzarella on the lower third of each dough rectangle, leaving a 1-inch border. Roll tightly from the bottom, pinch seams closed, and place seam-side down on the pan.",
+      "minutes": 10
     },
     {
       "stepNumber": 4,
-      "title": "Prep the filling",
-      "instruction": "Soft-scramble eggs over low heat until just set but still glossy. Spread on a tray to cool 5 minutes—hot eggs will melt cheese prematurely and tear dough.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 5,
-      "title": "Fill and roll",
-      "instruction": "Layer ham, scrambled eggs, peppers, and mozzarella on the lower third of each dough rectangle, leaving a 1-inch border. Roll tightly from the bottom, pinch seams closed, and place seam-side down on the pan.",
-      "minutes": 10,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 6,
       "title": "Bake until golden",
       "instruction": "Brush rolls with olive oil and sprinkle Parmesan. Cut small vents on top. Bake 20–22 minutes until deep golden and internal egg filling reaches 165°F in the center.",
       "minutes": 22,
-      "heatLevel": ""
+      "tempF": 425
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 9,
-      "title": "Portion and open the line",
-      "instruction": "Portion Breakfast Stromboli Roll onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
-      "title": "Scale for larger halls",
-      "instruction": "When cooking for more than 8 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 11,
+      "stepNumber": 5,
       "title": "Rest and slice",
       "instruction": "Rest stromboli 8 minutes before slicing into thick portions with a serrated knife. Serve with warm marinara for dipping at the line.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 12,
-      "title": "Final quality check before service",
-      "instruction": "Walk the line once before opening service for Breakfast Stromboli Roll — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
-      "minutes": 4,
-      "heatLevel": ""
+      "minutes": 8
     }
   ],
   "nutrition": {
@@ -194,28 +142,9 @@
   "heroImage": "/images/breakfast/breakfast-stromboli-roll.jpg",
   "thumbImage": "/images/thumbs/breakfast/breakfast-stromboli-roll.jpg",
   "imageAlt": "Golden breakfast stromboli sliced with ham, eggs, and melted cheese",
-  "publishedAt": "2026-05-31T18:33:00.830Z",
-  "updatedAt": "2026-05-31T23:49:25.346Z",
+  "publishedAt": "2026-06-04T20:48:24.991Z",
+  "updatedAt": "2026-06-04T20:48:24.991Z",
   "readMinutes": 8,
   "seoTitle": "Breakfast Stromboli Roll | Firehall Breakfast",
-  "collectionTier": "firehall_classic",
-  "proTips": [
-    "Cool scrambled eggs slightly before filling—hot filling blows out seams during baking.",
-    "Vent the top of each roll so steam escapes and crust stays crisp.",
-    "Slice with a serrated knife in one motion to avoid squashing the roll."
-  ],
-  "tonightSpread": [
-    "Plate Breakfast Stromboli Roll with sides in separate pans so the crew can mix portions.",
-    "Keep hot items on one side of the table and cold on the other — eggs stay hot, fruit stays cold.",
-    "Line up Breakfast Stromboli Roll on the main counter with serving spoons — firefighters grab fast between calls.",
-    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
-  ],
-  "equipment": [
-    "Large sheet trays",
-    "Instant-read thermometer",
-    "Aluminum foil"
-  ],
-  "mealPrepNotes": "Prep mise en place before the shift — Breakfast Stromboli Roll runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone.",
-  "mobileImage": "/images/mobile/breakfast/breakfast-stromboli-roll.jpg",
-  "railImage": "/images/rails/breakfast/breakfast-stromboli-roll.jpg"
+  "collectionTier": "firehall_classic"
 }

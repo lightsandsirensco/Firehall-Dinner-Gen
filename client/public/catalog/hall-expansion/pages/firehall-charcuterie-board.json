@@ -13,10 +13,10 @@
   "cookTime": 10,
   "prepTime": 40,
   "difficulty": "easy",
-  "calories": 0,
-  "protein": 0,
-  "carbs": 0,
-  "fats": 0,
+  "calories": 420,
+  "protein": 22,
+  "carbs": 32,
+  "fats": 24,
   "tags": [
     "protein:mixed",
     "format:bar_line",
@@ -104,86 +104,37 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Firehall Charcuterie Board in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Double-check seasoning after scaling — crew palates run salty after long shifts, so taste the first portion before opening the line. Use sliced turkey breast as listed — measure each before heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch mixed. Confirm burners ignite evenly and sheet pans are greased or lined. Double-check seasoning after scaling — crew palates run salty after long shifts, so taste the first portion before opening the line.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Prep proteins and cheeses",
       "instruction": "Fold salami and prosciutto into rosettes or ribbons. Cube cheddar, slice gouda, and leave brie whole if baking later. Keep everything chilled until assembly.",
       "minutes": 20,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Optional baked brie",
       "instruction": "If serving warm brie, score the top, add a spoon of fig jam, and bake at 350°F for 8–10 minutes until the center is soft and gooey when probed. Target oven/smoker temperature: 350°F.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Arrange the board base",
       "instruction": "Place large items first—cheese blocks, brie wheel, and meat piles—on two large boards or sheet pans lined with parchment for easy cleanup.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Fill gaps with accents",
       "instruction": "Add crackers in stacks, grapes in clusters, and cornichons in ramekins. Spoon fig jam into small dishes and scatter nuts or olives in remaining gaps.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 9,
-      "title": "Portion and open the line",
-      "instruction": "Portion Firehall Charcuterie Board onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
-      "title": "Scale for larger halls",
-      "instruction": "When cooking for more than 10 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 11,
+      "stepNumber": 5,
       "title": "Serve and maintain",
       "instruction": "Set boards at room temp 15 minutes before eating so cheese flavor opens up. Replenish popular zones from backup containers kept refrigerated during the event.",
       "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 12,
-      "title": "Final quality check before service",
-      "instruction": "Walk the line once before opening service for Firehall Charcuterie Board — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
-      "minutes": 4,
       "heatLevel": ""
     }
   ],
@@ -200,31 +151,16 @@
     "Roll meats and cheese into next-day lunch wraps with leftover crackers crushed as crunch.",
     "Simmer leftover salami edges into a quick pasta sauce with tomatoes."
   ],
-  "whyCrewsLikeIt": "Charcuterie scales to any headcount and survives interruptions—no food gets cold and unappealing while the crew handles a call. It feels upscale without requiring school skills.",
+  "whyCrewsLikeIt": "Charcuterie scales to any headcount and survives interruptions—no food gets cold and unappealing while the crew handles a call. It feels upscale without requiring culinary school skills.",
   "mealPrepNotes": "Pre-slice hard cheeses and fan salami the night before on parchment. Keep wet items like pickles and olives in separate ramekins until the board goes out. Warm brie 8 minutes at 350°F if serving baked.",
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 0,
-    "protein": 0,
-    "carbs": 0,
-    "fats": 0,
-    "label": "Estimated per serving",
-    "source": "unavailable",
-    "estimateAvailable": false,
-    "filterFlags": {
-      "highProtein": false,
-      "under700Calories": false,
-      "under30gFat": false,
-      "highCarb": false,
-      "lowCarb": false,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": false,
-      "lighterOption": false,
-      "performanceMeal": false
-    }
+    "calories": 420,
+    "protein": 22,
+    "carbs": 32,
+    "fats": 24,
+    "label": "~420 cal/serving · 22g protein · 2g fiber (est.)"
   },
   "heroImage": "/images/hall-expansion/firehall-charcuterie-board.jpg",
   "heroImageAlt": "Firehall Charcuterie Board — crew-sized firehall meal",
@@ -244,6 +180,7 @@
     "pretzel-bite-platter",
     "jalapeno-popper-dip"
   ],
-  "generatedAt": "2026-05-31T01:50:00.916Z",
+  "sourceUrl": "",
+  "generatedAt": "2026-06-04T20:47:21.930Z",
   "contentVersion": 2
 }

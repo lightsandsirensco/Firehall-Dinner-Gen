@@ -140,6 +140,7 @@
     }
   },
   "heroImage": "/images/golden-100/chicken-pot-pie.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Chicken Pot Pie on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/chicken-pot-pie.jpg",
   "thumbImage": "/images/thumbs/chicken-pot-pie.jpg",
   "railImage": "/images/rails/chicken-pot-pie.jpg",
@@ -158,13 +159,13 @@
   "relatedSlugs": [
     "bbq-chicken-mac-and-cheese",
     "creamy-tuscan-chicken",
+    "four-step-chicken-piccata",
     "chicken-dumpling-soup",
     "meatloaf-mashed",
-    "chicken-caesar",
-    "crispy-chicken-cutlets"
+    "chicken-caesar"
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.350Z",
+  "generatedAt": "2026-06-04T20:45:42.190Z",
   "contentVersion": 2
 }

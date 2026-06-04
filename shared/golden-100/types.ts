@@ -40,6 +40,8 @@ export interface GoldenRecipeDefinition {
   hookLine: string;
   /** Trusted publisher inspiration — structure only, not verbatim copy */
   sourceInspiration?: string;
+  /** Tier 1 reference URL for attribution (Batch A and expansion imports) */
+  sourceUrl?: string;
   /** Hall classic slug — uses package steps + owned hero when present */
   classicSlug?: string;
   /** Fixed Spoonacular id when verified */

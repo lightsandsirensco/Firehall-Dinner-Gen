@@ -13,10 +13,10 @@
   "cookTime": 75,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 538,
-  "protein": 20,
-  "carbs": 6,
-  "fats": 48,
+  "calories": 480,
+  "protein": 22,
+  "carbs": 28,
+  "fats": 32,
   "tags": [
     "protein:pork",
     "format:smoker",
@@ -105,93 +105,37 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Smoked Sausage Platter in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch pork. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Prep links and vegetables",
       "instruction": "Score each sausage lightly on two sides. Toss peppers and onions with olive oil, smoked paprika, and salt until evenly coated and lightly glossy.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Smoke the sausage",
       "instruction": "Heat smoker to 275°F. Arrange links with space between each piece and smoke until internal temperature reaches 165°F and casings snap when bent, about 45–60 minutes. Target oven/smoker temperature: 275°F.",
       "minutes": 55,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Cook the pepper mixture",
       "instruction": "During the last 30 minutes, cook peppers and onions in a cast-iron pan on the smoker until softened and lightly charred at the edges. Target oven/smoker temperature: 275°F.",
       "minutes": 30,
       "heatLevel": ""
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Warm the sauerkraut",
       "instruction": "Heat sauerkraut in a small saucepan with a splash of beer or broth until steaming. Keep warm on the sideboard away from direct heat so it does not dry out.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F with a 3-minute rest. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 9,
-      "title": "Portion and open the line",
-      "instruction": "Portion Smoked Sausage Platter onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
-      "title": "Scale for larger halls",
-      "instruction": "When cooking for more than 10 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 11,
+      "stepNumber": 5,
       "title": "Build the platter",
       "instruction": "Pile links on a board with pepper-onion mix, sauerkraut, rolls, and a mustard bar. Verify every link hits at least 165°F before calling the meal ready.",
       "minutes": 10,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 12,
-      "title": "Final quality check before service",
-      "instruction": "Walk the line once before opening service for Smoked Sausage Platter — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
-      "minutes": 4,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 13,
-      "title": "Final quality check before service",
-      "instruction": "Walk the line once before opening service for Smoked Sausage Platter — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
-      "minutes": 4,
       "heatLevel": ""
     }
   ],
@@ -213,25 +157,11 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 538,
-    "protein": 20,
-    "carbs": 6,
-    "fats": 48,
-    "label": "per serving (hall portion)",
-    "source": "calculated",
-    "filterFlags": {
-      "highProtein": false,
-      "under700Calories": true,
-      "under30gFat": false,
-      "highCarb": false,
-      "lowCarb": true,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": false,
-      "lighterOption": false,
-      "performanceMeal": false
-    }
+    "calories": 480,
+    "protein": 22,
+    "carbs": 28,
+    "fats": 32,
+    "label": "~480 cal/serving · 22g protein · 3g fiber (est.)"
   },
   "heroImage": "/images/hall-expansion/smoked-sausage-platter.jpg",
   "heroImageAlt": "Smoked Sausage Platter — crew-sized firehall meal",
@@ -251,6 +181,7 @@
     "pork-belly-burnt-ends",
     "smoked-queso-fundido"
   ],
-  "generatedAt": "2026-05-31T01:50:00.915Z",
+  "sourceUrl": "",
+  "generatedAt": "2026-06-04T20:47:21.929Z",
   "contentVersion": 2
 }

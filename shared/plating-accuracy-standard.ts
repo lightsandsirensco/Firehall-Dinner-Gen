@@ -167,7 +167,10 @@ export function auditPlatingAccuracyMetadata(input: {
   const title = input.title.trim();
 
   if (isBreakfastTitle(title)) {
-    if (/\begg.*pancake|pancake.*egg|on top of pancake/i.test(blob)) {
+    if (
+      /\begg.*pancake|pancake.*egg|on top of pancake/i.test(blob) &&
+      !/\b(separate zones?|separate zone|not on top|egg zone|pancake stack zone|scrambled-egg zone)\b/i.test(blob)
+    ) {
       issues.push("breakfast_fail: eggs on pancakes");
     }
     if (/\bburied|hidden.*bacon|bacon.*hidden/i.test(blob)) {

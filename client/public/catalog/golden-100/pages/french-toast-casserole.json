@@ -131,6 +131,7 @@
     }
   },
   "heroImage": "/images/golden-100/french-toast-casserole.jpg",
+  "heroImageAlt": "Wide firehall crew platter of French Toast Casserole on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/french-toast-casserole.jpg",
   "thumbImage": "/images/thumbs/french-toast-casserole.jpg",
   "railImage": "/images/rails/french-toast-casserole.jpg",
@@ -149,13 +150,13 @@
   "relatedSlugs": [
     "pancake-short-stack",
     "mac-and-cheese-bake",
-    "bacon-egg-hash",
-    "biscuits-gravy",
+    "spicy-tomato-bisque-grilled-brie-toast",
+    "tomato-soup-grilled-cheese-croutons",
     "buffalo-chicken-dip",
     "sausage-egg-bake"
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.505Z",
+  "generatedAt": "2026-06-04T20:45:42.328Z",
   "contentVersion": 2
 }

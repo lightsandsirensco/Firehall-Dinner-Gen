@@ -1,0 +1,163 @@
+{
+  "generatedAt": "2026-06-04T20:15:58.436Z",
+  "catalogMealCount": 303,
+  "greekVsShawarma": {
+    "verdict": "SUFFICIENTLY DIFFERENT",
+    "rationale": "Greek pitas use lemon-oregano yogurt marinade, fresh cucumber-tomato-onion, and tzatziki-forward build. Shawarma pitas use warm spice blend (cumin, coriander, turmeric, paprika), optional pickled vegetables, and garlic-tahini sauce — different marinade, garnish, and flavour profile. Not a duplicate of shawarma-bar-night (bar spread) or shawarma-chicken-rice-bowls (bowl)."
+  },
+  "buffaloWrapVsExisting": {
+    "verdict": "PASS — NO HANDHELD OVERLAP",
+    "existing": [
+      {
+        "slug": "buffalo-chicken-dip",
+        "title": "Buffalo Chicken Dip",
+        "collection": "golden-100"
+      }
+    ],
+    "rationale": "Catalog has Buffalo Chicken Dip (baked dip) only. No buffalo chicken wrap or buffalo sandwich. Wrap is distinct format."
+  },
+  "chickenDumplings": {
+    "verdict": "EXISTING SLUG — ENHANCE IN PLACE",
+    "slug": "chicken-dumpling-soup",
+    "rationale": "Do not add second recipe. Upgrade instructions/images on chicken-dumpling-soup to thick stew with dropped dumplings (not brothy soup template)."
+  },
+  "proposed": [
+    {
+      "slug": "chicken-caesar-wraps",
+      "title": "Chicken Caesar Wraps",
+      "existing": null,
+      "nearDuplicates": [
+        {
+          "slug": "chicken-caesar",
+          "title": "Chicken Caesar Salad",
+          "collection": "golden-100",
+          "score": 2
+        }
+      ],
+      "buildAction": "add_hall_expansion"
+    },
+    {
+      "slug": "buffalo-chicken-wraps",
+      "title": "Buffalo Chicken Wraps",
+      "existing": null,
+      "nearDuplicates": [
+        {
+          "slug": "buffalo-chicken-dip",
+          "title": "Buffalo Chicken Dip",
+          "collection": "golden-100",
+          "score": 2
+        }
+      ],
+      "buildAction": "add_hall_expansion"
+    },
+    {
+      "slug": "greek-chicken-pitas",
+      "title": "Greek Chicken Pitas",
+      "existing": null,
+      "nearDuplicates": [
+        {
+          "slug": "greek-chicken-bowls",
+          "title": "Greek Chicken Bowls",
+          "collection": "golden-100",
+          "score": 2
+        }
+      ],
+      "buildAction": "add_hall_expansion"
+    },
+    {
+      "slug": "beef-gyros-for-the-hall",
+      "title": "Beef Gyros",
+      "existing": null,
+      "nearDuplicates": [],
+      "buildAction": "add_hall_expansion"
+    },
+    {
+      "slug": "chicken-shawarma-pitas",
+      "title": "Chicken Shawarma Pitas",
+      "existing": null,
+      "nearDuplicates": [
+        {
+          "slug": "shawarma-chicken-rice-bowls",
+          "title": "Shawarma Chicken Bowls",
+          "collection": "performance-meals",
+          "score": 2
+        }
+      ],
+      "buildAction": "add_hall_expansion"
+    },
+    {
+      "slug": "sausage-peppers-on-buns",
+      "title": "Sausage & Peppers on Buns",
+      "existing": null,
+      "nearDuplicates": [
+        {
+          "slug": "sausage-peppers-onions",
+          "title": "Sausage Peppers and Onions",
+          "collection": "golden-100",
+          "score": 2
+        },
+        {
+          "slug": "sheet-pan-sausage-peppers",
+          "title": "Sausage and Peppers",
+          "collection": "golden-100",
+          "score": 2
+        },
+        {
+          "slug": "italian-sausage-veg-sheet-pan",
+          "title": "Sausage and Peppers",
+          "collection": "performance-meals",
+          "score": 2
+        }
+      ],
+      "buildAction": "add_hall_expansion"
+    },
+    {
+      "slug": "chicken-dumpling-soup",
+      "title": "Chicken and Dumplings",
+      "existing": {
+        "slug": "chicken-dumpling-soup",
+        "title": "Chicken and Dumplings",
+        "collection": "golden-100"
+      },
+      "nearDuplicates": [
+        {
+          "slug": "bbq-chicken-mac-and-cheese",
+          "title": "BBQ Chicken Mac and Cheese",
+          "collection": "golden-100",
+          "score": 2
+        },
+        {
+          "slug": "jerk-chicken",
+          "title": "Jerk Chicken & Rice and Peas",
+          "collection": "golden-100",
+          "score": 2
+        },
+        {
+          "slug": "one-pot-chicken-rice",
+          "title": "Chicken and Rice",
+          "collection": "golden-100",
+          "score": 2
+        },
+        {
+          "slug": "cajun-chicken-rice-skillet",
+          "title": "Cajun Chicken and Rice Skillet",
+          "collection": "hall-expansion",
+          "score": 2
+        },
+        {
+          "slug": "chicken-and-waffles-crew",
+          "title": "Chicken and Waffles for the Crew",
+          "collection": "breakfast",
+          "score": 2
+        },
+        {
+          "slug": "greek-lemon-chicken-potatoes",
+          "title": "Lemon Chicken and Potatoes",
+          "collection": "performance-meals",
+          "score": 2
+        }
+      ],
+      "buildAction": "enhance_existing_golden_page"
+    }
+  ]
+}

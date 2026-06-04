@@ -11,6 +11,8 @@ import { NEW_BREAKFAST_PAGES } from "../shared/breakfast-expansion/new-breakfast
 import { BATCH_25_BREAKFAST_PAGES } from "../shared/breakfast-expansion/batch-25-breakfast-pages.js";
 import { BATCH_A_BREAKFAST_PAGES } from "../shared/breakfast-expansion/batch-a-breakfast-pages.js";
 import { calculateNutritionFromIngredients } from "../shared/nutrition/calculate.js";
+import { PHASE5_REMOVED_SLUGS } from "../shared/catalog-consolidation/phase5-redirects.js";
+import { buildFirehallHeroImageAlt } from "../shared/curated-image-governance/firehall-hero-alt.js";
 import { getBreakfastGovernanceMap } from "../shared/breakfast-catalog/governance.js";
 import { isPerformanceBreakfastSlug } from "../shared/breakfast-catalog/governance-types.js";
 import fs from "node:fs";
@@ -349,7 +351,7 @@ function build(seed: Seed): BreakfastRecipePage {
     stationWorkflow: notes.stationWorkflow,
     cleanupNotes: notes.cleanupNotes,
     leftovers: notes.leftovers,
-    imageAlt: `Warm station-kitchen breakfast: ${seed.title}`,
+    imageAlt: buildFirehallHeroImageAlt(seed.title, [`Main: ${seed.title}`, "Sides: eggs, toast, and fruit on the line"]),
     publishedAt: iso,
     updatedAt: iso,
     readMinutes,
@@ -416,7 +418,9 @@ const SEEDS: Seed[] = [
 ];
 
 async function main(): Promise<void> {
-  const basePages: BreakfastRecipePage[] = SEEDS.map((seed) => build(seed));
+  const basePages: BreakfastRecipePage[] = SEEDS.filter((seed) => !PHASE5_REMOVED_SLUGS.has(seed.slug)).map(
+    (seed) => build(seed),
+  );
   const newSlugs = new Set([
     ...NEW_BREAKFAST_PAGES.map((p) => p.slug),
     ...BATCH_25_BREAKFAST_PAGES.map((p) => p.slug),

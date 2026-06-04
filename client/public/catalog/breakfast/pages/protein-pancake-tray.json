@@ -12,8 +12,8 @@
     "tray-bake",
     "make-ahead"
   ],
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 12,
+  "baseServings": 12,
   "prepTime": 15,
   "cookTime": 22,
   "totalTime": 37,
@@ -21,35 +21,35 @@
   "ingredients": [
     {
       "name": "complete pancake mix",
-      "quantity": "5.3",
+      "quantity": "8 cups",
       "notes": "or from-scratch dry mix"
     },
     {
       "name": "whole milk",
-      "quantity": "4"
+      "quantity": "6 cups"
     },
     {
       "name": "large eggs",
-      "quantity": "3"
+      "quantity": "4"
     },
     {
       "name": "melted butter",
-      "quantity": "1/8",
+      "quantity": "1/4 cup",
       "notes": "plus more for the griddle"
     },
     {
       "name": "sugar",
-      "quantity": "1.3",
+      "quantity": "2 tbsp",
       "optional": true
     },
     {
       "name": "vanilla extract",
-      "quantity": "5/8",
+      "quantity": "1 tsp",
       "optional": true
     },
     {
       "name": "Greek yogurt or protein powder",
-      "quantity": "5/8",
+      "quantity": "1 cup",
       "notes": "for protein tray version",
       "optional": true
     }
@@ -81,18 +81,17 @@
     }
   ],
   "nutrition": {
-    "calories": 300,
-    "protein": 9,
-    "carbs": 49,
-    "fat": 7,
-    "label": "Estimated per serving",
+    "calories": 412,
+    "protein": 13,
+    "carbs": 62,
+    "fat": 13,
+    "label": "per serving (hall portion)",
     "source": "calculated",
-    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
       "under30gFat": true,
-      "highCarb": false,
+      "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": true
     },
@@ -117,9 +116,9 @@
   ],
   "heroImage": "/images/breakfast/protein-pancake-tray.jpg",
   "thumbImage": "/images/thumbs/breakfast/protein-pancake-tray.jpg",
-  "imageAlt": "Warm station-kitchen breakfast: Protein Pancake Tray",
-  "publishedAt": "2026-05-31T18:33:00.830Z",
-  "updatedAt": "2026-05-31T18:34:15.374Z",
+  "imageAlt": "Wide firehall crew platter of Protein Pancake Tray beside eggs on a station prep table, family-style",
+  "publishedAt": "2026-06-04T20:48:24.993Z",
+  "updatedAt": "2026-06-04T20:48:24.993Z",
   "readMinutes": 6,
   "seoTitle": "Protein Pancake Tray | Firehall Breakfast",
   "collectionTier": "performance"

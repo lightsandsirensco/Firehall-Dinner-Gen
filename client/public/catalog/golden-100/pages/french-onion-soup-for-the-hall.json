@@ -186,6 +186,7 @@
     }
   },
   "heroImage": "/images/golden-100/french-onion-soup-for-the-hall.jpg",
+  "heroImageAlt": "Wide firehall crew platter of French Onion Soup for the Hall on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/french-onion-soup-for-the-hall.jpg",
   "thumbImage": "/images/thumbs/french-onion-soup-for-the-hall.jpg",
   "railImage": "/images/rails/french-onion-soup-for-the-hall.jpg",
@@ -205,13 +206,13 @@
   "relatedSlugs": [
     "beef-barley-soup",
     "shepherds-pie",
-    "chili-garlic-bread",
     "baked-ziti",
     "beef-stroganoff",
-    "loaded-baked-potato-bar"
+    "loaded-baked-potato-bar",
+    "meatloaf-mashed"
   ],
   "sourceName": "America's Test Kitchen",
   "sourceUrl": "https://www.americastestkitchen.com/recipes/12325-french-onion-soup",
-  "generatedAt": "2026-06-04T20:35:16.822Z",
+  "generatedAt": "2026-06-04T20:45:42.222Z",
   "contentVersion": 2
 }

@@ -137,6 +137,7 @@
     }
   },
   "heroImage": "/images/golden-100/honey-garlic-pork-tenderloin.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Honey Garlic Pork Tenderloin on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/honey-garlic-pork-tenderloin.jpg",
   "thumbImage": "/images/thumbs/honey-garlic-pork-tenderloin.jpg",
   "railImage": "/images/rails/honey-garlic-pork-tenderloin.jpg",
@@ -155,13 +156,13 @@
   "relatedSlugs": [
     "grilled-pork-chops",
     "memphis-dry-rub-ribs",
-    "carolina-mustard-pork",
     "bbq-brisket-burnt-ends",
     "beer-can-chicken",
-    "cedar-plank-salmon"
+    "cedar-plank-salmon",
+    "ny-strip-herb-butter"
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.325Z",
+  "generatedAt": "2026-06-04T20:45:42.168Z",
   "contentVersion": 2
 }

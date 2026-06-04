@@ -132,6 +132,7 @@
     }
   },
   "heroImage": "/images/golden-100/stuffed-peppers.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Quinoa Stuffed Peppers on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/stuffed-peppers.jpg",
   "thumbImage": "/images/thumbs/stuffed-peppers.jpg",
   "railImage": "/images/rails/stuffed-peppers.jpg",
@@ -152,12 +153,12 @@
     "meatloaf-mashed",
     "beef-barley-soup",
     "beef-dip",
-    "chili-garlic-bread",
     "loaded-baked-potato-bar",
-    "philly-cheesesteak-skillet"
+    "philly-cheesesteak-skillet",
+    "philly-egg-rolls"
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.393Z",
+  "generatedAt": "2026-06-04T20:45:42.235Z",
   "contentVersion": 2
 }

@@ -150,6 +150,7 @@
     }
   },
   "heroImage": "/images/golden-100/five-ingredient-pasta.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Garlic Butter Pasta on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/five-ingredient-pasta.jpg",
   "thumbImage": "/images/thumbs/five-ingredient-pasta.jpg",
   "railImage": "/images/rails/five-ingredient-pasta.jpg",
@@ -168,15 +169,15 @@
     "golden_100"
   ],
   "relatedSlugs": [
+    "spaghetti-aglio-e-olio-for-the-hall",
+    "30-minute-pasta-e-fagioli-for-the-hall",
+    "pasta-e-ceci-for-the-hall",
     "skillet-chicken-alfredo",
     "margherita-pizza",
-    "chicken-alfredo-bake",
-    "baked-ziti",
-    "batch-lasagna",
-    "sheet-pan-sausage-peppers"
+    "chicken-alfredo-bake"
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.544Z",
+  "generatedAt": "2026-06-04T20:45:42.359Z",
   "contentVersion": 2
 }

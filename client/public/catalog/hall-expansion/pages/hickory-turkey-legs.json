@@ -13,10 +13,10 @@
   "cookTime": 210,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 0,
-  "protein": 0,
-  "carbs": 0,
-  "fats": 0,
+  "calories": 410,
+  "protein": 52,
+  "carbs": 18,
+  "fats": 16,
   "tags": [
     "protein:turkey",
     "format:smoker",
@@ -104,93 +104,37 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Hickory Smoked Turkey Legs in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use apple juice as listed — measure each before heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch turkey. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Brine the turkey legs",
       "instruction": "Dissolve salt and brown sugar in 1 gallon cold water. Submerge legs and refrigerate 8–12 hours so seasoning penetrates deep into the dense leg meat.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Apply the spice rub",
       "instruction": "Pat legs completely dry, rub with olive oil, then coat evenly with smoked paprika, garlic powder, onion powder, and cayenne until no wet spots remain.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Smoke over hickory",
       "instruction": "Heat smoker to 275°F with hickory wood. Smoke legs upright in a rib rack until internal temp reaches 175°F in the thickest part, about 3–3.5 hours, spritzing hourly. Target oven/smoker temperature: 275°F.",
       "minutes": 180,
       "heatLevel": ""
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Crisp the skin",
       "instruction": "Increase smoker temp to 325°F for the final 15 minutes until skin darkens and crackles slightly. Verify 175°F internal before pulling—dark meat needs higher finish temps. Target oven/smoker temperature: 325°F.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 9,
-      "title": "Portion and open the line",
-      "instruction": "Portion Hickory Smoked Turkey Legs onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
-      "title": "Scale for larger halls",
-      "instruction": "When cooking for more than 10 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 11,
+      "stepNumber": 5,
       "title": "Rest and serve handheld",
       "instruction": "Rest legs 10 minutes tented in foil. Serve with buttered corn and coleslaw. Provide extra napkins and a bowl for bones at the end of the table.",
       "minutes": 10,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 12,
-      "title": "Final quality check before service",
-      "instruction": "Walk the line once before opening service for Hickory Smoked Turkey Legs — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
-      "minutes": 4,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 13,
-      "title": "Final quality check before service",
-      "instruction": "Walk the line once before opening service for Hickory Smoked Turkey Legs — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
-      "minutes": 4,
       "heatLevel": ""
     }
   ],
@@ -207,31 +151,16 @@
     "Pull meat from bones and toss into a smoky turkey pot pie.",
     "Shred and mix with BBQ sauce for pulled turkey sandwiches on soft buns."
   ],
-  "whyCrewsLikeIt": "Turkey legs are fun, photogenic, and eat with one hand—works for game nights or casual smoke feeds. The hickory profile feels classic BBQ without needing a full pit crew.",
+  "whyCrewsLikeIt": "Turkey legs are fun, photogenic, and eat with one hand—perfect for game nights or casual smoke feeds. The hickory profile feels classic BBQ without needing a full pit crew.",
   "mealPrepNotes": "Brine legs overnight for maximum juiciness. Pat dry and apply rub 2 hours before smoking. Legs can hold wrapped in foil in a warm box for 45 minutes after reaching temp.",
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 0,
-    "protein": 0,
-    "carbs": 0,
-    "fats": 0,
-    "label": "Estimated per serving",
-    "source": "unavailable",
-    "estimateAvailable": false,
-    "filterFlags": {
-      "highProtein": false,
-      "under700Calories": true,
-      "under30gFat": true,
-      "highCarb": false,
-      "lowCarb": false,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": false,
-      "lighterOption": true,
-      "performanceMeal": false
-    }
+    "calories": 410,
+    "protein": 52,
+    "carbs": 18,
+    "fats": 16,
+    "label": "~410 cal/serving · 52g protein · 2g fiber (est.)"
   },
   "heroImage": "/images/hall-expansion/hickory-turkey-legs.jpg",
   "heroImageAlt": "Hickory Smoked Turkey Legs — crew-sized firehall meal",
@@ -251,6 +180,7 @@
     "pork-belly-burnt-ends",
     "smoked-sausage-platter"
   ],
-  "generatedAt": "2026-05-31T01:50:00.915Z",
+  "sourceUrl": "",
+  "generatedAt": "2026-06-04T20:47:21.929Z",
   "contentVersion": 2
 }

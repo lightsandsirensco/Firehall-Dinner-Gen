@@ -207,6 +207,7 @@
     }
   },
   "heroImage": "/images/golden-100/batch-lasagna.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Batch Lasagna on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/batch-lasagna.jpg",
   "thumbImage": "/images/thumbs/batch-lasagna.jpg",
   "railImage": "/images/rails/batch-lasagna.jpg",
@@ -228,10 +229,10 @@
     "loaded-potato-feed",
     "big-chili",
     "beef-stroganoff",
-    "pulled-pork-mac"
+    "meatball-hoagies"
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.477Z",
+  "generatedAt": "2026-06-04T20:45:42.306Z",
   "contentVersion": 2
 }

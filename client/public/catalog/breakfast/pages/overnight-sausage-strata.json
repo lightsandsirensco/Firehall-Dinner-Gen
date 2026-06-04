@@ -15,8 +15,8 @@
     "make-ahead",
     "bake"
   ],
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "prepTime": 25,
   "cookTime": 50,
   "totalTime": 75,
@@ -24,48 +24,48 @@
   "ingredients": [
     {
       "name": "day-old bread",
-      "quantity": "3/4",
+      "quantity": "1 lb",
       "notes": "cubed into 1-inch pieces",
       "group": "Base"
     },
     {
       "name": "breakfast sausage",
-      "quantity": "2",
+      "quantity": "2 lb",
       "notes": "browned and crumbled",
       "group": "Protein"
     },
     {
       "name": "shredded sharp cheddar",
-      "quantity": "2.4",
+      "quantity": "3 cups",
       "notes": "divided",
       "group": "Cheese"
     },
     {
       "name": "large eggs",
-      "quantity": "10",
+      "quantity": "12",
       "group": "Egg mix"
     },
     {
       "name": "whole milk",
-      "quantity": "2.4",
+      "quantity": "3 cups",
       "notes": "or half-and-half",
       "group": "Egg mix"
     },
     {
       "name": "dry mustard",
-      "quantity": "3/4",
+      "quantity": "1 tsp",
       "notes": "plus salt, pepper, and pinch nutmeg",
       "group": "Seasoning"
     },
     {
       "name": "sautéed onion",
-      "quantity": "3/4",
+      "quantity": "1 cup",
       "notes": "optional layer",
       "group": "Optional"
     },
     {
       "name": "sliced green onions",
-      "quantity": "1/2",
+      "quantity": "1/2 cup",
       "notes": "plus hot sauce at the line",
       "group": "Finish"
     }
@@ -73,102 +73,48 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Overnight Sausage Strata in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Double-check seasoning after scaling — crew palates run salty after long shifts, so taste the first portion before opening the line.",
-      "minutes": 12,
-      "heatLevel": ""
+      "title": "Brown sausage and build layers",
+      "instruction": "Cook sausage until no pink remains and internal temperature reaches 160°F; drain. Grease a deep 9x13 pan. Layer half the bread cubes, sausage, optional onion, and half the cheddar. Repeat layers.",
+      "minutes": 20
     },
     {
       "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch Sausage. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
+      "title": "Mix and pour custard",
+      "instruction": "Whisk eggs, milk, mustard, salt, pepper, and nutmeg until smooth. Pour evenly over the bread layers, pressing gently so all cubes contact liquid.",
+      "minutes": 5
     },
     {
       "stepNumber": 3,
-      "title": "Brown sausage and build layers",
-      "instruction": "Cook sausage until no pink remains and internal temperature reaches 160°F; drain. Grease a deep 9x13 pan. Layer half the bread cubes, sausage, optional onion, and half the cheddar. Repeat layers.",
-      "minutes": 20,
-      "heatLevel": ""
+      "title": "Refrigerate overnight",
+      "instruction": "Cover tightly and refrigerate at least 8 hours or overnight so bread fully absorbs custard. Remove from fridge 30 minutes before baking to take the chill off the pan."
     },
     {
       "stepNumber": 4,
-      "title": "Mix and pour custard",
-      "instruction": "Whisk eggs, milk, mustard, salt, pepper, and nutmeg until smooth. Pour evenly over the bread layers, pressing gently so all cubes contact liquid.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 5,
-      "title": "Refrigerate overnight",
-      "instruction": "Cover tightly and refrigerate at least 8 hours or overnight so bread fully absorbs custard. Remove from fridge 30 minutes before baking to take the chill off the pan.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 6,
       "title": "Bake until puffed",
       "instruction": "Heat oven to 375°F. Top with remaining cheddar. Bake uncovered 45–50 minutes until center reaches 165°F, top is golden, and a knife inserted in the middle comes out clean.",
       "minutes": 45,
-      "heatLevel": ""
+      "tempF": 375
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 9,
-      "title": "Portion and open the line",
-      "instruction": "Portion Overnight Sausage Strata onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
-      "title": "Scale for larger halls",
-      "instruction": "When cooking for more than 8 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 11,
+      "stepNumber": 5,
       "title": "Rest and portion",
       "instruction": "Rest 10 minutes before cutting into squares so custard sets for clean portions. Garnish with green onions and serve with hot sauce at the line.",
-      "minutes": 10,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 12,
-      "title": "Final quality check before service",
-      "instruction": "Walk the line once before opening service for Overnight Sausage Strata — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
-      "minutes": 4,
-      "heatLevel": ""
+      "minutes": 10
     }
   ],
   "nutrition": {
-    "calories": 323,
-    "protein": 20,
-    "carbs": 6,
-    "fat": 24,
+    "calories": 667,
+    "protein": 34,
+    "carbs": 30,
+    "fat": 46,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
-      "under30gFat": true,
+      "under30gFat": false,
       "highCarb": false,
-      "lowCarb": true,
+      "lowCarb": false,
       "mealPrepFriendly": true
     },
     "badgeCandidates": {
@@ -193,28 +139,9 @@
   "heroImage": "/images/breakfast/overnight-sausage-strata.jpg",
   "thumbImage": "/images/thumbs/breakfast/overnight-sausage-strata.jpg",
   "imageAlt": "Overnight sausage strata baked golden with melted cheddar",
-  "publishedAt": "2026-05-31T18:33:00.830Z",
-  "updatedAt": "2026-05-31T23:49:25.630Z",
+  "publishedAt": "2026-06-04T20:48:24.991Z",
+  "updatedAt": "2026-06-04T20:48:24.991Z",
   "readMinutes": 8,
   "seoTitle": "Overnight Sausage Strata | Firehall Breakfast",
-  "collectionTier": "firehall_classic",
-  "proTips": [
-    "Assemble the night before so morning service is mostly oven time.",
-    "Use stale bread—fresh bread turns to mush after an overnight soak.",
-    "Check center temp with a probe; golden top can hide under-set custard in the middle."
-  ],
-  "tonightSpread": [
-    "Plate Overnight Sausage Strata with sides in separate pans so the crew can mix portions.",
-    "Keep hot items on one side of the table and cold on the other — eggs stay hot, fruit stays cold.",
-    "Line up Overnight Sausage Strata on the main counter with serving spoons — firefighters grab fast between calls.",
-    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
-  ],
-  "equipment": [
-    "Large sheet trays",
-    "Instant-read thermometer",
-    "Aluminum foil"
-  ],
-  "mealPrepNotes": "Prep mise en place before the shift — Overnight Sausage Strata runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone.",
-  "mobileImage": "/images/mobile/breakfast/overnight-sausage-strata.jpg",
-  "railImage": "/images/rails/breakfast/overnight-sausage-strata.jpg"
+  "collectionTier": "firehall_classic"
 }

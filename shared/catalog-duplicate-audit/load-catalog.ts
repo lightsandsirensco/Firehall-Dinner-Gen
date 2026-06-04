@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { PHASE5_REMOVED_SLUGS } from "../catalog-consolidation/phase5-redirects.js";
 import { normalizeTitleKey } from "../ingestion/dedupe.js";
 import { inferMealArchetypes } from "./meal-archetypes.js";
 import type { CatalogRecipeAuditRecord } from "./types.js";
@@ -159,6 +160,7 @@ export function loadCatalogRecipes(): CatalogRecipeAuditRecord[] {
       const raw = JSON.parse(fs.readFileSync(path.join(dir, file), "utf8")) as RawPage;
       const record = normalizePage(raw, collection);
       if (!record) continue;
+      if (PHASE5_REMOVED_SLUGS.has(record.slug)) continue;
       if (!bySlug.has(record.slug)) {
         bySlug.set(record.slug, record);
       }

@@ -8,8 +8,8 @@
   "category": "bbq_grill_nights",
   "cuisine": "american",
   "description": "Ribeye slices freeze partially and chop fine, griddle with onions until charred, melt provolone, and pile on toasted hoagie rolls for ten cheesesteaks.",
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "cookTime": 25,
   "prepTime": 30,
   "difficulty": "medium",
@@ -39,57 +39,57 @@
   "ingredients": [
     {
       "name": "ribeye steak",
-      "quantity": "4.4",
+      "quantity": "5.5",
       "unit": "lb",
       "notes": "partially frozen for chopping",
       "group": "Main"
     },
     {
       "name": "Cooper Sharp cheese",
-      "quantity": "17",
+      "quantity": "20",
       "unit": "slices",
       "group": "Philly"
     },
     {
       "name": "Amoroso hoagie rolls",
-      "quantity": "8",
+      "quantity": "10",
       "unit": "whole",
       "group": "Philly"
     },
     {
       "name": "Spanish onions",
-      "quantity": "3",
+      "quantity": "4",
       "unit": "whole",
       "notes": "thin-sliced",
       "group": "Philly"
     },
     {
       "name": "beef tallow",
-      "quantity": "1/4",
+      "quantity": "0.25",
       "unit": "cup",
       "group": "Griddle"
     },
     {
       "name": "Kitchen Bouquet",
-      "quantity": "7/8",
+      "quantity": "1",
       "unit": "tbsp",
       "group": "Seasoning"
     },
     {
       "name": "dried basil",
-      "quantity": "7/8",
+      "quantity": "1",
       "unit": "tsp",
       "group": "Seasoning"
     },
     {
       "name": "ground white pepper",
-      "quantity": "7/8",
+      "quantity": "1",
       "unit": "tsp",
       "group": "Seasoning"
     },
     {
       "name": "long hot peppers",
-      "quantity": "5",
+      "quantity": "6",
       "unit": "whole",
       "notes": "optional",
       "group": "Service"
@@ -99,56 +99,56 @@
     {
       "stepNumber": 1,
       "title": "Prep ribeye for chopping",
-      "instruction": "Partially freeze ribeye 45 minutes. Slice thin, then chop fine with bench scraper. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Partially freeze ribeye 45 minutes. Slice thin, then chop fine with bench scraper.",
       "minutes": 20,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
       "title": "Slice onions",
-      "instruction": "Slice onions paper-thin for quick caramelization on the griddle. Cook until char marks are visible and the thickest piece reads 145°F for medium beef, 160°F for ground on an instant-read thermometer. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Slice onions paper-thin for quick caramelization on the griddle.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 3,
       "title": "Heat flat-top",
-      "instruction": "Preheat griddle to 425°F. Film with oil. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Preheat griddle to 425°F. Film with oil.",
       "minutes": 10,
       "heatLevel": "high"
     },
     {
       "stepNumber": 4,
       "title": "Griddle onions",
-      "instruction": "Griddle onions 8–10 minutes until soft and golden. Push to cooler zone. Cook until char marks are visible and the thickest piece reads 145°F for medium beef, 160°F for ground on an instant-read thermometer. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Griddle onions 8–10 minutes until soft and golden. Push to cooler zone.",
       "minutes": 10,
       "heatLevel": "medium"
     },
     {
       "stepNumber": 5,
       "title": "Chop and sear beef",
-      "instruction": "Griddle chopped ribeye in batches, chopping with spatulas on the flat-top until charred and 145°F. Plan about 12 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Griddle chopped ribeye in batches, chopping with spatulas on the flat-top until charred and 145°F.",
       "minutes": 12,
       "heatLevel": "high"
     },
     {
       "stepNumber": 6,
       "title": "Melt cheese",
-      "instruction": "Combine beef with onions, lay provolone over top, cover with dome or foil until melted. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
+      "instruction": "Combine beef with onions, lay provolone over top, cover with dome or foil until melted.",
       "minutes": 5,
       "heatLevel": "medium"
     },
     {
       "stepNumber": 7,
       "title": "Toast rolls",
-      "instruction": "Split hoagies and toast cut-side down on griddle at 375°F until crisp. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Split hoagies and toast cut-side down on griddle at 375°F until crisp.",
       "minutes": 5,
       "heatLevel": "medium"
     },
     {
       "stepNumber": 8,
       "title": "Line for ten",
-      "instruction": "Pile cheesesteak mix into rolls. About 8 oz beef per sandwich. Hot peppers on request. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
+      "instruction": "Pile cheesesteak mix into rolls. About 8 oz beef per sandwich. Hot peppers on request.",
       "minutes": 5,
       "heatLevel": ""
     }
@@ -174,22 +174,8 @@
     "protein": 0,
     "carbs": 0,
     "fats": 0,
-    "label": "Estimated per serving",
-    "source": "unavailable",
-    "estimateAvailable": false,
-    "filterFlags": {
-      "highProtein": false,
-      "under700Calories": false,
-      "under30gFat": false,
-      "highCarb": false,
-      "lowCarb": false,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": false,
-      "lighterOption": false,
-      "performanceMeal": false
-    }
+    "label": "per serving (hall portion)",
+    "source": "estimated"
   },
   "heroImage": "/images/smoker-catalog/flat-top-philly-cheesesteaks-crew.jpg",
   "heroImageAlt": "Cooper Sharp Chopped Ribeye Hoagies — crew-sized BBQ spread with visible smoke and bark",
@@ -218,6 +204,6 @@
     "brisket-style-beef-sandwiches-au-jus"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T23:32:23.208Z",
+  "generatedAt": "2026-06-04T20:47:49.451Z",
   "contentVersion": 2
 }

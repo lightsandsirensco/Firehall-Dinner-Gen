@@ -15,8 +15,8 @@
     "classic",
     "comfort"
   ],
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 12,
+  "baseServings": 12,
   "prepTime": 10,
   "cookTime": 25,
   "totalTime": 35,
@@ -24,49 +24,49 @@
   "ingredients": [
     {
       "name": "large refrigerated biscuits",
-      "quantity": "8",
+      "quantity": "12",
       "notes": "or scratch-baked equivalents",
       "group": "Biscuits"
     },
     {
       "name": "butter",
-      "quantity": "1.3",
+      "quantity": "2 tbsp",
       "notes": "melted for brushing tops",
       "group": "Biscuits"
     },
     {
       "name": "breakfast sausage",
-      "quantity": "1",
+      "quantity": "2 lb",
       "notes": "bulk or casings removed",
       "group": "Gravy"
     },
     {
       "name": "all-purpose flour",
-      "quantity": "3/8",
+      "quantity": "1/2 cup",
       "notes": "whisked into rendered fat",
       "group": "Gravy"
     },
     {
       "name": "whole milk",
-      "quantity": "3.3",
+      "quantity": "5 cups",
       "notes": "warmed slightly for smoother whisking",
       "group": "Gravy"
     },
     {
       "name": "black pepper",
-      "quantity": "1",
+      "quantity": "2 tsp",
       "notes": "freshly ground, plus salt to taste",
       "group": "Seasoning"
     },
     {
       "name": "poultry seasoning",
-      "quantity": "3/8",
+      "quantity": "1/2 tsp",
       "notes": "optional depth",
       "group": "Seasoning"
     },
     {
       "name": "chopped parsley",
-      "quantity": "1/8",
+      "quantity": "1/4 cup",
       "notes": "and hot sauce at the line",
       "group": "Serve"
     }
@@ -74,94 +74,54 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Hall Sausage Biscuits & Gravy in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch Sausage. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Bake the biscuits",
       "instruction": "Heat oven to 375°F. Arrange biscuits on a sheet pan and brush tops with melted butter. Bake until golden and cooked through—split one to check the center isn't doughy.",
       "minutes": 15,
-      "heatLevel": ""
+      "tempF": 375
+    },
+    {
+      "stepNumber": 2,
+      "title": "Brown the sausage",
+      "instruction": "In a large Dutch oven or deep skillet, brown sausage over medium-high, breaking it into fine crumbles. Don't drain all the fat—you need it for the roux.",
+      "minutes": 8
+    },
+    {
+      "stepNumber": 3,
+      "title": "Build the roux",
+      "instruction": "Sprinkle flour over the sausage and fat, stirring constantly for 1–2 minutes until the raw flour smell cooks off and the mixture looks sandy.",
+      "minutes": 3
     },
     {
       "stepNumber": 4,
-      "title": "Brown the sausage",
-      "instruction": "In a large Dutch oven or deep skillet, brown sausage over medium-high, breaking it into fine crumbles. Don't drain all the fat—you need it for the roux.",
-      "minutes": 8,
-      "heatLevel": ""
+      "title": "Whisk in milk",
+      "instruction": "Add warm milk gradually, whisking to prevent lumps. Simmer until gravy thickens enough to coat a spoon. Season aggressively with black pepper and salt.",
+      "minutes": 10
     },
     {
       "stepNumber": 5,
-      "title": "Build the roux",
-      "instruction": "Sprinkle flour over the sausage and fat, stirring constantly for 1–2 minutes until the raw flour smell cooks off and the mixture looks sandy.",
-      "minutes": 3,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 6,
-      "title": "Whisk in milk",
-      "instruction": "Add warm milk gradually, whisking to prevent lumps. Simmer until gravy thickens enough to coat a spoon. Season aggressively with black pepper and salt.",
-      "minutes": 10,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 9,
-      "title": "Portion and open the line",
-      "instruction": "Portion Hall Sausage Biscuits & Gravy onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
       "title": "Split and ladle",
       "instruction": "Split warm biscuits and place two halves per bowl or plate. Ladle hot gravy over the top until generously covered. Garnish with parsley and serve immediately.",
-      "minutes": 5,
-      "heatLevel": ""
+      "minutes": 5
     }
   ],
   "nutrition": {
-    "calories": 0,
-    "protein": 0,
-    "carbs": 0,
-    "fats": 0,
-    "label": "Estimated per serving",
-    "source": "unavailable",
-    "estimateAvailable": false,
+    "calories": 326,
+    "protein": 13,
+    "carbs": 10,
+    "fat": 26,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
       "under30gFat": true,
       "highCarb": false,
       "lowCarb": true,
-      "mealPrepFriendly": true
+      "mealPrepFriendly": false
     },
     "badgeCandidates": {
       "highProtein": false,
-      "lighterOption": true,
+      "lighterOption": false,
       "performanceMeal": false
     }
   },
@@ -181,29 +141,9 @@
   "heroImage": "/images/breakfast/hall-sausage-biscuits-gravy.jpg",
   "thumbImage": "/images/thumbs/breakfast/hall-sausage-biscuits-gravy.jpg",
   "imageAlt": "Split biscuits smothered in peppery sausage gravy on a firehall breakfast plate",
-  "publishedAt": "2026-05-31T18:33:00.829Z",
-  "updatedAt": "2026-05-31T23:49:25.492Z",
+  "publishedAt": "2026-06-04T20:48:24.990Z",
+  "updatedAt": "2026-06-04T20:48:24.990Z",
   "readMinutes": 7,
   "seoTitle": "Hall Sausage Biscuits & Gravy | Firehall Breakfast",
-  "collectionTier": "firehall_classic",
-  "proTips": [
-    "Warm milk in a microwave or small pot before whisking—cold milk shocks the roux and causes lumps.",
-    "Hold biscuits uncovered at 200°F while gravy finishes; covered biscuits steam soft tops.",
-    "Keep gravy on the lowest simmer with a ladle in the pot at the line for second portions."
-  ],
-  "tonightSpread": [
-    "Plate Hall Sausage Biscuits & Gravy with sides in separate pans so the crew can mix portions.",
-    "Keep hot items on one side of the table and cold on the other — eggs stay hot, fruit stays cold.",
-    "Line up Hall Sausage Biscuits & Gravy on the main counter with serving spoons — firefighters grab fast between calls.",
-    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
-  ],
-  "equipment": [
-    "Large sheet trays",
-    "Instant-read thermometer",
-    "Aluminum foil"
-  ],
-  "mealPrepNotes": "Prep mise en place before the shift — Hall Sausage Biscuits & Gravy runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone.",
-  "heroImageAlt": "Hall Sausage Biscuits & Gravy — wide family-style firehall platter showing gravy on a crew prep table",
-  "mobileImage": "/images/mobile/breakfast/hall-sausage-biscuits-gravy.jpg",
-  "railImage": "/images/rails/breakfast/hall-sausage-biscuits-gravy.jpg"
+  "collectionTier": "firehall_classic"
 }

@@ -12,8 +12,8 @@
     "one-pot",
     "topping-bar"
   ],
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "prepTime": 10,
   "cookTime": 18,
   "totalTime": 28,
@@ -21,35 +21,35 @@
   "ingredients": [
     {
       "name": "rolled oats",
-      "quantity": "4.8"
+      "quantity": "6 cups"
     },
     {
       "name": "water or broth",
-      "quantity": "9.6",
+      "quantity": "12 cups",
       "notes": "half broth for savory"
     },
     {
       "name": "kosher salt",
-      "quantity": "1.6"
+      "quantity": "2 tsp"
     },
     {
       "name": "butter",
-      "quantity": "2.4"
+      "quantity": "3 tbsp"
     },
     {
       "name": "shredded cheddar",
-      "quantity": "3/4",
+      "quantity": "1 cup",
       "notes": "topping bar"
     },
     {
       "name": "soft-cooked eggs",
-      "quantity": "5",
+      "quantity": "6",
       "notes": "for topping",
       "optional": true
     },
     {
       "name": "green onions",
-      "quantity": "1/2",
+      "quantity": "1/2 cup",
       "notes": "sliced",
       "optional": true
     }
@@ -81,24 +81,23 @@
     }
   ],
   "nutrition": {
-    "calories": 504,
+    "calories": 306,
     "protein": 14,
-    "carbs": 41,
-    "fat": 32,
-    "label": "Estimated per serving",
+    "carbs": 35,
+    "fat": 12,
+    "label": "per serving (hall portion)",
     "source": "calculated",
-    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
-      "under30gFat": false,
+      "under30gFat": true,
       "highCarb": false,
       "lowCarb": false,
       "mealPrepFriendly": false
     },
     "badgeCandidates": {
       "highProtein": false,
-      "lighterOption": false,
+      "lighterOption": true,
       "performanceMeal": false
     }
   },
@@ -117,9 +116,9 @@
   ],
   "heroImage": "/images/breakfast/big-pot-savory-oats.jpg",
   "thumbImage": "/images/thumbs/breakfast/big-pot-savory-oats.jpg",
-  "imageAlt": "Warm station-kitchen breakfast: Big-Pot Savory Oats",
-  "publishedAt": "2026-05-31T18:33:00.830Z",
-  "updatedAt": "2026-05-31T18:34:15.374Z",
+  "imageAlt": "Wide firehall crew platter of Big-Pot Savory Oats beside eggs on a station prep table, family-style",
+  "publishedAt": "2026-06-04T20:48:24.993Z",
+  "updatedAt": "2026-06-04T20:48:24.993Z",
   "readMinutes": 6,
   "seoTitle": "Big-Pot Savory Oats | Firehall Breakfast",
   "collectionTier": "performance"

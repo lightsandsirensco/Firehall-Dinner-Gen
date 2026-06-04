@@ -15,8 +15,8 @@
     "deli",
     "board"
   ],
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "prepTime": 25,
   "cookTime": 10,
   "totalTime": 35,
@@ -24,31 +24,31 @@
   "ingredients": [
     {
       "name": "bagels",
-      "quantity": "8",
+      "quantity": "10",
       "notes": "assorted flavors, split",
       "group": "Base"
     },
     {
       "name": "smoked salmon lox",
-      "quantity": "1.6",
+      "quantity": "2 lb",
       "notes": "sliced thin",
       "group": "Fish"
     },
     {
       "name": "cream cheese",
-      "quantity": "1.6",
+      "quantity": "2 cups",
       "notes": "plain and scallion whipped",
       "group": "Spread"
     },
     {
       "name": "whipped butter",
-      "quantity": "3/8",
+      "quantity": "1/2 cup",
       "notes": "optional for plain bagels",
       "group": "Spread"
     },
     {
       "name": "capers",
-      "quantity": "3/8",
+      "quantity": "1/2 cup",
       "notes": "drained",
       "group": "Fixings"
     },
@@ -60,13 +60,13 @@
     },
     {
       "name": "Roma tomatoes",
-      "quantity": "3",
+      "quantity": "4",
       "notes": "sliced",
       "group": "Fixings"
     },
     {
       "name": "English cucumbers",
-      "quantity": "1.6",
+      "quantity": "2",
       "notes": "sliced thin, plus lemon wedges",
       "group": "Fixings"
     }
@@ -74,76 +74,50 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Bagel and Lox Breakfast Board in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use smoked salmon lox, whipped butter as listed — measure each before heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
+      "title": "Prep all fixings",
+      "instruction": "Slice onion, tomato, and cucumber and arrange in separate bowls on ice or cold trays. Drain capers and portion cream cheese into ramekins. Keep lox refrigerated until the board goes out.",
+      "minutes": 15
     },
     {
       "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch Eggs. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
-      "title": "Prep all fixings",
-      "instruction": "Slice onion, tomato, and cucumber and arrange in separate bowls on ice or cold trays. Drain capers and portion cream cheese into ramekins. Keep lox refrigerated until the board goes out.",
-      "minutes": 15,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 4,
       "title": "Toast the bagels",
       "instruction": "Split bagels and toast on sheet pans at 350°F until edges are crisp, about 6 minutes. Hold in a warm oven uncovered at 200°F—do not stack or they steam soft.",
       "minutes": 8,
-      "heatLevel": ""
+      "tempF": 350
+    },
+    {
+      "stepNumber": 3,
+      "title": "Arrange the board",
+      "instruction": "Center lox on a large chilled platter folded in overlapping layers. Surround with ramekins of cream cheese, capers, onion, tomato, cucumber, and lemon wedges.",
+      "minutes": 8
+    },
+    {
+      "stepNumber": 4,
+      "title": "Set the line",
+      "instruction": "Place toasted bagels in a warm basket at the line with tongs. Post a simple build order: schmear, lox, capers, onion, tomato.",
+      "minutes": 5
     },
     {
       "stepNumber": 5,
-      "title": "Arrange the board",
-      "instruction": "Center lox on a large chilled platter folded in overlapping layers. Surround with ramekins of cream cheese, capers, onion, tomato, cucumber, and lemon wedges.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 6,
-      "title": "Set up the serving line",
-      "instruction": "Place toasted bagels in a warm basket at the line with tongs. Post a simple build order: schmear, lox, capers, onion, tomato. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
       "title": "Serve and refresh",
       "instruction": "Serve immediately as a self-serve board. Refresh lox and cold fixings on ice if service runs longer than 30 minutes to keep fish food-safe.",
-      "minutes": 5,
-      "heatLevel": ""
+      "minutes": 5
     }
   ],
   "nutrition": {
-    "calories": 0,
-    "protein": 0,
-    "carbs": 0,
-    "fats": 0,
-    "label": "Estimated per serving",
-    "source": "unavailable",
-    "estimateAvailable": false,
+    "calories": 426,
+    "protein": 23,
+    "carbs": 2,
+    "fat": 36,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
     "filterFlags": {
       "highProtein": false,
-      "under700Calories": false,
+      "under700Calories": true,
       "under30gFat": false,
       "highCarb": false,
-      "lowCarb": false,
-      "mealPrepFriendly": true
+      "lowCarb": true,
+      "mealPrepFriendly": false
     },
     "badgeCandidates": {
       "highProtein": false,
@@ -166,30 +140,13 @@
   ],
   "heroImage": "/images/breakfast/bagel-lox-breakfast-board.jpg",
   "thumbImage": "/images/thumbs/breakfast/bagel-lox-breakfast-board.jpg",
-  "imageAlt": "Bagel and lox breakfast board with cream cheese, capers, and fresh fixings",
-  "publishedAt": "2026-05-31T18:33:00.830Z",
-  "updatedAt": "2026-05-31T23:49:25.285Z",
+  "imageAlt": "Wide firehall breakfast board with bagels, cream cheese, smoked salmon lox, capers, and red onion on a crew prep table, family-style platter",
+  "publishedAt": "2026-06-04T20:48:24.991Z",
+  "updatedAt": "2026-06-04T21:52:25.179Z",
   "readMinutes": 6,
   "seoTitle": "Bagel and Lox Breakfast Board | Firehall Breakfast",
   "collectionTier": "healthier_hall",
-  "proTips": [
-    "Keep lox on ice until the moment the board hits the table—room temp fish is a food-safety issue.",
-    "Toast bagels in two sheet pan batches so all ten finish crisp at the same time.",
-    "Assign one crew member to restock fixings while another manages bagel refills."
-  ],
-  "tonightSpread": [
-    "Plate Bagel and Lox Breakfast Board with sides in separate pans so the crew can mix portions.",
-    "Keep hot items on one side of the table and cold on the other — eggs stay hot, fruit stays cold.",
-    "Line up Bagel and Lox Breakfast Board on the main counter with serving spoons — firefighters grab fast between calls.",
-    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
-  ],
-  "equipment": [
-    "Large sheet trays",
-    "Instant-read thermometer",
-    "Aluminum foil"
-  ],
-  "mealPrepNotes": "Prep mise en place before the shift — Bagel and Lox Breakfast Board runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone.",
-  "heroImageAlt": "Bagel and Lox Breakfast Board — wide family-style firehall platter showing lox breakfast board on a crew prep table",
+  "heroImageAlt": "Wide firehall breakfast board with bagels, cream cheese, smoked salmon lox, capers, and red onion on a crew prep table, family-style platter",
   "mobileImage": "/images/mobile/breakfast/bagel-lox-breakfast-board.jpg",
   "railImage": "/images/rails/breakfast/bagel-lox-breakfast-board.jpg"
 }

@@ -146,6 +146,7 @@
     }
   },
   "heroImage": "/images/golden-100/loaded-nacho-skillet.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Nacho Skillet on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/loaded-nacho-skillet.jpg",
   "thumbImage": "/images/thumbs/loaded-nacho-skillet.jpg",
   "railImage": "/images/rails/loaded-nacho-skillet.jpg",
@@ -174,6 +175,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.287Z",
+  "generatedAt": "2026-06-04T20:45:42.138Z",
   "contentVersion": 2
 }

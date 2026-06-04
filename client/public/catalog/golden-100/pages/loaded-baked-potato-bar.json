@@ -146,6 +146,7 @@
     }
   },
   "heroImage": "/images/golden-100/loaded-baked-potato-bar.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Baked Potato Bar on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/loaded-baked-potato-bar.jpg",
   "thumbImage": "/images/thumbs/loaded-baked-potato-bar.jpg",
   "railImage": "/images/rails/loaded-baked-potato-bar.jpg",
@@ -172,6 +173,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.357Z",
+  "generatedAt": "2026-06-04T20:45:42.196Z",
   "contentVersion": 2
 }

@@ -503,7 +503,7 @@ const CURATED_HALL_PACKAGES_RAW: CuratedPackageInput[] = [
     ],
   },
   {
-    slug: "chili-garlic-bread",
+    slug: "big-chili",
     title: "Firehouse Smoked Beef Chili with Cheesy Garlic Bread",
     displayTitle: "Firehouse Smoked Beef Chili with Cheesy Garlic Bread",
     emoji: "🔥",
@@ -1036,7 +1036,7 @@ const TITLE_MATCHERS: { pattern: RegExp; slug: string }[] = [
   { pattern: /chimichurri|steak\s*taco|skirt\s*steak\s*taco|flank\s*steak\s*taco/i, slug: "steak-tacos" },
   { pattern: /pulled\s*pork/i, slug: "pulled-pork" },
   { pattern: /double\s*smash|dirty\s*sauce|smash\s*burger/i, slug: "smash-burgers" },
-  { pattern: /chili/i, slug: "chili-garlic-bread" },
+  { pattern: /chili/i, slug: "big-chili" },
   { pattern: /caesar/i, slug: "chicken-caesar" },
   { pattern: /jerk/i, slug: "jerk-chicken" },
   { pattern: /steak\s*sandwich/i, slug: "steak-sandwiches" },

@@ -8,8 +8,8 @@
   "category": "bbq_grill_nights",
   "cuisine": "north african",
   "description": "Ground lamb mixes with urfa pepper, fennel, and ras el hanout, forms around flat skewers, and grills until charred and 165°F. Serve with preserved-lemon yogurt and grilled naan.",
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "cookTime": 18,
   "prepTime": 35,
   "difficulty": "medium",
@@ -40,69 +40,69 @@
   "ingredients": [
     {
       "name": "ground lamb",
-      "quantity": "4.4",
+      "quantity": "5.5",
       "unit": "lb",
       "group": "Main"
     },
     {
       "name": "Urfa biber",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tbsp",
       "group": "Merguez spice"
     },
     {
       "name": "ground fennel seed",
-      "quantity": "7/8",
+      "quantity": "1",
       "unit": "tbsp",
       "group": "Merguez spice"
     },
     {
       "name": "ras el hanout",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tsp",
       "group": "Merguez spice"
     },
     {
       "name": "ground cinnamon",
-      "quantity": "3/8",
+      "quantity": "0.5",
       "unit": "tsp",
       "group": "Merguez spice"
     },
     {
       "name": "shallots",
-      "quantity": "2",
+      "quantity": "3",
       "unit": "whole",
       "notes": "grated and drained",
       "group": "Merguez spice"
     },
     {
       "name": "kosher salt",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tbsp",
       "group": "Merguez spice"
     },
     {
       "name": "Greek yogurt",
-      "quantity": "1.6",
+      "quantity": "2",
       "unit": "cups",
       "group": "Sauce"
     },
     {
       "name": "preserved lemon",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tbsp",
       "notes": "minced rind",
       "group": "Sauce"
     },
     {
       "name": "naan bread",
-      "quantity": "9.6",
+      "quantity": "12",
       "unit": "pieces",
       "group": "Service"
     },
     {
       "name": "pomegranate seeds",
-      "quantity": "3/8",
+      "quantity": "0.5",
       "unit": "cup",
       "group": "Garnish"
     }
@@ -118,49 +118,49 @@
     {
       "stepNumber": 2,
       "title": "Form skewer logs",
-      "instruction": "Press lamb around wide flat skewers in 8-inch logs about 1 inch thick. Chill 30 minutes on a sheet pan. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
+      "instruction": "Press lamb around wide flat skewers in 8-inch logs about 1 inch thick. Chill 30 minutes on a sheet pan.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
       "stepNumber": 3,
       "title": "Build preserved-lemon yogurt",
-      "instruction": "Whisk yogurt with minced preserved lemon rind and pinch of salt. Keep cold until service. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Whisk yogurt with minced preserved lemon rind and pinch of salt. Keep cold until service.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 4,
-      "title": "Preheat grill grates",
-      "instruction": "Preheat grill to medium-high, 425°F. Oil grates—lamb fat will flare; keep a cooler zone ready. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
+      "title": "Heat grill",
+      "instruction": "Preheat grill to medium-high, 425°F. Oil grates—lamb fat will flare; keep a cooler zone ready.",
       "minutes": 10,
       "heatLevel": "medium-high"
     },
     {
       "stepNumber": 5,
       "title": "Grill merguez skewers",
-      "instruction": "Grill skewers 4–5 minutes per side until deeply charred and 160°F internal. Move to indirect heat if flare-ups hit. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Grill skewers 4–5 minutes per side until deeply charred and 160°F internal. Move to indirect heat if flare-ups hit.",
       "minutes": 14,
       "heatLevel": "high"
     },
     {
       "stepNumber": 6,
       "title": "Rest and hold",
-      "instruction": "Rest skewers 5 minutes to 165°F carryover. Slide onto hotel pans, cover with foil, hold at 170°F until service. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Rest skewers 5 minutes to 165°F carryover. Slide onto hotel pans, cover with foil, hold at 170°F until service.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 7,
       "title": "Warm flatbread",
-      "instruction": "Wrap flatbread in foil bundles and warm on the grill 2–3 minutes at 400°F. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Wrap flatbread in foil bundles and warm on the grill 2–3 minutes at 400°F.",
       "minutes": 3,
       "heatLevel": "medium"
     },
     {
       "stepNumber": 8,
       "title": "Tonight's line",
-      "instruction": "Serve two skewers per firefighter with harissa yogurt and flatbread. Call temps: pull at 165°F, held at 170°F max. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Serve two skewers per firefighter with harissa yogurt and flatbread. Call temps: pull at 165°F, held at 170°F max.",
       "minutes": 5,
       "heatLevel": ""
     }
@@ -186,22 +186,8 @@
     "protein": 70,
     "carbs": 20,
     "fats": 44,
-    "label": "Estimated per serving",
-    "source": "calculated",
-    "estimateAvailable": true,
-    "filterFlags": {
-      "highProtein": true,
-      "under700Calories": false,
-      "under30gFat": false,
-      "highCarb": false,
-      "lowCarb": true,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": false
-    }
+    "label": "per serving (hall portion)",
+    "source": "estimated"
   },
   "heroImage": "/images/smoker-catalog/lamb-merguez-skewers-crew.jpg",
   "heroImageAlt": "North African Urfa Lamb Merguez Logs — crew-sized BBQ spread with visible smoke and bark",
@@ -230,6 +216,6 @@
     "brisket-style-beef-sandwiches-au-jus"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T23:32:23.203Z",
+  "generatedAt": "2026-06-04T20:47:49.427Z",
   "contentVersion": 2
 }

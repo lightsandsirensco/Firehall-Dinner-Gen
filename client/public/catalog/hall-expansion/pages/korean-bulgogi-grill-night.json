@@ -1,7 +1,7 @@
 {
   "slug": "korean-bulgogi-grill-night",
-  "title": "Seared Garlic Steak",
-  "displayTitle": "Seared Garlic Steak",
+  "title": "Korean Bulgogi Grill Night",
+  "displayTitle": "Korean Bulgogi Grill Night",
   "seoTitle": "Korean Bulgogi Grill Night | Firefighter Meal",
   "shortDescription": "Marinated beef grilled with scallions and lettuce wraps for ten",
   "subtitle": "Marinated beef grilled with scallions and lettuce wraps for ten",
@@ -13,10 +13,10 @@
   "cookTime": 20,
   "prepTime": 35,
   "difficulty": "medium",
-  "calories": 546,
-  "protein": 49,
-  "carbs": 8,
-  "fats": 35,
+  "calories": 460,
+  "protein": 36,
+  "carbs": 18,
+  "fats": 28,
   "tags": [
     "protein:beef",
     "format:grill",
@@ -113,64 +113,36 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Seared Garlic Steak in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use soy sauce, green onions as listed — measure each before heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch beef. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Slice and marinate beef",
-      "instruction": "Slice ribeye paper-thin. Mix soy, grated pear, sugar, garlic, ginger, and sesame oil. Toss beef and marinate at least 1 hour. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
+      "instruction": "Slice ribeye paper-thin. Mix soy, grated pear, sugar, garlic, ginger, and sesame oil. Toss beef and marinate at least 1 hour.",
       "minutes": 20,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Prep wrap station",
-      "instruction": "Separate lettuce leaves, grill scallion lengths lightly, and portion kimchi and ssamjang into bowls. Cook until char marks are visible and the thickest piece reads 145°F for medium beef, 160°F for ground on an instant-read thermometer. Plan about 15 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Separate lettuce leaves, grill scallion lengths lightly, and portion kimchi and ssamjang into bowls.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Heat the grill",
-      "instruction": "Preheat grill to high, about 450°F. Vent the kitchen—this will smoke. Target oven/smoker temperature: 450°F. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Preheat grill to high, about 450°F. Vent the kitchen—this will smoke. Target oven/smoker temperature: 450°F.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Grill bulgogi in batches",
-      "instruction": "Grill beef in single layers 1–2 minutes per side until caramelized. Repeat until all beef is cooked. Target oven/smoker temperature: 450°F. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
+      "instruction": "Grill beef in single layers 1–2 minutes per side until caramelized. Repeat until all beef is cooked. Target oven/smoker temperature: 450°F.",
       "minutes": 12,
       "heatLevel": ""
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F for medium beef, 160°F for ground. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 9,
+      "stepNumber": 5,
       "title": "Serve platters",
-      "instruction": "Pile hot beef on platters with grilled scallions. Let crews build lettuce wraps with kimchi and ssamjang. Cook until char marks are visible and the thickest piece reads 145°F for medium beef, 160°F for ground on an instant-read thermometer. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Pile hot beef on platters with grilled scallions. Let crews build lettuce wraps with kimchi and ssamjang.",
       "minutes": 5,
       "heatLevel": ""
     }
@@ -193,25 +165,11 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 546,
-    "protein": 49,
-    "carbs": 8,
-    "fats": 35,
-    "label": "per serving (hall portion)",
-    "source": "calculated",
-    "filterFlags": {
-      "highProtein": true,
-      "under700Calories": true,
-      "under30gFat": false,
-      "highCarb": false,
-      "lowCarb": true,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": false
-    }
+    "calories": 460,
+    "protein": 36,
+    "carbs": 18,
+    "fats": 28,
+    "label": "~460 cal/serving · 36g protein · 2g fiber (est.)"
   },
   "heroImage": "/images/hall-expansion/korean-bulgogi-grill-night.jpg",
   "heroImageAlt": "Korean Bulgogi Grill Night — crew-sized firehall meal",
@@ -231,6 +189,7 @@
     "hall-burger-bar",
     "pasta-bar-night"
   ],
-  "generatedAt": "2026-05-31T01:50:00.916Z",
+  "sourceUrl": "",
+  "generatedAt": "2026-06-04T20:47:21.931Z",
   "contentVersion": 2
 }

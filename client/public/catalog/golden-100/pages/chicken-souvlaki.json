@@ -148,6 +148,7 @@
     }
   },
   "heroImage": "/images/golden-100/chicken-souvlaki.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Chicken Souvlaki on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/chicken-souvlaki.jpg",
   "thumbImage": "/images/thumbs/chicken-souvlaki.jpg",
   "railImage": "/images/rails/chicken-souvlaki.jpg",
@@ -173,6 +174,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.395Z",
+  "generatedAt": "2026-06-04T20:45:42.237Z",
   "contentVersion": 2
 }

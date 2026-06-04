@@ -196,8 +196,8 @@ export const CLASSIC_HALL_MEALS: ClassicHallMealMeta[] = [
     exploreServings: 8,
   },
   {
-    id: "chili-garlic-bread",
-    slug: "chili-garlic-bread",
+    id: "big-chili",
+    slug: "big-chili",
     title: "Firehall Chili",
     shortLabel: "Smoked Chili Night",
     displayTitle: "Firehouse Smoked Beef Chili with Cheesy Garlic Bread",
@@ -207,7 +207,7 @@ export const CLASSIC_HALL_MEALS: ClassicHallMealMeta[] = [
     emoji: "🌶️",
     spoonacularRecipeId: 660273,
     spoonacularTitle: "Slow Cooked Beef Chili",
-    heroImagePath: "/images/golden-100/chili-garlic-bread.jpg",
+    heroImagePath: "/images/golden-100/big-chili.jpg",
     imageAlt:
       "Dark bowl of smoky beef chili with visible steam beside cheesy golden garlic bread on a rustic board",
     imageKeywords: ["chili", "beef", "smoked", "garlic", "bread", "cheese", "comfort", "bowl"],

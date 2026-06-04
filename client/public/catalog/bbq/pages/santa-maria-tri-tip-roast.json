@@ -8,15 +8,15 @@
   "category": "bbq_grill_nights",
   "cuisine": "american",
   "description": "Adapted from classic Santa Maria tri-tip tradition (Amazing Ribs, Weber): tri-tip gets a salt-pepper-garlic rub, smokes over oak at 275°F to 130°F, then sears and slices against the grain with pinquito beans and salsa.",
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "cookTime": 90,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 0,
-  "protein": 0,
-  "carbs": 0,
-  "fats": 0,
+  "calories": 955,
+  "protein": 76,
+  "carbs": 32,
+  "fats": 56,
   "tags": [
     "protein:beef",
     "format:grill",
@@ -39,49 +39,49 @@
   "ingredients": [
     {
       "name": "tri-tip roast",
-      "quantity": "4.8",
+      "quantity": "6",
       "unit": "lb"
     },
     {
       "name": "kosher salt",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tbsp"
     },
     {
       "name": "black pepper",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tbsp"
     },
     {
       "name": "granulated garlic",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tbsp"
     },
     {
       "name": "neutral oil",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tbsp"
     },
     {
       "name": "beef broth",
-      "quantity": "3/4",
+      "quantity": "1",
       "unit": "cup",
       "notes": "for holding"
     },
     {
       "name": "pinto beans",
-      "quantity": "3.2",
+      "quantity": "4",
       "unit": "cups",
       "notes": "cooked, warmed"
     },
     {
       "name": "pico de gallo",
-      "quantity": "1.6",
+      "quantity": "2",
       "unit": "cups"
     },
     {
       "name": "flour tortillas",
-      "quantity": "10",
+      "quantity": "12",
       "unit": "whole",
       "notes": "optional"
     }
@@ -89,71 +89,57 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Santa Maria Tri-Tip Roast in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use neutral oil as listed — measure each before heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch beef. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Season Santa Maria-style",
       "instruction": "Mix salt, pepper, and garlic. Coat tri-tip with oil, then pack rub on all sides. Rest 30 minutes while smoker heats to 275°F with oak.",
       "minutes": 30,
       "heatLevel": "low"
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Smoke to 130°F",
-      "instruction": "Smoke tri-tip at 275°F until internal temp reaches 125–130°F for medium-rare, about 45–55 minutes. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Smoke tri-tip at 275°F until internal temp reaches 125–130°F for medium-rare, about 45–55 minutes.",
       "minutes": 50,
       "heatLevel": "low"
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Sear over high heat",
-      "instruction": "Sear over direct heat at 450°F+ 3–4 minutes per side until crust forms and internal temp reaches 135°F for medium. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Sear over direct heat at 450°F+ 3–4 minutes per side until crust forms and internal temp reaches 135°F for medium.",
       "minutes": 10,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Rest and slice",
-      "instruction": "Rest 10 minutes. Slice against the grain into thin slices—tri-tip grain changes direction; rotate as you cut. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Rest 10 minutes. Slice against the grain into thin slices—tri-tip grain changes direction; rotate as you cut.",
       "minutes": 12,
       "heatLevel": ""
     },
     {
-      "stepNumber": 7,
+      "stepNumber": 5,
       "title": "Hold at 170°F",
-      "instruction": "Toss slices lightly with warm beef broth. Cover with foil and hold at 170°F until service. Plan about 5 minutes for this step at crew scale. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
+      "instruction": "Toss slices lightly with warm beef broth. Cover with foil and hold at 170°F until service.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 8,
+      "stepNumber": 6,
       "title": "Warm beans and salsa",
-      "instruction": "Heat pinto beans in a pot. Set pico de gallo cold on the line. Plan about 8 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Heat pinto beans in a pot. Set pico de gallo cold on the line.",
       "minutes": 8,
       "heatLevel": ""
     },
     {
-      "stepNumber": 9,
-      "title": "Cooking step",
-      "instruction": "Sliced tri-tip, beans, salsa, optional tortillas. Call temps: pulled at 135°F medium, held at 170°F. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "stepNumber": 7,
+      "title": "Tonight's board",
+      "instruction": "Sliced tri-tip, beans, salsa, optional tortillas. Call temps: pulled at 135°F medium, held at 170°F.",
       "minutes": 5,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 10,
+      "stepNumber": 8,
       "title": "Leftovers",
-      "instruction": "Slice thin for tri-tip sandwiches with salsa and mayo. Reheat in broth at 325°F until 145°F. Plan about 8 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Slice thin for tri-tip sandwiches with salsa and mayo. Reheat in broth at 325°F until 145°F.",
       "minutes": 8,
       "heatLevel": ""
     }
@@ -175,26 +161,12 @@
   "mealPrepNotes": "Season 30 minutes ahead. Smoke to 130°F, sear hot, rest 10 minutes, slice. Hold sliced tri-tip covered at 170°F with beef jus.",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 0,
-    "protein": 0,
-    "carbs": 0,
-    "fats": 0,
-    "label": "Estimated per serving",
-    "source": "unavailable",
-    "estimateAvailable": false,
-    "filterFlags": {
-      "highProtein": true,
-      "under700Calories": false,
-      "under30gFat": false,
-      "highCarb": false,
-      "lowCarb": false,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": false
-    }
+    "calories": 955,
+    "protein": 76,
+    "carbs": 32,
+    "fats": 56,
+    "label": "per serving (hall portion)",
+    "source": "estimated"
   },
   "heroImage": "/images/smoker-catalog/santa-maria-tri-tip-roast.jpg",
   "heroImageAlt": "Santa Maria Tri-Tip Roast — crew-sized BBQ spread with visible smoke and bark",
@@ -223,6 +195,6 @@
     "texas-central-brisket-crew"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T23:32:23.201Z",
+  "generatedAt": "2026-06-04T20:47:49.418Z",
   "contentVersion": 2
 }

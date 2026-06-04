@@ -1,0 +1,2792 @@
+[
+  {
+    "slug": "chicken-parm",
+    "title": "Chicken Parmesan",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "steak-tacos",
+    "title": "Steak Tacos",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "smash-burgers",
+    "title": "Double Smash Burgers",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "chili-garlic-bread",
+    "title": "Firehall Chili",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "pulled-pork",
+    "title": "Pulled Pork Sandwiches",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "beef-dip",
+    "title": "Beef Dip Sandwiches",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "jerk-chicken",
+    "title": "Jerk Chicken & Rice and Peas",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "bbq-chicken-bowls",
+    "title": "BBQ Chicken Bowls",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "steak-sandwiches",
+    "title": "Steak Sandwiches",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "chicken-caesar",
+    "title": "Chicken Caesar Salad",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "crispy-chicken-cutlets",
+    "title": "Crispy Chicken Cutlets Marinara",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "loaded-nacho-skillet",
+    "title": "Nacho Skillet",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "meatball-hoagies",
+    "title": "Meatball Hoagies",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "parm-hero-subs",
+    "title": "Parm Hero Subs",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "hall-taco-bar",
+    "title": "Taco Bar",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "smoked-brisket",
+    "title": "Kansas City Smoked Brisket",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "memphis-dry-rub-ribs",
+    "title": "Memphis Dry Rub Ribs",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "beer-can-chicken",
+    "title": "Beer Can Chicken",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "ny-strip-herb-butter",
+    "title": "NY Strip with Herb Butter",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "bbq-chicken-sliders",
+    "title": "BBQ Chicken Sliders",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "grilled-pork-chops",
+    "title": "Grilled Pork Chops",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "smoked-wings-white-sauce",
+    "title": "Smoked Wings with White Sauce",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "texas-beef-ribs",
+    "title": "Texas-Style Beef Ribs",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "cedar-plank-salmon",
+    "title": "Cedar Plank Salmon",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "honey-garlic-pork-tenderloin",
+    "title": "Honey Garlic Pork Tenderloin",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "flank-chimichurri",
+    "title": "Flank Steak with Chimichurri",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "carolina-mustard-pork",
+    "title": "Carolina Mustard Pulled Pork",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "grilled-corn-cotija",
+    "title": "Street Corn with Cotija",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "teriyaki-salmon-grill",
+    "title": "Teriyaki Salmon",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "bbq-brisket-burnt-ends",
+    "title": "BBQ Burnt Ends",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "mac-and-cheese-bake",
+    "title": "Baked Mac and Cheese",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "shepherds-pie",
+    "title": "Shepherd's Pie",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "meatloaf-mashed",
+    "title": "Meatloaf and Mashed Potatoes",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "chicken-pot-pie",
+    "title": "Chicken Pot Pie",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "beef-stroganoff",
+    "title": "Beef Stroganoff",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "loaded-baked-potato-bar",
+    "title": "Baked Potato Bar",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "creamy-tuscan-chicken",
+    "title": "Tuscan Chicken",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "philly-cheesesteak-skillet",
+    "title": "Philly Cheesesteak Skillet",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "sausage-peppers-onions",
+    "title": "Sausage Peppers and Onions",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "beef-barley-soup",
+    "title": "Beef Barley Soup",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "baked-ziti",
+    "title": "Baked Ziti",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "chicken-dumpling-soup",
+    "title": "Chicken and Dumplings",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "bbq-chicken-mac-and-cheese",
+    "title": "BBQ Chicken Mac and Cheese",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "lemon-herb-salmon",
+    "title": "Lemon Herb Salmon",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "greek-chicken-bowls",
+    "title": "Greek Chicken Bowls",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "turkey-chili",
+    "title": "Turkey Chili",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "sheet-pan-fajitas",
+    "title": "Chicken Fajitas",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "stuffed-peppers",
+    "title": "Quinoa Stuffed Peppers",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "chicken-souvlaki",
+    "title": "Chicken Souvlaki",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "turkey-burgers",
+    "title": "Black Bean Turkey Burgers",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "ginger-salmon-bowls",
+    "title": "Ginger Salmon Rice Bowls",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "mediterranean-chickpea",
+    "title": "Mediterranean Chickpea Bowls",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "turkey-meatball-zoodles",
+    "title": "Turkey Meatballs with Zucchini Noodles",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "performance-burrito-bowls",
+    "title": "Chicken Burrito Bowls",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "herb-roasted-thighs",
+    "title": "Herb Roasted Chicken Thighs",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "garlic-butter-shrimp",
+    "title": "Garlic Butter Shrimp",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "sheet-pan-sausage-peppers",
+    "title": "Sausage and Peppers",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "skillet-chicken-alfredo",
+    "title": "Chicken Alfredo",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "beef-broccoli",
+    "title": "Beef and Broccoli",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "chicken-tikka-masala",
+    "title": "Chicken Tikka Masala",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "fast-philly-skillet",
+    "title": "Quick Philly Skillet",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "pork-carnitas-tacos",
+    "title": "Pork Carnitas Tacos",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "chicken-quesadillas",
+    "title": "Chicken Quesadillas",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "chili-mac",
+    "title": "Chili Mac Skillet",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "pad-thai",
+    "title": "Pad Thai",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "pepperoni-pizza-night",
+    "title": "Pepperoni Pizza",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "detroit-style-pizza",
+    "title": "Detroit-Style Pepperoni Pizza",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "bbq-chicken-pizza",
+    "title": "BBQ Chicken Pizza",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "white-garlic-chicken-pizza",
+    "title": "White Garlic Chicken Pizza",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "meat-lovers-sheet-pizza",
+    "title": "Meat Lover's Pizza",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "margherita-pizza",
+    "title": "Margherita Pizza",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "honey-soppressata-pizza",
+    "title": "Hot Honey Soppressata Pizza",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "breakfast-sausage-pizza",
+    "title": "Breakfast Sausage Gravy Pizza",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "batch-lasagna",
+    "title": "Batch Lasagna",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "pulled-pork-mac",
+    "title": "Pulled Pork Mac and Cheese",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "chicken-alfredo-bake",
+    "title": "Chicken Alfredo Bake",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "big-chili",
+    "title": "Beef and Bean Chili",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "enchilada-casserole",
+    "title": "Chicken Enchilada Casserole",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "sausage-egg-bake",
+    "title": "Sausage Egg Bake",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "jambalaya",
+    "title": "Jambalaya",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "loaded-potato-feed",
+    "title": "Potato Bar Feed",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "breakfast-burrito-bar",
+    "title": "Breakfast Burrito Bar",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "pancake-short-stack",
+    "title": "Pancake Short Stack",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "bacon-egg-hash",
+    "title": "Bacon Egg Hash Brown Skillet",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "french-toast-casserole",
+    "title": "French Toast Casserole",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "chorizo-breakfast-tacos",
+    "title": "Chorizo Breakfast Tacos",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "biscuits-gravy",
+    "title": "Biscuits and Gravy",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "thai-basil-chicken",
+    "title": "Thai Basil Chicken",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "bulgogi-bowls",
+    "title": "Bulgogi Bowls",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "butter-chicken",
+    "title": "Butter Chicken",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "street-corn-chicken",
+    "title": "Street Corn Chicken Bowls",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "moroccan-meatballs",
+    "title": "Moroccan Lamb Meatballs",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "teriyaki-donburi",
+    "title": "Teriyaki Chicken Donburi",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "game-day-nachos",
+    "title": "Game Day Nachos",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "buffalo-chicken-dip",
+    "title": "Buffalo Chicken Dip",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "slider-bar",
+    "title": "Slider Bar",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "philly-egg-rolls",
+    "title": "Philly Cheesesteak Egg Rolls",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "sunday-chili-batch",
+    "title": "Sunday Batch Chili",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "sheet-pan-meal-prep",
+    "title": "Chicken Meal Prep Trays",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "one-pot-chicken-rice",
+    "title": "Chicken and Rice",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "five-ingredient-pasta",
+    "title": "Garlic Butter Pasta",
+    "catalog": "golden100"
+  },
+  {
+    "slug": "lemon-garlic-chicken-tray",
+    "title": "Lemon Garlic Chicken Tray",
+    "catalog": "performance"
+  },
+  {
+    "slug": "herb-baked-salmon-tray",
+    "title": "Baked Salmon Tray",
+    "catalog": "performance"
+  },
+  {
+    "slug": "lean-turkey-bean-chili",
+    "title": "Lean Turkey and Bean Chili",
+    "catalog": "performance"
+  },
+  {
+    "slug": "sheet-pan-chicken-fajitas-lite",
+    "title": "Chicken Fajitas",
+    "catalog": "performance"
+  },
+  {
+    "slug": "turkey-sausage-egg-muffins",
+    "title": "Turkey Sausage Egg Muffins",
+    "catalog": "performance"
+  },
+  {
+    "slug": "lemon-garlic-shrimp-pasta",
+    "title": "Lemon Garlic Shrimp Pasta",
+    "catalog": "performance"
+  },
+  {
+    "slug": "baked-turkey-meatball-marinara",
+    "title": "Baked Turkey Meatball Marinara",
+    "catalog": "performance"
+  },
+  {
+    "slug": "cottage-cheese-protein-pasta",
+    "title": "Protein Pasta Bake",
+    "catalog": "performance"
+  },
+  {
+    "slug": "honey-garlic-chicken-rice-bowls",
+    "title": "Honey Garlic Chicken Bowls",
+    "catalog": "performance"
+  },
+  {
+    "slug": "white-bean-chicken-chili",
+    "title": "White Bean Chicken Chili",
+    "catalog": "performance"
+  },
+  {
+    "slug": "korean-beef-rice-bowls",
+    "title": "Beef Rice Bowls",
+    "catalog": "performance"
+  },
+  {
+    "slug": "crispy-fish-taco-night",
+    "title": "Fish Tacos",
+    "catalog": "performance"
+  },
+  {
+    "slug": "smoky-lentil-kale-soup",
+    "title": "Lentil and Kale Soup",
+    "catalog": "performance"
+  },
+  {
+    "slug": "crock-barbacoa-chicken",
+    "title": "Barbacoa Chicken",
+    "catalog": "performance"
+  },
+  {
+    "slug": "shawarma-chicken-rice-bowls",
+    "title": "Shawarma Chicken Bowls",
+    "catalog": "performance"
+  },
+  {
+    "slug": "honey-lime-chicken-tray",
+    "title": "Honey Lime Chicken Tray",
+    "catalog": "performance"
+  },
+  {
+    "slug": "turkey-taco-skillet",
+    "title": "Turkey Taco Skillet",
+    "catalog": "performance"
+  },
+  {
+    "slug": "maple-soy-salmon-bowls",
+    "title": "Maple Soy Salmon Bowls",
+    "catalog": "performance"
+  },
+  {
+    "slug": "turkey-sweet-potato-chili",
+    "title": "Turkey Sweet Potato Chili",
+    "catalog": "performance"
+  },
+  {
+    "slug": "asian-chicken-lettuce-cups",
+    "title": "Chicken Lettuce Cups",
+    "catalog": "performance"
+  },
+  {
+    "slug": "mediterranean-baked-fish-tray",
+    "title": "Baked Cod Tray",
+    "catalog": "performance"
+  },
+  {
+    "slug": "greek-lemon-chicken-potatoes",
+    "title": "Lemon Chicken and Potatoes",
+    "catalog": "performance"
+  },
+  {
+    "slug": "moroccan-chicken-chickpea-tray",
+    "title": "Moroccan Chicken and Chickpeas",
+    "catalog": "performance"
+  },
+  {
+    "slug": "hummus-chicken-platter",
+    "title": "Hummus Chicken Platter",
+    "catalog": "performance"
+  },
+  {
+    "slug": "tabbouleh-chicken-bowls",
+    "title": "Tabbouleh Chicken Bowls",
+    "catalog": "performance"
+  },
+  {
+    "slug": "zaatar-roasted-chicken-thighs",
+    "title": "Za'atar Chicken Thighs",
+    "catalog": "performance"
+  },
+  {
+    "slug": "lemon-salmon-orzo-skillet",
+    "title": "Lemon Salmon Orzo",
+    "catalog": "performance"
+  },
+  {
+    "slug": "white-bean-kale-soup",
+    "title": "White Bean and Kale Soup",
+    "catalog": "performance"
+  },
+  {
+    "slug": "lemon-chicken-orzo-soup",
+    "title": "Lemon Chicken Orzo Soup",
+    "catalog": "performance"
+  },
+  {
+    "slug": "lean-beef-broccoli-rice",
+    "title": "Beef and Broccoli Rice",
+    "catalog": "performance"
+  },
+  {
+    "slug": "turkey-lettuce-wrap-night",
+    "title": "Turkey Lettuce Wraps",
+    "catalog": "performance"
+  },
+  {
+    "slug": "caprese-chicken-bake",
+    "title": "Caprese Chicken Bake",
+    "catalog": "performance"
+  },
+  {
+    "slug": "blackened-cod-taco-night",
+    "title": "Blackened Cod Tacos",
+    "catalog": "performance"
+  },
+  {
+    "slug": "pesto-tomato-chicken-tray",
+    "title": "Pesto Chicken Tray",
+    "catalog": "performance"
+  },
+  {
+    "slug": "boneless-chicken-thighs-sweet-potato-spinach",
+    "title": "Chicken Thighs with Sweet Potato and Spinach",
+    "catalog": "performance"
+  },
+  {
+    "slug": "spanish-chicken-chorizo-rice",
+    "title": "Chicken and Chorizo Rice",
+    "catalog": "performance"
+  },
+  {
+    "slug": "yogurt-marinated-grill-chicken",
+    "title": "Yogurt Marinated Chicken",
+    "catalog": "performance"
+  },
+  {
+    "slug": "lentil-mushroom-bolognese",
+    "title": "Lentil Bolognese",
+    "catalog": "performance"
+  },
+  {
+    "slug": "chicken-enchilada-skillet-light",
+    "title": "Chicken Enchilada Skillet",
+    "catalog": "performance"
+  },
+  {
+    "slug": "italian-sausage-veg-sheet-pan",
+    "title": "Sausage and Peppers",
+    "catalog": "performance"
+  },
+  {
+    "slug": "turkey-zoodle-bolognese",
+    "title": "Turkey Zoodle Bolognese",
+    "catalog": "performance"
+  },
+  {
+    "slug": "cajun-chicken-rice-bowl",
+    "title": "Cajun Chicken and Rice",
+    "catalog": "performance"
+  },
+  {
+    "slug": "chipotle-lime-chicken-tacos",
+    "title": "Chipotle Lime Chicken Tacos",
+    "catalog": "performance"
+  },
+  {
+    "slug": "grilled-shrimp-quinoa-bowls",
+    "title": "Shrimp and Quinoa Bowls",
+    "catalog": "performance"
+  },
+  {
+    "slug": "veggie-egg-casserole-tray",
+    "title": "Veggie Egg Casserole",
+    "catalog": "performance"
+  },
+  {
+    "slug": "maple-mustard-salmon-tray",
+    "title": "Maple Mustard Salmon Tray",
+    "catalog": "performance"
+  },
+  {
+    "slug": "salsa-verde-crock-chicken",
+    "title": "Salsa Verde Crock Chicken",
+    "catalog": "performance"
+  },
+  {
+    "slug": "turkey-quinoa-stuffed-peppers",
+    "title": "Turkey Stuffed Peppers",
+    "catalog": "performance"
+  },
+  {
+    "slug": "turkey-shepherds-sweet-potato",
+    "title": "Turkey Shepherd's Pie",
+    "catalog": "performance"
+  },
+  {
+    "slug": "baked-falafel-hall-bowls",
+    "title": "Falafel Bowls",
+    "catalog": "performance"
+  },
+  {
+    "slug": "bacon-egg-hash-skillet",
+    "title": "Bacon Egg Hash Skillet",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "bacon-hash-burritos",
+    "title": "Bacon Hash Burritos",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "bagel-lox-breakfast-board",
+    "title": "Bagel and Lox Breakfast Board",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "bbq-breakfast-hash",
+    "title": "BBQ Breakfast Hash",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "belgian-waffle-platter",
+    "title": "Belgian Waffle Platter",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "biscuit-french-toast-sliders",
+    "title": "Biscuit French Toast Sliders",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "breakfast-crunchwraps",
+    "title": "Breakfast Crunchwraps",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "breakfast-enchiladas",
+    "title": "Breakfast Enchiladas for the Crew",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "breakfast-fried-rice-crew",
+    "title": "Breakfast Fried Rice for the Crew",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "breakfast-nachos-supreme",
+    "title": "Breakfast Nachos Supreme",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "breakfast-poutine",
+    "title": "Breakfast Poutine",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "breakfast-quesadillas",
+    "title": "Breakfast Quesadillas",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "breakfast-sandwich-trays",
+    "title": "Breakfast Sandwich Trays",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "breakfast-sliders",
+    "title": "Breakfast Sliders",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "breakfast-stromboli-roll",
+    "title": "Breakfast Stromboli Roll",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "buttermilk-pancakes",
+    "title": "Buttermilk Pancakes for the Crew",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "cast-iron-breakfast-skillet",
+    "title": "Cast Iron Breakfast Skillet",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "chicken-and-waffles-crew",
+    "title": "Chicken and Waffles for the Crew",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "chilaquiles-verde-bake",
+    "title": "Chilaquiles Verde Bake",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "chorizo-breakfast-burritos",
+    "title": "Chorizo Breakfast Burritos",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "chorizo-breakfast-hash",
+    "title": "Chorizo Breakfast Hash",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "club-sandwich-breakfast-bake",
+    "title": "Club Sandwich Breakfast Bake",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "corned-beef-hash-breakfast",
+    "title": "Corned Beef Hash Breakfast",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "country-fried-steak-eggs",
+    "title": "Country Fried Steak and Eggs Breakfast",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "cowboy-breakfast-skillet",
+    "title": "Cowboy Breakfast Skillet",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "crew-french-toast-bake",
+    "title": "Crew French Toast Bake",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "denver-breakfast-casserole",
+    "title": "Denver Breakfast Casserole",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "eggs-benedict-hall-style",
+    "title": "Eggs Benedict Hall Style",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "farmers-breakfast-casserole",
+    "title": "Farmer's Breakfast Casserole",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "fire-captain-omelette-bar",
+    "title": "Fire Captain Omelette Bar",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "firehall-breakfast-pizza",
+    "title": "Firehall Breakfast Pizza",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "german-potato-breakfast-skillet",
+    "title": "German Potato Breakfast Skillet",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "green-chile-breakfast-burritos",
+    "title": "Green Chile Breakfast Burritos",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "hall-breakfast-burritos",
+    "title": "Hall Breakfast Burritos",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "hall-breakfast-wraps",
+    "title": "Hall Breakfast Wraps",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "hall-sausage-biscuits-gravy",
+    "title": "Hall Sausage Biscuits & Gravy",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "ham-cheddar-egg-bake",
+    "title": "Ham & Cheddar Egg Bake",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "ham-pepper-skillet",
+    "title": "Ham & Pepper Breakfast Skillet",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "huevos-rancheros-crew",
+    "title": "Huevos Rancheros for the Crew",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "irish-breakfast-fry-up",
+    "title": "Irish Breakfast Fry-Up",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "johnnycakes-with-syrup",
+    "title": "Johnnycakes with Maple Syrup",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "lumberjack-breakfast-platter",
+    "title": "Lumberjack Breakfast Platter",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "maple-sausage-pinwheels",
+    "title": "Maple Sausage Pinwheels",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "migas-for-the-crew",
+    "title": "Migas for the Crew",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "monte-cristo-sandwiches",
+    "title": "Monte Cristo Sandwiches",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "overnight-french-toast-bake",
+    "title": "Overnight French Toast Bake",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "overnight-sausage-strata",
+    "title": "Overnight Sausage Strata",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "quick-egg-tacos",
+    "title": "Quick Egg Tacos",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "red-lead-skillet",
+    "title": "Red Lead Skillet",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "sausage-egg-cheese-sandwiches",
+    "title": "Sausage Egg & Cheese Sandwiches",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "scrapple-and-eggs-skillet",
+    "title": "Scrapple and Eggs Skillet",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "sheet-pan-breakfast-hash",
+    "title": "Sheet Pan Breakfast Hash",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "sheet-pan-breakfast-sandwiches",
+    "title": "Sheet Pan Breakfast Sandwiches",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "sheet-pan-full-english",
+    "title": "Sheet Pan Full English",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "shrimp-and-grits-breakfast",
+    "title": "Shrimp and Grits Breakfast",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "smoked-salmon-benedit",
+    "title": "Smoked Salmon Benedict",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "southwest-egg-bake",
+    "title": "Southwest Egg Bake",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "steakhouse-hash-skillet",
+    "title": "Steakhouse Hash Skillet",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "tater-tot-breakfast-casserole",
+    "title": "Tater Tot Breakfast Casserole",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "turkey-sausage-burritos",
+    "title": "Turkey Sausage Breakfast Burritos",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "turkey-sausage-egg-bake",
+    "title": "Turkey Sausage Egg Bake",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "veggie-egg-burritos",
+    "title": "Veggie Egg Burritos",
+    "catalog": "breakfast"
+  },
+  {
+    "slug": "carolina-vinegar-pulled-pork",
+    "title": "Carolina Vinegar Pulled Pork",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "honey-chipotle-chicken-thighs",
+    "title": "Honey Chipotle Grilled Chicken Thighs",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "smoked-chicken-quarters-white-sauce",
+    "title": "Smoked Chicken Quarters with White Sauce",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "brisket-style-beef-sandwiches-au-jus",
+    "title": "Brisket-Style Beef Sandwiches",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "hot-honey-grilled-sausage-peppers",
+    "title": "Hot Honey Grilled Sausage & Peppers",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "bbq-bacon-cheddar-burgers",
+    "title": "BBQ Bacon Cheddar Burgers",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "texas-central-brisket-crew",
+    "title": "Texas Central Brisket for the Crew",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "firehall-burnt-ends-platter",
+    "title": "Firehall Burnt Ends Platter",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "overnight-smoked-brisket-hold",
+    "title": "Overnight Smoked Brisket Hold",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "pepper-smoked-brisket-flat",
+    "title": "Pepper-Crusted Smoked Brisket Flat",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "kansas-city-pulled-pork-sandwiches",
+    "title": "Kansas City Pulled Pork Sandwiches",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "memphis-dry-rub-pulled-pork",
+    "title": "Memphis Dry-Rub Pulled Pork",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "texas-smoked-pulled-pork-shoulder",
+    "title": "Texas Smoked Pulled Pork Shoulder",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "alabama-white-sauce-pulled-pork",
+    "title": "Alabama White Sauce Pulled Pork",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "competition-bbq-chicken-thighs",
+    "title": "Competition BBQ Chicken Thighs",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "smoked-bbq-chicken-wings-tray",
+    "title": "Smoked BBQ Chicken Wings Tray",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "hickory-smoked-chicken-breast",
+    "title": "Hickory Smoked Chicken Breast",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "santa-maria-tri-tip-roast",
+    "title": "Santa Maria Tri-Tip Roast",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "reverse-seared-ribeye-crew",
+    "title": "Reverse-Seared Ribeye for the Crew",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "smoked-picanha-steak-platter",
+    "title": "Smoked Picanha Steak Platter",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "firehall-double-smash-burgers-bbq",
+    "title": "Firehall Double Smash Burgers BBQ",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "jalapeno-cheddar-smoked-sausages",
+    "title": "Jalapeño Cheddar Smoked Sausages",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "smoked-mac-and-cheese-crew",
+    "title": "Smoked Mac and Cheese for the Crew",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "smoked-baked-beans-crew",
+    "title": "Smoked Baked Beans for the Crew",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "smoked-potato-salad-tray",
+    "title": "Smoked Potato Salad Tray",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "lamb-merguez-skewers-crew",
+    "title": "North African Urfa Lamb Merguez Logs",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "pork-satay-skewers-crew",
+    "title": "Indonesian Tamarind Pork Satay Batches",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "gochujang-beef-skewers-crew",
+    "title": "Seoul Chili Pear Beef Cubes",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "garlic-butter-shrimp-skewers",
+    "title": "Garlic Tarragon Shrimp Skewers",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "caprese-steak-skewers-crew",
+    "title": "Heirloom Tomato Bocconcini Sirloin Stacks",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "honey-sriracha-shrimp-skewers",
+    "title": "Palm Sugar Lime Shrimp Skewers",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "yakiniku-grill-platter-crew",
+    "title": "Tokyo Tare Ribeye Yakiniku Board",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "tandoori-lamb-chop-platter",
+    "title": "Kashmiri Mustard-Oil Lamb Chop Feast",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "portuguese-linguica-grill-platter",
+    "title": "Lisbon Piri-Piri Linguica Spread",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "spiedie-chicken-platter-crew",
+    "title": "Binghamton White-Wine Spiedie Tray",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "pollo-asado-citrus-platter",
+    "title": "Yucatán Achiote Pollo Asado Spread",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "mixed-lamb-chop-grill-board",
+    "title": "Za'atar Loin and Shoulder Lamb Board",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "maple-bourbon-grilled-trout",
+    "title": "Pecan Bourbon Whole Trout Board",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "cajun-grilled-cod-crew",
+    "title": "Black Iron Remoulade Cod Plates",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "grilled-cod-lemon-packets",
+    "title": "Caper-Butter Cod Foil Packets",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "chili-lime-grilled-tilapia",
+    "title": "Ancho-Tilapia with Charred Corn Salsa",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "grilled-chicken-pesto-panini-crew",
+    "title": "Sun-Dried Tomato Pesto Panini Press",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "pressed-cuban-sandwiches-crew",
+    "title": "Pressed Cuban Sandwiches for the Crew",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "grilled-reuben-sandwiches-crew",
+    "title": "Grilled Reuben Sandwiches for the Crew",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "andouille-po-boy-rolls-crew",
+    "title": "Andouille Po Boy Rolls for the Crew",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "cast-iron-steak-fajita-sizzlers",
+    "title": "Cast Iron Skirt Steak Sizzlers",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "firehall-hibachi-mixed-grill-crew",
+    "title": "Teppan Shrimp and Pork Belly Mixed Grill",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "flat-top-philly-cheesesteaks-crew",
+    "title": "Cooper Sharp Chopped Ribeye Hoagies",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "griddle-smash-sausage-peppers",
+    "title": "Giardiniera Smash Sausage Hoagies",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "mongolian-beef-flat-top-crew",
+    "title": "Scallion Crisp Mongolian Flank Tray",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "firehall-street-elote-cups",
+    "title": "Epazote Esquites Street Cups",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "loaded-ranch-potato-salad-crew",
+    "title": "Blue Cheese Fingerling Ranch Tray",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "firehall-antipasto-pasta-salad",
+    "title": "Mortadella Farfalle Antipasto Tray",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "grilled-peach-burrata-salad",
+    "title": "Pistachio Peach and Burrata Salad",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "charred-broccolini-lemon-tray",
+    "title": "Sicilian Anchovy Broccolini Tray",
+    "catalog": "bbq"
+  },
+  {
+    "slug": "smoked-turkey-breast",
+    "title": "Smoked Turkey Breast for the Crew",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "smoked-meatloaf",
+    "title": "Smoked Meatloaf with Glaze",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "pork-belly-burnt-ends",
+    "title": "Pork Belly Burnt Ends",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "smoked-sausage-platter",
+    "title": "Smoked Sausage Platter",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "smoked-queso-fundido",
+    "title": "Smoked Queso Fundido",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "hickory-turkey-legs",
+    "title": "Hickory Smoked Turkey Legs",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "smoked-tri-tip",
+    "title": "Smoked Tri-Tip Roast",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "smoked-corned-beef",
+    "title": "Smoked Corned Beef Brisket",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "pellet-smoked-chicken-quarters",
+    "title": "Pellet Smoked Chicken Quarters",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "loaded-potato-skins",
+    "title": "Loaded Potato Skins",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "game-day-pizza-sliders",
+    "title": "Game Day Pizza Sliders",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "pretzel-bite-platter",
+    "title": "Pretzel Bite Platter with Beer Cheese",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "jalapeno-popper-dip",
+    "title": "Jalapeño Popper Dip",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "philly-cheesesteak-sliders",
+    "title": "Philly Cheesesteak Sliders",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "chicken-wing-bar-night",
+    "title": "Chicken Wing Bar Night",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "bbq-meatball-skewers",
+    "title": "BBQ Meatball Skewers",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "soft-pretzel-dogs",
+    "title": "Soft Pretzel Hot Dogs",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "firehall-charcuterie-board",
+    "title": "Firehall Charcuterie Board",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "cheesy-beef-nacho-bake",
+    "title": "Cheesy Beef Nacho Bake",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "shawarma-bar-night",
+    "title": "Shawarma Bar Night",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "fajita-bar-night",
+    "title": "Fajita Bar Night",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "hall-burger-bar",
+    "title": "Hall Burger Bar",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "pasta-bar-night",
+    "title": "Pasta Bar Night",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "rice-bowl-bar-night",
+    "title": "Rice Bowl Bar Night",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "sandwich-board-night",
+    "title": "Sandwich Board Night",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "mediterranean-feast-night",
+    "title": "Mediterranean Feast Night",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "burrito-bowl-bar-night",
+    "title": "Burrito Bowl Bar Night",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "loaded-nacho-bar-night",
+    "title": "Loaded Nacho Bar Night",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "build-your-own-pho-bar",
+    "title": "Build-Your-Own Pho Bar",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "mesquite-chuck-roast",
+    "title": "Mesquite Smoked Chuck Roast",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "molasses-bourbon-pork-ribs",
+    "title": "Molasses Bourbon Pork Ribs",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "applewood-pork-shoulder-steaks",
+    "title": "Applewood Grilled Pork Shoulder Steaks",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "honey-mustard-oven-chicken-thighs",
+    "title": "Honey Mustard Baked Chicken Thighs",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "spatchcock-lemon-roast-chicken",
+    "title": "Spatchcock Lemon Roast Chicken",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "cajun-chicken-rice-skillet",
+    "title": "Cajun Chicken and Rice Skillet",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "paprika-roasted-chicken-quarters",
+    "title": "Paprika Roasted Chicken Quarters",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "cast-iron-chicken-fajitas",
+    "title": "Cast Iron Chicken Fajitas",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "mushroom-swiss-steak-pan",
+    "title": "Mushroom Swiss Steak Pan",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "pepper-steak-onions",
+    "title": "Pepper Steak with Onions",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "dutch-oven-pot-roast",
+    "title": "Dutch Oven Pot Roast",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "enchilada-beef-skillet",
+    "title": "Beef Enchilada Skillet",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "mostaccioli-sausage-bake",
+    "title": "Baked Mostaccioli with Sausage",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "creamy-chicken-penne-alfredo",
+    "title": "Creamy Chicken Penne Alfredo",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "rigatoni-meat-sauce-batch",
+    "title": "Rigatoni with Meat Sauce",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "station-cobb-salad",
+    "title": "Station Cobb Salad",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "warm-spinach-chicken-salad",
+    "title": "Warm Spinach Chicken Salad",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "hall-chicken-noodle-soup",
+    "title": "Hall Chicken Noodle Soup",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "green-chile-chicken-stew",
+    "title": "Green Chile Chicken Stew",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "ginger-soy-chicken-rice-bowls",
+    "title": "Ginger Soy Chicken Rice Bowls",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "mediterranean-chicken-farro-bowls",
+    "title": "Mediterranean Chicken Farro Bowls",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "kielbasa-cabbage-potato-skillet",
+    "title": "Kielbasa Cabbage Potato Skillet",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "cheesy-chicken-broccoli-rice",
+    "title": "Cheesy Chicken Broccoli Rice",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "sheet-pan-meatball-marinara",
+    "title": "Sheet Pan Meatball Marinara Feed",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "hall-sloppy-joe-feed",
+    "title": "Hall Sloppy Joe Feed",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "montreal-smoked-meat-platter",
+    "title": "Montreal Smoked Meat Platter",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "tourtiere-for-the-crew",
+    "title": "Tourtière for the Crew",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "firehall-donair-platter",
+    "title": "Firehall Donair Platter",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "maple-cured-salmon-plank",
+    "title": "Maple-Cured Salmon Plank",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "classic-poutine-feed-crew",
+    "title": "Classic Poutine Feed for the Crew",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "cottage-pie-for-the-crew",
+    "title": "Cottage Pie for the Crew",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "chicken-paprikash-hall",
+    "title": "Chicken Paprikash for the Hall",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "chicken-cacciatore-crew",
+    "title": "Chicken Cacciatore for the Crew",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "coq-au-vin-batch",
+    "title": "Coq au Vin Batch",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "hungarian-goulash-crew",
+    "title": "Hungarian Goulash for the Crew",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "tonkotsu-ramen-crew",
+    "title": "Tonkotsu Ramen for the Crew",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "miso-ramen-bar",
+    "title": "Miso Ramen Bar",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "malaysian-laksa-soup",
+    "title": "Malaysian Laksa Soup",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "bun-bo-hue-noodle-soup",
+    "title": "Bun Bo Hue Noodle Soup",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "wonton-noodle-soup-crew",
+    "title": "Wonton Noodle Soup for the Crew",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "peri-peri-chicken-platter",
+    "title": "Peri Peri Chicken Platter",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "korean-bulgogi-grill-night",
+    "title": "Korean Bulgogi Grill Night",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "lamb-kofta-skewer-platter",
+    "title": "Lamb Kofta Skewer Platter",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "moroccan-chicken-kebab-platter",
+    "title": "Moroccan Chicken Kebab Platter",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "lebanese-chicken-shish-platter",
+    "title": "Lebanese Chicken Shish Platter",
+    "catalog": "hallExpansion"
+  },
+  {
+    "slug": "applewood-pork-shoulder-steaks",
+    "title": "Applewood Grilled Pork Shoulder Steaks",
+    "catalog": "hall"
+  },
+  {
+    "slug": "asian-chicken-lettuce-cups",
+    "title": "Asian Chicken Lettuce Cups",
+    "catalog": "hall"
+  },
+  {
+    "slug": "baked-falafel-hall-bowls",
+    "title": "Baked Falafel Hall Bowls",
+    "catalog": "hall"
+  },
+  {
+    "slug": "mac-and-cheese-bake",
+    "title": "Baked Mac and Cheese",
+    "catalog": "hall"
+  },
+  {
+    "slug": "mostaccioli-sausage-bake",
+    "title": "Baked Mostaccioli with Sausage",
+    "catalog": "hall"
+  },
+  {
+    "slug": "baked-turkey-meatball-marinara",
+    "title": "Baked Turkey Meatball Marinara",
+    "catalog": "hall"
+  },
+  {
+    "slug": "baked-ziti",
+    "title": "Baked Ziti",
+    "catalog": "hall"
+  },
+  {
+    "slug": "bbq-brisket-burnt-ends",
+    "title": "BBQ Burnt Ends",
+    "catalog": "hall"
+  },
+  {
+    "slug": "bbq-chicken-bowls",
+    "title": "BBQ Chicken Bowls",
+    "catalog": "hall"
+  },
+  {
+    "slug": "bbq-chicken-pizza",
+    "title": "BBQ Chicken Pizza",
+    "catalog": "hall"
+  },
+  {
+    "slug": "bbq-chicken-sliders",
+    "title": "BBQ Chicken Sliders",
+    "catalog": "hall"
+  },
+  {
+    "slug": "bbq-meatball-skewers",
+    "title": "BBQ Meatball Skewers",
+    "catalog": "hall"
+  },
+  {
+    "slug": "beef-barley-soup",
+    "title": "Beef Barley Soup",
+    "catalog": "hall"
+  },
+  {
+    "slug": "enchilada-beef-skillet",
+    "title": "Beef Enchilada Skillet",
+    "catalog": "hall"
+  },
+  {
+    "slug": "beef-stroganoff",
+    "title": "Beef Stroganoff",
+    "catalog": "hall"
+  },
+  {
+    "slug": "beer-can-chicken",
+    "title": "Beer Can Chicken",
+    "catalog": "hall"
+  },
+  {
+    "slug": "turkey-burgers",
+    "title": "Black Bean Turkey Burgers",
+    "catalog": "hall"
+  },
+  {
+    "slug": "blackened-cod-taco-night",
+    "title": "Blackened Cod Taco Night",
+    "catalog": "hall"
+  },
+  {
+    "slug": "beef-dip",
+    "title": "Beef Dip Sandwiches",
+    "catalog": "hall"
+  },
+  {
+    "slug": "boneless-chicken-thighs-sweet-potato-spinach",
+    "title": "Boneless Chicken Thighs with Sweet Potato & Fresh Spinach",
+    "catalog": "hall"
+  },
+  {
+    "slug": "breakfast-sausage-pizza",
+    "title": "Breakfast Sausage Gravy Pizza",
+    "catalog": "hall"
+  },
+  {
+    "slug": "buffalo-chicken-dip",
+    "title": "Buffalo Chicken Dip",
+    "catalog": "hall"
+  },
+  {
+    "slug": "build-your-own-pho-bar",
+    "title": "Build-Your-Own Pho Bar",
+    "catalog": "hall"
+  },
+  {
+    "slug": "bun-bo-hue-noodle-soup",
+    "title": "Bun Bo Hue Noodle Soup",
+    "catalog": "hall"
+  },
+  {
+    "slug": "burrito-bowl-bar-night",
+    "title": "Burrito Bowl Bar Night",
+    "catalog": "hall"
+  },
+  {
+    "slug": "butter-chicken",
+    "title": "Butter Chicken",
+    "catalog": "hall"
+  },
+  {
+    "slug": "cajun-chicken-rice-skillet",
+    "title": "Cajun Chicken and Rice Skillet",
+    "catalog": "hall"
+  },
+  {
+    "slug": "cajun-chicken-rice-bowl",
+    "title": "Cajun Chicken Rice Bowl",
+    "catalog": "hall"
+  },
+  {
+    "slug": "jambalaya",
+    "title": "Cajun Jambalaya for the Hall",
+    "catalog": "hall"
+  },
+  {
+    "slug": "caprese-chicken-bake",
+    "title": "Caprese Chicken Bake",
+    "catalog": "hall"
+  },
+  {
+    "slug": "carolina-mustard-pork",
+    "title": "Carolina Mustard Pulled Pork",
+    "catalog": "hall"
+  },
+  {
+    "slug": "cast-iron-chicken-fajitas",
+    "title": "Cast Iron Chicken Fajitas",
+    "catalog": "hall"
+  },
+  {
+    "slug": "cedar-plank-salmon",
+    "title": "Cedar Plank Grilled Salmon",
+    "catalog": "hall"
+  },
+  {
+    "slug": "grilled-pork-chops",
+    "title": "Charcoal Grilled Pork Chops",
+    "catalog": "hall"
+  },
+  {
+    "slug": "cheesy-beef-nacho-bake",
+    "title": "Cheesy Beef Nacho Bake",
+    "catalog": "hall"
+  },
+  {
+    "slug": "cheesy-chicken-broccoli-rice",
+    "title": "Cheesy Chicken Broccoli Rice",
+    "catalog": "hall"
+  },
+  {
+    "slug": "chicken-alfredo-bake",
+    "title": "Chicken Alfredo Bake",
+    "catalog": "hall"
+  },
+  {
+    "slug": "chicken-dumpling-soup",
+    "title": "Chicken and Dumplings",
+    "catalog": "hall"
+  },
+  {
+    "slug": "chicken-cacciatore-crew",
+    "title": "Chicken Cacciatore for the Crew",
+    "catalog": "hall"
+  },
+  {
+    "slug": "enchilada-casserole",
+    "title": "Chicken Enchilada Casserole",
+    "catalog": "hall"
+  },
+  {
+    "slug": "chicken-paprikash-hall",
+    "title": "Chicken Paprikash for the Hall",
+    "catalog": "hall"
+  },
+  {
+    "slug": "chicken-parm",
+    "title": "Chicken Parm",
+    "catalog": "hall"
+  },
+  {
+    "slug": "parm-hero-subs",
+    "title": "Chicken Parm Hero Subs",
+    "catalog": "hall"
+  },
+  {
+    "slug": "chicken-pot-pie",
+    "title": "Chicken Pot Pie",
+    "catalog": "hall"
+  },
+  {
+    "slug": "chicken-tikka-masala",
+    "title": "Chicken Tikka Masala",
+    "catalog": "hall"
+  },
+  {
+    "slug": "chicken-wing-bar-night",
+    "title": "Chicken Wing Bar Night",
+    "catalog": "hall"
+  },
+  {
+    "slug": "chili-mac",
+    "title": "Chili Mac Skillet",
+    "catalog": "hall"
+  },
+  {
+    "slug": "steak-tacos",
+    "title": "Street-Style Chimichurri Steak Tacos",
+    "catalog": "hall"
+  },
+  {
+    "slug": "chipotle-lime-chicken-tacos",
+    "title": "Chipotle Lime Chicken Tacos",
+    "catalog": "hall"
+  },
+  {
+    "slug": "meatloaf-mashed",
+    "title": "Classic Meatloaf with Mashed Potatoes",
+    "catalog": "hall"
+  },
+  {
+    "slug": "pepperoni-pizza-night",
+    "title": "Classic Pepperoni Pizza",
+    "catalog": "hall"
+  },
+  {
+    "slug": "classic-poutine-feed-crew",
+    "title": "Classic Poutine Feed for the Crew",
+    "catalog": "hall"
+  },
+  {
+    "slug": "coq-au-vin-batch",
+    "title": "Coq au Vin Batch",
+    "catalog": "hall"
+  },
+  {
+    "slug": "cottage-cheese-protein-pasta",
+    "title": "Cottage Cheese Protein Pasta Bake",
+    "catalog": "hall"
+  },
+  {
+    "slug": "cottage-pie-for-the-crew",
+    "title": "Cottage Pie for the Crew",
+    "catalog": "hall"
+  },
+  {
+    "slug": "creamy-chicken-penne-alfredo",
+    "title": "Creamy Chicken Penne Alfredo",
+    "catalog": "hall"
+  },
+  {
+    "slug": "creamy-tuscan-chicken",
+    "title": "Creamy Tuscan Chicken",
+    "catalog": "hall"
+  },
+  {
+    "slug": "crispy-chicken-cutlets",
+    "title": "Crispy Chicken Cutlets Marinara",
+    "catalog": "hall"
+  },
+  {
+    "slug": "crispy-fish-taco-night",
+    "title": "Crispy Fish Taco Night",
+    "catalog": "hall"
+  },
+  {
+    "slug": "crock-barbacoa-chicken",
+    "title": "Crock Barbacoa Chicken",
+    "catalog": "hall"
+  },
+  {
+    "slug": "detroit-style-pizza",
+    "title": "Detroit-Style Pepperoni Pizza",
+    "catalog": "hall"
+  },
+  {
+    "slug": "smash-burgers",
+    "title": "Double Smash Burgers with Caramelized Onions & Dirty Sauce",
+    "catalog": "hall"
+  },
+  {
+    "slug": "dutch-oven-pot-roast",
+    "title": "Dutch Oven Pot Roast",
+    "catalog": "hall"
+  },
+  {
+    "slug": "fajita-bar-night",
+    "title": "Fajita Bar Night",
+    "catalog": "hall"
+  },
+  {
+    "slug": "fast-philly-skillet",
+    "title": "Fast Philly Cheesesteak Skillet",
+    "catalog": "hall"
+  },
+  {
+    "slug": "firehall-charcuterie-board",
+    "title": "Firehall Charcuterie Board",
+    "catalog": "hall"
+  },
+  {
+    "slug": "chili-garlic-bread",
+    "title": "Firehouse Smoked Beef Chili with Cheesy Garlic Bread",
+    "catalog": "hall"
+  },
+  {
+    "slug": "firehall-donair-platter",
+    "title": "Firehall Donair Platter",
+    "catalog": "hall"
+  },
+  {
+    "slug": "meatball-hoagies",
+    "title": "Firehall Meatball Hoagies",
+    "catalog": "hall"
+  },
+  {
+    "slug": "pad-thai",
+    "title": "Firehall Pad Thai",
+    "catalog": "hall"
+  },
+  {
+    "slug": "margherita-pizza",
+    "title": "Fresh Margherita Pizza",
+    "catalog": "hall"
+  },
+  {
+    "slug": "game-day-pizza-sliders",
+    "title": "Game Day Pizza Sliders",
+    "catalog": "hall"
+  },
+  {
+    "slug": "five-ingredient-pasta",
+    "title": "Garlic Butter Pasta",
+    "catalog": "hall"
+  },
+  {
+    "slug": "garlic-butter-shrimp",
+    "title": "Garlic Butter Shrimp",
+    "catalog": "hall"
+  },
+  {
+    "slug": "batch-lasagna",
+    "title": "Giant Batch Lasagna",
+    "catalog": "hall"
+  },
+  {
+    "slug": "ginger-salmon-bowls",
+    "title": "Ginger Salmon Rice Bowls",
+    "catalog": "hall"
+  },
+  {
+    "slug": "ginger-soy-chicken-rice-bowls",
+    "title": "Ginger Soy Chicken Rice Bowls",
+    "catalog": "hall"
+  },
+  {
+    "slug": "greek-chicken-bowls",
+    "title": "Greek Chicken Bowls",
+    "catalog": "hall"
+  },
+  {
+    "slug": "greek-lemon-chicken-potatoes",
+    "title": "Greek Lemon Chicken and Potatoes",
+    "catalog": "hall"
+  },
+  {
+    "slug": "green-chile-chicken-stew",
+    "title": "Green Chile Chicken Stew",
+    "catalog": "hall"
+  },
+  {
+    "slug": "chicken-souvlaki",
+    "title": "Grilled Chicken Souvlaki",
+    "catalog": "hall"
+  },
+  {
+    "slug": "flank-chimichurri",
+    "title": "Grilled Flank Steak with Chimichurri",
+    "catalog": "hall"
+  },
+  {
+    "slug": "ny-strip-herb-butter",
+    "title": "Grilled NY Strip with Herb Butter",
+    "catalog": "hall"
+  },
+  {
+    "slug": "grilled-shrimp-quinoa-bowls",
+    "title": "Grilled Shrimp Quinoa Bowls",
+    "catalog": "hall"
+  },
+  {
+    "slug": "grilled-corn-cotija",
+    "title": "Grilled Street Corn with Cotija",
+    "catalog": "hall"
+  },
+  {
+    "slug": "hall-burger-bar",
+    "title": "Hall Burger Bar",
+    "catalog": "hall"
+  },
+  {
+    "slug": "chicken-caesar",
+    "title": "Chicken Caesar Salad",
+    "catalog": "hall"
+  },
+  {
+    "slug": "hall-chicken-noodle-soup",
+    "title": "Hall Chicken Noodle Soup",
+    "catalog": "hall"
+  },
+  {
+    "slug": "slider-bar",
+    "title": "Hall Slider Bar",
+    "catalog": "hall"
+  },
+  {
+    "slug": "hall-sloppy-joe-feed",
+    "title": "Hall Sloppy Joe Feed",
+    "catalog": "hall"
+  },
+  {
+    "slug": "hall-taco-bar",
+    "title": "Hall Taco Bar Night",
+    "catalog": "hall"
+  },
+  {
+    "slug": "big-chili",
+    "title": "Hall-Sized Beef and Bean Chili",
+    "catalog": "hall"
+  },
+  {
+    "slug": "herb-roasted-thighs",
+    "title": "Herb Roasted Chicken Thighs",
+    "catalog": "hall"
+  },
+  {
+    "slug": "herb-baked-salmon-tray",
+    "title": "Herb-Crusted Baked Salmon Tray",
+    "catalog": "hall"
+  },
+  {
+    "slug": "hickory-turkey-legs",
+    "title": "Hickory Smoked Turkey Legs",
+    "catalog": "hall"
+  },
+  {
+    "slug": "turkey-chili",
+    "title": "High-Protein Turkey Chili",
+    "catalog": "hall"
+  },
+  {
+    "slug": "honey-garlic-chicken-rice-bowls",
+    "title": "Honey Garlic Chicken Rice Bowls",
+    "catalog": "hall"
+  },
+  {
+    "slug": "honey-garlic-pork-tenderloin",
+    "title": "Honey Garlic Grilled Pork Tenderloin",
+    "catalog": "hall"
+  },
+  {
+    "slug": "honey-lime-chicken-tray",
+    "title": "Honey Lime Chicken Tray",
+    "catalog": "hall"
+  },
+  {
+    "slug": "honey-mustard-oven-chicken-thighs",
+    "title": "Honey Mustard Baked Chicken Thighs",
+    "catalog": "hall"
+  },
+  {
+    "slug": "honey-soppressata-pizza",
+    "title": "Hot Honey Soppressata Pizza",
+    "catalog": "hall"
+  },
+  {
+    "slug": "hummus-chicken-platter",
+    "title": "Hummus Chicken Platter",
+    "catalog": "hall"
+  },
+  {
+    "slug": "hungarian-goulash-crew",
+    "title": "Hungarian Goulash for the Crew",
+    "catalog": "hall"
+  },
+  {
+    "slug": "italian-sausage-veg-sheet-pan",
+    "title": "Italian Sausage and Veg Sheet Pan",
+    "catalog": "hall"
+  },
+  {
+    "slug": "jalapeno-popper-dip",
+    "title": "Jalapeño Popper Dip",
+    "catalog": "hall"
+  },
+  {
+    "slug": "jerk-chicken",
+    "title": "Jerk Chicken & Peas and Rice",
+    "catalog": "hall"
+  },
+  {
+    "slug": "smoked-brisket",
+    "title": "Kansas City Smoked Brisket",
+    "catalog": "hall"
+  },
+  {
+    "slug": "kielbasa-cabbage-potato-skillet",
+    "title": "Kielbasa Cabbage Potato Skillet",
+    "catalog": "hall"
+  },
+  {
+    "slug": "korean-beef-rice-bowls",
+    "title": "Korean Beef Rice Bowls",
+    "catalog": "hall"
+  },
+  {
+    "slug": "korean-bulgogi-grill-night",
+    "title": "Korean Bulgogi Grill Night",
+    "catalog": "hall"
+  },
+  {
+    "slug": "bulgogi-bowls",
+    "title": "Korean Bulgogi Rice Bowls",
+    "catalog": "hall"
+  },
+  {
+    "slug": "lamb-kofta-skewer-platter",
+    "title": "Lamb Kofta Skewer Platter",
+    "catalog": "hall"
+  },
+  {
+    "slug": "lean-beef-broccoli-rice",
+    "title": "Lean Beef and Broccoli Rice",
+    "catalog": "hall"
+  },
+  {
+    "slug": "lean-turkey-bean-chili",
+    "title": "Lean Turkey and Bean Chili",
+    "catalog": "hall"
+  },
+  {
+    "slug": "lebanese-chicken-shish-platter",
+    "title": "Lebanese Chicken Shish Platter",
+    "catalog": "hall"
+  },
+  {
+    "slug": "lemon-chicken-orzo-soup",
+    "title": "Lemon Chicken Orzo Soup",
+    "catalog": "hall"
+  },
+  {
+    "slug": "lemon-garlic-chicken-tray",
+    "title": "Lemon Garlic Chicken Tray Bake",
+    "catalog": "hall"
+  },
+  {
+    "slug": "lemon-garlic-shrimp-pasta",
+    "title": "Lemon Garlic Shrimp Pasta",
+    "catalog": "hall"
+  },
+  {
+    "slug": "lemon-herb-salmon",
+    "title": "Lemon Herb Grilled Salmon",
+    "catalog": "hall"
+  },
+  {
+    "slug": "lemon-salmon-orzo-skillet",
+    "title": "Lemon Salmon Orzo Skillet",
+    "catalog": "hall"
+  },
+  {
+    "slug": "lentil-mushroom-bolognese",
+    "title": "Lentil Mushroom Bolognese",
+    "catalog": "hall"
+  },
+  {
+    "slug": "chicken-enchilada-skillet-light",
+    "title": "Light Chicken Enchilada Skillet",
+    "catalog": "hall"
+  },
+  {
+    "slug": "loaded-baked-potato-bar",
+    "title": "Loaded Baked Potato Bar",
+    "catalog": "hall"
+  },
+  {
+    "slug": "game-day-nachos",
+    "title": "Loaded Game Day Nachos",
+    "catalog": "hall"
+  },
+  {
+    "slug": "loaded-nacho-bar-night",
+    "title": "Loaded Nacho Bar Night",
+    "catalog": "hall"
+  },
+  {
+    "slug": "loaded-nacho-skillet",
+    "title": "Loaded Nacho Skillet",
+    "catalog": "hall"
+  },
+  {
+    "slug": "loaded-potato-feed",
+    "title": "Loaded Potato Feed",
+    "catalog": "hall"
+  },
+  {
+    "slug": "loaded-potato-skins",
+    "title": "Loaded Potato Skins",
+    "catalog": "hall"
+  },
+  {
+    "slug": "malaysian-laksa-soup",
+    "title": "Malaysian Laksa Soup",
+    "catalog": "hall"
+  },
+  {
+    "slug": "maple-mustard-salmon-tray",
+    "title": "Maple Mustard Salmon Tray",
+    "catalog": "hall"
+  },
+  {
+    "slug": "maple-soy-salmon-bowls",
+    "title": "Maple Soy Salmon Bowls",
+    "catalog": "hall"
+  },
+  {
+    "slug": "maple-cured-salmon-plank",
+    "title": "Maple-Cured Salmon Plank",
+    "catalog": "hall"
+  },
+  {
+    "slug": "meat-lovers-sheet-pizza",
+    "title": "Meat Lover's Sheet Pan Pizza",
+    "catalog": "hall"
+  },
+  {
+    "slug": "mediterranean-baked-fish-tray",
+    "title": "Mediterranean Baked Fish Tray",
+    "catalog": "hall"
+  },
+  {
+    "slug": "mediterranean-chicken-farro-bowls",
+    "title": "Mediterranean Chicken Farro Bowls",
+    "catalog": "hall"
+  },
+  {
+    "slug": "mediterranean-chickpea",
+    "title": "Mediterranean Chickpea Bowls",
+    "catalog": "hall"
+  },
+  {
+    "slug": "mediterranean-feast-night",
+    "title": "Mediterranean Feast Night",
+    "catalog": "hall"
+  },
+  {
+    "slug": "memphis-dry-rub-ribs",
+    "title": "Memphis Dry Rub Ribs",
+    "catalog": "hall"
+  },
+  {
+    "slug": "mesquite-chuck-roast",
+    "title": "Mesquite Smoked Chuck Roast",
+    "catalog": "hall"
+  },
+  {
+    "slug": "street-corn-chicken",
+    "title": "Mexican Street Corn Chicken Bowls",
+    "catalog": "hall"
+  },
+  {
+    "slug": "miso-ramen-bar",
+    "title": "Miso Ramen Bar",
+    "catalog": "hall"
+  },
+  {
+    "slug": "molasses-bourbon-pork-ribs",
+    "title": "Molasses Bourbon Pork Ribs",
+    "catalog": "hall"
+  },
+  {
+    "slug": "montreal-smoked-meat-platter",
+    "title": "Montreal Smoked Meat Platter",
+    "catalog": "hall"
+  },
+  {
+    "slug": "moroccan-chicken-chickpea-tray",
+    "title": "Moroccan Chicken Chickpea Tray",
+    "catalog": "hall"
+  },
+  {
+    "slug": "moroccan-chicken-kebab-platter",
+    "title": "Moroccan Chicken Kebab Platter",
+    "catalog": "hall"
+  },
+  {
+    "slug": "moroccan-meatballs",
+    "title": "Moroccan Spiced Lamb Meatballs",
+    "catalog": "hall"
+  },
+  {
+    "slug": "mushroom-swiss-steak-pan",
+    "title": "Mushroom Swiss Steak Pan",
+    "catalog": "hall"
+  },
+  {
+    "slug": "one-pot-chicken-rice",
+    "title": "One-Pot Chicken and Rice",
+    "catalog": "hall"
+  },
+  {
+    "slug": "skillet-chicken-alfredo",
+    "title": "One-Skillet Chicken Alfredo",
+    "catalog": "hall"
+  },
+  {
+    "slug": "paprika-roasted-chicken-quarters",
+    "title": "Paprika Roasted Chicken Quarters",
+    "catalog": "hall"
+  },
+  {
+    "slug": "pasta-bar-night",
+    "title": "Pasta Bar Night",
+    "catalog": "hall"
+  },
+  {
+    "slug": "pellet-smoked-chicken-quarters",
+    "title": "Pellet Smoked Chicken Quarters",
+    "catalog": "hall"
+  },
+  {
+    "slug": "pepper-steak-onions",
+    "title": "Pepper Steak with Onions",
+    "catalog": "hall"
+  },
+  {
+    "slug": "performance-burrito-bowls",
+    "title": "Performance Chicken Burrito Bowls",
+    "catalog": "hall"
+  },
+  {
+    "slug": "peri-peri-chicken-platter",
+    "title": "Peri Peri Chicken Platter",
+    "catalog": "hall"
+  },
+  {
+    "slug": "pesto-tomato-chicken-tray",
+    "title": "Pesto Tomato Chicken Tray",
+    "catalog": "hall"
+  },
+  {
+    "slug": "philly-egg-rolls",
+    "title": "Philly Cheesesteak Egg Rolls",
+    "catalog": "hall"
+  },
+  {
+    "slug": "philly-cheesesteak-skillet",
+    "title": "Philly Cheesesteak Skillet",
+    "catalog": "hall"
+  },
+  {
+    "slug": "philly-cheesesteak-sliders",
+    "title": "Philly Cheesesteak Sliders",
+    "catalog": "hall"
+  },
+  {
+    "slug": "pork-belly-burnt-ends",
+    "title": "Pork Belly Burnt Ends",
+    "catalog": "hall"
+  },
+  {
+    "slug": "pretzel-bite-platter",
+    "title": "Pretzel Bite Platter with Beer Cheese",
+    "catalog": "hall"
+  },
+  {
+    "slug": "pulled-pork-mac",
+    "title": "Pulled Pork Mac and Cheese",
+    "catalog": "hall"
+  },
+  {
+    "slug": "pulled-pork",
+    "title": "Pulled Pork Sandwiches",
+    "catalog": "hall"
+  },
+  {
+    "slug": "beef-broccoli",
+    "title": "Quick Beef and Broccoli",
+    "catalog": "hall"
+  },
+  {
+    "slug": "pork-carnitas-tacos",
+    "title": "Quick Pork Carnitas Tacos",
+    "catalog": "hall"
+  },
+  {
+    "slug": "stuffed-peppers",
+    "title": "Quinoa Stuffed Peppers",
+    "catalog": "hall"
+  },
+  {
+    "slug": "rice-bowl-bar-night",
+    "title": "Rice Bowl Bar Night",
+    "catalog": "hall"
+  },
+  {
+    "slug": "rigatoni-meat-sauce-batch",
+    "title": "Rigatoni with Meat Sauce",
+    "catalog": "hall"
+  },
+  {
+    "slug": "salsa-verde-crock-chicken",
+    "title": "Salsa Verde Crock Chicken",
+    "catalog": "hall"
+  },
+  {
+    "slug": "sandwich-board-night",
+    "title": "Sandwich Board Night",
+    "catalog": "hall"
+  },
+  {
+    "slug": "sausage-egg-bake",
+    "title": "Sausage Egg Bake for the Crew",
+    "catalog": "hall"
+  },
+  {
+    "slug": "sausage-peppers-onions",
+    "title": "Sausage Peppers and Onions",
+    "catalog": "hall"
+  },
+  {
+    "slug": "shawarma-bar-night",
+    "title": "Shawarma Bar Night",
+    "catalog": "hall"
+  },
+  {
+    "slug": "shawarma-chicken-rice-bowls",
+    "title": "Shawarma Chicken Rice Bowls",
+    "catalog": "hall"
+  },
+  {
+    "slug": "sheet-pan-fajitas",
+    "title": "Sheet Pan Chicken Fajitas",
+    "catalog": "hall"
+  },
+  {
+    "slug": "sheet-pan-chicken-fajitas-lite",
+    "title": "Sheet Pan Chicken Fajitas Lite",
+    "catalog": "hall"
+  },
+  {
+    "slug": "sheet-pan-meal-prep",
+    "title": "Sheet Pan Chicken Trays",
+    "catalog": "hall"
+  },
+  {
+    "slug": "sheet-pan-meatball-marinara",
+    "title": "Sheet Pan Meatball Marinara Feed",
+    "catalog": "hall"
+  },
+  {
+    "slug": "sheet-pan-sausage-peppers",
+    "title": "Sheet Pan Sausage and Peppers",
+    "catalog": "hall"
+  },
+  {
+    "slug": "shepherds-pie",
+    "title": "Shepherd's Pie with Greek Salad",
+    "catalog": "hall"
+  },
+  {
+    "slug": "chicken-quesadillas",
+    "title": "Shredded Chicken Quesadillas",
+    "catalog": "hall"
+  },
+  {
+    "slug": "smoked-corned-beef",
+    "title": "Smoked Corned Beef Brisket",
+    "catalog": "hall"
+  },
+  {
+    "slug": "smoked-meatloaf",
+    "title": "Smoked Meatloaf with Glaze",
+    "catalog": "hall"
+  },
+  {
+    "slug": "smoked-queso-fundido",
+    "title": "Smoked Queso Fundido",
+    "catalog": "hall"
+  },
+  {
+    "slug": "smoked-sausage-platter",
+    "title": "Smoked Sausage Platter",
+    "catalog": "hall"
+  },
+  {
+    "slug": "smoked-tri-tip",
+    "title": "Smoked Tri-Tip Roast",
+    "catalog": "hall"
+  },
+  {
+    "slug": "smoked-turkey-breast",
+    "title": "Smoked Turkey Breast for the Crew",
+    "catalog": "hall"
+  },
+  {
+    "slug": "smoked-wings-white-sauce",
+    "title": "Smoked Wings with White BBQ Sauce",
+    "catalog": "hall"
+  },
+  {
+    "slug": "smoky-lentil-kale-soup",
+    "title": "Smoky Lentil and Kale Soup",
+    "catalog": "hall"
+  },
+  {
+    "slug": "soft-pretzel-dogs",
+    "title": "Soft Pretzel Hot Dogs",
+    "catalog": "hall"
+  },
+  {
+    "slug": "spanish-chicken-chorizo-rice",
+    "title": "Spanish Chicken and Chorizo Rice",
+    "catalog": "hall"
+  },
+  {
+    "slug": "spatchcock-lemon-roast-chicken",
+    "title": "Spatchcock Lemon Roast Chicken",
+    "catalog": "hall"
+  },
+  {
+    "slug": "station-cobb-salad",
+    "title": "Station Cobb Salad",
+    "catalog": "hall"
+  },
+  {
+    "slug": "steak-sandwiches",
+    "title": "Steak Sandwiches",
+    "catalog": "hall"
+  },
+  {
+    "slug": "sunday-chili-batch",
+    "title": "Sunday Batch Chili",
+    "catalog": "hall"
+  },
+  {
+    "slug": "tabbouleh-chicken-bowls",
+    "title": "Tabbouleh Chicken Bowls",
+    "catalog": "hall"
+  },
+  {
+    "slug": "teriyaki-donburi",
+    "title": "Teriyaki Chicken Donburi",
+    "catalog": "hall"
+  },
+  {
+    "slug": "teriyaki-salmon-grill",
+    "title": "Teriyaki Grilled Salmon",
+    "catalog": "hall"
+  },
+  {
+    "slug": "texas-beef-ribs",
+    "title": "Texas-Style Beef Ribs",
+    "catalog": "hall"
+  },
+  {
+    "slug": "thai-basil-chicken",
+    "title": "Thai Basil Chicken Stir Fry",
+    "catalog": "hall"
+  },
+  {
+    "slug": "tonkotsu-ramen-crew",
+    "title": "Tonkotsu Ramen for the Crew",
+    "catalog": "hall"
+  },
+  {
+    "slug": "tourtiere-for-the-crew",
+    "title": "Tourtière for the Crew",
+    "catalog": "hall"
+  },
+  {
+    "slug": "turkey-lettuce-wrap-night",
+    "title": "Turkey Lettuce Wrap Night",
+    "catalog": "hall"
+  },
+  {
+    "slug": "turkey-meatball-zoodles",
+    "title": "Turkey Meatballs with Zucchini Noodles",
+    "catalog": "hall"
+  },
+  {
+    "slug": "turkey-quinoa-stuffed-peppers",
+    "title": "Turkey Quinoa Stuffed Peppers",
+    "catalog": "hall"
+  },
+  {
+    "slug": "turkey-shepherds-sweet-potato",
+    "title": "Turkey Shepherd's with Sweet Potato Top",
+    "catalog": "hall"
+  },
+  {
+    "slug": "turkey-sweet-potato-chili",
+    "title": "Turkey Sweet Potato Chili",
+    "catalog": "hall"
+  },
+  {
+    "slug": "turkey-taco-skillet",
+    "title": "Turkey Taco Skillet",
+    "catalog": "hall"
+  },
+  {
+    "slug": "turkey-zoodle-bolognese",
+    "title": "Turkey Zoodle Bolognese",
+    "catalog": "hall"
+  },
+  {
+    "slug": "warm-spinach-chicken-salad",
+    "title": "Warm Spinach Chicken Salad",
+    "catalog": "hall"
+  },
+  {
+    "slug": "white-bean-kale-soup",
+    "title": "White Bean and Kale Soup",
+    "catalog": "hall"
+  },
+  {
+    "slug": "white-bean-chicken-chili",
+    "title": "White Bean Chicken Chili",
+    "catalog": "hall"
+  },
+  {
+    "slug": "white-garlic-chicken-pizza",
+    "title": "White Garlic Chicken Pizza",
+    "catalog": "hall"
+  },
+  {
+    "slug": "wonton-noodle-soup-crew",
+    "title": "Wonton Noodle Soup for the Crew",
+    "catalog": "hall"
+  },
+  {
+    "slug": "yogurt-marinated-grill-chicken",
+    "title": "Yogurt Marinated Grill Chicken",
+    "catalog": "hall"
+  },
+  {
+    "slug": "zaatar-roasted-chicken-thighs",
+    "title": "Za'atar Roasted Chicken Thighs",
+    "catalog": "hall"
+  }
+]

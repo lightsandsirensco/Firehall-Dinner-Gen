@@ -14,8 +14,8 @@
     "bake",
     "make-ahead"
   ],
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "prepTime": 15,
   "cookTime": 40,
   "totalTime": 55,
@@ -23,19 +23,19 @@
   "ingredients": [
     {
       "name": "rolled oats",
-      "quantity": "2.4",
+      "quantity": "3 cups",
       "notes": "old-fashioned, not instant",
       "group": "Base"
     },
     {
       "name": "steel-cut oats",
-      "quantity": "3/4",
+      "quantity": "1 cup",
       "notes": "adds texture; optional",
       "group": "Base"
     },
     {
       "name": "whole milk",
-      "quantity": "3.2",
+      "quantity": "4 cups",
       "notes": "or oat milk for dairy-free",
       "group": "Base"
     },
@@ -47,25 +47,25 @@
     },
     {
       "name": "large apples",
-      "quantity": "2",
+      "quantity": "3",
       "notes": "peeled, cored, diced",
       "group": "Fruit"
     },
     {
       "name": "ground cinnamon",
-      "quantity": "1.6",
+      "quantity": "2 tsp",
       "notes": "plus 1/2 tsp nutmeg",
       "group": "Spice"
     },
     {
       "name": "brown sugar",
-      "quantity": "3/8",
+      "quantity": "1/2 cup",
       "notes": "plus maple for serving",
       "group": "Sweet"
     },
     {
       "name": "chopped walnuts",
-      "quantity": "3/8",
+      "quantity": "1/2 cup",
       "notes": "and butter pats at the line",
       "group": "Finish"
     }
@@ -105,13 +105,12 @@
     }
   ],
   "nutrition": {
-    "calories": 287,
-    "protein": 12,
-    "carbs": 49,
-    "fat": 6,
-    "label": "Estimated per serving",
+    "calories": 267,
+    "protein": 10,
+    "carbs": 44,
+    "fat": 7,
+    "label": "per serving (hall portion)",
     "source": "calculated",
-    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
@@ -142,8 +141,8 @@
   "heroImage": "/images/breakfast/apple-cinnamon-baked-oatmeal.jpg",
   "thumbImage": "/images/thumbs/breakfast/apple-cinnamon-baked-oatmeal.jpg",
   "imageAlt": "Baked apple cinnamon oatmeal squares with walnuts and maple drizzle",
-  "publishedAt": "2026-05-31T18:33:00.829Z",
-  "updatedAt": "2026-05-31T18:34:15.374Z",
+  "publishedAt": "2026-06-04T20:48:24.990Z",
+  "updatedAt": "2026-06-04T20:48:24.990Z",
   "readMinutes": 7,
   "seoTitle": "Apple Cinnamon Baked Oatmeal | Firehall Breakfast",
   "collectionTier": "performance"

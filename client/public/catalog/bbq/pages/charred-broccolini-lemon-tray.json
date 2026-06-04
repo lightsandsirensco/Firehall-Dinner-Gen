@@ -8,15 +8,15 @@
   "category": "bbq_grill_nights",
   "cuisine": "italian-american",
   "description": "Broccolini bundles toss in olive oil, grill until charred and tender, and finish with lemon-garlic oil, parmesan, and chili flakes on a big tray for ten.",
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "cookTime": 15,
   "prepTime": 15,
   "difficulty": "medium",
-  "calories": 0,
-  "protein": 0,
-  "carbs": 0,
-  "fats": 0,
+  "calories": 128,
+  "protein": 4,
+  "carbs": 13,
+  "fats": 8,
   "tags": [
     "protein:vegetarian",
     "format:brassica_tray",
@@ -39,59 +39,59 @@
   "ingredients": [
     {
       "name": "broccolini",
-      "quantity": "3.2",
+      "quantity": "4",
       "unit": "lb",
       "notes": "trimmed",
       "group": "Main"
     },
     {
       "name": "anchovy fillets",
-      "quantity": "3",
+      "quantity": "4",
       "unit": "whole",
       "notes": "minced",
       "group": "Sicilian finish"
     },
     {
       "name": "golden raisins",
-      "quantity": "1/4",
+      "quantity": "0.33",
       "unit": "cup",
       "group": "Sicilian finish"
     },
     {
       "name": "pine nuts",
-      "quantity": "1/4",
+      "quantity": "0.33",
       "unit": "cup",
       "notes": "toasted",
       "group": "Sicilian finish"
     },
     {
       "name": "lemon juice",
-      "quantity": "2.6",
+      "quantity": "3",
       "unit": "tbsp",
       "group": "Sicilian finish"
     },
     {
       "name": "extra-virgin olive oil",
-      "quantity": "1/4",
+      "quantity": "0.33",
       "unit": "cup",
       "group": "Grill"
     },
     {
       "name": "Pecorino Romano",
-      "quantity": "5/8",
+      "quantity": "0.75",
       "unit": "cup",
       "notes": "shaved",
       "group": "Finish"
     },
     {
       "name": "red pepper flakes",
-      "quantity": "7/8",
+      "quantity": "1",
       "unit": "tsp",
       "group": "Finish"
     },
     {
       "name": "kosher salt",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tsp",
       "group": "Seasoning"
     }
@@ -100,56 +100,56 @@
     {
       "stepNumber": 1,
       "title": "Prep broccolini",
-      "instruction": "Trim tough ends. Toss broccolini with olive oil, salt, and pepper. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Use anchovy fillets, golden raisins, pine nuts, Pecorino Romano as listed — measure each before heat goes on.",
+      "instruction": "Trim tough ends. Toss broccolini with olive oil, salt, and pepper.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
       "title": "Build lemon-garlic oil",
-      "instruction": "Warm olive oil with garlic 2 minutes off heat. Add lemon zest and juice. Reserve for service. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Warm olive oil with garlic 2 minutes off heat. Add lemon zest and juice. Reserve for service.",
       "minutes": 8,
       "heatLevel": ""
     },
     {
       "stepNumber": 3,
-      "title": "Preheat grill grates",
-      "instruction": "Preheat grill to medium-high, 425°F. Plan about 8 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "title": "Heat grill",
+      "instruction": "Preheat grill to medium-high, 425°F.",
       "minutes": 8,
       "heatLevel": "medium-high"
     },
     {
       "stepNumber": 4,
       "title": "Grill in batches",
-      "instruction": "Grill broccolini in basket, turning, until charred and tender, 6–8 minutes per batch. Cook until char marks are visible and the thickest piece reads 165°F for any egg-based components on an instant-read thermometer. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Grill broccolini in basket, turning, until charred and tender, 6–8 minutes per batch.",
       "minutes": 12,
       "heatLevel": "high"
     },
     {
       "stepNumber": 5,
       "title": "Hold wrapped",
-      "instruction": "Transfer to hotel pan, cover with foil, hold at 170°F up to 25 minutes. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Transfer to hotel pan, cover with foil, hold at 170°F up to 25 minutes.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 6,
       "title": "Lemon oil finish",
-      "instruction": "Drizzle lemon-garlic oil over broccolini at service—not before long hold. Plan about 3 minutes for this step at crew scale. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Drizzle lemon-garlic oil over broccolini at service—not before long hold.",
       "minutes": 3,
       "heatLevel": ""
     },
     {
       "stepNumber": 7,
       "title": "Parmesan and chili",
-      "instruction": "Grate parmesan and scatter chili flakes over tray at the line. Plan about 3 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Grate parmesan and scatter chili flakes over tray at the line.",
       "minutes": 3,
       "heatLevel": ""
     },
     {
       "stepNumber": 8,
       "title": "Tray for ten",
-      "instruction": "Spread charred broccolini in a hotel pan for buffet-style service alongside mains. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Spread charred broccolini in a hotel pan for buffet-style service alongside mains.",
       "minutes": 5,
       "heatLevel": ""
     }
@@ -171,26 +171,12 @@
   "mealPrepNotes": "Grill broccolini medium-high 425°F in batches, 6–8 minutes. Hold wrapped at 170°F up to 25 minutes. Lemon oil and parmesan at service.",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 0,
-    "protein": 0,
-    "carbs": 0,
-    "fats": 0,
-    "label": "Estimated per serving",
-    "source": "unavailable",
-    "estimateAvailable": false,
-    "filterFlags": {
-      "highProtein": false,
-      "under700Calories": true,
-      "under30gFat": true,
-      "highCarb": false,
-      "lowCarb": true,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": false,
-      "lighterOption": true,
-      "performanceMeal": false
-    }
+    "calories": 128,
+    "protein": 4,
+    "carbs": 13,
+    "fats": 8,
+    "label": "per serving (hall portion)",
+    "source": "estimated"
   },
   "heroImage": "/images/smoker-catalog/charred-broccolini-lemon-tray.jpg",
   "heroImageAlt": "Sicilian Anchovy Broccolini Tray — crew-sized BBQ spread with visible smoke and bark",
@@ -218,6 +204,6 @@
     "brisket-style-beef-sandwiches-au-jus"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T23:32:23.209Z",
+  "generatedAt": "2026-06-04T20:47:49.459Z",
   "contentVersion": 2
 }

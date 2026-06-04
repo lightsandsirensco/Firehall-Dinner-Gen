@@ -8,14 +8,14 @@
   "category": "bbq_grill_nights",
   "cuisine": "american",
   "description": "Chicken quarters ride a steady 275°F smoke, then get kissed over hotter heat to tighten the skin. Serve with a punchy white sauce and a tray of potato salad.",
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "cookTime": 120,
   "prepTime": 25,
   "difficulty": "easy",
-  "calories": 575,
-  "protein": 40,
-  "carbs": 45,
+  "calories": 582,
+  "protein": 41,
+  "carbs": 46,
   "fats": 25,
   "tags": [
     "protein:chicken",
@@ -39,90 +39,90 @@
   "ingredients": [
     {
       "name": "chicken leg quarters",
-      "quantity": "8",
+      "quantity": "10",
       "unit": "pieces",
       "notes": "about 8–10 lb total"
     },
     {
       "name": "kosher salt",
-      "quantity": "2.6",
+      "quantity": "3",
       "unit": "tbsp"
     },
     {
       "name": "black pepper",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tbsp"
     },
     {
       "name": "smoked paprika",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tbsp"
     },
     {
       "name": "garlic powder",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tbsp"
     },
     {
       "name": "onion powder",
-      "quantity": "7/8",
+      "quantity": "1",
       "unit": "tbsp"
     },
     {
       "name": "brown sugar",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tbsp"
     },
     {
       "name": "mayonnaise",
-      "quantity": "1",
+      "quantity": "1.25",
       "unit": "cups"
     },
     {
       "name": "apple cider vinegar",
-      "quantity": "3/8",
+      "quantity": "0.5",
       "unit": "cup"
     },
     {
       "name": "lemon juice",
-      "quantity": "2.6",
+      "quantity": "3",
       "unit": "tbsp"
     },
     {
       "name": "prepared horseradish",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tbsp"
     },
     {
       "name": "Dijon mustard",
-      "quantity": "1 1/4",
+      "quantity": "1.5",
       "unit": "tbsp"
     },
     {
       "name": "cayenne",
-      "quantity": "7/8",
+      "quantity": "1",
       "unit": "tsp"
     },
     {
       "name": "Yukon gold potatoes",
-      "quantity": "4",
+      "quantity": "5",
       "unit": "lb"
     },
     {
       "name": "celery",
-      "quantity": "3",
+      "quantity": "4",
       "unit": "stalks",
       "notes": "diced"
     },
     {
       "name": "red onion",
-      "quantity": "3/4",
+      "quantity": "1",
       "unit": "whole",
       "notes": "diced"
     },
     {
       "name": "dill pickles",
-      "quantity": "3/8",
+      "quantity": "0.5",
       "unit": "cup",
       "notes": "chopped"
     }
@@ -130,85 +130,50 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Smoked Chicken Quarters with White Sauce in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use mayonnaise as listed — measure each before heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Season the quarters",
       "instruction": "Mix salt, pepper, paprika, garlic, onion powder, and brown sugar. Pat chicken dry and season heavily on all sides. Let sit 15–20 minutes while smoker heats.",
       "minutes": 20,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Smoke steady",
-      "instruction": "Heat smoker to 275°F. Smoke chicken skin-side up until the thickest thigh hits 175–180°F and juices run clear, about 1 hour 45 minutes to 2 hours. Target 165°F at the thickest point before moving to the next batch.",
+      "instruction": "Heat smoker to 275°F. Smoke chicken skin-side up until the thickest thigh hits 175–180°F and juices run clear, about 1 hour 45 minutes to 2 hours.",
       "minutes": 115,
       "heatLevel": "low"
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Make the white sauce",
       "instruction": "Whisk mayo, vinegar, lemon juice, horseradish, mustard, cayenne, and a pinch of salt. Chill until service; it tightens up and tastes better cold.",
       "minutes": 6,
       "heatLevel": ""
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Optional crisp finish",
-      "instruction": "If skin needs help, finish chicken over a hot grill (450°F) 2–3 minutes skin-side down. Don’t burn the sugar in the rub—move to indirect if it flares. Target 165°F at the thickest point before moving to the next batch.",
+      "instruction": "If skin needs help, finish chicken over a hot grill (450°F) 2–3 minutes skin-side down. Don’t burn the sugar in the rub—move to indirect if it flares.",
       "minutes": 6,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 7,
+      "stepNumber": 5,
       "title": "Potato salad (fast tray method)",
-      "instruction": "Boil potatoes in salted water until tender. Drain, cool 10 minutes, then toss with 3/4 cup of the white sauce, celery, onion, and pickles. Salt to balance.",
+      "instruction": "Boil potatoes in salted water until tender. Drain, cool 10 minutes, then toss with 3/4 cup of the white sauce, celery, onion, and pickles. Salt to taste.",
       "minutes": 35,
       "heatLevel": ""
     },
     {
-      "stepNumber": 8,
+      "stepNumber": 6,
       "title": "Tonight’s board",
       "instruction": "Tray of smoked quarters, white sauce on the side, potato salad, and extra napkins. Call temps: chicken is pulled at 175–180°F for dark meat tenderness.",
       "minutes": 3,
       "heatLevel": ""
     },
     {
-      "stepNumber": 9,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 11,
-      "title": "Portion and open the line",
-      "instruction": "Portion Smoked Chicken Quarters with White Sauce onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 12,
+      "stepNumber": 7,
       "title": "Leftovers",
-      "instruction": "Pull meat off bones for wraps or quesadillas. Reheat covered in a 325°F oven until hot; keep sauce cold. Plan about 4 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Pull meat off bones for wraps or quesadillas. Reheat covered in a 325°F oven until hot; keep sauce cold.",
       "minutes": 4,
       "heatLevel": ""
     }
@@ -226,31 +191,18 @@
     "Chop into a quick chicken salad."
   ],
   "whyCrewsLikeIt": "Quarters are cheap, forgiving, and they feed ten without fuss. White sauce cuts the smoke and keeps the plate from feeling heavy.",
-  "mealPrepNotes": "Season early. Smoke until fully cooked, then hold in a covered pan at 170°F. Crisp skin right before service if you have the time.",
+  "mealPrepNotes": "Season early. Smoke until done, then hold in a covered pan at 170°F. Crisp skin right before service if you have the time.",
   "substitutions": [
     "No horseradish? Use 1 tsp garlic + extra mustard for bite."
   ],
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 575,
-    "protein": 40,
-    "carbs": 45,
+    "calories": 582,
+    "protein": 41,
+    "carbs": 46,
     "fats": 25,
     "label": "per serving (hall portion)",
-    "source": "calculated",
-    "filterFlags": {
-      "highProtein": true,
-      "under700Calories": true,
-      "under30gFat": true,
-      "highCarb": false,
-      "lowCarb": false,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": true
-    }
+    "source": "estimated"
   },
   "heroImage": "/images/smoker-catalog/smoked-chicken-quarters-white-sauce.jpg",
   "heroImageAlt": "Smoked Chicken Quarters with White Sauce — crew-sized BBQ spread with visible smoke and bark",
@@ -275,6 +227,6 @@
     "hot-honey-grilled-sausage-peppers"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T23:32:23.197Z",
+  "generatedAt": "2026-06-04T20:47:49.406Z",
   "contentVersion": 2
 }

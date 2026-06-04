@@ -144,6 +144,7 @@
     }
   },
   "heroImage": "/images/golden-100/ny-strip-herb-butter.jpg",
+  "heroImageAlt": "Wide firehall crew platter of NY Strip with Herb Butter on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/ny-strip-herb-butter.jpg",
   "thumbImage": "/images/thumbs/ny-strip-herb-butter.jpg",
   "railImage": "/images/rails/ny-strip-herb-butter.jpg",
@@ -162,14 +163,14 @@
   ],
   "relatedSlugs": [
     "bbq-brisket-burnt-ends",
-    "smoked-brisket",
     "texas-beef-ribs",
     "flank-chimichurri",
     "beer-can-chicken",
-    "cedar-plank-salmon"
+    "cedar-plank-salmon",
+    "grilled-pork-chops"
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.309Z",
+  "generatedAt": "2026-06-04T20:45:42.153Z",
   "contentVersion": 2
 }

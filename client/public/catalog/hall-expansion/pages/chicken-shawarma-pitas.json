@@ -186,7 +186,11 @@
     "fats": 18,
     "label": "~510 cal/serving · 38g protein · 3g fiber (est.)"
   },
-  "heroImageAlt": "Chicken Shawarma Pitas — firehall handheld meal — firefighter meal served for a firehall crew dinner",
+  "heroImage": "/images/hall-expansion/chicken-shawarma-pitas.jpg",
+  "heroImageAlt": "Chicken Shawarma Pitas — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/chicken-shawarma-pitas.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/chicken-shawarma-pitas.jpg",
+  "railImage": "/images/rails/hall-expansion/chicken-shawarma-pitas.jpg",
   "realismScore": 97,
   "firefighterScore": 86,
   "popularityWeight": 7.8,
@@ -201,10 +205,6 @@
     "pasta-bar-night"
   ],
   "sourceUrl": "https://www.seriouseats.com/shawarma-recipe",
-  "generatedAt": "2026-06-04T20:18:31.794Z",
-  "contentVersion": 2,
-  "heroImage": "/images/hall-expansion/chicken-shawarma-pitas.jpg",
-  "thumbImage": "/images/thumbs/hall-expansion/chicken-shawarma-pitas.jpg",
-  "mobileImage": "/images/mobile/hall-expansion/chicken-shawarma-pitas.jpg",
-  "railImage": "/images/rails/hall-expansion/chicken-shawarma-pitas.jpg"
+  "generatedAt": "2026-06-04T20:47:21.931Z",
+  "contentVersion": 2
 }

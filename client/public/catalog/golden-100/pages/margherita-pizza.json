@@ -185,6 +185,7 @@
     }
   },
   "heroImage": "/images/golden-100/margherita-pizza.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Margherita Pizza on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/margherita-pizza.jpg",
   "thumbImage": "/images/thumbs/margherita-pizza.jpg",
   "railImage": "/images/rails/margherita-pizza.jpg",
@@ -204,12 +205,12 @@
     "honey-soppressata-pizza",
     "pepperoni-pizza-night",
     "white-garlic-chicken-pizza",
+    "30-minute-pasta-e-fagioli-for-the-hall",
     "five-ingredient-pasta",
-    "bbq-chicken-pizza",
-    "breakfast-sausage-pizza"
+    "spaghetti-aglio-e-olio-for-the-hall"
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.468Z",
+  "generatedAt": "2026-06-04T20:45:42.298Z",
   "contentVersion": 2
 }

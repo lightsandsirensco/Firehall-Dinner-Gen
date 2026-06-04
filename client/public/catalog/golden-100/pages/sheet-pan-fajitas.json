@@ -144,6 +144,7 @@
     }
   },
   "heroImage": "/images/golden-100/sheet-pan-fajitas.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Chicken Fajitas on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/sheet-pan-fajitas.jpg",
   "thumbImage": "/images/thumbs/sheet-pan-fajitas.jpg",
   "railImage": "/images/rails/sheet-pan-fajitas.jpg",
@@ -166,11 +167,11 @@
     "chicken-souvlaki",
     "greek-chicken-bowls",
     "herb-roasted-thighs",
-    "street-corn-chicken",
-    "chicken-quesadillas"
+    "chicken-tortilla-soup-for-the-hall",
+    "sheet-pan-parmesan-dijon-chicken-thigh-dinner"
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.391Z",
+  "generatedAt": "2026-06-04T20:45:42.234Z",
   "contentVersion": 2
 }

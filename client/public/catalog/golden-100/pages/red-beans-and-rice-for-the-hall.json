@@ -206,6 +206,7 @@
     }
   },
   "heroImage": "/images/golden-100/red-beans-and-rice-for-the-hall.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Red Beans and Rice for the Hall on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/red-beans-and-rice-for-the-hall.jpg",
   "thumbImage": "/images/thumbs/red-beans-and-rice-for-the-hall.jpg",
   "railImage": "/images/rails/red-beans-and-rice-for-the-hall.jpg",
@@ -224,14 +225,14 @@
   ],
   "relatedSlugs": [
     "jambalaya",
-    "pulled-pork-mac",
     "sausage-egg-bake",
-    "carolina-mustard-pork",
     "grilled-pork-chops",
-    "honey-garlic-pork-tenderloin"
+    "honey-garlic-pork-tenderloin",
+    "memphis-dry-rub-ribs",
+    "breakfast-burrito-bar"
   ],
   "sourceName": "Serious Eats",
   "sourceUrl": "https://www.seriouseats.com/new-orleans-style-red-beans-rice-recipe",
-  "generatedAt": "2026-06-04T20:35:16.843Z",
+  "generatedAt": "2026-06-04T20:45:42.321Z",
   "contentVersion": 2
 }

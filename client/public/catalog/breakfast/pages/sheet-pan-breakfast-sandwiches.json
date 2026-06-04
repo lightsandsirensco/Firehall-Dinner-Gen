@@ -1,6 +1,6 @@
 {
   "slug": "sheet-pan-breakfast-sandwiches",
-  "title": "Crispy Honey Chili Sausage",
+  "title": "Sheet Pan Breakfast Sandwiches",
   "subtitle": "A dozen eggs and cheese baked between two layers of slider rolls.",
   "description": "Eggs baked on a sheet pan, cut into squares, and layered on toasted buns with sausage and cheese. Ten sandwiches without flipping eggs one at a time.",
   "filters": [
@@ -15,8 +15,8 @@
     "sausage",
     "batch-cook"
   ],
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 12,
+  "baseServings": 12,
   "prepTime": 15,
   "cookTime": 22,
   "totalTime": 37,
@@ -24,48 +24,48 @@
   "ingredients": [
     {
       "name": "24-count slider roll package",
-      "quantity": "3/4",
+      "quantity": "1",
       "notes": "connected, not separated",
       "group": "Build"
     },
     {
       "name": "large eggs",
-      "quantity": "9",
+      "quantity": "14",
       "notes": "whisked with 2 tbsp milk",
       "group": "Egg layer"
     },
     {
       "name": "kosher salt",
-      "quantity": "3/8",
+      "quantity": "1/2 tsp",
       "notes": "and black pepper",
       "group": "Egg layer"
     },
     {
       "name": "pre-cooked sausage patties",
-      "quantity": "8",
+      "quantity": "12",
       "notes": "thin, fit slider size",
       "group": "Protein"
     },
     {
       "name": "American or cheddar cheese",
-      "quantity": "8",
+      "quantity": "12 slices",
       "group": "Protein"
     },
     {
       "name": "butter",
-      "quantity": "2",
+      "quantity": "3 tbsp",
       "notes": "melted for brushing tops",
       "group": "Finish"
     },
     {
       "name": "everything bagel seasoning",
-      "quantity": "5/8",
+      "quantity": "1 tsp",
       "notes": "optional",
       "group": "Finish"
     },
     {
       "name": "hot sauce or ketchup",
-      "quantity": "3/8",
+      "quantity": "1/2 cup",
       "notes": "at the line",
       "group": "Serve"
     }
@@ -73,76 +73,52 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Crispy Honey Chili Sausage in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
+      "title": "Heat the oven",
+      "instruction": "Heat oven to 350°F. Slice the connected roll block horizontally into tops and bottoms without separating individual rolls.",
+      "minutes": 0,
+      "tempF": 350
     },
     {
       "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch Sausage. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
-      "title": "Heat the oven",
-      "instruction": "Heat oven to 350°F. Slice the connected roll block horizontally into tops and bottoms without separating individual rolls. Allow 10–15 minutes for mise en place before heat goes on. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 0,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 4,
       "title": "Bake the egg sheet",
       "instruction": "Whisk eggs with milk, salt, and pepper. Pour into a parchment-lined quarter sheet pan to roughly slider dimensions. Bake until just set—don't overbake or eggs turn rubbery.",
       "minutes": 12,
-      "heatLevel": ""
+      "tempF": 350
+    },
+    {
+      "stepNumber": 3,
+      "title": "Trim and assemble",
+      "instruction": "Trim egg sheet to fit the roll block. Place bottom halves on a lined sheet pan, add sausage, egg sheet, cheese, and top halves. Press gently to align seams.",
+      "minutes": 8
+    },
+    {
+      "stepNumber": 4,
+      "title": "Final bake",
+      "instruction": "Brush tops with melted butter and optional everything seasoning. Bake until cheese melts and tops turn lightly golden.",
+      "minutes": 10,
+      "tempF": 350
     },
     {
       "stepNumber": 5,
-      "title": "Trim and assemble",
-      "instruction": "Trim egg sheet to fit the roll block. Place bottom halves on a lined sheet pan, add sausage, egg sheet, cheese, and top halves. Press gently to align seams.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 6,
-      "title": "Final bake",
-      "instruction": "Brush tops with melted butter and optional everything seasoning. Bake until cheese melts and tops turn lightly golden. Bake until the center reaches a safe internal temp (165°F) and edges look set — use a thermometer at the thickest point. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 10,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
       "title": "Cut and serve",
-      "instruction": "Rest 5 minutes, then cut along roll seams with a sharp knife. Serve warm from the pan or transfer to a hotel pan for the line. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 5,
-      "heatLevel": ""
+      "instruction": "Rest 5 minutes, then cut along roll seams with a sharp knife. Serve warm from the pan or transfer to a hotel pan for the line.",
+      "minutes": 5
     }
   ],
   "nutrition": {
-    "calories": 0,
-    "protein": 0,
-    "carbs": 0,
-    "fats": 0,
-    "label": "Estimated per serving",
-    "source": "unavailable",
-    "estimateAvailable": false,
+    "calories": 736,
+    "protein": 40,
+    "carbs": 4,
+    "fat": 62,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
       "under30gFat": false,
       "highCarb": false,
       "lowCarb": true,
-      "mealPrepFriendly": true
+      "mealPrepFriendly": false
     },
     "badgeCandidates": {
       "highProtein": true,
@@ -166,28 +142,9 @@
   "heroImage": "/images/breakfast/sheet-pan-breakfast-sandwiches.jpg",
   "thumbImage": "/images/thumbs/breakfast/sheet-pan-breakfast-sandwiches.jpg",
   "imageAlt": "Sheet pan of pull-apart breakfast slider sandwiches with egg and sausage",
-  "publishedAt": "2026-05-31T18:33:00.829Z",
-  "updatedAt": "2026-05-31T23:49:25.707Z",
+  "publishedAt": "2026-06-04T20:48:24.990Z",
+  "updatedAt": "2026-06-04T20:48:24.990Z",
   "readMinutes": 7,
   "seoTitle": "Sheet Pan Breakfast Sandwiches | Firehall Breakfast",
-  "collectionTier": "firehall_classic",
-  "proTips": [
-    "Measure the roll block before baking the egg sheet—trim once, not twice, for clean sandwich edges.",
-    "Use parchment to lift the egg sheet out of the quarter pan for easier trimming and placement.",
-    "Cut seams with a long serrated knife in one pass per row to avoid squashing the stacks."
-  ],
-  "tonightSpread": [
-    "Plate Crispy Honey Chili Sausage with sides in separate pans so the crew can mix portions.",
-    "Keep hot items on one side of the table and cold on the other — eggs stay hot, fruit stays cold.",
-    "Line up Crispy Honey Chili Sausage on the main counter with serving spoons — firefighters grab fast between calls.",
-    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
-  ],
-  "equipment": [
-    "Large sheet trays",
-    "Instant-read thermometer",
-    "Aluminum foil"
-  ],
-  "mealPrepNotes": "Prep mise en place before the shift — Crispy Honey Chili Sausage runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone.",
-  "mobileImage": "/images/mobile/breakfast/sheet-pan-breakfast-sandwiches.jpg",
-  "railImage": "/images/rails/breakfast/sheet-pan-breakfast-sandwiches.jpg"
+  "collectionTier": "firehall_classic"
 }

@@ -39,6 +39,7 @@ import {
 import { getMealSpecificPack } from "../../shared/golden-100/recipe-quality/meal-specific-packs.js";
 import { clampGoldenIngredientsForCrew } from "../../shared/recipe/crew-portion-limits.js";
 import { resolveGoldenSlugTiming } from "../../shared/golden-100/recipe-quality/slug-timing-overrides.js";
+import { buildFirehallHeroImageAlt } from "../../shared/curated-image-governance/firehall-hero-alt.js";
 
 const CREW_SIZE_DEFAULT = 8;
 const BASE_SERVINGS_DEFAULT = 8;
@@ -336,6 +337,7 @@ export function buildGoldenRecipePage(
   const relatedSlugs = pickRelatedSlugs(def, relatedPool, 6);
   const titleFields = buildRecipeTitleFields(def);
   const editorial = buildEditorialMeta(def, curatedUsable ? curated : null);
+  const tonightSpread = buildTonightSpread(def);
 
   const page: GoldenRecipePage = {
     slug: def.slug,
@@ -361,7 +363,8 @@ export function buildGoldenRecipePage(
     ingredients,
     steps,
     proTips: uniqueProTips,
-    tonightSpread: buildTonightSpread(def),
+    tonightSpread,
+    heroImageAlt: buildFirehallHeroImageAlt(titleFields.displayTitle, tonightSpread),
     leftovers: buildLeftoversStrategy(def),
     whyCrewsLikeIt: editorial.whyCrewsLikeIt,
     mealPrepNotes: editorial.mealPrepNotes,
@@ -378,7 +381,7 @@ export function buildGoldenRecipePage(
     searchTerms: [],
     relatedSlugs,
     sourceName: curated?.source?.name ?? def.sourceInspiration ?? pkg?.spoonacularTitle,
-    sourceUrl: curated?.source?.url ?? pkg?.externalUrl,
+    sourceUrl: def.sourceUrl ?? curated?.source?.url ?? pkg?.externalUrl ?? "",
     classicSlug: def.classicSlug,
     generatedAt: new Date().toISOString(),
     contentVersion: GOLDEN_RECIPE_PAGE_CONTENT_VERSION,

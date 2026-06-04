@@ -141,6 +141,7 @@
     }
   },
   "heroImage": "/images/golden-100/parm-hero-subs.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Parm Hero Subs on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/parm-hero-subs.jpg",
   "thumbImage": "/images/thumbs/parm-hero-subs.jpg",
   "railImage": "/images/rails/parm-hero-subs.jpg",
@@ -161,11 +162,11 @@
     "chicken-parm",
     "meatball-hoagies",
     "creamy-tuscan-chicken",
-    "chicken-caesar",
-    "jerk-chicken"
+    "four-step-chicken-piccata",
+    "chicken-caesar"
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.294Z",
+  "generatedAt": "2026-06-04T20:45:42.144Z",
   "contentVersion": 2
 }

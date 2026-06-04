@@ -13,10 +13,10 @@
   "cookTime": 25,
   "prepTime": 25,
   "difficulty": "easy",
-  "calories": 488,
-  "protein": 40,
-  "carbs": 28,
-  "fats": 25,
+  "calories": 380,
+  "protein": 28,
+  "carbs": 22,
+  "fats": 20,
   "tags": [
     "protein:beef",
     "format:handheld",
@@ -102,57 +102,36 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for BBQ Meatball Skewers in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch beef. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Mix and roll meatballs",
-      "instruction": "Combine beef, breadcrumbs, eggs, garlic powder, onion powder, and salt until just mixed. Roll into 40 equal meatballs about 1.5 inches across for two per skewer. Plan about 15 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
+      "instruction": "Combine beef, breadcrumbs, eggs, garlic powder, onion powder, and salt until just mixed. Roll into 40 equal meatballs about 1.5 inches across for two per skewer.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Bake the meatballs",
-      "instruction": "Arrange on a wire rack over a sheet pan. Bake at 425°F for 18–20 minutes until browned and internal temp reaches 160°F in the center. Target oven/smoker temperature: 425°F. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Arrange on a wire rack over a sheet pan. Bake at 425°F for 18–20 minutes until browned and internal temp reaches 160°F in the center. Target oven/smoker temperature: 425°F.",
       "minutes": 20,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Glaze and finish",
-      "instruction": "Brush generously with BBQ sauce and bake 5 more minutes at 425°F until glaze sets sticky. Internal temp should still read at least 160°F after glazing. Target oven/smoker temperature: 425°F. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Brush generously with BBQ sauce and bake 5 more minutes at 425°F until glaze sets sticky. Internal temp should still read at least 160°F after glazing. Target oven/smoker temperature: 425°F.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Quick slaw",
-      "instruction": "Toss cabbage with apple cider vinegar, a tablespoon of oil, salt, and pepper. Drain excess liquid so slaw stays crisp on the platter. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Toss cabbage with apple cider vinegar, a tablespoon of oil, salt, and pepper. Drain excess liquid so slaw stays crisp on the platter.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F for medium beef, 160°F for ground. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
+      "stepNumber": 5,
       "title": "Skewer and serve",
-      "instruction": "Thread two meatballs, a tomato, and pickled onion on each skewer. Arrange on a platter with slaw cups for grabbing between plays. Plan about 10 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Thread two meatballs, a tomato, and pickled onion on each skewer. Arrange on a platter with slaw cups for grabbing between plays.",
       "minutes": 10,
       "heatLevel": ""
     }
@@ -175,25 +154,11 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 488,
-    "protein": 40,
-    "carbs": 28,
-    "fats": 25,
-    "label": "per serving (hall portion)",
-    "source": "calculated",
-    "filterFlags": {
-      "highProtein": true,
-      "under700Calories": true,
-      "under30gFat": true,
-      "highCarb": false,
-      "lowCarb": false,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": true
-    }
+    "calories": 380,
+    "protein": 28,
+    "carbs": 22,
+    "fats": 20,
+    "label": "~380 cal/serving · 28g protein · 2g fiber (est.)"
   },
   "heroImage": "/images/hall-expansion/bbq-meatball-skewers.jpg",
   "heroImageAlt": "BBQ Meatball Skewers — crew-sized firehall meal",
@@ -213,6 +178,7 @@
     "pretzel-bite-platter",
     "jalapeno-popper-dip"
   ],
-  "generatedAt": "2026-05-31T01:50:00.916Z",
+  "sourceUrl": "",
+  "generatedAt": "2026-06-04T20:47:21.930Z",
   "contentVersion": 2
 }

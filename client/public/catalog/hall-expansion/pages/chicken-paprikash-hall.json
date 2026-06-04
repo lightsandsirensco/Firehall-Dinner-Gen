@@ -13,10 +13,10 @@
   "cookTime": 50,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 804,
-  "protein": 89,
-  "carbs": 52,
-  "fats": 24,
+  "calories": 490,
+  "protein": 36,
+  "carbs": 44,
+  "fats": 20,
   "tags": [
     "protein:chicken",
     "format:stew",
@@ -112,64 +112,36 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Chicken Paprikash for the Hall in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "title": "Brown the chicken",
+      "instruction": "Season thighs with salt and pepper. Sear skin-side down in a Dutch oven until golden, flip briefly, then set aside.",
       "minutes": 12,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
-      "title": "Brown the chicken",
-      "instruction": "Season thighs with salt and pepper. Sear skin-side down in a Dutch oven until golden, flip briefly, then set aside. Bake until the center reaches a safe internal temp (165°F) and edges look set — use a thermometer at the thickest point. Plan about 12 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 4,
       "title": "Build paprika base",
       "instruction": "Sauté onion and bell pepper in the same pot 6 minutes. Stir in paprika and garlic, cook 1 minute until fragrant, then add tomato paste.",
       "minutes": 8,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Braise until tender",
-      "instruction": "Add broth, nestle chicken skin-side up, cover, and simmer 35–40 minutes until chicken reaches 165°F and sauce thickens. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Add broth, nestle chicken skin-side up, cover, and simmer 35–40 minutes until chicken reaches 165°F and sauce thickens.",
       "minutes": 38,
       "heatLevel": ""
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Finish with sour cream",
-      "instruction": "Remove pot from heat. Stir sour cream in gradually until sauce turns silky. Taste and adjust salt. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Remove pot from heat. Stir sour cream in gradually until sauce turns silky. Taste and adjust salt.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 9,
+      "stepNumber": 5,
       "title": "Boil noodles and serve",
-      "instruction": "Cook egg noodles, toss with butter, and portion into bowls. Top with chicken, sauce, and parsley. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Plan about 12 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Target 165°F at the thickest point before moving to the next batch.",
+      "instruction": "Cook egg noodles, toss with butter, and portion into bowls. Top with chicken, sauce, and parsley.",
       "minutes": 12,
       "heatLevel": ""
     }
@@ -192,26 +164,11 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 804,
-    "protein": 89,
-    "carbs": 52,
-    "fats": 24,
-    "label": "Estimated per serving",
-    "source": "calculated",
-    "estimateAvailable": true,
-    "filterFlags": {
-      "highProtein": true,
-      "under700Calories": false,
-      "under30gFat": true,
-      "highCarb": true,
-      "lowCarb": false,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": false
-    }
+    "calories": 490,
+    "protein": 36,
+    "carbs": 44,
+    "fats": 20,
+    "label": "~490 cal/serving · 36g protein · 3g fiber (est.)"
   },
   "heroImage": "/images/hall-expansion/chicken-paprikash-hall.jpg",
   "heroImageAlt": "Chicken Paprikash for the Hall — crew-sized firehall meal",
@@ -231,6 +188,7 @@
     "hall-burger-bar",
     "pasta-bar-night"
   ],
-  "generatedAt": "2026-05-31T01:50:00.916Z",
+  "sourceUrl": "",
+  "generatedAt": "2026-06-04T20:47:21.931Z",
   "contentVersion": 2
 }

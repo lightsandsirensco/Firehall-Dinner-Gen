@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-02T14:05:59.242Z",
+  "generatedAt": "2026-06-04T20:53:34.945Z",
   "wheelSegmentCount": 10,
   "pass": true,
   "passCount": 10,
@@ -11,7 +11,7 @@
     "steak-tacos",
     "pulled-pork",
     "smash-burgers",
-    "chili-garlic-bread",
+    "big-chili",
     "chicken-caesar",
     "jerk-chicken",
     "beef-dip",
@@ -38,7 +38,7 @@
   "rows": [
     {
       "slug": "chicken-parm",
-      "title": "Chicken Parm",
+      "title": "Chicken Parmesan",
       "pass": true,
       "imageAccuracyScore": 100,
       "recipeDetailScore": 100,
@@ -55,7 +55,7 @@
     },
     {
       "slug": "steak-tacos",
-      "title": "Street-Style Chimichurri Steak Tacos",
+      "title": "Steak Tacos",
       "pass": true,
       "imageAccuracyScore": 100,
       "recipeDetailScore": 100,
@@ -89,7 +89,7 @@
     },
     {
       "slug": "smash-burgers",
-      "title": "Double Smash Burgers with Caramelized Onions & Dirty Sauce",
+      "title": "Double Smash Burgers",
       "pass": true,
       "imageAccuracyScore": 100,
       "recipeDetailScore": 100,
@@ -105,18 +105,18 @@
       "recommendations": []
     },
     {
-      "slug": "chili-garlic-bread",
-      "title": "Firehouse Smoked Beef Chili with Cheesy Garlic Bread",
+      "slug": "big-chili",
+      "title": "Firehall Chili",
       "pass": true,
       "imageAccuracyScore": 100,
       "recipeDetailScore": 100,
       "realismScore": 100,
-      "route": "/recipes/chili-garlic-bread",
+      "route": "/recipes/big-chili",
       "pageExists": true,
       "heroOnDisk": true,
       "thumbOnDisk": true,
       "mobileOnDisk": true,
-      "heroMd5": "a7e085f6740ffc0841e11d7ce5beb335",
+      "heroMd5": "6f485c25c41cc95e5e28c9c8b52021cf",
       "duplicateHeroPeers": [],
       "issues": [],
       "recommendations": []
@@ -133,14 +133,14 @@
       "heroOnDisk": true,
       "thumbOnDisk": true,
       "mobileOnDisk": true,
-      "heroMd5": "98469346cbf06a6b03225f5d4391a7ac",
+      "heroMd5": "4a852b2ddd4b6379a800e14887661d87",
       "duplicateHeroPeers": [],
       "issues": [],
       "recommendations": []
     },
     {
       "slug": "jerk-chicken",
-      "title": "Jerk Chicken & Peas and Rice",
+      "title": "Jerk Chicken & Rice and Peas",
       "pass": true,
       "imageAccuracyScore": 100,
       "recipeDetailScore": 100,
@@ -150,7 +150,7 @@
       "heroOnDisk": true,
       "thumbOnDisk": true,
       "mobileOnDisk": true,
-      "heroMd5": "f9378c236c0ae35b8c3accc16f2d84f5",
+      "heroMd5": "d70475846229405ca1ca33637ffde99e",
       "duplicateHeroPeers": [],
       "issues": [],
       "recommendations": []
@@ -161,7 +161,7 @@
       "pass": true,
       "imageAccuracyScore": 100,
       "recipeDetailScore": 100,
-      "realismScore": 100,
+      "realismScore": 91,
       "route": "/recipes/beef-dip",
       "pageExists": true,
       "heroOnDisk": true,

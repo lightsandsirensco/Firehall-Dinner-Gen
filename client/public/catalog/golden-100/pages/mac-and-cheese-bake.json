@@ -188,6 +188,7 @@
     }
   },
   "heroImage": "/images/golden-100/mac-and-cheese-bake.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Baked Mac and Cheese on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/mac-and-cheese-bake.jpg",
   "thumbImage": "/images/thumbs/mac-and-cheese-bake.jpg",
   "railImage": "/images/rails/mac-and-cheese-bake.jpg",
@@ -206,15 +207,15 @@
     "golden_100"
   ],
   "relatedSlugs": [
+    "spicy-tomato-bisque-grilled-brie-toast",
+    "tomato-soup-grilled-cheese-croutons",
     "french-toast-casserole",
     "bbq-chicken-mac-and-cheese",
     "pancake-short-stack",
-    "beef-barley-soup",
-    "chicken-dumpling-soup",
-    "chicken-pot-pie"
+    "beef-barley-soup"
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.342Z",
+  "generatedAt": "2026-06-04T20:45:42.182Z",
   "contentVersion": 2
 }

@@ -14,8 +14,8 @@
     "casserole",
     "brioche"
   ],
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 12,
+  "baseServings": 12,
   "prepTime": 20,
   "cookTime": 45,
   "totalTime": 65,
@@ -23,48 +23,48 @@
   "ingredients": [
     {
       "name": "brioche or challah",
-      "quantity": "1.3",
+      "quantity": "2 loaves",
       "notes": "cubed into 1-inch pieces",
       "group": "Base"
     },
     {
       "name": "large eggs",
-      "quantity": "8",
+      "quantity": "12",
       "group": "Custard"
     },
     {
       "name": "whole milk",
-      "quantity": "2.7",
+      "quantity": "4 cups",
       "notes": "or half-and-half",
       "group": "Custard"
     },
     {
       "name": "maple syrup",
-      "quantity": "3/8",
+      "quantity": "1/2 cup",
       "notes": "plus extra for serving",
       "group": "Custard"
     },
     {
       "name": "vanilla extract",
-      "quantity": "1.3",
+      "quantity": "2 tsp",
       "notes": "and 1 tbsp cinnamon",
       "group": "Custard"
     },
     {
       "name": "brown sugar",
-      "quantity": "3/8",
+      "quantity": "1/2 cup",
       "notes": "sprinkled before baking",
       "group": "Topping"
     },
     {
       "name": "chopped pecans",
-      "quantity": "3/8",
+      "quantity": "1/2 cup",
       "notes": "optional crunch",
       "group": "Topping"
     },
     {
       "name": "powdered sugar",
-      "quantity": "1/8",
+      "quantity": "1/4 cup",
       "notes": "and fresh berries at the line",
       "group": "Finish"
     }
@@ -72,103 +72,49 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Overnight French Toast Bake in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
+      "title": "Prep the bread",
+      "instruction": "Cube brioche and spread on sheet pans to dry slightly for 30 minutes, or toast lightly at 300°F for 6 minutes. Day-old bread absorbs custard without turning mushy.",
+      "minutes": 8
     },
     {
       "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch Eggs. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
+      "title": "Whisk the custard",
+      "instruction": "Whisk eggs, milk, maple syrup, vanilla, cinnamon, and a pinch of salt until smooth. The mixture should look like thin pancake batter.",
+      "minutes": 5
     },
     {
       "stepNumber": 3,
-      "title": "Prep the bread",
-      "instruction": "Cube brioche and spread on sheet pans to dry slightly for 30 minutes, or toast lightly at 300°F for 6 minutes. Day-old bread absorbs custard without turning mushy.",
-      "minutes": 8,
-      "heatLevel": ""
+      "title": "Assemble and refrigerate",
+      "instruction": "Layer bread cubes in a buttered 9x13 dish. Pour custard evenly, pressing gently so all cubes soak. Cover and refrigerate 8–12 hours.",
+      "minutes": 10
     },
     {
       "stepNumber": 4,
-      "title": "Whisk the custard",
-      "instruction": "Whisk eggs, milk, maple syrup, vanilla, cinnamon, and a pinch of salt until smooth. The mixture should look like thin pancake batter.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 5,
-      "title": "Assemble and refrigerate",
-      "instruction": "Layer bread cubes in a buttered 9x13 dish. Pour custard evenly, pressing gently so all cubes soak. Cover and refrigerate 8–12 hours.",
-      "minutes": 10,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 6,
       "title": "Bake until puffed",
       "instruction": "Remove from fridge 30 minutes before baking. Heat oven to 375°F, sprinkle brown sugar and pecans on top, and bake until puffed, golden, and set in the center.",
       "minutes": 42,
-      "heatLevel": ""
+      "tempF": 375
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 9,
-      "title": "Portion and open the line",
-      "instruction": "Portion Overnight French Toast Bake onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
-      "title": "Scale for larger halls",
-      "instruction": "When cooking for more than 8 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 11,
+      "stepNumber": 5,
       "title": "Rest and serve",
-      "instruction": "Rest 10 minutes before cutting into squares. Dust with powdered sugar and serve with maple syrup and berries at the line. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 10,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 12,
-      "title": "Final quality check before service",
-      "instruction": "Walk the line once before opening service for Overnight French Toast Bake — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
-      "minutes": 4,
-      "heatLevel": ""
+      "instruction": "Rest 10 minutes before cutting into squares. Dust with powdered sugar and serve with maple syrup and berries at the line.",
+      "minutes": 10
     }
   ],
   "nutrition": {
-    "calories": 0,
-    "protein": 0,
-    "carbs": 0,
-    "fats": 0,
-    "label": "Estimated per serving",
-    "source": "unavailable",
-    "estimateAvailable": false,
+    "calories": 213,
+    "protein": 9,
+    "carbs": 28,
+    "fat": 8,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
       "under30gFat": true,
       "highCarb": false,
-      "lowCarb": true,
+      "lowCarb": false,
       "mealPrepFriendly": true
     },
     "badgeCandidates": {
@@ -193,28 +139,9 @@
   "heroImage": "/images/breakfast/overnight-french-toast-bake.jpg",
   "thumbImage": "/images/thumbs/breakfast/overnight-french-toast-bake.jpg",
   "imageAlt": "Golden overnight French toast bake cut into squares with berries and maple",
-  "publishedAt": "2026-05-31T18:33:00.829Z",
-  "updatedAt": "2026-05-31T23:49:25.627Z",
+  "publishedAt": "2026-06-04T20:48:24.990Z",
+  "updatedAt": "2026-06-04T20:48:24.990Z",
   "readMinutes": 8,
   "seoTitle": "Overnight French Toast Bake | Firehall Breakfast",
-  "collectionTier": "healthier_hall",
-  "proTips": [
-    "Label the covered dish with bake time and oven temp so the morning cook doesn't guess.",
-    "Pull the dish while the oven preheats so the glass or metal pan doesn't crack from cold shock.",
-    "Cut in the pan with a serrated knife wiped between rows for clean squares on the line."
-  ],
-  "tonightSpread": [
-    "Plate Overnight French Toast Bake with sides in separate pans so the crew can mix portions.",
-    "Keep hot items on one side of the table and cold on the other — eggs stay hot, fruit stays cold.",
-    "Line up Overnight French Toast Bake on the main counter with serving spoons — firefighters grab fast between calls.",
-    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
-  ],
-  "equipment": [
-    "Large sheet trays",
-    "Instant-read thermometer",
-    "Aluminum foil"
-  ],
-  "mealPrepNotes": "Prep mise en place before the shift — Overnight French Toast Bake runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone.",
-  "mobileImage": "/images/mobile/breakfast/overnight-french-toast-bake.jpg",
-  "railImage": "/images/rails/breakfast/overnight-french-toast-bake.jpg"
+  "collectionTier": "healthier_hall"
 }

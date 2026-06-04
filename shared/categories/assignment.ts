@@ -46,7 +46,7 @@ export const CURATED_STARTER_ASSIGNMENTS: Record<
     secondary: ["game_day_watch_party", "bbq_grill_nights"],
     subcategories: ["line-specials"],
   },
-  "chili-garlic-bread": {
+  "big-chili": {
     primary: "comfort_food",
     secondary: ["big_crew_feeders", "firehall_classics"],
     subcategories: ["bowls-stews"],

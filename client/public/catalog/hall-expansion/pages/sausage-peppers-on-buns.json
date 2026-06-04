@@ -148,7 +148,11 @@
     "fats": 34,
     "label": "~620 cal/serving · 28g protein · 4g fiber (est.)"
   },
-  "heroImageAlt": "Sausage & Peppers on Buns — firehall handheld meal — firefighter meal served for a firehall crew dinner",
+  "heroImage": "/images/hall-expansion/sausage-peppers-on-buns.jpg",
+  "heroImageAlt": "Sausage & Peppers on Buns — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/sausage-peppers-on-buns.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/sausage-peppers-on-buns.jpg",
+  "railImage": "/images/rails/hall-expansion/sausage-peppers-on-buns.jpg",
   "realismScore": 97,
   "firefighterScore": 86,
   "popularityWeight": 7.8,
@@ -163,10 +167,6 @@
     "pasta-bar-night"
   ],
   "sourceUrl": "https://www.americastestkitchen.com/recipes/6831-sausage-peppers-and-onions",
-  "generatedAt": "2026-06-04T20:18:31.794Z",
-  "contentVersion": 2,
-  "heroImage": "/images/hall-expansion/sausage-peppers-on-buns.jpg",
-  "thumbImage": "/images/thumbs/hall-expansion/sausage-peppers-on-buns.jpg",
-  "mobileImage": "/images/mobile/hall-expansion/sausage-peppers-on-buns.jpg",
-  "railImage": "/images/rails/hall-expansion/sausage-peppers-on-buns.jpg"
+  "generatedAt": "2026-06-04T20:47:21.931Z",
+  "contentVersion": 2
 }

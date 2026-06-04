@@ -13,10 +13,10 @@
   "cookTime": 20,
   "prepTime": 30,
   "difficulty": "medium",
-  "calories": 426,
-  "protein": 38,
-  "carbs": 2,
-  "fats": 28,
+  "calories": 450,
+  "protein": 36,
+  "carbs": 38,
+  "fats": 18,
   "tags": [
     "protein:chicken",
     "format:skewer",
@@ -119,71 +119,36 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Moroccan Chicken Kebab Platter in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
+      "title": "Blend chermoula",
+      "instruction": "Blend cilantro, parsley, garlic, cumin, paprika, lemon juice, and olive oil until smooth.",
+      "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "title": "Marinate chicken",
+      "instruction": "Coat chicken chunks in chermoula. Marinate at least 2 hours or overnight.",
       "minutes": 10,
-      "heatLevel": "medium-high"
+      "heatLevel": ""
     },
     {
       "stepNumber": 3,
-      "title": "Blend chermoula",
-      "instruction": "Blend cilantro, parsley, garlic, cumin, paprika, lemon juice, and olive oil until smooth. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "title": "Prepare couscous",
+      "instruction": "Pour boiling broth or water over couscous, cover, rest 5 minutes, then fluff with a fork.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 4,
-      "title": "Marinate chicken",
-      "instruction": "Coat chicken chunks in chermoula. Marinate at least 2 hours or overnight. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
-      "minutes": 10,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 5,
-      "title": "Prepare couscous",
-      "instruction": "Pour boiling broth or water over couscous, cover, rest 5 minutes, then fluff with a fork. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts.",
-      "minutes": 10,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 6,
       "title": "Skewer and grill",
       "instruction": "Thread chicken onto skewers with onion and pepper pieces. Grill over medium-high heat until charred and 165°F internal, about 12–15 minutes. Target oven/smoker temperature: 400°F.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 9,
-      "title": "Portion and open the line",
-      "instruction": "Portion Moroccan Chicken Kebab Platter onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
+      "stepNumber": 5,
       "title": "Platter and serve",
-      "instruction": "Spread couscous on platters, top with kebabs, scatter olives and preserved lemon, and serve harissa on the side. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Spread couscous on platters, top with kebabs, scatter olives and preserved lemon, and serve harissa on the side.",
       "minutes": 5,
       "heatLevel": ""
     }
@@ -206,26 +171,11 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 426,
-    "protein": 38,
-    "carbs": 2,
-    "fats": 28,
-    "label": "Estimated per serving",
-    "source": "calculated",
-    "estimateAvailable": true,
-    "filterFlags": {
-      "highProtein": true,
-      "under700Calories": true,
-      "under30gFat": true,
-      "highCarb": false,
-      "lowCarb": true,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": false
-    }
+    "calories": 450,
+    "protein": 36,
+    "carbs": 38,
+    "fats": 18,
+    "label": "~450 cal/serving · 36g protein · 3g fiber (est.)"
   },
   "heroImage": "/images/hall-expansion/moroccan-chicken-kebab-platter.jpg",
   "heroImageAlt": "Moroccan Chicken Kebab Platter — crew-sized firehall meal",
@@ -245,6 +195,7 @@
     "hall-burger-bar",
     "pasta-bar-night"
   ],
-  "generatedAt": "2026-05-31T01:50:00.916Z",
+  "sourceUrl": "",
+  "generatedAt": "2026-06-04T20:47:21.931Z",
   "contentVersion": 2
 }

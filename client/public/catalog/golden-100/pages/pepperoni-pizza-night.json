@@ -190,6 +190,7 @@
     }
   },
   "heroImage": "/images/golden-100/pepperoni-pizza-night.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Pepperoni Pizza on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/pepperoni-pizza-night.jpg",
   "thumbImage": "/images/thumbs/pepperoni-pizza-night.jpg",
   "railImage": "/images/rails/pepperoni-pizza-night.jpg",
@@ -217,6 +218,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.449Z",
+  "generatedAt": "2026-06-04T20:45:42.284Z",
   "contentVersion": 2
 }

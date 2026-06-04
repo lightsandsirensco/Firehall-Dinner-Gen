@@ -8,15 +8,15 @@
   "category": "bbq_grill_nights",
   "cuisine": "american",
   "description": "Whole butterflied rainbow trout brush with maple-bourbon glaze, grill in baskets until skin crisps and flesh reads 145°F, and finish with dill and lemon.",
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "cookTime": 16,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 423,
+  "calories": 412,
   "protein": 38,
-  "carbs": 6,
-  "fats": 26,
+  "carbs": 5,
+  "fats": 25,
   "tags": [
     "protein:seafood",
     "format:river_fish",
@@ -39,38 +39,38 @@
   "ingredients": [
     {
       "name": "whole rainbow trout",
-      "quantity": "8",
+      "quantity": "10",
       "unit": "pieces",
       "notes": "butterflied, about 5 lb total",
       "group": "Main"
     },
     {
       "name": "bourbon",
-      "quantity": "1/4",
+      "quantity": "0.33",
       "unit": "cup",
       "group": "Glaze"
     },
     {
       "name": "maple syrup",
-      "quantity": "2.6",
+      "quantity": "3",
       "unit": "tbsp",
       "group": "Glaze"
     },
     {
       "name": "whole-grain mustard",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tbsp",
       "group": "Glaze"
     },
     {
       "name": "fresh thyme",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tbsp",
       "group": "Glaze"
     },
     {
       "name": "pecans",
-      "quantity": "3/8",
+      "quantity": "0.5",
       "unit": "cup",
       "notes": "toasted and chopped",
       "group": "Finish"
@@ -84,20 +84,20 @@
     },
     {
       "name": "fresh sage",
-      "quantity": "7/8",
+      "quantity": "1",
       "unit": "tbsp",
       "notes": "chopped",
       "group": "Finish"
     },
     {
       "name": "brown butter",
-      "quantity": "1/4",
+      "quantity": "0.25",
       "unit": "cup",
       "group": "Finish"
     },
     {
       "name": "Maldon salt",
-      "quantity": "7/8",
+      "quantity": "1",
       "unit": "tsp",
       "group": "Seasoning"
     }
@@ -106,56 +106,56 @@
     {
       "stepNumber": 1,
       "title": "Build maple-bourbon glaze",
-      "instruction": "Simmer maple syrup, bourbon, mustard, soy, and garlic until slightly thickened. Cool before brushing. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Use fresh thyme, pecans, shallots, fresh sage as listed — measure each before heat goes on.",
+      "instruction": "Simmer maple syrup, bourbon, mustard, soy, and garlic until slightly thickened. Cool before brushing.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
       "title": "Prep trout",
-      "instruction": "Pat trout completely dry inside and out. Season with salt and pepper. Brush flesh lightly with half the glaze. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Pat trout completely dry inside and out. Season with salt and pepper. Brush flesh lightly with half the glaze.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 3,
-      "title": "Preheat grill grates",
-      "instruction": "Preheat grill to medium, 375°F. Oil fish basket well. Plan about 8 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F at the thickest point before moving to the next batch.",
+      "title": "Heat grill",
+      "instruction": "Preheat grill to medium, 375°F. Oil fish basket well.",
       "minutes": 8,
       "heatLevel": "medium"
     },
     {
       "stepNumber": 4,
       "title": "Grill trout",
-      "instruction": "Grill trout in basket flesh-side down 6–8 minutes until skin crisps. Flip carefully. Cook until char marks are visible and the thickest piece reads 145°F for fish, 145°F for shrimp until opaque on an instant-read thermometer. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Grill trout in basket flesh-side down 6–8 minutes until skin crisps. Flip carefully.",
       "minutes": 8,
       "heatLevel": "medium"
     },
     {
       "stepNumber": 5,
       "title": "Glaze and finish",
-      "instruction": "Brush glaze on flesh side and grill 4–6 minutes until 145°F at thickest part and flesh flakes. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Brush glaze on flesh side and grill 4–6 minutes until 145°F at thickest part and flesh flakes.",
       "minutes": 6,
       "heatLevel": "medium"
     },
     {
       "stepNumber": 6,
-      "title": "Rest before plating",
-      "instruction": "Rest trout 3 minutes off heat. Transfer to platters flesh-side up. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "title": "Rest briefly",
+      "instruction": "Rest trout 3 minutes off heat. Transfer to platters flesh-side up.",
       "minutes": 3,
       "heatLevel": ""
     },
     {
       "stepNumber": 7,
       "title": "Hold at 140°F",
-      "instruction": "Hold covered at 140°F up to 12 minutes max. Fish dries fast above 145°F hold. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Hold covered at 140°F up to 12 minutes max. Fish dries fast above 145°F hold.",
       "minutes": 3,
       "heatLevel": ""
     },
     {
       "stepNumber": 8,
       "title": "Serve with dill",
-      "instruction": "Scatter dill and serve with lemon wedges. One whole trout per firefighter. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Scatter dill and serve with lemon wedges. One whole trout per firefighter.",
       "minutes": 5,
       "heatLevel": ""
     }
@@ -177,25 +177,12 @@
   "mealPrepNotes": "Pat trout dry. Grill medium 375°F in fish baskets 6–8 minutes per side. Hold covered at 140°F up to 12 minutes max. Glaze in last 2 minutes only.",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 423,
+    "calories": 412,
     "protein": 38,
-    "carbs": 6,
-    "fats": 26,
+    "carbs": 5,
+    "fats": 25,
     "label": "per serving (hall portion)",
-    "source": "calculated",
-    "filterFlags": {
-      "highProtein": true,
-      "under700Calories": true,
-      "under30gFat": true,
-      "highCarb": false,
-      "lowCarb": true,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": false
-    }
+    "source": "estimated"
   },
   "heroImage": "/images/smoker-catalog/maple-bourbon-grilled-trout.jpg",
   "heroImageAlt": "Pecan Bourbon Whole Trout Board — crew-sized BBQ spread with visible smoke and bark",
@@ -223,6 +210,6 @@
     "brisket-style-beef-sandwiches-au-jus"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T23:32:23.206Z",
+  "generatedAt": "2026-06-04T20:47:49.439Z",
   "contentVersion": 2
 }

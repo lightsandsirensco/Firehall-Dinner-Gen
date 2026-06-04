@@ -134,6 +134,7 @@
     }
   },
   "heroImage": "/images/golden-100/breakfast-burrito-bar.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Breakfast Burrito Bar on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/breakfast-burrito-bar.jpg",
   "thumbImage": "/images/thumbs/breakfast-burrito-bar.jpg",
   "railImage": "/images/rails/breakfast-burrito-bar.jpg",
@@ -152,13 +153,13 @@
   "relatedSlugs": [
     "chorizo-breakfast-tacos",
     "pork-carnitas-tacos",
-    "bacon-egg-hash",
-    "biscuits-gravy",
     "chicken-quesadillas",
-    "breakfast-sausage-pizza"
+    "breakfast-sausage-pizza",
+    "detroit-style-pizza",
+    "honey-soppressata-pizza"
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.498Z",
+  "generatedAt": "2026-06-04T20:45:42.325Z",
   "contentVersion": 2
 }

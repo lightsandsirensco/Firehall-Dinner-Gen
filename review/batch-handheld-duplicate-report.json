@@ -1,0 +1,71 @@
+{
+  "generatedAt": "2026-06-04T20:36:39.014Z",
+  "greekVsShawarma": "SUFFICIENTLY DIFFERENT — approved in prebuild audit",
+  "buffaloVsSandwich": "PASS — no buffalo wrap/sandwich duplicate",
+  "rows": [
+    {
+      "slug": "chicken-caesar-wraps",
+      "duplicate": "PASS",
+      "near": [
+        "chicken-caesar",
+        "chicken-quesadillas"
+      ],
+      "overall": "PASS"
+    },
+    {
+      "slug": "buffalo-chicken-wraps",
+      "duplicate": "PASS",
+      "near": [
+        "buffalo-chicken-dip",
+        "game-day-nachos"
+      ],
+      "overall": "PASS"
+    },
+    {
+      "slug": "greek-chicken-pitas",
+      "duplicate": "PASS",
+      "near": [
+        "greek-chicken-bowls",
+        "chicken-souvlaki",
+        "mediterranean-chickpea"
+      ],
+      "overall": "PASS"
+    },
+    {
+      "slug": "beef-gyros-for-the-hall",
+      "duplicate": "PASS",
+      "near": [
+        "philly-cheesesteak-skillet",
+        "hall-taco-bar"
+      ],
+      "overall": "PASS"
+    },
+    {
+      "slug": "chicken-shawarma-pitas",
+      "duplicate": "PASS",
+      "near": [
+        "shawarma-bar-night",
+        "greek-chicken-pitas"
+      ],
+      "overall": "PASS"
+    },
+    {
+      "slug": "sausage-peppers-on-buns",
+      "duplicate": "PASS",
+      "near": [
+        "sausage-peppers-onions",
+        "sheet-pan-sausage-peppers",
+        "meatball-hoagies"
+      ],
+      "overall": "PASS"
+    },
+    {
+      "slug": "chicken-dumpling-soup",
+      "duplicate": "PASS",
+      "near": [
+        "chicken-pot-pie"
+      ],
+      "overall": "PASS"
+    }
+  ]
+}

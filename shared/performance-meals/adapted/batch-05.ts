@@ -132,35 +132,76 @@ export const batch05: PerformanceAdaptedRecipe[] = [
     ],
     stepLines: [
       {
-        title: "Mix Cajun spice blend",
+        title: "Mix Cajun spice blend in bulk",
         instruction:
-          "Combine paprika, garlic powder, onion powder, thyme, cayenne, 1 tbsp salt, and 1 tsp pepper until evenly blended and deeply red in color.",
-        minutes: 3,
+          "Combine paprika, garlic powder, onion powder, thyme, cayenne, 1 tbsp salt, and 1 tsp pepper in a labeled jar until evenly blended and deeply red. Portion what you need for this cook — the rest stays on the spice shelf for the next bowl night.",
+        minutes: 5,
       },
       {
-        title: "Cook rice",
+        title: "Rinse and start the rice",
         instruction:
-          "Simmer rice in salted water or broth until fluffy grains separate easily with a fork, not sticky, gummy, or wet at the bottom.",
-        minutes: 20,
+          "Rinse long-grain rice until water runs clear. Simmer in salted water or broth 18–20 minutes until grains separate with a fork — not sticky mush. Fluff and hold covered at 200°F in a hotel pan while chicken sears.",
+        minutes: 22,
+        heatLevel: "medium",
       },
       {
-        title: "Sauté trinity vegetables",
+        title: "Prep the trinity for the line",
         instruction:
-          "Cook onion, bell peppers, and celery in oil over medium 8 minutes until softened and edges lightly caramelized with sweet aroma.",
+          "Dice onion, bell peppers, and celery to uniform pieces so they cook evenly on the flat-top. Keep a dry towel nearby — blackening smoke will set off the hood if you forget to vent.",
+        minutes: 10,
+      },
+      {
+        title: "Sauté trinity until sweet",
+        instruction:
+          "Cook trinity in oil over medium 8–10 minutes until softened and edges turn light gold. Season with a pinch of salt. Hold warm at the edge of the range — do not let them steam to grey mush under a lid.",
+        minutes: 10,
+        heatLevel: "medium",
+      },
+      {
+        title: "Coat chicken for blackening",
+        instruction:
+          "Pat thighs dry; press Cajun blend onto both sides until fully coated and visibly red. Cold, wet chicken steams instead of chars — room-temp meat blackens faster and more evenly.",
         minutes: 8,
       },
       {
-        title: "Blacken chicken",
+        title: "Blacken chicken in batches",
         instruction:
-          "Coat thighs generously with Cajun blend. Sear in hot oiled skillet 5–6 minutes per side until dark crust forms and internal temp hits 165°F.",
-        minutes: 14,
+          "Heat cast iron until a water drop dances. Sear thighs 5–6 minutes per side in batches until crust is nearly black and centers read 165°F. Vent hood on — this step smokes. Rest chicken 5 minutes tented before slicing.",
+        minutes: 18,
         heatLevel: "high",
       },
       {
-        title: "Build bowls",
+        title: "Deglaze pan sauce",
         instruction:
-          "Slice chicken, portion over rice with sautéed trinity. Deglaze pan with broth for light sauce drizzle. Chicken should be juicy inside, charred outside.",
+          "Pour chicken broth into the hot pan and scrape fond. Simmer 3 minutes until lightly thickened and mahogany. Taste for salt; add a knob of butter if the crew likes a richer drizzle.",
         minutes: 5,
+        heatLevel: "medium",
+      },
+      {
+        title: "Slice and verify temp",
+        instruction:
+          "Slice rested thighs across the grain. Probe the thickest slice — must read 165°F before it hits the bowl line. Any under-temp piece goes back to the skillet 2 minutes per side.",
+        minutes: 5,
+      },
+      {
+        title: "Build the bowl line",
+        instruction:
+          "Set up: rice pan, sliced chicken, trinity, sauce ladle, green onion, hot sauce. Portion ~1 cup rice, 6 oz chicken, generous trinity, light sauce drizzle per firefighter. Charred outside, juicy inside is the visual cue.",
+        minutes: 8,
+        heatLevel: "low",
+      },
+      {
+        title: "Hold through call interruptions",
+        instruction:
+          "If tones drop, hold chicken covered at 140°F and rice at 200°F. Refresh sauce with a splash of broth if it tightens on the warm side of the range.",
+        minutes: 5,
+        heatLevel: "low",
+      },
+      {
+        title: "Pack down leftovers safely",
+        instruction:
+          "Cool chicken and rice in shallow pans within two hours. Reheat chicken to 165°F next shift; refresh rice with stock. Cajun chicken over romaine with ranch is a solid next-day lunch.",
+        minutes: 10,
       },
     ],
     nutrition: { calories: 495, protein: 38, carbs: 52, fats: 14, fiber: 3 },

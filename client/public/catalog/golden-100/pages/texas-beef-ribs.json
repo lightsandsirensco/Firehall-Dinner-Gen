@@ -146,6 +146,7 @@
     }
   },
   "heroImage": "/images/golden-100/texas-beef-ribs.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Texas-Style Beef Ribs on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/texas-beef-ribs.jpg",
   "thumbImage": "/images/thumbs/texas-beef-ribs.jpg",
   "railImage": "/images/rails/texas-beef-ribs.jpg",
@@ -165,13 +166,13 @@
   "relatedSlugs": [
     "bbq-brisket-burnt-ends",
     "ny-strip-herb-butter",
-    "smoked-brisket",
     "flank-chimichurri",
     "beer-can-chicken",
-    "cedar-plank-salmon"
+    "cedar-plank-salmon",
+    "grilled-pork-chops"
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.321Z",
+  "generatedAt": "2026-06-04T20:45:42.163Z",
   "contentVersion": 2
 }

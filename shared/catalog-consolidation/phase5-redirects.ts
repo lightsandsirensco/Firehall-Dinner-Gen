@@ -68,6 +68,10 @@ export const PHASE5_CONSOLIDATIONS: Phase5Consolidation[] = [
   { from: "cajun-grilled-catfish-crew", to: "cajun-grilled-cod-crew", note: "protein realism: catfish → cod" },
   { from: "grilled-halibut-lemon-packets", to: "grilled-cod-lemon-packets", note: "protein realism: halibut → cod" },
   { from: "garlic-butter-scallop-skewers", to: "garlic-butter-shrimp-skewers", note: "protein realism: scallops → shrimp" },
+  { from: "garlic-butter-shrimp-skewers", to: "garlic-butter-shrimp", note: "exact: garlic butter shrimp" },
+  { from: "chicken-caesar-wraps", to: "chicken-caesar", note: "exact: caesar chicken crossover" },
+  { from: "italian-sausage-veg-sheet-pan", to: "sheet-pan-sausage-peppers", note: "exact: sausage peppers sheet pan" },
+  { from: "sheet-pan-chicken-fajitas-lite", to: "sheet-pan-fajitas", note: "exact: sheet pan fajitas" },
 ];
 
 export const PHASE5_REDIRECT_MAP: Record<string, string> = Object.fromEntries(

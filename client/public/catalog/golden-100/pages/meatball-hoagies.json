@@ -138,6 +138,7 @@
     }
   },
   "heroImage": "/images/golden-100/meatball-hoagies.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Meatball Hoagies on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/meatball-hoagies.jpg",
   "thumbImage": "/images/thumbs/meatball-hoagies.jpg",
   "railImage": "/images/rails/meatball-hoagies.jpg",
@@ -164,6 +165,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.291Z",
+  "generatedAt": "2026-06-04T20:45:42.142Z",
   "contentVersion": 2
 }

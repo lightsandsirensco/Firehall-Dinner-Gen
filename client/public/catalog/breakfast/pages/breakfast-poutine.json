@@ -15,8 +15,8 @@
     "eggs",
     "indulgent"
   ],
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "prepTime": 15,
   "cookTime": 30,
   "totalTime": 45,
@@ -24,49 +24,49 @@
   "ingredients": [
     {
       "name": "frozen straight-cut fries",
-      "quantity": "3.2",
+      "quantity": "4 lb",
       "notes": "or hand-cut russets",
       "group": "Base"
     },
     {
       "name": "vegetable oil",
-      "quantity": "1.6",
+      "quantity": "2 tbsp",
       "notes": "for roasting",
       "group": "Base"
     },
     {
       "name": "breakfast sausage",
-      "quantity": "3/4",
+      "quantity": "1 lb",
       "notes": "browned for gravy",
       "group": "Gravy"
     },
     {
       "name": "all-purpose flour",
-      "quantity": "1/4",
+      "quantity": "1/4 cup",
       "notes": "whisked into sausage fat",
       "group": "Gravy"
     },
     {
       "name": "whole milk",
-      "quantity": "2.4",
+      "quantity": "3 cups",
       "notes": "plus salt and black pepper",
       "group": "Gravy"
     },
     {
       "name": "large eggs",
-      "quantity": "10",
+      "quantity": "12",
       "notes": "fried sunny-side up",
       "group": "Toppings"
     },
     {
       "name": "cheese curds",
-      "quantity": "3/8",
+      "quantity": "1 1/2 lb",
       "notes": "or cubed mozzarella if curds unavailable",
       "group": "Toppings"
     },
     {
       "name": "green onions",
-      "quantity": "1/4",
+      "quantity": "1/4 cup",
       "notes": "sliced, and hot sauce at the line",
       "group": "Finish"
     }
@@ -74,83 +74,50 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Breakfast Poutine in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch Eggs. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Crisp the fries",
       "instruction": "Heat oven to 425°F. Spread fries on sheet pans in a single layer with oil and salt. Roast until deeply golden and crisp—soft fries kill poutine.",
       "minutes": 25,
-      "heatLevel": ""
+      "tempF": 425
+    },
+    {
+      "stepNumber": 2,
+      "title": "Make sausage gravy",
+      "instruction": "Brown sausage, sprinkle flour over the fat, and cook 1 minute. Whisk in milk gradually, simmer until thick enough to coat a spoon. Season aggressively with black pepper.",
+      "minutes": 10
+    },
+    {
+      "stepNumber": 3,
+      "title": "Fry the eggs",
+      "instruction": "Fry eggs sunny-side up in batches with crisp edges on the whites. Hold on a warm tray—yolks should stay runny for the full poutine experience.",
+      "minutes": 8
     },
     {
       "stepNumber": 4,
-      "title": "Make sausage gravy",
-      "instruction": "Brown sausage, sprinkle flour over the fat, and cook 1 minute. Whisk in milk gradually, simmer until thick enough to coat a spoon. Season aggressively with black pepper. Target 165°F at the thickest point before moving to the next batch.",
-      "minutes": 10,
-      "heatLevel": ""
+      "title": "Assemble on trays",
+      "instruction": "Pile hot fries on hotel pans or plates. Scatter cheese curds, ladle hot gravy to partially melt them, then crown each portion with a fried egg.",
+      "minutes": 5
     },
     {
       "stepNumber": 5,
-      "title": "Fry the eggs",
-      "instruction": "Fry eggs sunny-side up in batches with crisp edges on the whites. Hold on a warm tray—yolks should stay runny for the full poutine experience.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 6,
-      "title": "Assemble on trays",
-      "instruction": "Pile hot fries on hotel pans or plates. Scatter cheese curds, ladle hot gravy to partially melt them, then crown each portion with a fried egg.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 9,
       "title": "Serve immediately",
-      "instruction": "Finish with green onion and hot sauce at the line. Poutine waits for no one—serve the moment eggs hit the fries. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 0,
-      "heatLevel": ""
+      "instruction": "Finish with green onion and hot sauce at the line. Poutine waits for no one—serve the moment eggs hit the fries.",
+      "minutes": 0
     }
   ],
   "nutrition": {
-    "calories": 324,
-    "protein": 11,
-    "carbs": 4,
-    "fat": 30,
-    "label": "Estimated per serving",
+    "calories": 303,
+    "protein": 16,
+    "carbs": 7,
+    "fat": 24,
+    "label": "per serving (hall portion)",
     "source": "calculated",
-    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
-      "under30gFat": false,
+      "under30gFat": true,
       "highCarb": false,
       "lowCarb": true,
-      "mealPrepFriendly": true
+      "mealPrepFriendly": false
     },
     "badgeCandidates": {
       "highProtein": false,
@@ -174,28 +141,9 @@
   "heroImage": "/images/breakfast/breakfast-poutine.jpg",
   "thumbImage": "/images/thumbs/breakfast/breakfast-poutine.jpg",
   "imageAlt": "Breakfast poutine with crispy fries, sausage gravy, cheese curds, and fried egg",
-  "publishedAt": "2026-05-31T18:33:00.829Z",
-  "updatedAt": "2026-05-31T23:50:24.888Z",
+  "publishedAt": "2026-06-04T20:48:24.990Z",
+  "updatedAt": "2026-06-04T20:48:24.990Z",
   "readMinutes": 8,
   "seoTitle": "Breakfast Poutine | Firehall Breakfast",
-  "collectionTier": "firehall_classic",
-  "proTips": [
-    "Roast fries first and hold in a warm oven uncovered so they stay crisp until gravy hits.",
-    "Make gravy in a wide skillet so it stays hot and pourable—reheat with a splash of milk if it tightens.",
-    "Fry eggs last in sync with gravy ladle—one cook assembles while another keeps the egg pan moving."
-  ],
-  "tonightSpread": [
-    "Plate Breakfast Poutine with sides in separate pans so the crew can mix portions.",
-    "Keep hot items on one side of the table and cold on the other — eggs stay hot, fruit stays cold.",
-    "Line up Breakfast Poutine on the main counter with serving spoons — firefighters grab fast between calls.",
-    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
-  ],
-  "equipment": [
-    "Large sheet trays",
-    "Instant-read thermometer",
-    "Aluminum foil"
-  ],
-  "mealPrepNotes": "Prep mise en place before the shift — Breakfast Poutine runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone.",
-  "mobileImage": "/images/mobile/breakfast/breakfast-poutine.jpg",
-  "railImage": "/images/rails/breakfast/breakfast-poutine.jpg"
+  "collectionTier": "firehall_classic"
 }

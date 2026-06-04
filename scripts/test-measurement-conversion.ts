@@ -87,7 +87,7 @@ const qaRecipes: Array<{ path: string; label: string }> = [
   { path: join(catalogDir, "chicken-parm.json"), label: "Chicken Parm" },
   { path: join(catalogDir, "pulled-pork.json"), label: "Pulled Pork" },
   { path: join(breakfastDir, "hall-breakfast-burritos.json"), label: "Breakfast Burritos" },
-  { path: join(catalogDir, "smoked-brisket.json"), label: "Smoked Brisket" },
+  { path: join(catalogDir, "chicken-parm.json"), label: "Chicken Parm" },
   { path: join(catalogDir, "loaded-nacho-skillet.json"), label: "Loaded Nacho Bar" },
   { path: join(breakfastDir, "monte-cristo-sandwiches.json"), label: "Monte Cristo" },
 ];

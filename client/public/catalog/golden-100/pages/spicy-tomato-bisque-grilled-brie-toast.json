@@ -180,6 +180,7 @@
     }
   },
   "heroImage": "/images/golden-100/spicy-tomato-bisque-grilled-brie-toast.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Spicy Tomato Bisque with Grilled Brie Toast on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/spicy-tomato-bisque-grilled-brie-toast.jpg",
   "thumbImage": "/images/thumbs/spicy-tomato-bisque-grilled-brie-toast.jpg",
   "railImage": "/images/rails/spicy-tomato-bisque-grilled-brie-toast.jpg",
@@ -202,11 +203,11 @@
     "mac-and-cheese-bake",
     "beef-barley-soup",
     "chicken-dumpling-soup",
-    "chili-garlic-bread",
-    "chicken-tortilla-soup-for-the-hall"
+    "chicken-tortilla-soup-for-the-hall",
+    "french-onion-soup-for-the-hall"
   ],
   "sourceName": "Serious Eats",
   "sourceUrl": "https://www.seriouseats.com/15-minute-creamy-tomato-soup-vegan-recipe",
-  "generatedAt": "2026-06-04T20:35:16.819Z",
+  "generatedAt": "2026-06-04T20:45:42.220Z",
   "contentVersion": 2
 }

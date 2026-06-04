@@ -8,12 +8,12 @@
   "category": "bbq_grill_nights",
   "cuisine": "american",
   "description": "Adapted from classic smoked mac and cheese tradition (Hey Grill Hey, Traeger): elbow pasta bakes in a creamy three-cheese sauce, then rides the smoker at 275°F for 30 minutes for subtle smoke and a golden top.",
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "cookTime": 75,
   "prepTime": 25,
   "difficulty": "easy",
-  "calories": 728,
+  "calories": 729,
   "protein": 26,
   "carbs": 84,
   "fats": 32,
@@ -39,136 +39,115 @@
   "ingredients": [
     {
       "name": "elbow macaroni",
-      "quantity": "1.6",
+      "quantity": "2",
       "unit": "lb"
     },
     {
       "name": "unsalted butter",
-      "quantity": "5.1",
+      "quantity": "6",
       "unit": "tbsp"
     },
     {
       "name": "all-purpose flour",
-      "quantity": "1/4",
+      "quantity": "0.25",
       "unit": "cup"
     },
     {
       "name": "whole milk",
-      "quantity": "3.2",
+      "quantity": "4",
       "unit": "cups"
     },
     {
       "name": "heavy cream",
-      "quantity": "3/4",
+      "quantity": "1",
       "unit": "cup"
     },
     {
       "name": "sharp cheddar",
-      "quantity": "2.4",
+      "quantity": "3",
       "unit": "cups",
       "notes": "shredded"
     },
     {
       "name": "Gruyère",
-      "quantity": "3/4",
+      "quantity": "1",
       "unit": "cup",
       "notes": "shredded"
     },
     {
       "name": "smoked gouda",
-      "quantity": "3/4",
+      "quantity": "1",
       "unit": "cup",
       "notes": "shredded"
     },
     {
       "name": "kosher salt",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tsp"
     },
     {
       "name": "black pepper",
-      "quantity": "7/8",
+      "quantity": "1",
       "unit": "tsp"
     },
     {
       "name": "smoked paprika",
-      "quantity": "7/8",
+      "quantity": "1",
       "unit": "tsp"
     },
     {
       "name": "panko breadcrumbs",
-      "quantity": "3/4",
+      "quantity": "1",
       "unit": "cup"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Smoked Mac and Cheese for the Crew in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
+      "title": "Par-cook pasta",
+      "instruction": "Boil macaroni in salted water 2 minutes shy of package directions. Drain well.",
+      "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch vegetarian. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
-      "title": "Par-cook pasta",
-      "instruction": "Boil macaroni in salted water 2 minutes shy of package directions. Drain well. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 10,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 4,
       "title": "Build cheese sauce",
       "instruction": "Melt butter, whisk in flour 1 minute. Whisk in milk and cream until smooth. Simmer until thick, then melt in cheddar, Gruyère, and gouda. Season with salt, pepper, and paprika.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Combine and pan",
-      "instruction": "Fold pasta into cheese sauce. Transfer to buttered foil pans. Top with panko mixed with 2 tbsp melted butter. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Fold pasta into cheese sauce. Transfer to buttered foil pans. Top with panko mixed with 2 tbsp melted butter.",
       "minutes": 8,
       "heatLevel": ""
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Smoke at 275°F",
-      "instruction": "Smoke uncovered at 275°F 30 minutes until top is golden and internal temp reaches 165°F in the center. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Smoke uncovered at 275°F 30 minutes until top is golden and internal temp reaches 165°F in the center.",
       "minutes": 30,
       "heatLevel": "low"
     },
     {
-      "stepNumber": 7,
+      "stepNumber": 5,
       "title": "Rest and hold",
-      "instruction": "Rest 10 minutes. Cover with foil and hold at 170°F until service. Stir edges into center if a skin forms. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Rest 10 minutes. Cover with foil and hold at 170°F until service. Stir edges into center if a skin forms.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
-      "stepNumber": 8,
-      "title": "Cooking step",
-      "instruction": "Mac in foil pans with serving spoons. Pair with any smoked meat on the line. Target 165°F for any egg-based components at the thickest part before moving to the next batch. Plan about 3 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
+      "stepNumber": 6,
+      "title": "Tonight's board",
+      "instruction": "Mac in foil pans with serving spoons. Pair with any smoked meat on the line.",
       "minutes": 3,
       "heatLevel": ""
     },
     {
-      "stepNumber": 9,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F for any egg-based components. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
+      "stepNumber": 7,
       "title": "Leftovers",
-      "instruction": "Reheat covered at 325°F with splash of milk until 165°F. Top with hot sauce for shift lunch. Plan about 10 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Reheat covered at 325°F with splash of milk until 165°F. Top with hot sauce for shift lunch.",
       "minutes": 10,
       "heatLevel": ""
     }
@@ -190,26 +169,12 @@
   "mealPrepNotes": "Build sauce and par-cook pasta ahead. Assemble in foil pans. Smoke 30 minutes, then hold covered at 170°F. Stir before service if top dries.",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 728,
+    "calories": 729,
     "protein": 26,
     "carbs": 84,
     "fats": 32,
-    "label": "Estimated per serving",
-    "source": "calculated",
-    "estimateAvailable": true,
-    "filterFlags": {
-      "highProtein": false,
-      "under700Calories": false,
-      "under30gFat": false,
-      "highCarb": true,
-      "lowCarb": false,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": false,
-      "lighterOption": false,
-      "performanceMeal": false
-    }
+    "label": "per serving (hall portion)",
+    "source": "estimated"
   },
   "heroImage": "/images/smoker-catalog/smoked-mac-and-cheese-crew.jpg",
   "heroImageAlt": "Smoked Mac and Cheese for the Crew — crew-sized BBQ spread with visible smoke and bark",
@@ -238,6 +203,6 @@
     "kansas-city-pulled-pork-sandwiches"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T23:32:23.203Z",
+  "generatedAt": "2026-06-04T20:47:49.423Z",
   "contentVersion": 2
 }

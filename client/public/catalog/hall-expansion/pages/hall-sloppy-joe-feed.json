@@ -13,10 +13,10 @@
   "cookTime": 35,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 846,
-  "protein": 68,
-  "carbs": 49,
-  "fats": 44,
+  "calories": 520,
+  "protein": 36,
+  "carbs": 42,
+  "fats": 24,
   "tags": [
     "protein:beef",
     "format:sandwich",
@@ -105,78 +105,36 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Hall Sloppy Joe Feed in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch beef. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Brown the beef",
       "instruction": "Cook ground beef with onion and bell pepper over medium-high heat 12–15 minutes, breaking into crumbles until well browned. Drain excess fat.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Build the sauce",
-      "instruction": "Stir in ketchup, tomato paste, Worcestershire, vinegar, and brown sugar until combined. Plan about 3 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Stir in ketchup, tomato paste, Worcestershire, vinegar, and brown sugar until combined.",
       "minutes": 3,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Simmer until thick",
-      "instruction": "Reduce heat and simmer uncovered 15–20 minutes, stirring often, until sauce mounds on a spoon and flavors meld. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Reduce heat and simmer uncovered 15–20 minutes, stirring often, until sauce mounds on a spoon and flavors meld.",
       "minutes": 18,
       "heatLevel": ""
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Toast the buns",
       "instruction": "Split buns and toast cut-side down in a dry skillet or under broiler at 400°F until golden, about 3 minutes. Target oven/smoker temperature: 400°F.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F for medium beef, 160°F for ground. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 9,
-      "title": "Portion and open the line",
-      "instruction": "Portion Hall Sloppy Joe Feed onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
-      "title": "Scale for larger halls",
-      "instruction": "When cooking for more than 10 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 11,
+      "stepNumber": 5,
       "title": "Serve the line",
-      "instruction": "Hold beef warm at 165°F in a hotel pan. Crews build sandwiches with pickles and extra onion if desired. Serve with chips. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Hold beef warm at 165°F in a hotel pan. Crews build sandwiches with pickles and extra onion if desired. Serve with chips.",
       "minutes": 5,
       "heatLevel": ""
     }
@@ -199,26 +157,11 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 846,
-    "protein": 68,
-    "carbs": 49,
-    "fats": 44,
-    "label": "Estimated per serving",
-    "source": "calculated",
-    "estimateAvailable": true,
-    "filterFlags": {
-      "highProtein": true,
-      "under700Calories": false,
-      "under30gFat": false,
-      "highCarb": false,
-      "lowCarb": false,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": false
-    }
+    "calories": 520,
+    "protein": 36,
+    "carbs": 42,
+    "fats": 24,
+    "label": "~520 cal/serving · 36g protein · 3g fiber (est.)"
   },
   "heroImage": "/images/hall-expansion/hall-sloppy-joe-feed.jpg",
   "heroImageAlt": "Hall Sloppy Joe Feed — crew-sized firehall meal",
@@ -238,6 +181,7 @@
     "hall-burger-bar",
     "pasta-bar-night"
   ],
-  "generatedAt": "2026-05-31T01:50:00.916Z",
+  "sourceUrl": "",
+  "generatedAt": "2026-06-04T20:47:21.930Z",
   "contentVersion": 2
 }

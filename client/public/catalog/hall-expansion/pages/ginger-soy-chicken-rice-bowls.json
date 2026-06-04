@@ -13,10 +13,10 @@
   "cookTime": 25,
   "prepTime": 25,
   "difficulty": "easy",
-  "calories": 599,
-  "protein": 43,
-  "carbs": 58,
-  "fats": 21,
+  "calories": 420,
+  "protein": 36,
+  "carbs": 48,
+  "fats": 10,
   "tags": [
     "protein:chicken",
     "format:bowl",
@@ -104,86 +104,37 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Ginger Soy Chicken Rice Bowls in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
+      "title": "Marinate the chicken",
+      "instruction": "Whisk soy sauce, ginger, garlic, and honey. Coat chicken thighs and marinate at least 30 minutes in the fridge.",
+      "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
-      "title": "Marinate the chicken",
-      "instruction": "Whisk soy sauce, ginger, garlic, and honey. Coat chicken thighs and marinate at least 30 minutes in the fridge. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
-      "minutes": 10,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 4,
       "title": "Cook the rice",
-      "instruction": "Rinse jasmine rice and cook with 5.5 cups water—bring to boil, cover, simmer 18 minutes, rest 5 minutes off heat. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts.",
+      "instruction": "Rinse jasmine rice and cook with 5.5 cups water—bring to boil, cover, simmer 18 minutes, rest 5 minutes off heat.",
       "minutes": 25,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Grill the chicken",
       "instruction": "Grill thighs over medium-high heat 5–6 minutes per side until charred and internal temp reaches 165°F. Rest and slice. Target oven/smoker temperature: 165°F.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Steam the broccoli",
-      "instruction": "Steam broccoli 4–5 minutes until bright green and tender-crisp. Season lightly with salt. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Steam broccoli 4–5 minutes until bright green and tender-crisp. Season lightly with salt.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 9,
-      "title": "Portion and open the line",
-      "instruction": "Portion Ginger Soy Chicken Rice Bowls onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
-      "title": "Scale for larger halls",
-      "instruction": "When cooking for more than 10 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 11,
+      "stepNumber": 5,
       "title": "Assemble bowls",
       "instruction": "Portion rice and broccoli into bowls. Top with sliced chicken, drizzle remaining marinade simmered 2 minutes, sesame oil, and sesame seeds.",
       "minutes": 10,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 12,
-      "title": "Final quality check before service",
-      "instruction": "Walk the line once before opening service for Ginger Soy Chicken Rice Bowls — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
-      "minutes": 4,
       "heatLevel": ""
     }
   ],
@@ -205,26 +156,11 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 599,
-    "protein": 43,
-    "carbs": 58,
-    "fats": 21,
-    "label": "Estimated per serving",
-    "source": "calculated",
-    "estimateAvailable": true,
-    "filterFlags": {
-      "highProtein": true,
-      "under700Calories": true,
-      "under30gFat": true,
-      "highCarb": true,
-      "lowCarb": false,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": true
-    }
+    "calories": 420,
+    "protein": 36,
+    "carbs": 48,
+    "fats": 10,
+    "label": "~420 cal/serving · 36g protein · 4g fiber (est.)"
   },
   "heroImage": "/images/hall-expansion/ginger-soy-chicken-rice-bowls.jpg",
   "heroImageAlt": "Ginger Soy Chicken Rice Bowls — crew-sized firehall meal",
@@ -244,6 +180,7 @@
     "hall-burger-bar",
     "pasta-bar-night"
   ],
-  "generatedAt": "2026-05-31T01:50:00.916Z",
+  "sourceUrl": "",
+  "generatedAt": "2026-06-04T20:47:21.930Z",
   "contentVersion": 2
 }

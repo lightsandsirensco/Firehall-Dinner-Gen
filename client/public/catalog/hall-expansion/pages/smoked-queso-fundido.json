@@ -13,10 +13,10 @@
   "cookTime": 45,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 0,
-  "protein": 0,
-  "carbs": 0,
-  "fats": 0,
+  "calories": 540,
+  "protein": 26,
+  "carbs": 22,
+  "fats": 40,
   "tags": [
     "protein:pork",
     "format:smoker",
@@ -108,86 +108,37 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Smoked Queso Fundido in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Double-check seasoning after scaling — crew palates run salty after long shifts, so taste the first portion before opening the line.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch pork. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Brown the chorizo",
       "instruction": "Cook crumbled chorizo in a skillet over medium heat until fully browned and fat renders, about 8 minutes. Drain excess fat, leaving just enough to coat the pan.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Sweat aromatics",
       "instruction": "Add diced onion and garlic to the chorizo fat and cook until softened and translucent, about 5 minutes. Stir in roasted poblano peppers and remove from direct heat.",
       "minutes": 6,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Build the cheese base",
       "instruction": "Fold in cream cheese until melted, then gradually add Oaxaca, Monterey Jack, and heavy cream, stirring until the mixture is smooth and evenly combined.",
       "minutes": 8,
       "heatLevel": ""
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Smoke until bubbling",
       "instruction": "Transfer skillet to smoker at 275°F and smoke uncovered 25–30 minutes until surface bubbles, edges brown lightly, and center reaches 165°F for safe holding. Target oven/smoker temperature: 275°F.",
       "minutes": 30,
       "heatLevel": ""
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F with a 3-minute rest. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 9,
-      "title": "Portion and open the line",
-      "instruction": "Portion Smoked Queso Fundido onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
-      "title": "Scale for larger halls",
-      "instruction": "When cooking for more than 10 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 11,
+      "stepNumber": 5,
       "title": "Serve immediately",
       "instruction": "Place hot skillet on a trivet with chips and warm tortillas around the board. Replenish chips as needed and keep backup queso warm at 170°F in a crock if the first batch disappears fast.",
       "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 12,
-      "title": "Final quality check before service",
-      "instruction": "Walk the line once before opening service for Smoked Queso Fundido — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
-      "minutes": 4,
       "heatLevel": ""
     }
   ],
@@ -209,26 +160,11 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 0,
-    "protein": 0,
-    "carbs": 0,
-    "fats": 0,
-    "label": "Estimated per serving",
-    "source": "unavailable",
-    "estimateAvailable": false,
-    "filterFlags": {
-      "highProtein": true,
-      "under700Calories": false,
-      "under30gFat": false,
-      "highCarb": true,
-      "lowCarb": false,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": false
-    }
+    "calories": 540,
+    "protein": 26,
+    "carbs": 22,
+    "fats": 40,
+    "label": "~540 cal/serving · 26g protein · 2g fiber (est.)"
   },
   "heroImage": "/images/hall-expansion/smoked-queso-fundido.jpg",
   "heroImageAlt": "Smoked Queso Fundido — crew-sized firehall meal",
@@ -248,6 +184,7 @@
     "pork-belly-burnt-ends",
     "smoked-sausage-platter"
   ],
-  "generatedAt": "2026-05-31T01:50:00.915Z",
+  "sourceUrl": "",
+  "generatedAt": "2026-06-04T20:47:21.929Z",
   "contentVersion": 2
 }

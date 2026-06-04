@@ -14,8 +14,8 @@
     "griddle",
     "diner"
   ],
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "prepTime": 20,
   "cookTime": 25,
   "totalTime": 45,
@@ -23,46 +23,46 @@
   "ingredients": [
     {
       "name": "thick white bread slices",
-      "quantity": "16",
+      "quantity": "20",
       "notes": "crusts trimmed optional",
       "group": "Sandwich"
     },
     {
       "name": "sliced deli ham",
-      "quantity": "3/4",
+      "quantity": "1 lb",
       "group": "Sandwich"
     },
     {
       "name": "sliced deli turkey",
-      "quantity": "3/4",
+      "quantity": "1 lb",
       "group": "Sandwich"
     },
     {
       "name": "Swiss cheese",
-      "quantity": "8",
+      "quantity": "10 slices",
       "group": "Sandwich"
     },
     {
       "name": "Dijon mustard",
-      "quantity": "2.4",
+      "quantity": "3 tbsp",
       "notes": "spread thin on half the slices",
       "group": "Sandwich"
     },
     {
       "name": "large eggs",
-      "quantity": "5",
+      "quantity": "6",
       "notes": "whisked with 1 cup milk and pinch of salt",
       "group": "Batter"
     },
     {
       "name": "butter",
-      "quantity": "3.2",
+      "quantity": "4 tbsp",
       "notes": "for griddling in batches",
       "group": "Cook"
     },
     {
       "name": "powdered sugar",
-      "quantity": "1/4",
+      "quantity": "1/4 cup",
       "notes": "plus raspberry jam for dipping",
       "group": "Finish"
     }
@@ -70,76 +70,49 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Monte Cristo Sandwiches in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use sliced deli ham as listed — measure each before heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
+      "title": "Build the sandwiches",
+      "instruction": "Layer ham, turkey, and Swiss between bread slices with a thin smear of Dijon. Press gently and set aside while the griddle heats.",
+      "minutes": 12
     },
     {
       "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch Eggs. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
+      "title": "Set the dip station",
+      "instruction": "Whisk eggs and milk in a shallow pan wide enough to fit a sandwich. Heat a large griddle over medium and melt butter until foaming.",
+      "minutes": 3
     },
     {
       "stepNumber": 3,
-      "title": "Build the sandwiches",
-      "instruction": "Layer ham, turkey, and Swiss between bread slices with a thin smear of Dijon. Press gently and set aside while the griddle heats. Cook until char marks are visible and the thickest piece reads 165°F on an instant-read thermometer. Plan about 12 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 12,
-      "heatLevel": ""
+      "title": "Dip and griddle",
+      "instruction": "Dip each sandwich briefly in egg batter—don't soak or bread falls apart. Griddle 3–4 minutes per side until deep golden and cheese melts.",
+      "minutes": 18
     },
     {
       "stepNumber": 4,
-      "title": "Set the dip station",
-      "instruction": "Whisk eggs and milk in a shallow pan wide enough to fit a sandwich. Heat a large griddle over medium and melt butter until foaming.",
-      "minutes": 3,
-      "heatLevel": ""
+      "title": "Hold and slice",
+      "instruction": "Transfer to a wire rack in a 200°F oven between batches. Slice diagonally before serving so jam dipping is easier.",
+      "minutes": 5
     },
     {
       "stepNumber": 5,
-      "title": "Dip and griddle",
-      "instruction": "Dip each sandwich briefly in egg batter—don't soak or bread falls apart. Griddle 3–4 minutes per side until deep golden and cheese melts.",
-      "minutes": 18,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 6,
-      "title": "Hold and slice",
-      "instruction": "Transfer to a wire rack in a 200°F oven between batches. Slice diagonally before serving so jam dipping is easier. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
       "title": "Dust and serve",
       "instruction": "Dust lightly with powdered sugar through a fine sieve—go easy so it doesn't clump. Serve with warm raspberry jam for dipping at the line.",
-      "minutes": 3,
-      "heatLevel": ""
+      "minutes": 3
     }
   ],
   "nutrition": {
-    "calories": 0,
-    "protein": 0,
-    "carbs": 0,
-    "fats": 0,
-    "label": "Estimated per serving",
-    "source": "unavailable",
-    "estimateAvailable": false,
+    "calories": 652,
+    "protein": 39,
+    "carbs": 37,
+    "fat": 39,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": false,
+      "under700Calories": true,
       "under30gFat": false,
       "highCarb": false,
       "lowCarb": false,
-      "mealPrepFriendly": true
+      "mealPrepFriendly": false
     },
     "badgeCandidates": {
       "highProtein": true,
@@ -163,28 +136,9 @@
   "heroImage": "/images/breakfast/monte-cristo-sandwiches.jpg",
   "thumbImage": "/images/thumbs/breakfast/monte-cristo-sandwiches.jpg",
   "imageAlt": "Golden Monte Cristo sandwiches dusted with powdered sugar and served with jam",
-  "publishedAt": "2026-05-31T18:33:00.829Z",
-  "updatedAt": "2026-05-31T23:49:25.609Z",
+  "publishedAt": "2026-06-04T20:48:24.990Z",
+  "updatedAt": "2026-06-04T20:48:24.990Z",
   "readMinutes": 8,
   "seoTitle": "Monte Cristo Sandwiches | Firehall Breakfast",
-  "collectionTier": "firehall_classic",
-  "proTips": [
-    "Build all sandwiches before dipping so the griddle never waits for assembly mid-batch.",
-    "Keep batter shallow and replace when it gets thick with bread crumbs for clean dips.",
-    "Dust sugar at the line, not in the oven—steam makes powdered sugar disappear on held sandwiches."
-  ],
-  "tonightSpread": [
-    "Plate Monte Cristo Sandwiches with sides in separate pans so the crew can mix portions.",
-    "Keep hot items on one side of the table and cold on the other — eggs stay hot, fruit stays cold.",
-    "Line up Monte Cristo Sandwiches on the main counter with serving spoons — firefighters grab fast between calls.",
-    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
-  ],
-  "equipment": [
-    "Large sheet trays",
-    "Instant-read thermometer",
-    "Aluminum foil"
-  ],
-  "mealPrepNotes": "Prep mise en place before the shift — Monte Cristo Sandwiches runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone.",
-  "mobileImage": "/images/mobile/breakfast/monte-cristo-sandwiches.jpg",
-  "railImage": "/images/rails/breakfast/monte-cristo-sandwiches.jpg"
+  "collectionTier": "firehall_classic"
 }

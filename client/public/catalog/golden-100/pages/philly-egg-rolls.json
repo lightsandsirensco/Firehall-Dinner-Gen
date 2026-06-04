@@ -139,6 +139,7 @@
     }
   },
   "heroImage": "/images/golden-100/philly-egg-rolls.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Philly Cheesesteak Egg Rolls on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/philly-egg-rolls.jpg",
   "thumbImage": "/images/thumbs/philly-egg-rolls.jpg",
   "railImage": "/images/rails/philly-egg-rolls.jpg",
@@ -165,6 +166,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.534Z",
+  "generatedAt": "2026-06-04T20:45:42.352Z",
   "contentVersion": 2
 }

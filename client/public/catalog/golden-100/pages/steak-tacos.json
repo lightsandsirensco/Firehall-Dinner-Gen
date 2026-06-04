@@ -189,23 +189,42 @@
       "instruction": "Call the crew when steak and tortillas are hot — street tacos fall apart when held under heat lamps. Lime wedges on the side for a final squeeze. Balance check on your first taco: char (steak/tortilla), fat (crema/cotija), acid (pickled onion/lime/chimichurri), spice (jalapeño/chili rub). Adjust chimichurri vinegar or salt at the line if needed.",
       "minutes": 3,
       "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover sliced steak — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 10,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool sliced steak and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
+      "heatLevel": ""
     }
   ],
   "proTips": [
     "Slice steak only after resting — rushing guarantees chewy tacos.",
     "Keep chimichurri loose; a thick paste won't cling to sliced steak.",
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
-    "Taste for salt at the end — hall palates run salty after long shifts."
+    "Char tortillas until pliable — cold shells crack when folded.",
+    "Keep a backup tray at 200°F for firefighters returning from a run — never serve picked-over pans to late crew.",
+    "Taste for salt at the end — hall palates run salty after long shifts.",
+    "Log hold times on the pan with a grease pencil when tones drop mid-service.",
+    "Spot-check proteins with an instant-read thermometer before reopening the line after a call."
   ],
   "tonightSpread": [
-    "Warm tortillas in a dry skillet stack — wrap in foil so the line stays soft.",
-    "Set proteins, salsa, and toppings in separate bowls for build-your-own station flow.",
-    "Line up Steak Tacos on the main counter with serving spoons — firefighters grab fast between calls.",
-    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+    "Main: Street-style steak tacos",
+    "Sides: charred corn tortillas, pickled red onions",
+    "Condiments: chimichurri, cotija, lime crema, cilantro, jalapeño slices",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
   ],
   "leftovers": [
-    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
-    "Label trays with date and reheat to 165°F minimum before second shift."
+    "Cool sliced steak in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Store chimichurri and pickled onions separately — acid wilts warm meat overnight."
   ],
   "whyCrewsLikeIt": "Charred steak, bright chimichurri, tortilla night. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
   "substitutions": [],
@@ -233,6 +252,7 @@
     }
   },
   "heroImage": "/images/golden-100/steak-tacos.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Steak Tacos on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/steak-tacos.jpg",
   "thumbImage": "/images/thumbs/steak-tacos.jpg",
   "railImage": "/images/rails/steak-tacos.jpg",
@@ -254,11 +274,11 @@
     "meatball-hoagies",
     "smash-burgers",
     "beef-dip",
-    "chili-garlic-bread"
+    "game-day-nachos"
   ],
   "sourceName": "Firehall Classics",
   "sourceUrl": "",
   "classicSlug": "steak-tacos",
-  "generatedAt": "2026-06-04T19:44:40.240Z",
-  "contentVersion": 2
+  "generatedAt": "2026-06-04T20:53:34.877Z",
+  "contentVersion": 4
 }

@@ -149,6 +149,7 @@
     }
   },
   "heroImage": "/images/golden-100/loaded-potato-feed.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Potato Bar Feed on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/loaded-potato-feed.jpg",
   "thumbImage": "/images/thumbs/loaded-potato-feed.jpg",
   "railImage": "/images/rails/loaded-potato-feed.jpg",
@@ -170,11 +171,11 @@
     "loaded-baked-potato-bar",
     "bbq-brisket-burnt-ends",
     "ny-strip-herb-butter",
-    "smoked-brisket",
-    "texas-beef-ribs"
+    "texas-beef-ribs",
+    "batch-lasagna"
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.495Z",
+  "generatedAt": "2026-06-04T20:45:42.323Z",
   "contentVersion": 2
 }

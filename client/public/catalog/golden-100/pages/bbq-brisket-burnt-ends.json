@@ -150,6 +150,7 @@
     }
   },
   "heroImage": "/images/golden-100/bbq-brisket-burnt-ends.jpg",
+  "heroImageAlt": "Wide firehall crew platter of BBQ Burnt Ends on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/bbq-brisket-burnt-ends.jpg",
   "thumbImage": "/images/thumbs/bbq-brisket-burnt-ends.jpg",
   "railImage": "/images/rails/bbq-brisket-burnt-ends.jpg",
@@ -168,14 +169,14 @@
   ],
   "relatedSlugs": [
     "ny-strip-herb-butter",
-    "smoked-brisket",
     "texas-beef-ribs",
     "flank-chimichurri",
     "beer-can-chicken",
-    "cedar-plank-salmon"
+    "cedar-plank-salmon",
+    "grilled-pork-chops"
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.339Z",
+  "generatedAt": "2026-06-04T20:45:42.179Z",
   "contentVersion": 2
 }

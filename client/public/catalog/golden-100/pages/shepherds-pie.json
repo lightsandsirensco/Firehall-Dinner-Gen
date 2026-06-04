@@ -137,6 +137,7 @@
     }
   },
   "heroImage": "/images/golden-100/shepherds-pie.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Shepherd's Pie on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/shepherds-pie.jpg",
   "thumbImage": "/images/thumbs/shepherds-pie.jpg",
   "railImage": "/images/rails/shepherds-pie.jpg",
@@ -157,13 +158,13 @@
   "relatedSlugs": [
     "meatloaf-mashed",
     "beef-barley-soup",
+    "french-onion-soup-for-the-hall",
     "baked-ziti",
     "beef-stroganoff",
-    "loaded-baked-potato-bar",
-    "philly-cheesesteak-skillet"
+    "loaded-baked-potato-bar"
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.345Z",
+  "generatedAt": "2026-06-04T20:45:42.185Z",
   "contentVersion": 2
 }

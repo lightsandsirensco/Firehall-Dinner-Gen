@@ -15,8 +15,8 @@
     "crescent",
     "handheld"
   ],
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "prepTime": 15,
   "cookTime": 22,
   "totalTime": 37,
@@ -24,19 +24,19 @@
   "ingredients": [
     {
       "name": "breakfast sausage",
-      "quantity": "1/2",
+      "quantity": "1 1/2 lb",
       "notes": "browned and crumbled fine",
       "group": "Filling"
     },
     {
       "name": "shredded cheddar",
-      "quantity": "3/8",
+      "quantity": "1 1/2 cups",
       "notes": "mixed into warm sausage",
       "group": "Filling"
     },
     {
       "name": "maple syrup",
-      "quantity": "2.4",
+      "quantity": "3 tbsp",
       "notes": "stirred into sausage off heat",
       "group": "Filling"
     },
@@ -48,25 +48,25 @@
     },
     {
       "name": "butter",
-      "quantity": "1/4",
+      "quantity": "1/4 cup",
       "notes": "melted",
       "group": "Glaze"
     },
     {
       "name": "maple syrup",
-      "quantity": "1.6",
+      "quantity": "2 tbsp",
       "notes": "for brushing before bake",
       "group": "Glaze"
     },
     {
       "name": "black pepper",
-      "quantity": "1/2",
+      "quantity": "1/2 tsp",
       "notes": "in sausage mix",
       "group": "Seasoning"
     },
     {
       "name": "everything bagel seasoning",
-      "quantity": "3/4",
+      "quantity": "1 tbsp",
       "notes": "optional on top",
       "group": "Finish"
     }
@@ -74,83 +74,50 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Maple Sausage Pinwheels in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use everything bagel seasoning as listed — measure each before heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
+      "title": "Make the filling",
+      "instruction": "Brown sausage, drain well, and mix with cheddar, maple syrup, and black pepper while warm so cheese starts to melt and bind the filling.",
+      "minutes": 10
     },
     {
       "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch Sausage. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
+      "title": "Roll the dough",
+      "instruction": "Press crescent dough into two rectangles, sealing seams. Spread sausage filling evenly, roll tight into logs, and pinch seams closed.",
+      "minutes": 8
     },
     {
       "stepNumber": 3,
-      "title": "Make the filling",
-      "instruction": "Brown sausage, drain well, and mix with cheddar, maple syrup, and black pepper while warm so cheese starts to melt and bind the filling.",
-      "minutes": 10,
-      "heatLevel": ""
+      "title": "Slice pinwheels",
+      "instruction": "Cut each log into 8–10 pinwheels with a sharp serrated knife. Place cut-side up on parchment-lined sheet pans with space between each spiral.",
+      "minutes": 5
     },
     {
       "stepNumber": 4,
-      "title": "Roll the dough",
-      "instruction": "Press crescent dough into two rectangles, sealing seams. Spread sausage filling evenly, roll tight into logs, and pinch seams closed.",
-      "minutes": 8,
-      "heatLevel": ""
+      "title": "Glaze and bake",
+      "instruction": "Brush tops with melted butter and maple syrup. Bake at 375°F until golden, puffed, and sausage reaches 165°F in the center.",
+      "minutes": 18,
+      "tempF": 375
     },
     {
       "stepNumber": 5,
-      "title": "Slice pinwheels",
-      "instruction": "Cut each log into 8–10 pinwheels with a sharp serrated knife. Place cut-side up on parchment-lined sheet pans with space between each spiral.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 6,
-      "title": "Glaze and bake",
-      "instruction": "Brush tops with melted butter and maple syrup. Bake at 375°F until golden, puffed, and sausage reaches 165°F in the center. Plan about 18 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 18,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 9,
       "title": "Cool slightly and serve",
       "instruction": "Rest 5 minutes so filling sets—hot maple cheese burns tongues. Serve from sheet pans or stack in a warm hotel pan for grab-and-go.",
-      "minutes": 5,
-      "heatLevel": ""
+      "minutes": 5
     }
   ],
   "nutrition": {
-    "calories": 0,
-    "protein": 0,
-    "carbs": 0,
-    "fats": 0,
-    "label": "Estimated per serving",
-    "source": "unavailable",
-    "estimateAvailable": false,
+    "calories": 131,
+    "protein": 3,
+    "carbs": 9,
+    "fat": 9,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
       "under30gFat": true,
       "highCarb": false,
-      "lowCarb": false,
-      "mealPrepFriendly": true
+      "lowCarb": true,
+      "mealPrepFriendly": false
     },
     "badgeCandidates": {
       "highProtein": false,
@@ -174,28 +141,9 @@
   "heroImage": "/images/breakfast/maple-sausage-pinwheels.jpg",
   "thumbImage": "/images/thumbs/breakfast/maple-sausage-pinwheels.jpg",
   "imageAlt": "Golden maple sausage pinwheels on a sheet pan fresh from the oven",
-  "publishedAt": "2026-05-31T18:33:00.829Z",
-  "updatedAt": "2026-05-31T23:49:25.586Z",
+  "publishedAt": "2026-06-04T20:48:24.990Z",
+  "updatedAt": "2026-06-04T20:48:24.990Z",
   "readMinutes": 7,
   "seoTitle": "Maple Sausage Pinwheels | Firehall Breakfast",
-  "collectionTier": "firehall_classic",
-  "proTips": [
-    "Chill rolled logs 10 minutes before slicing if dough gets soft—clean spirals need a firm log.",
-    "Bake both sheet pans on middle and upper racks, swapping halfway for even browning.",
-    "Serve with napkins stacked high—these are sticky, handheld, and popular on the way to rigs."
-  ],
-  "tonightSpread": [
-    "Plate Maple Sausage Pinwheels with sides in separate pans so the crew can mix portions.",
-    "Keep hot items on one side of the table and cold on the other — eggs stay hot, fruit stays cold.",
-    "Line up Maple Sausage Pinwheels on the main counter with serving spoons — firefighters grab fast between calls.",
-    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
-  ],
-  "equipment": [
-    "Large sheet trays",
-    "Instant-read thermometer",
-    "Aluminum foil"
-  ],
-  "mealPrepNotes": "Prep mise en place before the shift — Maple Sausage Pinwheels runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone.",
-  "mobileImage": "/images/mobile/breakfast/maple-sausage-pinwheels.jpg",
-  "railImage": "/images/rails/breakfast/maple-sausage-pinwheels.jpg"
+  "collectionTier": "firehall_classic"
 }

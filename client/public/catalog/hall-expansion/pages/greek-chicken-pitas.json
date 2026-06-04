@@ -171,7 +171,11 @@
     "fats": 14,
     "label": "~480 cal/serving · 40g protein · 3g fiber (est.)"
   },
-  "heroImageAlt": "Greek Chicken Pitas — firehall handheld meal — firefighter meal served for a firehall crew dinner",
+  "heroImage": "/images/hall-expansion/greek-chicken-pitas.jpg",
+  "heroImageAlt": "Greek Chicken Pitas — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/greek-chicken-pitas.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/greek-chicken-pitas.jpg",
+  "railImage": "/images/rails/hall-expansion/greek-chicken-pitas.jpg",
   "realismScore": 97,
   "firefighterScore": 86,
   "popularityWeight": 7.8,
@@ -186,10 +190,6 @@
     "pasta-bar-night"
   ],
   "sourceUrl": "https://www.seriouseats.com/chicken-souvlaki-recipe",
-  "generatedAt": "2026-06-04T20:18:31.794Z",
-  "contentVersion": 2,
-  "heroImage": "/images/hall-expansion/greek-chicken-pitas.jpg",
-  "thumbImage": "/images/thumbs/hall-expansion/greek-chicken-pitas.jpg",
-  "mobileImage": "/images/mobile/hall-expansion/greek-chicken-pitas.jpg",
-  "railImage": "/images/rails/hall-expansion/greek-chicken-pitas.jpg"
+  "generatedAt": "2026-06-04T20:47:21.931Z",
+  "contentVersion": 2
 }

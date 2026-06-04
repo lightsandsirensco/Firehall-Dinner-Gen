@@ -8,15 +8,15 @@
   "category": "bbq_grill_nights",
   "cuisine": "japanese-american",
   "description": "Jumbo shrimp and pork belly cubes griddle with zucchini, mushrooms, and onions, finished with ginger-garlic sauce and sesame. Served with fried rice.",
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "cookTime": 25,
   "prepTime": 40,
   "difficulty": "medium",
-  "calories": 319,
+  "calories": 330,
   "protein": 33,
-  "carbs": 3,
-  "fats": 18,
+  "carbs": 4,
+  "fats": 19,
   "tags": [
     "protein:mixed",
     "format:teppan_mixed",
@@ -39,28 +39,28 @@
   "ingredients": [
     {
       "name": "jumbo shrimp",
-      "quantity": "2.4",
+      "quantity": "3",
       "unit": "lb",
       "notes": "peeled and deveined",
       "group": "Main"
     },
     {
       "name": "pork belly",
-      "quantity": "2.4",
+      "quantity": "3",
       "unit": "lb",
       "notes": "cubed",
       "group": "Main"
     },
     {
       "name": "zucchini",
-      "quantity": "2",
+      "quantity": "3",
       "unit": "whole",
       "notes": "half-moons",
       "group": "Hibachi veg"
     },
     {
       "name": "cremini mushrooms",
-      "quantity": "3/4",
+      "quantity": "1",
       "unit": "lb",
       "notes": "quartered",
       "group": "Hibachi veg"
@@ -74,32 +74,32 @@
     },
     {
       "name": "soy sauce",
-      "quantity": "3/8",
+      "quantity": "0.5",
       "unit": "cup",
       "group": "Ginger sauce"
     },
     {
       "name": "fresh ginger",
-      "quantity": "2.6",
+      "quantity": "3",
       "unit": "tbsp",
       "notes": "grated",
       "group": "Ginger sauce"
     },
     {
       "name": "mirin",
-      "quantity": "1/4",
+      "quantity": "0.25",
       "unit": "cup",
       "group": "Ginger sauce"
     },
     {
       "name": "toasted sesame oil",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tbsp",
       "group": "Ginger sauce"
     },
     {
       "name": "cooked fried rice",
-      "quantity": "8",
+      "quantity": "10",
       "unit": "cups",
       "group": "Service"
     }
@@ -108,56 +108,56 @@
     {
       "stepNumber": 1,
       "title": "Build ginger sauce",
-      "instruction": "Simmer soy, mirin, ginger, and garlic until glossy. Finish with sesame oil. Keep warm at 140°F. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Simmer soy, mirin, ginger, and garlic until glossy. Finish with sesame oil. Keep warm at 140°F.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
       "title": "Prep proteins",
-      "instruction": "Pat shrimp and pork belly dry. Season pork belly with salt and pepper; shrimp with pinch of salt. Plan about 15 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
+      "instruction": "Pat shrimp and pork belly dry. Season pork belly with salt and pepper; shrimp with pinch of salt.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
       "stepNumber": 3,
-      "title": "Preheat the flat-top griddle",
-      "instruction": "Preheat griddle to 400°F. Oil surface lightly. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "title": "Heat griddle",
+      "instruction": "Preheat griddle to 400°F. Oil surface lightly.",
       "minutes": 10,
       "heatLevel": "high"
     },
     {
       "stepNumber": 4,
       "title": "Render pork belly",
-      "instruction": "Griddle pork belly cubes 10–12 minutes until crisp and 165°F internal. Drain excess fat. Hold at 170°F. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Griddle pork belly cubes 10–12 minutes until crisp and 165°F internal. Drain excess fat. Hold at 170°F.",
       "minutes": 12,
       "heatLevel": "medium"
     },
     {
       "stepNumber": 5,
       "title": "Griddle shrimp",
-      "instruction": "Griddle shrimp at 450°F 2 minutes per side until pink and 140°F. Hold at 170°F separately. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
+      "instruction": "Griddle shrimp at 450°F 2 minutes per side until pink and 140°F. Hold at 170°F separately.",
       "minutes": 8,
       "heatLevel": "high"
     },
     {
       "stepNumber": 6,
       "title": "Char vegetables",
-      "instruction": "Griddle zucchini, mushrooms, and onions at 425°F until charred and tender, 8–10 minutes. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Griddle zucchini, mushrooms, and onions at 425°F until charred and tender, 8–10 minutes.",
       "minutes": 10,
       "heatLevel": "high"
     },
     {
       "stepNumber": 7,
       "title": "Combine at service",
-      "instruction": "Toss shrimp, pork belly, and veg with ginger sauce at the line. Do not sauced during long hold. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
+      "instruction": "Toss shrimp, pork belly, and veg with ginger sauce at the line. Do not sauced during long hold.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 8,
       "title": "Platter for ten",
-      "instruction": "Serve mixed grill over fried rice with extra sauce and sesame. About 6 oz protein per firefighter. Cook until char marks are visible and the thickest piece reads 165°F on an instant-read thermometer. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
+      "instruction": "Serve mixed grill over fried rice with extra sauce and sesame. About 6 oz protein per firefighter.",
       "minutes": 5,
       "heatLevel": ""
     }
@@ -179,26 +179,12 @@
   "mealPrepNotes": "Prep proteins separately. Griddle pork belly first at 400°F to render, then shrimp at 450°F, veg last. Hold components covered at 170°F. Sauce at service.",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 319,
+    "calories": 330,
     "protein": 33,
-    "carbs": 3,
-    "fats": 18,
-    "label": "Estimated per serving",
-    "source": "calculated",
-    "estimateAvailable": true,
-    "filterFlags": {
-      "highProtein": false,
-      "under700Calories": true,
-      "under30gFat": true,
-      "highCarb": false,
-      "lowCarb": true,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": false,
-      "lighterOption": true,
-      "performanceMeal": true
-    }
+    "carbs": 4,
+    "fats": 19,
+    "label": "per serving (hall portion)",
+    "source": "estimated"
   },
   "heroImage": "/images/smoker-catalog/firehall-hibachi-mixed-grill-crew.jpg",
   "heroImageAlt": "Teppan Shrimp and Pork Belly Mixed Grill — crew-sized BBQ spread with visible smoke and bark",
@@ -227,6 +213,6 @@
     "brisket-style-beef-sandwiches-au-jus"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T23:32:23.208Z",
+  "generatedAt": "2026-06-04T20:47:49.450Z",
   "contentVersion": 2
 }

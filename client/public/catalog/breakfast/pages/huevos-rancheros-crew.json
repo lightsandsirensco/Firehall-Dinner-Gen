@@ -73,87 +73,33 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Huevos Rancheros for the Crew in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
+      "title": "Simmer ranchero sauce",
+      "instruction": "Sauté onion in oil over medium heat until soft, about 6 minutes. Add garlic and chipotle, cook 1 minute, then add tomatoes and adobo sauce. Simmer uncovered, stirring occasionally, until thickened enough to coat a spoon.",
+      "minutes": 20
     },
     {
       "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch Eggs. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
+      "title": "Warm beans and prep line",
+      "instruction": "Heat black beans with a pinch of cumin and salt in a covered pot over low heat. Set up a griddle station with warm tortillas, sauce, beans, cheese, and cilantro so eggs can go straight to plates.",
+      "minutes": 8
     },
     {
       "stepNumber": 3,
-      "title": "Simmer ranchero sauce",
-      "instruction": "Sauté onion in oil over medium heat until soft, about 6 minutes. Add garlic and chipotle, cook 1 minute, then add tomatoes and adobo sauce. Simmer uncovered, stirring occasionally, until thickened enough to coat a spoon.",
-      "minutes": 20,
-      "heatLevel": ""
+      "title": "Crisp the tortillas",
+      "instruction": "Heat a lightly oiled griddle or cast iron over medium-high until shimmering. Fry tortillas 30–45 seconds per side until crisp at the edges but still pliable in the center. Hold stacked and covered with a towel.",
+      "minutes": 10
     },
     {
       "stepNumber": 4,
-      "title": "Warm beans and prep line",
-      "instruction": "Heat black beans with a pinch of cumin and salt in a covered pot over low heat. Set up a griddle station with warm tortillas, sauce, beans, cheese, and cilantro so eggs can go straight to plates.",
-      "minutes": 8,
-      "heatLevel": ""
+      "title": "Fry eggs to order",
+      "instruction": "Fry eggs in a thin film of oil over medium heat until whites are fully set (165°F) and yolks are runny or jammy. Season each egg with salt and pepper as it comes off the griddle.",
+      "minutes": 12
     },
     {
       "stepNumber": 5,
-      "title": "Crisp the tortillas",
-      "instruction": "Heat a lightly oiled griddle or cast iron over medium-high until shimmering. Fry tortillas 30–45 seconds per side until crisp at the edges but still pliable in the center. Hold stacked and covered with a towel.",
-      "minutes": 10,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 6,
-      "title": "Fry eggs to order",
-      "instruction": "Fry eggs in a thin film of oil over medium heat until whites are fully set (165°F) and yolks are runny or jammy. Season each egg with salt and pepper as it comes off the griddle.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 9,
-      "title": "Portion and open the line",
-      "instruction": "Portion Huevos Rancheros for the Crew onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
-      "title": "Scale for larger halls",
-      "instruction": "When cooking for more than 8 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 11,
-      "title": "portion and serve",
+      "title": "Plate and serve",
       "instruction": "Layer two tortillas per plate with beans and a generous ladle of ranchero sauce. Top each stack with two fried eggs, crumbled queso fresco, cilantro, and a lime wedge. Serve immediately while tortillas stay crisp.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 12,
-      "title": "Final quality check before service",
-      "instruction": "Walk the line once before opening service for Huevos Rancheros for the Crew — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
-      "minutes": 4,
-      "heatLevel": ""
+      "minutes": 5
     }
   ],
   "nutrition": {
@@ -169,7 +115,7 @@
       "under30gFat": true,
       "highCarb": true,
       "lowCarb": false,
-      "mealPrepFriendly": true
+      "mealPrepFriendly": false
     },
     "badgeCandidates": {
       "highProtein": false,
@@ -193,28 +139,9 @@
   "heroImage": "/images/breakfast/huevos-rancheros-crew.jpg",
   "thumbImage": "/images/thumbs/breakfast/huevos-rancheros-crew.jpg",
   "imageAlt": "Huevos rancheros with fried eggs, ranchero sauce, and crisp corn tortillas for the crew",
-  "publishedAt": "2026-05-31T18:33:00.830Z",
-  "updatedAt": "2026-05-31T23:49:25.520Z",
+  "publishedAt": "2026-06-04T20:48:24.991Z",
+  "updatedAt": "2026-06-04T20:48:24.991Z",
   "readMinutes": 8,
   "seoTitle": "Huevos Rancheros for the Crew | Firehall Breakfast",
-  "collectionTier": "firehall_classic",
-  "proTips": [
-    "Simmer ranchero sauce first—it holds warm on the back burner while the griddle handles tortillas and eggs.",
-    "Assign one cook to tortilla frying and another to eggs so nothing sits under a heat lamp getting rubbery.",
-    "Plate in batches of four; hold finished plates covered for no more than 3 minutes before the line clears."
-  ],
-  "tonightSpread": [
-    "Plate Huevos Rancheros for the Crew with sides in separate pans so the crew can mix portions.",
-    "Keep hot items on one side of the table and cold on the other — eggs stay hot, fruit stays cold.",
-    "Line up Huevos Rancheros for the Crew on the main counter with serving spoons — firefighters grab fast between calls.",
-    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
-  ],
-  "equipment": [
-    "Large sheet trays",
-    "Instant-read thermometer",
-    "Aluminum foil"
-  ],
-  "mealPrepNotes": "Prep mise en place before the shift — Huevos Rancheros for the Crew runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone.",
-  "mobileImage": "/images/mobile/breakfast/huevos-rancheros-crew.jpg",
-  "railImage": "/images/rails/breakfast/huevos-rancheros-crew.jpg"
+  "collectionTier": "firehall_classic"
 }

@@ -8,12 +8,12 @@
   "category": "bbq_grill_nights",
   "cuisine": "american",
   "description": "Adapted from classic smoked chicken breast technique (Weber, Traeger): boneless breasts get a quick brine, smoke over hickory at 275°F to 165°F, and finish with herb butter for a crew-friendly protein tray.",
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "cookTime": 60,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 533,
+  "calories": 530,
   "protein": 85,
   "carbs": 5,
   "fats": 17,
@@ -39,58 +39,58 @@
   "ingredients": [
     {
       "name": "boneless skinless chicken breasts",
-      "quantity": "4.8",
+      "quantity": "6",
       "unit": "lb",
       "notes": "about 10 pieces, even thickness"
     },
     {
       "name": "kosher salt",
-      "quantity": "1/4",
+      "quantity": "0.25",
       "unit": "cup",
       "notes": "for brine"
     },
     {
       "name": "brown sugar",
-      "quantity": "2.6",
+      "quantity": "3",
       "unit": "tbsp",
       "notes": "for brine"
     },
     {
       "name": "water",
-      "quantity": "6.4",
+      "quantity": "8",
       "unit": "cups",
       "notes": "for brine"
     },
     {
       "name": "smoked paprika",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tbsp"
     },
     {
       "name": "garlic powder",
-      "quantity": "7/8",
+      "quantity": "1",
       "unit": "tbsp"
     },
     {
       "name": "black pepper",
-      "quantity": "7/8",
+      "quantity": "1",
       "unit": "tbsp"
     },
     {
       "name": "unsalted butter",
-      "quantity": "5.1",
+      "quantity": "6",
       "unit": "tbsp",
       "notes": "softened"
     },
     {
       "name": "fresh parsley",
-      "quantity": "1/4",
+      "quantity": "0.25",
       "unit": "cup",
       "notes": "chopped"
     },
     {
       "name": "lemon juice",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tbsp"
     }
   ],
@@ -98,56 +98,56 @@
     {
       "stepNumber": 1,
       "title": "Quick brine",
-      "instruction": "Dissolve salt and brown sugar in water. Submerge breasts 30 minutes in the fridge. Pat completely dry after brining. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Dissolve salt and brown sugar in water. Submerge breasts 30 minutes in the fridge. Pat completely dry after brining.",
       "minutes": 30,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
       "title": "Season and prep smoker",
-      "instruction": "Mix paprika, garlic powder, and pepper; coat breasts evenly. Preheat smoker to 275°F with hickory. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Mix paprika, garlic powder, and pepper; coat breasts evenly. Preheat smoker to 275°F with hickory.",
       "minutes": 10,
       "heatLevel": "low"
     },
     {
       "stepNumber": 3,
       "title": "Smoke to 155°F",
-      "instruction": "Smoke breasts on a wire rack at 275°F until internal temp reaches 155°F, about 25–30 minutes. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Smoke breasts on a wire rack at 275°F until internal temp reaches 155°F, about 25–30 minutes.",
       "minutes": 28,
       "heatLevel": "low"
     },
     {
       "stepNumber": 4,
       "title": "Herb butter finish",
-      "instruction": "Mix butter, parsley, and lemon juice. Brush breasts during final 5 minutes of smoke. Target 165°F at the thickest part before moving to the next batch. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Mix butter, parsley, and lemon juice. Brush breasts during final 5 minutes of smoke.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 5,
       "title": "Pull at 165°F",
-      "instruction": "Remove when thickest breast hits 165°F internal. Rest 5 minutes before slicing. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Remove when thickest breast hits 165°F internal. Rest 5 minutes before slicing.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 6,
       "title": "Slice and hold",
-      "instruction": "Slice on a bias 1/2 inch thick. Toss lightly with melted butter. Hold covered at 170°F until service. Plan about 8 minutes for this step at crew scale. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Slice on a bias 1/2 inch thick. Toss lightly with melted butter. Hold covered at 170°F until service.",
       "minutes": 8,
       "heatLevel": ""
     },
     {
       "stepNumber": 7,
-      "title": "Cooking step",
-      "instruction": "Sliced breast on a tray with extra herb butter melting on top. Pair with smoked potato salad. Target 165°F at the thickest part before moving to the next batch. Plan about 3 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "title": "Tonight's board",
+      "instruction": "Sliced breast on a tray with extra herb butter melting on top. Pair with smoked potato salad.",
       "minutes": 3,
       "heatLevel": ""
     },
     {
       "stepNumber": 8,
       "title": "Leftovers",
-      "instruction": "Chill and slice for salads. Reheat covered at 325°F with butter until 165°F. Plan about 8 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Chill and slice for salads. Reheat covered at 325°F with butter until 165°F.",
       "minutes": 8,
       "heatLevel": ""
     }
@@ -169,26 +169,12 @@
   "mealPrepNotes": "Brine can happen early shift. Smoke to 165°F exactly—don't overshoot. Hold sliced breast covered at 170°F with a splash of butter up to 45 minutes.",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 533,
+    "calories": 530,
     "protein": 85,
     "carbs": 5,
     "fats": 17,
-    "label": "Estimated per serving",
-    "source": "calculated",
-    "estimateAvailable": true,
-    "filterFlags": {
-      "highProtein": true,
-      "under700Calories": true,
-      "under30gFat": true,
-      "highCarb": false,
-      "lowCarb": true,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": true,
-      "lighterOption": true,
-      "performanceMeal": true
-    }
+    "label": "per serving (hall portion)",
+    "source": "estimated"
   },
   "heroImage": "/images/smoker-catalog/hickory-smoked-chicken-breast.jpg",
   "heroImageAlt": "Hickory Smoked Chicken Breast — crew-sized BBQ spread with visible smoke and bark",
@@ -216,6 +202,6 @@
     "smoked-potato-salad-tray"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T23:32:23.201Z",
+  "generatedAt": "2026-06-04T20:47:49.417Z",
   "contentVersion": 2
 }

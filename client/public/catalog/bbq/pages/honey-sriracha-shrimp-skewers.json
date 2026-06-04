@@ -8,15 +8,15 @@
   "category": "bbq_grill_nights",
   "cuisine": "thai-american",
   "description": "Jumbo shrimp marinate briefly in lime and garlic, grill on skewers until pink and 140°F, and glaze with honey-sriracha in the final minute.",
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "cookTime": 10,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 519,
+  "calories": 523,
   "protein": 50,
-  "carbs": 10,
-  "fats": 29,
+  "carbs": 9,
+  "fats": 30,
   "tags": [
     "protein:seafood",
     "format:crew_kebab",
@@ -40,33 +40,33 @@
   "ingredients": [
     {
       "name": "Gulf colossal shrimp",
-      "quantity": "4",
+      "quantity": "5",
       "unit": "lb",
       "notes": "peeled and deveined",
       "group": "Main"
     },
     {
       "name": "palm sugar",
-      "quantity": "1/4",
+      "quantity": "0.25",
       "unit": "cup",
       "group": "Glaze"
     },
     {
       "name": "kaffir lime leaves",
-      "quantity": "5",
+      "quantity": "6",
       "unit": "whole",
       "notes": "finely shredded",
       "group": "Glaze"
     },
     {
       "name": "nam pla",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tbsp",
       "group": "Glaze"
     },
     {
       "name": "tamarind concentrate",
-      "quantity": "7/8",
+      "quantity": "1",
       "unit": "tbsp",
       "group": "Marinade"
     },
@@ -86,20 +86,20 @@
     },
     {
       "name": "Thai basil",
-      "quantity": "3/8",
+      "quantity": "0.5",
       "unit": "cup",
       "notes": "chopped",
       "group": "Finish"
     },
     {
       "name": "fried shallots",
-      "quantity": "3/8",
+      "quantity": "0.5",
       "unit": "cup",
       "group": "Finish"
     },
     {
       "name": "grapeseed oil",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tbsp",
       "group": "Grill"
     }
@@ -108,56 +108,56 @@
     {
       "stepNumber": 1,
       "title": "Marinate shrimp briefly",
-      "instruction": "Toss shrimp with half the lime juice, garlic, fish sauce, and salt. Marinate 20–30 minutes refrigerated only. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Use nam pla, tamarind concentrate, shallots, Thai bird chilies as listed — measure each before heat goes on. Use grapeseed oil as listed — measure each before heat goes on. Target 145°F at the thickest point before moving to the next batch.",
+      "instruction": "Toss shrimp with half the lime juice, garlic, fish sauce, and salt. Marinate 20–30 minutes refrigerated only.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
       "title": "Build honey sriracha glaze",
-      "instruction": "Whisk honey, sriracha, and remaining lime juice until smooth. Reserve for basting. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Whisk honey, sriracha, and remaining lime juice until smooth. Reserve for basting.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 3,
       "title": "Heat grill hot",
-      "instruction": "Preheat grill to high, 450°F. Oil grates. Have glaze and brush ready. Plan about 8 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Preheat grill to high, 450°F. Oil grates. Have glaze and brush ready.",
       "minutes": 8,
       "heatLevel": "high"
     },
     {
       "stepNumber": 4,
       "title": "Skewer shrimp",
-      "instruction": "Thread 4–5 shrimp per skewer in a flat line for even contact. Pat dry before grilling. Cook until char marks are visible and the thickest piece reads 145°F for fish, 145°F for shrimp until opaque on an instant-read thermometer. Plan about 10 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
+      "instruction": "Thread 4–5 shrimp per skewer in a flat line for even contact. Pat dry before grilling.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 5,
       "title": "Grill shrimp",
-      "instruction": "Grill skewers 2 minutes per side until pink, lightly charred, and 135–140°F internal. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F at the thickest point before moving to the next batch.",
+      "instruction": "Grill skewers 2 minutes per side until pink, lightly charred, and 135–140°F internal.",
       "minutes": 6,
       "heatLevel": "high"
     },
     {
       "stepNumber": 6,
       "title": "Glaze finish",
-      "instruction": "Brush honey sriracha and grill 30 seconds per side until sticky. Move to cooler zone if sugar burns. Cook until char marks are visible and the thickest piece reads 145°F for fish, 145°F for shrimp until opaque on an instant-read thermometer. Plan about 2 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Brush honey sriracha and grill 30 seconds per side until sticky. Move to cooler zone if sugar burns.",
       "minutes": 2,
       "heatLevel": "high"
     },
     {
       "stepNumber": 7,
       "title": "Hold at 140°F",
-      "instruction": "Rest skewers 2 minutes. Transfer to hotel pans, cover loosely, hold at 140°F up to 12 minutes max. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Rest skewers 2 minutes. Transfer to hotel pans, cover loosely, hold at 140°F up to 12 minutes max.",
       "minutes": 3,
       "heatLevel": ""
     },
     {
       "stepNumber": 8,
       "title": "Serve with herbs",
-      "instruction": "Scatter cilantro and green onions at the line. About 8 oz shrimp per firefighter. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F at the thickest point before moving to the next batch.",
+      "instruction": "Scatter cilantro and green onions at the line. About 8 oz shrimp per firefighter.",
       "minutes": 5,
       "heatLevel": ""
     }
@@ -179,25 +179,12 @@
   "mealPrepNotes": "Marinate shrimp 20–30 minutes max—acid toughens longer soaks. Grill high 450°F, 2 minutes per side. Hold covered at 140°F up to 12 minutes. Glaze at service if needed.",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 519,
+    "calories": 523,
     "protein": 50,
-    "carbs": 10,
-    "fats": 29,
+    "carbs": 9,
+    "fats": 30,
     "label": "per serving (hall portion)",
-    "source": "calculated",
-    "filterFlags": {
-      "highProtein": true,
-      "under700Calories": true,
-      "under30gFat": true,
-      "highCarb": false,
-      "lowCarb": true,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": false
-    }
+    "source": "estimated"
   },
   "heroImage": "/images/smoker-catalog/honey-sriracha-shrimp-skewers.jpg",
   "heroImageAlt": "Palm Sugar Lime Shrimp Skewers — crew-sized BBQ spread with visible smoke and bark",
@@ -225,6 +212,6 @@
     "brisket-style-beef-sandwiches-au-jus"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T23:32:23.205Z",
+  "generatedAt": "2026-06-04T20:47:49.431Z",
   "contentVersion": 2
 }

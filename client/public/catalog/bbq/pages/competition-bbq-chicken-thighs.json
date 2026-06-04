@@ -8,15 +8,15 @@
   "category": "bbq_grill_nights",
   "cuisine": "american",
   "description": "Adapted from classic competition chicken thigh tradition (Traeger, Meat Church): bone-in thighs get trimmed and squared, rubbed, smoked at 275°F, glazed, and finished until skin bites and meat hits 175°F.",
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "cookTime": 90,
   "prepTime": 30,
   "difficulty": "medium",
-  "calories": 332,
-  "protein": 42,
-  "carbs": 19,
-  "fats": 9,
+  "calories": 335,
+  "protein": 43,
+  "carbs": 20,
+  "fats": 8,
   "tags": [
     "protein:chicken",
     "format:grill",
@@ -40,129 +40,115 @@
   "ingredients": [
     {
       "name": "bone-in chicken thighs",
-      "quantity": "9.6",
+      "quantity": "12",
       "unit": "pieces",
       "notes": "about 6 lb, skin-on"
     },
     {
       "name": "kosher salt",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tbsp"
     },
     {
       "name": "brown sugar",
-      "quantity": "2.6",
+      "quantity": "3",
       "unit": "tbsp"
     },
     {
       "name": "smoked paprika",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tbsp"
     },
     {
       "name": "garlic powder",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tbsp"
     },
     {
       "name": "onion powder",
-      "quantity": "7/8",
+      "quantity": "1",
       "unit": "tbsp"
     },
     {
       "name": "cayenne",
-      "quantity": "7/8",
+      "quantity": "1",
       "unit": "tsp"
     },
     {
       "name": "honey",
-      "quantity": "1/4",
+      "quantity": "0.33",
       "unit": "cup"
     },
     {
       "name": "BBQ sauce",
-      "quantity": "3/8",
+      "quantity": "0.5",
       "unit": "cup"
     },
     {
       "name": "apple cider vinegar",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tbsp"
     },
     {
       "name": "butter",
-      "quantity": "2.6",
+      "quantity": "3",
       "unit": "tbsp"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Competition BBQ Chicken Thighs in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Trim competition-style",
-      "instruction": "Skin thighs and trim excess fat and flap meat for uniform pieces about 4 oz each. Square edges so they cook evenly. Pat dry. Plan about 25 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Skin thighs and trim excess fat and flap meat for uniform pieces about 4 oz each. Square edges so they cook evenly. Pat dry.",
       "minutes": 25,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Apply sweet rub",
-      "instruction": "Mix salt, brown sugar, paprika, garlic, onion, and cayenne. Coat thighs evenly. Rest 15 minutes while smoker heats to 275°F. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Mix salt, brown sugar, paprika, garlic, onion, and cayenne. Coat thighs evenly. Rest 15 minutes while smoker heats to 275°F.",
       "minutes": 15,
       "heatLevel": "low"
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Smoke to 150°F",
-      "instruction": "Smoke thighs at 275°F until internal temp reaches 150°F and color looks even, about 45–55 minutes. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Smoke thighs at 275°F until internal temp reaches 150°F and color looks even, about 45–55 minutes.",
       "minutes": 50,
       "heatLevel": "low"
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Build competition glaze",
-      "instruction": "Simmer honey, BBQ sauce, vinegar, and butter until glossy. Keep warm for basting. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Simmer honey, BBQ sauce, vinegar, and butter until glossy. Keep warm for basting.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Glaze and finish",
+      "instruction": "Brush thighs with glaze. Finish at 375°F on smoker or grill 8–10 minutes until glaze sets and internal temp hits 175°F.",
+      "minutes": 10,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Rest and hold",
+      "instruction": "Rest thighs 5 minutes. Hold covered at 170°F with foil vented slightly until service.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 7,
-      "title": "Glaze and finish",
-      "instruction": "Brush thighs with glaze. Finish at 375°F on smoker or grill 8–10 minutes until glaze sets and internal temp hits 175°F. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 10,
-      "heatLevel": "high"
-    },
-    {
-      "stepNumber": 8,
-      "title": "Rest and hold",
-      "instruction": "Rest thighs 5 minutes. Hold covered at 170°F with foil vented slightly until service. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 9,
-      "title": "Cooking step",
-      "instruction": "Arrange thighs on a tray, glaze side up. Extra glaze on the side for dipping. Plan about 3 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "title": "Tonight's board",
+      "instruction": "Arrange thighs on a tray, glaze side up. Extra glaze on the side for dipping.",
       "minutes": 3,
       "heatLevel": ""
     },
     {
-      "stepNumber": 10,
+      "stepNumber": 8,
       "title": "Leftovers",
-      "instruction": "Pull meat for wraps. Reheat covered at 325°F until 165°F internal. Plan about 8 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Pull meat for wraps. Reheat covered at 325°F until 165°F internal.",
       "minutes": 8,
       "heatLevel": ""
     }
@@ -184,25 +170,12 @@
   "mealPrepNotes": "Trim thighs early. Smoke in two batches if needed. Hold finished thighs covered at 170°F up to 45 minutes; glaze right before service.",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 332,
-    "protein": 42,
-    "carbs": 19,
-    "fats": 9,
+    "calories": 335,
+    "protein": 43,
+    "carbs": 20,
+    "fats": 8,
     "label": "per serving (hall portion)",
-    "source": "calculated",
-    "filterFlags": {
-      "highProtein": true,
-      "under700Calories": true,
-      "under30gFat": true,
-      "highCarb": false,
-      "lowCarb": true,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": true,
-      "lighterOption": true,
-      "performanceMeal": true
-    }
+    "source": "estimated"
   },
   "heroImage": "/images/smoker-catalog/competition-bbq-chicken-thighs.jpg",
   "heroImageAlt": "Competition BBQ Chicken Thighs — crew-sized BBQ spread with visible smoke and bark",
@@ -230,6 +203,6 @@
     "hickory-smoked-chicken-breast"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T23:32:23.201Z",
+  "generatedAt": "2026-06-04T20:47:49.414Z",
   "contentVersion": 2
 }

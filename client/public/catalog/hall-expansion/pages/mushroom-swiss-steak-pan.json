@@ -13,10 +13,10 @@
   "cookTime": 35,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 879,
-  "protein": 52,
-  "carbs": 74,
-  "fats": 41,
+  "calories": 520,
+  "protein": 38,
+  "carbs": 48,
+  "fats": 22,
   "tags": [
     "protein:beef",
     "format:pasta",
@@ -106,71 +106,36 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Mushroom Swiss Steak Pan in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
+      "title": "Sear the beef",
+      "instruction": "Pat sirloin strips dry and season with salt and pepper. Sear in butter over high heat in batches 30–45 seconds per side until browned but still pink inside. Set aside.",
+      "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch beef. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
-      "title": "Sear the beef",
-      "instruction": "Pat sirloin strips dry and season with salt and pepper. Sear in butter over high heat in batches 30–45 seconds per side until browned but still pink inside. Set aside. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
-      "minutes": 10,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 4,
       "title": "Cook mushrooms and onion",
-      "instruction": "In the same pot, sauté mushrooms and onion 8 minutes until moisture evaporates and edges brown. Add garlic and cook 1 minute. Target 145°F for medium beef, 160°F for ground at the thickest part before moving to the next batch. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "In the same pot, sauté mushrooms and onion 8 minutes until moisture evaporates and edges brown. Add garlic and cook 1 minute.",
       "minutes": 9,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Build the sauce",
-      "instruction": "Pour in beef broth and simmer 5 minutes, scraping fond from the bottom. Whisk Dijon into sour cream, then stir off heat into the warm broth until smooth. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
+      "instruction": "Pour in beef broth and simmer 5 minutes, scraping fond from the bottom. Whisk Dijon into sour cream, then stir off heat into the warm broth until smooth.",
       "minutes": 6,
       "heatLevel": ""
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Cook the noodles",
-      "instruction": "Boil egg noodles in salted water until al dente, about 8 minutes. Drain and toss with a tablespoon of butter. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Boil egg noodles in salted water until al dente, about 8 minutes. Drain and toss with a tablespoon of butter.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F for medium beef, 160°F for ground. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 9,
-      "title": "Portion and open the line",
-      "instruction": "Portion Mushroom Swiss Steak Pan onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
+      "stepNumber": 5,
       "title": "Combine and serve",
-      "instruction": "Return beef and any juices to sauce and warm 2 minutes—do not boil. Serve noodles topped with stroganoff and parsley at the line. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
+      "instruction": "Return beef and any juices to sauce and warm 2 minutes—do not boil. Serve noodles topped with stroganoff and parsley at the line.",
       "minutes": 5,
       "heatLevel": ""
     }
@@ -193,25 +158,11 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 879,
-    "protein": 52,
-    "carbs": 74,
-    "fats": 41,
-    "label": "per serving (hall portion)",
-    "source": "calculated",
-    "filterFlags": {
-      "highProtein": true,
-      "under700Calories": false,
-      "under30gFat": false,
-      "highCarb": true,
-      "lowCarb": false,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": false
-    }
+    "calories": 520,
+    "protein": 38,
+    "carbs": 48,
+    "fats": 22,
+    "label": "~520 cal/serving · 38g protein · 3g fiber (est.)"
   },
   "heroImage": "/images/hall-expansion/mushroom-swiss-steak-pan.jpg",
   "heroImageAlt": "Mushroom Swiss Steak Pan — crew-sized firehall meal",
@@ -231,6 +182,7 @@
     "hall-burger-bar",
     "pasta-bar-night"
   ],
-  "generatedAt": "2026-05-31T01:50:00.916Z",
+  "sourceUrl": "",
+  "generatedAt": "2026-06-04T20:47:21.930Z",
   "contentVersion": 2
 }

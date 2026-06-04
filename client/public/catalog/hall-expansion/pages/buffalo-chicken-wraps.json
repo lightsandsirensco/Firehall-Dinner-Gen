@@ -157,7 +157,11 @@
     "fats": 24,
     "label": "~540 cal/serving · 36g protein · 2g fiber (est.)"
   },
-  "heroImageAlt": "Buffalo Chicken Wraps — firehall handheld meal — firefighter meal served for a firehall crew dinner",
+  "heroImage": "/images/hall-expansion/buffalo-chicken-wraps.jpg",
+  "heroImageAlt": "Buffalo Chicken Wraps — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/buffalo-chicken-wraps.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/buffalo-chicken-wraps.jpg",
+  "railImage": "/images/rails/hall-expansion/buffalo-chicken-wraps.jpg",
   "realismScore": 97,
   "firefighterScore": 86,
   "popularityWeight": 7.8,
@@ -172,10 +176,6 @@
     "pasta-bar-night"
   ],
   "sourceUrl": "https://www.seriouseats.com/buffalo-chicken-wing-recipe",
-  "generatedAt": "2026-06-04T20:18:31.794Z",
-  "contentVersion": 2,
-  "heroImage": "/images/hall-expansion/buffalo-chicken-wraps.jpg",
-  "thumbImage": "/images/thumbs/hall-expansion/buffalo-chicken-wraps.jpg",
-  "mobileImage": "/images/mobile/hall-expansion/buffalo-chicken-wraps.jpg",
-  "railImage": "/images/rails/hall-expansion/buffalo-chicken-wraps.jpg"
+  "generatedAt": "2026-06-04T20:47:21.931Z",
+  "contentVersion": 2
 }

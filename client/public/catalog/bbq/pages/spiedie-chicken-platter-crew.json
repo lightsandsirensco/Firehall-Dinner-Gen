@@ -8,15 +8,15 @@
   "category": "bbq_grill_nights",
   "cuisine": "upstate new york",
   "description": "Chicken breast cubes marinate in white-wine mint-sage spiedie bath, griddle on skewers until charred and 165°F, and serve with Martin's potato rolls for soaking.",
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "cookTime": 18,
   "prepTime": 35,
   "difficulty": "medium",
-  "calories": 750,
+  "calories": 762,
   "protein": 81,
   "carbs": 35,
-  "fats": 30,
+  "fats": 31,
   "tags": [
     "protein:chicken",
     "format:smokehouse_board",
@@ -39,57 +39,57 @@
   "ingredients": [
     {
       "name": "chicken breast",
-      "quantity": "4.4",
+      "quantity": "5.5",
       "unit": "lb",
       "notes": "cut into 1.5-inch cubes",
       "group": "Main"
     },
     {
       "name": "canola oil",
-      "quantity": "3/4",
+      "quantity": "1",
       "unit": "cup",
       "group": "Spiedie marinade"
     },
     {
       "name": "distilled white vinegar",
-      "quantity": "3/8",
+      "quantity": "0.5",
       "unit": "cup",
       "group": "Spiedie marinade"
     },
     {
       "name": "Riesling wine",
-      "quantity": "1/4",
+      "quantity": "0.25",
       "unit": "cup",
       "group": "Spiedie marinade"
     },
     {
       "name": "fresh mint leaves",
-      "quantity": "3/8",
+      "quantity": "0.5",
       "unit": "cup",
       "notes": "chopped",
       "group": "Spiedie marinade"
     },
     {
       "name": "dried sage",
-      "quantity": "7/8",
+      "quantity": "1",
       "unit": "tbsp",
       "group": "Spiedie marinade"
     },
     {
       "name": "dried rosemary",
-      "quantity": "7/8",
+      "quantity": "1",
       "unit": "tbsp",
       "group": "Spiedie marinade"
     },
     {
       "name": "Martin's potato rolls",
-      "quantity": "9.6",
+      "quantity": "12",
       "unit": "pieces",
       "group": "Service"
     },
     {
       "name": "Maldon salt",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tbsp",
       "group": "Spiedie marinade"
     }
@@ -98,56 +98,56 @@
     {
       "stepNumber": 1,
       "title": "Build spiedie marinade",
-      "instruction": "Whisk canola oil, vinegar, Riesling, mint, sage, rosemary, and salt. Reserve 0.5 cup for roll soaking. Plan about 10 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Whisk canola oil, vinegar, Riesling, mint, sage, rosemary, and salt. Reserve 0.5 cup for roll soaking.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
       "title": "Marinate chicken cubes",
-      "instruction": "Toss chicken in remaining marinade at least 4 hours, ideally overnight refrigerated. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
+      "instruction": "Toss chicken in remaining marinade at least 4 hours, ideally overnight refrigerated.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
       "stepNumber": 3,
-      "title": "Preheat grill grates",
-      "instruction": "Preheat grill to medium-high, 425°F. Oil grates. Plan about 8 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "title": "Heat grill",
+      "instruction": "Preheat grill to medium-high, 425°F. Oil grates.",
       "minutes": 8,
       "heatLevel": "medium-high"
     },
     {
       "stepNumber": 4,
       "title": "Skewer and grill",
-      "instruction": "Thread chicken on skewers. Grill 4 minutes per side until charred and 165°F internal. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Thread chicken on skewers. Grill 4 minutes per side until charred and 165°F internal.",
       "minutes": 14,
       "heatLevel": "high"
     },
     {
       "stepNumber": 5,
       "title": "Rest and slide off",
-      "instruction": "Rest skewers 5 minutes. Slide chicken into hotel pans, cover with foil, hold at 170°F. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
+      "instruction": "Rest skewers 5 minutes. Slide chicken into hotel pans, cover with foil, hold at 170°F.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 6,
       "title": "Prep soak rolls",
-      "instruction": "Split Italian rolls. Brush cut sides with reserved marinade—do not oversoak or rolls fall apart. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Split Italian rolls. Brush cut sides with reserved marinade—do not oversoak or rolls fall apart.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 7,
       "title": "Warm rolls briefly",
-      "instruction": "Warm split rolls on grill 1 minute at 350°F cut-side down for light toast. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Warm split rolls on grill 1 minute at 350°F cut-side down for light toast.",
       "minutes": 3,
       "heatLevel": "medium"
     },
     {
       "stepNumber": 8,
       "title": "Platter for ten",
-      "instruction": "Pile chicken on platters with rolls for building. About 8 oz chicken per firefighter. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
+      "instruction": "Pile chicken on platters with rolls for building. About 8 oz chicken per firefighter.",
       "minutes": 5,
       "heatLevel": ""
     }
@@ -169,26 +169,12 @@
   "mealPrepNotes": "Marinate cubes 24 hours ideally, minimum 4 hours. Griddle medium-high 425°F. Hold chicken covered at 170°F up to 35 minutes. Rolls at room temp for soaking.",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 750,
+    "calories": 762,
     "protein": 81,
     "carbs": 35,
-    "fats": 30,
-    "label": "Estimated per serving",
-    "source": "calculated",
-    "estimateAvailable": true,
-    "filterFlags": {
-      "highProtein": true,
-      "under700Calories": false,
-      "under30gFat": false,
-      "highCarb": false,
-      "lowCarb": false,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": false
-    }
+    "fats": 31,
+    "label": "per serving (hall portion)",
+    "source": "estimated"
   },
   "heroImage": "/images/smoker-catalog/spiedie-chicken-platter-crew.jpg",
   "heroImageAlt": "Binghamton White-Wine Spiedie Tray — crew-sized BBQ spread with visible smoke and bark",
@@ -217,6 +203,6 @@
     "brisket-style-beef-sandwiches-au-jus"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T23:32:23.205Z",
+  "generatedAt": "2026-06-04T20:47:49.436Z",
   "contentVersion": 2
 }

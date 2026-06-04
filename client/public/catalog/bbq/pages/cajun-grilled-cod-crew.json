@@ -8,15 +8,15 @@
   "category": "bbq_grill_nights",
   "cuisine": "cajun",
   "description": "Cod fillets coat in Cajun blackening spice, grill in cast-iron griddle inserts until charred and 145°F, and serve with cool remoulade and lemon.",
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "cookTime": 14,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 709,
+  "calories": 723,
   "protein": 51,
   "carbs": 7,
-  "fats": 52,
+  "fats": 53,
   "tags": [
     "protein:seafood",
     "format:bayou_fillet",
@@ -39,62 +39,62 @@
   "ingredients": [
     {
       "name": "cod fillets",
-      "quantity": "4",
+      "quantity": "5",
       "unit": "lb",
       "notes": "about 10 fillets",
       "group": "Main"
     },
     {
       "name": "Cajun blackening spice",
-      "quantity": "1/4",
+      "quantity": "0.33",
       "unit": "cup",
       "group": "Blackening"
     },
     {
       "name": "smoked paprika",
-      "quantity": "7/8",
+      "quantity": "1",
       "unit": "tbsp",
       "group": "Blackening"
     },
     {
       "name": "garlic powder",
-      "quantity": "7/8",
+      "quantity": "1",
       "unit": "tbsp",
       "group": "Blackening"
     },
     {
       "name": "mayonnaise",
-      "quantity": "3/4",
+      "quantity": "1",
       "unit": "cup",
       "group": "Remoulade"
     },
     {
       "name": "Creole mustard",
-      "quantity": "2.6",
+      "quantity": "3",
       "unit": "tbsp",
       "group": "Remoulade"
     },
     {
       "name": "sweet pickle relish",
-      "quantity": "2.6",
+      "quantity": "3",
       "unit": "tbsp",
       "group": "Remoulade"
     },
     {
       "name": "cayenne pepper",
-      "quantity": "3/8",
+      "quantity": "0.5",
       "unit": "tsp",
       "group": "Remoulade"
     },
     {
       "name": "clarified butter",
-      "quantity": "3/8",
+      "quantity": "0.5",
       "unit": "cup",
       "group": "Grill"
     },
     {
       "name": "lemon wedges",
-      "quantity": "8",
+      "quantity": "10",
       "unit": "whole",
       "group": "Service"
     }
@@ -103,56 +103,56 @@
     {
       "stepNumber": 1,
       "title": "Build remoulade",
-      "instruction": "Whisk mayo, Creole mustard, relish, and cayenne. Chill until service. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Use mayonnaise as listed — measure each before heat goes on.",
+      "instruction": "Whisk mayo, Creole mustard, relish, and cayenne. Chill until service.",
       "minutes": 8,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
       "title": "Season cod",
-      "instruction": "Pat fillets completely dry. Press Cajun spice, paprika, and garlic powder onto both sides. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F at the thickest point before moving to the next batch.",
+      "instruction": "Pat fillets completely dry. Press Cajun spice, paprika, and garlic powder onto both sides.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 3,
       "title": "Heat cast iron on grill",
-      "instruction": "Place cast-iron insert on grill and preheat to 425°F, about 10 minutes. Have clarified butter ready. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Place cast-iron insert on grill and preheat to 425°F, about 10 minutes. Have clarified butter ready.",
       "minutes": 10,
       "heatLevel": "high"
     },
     {
       "stepNumber": 4,
       "title": "Blacken first side",
-      "instruction": "Brush iron with butter. Lay fillets and cook 4 minutes undisturbed until blackened crust forms. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Brush iron with butter. Lay fillets and cook 4 minutes undisturbed until blackened crust forms.",
       "minutes": 4,
       "heatLevel": "high"
     },
     {
       "stepNumber": 5,
       "title": "Flip and finish",
-      "instruction": "Flip carefully and cook 3–4 minutes until 145°F internal and flesh flakes. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Flip carefully and cook 3–4 minutes until 145°F internal and flesh flakes.",
       "minutes": 4,
       "heatLevel": "high"
     },
     {
       "stepNumber": 6,
-      "title": "Rest before plating",
-      "instruction": "Rest fillets 2 minutes off heat. Transfer to hotel pans flesh-side up. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "title": "Rest briefly",
+      "instruction": "Rest fillets 2 minutes off heat. Transfer to hotel pans flesh-side up.",
       "minutes": 2,
       "heatLevel": ""
     },
     {
       "stepNumber": 7,
       "title": "Hold at 140°F",
-      "instruction": "Hold covered at 140°F up to 10 minutes max. Remoulade on the side. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Hold covered at 140°F up to 10 minutes max. Remoulade on the side.",
       "minutes": 3,
       "heatLevel": ""
     },
     {
       "stepNumber": 8,
       "title": "Platter for ten",
-      "instruction": "Serve one fillet per firefighter with remoulade and lemon. Call it fast—cod waits poorly. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F at the thickest point before moving to the next batch.",
+      "instruction": "Serve one fillet per firefighter with remoulade and lemon. Call it fast—cod waits poorly.",
       "minutes": 5,
       "heatLevel": ""
     }
@@ -174,25 +174,12 @@
   "mealPrepNotes": "Pat fillets dry. Grill on cast-iron insert at 425°F, 4 minutes per side. Hold covered at 140°F up to 10 minutes. Remoulade cold on the side.",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 709,
+    "calories": 723,
     "protein": 51,
     "carbs": 7,
-    "fats": 52,
+    "fats": 53,
     "label": "per serving (hall portion)",
-    "source": "calculated",
-    "filterFlags": {
-      "highProtein": true,
-      "under700Calories": false,
-      "under30gFat": false,
-      "highCarb": false,
-      "lowCarb": true,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": false
-    }
+    "source": "estimated"
   },
   "heroImage": "/images/smoker-catalog/cajun-grilled-cod-crew.jpg",
   "heroImageAlt": "Black Iron Remoulade Cod Plates — crew-sized BBQ spread with visible smoke and bark",
@@ -221,6 +208,6 @@
     "brisket-style-beef-sandwiches-au-jus"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T23:32:23.207Z",
+  "generatedAt": "2026-06-04T20:47:49.440Z",
   "contentVersion": 2
 }

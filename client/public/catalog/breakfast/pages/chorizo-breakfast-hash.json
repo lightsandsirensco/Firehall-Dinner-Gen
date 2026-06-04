@@ -73,66 +73,33 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Chorizo Breakfast Hash in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
+      "title": "Par-cook potatoes",
+      "instruction": "Microwave diced potatoes with a splash of water until just tender, then drain and pat completely dry. Wet potatoes steam instead of crisp in the chorizo fat.",
+      "minutes": 8
     },
     {
       "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch Eggs. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
+      "title": "Render chorizo",
+      "instruction": "Cook chorizo in a large skillet over medium-high, breaking it up until browned and fat renders. Push chorizo to one side and add potatoes to the hot fat in a single layer.",
+      "minutes": 8
     },
     {
       "stepNumber": 3,
-      "title": "Par-cook potatoes",
-      "instruction": "Microwave diced potatoes with a splash of water until just tender, then drain and pat completely dry. Wet potatoes steam instead of crisp in the chorizo fat.",
-      "minutes": 8,
-      "heatLevel": ""
+      "title": "Crisp and combine",
+      "instruction": "Let potatoes sit undisturbed 3 minutes for crust, then toss with chorizo, onion, and peppers. Cook until edges are deeply golden and vegetables soften.",
+      "minutes": 10
     },
     {
       "stepNumber": 4,
-      "title": "Render chorizo",
-      "instruction": "Cook chorizo in a large skillet over medium-high, breaking it up until browned and fat renders. Push chorizo to one side and add potatoes to the hot fat in a single layer.",
-      "minutes": 8,
-      "heatLevel": ""
+      "title": "Eggs on top",
+      "instruction": "Make wells in the hash and crack eggs into each. Cover over medium-low heat until egg whites are fully set (165°F) and yolks are jammy. Season with paprika and salt only if the chorizo is not already salty enough.",
+      "minutes": 7
     },
     {
       "stepNumber": 5,
-      "title": "Crisp and combine",
-      "instruction": "Let potatoes sit undisturbed 3 minutes for crust, then toss with chorizo, onion, and peppers. Cook until edges are deeply golden and vegetables soften.",
-      "minutes": 10,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 6,
-      "title": "Eggs on top",
-      "instruction": "Make wells in the hash and crack eggs into each. Cover over medium-low heat until egg whites are fully set (165°F) and yolks are jammy. Season with paprika and salt only if the chorizo is not already salty enough.",
-      "minutes": 7,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 9,
       "title": "Top and serve",
       "instruction": "Scatter cotija and cilantro over the top. Serve with lime wedges and hot sauce at the line straight from the skillet or scooped onto warm plates.",
-      "minutes": 2,
-      "heatLevel": ""
+      "minutes": 2
     }
   ],
   "nutrition": {
@@ -140,16 +107,15 @@
     "protein": 15,
     "carbs": 38,
     "fat": 11,
-    "label": "Estimated per serving",
+    "label": "per serving (hall portion)",
     "source": "calculated",
-    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
       "under30gFat": true,
       "highCarb": false,
       "lowCarb": false,
-      "mealPrepFriendly": true
+      "mealPrepFriendly": false
     },
     "badgeCandidates": {
       "highProtein": false,
@@ -173,28 +139,9 @@
   "heroImage": "/images/breakfast/chorizo-breakfast-hash.jpg",
   "thumbImage": "/images/thumbs/breakfast/chorizo-breakfast-hash.jpg",
   "imageAlt": "Chorizo breakfast hash with crispy potatoes, peppers, and jammy eggs",
-  "publishedAt": "2026-05-31T18:33:00.829Z",
-  "updatedAt": "2026-05-31T23:49:25.399Z",
+  "publishedAt": "2026-06-04T20:48:24.990Z",
+  "updatedAt": "2026-06-04T20:48:24.990Z",
   "readMinutes": 7,
   "seoTitle": "Chorizo Breakfast Hash | Firehall Breakfast",
-  "collectionTier": "firehall_classic",
-  "proTips": [
-    "Use the widest skillet you have—crowded potatoes steam and never develop the hash crust.",
-    "Hold rendered chorizo fat in the pan; if lean, add a tablespoon of oil before potatoes hit.",
-    "Cover with a sheet pan lid to set eggs fast while the crew lines up at the counter."
-  ],
-  "tonightSpread": [
-    "Plate Chorizo Breakfast Hash with sides in separate pans so the crew can mix portions.",
-    "Keep hot items on one side of the table and cold on the other — eggs stay hot, fruit stays cold.",
-    "Line up Chorizo Breakfast Hash on the main counter with serving spoons — firefighters grab fast between calls.",
-    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
-  ],
-  "equipment": [
-    "Large sheet trays",
-    "Instant-read thermometer",
-    "Aluminum foil"
-  ],
-  "mealPrepNotes": "Prep mise en place before the shift — Chorizo Breakfast Hash runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone.",
-  "mobileImage": "/images/mobile/breakfast/chorizo-breakfast-hash.jpg",
-  "railImage": "/images/rails/breakfast/chorizo-breakfast-hash.jpg"
+  "collectionTier": "firehall_classic"
 }

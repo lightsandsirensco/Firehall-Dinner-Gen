@@ -183,6 +183,7 @@
     }
   },
   "heroImage": "/images/golden-100/meat-lovers-sheet-pizza.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Meat Lover's Pizza on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/meat-lovers-sheet-pizza.jpg",
   "thumbImage": "/images/thumbs/meat-lovers-sheet-pizza.jpg",
   "railImage": "/images/rails/meat-lovers-sheet-pizza.jpg",
@@ -205,10 +206,10 @@
     "honey-soppressata-pizza",
     "pepperoni-pizza-night",
     "bbq-chicken-pizza",
-    "bacon-egg-hash"
+    "pulled-pork"
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.465Z",
+  "generatedAt": "2026-06-04T20:45:42.295Z",
   "contentVersion": 2
 }

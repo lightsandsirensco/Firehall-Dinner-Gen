@@ -8,15 +8,15 @@
   "category": "bbq_grill_nights",
   "cuisine": "american",
   "description": "Adapted from classic pit-style baked beans tradition (BBQ Pit Boys, Amazing Ribs): canned beans simmer with molasses, brown sugar, and bacon, then smoke at 275°F for 2 hours until thick and smoky.",
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "cookTime": 180,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 261,
+  "calories": 259,
   "protein": 14,
-  "carbs": 15,
-  "fats": 16,
+  "carbs": 16,
+  "fats": 15,
   "tags": [
     "protein:vegetarian",
     "format:side",
@@ -38,7 +38,7 @@
   "ingredients": [
     {
       "name": "canned pinto beans",
-      "quantity": "3",
+      "quantity": "4",
       "unit": "cans",
       "notes": "15 oz, drained and rinsed"
     },
@@ -50,120 +50,99 @@
     },
     {
       "name": "bacon",
-      "quantity": "5/8",
+      "quantity": "0.75",
       "unit": "lb",
       "notes": "diced"
     },
     {
       "name": "yellow onion",
-      "quantity": "3/4",
+      "quantity": "1",
       "unit": "whole",
       "notes": "diced"
     },
     {
       "name": "ketchup",
-      "quantity": "3/4",
+      "quantity": "1",
       "unit": "cup"
     },
     {
       "name": "molasses",
-      "quantity": "1/4",
+      "quantity": "0.33",
       "unit": "cup"
     },
     {
       "name": "brown sugar",
-      "quantity": "1/4",
+      "quantity": "0.33",
       "unit": "cup"
     },
     {
       "name": "yellow mustard",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tbsp"
     },
     {
       "name": "apple cider vinegar",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tbsp"
     },
     {
       "name": "Worcestershire sauce",
-      "quantity": "7/8",
+      "quantity": "1",
       "unit": "tbsp"
     },
     {
       "name": "BBQ sauce",
-      "quantity": "3/8",
+      "quantity": "0.5",
       "unit": "cup"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Smoked Baked Beans for the Crew in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
+      "title": "Render bacon",
+      "instruction": "Cook diced bacon in a pot until crisp. Remove half for topping; leave rest with fat.",
+      "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch vegetarian. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
-      "title": "Render bacon",
-      "instruction": "Cook diced bacon in a pot until crisp. Remove half for topping; leave rest with fat. Plan about 10 minutes for this step at crew scale. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F for any egg-based components at the thickest point before moving to the next batch.",
-      "minutes": 10,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 4,
       "title": "Sweat onion",
-      "instruction": "Cook diced onion in bacon fat until soft, about 6 minutes. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F for any egg-based components at the thickest point before moving to the next batch.",
+      "instruction": "Cook diced onion in bacon fat until soft, about 6 minutes.",
       "minutes": 6,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Build bean base",
       "instruction": "Add beans, ketchup, molasses, brown sugar, mustard, vinegar, Worcestershire, and BBQ sauce. Simmer 20 minutes until starting to thicken.",
       "minutes": 20,
       "heatLevel": ""
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Smoke at 275°F",
-      "instruction": "Transfer to foil pans. Smoke uncovered at 275°F 2 hours, stirring once, until thick and smoky. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Transfer to foil pans. Smoke uncovered at 275°F 2 hours, stirring once, until thick and smoky.",
       "minutes": 120,
       "heatLevel": "low"
     },
     {
-      "stepNumber": 7,
+      "stepNumber": 5,
       "title": "Hold at 170°F",
-      "instruction": "Cover with foil and hold at 170°F until service. Top with reserved crisp bacon before serving. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F for any egg-based components at the thickest point before moving to the next batch.",
+      "instruction": "Cover with foil and hold at 170°F until service. Top with reserved crisp bacon before serving.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 8,
-      "title": "Cooking step",
-      "instruction": "Beans in a pot with ladle alongside any smoked meat. Call it the hall pot—everyone gets a scoop. Target 165°F for any egg-based components at the thickest part before moving to the next batch. Plan about 3 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "stepNumber": 6,
+      "title": "Tonight's board",
+      "instruction": "Beans in a pot with ladle alongside any smoked meat. Call it the hall pot—everyone gets a scoop.",
       "minutes": 3,
       "heatLevel": ""
     },
     {
-      "stepNumber": 9,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F for any egg-based components. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
+      "stepNumber": 7,
       "title": "Leftovers",
-      "instruction": "Reheat covered at 325°F until 165°F. Fold into burritos with pulled pork. Plan about 10 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Reheat covered at 325°F until 165°F. Fold into burritos with pulled pork.",
       "minutes": 10,
       "heatLevel": ""
     }
@@ -185,26 +164,12 @@
   "mealPrepNotes": "Simmer base on the stove, then transfer to foil pans on the smoker. Hold covered at 170°F up to 3 hours. Stir before service.",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 261,
+    "calories": 259,
     "protein": 14,
-    "carbs": 15,
-    "fats": 16,
-    "label": "Estimated per serving",
-    "source": "calculated",
-    "estimateAvailable": true,
-    "filterFlags": {
-      "highProtein": false,
-      "under700Calories": true,
-      "under30gFat": true,
-      "highCarb": false,
-      "lowCarb": true,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": false,
-      "lighterOption": true,
-      "performanceMeal": false
-    }
+    "carbs": 16,
+    "fats": 15,
+    "label": "per serving (hall portion)",
+    "source": "estimated"
   },
   "heroImage": "/images/smoker-catalog/smoked-baked-beans-crew.jpg",
   "heroImageAlt": "Smoked Baked Beans for the Crew — crew-sized BBQ spread with visible smoke and bark",
@@ -233,6 +198,6 @@
     "smoked-mac-and-cheese-crew"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T23:32:23.203Z",
+  "generatedAt": "2026-06-04T20:47:49.424Z",
   "contentVersion": 2
 }

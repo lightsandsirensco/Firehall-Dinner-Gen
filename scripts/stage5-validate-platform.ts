@@ -19,7 +19,7 @@ async function main(): Promise<void> {
   const manifestIssues = validateGoldenManifest();
   const manifestErrors = manifestIssues.filter((i) => i.severity === "error");
   assert.equal(manifestErrors.length, 0, manifestErrors.map((i) => i.message).join("; "));
-  assert.equal(GOLDEN_100_RECIPES.length, 101);
+  assert.equal(GOLDEN_100_RECIPES.length, 104);
 
   for (const id of IMAGE_STYLE_PRESET_IDS) {
     const lock = getVisualLockSpec(id);

@@ -133,6 +133,7 @@
     }
   },
   "heroImage": "/images/golden-100/chorizo-breakfast-tacos.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Chorizo Breakfast Tacos on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/chorizo-breakfast-tacos.jpg",
   "thumbImage": "/images/thumbs/chorizo-breakfast-tacos.jpg",
   "railImage": "/images/rails/chorizo-breakfast-tacos.jpg",
@@ -151,13 +152,13 @@
   "relatedSlugs": [
     "breakfast-burrito-bar",
     "pork-carnitas-tacos",
-    "bacon-egg-hash",
-    "biscuits-gravy",
     "breakfast-sausage-pizza",
-    "hall-taco-bar"
+    "hall-taco-bar",
+    "steak-tacos",
+    "detroit-style-pizza"
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.507Z",
+  "generatedAt": "2026-06-04T20:45:42.330Z",
   "contentVersion": 2
 }

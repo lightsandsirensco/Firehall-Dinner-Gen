@@ -149,6 +149,7 @@
     }
   },
   "heroImage": "/images/golden-100/garlic-butter-shrimp.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Garlic Butter Shrimp on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/garlic-butter-shrimp.jpg",
   "thumbImage": "/images/thumbs/garlic-butter-shrimp.jpg",
   "railImage": "/images/rails/garlic-butter-shrimp.jpg",
@@ -167,13 +168,13 @@
   "relatedSlugs": [
     "chili-mac",
     "fast-philly-skillet",
+    "sheet-pan-parmesan-dijon-chicken-thigh-dinner",
     "cedar-plank-salmon",
     "beef-broccoli",
-    "pad-thai",
-    "bacon-egg-hash"
+    "pad-thai"
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.414Z",
+  "generatedAt": "2026-06-04T20:45:42.254Z",
   "contentVersion": 2
 }

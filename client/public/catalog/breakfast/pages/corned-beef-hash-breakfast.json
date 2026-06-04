@@ -73,87 +73,33 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Corned Beef Hash Breakfast in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
+      "title": "Par-cook potatoes",
+      "instruction": "Microwave diced potatoes with a splash of water in a covered bowl until just tender, about 8 minutes. Drain thoroughly and spread on a towel to dry—wet potatoes will steam instead of crisp.",
+      "minutes": 10
     },
     {
       "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch Eggs. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
+      "title": "Crisp the hash base",
+      "instruction": "Heat oil in two large skillets over medium-high until shimmering. Add potatoes in a single layer without crowding; let sit 4 minutes for crust before stirring. Cook until deeply golden on most sides.",
+      "minutes": 15
     },
     {
       "stepNumber": 3,
-      "title": "Par-cook potatoes",
-      "instruction": "Microwave diced potatoes with a splash of water in a covered bowl until just tender, about 8 minutes. Drain thoroughly and spread on a towel to dry—wet potatoes will steam instead of crisp.",
-      "minutes": 10,
-      "heatLevel": ""
+      "title": "Add corned beef and onion",
+      "instruction": "Fold in onion, pepper, and corned beef. Press the mixture into the pan and cook undisturbed 3 minutes to build a crust. Season with pepper; taste before adding salt because corned beef carries plenty.",
+      "minutes": 8
     },
     {
       "stepNumber": 4,
-      "title": "Crisp the hash base",
-      "instruction": "Heat oil in two large skillets over medium-high until shimmering. Add potatoes in a single layer without crowding; let sit 4 minutes for crust before stirring. Cook until deeply golden on most sides.",
-      "minutes": 15,
-      "heatLevel": ""
+      "title": "Make wells for eggs",
+      "instruction": "Divide hash between warm serving skillets or one large cast iron. Make eight shallow wells and crack an egg into each. Season eggs with pepper.",
+      "minutes": 3
     },
     {
       "stepNumber": 5,
-      "title": "Add corned beef and onion",
-      "instruction": "Fold in onion, pepper, and corned beef. Press the mixture into the pan and cook undisturbed 3 minutes to build a crust. Season with pepper; taste before adding salt because corned beef carries plenty.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 6,
-      "title": "Make wells for eggs",
-      "instruction": "Divide hash between warm serving skillets or one large cast iron. Make eight shallow wells and crack an egg into each. Season eggs with pepper.",
-      "minutes": 3,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 9,
-      "title": "Portion and open the line",
-      "instruction": "Portion Corned Beef Hash Breakfast onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
-      "title": "Scale for larger halls",
-      "instruction": "When cooking for more than 8 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 11,
       "title": "Cover and finish eggs",
       "instruction": "Cover skillets over medium-low heat until egg whites are fully set (165°F) and yolks are runny or jammy to preference. Scatter parsley and serve straight from the pan with hot sauce.",
-      "minutes": 6,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 12,
-      "title": "Final quality check before service",
-      "instruction": "Walk the line once before opening service for Corned Beef Hash Breakfast — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
-      "minutes": 4,
-      "heatLevel": ""
+      "minutes": 6
     }
   ],
   "nutrition": {
@@ -161,16 +107,15 @@
     "protein": 11,
     "carbs": 40,
     "fat": 12,
-    "label": "Estimated per serving",
+    "label": "per serving (hall portion)",
     "source": "calculated",
-    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
       "under30gFat": true,
       "highCarb": false,
       "lowCarb": false,
-      "mealPrepFriendly": true
+      "mealPrepFriendly": false
     },
     "badgeCandidates": {
       "highProtein": false,
@@ -194,28 +139,9 @@
   "heroImage": "/images/breakfast/corned-beef-hash-breakfast.jpg",
   "thumbImage": "/images/thumbs/breakfast/corned-beef-hash-breakfast.jpg",
   "imageAlt": "Corned beef hash with crispy potatoes and sunny-side eggs in a cast-iron skillet",
-  "publishedAt": "2026-05-31T18:33:00.830Z",
-  "updatedAt": "2026-05-31T23:49:25.416Z",
+  "publishedAt": "2026-06-04T20:48:24.991Z",
+  "updatedAt": "2026-06-04T20:48:24.991Z",
   "readMinutes": 8,
   "seoTitle": "Corned Beef Hash Breakfast | Firehall Breakfast",
-  "collectionTier": "firehall_classic",
-  "proTips": [
-    "Dry potatoes aggressively—this is the difference between diner hash and cafeteria mush.",
-    "Use two skillets in parallel if one pan cannot fit eight eggs without crowding.",
-    "Serve family-style from cast iron so the crew gets the crisp bottom layer first."
-  ],
-  "tonightSpread": [
-    "Plate Corned Beef Hash Breakfast with sides in separate pans so the crew can mix portions.",
-    "Keep hot items on one side of the table and cold on the other — eggs stay hot, fruit stays cold.",
-    "Line up Corned Beef Hash Breakfast on the main counter with serving spoons — firefighters grab fast between calls.",
-    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
-  ],
-  "equipment": [
-    "Large sheet trays",
-    "Instant-read thermometer",
-    "Aluminum foil"
-  ],
-  "mealPrepNotes": "Prep mise en place before the shift — Corned Beef Hash Breakfast runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone.",
-  "mobileImage": "/images/mobile/breakfast/corned-beef-hash-breakfast.jpg",
-  "railImage": "/images/rails/breakfast/corned-beef-hash-breakfast.jpg"
+  "collectionTier": "firehall_classic"
 }

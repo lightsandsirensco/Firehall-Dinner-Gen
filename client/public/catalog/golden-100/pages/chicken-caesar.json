@@ -10,13 +10,13 @@
   "description": "Big bowls, hot chicken, all the fixings. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
   "baseServings": 8,
-  "cookTime": 60,
+  "cookTime": 70,
   "prepTime": 25,
   "difficulty": "medium",
   "calories": 1400,
   "protein": 120,
-  "carbs": 102,
-  "fats": 90,
+  "carbs": 69,
+  "fats": 88,
   "tags": [
     "protein:chicken",
     "format:salad",
@@ -32,115 +32,189 @@
   ],
   "ingredients": [
     {
-      "name": "Chicken breast",
+      "name": "Romaine hearts, chopped",
+      "quantity": "6",
+      "unit": "count",
+      "group": "Salad"
+    },
+    {
+      "name": "Boneless chicken breasts",
       "quantity": "4",
-      "unit": "lb"
-    },
-    {
-      "name": "Romaine hearts",
-      "quantity": "8",
-      "unit": "heads"
-    },
-    {
-      "name": "Caesar dressing",
-      "quantity": "5.3",
-      "unit": "cups"
+      "unit": "lb",
+      "group": "Main"
     },
     {
       "name": "Thick-cut bacon",
-      "quantity": "2.7",
-      "unit": "lb"
+      "quantity": "2",
+      "unit": "lb",
+      "group": "Salad"
     },
     {
-      "name": "Parmesan wedge",
-      "quantity": "1.3",
-      "unit": "lb"
+      "name": "Caesar dressing",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Salad"
     },
     {
-      "name": "French bread / baguette",
-      "quantity": "4",
-      "unit": "loaves"
-    },
-    {
-      "name": "Butter + garlic",
-      "quantity": "1.3",
-      "unit": "batch"
+      "name": "Parmesan, shaved",
+      "quantity": "12",
+      "unit": "oz",
+      "group": "Salad"
     },
     {
       "name": "Day-old bread cubes",
-      "quantity": "10.7",
-      "unit": "cups"
+      "quantity": "8",
+      "unit": "cups",
+      "group": "Croutons"
     },
     {
       "name": "Olive oil",
-      "quantity": "0.7",
-      "unit": "cup"
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Cooking"
     },
     {
-      "name": "Lemon",
-      "quantity": "8"
+      "name": "Garlic powder",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Kosher salt",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Black pepper",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Baguettes",
+      "quantity": "2",
+      "unit": "count",
+      "group": "Side"
+    },
+    {
+      "name": "Garlic butter",
+      "quantity": "1",
+      "unit": "cup",
+      "group": "Side"
+    },
+    {
+      "name": "Lemons",
+      "quantity": "4",
+      "unit": "count",
+      "group": "Finish"
+    },
+    {
+      "name": "Frozen diner fries",
+      "quantity": "4",
+      "unit": "lb",
+      "notes": "optional",
+      "group": "Side"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Prep the station (no heat, 12 min)",
-      "instruction": "Lay out chicken, romaine, dressing, parmesan, bread, sheet pans, and a large skillet or grill pan before any heat goes on. In a busy hall, cooking gets messy fast if you're hunting for ingredients halfway through.",
+      "title": "Prep romaine and dressing station",
+      "instruction": "Chop romaine hearts into bite-sized pieces; wash and spin dry — wet lettuce rejects dressing. Shave parmesan into a bowl. Set Caesar dressing, croutons, and lemon wedges in labeled containers before any heat goes on.",
       "minutes": 12,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Cook the chicken (medium-high, 14–16 min)",
-      "instruction": "Heat a large skillet over medium-high until a drop of water sizzles on contact. Season chicken with salt, pepper, garlic powder, and a little paprika. Add oil, then chicken in a single layer — overcrowd and it steams instead of coloring. Cook 5–6 minutes per side until golden outside and 165°F in the center. Rest 5 minutes, then slice across the grain so juices stay in the meat.",
-      "minutes": 16,
+      "title": "Crisp the bacon",
+      "instruction": "Lay thick-cut bacon on sheet pans in a single layer. Bake at 400°F 15–18 minutes until shatter-crisp and deep mahogany. Drain on paper towels; crumble when cool. Hold warm in a dry pan — wet bacon steams the salad.",
+      "minutes": 18,
       "heatLevel": "high"
     },
     {
       "stepNumber": 3,
-      "title": "Make the garlic bread (400°F oven, 8–10 min)",
-      "instruction": "Spread garlic butter on halved loaves and sprinkle parmesan and parsley if you have them. Bake at 400°F until edges are crisp and the top is golden. Keep an eye on it — garlic burns fast and nobody wants black toast at the table.",
-      "minutes": 10,
-      "heatLevel": "high"
+      "title": "Grill the chicken",
+      "instruction": "Heat a grill pan or flat-top over medium-high until a water drop sizzles. Season chicken breasts with salt, pepper, and garlic powder. Cook 5–6 minutes per side until deep grill marks show and thickest part reads 160°F. Rest 5 minutes tented with foil.",
+      "minutes": 16,
+      "heatLevel": "medium-high"
     },
     {
       "stepNumber": 4,
-      "title": "Toast the croutons (400°F, 8–10 min)",
-      "instruction": "Toss bread cubes with oil, salt, and garlic powder. Spread on a sheet pan and bake until crunchy all the way through — soft centers will sog out the salad in minutes.",
+      "title": "Verify chicken at 165°F",
+      "instruction": "Slice rested chicken across the grain and probe the center of the thickest piece — must read 165°F before it hits the salad line. Any pink or under-temp slice goes back to the grill 2 minutes per side. Hold sliced chicken loosely covered at 140°F.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Bake garlic bread",
+      "instruction": "Spread garlic butter on halved baguettes edge to edge. Bake at 400°F 8–10 minutes until edges are crisp and tops golden — garlic burns fast, so watch the last 2 minutes. Slice on a bias and hold in a warm pan.",
       "minutes": 10,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 5,
-      "title": "Build the Caesar salad (no heat, 10 min)",
-      "instruction": "Chop romaine into bite-sized pieces and dry it well so dressing sticks instead of pooling. Toss lightly with Caesar dressing, parmesan, croutons, and a squeeze of lemon. Add dressing gradually — coated lettuce, not soup.",
+      "stepNumber": 6,
+      "title": "Toast the croutons",
+      "instruction": "Toss day-old bread cubes with olive oil, salt, and garlic powder. Spread on a sheet pan and bake at 400°F 8–10 minutes until crunchy through the center — soft cores sog out dressed romaine in minutes.",
+      "minutes": 10,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 7,
+      "title": "Bake diner fries (optional)",
+      "instruction": "Spread frozen fries in a single layer on sheet pans. Bake at 425°F 20–22 minutes until deeply golden with audible crunch when shaken. Season with salt immediately out of the oven; hold in a warm pan with the door cracked.",
+      "minutes": 22,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 8,
+      "title": "Toss the Caesar",
+      "instruction": "Toss dried romaine with dressing gradually — coated leaves, not soup. Fold in half the parmesan, croutons, and crumbled bacon. Add dressing in two passes so bowls stay crisp until the crew hits the line.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
-      "stepNumber": 6,
-      "title": "Slice and serve (no heat, 5 min)",
-      "instruction": "Slice rested chicken across the grain and lay it over the Caesar while still warm. Serve with hot garlic bread on the side and extra parmesan at the table for the crew.",
+      "stepNumber": 9,
+      "title": "Plate hot chicken over salad",
+      "instruction": "Lay warm sliced chicken over the dressed romaine in hotel pans or individual bowls. Finish with remaining parmesan, bacon, and a lemon squeeze at the table. Garlic bread and fries go on separate trays.",
       "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 10,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover grilled chicken — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 11,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool grilled chicken and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
       "heatLevel": ""
     }
   ],
   "proTips": [
     "Slice chicken thick and against the grain so it feels like a main, not a garnish.",
-    "Keep bacon and croutons in warm pans so the line stays loud and crunchy.",
     "Dress each bowl to order — soggy Caesar kills the vibe.",
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
+    "Pull chicken at 160°F and let carryover hit 165°F during rest — dry breast ruins crew morale.",
+    "Keep a backup tray at 200°F for firefighters returning from a run — never serve picked-over pans to late crew.",
     "Taste for salt at the end — hall palates run salty after long shifts.",
-    "Pull chicken at 160°F and let carryover hit 165°F — dry breast ruins crew morale."
+    "Log hold times on the pan with a grease pencil when tones drop mid-service.",
+    "Spot-check proteins with an instant-read thermometer before reopening the line after a call."
   ],
   "tonightSpread": [
-    "Plate Chicken Caesar Salad with sides in separate pans so the crew can mix portions.",
-    "Line up Chicken Caesar Salad on the main counter with serving spoons — firefighters grab fast between calls.",
-    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+    "Main: Grilled chicken Caesar",
+    "Sides: garlic bread, croutons, crispy bacon, shaved parmesan, optional diner fries",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
   ],
   "leftovers": [
-    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
-    "Label trays with date and reheat to 165°F minimum before second shift."
+    "Cool grilled chicken in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Store dressed salad separately from chicken — acid wilts romaine overnight."
   ],
   "whyCrewsLikeIt": "Crispy chicken, real parmesan, crew salad night. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
   "substitutions": [
@@ -151,8 +225,8 @@
   "nutrition": {
     "calories": 1400,
     "protein": 120,
-    "carbs": 102,
-    "fats": 90,
+    "carbs": 69,
+    "fats": 88,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
@@ -170,6 +244,7 @@
     }
   },
   "heroImage": "/images/golden-100/chicken-caesar.jpg",
+  "heroImageAlt": "Wide firehall bowl of Chicken Caesar Salad with chopped romaine, diced grilled chicken mixed through, croutons, and parmesan on a prep table",
   "mobileImage": "/images/mobile/chicken-caesar.jpg",
   "thumbImage": "/images/thumbs/chicken-caesar.jpg",
   "railImage": "/images/rails/chicken-caesar.jpg",
@@ -196,6 +271,6 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "classicSlug": "chicken-caesar",
-  "generatedAt": "2026-06-04T19:44:40.280Z",
-  "contentVersion": 2
+  "generatedAt": "2026-06-04T20:53:34.893Z",
+  "contentVersion": 4
 }

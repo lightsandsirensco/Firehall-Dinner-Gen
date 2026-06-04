@@ -13,10 +13,10 @@
   "cookTime": 65,
   "prepTime": 35,
   "difficulty": "medium",
-  "calories": 878,
-  "protein": 82,
-  "carbs": 24,
-  "fats": 52,
+  "calories": 540,
+  "protein": 38,
+  "carbs": 36,
+  "fats": 28,
   "tags": [
     "protein:beef",
     "format:platter",
@@ -119,69 +119,34 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Firehall Donair Platter in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
+      "title": "Season the meat",
+      "instruction": "Mix beef, lamb if using, garlic powder, onion powder, oregano, paprika, salt, and pepper until sticky and uniform.",
+      "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch beef. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
-      "title": "Season the meat",
-      "instruction": "Mix beef, lamb if using, garlic powder, onion powder, oregano, paprika, salt, and pepper until sticky and uniform. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
-      "minutes": 10,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 4,
       "title": "Form the cones",
-      "instruction": "Press seasoned meat around metal skewers or dowels set in loaf pans, packing tight into cone shapes about 6 inches tall. Plan about 20 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Press seasoned meat around metal skewers or dowels set in loaf pans, packing tight into cone shapes about 6 inches tall.",
       "minutes": 20,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Roast until browned",
       "instruction": "Roast at 350°F, rotating pans, until exterior is deeply browned and internal temp hits 165°F, about 50–60 minutes. Target oven/smoker temperature: 350°F.",
       "minutes": 55,
       "heatLevel": ""
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Make donair sauce",
-      "instruction": "Whisk condensed milk, vinegar, and garlic until smooth and tangy. Thin with a tablespoon of water if too thick. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Whisk condensed milk, vinegar, and garlic until smooth and tangy. Thin with a tablespoon of water if too thick.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F for medium beef, 160°F for ground. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 9,
-      "title": "Portion and open the line",
-      "instruction": "Portion Firehall Donair Platter onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
+      "stepNumber": 5,
       "title": "Shave and serve",
       "instruction": "Rest cones 10 minutes, shave meat thin with a sharp knife, and pile on platters with warmed pita, tomatoes, onions, and sauce at the line.",
       "minutes": 15,
@@ -206,26 +171,11 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 878,
-    "protein": 82,
-    "carbs": 24,
-    "fats": 52,
-    "label": "Estimated per serving",
-    "source": "calculated",
-    "estimateAvailable": true,
-    "filterFlags": {
-      "highProtein": true,
-      "under700Calories": false,
-      "under30gFat": false,
-      "highCarb": false,
-      "lowCarb": true,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": false
-    }
+    "calories": 540,
+    "protein": 38,
+    "carbs": 36,
+    "fats": 28,
+    "label": "~540 cal/serving · 38g protein · 2g fiber (est.)"
   },
   "heroImage": "/images/hall-expansion/firehall-donair-platter.jpg",
   "heroImageAlt": "Firehall Donair Platter — crew-sized firehall meal",
@@ -245,6 +195,7 @@
     "hall-burger-bar",
     "pasta-bar-night"
   ],
-  "generatedAt": "2026-05-31T01:50:00.916Z",
+  "sourceUrl": "",
+  "generatedAt": "2026-06-04T20:47:21.930Z",
   "contentVersion": 2
 }

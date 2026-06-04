@@ -13,10 +13,10 @@
   "cookTime": 210,
   "prepTime": 30,
   "difficulty": "easy",
-  "calories": 748,
-  "protein": 66,
-  "carbs": 37,
-  "fats": 40,
+  "calories": 540,
+  "protein": 44,
+  "carbs": 38,
+  "fats": 24,
   "tags": [
     "protein:beef",
     "format:braise",
@@ -106,93 +106,37 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Dutch Oven Pot Roast in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch beef. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Sear the roast",
       "instruction": "Pat chuck dry and season generously. Sear in oil in a Dutch oven over medium-high heat 3–4 minutes per side until deeply browned. Set aside.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Build the braise",
       "instruction": "Sauté onion and garlic 3 minutes. Stir in tomato paste and cook 1 minute. Add broth, Worcestershire, and thyme, scraping fond from the bottom.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Braise low and slow",
       "instruction": "Return roast to pot, cover, and braise at 325°F until fork-tender and internal temp reaches 203°F, about 2.5–3 hours. Target oven/smoker temperature: 325°F.",
       "minutes": 165,
       "heatLevel": ""
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Add vegetables",
       "instruction": "Nestle potatoes and carrots around roast. Cover and continue braising at 325°F until vegetables pierce easily, about 60–75 minutes. Target oven/smoker temperature: 325°F.",
       "minutes": 70,
       "heatLevel": ""
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F for medium beef, 160°F for ground. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 9,
-      "title": "Portion and open the line",
-      "instruction": "Portion Dutch Oven Pot Roast onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
-      "title": "Scale for larger halls",
-      "instruction": "When cooking for more than 10 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 11,
+      "stepNumber": 5,
       "title": "Rest and serve",
-      "instruction": "Rest roast 15 minutes. Whisk flour slurry into simmering braising liquid for gravy. Slice or shred beef and serve with vegetables and gravy. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
+      "instruction": "Rest roast 15 minutes. Whisk flour slurry into simmering braising liquid for gravy. Slice or shred beef and serve with vegetables and gravy.",
       "minutes": 20,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 12,
-      "title": "Final quality check before service",
-      "instruction": "Walk the line once before opening service for Dutch Oven Pot Roast — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
-      "minutes": 4,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 13,
-      "title": "Final quality check before service",
-      "instruction": "Walk the line once before opening service for Dutch Oven Pot Roast — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
-      "minutes": 4,
       "heatLevel": ""
     }
   ],
@@ -214,26 +158,11 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 748,
-    "protein": 66,
-    "carbs": 37,
-    "fats": 40,
-    "label": "Estimated per serving",
-    "source": "calculated",
-    "estimateAvailable": true,
-    "filterFlags": {
-      "highProtein": true,
-      "under700Calories": false,
-      "under30gFat": false,
-      "highCarb": false,
-      "lowCarb": false,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": false
-    }
+    "calories": 540,
+    "protein": 44,
+    "carbs": 38,
+    "fats": 24,
+    "label": "~540 cal/serving · 44g protein · 5g fiber (est.)"
   },
   "heroImage": "/images/hall-expansion/dutch-oven-pot-roast.jpg",
   "heroImageAlt": "Dutch Oven Pot Roast — crew-sized firehall meal",
@@ -253,6 +182,7 @@
     "hall-burger-bar",
     "pasta-bar-night"
   ],
-  "generatedAt": "2026-05-31T01:50:00.916Z",
+  "sourceUrl": "",
+  "generatedAt": "2026-06-04T20:47:21.930Z",
   "contentVersion": 2
 }

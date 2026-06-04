@@ -13,10 +13,10 @@
   "cookTime": 240,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 0,
-  "protein": 0,
-  "carbs": 0,
-  "fats": 0,
+  "calories": 580,
+  "protein": 18,
+  "carbs": 24,
+  "fats": 48,
   "tags": [
     "protein:pork",
     "format:smoker",
@@ -103,86 +103,37 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Pork Belly Burnt Ends in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch pork. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Season the cubed belly",
       "instruction": "Toss pork belly cubes with salt, brown sugar, smoked paprika, garlic powder, and black pepper until evenly coated. Let sit at room temperature 30 minutes while the smoker preheats.",
       "minutes": 35,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Smoke until tender",
       "instruction": "Heat smoker to 250°F. Spread cubes on a wire rack and smoke until probe-tender and internal temp reaches 195°F, about 3–3.5 hours, rotating the pan once halfway. Target oven/smoker temperature: 250°F.",
       "minutes": 180,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Build the finishing glaze",
       "instruction": "Simmer BBQ sauce with honey, vinegar, and butter until glossy and slightly thickened. Taste and adjust sweetness with a splash more vinegar if cloying.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Glaze and caramelize",
       "instruction": "Transfer tender cubes to a foil pan, pour glaze over top, and return to smoker at 275°F. Cook uncovered 45–60 minutes, stirring every 15 minutes, until edges char and sauce clings. Target oven/smoker temperature: 275°F.",
       "minutes": 50,
       "heatLevel": ""
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F with a 3-minute rest. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 9,
-      "title": "Portion and open the line",
-      "instruction": "Portion Pork Belly Burnt Ends onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
-      "title": "Scale for larger halls",
-      "instruction": "When cooking for more than 10 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 11,
+      "stepNumber": 5,
       "title": "Rest and serve family-style",
       "instruction": "Rest the pan 10 minutes so glaze sets sticky instead of running. Pile burnt ends on a platter with pickle chips and soft rolls for building quick sandwiches.",
       "minutes": 10,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 12,
-      "title": "Final quality check before service",
-      "instruction": "Walk the line once before opening service for Pork Belly Burnt Ends — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
-      "minutes": 4,
       "heatLevel": ""
     }
   ],
@@ -204,26 +155,11 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 0,
-    "protein": 0,
-    "carbs": 0,
-    "fats": 0,
-    "label": "Estimated per serving",
-    "source": "unavailable",
-    "estimateAvailable": false,
-    "filterFlags": {
-      "highProtein": false,
-      "under700Calories": true,
-      "under30gFat": true,
-      "highCarb": false,
-      "lowCarb": false,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": false,
-      "lighterOption": true,
-      "performanceMeal": false
-    }
+    "calories": 580,
+    "protein": 18,
+    "carbs": 24,
+    "fats": 48,
+    "label": "~580 cal/serving · 18g protein · 0g fiber (est.)"
   },
   "heroImage": "/images/hall-expansion/pork-belly-burnt-ends.jpg",
   "heroImageAlt": "Pork Belly Burnt Ends — crew-sized firehall meal",
@@ -243,6 +179,7 @@
     "smoked-sausage-platter",
     "smoked-queso-fundido"
   ],
-  "generatedAt": "2026-05-31T01:50:00.915Z",
+  "sourceUrl": "",
+  "generatedAt": "2026-06-04T20:47:21.929Z",
   "contentVersion": 2
 }

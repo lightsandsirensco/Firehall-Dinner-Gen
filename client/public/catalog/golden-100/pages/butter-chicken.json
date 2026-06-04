@@ -10,13 +10,13 @@
   "description": "Rich tomato butter sauce, naan-ready. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
   "baseServings": 8,
-  "cookTime": 55,
-  "prepTime": 20,
+  "cookTime": 85,
+  "prepTime": 40,
   "difficulty": "medium",
-  "calories": 732,
-  "protein": 42,
-  "carbs": 58,
-  "fats": 35,
+  "calories": 1134,
+  "protein": 62,
+  "carbs": 95,
+  "fats": 56,
   "tags": [
     "protein:chicken",
     "format:plated_main",
@@ -32,75 +32,155 @@
   "ingredients": [
     {
       "name": "Boneless chicken thighs, cubed",
-      "quantity": "3",
+      "quantity": "4",
       "unit": "lb",
       "group": "Main"
     },
     {
-      "name": "Greek yogurt",
-      "quantity": "1",
-      "unit": "cup",
+      "name": "Plain Greek yogurt",
+      "quantity": "1.5",
+      "unit": "cups",
       "group": "Marinade"
     },
     {
       "name": "Garam masala",
-      "quantity": "2",
+      "quantity": "3",
       "unit": "tbsp",
-      "group": "Spices"
+      "group": "Marinade"
+    },
+    {
+      "name": "Ground cumin",
+      "quantity": "2",
+      "unit": "tsp",
+      "group": "Marinade"
+    },
+    {
+      "name": "Garlic cloves, minced",
+      "quantity": "8",
+      "unit": "count",
+      "group": "Marinade"
+    },
+    {
+      "name": "Fresh ginger, grated",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Marinade"
     },
     {
       "name": "Crushed tomatoes",
       "quantity": "2",
       "unit": "cans",
+      "notes": "28 oz each",
       "group": "Sauce"
     },
     {
       "name": "Heavy cream",
-      "quantity": "1",
-      "unit": "cup",
+      "quantity": "2",
+      "unit": "cups",
       "group": "Sauce"
     },
     {
       "name": "Unsalted butter",
-      "quantity": "4",
+      "quantity": "6",
       "unit": "tbsp",
       "group": "Sauce"
     },
     {
-      "name": "Basmati rice, uncooked",
+      "name": "Yellow onion, diced",
+      "quantity": "1",
+      "unit": "large",
+      "group": "Aromatics"
+    },
+    {
+      "name": "Basmati rice, rinsed",
       "quantity": "3",
       "unit": "cups",
+      "group": "Base"
+    },
+    {
+      "name": "Fresh cilantro",
+      "quantity": "1",
+      "unit": "cup",
+      "group": "Finish"
+    },
+    {
+      "name": "Basmati for serving",
+      "quantity": "0",
+      "unit": "",
+      "notes": "cooked separately",
       "group": "Base"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Marinate chicken",
-      "instruction": "Toss cubed chicken thighs with yogurt, garam masala, garlic, ginger, and salt. Rest 30 minutes (or overnight in the fridge).",
-      "minutes": 35,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Sear marinated chicken",
-      "instruction": "Sear chicken in butter over medium-high in batches until golden — not fully cooked through. Set aside.",
-      "minutes": 12,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
-      "title": "Simmer the makhani sauce",
-      "instruction": "In the same pot, melt butter; add crushed tomatoes, cream, and remaining spices. Simmer 15 minutes until silky. Return chicken; cook 10 minutes until 165°F.",
+      "title": "Rinse and start the rice",
+      "instruction": "Rinse basmati until water runs clear. Simmer with 1:1.5 rice-to-water and a pinch of salt 15 minutes; rest covered 10 minutes off heat. Fluff and hold at 200°F in a covered hotel pan.",
       "minutes": 25,
       "heatLevel": "medium"
     },
     {
+      "stepNumber": 2,
+      "title": "Build the yogurt marinade",
+      "instruction": "Stir yogurt with garam masala, cumin, half the garlic and ginger, and salt until smooth. Toss cubed chicken until coated; marinate at least 30 minutes in the fridge.",
+      "minutes": 35,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Sear the chicken in batches",
+      "instruction": "Heat 2 tbsp butter in a heavy pot over medium-high. Sear chicken in single layers until golden on the edges — not cooked through. Transfer to a hotel pan.",
+      "minutes": 15,
+      "heatLevel": "medium-high"
+    },
+    {
       "stepNumber": 4,
-      "title": "Serve over rice",
-      "instruction": "Cook basmati separately. Ladle butter chicken over rice with cilantro. The sauce should coat a spoon — add cream if it breaks.",
+      "title": "Sweat the aromatics",
+      "instruction": "Lower heat to medium. Add remaining butter and diced onion; cook 8 minutes until soft and translucent. Add remaining garlic and ginger; stir 1 minute until fragrant.",
+      "minutes": 10,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Simmer the makhani sauce",
+      "instruction": "Pour in crushed tomatoes and simmer 10 minutes, scraping the fond. Stir in cream and simmer 5 more minutes until the sauce coats a spoon and looks deep orange-red.",
+      "minutes": 15,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Finish chicken to 165°F",
+      "instruction": "Return seared chicken and any juices. Simmer gently 12–15 minutes until thickest pieces read 165°F. Stir occasionally so nothing sticks on the bottom.",
+      "minutes": 15,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 7,
+      "title": "Balance the sauce",
+      "instruction": "Taste for salt and a pinch of sugar if the tomatoes are sharp. Add a splash of cream if the sauce looks broken or grainy. Keep at a gentle simmer — do not boil hard after cream is in.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 8,
+      "title": "Hold through call interruptions",
+      "instruction": "If tones drop, hold the pot covered on the warm side of the range at 140°F. Stir in a tablespoon of cream before service if the surface tightens.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Serve Butter Chicken for the crew",
+      "instruction": "Mound fluffy basmati on sheet trays or bowls, then ladle saucy chicken over the rice. Finish with cilantro. Keep extra sauce in a labeled cambro for seconds.",
       "minutes": 8,
       "heatLevel": "low"
+    },
+    {
+      "stepNumber": 10,
+      "title": "Pack down leftovers",
+      "instruction": "Cool chicken and rice in shallow pans within two hours. Reheat chicken to 165°F next shift; refresh rice with a splash of water.",
+      "minutes": 10,
+      "heatLevel": ""
     }
   ],
   "proTips": [
@@ -124,10 +204,10 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 732,
-    "protein": 42,
-    "carbs": 58,
-    "fats": 35,
+    "calories": 1134,
+    "protein": 62,
+    "carbs": 95,
+    "fats": 56,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
@@ -145,6 +225,7 @@
     }
   },
   "heroImage": "/images/golden-100/butter-chicken.jpg",
+  "heroImageAlt": "Wide firehall platter: Butter Chicken with basmati rice beside saucy chicken on a crew prep table, family-style",
   "mobileImage": "/images/mobile/butter-chicken.jpg",
   "thumbImage": "/images/thumbs/butter-chicken.jpg",
   "railImage": "/images/rails/butter-chicken.jpg",
@@ -164,12 +245,12 @@
     "chicken-tikka-masala",
     "chicken-pot-pie",
     "creamy-tuscan-chicken",
+    "four-step-chicken-piccata",
     "street-corn-chicken",
-    "teriyaki-donburi",
-    "thai-basil-chicken"
+    "teriyaki-donburi"
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.517Z",
+  "generatedAt": "2026-06-04T20:48:23.771Z",
   "contentVersion": 2
 }

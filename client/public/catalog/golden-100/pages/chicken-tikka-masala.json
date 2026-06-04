@@ -10,13 +10,13 @@
   "description": "Rich curry on a busy night. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
   "baseServings": 8,
-  "cookTime": 35,
-  "prepTime": 15,
+  "cookTime": 95,
+  "prepTime": 45,
   "difficulty": "easy",
-  "calories": 719,
-  "protein": 45,
-  "carbs": 61,
-  "fats": 31,
+  "calories": 1125,
+  "protein": 63,
+  "carbs": 96,
+  "fats": 54,
   "tags": [
     "protein:chicken",
     "format:plated_main",
@@ -32,15 +32,45 @@
   "ingredients": [
     {
       "name": "Boneless chicken thighs, cubed",
-      "quantity": "3",
+      "quantity": "4",
       "unit": "lb",
       "group": "Main"
     },
     {
-      "name": "Tikka marinade (yogurt, spices)",
+      "name": "Plain Greek yogurt",
       "quantity": "2",
       "unit": "cups",
-      "group": "Marinade"
+      "group": "Tikka marinade"
+    },
+    {
+      "name": "Paprika",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Tikka marinade"
+    },
+    {
+      "name": "Ground cumin",
+      "quantity": "2",
+      "unit": "tsp",
+      "group": "Tikka marinade"
+    },
+    {
+      "name": "Garam masala",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "Garlic cloves, minced",
+      "quantity": "8",
+      "unit": "count",
+      "group": "Aromatics"
+    },
+    {
+      "name": "Fresh ginger, grated",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Aromatics"
     },
     {
       "name": "Crushed tomatoes",
@@ -50,8 +80,8 @@
     },
     {
       "name": "Heavy cream",
-      "quantity": "1",
-      "unit": "cup",
+      "quantity": "2",
+      "unit": "cups",
       "group": "Sauce"
     },
     {
@@ -61,40 +91,94 @@
       "group": "Aromatics"
     },
     {
-      "name": "Basmati rice, uncooked",
+      "name": "Vegetable oil",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Cooking"
+    },
+    {
+      "name": "Basmati rice, rinsed",
       "quantity": "3",
       "unit": "cups",
       "group": "Base"
+    },
+    {
+      "name": "Fresh cilantro",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Finish"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Marinate chicken",
-      "instruction": "Coat cubed chicken thighs in tikka marinade; rest at least 30 minutes.",
-      "minutes": 35,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Char the chicken",
-      "instruction": "Broil or grill marinated chicken on racks until edges char and centers reach 165°F.",
-      "minutes": 15,
-      "heatLevel": "high"
-    },
-    {
-      "stepNumber": 3,
-      "title": "Build the masala",
-      "instruction": "Sweat diced onion in oil 8 minutes. Add crushed tomatoes and cream; simmer 15 minutes. Fold in charred chicken; simmer 10 minutes more.",
+      "title": "Cook basmati for the line",
+      "instruction": "Rinse basmati; simmer 1:1.5 with salted water 15 minutes. Rest covered 10 minutes, fluff, and hold at 200°F. Basmati should stay separate — not sticky mush.",
       "minutes": 25,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 4,
-      "title": "Serve with basmati",
-      "instruction": "Fluff basmati rice. Ladle tikka masala over rice with naan on the side if you have it.",
-      "minutes": 8,
+      "stepNumber": 2,
+      "title": "Mix tikka marinade",
+      "instruction": "Stir yogurt with paprika, cumin, half the garam masala, garlic, ginger, and salt. Coat chicken; refrigerate at least 45 minutes.",
+      "minutes": 45,
       "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Char the chicken",
+      "instruction": "Broil on racks 6 inches from heat or grill over medium-high until edges char and centers hit 165°F. Work in batches so pieces char instead of steam.",
+      "minutes": 18,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Hold charred chicken",
+      "instruction": "Rest charred chicken 5 minutes; hold loosely covered at 140°F while the sauce finishes.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Start the masala base",
+      "instruction": "Sweat onion in oil over medium heat 8–10 minutes until edges turn gold. Add remaining garlic and ginger; cook 1 minute.",
+      "minutes": 12,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Simmer tomato and cream",
+      "instruction": "Add crushed tomatoes and remaining garam masala; simmer 12 minutes until the sauce thickens and oil sheen appears at the edges. Stir in cream; simmer 5 minutes without a hard boil.",
+      "minutes": 18,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 7,
+      "title": "Fold in chicken",
+      "instruction": "Add charred chicken and resting juices. Simmer gently 10 minutes so flavors marry. Sauce should look coral-orange and coat the back of a spoon.",
+      "minutes": 10,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 8,
+      "title": "Taste and adjust",
+      "instruction": "Balance with salt and a squeeze of lemon if the sauce tastes flat. Add a splash of cream if spice reads too sharp for the crew.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Serve Chicken Tikka Masala",
+      "instruction": "Plate rice first, then ladle masala over top with cilantro. Keep naan or flatbread on a side tray if the hall stocks it.",
+      "minutes": 8,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 10,
+      "title": "Hold and store safely",
+      "instruction": "If interrupted, hold covered at 140°F. Cool leftovers shallow within two hours; reheat to 165°F before the next meal.",
+      "minutes": 5,
+      "heatLevel": "low"
     }
   ],
   "proTips": [
@@ -120,10 +204,10 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 719,
-    "protein": 45,
-    "carbs": 61,
-    "fats": 31,
+    "calories": 1125,
+    "protein": 63,
+    "carbs": 96,
+    "fats": 54,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
@@ -141,6 +225,7 @@
     }
   },
   "heroImage": "/images/golden-100/chicken-tikka-masala.jpg",
+  "heroImageAlt": "Wide firehall platter: Chicken Tikka Masala with basmati rice beside saucy chicken on a crew prep table, family-style",
   "mobileImage": "/images/mobile/chicken-tikka-masala.jpg",
   "thumbImage": "/images/thumbs/chicken-tikka-masala.jpg",
   "railImage": "/images/rails/chicken-tikka-masala.jpg",
@@ -160,12 +245,12 @@
     "butter-chicken",
     "chicken-quesadillas",
     "pad-thai",
+    "sheet-pan-parmesan-dijon-chicken-thigh-dinner",
     "skillet-chicken-alfredo",
-    "enchilada-casserole",
-    "one-pot-chicken-rice"
+    "enchilada-casserole"
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.426Z",
+  "generatedAt": "2026-06-04T20:48:23.767Z",
   "contentVersion": 2
 }

@@ -137,6 +137,7 @@
     }
   },
   "heroImage": "/images/golden-100/grilled-pork-chops.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Grilled Pork Chops on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/grilled-pork-chops.jpg",
   "thumbImage": "/images/thumbs/grilled-pork-chops.jpg",
   "railImage": "/images/rails/grilled-pork-chops.jpg",
@@ -155,13 +156,13 @@
   "relatedSlugs": [
     "honey-garlic-pork-tenderloin",
     "memphis-dry-rub-ribs",
-    "carolina-mustard-pork",
     "bbq-brisket-burnt-ends",
     "beer-can-chicken",
-    "cedar-plank-salmon"
+    "cedar-plank-salmon",
+    "ny-strip-herb-butter"
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.314Z",
+  "generatedAt": "2026-06-04T20:45:42.158Z",
   "contentVersion": 2
 }

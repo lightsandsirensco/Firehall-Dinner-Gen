@@ -8,8 +8,8 @@
   "category": "bbq_grill_nights",
   "cuisine": "italian-american",
   "description": "Ripe peach halves grill until caramelized, serve on arugula with burrata, prosciutto crisps, basil, and balsamic reduction for ten.",
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "cookTime": 12,
   "prepTime": 15,
   "difficulty": "medium",
@@ -39,66 +39,66 @@
   "ingredients": [
     {
       "name": "ripe peaches",
-      "quantity": "8",
+      "quantity": "10",
       "unit": "whole",
       "notes": "halved and pitted",
       "group": "Main"
     },
     {
       "name": "burrata cheese",
-      "quantity": "1.6",
+      "quantity": "2",
       "unit": "lb",
       "notes": "about 10 balls",
       "group": "Salad"
     },
     {
       "name": "baby arugula",
-      "quantity": "6.4",
+      "quantity": "8",
       "unit": "cups",
       "group": "Salad"
     },
     {
       "name": "prosciutto di Parma",
-      "quantity": "3/8",
+      "quantity": "0.5",
       "unit": "lb",
       "notes": "crisped",
       "group": "Salad"
     },
     {
       "name": "pistachios",
-      "quantity": "3/8",
+      "quantity": "0.5",
       "unit": "cup",
       "notes": "chopped",
       "group": "Finish"
     },
     {
       "name": "Prosecco reduction",
-      "quantity": "3/8",
+      "quantity": "0.5",
       "unit": "cup",
       "group": "Finish"
     },
     {
       "name": "peach nectar",
-      "quantity": "2.6",
+      "quantity": "3",
       "unit": "tbsp",
       "group": "Grill"
     },
     {
       "name": "fresh mint",
-      "quantity": "1/4",
+      "quantity": "0.25",
       "unit": "cup",
       "notes": "torn",
       "group": "Finish"
     },
     {
       "name": "Maldon salt",
-      "quantity": "7/8",
+      "quantity": "1",
       "unit": "tsp",
       "group": "Seasoning"
     },
     {
       "name": "lavender honey",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tbsp",
       "group": "Grill"
     }
@@ -107,56 +107,56 @@
     {
       "stepNumber": 1,
       "title": "Crisp prosciutto",
-      "instruction": "Bake prosciutto on sheet pan at 400°F until crisp, 8–10 minutes. Crumble. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Use pistachios, Prosecco reduction, fresh mint as listed — measure each before heat goes on.",
+      "instruction": "Bake prosciutto on sheet pan at 400°F until crisp, 8–10 minutes. Crumble.",
       "minutes": 10,
       "heatLevel": "medium"
     },
     {
       "stepNumber": 2,
       "title": "Prep peaches",
-      "instruction": "Halve and pit peaches. Brush cut sides with olive oil and honey. Season lightly with salt. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Halve and pit peaches. Brush cut sides with olive oil and honey. Season lightly with salt.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 3,
-      "title": "Preheat grill grates",
-      "instruction": "Preheat grill to medium, 400°F. Clean grates for fruit. Plan about 8 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "title": "Heat grill",
+      "instruction": "Preheat grill to medium, 400°F. Clean grates for fruit.",
       "minutes": 8,
       "heatLevel": "medium"
     },
     {
       "stepNumber": 4,
       "title": "Grill peaches",
-      "instruction": "Grill peaches cut-side down 3–4 minutes until caramelized grill marks appear. Flip 1 minute on skin side. Cook until char marks are visible and the thickest piece reads 165°F for any egg-based components on an instant-read thermometer. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Grill peaches cut-side down 3–4 minutes until caramelized grill marks appear. Flip 1 minute on skin side.",
       "minutes": 8,
       "heatLevel": "medium"
     },
     {
       "stepNumber": 5,
       "title": "Hold peaches briefly",
-      "instruction": "Hold grilled peaches at 140°F up to 15 minutes covered loosely. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Hold grilled peaches at 140°F up to 15 minutes covered loosely.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 6,
       "title": "Plate arugula base",
-      "instruction": "Toss arugula lightly with olive oil and pepper. Spread on platters. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Toss arugula lightly with olive oil and pepper. Spread on platters.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 7,
       "title": "Assemble at service",
-      "instruction": "Top arugula with warm peaches, burrata ball per plate, prosciutto crisps, basil, and balsamic drizzle. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Top arugula with warm peaches, burrata ball per plate, prosciutto crisps, basil, and balsamic drizzle.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 8,
       "title": "Call guidance",
-      "instruction": "Grill peaches last—they wait poorly. Burrata cold on top keeps salad from wilting. Cook until char marks are visible and the thickest piece reads 165°F for any egg-based components on an instant-read thermometer. Plan about 3 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
+      "instruction": "Grill peaches last—they wait poorly. Burrata cold on top keeps salad from wilting.",
       "minutes": 3,
       "heatLevel": ""
     }
@@ -182,22 +182,8 @@
     "protein": 0,
     "carbs": 0,
     "fats": 0,
-    "label": "Estimated per serving",
-    "source": "unavailable",
-    "estimateAvailable": false,
-    "filterFlags": {
-      "highProtein": false,
-      "under700Calories": false,
-      "under30gFat": false,
-      "highCarb": false,
-      "lowCarb": false,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": false,
-      "lighterOption": false,
-      "performanceMeal": false
-    }
+    "label": "per serving (hall portion)",
+    "source": "estimated"
   },
   "heroImage": "/images/smoker-catalog/grilled-peach-burrata-salad.jpg",
   "heroImageAlt": "Pistachio Peach and Burrata Salad — crew-sized BBQ spread with visible smoke and bark",
@@ -225,6 +211,6 @@
     "brisket-style-beef-sandwiches-au-jus"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-05-31T23:32:23.209Z",
+  "generatedAt": "2026-06-04T20:47:49.458Z",
   "contentVersion": 2
 }

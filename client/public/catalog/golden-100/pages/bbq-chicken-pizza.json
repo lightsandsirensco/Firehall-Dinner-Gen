@@ -201,6 +201,7 @@
     }
   },
   "heroImage": "/images/golden-100/bbq-chicken-pizza.jpg",
+  "heroImageAlt": "Wide firehall crew platter of BBQ Chicken Pizza on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/bbq-chicken-pizza.jpg",
   "thumbImage": "/images/thumbs/bbq-chicken-pizza.jpg",
   "railImage": "/images/rails/bbq-chicken-pizza.jpg",
@@ -226,6 +227,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.457Z",
+  "generatedAt": "2026-06-04T20:45:42.290Z",
   "contentVersion": 2
 }

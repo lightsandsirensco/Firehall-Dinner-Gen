@@ -13,10 +13,10 @@
   "cookTime": 20,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 307,
-  "protein": 13,
-  "carbs": 3,
-  "fats": 27,
+  "calories": 460,
+  "protein": 16,
+  "carbs": 52,
+  "fats": 20,
   "tags": [
     "protein:vegetarian",
     "format:bar_line",
@@ -105,62 +105,34 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Pretzel Bite Platter with Beer Cheese in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch vegetarian. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Make the beer cheese",
       "instruction": "Melt cream cheese in a saucepan over medium-low heat. Whisk in cheddar gradually, then beer, Dijon, Worcestershire, and garlic powder until smooth and velvety.",
       "minutes": 12,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Hold the dip warm",
       "instruction": "Transfer beer cheese to a slow cooker on warm or a double boiler setup. Stir every 10 minutes and add beer by the tablespoon if the sauce thickens too much.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Warm pretzel bites",
       "instruction": "Toss frozen pretzel bites with melted butter and coarse salt. Spread on sheet pans and bake at 400°F until heated through and lightly crisp at the edges, about 12–15 minutes. Target oven/smoker temperature: 400°F.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Build the platter",
       "instruction": "Pile warm pretzel bites on a large board with ramekins of beer cheese and honey mustard. Sprinkle extra coarse salt over the bites for that brewpub crunch.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F for any egg-based components. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 9,
+      "stepNumber": 5,
       "title": "Serve and replenish",
       "instruction": "Set out tongs and small plates. Replenish warm bites from the oven in batches so the platter never looks picked over during a long game.",
       "minutes": 5,
@@ -185,25 +157,11 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 307,
-    "protein": 13,
-    "carbs": 3,
-    "fats": 27,
-    "label": "per serving (hall portion)",
-    "source": "calculated",
-    "filterFlags": {
-      "highProtein": false,
-      "under700Calories": true,
-      "under30gFat": true,
-      "highCarb": false,
-      "lowCarb": true,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": false,
-      "lighterOption": false,
-      "performanceMeal": false
-    }
+    "calories": 460,
+    "protein": 16,
+    "carbs": 52,
+    "fats": 20,
+    "label": "~460 cal/serving · 16g protein · 2g fiber (est.)"
   },
   "heroImage": "/images/hall-expansion/pretzel-bite-platter.jpg",
   "heroImageAlt": "Pretzel Bite Platter with Beer Cheese — crew-sized firehall meal",
@@ -223,6 +181,7 @@
     "jalapeno-popper-dip",
     "philly-cheesesteak-sliders"
   ],
-  "generatedAt": "2026-05-31T01:50:00.916Z",
+  "sourceUrl": "",
+  "generatedAt": "2026-06-04T20:47:21.930Z",
   "contentVersion": 2
 }

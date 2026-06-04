@@ -150,6 +150,7 @@
     }
   },
   "heroImage": "/images/golden-100/memphis-dry-rub-ribs.jpg",
+  "heroImageAlt": "Wide firehall crew platter of Memphis Dry Rub Ribs on a station prep table, family-style serving",
   "mobileImage": "/images/mobile/memphis-dry-rub-ribs.jpg",
   "thumbImage": "/images/thumbs/memphis-dry-rub-ribs.jpg",
   "railImage": "/images/rails/memphis-dry-rub-ribs.jpg",
@@ -168,13 +169,13 @@
   "relatedSlugs": [
     "grilled-pork-chops",
     "honey-garlic-pork-tenderloin",
-    "carolina-mustard-pork",
     "bbq-brisket-burnt-ends",
     "beer-can-chicken",
-    "cedar-plank-salmon"
+    "cedar-plank-salmon",
+    "ny-strip-herb-butter"
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T19:44:40.303Z",
+  "generatedAt": "2026-06-04T20:45:42.149Z",
   "contentVersion": 2
 }

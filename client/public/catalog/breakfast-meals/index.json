@@ -1,73 +1,9 @@
 {
   "version": 1,
   "contentVersion": 2,
-  "generatedAt": "2026-05-30T23:28:05.192Z",
-  "recipeCount": 8,
+  "generatedAt": "2026-06-04T20:47:23.152Z",
+  "recipeCount": 6,
   "recipes": [
-    {
-      "slug": "bacon-egg-hash",
-      "title": "Bacon Egg Hash Brown Skillet",
-      "subtitle": "Crispy potatoes, runny eggs",
-      "category": "breakfast_brunch",
-      "cuisine": "american",
-      "protein": "pork",
-      "mealFormat": "skillet",
-      "cookTime": 55,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/bacon-egg-hash.jpg",
-      "thumbImage": "/images/thumbs/bacon-egg-hash.jpg",
-      "tags": [
-        "protein:pork",
-        "format:skillet",
-        "category:breakfast_brunch",
-        "breakfast",
-        "golden_100"
-      ],
-      "firefighterScore": 98,
-      "popularityWeight": 3.2,
-      "searchTerms": [
-        "bacon egg hash brown skillet",
-        "bacon egg hash",
-        "american",
-        "pork",
-        "skillet",
-        "breakfast",
-        "golden_100"
-      ]
-    },
-    {
-      "slug": "biscuits-gravy",
-      "title": "Biscuits and Gravy",
-      "subtitle": "Southern comfort for a slow morning",
-      "category": "breakfast_brunch",
-      "cuisine": "american",
-      "protein": "pork",
-      "mealFormat": "breakfast",
-      "cookTime": 55,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/biscuits-gravy.jpg",
-      "thumbImage": "/images/thumbs/biscuits-gravy.jpg",
-      "tags": [
-        "protein:pork",
-        "format:breakfast",
-        "category:breakfast_brunch",
-        "breakfast",
-        "comfort",
-        "golden_100"
-      ],
-      "firefighterScore": 98,
-      "popularityWeight": 3.2,
-      "searchTerms": [
-        "biscuits and gravy",
-        "biscuits gravy",
-        "american",
-        "pork",
-        "breakfast",
-        "comfort",
-        "sausage biscuits and gravy",
-        "golden_100"
-      ]
-    },
     {
       "slug": "breakfast-burrito-bar",
       "title": "Breakfast Burrito Bar",
@@ -165,7 +101,7 @@
     },
     {
       "slug": "pancake-short-stack",
-      "title": "Pancake Short Stack for the Crew",
+      "title": "Pancake Short Stack",
       "subtitle": "Fluffy stacks, bacon on the side",
       "category": "breakfast_brunch",
       "cuisine": "american",
@@ -185,7 +121,6 @@
       "firefighterScore": 98,
       "popularityWeight": 3.2,
       "searchTerms": [
-        "pancake short stack for the crew",
         "pancake short stack",
         "american",
         "vegetarian",
@@ -229,7 +164,7 @@
     },
     {
       "slug": "veggie-egg-casserole-tray",
-      "title": "Veggie Egg Casserole Tray",
+      "title": "Veggie Egg Casserole",
       "subtitle": "Baked egg casserole with spinach, bell pepper, and feta for eight",
       "category": "healthy_performance",
       "cuisine": "American",
@@ -252,6 +187,7 @@
       "firefighterScore": 83,
       "popularityWeight": 7.5,
       "searchTerms": [
+        "veggie egg casserole",
         "veggie egg casserole tray",
         "egg",
         "American",

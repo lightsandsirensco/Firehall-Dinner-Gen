@@ -13,10 +13,10 @@
   "cookTime": 25,
   "prepTime": 30,
   "difficulty": "medium",
-  "calories": 716,
-  "protein": 68,
-  "carbs": 25,
-  "fats": 36,
+  "calories": 420,
+  "protein": 40,
+  "carbs": 18,
+  "fats": 22,
   "tags": [
     "protein:salmon",
     "format:grill",
@@ -112,78 +112,36 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Maple-Cured Salmon Plank in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch salmon. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Brine the salmon",
-      "instruction": "Dissolve salt in cold water with maple syrup. Submerge salmon 30–60 minutes, then pat completely dry. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F at the thickest point before moving to the next batch.",
+      "instruction": "Dissolve salt in cold water with maple syrup. Submerge salmon 30–60 minutes, then pat completely dry.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Soak cedar planks",
-      "instruction": "Submerge planks in water at least 1 hour so they smolder instead of catching fire on the grill. Cook until char marks are visible and the thickest piece reads 165°F on an instant-read thermometer. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Submerge planks in water at least 1 hour so they smolder instead of catching fire on the grill.",
       "minutes": 60,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Prep glaze and sauce",
       "instruction": "Whisk maple syrup, brown sugar, Dijon, and soy for glaze. Mix yogurt, dill, lemon zest, and juice for sauce. Refrigerate until service.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Grill on planks",
-      "instruction": "Heat grill to medium-high, about 400°F. Place salmon on planks, close lid, and grill 12–15 minutes until centers reach 125°F for medium or 140°F for well-done. Target oven/smoker temperature: 400°F. Target 145°F at the thickest point before moving to the next batch.",
+      "instruction": "Heat grill to medium-high, about 400°F. Place salmon on planks, close lid, and grill 12–15 minutes until centers reach 125°F for medium or 140°F for well-done. Target oven/smoker temperature: 400°F.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 9,
-      "title": "Portion and open the line",
-      "instruction": "Portion Maple-Cured Salmon Plank onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
-      "title": "Scale for larger halls",
-      "instruction": "When cooking for more than 8 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 11,
+      "stepNumber": 5,
       "title": "Glaze and platter",
-      "instruction": "Brush glaze in final 6 minutes. Rest salmon 5 minutes, flake or portion onto platters with yogurt sauce and grilled asparagus. Cook until char marks are visible and the thickest piece reads 165°F on an instant-read thermometer. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
+      "instruction": "Brush glaze in final 6 minutes. Rest salmon 5 minutes, flake or portion onto platters with yogurt sauce and grilled asparagus.",
       "minutes": 10,
       "heatLevel": ""
     }
@@ -206,26 +164,11 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 716,
-    "protein": 68,
-    "carbs": 25,
-    "fats": 36,
-    "label": "Estimated per serving",
-    "source": "calculated",
-    "estimateAvailable": true,
-    "filterFlags": {
-      "highProtein": true,
-      "under700Calories": false,
-      "under30gFat": false,
-      "highCarb": false,
-      "lowCarb": true,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": false
-    }
+    "calories": 420,
+    "protein": 40,
+    "carbs": 18,
+    "fats": 22,
+    "label": "~420 cal/serving · 40g protein · 2g fiber (est.)"
   },
   "heroImage": "/images/hall-expansion/maple-cured-salmon-plank.jpg",
   "heroImageAlt": "Maple-Cured Salmon Plank — crew-sized firehall meal",
@@ -245,6 +188,7 @@
     "hall-burger-bar",
     "pasta-bar-night"
   ],
-  "generatedAt": "2026-05-31T01:50:00.916Z",
+  "sourceUrl": "",
+  "generatedAt": "2026-06-04T20:47:21.930Z",
   "contentVersion": 2
 }

@@ -15,8 +15,8 @@
     "sheet-pan",
     "shareable"
   ],
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "prepTime": 15,
   "cookTime": 15,
   "totalTime": 30,
@@ -30,31 +30,31 @@
     },
     {
       "name": "large eggs",
-      "quantity": "11",
+      "quantity": "14",
       "notes": "soft-scrambled",
       "group": "Protein"
     },
     {
       "name": "bacon",
-      "quantity": "3/4",
+      "quantity": "1 lb",
       "notes": "cooked crisp and crumbled",
       "group": "Protein"
     },
     {
       "name": "shredded cheddar",
-      "quantity": "2.4",
+      "quantity": "3 cups",
       "notes": "and 2 cups shredded Monterey Jack",
       "group": "Cheese"
     },
     {
       "name": "nacho cheese sauce",
-      "quantity": "3/8",
+      "quantity": "1 1/2 cups",
       "notes": "warmed",
       "group": "Cheese"
     },
     {
       "name": "pico de gallo",
-      "quantity": "3/8",
+      "quantity": "1 1/2 cups",
       "notes": "drained well",
       "group": "Toppings"
     },
@@ -66,7 +66,7 @@
     },
     {
       "name": "sour cream",
-      "quantity": "3/8",
+      "quantity": "1/2 cup",
       "notes": "crema, and sliced jalapeños",
       "group": "Finish"
     }
@@ -74,92 +74,54 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Breakfast Nachos Supreme in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
+      "title": "Prep components",
+      "instruction": "Cook bacon until crisp and crumble. Soft-scramble eggs—they should still look glossy. Warm nacho cheese. Drain pico thoroughly so chips don't sog out.",
+      "minutes": 12
     },
     {
       "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch Bacon. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
+      "title": "Layer the chips",
+      "instruction": "Spread chips on two rimmed sheet pans in a single thick layer. Drizzle half the nacho cheese, then scatter half the shredded cheeses over each pan.",
+      "minutes": 3
     },
     {
       "stepNumber": 3,
-      "title": "Prep components",
-      "instruction": "Cook bacon until crisp and crumble. Soft-scramble eggs—they should still look glossy. Warm nacho cheese. Drain pico thoroughly so chips don't sog out.",
-      "minutes": 12,
-      "heatLevel": ""
+      "title": "First melt",
+      "instruction": "Bake at 400°F until cheese melts and chips at the edges toast lightly. Remove and distribute scrambled eggs and bacon evenly across both pans.",
+      "minutes": 5,
+      "tempF": 400
     },
     {
       "stepNumber": 4,
-      "title": "Layer the chips",
-      "instruction": "Spread chips on two rimmed sheet pans in a single thick layer. Drizzle half the nacho cheese, then scatter half the shredded cheeses over each pan.",
-      "minutes": 3,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 5,
-      "title": "First melt",
-      "instruction": "Bake at 400°F until cheese melts and chips at the edges toast lightly. Remove and distribute scrambled eggs and bacon evenly across both pans. Target 165°F at the thickest point before moving to the next batch.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 6,
       "title": "Broil to finish",
       "instruction": "Add remaining cheese and broil on high 2–3 minutes until bubbling and spotty golden. Watch constantly—chips burn fast under the broiler.",
       "minutes": 3,
-      "heatLevel": ""
+      "tempF": 500
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 9,
-      "title": "Portion and open the line",
-      "instruction": "Portion Breakfast Nachos Supreme onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
+      "stepNumber": 5,
       "title": "Top and serve",
       "instruction": "Add pico, avocado, sour cream, and jalapeños immediately. Serve straight from the sheet pans at the line with extra hot sauce on the side.",
-      "minutes": 2,
-      "heatLevel": ""
+      "minutes": 2
     }
   ],
   "nutrition": {
-    "calories": 323,
-    "protein": 21,
+    "calories": 553,
+    "protein": 36,
     "carbs": 7,
-    "fat": 23,
+    "fat": 42,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
-      "highProtein": false,
+      "highProtein": true,
       "under700Calories": true,
-      "under30gFat": true,
+      "under30gFat": false,
       "highCarb": false,
       "lowCarb": true,
-      "mealPrepFriendly": true
+      "mealPrepFriendly": false
     },
     "badgeCandidates": {
-      "highProtein": false,
+      "highProtein": true,
       "lighterOption": false,
       "performanceMeal": false
     }
@@ -180,30 +142,9 @@
   "heroImage": "/images/breakfast/breakfast-nachos-supreme.jpg",
   "thumbImage": "/images/thumbs/breakfast/breakfast-nachos-supreme.jpg",
   "imageAlt": "Breakfast nachos supreme loaded with eggs, bacon, melted cheese, and pico",
-  "publishedAt": "2026-05-31T18:33:00.829Z",
-  "updatedAt": "2026-05-31T23:50:24.885Z",
+  "publishedAt": "2026-06-04T20:48:24.990Z",
+  "updatedAt": "2026-06-04T20:48:24.990Z",
   "readMinutes": 7,
   "seoTitle": "Breakfast Nachos Supreme | Firehall Breakfast",
-  "collectionTier": "firehall_classic",
-  "proTips": [
-    "Build on two pans so the crew can attack from both ends of the table without a traffic jam.",
-    "Hold avocado and sour cream cold until the nachos leave the broiler—hot chips wilt them fast.",
-    "Serve within 5 minutes of broiling; nachos don't hold, so call the crew as soon as pans hit the counter."
-  ],
-  "tonightSpread": [
-    "Label every topping bowl — rookies grab faster when they can read the line.",
-    "Keep hot bases (potatoes, chips) in cambros at 200°F and cold toppings on ice if service runs long.",
-    "Put forks, napkins, and a trash can at the end of the bar — self-serve feeds get messy fast.",
-    "Keep hot items on one side of the table and cold on the other — eggs stay hot, fruit stays cold.",
-    "Line up Breakfast Nachos Supreme on the main counter with serving spoons — firefighters grab fast between calls.",
-    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
-  ],
-  "equipment": [
-    "Large sheet trays",
-    "Instant-read thermometer",
-    "Aluminum foil"
-  ],
-  "mealPrepNotes": "Prep mise en place before the shift — Breakfast Nachos Supreme runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone.",
-  "mobileImage": "/images/mobile/breakfast/breakfast-nachos-supreme.jpg",
-  "railImage": "/images/rails/breakfast/breakfast-nachos-supreme.jpg"
+  "collectionTier": "firehall_classic"
 }
