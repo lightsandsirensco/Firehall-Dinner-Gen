@@ -1,0 +1,205 @@
+{
+  "slug": "tomato-soup-grilled-cheese-croutons",
+  "title": "Tomato Soup with Grilled Cheese Croutons",
+  "displayTitle": "Tomato Soup with Grilled Cheese Croutons",
+  "seoTitle": "Tomato Soup with Grilled Cheese Croutons | Firefighter Meal",
+  "shortDescription": "Creamy tomato soup topped with real grilled-cheese cubes",
+  "subtitle": "Creamy tomato soup topped with real grilled-cheese cubes",
+  "category": "comfort_food",
+  "cuisine": "american",
+  "description": "Creamy tomato soup topped with real grilled-cheese cubes",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 40,
+  "prepTime": 15,
+  "difficulty": "medium",
+  "calories": 926,
+  "protein": 34,
+  "carbs": 61,
+  "fats": 61,
+  "tags": [
+    "protein:vegetarian",
+    "format:soup_chili",
+    "category:comfort_food",
+    "comfort",
+    "hearty",
+    "golden_100"
+  ],
+  "equipment": [
+    "8-quart stock pot",
+    "Large sheet trays",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "ingredients": [
+    {
+      "name": "Canned whole peeled tomatoes",
+      "quantity": "4",
+      "unit": "cans",
+      "notes": "28 oz, with juice",
+      "group": "Soup"
+    },
+    {
+      "name": "Yellow onion",
+      "quantity": "2",
+      "unit": "count",
+      "notes": "diced",
+      "group": "Soup"
+    },
+    {
+      "name": "Garlic cloves",
+      "quantity": "6",
+      "unit": "count",
+      "notes": "minced",
+      "group": "Soup"
+    },
+    {
+      "name": "Chicken broth",
+      "quantity": "6",
+      "unit": "cups",
+      "notes": "low-sodium",
+      "group": "Soup"
+    },
+    {
+      "name": "Heavy cream",
+      "quantity": "1",
+      "unit": "cup",
+      "group": "Soup"
+    },
+    {
+      "name": "Olive oil",
+      "quantity": "0.3",
+      "unit": "cup",
+      "group": "Soup"
+    },
+    {
+      "name": "Dried basil",
+      "quantity": "2",
+      "unit": "tsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Sandwich bread",
+      "quantity": "16",
+      "unit": "slices",
+      "notes": "sturdy white or sourdough",
+      "group": "Croutons"
+    },
+    {
+      "name": "Sharp cheddar cheese",
+      "quantity": "24",
+      "unit": "oz",
+      "notes": "grated",
+      "group": "Croutons"
+    },
+    {
+      "name": "Unsalted butter",
+      "quantity": "0.5",
+      "unit": "cup",
+      "notes": "softened",
+      "group": "Croutons"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Start the tomato base",
+      "instruction": "Heat olive oil in a large pot over medium. Cook onion with a pinch of salt until soft and translucent, 6–8 minutes. Add garlic and basil; stir 45 seconds until fragrant. Add tomatoes with their juice and broth. Bring to a simmer.",
+      "minutes": 12,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Simmer and blend smooth",
+      "instruction": "Simmer uncovered 15 minutes, stirring occasionally, until the soup thickens slightly and raw onion flavor is gone. Blend with an immersion blender until completely smooth — or cool slightly and blend in batches if using a countertop blender. Return to the pot, stir in cream, and season with salt and pepper. Hold at a bare simmer (do not boil cream).",
+      "minutes": 18,
+      "heatLevel": "medium-low"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Make grilled cheese croutons",
+      "instruction": "Butter one side of each bread slice. Flip dry sides up and cover with cheddar. Pair slices into sandwiches and press in a skillet over medium-low with a spatula weight until deeply golden and cheese melts, about 4 minutes per side. Transfer to a cutting board.",
+      "minutes": 12,
+      "heatLevel": "medium-low"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Cube the melts and finish soup",
+      "instruction": "Cut grilled cheese sandwiches into ¾-inch cubes — these are your croutons, not raw bread. Ladle hot soup into bowls and float a handful of cheesy croutons on top. Serve extra croutons in a warm pan at the line so they stay crisp.",
+      "minutes": 5,
+      "heatLevel": "low"
+    }
+  ],
+  "proTips": [
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
+    "Taste for salt at the end — hall palates run salty after long shifts."
+  ],
+  "tonightSpread": [
+    "Keep the pot on low simmer on the stove — ladle from the side so the bottom doesn't scorch.",
+    "Set shredded cheese, crackers, and hot sauce in a row beside the pot.",
+    "Line up Tomato Soup with Grilled Cheese Croutons on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+  ],
+  "leftovers": [
+    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
+    "Label trays with date and reheat to 165°F minimum before second shift.",
+    "Add a splash of stock or water when reheating — thick sauces tighten in the fridge."
+  ],
+  "whyCrewsLikeIt": "Creamy tomato soup topped with real grilled-cheese cubes. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
+  "substitutions": [
+    "Ground turkey swaps 1:1 for beef in chili if the crew wants leaner."
+  ],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 926,
+    "protein": 34,
+    "carbs": 61,
+    "fats": 61,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "heroImage": "/images/golden-100/tomato-soup-grilled-cheese-croutons.jpg",
+  "mobileImage": "/images/mobile/tomato-soup-grilled-cheese-croutons.jpg",
+  "thumbImage": "/images/thumbs/tomato-soup-grilled-cheese-croutons.jpg",
+  "railImage": "/images/rails/tomato-soup-grilled-cheese-croutons.jpg",
+  "realismScore": 100,
+  "firefighterScore": 100,
+  "popularityWeight": 3.6,
+  "searchTerms": [
+    "tomato soup with grilled cheese croutons",
+    "tomato soup grilled cheese croutons",
+    "american",
+    "vegetarian",
+    "soup chili",
+    "comfort",
+    "hearty",
+    "tomato soup grilled cheese croutons dinner",
+    "golden_100"
+  ],
+  "relatedSlugs": [
+    "spicy-tomato-bisque-grilled-brie-toast",
+    "mac-and-cheese-bake",
+    "beef-barley-soup",
+    "chicken-dumpling-soup",
+    "chili-garlic-bread",
+    "chicken-tortilla-soup-for-the-hall"
+  ],
+  "sourceName": "Serious Eats",
+  "sourceUrl": "https://www.seriouseats.com/15-minute-creamy-tomato-soup-vegan-recipe",
+  "generatedAt": "2026-06-04T20:35:16.815Z",
+  "contentVersion": 2
+}

@@ -76,6 +76,13 @@ const SLUG_CLASS: Partial<Record<string, RecipeInstructionClass>> = {
   "jambalaya": "one_pot",
   "beef-barley-soup": "soup",
   "chicken-dumpling-soup": "soup",
+  "tomato-soup-grilled-cheese-croutons": "soup",
+  "spicy-tomato-bisque-grilled-brie-toast": "soup",
+  "french-onion-soup-for-the-hall": "soup",
+  "chicken-tortilla-soup-for-the-hall": "soup",
+  "30-minute-pasta-e-fagioli-for-the-hall": "pasta",
+  "red-beans-and-rice-for-the-hall": "one_pot",
+  "pasta-e-ceci-for-the-hall": "pasta",
 };
 
 export function inferRecipeInstructionClass(def: GoldenRecipeDefinition): RecipeInstructionClass {

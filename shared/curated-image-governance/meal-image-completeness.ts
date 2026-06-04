@@ -175,6 +175,11 @@ export function extractMealImageRequirements(input: {
 
 function cueReForPhrase(phrase: string): RegExp {
   const p = normalizePhrase(phrase);
+  const words = p.split(/\s+/).filter((w) => w.length > 1);
+  if (words.length >= 2) {
+    const joined = words.map((w) => w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("[\\s-]+");
+    return new RegExp(joined, "i");
+  }
   if (/sweet potato/.test(p)) return /\b(sweet.?potato|yam|orange.?potato)\b/i;
   if (/spinach/.test(p)) return /\b(spinach|greens|wilted.?green)\b/i;
   if (/cornbread/.test(p)) return /\b(cornbread|corn.?bread|corn.?muffin)\b/i;

@@ -3,20 +3,20 @@
   "title": "Chicken and Dumplings",
   "displayTitle": "Chicken and Dumplings",
   "seoTitle": "Chicken and Dumplings | Firefighter Meal",
-  "shortDescription": "Post-shift hug in a pot",
-  "subtitle": "Post-shift hug in a pot",
+  "shortDescription": "Thick chicken stew with fluffy dropped dumplings — not brothy soup",
+  "subtitle": "Thick chicken stew with fluffy dropped dumplings — not brothy soup",
   "category": "comfort_food",
   "cuisine": "american",
-  "description": "Post-shift hug in a pot. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
+  "description": "Thick chicken stew with fluffy dropped dumplings — not brothy soup",
   "crewSize": 8,
   "baseServings": 8,
-  "cookTime": 55,
-  "prepTime": 20,
-  "difficulty": "medium",
-  "calories": 578,
-  "protein": 64,
-  "carbs": 41,
-  "fats": 16,
+  "cookTime": 80,
+  "prepTime": 25,
+  "difficulty": "easy",
+  "calories": 670,
+  "protein": 66,
+  "carbs": 55,
+  "fats": 20,
   "tags": [
     "protein:chicken",
     "format:soup_chili",
@@ -33,38 +33,75 @@
   ],
   "ingredients": [
     {
-      "name": "Bone-in chicken thighs",
+      "name": "Bone-in, skin-on chicken thighs",
       "quantity": "3",
       "unit": "lb",
-      "group": "Main"
+      "notes": "or 4 lb boneless thighs",
+      "group": "Stew"
+    },
+    {
+      "name": "Unsalted butter",
+      "quantity": "4",
+      "unit": "tbsp",
+      "group": "Stew"
     },
     {
       "name": "Yellow onion",
       "quantity": "2",
-      "unit": "large",
-      "group": "Aromatics"
+      "unit": "count",
+      "notes": "diced",
+      "group": "Stew"
     },
     {
-      "name": "Carrots, diced",
+      "name": "Carrots",
       "quantity": "3",
       "unit": "cups",
-      "group": "Veg"
+      "notes": "diced",
+      "group": "Stew"
     },
     {
-      "name": "Celery, diced",
-      "quantity": "2",
-      "unit": "cups",
-      "group": "Veg"
+      "name": "Celery stalks",
+      "quantity": "4",
+      "unit": "count",
+      "notes": "diced",
+      "group": "Stew"
     },
     {
-      "name": "Chicken broth",
-      "quantity": "8",
-      "unit": "cups",
-      "group": "Broth"
+      "name": "Garlic cloves",
+      "quantity": "4",
+      "unit": "count",
+      "notes": "minced",
+      "group": "Stew"
     },
     {
       "name": "All-purpose flour",
-      "quantity": "2.5",
+      "quantity": "0.3",
+      "unit": "cup",
+      "notes": "for thickening",
+      "group": "Stew"
+    },
+    {
+      "name": "Low-sodium chicken broth",
+      "quantity": "6",
+      "unit": "cups",
+      "notes": "not watery soup volume",
+      "group": "Stew"
+    },
+    {
+      "name": "Bay leaves",
+      "quantity": "2",
+      "unit": "count",
+      "group": "Stew"
+    },
+    {
+      "name": "Fresh thyme",
+      "quantity": "4",
+      "unit": "sprigs",
+      "group": "Stew"
+    },
+    {
+      "name": "All-purpose flour",
+      "quantity": "2",
       "unit": "cups",
       "group": "Dumplings"
     },
@@ -75,96 +112,77 @@
       "group": "Dumplings"
     },
     {
-      "name": "Whole milk",
+      "name": "Kosher salt",
       "quantity": "1",
+      "unit": "tsp",
+      "group": "Dumplings"
+    },
+    {
+      "name": "Whole milk",
+      "quantity": "0.8",
       "unit": "cup",
       "group": "Dumplings"
     },
     {
       "name": "Large eggs",
       "quantity": "2",
-      "unit": "",
+      "unit": "count",
       "group": "Dumplings"
     },
     {
       "name": "Unsalted butter",
-      "quantity": "4",
+      "quantity": "3",
       "unit": "tbsp",
+      "notes": "cold, cubed",
       "group": "Dumplings"
     },
     {
-      "name": "Fresh parsley, chopped",
+      "name": "Fresh parsley",
       "quantity": "0.5",
       "unit": "cup",
+      "notes": "chopped",
       "group": "Finish"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Chicken and Dumplings in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use Carrots, diced, Celery, diced, Fresh parsley, chopped as listed — measure each before heat goes on.",
+      "title": "Brown chicken and build the stew base",
+      "instruction": "Pat chicken dry. Brown thighs in butter in a large Dutch oven over medium-high, skin-side down first, 8–10 minutes total; transfer out. In the same pot, cook onion, carrot, celery, and garlic with salt until softened, 8 minutes. Stir in ¼ cup flour and cook 1 minute.",
       "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
       "heatLevel": "medium-high"
     },
     {
-      "stepNumber": 3,
-      "title": "Sear aromatics",
-      "instruction": "Brown meat in batches; remove. Sweat onion, carrot, celery in the same pot 8 minutes until edges soften. Cook until char marks are visible and the thickest piece reads 165°F on an instant-read thermometer. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 15,
-      "heatLevel": "medium"
-    },
-    {
-      "stepNumber": 4,
-      "title": "Simmer the broth",
-      "instruction": "Return chicken to the pot with broth and vegetables. Simmer 35 minutes until chicken is tender; shred meat and return to the pot. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
-      "minutes": 40,
+      "stepNumber": 2,
+      "title": "Simmer until stew-thick",
+      "instruction": "Add broth, bay leaves, and thyme. Return chicken. Simmer partially covered 30–35 minutes until chicken is tender. Stew should coat a spoon — not thin brothy soup. Shred or chop chicken, return meat, and discard skin and bones if you used bone-in.",
+      "minutes": 35,
       "heatLevel": "medium-low"
     },
     {
-      "stepNumber": 5,
-      "title": "Drop the dumplings",
-      "instruction": "Whisk flour, baking powder, and salt. Cut in butter, then stir in milk and eggs until a thick batter forms. Drop spoonfuls onto simmering broth, cover, and cook 15 minutes without lifting the lid.",
+      "stepNumber": 3,
+      "title": "Mix dumpling batter",
+      "instruction": "Whisk flour, baking powder, and salt. Cut in cold butter, then stir in milk and eggs until a thick, scoopable batter forms — thicker than pancake batter, it should mound on a spoon.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Drop dumplings and steam",
+      "instruction": "Bring stew to a gentle simmer. Drop batter by ¼-cup scoops on top, spacing across the pot. Cover tightly and cook 15 minutes without lifting the lid — dumplings steam and puff. Consistency when done: thick stew underneath, fluffy dumplings on top, not submerged thin soup.",
       "minutes": 18,
       "heatLevel": "medium-low"
     },
     {
-      "stepNumber": 6,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 7,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 8,
-      "title": "Portion and open the line",
-      "instruction": "Portion Chicken and Dumplings onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
+      "stepNumber": 5,
+      "title": "Finish and hold for late crew",
+      "instruction": "Dumplings are done when a skewer through a centre comes out clean. Stir parsley at the edge of the pot. Hold covered off heat up to 20 minutes or keep on lowest simmer — do not boil hard or dumplings fall apart. Ladle stew and dumplings together so each bowl gets both.",
       "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 9,
-      "title": "Ladle and garnish",
-      "instruction": "Dumplings should be puffed and cooked through — a skewer should come out clean. Stir in parsley and serve hot from the pot. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 5,
       "heatLevel": "low"
     }
   ],
   "proTips": [
+    "Assign one cook to proteins and one to sides — rookies stay on timing, not multitasking.",
     "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
     "Taste for salt at the end — hall palates run salty after long shifts.",
     "Pull chicken at 160°F and let carryover hit 165°F — dry breast ruins crew morale."
@@ -180,7 +198,7 @@
     "Label trays with date and reheat to 165°F minimum before second shift.",
     "Add a splash of stock or water when reheating — thick sauces tighten in the fridge."
   ],
-  "whyCrewsLikeIt": "Post-shift hug in a pot. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
+  "whyCrewsLikeIt": "Thick chicken stew with fluffy dropped dumplings — not brothy soup. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
   "substitutions": [
     "Chicken thighs ↔ breasts (thighs forgive overcooking on the flat-top).",
     "Ground turkey swaps 1:1 for beef in chili if the crew wants leaner."
@@ -188,34 +206,34 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 578,
-    "protein": 64,
-    "carbs": 41,
-    "fats": 16,
-    "label": "Estimated per serving",
+    "calories": 670,
+    "protein": 66,
+    "carbs": 55,
+    "fats": 20,
+    "label": "per serving (hall portion)",
     "source": "calculated",
-    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": true,
       "under30gFat": true,
-      "highCarb": false,
+      "highCarb": true,
       "lowCarb": false,
-      "mealPrepFriendly": true
+      "mealPrepFriendly": false
     },
     "badgeCandidates": {
       "highProtein": true,
       "lighterOption": false,
-      "performanceMeal": true
+      "performanceMeal": false
     }
   },
+  "heroImageAlt": "Chicken and Dumplings — wide family-style platter for the firehall crew with a bowl of thick chicken stew, fluffy dropped dumplings beside, and serving spoons on the prep table",
   "heroImage": "/images/golden-100/chicken-dumpling-soup.jpg",
   "mobileImage": "/images/mobile/chicken-dumpling-soup.jpg",
   "thumbImage": "/images/thumbs/chicken-dumpling-soup.jpg",
   "railImage": "/images/rails/chicken-dumpling-soup.jpg",
-  "realismScore": 93,
+  "realismScore": 100,
   "firefighterScore": 100,
-  "popularityWeight": 3.6,
+  "popularityWeight": 3.7,
   "searchTerms": [
     "chicken and dumplings",
     "chicken dumpling soup",
@@ -224,20 +242,19 @@
     "soup chili",
     "hearty",
     "comfort",
-    "chicken and dumplings soup",
+    "chicken and dumplings stew dumplings",
     "golden_100"
   ],
   "relatedSlugs": [
+    "chicken-tortilla-soup-for-the-hall",
+    "bbq-chicken-mac-and-cheese",
     "chicken-pot-pie",
     "beef-barley-soup",
-    "bbq-chicken-bowls",
-    "chicken-caesar",
-    "creamy-tuscan-chicken",
-    "chili-garlic-bread"
+    "spicy-tomato-bisque-grilled-brie-toast",
+    "tomato-soup-grilled-cheese-croutons"
   ],
   "sourceName": "Firehall Meals",
-  "sourceUrl": "",
-  "generatedAt": "2026-06-01T01:40:02.081Z",
-  "contentVersion": 2,
-  "mealPrepNotes": "Prep mise en place before the shift — Chicken and Dumplings runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
+  "sourceUrl": "https://www.seriouseats.com/easy-chicken-and-dumplings-recipe",
+  "generatedAt": "2026-06-04T20:35:16.799Z",
+  "contentVersion": 2
 }

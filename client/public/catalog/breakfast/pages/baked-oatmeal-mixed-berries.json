@@ -1,0 +1,156 @@
+{
+  "slug": "baked-oatmeal-mixed-berries",
+  "title": "Baked Oatmeal with Mixed Berries",
+  "subtitle": "Make-ahead baked oatmeal squares with berries for staggered eaters.",
+  "description": "A 9x13 baked oatmeal that feeds the hall from one pan — quick oats baked with milk, eggs, and cinnamon, studded with mixed berries. Bake the night before or early shift; reheat portions in the microwave between calls.",
+  "filters": [
+    "feed_a_crew",
+    "healthy_breakfasts",
+    "quick_breakfasts"
+  ],
+  "tags": [
+    "oatmeal",
+    "baked",
+    "berries",
+    "make-ahead",
+    "9x13"
+  ],
+  "crewSize": 8,
+  "baseServings": 8,
+  "prepTime": 15,
+  "cookTime": 45,
+  "totalTime": 60,
+  "difficulty": "easy",
+  "ingredients": [
+    {
+      "name": "cups quick oats",
+      "quantity": "4",
+      "notes": "not steel-cut",
+      "group": "Bake"
+    },
+    {
+      "name": "cup brown sugar",
+      "quantity": "0.75",
+      "notes": "light or dark",
+      "group": "Bake"
+    },
+    {
+      "name": "tsp baking powder",
+      "quantity": "2",
+      "group": "Bake"
+    },
+    {
+      "name": "tsp cinnamon",
+      "quantity": "1.5",
+      "group": "Bake"
+    },
+    {
+      "name": "tsp kosher salt",
+      "quantity": "0.5",
+      "group": "Bake"
+    },
+    {
+      "name": "cups whole milk",
+      "quantity": "3",
+      "group": "Wet"
+    },
+    {
+      "name": "large eggs",
+      "quantity": "2",
+      "group": "Wet"
+    },
+    {
+      "name": "cup melted butter",
+      "quantity": "0.25",
+      "notes": "plus spray for the dish",
+      "group": "Wet"
+    },
+    {
+      "name": "cups mixed berries",
+      "quantity": "3",
+      "notes": "fresh or frozen, thawed and drained",
+      "group": "Fruit"
+    },
+    {
+      "name": "cup maple syrup",
+      "quantity": "1",
+      "notes": "for serving",
+      "group": "Line"
+    },
+    {
+      "name": "cups Greek yogurt",
+      "quantity": "2",
+      "notes": "optional at the line",
+      "group": "Line"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Heat oven and prep the dish",
+      "instruction": "Heat oven to 350°F. Spray a 9x13 baking dish with oil. For 10 or 14 firefighters, use two dishes and split the batter evenly rather than one overflowing pan.",
+      "minutes": 5,
+      "tempF": 350
+    },
+    {
+      "stepNumber": 2,
+      "title": "Mix dry and wet",
+      "instruction": "Whisk oats, brown sugar, baking powder, cinnamon, and salt in a large bowl. In another bowl, whisk milk, eggs, and melted butter until smooth. Pour wet into dry and stir until no dry pockets remain.",
+      "minutes": 8
+    },
+    {
+      "stepNumber": 3,
+      "title": "Fold in berries and bake",
+      "instruction": "Gently fold in berries. Spread level in the dish. Bake 40–45 minutes until the center is set, edges are golden, and a knife in the center comes out clean. Cool 10 minutes before cutting — hot oatmeal squares fall apart if rushed.",
+      "minutes": 45,
+      "tempF": 350
+    },
+    {
+      "stepNumber": 4,
+      "title": "Portion and hold",
+      "instruction": "Cut into squares — one generous square per firefighter at base 8. Hold covered at room temp up to 2 hours or refrigerate overnight. Reheat squares 1–2 minutes in the microwave until warm through; pass maple syrup and yogurt at the line.",
+      "minutes": 10
+    }
+  ],
+  "nutrition": {
+    "calories": 438,
+    "protein": 16,
+    "carbs": 77,
+    "fat": 11,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": false
+    }
+  },
+  "stationWorkflow": [
+    "Bake before the crew arrives so breakfast is grab-and-go between apparatus checks.",
+    "Label the pan with bake time — overnight oats cement to the dish if you skip soaking later.",
+    "Set out a sheet pan of warm squares and let firefighters top their own — faster than plating every bowl."
+  ],
+  "cleanupNotes": [
+    "Soak the baking dish in warm water immediately after cutting — baked oatmeal glue is easier hot.",
+    "Wipe berry stains on counters before they set; sugar syrup gets tacky fast."
+  ],
+  "leftovers": [
+    "Squares keep 4 days refrigerated; reheat covered with a splash of milk to restore moisture.",
+    "Crumble cold leftovers into a parfait with yogurt and granola for a fast second breakfast."
+  ],
+  "heroImage": "/images/breakfast/baked-oatmeal-mixed-berries.jpg",
+  "thumbImage": "/images/thumbs/breakfast/baked-oatmeal-mixed-berries.jpg",
+  "imageAlt": "Golden baked oatmeal squares with mixed berries in a 9x13 pan",
+  "publishedAt": "2026-06-04T20:04:13.542Z",
+  "updatedAt": "2026-06-04T20:04:13.542Z",
+  "readMinutes": 7,
+  "seoTitle": "Baked Oatmeal with Mixed Berries | Firehall Breakfast"
+}

@@ -1,0 +1,172 @@
+{
+  "slug": "shakshuka-for-the-hall",
+  "title": "Shakshuka for the Hall",
+  "subtitle": "Eggs poached in a spiced tomato-pepper skillet for the whole crew.",
+  "description": "A one-pan hall breakfast: onions and peppers simmer in a thick tomato sauce, then eggs poach right in the skillet so every firefighter gets runny yolks and warm sauce for bread. Sauce can be made ahead and reheated before the eggs go in.",
+  "filters": [
+    "feed_a_crew",
+    "skillets",
+    "high_protein"
+  ],
+  "tags": [
+    "shakshuka",
+    "eggs",
+    "skillet",
+    "tomato",
+    "one-pan"
+  ],
+  "crewSize": 8,
+  "baseServings": 8,
+  "prepTime": 20,
+  "cookTime": 35,
+  "totalTime": 55,
+  "difficulty": "medium",
+  "ingredients": [
+    {
+      "name": "yellow onions",
+      "quantity": "3",
+      "notes": "sliced pole to pole",
+      "group": "Sauce"
+    },
+    {
+      "name": "bell peppers",
+      "quantity": "3",
+      "notes": "red or mixed, sliced",
+      "group": "Sauce"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "6",
+      "notes": "minced",
+      "group": "Sauce"
+    },
+    {
+      "name": "cans crushed tomatoes",
+      "quantity": "2",
+      "notes": "28 oz",
+      "group": "Sauce"
+    },
+    {
+      "name": "can diced tomatoes",
+      "quantity": "1",
+      "notes": "14.5 oz with juice",
+      "group": "Sauce"
+    },
+    {
+      "name": "roasted red peppers",
+      "quantity": "2",
+      "notes": "jarred, chopped, or 2 fresh charred",
+      "group": "Sauce"
+    },
+    {
+      "name": "tbsp tomato paste",
+      "quantity": "2",
+      "group": "Seasoning"
+    },
+    {
+      "name": "tsp ground cumin",
+      "quantity": "2",
+      "group": "Seasoning"
+    },
+    {
+      "name": "tsp smoked paprika",
+      "quantity": "1",
+      "group": "Seasoning"
+    },
+    {
+      "name": "tsp cayenne",
+      "quantity": "0.5",
+      "notes": "optional",
+      "group": "Seasoning"
+    },
+    {
+      "name": "large eggs",
+      "quantity": "16",
+      "group": "Protein"
+    },
+    {
+      "name": "cups crumbled feta",
+      "quantity": "1.5",
+      "group": "Finish"
+    },
+    {
+      "name": "bunch fresh cilantro",
+      "quantity": "1",
+      "notes": "plus crusty bread for the line",
+      "group": "Finish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Build the tomato base",
+      "instruction": "Heat olive oil in a 12-inch skillet (use two skillets for 14) over medium-high. Cook onions and peppers with salt until softened and starting to brown, 8–10 minutes. Stir in garlic, tomato paste, cumin, paprika, and cayenne; cook until paste darkens slightly, about 3 minutes.",
+      "minutes": 20
+    },
+    {
+      "stepNumber": 2,
+      "title": "Simmer the sauce",
+      "instruction": "Add crushed and diced tomatoes and chopped roasted peppers. Simmer over medium-low, stirring occasionally, until thick enough that a spoon leaves a trail, 12–15 minutes. Taste and adjust salt — the sauce should be bold before eggs go in.",
+      "minutes": 15
+    },
+    {
+      "stepNumber": 3,
+      "title": "Make wells and add eggs",
+      "instruction": "Off heat, make shallow wells in the sauce with the back of a spoon — two eggs per well for eight firefighters. Crack eggs into wells, season with salt and pepper, cover, and return to medium-low heat.",
+      "minutes": 10
+    },
+    {
+      "stepNumber": 4,
+      "title": "Poach covered",
+      "instruction": "Cook covered until whites are set and yolks are still runny (or jammy if your crew prefers), 5–10 minutes. Peek once — overcooked yolks cannot be fixed. If whites are slow, spoon hot sauce over them before covering again.",
+      "minutes": 8
+    },
+    {
+      "stepNumber": 5,
+      "title": "Plate with feta and bread at the line",
+      "instruction": "Scatter feta and cilantro over the top. Serve straight from the skillet with warm bread for dipping. Hold covered off heat up to 10 minutes; do not reheat aggressively or yolks will set hard.",
+      "minutes": 5
+    }
+  ],
+  "nutrition": {
+    "calories": 432,
+    "protein": 26,
+    "carbs": 52,
+    "fat": 16,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": false
+    }
+  },
+  "stationWorkflow": [
+    "Simmer sauce on the back burner while a second cook manages eggs on the line — sauce holds 30 minutes covered on low.",
+    "For 14 firefighters, split across two 12-inch skillets with 7 eggs each so poaching stays even.",
+    "Keep bread in a warm oven (200°F) so the crew has something to drag through the sauce immediately."
+  ],
+  "cleanupNotes": [
+    "Soak the skillet as soon as service ends — tomato sugars glue to dry pans fast.",
+    "Wipe any egg overflow while warm; cold egg protein scrapes harder."
+  ],
+  "leftovers": [
+    "Sauce without eggs reheats well — poach fresh eggs tomorrow for a fast second breakfast.",
+    "Leftover sauce over rice or pasta makes a solid shift lunch."
+  ],
+  "heroImage": "/images/breakfast/shakshuka-for-the-hall.jpg",
+  "thumbImage": "/images/thumbs/breakfast/shakshuka-for-the-hall.jpg",
+  "imageAlt": "Shakshuka with poached eggs in spiced tomato sauce in a cast-iron skillet",
+  "publishedAt": "2026-06-04T20:04:13.542Z",
+  "updatedAt": "2026-06-04T20:04:13.542Z",
+  "readMinutes": 8,
+  "seoTitle": "Shakshuka for the Hall | Firehall Breakfast"
+}

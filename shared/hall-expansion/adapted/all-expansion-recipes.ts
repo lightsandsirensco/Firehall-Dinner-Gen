@@ -2,6 +2,8 @@ import type { ExpansionRecipeDef } from "../types.js";
 import { def, ing, step } from "../recipe-build.js";
 import { BATCH_250_RECIPES } from "./batch-250.js";
 import { PHASE5_DISTINCT_RECIPES } from "./batch-phase5-distinct.js";
+import { BATCH_B_SANDWICH_RECIPES } from "./batch-b-sandwiches.js";
+import { BATCH_HANDHELD_WRAP_RECIPES } from "./batch-handheld-wraps.js";
 
 const SMOKER_RECIPES: ExpansionRecipeDef[] = [
   def({
@@ -1844,4 +1846,6 @@ export const HALL_EXPANSION_ADAPTED_RECIPES: ExpansionRecipeDef[] = [
   ...CREW_FEEDER_RECIPES,
   ...BATCH_250_RECIPES,
   ...PHASE5_DISTINCT_RECIPES,
+  ...BATCH_B_SANDWICH_RECIPES,
+  ...BATCH_HANDHELD_WRAP_RECIPES,
 ];

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-31T18:34:15.374Z",
-  "recipeCount": 62,
+  "generatedAt": "2026-06-04T20:36:32.490Z",
+  "recipeCount": 65,
   "collection": "primary",
   "recipes": [
     {
@@ -66,6 +66,29 @@
       "thumbImage": "/images/thumbs/breakfast/bagel-lox-breakfast-board.jpg",
       "publishedAt": "2026-05-31T18:33:00.830Z",
       "collectionTier": "healthier_hall"
+    },
+    {
+      "slug": "baked-oatmeal-mixed-berries",
+      "title": "Baked Oatmeal with Mixed Berries",
+      "subtitle": "Make-ahead baked oatmeal squares with berries for staggered eaters.",
+      "description": "A 9x13 baked oatmeal that feeds the hall from one pan — quick oats baked with milk, eggs, and cinnamon, studded with mixed berries. Bake the night before or early shift; reheat portions in the microwave between calls.",
+      "filters": [
+        "feed_a_crew",
+        "healthy_breakfasts",
+        "quick_breakfasts"
+      ],
+      "tags": [
+        "oatmeal",
+        "baked",
+        "berries",
+        "make-ahead",
+        "9x13"
+      ],
+      "totalTime": 60,
+      "heroImage": "/images/breakfast/baked-oatmeal-mixed-berries.jpg",
+      "thumbImage": "/images/thumbs/breakfast/baked-oatmeal-mixed-berries.jpg",
+      "publishedAt": "2026-06-04T20:04:13.542Z",
+      "collectionTier": "firehall_classic"
     },
     {
       "slug": "bbq-breakfast-hash",
@@ -965,6 +988,29 @@
       "collectionTier": "firehall_classic"
     },
     {
+      "slug": "menemen-for-the-crew",
+      "title": "Menemen for the Crew",
+      "subtitle": "Turkish-style soft scrambled eggs with tomatoes, peppers, and olive oil.",
+      "description": "Soft-scrambled eggs folded into a slow-cooked tomato-pepper base with plenty of olive oil — a skillet breakfast that scales cleanly and tastes great with warm pita or bread from the oven.",
+      "filters": [
+        "feed_a_crew",
+        "skillets",
+        "quick_breakfasts"
+      ],
+      "tags": [
+        "menemen",
+        "turkish",
+        "eggs",
+        "skillet",
+        "tomato"
+      ],
+      "totalTime": 40,
+      "heroImage": "/images/breakfast/menemen-for-the-crew.jpg",
+      "thumbImage": "/images/thumbs/breakfast/menemen-for-the-crew.jpg",
+      "publishedAt": "2026-06-04T20:04:13.542Z",
+      "collectionTier": "firehall_classic"
+    },
+    {
       "slug": "migas-for-the-crew",
       "title": "Migas for the Crew",
       "subtitle": "Scrambled eggs with crispy tortilla strips, peppers, and queso fresco.",
@@ -1138,6 +1184,29 @@
       "heroImage": "/images/breakfast/scrapple-and-eggs-skillet.jpg",
       "thumbImage": "/images/thumbs/breakfast/scrapple-and-eggs-skillet.jpg",
       "publishedAt": "2026-05-31T18:33:00.830Z",
+      "collectionTier": "firehall_classic"
+    },
+    {
+      "slug": "shakshuka-for-the-hall",
+      "title": "Shakshuka for the Hall",
+      "subtitle": "Eggs poached in a spiced tomato-pepper skillet for the whole crew.",
+      "description": "A one-pan hall breakfast: onions and peppers simmer in a thick tomato sauce, then eggs poach right in the skillet so every firefighter gets runny yolks and warm sauce for bread. Sauce can be made ahead and reheated before the eggs go in.",
+      "filters": [
+        "feed_a_crew",
+        "skillets",
+        "high_protein"
+      ],
+      "tags": [
+        "shakshuka",
+        "eggs",
+        "skillet",
+        "tomato",
+        "one-pan"
+      ],
+      "totalTime": 55,
+      "heroImage": "/images/breakfast/shakshuka-for-the-hall.jpg",
+      "thumbImage": "/images/thumbs/breakfast/shakshuka-for-the-hall.jpg",
+      "publishedAt": "2026-06-04T20:04:13.542Z",
       "collectionTier": "firehall_classic"
     },
     {

@@ -9,6 +9,7 @@ import type { BreakfastRecipePageDraft } from "../shared/breakfast-expansion/new
 import { breakfastRecipePageSchema } from "../shared/breakfast-schema.js";
 import { NEW_BREAKFAST_PAGES } from "../shared/breakfast-expansion/new-breakfast-pages.js";
 import { BATCH_25_BREAKFAST_PAGES } from "../shared/breakfast-expansion/batch-25-breakfast-pages.js";
+import { BATCH_A_BREAKFAST_PAGES } from "../shared/breakfast-expansion/batch-a-breakfast-pages.js";
 import { calculateNutritionFromIngredients } from "../shared/nutrition/calculate.js";
 import { getBreakfastGovernanceMap } from "../shared/breakfast-catalog/governance.js";
 import { isPerformanceBreakfastSlug } from "../shared/breakfast-catalog/governance-types.js";
@@ -419,11 +420,13 @@ async function main(): Promise<void> {
   const newSlugs = new Set([
     ...NEW_BREAKFAST_PAGES.map((p) => p.slug),
     ...BATCH_25_BREAKFAST_PAGES.map((p) => p.slug),
+    ...BATCH_A_BREAKFAST_PAGES.map((p) => p.slug),
   ]);
   const merged = [
     ...basePages.filter((p) => !newSlugs.has(p.slug)),
     ...NEW_BREAKFAST_PAGES.map((p) => withBreakfastNutrition(p)),
     ...BATCH_25_BREAKFAST_PAGES.map((p) => withBreakfastNutrition(p)),
+    ...BATCH_A_BREAKFAST_PAGES.map((p) => withBreakfastNutrition(p)),
   ];
 
   const gov = getBreakfastGovernanceMap();
@@ -486,7 +489,7 @@ async function main(): Promise<void> {
   }
 
   console.log(
-    `[breakfast] wrote ${governed.length} pages — primary ${primaryPages.length}, performance ${performancePages.length} (${NEW_BREAKFAST_PAGES.length} expansion + ${BATCH_25_BREAKFAST_PAGES.length} batch-25)`,
+    `[breakfast] wrote ${governed.length} pages — primary ${primaryPages.length}, performance ${performancePages.length} (${NEW_BREAKFAST_PAGES.length} expansion + ${BATCH_25_BREAKFAST_PAGES.length} batch-25 + ${BATCH_A_BREAKFAST_PAGES.length} batch-a)`,
   );
 }
 

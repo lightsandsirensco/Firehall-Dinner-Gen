@@ -1,0 +1,176 @@
+{
+  "slug": "hall-blt-sandwich-feed",
+  "title": "Hall BLT Sandwich Feed",
+  "displayTitle": "Hall BLT Sandwich Feed",
+  "seoTitle": "Hall BLT Sandwich Feed | Firefighter Meal",
+  "shortDescription": "Thick-cut bacon, ripe tomato, and crisp lettuce on toasted sandwich bread",
+  "subtitle": "Thick-cut bacon, ripe tomato, and crisp lettuce on toasted sandwich bread",
+  "category": "hall_expansion",
+  "cuisine": "american",
+  "description": "Bacon cooks low on sheet pans until flat and crisp, sandwich bread toasts golden, and the line builds BLTs with mayo, thick tomato, and crisp lettuce so every sandwich shows bacon, lettuce, and tomato without digging. Built for volume, not tea-party portions.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 25,
+  "prepTime": 15,
+  "difficulty": "easy",
+  "calories": 540,
+  "protein": 22,
+  "carbs": 38,
+  "fats": 34,
+  "tags": [
+    "protein:pork",
+    "format:sandwich",
+    "category:crew_feeders",
+    "handheld",
+    "comfort",
+    "hall_expansion",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Rimmed sheet pans",
+    "Foil",
+    "Paper towels",
+    "Serrated knife",
+    "Cutting board"
+  ],
+  "ingredients": [
+    {
+      "name": "thick-cut bacon",
+      "quantity": "4",
+      "unit": "lb",
+      "group": "Bacon"
+    },
+    {
+      "name": "sandwich bread",
+      "quantity": "24",
+      "unit": "slices",
+      "notes": "soft white or potato bread, not thin toast",
+      "group": "Bread"
+    },
+    {
+      "name": "ripe tomatoes",
+      "quantity": "6",
+      "unit": "large",
+      "notes": "¼-inch slices, pat dry",
+      "group": "Produce"
+    },
+    {
+      "name": "romaine or iceberg lettuce",
+      "quantity": "2",
+      "unit": "heads",
+      "notes": "leaves separated, crisp",
+      "group": "Produce"
+    },
+    {
+      "name": "mayonnaise",
+      "quantity": "1.5",
+      "unit": "cups",
+      "group": "Spread"
+    },
+    {
+      "name": "unsalted butter",
+      "quantity": "0.5",
+      "unit": "cup",
+      "notes": "softened for toasting",
+      "group": "Toast"
+    },
+    {
+      "name": "kosher salt and black pepper",
+      "quantity": "1",
+      "unit": "batch",
+      "group": "Seasoning"
+    },
+    {
+      "name": "avocado",
+      "quantity": "4",
+      "unit": "count",
+      "notes": "sliced, optional at the line",
+      "group": "Optional"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Oven-crisp the bacon",
+      "instruction": "Heat oven to 400°F. Lay bacon on foil-lined sheet pans in a single layer. Bake, rotating pans, until flat, crisp, and deep brown, 18–22 minutes. Drain on paper towels. Hold warm up to 30 minutes — do not stack hot bacon or it steams soft. Target oven/smoker temperature: 400°F.",
+      "minutes": 22,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Toast the sandwich bread",
+      "instruction": "Brush bread slices lightly with butter. Toast on sheet pans at 400°F until golden on both sides, 6–8 minutes total, flipping once. Warm toast holds better than untoasted bread against tomato juice. Target oven/smoker temperature: 400°F.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Prep tomato and lettuce",
+      "instruction": "Slice tomatoes ¼ inch thick and pat dry with paper towels — wet tomato is the main reason BLTs fail. Separate lettuce into cupped leaves and rinse if needed; dry in a spinner so leaves stay crisp on the line.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Build BLTs on toasted bread",
+      "instruction": "Spread mayo on both inner faces of every toast slice. For batch build: layer lettuce, tomato seasoned with salt and pepper, then 3 bacon strips per sandwich. For self-serve, lay bacon, lettuce, and tomato in hotel pans so the crew assembles clear BLTs with visible layers.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Serve immediately or brief hold",
+      "instruction": "Cut sandwiches diagonal and serve while bacon still crackles. If holding for late crew, add tomato and lettuce only when the bell rings; keep bacon and toast warm separately up to 20 minutes. Re-toast 2 minutes if bread softens.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Thick-cut bacon gives meaty bites; thin bacon disappears under tomato.",
+    "Season tomato slices lightly — it wakes up winter tomatoes.",
+    "Avocado at the line turns this into a hall ABLT without rewriting the recipe."
+  ],
+  "tonightSpread": [
+    "BLTs with chips and cold slaw.",
+    "Extra toast on the side for crews who want open-face doubles."
+  ],
+  "leftovers": [
+    "Crumble bacon into breakfast potatoes tomorrow.",
+    "Chop leftover tomato into a quick salsa for tacos."
+  ],
+  "whyCrewsLikeIt": "Everyone knows a BLT — no explanation needed on a busy day. Cooking bacon in the oven frees the stove for soup or eggs, and toasted bread keeps the feed from turning soggy while the second wave eats.",
+  "mealPrepNotes": "Oven bacon can finish 30 minutes ahead and hold warm on paper towels. Toast bread in the same oven after bacon comes out. Hold assembled BLTs up to 20 minutes in a warm box with lettuce and tomato added last if you pre-stage bacon and toast only.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 540,
+    "protein": 22,
+    "carbs": 38,
+    "fats": 34,
+    "label": "~540 cal/serving · 22g protein · 3g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/hall-blt-sandwich-feed.jpg",
+  "heroImageAlt": "Hall BLT Sandwich Feed — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/hall-blt-sandwich-feed.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/hall-blt-sandwich-feed.jpg",
+  "railImage": "/images/rails/hall-expansion/hall-blt-sandwich-feed.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "BLT sandwich crew",
+    "hall BLT feed",
+    "bacon lettuce tomato batch"
+  ],
+  "relatedSlugs": [
+    "shawarma-bar-night",
+    "fajita-bar-night",
+    "hall-burger-bar",
+    "pasta-bar-night"
+  ],
+  "sourceUrl": "https://www.americastestkitchen.com/recipes/8985-ultimate-blt-sandwich",
+  "generatedAt": "2026-06-04T20:18:31.794Z",
+  "contentVersion": 2
+}

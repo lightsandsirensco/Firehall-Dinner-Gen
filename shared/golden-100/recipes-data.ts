@@ -3,20 +3,22 @@
  */
 
 import { goldenEntry } from "./entry.js";
+import { BATCH_A_SOURCE_URLS } from "./recipe-quality/batch-a-packs.js";
+import { BATCH_B_SOURCE_URLS } from "./recipe-quality/batch-b-packs.js";
 
 export const GOLDEN_100_TARGET_BY_CATEGORY = {
   firehall_classics: 15,
   bbq_grill_nights: 15,
-  comfort_food: 13,
-  healthy_performance: 12,
-  quick_shift_meals: 10,
+  comfort_food: 18,
+  healthy_performance: 13,
+  quick_shift_meals: 12,
   pizza_night: 8,
-  big_crew_feeders: 8,
+  big_crew_feeders: 9,
   breakfast_brunch: 6,
   global_flavors: 6,
   game_day_watch_party: 4,
   meal_prep_leftovers: 2,
-  rookie_friendly: 2,
+  rookie_friendly: 3,
 } as const;
 
 const CLASSICS = [
@@ -67,7 +69,7 @@ const COMFORT = [
   goldenEntry({ slug: "sausage-peppers-onions", title: "Sausage Peppers and Onions", cat: "comfort_food", protein: "pork", cuisine: "italian", format: "skillet", pools: ["comfort", "one_pot"], hook: "Sheet-pan Italian comfort", search: "italian sausage peppers onions dinner", inspiration: "NYT Cooking" }),
   goldenEntry({ slug: "beef-barley-soup", title: "Beef Barley Soup", cat: "comfort_food", protein: "beef", cuisine: "american", format: "soup_chili", pools: ["hearty", "comfort"], hook: "Cold-night bowl that fills everyone", search: "beef barley soup hearty", inspiration: "Bon Appétit" }),
   goldenEntry({ slug: "baked-ziti", title: "Baked Ziti", cat: "comfort_food", protein: "beef", cuisine: "italian", format: "pasta", pools: ["comfort", "pasta"], hook: "Cheesy pasta bake for the table", search: "baked ziti meat sauce dinner", inspiration: "GialloZafferano" }),
-  goldenEntry({ slug: "chicken-dumpling-soup", title: "Chicken and Dumplings", cat: "comfort_food", protein: "chicken", cuisine: "american", format: "soup_chili", pools: ["hearty", "comfort"], hook: "Post-shift hug in a pot", search: "chicken and dumplings soup", inspiration: "Serious Eats" }),
+  goldenEntry({ slug: "chicken-dumpling-soup", title: "Chicken and Dumplings", cat: "comfort_food", protein: "chicken", cuisine: "american", format: "soup_chili", pools: ["hearty", "comfort"], hook: "Thick chicken stew with fluffy dropped dumplings — not brothy soup", search: "chicken and dumplings stew dumplings", inspiration: "Serious Eats", sourceUrl: "https://www.seriouseats.com/easy-chicken-and-dumplings-recipe", rec: { rookieFriendly: 8, comfortFoodScore: 10 } }),
   goldenEntry({
     slug: "bbq-chicken-mac-and-cheese",
     title: "BBQ Chicken Mac and Cheese",
@@ -86,6 +88,11 @@ const COMFORT = [
         "creamy baked mac and cheese in hotel pan with visible shredded BBQ chicken, melted cheddar and mozzarella, BBQ sauce glaze, cheese pull, steam",
     },
   }),
+  goldenEntry({ slug: "four-step-chicken-piccata", title: "Four-Step Chicken Piccata", cat: "comfort_food", protein: "chicken", cuisine: "italian", format: "plated_main", pools: ["comfort", "chicken"], hook: "Lemon-caper pan sauce in four straightforward steps", search: "chicken piccata lemon caper skillet dinner", inspiration: "America's Test Kitchen", sourceUrl: BATCH_A_SOURCE_URLS["four-step-chicken-piccata"], rec: { rookieFriendly: 8 } }),
+  goldenEntry({ slug: "tomato-soup-grilled-cheese-croutons", title: "Tomato Soup with Grilled Cheese Croutons", cat: "comfort_food", protein: "vegetarian", cuisine: "american", format: "soup_chili", pools: ["comfort", "hearty"], hook: "Creamy tomato soup topped with real grilled-cheese cubes", search: "tomato soup grilled cheese croutons dinner", inspiration: "Serious Eats", sourceUrl: BATCH_A_SOURCE_URLS["tomato-soup-grilled-cheese-croutons"] }),
+  goldenEntry({ slug: "spicy-tomato-bisque-grilled-brie-toast", title: "Spicy Tomato Bisque with Grilled Brie Toast", cat: "comfort_food", protein: "vegetarian", cuisine: "american", format: "soup_chili", pools: ["comfort", "hearty"], hook: "Smoky-spiced bisque with melty brie toast on the side", search: "spicy tomato bisque brie toast soup", inspiration: "Serious Eats", sourceUrl: BATCH_A_SOURCE_URLS["spicy-tomato-bisque-grilled-brie-toast"] }),
+  goldenEntry({ slug: "french-onion-soup-for-the-hall", title: "French Onion Soup for the Hall", cat: "comfort_food", protein: "beef", cuisine: "french", format: "soup_chili", pools: ["comfort", "hearty"], hook: "Dark onion broth with a broiled Gruyère cap", search: "french onion soup gruyere firehall", inspiration: "America's Test Kitchen", sourceUrl: BATCH_B_SOURCE_URLS["french-onion-soup-for-the-hall"], rec: { rookieFriendly: 7 } }),
+  goldenEntry({ slug: "chicken-tortilla-soup-for-the-hall", title: "Chicken Tortilla Soup for the Hall", cat: "comfort_food", protein: "chicken", cuisine: "mexican", format: "soup_chili", pools: ["comfort", "hearty"], hook: "Brothy lime-kissed soup with crisp tortilla strips at the line", search: "chicken tortilla soup fire station", inspiration: "Serious Eats", sourceUrl: BATCH_B_SOURCE_URLS["chicken-tortilla-soup-for-the-hall"] }),
 ];
 
 const HEALTHY = [
@@ -98,6 +105,7 @@ const HEALTHY = [
   goldenEntry({ slug: "turkey-burgers", title: "Black Bean Turkey Burgers", cat: "healthy_performance", protein: "turkey", cuisine: "american", format: "burger", pools: ["healthy", "handheld"], hook: "Juicy lean burgers that still satisfy", search: "turkey black bean burgers", inspiration: "Bon Appétit" }),
   goldenEntry({ slug: "ginger-salmon-bowls", title: "Ginger Salmon Rice Bowls", cat: "healthy_performance", protein: "seafood", cuisine: "asian", format: "bowl", pools: ["healthy", "bowl"], hook: "Bright ginger glaze, clean bowls", search: "ginger salmon rice bowl", inspiration: "NYT Cooking" }),
   goldenEntry({ slug: "mediterranean-chickpea", title: "Mediterranean Chickpea Bowls", cat: "healthy_performance", protein: "vegetarian", cuisine: "mediterranean", format: "bowl", pools: ["healthy", "bowl"], hook: "Plant-forward without feeling light", search: "mediterranean chickpea bowl dinner", inspiration: "Bon Appétit" }),
+  goldenEntry({ slug: "pasta-e-ceci-for-the-hall", title: "Pasta e Ceci (Pasta with Chickpeas)", cat: "healthy_performance", protein: "vegetarian", cuisine: "italian", format: "pasta", pools: ["healthy", "pasta", "one_pot"], hook: "Creamy chickpea-and-pasta pot with rosemary and lemon", search: "pasta e ceci chickpea pasta dinner", inspiration: "Serious Eats", sourceUrl: BATCH_B_SOURCE_URLS["pasta-e-ceci-for-the-hall"], rec: { healthyScore: 8, rookieFriendly: 8 } }),
   goldenEntry({ slug: "turkey-meatball-zoodles", title: "Turkey Meatballs with Zucchini Noodles", cat: "healthy_performance", protein: "turkey", cuisine: "italian", format: "pasta", pools: ["healthy"], hook: "Classic flavors, lighter base", search: "turkey meatballs zucchini noodles", inspiration: "Serious Eats" }),
   goldenEntry({ slug: "performance-burrito-bowls", title: "Performance Chicken Burrito Bowls", cat: "healthy_performance", protein: "chicken", cuisine: "mexican", format: "bowl", pools: ["healthy", "bowl"], hook: "Macros-friendly, still craveable", search: "chicken burrito bowl healthy", inspiration: "Budget Bytes" }),
   goldenEntry({ slug: "herb-roasted-thighs", title: "Herb Roasted Chicken Thighs", cat: "healthy_performance", protein: "chicken", cuisine: "american", format: "roast", pools: ["healthy", "chicken"], hook: "Crispy skin, lean protein, oven ease", search: "herb roasted chicken thighs dinner", inspiration: "NYT Cooking" }),
@@ -114,6 +122,8 @@ const QUICK = [
   goldenEntry({ slug: "chicken-quesadillas", title: "Shredded Chicken Quesadillas", cat: "quick_shift_meals", protein: "chicken", cuisine: "mexican", format: "handheld", pools: ["quick", "handheld"], hook: "Melty, crispy, line-friendly", search: "chicken quesadillas dinner", rec: { quickShiftMeal: true } }),
   goldenEntry({ slug: "chili-mac", title: "Chili Mac Skillet", cat: "quick_shift_meals", protein: "beef", cuisine: "american", format: "skillet", pools: ["quick", "comfort"], hook: "Two cravings, one pan", search: "chili mac skillet dinner", rec: { quickShiftMeal: true } }),
   goldenEntry({ slug: "pad-thai", title: "Firehall Pad Thai", cat: "quick_shift_meals", protein: "chicken", cuisine: "thai", format: "skillet", pools: ["quick"], hook: "Sweet-tangy wok noodles, lime, and crushed peanuts", search: "firehall pad thai chicken wok noodles", rec: { quickShiftMeal: true } }),
+  goldenEntry({ slug: "sheet-pan-parmesan-dijon-chicken-thigh-dinner", title: "Sheet Pan Parmesan-Dijon Chicken Thigh Dinner", cat: "quick_shift_meals", protein: "chicken", cuisine: "american", format: "sheet_pan", pools: ["quick", "chicken", "healthy"], hook: "Crispy Parmesan crust, Dijon potatoes, and green beans on one pan", search: "sheet pan parmesan dijon chicken thighs dinner", inspiration: "America's Test Kitchen", sourceUrl: BATCH_A_SOURCE_URLS["sheet-pan-parmesan-dijon-chicken-thigh-dinner"], rec: { cleanupScore: 9, rookieFriendly: 8, quickShiftMeal: true } }),
+  goldenEntry({ slug: "30-minute-pasta-e-fagioli-for-the-hall", title: "30-Minute Pasta e Fagioli for the Hall", cat: "quick_shift_meals", protein: "vegetarian", cuisine: "italian", format: "pasta", pools: ["quick", "pasta", "one_pot"], hook: "Bean-and-pasta soup that lands in half an hour", search: "pasta e fagioli quick fire station", inspiration: "Serious Eats", sourceUrl: BATCH_B_SOURCE_URLS["30-minute-pasta-e-fagioli-for-the-hall"], rec: { quickShiftMeal: true, rookieFriendly: 9 } }),
 ];
 
 const PIZZA = [
@@ -135,6 +145,7 @@ const BIG_CREW = [
   goldenEntry({ slug: "enchilada-casserole", title: "Chicken Enchilada Casserole", cat: "big_crew_feeders", protein: "chicken", cuisine: "mexican", format: "plated_main", pools: ["chicken", "handheld"], hook: "Stacked tortillas, melted cheese", search: "chicken enchilada casserole large", rec: { feedsHardScore: 9 } }),
   goldenEntry({ slug: "sausage-egg-bake", title: "Sausage Egg Bake for the Crew", cat: "big_crew_feeders", protein: "pork", cuisine: "american", format: "bake", pools: ["breakfast", "beef"], hook: "Morning feed after night shift", search: "large sausage egg breakfast bake", rec: { feedsHardScore: 10 } }),
   goldenEntry({ slug: "jambalaya", title: "Cajun Jambalaya for the Hall", cat: "big_crew_feeders", protein: "mixed", cuisine: "cajun", format: "one_pot", pools: ["hearty"], hook: "One pot, loud flavor, full table", search: "cajun jambalaya large batch", rec: { feedsHardScore: 10 } }),
+  goldenEntry({ slug: "red-beans-and-rice-for-the-hall", title: "Red Beans and Rice for the Hall", cat: "big_crew_feeders", protein: "pork", cuisine: "cajun", format: "one_pot", pools: ["hearty", "comfort"], hook: "Creamy red beans over fluffy rice — New Orleans hall feed", search: "red beans and rice firehall crew", inspiration: "Serious Eats", sourceUrl: BATCH_B_SOURCE_URLS["red-beans-and-rice-for-the-hall"], rec: { feedsHardScore: 10, rookieFriendly: 7 } }),
   goldenEntry({ slug: "loaded-potato-feed", title: "Loaded Potato Feed", cat: "big_crew_feeders", protein: "beef", cuisine: "american", format: "bowl", pools: ["comfort", "beef"], hook: "Self-serve spuds for twenty", search: "loaded baked potato bar feed", rec: { feedsHardScore: 10 } }),
 ];
 
@@ -171,6 +182,7 @@ const MEAL_PREP = [
 const ROOKIE = [
   goldenEntry({ slug: "one-pot-chicken-rice", title: "One-Pot Chicken and Rice", cat: "rookie_friendly", protein: "chicken", cuisine: "american", format: "one_pot", pools: ["one_pot", "quick"], hook: "One pot, hard to mess up", search: "one pot chicken and rice dinner", rec: { rookieFriendly: 10, cleanupScore: 9 } }),
   goldenEntry({ slug: "five-ingredient-pasta", title: "Garlic Butter Pasta", cat: "rookie_friendly", protein: "vegetarian", cuisine: "italian", format: "pasta", pools: ["one_pot", "pasta"], hook: "Pantry pasta the rookies can nail", search: "garlic butter pasta simple", rec: { rookieFriendly: 10 } }),
+  goldenEntry({ slug: "spaghetti-aglio-e-olio-for-the-hall", title: "Spaghetti Aglio e Olio for the Hall", cat: "rookie_friendly", protein: "vegetarian", cuisine: "italian", format: "pasta", pools: ["one_pot", "pasta", "quick"], hook: "Garlic, oil, and pasta — emulsified the right way", search: "spaghetti aglio olio garlic oil pasta", inspiration: "Serious Eats", sourceUrl: BATCH_A_SOURCE_URLS["spaghetti-aglio-e-olio-for-the-hall"], rec: { rookieFriendly: 10, cleanupScore: 8 } }),
 ];
 
 export const GOLDEN_100_RECIPES = [

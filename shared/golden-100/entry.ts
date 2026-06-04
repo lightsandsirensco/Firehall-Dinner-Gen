@@ -15,6 +15,7 @@ type EntryInput = {
   id?: number;
   classic?: string;
   inspiration?: string;
+  sourceUrl?: string;
   rec?: Partial<GoldenRecommendationMeta>;
   img?: Partial<GoldenImageryMeta>;
   featured?: boolean;
@@ -74,6 +75,7 @@ export function goldenEntry(input: EntryInput): GoldenRecipeDefinition {
     explorePools: input.pools,
     hookLine: input.hook,
     sourceInspiration: input.inspiration,
+    sourceUrl: input.sourceUrl,
     classicSlug: input.classic,
     spoonacularId: input.id,
     spoonacularSearch: input.search,

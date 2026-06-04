@@ -1,0 +1,188 @@
+{
+  "slug": "beef-gyros-for-the-hall",
+  "title": "Beef Gyros",
+  "displayTitle": "Beef Gyros",
+  "seoTitle": "Beef Gyros | Firefighter Meal",
+  "shortDescription": "Thin-sliced seasoned beef with tzatziki and onion in warm pita",
+  "subtitle": "Thin-sliced seasoned beef with tzatziki and onion in warm pita",
+  "category": "hall_expansion",
+  "cuisine": "greek",
+  "description": "Skirt or sirloin is seasoned with gyro-style spices, seared and sliced thin, then served in warm pita with tzatziki, tomato, and red onion. The plate should read beef gyro immediately: sliced meat, white sauce, and pita — not a steak sandwich.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 25,
+  "prepTime": 20,
+  "difficulty": "medium",
+  "calories": 560,
+  "protein": 38,
+  "carbs": 40,
+  "fats": 26,
+  "tags": [
+    "protein:beef",
+    "format:handheld",
+    "category:crew_feeders",
+    "handheld",
+    "beef",
+    "hall_expansion",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Cast iron or grill",
+    "Sharp knife",
+    "Foil"
+  ],
+  "ingredients": [
+    {
+      "name": "beef skirt or sirloin steak",
+      "quantity": "3",
+      "unit": "lb",
+      "group": "Beef"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Beef"
+    },
+    {
+      "name": "dried oregano",
+      "quantity": "2",
+      "unit": "tsp",
+      "group": "Spice"
+    },
+    {
+      "name": "garlic powder",
+      "quantity": "1",
+      "unit": "tsp",
+      "group": "Spice"
+    },
+    {
+      "name": "ground cumin",
+      "quantity": "1",
+      "unit": "tsp",
+      "group": "Spice"
+    },
+    {
+      "name": "paprika",
+      "quantity": "1",
+      "unit": "tsp",
+      "group": "Spice"
+    },
+    {
+      "name": "kosher salt and black pepper",
+      "quantity": "1",
+      "unit": "batch",
+      "group": "Spice"
+    },
+    {
+      "name": "pita breads",
+      "quantity": "10",
+      "unit": "count",
+      "group": "Pita"
+    },
+    {
+      "name": "tzatziki",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Sauce"
+    },
+    {
+      "name": "tomatoes",
+      "quantity": "3",
+      "unit": "large",
+      "notes": "diced",
+      "group": "Veg"
+    },
+    {
+      "name": "red onion",
+      "quantity": "1",
+      "unit": "count",
+      "notes": "thinly sliced",
+      "group": "Veg"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Season the beef",
+      "instruction": "Pat beef dry. Rub with olive oil, oregano, garlic powder, cumin, paprika, salt, and pepper. Let sit 15 minutes while the grill or cast iron heats.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Sear in batches",
+      "instruction": "Sear over high heat 3–4 minutes per side for medium-rare to medium. Rest 8 minutes — carryover finishes cook. Slice as thin as possible against the grain.",
+      "minutes": 15,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Warm pita and prep veg",
+      "instruction": "Wrap pita in foil and warm at 300°F. Dice tomato and slice onion. Optional: quick-pickle onion in vinegar 30 minutes ahead. Target oven/smoker temperature: 300°F.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Build gyros",
+      "instruction": "Spread tzatziki in pita. Layer sliced beef, tomato, and onion. For photos and the line, show one open pita with meat fanned and sauce visible before wrapping the rest.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Serve hot",
+      "instruction": "Wrap and foil. Hold beef and pita separately if service delays past 15 minutes — reassemble quick. Fries or simple salad are classic sides at Canadian groceries.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "A touch of ground cinnamon in the rub is traditional gyro flavour — ¼ teaspoon is enough.",
+    "Do not confuse with shawarma pitas — beef gyro is oregano-cumin, not turmeric-heavy.",
+    "Sirloin is easier to slice; skirt has more flavour if you can slice thin."
+  ],
+  "tonightSpread": [
+    "Beef gyros with fries",
+    "Pickled onion jar at the line"
+  ],
+  "leftovers": [
+    "Beef on a salad",
+    "Beef with eggs for breakfast wrap"
+  ],
+  "whyCrewsLikeIt": "Beef breaks the chicken-heavy handheld cycle. Slicing thin after a hard sear mimics vertical-spit texture without a spit in the hall. Crews build their own if you run it open on the line.",
+  "mealPrepNotes": "Freeze beef 20 minutes for easier thin slicing if needed. Seasoning can be mixed ahead. Warm pita in stacks in foil. Hold sliced beef covered with a splash of broth at 140°F.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 560,
+    "protein": 38,
+    "carbs": 40,
+    "fats": 26,
+    "label": "~560 cal/serving · 38g protein · 2g fiber (est.)"
+  },
+  "heroImageAlt": "Beef Gyros — firehall handheld meal — firefighter meal served for a firehall crew dinner",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "beef gyro firehall",
+    "gyro pita crew"
+  ],
+  "relatedSlugs": [
+    "shawarma-bar-night",
+    "fajita-bar-night",
+    "hall-burger-bar",
+    "pasta-bar-night"
+  ],
+  "sourceUrl": "https://www.seriouseats.com/gyros-recipe",
+  "generatedAt": "2026-06-04T20:18:31.794Z",
+  "contentVersion": 2,
+  "heroImage": "/images/hall-expansion/beef-gyros-for-the-hall.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/beef-gyros-for-the-hall.jpg",
+  "mobileImage": "/images/mobile/hall-expansion/beef-gyros-for-the-hall.jpg",
+  "railImage": "/images/rails/hall-expansion/beef-gyros-for-the-hall.jpg"
+}

@@ -1,0 +1,217 @@
+{
+  "slug": "french-onion-soup-for-the-hall",
+  "title": "French Onion Soup for the Hall",
+  "displayTitle": "French Onion Soup for the Hall",
+  "seoTitle": "French Onion Soup for the Hall | Firefighter Meal",
+  "shortDescription": "Dark onion broth with a broiled Gruyère cap",
+  "subtitle": "Dark onion broth with a broiled Gruyère cap",
+  "category": "comfort_food",
+  "cuisine": "french",
+  "description": "Dark onion broth with a broiled Gruyère cap. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 100,
+  "prepTime": 25,
+  "difficulty": "medium",
+  "calories": 158,
+  "protein": 6,
+  "carbs": 8,
+  "fats": 11,
+  "tags": [
+    "protein:beef",
+    "format:soup_chili",
+    "category:comfort_food",
+    "comfort",
+    "hearty",
+    "golden_100"
+  ],
+  "equipment": [
+    "8-quart stock pot",
+    "Large sheet trays",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "ingredients": [
+    {
+      "name": "Yellow onions",
+      "quantity": "5",
+      "unit": "lb",
+      "notes": "halved pole to pole, sliced ¼ inch",
+      "group": "Base"
+    },
+    {
+      "name": "Unsalted butter",
+      "quantity": "6",
+      "unit": "tbsp",
+      "group": "Base"
+    },
+    {
+      "name": "Dry sherry",
+      "quantity": "0.5",
+      "unit": "cup",
+      "notes": "or dry white wine",
+      "group": "Base"
+    },
+    {
+      "name": "Beef broth",
+      "quantity": "10",
+      "unit": "cups",
+      "notes": "low-sodium",
+      "group": "Broth"
+    },
+    {
+      "name": "Chicken broth",
+      "quantity": "4",
+      "unit": "cups",
+      "notes": "low-sodium",
+      "group": "Broth"
+    },
+    {
+      "name": "Fresh thyme",
+      "quantity": "6",
+      "unit": "sprigs",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Bay leaves",
+      "quantity": "2",
+      "unit": "count",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Gruyère cheese",
+      "quantity": "2",
+      "unit": "lb",
+      "notes": "grated",
+      "group": "Cheese"
+    },
+    {
+      "name": "Baguette",
+      "quantity": "2",
+      "unit": "count",
+      "notes": "day-old, sliced ½ inch",
+      "group": "Crouton"
+    },
+    {
+      "name": "Black pepper",
+      "quantity": "1",
+      "unit": "tsp",
+      "notes": "freshly ground",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Kosher salt",
+      "quantity": "1",
+      "unit": "batch",
+      "group": "Seasoning"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Caramelize onions low and slow",
+      "instruction": "Melt butter in a large Dutch oven over medium-low. Add onions with salt and cook, stirring every few minutes, until deeply golden brown and jammy, 45–60 minutes — do not rush over high heat or they burn before sweetening. The pot should smell sweet, not acrid.",
+      "minutes": 55,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Deglaze and add stock",
+      "instruction": "Stir in sherry, scraping browned bits. Simmer until almost dry, 2–3 minutes. Add beef broth, chicken broth, thyme, bay leaves, and pepper. Bring to a simmer and cook 20 minutes. Broth should taste rich and onion-sweet; consistency is thin soup, not gravy.",
+      "minutes": 25,
+      "heatLevel": "medium-low"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Toast baguette rounds",
+      "instruction": "Arrange baguette slices on sheet pans. Toast at 400°F until dry and lightly golden, 8–10 minutes — dry bread floats and soaks broth without turning mushy. Hold at room temp up to 4 hours.",
+      "minutes": 12,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Fill crocks and top with cheese",
+      "instruction": "Heat broiler with rack 6 inches from element. Ladle hot soup into oven-safe bowls or crocks, leaving ½ inch headspace. Float 2–3 baguette crouton rounds per bowl and blanket with Gruyère — cheese should cover croutons to the rim so it melts into a solid cap.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Broil the cheese cap and serve",
+      "instruction": "Broil until cheese bubbles and browns in spots, 3–5 minutes — watch constantly, no distracted tones during this step. Serve immediately with extra pepper at the line. Hold finished crocks in a warm box up to 20 minutes; re-broil 1 minute if cheese sets.",
+      "minutes": 8,
+      "heatLevel": "high"
+    }
+  ],
+  "proTips": [
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
+    "Taste for salt at the end — hall palates run salty after long shifts."
+  ],
+  "tonightSpread": [
+    "Keep the pot on low simmer on the stove — ladle from the side so the bottom doesn't scorch.",
+    "Set shredded cheese, crackers, and hot sauce in a row beside the pot.",
+    "Line up French Onion Soup for the Hall on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+  ],
+  "leftovers": [
+    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
+    "Label trays with date and reheat to 165°F minimum before second shift.",
+    "Add a splash of stock or water when reheating — thick sauces tighten in the fridge."
+  ],
+  "whyCrewsLikeIt": "Dark onion broth with a broiled Gruyère cap. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
+  "substitutions": [
+    "Ground turkey swaps 1:1 for beef in chili if the crew wants leaner."
+  ],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 158,
+    "protein": 6,
+    "carbs": 8,
+    "fats": 11,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": false
+    }
+  },
+  "heroImage": "/images/golden-100/french-onion-soup-for-the-hall.jpg",
+  "mobileImage": "/images/mobile/french-onion-soup-for-the-hall.jpg",
+  "thumbImage": "/images/thumbs/french-onion-soup-for-the-hall.jpg",
+  "railImage": "/images/rails/french-onion-soup-for-the-hall.jpg",
+  "realismScore": 100,
+  "firefighterScore": 100,
+  "popularityWeight": 3.6,
+  "searchTerms": [
+    "french onion soup for the hall",
+    "french",
+    "beef",
+    "soup chili",
+    "comfort",
+    "hearty",
+    "french onion soup gruyere firehall",
+    "golden_100"
+  ],
+  "relatedSlugs": [
+    "beef-barley-soup",
+    "shepherds-pie",
+    "chili-garlic-bread",
+    "baked-ziti",
+    "beef-stroganoff",
+    "loaded-baked-potato-bar"
+  ],
+  "sourceName": "America's Test Kitchen",
+  "sourceUrl": "https://www.americastestkitchen.com/recipes/12325-french-onion-soup",
+  "generatedAt": "2026-06-04T20:35:16.822Z",
+  "contentVersion": 2
+}

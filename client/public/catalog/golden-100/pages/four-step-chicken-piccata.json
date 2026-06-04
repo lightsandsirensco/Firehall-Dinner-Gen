@@ -1,0 +1,202 @@
+{
+  "slug": "four-step-chicken-piccata",
+  "title": "Four-Step Chicken Piccata",
+  "displayTitle": "Four-Step Chicken Piccata",
+  "seoTitle": "Four-Step Chicken Piccata | Firefighter Meal",
+  "shortDescription": "Lemon-caper pan sauce in four straightforward steps",
+  "subtitle": "Lemon-caper pan sauce in four straightforward steps",
+  "category": "comfort_food",
+  "cuisine": "italian",
+  "description": "Lemon-caper pan sauce in four straightforward steps",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 50,
+  "prepTime": 25,
+  "difficulty": "easy",
+  "calories": 667,
+  "protein": 77,
+  "carbs": 36,
+  "fats": 23,
+  "tags": [
+    "protein:chicken",
+    "format:plated_main",
+    "category:comfort_food",
+    "comfort",
+    "chicken",
+    "golden_100"
+  ],
+  "equipment": [
+    "Large sheet trays",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "ingredients": [
+    {
+      "name": "Boneless, skinless chicken breasts",
+      "quantity": "4",
+      "unit": "lb",
+      "notes": "split into 12 cutlets, pounded ¼ inch",
+      "group": "Main"
+    },
+    {
+      "name": "All-purpose flour",
+      "quantity": "1.5",
+      "unit": "cups",
+      "group": "Breading"
+    },
+    {
+      "name": "Unsalted butter",
+      "quantity": "6",
+      "unit": "tbsp",
+      "notes": "divided",
+      "group": "Sauce"
+    },
+    {
+      "name": "Olive oil",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Sear"
+    },
+    {
+      "name": "Garlic cloves",
+      "quantity": "4",
+      "unit": "count",
+      "notes": "minced",
+      "group": "Sauce"
+    },
+    {
+      "name": "Capers",
+      "quantity": "0.5",
+      "unit": "cup",
+      "notes": "drained",
+      "group": "Sauce"
+    },
+    {
+      "name": "Low-sodium chicken broth",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Sauce"
+    },
+    {
+      "name": "Dry white wine",
+      "quantity": "0.8",
+      "unit": "cup",
+      "group": "Sauce"
+    },
+    {
+      "name": "Fresh lemon juice",
+      "quantity": "0.3",
+      "unit": "cup",
+      "notes": "plus 2 lemons zested in strips",
+      "group": "Sauce"
+    },
+    {
+      "name": "Fresh parsley",
+      "quantity": "0.3",
+      "unit": "cup",
+      "notes": "chopped",
+      "group": "Finish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Pound and season cutlets",
+      "instruction": "Working one breast at a time, slice horizontally into three even pieces and pound to ¼ inch between plastic wrap. Season both sides with salt and pepper. Spread flour in a sheet pan and dredge cutlets, shaking off excess — a thin dusting is enough.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Sear cutlets in batches",
+      "instruction": "Heat 1 tablespoon oil and 1 tablespoon butter in a 12-inch skillet over medium-high until shimmering. Sear cutlets in batches without crowding, 2–3 minutes per side until golden. Transfer to a warm platter and tent with foil while you finish the sauce.",
+      "minutes": 12,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Build the lemon-caper sauce",
+      "instruction": "Reduce heat to medium. Add garlic and capers to the pan; cook 30 seconds until fragrant. Pour in broth, wine, and lemon zest strips. Simmer, scraping browned bits, until reduced to about ½ cup and slightly syrupy, 8–10 minutes. Off heat, whisk in remaining butter and lemon juice until glossy.",
+      "minutes": 10,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Coat cutlets in lemon-caper sauce",
+      "instruction": "Return cutlets and any resting juices to the skillet. Turn each piece once in the sauce over low heat until warmed through, about 1 minute — do not boil or the cutlets toughen. Spoon glossy sauce over every portion and scatter parsley at the line. Plate two to three cutlets per firefighter with pasta or crusty bread; hold sauced chicken covered at 200°F up to 15 minutes if a call delays seating.",
+      "minutes": 5,
+      "heatLevel": "low"
+    }
+  ],
+  "proTips": [
+    "Assign one cook to proteins and one to sides — rookies stay on timing, not multitasking.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
+    "Taste for salt at the end — hall palates run salty after long shifts.",
+    "Pull chicken at 160°F and let carryover hit 165°F — dry breast ruins crew morale."
+  ],
+  "tonightSpread": [
+    "Plate Four-Step Chicken Piccata with sides in separate pans so the crew can mix portions.",
+    "Line up Four-Step Chicken Piccata on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+  ],
+  "leftovers": [
+    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
+    "Label trays with date and reheat to 165°F minimum before second shift."
+  ],
+  "whyCrewsLikeIt": "Lemon-caper pan sauce in four straightforward steps. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
+  "substitutions": [
+    "Chicken thighs ↔ breasts (thighs forgive overcooking on the flat-top)."
+  ],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 667,
+    "protein": 77,
+    "carbs": 36,
+    "fats": 23,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "heroImage": "/images/golden-100/four-step-chicken-piccata.jpg",
+  "mobileImage": "/images/mobile/four-step-chicken-piccata.jpg",
+  "thumbImage": "/images/thumbs/four-step-chicken-piccata.jpg",
+  "railImage": "/images/rails/four-step-chicken-piccata.jpg",
+  "realismScore": 100,
+  "firefighterScore": 100,
+  "popularityWeight": 3.6,
+  "searchTerms": [
+    "four-step chicken piccata",
+    "four step chicken piccata",
+    "italian",
+    "chicken",
+    "plated main",
+    "comfort",
+    "chicken piccata lemon caper skillet dinner",
+    "golden_100"
+  ],
+  "relatedSlugs": [
+    "creamy-tuscan-chicken",
+    "crispy-chicken-cutlets",
+    "chicken-pot-pie",
+    "chicken-parm",
+    "parm-hero-subs",
+    "bbq-chicken-mac-and-cheese"
+  ],
+  "sourceName": "America's Test Kitchen",
+  "sourceUrl": "https://www.americastestkitchen.com/recipes/4555-easy-chicken-piccata",
+  "generatedAt": "2026-06-04T20:35:16.810Z",
+  "contentVersion": 2
+}

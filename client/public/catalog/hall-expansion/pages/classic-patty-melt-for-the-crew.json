@@ -1,0 +1,183 @@
+{
+  "slug": "classic-patty-melt-for-the-crew",
+  "title": "Classic Patty Melt for the Crew",
+  "displayTitle": "Classic Patty Melt for the Crew",
+  "seoTitle": "Classic Patty Melt for the Crew | Firefighter Meal",
+  "shortDescription": "Griddled beef patties with caramelized onions and Swiss on rye",
+  "subtitle": "Griddled beef patties with caramelized onions and Swiss on rye",
+  "category": "hall_expansion",
+  "cuisine": "american",
+  "description": "Thin beef patties and a big batch of sweet caramelized onions hit the griddle, then stack onto marbled rye with Swiss cheese and butter for a second press until the cheese oozes and the bread crisps. Built in waves so eight to fourteen firefighters eat hot sandwiches, not steamy ones.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 35,
+  "prepTime": 25,
+  "difficulty": "medium",
+  "calories": 620,
+  "protein": 34,
+  "carbs": 42,
+  "fats": 36,
+  "tags": [
+    "protein:beef",
+    "format:sandwich",
+    "category:crew_feeders",
+    "handheld",
+    "comfort",
+    "beef",
+    "hall_expansion",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Cast-iron griddle or flat top",
+    "Spatulas",
+    "Sheet pans",
+    "Instant-read thermometer",
+    "Warm holding oven"
+  ],
+  "ingredients": [
+    {
+      "name": "ground beef (80/20)",
+      "quantity": "3",
+      "unit": "lb",
+      "group": "Patties"
+    },
+    {
+      "name": "yellow onions",
+      "quantity": "3",
+      "unit": "lb",
+      "notes": "halved and sliced ¼ inch",
+      "group": "Onions"
+    },
+    {
+      "name": "marbled rye bread",
+      "quantity": "24",
+      "unit": "slices",
+      "notes": "about 2 loaves",
+      "group": "Bread"
+    },
+    {
+      "name": "Swiss cheese",
+      "quantity": "24",
+      "unit": "slices",
+      "notes": "about 1½ lb",
+      "group": "Cheese"
+    },
+    {
+      "name": "unsalted butter",
+      "quantity": "0.75",
+      "unit": "cup",
+      "notes": "softened for spreading",
+      "group": "Press"
+    },
+    {
+      "name": "vegetable oil",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Griddle"
+    },
+    {
+      "name": "Worcestershire sauce",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Patties"
+    },
+    {
+      "name": "kosher salt and black pepper",
+      "quantity": "1",
+      "unit": "batch",
+      "group": "Seasoning"
+    },
+    {
+      "name": "dill pickle chips",
+      "quantity": "2",
+      "unit": "cups",
+      "notes": "optional at the line",
+      "group": "Sides"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Caramelize onions for the whole batch",
+      "instruction": "Heat 2 tablespoons oil in a large skillet over medium-low. Add onions with a pinch of salt and cook, stirring every few minutes, until deep golden and jammy, 35–45 minutes. Hold warm in a covered pan — these go on every sandwich.",
+      "minutes": 40,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Shape and season thin patties",
+      "instruction": "Divide beef into 12 equal portions for base 8 (18 for 14). Gently press each into a thin 4-inch oval about ¼ inch thick — thicker patties will not melt into the sandwich. Season with salt, pepper, and a few drops of Worcestershire per patty.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Griddle patties in batches",
+      "instruction": "Heat griddle over medium-high with a thin film of oil. Cook patties in batches without crowding until well browned and 160°F in the center, about 2 minutes per side. Transfer to a sheet pan and tent — wipe griddle between batches if needed.",
+      "minutes": 15,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Build on rye with Swiss and onions",
+      "instruction": "Butter one side of each rye slice. Lay unbuttered sides up, top with Swiss, patty, and a spoon of caramelized onions. Close with second slice, buttered side out. For 14, run two assembly lines so presses do not backlog.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Press until cheese melts and serve",
+      "instruction": "Griddle sandwiches over medium until bread is crisp and cheese melts, 3–4 minutes per side, pressing with spatulas. Cut diagonal, hold on a rack in a 200°F oven up to 20 minutes. Serve with pickles. Re-crisp 30 seconds per side on the griddle if a call delays seating.",
+      "minutes": 12,
+      "heatLevel": "medium"
+    }
+  ],
+  "proTips": [
+    "Swiss melts smoother than cheddar here — save cheddar for other sandwiches.",
+    "If rye is thin, double-stack only the press side butter — too much butter leaks and smokes.",
+    "Mark one griddle zone lower heat for holding finished melts without burning crust."
+  ],
+  "tonightSpread": [
+    "Patty melts with dill pickles and kettle chips.",
+    "Thin dill pickle spear and a simple iceberg salad with ranch for crunch."
+  ],
+  "leftovers": [
+    "Chop cold patties and onions into a grilled cheese for next-day lunch.",
+    "Crumble patties over a sheet-pan cheese fries bake."
+  ],
+  "whyCrewsLikeIt": "Patty melts scratch the burger craving but eat easier on the line — no tall stack falling apart. Rye and Swiss read as classic diner food, and the onion batch can start while the crew is still on apparatus check.",
+  "mealPrepNotes": "Slice onions and shape patties up to 4 hours ahead; refrigerate patties between parchment. Caramelize onions in a Dutch oven earlier in the shift and reheat on the griddle before assembly. Keep melted sandwiches in a 200°F oven up to 20 minutes on a rack, not stacked.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 620,
+    "protein": 34,
+    "carbs": 42,
+    "fats": 36,
+    "label": "~620 cal/serving · 34g protein · 4g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/classic-patty-melt-for-the-crew.jpg",
+  "heroImageAlt": "Classic Patty Melt for the Crew — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/classic-patty-melt-for-the-crew.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/classic-patty-melt-for-the-crew.jpg",
+  "railImage": "/images/rails/hall-expansion/classic-patty-melt-for-the-crew.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "patty melt firehall",
+    "diner patty melt crew",
+    "rye swiss patty melt"
+  ],
+  "relatedSlugs": [
+    "shawarma-bar-night",
+    "fajita-bar-night",
+    "hall-burger-bar",
+    "pasta-bar-night"
+  ],
+  "sourceUrl": "https://www.americastestkitchen.com/recipes/14928-diner-style-patty-melts",
+  "generatedAt": "2026-06-04T20:18:31.794Z",
+  "contentVersion": 2
+}

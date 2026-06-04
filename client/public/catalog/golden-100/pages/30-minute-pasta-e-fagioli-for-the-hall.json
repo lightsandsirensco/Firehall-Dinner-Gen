@@ -1,0 +1,227 @@
+{
+  "slug": "30-minute-pasta-e-fagioli-for-the-hall",
+  "title": "30-Minute Pasta e Fagioli for the Hall",
+  "displayTitle": "30-Minute Pasta e Fagioli for the Hall",
+  "seoTitle": "30-Minute Pasta e Fagioli for the Hall | Firefighter Meal",
+  "shortDescription": "Bean-and-pasta soup that lands in half an hour",
+  "subtitle": "Bean-and-pasta soup that lands in half an hour",
+  "category": "quick_shift_meals",
+  "cuisine": "italian",
+  "description": "Bean-and-pasta soup that lands in half an hour. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 40,
+  "prepTime": 12,
+  "difficulty": "easy",
+  "calories": 440,
+  "protein": 17,
+  "carbs": 58,
+  "fats": 16,
+  "tags": [
+    "protein:vegetarian",
+    "format:pasta",
+    "category:quick_shift_meals",
+    "quick",
+    "pasta",
+    "one_pot",
+    "golden_100"
+  ],
+  "equipment": [
+    "8-quart stock pot",
+    "Large sheet trays",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "ingredients": [
+    {
+      "name": "Ditalini or small shells",
+      "quantity": "1.3",
+      "unit": "lb",
+      "group": "Pasta"
+    },
+    {
+      "name": "Olive oil",
+      "quantity": "0.3",
+      "unit": "cup",
+      "group": "Base"
+    },
+    {
+      "name": "Yellow onion",
+      "quantity": "1",
+      "unit": "count",
+      "notes": "diced",
+      "group": "Base"
+    },
+    {
+      "name": "Garlic cloves",
+      "quantity": "6",
+      "unit": "count",
+      "notes": "minced",
+      "group": "Base"
+    },
+    {
+      "name": "Tomato paste",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Base"
+    },
+    {
+      "name": "Canned kidney beans",
+      "quantity": "3",
+      "unit": "cans",
+      "notes": "15 oz, drained and rinsed",
+      "group": "Beans"
+    },
+    {
+      "name": "Low-sodium chicken broth",
+      "quantity": "8",
+      "unit": "cups",
+      "group": "Broth"
+    },
+    {
+      "name": "Dried oregano",
+      "quantity": "2",
+      "unit": "tsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Bay leaves",
+      "quantity": "2",
+      "unit": "count",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Parmesan cheese",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "finely grated, plus rind if you have it",
+      "group": "Finish"
+    },
+    {
+      "name": "Fresh parsley",
+      "quantity": "0.5",
+      "unit": "cup",
+      "notes": "chopped — serve separately",
+      "group": "Garnish"
+    },
+    {
+      "name": "Crusty bread",
+      "quantity": "1",
+      "unit": "loaf",
+      "notes": "for the line",
+      "group": "Sides"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Bloom aromatics in olive oil",
+      "instruction": "Heat olive oil in a large Dutch oven or stockpot over medium. Cook onion with a pinch of salt until softened and lightly golden at the edges, 6–8 minutes. Stir in garlic and tomato paste; cook until the paste darkens and smells sweet, about 2 minutes.",
+      "minutes": 10,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Simmer broth and beans",
+      "instruction": "Add kidney beans, broth, oregano, bay leaves, and Parmesan rind if using. Bring to a steady simmer — the soup should look brothy, not stew-thick yet. Simmer 10 minutes so flavors meld and beans heat through.",
+      "minutes": 12,
+      "heatLevel": "medium-low"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Cook pasta in the soup",
+      "instruction": "Stir in ditalini and simmer until pasta is tender with a little bite, 10–12 minutes, stirring occasionally so pasta does not stick. The consistency should coat a spoon lightly — add a splash of water if it tightens too much before service.",
+      "minutes": 12,
+      "heatLevel": "medium-low"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Finish and season the pot",
+      "instruction": "Fish out bay leaves and rind. Stir in half the grated Parmesan off heat until melted. Taste and adjust salt and pepper — the soup should be savory and tomato-forward, not bland brothy.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Ladle and garnish at the line",
+      "instruction": "Ladle into bowls. Pass parsley and remaining Parmesan separately so greens stay bright. Serve bread on the side. Hold the pot on the lowest simmer up to 45 minutes; add broth if pasta swells — stir before each ladle.",
+      "minutes": 5,
+      "heatLevel": "low"
+    }
+  ],
+  "proTips": [
+    "Assign one cook to proteins and one to sides — rookies stay on timing, not multitasking.",
+    "Prep all mise en place before the bell — this meal wins on organization, not speed hacks.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
+    "Taste for salt at the end — hall palates run salty after long shifts."
+  ],
+  "tonightSpread": [
+    "Plate 30-Minute Pasta e Fagioli for the Hall with sides in separate pans so the crew can mix portions.",
+    "Line up 30-Minute Pasta e Fagioli for the Hall on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+  ],
+  "leftovers": [
+    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
+    "Label trays with date and reheat to 165°F minimum before second shift.",
+    "Add a splash of stock or water when reheating — thick sauces tighten in the fridge."
+  ],
+  "whyCrewsLikeIt": "Bean-and-pasta soup that lands in half an hour. A hall pick for tight shifts — one line, real portions, no drama at the stove.",
+  "mealPrepNotes": "Minimal prep — chop aromatics before shift change so you can cook as soon as the board quiets.",
+  "substitutions": [
+    "Any short pasta shape works — penne, rigatoni, or spaghetti."
+  ],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 440,
+    "protein": 17,
+    "carbs": 58,
+    "fats": 16,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": false
+    }
+  },
+  "heroImage": "/images/golden-100/30-minute-pasta-e-fagioli-for-the-hall.jpg",
+  "mobileImage": "/images/mobile/30-minute-pasta-e-fagioli-for-the-hall.jpg",
+  "thumbImage": "/images/thumbs/30-minute-pasta-e-fagioli-for-the-hall.jpg",
+  "railImage": "/images/rails/30-minute-pasta-e-fagioli-for-the-hall.jpg",
+  "realismScore": 95,
+  "firefighterScore": 100,
+  "popularityWeight": 3.2,
+  "searchTerms": [
+    "30-minute pasta e fagioli for the hall",
+    "30 minute pasta e fagioli for the hall",
+    "italian",
+    "vegetarian",
+    "pasta",
+    "quick",
+    "one pot",
+    "pasta e fagioli quick fire station",
+    "one_pot",
+    "golden_100"
+  ],
+  "relatedSlugs": [
+    "spaghetti-aglio-e-olio-for-the-hall",
+    "five-ingredient-pasta",
+    "pasta-e-ceci-for-the-hall",
+    "skillet-chicken-alfredo",
+    "sheet-pan-sausage-peppers",
+    "margherita-pizza"
+  ],
+  "sourceName": "Serious Eats",
+  "sourceUrl": "https://www.seriouseats.com/30-minute-pasta-and-kidney-bean-soup-pasta-e-fagioli-recipe",
+  "generatedAt": "2026-06-04T20:35:16.840Z",
+  "contentVersion": 2
+}

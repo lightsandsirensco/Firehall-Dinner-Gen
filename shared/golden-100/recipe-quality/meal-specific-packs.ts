@@ -8,6 +8,9 @@ import type { GoldenRecipePageIngredient, GoldenRecipePageStep } from "../recipe
 import { GOLDEN_P0_CLASSIC_PACKS } from "./golden-p0-classic-packs.js";
 import type { MealSpecificPack } from "./golden-p0-classic-packs.js";
 import { PIZZA_NIGHT_PACKS } from "./pizza-night-packs.js";
+import { BATCH_A_GOLDEN_PACKS } from "./batch-a-packs.js";
+import { BATCH_B_GOLDEN_PACKS } from "./batch-b-packs.js";
+import { CHICKEN_DUMPLINGS_PACK } from "./batch-handheld-dumplings-pack.js";
 
 type Ing = GoldenRecipePageIngredient;
 type Step = GoldenRecipePageStep;
@@ -757,6 +760,14 @@ export function getMealSpecificPack(
 
   const pizza = PIZZA_NIGHT_PACKS[def.slug];
   if (pizza) return pizza(scale, def);
+
+  const batchA = BATCH_A_GOLDEN_PACKS[def.slug];
+  if (batchA) return batchA(scale, def);
+
+  const batchB = BATCH_B_GOLDEN_PACKS[def.slug];
+  if (batchB) return batchB(scale, def);
+
+  if (def.slug === "chicken-dumpling-soup") return CHICKEN_DUMPLINGS_PACK(scale, def);
 
   const builder = PACKS[def.slug];
   if (!builder) return null;

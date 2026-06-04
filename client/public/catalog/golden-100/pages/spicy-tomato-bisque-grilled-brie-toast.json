@@ -1,0 +1,212 @@
+{
+  "slug": "spicy-tomato-bisque-grilled-brie-toast",
+  "title": "Spicy Tomato Bisque with Grilled Brie Toast",
+  "displayTitle": "Spicy Tomato Bisque with Grilled Brie Toast",
+  "seoTitle": "Spicy Tomato Bisque with Grilled Brie Toast | Firefighter Meal",
+  "shortDescription": "Smoky-spiced bisque with melty brie toast on the side",
+  "subtitle": "Smoky-spiced bisque with melty brie toast on the side",
+  "category": "comfort_food",
+  "cuisine": "american",
+  "description": "Smoky-spiced bisque with melty brie toast on the side",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 50,
+  "prepTime": 20,
+  "difficulty": "medium",
+  "calories": 545,
+  "protein": 13,
+  "carbs": 57,
+  "fats": 31,
+  "tags": [
+    "protein:vegetarian",
+    "format:soup_chili",
+    "category:comfort_food",
+    "comfort",
+    "hearty",
+    "golden_100"
+  ],
+  "equipment": [
+    "8-quart stock pot",
+    "Large sheet trays",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "ingredients": [
+    {
+      "name": "Canned crushed tomatoes",
+      "quantity": "3",
+      "unit": "cans",
+      "notes": "28 oz",
+      "group": "Bisque"
+    },
+    {
+      "name": "Fire-roasted diced tomatoes",
+      "quantity": "2",
+      "unit": "cans",
+      "notes": "14 oz",
+      "group": "Bisque"
+    },
+    {
+      "name": "Yellow onion",
+      "quantity": "2",
+      "unit": "count",
+      "notes": "diced",
+      "group": "Aromatics"
+    },
+    {
+      "name": "Garlic cloves",
+      "quantity": "5",
+      "unit": "count",
+      "notes": "minced",
+      "group": "Aromatics"
+    },
+    {
+      "name": "Chicken broth",
+      "quantity": "5",
+      "unit": "cups",
+      "group": "Bisque"
+    },
+    {
+      "name": "Heavy cream",
+      "quantity": "1.5",
+      "unit": "cups",
+      "group": "Bisque"
+    },
+    {
+      "name": "Smoked paprika",
+      "quantity": "2",
+      "unit": "tsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Cayenne pepper",
+      "quantity": "0.3",
+      "unit": "tsp",
+      "notes": "plus more at service",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Crusty bread",
+      "quantity": "16",
+      "unit": "slices",
+      "notes": "ciabatta or sourdough",
+      "group": "Toast"
+    },
+    {
+      "name": "Brie cheese",
+      "quantity": "2",
+      "unit": "lb",
+      "notes": "rind on, sliced ¼ inch",
+      "group": "Toast"
+    },
+    {
+      "name": "Unsalted butter",
+      "quantity": "0.5",
+      "unit": "cup",
+      "notes": "softened",
+      "group": "Toast"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Build the spicy tomato base",
+      "instruction": "Sweat onion in olive oil over medium heat until soft, 6–8 minutes. Add garlic, smoked paprika, and cayenne; cook 45 seconds. Add crushed tomatoes, diced tomatoes, and broth. Simmer 20 minutes until flavors meld and raw onion taste is gone.",
+      "minutes": 22,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Blend bisque and finish with cream",
+      "instruction": "Blend until completely smooth. Return to pot, stir in cream, and simmer gently 5 minutes — do not boil after cream is added or the bisque can break. Season with salt, pepper, and a pinch more cayenne if the hall likes heat. Hold at 180–190°F for service.",
+      "minutes": 10,
+      "heatLevel": "medium-low"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Grill brie toasts",
+      "instruction": "Butter bread on one side. Top dry sides with brie slices. Cook in a skillet or on a flat top over medium heat, buttered side down first, until bread is deep golden and brie starts to ooze, 3–4 minutes per side. Cut each slice in half for manageable portions.",
+      "minutes": 12,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Plate soup and toast",
+      "instruction": "Ladle about 1½ cups bisque per bowl. Serve grilled brie toast on the side or resting on the rim so the cheese stays visible. If a call holds service, keep toast uncovered at 200°F up to 15 minutes so the bread stays crisp.",
+      "minutes": 5,
+      "heatLevel": "low"
+    }
+  ],
+  "proTips": [
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
+    "Taste for salt at the end — hall palates run salty after long shifts."
+  ],
+  "tonightSpread": [
+    "Keep the pot on low simmer on the stove — ladle from the side so the bottom doesn't scorch.",
+    "Set shredded cheese, crackers, and hot sauce in a row beside the pot.",
+    "Line up Spicy Tomato Bisque with Grilled Brie Toast on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+  ],
+  "leftovers": [
+    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
+    "Label trays with date and reheat to 165°F minimum before second shift.",
+    "Add a splash of stock or water when reheating — thick sauces tighten in the fridge."
+  ],
+  "whyCrewsLikeIt": "Smoky-spiced bisque with melty brie toast on the side. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
+  "substitutions": [
+    "Ground turkey swaps 1:1 for beef in chili if the crew wants leaner."
+  ],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 545,
+    "protein": 13,
+    "carbs": 57,
+    "fats": 31,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "heroImage": "/images/golden-100/spicy-tomato-bisque-grilled-brie-toast.jpg",
+  "mobileImage": "/images/mobile/spicy-tomato-bisque-grilled-brie-toast.jpg",
+  "thumbImage": "/images/thumbs/spicy-tomato-bisque-grilled-brie-toast.jpg",
+  "railImage": "/images/rails/spicy-tomato-bisque-grilled-brie-toast.jpg",
+  "realismScore": 100,
+  "firefighterScore": 100,
+  "popularityWeight": 3.6,
+  "searchTerms": [
+    "spicy tomato bisque with grilled brie toast",
+    "spicy tomato bisque grilled brie toast",
+    "american",
+    "vegetarian",
+    "soup chili",
+    "comfort",
+    "hearty",
+    "spicy tomato bisque brie toast soup",
+    "golden_100"
+  ],
+  "relatedSlugs": [
+    "tomato-soup-grilled-cheese-croutons",
+    "mac-and-cheese-bake",
+    "beef-barley-soup",
+    "chicken-dumpling-soup",
+    "chili-garlic-bread",
+    "chicken-tortilla-soup-for-the-hall"
+  ],
+  "sourceName": "Serious Eats",
+  "sourceUrl": "https://www.seriouseats.com/15-minute-creamy-tomato-soup-vegan-recipe",
+  "generatedAt": "2026-06-04T20:35:16.819Z",
+  "contentVersion": 2
+}

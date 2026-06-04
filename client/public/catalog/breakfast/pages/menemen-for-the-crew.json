@@ -1,0 +1,139 @@
+{
+  "slug": "menemen-for-the-crew",
+  "title": "Menemen for the Crew",
+  "subtitle": "Turkish-style soft scrambled eggs with tomatoes, peppers, and olive oil.",
+  "description": "Soft-scrambled eggs folded into a slow-cooked tomato-pepper base with plenty of olive oil — a skillet breakfast that scales cleanly and tastes great with warm pita or bread from the oven.",
+  "filters": [
+    "feed_a_crew",
+    "skillets",
+    "quick_breakfasts"
+  ],
+  "tags": [
+    "menemen",
+    "turkish",
+    "eggs",
+    "skillet",
+    "tomato"
+  ],
+  "crewSize": 8,
+  "baseServings": 8,
+  "prepTime": 15,
+  "cookTime": 25,
+  "totalTime": 40,
+  "difficulty": "easy",
+  "ingredients": [
+    {
+      "name": "cup extra-virgin olive oil",
+      "quantity": "0.75",
+      "notes": "quality oil matters here",
+      "group": "Base"
+    },
+    {
+      "name": "yellow onions",
+      "quantity": "2",
+      "notes": "finely diced",
+      "group": "Base"
+    },
+    {
+      "name": "long green peppers",
+      "quantity": "4",
+      "notes": "shishito, poblano, or bell, diced",
+      "group": "Base"
+    },
+    {
+      "name": "cups chopped tomatoes",
+      "quantity": "2",
+      "notes": "ripe fresh or drained canned",
+      "group": "Base"
+    },
+    {
+      "name": "tsp hot paprika",
+      "quantity": "1",
+      "group": "Seasoning"
+    },
+    {
+      "name": "tsp dried oregano",
+      "quantity": "0.5",
+      "notes": "optional",
+      "group": "Seasoning"
+    },
+    {
+      "name": "large eggs",
+      "quantity": "16",
+      "notes": "beaten lightly with salt",
+      "group": "Protein"
+    },
+    {
+      "name": "cup chopped chives or parsley",
+      "quantity": "0.25",
+      "group": "Finish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Slow-cook peppers and onion",
+      "instruction": "Heat olive oil in a large nonstick or cast-iron skillet over low until barely warm. Add paprika, oregano, onion, and peppers with a generous pinch of salt and pepper. Cook, stirring often, until very soft and sweet, about 8 minutes — do not rush this step.",
+      "minutes": 10
+    },
+    {
+      "stepNumber": 2,
+      "title": "Cook tomatoes down",
+      "instruction": "Add tomatoes and cook, stirring, until the mixture deepens in color and excess liquid cooks off, about 6–8 minutes. Reserve half the mixture in a bowl — you will fold it back in after the eggs.",
+      "minutes": 8
+    },
+    {
+      "stepNumber": 3,
+      "title": "Scramble eggs softly",
+      "instruction": "Pour beaten eggs into the skillet. Season lightly. Cook over medium-low, stirring gently and constantly, until eggs are just set but still glossy and soft — they should look like thick ribbons, not dry curds.",
+      "minutes": 6
+    },
+    {
+      "stepNumber": 4,
+      "title": "Fold and serve",
+      "instruction": "Remove from heat immediately and fold in the reserved pepper-tomato mixture. Garnish with chives. Serve at once with warm pita — menemen does not hold well on a steam table.",
+      "minutes": 3
+    }
+  ],
+  "nutrition": {
+    "calories": 273,
+    "protein": 15,
+    "carbs": 10,
+    "fat": 20,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": false
+    }
+  },
+  "stationWorkflow": [
+    "Low heat is the secret — assign the most patient cook to the skillet, not the fastest.",
+    "Beat all eggs in one pitcher so you can pour in one motion when the base is ready.",
+    "Toast pita in the oven while the base cooks so bread lands hot when eggs finish."
+  ],
+  "cleanupNotes": [
+    "Wipe olive oil pans with paper towels before soap — it cuts grease time in half.",
+    "Do not soak nonstick with cold water while hot; let pans cool 2 minutes first."
+  ],
+  "leftovers": [
+    "Not ideal reheated — if you must, warm gently with a splash of oil and fresh eggs beaten in.",
+    "The pepper-tomato base alone wraps well into breakfast burritos for the next shift."
+  ],
+  "heroImage": "/images/breakfast/menemen-for-the-crew.jpg",
+  "thumbImage": "/images/thumbs/breakfast/menemen-for-the-crew.jpg",
+  "imageAlt": "Soft Turkish menemen scrambled eggs with tomatoes and peppers in a skillet",
+  "publishedAt": "2026-06-04T20:04:13.542Z",
+  "updatedAt": "2026-06-04T20:04:13.542Z",
+  "readMinutes": 7,
+  "seoTitle": "Menemen for the Crew | Firehall Breakfast"
+}

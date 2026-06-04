@@ -1,0 +1,172 @@
+{
+  "slug": "sausage-peppers-on-buns",
+  "title": "Sausage & Peppers on Buns",
+  "displayTitle": "Sausage & Peppers on Buns",
+  "seoTitle": "Sausage & Peppers on Buns | Firefighter Meal",
+  "shortDescription": "Italian sausage and peppers on hoagie rolls for the crew",
+  "subtitle": "Italian sausage and peppers on hoagie rolls for the crew",
+  "category": "hall_expansion",
+  "cuisine": "italian",
+  "description": "Italian sausage links are roasted with bell peppers and onions, split onto hoagie buns, and finished with optional melted provolone. The tray should show sausage, coloured peppers, and long buns — distinct from sausage-peppers-onions skillet dinner.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 35,
+  "prepTime": 15,
+  "difficulty": "easy",
+  "calories": 620,
+  "protein": 28,
+  "carbs": 48,
+  "fats": 34,
+  "tags": [
+    "protein:pork",
+    "format:handheld",
+    "category:crew_feeders",
+    "handheld",
+    "comfort",
+    "hall_expansion",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Sheet pans",
+    "Instant-read thermometer",
+    "Foil"
+  ],
+  "ingredients": [
+    {
+      "name": "Italian sausage links",
+      "quantity": "4",
+      "unit": "lb",
+      "notes": "sweet or hot",
+      "group": "Main"
+    },
+    {
+      "name": "bell peppers",
+      "quantity": "4",
+      "unit": "count",
+      "notes": "sliced",
+      "group": "Veg"
+    },
+    {
+      "name": "yellow onions",
+      "quantity": "2",
+      "unit": "large",
+      "notes": "sliced",
+      "group": "Veg"
+    },
+    {
+      "name": "hoagie or sub rolls",
+      "quantity": "10",
+      "unit": "count",
+      "group": "Buns"
+    },
+    {
+      "name": "provolone cheese",
+      "quantity": "12",
+      "unit": "slices",
+      "notes": "optional",
+      "group": "Cheese"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Roast"
+    },
+    {
+      "name": "dried oregano",
+      "quantity": "1",
+      "unit": "tsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "red wine vinegar",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Finish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Prep sausage and vegetables",
+      "instruction": "Slice peppers and onions. Toss with olive oil, oregano, salt, and pepper on rimmed sheet pans. Nestle whole sausage links among vegetables.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Roast until browned",
+      "instruction": "Roast at 425°F, turning sausage once, until sausages hit 160°F and peppers are tender with browned edges, 28–32 minutes. Cut sausages on a bias into chunks. Target oven/smoker temperature: 425°F.",
+      "minutes": 32,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Toast hoagie buns",
+      "instruction": "Split buns and toast cut sides on a sheet pan at 425°F for 4–5 minutes until lightly crisp. Target oven/smoker temperature: 425°F.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Assemble sandwiches",
+      "instruction": "Pile sausage and peppers into each bun. Add provolone if using and melt under broiler 2 minutes. Splash vinegar over the pan for brightness.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Hold and serve",
+      "instruction": "Wrap sandwiches in foil and hold at 200°F up to 25 minutes. Leave one sandwich open on the tray for identification — sausage, peppers, and hoagie bun clearly visible.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Sweet and hot sausage mix adds variety without two recipes.",
+    "A foil-lined pan saves cleanup when sausage fat renders.",
+    "Mustard and hot peppers at the line turn this into a full sub shop spread."
+  ],
+  "tonightSpread": [
+    "Sausage and pepper hoagies with chips",
+    "Simple green salad"
+  ],
+  "leftovers": [
+    "Chop into pasta with marinara",
+    "Breakfast hash with leftover peppers"
+  ],
+  "whyCrewsLikeIt": "Hoagie feed is fast to eat and scales to fourteen easily. Skillet sausage and peppers already exist in the catalog as a plated dinner; this is the sandwich version crews grab with one hand.",
+  "mealPrepNotes": "Poke sausages before roasting so they do not burst. Hoagies can be split and toasted 5 minutes in the oven. Hold sausage and pepper mix in a hotel pan at 165°F; assemble buns to order if calls interrupt.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 620,
+    "protein": 28,
+    "carbs": 48,
+    "fats": 34,
+    "label": "~620 cal/serving · 28g protein · 4g fiber (est.)"
+  },
+  "heroImageAlt": "Sausage & Peppers on Buns — firehall handheld meal — firefighter meal served for a firehall crew dinner",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "sausage and peppers sandwich",
+    "italian sausage hoagie firehall"
+  ],
+  "relatedSlugs": [
+    "shawarma-bar-night",
+    "fajita-bar-night",
+    "hall-burger-bar",
+    "pasta-bar-night"
+  ],
+  "sourceUrl": "https://www.americastestkitchen.com/recipes/6831-sausage-peppers-and-onions",
+  "generatedAt": "2026-06-04T20:18:31.794Z",
+  "contentVersion": 2,
+  "heroImage": "/images/hall-expansion/sausage-peppers-on-buns.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/sausage-peppers-on-buns.jpg",
+  "mobileImage": "/images/mobile/hall-expansion/sausage-peppers-on-buns.jpg",
+  "railImage": "/images/rails/hall-expansion/sausage-peppers-on-buns.jpg"
+}

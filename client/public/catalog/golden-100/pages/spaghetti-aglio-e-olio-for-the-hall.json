@@ -1,0 +1,188 @@
+{
+  "slug": "spaghetti-aglio-e-olio-for-the-hall",
+  "title": "Spaghetti Aglio e Olio for the Hall",
+  "displayTitle": "Spaghetti Aglio e Olio for the Hall",
+  "seoTitle": "Spaghetti Aglio e Olio for the Hall | Firefighter Meal",
+  "shortDescription": "Garlic, oil, and pasta — emulsified the right way",
+  "subtitle": "Garlic, oil, and pasta — emulsified the right way",
+  "category": "rookie_friendly",
+  "cuisine": "italian",
+  "description": "Garlic, oil, and pasta — emulsified the right way. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 35,
+  "prepTime": 10,
+  "difficulty": "easy",
+  "calories": 942,
+  "protein": 28,
+  "carbs": 135,
+  "fats": 34,
+  "tags": [
+    "protein:vegetarian",
+    "format:pasta",
+    "category:rookie_friendly",
+    "one_pot",
+    "pasta",
+    "quick",
+    "golden_100"
+  ],
+  "equipment": [
+    "8-quart stock pot",
+    "Large sheet trays",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "ingredients": [
+    {
+      "name": "Dried spaghetti",
+      "quantity": "2",
+      "unit": "lb",
+      "group": "Pasta"
+    },
+    {
+      "name": "Extra-virgin olive oil",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "divided",
+      "group": "Sauce"
+    },
+    {
+      "name": "Garlic cloves",
+      "quantity": "12",
+      "unit": "count",
+      "notes": "thinly sliced",
+      "group": "Sauce"
+    },
+    {
+      "name": "Red pepper flakes",
+      "quantity": "1",
+      "unit": "tsp",
+      "notes": "adjust to crew heat tolerance",
+      "group": "Sauce"
+    },
+    {
+      "name": "Fresh parsley",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "chopped",
+      "group": "Finish"
+    },
+    {
+      "name": "Grated Parmesan",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "optional at the line",
+      "group": "Finish"
+    },
+    {
+      "name": "Kosher salt",
+      "quantity": "1",
+      "unit": "batch",
+      "group": "Seasoning"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Boil pasta in well-salted water",
+      "instruction": "Bring a large pot of water to a rolling boil with salt that tastes like the sea. Add spaghetti and stir once. Cook 1 minute shy of package directions — the pasta finishes in the skillet.",
+      "minutes": 12,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Infuse garlic oil gently",
+      "instruction": "While pasta cooks, combine ¾ cup olive oil and sliced garlic in a large skillet over medium heat. Add pepper flakes. Cook slowly until garlic is pale gold and fragrant, not brown — brown garlic turns bitter fast. If it darkens, pull the pan off heat for 30 seconds.",
+      "minutes": 8,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Toss pasta off heat with starchy water",
+      "instruction": "Reserve 2 cups pasta water, then drain spaghetti. Transfer pasta to the skillet off heat. Add ½ cup pasta water and remaining ¼ cup olive oil. Toss vigorously 1–2 minutes until the oil emulsifies into a glossy, clingy sauce that coats every strand.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Serve immediately",
+      "instruction": "Fold in parsley and taste for salt. Portion into bowls right away — aglio e olio waits for no one. Pass Parmesan at the line if your crew wants it; the dish is traditionally cheese-optional.",
+      "minutes": 3,
+      "heatLevel": "low"
+    }
+  ],
+  "proTips": [
+    "Assign one cook to proteins and one to sides — rookies stay on timing, not multitasking.",
+    "Prep all mise en place before the bell — this meal wins on organization, not speed hacks.",
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
+    "Taste for salt at the end — hall palates run salty after long shifts."
+  ],
+  "tonightSpread": [
+    "Plate Spaghetti Aglio e Olio for the Hall with sides in separate pans so the crew can mix portions.",
+    "Line up Spaghetti Aglio e Olio for the Hall on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+  ],
+  "leftovers": [
+    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
+    "Label trays with date and reheat to 165°F minimum before second shift.",
+    "Add a splash of stock or water when reheating — thick sauces tighten in the fridge."
+  ],
+  "whyCrewsLikeIt": "Garlic, oil, and pasta — emulsified the right way. A hall pick for tight shifts — one line, real portions, no drama at the stove.",
+  "mealPrepNotes": "Minimal prep — chop aromatics before shift change so you can cook as soon as the board quiets.",
+  "substitutions": [
+    "Any short pasta shape works — penne, rigatoni, or spaghetti."
+  ],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 942,
+    "protein": 28,
+    "carbs": 135,
+    "fats": 34,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "heroImage": "/images/golden-100/spaghetti-aglio-e-olio-for-the-hall.jpg",
+  "mobileImage": "/images/mobile/spaghetti-aglio-e-olio-for-the-hall.jpg",
+  "thumbImage": "/images/thumbs/spaghetti-aglio-e-olio-for-the-hall.jpg",
+  "railImage": "/images/rails/spaghetti-aglio-e-olio-for-the-hall.jpg",
+  "realismScore": 100,
+  "firefighterScore": 100,
+  "popularityWeight": 3.2,
+  "searchTerms": [
+    "spaghetti aglio e olio for the hall",
+    "italian",
+    "vegetarian",
+    "pasta",
+    "one pot",
+    "quick",
+    "spaghetti aglio olio garlic oil pasta",
+    "one_pot",
+    "golden_100"
+  ],
+  "relatedSlugs": [
+    "five-ingredient-pasta",
+    "30-minute-pasta-e-fagioli-for-the-hall",
+    "pasta-e-ceci-for-the-hall",
+    "skillet-chicken-alfredo",
+    "margherita-pizza",
+    "chicken-alfredo-bake"
+  ],
+  "sourceName": "Serious Eats",
+  "sourceUrl": "https://www.seriouseats.com/spaghetti-aglio-olio-recipe",
+  "generatedAt": "2026-06-04T20:35:16.846Z",
+  "contentVersion": 2
+}

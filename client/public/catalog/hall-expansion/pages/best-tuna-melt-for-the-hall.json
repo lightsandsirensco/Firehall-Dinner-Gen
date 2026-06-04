@@ -1,0 +1,203 @@
+{
+  "slug": "best-tuna-melt-for-the-hall",
+  "title": "Best Tuna Melt for the Hall (Diner Style)",
+  "displayTitle": "Best Tuna Melt for the Hall (Diner Style)",
+  "seoTitle": "Best Tuna Melt for the Hall (Diner Style) | Firefighter Meal",
+  "shortDescription": "Open-faced tuna melts on rye with cheddar — sheet-pan batch for the crew",
+  "subtitle": "Open-faced tuna melts on rye with cheddar — sheet-pan batch for the crew",
+  "category": "hall_expansion",
+  "cuisine": "american",
+  "description": "Well-drained tuna folds into a seasoned salad, spreads onto buttered rye, and tops with sharp cheddar for a sheet-pan broil until every melt bubbles. Open-faced means faster batch cooking and an obvious tuna-melt identity — no mystery hot sandwiches.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 15,
+  "prepTime": 20,
+  "difficulty": "easy",
+  "calories": 480,
+  "protein": 32,
+  "carbs": 28,
+  "fats": 26,
+  "tags": [
+    "protein:seafood",
+    "format:sandwich",
+    "category:crew_feeders",
+    "handheld",
+    "comfort",
+    "seafood",
+    "hall_expansion",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Sheet pans",
+    "Parchment paper",
+    "Broiler or oven",
+    "Colander",
+    "Mixing bowl"
+  ],
+  "ingredients": [
+    {
+      "name": "canned tuna",
+      "quantity": "48",
+      "unit": "oz",
+      "notes": "in water, drained and pressed dry",
+      "group": "Salad"
+    },
+    {
+      "name": "mayonnaise",
+      "quantity": "1",
+      "unit": "cup",
+      "group": "Salad"
+    },
+    {
+      "name": "celery stalks",
+      "quantity": "4",
+      "unit": "count",
+      "notes": "finely diced",
+      "group": "Salad"
+    },
+    {
+      "name": "red onion",
+      "quantity": "0.5",
+      "unit": "cup",
+      "notes": "finely diced",
+      "group": "Salad"
+    },
+    {
+      "name": "lemon juice",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Salad"
+    },
+    {
+      "name": "Dijon mustard",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Salad"
+    },
+    {
+      "name": "marbled rye bread",
+      "quantity": "16",
+      "unit": "slices",
+      "group": "Bread"
+    },
+    {
+      "name": "sharp cheddar cheese",
+      "quantity": "1.5",
+      "unit": "lb",
+      "notes": "grated or 16 slices",
+      "group": "Cheese"
+    },
+    {
+      "name": "unsalted butter",
+      "quantity": "0.5",
+      "unit": "cup",
+      "notes": "softened",
+      "group": "Toast"
+    },
+    {
+      "name": "kosher salt and black pepper",
+      "quantity": "1",
+      "unit": "batch",
+      "group": "Seasoning"
+    },
+    {
+      "name": "paprika",
+      "quantity": "1",
+      "unit": "tsp",
+      "notes": "optional dusting before broil",
+      "group": "Finish"
+    },
+    {
+      "name": "dill pickles",
+      "quantity": "2",
+      "unit": "cups",
+      "notes": "sliced, for the line",
+      "group": "Sides"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Drain tuna and make the salad",
+      "instruction": "Open tuna, drain, and press dry in a colander or on paper towels — dry tuna is the difference between melts and mush. Fold with mayonnaise, celery, onion, lemon, Dijon, salt, and pepper until creamy but not soupy. Taste and adjust acid.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Butter rye and portion salad",
+      "instruction": "Heat broiler with rack in upper third. Butter one side of each rye slice and lay buttered-side down on parchment-lined sheet pans. Spread a generous ½ cup tuna salad on each slice, mounding slightly in the center.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Top with cheddar",
+      "instruction": "Cover each open face with cheddar — sliced or grated — all the way to the edges so broiler melt seals to bread. Dust lightly with paprika if you want diner color.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Broil until bubbling",
+      "instruction": "Broil until cheese melts, bubbles, and browns in spots, 4–6 minutes — rotate pans and watch constantly. Cheese should look glossy and split at the edges, not pale and rubbery. Target oven/smoker temperature: 500°F.",
+      "minutes": 6,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Hold warm and serve open-faced",
+      "instruction": "Slide melts onto serving platters or leave on parchment in a 200°F oven up to 15 minutes. Serve open-faced with pickles so the crew sees tuna and rye immediately. Re-broil 1 minute if cheese tightens on hold.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "A squeeze of hot sauce in the salad wakes up canned tuna without hiding it.",
+    "For 14, use two ovens or stagger pans — crowded broilers steam instead of brown.",
+    "Do not cover finished melts with foil — condensation kills crisp rye."
+  ],
+  "tonightSpread": [
+    "Open-faced tuna melts with pickle chips and tomato soup on the side if available.",
+    "Simple potato chips or slaw — this sandwich is the main event."
+  ],
+  "leftovers": [
+    "Tuna salad keeps 2 days refrigerated — broil fresh bread tomorrow.",
+    "Fold leftover salad into a pasta bake with extra cheddar."
+  ],
+  "whyCrewsLikeIt": "Tuna melts are cheap, fast, and familiar — perfect when the crew wants comfort without firing up the smoker. Sheet-pan broiling beats one-at-a-time skillets when ten people walk in together after a call.",
+  "mealPrepNotes": "Mix tuna salad up to 6 hours ahead; cover and refrigerate. Butter rye and portion salad onto trays just before broiling so bread does not sog. Hold finished melts in a warm oven 200°F up to 15 minutes — cheese sets but reheats fine under broiler 1 minute.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 480,
+    "protein": 32,
+    "carbs": 28,
+    "fats": 26,
+    "label": "~480 cal/serving · 32g protein · 3g fiber (est.)"
+  },
+  "heroImage": "/images/hall-expansion/best-tuna-melt-for-the-hall.jpg",
+  "heroImageAlt": "Best Tuna Melt for the Hall (Diner Style) — crew-sized firehall meal",
+  "mobileImage": "/images/mobile/hall-expansion/best-tuna-melt-for-the-hall.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/best-tuna-melt-for-the-hall.jpg",
+  "railImage": "/images/rails/hall-expansion/best-tuna-melt-for-the-hall.jpg",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "tuna melt sheet pan",
+    "hall tuna melt",
+    "diner tuna melt rye"
+  ],
+  "relatedSlugs": [
+    "shawarma-bar-night",
+    "fajita-bar-night",
+    "hall-burger-bar",
+    "pasta-bar-night"
+  ],
+  "sourceUrl": "https://www.americastestkitchen.com/recipes/16853-diner-style-sheet-pan-tuna-melts",
+  "generatedAt": "2026-06-04T20:18:31.794Z",
+  "contentVersion": 2
+}

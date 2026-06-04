@@ -1,0 +1,242 @@
+{
+  "slug": "chicken-tortilla-soup-for-the-hall",
+  "title": "Chicken Tortilla Soup for the Hall",
+  "displayTitle": "Chicken Tortilla Soup for the Hall",
+  "seoTitle": "Chicken Tortilla Soup for the Hall | Firefighter Meal",
+  "shortDescription": "Brothy lime-kissed soup with crisp tortilla strips at the line",
+  "subtitle": "Brothy lime-kissed soup with crisp tortilla strips at the line",
+  "category": "comfort_food",
+  "cuisine": "mexican",
+  "description": "Brothy lime-kissed soup with crisp tortilla strips at the line",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 60,
+  "prepTime": 20,
+  "difficulty": "medium",
+  "calories": 1100,
+  "protein": 72,
+  "carbs": 61,
+  "fats": 62,
+  "tags": [
+    "protein:chicken",
+    "format:soup_chili",
+    "category:comfort_food",
+    "comfort",
+    "hearty",
+    "golden_100"
+  ],
+  "equipment": [
+    "8-quart stock pot",
+    "Large sheet trays",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "ingredients": [
+    {
+      "name": "Boneless, skinless chicken thighs",
+      "quantity": "4",
+      "unit": "lb",
+      "notes": "cut into 1-inch pieces",
+      "group": "Protein"
+    },
+    {
+      "name": "Yellow onion",
+      "quantity": "2",
+      "unit": "count",
+      "notes": "diced",
+      "group": "Base"
+    },
+    {
+      "name": "Jalapeño peppers",
+      "quantity": "2",
+      "unit": "count",
+      "notes": "stemmed, half minced, half sliced for garnish",
+      "group": "Base"
+    },
+    {
+      "name": "Garlic cloves",
+      "quantity": "6",
+      "unit": "count",
+      "notes": "minced",
+      "group": "Base"
+    },
+    {
+      "name": "Ground cumin",
+      "quantity": "2",
+      "unit": "tsp",
+      "group": "Spice"
+    },
+    {
+      "name": "Ancho chile powder",
+      "quantity": "1",
+      "unit": "tbsp",
+      "notes": "mild; not chili-con carne seasoning",
+      "group": "Spice"
+    },
+    {
+      "name": "Canned fire-roasted tomatoes",
+      "quantity": "2",
+      "unit": "cans",
+      "notes": "14.5 oz",
+      "group": "Base"
+    },
+    {
+      "name": "Low-sodium chicken stock",
+      "quantity": "10",
+      "unit": "cups",
+      "group": "Broth"
+    },
+    {
+      "name": "Corn tortillas",
+      "quantity": "10",
+      "unit": "count",
+      "notes": "6-inch, cut into thin strips for frying",
+      "group": "Garnish"
+    },
+    {
+      "name": "Vegetable oil",
+      "quantity": "0.5",
+      "unit": "cup",
+      "notes": "for shallow frying strips",
+      "group": "Garnish"
+    },
+    {
+      "name": "Avocados",
+      "quantity": "4",
+      "unit": "count",
+      "notes": "diced — hold separately",
+      "group": "Garnish"
+    },
+    {
+      "name": "Fresh cilantro",
+      "quantity": "1",
+      "unit": "bunch",
+      "notes": "chopped — serve separately",
+      "group": "Garnish"
+    },
+    {
+      "name": "Limes",
+      "quantity": "6",
+      "unit": "count",
+      "notes": "cut into wedges",
+      "group": "Garnish"
+    },
+    {
+      "name": "Shredded Monterey Jack",
+      "quantity": "1",
+      "unit": "lb",
+      "notes": "optional at the line",
+      "group": "Garnish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Sear chicken and soften aromatics",
+      "instruction": "Heat 2 tablespoons oil in a large pot over medium-high. Brown chicken in batches until golden but not cooked through, 4–5 minutes per batch; transfer to a plate. Lower heat to medium, cook onion and minced jalapeño with salt until soft, 6–8 minutes. Add garlic, cumin, and ancho chile powder; stir 45 seconds until fragrant.",
+      "minutes": 15,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Simmer the broth",
+      "instruction": "Add tomatoes with juice and chicken stock. Return chicken and any juices. Simmer until chicken registers 165°F and shreds easily, 18–22 minutes. Soup should be brothy and deep red-orange — thin with stock if it reduces too far.",
+      "minutes": 22,
+      "heatLevel": "medium-low"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Shred chicken and adjust seasoning",
+      "instruction": "Transfer chicken to a board, shred with forks, and return to the pot. Taste and adjust salt — the broth should be savory, cumin-forward, and lightly smoky from the tomatoes, not watery.",
+      "minutes": 8,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Fry tortilla strips",
+      "instruction": "Heat vegetable oil to 350°F in a skillet. Fry corn tortilla strips in batches until crisp and lightly golden, 1–2 minutes per batch. Drain on paper towels and season lightly with salt. Hold strips uncovered at room temp up to 2 hours so they stay crisp.",
+      "minutes": 12,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Ladle soup and finish at the line",
+      "instruction": "Ladle hot soup into bowls. Garnish at the line with tortilla strips, avocado, cilantro, cheese, and lime wedges — garnishes stay separate so late crews get crisp strips. Hold soup at 165°F on the back burner up to 60 minutes; refresh strips if they soften.",
+      "minutes": 8,
+      "heatLevel": "low"
+    }
+  ],
+  "proTips": [
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
+    "Taste for salt at the end — hall palates run salty after long shifts.",
+    "Pull chicken at 160°F and let carryover hit 165°F — dry breast ruins crew morale."
+  ],
+  "tonightSpread": [
+    "Keep the pot on low simmer on the stove — ladle from the side so the bottom doesn't scorch.",
+    "Set shredded cheese, crackers, and hot sauce in a row beside the pot.",
+    "Line up Chicken Tortilla Soup for the Hall on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+  ],
+  "leftovers": [
+    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
+    "Label trays with date and reheat to 165°F minimum before second shift.",
+    "Add a splash of stock or water when reheating — thick sauces tighten in the fridge."
+  ],
+  "whyCrewsLikeIt": "Brothy lime-kissed soup with crisp tortilla strips at the line. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
+  "substitutions": [
+    "Chicken thighs ↔ breasts (thighs forgive overcooking on the flat-top).",
+    "Ground turkey swaps 1:1 for beef in chili if the crew wants leaner."
+  ],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 1100,
+    "protein": 72,
+    "carbs": 61,
+    "fats": 62,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "heroImage": "/images/golden-100/chicken-tortilla-soup-for-the-hall.jpg",
+  "mobileImage": "/images/mobile/chicken-tortilla-soup-for-the-hall.jpg",
+  "thumbImage": "/images/thumbs/chicken-tortilla-soup-for-the-hall.jpg",
+  "railImage": "/images/rails/chicken-tortilla-soup-for-the-hall.jpg",
+  "realismScore": 100,
+  "firefighterScore": 100,
+  "popularityWeight": 3.6,
+  "searchTerms": [
+    "chicken tortilla soup for the hall",
+    "mexican",
+    "chicken",
+    "soup chili",
+    "comfort",
+    "hearty",
+    "chicken tortilla soup fire station",
+    "golden_100"
+  ],
+  "relatedSlugs": [
+    "chicken-dumpling-soup",
+    "bbq-chicken-mac-and-cheese",
+    "chicken-pot-pie",
+    "creamy-tuscan-chicken",
+    "four-step-chicken-piccata",
+    "beef-barley-soup"
+  ],
+  "sourceName": "Serious Eats",
+  "sourceUrl": "https://www.seriouseats.com/real-deal-tortilla-soup-recipe",
+  "generatedAt": "2026-06-04T20:35:16.827Z",
+  "contentVersion": 2
+}

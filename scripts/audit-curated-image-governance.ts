@@ -195,6 +195,7 @@ function duplicateHeroReport(rows: AuditRow[]): Array<{ hero: string; slugs: str
 
 async function main(): Promise<void> {
   const asJson = process.argv.includes("--json");
+  await initCuratedRecipeStore();
   const hall = auditHallCatalog();
   const explore = await auditExploreCurated();
   const all = [...hall, ...explore];

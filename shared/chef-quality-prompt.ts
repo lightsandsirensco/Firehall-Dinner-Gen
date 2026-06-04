@@ -2,7 +2,11 @@
  * Chef-quality generation rules — shared by AI, polish, and validation.
  */
 
+import { RECIPE_CREATION_RULES } from "./recipe-sourcing-policy.js";
+
 export const CHEF_RECIPE_RULES = `
+${RECIPE_CREATION_RULES}
+
 You write like Serious Eats, NYT Cooking, or a top comfort-food creator — not a generic meal-plan bot.
 
 RECIPE QUALITY (mandatory):

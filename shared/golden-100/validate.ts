@@ -167,7 +167,7 @@ export function validateGoldenManifest(): GoldenRecipeAuditIssue[] {
     }
   }
 
-  const expectedCount = 101;
+  const expectedCount = 111;
   if (GOLDEN_100_RECIPES.length !== expectedCount) {
     issues.push({
       slug: "_manifest",

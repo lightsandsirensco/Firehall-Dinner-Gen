@@ -7,6 +7,7 @@
  */
 
 import type { GenerateResponse } from "./schema.js";
+import { RECIPE_SOURCE_PUBLISHERS } from "./recipe-sourcing-policy.js";
 
 export type CatalogSourceKind = "spoonacular" | "curated" | "publisher" | "template";
 
@@ -110,19 +111,9 @@ export function mealFormatToArchetype(mealFormat: string): MealArchetype {
   return map[mealFormat] || "plated_main";
 }
 
-const PUBLISHER_HOST_LABELS: Record<string, string> = {
-  "damndelicious.net": "Damn Delicious",
-  "halfbakedharvest.com": "Half Baked Harvest",
-  "budgetbytes.com": "Budget Bytes",
-  "cafedelites.com": "Cafe Delites",
-  "allrecipes.com": "AllRecipes",
-  "seriouseats.com": "Serious Eats",
-  "cooking.nytimes.com": "NYT Cooking",
-  "bonappetit.com": "Bon Appétit",
-  "foodnetwork.com": "Food Network",
-  "tasty.co": "Tasty",
-  "mob.co.uk": "Mob Kitchen",
-};
+const PUBLISHER_HOST_LABELS: Record<string, string> = Object.fromEntries(
+  RECIPE_SOURCE_PUBLISHERS.flatMap((p) => p.hosts.map((host) => [host, p.name] as const)),
+);
 
 /** Best-effort publisher label from original recipe URL */
 export function publisherNameFromSourceUrl(sourceUrl: string): string {

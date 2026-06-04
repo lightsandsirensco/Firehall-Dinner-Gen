@@ -11,7 +11,12 @@ import { initCuratedRecipeStore } from "../server/curated-recipe-store.js";
 import { GOLDEN_100_RECIPES } from "../shared/golden-100/manifest.js";
 import { buildGoldenRecipePage } from "../server/golden-100/recipe-page-builder.js";
 import { validateGoldenRecipePage } from "../server/golden-100/recipe-page-validator.js";
-import { writeGoldenCatalogIndex, writeGoldenRecipePage } from "../server/golden-100/page-store.js";
+import {
+  listGoldenPageSlugs,
+  readGoldenRecipePage,
+  writeGoldenCatalogIndex,
+  writeGoldenRecipePage,
+} from "../server/golden-100/page-store.js";
 import { flushSqliteToDisk } from "../server/sqlite.js";
 
 const args = process.argv.slice(2);
@@ -52,9 +57,14 @@ async function main(): Promise<void> {
   }
 
   if (!dryRun && pages.length > 0) {
-    const indexPath = writeGoldenCatalogIndex(pages);
+    const indexPages = onlySlugs
+      ? listGoldenPageSlugs()
+          .map((slug) => readGoldenRecipePage(slug))
+          .filter((p) => p != null)
+      : pages;
+    const indexPath = writeGoldenCatalogIndex(indexPages);
     flushSqliteToDisk();
-    console.log(`\n[catalog:pages] Wrote index → ${indexPath}`);
+    console.log(`\n[catalog:pages] Wrote index (${indexPages.length} recipes) → ${indexPath}`);
   }
 
   console.log(`\n[catalog:pages] done — ok=${pages.length} fail=${fail}`);

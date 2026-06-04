@@ -1,0 +1,195 @@
+{
+  "slug": "greek-chicken-pitas",
+  "title": "Greek Chicken Pitas",
+  "displayTitle": "Greek Chicken Pitas",
+  "seoTitle": "Greek Chicken Pitas | Firefighter Meal",
+  "shortDescription": "Lemon-oregano chicken with cucumber, tomato, and tzatziki in pita",
+  "subtitle": "Lemon-oregano chicken with cucumber, tomato, and tzatziki in pita",
+  "category": "hall_expansion",
+  "cuisine": "greek",
+  "description": "Chicken is marinated in yogurt, lemon, and oregano, grilled, and tucked into warm pita with cucumber, tomato, red onion, and tzatziki. Open-faced on the line so chicken, pita, and tzatziki are visible before folding.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 20,
+  "prepTime": 25,
+  "difficulty": "medium",
+  "calories": 480,
+  "protein": 40,
+  "carbs": 44,
+  "fats": 14,
+  "tags": [
+    "protein:chicken",
+    "format:handheld",
+    "category:crew_feeders",
+    "handheld",
+    "chicken",
+    "healthy",
+    "hall_expansion",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Grill or grill pan",
+    "Mixing bowls",
+    "Foil",
+    "Thermometer"
+  ],
+  "ingredients": [
+    {
+      "name": "boneless, skinless chicken breasts",
+      "quantity": "3",
+      "unit": "lb",
+      "group": "Chicken"
+    },
+    {
+      "name": "plain Greek yogurt",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "marinade",
+      "group": "Marinade"
+    },
+    {
+      "name": "lemon juice",
+      "quantity": "0.25",
+      "unit": "cup",
+      "group": "Marinade"
+    },
+    {
+      "name": "dried oregano",
+      "quantity": "2",
+      "unit": "tsp",
+      "group": "Marinade"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "4",
+      "unit": "count",
+      "notes": "minced",
+      "group": "Marinade"
+    },
+    {
+      "name": "pita breads",
+      "quantity": "10",
+      "unit": "count",
+      "notes": "pocket or flat",
+      "group": "Pita"
+    },
+    {
+      "name": "English cucumber",
+      "quantity": "1",
+      "unit": "count",
+      "notes": "diced",
+      "group": "Veg"
+    },
+    {
+      "name": "tomatoes",
+      "quantity": "3",
+      "unit": "large",
+      "notes": "diced",
+      "group": "Veg"
+    },
+    {
+      "name": "red onion",
+      "quantity": "0.5",
+      "unit": "cup",
+      "notes": "thinly sliced",
+      "group": "Veg"
+    },
+    {
+      "name": "tzatziki",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Sauce"
+    },
+    {
+      "name": "crumbled feta",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "optional",
+      "group": "Line"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Marinate chicken",
+      "instruction": "Combine yogurt, lemon juice, oregano, garlic, salt, and pepper. Coat chicken and refrigerate at least 2 hours. Remove 30 minutes before grilling if time allows.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Grill chicken",
+      "instruction": "Grill over medium-high until 160°F, 5–7 minutes per side. Rest 5 minutes and slice into strips. Chicken should taste lemon-herb bright, not warm-spice shawarma.",
+      "minutes": 18,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Prep vegetables and warm pita",
+      "instruction": "Dice cucumber and tomato; salt lightly and drain on paper towels. Warm pita wrapped in foil in a 300°F oven 8 minutes. Target oven/smoker temperature: 300°F.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Fill pitas for the line",
+      "instruction": "Spread tzatziki inside each pita. Add chicken, cucumber, tomato, and onion. Crumble feta if using. Leave pitas open on trays so the crew sees Greek build before folding.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Fold and hold",
+      "instruction": "Fold pitas and wrap in foil. Hold at 200°F up to 20 minutes. Suggested sides: Greek salad or lemon potatoes if you have oven space.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "English cucumber has fewer seeds and keeps pitas from going soggy.",
+    "If pita tears, serve as a chicken-tzatziki plate with pita on the side.",
+    "Do not swap in shawarma marinade — crews should taste the difference from shawarma pitas on the same menu cycle."
+  ],
+  "tonightSpread": [
+    "Greek pitas with simple orzo or rice",
+    "Lemon wedges at the line"
+  ],
+  "leftovers": [
+    "Chicken on a salad with remaining tzatziki",
+    "Pita chips from extra bread"
+  ],
+  "whyCrewsLikeIt": "Lighter than a burger run but still filling. Greek bowls exist in the catalog; pitas are the handheld version crews can eat walking to the rig. Feta at the line is optional but popular.",
+  "mealPrepNotes": "Marinate chicken at least 2 hours or overnight. Make tzatziki the day before. Warm pita in foil packets. Assemble open on sheet pans for speed, then fold for eating.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 480,
+    "protein": 40,
+    "carbs": 44,
+    "fats": 14,
+    "label": "~480 cal/serving · 40g protein · 3g fiber (est.)"
+  },
+  "heroImageAlt": "Greek Chicken Pitas — firehall handheld meal — firefighter meal served for a firehall crew dinner",
+  "realismScore": 97,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "greek chicken pita",
+    "chicken souvlaki pita firehall"
+  ],
+  "relatedSlugs": [
+    "shawarma-bar-night",
+    "fajita-bar-night",
+    "hall-burger-bar",
+    "pasta-bar-night"
+  ],
+  "sourceUrl": "https://www.seriouseats.com/chicken-souvlaki-recipe",
+  "generatedAt": "2026-06-04T20:18:31.794Z",
+  "contentVersion": 2,
+  "heroImage": "/images/hall-expansion/greek-chicken-pitas.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/greek-chicken-pitas.jpg",
+  "mobileImage": "/images/mobile/hall-expansion/greek-chicken-pitas.jpg",
+  "railImage": "/images/rails/hall-expansion/greek-chicken-pitas.jpg"
+}

@@ -238,6 +238,124 @@ NO rice bowl. NO tiny portions.
 Indulgent comfort food. Professional firehall food photography. Warm lighting. Shallow depth of field.
 Prepared for eight firefighters.`;
 
+export const CHICKEN_CAESAR_WRAPS_IMAGE_PROMPT = `Chicken Caesar Wraps
+
+Large flour tortilla wraps cut on a bias showing a clear cross-section — mandatory.
+
+Visible in cross-section and on the wrap:
+- grilled chicken breast strips with grill marks (not deli slices)
+- chopped romaine lettuce
+- creamy Caesar dressing
+- grated Parmesan
+
+Wraps stacked or fanned on a firehall prep counter with foil at edge.
+One wrap cut in half with cut face toward camera.
+
+NO Caesar salad bowl without tortilla.
+NO whole chicken breast on a plate.
+NO burrito with rice and beans.
+NO buffalo orange sauce.
+
+Professional firehall food photography. Warm lighting. 50mm lens.`;
+
+export const BUFFALO_CHICKEN_WRAPS_IMAGE_PROMPT = `Buffalo Chicken Wraps
+
+Flour tortilla wraps cut in half with cut faces up on a sheet tray.
+
+Visible:
+- shredded or chunked buffalo chicken with orange-red buffalo sauce coating
+- shredded iceberg or romaine lettuce inside the wrap
+- ranch dressing or blue cheese drizzle visible at the cut edge
+
+NO buffalo chicken dip in a baking dish without tortillas.
+NO plain chicken wrap without orange buffalo color.
+NO tacos.
+
+Professional firehall food photography. Warm kitchen lighting.`;
+
+export const GREEK_CHICKEN_PITAS_IMAGE_PROMPT = `Greek Chicken Pitas
+
+Greek-style chicken pitas — lemon herb profile, NOT shawarma spice.
+
+Visible:
+- warm pita bread opened or folded showing filling
+- grilled lemon-oregano chicken strips
+- white tzatziki sauce clearly visible
+- diced cucumber and tomato
+- optional red onion and crumbled feta
+
+NO pink shawarma turmeric marinade.
+NO pickled turnip only (that is shawarma).
+NO rice bowl.
+
+Bright Mediterranean presentation on firehall stainless counter.`;
+
+export const BEEF_GYROS_FOR_THE_HALL_IMAGE_PROMPT = `Beef Gyros
+
+Greek beef gyro pitas on a firehall serving line.
+
+Visible:
+- thin-sliced seasoned beef gyro meat (not ground beef patty)
+- warm pita bread
+- white tzatziki sauce
+- thinly sliced red onion
+- diced tomato at edge
+
+NO chicken shawarma.
+NO steak sandwich on kaiser bun without pita.
+NO lamb-only if beef is the protein focus — show sliced beef.
+
+Professional firehall food photography. Warm lighting.`;
+
+export const CHICKEN_SHAWARMA_PITAS_IMAGE_PROMPT = `Chicken Shawarma Pitas
+
+Middle Eastern shawarma chicken pitas — distinct from Greek lemon pitas.
+
+Visible:
+- warm pita with golden turmeric-cumin spiced chicken
+- pink pickled turnip or pickled cabbage (mandatory pickle garnish)
+- garlic-tahini or white sauce
+- diced tomato
+
+Spice-colored chicken must look different from plain Greek lemon chicken.
+NO tzatziki-only Greek build without pickles.
+NO shawarma bar spread with rice — handheld pita focus.
+
+Firehall kitchen counter. Warm lighting.`;
+
+export const SAUSAGE_PEPPERS_ON_BUNS_IMAGE_PROMPT = `Sausage and Peppers on Hoagie Buns
+
+Italian sausage and peppers sandwiches for a firefighter crew.
+
+Visible:
+- Italian sausage links or split sausages in hoagie/sub rolls
+- sautéed red and green bell peppers
+- caramelized onions
+- optional melted provolone
+
+Sandwiches lined on sheet tray or wide platter — NOT a skillet-only shot without buns.
+NO meatball sub.
+NO plain sausage on plate without peppers and hoagie buns.
+
+Professional firehall food photography. Crew-sized line of sandwiches.`;
+
+export const CHICKEN_DUMPLING_SOUP_IMAGE_PROMPT = `Chicken and Dumplings
+
+Thick chicken stew with fluffy dropped dumplings in a wide Dutch oven or deep hotel pan — NOT brothy soup, NOT pot pie.
+
+Visible:
+- thick creamy stew base coating chicken and vegetables
+- large fluffy steamed dumplings sitting ON TOP of the stew (not submerged thin soup)
+- pulled or chopped chicken in the stew
+- carrots and celery in the stew underneath
+
+NO thin clear broth soup bowl.
+NO pot pie with pastry lid.
+NO chicken noodle soup with thin noodles only.
+NO chili.
+
+Ladle resting on pot edge. Steam visible. Firehall kitchen. Wide angle showing stew thickness.`;
+
 export const TITLE_LOCKED_IMAGE_PROMPTS: Record<string, string> = {
   "crock-barbacoa-chicken": CROCK_BARBACOA_CHICKEN_IMAGE_PROMPT,
   "steak-sandwiches": STEAK_SANDWICHES_IMAGE_PROMPT,
@@ -253,4 +371,11 @@ export const TITLE_LOCKED_IMAGE_PROMPTS: Record<string, string> = {
   "sausage-peppers-onions": SAUSAGE_PEPPERS_ONIONS_IMAGE_PROMPT,
   "biscuits-gravy": BISCUITS_GRAVY_IMAGE_PROMPT,
   "pepper-steak-onions": PEPPER_STEAK_ONIONS_IMAGE_PROMPT,
+  "chicken-caesar-wraps": CHICKEN_CAESAR_WRAPS_IMAGE_PROMPT,
+  "buffalo-chicken-wraps": BUFFALO_CHICKEN_WRAPS_IMAGE_PROMPT,
+  "greek-chicken-pitas": GREEK_CHICKEN_PITAS_IMAGE_PROMPT,
+  "beef-gyros-for-the-hall": BEEF_GYROS_FOR_THE_HALL_IMAGE_PROMPT,
+  "chicken-shawarma-pitas": CHICKEN_SHAWARMA_PITAS_IMAGE_PROMPT,
+  "sausage-peppers-on-buns": SAUSAGE_PEPPERS_ON_BUNS_IMAGE_PROMPT,
+  "chicken-dumpling-soup": CHICKEN_DUMPLING_SOUP_IMAGE_PROMPT,
 };
